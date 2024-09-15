@@ -15,19 +15,19 @@ bool __fastcall BattleSelectMainSubServantWindow__CheckCanOrderChangeServant(
   BattleBuffData_o *buffData; // x19
   BattleBuffData_CheckIndividualitiesData_o *v5; // x20
 
-  if ( (byte_4A22A71 & 1) == 0 )
+  if ( (byte_4A30EE7 & 1) == 0 )
   {
-    this = (BattleSelectMainSubServantWindow_o *)sub_1B715CC(
+    this = (BattleSelectMainSubServantWindow_o *)sub_1B761C0(
                                                    &BattleBuffData_CheckIndividualitiesData_TypeInfo,
                                                    servantData);
-    byte_4A22A71 = 1;
+    byte_4A30EE7 = 1;
   }
   if ( !servantData
     || (buffData = servantData->fields.buffData,
-        v5 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1B71818(BattleBuffData_CheckIndividualitiesData_TypeInfo),
+        v5 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1B7640C(BattleBuffData_CheckIndividualitiesData_TypeInfo),
         BattleBuffData_CheckIndividualitiesData___ctor(v5, servantData, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL),
         !buffData)
-    || (this = (BattleSelectMainSubServantWindow_o *)BattleBuffData__getBuffList_42225300(
+    || (this = (BattleSelectMainSubServantWindow_o *)BattleBuffData__getBuffList_42250240(
                                                        buffData,
                                                        84,
                                                        v5,
@@ -37,7 +37,7 @@ bool __fastcall BattleSelectMainSubServantWindow__CheckCanOrderChangeServant(
                                                        0LL,
                                                        0LL)) == 0LL )
   {
-    sub_1B71828(this, servantData);
+    sub_1B7641C(this, servantData);
   }
   return this->fields.m_CancellationTokenSource == 0LL;
 }
@@ -74,7 +74,7 @@ void __fastcall BattleSelectMainSubServantWindow__Close(
       break;
     if ( (unsigned int)v7 >= max_length )
 LABEL_19:
-      sub_1B71830(parentPanel, call);
+      sub_1B76424(parentPanel, call);
     v9 = mainSvtList->m_Items[v7];
     if ( v9 )
     {
@@ -93,7 +93,7 @@ LABEL_19:
   subSvtList = this->fields.subSvtList;
   if ( !subSvtList )
 LABEL_17:
-    sub_1B71828(parentPanel, call);
+    sub_1B7641C(parentPanel, call);
   v11 = 0LL;
   while ( 1 )
   {
@@ -143,11 +143,11 @@ void __fastcall BattleSelectMainSubServantWindow__OpenImpl(
   const MethodInfo *v9; // x3
   BattleWindowOuterClickComponent_OuterClickCall_o *v10; // x20
 
-  if ( (byte_4A22A6D & 1) == 0 )
+  if ( (byte_4A30EE3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_BattleSelectMainSubServantWindow_onCloseButton__, call);
-    sub_1B715CC(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo, v5);
-    byte_4A22A6D = 1;
+    sub_1B761C0(&Method_BattleSelectMainSubServantWindow_onCloseButton__, call);
+    sub_1B761C0(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo, v5);
+    byte_4A30EE3 = 1;
   }
   battleData = this->fields.battleData;
   if ( !battleData )
@@ -169,7 +169,7 @@ void __fastcall BattleSelectMainSubServantWindow__OpenImpl(
         (battleData = (BattleData_o *)this->fields.actButton) == 0LL) )
   {
 LABEL_9:
-    sub_1B71828(battleData, call);
+    sub_1B7641C(battleData, call);
   }
   ((void (__fastcall *)(BattleData_o *, __int64, __int64, void *))battleData->klass[1]._1.events)(
     battleData,
@@ -179,7 +179,7 @@ LABEL_9:
   this->fields.isSelected = 0;
   *(_QWORD *)&this->fields.mainSelect_uniqueId = 0LL;
   BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0LL);
-  v10 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_1B71818(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+  v10 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_1B7640C(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
   BattleWindowOuterClickComponent_OuterClickCall___ctor(
     v10,
     (Il2CppObject *)this,
@@ -200,7 +200,7 @@ void __fastcall BattleSelectMainSubServantWindow__SetCallBack(
   int32_t v3; // w3
 
   this->fields.callBack = callback;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callback, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -247,18 +247,18 @@ void __fastcall BattleSelectMainSubServantWindow__SetServantData(
   BattleSelectServantComponent_o *v41; // x21
   const MethodInfo *v42; // x2
 
-  if ( (byte_4A22A6C & 1) == 0 )
+  if ( (byte_4A30EE2 & 1) == 0 )
   {
-    sub_1B715CC(&Method_BattleSelectMainSubServantWindow_selectSvt__, mainList);
-    sub_1B715CC(&BattleSelectServantComponent_CallBack_TypeInfo, v7);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v8);
-    sub_1B715CC(&StringLiteral_2853/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, v9);
-    byte_4A22A6C = 1;
+    sub_1B761C0(&Method_BattleSelectMainSubServantWindow_selectSvt__, mainList);
+    sub_1B761C0(&BattleSelectServantComponent_CallBack_TypeInfo, v7);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v8);
+    sub_1B761C0(&StringLiteral_2867/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, v9);
+    byte_4A30EE2 = 1;
   }
   title_label = this->fields.title_label;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2853/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2867/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, 0LL);
   if ( !title_label )
     goto LABEL_39;
   UILabel__set_text(title_label, v11, 0LL);
@@ -276,7 +276,7 @@ void __fastcall BattleSelectMainSubServantWindow__SetServantData(
       goto LABEL_39;
     if ( v16 >= max_length )
 LABEL_41:
-      sub_1B71830(v11, v12);
+      sub_1B76424(v11, v12);
     v17 = mainList->max_length;
     v18 = (BattleSelectServantComponent_o *)*((_QWORD *)&mainSvtList->obj.klass + v14);
     if ( (__int64)v16 >= (int)v17 )
@@ -290,7 +290,7 @@ LABEL_41:
       if ( v16 >= v17 )
         goto LABEL_41;
       v19 = (BattleServantData_o *)*((_QWORD *)&mainList->obj.klass + v14);
-      v20 = (BattleSelectServantComponent_CallBack_o *)sub_1B71818(BattleSelectServantComponent_CallBack_TypeInfo);
+      v20 = (BattleSelectServantComponent_CallBack_o *)sub_1B7640C(BattleSelectServantComponent_CallBack_TypeInfo);
       BattleSelectServantComponent_CallBack___ctor(
         v20,
         (Il2CppObject *)this,
@@ -321,7 +321,7 @@ LABEL_41:
   subSvtList = this->fields.subSvtList;
   if ( !subSvtList )
 LABEL_39:
-    sub_1B71828(v11, v12);
+    sub_1B7641C(v11, v12);
   v29 = 4LL;
   while ( 1 )
   {
@@ -346,7 +346,7 @@ LABEL_39:
       if ( v31 >= v32 )
         goto LABEL_41;
       v34 = (BattleServantData_o *)*((_QWORD *)&subList->obj.klass + v29);
-      v35 = (BattleSelectServantComponent_CallBack_o *)sub_1B71818(BattleSelectServantComponent_CallBack_TypeInfo);
+      v35 = (BattleSelectServantComponent_CallBack_o *)sub_1B7640C(BattleSelectServantComponent_CallBack_TypeInfo);
       BattleSelectServantComponent_CallBack___ctor(
         v35,
         (Il2CppObject *)this,
@@ -390,7 +390,7 @@ void __fastcall BattleSelectMainSubServantWindow__atlasLoadEnd(
   if ( !battleData
     || (battleData = (BattleData_o *)BattleData__getFieldPlayerServantList(battleData, 0LL), !this->fields.battleData) )
   {
-    sub_1B71828(battleData, method);
+    sub_1B7641C(battleData, method);
   }
   v4 = (BattleServantData_array *)battleData;
   SubPlayerServantList = BattleData__getSubPlayerServantList(this->fields.battleData, 0LL);
@@ -407,14 +407,14 @@ void __fastcall BattleSelectMainSubServantWindow__endErrorDialog(
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A22A70 & 1) == 0 )
+  if ( (byte_4A30EE6 & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, flg);
-    byte_4A22A70 = 1;
+    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, flg);
+    byte_4A30EE6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v5);
+    sub_1B7641C(0LL, v5);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
   this->fields.isSelected = 0;
 }
@@ -424,12 +424,12 @@ System_String_o *__fastcall BattleSelectMainSubServantWindow__get_closeBtnPath(
         BattleSelectMainSubServantWindow_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A22A72 & 1) == 0 )
+  if ( (byte_4A30EE8 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_12861/*"Sprite"*/, method);
-    byte_4A22A72 = 1;
+    sub_1B761C0(&StringLiteral_12903/*"Sprite"*/, method);
+    byte_4A30EE8 = 1;
   }
-  return (System_String_o *)StringLiteral_12861/*"Sprite"*/;
+  return (System_String_o *)StringLiteral_12903/*"Sprite"*/;
 }
 
 
@@ -453,27 +453,27 @@ void __fastcall BattleSelectMainSubServantWindow__onActionButton(
   System_Reflection_MethodBase_o *v15; // x0
 
   v2 = this;
-  if ( (byte_4A22A6F & 1) == 0 )
+  if ( (byte_4A30EE5 & 1) == 0 )
   {
-    sub_1B715CC(&Method_BattleSelectMainSubServantWindow_endErrorDialog__, method);
-    sub_1B715CC(&Method_BattleSelectMainSubServantWindow_onActionButton__, v3);
-    sub_1B715CC(&NotificationDialog_ClickDelegate_TypeInfo, v4);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v5);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B715CC(&StringLiteral_2964/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, v7);
-    this = (BattleSelectMainSubServantWindow_o *)sub_1B715CC(&StringLiteral_2965/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, v8);
-    byte_4A22A6F = 1;
+    sub_1B761C0(&Method_BattleSelectMainSubServantWindow_endErrorDialog__, method);
+    sub_1B761C0(&Method_BattleSelectMainSubServantWindow_onActionButton__, v3);
+    sub_1B761C0(&NotificationDialog_ClickDelegate_TypeInfo, v4);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v5);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B761C0(&StringLiteral_2979/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, v7);
+    this = (BattleSelectMainSubServantWindow_o *)sub_1B761C0(&StringLiteral_2980/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, v8);
+    byte_4A30EE5 = 1;
   }
   if ( !v2->fields.isSelected )
   {
     if ( v2->fields.mainSelect_uniqueId < 1 || v2->fields.subSelect_uniqueId < 1 )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2965/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, 0LL);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2964/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, 0LL);
-      v13 = (NotificationDialog_ClickDelegate_o *)sub_1B71818(NotificationDialog_ClickDelegate_TypeInfo);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2980/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, 0LL);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2979/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, 0LL);
+      v13 = (NotificationDialog_ClickDelegate_o *)sub_1B7640C(NotificationDialog_ClickDelegate_TypeInfo);
       NotificationDialog_ClickDelegate___ctor(
         v13,
         (Il2CppObject *)v2,
@@ -481,7 +481,7 @@ void __fastcall BattleSelectMainSubServantWindow__onActionButton(
         0LL);
       if ( Instance )
       {
-        CommonUI__OpenNotificationDialog_30402080(
+        CommonUI__OpenNotificationDialog_30421532(
           (CommonUI_o *)Instance,
           v11,
           v12,
@@ -516,14 +516,14 @@ void __fastcall BattleSelectMainSubServantWindow__onActionButton(
 LABEL_12:
         v14 = Method_BattleSelectMainSubServantWindow_onActionButton__;
         if ( (*((_BYTE *)Method_BattleSelectMainSubServantWindow_onActionButton__ + 83) & 2) != 0 )
-          v14 = (_QWORD *)sub_1B715E4(Method_BattleSelectMainSubServantWindow_onActionButton__);
-        v15 = (System_Reflection_MethodBase_o *)sub_1B715B0(v14, v14[4]);
+          v14 = (_QWORD *)sub_1B761D8(Method_BattleSelectMainSubServantWindow_onActionButton__);
+        v15 = (System_Reflection_MethodBase_o *)sub_1B761A4(v14, v14[4]);
         OverwriteAssetSoundName__PlaySystemSe(v15, 8, 0LL);
         v2->fields.isSelected = 1;
         return;
       }
     }
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
 }
 
@@ -538,21 +538,21 @@ void __fastcall BattleSelectMainSubServantWindow__onCloseButton(
   __int64 v6; // x1
   struct BattleSelectMainSubServantWindow_SelectedCallBack_o *callBack; // x8
 
-  if ( (byte_4A22A6E & 1) == 0 )
+  if ( (byte_4A30EE4 & 1) == 0 )
   {
-    sub_1B715CC(&Method_BattleSelectMainSubServantWindow_onCloseButton__, method);
-    byte_4A22A6E = 1;
+    sub_1B761C0(&Method_BattleSelectMainSubServantWindow_onCloseButton__, method);
+    byte_4A30EE4 = 1;
   }
   if ( !this->fields.isSelected )
   {
     v3 = Method_BattleSelectMainSubServantWindow_onCloseButton__;
     if ( (*((_BYTE *)Method_BattleSelectMainSubServantWindow_onCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B715E4(Method_BattleSelectMainSubServantWindow_onCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B715B0(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B761D8(Method_BattleSelectMainSubServantWindow_onCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B761A4(v3, v3[4]);
     OverwriteAssetSoundName__PlayCommonSe(v4, 10, 0LL);
     callBack = this->fields.callBack;
     if ( !callBack )
-      sub_1B71828(v5, v6);
+      sub_1B7641C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD, _QWORD))callBack->fields.m_target)(
       callBack->fields.original_method_info,
       0LL,
@@ -600,7 +600,7 @@ void __fastcall BattleSelectMainSubServantWindow__selectSvt(
         break;
       if ( (unsigned int)v11 >= max_length )
 LABEL_35:
-        sub_1B71830(this, *(_QWORD *)&position);
+        sub_1B76424(this, *(_QWORD *)&position);
       this = (BattleSelectMainSubServantWindow_o *)subSvtList->m_Items[v11];
       if ( this )
       {
@@ -668,7 +668,7 @@ LABEL_35:
       }
     }
 LABEL_34:
-    sub_1B71828(this, *(_QWORD *)&position);
+    sub_1B7641C(this, *(_QWORD *)&position);
   }
   this = (BattleSelectMainSubServantWindow_o *)v4->fields.actButton;
   if ( !this )
@@ -695,7 +695,7 @@ void __fastcall BattleSelectMainSubServantWindow__setBattleData(
   int32_t v3; // w3
 
   this->fields.battleData = data;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.battleData, (int32_t)data, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.battleData, (int32_t)data, (int32_t)method, v3);
 }
 
 
@@ -712,14 +712,14 @@ void __fastcall BattleSelectMainSubServantWindow__setInitialPos(
     goto LABEL_6;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
   v5 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v4);
-    byte_4A1A751 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v4);
+    byte_4A28BB1 = 1;
   }
   if ( !v5 )
 LABEL_6:
-    sub_1B71828(gameObject, v4);
+    sub_1B7641C(gameObject, v4);
   UnityEngine_Transform__set_localPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   BattleWindowComponent__setInitialPos((BattleWindowComponent_o *)this, 0LL);
 }
@@ -743,15 +743,15 @@ void __fastcall BattleSelectMainSubServantWindow_SelectedCallBack___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B7168C(v6) & 1) == 0 )
+  if ( (sub_1B76280(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B71844(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B716F4(v10, 0LL);
+      v10 = sub_1B76438(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B762E8(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -763,9 +763,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19BC800;
+  this->fields.m_target = (Il2CppObject *)sub_19C0D00;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19BC7A0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19C0CA0;
 }
 
 
@@ -795,17 +795,17 @@ System_IAsyncResult_o *__fastcall BattleSelectMainSubServantWindow_SelectedCallB
   v22[0] = flg;
   v21 = mainUniqueId;
   v20 = subUniqueId;
-  if ( (byte_4A22A73 & 1) == 0 )
+  if ( (byte_4A30EE9 & 1) == 0 )
   {
-    sub_1B715CC(&bool_TypeInfo, flg);
-    sub_1B715CC(&int_TypeInfo, v10);
-    byte_4A22A73 = 1;
+    sub_1B761C0(&bool_TypeInfo, flg);
+    sub_1B761C0(&int_TypeInfo, v10);
+    byte_4A30EE9 = 1;
   }
   v19 = 0u;
   v18[0] = j_il2cpp_value_box_0(bool_TypeInfo, v22, *(_QWORD *)&mainUniqueId, *(_QWORD *)&subUniqueId, callback);
   v18[1] = j_il2cpp_value_box_0(int_TypeInfo, &v21, v11, v12, v13);
   *(_QWORD *)&v19 = j_il2cpp_value_box_0(int_TypeInfo, &v20, v14, v15, v16);
-  return (System_IAsyncResult_o *)sub_1B71580(this, v18, callback, object);
+  return (System_IAsyncResult_o *)sub_1B76174(this, v18, callback, object);
 }
 
 
@@ -814,7 +814,7 @@ void __fastcall BattleSelectMainSubServantWindow_SelectedCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B71584(result, 0LL, method);
+  sub_1B76178(result, 0LL, method);
 }
 
 

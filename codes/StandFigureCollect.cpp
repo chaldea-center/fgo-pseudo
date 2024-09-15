@@ -11,9 +11,9 @@ void __fastcall StandFigureCollect___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._entity_k__BackingField = entity;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)entity, v7, v8);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)entity, v7, v8);
   this->fields._standFigure_k__BackingField = standFigure;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._standFigure_k__BackingField,
     (int32_t)standFigure,
     v9,
@@ -43,7 +43,7 @@ void __fastcall StandFigureCollect__set_entity(
   int32_t v3; // w3
 
   this->fields._entity_k__BackingField = value;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -55,7 +55,7 @@ void __fastcall StandFigureCollect__set_standFigure(
   int32_t v3; // w3
 
   this->fields._standFigure_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._standFigure_k__BackingField,
     (int32_t)value,
     (int32_t)method,

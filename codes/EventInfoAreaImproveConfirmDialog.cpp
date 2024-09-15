@@ -2,10 +2,10 @@ void __fastcall EventInfoAreaImproveConfirmDialog___ctor(
         EventInfoAreaImproveConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2056D & 1) == 0 )
+  if ( (byte_4A2E9DF & 1) == 0 )
   {
-    sub_1B715CC(&BaseDialog_TypeInfo, method);
-    byte_4A2056D = 1;
+    sub_1B761C0(&BaseDialog_TypeInfo, method);
+    byte_4A2E9DF = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -34,15 +34,15 @@ int32_t __fastcall EventInfoAreaImproveConfirmDialog__GetCurrentSpotLevel(
   __int64 v10; // x1
   int32_t *p_lv; // x8
 
-  if ( (byte_4A20569 & 1) == 0 )
+  if ( (byte_4A2E9DB & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, *(_QWORD *)&eventId);
-    sub_1B715CC(&DataManager_TypeInfo, v8);
-    byte_4A20569 = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, *(_QWORD *)&eventId);
+    sub_1B761C0(&DataManager_TypeInfo, v8);
+    byte_4A2E9DB = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserEventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+  Master_object = (UserEventCooltimeRewardMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (UserEventCooltimeRewardMaster_o *)UserEventCooltimeRewardMaster__GetCurrentLevelEntity(
@@ -58,7 +58,7 @@ int32_t __fastcall EventInfoAreaImproveConfirmDialog__GetCurrentSpotLevel(
       return *p_lv;
     }
 LABEL_11:
-    sub_1B71828(Master_object, v10);
+    sub_1B7641C(Master_object, v10);
   }
   p_lv = (int32_t *)&Master_object->fields.list;
   return *p_lv;
@@ -87,17 +87,17 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Init(
   int32_t v18; // w2
   int32_t v19; // w3
 
-  if ( (byte_4A20567 & 1) == 0 )
+  if ( (byte_4A2E9D9 & 1) == 0 )
   {
-    sub_1B715CC(&LocalizationManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_5511/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, v3);
-    sub_1B715CC(&StringLiteral_5515/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, v4);
-    sub_1B715CC(&StringLiteral_3737/*"COMMON_CONFIRM_CANCEL"*/, v5);
-    sub_1B715CC(&StringLiteral_5510/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, v6);
-    sub_1B715CC(&StringLiteral_5512/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, v7);
-    sub_1B715CC(&StringLiteral_1/*""*/, v8);
-    sub_1B715CC(&StringLiteral_5513/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, v9);
-    byte_4A20567 = 1;
+    sub_1B761C0(&LocalizationManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_5530/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, v3);
+    sub_1B761C0(&StringLiteral_5534/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, v4);
+    sub_1B761C0(&StringLiteral_3754/*"COMMON_CONFIRM_CANCEL"*/, v5);
+    sub_1B761C0(&StringLiteral_5529/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, v6);
+    sub_1B761C0(&StringLiteral_5531/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, v7);
+    sub_1B761C0(&StringLiteral_1/*""*/, v8);
+    sub_1B761C0(&StringLiteral_5532/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, v9);
+    byte_4A2E9D9 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -108,38 +108,38 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Init(
   decideLabel = this->fields.decideLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5515/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5534/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_13;
   UILabel__set_text(decideLabel, (System_String_o *)titleLabel, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_13;
   UILabel__set_text(cancelLabel, (System_String_o *)titleLabel, 0LL);
   messageLabel = this->fields.messageLabel;
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5512/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5531/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_13;
   UILabel__set_text(messageLabel, (System_String_o *)titleLabel, 0LL);
   cautionMessageLabel = this->fields.cautionMessageLabel;
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5510/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5529/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, 0LL);
   if ( !cautionMessageLabel
     || (UILabel__set_text(cautionMessageLabel, (System_String_o *)titleLabel, 0LL),
         subTitleLabel = this->fields.subTitleLabel,
-        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, 0LL),
+        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5532/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, 0LL),
         !subTitleLabel)
     || (UILabel__set_text(subTitleLabel, (System_String_o *)titleLabel, 0LL),
         consumeItemTitle = this->fields.consumeItemTitle,
-        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5511/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, 0LL),
+        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5530/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, 0LL),
         !consumeItemTitle) )
   {
 LABEL_13:
-    sub_1B71828(titleLabel, v10);
+    sub_1B7641C(titleLabel, v10);
   }
   UILabel__set_text(consumeItemTitle, (System_String_o *)titleLabel, 0LL);
   this->fields.callback = 0LL;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.callback, 0, v18, v19);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.callback, 0, v18, v19);
 }
 
 
@@ -153,21 +153,21 @@ void __fastcall EventInfoAreaImproveConfirmDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A2056B & 1) == 0 )
+  if ( (byte_4A2E9DD & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__, v3);
-    sub_1B715CC(&Method_EventInfoAreaImproveConfirmDialog__OnClickCancelButton_b__17_0__, v4);
-    byte_4A2056B = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__, v3);
+    sub_1B761C0(&Method_EventInfoAreaImproveConfirmDialog__OnClickCancelButton_b__17_0__, v4);
+    byte_4A2E9DD = 1;
   }
   if ( !this->fields.isClose )
   {
     v5 = Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B715E4(Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B715B0(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B761D8(Method_EventInfoAreaImproveConfirmDialog_OnClickCancelButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
-    v7 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -195,13 +195,13 @@ void __fastcall EventInfoAreaImproveConfirmDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v12; // x0
   System_Action_o *v13; // x20
 
-  if ( (byte_4A2056A & 1) == 0 )
+  if ( (byte_4A2E9DC & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__, v5);
-    sub_1B715CC(&Method_EventInfoAreaImproveConfirmDialog__OnClickDecideButton_b__16_0__, v6);
-    sub_1B715CC(&TerminalPramsManager_TypeInfo, v7);
-    byte_4A2056A = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__, v5);
+    sub_1B761C0(&Method_EventInfoAreaImproveConfirmDialog__OnClickDecideButton_b__16_0__, v6);
+    sub_1B761C0(&TerminalPramsManager_TypeInfo, v7);
+    byte_4A2E9DC = 1;
   }
   if ( !this->fields.isClose )
   {
@@ -214,13 +214,13 @@ void __fastcall EventInfoAreaImproveConfirmDialog__OnClickDecideButton(
     }
     p_eventAreaImproveResultInfo = (ServantStatusBattleListViewItem_o *)&v9->static_fields->eventAreaImproveResultInfo;
     p_eventAreaImproveResultInfo->klass = (ServantStatusBattleListViewItem_c *)tempAreaImproveResultInfo;
-    sub_1B71570(p_eventAreaImproveResultInfo, (int32_t)tempAreaImproveResultInfo, v2, v3);
+    sub_1B76164(p_eventAreaImproveResultInfo, (int32_t)tempAreaImproveResultInfo, v2, v3);
     v11 = Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1B715E4(Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1B715B0(v11, v11[4]);
+      v11 = (_QWORD *)sub_1B761D8(Method_EventInfoAreaImproveConfirmDialog_OnClickDecideButton__);
+    v12 = (System_Reflection_MethodBase_o *)sub_1B761A4(v11, v11[4]);
     OverwriteAssetSoundName__PlaySystemSe(v12, 8, 0LL);
-    v13 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       v13,
       (Il2CppObject *)this,
@@ -273,29 +273,29 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
   int32_t v39; // w2
   int32_t v40; // w3
 
-  if ( (byte_4A20568 & 1) == 0 )
+  if ( (byte_4A2E9DA & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B715CC(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, v9);
-    sub_1B715CC(&Method_DataManager_GetMaster_QuestMaster___, v10);
-    sub_1B715CC(&DataManager_TypeInfo, v11);
-    sub_1B715CC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v12);
-    sub_1B715CC(&EventAreaImproveResultInfo_TypeInfo, v13);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v14);
-    sub_1B715CC(&Method_EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0__Open_b__0__, v15);
-    sub_1B715CC(&EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0_TypeInfo, v16);
-    sub_1B715CC(&StringLiteral_5514/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, v17);
-    byte_4A20568 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B761C0(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, v9);
+    sub_1B761C0(&Method_DataManager_GetMaster_QuestMaster___, v10);
+    sub_1B761C0(&DataManager_TypeInfo, v11);
+    sub_1B761C0(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v12);
+    sub_1B761C0(&EventAreaImproveResultInfo_TypeInfo, v13);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v14);
+    sub_1B761C0(&Method_EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0__Open_b__0__, v15);
+    sub_1B761C0(&EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0_TypeInfo, v16);
+    sub_1B761C0(&StringLiteral_5533/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, v17);
+    byte_4A2E9DA = 1;
   }
-  v18 = sub_1B71818(EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0_TypeInfo);
+  v18 = sub_1B7640C(EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !v18 )
     goto LABEL_16;
   *(_QWORD *)(v18 + 16) = callback;
   v23 = (struct CommonConfirmDialog_ClickDelegate_o **)(v18 + 16);
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)callback, v21, v22);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v18 + 16), (int32_t)callback, v21, v22);
   EventInfoAreaImproveConfirmDialog__Init(this, v24);
-  v25 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
   System_Action___ctor(
     v25,
     (Il2CppObject *)v18,
@@ -303,18 +303,18 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
     0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Master_object )
     goto LABEL_16;
   Master_object = DataMasterBase_object__object__int___GetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                     questId,
-                    (const MethodInfo_30F8760 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                    (const MethodInfo_30FF780 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( !Master_object )
     goto LABEL_16;
   v26 = (QuestEntity_o *)Master_object;
   v27 = *((_DWORD *)Master_object + 12);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_object )
     goto LABEL_16;
   AvailableMaxLevelEntity = (EventInfoAreaImproveConfirmDialog_o *)EventCooltimeRewardMaster__GetAvailableMaxLevelEntity(
@@ -331,15 +331,15 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
                          v27,
                          (EventCooltimeRewardEntity_o *)AvailableMaxLevelEntity,
                          v29);
-    v32 = (EventAreaImproveResultInfo_o *)sub_1B71818(EventAreaImproveResultInfo_TypeInfo);
+    v32 = (EventAreaImproveResultInfo_o *)sub_1B7640C(EventAreaImproveResultInfo_TypeInfo);
     EventAreaImproveResultInfo___ctor(v32, eventId, v27, CurrentSpotLevel, 0LL);
     this->fields.tempAreaImproveResultInfo = v32;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.tempAreaImproveResultInfo, (int32_t)v32, v33, v34);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.tempAreaImproveResultInfo, (int32_t)v32, v33, v34);
     BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5514/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5533/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, 0LL);
     Master_object = System_String__Format(v36, (Il2CppObject *)v30->fields.basePanel, 0LL);
     if ( titleLabel )
     {
@@ -354,12 +354,12 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
           0LL);
         v38 = *v23;
         this->fields.callback = *v23;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.callback, (int32_t)v38, v39, v40);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.callback, (int32_t)v38, v39, v40);
         return;
       }
     }
 LABEL_16:
-    sub_1B71828(Master_object, v20);
+    sub_1B7641C(Master_object, v20);
   }
   ActionExtensions__Call(v25, 0LL);
 }
@@ -405,10 +405,10 @@ UnityEngine_GameObject_o *__fastcall EventInfoAreaImproveConfirmDialog__get_clos
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A2056C & 1) == 0 )
+  if ( (byte_4A2E9DE & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2056C = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2E9DE = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -417,7 +417,7 @@ UnityEngine_GameObject_o *__fastcall EventInfoAreaImproveConfirmDialog__get_clos
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1B71828(0LL, v4);
+    sub_1B7641C(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 

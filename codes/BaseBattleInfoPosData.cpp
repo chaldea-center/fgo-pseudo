@@ -12,7 +12,7 @@ void __fastcall BaseBattleInfoPosData__Init(
   int32_t v3; // w3
 
   this->fields._Perf_k__BackingField = perf;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
 }
 
 
@@ -45,10 +45,10 @@ UnityEngine_Vector3_o __fastcall BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A28BB1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -69,5 +69,5 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
   int32_t v3; // w3
 
   this->fields._Perf_k__BackingField = value;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

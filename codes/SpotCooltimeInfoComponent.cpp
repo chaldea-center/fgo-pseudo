@@ -47,19 +47,19 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetCooltimeText(
   unsigned int v25; // [xsp+18h] [xbp-38h] BYREF
   unsigned int v26; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A23D71 & 1) == 0 )
+  if ( (byte_4A321EC & 1) == 0 )
   {
-    sub_1B715CC(&int_TypeInfo, *(_QWORD *)&remainTime);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v4);
-    sub_1B715CC(&StringLiteral_12157/*"SPOT_COOLTIME_REMAIN"*/, v5);
-    sub_1B715CC(&StringLiteral_12155/*"SPOT_COOLTIME_NONE"*/, v6);
-    byte_4A23D71 = 1;
+    sub_1B761C0(&int_TypeInfo, *(_QWORD *)&remainTime);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v4);
+    sub_1B761C0(&StringLiteral_12194/*"SPOT_COOLTIME_REMAIN"*/, v5);
+    sub_1B761C0(&StringLiteral_12192/*"SPOT_COOLTIME_NONE"*/, v6);
+    byte_4A321EC = 1;
   }
   if ( remainTime <= 0 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_12155/*"SPOT_COOLTIME_NONE"*/, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_12192/*"SPOT_COOLTIME_NONE"*/, 0LL);
   }
   else
   {
@@ -68,14 +68,14 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetCooltimeText(
     v9 = remainTime % 0xE10u / 0x3C;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12157/*"SPOT_COOLTIME_REMAIN"*/, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12194/*"SPOT_COOLTIME_REMAIN"*/, 0LL);
     v26 = v7;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v11, v12, v13);
     v25 = v9;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v15, v16, v17);
     v24 = v8;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, v19, v20, v21);
-    return System_String__Format_61519944(v10, v14, v18, v22, 0LL);
+    return System_String__Format_61549500(v10, v14, v18, v22, 0LL);
   }
 }
 
@@ -105,28 +105,28 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
   int64_t maxRewardNum; // [xsp+8h] [xbp-58h] BYREF
   int64_t receivedRewardNum; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4A23D76 & 1) == 0 )
+  if ( (byte_4A321F1 & 1) == 0 )
   {
-    sub_1B715CC(&long_TypeInfo, method);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v3);
-    sub_1B715CC(&StringLiteral_12159/*"SPOT_COOLTIME_REWARD_COUNT"*/, v4);
-    sub_1B715CC(&StringLiteral_12162/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/, v5);
-    sub_1B715CC(&StringLiteral_12161/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/, v6);
-    sub_1B715CC(&StringLiteral_12160/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/, v7);
-    byte_4A23D76 = 1;
+    sub_1B761C0(&long_TypeInfo, method);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v3);
+    sub_1B761C0(&StringLiteral_12196/*"SPOT_COOLTIME_REWARD_COUNT"*/, v4);
+    sub_1B761C0(&StringLiteral_12199/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/, v5);
+    sub_1B761C0(&StringLiteral_12198/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/, v6);
+    sub_1B761C0(&StringLiteral_12197/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/, v7);
+    byte_4A321F1 = 1;
   }
   isQpType = this->fields.isQpType;
   remainTime = this->fields.remainTime;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( remainTime <= 0 )
-    v10 = (System_String_o **)&StringLiteral_12162/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/;
+    v10 = (System_String_o **)&StringLiteral_12199/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/;
   else
-    v10 = (System_String_o **)&StringLiteral_12161/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/;
+    v10 = (System_String_o **)&StringLiteral_12198/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/;
   if ( remainTime <= 0 )
-    v11 = (System_String_o **)&StringLiteral_12160/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/;
+    v11 = (System_String_o **)&StringLiteral_12197/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/;
   else
-    v11 = (System_String_o **)&StringLiteral_12159/*"SPOT_COOLTIME_REWARD_COUNT"*/;
+    v11 = (System_String_o **)&StringLiteral_12196/*"SPOT_COOLTIME_REWARD_COUNT"*/;
   if ( !isQpType )
     v10 = v11;
   v12 = LocalizationManager__Get(*v10, 0LL);
@@ -134,7 +134,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &receivedRewardNum, v13, v14, v15);
   maxRewardNum = this->fields.maxRewardNum;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &maxRewardNum, v17, v18, v19);
-  return System_String__Format_61519876(v12, v16, v20, 0LL);
+  return System_String__Format_61549432(v12, v16, v20, 0LL);
 }
 
 
@@ -177,10 +177,10 @@ void __fastcall SpotCooltimeInfoComponent__OnDestroyObject(SpotCooltimeInfoCompo
   struct SrcSpotBasePrefab_o *v6; // x8
   struct MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x8
 
-  if ( (byte_4A23D77 & 1) == 0 )
+  if ( (byte_4A321F2 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A23D77 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A321F2 = 1;
   }
   targetSpot = (UnityEngine_Object_o *)this->fields.targetSpot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -190,7 +190,7 @@ void __fastcall SpotCooltimeInfoComponent__OnDestroyObject(SpotCooltimeInfoCompo
   {
     v6 = this->fields.targetSpot;
     if ( !v6 || (mMapCtrl_SpotInfo = v6->fields.mMapCtrl_SpotInfo) == 0LL )
-      sub_1B71828(v4, v5);
+      sub_1B7641C(v4, v5);
     *(_QWORD *)&mMapCtrl_SpotInfo->fields.dispType = 0x100000001LL;
   }
 }
@@ -221,11 +221,11 @@ void __fastcall SpotCooltimeInfoComponent__Setup(
   const MethodInfo *v23; // x2
   const MethodInfo *v24; // x1
 
-  if ( (byte_4A23D72 & 1) == 0 )
+  if ( (byte_4A321ED & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_GiftMaster___, userCooltimeRewardEntity);
-    sub_1B715CC(&DataManager_TypeInfo, v7);
-    byte_4A23D72 = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_GiftMaster___, userCooltimeRewardEntity);
+    sub_1B761C0(&DataManager_TypeInfo, v7);
+    byte_4A321ED = 1;
   }
   if ( userCooltimeRewardEntity )
   {
@@ -234,7 +234,7 @@ void __fastcall SpotCooltimeInfoComponent__Setup(
                                   0LL);
     this->fields.cooltimeRewardEntity = EventCooltimeRewardEntity;
     p_cooltimeRewardEntity = &this->fields.cooltimeRewardEntity;
-    sub_1B71570(
+    sub_1B76164(
       (ServantStatusBattleListViewItem_o *)&this->fields.cooltimeRewardEntity,
       (int32_t)EventCooltimeRewardEntity,
       v10,
@@ -242,16 +242,16 @@ void __fastcall SpotCooltimeInfoComponent__Setup(
     if ( this->fields.cooltimeRewardEntity )
     {
       this->fields.userCooltimeRewardEntity = userCooltimeRewardEntity;
-      sub_1B71570(
+      sub_1B76164(
         (ServantStatusBattleListViewItem_o *)&this->fields.userCooltimeRewardEntity,
         (int32_t)userCooltimeRewardEntity,
         v12,
         v13);
       this->fields.targetSpot = targetSpot;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.targetSpot, (int32_t)targetSpot, v14, v15);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.targetSpot, (int32_t)targetSpot, v14, v15);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_GiftMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_GiftMaster___);
       if ( !*p_cooltimeRewardEntity
         || !Master_object
         || (DataById = GiftMaster__getDataById(
@@ -259,10 +259,10 @@ void __fastcall SpotCooltimeInfoComponent__Setup(
                          (*p_cooltimeRewardEntity)->fields.giftId,
                          0LL),
             this->fields.giftEntity = DataById,
-            sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.giftEntity, (int32_t)DataById, v19, v20),
+            sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.giftEntity, (int32_t)DataById, v19, v20),
             (cooltimeRewardEntity = this->fields.cooltimeRewardEntity) == 0LL) )
       {
-        sub_1B71828(Master_object, v17);
+        sub_1B7641C(Master_object, v17);
       }
       SpotCooltimeInfoComponent__SetupBaseUI(this, cooltimeRewardEntity->fields.eventId, v21);
       SpotCooltimeInfoComponent__SetupRewardInfo(this, this->fields.giftEntity, v23);
@@ -289,24 +289,24 @@ void __fastcall SpotCooltimeInfoComponent__SetupBaseUI(
   unsigned __int64 v13; // x24
   UISprite_o *v14; // x20
 
-  if ( (byte_4A23D73 & 1) == 0 )
+  if ( (byte_4A321EE & 1) == 0 )
   {
-    sub_1B715CC(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B715CC(&StringLiteral_23375/*"spot_info_gauge_base"*/, v5);
-    sub_1B715CC(&StringLiteral_23374/*"spot_info_gauge"*/, v6);
-    sub_1B715CC(&StringLiteral_23379/*"spot_info_window"*/, v7);
-    byte_4A23D73 = 1;
+    sub_1B761C0(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B761C0(&StringLiteral_23421/*"spot_info_gauge_base"*/, v5);
+    sub_1B761C0(&StringLiteral_23420/*"spot_info_gauge"*/, v6);
+    sub_1B761C0(&StringLiteral_23425/*"spot_info_window"*/, v7);
+    byte_4A321EE = 1;
   }
   rewardItemInfoRoot = this->fields.rewardItemInfoRoot;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_37654552(eventId, rewardItemInfoRoot, (System_String_o *)StringLiteral_23379/*"spot_info_window"*/, 0LL);
-  AtlasManager__SetEventUI_37654552(eventId, this->fields.rewardQpInfoRoot, (System_String_o *)StringLiteral_23379/*"spot_info_window"*/, 0LL);
-  AtlasManager__SetEventUI_37654552(eventId, this->fields.gaugeBaseSprite, (System_String_o *)StringLiteral_23375/*"spot_info_gauge_base"*/, 0LL);
-  v9 = AtlasManager__SetEventUI_37654552(eventId, this->fields.gaugeSprite, (System_String_o *)StringLiteral_23374/*"spot_info_gauge"*/, 0LL);
+  AtlasManager__SetEventUI_37679488(eventId, rewardItemInfoRoot, (System_String_o *)StringLiteral_23425/*"spot_info_window"*/, 0LL);
+  AtlasManager__SetEventUI_37679488(eventId, this->fields.rewardQpInfoRoot, (System_String_o *)StringLiteral_23425/*"spot_info_window"*/, 0LL);
+  AtlasManager__SetEventUI_37679488(eventId, this->fields.gaugeBaseSprite, (System_String_o *)StringLiteral_23421/*"spot_info_gauge_base"*/, 0LL);
+  v9 = AtlasManager__SetEventUI_37679488(eventId, this->fields.gaugeSprite, (System_String_o *)StringLiteral_23420/*"spot_info_gauge"*/, 0LL);
   gaugeLinesSprite = this->fields.gaugeLinesSprite;
   if ( !gaugeLinesSprite )
-    sub_1B71828(v9, v10);
+    sub_1B7641C(v9, v10);
   v12 = *(_QWORD *)&gaugeLinesSprite->max_length;
   if ( (int)v12 >= 1 )
   {
@@ -314,11 +314,11 @@ void __fastcall SpotCooltimeInfoComponent__SetupBaseUI(
     do
     {
       if ( v13 >= (unsigned int)v12 )
-        sub_1B71830(v9, v10);
+        sub_1B76424(v9, v10);
       v14 = gaugeLinesSprite->m_Items[v13];
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      v9 = AtlasManager__SetEventUI_37654552(eventId, v14, (System_String_o *)StringLiteral_23375/*"spot_info_gauge_base"*/, 0LL);
+      v9 = AtlasManager__SetEventUI_37679488(eventId, v14, (System_String_o *)StringLiteral_23421/*"spot_info_gauge_base"*/, 0LL);
       LODWORD(v12) = gaugeLinesSprite->max_length;
       ++v13;
     }
@@ -349,10 +349,10 @@ void __fastcall SpotCooltimeInfoComponent__SetupRewardInfo(
   __int64 v19; // x1
   UnityEngine_GameObject_o *gaugeLineGridRoot; // x8
 
-  if ( (byte_4A23D75 & 1) == 0 )
+  if ( (byte_4A321F0 & 1) == 0 )
   {
-    sub_1B715CC(&AtlasManager_TypeInfo, giftEntity);
-    byte_4A23D75 = 1;
+    sub_1B761C0(&AtlasManager_TypeInfo, giftEntity);
+    byte_4A321F0 = 1;
   }
   if ( giftEntity )
   {
@@ -442,7 +442,7 @@ LABEL_30:
               (isQp = (UnityEngine_Component_o *)this->fields.rewardServantItemRoot) == 0LL) )
         {
 LABEL_39:
-          sub_1B71828(isQp, v19);
+          sub_1B7641C(isQp, v19);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)isQp, v5, 0LL);
         break;
@@ -486,10 +486,10 @@ void __fastcall SpotCooltimeInfoComponent__UpdateDisp(SpotCooltimeInfoComponent_
   System_DateTime_o v23; // 0:x0.8
 
   v2 = this;
-  if ( (byte_4A23D70 & 1) == 0 )
+  if ( (byte_4A321EB & 1) == 0 )
   {
-    this = (SpotCooltimeInfoComponent_o *)sub_1B715CC(&NetworkManager_TypeInfo, method);
-    byte_4A23D70 = 1;
+    this = (SpotCooltimeInfoComponent_o *)sub_1B761C0(&NetworkManager_TypeInfo, method);
+    byte_4A321EB = 1;
   }
   userCooltimeRewardEntity = v2->fields.userCooltimeRewardEntity;
   if ( !userCooltimeRewardEntity || !v2->fields.cooltimeRewardEntity )
@@ -515,7 +515,7 @@ LABEL_16:
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   v23.fields._dateData = NetworkManager__getDateTime(0LL).fields._dateData;
-  v6 = NetworkManager__getTime_38271424(v23, 0LL) - 1;
+  v6 = NetworkManager__getTime_38296364(v23, 0LL) - 1;
   this = (SpotCooltimeInfoComponent_o *)v2->fields.cooltimeRewardEntity;
   v7 = (v6 - v2->fields.collectedAt) & ~((v6 - v2->fields.collectedAt) >> 63);
   v2->fields.currentTime = v6;
@@ -606,7 +606,7 @@ LABEL_16:
       }
     }
 LABEL_37:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
 }
 
@@ -630,19 +630,19 @@ void __fastcall SpotCooltimeInfoComponent__UpdateUserData(SpotCooltimeInfoCompon
   int32_t v17; // w3
   const MethodInfo *v18; // x1
 
-  if ( (byte_4A23D74 & 1) == 0 )
+  if ( (byte_4A321EF & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_GiftMaster___, method);
-    sub_1B715CC(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, v3);
-    sub_1B715CC(&DataManager_TypeInfo, v4);
-    byte_4A23D74 = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_GiftMaster___, method);
+    sub_1B761C0(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, v3);
+    sub_1B761C0(&DataManager_TypeInfo, v4);
+    byte_4A321EF = 1;
   }
   p_userCooltimeRewardEntity = &this->fields.userCooltimeRewardEntity;
   if ( this->fields.userCooltimeRewardEntity )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
     if ( !*p_userCooltimeRewardEntity || !Master_object )
       goto LABEL_16;
     CurrentLevelEntity = UserEventCooltimeRewardMaster__GetCurrentLevelEntity(
@@ -651,7 +651,7 @@ void __fastcall SpotCooltimeInfoComponent__UpdateUserData(SpotCooltimeInfoCompon
                            (*p_userCooltimeRewardEntity)->fields.spotId,
                            0LL);
     *p_userCooltimeRewardEntity = CurrentLevelEntity;
-    sub_1B71570(
+    sub_1B76164(
       (ServantStatusBattleListViewItem_o *)&this->fields.userCooltimeRewardEntity,
       (int32_t)CurrentLevelEntity,
       v9,
@@ -663,7 +663,7 @@ void __fastcall SpotCooltimeInfoComponent__UpdateUserData(SpotCooltimeInfoCompon
                                     0LL);
       this->fields.cooltimeRewardEntity = EventCooltimeRewardEntity;
       p_cooltimeRewardEntity = &this->fields.cooltimeRewardEntity;
-      sub_1B71570(
+      sub_1B76164(
         (ServantStatusBattleListViewItem_o *)&this->fields.cooltimeRewardEntity,
         (int32_t)EventCooltimeRewardEntity,
         v13,
@@ -672,7 +672,7 @@ void __fastcall SpotCooltimeInfoComponent__UpdateUserData(SpotCooltimeInfoCompon
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_GiftMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_GiftMaster___);
         if ( *p_cooltimeRewardEntity && Master_object )
         {
           DataById = GiftMaster__getDataById(
@@ -680,12 +680,12 @@ void __fastcall SpotCooltimeInfoComponent__UpdateUserData(SpotCooltimeInfoCompon
                        (*p_cooltimeRewardEntity)->fields.giftId,
                        0LL);
           this->fields.giftEntity = DataById;
-          sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.giftEntity, (int32_t)DataById, v16, v17);
+          sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.giftEntity, (int32_t)DataById, v16, v17);
           SpotCooltimeInfoComponent__UpdateDisp(this, v18);
           return;
         }
 LABEL_16:
-        sub_1B71828(Master_object, v7);
+        sub_1B7641C(Master_object, v7);
       }
     }
   }

@@ -4,14 +4,14 @@ void __fastcall EventInfoCondenseLabel___ctor(EventInfoCondenseLabel_o *this, co
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_4A20607 & 1) == 0 )
+  if ( (byte_4A2EA79 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_1/*""*/, method);
-    byte_4A20607 = 1;
+    sub_1B761C0(&StringLiteral_1/*""*/, method);
+    byte_4A2EA79 = 1;
   }
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.beforeText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.beforeText, v5, v2, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.beforeText, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -26,10 +26,10 @@ void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel
   struct UILabel_o *v8; // x8
   struct System_String_o *mText; // x1
 
-  if ( (byte_4A20606 & 1) == 0 )
+  if ( (byte_4A2EA78 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A20606 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2EA78 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -41,10 +41,10 @@ void __fastcall EventInfoCondenseLabel__SetCondensedScale(EventInfoCondenseLabel
     if ( !v8
       || (mText = v8->fields.mText,
           this->fields.beforeText = mText,
-          sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.beforeText, (int32_t)mText, v6, v7),
+          sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.beforeText, (int32_t)mText, v6, v7),
           (v4 = this->fields.label) == 0LL) )
     {
-      sub_1B71828(v4, v5);
+      sub_1B7641C(v4, v5);
     }
     UILabel__SetCondensedScale(v4, this->fields.condensedWidth, 0LL);
   }
@@ -60,19 +60,19 @@ void __fastcall EventInfoCondenseLabel__Start(EventInfoCondenseLabel_o *this, co
   int32_t v7; // w3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4A20604 & 1) == 0 )
+  if ( (byte_4A2EA76 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
-    byte_4A20604 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
+    byte_4A2EA76 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B71828(0LL, v4);
+    sub_1B7641C(0LL, v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   this->fields.label = (struct UILabel_o *)Component_object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.label, (int32_t)Component_object, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.label, (int32_t)Component_object, v6, v7);
   EventInfoCondenseLabel__SetCondensedScale(this, v8);
 }
 
@@ -85,10 +85,10 @@ void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, c
   struct UILabel_o *v6; // x8
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A20605 & 1) == 0 )
+  if ( (byte_4A2EA77 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A20605 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2EA77 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -98,7 +98,7 @@ void __fastcall EventInfoCondenseLabel__Update(EventInfoCondenseLabel_o *this, c
   {
     v6 = this->fields.label;
     if ( !v6 )
-      sub_1B71828(v4, v5);
+      sub_1B7641C(v4, v5);
     if ( System_String__op_Inequality(this->fields.beforeText, v6->fields.mText, 0LL) )
       EventInfoCondenseLabel__SetCondensedScale(this, v7);
   }

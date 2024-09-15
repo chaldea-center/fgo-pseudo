@@ -2,14 +2,14 @@ void __fastcall ServantPassiveSkillReleaseEntity___ctor(
         ServantPassiveSkillReleaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A20281 & 1) == 0 )
+  if ( (byte_4A2E6F3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A20281 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2E6F3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,17 +21,17 @@ System_String_o *__fastcall ServantPassiveSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4A2027F & 1) == 0 )
+  if ( (byte_4A2E6F1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
-    byte_4A2027F = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
+    byte_4A2E6F1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_2E59F5C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E60F7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -88,52 +88,52 @@ System_String_o *__fastcall ServantPassiveSkillReleaseEntity__getCreatePrimaryke
   v30 = svtId;
   v27 = idx;
   v28 = priority;
-  if ( (byte_4A2027E & 1) == 0 )
+  if ( (byte_4A2E6F0 & 1) == 0 )
   {
-    sub_1B715CC(&string___TypeInfo, *(_QWORD *)&num);
-    sub_1B715CC(&StringLiteral_1545/*":"*/, v5);
-    byte_4A2027E = 1;
+    sub_1B761C0(&string___TypeInfo, *(_QWORD *)&num);
+    sub_1B761C0(&StringLiteral_1544/*":"*/, v5);
+    byte_4A2E6F0 = 1;
   }
-  v6 = sub_1B71674(string___TypeInfo, 7LL);
+  v6 = sub_1B76268(string___TypeInfo, 7LL);
   v7 = System_Int32__ToString((int32_t)&v30, 0LL);
   if ( !v6 )
-    sub_1B71828(v7, v8);
+    sub_1B7641C(v7, v8);
   if ( !*(_DWORD *)(v6 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v6 + 32) = v7;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
   if ( *(_DWORD *)(v6 + 24) <= 1u )
     goto LABEL_12;
-  v13 = StringLiteral_1545/*":"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_1545/*":"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
+  v13 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v6 + 40) = StringLiteral_1544/*":"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
   v7 = System_Int32__ToString((int32_t)&v29, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v6 + 48) = v7;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_12;
-  v18 = StringLiteral_1545/*":"*/;
-  *(_QWORD *)(v6 + 56) = StringLiteral_1545/*":"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
+  v18 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v6 + 56) = StringLiteral_1544/*":"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
   v7 = System_Int32__ToString((int32_t)&v28, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 4u
     || (*(_QWORD *)(v6 + 64) = v7,
-        sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
+        sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
         *(_DWORD *)(v6 + 24) <= 5u)
-    || (v23 = StringLiteral_1545/*":"*/,
-        *(_QWORD *)(v6 + 72) = StringLiteral_1545/*":"*/,
-        sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
+    || (v23 = StringLiteral_1544/*":"*/,
+        *(_QWORD *)(v6 + 72) = StringLiteral_1544/*":"*/,
+        sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
         v7 = System_Int32__ToString((int32_t)&v27, 0LL),
         *(_DWORD *)(v6 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1B71830(v7, v8);
+    sub_1B76424(v7, v8);
   }
   *(_QWORD *)(v6 + 80) = v7;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
-  return System_String__Concat_61519032((System_String_array *)v6, 0LL);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
+  return System_String__Concat_61548588((System_String_array *)v6, 0LL);
 }
 
 
@@ -153,11 +153,11 @@ bool __fastcall ServantPassiveSkillReleaseEntity__isUse(
   int32_t v14; // w21
   int64_t v15; // x19
 
-  if ( (byte_4A20280 & 1) == 0 )
+  if ( (byte_4A2E6F2 & 1) == 0 )
   {
-    sub_1B715CC(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
-    sub_1B715CC(&NetworkManager_TypeInfo, v7);
-    byte_4A20280 = 1;
+    sub_1B761C0(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1B761C0(&NetworkManager_TypeInfo, v7);
+    byte_4A2E6F2 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )

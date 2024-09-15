@@ -38,18 +38,18 @@ LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(c
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A21256 & 1) == 0 )
+  if ( (byte_4A2F6C9 & 1) == 0 )
   {
-    sub_1B715CC(&LocalNotificationService_TypeInfo, v1);
-    byte_4A21256 = 1;
+    sub_1B761C0(&LocalNotificationService_TypeInfo, v1);
+    byte_4A2F6C9 = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1B71818(LocalNotificationService_TypeInfo);
+    v3 = (Il2CppObject *)sub_1B7640C(LocalNotificationService_TypeInfo);
     System_Object___ctor(v3, 0LL);
     LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1B71570(
+    sub_1B76164(
       (ServantStatusBattleListViewItem_o *)LocalNotificationService_TypeInfo->static_fields,
       (int32_t)v3,
       v4,

@@ -14,21 +14,21 @@ void __fastcall BattleUseItemRequest__beginRequest(
   const MethodInfo *v14; // x1
   const MethodInfo *v15; // x1
 
-  if ( (byte_4A212AA & 1) == 0 )
+  if ( (byte_4A2F71D & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
-    sub_1B715CC(&StringLiteral_22123/*"num"*/, v9);
-    sub_1B715CC(&StringLiteral_19081/*"eventId"*/, v10);
-    sub_1B715CC(&StringLiteral_24299/*"useItemId"*/, v11);
-    byte_4A212AA = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+    sub_1B761C0(&StringLiteral_22169/*"num"*/, v9);
+    sub_1B761C0(&StringLiteral_19126/*"eventId"*/, v10);
+    sub_1B761C0(&StringLiteral_24345/*"useItemId"*/, v11);
+    byte_4A2F71D = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19081/*"eventId"*/,
+    (System_String_o *)StringLiteral_19126/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24299/*"useItemId"*/, itemId, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22123/*"num"*/, num, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24345/*"useItemId"*/, itemId, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22169/*"num"*/, num, v13);
   RequestBase__addBaseField((RequestBase_o *)this, v14);
   RequestBase__WriteParameter((RequestBase_o *)this, v15);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,12 +46,12 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4A212A9 & 1) == 0 )
+  if ( (byte_4A2F71C & 1) == 0 )
   {
-    sub_1B715CC(&AndroidUtil_TypeInfo, method);
-    sub_1B715CC(&DatFileName_TypeInfo, v2);
-    sub_1B715CC(&StringLiteral_1123/*"/"*/, v3);
-    byte_4A212A9 = 1;
+    sub_1B761C0(&AndroidUtil_TypeInfo, method);
+    sub_1B761C0(&DatFileName_TypeInfo, v2);
+    sub_1B761C0(&StringLiteral_1123/*"/"*/, v3);
+    byte_4A2F71C = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -59,7 +59,7 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(30, 0LL);
-  return System_String__Concat_61516764(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+  return System_String__Concat_61546320(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
 }
 
 
@@ -68,16 +68,16 @@ System_String_o *__fastcall BattleUseItemRequest__getURL(BattleUseItemRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A212A8 & 1) == 0 )
+  if ( (byte_4A2F71B & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_17052/*"battle/useItem"*/, v2);
-    byte_4A212A8 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_17096/*"battle/useItem"*/, v2);
+    byte_4A2F71B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_17052/*"battle/useItem"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_17096/*"battle/useItem"*/, 0LL);
 }
 
 
@@ -96,12 +96,12 @@ void __fastcall BattleUseItemRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A212AB & 1) == 0 )
+  if ( (byte_4A2F71E & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A212AB = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F71E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -128,7 +128,7 @@ void __fastcall BattleUseItemRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

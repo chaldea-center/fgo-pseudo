@@ -57,32 +57,32 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateChapterList(
   Il2CppObject *v45; // x0
   int32_t kind; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A1BD85 & 1) == 0 )
+  if ( (byte_4A2A1EA & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___,
       folderInfos);
-    sub_1B715CC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
-    sub_1B715CC(&Method_System_Collections_Generic_List_ListViewItem__Find__, v8);
-    sub_1B715CC(
+    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
+    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__Find__, v8);
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Count__,
       v9);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__get_Count__, v10);
-    sub_1B715CC(
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__get_Count__, v10);
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__,
       v11);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__get_Item__, v12);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B715CC(&System_Predicate_ListViewItem__TypeInfo, v14);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewItem_TypeInfo, v15);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v16);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0__CreateChapterList_b__0__, v17);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_TypeInfo, v18);
-    sub_1B715CC(&StringLiteral_15140/*"UpdateScrollPosition"*/, v19);
-    byte_4A1BD85 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__get_Item__, v12);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v13);
+    sub_1B761C0(&System_Predicate_ListViewItem__TypeInfo, v14);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewItem_TypeInfo, v15);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v16);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0__CreateChapterList_b__0__, v17);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_TypeInfo, v18);
+    sub_1B761C0(&StringLiteral_15183/*"UpdateScrollPosition"*/, v19);
+    byte_4A2A1EA = 1;
   }
   kind = 0;
-  v20 = sub_1B71818(RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_TypeInfo);
+  v20 = sub_1B7640C(RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   ListViewManager__SetArrangementPitchY((ListViewManager_o *)this, (float)this->fields.warArrangementPitchY, 0LL);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -98,8 +98,8 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateChapterList(
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)folderInfos,
                  v22,
-                 (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__);
-        v25 = (RecommendSupportQuestBoardListViewItem_o *)sub_1B71818(RecommendSupportQuestBoardListViewItem_TypeInfo);
+                 (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__);
+        v25 = (RecommendSupportQuestBoardListViewItem_o *)sub_1B7640C(RecommendSupportQuestBoardListViewItem_TypeInfo);
         RecommendSupportQuestBoardListViewItem___ctor(
           v25,
           v22,
@@ -119,26 +119,26 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateChapterList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v25,
-            *(const MethodInfo_34D0260 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
         }
         else
         {
           v34 = &items->obj.klass + v33;
           itemList->fields._size = v33 + 1;
           v34[4] = (Il2CppClass *)v25;
-          sub_1B71570((ServantStatusBattleListViewItem_o *)(v34 + 4), (int32_t)v25, v29, v30);
+          sub_1B76164((ServantStatusBattleListViewItem_o *)(v34 + 4), (int32_t)v25, v29, v30);
         }
         if ( size == ++v22 )
           goto LABEL_12;
       }
 LABEL_37:
-      sub_1B71828(titleInfo, hierarchyIndex);
+      sub_1B7641C(titleInfo, hierarchyIndex);
     }
   }
 LABEL_12:
-  v35 = (struct System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__o *)System_Linq_Enumerable__ToList_object_((System_Collections_Generic_IEnumerable_TSource__o *)folderInfos, (const MethodInfo_2E97ADC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___);
+  v35 = (struct System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__o *)System_Linq_Enumerable__ToList_object_((System_Collections_Generic_IEnumerable_TSource__o *)folderInfos, (const MethodInfo_2E9EAFC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___);
   this->fields.currentFolderInfoData = v35;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.currentFolderInfoData, (int32_t)v35, v36, v37);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.currentFolderInfoData, (int32_t)v35, v36, v37);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_37;
@@ -148,12 +148,12 @@ LABEL_12:
   v38 = ((unsigned __int8)titleInfo & 1) != 0 ? kind : 91;
   TitleInfoControl__setTitleImg(this->fields.titleInfo, v38, 0, 0, 0LL);
   selectWarIdData = this->fields.selectWarIdData;
-  titleInfo = (TitleInfoControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  titleInfo = (TitleInfoControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !titleInfo || !selectWarIdData )
     goto LABEL_37;
   titleImg_low = SLODWORD(titleInfo->fields.titleImg);
   if ( (unsigned int)titleImg_low >= selectWarIdData->max_length )
-    sub_1B71830(titleInfo, hierarchyIndex);
+    sub_1B76424(titleInfo, hierarchyIndex);
   titleInfo = (TitleInfoControl_o *)selectWarIdData->m_Items[titleImg_low];
   if ( !titleInfo )
     goto LABEL_37;
@@ -163,7 +163,7 @@ LABEL_12:
             : (TitleInfoControl_o *)System_Collections_Generic_List_int___get_Item(
                                       (System_Collections_Generic_List_int__o *)titleInfo,
                                       hierarchyIndex,
-                                      (const MethodInfo_34B2F4C *)Method_System_Collections_Generic_List_int__get_Item__);
+                                      (const MethodInfo_34BA2C0 *)Method_System_Collections_Generic_List_int__get_Item__);
   if ( !v20 )
     goto LABEL_37;
   *(_DWORD *)(v20 + 16) = (_DWORD)titleInfo;
@@ -189,7 +189,7 @@ LABEL_12:
       if ( v42->fields.mSize <= 0.98 )
       {
         v43 = this->fields.itemList;
-        v44 = (System_Predicate_object__o *)sub_1B71818(System_Predicate_ListViewItem__TypeInfo);
+        v44 = (System_Predicate_object__o *)sub_1B7640C(System_Predicate_ListViewItem__TypeInfo);
         System_Predicate_object____ctor(
           v44,
           (Il2CppObject *)v20,
@@ -200,7 +200,7 @@ LABEL_12:
         v45 = System_Collections_Generic_List_object___Find(
                 (System_Collections_Generic_List_object__o *)v43,
                 (System_Predicate_T__o *)v44,
-                (const MethodInfo_34D08C8 *)Method_System_Collections_Generic_List_ListViewItem__Find__);
+                (const MethodInfo_34D7C3C *)Method_System_Collections_Generic_List_ListViewItem__Find__);
         if ( v45 )
           ListViewManager__JumpItem((ListViewManager_o *)this, HIDWORD(v45[1].klass), 0LL);
       }
@@ -208,7 +208,7 @@ LABEL_12:
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15140/*"UpdateScrollPosition"*/,
+    (System_String_o *)StringLiteral_15183/*"UpdateScrollPosition"*/,
     0.0,
     0LL);
   ActionExtensions__Call(callBack, 0LL);
@@ -282,35 +282,35 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
   Il2CppObject *v65; // x0
   int32_t kind; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A1BD86 & 1) == 0 )
+  if ( (byte_4A2A1EB & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_MapMaster___, questInfos);
-    sub_1B715CC(&DataManager_TypeInfo, v8);
-    sub_1B715CC(
+    sub_1B761C0(&Method_DataManager_GetMaster_MapMaster___, questInfos);
+    sub_1B761C0(&DataManager_TypeInfo, v8);
+    sub_1B761C0(
       &Method_System_Linq_Enumerable_OrderByDescending_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___,
       v9);
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Linq_Enumerable_ThenBy_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___,
       v10);
-    sub_1B715CC(&Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___, v11);
-    sub_1B715CC(&System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo, v12);
-    sub_1B715CC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v13);
-    sub_1B715CC(&Method_System_Collections_Generic_List_ListViewItem__Find__, v14);
-    sub_1B715CC(
+    sub_1B761C0(&Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___, v11);
+    sub_1B761C0(&System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo, v12);
+    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__Add__, v13);
+    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__Find__, v14);
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_Count__,
       v15);
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_Item__,
       v16);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v17);
-    sub_1B715CC(&System_Predicate_ListViewItem__TypeInfo, v18);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewItem_TypeInfo, v19);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_0__, v20);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_1__, v21);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_2__, v22);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v23);
-    sub_1B715CC(&StringLiteral_15140/*"UpdateScrollPosition"*/, v24);
-    byte_4A1BD86 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v17);
+    sub_1B761C0(&System_Predicate_ListViewItem__TypeInfo, v18);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewItem_TypeInfo, v19);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_0__, v20);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_1__, v21);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__CreateQuestList_b__20_2__, v22);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v23);
+    sub_1B761C0(&StringLiteral_15183/*"UpdateScrollPosition"*/, v24);
+    byte_4A2A1EB = 1;
   }
   kind = 0;
   ListViewManager__SetArrangementPitchY((ListViewManager_o *)this, (float)this->fields.questArrangementPitchY, 0LL);
@@ -320,7 +320,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
     size = questInfos->fields._size;
     Master_object = System_Linq_Enumerable__ToList_object_(
                       (System_Collections_Generic_IEnumerable_TSource__o *)questInfos,
-                      (const MethodInfo_2E97ADC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___);
+                      (const MethodInfo_2E9EAFC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___);
     if ( size >= 3 )
     {
       v29 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
@@ -338,7 +338,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
           v29 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
         }
         v31 = (Il2CppObject *)v29->static_fields->__9;
-        _9__20_0 = (System_Func_object__int__o *)sub_1B71818(System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo);
+        _9__20_0 = (System_Func_object__int__o *)sub_1B7640C(System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__20_0,
           v31,
@@ -346,12 +346,12 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
           0LL);
         static_fields = RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields;
         static_fields->__9__20_0 = (struct System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__o *)_9__20_0;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__20_0, (int32_t)_9__20_0, v33, v34);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__20_0, (int32_t)_9__20_0, v33, v34);
       }
       v35 = System_Linq_Enumerable__OrderByDescending_object__int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)questInfos,
               (System_Func_TSource__TKey__o *)_9__20_0,
-              (const MethodInfo_2E85DD0 *)Method_System_Linq_Enumerable_OrderByDescending_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___);
+              (const MethodInfo_2E8CDF0 *)Method_System_Linq_Enumerable_OrderByDescending_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___);
       v36 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
       v37 = v35;
       if ( !RecommendSupportQuestBoardListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -368,7 +368,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
           v36 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
         }
         v39 = (Il2CppObject *)v36->static_fields->__9;
-        _9__20_1 = (System_Func_object__int__o *)sub_1B71818(System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo);
+        _9__20_1 = (System_Func_object__int__o *)sub_1B7640C(System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__20_1,
           v39,
@@ -376,15 +376,15 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
           0LL);
         v40 = RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields;
         v40->__9__20_1 = (struct System_Func_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int__o *)_9__20_1;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)&v40->__9__20_1, (int32_t)_9__20_1, v41, v42);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)&v40->__9__20_1, (int32_t)_9__20_1, v41, v42);
       }
       v43 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                    v37,
                                                                    (System_Func_TSource__TKey__o *)_9__20_1,
-                                                                   (const MethodInfo_2E93318 *)Method_System_Linq_Enumerable_ThenBy_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___);
+                                                                   (const MethodInfo_2E9A338 *)Method_System_Linq_Enumerable_ThenBy_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__int___);
       Master_object = System_Linq_Enumerable__ToList_object_(
                         v43,
-                        (const MethodInfo_2E97ADC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___);
+                        (const MethodInfo_2E9EAFC *)Method_System_Linq_Enumerable_ToList_RecommendSupportQuestSelectListMenu_RecommendQuestInfo___);
       v28 = (System_Collections_Generic_List_object__o *)Master_object;
     }
     else
@@ -402,8 +402,8 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
         Item = System_Collections_Generic_List_object___get_Item(
                  v28,
                  v44,
-                 (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_Item__);
-        v47 = (RecommendSupportQuestBoardListViewItem_o *)sub_1B71818(RecommendSupportQuestBoardListViewItem_TypeInfo);
+                 (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestInfo__get_Item__);
+        v47 = (RecommendSupportQuestBoardListViewItem_o *)sub_1B7640C(RecommendSupportQuestBoardListViewItem_TypeInfo);
         RecommendSupportQuestBoardListViewItem___ctor(
           v47,
           v44,
@@ -423,14 +423,14 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v47,
-            *(const MethodInfo_34D0260 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
         }
         else
         {
           v54 = &items->obj.klass + v53;
           itemList->fields._size = v53 + 1;
           v54[4] = (Il2CppClass *)v47;
-          sub_1B71570((ServantStatusBattleListViewItem_o *)(v54 + 4), (int32_t)v47, v49, v50);
+          sub_1B76164((ServantStatusBattleListViewItem_o *)(v54 + 4), (int32_t)v47, v49, v50);
         }
         if ( size == ++v44 )
           goto LABEL_28;
@@ -441,7 +441,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__CreateQuestList(
 LABEL_28:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_MapMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_MapMaster___);
   if ( !Master_object )
     goto LABEL_59;
   Master_object = MapMaster__getList((MapMaster_o *)Master_object, selectWarId, 0LL);
@@ -463,7 +463,7 @@ LABEL_28:
       if ( !v55 )
         goto LABEL_59;
       if ( !LODWORD(v55[1].monitor) )
-        sub_1B71830(Master_object, v27);
+        sub_1B76424(Master_object, v27);
       Master_object = v55[2].klass;
       if ( !Master_object )
         goto LABEL_59;
@@ -511,7 +511,7 @@ LABEL_28:
               Master_object = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
             }
             v61 = (Il2CppObject *)**((_QWORD **)Master_object + 23);
-            v60 = (System_Predicate_object__o *)sub_1B71818(System_Predicate_ListViewItem__TypeInfo);
+            v60 = (System_Predicate_object__o *)sub_1B7640C(System_Predicate_ListViewItem__TypeInfo);
             System_Predicate_object____ctor(
               v60,
               v61,
@@ -519,14 +519,14 @@ LABEL_28:
               0LL);
             v62 = RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields;
             v62->__9__20_2 = (struct System_Predicate_ListViewItem__o *)v60;
-            sub_1B71570((ServantStatusBattleListViewItem_o *)&v62->__9__20_2, (int32_t)v60, v63, v64);
+            sub_1B76164((ServantStatusBattleListViewItem_o *)&v62->__9__20_2, (int32_t)v60, v63, v64);
           }
           if ( v59 )
           {
             v65 = System_Collections_Generic_List_object___Find(
                     (System_Collections_Generic_List_object__o *)v59,
                     (System_Predicate_T__o *)v60,
-                    (const MethodInfo_34D08C8 *)Method_System_Collections_Generic_List_ListViewItem__Find__);
+                    (const MethodInfo_34D7C3C *)Method_System_Collections_Generic_List_ListViewItem__Find__);
             if ( v65 )
               ListViewManager__JumpItem((ListViewManager_o *)this, HIDWORD(v65[1].klass), 0LL);
             goto LABEL_58;
@@ -535,12 +535,12 @@ LABEL_28:
       }
     }
 LABEL_59:
-    sub_1B71828(Master_object, v27);
+    sub_1B7641C(Master_object, v27);
   }
 LABEL_58:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15140/*"UpdateScrollPosition"*/,
+    (System_String_o *)StringLiteral_15183/*"UpdateScrollPosition"*/,
     0.0,
     0LL);
   ActionExtensions__Call(callBack, 0LL);
@@ -569,28 +569,28 @@ void __fastcall RecommendSupportQuestBoardListViewManager__DispFolderList(
   float v20; // s9
   System_Action_o *v21; // x19
 
-  if ( (byte_4A1BD88 & 1) == 0 )
+  if ( (byte_4A2A1ED & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, folderInfo);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__0__, v7);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_TypeInfo, v8);
-    byte_4A1BD88 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, folderInfo);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__0__, v7);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_TypeInfo, v8);
+    byte_4A2A1ED = 1;
   }
-  v9 = sub_1B71818(RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_TypeInfo);
+  v9 = sub_1B7640C(RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_6;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v9 + 16), (int32_t)this, v12, v13);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 16), (int32_t)this, v12, v13);
   *(_QWORD *)(v9 + 24) = folderInfo;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)folderInfo, v14, v15);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)folderInfo, v14, v15);
   *(_DWORD *)(v9 + 32) = warId;
   slideComponent = this->fields.slideComponent;
   this->fields.state = 1;
   OUT_POS_OFS_X = RecommendSupportQuestBoardListViewManager__get_OUT_POS_OFS_X(this, v17);
   extiTime = this->fields.extiTime;
   v20 = OUT_POS_OFS_X;
-  v21 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v9,
@@ -598,8 +598,8 @@ void __fastcall RecommendSupportQuestBoardListViewManager__DispFolderList(
     0LL);
   if ( !slideComponent )
 LABEL_6:
-    sub_1B71828(v10, v11);
-  SlideFadeObject__SlideOut_33545668(slideComponent, v20, extiTime, 0.0, v21, 0LL);
+    sub_1B7641C(v10, v11);
+  SlideFadeObject__SlideOut_33568312(slideComponent, v20, extiTime, 0.0, v21, 0LL);
 }
 
 
@@ -645,48 +645,48 @@ void __fastcall RecommendSupportQuestBoardListViewManager__Init(
   int32_t v38; // w3
   __int64 v39; // x0
 
-  if ( (byte_4A1BD83 & 1) == 0 )
+  if ( (byte_4A2A1E8 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_List_int___TypeInfo, method);
-    sub_1B715CC(&BalanceConfig_TypeInfo, v3);
-    sub_1B715CC(&Method_BasicHelper_ForEach_List_int____, v4);
-    sub_1B715CC(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___, v5);
-    sub_1B715CC(&System_Collections_Generic_List_int____TypeInfo, v6);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int___ctor__, v7);
-    sub_1B715CC(&System_Collections_Generic_List_int__TypeInfo, v8);
-    sub_1B715CC(
+    sub_1B761C0(&System_Action_List_int___TypeInfo, method);
+    sub_1B761C0(&BalanceConfig_TypeInfo, v3);
+    sub_1B761C0(&Method_BasicHelper_ForEach_List_int____, v4);
+    sub_1B761C0(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___, v5);
+    sub_1B761C0(&System_Collections_Generic_List_int____TypeInfo, v6);
+    sub_1B761C0(&Method_System_Collections_Generic_List_int___ctor__, v7);
+    sub_1B761C0(&System_Collections_Generic_List_int__TypeInfo, v8);
+    sub_1B761C0(
       &Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo____ctor__,
       v9);
-    sub_1B715CC(
+    sub_1B761C0(
       &System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___TypeInfo,
       v10);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__Init_b__16_0__, v11);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v12);
-    byte_4A1BD83 = 1;
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__Init_b__16_0__, v11);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v12);
+    byte_4A2A1E8 = 1;
   }
-  v13 = (System_Collections_Generic_Stack_T__o *)sub_1B71818(System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___TypeInfo);
+  v13 = (System_Collections_Generic_Stack_T__o *)sub_1B7640C(System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v13,
-    (const MethodInfo_3723E00 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo____ctor__);
+    (const MethodInfo_372B174 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo____ctor__);
   this->fields.folderTransitionData = (struct System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___o *)v13;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.folderTransitionData, (int32_t)v13, v14, v15);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.folderTransitionData, (int32_t)v13, v14, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EAC480 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+                       (const MethodInfo_2EB34A0 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
   this->fields.slideComponent = (struct SlideFadeObject_o *)Component_object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.slideComponent, (int32_t)Component_object, v18, v19);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.slideComponent, (int32_t)Component_object, v18, v19);
   v20 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v20 = BalanceConfig_TypeInfo;
   }
-  v21 = (struct System_Collections_Generic_List_int__array *)sub_1B71674(
+  v21 = (struct System_Collections_Generic_List_int__array *)sub_1B76268(
                                                                System_Collections_Generic_List_int____TypeInfo,
                                                                (unsigned int)v20->static_fields->RecommendSupportMemberMax);
   this->fields.selectWarIdData = v21;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.selectWarIdData, (int32_t)v21, v22, v23);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.selectWarIdData, (int32_t)v21, v22, v23);
   v24 = 0LL;
   for ( i = 32LL; ; i += 8LL )
   {
@@ -699,27 +699,27 @@ void __fastcall RecommendSupportQuestBoardListViewManager__Init(
     selectWarIdData = this->fields.selectWarIdData;
     if ( (__int64)v24 >= v26->static_fields->RecommendSupportMemberMax )
       break;
-    v28 = (System_Collections_Generic_List_int__o *)sub_1B71818(System_Collections_Generic_List_int__TypeInfo);
+    v28 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v28,
-      (const MethodInfo_34B29E8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
     if ( !selectWarIdData )
       goto LABEL_22;
     if ( v28 )
     {
-      questSelectDialog = (RecommendSupportQuestSelectDialogComponent_o *)sub_1B71708(
+      questSelectDialog = (RecommendSupportQuestSelectDialogComponent_o *)sub_1B762FC(
                                                                             v28,
                                                                             selectWarIdData->obj.klass->_1.element_class);
       if ( !questSelectDialog )
       {
-        v39 = sub_1B7184C();
-        sub_1B716F4(v39, 0LL);
+        v39 = sub_1B76440();
+        sub_1B762E8(v39, 0LL);
       }
     }
     if ( v24 >= selectWarIdData->max_length )
-      sub_1B71830(questSelectDialog, v30);
+      sub_1B76424(questSelectDialog, v30);
     selectWarIdData->m_Items[v24] = v28;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)((char *)selectWarIdData + i), (int32_t)v28, v31, v32);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)((char *)selectWarIdData + i), (int32_t)v28, v31, v32);
     ++v24;
   }
   v33 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
@@ -737,7 +737,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__Init(
       v33 = RecommendSupportQuestBoardListViewManager___c_TypeInfo;
     }
     v35 = (Il2CppObject *)v33->static_fields->__9;
-    _9__16_0 = (System_Action_object__o *)sub_1B71818(System_Action_List_int___TypeInfo);
+    _9__16_0 = (System_Action_object__o *)sub_1B7640C(System_Action_List_int___TypeInfo);
     System_Action_object____ctor(
       _9__16_0,
       v35,
@@ -745,16 +745,16 @@ void __fastcall RecommendSupportQuestBoardListViewManager__Init(
       0LL);
     static_fields = RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = (struct System_Action_List_int___o *)_9__16_0;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v37, v38);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v37, v38);
   }
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)selectWarIdData,
     (System_Action_T__o *)_9__16_0,
-    (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_List_int____);
+    (const MethodInfo_2E4F7C0 *)Method_BasicHelper_ForEach_List_int____);
   questSelectDialog = this->fields.questSelectDialog;
   if ( !questSelectDialog )
 LABEL_22:
-    sub_1B71828(questSelectDialog, v30);
+    sub_1B7641C(questSelectDialog, v30);
   RecommendSupportQuestSelectDialogComponent__Init(questSelectDialog, v30);
 }
 
@@ -770,22 +770,22 @@ void __fastcall RecommendSupportQuestBoardListViewManager__InitOpen(
   int v7; // w9
   System_Collections_Generic_Stack_T__o *folderTransitionData; // x0
 
-  if ( (byte_4A1BD84 & 1) == 0 )
+  if ( (byte_4A2A1E9 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__Clear__,
       method);
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__,
       v3);
-    byte_4A1BD84 = 1;
+    byte_4A2A1E9 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo
     || (TitleInfoControl__setTitleInfo(titleInfo, 0LL, 1, 0LL, 91, 0LL), (titleInfo = this->fields.titleInfo) == 0LL)
-    || (TitleInfoControl__setBackBtnSprite_36984080(titleInfo, 1, 0, 0, 0LL), (titleInfo = this->fields.titleInfo) == 0LL) )
+    || (TitleInfoControl__setBackBtnSprite_37007596(titleInfo, 1, 0, 0, 0LL), (titleInfo = this->fields.titleInfo) == 0LL) )
   {
-    sub_1B71828(titleInfo, method);
+    sub_1B7641C(titleInfo, method);
   }
   TitleInfoControl__setBackBtnSprite(titleInfo, 3, 0LL);
   currentFolderInfoData = this->fields.currentFolderInfoData;
@@ -802,7 +802,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__InitOpen(
   if ( folderTransitionData )
     System_Collections_Generic_Stack_object___Clear(
       folderTransitionData,
-      (const MethodInfo_3723FD4 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__);
+      (const MethodInfo_372B348 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__);
   *(_QWORD *)&this->fields.hierarchyIndex = 0LL;
 }
 
@@ -878,42 +878,42 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
   float v68; // s9
   System_Action_o *v69; // x19
 
-  if ( (byte_4A1BD87 & 1) == 0 )
+  if ( (byte_4A2A1EC & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, obj);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__Add__, v5);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__get_Count__, v6);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__set_Item__, v7);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager_OnClickListView__, v8);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v9);
-    sub_1B715CC(
+    sub_1B761C0(&System_Action_TypeInfo, obj);
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__Add__, v5);
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__get_Count__, v6);
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__set_Item__, v7);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager_OnClickListView__, v8);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v9);
+    sub_1B761C0(
       &Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Push__,
       v10);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__0__, v11);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_TypeInfo, v12);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1__OnClickListView_b__3__, v13);
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_TypeInfo, v14);
-    byte_4A1BD87 = 1;
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__0__, v11);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_TypeInfo, v12);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1__OnClickListView_b__3__, v13);
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_TypeInfo, v14);
+    byte_4A2A1EC = 1;
   }
-  v15 = sub_1B71818(RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_TypeInfo);
+  v15 = sub_1B7640C(RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0LL);
   if ( !v15 )
     goto LABEL_57;
   *(_QWORD *)(v15 + 16) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v15 + 16), (int32_t)this, v18, v19);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v15 + 16), (int32_t)this, v18, v19);
   if ( !obj )
     goto LABEL_57;
   Item = RecommendSupportQuestBoardListViewObject__GetItem(obj, v17);
   *(_QWORD *)(v15 + 32) = Item;
   v21 = v15 + 32;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v15 + 32), (int32_t)Item, v22, v23);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v15 + 32), (int32_t)Item, v22, v23);
   if ( !*(_QWORD *)(v15 + 32) )
     goto LABEL_57;
   v24 = *(unsigned __int8 *)(*(_QWORD *)(v15 + 32) + 128LL);
   v25 = Method_RecommendSupportQuestBoardListViewManager_OnClickListView__;
   if ( (*((_BYTE *)Method_RecommendSupportQuestBoardListViewManager_OnClickListView__ + 83) & 2) != 0 )
-    v25 = (_QWORD *)sub_1B715E4(Method_RecommendSupportQuestBoardListViewManager_OnClickListView__);
-  v26 = (System_Reflection_MethodBase_o *)sub_1B715B0(v25, v25[4]);
+    v25 = (_QWORD *)sub_1B761D8(Method_RecommendSupportQuestBoardListViewManager_OnClickListView__);
+  v26 = (System_Reflection_MethodBase_o *)sub_1B761A4(v25, v25[4]);
   if ( v24 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v26, 2, 0LL);
@@ -925,14 +925,14 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
   v29 = *(_QWORD *)(*(_QWORD *)v21 + 112LL);
   *(_QWORD *)(v15 + 24) = v29;
   v30 = v15 + 24;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v15 + 24), v29, v27, v28);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v15 + 24), v29, v27, v28);
   selectWarIdData = this->fields.selectWarIdData;
-  Instance = (System_Collections_Generic_Stack_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (System_Collections_Generic_Stack_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance || !selectWarIdData )
     goto LABEL_57;
   klass_low = SLODWORD(Instance[3].klass);
   if ( (unsigned int)klass_low >= selectWarIdData->max_length )
-    sub_1B71830(Instance, v17);
+    sub_1B76424(Instance, v17);
   v33 = selectWarIdData->m_Items[klass_low];
   if ( !v33 )
     goto LABEL_57;
@@ -964,7 +964,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
           System_Collections_Generic_List_int___AddWithResize(
             v33,
             (int32_t)v17,
-            *(const MethodInfo_34B323C **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+            *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
         }
         else
         {
@@ -983,7 +983,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
           v33,
           this->fields.hierarchyIndex,
           *(_DWORD *)(v51 + 16),
-          (const MethodInfo_34B2FA0 *)Method_System_Collections_Generic_List_int__set_Item__);
+          (const MethodInfo_34BA314 *)Method_System_Collections_Generic_List_int__set_Item__);
       }
       Instance = (System_Collections_Generic_Stack_T__o *)this->fields.folderTransitionData;
       ++this->fields.hierarchyIndex;
@@ -992,7 +992,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
       System_Collections_Generic_Stack_object___Push(
         Instance,
         (Il2CppObject *)this->fields.currentFolderInfoData,
-        (const MethodInfo_3724428 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Push__);
+        (const MethodInfo_372B79C *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Push__);
       v58 = *(_QWORD *)v30;
       if ( !*(_QWORD *)v30 )
         goto LABEL_57;
@@ -1032,7 +1032,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
             System_Collections_Generic_List_int___AddWithResize(
               v33,
               (int32_t)v17,
-              *(const MethodInfo_34B323C **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+              *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
           }
           else
           {
@@ -1051,7 +1051,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
             v33,
             this->fields.hierarchyIndex,
             *(_DWORD *)(v56 + 16),
-            (const MethodInfo_34B2FA0 *)Method_System_Collections_Generic_List_int__set_Item__);
+            (const MethodInfo_34BA314 *)Method_System_Collections_Generic_List_int__set_Item__);
         }
         Instance = (System_Collections_Generic_Stack_T__o *)this->fields.folderTransitionData;
         ++this->fields.hierarchyIndex;
@@ -1060,13 +1060,13 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
         System_Collections_Generic_Stack_object___Push(
           Instance,
           (Il2CppObject *)this->fields.currentFolderInfoData,
-          (const MethodInfo_3724428 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Push__);
+          (const MethodInfo_372B79C *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Push__);
         slideComponent = this->fields.slideComponent;
         this->fields.state = 1;
         OUT_POS_OFS_X = RecommendSupportQuestBoardListViewManager__get_OUT_POS_OFS_X(this, v65);
         extiTime = this->fields.extiTime;
         v68 = OUT_POS_OFS_X;
-        v69 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+        v69 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
         System_Action___ctor(
           v69,
           (Il2CppObject *)v15,
@@ -1074,7 +1074,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
           0LL);
         if ( !slideComponent )
           goto LABEL_57;
-        SlideFadeObject__SlideOut_33545668(slideComponent, v68, extiTime, 0.0, v69, 0LL);
+        SlideFadeObject__SlideOut_33568312(slideComponent, v68, extiTime, 0.0, v69, 0LL);
         return;
       }
     }
@@ -1083,12 +1083,12 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
     goto LABEL_57;
   if ( *(_QWORD *)(*(_QWORD *)v21 + 120LL) )
   {
-    v36 = sub_1B71818(RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_TypeInfo);
+    v36 = sub_1B7640C(RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v36, 0LL);
     if ( v36 )
     {
       *(_QWORD *)(v36 + 32) = v15;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)(v36 + 32), v15, v37, v38);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)(v36 + 32), v15, v37, v38);
       v41 = *(_QWORD *)(v36 + 32);
       if ( v41 )
       {
@@ -1097,7 +1097,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
         {
           v43 = *(_QWORD *)(v42 + 120);
           *(_QWORD *)(v36 + 16) = v43;
-          sub_1B71570((ServantStatusBattleListViewItem_o *)(v36 + 16), v43, v39, v40);
+          sub_1B76164((ServantStatusBattleListViewItem_o *)(v36 + 16), v43, v39, v40);
           v44 = *(_QWORD *)(v36 + 32);
           if ( v44 )
           {
@@ -1106,12 +1106,12 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
             {
               *(_DWORD *)(v36 + 24) = v45->fields._SettingSelectIndex_k__BackingField;
               questSelectDialog = this->fields.questSelectDialog;
-              Instance = (System_Collections_Generic_Stack_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+              Instance = (System_Collections_Generic_Stack_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
               if ( Instance )
               {
                 klass = (int)Instance[3].klass;
                 v48 = *(_DWORD *)(v36 + 24);
-                v49 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+                v49 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
                 System_Action___ctor(
                   v49,
                   (Il2CppObject *)v36,
@@ -1129,7 +1129,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnClickListView(
       }
     }
 LABEL_57:
-    sub_1B71828(Instance, v17);
+    sub_1B7641C(Instance, v17);
   }
 }
 
@@ -1148,15 +1148,15 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnDestroy(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A1BD8A & 1) == 0 )
+  if ( (byte_4A2A1EF & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__Clear__,
       method);
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__,
       v4);
-    byte_4A1BD8A = 1;
+    byte_4A2A1EF = 1;
   }
   currentFolderInfoData = this->fields.currentFolderInfoData;
   if ( currentFolderInfoData )
@@ -1168,7 +1168,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnDestroy(
     if ( size >= 1 )
       System_Array__Clear((System_Array_o *)currentFolderInfoData->fields._items, 0, size, 0LL);
     this->fields.currentFolderInfoData = 0LL;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.currentFolderInfoData, 0, size, v2);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.currentFolderInfoData, 0, size, v2);
   }
   folderTransitionData = (System_Collections_Generic_Stack_T__o *)this->fields.folderTransitionData;
   if ( folderTransitionData )
@@ -1176,9 +1176,9 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnDestroy(
     p_folderTransitionData = (ServantStatusBattleListViewItem_o *)&this->fields.folderTransitionData;
     System_Collections_Generic_Stack_object___Clear(
       folderTransitionData,
-      (const MethodInfo_3723FD4 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__);
+      (const MethodInfo_372B348 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Clear__);
     p_folderTransitionData->klass = 0LL;
-    sub_1B71570(p_folderTransitionData, 0, v10, v11);
+    sub_1B76164(p_folderTransitionData, 0, v10, v11);
   }
 }
 
@@ -1198,35 +1198,35 @@ void __fastcall RecommendSupportQuestBoardListViewManager__OnclickBack(
   System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__o *v11; // x20
   const MethodInfo *v12; // x3
 
-  if ( (byte_4A1BD89 & 1) == 0 )
+  if ( (byte_4A2A1EE & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__,
       method);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager_OnclickBack__, v3);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
-    sub_1B715CC(
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager_OnclickBack__, v3);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
+    sub_1B761C0(
       &Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Pop__,
       v5);
-    byte_4A1BD89 = 1;
+    byte_4A2A1EE = 1;
   }
   if ( !this->fields.state )
   {
     v6 = Method_RecommendSupportQuestBoardListViewManager_OnclickBack__;
     if ( (*((_BYTE *)Method_RecommendSupportQuestBoardListViewManager_OnclickBack__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B715E4(Method_RecommendSupportQuestBoardListViewManager_OnclickBack__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B715B0(v6, v6[4]);
+      v6 = (_QWORD *)sub_1B761D8(Method_RecommendSupportQuestBoardListViewManager_OnclickBack__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1B761A4(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0LL);
     if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.folderTransitionData, 0LL) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
       if ( Instance )
       {
         RecommendSupportSelectControl__SetState((RecommendSupportSelectControl_o *)Instance, 0, v10);
         return;
       }
 LABEL_13:
-      sub_1B71828(Instance, v8);
+      sub_1B7641C(Instance, v8);
     }
     Instance = this->fields.folderTransitionData;
     --this->fields.hierarchyIndex;
@@ -1234,14 +1234,14 @@ LABEL_13:
       goto LABEL_13;
     Instance = System_Collections_Generic_Stack_object___Pop(
                  (System_Collections_Generic_Stack_T__o *)Instance,
-                 (const MethodInfo_37243C8 *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Pop__);
+                 (const MethodInfo_372B73C *)Method_System_Collections_Generic_Stack_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___Pop__);
     if ( !Instance )
       goto LABEL_13;
     v11 = (System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__o *)Instance;
     Instance = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)Instance,
                  0,
-                 (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__);
+                 (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo__get_Item__);
     if ( !Instance )
       goto LABEL_13;
     RecommendSupportQuestBoardListViewManager__DispFolderList(this, v11, *((_DWORD *)Instance + 6), v12);
@@ -1271,7 +1271,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager__UpdateScrollPosition(
           scrollView->klass->vtable._9_SetDragAmount.methodPtr),
         (scrollView = this->fields.scrollView) == 0LL) )
   {
-    sub_1B71828(scrollView, method);
+    sub_1B7641C(scrollView, method);
   }
   UIScrollView__UpdatePosition(scrollView, 0LL);
 }
@@ -1300,15 +1300,15 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c___cctor(const Meth
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A1BD8B & 1) == 0 )
+  if ( (byte_4A2A1F0 & 1) == 0 )
   {
-    sub_1B715CC(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v1);
-    byte_4A1BD8B = 1;
+    sub_1B761C0(&RecommendSupportQuestBoardListViewManager___c_TypeInfo, v1);
+    byte_4A2A1F0 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B71818(RecommendSupportQuestBoardListViewManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B7640C(RecommendSupportQuestBoardListViewManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields->__9 = (struct RecommendSupportQuestBoardListViewManager___c_o *)v2;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)RecommendSupportQuestBoardListViewManager___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1332,7 +1332,7 @@ int32_t __fastcall RecommendSupportQuestBoardListViewManager___c___CreateQuestLi
   struct QuestEntity_o *questEntity; // x8
 
   if ( !x || (questEntity = x->fields.questEntity) == 0LL )
-    sub_1B71828(this, x);
+    sub_1B7641C(this, x);
   return questEntity->fields.priority;
 }
 
@@ -1343,7 +1343,7 @@ int32_t __fastcall RecommendSupportQuestBoardListViewManager___c___CreateQuestLi
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   return x->fields.phase;
 }
 
@@ -1360,13 +1360,13 @@ bool __fastcall RecommendSupportQuestBoardListViewManager___c___CreateQuestList_
   ListViewItem_o *v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A1BD8D & 1) == 0 )
+  if ( (byte_4A2A1F2 & 1) == 0 )
   {
-    sub_1B715CC(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
-    this = (RecommendSupportQuestBoardListViewManager___c_o *)sub_1B715CC(
+    sub_1B761C0(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
+    this = (RecommendSupportQuestBoardListViewManager___c_o *)sub_1B761C0(
                                                                 &Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__,
                                                                 v4);
-    byte_4A1BD8D = 1;
+    byte_4A2A1F2 = 1;
   }
   if ( !item )
     goto LABEL_8;
@@ -1375,13 +1375,13 @@ bool __fastcall RecommendSupportQuestBoardListViewManager___c___CreateQuestList_
     && (RecommendSupportQuestBoardListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] == RecommendSupportQuestBoardListViewItem_TypeInfo )
   {
     index = item[1].fields.index;
-    this = (RecommendSupportQuestBoardListViewManager___c_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    this = (RecommendSupportQuestBoardListViewManager___c_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( this )
       return index == LODWORD(this[7].monitor);
 LABEL_8:
-    sub_1B71828(this, item);
+    sub_1B7641C(this, item);
   }
-  v8 = (RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_o *)sub_1B71AE8(item);
+  v8 = (RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_o *)sub_1B766DC(item);
   return RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0___CreateChapterList_b__0(v8, v9, v10);
 }
 
@@ -1394,16 +1394,16 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c___Init_b__16_0(
   __int64 v3; // x1
   System_Collections_Generic_List_int__o *v4; // x0
 
-  if ( (byte_4A1BD8C & 1) == 0 )
+  if ( (byte_4A2A1F1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_int___ctor__, x);
-    sub_1B715CC(&System_Collections_Generic_List_int__TypeInfo, v3);
-    byte_4A1BD8C = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_int___ctor__, x);
+    sub_1B761C0(&System_Collections_Generic_List_int__TypeInfo, v3);
+    byte_4A2A1F1 = 1;
   }
-  v4 = (System_Collections_Generic_List_int__o *)sub_1B71818(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_34B29E8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
 }
 
 
@@ -1431,12 +1431,12 @@ bool __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_
 
   v3 = item;
   v4 = this;
-  if ( (byte_4A1BD8E & 1) == 0 )
+  if ( (byte_4A2A1F3 & 1) == 0 )
   {
-    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_o *)sub_1B715CC(
+    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_o *)sub_1B761C0(
                                                                                   &RecommendSupportQuestBoardListViewItem_TypeInfo,
                                                                                   item);
-    byte_4A1BD8E = 1;
+    byte_4A2A1F3 = 1;
   }
   if ( !v3 )
     goto LABEL_9;
@@ -1453,9 +1453,9 @@ bool __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass19_0_
         return *((_DWORD *)name + 4) == v4->fields.moveWarId;
     }
 LABEL_9:
-    sub_1B71828(this, item);
+    sub_1B7641C(this, item);
   }
-  v9 = (RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_o *)sub_1B71AE8(v3);
+  v9 = (RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_o *)sub_1B766DC(v3);
   RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0___OnClickListView_b__0(v9, v10);
   return result;
 }
@@ -1486,13 +1486,13 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_
   int32_t v12; // w3
 
   v3 = this;
-  if ( (byte_4A1BD8F & 1) == 0 )
+  if ( (byte_4A2A1F4 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_o *)sub_1B715CC(
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_o *)sub_1B761C0(
                                                                                   &Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__1__,
                                                                                   v4);
-    byte_4A1BD8F = 1;
+    byte_4A2A1F4 = 1;
   }
   folderInfo = v3->fields.folderInfo;
   if ( !folderInfo )
@@ -1506,18 +1506,18 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_
   _9__1 = v3->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__1__,
       0LL);
     v3->fields.__9__1 = _9__1;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v11, v12);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v11, v12);
   }
   if ( !_4__this )
 LABEL_9:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   RecommendSupportQuestBoardListViewManager__CreateQuestList(_4__this, questList, id, _9__1, v2);
 }
 
@@ -1537,11 +1537,11 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A1BD90 & 1) == 0 )
+  if ( (byte_4A2A1F5 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__2__, v3);
-    byte_4A1BD90 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__2__, v3);
+    byte_4A2A1F5 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -1556,19 +1556,19 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_
   v10 = OUT_POS_OFS_X;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0__OnClickListView_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
   }
   if ( !slideComponent )
 LABEL_9:
-    sub_1B71828(_4__this, method);
-  SlideFadeObject__SlideIn_33544724(slideComponent, v10, intoTime, 0.0, _9__2, 0LL);
+    sub_1B7641C(_4__this, method);
+  SlideFadeObject__SlideIn_33567368(slideComponent, v10, intoTime, 0.0, _9__2, 0LL);
 }
 
 
@@ -1586,7 +1586,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_
         (this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass21_0_o *)_4__this->fields.slideComponent) == 0LL)
     || (SlideFadeObject__ResetPosition((SlideFadeObject_o *)this, 0LL), (v4 = v3->fields.__4__this) == 0LL) )
   {
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   v4->fields.state = 0;
 }
@@ -1613,17 +1613,17 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_
   const MethodInfo *v9; // x2
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A1BD91 & 1) == 0 )
+  if ( (byte_4A2A1F6 & 1) == 0 )
   {
-    sub_1B715CC(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, method);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v3);
-    byte_4A1BD91 = 1;
+    sub_1B761C0(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, method);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v3);
+    byte_4A2A1F6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   klass = (RecommendSupportData_o *)Instance[7].klass;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   if ( !klass )
@@ -1637,22 +1637,22 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass21_1_
     goto LABEL_17;
   if ( !item->fields._IsSetting_k__BackingField )
     goto LABEL_15;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = (Il2CppObject *)Instance[7].klass) == 0LL
     || (RecommendSupportData__SetQuest((RecommendSupportData_o *)Instance, this->fields.index, 0LL, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
     || (Instance = RecommendSupportSelectControl__GetMenu_object_(
                      (RecommendSupportSelectControl_o *)Instance,
-                     (const MethodInfo_2EEC2E8 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___)) == 0LL
+                     (const MethodInfo_2EF3308 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___)) == 0LL
     || (Instance = (Il2CppObject *)Instance[10].klass) == 0LL )
   {
 LABEL_17:
-    sub_1B71828(Instance, v5);
+    sub_1B7641C(Instance, v5);
   }
   RecommendSupportListViewManager__SetItemSub((RecommendSupportListViewManager_o *)Instance, this->fields.index, v9);
 LABEL_15:
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   RecommendSupportSelectControl__SetState((RecommendSupportSelectControl_o *)Instance, 0, v10);
@@ -1682,13 +1682,13 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_
   int32_t v10; // w3
 
   v3 = this;
-  if ( (byte_4A1BD92 & 1) == 0 )
+  if ( (byte_4A2A1F7 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_o *)sub_1B715CC(
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_o *)sub_1B761C0(
                                                                                   &Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__1__,
                                                                                   v4);
-    byte_4A1BD92 = 1;
+    byte_4A2A1F7 = 1;
   }
   _9__1 = v3->fields.__9__1;
   _4__this = v3->fields.__4__this;
@@ -1696,17 +1696,17 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_
   warId = v3->fields.warId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__1__,
       0LL);
     v3->fields.__9__1 = _9__1;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v9, v10);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v9, v10);
   }
   if ( !_4__this )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   RecommendSupportQuestBoardListViewManager__CreateChapterList(_4__this, folderInfo, warId, _9__1, v2);
 }
 
@@ -1726,11 +1726,11 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A1BD93 & 1) == 0 )
+  if ( (byte_4A2A1F8 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__2__, v3);
-    byte_4A1BD93 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__2__, v3);
+    byte_4A2A1F8 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -1745,19 +1745,19 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_
   v10 = OUT_POS_OFS_X;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0__DispFolderList_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
   }
   if ( !slideComponent )
 LABEL_9:
-    sub_1B71828(_4__this, method);
-  SlideFadeObject__SlideIn_33544724(slideComponent, v10, intoTime, 0.0, _9__2, 0LL);
+    sub_1B7641C(_4__this, method);
+  SlideFadeObject__SlideIn_33567368(slideComponent, v10, intoTime, 0.0, _9__2, 0LL);
 }
 
 
@@ -1775,7 +1775,7 @@ void __fastcall RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_
         (this = (RecommendSupportQuestBoardListViewManager___c__DisplayClass23_0_o *)_4__this->fields.slideComponent) == 0LL)
     || (SlideFadeObject__ResetPosition((SlideFadeObject_o *)this, 0LL), (v4 = v3->fields.__4__this) == 0LL) )
   {
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   v4->fields.state = 0;
 }

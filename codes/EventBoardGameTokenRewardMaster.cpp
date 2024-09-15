@@ -2,17 +2,17 @@ void __fastcall EventBoardGameTokenRewardMaster___ctor(
         EventBoardGameTokenRewardMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A1F992 & 1) == 0 )
+  if ( (byte_4A2DDFF & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string___ctor__,
       method);
-    byte_4A1F992 = 1;
+    byte_4A2DDFF = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     308,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string___ctor__);
 }
 
 
@@ -26,12 +26,12 @@ EventBoardGameTokenRewardEntity_o *__fastcall EventBoardGameTokenRewardMaster__G
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A1F990 & 1) == 0 )
+  if ( (byte_4A2DDFD & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4A1F990 = 1;
+    byte_4A2DDFD = 1;
   }
   PK = (Il2CppObject *)EventBoardGameTokenRewardEntity__CreatePK(
                          eventId,
@@ -41,7 +41,7 @@ EventBoardGameTokenRewardEntity_o *__fastcall EventBoardGameTokenRewardMaster__G
   return (EventBoardGameTokenRewardEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_30F8AB8 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__GetEntity__);
+                                                (const MethodInfo_30FFAD8 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__GetEntity__);
 }
 
 
@@ -56,12 +56,12 @@ bool __fastcall EventBoardGameTokenRewardMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A1F991 & 1) == 0 )
+  if ( (byte_4A2DDFE & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__TryGetEntity__,
       entity);
-    byte_4A1F991 = 1;
+    byte_4A2DDFE = 1;
   }
   PK = (Il2CppObject *)EventBoardGameTokenRewardEntity__CreatePK(
                          eventId,
@@ -72,5 +72,5 @@ bool __fastcall EventBoardGameTokenRewardMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__TryGetEntity__);
 }

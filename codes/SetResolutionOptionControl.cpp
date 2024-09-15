@@ -27,16 +27,16 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   const MethodInfo *v20; // x2
 
   v2 = this;
-  if ( (byte_4A1B0B4 & 1) == 0 )
+  if ( (byte_4A29514 & 1) == 0 )
   {
-    sub_1B715CC(&LocalizationManager_TypeInfo, method);
-    sub_1B715CC(&OptionManager_TypeInfo, v3);
-    sub_1B715CC(&ResolutionManager_TypeInfo, v4);
-    sub_1B715CC(&StringLiteral_9649/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
-    sub_1B715CC(&StringLiteral_9648/*"OPTION_RERSOLUTION_INFO"*/, v6);
-    sub_1B715CC(&StringLiteral_9651/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
-    this = (SetResolutionOptionControl_o *)sub_1B715CC(&StringLiteral_9650/*"OPTION_RERSOLUTION_LOW"*/, v8);
-    byte_4A1B0B4 = 1;
+    sub_1B761C0(&LocalizationManager_TypeInfo, method);
+    sub_1B761C0(&OptionManager_TypeInfo, v3);
+    sub_1B761C0(&ResolutionManager_TypeInfo, v4);
+    sub_1B761C0(&StringLiteral_9680/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
+    sub_1B761C0(&StringLiteral_9679/*"OPTION_RERSOLUTION_INFO"*/, v6);
+    sub_1B761C0(&StringLiteral_9682/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
+    this = (SetResolutionOptionControl_o *)sub_1B761C0(&StringLiteral_9681/*"OPTION_RERSOLUTION_LOW"*/, v8);
+    byte_4A29514 = 1;
   }
   if ( v2->fields.isInit )
   {
@@ -58,12 +58,12 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
     if ( !this )
       goto LABEL_23;
     v2->fields.onButtonName = UIButton__get_normalSprite((UIButton_o *)this, 0LL);
-    sub_1B71570(&v2->fields.onButtonName);
+    sub_1B76164(&v2->fields.onButtonName);
     this = (SetResolutionOptionControl_o *)v2->fields.normalButton;
     if ( !this )
       goto LABEL_23;
     v2->fields.offButtonName = UIButton__get_normalSprite((UIButton_o *)this, 0LL);
-    sub_1B71570(&v2->fields.offButtonName);
+    sub_1B76164(&v2->fields.offButtonName);
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
     IsEnableResolutionSetting = ResolutionManager__IsEnableResolutionSetting(0LL);
@@ -72,9 +72,9 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   }
   infoLabel = v2->fields.infoLabel;
   if ( enableResolutionSetting )
-    v15 = (System_String_o **)&StringLiteral_9648/*"OPTION_RERSOLUTION_INFO"*/;
+    v15 = (System_String_o **)&StringLiteral_9679/*"OPTION_RERSOLUTION_INFO"*/;
   else
-    v15 = (System_String_o **)&StringLiteral_9649/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
+    v15 = (System_String_o **)&StringLiteral_9680/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
   v16 = *v15;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -82,15 +82,15 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   if ( !infoLabel
     || (UILabel__set_text(infoLabel, (System_String_o *)this, 0LL),
         v17 = v2->fields.normalLabel,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9651/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9682/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
         !v17)
     || (UILabel__set_text(v17, (System_String_o *)this, 0LL),
         v18 = v2->fields.lowLabel,
-        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9650/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9681/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
         !v18) )
   {
 LABEL_23:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   UILabel__set_text(v18, (System_String_o *)this, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -110,17 +110,17 @@ void __fastcall SetResolutionOptionControl__OnClickLowButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4A1B0B6 & 1) == 0 )
+  if ( (byte_4A29516 & 1) == 0 )
   {
-    sub_1B715CC(&OptionManager_TypeInfo, method);
-    sub_1B715CC(&Method_SetResolutionOptionControl_OnClickLowButton__, v3);
-    byte_4A1B0B6 = 1;
+    sub_1B761C0(&OptionManager_TypeInfo, method);
+    sub_1B761C0(&Method_SetResolutionOptionControl_OnClickLowButton__, v3);
+    byte_4A29516 = 1;
   }
   v4 = Method_SetResolutionOptionControl_OnClickLowButton__;
   enableResolutionSetting = this->fields.enableResolutionSetting;
   if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickLowButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B715E4(Method_SetResolutionOptionControl_OnClickLowButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B715B0(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B761D8(Method_SetResolutionOptionControl_OnClickLowButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v4, v4[4]);
   if ( enableResolutionSetting )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
@@ -146,17 +146,17 @@ void __fastcall SetResolutionOptionControl__OnClickNormalButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4A1B0B5 & 1) == 0 )
+  if ( (byte_4A29515 & 1) == 0 )
   {
-    sub_1B715CC(&OptionManager_TypeInfo, method);
-    sub_1B715CC(&Method_SetResolutionOptionControl_OnClickNormalButton__, v3);
-    byte_4A1B0B5 = 1;
+    sub_1B761C0(&OptionManager_TypeInfo, method);
+    sub_1B761C0(&Method_SetResolutionOptionControl_OnClickNormalButton__, v3);
+    byte_4A29515 = 1;
   }
   v4 = Method_SetResolutionOptionControl_OnClickNormalButton__;
   enableResolutionSetting = this->fields.enableResolutionSetting;
   if ( (*((_BYTE *)Method_SetResolutionOptionControl_OnClickNormalButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B715E4(Method_SetResolutionOptionControl_OnClickNormalButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B715B0(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B761D8(Method_SetResolutionOptionControl_OnClickNormalButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v4, v4[4]);
   if ( enableResolutionSetting )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
@@ -223,15 +223,15 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
                 lowButton = this->fields.lowButton;
                 if ( lowButton )
                 {
-                  lowButton->fields.hover = (struct UnityEngine_Color_o)xmmword_BAA5D0;
+                  lowButton->fields.hover = (struct UnityEngine_Color_o)xmmword_BAC9A0;
                   v7 = this->fields.lowButton;
                   if ( v7 )
                   {
-                    v7->fields.pressed = (struct UnityEngine_Color_o)xmmword_BAA5D0;
+                    v7->fields.pressed = (struct UnityEngine_Color_o)xmmword_BAC9A0;
                     v8 = this->fields.lowButton;
                     if ( v8 )
                     {
-                      v8->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_BAA5D0;
+                      v8->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_BAC9A0;
                       return;
                     }
                   }
@@ -268,7 +268,7 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
       }
     }
 LABEL_24:
-    sub_1B71828(normalLabel, *(_QWORD *)&type);
+    sub_1B7641C(normalLabel, *(_QWORD *)&type);
   }
   if ( !normalLabel )
     goto LABEL_24;

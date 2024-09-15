@@ -13,13 +13,13 @@ void __fastcall SubmarineSelectScannerListViewItem___ctor(
   int32_t v15; // w3
 
   v13 = this;
-  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40521064((ListViewItem_o *)this, index, 0LL);
   v13->fields._name_k__BackingField = name;
   v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 128);
   LODWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)v13, (int32_t)name, v14, v15);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)v13, (int32_t)name, v14, v15);
   LOBYTE(v13->fields.selectNum) = enabled;
 }
 
@@ -80,7 +80,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
   int32_t v3; // w3
 
   this->fields._consumeItemDetail_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._consumeItemDetail_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -123,7 +123,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_name(
   int32_t v3; // w3
 
   this->fields._name_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._name_k__BackingField,
     (int32_t)value,
     (int32_t)method,

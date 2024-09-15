@@ -7,5 +7,5 @@ void __fastcall EventTowerReward___ctor(EventTowerReward_o *this, const MethodIn
   *(_OWORD *)&this->fields.iconId = 0u;
   *(_OWORD *)&this->fields.limitCount = 0u;
   *(_OWORD *)&this->fields.eventId = 0u;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.voiceIds, 0, v3, v4);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.voiceIds, 0, v3, v4);
 }

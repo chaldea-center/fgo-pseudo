@@ -1,9 +1,9 @@
 System_String_o *__fastcall BlacklistTopRequest__getMockData(BlacklistTopRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A212B5 & 1) == 0 )
+  if ( (byte_4A2F728 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_1/*""*/, method);
-    byte_4A212B5 = 1;
+    sub_1B761C0(&StringLiteral_1/*""*/, method);
+    byte_4A2F728 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -14,16 +14,16 @@ System_String_o *__fastcall BlacklistTopRequest__getURL(BlacklistTopRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A212B4 & 1) == 0 )
+  if ( (byte_4A2F727 & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_17284/*"blacklist/top"*/, v2);
-    byte_4A212B4 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_17328/*"blacklist/top"*/, v2);
+    byte_4A2F727 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_17284/*"blacklist/top"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_17328/*"blacklist/top"*/, 0LL);
 }
 
 
@@ -42,12 +42,12 @@ void __fastcall BlacklistTopRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A212B6 & 1) == 0 )
+  if ( (byte_4A2F729 & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A212B6 = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F729 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -71,7 +71,7 @@ void __fastcall BlacklistTopRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

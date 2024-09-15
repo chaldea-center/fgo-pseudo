@@ -12,23 +12,23 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2___cctor(const Metho
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A1BFA8 & 1) == 0 )
+  if ( (byte_4A2A40E & 1) == 0 )
   {
-    sub_1B715CC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v1);
-    sub_1B715CC(&StringLiteral_20275/*"img_index_03"*/, v4);
-    sub_1B715CC(&StringLiteral_20274/*"img_index_02"*/, v5);
-    byte_4A1BFA8 = 1;
+    sub_1B761C0(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v1);
+    sub_1B761C0(&StringLiteral_20320/*"img_index_03"*/, v4);
+    sub_1B761C0(&StringLiteral_20319/*"img_index_02"*/, v5);
+    byte_4A2A40E = 1;
   }
   static_fields = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->LABEL_HEIGHT_MAX = 0xA800000BB8LL;
   static_fields->TITLE_NAME_LEFT_POS = -88;
-  v7 = StringLiteral_20274/*"img_index_02"*/;
-  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_20274/*"img_index_02"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->TITLE_BASE_SPRITE_NAME, v7, v2, v3);
-  v8 = StringLiteral_20275/*"img_index_03"*/;
+  v7 = StringLiteral_20319/*"img_index_02"*/;
+  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_20319/*"img_index_02"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->TITLE_BASE_SPRITE_NAME, v7, v2, v3);
+  v8 = StringLiteral_20320/*"img_index_03"*/;
   v9 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields;
-  v9->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_20275/*"img_index_03"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v9->TITLE_BASE_LONG_SPRITE_NAME, v8, v10, v11);
+  v9->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_20320/*"img_index_03"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v9->TITLE_BASE_LONG_SPRITE_NAME, v8, v10, v11);
 }
 
 
@@ -57,6 +57,19 @@ int32_t __fastcall ServantStatusFlavorTextListViewItemDrawText2__GetKind(
 }
 
 
+void __fastcall ServantStatusFlavorTextListViewItemDrawText2__HideNew(
+        ServantStatusFlavorTextListViewItemDrawText2_o *this,
+        const MethodInfo *method)
+{
+  ShiningIconComponent_o *newIcon; // x0
+
+  newIcon = this->fields.newIcon;
+  if ( !newIcon )
+    sub_1B7641C(0LL, method);
+  ShiningIconComponent__Set_38054676(newIcon, 0, 0LL);
+}
+
+
 void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
         ServantStatusFlavorTextListViewItemDrawText2_o *this,
         System_String_o *title,
@@ -75,11 +88,11 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
   float v15; // s8
   UILabel_o *v16; // x19
 
-  if ( (byte_4A1BFA7 & 1) == 0 )
+  if ( (byte_4A2A40D & 1) == 0 )
   {
-    sub_1B715CC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, title);
-    sub_1B715CC(&StringLiteral_1/*""*/, v5);
-    byte_4A1BFA7 = 1;
+    sub_1B761C0(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, title);
+    sub_1B761C0(&StringLiteral_1/*""*/, v5);
+    byte_4A2A40D = 1;
   }
   if ( System_String__IsNullOrEmpty(title, 0LL) )
   {
@@ -101,7 +114,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
       }
     }
 LABEL_34:
-    sub_1B71828(titleName, v6);
+    sub_1B7641C(titleName, v6);
   }
   titleName = (UILabel_o *)ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
   v9 = this->fields.titleBase;
@@ -253,13 +266,13 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
   UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
 
   v59 = profileNum;
-  if ( (byte_4A1BFA6 & 1) == 0 )
+  if ( (byte_4A2A40C & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, item);
-    sub_1B715CC(&RubyLabelHelper_TypeInfo, v15);
-    sub_1B715CC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v16);
-    sub_1B715CC(&StringLiteral_20518/*"img_txt_profile"*/, v17);
-    byte_4A1BFA6 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, item);
+    sub_1B761C0(&RubyLabelHelper_TypeInfo, v15);
+    sub_1B761C0(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v16);
+    sub_1B761C0(&StringLiteral_20563/*"img_txt_profile"*/, v17);
+    byte_4A2A40C = 1;
   }
   this->fields.dispMode = mode;
   if ( item && mode && this->fields.isFirst )
@@ -275,7 +288,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       {
         v22 = this->fields.titleNumSprite;
         v23 = System_Int32__ToString((int32_t)&v59, 0LL);
-        transform = System_String__Concat_61505504((System_String_o *)StringLiteral_20518/*"img_txt_profile"*/, v23, 0LL);
+        transform = System_String__Concat_61535060((System_String_o *)StringLiteral_20563/*"img_txt_profile"*/, v23, 0LL);
         if ( !v22 )
           goto LABEL_57;
         UISprite__set_spriteName(v22, transform, 0LL);
@@ -313,7 +326,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
     v27 = this->fields.messageLabel;
     rubyPrefab = this->fields.rubyPrefab;
     mainPrefab = this->fields.mainPrefab;
-    v30 = (RubyLabelHelper_o *)sub_1B71818(RubyLabelHelper_TypeInfo);
+    v30 = (RubyLabelHelper_o *)sub_1B7640C(RubyLabelHelper_TypeInfo);
     RubyLabelHelper___ctor(v30, v27, mainPrefab, rubyPrefab, 0LL);
     if ( !v30 )
       goto LABEL_57;
@@ -400,7 +413,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
                                             0LL)) == 0LL) )
     {
 LABEL_57:
-      sub_1B71828(transform, v20);
+      sub_1B7641C(transform, v20);
     }
     v61.fields.y = v56 + v47;
     v61.fields.x = v55;
@@ -414,7 +427,7 @@ LABEL_57:
       transform = (System_String_o *)this->fields.newIcon;
       if ( transform )
       {
-        ShiningIconComponent__Set_38029736((ShiningIconComponent_o *)transform, isNew, 0LL);
+        ShiningIconComponent__Set_38054676((ShiningIconComponent_o *)transform, isNew, 0LL);
         return;
       }
       goto LABEL_57;
@@ -431,7 +444,7 @@ int32_t __fastcall ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabe
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   return messageLabel->fields.mFontSize;
 }
 
@@ -444,7 +457,7 @@ float __fastcall ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabelH
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   return (float)messageLabel->fields.mHeight;
 }
 
@@ -464,7 +477,7 @@ UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewItemDrawText2__g
   if ( !messageLabel
     || (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(messageLabel, 0LL)) == 0LL )
   {
-    sub_1B71828(messageLabel, method);
+    sub_1B7641C(messageLabel, method);
   }
   *(UnityEngine_Vector3_o *)&v3 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0LL);
   result.fields.z = v5;

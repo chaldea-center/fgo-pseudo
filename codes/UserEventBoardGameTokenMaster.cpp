@@ -1,16 +1,16 @@
 void __fastcall UserEventBoardGameTokenMaster___ctor(UserEventBoardGameTokenMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A206DA & 1) == 0 )
+  if ( (byte_4A2EB4C & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string___ctor__,
       method);
-    byte_4A206DA = 1;
+    byte_4A2EB4C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     309,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string___ctor__);
 }
 
 
@@ -24,18 +24,18 @@ UserEventBoardGameTokenEntity_o *__fastcall UserEventBoardGameTokenMaster__GetEn
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A206D8 & 1) == 0 )
+  if ( (byte_4A2EB4A & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__GetEntity__,
       userId);
-    byte_4A206D8 = 1;
+    byte_4A2EB4A = 1;
   }
   PK = (Il2CppObject *)UserEventBoardGameTokenEntity__CreatePK(userId, eventId, tokenId, *(const MethodInfo **)&tokenId);
   return (UserEventBoardGameTokenEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_30F8AB8 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__GetEntity__);
+                                              (const MethodInfo_30FFAD8 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__GetEntity__);
 }
 
 
@@ -80,31 +80,31 @@ UserEventBoardGameTokenEntity_array *__fastcall UserEventBoardGameTokenMaster__G
   int32_t *v38; // x10
   __int64 v39; // x0
 
-  if ( (byte_4A206DB & 1) == 0 )
+  if ( (byte_4A2EB4D & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, userId);
-    sub_1B715CC(&System_IDisposable_TypeInfo, v5);
-    sub_1B715CC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1B715CC(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1B715CC(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__Add__, v8);
-    sub_1B715CC(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__ToArray__, v9);
-    sub_1B715CC(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity___ctor__, v10);
-    sub_1B715CC(&System_Collections_Generic_List_UserEventBoardGameTokenEntity__TypeInfo, v11);
-    sub_1B715CC(&UserEventBoardGameTokenEntity_TypeInfo, v12);
-    byte_4A206DB = 1;
+    sub_1B761C0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, userId);
+    sub_1B761C0(&System_IDisposable_TypeInfo, v5);
+    sub_1B761C0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_1B761C0(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1B761C0(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__Add__, v8);
+    sub_1B761C0(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__ToArray__, v9);
+    sub_1B761C0(&Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity___ctor__, v10);
+    sub_1B761C0(&System_Collections_Generic_List_UserEventBoardGameTokenEntity__TypeInfo, v11);
+    sub_1B761C0(&UserEventBoardGameTokenEntity_TypeInfo, v12);
+    byte_4A2EB4D = 1;
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_UserEventBoardGameTokenEntity__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_UserEventBoardGameTokenEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_38;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3096080 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_309D0A0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B71828(0LL, v16);
+    sub_1B7641C(0LL, v16);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -124,7 +124,7 @@ UserEventBoardGameTokenEntity_array *__fastcall UserEventBoardGameTokenMaster__G
     else
     {
 LABEL_9:
-      p_method = sub_1BC35AC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BC81A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -147,7 +147,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v25 = sub_1BC35AC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v25 = sub_1BC81A0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v26 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
                             Enumerator,
@@ -160,9 +160,9 @@ LABEL_16:
       if ( LOBYTE(v26->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
         || (UserEventBoardGameTokenEntity_c *)v26->klass->_2.typeHierarchy[methodPtr_low - 1] != UserEventBoardGameTokenEntity_TypeInfo )
       {
-        sub_1B71AE8(v26);
+        sub_1B766DC(v26);
 LABEL_36:
-        sub_1B71828(v26, v30);
+        sub_1B7641C(v26, v30);
       }
       if ( v26[1].klass == (Il2CppClass *)userId )
       {
@@ -172,21 +172,21 @@ LABEL_36:
         v33 = Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__Add__;
         ++v13->fields._version;
         if ( !items )
-          sub_1B71828(v26, v30);
+          sub_1B7641C(v26, v30);
         size = v13->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v13,
             v26,
-            *(const MethodInfo_34D0260 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
         }
         else
         {
           v35 = &items->obj.klass + size;
           v13->fields._size = size + 1;
           v35[4] = (Il2CppClass *)v29;
-          sub_1B71570((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v29, v27, v28);
+          sub_1B76164((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v29, v27, v28);
         }
       }
     }
@@ -208,31 +208,31 @@ LABEL_36:
   else
   {
 LABEL_31:
-    v39 = sub_1BC35AC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v39 = sub_1BC81A0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
                                                              Enumerator,
                                                              *(_QWORD *)(v39 + 8));
   if ( !v13 )
 LABEL_38:
-    sub_1B71828(list, v14);
+    sub_1B7641C(list, v14);
   return (UserEventBoardGameTokenEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                   v13,
-                                                  (const MethodInfo_34D1DB8 *)Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__ToArray__);
+                                                  (const MethodInfo_34D912C *)Method_System_Collections_Generic_List_UserEventBoardGameTokenEntity__ToArray__);
 }
 
 
-UserEventBoardGameTokenEntity_array *__fastcall UserEventBoardGameTokenMaster__GetList_39856528(
+UserEventBoardGameTokenEntity_array *__fastcall UserEventBoardGameTokenMaster__GetList_39883764(
         UserEventBoardGameTokenMaster_o *this,
         const MethodInfo *method)
 {
   int64_t UserId; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_4A206DC & 1) == 0 )
+  if ( (byte_4A2EB4E & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    byte_4A206DC = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    byte_4A2EB4E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -261,20 +261,20 @@ bool __fastcall UserEventBoardGameTokenMaster__IsHavingGroupToken(
   int32_t *v17; // x8
   EventBoardGameTokenEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A206DE & 1) == 0 )
+  if ( (byte_4A2EB50 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___, *(_QWORD *)&gameFlagVal);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A206DE = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___, *(_QWORD *)&gameFlagVal);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A2EB50 = 1;
   }
   entity = 0LL;
-  Instance = (UserEventBoardGameTokenEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (UserEventBoardGameTokenEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
-  Instance = UserEventBoardGameTokenMaster__GetList_39856528(this, v11);
+                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
+  Instance = UserEventBoardGameTokenMaster__GetList_39883764(this, v11);
   if ( !Instance )
     goto LABEL_16;
   max_length = Instance->max_length;
@@ -287,7 +287,7 @@ bool __fastcall UserEventBoardGameTokenMaster__IsHavingGroupToken(
     while ( 1 )
     {
       if ( v15 >= (unsigned int)max_length )
-        sub_1B71830(Instance, v9);
+        sub_1B76424(Instance, v9);
       v17 = (int32_t *)v13->m_Items[v15];
       if ( !v17 )
         break;
@@ -312,7 +312,7 @@ LABEL_20:
       return v14;
     }
 LABEL_16:
-    sub_1B71828(Instance, v9);
+    sub_1B7641C(Instance, v9);
   }
   return v14;
 }
@@ -330,33 +330,33 @@ bool __fastcall UserEventBoardGameTokenMaster__IsHavingToken(
   __int64 v8; // x21
   __int64 v9; // x0
   const MethodInfo *v10; // x1
-  System_Object_array *List_39856528; // x19
+  System_Object_array *List_39883764; // x19
   System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_4A206DD & 1) == 0 )
+  if ( (byte_4A2EB4F & 1) == 0 )
   {
-    sub_1B715CC(&Method_BasicHelper_Any_UserEventBoardGameTokenEntity___, *(_QWORD *)&tokenId);
-    sub_1B715CC(&System_Func_UserEventBoardGameTokenEntity__bool__TypeInfo, v5);
-    sub_1B715CC(&Method_UserEventBoardGameTokenMaster___c__DisplayClass5_0__IsHavingToken_b__0__, v6);
-    sub_1B715CC(&UserEventBoardGameTokenMaster___c__DisplayClass5_0_TypeInfo, v7);
-    byte_4A206DD = 1;
+    sub_1B761C0(&Method_BasicHelper_Any_UserEventBoardGameTokenEntity___, *(_QWORD *)&tokenId);
+    sub_1B761C0(&System_Func_UserEventBoardGameTokenEntity__bool__TypeInfo, v5);
+    sub_1B761C0(&Method_UserEventBoardGameTokenMaster___c__DisplayClass5_0__IsHavingToken_b__0__, v6);
+    sub_1B761C0(&UserEventBoardGameTokenMaster___c__DisplayClass5_0_TypeInfo, v7);
+    byte_4A2EB4F = 1;
   }
-  v8 = sub_1B71818(UserEventBoardGameTokenMaster___c__DisplayClass5_0_TypeInfo);
+  v8 = sub_1B7640C(UserEventBoardGameTokenMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1B71828(v9, v10);
+    sub_1B7641C(v9, v10);
   *(_DWORD *)(v8 + 16) = tokenId;
-  List_39856528 = (System_Object_array *)UserEventBoardGameTokenMaster__GetList_39856528(this, v10);
-  v12 = (System_Func_object__bool__o *)sub_1B71818(System_Func_UserEventBoardGameTokenEntity__bool__TypeInfo);
+  List_39883764 = (System_Object_array *)UserEventBoardGameTokenMaster__GetList_39883764(this, v10);
+  v12 = (System_Func_object__bool__o *)sub_1B7640C(System_Func_UserEventBoardGameTokenEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v8,
     Method_UserEventBoardGameTokenMaster___c__DisplayClass5_0__IsHavingToken_b__0__,
     0LL);
-  return BasicHelper__Any_object__48523356(
-           List_39856528,
+  return BasicHelper__Any_object__48552060(
+           List_39883764,
            (System_Func_T__bool__o *)v12,
-           (const MethodInfo_2E4685C *)Method_BasicHelper_Any_UserEventBoardGameTokenEntity___);
+           (const MethodInfo_2E4D87C *)Method_BasicHelper_Any_UserEventBoardGameTokenEntity___);
 }
 
 
@@ -371,19 +371,19 @@ bool __fastcall UserEventBoardGameTokenMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A206D9 & 1) == 0 )
+  if ( (byte_4A2EB4B & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__TryGetEntity__,
       entity);
-    byte_4A206D9 = 1;
+    byte_4A2EB4B = 1;
   }
   PK = (Il2CppObject *)UserEventBoardGameTokenEntity__CreatePK(userId, eventId, tokenId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_UserEventBoardGameTokenMaster__UserEventBoardGameTokenEntity__string__TryGetEntity__);
 }
 
 
@@ -401,6 +401,6 @@ bool __fastcall UserEventBoardGameTokenMaster___c__DisplayClass5_0___IsHavingTok
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   return x->fields.tokenId == this->fields.tokenId && x->fields.num > 0;
 }

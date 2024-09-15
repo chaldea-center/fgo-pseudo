@@ -74,7 +74,7 @@ void __fastcall BattleActionWaitCond_UntilSideEffectInvisible___ctor(
   v4->fields.perf = perf;
   v4 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)((char *)v4 + 24);
   LODWORD(v4[-1].fields.perf) = 1067450368;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)v4, (int32_t)perf, v5, v6);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)v4, (int32_t)perf, v5, v6);
 }
 
 
@@ -86,6 +86,6 @@ bool __fastcall BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }

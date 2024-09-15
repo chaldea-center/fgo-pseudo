@@ -10,8 +10,8 @@ int32_t __fastcall UserNameChangeResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1B71828(this, 0LL);
-  return !ResponseData__checkError_40915860(data, 0LL) || !data->fields.success;
+    sub_1B7641C(this, 0LL);
+  return !ResponseData__checkError_40940600(data, 0LL) || !data->fields.success;
 }
 
 

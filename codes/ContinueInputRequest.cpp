@@ -8,24 +8,24 @@ void __fastcall ContinueInputRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A21311 & 1) == 0 )
+  if ( (byte_4A2F784 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_18193/*"continueKey"*/, continueKey);
-    sub_1B715CC(&StringLiteral_18195/*"continuePass"*/, v7);
-    byte_4A21311 = 1;
+    sub_1B761C0(&StringLiteral_18237/*"continueKey"*/, continueKey);
+    sub_1B761C0(&StringLiteral_18239/*"continuePass"*/, v7);
+    byte_4A2F784 = 1;
   }
-  RequestBase__addField_40916388((RequestBase_o *)this, (System_String_o *)StringLiteral_18193/*"continueKey"*/, continueKey, method);
-  RequestBase__addField_40916388((RequestBase_o *)this, (System_String_o *)StringLiteral_18195/*"continuePass"*/, continuePass, v8);
+  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_18237/*"continueKey"*/, continueKey, method);
+  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_18239/*"continuePass"*/, continuePass, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
 
 System_String_o *__fastcall ContinueInputRequest__getMockData(ContinueInputRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A21310 & 1) == 0 )
+  if ( (byte_4A2F783 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_1/*""*/, method);
-    byte_4A21310 = 1;
+    sub_1B761C0(&StringLiteral_1/*""*/, method);
+    byte_4A2F783 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -36,16 +36,16 @@ System_String_o *__fastcall ContinueInputRequest__getURL(ContinueInputRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A2130F & 1) == 0 )
+  if ( (byte_4A2F782 & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_18191/*"continue/input"*/, v2);
-    byte_4A2130F = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_18235/*"continue/input"*/, v2);
+    byte_4A2F782 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_18191/*"continue/input"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_18235/*"continue/input"*/, 0LL);
 }
 
 
@@ -70,14 +70,14 @@ void __fastcall ContinueInputRequest__requestCompleted(
   Il2CppObject *m_target; // x3
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
-  if ( (byte_4A21312 & 1) == 0 )
+  if ( (byte_4A2F785 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1B715CC(&JsonManager_TypeInfo, v5);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v6);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v7);
-    sub_1B715CC(&StringLiteral_24362/*"userGame"*/, v8);
-    byte_4A21312 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1B761C0(&JsonManager_TypeInfo, v5);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v6);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v7);
+    sub_1B761C0(&StringLiteral_24408/*"userGame"*/, v8);
+    byte_4A2F785 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -86,11 +86,11 @@ void __fastcall ContinueInputRequest__requestCompleted(
   {
     success = (System_Collections_Generic_Dictionary_object__object__o *)v11->fields.success;
     if ( !success )
-      sub_1B71828(0LL, v12);
+      sub_1B7641C(0LL, v12);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24362/*"userGame"*/,
-             (const MethodInfo_319EC90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24408/*"userGame"*/,
+             (const MethodInfo_31A5CB0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v15 = JsonManager__toJson(Item, 0, 0, 0LL);
@@ -114,7 +114,7 @@ LABEL_14:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v17 = StringLiteral_22000/*"ng"*/;
+      v17 = StringLiteral_22046/*"ng"*/;
       goto LABEL_14;
     }
   }

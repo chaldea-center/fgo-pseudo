@@ -17,21 +17,21 @@ void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo
   System_Reflection_MethodBase_o *v11; // x0
   System_String_o *linkUrl; // x19
 
-  if ( (byte_4A22540 & 1) == 0 )
+  if ( (byte_4A309B6 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Application_TypeInfo, method);
-    sub_1B715CC(&Method_LinkableObject_OnClick__, v3);
-    sub_1B715CC(&WebViewManager_TypeInfo, v4);
-    sub_1B715CC(&StringLiteral_1/*""*/, v5);
-    byte_4A22540 = 1;
+    sub_1B761C0(&UnityEngine_Application_TypeInfo, method);
+    sub_1B761C0(&Method_LinkableObject_OnClick__, v3);
+    sub_1B761C0(&WebViewManager_TypeInfo, v4);
+    sub_1B761C0(&StringLiteral_1/*""*/, v5);
+    byte_4A309B6 = 1;
   }
   linkType = this->fields.linkType;
   if ( linkType == 2 )
   {
     v10 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v10 = (_QWORD *)sub_1B715E4(Method_LinkableObject_OnClick__);
-    v11 = (System_Reflection_MethodBase_o *)sub_1B715B0(v10, v10[4]);
+      v10 = (_QWORD *)sub_1B761D8(Method_LinkableObject_OnClick__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1B761A4(v10, v10[4]);
     OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
     linkUrl = this->fields.linkUrl;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -42,8 +42,8 @@ void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo
   {
     v7 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B715E4(Method_LinkableObject_OnClick__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B715B0(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B761D8(Method_LinkableObject_OnClick__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B761A4(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
     v9 = this->fields.linkUrl;
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
@@ -64,5 +64,5 @@ void __fastcall LinkableObject__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
 }

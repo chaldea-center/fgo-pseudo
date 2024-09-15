@@ -12,33 +12,33 @@ void __fastcall CriWareInitializer___ctor(CriWareInitializer_o *this, const Meth
   CriWareDecrypterConfig_o *v12; // x20
   const MethodInfo *v13; // x1
 
-  if ( (byte_4A1A53D & 1) == 0 )
+  if ( (byte_4A2899D & 1) == 0 )
   {
-    sub_1B715CC(&CriAtomConfig_TypeInfo, method);
-    sub_1B715CC(&CriFsConfig_TypeInfo, v3);
-    sub_1B715CC(&CriManaConfig_TypeInfo, v4);
-    sub_1B715CC(&CriWareDecrypterConfig_TypeInfo, v5);
-    byte_4A1A53D = 1;
+    sub_1B761C0(&CriAtomConfig_TypeInfo, method);
+    sub_1B761C0(&CriFsConfig_TypeInfo, v3);
+    sub_1B761C0(&CriManaConfig_TypeInfo, v4);
+    sub_1B761C0(&CriWareDecrypterConfig_TypeInfo, v5);
+    byte_4A2899D = 1;
   }
   this->fields.initializesFileSystem = 1;
-  v6 = (CriFsConfig_o *)sub_1B71818(CriFsConfig_TypeInfo);
+  v6 = (CriFsConfig_o *)sub_1B7640C(CriFsConfig_TypeInfo);
   CriFsConfig___ctor(v6, v7);
   this->fields.fileSystemConfig = v6;
-  sub_1B71570(&this->fields.fileSystemConfig);
+  sub_1B76164(&this->fields.fileSystemConfig);
   this->fields.initializesAtom = 1;
-  v8 = (CriAtomConfig_o *)sub_1B71818(CriAtomConfig_TypeInfo);
+  v8 = (CriAtomConfig_o *)sub_1B7640C(CriAtomConfig_TypeInfo);
   CriAtomConfig___ctor(v8, v9);
   this->fields.atomConfig = v8;
-  sub_1B71570(&this->fields.atomConfig);
+  sub_1B76164(&this->fields.atomConfig);
   this->fields.initializesMana = 1;
-  v10 = (CriManaConfig_o *)sub_1B71818(CriManaConfig_TypeInfo);
+  v10 = (CriManaConfig_o *)sub_1B7640C(CriManaConfig_TypeInfo);
   CriManaConfig___ctor(v10, v11);
   this->fields.manaConfig = v10;
-  sub_1B71570(&this->fields.manaConfig);
-  v12 = (CriWareDecrypterConfig_o *)sub_1B71818(CriWareDecrypterConfig_TypeInfo);
+  sub_1B76164(&this->fields.manaConfig);
+  v12 = (CriWareDecrypterConfig_o *)sub_1B7640C(CriWareDecrypterConfig_TypeInfo);
   CriWareDecrypterConfig___ctor(v12, v13);
   this->fields.decrypterConfig = v12;
-  sub_1B71570(&this->fields.decrypterConfig);
+  sub_1B76164(&this->fields.decrypterConfig);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
   this->fields._guid_k__BackingField = System_Guid__NewGuid(0LL);
 }
@@ -57,11 +57,11 @@ void __fastcall CriWareInitializer__AddAudioEffectInterface(intptr_t effect_inte
   System_Collections_Generic_List_IntPtr__o *effect_interface_list; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = *(_QWORD *)&effect_interface;
-  if ( (byte_4A1A539 & 1) == 0 )
+  if ( (byte_4A28999 & 1) == 0 )
   {
-    sub_1B715CC(&CriAtomPlugin_TypeInfo, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_IntPtr__Add__, v3);
-    byte_4A1A539 = 1;
+    sub_1B761C0(&CriAtomPlugin_TypeInfo, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_IntPtr__Add__, v3);
+    byte_4A28999 = 1;
   }
   effect_interface_list = 0LL;
   if ( !CriAtomPlugin_TypeInfo->_2.cctor_finished )
@@ -75,7 +75,7 @@ void __fastcall CriWareInitializer__AddAudioEffectInterface(intptr_t effect_inte
           ++effect_interface_list->fields._version,
           !items) )
     {
-      sub_1B71828(v5, v4);
+      sub_1B7641C(v5, v4);
     }
     size = v5->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -83,7 +83,7 @@ void __fastcall CriWareInitializer__AddAudioEffectInterface(intptr_t effect_inte
       System_Collections_Generic_List_IntPtr___AddWithResize(
         v5,
         v2,
-        *(const MethodInfo_34BAAC0 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+        *(const MethodInfo_34C1E34 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
     }
     else
     {
@@ -141,24 +141,24 @@ void __fastcall CriWareInitializer__Initialize(CriWareInitializer_o *this, const
   int32_t inGamePreviewMode; // w8
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4A1A536 & 1) == 0 )
+  if ( (byte_4A28996 & 1) == 0 )
   {
-    sub_1B715CC(&CriAtomPlugin_TypeInfo, method);
-    sub_1B715CC(&CriFsPlugin_TypeInfo, v3);
-    sub_1B715CC(&CriManaPlugin_TypeInfo, v4);
-    sub_1B715CC(&CriWareInitializer_TypeInfo, v5);
-    sub_1B715CC(&UnityEngine_Debug_TypeInfo, v6);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B715CC(&StringLiteral_1/*""*/, v8);
-    sub_1B715CC(&StringLiteral_1212/*"0"*/, v9);
-    byte_4A1A536 = 1;
+    sub_1B761C0(&CriAtomPlugin_TypeInfo, method);
+    sub_1B761C0(&CriFsPlugin_TypeInfo, v3);
+    sub_1B761C0(&CriManaPlugin_TypeInfo, v4);
+    sub_1B761C0(&CriWareInitializer_TypeInfo, v5);
+    sub_1B761C0(&UnityEngine_Debug_TypeInfo, v6);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B761C0(&StringLiteral_1/*""*/, v8);
+    sub_1B761C0(&StringLiteral_1212/*"0"*/, v9);
+    byte_4A28996 = 1;
   }
   static_fields = CriWareInitializer_TypeInfo->static_fields;
   if ( static_fields->initializationCount++ )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69257852((UnityEngine_Object_o *)this, 0LL);
+    UnityEngine_Object__Destroy_69287408((UnityEngine_Object_o *)this, 0LL);
     return;
   }
   inited = CriFsPlugin_TypeInfo;
@@ -270,7 +270,7 @@ LABEL_75:
   if ( this->fields.useDecrypter )
     CriWareDecrypter__Initialize(this->fields.decrypterConfig, v15);
   else
-    CriWareDecrypter__Initialize_30055176(
+    CriWareDecrypter__Initialize_30074628(
       (System_String_o *)StringLiteral_1212/*"0"*/,
       (System_String_o *)StringLiteral_1/*""*/,
       0,
@@ -290,7 +290,7 @@ LABEL_75:
       return;
     }
 LABEL_72:
-    sub_1B71828(IsLibraryInitialized, v15);
+    sub_1B7641C(IsLibraryInitialized, v15);
   }
 }
 
@@ -342,15 +342,15 @@ bool __fastcall CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, cons
   uint64_t dateData; // [xsp+58h] [xbp-58h] BYREF
   System_DateTime_o v47; // 0:x0.8
 
-  if ( (byte_4A1A53B & 1) == 0 )
+  if ( (byte_4A2899B & 1) == 0 )
   {
-    sub_1B715CC(&CriAtomEx_TypeInfo, method);
-    sub_1B715CC(&CriAtomPlugin_TypeInfo, v3);
-    sub_1B715CC(&CriAtomServer_TypeInfo, v4);
-    sub_1B715CC(&System_DateTime_TypeInfo, v5);
-    sub_1B715CC(&System_Math_TypeInfo, v6);
-    sub_1B715CC(&System_IO_Path_TypeInfo, v7);
-    byte_4A1A53B = 1;
+    sub_1B761C0(&CriAtomEx_TypeInfo, method);
+    sub_1B761C0(&CriAtomPlugin_TypeInfo, v3);
+    sub_1B761C0(&CriAtomServer_TypeInfo, v4);
+    sub_1B761C0(&System_DateTime_TypeInfo, v5);
+    sub_1B761C0(&System_Math_TypeInfo, v6);
+    sub_1B761C0(&System_IO_Path_TypeInfo, v7);
+    byte_4A2899B = 1;
   }
   dateData = 0LL;
   if ( !CriAtomPlugin_TypeInfo->_2.cctor_finished )
@@ -367,7 +367,7 @@ bool __fastcall CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, cons
     RequiredMaxVirtualVoices = CriAtomPlugin__GetRequiredMaxVirtualVoices(config, 0LL);
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    IsLibraryInitialized = (CriAtomEx_c *)System_Math__Max_62324152(maxVirtualVoices, RequiredMaxVirtualVoices, 0LL);
+    IsLibraryInitialized = (CriAtomEx_c *)System_Math__Max_62353708(maxVirtualVoices, RequiredMaxVirtualVoices, 0LL);
     standardVoicePoolConfig = config->fields.standardVoicePoolConfig;
     if ( !standardVoicePoolConfig )
       goto LABEL_54;
@@ -415,7 +415,7 @@ bool __fastcall CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, cons
       config->fields.linuxPulseLatencyUsec,
       0LL);
     iosEnableSonicSync = config->fields.iosEnableSonicSync;
-    v18 = System_Math__Max_62324152(config->fields.iosBufferingTime, 16, 0LL);
+    v18 = System_Math__Max_62353708(config->fields.iosBufferingTime, 16, 0LL);
     CriAtomPlugin__SetConfigAdditionalParameters_IOS(iosEnableSonicSync, v18, config->fields.iosOverrideIPodMusic, 0LL);
     if ( !config->fields.androidBufferingTime )
     {
@@ -518,7 +518,7 @@ bool __fastcall CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, cons
     acfFileName = config->fields.acfFileName;
     if ( !acfFileName )
 LABEL_54:
-      sub_1B71828(IsLibraryInitialized, v9);
+      sub_1B7641C(IsLibraryInitialized, v9);
     if ( acfFileName->fields._stringLength )
     {
       if ( CriWare_Common__IsStreamingAssetsPath(config->fields.acfFileName, 0LL) )
@@ -563,10 +563,10 @@ bool __fastcall CriWareInitializer__InitializeFileSystem(CriFsConfig_o *config, 
   int32_t androidDeviceReadBitrate; // w21
   const MethodInfo *v17; // x0
 
-  if ( (byte_4A1A53A & 1) == 0 )
+  if ( (byte_4A2899A & 1) == 0 )
   {
-    sub_1B715CC(&CriFsPlugin_TypeInfo, method);
-    byte_4A1A53A = 1;
+    sub_1B761C0(&CriFsPlugin_TypeInfo, method);
+    byte_4A2899A = 1;
   }
   inited = CriFsPlugin_TypeInfo;
   if ( !CriFsPlugin_TypeInfo->_2.cctor_finished )
@@ -608,7 +608,7 @@ bool __fastcall CriWareInitializer__InitializeFileSystem(CriFsConfig_o *config, 
     IsLibraryInitialized = config->fields.userAgentString;
     if ( !IsLibraryInitialized )
 LABEL_17:
-      sub_1B71828(IsLibraryInitialized, v5);
+      sub_1B7641C(IsLibraryInitialized, v5);
     if ( IsLibraryInitialized->fields._stringLength )
       CriFsUtility__CRIWARE14C89F34(IsLibraryInitialized, v5);
   }
@@ -631,11 +631,11 @@ bool __fastcall CriWareInitializer__InitializeMana(CriManaConfig_o *config, cons
   const MethodInfo *v13; // x2
   const MethodInfo *v14; // x0
 
-  if ( (byte_4A1A53C & 1) == 0 )
+  if ( (byte_4A2899C & 1) == 0 )
   {
-    sub_1B715CC(&CriManaPlugin_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_3925/*"CRI_LINEAR_COLORSPACE"*/, v3);
-    byte_4A1A53C = 1;
+    sub_1B761C0(&CriManaPlugin_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_3942/*"CRI_LINEAR_COLORSPACE"*/, v3);
+    byte_4A2899C = 1;
   }
   inited = CriManaPlugin_TypeInfo;
   if ( !CriManaPlugin_TypeInfo->_2.cctor_finished )
@@ -645,7 +645,7 @@ bool __fastcall CriWareInitializer__InitializeMana(CriManaConfig_o *config, cons
   if ( !IsLibraryInitialized )
   {
     if ( !config )
-      sub_1B71828(IsLibraryInitialized, v6);
+      sub_1B7641C(IsLibraryInitialized, v6);
     graphicsMultiThreaded = config->fields.graphicsMultiThreaded;
     numberOfDecoders = config->fields.numberOfDecoders;
     numberOfMaxEntries = config->fields.numberOfMaxEntries;
@@ -656,7 +656,7 @@ bool __fastcall CriWareInitializer__InitializeMana(CriManaConfig_o *config, cons
     CriManaPlugin__SetConfigAdditonalParameters_ANDROID(v12, 0, v13);
     CriManaPlugin__InitializeLibrary(v14);
     if ( UnityEngine_QualitySettings__get_activeColorSpace(0LL) == 1 )
-      UnityEngine_Shader__EnableKeyword((System_String_o *)StringLiteral_3925/*"CRI_LINEAR_COLORSPACE"*/, 0LL);
+      UnityEngine_Shader__EnableKeyword((System_String_o *)StringLiteral_3942/*"CRI_LINEAR_COLORSPACE"*/, 0LL);
   }
   return !v8;
 }
@@ -667,10 +667,10 @@ bool __fastcall CriWareInitializer__IsInitialized(const MethodInfo *method)
   __int64 v1; // x1
   int32_t initializationCount; // w19
 
-  if ( (byte_4A1A538 & 1) == 0 )
+  if ( (byte_4A28998 & 1) == 0 )
   {
-    sub_1B715CC(&CriWareInitializer_TypeInfo, v1);
-    byte_4A1A538 = 1;
+    sub_1B761C0(&CriWareInitializer_TypeInfo, v1);
+    byte_4A28998 = 1;
   }
   initializationCount = CriWareInitializer_TypeInfo->static_fields->initializationCount;
   if ( initializationCount <= 0 )
@@ -697,13 +697,13 @@ void __fastcall CriWareInitializer__Shutdown(CriWareInitializer_o *this, const M
   CriManaPlugin_c *inited; // x0
   CriFsPlugin_c *v10; // x0
 
-  if ( (byte_4A1A537 & 1) == 0 )
+  if ( (byte_4A28997 & 1) == 0 )
   {
-    sub_1B715CC(&CriAtomPlugin_TypeInfo, method);
-    sub_1B715CC(&CriFsPlugin_TypeInfo, v3);
-    sub_1B715CC(&CriManaPlugin_TypeInfo, v4);
-    sub_1B715CC(&CriWareInitializer_TypeInfo, v5);
-    byte_4A1A537 = 1;
+    sub_1B761C0(&CriAtomPlugin_TypeInfo, method);
+    sub_1B761C0(&CriFsPlugin_TypeInfo, v3);
+    sub_1B761C0(&CriManaPlugin_TypeInfo, v4);
+    sub_1B761C0(&CriWareInitializer_TypeInfo, v5);
+    byte_4A28997 = 1;
   }
   static_fields = CriWareInitializer_TypeInfo->static_fields;
   v8 = static_fields->initializationCount - 1;

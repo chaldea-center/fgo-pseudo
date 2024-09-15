@@ -20,20 +20,20 @@ UnityEngine_GameObject_o *__fastcall FGOActionUtil__getEffectObject(
   __int64 v14; // x1
   bool v15; // w8
 
-  if ( (byte_4A2113D & 1) == 0 )
+  if ( (byte_4A2F5B0 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
-    sub_1B715CC(&UnityEngine_GameObject_TypeInfo, v7);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B715CC(&StringLiteral_3194/*"Battle/CommonEffects/"*/, v9);
-    sub_1B715CC(&StringLiteral_18819/*"effect/"*/, v10);
-    byte_4A2113D = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
+    sub_1B761C0(&UnityEngine_GameObject_TypeInfo, v7);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B761C0(&StringLiteral_3210/*"Battle/CommonEffects/"*/, v9);
+    sub_1B761C0(&StringLiteral_18864/*"effect/"*/, v10);
+    byte_4A2F5B0 = 1;
   }
   if ( folder == 2 )
   {
-    v11 = &StringLiteral_18819/*"effect/"*/;
+    v11 = &StringLiteral_18864/*"effect/"*/;
 LABEL_8:
-    v12 = System_String__Concat_61505504((System_String_o *)*v11, name, 0LL);
+    v12 = System_String__Concat_61535060((System_String_o *)*v11, name, 0LL);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v12, 0LL);
     if ( result )
     {
@@ -46,7 +46,7 @@ LABEL_8:
   {
     if ( folder )
       return 0LL;
-    v11 = &StringLiteral_3194/*"Battle/CommonEffects/"*/;
+    v11 = &StringLiteral_3210/*"Battle/CommonEffects/"*/;
     goto LABEL_8;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,9 +58,9 @@ LABEL_8:
     if ( !actorObject
       || (result = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  actorObject,
-                                                 (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
+                                                 (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
     {
-      sub_1B71828(result, v14);
+      sub_1B7641C(result, v14);
     }
     return BattleActorControl__getActorEffect((BattleActorControl_o *)result, name, 0LL);
   }

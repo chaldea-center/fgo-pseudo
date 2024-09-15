@@ -1,16 +1,16 @@
 void __fastcall StatusEffectPosOverwriteMaster___ctor(StatusEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A204D2 & 1) == 0 )
+  if ( (byte_4A2E944 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__,
       method);
-    byte_4A204D2 = 1;
+    byte_4A2E944 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     301,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -24,12 +24,12 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A204D0 & 1) == 0 )
+  if ( (byte_4A2E942 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&statusEffectId);
-    byte_4A204D0 = 1;
+    byte_4A2E942 = 1;
   }
   PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
                          statusEffectId,
@@ -39,7 +39,7 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
   return (StatusEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_30F8AB8 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
+                                               (const MethodInfo_30FFAD8 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -54,12 +54,12 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A204D1 & 1) == 0 )
+  if ( (byte_4A2E943 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_4A204D1 = 1;
+    byte_4A2E943 = 1;
   }
   PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
                          statusEffectId,
@@ -70,5 +70,5 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
 }

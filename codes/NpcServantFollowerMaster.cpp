@@ -1,14 +1,14 @@
 void __fastcall NpcServantFollowerMaster___ctor(NpcServantFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1FEB5 & 1) == 0 )
+  if ( (byte_4A2E327 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__, method);
-    byte_4A1FEB5 = 1;
+    sub_1B761C0(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__, method);
+    byte_4A2E327 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     96,
-    (const MethodInfo_30F88CC *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    (const MethodInfo_30FF8EC *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
 }
 
 
@@ -36,27 +36,27 @@ bool __fastcall NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
   int32_t v23; // w3
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A1FEB6 & 1) == 0 )
+  if ( (byte_4A2E328 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_NpcFollowerMaster___, npcServantFollowerEntity);
-    sub_1B715CC(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v10);
-    sub_1B715CC(&DataManager_TypeInfo, v11);
-    sub_1B715CC(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__, v12);
-    byte_4A1FEB6 = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_NpcFollowerMaster___, npcServantFollowerEntity);
+    sub_1B761C0(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v10);
+    sub_1B761C0(&DataManager_TypeInfo, v11);
+    sub_1B761C0(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__, v12);
+    byte_4A2E328 = 1;
   }
   entity = 0LL;
   *npcServantFollowerEntity = 0LL;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, 0, questId, questPhase);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, 0, questId, questPhase);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
   if ( !Master_object
     || (EntityArray = NpcFollowerMaster__GetEntityArray((NpcFollowerMaster_o *)Master_object, questId, questPhase, v15),
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
         !EntityArray) )
   {
 LABEL_19:
-    sub_1B71828(Master_object, v14);
+    sub_1B7641C(Master_object, v14);
   }
   max_length = EntityArray->max_length;
   v18 = max_length > 0;
@@ -67,7 +67,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( v20 >= (unsigned int)max_length )
-        sub_1B71830(Master_object, v14);
+        sub_1B76424(Master_object, v14);
       v21 = EntityArray->m_Items[v20];
       if ( !v21 || !v19 )
         goto LABEL_19;
@@ -75,7 +75,7 @@ LABEL_19:
                                         v19,
                                         &entity,
                                         v21->fields.leaderSvtId,
-                                        (const MethodInfo_30F8960 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+                                        (const MethodInfo_30FF980 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         v14 = entity;
@@ -90,7 +90,7 @@ LABEL_19:
         return v18;
     }
     *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, (int32_t)v14, v22, v23);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)npcServantFollowerEntity, (int32_t)v14, v22, v23);
   }
   return v18;
 }

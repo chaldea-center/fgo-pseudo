@@ -20,21 +20,21 @@ void __fastcall BlankEarthPoint___ctor(BlankEarthPoint_o *this, const MethodInfo
   int32_t v20; // w2
   int32_t v21; // w3
 
-  if ( (byte_4A1C639 & 1) == 0 )
+  if ( (byte_4A2AAA2 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_UIWidget___ctor__, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__, v3);
-    sub_1B715CC(&System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo, v4);
-    sub_1B715CC(&System_Collections_Generic_List_UIWidget__TypeInfo, v5);
-    sub_1B715CC(&QAASpotStateController_TypeInfo, v6);
-    byte_4A1C639 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_UIWidget___ctor__, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__, v3);
+    sub_1B761C0(&System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo, v4);
+    sub_1B761C0(&System_Collections_Generic_List_UIWidget__TypeInfo, v5);
+    sub_1B761C0(&QAASpotStateController_TypeInfo, v6);
+    byte_4A2AAA2 = 1;
   }
   this->fields.spotNamePos.fields.z = 0.0;
-  *(_OWORD *)&this->fields.dispSpriteDot = xmmword_BAAA80;
-  if ( !byte_4A1A751 )
+  *(_OWORD *)&this->fields.dispSpriteDot = xmmword_BACE50;
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A28BB1 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -47,22 +47,22 @@ void __fastcall BlankEarthPoint___ctor(BlankEarthPoint_o *this, const MethodInfo
   this->fields.isForward = 1;
   *(_QWORD *)&this->fields.changedUiRootPosition.fields.x = v11;
   this->fields.changedUiRootPosition.fields.z = v12;
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_MapControl_QuestInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_MapControl_QuestInfo___ctor__);
   this->fields.areaInfoList = (struct System_Collections_Generic_List_MapControl_QuestInfo__o *)v13;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.areaInfoList, (int32_t)v13, v14, v15);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_UIWidget__TypeInfo);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.areaInfoList, (int32_t)v13, v14, v15);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
   this->fields.listBillboardChildWidget = (struct System_Collections_Generic_List_UIWidget__o *)v16;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.listBillboardChildWidget, (int32_t)v16, v17, v18);
-  v19 = (QAASpotStateController_o *)sub_1B71818(QAASpotStateController_TypeInfo);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.listBillboardChildWidget, (int32_t)v16, v17, v18);
+  v19 = (QAASpotStateController_o *)sub_1B7640C(QAASpotStateController_TypeInfo);
   QAASpotStateController___ctor(v19, 0LL);
   this->fields.stateController = v19;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.stateController, (int32_t)v19, v20, v21);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.stateController, (int32_t)v19, v20, v21);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -82,24 +82,24 @@ void __fastcall BlankEarthPoint__ActivateEachComponent(
   System_Collections_Generic_IEnumerable_T__o *v12; // x19
   System_Action_object__o *v13; // x20
 
-  if ( (byte_4A1C633 & 1) == 0 )
+  if ( (byte_4A2AA9C & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_Component__TypeInfo, targets);
-    sub_1B715CC(&Method_BasicHelper_ExcludeNull_Component___, v5);
-    sub_1B715CC(&Method_BasicHelper_ForEach_Component___, v6);
-    sub_1B715CC(&Method_BlankEarthPoint___c__DisplayClass101_0__ActivateEachComponent_b__0__, v7);
-    sub_1B715CC(&BlankEarthPoint___c__DisplayClass101_0_TypeInfo, v8);
-    byte_4A1C633 = 1;
+    sub_1B761C0(&System_Action_Component__TypeInfo, targets);
+    sub_1B761C0(&Method_BasicHelper_ExcludeNull_Component___, v5);
+    sub_1B761C0(&Method_BasicHelper_ForEach_Component___, v6);
+    sub_1B761C0(&Method_BlankEarthPoint___c__DisplayClass101_0__ActivateEachComponent_b__0__, v7);
+    sub_1B761C0(&BlankEarthPoint___c__DisplayClass101_0_TypeInfo, v8);
+    byte_4A2AA9C = 1;
   }
-  v9 = sub_1B71818(BlankEarthPoint___c__DisplayClass101_0_TypeInfo);
+  v9 = sub_1B7640C(BlankEarthPoint___c__DisplayClass101_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1B71828(v10, v11);
+    sub_1B7641C(v10, v11);
   *(_BYTE *)(v9 + 16) = value;
   v12 = BasicHelper__ExcludeNull_object_(
           (System_Collections_Generic_IEnumerable_T__o *)targets,
-          (const MethodInfo_2E47104 *)Method_BasicHelper_ExcludeNull_Component___);
-  v13 = (System_Action_object__o *)sub_1B71818(System_Action_Component__TypeInfo);
+          (const MethodInfo_2E4E124 *)Method_BasicHelper_ExcludeNull_Component___);
+  v13 = (System_Action_object__o *)sub_1B7640C(System_Action_Component__TypeInfo);
   System_Action_object____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -108,7 +108,7 @@ void __fastcall BlankEarthPoint__ActivateEachComponent(
   BasicHelper__ForEach_object_(
     v12,
     (System_Action_T__o *)v13,
-    (const MethodInfo_2E487A0 *)Method_BasicHelper_ForEach_Component___);
+    (const MethodInfo_2E4F7C0 *)Method_BasicHelper_ForEach_Component___);
 }
 
 
@@ -152,16 +152,16 @@ void __fastcall BlankEarthPoint__Awake(BlankEarthPoint_o *this, const MethodInfo
   float z; // w9
 
   v2 = this;
-  if ( (byte_4A1C62B & 1) == 0 )
+  if ( (byte_4A2AA94 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Array_Empty_AnimationState___, method);
-    sub_1B715CC(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75869224, v3);
-    sub_1B715CC(&Method_System_Linq_Enumerable_OfType_AnimationState___, v4);
-    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_AnimationState___, v5);
-    sub_1B715CC(&Method_System_Collections_Generic_List_UIWidget__AddRange__, v6);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v7);
-    this = (BlankEarthPoint_o *)sub_1B715CC(&UnityEngine_Vector3___TypeInfo, v8);
-    byte_4A1C62B = 1;
+    sub_1B761C0(&Method_System_Array_Empty_AnimationState___, method);
+    sub_1B761C0(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464, v3);
+    sub_1B761C0(&Method_System_Linq_Enumerable_OfType_AnimationState___, v4);
+    sub_1B761C0(&Method_System_Linq_Enumerable_ToArray_AnimationState___, v5);
+    sub_1B761C0(&Method_System_Collections_Generic_List_UIWidget__AddRange__, v6);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
+    this = (BlankEarthPoint_o *)sub_1B761C0(&UnityEngine_Vector3___TypeInfo, v8);
+    byte_4A2AA94 = 1;
   }
   uiBillboardTransforms = v2->fields.uiBillboardTransforms;
   if ( uiBillboardTransforms )
@@ -174,20 +174,20 @@ void __fastcall BlankEarthPoint__Awake(BlankEarthPoint_o *this, const MethodInfo
         break;
       if ( (unsigned int)v10 >= max_length )
 LABEL_45:
-        sub_1B71830(this, method);
+        sub_1B76424(this, method);
       this = (BlankEarthPoint_o *)uiBillboardTransforms->m_Items[v10];
       if ( this )
       {
         this = (BlankEarthPoint_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                       (UnityEngine_Component_o *)this,
                                       1,
-                                      (const MethodInfo_2E52978 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75869224);
+                                      (const MethodInfo_2E59998 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464);
         if ( v2->fields.listBillboardChildWidget )
         {
           System_Collections_Generic_List_object___AddRange(
             (System_Collections_Generic_List_object__o *)v2->fields.listBillboardChildWidget,
             (System_Collections_Generic_IEnumerable_T__o *)this,
-            (const MethodInfo_34D046C *)Method_System_Collections_Generic_List_UIWidget__AddRange__);
+            (const MethodInfo_34D77E0 *)Method_System_Collections_Generic_List_UIWidget__AddRange__);
           uiBillboardTransforms = v2->fields.uiBillboardTransforms;
           ++v10;
           if ( uiBillboardTransforms )
@@ -200,9 +200,9 @@ LABEL_45:
   offsetTargetObjects = v2->fields.offsetTargetObjects;
   if ( offsetTargetObjects )
   {
-    v13 = sub_1B71674(UnityEngine_Vector3___TypeInfo, offsetTargetObjects->max_length);
+    v13 = sub_1B76268(UnityEngine_Vector3___TypeInfo, offsetTargetObjects->max_length);
     v2->fields.defaultLocalPosOffsetTargetObjects = (struct UnityEngine_Vector3_array *)v13;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v2->fields.defaultLocalPosOffsetTargetObjects, v13, v14, v15);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v2->fields.defaultLocalPosOffsetTargetObjects, v13, v14, v15);
     v16 = v2->fields.offsetTargetObjects;
     if ( !v16 )
       goto LABEL_44;
@@ -242,7 +242,7 @@ LABEL_45:
   this = (BlankEarthPoint_o *)v2->fields.stateController;
   if ( !this )
 LABEL_44:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   QAASpotStateController__Init((QAASpotStateController_o *)this, (QAASpotStateController_IMapSpot_o *)v2, 0LL);
   anim = (UnityEngine_Object_o *)v2->fields.anim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -251,10 +251,10 @@ LABEL_44:
   {
     v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                  (System_Collections_IEnumerable_o *)v2->fields.anim,
-                                                                 (const MethodInfo_2E8546C *)Method_System_Linq_Enumerable_OfType_AnimationState___);
+                                                                 (const MethodInfo_2E8C48C *)Method_System_Linq_Enumerable_OfType_AnimationState___);
     v30 = System_Linq_Enumerable__ToArray_object_(
             v29,
-            (const MethodInfo_2E93E84 *)Method_System_Linq_Enumerable_ToArray_AnimationState___);
+            (const MethodInfo_2E9AEA4 *)Method_System_Linq_Enumerable_ToArray_AnimationState___);
   }
   else
   {
@@ -262,21 +262,21 @@ LABEL_44:
     v32 = *((_QWORD *)Method_System_Array_Empty_AnimationState___ + 7);
     if ( !v32 )
     {
-      sub_1BC3504(Method_System_Array_Empty_AnimationState___);
+      sub_1BC80F8(Method_System_Array_Empty_AnimationState___);
       v32 = v31[7];
     }
     v33 = *(_QWORD *)(v32 + 16);
     if ( (*(_BYTE *)(v33 + 309) & 1) == 0 )
-      v33 = sub_1BC34A8(v33);
+      v33 = sub_1BC809C(v33);
     if ( !*(_DWORD *)(v33 + 224) )
       j_il2cpp_runtime_class_init_0(v33);
     v34 = *(_QWORD *)(v31[7] + 16LL);
     if ( (*(_BYTE *)(v34 + 309) & 1) == 0 )
-      v34 = sub_1BC34A8(v34);
+      v34 = sub_1BC809C(v34);
     v30 = **(System_Object_array ***)(v34 + 184);
   }
   v2->fields.animationStateArray = (struct UnityEngine_AnimationState_array *)v30;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v2->fields.animationStateArray, (int32_t)v30, v27, v28);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v2->fields.animationStateArray, (int32_t)v30, v27, v28);
   pinObject = (UnityEngine_Object_o *)v2->fields.pinObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -319,14 +319,14 @@ void __fastcall BlankEarthPoint__ChangeState(
   QAASpotStateController_o *stateController; // x0
 
   this->fields.stateEndAct = finishCallback;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields.stateEndAct,
     (int32_t)finishCallback,
     (int32_t)finishCallback,
     (int32_t)method);
   stateController = this->fields.stateController;
   if ( !stateController )
-    sub_1B71828(0LL, v6);
+    sub_1B7641C(0LL, v6);
   QAASpotStateController__SetState(stateController, state, 0LL);
 }
 
@@ -344,19 +344,19 @@ System_Collections_IEnumerator_o *__fastcall BlankEarthPoint__CoPlayAnimUntilFin
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A1C637 & 1) == 0 )
+  if ( (byte_4A2AAA0 & 1) == 0 )
   {
-    sub_1B715CC(&BlankEarthPoint__CoPlayAnimUntilFinish_d__111_TypeInfo, *(_QWORD *)&index);
-    byte_4A1C637 = 1;
+    sub_1B761C0(&BlankEarthPoint__CoPlayAnimUntilFinish_d__111_TypeInfo, *(_QWORD *)&index);
+    byte_4A2AAA0 = 1;
   }
-  v7 = sub_1B71818(BlankEarthPoint__CoPlayAnimUntilFinish_d__111_TypeInfo);
+  v7 = sub_1B7640C(BlankEarthPoint__CoPlayAnimUntilFinish_d__111_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 40) = index;
   *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -370,10 +370,10 @@ System_String_o *__fastcall BlankEarthPoint__GetAnimName(
   System_Object_array *animationStateArray; // x0
   Il2CppObject *v6; // x0
 
-  if ( (byte_4A1C638 & 1) == 0 )
+  if ( (byte_4A2AAA1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_BasicHelper_IndexValue_AnimationState___, *(_QWORD *)&index);
-    byte_4A1C638 = 1;
+    sub_1B761C0(&Method_BasicHelper_IndexValue_AnimationState___, *(_QWORD *)&index);
+    byte_4A2AAA1 = 1;
   }
   animationStateArray = (System_Object_array *)this->fields.animationStateArray;
   if ( animationStateArray
@@ -381,7 +381,7 @@ System_String_o *__fastcall BlankEarthPoint__GetAnimName(
                animationStateArray,
                index,
                0LL,
-               (const MethodInfo_2E4A234 *)Method_BasicHelper_IndexValue_AnimationState___)) != 0LL )
+               (const MethodInfo_2E51254 *)Method_BasicHelper_IndexValue_AnimationState___)) != 0LL )
   {
     return UnityEngine_AnimationState__get_name((UnityEngine_AnimationState_o *)v6, 0LL);
   }
@@ -417,28 +417,28 @@ int32_t __fastcall BlankEarthPoint__GetCurrentAnimIndex(BlankEarthPoint_o *this,
   struct BlankEarth_o *earthCore; // x8
   BlankEarthSpotAnimStateManager_o *SpotAnimStateManager_k__BackingField; // x0
 
-  if ( (byte_4A1C634 & 1) == 0 )
+  if ( (byte_4A2AA9D & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_BlankEarthSpotAddMaster___, method);
-    sub_1B715CC(&DataManager_TypeInfo, v3);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__, v5);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v6);
-    sub_1B715CC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v7);
-    byte_4A1C634 = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_BlankEarthSpotAddMaster___, method);
+    sub_1B761C0(&DataManager_TypeInfo, v3);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__, v5);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v6);
+    sub_1B761C0(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v7);
+    byte_4A2AA9D = 1;
   }
   v8 = *((_QWORD *)Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__ + 4);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1BC34A8(v8);
+    v8 = sub_1BC809C(v8);
   v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1BC34A8(v9);
+    v9 = sub_1BC809C(v9);
   v10 = **(UnityEngine_Object_o ***)(v9 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(v10, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
     IsExistCommand = QuestAfterAction__IsExistCommand(
@@ -451,13 +451,13 @@ int32_t __fastcall BlankEarthPoint__GetCurrentAnimIndex(BlankEarthPoint_o *this,
   {
     IsExistCommand = 0;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   v14 = clsQuestCheck__GetBeforeClearQuestId((clsQuestCheck_o *)Instance, IsExistCommand, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_BlankEarthSpotAddMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BlankEarthSpotAddMaster___);
   if ( !Instance )
     goto LABEL_24;
   v15 = (BlankEarthSpotAddMaster_o *)Instance;
@@ -478,7 +478,7 @@ int32_t __fastcall BlankEarthPoint__GetCurrentAnimIndex(BlankEarthPoint_o *this,
   earthCore = this->fields.earthCore;
   if ( !earthCore )
 LABEL_24:
-    sub_1B71828(Instance, v12);
+    sub_1B7641C(Instance, v12);
   SpotAnimStateManager_k__BackingField = earthCore->fields._SpotAnimStateManager_k__BackingField;
   if ( SpotAnimStateManager_k__BackingField )
     return BlankEarthSpotAnimStateManager__GetCurrentAnimIndex(
@@ -576,7 +576,7 @@ float __fastcall BlankEarthPoint__GetDotXYZ(
   earthCore = (UnityEngine_Component_o *)this->fields.earthCamera;
   if ( !earthCore )
 LABEL_24:
-    sub_1B71828(earthCore, v6);
+    sub_1B7641C(earthCore, v6);
   v19 = UnityEngine_Component__get_gameObject(earthCore, 0LL);
   v45 = GameObjectExtensions__GetPosition(v19, 0LL);
   x = v45.fields.x;
@@ -586,10 +586,10 @@ LABEL_24:
   v24 = v46.fields.x;
   v25 = v46.fields.y;
   v26 = v46.fields.z;
-  if ( !byte_4A1A754 )
+  if ( !byte_4A28BB4 )
   {
-    sub_1B715CC(&System_Math_TypeInfo, v23);
-    byte_4A1A754 = 1;
+    sub_1B761C0(&System_Math_TypeInfo, v23);
+    byte_4A28BB4 = 1;
   }
   v27 = x - v24;
   v28 = y - v25;
@@ -599,10 +599,10 @@ LABEL_24:
   v30 = sqrtf((float)(v29 * v29) + (float)((float)(v27 * v27) + (float)(v28 * v28)));
   if ( v30 <= 0.00001 )
   {
-    if ( !byte_4A1A751 )
+    if ( !byte_4A28BB1 )
     {
-      sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v23);
-      byte_4A1A751 = 1;
+      sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v23);
+      byte_4A28BB1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v31 = static_fields->zeroVector.fields.x;
@@ -618,20 +618,20 @@ LABEL_24:
   v35 = vec->fields.x;
   v36 = vec->fields.y;
   v37 = vec->fields.z;
-  if ( !byte_4A1A754 )
+  if ( !byte_4A28BB4 )
   {
-    sub_1B715CC(&System_Math_TypeInfo, v23);
-    byte_4A1A754 = 1;
+    sub_1B761C0(&System_Math_TypeInfo, v23);
+    byte_4A28BB4 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v38 = sqrtf((float)(v37 * v37) + (float)((float)(v35 * v35) + (float)(v36 * v36)));
   if ( v38 <= 0.00001 )
   {
-    if ( !byte_4A1A751 )
+    if ( !byte_4A28BB1 )
     {
-      sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v23);
-      byte_4A1A751 = 1;
+      sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v23);
+      byte_4A28BB1 = 1;
     }
     v42 = UnityEngine_Vector3_TypeInfo->static_fields;
     v39 = v42->zeroVector.fields.x;
@@ -768,17 +768,17 @@ void __fastcall BlankEarthPoint__LateUpdate(BlankEarthPoint_o *this, const Metho
   UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A1C62C & 1) == 0 )
+  if ( (byte_4A2AA95 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_UIWidget__get_Count__, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_UIWidget__get_Item__, v4);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A1C62C = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_UIWidget__get_Count__, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_UIWidget__get_Item__, v4);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A2AA95 = 1;
   }
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A28BB1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -787,10 +787,10 @@ void __fastcall BlankEarthPoint__LateUpdate(BlankEarthPoint_o *this, const Metho
   DotXYZ = BlankEarthPoint__GetDotXYZ(this, &v67, v2);
   isForward = this->fields.isForward;
   this->fields.isForward = DotXYZ > -0.2;
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v8);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v8);
+    byte_4A28BB1 = 1;
   }
   earthCamera = (UnityEngine_Object_o *)this->fields.earthCamera;
   x = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.x;
@@ -810,7 +810,7 @@ void __fastcall BlankEarthPoint__LateUpdate(BlankEarthPoint_o *this, const Metho
       *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
       if ( !v14 )
         goto LABEL_123;
-      x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_69064152(v14, *(UnityEngine_Vector3_o *)&v17, 0LL));
+      x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_69093708(v14, *(UnityEngine_Vector3_o *)&v17, 0LL));
       if ( x < 0.0 && this->fields.isForward )
         this->fields.isDisp = 0;
     }
@@ -836,10 +836,10 @@ void __fastcall BlankEarthPoint__LateUpdate(BlankEarthPoint_o *this, const Metho
       v22 = (UnityEngine_Transform_o *)transform;
       transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.earthCore, 0LL);
       v23 = (UnityEngine_Transform_o *)transform;
-      if ( !byte_4A1A759 )
+      if ( !byte_4A28BB9 )
       {
-        transform = sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v16);
-        byte_4A1A759 = 1;
+        transform = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v16);
+        byte_4A28BB9 = 1;
       }
       if ( !v22 )
         goto LABEL_123;
@@ -868,12 +868,12 @@ void __fastcall BlankEarthPoint__LateUpdate(BlankEarthPoint_o *this, const Metho
             goto LABEL_123;
           if ( v27 >= v29->max_length )
 LABEL_124:
-            sub_1B71830(transform, v16);
+            sub_1B76424(transform, v16);
           v30 = (UnityEngine_Transform_o *)*((_QWORD *)&v29->obj.klass + v25);
-          if ( !byte_4A1A751 )
+          if ( !byte_4A28BB1 )
           {
-            transform = sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v16);
-            byte_4A1A751 = 1;
+            transform = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v16);
+            byte_4A28BB1 = 1;
           }
           if ( !v30 )
             goto LABEL_123;
@@ -893,7 +893,7 @@ LABEL_124:
         transform = (__int64)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)transform,
                                v31,
-                               (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                               (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
         if ( !transform )
           goto LABEL_123;
         transform = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0LL);
@@ -907,7 +907,7 @@ LABEL_124:
           transform = (__int64)System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)transform,
                                  v31,
-                                 (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
+                                 (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_UIWidget__get_Item__);
           if ( !transform )
             goto LABEL_123;
           (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)transform + 792LL))(
@@ -1094,7 +1094,7 @@ LABEL_124:
       return;
     }
 LABEL_123:
-    sub_1B71828(transform, v16);
+    sub_1B7641C(transform, v16);
   }
 }
 
@@ -1106,20 +1106,20 @@ void __fastcall BlankEarthPoint__OnClickSpot(BlankEarthPoint_o *this, const Meth
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A1C632 & 1) == 0 )
+  if ( (byte_4A2AA9B & 1) == 0 )
   {
-    sub_1B715CC(&Method_BlankEarthPoint_OnClickSpot__, method);
-    byte_4A1C632 = 1;
+    sub_1B761C0(&Method_BlankEarthPoint_OnClickSpot__, method);
+    byte_4A2AA9B = 1;
   }
   earthCore = this->fields.earthCore;
   if ( !earthCore )
-    sub_1B71828(0LL, method);
+    sub_1B7641C(0LL, method);
   if ( (unsigned int)(BlankEarth__GetState(earthCore, method) - 1) <= 1 )
   {
     v4 = Method_BlankEarthPoint_OnClickSpot__;
     if ( (*((_BYTE *)Method_BlankEarthPoint_OnClickSpot__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B715E4(Method_BlankEarthPoint_OnClickSpot__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B715B0(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B761D8(Method_BlankEarthPoint_OnClickSpot__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B761A4(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
     BlankEarthPoint__OpenQuestList(this, v6);
   }
@@ -1132,7 +1132,7 @@ void __fastcall BlankEarthPoint__OnPress(BlankEarthPoint_o *this, const MethodIn
 
   earthCore = this->fields.earthCore;
   if ( !earthCore )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   earthCore->fields.isTouch = 1;
 }
 
@@ -1143,7 +1143,7 @@ void __fastcall BlankEarthPoint__OnRelease(BlankEarthPoint_o *this, const Method
 
   earthCore = this->fields.earthCore;
   if ( !earthCore )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   earthCore->fields.isTouch = 0;
 }
 
@@ -1155,17 +1155,17 @@ void __fastcall BlankEarthPoint__OpenQuestList(BlankEarthPoint_o *this, const Me
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x2
 
-  if ( (byte_4A1C631 & 1) == 0 )
+  if ( (byte_4A2AA9A & 1) == 0 )
   {
-    sub_1B715CC(&TerminalSceneComponent_TypeInfo, method);
-    byte_4A1C631 = 1;
+    sub_1B761C0(&TerminalSceneComponent_TypeInfo, method);
+    byte_4A2AA9A = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A1ACFD )
+  if ( !byte_4A2915D )
   {
-    sub_1B715CC(&TerminalSceneComponent_TypeInfo, method);
-    byte_4A1ACFD = 1;
+    sub_1B761C0(&TerminalSceneComponent_TypeInfo, method);
+    byte_4A2915D = 1;
   }
   earthCore = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1185,7 +1185,7 @@ void __fastcall BlankEarthPoint__OpenQuestList(BlankEarthPoint_o *this, const Me
           v5),
         (earthCore = (TitleInfoControl_o *)this->fields.earthCore) == 0LL) )
   {
-    sub_1B71828(earthCore, method);
+    sub_1B7641C(earthCore, method);
   }
   BlankEarth__SetState((BlankEarth_o *)earthCore, 3, v6);
 }
@@ -1200,7 +1200,7 @@ void __fastcall BlankEarthPoint__PlayAnim(
   System_Collections_IEnumerator_o *v5; // x1
 
   v5 = BlankEarthPoint__CoPlayAnimUntilFinish(this, index, finishCallback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69243124((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
 }
 
 
@@ -1280,10 +1280,10 @@ void __fastcall BlankEarthPoint__SetAnimationToEnd(BlankEarthPoint_o *this, int3
   __int64 v8; // x1
   UnityEngine_Animation_o *Item; // x0
 
-  if ( (byte_4A1C635 & 1) == 0 )
+  if ( (byte_4A2AA9E & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A1C635 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4A2AA9E = 1;
   }
   AnimName = BlankEarthPoint__GetAnimName(this, index, method);
   anim = (UnityEngine_Object_o *)this->fields.anim;
@@ -1295,10 +1295,10 @@ void __fastcall BlankEarthPoint__SetAnimationToEnd(BlankEarthPoint_o *this, int3
     Item = this->fields.anim;
     if ( !Item
       || (UnityEngine_Animation__Rewind(Item, 0LL), (Item = this->fields.anim) == 0LL)
-      || (UnityEngine_Animation__Play_69002944(Item, v7, 0LL), (Item = this->fields.anim) == 0LL)
+      || (UnityEngine_Animation__Play_69032500(Item, v7, 0LL), (Item = this->fields.anim) == 0LL)
       || (Item = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(Item, v7, 0LL)) == 0LL )
     {
-      sub_1B71828(Item, v8);
+      sub_1B7641C(Item, v8);
     }
     UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)Item, 1.0, 0LL);
   }
@@ -1356,75 +1356,75 @@ void __fastcall BlankEarthPoint__SetBlankEarthSpotUI(BlankEarthPoint_o *this, bo
   System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v51; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4A1C62E & 1) == 0 )
+  if ( (byte_4A2AA97 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Component___TypeInfo, isDisp);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__, v5);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__, v6);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__, v7);
-    sub_1B715CC(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__, v8);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v9);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B715CC(&TerminalPramsManager_TypeInfo, v11);
-    sub_1B715CC(&StringLiteral_12170/*"SPOT_FREE_QUEST_LAST_TIME"*/, v12);
-    byte_4A1C62E = 1;
+    sub_1B761C0(&UnityEngine_Component___TypeInfo, isDisp);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__, v5);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__, v6);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__, v7);
+    sub_1B761C0(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__, v8);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v9);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B761C0(&TerminalPramsManager_TypeInfo, v11);
+    sub_1B761C0(&StringLiteral_12207/*"SPOT_FREE_QUEST_LAST_TIME"*/, v12);
+    byte_4A2AA97 = 1;
   }
   memset(&v51, 0, sizeof(v51));
   if ( !this->fields.bSpotInfo || !this->fields.areaInfoList )
     return;
-  bSpotInfo = sub_1B71674(UnityEngine_Component___TypeInfo, 4LL);
+  bSpotInfo = sub_1B76268(UnityEngine_Component___TypeInfo, 4LL);
   if ( !bSpotInfo )
     goto LABEL_74;
   nextSprite = this->fields.nextSprite;
   v18 = (UnityEngine_Component_array *)bSpotInfo;
   if ( nextSprite )
   {
-    bSpotInfo = sub_1B71708(this->fields.nextSprite, *(_QWORD *)(*(_QWORD *)bSpotInfo + 64LL));
+    bSpotInfo = sub_1B762FC(this->fields.nextSprite, *(_QWORD *)(*(_QWORD *)bSpotInfo + 64LL));
     if ( !bSpotInfo )
       goto LABEL_76;
   }
   if ( !v18->max_length )
     goto LABEL_75;
   v18->m_Items[0] = (UnityEngine_Component_o *)nextSprite;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)v18->m_Items, (int32_t)nextSprite, v15, v16);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)v18->m_Items, (int32_t)nextSprite, v15, v16);
   loopIconSprite = this->fields.loopIconSprite;
   if ( loopIconSprite )
   {
-    bSpotInfo = sub_1B71708(this->fields.loopIconSprite, v18->obj.klass->_1.element_class);
+    bSpotInfo = sub_1B762FC(this->fields.loopIconSprite, v18->obj.klass->_1.element_class);
     if ( !bSpotInfo )
       goto LABEL_76;
   }
   if ( v18->max_length <= 1 )
     goto LABEL_75;
   v18->m_Items[1] = (UnityEngine_Component_o *)loopIconSprite;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v18->m_Items[1], (int32_t)loopIconSprite, v19, v20);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v18->m_Items[1], (int32_t)loopIconSprite, v19, v20);
   lastTimeLabel = this->fields.lastTimeLabel;
   if ( lastTimeLabel )
   {
-    bSpotInfo = sub_1B71708(this->fields.lastTimeLabel, v18->obj.klass->_1.element_class);
+    bSpotInfo = sub_1B762FC(this->fields.lastTimeLabel, v18->obj.klass->_1.element_class);
     if ( !bSpotInfo )
       goto LABEL_76;
   }
   if ( v18->max_length <= 2 )
     goto LABEL_75;
   v18->m_Items[2] = (UnityEngine_Component_o *)lastTimeLabel;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v18->m_Items[2], (int32_t)lastTimeLabel, v22, v23);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v18->m_Items[2], (int32_t)lastTimeLabel, v22, v23);
   noticeNumberComp = this->fields.noticeNumberComp;
   if ( noticeNumberComp )
   {
-    bSpotInfo = sub_1B71708(this->fields.noticeNumberComp, v18->obj.klass->_1.element_class);
+    bSpotInfo = sub_1B762FC(this->fields.noticeNumberComp, v18->obj.klass->_1.element_class);
     if ( !bSpotInfo )
     {
 LABEL_76:
-      v49 = sub_1B7184C();
-      sub_1B716F4(v49, 0LL);
+      v49 = sub_1B76440();
+      sub_1B762E8(v49, 0LL);
     }
   }
   if ( v18->max_length <= 3 )
 LABEL_75:
-    sub_1B71830(bSpotInfo, v14);
+    sub_1B76424(bSpotInfo, v14);
   v18->m_Items[3] = (UnityEngine_Component_o *)noticeNumberComp;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v18->m_Items[3], (int32_t)noticeNumberComp, v25, v26);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v18->m_Items[3], (int32_t)noticeNumberComp, v25, v26);
   BlankEarthPoint__ActivateEachComponent(0, v18, v28);
   if ( !isDisp )
     return;
@@ -1443,25 +1443,25 @@ LABEL_75:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v50,
       (System_Collections_Generic_List_object__o *)this->fields.areaInfoList,
-      (const MethodInfo_34D0D58 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+      (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
     v51 = v50;
     while ( 1 )
     {
       v31 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v51,
-              (const MethodInfo_324F8B8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+              (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
       if ( !v31 )
         break;
       if ( !v51.fields._current )
-        sub_1B71828(v31, v32);
+        sub_1B7641C(v31, v32);
       klass = v51.fields._current[7].klass;
       if ( !klass )
-        sub_1B71828(v31, v32);
+        sub_1B7641C(v31, v32);
       v30 = LOBYTE(klass->_1.byval_arg.bits) != 0;
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v51,
-      (const MethodInfo_324F8B4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+      (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
     bSpotInfo = (__int64)this->fields.nextSprite;
     if ( !bSpotInfo )
       goto LABEL_74;
@@ -1488,10 +1488,10 @@ LABEL_75:
       spotId_k__BackingField = this->fields._spotId_k__BackingField;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4A1C675 )
+      if ( !byte_4A2AADE )
       {
-        sub_1B715CC(&TerminalPramsManager_TypeInfo, v14);
-        byte_4A1C675 = 1;
+        sub_1B761C0(&TerminalPramsManager_TypeInfo, v14);
+        byte_4A2AADE = 1;
       }
       v39 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1511,7 +1511,7 @@ LABEL_75:
       v42 = this->fields.lastTimeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      bSpotInfo = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12170/*"SPOT_FREE_QUEST_LAST_TIME"*/, 0LL);
+      bSpotInfo = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12207/*"SPOT_FREE_QUEST_LAST_TIME"*/, 0LL);
       if ( !v42 )
         goto LABEL_74;
       UILabel__set_text(v42, (System_String_o *)bSpotInfo, 0LL);
@@ -1540,25 +1540,25 @@ LABEL_75:
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v50,
           (System_Collections_Generic_List_object__o *)bSpotInfo,
-          (const MethodInfo_34D0D58 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+          (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
         v51 = v50;
         while ( 1 )
         {
           v46 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v51,
-                  (const MethodInfo_324F8B8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+                  (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
           if ( !v46 )
             break;
           if ( !v51.fields._current )
-            sub_1B71828(v46, v47);
+            sub_1B7641C(v46, v47);
           v48 = v51.fields._current[7].klass;
           if ( !v48 )
-            sub_1B71828(v46, v47);
+            sub_1B7641C(v46, v47);
           questCount += LODWORD(v48->_1.namespaze);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v51,
-          (const MethodInfo_324F8B4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+          (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
         bSpotInfo = (__int64)this->fields.noticeNumberComp;
         if ( bSpotInfo )
         {
@@ -1579,7 +1579,7 @@ LABEL_75:
       }
     }
 LABEL_74:
-    sub_1B71828(bSpotInfo, v14);
+    sub_1B7641C(bSpotInfo, v14);
   }
 }
 
@@ -1593,7 +1593,7 @@ void __fastcall BlankEarthPoint__SetBtnColliderEnable(
 
   pointCol = (UnityEngine_Collider_o *)this->fields.pointCol;
   if ( !pointCol )
-    sub_1B71828(0LL, isEnabled);
+    sub_1B7641C(0LL, isEnabled);
   UnityEngine_Collider__set_enabled(pointCol, !this->fields.isForceTouchDisabled && isEnabled, 0LL);
 }
 
@@ -1706,19 +1706,19 @@ void __fastcall BlankEarthPoint__SetEarthObj(
   UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A1C62D & 1) == 0 )
+  if ( (byte_4A2AA96 & 1) == 0 )
   {
-    sub_1B715CC(&AtlasManager_TypeInfo, spotEnt);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__, v11);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__, v12);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__, v13);
-    sub_1B715CC(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__, v14);
-    sub_1B715CC(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__, v15);
-    sub_1B715CC(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__, v16);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v17);
-    sub_1B715CC(&Method_SingletonTemplate_QuestTree__get_Instance__, v18);
-    sub_1B715CC(&StringLiteral_20132/*"icon_spot_next"*/, v19);
-    byte_4A1C62D = 1;
+    sub_1B761C0(&AtlasManager_TypeInfo, spotEnt);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__, v11);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__, v12);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__get_Current__, v13);
+    sub_1B761C0(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__, v14);
+    sub_1B761C0(&Method_System_Collections_Generic_List_MapControl_QuestInfo__Clear__, v15);
+    sub_1B761C0(&Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__, v16);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v17);
+    sub_1B761C0(&Method_SingletonTemplate_QuestTree__get_Instance__, v18);
+    sub_1B761C0(&StringLiteral_20177/*"icon_spot_next"*/, v19);
+    byte_4A2AA96 = 1;
   }
   memset(&v69, 0, sizeof(v69));
   nextSprite = (UnityEngine_Object_o *)this->fields.nextSprite;
@@ -1730,28 +1730,28 @@ void __fastcall BlankEarthPoint__SetEarthObj(
     v25 = this->fields.nextSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    Instance = (QuestTree_o *)AtlasManager__SetEventUI(v25, (System_String_o *)StringLiteral_20132/*"icon_spot_next"*/, 0LL);
+    Instance = (QuestTree_o *)AtlasManager__SetEventUI(v25, (System_String_o *)StringLiteral_20177/*"icon_spot_next"*/, 0LL);
   }
   if ( !spotEnt )
     goto LABEL_41;
   *(int32x2_t *)&this->fields._warId_k__BackingField = vrev64_s32(*(int32x2_t *)&spotEnt->fields.id);
   name = spotEnt->fields.name;
   this->fields._spotName_k__BackingField = name;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._spotName_k__BackingField, (int32_t)name, v23, v24);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._spotName_k__BackingField, (int32_t)name, v23, v24);
   this->fields._spotOnType_k__BackingField = spotEnt->fields.onObjectType;
   this->fields.earthCore = obj;
   p_earthCore = &this->fields.earthCore;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.earthCore, (int32_t)obj, v28, v29);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.earthCore, (int32_t)obj, v28, v29);
   this->fields.earthCamera = camera;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.earthCamera, (int32_t)camera, v30, v31);
-  Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.earthCamera, (int32_t)camera, v30, v31);
+  Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   SpotInfo = QuestTree__GetSpotInfo(Instance, this->fields._spotId_k__BackingField, 0LL);
   this->fields.bSpotInfo = SpotInfo;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.bSpotInfo, (int32_t)SpotInfo, v33, v34);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.bSpotInfo, (int32_t)SpotInfo, v33, v34);
   this->fields.earthCoreRoot = coreRoot;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.earthCoreRoot, (int32_t)coreRoot, v35, v36);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.earthCoreRoot, (int32_t)coreRoot, v35, v36);
   areaInfoList = this->fields.areaInfoList;
   *(_QWORD *)&this->fields._DefaultDispSpriteDot_k__BackingField = *(_QWORD *)&this->fields.dispSpriteDot;
   if ( !areaInfoList )
@@ -1767,74 +1767,74 @@ void __fastcall BlankEarthPoint__SetEarthObj(
     || (Instance = (QuestTree_o *)ordealCallFolderInfo->fields.questInfoList) == 0LL )
   {
 LABEL_41:
-    sub_1B71828(Instance, v22);
+    sub_1B7641C(Instance, v22);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v68,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_34D0D58 *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
+    (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_MapControl_QuestInfo__GetEnumerator__);
   v69 = v68;
   while ( 1 )
   {
     v41 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v69,
-            (const MethodInfo_324F8B8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
+            (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__MoveNext__);
     if ( !v41 )
       break;
     current = v69.fields._current;
     if ( !v69.fields._current )
-      sub_1B71828(v41, v42);
+      sub_1B7641C(v41, v42);
     klass = v69.fields._current[7].klass;
     if ( klass && this->fields._spotId_k__BackingField == LODWORD(klass->_1.castClass) )
     {
       v47 = (System_Collections_Generic_List_object__o *)this->fields.areaInfoList;
       if ( !v47 )
-        sub_1B71828(0LL, v42);
+        sub_1B7641C(0LL, v42);
       items = v47->fields._items;
       v49 = Method_System_Collections_Generic_List_MapControl_QuestInfo__Add__;
       ++v47->fields._version;
       if ( !items )
-        sub_1B71828(v47, v42);
+        sub_1B7641C(v47, v42);
       v50 = v47->fields._size;
       if ( (unsigned int)v50 >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v47,
           current,
-          *(const MethodInfo_34D0260 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+          *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
       }
       else
       {
         v51 = &items->obj.klass + v50;
         v47->fields._size = v50 + 1;
         v51[4] = (Il2CppClass *)current;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)(v51 + 4), (int32_t)current, v43, v44);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)(v51 + 4), (int32_t)current, v43, v44);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v69,
-    (const MethodInfo_324F8B4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
+    (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_QuestInfo__Dispose__);
 LABEL_28:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0LL);
   x = LocalPosition.fields.x;
   y = LocalPosition.fields.y;
   z = LocalPosition.fields.z;
-  if ( !byte_4A1A754 )
+  if ( !byte_4A28BB4 )
   {
-    sub_1B715CC(&System_Math_TypeInfo, v53);
-    byte_4A1A754 = 1;
+    sub_1B761C0(&System_Math_TypeInfo, v53);
+    byte_4A28BB4 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v57 = sqrtf((float)(z * z) + (float)((float)(x * x) + (float)(y * y)));
   if ( v57 <= 0.00001 )
   {
-    if ( !byte_4A1A751 )
+    if ( !byte_4A28BB1 )
     {
-      sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v53);
-      byte_4A1A751 = 1;
+      sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v53);
+      byte_4A28BB1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v58 = static_fields->zeroVector.fields.x;
@@ -1850,7 +1850,7 @@ LABEL_28:
   v71.fields.x = -v58;
   v71.fields.y = -v59;
   v71.fields.z = -v60;
-  v72 = UnityEngine_Quaternion__LookRotation_69196212(v71, 0LL);
+  v72 = UnityEngine_Quaternion__LookRotation_69225768(v71, 0LL);
   this->fields._FocusQua_k__BackingField = v72;
   this->fields._FocusQua_k__BackingField = UnityEngine_Quaternion__Inverse(v72, 0LL);
   v62 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -1891,11 +1891,11 @@ void __fastcall BlankEarthPoint__ShowQAADispEffect(BlankEarthPoint_o *this, cons
   int32_t v15; // w2
   int32_t v16; // w3
 
-  if ( (byte_4A1C636 & 1) == 0 )
+  if ( (byte_4A2AA9F & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_Object_Instantiate_GameObject____75933272, method);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A1C636 = 1;
+    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject____75989608, method);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A2AA9F = 1;
   }
   qaaDispEffObj = (UnityEngine_Object_o *)this->fields.qaaDispEffObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1911,25 +1911,25 @@ void __fastcall BlankEarthPoint__ShowQAADispEffect(BlankEarthPoint_o *this, cons
       v7 = (UnityEngine_Object_o *)*p_spotDispEffectObj;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69257852(v7, 0LL);
+      UnityEngine_Object__Destroy_69287408(v7, 0LL);
       *p_spotDispEffectObj = 0LL;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.spotDispEffectObj, 0, v8, v9);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.spotDispEffectObj, 0, v8, v9);
     }
     v10 = (Il2CppObject *)this->fields.qaaDispEffObj;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      sub_1B71828(0LL, v12);
+      sub_1B7641C(0LL, v12);
     transform = UnityEngine_GameObject__get_transform(gameObject, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v14 = UnityEngine_Object__Instantiate_object__49146012(
+    v14 = UnityEngine_Object__Instantiate_object__49174716(
             v10,
             transform,
-            (const MethodInfo_2EDE89C *)Method_UnityEngine_Object_Instantiate_GameObject____75933272);
+            (const MethodInfo_2EE58BC *)Method_UnityEngine_Object_Instantiate_GameObject____75989608);
     GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v14, this->fields.spotRevealedEffectOffset, 0LL);
     GameObjectExtensions__ResetTransform((UnityEngine_GameObject_o *)v14, 0LL);
     this->fields.spotDispEffectObj = (struct UnityEngine_GameObject_o *)v14;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.spotDispEffectObj, (int32_t)v14, v15, v16);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.spotDispEffectObj, (int32_t)v14, v15, v16);
   }
 }
 
@@ -1952,10 +1952,10 @@ void __fastcall BlankEarthPoint__SwitchDispUIRoot(BlankEarthPoint_o *this, bool 
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4A1C630 & 1) == 0 )
+  if ( (byte_4A2AA99 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, isDisp);
-    byte_4A1C630 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, isDisp);
+    byte_4A2AA99 = 1;
   }
   uiRoot = (UnityEngine_Object_o *)this->fields.uiRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1964,7 +1964,7 @@ void __fastcall BlankEarthPoint__SwitchDispUIRoot(BlankEarthPoint_o *this, bool 
   {
     v7 = this->fields.uiRoot;
     if ( !v7 )
-      sub_1B71828(0LL, v6);
+      sub_1B7641C(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isDisp, 0LL);
   }
 }
@@ -1976,7 +1976,7 @@ void __fastcall BlankEarthPoint__Update(BlankEarthPoint_o *this, const MethodInf
 
   stateController = this->fields.stateController;
   if ( !stateController )
-    sub_1B71828(0LL, method);
+    sub_1B7641C(0LL, method);
   QAASpotStateController__Update(stateController, 0LL);
 }
 
@@ -2009,10 +2009,10 @@ void __fastcall BlankEarthPoint__UpdateDisp(BlankEarthPoint_o *this, bool isForc
   if ( !dispType )
   {
 LABEL_7:
-    if ( !byte_4A1A751 )
+    if ( !byte_4A28BB1 )
     {
-      sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4A1A751 = 1;
+      sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_4A28BB1 = 1;
     }
     v11 = 0;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -2033,7 +2033,7 @@ LABEL_10:
   {
     anim = this->fields.anim;
     if ( !anim )
-      sub_1B71828(0LL, v12);
+      sub_1B7641C(0LL, v12);
     UnityEngine_Animation__Stop(anim, 0LL);
   }
   BlankEarthPoint__SetBlankEarthSpotUI(this, v11, v13);
@@ -2054,10 +2054,10 @@ void __fastcall BlankEarthPoint__UpdateSpotUIToPinObjectPosition(BlankEarthPoint
   float *p_z; // x10
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A1C62F & 1) == 0 )
+  if ( (byte_4A2AA98 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A1C62F = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2AA98 = 1;
   }
   pinObject = (UnityEngine_Object_o *)this->fields.pinObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2066,7 +2066,7 @@ void __fastcall BlankEarthPoint__UpdateSpotUIToPinObjectPosition(BlankEarthPoint
   {
     v5 = this->fields.pinObject;
     if ( !v5 )
-      sub_1B71828(0LL, v4);
+      sub_1B7641C(0LL, v4);
     activeSelf = UnityEngine_GameObject__get_activeSelf(v5, 0LL);
     uiRoot = this->fields.uiRoot;
     if ( activeSelf )
@@ -2077,10 +2077,10 @@ void __fastcall BlankEarthPoint__UpdateSpotUIToPinObjectPosition(BlankEarthPoint
     }
     else
     {
-      if ( !byte_4A1A751 )
+      if ( !byte_4A28BB1 )
       {
-        sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v7);
-        byte_4A1A751 = 1;
+        sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v7);
+        byte_4A28BB1 = 1;
       }
       p_changedUiRootPosition = UnityEngine_Vector3_TypeInfo->static_fields;
       p_y = &p_changedUiRootPosition->zeroVector.fields.y;
@@ -2260,7 +2260,7 @@ void __fastcall BlankEarthPoint__set_spotName(
   int32_t v3; // w3
 
   this->fields._spotName_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._spotName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -2325,10 +2325,10 @@ bool __fastcall BlankEarthPoint__CoPlayAnimUntilFinish_d__111__MoveNext(
   bool result; // w0
 
   v3 = this;
-  if ( (byte_4A1C63A & 1) == 0 )
+  if ( (byte_4A2AAA3 & 1) == 0 )
   {
-    this = (BlankEarthPoint__CoPlayAnimUntilFinish_d__111_o *)sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A1C63A = 1;
+    this = (BlankEarthPoint__CoPlayAnimUntilFinish_d__111_o *)sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A2AAA3 = 1;
   }
   _1__state = v3->fields.__1__state;
   _4__this = v3->fields.__4__this;
@@ -2360,7 +2360,7 @@ LABEL_19:
           {
             v3->fields.__2__current = 0LL;
             p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-            sub_1B71570(p__2__current, 0, v11, v12);
+            sub_1B76164(p__2__current, 0, v11, v12);
             result = 1;
             *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
             return result;
@@ -2368,7 +2368,7 @@ LABEL_19:
           goto LABEL_22;
         }
 LABEL_24:
-        sub_1B71828(this, method);
+        sub_1B7641C(this, method);
       }
     }
 LABEL_22:
@@ -2382,7 +2382,7 @@ LABEL_22:
       goto LABEL_24;
     AnimName = BlankEarthPoint__GetAnimName(_4__this, v3->fields.index, v2);
     v3->fields._animName_5__2 = AnimName;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v3->fields._animName_5__2, (int32_t)AnimName, v7, v8);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v3->fields._animName_5__2, (int32_t)AnimName, v7, v8);
     anim = (UnityEngine_Object_o *)_4__this->fields.anim;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2396,7 +2396,7 @@ LABEL_22:
       this = (BlankEarthPoint__CoPlayAnimUntilFinish_d__111_o *)_4__this->fields.anim;
       if ( !this )
         goto LABEL_24;
-      UnityEngine_Animation__Play_69002944((UnityEngine_Animation_o *)this, v3->fields._animName_5__2, 0LL);
+      UnityEngine_Animation__Play_69032500((UnityEngine_Animation_o *)this, v3->fields._animName_5__2, 0LL);
       v3->fields._totalTime_5__3 = 0.0;
       goto LABEL_19;
     }
@@ -2422,11 +2422,11 @@ void __fastcall __noreturn BlankEarthPoint__CoPlayAnimUntilFinish_d__111__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
+  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B715E0(&Method_BlankEarthPoint__CoPlayAnimUntilFinish_d__111_System_Collections_IEnumerator_Reset__);
-  sub_1B716F4(v3, v4);
+  v4 = sub_1B761D4(&Method_BlankEarthPoint__CoPlayAnimUntilFinish_d__111_System_Collections_IEnumerator_Reset__);
+  sub_1B762E8(v3, v4);
 }
 
 
@@ -2465,7 +2465,7 @@ void __fastcall BlankEarthPoint___c__DisplayClass101_0___ActivateEachComponent_b
     || (v3 = this,
         (this = (BlankEarthPoint___c__DisplayClass101_0_o *)UnityEngine_Component__get_gameObject(x, 0LL)) == 0LL) )
   {
-    sub_1B71828(this, x);
+    sub_1B7641C(this, x);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v3->fields.value, 0LL);
 }

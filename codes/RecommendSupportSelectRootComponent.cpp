@@ -14,15 +14,15 @@ void __fastcall RecommendSupportSelectRootComponent__OnDestroy(
   Il2CppObject *Instance; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4A1BDF1 & 1) == 0 )
+  if ( (byte_4A2A256 & 1) == 0 )
   {
-    sub_1B715CC(&AtlasManager_TypeInfo, method);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v2);
-    byte_4A1BDF1 = 1;
+    sub_1B761C0(&AtlasManager_TypeInfo, method);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v2);
+    byte_4A2A256 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v4);
+    sub_1B7641C(0LL, v4);
   RecommendSupportSelectControl__ReleaseAsset((RecommendSupportSelectControl_o *)Instance, v4);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -34,7 +34,7 @@ void __fastcall RecommendSupportSelectRootComponent____n__0(
         RecommendSupportSelectRootComponent_o *this,
         const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_38386884((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_38411824((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -45,14 +45,14 @@ void __fastcall RecommendSupportSelectRootComponent__beginFinish(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A1BDF0 & 1) == 0 )
+  if ( (byte_4A2A255 & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, method);
-    byte_4A1BDF0 = 1;
+    sub_1B761C0(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, method);
+    byte_4A2A255 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   AtlasManager__ReleaseUISkin((AtlasManager_o *)Instance, 2, 0, 0LL);
 }
 
@@ -64,15 +64,15 @@ void __fastcall RecommendSupportSelectRootComponent__beginInitialize(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A1BDEE & 1) == 0 )
+  if ( (byte_4A2A253 & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4A1BDEE = 1;
+    sub_1B761C0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4A2A253 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v4);
+    sub_1B7641C(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -100,21 +100,21 @@ void __fastcall RecommendSupportSelectRootComponent__beginStartUp(
   ServantStatusBattleListViewItem_o *v20; // x0
   System_Action_o *v21; // x19
 
-  if ( (byte_4A1BDEF & 1) == 0 )
+  if ( (byte_4A2A254 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, data);
-    sub_1B715CC(&AtlasManager_TypeInfo, v5);
-    sub_1B715CC(&SceneJumpInfo_TypeInfo, v6);
-    sub_1B715CC(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__0__, v7);
-    sub_1B715CC(&RecommendSupportSelectRootComponent___c__DisplayClass1_0_TypeInfo, v8);
-    byte_4A1BDEF = 1;
+    sub_1B761C0(&System_Action_TypeInfo, data);
+    sub_1B761C0(&AtlasManager_TypeInfo, v5);
+    sub_1B761C0(&SceneJumpInfo_TypeInfo, v6);
+    sub_1B761C0(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__0__, v7);
+    sub_1B761C0(&RecommendSupportSelectRootComponent___c__DisplayClass1_0_TypeInfo, v8);
+    byte_4A2A254 = 1;
   }
-  v9 = sub_1B71818(RecommendSupportSelectRootComponent___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_1B7640C(RecommendSupportSelectRootComponent___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1B71828(v10, v11);
+    sub_1B7641C(v10, v11);
   *(_QWORD *)(v9 + 24) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)this, v12, v13);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)this, v12, v13);
   if ( data )
   {
     v16 = (Il2CppClass *)SceneJumpInfo_TypeInfo;
@@ -150,8 +150,8 @@ void __fastcall RecommendSupportSelectRootComponent__beginStartUp(
     *(_QWORD *)(v9 + 16) = 0LL;
     v20 = (ServantStatusBattleListViewItem_o *)(v9 + 16);
   }
-  sub_1B71570(v20, v19, v14, v15);
-  v21 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+  sub_1B76164(v20, v19, v14, v15);
+  v21 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v9,
@@ -181,24 +181,24 @@ void __fastcall RecommendSupportSelectRootComponent___c__DisplayClass1_0___begin
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A1BDF2 & 1) == 0 )
+  if ( (byte_4A2A257 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&AtlasManager_TypeInfo, v3);
-    sub_1B715CC(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__1__, v4);
-    byte_4A1BDF2 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&AtlasManager_TypeInfo, v3);
+    sub_1B761C0(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__1__, v4);
+    byte_4A2A257 = 1;
   }
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v6, v7);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.__9__1, (int32_t)_9__1, v6, v7);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -221,30 +221,30 @@ void __fastcall RecommendSupportSelectRootComponent___c__DisplayClass1_0___begin
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A1BDF3 & 1) == 0 )
+  if ( (byte_4A2A258 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, method);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v3);
-    sub_1B715CC(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__2__, v4);
-    byte_4A1BDF3 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, method);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v3);
+    sub_1B761C0(&Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__2__, v4);
+    byte_4A2A258 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   _9__2 = this->fields.__9__2;
   v9 = (RecommendSupportSelectControl_o *)Instance;
   sceneJumpInfo = this->fields.sceneJumpInfo;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1B71818(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_RecommendSupportSelectRootComponent___c__DisplayClass1_0__beginStartUp_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v11, v12);
   }
   if ( !v9 )
-    sub_1B71828(Instance, v6);
+    sub_1B7641C(Instance, v6);
   RecommendSupportSelectControl__Init(v9, sceneJumpInfo, _9__2, v7);
 }
 
@@ -257,6 +257,6 @@ void __fastcall RecommendSupportSelectRootComponent___c__DisplayClass1_0___begin
 
   _4__this = (SceneRootComponent_o *)this->fields.__4__this;
   if ( !_4__this )
-    sub_1B71828(0LL, method);
-  SceneRootComponent__beginStartUp_38386884(_4__this, 0LL);
+    sub_1B7641C(0LL, method);
+  SceneRootComponent__beginStartUp_38411824(_4__this, 0LL);
 }

@@ -1,14 +1,14 @@
 void __fastcall QuestRandomGroupMaster___ctor(QuestRandomGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20029 & 1) == 0 )
+  if ( (byte_4A2E49B & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string___ctor__, method);
-    byte_4A20029 = 1;
+    sub_1B761C0(&Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string___ctor__, method);
+    byte_4A2E49B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     74,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string___ctor__);
 }
 
 
@@ -22,12 +22,12 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A20027 & 1) == 0 )
+  if ( (byte_4A2E499 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4A20027 = 1;
+    byte_4A2E499 = 1;
   }
   PK = (Il2CppObject *)QuestRandomGroupEntity__CreatePK(
                          questId,
@@ -37,7 +37,7 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetEntity(
   return (QuestRandomGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_30F8AB8 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__GetEntity__);
+                                       (const MethodInfo_30FFAD8 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__GetEntity__);
 }
 
 
@@ -59,22 +59,22 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetEntityFromQuestI
   QuestRandomGroupEntity_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A2002A & 1) == 0 )
+  if ( (byte_4A2E49C & 1) == 0 )
   {
-    sub_1B715CC(&Method_ObservableCollectionExtensions_Find_DataEntityBase___, *(_QWORD *)&questId);
-    sub_1B715CC(&System_Predicate_DataEntityBase__TypeInfo, v5);
-    sub_1B715CC(&QuestRandomGroupEntity_TypeInfo, v6);
-    sub_1B715CC(&Method_QuestRandomGroupMaster___c__DisplayClass3_0__GetEntityFromQuestId_b__0__, v7);
-    sub_1B715CC(&QuestRandomGroupMaster___c__DisplayClass3_0_TypeInfo, v8);
-    byte_4A2002A = 1;
+    sub_1B761C0(&Method_ObservableCollectionExtensions_Find_DataEntityBase___, *(_QWORD *)&questId);
+    sub_1B761C0(&System_Predicate_DataEntityBase__TypeInfo, v5);
+    sub_1B761C0(&QuestRandomGroupEntity_TypeInfo, v6);
+    sub_1B761C0(&Method_QuestRandomGroupMaster___c__DisplayClass3_0__GetEntityFromQuestId_b__0__, v7);
+    sub_1B761C0(&QuestRandomGroupMaster___c__DisplayClass3_0_TypeInfo, v8);
+    byte_4A2E49C = 1;
   }
-  v9 = sub_1B71818(QuestRandomGroupMaster___c__DisplayClass3_0_TypeInfo);
+  v9 = sub_1B7640C(QuestRandomGroupMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1B71828(v10, v11);
+    sub_1B7641C(v10, v11);
   *(_DWORD *)(v9 + 16) = questId;
   list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list;
-  v13 = (System_Predicate_object__o *)sub_1B71818(System_Predicate_DataEntityBase__TypeInfo);
+  v13 = (System_Predicate_object__o *)sub_1B7640C(System_Predicate_DataEntityBase__TypeInfo);
   System_Predicate_object____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -83,7 +83,7 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetEntityFromQuestI
   result = (QuestRandomGroupEntity_o *)ObservableCollectionExtensions__Find_object_(
                                          list,
                                          (System_Predicate_T__o *)v13,
-                                         (const MethodInfo_2EDF3A4 *)Method_ObservableCollectionExtensions_Find_DataEntityBase___);
+                                         (const MethodInfo_2EE63C4 *)Method_ObservableCollectionExtensions_Find_DataEntityBase___);
   if ( result )
   {
     methodPtr_low = LOBYTE(QuestRandomGroupEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -125,15 +125,15 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetRandomRangeQuest
   __int64 RandomRangeIndex; // x0
   __int64 v21; // x1
 
-  if ( (byte_4A2002B & 1) == 0 )
+  if ( (byte_4A2E49D & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Linq_Enumerable_Select_QuestRandomGroupEntity__int___, *(_QWORD *)&groupId);
-    sub_1B715CC(&Method_System_Linq_Enumerable_ToArray_int___, v5);
-    sub_1B715CC(&System_Func_QuestRandomGroupEntity__int__TypeInfo, v6);
-    sub_1B715CC(&Method_System_Collections_Generic_List_QuestRandomGroupEntity__get_Item__, v7);
-    sub_1B715CC(&Method_QuestRandomGroupMaster___c__GetRandomRangeQuest_b__4_0__, v8);
-    sub_1B715CC(&QuestRandomGroupMaster___c_TypeInfo, v9);
-    byte_4A2002B = 1;
+    sub_1B761C0(&Method_System_Linq_Enumerable_Select_QuestRandomGroupEntity__int___, *(_QWORD *)&groupId);
+    sub_1B761C0(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    sub_1B761C0(&System_Func_QuestRandomGroupEntity__int__TypeInfo, v6);
+    sub_1B761C0(&Method_System_Collections_Generic_List_QuestRandomGroupEntity__get_Item__, v7);
+    sub_1B761C0(&Method_QuestRandomGroupMaster___c__GetRandomRangeQuest_b__4_0__, v8);
+    sub_1B761C0(&QuestRandomGroupMaster___c_TypeInfo, v9);
+    byte_4A2E49D = 1;
   }
   ValidEntityListFromGroupId = QuestRandomGroupMaster__GetValidEntityListFromGroupId(this, groupId, method);
   v11 = QuestRandomGroupMaster___c_TypeInfo;
@@ -152,28 +152,28 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster__GetRandomRangeQuest
       v11 = QuestRandomGroupMaster___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__4_0 = (System_Func_object__int__o *)sub_1B71818(System_Func_QuestRandomGroupEntity__int__TypeInfo);
+    _9__4_0 = (System_Func_object__int__o *)sub_1B7640C(System_Func_QuestRandomGroupEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__4_0, v14, Method_QuestRandomGroupMaster___c__GetRandomRangeQuest_b__4_0__, 0LL);
     static_fields = QuestRandomGroupMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_QuestRandomGroupEntity__int__o *)_9__4_0;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v16, v17);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v16, v17);
   }
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v12,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_2E8B610 *)Method_System_Linq_Enumerable_Select_QuestRandomGroupEntity__int___);
+                                                               (const MethodInfo_2E92630 *)Method_System_Linq_Enumerable_Select_QuestRandomGroupEntity__int___);
   v19 = System_Linq_Enumerable__ToArray_int_(
           v18,
-          (const MethodInfo_2E93CEC *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_2E9AD0C *)Method_System_Linq_Enumerable_ToArray_int___);
   RandomRangeIndex = RandomUtility__GetRandomRangeIndex(v19, -1, 0LL);
   if ( (RandomRangeIndex & 0x80000000) != 0 )
     return 0LL;
   if ( !v12 )
-    sub_1B71828(RandomRangeIndex, v21);
+    sub_1B7641C(RandomRangeIndex, v21);
   return (QuestRandomGroupEntity_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)v12,
                                        RandomRangeIndex,
-                                       (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_QuestRandomGroupEntity__get_Item__);
+                                       (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_QuestRandomGroupEntity__get_Item__);
 }
 
 
@@ -205,23 +205,23 @@ System_Collections_Generic_List_QuestRandomGroupEntity__o *__fastcall QuestRando
   System_Func_object__bool__o *v24; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v25; // x0
 
-  if ( (byte_4A2002C & 1) == 0 )
+  if ( (byte_4A2E49E & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Linq_Enumerable_Select_DataEntityBase__QuestRandomGroupEntity___, *(_QWORD *)&groupId);
-    sub_1B715CC(&Method_System_Linq_Enumerable_ToList_QuestRandomGroupEntity___, v5);
-    sub_1B715CC(&Method_System_Linq_Enumerable_Where_QuestRandomGroupEntity___, v6);
-    sub_1B715CC(&System_Func_DataEntityBase__QuestRandomGroupEntity__TypeInfo, v7);
-    sub_1B715CC(&System_Func_QuestRandomGroupEntity__bool__TypeInfo, v8);
-    sub_1B715CC(&Method_QuestRandomGroupMaster___c__GetValidEntityListFromGroupId_b__5_0__, v9);
-    sub_1B715CC(&Method_QuestRandomGroupMaster___c__DisplayClass5_0__GetValidEntityListFromGroupId_b__1__, v10);
-    sub_1B715CC(&QuestRandomGroupMaster___c__DisplayClass5_0_TypeInfo, v11);
-    sub_1B715CC(&QuestRandomGroupMaster___c_TypeInfo, v12);
-    byte_4A2002C = 1;
+    sub_1B761C0(&Method_System_Linq_Enumerable_Select_DataEntityBase__QuestRandomGroupEntity___, *(_QWORD *)&groupId);
+    sub_1B761C0(&Method_System_Linq_Enumerable_ToList_QuestRandomGroupEntity___, v5);
+    sub_1B761C0(&Method_System_Linq_Enumerable_Where_QuestRandomGroupEntity___, v6);
+    sub_1B761C0(&System_Func_DataEntityBase__QuestRandomGroupEntity__TypeInfo, v7);
+    sub_1B761C0(&System_Func_QuestRandomGroupEntity__bool__TypeInfo, v8);
+    sub_1B761C0(&Method_QuestRandomGroupMaster___c__GetValidEntityListFromGroupId_b__5_0__, v9);
+    sub_1B761C0(&Method_QuestRandomGroupMaster___c__DisplayClass5_0__GetValidEntityListFromGroupId_b__1__, v10);
+    sub_1B761C0(&QuestRandomGroupMaster___c__DisplayClass5_0_TypeInfo, v11);
+    sub_1B761C0(&QuestRandomGroupMaster___c_TypeInfo, v12);
+    byte_4A2E49E = 1;
   }
-  v13 = sub_1B71818(QuestRandomGroupMaster___c__DisplayClass5_0_TypeInfo);
+  v13 = sub_1B7640C(QuestRandomGroupMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
-    sub_1B71828(v14, v15);
+    sub_1B7641C(v14, v15);
   *(_DWORD *)(v13 + 16) = groupId;
   list = this->fields.list;
   v17 = QuestRandomGroupMaster___c_TypeInfo;
@@ -239,7 +239,7 @@ System_Collections_Generic_List_QuestRandomGroupEntity__o *__fastcall QuestRando
       v17 = QuestRandomGroupMaster___c_TypeInfo;
     }
     v19 = (Il2CppObject *)v17->static_fields->__9;
-    _9__5_0 = (System_Func_object__object__o *)sub_1B71818(System_Func_DataEntityBase__QuestRandomGroupEntity__TypeInfo);
+    _9__5_0 = (System_Func_object__object__o *)sub_1B7640C(System_Func_DataEntityBase__QuestRandomGroupEntity__TypeInfo);
     System_Func_object__object____ctor(
       _9__5_0,
       v19,
@@ -247,13 +247,13 @@ System_Collections_Generic_List_QuestRandomGroupEntity__o *__fastcall QuestRando
       0LL);
     static_fields = QuestRandomGroupMaster___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Func_DataEntityBase__QuestRandomGroupEntity__o *)_9__5_0;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v21, v22);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v21, v22);
   }
   v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__5_0,
-                                                               (const MethodInfo_2E8BEEC *)Method_System_Linq_Enumerable_Select_DataEntityBase__QuestRandomGroupEntity___);
-  v24 = (System_Func_object__bool__o *)sub_1B71818(System_Func_QuestRandomGroupEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2E92F0C *)Method_System_Linq_Enumerable_Select_DataEntityBase__QuestRandomGroupEntity___);
+  v24 = (System_Func_object__bool__o *)sub_1B7640C(System_Func_QuestRandomGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v24,
     (Il2CppObject *)v13,
@@ -262,10 +262,10 @@ System_Collections_Generic_List_QuestRandomGroupEntity__o *__fastcall QuestRando
   v25 = System_Linq_Enumerable__Where_object_(
           v23,
           (System_Func_TSource__bool__o *)v24,
-          (const MethodInfo_2E99B5C *)Method_System_Linq_Enumerable_Where_QuestRandomGroupEntity___);
+          (const MethodInfo_2EA0B7C *)Method_System_Linq_Enumerable_Where_QuestRandomGroupEntity___);
   return (System_Collections_Generic_List_QuestRandomGroupEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                         v25,
-                                                                        (const MethodInfo_2E97ADC *)Method_System_Linq_Enumerable_ToList_QuestRandomGroupEntity___);
+                                                                        (const MethodInfo_2E9EAFC *)Method_System_Linq_Enumerable_ToList_QuestRandomGroupEntity___);
 }
 
 
@@ -280,10 +280,10 @@ bool __fastcall QuestRandomGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A20028 & 1) == 0 )
+  if ( (byte_4A2E49A & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__TryGetEntity__, entity);
-    byte_4A20028 = 1;
+    sub_1B761C0(&Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__TryGetEntity__, entity);
+    byte_4A2E49A = 1;
   }
   PK = (Il2CppObject *)QuestRandomGroupEntity__CreatePK(
                          questId,
@@ -294,7 +294,7 @@ bool __fastcall QuestRandomGroupMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_QuestRandomGroupMaster__QuestRandomGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -305,15 +305,15 @@ void __fastcall QuestRandomGroupMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A2002D & 1) == 0 )
+  if ( (byte_4A2E49F & 1) == 0 )
   {
-    sub_1B715CC(&QuestRandomGroupMaster___c_TypeInfo, v1);
-    byte_4A2002D = 1;
+    sub_1B761C0(&QuestRandomGroupMaster___c_TypeInfo, v1);
+    byte_4A2E49F = 1;
   }
-  v2 = (Il2CppObject *)sub_1B71818(QuestRandomGroupMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B7640C(QuestRandomGroupMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestRandomGroupMaster___c_TypeInfo->static_fields->__9 = (struct QuestRandomGroupMaster___c_o *)v2;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)QuestRandomGroupMaster___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -333,7 +333,7 @@ int32_t __fastcall QuestRandomGroupMaster___c___GetRandomRangeQuest_b__4_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   return entity->fields.probability;
 }
 
@@ -345,10 +345,10 @@ QuestRandomGroupEntity_o *__fastcall QuestRandomGroupMaster___c___GetValidEntity
 {
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A2002E & 1) == 0 )
+  if ( (byte_4A2E4A0 & 1) == 0 )
   {
-    sub_1B715CC(&QuestRandomGroupEntity_TypeInfo, entity);
-    byte_4A2002E = 1;
+    sub_1B761C0(&QuestRandomGroupEntity_TypeInfo, entity);
+    byte_4A2E4A0 = 1;
   }
   if ( !entity )
     return 0LL;
@@ -378,17 +378,17 @@ bool __fastcall QuestRandomGroupMaster___c__DisplayClass3_0___GetEntityFromQuest
   __int64 methodPtr_low; // x10
 
   v4 = this;
-  if ( (byte_4A2002F & 1) == 0 )
+  if ( (byte_4A2E4A1 & 1) == 0 )
   {
-    this = (QuestRandomGroupMaster___c__DisplayClass3_0_o *)sub_1B715CC(&QuestRandomGroupEntity_TypeInfo, entity);
-    byte_4A2002F = 1;
+    this = (QuestRandomGroupMaster___c__DisplayClass3_0_o *)sub_1B761C0(&QuestRandomGroupEntity_TypeInfo, entity);
+    byte_4A2E4A1 = 1;
   }
   if ( !entity
     || (methodPtr_low = LOBYTE(QuestRandomGroupEntity_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(entity->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (QuestRandomGroupEntity_c *)entity->klass->_2.typeHierarchy[methodPtr_low - 1] != QuestRandomGroupEntity_TypeInfo )
   {
-    sub_1B71828(this, entity);
+    sub_1B7641C(this, entity);
   }
   return LODWORD(entity[1].klass) == v4->fields.questId;
 }
@@ -411,19 +411,19 @@ bool __fastcall QuestRandomGroupMaster___c__DisplayClass5_0___GetValidEntityList
   int32_t questId; // w19
 
   v4 = this;
-  if ( (byte_4A20030 & 1) == 0 )
+  if ( (byte_4A2E4A2 & 1) == 0 )
   {
-    this = (QuestRandomGroupMaster___c__DisplayClass5_0_o *)sub_1B715CC(&CondType_TypeInfo, entity);
-    byte_4A20030 = 1;
+    this = (QuestRandomGroupMaster___c__DisplayClass5_0_o *)sub_1B761C0(&CondType_TypeInfo, entity);
+    byte_4A2E4A2 = 1;
   }
   if ( !entity )
-    sub_1B71828(this, entity);
+    sub_1B7641C(this, entity);
   if ( entity->fields.randomGroupId == v4->fields.groupId )
   {
     questId = entity->fields.questId;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return !CondType__IsQuestClear_37394868(questId, -1, 0, 0LL);
+    return !CondType__IsQuestClear_37418488(questId, -1, 0, 0LL);
   }
   else
   {

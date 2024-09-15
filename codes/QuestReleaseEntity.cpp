@@ -1,13 +1,13 @@
 void __fastcall QuestReleaseEntity___ctor(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20032 & 1) == 0 )
+  if ( (byte_4A2E4A4 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A20032 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2E4A4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall QuestReleaseEntity__CreatePK(
         int64_t value,
         const MethodInfo *method)
 {
-  if ( (byte_4A20031 & 1) == 0 )
+  if ( (byte_4A2E4A3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&type);
-    byte_4A20031 = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&type);
+    byte_4A2E4A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            questId,
            type,
            targetId,
            value,
-           (const MethodInfo_2E59FF8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2E61018 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 

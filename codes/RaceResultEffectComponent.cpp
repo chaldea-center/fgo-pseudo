@@ -1,9 +1,9 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20E8A & 1) == 0 )
+  if ( (byte_4A2F2FE & 1) == 0 )
   {
-    sub_1B715CC(&CommonEffectComponent_TypeInfo, method);
-    byte_4A20E8A = 1;
+    sub_1B761C0(&CommonEffectComponent_TypeInfo, method);
+    byte_4A2F2FE = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -35,18 +35,18 @@ void __fastcall RaceResultEffectComponent__SetParam(
   System_Object_array *v13; // x20
   __int64 v14; // x24
 
-  if ( (byte_4A20E89 & 1) == 0 )
+  if ( (byte_4A2F2FD & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
-    byte_4A20E89 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_4A2F2FD = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
   v9 = (__int64)*(p_param - 1);
   if ( !v9 )
 LABEL_17:
-    sub_1B71828(Components_object, v8);
+    sub_1B7641C(Components_object, v8);
   v10 = *(_DWORD *)(v9 + 24);
   if ( v10 >= 1 )
   {
@@ -60,7 +60,7 @@ LABEL_17:
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_2EAB2F4 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_2EB2314 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -88,6 +88,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1B71830(Components_object, v8);
+    sub_1B76424(Components_object, v8);
   }
 }

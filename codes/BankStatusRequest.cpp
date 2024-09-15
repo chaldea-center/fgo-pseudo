@@ -3,12 +3,12 @@ void __fastcall BankStatusRequest__beginRequest(BankStatusRequest_o *this, const
   const MethodInfo *v2; // x3
   const MethodInfo *v4; // x1
 
-  if ( (byte_4A21277 & 1) == 0 )
+  if ( (byte_4A2F6EA & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_22488/*"platformType"*/, method);
-    byte_4A21277 = 1;
+    sub_1B761C0(&StringLiteral_22534/*"platformType"*/, method);
+    byte_4A2F6EA = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22488/*"platformType"*/, 2, v2);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22534/*"platformType"*/, 2, v2);
   RequestBase__beginRequest((RequestBase_o *)this, v4);
 }
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall BankStatusRequest__getURL(BankStatusRequest_o *this,
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A21276 & 1) == 0 )
+  if ( (byte_4A2F6E9 & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_23206/*"shop/bankStatus"*/, v2);
-    byte_4A21276 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_23252/*"shop/bankStatus"*/, v2);
+    byte_4A2F6E9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_23206/*"shop/bankStatus"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_23252/*"shop/bankStatus"*/, 0LL);
 }
 
 
@@ -46,12 +46,12 @@ void __fastcall BankStatusRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A21278 & 1) == 0 )
+  if ( (byte_4A2F6EB & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A21278 = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F6EB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -76,7 +76,7 @@ void __fastcall BankStatusRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

@@ -11,28 +11,28 @@ void __fastcall ServantEquipSetRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A2140D & 1) == 0 )
+  if ( (byte_4A2F880 & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, svtEquip);
-    sub_1B715CC(&StringLiteral_18996/*"equipInfo"*/, v5);
-    sub_1B715CC(&StringLiteral_15762/*"["*/, v6);
-    sub_1B715CC(&StringLiteral_16019/*"]"*/, v7);
-    byte_4A2140D = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, svtEquip);
+    sub_1B761C0(&StringLiteral_19041/*"equipInfo"*/, v5);
+    sub_1B761C0(&StringLiteral_15806/*"["*/, v6);
+    sub_1B761C0(&StringLiteral_16063/*"]"*/, v7);
+    byte_4A2F880 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v8 = JsonManager__toJson((Il2CppObject *)svtEquip, 0, 0, 0LL);
-  v9 = System_String__Concat_61516764(
-         (System_String_o *)StringLiteral_15762/*"["*/,
+  v9 = System_String__Concat_61546320(
+         (System_String_o *)StringLiteral_15806/*"["*/,
          v8,
-         (System_String_o *)StringLiteral_16019/*"]"*/,
+         (System_String_o *)StringLiteral_16063/*"]"*/,
          0LL);
-  RequestBase__addField_40916388((RequestBase_o *)this, (System_String_o *)StringLiteral_18996/*"equipInfo"*/, v9, v10);
+  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_19041/*"equipInfo"*/, v9, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
 
-void __fastcall ServantEquipSetRequest__beginRequest_41011224(
+void __fastcall ServantEquipSetRequest__beginRequest_41035964(
         ServantEquipSetRequest_o *this,
         SvtEquipInfo_array *svtEquipList,
         const MethodInfo *method)
@@ -42,16 +42,16 @@ void __fastcall ServantEquipSetRequest__beginRequest_41011224(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4A2140E & 1) == 0 )
+  if ( (byte_4A2F881 & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, svtEquipList);
-    sub_1B715CC(&StringLiteral_18996/*"equipInfo"*/, v5);
-    byte_4A2140E = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, svtEquipList);
+    sub_1B761C0(&StringLiteral_19041/*"equipInfo"*/, v5);
+    byte_4A2F881 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v6 = JsonManager__toJson(&svtEquipList->obj, 0, 0, 0LL);
-  RequestBase__addField_40916388((RequestBase_o *)this, (System_String_o *)StringLiteral_18996/*"equipInfo"*/, v6, v7);
+  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_19041/*"equipInfo"*/, v6, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -61,16 +61,16 @@ System_String_o *__fastcall ServantEquipSetRequest__getURL(ServantEquipSetReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A2140C & 1) == 0 )
+  if ( (byte_4A2F87F & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_23648/*"svtEquip/set"*/, v2);
-    byte_4A2140C = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_23694/*"svtEquip/set"*/, v2);
+    byte_4A2F87F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_23648/*"svtEquip/set"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_23694/*"svtEquip/set"*/, 0LL);
 }
 
 
@@ -86,12 +86,12 @@ void __fastcall ServantEquipSetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4A2140F & 1) == 0 )
+  if ( (byte_4A2F882 & 1) == 0 )
   {
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B715CC(&StringLiteral_22170/*"ok"*/, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A2140F = 1;
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B761C0(&StringLiteral_22216/*"ok"*/, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F882 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -101,14 +101,14 @@ void __fastcall ServantEquipSetRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22170/*"ok"*/;
+    v10 = &StringLiteral_22216/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22000/*"ng"*/;
+    v10 = &StringLiteral_22046/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

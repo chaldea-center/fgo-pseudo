@@ -1,28 +1,28 @@
 void __fastcall CommonConsumeEntity___ctor(CommonConsumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1F8F7 & 1) == 0 )
+  if ( (byte_4A2DD64 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A1F8F7 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2DD64 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CommonConsumeEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4A1F8F3 & 1) == 0 )
+  if ( (byte_4A2DD60 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4A1F8F3 = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4A2DD60 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2E5960C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E6062C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -49,27 +49,27 @@ ItemEntity_o *__fastcall CommonConsumeEntity__GetItemEntity(CommonConsumeEntity_
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A1F8F5 & 1) == 0 )
+  if ( (byte_4A2DD62 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_ItemMaster___, method);
-    sub_1B715CC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4A1F8F5 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_ItemMaster___, method);
+    sub_1B761C0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4A2DD62 = 1;
   }
   if ( this->fields.type != 1 )
     return 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                     (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
-    sub_1B71828(Instance, v6);
+    sub_1B7641C(Instance, v6);
   }
   return (ItemEntity_o *)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                            this->fields.objectId,
-                           (const MethodInfo_30F8760 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                           (const MethodInfo_30FF780 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
 }
 
 
@@ -80,19 +80,19 @@ System_String_o *__fastcall CommonConsumeEntity__GetName(CommonConsumeEntity_o *
   int32_t type; // w8
   ItemEntity_o *ItemEntity; // x0
 
-  if ( (byte_4A1F8F6 & 1) == 0 )
+  if ( (byte_4A2DD63 & 1) == 0 )
   {
-    sub_1B715CC(&LocalizationManager_TypeInfo, method);
-    sub_1B715CC(&string_TypeInfo, v3);
-    sub_1B715CC(&StringLiteral_2133/*"AP_TXT"*/, v4);
-    byte_4A1F8F6 = 1;
+    sub_1B761C0(&LocalizationManager_TypeInfo, method);
+    sub_1B761C0(&string_TypeInfo, v3);
+    sub_1B761C0(&StringLiteral_2132/*"AP_TXT"*/, v4);
+    byte_4A2DD63 = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_2133/*"AP_TXT"*/, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_2132/*"AP_TXT"*/, 0LL);
   }
   else if ( type == 1 && (ItemEntity = CommonConsumeEntity__GetItemEntity(this, method)) != 0LL )
   {
@@ -126,21 +126,21 @@ int32_t __fastcall CommonConsumeEntity__GetUserHasNum(CommonConsumeEntity_o *thi
   UserItemMaster_o *v10; // x20
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A1F8F4 & 1) == 0 )
+  if ( (byte_4A2DD61 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_UserItemMaster___, method);
-    sub_1B715CC(&NetworkManager_TypeInfo, v3);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4A1F8F4 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1B761C0(&NetworkManager_TypeInfo, v3);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4A2DD61 = 1;
   }
   entity = 0LL;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserItemMaster___);
   type = this->fields.type;
   if ( type == 2 )
   {
@@ -161,7 +161,7 @@ int32_t __fastcall CommonConsumeEntity__GetUserHasNum(CommonConsumeEntity_o *thi
       if ( entity )
         return entity->fields.num;
 LABEL_16:
-      sub_1B71828(Instance, v7);
+      sub_1B7641C(Instance, v7);
     }
   }
   return 0;

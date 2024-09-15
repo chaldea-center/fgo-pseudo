@@ -11,15 +11,15 @@ DropInfo_SaveData_o *__fastcall DropInfo__GetSaveData(DropInfo_o *this, const Me
   __int64 v5; // x1
   DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_4A1F664 & 1) == 0 )
+  if ( (byte_4A2DAD0 & 1) == 0 )
   {
-    sub_1B715CC(&DropInfo_SaveData_TypeInfo, method);
-    byte_4A1F664 = 1;
+    sub_1B761C0(&DropInfo_SaveData_TypeInfo, method);
+    byte_4A2DAD0 = 1;
   }
-  v3 = sub_1B71818(DropInfo_SaveData_TypeInfo);
+  v3 = sub_1B7640C(DropInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   if ( !v3 )
-    sub_1B71828(v4, v5);
+    sub_1B7641C(v4, v5);
   result = (DropInfo_SaveData_o *)v3;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
   *(_QWORD *)(v3 + 32) = *(_QWORD *)&this->fields.lv;
@@ -36,7 +36,7 @@ void __fastcall DropInfo__SetDataFromSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   *(_OWORD *)&this->fields.type = *(_OWORD *)&saveData->fields.type;
   *(_QWORD *)&this->fields.lv = *(_QWORD *)&saveData->fields.lv;
   this->fields.isRateUp = saveData->fields.isRateUp;
@@ -47,13 +47,13 @@ void __fastcall DropInfo__SetDataFromSaveData(
 
 bool __fastcall DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_37485852(this->fields.type, 0LL);
+  return Gift__IsItem_37509512(this->fields.type, 0LL);
 }
 
 
 bool __fastcall DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_37485904(this->fields.type, 0LL);
+  return Gift__IsServant_37509564(this->fields.type, 0LL);
 }
 
 

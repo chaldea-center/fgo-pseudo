@@ -1,13 +1,13 @@
 void __fastcall ClassBoardGlobalObject___ctor(ClassBoardGlobalObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A22EC7 & 1) == 0 )
+  if ( (byte_4A3133D & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject___ctor__, method);
-    byte_4A22EC7 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject___ctor__, method);
+    byte_4A3133D = 1;
   }
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_370B720 *)Method_SingletonTemplate_ClassBoardGlobalObject___ctor__);
+    (const MethodInfo_3712A94 *)Method_SingletonTemplate_ClassBoardGlobalObject___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ void __fastcall ClassBoardGlobalObject__SetCamera(MapCamera_o *mapCamera, const 
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A22EC6 & 1) == 0 )
+  if ( (byte_4A3133C & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, method);
-    byte_4A22EC6 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, method);
+    byte_4A3133C = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v4);
+    sub_1B7641C(0LL, v4);
   Instance[2].klass = (Il2CppClass *)mapCamera;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&Instance[2], (int32_t)mapCamera, v5, v6);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&Instance[2], (int32_t)mapCamera, v5, v6);
 }
 
 
@@ -44,28 +44,28 @@ void __fastcall ClassBoardGlobalObject__SetResourceContents(
   int32_t v9; // w3
   struct AtlasManagerUnit_o *BoardUiAtlasManagerUnit_k__BackingField; // x1
 
-  if ( (byte_4A22EC5 & 1) == 0 )
+  if ( (byte_4A3133B & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, method);
-    byte_4A22EC5 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, method);
+    byte_4A3133B = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
   if ( !contents
     || !Instance
     || (IconAtlasManagerUnit_k__BackingField = contents->fields._IconAtlasManagerUnit_k__BackingField,
         Instance[1].klass = (Il2CppClass *)IconAtlasManagerUnit_k__BackingField,
-        sub_1B71570(
+        sub_1B76164(
           (ServantStatusBattleListViewItem_o *)&Instance[1],
           (int32_t)IconAtlasManagerUnit_k__BackingField,
           v5,
           v6),
-        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__)) == 0LL) )
+        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__)) == 0LL) )
   {
-    sub_1B71828(Instance, v4);
+    sub_1B7641C(Instance, v4);
   }
   BoardUiAtlasManagerUnit_k__BackingField = contents->fields._BoardUiAtlasManagerUnit_k__BackingField;
   Instance[1].monitor = BoardUiAtlasManagerUnit_k__BackingField;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&Instance[1].monitor,
     (int32_t)BoardUiAtlasManagerUnit_k__BackingField,
     v8,
@@ -79,14 +79,14 @@ AtlasManagerUnit_o *__fastcall ClassBoardGlobalObject__get_IconAtlasManagerUnit(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A22EC2 & 1) == 0 )
+  if ( (byte_4A31338 & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
-    byte_4A22EC2 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
+    byte_4A31338 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   return (AtlasManagerUnit_o *)Instance[1].klass;
 }
 
@@ -97,14 +97,14 @@ MapCamera_o *__fastcall ClassBoardGlobalObject__get_MapCamera(const MethodInfo *
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A22EC4 & 1) == 0 )
+  if ( (byte_4A3133A & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
-    byte_4A22EC4 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
+    byte_4A3133A = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   return (MapCamera_o *)Instance[2].klass;
 }
 
@@ -115,13 +115,13 @@ AtlasManagerUnit_o *__fastcall ClassBoardGlobalObject__get_UiAtlasManagerUnit(co
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A22EC3 & 1) == 0 )
+  if ( (byte_4A31339 & 1) == 0 )
   {
-    sub_1B715CC(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
-    byte_4A22EC3 = 1;
+    sub_1B761C0(&Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__, v1);
+    byte_4A31339 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_370B628 *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_ClassBoardGlobalObject__get_Instance__);
   if ( !Instance )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   return (AtlasManagerUnit_o *)Instance[1].monitor;
 }

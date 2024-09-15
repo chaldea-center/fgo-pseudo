@@ -4,14 +4,14 @@ void __fastcall EventBoardGameDiceCounter___ctor(EventBoardGameDiceCounter_o *th
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_4A2372A & 1) == 0 )
+  if ( (byte_4A31BA4 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_19650/*"game1_count_"*/, method);
-    byte_4A2372A = 1;
+    sub_1B761C0(&StringLiteral_19695/*"game1_count_"*/, method);
+    byte_4A31BA4 = 1;
   }
-  v5 = StringLiteral_19650/*"game1_count_"*/;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_19650/*"game1_count_"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.spriteName, v5, v2, v3);
+  v5 = StringLiteral_19695/*"game1_count_"*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_19695/*"game1_count_"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.spriteName, v5, v2, v3);
   this->fields.delayTime = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -27,7 +27,7 @@ void __fastcall EventBoardGameDiceCounter__CountDown(EventBoardGameDiceCounter_o
   if ( currentNum >= 1 )
   {
     v5 = EventBoardGameDiceCounter__SetNum(this, currentNum - 1, v2);
-    UnityEngine_MonoBehaviour__StartCoroutine_69243124((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
   }
 }
 
@@ -42,16 +42,16 @@ System_Collections_IEnumerator_o *__fastcall EventBoardGameDiceCounter__SetNum(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A23729 & 1) == 0 )
+  if ( (byte_4A31BA3 & 1) == 0 )
   {
-    sub_1B715CC(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo, *(_QWORD *)&num);
-    byte_4A23729 = 1;
+    sub_1B761C0(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo, *(_QWORD *)&num);
+    byte_4A31BA3 = 1;
   }
-  v5 = sub_1B71818(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
+  v5 = sub_1B7640C(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_DWORD *)(v5 + 40) = num;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -73,9 +73,9 @@ void __fastcall EventBoardGameDiceCounter__SetNumSprite(
   spriteName = this->fields.spriteName;
   counterSp = this->fields.counterSp;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_61505504(spriteName, v6, 0LL);
+  v7 = System_String__Concat_61535060(spriteName, v6, 0LL);
   if ( !counterSp )
-    sub_1B71828(v7, v8);
+    sub_1B7641C(v7, v8);
   UISprite__set_spriteName(counterSp, v7, 0LL);
   this->fields.currentNum = v9;
 }
@@ -115,10 +115,10 @@ bool __fastcall EventBoardGameDiceCounter__SetNum_d__7__MoveNext(
   int32_t v10; // w3
   bool result; // w0
 
-  if ( (byte_4A2372B & 1) == 0 )
+  if ( (byte_4A31BA5 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_WaitForSeconds_TypeInfo, method);
-    byte_4A2372B = 1;
+    sub_1B761C0(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_4A31BA5 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -135,17 +135,17 @@ bool __fastcall EventBoardGameDiceCounter__SetNum_d__7__MoveNext(
     if ( _4__this )
     {
       delayTime = _4__this->fields.delayTime;
-      v7 = (UnityEngine_WaitForSeconds_o *)sub_1B71818(UnityEngine_WaitForSeconds_TypeInfo);
+      v7 = (UnityEngine_WaitForSeconds_o *)sub_1B7640C(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v7, delayTime, 0LL);
       this->fields.__2__current = (Il2CppObject *)v7;
       p__2__current = &this->fields.__2__current;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v7, v9, v10);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v7, v9, v10);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
     }
 LABEL_10:
-    sub_1B71828(_4__this, method);
+    sub_1B7641C(_4__this, method);
   }
   return 0;
 }
@@ -167,11 +167,11 @@ void __fastcall __noreturn EventBoardGameDiceCounter__SetNum_d__7__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
+  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B715E0(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1B716F4(v3, v4);
+  v4 = sub_1B761D4(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1B762E8(v3, v4);
 }
 
 

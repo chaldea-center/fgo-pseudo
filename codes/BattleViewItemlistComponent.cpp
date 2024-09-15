@@ -2,10 +2,10 @@ void __fastcall BattleViewItemlistComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A22B6F & 1) == 0 )
+  if ( (byte_4A30FE5 & 1) == 0 )
   {
-    sub_1B715CC(&BattleViewItemlistComponent_TypeInfo, v1);
-    byte_4A22B6F = 1;
+    sub_1B761C0(&BattleViewItemlistComponent_TypeInfo, v1);
+    byte_4A30FE5 = 1;
   }
   BattleViewItemlistComponent_TypeInfo->static_fields->defaultColumnMax = 8;
 }
@@ -22,24 +22,24 @@ void __fastcall BattleViewItemlistComponent___ctor(BattleViewItemlistComponent_o
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_4A22B6E & 1) == 0 )
+  if ( (byte_4A30FE4 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_1B715CC(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_2898/*"BATTLE_ITEMLIST_NOTGET"*/, v6);
-    byte_4A22B6E = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_1B761C0(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_2913/*"BATTLE_ITEMLIST_NOTGET"*/, v6);
+    byte_4A30FE4 = 1;
   }
-  v7 = StringLiteral_2898/*"BATTLE_ITEMLIST_NOTGET"*/;
-  this->fields.noItemLabelKey = (struct System_String_o *)StringLiteral_2898/*"BATTLE_ITEMLIST_NOTGET"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.noItemLabelKey, v7, v2, v3);
+  v7 = StringLiteral_2913/*"BATTLE_ITEMLIST_NOTGET"*/;
+  this->fields.noItemLabelKey = (struct System_String_o *)StringLiteral_2913/*"BATTLE_ITEMLIST_NOTGET"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.noItemLabelKey, v7, v2, v3);
   this->fields.colmax = 5;
   *(_QWORD *)&this->fields.width = 0x42F0000042FA0000LL;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_GameObject__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.itemObjectList = (struct System_Collections_Generic_List_GameObject__o *)v8;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.itemObjectList, (int32_t)v8, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemObjectList, (int32_t)v8, v9, v10);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -59,33 +59,33 @@ int32_t __fastcall BattleViewItemlistComponent__CalcPossessionNum(
   int notgetLabel; // w8
 
   v5 = this;
-  if ( (byte_4A22B64 & 1) == 0 )
+  if ( (byte_4A30FDA & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_ItemMaster___, battleDropItem);
-    sub_1B715CC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
-    this = (BattleViewItemlistComponent_o *)sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A22B64 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_ItemMaster___, battleDropItem);
+    sub_1B761C0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
+    this = (BattleViewItemlistComponent_o *)sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A30FDA = 1;
   }
   if ( !battleDropItem )
     goto LABEL_19;
-  if ( !Gift__IsItem_37485852(battleDropItem->fields.type, 0LL) )
+  if ( !Gift__IsItem_37509512(battleDropItem->fields.type, 0LL) )
     return 0;
   this = (BattleViewItemlistComponent_o *)UserGameMaster__getSelfUserGame(0LL);
   if ( !this )
     goto LABEL_19;
   v8 = *(_QWORD *)&this->fields.m_CachedPtr;
-  this = (BattleViewItemlistComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (BattleViewItemlistComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_19;
   this = (BattleViewItemlistComponent_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                            (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this )
     goto LABEL_19;
   this = (BattleViewItemlistComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             battleDropItem->fields.objectId,
-                                            (const MethodInfo_30F8760 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                            (const MethodInfo_30FF780 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( !this )
     goto LABEL_19;
   notgetLabel = (int)this->fields.notgetLabel;
@@ -106,7 +106,7 @@ int32_t __fastcall BattleViewItemlistComponent__CalcPossessionNum(
       if ( this )
         return LODWORD(this[1].fields.noItemLabelKey) - v5->fields.boostEventItemManaCount;
 LABEL_19:
-      sub_1B71828(this, battleDropItem);
+      sub_1B7641C(this, battleDropItem);
     }
     return BattleViewItemlistComponent__getUserItemNum(this, v8, battleDropItem, 0, v10);
   }
@@ -138,12 +138,12 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A22B6B & 1) == 0 )
+  if ( (byte_4A30FE1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v3);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A22B6B = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v3);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A30FE1 = 1;
   }
   TitleSpr = (UnityEngine_Component_o *)this->fields.TitleSpr;
   if ( !TitleSpr )
@@ -215,7 +215,7 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
             {
               TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       (UnityEngine_GameObject_o *)TitleSpr,
-                                                      (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                      (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
               if ( TitleSpr )
               {
                 v9 = (UIWidget_o *)TitleSpr;
@@ -232,7 +232,7 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
                     {
                       TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                               (UnityEngine_GameObject_o *)TitleSpr,
-                                                              (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                              (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
                       if ( TitleSpr )
                       {
                         v18.fields.x = 28.0;
@@ -250,7 +250,7 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
                             {
                               TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       (UnityEngine_GameObject_o *)TitleSpr,
-                                                                      (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                      (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
                               if ( TitleSpr )
                               {
                                 v12 = (UIWidget_o *)TitleSpr;
@@ -269,7 +269,7 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
                                     {
                                       TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               (UnityEngine_GameObject_o *)TitleSpr,
-                                                                              (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                                              (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
                                       if ( TitleSpr )
                                       {
                                         v19.fields.x = 16.0;
@@ -299,7 +299,7 @@ void __fastcall BattleViewItemlistComponent__ChangeLayoutScrollView(
       }
     }
 LABEL_41:
-    sub_1B71828(TitleSpr, method);
+    sub_1B7641C(TitleSpr, method);
   }
 LABEL_36:
   TitleSpr = (UnityEngine_Component_o *)this->fields.notgetLabel;
@@ -336,18 +336,18 @@ void __fastcall BattleViewItemlistComponent__ClearObj(BattleViewItemlistComponen
   Il2CppObject *Item; // x21
   int v10; // w8
 
-  if ( (byte_4A22B68 & 1) == 0 )
+  if ( (byte_4A30FDE & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A22B68 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A30FDE = 1;
   }
   itemObjectList = this->fields.itemObjectList;
   if ( !itemObjectList )
 LABEL_9:
-    sub_1B71828(itemObjectList, method);
+    sub_1B7641C(itemObjectList, method);
   v7 = 0;
   while ( 1 )
   {
@@ -357,10 +357,10 @@ LABEL_9:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)itemObjectList,
              v7,
-             (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+             (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69257852((UnityEngine_Object_o *)Item, 0LL);
+    UnityEngine_Object__Destroy_69287408((UnityEngine_Object_o *)Item, 0LL);
     itemObjectList = this->fields.itemObjectList;
     ++v7;
     if ( !itemObjectList )
@@ -399,12 +399,12 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A22B6A & 1) == 0 )
+  if ( (byte_4A30FE0 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v3);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A22B6A = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v3);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A30FE0 = 1;
   }
   TitleSpr = (UnityEngine_Component_o *)this->fields.TitleSpr;
   if ( !TitleSpr )
@@ -476,7 +476,7 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
             {
               TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       (UnityEngine_GameObject_o *)TitleSpr,
-                                                      (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                      (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
               if ( TitleSpr )
               {
                 v9 = (UIWidget_o *)TitleSpr;
@@ -493,7 +493,7 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
                     {
                       TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                               (UnityEngine_GameObject_o *)TitleSpr,
-                                                              (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                              (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
                       if ( TitleSpr )
                       {
                         v18.fields.x = 28.0;
@@ -511,7 +511,7 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
                             {
                               TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       (UnityEngine_GameObject_o *)TitleSpr,
-                                                                      (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                      (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
                               if ( TitleSpr )
                               {
                                 v12 = (UIWidget_o *)TitleSpr;
@@ -530,7 +530,7 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
                                     {
                                       TitleSpr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               (UnityEngine_GameObject_o *)TitleSpr,
-                                                                              (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                                              (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
                                       if ( TitleSpr )
                                       {
                                         v19.fields.x = 16.0;
@@ -560,7 +560,7 @@ void __fastcall BattleViewItemlistComponent__DefaultLayoutScrollView(
       }
     }
 LABEL_41:
-    sub_1B71828(TitleSpr, method);
+    sub_1B7641C(TitleSpr, method);
   }
 LABEL_36:
   TitleSpr = (UnityEngine_Component_o *)this->fields.notgetLabel;
@@ -590,18 +590,18 @@ void __fastcall BattleViewItemlistComponent__Reposition(BattleViewItemlistCompon
 {
   UnityEngine_Component_o *listRoot; // x0
 
-  if ( (byte_4A22B6C & 1) == 0 )
+  if ( (byte_4A30FE2 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_Component_GetComponent_UIGrid___, method);
-    byte_4A22B6C = 1;
+    sub_1B761C0(&Method_UnityEngine_Component_GetComponent_UIGrid___, method);
+    byte_4A30FE2 = 1;
   }
   listRoot = (UnityEngine_Component_o *)this->fields.listRoot;
   if ( !listRoot
     || (listRoot = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 listRoot,
-                                                (const MethodInfo_2E51E8C *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
+                                                (const MethodInfo_2E58EAC *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
   {
-    sub_1B71828(listRoot, method);
+    sub_1B7641C(listRoot, method);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))listRoot->klass[1]._1.castClass)(
     listRoot,
@@ -617,10 +617,10 @@ void __fastcall BattleViewItemlistComponent__ResetScrollBarPoisition(
   __int64 v4; // x1
   UIProgressBar_o *v5; // x0
 
-  if ( (byte_4A22B6D & 1) == 0 )
+  if ( (byte_4A30FE3 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A22B6D = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A30FE3 = 1;
   }
   ScrollBar = (UnityEngine_Object_o *)this->fields.ScrollBar;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -629,7 +629,7 @@ void __fastcall BattleViewItemlistComponent__ResetScrollBarPoisition(
   {
     v5 = (UIProgressBar_o *)this->fields.ScrollBar;
     if ( !v5 )
-      sub_1B71828(0LL, v4);
+      sub_1B7641C(0LL, v4);
     UIProgressBar__set_value(v5, 0.0, 0LL);
   }
 }
@@ -647,10 +647,10 @@ void __fastcall BattleViewItemlistComponent__SetBattleDropItemComponent(
   int32_t v9; // w3
 
   if ( !battleDropItemComponent )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   BattleDropItemComponent__Set(battleDropItemComponent, dropItem, 0LL);
   battleDropItemComponent->fields.callbackFunc = callback;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&battleDropItemComponent->fields.callbackFunc,
     (int32_t)callback,
     v8,
@@ -673,10 +673,10 @@ void __fastcall BattleViewItemlistComponent__SetBattleDropItemComponentEx(
 
   v9 = BattleViewItemlistComponent__CalcPossessionNum(this, dropItem, (int32_t)dropItem, (const MethodInfo *)callback);
   if ( !battleDropItemComponent )
-    sub_1B71828(v9, v10);
-  BattleDropItemComponent__Set_42467972(battleDropItemComponent, dropItem, v9, 0LL);
+    sub_1B7641C(v9, v10);
+  BattleDropItemComponent__Set_42493036(battleDropItemComponent, dropItem, v9, 0LL);
   battleDropItemComponent->fields.callbackFunc = callback;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&battleDropItemComponent->fields.callbackFunc,
     (int32_t)callback,
     v11,
@@ -695,29 +695,29 @@ void __fastcall BattleViewItemlistComponent__SwitchShowNumMode(
   System_Collections_Generic_List_object__o *itemObjectList; // x0
   int32_t v8; // w21
 
-  if ( (byte_4A22B69 & 1) == 0 )
+  if ( (byte_4A30FDF & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___, isShowPossessionNum);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
-    byte_4A22B69 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___, isShowPossessionNum);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
+    byte_4A30FDF = 1;
   }
   itemObjectList = (System_Collections_Generic_List_object__o *)this->fields.itemObjectList;
   if ( !itemObjectList )
 LABEL_12:
-    sub_1B71828(itemObjectList, isShowPossessionNum);
+    sub_1B7641C(itemObjectList, isShowPossessionNum);
   v8 = 0;
   while ( v8 < itemObjectList->fields._size )
   {
     itemObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     itemObjectList,
                                                                     v8,
-                                                                    (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                    (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( itemObjectList )
     {
       itemObjectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       (UnityEngine_GameObject_o *)itemObjectList,
-                                                                      (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___);
+                                                                      (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___);
       if ( itemObjectList )
       {
         if ( isShowPossessionNum )
@@ -757,9 +757,9 @@ int32_t __fastcall BattleViewItemlistComponent__compareItemId(
     while ( 1 )
     {
       if ( (unsigned int)v7 >= max_length )
-        sub_1B71830(this, userId);
+        sub_1B76424(this, userId);
       if ( !battleDropItem || (v9 = m_Items[v7]) == 0LL )
-        sub_1B71828(this, userId);
+        sub_1B7641C(this, userId);
       if ( battleDropItem->fields.objectId == v9->fields.objectId )
         break;
       if ( (int)++v7 >= max_length )
@@ -788,18 +788,18 @@ int32_t __fastcall BattleViewItemlistComponent__getUserItemNum(
   __int64 v10; // x1
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A22B65 & 1) == 0 )
+  if ( (byte_4A30FDB & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_UserItemMaster___, userId);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4A22B65 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_UserItemMaster___, userId);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4A30FDB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+               (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserItemMaster___);
   entity = 0LL;
   if ( !battleDropItem || !Instance )
     goto LABEL_11;
@@ -814,7 +814,7 @@ int32_t __fastcall BattleViewItemlistComponent__getUserItemNum(
     if ( entity )
       return entity->fields.num - questClearItemSubtraction;
 LABEL_11:
-    sub_1B71828(Instance, v10);
+    sub_1B7641C(Instance, v10);
   }
   return 0;
 }
@@ -838,7 +838,7 @@ void __fastcall BattleViewItemlistComponent__setEventResultCount(
 
   this->fields._rewardInfos_k__BackingField = rewardInfos;
   p_rewardInfos_k__BackingField = &this->fields._rewardInfos_k__BackingField;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._rewardInfos_k__BackingField,
     (int32_t)rewardInfos,
     (int32_t)rewardInfos,
@@ -853,10 +853,10 @@ void __fastcall BattleViewItemlistComponent__setHide(BattleViewItemlistComponent
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A22B66 & 1) == 0 )
+  if ( (byte_4A30FDC & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A22B66 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A30FDC = 1;
   }
   listRoot = (UnityEngine_Object_o *)this->fields.listRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -867,7 +867,7 @@ void __fastcall BattleViewItemlistComponent__setHide(BattleViewItemlistComponent
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_1B71828(gameObject, v4);
+      sub_1B7641C(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
@@ -943,22 +943,22 @@ void __fastcall BattleViewItemlistComponent__setListData(
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
 
   v67 = callBack;
-  if ( (byte_4A22B63 & 1) == 0 )
+  if ( (byte_4A30FD9 & 1) == 0 )
   {
-    sub_1B715CC(&BattleViewItemlistComponent_TypeInfo, itemlist);
-    sub_1B715CC(&Method_UnityEngine_Component_GetComponentInParent_UIScrollView___, v11);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v12);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v13);
-    sub_1B715CC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v14);
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___, v15);
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___, v16);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__Add__, v17);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__Clear__, v18);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v19);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v20);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v21);
-    sub_1B715CC(&StringLiteral_2899/*"BATTLE_ITEM_DISP_COLUMN"*/, v22);
-    byte_4A22B63 = 1;
+    sub_1B761C0(&BattleViewItemlistComponent_TypeInfo, itemlist);
+    sub_1B761C0(&Method_UnityEngine_Component_GetComponentInParent_UIScrollView___, v11);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v12);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v13);
+    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v14);
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___, v15);
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___, v16);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Add__, v17);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Clear__, v18);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v19);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v20);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v21);
+    sub_1B761C0(&StringLiteral_2914/*"BATTLE_ITEM_DISP_COLUMN"*/, v22);
+    byte_4A30FD9 = 1;
   }
   memset(&v66, 0, sizeof(v66));
   itemObjectList = (__int64)this->fields.itemObjectList;
@@ -967,20 +967,20 @@ void __fastcall BattleViewItemlistComponent__setListData(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v65,
     (System_Collections_Generic_List_object__o *)itemObjectList,
-    (const MethodInfo_34D0D58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v66 = v65;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v66,
-            (const MethodInfo_324F8B8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v66.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69257852((UnityEngine_Object_o *)current, 0LL);
+    UnityEngine_Object__Destroy_69287408((UnityEngine_Object_o *)current, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v66,
-    (const MethodInfo_324F8B4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   v25 = this->fields.itemObjectList;
   if ( !v25 )
     goto LABEL_62;
@@ -995,7 +995,7 @@ void __fastcall BattleViewItemlistComponent__setListData(
   width = this->fields.width;
   if ( !setColMax )
   {
-    setColMax = ConstantMaster__getValue((System_String_o *)StringLiteral_2899/*"BATTLE_ITEM_DISP_COLUMN"*/, 0LL);
+    setColMax = ConstantMaster__getValue((System_String_o *)StringLiteral_2914/*"BATTLE_ITEM_DISP_COLUMN"*/, 0LL);
     if ( setColMax <= 0 )
     {
       v30 = BattleViewItemlistComponent_TypeInfo;
@@ -1007,10 +1007,10 @@ void __fastcall BattleViewItemlistComponent__setListData(
       setColMax = v30->static_fields->defaultColumnMax;
     }
   }
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, itemlist);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, itemlist);
+    byte_4A28BB1 = 1;
   }
   if ( setColMax >= 1 )
   {
@@ -1047,7 +1047,7 @@ LABEL_54:
       }
     }
 LABEL_62:
-    sub_1B71828(itemObjectList, itemlist);
+    sub_1B7641C(itemObjectList, itemlist);
   }
   v62 = 1.0;
   setColMax = colmax;
@@ -1062,7 +1062,7 @@ LABEL_21:
     goto LABEL_62;
   itemObjectList = (__int64)UnityEngine_Component__GetComponentInParent_object_(
                               (UnityEngine_Component_o *)itemObjectList,
-                              (const MethodInfo_2E52548 *)Method_UnityEngine_Component_GetComponentInParent_UIScrollView___);
+                              (const MethodInfo_2E59568 *)Method_UnityEngine_Component_GetComponentInParent_UIScrollView___);
   v34 = *(_QWORD *)&itemlist->max_length;
   if ( (int)v34 >= 1 )
   {
@@ -1075,7 +1075,7 @@ LABEL_21:
     {
       if ( v37 >= (unsigned int)v34 )
 LABEL_63:
-        sub_1B71830(itemObjectList, itemlist);
+        sub_1B76424(itemObjectList, itemlist);
       itemObjectList = (__int64)BaseMonoBehaviour__createObject(
                                   (BaseMonoBehaviour_o *)this,
                                   this->fields.prefabResultItem,
@@ -1099,10 +1099,10 @@ LABEL_63:
         0LL);
       itemObjectList = (__int64)UnityEngine_GameObject__get_transform(v38, 0LL);
       v43 = (UnityEngine_Transform_o *)itemObjectList;
-      if ( !byte_4A1A756 )
+      if ( !byte_4A28BB6 )
       {
-        itemObjectList = sub_1B715CC(&UnityEngine_Vector3_TypeInfo, itemlist);
-        byte_4A1A756 = 1;
+        itemObjectList = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, itemlist);
+        byte_4A28BB6 = 1;
       }
       if ( !v43 )
         goto LABEL_62;
@@ -1117,14 +1117,14 @@ LABEL_63:
       {
         itemObjectList = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     v38,
-                                    (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
+                                    (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UIDragScrollView___);
         if ( !itemObjectList )
           goto LABEL_62;
         *(_QWORD *)(itemObjectList + 32) = v36;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)(itemObjectList + 32), v36, v47, v48);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)(itemObjectList + 32), v36, v47, v48);
         itemObjectList = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     v38,
-                                    (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___);
+                                    (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BattleDropItemComponent___);
         if ( v37 >= itemlist->max_length )
           goto LABEL_63;
         if ( !setAction )
@@ -1155,14 +1155,14 @@ LABEL_63:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)itemObjectList,
           (Il2CppObject *)v38,
-          *(const MethodInfo_34D0260 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+          *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
       }
       else
       {
         v53 = v50 + 8 * v52;
         *(_DWORD *)(itemObjectList + 24) = v52 + 1;
         *(_QWORD *)(v53 + 32) = v38;
-        sub_1B71570((ServantStatusBattleListViewItem_o *)(v53 + 32), (int32_t)v38, v45, v46);
+        sub_1B76164((ServantStatusBattleListViewItem_o *)(v53 + 32), (int32_t)v38, v45, v46);
       }
       LODWORD(v34) = itemlist->max_length;
       ++v37;
@@ -1212,13 +1212,13 @@ void __fastcall BattleViewItemlistComponent__setListDataCustomColumn(
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x6
 
-  if ( (byte_4A22B61 & 1) == 0 )
+  if ( (byte_4A30FD7 & 1) == 0 )
   {
-    sub_1B715CC(&BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo, itemlist);
-    sub_1B715CC(&Method_BattleViewItemlistComponent_SetBattleDropItemComponent__, v9);
-    byte_4A22B61 = 1;
+    sub_1B761C0(&BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo, itemlist);
+    sub_1B761C0(&Method_BattleViewItemlistComponent_SetBattleDropItemComponent__, v9);
+    byte_4A30FD7 = 1;
   }
-  v10 = (BattleViewItemlistComponent_BattleDropItemComponentSetAction_o *)sub_1B71818(BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo);
+  v10 = (BattleViewItemlistComponent_BattleDropItemComponentSetAction_o *)sub_1B7640C(BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo);
   BattleViewItemlistComponent_BattleDropItemComponentSetAction___ctor(
     v10,
     (Il2CppObject *)this,
@@ -1228,7 +1228,7 @@ void __fastcall BattleViewItemlistComponent__setListDataCustomColumn(
 }
 
 
-void __fastcall BattleViewItemlistComponent__setListDataCustomColumn_43854384(
+void __fastcall BattleViewItemlistComponent__setListDataCustomColumn_43881828(
         BattleViewItemlistComponent_o *this,
         BattleDropItem_array *itemlist,
         int32_t eventId,
@@ -1241,13 +1241,13 @@ void __fastcall BattleViewItemlistComponent__setListDataCustomColumn_43854384(
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x6
 
-  if ( (byte_4A22B62 & 1) == 0 )
+  if ( (byte_4A30FD8 & 1) == 0 )
   {
-    sub_1B715CC(&BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo, itemlist);
-    sub_1B715CC(&Method_BattleViewItemlistComponent_SetBattleDropItemComponentEx__, v11);
-    byte_4A22B62 = 1;
+    sub_1B761C0(&BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo, itemlist);
+    sub_1B761C0(&Method_BattleViewItemlistComponent_SetBattleDropItemComponentEx__, v11);
+    byte_4A30FD8 = 1;
   }
-  v12 = (BattleViewItemlistComponent_BattleDropItemComponentSetAction_o *)sub_1B71818(BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo);
+  v12 = (BattleViewItemlistComponent_BattleDropItemComponentSetAction_o *)sub_1B7640C(BattleViewItemlistComponent_BattleDropItemComponentSetAction_TypeInfo);
   BattleViewItemlistComponent_BattleDropItemComponentSetAction___ctor(
     v12,
     (Il2CppObject *)this,
@@ -1263,10 +1263,10 @@ void __fastcall BattleViewItemlistComponent__setShow(BattleViewItemlistComponent
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A22B67 & 1) == 0 )
+  if ( (byte_4A30FDD & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A22B67 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A30FDD = 1;
   }
   listRoot = (UnityEngine_Object_o *)this->fields.listRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1277,7 +1277,7 @@ void __fastcall BattleViewItemlistComponent__setShow(BattleViewItemlistComponent
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_1B71828(gameObject, v4);
+      sub_1B7641C(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   }
@@ -1292,7 +1292,7 @@ void __fastcall BattleViewItemlistComponent__set_rewardInfos(
   int32_t v3; // w3
 
   this->fields._rewardInfos_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._rewardInfos_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1321,14 +1321,14 @@ void __fastcall BattleViewItemlistComponent_BattleDropItemComponentSetAction___c
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B7168C(v6) & 1) != 0 )
+  if ( (sub_1B76280(v6) & 1) != 0 )
   {
     if ( v8 == 4 )
     {
-      v9 = (Il2CppObject *)sub_19BCC7C;
+      v9 = (Il2CppObject *)sub_19C117C;
 LABEL_16:
       this->fields.m_target = v9;
       goto LABEL_17;
@@ -1340,41 +1340,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v10 = sub_1B71684(v6);
-        v11 = sub_1B71B40(v6);
+        v10 = sub_1B76278(v6);
+        v11 = sub_1B76734(v6);
         if ( (v10 & 1) != 0 )
         {
           if ( (v11 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_19BCDD8;
+            v9 = (Il2CppObject *)sub_19C12D8;
           else
-            v9 = (Il2CppObject *)sub_19BCD74;
+            v9 = (Il2CppObject *)sub_19C1274;
         }
         else if ( (v11 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_19BCCD0;
+          v9 = (Il2CppObject *)sub_19C11D0;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_19BCC98;
+          v9 = (Il2CppObject *)sub_19C1198;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_19BCC50;
+        v9 = (Il2CppObject *)sub_19C1150;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1B71844(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B716F4(v13, 0LL);
+      v13 = sub_1B76438(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B762E8(v13, 0LL);
     }
   }
   v12 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v12;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19BCBE0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19C10E0;
 }
 
 
@@ -1393,17 +1393,17 @@ System_IAsyncResult_o *__fastcall BattleViewItemlistComponent_BattleDropItemComp
   int32_t v16; // [xsp+3Ch] [xbp-44h] BYREF
 
   v16 = eventId;
-  if ( (byte_4A22B70 & 1) == 0 )
+  if ( (byte_4A30FE6 & 1) == 0 )
   {
-    sub_1B715CC(&int_TypeInfo, battleDropItemComponent);
-    byte_4A22B70 = 1;
+    sub_1B761C0(&int_TypeInfo, battleDropItemComponent);
+    byte_4A30FE6 = 1;
   }
   v15[4] = 0LL;
   v15[0] = (__int64)battleDropItemComponent;
   v15[1] = (__int64)dropItem;
   v15[2] = (__int64)callback;
   v15[3] = j_il2cpp_value_box_0(int_TypeInfo, &v16, dropItem, callback, *(_QWORD *)&eventId);
-  return (System_IAsyncResult_o *)sub_1B71580(this, v15, a6, object);
+  return (System_IAsyncResult_o *)sub_1B76174(this, v15, a6, object);
 }
 
 
@@ -1412,7 +1412,7 @@ void __fastcall BattleViewItemlistComponent_BattleDropItemComponentSetAction__En
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B71584(result, 0LL, method);
+  sub_1B76178(result, 0LL, method);
 }
 
 

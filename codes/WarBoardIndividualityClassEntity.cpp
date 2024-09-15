@@ -2,14 +2,14 @@ void __fastcall WarBoardIndividualityClassEntity___ctor(
         WarBoardIndividualityClassEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A20A78 & 1) == 0 )
+  if ( (byte_4A2EEEA & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A20A78 = 1;
+    sub_1B761C0(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A2EEEA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30F8560 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30FF580 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -31,29 +31,29 @@ ServantClassEntity_o *__fastcall WarBoardIndividualityClassEntity__GetServantCla
   __int64 v6; // x0
   Il2CppObject *MasterData_object; // x0
 
-  if ( (byte_4A20A77 & 1) == 0 )
+  if ( (byte_4A2EEE9 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_ServantClassMaster___, method);
-    sub_1B715CC(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__, v3);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v4);
-    byte_4A20A77 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_ServantClassMaster___, method);
+    sub_1B761C0(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__, v3);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v4);
+    byte_4A2EEE9 = 1;
   }
   v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1BC34A8(v5);
+    v5 = sub_1BC809C(v5);
   v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1BC34A8(v6);
+    v6 = sub_1BC809C(v6);
   MasterData_object = **(Il2CppObject ***)(v6 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
+                              (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
   {
-    sub_1B71828(MasterData_object, method);
+    sub_1B7641C(MasterData_object, method);
   }
   return (ServantClassEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                    this->fields.classId,
-                                   (const MethodInfo_30F8760 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+                                   (const MethodInfo_30FF780 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
 }

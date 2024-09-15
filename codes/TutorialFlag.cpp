@@ -51,173 +51,173 @@ void __fastcall TutorialFlag___cctor(const MethodInfo *method)
   int32_t v49; // w2
   int32_t v50; // w3
 
-  if ( (byte_4A1EB29 & 1) == 0 )
+  if ( (byte_4A2CF94 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v4);
-    sub_1B715CC(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v5);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v6);
-    sub_1B715CC(&StringLiteral_13406/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v7);
-    sub_1B715CC(&StringLiteral_13419/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v8);
-    sub_1B715CC(&StringLiteral_13401/*"TUTORIAL_LABEL_COMBINE"*/, v9);
-    sub_1B715CC(&StringLiteral_13417/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v10);
-    sub_1B715CC(&StringLiteral_13405/*"TUTORIAL_LABEL_END"*/, v11);
-    sub_1B715CC(&StringLiteral_13415/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v12);
-    sub_1B715CC(&StringLiteral_14549/*"TutorialFlagConfigId"*/, v13);
-    sub_1B715CC(&StringLiteral_13402/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v14);
-    sub_1B715CC(&StringLiteral_14552/*"TutorialFlagProgress"*/, v15);
-    sub_1B715CC(&StringLiteral_13409/*"TUTORIAL_LABEL_FAVORITE1"*/, v16);
-    sub_1B715CC(&StringLiteral_14550/*"TutorialFlagGachaId"*/, v17);
-    sub_1B715CC(&StringLiteral_13408/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v18);
-    sub_1B715CC(&StringLiteral_13404/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v19);
-    sub_1B715CC(&StringLiteral_13414/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v20);
-    sub_1B715CC(&StringLiteral_13421/*"TUTORIAL_LABEL_STONE_GACHA"*/, v21);
-    sub_1B715CC(&StringLiteral_13422/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v22);
-    sub_1B715CC(&StringLiteral_13420/*"TUTORIAL_LABEL_SHOP"*/, v23);
-    sub_1B715CC(&StringLiteral_13413/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v24);
-    sub_1B715CC(&StringLiteral_14551/*"TutorialFlagLocalId"*/, v25);
-    sub_1B715CC(&StringLiteral_13416/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v26);
-    sub_1B715CC(&StringLiteral_13407/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v27);
-    sub_1B715CC(&StringLiteral_13412/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v28);
-    sub_1B715CC(&StringLiteral_13403/*"TUTORIAL_LABEL_DECK_SCENE"*/, v29);
-    sub_1B715CC(&StringLiteral_13418/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v30);
-    sub_1B715CC(&StringLiteral_13410/*"TUTORIAL_LABEL_FAVORITE2"*/, v31);
-    sub_1B715CC(&StringLiteral_13411/*"TUTORIAL_LABEL_FES"*/, v32);
-    byte_4A1EB29 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v4);
+    sub_1B761C0(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v5);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v6);
+    sub_1B761C0(&StringLiteral_13448/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v7);
+    sub_1B761C0(&StringLiteral_13461/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v8);
+    sub_1B761C0(&StringLiteral_13443/*"TUTORIAL_LABEL_COMBINE"*/, v9);
+    sub_1B761C0(&StringLiteral_13459/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v10);
+    sub_1B761C0(&StringLiteral_13447/*"TUTORIAL_LABEL_END"*/, v11);
+    sub_1B761C0(&StringLiteral_13457/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v12);
+    sub_1B761C0(&StringLiteral_14592/*"TutorialFlagConfigId"*/, v13);
+    sub_1B761C0(&StringLiteral_13444/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v14);
+    sub_1B761C0(&StringLiteral_14595/*"TutorialFlagProgress"*/, v15);
+    sub_1B761C0(&StringLiteral_13451/*"TUTORIAL_LABEL_FAVORITE1"*/, v16);
+    sub_1B761C0(&StringLiteral_14593/*"TutorialFlagGachaId"*/, v17);
+    sub_1B761C0(&StringLiteral_13450/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v18);
+    sub_1B761C0(&StringLiteral_13446/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v19);
+    sub_1B761C0(&StringLiteral_13456/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v20);
+    sub_1B761C0(&StringLiteral_13463/*"TUTORIAL_LABEL_STONE_GACHA"*/, v21);
+    sub_1B761C0(&StringLiteral_13464/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v22);
+    sub_1B761C0(&StringLiteral_13462/*"TUTORIAL_LABEL_SHOP"*/, v23);
+    sub_1B761C0(&StringLiteral_13455/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v24);
+    sub_1B761C0(&StringLiteral_14594/*"TutorialFlagLocalId"*/, v25);
+    sub_1B761C0(&StringLiteral_13458/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v26);
+    sub_1B761C0(&StringLiteral_13449/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v27);
+    sub_1B761C0(&StringLiteral_13454/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v28);
+    sub_1B761C0(&StringLiteral_13445/*"TUTORIAL_LABEL_DECK_SCENE"*/, v29);
+    sub_1B761C0(&StringLiteral_13460/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v30);
+    sub_1B761C0(&StringLiteral_13452/*"TUTORIAL_LABEL_FAVORITE2"*/, v31);
+    sub_1B761C0(&StringLiteral_13453/*"TUTORIAL_LABEL_FES"*/, v32);
+    byte_4A2CF94 = 1;
   }
-  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14552/*"TutorialFlagProgress"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)TutorialFlag_TypeInfo->static_fields, StringLiteral_14552/*"TutorialFlagProgress"*/, v2, v3);
-  v33 = StringLiteral_14551/*"TutorialFlagLocalId"*/;
+  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14595/*"TutorialFlagProgress"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)TutorialFlag_TypeInfo->static_fields, StringLiteral_14595/*"TutorialFlagProgress"*/, v2, v3);
+  v33 = StringLiteral_14594/*"TutorialFlagLocalId"*/;
   static_fields = TutorialFlag_TypeInfo->static_fields;
-  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14551/*"TutorialFlagLocalId"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY2, v33, v35, v36);
-  v37 = StringLiteral_14549/*"TutorialFlagConfigId"*/;
+  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14594/*"TutorialFlagLocalId"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY2, v33, v35, v36);
+  v37 = StringLiteral_14592/*"TutorialFlagConfigId"*/;
   v38 = TutorialFlag_TypeInfo->static_fields;
-  v38->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14549/*"TutorialFlagConfigId"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v38->SAVE_KEY3, v37, v39, v40);
-  v41 = StringLiteral_14550/*"TutorialFlagGachaId"*/;
+  v38->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14592/*"TutorialFlagConfigId"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v38->SAVE_KEY3, v37, v39, v40);
+  v41 = StringLiteral_14593/*"TutorialFlagGachaId"*/;
   v42 = TutorialFlag_TypeInfo->static_fields;
-  v42->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14550/*"TutorialFlagGachaId"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v42->SAVE_KEY4, v41, v43, v44);
-  v45 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B71818(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
+  v42->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14593/*"TutorialFlagGachaId"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v42->SAVE_KEY4, v41, v43, v44);
+  v45 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B7640C(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
   System_Collections_Generic_Dictionary_object__Int32Enum____ctor(
     v45,
-    (const MethodInfo_3198464 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
+    (const MethodInfo_319F484 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
   if ( !v45 )
-    sub_1B71828(v46, v47);
+    sub_1B7641C(v46, v47);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13421/*"TUTORIAL_LABEL_STONE_GACHA"*/,
+    (Il2CppObject *)StringLiteral_13463/*"TUTORIAL_LABEL_STONE_GACHA"*/,
     101,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13405/*"TUTORIAL_LABEL_END"*/,
+    (Il2CppObject *)StringLiteral_13447/*"TUTORIAL_LABEL_END"*/,
     102,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13420/*"TUTORIAL_LABEL_SHOP"*/,
+    (Il2CppObject *)StringLiteral_13462/*"TUTORIAL_LABEL_SHOP"*/,
     103,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13401/*"TUTORIAL_LABEL_COMBINE"*/,
+    (Il2CppObject *)StringLiteral_13443/*"TUTORIAL_LABEL_COMBINE"*/,
     104,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13409/*"TUTORIAL_LABEL_FAVORITE1"*/,
+    (Il2CppObject *)StringLiteral_13451/*"TUTORIAL_LABEL_FAVORITE1"*/,
     105,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13410/*"TUTORIAL_LABEL_FAVORITE2"*/,
+    (Il2CppObject *)StringLiteral_13452/*"TUTORIAL_LABEL_FAVORITE2"*/,
     106,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13412/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
+    (Il2CppObject *)StringLiteral_13454/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
     107,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13413/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13455/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
     108,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13403/*"TUTORIAL_LABEL_DECK_SCENE"*/,
+    (Il2CppObject *)StringLiteral_13445/*"TUTORIAL_LABEL_DECK_SCENE"*/,
     109,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13404/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13446/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
     110,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13406/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
+    (Il2CppObject *)StringLiteral_13448/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
     111,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13408/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13450/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
     112,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13402/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13444/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
     113,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13407/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
+    (Il2CppObject *)StringLiteral_13449/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
     114,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13416/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
+    (Il2CppObject *)StringLiteral_13458/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
     115,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13414/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
+    (Il2CppObject *)StringLiteral_13456/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
     117,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13415/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13457/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
     118,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13417/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
+    (Il2CppObject *)StringLiteral_13459/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
     120,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13419/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13461/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
     121,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13418/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
+    (Il2CppObject *)StringLiteral_13460/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
     122,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13422/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
+    (Il2CppObject *)StringLiteral_13464/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
     126,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v45,
-    (Il2CppObject *)StringLiteral_13411/*"TUTORIAL_LABEL_FES"*/,
+    (Il2CppObject *)StringLiteral_13453/*"TUTORIAL_LABEL_FES"*/,
     127,
-    (const MethodInfo_3198E18 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_319FE38 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   v48 = TutorialFlag_TypeInfo->static_fields;
   v48->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v45;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v48->flagNameList, (int32_t)v45, v49, v50);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v48->flagNameList, (int32_t)v45, v49, v50);
 }
 
 
@@ -234,11 +234,11 @@ void __fastcall TutorialFlag__ClearProgress(const MethodInfo *method)
   ManagerConfig_c *v3; // x0
   TutorialFlag_c *v4; // x0
 
-  if ( (byte_4A1EB1B & 1) == 0 )
+  if ( (byte_4A2CF86 & 1) == 0 )
   {
-    sub_1B715CC(&ManagerConfig_TypeInfo, v1);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v2);
-    byte_4A1EB1B = 1;
+    sub_1B761C0(&ManagerConfig_TypeInfo, v1);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v2);
+    byte_4A2CF86 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -264,10 +264,10 @@ void __fastcall TutorialFlag__CompleteProgress(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_4A1EB1C & 1) == 0 )
+  if ( (byte_4A2CF87 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, v1);
-    byte_4A1EB1C = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, v1);
+    byte_4A2CF87 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -280,10 +280,10 @@ void __fastcall TutorialFlag__DeleteContinueData(const MethodInfo *method)
   __int64 v1; // x1
   TutorialFlag_c *v2; // x0
 
-  if ( (byte_4A1EB11 & 1) == 0 )
+  if ( (byte_4A2CF7C & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, v1);
-    byte_4A1EB11 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, v1);
+    byte_4A2CF7C = 1;
   }
   v2 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -303,15 +303,15 @@ bool __fastcall TutorialFlag__Get(System_String_o *flagIdName, const MethodInfo 
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4A1EB14 & 1) == 0 )
+  if ( (byte_4A2CF7F & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB14 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF7F = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  return TutorialFlag__Get_37486428(Id, v4);
+  return TutorialFlag__Get_37510088(Id, v4);
 }
 
 
@@ -320,10 +320,10 @@ bool __fastcall TutorialFlag__GetConfigFlg(int32_t configFlagId, const MethodInf
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4A1EB25 & 1) == 0 )
+  if ( (byte_4A2CF90 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB25 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF90 = 1;
   }
   if ( (unsigned int)configFlagId > 0x63 )
     return 0;
@@ -344,10 +344,10 @@ bool __fastcall TutorialFlag__GetGachaFlg(int32_t gachaFlagId, const MethodInfo 
   TutorialFlag_c *v3; // x0
 
   v2 = gachaFlagId;
-  if ( (byte_4A1EB27 & 1) == 0 )
+  if ( (byte_4A2CF92 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB27 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF92 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -365,11 +365,11 @@ int32_t __fastcall TutorialFlag__GetId(System_String_o *flagIdName, const Method
   TutorialFlag_c *v4; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *flagNameList; // x0
 
-  if ( (byte_4A1EB13 & 1) == 0 )
+  if ( (byte_4A2CF7E & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v3);
-    byte_4A1EB13 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v3);
+    byte_4A2CF7E = 1;
   }
   v4 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -379,11 +379,11 @@ int32_t __fastcall TutorialFlag__GetId(System_String_o *flagIdName, const Method
   }
   flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->flagNameList;
   if ( !flagNameList )
-    sub_1B71828(0LL, method);
+    sub_1B7641C(0LL, method);
   return System_Collections_Generic_Dictionary_object__Int32Enum___get_Item(
            flagNameList,
            (Il2CppObject *)flagIdName,
-           (const MethodInfo_3198D98 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
+           (const MethodInfo_319FDB8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
 }
 
 
@@ -408,17 +408,17 @@ TutorialFlag_Id_array *__fastcall TutorialFlag__GetIdList(const MethodInfo *meth
   char *v17; // x9
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v19; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4A1EB12 & 1) == 0 )
+  if ( (byte_4A2CF7D & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v2);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v3);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v4);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__, v5);
-    sub_1B715CC(&TutorialFlag_Id___TypeInfo, v6);
-    sub_1B715CC(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v7);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v8);
-    byte_4A1EB12 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v2);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v3);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v4);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__, v5);
+    sub_1B761C0(&TutorialFlag_Id___TypeInfo, v6);
+    sub_1B761C0(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v7);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v8);
+    byte_4A2CF7D = 1;
   }
   v9 = TutorialFlag_TypeInfo;
   memset(&v19, 0, sizeof(v19));
@@ -431,36 +431,36 @@ TutorialFlag_Id_array *__fastcall TutorialFlag__GetIdList(const MethodInfo *meth
   if ( !flagNameList
     || (Count = System_Collections_Generic_Dictionary_object__Int32Enum___get_Count(
                   flagNameList,
-                  (const MethodInfo_3198AE8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
-        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B71674(
+                  (const MethodInfo_319FB08 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
+        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B76268(
                                                                                   TutorialFlag_Id___TypeInfo,
                                                                                   Count),
         (v12 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)TutorialFlag_TypeInfo->static_fields->flagNameList) == 0LL) )
   {
-    sub_1B71828(flagNameList, v1);
+    sub_1B7641C(flagNameList, v1);
   }
   v13 = (TutorialFlag_Id_array *)flagNameList;
   System_Collections_Generic_Dictionary_object__Int32Enum___GetEnumerator(
     &v19,
     v12,
-    (const MethodInfo_3199208 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
+    (const MethodInfo_31A0228 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
   for ( i = 0; ; ++i )
   {
     v15 = System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___MoveNext(
             &v19,
-            (const MethodInfo_3299958 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
+            (const MethodInfo_32A0978 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
     if ( !v15 )
       break;
     if ( !v13 )
-      sub_1B71828(v15, v16);
+      sub_1B7641C(v15, v16);
     if ( i >= v13->max_length )
-      sub_1B71830(v15, v16);
+      sub_1B76424(v15, v16);
     v17 = (char *)v13 + 4 * (int)i;
     *((_DWORD *)v17 + 8) = v19.fields._current.fields.value;
   }
   System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___Dispose(
     &v19,
-    (const MethodInfo_3299A7C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
+    (const MethodInfo_32A0A9C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
   return v13;
 }
 
@@ -470,10 +470,10 @@ int32_t __fastcall TutorialFlag__GetProgress(const MethodInfo *method)
   __int64 v1; // x1
   TutorialFlag_c *v2; // x0
 
-  if ( (byte_4A1EB1A & 1) == 0 )
+  if ( (byte_4A2CF85 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, v1);
-    byte_4A1EB1A = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, v1);
+    byte_4A2CF85 = 1;
   }
   v2 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -485,20 +485,20 @@ int32_t __fastcall TutorialFlag__GetProgress(const MethodInfo *method)
 }
 
 
-bool __fastcall TutorialFlag__Get_37486428(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37510088(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4A1EB15 & 1) == 0 )
+  if ( (byte_4A2CF80 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB15 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF80 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_37517892(flagId, method);
+  return TutorialFlag__Get_37541568(flagId, method);
 }
 
 
-bool __fastcall TutorialFlag__Get_37486608(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37510268(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial1; // x8
 
@@ -525,13 +525,13 @@ bool __fastcall TutorialFlag__Get_37486608(UserGameEntity_o *userGameEntity, int
                                                  + (1374389535LL * flagId < 0))))) != 0;
     }
 LABEL_9:
-    sub_1B71828(userGameEntity, flagId);
+    sub_1B7641C(userGameEntity, flagId);
   }
   return 0;
 }
 
 
-bool __fastcall TutorialFlag__Get_37486828(
+bool __fastcall TutorialFlag__Get_37510488(
         OtherUserGameEntity_o *otherUserGameEntity,
         int32_t flagId,
         const MethodInfo *method)
@@ -539,7 +539,7 @@ bool __fastcall TutorialFlag__Get_37486828(
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !otherUserGameEntity )
-    sub_1B71828(0LL, flagId);
+    sub_1B7641C(0LL, flagId);
   return (otherUserGameEntity->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                                      - 100
                                                                      * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -547,12 +547,12 @@ bool __fastcall TutorialFlag__Get_37486828(
 }
 
 
-bool __fastcall TutorialFlag__Get_37487020(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37510680(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !followerInfo )
-    sub_1B71828(0LL, flagId);
+    sub_1B7641C(0LL, flagId);
   return (followerInfo->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                               - 100
                                                               * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -560,32 +560,32 @@ bool __fastcall TutorialFlag__Get_37487020(FollowerInfo_o *followerInfo, int32_t
 }
 
 
-bool __fastcall TutorialFlag__Get_37517892(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37541568(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4A1EB16 & 1) == 0 )
+  if ( (byte_4A2CF81 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB16 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF81 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_37486608(SelfUserGame, flagId, v3);
+  return TutorialFlag__Get_37510268(SelfUserGame, flagId, v3);
 }
 
 
-bool __fastcall TutorialFlag__Get_37519328(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37543004(int32_t flagId, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4A1EB22 & 1) == 0 )
+  if ( (byte_4A2CF8D & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB22 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF8D = 1;
   }
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
@@ -601,7 +601,7 @@ bool __fastcall TutorialFlag__Get_37519328(int32_t flagId, const MethodInfo *met
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall TutorialFlag__Get_37519752(int32_t flagId, int32_t eventId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_37543428(int32_t flagId, int32_t eventId, const MethodInfo *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -610,20 +610,20 @@ bool __fastcall TutorialFlag__Get_37519752(int32_t flagId, int32_t eventId, cons
   Il2CppObject *MasterData_object; // x21
   UserEventEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A1EB24 & 1) == 0 )
+  if ( (byte_4A2CF8F & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1B715CC(&NetworkManager_TypeInfo, v5);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A1EB24 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
+    sub_1B761C0(&NetworkManager_TypeInfo, v5);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A2CF8F = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
@@ -634,7 +634,7 @@ bool __fastcall TutorialFlag__Get_37519752(int32_t flagId, int32_t eventId, cons
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_12:
-    sub_1B71828(Instance, v8);
+    sub_1B7641C(Instance, v8);
   return UserEventEntity__getTutorialFlag(entity, flagId, 0LL);
 }
 
@@ -644,14 +644,14 @@ bool __fastcall TutorialFlag__IsProgressComplete(const MethodInfo *method)
   const MethodInfo *v1; // x1
   const MethodInfo *v2; // x1
 
-  if ( (byte_4A1EB21 & 1) == 0 )
+  if ( (byte_4A2CF8C & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, v1);
-    byte_4A1EB21 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, v1);
+    byte_4A2CF8C = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_37486428(102, v1) )
+  if ( TutorialFlag__Get_37510088(102, v1) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -663,29 +663,29 @@ bool __fastcall TutorialFlag__IsProgressDone(int32_t count, const MethodInfo *me
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4A1EB1F & 1) == 0 )
+  if ( (byte_4A2CF8A & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB1F = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF8A = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_37486428(102, method) )
+  if ( TutorialFlag__Get_37510088(102, method) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__IsProgressDone_37519112(count, v3);
+  return TutorialFlag__IsProgressDone_37542788(count, v3);
 }
 
 
-bool __fastcall TutorialFlag__IsProgressDone_37519112(int32_t count, const MethodInfo *method)
+bool __fastcall TutorialFlag__IsProgressDone_37542788(int32_t count, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4A1EB20 & 1) == 0 )
+  if ( (byte_4A2CF8B & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB20 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF8B = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -699,15 +699,15 @@ void __fastcall TutorialFlag__Set(System_String_o *flagIdName, const MethodInfo 
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4A1EB17 & 1) == 0 )
+  if ( (byte_4A2CF82 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB17 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF82 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  TutorialFlag__Set_37518084(Id, v4);
+  TutorialFlag__Set_37541760(Id, v4);
 }
 
 
@@ -718,11 +718,11 @@ void __fastcall TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInf
   TutorialFlag_c *v5; // x0
   int32_t Int; // w0
 
-  if ( (byte_4A1EB26 & 1) == 0 )
+  if ( (byte_4A2CF91 & 1) == 0 )
   {
-    sub_1B715CC(&ManagerConfig_TypeInfo, method);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v3);
-    byte_4A1EB26 = 1;
+    sub_1B761C0(&ManagerConfig_TypeInfo, method);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v3);
+    byte_4A2CF91 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -758,11 +758,11 @@ void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo 
   int32_t Int; // w0
 
   v2 = gachaFlagId;
-  if ( (byte_4A1EB28 & 1) == 0 )
+  if ( (byte_4A2CF93 & 1) == 0 )
   {
-    sub_1B715CC(&ManagerConfig_TypeInfo, method);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v3);
-    byte_4A1EB28 = 1;
+    sub_1B761C0(&ManagerConfig_TypeInfo, method);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v3);
+    byte_4A2CF93 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -788,28 +788,28 @@ void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo 
 
 void __fastcall TutorialFlag__SetProgress(int32_t count, const MethodInfo *method)
 {
-  if ( (byte_4A1EB1D & 1) == 0 )
+  if ( (byte_4A2CF88 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB1D = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF88 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__SetProgress_37518812(count, method);
+  TutorialFlag__SetProgress_37542488(count, method);
 }
 
 
-void __fastcall TutorialFlag__SetProgress_37518812(int32_t count, const MethodInfo *method)
+void __fastcall TutorialFlag__SetProgress_37542488(int32_t count, const MethodInfo *method)
 {
   __int64 v3; // x1
   ManagerConfig_c *v4; // x0
   TutorialFlag_c *v5; // x0
 
-  if ( (byte_4A1EB1E & 1) == 0 )
+  if ( (byte_4A2CF89 & 1) == 0 )
   {
-    sub_1B715CC(&ManagerConfig_TypeInfo, method);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v3);
-    byte_4A1EB1E = 1;
+    sub_1B761C0(&ManagerConfig_TypeInfo, method);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v3);
+    byte_4A2CF89 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -831,37 +831,37 @@ void __fastcall TutorialFlag__SetProgress_37518812(int32_t count, const MethodIn
 }
 
 
-void __fastcall TutorialFlag__Set_37518084(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_37541760(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4A1EB18 & 1) == 0 )
+  if ( (byte_4A2CF83 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB18 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF83 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_37518168(flagId, method);
+  TutorialFlag__Set_37541844(flagId, method);
 }
 
 
-void __fastcall TutorialFlag__Set_37518168(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_37541844(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4A1EB19 & 1) == 0 )
+  if ( (byte_4A2CF84 & 1) == 0 )
   {
-    sub_1B715CC(&TutorialFlag_TypeInfo, method);
-    byte_4A1EB19 = 1;
+    sub_1B761C0(&TutorialFlag_TypeInfo, method);
+    byte_4A2CF84 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_37518272(SelfUserGame, flagId, v3);
+  TutorialFlag__Set_37541948(SelfUserGame, flagId, v3);
 }
 
 
-void __fastcall TutorialFlag__Set_37518272(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_37541948(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial2; // x8
 
@@ -875,7 +875,7 @@ void __fastcall TutorialFlag__Set_37518272(UserGameEntity_o *userGameEntity, int
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1B71828(userGameEntity, flagId);
+    sub_1B7641C(userGameEntity, flagId);
   }
   if ( !userGameEntity )
     goto LABEL_9;
@@ -887,7 +887,7 @@ LABEL_7:
 }
 
 
-void __fastcall TutorialFlag__Set_37519500(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_37543176(int32_t flagId, const MethodInfo *method)
 {
   __int64 v3; // x1
   ManagerConfig_c *v4; // x0
@@ -895,11 +895,11 @@ void __fastcall TutorialFlag__Set_37519500(int32_t flagId, const MethodInfo *met
   int v6; // w19
   int32_t Int; // w0
 
-  if ( (byte_4A1EB23 & 1) == 0 )
+  if ( (byte_4A2CF8E & 1) == 0 )
   {
-    sub_1B715CC(&ManagerConfig_TypeInfo, method);
-    sub_1B715CC(&TutorialFlag_TypeInfo, v3);
-    byte_4A1EB23 = 1;
+    sub_1B761C0(&ManagerConfig_TypeInfo, method);
+    sub_1B761C0(&TutorialFlag_TypeInfo, v3);
+    byte_4A2CF8E = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )

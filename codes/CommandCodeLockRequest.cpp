@@ -9,14 +9,14 @@ void __fastcall CommandCodeLockRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A212F8 & 1) == 0 )
+  if ( (byte_4A2F76B & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_23649/*"svtId"*/, *(_QWORD *)&servantId);
-    sub_1B715CC(&StringLiteral_20162/*"idx"*/, v7);
-    byte_4A212F8 = 1;
+    sub_1B761C0(&StringLiteral_23695/*"svtId"*/, *(_QWORD *)&servantId);
+    sub_1B761C0(&StringLiteral_20207/*"idx"*/, v7);
+    byte_4A2F76B = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23649/*"svtId"*/, servantId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20162/*"idx"*/, idx, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23695/*"svtId"*/, servantId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20207/*"idx"*/, idx, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall CommandCodeLockRequest__getURL(CommandCodeLockReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A212F7 & 1) == 0 )
+  if ( (byte_4A2F76A & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_18100/*"commandCode/lock"*/, v2);
-    byte_4A212F7 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_18144/*"commandCode/lock"*/, v2);
+    byte_4A2F76A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_18100/*"commandCode/lock"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_18144/*"commandCode/lock"*/, 0LL);
 }
 
 
@@ -54,12 +54,12 @@ void __fastcall CommandCodeLockRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A212F9 & 1) == 0 )
+  if ( (byte_4A2F76C & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A212F9 = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F76C = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -83,7 +83,7 @@ void __fastcall CommandCodeLockRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

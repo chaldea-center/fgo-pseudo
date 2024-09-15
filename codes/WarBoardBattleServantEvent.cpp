@@ -8,7 +8,7 @@ void __fastcall WarBoardBattleServantEvent___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.svtInfoArray = svtInfoArray;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)svtInfoArray, v5, v6);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)svtInfoArray, v5, v6);
 }
 
 
@@ -29,11 +29,11 @@ void __fastcall WarBoardBattleServantEvent__AddPartySkill(
   unsigned __int64 v14; // x21
   __int64 v15; // x22
 
-  if ( (byte_4A2203A & 1) == 0 )
+  if ( (byte_4A304AD & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_WarBoardPartySkillMaster___, svtData);
-    this = (WarBoardBattleServantEvent_o *)sub_1B715CC(&DataManager_TypeInfo, v6);
-    byte_4A2203A = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_WarBoardPartySkillMaster___, svtData);
+    this = (WarBoardBattleServantEvent_o *)sub_1B761C0(&DataManager_TypeInfo, v6);
+    byte_4A304AD = 1;
   }
   if ( !svtData || !battleInfoData )
     goto LABEL_27;
@@ -44,7 +44,7 @@ void __fastcall WarBoardBattleServantEvent__AddPartySkill(
       goto LABEL_27;
     if ( !enemyDeck->max_length )
 LABEL_26:
-      sub_1B71830(this, svtData);
+      sub_1B76424(this, svtData);
     myDeck = enemyDeck->m_Items[0];
     if ( !myDeck )
       goto LABEL_27;
@@ -65,10 +65,10 @@ LABEL_26:
   PartySkillId = BattleWarBoardInfo__GetPartySkillId((BattleWarBoardInfo_o *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (WarBoardBattleServantEvent_o *)DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_WarBoardPartySkillMaster___);
+  this = (WarBoardBattleServantEvent_o *)DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_WarBoardPartySkillMaster___);
   if ( !this )
 LABEL_27:
-    sub_1B71828(this, svtData);
+    sub_1B7641C(this, svtData);
   PartySkillEntityArray = (System_Collections_ICollection_o *)WarBoardPartySkillMaster__GetPartySkillEntityArray(
                                                                 (WarBoardPartySkillMaster_o *)this,
                                                                 PartySkillId,
@@ -129,12 +129,12 @@ void __fastcall WarBoardBattleServantEvent__AddSpecialPassive(
   Il2CppObject *Entity; // x0
 
   v4 = this;
-  if ( (byte_4A22039 & 1) == 0 )
+  if ( (byte_4A304AC & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_SkillMaster___, svtData);
-    sub_1B715CC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v5);
-    this = (WarBoardBattleServantEvent_o *)sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A22039 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_SkillMaster___, svtData);
+    sub_1B761C0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v5);
+    this = (WarBoardBattleServantEvent_o *)sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A304AC = 1;
   }
   if ( !svtData )
     goto LABEL_13;
@@ -145,19 +145,19 @@ void __fastcall WarBoardBattleServantEvent__AddSpecialPassive(
   v10 = EventServantInfo;
   if ( EventServantInfo->fields.squareEffectSkillId < 1 || EventServantInfo->fields.squareEffectSkillLv < 1 )
     return;
-  this = (WarBoardBattleServantEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (WarBoardBattleServantEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (WarBoardBattleServantEvent_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)this,
-                                                 (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
+                                                 (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
   {
 LABEL_13:
-    sub_1B71828(this, svtData);
+    sub_1B7641C(this, svtData);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              v10->fields.squareEffectSkillId,
-             (const MethodInfo_30F8760 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_30FF780 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
     if ( !SkillEntity__isActive((SkillEntity_o *)Entity, 0LL) )
@@ -189,23 +189,23 @@ BattleWarBoardInfo_WarBoardServantInfo_o *__fastcall WarBoardBattleServantEvent_
   System_Object_array *svtInfoArray; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4A22038 & 1) == 0 )
+  if ( (byte_4A304AB & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Array_Find_BattleWarBoardInfo_WarBoardServantInfo___, userSvtId);
-    sub_1B715CC(&System_Predicate_BattleWarBoardInfo_WarBoardServantInfo__TypeInfo, v5);
-    sub_1B715CC(&Method_WarBoardBattleServantEvent___c__DisplayClass2_0__GetEventServantInfo_b__0__, v6);
-    sub_1B715CC(&WarBoardBattleServantEvent___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4A22038 = 1;
+    sub_1B761C0(&Method_System_Array_Find_BattleWarBoardInfo_WarBoardServantInfo___, userSvtId);
+    sub_1B761C0(&System_Predicate_BattleWarBoardInfo_WarBoardServantInfo__TypeInfo, v5);
+    sub_1B761C0(&Method_WarBoardBattleServantEvent___c__DisplayClass2_0__GetEventServantInfo_b__0__, v6);
+    sub_1B761C0(&WarBoardBattleServantEvent___c__DisplayClass2_0_TypeInfo, v7);
+    byte_4A304AB = 1;
   }
-  v8 = (Il2CppObject *)sub_1B71818(WarBoardBattleServantEvent___c__DisplayClass2_0_TypeInfo);
+  v8 = (Il2CppObject *)sub_1B7640C(WarBoardBattleServantEvent___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor(v8, 0LL);
   if ( !v8 )
-    sub_1B71828(v9, v10);
+    sub_1B7641C(v9, v10);
   v8[1].klass = (Il2CppClass *)userSvtId;
   svtInfoArray = (System_Object_array *)this->fields.svtInfoArray;
   if ( !svtInfoArray )
     return 0LL;
-  v12 = (System_Predicate_object__o *)sub_1B71818(System_Predicate_BattleWarBoardInfo_WarBoardServantInfo__TypeInfo);
+  v12 = (System_Predicate_object__o *)sub_1B7640C(System_Predicate_BattleWarBoardInfo_WarBoardServantInfo__TypeInfo);
   System_Predicate_object____ctor(
     v12,
     v8,
@@ -214,7 +214,7 @@ BattleWarBoardInfo_WarBoardServantInfo_o *__fastcall WarBoardBattleServantEvent_
   return (BattleWarBoardInfo_WarBoardServantInfo_o *)System_Array__Find_object_(
                                                        svtInfoArray,
                                                        (System_Predicate_T__o *)v12,
-                                                       (const MethodInfo_2F53BB8 *)Method_System_Array_Find_BattleWarBoardInfo_WarBoardServantInfo___);
+                                                       (const MethodInfo_2F5ABD8 *)Method_System_Array_Find_BattleWarBoardInfo_WarBoardServantInfo___);
 }
 
 
@@ -242,6 +242,6 @@ bool __fastcall WarBoardBattleServantEvent___c__DisplayClass2_0___GetEventServan
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B71828(this, 0LL);
+    sub_1B7641C(this, 0LL);
   return x->fields.id == this->fields.userSvtId;
 }

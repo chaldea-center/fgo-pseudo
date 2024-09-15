@@ -1,9 +1,9 @@
 void __fastcall MissionListViewObject___ctor(MissionListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A22E43 & 1) == 0 )
+  if ( (byte_4A312B9 & 1) == 0 )
   {
-    sub_1B715CC(&ListViewObject_TypeInfo, method);
-    byte_4A22E43 = 1;
+    sub_1B761C0(&ListViewObject_TypeInfo, method);
+    byte_4A312B9 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall MissionListViewObject__Awake(MissionListViewObject_o *this, cons
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A22E33 & 1) == 0 )
+  if ( (byte_4A312A9 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_MissionListViewItemDraw___, method);
-    byte_4A22E33 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MissionListViewItemDraw___, method);
+    byte_4A312A9 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewItemDraw___);
+                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewItemDraw___);
   this->fields.itemDraw = (struct MissionListViewItemDraw_o *)Component_object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -52,7 +52,7 @@ void __fastcall MissionListViewObject__CommonEventMoveEnd(MissionListViewObject_
   if ( onCompleteMoveAction )
   {
     p_onCompleteMoveAction->klass = 0LL;
-    sub_1B71570(p_onCompleteMoveAction, 0, v2, v3);
+    sub_1B76164(p_onCompleteMoveAction, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -69,19 +69,19 @@ UnityEngine_GameObject_o *__fastcall MissionListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x4
 
-  if ( (byte_4A22E36 & 1) == 0 )
+  if ( (byte_4A312AC & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
-    byte_4A22E36 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
+    byte_4A312AC = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___)) == 0LL) )
   {
-    sub_1B71828(DragObject, v4);
+    sub_1B7641C(DragObject, v4);
   }
   MissionListViewObject__Init((MissionListViewObject_o *)DragObject, 2, 0LL, 0.0, 0, v6);
   return v5;
@@ -113,12 +113,12 @@ void __fastcall MissionListViewObject__EventExitMove(MissionListViewObject_o *th
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4A22E3E & 1) == 0 )
+  if ( (byte_4A312B4 & 1) == 0 )
   {
-    sub_1B715CC(&ListViewObject_TypeInfo, method);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B715CC(&StringLiteral_9839/*"OnCompleteEventExitMove"*/, v4);
-    byte_4A22E3E = 1;
+    sub_1B761C0(&ListViewObject_TypeInfo, method);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B761C0(&StringLiteral_9870/*"OnCompleteEventExitMove"*/, v4);
+    byte_4A312B4 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -159,15 +159,15 @@ void __fastcall MissionListViewObject__EventExitMove(MissionListViewObject_o *th
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v12, v13->static_fields->BASE_MOVE_TIME, v25, 0LL);
     if ( !transform )
 LABEL_15:
-      sub_1B71828(transform, v6);
+      sub_1B7641C(transform, v6);
     v17 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v17[3].monitor = gameObject;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v17[3].monitor, (int32_t)gameObject, v19, v20);
-    v21 = StringLiteral_9839/*"OnCompleteEventExitMove"*/;
-    *(_QWORD *)&v17[3].fields.m_CachedPtr = StringLiteral_9839/*"OnCompleteEventExitMove"*/;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v17[3].fields, v21, v22, v23);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v17[3].monitor, (int32_t)gameObject, v19, v20);
+    v21 = StringLiteral_9870/*"OnCompleteEventExitMove"*/;
+    *(_QWORD *)&v17[3].fields.m_CachedPtr = StringLiteral_9870/*"OnCompleteEventExitMove"*/;
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v17[3].fields, v21, v22, v23);
   }
 }
 
@@ -188,12 +188,12 @@ void __fastcall MissionListViewObject__EventExitStart(
   Il2CppObject *Component_object; // x20
   const MethodInfo *v14; // x4
 
-  if ( (byte_4A22E3D & 1) == 0 )
+  if ( (byte_4A312B3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B715CC(&StringLiteral_6155/*"EventExitMove"*/, v7);
-    byte_4A22E3D = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B761C0(&StringLiteral_6175/*"EventExitMove"*/, v7);
+    byte_4A312B3 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -203,13 +203,13 @@ void __fastcall MissionListViewObject__EventExitStart(
                                             this,
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v8;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, (int32_t)v8, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, (int32_t)v8, v9, v10);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___);
+                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -223,11 +223,11 @@ void __fastcall MissionListViewObject__EventExitStart(
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1B71828(dragObject, v11);
+    sub_1B7641C(dragObject, v11);
   MissionListViewObject__Init((MissionListViewObject_o *)Component_object, 2, 0LL, 0.0, 0, v14);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6155/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6175/*"EventExitMove"*/,
     delay,
     0LL);
 }
@@ -255,11 +255,11 @@ void __fastcall MissionListViewObject__EventIntoMove(MissionListViewObject_o *th
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4A22E3B & 1) == 0 )
+  if ( (byte_4A312B1 & 1) == 0 )
   {
-    sub_1B715CC(&ListViewObject_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_9840/*"OnCompleteEventIntoMove"*/, v3);
-    byte_4A22E3B = 1;
+    sub_1B761C0(&ListViewObject_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_9871/*"OnCompleteEventIntoMove"*/, v3);
+    byte_4A312B1 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -291,15 +291,15 @@ void __fastcall MissionListViewObject__EventIntoMove(MissionListViewObject_o *th
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v10, v9->static_fields->BASE_MOVE_TIME, v22, 0LL);
   if ( !dragObject )
 LABEL_11:
-    sub_1B71828(dragObject, method);
+    sub_1B7641C(dragObject, method);
   v14 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v14[3].monitor = gameObject;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v14[3].monitor, (int32_t)gameObject, v16, v17);
-  v18 = StringLiteral_9840/*"OnCompleteEventIntoMove"*/;
-  *(_QWORD *)&v14[3].fields.m_CachedPtr = StringLiteral_9840/*"OnCompleteEventIntoMove"*/;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v14[3].fields, v18, v19, v20);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v14[3].monitor, (int32_t)gameObject, v16, v17);
+  v18 = StringLiteral_9871/*"OnCompleteEventIntoMove"*/;
+  *(_QWORD *)&v14[3].fields.m_CachedPtr = StringLiteral_9871/*"OnCompleteEventIntoMove"*/;
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v14[3].fields, v18, v19, v20);
 }
 
 
@@ -321,11 +321,11 @@ void __fastcall MissionListViewObject__EventIntoStart(
   UnityEngine_Transform_o *transform; // x20
   int v15; // s0
 
-  if ( (byte_4A22E3A & 1) == 0 )
+  if ( (byte_4A312B0 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
-    sub_1B715CC(&StringLiteral_6165/*"EventIntoMove"*/, v6);
-    byte_4A22E3A = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___, method);
+    sub_1B761C0(&StringLiteral_6185/*"EventIntoMove"*/, v6);
+    byte_4A312B0 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -336,19 +336,19 @@ void __fastcall MissionListViewObject__EventIntoStart(
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v7;
   p_dragObject = &this->fields.dragObject;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, (int32_t)v7, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, (int32_t)v7, v9, v10);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___)) == 0LL
+                                                   (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MissionListViewObject___)) == 0LL
     || (MissionListViewObject__Init((MissionListViewObject_o *)dragObject, 2, 0LL, 0.0, 0, v13),
         (dragObject = *p_dragObject) == 0LL)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)&v15 = UnityEngine_Transform__TransformPoint_69282440(
+    || (*(UnityEngine_Vector3_o *)&v15 = UnityEngine_Transform__TransformPoint_69311996(
                                            (UnityEngine_Transform_o *)dragObject,
                                            1000.0,
                                            0.0,
@@ -356,12 +356,12 @@ void __fastcall MissionListViewObject__EventIntoStart(
                                            0LL),
         !transform) )
   {
-    sub_1B71828(dragObject, v11);
+    sub_1B7641C(dragObject, v11);
   }
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v15, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6165/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6185/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -392,10 +392,10 @@ void __fastcall MissionListViewObject__Init(
   int32_t v24; // w8
   ServantStatusBattleListViewItem_c *klass; // x19
 
-  if ( (byte_4A22E38 & 1) == 0 )
+  if ( (byte_4A312AE & 1) == 0 )
   {
-    sub_1B715CC(&MissionListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A22E38 = 1;
+    sub_1B761C0(&MissionListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A312AE = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -423,12 +423,12 @@ void __fastcall MissionListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B71828(transform, v17);
+    sub_1B7641C(transform, v17);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.onCompleteMoveAction = onCompleteMove;
   p_onCompleteMoveAction = (ServantStatusBattleListViewItem_o *)&this->fields.onCompleteMoveAction;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields.onCompleteMoveAction,
     (int32_t)onCompleteMove,
     v19,
@@ -469,7 +469,7 @@ LABEL_20:
       if ( p_onCompleteMoveAction->klass )
       {
         p_onCompleteMoveAction->klass = 0LL;
-        sub_1B71570(p_onCompleteMoveAction, 0, (int32_t)v22, v23);
+        sub_1B76164(p_onCompleteMoveAction, 0, (int32_t)v22, v23);
         ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
           klass->_1.element_class,
           *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -479,7 +479,7 @@ LABEL_20:
 }
 
 
-void __fastcall MissionListViewObject__Init_44148684(
+void __fastcall MissionListViewObject__Init_44176132(
         MissionListViewObject_o *this,
         int32_t initMode,
         bool isColliderEnable,
@@ -491,7 +491,7 @@ void __fastcall MissionListViewObject__Init_44148684(
 }
 
 
-void __fastcall MissionListViewObject__Init_44172256(
+void __fastcall MissionListViewObject__Init_44199704(
         MissionListViewObject_o *this,
         int32_t initMode,
         System_Action_o *onCompleteMove,
@@ -506,15 +506,15 @@ void __fastcall MissionListViewObject__OnClickReward(MissionListViewObject_o *th
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A22E41 & 1) == 0 )
+  if ( (byte_4A312B7 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_9828/*"OnClickRewardIcon"*/, method);
-    byte_4A22E41 = 1;
+    sub_1B761C0(&StringLiteral_9859/*"OnClickRewardIcon"*/, method);
+    byte_4A312B7 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1B71828(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9828/*"OnClickRewardIcon"*/, (Il2CppObject *)this, 0LL);
+    sub_1B7641C(0LL, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9859/*"OnClickRewardIcon"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -522,15 +522,15 @@ void __fastcall MissionListViewObject__OnClickSelect(MissionListViewObject_o *th
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A22E40 & 1) == 0 )
+  if ( (byte_4A312B6 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_9813/*"OnClickListView"*/, method);
-    byte_4A22E40 = 1;
+    sub_1B761C0(&StringLiteral_9844/*"OnClickListView"*/, method);
+    byte_4A312B6 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1B71828(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9813/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
+    sub_1B7641C(0LL, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9844/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -541,17 +541,17 @@ void __fastcall MissionListViewObject__OnCompleteEventExitMove(MissionListViewOb
   int32_t v5; // w3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A22E3F & 1) == 0 )
+  if ( (byte_4A312B5 & 1) == 0 )
   {
-    sub_1B715CC(&NGUITools_TypeInfo, method);
-    byte_4A22E3F = 1;
+    sub_1B761C0(&NGUITools_TypeInfo, method);
+    byte_4A312B5 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, 0, v4, v5);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, 0, v4, v5);
   MissionListViewObject__CommonEventMoveEnd(this, v6);
 }
 
@@ -564,10 +564,10 @@ void __fastcall MissionListViewObject__OnCompleteEventIntoMove(MissionListViewOb
   int32_t v6; // w3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A22E3C & 1) == 0 )
+  if ( (byte_4A312B2 & 1) == 0 )
   {
-    sub_1B715CC(&NGUITools_TypeInfo, method);
-    byte_4A22E3C = 1;
+    sub_1B761C0(&NGUITools_TypeInfo, method);
+    byte_4A312B2 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0LL);
   this->fields.dispMode = 2;
@@ -577,7 +577,7 @@ void __fastcall MissionListViewObject__OnCompleteEventIntoMove(MissionListViewOb
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, 0, v5, v6);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.dragObject, 0, v5, v6);
   MissionListViewObject__CommonEventMoveEnd(this, v7);
 }
 
@@ -592,11 +592,11 @@ void __fastcall MissionListViewObject__OnDestroy(MissionListViewObject_o *this, 
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A22E34 & 1) == 0 )
+  if ( (byte_4A312AA & 1) == 0 )
   {
-    sub_1B715CC(&NGUITools_TypeInfo, method);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A22E34 = 1;
+    sub_1B761C0(&NGUITools_TypeInfo, method);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A312AA = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
@@ -610,7 +610,7 @@ void __fastcall MissionListViewObject__OnDestroy(MissionListViewObject_o *this, 
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B71570(p_dragObject, 0, v8, v9);
+    sub_1B76164(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -619,15 +619,15 @@ void __fastcall MissionListViewObject__OnLongPressReward(MissionListViewObject_o
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A22E42 & 1) == 0 )
+  if ( (byte_4A312B8 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_9881/*"OnLongPressRewardIcon"*/, method);
-    byte_4A22E42 = 1;
+    sub_1B761C0(&StringLiteral_9912/*"OnLongPressRewardIcon"*/, method);
+    byte_4A312B8 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1B71828(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9881/*"OnLongPressRewardIcon"*/, (Il2CppObject *)this, 0LL);
+    sub_1B7641C(0LL, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9912/*"OnLongPressRewardIcon"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -644,12 +644,12 @@ void __fastcall MissionListViewObject__RedispResTime(MissionListViewObject_o *th
   int64_t Time; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A22E37 & 1) == 0 )
+  if ( (byte_4A312AD & 1) == 0 )
   {
-    sub_1B715CC(&MissionListViewItem_TypeInfo, method);
-    sub_1B715CC(&NetworkManager_TypeInfo, v3);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A22E37 = 1;
+    sub_1B761C0(&MissionListViewItem_TypeInfo, method);
+    sub_1B761C0(&NetworkManager_TypeInfo, v3);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A312AD = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -677,7 +677,7 @@ void __fastcall MissionListViewObject__RedispResTime(MissionListViewObject_o *th
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Time = NetworkManager__getTime(0LL);
       if ( !itemDraw )
-        sub_1B71828(Time, v12);
+        sub_1B7641C(Time, v12);
       ((void (__fastcall *)(struct MissionListViewItemDraw_o *, struct ListViewItem_o *, int64_t, Il2CppMethodPointer))itemDraw->klass->vtable._9_UpdateDispResTime.method)(
         itemDraw,
         v7,
@@ -698,11 +698,11 @@ void __fastcall MissionListViewObject__SetInput(MissionListViewObject_o *this, b
   struct ListViewItem_o *v9; // x1
   struct MissionListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4A22E35 & 1) == 0 )
+  if ( (byte_4A312AB & 1) == 0 )
   {
-    sub_1B715CC(&MissionListViewItem_TypeInfo, isInput);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A22E35 = 1;
+    sub_1B761C0(&MissionListViewItem_TypeInfo, isInput);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A312AB = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -726,7 +726,7 @@ void __fastcall MissionListViewObject__SetInput(MissionListViewObject_o *this, b
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1B71828(0LL, v9);
+      sub_1B7641C(0LL, v9);
     ((void (__fastcall *)(struct MissionListViewItemDraw_o *, struct ListViewItem_o *, void *))v10->klass->vtable._10_SetInput.method)(
       v10,
       v9,
@@ -742,7 +742,7 @@ void __fastcall MissionListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_40546388((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_40571128((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -761,11 +761,11 @@ void __fastcall MissionListViewObject__SetupDisp(
   __int64 v11; // x1
   struct MissionListViewItemDraw_o *v12; // x0
 
-  if ( (byte_4A22E39 & 1) == 0 )
+  if ( (byte_4A312AF & 1) == 0 )
   {
-    sub_1B715CC(&MissionListViewItem_TypeInfo, isColliderEnable);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A22E39 = 1;
+    sub_1B761C0(&MissionListViewItem_TypeInfo, isColliderEnable);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A312AF = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -786,10 +786,10 @@ void __fastcall MissionListViewObject__SetupDisp(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.manager, (int32_t)this->fields.manager, v9, v10);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.manager, (int32_t)this->fields.manager, v9, v10);
     v12 = this->fields.itemDraw;
     if ( !v12 )
-      sub_1B71828(0LL, v11);
+      sub_1B7641C(0LL, v11);
     ((void (__fastcall *)(struct MissionListViewItemDraw_o *, struct ListViewItem_o *, _QWORD, struct ListViewManager_o *, Il2CppMethodPointer))v12->klass->vtable._4_SetItem.method)(
       v12,
       linkItem,
@@ -815,10 +815,10 @@ void __fastcall MissionListViewObject__add_onCompleteMoveAction(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A22E31 & 1) == 0 )
+  if ( (byte_4A312A7 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, value);
-    byte_4A22E31 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, value);
+    byte_4A312A7 = 1;
   }
   onCompleteMoveAction = this->fields.onCompleteMoveAction;
   p_onCompleteMoveAction = &this->fields.onCompleteMoveAction;
@@ -831,13 +831,13 @@ void __fastcall MissionListViewObject__add_onCompleteMoveAction(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BACABC(p_onCompleteMoveAction, v8, v6);
+    v9 = sub_1BB16B0(p_onCompleteMoveAction, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B71AE8(v8);
+  sub_1B766DC(v8);
   MissionListViewObject__remove_onCompleteMoveAction(v11, v12, v13);
 }
 
@@ -856,10 +856,10 @@ void __fastcall MissionListViewObject__remove_onCompleteMoveAction(
   MissionListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A22E32 & 1) == 0 )
+  if ( (byte_4A312A8 & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, value);
-    byte_4A22E32 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, value);
+    byte_4A312A8 = 1;
   }
   onCompleteMoveAction = this->fields.onCompleteMoveAction;
   p_onCompleteMoveAction = &this->fields.onCompleteMoveAction;
@@ -872,12 +872,12 @@ void __fastcall MissionListViewObject__remove_onCompleteMoveAction(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BACABC(p_onCompleteMoveAction, v8, v6);
+    v9 = sub_1BB16B0(p_onCompleteMoveAction, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B71AE8(v8);
+  sub_1B766DC(v8);
   MissionListViewObject__Awake(v11, v12);
 }

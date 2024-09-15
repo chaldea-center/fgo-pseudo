@@ -8,7 +8,7 @@ void __fastcall WrapBattleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.animation = normalAnim;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)normalAnim, v5, v6);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)normalAnim, v5, v6);
 }
 
 
@@ -45,21 +45,21 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleAnimation__GetPlaying
   int *v29; // x10
   __int64 v30; // x0
 
-  if ( (byte_4A22BA3 & 1) == 0 )
+  if ( (byte_4A31019 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_AnimationState_TypeInfo, method);
-    sub_1B715CC(&System_IDisposable_TypeInfo, v3);
-    sub_1B715CC(&System_Collections_IEnumerator_TypeInfo, v4);
-    sub_1B715CC(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v5);
-    byte_4A22BA3 = 1;
+    sub_1B761C0(&UnityEngine_AnimationState_TypeInfo, method);
+    sub_1B761C0(&System_IDisposable_TypeInfo, v3);
+    sub_1B761C0(&System_Collections_IEnumerator_TypeInfo, v4);
+    sub_1B761C0(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v5);
+    byte_4A31019 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
 LABEL_34:
-    sub_1B71828(animation, method);
+    sub_1B7641C(animation, method);
   Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0LL);
   if ( !Enumerator )
-    sub_1B71828(0LL, v7);
+    sub_1B7641C(0LL, v7);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -79,7 +79,7 @@ LABEL_34:
     else
     {
 LABEL_9:
-      p_method = sub_1BC35AC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BC81A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -102,34 +102,34 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v16 = sub_1BC35AC(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v16 = sub_1BC81A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v17 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
                                             Enumerator,
                                             *(_QWORD *)(v16 + 8));
     v19 = v17;
     if ( !v17 )
-      sub_1B71828(0LL, v18);
+      sub_1B7641C(0LL, v18);
     if ( v17->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1B71AE8(v17);
+      sub_1B766DC(v17);
       goto LABEL_34;
     }
     if ( UnityEngine_AnimationState__get_enabled(v17, 0LL) )
     {
       name = UnityEngine_AnimationState__get_name(v19, 0LL);
       time = UnityEngine_AnimationState__get_time(v19, 0LL);
-      v22 = sub_1B71818(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+      v22 = sub_1B7640C(WrapBattleBaseAnimation_SimpleData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v22, 0LL);
       *(_QWORD *)(v22 + 16) = name;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)(v22 + 16), (int32_t)name, v23, v24);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)(v22 + 16), (int32_t)name, v23, v24);
       *(float *)(v22 + 24) = time;
       goto LABEL_23;
     }
   }
   v22 = 0LL;
 LABEL_23:
-  v25 = sub_1B71708(Enumerator, System_IDisposable_TypeInfo);
+  v25 = sub_1B762FC(Enumerator, System_IDisposable_TypeInfo);
   if ( v25 )
   {
     v26 = *(_QWORD *)v25;
@@ -150,7 +150,7 @@ LABEL_23:
     else
     {
 LABEL_28:
-      v30 = sub_1BC35AC(v25, System_IDisposable_TypeInfo, 0LL);
+      v30 = sub_1BC81A0(v25, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v30)(v27, *(_QWORD *)(v30 + 8));
   }
@@ -173,7 +173,7 @@ void __fastcall WrapBattleAnimation__PlayAnimation(
         (animation = this->fields.animation) == 0LL)
     || (UnityEngine_Animation__Sample(animation, 0LL), (animation = this->fields.animation) == 0LL) )
   {
-    sub_1B71828(animation, animName);
+    sub_1B7641C(animation, animName);
   }
-  UnityEngine_Animation__Play_69002944(animation, animName, 0LL);
+  UnityEngine_Animation__Play_69032500(animation, animName, 0LL);
 }

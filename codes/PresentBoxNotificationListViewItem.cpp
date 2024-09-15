@@ -25,41 +25,41 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
   int32_t v24; // w1
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4A235D3 & 1) == 0 )
+  if ( (byte_4A31A4C & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
-    sub_1B715CC(&Method_DataManager_GetMasterData_ServantMaster___, v7);
-    sub_1B715CC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    sub_1B715CC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4A235D3 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
+    sub_1B761C0(&Method_DataManager_GetMasterData_ServantMaster___, v7);
+    sub_1B761C0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    sub_1B761C0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_4A31A4C = 1;
   }
-  ListViewItem___ctor_40493632((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40521064((ListViewItem_o *)this, index, 0LL);
   this->fields.entity = e;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.entity, (int32_t)e, v11, v12);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.entity, (int32_t)e, v11, v12);
   this->fields.itemEntity = 0LL;
   p_itemEntity = (ServantStatusBattleListViewItem_o *)&this->fields.itemEntity;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.itemEntity, 0, v14, v15);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemEntity, 0, v14, v15);
   this->fields.svtEntity = 0LL;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.svtEntity, 0, v16, v17);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.svtEntity, 0, v16, v17);
   if ( !e )
     goto LABEL_15;
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0LL);
   giftType = e->fields.giftType;
   if ( (unsigned int)(giftType - 6) < 2 || giftType == 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    e->fields.objectId,
-                   (const MethodInfo_30F8760 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                   (const MethodInfo_30FF780 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         v24 = (int)Entity;
         p_itemEntity = (ServantStatusBattleListViewItem_o *)&this->fields.svtEntity;
         this->fields.svtEntity = (struct ServantEntity_o *)Entity;
@@ -67,26 +67,26 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
       }
     }
 LABEL_15:
-    sub_1B71828(Instance, v19);
+    sub_1B7641C(Instance, v19);
   }
   if ( giftType == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                   (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Instance )
       {
         v21 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                 e->fields.objectId,
-                (const MethodInfo_30F8760 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                (const MethodInfo_30FF780 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         v24 = (int)v21;
         p_itemEntity->klass = (ServantStatusBattleListViewItem_c *)v21;
 LABEL_13:
-        sub_1B71570(p_itemEntity, v24, v22, v23);
+        sub_1B76164(p_itemEntity, v24, v22, v23);
         return;
       }
     }
@@ -107,12 +107,12 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A235D4 & 1) == 0 )
+  if ( (byte_4A31A4D & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_10688/*"Present "*/, method);
-    byte_4A235D4 = 1;
+    sub_1B761C0(&StringLiteral_10724/*"Present "*/, method);
+    byte_4A31A4D = 1;
   }
-  return System_String__Concat_61505504((System_String_o *)StringLiteral_10688/*"Present "*/, this->fields.presentName, 0LL);
+  return System_String__Concat_61535060((System_String_o *)StringLiteral_10724/*"Present "*/, this->fields.presentName, 0LL);
 }
 
 

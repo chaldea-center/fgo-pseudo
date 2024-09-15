@@ -8,14 +8,14 @@ void __fastcall ClassBoardReleaseLockRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4A212DA & 1) == 0 )
+  if ( (byte_4A2F74D & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_17941/*"classBoardBaseId"*/, data);
-    sub_1B715CC(&StringLiteral_23392/*"squareId"*/, v6);
-    byte_4A212DA = 1;
+    sub_1B761C0(&StringLiteral_17985/*"classBoardBaseId"*/, data);
+    sub_1B761C0(&StringLiteral_23438/*"squareId"*/, v6);
+    byte_4A2F74D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17941/*"classBoardBaseId"*/, data.fields.ClassBoardId, v3);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23392/*"squareId"*/, data.fields.SquareId, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17985/*"classBoardBaseId"*/, data.fields.ClassBoardId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23438/*"squareId"*/, data.fields.SquareId, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -27,16 +27,16 @@ System_String_o *__fastcall ClassBoardReleaseLockRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A212D9 & 1) == 0 )
+  if ( (byte_4A2F74C & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_17939/*"classBoard/releaseLock"*/, v2);
-    byte_4A212D9 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_17983/*"classBoard/releaseLock"*/, v2);
+    byte_4A2F74C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_17939/*"classBoard/releaseLock"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_17983/*"classBoard/releaseLock"*/, 0LL);
 }
 
 
@@ -55,12 +55,12 @@ void __fastcall ClassBoardReleaseLockRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A212DB & 1) == 0 )
+  if ( (byte_4A2F74E & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A212DB = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F74E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -85,7 +85,7 @@ void __fastcall ClassBoardReleaseLockRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

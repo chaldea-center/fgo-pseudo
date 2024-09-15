@@ -12,7 +12,7 @@ int32_t __fastcall BattleFieldEffectComponent__getAmbientColors(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   return ambientlist->max_length;
 }
 
@@ -32,15 +32,15 @@ System_String_array *__fastcall BattleFieldEffectComponent__getFieldEffects(
   Il2CppClass **v10; // x0
 
   v2 = this;
-  if ( (byte_4A2207C & 1) == 0 )
+  if ( (byte_4A304EF & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_1B715CC(&string___TypeInfo, method);
-    byte_4A2207C = 1;
+    this = (BattleFieldEffectComponent_o *)sub_1B761C0(&string___TypeInfo, method);
+    byte_4A304EF = 1;
   }
   fieldeffect = v2->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_13;
-  this = (BattleFieldEffectComponent_o *)sub_1B71674(string___TypeInfo, fieldeffect->max_length);
+  this = (BattleFieldEffectComponent_o *)sub_1B76268(string___TypeInfo, fieldeffect->max_length);
   if ( !this )
     goto LABEL_13;
   v4 = (System_String_array *)this;
@@ -60,16 +60,16 @@ System_String_array *__fastcall BattleFieldEffectComponent__getFieldEffects(
       this = (BattleFieldEffectComponent_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
       if ( v5 >= v4->max_length )
 LABEL_14:
-        sub_1B71830(this, method);
+        sub_1B76424(this, method);
       v9 = this;
       v10 = &v4->obj.klass + (int)v5;
       v10[4] = (Il2CppClass *)v9;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
       if ( (signed int)++v5 >= (signed int)v4->max_length )
         return v4;
     }
 LABEL_13:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   return v4;
 }
@@ -85,9 +85,9 @@ void __fastcall BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1B71828(this, index);
+    sub_1B7641C(this, index);
   if ( ambientlist->max_length <= index )
-    sub_1B71830(this, *(_QWORD *)&index);
+    sub_1B76424(this, *(_QWORD *)&index);
   UnityEngine_RenderSettings__set_ambientLight(*(UnityEngine_Color_o *)&ambientlist->m_Items[index].fields.g, 0LL);
 }
 
@@ -108,10 +108,10 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
   int32_t v12; // w2
   int32_t v13; // w3
 
-  if ( (byte_4A2207D & 1) == 0 )
+  if ( (byte_4A304F0 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A2207D = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4A304F0 = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -122,18 +122,18 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
     v8 = (UnityEngine_Object_o *)this->fields.viewobject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69257852(v8, 0LL);
+    UnityEngine_Object__Destroy_69287408(v8, 0LL);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_1B71828(v6, v7);
+      sub_1B7641C(v6, v7);
     max_length = fieldeffect->max_length;
     if ( max_length > index )
     {
       if ( max_length <= (unsigned int)index )
-        sub_1B71830(v6, v7);
+        sub_1B76424(v6, v7);
       Object = BaseMonoBehaviour__createObject(
                  (BaseMonoBehaviour_o *)this,
                  fieldeffect->m_Items[index],
@@ -141,7 +141,7 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
                  0LL,
                  0LL);
       this->fields.viewobject = Object;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.viewobject, (int32_t)Object, v12, v13);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.viewobject, (int32_t)Object, v12, v13);
     }
   }
 }

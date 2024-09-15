@@ -1,13 +1,13 @@
 void __fastcall ServantVoicePatternEntity___ctor(ServantVoicePatternEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20351 & 1) == 0 )
+  if ( (byte_4A2E7C3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A20351 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2E7C3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -34,14 +34,14 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
   Il2CppObject *v21; // x21
   const MethodInfo *v22; // x2
 
-  if ( (byte_4A2034F & 1) == 0 )
+  if ( (byte_4A2E7C1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&limitCount);
-    sub_1B715CC(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
-    sub_1B715CC(&DataManager_TypeInfo, v8);
-    sub_1B715CC(&NetworkManager_TypeInfo, v9);
-    sub_1B715CC(&VoiceCondType_TypeInfo, v10);
-    byte_4A2034F = 1;
+    sub_1B761C0(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&limitCount);
+    sub_1B761C0(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
+    sub_1B761C0(&DataManager_TypeInfo, v8);
+    sub_1B761C0(&NetworkManager_TypeInfo, v9);
+    sub_1B761C0(&VoiceCondType_TypeInfo, v10);
+    byte_4A2E7C1 = 1;
   }
   if ( targetValue == -1 )
   {
@@ -68,7 +68,7 @@ bool __fastcall ServantVoicePatternEntity__CheckAddCond(
 LABEL_15:
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         UserId = NetworkManager__get_UserId(0LL);
@@ -94,7 +94,7 @@ LABEL_22:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        v21 = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+        v21 = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
         FixSvtId = (UserServantCollectionEntity_o *)ServantVoicePatternEntity__GetFixSvtId(this, limitCount, v22);
         if ( v21 )
         {
@@ -106,7 +106,7 @@ LABEL_22:
           goto LABEL_22;
         }
 LABEL_29:
-        sub_1B71828(FixSvtId, v19);
+        sub_1B7641C(FixSvtId, v19);
       }
     }
     targetValue = -1;
@@ -127,16 +127,16 @@ System_String_o *__fastcall ServantVoicePatternEntity__CreatePK(
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  if ( (byte_4A2034E & 1) == 0 )
+  if ( (byte_4A2E7C0 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__string___, *(_QWORD *)&svtId);
-    byte_4A2034E = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__string___, *(_QWORD *)&svtId);
+    byte_4A2E7C0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__object_(
            id,
            svtId,
            (Il2CppObject *)voiceId,
-           (const MethodInfo_2E59BC4 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
+           (const MethodInfo_2E60BE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__string___);
 }
 
 
@@ -181,12 +181,12 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(
   const MethodInfo *v15; // x3
   ServantTransformEntity_o *v16; // x0
 
-  if ( (byte_4A20350 & 1) == 0 )
+  if ( (byte_4A2E7C2 & 1) == 0 )
   {
-    sub_1B715CC(&BalanceConfig_TypeInfo, *(_QWORD *)&dispLimitCount);
-    sub_1B715CC(&Method_DataManager_GetMaster_ServantTransformMaster___, v5);
-    sub_1B715CC(&DataManager_TypeInfo, v6);
-    byte_4A20350 = 1;
+    sub_1B761C0(&BalanceConfig_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1B761C0(&Method_DataManager_GetMaster_ServantTransformMaster___, v5);
+    sub_1B761C0(&DataManager_TypeInfo, v6);
+    byte_4A2E7C2 = 1;
   }
   svtId = this->fields.svtId;
   p_svtId = &this->fields.svtId;
@@ -211,9 +211,9 @@ int32_t __fastcall ServantVoicePatternEntity__GetFixSvtId(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_ServantTransformMaster___);
     if ( !Master_object )
-      sub_1B71828(0LL, v14);
+      sub_1B7641C(0LL, v14);
     v16 = ServantTransformMaster__GetBeforeTransformEntity(
             (ServantTransformMaster_o *)Master_object,
             *p_svtId,

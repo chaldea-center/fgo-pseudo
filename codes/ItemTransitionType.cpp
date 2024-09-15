@@ -9,5 +9,5 @@ int32_t __fastcall ItemTransitionType__GetSortPriority(int32_t type, const Metho
   if ( (unsigned int)(type - 1) > 0x11 )
     return 0x7FFFFFFF;
   else
-    return dword_BE4EFC[type - 1];
+    return dword_BE734C[type - 1];
 }

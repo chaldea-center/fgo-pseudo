@@ -1,13 +1,13 @@
 void __fastcall UserPaymentLimitEntity___ctor(UserPaymentLimitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20BB0 & 1) == 0 )
+  if ( (byte_4A2F024 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A20BB0 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2F024 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserPaymentLimitEntity__CreatePK(
         int32_t paymentLimitId,
         const MethodInfo *method)
 {
-  if ( (byte_4A20BAF & 1) == 0 )
+  if ( (byte_4A2F023 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&paymentLimitId);
-    byte_4A20BAF = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&paymentLimitId);
+    byte_4A2F023 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            paymentLimitId,
-           (const MethodInfo_2E59714 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E60734 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

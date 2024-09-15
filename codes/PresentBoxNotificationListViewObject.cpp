@@ -2,10 +2,10 @@ void __fastcall PresentBoxNotificationListViewObject___ctor(
         PresentBoxNotificationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A235EC & 1) == 0 )
+  if ( (byte_4A31A65 & 1) == 0 )
   {
-    sub_1B715CC(&ListViewObject_TypeInfo, method);
-    byte_4A235EC = 1;
+    sub_1B761C0(&ListViewObject_TypeInfo, method);
+    byte_4A31A65 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void __fastcall PresentBoxNotificationListViewObject__Awake(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A235E4 & 1) == 0 )
+  if ( (byte_4A31A5D & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewItemDraw___, method);
-    byte_4A235E4 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewItemDraw___, method);
+    byte_4A31A5D = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B71828(0LL, v3);
+    sub_1B7641C(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewItemDraw___);
+                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewItemDraw___);
   this->fields.itemDraw = (struct PresentBoxNotificationListViewItemDraw_o *)Component_object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -49,21 +49,21 @@ UnityEngine_GameObject_o *__fastcall PresentBoxNotificationListViewObject__Creat
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4A235E8 & 1) == 0 )
+  if ( (byte_4A31A61 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___, method);
-    byte_4A235E8 = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___, method);
+    byte_4A31A61 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_PresentBoxNotificationListViewObject___)) == 0LL) )
   {
-    sub_1B71828(DragObject, v4);
+    sub_1B7641C(DragObject, v4);
   }
-  PresentBoxNotificationListViewObject__Init_45108628((PresentBoxNotificationListViewObject_o *)DragObject, 2, v6);
+  PresentBoxNotificationListViewObject__Init_45136840((PresentBoxNotificationListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -86,7 +86,7 @@ void __fastcall PresentBoxNotificationListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B71570(p_callbackFunc, 0, v2, v3);
+    sub_1B76164(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -101,10 +101,10 @@ PresentBoxNotificationListViewItem_o *__fastcall PresentBoxNotificationListViewO
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4A235E6 & 1) == 0 )
+  if ( (byte_4A31A5F & 1) == 0 )
   {
-    sub_1B715CC(&PresentBoxNotificationListViewItem_TypeInfo, method);
-    byte_4A235E6 = 1;
+    sub_1B761C0(&PresentBoxNotificationListViewItem_TypeInfo, method);
+    byte_4A31A5F = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -143,10 +143,10 @@ void __fastcall PresentBoxNotificationListViewObject__Init(
   int32_t v22; // w9
   ServantStatusBattleListViewItem_c *klass; // x19
 
-  if ( (byte_4A235E9 & 1) == 0 )
+  if ( (byte_4A31A62 & 1) == 0 )
   {
-    sub_1B715CC(&PresentBoxNotificationListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A235E9 = 1;
+    sub_1B761C0(&PresentBoxNotificationListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A31A62 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -174,16 +174,16 @@ void __fastcall PresentBoxNotificationListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B71828(transform, v15);
+    sub_1B7641C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_BAA260[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BAAE80 + v11);
+    v22 = dword_BAC630[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BAD250 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -192,7 +192,7 @@ void __fastcall PresentBoxNotificationListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B71570(p_callbackFunc, 0, v20, v21);
+    sub_1B76164(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -201,7 +201,7 @@ void __fastcall PresentBoxNotificationListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PresentBoxNotificationListViewObject__Init_45108628(
+void __fastcall PresentBoxNotificationListViewObject__Init_45136840(
         PresentBoxNotificationListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -210,17 +210,17 @@ void __fastcall PresentBoxNotificationListViewObject__Init_45108628(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A28BB1 = 1;
   }
   PresentBoxNotificationListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PresentBoxNotificationListViewObject__Init_45109924(
+void __fastcall PresentBoxNotificationListViewObject__Init_45138136(
         PresentBoxNotificationListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -229,17 +229,17 @@ void __fastcall PresentBoxNotificationListViewObject__Init_45109924(
 {
   int v5; // s1
 
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A28BB1 = 1;
   }
   PresentBoxNotificationListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PresentBoxNotificationListViewObject__Init_45110008(
+void __fastcall PresentBoxNotificationListViewObject__Init_45138220(
         PresentBoxNotificationListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -248,10 +248,10 @@ void __fastcall PresentBoxNotificationListViewObject__Init_45110008(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    sub_1B715CC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A1A751 = 1;
+    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A28BB1 = 1;
   }
   PresentBoxNotificationListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -269,11 +269,11 @@ void __fastcall PresentBoxNotificationListViewObject__OnDestroy(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A235E5 & 1) == 0 )
+  if ( (byte_4A31A5E & 1) == 0 )
   {
-    sub_1B715CC(&NGUITools_TypeInfo, method);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A235E5 = 1;
+    sub_1B761C0(&NGUITools_TypeInfo, method);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A31A5E = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
@@ -287,7 +287,7 @@ void __fastcall PresentBoxNotificationListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B71570(p_dragObject, 0, v8, v9);
+    sub_1B76164(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -303,11 +303,11 @@ void __fastcall PresentBoxNotificationListViewObject__SetInput(
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A235E7 & 1) == 0 )
+  if ( (byte_4A31A60 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, isInput);
-    sub_1B715CC(&PresentBoxNotificationListViewItem_TypeInfo, v5);
-    byte_4A235E7 = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, isInput);
+    sub_1B761C0(&PresentBoxNotificationListViewItem_TypeInfo, v5);
+    byte_4A31A60 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -315,7 +315,7 @@ void __fastcall PresentBoxNotificationListViewObject__SetInput(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL);
   if ( v7 && !this->fields.itemDraw )
-    sub_1B71828(v7, v8);
+    sub_1B7641C(v7, v8);
 }
 
 
@@ -326,7 +326,7 @@ void __fastcall PresentBoxNotificationListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_40546388((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_40571128((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -343,11 +343,11 @@ void __fastcall PresentBoxNotificationListViewObject__SetupDisp(
   const MethodInfo *v9; // x3
   PresentBoxNotificationListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4A235EA & 1) == 0 )
+  if ( (byte_4A31A63 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    sub_1B715CC(&PresentBoxNotificationListViewItem_TypeInfo, v3);
-    byte_4A235EA = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    sub_1B761C0(&PresentBoxNotificationListViewItem_TypeInfo, v3);
+    byte_4A31A63 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -371,7 +371,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1B71828(0LL, v8);
+      sub_1B7641C(0LL, v8);
     PresentBoxNotificationListViewItemDraw__SetItem(
       v10,
       (PresentBoxNotificationListViewItem_o *)linkItem,
@@ -388,7 +388,7 @@ void __fastcall PresentBoxNotificationListViewObject__Start(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    PresentBoxNotificationListViewObject__Init_45108628(this, 2, v2);
+    PresentBoxNotificationListViewObject__Init_45136840(this, 2, v2);
 }
 
 
@@ -406,11 +406,11 @@ System_String_o *__fastcall PresentBoxNotificationListViewObject__ToString(
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4A235EB & 1) == 0 )
+  if ( (byte_4A31A64 & 1) == 0 )
   {
-    sub_1B715CC(&PresentBoxNotificationListViewItemDraw_DispMode_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_117/*" "*/, v3);
-    byte_4A235EB = 1;
+    sub_1B761C0(&PresentBoxNotificationListViewItemDraw_DispMode_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_117/*" "*/, v3);
+    byte_4A31A64 = 1;
   }
   v12 = 0.0;
   v11 = 0LL;
@@ -422,8 +422,8 @@ System_String_o *__fastcall PresentBoxNotificationListViewObject__ToString(
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_1D94964(&v11, 0LL, 0LL, 0LL);
-  return System_String__Concat_61516764(v6, (System_String_o *)StringLiteral_117/*" "*/, v7, 0LL);
+  v7 = (System_String_o *)sub_1D99560(&v11, 0LL, 0LL, 0LL);
+  return System_String__Concat_61546320(v6, (System_String_o *)StringLiteral_117/*" "*/, v7, 0LL);
 }
 
 
@@ -442,10 +442,10 @@ void __fastcall PresentBoxNotificationListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A235E2 & 1) == 0 )
+  if ( (byte_4A31A5B & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, value);
-    byte_4A235E2 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, value);
+    byte_4A31A5B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -458,13 +458,13 @@ void __fastcall PresentBoxNotificationListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BACABC(p_callbackFunc, v8, v6);
+    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B71AE8(v8);
+  sub_1B766DC(v8);
   PresentBoxNotificationListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -483,10 +483,10 @@ void __fastcall PresentBoxNotificationListViewObject__remove_callbackFunc(
   PresentBoxNotificationListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A235E3 & 1) == 0 )
+  if ( (byte_4A31A5C & 1) == 0 )
   {
-    sub_1B715CC(&System_Action_TypeInfo, value);
-    byte_4A235E3 = 1;
+    sub_1B761C0(&System_Action_TypeInfo, value);
+    byte_4A31A5C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -499,12 +499,12 @@ void __fastcall PresentBoxNotificationListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BACABC(p_callbackFunc, v8, v6);
+    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B71AE8(v8);
+  sub_1B766DC(v8);
   PresentBoxNotificationListViewObject__Awake(v11, v12);
 }

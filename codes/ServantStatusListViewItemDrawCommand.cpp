@@ -8,11 +8,11 @@ void __fastcall ServantStatusListViewItemDrawCommand___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A1C857 & 1) == 0 )
+  if ( (byte_4A2ACC0 & 1) == 0 )
   {
-    sub_1B715CC(&BalanceConfig_TypeInfo, method);
-    sub_1B715CC(&UISprite___TypeInfo, v3);
-    byte_4A1C857 = 1;
+    sub_1B761C0(&BalanceConfig_TypeInfo, method);
+    sub_1B761C0(&UISprite___TypeInfo, v3);
+    byte_4A2ACC0 = 1;
   }
   this->fields.MASK_LABEL_MAX_WIDTH = 550;
   v4 = BalanceConfig_TypeInfo;
@@ -21,9 +21,9 @@ void __fastcall ServantStatusListViewItemDrawCommand___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct UISprite_array *)sub_1B71674(UISprite___TypeInfo, (unsigned int)v4->static_fields->SvtCommandCardMax);
+  v5 = (struct UISprite_array *)sub_1B76268(UISprite___TypeInfo, (unsigned int)v4->static_fields->SvtCommandCardMax);
   this->fields.commandCodeSpriteList = v5;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.commandCodeSpriteList, (int32_t)v5, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.commandCodeSpriteList, (int32_t)v5, v6, v7);
   *(_QWORD *)&this->fields.transformNameAddHeight = 0xFFFFFF9C00000022LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -76,7 +76,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__Awake(
     if ( !v6 )
       goto LABEL_30;
     if ( v6->max_length <= 3 )
-      sub_1B71830(this, method);
+      sub_1B76424(this, method);
     if ( (this = (ServantStatusListViewItemDrawCommand_o *)v6->m_Items[3]) == 0LL
       || (v7 = v5,
           (this = (ServantStatusListViewItemDrawCommand_o *)UnityEngine_Component__get_transform(
@@ -93,7 +93,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__Awake(
           !battleCharaLevelSpriteList) )
     {
 LABEL_30:
-      sub_1B71828(this, method);
+      sub_1B7641C(this, method);
     }
   }
   else
@@ -191,19 +191,19 @@ void __fastcall ServantStatusListViewItemDrawCommand__ModifyRandomLimitCountSett
 {
   RandomLimitCountManager_c *v5; // x0
 
-  if ( (byte_4A1C853 & 1) == 0 )
+  if ( (byte_4A2ACBC & 1) == 0 )
   {
-    sub_1B715CC(&RandomLimitCountManager_TypeInfo, item);
-    byte_4A1C853 = 1;
+    sub_1B761C0(&RandomLimitCountManager_TypeInfo, item);
+    byte_4A2ACBC = 1;
   }
   if ( this->fields.isStart )
   {
     if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
-    if ( !byte_4A1B828 )
+    if ( !byte_4A29C8B )
     {
-      sub_1B715CC(&RandomLimitCountManager_TypeInfo, item);
-      byte_4A1B828 = 1;
+      sub_1B761C0(&RandomLimitCountManager_TypeInfo, item);
+      byte_4A29C8B = 1;
     }
     v5 = RandomLimitCountManager_TypeInfo;
     if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -333,24 +333,24 @@ void __fastcall ServantStatusListViewItemDrawCommand__RefreshCommandCard(
 
   v4 = item;
   v5 = this;
-  if ( (byte_4A1C854 & 1) == 0 )
+  if ( (byte_4A2ACBD & 1) == 0 )
   {
-    sub_1B715CC(&AtlasManager_TypeInfo, item);
-    sub_1B715CC(&BattleCommandComponent___TypeInfo, v6);
-    sub_1B715CC(&BattleCommandData___TypeInfo, v7);
-    sub_1B715CC(&BattleCommandData_TypeInfo, v8);
-    sub_1B715CC(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v9);
-    sub_1B715CC(&Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___, v10);
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___, v11);
-    sub_1B715CC(&ImageLimitCount_TypeInfo, v12);
-    sub_1B715CC(&NGUITools_TypeInfo, v13);
-    sub_1B715CC(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v15);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1B715CC(&StringLiteral_15080/*"Unlit/Transparent Colored"*/, v17);
-    sub_1B715CC(&StringLiteral_4594/*"CommandCard("*/, v18);
-    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B715CC(&StringLiteral_814/*")"*/, v19);
-    byte_4A1C854 = 1;
+    sub_1B761C0(&AtlasManager_TypeInfo, item);
+    sub_1B761C0(&BattleCommandComponent___TypeInfo, v6);
+    sub_1B761C0(&BattleCommandData___TypeInfo, v7);
+    sub_1B761C0(&BattleCommandData_TypeInfo, v8);
+    sub_1B761C0(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v9);
+    sub_1B761C0(&Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___, v10);
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___, v11);
+    sub_1B761C0(&ImageLimitCount_TypeInfo, v12);
+    sub_1B761C0(&NGUITools_TypeInfo, v13);
+    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v15);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1B761C0(&StringLiteral_15123/*"Unlit/Transparent Colored"*/, v17);
+    sub_1B761C0(&StringLiteral_4612/*"CommandCard("*/, v18);
+    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B761C0(&StringLiteral_814/*")"*/, v19);
+    byte_4A2ACBD = 1;
   }
   v108 = 0;
   v20 = &UnityEngine_Object_TypeInfo;
@@ -386,12 +386,12 @@ void __fastcall ServantStatusListViewItemDrawCommand__RefreshCommandCard(
             LimitCountByImageLimitCostumeIn = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(
                                                 ConvertOverwriteCommandCardLimitCount,
                                                 0LL);
-            this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !this )
               goto LABEL_109;
             MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)this,
-                                  (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                  (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
             this = (ServantStatusListViewItemDrawCommand_o *)ServantStatusListViewItem__get_SvtId(v4, 0LL);
             if ( !MasterData_object )
               goto LABEL_109;
@@ -469,41 +469,41 @@ void __fastcall ServantStatusListViewItemDrawCommand__RefreshCommandCard(
       goto LABEL_110;
     }
 LABEL_109:
-    sub_1B71828(this, item);
+    sub_1B7641C(this, item);
   }
   if ( !commandCardBaseList )
     goto LABEL_109;
-  v37 = sub_1B71674(BattleCommandData___TypeInfo, commandCardBaseList->max_length);
+  v37 = sub_1B76268(BattleCommandData___TypeInfo, commandCardBaseList->max_length);
   v5->fields.commandCardDataList = (struct BattleCommandData_array *)v37;
-  sub_1B71570(p_commandCardDataList, v37, v38, v39);
+  sub_1B76164(p_commandCardDataList, v37, v38, v39);
   v40 = v5->fields.commandCardBaseList;
   if ( !v40 )
     goto LABEL_109;
-  v41 = sub_1B71674(BattleCommandComponent___TypeInfo, v40->max_length);
+  v41 = sub_1B76268(BattleCommandComponent___TypeInfo, v40->max_length);
   v5->fields.commandCardComponentList = (struct BattleCommandComponent_array *)v41;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v5->fields.commandCardComponentList, v41, v42, v43);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v5->fields.commandCardComponentList, v41, v42, v43);
   if ( !v4 )
     goto LABEL_109;
   v46 = v4->fields.commandCodeIdList;
   p_commandCodeIdList = &v5->fields.commandCodeIdList;
   v5->fields.commandCodeIdList = v46;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v5->fields.commandCodeIdList, (int32_t)v46, v44, v45);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v5->fields.commandCodeIdList, (int32_t)v46, v44, v45);
   v48 = v4->fields.commandCardParam;
   p_commandCardParam = &v5->fields.commandCardParam;
   v5->fields.commandCardParam = v48;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v5->fields.commandCardParam, (int32_t)v48, v50, v51);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v5->fields.commandCardParam, (int32_t)v48, v50, v51);
   CommandCardIds = ServantStatusListViewItem__GetCommandCardIds(v4, 1, 0LL);
   svtId = ServantStatusListViewItem__GetSvtId(v4, 1, 0LL);
   v53 = ServantStatusListViewItem__get_ConvertOverwriteCommandCardLimitCount(v4, 0LL);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   v54 = ImageLimitCount__GetLimitCountByImageLimitCostumeIn(v53, 0LL);
-  this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_109;
   this = (ServantStatusListViewItemDrawCommand_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)this,
-                                                     (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                                     (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   if ( !this )
     goto LABEL_109;
   this = (ServantStatusListViewItemDrawCommand_o *)ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -572,7 +572,7 @@ LABEL_109:
         j_il2cpp_runtime_class_init_0(*v20);
       this = (ServantStatusListViewItemDrawCommand_o *)UnityEngine_Object__Instantiate_object_(
                                                          commandCardPrefab,
-                                                         (const MethodInfo_2EDE770 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                         (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !this )
         goto LABEL_109;
       v66 = this;
@@ -588,8 +588,8 @@ LABEL_109:
       z = localScale.fields.z;
       v108 = v56 + 1;
       v71 = System_Int32__ToString((int32_t)&v108, 0LL);
-      v72 = System_String__Concat_61516764(
-              (System_String_o *)StringLiteral_4594/*"CommandCard("*/,
+      v72 = System_String__Concat_61546320(
+              (System_String_o *)StringLiteral_4612/*"CommandCard("*/,
               v71,
               (System_String_o *)StringLiteral_814/*")"*/,
               0LL);
@@ -608,17 +608,17 @@ LABEL_109:
       if ( !transform )
         goto LABEL_109;
       UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)this, 0LL);
-      if ( !byte_4A1A751 )
+      if ( !byte_4A28BB1 )
       {
-        sub_1B715CC(&UnityEngine_Vector3_TypeInfo, v74);
-        byte_4A1A751 = 1;
+        sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v74);
+        byte_4A28BB1 = 1;
       }
       v75 = v4;
       UnityEngine_Transform__set_localPosition(transform, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-      if ( !byte_4A1A757 )
+      if ( !byte_4A28BB7 )
       {
-        sub_1B715CC(&UnityEngine_Quaternion_TypeInfo, v76);
-        byte_4A1A757 = 1;
+        sub_1B761C0(&UnityEngine_Quaternion_TypeInfo, v76);
+        byte_4A28BB7 = 1;
       }
       v77 = v20;
       UnityEngine_Transform__set_localRotation(
@@ -631,39 +631,39 @@ LABEL_109:
       UnityEngine_Transform__set_localScale(transform, v110, 0LL);
       UnityEngine_GameObject__AddComponent_object_(
         (UnityEngine_GameObject_o *)v66,
-        (const MethodInfo_2EAA8B0 *)Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
+        (const MethodInfo_2EB18D0 *)Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
       this = (ServantStatusListViewItemDrawCommand_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          (UnityEngine_GameObject_o *)v66,
-                                                         (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                                         (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
       if ( !this )
         goto LABEL_109;
       v78 = this;
       BattleCommandComponent__setDepth((BattleCommandComponent_o *)this, 110, 0LL);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0LL);
       *(_QWORD *)&v78[1].fields.dispMode = gameObject;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)&v78[1].fields.dispMode, (int32_t)gameObject, v80, v81);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)&v78[1].fields.dispMode, (int32_t)gameObject, v80, v81);
       commandCardDataList = (unsigned int *)v5->fields.commandCardDataList;
-      v83 = (BattleCommandData_o *)sub_1B71818(BattleCommandData_TypeInfo);
-      BattleCommandData___ctor_42990820(v83, v58, svtId, v104, 0, -1, 0LL);
+      v83 = (BattleCommandData_o *)sub_1B7640C(BattleCommandData_TypeInfo);
+      BattleCommandData___ctor_43018260(v83, v58, svtId, v104, 0, -1, 0LL);
       if ( !commandCardDataList )
         goto LABEL_109;
       if ( v83 )
       {
-        this = (ServantStatusListViewItemDrawCommand_o *)sub_1B71708(
+        this = (ServantStatusListViewItemDrawCommand_o *)sub_1B762FC(
                                                            v83,
                                                            *(_QWORD *)(*(_QWORD *)commandCardDataList + 64LL));
         if ( !this )
         {
 LABEL_112:
-          v102 = sub_1B7184C();
-          sub_1B716F4(v102, 0LL);
+          v102 = sub_1B76440();
+          sub_1B762E8(v102, 0LL);
         }
       }
       if ( v56 >= commandCardDataList[6] )
         goto LABEL_111;
       v86 = &commandCardDataList[2 * v56];
       *((_QWORD *)v86 + 4) = v83;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)(v86 + 8), (int32_t)v83, v84, v85);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)(v86 + 8), (int32_t)v83, v84, v85);
       v87 = p_commandCardDataList->klass;
       if ( !p_commandCardDataList->klass )
         goto LABEL_109;
@@ -685,24 +685,24 @@ LABEL_112:
         0,
         1,
         0LL);
-      BattleCommandComponent__setShader((BattleCommandComponent_o *)v78, (System_String_o *)StringLiteral_15080/*"Unlit/Transparent Colored"*/, 0LL);
+      BattleCommandComponent__setShader((BattleCommandComponent_o *)v78, (System_String_o *)StringLiteral_15123/*"Unlit/Transparent Colored"*/, 0LL);
       BattleCommandComponent__updateView((BattleCommandComponent_o *)v78, 1, 0, 1, 0, 0, 0LL);
       clickEventObject = v5->fields.clickEventObject;
       *(_QWORD *)&v78[1].fields.dispMode = clickEventObject;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)&v78[1].fields.dispMode, (int32_t)clickEventObject, v89, v90);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)&v78[1].fields.dispMode, (int32_t)clickEventObject, v89, v90);
       v91 = (unsigned int *)v5->fields.commandCardComponentList;
       p_commandCardParam = &v5->fields.commandCardParam;
       p_commandCodeIdList = &v5->fields.commandCodeIdList;
       if ( !v91 )
         goto LABEL_109;
-      this = (ServantStatusListViewItemDrawCommand_o *)sub_1B71708(v78, *(_QWORD *)(*(_QWORD *)v91 + 64LL));
+      this = (ServantStatusListViewItemDrawCommand_o *)sub_1B762FC(v78, *(_QWORD *)(*(_QWORD *)v91 + 64LL));
       if ( !this )
         goto LABEL_112;
       if ( v56 >= v91[6] )
         goto LABEL_111;
       v94 = &v91[2 * v56];
       *((_QWORD *)v94 + 4) = v78;
-      sub_1B71570((ServantStatusBattleListViewItem_o *)(v94 + 8), (int32_t)v78, v92, v93);
+      sub_1B76164((ServantStatusBattleListViewItem_o *)(v94 + 8), (int32_t)v78, v92, v93);
       v95 = v5->fields.commandCardBaseList;
       if ( !v95 )
         goto LABEL_109;
@@ -738,7 +738,7 @@ LABEL_112:
         goto LABEL_109;
       if ( v56 >= v99->max_length )
 LABEL_111:
-        sub_1B71830(this, item);
+        sub_1B76424(this, item);
       v100 = v99->m_Items[v56];
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -843,32 +843,32 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetItem(
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A1C852 & 1) == 0 )
+  if ( (byte_4A2ACBB & 1) == 0 )
   {
-    sub_1B715CC(&BalanceConfig_TypeInfo, item);
-    sub_1B715CC(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
-    sub_1B715CC(&DataManager_TypeInfo, v8);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v9);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B715CC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1B715CC(&StringLiteral_11822/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD_LIMIT_COUNT_SEALED_MSG"*/, v12);
-    sub_1B715CC(&StringLiteral_11820/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD2"*/, v13);
-    sub_1B715CC(&StringLiteral_11821/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD3"*/, v14);
-    sub_1B715CC(&StringLiteral_11819/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD"*/, v15);
-    byte_4A1C852 = 1;
+    sub_1B761C0(&BalanceConfig_TypeInfo, item);
+    sub_1B761C0(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
+    sub_1B761C0(&DataManager_TypeInfo, v8);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v9);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B761C0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1B761C0(&StringLiteral_11859/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD_LIMIT_COUNT_SEALED_MSG"*/, v12);
+    sub_1B761C0(&StringLiteral_11857/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD2"*/, v13);
+    sub_1B761C0(&StringLiteral_11858/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD3"*/, v14);
+    sub_1B761C0(&StringLiteral_11856/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD"*/, v15);
+    byte_4A2ACBB = 1;
   }
   this->fields.dispMode = mode;
   if ( item && mode )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E5B394 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     if ( item->fields.userSvtEntity )
     {
       explanationLabel = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11819/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD"*/, 0LL);
+      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11856/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD"*/, 0LL);
       if ( !explanationLabel )
         goto LABEL_134;
       UILabel__set_text(explanationLabel, levelButtonBase, 0LL);
@@ -883,7 +883,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetItem(
       v23 = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11820/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD2"*/, 0LL);
+      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11857/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD2"*/, 0LL);
       if ( !v23 )
         goto LABEL_134;
       UILabel__set_text(v23, levelButtonBase, 0LL);
@@ -899,7 +899,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetItem(
       v26 = this->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11821/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD3"*/, 0LL);
+      levelButtonBase = LocalizationManager__Get((System_String_o *)StringLiteral_11858/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD3"*/, 0LL);
       if ( !v26 )
         goto LABEL_134;
       UILabel__set_text(v26, levelButtonBase, 0LL);
@@ -1204,13 +1204,13 @@ LABEL_80:
               }
             }
 LABEL_134:
-            sub_1B71828(levelButtonBase, v19);
+            sub_1B7641C(levelButtonBase, v19);
           }
           v77 = 0LL;
           while ( 1 )
           {
             if ( (unsigned int)v77 >= v76 )
-              sub_1B71830(IsEventJoin, v19);
+              sub_1B76424(IsEventJoin, v19);
             IsEventJoin = BalanceConfig_TypeInfo;
             v78 = commandCardParam->m_Items[v77 + 1];
             if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -1254,7 +1254,7 @@ LABEL_134:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v83.fields.currentCryptoKey = v22;
     *(_QWORD *)&v83.fields.fakeValue = v21;
-    levelButtonBase = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46308268(v83, 0LL);
+    levelButtonBase = (System_String_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46336972(v83, 0LL);
     if ( !(_DWORD)levelButtonBase )
       goto LABEL_33;
     if ( !Master_object )
@@ -1269,7 +1269,7 @@ LABEL_134:
     {
       levelButtonBase = ServantLimitImageMaster__GetServantStatusExplanationText(
                           (ServantLimitImageMaster_o *)Master_object,
-                          (System_String_o *)StringLiteral_11822/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD_LIMIT_COUNT_SEALED_MSG"*/,
+                          (System_String_o *)StringLiteral_11859/*"SERVANT_STATUS_EXPLANATION_COMMAND_CARD_LIMIT_COUNT_SEALED_MSG"*/,
                           v28,
                           0LL);
       servantLeaderInfo = this->fields.explanationLabel;
@@ -1283,7 +1283,7 @@ LABEL_134:
                                                       3,
                                                       0LL);
       v32 = System_String__Format(v30, LimitCountSealedServantName, 0LL);
-      v33 = System_String__Concat_61505504(mText, v32, 0LL);
+      v33 = System_String__Concat_61535060(mText, v32, 0LL);
       UILabel__set_text(servantLeaderInfo, v33, 0LL);
       LODWORD(servantLeaderInfo) = 1;
     }
@@ -1381,31 +1381,31 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
 
   v4 = item;
   v5 = this;
-  if ( (byte_4A1C855 & 1) == 0 )
+  if ( (byte_4A2ACBE & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataManager_GetMasterData_ServantCostumeMaster___, item);
-    sub_1B715CC(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v6);
-    sub_1B715CC(&LocalizationManager_TypeInfo, v7);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B715CC(&StringLiteral_8219/*"LIMIT_COUNT_SELECT_SEALED"*/, v10);
-    sub_1B715CC(&StringLiteral_11844/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v11);
-    sub_1B715CC(&StringLiteral_17429/*"btn_bg_20"*/, v12);
-    sub_1B715CC(&StringLiteral_11845/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/, v13);
-    sub_1B715CC(&StringLiteral_1/*""*/, v14);
-    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B715CC(&StringLiteral_17430/*"btn_bg_21"*/, v15);
-    byte_4A1C855 = 1;
+    sub_1B761C0(&Method_DataManager_GetMasterData_ServantCostumeMaster___, item);
+    sub_1B761C0(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v6);
+    sub_1B761C0(&LocalizationManager_TypeInfo, v7);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B761C0(&StringLiteral_8247/*"LIMIT_COUNT_SELECT_SEALED"*/, v10);
+    sub_1B761C0(&StringLiteral_11881/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v11);
+    sub_1B761C0(&StringLiteral_17473/*"btn_bg_20"*/, v12);
+    sub_1B761C0(&StringLiteral_11882/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/, v13);
+    sub_1B761C0(&StringLiteral_1/*""*/, v14);
+    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B761C0(&StringLiteral_17474/*"btn_bg_21"*/, v15);
+    byte_4A2ACBE = 1;
   }
   if ( !v4 )
     goto LABEL_136;
   if ( !v4->fields._IsTransformed_k__BackingField )
   {
-    this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_136;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)this,
-                          (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                          (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
     if ( v5->fields.isStart && !v4->fields.isConvertOverwriteImage )
     {
       if ( v4->fields.userSvtEntity )
@@ -1426,10 +1426,10 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
     v73 = ConvertOverwriteCommandCardLimitCount;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4A1ADDB )
+    if ( !byte_4A2923B )
     {
-      sub_1B715CC(&LocalizationManager_TypeInfo, v18);
-      byte_4A1ADDB = 1;
+      sub_1B761C0(&LocalizationManager_TypeInfo, v18);
+      byte_4A2923B = 1;
     }
     v21 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1442,11 +1442,11 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
     v24 = static_fields[21];
     v25 = static_fields[22];
     v26 = static_fields[23];
-    if ( !byte_4A1ADDC )
+    if ( !byte_4A2923C )
     {
-      sub_1B715CC(&LocalizationManager_TypeInfo, v18);
+      sub_1B761C0(&LocalizationManager_TypeInfo, v18);
       v21 = LocalizationManager_TypeInfo;
-      byte_4A1ADDC = 1;
+      byte_4A2923C = 1;
     }
     if ( !v21->_2.cctor_finished )
     {
@@ -1458,12 +1458,12 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
     g = v27->selectEffectColor.fields.g;
     b = v27->selectEffectColor.fields.b;
     a = v27->selectEffectColor.fields.a;
-    this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ServantStatusListViewItemDrawCommand_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_136;
     this = (ServantStatusListViewItemDrawCommand_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)this,
-                                                       (const MethodInfo_2E5B3E8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                                       (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
     v77 = 0;
     v32 = this;
     v33 = 0;
@@ -1501,7 +1501,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
         UIRangeLabel__set_effectColor(v36, v78, 0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v38 = (System_String_o *)StringLiteral_11845/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
+        v38 = (System_String_o *)StringLiteral_11882/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
       }
       else
       {
@@ -1520,7 +1520,7 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
           goto LABEL_136;
         UIRangeLabel__set_effectColor(v36, *(UnityEngine_Color_o *)&v42, 0LL);
         v43 = System_Int32__ToString((int32_t)&v77, 0LL);
-        v38 = System_String__Concat_61505504((System_String_o *)StringLiteral_11844/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v43, 0LL);
+        v38 = System_String__Concat_61535060((System_String_o *)StringLiteral_11881/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v43, 0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
@@ -1531,13 +1531,13 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupBattleButton(
         goto LABEL_136;
       if ( v77 >= battleCharaLevelSpriteList->max_length )
 LABEL_137:
-        sub_1B71830(this, item);
+        sub_1B76424(this, item);
       this = (ServantStatusListViewItemDrawCommand_o *)battleCharaLevelSpriteList->m_Items[v77];
       if ( !this )
         goto LABEL_136;
-      v46 = &StringLiteral_17429/*"btn_bg_20"*/;
+      v46 = &StringLiteral_17473/*"btn_bg_20"*/;
       if ( v34 )
-        v46 = &StringLiteral_17430/*"btn_bg_21"*/;
+        v46 = &StringLiteral_17474/*"btn_bg_21"*/;
       UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v46, 0LL);
       battleCharaLevelButtonList = v5->fields.battleCharaLevelButtonList;
       if ( !battleCharaLevelButtonList )
@@ -1610,7 +1610,7 @@ LABEL_137:
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         this = (ServantStatusListViewItemDrawCommand_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_8219/*"LIMIT_COUNT_SELECT_SEALED"*/,
+                                                           (System_String_o *)StringLiteral_8247/*"LIMIT_COUNT_SELECT_SEALED"*/,
                                                            0LL);
         if ( !v49 )
           goto LABEL_136;
@@ -1696,10 +1696,10 @@ LABEL_89:
               {
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                if ( !byte_4A1B3BE )
+                if ( !byte_4A29821 )
                 {
-                  sub_1B715CC(&LocalizationManager_TypeInfo, item);
-                  byte_4A1B3BE = 1;
+                  sub_1B761C0(&LocalizationManager_TypeInfo, item);
+                  byte_4A29821 = 1;
                 }
                 this = (ServantStatusListViewItemDrawCommand_o *)LocalizationManager_TypeInfo;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1733,9 +1733,9 @@ LABEL_89:
             this = (ServantStatusListViewItemDrawCommand_o *)v69->m_Items[v57];
             if ( !this )
               goto LABEL_136;
-            v70 = &StringLiteral_17429/*"btn_bg_20"*/;
+            v70 = &StringLiteral_17473/*"btn_bg_20"*/;
             if ( v59 )
-              v70 = &StringLiteral_17430/*"btn_bg_21"*/;
+              v70 = &StringLiteral_17474/*"btn_bg_21"*/;
             UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v70, 0LL);
             v71 = v5->fields.battleCharaLevelButtonList;
             if ( !v71 )
@@ -1775,7 +1775,7 @@ LABEL_130:
           goto LABEL_131;
         }
 LABEL_136:
-        sub_1B71828(this, item);
+        sub_1B7641C(this, item);
       }
     }
   }
@@ -1801,12 +1801,12 @@ void __fastcall ServantStatusListViewItemDrawCommand__SetupMask(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4A1C856 & 1) == 0 )
+  if ( (byte_4A2ACBF & 1) == 0 )
   {
-    sub_1B715CC(&LocalizationManager_TypeInfo, item);
-    sub_1B715CC(&string_TypeInfo, v7);
-    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B715CC(&StringLiteral_11865/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND"*/, v8);
-    byte_4A1C856 = 1;
+    sub_1B761C0(&LocalizationManager_TypeInfo, item);
+    sub_1B761C0(&string_TypeInfo, v7);
+    this = (ServantStatusListViewItemDrawCommand_o *)sub_1B761C0(&StringLiteral_11902/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND"*/, v8);
+    byte_4A2ACBF = 1;
   }
   if ( !item )
     goto LABEL_35;
@@ -1884,7 +1884,7 @@ LABEL_17:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Empty = LocalizationManager__Get((System_String_o *)StringLiteral_11865/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND"*/, 0LL);
+    Empty = LocalizationManager__Get((System_String_o *)StringLiteral_11902/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND"*/, 0LL);
   }
   else
   {
@@ -1898,7 +1898,7 @@ LABEL_17:
         (this = (ServantStatusListViewItemDrawCommand_o *)v6->fields.maskInfoLabel) == 0LL) )
   {
 LABEL_35:
-    sub_1B71828(this, item);
+    sub_1B7641C(this, item);
   }
   UILabel__SetCondensedScale((UILabel_o *)this, v6->fields.MASK_LABEL_MAX_WIDTH, 0LL);
   if ( isDisplayCombineButton )

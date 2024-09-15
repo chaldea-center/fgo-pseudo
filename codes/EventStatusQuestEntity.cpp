@@ -1,13 +1,13 @@
 void __fastcall EventStatusQuestEntity___ctor(EventStatusQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1FC46 & 1) == 0 )
+  if ( (byte_4A2E0B3 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A1FC46 = 1;
+    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A2E0B3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30F85D8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall EventStatusQuestEntity__CreatePK(
         int32_t questId,
         const MethodInfo *method)
 {
-  if ( (byte_4A1FC44 & 1) == 0 )
+  if ( (byte_4A2E0B1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&statusId);
-    byte_4A1FC44 = 1;
+    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&statusId);
+    byte_4A2E0B1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            statusId,
            priority,
            questId,
-           (const MethodInfo_2E59F5C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E60F7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -65,28 +65,28 @@ int32_t __fastcall EventStatusQuestEntity__getPriority(EventStatusQuestEntity_o 
   EventStatusQuestEntity_o *v15; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_4A1FC45 & 1) == 0 )
+  if ( (byte_4A2E0B2 & 1) == 0 )
   {
-    sub_1B715CC(&CondType_TypeInfo, method);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    sub_1B715CC(&int_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22085/*"notClearPriority"*/, v6);
-    byte_4A1FC45 = 1;
+    sub_1B761C0(&CondType_TypeInfo, method);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B761C0(&int_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22131/*"notClearPriority"*/, v6);
+    byte_4A2E0B2 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
-          (Il2CppObject *)StringLiteral_22085/*"notClearPriority"*/,
-          (const MethodInfo_319EF04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_22131/*"notClearPriority"*/,
+          (const MethodInfo_31A5F24 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     goto LABEL_8;
   }
   questId = this->fields.questId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  if ( CondType__IsQuestClear_37394868(questId, -1, 0, 0LL) )
+  if ( CondType__IsQuestClear_37418488(questId, -1, 0, 0LL) )
   {
 LABEL_8:
     p_priority = &this->fields.priority;
@@ -96,17 +96,17 @@ LABEL_8:
   if ( !Item
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
-                                                                            (Il2CppObject *)StringLiteral_22085/*"notClearPriority"*/,
-                                                                            (const MethodInfo_319EC90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (Il2CppObject *)StringLiteral_22131/*"notClearPriority"*/,
+                                                                            (const MethodInfo_31A5CB0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B71828(Item, v9);
+    sub_1B7641C(Item, v9);
   }
   if ( Item->klass->_1.element_class == int_TypeInfo->_1.element_class )
   {
     p_priority = (int32_t *)j_il2cpp_object_unbox_0(Item, int_TypeInfo, v13, v14);
     return *p_priority;
   }
-  sub_1B71AE8(Item);
+  sub_1B766DC(Item);
   EventStatusQuestEntity___ctor(v15, v16);
   return result;
 }

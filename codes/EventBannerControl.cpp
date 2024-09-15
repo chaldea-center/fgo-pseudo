@@ -10,26 +10,26 @@ void __fastcall EventBannerControl___ctor(EventBannerControl_o *this, const Meth
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A2327B & 1) == 0 )
+  if ( (byte_4A316F2 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_int___ctor__, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject___ctor__, v3);
-    sub_1B715CC(&System_Collections_Generic_List_int__TypeInfo, v4);
-    sub_1B715CC(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
-    byte_4A2327B = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_int___ctor__, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject___ctor__, v3);
+    sub_1B761C0(&System_Collections_Generic_List_int__TypeInfo, v4);
+    sub_1B761C0(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
+    byte_4A316F2 = 1;
   }
-  v6 = (System_Collections_Generic_List_int__o *)sub_1B71818(System_Collections_Generic_List_int__TypeInfo);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v6,
-    (const MethodInfo_34B29E8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.bannerIdList = v6;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.bannerIdList, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.bannerIdList, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.bannerObjList = (struct System_Collections_Generic_List_GameObject__o *)v9;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.bannerObjList, (int32_t)v9, v10, v11);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.bannerObjList, (int32_t)v9, v10, v11);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -46,13 +46,13 @@ void __fastcall EventBannerControl__ClearBanner(EventBannerControl_o *this, cons
   int32_t v10; // w2
   int v11; // w8
 
-  if ( (byte_4A23279 & 1) == 0 )
+  if ( (byte_4A316F0 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A23279 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A316F0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
@@ -60,7 +60,7 @@ void __fastcall EventBannerControl__ClearBanner(EventBannerControl_o *this, cons
         (gameObject = this->fields.bannerObjList) == 0LL) )
   {
 LABEL_14:
-    sub_1B71828(gameObject, v7);
+    sub_1B7641C(gameObject, v7);
   }
   if ( *((int *)gameObject + 6) >= 1 )
   {
@@ -70,10 +70,10 @@ LABEL_14:
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)gameObject,
                v8,
-               (const MethodInfo_34CFF90 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69257852((UnityEngine_Object_o *)Item, 0LL);
+      UnityEngine_Object__Destroy_69287408((UnityEngine_Object_o *)Item, 0LL);
       gameObject = this->fields.bannerObjList;
       if ( !gameObject )
         goto LABEL_14;
@@ -115,12 +115,12 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
   __int64 v22; // x8
 
   v2 = this;
-  if ( (byte_4A2327A & 1) == 0 )
+  if ( (byte_4A316F1 & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___, method);
-    sub_1B715CC(&Method_System_Collections_Generic_List_int__Add__, v3);
-    this = (EventBannerControl_o *)sub_1B715CC(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
-    byte_4A2327A = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BannerComponent___, method);
+    sub_1B761C0(&Method_System_Collections_Generic_List_int__Add__, v3);
+    this = (EventBannerControl_o *)sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
+    byte_4A316F1 = 1;
   }
   combineData = v2->fields.combineData;
   if ( !combineData )
@@ -139,7 +139,7 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
       while ( 1 )
       {
         if ( (unsigned int)v8 >= max_length )
-          sub_1B71830(this, method);
+          sub_1B76424(this, method);
         v9 = combineEventList->m_Items[v8];
         if ( !v9 )
           break;
@@ -160,7 +160,7 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)this,
               (int32_t)method,
-              *(const MethodInfo_34B323C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+              *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
           }
           else
           {
@@ -183,10 +183,10 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
           v15 = this;
           this = (EventBannerControl_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
           v16 = this;
-          if ( !byte_4A1A756 )
+          if ( !byte_4A28BB6 )
           {
-            this = (EventBannerControl_o *)sub_1B715CC(&UnityEngine_Vector3_TypeInfo, method);
-            byte_4A1A756 = 1;
+            this = (EventBannerControl_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
+            byte_4A28BB6 = 1;
           }
           if ( !v16 )
             break;
@@ -196,7 +196,7 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
             0LL);
           this = (EventBannerControl_o *)UnityEngine_GameObject__GetComponent_object_(
                                            (UnityEngine_GameObject_o *)v15,
-                                           (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
+                                           (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BannerComponent___);
           if ( !this )
             break;
           BannerComponent__SetBanner((BannerComponent_o *)this, v9, 0LL);
@@ -214,14 +214,14 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)this,
               (Il2CppObject *)v15,
-              *(const MethodInfo_34D0260 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = v19 + 8 * v21;
             LODWORD(this->fields.m_CancellationTokenSource) = v21 + 1;
             *(_QWORD *)(v22 + 32) = v15;
-            sub_1B71570((ServantStatusBattleListViewItem_o *)(v22 + 32), (int32_t)v15, v17, v18);
+            sub_1B76164((ServantStatusBattleListViewItem_o *)(v22 + 32), (int32_t)v15, v17, v18);
           }
         }
         max_length = combineEventList->max_length;
@@ -229,7 +229,7 @@ void __fastcall EventBannerControl__setBannerList(EventBannerControl_o *this, co
           goto LABEL_28;
       }
 LABEL_31:
-      sub_1B71828(this, method);
+      sub_1B7641C(this, method);
     }
 LABEL_28:
     this = (EventBannerControl_o *)v2->fields.bannerGrid;

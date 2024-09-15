@@ -5,7 +5,7 @@ void __fastcall WarBoardAPIGameSetRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_35478400((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
+  WarBoardAPIRequestTask___ctor_35501044((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, 0LL);
   this->fields.gameResult = result;
 }
 
@@ -23,15 +23,15 @@ void __fastcall WarBoardAPIGameSetRequestTask__SetRequest(
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_4A1D9B5 & 1) == 0 )
+  if ( (byte_4A2BE1E & 1) == 0 )
   {
-    sub_1B715CC(&Method_NetworkManager_getRequest_WarBoardFinishRequest___, method);
-    sub_1B715CC(&NetworkManager_TypeInfo, v3);
-    sub_1B715CC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4A1D9B5 = 1;
+    sub_1B761C0(&Method_NetworkManager_getRequest_WarBoardFinishRequest___, method);
+    sub_1B761C0(&NetworkManager_TypeInfo, v3);
+    sub_1B761C0(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4A2BE1E = 1;
   }
   WarBoardAPIRequestTask__SetRequest((WarBoardAPIRequestTask_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -39,12 +39,12 @@ void __fastcall WarBoardAPIGameSetRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2EDD4A0 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
+               (const MethodInfo_2EE44C0 *)Method_NetworkManager_getRequest_WarBoardFinishRequest___);
   if ( !monitor
     || (v8 = (WarBoardFinishRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0LL), !v8) )
   {
 LABEL_9:
-    sub_1B71828(Instance, v6);
+    sub_1B7641C(Instance, v6);
   }
   WarBoardFinishRequest__beginRequest(
     v8,
@@ -54,5 +54,5 @@ LABEL_9:
     monitor->fields.winCondGroup,
     0LL);
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
 }

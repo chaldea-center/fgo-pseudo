@@ -4,12 +4,12 @@ void __fastcall BattleResetRequest__beginRequest(BattleResetRequest_o *this, int
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A21282 & 1) == 0 )
+  if ( (byte_4A2F6F5 & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_22634/*"questId"*/, *(_QWORD *)&questId);
-    byte_4A21282 = 1;
+    sub_1B761C0(&StringLiteral_22680/*"questId"*/, *(_QWORD *)&questId);
+    byte_4A2F6F5 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22634/*"questId"*/, questId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22680/*"questId"*/, questId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -19,16 +19,16 @@ System_String_o *__fastcall BattleResetRequest__getURL(BattleResetRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A21281 & 1) == 0 )
+  if ( (byte_4A2F6F4 & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_17043/*"battle/reset"*/, v2);
-    byte_4A21281 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_17087/*"battle/reset"*/, v2);
+    byte_4A2F6F4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_17043/*"battle/reset"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_17087/*"battle/reset"*/, 0LL);
 }
 
 
@@ -47,12 +47,12 @@ void __fastcall BattleResetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A21283 & 1) == 0 )
+  if ( (byte_4A2F6F6 & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_22000/*"ng"*/, v6);
-    byte_4A21283 = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
+    byte_4A2F6F6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -76,7 +76,7 @@ void __fastcall BattleResetRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22000/*"ng"*/,
+        StringLiteral_22046/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

@@ -4,7 +4,7 @@ void __fastcall BattleCallBack_int__bool__bool____ctor(
         bool arg2,
         bool arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_30719C4 *method)
+        const MethodInfo_30789E4 *method)
 {
   BattleCallBack_int__bool__bool__o *v8; // x21
   bool v9; // w22
@@ -21,18 +21,18 @@ void __fastcall BattleCallBack_int__bool__bool____ctor(
   LODWORD(v8[-1].fields.callBack) = arg1;
   BYTE4(v8[-1].fields.callBack) = v9;
   BYTE5(v8[-1].fields.callBack) = v10;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)v8, (int32_t)callBack, v11, v12);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)v8, (int32_t)callBack, v11, v12);
 }
 
 
 void __fastcall BattleCallBack_int__bool__bool___call(
         BattleCallBack_int__bool__bool__o *this,
-        const MethodInfo_3071A14 *method)
+        const MethodInfo_3078A34 *method)
 {
   ActionExtensions__Call_int__bool__bool_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
     this->fields.arg3,
-    (const MethodInfo_2DB32A4 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
+    (const MethodInfo_2DBA2C4 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
 }

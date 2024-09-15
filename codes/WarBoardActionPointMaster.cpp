@@ -1,14 +1,14 @@
 void __fastcall WarBoardActionPointMaster___ctor(WarBoardActionPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A20A12 & 1) == 0 )
+  if ( (byte_4A2EE84 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string___ctor__, method);
-    byte_4A20A12 = 1;
+    sub_1B761C0(&Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string___ctor__, method);
+    byte_4A2EE84 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     323,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ WarBoardActionPointEntity_o *__fastcall WarBoardActionPointMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A20A10 & 1) == 0 )
+  if ( (byte_4A2EE82 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_4A20A10 = 1;
+    byte_4A2EE82 = 1;
   }
   PK = (Il2CppObject *)WarBoardActionPointEntity__CreatePK(stageId, forceId, groupId, *(const MethodInfo **)&groupId);
   return (WarBoardActionPointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_30F8AB8 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__GetEntity__);
+                                          (const MethodInfo_30FFAD8 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__GetEntity__);
 }
 
 
@@ -47,17 +47,17 @@ System_Collections_Generic_IEnumerable_WarBoardActionPointEntity__o *__fastcall 
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A20A13 & 1) == 0 )
+  if ( (byte_4A2EE85 & 1) == 0 )
   {
-    sub_1B715CC(&WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo, *(_QWORD *)&stageId);
-    byte_4A20A13 = 1;
+    sub_1B761C0(&WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo, *(_QWORD *)&stageId);
+    byte_4A2EE85 = 1;
   }
-  v5 = sub_1B71818(WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo);
+  v5 = sub_1B7640C(WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0LL);
   *(_QWORD *)(v5 + 40) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)this, v6, v7);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)this, v6, v7);
   *(_DWORD *)(v5 + 52) = stageId;
   return (System_Collections_Generic_IEnumerable_WarBoardActionPointEntity__o *)v5;
 }
@@ -74,19 +74,19 @@ bool __fastcall WarBoardActionPointMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A20A11 & 1) == 0 )
+  if ( (byte_4A2EE83 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__TryGetEntity__,
       entity);
-    byte_4A20A11 = 1;
+    byte_4A2EE83 = 1;
   }
   PK = (Il2CppObject *)WarBoardActionPointEntity__CreatePK(stageId, forceId, groupId, *(const MethodInfo **)&forceId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_WarBoardActionPointMaster__WarBoardActionPointEntity__string__TryGetEntity__);
 }
 
 
@@ -118,14 +118,14 @@ bool __fastcall WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3__
   ServantStatusBattleListViewItem_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4A20A14 & 1) == 0 )
+  if ( (byte_4A2EE86 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B715CC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    this = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)sub_1B715CC(
+    sub_1B761C0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1B761C0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    this = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)sub_1B761C0(
                                                                                  &WarBoardActionPointEntity_TypeInfo,
                                                                                  v4);
-    byte_4A20A14 = 1;
+    byte_4A2EE86 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -141,11 +141,11 @@ bool __fastcall WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3__
       || (this = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)_4__this->fields.list) == 0LL )
     {
 LABEL_19:
-      sub_1B71828(this, method);
+      sub_1B7641C(this, method);
     }
     this = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                                  (System_Collections_ObjectModel_Collection_T__o *)this,
-                                                                                 (const MethodInfo_3095AA8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                                                 (const MethodInfo_309CAC8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     method = 0LL;
     *(_QWORD *)&v2->fields._count_5__2 = (unsigned int)this;
     while ( (int)method < (int)this )
@@ -158,7 +158,7 @@ LABEL_19:
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)this,
                (int32_t)method,
-               (const MethodInfo_3095B38 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_309CB58 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         methodPtr_low = LOBYTE(WarBoardActionPointEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -168,7 +168,7 @@ LABEL_19:
         {
           v2->fields.__2__current = (struct WarBoardActionPointEntity_o *)Item;
           p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-          sub_1B71570(p__2__current, (int32_t)Item, v8, v9);
+          sub_1B76164(p__2__current, (int32_t)Item, v8, v9);
           result = 1;
           *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
           return result;
@@ -195,10 +195,10 @@ System_Collections_Generic_IEnumerator_WarBoardActionPointEntity__o *__fastcall 
   int32_t v7; // w3
   System_Collections_Generic_IEnumerator_WarBoardActionPointEntity__o *result; // x0
 
-  if ( (byte_4A20A15 & 1) == 0 )
+  if ( (byte_4A2EE87 & 1) == 0 )
   {
-    sub_1B715CC(&WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo, method);
-    byte_4A20A15 = 1;
+    sub_1B761C0(&WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo, method);
+    byte_4A2EE87 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -209,13 +209,13 @@ System_Collections_Generic_IEnumerator_WarBoardActionPointEntity__o *__fastcall 
   }
   else
   {
-    v4 = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)sub_1B71818(WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo);
+    v4 = (WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_o *)sub_1B7640C(WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7);
   }
   result = (System_Collections_Generic_IEnumerator_WarBoardActionPointEntity__o *)v4;
   v4->fields.stageId = this->fields.__3__stageId;
@@ -239,11 +239,11 @@ void __fastcall __noreturn WarBoardActionPointMaster__GetWarBoardActionPointEnti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
+  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B715E0(&Method_WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1B716F4(v3, v4);
+  v4 = sub_1B761D4(&Method_WarBoardActionPointMaster__GetWarBoardActionPointEntities_d__3_System_Collections_IEnumerator_Reset__);
+  sub_1B762E8(v3, v4);
 }
 
 

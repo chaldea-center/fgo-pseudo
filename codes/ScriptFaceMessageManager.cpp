@@ -2,10 +2,10 @@ void __fastcall ScriptFaceMessageManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A2166D & 1) == 0 )
+  if ( (byte_4A2FAE0 & 1) == 0 )
   {
-    sub_1B715CC(&ScriptFaceMessageManager_TypeInfo, v1);
-    byte_4A2166D = 1;
+    sub_1B761C0(&ScriptFaceMessageManager_TypeInfo, v1);
+    byte_4A2FAE0 = 1;
   }
   LODWORD(ScriptFaceMessageManager_TypeInfo->static_fields->FACE_IMAGE_WIDTH) = (struct ScriptFaceMessageManager_StaticFields)1120403456;
 }
@@ -35,15 +35,15 @@ void __fastcall ScriptFaceMessageManager___ctor(ScriptFaceMessageManager_o *this
   float FACE_IMAGE_WIDTH; // s0
   const MethodInfo *v23; // x1
 
-  if ( (byte_4A2166C & 1) == 0 )
+  if ( (byte_4A2FADF & 1) == 0 )
   {
-    sub_1B715CC(&ScriptFaceMessageManager_TypeInfo, method);
-    sub_1B715CC(&float___TypeInfo, v3);
-    sub_1B715CC(&UnityEngine_Vector2___TypeInfo, v4);
-    sub_1B715CC(&UnityEngine_Vector3___TypeInfo, v5);
-    byte_4A2166C = 1;
+    sub_1B761C0(&ScriptFaceMessageManager_TypeInfo, method);
+    sub_1B761C0(&float___TypeInfo, v3);
+    sub_1B761C0(&UnityEngine_Vector2___TypeInfo, v4);
+    sub_1B761C0(&UnityEngine_Vector3___TypeInfo, v5);
+    byte_4A2FADF = 1;
   }
-  v6 = sub_1B71674(float___TypeInfo, 2LL);
+  v6 = sub_1B76268(float___TypeInfo, 2LL);
   if ( !v6 )
     goto LABEL_19;
   v10 = *(_DWORD *)(v6 + 24);
@@ -55,8 +55,8 @@ void __fastcall ScriptFaceMessageManager___ctor(ScriptFaceMessageManager_o *this
     goto LABEL_18;
   *(_DWORD *)(v6 + 36) = 1138491392;
   this->fields.ALIGN_CENTER_BASE = (struct System_Single_array *)v6;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.ALIGN_CENTER_BASE, v6, v8, v9);
-  v6 = sub_1B71674(float___TypeInfo, 2LL);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.ALIGN_CENTER_BASE, v6, v8, v9);
+  v6 = sub_1B76268(float___TypeInfo, 2LL);
   if ( !v6 )
     goto LABEL_19;
   v13 = *(_DWORD *)(v6 + 24);
@@ -68,20 +68,20 @@ void __fastcall ScriptFaceMessageManager___ctor(ScriptFaceMessageManager_o *this
     goto LABEL_18;
   *(_DWORD *)(v6 + 36) = 1146224640;
   this->fields.ALIGN_RIGHT_BASE = (struct System_Single_array *)v6;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.ALIGN_RIGHT_BASE, v6, v11, v12);
-  v6 = sub_1B71674(UnityEngine_Vector3___TypeInfo, 2LL);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.ALIGN_RIGHT_BASE, v6, v11, v12);
+  v6 = sub_1B76268(UnityEngine_Vector3___TypeInfo, 2LL);
   if ( !v6 )
     goto LABEL_19;
   v16 = *(_DWORD *)(v6 + 24);
   v7 = v6;
   if ( !v16 || (*(_DWORD *)(v6 + 40) = 0, *(_QWORD *)(v6 + 32) = 0x4150000042200000LL, v16 == 1) )
 LABEL_18:
-    sub_1B71830(v6, v7);
+    sub_1B76424(v6, v7);
   *(_DWORD *)(v6 + 52) = 0;
   *(_QWORD *)(v6 + 44) = 0x41500000C2CE0000LL;
   this->fields.TALK_NAME_ANCHOR_POS = (struct UnityEngine_Vector3_array *)v6;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.TALK_NAME_ANCHOR_POS, v6, v14, v15);
-  v6 = sub_1B71674(UnityEngine_Vector2___TypeInfo, 2LL);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TALK_NAME_ANCHOR_POS, v6, v14, v15);
+  v6 = sub_1B76268(UnityEngine_Vector2___TypeInfo, 2LL);
   v19 = ScriptFaceMessageManager_TypeInfo;
   v20 = v6;
   if ( !ScriptFaceMessageManager_TypeInfo->_2.cctor_finished )
@@ -91,7 +91,7 @@ LABEL_18:
   }
   if ( !v20 )
 LABEL_19:
-    sub_1B71828(v6, v7);
+    sub_1B7641C(v6, v7);
   v21 = *(_DWORD *)(v20 + 24);
   if ( !v21 )
     goto LABEL_18;
@@ -102,7 +102,7 @@ LABEL_19:
     goto LABEL_18;
   *(_QWORD *)(v20 + 40) = 0LL;
   this->fields.MESSAGE_SCROLL_POS = (struct UnityEngine_Vector2_array *)v20;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.MESSAGE_SCROLL_POS, v20, v17, v18);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.MESSAGE_SCROLL_POS, v20, v17, v18);
   ScriptMessageCommonManager___ctor((ScriptMessageCommonManager_o *)this, v23);
 }
 
@@ -129,7 +129,7 @@ UnityEngine_Vector3_o __fastcall ScriptFaceMessageManager__GetFaceIconPosition(
 
   faceIcon = (UnityEngine_Component_o *)this->fields.faceIcon;
   if ( !faceIcon || (faceIcon = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(faceIcon, 0LL)) == 0LL )
-    sub_1B71828(faceIcon, method);
+    sub_1B7641C(faceIcon, method);
   *(UnityEngine_Vector3_o *)&v3 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)faceIcon, 0LL);
   result.fields.z = v5;
   result.fields.y = v4;
@@ -170,7 +170,7 @@ void __fastcall ScriptFaceMessageManager__SetFaceIconContentSize(
 
   faceIcon = this->fields.faceIcon;
   if ( !faceIcon || (UIWidget__set_width(faceIcon, width, 0LL), (faceIcon = this->fields.faceIcon) == 0LL) )
-    sub_1B71828(faceIcon, *(_QWORD *)&width);
+    sub_1B7641C(faceIcon, *(_QWORD *)&width);
   UIWidget__set_height(faceIcon, height, 0LL);
 }
 
@@ -227,10 +227,10 @@ void __fastcall ScriptFaceMessageManager__SetMessageWindowLayout(
     goto LABEL_17;
   this = (ScriptFaceMessageManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v10 = this;
-  if ( !byte_4A1A751 )
+  if ( !byte_4A28BB1 )
   {
-    this = (ScriptFaceMessageManager_o *)sub_1B715CC(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A1A751 = 1;
+    this = (ScriptFaceMessageManager_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A28BB1 = 1;
   }
   if ( !v10
     || (UnityEngine_Transform__set_localPosition(
@@ -241,11 +241,11 @@ void __fastcall ScriptFaceMessageManager__SetMessageWindowLayout(
     || (MESSAGE_SCROLL_POS = v4->fields.MESSAGE_SCROLL_POS) == 0LL )
   {
 LABEL_17:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   if ( (unsigned int)talkMode_k__BackingField >= MESSAGE_SCROLL_POS->max_length )
 LABEL_18:
-    sub_1B71830(this, method);
+    sub_1B76424(this, method);
   v4->fields.dispSize = (struct UnityEngine_Vector2_o)vadd_f32(
                                                         v11[13],
                                                         vadd_f32(
@@ -270,12 +270,12 @@ void __fastcall ScriptFaceMessageManager__SetTalkMode(
   Il2CppObject *Instance; // x0
 
   v5 = this;
-  if ( (byte_4A2166B & 1) == 0 )
+  if ( (byte_4A2FADE & 1) == 0 )
   {
-    this = (ScriptFaceMessageManager_o *)sub_1B715CC(
+    this = (ScriptFaceMessageManager_o *)sub_1B761C0(
                                            &Method_SingletonMonoBehaviour_ScriptManager__get_Instance__,
                                            *(_QWORD *)&mode);
-    byte_4A2166B = 1;
+    byte_4A2FADE = 1;
   }
   backLogButton = v5->fields.backLogButton;
   v5->fields._talkMode_k__BackingField = mode;
@@ -288,9 +288,9 @@ void __fastcall ScriptFaceMessageManager__SetTalkMode(
   else if ( !talkMode_k__BackingField )
   {
     ScriptMessageCommonManager__SetActiveButton(v7, v5->fields.autoMessageButton, 0, 1, v9);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_370B208 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
     if ( !Instance )
-      sub_1B71828(0LL, v8);
+      sub_1B7641C(0LL, v8);
     LOBYTE(Instance[56].monitor) = 0;
   }
   ScriptFaceMessageManager__SetMessageWindowLayout(v5, v8);
@@ -327,24 +327,24 @@ void __fastcall ScriptFaceMessageManager__Start(ScriptFaceMessageManager_o *this
   const MethodInfo *v28; // x1
   const MethodInfo *v29; // x6
 
-  if ( (byte_4A2166A & 1) == 0 )
+  if ( (byte_4A2FADD & 1) == 0 )
   {
-    sub_1B715CC(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, method);
-    sub_1B715CC(&Method_UnityEngine_Object_Instantiate_UILabel___, v3);
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B715CC(&ScriptMessageLabel_TypeInfo, v5);
-    sub_1B715CC(&StringLiteral_919/*"-"*/, v6);
-    sub_1B715CC(&StringLiteral_25193/*"■"*/, v7);
-    byte_4A2166A = 1;
+    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, method);
+    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_UILabel___, v3);
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B761C0(&ScriptMessageLabel_TypeInfo, v5);
+    sub_1B761C0(&StringLiteral_919/*"-"*/, v6);
+    sub_1B761C0(&StringLiteral_25239/*"■"*/, v7);
+    byte_4A2FADD = 1;
   }
   rootObject = (unsigned __int64)this->fields.rootObject;
   if ( !rootObject )
     goto LABEL_15;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)rootObject,
-                       (const MethodInfo_2EAA998 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   this->fields.rootPanel = (struct UIPanel_o *)Component_object;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.rootPanel, (int32_t)Component_object, v10, v11);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.rootPanel, (int32_t)Component_object, v10, v11);
   rootObject = (unsigned int)this->fields.messageFontSize;
   if ( !(_DWORD)rootObject )
   {
@@ -361,41 +361,41 @@ void __fastcall ScriptFaceMessageManager__Start(ScriptFaceMessageManager_o *this
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootObject = (unsigned __int64)UnityEngine_Object__Instantiate_object_(
                                    messageMainLabel,
-                                   (const MethodInfo_2EDE770 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                   (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_UILabel___);
   v15 = this->fields.defaultMessageWindow;
   if ( !v15 )
     goto LABEL_15;
   v16 = (UILabel_o *)rootObject;
   rootObject = (unsigned __int64)UnityEngine_Object__Instantiate_object_(
                                    (Il2CppObject *)v15->fields.messageRubyLabel,
-                                   (const MethodInfo_2EDE770 *)Method_UnityEngine_Object_Instantiate_UILabel___);
+                                   (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_UILabel___);
   if ( !v16 )
     goto LABEL_15;
   v17 = (UILabel_o *)rootObject;
   trueTypeFont = UILabel__get_trueTypeFont(v16, 0LL);
   this->fields.defaultFontType = trueTypeFont;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.defaultFontType, (int32_t)trueTypeFont, v19, v20);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.defaultFontType, (int32_t)trueTypeFont, v19, v20);
   this->fields.fontType = trueTypeFont;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.fontType, (int32_t)trueTypeFont, v21, v22);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.fontType, (int32_t)trueTypeFont, v21, v22);
   UILabel__set_fontSize(v16, this->fields.defaultFontSize, 0LL);
-  UILabel__set_text(v16, (System_String_o *)StringLiteral_25193/*"■"*/, 0LL);
+  UILabel__set_text(v16, (System_String_o *)StringLiteral_25239/*"■"*/, 0LL);
   rootObject = ((__int64 (__fastcall *)(UILabel_o *, Il2CppMethodPointer))v16->klass->vtable._22_get_localSize.method)(
                  v16,
                  v16->klass->vtable._23_get_drawingDimensions.methodPtr);
   this->fields.defaultTextOnlyLineHeight = v23;
   if ( !v17 )
 LABEL_15:
-    sub_1B71828(rootObject, method);
+    sub_1B7641C(rootObject, method);
   this->fields.rubyFontSize = v17->fields.mFontSize;
-  UILabel__set_text(v17, (System_String_o *)StringLiteral_25193/*"■"*/, 0LL);
+  UILabel__set_text(v17, (System_String_o *)StringLiteral_25239/*"■"*/, 0LL);
   ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))v17->klass->vtable._22_get_localSize.method)(
     v17,
     v17->klass->vtable._23_get_drawingDimensions.methodPtr);
   this->fields.rubyLineHeight = v24;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v16, 0LL);
-  UnityEngine_Object__Destroy_69257852(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69287408(gameObject, 0LL);
   v26 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v17, 0LL);
-  UnityEngine_Object__Destroy_69257852(v26, 0LL);
+  UnityEngine_Object__Destroy_69287408(v26, 0LL);
   ScriptMessageCommonManager__ResetMessageWindow((ScriptMessageCommonManager_o *)this, v27);
   ScriptFaceMessageManager__SetMessageWindowLayout(this, v28);
   ScriptMessageCommonManager__SetScreen((ScriptMessageCommonManager_o *)this, 0, 0, 0, 0, 1, v29);

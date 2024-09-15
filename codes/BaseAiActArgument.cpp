@@ -11,9 +11,9 @@ void __fastcall BaseAiActArgument___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)aiActEnt, v7, v8);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)aiActEnt, v7, v8);
   this->fields._AiEnt_k__BackingField = aiEnt;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields._AiEnt_k__BackingField, (int32_t)aiEnt, v9, v10);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._AiEnt_k__BackingField, (int32_t)aiEnt, v9, v10);
 }
 
 
@@ -35,18 +35,18 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
   BaseAiActBattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4A22613 & 1) == 0 )
+  if ( (byte_4A30A89 & 1) == 0 )
   {
-    sub_1B715CC(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
-    byte_4A22613 = 1;
+    sub_1B761C0(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
+    byte_4A30A89 = 1;
   }
-  v7 = (BaseAiActBattleLogicTask_o *)sub_1B71818(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BaseAiActBattleLogicTask_o *)sub_1B7640C(BaseAiActBattleLogicTask_TypeInfo);
   BaseAiActBattleLogicTask___ctor(v7, actType, 0LL);
-  return BaseAiActArgument__MakeTask_43234556(this, v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_43261996(this, v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_43234556(
+BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_43261996(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -65,7 +65,7 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_43234556(
                                         v5->klass->vtable._5_InitCommonTask.methodPtr),
         !task) )
   {
-    sub_1B71828(this, task);
+    sub_1B7641C(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0LL);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._8_Init.method)(
@@ -107,7 +107,7 @@ void __fastcall BaseAiActArgument__set_AiActEnt(
   int32_t v3; // w3
 
   this->fields._AiActEnt_k__BackingField = value;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -119,7 +119,7 @@ void __fastcall BaseAiActArgument__set_AiEnt(
   int32_t v3; // w3
 
   this->fields._AiEnt_k__BackingField = value;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)&this->fields._AiEnt_k__BackingField,
     (int32_t)value,
     (int32_t)method,

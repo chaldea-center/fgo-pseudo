@@ -9,16 +9,16 @@ void __fastcall EventExpeditionFinishRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A2133A & 1) == 0 )
+  if ( (byte_4A2F7AD & 1) == 0 )
   {
-    sub_1B715CC(&StringLiteral_19081/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B715CC(&StringLiteral_19259/*"expeditionIdxs"*/, v7);
-    byte_4A2133A = 1;
+    sub_1B761C0(&StringLiteral_19126/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B761C0(&StringLiteral_19304/*"expeditionIdxs"*/, v7);
+    byte_4A2F7AD = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19081/*"eventId"*/, eventId, method);
-  RequestBase__addField_40925448(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19126/*"eventId"*/, eventId, method);
+  RequestBase__addField_40950188(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19259/*"expeditionIdxs"*/,
+    (System_String_o *)StringLiteral_19304/*"expeditionIdxs"*/,
     &expeditionIdxs->obj,
     v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
@@ -32,16 +32,16 @@ System_String_o *__fastcall EventExpeditionFinishRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A21339 & 1) == 0 )
+  if ( (byte_4A2F7AC & 1) == 0 )
   {
-    sub_1B715CC(&NetworkManager_TypeInfo, method);
-    sub_1B715CC(&StringLiteral_19064/*"event/expeditionFinish"*/, v2);
-    byte_4A21339 = 1;
+    sub_1B761C0(&NetworkManager_TypeInfo, method);
+    sub_1B761C0(&StringLiteral_19109/*"event/expeditionFinish"*/, v2);
+    byte_4A2F7AC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61505504(BaseUrl, (System_String_o *)StringLiteral_19064/*"event/expeditionFinish"*/, 0LL);
+  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_19109/*"event/expeditionFinish"*/, 0LL);
 }
 
 
@@ -59,11 +59,11 @@ void __fastcall EventExpeditionFinishRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4A2133B & 1) == 0 )
+  if ( (byte_4A2F7AE & 1) == 0 )
   {
-    sub_1B715CC(&JsonManager_TypeInfo, responseList);
-    sub_1B715CC(&ResponseCommandKind_TypeInfo, v5);
-    byte_4A2133B = 1;
+    sub_1B761C0(&JsonManager_TypeInfo, responseList);
+    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
+    byte_4A2F7AE = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);

@@ -13,7 +13,7 @@ void __fastcall BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, cons
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.selfTransform = transform;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5);
 }
 
 
@@ -58,10 +58,10 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v42; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4A21D3F & 1) == 0 )
+  if ( (byte_4A301B2 & 1) == 0 )
   {
-    sub_1B715CC(&UnityEngine_Object_TypeInfo, method);
-    byte_4A21D3F = 1;
+    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
+    byte_4A301B2 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
@@ -85,10 +85,10 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
       x = position.fields.x;
       y = position.fields.y;
       z = position.fields.z;
-      if ( !byte_4A1A753 )
+      if ( !byte_4A28BB3 )
       {
-        sub_1B715CC(&System_Math_TypeInfo, v22);
-        byte_4A1A753 = 1;
+        sub_1B761C0(&System_Math_TypeInfo, v22);
+        byte_4A28BB3 = 1;
       }
       v26 = v19 - x;
       v27 = v20 - y;
@@ -99,7 +99,7 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
         v39.fields.x = v26;
         v39.fields.y = v27;
         v39.fields.z = v21 - z;
-        v40 = UnityEngine_Quaternion__LookRotation_69196212(v39, 0LL);
+        v40 = UnityEngine_Quaternion__LookRotation_69225768(v39, 0LL);
         v28 = v40.fields.x;
         v29 = v40.fields.y;
         v30 = v40.fields.z;
@@ -124,7 +124,7 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
           goto LABEL_7;
         }
 LABEL_24:
-        sub_1B71828(selfTransform, v9);
+        sub_1B7641C(selfTransform, v9);
       }
     }
   }

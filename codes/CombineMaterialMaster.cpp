@@ -1,14 +1,14 @@
 void __fastcall CombineMaterialMaster___ctor(CombineMaterialMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1F8A6 & 1) == 0 )
+  if ( (byte_4A2DD13 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string___ctor__, method);
-    byte_4A1F8A6 = 1;
+    sub_1B761C0(&Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string___ctor__, method);
+    byte_4A2DD13 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     85,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ CombineMaterialEntity_o *__fastcall CombineMaterialMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A1F8A4 & 1) == 0 )
+  if ( (byte_4A2DD11 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4A1F8A4 = 1;
+    byte_4A2DD11 = 1;
   }
   PK = (Il2CppObject *)CombineMaterialEntity__CreatePK(id, lv, *(const MethodInfo **)&lv);
   return (CombineMaterialEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_30F8AB8 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__GetEntity__);
+                                      (const MethodInfo_30FFAD8 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +46,15 @@ bool __fastcall CombineMaterialMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A1F8A5 & 1) == 0 )
+  if ( (byte_4A2DD12 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__TryGetEntity__, entity);
-    byte_4A1F8A5 = 1;
+    sub_1B761C0(&Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__TryGetEntity__, entity);
+    byte_4A2DD12 = 1;
   }
   PK = (Il2CppObject *)CombineMaterialEntity__CreatePK(id, lv, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_CombineMaterialMaster__CombineMaterialEntity__string__TryGetEntity__);
 }

@@ -14,6 +14,14 @@ int32_t __fastcall ServantStatusFlavorTextListViewItemDraw__GetKind(
 }
 
 
+void __fastcall ServantStatusFlavorTextListViewItemDraw__HideNew(
+        ServantStatusFlavorTextListViewItemDraw_o *this,
+        const MethodInfo *method)
+{
+  ;
+}
+
+
 void __fastcall ServantStatusFlavorTextListViewItemDraw__SetCondTitle(
         ServantStatusFlavorTextListViewItemDraw_o *this,
         System_String_o *title,

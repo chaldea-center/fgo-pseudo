@@ -14,16 +14,16 @@ System_Collections_IEnumerator_o *__fastcall CoinRoomControlEffect__AddValue(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A22FFA & 1) == 0 )
+  if ( (byte_4A31470 & 1) == 0 )
   {
-    sub_1B715CC(&CoinRoomControlEffect__AddValue_d__10_TypeInfo, method);
-    byte_4A22FFA = 1;
+    sub_1B761C0(&CoinRoomControlEffect__AddValue_d__10_TypeInfo, method);
+    byte_4A31470 = 1;
   }
-  v3 = sub_1B71818(CoinRoomControlEffect__AddValue_d__10_TypeInfo);
+  v3 = sub_1B7640C(CoinRoomControlEffect__AddValue_d__10_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B71570((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -43,7 +43,7 @@ void __fastcall CoinRoomControlEffect__KeyEventStartAddValue(
 
   this->fields.actionTime = time;
   v4 = CoinRoomControlEffect__AddValue(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69243124((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -65,7 +65,7 @@ void __fastcall CoinRoomControlEffect__SetValue(
   this->fields.endValue = endValue;
   this->fields.devideValue = maxValue;
   if ( !targetParticle )
-    sub_1B71828(0LL, startValue);
+    sub_1B7641C(0LL, startValue);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(targetParticle, 0LL).fields.m_ParticleSystem;
   UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(
     &v8,
@@ -129,7 +129,7 @@ bool __fastcall CoinRoomControlEffect__AddValue_d__10__MoveNext(
     if ( _4__this )
       goto LABEL_7;
 LABEL_11:
-    sub_1B71828(this, method);
+    sub_1B7641C(this, method);
   }
   if ( _1__state )
     return 0;
@@ -146,7 +146,7 @@ LABEL_11:
   if ( !this )
     goto LABEL_11;
   v5->fields._mainModule_5__5 = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)this, 0LL);
-  sub_1B71570((ServantStatusBattleListViewItem_o *)&v5->fields._mainModule_5__5, 0, v7, v8);
+  sub_1B76164((ServantStatusBattleListViewItem_o *)&v5->fields._mainModule_5__5, 0, v7, v8);
   v5->fields._time_5__6 = 0.0;
   v9 = 0.0;
 LABEL_7:
@@ -162,7 +162,7 @@ LABEL_7:
     UnityEngine_ParticleSystem_MainModule__set_startSize(v19, &v17, 0LL);
     v5->fields.__2__current = 0LL;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-    sub_1B71570(p__2__current, 0, v13, v14);
+    sub_1B76164(p__2__current, 0, v13, v14);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
     return result;
@@ -191,11 +191,11 @@ void __fastcall __noreturn CoinRoomControlEffect__AddValue_d__10__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B715E0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B71818(v2);
+  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B715E0(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
-  sub_1B716F4(v3, v4);
+  v4 = sub_1B761D4(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
+  sub_1B762E8(v3, v4);
 }
 
 

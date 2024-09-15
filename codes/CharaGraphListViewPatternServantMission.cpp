@@ -15,28 +15,28 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *__fastcall
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
   System_Func_T1__T2__TResult__o *v6; // x21
 
-  if ( (byte_4A1BEEB & 1) == 0 )
+  if ( (byte_4A2A351 & 1) == 0 )
   {
-    sub_1B715CC(&Method_CharaGraphListViewPatternServantMission__GenerateListViewItem_b__0_0__, method);
-    sub_1B715CC(
+    sub_1B761C0(&Method_CharaGraphListViewPatternServantMission__GenerateListViewItem_b__0_0__, method);
+    sub_1B761C0(
       &Method_System_Linq_Enumerable_Select_UserServantCollectionEntity__CharaGraphServantMissionListViewItem___,
       v3);
-    sub_1B715CC(&System_Func_UserServantCollectionEntity__int__CharaGraphServantMissionListViewItem__TypeInfo, v4);
-    byte_4A1BEEB = 1;
+    sub_1B761C0(&System_Func_UserServantCollectionEntity__int__CharaGraphServantMissionListViewItem__TypeInfo, v4);
+    byte_4A2A351 = 1;
   }
   v5 = (System_Collections_Generic_IEnumerable_TSource__o *)((__int64 (__fastcall *)(CharaGraphListViewPatternServantMission_o *, void *))this->klass->vtable._14_GetServantArray.method)(
                                                               this,
                                                               this->klass[1]._1.image);
-  v6 = (System_Func_T1__T2__TResult__o *)sub_1B71818(System_Func_UserServantCollectionEntity__int__CharaGraphServantMissionListViewItem__TypeInfo);
+  v6 = (System_Func_T1__T2__TResult__o *)sub_1B7640C(System_Func_UserServantCollectionEntity__int__CharaGraphServantMissionListViewItem__TypeInfo);
   System_Func_object__int__object____ctor(
     v6,
     (Il2CppObject *)this,
     Method_CharaGraphListViewPatternServantMission__GenerateListViewItem_b__0_0__,
     0LL);
-  return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)System_Linq_Enumerable__Select_object__object__48808416(
+  return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)System_Linq_Enumerable__Select_object__object__48837120(
                                                                                    v5,
                                                                                    (System_Func_TSource__int__TResult__o *)v6,
-                                                                                   (const MethodInfo_2E8C1E0 *)Method_System_Linq_Enumerable_Select_UserServantCollectionEntity__CharaGraphServantMissionListViewItem___);
+                                                                                   (const MethodInfo_2E93200 *)Method_System_Linq_Enumerable_Select_UserServantCollectionEntity__CharaGraphServantMissionListViewItem___);
 }
 
 
@@ -46,12 +46,12 @@ CharaGraphListViewItemDrawPatternBase_o *__fastcall CharaGraphListViewPatternSer
 {
   CharaGraphListViewItemDrawPatternServantCollection_o *v2; // x19
 
-  if ( (byte_4A1BEEC & 1) == 0 )
+  if ( (byte_4A2A352 & 1) == 0 )
   {
-    sub_1B715CC(&CharaGraphListViewItemDrawPatternServantMission_TypeInfo, method);
-    byte_4A1BEEC = 1;
+    sub_1B761C0(&CharaGraphListViewItemDrawPatternServantMission_TypeInfo, method);
+    byte_4A2A352 = 1;
   }
-  v2 = (CharaGraphListViewItemDrawPatternServantCollection_o *)sub_1B71818(CharaGraphListViewItemDrawPatternServantMission_TypeInfo);
+  v2 = (CharaGraphListViewItemDrawPatternServantCollection_o *)sub_1B7640C(CharaGraphListViewItemDrawPatternServantMission_TypeInfo);
   CharaGraphListViewItemDrawPatternServantCollection___ctor(v2, 0LL);
   return (CharaGraphListViewItemDrawPatternBase_o *)v2;
 }
@@ -65,12 +65,12 @@ CharaGraphServantMissionListViewItem_o *__fastcall CharaGraphListViewPatternServ
 {
   CharaGraphServantCollectionListViewItem_o *v7; // x22
 
-  if ( (byte_4A1BEED & 1) == 0 )
+  if ( (byte_4A2A353 & 1) == 0 )
   {
-    sub_1B715CC(&CharaGraphServantMissionListViewItem_TypeInfo, elem);
-    byte_4A1BEED = 1;
+    sub_1B761C0(&CharaGraphServantMissionListViewItem_TypeInfo, elem);
+    byte_4A2A353 = 1;
   }
-  v7 = (CharaGraphServantCollectionListViewItem_o *)sub_1B71818(CharaGraphServantMissionListViewItem_TypeInfo);
+  v7 = (CharaGraphServantCollectionListViewItem_o *)sub_1B7640C(CharaGraphServantMissionListViewItem_TypeInfo);
   CharaGraphServantCollectionListViewItem___ctor(v7, i, (CharaGraphListViewPatternBase_o *)this, elem, 0LL);
   return (CharaGraphServantMissionListViewItem_o *)v7;
 }

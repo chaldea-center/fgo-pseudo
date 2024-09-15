@@ -1,14 +1,14 @@
 void __fastcall EventRecipeGiftMaster___ctor(EventRecipeGiftMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1FBC5 & 1) == 0 )
+  if ( (byte_4A2E032 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string___ctor__, method);
-    byte_4A1FBC5 = 1;
+    sub_1B761C0(&Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string___ctor__, method);
+    byte_4A2E032 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     383,
-    (const MethodInfo_30F8A78 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string___ctor__);
+    (const MethodInfo_30FFA98 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ EventRecipeGiftEntity_o *__fastcall EventRecipeGiftMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A1FBC6 & 1) == 0 )
+  if ( (byte_4A2E033 & 1) == 0 )
   {
-    sub_1B715CC(
+    sub_1B761C0(
       &Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__GetEntity__,
       *(_QWORD *)&recipeId);
-    byte_4A1FBC6 = 1;
+    byte_4A2E033 = 1;
   }
   PK = (Il2CppObject *)EventRecipeGiftEntity__CreatePK(recipeId, idx, *(const MethodInfo **)&idx);
   return (EventRecipeGiftEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_30F8AB8 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__GetEntity__);
+                                      (const MethodInfo_30FFAD8 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__GetEntity__);
 }
 
 
@@ -71,31 +71,31 @@ EventRecipeGiftEntity_array *__fastcall EventRecipeGiftMaster__GetSortedEntityAr
   int32_t v31; // w2
   int32_t v32; // w3
 
-  if ( (byte_4A1FBC8 & 1) == 0 )
+  if ( (byte_4A2E035 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&id);
-    sub_1B715CC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B715CC(&System_Comparison_EventRecipeGiftEntity__TypeInfo, v6);
-    sub_1B715CC(&EventRecipeGiftEntity_TypeInfo, v7);
-    sub_1B715CC(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__Add__, v8);
-    sub_1B715CC(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__Sort__, v9);
-    sub_1B715CC(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__ToArray__, v10);
-    sub_1B715CC(&Method_System_Collections_Generic_List_EventRecipeGiftEntity___ctor__, v11);
-    sub_1B715CC(&System_Collections_Generic_List_EventRecipeGiftEntity__TypeInfo, v12);
-    sub_1B715CC(&Method_EventRecipeGiftMaster___c__GetSortedEntityArray_b__3_0__, v13);
-    sub_1B715CC(&EventRecipeGiftMaster___c_TypeInfo, v14);
-    byte_4A1FBC8 = 1;
+    sub_1B761C0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&id);
+    sub_1B761C0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B761C0(&System_Comparison_EventRecipeGiftEntity__TypeInfo, v6);
+    sub_1B761C0(&EventRecipeGiftEntity_TypeInfo, v7);
+    sub_1B761C0(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__Add__, v8);
+    sub_1B761C0(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__Sort__, v9);
+    sub_1B761C0(&Method_System_Collections_Generic_List_EventRecipeGiftEntity__ToArray__, v10);
+    sub_1B761C0(&Method_System_Collections_Generic_List_EventRecipeGiftEntity___ctor__, v11);
+    sub_1B761C0(&System_Collections_Generic_List_EventRecipeGiftEntity__TypeInfo, v12);
+    sub_1B761C0(&Method_EventRecipeGiftMaster___c__GetSortedEntityArray_b__3_0__, v13);
+    sub_1B761C0(&EventRecipeGiftMaster___c_TypeInfo, v14);
+    byte_4A2E035 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1B71818(System_Collections_Generic_List_EventRecipeGiftEntity__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_EventRecipeGiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_34CFA2C *)Method_System_Collections_Generic_List_EventRecipeGiftEntity___ctor__);
+    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_EventRecipeGiftEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_25;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_3095AA8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_309CAC8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v19 = Count;
@@ -108,7 +108,7 @@ EventRecipeGiftEntity_array *__fastcall EventRecipeGiftMaster__GetSortedEntityAr
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v20,
-               (const MethodInfo_3095B38 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_309CB58 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v16 = (Il2CppClass *)list;
@@ -130,14 +130,14 @@ EventRecipeGiftEntity_array *__fastcall EventRecipeGiftMaster__GetSortedEntityAr
             System_Collections_Generic_List_object___AddWithResize(
               v15,
               (Il2CppObject *)list,
-              *(const MethodInfo_34D0260 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+              *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
           }
           else
           {
             v27 = &items->obj.klass + size;
             v15->fields._size = size + 1;
             v27[4] = v16;
-            sub_1B71570((ServantStatusBattleListViewItem_o *)(v27 + 4), (int32_t)v16, v21, v22);
+            sub_1B76164((ServantStatusBattleListViewItem_o *)(v27 + 4), (int32_t)v16, v21, v22);
           }
         }
       }
@@ -145,7 +145,7 @@ EventRecipeGiftEntity_array *__fastcall EventRecipeGiftMaster__GetSortedEntityAr
         goto LABEL_17;
     }
 LABEL_25:
-    sub_1B71828(list, v16);
+    sub_1B7641C(list, v16);
   }
 LABEL_17:
   list = EventRecipeGiftMaster___c_TypeInfo;
@@ -163,21 +163,21 @@ LABEL_17:
       list = EventRecipeGiftMaster___c_TypeInfo;
     }
     v29 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v28 = (System_Comparison_T__o *)sub_1B71818(System_Comparison_EventRecipeGiftEntity__TypeInfo);
+    v28 = (System_Comparison_T__o *)sub_1B7640C(System_Comparison_EventRecipeGiftEntity__TypeInfo);
     System_Comparison_object____ctor(v28, v29, Method_EventRecipeGiftMaster___c__GetSortedEntityArray_b__3_0__, 0LL);
     static_fields = EventRecipeGiftMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_EventRecipeGiftEntity__o *)v28;
-    sub_1B71570((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)v28, v31, v32);
+    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)v28, v31, v32);
   }
   if ( !v15 )
     goto LABEL_25;
-  System_Collections_Generic_List_object___Sort_55385380(
+  System_Collections_Generic_List_object___Sort_55414936(
     v15,
     v28,
-    (const MethodInfo_34D1D24 *)Method_System_Collections_Generic_List_EventRecipeGiftEntity__Sort__);
+    (const MethodInfo_34D9098 *)Method_System_Collections_Generic_List_EventRecipeGiftEntity__Sort__);
   return (EventRecipeGiftEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v15,
-                                          (const MethodInfo_34D1DB8 *)Method_System_Collections_Generic_List_EventRecipeGiftEntity__ToArray__);
+                                          (const MethodInfo_34D912C *)Method_System_Collections_Generic_List_EventRecipeGiftEntity__ToArray__);
 }
 
 
@@ -191,17 +191,17 @@ bool __fastcall EventRecipeGiftMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A1FBC7 & 1) == 0 )
+  if ( (byte_4A2E034 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__TryGetEntity__, entity);
-    byte_4A1FBC7 = 1;
+    sub_1B761C0(&Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__TryGetEntity__, entity);
+    byte_4A2E034 = 1;
   }
   PK = (Il2CppObject *)EventRecipeGiftEntity__CreatePK(recipeId, idx, *(const MethodInfo **)&recipeId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30F8B08 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__TryGetEntity__);
+           (const MethodInfo_30FFB28 *)Method_DataMasterBase_EventRecipeGiftMaster__EventRecipeGiftEntity__string__TryGetEntity__);
 }
 
 
@@ -212,15 +212,15 @@ void __fastcall EventRecipeGiftMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A1FBC9 & 1) == 0 )
+  if ( (byte_4A2E036 & 1) == 0 )
   {
-    sub_1B715CC(&EventRecipeGiftMaster___c_TypeInfo, v1);
-    byte_4A1FBC9 = 1;
+    sub_1B761C0(&EventRecipeGiftMaster___c_TypeInfo, v1);
+    byte_4A2E036 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B71818(EventRecipeGiftMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B7640C(EventRecipeGiftMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventRecipeGiftMaster___c_TypeInfo->static_fields->__9 = (struct EventRecipeGiftMaster___c_o *)v2;
-  sub_1B71570(
+  sub_1B76164(
     (ServantStatusBattleListViewItem_o *)EventRecipeGiftMaster___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -241,6 +241,6 @@ int32_t __fastcall EventRecipeGiftMaster___c___GetSortedEntityArray_b__3_0(
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_1B71828(this, x);
+    sub_1B7641C(this, x);
   return x->fields.displayOrder - y->fields.displayOrder;
 }

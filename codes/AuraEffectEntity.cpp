@@ -1,13 +1,13 @@
 void __fastcall AuraEffectEntity___ctor(AuraEffectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A1F728 & 1) == 0 )
+  if ( (byte_4A2DB94 & 1) == 0 )
   {
-    sub_1B715CC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A1F728 = 1;
+    sub_1B761C0(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A2DB94 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30F8560 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_30FF580 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,17 +21,17 @@ bool __fastcall AuraEffectEntity__checkScript(AuraEffectEntity_o *this, System_S
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4A1F725 & 1) == 0 )
+  if ( (byte_4A2DB91 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    byte_4A1F725 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_4A2DB91 = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
                        (Il2CppObject *)key,
-                       (const MethodInfo_319EF04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_31A5F24 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -55,11 +55,11 @@ int32_t __fastcall AuraEffectEntity__getScript(
   const MethodInfo *v16; // x3
 
   v4 = defVal;
-  if ( (byte_4A1F726 & 1) == 0 )
+  if ( (byte_4A2DB92 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    sub_1B715CC(&long_TypeInfo, v7);
-    byte_4A1F726 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1B761C0(&long_TypeInfo, v7);
+    byte_4A2DB92 = 1;
   }
   if ( !AuraEffectEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -68,18 +68,18 @@ int32_t __fastcall AuraEffectEntity__getScript(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_319EC90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_31A5CB0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B71828(script, v8);
+    sub_1B7641C(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
-  sub_1B71AE8(script);
-  return (unsigned int)AuraEffectEntity__getScript_38742104(v13, v14, v15, v16);
+  sub_1B766DC(script);
+  return (unsigned int)AuraEffectEntity__getScript_38767392(v13, v14, v15, v16);
 }
 
 
-System_String_o *__fastcall AuraEffectEntity__getScript_38742104(
+System_String_o *__fastcall AuraEffectEntity__getScript_38767392(
         AuraEffectEntity_o *this,
         System_String_o *key,
         System_String_o *defVal,
@@ -88,10 +88,10 @@ System_String_o *__fastcall AuraEffectEntity__getScript_38742104(
   __int64 v7; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
 
-  if ( (byte_4A1F727 & 1) == 0 )
+  if ( (byte_4A2DB93 & 1) == 0 )
   {
-    sub_1B715CC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    byte_4A1F727 = 1;
+    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    byte_4A2DB93 = 1;
   }
   if ( !AuraEffectEntity__checkScript(this, key, (const MethodInfo *)defVal) )
     return defVal;
@@ -100,9 +100,9 @@ System_String_o *__fastcall AuraEffectEntity__getScript_38742104(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_319EC90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_31A5CB0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B71828(script, v7);
+    sub_1B7641C(script, v7);
   }
   return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, Il2CppMethodPointer))script->klass->vtable._3_ToString.method)(
                               script,
