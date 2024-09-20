@@ -16,15 +16,15 @@ void __fastcall BattleLogicServantAiTask___ctor(
   BattleLogicServantTask___ctor((BattleLogicServantTask_o *)this, 59, svtData, (const MethodInfo *)logic);
   this->fields.svtData = svtData;
   this->fields.procState = procState;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
   if ( !svtData )
-    sub_1B7641C(v11, v12);
+    sub_1B8880C(v11, v12);
   v13 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, Il2CppMethodPointer))svtData->klass->vtable._20_GetLogicServantAi.method)(
                                            svtData,
                                            logic,
                                            svtData->klass->vtable._21_getThisTurnActCount.methodPtr);
   this->fields.logicAi = v13;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
 }
 
 
@@ -45,19 +45,19 @@ BattleLogicTask_array *__fastcall BattleLogicServantAiTask__MakeActionTask(
   __int64 v5; // x1
   BattleLogicServantAi_o *logicAi; // x0
 
-  if ( (byte_4A30BC6 & 1) == 0 )
+  if ( (byte_4A5DE14 & 1) == 0 )
   {
-    sub_1B761C0(&BattleLogicTask___TypeInfo, logic);
-    byte_4A30BC6 = 1;
+    sub_1B885B0(&BattleLogicTask___TypeInfo);
+    byte_4A5DE14 = 1;
   }
   if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, void *))this->klass->vtable._8_IsActable.method)(
           this,
           logic,
           this->klass[1]._1.image) & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1B76268(BattleLogicTask___TypeInfo, 0LL);
+    return (BattleLogicTask_array *)sub_1B88658(BattleLogicTask___TypeInfo, 0LL);
   logicAi = this->fields.logicAi;
   if ( !logicAi )
-    sub_1B7641C(0LL, v5);
+    sub_1B8880C(0LL, v5);
   return BattleLogicServantAi__TaskAiTargetAct(
            logicAi,
            this->fields.svtData,

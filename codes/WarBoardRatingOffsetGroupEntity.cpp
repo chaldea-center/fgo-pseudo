@@ -2,14 +2,14 @@ void __fastcall WarBoardRatingOffsetGroupEntity___ctor(
         WarBoardRatingOffsetGroupEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2EF1F & 1) == 0 )
+  if ( (byte_4A5C14F & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A2EF1F = 1;
+    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
+    byte_4A5C14F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30FF580 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
 }
 
 

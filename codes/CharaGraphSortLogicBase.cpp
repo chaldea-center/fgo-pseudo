@@ -10,32 +10,31 @@ void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, 
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
   v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
   this->fields._IconInfo2_k__BackingField = v7;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  IconLabelInfo_o *v2; // x19
-  __int64 v3; // x0
-  __int64 v4; // x1
+  IconLabelInfo_o *v1; // x19
+  __int64 v2; // x0
+  __int64 v3; // x1
 
-  if ( (byte_4A2D353 & 1) == 0 )
+  if ( (byte_4A5A571 & 1) == 0 )
   {
-    sub_1B761C0(&IconLabelInfo_TypeInfo, v1);
-    byte_4A2D353 = 1;
+    sub_1B885B0(&IconLabelInfo_TypeInfo);
+    byte_4A5A571 = 1;
   }
-  v2 = (IconLabelInfo_o *)sub_1B7640C(IconLabelInfo_TypeInfo);
-  IconLabelInfo___ctor(v2, 0LL);
-  if ( !v2 )
-    sub_1B7641C(v3, v4);
-  IconLabelInfo__Clear(v2, 0LL);
-  return v2;
+  v1 = (IconLabelInfo_o *)sub_1B887FC(IconLabelInfo_TypeInfo);
+  IconLabelInfo___ctor(v1, 0LL);
+  if ( !v1 )
+    sub_1B8880C(v2, v3);
+  IconLabelInfo__Clear(v1, 0LL);
+  return v1;
 }
 
 
@@ -53,7 +52,7 @@ void __fastcall CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0LL) )
   {
-    sub_1B7641C(IconInfo1_k__BackingField, method);
+    sub_1B8880C(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL);
 }
@@ -67,7 +66,7 @@ void __fastcall CharaGraphSortLogicBase__SetListViewItem(
   int32_t v3; // w3
 
   this->fields.item = inputItem;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
@@ -79,7 +78,7 @@ void __fastcall CharaGraphSortLogicBase__SetListViewSort(
   int32_t v3; // w3
 
   this->fields.sort = inputSort;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
@@ -94,18 +93,19 @@ void __fastcall CharaGraphSortLogicBase__SetSortValue(CharaGraphSortLogicBase_o 
 
 void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
-  struct CharaGraphListViewItemBase_o *item; // x8
+  CharaGraphListViewItemBase_o *item; // x0
   struct ListViewSort_o *sort; // x8
 
   item = this->fields.item;
   if ( !item )
     goto LABEL_7;
-  if ( item->fields._IsSwapChoice_k__BackingField == item->fields._IsChoice_k__BackingField )
+  item = (CharaGraphListViewItemBase_o *)CharaGraphListViewItemBase__get_IsDispChoice(item, 0LL);
+  if ( ((unsigned __int8)item & 1) == 0 )
     return;
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1B7641C(this, method);
+    sub_1B8880C(item, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10LL;
 }
@@ -188,7 +188,7 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
   int32_t v3; // w3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -204,7 +204,7 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
   int32_t v3; // w3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (int32_t)method,

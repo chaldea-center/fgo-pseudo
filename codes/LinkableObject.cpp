@@ -6,33 +6,30 @@ void __fastcall LinkableObject___ctor(LinkableObject_o *this, const MethodInfo *
 
 void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   int32_t linkType; // w8
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  System_String_o *v6; // x19
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
-  System_String_o *v9; // x19
-  _QWORD *v10; // x0
-  System_Reflection_MethodBase_o *v11; // x0
   System_String_o *linkUrl; // x19
 
-  if ( (byte_4A309B6 & 1) == 0 )
+  if ( (byte_4A5DBAC & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Application_TypeInfo, method);
-    sub_1B761C0(&Method_LinkableObject_OnClick__, v3);
-    sub_1B761C0(&WebViewManager_TypeInfo, v4);
-    sub_1B761C0(&StringLiteral_1/*""*/, v5);
-    byte_4A309B6 = 1;
+    sub_1B885B0(&UnityEngine_Application_TypeInfo);
+    sub_1B885B0(&Method_LinkableObject_OnClick__);
+    sub_1B885B0(&WebViewManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5DBAC = 1;
   }
   linkType = this->fields.linkType;
   if ( linkType == 2 )
   {
-    v10 = Method_LinkableObject_OnClick__;
+    v7 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v10 = (_QWORD *)sub_1B761D8(Method_LinkableObject_OnClick__);
-    v11 = (System_Reflection_MethodBase_o *)sub_1B761A4(v10, v10[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
+      v7 = (_QWORD *)sub_1B885C8(Method_LinkableObject_OnClick__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B88594(v7, v7[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
     linkUrl = this->fields.linkUrl;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -40,15 +37,15 @@ void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo
   }
   else if ( linkType == 1 )
   {
-    v7 = Method_LinkableObject_OnClick__;
+    v4 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B761D8(Method_LinkableObject_OnClick__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B761A4(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
-    v9 = this->fields.linkUrl;
+      v4 = (_QWORD *)sub_1B885C8(Method_LinkableObject_OnClick__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B88594(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
+    v6 = this->fields.linkUrl;
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, v9, 0LL, 0LL);
+    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, v6, 0LL, 0LL);
   }
 }
 
@@ -64,5 +61,5 @@ void __fastcall LinkableObject__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, (int32_t)method);
 }

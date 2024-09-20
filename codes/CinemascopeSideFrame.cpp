@@ -20,10 +20,10 @@ void __fastcall CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const M
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4A31B6E & 1) == 0 )
+  if ( (byte_4A5EDC7 & 1) == 0 )
   {
-    sub_1B761C0(&CommonUI_TypeInfo, method);
-    byte_4A31B6E = 1;
+    sub_1B885B0(&CommonUI_TypeInfo);
+    byte_4A5EDC7 = 1;
   }
   if ( this->fields.hide )
   {
@@ -39,10 +39,10 @@ void __fastcall CinemascopeSideFrame__HideLater(CinemascopeSideFrame_o *this, co
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4A31B6F & 1) == 0 )
+  if ( (byte_4A5EDC8 & 1) == 0 )
   {
-    sub_1B761C0(&CommonUI_TypeInfo, method);
-    byte_4A31B6F = 1;
+    sub_1B885B0(&CommonUI_TypeInfo);
+    byte_4A5EDC8 = 1;
   }
   if ( !this->fields.hide )
   {
@@ -59,22 +59,20 @@ System_Nullable_int__o __fastcall CinemascopeSideFrame__Show(
         System_String_o *name,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   bool IsFullScreenMovie; // w19
-  bool v8; // w0
-  int32_t v9; // w19
-  System_Nullable_int__o v11; // [xsp+8h] [xbp-28h] BYREF
-  System_Nullable_int__o v12; // 0:x0.8
+  bool v6; // w0
+  int32_t v7; // w19
+  System_Nullable_int__o v9; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v10; // 0:x0.8
 
-  if ( (byte_4A31B6D & 1) == 0 )
+  if ( (byte_4A5EDC6 & 1) == 0 )
   {
-    sub_1B761C0(&CommonUI_TypeInfo, name);
-    sub_1B761C0(&FSUtility_TypeInfo, v5);
-    sub_1B761C0(&Method_System_Nullable_int___ctor__, v6);
-    byte_4A31B6D = 1;
+    sub_1B885B0(&CommonUI_TypeInfo);
+    sub_1B885B0(&FSUtility_TypeInfo);
+    sub_1B885B0(&Method_System_Nullable_int___ctor__);
+    byte_4A5EDC6 = 1;
   }
-  v11 = 0LL;
+  v9 = 0LL;
   if ( this->fields.show )
   {
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
@@ -85,14 +83,14 @@ System_Nullable_int__o __fastcall CinemascopeSideFrame__Show(
     IsFullScreenMovie = FSUtility__IsFullScreenMovie(name, 0LL);
     if ( !CommonUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
-    v8 = !IsFullScreenMovie;
+    v6 = !IsFullScreenMovie;
     if ( IsFullScreenMovie )
-      v9 = 1344;
+      v7 = 1344;
     else
-      v9 = 1024;
-    CommonUI__SetForceObi_16_9(v8, 0LL);
-    v12 = (System_Nullable_int__o)&v11;
-    System_Nullable_int____ctor(v12, v9, (const MethodInfo_35F42F0 *)Method_System_Nullable_int___ctor__);
+      v7 = 1024;
+    CommonUI__SetForceObi_16_9(v6, 0LL);
+    v10 = (System_Nullable_int__o)&v9;
+    System_Nullable_int____ctor(v10, v7, (const MethodInfo_361A2C0 *)Method_System_Nullable_int___ctor__);
   }
-  return v11;
+  return v9;
 }

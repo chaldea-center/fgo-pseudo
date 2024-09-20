@@ -1,73 +1,68 @@
 void __fastcall TutorialBigDialog___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  int32_t v3; // w3
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
+  int32_t v1; // w2
+  int32_t v2; // w3
   struct TutorialBigDialog_StaticFields *static_fields; // x0
+  int32_t v4; // w1
+  int32_t v5; // w1
+  struct TutorialBigDialog_StaticFields *v6; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
   int32_t v9; // w1
-  int32_t v10; // w1
-  struct TutorialBigDialog_StaticFields *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w1
-  struct TutorialBigDialog_StaticFields *v15; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w1
-  struct TutorialBigDialog_StaticFields *v19; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  TutorialBigDialog_c *v22; // x8
-  struct TutorialBigDialog_StaticFields *v23; // x9
-  struct TutorialBigDialog_StaticFields *v24; // x8
+  struct TutorialBigDialog_StaticFields *v10; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
+  int32_t v13; // w1
+  struct TutorialBigDialog_StaticFields *v14; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
+  TutorialBigDialog_c *v17; // x8
+  struct TutorialBigDialog_StaticFields *v18; // x9
+  struct TutorialBigDialog_StaticFields *v19; // x8
 
-  if ( (byte_4A2CC1C & 1) == 0 )
+  if ( (byte_4A59E35 & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v1);
-    sub_1B761C0(&StringLiteral_14591/*"Tutorial/tutorial_alpha"*/, v4);
-    sub_1B761C0(&StringLiteral_18140/*"combine_tutorial_alpha"*/, v5);
-    sub_1B761C0(&StringLiteral_14589/*"Tutorial/combine_tutorial_alpha"*/, v6);
-    sub_1B761C0(&StringLiteral_24088/*"tutorial_alpha"*/, v7);
-    byte_4A2CC1C = 1;
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    sub_1B885B0(&StringLiteral_14597/*"Tutorial/tutorial_alpha"*/);
+    sub_1B885B0(&StringLiteral_18146/*"combine_tutorial_alpha"*/);
+    sub_1B885B0(&StringLiteral_14595/*"Tutorial/combine_tutorial_alpha"*/);
+    sub_1B885B0(&StringLiteral_24101/*"tutorial_alpha"*/);
+    byte_4A59E35 = 1;
   }
   static_fields = TutorialBigDialog_TypeInfo->static_fields;
   static_fields->FADE_TIME = 0.3;
-  v9 = StringLiteral_14591/*"Tutorial/tutorial_alpha"*/;
-  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14591/*"Tutorial/tutorial_alpha"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->alphaImgPath, v9, v2, v3);
-  v10 = StringLiteral_24088/*"tutorial_alpha"*/;
-  v11 = TutorialBigDialog_TypeInfo->static_fields;
-  v11->alphaImgName = (struct System_String_o *)StringLiteral_24088/*"tutorial_alpha"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v11->alphaImgName, v10, v12, v13);
-  v14 = StringLiteral_14589/*"Tutorial/combine_tutorial_alpha"*/;
-  v15 = TutorialBigDialog_TypeInfo->static_fields;
-  v15->alphaMiniImgPath = (struct System_String_o *)StringLiteral_14589/*"Tutorial/combine_tutorial_alpha"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v15->alphaMiniImgPath, v14, v16, v17);
-  v18 = StringLiteral_18140/*"combine_tutorial_alpha"*/;
-  v19 = TutorialBigDialog_TypeInfo->static_fields;
-  v19->alphaMiniImgName = (struct System_String_o *)StringLiteral_18140/*"combine_tutorial_alpha"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v19->alphaMiniImgName, v18, v20, v21);
-  v22 = TutorialBigDialog_TypeInfo;
-  v23 = TutorialBigDialog_TypeInfo->static_fields;
-  v23->baseCloseButtonPosition.fields.z = 0.0;
-  *(_QWORD *)&v23->baseImgNo = 0x38400000006LL;
-  *(_QWORD *)&v23->baseCloseButtonPosition.fields.x = 0x4382800043F28000LL;
-  v24 = v22->static_fields;
-  *(_QWORD *)&v24->miniCloseButtonPosition.fields.x = 0x4362000043BD0000LL;
-  v24->miniCloseButtonPosition.fields.z = 0.0;
+  v4 = StringLiteral_14597/*"Tutorial/tutorial_alpha"*/;
+  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14597/*"Tutorial/tutorial_alpha"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->alphaImgPath, v4, v1, v2);
+  v5 = StringLiteral_24101/*"tutorial_alpha"*/;
+  v6 = TutorialBigDialog_TypeInfo->static_fields;
+  v6->alphaImgName = (struct System_String_o *)StringLiteral_24101/*"tutorial_alpha"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v6->alphaImgName, v5, v7, v8);
+  v9 = StringLiteral_14595/*"Tutorial/combine_tutorial_alpha"*/;
+  v10 = TutorialBigDialog_TypeInfo->static_fields;
+  v10->alphaMiniImgPath = (struct System_String_o *)StringLiteral_14595/*"Tutorial/combine_tutorial_alpha"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v10->alphaMiniImgPath, v9, v11, v12);
+  v13 = StringLiteral_18146/*"combine_tutorial_alpha"*/;
+  v14 = TutorialBigDialog_TypeInfo->static_fields;
+  v14->alphaMiniImgName = (struct System_String_o *)StringLiteral_18146/*"combine_tutorial_alpha"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v14->alphaMiniImgName, v13, v15, v16);
+  v17 = TutorialBigDialog_TypeInfo;
+  v18 = TutorialBigDialog_TypeInfo->static_fields;
+  v18->baseCloseButtonPosition.fields.z = 0.0;
+  *(_QWORD *)&v18->baseImgNo = 0x38400000006LL;
+  *(_QWORD *)&v18->baseCloseButtonPosition.fields.x = 0x4382800043F28000LL;
+  v19 = v17->static_fields;
+  *(_QWORD *)&v19->miniCloseButtonPosition.fields.x = 0x4362000043BD0000LL;
+  v19->miniCloseButtonPosition.fields.z = 0.0;
 }
 
 
 void __fastcall TutorialBigDialog___ctor(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2CC1B & 1) == 0 )
+  if ( (byte_4A59E34 & 1) == 0 )
   {
-    sub_1B761C0(&BaseDialog_TypeInfo, method);
-    byte_4A2CC1B = 1;
+    sub_1B885B0(&BaseDialog_TypeInfo);
+    byte_4A59E34 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -80,155 +75,145 @@ void __fastcall TutorialBigDialog__AddImg(
         UnityEngine_Texture2D_o *tex,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
   Il2CppObject *TutorialImagePrefab; // x20
-  Il2CppObject *v16; // x20
-  System_String_o *v17; // x0
-  __int64 gameObject; // x0
-  __int64 v19; // x1
+  Il2CppObject *v6; // x20
+  System_String_o *v7; // x0
+  System_String_o *gameObject; // x0
+  __int64 v9; // x1
   Il2CppObject *Component_object; // x23
   int32_t layer; // w22
-  UnityEngine_Shader_o *v22; // x24
-  UnityEngine_Material_o *v23; // x22
+  UnityEngine_Shader_o *v12; // x24
+  UnityEngine_Material_o *v13; // x22
   int32_t sizeKind; // w21
-  __int64 v25; // x10
-  Il2CppObject *Object_object__48515452; // x0
-  UnityEngine_Transform_o *v27; // x21
-  UnityEngine_Transform_o *v28; // x21
-  UnityEngine_Transform_o *v29; // x21
-  int32_t v30; // w2
-  int32_t v31; // w3
-  __int64 v32; // x8
-  _QWORD *v33; // x9
-  __int64 v34; // x10
-  __int64 v35; // x8
+  __int64 v15; // x10
+  Il2CppObject *Object_object__48635516; // x0
+  UnityEngine_Transform_o *v17; // x21
+  UnityEngine_Transform_o *v18; // x21
+  UnityEngine_Transform_o *v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_Fields fields; // x8
+  _QWORD *v23; // x9
+  __int64 klass_low; // x10
+  __int64 v25; // x8
 
-  if ( (byte_4A2CC0C & 1) == 0 )
+  if ( (byte_4A59E25 & 1) == 0 )
   {
-    sub_1B761C0(&Method_AssetData_GetObject_Texture2D____75903240, tex);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UITexture___, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
-    sub_1B761C0(&UnityEngine_Material_TypeInfo, v7);
-    sub_1B761C0(&NGUITools_TypeInfo, v8);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v11);
-    sub_1B761C0(&StringLiteral_4974/*"Custom/SpriteWithMask"*/, v12);
-    sub_1B761C0(&StringLiteral_7475/*"Image"*/, v13);
-    sub_1B761C0(&StringLiteral_16261/*"_MaskTex"*/, v14);
-    byte_4A2CC0C = 1;
+    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1B885B0(&UnityEngine_Material_TypeInfo);
+    sub_1B885B0(&NGUITools_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    sub_1B885B0(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
+    sub_1B885B0(&StringLiteral_7476/*"Image"*/);
+    sub_1B885B0(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4A59E25 = 1;
   }
   TutorialImagePrefab = (Il2CppObject *)this->fields.TutorialImagePrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v16 = UnityEngine_Object__Instantiate_object_(
-          TutorialImagePrefab,
-          (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  v17 = System_Int32__ToString((int)this + 248, 0LL);
-  gameObject = (__int64)System_String__Concat_61535060((System_String_o *)StringLiteral_7475/*"Image"*/, v17, 0LL);
-  if ( !v16 )
+  v6 = UnityEngine_Object__Instantiate_object_(
+         TutorialImagePrefab,
+         (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  v7 = System_Int32__ToString((int)this + 248, 0LL);
+  gameObject = System_String__Concat_61707032((System_String_o *)StringLiteral_7476/*"Image"*/, v7, 0LL);
+  if ( !v6 )
     goto LABEL_29;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v16, (System_String_o *)gameObject, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v6, gameObject, 0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)v16,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+                       (UnityEngine_GameObject_o *)v6,
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+  gameObject = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_29;
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)gameObject, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__SetLayer((UnityEngine_GameObject_o *)v16, layer, 0LL);
-  v22 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4974/*"Custom/SpriteWithMask"*/, 0LL);
-  v23 = (UnityEngine_Material_o *)sub_1B7640C(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v23, v22, 0LL);
+  NGUITools__SetLayer((UnityEngine_GameObject_o *)v6, layer, 0LL);
+  v12 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0LL);
+  v13 = (UnityEngine_Material_o *)sub_1B887FC(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v13, v12, 0LL);
   if ( !Component_object )
     goto LABEL_29;
-  gameObject = ((__int64 (__fastcall *)(Il2CppObject *, UnityEngine_Material_o *, Il2CppMethodPointer))Component_object->klass->vtable[25].method)(
-                 Component_object,
-                 v23,
-                 Component_object->klass->vtable[26].methodPtr);
-  if ( !v23 )
+  gameObject = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, UnityEngine_Material_o *, Il2CppMethodPointer))Component_object->klass->vtable[25].method)(
+                                    Component_object,
+                                    v13,
+                                    Component_object->klass->vtable[26].methodPtr);
+  if ( !v13 )
     goto LABEL_29;
-  UnityEngine_Material__set_mainTexture(v23, (UnityEngine_Texture_o *)tex, 0LL);
+  UnityEngine_Material__set_mainTexture(v13, (UnityEngine_Texture_o *)tex, 0LL);
   sizeKind = this->fields.sizeKind;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-  gameObject = (__int64)this->fields.alphaTexAssetData;
+  gameObject = (System_String_o *)this->fields.alphaTexAssetData;
   if ( !gameObject )
     goto LABEL_29;
-  v25 = 16LL;
+  v15 = 16LL;
   if ( sizeKind == 2 )
-    v25 = 32LL;
-  Object_object__48515452 = AssetData__GetObject_object__48515452(
+    v15 = 32LL;
+  Object_object__48635516 = AssetData__GetObject_object__48635516(
                               (AssetData_o *)gameObject,
-                              *(System_String_o **)((char *)&TutorialBigDialog_TypeInfo->static_fields->FADE_TIME + v25),
-                              (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
+                              *(System_String_o **)((char *)&TutorialBigDialog_TypeInfo->static_fields->FADE_TIME + v15),
+                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
   UnityEngine_Material__SetTexture(
-    v23,
-    (System_String_o *)StringLiteral_16261/*"_MaskTex"*/,
-    (UnityEngine_Texture_o *)Object_object__48515452,
+    v13,
+    (System_String_o *)StringLiteral_16267/*"_MaskTex"*/,
+    (UnityEngine_Texture_o *)Object_object__48635516,
     0LL);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v16, 0, 0LL);
-  gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v16, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v6, 0, 0LL);
+  gameObject = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v6, 0LL);
   if ( !this->fields.ImageRoot )
     goto LABEL_29;
-  v27 = (UnityEngine_Transform_o *)gameObject;
-  gameObject = (__int64)UnityEngine_GameObject__get_transform(this->fields.ImageRoot, 0LL);
-  if ( !v27 )
+  v17 = (UnityEngine_Transform_o *)gameObject;
+  gameObject = (System_String_o *)UnityEngine_GameObject__get_transform(this->fields.ImageRoot, 0LL);
+  if ( !v17 )
     goto LABEL_29;
-  UnityEngine_Transform__set_parent(v27, (UnityEngine_Transform_o *)gameObject, 0LL);
-  gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v16, 0LL);
-  v28 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4A28BB1 )
+  UnityEngine_Transform__set_parent(v17, (UnityEngine_Transform_o *)gameObject, 0LL);
+  gameObject = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v6, 0LL);
+  v18 = (UnityEngine_Transform_o *)gameObject;
+  if ( !byte_4A55CE1 )
   {
-    gameObject = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v19);
-    byte_4A28BB1 = 1;
+    gameObject = (System_String_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
-  if ( !v28 )
+  if ( !v18 )
     goto LABEL_29;
-  UnityEngine_Transform__set_localPosition(v28, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v16, 0LL);
-  v29 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4A28BB6 )
+  UnityEngine_Transform__set_localPosition(v18, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  gameObject = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v6, 0LL);
+  v19 = (UnityEngine_Transform_o *)gameObject;
+  if ( !byte_4A55CE6 )
   {
-    gameObject = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v19);
-    byte_4A28BB6 = 1;
+    gameObject = (System_String_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE6 = 1;
   }
-  if ( !v29
-    || (UnityEngine_Transform__set_localScale(v29, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
-        (gameObject = (__int64)this->fields.ImagePageList) == 0)
-    || (v32 = *(_QWORD *)(gameObject + 16),
-        v33 = Method_System_Collections_Generic_List_GameObject__Add__,
-        ++*(_DWORD *)(gameObject + 28),
-        !v32) )
+  if ( !v19
+    || (UnityEngine_Transform__set_localScale(v19, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
+        (gameObject = (System_String_o *)this->fields.ImagePageList) == 0LL)
+    || (fields = gameObject->fields,
+        v23 = Method_System_Collections_Generic_List_GameObject__Add__,
+        ++HIDWORD(gameObject[1].klass),
+        !*(_QWORD *)&fields) )
   {
 LABEL_29:
-    sub_1B7641C(gameObject, v19);
+    sub_1B8880C(gameObject, v9);
   }
-  v34 = *(int *)(gameObject + 24);
-  if ( (unsigned int)v34 >= *(_DWORD *)(v32 + 24) )
+  klass_low = SLODWORD(gameObject[1].klass);
+  if ( (unsigned int)klass_low >= *(_DWORD *)(*(_QWORD *)&fields + 24LL) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)gameObject,
-      v16,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+      v6,
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
   }
   else
   {
-    v35 = v32 + 8 * v34;
-    *(_DWORD *)(gameObject + 24) = v34 + 1;
-    *(_QWORD *)(v35 + 32) = v16;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v35 + 32), (int32_t)v16, v30, v31);
+    v25 = *(_QWORD *)&fields + 8 * klass_low;
+    LODWORD(gameObject[1].klass) = klass_low + 1;
+    *(_QWORD *)(v25 + 32) = v6;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v25 + 32), (int32_t)v6, v20, v21);
   }
 }
 
@@ -239,194 +224,180 @@ void __fastcall TutorialBigDialog__AddScrollImg(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x20
+  __int64 v7; // x20
   __int64 ObjectNameList; // x0
-  __int64 v23; // x1
-  int32_t v24; // w2
-  int32_t v25; // w3
-  int32_t v26; // w2
-  int32_t v27; // w3
-  int v28; // w8
-  __int64 v29; // x24
-  unsigned int v30; // w27
-  int32_t v31; // w21
-  UnityEngine_Texture_o *v32; // x25
-  UnityEngine_Texture_o *v33; // x19
-  __int64 v34; // x20
-  System_String_o **v35; // x20
-  __int64 v36; // t1
-  char v37; // w26
-  const MethodInfo *v38; // x2
-  UnityEngine_Texture_o *v39; // x23
+  __int64 v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int v14; // w8
+  __int64 v15; // x24
+  unsigned int v16; // w27
+  int32_t v17; // w21
+  UnityEngine_Texture_o *v18; // x25
+  UnityEngine_Texture_o *v19; // x19
+  __int64 v20; // x20
+  System_String_o **v21; // x20
+  __int64 v22; // t1
+  char v23; // w26
+  const MethodInfo *v24; // x2
+  UnityEngine_Texture_o *v25; // x23
   Il2CppObject *TutorialImageLongPrefab; // x22
-  Il2CppObject *v41; // x0
-  __int64 *v42; // x22
-  int32_t v43; // w2
-  int32_t v44; // w3
+  Il2CppObject *v27; // x0
+  __int64 *v28; // x22
+  int32_t v29; // w2
+  int32_t v30; // w3
   UnityEngine_Object_o *klass; // x24
-  System_String_o *v46; // x0
+  System_String_o *v32; // x0
   Il2CppObject *Component_object; // x0
   void **p_monitor; // x24
-  int32_t v49; // w2
-  int32_t v50; // w3
-  UnityEngine_GameObject_o *v51; // x26
+  int32_t v35; // w2
+  int32_t v36; // w3
+  UnityEngine_GameObject_o *v37; // x26
   int32_t layer; // w27
-  UnityEngine_Shader_o *v53; // x27
-  UnityEngine_Material_o *v54; // x26
-  UIWidget_o *v55; // x25
-  UITexture_o *v56; // x25
-  int v57; // w26
-  int v58; // w27
+  UnityEngine_Shader_o *v39; // x27
+  UnityEngine_Material_o *v40; // x26
+  UIWidget_o *v41; // x25
+  UITexture_o *v42; // x25
+  int v43; // w26
+  int v44; // w27
   int32_t baseWidth; // w20
-  int v60; // w28
-  UnityEngine_Transform_o *v61; // x21
-  UnityEngine_Transform_o *v62; // x21
-  UnityEngine_Transform_o *v63; // x21
-  __int64 v64; // x21
-  const MethodInfo *v65; // x2
-  TutorialBigDialog_c *v66; // x0
+  int v46; // w28
+  UnityEngine_Transform_o *v47; // x21
+  UnityEngine_Transform_o *v48; // x21
+  UnityEngine_Transform_o *v49; // x21
+  __int64 v50; // x21
+  const MethodInfo *v51; // x2
+  TutorialBigDialog_c *v52; // x0
   System_String_o *TuorialImagePath; // x19
   Il2CppObject *object; // [xsp+8h] [xbp-78h]
-  TutorialBigDialog_o *v69; // [xsp+18h] [xbp-68h]
-  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  TutorialBigDialog_o *v55; // [xsp+18h] [xbp-68h]
+  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A2CC0D & 1) == 0 )
+  if ( (byte_4A59E26 & 1) == 0 )
   {
-    sub_1B761C0(&Method_AssetData_GetObject_Texture2D____75903240, data);
-    sub_1B761C0(&AssetManager_TypeInfo, v7);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___, v8);
-    sub_1B761C0(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1B761C0(&UnityEngine_Material_TypeInfo, v10);
-    sub_1B761C0(&NGUITools_TypeInfo, v11);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v14);
-    sub_1B761C0(&Method_TutorialBigDialog___c__DisplayClass56_0__AddScrollImg_b__0__, v15);
-    sub_1B761C0(&TutorialBigDialog___c__DisplayClass56_0_TypeInfo, v16);
-    sub_1B761C0(&StringLiteral_16731/*"alpha"*/, v17);
-    sub_1B761C0(&StringLiteral_4974/*"Custom/SpriteWithMask"*/, v18);
-    sub_1B761C0(&StringLiteral_7475/*"Image"*/, v19);
-    sub_1B761C0(&StringLiteral_16261/*"_MaskTex"*/, v20);
-    byte_4A2CC0D = 1;
+    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
+    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1B885B0(&UnityEngine_Material_TypeInfo);
+    sub_1B885B0(&NGUITools_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    sub_1B885B0(&Method_TutorialBigDialog___c__DisplayClass56_0__AddScrollImg_b__0__);
+    sub_1B885B0(&TutorialBigDialog___c__DisplayClass56_0_TypeInfo);
+    sub_1B885B0(&StringLiteral_16737/*"alpha"*/);
+    sub_1B885B0(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
+    sub_1B885B0(&StringLiteral_7476/*"Image"*/);
+    sub_1B885B0(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4A59E26 = 1;
   }
-  v21 = sub_1B7640C(TutorialBigDialog___c__DisplayClass56_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v21, 0LL);
-  if ( !v21 )
+  v7 = sub_1B887FC(TutorialBigDialog___c__DisplayClass56_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_62;
-  *(_QWORD *)(v21 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v21 + 16), (int32_t)this, v24, v25);
-  *(_QWORD *)(v21 + 40) = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v21 + 40), (int32_t)callback, v26, v27);
+  *(_QWORD *)(v7 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  *(_QWORD *)(v7 + 40) = callback;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)callback, v12, v13);
   if ( !data )
     goto LABEL_62;
   ObjectNameList = (__int64)AssetData__GetObjectNameList(data, 0LL);
   if ( !ObjectNameList )
     goto LABEL_62;
-  v28 = *(_DWORD *)(ObjectNameList + 24);
-  v29 = ObjectNameList;
-  object = (Il2CppObject *)v21;
-  v69 = this;
-  if ( v28 < 1 )
+  v14 = *(_DWORD *)(ObjectNameList + 24);
+  v15 = ObjectNameList;
+  object = (Il2CppObject *)v7;
+  v55 = this;
+  if ( v14 < 1 )
   {
-    v33 = 0LL;
-    v39 = 0LL;
-    v31 = 0;
+    v19 = 0LL;
+    v25 = 0LL;
+    v17 = 0;
   }
   else
   {
-    v30 = 0;
-    v31 = 0;
-    v32 = 0LL;
-    v33 = 0LL;
+    v16 = 0;
+    v17 = 0;
+    v18 = 0LL;
+    v19 = 0LL;
     do
     {
-      if ( v30 >= v28 )
+      if ( v16 >= v14 )
         goto LABEL_61;
-      v34 = v29 + 8LL * (int)v30;
-      v36 = *(_QWORD *)(v34 + 32);
-      v35 = (System_String_o **)(v34 + 32);
-      ObjectNameList = v36;
-      if ( !v36 )
+      v20 = v15 + 8LL * (int)v16;
+      v22 = *(_QWORD *)(v20 + 32);
+      v21 = (System_String_o **)(v20 + 32);
+      ObjectNameList = v22;
+      if ( !v22 )
         goto LABEL_62;
       ObjectNameList = System_String__Contains(
                          (System_String_o *)ObjectNameList,
-                         (System_String_o *)StringLiteral_16731/*"alpha"*/,
+                         (System_String_o *)StringLiteral_16737/*"alpha"*/,
                          0LL);
-      if ( v30 >= *(_DWORD *)(v29 + 24) )
+      if ( v16 >= *(_DWORD *)(v15 + 24) )
 LABEL_61:
-        sub_1B76424(ObjectNameList, v23);
-      v37 = ObjectNameList;
-      ObjectNameList = (__int64)AssetData__GetObject_object__48515452(
+        sub_1B88814(ObjectNameList, v9);
+      v23 = ObjectNameList;
+      ObjectNameList = (__int64)AssetData__GetObject_object__48635516(
                                   data,
-                                  *v35,
-                                  (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
-      v39 = (UnityEngine_Texture_o *)ObjectNameList;
-      if ( (v37 & 1) == 0 )
+                                  *v21,
+                                  (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
+      v25 = (UnityEngine_Texture_o *)ObjectNameList;
+      if ( (v23 & 1) == 0 )
       {
-        if ( v30 >= *(_DWORD *)(v29 + 24) )
+        if ( v16 >= *(_DWORD *)(v15 + 24) )
           goto LABEL_61;
-        v33 = (UnityEngine_Texture_o *)ObjectNameList;
-        ObjectNameList = TutorialBigDialog__GetScrollHeightWithName((TutorialBigDialog_o *)ObjectNameList, *v35, v38);
-        v31 = ObjectNameList;
-        v39 = v32;
+        v19 = (UnityEngine_Texture_o *)ObjectNameList;
+        ObjectNameList = TutorialBigDialog__GetScrollHeightWithName((TutorialBigDialog_o *)ObjectNameList, *v21, v24);
+        v17 = ObjectNameList;
+        v25 = v18;
       }
-      v28 = *(_DWORD *)(v29 + 24);
-      ++v30;
-      v32 = v39;
+      v14 = *(_DWORD *)(v15 + 24);
+      ++v16;
+      v18 = v25;
     }
-    while ( (int)v30 < v28 );
+    while ( (int)v16 < v14 );
   }
-  TutorialImageLongPrefab = (Il2CppObject *)v69->fields.TutorialImageLongPrefab;
+  TutorialImageLongPrefab = (Il2CppObject *)v55->fields.TutorialImageLongPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v41 = UnityEngine_Object__Instantiate_object_(
+  v27 = UnityEngine_Object__Instantiate_object_(
           TutorialImageLongPrefab,
-          (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  object[2].klass = (Il2CppClass *)v41;
-  v42 = (__int64 *)&object[2];
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&object[2], (int32_t)v41, v43, v44);
+          (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  object[2].klass = (Il2CppClass *)v27;
+  v28 = (__int64 *)&object[2];
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&object[2], (int32_t)v27, v29, v30);
   klass = (UnityEngine_Object_o *)object[2].klass;
-  v46 = System_Int32__ToString((int)v69 + 248, 0LL);
-  ObjectNameList = (__int64)System_String__Concat_61535060((System_String_o *)StringLiteral_7475/*"Image"*/, v46, 0LL);
+  v32 = System_Int32__ToString((int)v55 + 248, 0LL);
+  ObjectNameList = (__int64)System_String__Concat_61707032((System_String_o *)StringLiteral_7476/*"Image"*/, v32, 0LL);
   if ( !klass )
     goto LABEL_62;
   UnityEngine_Object__set_name(klass, (System_String_o *)ObjectNameList, 0LL);
-  ObjectNameList = *v42;
-  if ( !*v42 )
+  ObjectNameList = *v28;
+  if ( !*v28 )
     goto LABEL_62;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)ObjectNameList,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
   object[1].monitor = Component_object;
   p_monitor = &object[1].monitor;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&object[1].monitor, (int32_t)Component_object, v49, v50);
-  v51 = (UnityEngine_GameObject_o *)object[2].klass;
-  ObjectNameList = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v69, 0LL);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&object[1].monitor, (int32_t)Component_object, v35, v36);
+  v37 = (UnityEngine_GameObject_o *)object[2].klass;
+  ObjectNameList = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v55, 0LL);
   if ( !ObjectNameList )
     goto LABEL_62;
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)ObjectNameList, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__SetLayer(v51, layer, 0LL);
-  v53 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4974/*"Custom/SpriteWithMask"*/, 0LL);
-  v54 = (UnityEngine_Material_o *)sub_1B7640C(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v54, v53, 0LL);
+  NGUITools__SetLayer(v37, layer, 0LL);
+  v39 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0LL);
+  v40 = (UnityEngine_Material_o *)sub_1B887FC(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v40, v39, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
   ObjectNameList = *((_QWORD *)*p_monitor + 5);
@@ -435,143 +406,143 @@ LABEL_61:
   ObjectNameList = (*(__int64 (__fastcall **)(__int64, UnityEngine_Material_o *, _QWORD))(*(_QWORD *)ObjectNameList
                                                                                         + 712LL))(
                      ObjectNameList,
-                     v54,
+                     v40,
                      *(_QWORD *)(*(_QWORD *)ObjectNameList + 720LL));
-  if ( !v54 )
+  if ( !v40 )
     goto LABEL_62;
-  UnityEngine_Material__set_mainTexture(v54, v33, 0LL);
-  UnityEngine_Material__SetTexture(v54, (System_String_o *)StringLiteral_16261/*"_MaskTex"*/, v39, 0LL);
+  UnityEngine_Material__set_mainTexture(v40, v19, 0LL);
+  UnityEngine_Material__SetTexture(v40, (System_String_o *)StringLiteral_16267/*"_MaskTex"*/, v25, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
   ObjectNameList = *((_QWORD *)*p_monitor + 5);
   if ( !ObjectNameList )
     goto LABEL_62;
-  UIWidget__set_height((UIWidget_o *)ObjectNameList, v31, 0LL);
+  UIWidget__set_height((UIWidget_o *)ObjectNameList, v17, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
-  v55 = (UIWidget_o *)*((_QWORD *)*p_monitor + 5);
+  v41 = (UIWidget_o *)*((_QWORD *)*p_monitor + 5);
   ObjectNameList = (__int64)TutorialBigDialog_TypeInfo;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-  if ( !v55 )
+  if ( !v41 )
     goto LABEL_62;
-  UIWidget__set_width(v55, TutorialBigDialog_TypeInfo->static_fields->baseWidth, 0LL);
+  UIWidget__set_width(v41, TutorialBigDialog_TypeInfo->static_fields->baseWidth, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
-  if ( !v33 )
+  if ( !v19 )
     goto LABEL_62;
-  v56 = (UITexture_o *)*((_QWORD *)*p_monitor + 5);
-  v57 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v33->klass->vtable._6_get_height.method)(
-          v33,
-          v33->klass->vtable._7_set_height.methodPtr);
-  v58 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v33->klass->vtable._6_get_height.method)(
-          v33,
-          v33->klass->vtable._7_set_height.methodPtr);
+  v42 = (UITexture_o *)*((_QWORD *)*p_monitor + 5);
+  v43 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v19->klass->vtable._6_get_height.method)(
+          v19,
+          v19->klass->vtable._7_set_height.methodPtr);
+  v44 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v19->klass->vtable._6_get_height.method)(
+          v19,
+          v19->klass->vtable._7_set_height.methodPtr);
   baseWidth = TutorialBigDialog_TypeInfo->static_fields->baseWidth;
-  v60 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v33->klass->vtable._4_get_width.method)(
-          v33,
-          v33->klass->vtable._5_set_width.methodPtr);
-  ObjectNameList = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v33->klass->vtable._6_get_height.method)(
-                     v33,
-                     v33->klass->vtable._7_set_height.methodPtr);
-  if ( !v56 )
+  v46 = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v19->klass->vtable._4_get_width.method)(
+          v19,
+          v19->klass->vtable._5_set_width.methodPtr);
+  ObjectNameList = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v19->klass->vtable._6_get_height.method)(
+                     v19,
+                     v19->klass->vtable._7_set_height.methodPtr);
+  if ( !v42 )
     goto LABEL_62;
-  v72.fields.m_Height = (float)v31 / (float)(int)ObjectNameList;
-  v72.fields.m_Width = (float)baseWidth / (float)v60;
-  v72.fields.m_YMin = (float)(v57 - v31) / (float)v58;
-  v72.fields.m_XMin = 0.0;
-  UITexture__set_uvRect(v56, v72, 0LL);
+  v58.fields.m_Height = (float)v17 / (float)(int)ObjectNameList;
+  v58.fields.m_Width = (float)baseWidth / (float)v46;
+  v58.fields.m_YMin = (float)(v43 - v17) / (float)v44;
+  v58.fields.m_XMin = 0.0;
+  UITexture__set_uvRect(v42, v58, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
   ObjectNameList = *((_QWORD *)*p_monitor + 6);
   if ( !ObjectNameList )
     goto LABEL_62;
-  v70.fields.z = 1.0;
-  v70.fields.y = (float)v31;
-  v70.fields.x = (float)TutorialBigDialog_TypeInfo->static_fields->baseWidth;
-  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)ObjectNameList, v70, 0LL);
+  v56.fields.z = 1.0;
+  v56.fields.y = (float)v17;
+  v56.fields.x = (float)TutorialBigDialog_TypeInfo->static_fields->baseWidth;
+  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)ObjectNameList, v56, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
   ObjectNameList = *((_QWORD *)*p_monitor + 6);
   if ( !ObjectNameList )
     goto LABEL_62;
-  v71.fields.y = (float)-v31 * 0.5;
-  v71.fields.x = 0.0;
-  v71.fields.z = 0.0;
-  UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)ObjectNameList, v71, 0LL);
+  v57.fields.y = (float)-v17 * 0.5;
+  v57.fields.x = 0.0;
+  v57.fields.z = 0.0;
+  UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)ObjectNameList, v57, 0LL);
   if ( !*p_monitor )
     goto LABEL_62;
   ObjectNameList = *((_QWORD *)*p_monitor + 7);
   if ( !ObjectNameList )
     goto LABEL_62;
   UIScrollView__ResetPosition((UIScrollView_o *)ObjectNameList, 0LL);
-  ObjectNameList = *v42;
-  if ( !*v42 )
+  ObjectNameList = *v28;
+  if ( !*v28 )
     goto LABEL_62;
   ObjectNameList = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)ObjectNameList, 0LL);
-  if ( !v69->fields.ImageRoot )
+  if ( !v55->fields.ImageRoot )
     goto LABEL_62;
-  v61 = (UnityEngine_Transform_o *)ObjectNameList;
-  ObjectNameList = (__int64)UnityEngine_GameObject__get_transform(v69->fields.ImageRoot, 0LL);
-  if ( !v61 )
+  v47 = (UnityEngine_Transform_o *)ObjectNameList;
+  ObjectNameList = (__int64)UnityEngine_GameObject__get_transform(v55->fields.ImageRoot, 0LL);
+  if ( !v47 )
     goto LABEL_62;
-  UnityEngine_Transform__set_parent(v61, (UnityEngine_Transform_o *)ObjectNameList, 0LL);
-  ObjectNameList = *v42;
-  if ( !*v42 )
+  UnityEngine_Transform__set_parent(v47, (UnityEngine_Transform_o *)ObjectNameList, 0LL);
+  ObjectNameList = *v28;
+  if ( !*v28 )
     goto LABEL_62;
   ObjectNameList = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)ObjectNameList, 0LL);
-  v62 = (UnityEngine_Transform_o *)ObjectNameList;
-  if ( !byte_4A28BB1 )
+  v48 = (UnityEngine_Transform_o *)ObjectNameList;
+  if ( !byte_4A55CE1 )
   {
-    ObjectNameList = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v23);
-    byte_4A28BB1 = 1;
+    ObjectNameList = sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
-  if ( !v62 )
+  if ( !v48 )
     goto LABEL_62;
-  UnityEngine_Transform__set_localPosition(v62, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  ObjectNameList = *v42;
-  if ( !*v42 )
+  UnityEngine_Transform__set_localPosition(v48, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  ObjectNameList = *v28;
+  if ( !*v28 )
     goto LABEL_62;
   ObjectNameList = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)ObjectNameList, 0LL);
-  v63 = (UnityEngine_Transform_o *)ObjectNameList;
-  if ( !byte_4A28BB6 )
+  v49 = (UnityEngine_Transform_o *)ObjectNameList;
+  if ( !byte_4A55CE6 )
   {
-    ObjectNameList = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v23);
-    byte_4A28BB6 = 1;
+    ObjectNameList = sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE6 = 1;
   }
-  if ( !v63 )
+  if ( !v49 )
     goto LABEL_62;
-  UnityEngine_Transform__set_localScale(v63, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-  v64 = sub_1B7640C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  UnityEngine_Transform__set_localScale(v49, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+  v50 = sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    (AssetLoader_LoadEndDataHandler_o *)v64,
+    (AssetLoader_LoadEndDataHandler_o *)v50,
     object,
     Method_TutorialBigDialog___c__DisplayClass56_0__AddScrollImg_b__0__,
     0LL);
-  if ( v69->fields.baseTexLoadRequested )
+  if ( v55->fields.baseTexLoadRequested )
   {
-    if ( v64 )
+    if ( v50 )
     {
-      (*(void (__fastcall **)(_QWORD, struct AssetData_o *, _QWORD))(v64 + 24))(
-        *(_QWORD *)(v64 + 64),
-        v69->fields.baseTexAssetData,
-        *(_QWORD *)(v64 + 40));
+      (*(void (__fastcall **)(_QWORD, struct AssetData_o *, _QWORD))(v50 + 24))(
+        *(_QWORD *)(v50 + 64),
+        v55->fields.baseTexAssetData,
+        *(_QWORD *)(v50 + 40));
       return;
     }
 LABEL_62:
-    sub_1B7641C(ObjectNameList, v23);
+    sub_1B8880C(ObjectNameList, v9);
   }
-  v69->fields.baseTexLoadRequested = 1;
-  v66 = TutorialBigDialog_TypeInfo;
+  v55->fields.baseTexLoadRequested = 1;
+  v52 = TutorialBigDialog_TypeInfo;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v66 = TutorialBigDialog_TypeInfo;
+    v52 = TutorialBigDialog_TypeInfo;
   }
-  TuorialImagePath = TutorialBigDialog__GetTuorialImagePath(v69, v66->static_fields->baseImgNo, v65);
+  TuorialImagePath = TutorialBigDialog__GetTuorialImagePath(v55, v52->static_fields->baseImgNo, v51);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(TuorialImagePath, (AssetLoader_LoadEndDataHandler_o *)v64, 1, 0LL);
+  AssetManager__loadAssetStorage(TuorialImagePath, (AssetLoader_LoadEndDataHandler_o *)v50, 1, 0LL);
 }
 
 
@@ -607,7 +578,7 @@ void __fastcall TutorialBigDialog__AfterLoad(TutorialBigDialog_o *this, int32_t 
       goto LABEL_13;
     }
 LABEL_14:
-    sub_1B7641C(this, addCount);
+    sub_1B8880C(this, addCount);
   }
   TutorialImageLoadList = this->fields.TutorialImageLoadList;
   if ( !TutorialImageLoadList )
@@ -620,7 +591,7 @@ LABEL_14:
 LABEL_13:
   this->fields.CurrentIndex = 0;
   v9 = TutorialBigDialog__WaitPurchase(this, 0, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v9, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)this, v9, 0LL);
 }
 
 
@@ -630,86 +601,79 @@ void __fastcall TutorialBigDialog__Close(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Action_o *v8; // x20
+  System_Action_o *v6; // x20
 
-  if ( (byte_4A2CC14 & 1) == 0 )
+  if ( (byte_4A59E2D & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, callback);
-    sub_1B761C0(&AndroidBackKeyManager_TypeInfo, v6);
-    sub_1B761C0(&Method_TutorialBigDialog_EndClose__, v7);
-    byte_4A2CC14 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&AndroidBackKeyManager_TypeInfo);
+    sub_1B885B0(&Method_TutorialBigDialog_EndClose__);
+    byte_4A59E2D = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.isButtonEnable = 0;
   AndroidBackKeyManager_TypeInfo->static_fields->ToastEnabled = 0;
-  v8 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_TutorialBigDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v8, 0LL);
+  v6 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_TutorialBigDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
 void __fastcall TutorialBigDialog__DestroyImagePageList(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct System_Collections_Generic_List_GameObject__o *ImagePageList; // x0
   Il2CppObject *current; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
-  struct System_Collections_Generic_List_GameObject__o *v12; // x8
+  __int64 v5; // x0
+  __int64 v6; // x1
+  struct System_Collections_Generic_List_GameObject__o *v7; // x8
   int32_t size; // w2
-  int v14; // w9
-  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-48h] BYREF
+  int v9; // w9
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A2CC1A & 1) == 0 )
+  if ( (byte_4A59E33 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Clear__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v6);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A2CC1A = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A59E33 = 1;
   }
-  memset(&v15, 0, sizeof(v15));
+  memset(&v10, 0, sizeof(v10));
   ImagePageList = this->fields.ImagePageList;
   if ( ImagePageList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       (System_Collections_Generic_List_object__o *)ImagePageList,
-      (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v15,
-              (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              &v10,
+              (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
-      current = v15.fields._current;
+      current = v10.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_69287408((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_69459380((UnityEngine_Object_o *)current, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v15,
-      (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v12 = this->fields.ImagePageList;
-    if ( !v12 )
-      sub_1B7641C(v10, v11);
-    size = v12->fields._size;
-    v14 = v12->fields._version + 1;
-    v12->fields._size = 0;
-    v12->fields._version = v14;
+      &v10,
+      (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v7 = this->fields.ImagePageList;
+    if ( !v7 )
+      sub_1B8880C(v5, v6);
+    size = v7->fields._size;
+    v9 = v7->fields._version + 1;
+    v7->fields._size = 0;
+    v7->fields._version = v9;
     if ( size >= 1 )
-      System_Array__Clear((System_Array_o *)v12->fields._items, 0, size, 0LL);
+      System_Array__Clear((System_Array_o *)v7->fields._items, 0, size, 0LL);
     this->fields.CurrentIndex = 0;
   }
 }
@@ -728,7 +692,7 @@ void __fastcall TutorialBigDialog__EndClose(TutorialBigDialog_o *this, const Met
   TutorialBigDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B7641C(0LL, v4);
+    sub_1B8880C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
@@ -736,7 +700,7 @@ void __fastcall TutorialBigDialog__EndClose(TutorialBigDialog_o *this, const Met
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B76164(p_closeCallbackFunc, 0, v5, v6);
+    sub_1B88554(p_closeCallbackFunc, 0, v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
       v8->fields.original_method_info,
       *(_QWORD *)&v8->fields.extra_arg);
@@ -760,7 +724,7 @@ void __fastcall TutorialBigDialog__EndOpen(TutorialBigDialog_o *this, const Meth
   if ( endOpenCallbackFunc )
   {
     p_endOpenCallbackFunc->klass = 0LL;
-    sub_1B76164(p_endOpenCallbackFunc, 0, v3, v4);
+    sub_1B88554(p_endOpenCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -788,15 +752,14 @@ int32_t __fastcall TutorialBigDialog__GetScrollHeightWithName(
   int32_t result; // [xsp+Ch] [xbp-4h] BYREF
 
   if ( !imageName || (this = (TutorialBigDialog_o *)System_String__Split(imageName, 0x5Fu, 0, 0LL), result = 0, !this) )
-    sub_1B7641C(this, imageName);
+    sub_1B8880C(this, imageName);
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 3 )
-    sub_1B76424(this, imageName);
+    sub_1B88814(this, imageName);
   System_Int32__TryParse((System_String_o *)this->fields.maskSprite, &result, 0LL);
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TutorialBigDialog__GetTuorialImageName(
         TutorialBigDialog_o *this,
         int32_t imgId,
@@ -804,27 +767,24 @@ System_String_o *__fastcall TutorialBigDialog__GetTuorialImageName(
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  __int64 v6; // x1
-  __int64 v7; // x1
-  Il2CppObject *v8; // x0
-  System_String_o *v9; // x0
-  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v6; // x0
+  System_String_o *v7; // x0
+  int32_t v9; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A2CC09 & 1) == 0 )
+  if ( (byte_4A59E22 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, *(_QWORD *)&imgId);
-    sub_1B761C0(&StringLiteral_24939/*"{0:D4}"*/, v6);
-    sub_1B761C0(&StringLiteral_24086/*"tutorial_"*/, v7);
-    byte_4A2CC09 = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&StringLiteral_24952/*"{0:D4}"*/);
+    sub_1B885B0(&StringLiteral_24099/*"tutorial_"*/);
+    byte_4A59E22 = 1;
   }
-  v11 = imgId;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
-  v9 = System_String__Format((System_String_o *)StringLiteral_24939/*"{0:D4}"*/, v8, 0LL);
-  return System_String__Concat_61535060((System_String_o *)StringLiteral_24086/*"tutorial_"*/, v9, 0LL);
+  v9 = imgId;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, method, v3, v4);
+  v7 = System_String__Format((System_String_o *)StringLiteral_24952/*"{0:D4}"*/, v6, 0LL);
+  return System_String__Concat_61707032((System_String_o *)StringLiteral_24099/*"tutorial_"*/, v7, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TutorialBigDialog__GetTuorialImagePath(
         TutorialBigDialog_o *this,
         int32_t imgId,
@@ -832,141 +792,140 @@ System_String_o *__fastcall TutorialBigDialog__GetTuorialImagePath(
 {
   System_String_o *TuorialImageName; // x0
 
-  if ( (byte_4A2CC08 & 1) == 0 )
+  if ( (byte_4A59E21 & 1) == 0 )
   {
-    this = (TutorialBigDialog_o *)sub_1B761C0(&StringLiteral_14588/*"Tutorial/"*/, *(_QWORD *)&imgId);
-    byte_4A2CC08 = 1;
+    this = (TutorialBigDialog_o *)sub_1B885B0(&StringLiteral_14594/*"Tutorial/"*/);
+    byte_4A59E21 = 1;
   }
   TuorialImageName = TutorialBigDialog__GetTuorialImageName(this, imgId, method);
-  return System_String__Concat_61535060((System_String_o *)StringLiteral_14588/*"Tutorial/"*/, TuorialImageName, 0LL);
+  return System_String__Concat_61707032((System_String_o *)StringLiteral_14594/*"Tutorial/"*/, TuorialImageName, 0LL);
 }
 
 
 void __fastcall TutorialBigDialog__Init(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x2
-  int32_t v8; // w3
-  TutorialBigDialog_c *v9; // x0
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x2
+  int32_t v7; // w3
+  TutorialBigDialog_c *v8; // x0
   int32_t sizeKind; // w20
-  __int64 v11; // x9
-  System_String_o *v12; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
-  TutorialBigDialog_c *v15; // x0
+  __int64 v10; // x9
+  System_String_o *v11; // x20
+  int32_t v12; // w2
+  int32_t v13; // w3
+  TutorialBigDialog_c *v14; // x0
   System_String_o *TuorialImagePath; // x20
-  int32_t v17; // w2
-  int32_t v18; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
   struct System_Int32_array *TutorialImageLoadList; // x23
-  __int64 v20; // x8
-  unsigned __int64 v21; // x24
-  System_String_o *v22; // x21
+  __int64 v19; // x8
+  unsigned __int64 v20; // x24
+  System_String_o *v21; // x21
   struct System_String_array *assetsImageLoadList; // x8
   struct System_String_array **p_assetsImageLoadList; // x20
-  il2cpp_array_size_t v25; // w23
+  il2cpp_array_size_t v24; // w23
   il2cpp_array_size_t max_length; // w9
-  System_String_o *v27; // x21
+  System_String_o *v26; // x21
 
-  if ( (byte_4A2CBFE & 1) == 0 )
+  if ( (byte_4A59E17 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, method);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v3);
-    byte_4A2CBFE = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E17 = 1;
   }
   this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_33:
-    sub_1B7641C(gameObject, v5);
+    sub_1B8880C(gameObject, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.IsFading = 0;
-  TutorialBigDialog__DestroyImagePageList(this, v6);
+  TutorialBigDialog__DestroyImagePageList(this, v5);
   if ( this->fields.alphaTexLoadRequested )
   {
-    v9 = TutorialBigDialog_TypeInfo;
+    v8 = TutorialBigDialog_TypeInfo;
     sizeKind = this->fields.sizeKind;
     if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-      v9 = TutorialBigDialog_TypeInfo;
+      v8 = TutorialBigDialog_TypeInfo;
     }
-    v11 = 8LL;
+    v10 = 8LL;
     if ( sizeKind == 2 )
-      v11 = 24LL;
-    v12 = *(System_String_o **)((char *)&v9->static_fields->FADE_TIME + v11);
+      v10 = 24LL;
+    v11 = *(System_String_o **)((char *)&v8->static_fields->FADE_TIME + v10);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage(v12, 0LL);
+    AssetManager__releaseAssetStorage(v11, 0LL);
     this->fields.alphaTexAssetData = 0LL;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.alphaTexAssetData, 0, v13, v14);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.alphaTexAssetData, 0, v12, v13);
     this->fields.alphaTexLoadRequested = 0;
   }
   if ( this->fields.baseTexLoadRequested )
   {
-    v15 = TutorialBigDialog_TypeInfo;
+    v14 = TutorialBigDialog_TypeInfo;
     if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-      v15 = TutorialBigDialog_TypeInfo;
+      v14 = TutorialBigDialog_TypeInfo;
     }
-    TuorialImagePath = TutorialBigDialog__GetTuorialImagePath(this, v15->static_fields->baseImgNo, v7);
+    TuorialImagePath = TutorialBigDialog__GetTuorialImagePath(this, v14->static_fields->baseImgNo, v6);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(TuorialImagePath, 0LL);
     this->fields.baseTexAssetData = 0LL;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.baseTexAssetData, 0, v17, v18);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseTexAssetData, 0, v16, v17);
     this->fields.baseTexLoadRequested = 0;
   }
   TutorialImageLoadList = this->fields.TutorialImageLoadList;
   if ( TutorialImageLoadList )
   {
-    v20 = *(_QWORD *)&TutorialImageLoadList->max_length;
-    if ( (int)v20 >= 1 )
+    v19 = *(_QWORD *)&TutorialImageLoadList->max_length;
+    if ( (int)v19 >= 1 )
     {
-      v21 = 0LL;
+      v20 = 0LL;
       do
       {
-        if ( v21 >= (unsigned int)v20 )
+        if ( v20 >= (unsigned int)v19 )
 LABEL_36:
-          sub_1B76424(gameObject, v5);
-        v22 = TutorialBigDialog__GetTuorialImagePath(this, TutorialImageLoadList->m_Items[v21 + 1], v7);
+          sub_1B88814(gameObject, v4);
+        v21 = TutorialBigDialog__GetTuorialImagePath(this, TutorialImageLoadList->m_Items[v20 + 1], v6);
         if ( !AssetManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-        AssetManager__releaseAssetStorage(v22, 0LL);
-        LODWORD(v20) = TutorialImageLoadList->max_length;
-        ++v21;
+        AssetManager__releaseAssetStorage(v21, 0LL);
+        LODWORD(v19) = TutorialImageLoadList->max_length;
+        ++v20;
       }
-      while ( (__int64)v21 < (int)v20 );
+      while ( (__int64)v20 < (int)v19 );
     }
     this->fields.TutorialImageLoadList = 0LL;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, 0, (int32_t)v7, v8);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, 0, (int32_t)v6, v7);
   }
   p_assetsImageLoadList = &this->fields.assetsImageLoadList;
   assetsImageLoadList = this->fields.assetsImageLoadList;
   if ( assetsImageLoadList )
   {
-    v25 = 0;
+    v24 = 0;
     while ( 1 )
     {
       max_length = assetsImageLoadList->max_length;
-      if ( (int)v25 >= (int)max_length )
+      if ( (int)v24 >= (int)max_length )
         break;
-      if ( v25 >= max_length )
+      if ( v24 >= max_length )
         goto LABEL_36;
-      v27 = assetsImageLoadList->m_Items[v25];
+      v26 = assetsImageLoadList->m_Items[v24];
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAssetStorage(v27, 0LL);
+      AssetManager__releaseAssetStorage(v26, 0LL);
       assetsImageLoadList = *p_assetsImageLoadList;
-      v25 += 2;
+      v24 += 2;
       if ( !*p_assetsImageLoadList )
         goto LABEL_33;
     }
     *p_assetsImageLoadList = 0LL;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, 0, (int32_t)v7, v8);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, 0, (int32_t)v6, v7);
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -977,61 +936,57 @@ void __fastcall TutorialBigDialog__LoadAlpha(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x20
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
-  TutorialBigDialog_c *v16; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
+  TutorialBigDialog_c *v12; // x0
   int32_t sizeKind; // w19
-  __int64 v18; // x9
-  System_String_o *v19; // x19
-  AssetLoader_LoadEndDataHandler_o *v20; // x21
+  __int64 v14; // x9
+  System_String_o *v15; // x19
+  AssetLoader_LoadEndDataHandler_o *v16; // x21
 
-  if ( (byte_4A2CC0F & 1) == 0 )
+  if ( (byte_4A59E28 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, callback);
-    sub_1B761C0(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v6);
-    sub_1B761C0(&Method_TutorialBigDialog___c__DisplayClass59_0__LoadAlpha_b__0__, v7);
-    sub_1B761C0(&TutorialBigDialog___c__DisplayClass59_0_TypeInfo, v8);
-    byte_4A2CC0F = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    sub_1B885B0(&Method_TutorialBigDialog___c__DisplayClass59_0__LoadAlpha_b__0__);
+    sub_1B885B0(&TutorialBigDialog___c__DisplayClass59_0_TypeInfo);
+    byte_4A59E28 = 1;
   }
-  v9 = sub_1B7640C(TutorialBigDialog___c__DisplayClass59_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
-    sub_1B7641C(v10, v11);
-  *(_QWORD *)(v9 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 16), (int32_t)this, v12, v13);
-  *(_QWORD *)(v9 + 24) = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)callback, v14, v15);
+  v5 = sub_1B887FC(TutorialBigDialog___c__DisplayClass59_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
+    sub_1B8880C(v6, v7);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  *(_QWORD *)(v5 + 24) = callback;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 24), (int32_t)callback, v10, v11);
   this->fields.alphaTexLoadRequested = 1;
-  v16 = TutorialBigDialog_TypeInfo;
+  v12 = TutorialBigDialog_TypeInfo;
   sizeKind = this->fields.sizeKind;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v16 = TutorialBigDialog_TypeInfo;
+    v12 = TutorialBigDialog_TypeInfo;
   }
-  v18 = 8LL;
+  v14 = 8LL;
   if ( sizeKind == 2 )
-    v18 = 24LL;
-  v19 = *(System_String_o **)((char *)&v16->static_fields->FADE_TIME + v18);
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1B7640C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v14 = 24LL;
+  v15 = *(System_String_o **)((char *)&v12->static_fields->FADE_TIME + v14);
+  v16 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v20,
-    (Il2CppObject *)v9,
+    v16,
+    (Il2CppObject *)v5,
     Method_TutorialBigDialog___c__DisplayClass59_0__LoadAlpha_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v19, v20, 1, 0LL);
+  AssetManager__loadAssetStorage(v15, v16, 1, 0LL);
 }
 
 
@@ -1040,86 +995,78 @@ void __fastcall TutorialBigDialog__LoadImages(
         System_Int32_array *images,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x20
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
-  System_Action_o *v13; // x20
-  const MethodInfo *v14; // x2
+  __int64 v8; // x1
+  System_Action_o *v9; // x20
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4A2CC06 & 1) == 0 )
+  if ( (byte_4A59E1F & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, images);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
-    sub_1B761C0(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B761C0(&Method_TutorialBigDialog_LoadStart__, v7);
-    byte_4A2CC06 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_TutorialBigDialog_LoadStart__);
+    byte_4A59E1F = 1;
   }
   this->fields._loadIndex = 0;
   this->fields.loadByAsset = 0;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v8,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v8;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.ImagePageList, (int32_t)v8, v9, v10);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v4,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v4;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.ImagePageList, (int32_t)v4, v5, v6);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v12);
+    sub_1B8880C(0LL, v8);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
-  v13 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_TutorialBigDialog_LoadStart__, 0LL);
-  TutorialBigDialog__LoadAlpha(this, v13, v14);
+  v9 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_TutorialBigDialog_LoadStart__, 0LL);
+  TutorialBigDialog__LoadAlpha(this, v9, v10);
 }
 
 
-void __fastcall TutorialBigDialog__LoadImages_37167472(
+void __fastcall TutorialBigDialog__LoadImages_37344760(
         TutorialBigDialog_o *this,
         System_String_array *images,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x20
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_Collections_Generic_List_object__o *v4; // x20
+  int32_t v5; // w2
+  int32_t v6; // w3
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
-  System_Action_o *v13; // x20
-  const MethodInfo *v14; // x2
+  __int64 v8; // x1
+  System_Action_o *v9; // x20
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4A2CC07 & 1) == 0 )
+  if ( (byte_4A59E20 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, images);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
-    sub_1B761C0(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B761C0(&Method_TutorialBigDialog_LoadStartAssets__, v7);
-    byte_4A2CC07 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_TutorialBigDialog_LoadStartAssets__);
+    byte_4A59E20 = 1;
   }
   this->fields._loadIndex = 0;
   this->fields.loadByAsset = 1;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v8,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v8;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.ImagePageList, (int32_t)v8, v9, v10);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v4,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v4;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.ImagePageList, (int32_t)v4, v5, v6);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v12);
+    sub_1B8880C(0LL, v8);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
-  v13 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_TutorialBigDialog_LoadStartAssets__, 0LL);
-  TutorialBigDialog__LoadAlpha(this, v13, v14);
+  v9 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_TutorialBigDialog_LoadStartAssets__, 0LL);
+  TutorialBigDialog__LoadAlpha(this, v9, v10);
 }
 
 
@@ -1127,102 +1074,97 @@ void __fastcall TutorialBigDialog__LoadStart(TutorialBigDialog_o *this, const Me
 {
   const MethodInfo *v2; // x2
   TutorialBigDialog_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
   struct System_Int32_array *TutorialImageLoadList; // x8
   __int64 loadIndex; // x9
   System_String_o *TuorialImagePath; // x20
-  AssetLoader_LoadEndDataHandler_o *v9; // x21
+  AssetLoader_LoadEndDataHandler_o *v7; // x21
 
   v3 = this;
-  if ( (byte_4A2CC0A & 1) == 0 )
+  if ( (byte_4A59E23 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, method);
-    sub_1B761C0(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&Method_TutorialBigDialog__LoadStart_b__53_0__, v5);
-    byte_4A2CC0A = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&Method_TutorialBigDialog__LoadStart_b__53_0__);
+    byte_4A59E23 = 1;
   }
   TutorialImageLoadList = v3->fields.TutorialImageLoadList;
   if ( !TutorialImageLoadList )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   loadIndex = v3->fields._loadIndex;
   if ( (unsigned int)loadIndex >= TutorialImageLoadList->max_length )
-    sub_1B76424(this, method);
+    sub_1B88814(this, method);
   TuorialImagePath = TutorialBigDialog__GetTuorialImagePath(v3, TutorialImageLoadList->m_Items[loadIndex + 1], v2);
-  v9 = (AssetLoader_LoadEndDataHandler_o *)sub_1B7640C(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(v9, (Il2CppObject *)v3, Method_TutorialBigDialog__LoadStart_b__53_0__, 0LL);
+  v7 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v7, (Il2CppObject *)v3, Method_TutorialBigDialog__LoadStart_b__53_0__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(TuorialImagePath, v9, 1, 0LL);
+  AssetManager__loadAssetStorage(TuorialImagePath, v7, 1, 0LL);
 }
 
 
 void __fastcall TutorialBigDialog__LoadStartAssets(TutorialBigDialog_o *this, const MethodInfo *method)
 {
   TutorialBigDialog_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct System_String_array *assetsImageLoadList; // x8
   __int64 loadIndex; // x9
-  System_String_o *v7; // x20
-  AssetLoader_LoadEndDataHandler_o *v8; // x21
+  System_String_o *v5; // x20
+  AssetLoader_LoadEndDataHandler_o *v6; // x21
 
   v2 = this;
-  if ( (byte_4A2CC0B & 1) == 0 )
+  if ( (byte_4A59E24 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, method);
-    sub_1B761C0(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&Method_TutorialBigDialog__LoadStartAssets_b__54_0__, v4);
-    byte_4A2CC0B = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&Method_TutorialBigDialog__LoadStartAssets_b__54_0__);
+    byte_4A59E24 = 1;
   }
   assetsImageLoadList = v2->fields.assetsImageLoadList;
   if ( !assetsImageLoadList )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   loadIndex = v2->fields._loadIndex;
   if ( (unsigned int)loadIndex >= assetsImageLoadList->max_length )
-    sub_1B76424(this, method);
-  v7 = assetsImageLoadList->m_Items[loadIndex];
-  v8 = (AssetLoader_LoadEndDataHandler_o *)sub_1B7640C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1B88814(this, method);
+  v5 = assetsImageLoadList->m_Items[loadIndex];
+  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v8,
+    v6,
     (Il2CppObject *)v2,
     Method_TutorialBigDialog__LoadStartAssets_b__54_0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v7, v8, 1, 0LL);
+  AssetManager__loadAssetStorage(v5, v6, 1, 0LL);
 }
 
 
 void __fastcall TutorialBigDialog__OnBottomButton(TutorialBigDialog_o *this, const MethodInfo *method)
 {
   TutorialBigDialog_o *v2; // x19
-  __int64 v3; // x1
   struct System_Collections_Generic_List_GameObject__o *ImagePageList; // x8
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  const MethodInfo *v7; // x1
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  const MethodInfo *v6; // x1
 
   v2 = this;
-  if ( (byte_4A2CC17 & 1) == 0 )
+  if ( (byte_4A59E30 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&Method_TutorialBigDialog_OnBottomButton__, v3);
-    byte_4A2CC17 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&Method_TutorialBigDialog_OnBottomButton__);
+    byte_4A59E30 = 1;
   }
   if ( !v2->fields.IsFading )
   {
     ImagePageList = v2->fields.ImagePageList;
     if ( !ImagePageList )
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     if ( v2->fields.CurrentIndex == ImagePageList->fields._size - 1 )
     {
-      v5 = Method_TutorialBigDialog_OnBottomButton__;
+      v4 = Method_TutorialBigDialog_OnBottomButton__;
       if ( (*((_BYTE *)Method_TutorialBigDialog_OnBottomButton__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1B761D8(Method_TutorialBigDialog_OnBottomButton__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v5, v5[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
-      TutorialBigDialog__OnClickClose(v2, v7);
+        v4 = (_QWORD *)sub_1B885C8(Method_TutorialBigDialog_OnBottomButton__);
+      v5 = (System_Reflection_MethodBase_o *)sub_1B88594(v4, v4[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
+      TutorialBigDialog__OnClickClose(v2, v6);
     }
   }
 }
@@ -1230,47 +1172,41 @@ void __fastcall TutorialBigDialog__OnBottomButton(TutorialBigDialog_o *this, con
 
 void __fastcall TutorialBigDialog__OnClickClose(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  _QWORD *v9; // x0
-  System_Reflection_MethodBase_o *v10; // x0
-  const MethodInfo *v11; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
   int32_t localFlagId; // w20
   int configFlagId; // w20
-  NetworkManager_ResultCallbackFunc_o *v14; // x20
+  NetworkManager_ResultCallbackFunc_o *v8; // x20
   Il2CppObject *Request_object; // x0
-  __int64 v16; // x1
-  NetworkManager_ResultCallbackFunc_o *v17; // x20
+  __int64 v10; // x1
+  NetworkManager_ResultCallbackFunc_o *v11; // x20
 
-  if ( (byte_4A2CC18 & 1) == 0 )
+  if ( (byte_4A59E31 & 1) == 0 )
   {
-    sub_1B761C0(&Method_NetworkManager_getRequest_TutorialEventSetRequest___, method);
-    sub_1B761C0(&Method_NetworkManager_getRequest_TutorialSetRequest___, v3);
-    sub_1B761C0(&NetworkManager_TypeInfo, v4);
-    sub_1B761C0(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_1B761C0(&Method_TutorialBigDialog_EndTurorialRequest__, v6);
-    sub_1B761C0(&Method_TutorialBigDialog_OnClickClose__, v7);
-    sub_1B761C0(&TutorialFlag_TypeInfo, v8);
-    byte_4A2CC18 = 1;
+    sub_1B885B0(&Method_NetworkManager_getRequest_TutorialEventSetRequest___);
+    sub_1B885B0(&Method_NetworkManager_getRequest_TutorialSetRequest___);
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1B885B0(&Method_TutorialBigDialog_EndTurorialRequest__);
+    sub_1B885B0(&Method_TutorialBigDialog_OnClickClose__);
+    sub_1B885B0(&TutorialFlag_TypeInfo);
+    byte_4A59E31 = 1;
   }
   if ( !this->fields.IsFading && this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
-    v9 = Method_TutorialBigDialog_OnClickClose__;
+    v3 = Method_TutorialBigDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_TutorialBigDialog_OnClickClose__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1B761D8(Method_TutorialBigDialog_OnClickClose__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1B761A4(v9, v9[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v10, 1, 0LL);
+      v3 = (_QWORD *)sub_1B885C8(Method_TutorialBigDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     localFlagId = this->fields.localFlagId;
     if ( localFlagId != -1 )
     {
       if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      TutorialFlag__Set_37543176(localFlagId, 0LL);
+      TutorialFlag__Set_37721572(localFlagId, 0LL);
     }
     configFlagId = this->fields.configFlagId;
     if ( configFlagId >= 1 )
@@ -1281,42 +1217,42 @@ void __fastcall TutorialBigDialog__OnClickClose(TutorialBigDialog_o *this, const
     }
     if ( this->fields.flagId != -1 )
     {
-      v14 = (NetworkManager_ResultCallbackFunc_o *)sub_1B7640C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B887FC(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v14,
+        v8,
         (Il2CppObject *)this,
         Method_TutorialBigDialog_EndTurorialRequest__,
         0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
-                         v14,
-                         (const MethodInfo_2EE44C0 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+                         v8,
+                         (const MethodInfo_2F019D8 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
       if ( Request_object )
       {
         TutorialSetRequest__beginRequest((TutorialSetRequest_o *)Request_object, this->fields.flagId, 0LL);
         return;
       }
 LABEL_28:
-      sub_1B7641C(Request_object, v16);
+      sub_1B8880C(Request_object, v10);
     }
     if ( this->fields.eventFlagId == -1 || !this->fields.eventId )
     {
-      TutorialBigDialog__Close(this, this->fields.closeCallbackFunc, v11);
+      TutorialBigDialog__Close(this, this->fields.closeCallbackFunc, v5);
     }
     else
     {
-      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B7640C(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v11 = (NetworkManager_ResultCallbackFunc_o *)sub_1B887FC(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v17,
+        v11,
         (Il2CppObject *)this,
         Method_TutorialBigDialog_EndTurorialRequest__,
         0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
-                         v17,
-                         (const MethodInfo_2EE44C0 *)Method_NetworkManager_getRequest_TutorialEventSetRequest___);
+                         v11,
+                         (const MethodInfo_2F019D8 *)Method_NetworkManager_getRequest_TutorialEventSetRequest___);
       if ( !Request_object )
         goto LABEL_28;
       TutorialEventSetRequest__beginRequest(
@@ -1332,32 +1268,31 @@ LABEL_28:
 void __fastcall TutorialBigDialog__OnNextButton(TutorialBigDialog_o *this, const MethodInfo *method)
 {
   TutorialBigDialog_o *v2; // x19
-  __int64 v3; // x1
   struct System_Collections_Generic_List_GameObject__o *ImagePageList; // x8
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  const MethodInfo *v7; // x2
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  const MethodInfo *v6; // x2
 
   v2 = this;
-  if ( (byte_4A2CC15 & 1) == 0 )
+  if ( (byte_4A59E2E & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&Method_TutorialBigDialog_OnNextButton__, v3);
-    byte_4A2CC15 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&Method_TutorialBigDialog_OnNextButton__);
+    byte_4A59E2E = 1;
   }
   if ( !v2->fields.IsFading )
   {
     ImagePageList = v2->fields.ImagePageList;
     if ( !ImagePageList )
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     if ( v2->fields.CurrentIndex != ImagePageList->fields._size - 1 )
     {
-      v5 = Method_TutorialBigDialog_OnNextButton__;
+      v4 = Method_TutorialBigDialog_OnNextButton__;
       if ( (*((_BYTE *)Method_TutorialBigDialog_OnNextButton__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1B761D8(Method_TutorialBigDialog_OnNextButton__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v5, v5[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-      TutorialBigDialog__UpdatePage(v2, v2->fields.CurrentIndex + 1, v7);
+        v4 = (_QWORD *)sub_1B885C8(Method_TutorialBigDialog_OnNextButton__);
+      v5 = (System_Reflection_MethodBase_o *)sub_1B88594(v4, v4[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
+      TutorialBigDialog__UpdatePage(v2, v2->fields.CurrentIndex + 1, v6);
     }
   }
 }
@@ -1367,30 +1302,29 @@ void __fastcall TutorialBigDialog__OnNextButton(TutorialBigDialog_o *this, const
 void __fastcall TutorialBigDialog__OnPageChange(TutorialBigDialog_o *this, int32_t idx, const MethodInfo *method)
 {
   TutorialBigDialog_o *v4; // x20
-  __int64 v5; // x1
   struct System_Collections_Generic_List_GameObject__o *ImagePageList; // x8
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
 
   v4 = this;
-  if ( (byte_4A2CC19 & 1) == 0 )
+  if ( (byte_4A59E32 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, *(_QWORD *)&idx);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&Method_TutorialBigDialog_OnPageChange__, v5);
-    byte_4A2CC19 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&Method_TutorialBigDialog_OnPageChange__);
+    byte_4A59E32 = 1;
   }
   if ( (idx & 0x80000000) == 0 && v4->fields.CurrentIndex != idx )
   {
     ImagePageList = v4->fields.ImagePageList;
     if ( !ImagePageList )
-      sub_1B7641C(this, *(_QWORD *)&idx);
+      sub_1B8880C(this, *(_QWORD *)&idx);
     if ( ImagePageList->fields._size > idx )
     {
-      v7 = Method_TutorialBigDialog_OnPageChange__;
+      v6 = Method_TutorialBigDialog_OnPageChange__;
       if ( (*((_BYTE *)Method_TutorialBigDialog_OnPageChange__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1B761D8(Method_TutorialBigDialog_OnPageChange__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1B761A4(v7, v7[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
+        v6 = (_QWORD *)sub_1B885C8(Method_TutorialBigDialog_OnPageChange__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1B88594(v6, v6[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
     }
   }
 }
@@ -1402,17 +1336,17 @@ void __fastcall TutorialBigDialog__OnPrevButton(TutorialBigDialog_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A2CC16 & 1) == 0 )
+  if ( (byte_4A59E2F & 1) == 0 )
   {
-    sub_1B761C0(&Method_TutorialBigDialog_OnPrevButton__, method);
-    byte_4A2CC16 = 1;
+    sub_1B885B0(&Method_TutorialBigDialog_OnPrevButton__);
+    byte_4A59E2F = 1;
   }
   if ( !this->fields.IsFading && this->fields.CurrentIndex >= 1 )
   {
     v3 = Method_TutorialBigDialog_OnPrevButton__;
     if ( (*((_BYTE *)Method_TutorialBigDialog_OnPrevButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B761D8(Method_TutorialBigDialog_OnPrevButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B761A4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B885C8(Method_TutorialBigDialog_OnPrevButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     TutorialBigDialog__UpdatePage(this, this->fields.CurrentIndex - 1, v5);
   }
@@ -1429,34 +1363,33 @@ void __fastcall TutorialBigDialog__Open(
         System_Action_o *endTurorialRequestFunc,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-  __int64 v20; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 v19; // x1
   UnityEngine_GameObject_o *CloseButton; // x0
-  TutorialBigDialog_c *v22; // x8
-  UnityEngine_Transform_o *v23; // x21
-  struct System_Int32_array *v24; // x0
+  TutorialBigDialog_c *v21; // x8
+  UnityEngine_Transform_o *v22; // x21
+  struct System_Int32_array *v23; // x0
   struct System_Int32_array **p_TutorialImageLoadList; // x21
-  int32_t v26; // w2
-  int32_t v27; // w3
-  struct System_Int32_array *v28; // x9
-  unsigned __int64 v29; // x10
-  unsigned __int64 v30; // x8
-  __int64 v31; // x13
-  System_Int32_array *v32; // x1
+  int32_t v25; // w2
+  int32_t v26; // w3
+  struct System_Int32_array *v27; // x9
+  unsigned __int64 v28; // x10
+  unsigned __int64 v29; // x8
+  __int64 v30; // x13
+  System_Int32_array *v31; // x1
+  const MethodInfo *v32; // x2
   const MethodInfo *v33; // x2
-  const MethodInfo *v34; // x2
 
-  if ( (byte_4A2CBFF & 1) == 0 )
+  if ( (byte_4A59E18 & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, images);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v13);
-    byte_4A2CBFF = 1;
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E18 = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -1465,67 +1398,67 @@ void __fastcall TutorialBigDialog__Open(
   }
   TutorialBigDialog__SetTouchMask(this, 0, *(const MethodInfo **)&flagId);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v14, v15);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v13, v14);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
-    v16,
-    v17);
+    v15,
+    v16);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v18, v19);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v17, v18);
   CloseButton = this->fields.CloseButton;
   this->fields.flagId = flagId;
-  *(_OWORD *)&this->fields.localFlagId = xmmword_BAD210;
+  *(_OWORD *)&this->fields.localFlagId = xmmword_BB4980;
   this->fields.sizeKind = 1;
   if ( !CloseButton )
     goto LABEL_19;
   CloseButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(CloseButton, 0LL);
-  v22 = TutorialBigDialog_TypeInfo;
-  v23 = (UnityEngine_Transform_o *)CloseButton;
+  v21 = TutorialBigDialog_TypeInfo;
+  v22 = (UnityEngine_Transform_o *)CloseButton;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v22 = TutorialBigDialog_TypeInfo;
+    v21 = TutorialBigDialog_TypeInfo;
   }
-  if ( !v23 )
+  if ( !v22 )
     goto LABEL_19;
-  UnityEngine_Transform__set_localPosition(v23, v22->static_fields->baseCloseButtonPosition, 0LL);
+  UnityEngine_Transform__set_localPosition(v22, v21->static_fields->baseCloseButtonPosition, 0LL);
   if ( !images )
     goto LABEL_19;
-  v24 = (struct System_Int32_array *)sub_1B76268(int___TypeInfo, images->max_length);
-  this->fields.TutorialImageLoadList = v24;
+  v23 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, images->max_length);
+  this->fields.TutorialImageLoadList = v23;
   p_TutorialImageLoadList = &this->fields.TutorialImageLoadList;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v24, v26, v27);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v23, v25, v26);
   if ( (int)*(_QWORD *)&images->max_length >= 1 )
   {
-    v28 = *p_TutorialImageLoadList;
-    v29 = (unsigned int)*(_QWORD *)&images->max_length;
-    v30 = 0LL;
-    v31 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
+    v27 = *p_TutorialImageLoadList;
+    v28 = (unsigned int)*(_QWORD *)&images->max_length;
+    v29 = 0LL;
+    v30 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
     do
     {
-      if ( v30 >= v29 )
+      if ( v29 >= v28 )
         goto LABEL_18;
-      if ( !v28 )
+      if ( !v27 )
         goto LABEL_19;
-      if ( v30 >= v28->max_length )
+      if ( v29 >= v27->max_length )
 LABEL_18:
-        sub_1B76424(CloseButton, v20);
-      *(_DWORD *)(v31 + 4 * v30) = images->m_Items[v30 + 1];
-      ++v30;
+        sub_1B88814(CloseButton, v19);
+      *(_DWORD *)(v30 + 4 * v29) = images->m_Items[v29 + 1];
+      ++v29;
     }
-    while ( (__int64)v30 < (int)v29 );
+    while ( (__int64)v29 < (int)v28 );
   }
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL);
-  TutorialBigDialog__LoadImages(this, v32, v33);
+  TutorialBigDialog__LoadImages(this, v31, v32);
   CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !CloseButton )
 LABEL_19:
-    sub_1B7641C(CloseButton, v20);
+    sub_1B8880C(CloseButton, v19);
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
-  TutorialBigDialog__UpdateButtons(this, 1, v34);
+  TutorialBigDialog__UpdateButtons(this, 1, v33);
 }
 
 
@@ -1537,50 +1470,43 @@ void __fastcall TutorialBigDialog__OpenAssets(
         System_Action_o *closeFunc,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  System_Action_o *v16; // x23
-  int32_t v17; // w2
-  int32_t v18; // w3
-  int32_t v19; // w2
-  int32_t v20; // w3
-  int32_t v21; // w2
-  int32_t v22; // w3
-  __int64 v23; // x1
+  System_Action_o *v9; // x23
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  __int64 v16; // x1
   UnityEngine_GameObject_o *CloseButton; // x0
-  TutorialBigDialog_c *v25; // x8
-  UnityEngine_Transform_o *v26; // x21
-  int32_t v27; // w2
-  int32_t v28; // w3
+  TutorialBigDialog_c *v18; // x8
+  UnityEngine_Transform_o *v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
   Il2CppObject *Component_object; // x21
-  EventDelegate_Callback_o *v30; // x22
-  EventDelegate_o *v31; // x20
-  int32_t v32; // w2
-  int32_t v33; // w3
-  __int64 v34; // x8
-  _QWORD *v35; // x9
+  EventDelegate_Callback_o *v23; // x22
+  EventDelegate_o *v24; // x20
+  int32_t v25; // w2
+  int32_t v26; // w3
+  __int64 v27; // x8
+  _QWORD *v28; // x9
   __int64 klass_low; // x10
-  __int64 v37; // x8
-  System_Int32_array *v38; // x1
-  const MethodInfo *v39; // x2
-  const MethodInfo *v40; // x2
+  __int64 v30; // x8
+  System_Int32_array *v31; // x1
+  const MethodInfo *v32; // x2
+  const MethodInfo *v33; // x2
 
-  if ( (byte_4A2CC04 & 1) == 0 )
+  if ( (byte_4A59E1D & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, images);
-    sub_1B761C0(&EventDelegate_Callback_TypeInfo, v9);
-    sub_1B761C0(&EventDelegate_TypeInfo, v10);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___, v11);
-    sub_1B761C0(&Method_System_Collections_Generic_List_EventDelegate__Add__, v12);
-    sub_1B761C0(&Method_TutorialBigDialog__OpenAssets_b__46_0__, v13);
-    sub_1B761C0(&Method_TutorialBigDialog__OpenAssets_b__46_1__, v14);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v15);
-    byte_4A2CC04 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&EventDelegate_Callback_TypeInfo);
+    sub_1B885B0(&EventDelegate_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1B885B0(&Method_TutorialBigDialog__OpenAssets_b__46_0__);
+    sub_1B885B0(&Method_TutorialBigDialog__OpenAssets_b__46_1__);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E1D = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -1588,77 +1514,77 @@ void __fastcall TutorialBigDialog__OpenAssets(
     this->fields.IsInitialized = 1;
   }
   TutorialBigDialog__SetTouchMask(this, 0, *(const MethodInfo **)&kind);
-  v16 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v16, (Il2CppObject *)this, Method_TutorialBigDialog__OpenAssets_b__46_0__, 0LL);
-  this->fields.endOpenCallbackFunc = v16;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)v16, v17, v18);
+  v9 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_TutorialBigDialog__OpenAssets_b__46_0__, 0LL);
+  this->fields.endOpenCallbackFunc = v9;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)v9, v10, v11);
   this->fields.endTurorialRequestFunc = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc, 0, v19, v20);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc, 0, v12, v13);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v21, v22);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v14, v15);
   CloseButton = this->fields.CloseButton;
   this->fields.configFlagId = 0;
   this->fields.sizeKind = kind;
-  *(_OWORD *)&this->fields.flagId = xmmword_BAD480;
+  *(_OWORD *)&this->fields.flagId = xmmword_BB4BF0;
   if ( !CloseButton )
     goto LABEL_18;
   CloseButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(CloseButton, 0LL);
-  v25 = TutorialBigDialog_TypeInfo;
-  v26 = (UnityEngine_Transform_o *)CloseButton;
+  v18 = TutorialBigDialog_TypeInfo;
+  v19 = (UnityEngine_Transform_o *)CloseButton;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v25 = TutorialBigDialog_TypeInfo;
+    v18 = TutorialBigDialog_TypeInfo;
   }
-  if ( !v26 )
+  if ( !v19 )
     goto LABEL_18;
-  UnityEngine_Transform__set_localPosition(v26, v25->static_fields->miniCloseButtonPosition, 0LL);
+  UnityEngine_Transform__set_localPosition(v19, v18->static_fields->miniCloseButtonPosition, 0LL);
   this->fields.TutorialImageLoadList = images;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)images, v27, v28);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)images, v20, v21);
   CloseButton = this->fields.TouchMask;
   this->fields.isButtonEnable = 0;
   if ( !CloseButton )
     goto LABEL_18;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        CloseButton,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
-  v30 = (EventDelegate_Callback_o *)sub_1B7640C(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v30, (Il2CppObject *)this, Method_TutorialBigDialog__OpenAssets_b__46_1__, 0LL);
-  v31 = (EventDelegate_o *)sub_1B7640C(EventDelegate_TypeInfo);
-  EventDelegate___ctor_46673908(v31, v30, 0LL);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_UITouchPress___);
+  v23 = (EventDelegate_Callback_o *)sub_1B887FC(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v23, (Il2CppObject *)this, Method_TutorialBigDialog__OpenAssets_b__46_1__, 0LL);
+  v24 = (EventDelegate_o *)sub_1B887FC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_46786736(v24, v23, 0LL);
   if ( !Component_object )
     goto LABEL_18;
   CloseButton = (UnityEngine_GameObject_o *)Component_object[2].klass;
   if ( !CloseButton )
     goto LABEL_18;
-  v34 = *(_QWORD *)&CloseButton->fields.m_CachedPtr;
-  v35 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+  v27 = *(_QWORD *)&CloseButton->fields.m_CachedPtr;
+  v28 = Method_System_Collections_Generic_List_EventDelegate__Add__;
   ++HIDWORD(CloseButton[1].klass);
-  if ( !v34 )
+  if ( !v27 )
     goto LABEL_18;
   klass_low = SLODWORD(CloseButton[1].klass);
-  if ( (unsigned int)klass_low >= *(_DWORD *)(v34 + 24) )
+  if ( (unsigned int)klass_low >= *(_DWORD *)(v27 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)CloseButton,
-      (Il2CppObject *)v31,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+      (Il2CppObject *)v24,
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
   }
   else
   {
-    v37 = v34 + 8 * klass_low;
+    v30 = v27 + 8 * klass_low;
     LODWORD(CloseButton[1].klass) = klass_low + 1;
-    *(_QWORD *)(v37 + 32) = v31;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v37 + 32), (int32_t)v31, v32, v33);
+    *(_QWORD *)(v30 + 32) = v24;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v30 + 32), (int32_t)v24, v25, v26);
   }
   BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL);
-  TutorialBigDialog__LoadImages(this, v38, v39);
+  TutorialBigDialog__LoadImages(this, v31, v32);
   CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !CloseButton )
 LABEL_18:
-    sub_1B7641C(CloseButton, v23);
+    sub_1B8880C(CloseButton, v16);
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
-  TutorialBigDialog__UpdateButtons(this, 1, v40);
+  TutorialBigDialog__UpdateButtons(this, 1, v33);
 }
 
 
@@ -1688,10 +1614,10 @@ void __fastcall TutorialBigDialog__OpenByConfigId(
   const MethodInfo *v26; // x2
   const MethodInfo *v27; // x2
 
-  if ( (byte_4A2CC05 & 1) == 0 )
+  if ( (byte_4A59E1E & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, images);
-    byte_4A2CC05 = 1;
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E1E = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -1700,18 +1626,18 @@ void __fastcall TutorialBigDialog__OpenByConfigId(
   }
   TutorialBigDialog__SetTouchMask(this, 0, *(const MethodInfo **)&configId);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v13, v14);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v13, v14);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
     v15,
     v16);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v17, v18);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v17, v18);
   CloseButton = this->fields.CloseButton;
   this->fields.configFlagId = configId;
-  *(_OWORD *)&this->fields.flagId = xmmword_BAD480;
+  *(_OWORD *)&this->fields.flagId = xmmword_BB4BF0;
   this->fields.sizeKind = 1;
   if ( !CloseButton )
     goto LABEL_11;
@@ -1726,14 +1652,14 @@ void __fastcall TutorialBigDialog__OpenByConfigId(
   if ( !v22
     || (UnityEngine_Transform__set_localPosition(v22, v21->static_fields->baseCloseButtonPosition, 0LL),
         this->fields.assetsImageLoadList = images,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, (int32_t)images, v23, v24),
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, (int32_t)images, v23, v24),
         this->fields.isButtonEnable = 0,
         BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL),
-        TutorialBigDialog__LoadImages_37167472(this, v25, v26),
+        TutorialBigDialog__LoadImages_37344760(this, v25, v26),
         (CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_11:
-    sub_1B7641C(CloseButton, v19);
+    sub_1B8880C(CloseButton, v19);
   }
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
   TutorialBigDialog__UpdateButtons(this, 1, v27);
@@ -1742,26 +1668,24 @@ LABEL_11:
 
 void __fastcall TutorialBigDialog__OpenWindow(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
-  System_Action_o *v7; // x20
+  __int64 v4; // x1
+  System_Action_o *v5; // x20
 
-  if ( (byte_4A2CC10 & 1) == 0 )
+  if ( (byte_4A59E29 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B761C0(&Method_TutorialBigDialog_EndOpen__, v4);
-    byte_4A2CC10 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_TutorialBigDialog_EndOpen__);
+    byte_4A59E29 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v6);
+    sub_1B8880C(0LL, v4);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0LL);
-  v7 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_TutorialBigDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v7, 1, 0LL);
+  v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_TutorialBigDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v5, 1, 0LL);
 }
 
 
@@ -1789,10 +1713,10 @@ void __fastcall TutorialBigDialog__OpenWithAssets(
   const MethodInfo *v24; // x2
   const MethodInfo *v25; // x2
 
-  if ( (byte_4A2CC03 & 1) == 0 )
+  if ( (byte_4A59E1C & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, images);
-    byte_4A2CC03 = 1;
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E1C = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -1801,18 +1725,18 @@ void __fastcall TutorialBigDialog__OpenWithAssets(
   }
   TutorialBigDialog__SetTouchMask(this, 0, (const MethodInfo *)closeFunc);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v11, v12);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v11, v12);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
     v13,
     v14);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v15, v16);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v15, v16);
   CloseButton = this->fields.CloseButton;
   this->fields.configFlagId = 0;
-  *(_OWORD *)&this->fields.flagId = xmmword_BAD480;
+  *(_OWORD *)&this->fields.flagId = xmmword_BB4BF0;
   this->fields.sizeKind = 1;
   if ( !CloseButton )
     goto LABEL_11;
@@ -1827,14 +1751,14 @@ void __fastcall TutorialBigDialog__OpenWithAssets(
   if ( !v20
     || (UnityEngine_Transform__set_localPosition(v20, v19->static_fields->baseCloseButtonPosition, 0LL),
         this->fields.assetsImageLoadList = images,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, (int32_t)images, v21, v22),
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.assetsImageLoadList, (int32_t)images, v21, v22),
         this->fields.isButtonEnable = 0,
         BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL),
-        TutorialBigDialog__LoadImages_37167472(this, v23, v24),
+        TutorialBigDialog__LoadImages_37344760(this, v23, v24),
         (CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_11:
-    sub_1B7641C(CloseButton, v17);
+    sub_1B8880C(CloseButton, v17);
   }
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
   TutorialBigDialog__UpdateButtons(this, 1, v25);
@@ -1842,7 +1766,7 @@ LABEL_11:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall TutorialBigDialog__Open_37165716(
+void __fastcall TutorialBigDialog__Open_37343004(
         TutorialBigDialog_o *this,
         TutorialFlag_ImageId_array *images,
         int32_t flagId,
@@ -1851,34 +1775,33 @@ void __fastcall TutorialBigDialog__Open_37165716(
         System_Action_o *endTurorialRequestFunc,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-  __int64 v20; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  __int64 v19; // x1
   UnityEngine_GameObject_o *CloseButton; // x0
-  TutorialBigDialog_c *v22; // x8
-  UnityEngine_Transform_o *v23; // x21
-  struct System_Int32_array *v24; // x0
+  TutorialBigDialog_c *v21; // x8
+  UnityEngine_Transform_o *v22; // x21
+  struct System_Int32_array *v23; // x0
   struct System_Int32_array **p_TutorialImageLoadList; // x21
-  int32_t v26; // w2
-  int32_t v27; // w3
-  struct System_Int32_array *v28; // x9
-  unsigned __int64 v29; // x10
-  unsigned __int64 v30; // x8
-  __int64 v31; // x13
-  System_Int32_array *v32; // x1
+  int32_t v25; // w2
+  int32_t v26; // w3
+  struct System_Int32_array *v27; // x9
+  unsigned __int64 v28; // x10
+  unsigned __int64 v29; // x8
+  __int64 v30; // x13
+  System_Int32_array *v31; // x1
+  const MethodInfo *v32; // x2
   const MethodInfo *v33; // x2
-  const MethodInfo *v34; // x2
 
-  if ( (byte_4A2CC00 & 1) == 0 )
+  if ( (byte_4A59E19 & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, images);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v13);
-    byte_4A2CC00 = 1;
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E19 = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -1887,15 +1810,15 @@ void __fastcall TutorialBigDialog__Open_37165716(
   }
   TutorialBigDialog__SetTouchMask(this, 0, *(const MethodInfo **)&flagId);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v14, v15);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v13, v14);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
-    v16,
-    v17);
+    v15,
+    v16);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v18, v19);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v17, v18);
   CloseButton = this->fields.CloseButton;
   this->fields.flagId = -1;
   this->fields.localFlagId = flagId;
@@ -1905,55 +1828,55 @@ void __fastcall TutorialBigDialog__Open_37165716(
   if ( !CloseButton )
     goto LABEL_19;
   CloseButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(CloseButton, 0LL);
-  v22 = TutorialBigDialog_TypeInfo;
-  v23 = (UnityEngine_Transform_o *)CloseButton;
+  v21 = TutorialBigDialog_TypeInfo;
+  v22 = (UnityEngine_Transform_o *)CloseButton;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v22 = TutorialBigDialog_TypeInfo;
+    v21 = TutorialBigDialog_TypeInfo;
   }
-  if ( !v23 )
+  if ( !v22 )
     goto LABEL_19;
-  UnityEngine_Transform__set_localPosition(v23, v22->static_fields->baseCloseButtonPosition, 0LL);
+  UnityEngine_Transform__set_localPosition(v22, v21->static_fields->baseCloseButtonPosition, 0LL);
   if ( !images )
     goto LABEL_19;
-  v24 = (struct System_Int32_array *)sub_1B76268(int___TypeInfo, images->max_length);
-  this->fields.TutorialImageLoadList = v24;
+  v23 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, images->max_length);
+  this->fields.TutorialImageLoadList = v23;
   p_TutorialImageLoadList = &this->fields.TutorialImageLoadList;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v24, v26, v27);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v23, v25, v26);
   if ( (int)*(_QWORD *)&images->max_length >= 1 )
   {
-    v28 = *p_TutorialImageLoadList;
-    v29 = (unsigned int)*(_QWORD *)&images->max_length;
-    v30 = 0LL;
-    v31 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
+    v27 = *p_TutorialImageLoadList;
+    v28 = (unsigned int)*(_QWORD *)&images->max_length;
+    v29 = 0LL;
+    v30 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
     do
     {
-      if ( v30 >= v29 )
+      if ( v29 >= v28 )
         goto LABEL_18;
-      if ( !v28 )
+      if ( !v27 )
         goto LABEL_19;
-      if ( v30 >= v28->max_length )
+      if ( v29 >= v27->max_length )
 LABEL_18:
-        sub_1B76424(CloseButton, v20);
-      *(_DWORD *)(v31 + 4 * v30) = images->m_Items[v30 + 1];
-      ++v30;
+        sub_1B88814(CloseButton, v19);
+      *(_DWORD *)(v30 + 4 * v29) = images->m_Items[v29 + 1];
+      ++v29;
     }
-    while ( (__int64)v30 < (int)v29 );
+    while ( (__int64)v29 < (int)v28 );
   }
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL);
-  TutorialBigDialog__LoadImages(this, v32, v33);
+  TutorialBigDialog__LoadImages(this, v31, v32);
   CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !CloseButton )
 LABEL_19:
-    sub_1B7641C(CloseButton, v20);
+    sub_1B8880C(CloseButton, v19);
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
-  TutorialBigDialog__UpdateButtons(this, 1, v34);
+  TutorialBigDialog__UpdateButtons(this, 1, v33);
 }
 
 
-void __fastcall TutorialBigDialog__Open_37166212(
+void __fastcall TutorialBigDialog__Open_37343500(
         TutorialBigDialog_o *this,
         System_Int32_array *images,
         int32_t flagId,
@@ -1980,10 +1903,10 @@ void __fastcall TutorialBigDialog__Open_37166212(
   const MethodInfo *v29; // x2
   const MethodInfo *v30; // x2
 
-  if ( (byte_4A2CC01 & 1) == 0 )
+  if ( (byte_4A59E1A & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, images);
-    byte_4A2CC01 = 1;
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E1A = 1;
   }
   if ( this->fields.IsInitialized )
   {
@@ -1996,15 +1919,15 @@ void __fastcall TutorialBigDialog__Open_37166212(
   }
   TutorialBigDialog__SetTouchMask(this, 0, v15);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v16, v17);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v16, v17);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
     v18,
     v19);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v20, v21);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v20, v21);
   CloseButton = this->fields.CloseButton;
   *(_QWORD *)&this->fields.flagId = -1LL;
   this->fields.eventFlagId = flagId;
@@ -2024,14 +1947,14 @@ void __fastcall TutorialBigDialog__Open_37166212(
   if ( !v25
     || (UnityEngine_Transform__set_localPosition(v25, v24->static_fields->baseCloseButtonPosition, 0LL),
         this->fields.TutorialImageLoadList = images,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)images, v26, v27),
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)images, v26, v27),
         this->fields.isButtonEnable = 0,
         BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL),
         TutorialBigDialog__LoadImages(this, v28, v29),
         (CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_12:
-    sub_1B7641C(CloseButton, v22);
+    sub_1B8880C(CloseButton, v22);
   }
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
   TutorialBigDialog__UpdateButtons(this, 1, v30);
@@ -2039,7 +1962,7 @@ LABEL_12:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall TutorialBigDialog__Open_37166604(
+void __fastcall TutorialBigDialog__Open_37343892(
         TutorialBigDialog_o *this,
         TutorialFlag_ImageId_array *images,
         int32_t flagId,
@@ -2049,34 +1972,33 @@ void __fastcall TutorialBigDialog__Open_37166604(
         System_Action_o *endTurorialRequestFunc,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-  int32_t v20; // w2
-  int32_t v21; // w3
-  __int64 v22; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
+  int32_t v20; // w3
+  __int64 v21; // x1
   UnityEngine_GameObject_o *CloseButton; // x0
-  TutorialBigDialog_c *v24; // x8
-  UnityEngine_Transform_o *v25; // x21
-  struct System_Int32_array *v26; // x0
+  TutorialBigDialog_c *v23; // x8
+  UnityEngine_Transform_o *v24; // x21
+  struct System_Int32_array *v25; // x0
   struct System_Int32_array **p_TutorialImageLoadList; // x21
-  int32_t v28; // w2
-  int32_t v29; // w3
-  struct System_Int32_array *v30; // x9
-  unsigned __int64 v31; // x10
-  unsigned __int64 v32; // x8
-  __int64 v33; // x13
-  System_Int32_array *v34; // x1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  struct System_Int32_array *v29; // x9
+  unsigned __int64 v30; // x10
+  unsigned __int64 v31; // x8
+  __int64 v32; // x13
+  System_Int32_array *v33; // x1
+  const MethodInfo *v34; // x2
   const MethodInfo *v35; // x2
-  const MethodInfo *v36; // x2
 
-  if ( (byte_4A2CC02 & 1) == 0 )
+  if ( (byte_4A59E1B & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, images);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v15);
-    byte_4A2CC02 = 1;
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E1B = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -2085,15 +2007,15 @@ void __fastcall TutorialBigDialog__Open_37166604(
   }
   TutorialBigDialog__SetTouchMask(this, 0, *(const MethodInfo **)&flagId);
   this->fields.endOpenCallbackFunc = endOpenFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v16, v17);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endOpenCallbackFunc, (int32_t)endOpenFunc, v15, v16);
   this->fields.endTurorialRequestFunc = endTurorialRequestFunc;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.endTurorialRequestFunc,
     (int32_t)endTurorialRequestFunc,
-    v18,
-    v19);
+    v17,
+    v18);
   this->fields.closeCallbackFunc = closeFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v20, v21);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc, (int32_t)closeFunc, v19, v20);
   CloseButton = this->fields.CloseButton;
   *(_QWORD *)&this->fields.flagId = -1LL;
   this->fields.eventFlagId = flagId;
@@ -2103,51 +2025,51 @@ void __fastcall TutorialBigDialog__Open_37166604(
   if ( !CloseButton )
     goto LABEL_19;
   CloseButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(CloseButton, 0LL);
-  v24 = TutorialBigDialog_TypeInfo;
-  v25 = (UnityEngine_Transform_o *)CloseButton;
+  v23 = TutorialBigDialog_TypeInfo;
+  v24 = (UnityEngine_Transform_o *)CloseButton;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v24 = TutorialBigDialog_TypeInfo;
+    v23 = TutorialBigDialog_TypeInfo;
   }
-  if ( !v25 )
+  if ( !v24 )
     goto LABEL_19;
-  UnityEngine_Transform__set_localPosition(v25, v24->static_fields->baseCloseButtonPosition, 0LL);
+  UnityEngine_Transform__set_localPosition(v24, v23->static_fields->baseCloseButtonPosition, 0LL);
   if ( !images )
     goto LABEL_19;
-  v26 = (struct System_Int32_array *)sub_1B76268(int___TypeInfo, images->max_length);
-  this->fields.TutorialImageLoadList = v26;
+  v25 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, images->max_length);
+  this->fields.TutorialImageLoadList = v25;
   p_TutorialImageLoadList = &this->fields.TutorialImageLoadList;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v26, v28, v29);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.TutorialImageLoadList, (int32_t)v25, v27, v28);
   if ( (int)*(_QWORD *)&images->max_length >= 1 )
   {
-    v30 = *p_TutorialImageLoadList;
-    v31 = (unsigned int)*(_QWORD *)&images->max_length;
-    v32 = 0LL;
-    v33 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
+    v29 = *p_TutorialImageLoadList;
+    v30 = (unsigned int)*(_QWORD *)&images->max_length;
+    v31 = 0LL;
+    v32 = (__int64)&(*p_TutorialImageLoadList)->m_Items[1];
     do
     {
-      if ( v32 >= v31 )
+      if ( v31 >= v30 )
         goto LABEL_18;
-      if ( !v30 )
+      if ( !v29 )
         goto LABEL_19;
-      if ( v32 >= v30->max_length )
+      if ( v31 >= v29->max_length )
 LABEL_18:
-        sub_1B76424(CloseButton, v22);
-      *(_DWORD *)(v33 + 4 * v32) = images->m_Items[v32 + 1];
-      ++v32;
+        sub_1B88814(CloseButton, v21);
+      *(_DWORD *)(v32 + 4 * v31) = images->m_Items[v31 + 1];
+      ++v31;
     }
-    while ( (__int64)v32 < (int)v31 );
+    while ( (__int64)v31 < (int)v30 );
   }
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMask((BaseDialog_o *)this, 0, 0LL);
-  TutorialBigDialog__LoadImages(this, v34, v35);
+  TutorialBigDialog__LoadImages(this, v33, v34);
   CloseButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !CloseButton )
 LABEL_19:
-    sub_1B7641C(CloseButton, v22);
+    sub_1B8880C(CloseButton, v21);
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
-  TutorialBigDialog__UpdateButtons(this, 1, v36);
+  TutorialBigDialog__UpdateButtons(this, 1, v35);
 }
 
 
@@ -2164,7 +2086,7 @@ void __fastcall TutorialBigDialog__SetTouchMask(TutorialBigDialog_o *this, bool 
                                                   0LL)) == 0LL
     || (TouchMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)TouchMask, 0LL)) == 0LL )
   {
-    sub_1B7641C(TouchMask, isDisp);
+    sub_1B8880C(TouchMask, isDisp);
   }
   UnityEngine_GameObject__SetActive(TouchMask, isDisp, 0LL);
 }
@@ -2174,25 +2096,20 @@ void __fastcall TutorialBigDialog__SetTouchMask(TutorialBigDialog_o *this, bool 
 void __fastcall TutorialBigDialog__UpdateButtons(TutorialBigDialog_o *this, bool isDisp, const MethodInfo *method)
 {
   TutorialBigDialog_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   struct System_Collections_Generic_List_GameObject__o *ImagePageList; // x8
   UILabel_o *basePanel; // x20
-  UILabel_o *v12; // x19
+  UILabel_o *v7; // x19
 
   v4 = this;
-  if ( (byte_4A2CC12 & 1) == 0 )
+  if ( (byte_4A59E2B & 1) == 0 )
   {
-    sub_1B761C0(&AndroidBackKeyManager_TypeInfo, isDisp);
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____75925424, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v6);
-    sub_1B761C0(&LocalizationManager_TypeInfo, v7);
-    sub_1B761C0(&StringLiteral_13441/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v8);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&StringLiteral_13442/*"TUTORIAL_IMAGE_DIALOG_PREV"*/, v9);
-    byte_4A2CC12 = 1;
+    sub_1B885B0(&AndroidBackKeyManager_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____76107632);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_13447/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&StringLiteral_13448/*"TUTORIAL_IMAGE_DIALOG_PREV"*/);
+    byte_4A59E2B = 1;
   }
   if ( !isDisp )
   {
@@ -2246,19 +2163,19 @@ void __fastcall TutorialBigDialog__UpdateButtons(TutorialBigDialog_o *this, bool
     this = (TutorialBigDialog_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                     (UnityEngine_Component_o *)this,
                                     1,
-                                    (const MethodInfo_2E59998 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____75925424);
+                                    (const MethodInfo_2E76E98 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____76107632);
     if ( !this )
       goto LABEL_34;
     if ( !LODWORD(this->fields.m_CancellationTokenSource) )
 LABEL_35:
-      sub_1B76424(this, isDisp);
+      sub_1B88814(this, isDisp);
     basePanel = (UILabel_o *)this->fields.basePanel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (TutorialBigDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13441/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, 0LL);
+    this = (TutorialBigDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13447/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, 0LL);
     if ( !basePanel )
 LABEL_34:
-      sub_1B7641C(this, isDisp);
+      sub_1B8880C(this, isDisp);
     UILabel__set_text(basePanel, (System_String_o *)this, 0LL);
   }
   this = (TutorialBigDialog_o *)v4->fields.PrevButton;
@@ -2279,133 +2196,127 @@ LABEL_34:
   this = (TutorialBigDialog_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_2E59998 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____75925424);
+                                  (const MethodInfo_2E76E98 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____76107632);
   if ( !this )
     goto LABEL_34;
   if ( !LODWORD(this->fields.m_CancellationTokenSource) )
     goto LABEL_35;
-  v12 = (UILabel_o *)this->fields.basePanel;
+  v7 = (UILabel_o *)this->fields.basePanel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (TutorialBigDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13442/*"TUTORIAL_IMAGE_DIALOG_PREV"*/, 0LL);
-  if ( !v12 )
+  this = (TutorialBigDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13448/*"TUTORIAL_IMAGE_DIALOG_PREV"*/, 0LL);
+  if ( !v7 )
     goto LABEL_34;
-  UILabel__set_text(v12, (System_String_o *)this, 0LL);
+  UILabel__set_text(v7, (System_String_o *)this, 0LL);
 LABEL_33:
   AndroidBackKeyManager_TypeInfo->static_fields->ToastEnabled = 1;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall TutorialBigDialog__UpdatePage(TutorialBigDialog_o *this, int32_t dispIndex, const MethodInfo *method)
 {
   int32_t v3; // w3
   long double v4; // q8
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   int32_t CurrentIndex; // w26
   struct UITexture_o **p_FadeInTarget; // x20
-  int32_t v14; // w2
-  int32_t v15; // w3
-  __int64 v16; // x1
-  const MethodInfo *v17; // x2
+  int32_t v9; // w2
+  int32_t v10; // w3
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
   System_Collections_Generic_List_object__o *ImagePageList; // x0
   int size; // w8
-  int v20; // w27
-  int32_t v21; // w23
-  UnityEngine_GameObject_o *v22; // x24
-  int32_t v23; // w2
-  int32_t v24; // w3
-  long double v25; // q0
-  System_Collections_Generic_List_object__o *v26; // x25
+  int v15; // w27
+  int32_t v16; // w23
+  UnityEngine_GameObject_o *v17; // x24
+  int32_t v18; // w2
+  int32_t v19; // w3
+  long double v20; // q0
+  System_Collections_Generic_List_object__o *v21; // x25
   System_Collections_Generic_List_object__c *klass; // x8
-  bool v28; // w1
+  bool v23; // w1
   UnityEngine_GameObject_o *gameObject; // x21
-  TutorialBigDialog_c *v30; // x8
-  UnityEngine_GameObject_o *v31; // x0
-  UITweener_o *v32; // x20
-  EventDelegate_Callback_o *v33; // x21
+  TutorialBigDialog_c *v25; // x8
+  UnityEngine_GameObject_o *v26; // x0
+  UITweener_o *v27; // x20
+  EventDelegate_Callback_o *v28; // x21
 
-  if ( (byte_4A2CC11 & 1) == 0 )
+  if ( (byte_4A59E2A & 1) == 0 )
   {
-    sub_1B761C0(&EventDelegate_Callback_TypeInfo, *(_QWORD *)&dispIndex);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UITexture___, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v8);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v9);
-    sub_1B761C0(&Method_TutorialBigDialog__UpdatePage_b__61_0__, v10);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v11);
-    byte_4A2CC11 = 1;
+    sub_1B885B0(&EventDelegate_Callback_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1B885B0(&Method_TutorialBigDialog__UpdatePage_b__61_0__);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    byte_4A59E2A = 1;
   }
   CurrentIndex = this->fields.CurrentIndex;
   this->fields.FadeInTarget = 0LL;
   p_FadeInTarget = &this->fields.FadeInTarget;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.FadeInTarget, 0, (int32_t)method, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.FadeInTarget, 0, (int32_t)method, v3);
   this->fields.FadeOutTarget = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.FadeOutTarget, 0, v14, v15);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.FadeOutTarget, 0, v9, v10);
   ImagePageList = (System_Collections_Generic_List_object__o *)this->fields.ImagePageList;
   if ( !ImagePageList )
     goto LABEL_29;
   size = ImagePageList->fields._size;
-  v20 = size - 1;
+  v15 = size - 1;
   if ( size >= 1 )
   {
     LODWORD(v4) = 1000593162;
-    v21 = 0;
+    v16 = 0;
     while ( 1 )
     {
       ImagePageList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      ImagePageList,
-                                                                     v21,
-                                                                     (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                     v16,
+                                                                     (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !ImagePageList )
         goto LABEL_29;
-      v22 = (UnityEngine_GameObject_o *)ImagePageList;
+      v17 = (UnityEngine_GameObject_o *)ImagePageList;
       ImagePageList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                      (UnityEngine_GameObject_o *)ImagePageList,
-                                                                     (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
-      v26 = ImagePageList;
-      if ( dispIndex == v21 )
+                                                                     (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+      v21 = ImagePageList;
+      if ( dispIndex == v16 )
       {
         if ( CurrentIndex == dispIndex )
         {
           if ( !ImagePageList )
             goto LABEL_29;
           klass = ImagePageList->klass;
-          LODWORD(v25) = 1.0;
+          LODWORD(v20) = 1.0;
         }
         else
         {
           *p_FadeInTarget = (struct UITexture_o *)ImagePageList;
-          sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.FadeInTarget, (int32_t)ImagePageList, v23, v24);
-          if ( !v26 )
+          sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.FadeInTarget, (int32_t)ImagePageList, v18, v19);
+          if ( !v21 )
             goto LABEL_29;
-          klass = v26->klass;
-          ImagePageList = v26;
-          v25 = v4;
+          klass = v21->klass;
+          ImagePageList = v21;
+          v20 = v4;
         }
         ((void (__fastcall *)(System_Collections_Generic_List_object__o *, Il2CppMethodPointer, long double))klass->vtable._8_unknown.method)(
           ImagePageList,
           klass->vtable._9_unknown.methodPtr,
-          v25);
+          v20);
       }
       else
       {
-        v28 = 0;
-        if ( v21 != this->fields.CurrentIndex || CurrentIndex == dispIndex )
+        v23 = 0;
+        if ( v16 != this->fields.CurrentIndex || CurrentIndex == dispIndex )
           goto LABEL_18;
         this->fields.FadeOutTarget = (struct UITexture_o *)ImagePageList;
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.FadeOutTarget, (int32_t)ImagePageList, v23, v24);
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.FadeOutTarget, (int32_t)ImagePageList, v18, v19);
       }
-      v28 = 1;
+      v23 = 1;
 LABEL_18:
-      UnityEngine_GameObject__SetActive(v22, v28, 0LL);
-      if ( v20 == v21 )
+      UnityEngine_GameObject__SetActive(v17, v23, 0LL);
+      if ( v15 == v16 )
         break;
       ImagePageList = (System_Collections_Generic_List_object__o *)this->fields.ImagePageList;
-      ++v21;
+      ++v16;
       if ( !ImagePageList )
         goto LABEL_29;
     }
@@ -2413,7 +2324,7 @@ LABEL_18:
   this->fields.CurrentIndex = dispIndex;
   if ( CurrentIndex == dispIndex )
   {
-    TutorialBigDialog__UpdateButtons(this, 1, v17);
+    TutorialBigDialog__UpdateButtons(this, 1, v12);
     return;
   }
   ImagePageList = (System_Collections_Generic_List_object__o *)this->fields.FadeOutTarget;
@@ -2421,29 +2332,28 @@ LABEL_18:
   if ( !ImagePageList )
     goto LABEL_29;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)ImagePageList, 0LL);
-  v30 = TutorialBigDialog_TypeInfo;
+  v25 = TutorialBigDialog_TypeInfo;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-    v30 = TutorialBigDialog_TypeInfo;
+    v25 = TutorialBigDialog_TypeInfo;
   }
-  TweenAlpha__Begin(gameObject, v30->static_fields->FADE_TIME, 0.0, 0LL);
+  TweenAlpha__Begin(gameObject, v25->static_fields->FADE_TIME, 0.0, 0LL);
   ImagePageList = (System_Collections_Generic_List_object__o *)*p_FadeInTarget;
   if ( !*p_FadeInTarget
-    || (v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)ImagePageList, 0LL),
-        v32 = (UITweener_o *)TweenAlpha__Begin(v31, TutorialBigDialog_TypeInfo->static_fields->FADE_TIME, 1.0, 0LL),
-        v33 = (EventDelegate_Callback_o *)sub_1B7640C(EventDelegate_Callback_TypeInfo),
-        EventDelegate_Callback___ctor(v33, (Il2CppObject *)this, Method_TutorialBigDialog__UpdatePage_b__61_0__, 0LL),
-        !v32) )
+    || (v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)ImagePageList, 0LL),
+        v27 = (UITweener_o *)TweenAlpha__Begin(v26, TutorialBigDialog_TypeInfo->static_fields->FADE_TIME, 1.0, 0LL),
+        v28 = (EventDelegate_Callback_o *)sub_1B887FC(EventDelegate_Callback_TypeInfo),
+        EventDelegate_Callback___ctor(v28, (Il2CppObject *)this, Method_TutorialBigDialog__UpdatePage_b__61_0__, 0LL),
+        !v27) )
   {
 LABEL_29:
-    sub_1B7641C(ImagePageList, v16);
+    sub_1B8880C(ImagePageList, v11);
   }
-  UITweener__SetOnFinished(v32, v33, 0LL);
+  UITweener__SetOnFinished(v27, v28, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_IEnumerator_o *__fastcall TutorialBigDialog__WaitPurchase(
         TutorialBigDialog_o *this,
         int32_t CurrentIndex,
@@ -2453,16 +2363,16 @@ System_Collections_IEnumerator_o *__fastcall TutorialBigDialog__WaitPurchase(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A2CC0E & 1) == 0 )
+  if ( (byte_4A59E27 & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog__WaitPurchase_d__58_TypeInfo, *(_QWORD *)&CurrentIndex);
-    byte_4A2CC0E = 1;
+    sub_1B885B0(&TutorialBigDialog__WaitPurchase_d__58_TypeInfo);
+    byte_4A59E27 = 1;
   }
-  v5 = sub_1B7640C(TutorialBigDialog__WaitPurchase_d__58_TypeInfo);
+  v5 = sub_1B887FC(TutorialBigDialog__WaitPurchase_d__58_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_DWORD *)(v5 + 40) = CurrentIndex;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -2474,25 +2384,22 @@ void __fastcall TutorialBigDialog___LoadStartAssets_b__54_0(
         const MethodInfo *method)
 {
   TutorialBigDialog_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Action_o *v8; // x21
-  const MethodInfo *v9; // x3
+  System_Action_o *v5; // x21
+  const MethodInfo *v6; // x3
   struct System_String_array *assetsImageLoadList; // x8
-  int v11; // w9
-  Il2CppObject *Object_object__48515452; // x0
-  const MethodInfo *v13; // x2
-  const MethodInfo *v14; // x2
+  int v8; // w9
+  Il2CppObject *Object_object__48635516; // x0
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x2
 
   v4 = this;
-  if ( (byte_4A2CC1E & 1) == 0 )
+  if ( (byte_4A59E37 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, data);
-    sub_1B761C0(&Method_AssetData_GetObject_Texture2D____75903240, v5);
-    sub_1B761C0(&Method_TutorialBigDialog__LoadStartAssets_b__54_1__, v6);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&StringLiteral_16249/*"_L_"*/, v7);
-    byte_4A2CC1E = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
+    sub_1B885B0(&Method_TutorialBigDialog__LoadStartAssets_b__54_1__);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&StringLiteral_16255/*"_L_"*/);
+    byte_4A59E37 = 1;
   }
   if ( !data )
     goto LABEL_12;
@@ -2506,29 +2413,29 @@ void __fastcall TutorialBigDialog___LoadStartAssets_b__54_0(
     goto LABEL_12;
   this = (TutorialBigDialog_o *)System_String__Contains(
                                   (System_String_o *)this,
-                                  (System_String_o *)StringLiteral_16249/*"_L_"*/,
+                                  (System_String_o *)StringLiteral_16255/*"_L_"*/,
                                   0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v8 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-    System_Action___ctor(v8, (Il2CppObject *)v4, Method_TutorialBigDialog__LoadStartAssets_b__54_1__, 0LL);
-    TutorialBigDialog__AddScrollImg(v4, data, v8, v9);
+    v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+    System_Action___ctor(v5, (Il2CppObject *)v4, Method_TutorialBigDialog__LoadStartAssets_b__54_1__, 0LL);
+    TutorialBigDialog__AddScrollImg(v4, data, v5, v6);
     return;
   }
   assetsImageLoadList = v4->fields.assetsImageLoadList;
   if ( !assetsImageLoadList )
 LABEL_12:
-    sub_1B7641C(this, data);
-  v11 = v4->fields._loadIndex + 1;
-  if ( v11 >= assetsImageLoadList->max_length )
+    sub_1B8880C(this, data);
+  v8 = v4->fields._loadIndex + 1;
+  if ( v8 >= assetsImageLoadList->max_length )
 LABEL_13:
-    sub_1B76424(this, data);
-  Object_object__48515452 = AssetData__GetObject_object__48515452(
+    sub_1B88814(this, data);
+  Object_object__48635516 = AssetData__GetObject_object__48635516(
                               data,
-                              assetsImageLoadList->m_Items[v11],
-                              (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
-  TutorialBigDialog__AddImg(v4, (UnityEngine_Texture2D_o *)Object_object__48515452, v13);
-  TutorialBigDialog__AfterLoad(v4, 2, v14);
+                              assetsImageLoadList->m_Items[v8],
+                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
+  TutorialBigDialog__AddImg(v4, (UnityEngine_Texture2D_o *)Object_object__48635516, v10);
+  TutorialBigDialog__AfterLoad(v4, 2, v11);
 }
 
 
@@ -2546,27 +2453,24 @@ void __fastcall TutorialBigDialog___LoadStart_b__53_0(
         const MethodInfo *method)
 {
   TutorialBigDialog_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  System_Action_o *v9; // x21
-  const MethodInfo *v10; // x3
+  const MethodInfo *v5; // x2
+  System_Action_o *v6; // x21
+  const MethodInfo *v7; // x3
   struct System_Int32_array *TutorialImageLoadList; // x8
   __int64 loadIndex; // x9
   System_String_o *TuorialImageName; // x0
-  Il2CppObject *Object_object__48515452; // x0
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x2
+  Il2CppObject *Object_object__48635516; // x0
+  const MethodInfo *v12; // x2
+  const MethodInfo *v13; // x2
 
   v4 = this;
-  if ( (byte_4A2CC1D & 1) == 0 )
+  if ( (byte_4A59E36 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, data);
-    sub_1B761C0(&Method_AssetData_GetObject_Texture2D____75903240, v5);
-    sub_1B761C0(&Method_TutorialBigDialog__LoadStart_b__53_1__, v6);
-    this = (TutorialBigDialog_o *)sub_1B761C0(&StringLiteral_16249/*"_L_"*/, v7);
-    byte_4A2CC1D = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
+    sub_1B885B0(&Method_TutorialBigDialog__LoadStart_b__53_1__);
+    this = (TutorialBigDialog_o *)sub_1B885B0(&StringLiteral_16255/*"_L_"*/);
+    byte_4A59E36 = 1;
   }
   if ( !data )
     goto LABEL_12;
@@ -2580,30 +2484,30 @@ void __fastcall TutorialBigDialog___LoadStart_b__53_0(
     goto LABEL_12;
   this = (TutorialBigDialog_o *)System_String__Contains(
                                   (System_String_o *)this,
-                                  (System_String_o *)StringLiteral_16249/*"_L_"*/,
+                                  (System_String_o *)StringLiteral_16255/*"_L_"*/,
                                   0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v9 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-    System_Action___ctor(v9, (Il2CppObject *)v4, Method_TutorialBigDialog__LoadStart_b__53_1__, 0LL);
-    TutorialBigDialog__AddScrollImg(v4, data, v9, v10);
+    v6 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+    System_Action___ctor(v6, (Il2CppObject *)v4, Method_TutorialBigDialog__LoadStart_b__53_1__, 0LL);
+    TutorialBigDialog__AddScrollImg(v4, data, v6, v7);
     return;
   }
   TutorialImageLoadList = v4->fields.TutorialImageLoadList;
   if ( !TutorialImageLoadList )
 LABEL_12:
-    sub_1B7641C(this, data);
+    sub_1B8880C(this, data);
   loadIndex = v4->fields._loadIndex;
   if ( (unsigned int)loadIndex >= TutorialImageLoadList->max_length )
 LABEL_13:
-    sub_1B76424(this, data);
-  TuorialImageName = TutorialBigDialog__GetTuorialImageName(this, TutorialImageLoadList->m_Items[loadIndex + 1], v8);
-  Object_object__48515452 = AssetData__GetObject_object__48515452(
+    sub_1B88814(this, data);
+  TuorialImageName = TutorialBigDialog__GetTuorialImageName(this, TutorialImageLoadList->m_Items[loadIndex + 1], v5);
+  Object_object__48635516 = AssetData__GetObject_object__48635516(
                               data,
                               TuorialImageName,
-                              (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
-  TutorialBigDialog__AddImg(v4, (UnityEngine_Texture2D_o *)Object_object__48515452, v15);
-  TutorialBigDialog__AfterLoad(v4, 1, v16);
+                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
+  TutorialBigDialog__AddImg(v4, (UnityEngine_Texture2D_o *)Object_object__48635516, v12);
+  TutorialBigDialog__AfterLoad(v4, 1, v13);
 }
 
 
@@ -2634,7 +2538,7 @@ void __fastcall TutorialBigDialog___UpdatePage_b__61_0(TutorialBigDialog_o *this
   if ( !FadeOutTarget
     || (FadeOutTarget = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(FadeOutTarget, 0LL)) == 0LL )
   {
-    sub_1B7641C(FadeOutTarget, v3);
+    sub_1B8880C(FadeOutTarget, v3);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)FadeOutTarget, 0, 0LL);
   this->fields.IsFading = 0;
@@ -2644,20 +2548,17 @@ void __fastcall TutorialBigDialog___UpdatePage_b__61_0(TutorialBigDialog_o *this
 
 void __fastcall TutorialBigDialog__refreshCurrent(TutorialBigDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *ImagePageList; // x0
   int32_t CurrentIndex; // w1
   UnityEngine_Object_o *Component_object; // x19
 
-  if ( (byte_4A2CC13 & 1) == 0 )
+  if ( (byte_4A59E2C & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A2CC13 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A59E2C = 1;
   }
   ImagePageList = (System_Collections_Generic_List_object__o *)this->fields.ImagePageList;
   if ( !ImagePageList )
@@ -2668,12 +2569,12 @@ void __fastcall TutorialBigDialog__refreshCurrent(TutorialBigDialog_o *this, con
     ImagePageList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                    ImagePageList,
                                                                    CurrentIndex,
-                                                                   (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                   (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( !ImagePageList )
       goto LABEL_13;
     Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  (UnityEngine_GameObject_o *)ImagePageList,
-                                                 (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
+                                                 (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_TutorialImageLong___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     ImagePageList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
@@ -2692,7 +2593,7 @@ void __fastcall TutorialBigDialog__refreshCurrent(TutorialBigDialog_o *this, con
         }
       }
 LABEL_13:
-      sub_1B7641C(ImagePageList, method);
+      sub_1B8880C(ImagePageList, method);
     }
   }
 }
@@ -2714,33 +2615,29 @@ bool __fastcall TutorialBigDialog__WaitPurchase_d__58__MoveNext(
 {
   const MethodInfo *v2; // x2
   TutorialBigDialog__WaitPurchase_d__58_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   int32_t _1__state; // w8
-  TutorialBigDialog___c_c *v9; // x0
+  TutorialBigDialog___c_c *v5; // x0
   System_Func_bool__o *_9__58_0; // x20
-  Il2CppObject *v11; // x21
+  Il2CppObject *v7; // x21
   struct TutorialBigDialog___c_StaticFields *static_fields; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  UnityEngine_WaitUntil_o *v11; // x21
+  ServantStatusBattleListViewItem_o *p__2__current; // x19
   int32_t v13; // w2
   int32_t v14; // w3
-  UnityEngine_WaitUntil_o *v15; // x21
-  ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v17; // w2
-  int32_t v18; // w3
   bool result; // w0
   TutorialBigDialog_o *_4__this; // x20
 
   v3 = this;
-  if ( (byte_4A2CC22 & 1) == 0 )
+  if ( (byte_4A59E3B & 1) == 0 )
   {
-    sub_1B761C0(&System_Func_bool__TypeInfo, method);
-    sub_1B761C0(&Method_TutorialBigDialog___c__WaitPurchase_b__58_0__, v4);
-    sub_1B761C0(&TutorialBigDialog___c_TypeInfo, v5);
-    sub_1B761C0(&UnityEngine_WaitUntil_TypeInfo, v6);
-    this = (TutorialBigDialog__WaitPurchase_d__58_o *)sub_1B761C0(&StringLiteral_10001/*"OpenWindow"*/, v7);
-    byte_4A2CC22 = 1;
+    sub_1B885B0(&System_Func_bool__TypeInfo);
+    sub_1B885B0(&Method_TutorialBigDialog___c__WaitPurchase_b__58_0__);
+    sub_1B885B0(&TutorialBigDialog___c_TypeInfo);
+    sub_1B885B0(&UnityEngine_WaitUntil_TypeInfo);
+    this = (TutorialBigDialog__WaitPurchase_d__58_o *)sub_1B885B0(&StringLiteral_10004/*"OpenWindow"*/);
+    byte_4A59E3B = 1;
   }
   _1__state = v3->fields.__1__state;
   if ( _1__state == 1 )
@@ -2748,11 +2645,11 @@ bool __fastcall TutorialBigDialog__WaitPurchase_d__58__MoveNext(
     _4__this = v3->fields.__4__this;
     v3->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     TutorialBigDialog__UpdatePage(_4__this, v3->fields.CurrentIndex, v2);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)_4__this,
-      (System_String_o *)StringLiteral_10001/*"OpenWindow"*/,
+      (System_String_o *)StringLiteral_10004/*"OpenWindow"*/,
       0.3,
       0LL);
     return 0;
@@ -2760,32 +2657,32 @@ bool __fastcall TutorialBigDialog__WaitPurchase_d__58__MoveNext(
   if ( _1__state )
     return 0;
   v3->fields.__1__state = -1;
-  v9 = TutorialBigDialog___c_TypeInfo;
+  v5 = TutorialBigDialog___c_TypeInfo;
   if ( !TutorialBigDialog___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TutorialBigDialog___c_TypeInfo);
-    v9 = TutorialBigDialog___c_TypeInfo;
+    v5 = TutorialBigDialog___c_TypeInfo;
   }
-  _9__58_0 = v9->static_fields->__9__58_0;
+  _9__58_0 = v5->static_fields->__9__58_0;
   if ( !_9__58_0 )
   {
-    if ( !v9->_2.cctor_finished )
+    if ( !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v9);
-      v9 = TutorialBigDialog___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = TutorialBigDialog___c_TypeInfo;
     }
-    v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__58_0 = (System_Func_bool__o *)sub_1B7640C(System_Func_bool__TypeInfo);
-    System_Func_bool____ctor(_9__58_0, v11, Method_TutorialBigDialog___c__WaitPurchase_b__58_0__, 0LL);
+    v7 = (Il2CppObject *)v5->static_fields->__9;
+    _9__58_0 = (System_Func_bool__o *)sub_1B887FC(System_Func_bool__TypeInfo);
+    System_Func_bool____ctor(_9__58_0, v7, Method_TutorialBigDialog___c__WaitPurchase_b__58_0__, 0LL);
     static_fields = TutorialBigDialog___c_TypeInfo->static_fields;
     static_fields->__9__58_0 = _9__58_0;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__58_0, (int32_t)_9__58_0, v13, v14);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__58_0, (int32_t)_9__58_0, v9, v10);
   }
-  v15 = (UnityEngine_WaitUntil_o *)sub_1B7640C(UnityEngine_WaitUntil_TypeInfo);
-  UnityEngine_WaitUntil___ctor(v15, _9__58_0, 0LL);
-  v3->fields.__2__current = (Il2CppObject *)v15;
+  v11 = (UnityEngine_WaitUntil_o *)sub_1B887FC(UnityEngine_WaitUntil_TypeInfo);
+  UnityEngine_WaitUntil___ctor(v11, _9__58_0, 0LL);
+  v3->fields.__2__current = (Il2CppObject *)v11;
   p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-  sub_1B76164(p__2__current, (int32_t)v15, v17, v18);
+  sub_1B88554(p__2__current, (int32_t)v11, v13, v14);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   return result;
@@ -2808,11 +2705,11 @@ void __fastcall __noreturn TutorialBigDialog__WaitPurchase_d__58__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_TutorialBigDialog__WaitPurchase_d__58_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_TutorialBigDialog__WaitPurchase_d__58_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -2834,20 +2731,19 @@ void __fastcall TutorialBigDialog__WaitPurchase_d__58__System_IDisposable_Dispos
 
 void __fastcall TutorialBigDialog___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
 
-  if ( (byte_4A2CC1F & 1) == 0 )
+  if ( (byte_4A59E38 & 1) == 0 )
   {
-    sub_1B761C0(&TutorialBigDialog___c_TypeInfo, v1);
-    byte_4A2CC1F = 1;
+    sub_1B885B0(&TutorialBigDialog___c_TypeInfo);
+    byte_4A59E38 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B7640C(TutorialBigDialog___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  TutorialBigDialog___c_TypeInfo->static_fields->__9 = (struct TutorialBigDialog___c_o *)v2;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)TutorialBigDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1B887FC(TutorialBigDialog___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  TutorialBigDialog___c_TypeInfo->static_fields->__9 = (struct TutorialBigDialog___c_o *)v1;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)TutorialBigDialog___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -2861,10 +2757,10 @@ bool __fastcall TutorialBigDialog___c___WaitPurchase_b__58_0(TutorialBigDialog__
 {
   PurchaseBehaviour_c *v2; // x0
 
-  if ( (byte_4A2CC20 & 1) == 0 )
+  if ( (byte_4A59E39 & 1) == 0 )
   {
-    sub_1B761C0(&PurchaseBehaviour_TypeInfo, method);
-    byte_4A2CC20 = 1;
+    sub_1B885B0(&PurchaseBehaviour_TypeInfo);
+    byte_4A59E39 = 1;
   }
   v2 = PurchaseBehaviour_TypeInfo;
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
@@ -2892,47 +2788,42 @@ void __fastcall TutorialBigDialog___c__DisplayClass56_0___AddScrollImg_b__0(
   int32_t v3; // w3
   AssetData_o *v4; // x20
   TutorialBigDialog___c__DisplayClass56_0_o *v5; // x19
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   struct TutorialBigDialog_o *_4__this; // x8
-  UnityEngine_Shader_o *v12; // x22
-  UnityEngine_Material_o *v13; // x21
+  UnityEngine_Shader_o *v7; // x22
+  UnityEngine_Material_o *v8; // x21
   struct TutorialImageLong_o *comp; // x8
-  const MethodInfo *v15; // x2
-  struct TutorialBigDialog_o *v16; // x23
+  const MethodInfo *v10; // x2
+  struct TutorialBigDialog_o *v11; // x23
+  struct TutorialBigDialog_o *v12; // x8
+  Il2CppObject *Object_object__48635516; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  struct TutorialBigDialog_o *v16; // x8
   struct TutorialBigDialog_o *v17; // x8
-  Il2CppObject *Object_object__48515452; // x0
-  int32_t v19; // w2
-  int32_t v20; // w3
-  struct TutorialBigDialog_o *v21; // x8
-  struct TutorialBigDialog_o *v22; // x8
-  _QWORD *v23; // x9
+  _QWORD *v18; // x9
   __int64 comp_low; // x10
-  TutorialBigDialog_c **v25; // x8
+  TutorialBigDialog_c **v20; // x8
 
   v4 = aData;
   v5 = this;
-  if ( (byte_4A2CC21 & 1) == 0 )
+  if ( (byte_4A59E3A & 1) == 0 )
   {
-    sub_1B761C0(&Method_AssetData_GetObject_Texture2D____75903240, aData);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
-    sub_1B761C0(&UnityEngine_Material_TypeInfo, v7);
-    sub_1B761C0(&TutorialBigDialog_TypeInfo, v8);
-    sub_1B761C0(&StringLiteral_4974/*"Custom/SpriteWithMask"*/, v9);
-    this = (TutorialBigDialog___c__DisplayClass56_0_o *)sub_1B761C0(&StringLiteral_16261/*"_MaskTex"*/, v10);
-    byte_4A2CC21 = 1;
+    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1B885B0(&UnityEngine_Material_TypeInfo);
+    sub_1B885B0(&TutorialBigDialog_TypeInfo);
+    sub_1B885B0(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
+    this = (TutorialBigDialog___c__DisplayClass56_0_o *)sub_1B885B0(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4A59E3A = 1;
   }
   _4__this = v5->fields.__4__this;
   if ( !_4__this )
     goto LABEL_20;
   _4__this->fields.baseTexAssetData = v4;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&_4__this->fields.baseTexAssetData, (int32_t)v4, (int32_t)method, v3);
-  v12 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4974/*"Custom/SpriteWithMask"*/, 0LL);
-  v13 = (UnityEngine_Material_o *)sub_1B7640C(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v13, v12, 0LL);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&_4__this->fields.baseTexAssetData, (int32_t)v4, (int32_t)method, v3);
+  v7 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0LL);
+  v8 = (UnityEngine_Material_o *)sub_1B887FC(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v8, v7, 0LL);
   comp = v5->fields.comp;
   if ( !comp )
     goto LABEL_20;
@@ -2941,68 +2832,68 @@ void __fastcall TutorialBigDialog___c__DisplayClass56_0___AddScrollImg_b__0(
     goto LABEL_20;
   ((void (__fastcall *)(TutorialBigDialog___c__DisplayClass56_0_o *, UnityEngine_Material_o *, Il2CppMethodPointer))this->klass[1].vtable._2_GetHashCode.method)(
     this,
-    v13,
+    v8,
     this->klass[1].vtable._3_ToString.methodPtr);
   this = (TutorialBigDialog___c__DisplayClass56_0_o *)TutorialBigDialog_TypeInfo;
-  v16 = v5->fields.__4__this;
+  v11 = v5->fields.__4__this;
   if ( !TutorialBigDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialBigDialog_TypeInfo);
-  if ( !v16 )
+  if ( !v11 )
     goto LABEL_20;
   this = (TutorialBigDialog___c__DisplayClass56_0_o *)TutorialBigDialog__GetTuorialImageName(
                                                         (TutorialBigDialog_o *)this,
                                                         TutorialBigDialog_TypeInfo->static_fields->baseImgNo,
-                                                        v15);
+                                                        v10);
   if ( !v4 )
     goto LABEL_20;
-  this = (TutorialBigDialog___c__DisplayClass56_0_o *)AssetData__GetObject_object__48515452(
+  this = (TutorialBigDialog___c__DisplayClass56_0_o *)AssetData__GetObject_object__48635516(
                                                         v4,
                                                         (System_String_o *)this,
-                                                        (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
-  if ( !v13 )
+                                                        (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
+  if ( !v8 )
     goto LABEL_20;
-  UnityEngine_Material__set_mainTexture(v13, (UnityEngine_Texture_o *)this, 0LL);
-  v17 = v5->fields.__4__this;
-  if ( !v17 )
+  UnityEngine_Material__set_mainTexture(v8, (UnityEngine_Texture_o *)this, 0LL);
+  v12 = v5->fields.__4__this;
+  if ( !v12 )
     goto LABEL_20;
-  this = (TutorialBigDialog___c__DisplayClass56_0_o *)v17->fields.alphaTexAssetData;
+  this = (TutorialBigDialog___c__DisplayClass56_0_o *)v12->fields.alphaTexAssetData;
   if ( !this )
     goto LABEL_20;
-  Object_object__48515452 = AssetData__GetObject_object__48515452(
+  Object_object__48635516 = AssetData__GetObject_object__48635516(
                               (AssetData_o *)this,
                               TutorialBigDialog_TypeInfo->static_fields->alphaImgName,
-                              (const MethodInfo_2E4497C *)Method_AssetData_GetObject_Texture2D____75903240);
+                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
   UnityEngine_Material__SetTexture(
-    v13,
-    (System_String_o *)StringLiteral_16261/*"_MaskTex"*/,
-    (UnityEngine_Texture_o *)Object_object__48515452,
+    v8,
+    (System_String_o *)StringLiteral_16267/*"_MaskTex"*/,
+    (UnityEngine_Texture_o *)Object_object__48635516,
     0LL);
-  v21 = v5->fields.__4__this;
-  if ( !v21
-    || (this = (TutorialBigDialog___c__DisplayClass56_0_o *)v21->fields.ImagePageList) == 0LL
+  v16 = v5->fields.__4__this;
+  if ( !v16
+    || (this = (TutorialBigDialog___c__DisplayClass56_0_o *)v16->fields.ImagePageList) == 0LL
     || (aData = (AssetData_o *)v5->fields.obj,
-        v22 = this->fields.__4__this,
-        v23 = Method_System_Collections_Generic_List_GameObject__Add__,
+        v17 = this->fields.__4__this,
+        v18 = Method_System_Collections_Generic_List_GameObject__Add__,
         ++HIDWORD(this->fields.comp),
-        !v22) )
+        !v17) )
   {
 LABEL_20:
-    sub_1B7641C(this, aData);
+    sub_1B8880C(this, aData);
   }
   comp_low = SLODWORD(this->fields.comp);
-  if ( (unsigned int)comp_low >= LODWORD(v22->fields.m_CancellationTokenSource) )
+  if ( (unsigned int)comp_low >= LODWORD(v17->fields.m_CancellationTokenSource) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)aData,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v25 = &v22->klass + comp_low;
+    v20 = &v17->klass + comp_low;
     LODWORD(this->fields.comp) = comp_low + 1;
-    v25[4] = (TutorialBigDialog_c *)aData;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v25 + 4), (int32_t)aData, v19, v20);
+    v20[4] = (TutorialBigDialog_c *)aData;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v20 + 4), (int32_t)aData, v14, v15);
   }
   ActionExtensions__Call(v5->fields.callback, 0LL);
 }
@@ -3026,9 +2917,9 @@ void __fastcall TutorialBigDialog___c__DisplayClass59_0___LoadAlpha_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B7641C(this, data);
+    sub_1B8880C(this, data);
   _4__this->fields.alphaTexAssetData = data;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&_4__this->fields.alphaTexAssetData,
     (int32_t)data,
     (int32_t)method,

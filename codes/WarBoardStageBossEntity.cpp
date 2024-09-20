@@ -1,28 +1,27 @@
 void __fastcall WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2EF46 & 1) == 0 )
+  if ( (byte_4A5C176 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2EF46 = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5C176 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4A2EF45 & 1) == 0 )
+  if ( (byte_4A5C175 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4A2EF45 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4A5C175 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_2E6062C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,22 +39,21 @@ System_String_array *__fastcall WarBoardStageBossEntity__GetTextEffectColors(
         WarBoardStageBossEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_String_o *StringValue; // x19
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v6; // x1
+  __int64 v5; // x1
 
-  if ( (byte_4A2EF44 & 1) == 0 )
+  if ( (byte_4A5C174 & 1) == 0 )
   {
-    sub_1B761C0(&string___TypeInfo, method);
-    sub_1B761C0(&StringLiteral_23895/*"text_effect_colors"*/, v3);
-    byte_4A2EF44 = 1;
+    sub_1B885B0(&string___TypeInfo);
+    sub_1B885B0(&StringLiteral_23908/*"text_effect_colors"*/);
+    byte_4A5C174 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23895/*"text_effect_colors"*/, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23908/*"text_effect_colors"*/, 0LL, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
   if ( IsNullOrEmpty )
-    return (System_String_array *)sub_1B76268(string___TypeInfo, 0LL);
+    return (System_String_array *)sub_1B88658(string___TypeInfo, 0LL);
   if ( !StringValue )
-    sub_1B7641C(IsNullOrEmpty, v6);
+    sub_1B8880C(IsNullOrEmpty, v5);
   return System_String__Split(StringValue, 0x2Cu, 0, 0LL);
 }

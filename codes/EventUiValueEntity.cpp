@@ -1,46 +1,44 @@
 void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  int32_t v4; // w1
+  int32_t v3; // w1
   struct System_String_o **p_value; // x19
-  int32_t v6; // w2
-  int32_t v7; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
 
-  if ( (byte_4A2E14C & 1) == 0 )
+  if ( (byte_4A5B36C & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    sub_1B761C0(&StringLiteral_1/*""*/, v3);
-    byte_4A2E14C = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5B36C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
-  v4 = (int)StringLiteral_1/*""*/;
+  v3 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_value, v4, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_value, v3, v5, v6);
   *((_DWORD *)p_value + 2) = 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventUiValueEntity__CreatePK(
         int32_t id,
         int32_t type,
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4A2E14D & 1) == 0 )
+  if ( (byte_4A5B36D & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
-    byte_4A2E14D = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_4A5B36D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_2E60D0C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_2E7E20C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

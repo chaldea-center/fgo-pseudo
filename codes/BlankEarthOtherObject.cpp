@@ -4,10 +4,10 @@ void __fastcall BlankEarthOtherObject___ctor(BlankEarthOtherObject_o *this, cons
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A2AA93 & 1) == 0 )
+  if ( (byte_4A57C9E & 1) == 0 )
   {
-    sub_1B761C0(&QAAOtherObjStateController_TypeInfo, method);
-    byte_4A2AA93 = 1;
+    sub_1B885B0(&QAAOtherObjStateController_TypeInfo);
+    byte_4A57C9E = 1;
   }
   *(_QWORD *)&this->fields.otherObjZoomInPos.fields.y = 0LL;
   this->fields.otherObjZoomInPos.fields.x = 0.0;
@@ -15,41 +15,40 @@ void __fastcall BlankEarthOtherObject___ctor(BlankEarthOtherObject_o *this, cons
   *(_QWORD *)&this->fields.zoomOutOffsetEulerAngle.fields.y = 0LL;
   *(_QWORD *)&this->fields.zoomInOffsetEulerAngle.fields.x = 0LL;
   *(_QWORD *)&this->fields.zoomInSpeed = 0x3F0000003F000000LL;
-  v3 = (QAAOtherObjStateController_o *)sub_1B7640C(QAAOtherObjStateController_TypeInfo);
+  v3 = (QAAOtherObjStateController_o *)sub_1B887FC(QAAOtherObjStateController_TypeInfo);
   QAAOtherObjStateController___ctor(v3, 0LL);
   this->fields.stateController = v3;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.stateController, (int32_t)v3, v4, v5);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.stateController, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall BlankEarthOtherObject__Awake(BlankEarthOtherObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   QAAOtherObjStateController_o *stateController; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
-  System_Object_array *v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v4; // x0
+  System_Object_array *v5; // x0
+  int32_t v6; // w2
+  int32_t v7; // w3
 
-  if ( (byte_4A2AA8C & 1) == 0 )
+  if ( (byte_4A57C97 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Linq_Enumerable_OfType_AnimationState___, method);
-    sub_1B761C0(&Method_System_Linq_Enumerable_ToArray_AnimationState___, v3);
-    byte_4A2AA8C = 1;
+    sub_1B885B0(&Method_System_Linq_Enumerable_OfType_AnimationState___);
+    sub_1B885B0(&Method_System_Linq_Enumerable_ToArray_AnimationState___);
+    byte_4A57C97 = 1;
   }
   stateController = this->fields.stateController;
   if ( !stateController )
-    sub_1B7641C(0LL, method);
+    sub_1B8880C(0LL, method);
   QAAOtherObjStateController__Init(stateController, (QAAOtherObjStateController_IBlankEarthObject_o *)this, 0LL);
-  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
+  v4 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.anim,
-                                                              (const MethodInfo_2E8C48C *)Method_System_Linq_Enumerable_OfType_AnimationState___);
-  v6 = System_Linq_Enumerable__ToArray_object_(
-         v5,
-         (const MethodInfo_2E9AEA4 *)Method_System_Linq_Enumerable_ToArray_AnimationState___);
-  this->fields.animationStateArray = (struct UnityEngine_AnimationState_array *)v6;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.animationStateArray, (int32_t)v6, v7, v8);
+                                                              (const MethodInfo_2EA998C *)Method_System_Linq_Enumerable_OfType_AnimationState___);
+  v5 = System_Linq_Enumerable__ToArray_object_(
+         v4,
+         (const MethodInfo_2EB86E4 *)Method_System_Linq_Enumerable_ToArray_AnimationState___);
+  this->fields.animationStateArray = (struct UnityEngine_AnimationState_array *)v5;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.animationStateArray, (int32_t)v5, v6, v7);
 }
 
 
@@ -65,19 +64,18 @@ void __fastcall BlankEarthOtherObject__ChangeState(
 
   this->fields.stateEndAct = finishCallback;
   p_stateEndAct = &this->fields.stateEndAct;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.stateEndAct,
     (int32_t)finishCallback,
     (int32_t)finishCallback,
     (int32_t)method);
   v7 = (QAAOtherObjStateController_o *)*(p_stateEndAct - 5);
   if ( !v7 )
-    sub_1B7641C(0LL, v6);
+    sub_1B8880C(0LL, v6);
   QAAOtherObjStateController__SetState(v7, state, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_IEnumerator_o *__fastcall BlankEarthOtherObject__CoPlayAnimUntilFinish(
         BlankEarthOtherObject_o *this,
         int32_t index,
@@ -90,24 +88,23 @@ System_Collections_IEnumerator_o *__fastcall BlankEarthOtherObject__CoPlayAnimUn
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A2AA91 & 1) == 0 )
+  if ( (byte_4A57C9C & 1) == 0 )
   {
-    sub_1B761C0(&BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_TypeInfo, *(_QWORD *)&index);
-    byte_4A2AA91 = 1;
+    sub_1B885B0(&BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_TypeInfo);
+    byte_4A57C9C = 1;
   }
-  v7 = sub_1B7640C(BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_TypeInfo);
+  v7 = sub_1B887FC(BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_DWORD *)(v7 + 40) = index;
   *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)finishCallback, v10, v11);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BlankEarthOtherObject__GetAnimName(
         BlankEarthOtherObject_o *this,
         int32_t index,
@@ -116,10 +113,10 @@ System_String_o *__fastcall BlankEarthOtherObject__GetAnimName(
   System_Object_array *animationStateArray; // x0
   Il2CppObject *v6; // x0
 
-  if ( (byte_4A2AA92 & 1) == 0 )
+  if ( (byte_4A57C9D & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_IndexValue_AnimationState___, *(_QWORD *)&index);
-    byte_4A2AA92 = 1;
+    sub_1B885B0(&Method_BasicHelper_IndexValue_AnimationState___);
+    byte_4A57C9D = 1;
   }
   animationStateArray = (System_Object_array *)this->fields.animationStateArray;
   if ( animationStateArray
@@ -127,7 +124,7 @@ System_String_o *__fastcall BlankEarthOtherObject__GetAnimName(
                animationStateArray,
                index,
                0LL,
-               (const MethodInfo_2E51254 *)Method_BasicHelper_IndexValue_AnimationState___)) != 0LL )
+               (const MethodInfo_2E6E754 *)Method_BasicHelper_IndexValue_AnimationState___)) != 0LL )
   {
     return UnityEngine_AnimationState__get_name((UnityEngine_AnimationState_o *)v6, 0LL);
   }
@@ -140,43 +137,38 @@ System_String_o *__fastcall BlankEarthOtherObject__GetAnimName(
 
 int32_t __fastcall BlankEarthOtherObject__GetCurrentAnimIndex(BlankEarthOtherObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x0
-  __int64 v9; // x0
-  UnityEngine_Object_o *v10; // x20
+  __int64 v3; // x0
+  __int64 v4; // x0
+  UnityEngine_Object_o *v5; // x20
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
+  __int64 v7; // x1
   bool IsExistCommand; // w20
-  int32_t v14; // w20
-  BlankEarthGimmickAddMaster_o *v15; // x21
+  int32_t v9; // w20
+  BlankEarthGimmickAddMaster_o *v10; // x21
   BlankEarthGimmickAddEntity_o *PrioredAvailableEntity; // x0
 
-  if ( (byte_4A2AA90 & 1) == 0 )
+  if ( (byte_4A57C9B & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_BlankEarthGimmickAddMaster___, method);
-    sub_1B761C0(&DataManager_TypeInfo, v3);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__, v5);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v6);
-    sub_1B761C0(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v7);
-    byte_4A2AA90 = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_BlankEarthGimmickAddMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    sub_1B885B0(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    byte_4A57C9B = 1;
   }
-  v8 = *((_QWORD *)Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__ + 4);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1BC809C(v8);
-  v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
-  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1BC809C(v9);
-  v10 = **(UnityEngine_Object_o ***)(v9 + 184);
+  v3 = *((_QWORD *)Method_SingletonMonoBehaviour_QuestAfterAction__getInstance__ + 4);
+  if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
+    v3 = sub_1BDA48C(v3);
+  v4 = *(_QWORD *)(*(_QWORD *)(v3 + 192) + 16LL);
+  if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
+    v4 = sub_1BDA48C(v4);
+  v5 = **(UnityEngine_Object_o ***)(v4 + 184);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v10, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !Instance )
       goto LABEL_21;
     IsExistCommand = QuestAfterAction__IsExistCommand(
@@ -189,23 +181,23 @@ int32_t __fastcall BlankEarthOtherObject__GetCurrentAnimIndex(BlankEarthOtherObj
   {
     IsExistCommand = 0;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
-  v14 = clsQuestCheck__GetBeforeClearQuestId((clsQuestCheck_o *)Instance, IsExistCommand, 0LL);
+  v9 = clsQuestCheck__GetBeforeClearQuestId((clsQuestCheck_o *)Instance, IsExistCommand, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BlankEarthGimmickAddMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BlankEarthGimmickAddMaster___);
   if ( !Instance )
 LABEL_21:
-    sub_1B7641C(Instance, v12);
-  v15 = (BlankEarthGimmickAddMaster_o *)Instance;
+    sub_1B8880C(Instance, v7);
+  v10 = (BlankEarthGimmickAddMaster_o *)Instance;
   if ( BlankEarthGimmickAddMaster__HasAnyRecord((BlankEarthGimmickAddMaster_o *)Instance, 0LL)
     && (PrioredAvailableEntity = BlankEarthGimmickAddMaster__GetPrioredAvailableEntity(
-                                   v15,
+                                   v10,
                                    1,
                                    this->fields._objectId_k__BackingField,
-                                   v14,
+                                   v9,
                                    0,
                                    0LL)) != 0LL )
   {
@@ -224,7 +216,7 @@ int32_t __fastcall BlankEarthOtherObject__GetDispType(BlankEarthOtherObject_o *t
 
   objectInfo = this->fields.objectInfo;
   if ( !objectInfo )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   return objectInfo->fields._dispType_k__BackingField;
 }
 
@@ -247,7 +239,7 @@ void __fastcall BlankEarthOtherObject__PlayAnim(
   System_Collections_IEnumerator_o *v5; // x1
 
   v5 = BlankEarthOtherObject__CoPlayAnimUntilFinish(this, index, finishCallback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
 }
 
 
@@ -324,10 +316,10 @@ void __fastcall BlankEarthOtherObject__SetAnimationToEnd(
     anim = this->fields.anim;
     if ( !anim
       || (UnityEngine_Animation__Rewind(anim, 0LL), (anim = this->fields.anim) == 0LL)
-      || (UnityEngine_Animation__Play_69032500(anim, AnimName, 0LL), (anim = this->fields.anim) == 0LL)
+      || (UnityEngine_Animation__Play_69204472(anim, AnimName, 0LL), (anim = this->fields.anim) == 0LL)
       || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(anim, AnimName, 0LL)) == 0LL )
     {
-      sub_1B7641C(anim, v5);
+      sub_1B8880C(anim, v5);
     }
     UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)anim, 1.0, 0LL);
   }
@@ -343,7 +335,7 @@ void __fastcall BlankEarthOtherObject__SetDispType(
 
   objectInfo = this->fields.objectInfo;
   if ( !objectInfo )
-    sub_1B7641C(this, dispType);
+    sub_1B8880C(this, dispType);
   objectInfo->fields._dispType_k__BackingField = dispType;
 }
 
@@ -367,18 +359,18 @@ void __fastcall BlankEarthOtherObject__SetOtherObj(
   const MethodInfo *v15; // x2
 
   v4 = this;
-  if ( (byte_4A2AA8D & 1) == 0 )
+  if ( (byte_4A57C98 & 1) == 0 )
   {
-    this = (BlankEarthOtherObject_o *)sub_1B761C0(&BlankEarthOtherObjectInfo_TypeInfo, ent);
-    byte_4A2AA8D = 1;
+    this = (BlankEarthOtherObject_o *)sub_1B885B0(&BlankEarthOtherObjectInfo_TypeInfo);
+    byte_4A57C98 = 1;
   }
   if ( !ent )
     goto LABEL_7;
   v4->fields._objectId_k__BackingField = ent->fields.id;
-  v5 = (Il2CppObject *)sub_1B7640C(BlankEarthOtherObjectInfo_TypeInfo);
+  v5 = (Il2CppObject *)sub_1B887FC(BlankEarthOtherObjectInfo_TypeInfo);
   System_Object___ctor(v5, 0LL);
   v4->fields.objectInfo = (struct BlankEarthOtherObjectInfo_o *)v5;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v4->fields.objectInfo, (int32_t)v5, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v4->fields.objectInfo, (int32_t)v5, v6, v7);
   objectInfo = v4->fields.objectInfo;
   if ( !objectInfo
     || (objectInfo->fields._ObjectId_k__BackingField = v4->fields._objectId_k__BackingField,
@@ -386,7 +378,7 @@ void __fastcall BlankEarthOtherObject__SetOtherObj(
         (v9 = v4->fields.objectInfo) == 0LL) )
   {
 LABEL_7:
-    sub_1B7641C(this, ent);
+    sub_1B8880C(this, ent);
   }
   v9->fields._dispType_k__BackingField = (unsigned __int8)this & 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
@@ -417,7 +409,7 @@ void __fastcall BlankEarthOtherObject__Update(BlankEarthOtherObject_o *this, con
 
   stateController = this->fields.stateController;
   if ( !stateController )
-    sub_1B7641C(0LL, method);
+    sub_1B8880C(0LL, method);
   QAAOtherObjStateController__Update(stateController, 0LL);
 }
 
@@ -431,12 +423,11 @@ void __fastcall BlankEarthOtherObject__UpdateDisp(
   BlankEarthOtherObject_o *v3; // x19
   struct BlankEarthOtherObjectInfo_o *objectInfo; // x8
   int32_t dispType_k__BackingField; // w21
-  __int64 v6; // x1
   UnityEngine_GameObject_o *gameObject; // x20
   struct UnityEngine_Vector3_StaticFields *p_selfScale_k__BackingField; // x8
   float *p_y; // x9
   float *p_z; // x10
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = this;
   if ( this->fields._mtIsUpdate_k__BackingField || isForce )
@@ -454,19 +445,19 @@ void __fastcall BlankEarthOtherObject__UpdateDisp(
       }
       else
       {
-        if ( !byte_4A28BB1 )
+        if ( !byte_4A55CE1 )
         {
-          sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v6);
-          byte_4A28BB1 = 1;
+          sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+          byte_4A55CE1 = 1;
         }
         p_selfScale_k__BackingField = UnityEngine_Vector3_TypeInfo->static_fields;
         p_y = &p_selfScale_k__BackingField->zeroVector.fields.y;
         p_z = &p_selfScale_k__BackingField->zeroVector.fields.z;
       }
-      v11.fields.z = *p_z;
-      v11.fields.y = *p_y;
-      v11.fields.x = p_selfScale_k__BackingField->zeroVector.fields.x;
-      GameObjectExtensions__SetLocalScale(gameObject, v11, 0LL);
+      v10.fields.z = *p_z;
+      v10.fields.y = *p_y;
+      v10.fields.x = p_selfScale_k__BackingField->zeroVector.fields.x;
+      GameObjectExtensions__SetLocalScale(gameObject, v10, 0LL);
       if ( dispType_k__BackingField )
         goto LABEL_12;
       this = (BlankEarthOtherObject_o *)v3->fields.anim;
@@ -478,166 +469,156 @@ LABEL_12:
         return;
       }
     }
-    sub_1B7641C(this, isForce);
+    sub_1B8880C(this, isForce);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BlankEarthOtherObject__ZoomInAdjustAppearance(
         BlankEarthOtherObject_o *this,
         float speedTime,
         int32_t easingType,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x21
+  __int64 v7; // x21
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
+  __int64 v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  EasingObject_o *v20; // x20
-  System_Action_o *v21; // x22
-  System_Action_o *v22; // x23
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v14; // w2
+  int32_t v15; // w3
+  EasingObject_o *v16; // x20
+  System_Action_o *v17; // x22
+  System_Action_o *v18; // x23
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A2AA8E & 1) == 0 )
+  if ( (byte_4A57C99 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&easingType);
-    sub_1B761C0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v7);
-    sub_1B761C0(&Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__0__, v8);
-    sub_1B761C0(&Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__1__, v9);
-    sub_1B761C0(&BlankEarthOtherObject___c__DisplayClass48_0_TypeInfo, v10);
-    byte_4A2AA8E = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1B885B0(&Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__0__);
+    sub_1B885B0(&Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__1__);
+    sub_1B885B0(&BlankEarthOtherObject___c__DisplayClass48_0_TypeInfo);
+    byte_4A57C99 = 1;
   }
-  v11 = sub_1B7640C(BlankEarthOtherObject___c__DisplayClass48_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
+  v7 = sub_1B887FC(BlankEarthOtherObject___c__DisplayClass48_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_8;
-  *(_QWORD *)(v11 + 24) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)this, v14, v15);
+  *(_QWORD *)(v7 + 24) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 24), (int32_t)this, v10, v11);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EB34A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v11 + 16) = Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)Component_object, v18, v19);
+                       (const MethodInfo_2ED09A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v7 + 16) = Component_object;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)Component_object, v14, v15);
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_8;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
   if ( !transform )
     goto LABEL_8;
-  *(UnityEngine_Quaternion_o *)(v11 + 32) = UnityEngine_Transform__get_rotation(
-                                              (UnityEngine_Transform_o *)transform,
-                                              0LL);
-  v23.fields.x = this->fields.zoomInOffsetEulerAngle.fields.x * 0.017453;
-  v23.fields.y = this->fields.zoomInOffsetEulerAngle.fields.y * 0.017453;
-  v23.fields.z = this->fields.zoomInOffsetEulerAngle.fields.z * 0.017453;
-  *(UnityEngine_Quaternion_o *)(v11 + 48) = UnityEngine_Quaternion__Internal_FromEulerRad(v23, 0LL);
-  v20 = *(EasingObject_o **)(v11 + 16);
-  v21 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  *(UnityEngine_Quaternion_o *)(v7 + 32) = UnityEngine_Transform__get_rotation(
+                                             (UnityEngine_Transform_o *)transform,
+                                             0LL);
+  v19.fields.x = this->fields.zoomInOffsetEulerAngle.fields.x * 0.017453;
+  v19.fields.y = this->fields.zoomInOffsetEulerAngle.fields.y * 0.017453;
+  v19.fields.z = this->fields.zoomInOffsetEulerAngle.fields.z * 0.017453;
+  *(UnityEngine_Quaternion_o *)(v7 + 48) = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0LL);
+  v16 = *(EasingObject_o **)(v7 + 16);
+  v17 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v21,
-    (Il2CppObject *)v11,
+    v17,
+    (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__0__,
     0LL);
-  v22 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
-    (Il2CppObject *)v11,
+    v18,
+    (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__1__,
     0LL);
-  if ( !v20 )
+  if ( !v16 )
 LABEL_8:
-    sub_1B7641C(transform, v13);
-  EasingObject__Play(v20, speedTime, v21, v22, 0.0, easingType, 0LL);
+    sub_1B8880C(transform, v9);
+  EasingObject__Play(v16, speedTime, v17, v18, 0.0, easingType, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BlankEarthOtherObject__ZoomOutAdjustAppearance(
         BlankEarthOtherObject_o *this,
         float speedTime,
         int32_t easingType,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x21
+  __int64 v7; // x21
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
+  __int64 v9; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  EasingObject_o *v20; // x20
-  System_Action_o *v21; // x22
-  System_Action_o *v22; // x23
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v14; // w2
+  int32_t v15; // w3
+  EasingObject_o *v16; // x20
+  System_Action_o *v17; // x22
+  System_Action_o *v18; // x23
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A2AA8F & 1) == 0 )
+  if ( (byte_4A57C9A & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&easingType);
-    sub_1B761C0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v7);
-    sub_1B761C0(&Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__0__, v8);
-    sub_1B761C0(&Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__1__, v9);
-    sub_1B761C0(&BlankEarthOtherObject___c__DisplayClass49_0_TypeInfo, v10);
-    byte_4A2AA8F = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1B885B0(&Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__0__);
+    sub_1B885B0(&Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__1__);
+    sub_1B885B0(&BlankEarthOtherObject___c__DisplayClass49_0_TypeInfo);
+    byte_4A57C9A = 1;
   }
-  v11 = sub_1B7640C(BlankEarthOtherObject___c__DisplayClass49_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
+  v7 = sub_1B887FC(BlankEarthOtherObject___c__DisplayClass49_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_8;
-  *(_QWORD *)(v11 + 24) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)this, v14, v15);
+  *(_QWORD *)(v7 + 24) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 24), (int32_t)this, v10, v11);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EB34A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v11 + 16) = Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)Component_object, v18, v19);
+                       (const MethodInfo_2ED09A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v7 + 16) = Component_object;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)Component_object, v14, v15);
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_8;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
   if ( !transform )
     goto LABEL_8;
-  *(UnityEngine_Quaternion_o *)(v11 + 32) = UnityEngine_Transform__get_rotation(
-                                              (UnityEngine_Transform_o *)transform,
-                                              0LL);
-  v23.fields.x = this->fields.zoomOutOffsetEulerAngle.fields.x * 0.017453;
-  v23.fields.y = this->fields.zoomOutOffsetEulerAngle.fields.y * 0.017453;
-  v23.fields.z = this->fields.zoomOutOffsetEulerAngle.fields.z * 0.017453;
-  *(UnityEngine_Quaternion_o *)(v11 + 48) = UnityEngine_Quaternion__Internal_FromEulerRad(v23, 0LL);
-  v20 = *(EasingObject_o **)(v11 + 16);
-  v21 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  *(UnityEngine_Quaternion_o *)(v7 + 32) = UnityEngine_Transform__get_rotation(
+                                             (UnityEngine_Transform_o *)transform,
+                                             0LL);
+  v19.fields.x = this->fields.zoomOutOffsetEulerAngle.fields.x * 0.017453;
+  v19.fields.y = this->fields.zoomOutOffsetEulerAngle.fields.y * 0.017453;
+  v19.fields.z = this->fields.zoomOutOffsetEulerAngle.fields.z * 0.017453;
+  *(UnityEngine_Quaternion_o *)(v7 + 48) = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0LL);
+  v16 = *(EasingObject_o **)(v7 + 16);
+  v17 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v21,
-    (Il2CppObject *)v11,
+    v17,
+    (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__0__,
     0LL);
-  v22 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
-    (Il2CppObject *)v11,
+    v18,
+    (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__1__,
     0LL);
-  if ( !v20 )
+  if ( !v16 )
 LABEL_8:
-    sub_1B7641C(transform, v13);
-  EasingObject__Play(v20, speedTime, v21, v22, 0.0, easingType, 0LL);
+    sub_1B8880C(transform, v9);
+  EasingObject__Play(v16, speedTime, v17, v18, 0.0, easingType, 0LL);
 }
 
 
@@ -843,7 +824,7 @@ LABEL_14:
           {
             v5->fields.__2__current = 0LL;
             p__2__current = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-            sub_1B76164(p__2__current, 0, v10, v11);
+            sub_1B88554(p__2__current, 0, v10, v11);
             result = 1;
             *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
             return result;
@@ -851,7 +832,7 @@ LABEL_14:
           goto LABEL_17;
         }
 LABEL_19:
-        sub_1B7641C(this, method);
+        sub_1B8880C(this, method);
       }
     }
 LABEL_17:
@@ -865,7 +846,7 @@ LABEL_17:
       goto LABEL_19;
     AnimName = BlankEarthOtherObject__GetAnimName(_4__this, this->fields.index, v2);
     v5->fields._animName_5__2 = AnimName;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&v5->fields._animName_5__2, (int32_t)AnimName, v7, v8);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&v5->fields._animName_5__2, (int32_t)AnimName, v7, v8);
     if ( !System_String__IsNullOrEmpty(v5->fields._animName_5__2, 0LL) )
     {
       this = (BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_o *)_4__this->fields.anim;
@@ -875,7 +856,7 @@ LABEL_17:
       this = (BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_o *)_4__this->fields.anim;
       if ( !this )
         goto LABEL_19;
-      UnityEngine_Animation__Play_69032500((UnityEngine_Animation_o *)this, v5->fields._animName_5__2, 0LL);
+      UnityEngine_Animation__Play_69204472((UnityEngine_Animation_o *)this, v5->fields._animName_5__2, 0LL);
       v5->fields._totalTime_5__3 = 0.0;
       goto LABEL_14;
     }
@@ -901,11 +882,11 @@ void __fastcall __noreturn BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -971,7 +952,7 @@ void __fastcall BlankEarthOtherObject___c__DisplayClass48_0___ZoomInAdjustAppear
         !v8) )
   {
 LABEL_6:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   }
   UnityEngine_Transform__set_rotation(v8, *(UnityEngine_Quaternion_o *)&v9, 0LL);
 }
@@ -990,7 +971,7 @@ void __fastcall BlankEarthOtherObject___c__DisplayClass48_0___ZoomInAdjustAppear
                                                 (UnityEngine_GameObject_o *)_4__this,
                                                 0LL)) == 0LL )
   {
-    sub_1B7641C(_4__this, method);
+    sub_1B8880C(_4__this, method);
   }
   UnityEngine_Transform__set_rotation((UnityEngine_Transform_o *)_4__this, this->fields.qua_to, 0LL);
 }
@@ -1042,7 +1023,7 @@ void __fastcall BlankEarthOtherObject___c__DisplayClass49_0___ZoomOutAdjustAppea
         !v8) )
   {
 LABEL_6:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   }
   UnityEngine_Transform__set_rotation(v8, *(UnityEngine_Quaternion_o *)&v9, 0LL);
 }
@@ -1061,7 +1042,7 @@ void __fastcall BlankEarthOtherObject___c__DisplayClass49_0___ZoomOutAdjustAppea
                                                 (UnityEngine_GameObject_o *)_4__this,
                                                 0LL)) == 0LL )
   {
-    sub_1B7641C(_4__this, method);
+    sub_1B8880C(_4__this, method);
   }
   UnityEngine_Transform__set_rotation((UnityEngine_Transform_o *)_4__this, this->fields.qua_to, 0LL);
 }

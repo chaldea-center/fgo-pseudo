@@ -1,28 +1,27 @@
 void __fastcall EventCommandAssistEntity___ctor(EventCommandAssistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2DE66 & 1) == 0 )
+  if ( (byte_4A5B084 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2DE66 = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5B084 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCommandAssistEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4A2DE65 & 1) == 0 )
+  if ( (byte_4A5B083 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4A2DE65 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4A5B083 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2E6062C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -36,7 +35,6 @@ System_String_o *__fastcall EventCommandAssistEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall EventCommandAssistEntity__IsOpen(
         EventCommandAssistEntity_o *this,
         int32_t beforeClearQuestId,
@@ -44,10 +42,10 @@ bool __fastcall EventCommandAssistEntity__IsOpen(
 {
   int32_t commonReleaseId; // w19
 
-  if ( (byte_4A2DE64 & 1) == 0 )
+  if ( (byte_4A5B082 & 1) == 0 )
   {
-    sub_1B761C0(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4A2DE64 = 1;
+    sub_1B885B0(&CondType_TypeInfo);
+    byte_4A5B082 = 1;
   }
   commonReleaseId = this->fields.commonReleaseId;
   if ( (beforeClearQuestId & 0x80000000) == 0 )

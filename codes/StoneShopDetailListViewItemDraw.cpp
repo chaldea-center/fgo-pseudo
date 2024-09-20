@@ -26,7 +26,7 @@ void __fastcall StoneShopDetailListViewItemDraw__SetItem(
     || (ItemIconComponent__SetItemImage((ItemIconComponent_o *)this, item->fields._ImageId_k__BackingField, 0LL),
         (this = (StoneShopDetailListViewItemDraw_o *)v3->fields.messageLabel) == 0LL) )
   {
-    sub_1B7641C(this, item);
+    sub_1B8880C(this, item);
   }
   UILabel__set_text((UILabel_o *)this, item->fields._Message_k__BackingField, 0LL);
 }

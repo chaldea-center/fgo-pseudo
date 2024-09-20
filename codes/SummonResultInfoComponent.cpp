@@ -13,21 +13,21 @@ void __fastcall SummonResultInfoComponent__OnClickSvt(SummonResultInfoComponent_
   struct GachaInfos_o *resultData; // x8
   struct SummonResultInfoComponent_ClickDelegate_o *clickCallbackFunc; // x9
 
-  if ( (byte_4A2A866 & 1) == 0 )
+  if ( (byte_4A57A71 & 1) == 0 )
   {
-    sub_1B761C0(&Method_SummonResultInfoComponent_OnClickSvt__, method);
-    byte_4A2A866 = 1;
+    sub_1B885B0(&Method_SummonResultInfoComponent_OnClickSvt__);
+    byte_4A57A71 = 1;
   }
   if ( this->fields.clickCallbackFunc )
   {
     v3 = Method_SummonResultInfoComponent_OnClickSvt__;
     if ( (*((_BYTE *)Method_SummonResultInfoComponent_OnClickSvt__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B761D8(Method_SummonResultInfoComponent_OnClickSvt__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B761A4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B885C8(Method_SummonResultInfoComponent_OnClickSvt__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     resultData = this->fields.resultData;
     if ( !resultData || (clickCallbackFunc = this->fields.clickCallbackFunc) == 0LL )
-      sub_1B7641C(v5, v6);
+      sub_1B8880C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int64_t, _QWORD))clickCallbackFunc->fields.m_target)(
       clickCallbackFunc->fields.original_method_info,
       resultData->fields.userSvtId,
@@ -45,81 +45,68 @@ void __fastcall SummonResultInfoComponent__setResultData(
         int32_t befMana,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  char v26; // w2
-  int32_t v27; // w3
+  char v13; // w2
+  int32_t v14; // w3
   DataManager_o *Instance; // x0
   __int64 sellMana; // x1
-  DataManager_o *v30; // x23
+  DataManager_o *v17; // x23
   bool isNew; // w24
   int32_t type; // w25
-  Il2CppObject *v33; // x0
-  UserCommandCodeEntity_o *v34; // x26
-  int32_t v35; // w25
+  Il2CppObject *v20; // x0
+  UserCommandCodeEntity_o *v21; // x26
+  int32_t v22; // w25
   struct DataMasterBase_array *datalist; // x25
-  __int64 v37; // x26
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v38; // x26
+  __int64 v24; // x26
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v25; // x26
   struct System_Collections_Generic_List_string__o *masterCheckName; // x25
-  __int64 v40; // x27
-  int32_t v41; // w0
+  __int64 v27; // x27
+  int32_t v28; // w0
   int32_t fakeValue; // w4
-  int32_t v43; // w2
+  int32_t v30; // w2
   UIButton_o *iconBtn; // x24
-  System_String_o *v45; // x21
-  __int64 v46; // x2
-  __int64 v47; // x3
-  __int64 v48; // x4
-  Il2CppObject *v49; // x0
+  System_String_o *v32; // x21
+  __int64 v33; // x2
+  __int64 v34; // x3
+  __int64 v35; // x4
+  Il2CppObject *v36; // x0
   int32_t svtCoinNum; // [xsp+44h] [xbp-6Ch] BYREF
-  Il2CppObject *v51; // [xsp+48h] [xbp-68h] BYREF
+  Il2CppObject *v38; // [xsp+48h] [xbp-68h] BYREF
   Il2CppObject *entity; // [xsp+58h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v54; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v41; // 0:x0.16
 
-  if ( (byte_4A2A865 & 1) == 0 )
+  if ( (byte_4A57A70 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMasterData_ServantMaster___, data);
-    sub_1B761C0(&Method_DataManager_GetMasterData_SvtCoinMaster___, v13);
-    sub_1B761C0(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v14);
-    sub_1B761C0(&Method_DataManager_GetMasterData_UserServantMaster___, v15);
-    sub_1B761C0(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v16);
-    sub_1B761C0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v17);
-    sub_1B761C0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v18);
-    sub_1B761C0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v19);
-    sub_1B761C0(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__, v20);
-    sub_1B761C0(&int_TypeInfo, v21);
-    sub_1B761C0(&LocalizationManager_TypeInfo, v22);
-    sub_1B761C0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v23);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
-    sub_1B761C0(&StringLiteral_12366/*"SUMMON_RESULT_COIN_FORMAT"*/, v25);
-    byte_4A2A865 = 1;
+    sub_1B885B0(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_SvtCoinMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1B885B0(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+    sub_1B885B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1B885B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1B885B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1B885B0(&Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__);
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1B885B0(&StringLiteral_12370/*"SUMMON_RESULT_COIN_FORMAT"*/);
+    byte_4A57A70 = 1;
   }
   entity = 0LL;
-  v51 = 0LL;
+  v38 = 0LL;
   this->fields.resultData = data;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.resultData,
     (int32_t)data,
     isOverlap,
     (int32_t)callback);
   this->fields.clickCallbackFunc = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.clickCallbackFunc, (int32_t)callback, v26, v27);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.clickCallbackFunc, (int32_t)callback, v13, v14);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !data )
     goto LABEL_49;
-  v30 = Instance;
+  v17 = Instance;
   isNew = data->fields.isNew && !isOverlap;
   if ( !data->fields.userSvtId )
   {
@@ -127,77 +114,77 @@ void __fastcall SummonResultInfoComponent__setResultData(
       goto LABEL_49;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_49;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   data->fields.objectId,
-                                  (const MethodInfo_30FF780 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                  (const MethodInfo_311D934 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !Instance )
       goto LABEL_49;
-    v37 = *(_QWORD *)&Instance->fields._DispLog;
+    v24 = *(_QWORD *)&Instance->fields._DispLog;
     datalist = Instance->fields.datalist;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v53.fields.currentCryptoKey = v37;
-    *(_QWORD *)&v53.fields.fakeValue = datalist;
-    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46336972(v53, 0LL);
+    *(_QWORD *)&v40.fields.currentCryptoKey = v24;
+    *(_QWORD *)&v40.fields.fakeValue = datalist;
+    v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46449800(v40, 0LL);
     goto LABEL_24;
   }
   type = data->fields.type;
   Instance = (DataManager_o *)SvtType__IsCommandCode(type, 0LL);
-  if ( !v30 )
+  if ( !v17 )
     goto LABEL_49;
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
-                                  v30,
-                                  (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                  v17,
+                                  (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !Instance )
       goto LABEL_49;
     Instance = (DataManager_o *)DataMasterBase_object__object__long___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   data->fields.userSvtId,
-                                  (const MethodInfo_30FF92C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                  (const MethodInfo_311DAE0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
     if ( !Instance )
       goto LABEL_49;
-    v38 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)Instance;
-    v40 = *(_QWORD *)&Instance->fields.lastFrameTime;
+    v25 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)Instance;
+    v27 = *(_QWORD *)&Instance->fields.lastFrameTime;
     masterCheckName = Instance->fields.masterCheckName;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v54.fields.currentCryptoKey = v40;
-    *(_QWORD *)&v54.fields.fakeValue = masterCheckName;
-    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46336972(v54, 0LL);
-    v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46336972(v38[6], 0LL);
-    fakeValue = v38[18].fields.fakeValue;
-    v43 = v41;
+    *(_QWORD *)&v41.fields.currentCryptoKey = v27;
+    *(_QWORD *)&v41.fields.fakeValue = masterCheckName;
+    v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46449800(v41, 0LL);
+    v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46449800(v25[6], 0LL);
+    fakeValue = v25[18].fields.fakeValue;
+    v30 = v28;
     goto LABEL_25;
   }
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
-                                v30,
-                                (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                                v17,
+                                (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
   if ( !Instance )
     goto LABEL_49;
-  v33 = DataMasterBase_object__object__long___GetEntity(
+  v20 = DataMasterBase_object__object__long___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           data->fields.userSvtId,
-          (const MethodInfo_30FF92C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-  if ( !v33 || (v34 = (UserCommandCodeEntity_o *)v33, !SvtType__IsCommandCode(type, 0LL)) )
+          (const MethodInfo_311DAE0 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+  if ( !v20 || (v21 = (UserCommandCodeEntity_o *)v20, !SvtType__IsCommandCode(type, 0LL)) )
   {
-    v35 = 0;
+    v22 = 0;
 LABEL_24:
-    v43 = 0;
+    v30 = 0;
     fakeValue = 0;
 LABEL_25:
     Instance = (DataManager_o *)this->fields.svtFaceInfo;
     if ( !Instance )
       goto LABEL_49;
-    ServantFaceIconComponent__Set_38036872(
+    ServantFaceIconComponent__Set_38217436(
       (ServantFaceIconComponent_o *)Instance,
-      v35,
-      v43,
+      v22,
+      v30,
       -1,
       fakeValue,
       0LL,
@@ -216,8 +203,8 @@ LABEL_25:
   Instance = (DataManager_o *)this->fields.svtFaceInfo;
   if ( !Instance )
     goto LABEL_49;
-  ServantFaceIconComponent__Set_38047916((ServantFaceIconComponent_o *)Instance, v34, isNew, 0LL, 0LL, 0LL);
-  v35 = 0;
+  ServantFaceIconComponent__Set_38227772((ServantFaceIconComponent_o *)Instance, v21, isNew, 0LL, 0LL, 0LL);
+  v22 = 0;
 LABEL_27:
   Instance = (DataManager_o *)this->fields.svtFaceInfo;
   if ( !Instance )
@@ -250,49 +237,49 @@ LABEL_27:
     goto LABEL_49;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
-                                v30,
-                                (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                v17,
+                                (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_49;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &entity,
-          v35,
-          (const MethodInfo_30FF7D4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          v22,
+          (const MethodInfo_311D988 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return;
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_49:
-    sub_1B7641C(Instance, sellMana);
+    sub_1B8880C(Instance, sellMana);
   if ( ServantEntity__get_IsServant((ServantEntity_o *)entity, 0LL) && data->fields.svtCoinNum >= 1 )
   {
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
-                                  v30,
-                                  (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_SvtCoinMaster___);
+                                  v17,
+                                  (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_SvtCoinMaster___);
     if ( Instance )
     {
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-              &v51,
-              v35,
-              (const MethodInfo_30FF7D4 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__) )
+              &v38,
+              v22,
+              (const MethodInfo_311D988 *)Method_DataMasterBase_SvtCoinMaster__SvtCoinEntity__int__TryGetEntity__) )
         return;
       Instance = (DataManager_o *)this->fields.addRoot;
       if ( Instance )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
-        if ( v51 )
+        if ( v38 )
         {
           Instance = (DataManager_o *)this->fields.addIcon;
           if ( Instance )
           {
-            ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, (int32_t)v51[1].monitor, -1, 0LL);
+            ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, (int32_t)v38[1].monitor, -1, 0LL);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12366/*"SUMMON_RESULT_COIN_FORMAT"*/, 0LL);
+            v32 = LocalizationManager__Get((System_String_o *)StringLiteral_12370/*"SUMMON_RESULT_COIN_FORMAT"*/, 0LL);
             svtCoinNum = data->fields.svtCoinNum;
-            v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtCoinNum, v46, v47, v48);
-            Instance = (DataManager_o *)System_String__Format(v45, v49, 0LL);
+            v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtCoinNum, v33, v34, v35);
+            Instance = (DataManager_o *)System_String__Format(v32, v36, 0LL);
             if ( this->fields.addNumLabel )
             {
               UILabel__set_text(this->fields.addNumLabel, (System_String_o *)Instance, 0LL);
@@ -325,15 +312,15 @@ void __fastcall SummonResultInfoComponent_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B76280(v6) & 1) == 0 )
+  if ( (sub_1B88670(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B76438(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B762E8(v10, 0LL);
+      v10 = sub_1B88828(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B886D8(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -345,9 +332,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19B9C78;
+  this->fields.m_target = (Il2CppObject *)sub_19CAE1C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B9C30;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CADD4;
 }
 
 
@@ -362,14 +349,14 @@ System_IAsyncResult_o *__fastcall SummonResultInfoComponent_ClickDelegate__Begin
   int64_t v10; // [xsp+18h] [xbp-38h] BYREF
 
   v10 = usrSvtId;
-  if ( (byte_4A2A867 & 1) == 0 )
+  if ( (byte_4A57A72 & 1) == 0 )
   {
-    sub_1B761C0(&long_TypeInfo, usrSvtId);
-    byte_4A2A867 = 1;
+    sub_1B885B0(&long_TypeInfo);
+    byte_4A57A72 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(long_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B76174(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B88564(this, v9, callback, object);
 }
 
 
@@ -378,7 +365,7 @@ void __fastcall SummonResultInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B76178(result, 0LL, method);
+  sub_1B88568(result, 0LL, method);
 }
 
 

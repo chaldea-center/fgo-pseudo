@@ -1,13 +1,13 @@
 void __fastcall EffectEntity___ctor(EffectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2DDC1 & 1) == 0 )
+  if ( (byte_4A5AFDF & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A2DDC1 = 1;
+    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
+    byte_4A5AFDF = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30FF580 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
 }
 
 

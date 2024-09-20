@@ -1,31 +1,30 @@
 void __fastcall UserClassBoardSquareEntity___ctor(UserClassBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2F014 & 1) == 0 )
+  if ( (byte_4A5C247 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2F014 = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5C247 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserClassBoardSquareEntity__CreatePK(
         int64_t userId,
         int32_t classBoardBaseId,
         const MethodInfo *method)
 {
-  if ( (byte_4A2F013 & 1) == 0 )
+  if ( (byte_4A5C246 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&classBoardBaseId);
-    byte_4A2F013 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4A5C246 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            classBoardBaseId,
-           (const MethodInfo_2E60734 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2E7DC34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

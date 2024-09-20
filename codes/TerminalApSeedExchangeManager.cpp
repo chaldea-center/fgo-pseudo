@@ -11,19 +11,19 @@ void __fastcall TerminalApSeedExchangeManager__CloseDialogs(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A2BF10 & 1) == 0 )
+  if ( (byte_4A5902B & 1) == 0 )
   {
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A2BF10 = 1;
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4A5902B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseApSeedExchangeDialog((CommonUI_o *)Instance, 0LL, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
     || (CommonUI__CloseApSeedBulkExchangeDialog((CommonUI_o *)Instance, 0LL, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1B7641C(Instance, v3);
+    sub_1B8880C(Instance, v3);
   }
   CommonUI__CloseItemExchangeResultDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }
@@ -34,141 +34,139 @@ void __fastcall TerminalApSeedExchangeManager__EndRequestShop(
         System_String_o *result,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  _BOOL8 v7; // x0
-  const MethodInfo *v8; // x1
-  TerminalSceneComponent_c *v9; // x0
+  _BOOL8 v5; // x0
+  const MethodInfo *v6; // x1
+  TerminalSceneComponent_c *v7; // x0
   UnityEngine_Object_o *mInstance; // x20
-  const MethodInfo *v11; // x1
-  ScrPlayerStatus_o *v12; // x0
-  struct TerminalSceneComponent_o *v13; // x8
+  const MethodInfo *v9; // x1
+  ScrPlayerStatus_o *v10; // x0
+  struct TerminalSceneComponent_o *v11; // x8
   UnityEngine_Object_o *mPlayerStatus; // x20
-  struct TerminalSceneComponent_o *v15; // x8
-  struct TerminalSceneComponent_o *v16; // x8
+  struct TerminalSceneComponent_o *v13; // x8
+  struct TerminalSceneComponent_o *v14; // x8
   UnityEngine_Object_o *mTerminalList; // x20
-  struct TerminalSceneComponent_o *v18; // x8
-  struct ScrTerminalListTop_o *v19; // x8
+  struct TerminalSceneComponent_o *v16; // x8
+  struct ScrTerminalListTop_o *v17; // x8
   UnityEngine_Object_o *mQuestBoardListViewManager; // x20
 
-  if ( (byte_4A2BF0E & 1) == 0 )
+  if ( (byte_4A59029 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, result);
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v5);
-    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
-    byte_4A2BF0E = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
+    byte_4A59029 = 1;
   }
-  v7 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22046/*"ng"*/, 0LL);
-  if ( v7 )
+  v5 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22055/*"ng"*/, 0LL);
+  if ( v5 )
   {
-    TerminalApSeedExchangeManager__CloseDialogs((TerminalApSeedExchangeManager_o *)v7, v8);
+    TerminalApSeedExchangeManager__CloseDialogs((TerminalApSeedExchangeManager_o *)v5, v6);
     return;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A2915D )
+  if ( !byte_4A5629D )
   {
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v8);
-    byte_4A2915D = 1;
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    byte_4A5629D = 1;
   }
-  v9 = TerminalSceneComponent_TypeInfo;
+  v7 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    v9 = TerminalSceneComponent_TypeInfo;
+    v7 = TerminalSceneComponent_TypeInfo;
   }
-  mInstance = (UnityEngine_Object_o *)v9->static_fields->mInstance;
+  mInstance = (UnityEngine_Object_o *)v7->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(mInstance, 0LL, 0LL) )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4A2915D )
+    if ( !byte_4A5629D )
     {
-      sub_1B761C0(&TerminalSceneComponent_TypeInfo, v11);
-      byte_4A2915D = 1;
+      sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+      byte_4A5629D = 1;
     }
-    v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+    v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+      v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
     }
-    v13 = **(struct TerminalSceneComponent_o ***)&v12->fields.mIsEnableRpRecoverBtn;
-    if ( v13 )
+    v11 = **(struct TerminalSceneComponent_o ***)&v10->fields.mIsEnableRpRecoverBtn;
+    if ( v11 )
     {
-      mPlayerStatus = (UnityEngine_Object_o *)v13->fields.mPlayerStatus;
+      mPlayerStatus = (UnityEngine_Object_o *)v11->fields.mPlayerStatus;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(mPlayerStatus, 0LL, 0LL) )
       {
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4A2915D )
+        if ( !byte_4A5629D )
         {
-          sub_1B761C0(&TerminalSceneComponent_TypeInfo, v11);
-          byte_4A2915D = 1;
+          sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+          byte_4A5629D = 1;
         }
-        v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+        v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+          v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
         }
-        v15 = **(struct TerminalSceneComponent_o ***)&v12->fields.mIsEnableRpRecoverBtn;
-        if ( !v15 )
+        v13 = **(struct TerminalSceneComponent_o ***)&v10->fields.mIsEnableRpRecoverBtn;
+        if ( !v13 )
           goto LABEL_57;
-        v12 = v15->fields.mPlayerStatus;
-        if ( !v12 )
+        v10 = v13->fields.mPlayerStatus;
+        if ( !v10 )
           goto LABEL_57;
-        ScrPlayerStatus__mfInitUserData(v12, 0LL);
+        ScrPlayerStatus__mfInitUserData(v10, 0LL);
       }
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4A2915D )
+      if ( !byte_4A5629D )
       {
-        sub_1B761C0(&TerminalSceneComponent_TypeInfo, v11);
-        byte_4A2915D = 1;
+        sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+        byte_4A5629D = 1;
       }
-      v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+      v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+        v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
       }
-      v16 = **(struct TerminalSceneComponent_o ***)&v12->fields.mIsEnableRpRecoverBtn;
-      if ( v16 )
+      v14 = **(struct TerminalSceneComponent_o ***)&v10->fields.mIsEnableRpRecoverBtn;
+      if ( v14 )
       {
-        mTerminalList = (UnityEngine_Object_o *)v16->fields.mTerminalList;
+        mTerminalList = (UnityEngine_Object_o *)v14->fields.mTerminalList;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( !UnityEngine_Object__op_Inequality(mTerminalList, 0LL, 0LL) )
           goto LABEL_56;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4A2915D )
+        if ( !byte_4A5629D )
         {
-          sub_1B761C0(&TerminalSceneComponent_TypeInfo, v11);
-          byte_4A2915D = 1;
+          sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+          byte_4A5629D = 1;
         }
-        v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+        v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          v12 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
+          v10 = (ScrPlayerStatus_o *)TerminalSceneComponent_TypeInfo;
         }
-        v18 = **(struct TerminalSceneComponent_o ***)&v12->fields.mIsEnableRpRecoverBtn;
-        if ( v18 )
+        v16 = **(struct TerminalSceneComponent_o ***)&v10->fields.mIsEnableRpRecoverBtn;
+        if ( v16 )
         {
-          v19 = v18->fields.mTerminalList;
-          if ( v19 )
+          v17 = v16->fields.mTerminalList;
+          if ( v17 )
           {
-            mQuestBoardListViewManager = (UnityEngine_Object_o *)v19->fields.mQuestBoardListViewManager;
+            mQuestBoardListViewManager = (UnityEngine_Object_o *)v17->fields.mQuestBoardListViewManager;
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            v12 = (ScrPlayerStatus_o *)UnityEngine_Object__op_Inequality(mQuestBoardListViewManager, 0LL, 0LL);
-            if ( ((unsigned __int8)v12 & 1) == 0 )
+            v10 = (ScrPlayerStatus_o *)UnityEngine_Object__op_Inequality(mQuestBoardListViewManager, 0LL, 0LL);
+            if ( ((unsigned __int8)v10 & 1) == 0 )
               goto LABEL_56;
             if ( mQuestBoardListViewManager )
             {
@@ -180,10 +178,10 @@ void __fastcall TerminalApSeedExchangeManager__EndRequestShop(
       }
     }
 LABEL_57:
-    sub_1B7641C(v12, v11);
+    sub_1B8880C(v10, v9);
   }
 LABEL_56:
-  TerminalApSeedExchangeManager__ShowExchangeResultDialog(this, v11);
+  TerminalApSeedExchangeManager__ShowExchangeResultDialog(this, v9);
 }
 
 
@@ -191,96 +189,88 @@ void __fastcall TerminalApSeedExchangeManager__Initialize(
         TerminalApSeedExchangeManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v12; // x1
-  ShopEntity_array *EnableEntitiyList_39643824; // x0
-  TerminalApSeedExchangeManager___c_c *v14; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x20
+  __int64 v4; // x1
+  ShopEntity_array *EnableEntitiyList_39915024; // x0
+  TerminalApSeedExchangeManager___c_c *v6; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x20
   System_Func_object__bool__o *_9__4_0; // x21
-  Il2CppObject *v17; // x22
+  Il2CppObject *v9; // x22
   struct TerminalApSeedExchangeManager___c_StaticFields *static_fields; // x0
-  int32_t v19; // w2
-  int32_t v20; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
-  int32_t v22; // w2
-  int32_t v23; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
   ApSeedExchangeButton_o *apSeedExchangeButton; // x20
   ShopEntity_o *shopEntity; // x21
-  System_Action_o *v26; // x22
+  System_Action_o *v18; // x22
 
-  if ( (byte_4A2BF0B & 1) == 0 )
+  if ( (byte_4A59026 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&Method_DataManager_GetMaster_ShopMaster___, v3);
-    sub_1B761C0(&DataManager_TypeInfo, v4);
-    sub_1B761C0(&Method_System_Linq_Enumerable_FirstOrDefault_ShopEntity___, v5);
-    sub_1B761C0(&Method_System_Linq_Enumerable_Where_ShopEntity___, v6);
-    sub_1B761C0(&System_Func_ShopEntity__bool__TypeInfo, v7);
-    sub_1B761C0(&Method_TerminalApSeedExchangeManager_OnClickApSeedExchangeButton__, v8);
-    sub_1B761C0(&Method_TerminalApSeedExchangeManager___c__Initialize_b__4_0__, v9);
-    sub_1B761C0(&TerminalApSeedExchangeManager___c_TypeInfo, v10);
-    byte_4A2BF0B = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_DataManager_GetMaster_ShopMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&Method_System_Linq_Enumerable_FirstOrDefault_ShopEntity___);
+    sub_1B885B0(&Method_System_Linq_Enumerable_Where_ShopEntity___);
+    sub_1B885B0(&System_Func_ShopEntity__bool__TypeInfo);
+    sub_1B885B0(&Method_TerminalApSeedExchangeManager_OnClickApSeedExchangeButton__);
+    sub_1B885B0(&Method_TerminalApSeedExchangeManager___c__Initialize_b__4_0__);
+    sub_1B885B0(&TerminalApSeedExchangeManager___c_TypeInfo);
+    byte_4A59026 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_ShopMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_ShopMaster___);
   if ( !Master_object )
     goto LABEL_15;
-  EnableEntitiyList_39643824 = ShopMaster__GetEnableEntitiyList_39643824((ShopMaster_o *)Master_object, 0, 14, 0LL);
-  v14 = TerminalApSeedExchangeManager___c_TypeInfo;
-  v15 = (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntitiyList_39643824;
+  EnableEntitiyList_39915024 = ShopMaster__GetEnableEntitiyList_39915024((ShopMaster_o *)Master_object, 0, 14, 0LL);
+  v6 = TerminalApSeedExchangeManager___c_TypeInfo;
+  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)EnableEntitiyList_39915024;
   if ( !TerminalApSeedExchangeManager___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalApSeedExchangeManager___c_TypeInfo);
-    v14 = TerminalApSeedExchangeManager___c_TypeInfo;
+    v6 = TerminalApSeedExchangeManager___c_TypeInfo;
   }
-  _9__4_0 = (System_Func_object__bool__o *)v14->static_fields->__9__4_0;
+  _9__4_0 = (System_Func_object__bool__o *)v6->static_fields->__9__4_0;
   if ( !_9__4_0 )
   {
-    if ( !v14->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v14);
-      v14 = TerminalApSeedExchangeManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6);
+      v6 = TerminalApSeedExchangeManager___c_TypeInfo;
     }
-    v17 = (Il2CppObject *)v14->static_fields->__9;
-    _9__4_0 = (System_Func_object__bool__o *)sub_1B7640C(System_Func_ShopEntity__bool__TypeInfo);
-    System_Func_object__bool____ctor(_9__4_0, v17, Method_TerminalApSeedExchangeManager___c__Initialize_b__4_0__, 0LL);
+    v9 = (Il2CppObject *)v6->static_fields->__9;
+    _9__4_0 = (System_Func_object__bool__o *)sub_1B887FC(System_Func_ShopEntity__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__4_0, v9, Method_TerminalApSeedExchangeManager___c__Initialize_b__4_0__, 0LL);
     static_fields = TerminalApSeedExchangeManager___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_ShopEntity__bool__o *)_9__4_0;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v19, v20);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v11, v12);
   }
-  v21 = System_Linq_Enumerable__Where_object_(
-          v15,
+  v13 = System_Linq_Enumerable__Where_object_(
+          v7,
           (System_Func_TSource__bool__o *)_9__4_0,
-          (const MethodInfo_2EA0B7C *)Method_System_Linq_Enumerable_Where_ShopEntity___);
+          (const MethodInfo_2EBE07C *)Method_System_Linq_Enumerable_Where_ShopEntity___);
   Master_object = System_Linq_Enumerable__FirstOrDefault_object_(
-                    v21,
-                    (const MethodInfo_2E86100 *)Method_System_Linq_Enumerable_FirstOrDefault_ShopEntity___);
+                    v13,
+                    (const MethodInfo_2EA3600 *)Method_System_Linq_Enumerable_FirstOrDefault_ShopEntity___);
   if ( !this
     || (this->fields.shopEntity = (struct ShopEntity_o *)Master_object,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.shopEntity, (int32_t)Master_object, v22, v23),
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.shopEntity, (int32_t)Master_object, v14, v15),
         apSeedExchangeButton = this->fields.apSeedExchangeButton,
         shopEntity = this->fields.shopEntity,
-        v26 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo),
+        v18 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo),
         System_Action___ctor(
-          v26,
+          v18,
           (Il2CppObject *)this,
           Method_TerminalApSeedExchangeManager_OnClickApSeedExchangeButton__,
           0LL),
         !apSeedExchangeButton) )
   {
 LABEL_15:
-    sub_1B7641C(Master_object, v12);
+    sub_1B8880C(Master_object, v4);
   }
-  ApSeedExchangeButton__SetupBtn(apSeedExchangeButton, shopEntity, v26, 0LL);
+  ApSeedExchangeButton__SetupBtn(apSeedExchangeButton, shopEntity, v18, 0LL);
 }
 
 
@@ -288,49 +278,46 @@ void __fastcall TerminalApSeedExchangeManager__OnClickApSeedExchangeButton(
         TerminalApSeedExchangeManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   ShopEntity_o *shopEntity; // x20
-  ShopBuyItemListViewItem_o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
+  ShopBuyItemListViewItem_o *v4; // x21
+  int32_t v5; // w2
+  int32_t v6; // w3
   Il2CppObject *Instance; // x0
-  ShopEntity_o *v11; // x20
+  ShopEntity_o *v8; // x20
   ShopBuyItemListViewItem_o *listViewItem; // x21
-  CommonUI_o *v13; // x22
-  System_Action_int__o *v14; // x23
-  __int64 v15; // x0
-  __int64 v16; // x1
+  CommonUI_o *v10; // x22
+  System_Action_int__o *v11; // x23
+  __int64 v12; // x0
+  __int64 v13; // x1
 
-  if ( (byte_4A2BF0C & 1) == 0 )
+  if ( (byte_4A59027 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_int__TypeInfo, method);
-    sub_1B761C0(&ShopBuyItemListViewItem_TypeInfo, v3);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B761C0(&Method_TerminalApSeedExchangeManager_OnSelectExchangeItems__, v5);
-    byte_4A2BF0C = 1;
+    sub_1B885B0(&System_Action_int__TypeInfo);
+    sub_1B885B0(&ShopBuyItemListViewItem_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_TerminalApSeedExchangeManager_OnSelectExchangeItems__);
+    byte_4A59027 = 1;
   }
   shopEntity = this->fields.shopEntity;
   if ( shopEntity )
   {
-    v7 = (ShopBuyItemListViewItem_o *)sub_1B7640C(ShopBuyItemListViewItem_TypeInfo);
-    ShopBuyItemListViewItem___ctor(v7, 0, 17, shopEntity, -1LL, 0LL);
-    this->fields.listViewItem = v7;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.listViewItem, (int32_t)v7, v8, v9);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v11 = this->fields.shopEntity;
+    v4 = (ShopBuyItemListViewItem_o *)sub_1B887FC(ShopBuyItemListViewItem_TypeInfo);
+    ShopBuyItemListViewItem___ctor(v4, 0, 17, shopEntity, -1LL, 0LL);
+    this->fields.listViewItem = v4;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.listViewItem, (int32_t)v4, v5, v6);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = this->fields.shopEntity;
     listViewItem = this->fields.listViewItem;
-    v13 = (CommonUI_o *)Instance;
-    v14 = (System_Action_int__o *)sub_1B7640C(System_Action_int__TypeInfo);
+    v10 = (CommonUI_o *)Instance;
+    v11 = (System_Action_int__o *)sub_1B887FC(System_Action_int__TypeInfo);
     System_Action_int____ctor(
-      v14,
+      v11,
       (Il2CppObject *)this,
       Method_TerminalApSeedExchangeManager_OnSelectExchangeItems__,
       0LL);
-    if ( !v13 )
-      sub_1B7641C(v15, v16);
-    CommonUI__OpenApSeedBulkExchangeDialog(v13, v11, listViewItem, v14, 0LL);
+    if ( !v10 )
+      sub_1B8880C(v12, v13);
+    CommonUI__OpenApSeedBulkExchangeDialog(v10, v8, listViewItem, v11, 0LL);
   }
 }
 
@@ -344,15 +331,15 @@ void __fastcall TerminalApSeedExchangeManager__OnCloseResultDialog(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A2BF11 & 1) == 0 )
+  if ( (byte_4A5902C & 1) == 0 )
   {
-    this = (TerminalApSeedExchangeManager_o *)sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isOk);
-    byte_4A2BF11 = 1;
+    this = (TerminalApSeedExchangeManager_o *)sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4A5902C = 1;
   }
   TerminalApSeedExchangeManager__CloseDialogs(this, (const MethodInfo *)isOk);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v4);
+    sub_1B8880C(0LL, v4);
   CommonUI__UpdateApRecoverItemListDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -364,40 +351,37 @@ void __fastcall TerminalApSeedExchangeManager__OnSelectExchangeItems(
         const MethodInfo *method)
 {
   TerminalApSeedExchangeManager_o *v4; // x20
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  NetworkManager_ResultCallbackFunc_o *v8; // x21
+  NetworkManager_ResultCallbackFunc_o *v5; // x21
   Il2CppObject *Request_object; // x0
-  __int64 v10; // x1
+  __int64 v7; // x1
   struct ShopEntity_o *shopEntity; // x8
 
   v4 = this;
-  if ( (byte_4A2BF0D & 1) == 0 )
+  if ( (byte_4A59028 & 1) == 0 )
   {
-    sub_1B761C0(&Method_NetworkManager_getRequest_PurchaseRequest___, *(_QWORD *)&buyCount);
-    sub_1B761C0(&NetworkManager_TypeInfo, v5);
-    sub_1B761C0(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    this = (TerminalApSeedExchangeManager_o *)sub_1B761C0(&Method_TerminalApSeedExchangeManager_EndRequestShop__, v7);
-    byte_4A2BF0D = 1;
+    sub_1B885B0(&Method_NetworkManager_getRequest_PurchaseRequest___);
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    this = (TerminalApSeedExchangeManager_o *)sub_1B885B0(&Method_TerminalApSeedExchangeManager_EndRequestShop__);
+    byte_4A59028 = 1;
   }
   v4->fields.buyCount = buyCount;
   if ( buyCount )
   {
-    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B7640C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1B887FC(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
-      v8,
+      v5,
       (Il2CppObject *)v4,
       Method_TerminalApSeedExchangeManager_EndRequestShop__,
       0LL);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
-                       v8,
-                       (const MethodInfo_2EE44C0 *)Method_NetworkManager_getRequest_PurchaseRequest___);
+                       v5,
+                       (const MethodInfo_2F019D8 *)Method_NetworkManager_getRequest_PurchaseRequest___);
     shopEntity = v4->fields.shopEntity;
     if ( !shopEntity || !Request_object )
-      sub_1B7641C(Request_object, v10);
+      sub_1B8880C(Request_object, v7);
     PurchaseRequest__beginRequest((PurchaseRequest_o *)Request_object, shopEntity->fields.id, buyCount, 0, 0LL);
   }
   else
@@ -411,48 +395,43 @@ void __fastcall TerminalApSeedExchangeManager__ShowExchangeResultDialog(
         TerminalApSeedExchangeManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   DataManager_o *Instance; // x0
-  __int64 v9; // x1
-  DataMasterBase_TMaster__TEntity__PKType__o *v10; // x20
+  __int64 v4; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *v5; // x20
   Il2CppObject *Entity; // x22
   struct ShopEntity_o *shopEntity; // x8
-  System_String_o *v13; // x20
+  System_String_o *v8; // x20
   System_String_o *RequestResultDialogItemMessageNormal; // x21
   System_String_o *RequestResultDialogNumMessageNormal; // x22
-  Il2CppObject *v16; // x23
-  System_Action_bool__o *v17; // x24
+  Il2CppObject *v11; // x23
+  System_Action_bool__o *v12; // x24
 
-  if ( (byte_4A2BF0F & 1) == 0 )
+  if ( (byte_4A5902A & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_bool__TypeInfo, method);
-    sub_1B761C0(&Method_DataManager_GetMasterData_ItemMaster___, v3);
-    sub_1B761C0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v4);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B761C0(&Method_TerminalApSeedExchangeManager_OnCloseResultDialog__, v7);
-    byte_4A2BF0F = 1;
+    sub_1B885B0(&System_Action_bool__TypeInfo);
+    sub_1B885B0(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1B885B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1B885B0(&Method_TerminalApSeedExchangeManager_OnCloseResultDialog__);
+    byte_4A5902A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this->fields.shopEntity )
     goto LABEL_11;
-  v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v5 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   Instance = (DataManager_o *)ShopEntity__get_TargetId(this->fields.shopEntity, 0LL);
-  if ( !v10 )
+  if ( !v5 )
     goto LABEL_11;
   Entity = DataMasterBase_object__object__int___GetEntity(
-             v10,
+             v5,
              (int32_t)Instance,
-             (const MethodInfo_30FF780 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_311D934 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   Instance = (DataManager_o *)ShopRequestResultDialogMessageMaker__GetRequestResultDialogMessageNormal(
                                 this->fields.listViewItem,
                                 this->fields.shopEntity,
@@ -463,7 +442,7 @@ void __fastcall TerminalApSeedExchangeManager__ShowExchangeResultDialog(
     goto LABEL_11;
   if ( shopEntity->fields.purchaseType == 1 )
   {
-    v13 = (System_String_o *)Instance;
+    v8 = (System_String_o *)Instance;
     RequestResultDialogItemMessageNormal = ShopRequestResultDialogMessageMaker__GetRequestResultDialogItemMessageNormal(
                                              this->fields.shopEntity,
                                              (ItemEntity_o *)Entity,
@@ -473,50 +452,49 @@ void __fastcall TerminalApSeedExchangeManager__ShowExchangeResultDialog(
                                             this->fields.shopEntity,
                                             (ItemEntity_o *)Entity,
                                             0LL);
-    v16 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v17 = (System_Action_bool__o *)sub_1B7640C(System_Action_bool__TypeInfo);
+    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v12 = (System_Action_bool__o *)sub_1B887FC(System_Action_bool__TypeInfo);
     System_Action_bool____ctor(
-      v17,
+      v12,
       (Il2CppObject *)this,
       Method_TerminalApSeedExchangeManager_OnCloseResultDialog__,
       0LL);
-    if ( v16 )
+    if ( v11 )
     {
       CommonUI__OpenItemExchangeResultDialog(
-        (CommonUI_o *)v16,
-        v13,
+        (CommonUI_o *)v11,
+        v8,
         RequestResultDialogNumMessageNormal,
         RequestResultDialogItemMessageNormal,
-        v17,
+        v12,
         0LL);
       return;
     }
 LABEL_11:
-    sub_1B7641C(Instance, v9);
+    sub_1B8880C(Instance, v4);
   }
 }
 
 
 void __fastcall TerminalApSeedExchangeManager___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
 
-  if ( (byte_4A2BF12 & 1) == 0 )
+  if ( (byte_4A5902D & 1) == 0 )
   {
-    sub_1B761C0(&TerminalApSeedExchangeManager___c_TypeInfo, v1);
-    byte_4A2BF12 = 1;
+    sub_1B885B0(&TerminalApSeedExchangeManager___c_TypeInfo);
+    byte_4A5902D = 1;
   }
-  v2 = (Il2CppObject *)sub_1B7640C(TerminalApSeedExchangeManager___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  TerminalApSeedExchangeManager___c_TypeInfo->static_fields->__9 = (struct TerminalApSeedExchangeManager___c_o *)v2;
-  sub_1B76164(
+  v1 = (Il2CppObject *)sub_1B887FC(TerminalApSeedExchangeManager___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  TerminalApSeedExchangeManager___c_TypeInfo->static_fields->__9 = (struct TerminalApSeedExchangeManager___c_o *)v1;
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)TerminalApSeedExchangeManager___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 
@@ -537,13 +515,13 @@ bool __fastcall TerminalApSeedExchangeManager___c___Initialize_b__4_0(
   BalanceConfig_c *v5; // x8
   int32_t v6; // w19
 
-  if ( (byte_4A2BF13 & 1) == 0 )
+  if ( (byte_4A5902E & 1) == 0 )
   {
-    this = (TerminalApSeedExchangeManager___c_o *)sub_1B761C0(&BalanceConfig_TypeInfo, ent);
-    byte_4A2BF13 = 1;
+    this = (TerminalApSeedExchangeManager___c_o *)sub_1B885B0(&BalanceConfig_TypeInfo);
+    byte_4A5902E = 1;
   }
   if ( !ent )
-    sub_1B7641C(this, ent);
+    sub_1B8880C(this, ent);
   TargetId = ShopEntity__get_TargetId(ent, 0LL);
   v5 = BalanceConfig_TypeInfo;
   v6 = TargetId;

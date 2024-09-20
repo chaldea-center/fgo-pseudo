@@ -1,33 +1,32 @@
 void __fastcall BoardMessageReleaseEntity___ctor(BoardMessageReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2DC34 & 1) == 0 )
+  if ( (byte_4A5AE52 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2DC34 = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5AE52 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BoardMessageReleaseEntity__CreatePK(
         int32_t messageId,
         int32_t condType,
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_4A2DC33 & 1) == 0 )
+  if ( (byte_4A5AE51 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&condType);
-    byte_4A2DC33 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4A5AE51 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            messageId,
            condType,
            condTargetId,
-           (const MethodInfo_2E60ABC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E7DFBC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

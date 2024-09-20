@@ -11,70 +11,64 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
         CommandAssistLvUpListViewItem_o *item,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   EventCommandAssistMaster_o *Master_object; // x0
-  __int64 v12; // x1
+  __int64 v6; // x1
   EventCommandAssistEntity_o *CurrentEntity; // x0
   UISprite_o *icon; // x22
-  EventCommandAssistEntity_o *v15; // x21
-  System_String_o *v16; // x23
+  EventCommandAssistEntity_o *v9; // x21
+  System_String_o *v10; // x23
   UISprite_o *beforeIcon; // x22
-  System_String_o *v18; // x0
+  System_String_o *v12; // x0
   UILabel_o *levelLabel; // x22
-  __int64 v20; // x2
-  __int64 v21; // x3
-  __int64 v22; // x4
-  System_String_o *v23; // x23
-  Il2CppObject *v24; // x0
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
+  System_String_o *v17; // x23
+  Il2CppObject *v18; // x0
   UILabel_o *beforeLevelLabel; // x22
-  System_String_o *v26; // x23
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  Il2CppObject *v30; // x0
+  System_String_o *v20; // x23
+  __int64 v21; // x2
+  __int64 v22; // x3
+  __int64 v23; // x4
+  Il2CppObject *v24; // x0
   UILabel_o *detailLabel; // x22
   System_String_o *Detail_k__BackingField; // x23
-  System_String_o *v33; // x24
-  __int64 v34; // x2
-  __int64 v35; // x3
-  __int64 v36; // x4
-  Il2CppObject *v37; // x0
-  Il2CppObject *v38; // x0
-  System_String_o *v39; // x0
+  System_String_o *v27; // x24
+  __int64 v28; // x2
+  __int64 v29; // x3
+  __int64 v30; // x4
+  Il2CppObject *v31; // x0
+  Il2CppObject *v32; // x0
+  System_String_o *v33; // x0
   UILabel_o *beforeDetailLabel; // x22
   System_String_o *BeforeDetail_k__BackingField; // x23
-  System_String_o *v42; // x24
-  __int64 v43; // x2
-  __int64 v44; // x3
-  __int64 v45; // x4
-  Il2CppObject *v46; // x0
-  Il2CppObject *v47; // x0
-  System_String_o *v48; // x0
-  int v49; // [xsp+4h] [xbp-5Ch] BYREF
-  int32_t v50; // [xsp+8h] [xbp-58h] BYREF
-  int v51; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v36; // x24
+  __int64 v37; // x2
+  __int64 v38; // x3
+  __int64 v39; // x4
+  Il2CppObject *v40; // x0
+  Il2CppObject *v41; // x0
+  System_String_o *v42; // x0
+  int v43; // [xsp+4h] [xbp-5Ch] BYREF
+  int32_t v44; // [xsp+8h] [xbp-58h] BYREF
+  int v45; // [xsp+Ch] [xbp-54h] BYREF
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A31F76 & 1) == 0 )
+  if ( (byte_4A5F1CF & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, item);
-    sub_1B761C0(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_1B761C0(&DataManager_TypeInfo, v6);
-    sub_1B761C0(&int_TypeInfo, v7);
-    sub_1B761C0(&LocalizationManager_TypeInfo, v8);
-    sub_1B761C0(&StringLiteral_8235/*"LEVEL_INFO"*/, v9);
-    sub_1B761C0(&StringLiteral_5582/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/, v10);
-    byte_4A31F76 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_8236/*"LEVEL_INFO"*/);
+    sub_1B885B0(&StringLiteral_5583/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/);
+    byte_4A5F1CF = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item || !Master_object )
     goto LABEL_18;
   CurrentEntity = EventCommandAssistMaster__GetCurrentEntity(
@@ -85,16 +79,16 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
                     0,
                     0LL);
   icon = this->fields.icon;
-  v15 = CurrentEntity;
+  v9 = CurrentEntity;
   IconImageId_k__BackingField = item->fields._IconImageId_k__BackingField;
-  v16 = System_Int32__ToString((int32_t)&IconImageId_k__BackingField, 0LL);
+  v10 = System_Int32__ToString((int32_t)&IconImageId_k__BackingField, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(icon, v16, 0LL);
+  AtlasManager__SetEventSprite(icon, v10, 0LL);
   beforeIcon = this->fields.beforeIcon;
   IconImageId_k__BackingField = item->fields._IconImageId_k__BackingField;
-  v18 = System_Int32__ToString((int32_t)&IconImageId_k__BackingField, 0LL);
-  AtlasManager__SetEventSprite(beforeIcon, v18, 0LL);
+  v12 = System_Int32__ToString((int32_t)&IconImageId_k__BackingField, 0LL);
+  AtlasManager__SetEventSprite(beforeIcon, v12, 0LL);
   Master_object = (EventCommandAssistMaster_o *)this->fields.nameLabel;
   if ( !Master_object )
     goto LABEL_18;
@@ -106,44 +100,44 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   levelLabel = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (EventCommandAssistMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5582/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/, 0LL);
-  if ( !v15 )
+  Master_object = (EventCommandAssistMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5583/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/, 0LL);
+  if ( !v9 )
     goto LABEL_18;
-  v23 = (System_String_o *)Master_object;
-  lv = v15->fields.lv;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v20, v21, v22);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format(v23, v24, 0LL);
+  v17 = (System_String_o *)Master_object;
+  lv = v9->fields.lv;
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v14, v15, v16);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format(v17, v18, 0LL);
   if ( !levelLabel )
     goto LABEL_18;
   UILabel__set_text(levelLabel, (System_String_o *)Master_object, 0LL);
   beforeLevelLabel = this->fields.beforeLevelLabel;
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_8235/*"LEVEL_INFO"*/, 0LL);
-  v51 = v15->fields.lv - 1;
-  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51, v27, v28, v29);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format(v26, v30, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_8236/*"LEVEL_INFO"*/, 0LL);
+  v45 = v9->fields.lv - 1;
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v21, v22, v23);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format(v20, v24, 0LL);
   if ( !beforeLevelLabel )
     goto LABEL_18;
   UILabel__set_text(beforeLevelLabel, (System_String_o *)Master_object, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_8235/*"LEVEL_INFO"*/, 0LL);
-  v50 = v15->fields.lv;
-  v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v34, v35, v36);
-  v38 = (Il2CppObject *)System_String__Format(v33, v37, 0LL);
-  v39 = System_String__Format(Detail_k__BackingField, v38, 0LL);
-  WrapControlText__textAdjust(detailLabel, v39, 16, 0, 0, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8236/*"LEVEL_INFO"*/, 0LL);
+  v44 = v9->fields.lv;
+  v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v28, v29, v30);
+  v32 = (Il2CppObject *)System_String__Format(v27, v31, 0LL);
+  v33 = System_String__Format(Detail_k__BackingField, v32, 0LL);
+  WrapControlText__textAdjust(detailLabel, v33, 16, 0, 0, 0LL);
   beforeDetailLabel = this->fields.beforeDetailLabel;
   BeforeDetail_k__BackingField = item->fields._BeforeDetail_k__BackingField;
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_8235/*"LEVEL_INFO"*/, 0LL);
-  v49 = v15->fields.lv - 1;
-  v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v43, v44, v45);
-  v47 = (Il2CppObject *)System_String__Format(v42, v46, 0LL);
-  v48 = System_String__Format(BeforeDetail_k__BackingField, v47, 0LL);
-  WrapControlText__textAdjust(beforeDetailLabel, v48, 16, 0, 0, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_8236/*"LEVEL_INFO"*/, 0LL);
+  v43 = v9->fields.lv - 1;
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43, v37, v38, v39);
+  v41 = (Il2CppObject *)System_String__Format(v36, v40, 0LL);
+  v42 = System_String__Format(BeforeDetail_k__BackingField, v41, 0LL);
+  WrapControlText__textAdjust(beforeDetailLabel, v42, 16, 0, 0, 0LL);
   Master_object = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_object )
 LABEL_18:
-    sub_1B7641C(Master_object, v12);
+    sub_1B8880C(Master_object, v6);
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)Master_object,
     !item->fields._IsLast_k__BackingField,

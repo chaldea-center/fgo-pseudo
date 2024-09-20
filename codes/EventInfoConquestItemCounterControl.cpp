@@ -2,25 +2,22 @@ void __fastcall EventInfoConquestItemCounterControl___ctor(
         EventInfoConquestItemCounterControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_4A2EA89 & 1) == 0 )
+  if ( (byte_4A5BB0A & 1) == 0 )
   {
-    sub_1B761C0(
-      &Method_System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData___ctor__,
-      method);
-    sub_1B761C0(&System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__TypeInfo, v3);
-    byte_4A2EA89 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__TypeInfo);
+    byte_4A5BB0A = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData___ctor__);
-  this->fields.itemSprites = (struct System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__o *)v4;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemSprites, (int32_t)v4, v5, v6);
+    v3,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData___ctor__);
+  this->fields.itemSprites = (struct System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__o *)v3;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.itemSprites, (int32_t)v3, v4, v5);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
@@ -36,7 +33,7 @@ void __fastcall EventInfoConquestItemCounterControl__PlayAnim(
   if ( this->fields.playType == type && this->fields.conquestItems )
   {
     v5 = EventInfoConquestItemCounterControl__playAnim(this, callback, (const MethodInfo *)callback);
-    UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
   }
   else
   {
@@ -50,98 +47,89 @@ void __fastcall EventInfoConquestItemCounterControl__SetConquestInfos(
         Il2CppObject *obj,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x21
+  __int64 v5; // x21
   int64_t Instance; // x0
-  __int64 v12; // x1
-  UserItemMaster_o *v13; // x20
+  __int64 v7; // x1
+  UserItemMaster_o *v8; // x20
   struct EventInfoConquestItemCounterComponent_array *conquestItems; // x8
-  il2cpp_array_size_t v15; // w22
-  il2cpp_array_size_t v16; // w8
-  __int64 v17; // x24
-  __int64 v18; // x8
-  __int64 v19; // x24
-  __int64 v20; // t1
-  const MethodInfo *v21; // x4
-  int32_t *v22; // x8
-  struct EventInfoConquestItemCounterComponent_array *v23; // x9
-  _DWORD *v24; // x10
-  int32_t v25; // w2
-  int32_t v26; // w3
-  int32_t v27; // w1
+  il2cpp_array_size_t v10; // w22
+  il2cpp_array_size_t v11; // w8
+  __int64 v12; // x24
+  __int64 v13; // x8
+  __int64 v14; // x24
+  __int64 v15; // t1
+  const MethodInfo *v16; // x4
+  int32_t *v17; // x8
+  struct EventInfoConquestItemCounterComponent_array *v18; // x9
+  _DWORD *v19; // x10
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w1
   Il2CppObject *MasterData_object; // x21
-  struct EventInfoConquestItemCounterComponent_array *v29; // x8
-  UserQuestMaster_o *v30; // x22
-  il2cpp_array_size_t v31; // w27
-  struct EventInfoConquestItemCounterComponent_array *v32; // x8
-  EventInfoConquestItemCounterComponent_o *v33; // x8
-  int64_t v34; // x24
-  const MethodInfo *v35; // x4
-  int v36; // w8
-  int64_t v37; // x25
-  __int64 v38; // x29
-  int32_t v39; // w23
-  int32_t *v40; // x21
-  int32_t *v41; // x8
-  struct EventInfoConquestItemCounterComponent_array *v42; // x9
-  int32_t v43; // w1
-  Il2CppObject *v44; // [xsp+8h] [xbp-68h]
+  struct EventInfoConquestItemCounterComponent_array *v24; // x8
+  UserQuestMaster_o *v25; // x22
+  il2cpp_array_size_t v26; // w27
+  struct EventInfoConquestItemCounterComponent_array *v27; // x8
+  EventInfoConquestItemCounterComponent_o *v28; // x8
+  int64_t v29; // x24
+  const MethodInfo *v30; // x4
+  int v31; // w8
+  int64_t v32; // x25
+  __int64 v33; // x29
+  int32_t v34; // w23
+  int32_t *v35; // x21
+  int32_t *v36; // x8
+  struct EventInfoConquestItemCounterComponent_array *v37; // x9
+  int32_t v38; // w1
+  Il2CppObject *v39; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4A2EA88 & 1) == 0 )
+  if ( (byte_4A5BB09 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMasterData_EventConquestRewardMaster___, obj);
-    sub_1B761C0(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
-    sub_1B761C0(&Method_DataManager_GetMasterData_UserQuestMaster___, v6);
-    sub_1B761C0(&EventConquestInfo___TypeInfo, v7);
-    sub_1B761C0(&NetworkManager_TypeInfo, v8);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A2EA88 = 1;
+    sub_1B885B0(&Method_DataManager_GetMasterData_EventConquestRewardMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1B885B0(&EventConquestInfo___TypeInfo);
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4A5BB09 = 1;
   }
-  v10 = sub_1B762FC(obj, EventConquestInfo___TypeInfo);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v5 = sub_1B886EC(obj, EventConquestInfo___TypeInfo);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_71;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserItemMaster___);
-  v13 = (UserItemMaster_o *)Instance;
-  if ( v10 && *(_QWORD *)(v10 + 24) )
+                        (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserItemMaster___);
+  v8 = (UserItemMaster_o *)Instance;
+  if ( v5 && *(_QWORD *)(v5 + 24) )
   {
     conquestItems = this->fields.conquestItems;
     if ( conquestItems )
     {
-      v15 = 0;
-      while ( (signed int)v15 < (signed int)conquestItems->max_length )
+      v10 = 0;
+      while ( (signed int)v10 < (signed int)conquestItems->max_length )
       {
-        v16 = *(_DWORD *)(v10 + 24);
-        if ( (int)v15 >= (int)v16 )
+        v11 = *(_DWORD *)(v5 + 24);
+        if ( (int)v10 >= (int)v11 )
           break;
-        if ( v15 >= v16 )
+        if ( v10 >= v11 )
           goto LABEL_73;
-        v17 = v10 + 8LL * (int)v15;
-        v20 = *(_QWORD *)(v17 + 32);
-        v19 = v17 + 32;
-        v18 = v20;
-        if ( !v20 )
+        v12 = v5 + 8LL * (int)v10;
+        v15 = *(_QWORD *)(v12 + 32);
+        v14 = v12 + 32;
+        v13 = v15;
+        if ( !v15 )
           goto LABEL_71;
-        if ( *(_DWORD *)(v18 + 16) == 2 )
+        if ( *(_DWORD *)(v13 + 16) == 2 )
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
           Instance = NetworkManager__get_UserId(0LL);
-          if ( v15 >= *(_DWORD *)(v10 + 24) )
+          if ( v10 >= *(_DWORD *)(v5 + 24) )
             goto LABEL_73;
-          if ( !*(_QWORD *)v19 || !v13 )
+          if ( !*(_QWORD *)v14 || !v8 )
             goto LABEL_71;
-          Instance = (int64_t)UserItemMaster__GetEntityDefinitely(
-                                v13,
-                                Instance,
-                                *(_DWORD *)(*(_QWORD *)v19 + 20LL),
-                                0LL);
+          Instance = (int64_t)UserItemMaster__GetEntityDefinitely(v8, Instance, *(_DWORD *)(*(_QWORD *)v14 + 20LL), 0LL);
           if ( Instance )
           {
             if ( *(_DWORD *)(Instance + 24) == 1 )
@@ -149,159 +137,159 @@ void __fastcall EventInfoConquestItemCounterControl__SetConquestInfos(
               Instance = (int64_t)UserGameMaster__getSelfUserGame(0LL);
               if ( !Instance )
                 goto LABEL_71;
-              v22 = (int32_t *)(Instance + 96);
+              v17 = (int32_t *)(Instance + 96);
             }
             else
             {
-              v22 = (int32_t *)(Instance + 28);
+              v17 = (int32_t *)(Instance + 28);
             }
-            v23 = this->fields.conquestItems;
-            if ( !v23 )
+            v18 = this->fields.conquestItems;
+            if ( !v18 )
               goto LABEL_71;
-            if ( v15 >= v23->max_length || v15 >= *(_DWORD *)(v10 + 24) )
+            if ( v10 >= v18->max_length || v10 >= *(_DWORD *)(v5 + 24) )
               goto LABEL_73;
-            v24 = *(_DWORD **)v19;
-            if ( !*(_QWORD *)v19 )
+            v19 = *(_DWORD **)v14;
+            if ( !*(_QWORD *)v14 )
               goto LABEL_71;
-            Instance = (int64_t)v23->m_Items[v15];
+            Instance = (int64_t)v18->m_Items[v10];
             if ( !Instance )
               goto LABEL_71;
-            if ( *(_DWORD *)(Instance + 80) == v24[5] )
+            if ( *(_DWORD *)(Instance + 80) == v19[5] )
             {
-              v25 = v24[8];
-              v26 = v24[9];
-              v27 = *v22;
-              *(_DWORD *)(Instance + 88) = v26;
-              *(_DWORD *)(Instance + 92) = v25;
-              *(_DWORD *)(Instance + 84) = v27;
+              v20 = v19[8];
+              v21 = v19[9];
+              v22 = *v17;
+              *(_DWORD *)(Instance + 88) = v21;
+              *(_DWORD *)(Instance + 92) = v20;
+              *(_DWORD *)(Instance + 84) = v22;
               EventInfoConquestItemCounterComponent__SetLabel(
                 (EventInfoConquestItemCounterComponent_o *)Instance,
-                v27,
-                v25,
-                v26,
-                v21);
+                v22,
+                v20,
+                v21,
+                v16);
             }
           }
         }
         conquestItems = this->fields.conquestItems;
-        ++v15;
+        ++v10;
         if ( !conquestItems )
           goto LABEL_71;
       }
       return;
     }
 LABEL_71:
-    sub_1B7641C(Instance, v12);
+    sub_1B8880C(Instance, v7);
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_71;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventConquestRewardMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventConquestRewardMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_71;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserQuestMaster___);
-  v29 = this->fields.conquestItems;
-  if ( !v29 )
+                        (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+  v24 = this->fields.conquestItems;
+  if ( !v24 )
     goto LABEL_71;
-  v30 = (UserQuestMaster_o *)Instance;
-  v31 = 0;
-  v44 = MasterData_object;
-  while ( (signed int)v31 < (signed int)v29->max_length )
+  v25 = (UserQuestMaster_o *)Instance;
+  v26 = 0;
+  v39 = MasterData_object;
+  while ( (signed int)v26 < (signed int)v24->max_length )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Instance = NetworkManager__get_UserId(0LL);
-    v32 = this->fields.conquestItems;
-    if ( !v32 )
+    v27 = this->fields.conquestItems;
+    if ( !v27 )
       goto LABEL_71;
-    if ( v31 >= v32->max_length )
+    if ( v26 >= v27->max_length )
       goto LABEL_73;
-    v33 = v32->m_Items[v31];
-    if ( !v33 || !v13 )
+    v28 = v27->m_Items[v26];
+    if ( !v28 || !v8 )
       goto LABEL_71;
-    Instance = (int64_t)UserItemMaster__GetEntityDefinitely(v13, Instance, v33->fields._itemId_k__BackingField, 0LL);
+    Instance = (int64_t)UserItemMaster__GetEntityDefinitely(v8, Instance, v28->fields._itemId_k__BackingField, 0LL);
     if ( Instance )
     {
       if ( !MasterData_object )
         goto LABEL_71;
-      v34 = Instance;
+      v29 = Instance;
       Instance = (int64_t)EventConquestRewardMaster__getList(
                             (EventConquestRewardMaster_o *)MasterData_object,
                             this->fields.eventId,
                             0LL);
       if ( Instance )
       {
-        v36 = *(_DWORD *)(Instance + 24);
-        v37 = Instance;
-        if ( v36 >= 1 )
+        v31 = *(_DWORD *)(Instance + 24);
+        v32 = Instance;
+        if ( v31 >= 1 )
         {
-          v38 = 0LL;
-          v39 = 0;
-          while ( (unsigned int)v38 < v36 )
+          v33 = 0LL;
+          v34 = 0;
+          while ( (unsigned int)v33 < v31 )
           {
-            v40 = *(int32_t **)(v37 + 32 + 8 * v38);
-            if ( !v40 )
+            v35 = *(int32_t **)(v32 + 32 + 8 * v33);
+            if ( !v35 )
               goto LABEL_71;
-            if ( v40[6] == 2 && v40[7] == *(_DWORD *)(v34 + 24) )
+            if ( v35[6] == 2 && v35[7] == *(_DWORD *)(v29 + 24) )
             {
               if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
               Instance = NetworkManager__get_UserId(0LL);
-              if ( !v30 )
+              if ( !v25 )
                 goto LABEL_71;
-              Instance = (int64_t)UserQuestMaster__getEntityFromId(v30, Instance, v40[5], 0LL);
-              if ( !v40[5] || Instance && *(int *)(Instance + 40) >= 1 )
-                v39 += v40[8];
+              Instance = (int64_t)UserQuestMaster__getEntityFromId(v25, Instance, v35[5], 0LL);
+              if ( !v35[5] || Instance && *(int *)(Instance + 40) >= 1 )
+                v34 += v35[8];
             }
-            v36 = *(_DWORD *)(v37 + 24);
-            if ( (int)++v38 >= v36 )
+            v31 = *(_DWORD *)(v32 + 24);
+            if ( (int)++v33 >= v31 )
               goto LABEL_62;
           }
 LABEL_73:
-          sub_1B76424(Instance, v12);
+          sub_1B88814(Instance, v7);
         }
       }
-      v39 = 0;
+      v34 = 0;
 LABEL_62:
-      if ( *(_DWORD *)(v34 + 24) == 1 )
+      if ( *(_DWORD *)(v29 + 24) == 1 )
       {
         Instance = (int64_t)UserGameMaster__getSelfUserGame(0LL);
         if ( !Instance )
           goto LABEL_71;
-        v41 = (int32_t *)(Instance + 96);
+        v36 = (int32_t *)(Instance + 96);
       }
       else
       {
-        v41 = (int32_t *)(v34 + 28);
+        v36 = (int32_t *)(v29 + 28);
       }
-      v42 = this->fields.conquestItems;
-      if ( !v42 )
+      v37 = this->fields.conquestItems;
+      if ( !v37 )
         goto LABEL_71;
-      if ( v31 >= v42->max_length )
+      if ( v26 >= v37->max_length )
         goto LABEL_73;
-      Instance = (int64_t)v42->m_Items[v31];
+      Instance = (int64_t)v37->m_Items[v26];
       if ( !Instance )
         goto LABEL_71;
-      v43 = *v41;
+      v38 = *v36;
       *(_DWORD *)(Instance + 88) = 0;
-      *(_DWORD *)(Instance + 92) = v39;
-      *(_DWORD *)(Instance + 84) = v43;
+      *(_DWORD *)(Instance + 92) = v34;
+      *(_DWORD *)(Instance + 84) = v38;
       EventInfoConquestItemCounterComponent__SetLabel(
         (EventInfoConquestItemCounterComponent_o *)Instance,
-        v43,
-        v39,
+        v38,
+        v34,
         0,
-        v35);
-      MasterData_object = v44;
+        v30);
+      MasterData_object = v39;
     }
-    v29 = this->fields.conquestItems;
-    ++v31;
-    if ( !v29 )
+    v24 = this->fields.conquestItems;
+    ++v26;
+    if ( !v24 )
       goto LABEL_71;
   }
 }
@@ -319,20 +307,20 @@ void __fastcall EventInfoConquestItemCounterControl__SetEventId(
   const MethodInfo *v8; // x2
 
   v5 = this;
-  if ( (byte_4A2EA87 & 1) == 0 )
+  if ( (byte_4A5BB08 & 1) == 0 )
   {
-    this = (EventInfoConquestItemCounterControl_o *)sub_1B761C0(&int_TypeInfo, val);
-    byte_4A2EA87 = 1;
+    this = (EventInfoConquestItemCounterControl_o *)sub_1B885B0(&int_TypeInfo);
+    byte_4A5BB08 = 1;
   }
   if ( !val )
-    sub_1B7641C(this, val);
+    sub_1B8880C(this, val);
   if ( val->klass->_1.element_class == int_TypeInfo->_1.element_class )
   {
     v5->fields.eventId = *(_DWORD *)j_il2cpp_object_unbox_0(val, int_TypeInfo, method, v3);
   }
   else
   {
-    sub_1B766DC(val);
+    sub_1B88ACC(val);
     EventInfoConquestItemCounterControl__SetConquestInfos(v6, v7, v8);
   }
 }
@@ -343,148 +331,139 @@ void __fastcall EventInfoConquestItemCounterControl__Setup(
         EventUiValueEntity_array *entity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  EventInfoConquestItemCounterControl___c_c *v14; // x0
+  EventInfoConquestItemCounterControl___c_c *v5; // x0
   System_Func_object__int__o *_9__7_0; // x21
-  Il2CppObject *v16; // x22
+  Il2CppObject *v7; // x22
   struct EventInfoConquestItemCounterControl___c_StaticFields *static_fields; // x0
-  int32_t v18; // w2
-  int32_t v19; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
-  System_Object_array *v21; // x0
-  __int64 v22; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  System_Object_array *v12; // x0
+  __int64 v13; // x1
   struct EventInfoConquestItemCounterComponent_array *conquestItems; // x8
-  System_Object_array *v24; // x20
-  __int64 v25; // x27
-  unsigned __int64 v26; // x28
-  __int64 v27; // x21
-  __int64 v28; // x8
+  System_Object_array *v15; // x20
+  __int64 v16; // x27
+  unsigned __int64 v17; // x28
+  __int64 v18; // x21
+  __int64 v19; // x8
   struct System_Collections_Generic_List_EventInfoConquestItemCounterControl_ItemSpriteData__o *itemSprites; // x23
-  System_Func_object__bool__o *v30; // x24
-  const MethodInfo *v31; // x3
-  struct EventInfoConquestItemCounterComponent_array *v32; // x8
-  EventInfoConquestItemCounterComponent_o *v33; // x8
+  System_Func_object__bool__o *v21; // x24
+  const MethodInfo *v22; // x3
+  struct EventInfoConquestItemCounterComponent_array *v23; // x8
+  EventInfoConquestItemCounterComponent_o *v24; // x8
 
-  if ( (byte_4A2EA85 & 1) == 0 )
+  if ( (byte_4A5BB06 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Linq_Enumerable_Count_EventUiValueEntity___, entity);
-    sub_1B761C0(&Method_System_Linq_Enumerable_FirstOrDefault_EventInfoConquestItemCounterControl_ItemSpriteData___, v5);
-    sub_1B761C0(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___, v6);
-    sub_1B761C0(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___, v7);
-    sub_1B761C0(&System_Func_EventInfoConquestItemCounterControl_ItemSpriteData__bool__TypeInfo, v8);
-    sub_1B761C0(&System_Func_EventUiValueEntity__int__TypeInfo, v9);
-    sub_1B761C0(&Method_EventInfoConquestItemCounterControl___c__Setup_b__7_0__, v10);
-    sub_1B761C0(&Method_EventInfoConquestItemCounterControl___c__DisplayClass7_0__Setup_b__1__, v11);
-    sub_1B761C0(&EventInfoConquestItemCounterControl___c__DisplayClass7_0_TypeInfo, v12);
-    sub_1B761C0(&EventInfoConquestItemCounterControl___c_TypeInfo, v13);
-    byte_4A2EA85 = 1;
+    sub_1B885B0(&Method_System_Linq_Enumerable_Count_EventUiValueEntity___);
+    sub_1B885B0(&Method_System_Linq_Enumerable_FirstOrDefault_EventInfoConquestItemCounterControl_ItemSpriteData___);
+    sub_1B885B0(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+    sub_1B885B0(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+    sub_1B885B0(&System_Func_EventInfoConquestItemCounterControl_ItemSpriteData__bool__TypeInfo);
+    sub_1B885B0(&System_Func_EventUiValueEntity__int__TypeInfo);
+    sub_1B885B0(&Method_EventInfoConquestItemCounterControl___c__Setup_b__7_0__);
+    sub_1B885B0(&Method_EventInfoConquestItemCounterControl___c__DisplayClass7_0__Setup_b__1__);
+    sub_1B885B0(&EventInfoConquestItemCounterControl___c__DisplayClass7_0_TypeInfo);
+    sub_1B885B0(&EventInfoConquestItemCounterControl___c_TypeInfo);
+    byte_4A5BB06 = 1;
   }
   if ( entity )
   {
-    v14 = EventInfoConquestItemCounterControl___c_TypeInfo;
+    v5 = EventInfoConquestItemCounterControl___c_TypeInfo;
     if ( !EventInfoConquestItemCounterControl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoConquestItemCounterControl___c_TypeInfo);
-      v14 = EventInfoConquestItemCounterControl___c_TypeInfo;
+      v5 = EventInfoConquestItemCounterControl___c_TypeInfo;
     }
-    _9__7_0 = (System_Func_object__int__o *)v14->static_fields->__9__7_0;
+    _9__7_0 = (System_Func_object__int__o *)v5->static_fields->__9__7_0;
     if ( !_9__7_0 )
     {
-      if ( !v14->_2.cctor_finished )
+      if ( !v5->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v14);
-        v14 = EventInfoConquestItemCounterControl___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v5);
+        v5 = EventInfoConquestItemCounterControl___c_TypeInfo;
       }
-      v16 = (Il2CppObject *)v14->static_fields->__9;
-      _9__7_0 = (System_Func_object__int__o *)sub_1B7640C(System_Func_EventUiValueEntity__int__TypeInfo);
-      System_Func_object__int____ctor(_9__7_0, v16, Method_EventInfoConquestItemCounterControl___c__Setup_b__7_0__, 0LL);
+      v7 = (Il2CppObject *)v5->static_fields->__9;
+      _9__7_0 = (System_Func_object__int__o *)sub_1B887FC(System_Func_EventUiValueEntity__int__TypeInfo);
+      System_Func_object__int____ctor(_9__7_0, v7, Method_EventInfoConquestItemCounterControl___c__Setup_b__7_0__, 0LL);
       static_fields = EventInfoConquestItemCounterControl___c_TypeInfo->static_fields;
       static_fields->__9__7_0 = (struct System_Func_EventUiValueEntity__int__o *)_9__7_0;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v18, v19);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v9, v10);
     }
-    v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
+    v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)entity,
                                                                  (System_Func_TSource__TKey__o *)_9__7_0,
-                                                                 (const MethodInfo_2E8CDF0 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
-    v21 = System_Linq_Enumerable__ToArray_object_(
-            v20,
-            (const MethodInfo_2E9AEA4 *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+                                                                 (const MethodInfo_2EAA2F0 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+    v12 = System_Linq_Enumerable__ToArray_object_(
+            v11,
+            (const MethodInfo_2EB86E4 *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
     conquestItems = this->fields.conquestItems;
     if ( !conquestItems )
 LABEL_26:
-      sub_1B7641C(v21, v22);
-    v24 = v21;
-    v25 = 4LL;
+      sub_1B8880C(v12, v13);
+    v15 = v12;
+    v16 = 4LL;
     while ( 1 )
     {
-      v26 = v25 - 4;
-      if ( v25 - 4 >= (int)conquestItems->max_length )
+      v17 = v16 - 4;
+      if ( v16 - 4 >= (int)conquestItems->max_length )
         break;
-      v27 = sub_1B7640C(EventInfoConquestItemCounterControl___c__DisplayClass7_0_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v27, 0LL);
-      v21 = (System_Object_array *)System_Linq_Enumerable__Count_object_(
-                                     (System_Collections_Generic_IEnumerable_TSource__o *)v24,
-                                     (const MethodInfo_2E7F520 *)Method_System_Linq_Enumerable_Count_EventUiValueEntity___);
-      if ( (__int64)v26 < (int)v21 )
+      v18 = sub_1B887FC(EventInfoConquestItemCounterControl___c__DisplayClass7_0_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v18, 0LL);
+      v12 = (System_Object_array *)System_Linq_Enumerable__Count_object_(
+                                     (System_Collections_Generic_IEnumerable_TSource__o *)v15,
+                                     (const MethodInfo_2E9CA20 *)Method_System_Linq_Enumerable_Count_EventUiValueEntity___);
+      if ( (__int64)v17 < (int)v12 )
       {
-        if ( !v24 )
+        if ( !v15 )
           goto LABEL_26;
-        if ( v26 >= v24->max_length )
+        if ( v17 >= v15->max_length )
           goto LABEL_28;
-        v28 = *((_QWORD *)&v24->obj.klass + v25);
-        if ( !v28 )
+        v19 = *((_QWORD *)&v15->obj.klass + v16);
+        if ( !v19 )
           goto LABEL_26;
-        if ( *(_DWORD *)(v28 + 20) == 1 )
+        if ( *(_DWORD *)(v19 + 20) == 1 )
         {
-          if ( !v27 )
+          if ( !v18 )
             goto LABEL_26;
-          v21 = (System_Object_array *)System_Int32__TryParse(
-                                         *(System_String_o **)(v28 + 24),
-                                         (int32_t *)(v27 + 16),
+          v12 = (System_Object_array *)System_Int32__TryParse(
+                                         *(System_String_o **)(v19 + 24),
+                                         (int32_t *)(v18 + 16),
                                          0LL);
-          if ( ((unsigned __int8)v21 & 1) != 0 )
+          if ( ((unsigned __int8)v12 & 1) != 0 )
           {
             itemSprites = this->fields.itemSprites;
-            v30 = (System_Func_object__bool__o *)sub_1B7640C(System_Func_EventInfoConquestItemCounterControl_ItemSpriteData__bool__TypeInfo);
+            v21 = (System_Func_object__bool__o *)sub_1B887FC(System_Func_EventInfoConquestItemCounterControl_ItemSpriteData__bool__TypeInfo);
             System_Func_object__bool____ctor(
-              v30,
-              (Il2CppObject *)v27,
+              v21,
+              (Il2CppObject *)v18,
               Method_EventInfoConquestItemCounterControl___c__DisplayClass7_0__Setup_b__1__,
               0LL);
-            v21 = (System_Object_array *)System_Linq_Enumerable__FirstOrDefault_object__48787792(
+            v12 = (System_Object_array *)System_Linq_Enumerable__FirstOrDefault_object__48907856(
                                            (System_Collections_Generic_IEnumerable_TSource__o *)itemSprites,
-                                           (System_Func_TSource__bool__o *)v30,
-                                           (const MethodInfo_2E87150 *)Method_System_Linq_Enumerable_FirstOrDefault_EventInfoConquestItemCounterControl_ItemSpriteData___);
-            if ( v21 )
+                                           (System_Func_TSource__bool__o *)v21,
+                                           (const MethodInfo_2EA4650 *)Method_System_Linq_Enumerable_FirstOrDefault_EventInfoConquestItemCounterControl_ItemSpriteData___);
+            if ( v12 )
             {
-              v32 = this->fields.conquestItems;
-              if ( !v32 )
+              v23 = this->fields.conquestItems;
+              if ( !v23 )
                 goto LABEL_26;
-              if ( v26 >= v32->max_length )
+              if ( v17 >= v23->max_length )
 LABEL_28:
-                sub_1B76424(v21, v22);
-              v33 = (EventInfoConquestItemCounterComponent_o *)*((_QWORD *)&v32->obj.klass + v25);
-              if ( !v33 )
+                sub_1B88814(v12, v13);
+              v24 = (EventInfoConquestItemCounterComponent_o *)*((_QWORD *)&v23->obj.klass + v16);
+              if ( !v24 )
                 goto LABEL_26;
               EventInfoConquestItemCounterComponent__SetItem(
-                v33,
-                *(_DWORD *)(v27 + 16),
-                *(System_String_o **)&v21->max_length,
-                v31);
+                v24,
+                *(_DWORD *)(v18 + 16),
+                *(System_String_o **)&v12->max_length,
+                v22);
             }
           }
         }
       }
       conquestItems = this->fields.conquestItems;
-      ++v25;
+      ++v16;
       if ( !conquestItems )
         goto LABEL_26;
     }
@@ -496,42 +475,38 @@ void __fastcall EventInfoConquestItemCounterControl__Start(
         EventInfoConquestItemCounterControl_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   UnityEngine_Object_o *crestSprite; // x20
-  UISprite_o *v8; // x20
+  UISprite_o *v4; // x20
   UILabel_o *armamentLabel; // x19
-  System_String_o *v10; // x0
-  __int64 v11; // x1
+  System_String_o *v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4A2EA84 & 1) == 0 )
+  if ( (byte_4A5BB05 & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, method);
-    sub_1B761C0(&LocalizationManager_TypeInfo, v3);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B761C0(&StringLiteral_16898/*"armaments_title"*/, v5);
-    sub_1B761C0(&StringLiteral_5584/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/, v6);
-    byte_4A2EA84 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&StringLiteral_16904/*"armaments_title"*/);
+    sub_1B885B0(&StringLiteral_5585/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/);
+    byte_4A5BB05 = 1;
   }
   crestSprite = (UnityEngine_Object_o *)this->fields.crestSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(crestSprite, 0LL, 0LL) )
   {
-    v8 = this->fields.crestSprite;
+    v4 = this->fields.crestSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_16898/*"armaments_title"*/, 0LL);
+    AtlasManager__SetEventUI(v4, (System_String_o *)StringLiteral_16904/*"armaments_title"*/, 0LL);
   }
   armamentLabel = this->fields.armamentLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5584/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5585/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/, 0LL);
   if ( !armamentLabel )
-    sub_1B7641C(v10, v11);
-  UILabel__set_text(armamentLabel, v10, 0LL);
+    sub_1B8880C(v6, v7);
+  UILabel__set_text(armamentLabel, v6, 0LL);
 }
 
 
@@ -546,18 +521,18 @@ System_Collections_IEnumerator_o *__fastcall EventInfoConquestItemCounterControl
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A2EA86 & 1) == 0 )
+  if ( (byte_4A5BB07 & 1) == 0 )
   {
-    sub_1B761C0(&EventInfoConquestItemCounterControl__playAnim_d__9_TypeInfo, callback);
-    byte_4A2EA86 = 1;
+    sub_1B885B0(&EventInfoConquestItemCounterControl__playAnim_d__9_TypeInfo);
+    byte_4A5BB07 = 1;
   }
-  v5 = sub_1B7640C(EventInfoConquestItemCounterControl__playAnim_d__9_TypeInfo);
+  v5 = sub_1B887FC(EventInfoConquestItemCounterControl__playAnim_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)callback, v8, v9);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)callback, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -572,24 +547,23 @@ void __fastcall EventInfoConquestItemCounterControl_ItemSpriteData___ctor(
 
 void __fastcall EventInfoConquestItemCounterControl___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
 
-  if ( (byte_4A2EA8A & 1) == 0 )
+  if ( (byte_4A5BB0B & 1) == 0 )
   {
-    sub_1B761C0(&EventInfoConquestItemCounterControl___c_TypeInfo, v1);
-    byte_4A2EA8A = 1;
+    sub_1B885B0(&EventInfoConquestItemCounterControl___c_TypeInfo);
+    byte_4A5BB0B = 1;
   }
-  v2 = (Il2CppObject *)sub_1B7640C(EventInfoConquestItemCounterControl___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  EventInfoConquestItemCounterControl___c_TypeInfo->static_fields->__9 = (struct EventInfoConquestItemCounterControl___c_o *)v2;
-  sub_1B76164(
+  v1 = (Il2CppObject *)sub_1B887FC(EventInfoConquestItemCounterControl___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  EventInfoConquestItemCounterControl___c_TypeInfo->static_fields->__9 = (struct EventInfoConquestItemCounterControl___c_o *)v1;
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)EventInfoConquestItemCounterControl___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 
@@ -607,7 +581,7 @@ int32_t __fastcall EventInfoConquestItemCounterControl___c___Setup_b__7_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   return ent->fields.priority;
 }
 
@@ -626,7 +600,7 @@ bool __fastcall EventInfoConquestItemCounterControl___c__DisplayClass7_0___Setup
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   return item->fields.itemId == this->fields.itemId;
 }
 
@@ -685,7 +659,7 @@ bool __fastcall EventInfoConquestItemCounterControl__playAnim_d__9__MoveNext(
       {
         if ( v9 >= max_length )
 LABEL_23:
-          sub_1B76424(this, method);
+          sub_1B88814(this, method);
         this = (EventInfoConquestItemCounterControl__playAnim_d__9_o *)conquestItems->m_Items[v9];
         if ( !this )
           break;
@@ -695,7 +669,7 @@ LABEL_23:
           goto LABEL_10;
       }
 LABEL_22:
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     }
 LABEL_10:
     v6->fields._i_5__2 = 0;
@@ -728,7 +702,7 @@ LABEL_19:
   }
   v6->fields.__2__current = 0LL;
   p__2__current = (ServantStatusBattleListViewItem_o *)&v6->fields.__2__current;
-  sub_1B76164(p__2__current, 0, v2, v3);
+  sub_1B88554(p__2__current, 0, v2, v3);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   return result;
@@ -751,11 +725,11 @@ void __fastcall __noreturn EventInfoConquestItemCounterControl__playAnim_d__9__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_EventInfoConquestItemCounterControl__playAnim_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_EventInfoConquestItemCounterControl__playAnim_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 

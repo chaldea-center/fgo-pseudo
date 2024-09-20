@@ -8,12 +8,12 @@ void __fastcall ScriptFlagData___ctor(ScriptFlagData_o *this, System_String_o *n
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v4->fields.name = name;
   v4 = (ScriptFlagData_o *)((char *)v4 + 16);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v4, (int32_t)name, v5, v6);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v4, (int32_t)name, v5, v6);
   v4->monitor = 0LL;
 }
 
 
-void __fastcall ScriptFlagData___ctor_41444000(
+void __fastcall ScriptFlagData___ctor_41629808(
         ScriptFlagData_o *this,
         System_String_o *name,
         int64_t v,
@@ -27,7 +27,7 @@ void __fastcall ScriptFlagData___ctor_41444000(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.name = name;
   v6 = (ScriptFlagData_o *)((char *)v6 + 16);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v6, (int32_t)name, v7, v8);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v6, (int32_t)name, v7, v8);
   v6->monitor = (void *)v;
 }
 
@@ -41,7 +41,7 @@ bool __fastcall ScriptFlagData__Comp(ScriptFlagData_o *this, System_String_o *vs
 }
 
 
-bool __fastcall ScriptFlagData__Comp_41444088(ScriptFlagData_o *this, const MethodInfo *method)
+bool __fastcall ScriptFlagData__Comp_41629896(ScriptFlagData_o *this, const MethodInfo *method)
 {
   return this->fields.v != 0;
 }
@@ -49,35 +49,32 @@ bool __fastcall ScriptFlagData__Comp_41444088(ScriptFlagData_o *this, const Meth
 
 int64_t __fastcall ScriptFlagData__Conv(ScriptFlagData_o *this, System_String_o *vs, const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   int64_t result; // x0
-  bool v8; // w8
-  bool v9; // w8
+  bool v5; // w8
+  bool v6; // w8
 
-  if ( (byte_4A2FAE1 & 1) == 0 )
+  if ( (byte_4A5CD15 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_22196/*"off"*/, vs);
-    sub_1B761C0(&StringLiteral_22226/*"on"*/, v4);
-    sub_1B761C0(&StringLiteral_19371/*"false"*/, v5);
-    sub_1B761C0(&StringLiteral_24066/*"true"*/, v6);
-    byte_4A2FAE1 = 1;
+    sub_1B885B0(&StringLiteral_22205/*"off"*/);
+    sub_1B885B0(&StringLiteral_22235/*"on"*/);
+    sub_1B885B0(&StringLiteral_19377/*"false"*/);
+    sub_1B885B0(&StringLiteral_24079/*"true"*/);
+    byte_4A5CD15 = 1;
   }
-  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24066/*"true"*/, 0LL)
-    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22226/*"on"*/, 0LL) )
+  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24079/*"true"*/, 0LL)
+    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22235/*"on"*/, 0LL) )
   {
     return 1LL;
   }
   if ( !vs )
     return 0LL;
-  v8 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19371/*"false"*/, 0LL);
+  v5 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19377/*"false"*/, 0LL);
   result = 0LL;
-  if ( !v8 )
+  if ( !v5 )
   {
-    v9 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22196/*"off"*/, 0LL);
+    v6 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22205/*"off"*/, 0LL);
     result = 0LL;
-    if ( !v9 )
+    if ( !v6 )
       return System_Int64__Parse(vs, 0LL);
   }
   return result;
@@ -105,14 +102,14 @@ void __fastcall ScriptFlagData__SetRahdom(
   v6 = (ScriptFlagData_o *)ScriptFlagData__Conv(this, ss, (const MethodInfo *)es);
   v7 = (int)v6;
   v9 = ScriptFlagData__Conv(v6, es, v8);
-  v10 = UnityEngine_Random__Range_69247148(v7, v9 + 1, 0LL);
+  v10 = UnityEngine_Random__Range_69419120(v7, v9 + 1, 0LL);
   if ( v9 < v10 )
     v10 = v9;
   this->fields.v = v10;
 }
 
 
-void __fastcall ScriptFlagData__Set_41444128(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
+void __fastcall ScriptFlagData__Set_41629936(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
 {
   this->fields.v = v;
 }

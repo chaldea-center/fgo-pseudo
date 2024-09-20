@@ -4,7 +4,7 @@ void __fastcall GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodIn
 }
 
 
-void __fastcall GachaRqParamData___ctor_32858748(
+void __fastcall GachaRqParamData___ctor_33029532(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -36,9 +36,9 @@ void __fastcall GachaRqParamData___ctor_32858748(
   v19->fields.shopIdIdx = shopIdIdx;
   v19->fields.gachaSubId = gachaSubId;
   v19->fields.storyAdjustIds = storyAdjustIds;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v19->fields.storyAdjustIds, (int32_t)storyAdjustIds, v20, v21);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v19->fields.storyAdjustIds, (int32_t)storyAdjustIds, v20, v21);
   v19->fields.selectBonusList = selectBonusList;
   v19 = (GachaRqParamData_o *)((char *)v19 + 64);
   LOBYTE(v19[-1].fields.selectBonusList) = isAppendSummon;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v19, (int32_t)selectBonusList, v22, v23);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v19, (int32_t)selectBonusList, v22, v23);
 }

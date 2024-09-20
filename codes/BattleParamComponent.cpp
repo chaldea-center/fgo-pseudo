@@ -4,56 +4,54 @@ void __fastcall BattleParamComponent___ctor(BattleParamComponent_o *this, const 
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_4A30579 & 1) == 0 )
+  if ( (byte_4A5D7B5 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1/*""*/, method);
-    byte_4A30579 = 1;
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5D7B5 = 1;
   }
   this->fields.endtime = 1.5;
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.baseAnimationName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.baseAnimationName, v5, v2, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseAnimationName, v5, v2, v3);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall BattleParamComponent__Init(BattleParamComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  int32_t v7; // w3
-  Il2CppObject *v8; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  Il2CppObject *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
+  int32_t v4; // w2
+  int32_t v5; // w3
+  Il2CppObject *v6; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
+  Il2CppObject *v9; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4A30574 & 1) == 0 )
+  if ( (byte_4A5D7B0 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___, v3);
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v4);
-    byte_4A30574 = 1;
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    byte_4A5D7B0 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E58EAC *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   this->fields.simpleAnim = (struct SimpleAnimation_o *)Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.simpleAnim, (int32_t)Component_object, v6, v7);
-  v8 = UnityEngine_Component__GetComponent_object_(
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.simpleAnim, (int32_t)Component_object, v4, v5);
+  v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2E58EAC *)Method_UnityEngine_Component_GetComponent_Animation___);
-  this->fields.anim = (struct UnityEngine_Animation_o *)v8;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.anim, (int32_t)v8, v9, v10);
+         (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_Animation___);
+  this->fields.anim = (struct UnityEngine_Animation_o *)v6;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.anim, (int32_t)v6, v7, v8);
   *(_QWORD *)&this->fields.currentPhase = 1LL;
-  v11 = UnityEngine_Component__GetComponent_object_(
-          (UnityEngine_Component_o *)this,
-          (const MethodInfo_2E58EAC *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
-  this->fields.commonEff = (struct CommonEffectComponent_o *)v11;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.commonEff, (int32_t)v11, v12, v13);
+  v9 = UnityEngine_Component__GetComponent_object_(
+         (UnityEngine_Component_o *)this,
+         (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
+  this->fields.commonEff = (struct CommonEffectComponent_o *)v9;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.commonEff, (int32_t)v9, v10, v11);
 }
 
 
@@ -67,7 +65,7 @@ void __fastcall BattleParamComponent__PlayStartEffect(
   System_Collections_IEnumerator_o *v6; // x1
 
   v6 = BattleParamComponent__playingEffect(this, start, end, callback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
 }
 
 
@@ -75,34 +73,32 @@ void __fastcall BattleParamComponent__Release(BattleParamComponent_o *this, cons
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  __int64 v5; // x1
-  int32_t v6; // w2
-  int32_t v7; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
   System_String_o *voicePath; // x0
-  System_String_o *v9; // x19
+  System_String_o *v8; // x19
 
-  if ( (byte_4A30576 & 1) == 0 )
+  if ( (byte_4A5D7B2 & 1) == 0 )
   {
-    sub_1B761C0(&SoundManager_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_1/*""*/, v5);
-    byte_4A30576 = 1;
+    sub_1B885B0(&SoundManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5D7B2 = 1;
   }
   this->fields.simpleAnim = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.simpleAnim, 0, v2, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.simpleAnim, 0, v2, v3);
   this->fields.anim = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.anim, 0, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.anim, 0, v5, v6);
   voicePath = this->fields.voicePath;
   if ( voicePath && System_String__op_Inequality(voicePath, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
-    v9 = this->fields.voicePath;
+    v8 = this->fields.voicePath;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__releaseAudioAssetStorage(v9, 0LL);
+    SoundManager__releaseAudioAssetStorage(v8, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleParamComponent__SetEndressFlg(BattleParamComponent_o *this, bool flg, const MethodInfo *method)
 {
   UnityEngine_Object_o *commonEff; // x21
@@ -110,10 +106,10 @@ void __fastcall BattleParamComponent__SetEndressFlg(BattleParamComponent_o *this
   __int64 v7; // x1
   struct CommonEffectComponent_o *v8; // x8
 
-  if ( (byte_4A30578 & 1) == 0 )
+  if ( (byte_4A5D7B4 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, flg);
-    byte_4A30578 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5D7B4 = 1;
   }
   commonEff = (UnityEngine_Object_o *)this->fields.commonEff;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -123,7 +119,7 @@ void __fastcall BattleParamComponent__SetEndressFlg(BattleParamComponent_o *this
   {
     v8 = this->fields.commonEff;
     if ( !v8 )
-      sub_1B7641C(v6, v7);
+      sub_1B8880C(v6, v7);
     v8->fields.isEndless = flg;
   }
 }
@@ -136,38 +132,36 @@ void __fastcall BattleParamComponent__SetInfo(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  __int64 v13; // x0
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
+  int32_t v9; // w2
+  int32_t v10; // w3
+  __int64 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
+  __int64 v15; // x4
   Il2CppObject *voiceDataStr; // x22
-  Il2CppObject *v19; // x0
-  struct System_String_o *v20; // x0
+  Il2CppObject *v17; // x0
+  struct System_String_o *v18; // x0
   struct System_String_o **p_voicePath; // x20
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_String_o *v24; // x20
-  int32_t v25; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x20
+  int32_t v23; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A30575 & 1) == 0 )
+  if ( (byte_4A5D7B1 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, animationIds);
-    sub_1B761C0(&SoundManager_TypeInfo, v9);
-    sub_1B761C0(&StringLiteral_25085/*"{0}_{1}"*/, v10);
-    byte_4A30575 = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&SoundManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_25098/*"{0}_{1}"*/);
+    byte_4A5D7B1 = 1;
   }
   BattleParamComponent__Init(this, (const MethodInfo *)animationIds);
   this->fields.animationIds = animationIds;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.animationIds, (int32_t)animationIds, v11, v12);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.animationIds, (int32_t)animationIds, v9, v10);
   if ( voiceId < 1 )
   {
     if ( !callback )
-      sub_1B7641C(v13, v14);
+      sub_1B8880C(v11, v12);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
       callback->fields.original_method_info,
       *(_QWORD *)&callback->fields.extra_arg);
@@ -175,21 +169,20 @@ void __fastcall BattleParamComponent__SetInfo(
   else
   {
     voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
-    v25 = voiceId;
-    v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v15, v16, v17);
-    v20 = System_String__Format_61549432((System_String_o *)StringLiteral_25085/*"{0}_{1}"*/, voiceDataStr, v19, 0LL);
-    this->fields.voicePath = v20;
+    v23 = voiceId;
+    v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v13, v14, v15);
+    v18 = System_String__Format_61721404((System_String_o *)StringLiteral_25098/*"{0}_{1}"*/, voiceDataStr, v17, 0LL);
+    this->fields.voicePath = v18;
     p_voicePath = &this->fields.voicePath;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)p_voicePath, (int32_t)v20, v22, v23);
-    v24 = *p_voicePath;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)p_voicePath, (int32_t)v18, v20, v21);
+    v22 = *p_voicePath;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__loadAudioAssetStorage(v24, callback, 1, 0LL);
+    SoundManager__loadAudioAssetStorage(v22, callback, 1, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_IEnumerator_o *__fastcall BattleParamComponent__playingEffect(
         BattleParamComponent_o *this,
         int32_t start,
@@ -203,20 +196,20 @@ System_Collections_IEnumerator_o *__fastcall BattleParamComponent__playingEffect
   int32_t v12; // w2
   int32_t v13; // w3
 
-  if ( (byte_4A30577 & 1) == 0 )
+  if ( (byte_4A5D7B3 & 1) == 0 )
   {
-    sub_1B761C0(&BattleParamComponent__playingEffect_d__16_TypeInfo, *(_QWORD *)&start);
-    byte_4A30577 = 1;
+    sub_1B885B0(&BattleParamComponent__playingEffect_d__16_TypeInfo);
+    byte_4A5D7B3 = 1;
   }
-  v9 = sub_1B7640C(BattleParamComponent__playingEffect_d__16_TypeInfo);
+  v9 = sub_1B887FC(BattleParamComponent__playingEffect_d__16_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
   *(_DWORD *)(v9 + 40) = start;
   *(_DWORD *)(v9 + 44) = end;
   *(_QWORD *)(v9 + 48) = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 48), (int32_t)callback, v12, v13);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 48), (int32_t)callback, v12, v13);
   return (System_Collections_IEnumerator_o *)v9;
 }
 
@@ -239,9 +232,6 @@ bool __fastcall BattleParamComponent__playingEffect_d__16__MoveNext(
   __int64 v3; // x3
   __int64 v4; // x4
   BattleParamComponent__playingEffect_d__16_o *v5; // x19
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   int32_t _1__state; // w8
   struct BattleParamComponent_o *_4__this; // x22
   int i; // w8
@@ -249,34 +239,34 @@ bool __fastcall BattleParamComponent__playingEffect_d__16__MoveNext(
   __int64 switchIndex; // x10
   int max_length; // w11
   Il2CppObject *baseAnimationName; // x20
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
+  __int64 v13; // x2
+  __int64 v14; // x3
+  __int64 v15; // x4
   struct System_Int32_array *animationIds; // x8
-  __int64 v20; // x9
-  Il2CppObject *v21; // x21
+  __int64 v17; // x9
+  Il2CppObject *v18; // x21
+  Il2CppObject *v19; // x0
+  System_String_o *v20; // x20
+  Il2CppObject *v21; // x20
   Il2CppObject *v22; // x0
-  System_String_o *v23; // x20
-  Il2CppObject *v24; // x20
-  Il2CppObject *v25; // x0
   UnityEngine_Object_o *simpleAnim; // x21
   ServantStatusBattleListViewItem_o *p__2__current; // x19
   bool result; // w0
   UnityEngine_Object_o *anim; // x21
   struct System_Action_o *callback; // x8
-  ServantStatusBattleListViewItem_o *v31; // x19
-  int v32; // [xsp+4h] [xbp-3Ch] BYREF
-  int32_t v33; // [xsp+8h] [xbp-38h] BYREF
-  int v34; // [xsp+Ch] [xbp-34h] BYREF
+  ServantStatusBattleListViewItem_o *v28; // x19
+  int v29; // [xsp+4h] [xbp-3Ch] BYREF
+  int32_t v30; // [xsp+8h] [xbp-38h] BYREF
+  int v31; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = this;
-  if ( (byte_4A3057A & 1) == 0 )
+  if ( (byte_4A5D7B6 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B761C0(&StringLiteral_25097/*"{0}{1}_{2}"*/, v7);
-    this = (BattleParamComponent__playingEffect_d__16_o *)sub_1B761C0(&StringLiteral_25093/*"{0}{1}"*/, v8);
-    byte_4A3057A = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&StringLiteral_25110/*"{0}{1}_{2}"*/);
+    this = (BattleParamComponent__playingEffect_d__16_o *)sub_1B885B0(&StringLiteral_25106/*"{0}{1}"*/);
+    byte_4A5D7B6 = 1;
   }
   _1__state = v5->fields.__1__state;
   _4__this = v5->fields.__4__this;
@@ -299,7 +289,7 @@ bool __fastcall BattleParamComponent__playingEffect_d__16__MoveNext(
   v5->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_41:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   for ( i = v5->fields.start; ; i = _4__this->fields.currentPhase + 1 )
   {
     _4__this->fields.currentPhase = i;
@@ -317,28 +307,28 @@ LABEL_41:
     if ( i == switchPhase->m_Items[switchIndex + 1] )
     {
       baseAnimationName = (Il2CppObject *)_4__this->fields.baseAnimationName;
-      v34 = i;
-      this = (BattleParamComponent__playingEffect_d__16_o *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v2, v3, v4);
+      v31 = i;
+      this = (BattleParamComponent__playingEffect_d__16_o *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v2, v3, v4);
       animationIds = _4__this->fields.animationIds;
       if ( !animationIds )
         goto LABEL_41;
-      v20 = _4__this->fields.switchIndex;
-      if ( (unsigned int)v20 >= animationIds->max_length )
+      v17 = _4__this->fields.switchIndex;
+      if ( (unsigned int)v17 >= animationIds->max_length )
 LABEL_42:
-        sub_1B76424(this, method);
-      v21 = (Il2CppObject *)this;
-      v33 = animationIds->m_Items[v20 + 1];
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v16, v17, v18);
-      v23 = System_String__Format_61549500((System_String_o *)StringLiteral_25097/*"{0}{1}_{2}"*/, baseAnimationName, v21, v22, 0LL);
+        sub_1B88814(this, method);
+      v18 = (Il2CppObject *)this;
+      v30 = animationIds->m_Items[v17 + 1];
+      v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v13, v14, v15);
+      v20 = System_String__Format_61721472((System_String_o *)StringLiteral_25110/*"{0}{1}_{2}"*/, baseAnimationName, v18, v19, 0LL);
       ++_4__this->fields.switchIndex;
     }
     else
     {
 LABEL_19:
-      v24 = (Il2CppObject *)_4__this->fields.baseAnimationName;
-      v32 = i;
-      v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v2, v3, v4);
-      v23 = System_String__Format_61549432((System_String_o *)StringLiteral_25093/*"{0}{1}"*/, v24, v25, 0LL);
+      v21 = (Il2CppObject *)_4__this->fields.baseAnimationName;
+      v29 = i;
+      v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v2, v3, v4);
+      v20 = System_String__Format_61721404((System_String_o *)StringLiteral_25106/*"{0}{1}"*/, v21, v22, 0LL);
     }
     simpleAnim = (UnityEngine_Object_o *)_4__this->fields.simpleAnim;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -348,7 +338,7 @@ LABEL_19:
       this = (BattleParamComponent__playingEffect_d__16_o *)_4__this->fields.simpleAnim;
       if ( !this )
         goto LABEL_41;
-      SimpleAnimation__Play_63672732((SimpleAnimation_o *)this, v23, 0LL);
+      SimpleAnimation__Play_63844704((SimpleAnimation_o *)this, v20, 0LL);
 LABEL_25:
       this = (BattleParamComponent__playingEffect_d__16_o *)_4__this->fields.simpleAnim;
       if ( !this )
@@ -360,7 +350,7 @@ LABEL_25:
       {
         v5->fields.__2__current = 0LL;
         p__2__current = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-        sub_1B76164(p__2__current, 0, v2, v3);
+        sub_1B88554(p__2__current, 0, v2, v3);
         result = 1;
         *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
         return result;
@@ -377,7 +367,7 @@ LABEL_25:
         this = (BattleParamComponent__playingEffect_d__16_o *)_4__this->fields.anim;
         if ( !this )
           goto LABEL_41;
-        UnityEngine_Animation__Play_69032500((UnityEngine_Animation_o *)this, v23, 0LL);
+        UnityEngine_Animation__Play_69204472((UnityEngine_Animation_o *)this, v20, 0LL);
 LABEL_33:
         this = (BattleParamComponent__playingEffect_d__16_o *)_4__this->fields.anim;
         if ( !this )
@@ -388,9 +378,9 @@ LABEL_33:
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           v5->fields.__2__current = 0LL;
-          v31 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
-          sub_1B76164(v31, 0, v2, v3);
-          *(_DWORD *)&v31[-1].fields.isMine = 2;
+          v28 = (ServantStatusBattleListViewItem_o *)&v5->fields.__2__current;
+          sub_1B88554(v28, 0, v2, v3);
+          *(_DWORD *)&v28[-1].fields.isMine = 2;
           return 1;
         }
       }
@@ -421,11 +411,11 @@ void __fastcall __noreturn BattleParamComponent__playingEffect_d__16__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_BattleParamComponent__playingEffect_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_BattleParamComponent__playingEffect_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 

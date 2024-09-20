@@ -37,10 +37,10 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
   int32_t v16; // w2
   int32_t v17; // w3
 
-  if ( (byte_4A31AAF & 1) == 0 )
+  if ( (byte_4A5EC74 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, item);
-    byte_4A31AAF = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5EC74 = 1;
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite )
@@ -66,9 +66,9 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
     v9 = (UnityEngine_Object_o *)*p_boardPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69287408(v9, 0LL);
+    UnityEngine_Object__Destroy_69459380(v9, 0LL);
     *p_boardPrefab = 0LL;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, 0, v10, v11);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, 0, v10, v11);
   }
   BoardPrefab_k__BackingField = (UnityEngine_Object_o *)item->fields._BoardPrefab_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v13, transform, 0LL, 0LL);
     this->fields.boardPrefab = Object;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, (int32_t)Object, v16, v17);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, (int32_t)Object, v16, v17);
     boardSprite = (UnityEngine_Component_o *)this->fields.boardPrefab;
     if ( !boardSprite )
       goto LABEL_21;
@@ -91,7 +91,7 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
         (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0LL) )
   {
 LABEL_21:
-    sub_1B7641C(boardSprite, item);
+    sub_1B8880C(boardSprite, item);
   }
   UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0LL);
 }

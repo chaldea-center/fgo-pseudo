@@ -1,17 +1,16 @@
 void __fastcall CommandCodeSkillReleaseEntity___ctor(CommandCodeSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2DD4C & 1) == 0 )
+  if ( (byte_4A5AF6A & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2DD4C = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5AF6A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CommandCodeSkillReleaseEntity__CreatePK(
         int32_t commandCodeId,
         int32_t num,
@@ -19,17 +18,17 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4A2DD4A & 1) == 0 )
+  if ( (byte_4A5AF68 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
-    byte_4A2DD4A = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4A5AF68 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            commandCodeId,
            num,
            priority,
            idx,
-           (const MethodInfo_2E60F7C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E7E47C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -48,7 +47,6 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
         int32_t commandCodeId,
         int32_t num,
@@ -56,105 +54,102 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
         int32_t idx,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x19
-  System_String_o *v7; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
-  int32_t v11; // w2
-  int32_t v12; // w3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w1
-  int32_t v19; // w2
-  int32_t v20; // w3
-  int32_t v21; // w2
-  int32_t v22; // w3
-  int32_t v23; // w1
-  int32_t v24; // w2
-  int32_t v25; // w3
-  int32_t v27; // [xsp+0h] [xbp-30h] BYREF
-  int32_t v28; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v29; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v30; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v5; // x19
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
+  int32_t v12; // w1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w1
+  int32_t v23; // w2
+  int32_t v24; // w3
+  int32_t v26; // [xsp+0h] [xbp-30h] BYREF
+  int32_t v27; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v28; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v29; // [xsp+Ch] [xbp-24h] BYREF
 
-  v29 = num;
-  v30 = commandCodeId;
-  v27 = idx;
-  v28 = priority;
-  if ( (byte_4A2DD49 & 1) == 0 )
+  v28 = num;
+  v29 = commandCodeId;
+  v26 = idx;
+  v27 = priority;
+  if ( (byte_4A5AF67 & 1) == 0 )
   {
-    sub_1B761C0(&string___TypeInfo, *(_QWORD *)&num);
-    sub_1B761C0(&StringLiteral_1544/*":"*/, v5);
-    byte_4A2DD49 = 1;
+    sub_1B885B0(&string___TypeInfo);
+    sub_1B885B0(&StringLiteral_1544/*":"*/);
+    byte_4A5AF67 = 1;
   }
-  v6 = sub_1B76268(string___TypeInfo, 7LL);
-  v7 = System_Int32__ToString((int32_t)&v30, 0LL);
-  if ( !v6 )
-    sub_1B7641C(v7, v8);
-  if ( !*(_DWORD *)(v6 + 24) )
+  v5 = sub_1B88658(string___TypeInfo, 7LL);
+  v6 = System_Int32__ToString((int32_t)&v29, 0LL);
+  if ( !v5 )
+    sub_1B8880C(v6, v7);
+  if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
-  *(_QWORD *)(v6 + 32) = v7;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
-  if ( *(_DWORD *)(v6 + 24) <= 1u )
+  *(_QWORD *)(v5 + 32) = v6;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
+  if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v13 = StringLiteral_1544/*":"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_1544/*":"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 40), v13, v11, v12);
-  v7 = System_Int32__ToString((int32_t)&v29, 0LL);
-  if ( *(_DWORD *)(v6 + 24) <= 2u )
+  v12 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1544/*":"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 40), v12, v10, v11);
+  v6 = System_Int32__ToString((int32_t)&v28, 0LL);
+  if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
-  *(_QWORD *)(v6 + 48) = v7;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
-  if ( *(_DWORD *)(v6 + 24) <= 3u )
+  *(_QWORD *)(v5 + 48) = v6;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
+  if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v18 = StringLiteral_1544/*":"*/;
-  *(_QWORD *)(v6 + 56) = StringLiteral_1544/*":"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 56), v18, v16, v17);
-  v7 = System_Int32__ToString((int32_t)&v28, 0LL);
-  if ( *(_DWORD *)(v6 + 24) <= 4u
-    || (*(_QWORD *)(v6 + 64) = v7,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
-        *(_DWORD *)(v6 + 24) <= 5u)
-    || (v23 = StringLiteral_1544/*":"*/,
-        *(_QWORD *)(v6 + 72) = StringLiteral_1544/*":"*/,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 72), v23, v21, v22),
-        v7 = System_Int32__ToString((int32_t)&v27, 0LL),
-        *(_DWORD *)(v6 + 24) <= 6u) )
+  v17 = StringLiteral_1544/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1544/*":"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 56), v17, v15, v16);
+  v6 = System_Int32__ToString((int32_t)&v27, 0LL);
+  if ( *(_DWORD *)(v5 + 24) <= 4u
+    || (*(_QWORD *)(v5 + 64) = v6,
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
+        *(_DWORD *)(v5 + 24) <= 5u)
+    || (v22 = StringLiteral_1544/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1544/*":"*/,
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 72), v22, v20, v21),
+        v6 = System_Int32__ToString((int32_t)&v26, 0LL),
+        *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1B76424(v7, v8);
+    sub_1B88814(v6, v7);
   }
-  *(_QWORD *)(v6 + 80) = v7;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
-  return System_String__Concat_61548588((System_String_array *)v6, 0LL);
+  *(_QWORD *)(v5 + 80) = v6;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
+  return System_String__Concat_61720560((System_String_array *)v5, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall CommandCodeSkillReleaseEntity__isUse(
         CommandCodeSkillReleaseEntity_o *this,
         int32_t beforeClearQuestId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   int32_t condType; // w21
   int64_t UserId; // x0
   int32_t condNum; // w20
   int32_t condTargetId; // w21
-  int64_t v10; // x22
-  int32_t v12; // w22
-  int64_t v13; // x19
+  int64_t v9; // x22
+  int32_t v11; // w22
+  int64_t v12; // x19
 
-  if ( (byte_4A2DD4B & 1) == 0 )
+  if ( (byte_4A5AF69 & 1) == 0 )
   {
-    sub_1B761C0(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    sub_1B761C0(&NetworkManager_TypeInfo, v5);
-    byte_4A2DD4B = 1;
+    sub_1B885B0(&CondType_TypeInfo);
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    byte_4A5AF69 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
@@ -164,17 +159,17 @@ bool __fastcall CommandCodeSkillReleaseEntity__isUse(
     UserId = NetworkManager__get_UserId(0LL);
     condTargetId = this->fields.condTargetId;
     condNum = this->fields.condNum;
-    v10 = UserId;
+    v9 = UserId;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestPhaseClear(v10, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
+    return CondType__IsQuestPhaseClear(v9, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
   }
   else
   {
-    v12 = this->fields.condTargetId;
-    v13 = this->fields.condNum;
+    v11 = this->fields.condTargetId;
+    v12 = this->fields.condNum;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsOpen(condType, v12, v13, 0, 0LL, 0LL);
+    return CondType__IsOpen(condType, v11, v12, 0, 0LL, 0LL);
   }
 }

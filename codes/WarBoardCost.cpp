@@ -11,7 +11,7 @@ void __fastcall WarBoardCost___ctor(WarBoardCost_o *this, const MethodInfo *meth
 }
 
 
-void __fastcall WarBoardCost___ctor_35162908(
+void __fastcall WarBoardCost___ctor_35335972(
         WarBoardCost_o *this,
         int32_t classId,
         int32_t baseActionPoint,
@@ -115,10 +115,10 @@ WarBoardCost_o *__fastcall WarBoardCost__Create(
   const MethodInfo *v11; // x2
   int v13; // [xsp+4h] [xbp-4Ch]
 
-  if ( (byte_4A2BBBF & 1) == 0 )
+  if ( (byte_4A58DCD & 1) == 0 )
   {
-    sub_1B761C0(&WarBoardCost_TypeInfo, stagePieceDetailEntity);
-    byte_4A2BBBF = 1;
+    sub_1B885B0(&WarBoardCost_TypeInfo);
+    byte_4A58DCD = 1;
   }
   if ( entity )
   {
@@ -126,7 +126,7 @@ WarBoardCost_o *__fastcall WarBoardCost__Create(
     v13 = HIDWORD(*(_QWORD *)&entity->fields.classId);
     v8 = vrev64_s32(*(int32x2_t *)&entity->fields.classId).n64_u64[0];
     v9 = vrev64_s32(*(int32x2_t *)&entity->fields.attackCost).n64_u64[0];
-    v10 = sub_1B7640C(WarBoardCost_TypeInfo);
+    v10 = sub_1B887FC(WarBoardCost_TypeInfo);
     *(_QWORD *)(v10 + 40) = -1LL;
     *(_QWORD *)(v10 + 48) = -1LL;
     System_Object___ctor((Il2CppObject *)v10, 0LL);
@@ -137,11 +137,11 @@ WarBoardCost_o *__fastcall WarBoardCost__Create(
     if ( stagePieceDetailEntity )
       WarBoardCost__SetOverwriteCost((WarBoardCost_o *)v10, stagePieceDetailEntity, v11);
     if ( reinforcementsEntity )
-      WarBoardCost__SetOverwriteCost_35163124((WarBoardCost_o *)v10, reinforcementsEntity, v11);
+      WarBoardCost__SetOverwriteCost_35336188((WarBoardCost_o *)v10, reinforcementsEntity, v11);
   }
   else
   {
-    v10 = sub_1B7640C(WarBoardCost_TypeInfo);
+    v10 = sub_1B887FC(WarBoardCost_TypeInfo);
     *(_QWORD *)(v10 + 40) = -1LL;
     *(_QWORD *)(v10 + 48) = -1LL;
     System_Object___ctor((Il2CppObject *)v10, 0LL);
@@ -160,30 +160,29 @@ System_String_o *__fastcall WarBoardCost__CurrentAndMaxPointToString(WarBoardCos
   __int64 v2; // x2
   __int64 v3; // x3
   __int64 v4; // x4
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x4
-  Il2CppObject *v10; // x20
-  __int64 v11; // x8
-  Il2CppObject *v12; // x0
-  int v14; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v6; // x2
+  __int64 v7; // x3
+  __int64 v8; // x4
+  Il2CppObject *v9; // x20
+  __int64 v10; // x8
+  Il2CppObject *v11; // x0
+  int v13; // [xsp+8h] [xbp-28h] BYREF
   int32_t CurrentActionPoint_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A2BBBE & 1) == 0 )
+  if ( (byte_4A58DCC & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_25041/*"{0}/{1}"*/, v6);
-    byte_4A2BBBE = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&StringLiteral_25054/*"{0}/{1}"*/);
+    byte_4A58DCC = 1;
   }
   CurrentActionPoint_k__BackingField = this->fields._CurrentActionPoint_k__BackingField;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &CurrentActionPoint_k__BackingField, v2, v3, v4);
-  v11 = 40LL;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &CurrentActionPoint_k__BackingField, v2, v3, v4);
+  v10 = 40LL;
   if ( this->fields.overwirteBaseActionPoint < 0 )
-    v11 = 24LL;
-  v14 = *(_DWORD *)((char *)&this->klass + v11);
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v7, v8, v9);
-  return System_String__Format_61549432((System_String_o *)StringLiteral_25041/*"{0}/{1}"*/, v10, v12, 0LL);
+    v10 = 24LL;
+  v13 = *(_DWORD *)((char *)&this->klass + v10);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v6, v7, v8);
+  return System_String__Format_61721404((System_String_o *)StringLiteral_25054/*"{0}/{1}"*/, v9, v11, 0LL);
 }
 
 
@@ -248,7 +247,7 @@ void __fastcall WarBoardCost__SetOverwriteCost(
   __int64 v8; // x8
 
   if ( !stagePieceDetailEntity )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   this->fields.overwirteBaseActionPoint = WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
                                             stagePieceDetailEntity,
                                             0LL);
@@ -265,7 +264,7 @@ void __fastcall WarBoardCost__SetOverwriteCost(
 }
 
 
-void __fastcall WarBoardCost__SetOverwriteCost_35163124(
+void __fastcall WarBoardCost__SetOverwriteCost_35336188(
         WarBoardCost_o *this,
         WarBoardReinforcementsEntity_o *reinforcementsEntity,
         const MethodInfo *method)
@@ -278,7 +277,7 @@ void __fastcall WarBoardCost__SetOverwriteCost_35163124(
   *(_QWORD *)v7 = 0LL;
   v8 = 0LL;
   if ( !reinforcementsEntity )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   OverwriteBaseActionPoint = WarBoardReinforcementsEntity__TryGetOverwriteBaseActionPoint(
                                reinforcementsEntity,
                                (int32_t *)&v8 + 1,
@@ -322,7 +321,7 @@ void __fastcall WarBoardCost__UpdateClassCost(
   __int64 v6; // x8
 
   if ( !changeClassCost )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   v3 = 44LL;
   if ( changeClassCost->fields.overwirteMove < 0 )
     v3 = 28LL;

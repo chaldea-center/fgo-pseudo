@@ -1,22 +1,20 @@
 void __fastcall WarBoardRoadComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  int32_t v3; // w3
-  __int64 v4; // x1
+  int32_t v1; // w2
+  int32_t v2; // w3
 
-  if ( (byte_4A2BA97 & 1) == 0 )
+  if ( (byte_4A58CA5 & 1) == 0 )
   {
-    sub_1B761C0(&WarBoardRoadComponent_TypeInfo, v1);
-    sub_1B761C0(&StringLiteral_5402/*"DrawPath"*/, v4);
-    byte_4A2BA97 = 1;
+    sub_1B885B0(&WarBoardRoadComponent_TypeInfo);
+    sub_1B885B0(&StringLiteral_5403/*"DrawPath"*/);
+    byte_4A58CA5 = 1;
   }
-  WarBoardRoadComponent_TypeInfo->static_fields->UNLOCK_ANIMATION_NAME = (struct System_String_o *)StringLiteral_5402/*"DrawPath"*/;
-  sub_1B76164(
+  WarBoardRoadComponent_TypeInfo->static_fields->UNLOCK_ANIMATION_NAME = (struct System_String_o *)StringLiteral_5403/*"DrawPath"*/;
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)WarBoardRoadComponent_TypeInfo->static_fields,
-    StringLiteral_5402/*"DrawPath"*/,
-    v2,
-    v3);
+    StringLiteral_5403/*"DrawPath"*/,
+    v1,
+    v2);
 }
 
 
@@ -50,10 +48,10 @@ void __fastcall WarBoardRoadComponent__ChangeColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4A2BA96 & 1) == 0 )
+  if ( (byte_4A58CA4 & 1) == 0 )
   {
-    this = (WarBoardRoadComponent_o *)sub_1B761C0(&UnityEngine_Object_TypeInfo, immediate);
-    byte_4A2BA96 = 1;
+    this = (WarBoardRoadComponent_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A58CA4 = 1;
   }
   if ( targets )
   {
@@ -64,7 +62,7 @@ void __fastcall WarBoardRoadComponent__ChangeColor(
       do
       {
         if ( v14 >= (unsigned int)v13 )
-          sub_1B76424(this, immediate);
+          sub_1B88814(this, immediate);
         v15 = (UnityEngine_Object_o *)targets->m_Items[v14];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -89,7 +87,7 @@ void __fastcall WarBoardRoadComponent__ChangeColor(
             {
               if ( !v17 )
 LABEL_20:
-                sub_1B7641C(this, immediate);
+                sub_1B8880C(this, immediate);
               TweenColor__set_value((TweenColor_o *)v17, *(UnityEngine_Color_o *)&v17[2].fields.roadImage, 0LL);
               UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v17, 0, 0LL);
             }
@@ -104,101 +102,97 @@ LABEL_20:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardRoadComponent__ChangeColorDarkness(
         WarBoardRoadComponent_o *this,
         bool immediate,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  UICommonButtonColor_c *v6; // x0
+  UICommonButtonColor_c *v5; // x0
   float duration; // s8
   UnityEngine_Component_o *transform; // x0
-  __int64 v9; // x1
+  __int64 v8; // x1
   WarBoardRoadComponent_o *ComponentsInChildren_object; // x0
-  const MethodInfo *v11; // x3
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo *v10; // x3
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A2BA94 & 1) == 0 )
+  if ( (byte_4A58CA2 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464, immediate);
-    sub_1B761C0(&UICommonButtonColor_TypeInfo, v5);
-    byte_4A2BA94 = 1;
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76107672);
+    sub_1B885B0(&UICommonButtonColor_TypeInfo);
+    byte_4A58CA2 = 1;
   }
-  v6 = UICommonButtonColor_TypeInfo;
+  v5 = UICommonButtonColor_TypeInfo;
   if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UICommonButtonColor_TypeInfo);
-    v6 = UICommonButtonColor_TypeInfo;
+    v5 = UICommonButtonColor_TypeInfo;
   }
-  duration = v6->static_fields->duration;
+  duration = v5->static_fields->duration;
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1B7641C(0LL, v9);
+    sub_1B8880C(0LL, v8);
   ComponentsInChildren_object = (WarBoardRoadComponent_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                              transform,
                                                              1,
-                                                             (const MethodInfo_2E59998 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464);
-  v12.fields.r = 0.5;
-  v12.fields.g = 0.5;
-  v12.fields.b = 0.5;
-  v12.fields.a = 1.0;
+                                                             (const MethodInfo_2E76E98 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76107672);
+  v11.fields.r = 0.5;
+  v11.fields.g = 0.5;
+  v11.fields.b = 0.5;
+  v11.fields.a = 1.0;
   WarBoardRoadComponent__ChangeColor(
     ComponentsInChildren_object,
-    v12,
+    v11,
     duration,
     immediate,
     (UIWidget_array *)ComponentsInChildren_object,
-    v11);
+    v10);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardRoadComponent__ChangeColorNormal(
         WarBoardRoadComponent_o *this,
         bool immediate,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  UICommonButtonColor_c *v6; // x0
+  UICommonButtonColor_c *v5; // x0
   float duration; // s8
   UnityEngine_Component_o *transform; // x0
-  __int64 v9; // x1
+  __int64 v8; // x1
   WarBoardRoadComponent_o *ComponentsInChildren_object; // x0
-  const MethodInfo *v11; // x3
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo *v10; // x3
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A2BA95 & 1) == 0 )
+  if ( (byte_4A58CA3 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464, immediate);
-    sub_1B761C0(&UICommonButtonColor_TypeInfo, v5);
-    byte_4A2BA95 = 1;
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76107672);
+    sub_1B885B0(&UICommonButtonColor_TypeInfo);
+    byte_4A58CA3 = 1;
   }
-  v6 = UICommonButtonColor_TypeInfo;
+  v5 = UICommonButtonColor_TypeInfo;
   if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UICommonButtonColor_TypeInfo);
-    v6 = UICommonButtonColor_TypeInfo;
+    v5 = UICommonButtonColor_TypeInfo;
   }
-  duration = v6->static_fields->duration;
+  duration = v5->static_fields->duration;
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1B7641C(0LL, v9);
+    sub_1B8880C(0LL, v8);
   ComponentsInChildren_object = (WarBoardRoadComponent_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                              transform,
                                                              1,
-                                                             (const MethodInfo_2E59998 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____75925464);
-  v12.fields.r = 1.0;
-  v12.fields.g = 1.0;
-  v12.fields.b = 1.0;
-  v12.fields.a = 1.0;
+                                                             (const MethodInfo_2E76E98 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76107672);
+  v11.fields.r = 1.0;
+  v11.fields.g = 1.0;
+  v11.fields.b = 1.0;
+  v11.fields.a = 1.0;
   WarBoardRoadComponent__ChangeColor(
     ComponentsInChildren_object,
-    v12,
+    v11,
     duration,
     immediate,
     (UIWidget_array *)ComponentsInChildren_object,
-    v11);
+    v10);
 }
 
 
@@ -206,15 +200,15 @@ void __fastcall WarBoardRoadComponent__DisablePass(WarBoardRoadComponent_o *this
 {
   UISprite_o *roadImage; // x0
 
-  if ( (byte_4A2BA93 & 1) == 0 )
+  if ( (byte_4A58CA1 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_22948/*"road"*/, method);
-    byte_4A2BA93 = 1;
+    sub_1B885B0(&StringLiteral_22959/*"road"*/);
+    byte_4A58CA1 = 1;
   }
   roadImage = this->fields.roadImage;
   if ( !roadImage )
-    sub_1B7641C(0LL, method);
-  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_22948/*"road"*/, 0LL);
+    sub_1B8880C(0LL, method);
+  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_22959/*"road"*/, 0LL);
 }
 
 
@@ -222,15 +216,15 @@ void __fastcall WarBoardRoadComponent__EnablePass(WarBoardRoadComponent_o *this,
 {
   UISprite_o *roadImage; // x0
 
-  if ( (byte_4A2BA92 & 1) == 0 )
+  if ( (byte_4A58CA0 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_22949/*"road_on"*/, method);
-    byte_4A2BA92 = 1;
+    sub_1B885B0(&StringLiteral_22960/*"road_on"*/);
+    byte_4A58CA0 = 1;
   }
   roadImage = this->fields.roadImage;
   if ( !roadImage )
-    sub_1B7641C(0LL, method);
-  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_22949/*"road_on"*/, 0LL);
+    sub_1B8880C(0LL, method);
+  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_22960/*"road_on"*/, 0LL);
 }
 
 
@@ -251,29 +245,28 @@ void __fastcall WarBoardRoadComponent__Initialize(
   float v12; // s12
   float v13; // s13
   WarBoardRoadComponent_o *v16; // x19
-  __int64 v17; // x1
   Il2CppObject *Component_object; // x0
-  int32_t v19; // w2
-  int32_t v20; // w3
-  float v21; // s15
-  float v22; // s11
-  float v23; // s9
-  float v24; // s12
-  float v25; // s14
-  float v26; // s13
-  unsigned int v27; // w9
-  int32_t v28; // w20
+  int32_t v18; // w2
+  int32_t v19; // w3
+  float v20; // s15
+  float v21; // s11
+  float v22; // s9
+  float v23; // s12
+  float v24; // s14
+  float v25; // s13
+  unsigned int v26; // w9
+  int32_t v27; // w20
   UnityEngine_GameObject_o *gameObject; // x0
-  int v30; // w8
-  WarBoardRoadComponent_o *v31; // x20
+  int v29; // w8
+  WarBoardRoadComponent_o *v30; // x20
   UnityEngine_Transform_o *transform; // x19
-  float v33; // s0
-  float v34; // s1
-  float v35; // s2
+  float v32; // s0
+  float v33; // s1
+  float v34; // s2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v37; // [xsp+Ch] [xbp-74h]
+  float v36; // [xsp+Ch] [xbp-74h]
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
 
   z = position2.fields.z;
   y = position2.fields.y;
@@ -282,11 +275,11 @@ void __fastcall WarBoardRoadComponent__Initialize(
   v12 = position1.fields.y;
   v13 = position1.fields.x;
   v16 = this;
-  if ( (byte_4A2BA91 & 1) == 0 )
+  if ( (byte_4A58C9F & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, imageSetAtlas);
-    this = (WarBoardRoadComponent_o *)sub_1B761C0(&StringLiteral_22948/*"road"*/, v17);
-    byte_4A2BA91 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    this = (WarBoardRoadComponent_o *)sub_1B885B0(&StringLiteral_22959/*"road"*/);
+    byte_4A58C9F = 1;
   }
   if ( !road )
     goto LABEL_39;
@@ -296,9 +289,9 @@ void __fastcall WarBoardRoadComponent__Initialize(
     goto LABEL_39;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   v16->fields.simpleAnimation = (struct SimpleAnimation_o *)Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v16->fields.simpleAnimation, (int32_t)Component_object, v19, v20);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v16->fields.simpleAnimation, (int32_t)Component_object, v18, v19);
   this = (WarBoardRoadComponent_o *)v16->fields.roadImage;
   if ( !this )
     goto LABEL_39;
@@ -306,7 +299,7 @@ void __fastcall WarBoardRoadComponent__Initialize(
   this = (WarBoardRoadComponent_o *)v16->fields.roadImage;
   if ( !this )
     goto LABEL_39;
-  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_22948/*"road"*/, 0LL);
+  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_22959/*"road"*/, 0LL);
   this = (WarBoardRoadComponent_o *)v16->fields.roadImage;
   if ( !this )
     goto LABEL_39;
@@ -315,91 +308,91 @@ void __fastcall WarBoardRoadComponent__Initialize(
     this->klass[2]._1.interopData);
   if ( isSwapPos )
   {
-    v37 = x;
+    v36 = x;
     x = v13;
-    v21 = v12;
-    v22 = v11;
+    v20 = v12;
+    v21 = v11;
   }
   else
   {
-    v21 = y;
-    v22 = z;
-    v37 = v13;
+    v20 = y;
+    v21 = z;
+    v36 = v13;
     y = v12;
     z = v11;
   }
-  if ( !byte_4A28BB3 )
+  if ( !byte_4A55CE3 )
   {
-    sub_1B761C0(&System_Math_TypeInfo, imageSetAtlas);
-    byte_4A28BB3 = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A55CE3 = 1;
   }
-  v23 = v21 - y;
-  v24 = x - v37;
-  v25 = v22 - z;
+  v22 = v20 - y;
+  v23 = x - v36;
+  v24 = v21 - z;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4A2923D )
+  if ( !byte_4A5638E )
   {
-    sub_1B761C0(&System_Math_TypeInfo, imageSetAtlas);
-    byte_4A2923D = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A5638E = 1;
   }
-  v26 = sqrtf((float)((float)(v24 * v24) + (float)(v23 * v23)) + (float)(v25 * v25));
+  v25 = sqrtf((float)((float)(v23 * v23) + (float)(v22 * v22)) + (float)(v24 * v24));
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   this = (WarBoardRoadComponent_o *)v16->fields.roadImage;
-  v27 = vcvtps_s32_f32(v26);
-  v28 = ceilf(v26) == INFINITY ? 0x80000000 : v27;
+  v26 = vcvtps_s32_f32(v25);
+  v27 = ceilf(v25) == INFINITY ? 0x80000000 : v26;
   if ( !this )
     goto LABEL_39;
-  UIWidget__set_width((UIWidget_o *)this, v28, 0LL);
+  UIWidget__set_width((UIWidget_o *)this, v27, 0LL);
   this = (WarBoardRoadComponent_o *)v16->fields.roadImage;
   if ( !this )
     goto LABEL_39;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v30 = v28 <= 0 ? -v28 : 1 - v28;
-  GameObjectExtensions__SetLocalPositionX(gameObject, (float)(v30 >> 1), 0LL);
+  v29 = v27 <= 0 ? -v27 : 1 - v27;
+  GameObjectExtensions__SetLocalPositionX(gameObject, (float)(v29 >> 1), 0LL);
   this = (WarBoardRoadComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v16, 0LL);
   if ( !this )
     goto LABEL_39;
-  v31 = this;
-  v38.fields.z = atan2f(v23, v24) * 57.296;
-  v38.fields.x = 0.0;
-  v38.fields.y = 0.0;
-  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v31, v38, 0LL);
+  v30 = this;
+  v37.fields.z = atan2f(v22, v23) * 57.296;
+  v37.fields.x = 0.0;
+  v37.fields.y = 0.0;
+  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v30, v37, 0LL);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v16, 0LL);
-  if ( !byte_4A28BB4 )
+  if ( !byte_4A55CE4 )
   {
-    sub_1B761C0(&System_Math_TypeInfo, imageSetAtlas);
-    byte_4A28BB4 = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A55CE4 = 1;
   }
   this = (WarBoardRoadComponent_o *)System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( v26 <= 0.00001 )
+  if ( v25 <= 0.00001 )
   {
-    if ( !byte_4A28BB1 )
+    if ( !byte_4A55CE1 )
     {
-      this = (WarBoardRoadComponent_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, imageSetAtlas);
-      byte_4A28BB1 = 1;
+      this = (WarBoardRoadComponent_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4A55CE1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    v33 = static_fields->zeroVector.fields.x;
-    v34 = static_fields->zeroVector.fields.y;
-    v35 = static_fields->zeroVector.fields.z;
+    v32 = static_fields->zeroVector.fields.x;
+    v33 = static_fields->zeroVector.fields.y;
+    v34 = static_fields->zeroVector.fields.z;
   }
   else
   {
-    v33 = v24 / v26;
-    v34 = v23 / v26;
-    v35 = v25 / v26;
+    v32 = v23 / v25;
+    v33 = v22 / v25;
+    v34 = v24 / v25;
   }
   if ( !transform )
 LABEL_39:
-    sub_1B7641C(this, imageSetAtlas);
-  v39.fields.z = z + (float)((float)(v26 * 0.5) * v35);
-  v39.fields.y = y + (float)((float)(v26 * 0.5) * v34);
-  v39.fields.x = v37 + (float)((float)(v26 * 0.5) * v33);
-  UnityEngine_Transform__set_localPosition(transform, v39, 0LL);
+    sub_1B8880C(this, imageSetAtlas);
+  v38.fields.z = z + (float)((float)(v25 * 0.5) * v34);
+  v38.fields.y = y + (float)((float)(v25 * 0.5) * v33);
+  v38.fields.x = v36 + (float)((float)(v25 * 0.5) * v32);
+  UnityEngine_Transform__set_localPosition(transform, v38, 0LL);
 }
 
 

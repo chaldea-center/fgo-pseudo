@@ -16,10 +16,9 @@ void __fastcall WarBoardMovePerformance___ctor(
   float v14; // s14
   int32_t v17; // w2
   int32_t v18; // w3
-  __int64 v19; // x1
-  float v20; // s12
-  float v21; // s10
-  float v22; // s9
+  float v19; // s12
+  float v20; // s10
+  float v21; // s9
 
   z = to.fields.z;
   y = to.fields.y;
@@ -29,24 +28,24 @@ void __fastcall WarBoardMovePerformance___ctor(
   v14 = from.fields.x;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   this->fields.target = target;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.target, (int32_t)target, v17, v18);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.target, (int32_t)target, v17, v18);
   this->fields.from.fields.x = v14;
   this->fields.from.fields.y = v13;
   this->fields.from.fields.z = v12;
   this->fields.to.fields.x = x;
   this->fields.to.fields.y = y;
   this->fields.to.fields.z = z;
-  if ( !byte_4A28BB3 )
+  if ( !byte_4A55CE3 )
   {
-    sub_1B761C0(&System_Math_TypeInfo, v19);
-    byte_4A28BB3 = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A55CE3 = 1;
   }
-  v20 = x - v14;
-  v21 = y - v13;
-  v22 = z - v12;
+  v19 = x - v14;
+  v20 = y - v13;
+  v21 = z - v12;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  this->fields.duration = sqrtf((float)(v22 * v22) + (float)((float)(v20 * v20) + (float)(v21 * v21))) / pixelPerSec;
+  this->fields.duration = sqrtf((float)(v21 * v21) + (float)((float)(v19 * v19) + (float)(v20 * v20))) / pixelPerSec;
   this->fields.easeType = easeType;
 }
 
@@ -59,16 +58,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardMovePerformance__Execute(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A2BE39 & 1) == 0 )
+  if ( (byte_4A590ED & 1) == 0 )
   {
-    sub_1B761C0(&WarBoardMovePerformance__Execute_d__7_TypeInfo, method);
-    byte_4A2BE39 = 1;
+    sub_1B885B0(&WarBoardMovePerformance__Execute_d__7_TypeInfo);
+    byte_4A590ED = 1;
   }
-  v3 = sub_1B7640C(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_1B887FC(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -80,7 +79,7 @@ void __fastcall WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, 
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_1B7641C(target, method);
+    sub_1B8880C(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0LL);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -104,7 +103,7 @@ void __fastcall WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this
       *(_QWORD *)&StartCallback->fields.extra_arg);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_1B7641C(target, method);
+    sub_1B8880C(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0LL);
 }
 
@@ -162,7 +161,7 @@ bool __fastcall WarBoardMovePerformance__Execute_d__7__MoveNext(
           !transform) )
     {
 LABEL_15:
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     }
     UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v14, 0LL);
     v7 = v6->fields._now_5__2;
@@ -181,7 +180,7 @@ LABEL_15:
   {
     v6->fields.__2__current = 0LL;
     p__2__current = (ServantStatusBattleListViewItem_o *)&v6->fields.__2__current;
-    sub_1B76164(p__2__current, 0, v2, v3);
+    sub_1B88554(p__2__current, 0, v2, v3);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
     return result;
@@ -206,11 +205,11 @@ void __fastcall __noreturn WarBoardMovePerformance__Execute_d__7__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 

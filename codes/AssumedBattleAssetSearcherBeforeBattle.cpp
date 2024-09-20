@@ -1,18 +1,17 @@
 AssumedBattleAssetSearcherBeforeBattle_o *__fastcall AssumedBattleAssetSearcherBeforeBattle__Create(
         const MethodInfo *method)
 {
-  __int64 v1; // x1
-  AssumedBattleAssetSearcherBase_o *v2; // x19
-  const MethodInfo *v3; // x1
+  AssumedBattleAssetSearcherBase_o *v1; // x19
+  const MethodInfo *v2; // x1
 
-  if ( (byte_4A2FFC3 & 1) == 0 )
+  if ( (byte_4A5D2E9 & 1) == 0 )
   {
-    sub_1B761C0(&AssumedBattleAssetSearcherBeforeBattle_TypeInfo, v1);
-    byte_4A2FFC3 = 1;
+    sub_1B885B0(&AssumedBattleAssetSearcherBeforeBattle_TypeInfo);
+    byte_4A5D2E9 = 1;
   }
-  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B7640C(AssumedBattleAssetSearcherBeforeBattle_TypeInfo);
-  AssumedBattleAssetSearcherBase___ctor(v2, v3);
-  return (AssumedBattleAssetSearcherBeforeBattle_o *)v2;
+  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1B887FC(AssumedBattleAssetSearcherBeforeBattle_TypeInfo);
+  AssumedBattleAssetSearcherBase___ctor(v1, v2);
+  return (AssumedBattleAssetSearcherBeforeBattle_o *)v1;
 }
 
 
@@ -21,95 +20,87 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
         const MethodInfo *method)
 {
   AssumedBattleAssetSearcherBeforeBattle_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   BattleEntity_o *BattleEntity; // x20
-  AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v10; // x19
+  AssumedBattleAssetLoadManager_AnalyzedResultParam_o *v4; // x19
+  const MethodInfo *v5; // x1
+  System_Collections_Generic_HashSet_SimpleSkillData__o *v6; // x21
+  const MethodInfo *v7; // x2
+  const MethodInfo *v8; // x1
+  System_Collections_Generic_IEnumerable_T__o *v9; // x0
+  System_Collections_Generic_HashSet_SimpleTreasureDeviceData__o *v10; // x21
   const MethodInfo *v11; // x1
-  System_Collections_Generic_HashSet_SimpleSkillData__o *v12; // x21
-  const MethodInfo *v13; // x2
-  const MethodInfo *v14; // x1
-  System_Collections_Generic_IEnumerable_T__o *v15; // x0
-  System_Collections_Generic_HashSet_SimpleTreasureDeviceData__o *v16; // x21
-  const MethodInfo *v17; // x1
   struct BattleInfoData_o *battleInfo; // x8
   QuestPhaseEntity_o *QuestPhaseEntity; // x0
   int32_t BattleItemObjectId; // w0
 
   v2 = this;
-  if ( (byte_4A2FFC2 & 1) == 0 )
+  if ( (byte_4A5D2E8 & 1) == 0 )
   {
-    sub_1B761C0(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo, method);
-    sub_1B761C0(&Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData__UnionWith__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__, v4);
-    sub_1B761C0(&Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData___ctor__, v6);
-    sub_1B761C0(&System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo, v7);
-    this = (AssumedBattleAssetSearcherBeforeBattle_o *)sub_1B761C0(
-                                                         &System_Collections_Generic_HashSet_SimpleTreasureDeviceData__TypeInfo,
-                                                         v8);
-    byte_4A2FFC2 = 1;
+    sub_1B885B0(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData__UnionWith__);
+    sub_1B885B0(&Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
+    sub_1B885B0(&Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__);
+    sub_1B885B0(&Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData___ctor__);
+    sub_1B885B0(&System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo);
+    this = (AssumedBattleAssetSearcherBeforeBattle_o *)sub_1B885B0(&System_Collections_Generic_HashSet_SimpleTreasureDeviceData__TypeInfo);
+    byte_4A5D2E8 = 1;
   }
   if ( !v2->fields.manager )
     goto LABEL_10;
   BattleEntity = AssumedBattleAssetLoadManager__GetBattleEntity((AssumedBattleAssetLoadManager_o *)this, method);
-  v10 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B7640C(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
-  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v10, v11);
-  v12 = (System_Collections_Generic_HashSet_SimpleSkillData__o *)sub_1B7640C(System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo);
+  v4 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B887FC(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v4, v5);
+  v6 = (System_Collections_Generic_HashSet_SimpleSkillData__o *)sub_1B887FC(System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo);
   System_Collections_Generic_HashSet_SimpleSkillData____ctor(
-    v12,
-    (const MethodInfo_33982CC *)Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__);
+    v6,
+    (const MethodInfo_33BB350 *)Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__);
   this = (AssumedBattleAssetSearcherBeforeBattle_o *)AssumedSkillExtractor__EnumerateSvtSimpleSkillData(
                                                        BattleEntity,
                                                        -1,
-                                                       v13);
-  if ( !v12 )
+                                                       v7);
+  if ( !v6 )
     goto LABEL_10;
   System_Collections_Generic_HashSet_SimpleSkillData___UnionWith(
-    v12,
+    v6,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_33994BC *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
-  v15 = (System_Collections_Generic_IEnumerable_T__o *)AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData(
-                                                         BattleEntity,
-                                                         v14);
+    (const MethodInfo_33BC540 *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
+  v9 = (System_Collections_Generic_IEnumerable_T__o *)AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData(
+                                                        BattleEntity,
+                                                        v8);
   System_Collections_Generic_HashSet_SimpleSkillData___UnionWith(
-    v12,
-    v15,
-    (const MethodInfo_33994BC *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
-  AssumedEffectExtractLogic__FromSkill((System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v12, v10, 0LL);
-  v16 = (System_Collections_Generic_HashSet_SimpleTreasureDeviceData__o *)sub_1B7640C(System_Collections_Generic_HashSet_SimpleTreasureDeviceData__TypeInfo);
+    v6,
+    v9,
+    (const MethodInfo_33BC540 *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
+  AssumedEffectExtractLogic__FromSkill((System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v6, v4, 0LL);
+  v10 = (System_Collections_Generic_HashSet_SimpleTreasureDeviceData__o *)sub_1B887FC(System_Collections_Generic_HashSet_SimpleTreasureDeviceData__TypeInfo);
   System_Collections_Generic_HashSet_SimpleTreasureDeviceData____ctor(
-    v16,
-    (const MethodInfo_339A420 *)Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData___ctor__);
+    v10,
+    (const MethodInfo_33BD4A4 *)Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData___ctor__);
   this = (AssumedBattleAssetSearcherBeforeBattle_o *)TreasureDeviceExtractor__EnumerateTreasureDeviceData(
                                                        BattleEntity,
-                                                       v17);
-  if ( !v16 )
+                                                       v11);
+  if ( !v10 )
     goto LABEL_10;
   System_Collections_Generic_HashSet_SimpleTreasureDeviceData___UnionWith(
-    v16,
-    (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_339B610 *)Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData__UnionWith__);
-  AssumedEffectExtractLogic__FromTreasureDevice(
-    (System_Collections_Generic_IEnumerable_SimpleTreasureDeviceData__o *)v16,
     v10,
+    (System_Collections_Generic_IEnumerable_T__o *)this,
+    (const MethodInfo_33BE694 *)Method_System_Collections_Generic_HashSet_SimpleTreasureDeviceData__UnionWith__);
+  AssumedEffectExtractLogic__FromTreasureDevice(
+    (System_Collections_Generic_IEnumerable_SimpleTreasureDeviceData__o *)v10,
+    v4,
     0LL);
   if ( !BattleEntity
     || (battleInfo = BattleEntity->fields.battleInfo) == 0LL
-    || (AssumedEffectExtractLogic__FromServant(battleInfo->fields.userSvt, v10, 0LL),
-        AssumedEffectExtractLogic__FromEnemyScript(BattleEntity->fields.battleInfo, v10, 0LL),
+    || (AssumedEffectExtractLogic__FromServant(battleInfo->fields.userSvt, v4, 0LL),
+        AssumedEffectExtractLogic__FromEnemyScript(BattleEntity->fields.battleInfo, v4, 0LL),
         QuestPhaseEntity = BattleEntity__GetQuestPhaseEntity(BattleEntity, 0LL),
-        AssumedEffectExtractLogic__FromQuestPhase(QuestPhaseEntity, v10, 0LL),
+        AssumedEffectExtractLogic__FromQuestPhase(QuestPhaseEntity, v4, 0LL),
         (this = (AssumedBattleAssetSearcherBeforeBattle_o *)BattleEntity__GetQuestPhaseEntity(BattleEntity, 0LL)) == 0LL) )
   {
 LABEL_10:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   }
   BattleItemObjectId = QuestPhaseEntity__GetBattleItemObjectId((QuestPhaseEntity_o *)this, 0LL);
-  AssumedEffectExtractLogic__FromItem(BattleItemObjectId, v10, 0LL);
-  return v10;
+  AssumedEffectExtractLogic__FromItem(BattleItemObjectId, v4, 0LL);
+  return v4;
 }

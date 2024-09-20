@@ -1,91 +1,87 @@
 void __fastcall DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  BalanceConfig_c *v5; // x0
-  struct System_Int64_array *v6; // x0
-  int32_t v7; // w2
-  int32_t v8; // w3
-  struct System_Int32_array *v9; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
+  BalanceConfig_c *v3; // x0
+  struct System_Int64_array *v4; // x0
+  int32_t v5; // w2
+  int32_t v6; // w3
+  struct System_Int32_array *v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_4A2DACD & 1) == 0 )
+  if ( (byte_4A5ACEB & 1) == 0 )
   {
-    sub_1B761C0(&BalanceConfig_TypeInfo, method);
-    sub_1B761C0(&int___TypeInfo, v3);
-    sub_1B761C0(&long___TypeInfo, v4);
-    byte_4A2DACD = 1;
+    sub_1B885B0(&BalanceConfig_TypeInfo);
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&long___TypeInfo);
+    byte_4A5ACEB = 1;
   }
   this->fields.followerType = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = BalanceConfig_TypeInfo;
+  v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v5 = BalanceConfig_TypeInfo;
+    v3 = BalanceConfig_TypeInfo;
   }
-  v6 = (struct System_Int64_array *)sub_1B76268(long___TypeInfo, (unsigned int)v5->static_fields->SvtEquipMax);
-  this->fields.userSvtEquipIds = v6;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.userSvtEquipIds, (int32_t)v6, v7, v8);
-  v9 = (struct System_Int32_array *)sub_1B76268(
+  v4 = (struct System_Int64_array *)sub_1B88658(long___TypeInfo, (unsigned int)v3->static_fields->SvtEquipMax);
+  this->fields.userSvtEquipIds = v4;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.userSvtEquipIds, (int32_t)v4, v5, v6);
+  v7 = (struct System_Int32_array *)sub_1B88658(
                                       int___TypeInfo,
                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipMax);
-  this->fields.svtEquipIds = v9;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.svtEquipIds, (int32_t)v9, v10, v11);
+  this->fields.svtEquipIds = v7;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.svtEquipIds, (int32_t)v7, v8, v9);
 }
 
 
 DeckServantData_o *__fastcall DeckServantData__Clone(DeckServantData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x20
-  const MethodInfo *v6; // x1
+  __int64 v3; // x20
+  const MethodInfo *v4; // x1
   System_Array_o *userSvtEquipIds; // x0
-  __int64 v8; // x1
-  Il2CppObject *v9; // x21
-  int32_t v10; // w0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  Il2CppObject *v13; // x21
-  int32_t v14; // w0
-  int32_t v15; // w2
-  int32_t v16; // w3
+  __int64 v6; // x1
+  Il2CppObject *v7; // x21
+  int32_t v8; // w0
+  int32_t v9; // w2
+  int32_t v10; // w3
+  Il2CppObject *v11; // x21
+  int32_t v12; // w0
+  int32_t v13; // w2
+  int32_t v14; // w3
   DeckServantData_o *result; // x0
 
-  if ( (byte_4A2DACE & 1) == 0 )
+  if ( (byte_4A5ACEC & 1) == 0 )
   {
-    sub_1B761C0(&DeckServantData_TypeInfo, method);
-    sub_1B761C0(&int___TypeInfo, v3);
-    sub_1B761C0(&long___TypeInfo, v4);
-    byte_4A2DACE = 1;
+    sub_1B885B0(&DeckServantData_TypeInfo);
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&long___TypeInfo);
+    byte_4A5ACEC = 1;
   }
-  v5 = sub_1B7640C(DeckServantData_TypeInfo);
-  DeckServantData___ctor((DeckServantData_o *)v5, v6);
-  if ( !v5 )
+  v3 = sub_1B887FC(DeckServantData_TypeInfo);
+  DeckServantData___ctor((DeckServantData_o *)v3, v4);
+  if ( !v3 )
     goto LABEL_7;
-  *(_DWORD *)(v5 + 16) = this->fields.id;
-  *(_QWORD *)(v5 + 24) = this->fields.userSvtId;
-  *(_DWORD *)(v5 + 32) = this->fields.svtId;
+  *(_DWORD *)(v3 + 16) = this->fields.id;
+  *(_QWORD *)(v3 + 24) = this->fields.userSvtId;
+  *(_DWORD *)(v3 + 32) = this->fields.svtId;
   userSvtEquipIds = (System_Array_o *)this->fields.userSvtEquipIds;
   if ( !userSvtEquipIds
-    || (v9 = System_Array__Clone(userSvtEquipIds, 0LL),
-        *(_QWORD *)(v5 + 40) = sub_1B762FC(v9, long___TypeInfo),
-        v10 = sub_1B762FC(v9, long___TypeInfo),
-        sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 40), v10, v11, v12),
+    || (v7 = System_Array__Clone(userSvtEquipIds, 0LL),
+        *(_QWORD *)(v3 + 40) = sub_1B886EC(v7, long___TypeInfo),
+        v8 = sub_1B886EC(v7, long___TypeInfo),
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 40), v8, v9, v10),
         (userSvtEquipIds = (System_Array_o *)this->fields.svtEquipIds) == 0LL) )
   {
 LABEL_7:
-    sub_1B7641C(userSvtEquipIds, v8);
+    sub_1B8880C(userSvtEquipIds, v6);
   }
-  v13 = System_Array__Clone(userSvtEquipIds, 0LL);
-  *(_QWORD *)(v5 + 48) = sub_1B762FC(v13, int___TypeInfo);
-  v14 = sub_1B762FC(v13, int___TypeInfo);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v5 + 48), v14, v15, v16);
-  result = (DeckServantData_o *)v5;
-  *(_BYTE *)(v5 + 56) = this->fields.isFollowerSvt;
-  *(_QWORD *)(v5 + 64) = this->fields.npcFollowerSvtId;
-  *(_QWORD *)(v5 + 72) = *(_QWORD *)&this->fields.followerType;
+  v11 = System_Array__Clone(userSvtEquipIds, 0LL);
+  *(_QWORD *)(v3 + 48) = sub_1B886EC(v11, int___TypeInfo);
+  v12 = sub_1B886EC(v11, int___TypeInfo);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 48), v12, v13, v14);
+  result = (DeckServantData_o *)v3;
+  *(_BYTE *)(v3 + 56) = this->fields.isFollowerSvt;
+  *(_QWORD *)(v3 + 64) = this->fields.npcFollowerSvtId;
+  *(_QWORD *)(v3 + 72) = *(_QWORD *)&this->fields.followerType;
   return result;
 }

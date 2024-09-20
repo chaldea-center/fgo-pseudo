@@ -2,7 +2,7 @@ void __fastcall CommandCodeCharaGraphFilterLogic___ctor(
         CommandCodeCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  CharaGraphFilterLogicBase___ctor((CharaGraphFilterLogicBase_o *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
@@ -43,7 +43,7 @@ bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilt
   sort = CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1B7641C(sort, method);
+    sub_1B8880C(sort, method);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
            *((System_Int32_array **)sort + 30),
            this->fields.sort,
@@ -64,10 +64,10 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
   CommandCodeCharaGraphFilterLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A2D2BB & 1) == 0 )
+  if ( (byte_4A5A4D6 & 1) == 0 )
   {
-    sub_1B761C0(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
-    byte_4A2D2BB = 1;
+    sub_1B885B0(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    byte_4A5A4D6 = 1;
   }
   p_listViewItem = (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -81,9 +81,9 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
   {
     item = this->fields.item;
     p_listViewItem->klass = (ServantStatusBattleListViewItem_c *)listViewItem;
-    sub_1B76164(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1B88554(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1B766DC(this->fields.item);
+  sub_1B88ACC(this->fields.item);
   return (CharaGraphCommandCodeListViewItem_o *)CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
 }

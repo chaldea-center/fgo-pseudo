@@ -9,64 +9,62 @@ void __fastcall DisplayEffectArgument___ctor(
         bool ispopAdjustment,
         const MethodInfo *method)
 {
-  __int64 v17; // x1
-  int32_t v18; // w1
+  int32_t v17; // w1
   struct System_String_o **p_attachNodeName; // x24
-  __int64 v20; // x1
-  UnityEngine_Vector3_c *v21; // x8
+  UnityEngine_Vector3_c *v19; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float z; // s1
-  struct UnityEngine_Vector3_StaticFields *v24; // x8
-  float v25; // s1
-  struct System_Int32_array *v26; // x0
+  struct UnityEngine_Vector3_StaticFields *v22; // x8
+  float v23; // s1
+  struct System_Int32_array *v24; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
   int32_t v27; // w2
   int32_t v28; // w3
-  int32_t v29; // w2
-  int32_t v30; // w3
   struct BattleActionData_o **p_actData; // x20
+  int32_t v30; // w2
+  int32_t v31; // w3
   int32_t v32; // w2
   int32_t v33; // w3
-  int32_t v34; // w2
-  int32_t v35; // w3
 
-  if ( (byte_4A303C7 & 1) == 0 )
+  if ( (byte_4A5D602 & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, actObj);
-    sub_1B761C0(&StringLiteral_1/*""*/, v17);
-    byte_4A303C7 = 1;
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5D602 = 1;
   }
-  v18 = (int)StringLiteral_1/*""*/;
+  v17 = (int)StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.attachNodeName, v18, funcIndex, (int32_t)actData);
-  if ( !byte_4A28BB1 )
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.attachNodeName, v17, funcIndex, (int32_t)actData);
+  if ( !byte_4A55CE1 )
   {
-    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v20);
-    byte_4A28BB1 = 1;
+    sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
-  v21 = UnityEngine_Vector3_TypeInfo;
+  v19 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.buffOffset.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.buffOffset.fields.z = z;
-  v24 = v21->static_fields;
-  v25 = v24->zeroVector.fields.z;
-  *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v24->zeroVector.fields.x;
-  this->fields.popupOffset.fields.z = v25;
-  v26 = (struct System_Int32_array *)sub_1B76268(int___TypeInfo, 0LL);
-  this->fields.fieldIndiv = v26;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v26, v27, v28);
+  v22 = v19->static_fields;
+  v23 = v22->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v22->zeroVector.fields.x;
+  this->fields.popupOffset.fields.z = v23;
+  v24 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
+  this->fields.fieldIndiv = v24;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v24, v25, v26);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.actObj = actObj;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)actObj, v29, v30);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)actObj, v27, v28);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_actData, (int32_t)actData, v32, v33);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_actData, (int32_t)actData, v30, v31);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_attachNodeName, (int32_t)attachNodeName, v34, v35);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_attachNodeName, (int32_t)attachNodeName, v32, v33);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -80,10 +78,10 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
   __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_4A303C9 & 1) == 0 )
+  if ( (byte_4A5D604 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, targetObj);
-    byte_4A303C9 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5D604 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -98,7 +96,7 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0LL);
 LABEL_13:
-    sub_1B7641C(v5, v6);
+    sub_1B8880C(v5, v6);
   }
   return 1;
 }
@@ -130,10 +128,10 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   v11 = buffOffset.fields.z;
   v12 = buffOffset.fields.y;
   v13 = buffOffset.fields.x;
-  if ( (byte_4A303C8 & 1) == 0 )
+  if ( (byte_4A5D603 & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, overwriteEffectIds);
-    byte_4A303C8 = 1;
+    sub_1B885B0(&int___TypeInfo);
+    byte_4A5D603 = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v13;
@@ -142,14 +140,14 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.overwriteEffectIds,
     (int32_t)overwriteEffectIds,
     (int32_t)fieldIndiv,
     (int32_t)method);
   if ( !v6 )
-    v6 = (struct System_Int32_array *)sub_1B76268(int___TypeInfo, 0LL);
+    v6 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v6;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
   return this;
 }

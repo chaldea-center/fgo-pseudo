@@ -4,8 +4,7 @@ void __fastcall OverwriteBattleBgmData___ctor(OverwriteBattleBgmData_o *this, co
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall OverwriteBattleBgmData___ctor_43033164(
+void __fastcall OverwriteBattleBgmData___ctor_43225900(
         OverwriteBattleBgmData_o *this,
         int32_t waveCount,
         int32_t bgmId,
@@ -13,19 +12,17 @@ void __fastcall OverwriteBattleBgmData___ctor_43033164(
         System_String_o *bgmName,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
   Il2CppObject *Master_object; // x0
-  __int64 v16; // x1
+  __int64 v14; // x1
 
-  if ( (byte_4A308E1 & 1) == 0 )
+  if ( (byte_4A5DB26 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_BgmMaster___, *(_QWORD *)&waveCount);
-    sub_1B761C0(&DataManager_TypeInfo, v11);
-    sub_1B761C0(&StringLiteral_1/*""*/, v12);
-    byte_4A308E1 = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5DB26 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._WaveCount_k__BackingField = waveCount;
@@ -35,13 +32,13 @@ void __fastcall OverwriteBattleBgmData___ctor_43033164(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( !Master_object )
-      sub_1B7641C(0LL, v16);
+      sub_1B8880C(0LL, v14);
     bgmName = BgmMaster__GetBgmFileName((BgmMaster_o *)Master_object, bgmId, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._BgmName_k__BackingField, (int32_t)bgmName, v13, v14);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._BgmName_k__BackingField, (int32_t)bgmName, v11, v12);
 }
 
 
@@ -52,15 +49,15 @@ OverwriteBattleBgmData_SaveData_o *__fastcall OverwriteBattleBgmData__ConvertToS
   OverwriteBattleBgmData_SaveData_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4A308E3 & 1) == 0 )
+  if ( (byte_4A5DB28 & 1) == 0 )
   {
-    sub_1B761C0(&OverwriteBattleBgmData_SaveData_TypeInfo, method);
-    byte_4A308E3 = 1;
+    sub_1B885B0(&OverwriteBattleBgmData_SaveData_TypeInfo);
+    byte_4A5DB28 = 1;
   }
   if ( !bgmData )
     return 0LL;
-  v3 = (OverwriteBattleBgmData_SaveData_o *)sub_1B7640C(OverwriteBattleBgmData_SaveData_TypeInfo);
-  OverwriteBattleBgmData_SaveData___ctor_43033920(v3, bgmData, v4);
+  v3 = (OverwriteBattleBgmData_SaveData_o *)sub_1B887FC(OverwriteBattleBgmData_SaveData_TypeInfo);
+  OverwriteBattleBgmData_SaveData___ctor_43226656(v3, bgmData, v4);
   return v3;
 }
 
@@ -69,80 +66,75 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
         OverwriteBattleBgmData_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x19
+  __int64 v3; // x19
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
-  Il2CppObject *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
+  __int64 v5; // x1
+  Il2CppObject *v6; // x0
+  int32_t v7; // w2
+  int32_t v8; // w3
   System_String_o *BgmFileName; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4A308E2 & 1) == 0 )
+  if ( (byte_4A5DB27 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_IndexValue_int____75908528, method);
-    sub_1B761C0(&Method_BasicHelper_IndexValue_string___, v3);
-    sub_1B761C0(&Method_DataManager_GetMaster_BgmMaster___, v4);
-    sub_1B761C0(&DataManager_TypeInfo, v5);
-    sub_1B761C0(&OverwriteBattleBgmData_TypeInfo, v6);
-    sub_1B761C0(&StringLiteral_1/*""*/, v7);
-    byte_4A308E2 = 1;
+    sub_1B885B0(&Method_BasicHelper_IndexValue_int____76090680);
+    sub_1B885B0(&Method_BasicHelper_IndexValue_string___);
+    sub_1B885B0(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&OverwriteBattleBgmData_TypeInfo);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5DB27 = 1;
   }
   if ( !sv )
     return 0LL;
-  v8 = sub_1B7640C(OverwriteBattleBgmData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v3 = sub_1B887FC(OverwriteBattleBgmData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
   Master_object = (Il2CppObject *)BasicHelper__IndexValue_int_(
                                     sv->fields.intParamArray,
                                     0,
                                     0,
-                                    (const MethodInfo_2E51170 *)Method_BasicHelper_IndexValue_int____75908528);
-  if ( !v8 )
+                                    (const MethodInfo_2E6E670 *)Method_BasicHelper_IndexValue_int____76090680);
+  if ( !v3 )
     goto LABEL_13;
-  *(_DWORD *)(v8 + 16) = (_DWORD)Master_object;
-  *(_DWORD *)(v8 + 20) = BasicHelper__IndexValue_int_(
+  *(_DWORD *)(v3 + 16) = (_DWORD)Master_object;
+  *(_DWORD *)(v3 + 20) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            1,
                            0,
-                           (const MethodInfo_2E51170 *)Method_BasicHelper_IndexValue_int____75908528);
-  *(_DWORD *)(v8 + 32) = BasicHelper__IndexValue_int_(
+                           (const MethodInfo_2E6E670 *)Method_BasicHelper_IndexValue_int____76090680);
+  *(_DWORD *)(v3 + 32) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            2,
                            0,
-                           (const MethodInfo_2E51170 *)Method_BasicHelper_IndexValue_int____75908528);
-  v11 = BasicHelper__IndexValue_object_(
-          (System_Object_array *)sv->fields.strParamArray,
-          0,
-          (Il2CppObject *)StringLiteral_1/*""*/,
-          (const MethodInfo_2E51254 *)Method_BasicHelper_IndexValue_string___);
-  *(_QWORD *)(v8 + 24) = v11;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)v11, v12, v13);
-  if ( *(int *)(v8 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v8 + 24), 0LL) )
+                           (const MethodInfo_2E6E670 *)Method_BasicHelper_IndexValue_int____76090680);
+  v6 = BasicHelper__IndexValue_object_(
+         (System_Object_array *)sv->fields.strParamArray,
+         0,
+         (Il2CppObject *)StringLiteral_1/*""*/,
+         (const MethodInfo_2E6E754 *)Method_BasicHelper_IndexValue_string___);
+  *(_QWORD *)(v3 + 24) = v6;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 24), (int32_t)v6, v7, v8);
+  if ( *(int *)(v3 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v3 + 24), 0LL) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( Master_object )
     {
       BgmFileName = BgmMaster__GetBgmFileName(
                       (BgmMaster_o *)Master_object,
-                      *(_DWORD *)(v8 + 20),
+                      *(_DWORD *)(v3 + 20),
                       (System_String_o *)StringLiteral_1/*""*/,
                       0LL);
-      *(_QWORD *)(v8 + 24) = BgmFileName;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)(v8 + 24), (int32_t)BgmFileName, v15, v16);
-      return (OverwriteBattleBgmData_o *)v8;
+      *(_QWORD *)(v3 + 24) = BgmFileName;
+      sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 24), (int32_t)BgmFileName, v10, v11);
+      return (OverwriteBattleBgmData_o *)v3;
     }
 LABEL_13:
-    sub_1B7641C(Master_object, v10);
+    sub_1B8880C(Master_object, v5);
   }
-  return (OverwriteBattleBgmData_o *)v8;
+  return (OverwriteBattleBgmData_o *)v3;
 }
 
 
@@ -191,7 +183,7 @@ void __fastcall OverwriteBattleBgmData__set_BgmName(
   int32_t v3; // w3
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._BgmName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -216,64 +208,63 @@ void __fastcall OverwriteBattleBgmData_SaveData___ctor(
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_43033920(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_43226656(
         OverwriteBattleBgmData_SaveData_o *this,
         OverwriteBattleBgmData_o *bgmData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  unsigned int v10; // w8
-  int32_t v11; // w2
-  int32_t v12; // w3
-  struct System_String_array *v13; // x21
+  __int64 v5; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  int32_t v8; // w3
+  unsigned int v9; // w8
+  int32_t v10; // w2
+  int32_t v11; // w3
+  struct System_String_array *v12; // x21
   struct System_String_o *BgmName_k__BackingField; // x1
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
-  if ( (byte_4A308E4 & 1) == 0 )
+  if ( (byte_4A5DB29 & 1) == 0 )
   {
-    sub_1B761C0(&int___TypeInfo, bgmData);
-    sub_1B761C0(&string___TypeInfo, v5);
-    byte_4A308E4 = 1;
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&string___TypeInfo);
+    byte_4A5DB29 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v6 = sub_1B76268(int___TypeInfo, 3LL);
+  v5 = sub_1B88658(int___TypeInfo, 3LL);
   if ( !bgmData )
     goto LABEL_12;
-  v7 = v6;
-  if ( !v6 )
+  v6 = v5;
+  if ( !v5 )
     goto LABEL_12;
-  v10 = *(_DWORD *)(v6 + 24);
-  if ( !v10
-    || (*(_DWORD *)(v6 + 32) = bgmData->fields._WaveCount_k__BackingField, v10 == 1)
-    || (*(_DWORD *)(v6 + 36) = bgmData->fields._BgmId_k__BackingField, v10 <= 2) )
+  v9 = *(_DWORD *)(v5 + 24);
+  if ( !v9
+    || (*(_DWORD *)(v5 + 32) = bgmData->fields._WaveCount_k__BackingField, v9 == 1)
+    || (*(_DWORD *)(v5 + 36) = bgmData->fields._BgmId_k__BackingField, v9 <= 2) )
   {
 LABEL_11:
-    sub_1B76424(v6, v7);
+    sub_1B88814(v5, v6);
   }
-  *(_DWORD *)(v6 + 40) = bgmData->fields.allowSubBgmPlayingRawValue;
-  this->fields.intParamArray = (struct System_Int32_array *)v6;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, v6, v8, v9);
-  v6 = sub_1B76268(string___TypeInfo, 1LL);
-  if ( !v6 )
+  *(_DWORD *)(v5 + 40) = bgmData->fields.allowSubBgmPlayingRawValue;
+  this->fields.intParamArray = (struct System_Int32_array *)v5;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, v5, v7, v8);
+  v5 = sub_1B88658(string___TypeInfo, 1LL);
+  if ( !v5 )
 LABEL_12:
-    sub_1B7641C(v6, v7);
-  v13 = (struct System_String_array *)v6;
-  if ( !*(_DWORD *)(v6 + 24) )
+    sub_1B8880C(v5, v6);
+  v12 = (struct System_String_array *)v5;
+  if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_11;
   BgmName_k__BackingField = bgmData->fields._BgmName_k__BackingField;
-  *(_QWORD *)(v6 + 32) = BgmName_k__BackingField;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)BgmName_k__BackingField, v11, v12);
-  this->fields.strParamArray = v13;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.strParamArray, (int32_t)v13, v15, v16);
+  *(_QWORD *)(v5 + 32) = BgmName_k__BackingField;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)BgmName_k__BackingField, v10, v11);
+  this->fields.strParamArray = v12;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.strParamArray, (int32_t)v12, v14, v15);
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_43034184(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_43226920(
         OverwriteBattleBgmData_SaveData_o *this,
         BattleData_SaveData_o *sv,
         const MethodInfo *method)
@@ -289,11 +280,11 @@ void __fastcall OverwriteBattleBgmData_SaveData___ctor_43034184(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !sv )
-    sub_1B7641C(v5, v6);
+    sub_1B8880C(v5, v6);
   overrideBgmData = sv->fields.overrideBgmData;
   this->fields.intParamArray = overrideBgmData;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)overrideBgmData, v7, v8);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)overrideBgmData, v7, v8);
   overrideStrBgmData = sv->fields.overrideStrBgmData;
   this->fields.strParamArray = overrideStrBgmData;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.strParamArray, (int32_t)overrideStrBgmData, v11, v12);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.strParamArray, (int32_t)overrideStrBgmData, v11, v12);
 }

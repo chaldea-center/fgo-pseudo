@@ -32,10 +32,10 @@ void __fastcall ClassButtonComponent__add_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A2D3AC & 1) == 0 )
+  if ( (byte_4A5A5CA & 1) == 0 )
   {
-    sub_1B761C0(&ClassButtonComponent_CallbackFunc_TypeInfo, value);
-    byte_4A2D3AC = 1;
+    sub_1B885B0(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4A5A5CA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -48,13 +48,13 @@ void __fastcall ClassButtonComponent__add_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
+    v9 = sub_1BC3AA0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B766DC(v8);
+  sub_1B88ACC(v8);
   ClassButtonComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -81,10 +81,10 @@ void __fastcall ClassButtonComponent__remove_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v13; // x2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4A2D3AD & 1) == 0 )
+  if ( (byte_4A5A5CB & 1) == 0 )
   {
-    sub_1B761C0(&ClassButtonComponent_CallbackFunc_TypeInfo, value);
-    byte_4A2D3AD = 1;
+    sub_1B885B0(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4A5A5CB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -97,13 +97,13 @@ void __fastcall ClassButtonComponent__remove_callbackFunc(
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
+    v9 = sub_1BC3AA0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B766DC(v8);
+  sub_1B88ACC(v8);
   ClassButtonComponent__setClassPos(v11, v12, v13, v14);
 }
 
@@ -119,7 +119,7 @@ void __fastcall ClassButtonComponent__setClassPos(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_DWORD *)p_callbackFunc - 2) = classPos;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)p_callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -145,15 +145,15 @@ void __fastcall ClassButtonComponent_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B76280(v6) & 1) == 0 )
+  if ( (sub_1B88670(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B76438(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B762E8(v10, 0LL);
+      v10 = sub_1B88828(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B886D8(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -165,13 +165,12 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19BD6C8;
+  this->fields.m_target = (Il2CppObject *)sub_19CE86C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19BD680;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CE824;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall ClassButtonComponent_CallbackFunc__BeginInvoke(
         ClassButtonComponent_CallbackFunc_o *this,
         int32_t classPos,
@@ -183,14 +182,14 @@ System_IAsyncResult_o *__fastcall ClassButtonComponent_CallbackFunc__BeginInvoke
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = classPos;
-  if ( (byte_4A2D3AE & 1) == 0 )
+  if ( (byte_4A5A5CC & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, *(_QWORD *)&classPos);
-    byte_4A2D3AE = 1;
+    sub_1B885B0(&int_TypeInfo);
+    byte_4A5A5CC = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B76174(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B88564(this, v9, callback, object);
 }
 
 
@@ -199,7 +198,7 @@ void __fastcall ClassButtonComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B76178(result, 0LL, method);
+  sub_1B88568(result, 0LL, method);
 }
 
 

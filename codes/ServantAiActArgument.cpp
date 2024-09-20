@@ -14,7 +14,7 @@ void __fastcall ServantAiActArgument___ctor(
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)svtData);
   v8->fields._SvtData_k__BackingField = svtData;
   v8 = (ServantAiActArgument_o *)((char *)v8 + 32);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v8, (int32_t)svtData, v9, v10);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v8, (int32_t)svtData, v9, v10);
   LOBYTE(v8->monitor) = isNoMessage;
 }
 
@@ -37,7 +37,7 @@ void __fastcall ServantAiActArgument__InitCommonTask(
       goto LABEL_10;
     infoText = AiEnt_k__BackingField->fields.infoText;
     task->fields.motionMessage = infoText;
-    sub_1B76164(
+    sub_1B88554(
       (ServantStatusBattleListViewItem_o *)&task->fields.motionMessage,
       (int32_t)infoText,
       (int32_t)method,
@@ -51,7 +51,7 @@ void __fastcall ServantAiActArgument__InitCommonTask(
     return;
   if ( !task )
 LABEL_10:
-    sub_1B7641C(this, task);
+    sub_1B8880C(this, task);
   task->fields.isForcedSpeedOne = 1;
 }
 
@@ -76,7 +76,7 @@ int32_t __fastcall ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *th
 
   SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
   if ( !SvtData_k__BackingField )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   return SvtData_k__BackingField->fields.uniqueId;
 }
 
@@ -98,7 +98,7 @@ void __fastcall ServantAiActArgument__set_SvtData(
   int32_t v3; // w3
 
   this->fields._SvtData_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._SvtData_k__BackingField,
     (int32_t)value,
     (int32_t)method,

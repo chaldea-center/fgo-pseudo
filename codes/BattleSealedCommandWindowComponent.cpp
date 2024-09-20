@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A30EE1 & 1) == 0 )
+  if ( (byte_4A5E130 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_17497/*"btn_close"*/, method);
-    byte_4A30EE1 = 1;
+    sub_1B885B0(&StringLiteral_17503/*"btn_close"*/);
+    byte_4A5E130 = 1;
   }
-  return (System_String_o *)StringLiteral_17497/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17503/*"btn_close"*/;
 }
 
 
@@ -29,28 +29,23 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
         BattleSealedCommandWindowComponent_LabelAdjustArgs_o *args,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   UnityEngine_Object_o *confLabel; // x22
   __int64 value; // x1
   UILabel_o *transform; // x0
-  __int64 v15; // x8
+  __int64 v10; // x8
   float x; // s0
   float z; // s2
   float y; // s1
 
-  if ( (byte_4A30EE0 & 1) == 0 )
+  if ( (byte_4A5E12F & 1) == 0 )
   {
-    sub_1B761C0(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
-    sub_1B761C0(&Method_System_Nullable_int__GetValueOrDefault__, v7);
-    sub_1B761C0(&Method_System_Nullable_Vector3__GetValueOrDefault__, v8);
-    sub_1B761C0(&Method_System_Nullable_Vector3__get_HasValue__, v9);
-    sub_1B761C0(&Method_System_Nullable_int__get_HasValue__, v10);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v11);
-    byte_4A30EE0 = 1;
+    sub_1B885B0(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+    sub_1B885B0(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1B885B0(&Method_System_Nullable_Vector3__GetValueOrDefault__);
+    sub_1B885B0(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1B885B0(&Method_System_Nullable_int__get_HasValue__);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5E12F = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -59,13 +54,13 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1B7640C(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_1B887FC(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
       System_Object___ctor((Il2CppObject *)args, 0LL);
     }
     transform = this->fields.confLabel;
     if ( !transform || (UILabel__set_text(transform, str, 0LL), !args) )
 LABEL_19:
-      sub_1B7641C(transform, value);
+      sub_1B8880C(transform, value);
     transform = this->fields.confLabel;
     if ( args->fields._fontSize_k__BackingField.fields.hasValue )
     {
@@ -84,10 +79,10 @@ LABEL_19:
     if ( !transform )
       goto LABEL_19;
     transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL);
-    v15 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
-    if ( (_BYTE)v15 )
+    v10 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
+    if ( (_BYTE)v10 )
     {
-      x = *((float *)&v15 + 1);
+      x = *((float *)&v10 + 1);
       LODWORD(z) = HIDWORD(*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y);
       LODWORD(y) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.y;
       if ( !transform )

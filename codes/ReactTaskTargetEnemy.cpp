@@ -1,15 +1,31 @@
-void __fastcall ReactTaskTargetEnemy___ctor(ReactTaskTargetEnemy_o *this, const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-}
-
-
 BattleServantData_array *__fastcall ReactTaskTargetEnemy__TargetServants(
         ReactTaskTargetEnemy_o *this,
         BattleData_o *data,
         const MethodInfo *method)
 {
-  if ( !data )
-    sub_1B7641C(this, 0LL);
-  return BattleData__getFieldEnemyServantList(data, 1, 0LL);
+  ReactTaskTargetEnemy_o *v4; // x20
+  ReactTaskTargetFilter_o *Filter_k__BackingField; // x20
+  const MethodInfo *v6; // x2
+  System_Collections_Generic_IEnumerable_BattleServantData__o *v7; // x0
+
+  v4 = this;
+  if ( (byte_4A5DDB9 & 1) == 0 )
+  {
+    this = (ReactTaskTargetEnemy_o *)sub_1B885B0(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    byte_4A5DDB9 = 1;
+  }
+  if ( !data
+    || (Filter_k__BackingField = v4->fields._Filter_k__BackingField,
+        this = (ReactTaskTargetEnemy_o *)BattleData__getFieldEnemyServantList(data, 1, 0LL),
+        !Filter_k__BackingField) )
+  {
+    sub_1B8880C(this, data);
+  }
+  v7 = ReactTaskTargetFilter__Apply(
+         Filter_k__BackingField,
+         (System_Collections_Generic_IEnumerable_BattleServantData__o *)this,
+         v6);
+  return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
+                                      (System_Collections_Generic_IEnumerable_TSource__o *)v7,
+                                      (const MethodInfo_2EB86E4 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }

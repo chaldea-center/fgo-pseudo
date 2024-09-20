@@ -9,7 +9,7 @@ void __fastcall SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const Meth
   v2->fields.nextSceneParam = 0LL;
   v2 = (SpecifiedSceneInfo_o *)((char *)v2 + 24);
   v2[-1].fields.nextSceneParam = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
 }
 
 
@@ -22,5 +22,5 @@ void __fastcall SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, co
   this->fields.nextSceneParam = 0LL;
   p_nextSceneParam = &this->fields.nextSceneParam;
   *(p_nextSceneParam - 1) = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_nextSceneParam, 0, v2, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_nextSceneParam, 0, v2, v3);
 }

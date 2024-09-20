@@ -1,4 +1,4 @@
 __int64 mono_domain_get_corlib()
 {
-  return il2cpp_class_get_name_0(qword_4A407F8);
+  return il2cpp_class_get_name_0(qword_4A6D9B8);
 }

@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PreLoadNpcBattleLogicTask___ctor(
         PreLoadNpcBattleLogicTask_o *this,
         int32_t targetId,
@@ -7,14 +6,14 @@ void __fastcall PreLoadNpcBattleLogicTask___ctor(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_4A30BBC & 1) == 0 )
+  if ( (byte_4A5DE0A & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_9310/*"NPC_PRE_LOAD"*/, *(_QWORD *)&targetId);
-    byte_4A30BBC = 1;
+    sub_1B885B0(&StringLiteral_9313/*"NPC_PRE_LOAD"*/);
+    byte_4A5DE0A = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9310/*"NPC_PRE_LOAD"*/,
+    (System_String_o *)StringLiteral_9313/*"NPC_PRE_LOAD"*/,
     targetId,
     isForcedSpeedOne,
     v4);

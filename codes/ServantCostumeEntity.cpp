@@ -1,13 +1,13 @@
 void __fastcall ServantCostumeEntity___ctor(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2E5ED & 1) == 0 )
+  if ( (byte_4A5B81B & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2E5ED = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5B81B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,10 +15,10 @@ bool __fastcall ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntit
 {
   int64_t Time; // x0
 
-  if ( (byte_4A2E5E9 & 1) == 0 )
+  if ( (byte_4A5B817 & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    byte_4A2E5E9 = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    byte_4A5B817 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -27,18 +27,17 @@ bool __fastcall ServantCostumeEntity__CheckEnableReleaseTime(ServantCostumeEntit
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCostumeEntity__CreatePK(int32_t svtId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4A2E5E8 & 1) == 0 )
+  if ( (byte_4A5B816 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
-    byte_4A2E5E8 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4A5B816 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            id,
-           (const MethodInfo_2E6062C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -54,23 +53,22 @@ System_String_o *__fastcall ServantCostumeEntity__CreatePrimaryKey(
 
 bool __fastcall ServantCostumeEntity__IsEventCombineCostume(ServantCostumeEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4A2E5EA & 1) == 0 )
+  if ( (byte_4A5B818 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___, method);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A2E5EA = 1;
+    sub_1B885B0(&Method_DataManager_GetMasterData_EventCombineCostumeMaster___);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4A5B818 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0LL )
+                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventCombineCostumeMaster___)) == 0LL )
   {
-    sub_1B7641C(Instance, v5);
+    sub_1B8880C(Instance, v4);
   }
   return EventCombineCostumeMaster__IsEventCombineCostume(
            (EventCombineCostumeMaster_o *)Instance,
@@ -87,12 +85,12 @@ bool __fastcall ServantCostumeEntity__checkBgmId(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4A2E5EC & 1) == 0 )
+  if ( (byte_4A5B81A & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_17169/*"bgmId"*/, param);
-    byte_4A2E5EC = 1;
+    sub_1B885B0(&StringLiteral_17175/*"bgmId"*/);
+    byte_4A5B81A = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17169/*"bgmId"*/, param, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_17175/*"bgmId"*/, param, v3);
 }
 
 
@@ -108,24 +106,22 @@ bool __fastcall ServantCostumeEntity__checkScript(
         int32_t *param,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  __int64 v10; // x1
+  __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x8
-  ServantCostumeEntity_o *v15; // x0
-  int32_t *v16; // x1
-  const MethodInfo *v17; // x2
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x8
+  ServantCostumeEntity_o *v13; // x0
+  int32_t *v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4A2E5EB & 1) == 0 )
+  if ( (byte_4A5B819 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1B761C0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1B761C0(&long_TypeInfo, v8);
-    byte_4A2E5EB = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1B885B0(&long_TypeInfo);
+    byte_4A5B819 = 1;
   }
   *param = 0;
   script = this->fields.script;
@@ -134,27 +130,27 @@ bool __fastcall ServantCostumeEntity__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_31A5F24 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_31A5CB0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
       {
-        sub_1B7641C(Item, v10);
+        sub_1B8880C(Item, v8);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
-        v14 = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
+        v12 = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11);
         LOBYTE(script) = 1;
-        *param = v14;
+        *param = v12;
       }
       else
       {
-        sub_1B766DC(Item);
-        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v15, v16, v17);
+        sub_1B88ACC(Item);
+        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v13, v14, v15);
       }
     }
     else

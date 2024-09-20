@@ -6,12 +6,12 @@ bool __fastcall BlacklistRemoveRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A2F725 & 1) == 0 )
+  if ( (byte_4A5C959 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_23845/*"targetUserId"*/, targetUserId);
-    byte_4A2F725 = 1;
+    sub_1B885B0(&StringLiteral_23857/*"targetUserId"*/);
+    byte_4A5C959 = 1;
   }
-  RequestBase__addField_40947456((RequestBase_o *)this, (System_String_o *)StringLiteral_23845/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_41133280((RequestBase_o *)this, (System_String_o *)StringLiteral_23857/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
   return 1;
 }
@@ -21,10 +21,10 @@ System_String_o *__fastcall BlacklistRemoveRequest__getMockData(
         BlacklistRemoveRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2F724 & 1) == 0 )
+  if ( (byte_4A5C958 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1/*""*/, method);
-    byte_4A2F724 = 1;
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5C958 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -32,19 +32,18 @@ System_String_o *__fastcall BlacklistRemoveRequest__getMockData(
 
 System_String_o *__fastcall BlacklistRemoveRequest__getURL(BlacklistRemoveRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A2F723 & 1) == 0 )
+  if ( (byte_4A5C957 & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_17327/*"blacklist/remove"*/, v2);
-    byte_4A2F723 = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_17333/*"blacklist/remove"*/);
+    byte_4A5C957 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_17327/*"blacklist/remove"*/, 0LL);
+  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_17333/*"blacklist/remove"*/, 0LL);
 }
 
 
@@ -53,39 +52,37 @@ void __fastcall BlacklistRemoveRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
+  ResponseData_o *v5; // x0
+  const MethodInfo *v6; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v10; // x9
+  __int64 *v8; // x9
 
-  if ( (byte_4A2F726 & 1) == 0 )
+  if ( (byte_4A5C95A & 1) == 0 )
   {
-    sub_1B761C0(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B761C0(&StringLiteral_22216/*"ok"*/, v5);
-    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
-    byte_4A2F726 = 1;
+    sub_1B885B0(&ResponseCommandKind_TypeInfo);
+    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
+    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
+    byte_4A5C95A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(65, responseList, 0LL);
-  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
+  v5 = ResponseCommandKind__SearchData(65, responseList, 0LL);
+  if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22216/*"ok"*/;
+    v8 = &StringLiteral_22225/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22046/*"ng"*/;
+    v8 = &StringLiteral_22055/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v10,
+    *v8,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

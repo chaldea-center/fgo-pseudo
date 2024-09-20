@@ -1,98 +1,87 @@
 void __fastcall SvtMaterialTdMaster___ctor(SvtMaterialTdMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2E95A & 1) == 0 )
+  if ( (byte_4A5BC68 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__, method);
-    byte_4A2E95A = 1;
+    sub_1B885B0(&Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
+    byte_4A5BC68 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     390,
-    (const MethodInfo_30FFA98 *)Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
+    (const MethodInfo_311DC4C *)Method_DataMasterBase_SvtMaterialTdMaster__SvtMaterialTdEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 SvtMaterialTdEntity_array *__fastcall SvtMaterialTdMaster__GetEntityList(
         SvtMaterialTdMaster_o *this,
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *v5; // x20
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  System_Collections_Generic_List_object__o *v13; // x20
-  __int64 v14; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v16; // x1
+  __int64 v8; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v19; // x9
+  __int64 v11; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v22; // x8
-  __int64 v23; // x9
-  int32_t *v24; // x10
-  __int64 v25; // x0
-  __int64 v26; // x0
-  int32_t v27; // w2
-  int32_t v28; // w3
-  __int64 v29; // x8
-  SvtMaterialTdEntity_c *v30; // x1
+  System_Collections_Generic_IEnumerator_T__c *v14; // x8
+  __int64 v15; // x9
+  int32_t *v16; // x10
+  __int64 v17; // x0
+  __int64 v18; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  __int64 v21; // x8
+  SvtMaterialTdEntity_c *v22; // x1
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x9
-  _QWORD *v33; // x10
+  _QWORD *v25; // x10
   __int64 size; // x11
-  Il2CppClass **v35; // x0
-  System_Collections_Generic_IEnumerator_T__c *v36; // x8
-  __int64 v37; // x9
-  int32_t *v38; // x10
-  __int64 v39; // x0
+  Il2CppClass **v27; // x0
+  System_Collections_Generic_IEnumerator_T__c *v28; // x8
+  __int64 v29; // x9
+  int32_t *v30; // x10
+  __int64 v31; // x0
 
-  if ( (byte_4A2E95B & 1) == 0 )
+  if ( (byte_4A5BC69 & 1) == 0 )
   {
-    sub_1B761C0(
-      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
-      *(_QWORD *)&baseSvtId);
-    sub_1B761C0(&System_IDisposable_TypeInfo, v5);
-    sub_1B761C0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1B761C0(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__, v8);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__, v9);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__, v10);
-    sub_1B761C0(&System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo, v11);
-    sub_1B761C0(&SvtMaterialTdEntity_TypeInfo, v12);
-    byte_4A2E95B = 1;
+    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+    sub_1B885B0(&System_IDisposable_TypeInfo);
+    sub_1B885B0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
+    sub_1B885B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
+    sub_1B885B0(&SvtMaterialTdEntity_TypeInfo);
+    byte_4A5BC69 = 1;
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_SvtMaterialTdEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v13,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
+    v5,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_SvtMaterialTdEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_38;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_309D0A0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30BAB58 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B7641C(0LL, v16);
+    sub_1B8880C(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v19 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v11 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v19;
+        --v11;
         p_offset += 4;
-        if ( !v19 )
+        if ( !v11 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -100,99 +89,99 @@ SvtMaterialTdEntity_array *__fastcall SvtMaterialTdMaster__GetEntityList(
     else
     {
 LABEL_9:
-      p_method = sub_1BC81A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BDA590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v22 = Enumerator->klass;
-    v23 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v14 = Enumerator->klass;
+    v15 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v24 = &v22->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v24 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v16 = &v14->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v16 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v23;
-        v24 += 4;
-        if ( !v23 )
+        --v15;
+        v16 += 4;
+        if ( !v15 )
           goto LABEL_16;
       }
-      v25 = (__int64)&v22->vtable[*v24].method;
+      v17 = (__int64)&v14->vtable[*v16].method;
     }
     else
     {
 LABEL_16:
-      v25 = sub_1BC81A0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v17 = sub_1BDA590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
+    v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
             Enumerator,
-            *(_QWORD *)(v25 + 8));
-    v29 = v26;
-    if ( v26 )
+            *(_QWORD *)(v17 + 8));
+    v21 = v18;
+    if ( v18 )
     {
-      v30 = SvtMaterialTdEntity_TypeInfo;
+      v22 = SvtMaterialTdEntity_TypeInfo;
       methodPtr_low = LOBYTE(SvtMaterialTdEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)v26 + 304LL) < (unsigned int)methodPtr_low
-        || *(SvtMaterialTdEntity_c **)(*(_QWORD *)(*(_QWORD *)v26 + 200LL) + 8 * methodPtr_low - 8) != SvtMaterialTdEntity_TypeInfo )
+      if ( *(unsigned __int8 *)(*(_QWORD *)v18 + 304LL) < (unsigned int)methodPtr_low
+        || *(SvtMaterialTdEntity_c **)(*(_QWORD *)(*(_QWORD *)v18 + 200LL) + 8 * methodPtr_low - 8) != SvtMaterialTdEntity_TypeInfo )
       {
-        sub_1B766DC(v26);
+        sub_1B88ACC(v18);
 LABEL_36:
-        sub_1B7641C(v26, v30);
+        sub_1B8880C(v18, v22);
       }
-      if ( *(_DWORD *)(v26 + 16) == baseSvtId )
+      if ( *(_DWORD *)(v18 + 16) == baseSvtId )
       {
-        if ( !v13 )
+        if ( !v5 )
           goto LABEL_36;
-        items = v13->fields._items;
-        v33 = Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__;
-        ++v13->fields._version;
+        items = v5->fields._items;
+        v25 = Method_System_Collections_Generic_List_SvtMaterialTdEntity__Add__;
+        ++v5->fields._version;
         if ( !items )
-          sub_1B7641C(v26, v30);
-        size = v13->fields._size;
+          sub_1B8880C(v18, v22);
+        size = v5->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v13,
-            (Il2CppObject *)v26,
-            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+            v5,
+            (Il2CppObject *)v18,
+            *(const MethodInfo_34FD834 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v35 = &items->obj.klass + size;
-          v13->fields._size = size + 1;
-          v35[4] = (Il2CppClass *)v29;
-          sub_1B76164((ServantStatusBattleListViewItem_o *)(v35 + 4), v29, v27, v28);
+          v27 = &items->obj.klass + size;
+          v5->fields._size = size + 1;
+          v27[4] = (Il2CppClass *)v21;
+          sub_1B88554((ServantStatusBattleListViewItem_o *)(v27 + 4), v21, v19, v20);
         }
       }
     }
   }
-  v36 = Enumerator->klass;
-  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v28 = Enumerator->klass;
+  v29 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v38 = &v36->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
+    v30 = &v28->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v30 - 1) != System_IDisposable_TypeInfo )
     {
-      --v37;
-      v38 += 4;
-      if ( !v37 )
+      --v29;
+      v30 += 4;
+      if ( !v29 )
         goto LABEL_31;
     }
-    v39 = (__int64)&v36->vtable[*v38].method;
+    v31 = (__int64)&v28->vtable[*v30].method;
   }
   else
   {
 LABEL_31:
-    v39 = sub_1BC81A0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_1BDA590(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
+  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(
                                                              Enumerator,
-                                                             *(_QWORD *)(v39 + 8));
-  if ( !v13 )
+                                                             *(_QWORD *)(v31 + 8));
+  if ( !v5 )
 LABEL_38:
-    sub_1B7641C(list, v14);
+    sub_1B8880C(list, v6);
   return (SvtMaterialTdEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                        v13,
-                                        (const MethodInfo_34D912C *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
+                                        v5,
+                                        (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_SvtMaterialTdEntity__ToArray__);
 }

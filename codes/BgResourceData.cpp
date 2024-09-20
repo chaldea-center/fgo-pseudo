@@ -1,22 +1,20 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BgResourceData___ctor(BgResourceData_o *this, int32_t bgId, int32_t bgType, const MethodInfo *method)
 {
-  __int64 v7; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
+  __int64 v8; // x1
 
-  if ( (byte_4A303E2 & 1) == 0 )
+  if ( (byte_4A5D61D & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_BattleBgMaster___, *(_QWORD *)&bgId);
-    sub_1B761C0(&DataManager_TypeInfo, v7);
-    byte_4A303E2 = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_BattleBgMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    byte_4A5D61D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BattleBgMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BattleBgMaster___);
   if ( !Master_object )
-    sub_1B7641C(0LL, v9);
+    sub_1B8880C(0LL, v8);
   this->fields = (BgResourceData_Fields)BattleBgMaster__GetBgResourceIdType(
                                           (BattleBgMaster_o *)Master_object,
                                           bgId,
@@ -29,10 +27,10 @@ System_String_o *__fastcall BgResourceData__get_AssetPath(BgResourceData_o *this
 {
   int32_t Id_k__BackingField; // w19
 
-  if ( (byte_4A303E1 & 1) == 0 )
+  if ( (byte_4A5D61C & 1) == 0 )
   {
-    sub_1B761C0(&BattleDataDefine_TypeInfo, method);
-    byte_4A303E1 = 1;
+    sub_1B885B0(&BattleDataDefine_TypeInfo);
+    byte_4A5D61C = 1;
   }
   Id_k__BackingField = this->fields._Id_k__BackingField;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )

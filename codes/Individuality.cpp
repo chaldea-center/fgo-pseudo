@@ -3,96 +3,93 @@ bool __fastcall Individuality__CheckAllIndividualities(
         System_Int32_array *target,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x20
+  _BOOL8 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x20
-  _BOOL8 v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  __int64 v13; // x8
-  __int64 v14; // x9
-  bool v15; // w24
-  System_Func_int__bool__o **v16; // x21
-  System_Func_int__bool__o *v17; // x22
-  int32_t v18; // w2
-  int32_t v19; // w3
-  __int64 v20; // x9
-  int v21; // w8
-  int v22; // w9
+  int32_t v8; // w2
+  int32_t v9; // w3
+  __int64 v10; // x8
+  __int64 v11; // x9
+  bool v12; // w24
+  System_Func_int__bool__o **v13; // x21
+  System_Func_int__bool__o *v14; // x22
+  int32_t v15; // w2
+  int32_t v16; // w3
+  __int64 v17; // x9
+  int v18; // w8
+  int v19; // w9
 
-  if ( (byte_4A2CF5A & 1) == 0 )
+  if ( (byte_4A5A174 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_Any_int____75906672, target);
-    sub_1B761C0(&System_Func_int__bool__TypeInfo, v5);
-    sub_1B761C0(&Method_Individuality___c__DisplayClass7_0__CheckAllIndividualities_b__0__, v6);
-    sub_1B761C0(&Individuality___c__DisplayClass7_0_TypeInfo, v7);
-    byte_4A2CF5A = 1;
+    sub_1B885B0(&Method_BasicHelper_Any_int____76088816);
+    sub_1B885B0(&System_Func_int__bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality___c__DisplayClass7_0__CheckAllIndividualities_b__0__);
+    sub_1B885B0(&Individuality___c__DisplayClass7_0_TypeInfo);
+    byte_4A5A174 = 1;
   }
-  v8 = sub_1B7640C(Individuality___c__DisplayClass7_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
+  v5 = sub_1B887FC(Individuality___c__DisplayClass7_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
 LABEL_18:
-    sub_1B7641C(v9, v10);
-  *(_QWORD *)(v8 + 16) = target;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)target, v11, v12);
-  if ( *(_QWORD *)(v8 + 16) )
+    sub_1B8880C(v6, v7);
+  *(_QWORD *)(v5 + 16) = target;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)target, v8, v9);
+  if ( *(_QWORD *)(v5 + 16) )
   {
-    LOBYTE(v13) = 1;
+    LOBYTE(v10) = 1;
     if ( self )
     {
-      v14 = *(_QWORD *)(*(_QWORD *)(v8 + 16) + 24LL);
-      if ( v14 )
+      v11 = *(_QWORD *)(*(_QWORD *)(v5 + 16) + 24LL);
+      if ( v11 )
       {
-        v13 = *(_QWORD *)&self->max_length;
-        if ( v13 )
+        v10 = *(_QWORD *)&self->max_length;
+        if ( v10 )
         {
-          v15 = (int)v14 > 0;
-          *(_DWORD *)(v8 + 24) = 0;
-          if ( (int)v14 >= 1 )
+          v12 = (int)v11 > 0;
+          *(_DWORD *)(v5 + 24) = 0;
+          if ( (int)v11 >= 1 )
           {
-            v16 = (System_Func_int__bool__o **)(v8 + 32);
+            v13 = (System_Func_int__bool__o **)(v5 + 32);
             do
             {
-              v17 = *v16;
-              if ( !*v16 )
+              v14 = *v13;
+              if ( !*v13 )
               {
-                v17 = (System_Func_int__bool__o *)sub_1B7640C(System_Func_int__bool__TypeInfo);
+                v14 = (System_Func_int__bool__o *)sub_1B887FC(System_Func_int__bool__TypeInfo);
                 System_Func_int__bool____ctor(
-                  v17,
-                  (Il2CppObject *)v8,
+                  v14,
+                  (Il2CppObject *)v5,
                   Method_Individuality___c__DisplayClass7_0__CheckAllIndividualities_b__0__,
                   0LL);
-                *(_QWORD *)(v8 + 32) = v17;
-                sub_1B76164((ServantStatusBattleListViewItem_o *)(v8 + 32), (int32_t)v17, v18, v19);
+                *(_QWORD *)(v5 + 32) = v14;
+                sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)v14, v15, v16);
               }
-              v9 = BasicHelper__Any_int__48551248(
+              v6 = BasicHelper__Any_int__48671312(
                      self,
-                     (System_Func_T__bool__o *)v17,
-                     (const MethodInfo_2E4D550 *)Method_BasicHelper_Any_int____75906672);
-              if ( !v9 )
+                     (System_Func_T__bool__o *)v14,
+                     (const MethodInfo_2E6AA50 *)Method_BasicHelper_Any_int____76088816);
+              if ( !v6 )
                 break;
-              v20 = *(_QWORD *)(v8 + 16);
-              v21 = *(_DWORD *)(v8 + 24) + 1;
-              *(_DWORD *)(v8 + 24) = v21;
-              if ( !v20 )
+              v17 = *(_QWORD *)(v5 + 16);
+              v18 = *(_DWORD *)(v5 + 24) + 1;
+              *(_DWORD *)(v5 + 24) = v18;
+              if ( !v17 )
                 goto LABEL_18;
-              v22 = *(_DWORD *)(v20 + 24);
-              v15 = v21 < v22;
+              v19 = *(_DWORD *)(v17 + 24);
+              v12 = v18 < v19;
             }
-            while ( v21 < v22 );
+            while ( v18 < v19 );
           }
-          LOBYTE(v13) = !v15;
+          LOBYTE(v10) = !v12;
         }
       }
     }
   }
   else
   {
-    LOBYTE(v13) = 1;
+    LOBYTE(v10) = 1;
   }
-  return v13 & 1;
+  return v10 & 1;
 }
 
 
@@ -145,7 +142,7 @@ LABEL_11:
 }
 
 
-bool __fastcall Individuality__CheckIndividualities_37518696(
+bool __fastcall Individuality__CheckIndividualities_37696972(
         System_Int32_array *self,
         System_Int64_array *target,
         const MethodInfo *method)
@@ -225,7 +222,7 @@ bool __fastcall Individuality__CheckSignedIndividualities(
           : (IsPartialMatchArray = Individuality__IsPartialMatchArray(self, unsignedArray, v7), v9 = IsPartialMatchArray),
             (v8 = signedArray) == 0LL) )
       {
-        sub_1B7641C(IsPartialMatchArray, v8);
+        sub_1B8880C(IsPartialMatchArray, v8);
       }
       if ( *(_QWORD *)&signedArray->max_length )
         v10 = !Individuality__IsPartialMatchArray(self, signedArray, v7);
@@ -306,7 +303,7 @@ bool __fastcall Individuality__CheckSignedIndividualitiesCount(
             }
           }
 LABEL_19:
-          sub_1B7641C(v11, v12);
+          sub_1B8880C(v11, v12);
         }
       }
     }
@@ -373,7 +370,7 @@ bool __fastcall Individuality__CheckSignedIndividualitiesPartialCount(
                       (unsigned int)countBelow,
                       *(_QWORD *)&mismatchFunc->fields.extra_arg) & 1) == 0;
 LABEL_14:
-          sub_1B7641C(IsNullOrEmpty, v14);
+          sub_1B8880C(IsNullOrEmpty, v14);
         }
       }
     }
@@ -424,14 +421,14 @@ bool __fastcall Individuality__CheckSignedIndividualitiesPartialMatch(
     return 0;
   if ( !mismatchFunc )
 LABEL_17:
-    sub_1B7641C(v13, v14);
+    sub_1B8880C(v13, v14);
   return (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Int32_array *))mismatchFunc->fields.m_target)(
             mismatchFunc->fields.original_method_info,
             selfs) & 1) == 0;
 }
 
 
-bool __fastcall Individuality__CheckSignedIndividualities_37518340(
+bool __fastcall Individuality__CheckSignedIndividualities_37696616(
         System_Int32_array *self,
         System_Int32_array *signedTarget,
         System_Func_int____int____bool__o *matchedFunc,
@@ -488,7 +485,7 @@ bool __fastcall Individuality__CheckSignedIndividualities_37518340(
       }
     }
 LABEL_19:
-    sub_1B7641C(v9, v10);
+    sub_1B8880C(v9, v10);
   }
   return result;
 }
@@ -499,42 +496,39 @@ bool __fastcall Individuality__CheckSignedMultiIndividuality(
         System_Int32_array_array *signedTargetsArray,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_Func_object__bool__o *v14; // x20
+  int32_t v8; // w2
+  int32_t v9; // w3
+  System_Func_object__bool__o *v11; // x20
 
-  if ( (byte_4A2CF5E & 1) == 0 )
+  if ( (byte_4A5A178 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_Any_int______75906448, signedTargetsArray);
-    sub_1B761C0(&System_Func_int____bool__TypeInfo, v5);
-    sub_1B761C0(&Method_Individuality___c__DisplayClass19_0__CheckSignedMultiIndividuality_b__0__, v6);
-    sub_1B761C0(&Individuality___c__DisplayClass19_0_TypeInfo, v7);
-    byte_4A2CF5E = 1;
+    sub_1B885B0(&Method_BasicHelper_Any_int______76088592);
+    sub_1B885B0(&System_Func_int____bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality___c__DisplayClass19_0__CheckSignedMultiIndividuality_b__0__);
+    sub_1B885B0(&Individuality___c__DisplayClass19_0_TypeInfo);
+    byte_4A5A178 = 1;
   }
-  v8 = sub_1B7640C(Individuality___c__DisplayClass19_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
-    sub_1B7641C(v9, v10);
-  *(_QWORD *)(v8 + 16) = selfArray;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)selfArray, v11, v12);
+  v5 = sub_1B887FC(Individuality___c__DisplayClass19_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
+    sub_1B8880C(v6, v7);
+  *(_QWORD *)(v5 + 16) = selfArray;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)selfArray, v8, v9);
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)signedTargetsArray, 0LL) )
     return 1;
-  v14 = (System_Func_object__bool__o *)sub_1B7640C(System_Func_int____bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1B887FC(System_Func_int____bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v14,
-    (Il2CppObject *)v8,
+    v11,
+    (Il2CppObject *)v5,
     Method_Individuality___c__DisplayClass19_0__CheckSignedMultiIndividuality_b__0__,
     0LL);
-  return BasicHelper__Any_object__48552060(
+  return BasicHelper__Any_object__48672124(
            (System_Object_array *)signedTargetsArray,
-           (System_Func_T__bool__o *)v14,
-           (const MethodInfo_2E4D87C *)Method_BasicHelper_Any_int______75906448);
+           (System_Func_T__bool__o *)v11,
+           (const MethodInfo_2E6AD7C *)Method_BasicHelper_Any_int______76088592);
 }
 
 
@@ -543,71 +537,68 @@ bool __fastcall Individuality__ContainsIndividualities(
         System_Int32_array *target,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   bool result; // w0
-  __int64 v9; // x8
-  __int64 v10; // x9
-  unsigned __int64 v11; // x24
-  int v12; // w23
-  __int64 v13; // x21
-  __int64 v14; // x0
-  __int64 v15; // x1
-  System_Func_int__bool__o *v16; // x22
+  __int64 v6; // x8
+  __int64 v7; // x9
+  unsigned __int64 v8; // x24
+  int v9; // w23
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_Func_int__bool__o *v13; // x22
 
-  if ( (byte_4A2CF59 & 1) == 0 )
+  if ( (byte_4A5A173 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_Any_int____75906672, target);
-    sub_1B761C0(&System_Func_int__bool__TypeInfo, v5);
-    sub_1B761C0(&Method_Individuality___c__DisplayClass6_0__ContainsIndividualities_b__0__, v6);
-    sub_1B761C0(&Individuality___c__DisplayClass6_0_TypeInfo, v7);
-    byte_4A2CF59 = 1;
+    sub_1B885B0(&Method_BasicHelper_Any_int____76088816);
+    sub_1B885B0(&System_Func_int__bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality___c__DisplayClass6_0__ContainsIndividualities_b__0__);
+    sub_1B885B0(&Individuality___c__DisplayClass6_0_TypeInfo);
+    byte_4A5A173 = 1;
   }
   result = 1;
   if ( target )
   {
     if ( self )
     {
-      v9 = *(_QWORD *)&target->max_length;
-      if ( v9 )
+      v6 = *(_QWORD *)&target->max_length;
+      if ( v6 )
       {
-        v10 = *(_QWORD *)&self->max_length;
-        if ( v10 )
+        v7 = *(_QWORD *)&self->max_length;
+        if ( v7 )
         {
-          if ( (int)v10 < 1 )
+          if ( (int)v7 < 1 )
           {
-            v12 = 0;
+            v9 = 0;
           }
           else
           {
-            v11 = 0LL;
-            v12 = 0;
+            v8 = 0LL;
+            v9 = 0;
             do
             {
-              v13 = sub_1B7640C(Individuality___c__DisplayClass6_0_TypeInfo);
-              System_Object___ctor((Il2CppObject *)v13, 0LL);
-              if ( v11 >= self->max_length )
-                sub_1B76424(v14, v15);
-              if ( !v13 )
-                sub_1B7641C(v14, v15);
-              *(_DWORD *)(v13 + 16) = self->m_Items[v11 + 1];
-              v16 = (System_Func_int__bool__o *)sub_1B7640C(System_Func_int__bool__TypeInfo);
+              v10 = sub_1B887FC(Individuality___c__DisplayClass6_0_TypeInfo);
+              System_Object___ctor((Il2CppObject *)v10, 0LL);
+              if ( v8 >= self->max_length )
+                sub_1B88814(v11, v12);
+              if ( !v10 )
+                sub_1B8880C(v11, v12);
+              *(_DWORD *)(v10 + 16) = self->m_Items[v8 + 1];
+              v13 = (System_Func_int__bool__o *)sub_1B887FC(System_Func_int__bool__TypeInfo);
               System_Func_int__bool____ctor(
-                v16,
-                (Il2CppObject *)v13,
+                v13,
+                (Il2CppObject *)v10,
                 Method_Individuality___c__DisplayClass6_0__ContainsIndividualities_b__0__,
                 0LL);
-              ++v11;
-              v12 += BasicHelper__Any_int__48551248(
-                       target,
-                       (System_Func_T__bool__o *)v16,
-                       (const MethodInfo_2E4D550 *)Method_BasicHelper_Any_int____75906672);
+              ++v8;
+              v9 += BasicHelper__Any_int__48671312(
+                      target,
+                      (System_Func_T__bool__o *)v13,
+                      (const MethodInfo_2E6AA50 *)Method_BasicHelper_Any_int____76088816);
             }
-            while ( (__int64)v11 < (int)self->max_length );
-            v9 = *(_QWORD *)&target->max_length;
+            while ( (__int64)v8 < (int)self->max_length );
+            v6 = *(_QWORD *)&target->max_length;
           }
-          return v12 >= (int)v9;
+          return v9 >= (int)v6;
         }
         else
         {
@@ -626,124 +617,121 @@ void __fastcall Individuality__DivideUnsignedAndSignedArray(
         System_Int32_array **signedArray,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_int__o *v10; // x23
-  System_Collections_Generic_List_int__o *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  __int64 v14; // x8
-  unsigned __int64 v15; // x24
-  struct System_Int32_array *v16; // x8
-  _QWORD *v17; // x9
-  __int64 v18; // x10
-  char *v19; // x8
+  System_Collections_Generic_List_int__o *v7; // x23
+  System_Collections_Generic_List_int__o *v8; // x22
+  __int64 v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x8
+  unsigned __int64 v12; // x24
+  struct System_Int32_array *v13; // x8
+  _QWORD *v14; // x9
+  __int64 v15; // x10
+  char *v16; // x8
   struct System_Int32_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  __int64 v23; // x8
-  System_Collections_Generic_List_int__o *v24; // x0
+  __int64 v20; // x8
+  System_Collections_Generic_List_int__o *v21; // x0
+  System_Int32_array *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
   System_Int32_array *v25; // x0
   int32_t v26; // w2
   int32_t v27; // w3
-  System_Int32_array *v28; // x0
-  int32_t v29; // w2
-  int32_t v30; // w3
 
-  if ( (byte_4A2CF58 & 1) == 0 )
+  if ( (byte_4A5A172 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__Add__, unsignedArray);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__ToArray__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int___ctor__, v8);
-    sub_1B761C0(&System_Collections_Generic_List_int__TypeInfo, v9);
-    byte_4A2CF58 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4A5A172 = 1;
   }
-  v10 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
+  v7 = (System_Collections_Generic_List_int__o *)sub_1B887FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v10,
-    (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
-  v11 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
+    v7,
+    (const MethodInfo_34DFFBC *)Method_System_Collections_Generic_List_int___ctor__);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1B887FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v11,
-    (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
+    v8,
+    (const MethodInfo_34DFFBC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !baseArray )
     goto LABEL_24;
-  v14 = *(_QWORD *)&baseArray->max_length;
-  if ( (int)v14 >= 1 )
+  v11 = *(_QWORD *)&baseArray->max_length;
+  if ( (int)v11 >= 1 )
   {
-    v15 = 0LL;
+    v12 = 0LL;
     do
     {
-      if ( v15 >= (unsigned int)v14 )
-        sub_1B76424(v12, v13);
-      v13 = (unsigned int)baseArray->m_Items[v15 + 1];
-      if ( (int)v13 < 1 )
+      if ( v12 >= (unsigned int)v11 )
+        sub_1B88814(v9, v10);
+      v10 = (unsigned int)baseArray->m_Items[v12 + 1];
+      if ( (int)v10 < 1 )
       {
-        if ( !v11 )
+        if ( !v8 )
           goto LABEL_24;
-        items = v11->fields._items;
-        v21 = Method_System_Collections_Generic_List_int__Add__;
-        ++v11->fields._version;
+        items = v8->fields._items;
+        v18 = Method_System_Collections_Generic_List_int__Add__;
+        ++v8->fields._version;
         if ( !items )
           goto LABEL_24;
-        size = v11->fields._size;
-        v13 = (unsigned int)-(int)v13;
+        size = v8->fields._size;
+        v10 = (unsigned int)-(int)v10;
         if ( (unsigned int)size >= items->max_length )
         {
-          v23 = v21[4];
-          v24 = v11;
+          v20 = v18[4];
+          v21 = v8;
           goto LABEL_19;
         }
-        v19 = (char *)items + 4 * size;
-        v11->fields._size = size + 1;
+        v16 = (char *)items + 4 * size;
+        v8->fields._size = size + 1;
       }
       else
       {
-        if ( !v10 )
+        if ( !v7 )
           goto LABEL_24;
-        v16 = v10->fields._items;
-        v17 = Method_System_Collections_Generic_List_int__Add__;
-        ++v10->fields._version;
-        if ( !v16 )
+        v13 = v7->fields._items;
+        v14 = Method_System_Collections_Generic_List_int__Add__;
+        ++v7->fields._version;
+        if ( !v13 )
           goto LABEL_24;
-        v18 = v10->fields._size;
-        if ( (unsigned int)v18 >= v16->max_length )
+        v15 = v7->fields._size;
+        if ( (unsigned int)v15 >= v13->max_length )
         {
-          v23 = v17[4];
-          v24 = v10;
+          v20 = v14[4];
+          v21 = v7;
 LABEL_19:
           System_Collections_Generic_List_int___AddWithResize(
-            v24,
-            v13,
-            *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v23 + 192) + 112LL));
+            v21,
+            v10,
+            *(const MethodInfo_34E0810 **)(*(_QWORD *)(v20 + 192) + 112LL));
           goto LABEL_20;
         }
-        v19 = (char *)v16 + 4 * v18;
-        v10->fields._size = v18 + 1;
+        v16 = (char *)v13 + 4 * v15;
+        v7->fields._size = v15 + 1;
       }
-      *((_DWORD *)v19 + 8) = v13;
+      *((_DWORD *)v16 + 8) = v10;
 LABEL_20:
-      LODWORD(v14) = baseArray->max_length;
+      LODWORD(v11) = baseArray->max_length;
     }
-    while ( (__int64)++v15 < (int)v14 );
+    while ( (__int64)++v12 < (int)v11 );
   }
-  if ( !v10
-    || (v25 = System_Collections_Generic_List_int___ToArray(
-                v10,
-                (const MethodInfo_34BC068 *)Method_System_Collections_Generic_List_int__ToArray__),
-        *unsignedArray = v25,
-        sub_1B76164((ServantStatusBattleListViewItem_o *)unsignedArray, (int32_t)v25, v26, v27),
-        !v11) )
+  if ( !v7
+    || (v22 = System_Collections_Generic_List_int___ToArray(
+                v7,
+                (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__),
+        *unsignedArray = v22,
+        sub_1B88554((ServantStatusBattleListViewItem_o *)unsignedArray, (int32_t)v22, v23, v24),
+        !v8) )
   {
 LABEL_24:
-    sub_1B7641C(v12, v13);
+    sub_1B8880C(v9, v10);
   }
-  v28 = System_Collections_Generic_List_int___ToArray(
-          v11,
-          (const MethodInfo_34BC068 *)Method_System_Collections_Generic_List_int__ToArray__);
-  *signedArray = v28;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)signedArray, (int32_t)v28, v29, v30);
+  v25 = System_Collections_Generic_List_int___ToArray(
+          v8,
+          (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+  *signedArray = v25;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)signedArray, (int32_t)v25, v26, v27);
 }
 
 
@@ -761,18 +749,18 @@ System_Int32_array *__fastcall Individuality__GetMatchedCountArray(
   unsigned __int64 v10; // x15
 
   v4 = selfs;
-  if ( (byte_4A2CF5C & 1) == 0 )
+  if ( (byte_4A5A176 & 1) == 0 )
   {
-    selfs = (System_Int32_array *)sub_1B761C0(&int___TypeInfo, targets);
-    byte_4A2CF5C = 1;
+    selfs = (System_Int32_array *)sub_1B885B0(&int___TypeInfo);
+    byte_4A5A176 = 1;
   }
   if ( !targets
     || (v5 = *(_QWORD *)&targets->max_length,
-        selfs = (System_Int32_array *)sub_1B76268(int___TypeInfo, (unsigned int)v5),
+        selfs = (System_Int32_array *)sub_1B88658(int___TypeInfo, (unsigned int)v5),
         !v4) )
   {
 LABEL_19:
-    sub_1B7641C(selfs, targets);
+    sub_1B8880C(selfs, targets);
   }
   if ( (int)*(_QWORD *)&v4->max_length >= 1 )
   {
@@ -805,7 +793,7 @@ LABEL_16:
         goto LABEL_16;
     }
 LABEL_18:
-    sub_1B76424(selfs, targets);
+    sub_1B88814(selfs, targets);
   }
   return selfs;
 }
@@ -834,25 +822,22 @@ bool __fastcall Individuality__IsMatchArray(
         System_Int32_array *targets,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  bool v8; // w0
-  unsigned __int64 v9; // x23
-  __int64 v10; // x21
-  __int64 v11; // x0
-  __int64 v12; // x1
-  System_Func_int__bool__o *v13; // x22
+  bool v5; // w0
+  unsigned __int64 v6; // x23
+  __int64 v7; // x21
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_Func_int__bool__o *v10; // x22
 
-  if ( (byte_4A2CF5B & 1) == 0 )
+  if ( (byte_4A5A175 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_Any_int____75906672, targets);
-    sub_1B761C0(&System_Func_int__bool__TypeInfo, v5);
-    sub_1B761C0(&Method_Individuality___c__DisplayClass9_0__IsMatchArray_b__0__, v6);
-    sub_1B761C0(&Individuality___c__DisplayClass9_0_TypeInfo, v7);
-    byte_4A2CF5B = 1;
+    sub_1B885B0(&Method_BasicHelper_Any_int____76088816);
+    sub_1B885B0(&System_Func_int__bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality___c__DisplayClass9_0__IsMatchArray_b__0__);
+    sub_1B885B0(&Individuality___c__DisplayClass9_0_TypeInfo);
+    byte_4A5A175 = 1;
   }
-  v8 = 0;
+  v5 = 0;
   if ( selfs && targets )
   {
     if ( (int)targets->max_length < 1 )
@@ -861,34 +846,34 @@ bool __fastcall Individuality__IsMatchArray(
     }
     else
     {
-      v9 = 0LL;
+      v6 = 0LL;
       do
       {
-        v10 = sub_1B7640C(Individuality___c__DisplayClass9_0_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v10, 0LL);
-        if ( v9 >= targets->max_length )
-          sub_1B76424(v11, v12);
-        if ( !v10 )
-          sub_1B7641C(v11, v12);
-        *(_DWORD *)(v10 + 16) = targets->m_Items[v9 + 1];
-        v13 = (System_Func_int__bool__o *)sub_1B7640C(System_Func_int__bool__TypeInfo);
+        v7 = sub_1B887FC(Individuality___c__DisplayClass9_0_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v7, 0LL);
+        if ( v6 >= targets->max_length )
+          sub_1B88814(v8, v9);
+        if ( !v7 )
+          sub_1B8880C(v8, v9);
+        *(_DWORD *)(v7 + 16) = targets->m_Items[v6 + 1];
+        v10 = (System_Func_int__bool__o *)sub_1B887FC(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
-          v13,
-          (Il2CppObject *)v10,
+          v10,
+          (Il2CppObject *)v7,
           Method_Individuality___c__DisplayClass9_0__IsMatchArray_b__0__,
           0LL);
-        v8 = BasicHelper__Any_int__48551248(
+        v5 = BasicHelper__Any_int__48671312(
                selfs,
-               (System_Func_T__bool__o *)v13,
-               (const MethodInfo_2E4D550 *)Method_BasicHelper_Any_int____75906672);
-        if ( !v8 )
+               (System_Func_T__bool__o *)v10,
+               (const MethodInfo_2E6AA50 *)Method_BasicHelper_Any_int____76088816);
+        if ( !v5 )
           break;
-        ++v9;
+        ++v6;
       }
-      while ( (__int64)v9 < (int)targets->max_length );
+      while ( (__int64)v6 < (int)targets->max_length );
     }
   }
-  return v8;
+  return v5;
 }
 
 
@@ -923,7 +908,7 @@ bool __fastcall Individuality__IsMatchArrayCount(
           {
             MatchedCountArray = Individuality__GetMatchedCountArray(selfs, targets, *(const MethodInfo **)&countAbove);
             if ( !MatchedCountArray )
-              sub_1B7641C(0LL, v10);
+              sub_1B8880C(0LL, v10);
             v11 = *(_QWORD *)&MatchedCountArray->max_length;
             v12 = MatchedCountArray;
             result = 1;
@@ -994,7 +979,7 @@ bool __fastcall Individuality__IsPartialMatchArray(
       {
         if ( v5 >= (unsigned int)*(_QWORD *)&selfs->max_length )
 LABEL_16:
-          sub_1B76424(selfs, targets);
+          sub_1B88814(selfs, targets);
         max_length = targets->max_length;
         if ( max_length >= 1 )
           break;
@@ -1027,32 +1012,29 @@ bool __fastcall Individuality__IsPartialMatchArrayCount(
         int32_t countBelow,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v9; // x21
+  __int64 v10; // x0
   __int64 v11; // x1
-  __int64 v12; // x21
-  __int64 v13; // x0
-  __int64 v14; // x1
-  const MethodInfo *v15; // x2
+  const MethodInfo *v12; // x2
   bool result; // w0
   System_Int32_array *MatchedCountArray; // x19
-  System_Func_int__bool__o *v18; // x20
+  System_Func_int__bool__o *v15; // x20
 
-  if ( (byte_4A2CF5D & 1) == 0 )
+  if ( (byte_4A5A177 & 1) == 0 )
   {
-    sub_1B761C0(&Method_BasicHelper_Any_int____75906672, targets);
-    sub_1B761C0(&System_Func_int__bool__TypeInfo, v9);
-    sub_1B761C0(&Method_Individuality___c__DisplayClass13_0__IsPartialMatchArrayCount_b__0__, v10);
-    sub_1B761C0(&Individuality___c__DisplayClass13_0_TypeInfo, v11);
-    byte_4A2CF5D = 1;
+    sub_1B885B0(&Method_BasicHelper_Any_int____76088816);
+    sub_1B885B0(&System_Func_int__bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality___c__DisplayClass13_0__IsPartialMatchArrayCount_b__0__);
+    sub_1B885B0(&Individuality___c__DisplayClass13_0_TypeInfo);
+    byte_4A5A177 = 1;
   }
-  v12 = sub_1B7640C(Individuality___c__DisplayClass13_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v12, 0LL);
-  if ( !v12 )
-    sub_1B7641C(v13, v14);
+  v9 = sub_1B887FC(Individuality___c__DisplayClass13_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0LL);
+  if ( !v9 )
+    sub_1B8880C(v10, v11);
   result = 1;
-  *(_DWORD *)(v12 + 16) = countAbove;
-  *(_DWORD *)(v12 + 20) = countBelow;
+  *(_DWORD *)(v9 + 16) = countAbove;
+  *(_DWORD *)(v9 + 20) = countBelow;
   if ( targets )
   {
     if ( countAbove >= 1 || countBelow >= 1 )
@@ -1064,17 +1046,17 @@ bool __fastcall Individuality__IsPartialMatchArrayCount(
         {
           if ( *(_QWORD *)&selfs->max_length )
           {
-            MatchedCountArray = Individuality__GetMatchedCountArray(selfs, targets, v15);
-            v18 = (System_Func_int__bool__o *)sub_1B7640C(System_Func_int__bool__TypeInfo);
+            MatchedCountArray = Individuality__GetMatchedCountArray(selfs, targets, v12);
+            v15 = (System_Func_int__bool__o *)sub_1B887FC(System_Func_int__bool__TypeInfo);
             System_Func_int__bool____ctor(
-              v18,
-              (Il2CppObject *)v12,
+              v15,
+              (Il2CppObject *)v9,
               Method_Individuality___c__DisplayClass13_0__IsPartialMatchArrayCount_b__0__,
               0LL);
-            return BasicHelper__Any_int__48551248(
+            return BasicHelper__Any_int__48671312(
                      MatchedCountArray,
-                     (System_Func_T__bool__o *)v18,
-                     (const MethodInfo_2E4D550 *)Method_BasicHelper_Any_int____75906672);
+                     (System_Func_T__bool__o *)v15,
+                     (const MethodInfo_2E6AA50 *)Method_BasicHelper_Any_int____76088816);
           }
           else
           {
@@ -1198,29 +1180,28 @@ bool __fastcall Individuality___c__DisplayClass19_0___CheckSignedMultiIndividual
         System_Int32_array *signedTargets,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Int32_array *selfArray; // x20
-  System_Func_T1__T2__TResult__o *v7; // x21
-  System_Func_T1__T2__TResult__o *v8; // x22
-  const MethodInfo *v9; // x4
+  System_Func_T1__T2__TResult__o *v6; // x21
+  System_Func_T1__T2__TResult__o *v7; // x22
+  const MethodInfo *v8; // x4
 
-  if ( (byte_4A2CF5F & 1) == 0 )
+  if ( (byte_4A5A179 & 1) == 0 )
   {
-    sub_1B761C0(&System_Func_int____int____bool__TypeInfo, signedTargets);
-    sub_1B761C0(&Method_Individuality_IsMatchArray__, v5);
-    byte_4A2CF5F = 1;
+    sub_1B885B0(&System_Func_int____int____bool__TypeInfo);
+    sub_1B885B0(&Method_Individuality_IsMatchArray__);
+    byte_4A5A179 = 1;
   }
   selfArray = this->fields.selfArray;
-  v7 = (System_Func_T1__T2__TResult__o *)sub_1B7640C(System_Func_int____int____bool__TypeInfo);
+  v6 = (System_Func_T1__T2__TResult__o *)sub_1B887FC(System_Func_int____int____bool__TypeInfo);
+  System_Func_object__object__bool____ctor(v6, 0LL, Method_Individuality_IsMatchArray__, 0LL);
+  v7 = (System_Func_T1__T2__TResult__o *)sub_1B887FC(System_Func_int____int____bool__TypeInfo);
   System_Func_object__object__bool____ctor(v7, 0LL, Method_Individuality_IsMatchArray__, 0LL);
-  v8 = (System_Func_T1__T2__TResult__o *)sub_1B7640C(System_Func_int____int____bool__TypeInfo);
-  System_Func_object__object__bool____ctor(v8, 0LL, Method_Individuality_IsMatchArray__, 0LL);
-  return Individuality__CheckSignedIndividualities_37518340(
+  return Individuality__CheckSignedIndividualities_37696616(
            selfArray,
            signedTargets,
+           (System_Func_int____int____bool__o *)v6,
            (System_Func_int____int____bool__o *)v7,
-           (System_Func_int____int____bool__o *)v8,
-           v9);
+           v8);
 }
 
 
@@ -1249,7 +1230,6 @@ void __fastcall Individuality___c__DisplayClass7_0___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall Individuality___c__DisplayClass7_0___CheckAllIndividualities_b__0(
         Individuality___c__DisplayClass7_0_o *this,
         int32_t sf,
@@ -1260,10 +1240,10 @@ bool __fastcall Individuality___c__DisplayClass7_0___CheckAllIndividualities_b__
 
   target = this->fields.target;
   if ( !target )
-    sub_1B7641C(this, sf);
+    sub_1B8880C(this, sf);
   i = this->fields.i;
   if ( (unsigned int)i >= target->max_length )
-    sub_1B76424(this, *(_QWORD *)&sf);
+    sub_1B88814(this, sf);
   return target->m_Items[i + 1] == sf;
 }
 

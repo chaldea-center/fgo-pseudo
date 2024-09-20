@@ -1,24 +1,22 @@
 void __fastcall ClassBoardClassReleaseDialog___ctor(ClassBoardClassReleaseDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  System_Collections_Generic_List_object__o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_4A3120A & 1) == 0 )
+  if ( (byte_4A5E53B & 1) == 0 )
   {
-    sub_1B761C0(&BaseDialog_TypeInfo, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent___ctor__, v3);
-    sub_1B761C0(&System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__TypeInfo, v4);
-    byte_4A3120A = 1;
+    sub_1B885B0(&BaseDialog_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__TypeInfo);
+    byte_4A5E53B = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent___ctor__);
-  this->fields.iconList = (struct System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__o *)v5;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.iconList, (int32_t)v5, v6, v7);
+    v3,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent___ctor__);
+  this->fields.iconList = (struct System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__o *)v3;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.iconList, (int32_t)v3, v4, v5);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -31,24 +29,23 @@ void __fastcall ClassBoardClassReleaseDialog__Close(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  __int64 v6; // x1
-  System_Action_o *v7; // x20
+  System_Action_o *v6; // x20
 
-  if ( (byte_4A31207 & 1) == 0 )
+  if ( (byte_4A5E538 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, closeCallback);
-    sub_1B761C0(&Method_ClassBoardClassReleaseDialog_OnCloseEnd__, v6);
-    byte_4A31207 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_ClassBoardClassReleaseDialog_OnCloseEnd__);
+    byte_4A5E538 = 1;
   }
   this->fields.closeCallback = closeCallback;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallback,
     (int32_t)closeCallback,
     (int32_t)method,
     v3);
-  v7 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_ClassBoardClassReleaseDialog_OnCloseEnd__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v6 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_ClassBoardClassReleaseDialog_OnCloseEnd__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
@@ -59,42 +56,38 @@ void __fastcall ClassBoardClassReleaseDialog__CreateBaseClassIconNameComponents(
         const MethodInfo *method)
 {
   ClassBoardClassReleaseDialog_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__o *iconList; // x8
   int32_t size; // w8
-  int v11; // w22
+  int v7; // w22
   Il2CppObject *iconPrefab; // x20
-  Il2CppObject *v13; // x21
-  System_Collections_Generic_List_object__o *v14; // x20
-  int32_t v15; // w2
-  int32_t v16; // w3
+  Il2CppObject *v9; // x21
+  System_Collections_Generic_List_object__o *v10; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
-  __int64 v19; // x10
-  ClassBoardClassReleaseDialog_o *v20; // x1
-  Il2CppClass **v21; // x0
+  _QWORD *v14; // x9
+  __int64 v15; // x10
+  ClassBoardClassReleaseDialog_o *v16; // x1
+  Il2CppClass **v17; // x0
 
   v4 = this;
-  if ( (byte_4A31209 & 1) == 0 )
+  if ( (byte_4A5E53A & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_ClassBoardBaseClassIconNameComponent___, *(_QWORD *)&count);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__Add__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Count__, v6);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    this = (ClassBoardClassReleaseDialog_o *)sub_1B761C0(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A31209 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_ClassBoardBaseClassIconNameComponent___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Count__);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (ClassBoardClassReleaseDialog_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5E53A = 1;
   }
   iconList = v4->fields.iconList;
   if ( !iconList )
 LABEL_17:
-    sub_1B7641C(this, *(_QWORD *)&count);
+    sub_1B8880C(this, *(_QWORD *)&count);
   size = iconList->fields._size;
   if ( size < count )
   {
-    v11 = count - size;
+    v7 = count - size;
     if ( count - size >= 1 )
     {
       do
@@ -102,48 +95,48 @@ LABEL_17:
         iconPrefab = (Il2CppObject *)v4->fields.iconPrefab;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v13 = UnityEngine_Object__Instantiate_object_(
-                iconPrefab,
-                (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0LL, 0LL) )
+        v9 = UnityEngine_Object__Instantiate_object_(
+               iconPrefab,
+               (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0LL, 0LL) )
         {
           GameObjectExtensions__SafeSetParent(
-            (UnityEngine_GameObject_o *)v13,
+            (UnityEngine_GameObject_o *)v9,
             (UnityEngine_Component_o *)v4->fields.iconListParent,
             0LL);
-          if ( !v13 )
+          if ( !v9 )
             goto LABEL_17;
-          v14 = (System_Collections_Generic_List_object__o *)v4->fields.iconList;
+          v10 = (System_Collections_Generic_List_object__o *)v4->fields.iconList;
           this = (ClassBoardClassReleaseDialog_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                     (UnityEngine_GameObject_o *)v13,
-                                                     (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardBaseClassIconNameComponent___);
-          if ( !v14 )
+                                                     (UnityEngine_GameObject_o *)v9,
+                                                     (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_ClassBoardBaseClassIconNameComponent___);
+          if ( !v10 )
             goto LABEL_17;
-          items = v14->fields._items;
-          v18 = Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__Add__;
-          ++v14->fields._version;
+          items = v10->fields._items;
+          v14 = Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__Add__;
+          ++v10->fields._version;
           if ( !items )
             goto LABEL_17;
-          v19 = v14->fields._size;
-          v20 = this;
-          if ( (unsigned int)v19 >= items->max_length )
+          v15 = v10->fields._size;
+          v16 = this;
+          if ( (unsigned int)v15 >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v14,
+              v10,
               (Il2CppObject *)this,
-              *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_34FD834 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
           }
           else
           {
-            v21 = &items->obj.klass + v19;
-            v14->fields._size = v19 + 1;
-            v21[4] = (Il2CppClass *)v20;
-            sub_1B76164((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v20, v15, v16);
+            v17 = &items->obj.klass + v15;
+            v10->fields._size = v15 + 1;
+            v17[4] = (Il2CppClass *)v16;
+            sub_1B88554((ServantStatusBattleListViewItem_o *)(v17 + 4), (int32_t)v16, v11, v12);
           }
         }
-        --v11;
+        --v7;
       }
-      while ( v11 );
+      while ( v7 );
     }
   }
 }
@@ -162,26 +155,25 @@ void __fastcall ClassBoardClassReleaseDialog__OnClickCloseButton(
         ClassBoardClassReleaseDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
+  _QWORD *v2; // x0
+  System_Reflection_MethodBase_o *v3; // x0
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
+  __int64 v5; // x1
 
-  if ( (byte_4A31206 & 1) == 0 )
+  if ( (byte_4A5E537 & 1) == 0 )
   {
-    sub_1B761C0(&Method_ClassBoardClassReleaseDialog_OnClickCloseButton__, method);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v2);
-    byte_4A31206 = 1;
+    sub_1B885B0(&Method_ClassBoardClassReleaseDialog_OnClickCloseButton__);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4A5E537 = 1;
   }
-  v3 = Method_ClassBoardClassReleaseDialog_OnClickCloseButton__;
+  v2 = Method_ClassBoardClassReleaseDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_ClassBoardClassReleaseDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B761D8(Method_ClassBoardClassReleaseDialog_OnClickCloseButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B761A4(v3, v3[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v2 = (_QWORD *)sub_1B885C8(Method_ClassBoardClassReleaseDialog_OnClickCloseButton__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1B88594(v2, v2[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v3, 0, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v6);
+    sub_1B8880C(0LL, v5);
   CommonUI__CloseClassBoardReleaseDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -198,7 +190,7 @@ void __fastcall ClassBoardClassReleaseDialog__OnCloseEnd(
   closeCallback = this->fields.closeCallback;
   p_closeCallback = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallback;
   p_closeCallback->klass = 0LL;
-  sub_1B76164(p_closeCallback, 0, v2, v3);
+  sub_1B88554(p_closeCallback, 0, v2, v3);
   ActionExtensions__Call(closeCallback, 0LL);
 }
 
@@ -210,95 +202,87 @@ void __fastcall ClassBoardClassReleaseDialog__Open(
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   System_Collections_Generic_List_object__o *iconList; // x0
-  __int64 v14; // x1
+  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v16; // x1
-  __int64 v17; // x8
-  unsigned __int64 v18; // x21
-  const MethodInfo *v19; // x2
-  int v20; // w8
-  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-50h] BYREF
+  __int64 v10; // x1
+  __int64 v11; // x8
+  unsigned __int64 v12; // x21
+  const MethodInfo *v13; // x2
+  int v14; // w8
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4A31205 & 1) == 0 )
+  if ( (byte_4A5E536 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_Component_GetComponent_UIGrid___, classBaseIds);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__Dispose__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__MoveNext__, v6);
-    sub_1B761C0(
-      &Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__get_Current__,
-      v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__GetEnumerator__, v8);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Count__, v9);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__, v10);
-    byte_4A31205 = 1;
+    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__get_Current__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__GetEnumerator__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__);
+    byte_4A5E536 = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v16, 0, sizeof(v16));
   if ( classBaseIds )
   {
-    v11 = *(_QWORD *)&classBaseIds->max_length;
-    if ( v11 )
+    v5 = *(_QWORD *)&classBaseIds->max_length;
+    if ( v5 )
     {
-      ClassBoardClassReleaseDialog__CreateBaseClassIconNameComponents(this, v11, method);
+      ClassBoardClassReleaseDialog__CreateBaseClassIconNameComponents(this, v5, method);
       iconList = (System_Collections_Generic_List_object__o *)this->fields.iconList;
       if ( !iconList )
         goto LABEL_30;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v21,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v15,
         iconList,
-        (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__GetEnumerator__);
-      v22 = v21;
+        (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__GetEnumerator__);
+      v16 = v15;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v22,
-                (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__MoveNext__) )
+                &v16,
+                (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__MoveNext__) )
       {
-        if ( !v22.fields._current )
-          sub_1B7641C(0LL, v14);
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v22.fields._current, 0LL);
+        if ( !v16.fields._current )
+          sub_1B8880C(0LL, v8);
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v16.fields._current, 0LL);
         if ( !gameObject )
-          sub_1B7641C(0LL, v16);
+          sub_1B8880C(0LL, v10);
         UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v22,
-        (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__Dispose__);
-      v17 = *(_QWORD *)&classBaseIds->max_length;
-      if ( (int)v17 >= 1 )
+        &v16,
+        (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardBaseClassIconNameComponent__Dispose__);
+      v11 = *(_QWORD *)&classBaseIds->max_length;
+      if ( (int)v11 >= 1 )
       {
-        v18 = 0LL;
+        v12 = 0LL;
         while ( 1 )
         {
           iconList = (System_Collections_Generic_List_object__o *)this->fields.iconList;
           if ( !iconList )
             break;
-          if ( (__int64)v18 < iconList->fields._size )
+          if ( (__int64)v12 < iconList->fields._size )
           {
             iconList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       iconList,
-                                                                      v18,
-                                                                      (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__);
-            if ( v18 >= classBaseIds->max_length )
-              sub_1B76424(iconList, v12);
+                                                                      v12,
+                                                                      (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__);
+            if ( v12 >= classBaseIds->max_length )
+              sub_1B88814(iconList, v6);
             if ( !iconList )
               break;
             ClassBoardBaseClassIconNameComponent__Setup(
               (ClassBoardBaseClassIconNameComponent_o *)iconList,
-              classBaseIds->m_Items[v18 + 1],
-              v19);
+              classBaseIds->m_Items[v12 + 1],
+              v13);
             iconList = (System_Collections_Generic_List_object__o *)this->fields.iconList;
             if ( !iconList )
               break;
             iconList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       iconList,
-                                                                      v18,
-                                                                      (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__);
+                                                                      v12,
+                                                                      (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_ClassBoardBaseClassIconNameComponent__get_Item__);
             if ( !iconList )
               break;
             iconList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -307,13 +291,13 @@ void __fastcall ClassBoardClassReleaseDialog__Open(
             if ( !iconList )
               break;
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)iconList, 1, 0LL);
-            v17 = *(_QWORD *)&classBaseIds->max_length;
+            v11 = *(_QWORD *)&classBaseIds->max_length;
           }
-          if ( (__int64)++v18 >= (int)v17 )
+          if ( (__int64)++v12 >= (int)v11 )
             goto LABEL_22;
         }
 LABEL_30:
-        sub_1B7641C(iconList, v12);
+        sub_1B8880C(iconList, v6);
       }
 LABEL_22:
       BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
@@ -322,7 +306,7 @@ LABEL_22:
         goto LABEL_30;
       iconList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__GetComponent_object_(
                                                                 (UnityEngine_Component_o *)iconList,
-                                                                (const MethodInfo_2E58EAC *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                                                (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_UIGrid___);
       if ( !iconList )
         goto LABEL_30;
       ((void (__fastcall *)(System_Collections_Generic_List_object__o *, Il2CppMethodPointer))iconList->klass->vtable._8_unknown.method)(
@@ -332,10 +316,10 @@ LABEL_22:
       if ( !iconList )
         goto LABEL_30;
       if ( (int)classBaseIds->max_length > 4 )
-        v20 = 1;
+        v14 = 1;
       else
-        v20 = 4;
-      HIDWORD(iconList[2].klass) = v20;
+        v14 = 4;
+      HIDWORD(iconList[2].klass) = v14;
       UIScrollView__ResetPosition((UIScrollView_o *)iconList, 0LL);
     }
   }
@@ -344,40 +328,37 @@ LABEL_22:
 
 void __fastcall ClassBoardClassReleaseDialog__SetupText(ClassBoardClassReleaseDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   UILabel_o *titleLabel; // x20
-  System_String_o *v7; // x0
-  __int64 v8; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
   UILabel_o *contentLabel; // x20
   UILabel_o *closeButtonLabel; // x19
 
-  if ( (byte_4A31208 & 1) == 0 )
+  if ( (byte_4A5E539 & 1) == 0 )
   {
-    sub_1B761C0(&LocalizationManager_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_3511/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/, v3);
-    sub_1B761C0(&StringLiteral_3755/*"COMMON_CONFIRM_CLOSE"*/, v4);
-    sub_1B761C0(&StringLiteral_3512/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/, v5);
-    byte_4A31208 = 1;
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_3512/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/);
+    sub_1B885B0(&StringLiteral_3756/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1B885B0(&StringLiteral_3513/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/);
+    byte_4A5E539 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3512/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3513/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, v7, 0LL),
+    || (UILabel__set_text(titleLabel, v4, 0LL),
         contentLabel = this->fields.contentLabel,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3511/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/, 0LL),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3512/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/, 0LL),
         !contentLabel)
-    || (UILabel__set_text(contentLabel, v7, 0LL),
+    || (UILabel__set_text(contentLabel, v4, 0LL),
         closeButtonLabel = this->fields.closeButtonLabel,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3755/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3756/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeButtonLabel) )
   {
-    sub_1B7641C(v7, v8);
+    sub_1B8880C(v4, v5);
   }
-  UILabel__set_text(closeButtonLabel, v7, 0LL);
+  UILabel__set_text(closeButtonLabel, v4, 0LL);
 }
 
 

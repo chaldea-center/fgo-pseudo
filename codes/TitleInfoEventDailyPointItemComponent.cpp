@@ -2,23 +2,22 @@ void __fastcall TitleInfoEventDailyPointItemComponent___ctor(
         TitleInfoEventDailyPointItemComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  int32_t v5; // w3
 
-  if ( (byte_4A2BF46 & 1) == 0 )
+  if ( (byte_4A59061 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_SideItemComponent___ctor__, method);
-    sub_1B761C0(&System_Collections_Generic_List_SideItemComponent__TypeInfo, v3);
-    byte_4A2BF46 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_SideItemComponent___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_SideItemComponent__TypeInfo);
+    byte_4A59061 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_SideItemComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_SideItemComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_SideItemComponent___ctor__);
-  this->fields.itemList = (struct System_Collections_Generic_List_SideItemComponent__o *)v4;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemList, (int32_t)v4, v5, v6);
+    v3,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_SideItemComponent___ctor__);
+  this->fields.itemList = (struct System_Collections_Generic_List_SideItemComponent__o *)v3;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.itemList, (int32_t)v3, v4, v5);
   this->fields.eventId = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -28,66 +27,64 @@ SideItemComponent_o *__fastcall TitleInfoEventDailyPointItemComponent__CreateIte
         TitleInfoEventDailyPointItemComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *prefab; // x19
   Il2CppObject *itemList; // x0
-  __int64 v7; // x1
-  Il2CppObject *v8; // x19
+  __int64 v5; // x1
+  Il2CppObject *v6; // x19
   UnityEngine_GameObject_o *gameObject; // x21
-  UnityEngine_GameObject_o *v10; // x0
-  int32_t v11; // w2
-  int32_t v12; // w3
+  UnityEngine_GameObject_o *v8; // x0
+  int32_t v9; // w2
+  int32_t v10; // w3
   Il2CppClass *klass; // x8
-  _QWORD *v14; // x9
+  _QWORD *v12; // x9
   __int64 monitor_low; // x10
-  __int64 v16; // x8
+  __int64 v14; // x8
 
-  if ( (byte_4A2BF44 & 1) == 0 )
+  if ( (byte_4A5905F & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_SideItemComponent__Add__, method);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_SideItemComponent___, v3);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A2BF44 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_SideItemComponent__Add__);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_SideItemComponent___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5905F = 1;
   }
   prefab = (Il2CppObject *)this->fields.prefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   itemList = UnityEngine_Object__Instantiate_object_(
                prefab,
-               (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
+               (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
   if ( !itemList )
     goto LABEL_12;
-  v8 = itemList;
+  v6 = itemList;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
-  v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SafeSetParent_33557996(gameObject, v10, 0LL);
+  v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  GameObjectExtensions__SafeSetParent_33730068(gameObject, v8, 0LL);
   itemList = (Il2CppObject *)this->fields.itemList;
   if ( !itemList
     || (klass = itemList[1].klass,
-        v14 = Method_System_Collections_Generic_List_SideItemComponent__Add__,
+        v12 = Method_System_Collections_Generic_List_SideItemComponent__Add__,
         ++HIDWORD(itemList[1].monitor),
         !klass) )
   {
 LABEL_12:
-    sub_1B7641C(itemList, v7);
+    sub_1B8880C(itemList, v5);
   }
   monitor_low = SLODWORD(itemList[1].monitor);
   if ( (unsigned int)monitor_low >= LODWORD(klass->_1.namespaze) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)itemList,
-      v8,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      v6,
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
-    v16 = (__int64)klass + 8 * monitor_low;
+    v14 = (__int64)klass + 8 * monitor_low;
     LODWORD(itemList[1].monitor) = monitor_low + 1;
-    *(_QWORD *)(v16 + 32) = v8;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v16 + 32), (int32_t)v8, v11, v12);
+    *(_QWORD *)(v14 + 32) = v6;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v14 + 32), (int32_t)v6, v9, v10);
   }
-  return (SideItemComponent_o *)v8;
+  return (SideItemComponent_o *)v6;
 }
 
 
@@ -106,110 +103,106 @@ void __fastcall TitleInfoEventDailyPointItemComponent__DeactivateSubLabel(
         (subLabel = (UnityEngine_Component_o *)this->fields.subLabel) == 0LL)
     || (subLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(subLabel, 0LL)) == 0LL )
   {
-    sub_1B7641C(subLabel, method);
+    sub_1B8880C(subLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)subLabel, 0, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 SideItemComponent_o *__fastcall TitleInfoEventDailyPointItemComponent__GetItem(
         TitleInfoEventDailyPointItemComponent_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   TitleInfoEventDailyPointItemComponent_ItemInfo_o *ItemInfo; // x0
-  const MethodInfo *v8; // x1
-  TitleInfoEventDailyPointItemComponent_ItemInfo_o *v9; // x19
+  const MethodInfo *v6; // x1
+  TitleInfoEventDailyPointItemComponent_ItemInfo_o *v7; // x19
   System_Collections_Generic_List_object__o *itemList; // x0
-  System_Collections_Generic_List_object__o *v11; // x20
+  System_Collections_Generic_List_object__o *v9; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v13; // x0
+  UnityEngine_GameObject_o *v11; // x0
   UISprite_o *syncRoot; // x21
   System_String_o *frameSpriteName; // x22
-  UnityEngine_GameObject_o *v16; // x0
-  UnityEngine_GameObject_o *v17; // x0
+  UnityEngine_GameObject_o *v14; // x0
+  UnityEngine_GameObject_o *v15; // x0
 
-  if ( (byte_4A2BF43 & 1) == 0 )
+  if ( (byte_4A5905E & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, *(_QWORD *)&index);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SideItemComponent__get_Count__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SideItemComponent__get_Item__, v6);
-    byte_4A2BF43 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SideItemComponent__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SideItemComponent__get_Item__);
+    byte_4A5905E = 1;
   }
   ItemInfo = TitleInfoEventDailyPointItemComponent__GetItemInfo(this, index, method);
   if ( !ItemInfo )
     return 0LL;
-  v9 = ItemInfo;
+  v7 = ItemInfo;
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
     goto LABEL_24;
   itemList = itemList->fields._size <= index
-           ? (System_Collections_Generic_List_object__o *)TitleInfoEventDailyPointItemComponent__CreateItem(this, v8)
+           ? (System_Collections_Generic_List_object__o *)TitleInfoEventDailyPointItemComponent__CreateItem(this, v6)
            : (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             itemList,
                                                             index,
-                                                            (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_SideItemComponent__get_Item__);
-  v11 = itemList;
+                                                            (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_SideItemComponent__get_Item__);
+  v9 = itemList;
   if ( !itemList )
     goto LABEL_24;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
   GameObjectExtensions__ResetLocalScale(gameObject, 0LL);
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
-  GameObjectExtensions__SetLocalPosition(v13, v9->fields.itemPosition, 0LL);
-  syncRoot = (UISprite_o *)v11->fields._syncRoot;
-  frameSpriteName = v9->fields.frameSpriteName;
+  v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0LL);
+  GameObjectExtensions__SetLocalPosition(v11, v7->fields.itemPosition, 0LL);
+  syncRoot = (UISprite_o *)v9->fields._syncRoot;
+  frameSpriteName = v7->fields.frameSpriteName;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(syncRoot, frameSpriteName, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11->fields._syncRoot;
+  itemList = (System_Collections_Generic_List_object__o *)v9->fields._syncRoot;
   if ( !itemList )
     goto LABEL_24;
   ((void (__fastcall *)(System_Collections_Generic_List_object__o *, Il2CppMethodPointer))itemList->klass->vtable._33_get_Item.method)(
     itemList,
     itemList->klass->vtable._34_get_Count.methodPtr);
-  itemList = (System_Collections_Generic_List_object__o *)v11->fields._syncRoot;
+  itemList = (System_Collections_Generic_List_object__o *)v9->fields._syncRoot;
   if ( !itemList )
     goto LABEL_24;
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
-  GameObjectExtensions__SetLocalPosition(v16, v9->fields.frameSpritePosition, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11[1].klass;
+  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
+  GameObjectExtensions__SetLocalPosition(v14, v7->fields.frameSpritePosition, 0LL);
+  itemList = (System_Collections_Generic_List_object__o *)v9[1].klass;
   if ( !itemList )
     goto LABEL_24;
-  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
-  GameObjectExtensions__SetLocalPosition(v17, v9->fields.pointTextPosition, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11[1].klass;
+  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0LL);
+  GameObjectExtensions__SetLocalPosition(v15, v7->fields.pointTextPosition, 0LL);
+  itemList = (System_Collections_Generic_List_object__o *)v9[1].klass;
   if ( !itemList )
     goto LABEL_24;
-  UILabel__set_fontSize((UILabel_o *)itemList, v9->fields.pointTextFontSize, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11[1].klass;
+  UILabel__set_fontSize((UILabel_o *)itemList, v7->fields.pointTextFontSize, 0LL);
+  itemList = (System_Collections_Generic_List_object__o *)v9[1].klass;
   if ( !itemList )
     goto LABEL_24;
-  UIWidget__set_height((UIWidget_o *)itemList, v9->fields.pointTextFontSize, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11[1].klass;
+  UIWidget__set_height((UIWidget_o *)itemList, v7->fields.pointTextFontSize, 0LL);
+  itemList = (System_Collections_Generic_List_object__o *)v9[1].klass;
   if ( !itemList )
     goto LABEL_24;
-  UILabel__set_effectStyle((UILabel_o *)itemList, v9->fields.pointTextEffectStyle, 0LL);
-  itemList = (System_Collections_Generic_List_object__o *)v11[1].klass;
+  UILabel__set_effectStyle((UILabel_o *)itemList, v7->fields.pointTextEffectStyle, 0LL);
+  itemList = (System_Collections_Generic_List_object__o *)v9[1].klass;
   if ( !itemList
-    || (UILabel__set_effectColor((UILabel_o *)itemList, v9->fields.pointTextEffectColor, 0LL),
-        (itemList = (System_Collections_Generic_List_object__o *)v11[1].klass) == 0LL)
+    || (UILabel__set_effectColor((UILabel_o *)itemList, v7->fields.pointTextEffectColor, 0LL),
+        (itemList = (System_Collections_Generic_List_object__o *)v9[1].klass) == 0LL)
     || (UILabel__set_applyGradient((UILabel_o *)itemList, 1, 0LL),
-        (itemList = (System_Collections_Generic_List_object__o *)v11[1].klass) == 0LL)
-    || (UILabel__set_gradientTop((UILabel_o *)itemList, v9->fields.pointTextGradientColorTop, 0LL),
-        (itemList = (System_Collections_Generic_List_object__o *)v11[1].klass) == 0LL) )
+        (itemList = (System_Collections_Generic_List_object__o *)v9[1].klass) == 0LL)
+    || (UILabel__set_gradientTop((UILabel_o *)itemList, v7->fields.pointTextGradientColorTop, 0LL),
+        (itemList = (System_Collections_Generic_List_object__o *)v9[1].klass) == 0LL) )
   {
 LABEL_24:
-    sub_1B7641C(itemList, v8);
+    sub_1B8880C(itemList, v6);
   }
-  UILabel__set_gradientBottom((UILabel_o *)itemList, v9->fields.pointTextGradientColorBottom, 0LL);
-  return (SideItemComponent_o *)v11;
+  UILabel__set_gradientBottom((UILabel_o *)itemList, v7->fields.pointTextGradientColorBottom, 0LL);
+  return (SideItemComponent_o *)v9;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 TitleInfoEventDailyPointItemComponent_ItemInfo_o *__fastcall TitleInfoEventDailyPointItemComponent__GetItemInfo(
         TitleInfoEventDailyPointItemComponent_o *this,
         int32_t index,
@@ -220,12 +213,12 @@ TitleInfoEventDailyPointItemComponent_ItemInfo_o *__fastcall TitleInfoEventDaily
 
   dailyPointItemInfoList = this->fields.dailyPointItemInfoList;
   if ( !dailyPointItemInfoList )
-    sub_1B7641C(this, index);
+    sub_1B8880C(this, index);
   max_length = dailyPointItemInfoList->max_length;
   if ( max_length <= index )
     return 0LL;
   if ( max_length <= (unsigned int)index )
-    sub_1B76424(this, *(_QWORD *)&index);
+    sub_1B88814(this, index);
   return dailyPointItemInfoList->m_Items[index];
 }
 
@@ -250,81 +243,74 @@ int32_t __fastcall TitleInfoEventDailyPointItemComponent__GetTotalDailyEventQues
         TitleInfoEventDailyPointItemComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
+  __int64 v4; // x1
   Il2CppObject *MasterData_object; // x21
-  QuestGroupMaster_o *v13; // x22
+  QuestGroupMaster_o *v6; // x22
   System_Collections_Generic_List_int__o *QuestIdListByGroupType; // x0
-  int32_t v15; // w20
+  int32_t v8; // w20
   int32_t current; // w23
   int32_t eventId; // w27
   int64_t UserId; // x0
-  System_Collections_Generic_List_Enumerator_int__o v20; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v21; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v13; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v14; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4A2BF45 & 1) == 0 )
+  if ( (byte_4A59060 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMasterData_QuestGroupMaster___, method);
-    sub_1B761C0(&Method_DataManager_GetMasterData_UserQuestMaster___, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v4);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v6);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__GetEnumerator__, v7);
-    sub_1B761C0(&NetworkManager_TypeInfo, v8);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A2BF45 = 1;
+    sub_1B885B0(&Method_DataManager_GetMasterData_QuestGroupMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4A59060 = 1;
   }
-  memset(&v21, 0, sizeof(v21));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  memset(&v14, 0, sizeof(v14));
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_UserQuestMaster___),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                              (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserQuestMaster___),
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_QuestGroupMaster___)) == 0LL )
+                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_QuestGroupMaster___)) == 0LL )
   {
-    sub_1B7641C(Instance, v11);
+    sub_1B8880C(Instance, v4);
   }
-  v13 = (QuestGroupMaster_o *)Instance;
+  v6 = (QuestGroupMaster_o *)Instance;
   QuestIdListByGroupType = QuestGroupMaster__GetQuestIdListByGroupType((QuestGroupMaster_o *)Instance, 11, 0LL);
   if ( !QuestIdListByGroupType )
     return 0;
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v20,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     QuestIdListByGroupType,
-    (const MethodInfo_34BB084 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v15 = 0;
-  v21 = v20;
+    (const MethodInfo_34E12E4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v8 = 0;
+  v14 = v13;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v21,
-            (const MethodInfo_325280C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            &v14,
+            (const MethodInfo_3274238 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    current = v21.fields._current;
+    current = v14.fields._current;
     eventId = this->fields.eventId;
-    if ( eventId == QuestGroupMaster__GetEventId(v13, v21.fields._current, 0LL) )
+    if ( eventId == QuestGroupMaster__GetEventId(v6, v14.fields._current, 0LL) )
     {
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       UserId = NetworkManager__get_UserId(0LL);
       if ( !MasterData_object )
-        sub_1B7641C(UserId, UserId);
+        sub_1B8880C(UserId, UserId);
       if ( UserQuestMaster__getClearCountsFromId((UserQuestMaster_o *)MasterData_object, UserId, current, 0LL) >= 1 )
-        v15 += QuestGroupMaster__GetGroupId(v13, current, 11, 0LL);
+        v8 += QuestGroupMaster__GetGroupId(v6, current, 11, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v21,
-    (const MethodInfo_3252808 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  return v15;
+    &v14,
+    (const MethodInfo_3274234 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  return v8;
 }
 
 
@@ -356,16 +342,16 @@ System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemCompone
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A2BF41 & 1) == 0 )
+  if ( (byte_4A5905C & 1) == 0 )
   {
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_TypeInfo, label);
-    byte_4A2BF41 = 1;
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_TypeInfo);
+    byte_4A5905C = 1;
   }
-  v10 = sub_1B7640C(TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_TypeInfo);
+  v10 = sub_1B887FC(TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   *(_DWORD *)(v10 + 16) = 0;
   *(_QWORD *)(v10 + 32) = label;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)label, v11, v12);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)label, v11, v12);
   *(_DWORD *)(v10 + 44) = to;
   *(_DWORD *)(v10 + 48) = from;
   *(float *)(v10 + 40) = duration;
@@ -392,18 +378,18 @@ System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemCompone
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4A2BF40 & 1) == 0 )
+  if ( (byte_4A5905B & 1) == 0 )
   {
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_TypeInfo, effectName);
-    byte_4A2BF40 = 1;
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_TypeInfo);
+    byte_4A5905B = 1;
   }
-  v9 = sub_1B7640C(TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_TypeInfo);
+  v9 = sub_1B887FC(TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
   *(_QWORD *)(v9 + 40) = effectName;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 40), (int32_t)effectName, v12, v13);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 40), (int32_t)effectName, v12, v13);
   *(float *)(v9 + 48) = x;
   *(float *)(v9 + 52) = y;
   *(float *)(v9 + 56) = z;
@@ -422,16 +408,16 @@ System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemCompone
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A2BF42 & 1) == 0 )
+  if ( (byte_4A5905D & 1) == 0 )
   {
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_TypeInfo, method);
-    byte_4A2BF42 = 1;
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_TypeInfo);
+    byte_4A5905D = 1;
   }
-  v9 = sub_1B7640C(TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_TypeInfo);
+  v9 = sub_1B887FC(TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)this, v10, v11);
   *(float *)(v9 + 44) = fromAlpha;
   *(float *)(v9 + 48) = toAlpha;
   *(float *)(v9 + 40) = duration;
@@ -439,53 +425,49 @@ System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemCompone
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect(
         TitleInfoEventDailyPointItemComponent_o *this,
         int32_t recievePoint,
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v7; // x2
   SideItemComponent_o *Item; // x20
   UnityEngine_Object_o *subLabel; // x22
   UnityEngine_Component_o *transform; // x0
-  __int64 v14; // x1
-  UnityEngine_Transform_o *v15; // x22
+  __int64 v11; // x1
+  UnityEngine_Transform_o *v12; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  UILabel_o *v17; // x22
-  __int64 v18; // x2
-  __int64 v19; // x3
-  __int64 v20; // x4
-  Il2CppObject *v21; // x0
-  System_String_o *v22; // x0
+  UILabel_o *v14; // x22
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x0
   UILabel_o *label; // x20
-  __int64 v24; // x2
-  __int64 v25; // x3
-  __int64 v26; // x4
-  Il2CppObject *v27; // x0
-  int v28; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v29; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v21; // x2
+  __int64 v22; // x3
+  __int64 v23; // x4
+  Il2CppObject *v24; // x0
+  int v25; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A2BF3E & 1) == 0 )
+  if ( (byte_4A59059 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, *(_QWORD *)&recievePoint);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B761C0(&StringLiteral_860/*"+"*/, v8);
-    sub_1B761C0(&StringLiteral_24920/*"{0:#,0}"*/, v9);
-    byte_4A2BF3E = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&StringLiteral_860/*"+"*/);
+    sub_1B885B0(&StringLiteral_24933/*"{0:#,0}"*/);
+    byte_4A59059 = 1;
   }
   this->fields.effectAssetData = assetData;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.effectAssetData,
     (int32_t)assetData,
     (int32_t)assetData,
     (int32_t)method);
   this->fields.recievePoint = recievePoint;
-  Item = TitleInfoEventDailyPointItemComponent__GetItem(this, 0, v10);
+  Item = TitleInfoEventDailyPointItemComponent__GetItem(this, 0, v7);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
@@ -502,11 +484,11 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL);
       if ( !Item )
         goto LABEL_27;
-      v15 = (UnityEngine_Transform_o *)transform;
+      v12 = (UnityEngine_Transform_o *)transform;
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Item, 0LL);
-      if ( !v15 )
+      if ( !v12 )
         goto LABEL_27;
-      UnityEngine_Transform__SetParent_69308656(v15, (UnityEngine_Transform_o *)transform, 0, 0LL);
+      UnityEngine_Transform__SetParent_69480628(v12, (UnityEngine_Transform_o *)transform, 0, 0LL);
       transform = (UnityEngine_Component_o *)this->fields.subLabel;
       if ( !transform )
         goto LABEL_27;
@@ -528,17 +510,17 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
       if ( !transform )
         goto LABEL_27;
       UILabel__set_effectColor((UILabel_o *)transform, this->fields.subLabelEffectColor, 0LL);
-      v17 = this->fields.subLabel;
-      v29 = recievePoint;
-      v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29, v18, v19, v20);
-      v22 = System_String__Format((System_String_o *)StringLiteral_24920/*"{0:#,0}"*/, v21, 0LL);
-      transform = (UnityEngine_Component_o *)System_String__Concat_61535060(
+      v14 = this->fields.subLabel;
+      v26 = recievePoint;
+      v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v15, v16, v17);
+      v19 = System_String__Format((System_String_o *)StringLiteral_24933/*"{0:#,0}"*/, v18, 0LL);
+      transform = (UnityEngine_Component_o *)System_String__Concat_61707032(
                                                (System_String_o *)StringLiteral_860/*"+"*/,
-                                               v22,
+                                               v19,
                                                0LL);
-      if ( !v17 )
+      if ( !v14 )
         goto LABEL_27;
-      UILabel__set_text(v17, (System_String_o *)transform, 0LL);
+      UILabel__set_text(v14, (System_String_o *)transform, 0LL);
       transform = (UnityEngine_Component_o *)this->fields.subLabel;
       if ( !transform )
         goto LABEL_27;
@@ -564,16 +546,16 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
       goto LABEL_27;
     }
     label = Item->fields.label;
-    v28 = UserEventPointMaster__GetEventPointNoGroup(this->fields.eventId, 0LL) - this->fields.recievePoint;
-    v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v24, v25, v26);
-    transform = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_24920/*"{0:#,0}"*/, v27, 0LL);
+    v25 = UserEventPointMaster__GetEventPointNoGroup(this->fields.eventId, 0LL) - this->fields.recievePoint;
+    v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v21, v22, v23);
+    transform = (UnityEngine_Component_o *)System_String__Format((System_String_o *)StringLiteral_24933/*"{0:#,0}"*/, v24, 0LL);
     if ( label )
     {
       UILabel__set_text(label, (System_String_o *)transform, 0LL);
       return;
     }
 LABEL_27:
-    sub_1B7641C(transform, v14);
+    sub_1B8880C(transform, v11);
   }
 }
 
@@ -593,98 +575,92 @@ void __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUI(
         TitleInfoEventDailyPointItemComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  System_Collections_Generic_List_int__o *v9; // x20
+  System_Collections_Generic_List_int__o *v3; // x20
   int64_t EventPointNoGroup; // x0
-  __int64 v11; // x1
+  __int64 v5; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v7; // x9
   __int64 size; // x10
-  const MethodInfo *v15; // x1
-  const MethodInfo *v16; // x2
-  struct System_Int32_array *v17; // x8
-  _QWORD *v18; // x9
-  __int64 v19; // x10
+  const MethodInfo *v9; // x1
+  const MethodInfo *v10; // x2
+  struct System_Int32_array *v11; // x8
+  _QWORD *v12; // x9
+  __int64 v13; // x10
   struct TitleInfoEventDailyPointItemComponent_ItemInfo_array *dailyPointItemInfoList; // x8
-  int32_t v21; // w21
+  int32_t v15; // w21
   SideItemComponent_o *Item; // x22
   UILabel_o *label; // x22
-  __int64 v24; // x2
-  __int64 v25; // x3
-  __int64 v26; // x4
-  Il2CppObject *v27; // x0
-  int32_t v28; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  Il2CppObject *v21; // x0
+  int32_t v22; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A2BF3D & 1) == 0 )
+  if ( (byte_4A59058 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__Add__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__get_Item__, v5);
-    sub_1B761C0(&System_Collections_Generic_List_int__TypeInfo, v6);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B761C0(&StringLiteral_24920/*"{0:#,0}"*/, v8);
-    byte_4A2BF3D = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1B885B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&StringLiteral_24933/*"{0:#,0}"*/);
+    byte_4A59058 = 1;
   }
   TitleInfoEventDailyPointItemComponent__DeactivateSubLabel(this, method);
-  v9 = (System_Collections_Generic_List_int__o *)sub_1B7640C(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1B887FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v9,
-    (const MethodInfo_34B9D5C *)Method_System_Collections_Generic_List_int___ctor__);
+    v3,
+    (const MethodInfo_34DFFBC *)Method_System_Collections_Generic_List_int___ctor__);
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(this->fields.eventId, 0LL);
-  if ( !v9 )
+  if ( !v3 )
     goto LABEL_22;
-  items = v9->fields._items;
-  v13 = Method_System_Collections_Generic_List_int__Add__;
-  ++v9->fields._version;
+  items = v3->fields._items;
+  v7 = Method_System_Collections_Generic_List_int__Add__;
+  ++v3->fields._version;
   if ( !items )
     goto LABEL_22;
-  size = v9->fields._size;
-  v15 = (const MethodInfo *)EventPointNoGroup;
+  size = v3->fields._size;
+  v9 = (const MethodInfo *)EventPointNoGroup;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_int___AddWithResize(
-      v9,
+      v3,
       EventPointNoGroup,
-      *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_34E0810 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
-    v9->fields._size = size + 1;
+    v3->fields._size = size + 1;
     items->m_Items[size + 1] = EventPointNoGroup;
   }
-  EventPointNoGroup = TitleInfoEventDailyPointItemComponent__GetTotalDailyEventQuestPoint(this, v15);
-  v17 = v9->fields._items;
-  v18 = Method_System_Collections_Generic_List_int__Add__;
-  ++v9->fields._version;
-  if ( !v17 )
+  EventPointNoGroup = TitleInfoEventDailyPointItemComponent__GetTotalDailyEventQuestPoint(this, v9);
+  v11 = v3->fields._items;
+  v12 = Method_System_Collections_Generic_List_int__Add__;
+  ++v3->fields._version;
+  if ( !v11 )
 LABEL_22:
-    sub_1B7641C(EventPointNoGroup, v11);
-  v19 = v9->fields._size;
-  if ( (unsigned int)v19 >= v17->max_length )
+    sub_1B8880C(EventPointNoGroup, v5);
+  v13 = v3->fields._size;
+  if ( (unsigned int)v13 >= v11->max_length )
   {
     System_Collections_Generic_List_int___AddWithResize(
-      v9,
+      v3,
       EventPointNoGroup,
-      *(const MethodInfo_34BA5B0 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_34E0810 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
-    v9->fields._size = v19 + 1;
-    v17->m_Items[v19 + 1] = EventPointNoGroup;
+    v3->fields._size = v13 + 1;
+    v11->m_Items[v13 + 1] = EventPointNoGroup;
   }
   dailyPointItemInfoList = this->fields.dailyPointItemInfoList;
   if ( dailyPointItemInfoList )
   {
-    v21 = 0;
-    while ( v21 < (signed int)dailyPointItemInfoList->max_length )
+    v15 = 0;
+    while ( v15 < (signed int)dailyPointItemInfoList->max_length )
     {
-      Item = TitleInfoEventDailyPointItemComponent__GetItem(this, v21, v16);
+      Item = TitleInfoEventDailyPointItemComponent__GetItem(this, v15, v10);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       EventPointNoGroup = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0LL, 0LL);
@@ -693,18 +669,18 @@ LABEL_22:
         if ( !Item )
           goto LABEL_22;
         label = Item->fields.label;
-        v28 = System_Collections_Generic_List_int___get_Item(
-                v9,
-                v21,
-                (const MethodInfo_34BA2C0 *)Method_System_Collections_Generic_List_int__get_Item__);
-        v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v24, v25, v26);
-        EventPointNoGroup = (int64_t)System_String__Format((System_String_o *)StringLiteral_24920/*"{0:#,0}"*/, v27, 0LL);
+        v22 = System_Collections_Generic_List_int___get_Item(
+                v3,
+                v15,
+                (const MethodInfo_34E0520 *)Method_System_Collections_Generic_List_int__get_Item__);
+        v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22, v18, v19, v20);
+        EventPointNoGroup = (int64_t)System_String__Format((System_String_o *)StringLiteral_24933/*"{0:#,0}"*/, v21, 0LL);
         if ( !label )
           goto LABEL_22;
         UILabel__set_text(label, (System_String_o *)EventPointNoGroup, 0LL);
       }
       dailyPointItemInfoList = this->fields.dailyPointItemInfoList;
-      ++v21;
+      ++v15;
       if ( !dailyPointItemInfoList )
         goto LABEL_22;
     }
@@ -712,7 +688,6 @@ LABEL_22:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE(
         TitleInfoEventDailyPointItemComponent_o *this,
         int32_t recievePoint,
@@ -725,20 +700,18 @@ System_Collections_IEnumerator_o *__fastcall TitleInfoEventDailyPointItemCompone
   int32_t v9; // w2
   int32_t v10; // w3
 
-  if ( (byte_4A2BF3F & 1) == 0 )
+  if ( (byte_4A5905A & 1) == 0 )
   {
-    sub_1B761C0(
-      &TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_TypeInfo,
-      *(_QWORD *)&recievePoint);
-    byte_4A2BF3F = 1;
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_TypeInfo);
+    byte_4A5905A = 1;
   }
-  v6 = sub_1B7640C(TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_TypeInfo);
+  v6 = sub_1B887FC(TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0LL);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)this, v7, v8);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v6 + 32), (int32_t)this, v7, v8);
   *(_QWORD *)(v6 + 40) = finishEffectEvent;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v6 + 40), (int32_t)finishEffectEvent, v9, v10);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v6 + 40), (int32_t)finishEffectEvent, v9, v10);
   return (System_Collections_IEnumerator_o *)v6;
 }
 
@@ -764,7 +737,7 @@ void __fastcall TitleInfoEventDailyPointItemComponent__UpdateUIWithEffect(
               (int32_t)finishEffectEvent,
               finishEffectEvent,
               v3);
-  UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)this, updated, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)this, updated, 0LL);
 }
 
 
@@ -780,10 +753,10 @@ void __fastcall TitleInfoEventDailyPointItemComponent_ItemInfo___ctor(
   struct UnityEngine_Vector3_StaticFields *v8; // x8
   float v9; // s1
 
-  if ( !byte_4A28BB1 )
+  if ( !byte_4A55CE1 )
   {
-    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A28BB1 = 1;
+    sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -816,50 +789,47 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
         TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   int32_t _1__state; // w8
   UnityEngine_Object_o *label; // x20
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x4
+  __int64 v5; // x2
+  __int64 v6; // x3
+  __int64 v7; // x4
   float duration; // s0
   float timer_5__2; // s8
-  __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x4
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x4
   float deltaTime; // s0
-  float v17; // s1
-  float v18; // s0
-  int32_t v19; // w8
+  float v14; // s1
+  float v15; // s0
+  int32_t v16; // w8
   int32_t from; // w21
-  float v21; // s2
-  bool v22; // nf
-  float v23; // s0
-  float v24; // s8
-  float v25; // s9
-  float v26; // s8
-  UILabel_o *v27; // x20
-  unsigned int v28; // w8
-  Il2CppObject *v29; // x0
-  System_String_o *v30; // x0
-  __int64 v31; // x1
+  float v18; // s2
+  bool v19; // nf
+  float v20; // s0
+  float v21; // s8
+  float v22; // s9
+  float v23; // s8
+  UILabel_o *v24; // x20
+  unsigned int v25; // w8
+  Il2CppObject *v26; // x0
+  System_String_o *v27; // x0
+  __int64 v28; // x1
   Il2CppObject **p__2__current; // x19
-  int32_t v33; // w2
-  int32_t v34; // w3
+  int32_t v30; // w2
+  int32_t v31; // w3
   bool result; // w0
-  UILabel_o *v36; // x20
-  Il2CppObject *v37; // x0
-  unsigned int v38; // [xsp+8h] [xbp-38h] BYREF
+  UILabel_o *v33; // x20
+  Il2CppObject *v34; // x0
+  unsigned int v35; // [xsp+8h] [xbp-38h] BYREF
   int32_t to; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A2BF49 & 1) == 0 )
+  if ( (byte_4A59064 & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B761C0(&StringLiteral_24920/*"{0:#,0}"*/, v4);
-    byte_4A2BF49 = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&StringLiteral_24933/*"{0:#,0}"*/);
+    byte_4A59064 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -881,13 +851,13 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
     duration = this->fields.duration;
     if ( duration <= 0.0 )
     {
-      v36 = this->fields.label;
+      v33 = this->fields.label;
       to = this->fields.to;
-      v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &to, v7, v8, v9);
-      v30 = System_String__Format((System_String_o *)StringLiteral_24920/*"{0:#,0}"*/, v37, 0LL);
-      if ( !v36 )
+      v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &to, v5, v6, v7);
+      v27 = System_String__Format((System_String_o *)StringLiteral_24933/*"{0:#,0}"*/, v34, 0LL);
+      if ( !v33 )
         goto LABEL_28;
-      UILabel__set_text(v36, v30, 0LL);
+      UILabel__set_text(v33, v27, 0LL);
       return 0;
     }
     this->fields._timer_5__2 = 0.0;
@@ -896,48 +866,48 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
   if ( timer_5__2 < duration )
   {
     deltaTime = UnityEngine_Time__get_deltaTime(0LL);
-    v17 = this->fields.duration;
-    v18 = timer_5__2 + deltaTime;
-    v19 = this->fields.to;
+    v14 = this->fields.duration;
+    v15 = timer_5__2 + deltaTime;
+    v16 = this->fields.to;
     from = this->fields.from;
-    if ( v18 <= v17 )
-      v21 = v18;
+    if ( v15 <= v14 )
+      v18 = v15;
     else
-      v21 = this->fields.duration;
-    v22 = v18 < 0.0;
-    v23 = 0.0;
-    if ( !v22 )
-      v23 = v21;
-    this->fields._timer_5__2 = v23;
-    v24 = (float)(v19 - from);
-    v25 = v23 / v17;
-    if ( !byte_4A28BB0 )
+      v18 = this->fields.duration;
+    v19 = v15 < 0.0;
+    v20 = 0.0;
+    if ( !v19 )
+      v20 = v18;
+    this->fields._timer_5__2 = v20;
+    v21 = (float)(v16 - from);
+    v22 = v20 / v14;
+    if ( !byte_4A55CE0 )
     {
-      sub_1B761C0(&System_Math_TypeInfo, v12);
-      byte_4A28BB0 = 1;
+      sub_1B885B0(&System_Math_TypeInfo);
+      byte_4A55CE0 = 1;
     }
-    v26 = v25 * v24;
+    v23 = v22 * v21;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v27 = this->fields.label;
-    v28 = vcvtms_s32_f32(v26);
-    if ( floorf(v26) == INFINITY )
-      v28 = 0x80000000;
-    v38 = v28 + from;
-    v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38, v13, v14, v15);
-    v30 = System_String__Format((System_String_o *)StringLiteral_24920/*"{0:#,0}"*/, v29, 0LL);
-    if ( v27 )
+    v24 = this->fields.label;
+    v25 = vcvtms_s32_f32(v23);
+    if ( floorf(v23) == INFINITY )
+      v25 = 0x80000000;
+    v35 = v25 + from;
+    v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35, v10, v11, v12);
+    v27 = System_String__Format((System_String_o *)StringLiteral_24933/*"{0:#,0}"*/, v26, 0LL);
+    if ( v24 )
     {
-      UILabel__set_text(v27, v30, 0LL);
+      UILabel__set_text(v24, v27, 0LL);
       this->fields.__2__current = 0LL;
       p__2__current = &this->fields.__2__current;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)p__2__current, 0, v33, v34);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)p__2__current, 0, v30, v31);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
     }
 LABEL_28:
-    sub_1B7641C(v30, v31);
+    sub_1B8880C(v27, v28);
   }
   return 0;
 }
@@ -959,11 +929,11 @@ void __fastcall __noreturn TitleInfoEventDailyPointItemComponent__PlayCountAnima
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -998,47 +968,36 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30__Move
         const MethodInfo *method)
 {
   TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   int32_t _1__state; // w8
   UnityEngine_Component_o *_4__this; // x20
   AssetData_o *klass; // x0
-  UnityEngine_Object_o *Object_37590216; // x0
-  Il2CppObject *v16; // x21
-  Il2CppObject *v17; // x21
+  UnityEngine_Object_o *Object_37768612; // x0
+  Il2CppObject *v7; // x21
+  Il2CppObject *v8; // x21
   UnityEngine_Component_o *transform; // x0
   Il2CppObject *Component_object; // x20
-  __int64 v20; // x21
-  System_Action_o *v21; // x22
-  System_Func_bool__o *v22; // x20
-  UnityEngine_WaitWhile_o *v23; // x21
+  __int64 v11; // x21
+  System_Action_o *v12; // x22
+  System_Func_bool__o *v13; // x20
+  UnityEngine_WaitWhile_o *v14; // x21
   ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v25; // w2
-  int32_t v26; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
 
   v2 = this;
-  if ( (byte_4A2BF4A & 1) == 0 )
+  if ( (byte_4A59065 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&System_Func_bool__TypeInfo, v3);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___, v4);
-    sub_1B761C0(&UnityEngine_GameObject_TypeInfo, v5);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B761C0(&Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__0__, v8);
-    sub_1B761C0(&Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__1__, v9);
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0_TypeInfo, v10);
-    this = (TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_o *)sub_1B761C0(
-                                                                             &UnityEngine_WaitWhile_TypeInfo,
-                                                                             v11);
-    byte_4A2BF4A = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&System_Func_bool__TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
+    sub_1B885B0(&UnityEngine_GameObject_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__0__);
+    sub_1B885B0(&Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__1__);
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0_TypeInfo);
+    this = (TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_o *)sub_1B885B0(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4A59065 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state != 1 )
@@ -1052,27 +1011,27 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30__Move
       klass = (AssetData_o *)_4__this[8].klass;
       if ( !klass )
         return (char)klass;
-      Object_37590216 = AssetData__GetObject_37590216(klass, v2->fields.effectName, 0LL);
-      if ( Object_37590216 )
+      Object_37768612 = AssetData__GetObject_37768612(klass, v2->fields.effectName, 0LL);
+      if ( Object_37768612 )
       {
-        if ( (UnityEngine_GameObject_c *)Object_37590216->klass == UnityEngine_GameObject_TypeInfo )
-          v16 = (Il2CppObject *)Object_37590216;
+        if ( (UnityEngine_GameObject_c *)Object_37768612->klass == UnityEngine_GameObject_TypeInfo )
+          v7 = (Il2CppObject *)Object_37768612;
         else
-          v16 = 0LL;
+          v7 = 0LL;
       }
       else
       {
-        v16 = 0LL;
+        v7 = 0LL;
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v16, 0LL, 0LL) )
+      if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v7, 0LL, 0LL) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v17 = UnityEngine_Object__Instantiate_object_(
-                v16,
-                (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        v8 = UnityEngine_Object__Instantiate_object_(
+               v7,
+               (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
         this = (TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_o *)UnityEngine_Component__get_gameObject(
                                                                                  _4__this,
                                                                                  0LL);
@@ -1081,47 +1040,47 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30__Move
         transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                                  (UnityEngine_GameObject_o *)this,
                                                  0LL);
-        GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v17, transform, 0LL);
-        GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v17, v2->fields.position, 0LL);
-        if ( !v17 )
+        GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v8, transform, 0LL);
+        GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v8, v2->fields.position, 0LL);
+        if ( !v8 )
           goto LABEL_26;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)v17,
-                             (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
+                             (UnityEngine_GameObject_o *)v8,
+                             (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
         {
-          v20 = sub_1B7640C(TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0_TypeInfo);
-          System_Object___ctor((Il2CppObject *)v20, 0LL);
-          if ( v20 )
+          v11 = sub_1B887FC(TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0_TypeInfo);
+          System_Object___ctor((Il2CppObject *)v11, 0LL);
+          if ( v11 )
           {
-            *(_BYTE *)(v20 + 16) = 0;
-            v21 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+            *(_BYTE *)(v11 + 16) = 0;
+            v12 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
             System_Action___ctor(
-              v21,
-              (Il2CppObject *)v20,
+              v12,
+              (Il2CppObject *)v11,
               Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__0__,
               0LL);
             if ( Component_object )
             {
-              TabOpenEffectComponent__SetAnimationEndCallback((TabOpenEffectComponent_o *)Component_object, v21, 0LL);
-              v22 = (System_Func_bool__o *)sub_1B7640C(System_Func_bool__TypeInfo);
+              TabOpenEffectComponent__SetAnimationEndCallback((TabOpenEffectComponent_o *)Component_object, v12, 0LL);
+              v13 = (System_Func_bool__o *)sub_1B887FC(System_Func_bool__TypeInfo);
               System_Func_bool____ctor(
-                v22,
-                (Il2CppObject *)v20,
+                v13,
+                (Il2CppObject *)v11,
                 Method_TitleInfoEventDailyPointItemComponent___c__DisplayClass30_0__PlayEffect_IE_b__1__,
                 0LL);
-              v23 = (UnityEngine_WaitWhile_o *)sub_1B7640C(UnityEngine_WaitWhile_TypeInfo);
-              UnityEngine_WaitWhile___ctor(v23, v22, 0LL);
-              v2->fields.__2__current = (Il2CppObject *)v23;
+              v14 = (UnityEngine_WaitWhile_o *)sub_1B887FC(UnityEngine_WaitWhile_TypeInfo);
+              UnityEngine_WaitWhile___ctor(v14, v13, 0LL);
+              v2->fields.__2__current = (Il2CppObject *)v14;
               p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-              sub_1B76164(p__2__current, (int32_t)v23, v25, v26);
+              sub_1B88554(p__2__current, (int32_t)v14, v16, v17);
               LOBYTE(klass) = 1;
               *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
               return (char)klass;
             }
           }
 LABEL_26:
-          sub_1B7641C(this, method);
+          sub_1B8880C(this, method);
         }
       }
     }
@@ -1150,11 +1109,11 @@ void __fastcall __noreturn TitleInfoEventDailyPointItemComponent__PlayEffect_IE_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_TitleInfoEventDailyPointItemComponent__PlayEffect_IE_d__30_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -1205,12 +1164,10 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4A2BF4B & 1) == 0 )
+  if ( (byte_4A59066 & 1) == 0 )
   {
-    this = (TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_o *)sub_1B761C0(
-                                                                                            &UnityEngine_Object_TypeInfo,
-                                                                                            method);
-    byte_4A2BF4B = 1;
+    this = (TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A59066 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1244,14 +1201,14 @@ LABEL_11:
             v2->fields.fromAlpha + (float)((float)(v12 / duration) * (float)(v2->fields.toAlpha - v2->fields.fromAlpha)));
           v2->fields.__2__current = 0LL;
           p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-          sub_1B76164(p__2__current, 0, v14, v15);
+          sub_1B88554(p__2__current, 0, v14, v15);
           result = 1;
           *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
           return result;
         }
       }
 LABEL_21:
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     }
     return 0;
   }
@@ -1290,11 +1247,11 @@ void __fastcall __noreturn TitleInfoEventDailyPointItemComponent__PlaySubLabelFa
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -1331,88 +1288,79 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
 {
   const MethodInfo *v2; // x4
   TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   struct TitleInfoEventDailyPointItemComponent_o *_4__this; // x20
   struct TitleInfoEventDailyPointItemComponent_ItemInfo_array *dailyPointItemInfoList; // x8
-  const MethodInfo *v13; // x2
+  const MethodInfo *v6; // x2
   SideItemComponent_o *Item; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v8; // w2
+  int32_t v9; // w3
   UnityEngine_Object_o *dailyPointItem_5__4; // x21
-  const MethodInfo *v18; // x2
+  const MethodInfo *v11; // x2
   int recievePoint; // w8
-  float v20; // s0
-  float v21; // s2
-  bool v22; // zf
-  float v23; // s0
-  bool v24; // w21
-  const MethodInfo *v25; // x1
-  System_Collections_IEnumerator_o *v26; // x0
-  const MethodInfo *v27; // x2
-  System_Collections_IEnumerator_o *v28; // x0
-  UnityEngine_Coroutine_o *v29; // x0
-  ServantStatusBattleListViewItem_o *v30; // x19
-  int32_t v31; // w2
-  int32_t v32; // w3
+  float v13; // s0
+  float v14; // s2
+  bool v15; // zf
+  float v16; // s0
+  bool v17; // w21
+  const MethodInfo *v18; // x1
+  System_Collections_IEnumerator_o *v19; // x0
+  const MethodInfo *v20; // x2
+  System_Collections_IEnumerator_o *v21; // x0
+  UnityEngine_Coroutine_o *v22; // x0
+  ServantStatusBattleListViewItem_o *v23; // x19
+  int32_t v24; // w2
+  int32_t v25; // w3
   float pointTextInterval; // s8
-  UnityEngine_WaitForSeconds_o *v34; // x20
-  ServantStatusBattleListViewItem_o *v35; // x19
-  int32_t v36; // w2
-  int32_t v37; // w3
-  int v38; // w8
-  struct SideItemComponent_o *v39; // x8
-  System_Collections_IEnumerator_o *v40; // x0
-  UnityEngine_Coroutine_o *v41; // x0
-  int32_t v42; // w2
-  int32_t v43; // w3
-  System_Collections_IEnumerator_o *v44; // x0
-  UnityEngine_Coroutine_o *v45; // x0
-  int32_t v46; // w2
-  int32_t v47; // w3
-  const MethodInfo *v48; // x2
-  System_Collections_IEnumerator_o *v49; // x0
-  UnityEngine_Coroutine_o *v50; // x0
-  int32_t v51; // w2
-  int32_t v52; // w3
-  TitleInfoEventDailyPointItemComponent___c_c *v53; // x0
+  UnityEngine_WaitForSeconds_o *v27; // x20
+  ServantStatusBattleListViewItem_o *v28; // x19
+  int32_t v29; // w2
+  int32_t v30; // w3
+  int v31; // w8
+  struct SideItemComponent_o *v32; // x8
+  System_Collections_IEnumerator_o *v33; // x0
+  UnityEngine_Coroutine_o *v34; // x0
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_Collections_IEnumerator_o *v37; // x0
+  UnityEngine_Coroutine_o *v38; // x0
+  int32_t v39; // w2
+  int32_t v40; // w3
+  const MethodInfo *v41; // x2
+  System_Collections_IEnumerator_o *v42; // x0
+  UnityEngine_Coroutine_o *v43; // x0
+  int32_t v44; // w2
+  int32_t v45; // w3
+  TitleInfoEventDailyPointItemComponent___c_c *v46; // x0
   System_Action_o *_9__29_0; // x20
-  Il2CppObject *v55; // x21
+  Il2CppObject *v48; // x21
   struct TitleInfoEventDailyPointItemComponent___c_StaticFields *static_fields; // x0
-  int32_t v57; // w2
-  int32_t v58; // w3
-  int32_t v59; // w2
-  int32_t v60; // w3
+  int32_t v50; // w2
+  int32_t v51; // w3
+  int32_t v52; // w2
+  int32_t v53; // w3
   System_Action_o *finishEffectEvent; // x0
-  float v63; // s2
-  unsigned __int64 v64; // d0 OVERLAPPED
-  float v65; // s2
-  int v66; // s1
-  System_Collections_IEnumerator_o *v67; // x0
+  float v56; // s2
+  unsigned __int64 v57; // d0 OVERLAPPED
+  float v58; // s2
+  int v59; // s1
+  System_Collections_IEnumerator_o *v60; // x0
   UnityEngine_Coroutine_o *started; // x0
   ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v70; // w2
-  int32_t v71; // w3
+  int32_t v63; // w2
+  int32_t v64; // w3
 
   v3 = this;
-  if ( (byte_4A2BF4C & 1) == 0 )
+  if ( (byte_4A59067 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B761C0(&Method_TitleInfoEventDailyPointItemComponent___c__UpdateDailyPointUIWithEffect_IE_b__29_0__, v5);
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent___c_TypeInfo, v6);
-    sub_1B761C0(&UnityEngine_WaitForSeconds_TypeInfo, v7);
-    sub_1B761C0(&StringLiteral_17213/*"bit_dedicate_left_item_flash_2"*/, v8);
-    sub_1B761C0(&StringLiteral_17212/*"bit_dedicate_left_item_flash_1"*/, v9);
-    this = (TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_o *)sub_1B761C0(
-                                                                                               &StringLiteral_17214/*"bit_dedicate_left_item_flash_3"*/,
-                                                                                               v10);
-    byte_4A2BF4C = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_TitleInfoEventDailyPointItemComponent___c__UpdateDailyPointUIWithEffect_IE_b__29_0__);
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent___c_TypeInfo);
+    sub_1B885B0(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_1B885B0(&StringLiteral_17219/*"bit_dedicate_left_item_flash_2"*/);
+    sub_1B885B0(&StringLiteral_17218/*"bit_dedicate_left_item_flash_1"*/);
+    this = (TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_o *)sub_1B885B0(&StringLiteral_17220/*"bit_dedicate_left_item_flash_3"*/);
+    byte_4A59067 = 1;
   }
   _4__this = v3->fields.__4__this;
   switch ( v3->fields.__1__state )
@@ -1427,9 +1375,9 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
       v3->fields._totalDailyPoint_5__2 = UserEventPointMaster__GetEventPointNoGroup(_4__this->fields.eventId, 0LL);
       v3->fields._lastDailyPoint_5__3 = UserEventPointMaster__GetEventPointNoGroup(_4__this->fields.eventId, 0LL)
                                       - _4__this->fields.recievePoint;
-      Item = TitleInfoEventDailyPointItemComponent__GetItem(_4__this, 0, v13);
+      Item = TitleInfoEventDailyPointItemComponent__GetItem(_4__this, 0, v6);
       v3->fields._dailyPointItem_5__4 = Item;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)&v3->fields._dailyPointItem_5__4, (int32_t)Item, v15, v16);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)&v3->fields._dailyPointItem_5__4, (int32_t)Item, v8, v9);
       dailyPointItem_5__4 = (UnityEngine_Object_o *)v3->fields._dailyPointItem_5__4;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1438,37 +1386,37 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
       recievePoint = _4__this->fields.recievePoint;
       if ( recievePoint < 1 )
       {
-        v23 = 1.0;
+        v16 = 1.0;
       }
       else
       {
-        v20 = log10f((float)recievePoint);
-        v21 = (float)((int)v20 + 1);
-        v22 = v20 == INFINITY;
-        v23 = -2147500000.0;
-        if ( !v22 )
-          v23 = v21;
+        v13 = log10f((float)recievePoint);
+        v14 = (float)((int)v13 + 1);
+        v15 = v13 == INFINITY;
+        v16 = -2147500000.0;
+        if ( !v15 )
+          v16 = v14;
       }
-      v63 = v23 * _4__this->fields.firstEffectPositionDiff.fields.z;
-      v64 = vadd_f32(
+      v56 = v16 * _4__this->fields.firstEffectPositionDiff.fields.z;
+      v57 = vadd_f32(
               *(float32x2_t *)&_4__this->fields.firstEffectPosition.fields.x,
-              vmul_n_f32(*(float32x2_t *)&_4__this->fields.firstEffectPositionDiff.fields.x, v23)).n64_u64[0];
-      v65 = _4__this->fields.firstEffectPosition.fields.z + v63;
-      *(_QWORD *)&v3->fields._position_5__5.fields.x = v64;
-      v3->fields._position_5__5.fields.z = v65;
-      v66 = HIDWORD(v64);
-      v67 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
+              vmul_n_f32(*(float32x2_t *)&_4__this->fields.firstEffectPositionDiff.fields.x, v16)).n64_u64[0];
+      v58 = _4__this->fields.firstEffectPosition.fields.z + v56;
+      *(_QWORD *)&v3->fields._position_5__5.fields.x = v57;
+      v3->fields._position_5__5.fields.z = v58;
+      v59 = HIDWORD(v57);
+      v60 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_17212/*"bit_dedicate_left_item_flash_1"*/,
-              *(UnityEngine_Vector3_o *)&v64,
-              v18);
-      started = UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v67, 0LL);
+              (System_String_o *)StringLiteral_17218/*"bit_dedicate_left_item_flash_1"*/,
+              *(UnityEngine_Vector3_o *)&v57,
+              v11);
+      started = UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v60, 0LL);
       v3->fields.__2__current = (Il2CppObject *)started;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(p__2__current, (int32_t)started, v70, v71);
-      v24 = 1;
+      sub_1B88554(p__2__current, (int32_t)started, v63, v64);
+      v17 = 1;
       *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
-      return v24;
+      return v17;
     case 1:
       v3->fields.__1__state = -1;
       if ( !_4__this )
@@ -1481,124 +1429,124 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
                                                                                                  0LL);
       if ( !this )
         goto LABEL_42;
-      v24 = 1;
+      v17 = 1;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-      v26 = TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE(
+      v19 = TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE(
               _4__this,
               0.0,
               1.0,
               _4__this->fields.recievePointFadeDuration,
-              v25);
-      UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v26, 0LL);
-      v28 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
+              v18);
+      UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v19, 0LL);
+      v21 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_17214/*"bit_dedicate_left_item_flash_3"*/,
+              (System_String_o *)StringLiteral_17220/*"bit_dedicate_left_item_flash_3"*/,
               v3->fields._position_5__5,
-              v27);
-      v29 = UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v28, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v29;
-      v30 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(v30, (int32_t)v29, v31, v32);
-      *(_DWORD *)&v30[-1].fields.isMine = 2;
-      return v24;
+              v20);
+      v22 = UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v21, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v22;
+      v23 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B88554(v23, (int32_t)v22, v24, v25);
+      *(_DWORD *)&v23[-1].fields.isMine = 2;
+      return v17;
     case 2:
       v3->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_42;
       pointTextInterval = _4__this->fields.pointTextInterval;
-      v34 = (UnityEngine_WaitForSeconds_o *)sub_1B7640C(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v34, pointTextInterval, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v34;
-      v35 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(v35, (int32_t)v34, v36, v37);
-      v38 = 3;
+      v27 = (UnityEngine_WaitForSeconds_o *)sub_1B887FC(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v27, pointTextInterval, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v27;
+      v28 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B88554(v28, (int32_t)v27, v29, v30);
+      v31 = 3;
       goto LABEL_27;
     case 3:
-      v39 = v3->fields._dailyPointItem_5__4;
+      v32 = v3->fields._dailyPointItem_5__4;
       v3->fields.__1__state = -1;
-      if ( !v39 || !_4__this )
+      if ( !v32 || !_4__this )
         goto LABEL_42;
-      v40 = TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE(
+      v33 = TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE(
               (TitleInfoEventDailyPointItemComponent_o *)this,
-              v39->fields.label,
+              v32->fields.label,
               v3->fields._lastDailyPoint_5__3,
               v3->fields._totalDailyPoint_5__2,
               _4__this->fields.countAnimDuration,
               v2);
-      v41 = UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v40, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v41;
-      v35 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(v35, (int32_t)v41, v42, v43);
-      v38 = 4;
+      v34 = UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v33, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v34;
+      v28 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B88554(v28, (int32_t)v34, v35, v36);
+      v31 = 4;
       goto LABEL_27;
     case 4:
       v3->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_42;
-      v44 = TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE(
+      v37 = TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE(
               _4__this,
               1.0,
               0.0,
               _4__this->fields.recievePointFadeDuration,
               method);
-      v45 = UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v44, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v45;
-      v35 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(v35, (int32_t)v45, v46, v47);
-      v38 = 5;
+      v38 = UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v37, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v38;
+      v28 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B88554(v28, (int32_t)v38, v39, v40);
+      v31 = 5;
       goto LABEL_27;
     case 5:
       v3->fields.__1__state = -1;
       if ( !_4__this )
 LABEL_42:
-        sub_1B7641C(this, method);
+        sub_1B8880C(this, method);
       TitleInfoEventDailyPointItemComponent__DeactivateSubLabel(_4__this, method);
-      v49 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
+      v42 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_17213/*"bit_dedicate_left_item_flash_2"*/,
+              (System_String_o *)StringLiteral_17219/*"bit_dedicate_left_item_flash_2"*/,
               _4__this->fields.lastEffectPosition,
-              v48);
-      v50 = UnityEngine_MonoBehaviour__StartCoroutine_69272680((UnityEngine_MonoBehaviour_o *)_4__this, v49, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v50;
-      v35 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
-      sub_1B76164(v35, (int32_t)v50, v51, v52);
-      v38 = 6;
+              v41);
+      v43 = UnityEngine_MonoBehaviour__StartCoroutine_69444652((UnityEngine_MonoBehaviour_o *)_4__this, v42, 0LL);
+      v3->fields.__2__current = (Il2CppObject *)v43;
+      v28 = (ServantStatusBattleListViewItem_o *)&v3->fields.__2__current;
+      sub_1B88554(v28, (int32_t)v43, v44, v45);
+      v31 = 6;
 LABEL_27:
-      *(_DWORD *)&v35[-1].fields.isMine = v38;
+      *(_DWORD *)&v28[-1].fields.isMine = v31;
       return 1;
     case 6:
       *(_QWORD *)&v3->fields._position_5__5.fields.x = 0LL;
       v3->fields.__1__state = -1;
       v3->fields._position_5__5.fields.z = 0.0;
 LABEL_29:
-      v53 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
+      v46 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
       if ( !TitleInfoEventDailyPointItemComponent___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TitleInfoEventDailyPointItemComponent___c_TypeInfo);
-        v53 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
+        v46 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
       }
-      _9__29_0 = v53->static_fields->__9__29_0;
+      _9__29_0 = v46->static_fields->__9__29_0;
       if ( !_9__29_0 )
       {
-        if ( !v53->_2.cctor_finished )
+        if ( !v46->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v53);
-          v53 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v46);
+          v46 = TitleInfoEventDailyPointItemComponent___c_TypeInfo;
         }
-        v55 = (Il2CppObject *)v53->static_fields->__9;
-        _9__29_0 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+        v48 = (Il2CppObject *)v46->static_fields->__9;
+        _9__29_0 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__29_0,
-          v55,
+          v48,
           Method_TitleInfoEventDailyPointItemComponent___c__UpdateDailyPointUIWithEffect_IE_b__29_0__,
           0LL);
         static_fields = TitleInfoEventDailyPointItemComponent___c_TypeInfo->static_fields;
         static_fields->__9__29_0 = _9__29_0;
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__29_0, (int32_t)_9__29_0, v57, v58);
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__29_0, (int32_t)_9__29_0, v50, v51);
       }
       EventTutorialMaster__CheckTutorial(0, 52, _9__29_0, 0, 0, 0, 0, 0LL);
       v3->fields._dailyPointItem_5__4 = 0LL;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)&v3->fields._dailyPointItem_5__4, 0, v59, v60);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)&v3->fields._dailyPointItem_5__4, 0, v52, v53);
 LABEL_36:
       finishEffectEvent = v3->fields.finishEffectEvent;
       if ( finishEffectEvent )
@@ -1626,11 +1574,11 @@ void __fastcall __noreturn TitleInfoEventDailyPointItemComponent__UpdateDailyPoi
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -1652,24 +1600,23 @@ void __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
 
 void __fastcall TitleInfoEventDailyPointItemComponent___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
 
-  if ( (byte_4A2BF47 & 1) == 0 )
+  if ( (byte_4A59062 & 1) == 0 )
   {
-    sub_1B761C0(&TitleInfoEventDailyPointItemComponent___c_TypeInfo, v1);
-    byte_4A2BF47 = 1;
+    sub_1B885B0(&TitleInfoEventDailyPointItemComponent___c_TypeInfo);
+    byte_4A59062 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B7640C(TitleInfoEventDailyPointItemComponent___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  TitleInfoEventDailyPointItemComponent___c_TypeInfo->static_fields->__9 = (struct TitleInfoEventDailyPointItemComponent___c_o *)v2;
-  sub_1B76164(
+  v1 = (Il2CppObject *)sub_1B887FC(TitleInfoEventDailyPointItemComponent___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  TitleInfoEventDailyPointItemComponent___c_TypeInfo->static_fields->__9 = (struct TitleInfoEventDailyPointItemComponent___c_o *)v1;
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)TitleInfoEventDailyPointItemComponent___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 
@@ -1688,14 +1635,14 @@ void __fastcall TitleInfoEventDailyPointItemComponent___c___UpdateDailyPointUIWi
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A2BF48 & 1) == 0 )
+  if ( (byte_4A59063 & 1) == 0 )
   {
-    sub_1B761C0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4A2BF48 = 1;
+    sub_1B885B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4A59063 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1B7641C(0LL, v3);
+    sub_1B8880C(0LL, v3);
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0LL);
 }
 

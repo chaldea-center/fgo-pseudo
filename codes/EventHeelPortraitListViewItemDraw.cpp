@@ -23,7 +23,7 @@ void __fastcall EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
 
   newImgSprite = this->fields.newImgSprite;
   if ( !newImgSprite )
-    sub_1B7641C(0LL, method);
+    sub_1B8880C(0LL, method);
   ShiningIconComponent__Clear(newImgSprite, 0LL);
 }
 
@@ -34,25 +34,22 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   EventHeelPortraitListViewItemDraw_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct HeelPortraitEntity_o *Entity_k__BackingField; // x8
   int32_t imageId; // w21
-  EventHeelPortraitListViewItemDraw_o *v10; // x21
-  struct HeelPortraitEntity_o *v11; // x8
+  EventHeelPortraitListViewItemDraw_o *v7; // x21
+  struct HeelPortraitEntity_o *v8; // x8
   int32_t eventId; // w22
   UISprite_o *heelPortraitSprite; // x23
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4A31E78 & 1) == 0 )
+  if ( (byte_4A5F0D1 & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, item);
-    sub_1B761C0(&System_Convert_TypeInfo, v5);
-    sub_1B761C0(&StringLiteral_22561/*"portrait_unknown"*/, v6);
-    this = (EventHeelPortraitListViewItemDraw_o *)sub_1B761C0(&StringLiteral_20123/*"icon_common_new01"*/, v7);
-    byte_4A31E78 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&System_Convert_TypeInfo);
+    sub_1B885B0(&StringLiteral_22571/*"portrait_unknown"*/);
+    this = (EventHeelPortraitListViewItemDraw_o *)sub_1B885B0(&StringLiteral_20130/*"icon_common_new01"*/);
+    byte_4A5F0D1 = 1;
   }
   if ( !item )
     goto LABEL_21;
@@ -64,22 +61,22 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
     imageId = Entity_k__BackingField->fields.imageId;
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_62200640(imageId, 0LL);
-    v10 = this;
+    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_62372612(imageId, 0LL);
+    v7 = this;
   }
   else
   {
-    v10 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_22561/*"portrait_unknown"*/;
+    v7 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_22571/*"portrait_unknown"*/;
   }
-  v11 = item->fields._Entity_k__BackingField;
-  if ( !v11 )
+  v8 = item->fields._Entity_k__BackingField;
+  if ( !v8 )
 LABEL_21:
-    sub_1B7641C(this, item);
-  eventId = v11->fields.eventId;
+    sub_1B8880C(this, item);
+  eventId = v8->fields.eventId;
   heelPortraitSprite = v4->fields.heelPortraitSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_37679488(eventId, heelPortraitSprite, (System_String_o *)v10, 0LL);
+  AtlasManager__SetEventUI_37859364(eventId, heelPortraitSprite, (System_String_o *)v7, 0LL);
   if ( !item->fields._isHavePortrait_k__BackingField || item->fields._isDispDetailDialog_k__BackingField )
   {
     this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
@@ -93,7 +90,7 @@ LABEL_21:
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;
-  ShiningIconComponent__Set_38050524((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_20123/*"icon_common_new01"*/, 0LL);
+  ShiningIconComponent__Set_38233884((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_20130/*"icon_common_new01"*/, 0LL);
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;
@@ -102,8 +99,8 @@ LABEL_21:
                                                   0LL);
   if ( !this )
     goto LABEL_21;
-  v14.fields.x = v4->fields.ICON_SCALE;
-  v14.fields.y = v14.fields.x;
-  v14.fields.z = v14.fields.x;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v14, 0LL);
+  v11.fields.x = v4->fields.ICON_SCALE;
+  v11.fields.y = v11.fields.x;
+  v11.fields.z = v11.fields.x;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v11, 0LL);
 }

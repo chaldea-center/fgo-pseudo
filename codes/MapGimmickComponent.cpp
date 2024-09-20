@@ -7,113 +7,107 @@ void __fastcall MapGimmickComponent___ctor(MapGimmickComponent_o *this, const Me
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_4A2ADC5 & 1) == 0 )
+  if ( (byte_4A57FD0 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1/*""*/, method);
-    byte_4A2ADC5 = 1;
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A57FD0 = 1;
   }
   this->fields.mDepthBase = 30;
   *(_QWORD *)&this->fields.mScaleBase = 0x3ECCCCCD3F800000LL;
   this->fields.mEasingType = 17;
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.mHideSeName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mHideSeName, v5, v2, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mHideSeName, v5, v2, v3);
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.mDispSeName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mDispSeName, v6, v7, v8);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mDispSeName, v6, v7, v8);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall MapGimmickComponent__Awake(MapGimmickComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct CStateManager_MapGimmickComponent__o **p_mFSM; // x20
-  CStateManager_T__o *v10; // x21
-  int32_t v11; // w2
-  int32_t v12; // w3
+  CStateManager_T__o *v4; // x21
+  int32_t v5; // w2
+  int32_t v6; // w3
   CStateManager_T__o *mFSM; // x21
+  Il2CppObject *v8; // x22
+  __int64 v9; // x0
+  __int64 v10; // x1
+  CStateManager_T__o *v11; // x21
+  Il2CppObject *v12; // x22
+  CStateManager_T__o *v13; // x21
   Il2CppObject *v14; // x22
-  __int64 v15; // x0
-  __int64 v16; // x1
-  CStateManager_T__o *v17; // x21
-  Il2CppObject *v18; // x22
-  CStateManager_T__o *v19; // x21
-  Il2CppObject *v20; // x22
-  CStateManager_T__o *v21; // x20
-  Il2CppObject *v22; // x21
-  const MethodInfo *v23; // x3
+  CStateManager_T__o *v15; // x20
+  Il2CppObject *v16; // x21
+  const MethodInfo *v17; // x3
 
-  if ( (byte_4A2ADB3 & 1) == 0 )
+  if ( (byte_4A57FBE & 1) == 0 )
   {
-    sub_1B761C0(&Method_CStateManager_MapGimmickComponent___ctor__, method);
-    sub_1B761C0(&Method_CStateManager_MapGimmickComponent__add__, v3);
-    sub_1B761C0(&CStateManager_MapGimmickComponent__TypeInfo, v4);
-    sub_1B761C0(&MapGimmickComponent_StateDispAnim_TypeInfo, v5);
-    sub_1B761C0(&MapGimmickComponent_StateHideAnim_TypeInfo, v6);
-    sub_1B761C0(&MapGimmickComponent_StateMapMain_TypeInfo, v7);
-    sub_1B761C0(&MapGimmickComponent_StateNone_TypeInfo, v8);
-    byte_4A2ADB3 = 1;
+    sub_1B885B0(&Method_CStateManager_MapGimmickComponent___ctor__);
+    sub_1B885B0(&Method_CStateManager_MapGimmickComponent__add__);
+    sub_1B885B0(&CStateManager_MapGimmickComponent__TypeInfo);
+    sub_1B885B0(&MapGimmickComponent_StateDispAnim_TypeInfo);
+    sub_1B885B0(&MapGimmickComponent_StateHideAnim_TypeInfo);
+    sub_1B885B0(&MapGimmickComponent_StateMapMain_TypeInfo);
+    sub_1B885B0(&MapGimmickComponent_StateNone_TypeInfo);
+    byte_4A57FBE = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v10 = (CStateManager_T__o *)sub_1B7640C(CStateManager_MapGimmickComponent__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_1B887FC(CStateManager_MapGimmickComponent__TypeInfo);
     CStateManager_object____ctor(
-      v10,
+      v4,
       (Il2CppObject *)this,
       4,
-      (const MethodInfo_308D27C *)Method_CStateManager_MapGimmickComponent___ctor__);
-    this->fields.mFSM = (struct CStateManager_MapGimmickComponent__o *)v10;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mFSM, (int32_t)v10, v11, v12);
+      (const MethodInfo_30AAD34 *)Method_CStateManager_MapGimmickComponent___ctor__);
+    this->fields.mFSM = (struct CStateManager_MapGimmickComponent__o *)v4;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v14 = (Il2CppObject *)sub_1B7640C(MapGimmickComponent_StateNone_TypeInfo);
-    System_Object___ctor(v14, 0LL);
+    v8 = (Il2CppObject *)sub_1B887FC(MapGimmickComponent_StateNone_TypeInfo);
+    System_Object___ctor(v8, 0LL);
     if ( !mFSM )
       goto LABEL_9;
     CStateManager_object___add(
       mFSM,
       0,
-      (IState_T__o *)v14,
-      (const MethodInfo_308D324 *)Method_CStateManager_MapGimmickComponent__add__);
-    v17 = (CStateManager_T__o *)*p_mFSM;
-    v18 = (Il2CppObject *)sub_1B7640C(MapGimmickComponent_StateMapMain_TypeInfo);
-    System_Object___ctor(v18, 0LL);
-    if ( !v17 )
+      (IState_T__o *)v8,
+      (const MethodInfo_30AADDC *)Method_CStateManager_MapGimmickComponent__add__);
+    v11 = (CStateManager_T__o *)*p_mFSM;
+    v12 = (Il2CppObject *)sub_1B887FC(MapGimmickComponent_StateMapMain_TypeInfo);
+    System_Object___ctor(v12, 0LL);
+    if ( !v11 )
       goto LABEL_9;
     CStateManager_object___add(
-      v17,
+      v11,
       1,
-      (IState_T__o *)v18,
-      (const MethodInfo_308D324 *)Method_CStateManager_MapGimmickComponent__add__);
-    v19 = (CStateManager_T__o *)*p_mFSM;
-    v20 = (Il2CppObject *)sub_1B7640C(MapGimmickComponent_StateHideAnim_TypeInfo);
-    System_Object___ctor(v20, 0LL);
-    if ( !v19
+      (IState_T__o *)v12,
+      (const MethodInfo_30AADDC *)Method_CStateManager_MapGimmickComponent__add__);
+    v13 = (CStateManager_T__o *)*p_mFSM;
+    v14 = (Il2CppObject *)sub_1B887FC(MapGimmickComponent_StateHideAnim_TypeInfo);
+    System_Object___ctor(v14, 0LL);
+    if ( !v13
       || (CStateManager_object___add(
-            v19,
+            v13,
             2,
-            (IState_T__o *)v20,
-            (const MethodInfo_308D324 *)Method_CStateManager_MapGimmickComponent__add__),
-          v21 = (CStateManager_T__o *)*p_mFSM,
-          v22 = (Il2CppObject *)sub_1B7640C(MapGimmickComponent_StateDispAnim_TypeInfo),
-          System_Object___ctor(v22, 0LL),
-          !v21) )
+            (IState_T__o *)v14,
+            (const MethodInfo_30AADDC *)Method_CStateManager_MapGimmickComponent__add__),
+          v15 = (CStateManager_T__o *)*p_mFSM,
+          v16 = (Il2CppObject *)sub_1B887FC(MapGimmickComponent_StateDispAnim_TypeInfo),
+          System_Object___ctor(v16, 0LL),
+          !v15) )
     {
 LABEL_9:
-      sub_1B7641C(v15, v16);
+      sub_1B8880C(v9, v10);
     }
     CStateManager_object___add(
-      v21,
+      v15,
       3,
-      (IState_T__o *)v22,
-      (const MethodInfo_308D324 *)Method_CStateManager_MapGimmickComponent__add__);
-    MapGimmickComponent__SetState(this, 1, 0LL, v23);
+      (IState_T__o *)v16,
+      (const MethodInfo_30AADDC *)Method_CStateManager_MapGimmickComponent__add__);
+    MapGimmickComponent__SetState(this, 1, 0LL, v17);
   }
 }
 
@@ -129,7 +123,7 @@ float __fastcall MapGimmickComponent__GetAnimTime(MapGimmickComponent_o *this, c
                                     (MapControl_MapGimmickInfo_o *)mMapCtrl_MapGimmickInfo,
                                     method)) == 0LL )
   {
-    sub_1B7641C(mMapCtrl_MapGimmickInfo, method);
+    sub_1B8880C(mMapCtrl_MapGimmickInfo, method);
   }
   v4 = *((_DWORD *)mMapCtrl_MapGimmickInfo + 24);
   if ( (v4 & 0x80000000) != 0 )
@@ -146,34 +140,30 @@ CommonEffectComponent_o *__fastcall MapGimmickComponent__GetCommonEffectComponen
         const MethodInfo *method)
 {
   UnityEngine_Component_o *v6; // x19
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   Il2CppObject *Component_object; // x22
-  MapEffectComponent_o *v12; // x21
+  MapEffectComponent_o *v8; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v14; // x3
-  Il2CppObject *v15; // x20
-  UnityEngine_GameObject_o *v16; // x20
-  UnityEngine_GameObject_o *v17; // x0
-  const MethodInfo *v18; // x2
+  const MethodInfo *v10; // x3
+  Il2CppObject *v11; // x20
+  UnityEngine_GameObject_o *v12; // x20
+  UnityEngine_GameObject_o *v13; // x0
+  const MethodInfo *v14; // x2
 
   v6 = (UnityEngine_Component_o *)this;
-  if ( (byte_4A2ADBA & 1) == 0 )
+  if ( (byte_4A57FC5 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, prefab);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___, v7);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_CommonEffectComponent___, v8);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_MapEffectComponent___, v9);
-    this = (MapGimmickComponent_o *)sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
-    byte_4A2ADBA = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_MapEffectComponent___);
+    this = (MapGimmickComponent_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FC5 = 1;
   }
   if ( !prefab )
     goto LABEL_19;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        prefab,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -182,42 +172,42 @@ CommonEffectComponent_o *__fastcall MapGimmickComponent__GetCommonEffectComponen
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (MapGimmickComponent_o *)UnityEngine_Object__Instantiate_object_(
                                       Component_object,
-                                      (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_MapEffectComponent___);
+                                      (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_MapEffectComponent___);
     if ( this )
     {
-      v12 = (MapEffectComponent_o *)this;
+      v8 = (MapEffectComponent_o *)this;
       LODWORD(this[1].fields.commonEffectComponent) = 1141899264;
       gameObject = UnityEngine_Component__get_gameObject(v6, 0LL);
-      MapEffectComponent__Setup(v12, gameObject, mapCamera, v14);
-      return (CommonEffectComponent_o *)v12;
+      MapEffectComponent__Setup(v8, gameObject, mapCamera, v10);
+      return (CommonEffectComponent_o *)v8;
     }
 LABEL_19:
-    sub_1B7641C(this, prefab);
+    sub_1B8880C(this, prefab);
   }
-  v15 = UnityEngine_GameObject__GetComponent_object_(
+  v11 = UnityEngine_GameObject__GetComponent_object_(
           prefab,
-          (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+          (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v12 = 0LL;
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v15, 0LL, 0LL) )
+  v8 = 0LL;
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0LL, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (MapGimmickComponent_o *)UnityEngine_Object__Instantiate_object_(
-                                      v15,
-                                      (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
+                                      v11,
+                                      (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
     if ( this )
     {
-      v12 = (MapEffectComponent_o *)this;
-      v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v17 = UnityEngine_Component__get_gameObject(v6, 0LL);
-      GameObjectExtensions__SafeSetParent_33557996(v16, v17, v18);
-      return (CommonEffectComponent_o *)v12;
+      v8 = (MapEffectComponent_o *)this;
+      v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+      v13 = UnityEngine_Component__get_gameObject(v6, 0LL);
+      GameObjectExtensions__SafeSetParent_33730068(v12, v13, v14);
+      return (CommonEffectComponent_o *)v8;
     }
     goto LABEL_19;
   }
-  return (CommonEffectComponent_o *)v12;
+  return (CommonEffectComponent_o *)v8;
 }
 
 
@@ -228,55 +218,53 @@ UnityEngine_GameObject_o *__fastcall MapGimmickComponent__GetEffectPrefab(
         AssetData_o *multiAssetData,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  Il2CppObject *Object_object__48515452; // x21
+  Il2CppObject *Object_object__48635516; // x21
 
-  if ( (byte_4A2ADB9 & 1) == 0 )
+  if ( (byte_4A57FC4 & 1) == 0 )
   {
-    sub_1B761C0(&Method_AssetData_GetObject_GameObject____75903216, effectPrefabName);
-    this = (MapGimmickComponent_o *)sub_1B761C0(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A2ADB9 = 1;
+    sub_1B885B0(&Method_AssetData_GetObject_GameObject____76085352);
+    this = (MapGimmickComponent_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FC4 = 1;
   }
   if ( !assetData )
-    sub_1B7641C(this, effectPrefabName);
-  Object_object__48515452 = AssetData__GetObject_object__48515452(
+    sub_1B8880C(this, effectPrefabName);
+  Object_object__48635516 = AssetData__GetObject_object__48635516(
                               assetData,
                               effectPrefabName,
-                              (const MethodInfo_2E4497C *)Method_AssetData_GetObject_GameObject____75903216);
+                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_GameObject____76085352);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__48515452, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__48635516, 0LL, 0LL) )
   {
     if ( !multiAssetData )
       return 0LL;
-    Object_object__48515452 = AssetData__GetObject_object__48515452(
+    Object_object__48635516 = AssetData__GetObject_object__48635516(
                                 multiAssetData,
                                 effectPrefabName,
-                                (const MethodInfo_2E4497C *)Method_AssetData_GetObject_GameObject____75903216);
+                                (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_GameObject____76085352);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__48515452, 0LL, 0LL) )
+    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__48635516, 0LL, 0LL) )
       return 0LL;
   }
-  return (UnityEngine_GameObject_o *)Object_object__48515452;
+  return (UnityEngine_GameObject_o *)Object_object__48635516;
 }
 
 
 System_String_o *__fastcall MapGimmickComponent__GetGobjName(int32_t id, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  System_String_o *v3; // x0
-  int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
+  System_String_o *v2; // x0
+  int32_t v4; // [xsp+Ch] [xbp-24h] BYREF
 
-  v5 = id;
-  if ( (byte_4A2ADB2 & 1) == 0 )
+  v4 = id;
+  if ( (byte_4A57FBD & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_8870/*"MapGimmick_"*/, method);
-    sub_1B761C0(&StringLiteral_1221/*"00"*/, v2);
-    byte_4A2ADB2 = 1;
+    sub_1B885B0(&StringLiteral_8873/*"MapGimmick_"*/);
+    sub_1B885B0(&StringLiteral_1221/*"00"*/);
+    byte_4A57FBD = 1;
   }
-  v3 = System_Int32__ToString_62340340((int32_t)&v5, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
-  return System_String__Concat_61535060((System_String_o *)StringLiteral_8870/*"MapGimmick_"*/, v3, 0LL);
+  v2 = System_Int32__ToString_62512312((int32_t)&v4, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
+  return System_String__Concat_61707032((System_String_o *)StringLiteral_8873/*"MapGimmick_"*/, v2, 0LL);
 }
 
 
@@ -292,36 +280,35 @@ MapGimmickRandomEffectElementComponent_o *__fastcall MapGimmickComponent__GetMap
         UnityEngine_GameObject_o *prefab,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _BOOL8 v4; // x0
-  const MethodInfo *v5; // x1
+  _BOOL8 v3; // x0
+  const MethodInfo *v4; // x1
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4A2ADBB & 1) == 0 )
+  if ( (byte_4A57FC6 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_MapGimmickRandomEffectComponent___, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A2ADBB = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_MapGimmickRandomEffectComponent___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FC6 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)prefab, 0LL, 0LL);
-  if ( v4 )
+  v3 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)prefab, 0LL, 0LL);
+  if ( v3 )
     return 0LL;
   if ( !prefab )
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        prefab,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_MapGimmickRandomEffectComponent___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_MapGimmickRandomEffectComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-  if ( v4 )
+  v3 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( v3 )
     return 0LL;
   if ( !Component_object )
 LABEL_13:
-    sub_1B7641C(v4, v5);
-  return MapGimmickRandomEffectComponent__GetRandomElement((MapGimmickRandomEffectComponent_o *)Component_object, v5);
+    sub_1B8880C(v3, v4);
+  return MapGimmickRandomEffectComponent__GetRandomElement((MapGimmickRandomEffectComponent_o *)Component_object, v4);
 }
 
 
@@ -331,14 +318,14 @@ int32_t __fastcall MapGimmickComponent__GetState(MapGimmickComponent_o *this, co
   struct CStateManager_MapGimmickComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4A2ADBC & 1) == 0 )
+  if ( (byte_4A57FC7 & 1) == 0 )
   {
-    this = (MapGimmickComponent_o *)sub_1B761C0(&Method_CStateManager_MapGimmickComponent__getState__, method);
-    byte_4A2ADBC = 1;
+    this = (MapGimmickComponent_o *)sub_1B885B0(&Method_CStateManager_MapGimmickComponent__getState__);
+    byte_4A57FC7 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -347,30 +334,27 @@ void __fastcall MapGimmickComponent__InitDefaultParam(MapGimmickComponent_o *thi
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct System_String_StaticFields *static_fields; // x8
   struct System_String_o *Empty; // x1
-  struct System_String_StaticFields *v15; // x8
-  struct System_String_o *v16; // x1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  UnityEngine_GameObject_o *v19; // x20
-  const MethodInfo *v20; // x2
-  Il2CppObject *v21; // x0
-  __int64 v22; // x1
-  struct UISprite_o *v23; // x20
-  int32_t v24; // w2
-  int32_t v25; // w3
+  struct System_String_StaticFields *v12; // x8
+  struct System_String_o *v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  UnityEngine_GameObject_o *v16; // x20
+  const MethodInfo *v17; // x2
+  Il2CppObject *v18; // x0
+  __int64 v19; // x1
+  struct UISprite_o *v20; // x20
+  int32_t v21; // w2
+  int32_t v22; // w3
 
-  if ( (byte_4A2ADB5 & 1) == 0 )
+  if ( (byte_4A57FC0 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_AddComponent_UISprite___, method);
-    sub_1B761C0(&UnityEngine_GameObject_TypeInfo, v5);
-    sub_1B761C0(&string_TypeInfo, v6);
-    sub_1B761C0(&StringLiteral_12903/*"Sprite"*/, v7);
-    byte_4A2ADB5 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_AddComponent_UISprite___);
+    sub_1B885B0(&UnityEngine_GameObject_TypeInfo);
+    sub_1B885B0(&string_TypeInfo);
+    sub_1B885B0(&StringLiteral_12909/*"Sprite"*/);
+    byte_4A57FC0 = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
   this->fields.mDepthBase = 0;
@@ -379,51 +363,49 @@ void __fastcall MapGimmickComponent__InitDefaultParam(MapGimmickComponent_o *thi
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.mHideSeName = static_fields->Empty;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mHideSeName, (int32_t)Empty, v2, v3);
-  v15 = string_TypeInfo->static_fields;
-  v16 = v15->Empty;
-  this->fields.mDispSeName = v15->Empty;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mDispSeName, (int32_t)v16, v17, v18);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mHideSeName, (int32_t)Empty, v2, v3);
+  v12 = string_TypeInfo->static_fields;
+  v13 = v12->Empty;
+  this->fields.mDispSeName = v12->Empty;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mDispSeName, (int32_t)v13, v14, v15);
   *(_WORD *)&this->fields.isForceLoop = 0;
-  v19 = (UnityEngine_GameObject_o *)sub_1B7640C(UnityEngine_GameObject_TypeInfo);
-  UnityEngine_GameObject___ctor(v19, (System_String_o *)StringLiteral_12903/*"Sprite"*/, 0LL);
-  GameObjectExtensions__SetParent(v19, (UnityEngine_Component_o *)this, v20);
-  if ( !v19
-    || (v21 = UnityEngine_GameObject__AddComponent_object_(
-                v19,
-                (const MethodInfo_2EB18D0 *)Method_UnityEngine_GameObject_AddComponent_UISprite___)) == 0LL )
+  v16 = (UnityEngine_GameObject_o *)sub_1B887FC(UnityEngine_GameObject_TypeInfo);
+  UnityEngine_GameObject___ctor(v16, (System_String_o *)StringLiteral_12909/*"Sprite"*/, 0LL);
+  GameObjectExtensions__SetParent(v16, (UnityEngine_Component_o *)this, v17);
+  if ( !v16
+    || (v18 = UnityEngine_GameObject__AddComponent_object_(
+                v16,
+                (const MethodInfo_2ECEDD0 *)Method_UnityEngine_GameObject_AddComponent_UISprite___)) == 0LL )
   {
-    sub_1B7641C(v21, v22);
+    sub_1B8880C(v18, v19);
   }
-  v23 = (struct UISprite_o *)v21;
-  UIWidget__SetDimensions((UIWidget_o *)v21, 64, 64, 0LL);
-  this->fields.mSprite = v23;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mSprite, (int32_t)v23, v24, v25);
+  v20 = (struct UISprite_o *)v18;
+  UIWidget__SetDimensions((UIWidget_o *)v18, 64, 64, 0LL);
+  this->fields.mSprite = v20;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mSprite, (int32_t)v20, v21, v22);
 }
 
 
 bool __fastcall MapGimmickComponent__IsEventOverEnd(MapGimmickComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v3; // x1
   void *Mine; // x0
-  __int64 v5; // x8
-  __int64 v6; // x8
-  int32_t v7; // w19
+  __int64 v3; // x8
+  __int64 v4; // x8
+  int32_t v5; // w19
 
-  if ( (byte_4A2ADC4 & 1) == 0 )
+  if ( (byte_4A57FCF & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_EventMaster___, method);
-    sub_1B761C0(&DataManager_TypeInfo, v2);
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v3);
-    byte_4A2ADC4 = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    byte_4A57FCF = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A2915D )
+  if ( !byte_4A5629D )
   {
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, method);
-    byte_4A2915D = 1;
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    byte_4A5629D = 1;
   }
   Mine = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -431,28 +413,28 @@ bool __fastcall MapGimmickComponent__IsEventOverEnd(MapGimmickComponent_o *this,
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     Mine = TerminalSceneComponent_TypeInfo;
   }
-  v5 = **((_QWORD **)Mine + 23);
-  if ( !v5 )
+  v3 = **((_QWORD **)Mine + 23);
+  if ( !v3 )
     goto LABEL_20;
-  v6 = *(_QWORD *)(v5 + 264);
-  if ( !v6 )
+  v4 = *(_QWORD *)(v3 + 264);
+  if ( !v4 )
     goto LABEL_20;
-  Mine = *(void **)(v6 + 336);
+  Mine = *(void **)(v4 + 336);
   if ( !Mine )
     goto LABEL_20;
   Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)Mine, method);
   if ( !Mine )
     goto LABEL_20;
-  v7 = *((_DWORD *)Mine + 24);
-  if ( v7 < 1 )
+  v5 = *((_DWORD *)Mine + 24);
+  if ( v5 < 1 )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Mine = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_EventMaster___);
+  Mine = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Mine )
 LABEL_20:
-    sub_1B7641C(Mine, method);
-  return !EventMaster__IsEnableEvent((EventMaster_o *)Mine, v7, 0, 0LL, 0LL);
+    sub_1B8880C(Mine, method);
+  return !EventMaster__IsEnableEvent((EventMaster_o *)Mine, v5, 0, 0LL, 0LL);
 }
 
 
@@ -463,10 +445,10 @@ bool __fastcall MapGimmickComponent__IsTouched(MapGimmickComponent_o *this, cons
   __int64 v5; // x1
   struct CommonEffectComponent_o *v6; // x8
 
-  if ( (byte_4A2ADB7 & 1) == 0 )
+  if ( (byte_4A57FC2 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2ADB7 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FC2 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -476,7 +458,7 @@ bool __fastcall MapGimmickComponent__IsTouched(MapGimmickComponent_o *this, cons
     return 0;
   v6 = this->fields.commonEffectComponent;
   if ( !v6 )
-    sub_1B7641C(v4, v5);
+    sub_1B8880C(v4, v5);
   return v6->fields.isTouched;
 }
 
@@ -487,26 +469,25 @@ void __fastcall MapGimmickComponent__OnGimmickTouched(
         NetworkManager_ResultCallbackFunc_o *touchCallback,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  const MethodInfo *v7; // x1
+  const MethodInfo *v6; // x1
   Il2CppObject *Instance; // x21
   void *Mine; // x0
+  __int64 v9; // x8
   __int64 v10; // x8
-  __int64 v11; // x8
 
-  if ( (byte_4A2ADB8 & 1) == 0 )
+  if ( (byte_4A57FC3 & 1) == 0 )
   {
-    sub_1B761C0(&Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__, mapGimmickEntity);
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v6);
-    byte_4A2ADB8 = 1;
+    sub_1B885B0(&Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    byte_4A57FC3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A2915D )
+  if ( !byte_4A5629D )
   {
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v7);
-    byte_4A2915D = 1;
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    byte_4A5629D = 1;
   }
   Mine = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -514,11 +495,11 @@ void __fastcall MapGimmickComponent__OnGimmickTouched(
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     Mine = TerminalSceneComponent_TypeInfo;
   }
-  v10 = **((_QWORD **)Mine + 23);
-  if ( !v10
-    || (v11 = *(_QWORD *)(v10 + 264)) == 0
-    || (Mine = *(void **)(v11 + 336)) == 0LL
-    || (Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)Mine, v7)) == 0LL
+  v9 = **((_QWORD **)Mine + 23);
+  if ( !v9
+    || (v10 = *(_QWORD *)(v9 + 264)) == 0
+    || (Mine = *(void **)(v10 + 336)) == 0LL
+    || (Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)Mine, v6)) == 0LL
     || !mapGimmickEntity
     || !Instance
     || (ClientMissionManager__OnClickMapGimmick(
@@ -526,9 +507,9 @@ void __fastcall MapGimmickComponent__OnGimmickTouched(
           *((_DWORD *)Mine + 24),
           mapGimmickEntity->fields.id,
           0LL),
-        (Mine = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__)) == 0LL) )
+        (Mine = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__)) == 0LL) )
   {
-    sub_1B7641C(Mine, v7);
+    sub_1B8880C(Mine, v6);
   }
   ClientMissionManager__SendRequest((ClientMissionManager_o *)Mine, touchCallback, 0LL);
 }
@@ -547,7 +528,7 @@ void __fastcall MapGimmickComponent__SetDispAnim(MapGimmickComponent_o *this, bo
   const MethodInfo *v6; // x3
 
   AnimTime = MapGimmickComponent__GetAnimTime(this, (const MethodInfo *)is_disp);
-  MapGimmickComponent__SetDispAnim_33617672(this, is_disp, AnimTime, 1, v6);
+  MapGimmickComponent__SetDispAnim_33789744(this, is_disp, AnimTime, 1, v6);
 }
 
 
@@ -558,73 +539,64 @@ void __fastcall MapGimmickComponent__SetDispAnimQuick(
 {
   const MethodInfo *v3; // x3
 
-  MapGimmickComponent__SetDispAnim_33617672(this, is_disp, 0.0, 0, v3);
+  MapGimmickComponent__SetDispAnim_33789744(this, is_disp, 0.0, 0, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MapGimmickComponent__SetDispAnim_33617672(
+void __fastcall MapGimmickComponent__SetDispAnim_33789744(
         MapGimmickComponent_o *this,
         bool is_disp,
         float time,
         bool is_play_se,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x22
+  __int64 v9; // x22
   UnityEngine_Component_o *mSprite; // x0
-  __int64 v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  const MethodInfo *v22; // x1
-  const MethodInfo *v23; // x2
+  __int64 v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x2
   UnityEngine_Object_o *commonEffectComponent; // x23
-  struct CommonEffectComponent_o *v25; // x20
-  System_Action_o *v26; // x21
+  struct CommonEffectComponent_o *v17; // x20
+  System_Action_o *v18; // x21
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v29; // w2
-  int32_t v30; // w3
-  __int64 v31; // x8
-  System_String_o *v32; // x21
-  System_Action_o *v33; // x23
-  EasingObject_o *v34; // x24
-  System_Action_o *v35; // x25
-  struct CommonEffectComponent_o *v36; // x20
-  System_Action_o *v37; // x21
-  _QWORD *v38; // x0
-  System_Reflection_MethodBase_o *v39; // x0
-  const MethodInfo *v40; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  __int64 v23; // x8
+  System_String_o *v24; // x21
+  System_Action_o *v25; // x23
+  EasingObject_o *v26; // x24
+  System_Action_o *v27; // x25
+  struct CommonEffectComponent_o *v28; // x20
+  System_Action_o *v29; // x21
+  _QWORD *v30; // x0
+  System_Reflection_MethodBase_o *v31; // x0
+  const MethodInfo *v32; // x1
   struct MapControl_MapGimmickInfo_o *mMapCtrl_MapGimmickInfo; // x8
 
-  if ( (byte_4A2ADBF & 1) == 0 )
+  if ( (byte_4A57FCA & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, is_disp);
-    sub_1B761C0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v9);
-    sub_1B761C0(&Method_MapGimmickComponent_SetDispAnim__, v10);
-    sub_1B761C0(&Method_MapGimmickComponent_StateDispAnimEnd__, v11);
-    sub_1B761C0(&Method_MapGimmickComponent_StateHideAnimEnd__, v12);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__0__, v14);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__1__, v15);
-    sub_1B761C0(&MapGimmickComponent___c__DisplayClass38_0_TypeInfo, v16);
-    byte_4A2ADBF = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1B885B0(&Method_MapGimmickComponent_SetDispAnim__);
+    sub_1B885B0(&Method_MapGimmickComponent_StateDispAnimEnd__);
+    sub_1B885B0(&Method_MapGimmickComponent_StateHideAnimEnd__);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__0__);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__1__);
+    sub_1B885B0(&MapGimmickComponent___c__DisplayClass38_0_TypeInfo);
+    byte_4A57FCA = 1;
   }
-  v17 = sub_1B7640C(MapGimmickComponent___c__DisplayClass38_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
-  if ( !v17 )
+  v9 = sub_1B887FC(MapGimmickComponent___c__DisplayClass38_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0LL);
+  if ( !v9 )
     goto LABEL_37;
-  *(_QWORD *)(v17 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v17 + 16), (int32_t)this, v20, v21);
-  MapGimmickComponent__StartActionEffect(this, v22);
-  MapGimmickComponent__SetTouchEnable(this, is_disp, v23);
+  *(_QWORD *)(v9 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 16), (int32_t)this, v12, v13);
+  MapGimmickComponent__StartActionEffect(this, v14);
+  MapGimmickComponent__SetTouchEnable(this, is_disp, v15);
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -634,55 +606,55 @@ void __fastcall MapGimmickComponent__SetDispAnim_33617672(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
                          gameObject,
-                         (const MethodInfo_2EB34A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    *(_QWORD *)(v17 + 32) = Component_object;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v17 + 32), (int32_t)Component_object, v29, v30);
+                         (const MethodInfo_2ED09A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    *(_QWORD *)(v9 + 32) = Component_object;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v9 + 32), (int32_t)Component_object, v21, v22);
     mSprite = (UnityEngine_Component_o *)this->fields.mSprite;
     if ( !mSprite )
       goto LABEL_37;
-    *(float *)(v17 + 28) = (*(float (__fastcall **)(UnityEngine_Component_o *, Il2CppClass *))&mSprite->klass[1]._1.this_arg.bits)(
-                             mSprite,
-                             mSprite->klass[1]._1.element_class);
-    *(_DWORD *)(v17 + 24) = is_disp;
+    *(float *)(v9 + 28) = (*(float (__fastcall **)(UnityEngine_Component_o *, Il2CppClass *))&mSprite->klass[1]._1.this_arg.bits)(
+                            mSprite,
+                            mSprite->klass[1]._1.element_class);
+    *(_DWORD *)(v9 + 24) = is_disp;
     if ( is_disp )
-      v31 = 64LL;
+      v23 = 64LL;
     else
-      v31 = 56LL;
-    v32 = *(System_String_o **)((char *)&this->klass + v31);
-    v33 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+      v23 = 56LL;
+    v24 = *(System_String_o **)((char *)&this->klass + v23);
+    v25 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v33,
-      (Il2CppObject *)v17,
+      v25,
+      (Il2CppObject *)v9,
       Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__0__,
       0LL);
     if ( time <= 0.0 )
     {
-      ActionExtensions__Call(v33, 0LL);
+      ActionExtensions__Call(v25, 0LL);
       if ( !is_play_se )
         return;
     }
     else
     {
-      v34 = *(EasingObject_o **)(v17 + 32);
-      v35 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+      v26 = *(EasingObject_o **)(v9 + 32);
+      v27 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v35,
-        (Il2CppObject *)v17,
+        v27,
+        (Il2CppObject *)v9,
         Method_MapGimmickComponent___c__DisplayClass38_0__SetDispAnim_b__1__,
         0LL);
-      if ( !v34 )
+      if ( !v26 )
         goto LABEL_37;
-      EasingObject__Play(v34, time, v35, v33, 0.0, this->fields.mEasingType, 0LL);
+      EasingObject__Play(v26, time, v27, v25, 0.0, this->fields.mEasingType, 0LL);
       if ( !is_play_se )
         return;
     }
-    if ( !System_String__IsNullOrEmpty(v32, 0LL) )
+    if ( !System_String__IsNullOrEmpty(v24, 0LL) )
     {
-      v38 = Method_MapGimmickComponent_SetDispAnim__;
+      v30 = Method_MapGimmickComponent_SetDispAnim__;
       if ( (*((_BYTE *)Method_MapGimmickComponent_SetDispAnim__ + 83) & 2) != 0 )
-        v38 = (_QWORD *)sub_1B761D8(Method_MapGimmickComponent_SetDispAnim__);
-      v39 = (System_Reflection_MethodBase_o *)sub_1B761A4(v38, v38[4]);
-      OverwriteAssetSoundName__PlaySe(v39, v32, 0LL);
+        v30 = (_QWORD *)sub_1B885C8(Method_MapGimmickComponent_SetDispAnim__);
+      v31 = (System_Reflection_MethodBase_o *)sub_1B88594(v30, v30[4]);
+      OverwriteAssetSoundName__PlaySe(v31, v24, 0LL);
     }
     return;
   }
@@ -695,33 +667,33 @@ void __fastcall MapGimmickComponent__SetDispAnim_33617672(
     if ( !mSprite )
       goto LABEL_37;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mSprite, 1, 0LL);
-    v25 = this->fields.commonEffectComponent;
+    v17 = this->fields.commonEffectComponent;
     if ( time > 0.0 )
     {
-      v26 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-      System_Action___ctor(v26, (Il2CppObject *)this, Method_MapGimmickComponent_StateDispAnimEnd__, 0LL);
-      if ( v25 )
+      v18 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+      System_Action___ctor(v18, (Il2CppObject *)this, Method_MapGimmickComponent_StateDispAnimEnd__, 0LL);
+      if ( v17 )
       {
-        ((void (__fastcall *)(struct CommonEffectComponent_o *, __int64, System_Action_o *, Il2CppMethodPointer))v25->klass->vtable._6_ForceStart.method)(
-          v25,
+        ((void (__fastcall *)(struct CommonEffectComponent_o *, __int64, System_Action_o *, Il2CppMethodPointer))v17->klass->vtable._6_ForceStart.method)(
+          v17,
           1LL,
-          v26,
-          v25->klass->vtable._7_ForceLoop.methodPtr);
+          v18,
+          v17->klass->vtable._7_ForceLoop.methodPtr);
         return;
       }
 LABEL_37:
-      sub_1B7641C(mSprite, v19);
+      sub_1B8880C(mSprite, v11);
     }
-    if ( !v25 )
+    if ( !v17 )
       goto LABEL_37;
     CommonEffectComponent__ForceLoop(this->fields.commonEffectComponent, 0LL);
   }
   else
   {
-    v36 = this->fields.commonEffectComponent;
+    v28 = this->fields.commonEffectComponent;
     if ( time <= 0.0 )
     {
-      if ( !v36 )
+      if ( !v28 )
         goto LABEL_37;
       mSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                              (UnityEngine_Component_o *)this->fields.commonEffectComponent,
@@ -729,19 +701,19 @@ LABEL_37:
       if ( !mSprite )
         goto LABEL_37;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mSprite, 0, 0LL);
-      MapGimmickComponent__StateHideAnimEnd(this, v40);
+      MapGimmickComponent__StateHideAnimEnd(this, v32);
     }
     else
     {
-      v37 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-      System_Action___ctor(v37, (Il2CppObject *)this, Method_MapGimmickComponent_StateHideAnimEnd__, 0LL);
-      if ( !v36 )
+      v29 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+      System_Action___ctor(v29, (Il2CppObject *)this, Method_MapGimmickComponent_StateHideAnimEnd__, 0LL);
+      if ( !v28 )
         goto LABEL_37;
-      mSprite = (UnityEngine_Component_o *)((__int64 (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, Il2CppMethodPointer))v36->klass->vtable._8_Stop.method)(
-                                             v36,
+      mSprite = (UnityEngine_Component_o *)((__int64 (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, Il2CppMethodPointer))v28->klass->vtable._8_Stop.method)(
+                                             v28,
                                              0LL,
-                                             v37,
-                                             v36->klass->vtable._9_ForceStop.methodPtr);
+                                             v29,
+                                             v28->klass->vtable._9_ForceStop.methodPtr);
     }
     mMapCtrl_MapGimmickInfo = this->fields.mMapCtrl_MapGimmickInfo;
     if ( !mMapCtrl_MapGimmickInfo )
@@ -753,25 +725,22 @@ LABEL_37:
 
 void __fastcall MapGimmickComponent__SetDisplayByRaidProgress(MapGimmickComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   MapControl_MapGimmickInfo_o *mMapCtrl_MapGimmickInfo; // x0
-  _BOOL8 v7; // x0
-  const MethodInfo *v8; // x1
-  struct MapControl_MapGimmickInfo_o *v9; // x8
+  _BOOL8 v4; // x0
+  const MethodInfo *v5; // x1
+  struct MapControl_MapGimmickInfo_o *v6; // x8
   int32_t dispType; // w8
-  System_Action_o *v11; // x20
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
+  System_Action_o *v8; // x20
+  const MethodInfo *v9; // x3
+  int32_t v10; // w1
 
-  if ( (byte_4A2ADC3 & 1) == 0 )
+  if ( (byte_4A57FCE & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_0__, v3);
-    sub_1B761C0(&Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_1__, v4);
-    sub_1B761C0(&Method_SingletonTemplate_QuestTree__get_Instance__, v5);
-    byte_4A2ADC3 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_0__);
+    sub_1B885B0(&Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_1__);
+    sub_1B885B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4A57FCE = 1;
   }
   mMapCtrl_MapGimmickInfo = this->fields.mMapCtrl_MapGimmickInfo;
   if ( !mMapCtrl_MapGimmickInfo )
@@ -781,48 +750,48 @@ void __fastcall MapGimmickComponent__SetDisplayByRaidProgress(MapGimmickComponen
                                                              method);
   if ( !mMapCtrl_MapGimmickInfo )
     goto LABEL_16;
-  v7 = MapGimmickEntity__IsCheckRaidProgress((MapGimmickEntity_o *)mMapCtrl_MapGimmickInfo, 0LL);
-  if ( v7 && !MapGimmickComponent__IsEventOverEnd((MapGimmickComponent_o *)v7, v8) )
+  v4 = MapGimmickEntity__IsCheckRaidProgress((MapGimmickEntity_o *)mMapCtrl_MapGimmickInfo, 0LL);
+  if ( v4 && !MapGimmickComponent__IsEventOverEnd((MapGimmickComponent_o *)v4, v5) )
   {
-    mMapCtrl_MapGimmickInfo = (MapControl_MapGimmickInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    mMapCtrl_MapGimmickInfo = (MapControl_MapGimmickInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( mMapCtrl_MapGimmickInfo )
     {
-      mMapCtrl_MapGimmickInfo = (MapControl_MapGimmickInfo_o *)QuestTree__CheckMapGimmickCond_33946152(
+      mMapCtrl_MapGimmickInfo = (MapControl_MapGimmickInfo_o *)QuestTree__CheckMapGimmickCond_34118192(
                                                                  (QuestTree_o *)mMapCtrl_MapGimmickInfo,
                                                                  this->fields.mMapCtrl_MapGimmickInfo,
                                                                  0LL);
-      v9 = this->fields.mMapCtrl_MapGimmickInfo;
-      if ( v9 )
+      v6 = this->fields.mMapCtrl_MapGimmickInfo;
+      if ( v6 )
       {
-        dispType = v9->fields.dispType;
+        dispType = v6->fields.dispType;
         if ( dispType != 0 || ((unsigned __int8)mMapCtrl_MapGimmickInfo & 1) == 0 )
         {
           if ( dispType != 1 || (((unsigned int)mMapCtrl_MapGimmickInfo ^ 1) & 1) == 0 )
             return;
-          v11 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+          v8 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
           System_Action___ctor(
-            v11,
+            v8,
             (Il2CppObject *)this,
             Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_1__,
             0LL);
-          v13 = 2;
+          v10 = 2;
         }
         else
         {
-          v11 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+          v8 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
           System_Action___ctor(
-            v11,
+            v8,
             (Il2CppObject *)this,
             Method_MapGimmickComponent__SetDisplayByRaidProgress_b__45_0__,
             0LL);
-          v13 = 3;
+          v10 = 3;
         }
-        MapGimmickComponent__SetState(this, v13, v11, v12);
+        MapGimmickComponent__SetState(this, v10, v8, v9);
         return;
       }
     }
 LABEL_16:
-    sub_1B7641C(mMapCtrl_MapGimmickInfo, method);
+    sub_1B8880C(mMapCtrl_MapGimmickInfo, method);
   }
 }
 
@@ -835,7 +804,7 @@ void __fastcall MapGimmickComponent__SetMapGimmickInfo(
   int32_t v3; // w3
 
   this->fields.mMapCtrl_MapGimmickInfo = mapGimmickInfo;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields.mMapCtrl_MapGimmickInfo,
     (int32_t)mapGimmickInfo,
     (int32_t)method,
@@ -855,91 +824,86 @@ void __fastcall MapGimmickComponent__SetMoveAnim(
   float z; // s9
   float y; // s10
   float x; // s11
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x20
+  __int64 v13; // x20
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v19; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  int32_t v22; // w2
-  int32_t v23; // w3
+  __int64 v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_Action_o *v28; // x21
-  EasingObject_o *v29; // x22
-  System_Action_o *v30; // x23
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_Action_o *v24; // x21
+  EasingObject_o *v25; // x22
+  System_Action_o *v26; // x23
 
   z = posTo.fields.z;
   y = posTo.fields.y;
   x = posTo.fields.x;
-  if ( (byte_4A2ADC0 & 1) == 0 )
+  if ( (byte_4A57FCB & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&easeType);
-    sub_1B761C0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v13);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__0__, v14);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__1__, v15);
-    sub_1B761C0(&MapGimmickComponent___c__DisplayClass39_0_TypeInfo, v16);
-    byte_4A2ADC0 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__0__);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__1__);
+    sub_1B885B0(&MapGimmickComponent___c__DisplayClass39_0_TypeInfo);
+    byte_4A57FCB = 1;
   }
-  v17 = sub_1B7640C(MapGimmickComponent___c__DisplayClass39_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
-  if ( !v17 )
+  v13 = sub_1B887FC(MapGimmickComponent___c__DisplayClass39_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v13, 0LL);
+  if ( !v13 )
     goto LABEL_10;
-  *(_QWORD *)(v17 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v17 + 16), (int32_t)this, v20, v21);
-  *(float *)(v17 + 24) = x;
-  *(float *)(v17 + 28) = y;
-  *(float *)(v17 + 32) = z;
-  *(_QWORD *)(v17 + 40) = callback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v17 + 40), (int32_t)callback, v22, v23);
+  *(_QWORD *)(v13 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  *(float *)(v13 + 24) = x;
+  *(float *)(v13 + 28) = y;
+  *(float *)(v13 + 32) = z;
+  *(_QWORD *)(v13 + 40) = callback;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v13 + 40), (int32_t)callback, v18, v19);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EB34A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v17 + 64) = Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v17 + 64), (int32_t)Component_object, v26, v27);
+                       (const MethodInfo_2ED09A0 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v13 + 64) = Component_object;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v13 + 64), (int32_t)Component_object, v22, v23);
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_10;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
   if ( !transform )
     goto LABEL_10;
-  *(UnityEngine_Vector3_o *)(v17 + 48) = UnityEngine_Transform__get_localPosition(
+  *(UnityEngine_Vector3_o *)(v13 + 48) = UnityEngine_Transform__get_localPosition(
                                            (UnityEngine_Transform_o *)transform,
                                            0LL);
-  v28 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v28,
-    (Il2CppObject *)v17,
+    v24,
+    (Il2CppObject *)v13,
     Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__0__,
     0LL);
   if ( time > 0.0 )
   {
-    v29 = *(EasingObject_o **)(v17 + 64);
-    v30 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+    v25 = *(EasingObject_o **)(v13 + 64);
+    v26 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v30,
-      (Il2CppObject *)v17,
+      v26,
+      (Il2CppObject *)v13,
       Method_MapGimmickComponent___c__DisplayClass39_0__SetMoveAnim_b__1__,
       0LL);
-    if ( v29 )
+    if ( v25 )
     {
-      EasingObject__Play(v29, time, v30, v28, 0.0, easeType, 0LL);
+      EasingObject__Play(v25, time, v26, v24, 0.0, easeType, 0LL);
       return;
     }
 LABEL_10:
-    sub_1B7641C(transform, v19);
+    sub_1B8880C(transform, v15);
   }
-  ActionExtensions__Call(v28, 0LL);
+  ActionExtensions__Call(v24, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall MapGimmickComponent__SetState(
         MapGimmickComponent_o *this,
         int32_t state,
@@ -950,47 +914,45 @@ void __fastcall MapGimmickComponent__SetState(
   __int64 v8; // x1
   CStateManager_T__o *v9; // x0
 
-  if ( (byte_4A2ADBD & 1) == 0 )
+  if ( (byte_4A57FC8 & 1) == 0 )
   {
-    sub_1B761C0(&Method_CStateManager_MapGimmickComponent__setState__, *(_QWORD *)&state);
-    byte_4A2ADBD = 1;
+    sub_1B885B0(&Method_CStateManager_MapGimmickComponent__setState__);
+    byte_4A57FC8 = 1;
   }
   this->fields.mStateEndAct = end_act;
   p_mStateEndAct = &this->fields.mStateEndAct;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_mStateEndAct, (int32_t)end_act, (int32_t)end_act, (int32_t)method);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_mStateEndAct, (int32_t)end_act, (int32_t)end_act, (int32_t)method);
   v9 = (CStateManager_T__o *)*(p_mStateEndAct - 6);
   if ( !v9 )
-    sub_1B7641C(0LL, v8);
+    sub_1B8880C(0LL, v8);
   CStateManager_object___setState(
     v9,
     state,
-    (const MethodInfo_308D3B0 *)Method_CStateManager_MapGimmickComponent__setState__);
+    (const MethodInfo_30AAE68 *)Method_CStateManager_MapGimmickComponent__setState__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall MapGimmickComponent__SetTouchEnable(
         MapGimmickComponent_o *this,
         bool enabled,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
+  __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4A2ADC2 & 1) == 0 )
+  if ( (byte_4A57FCD & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, enabled);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A2ADC2 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FCD = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1005,7 +967,7 @@ void __fastcall MapGimmickComponent__SetTouchEnable(
       return;
     }
 LABEL_10:
-    sub_1B7641C(gameObject, v7);
+    sub_1B8880C(gameObject, v6);
   }
 }
 
@@ -1021,292 +983,265 @@ void __fastcall MapGimmickComponent__Setup(
         NetworkManager_ResultCallbackFunc_o *touchCallback,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  __int64 v35; // x1
-  __int64 v36; // x1
-  __int64 v37; // x1
-  __int64 v38; // x1
-  __int64 v39; // x1
-  __int64 v40; // x1
-  __int64 v41; // x1
-  __int64 v42; // x23
+  __int64 v15; // x23
   __int64 IsMonoColorRect; // x0
-  const MethodInfo *v44; // x1
-  int32_t v45; // w2
-  int32_t v46; // w3
-  int32_t v47; // w2
-  int32_t v48; // w3
-  int32_t v49; // w2
-  int32_t v50; // w3
+  const MethodInfo *v17; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  int32_t v22; // w2
+  int32_t v23; // w3
   MapGimmickEntity_o *Mine; // x0
-  __int64 *v52; // x22
-  int32_t v53; // w2
-  int32_t v54; // w3
+  __int64 *v25; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
   UISprite_o *mSprite; // x26
-  System_String_o *v56; // x27
-  System_String_o *v57; // x0
-  System_String_o *v58; // x0
-  UISprite_o *v59; // x28
-  UnityEngine_Behaviour_o *v60; // x26
+  System_String_o *v29; // x27
+  System_String_o *v30; // x0
+  System_String_o *v31; // x0
+  UISprite_o *v32; // x28
+  UnityEngine_Behaviour_o *v33; // x26
   UnityEngine_Object_o *monitor; // x28
-  bool v62; // w0
-  System_String_o *v63; // x26
-  struct UISprite_o *v64; // x8
+  bool v35; // w0
+  System_String_o *v36; // x26
+  struct UISprite_o *v37; // x8
   struct UITexture_o *mMapBg; // x9
-  System_String_o *v66; // x0
-  MapGimmickComponent_o *v67; // x0
-  const MethodInfo *v68; // x4
+  System_String_o *v39; // x0
+  MapGimmickComponent_o *v40; // x0
+  const MethodInfo *v41; // x4
   UnityEngine_GameObject_o *EffectPrefab; // x26
   UnityEngine_Object_o *MapGimmickRandomEffectElementComponent; // x27
-  const MethodInfo *v71; // x3
+  const MethodInfo *v44; // x3
   struct CommonEffectComponent_o *CommonEffectComponent; // x0
   struct CommonEffectComponent_o **p_commonEffectComponent; // x25
-  int32_t v74; // w2
-  int32_t v75; // w3
-  UnityEngine_Object_o *v76; // x26
-  __int64 v77; // x8
-  __int64 v78; // x8
-  int32_t v79; // w26
-  UnityEngine_GameObject_o *v80; // x26
-  bool v81; // w1
-  float v82; // s8
+  int32_t v47; // w2
+  int32_t v48; // w3
+  UnityEngine_Object_o *v49; // x26
+  __int64 v50; // x8
+  __int64 v51; // x8
+  int32_t v52; // w26
+  UnityEngine_GameObject_o *v53; // x26
+  bool v54; // w1
+  float v55; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v84; // x1
-  long double v85; // q0
-  CommonEffectComponent_o *v86; // x8
-  struct CommonEffectComponent_o *v87; // x24
-  System_Action_o *v88; // x25
-  int32_t v89; // w2
-  int32_t v90; // w3
-  float v91; // s0
-  float v92; // s1
-  float v93; // s2
-  float v94; // s9
-  float v95; // s8
-  float v96; // s10
+  const MethodInfo *v57; // x1
+  long double v58; // q0
+  CommonEffectComponent_o *v59; // x8
+  struct CommonEffectComponent_o *v60; // x24
+  System_Action_o *v61; // x25
+  int32_t v62; // w2
+  int32_t v63; // w3
+  float v64; // s0
+  float v65; // s1
+  float v66; // s2
+  float v67; // s9
+  float v68; // s8
+  float v69; // s10
   Il2CppObject *Component_object; // x24
-  UnityEngine_Object_o *v98; // x24
-  __int64 v99; // x25
-  int32_t v100; // w2
-  int32_t v101; // w3
-  __int64 v102; // x8
-  __int64 v103; // x8
-  int32_t v104; // w26
-  DataManager_o *v105; // x23
-  Il2CppObject *v106; // x0
-  int32_t v107; // w2
-  int32_t v108; // w3
-  __int64 v109; // x8
-  EventMissionMaster_o *v110; // x23
-  EventMissionEntity_array *EventMissionList_39007844; // x0
-  int32_t v112; // w2
-  int32_t v113; // w3
-  System_Collections_Generic_List_EventDelegate__o *v114; // x23
-  EventDelegate_Callback_o *v115; // x24
-  int32_t v116; // w0
-  int v117; // t1
-  System_String_o *v118; // x0
-  MapGimmickComponent_o *v119; // x0
-  const MethodInfo *v120; // x4
-  UnityEngine_Object_o *v121; // x20
-  Il2CppObject *v122; // x20
-  Il2CppObject *v123; // x0
-  int32_t v124; // w2
-  int32_t v125; // w3
-  UnityEngine_GameObject_o *v126; // x20
-  UnityEngine_GameObject_o *v127; // x0
-  const MethodInfo *v128; // x2
-  UnityEngine_Color_o v129; // [xsp+0h] [xbp-90h] BYREF
+  UnityEngine_Object_o *v71; // x24
+  __int64 v72; // x25
+  int32_t v73; // w2
+  int32_t v74; // w3
+  __int64 v75; // x8
+  __int64 v76; // x8
+  int32_t v77; // w26
+  DataManager_o *v78; // x23
+  Il2CppObject *v79; // x0
+  int32_t v80; // w2
+  int32_t v81; // w3
+  __int64 v82; // x8
+  EventMissionMaster_o *v83; // x23
+  EventMissionEntity_array *EventMissionList_39188216; // x0
+  int32_t v85; // w2
+  int32_t v86; // w3
+  System_Collections_Generic_List_EventDelegate__o *v87; // x23
+  EventDelegate_Callback_o *v88; // x24
+  int32_t v89; // w0
+  int v90; // t1
+  System_String_o *v91; // x0
+  MapGimmickComponent_o *v92; // x0
+  const MethodInfo *v93; // x4
+  UnityEngine_Object_o *v94; // x20
+  Il2CppObject *v95; // x20
+  Il2CppObject *v96; // x0
+  int32_t v97; // w2
+  int32_t v98; // w3
+  UnityEngine_GameObject_o *v99; // x20
+  UnityEngine_GameObject_o *v100; // x0
+  const MethodInfo *v101; // x2
+  UnityEngine_Color_o v102; // [xsp+0h] [xbp-90h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o v131; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A2ADB6 & 1) == 0 )
+  if ( (byte_4A57FC1 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, mg_inf);
-    sub_1B761C0(&AtlasManager_TypeInfo, v15);
-    sub_1B761C0(&EventDelegate_Callback_TypeInfo, v16);
-    sub_1B761C0(&Method_DataManager_GetMasterData_EventDetailMaster___, v17);
-    sub_1B761C0(&Method_DataManager_GetMasterData_EventMissionMaster___, v18);
-    sub_1B761C0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v19);
-    sub_1B761C0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v20);
-    sub_1B761C0(&EventDelegate_TypeInfo, v21);
-    sub_1B761C0(&Method_UnityEngine_GameObject_AddComponent_BoxCollider___, v22);
-    sub_1B761C0(&Method_UnityEngine_GameObject_AddComponent_UIButton___, v23);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v24);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, v25);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_UIButton___, v26);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_CommonEffectComponent___, v27);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v28);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v29);
-    sub_1B761C0(&Method_SingletonTemplate_QuestTree__get_Instance__, v30);
-    sub_1B761C0(&TerminalSceneComponent_TypeInfo, v31);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass23_0__Setup_b__0__, v32);
-    sub_1B761C0(&MapGimmickComponent___c__DisplayClass23_0_TypeInfo, v33);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__, v34);
-    sub_1B761C0(&MapGimmickComponent___c__DisplayClass23_1_TypeInfo, v35);
-    sub_1B761C0(&StringLiteral_24680/*"white00"*/, v36);
-    sub_1B761C0(&StringLiteral_1225/*"000000"*/, v37);
-    sub_1B761C0(&StringLiteral_19815/*"gimmick_"*/, v38);
-    sub_1B761C0(&StringLiteral_8852/*"MapGimmickEffect_"*/, v39);
-    sub_1B761C0(&StringLiteral_1/*""*/, v40);
-    sub_1B761C0(&StringLiteral_8851/*"MapGimmickActionEffect_"*/, v41);
-    byte_4A2ADB6 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&EventDelegate_Callback_TypeInfo);
+    sub_1B885B0(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1B885B0(&Method_DataManager_GetMasterData_EventMissionMaster___);
+    sub_1B885B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1B885B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1B885B0(&EventDelegate_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
+    sub_1B885B0(&Method_UnityEngine_GameObject_AddComponent_UIButton___);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_UIButton___);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1B885B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass23_0__Setup_b__0__);
+    sub_1B885B0(&MapGimmickComponent___c__DisplayClass23_0_TypeInfo);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__);
+    sub_1B885B0(&MapGimmickComponent___c__DisplayClass23_1_TypeInfo);
+    sub_1B885B0(&StringLiteral_24693/*"white00"*/);
+    sub_1B885B0(&StringLiteral_1225/*"000000"*/);
+    sub_1B885B0(&StringLiteral_19821/*"gimmick_"*/);
+    sub_1B885B0(&StringLiteral_8855/*"MapGimmickEffect_"*/);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    sub_1B885B0(&StringLiteral_8854/*"MapGimmickActionEffect_"*/);
+    byte_4A57FC1 = 1;
   }
-  *(_QWORD *)&v129.fields.r = 0LL;
-  *(_QWORD *)&v129.fields.b = 0LL;
+  *(_QWORD *)&v102.fields.r = 0LL;
+  *(_QWORD *)&v102.fields.b = 0LL;
   entity = 0LL;
-  v42 = sub_1B7640C(MapGimmickComponent___c__DisplayClass23_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v42, 0LL);
-  if ( !v42 )
+  v15 = sub_1B887FC(MapGimmickComponent___c__DisplayClass23_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v15, 0LL);
+  if ( !v15 )
     goto LABEL_133;
-  *(_QWORD *)(v42 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v42 + 16), (int32_t)this, v45, v46);
-  *(_QWORD *)(v42 + 32) = touchCallback;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v42 + 32), (int32_t)touchCallback, v47, v48);
+  *(_QWORD *)(v15 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v15 + 16), (int32_t)this, v18, v19);
+  *(_QWORD *)(v15 + 32) = touchCallback;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v15 + 32), (int32_t)touchCallback, v20, v21);
   this->fields.mMapCtrl_MapGimmickInfo = mg_inf;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mMapCtrl_MapGimmickInfo, (int32_t)mg_inf, v49, v50);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mMapCtrl_MapGimmickInfo, (int32_t)mg_inf, v22, v23);
   *(_WORD *)&this->fields.isForceLoop = 0;
   if ( !mg_inf )
     goto LABEL_133;
-  Mine = MapControl_MapGimmickInfo__GetMine(mg_inf, v44);
-  *(_QWORD *)(v42 + 24) = Mine;
-  v52 = (__int64 *)(v42 + 24);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v42 + 24), (int32_t)Mine, v53, v54);
-  IsMonoColorRect = *(_QWORD *)(v42 + 24);
+  Mine = MapControl_MapGimmickInfo__GetMine(mg_inf, v17);
+  *(_QWORD *)(v15 + 24) = Mine;
+  v25 = (__int64 *)(v15 + 24);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v15 + 24), (int32_t)Mine, v26, v27);
+  IsMonoColorRect = *(_QWORD *)(v15 + 24);
   if ( !IsMonoColorRect )
     goto LABEL_133;
   IsMonoColorRect = MapGimmickEntity__IsMonoColorRect((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
   if ( (IsMonoColorRect & 1) != 0 )
   {
     mSprite = this->fields.mSprite;
-    v56 = (System_String_o *)StringLiteral_24680/*"white00"*/;
+    v29 = (System_String_o *)StringLiteral_24693/*"white00"*/;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetCommon(mSprite, 0LL);
   }
   else
   {
-    if ( !*v52 )
+    if ( !*v25 )
       goto LABEL_133;
-    v57 = System_Int32__ToString_62340340((unsigned int)*v52 + 24, (System_String_o *)StringLiteral_1225/*"000000"*/, 0LL);
-    v58 = System_String__Concat_61535060((System_String_o *)StringLiteral_19815/*"gimmick_"*/, v57, 0LL);
-    v59 = this->fields.mSprite;
-    v56 = v58;
-    IsMonoColorRect = (__int64)UIAtlas__GetUIAtlasBySpriteName(atlases, v58, 0LL);
-    if ( !v59 )
+    v30 = System_Int32__ToString_62512312((unsigned int)*v25 + 24, (System_String_o *)StringLiteral_1225/*"000000"*/, 0LL);
+    v31 = System_String__Concat_61707032((System_String_o *)StringLiteral_19821/*"gimmick_"*/, v30, 0LL);
+    v32 = this->fields.mSprite;
+    v29 = v31;
+    IsMonoColorRect = (__int64)UIAtlas__GetUIAtlasBySpriteName(atlases, v31, 0LL);
+    if ( !v32 )
       goto LABEL_133;
-    UISprite__set_atlas(v59, (UIAtlas_o *)IsMonoColorRect, 0LL);
+    UISprite__set_atlas(v32, (UIAtlas_o *)IsMonoColorRect, 0LL);
   }
-  v60 = (UnityEngine_Behaviour_o *)this->fields.mSprite;
-  if ( !v60 )
+  v33 = (UnityEngine_Behaviour_o *)this->fields.mSprite;
+  if ( !v33 )
     goto LABEL_133;
-  monitor = (UnityEngine_Object_o *)v60[19].monitor;
+  monitor = (UnityEngine_Object_o *)v33[19].monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v62 = UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL);
-  UnityEngine_Behaviour__set_enabled(v60, v62, 0LL);
-  IsMonoColorRect = *v52;
-  if ( !*v52 )
+  v35 = UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL);
+  UnityEngine_Behaviour__set_enabled(v33, v35, 0LL);
+  IsMonoColorRect = *v25;
+  if ( !*v25 )
     goto LABEL_133;
   IsMonoColorRect = (__int64)MapGimmickEntity__GetColorCodeFromScript((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
   if ( !this->fields.mSprite )
     goto LABEL_133;
-  v63 = (System_String_o *)IsMonoColorRect;
+  v36 = (System_String_o *)IsMonoColorRect;
   IsMonoColorRect = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.mSprite, 0LL);
   if ( (IsMonoColorRect & 1) != 0 )
   {
     IsMonoColorRect = (__int64)this->fields.mSprite;
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    UISprite__set_spriteName((UISprite_o *)IsMonoColorRect, v56, 0LL);
-    IsMonoColorRect = *v52;
-    if ( !*v52 )
+    UISprite__set_spriteName((UISprite_o *)IsMonoColorRect, v29, 0LL);
+    IsMonoColorRect = *v25;
+    if ( !*v25 )
       goto LABEL_133;
     IsMonoColorRect = MapGimmickEntity__IsMonoColorRect((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
-    v64 = this->fields.mSprite;
+    v37 = this->fields.mSprite;
     if ( (IsMonoColorRect & 1) != 0 )
     {
       if ( !mapCamera )
         goto LABEL_133;
       mMapBg = mapCamera->fields.mMapBg;
-      if ( !mMapBg || !v64 )
+      if ( !mMapBg || !v37 )
         goto LABEL_133;
       UIWidget__SetDimensions((UIWidget_o *)this->fields.mSprite, mMapBg->fields.mWidth, mMapBg->fields.mHeight, 0LL);
     }
     else
     {
-      if ( !v64 )
+      if ( !v37 )
         goto LABEL_133;
-      IsMonoColorRect = ((__int64 (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v64->klass->vtable._33_MakePixelPerfect.method)(
+      IsMonoColorRect = ((__int64 (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v37->klass->vtable._33_MakePixelPerfect.method)(
                           this->fields.mSprite,
-                          v64->klass->vtable._34_get_minWidth.methodPtr);
+                          v37->klass->vtable._34_get_minWidth.methodPtr);
     }
-    if ( !*v52 )
+    if ( !*v25 )
       goto LABEL_133;
     IsMonoColorRect = (__int64)this->fields.mSprite;
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    UIWidget__set_depth((UIWidget_o *)IsMonoColorRect, *(_DWORD *)(*v52 + 36) + this->fields.mDepthBase, 0LL);
-    if ( !*v52 )
+    UIWidget__set_depth((UIWidget_o *)IsMonoColorRect, *(_DWORD *)(*v25 + 36) + this->fields.mDepthBase, 0LL);
+    if ( !*v25 )
       goto LABEL_133;
     IsMonoColorRect = (__int64)this->fields.mSprite;
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    v82 = this->fields.mScaleBase * (float)((float)*(int *)(*v52 + 80) / 1000.0);
+    v55 = this->fields.mScaleBase * (float)((float)*(int *)(*v25 + 80) / 1000.0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0LL);
-    GameObjectExtensions__SetLocalScale_33554168(gameObject, v82, v84);
-    if ( !System_String__IsNullOrEmpty(v63, 0LL) )
+    GameObjectExtensions__SetLocalScale_33726240(gameObject, v55, v57);
+    if ( !System_String__IsNullOrEmpty(v36, 0LL) )
     {
-      UnityEngine_ColorUtility__TryParseHtmlString(v63, &v129, 0LL);
+      UnityEngine_ColorUtility__TryParseHtmlString(v36, &v102, 0LL);
       IsMonoColorRect = (__int64)this->fields.mSprite;
       if ( !IsMonoColorRect )
         goto LABEL_133;
-      UIWidget__set_color((UIWidget_o *)IsMonoColorRect, v129, 0LL);
+      UIWidget__set_color((UIWidget_o *)IsMonoColorRect, v102, 0LL);
     }
     IsMonoColorRect = (__int64)this->fields.mSprite;
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    LODWORD(v85) = 1.0;
+    LODWORD(v58) = 1.0;
     if ( !mg_inf->fields.dispType )
-      *(float *)&v85 = 0.0;
+      *(float *)&v58 = 0.0;
     (*(void (__fastcall **)(__int64, _QWORD, long double))(*(_QWORD *)IsMonoColorRect + 440LL))(
       IsMonoColorRect,
       *(_QWORD *)(*(_QWORD *)IsMonoColorRect + 448LL),
-      v85);
+      v58);
   }
   else
   {
-    if ( !*v52 )
+    if ( !*v25 )
       goto LABEL_133;
-    v66 = System_Int32__ToString((unsigned int)*v52 + 24, 0LL);
-    v67 = (MapGimmickComponent_o *)System_String__Concat_61535060((System_String_o *)StringLiteral_8852/*"MapGimmickEffect_"*/, v66, 0LL);
-    EffectPrefab = MapGimmickComponent__GetEffectPrefab(v67, (System_String_o *)v67, assetData, multiAssetData, v68);
+    v39 = System_Int32__ToString((unsigned int)*v25 + 24, 0LL);
+    v40 = (MapGimmickComponent_o *)System_String__Concat_61707032((System_String_o *)StringLiteral_8855/*"MapGimmickEffect_"*/, v39, 0LL);
+    EffectPrefab = MapGimmickComponent__GetEffectPrefab(v40, (System_String_o *)v40, assetData, multiAssetData, v41);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)EffectPrefab, 0LL, 0LL) )
     {
       MapGimmickRandomEffectElementComponent = (UnityEngine_Object_o *)MapGimmickComponent__GetMapGimmickRandomEffectElementComponent(
                                                                          EffectPrefab,
-                                                                         v44);
+                                                                         v17);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       IsMonoColorRect = UnityEngine_Object__op_Inequality(MapGimmickRandomEffectElementComponent, 0LL, 0LL);
@@ -1318,25 +1253,25 @@ void __fastcall MapGimmickComponent__Setup(
                          (UnityEngine_Component_o *)MapGimmickRandomEffectElementComponent,
                          0LL);
       }
-      CommonEffectComponent = MapGimmickComponent__GetCommonEffectComponent(this, EffectPrefab, mapCamera, v71);
+      CommonEffectComponent = MapGimmickComponent__GetCommonEffectComponent(this, EffectPrefab, mapCamera, v44);
       this->fields.commonEffectComponent = CommonEffectComponent;
       p_commonEffectComponent = &this->fields.commonEffectComponent;
-      sub_1B76164(
+      sub_1B88554(
         (ServantStatusBattleListViewItem_o *)&this->fields.commonEffectComponent,
         (int32_t)CommonEffectComponent,
-        v74,
-        v75);
-      v76 = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
+        v47,
+        v48);
+      v49 = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v76, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(v49, 0LL, 0LL) )
       {
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4A2915D )
+        if ( !byte_4A5629D )
         {
-          sub_1B761C0(&TerminalSceneComponent_TypeInfo, v44);
-          byte_4A2915D = 1;
+          sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+          byte_4A5629D = 1;
         }
         IsMonoColorRect = (__int64)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1344,46 +1279,46 @@ void __fastcall MapGimmickComponent__Setup(
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
           IsMonoColorRect = (__int64)TerminalSceneComponent_TypeInfo;
         }
-        v77 = **(_QWORD **)(IsMonoColorRect + 184);
-        if ( !v77 )
+        v50 = **(_QWORD **)(IsMonoColorRect + 184);
+        if ( !v50 )
           goto LABEL_133;
-        v78 = *(_QWORD *)(v77 + 264);
-        if ( !v78 )
+        v51 = *(_QWORD *)(v50 + 264);
+        if ( !v51 )
           goto LABEL_133;
-        IsMonoColorRect = *(_QWORD *)(v78 + 336);
+        IsMonoColorRect = *(_QWORD *)(v51 + 336);
         if ( !IsMonoColorRect )
           goto LABEL_133;
-        IsMonoColorRect = (__int64)MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)IsMonoColorRect, v44);
+        IsMonoColorRect = (__int64)MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)IsMonoColorRect, v17);
         if ( !IsMonoColorRect )
           goto LABEL_133;
-        v79 = *(_DWORD *)(IsMonoColorRect + 96);
-        IsMonoColorRect = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        v52 = *(_DWORD *)(IsMonoColorRect + 96);
+        IsMonoColorRect = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !IsMonoColorRect )
           goto LABEL_133;
         IsMonoColorRect = (__int64)DataManager__GetMasterData_object_(
                                      (DataManager_o *)IsMonoColorRect,
-                                     (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventDetailMaster___);
         if ( !IsMonoColorRect )
           goto LABEL_133;
         DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)IsMonoColorRect,
           &entity,
-          v79,
-          (const MethodInfo_30FF7D4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+          v52,
+          (const MethodInfo_311D988 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
         if ( entity && EventDetailEntity__IsEventBoardGame((EventDetailEntity_o *)entity, 0LL) )
         {
           IsMonoColorRect = (__int64)*p_commonEffectComponent;
           if ( !*p_commonEffectComponent )
             goto LABEL_133;
-          v80 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0LL);
-          IsMonoColorRect = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_QuestTree__get_Instance__);
+          v53 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0LL);
+          IsMonoColorRect = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_QuestTree__get_Instance__);
           if ( !IsMonoColorRect )
             goto LABEL_133;
-          IsMonoColorRect = QuestTree__CheckMapGimmickCond_33946152((QuestTree_o *)IsMonoColorRect, mg_inf, 0LL);
-          if ( !v80 )
+          IsMonoColorRect = QuestTree__CheckMapGimmickCond_34118192((QuestTree_o *)IsMonoColorRect, mg_inf, 0LL);
+          if ( !v53 )
             goto LABEL_133;
-          v81 = IsMonoColorRect & 1;
-          IsMonoColorRect = (__int64)v80;
+          v54 = IsMonoColorRect & 1;
+          IsMonoColorRect = (__int64)v53;
         }
         else
         {
@@ -1395,57 +1330,57 @@ void __fastcall MapGimmickComponent__Setup(
                                        0LL);
           if ( !IsMonoColorRect )
             goto LABEL_133;
-          v81 = mg_inf->fields.dispType != 0;
+          v54 = mg_inf->fields.dispType != 0;
         }
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsMonoColorRect, v81, 0LL);
-        IsMonoColorRect = *v52;
-        if ( !*v52 )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsMonoColorRect, v54, 0LL);
+        IsMonoColorRect = *v25;
+        if ( !*v25 )
           goto LABEL_133;
         IsMonoColorRect = MapGimmickEntity__GetUseAnimFromScript((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
-        v86 = *p_commonEffectComponent;
+        v59 = *p_commonEffectComponent;
         if ( (int)IsMonoColorRect < 1 )
         {
-          if ( !v86 )
+          if ( !v59 )
             goto LABEL_133;
         }
         else
         {
-          if ( !v86 )
+          if ( !v59 )
             goto LABEL_133;
-          v86->fields.useAnimNum = IsMonoColorRect;
+          v59->fields.useAnimNum = IsMonoColorRect;
         }
-        CommonEffectComponent__ResetPrewarmParticleList(v86, 0LL);
-        v87 = *p_commonEffectComponent;
-        v88 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+        CommonEffectComponent__ResetPrewarmParticleList(v59, 0LL);
+        v60 = *p_commonEffectComponent;
+        v61 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
         System_Action___ctor(
-          v88,
-          (Il2CppObject *)v42,
+          v61,
+          (Il2CppObject *)v15,
           Method_MapGimmickComponent___c__DisplayClass23_0__Setup_b__0__,
           0LL);
-        if ( !v87 )
+        if ( !v60 )
           goto LABEL_133;
-        v87->fields.touchCallback = v88;
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&v87->fields.touchCallback, (int32_t)v88, v89, v90);
+        v60->fields.touchCallback = v61;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&v60->fields.touchCallback, (int32_t)v61, v62, v63);
       }
     }
   }
-  IsMonoColorRect = *v52;
-  if ( !*v52 )
+  IsMonoColorRect = *v25;
+  if ( !*v25 )
     goto LABEL_133;
-  *(UnityEngine_Vector3_o *)&v91 = MapGimmickEntity__GetTouchSize((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
-  if ( v91 <= 0.0 )
+  *(UnityEngine_Vector3_o *)&v64 = MapGimmickEntity__GetTouchSize((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
+  if ( v64 <= 0.0 )
     goto LABEL_117;
-  v94 = v92;
-  if ( v92 <= 0.0 )
+  v67 = v65;
+  if ( v65 <= 0.0 )
     goto LABEL_117;
-  v95 = v91;
-  v96 = v93;
+  v68 = v64;
+  v69 = v66;
   IsMonoColorRect = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !IsMonoColorRect )
     goto LABEL_133;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)IsMonoColorRect,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   IsMonoColorRect = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -1456,50 +1391,50 @@ void __fastcall MapGimmickComponent__Setup(
       goto LABEL_133;
     IsMonoColorRect = (__int64)UnityEngine_GameObject__AddComponent_object_(
                                  (UnityEngine_GameObject_o *)IsMonoColorRect,
-                                 (const MethodInfo_2EB18D0 *)Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
+                                 (const MethodInfo_2ECEDD0 *)Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
     Component_object = (Il2CppObject *)IsMonoColorRect;
   }
   if ( !Component_object )
     goto LABEL_133;
-  v131.fields.x = v95;
-  v131.fields.y = v94;
-  v131.fields.z = v96;
-  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v131, 0LL);
+  v104.fields.x = v68;
+  v104.fields.y = v67;
+  v104.fields.z = v69;
+  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v104, 0LL);
   IsMonoColorRect = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !IsMonoColorRect )
     goto LABEL_133;
-  v98 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+  v71 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)IsMonoColorRect,
-                                  (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
+                                  (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(v98, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(v71, 0LL, 0LL) )
   {
     IsMonoColorRect = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    v98 = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
+    v71 = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
                                     (UnityEngine_GameObject_o *)IsMonoColorRect,
-                                    (const MethodInfo_2EB18D0 *)Method_UnityEngine_GameObject_AddComponent_UIButton___);
+                                    (const MethodInfo_2ECEDD0 *)Method_UnityEngine_GameObject_AddComponent_UIButton___);
   }
-  IsMonoColorRect = *v52;
-  if ( !*v52 )
+  IsMonoColorRect = *v25;
+  if ( !*v25 )
 LABEL_133:
-    sub_1B7641C(IsMonoColorRect, v44);
+    sub_1B8880C(IsMonoColorRect, v17);
   if ( MapGimmickEntity__IsEventMissionScript((MapGimmickEntity_o *)IsMonoColorRect, 0LL) )
   {
-    v99 = sub_1B7640C(MapGimmickComponent___c__DisplayClass23_1_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v99, 0LL);
-    if ( !v99 )
+    v72 = sub_1B887FC(MapGimmickComponent___c__DisplayClass23_1_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v72, 0LL);
+    if ( !v72 )
       goto LABEL_133;
-    *(_QWORD *)(v99 + 32) = v42;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v99 + 32), v42, v100, v101);
+    *(_QWORD *)(v72 + 32) = v15;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v72 + 32), v15, v73, v74);
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4A2915D )
+    if ( !byte_4A5629D )
     {
-      sub_1B761C0(&TerminalSceneComponent_TypeInfo, v44);
-      byte_4A2915D = 1;
+      sub_1B885B0(&TerminalSceneComponent_TypeInfo);
+      byte_4A5629D = 1;
     }
     IsMonoColorRect = (__int64)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1507,109 +1442,109 @@ LABEL_133:
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
       IsMonoColorRect = (__int64)TerminalSceneComponent_TypeInfo;
     }
-    v102 = **(_QWORD **)(IsMonoColorRect + 184);
-    if ( !v102 )
+    v75 = **(_QWORD **)(IsMonoColorRect + 184);
+    if ( !v75 )
       goto LABEL_133;
-    v103 = *(_QWORD *)(v102 + 264);
-    if ( !v103 )
+    v76 = *(_QWORD *)(v75 + 264);
+    if ( !v76 )
       goto LABEL_133;
-    IsMonoColorRect = *(_QWORD *)(v103 + 336);
+    IsMonoColorRect = *(_QWORD *)(v76 + 336);
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    IsMonoColorRect = (__int64)MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)IsMonoColorRect, v44);
+    IsMonoColorRect = (__int64)MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)IsMonoColorRect, v17);
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    v104 = *(_DWORD *)(IsMonoColorRect + 96);
-    IsMonoColorRect = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v77 = *(_DWORD *)(IsMonoColorRect + 96);
+    IsMonoColorRect = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    v105 = (DataManager_o *)IsMonoColorRect;
+    v78 = (DataManager_o *)IsMonoColorRect;
     IsMonoColorRect = (__int64)DataManager__GetMasterData_object_(
                                  (DataManager_o *)IsMonoColorRect,
-                                 (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                 (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !IsMonoColorRect )
       goto LABEL_133;
-    v106 = DataMasterBase_object__object__int___GetEntity(
-             (DataMasterBase_TMaster__TEntity__PKType__o *)IsMonoColorRect,
-             v104,
-             (const MethodInfo_30FF780 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    *(_QWORD *)(v99 + 16) = v106;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v99 + 16), (int32_t)v106, v107, v108);
+    v79 = DataMasterBase_object__object__int___GetEntity(
+            (DataMasterBase_TMaster__TEntity__PKType__o *)IsMonoColorRect,
+            v77,
+            (const MethodInfo_311D934 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    *(_QWORD *)(v72 + 16) = v79;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v72 + 16), (int32_t)v79, v80, v81);
     IsMonoColorRect = (__int64)DataManager__GetMasterData_object_(
-                                 v105,
-                                 (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventMissionMaster___);
-    v109 = *(_QWORD *)(v99 + 32);
-    if ( !v109 )
+                                 v78,
+                                 (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+    v82 = *(_QWORD *)(v72 + 32);
+    if ( !v82 )
       goto LABEL_133;
-    v110 = (EventMissionMaster_o *)IsMonoColorRect;
-    IsMonoColorRect = *(_QWORD *)(v109 + 24);
+    v83 = (EventMissionMaster_o *)IsMonoColorRect;
+    IsMonoColorRect = *(_QWORD *)(v82 + 24);
     if ( !IsMonoColorRect )
       goto LABEL_133;
     IsMonoColorRect = (__int64)MapGimmickEntity__GetEventMissionIdList((MapGimmickEntity_o *)IsMonoColorRect, 0LL);
-    if ( !v110 )
+    if ( !v83 )
       goto LABEL_133;
-    EventMissionList_39007844 = EventMissionMaster__getEventMissionList_39007844(
-                                  v110,
+    EventMissionList_39188216 = EventMissionMaster__getEventMissionList_39188216(
+                                  v83,
                                   (System_Collections_Generic_List_int__o *)IsMonoColorRect,
                                   0LL);
-    *(_QWORD *)(v99 + 24) = EventMissionList_39007844;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v99 + 24), (int32_t)EventMissionList_39007844, v112, v113);
-    if ( !v98 )
+    *(_QWORD *)(v72 + 24) = EventMissionList_39188216;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v72 + 24), (int32_t)EventMissionList_39188216, v85, v86);
+    if ( !v71 )
       goto LABEL_133;
-    v114 = (System_Collections_Generic_List_EventDelegate__o *)v98[8].monitor;
-    v115 = (EventDelegate_Callback_o *)sub_1B7640C(EventDelegate_Callback_TypeInfo);
+    v87 = (System_Collections_Generic_List_EventDelegate__o *)v71[8].monitor;
+    v88 = (EventDelegate_Callback_o *)sub_1B887FC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
-      v115,
-      (Il2CppObject *)v99,
+      v88,
+      (Il2CppObject *)v72,
       (intptr_t)Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__,
       0LL);
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Add(v114, v115, 0LL);
+    EventDelegate__Add(v87, v88, 0LL);
   }
 LABEL_117:
-  IsMonoColorRect = *v52;
-  if ( !*v52 )
+  IsMonoColorRect = *v25;
+  if ( !*v25 )
     goto LABEL_133;
-  v117 = *(_DWORD *)(IsMonoColorRect + 100);
-  v116 = IsMonoColorRect + 100;
-  if ( v117 >= 1 )
+  v90 = *(_DWORD *)(IsMonoColorRect + 100);
+  v89 = IsMonoColorRect + 100;
+  if ( v90 >= 1 )
   {
-    v118 = System_Int32__ToString(v116, 0LL);
-    v119 = (MapGimmickComponent_o *)System_String__Concat_61535060((System_String_o *)StringLiteral_8851/*"MapGimmickActionEffect_"*/, v118, 0LL);
-    v121 = (UnityEngine_Object_o *)MapGimmickComponent__GetEffectPrefab(
-                                     v119,
-                                     (System_String_o *)v119,
-                                     assetData,
-                                     multiAssetData,
-                                     v120);
+    v91 = System_Int32__ToString(v89, 0LL);
+    v92 = (MapGimmickComponent_o *)System_String__Concat_61707032((System_String_o *)StringLiteral_8854/*"MapGimmickActionEffect_"*/, v91, 0LL);
+    v94 = (UnityEngine_Object_o *)MapGimmickComponent__GetEffectPrefab(
+                                    v92,
+                                    (System_String_o *)v92,
+                                    assetData,
+                                    multiAssetData,
+                                    v93);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    IsMonoColorRect = UnityEngine_Object__op_Inequality(v121, 0LL, 0LL);
+    IsMonoColorRect = UnityEngine_Object__op_Inequality(v94, 0LL, 0LL);
     if ( (IsMonoColorRect & 1) != 0 )
     {
-      if ( !v121 )
+      if ( !v94 )
         goto LABEL_133;
-      v122 = UnityEngine_GameObject__GetComponent_object_(
-               (UnityEngine_GameObject_o *)v121,
-               (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+      v95 = UnityEngine_GameObject__GetComponent_object_(
+              (UnityEngine_GameObject_o *)v94,
+              (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v122, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v95, 0LL, 0LL) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v123 = UnityEngine_Object__Instantiate_object_(
-                 v122,
-                 (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
-        this->fields.actionEffect = (struct CommonEffectComponent_o *)v123;
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.actionEffect, (int32_t)v123, v124, v125);
+        v96 = UnityEngine_Object__Instantiate_object_(
+                v95,
+                (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
+        this->fields.actionEffect = (struct CommonEffectComponent_o *)v96;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.actionEffect, (int32_t)v96, v97, v98);
         IsMonoColorRect = (__int64)this->fields.actionEffect;
         if ( IsMonoColorRect )
         {
-          v126 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0LL);
-          v127 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-          GameObjectExtensions__SafeSetParent_33557996(v126, v127, v128);
+          v99 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0LL);
+          v100 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+          GameObjectExtensions__SafeSetParent_33730068(v99, v100, v101);
           IsMonoColorRect = (__int64)this->fields.actionEffect;
           if ( IsMonoColorRect )
           {
@@ -1636,10 +1571,10 @@ void __fastcall MapGimmickComponent__StartActionEffect(MapGimmickComponent_o *th
   __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A2ADBE & 1) == 0 )
+  if ( (byte_4A57FC9 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2ADBE = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FC9 = 1;
   }
   actionEffect = (UnityEngine_Object_o *)this->fields.actionEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1652,7 +1587,7 @@ void __fastcall MapGimmickComponent__StartActionEffect(MapGimmickComponent_o *th
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL),
           (gameObject = (UnityEngine_Component_o *)this->fields.actionEffect) == 0LL) )
     {
-      sub_1B7641C(gameObject, v4);
+      sub_1B8880C(gameObject, v4);
     }
     CommonEffectComponent__ForceStart((CommonEffectComponent_o *)gameObject, 0LL);
   }
@@ -1676,10 +1611,10 @@ void __fastcall MapGimmickComponent__StateHideAnimEnd(MapGimmickComponent_o *thi
   UnityEngine_Component_o *gameObject; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4A2ADC1 & 1) == 0 )
+  if ( (byte_4A57FCC & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2ADC1 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A57FCC = 1;
   }
   ActionExtensions__Call(this->fields.mStateEndAct, 0LL);
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
@@ -1691,7 +1626,7 @@ void __fastcall MapGimmickComponent__StateHideAnimEnd(MapGimmickComponent_o *thi
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_1B7641C(gameObject, v4);
+      sub_1B8880C(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
     MapGimmickComponent__SetTouchEnable(this, 0, v7);
@@ -1704,14 +1639,14 @@ void __fastcall MapGimmickComponent__Update(MapGimmickComponent_o *this, const M
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4A2ADB4 & 1) == 0 )
+  if ( (byte_4A57FBF & 1) == 0 )
   {
-    sub_1B761C0(&Method_CStateManager_MapGimmickComponent__update__, method);
-    byte_4A2ADB4 = 1;
+    sub_1B885B0(&Method_CStateManager_MapGimmickComponent__update__);
+    byte_4A57FBF = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
-    CStateManager_object___update(mFSM, (const MethodInfo_308D38C *)Method_CStateManager_MapGimmickComponent__update__);
+    CStateManager_object___update(mFSM, (const MethodInfo_30AAE44 *)Method_CStateManager_MapGimmickComponent__update__);
 }
 
 
@@ -1723,7 +1658,7 @@ void __fastcall MapGimmickComponent___SetDisplayByRaidProgress_b__45_0(
 
   mMapCtrl_MapGimmickInfo = this->fields.mMapCtrl_MapGimmickInfo;
   if ( !mMapCtrl_MapGimmickInfo )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   mMapCtrl_MapGimmickInfo->fields.dispType = 1;
 }
 
@@ -1736,7 +1671,7 @@ void __fastcall MapGimmickComponent___SetDisplayByRaidProgress_b__45_1(
 
   mMapCtrl_MapGimmickInfo = this->fields.mMapCtrl_MapGimmickInfo;
   if ( !mMapCtrl_MapGimmickInfo )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   mMapCtrl_MapGimmickInfo->fields.dispType = 0;
 }
 
@@ -1761,7 +1696,7 @@ void __fastcall MapGimmickComponent_StateDispAnim__begin(
   const MethodInfo *v8; // x3
 
   if ( !that || (mMapCtrl_MapGimmickInfo = that->fields.mMapCtrl_MapGimmickInfo) == 0LL )
-    sub_1B7641C(this, that);
+    sub_1B8880C(this, that);
   dispType = mMapCtrl_MapGimmickInfo->fields.dispType;
   if ( dispType == 1 )
   {
@@ -1771,7 +1706,7 @@ void __fastcall MapGimmickComponent_StateDispAnim__begin(
   else if ( !dispType )
   {
     AnimTime = MapGimmickComponent__GetAnimTime(that, (const MethodInfo *)that);
-    MapGimmickComponent__SetDispAnim_33617672(that, 1, AnimTime, 1, v7);
+    MapGimmickComponent__SetDispAnim_33789744(that, 1, AnimTime, 1, v7);
   }
 }
 
@@ -1813,12 +1748,12 @@ void __fastcall MapGimmickComponent_StateHideAnim__begin(
   const MethodInfo *v7; // x3
 
   if ( !that || (mMapCtrl_MapGimmickInfo = that->fields.mMapCtrl_MapGimmickInfo) == 0LL )
-    sub_1B7641C(this, that);
+    sub_1B8880C(this, that);
   dispType = mMapCtrl_MapGimmickInfo->fields.dispType;
   if ( dispType == 1 )
   {
     AnimTime = MapGimmickComponent__GetAnimTime(that, (const MethodInfo *)that);
-    MapGimmickComponent__SetDispAnim_33617672(that, 0, AnimTime, 1, v7);
+    MapGimmickComponent__SetDispAnim_33789744(that, 0, AnimTime, 1, v7);
   }
   else if ( !dispType )
   {
@@ -1847,12 +1782,10 @@ void __fastcall MapGimmickComponent_StateHideAnim__update(
 
 void __fastcall MapGimmickComponent_StateMapMain___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4A2ADC7 & 1) == 0 )
+  if ( (byte_4A57FD2 & 1) == 0 )
   {
-    sub_1B761C0(&MapGimmickComponent_StateMapMain_TypeInfo, v1);
-    byte_4A2ADC7 = 1;
+    sub_1B885B0(&MapGimmickComponent_StateMapMain_TypeInfo);
+    byte_4A57FD2 = 1;
   }
   MapGimmickComponent_StateMapMain_TypeInfo->static_fields->CHECK_DISP_ITVL_SEC = 60;
 }
@@ -1870,30 +1803,27 @@ void __fastcall MapGimmickComponent_StateMapMain__CheckDispTime(
         MapGimmickComponent_StateMapMain_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   int64_t Instance; // x0
-  const MethodInfo *v7; // x1
+  const MethodInfo *v4; // x1
   struct MapGimmickComponent_o *mThat; // x8
-  int64_t v9; // x20
+  int64_t v6; // x20
   int64_t mOldDispTime; // x21
+  struct MapGimmickComponent_o *v8; // x8
+  const MethodInfo *v9; // x3
+  struct MapGimmickComponent_o *v10; // x8
   struct MapGimmickComponent_o *v11; // x8
-  const MethodInfo *v12; // x3
-  struct MapGimmickComponent_o *v13; // x8
-  struct MapGimmickComponent_o *v14; // x8
-  int32_t v15; // w1
+  int32_t v12; // w1
   struct MapControl_MapGimmickInfo_o *mMapCtrl_MapGimmickInfo; // x8
 
-  if ( (byte_4A2ADC6 & 1) == 0 )
+  if ( (byte_4A57FD1 & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v3);
-    sub_1B761C0(&Method_SingletonTemplate_QuestTree__get_Instance__, v4);
-    sub_1B761C0(&MapGimmickComponent_StateMapMain_TypeInfo, v5);
-    byte_4A2ADC6 = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    sub_1B885B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1B885B0(&MapGimmickComponent_StateMapMain_TypeInfo);
+    byte_4A57FD1 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   if ( !QuestAfterAction__IsActiveCommand((QuestAfterAction_o *)Instance, 0LL) )
@@ -1904,7 +1834,7 @@ void __fastcall MapGimmickComponent_StateMapMain__CheckDispTime(
     mThat = this->fields.mThat;
     if ( !mThat )
       goto LABEL_31;
-    v9 = Instance;
+    v6 = Instance;
     mOldDispTime = mThat->fields.mOldDispTime;
     Instance = (int64_t)MapGimmickComponent_StateMapMain_TypeInfo;
     if ( !MapGimmickComponent_StateMapMain_TypeInfo->_2.cctor_finished )
@@ -1912,16 +1842,16 @@ void __fastcall MapGimmickComponent_StateMapMain__CheckDispTime(
       j_il2cpp_runtime_class_init_0(MapGimmickComponent_StateMapMain_TypeInfo);
       Instance = (int64_t)MapGimmickComponent_StateMapMain_TypeInfo;
     }
-    if ( v9 - mOldDispTime >= **(int **)(Instance + 184) )
+    if ( v6 - mOldDispTime >= **(int **)(Instance + 184) )
     {
-      v11 = this->fields.mThat;
-      if ( !v11 )
+      v8 = this->fields.mThat;
+      if ( !v8 )
         goto LABEL_31;
-      Instance = (int64_t)v11->fields.mMapCtrl_MapGimmickInfo;
-      v11->fields.mOldDispTime = v9;
+      Instance = (int64_t)v8->fields.mMapCtrl_MapGimmickInfo;
+      v8->fields.mOldDispTime = v6;
       if ( !Instance )
         goto LABEL_31;
-      Instance = (int64_t)MapControl_MapGimmickInfo__GetMine((MapControl_MapGimmickInfo_o *)Instance, v7);
+      Instance = (int64_t)MapControl_MapGimmickInfo__GetMine((MapControl_MapGimmickInfo_o *)Instance, v4);
       if ( !Instance )
         goto LABEL_31;
       Instance = MapGimmickEntity__IsCheckRaidProgress((MapGimmickEntity_o *)Instance, 0LL);
@@ -1929,47 +1859,47 @@ void __fastcall MapGimmickComponent_StateMapMain__CheckDispTime(
         goto LABEL_17;
       if ( !this->fields.mThat )
         goto LABEL_31;
-      Instance = MapGimmickComponent__IsEventOverEnd((MapGimmickComponent_o *)Instance, v7);
+      Instance = MapGimmickComponent__IsEventOverEnd((MapGimmickComponent_o *)Instance, v4);
       if ( (Instance & 1) == 0 )
       {
 LABEL_17:
-        v13 = this->fields.mThat;
-        if ( !v13 )
+        v10 = this->fields.mThat;
+        if ( !v10 )
           goto LABEL_31;
-        if ( !v13->fields.isForceNotActive )
+        if ( !v10->fields.isForceNotActive )
         {
-          Instance = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_371299C *)Method_SingletonTemplate_QuestTree__get_Instance__);
-          v14 = this->fields.mThat;
-          if ( !v14 || !Instance )
+          Instance = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+          v11 = this->fields.mThat;
+          if ( !v11 || !Instance )
             goto LABEL_31;
-          Instance = QuestTree__CheckMapGimmickCond_33946152(
+          Instance = QuestTree__CheckMapGimmickCond_34118192(
                        (QuestTree_o *)Instance,
-                       v14->fields.mMapCtrl_MapGimmickInfo,
+                       v11->fields.mMapCtrl_MapGimmickInfo,
                        0LL);
-          v13 = this->fields.mThat;
+          v10 = this->fields.mThat;
           if ( (Instance & 1) != 0 )
           {
-            if ( v13 )
+            if ( v10 )
             {
-              v15 = 3;
+              v12 = 3;
 LABEL_30:
-              MapGimmickComponent__SetState(v13, v15, 0LL, v12);
+              MapGimmickComponent__SetState(v10, v12, 0LL, v9);
               return;
             }
             goto LABEL_31;
           }
-          if ( !v13 )
+          if ( !v10 )
             goto LABEL_31;
         }
-        if ( !v13->fields.isForceLoop )
+        if ( !v10->fields.isForceLoop )
         {
-          v15 = 2;
+          v12 = 2;
           goto LABEL_30;
         }
-        mMapCtrl_MapGimmickInfo = v13->fields.mMapCtrl_MapGimmickInfo;
+        mMapCtrl_MapGimmickInfo = v10->fields.mMapCtrl_MapGimmickInfo;
         if ( !mMapCtrl_MapGimmickInfo )
 LABEL_31:
-          sub_1B7641C(Instance, v7);
+          sub_1B8880C(Instance, v4);
         mMapCtrl_MapGimmickInfo->fields.dispType = 0;
       }
     }
@@ -1985,7 +1915,7 @@ void __fastcall MapGimmickComponent_StateMapMain__begin(
   int32_t v3; // w3
 
   this->fields.mThat = that;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)that, (int32_t)method, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)that, (int32_t)method, v3);
 }
 
 
@@ -2056,7 +1986,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass23_0___Setup_b__0(
   const MethodInfo *v2; // x3
 
   if ( !this->fields.__4__this )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   MapGimmickComponent__OnGimmickTouched(
     (MapGimmickComponent_o *)this,
     this->fields.mg_ent,
@@ -2077,73 +2007,70 @@ void __fastcall MapGimmickComponent___c__DisplayClass23_1___Setup_b__1(
         MapGimmickComponent___c__DisplayClass23_1_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   MapGimmickEntity_o *Instance; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
   struct MapGimmickComponent___c__DisplayClass23_0_o *CS___8__locals1; // x8
-  CommonUI_o *v11; // x20
-  struct MapGimmickComponent___c__DisplayClass23_0_o *v12; // x8
-  System_String_o *v13; // x21
+  CommonUI_o *v8; // x20
+  struct MapGimmickComponent___c__DisplayClass23_0_o *v9; // x8
+  System_String_o *v10; // x21
   System_Action_o *_9__2; // x25
-  System_String_o *v15; // x24
+  System_String_o *v12; // x24
   EventDetailEntity_o *eventDetailEnt; // x22
   EventMissionEntity_array *eventMissionEntList; // x23
-  int32_t v18; // w2
-  int32_t v19; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
 
-  if ( (byte_4A2ADC8 & 1) == 0 )
+  if ( (byte_4A57FD3 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__, v4);
-    sub_1B761C0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__2__, v5);
-    byte_4A2ADC8 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__);
+    sub_1B885B0(&Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__2__);
+    byte_4A57FD3 = 1;
   }
-  v6 = Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__;
+  v3 = Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__;
   if ( (*((_BYTE *)Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1B761D8(Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1B761A4(v6, v6[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
-  Instance = (MapGimmickEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v3 = (_QWORD *)sub_1B885C8(Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__1__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+  Instance = (MapGimmickEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
     goto LABEL_13;
-  v11 = (CommonUI_o *)Instance;
+  v8 = (CommonUI_o *)Instance;
   Instance = CS___8__locals1->fields.mg_ent;
   if ( !Instance )
     goto LABEL_13;
   Instance = (MapGimmickEntity_o *)MapGimmickEntity__GetTitleFromScript(Instance, 0LL);
-  v12 = this->fields.CS___8__locals1;
-  if ( !v12 )
+  v9 = this->fields.CS___8__locals1;
+  if ( !v9 )
     goto LABEL_13;
-  v13 = (System_String_o *)Instance;
-  Instance = v12->fields.mg_ent;
+  v10 = (System_String_o *)Instance;
+  Instance = v9->fields.mg_ent;
   if ( !Instance )
     goto LABEL_13;
   Instance = (MapGimmickEntity_o *)MapGimmickEntity__GetSubTitleFromScript(Instance, 0LL);
   _9__2 = this->fields.__9__2;
-  v15 = (System_String_o *)Instance;
+  v12 = (System_String_o *)Instance;
   eventDetailEnt = this->fields.eventDetailEnt;
   eventMissionEntList = this->fields.eventMissionEntList;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_MapGimmickComponent___c__DisplayClass23_1__Setup_b__2__,
       0LL);
     this->fields.__9__2 = _9__2;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v18, v19);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.__9__2, (int32_t)_9__2, v15, v16);
   }
-  if ( !v11 )
+  if ( !v8 )
 LABEL_13:
-    sub_1B7641C(Instance, v9);
-  CommonUI__OpenEventMissionListDialog(v11, v13, v15, eventDetailEnt, eventMissionEntList, _9__2, 0LL);
+    sub_1B8880C(Instance, v6);
+  CommonUI__OpenEventMissionListDialog(v8, v10, v12, eventDetailEnt, eventMissionEntList, _9__2, 0LL);
 }
 
 
@@ -2152,41 +2079,37 @@ void __fastcall MapGimmickComponent___c__DisplayClass23_1___Setup_b__2(
         const MethodInfo *method)
 {
   MapGimmickComponent___c__DisplayClass23_1_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct EventRewardSaveData_StaticFields *static_fields; // x8
   struct EventMissionEntity_array *eventMissionEntList; // x9
-  EventMissionEntity_o *v9; // x9
+  EventMissionEntity_o *v5; // x9
   int32_t id; // w21
   struct EventDetailEntity_o *eventDetailEnt; // x8
-  struct EventDetailEntity_o *v12; // x8
-  int v13; // w8
-  MapGimmickComponent___c__DisplayClass23_1_o *v14; // x21
-  unsigned int v15; // w23
-  MapGimmickComponent___c__DisplayClass23_1_c **v16; // x8
-  MapGimmickComponent___c__DisplayClass23_1_c *v17; // x22
+  struct EventDetailEntity_o *v8; // x8
+  int v9; // w8
+  MapGimmickComponent___c__DisplayClass23_1_o *v10; // x21
+  unsigned int v11; // w23
+  MapGimmickComponent___c__DisplayClass23_1_c **v12; // x8
+  MapGimmickComponent___c__DisplayClass23_1_c *v13; // x22
   int32_t name_high; // w21
-  struct EventDetailEntity_o *v19; // x8
-  struct EventDetailEntity_o *v20; // x8
+  struct EventDetailEntity_o *v15; // x8
+  struct EventDetailEntity_o *v16; // x8
   int32_t eventId; // w20
-  SceneJumpInfo_o *v22; // x19
+  SceneJumpInfo_o *v18; // x19
 
   v2 = this;
-  if ( (byte_4A2ADC9 & 1) == 0 )
+  if ( (byte_4A57FD4 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMasterData_EventRewardSceneMaster___, method);
-    sub_1B761C0(&SceneJumpInfo_TypeInfo, v3);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v4);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B761C0(&StringLiteral_1/*""*/, v6);
-    byte_4A2ADC9 = 1;
+    sub_1B885B0(&Method_DataManager_GetMasterData_EventRewardSceneMaster___);
+    sub_1B885B0(&SceneJumpInfo_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A57FD4 = 1;
   }
-  if ( !byte_4A2ADEB )
+  if ( !byte_4A57FF6 )
   {
-    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B761C0(&EventRewardSaveData_TypeInfo, method);
-    byte_4A2ADEB = 1;
+    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B885B0(&EventRewardSaveData_TypeInfo);
+    byte_4A57FF6 = 1;
   }
   static_fields = EventRewardSaveData_TypeInfo->static_fields;
   static_fields->_FilterId_k__BackingField = 0;
@@ -2195,15 +2118,15 @@ void __fastcall MapGimmickComponent___c__DisplayClass23_1___Setup_b__2(
     goto LABEL_30;
   if ( !eventMissionEntList->max_length )
 LABEL_31:
-    sub_1B76424(this, method);
-  v9 = eventMissionEntList->m_Items[0];
-  if ( !v9 )
+    sub_1B88814(this, method);
+  v5 = eventMissionEntList->m_Items[0];
+  if ( !v5 )
     goto LABEL_30;
-  id = v9->fields.id;
-  if ( !byte_4A2ADEC )
+  id = v5->fields.id;
+  if ( !byte_4A57FF7 )
   {
-    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B761C0(&EventRewardSaveData_TypeInfo, method);
-    byte_4A2ADEC = 1;
+    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B885B0(&EventRewardSaveData_TypeInfo);
+    byte_4A57FF7 = 1;
     static_fields = EventRewardSaveData_TypeInfo->static_fields;
   }
   static_fields->_MissionId_k__BackingField = id;
@@ -2211,72 +2134,72 @@ LABEL_31:
   if ( !eventDetailEnt )
     goto LABEL_30;
   EventRewardSaveData__SaveMissionData(eventDetailEnt->fields.eventId, 0LL);
-  this = (MapGimmickComponent___c__DisplayClass23_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (MapGimmickComponent___c__DisplayClass23_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_30;
   this = (MapGimmickComponent___c__DisplayClass23_1_o *)DataManager__GetMasterData_object_(
                                                           (DataManager_o *)this,
-                                                          (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_EventRewardSceneMaster___);
-  v12 = v2->fields.eventDetailEnt;
-  if ( !v12 )
+                                                          (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_EventRewardSceneMaster___);
+  v8 = v2->fields.eventDetailEnt;
+  if ( !v8 )
     goto LABEL_30;
   if ( !this )
     goto LABEL_30;
   this = (MapGimmickComponent___c__DisplayClass23_1_o *)EventRewardSceneMaster__GetEntityList(
                                                           (EventRewardSceneMaster_o *)this,
-                                                          v12->fields.eventId,
+                                                          v8->fields.eventId,
                                                           0LL);
   if ( !this )
     goto LABEL_30;
-  v13 = (int)this->fields.eventMissionEntList;
-  v14 = this;
-  if ( v13 < 1 )
+  v9 = (int)this->fields.eventMissionEntList;
+  v10 = this;
+  if ( v9 < 1 )
   {
 LABEL_21:
     name_high = 0;
   }
   else
   {
-    v15 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v15 >= v13 )
+      if ( v11 >= v9 )
         goto LABEL_31;
-      v16 = &v14->klass + (int)v15;
-      v17 = v16[4];
-      if ( !v17 )
+      v12 = &v10->klass + (int)v11;
+      v13 = v12[4];
+      if ( !v13 )
         goto LABEL_30;
       this = (MapGimmickComponent___c__DisplayClass23_1_o *)EventRewardSceneEntity__IsEventMission(
-                                                              (EventRewardSceneEntity_o *)v16[4],
+                                                              (EventRewardSceneEntity_o *)v12[4],
                                                               0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
         break;
-      v13 = (int)v14->fields.eventMissionEntList;
-      if ( (int)++v15 >= v13 )
+      v9 = (int)v10->fields.eventMissionEntList;
+      if ( (int)++v11 >= v9 )
         goto LABEL_21;
     }
-    name_high = HIDWORD(v17->_1.name);
+    name_high = HIDWORD(v13->_1.name);
   }
-  if ( !byte_4A2ADED )
+  if ( !byte_4A57FF8 )
   {
-    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B761C0(&EventRewardSaveData_TypeInfo, method);
-    byte_4A2ADED = 1;
+    this = (MapGimmickComponent___c__DisplayClass23_1_o *)sub_1B885B0(&EventRewardSaveData_TypeInfo);
+    byte_4A57FF8 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField = name_high;
-  v19 = v2->fields.eventDetailEnt;
-  if ( !v19
-    || (EventRewardSaveData__SaveCurrentEventData(v19->fields.eventId, 0LL), (v20 = v2->fields.eventDetailEnt) == 0LL)
-    || (eventId = v20->fields.eventId,
-        v22 = (SceneJumpInfo_o *)sub_1B7640C(SceneJumpInfo_TypeInfo),
-        SceneJumpInfo___ctor_38409780(v22, (System_String_o *)StringLiteral_1/*""*/, eventId, 0LL),
-        !v22)
-    || (SceneJumpInfo__SetReturnNowScene(v22, 0LL),
-        (this = (MapGimmickComponent___c__DisplayClass23_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+  v15 = v2->fields.eventDetailEnt;
+  if ( !v15
+    || (EventRewardSaveData__SaveCurrentEventData(v15->fields.eventId, 0LL), (v16 = v2->fields.eventDetailEnt) == 0LL)
+    || (eventId = v16->fields.eventId,
+        v18 = (SceneJumpInfo_o *)sub_1B887FC(SceneJumpInfo_TypeInfo),
+        SceneJumpInfo___ctor_38664432(v18, (System_String_o *)StringLiteral_1/*""*/, eventId, 0LL),
+        !v18)
+    || (SceneJumpInfo__SetReturnNowScene(v18, 0LL),
+        (this = (MapGimmickComponent___c__DisplayClass23_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
 LABEL_30:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   }
-  AvalonSceneManager__transitionScene((AvalonSceneManager_o *)this, 72, 1, (Il2CppObject *)v22, 0LL);
+  AvalonSceneManager__transitionScene((AvalonSceneManager_o *)this, 72, 1, (Il2CppObject *)v18, 0LL);
 }
 
 
@@ -2306,7 +2229,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass38_0___SetDispAnim_b__0(
                                                                 (float)v3->fields.to),
         (v4 = v3->fields.__4__this) == 0LL) )
   {
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   }
   ActionExtensions__Call(v4->fields.mStateEndAct, 0LL);
   MapGimmickComponent__SetState(v4, 1, 0LL, v5);
@@ -2323,7 +2246,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass38_0___SetDispAnim_b__1(
 
   eo = this->fields.eo;
   if ( !eo || (_4__this = this->fields.__4__this) == 0LL || (mSprite = _4__this->fields.mSprite) == 0LL )
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, float))mSprite->klass->vtable._8_set_alpha.method)(
     mSprite,
     mSprite->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -2352,7 +2275,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass39_0___SetMoveAnim_b__0(
                                                 (UnityEngine_GameObject_o *)_4__this,
                                                 0LL)) == 0LL )
   {
-    sub_1B7641C(_4__this, method);
+    sub_1B8880C(_4__this, method);
   }
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)_4__this, this->fields.posTo, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
@@ -2394,7 +2317,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass39_0___SetMoveAnim_b__1(
     v8 = v6;
   if ( !_4__this )
 LABEL_8:
-    sub_1B7641C(_4__this, method);
+    sub_1B8880C(_4__this, method);
   z = this->fields.posFrom.fields.z;
   v10 = v8 * (float)(this->fields.posTo.fields.z - z);
   v11 = vadd_f32(

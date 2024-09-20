@@ -1,13 +1,13 @@
 void __fastcall BannerEntity___ctor(BannerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2DBAE & 1) == 0 )
+  if ( (byte_4A5ADCC & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A2DBAE = 1;
+    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
+    byte_4A5ADCC = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_30FF580 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,24 +19,23 @@ int32_t __fastcall BannerEntity__CreatePrimaryKey(BannerEntity_o *this, const Me
 
 int32_t __fastcall BannerEntity__GetBannerId(BannerEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x3
+  __int64 v4; // x1
+  const MethodInfo *v5; // x3
   int32_t result; // w0
 
-  if ( (byte_4A2DBAD & 1) == 0 )
+  if ( (byte_4A5ADCB & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_BannerAddMaster___, method);
-    sub_1B761C0(&DataManager_TypeInfo, v3);
-    byte_4A2DBAD = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_BannerAddMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    byte_4A5ADCB = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_BannerAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BannerAddMaster___);
   if ( !Master_object )
-    sub_1B7641C(0LL, v5);
-  result = BannerAddMaster__getOverwriteBannerId((BannerAddMaster_o *)Master_object, this->fields.bannerId, 1, v6);
+    sub_1B8880C(0LL, v4);
+  result = BannerAddMaster__getOverwriteBannerId((BannerAddMaster_o *)Master_object, this->fields.bannerId, 1, v5);
   if ( result == -1 )
     return this->fields.bannerId;
   return result;
@@ -58,7 +57,7 @@ System_String_array *__fastcall BannerEntity__GetLinkBody(
 
   linkBody = this->fields.linkBody;
   if ( !linkBody )
-    sub_1B7641C(0LL, separator);
+    sub_1B8880C(0LL, separator);
   return System_String__Split(linkBody, separator, 0, 0LL);
 }
 
@@ -67,10 +66,10 @@ bool __fastcall BannerEntity__IsEnable(BannerEntity_o *this, const MethodInfo *m
 {
   int64_t Time; // x0
 
-  if ( (byte_4A2DBAC & 1) == 0 )
+  if ( (byte_4A5ADCA & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    byte_4A2DBAC = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    byte_4A5ADCA = 1;
   }
   if ( this->fields.bannerId < 1 || this->fields.terminalBannerPriority < 1 || this->fields.deviceType > 1u )
     return 0;

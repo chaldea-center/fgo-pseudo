@@ -1,13 +1,13 @@
 void __fastcall UserFollowerEntity___ctor(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2EC1E & 1) == 0 )
+  if ( (byte_4A5BE4E & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_long___ctor__, method);
-    byte_4A2EC1E = 1;
+    sub_1B885B0(&Method_DataEntityBase_long___ctor__);
+    byte_4A5BE4E = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30FF5C8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_311D77C *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -39,10 +39,10 @@ FollowerInfo_o *__fastcall UserFollowerEntity__getFollowerInfo(
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1B76424(this, followerId);
+      sub_1B88814(this, followerId);
     this = (UserFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1B7641C(0LL, followerId);
+      sub_1B8880C(0LL, followerId);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {
@@ -57,10 +57,10 @@ FollowerInfo_o *__fastcall UserFollowerEntity__getFollowerInfo(
 
 bool __fastcall UserFollowerEntity__isEnableData(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2EC1D & 1) == 0 )
+  if ( (byte_4A5BE4D & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    byte_4A2EC1D = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    byte_4A5BE4D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

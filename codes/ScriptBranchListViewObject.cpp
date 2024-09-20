@@ -1,9 +1,9 @@
 void __fastcall ScriptBranchListViewObject___ctor(ScriptBranchListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2B7F6 & 1) == 0 )
+  if ( (byte_4A58A14 & 1) == 0 )
   {
-    sub_1B761C0(&ListViewObject_TypeInfo, method);
-    byte_4A2B7F6 = 1;
+    sub_1B885B0(&ListViewObject_TypeInfo);
+    byte_4A58A14 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall ScriptBranchListViewObject__Awake(ScriptBranchListViewObject_o *
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A2B7F1 & 1) == 0 )
+  if ( (byte_4A58A0F & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___, method);
-    byte_4A2B7F1 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___);
+    byte_4A58A0F = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B7641C(0LL, v3);
+    sub_1B8880C(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___);
   this->fields.itemDraw = (struct ScriptBranchListViewItemDraw_o *)Component_object;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,26 +45,25 @@ UnityEngine_GameObject_o *__fastcall ScriptBranchListViewObject__CreateDragObjec
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_4A2B7F3 & 1) == 0 )
+  if ( (byte_4A58A11 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___, method);
-    byte_4A2B7F3 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___);
+    byte_4A58A11 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___)) == 0LL) )
   {
-    sub_1B7641C(DragObject, v4);
+    sub_1B8880C(DragObject, v4);
   }
-  ScriptBranchListViewObject__Init_34750208((ScriptBranchListViewObject_o *)DragObject, 2, 0LL, v6);
+  ScriptBranchListViewObject__Init_34924776((ScriptBranchListViewObject_o *)DragObject, 2, 0LL, v6);
   return v5;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptBranchListViewObject__Init(
         ScriptBranchListViewObject_o *this,
         int32_t initMode,
@@ -89,10 +88,10 @@ void __fastcall ScriptBranchListViewObject__Init(
   int32_t v22; // w9
   ServantStatusBattleListViewItem_c *klass; // x19
 
-  if ( (byte_4A2B7F4 & 1) == 0 )
+  if ( (byte_4A58A12 & 1) == 0 )
   {
-    sub_1B761C0(&ScriptBranchListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A2B7F4 = 1;
+    sub_1B885B0(&ScriptBranchListViewItem_TypeInfo);
+    byte_4A58A12 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -120,16 +119,16 @@ void __fastcall ScriptBranchListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B7641C(transform, v15);
+    sub_1B8880C(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_BAC630[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BAD250 + v11);
+    v22 = dword_BB3DA0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BB49C0 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -138,7 +137,7 @@ void __fastcall ScriptBranchListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B76164(p_callbackFunc, 0, v20, v21);
+    sub_1B88554(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -147,7 +146,7 @@ void __fastcall ScriptBranchListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptBranchListViewObject__Init_34750208(
+void __fastcall ScriptBranchListViewObject__Init_34924776(
         ScriptBranchListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -156,10 +155,10 @@ void __fastcall ScriptBranchListViewObject__Init_34750208(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4A28BB1 )
+  if ( !byte_4A55CE1 )
   {
-    sub_1B761C0(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A28BB1 = 1;
+    sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
   ScriptBranchListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -167,33 +166,32 @@ void __fastcall ScriptBranchListViewObject__Init_34750208(
 
 void __fastcall ScriptBranchListViewObject__OnDestroy(ScriptBranchListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   ServantStatusBattleListViewItem_o *p_dragObject; // x19
-  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v7; // w2
+  int32_t v8; // w3
 
-  if ( (byte_4A2B7F2 & 1) == 0 )
+  if ( (byte_4A58A10 & 1) == 0 )
   {
-    sub_1B761C0(&NGUITools_TypeInfo, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A2B7F2 = 1;
+    sub_1B885B0(&NGUITools_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A58A10 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (ServantStatusBattleListViewItem_o *)&this->fields.dragObject;
-  v5 = (UnityEngine_Object_o *)dragObject;
+  v4 = (UnityEngine_Object_o *)dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
   {
     klass = (UnityEngine_Object_o *)p_dragObject->klass;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B76164(p_dragObject, 0, v8, v9);
+    sub_1B88554(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -205,26 +203,24 @@ void __fastcall ScriptBranchListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_40571128((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_40756536((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
 void __fastcall ScriptBranchListViewObject__SetupDisp(ScriptBranchListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct ListViewItem_o *linkItem; // x20
   __int64 methodPtr_low; // x10
-  bool v6; // w1
+  bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  ScriptBranchListViewItemDraw_o *v10; // x0
+  __int64 v7; // x1
+  ScriptBranchListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4A2B7F5 & 1) == 0 )
+  if ( (byte_4A58A13 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    sub_1B761C0(&ScriptBranchListViewItem_TypeInfo, v3);
-    byte_4A2B7F5 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&ScriptBranchListViewItem_TypeInfo);
+    byte_4A58A13 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -235,21 +231,21 @@ void __fastcall ScriptBranchListViewObject__SetupDisp(ScriptBranchListViewObject
   {
     linkItem = 0LL;
 LABEL_7:
-    v6 = 0;
+    v5 = 0;
     goto LABEL_8;
   }
-  v6 = this->fields.dispMode != 0;
+  v5 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1B7641C(0LL, v8);
-    ScriptBranchListViewItemDraw__SetItem(v10, (ScriptBranchListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1B8880C(0LL, v7);
+    ScriptBranchListViewItemDraw__SetItem(v8, (ScriptBranchListViewItem_o *)linkItem, this->fields.dispMode, 0LL);
   }
 }
 
@@ -259,7 +255,7 @@ void __fastcall ScriptBranchListViewObject__Start(ScriptBranchListViewObject_o *
   const MethodInfo *v2; // x3
 
   if ( !this->fields.state )
-    ScriptBranchListViewObject__Init_34750208(this, 2, 0LL, v2);
+    ScriptBranchListViewObject__Init_34924776(this, 2, 0LL, v2);
 }
 
 
@@ -278,10 +274,10 @@ void __fastcall ScriptBranchListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A2B7EF & 1) == 0 )
+  if ( (byte_4A58A0D & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, value);
-    byte_4A2B7EF = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    byte_4A58A0D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -294,13 +290,13 @@ void __fastcall ScriptBranchListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
+    v9 = sub_1BC3AA0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B766DC(v8);
+  sub_1B88ACC(v8);
   ScriptBranchListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -319,10 +315,10 @@ void __fastcall ScriptBranchListViewObject__remove_callbackFunc(
   ScriptBranchListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A2B7F0 & 1) == 0 )
+  if ( (byte_4A58A0E & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, value);
-    byte_4A2B7F0 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    byte_4A58A0E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -335,12 +331,12 @@ void __fastcall ScriptBranchListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BB16B0(p_callbackFunc, v8, v6);
+    v9 = sub_1BC3AA0(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B766DC(v8);
+  sub_1B88ACC(v8);
   ScriptBranchListViewObject__Awake(v11, v12);
 }

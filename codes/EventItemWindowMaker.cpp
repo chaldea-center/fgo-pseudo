@@ -1,156 +1,138 @@
 void __fastcall EventItemWindowMaker___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct EventItemWindowMaker_StaticFields *static_fields; // x8
-  struct System_Single_array *v10; // x0
-  __int64 v11; // x1
+  struct System_Single_array *v2; // x0
+  __int64 v3; // x1
+  int32_t v4; // w2
+  int32_t v5; // w3
+  il2cpp_array_size_t max_length; // w8
+  struct System_Single_array *v7; // x1
+  struct EventItemWindowMaker_StaticFields *v8; // x0
+  System_Array_o *v9; // x0
+  System_Array_o *v10; // x19
+  struct EventItemWindowMaker_StaticFields *v11; // x0
   int32_t v12; // w2
   int32_t v13; // w3
-  il2cpp_array_size_t max_length; // w8
-  struct System_Single_array *v15; // x1
-  struct EventItemWindowMaker_StaticFields *v16; // x0
-  System_Array_o *v17; // x0
-  System_Array_o *v18; // x19
-  struct EventItemWindowMaker_StaticFields *v19; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  struct EventItemWindowMaker_StaticFields *v22; // x8
-  System_Array_o *v23; // x0
-  System_Array_o *v24; // x19
-  struct EventItemWindowMaker_StaticFields *v25; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  System_Array_o *v28; // x0
-  System_Array_o *v29; // x19
-  struct EventItemWindowMaker_StaticFields *v30; // x0
-  int32_t v31; // w2
-  int32_t v32; // w3
-  int32_t v33; // w2
-  int32_t v34; // w3
-  il2cpp_array_size_t v35; // w8
+  struct EventItemWindowMaker_StaticFields *v14; // x8
+  System_Array_o *v15; // x0
+  System_Array_o *v16; // x19
+  struct EventItemWindowMaker_StaticFields *v17; // x0
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_Array_o *v20; // x0
+  System_Array_o *v21; // x19
+  struct EventItemWindowMaker_StaticFields *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
+  int32_t v25; // w2
+  int32_t v26; // w3
+  il2cpp_array_size_t v27; // w8
+  struct EventItemWindowMaker_StaticFields *v28; // x0
+  System_Array_o *v29; // x0
+  System_Array_o *v30; // x19
+  struct EventItemWindowMaker_StaticFields *v31; // x0
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_Array_o *v34; // x0
+  System_Array_o *v35; // x19
   struct EventItemWindowMaker_StaticFields *v36; // x0
-  System_Array_o *v37; // x0
-  System_Array_o *v38; // x19
-  struct EventItemWindowMaker_StaticFields *v39; // x0
-  int32_t v40; // w2
-  int32_t v41; // w3
-  System_Array_o *v42; // x0
-  System_Array_o *v43; // x19
-  struct EventItemWindowMaker_StaticFields *v44; // x0
-  int32_t v45; // w2
-  int32_t v46; // w3
-  struct EventItemWindowMaker_StaticFields *v47; // x8
-  System_RuntimeFieldHandle_o v48; // 0:w1.4
-  System_RuntimeFieldHandle_o v49; // 0:w1.4
-  System_RuntimeFieldHandle_o v50; // 0:w1.4
-  System_RuntimeFieldHandle_o v51; // 0:w1.4
-  System_RuntimeFieldHandle_o v52; // 0:w1.4
+  int32_t v37; // w2
+  int32_t v38; // w3
+  struct EventItemWindowMaker_StaticFields *v39; // x8
+  System_RuntimeFieldHandle_o v40; // 0:w1.4
+  System_RuntimeFieldHandle_o v41; // 0:w1.4
+  System_RuntimeFieldHandle_o v42; // 0:w1.4
+  System_RuntimeFieldHandle_o v43; // 0:w1.4
+  System_RuntimeFieldHandle_o v44; // 0:w1.4
 
-  if ( (byte_4A2A36B & 1) == 0 )
+  if ( (byte_4A575E8 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, v1);
-    sub_1B761C0(&int___TypeInfo, v2);
-    sub_1B761C0(&float___TypeInfo, v3);
-    sub_1B761C0(
-      &Field__PrivateImplementationDetails__3FB54EFF0CF17DC7FF006FA7182D1C99659ED820E3E1B626643EC55951FE13BD,
-      v4);
-    sub_1B761C0(
-      &Field__PrivateImplementationDetails__71D1A658FF2FA50F7694FC8A7C287C2CD9B92497C646C79707C0C81D99C20327,
-      v5);
-    sub_1B761C0(
-      &Field__PrivateImplementationDetails__D83DD4D6E09D0FB50249A80793CEC793DF676933B89DE246E16B3CEA541E0BAF,
-      v6);
-    sub_1B761C0(
-      &Field__PrivateImplementationDetails__E7986B0CC6AFD5693D407FE1D03B289AC4D96BC21666A109A987DC69CBA49499,
-      v7);
-    sub_1B761C0(
-      &Field__PrivateImplementationDetails__EC9A5A643F4380691BD71B254D28DB6E668D0421F6316D9D8FC8C332301295D7,
-      v8);
-    byte_4A2A36B = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    sub_1B885B0(&int___TypeInfo);
+    sub_1B885B0(&float___TypeInfo);
+    sub_1B885B0(&Field__PrivateImplementationDetails__3FB54EFF0CF17DC7FF006FA7182D1C99659ED820E3E1B626643EC55951FE13BD);
+    sub_1B885B0(&Field__PrivateImplementationDetails__71D1A658FF2FA50F7694FC8A7C287C2CD9B92497C646C79707C0C81D99C20327);
+    sub_1B885B0(&Field__PrivateImplementationDetails__D83DD4D6E09D0FB50249A80793CEC793DF676933B89DE246E16B3CEA541E0BAF);
+    sub_1B885B0(&Field__PrivateImplementationDetails__E7986B0CC6AFD5693D407FE1D03B289AC4D96BC21666A109A987DC69CBA49499);
+    sub_1B885B0(&Field__PrivateImplementationDetails__EC9A5A643F4380691BD71B254D28DB6E668D0421F6316D9D8FC8C332301295D7);
+    byte_4A575E8 = 1;
   }
   static_fields = EventItemWindowMaker_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->LIMIT_OVER_WINDOW_BASE_HEIGHT = xmmword_BAC870;
-  *(_OWORD *)&static_fields->LIMIT_OVER_WINDOW_ADD_HEIGHT = xmmword_BAC520;
-  *(_OWORD *)&static_fields->NORMAL_DEFAULT_COUNT = xmmword_BADC90;
+  *(_OWORD *)&static_fields->LIMIT_OVER_WINDOW_BASE_HEIGHT = xmmword_BB3FE0;
+  *(_OWORD *)&static_fields->LIMIT_OVER_WINDOW_ADD_HEIGHT = xmmword_BB3C90;
+  *(_OWORD *)&static_fields->NORMAL_DEFAULT_COUNT = xmmword_BB5400;
   *(_QWORD *)&static_fields->MAX_ROWS_NORMAL = 0x300000003LL;
   static_fields->MAX_ROWS_LIMIT_OVER = 4;
-  v10 = (struct System_Single_array *)sub_1B76268(float___TypeInfo, 2LL);
-  if ( !v10 )
+  v2 = (struct System_Single_array *)sub_1B88658(float___TypeInfo, 2LL);
+  if ( !v2 )
     goto LABEL_11;
-  max_length = v10->max_length;
-  v15 = v10;
-  if ( !max_length || (v10->m_Items[1] = -100.0, max_length == 1) )
+  max_length = v2->max_length;
+  v7 = v2;
+  if ( !max_length || (v2->m_Items[1] = -100.0, max_length == 1) )
 LABEL_10:
-    sub_1B76424(v10, v15);
-  v10->m_Items[2] = 100.0;
-  v16 = EventItemWindowMaker_TypeInfo->static_fields;
-  v16->X_NORMAL_POSITIONS = v15;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v16->X_NORMAL_POSITIONS, (int32_t)v15, v12, v13);
-  v17 = (System_Array_o *)sub_1B76268(float___TypeInfo, 3LL);
-  v48.fields.value = Field__PrivateImplementationDetails__71D1A658FF2FA50F7694FC8A7C287C2CD9B92497C646C79707C0C81D99C20327;
-  v18 = v17;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61443140(v17, v48, 0LL);
-  v19 = EventItemWindowMaker_TypeInfo->static_fields;
-  v19->Y_NORMAL_POSITIONS = (struct System_Single_array *)v18;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v19->Y_NORMAL_POSITIONS, (int32_t)v18, v20, v21);
+    sub_1B88814(v2, v7);
+  v2->m_Items[2] = 100.0;
+  v8 = EventItemWindowMaker_TypeInfo->static_fields;
+  v8->X_NORMAL_POSITIONS = v7;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v8->X_NORMAL_POSITIONS, (int32_t)v7, v4, v5);
+  v9 = (System_Array_o *)sub_1B88658(float___TypeInfo, 3LL);
+  v40.fields.value = Field__PrivateImplementationDetails__71D1A658FF2FA50F7694FC8A7C287C2CD9B92497C646C79707C0C81D99C20327;
+  v10 = v9;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61615112(v9, v40, 0LL);
+  v11 = EventItemWindowMaker_TypeInfo->static_fields;
+  v11->Y_NORMAL_POSITIONS = (struct System_Single_array *)v10;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v11->Y_NORMAL_POSITIONS, (int32_t)v10, v12, v13);
+  v14 = EventItemWindowMaker_TypeInfo->static_fields;
+  *(_QWORD *)&v14->X_NORMAL_ONE_POSITION = 0x426B333300000000LL;
+  v14->Y_NORMAL_ONE_POSITION_SHOP = 43.0;
+  v15 = (System_Array_o *)sub_1B88658(float___TypeInfo, 3LL);
+  v41.fields.value = Field__PrivateImplementationDetails__E7986B0CC6AFD5693D407FE1D03B289AC4D96BC21666A109A987DC69CBA49499;
+  v16 = v15;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61615112(v15, v41, 0LL);
+  v17 = EventItemWindowMaker_TypeInfo->static_fields;
+  v17->X_LIMIT_OVER_POSITIONS = (struct System_Single_array *)v16;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v17->X_LIMIT_OVER_POSITIONS, (int32_t)v16, v18, v19);
+  v20 = (System_Array_o *)sub_1B88658(float___TypeInfo, 4LL);
+  v42.fields.value = Field__PrivateImplementationDetails__EC9A5A643F4380691BD71B254D28DB6E668D0421F6316D9D8FC8C332301295D7;
+  v21 = v20;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61615112(v20, v42, 0LL);
   v22 = EventItemWindowMaker_TypeInfo->static_fields;
-  *(_QWORD *)&v22->X_NORMAL_ONE_POSITION = 0x426B333300000000LL;
-  v22->Y_NORMAL_ONE_POSITION_SHOP = 43.0;
-  v23 = (System_Array_o *)sub_1B76268(float___TypeInfo, 3LL);
-  v49.fields.value = Field__PrivateImplementationDetails__E7986B0CC6AFD5693D407FE1D03B289AC4D96BC21666A109A987DC69CBA49499;
-  v24 = v23;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61443140(v23, v49, 0LL);
-  v25 = EventItemWindowMaker_TypeInfo->static_fields;
-  v25->X_LIMIT_OVER_POSITIONS = (struct System_Single_array *)v24;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v25->X_LIMIT_OVER_POSITIONS, (int32_t)v24, v26, v27);
-  v28 = (System_Array_o *)sub_1B76268(float___TypeInfo, 4LL);
-  v50.fields.value = Field__PrivateImplementationDetails__EC9A5A643F4380691BD71B254D28DB6E668D0421F6316D9D8FC8C332301295D7;
-  v29 = v28;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61443140(v28, v50, 0LL);
-  v30 = EventItemWindowMaker_TypeInfo->static_fields;
-  v30->Y_LIMIT_OVER_POSITIONS = (struct System_Single_array *)v29;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v30->Y_LIMIT_OVER_POSITIONS, (int32_t)v29, v31, v32);
+  v22->Y_LIMIT_OVER_POSITIONS = (struct System_Single_array *)v21;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v22->Y_LIMIT_OVER_POSITIONS, (int32_t)v21, v23, v24);
   EventItemWindowMaker_TypeInfo->static_fields->X_LIMITOVER_ONE_POSITION = -2.0;
-  v10 = (struct System_Single_array *)sub_1B76268(float___TypeInfo, 2LL);
-  if ( !v10 )
+  v2 = (struct System_Single_array *)sub_1B88658(float___TypeInfo, 2LL);
+  if ( !v2 )
 LABEL_11:
-    sub_1B7641C(v10, v11);
-  v35 = v10->max_length;
-  v15 = v10;
-  if ( !v35 )
+    sub_1B8880C(v2, v3);
+  v27 = v2->max_length;
+  v7 = v2;
+  if ( !v27 )
     goto LABEL_10;
-  v10->m_Items[1] = -80.0;
-  if ( v35 == 1 )
+  v2->m_Items[1] = -80.0;
+  if ( v27 == 1 )
     goto LABEL_10;
-  v10->m_Items[2] = 80.0;
-  v36 = EventItemWindowMaker_TypeInfo->static_fields;
-  v36->X_LIMIT_OVER_TWO_POSITIONS = v15;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v36->X_LIMIT_OVER_TWO_POSITIONS, (int32_t)v15, v33, v34);
+  v2->m_Items[2] = 80.0;
+  v28 = EventItemWindowMaker_TypeInfo->static_fields;
+  v28->X_LIMIT_OVER_TWO_POSITIONS = v7;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v28->X_LIMIT_OVER_TWO_POSITIONS, (int32_t)v7, v25, v26);
   EventItemWindowMaker_TypeInfo->static_fields->Y_LIMIT_OVER_ONE = 51.0;
-  v37 = (System_Array_o *)sub_1B76268(int___TypeInfo, 4LL);
-  v51.fields.value = Field__PrivateImplementationDetails__D83DD4D6E09D0FB50249A80793CEC793DF676933B89DE246E16B3CEA541E0BAF;
-  v38 = v37;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61443140(v37, v51, 0LL);
+  v29 = (System_Array_o *)sub_1B88658(int___TypeInfo, 4LL);
+  v43.fields.value = Field__PrivateImplementationDetails__D83DD4D6E09D0FB50249A80793CEC793DF676933B89DE246E16B3CEA541E0BAF;
+  v30 = v29;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61615112(v29, v43, 0LL);
+  v31 = EventItemWindowMaker_TypeInfo->static_fields;
+  v31->NORMAL_ITEM_BASE_WINDOW_HEIGHT = (struct System_Int32_array *)v30;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v31->NORMAL_ITEM_BASE_WINDOW_HEIGHT, (int32_t)v30, v32, v33);
+  v34 = (System_Array_o *)sub_1B88658(int___TypeInfo, 5LL);
+  v44.fields.value = Field__PrivateImplementationDetails__3FB54EFF0CF17DC7FF006FA7182D1C99659ED820E3E1B626643EC55951FE13BD;
+  v35 = v34;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61615112(v34, v44, 0LL);
+  v36 = EventItemWindowMaker_TypeInfo->static_fields;
+  v36->LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT = (struct System_Int32_array *)v35;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v36->LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT, (int32_t)v35, v37, v38);
   v39 = EventItemWindowMaker_TypeInfo->static_fields;
-  v39->NORMAL_ITEM_BASE_WINDOW_HEIGHT = (struct System_Int32_array *)v38;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v39->NORMAL_ITEM_BASE_WINDOW_HEIGHT, (int32_t)v38, v40, v41);
-  v42 = (System_Array_o *)sub_1B76268(int___TypeInfo, 5LL);
-  v52.fields.value = Field__PrivateImplementationDetails__3FB54EFF0CF17DC7FF006FA7182D1C99659ED820E3E1B626643EC55951FE13BD;
-  v43 = v42;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61443140(v42, v52, 0LL);
-  v44 = EventItemWindowMaker_TypeInfo->static_fields;
-  v44->LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT = (struct System_Int32_array *)v43;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v44->LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT, (int32_t)v43, v45, v46);
-  v47 = EventItemWindowMaker_TypeInfo->static_fields;
-  *(_QWORD *)&v47->SCOPE_ITEM_INFO_ADD_HEIGHT = 0x400000021LL;
-  v47->X_ITEM_BASE_WINDOW_POSITION = -460;
+  *(_QWORD *)&v39->SCOPE_ITEM_INFO_ADD_HEIGHT = 0x400000021LL;
+  v39->X_ITEM_BASE_WINDOW_POSITION = -460;
 }
 
 
@@ -168,37 +150,36 @@ UnityEngine_Vector3_o __fastcall EventItemWindowMaker__GetEventItemPosition(
   const MethodInfo *v12; // x1
   int MaxColumns; // w23
   const MethodInfo *v14; // x1
-  __int64 v15; // x1
-  const MethodInfo *v16; // x2
+  const MethodInfo *v15; // x2
   int32_t MaxRows; // w24
-  float v18; // s8
-  unsigned int v19; // w9
-  unsigned int v20; // w21
-  unsigned int v21; // w26
-  __int64 v22; // x1
-  int v23; // w23
-  EventItemWindowMaker_c *v24; // x0
+  float v17; // s8
+  unsigned int v18; // w9
+  unsigned int v19; // w21
+  unsigned int v20; // w26
+  __int64 v21; // x1
+  int v22; // w23
+  EventItemWindowMaker_c *v23; // x0
   struct EventItemWindowMaker_StaticFields *static_fields; // x8
   float X_LIMITOVER_ONE_POSITION; // s8
-  struct EventItemWindowMaker_StaticFields *v27; // x8
-  EventItemWindowMaker_c *v28; // x0
-  struct System_Single_array *v29; // x9
-  __int64 v30; // x9
+  struct EventItemWindowMaker_StaticFields *v26; // x8
+  EventItemWindowMaker_c *v27; // x0
+  struct System_Single_array *v28; // x9
+  __int64 v29; // x9
   float *p_Y_LIMIT_OVER_ONE; // x8
-  struct EventItemWindowMaker_StaticFields *v32; // x9
+  struct EventItemWindowMaker_StaticFields *v31; // x9
   struct System_Single_array *X_NORMAL_POSITIONS; // x8
   struct System_Single_array *Y_LIMIT_OVER_POSITIONS; // x9
   struct System_Single_array *X_LIMIT_OVER_POSITIONS; // x9
-  struct EventItemWindowMaker_StaticFields *v36; // x9
-  float v37; // s1
-  float v38; // s2
-  float v39; // s0
+  struct EventItemWindowMaker_StaticFields *v35; // x9
+  float v36; // s1
+  float v37; // s2
+  float v38; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A2A367 & 1) == 0 )
+  if ( (byte_4A575E4 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, *(_QWORD *)&index);
-    byte_4A2A367 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E4 = 1;
   }
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
@@ -210,169 +191,168 @@ UnityEngine_Vector3_o __fastcall EventItemWindowMaker__GetEventItemPosition(
   v11 = IsLimitOverWindow;
   MaxColumns = EventItemWindowMaker__GetMaxColumns(IsLimitOverWindow, v12);
   MaxRows = EventItemWindowMaker__GetMaxRows(v10, v14);
-  if ( !byte_4A28BB0 )
+  if ( !byte_4A55CE0 )
   {
-    sub_1B761C0(&System_Math_TypeInfo, v15);
-    byte_4A28BB0 = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A55CE0 = 1;
   }
-  v18 = (float)index / (float)MaxColumns;
+  v17 = (float)index / (float)MaxColumns;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v19 = vcvtms_s32_f32(v18);
-  v20 = index % MaxColumns;
-  if ( floorf(v18) == INFINITY )
-    v21 = 0x80000000;
+  v18 = vcvtms_s32_f32(v17);
+  v19 = index % MaxColumns;
+  if ( floorf(v17) == INFINITY )
+    v20 = 0x80000000;
   else
-    v21 = v19;
-  v23 = MaxRows - EventItemWindowMaker__GetRowCount(count, MaxColumns, v16);
+    v20 = v18;
+  v22 = MaxRows - EventItemWindowMaker__GetRowCount(count, MaxColumns, v15);
   if ( v11 )
   {
     switch ( count )
     {
       case 3:
-        v28 = EventItemWindowMaker_TypeInfo;
+        v27 = EventItemWindowMaker_TypeInfo;
         if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-          v28 = EventItemWindowMaker_TypeInfo;
+          v27 = EventItemWindowMaker_TypeInfo;
         }
-        static_fields = v28->static_fields;
+        static_fields = v27->static_fields;
         X_LIMIT_OVER_POSITIONS = static_fields->X_LIMIT_OVER_POSITIONS;
         if ( !X_LIMIT_OVER_POSITIONS )
           goto LABEL_58;
         break;
       case 2:
-        v28 = EventItemWindowMaker_TypeInfo;
+        v27 = EventItemWindowMaker_TypeInfo;
         if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-          v28 = EventItemWindowMaker_TypeInfo;
+          v27 = EventItemWindowMaker_TypeInfo;
         }
-        static_fields = v28->static_fields;
+        static_fields = v27->static_fields;
         X_LIMIT_OVER_POSITIONS = static_fields->X_LIMIT_OVER_TWO_POSITIONS;
         if ( !X_LIMIT_OVER_POSITIONS )
           goto LABEL_58;
         break;
       case 1:
-        v24 = EventItemWindowMaker_TypeInfo;
+        v23 = EventItemWindowMaker_TypeInfo;
         if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-          v24 = EventItemWindowMaker_TypeInfo;
+          v23 = EventItemWindowMaker_TypeInfo;
         }
-        static_fields = v24->static_fields;
+        static_fields = v23->static_fields;
         X_LIMITOVER_ONE_POSITION = static_fields->X_LIMITOVER_ONE_POSITION;
         goto LABEL_47;
       default:
-        v28 = EventItemWindowMaker_TypeInfo;
+        v27 = EventItemWindowMaker_TypeInfo;
         if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-          v28 = EventItemWindowMaker_TypeInfo;
+          v27 = EventItemWindowMaker_TypeInfo;
         }
-        v36 = v28->static_fields;
-        X_NORMAL_POSITIONS = v36->X_LIMIT_OVER_POSITIONS;
+        v35 = v27->static_fields;
+        X_NORMAL_POSITIONS = v35->X_LIMIT_OVER_POSITIONS;
         if ( X_NORMAL_POSITIONS )
         {
-          if ( v20 >= X_NORMAL_POSITIONS->max_length )
+          if ( v19 >= X_NORMAL_POSITIONS->max_length )
             goto LABEL_59;
-          Y_LIMIT_OVER_POSITIONS = v36->Y_LIMIT_OVER_POSITIONS;
+          Y_LIMIT_OVER_POSITIONS = v35->Y_LIMIT_OVER_POSITIONS;
           if ( Y_LIMIT_OVER_POSITIONS )
             goto LABEL_53;
         }
         goto LABEL_58;
     }
-    if ( v20 < X_LIMIT_OVER_POSITIONS->max_length )
+    if ( v19 < X_LIMIT_OVER_POSITIONS->max_length )
     {
-      X_LIMITOVER_ONE_POSITION = X_LIMIT_OVER_POSITIONS->m_Items[v20 + 1];
+      X_LIMITOVER_ONE_POSITION = X_LIMIT_OVER_POSITIONS->m_Items[v19 + 1];
 LABEL_47:
       p_Y_LIMIT_OVER_ONE = &static_fields->Y_LIMIT_OVER_ONE;
       goto LABEL_55;
     }
 LABEL_59:
-    sub_1B76424(v28, v22);
+    sub_1B88814(v27, v21);
   }
   if ( count != 2 )
   {
     if ( count != 1 )
     {
-      v28 = EventItemWindowMaker_TypeInfo;
+      v27 = EventItemWindowMaker_TypeInfo;
       if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-        v28 = EventItemWindowMaker_TypeInfo;
+        v27 = EventItemWindowMaker_TypeInfo;
       }
-      v32 = v28->static_fields;
-      X_NORMAL_POSITIONS = v32->X_NORMAL_POSITIONS;
+      v31 = v27->static_fields;
+      X_NORMAL_POSITIONS = v31->X_NORMAL_POSITIONS;
       if ( X_NORMAL_POSITIONS )
       {
-        if ( v20 >= X_NORMAL_POSITIONS->max_length )
+        if ( v19 >= X_NORMAL_POSITIONS->max_length )
           goto LABEL_59;
-        Y_LIMIT_OVER_POSITIONS = v32->Y_NORMAL_POSITIONS;
+        Y_LIMIT_OVER_POSITIONS = v31->Y_NORMAL_POSITIONS;
         if ( Y_LIMIT_OVER_POSITIONS )
         {
 LABEL_53:
-          if ( v23 + v21 < Y_LIMIT_OVER_POSITIONS->max_length )
+          if ( v22 + v20 < Y_LIMIT_OVER_POSITIONS->max_length )
           {
-            X_LIMITOVER_ONE_POSITION = X_NORMAL_POSITIONS->m_Items[v20 + 1];
-            p_Y_LIMIT_OVER_ONE = &Y_LIMIT_OVER_POSITIONS->m_Items[v23 + v21 + 1];
+            X_LIMITOVER_ONE_POSITION = X_NORMAL_POSITIONS->m_Items[v19 + 1];
+            p_Y_LIMIT_OVER_ONE = &Y_LIMIT_OVER_POSITIONS->m_Items[v22 + v20 + 1];
             goto LABEL_55;
           }
           goto LABEL_59;
         }
       }
 LABEL_58:
-      sub_1B7641C(v28, v22);
+      sub_1B8880C(v27, v21);
     }
     if ( EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     {
-      v27 = EventItemWindowMaker_TypeInfo->static_fields;
-      X_LIMITOVER_ONE_POSITION = v27->X_NORMAL_ONE_POSITION;
+      v26 = EventItemWindowMaker_TypeInfo->static_fields;
+      X_LIMITOVER_ONE_POSITION = v26->X_NORMAL_ONE_POSITION;
       goto LABEL_29;
     }
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-    v28 = EventItemWindowMaker_TypeInfo;
-    v27 = EventItemWindowMaker_TypeInfo->static_fields;
-    X_LIMITOVER_ONE_POSITION = v27->X_NORMAL_ONE_POSITION;
+    v27 = EventItemWindowMaker_TypeInfo;
+    v26 = EventItemWindowMaker_TypeInfo->static_fields;
+    X_LIMITOVER_ONE_POSITION = v26->X_NORMAL_ONE_POSITION;
     if ( EventItemWindowMaker_TypeInfo->_2.cctor_finished )
       goto LABEL_29;
 LABEL_28:
-    j_il2cpp_runtime_class_init_0(v28);
-    v27 = EventItemWindowMaker_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v27);
+    v26 = EventItemWindowMaker_TypeInfo->static_fields;
     goto LABEL_29;
   }
-  v28 = EventItemWindowMaker_TypeInfo;
+  v27 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-    v28 = EventItemWindowMaker_TypeInfo;
+    v27 = EventItemWindowMaker_TypeInfo;
   }
-  v27 = v28->static_fields;
-  v29 = v27->X_NORMAL_POSITIONS;
-  if ( !v29 )
+  v26 = v27->static_fields;
+  v28 = v26->X_NORMAL_POSITIONS;
+  if ( !v28 )
     goto LABEL_58;
-  if ( v20 >= v29->max_length )
+  if ( v19 >= v28->max_length )
     goto LABEL_59;
-  X_LIMITOVER_ONE_POSITION = v29->m_Items[v20 + 1];
-  if ( !v28->_2.cctor_finished )
+  X_LIMITOVER_ONE_POSITION = v28->m_Items[v19 + 1];
+  if ( !v27->_2.cctor_finished )
     goto LABEL_28;
 LABEL_29:
-  v30 = 88LL;
+  v29 = 88LL;
   if ( isEventShop )
-    v30 = 84LL;
-  p_Y_LIMIT_OVER_ONE = (float *)((char *)&v27->LIMIT_OVER_WINDOW_BASE_HEIGHT + v30);
+    v29 = 84LL;
+  p_Y_LIMIT_OVER_ONE = (float *)((char *)&v26->LIMIT_OVER_WINDOW_BASE_HEIGHT + v29);
 LABEL_55:
-  v37 = *p_Y_LIMIT_OVER_ONE;
-  v38 = 0.0;
-  v39 = X_LIMITOVER_ONE_POSITION;
-  result.fields.z = v38;
-  result.fields.y = v37;
-  result.fields.x = v39;
+  v36 = *p_Y_LIMIT_OVER_ONE;
+  v37 = 0.0;
+  v38 = X_LIMITOVER_ONE_POSITION;
+  result.fields.z = v37;
+  result.fields.y = v36;
+  result.fields.x = v38;
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventItemWindowMaker__GetEventItemWindowHeight(
         bool isEventShop,
         int32_t count,
@@ -388,10 +368,10 @@ int32_t __fastcall EventItemWindowMaker__GetEventItemWindowHeight(
   struct EventItemWindowMaker_StaticFields *v13; // x8
   int32_t v15; // w8
 
-  if ( (byte_4A2A362 & 1) == 0 )
+  if ( (byte_4A575DF & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, *(_QWORD *)&count);
-    byte_4A2A362 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575DF = 1;
   }
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
@@ -446,7 +426,6 @@ LABEL_7:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall EventItemWindowMaker__GetIsLimitOverWindow(
         int32_t count,
         bool isForcedAdjustment,
@@ -454,10 +433,10 @@ bool __fastcall EventItemWindowMaker__GetIsLimitOverWindow(
 {
   EventItemWindowMaker_c *v5; // x0
 
-  if ( (byte_4A2A368 & 1) == 0 )
+  if ( (byte_4A575E5 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, isForcedAdjustment);
-    byte_4A2A368 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E5 = 1;
   }
   v5 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
@@ -469,52 +448,50 @@ bool __fastcall EventItemWindowMaker__GetIsLimitOverWindow(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventItemWindowMaker__GetItemBaseWindowHeight(
         int32_t count,
         bool isForcedAdjustment,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  bool v6; // w21
+  bool v5; // w21
   bool IsLimitOverWindow; // w0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v7; // x1
   int32_t MaxColumns; // w0
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
   int32_t RowCount; // w19
-  const MethodInfo *v12; // x2
-  _BOOL8 v13; // x0
-  __int64 v14; // x1
-  EventItemWindowMaker_c *v15; // x8
-  bool v16; // w20
+  const MethodInfo *v11; // x2
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
+  EventItemWindowMaker_c *v14; // x8
+  bool v15; // w20
   struct EventItemWindowMaker_StaticFields *static_fields; // x8
   struct System_Int32_array *LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT; // x8
-  int32_t v19; // w19
+  int32_t v18; // w19
   int32_t SCOPE_ITEM_INFO_ADD_HEIGHT; // w8
-  EventItemWindowMaker_c *v21; // x0
+  EventItemWindowMaker_c *v20; // x0
 
-  if ( (byte_4A2A364 & 1) == 0 )
+  if ( (byte_4A575E1 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, isForcedAdjustment);
-    sub_1B761C0(&FSUtility_TypeInfo, v5);
-    byte_4A2A364 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    sub_1B885B0(&FSUtility_TypeInfo);
+    byte_4A575E1 = 1;
   }
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-  v6 = isForcedAdjustment;
+  v5 = isForcedAdjustment;
   IsLimitOverWindow = EventItemWindowMaker__GetIsLimitOverWindow(count, isForcedAdjustment, method);
-  MaxColumns = EventItemWindowMaker__GetMaxColumns(IsLimitOverWindow, v8);
-  RowCount = EventItemWindowMaker__GetRowCount(count, MaxColumns, v10);
-  v13 = EventItemWindowMaker__GetIsLimitOverWindow(count, v6, v12);
-  v15 = EventItemWindowMaker_TypeInfo;
-  v16 = v13;
+  MaxColumns = EventItemWindowMaker__GetMaxColumns(IsLimitOverWindow, v7);
+  RowCount = EventItemWindowMaker__GetRowCount(count, MaxColumns, v9);
+  v12 = EventItemWindowMaker__GetIsLimitOverWindow(count, v5, v11);
+  v14 = EventItemWindowMaker_TypeInfo;
+  v15 = v12;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-    v15 = EventItemWindowMaker_TypeInfo;
+    v14 = EventItemWindowMaker_TypeInfo;
   }
-  static_fields = v15->static_fields;
-  if ( v16 )
+  static_fields = v14->static_fields;
+  if ( v15 )
   {
     LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT = static_fields->LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT;
     if ( !LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT )
@@ -525,11 +502,11 @@ int32_t __fastcall EventItemWindowMaker__GetItemBaseWindowHeight(
     LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT = static_fields->NORMAL_ITEM_BASE_WINDOW_HEIGHT;
     if ( !LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT )
 LABEL_9:
-      sub_1B7641C(v13, v14);
+      sub_1B8880C(v12, v13);
   }
   if ( RowCount >= LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT->max_length )
-    sub_1B76424(v13, v14);
-  v19 = LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT->m_Items[RowCount + 1];
+    sub_1B88814(v12, v13);
+  v18 = LIMIT_OVER_ITEM_BASE_WINDOW_HEIGHT->m_Items[RowCount + 1];
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   if ( FSUtility__IsUnderVista(0LL) )
@@ -538,38 +515,36 @@ LABEL_9:
   }
   else
   {
-    v21 = EventItemWindowMaker_TypeInfo;
+    v20 = EventItemWindowMaker_TypeInfo;
     if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-      v21 = EventItemWindowMaker_TypeInfo;
+      v20 = EventItemWindowMaker_TypeInfo;
     }
-    SCOPE_ITEM_INFO_ADD_HEIGHT = v21->static_fields->SCOPE_ITEM_INFO_ADD_HEIGHT;
+    SCOPE_ITEM_INFO_ADD_HEIGHT = v20->static_fields->SCOPE_ITEM_INFO_ADD_HEIGHT;
   }
-  return SCOPE_ITEM_INFO_ADD_HEIGHT + v19;
+  return SCOPE_ITEM_INFO_ADD_HEIGHT + v18;
 }
 
 
 float __fastcall EventItemWindowMaker__GetItemBaseWindowX(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  EventItemWindowMaker_c *v3; // x0
+  EventItemWindowMaker_c *v1; // x0
   int X_ITEM_BASE_WINDOW_POSITION; // w19
 
-  if ( (byte_4A2A363 & 1) == 0 )
+  if ( (byte_4A575E0 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, v1);
-    sub_1B761C0(&FSUtility_TypeInfo, v2);
-    byte_4A2A363 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    sub_1B885B0(&FSUtility_TypeInfo);
+    byte_4A575E0 = 1;
   }
-  v3 = EventItemWindowMaker_TypeInfo;
+  v1 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-    v3 = EventItemWindowMaker_TypeInfo;
+    v1 = EventItemWindowMaker_TypeInfo;
   }
-  X_ITEM_BASE_WINDOW_POSITION = v3->static_fields->X_ITEM_BASE_WINDOW_POSITION;
+  X_ITEM_BASE_WINDOW_POSITION = v1->static_fields->X_ITEM_BASE_WINDOW_POSITION;
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
   return (float)X_ITEM_BASE_WINDOW_POSITION - FSUtility__GetOffsetX(68.0, 1, 0LL);
@@ -581,10 +556,10 @@ int32_t __fastcall EventItemWindowMaker__GetMaxColumns(bool isLimitOverWindow, c
   EventItemWindowMaker_c *v3; // x0
   __int64 v4; // x9
 
-  if ( (byte_4A2A369 & 1) == 0 )
+  if ( (byte_4A575E6 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, method);
-    byte_4A2A369 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E6 = 1;
   }
   v3 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
@@ -604,10 +579,10 @@ int32_t __fastcall EventItemWindowMaker__GetMaxRows(bool isLimitOverWindow, cons
   EventItemWindowMaker_c *v3; // x0
   __int64 v4; // x9
 
-  if ( (byte_4A2A36A & 1) == 0 )
+  if ( (byte_4A575E7 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, method);
-    byte_4A2A36A = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E7 = 1;
   }
   v3 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
@@ -627,69 +602,66 @@ UnityEngine_Vector3_o __fastcall EventItemWindowMaker__GetPanelPosition(
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
   float z; // s8
-  __int64 v4; // x1
-  EventItemWindowMaker_c *v5; // x0
-  int32x2_t v6; // d9
-  unsigned __int64 v7; // d1
-  EventItemWindowMaker_c *v8; // x0
-  float v9; // s2
-  float v10; // s0
-  float32x2_t v11; // [xsp+0h] [xbp-40h]
+  EventItemWindowMaker_c *v3; // x0
+  int32x2_t v4; // d9
+  unsigned __int64 v5; // d1
+  EventItemWindowMaker_c *v6; // x0
+  float v7; // s2
+  float v8; // s0
+  float32x2_t v9; // [xsp+0h] [xbp-40h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   z = position.fields.z;
-  if ( (byte_4A2A361 & 1) == 0 )
+  if ( (byte_4A575DE & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, v2);
-    sub_1B761C0(&FSUtility_TypeInfo, v4);
-    byte_4A2A361 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    sub_1B885B0(&FSUtility_TypeInfo);
+    byte_4A575DE = 1;
   }
-  v5 = EventItemWindowMaker_TypeInfo;
+  v3 = EventItemWindowMaker_TypeInfo;
   if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-    v5 = EventItemWindowMaker_TypeInfo;
+    v3 = EventItemWindowMaker_TypeInfo;
   }
-  v6.n64_u64[0] = vrev64_s32(*(int32x2_t *)&v5->static_fields->X_EVENT_ITEM_PANEL_POSITION).n64_u64[0];
+  v4.n64_u64[0] = vrev64_s32(*(int32x2_t *)&v3->static_fields->X_EVENT_ITEM_PANEL_POSITION).n64_u64[0];
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-  v11.n64_u64[0] = vcvt_f32_s32(v6).n64_u64[0];
+  v9.n64_u64[0] = vcvt_f32_s32(v4).n64_u64[0];
   if ( FSUtility__IsUnderVista(0LL) )
   {
-    v7 = v11.n64_u64[0];
+    v5 = v9.n64_u64[0];
   }
   else
   {
-    v8 = EventItemWindowMaker_TypeInfo;
+    v6 = EventItemWindowMaker_TypeInfo;
     if ( !EventItemWindowMaker_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo);
-      v8 = EventItemWindowMaker_TypeInfo;
+      v6 = EventItemWindowMaker_TypeInfo;
     }
     z = z + 0.0;
-    v7 = vadd_f32(v11, vcvt_f32_s32(*(int32x2_t *)&v8->static_fields->SCOPE_ITEM_INFO_ADD_HEIGHT)).n64_u64[0];
+    v5 = vadd_f32(v9, vcvt_f32_s32(*(int32x2_t *)&v6->static_fields->SCOPE_ITEM_INFO_ADD_HEIGHT)).n64_u64[0];
   }
-  v9 = z;
-  v10 = *((float *)&v7 + 1);
-  result.fields.y = *(float *)&v7;
-  result.fields.z = v9;
-  result.fields.x = v10;
+  v7 = z;
+  v8 = *((float *)&v5 + 1);
+  result.fields.y = *(float *)&v5;
+  result.fields.z = v7;
+  result.fields.x = v8;
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventItemWindowMaker__GetRowCount(int32_t count, int32_t maxColumns, const MethodInfo *method)
 {
   float v5; // s0
   int32_t v6; // w8
 
-  if ( !byte_4A2923D )
+  if ( !byte_4A5638E )
   {
-    sub_1B761C0(&System_Math_TypeInfo, *(_QWORD *)&maxColumns);
-    byte_4A2923D = 1;
+    sub_1B885B0(&System_Math_TypeInfo);
+    byte_4A5638E = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -702,7 +674,6 @@ int32_t __fastcall EventItemWindowMaker__GetRowCount(int32_t count, int32_t maxC
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventItemWindowMaker__GetWindowAddHeight(
         bool isEventShop,
         int32_t count,
@@ -713,10 +684,10 @@ int32_t __fastcall EventItemWindowMaker__GetWindowAddHeight(
   int32_t NORMAL_MAX_COUNT; // w22
   __int64 v8; // x9
 
-  if ( (byte_4A2A365 & 1) == 0 )
+  if ( (byte_4A575E2 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, *(_QWORD *)&count);
-    byte_4A2A365 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E2 = 1;
   }
   if ( EventItemWindowMaker_TypeInfo->_2.cctor_finished )
   {
@@ -741,7 +712,6 @@ int32_t __fastcall EventItemWindowMaker__GetWindowAddHeight(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall EventItemWindowMaker__GetWindowBaseHeight(
         bool isEventShop,
         int32_t count,
@@ -753,10 +723,10 @@ int32_t __fastcall EventItemWindowMaker__GetWindowBaseHeight(
   struct EventItemWindowMaker_StaticFields *static_fields; // x8
   bool v10; // w20
 
-  if ( (byte_4A2A366 & 1) == 0 )
+  if ( (byte_4A575E3 & 1) == 0 )
   {
-    sub_1B761C0(&EventItemWindowMaker_TypeInfo, *(_QWORD *)&count);
-    byte_4A2A366 = 1;
+    sub_1B885B0(&EventItemWindowMaker_TypeInfo);
+    byte_4A575E3 = 1;
   }
   v7 = EventItemWindowMaker_TypeInfo;
   cctor_finished = EventItemWindowMaker_TypeInfo->_2.cctor_finished;

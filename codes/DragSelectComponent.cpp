@@ -4,7 +4,6 @@ void __fastcall DragSelectComponent___ctor(DragSelectComponent_o *this, const Me
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall DragSelectComponent__Set(
         DragSelectComponent_o *this,
         int32_t selectNum,
@@ -21,10 +20,10 @@ void __fastcall DragSelectComponent__Set(
   int32_t condensedWidth; // w1
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A2D3C9 & 1) == 0 )
+  if ( (byte_4A5A5E7 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
-    byte_4A2D3C9 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A5E7 = 1;
   }
   v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
@@ -89,7 +88,7 @@ LABEL_26:
       }
     }
 LABEL_28:
-    sub_1B7641C(v9, v8);
+    sub_1B8880C(v9, v8);
   }
 }
 

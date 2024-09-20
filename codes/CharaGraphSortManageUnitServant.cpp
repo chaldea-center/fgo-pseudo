@@ -10,15 +10,15 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateF
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphFilterLogic_o *v2; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4A2D33B & 1) == 0 )
+  if ( (byte_4A5A556 & 1) == 0 )
   {
-    sub_1B761C0(&ServantCharaGraphFilterLogic_TypeInfo, method);
-    byte_4A2D33B = 1;
+    sub_1B885B0(&ServantCharaGraphFilterLogic_TypeInfo);
+    byte_4A5A556 = 1;
   }
-  v2 = (ServantCharaGraphFilterLogic_o *)sub_1B7640C(ServantCharaGraphFilterLogic_TypeInfo);
-  ServantCharaGraphFilterLogic___ctor(v2, 0LL);
+  v2 = (Il2CppObject *)sub_1B887FC(ServantCharaGraphFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
 
@@ -27,17 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateSor
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  CharaGraphSortLogicBase_o *v2; // x19
-  const MethodInfo *v3; // x1
+  ServantCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_4A2D33A & 1) == 0 )
+  if ( (byte_4A5A555 & 1) == 0 )
   {
-    sub_1B761C0(&ServantCharaGraphSortLogic_TypeInfo, method);
-    byte_4A2D33A = 1;
+    sub_1B885B0(&ServantCharaGraphSortLogic_TypeInfo);
+    byte_4A5A555 = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1B7640C(ServantCharaGraphSortLogic_TypeInfo);
-  CharaGraphSortLogicBase___ctor(v2, v3);
-  return v2;
+  v2 = (ServantCharaGraphSortLogic_o *)sub_1B887FC(ServantCharaGraphSortLogic_TypeInfo);
+  ServantCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -77,10 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServant__get_SortSaveKeySuff
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2D339 & 1) == 0 )
+  if ( (byte_4A5A554 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1266/*"1"*/, method);
-    byte_4A2D339 = 1;
+    sub_1B885B0(&StringLiteral_1266/*"1"*/);
+    byte_4A5A554 = 1;
   }
   return (System_String_o *)StringLiteral_1266/*"1"*/;
 }

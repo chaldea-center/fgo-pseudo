@@ -13,6 +13,6 @@ void __fastcall SetMenuNameControl__setMenuName(
 
   menuNameLb = this->fields.menuNameLb;
   if ( !menuNameLb )
-    sub_1B7641C(0LL, menuName);
+    sub_1B8880C(0LL, menuName);
   UILabel__set_text(menuNameLb, menuName, 0LL);
 }

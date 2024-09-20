@@ -8,11 +8,11 @@ void __fastcall WarBoardParallelSchedule___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   this->fields.tasks = taskBases;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6);
 }
 
 
-void __fastcall WarBoardParallelSchedule___ctor_35519904(
+void __fastcall WarBoardParallelSchedule___ctor_35774572(
         WarBoardParallelSchedule_o *this,
         System_Collections_Generic_List_WarBoardTaskBase__o *taskBases,
         const MethodInfo *method)
@@ -23,19 +23,19 @@ void __fastcall WarBoardParallelSchedule___ctor_35519904(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A2BE47 & 1) == 0 )
+  if ( (byte_4A590FB & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
-    byte_4A2BE47 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+    byte_4A590FB = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   if ( !taskBases )
-    sub_1B7641C(v5, v6);
+    sub_1B8880C(v5, v6);
   v7 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_34D912C *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   this->fields.tasks = (struct WarBoardTaskBase_array *)v7;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9);
 }
 
 
@@ -47,16 +47,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardParallelSchedule__Execute(
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A2BE48 & 1) == 0 )
+  if ( (byte_4A590FC & 1) == 0 )
   {
-    sub_1B761C0(&WarBoardParallelSchedule__Execute_d__4_TypeInfo, method);
-    byte_4A2BE48 = 1;
+    sub_1B885B0(&WarBoardParallelSchedule__Execute_d__4_TypeInfo);
+    byte_4A590FC = 1;
   }
-  v3 = sub_1B7640C(WarBoardParallelSchedule__Execute_d__4_TypeInfo);
+  v3 = sub_1B887FC(WarBoardParallelSchedule__Execute_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -92,7 +92,7 @@ void __fastcall WarBoardParallelSchedule__OnStart(WarBoardParallelSchedule_o *th
   tasks = v3->fields.tasks;
   if ( !tasks )
 LABEL_11:
-    sub_1B7641C(this, method);
+    sub_1B8880C(this, method);
   if ( (int)*(_QWORD *)&tasks->max_length >= 1 )
   {
     v5 = 0LL;
@@ -100,7 +100,7 @@ LABEL_11:
     while ( 1 )
     {
       if ( v5 >= tasks->max_length )
-        sub_1B76424(this, method);
+        sub_1B88814(this, method);
       this = (WarBoardParallelSchedule_o *)tasks->m_Items[v5];
       if ( this )
         this = (WarBoardParallelSchedule_o *)((__int64 (__fastcall *)(WarBoardParallelSchedule_o *, Il2CppMethodPointer))this->klass->vtable._5_OnStart.method)(
@@ -131,82 +131,74 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
         const MethodInfo *method)
 {
   WarBoardParallelSchedule__Execute_d__4_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   int32_t _1__state; // w8
   struct WarBoardParallelSchedule_o *_4__this; // x23
   struct WarBoardTaskBase_array *tasks; // x8
   __int64 max_length; // x1
-  __int64 v15; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  __int64 v18; // x0
-  int32_t v19; // w2
-  int32_t v20; // w3
-  __int64 v21; // x0
+  __int64 v7; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  __int64 v10; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
+  __int64 v13; // x0
   unsigned int **p_executes_5__5; // x20
-  int32_t v23; // w2
-  int32_t v24; // w3
-  int32_t v25; // w2
-  int32_t v26; // w3
-  unsigned __int64 v27; // x22
-  __int64 v28; // x24
-  unsigned int *v29; // x8
-  struct WarBoardTaskBase_array *v30; // x8
-  unsigned int *v31; // x25
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  unsigned __int64 v19; // x22
+  __int64 v20; // x24
+  unsigned int *v21; // x8
+  struct WarBoardTaskBase_array *v22; // x8
+  unsigned int *v23; // x25
+  int32_t v24; // w2
+  int32_t v25; // w3
+  WarBoardParallelSchedule__Execute_d__4_o *v26; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *endFlags_5__3; // x20
+  WarBoardParallelSchedule___c_c *v28; // x0
+  System_Func_bool__bool__o *_9__4_0; // x21
+  Il2CppObject *v30; // x22
+  struct WarBoardParallelSchedule___c_StaticFields *static_fields; // x0
   int32_t v32; // w2
   int32_t v33; // w3
-  WarBoardParallelSchedule__Execute_d__4_o *v34; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *endFlags_5__3; // x20
-  WarBoardParallelSchedule___c_c *v36; // x0
-  System_Func_bool__bool__o *_9__4_0; // x21
-  Il2CppObject *v38; // x22
-  struct WarBoardParallelSchedule___c_StaticFields *static_fields; // x0
-  int32_t v40; // w2
-  int32_t v41; // w3
-  int32_t v42; // w2
-  int32_t v43; // w3
+  int32_t v34; // w2
+  int32_t v35; // w3
   bool result; // w0
-  unsigned __int64 v45; // x21
-  struct System_Boolean_array *v46; // x26
-  bool *v47; // x27
+  unsigned __int64 v37; // x21
+  struct System_Boolean_array *v38; // x26
+  bool *v39; // x27
   struct System_Collections_IEnumerator_array *executes_5__5; // x8
-  System_Collections_IEnumerator_o *v49; // x20
+  System_Collections_IEnumerator_o *v41; // x20
   System_Collections_IEnumerator_c *klass; // x8
   unsigned int *currentObjects_5__4; // x26
-  __int64 v52; // x9
+  __int64 v44; // x9
   System_Collections_IEnumerator_c **p_offset; // x10
   __int64 p_method; // x0
-  struct System_Object_array *v55; // x8
-  Il2CppClass **v56; // x0
-  WarBoardParallelSchedule__Execute_d__4_o *v57; // x20
-  ServantStatusBattleListViewItem_o *v58; // x0
-  unsigned int *v59; // x0
-  struct System_Boolean_array *v60; // x8
-  struct WarBoardTaskBase_array *v61; // x8
-  struct System_Object_array *v62; // x1
+  struct System_Object_array *v47; // x8
+  Il2CppClass **v48; // x0
+  WarBoardParallelSchedule__Execute_d__4_o *v49; // x20
+  ServantStatusBattleListViewItem_o *v50; // x0
+  unsigned int *v51; // x0
+  struct System_Boolean_array *v52; // x8
+  struct WarBoardTaskBase_array *v53; // x8
+  struct System_Object_array *v54; // x1
   ServantStatusBattleListViewItem_o *p__2__current; // x19
-  __int64 v64; // x0
+  __int64 v56; // x0
 
   v2 = this;
-  if ( (byte_4A2BE4A & 1) == 0 )
+  if ( (byte_4A590FE & 1) == 0 )
   {
-    sub_1B761C0(&bool___TypeInfo, method);
-    sub_1B761C0(&Method_System_Linq_Enumerable_All_bool___, v3);
-    sub_1B761C0(&System_Func_bool__bool__TypeInfo, v4);
-    sub_1B761C0(&System_Collections_IEnumerator___TypeInfo, v5);
-    sub_1B761C0(&System_Collections_IEnumerator_TypeInfo, v6);
-    sub_1B761C0(&object___TypeInfo, v7);
-    sub_1B761C0(&Method_WarBoardParallelSchedule___c__Execute_b__4_0__, v8);
-    sub_1B761C0(&WarBoardParallelSchedule___c_TypeInfo, v9);
-    this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B761C0(&WarBoardManager_TypeInfo, v10);
-    byte_4A2BE4A = 1;
+    sub_1B885B0(&bool___TypeInfo);
+    sub_1B885B0(&Method_System_Linq_Enumerable_All_bool___);
+    sub_1B885B0(&System_Func_bool__bool__TypeInfo);
+    sub_1B885B0(&System_Collections_IEnumerator___TypeInfo);
+    sub_1B885B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1B885B0(&object___TypeInfo);
+    sub_1B885B0(&Method_WarBoardParallelSchedule___c__Execute_b__4_0__);
+    sub_1B885B0(&WarBoardParallelSchedule___c_TypeInfo);
+    this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B885B0(&WarBoardManager_TypeInfo);
+    byte_4A590FE = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -226,136 +218,136 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
       goto LABEL_65;
     max_length = tasks->max_length;
     v2->fields._count_5__2 = max_length;
-    v15 = sub_1B76268(bool___TypeInfo, max_length);
-    v2->fields._endFlags_5__3 = (struct System_Boolean_array *)v15;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&v2->fields._endFlags_5__3, v15, v16, v17);
-    v18 = sub_1B76268(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
-    v2->fields._currentObjects_5__4 = (struct System_Object_array *)v18;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&v2->fields._currentObjects_5__4, v18, v19, v20);
-    v21 = sub_1B76268(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
-    v2->fields._executes_5__5 = (struct System_Collections_IEnumerator_array *)v21;
+    v7 = sub_1B88658(bool___TypeInfo, max_length);
+    v2->fields._endFlags_5__3 = (struct System_Boolean_array *)v7;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&v2->fields._endFlags_5__3, v7, v8, v9);
+    v10 = sub_1B88658(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    v2->fields._currentObjects_5__4 = (struct System_Object_array *)v10;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&v2->fields._currentObjects_5__4, v10, v11, v12);
+    v13 = sub_1B88658(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    v2->fields._executes_5__5 = (struct System_Collections_IEnumerator_array *)v13;
     p_executes_5__5 = (unsigned int **)&v2->fields._executes_5__5;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&v2->fields._executes_5__5, v21, v23, v24);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&v2->fields._executes_5__5, v13, v15, v16);
     if ( v2->fields._count_5__2 >= 1 )
     {
-      v27 = 0LL;
-      v28 = 8LL;
+      v19 = 0LL;
+      v20 = 8LL;
       while ( 1 )
       {
-        v29 = *p_executes_5__5;
+        v21 = *p_executes_5__5;
         if ( !*p_executes_5__5 )
           break;
-        if ( v27 >= v29[6] )
+        if ( v19 >= v21[6] )
           goto LABEL_66;
-        *(_QWORD *)&v29[v28] = 0LL;
-        sub_1B76164((ServantStatusBattleListViewItem_o *)&v29[v28], 0, v25, v26);
-        v30 = _4__this->fields.tasks;
-        if ( !v30 )
+        *(_QWORD *)&v21[v20] = 0LL;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)&v21[v20], 0, v17, v18);
+        v22 = _4__this->fields.tasks;
+        if ( !v22 )
           break;
-        if ( v27 >= v30->max_length )
+        if ( v19 >= v22->max_length )
           goto LABEL_66;
-        this = *(WarBoardParallelSchedule__Execute_d__4_o **)((char *)&v30->obj.klass + v28 * 4);
+        this = *(WarBoardParallelSchedule__Execute_d__4_o **)((char *)&v22->obj.klass + v20 * 4);
         if ( this )
         {
-          v31 = *p_executes_5__5;
+          v23 = *p_executes_5__5;
           this = (WarBoardParallelSchedule__Execute_d__4_o *)((__int64 (__fastcall *)(WarBoardParallelSchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._4_System_Collections_Generic_IEnumerator_System_Object__get_Current.method)(
                                                                this,
                                                                this->klass->vtable._5_System_IDisposable_Dispose.methodPtr);
-          if ( !v31 )
+          if ( !v23 )
             break;
-          v34 = this;
+          v26 = this;
           if ( this )
           {
-            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B762FC(this, *(_QWORD *)(*(_QWORD *)v31 + 64LL));
+            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B886EC(this, *(_QWORD *)(*(_QWORD *)v23 + 64LL));
             if ( !this )
             {
 LABEL_67:
-              v64 = sub_1B76440(this);
-              sub_1B762E8(v64, 0LL);
+              v56 = sub_1B88830(this);
+              sub_1B886D8(v56, 0LL);
             }
           }
-          if ( v27 >= v31[6] )
+          if ( v19 >= v23[6] )
 LABEL_66:
-            sub_1B76424(this, method);
-          *(_QWORD *)&v31[v28] = v34;
-          sub_1B76164((ServantStatusBattleListViewItem_o *)&v31[v28], (int32_t)v34, v32, v33);
+            sub_1B88814(this, method);
+          *(_QWORD *)&v23[v20] = v26;
+          sub_1B88554((ServantStatusBattleListViewItem_o *)&v23[v20], (int32_t)v26, v24, v25);
         }
-        ++v27;
-        v28 += 2LL;
-        if ( (__int64)v27 >= v2->fields._count_5__2 )
+        ++v19;
+        v20 += 2LL;
+        if ( (__int64)v19 >= v2->fields._count_5__2 )
           goto LABEL_22;
       }
 LABEL_65:
-      sub_1B7641C(this, method);
+      sub_1B8880C(this, method);
     }
   }
 LABEL_22:
   endFlags_5__3 = (System_Collections_Generic_IEnumerable_TSource__o *)v2->fields._endFlags_5__3;
-  v36 = WarBoardParallelSchedule___c_TypeInfo;
+  v28 = WarBoardParallelSchedule___c_TypeInfo;
   if ( !WarBoardParallelSchedule___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardParallelSchedule___c_TypeInfo);
-    v36 = WarBoardParallelSchedule___c_TypeInfo;
+    v28 = WarBoardParallelSchedule___c_TypeInfo;
   }
-  _9__4_0 = v36->static_fields->__9__4_0;
+  _9__4_0 = v28->static_fields->__9__4_0;
   if ( !_9__4_0 )
   {
-    if ( !v36->_2.cctor_finished )
+    if ( !v28->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v36);
-      v36 = WarBoardParallelSchedule___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v28);
+      v28 = WarBoardParallelSchedule___c_TypeInfo;
     }
-    v38 = (Il2CppObject *)v36->static_fields->__9;
-    _9__4_0 = (System_Func_bool__bool__o *)sub_1B7640C(System_Func_bool__bool__TypeInfo);
-    System_Func_bool__bool____ctor(_9__4_0, v38, Method_WarBoardParallelSchedule___c__Execute_b__4_0__, 0LL);
+    v30 = (Il2CppObject *)v28->static_fields->__9;
+    _9__4_0 = (System_Func_bool__bool__o *)sub_1B887FC(System_Func_bool__bool__TypeInfo);
+    System_Func_bool__bool____ctor(_9__4_0, v30, Method_WarBoardParallelSchedule___c__Execute_b__4_0__, 0LL);
     static_fields = WarBoardParallelSchedule___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = _9__4_0;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v40, v41);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v32, v33);
   }
   this = (WarBoardParallelSchedule__Execute_d__4_o *)System_Linq_Enumerable__All_bool_(
                                                        endFlags_5__3,
                                                        (System_Func_TSource__bool__o *)_9__4_0,
-                                                       (const MethodInfo_2E6E024 *)Method_System_Linq_Enumerable_All_bool___);
+                                                       (const MethodInfo_2E8B524 *)Method_System_Linq_Enumerable_All_bool___);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0;
   if ( v2->fields._count_5__2 >= 1 )
   {
-    v45 = 0LL;
+    v37 = 0LL;
     do
     {
-      v46 = v2->fields._endFlags_5__3;
-      if ( !v46 )
+      v38 = v2->fields._endFlags_5__3;
+      if ( !v38 )
         goto LABEL_65;
-      if ( v45 >= v46->max_length )
+      if ( v37 >= v38->max_length )
         goto LABEL_66;
-      v47 = &v46->m_Items[v45 + 4];
-      if ( !*v47 )
+      v39 = &v38->m_Items[v37 + 4];
+      if ( !*v39 )
       {
         executes_5__5 = v2->fields._executes_5__5;
         if ( !executes_5__5 )
           goto LABEL_65;
-        if ( v45 >= executes_5__5->max_length )
+        if ( v37 >= executes_5__5->max_length )
           goto LABEL_66;
-        v49 = executes_5__5->m_Items[v45];
-        if ( v49 )
+        v41 = executes_5__5->m_Items[v37];
+        if ( v41 )
         {
           if ( !WarBoardManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(WarBoardManager_TypeInfo);
-          this = (WarBoardParallelSchedule__Execute_d__4_o *)WarBoardManager__IEnumeratorExecute(v49, 0LL);
-          if ( v45 >= v46->max_length )
+          this = (WarBoardParallelSchedule__Execute_d__4_o *)WarBoardManager__IEnumeratorExecute(v41, 0LL);
+          if ( v37 >= v38->max_length )
             goto LABEL_66;
-          *v47 = ((unsigned __int8)this & 1) == 0;
-          klass = v49->klass;
+          *v39 = ((unsigned __int8)this & 1) == 0;
+          klass = v41->klass;
           currentObjects_5__4 = (unsigned int *)v2->fields._currentObjects_5__4;
-          v52 = *(unsigned __int16 *)(&v49->klass->_2.bitflags2 + 3);
-          if ( *(_WORD *)(&v49->klass->_2.bitflags2 + 3) )
+          v44 = *(unsigned __int16 *)(&v41->klass->_2.bitflags2 + 3);
+          if ( *(_WORD *)(&v41->klass->_2.bitflags2 + 3) )
           {
             p_offset = (System_Collections_IEnumerator_c **)&klass->_1.interfaceOffsets->offset;
             while ( *(p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v52;
+              --v44;
               p_offset += 2;
-              if ( !v52 )
+              if ( !v44 )
                 goto LABEL_45;
             }
             p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 1].method;
@@ -363,57 +355,57 @@ LABEL_22:
           else
           {
 LABEL_45:
-            p_method = sub_1BC81A0(v49, System_Collections_IEnumerator_TypeInfo, 1LL);
+            p_method = sub_1BDA590(v41, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
           this = (WarBoardParallelSchedule__Execute_d__4_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
-                                                               v49,
+                                                               v41,
                                                                *(_QWORD *)(p_method + 8));
           if ( !currentObjects_5__4 )
             goto LABEL_65;
-          v57 = this;
+          v49 = this;
           if ( this )
           {
-            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B762FC(
+            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1B886EC(
                                                                  this,
                                                                  *(_QWORD *)(*(_QWORD *)currentObjects_5__4 + 64LL));
             if ( !this )
               goto LABEL_67;
           }
-          if ( v45 >= currentObjects_5__4[6] )
+          if ( v37 >= currentObjects_5__4[6] )
             goto LABEL_66;
-          v59 = &currentObjects_5__4[2 * v45];
-          *((_QWORD *)v59 + 4) = v57;
-          v58 = (ServantStatusBattleListViewItem_o *)(v59 + 8);
+          v51 = &currentObjects_5__4[2 * v37];
+          *((_QWORD *)v51 + 4) = v49;
+          v50 = (ServantStatusBattleListViewItem_o *)(v51 + 8);
         }
         else
         {
-          *v47 = 1;
-          v55 = v2->fields._currentObjects_5__4;
-          if ( !v55 )
+          *v39 = 1;
+          v47 = v2->fields._currentObjects_5__4;
+          if ( !v47 )
             goto LABEL_65;
-          if ( v45 >= v55->max_length )
+          if ( v37 >= v47->max_length )
             goto LABEL_66;
-          v56 = &v55->obj.klass + v45;
-          LODWORD(v57) = 0;
-          v56[4] = 0LL;
-          v58 = (ServantStatusBattleListViewItem_o *)(v56 + 4);
+          v48 = &v47->obj.klass + v37;
+          LODWORD(v49) = 0;
+          v48[4] = 0LL;
+          v50 = (ServantStatusBattleListViewItem_o *)(v48 + 4);
         }
-        sub_1B76164(v58, (int32_t)v57, v42, v43);
-        v60 = v2->fields._endFlags_5__3;
-        if ( !v60 )
+        sub_1B88554(v50, (int32_t)v49, v34, v35);
+        v52 = v2->fields._endFlags_5__3;
+        if ( !v52 )
           goto LABEL_65;
-        if ( v45 >= v60->max_length )
+        if ( v37 >= v52->max_length )
           goto LABEL_66;
-        if ( v60->m_Items[v45 + 4] )
+        if ( v52->m_Items[v37 + 4] )
         {
           if ( !_4__this )
             goto LABEL_65;
-          v61 = _4__this->fields.tasks;
-          if ( !v61 )
+          v53 = _4__this->fields.tasks;
+          if ( !v53 )
             goto LABEL_65;
-          if ( v45 >= v61->max_length )
+          if ( v37 >= v53->max_length )
             goto LABEL_66;
-          this = (WarBoardParallelSchedule__Execute_d__4_o *)v61->m_Items[v45];
+          this = (WarBoardParallelSchedule__Execute_d__4_o *)v53->m_Items[v37];
           if ( !this )
             goto LABEL_65;
           this = (WarBoardParallelSchedule__Execute_d__4_o *)((__int64 (__fastcall *)(WarBoardParallelSchedule__Execute_d__4_o *, Il2CppMethodPointer))this->klass->vtable._6_MoveNext.method)(
@@ -422,12 +414,12 @@ LABEL_45:
         }
       }
     }
-    while ( (__int64)++v45 < v2->fields._count_5__2 );
+    while ( (__int64)++v37 < v2->fields._count_5__2 );
   }
-  v62 = v2->fields._currentObjects_5__4;
-  v2->fields.__2__current = &v62->obj;
+  v54 = v2->fields._currentObjects_5__4;
+  v2->fields.__2__current = &v54->obj;
   p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-  sub_1B76164(p__2__current, (int32_t)v62, v42, v43);
+  sub_1B88554(p__2__current, (int32_t)v54, v34, v35);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
   return result;
@@ -450,11 +442,11 @@ void __fastcall __noreturn WarBoardParallelSchedule__Execute_d__4__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B761D4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B7640C(v2);
+  v2 = sub_1B885C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B887FC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B761D4(&Method_WarBoardParallelSchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1B762E8(v3, v4);
+  v4 = sub_1B885C4(&Method_WarBoardParallelSchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1B886D8(v3, v4);
 }
 
 
@@ -476,24 +468,23 @@ void __fastcall WarBoardParallelSchedule__Execute_d__4__System_IDisposable_Dispo
 
 void __fastcall WarBoardParallelSchedule___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  int32_t v3; // w3
 
-  if ( (byte_4A2BE49 & 1) == 0 )
+  if ( (byte_4A590FD & 1) == 0 )
   {
-    sub_1B761C0(&WarBoardParallelSchedule___c_TypeInfo, v1);
-    byte_4A2BE49 = 1;
+    sub_1B885B0(&WarBoardParallelSchedule___c_TypeInfo);
+    byte_4A590FD = 1;
   }
-  v2 = (Il2CppObject *)sub_1B7640C(WarBoardParallelSchedule___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  WarBoardParallelSchedule___c_TypeInfo->static_fields->__9 = (struct WarBoardParallelSchedule___c_o *)v2;
-  sub_1B76164(
+  v1 = (Il2CppObject *)sub_1B887FC(WarBoardParallelSchedule___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  WarBoardParallelSchedule___c_TypeInfo->static_fields->__9 = (struct WarBoardParallelSchedule___c_o *)v1;
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)WarBoardParallelSchedule___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 

@@ -2,12 +2,12 @@ bool __fastcall AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A2DB67 & 1) == 0 )
+  if ( (byte_4A5AD85 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_9488/*"NoBackStepNpc"*/, method);
-    byte_4A2DB67 = 1;
+    sub_1B885B0(&StringLiteral_9491/*"NoBackStepNpc"*/);
+    byte_4A5AD85 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9488/*"NoBackStepNpc"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9491/*"NoBackStepNpc"*/, -1, v2) == 1;
 }
 
 
@@ -32,77 +32,83 @@ bool __fastcall AiEntity__isTiming(
     case 2:
       actNum = this->fields.actNum;
       v8 = -6;
-      goto LABEL_23;
+      goto LABEL_22;
     case 3:
     case 13:
       actNum = this->fields.actNum;
       v8 = -7;
-      goto LABEL_23;
+      goto LABEL_22;
     case 4:
       v9 = this->fields.actNum;
       v10 = -4;
-      return Ai__CheckPriority(v10, v9, timingPriority, 0LL);
+      goto LABEL_24;
     case 5:
       v9 = this->fields.actNum;
       v10 = -5;
-      return Ai__CheckPriority(v10, v9, timingPriority, 0LL);
+      goto LABEL_24;
     case 6:
       actNum = this->fields.actNum;
       v8 = -8;
-      goto LABEL_23;
+      goto LABEL_22;
     case 7:
       actNum = this->fields.actNum;
       v8 = -9;
-      goto LABEL_23;
+      goto LABEL_22;
     case 8:
       actNum = this->fields.actNum;
       v8 = -11;
-      goto LABEL_23;
+      goto LABEL_22;
     case 10:
       actNum = this->fields.actNum;
       v8 = -4;
-      goto LABEL_23;
+      goto LABEL_22;
     case 11:
       actNum = this->fields.actNum;
       v8 = -5;
-      goto LABEL_23;
+      goto LABEL_22;
     case 12:
       actNum = this->fields.actNum;
       v8 = -13;
-      goto LABEL_23;
+      goto LABEL_22;
     case 14:
       actNum = this->fields.actNum;
       v8 = -10;
-      goto LABEL_23;
+      goto LABEL_22;
     case 15:
       actNum = this->fields.actNum;
       v8 = -14;
-      goto LABEL_23;
+      goto LABEL_22;
     case 16:
       actNum = this->fields.actNum;
       v8 = -12;
-      goto LABEL_23;
+      goto LABEL_22;
     case 17:
       actNum = this->fields.actNum;
       v8 = -16;
-      goto LABEL_23;
+      goto LABEL_22;
     case 18:
       actNum = this->fields.actNum;
       v8 = -15;
-      goto LABEL_23;
+      goto LABEL_22;
     case 19:
       actNum = this->fields.actNum;
       v8 = -3;
-      goto LABEL_23;
+      goto LABEL_22;
     case 20:
       actNum = this->fields.actNum;
       v8 = -17;
-      goto LABEL_23;
+      goto LABEL_22;
     case 21:
       actNum = this->fields.actNum;
       v8 = -18;
-LABEL_23:
+LABEL_22:
       result = Ai__Check(v8, actNum, 0LL);
+      break;
+    case 24:
+      v9 = this->fields.actNum;
+      v10 = -19;
+LABEL_24:
+      result = Ai__CheckPriority(v10, v9, timingPriority, 0LL);
       break;
     default:
       return result;

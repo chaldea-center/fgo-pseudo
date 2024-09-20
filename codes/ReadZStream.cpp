@@ -27,7 +27,7 @@ __int64 __fastcall ReadZStream(__int64 *a1, __int64 a2, int a3)
           *(_QWORD *)v6 = v8;
           *(_DWORD *)(v6 + 8) = v9;
         }
-        result = sub_1BFC634(*a1, 2LL);
+        result = sub_1C0EA24(*a1, 2LL);
         if ( (_DWORD)result )
           break;
         if ( !*(_DWORD *)(v6 + 32) )

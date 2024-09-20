@@ -1,10 +1,10 @@
-void __fastcall SingletonTemplate_object____ctor(SingletonTemplate_CLASS__o *this, const MethodInfo_3712A94 *method)
+void __fastcall SingletonTemplate_object____ctor(SingletonTemplate_CLASS__o *this, const MethodInfo_3739C30 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-void __fastcall SingletonTemplate_object___Delete(const MethodInfo_3712AA0 *method)
+void __fastcall SingletonTemplate_object___Delete(const MethodInfo_3739C3C *method)
 {
   SingletonTemplate_CLASS__c *klass; // x0
   __int64 _2_SingletonTemplate_CLASS; // x0
@@ -13,30 +13,30 @@ void __fastcall SingletonTemplate_object___Delete(const MethodInfo_3712AA0 *meth
 
   klass = method->klass;
   if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    klass = (SingletonTemplate_CLASS__c *)sub_1BC809C(klass);
+    klass = (SingletonTemplate_CLASS__c *)sub_1BDA48C(klass);
   _2_SingletonTemplate_CLASS = (__int64)klass->rgctx_data->_2_SingletonTemplate_CLASS_;
   if ( (*(_BYTE *)(_2_SingletonTemplate_CLASS + 309) & 1) == 0 )
-    _2_SingletonTemplate_CLASS = sub_1BC809C(_2_SingletonTemplate_CLASS);
+    _2_SingletonTemplate_CLASS = sub_1BDA48C(_2_SingletonTemplate_CLASS);
   if ( **(_QWORD **)(_2_SingletonTemplate_CLASS + 184) )
   {
     v4 = method->klass;
     if ( (BYTE5(v4->vtable._0_Equals.methodPtr) & 1) == 0 )
-      v4 = (SingletonTemplate_CLASS__c *)sub_1BC809C(v4);
+      v4 = (SingletonTemplate_CLASS__c *)sub_1BDA48C(v4);
     v5 = (__int64)v4->rgctx_data->_2_SingletonTemplate_CLASS_;
     if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-      v5 = sub_1BC809C(v5);
+      v5 = sub_1BDA48C(v5);
     **(_QWORD **)(v5 + 184) = 0LL;
   }
 }
 
 
-void __fastcall SingletonTemplate_object___Destroy(SingletonTemplate_CLASS__o *this, const MethodInfo_3712A9C *method)
+void __fastcall SingletonTemplate_object___Destroy(SingletonTemplate_CLASS__o *this, const MethodInfo_3739C38 *method)
 {
   ;
 }
 
 
-Il2CppObject *__fastcall SingletonTemplate_object___get_Instance(const MethodInfo_371299C *method)
+Il2CppObject *__fastcall SingletonTemplate_object___get_Instance(const MethodInfo_3739B38 *method)
 {
   SingletonTemplate_CLASS__c *klass; // x0
   __int64 _2_SingletonTemplate_CLASS; // x0
@@ -54,37 +54,37 @@ Il2CppObject *__fastcall SingletonTemplate_object___get_Instance(const MethodInf
 
   klass = method->klass;
   if ( (BYTE5(klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    klass = (SingletonTemplate_CLASS__c *)sub_1BC809C(klass);
+    klass = (SingletonTemplate_CLASS__c *)sub_1BDA48C(klass);
   _2_SingletonTemplate_CLASS = (__int64)klass->rgctx_data->_2_SingletonTemplate_CLASS_;
   if ( (*(_BYTE *)(_2_SingletonTemplate_CLASS + 309) & 1) == 0 )
-    _2_SingletonTemplate_CLASS = sub_1BC809C(_2_SingletonTemplate_CLASS);
+    _2_SingletonTemplate_CLASS = sub_1BDA48C(_2_SingletonTemplate_CLASS);
   if ( !**(_QWORD **)(_2_SingletonTemplate_CLASS + 184) )
   {
     v4 = method->klass;
     if ( (BYTE5(v4->vtable._0_Equals.methodPtr) & 1) == 0 )
-      v4 = (SingletonTemplate_CLASS__c *)sub_1BC809C(v4);
-    Instance_object = System_Activator__CreateInstance_object_((const MethodInfo_2DBAF6C *)v4->rgctx_data->_3_System_Activator_CreateInstance_CLASS_);
+      v4 = (SingletonTemplate_CLASS__c *)sub_1BDA48C(v4);
+    Instance_object = System_Activator__CreateInstance_object_((const MethodInfo_2DD69CC *)v4->rgctx_data->_3_System_Activator_CreateInstance_CLASS_);
     v8 = method->klass;
     v9 = Instance_object;
     if ( (BYTE5(v8->vtable._0_Equals.methodPtr) & 1) == 0 )
-      v8 = (SingletonTemplate_CLASS__c *)sub_1BC809C(method->klass);
+      v8 = (SingletonTemplate_CLASS__c *)sub_1BDA48C(method->klass);
     v10 = (__int64)v8->rgctx_data->_2_SingletonTemplate_CLASS_;
     if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-      v10 = sub_1BC809C(v10);
+      v10 = sub_1BDA48C(v10);
     **(_QWORD **)(v10 + 184) = v9;
     v11 = method->klass;
     if ( (BYTE5(v11->vtable._0_Equals.methodPtr) & 1) == 0 )
-      v11 = (SingletonTemplate_CLASS__c *)sub_1BC809C(v11);
+      v11 = (SingletonTemplate_CLASS__c *)sub_1BDA48C(v11);
     v12 = (__int64)v11->rgctx_data->_2_SingletonTemplate_CLASS_;
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1BC809C(v12);
-    sub_1B76164(*(ServantStatusBattleListViewItem_o **)(v12 + 184), (int32_t)v9, v6, v7);
+      v12 = sub_1BDA48C(v12);
+    sub_1B88554(*(ServantStatusBattleListViewItem_o **)(v12 + 184), (int32_t)v9, v6, v7);
   }
   v13 = method->klass;
   if ( (BYTE5(v13->vtable._0_Equals.methodPtr) & 1) == 0 )
-    v13 = (SingletonTemplate_CLASS__c *)sub_1BC809C(v13);
+    v13 = (SingletonTemplate_CLASS__c *)sub_1BDA48C(v13);
   v14 = (__int64)v13->rgctx_data->_2_SingletonTemplate_CLASS_;
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1BC809C(v14);
+    v14 = sub_1BDA48C(v14);
   return **(Il2CppObject ***)(v14 + 184);
 }

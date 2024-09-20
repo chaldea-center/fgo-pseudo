@@ -3,34 +3,34 @@ void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, co
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A2D184 & 1) == 0 )
+  if ( (byte_4A5A3A2 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, bytes);
-    byte_4A2D184 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A3A2 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.byteData = bytes;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
 }
 
 
-void __fastcall DataAsset___ctor_37733912(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void __fastcall DataAsset___ctor_37913940(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A2D185 & 1) == 0 )
+  if ( (byte_4A5A3A3 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, text);
-    byte_4A2D185 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A3A3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.textData = text;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
 }
 
 

@@ -8,33 +8,31 @@ WarBoardUserGetItemData_o *__fastcall WarBoardUserGetItemData__FromJson(
         System_String_o *json,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  Il2CppObject *v5; // x19
+  Il2CppObject *v3; // x19
   WarBoardUserGetItemData_o *result; // x0
-  __int64 v7; // x1
-  __int64 v8; // x8
+  __int64 v5; // x1
+  __int64 v6; // x8
 
-  if ( (byte_4A2BD71 & 1) == 0 )
+  if ( (byte_4A58F7F & 1) == 0 )
   {
-    sub_1B761C0(&Method_JsonManager_DeserializeArray_WarBoardUserGetItemData___, method);
-    sub_1B761C0(&JsonManager_TypeInfo, v3);
-    sub_1B761C0(&StringLiteral_16018/*"[{0}]"*/, v4);
-    byte_4A2BD71 = 1;
+    sub_1B885B0(&Method_JsonManager_DeserializeArray_WarBoardUserGetItemData___);
+    sub_1B885B0(&JsonManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_16024/*"[{0}]"*/);
+    byte_4A58F7F = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16018/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16024/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserGetItemData_o *)JsonManager__DeserializeArray_object_(
-                                          v5,
-                                          (const MethodInfo_2EC89B0 *)Method_JsonManager_DeserializeArray_WarBoardUserGetItemData___);
+                                          v3,
+                                          (const MethodInfo_2EE5F40 *)Method_JsonManager_DeserializeArray_WarBoardUserGetItemData___);
   if ( result )
   {
-    v8 = *(_QWORD *)&result->fields.pieceIndex;
-    if ( v8 )
+    v6 = *(_QWORD *)&result->fields.pieceIndex;
+    if ( v6 )
     {
-      if ( !(_DWORD)v8 )
-        sub_1B76424(result, v7);
+      if ( !(_DWORD)v6 )
+        sub_1B88814(result, v5);
       return *(WarBoardUserGetItemData_o **)&result->fields.isUse;
     }
     else
@@ -52,7 +50,7 @@ void __fastcall WarBoardUserGetItemData__SetSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1B7641C(this, 0LL);
+    sub_1B8880C(this, 0LL);
   this->fields.isUse = saveData->fields.isUse;
   *(_QWORD *)&this->fields.forceId = *(_QWORD *)&saveData->fields.forceId;
   this->fields.pieceIndex = saveData->fields.pieceIndex;
@@ -62,10 +60,10 @@ void __fastcall WarBoardUserGetItemData__SetSaveData(
 
 System_String_o *__fastcall WarBoardUserGetItemData__ToJson(WarBoardUserGetItemData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2BD70 & 1) == 0 )
+  if ( (byte_4A58F7E & 1) == 0 )
   {
-    sub_1B761C0(&JsonManager_TypeInfo, method);
-    byte_4A2BD70 = 1;
+    sub_1B885B0(&JsonManager_TypeInfo);
+    byte_4A58F7E = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

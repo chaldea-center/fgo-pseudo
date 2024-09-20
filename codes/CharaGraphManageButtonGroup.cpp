@@ -2,24 +2,23 @@ void __fastcall CharaGraphManageButtonGroup___ctor(CharaGraphManageButtonGroup_o
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  __int64 v5; // x1
+  int32_t v5; // w1
   int32_t v6; // w1
-  int32_t v7; // w1
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v7; // w2
+  int32_t v8; // w3
 
-  if ( (byte_4A2D34F & 1) == 0 )
+  if ( (byte_4A5A56A & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_17657/*"button_select_reg"*/, method);
-    sub_1B761C0(&StringLiteral_17658/*"button_select_unreg"*/, v5);
-    byte_4A2D34F = 1;
+    sub_1B885B0(&StringLiteral_17663/*"button_select_reg"*/);
+    sub_1B885B0(&StringLiteral_17664/*"button_select_unreg"*/);
+    byte_4A5A56A = 1;
   }
-  v6 = StringLiteral_17657/*"button_select_reg"*/;
-  this->fields._MainButtonOnSpriteName_k__BackingField = (struct System_String_o *)StringLiteral_17657/*"button_select_reg"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOnSpriteName_k__BackingField, v6, v2, v3);
-  v7 = StringLiteral_17658/*"button_select_unreg"*/;
-  this->fields._MainButtonOffSpriteName_k__BackingField = (struct System_String_o *)StringLiteral_17658/*"button_select_unreg"*/;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOffSpriteName_k__BackingField, v7, v8, v9);
+  v5 = StringLiteral_17663/*"button_select_reg"*/;
+  this->fields._MainButtonOnSpriteName_k__BackingField = (struct System_String_o *)StringLiteral_17663/*"button_select_reg"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOnSpriteName_k__BackingField, v5, v2, v3);
+  v6 = StringLiteral_17664/*"button_select_unreg"*/;
+  this->fields._MainButtonOffSpriteName_k__BackingField = (struct System_String_o *)StringLiteral_17664/*"button_select_unreg"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOffSpriteName_k__BackingField, v6, v7, v8);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -107,10 +106,10 @@ bool __fastcall CharaGraphManageButtonGroup__IsActive(UnityEngine_Component_o *c
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A2D34E & 1) == 0 )
+  if ( (byte_4A5A569 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2D34E = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A569 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -118,12 +117,11 @@ bool __fastcall CharaGraphManageButtonGroup__IsActive(UnityEngine_Component_o *c
   if ( ((unsigned __int8)gameObject & 1) == 0 )
     return 0;
   if ( !c || (gameObject = UnityEngine_Component__get_gameObject(c, 0LL)) == 0LL )
-    sub_1B7641C(gameObject, v4);
+    sub_1B8880C(gameObject, v4);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaGraphManageButtonGroup__SetPushButtonActive(
         CharaGraphManageButtonGroup_o *this,
         bool value,
@@ -135,10 +133,10 @@ void __fastcall CharaGraphManageButtonGroup__SetPushButtonActive(
   UnityEngine_Component_o *gameObject; // x0
   bool v10; // w21
 
-  if ( (byte_4A2D34B & 1) == 0 )
+  if ( (byte_4A5A566 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, value);
-    byte_4A2D34B = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A566 = 1;
   }
   if ( this->fields.isTabPushDefaultActive )
   {
@@ -164,7 +162,7 @@ void __fastcall CharaGraphManageButtonGroup__SetPushButtonActive(
             (gameObject = (UnityEngine_Component_o *)this->fields.pushTabButton) == 0LL) )
       {
 LABEL_14:
-        sub_1B7641C(gameObject, v8);
+        sub_1B8880C(gameObject, v8);
       }
       UICommonButton__SetColliderEnable((UICommonButton_o *)gameObject, v10, !isInit, 0LL);
     }
@@ -186,7 +184,7 @@ void __fastcall CharaGraphManageButtonGroup__SetScaleButtonSprite(
   {
     scaleChangeTabSprite = this->fields.scaleChangeTabSprite;
     if ( !scaleChangeTabSprite )
-      sub_1B7641C(0LL, v5);
+      sub_1B8880C(0LL, v5);
     UISprite__set_spriteName(scaleChangeTabSprite, spriteName, 0LL);
   }
 }
@@ -208,10 +206,10 @@ void __fastcall CharaGraphManageButtonGroup__SetupButton(
   bool enabled; // w0
   System_String_o *v18; // x1
 
-  if ( (byte_4A2D34D & 1) == 0 )
+  if ( (byte_4A5A568 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, button);
-    byte_4A2D34D = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A568 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -238,7 +236,7 @@ void __fastcall CharaGraphManageButtonGroup__SetupButton(
             UICommonButton__SetColliderEnable(button, enabled, v16, 0LL),
             !sprite) )
       {
-        sub_1B7641C(v14, v15);
+        sub_1B8880C(v14, v15);
       }
       if ( modeMatched )
         v18 = onName;
@@ -250,7 +248,6 @@ void __fastcall CharaGraphManageButtonGroup__SetupButton(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaGraphManageButtonGroup__UpdateDisplay(
         CharaGraphManageButtonGroup_o *this,
         int32_t selectedModeKind,
@@ -259,31 +256,26 @@ void __fastcall CharaGraphManageButtonGroup__UpdateDisplay(
 {
   const MethodInfo *v4; // x7
   CharaGraphManageButtonGroup_o *v7; // x20
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  bool v13; // w21
-  CharaGraphManageButtonGroup_o *v14; // x0
-  const MethodInfo *v15; // x7
-  CharaGraphManageButtonGroup_o *v16; // x0
-  const MethodInfo *v17; // x7
-  CharaGraphManageButtonGroup_o *v18; // x0
-  const MethodInfo *v19; // x7
+  bool v8; // w21
+  CharaGraphManageButtonGroup_o *v9; // x0
+  const MethodInfo *v10; // x7
+  CharaGraphManageButtonGroup_o *v11; // x0
+  const MethodInfo *v12; // x7
+  CharaGraphManageButtonGroup_o *v13; // x0
+  const MethodInfo *v14; // x7
 
   v7 = this;
-  if ( (byte_4A2D34C & 1) == 0 )
+  if ( (byte_4A5A567 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_17655/*"button_push_reg"*/, *(_QWORD *)&selectedModeKind);
-    sub_1B761C0(&StringLiteral_17656/*"button_push_unreg"*/, v8);
-    sub_1B761C0(&StringLiteral_17641/*"button_allchoice_reg"*/, v9);
-    sub_1B761C0(&StringLiteral_17644/*"button_alllock_unreg"*/, v10);
-    sub_1B761C0(&StringLiteral_17643/*"button_alllock_reg"*/, v11);
-    this = (CharaGraphManageButtonGroup_o *)sub_1B761C0(&StringLiteral_17642/*"button_allchoice_unreg"*/, v12);
-    byte_4A2D34C = 1;
+    sub_1B885B0(&StringLiteral_17661/*"button_push_reg"*/);
+    sub_1B885B0(&StringLiteral_17662/*"button_push_unreg"*/);
+    sub_1B885B0(&StringLiteral_17647/*"button_allchoice_reg"*/);
+    sub_1B885B0(&StringLiteral_17650/*"button_alllock_unreg"*/);
+    sub_1B885B0(&StringLiteral_17649/*"button_alllock_reg"*/);
+    this = (CharaGraphManageButtonGroup_o *)sub_1B885B0(&StringLiteral_17648/*"button_allchoice_unreg"*/);
+    byte_4A5A567 = 1;
   }
-  v13 = isInit;
+  v8 = isInit;
   CharaGraphManageButtonGroup__SetupButton(
     this,
     v7->fields.mainTabButton,
@@ -291,35 +283,35 @@ void __fastcall CharaGraphManageButtonGroup__UpdateDisplay(
     selectedModeKind == 0,
     v7->fields._MainButtonOnSpriteName_k__BackingField,
     v7->fields._MainButtonOffSpriteName_k__BackingField,
-    v13,
+    v8,
     v4);
   CharaGraphManageButtonGroup__SetupButton(
-    v14,
+    v9,
     v7->fields.lockTabButton,
     v7->fields.lockTabSprite,
     selectedModeKind == 2,
-    (System_String_o *)StringLiteral_17643/*"button_alllock_reg"*/,
-    (System_String_o *)StringLiteral_17644/*"button_alllock_unreg"*/,
-    v13,
-    v15);
+    (System_String_o *)StringLiteral_17649/*"button_alllock_reg"*/,
+    (System_String_o *)StringLiteral_17650/*"button_alllock_unreg"*/,
+    v8,
+    v10);
   CharaGraphManageButtonGroup__SetupButton(
-    v16,
+    v11,
     v7->fields.choiceTabButton,
     v7->fields.choiceTabSprite,
     selectedModeKind == 3,
-    (System_String_o *)StringLiteral_17641/*"button_allchoice_reg"*/,
-    (System_String_o *)StringLiteral_17642/*"button_allchoice_unreg"*/,
-    v13,
-    v17);
+    (System_String_o *)StringLiteral_17647/*"button_allchoice_reg"*/,
+    (System_String_o *)StringLiteral_17648/*"button_allchoice_unreg"*/,
+    v8,
+    v12);
   CharaGraphManageButtonGroup__SetupButton(
-    v18,
+    v13,
     v7->fields.pushTabButton,
     v7->fields.pushTabSprite,
     selectedModeKind == 4,
-    (System_String_o *)StringLiteral_17655/*"button_push_reg"*/,
-    (System_String_o *)StringLiteral_17656/*"button_push_unreg"*/,
-    v13,
-    v19);
+    (System_String_o *)StringLiteral_17661/*"button_push_reg"*/,
+    (System_String_o *)StringLiteral_17662/*"button_push_unreg"*/,
+    v8,
+    v14);
 }
 
 
@@ -387,7 +379,7 @@ void __fastcall CharaGraphManageButtonGroup__set_MainButtonOffSpriteName(
   int32_t v3; // w3
 
   this->fields._MainButtonOffSpriteName_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOffSpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -403,7 +395,7 @@ void __fastcall CharaGraphManageButtonGroup__set_MainButtonOnSpriteName(
   int32_t v3; // w3
 
   this->fields._MainButtonOnSpriteName_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._MainButtonOnSpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -419,7 +411,7 @@ void __fastcall CharaGraphManageButtonGroup__set_OnClickScaleChange(
   int32_t v3; // w3
 
   this->fields._OnClickScaleChange_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickScaleChange_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -435,7 +427,7 @@ void __fastcall CharaGraphManageButtonGroup__set_OnClickTabChoice(
   int32_t v3; // w3
 
   this->fields._OnClickTabChoice_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickTabChoice_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -451,7 +443,7 @@ void __fastcall CharaGraphManageButtonGroup__set_OnClickTabLock(
   int32_t v3; // w3
 
   this->fields._OnClickTabLock_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickTabLock_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -467,7 +459,7 @@ void __fastcall CharaGraphManageButtonGroup__set_OnClickTabMain(
   int32_t v3; // w3
 
   this->fields._OnClickTabMain_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickTabMain_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -483,7 +475,7 @@ void __fastcall CharaGraphManageButtonGroup__set_OnClickTabPush(
   int32_t v3; // w3
 
   this->fields._OnClickTabPush_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._OnClickTabPush_k__BackingField,
     (int32_t)value,
     (int32_t)method,

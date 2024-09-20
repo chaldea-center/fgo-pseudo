@@ -1,25 +1,22 @@
 void __fastcall PanelUniqueIDUtil___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4A2AB8D & 1) == 0 )
+  if ( (byte_4A57D98 & 1) == 0 )
   {
-    sub_1B761C0(&PanelUniqueIDUtil_TypeInfo, v1);
-    byte_4A2AB8D = 1;
+    sub_1B885B0(&PanelUniqueIDUtil_TypeInfo);
+    byte_4A57D98 = 1;
   }
   PanelUniqueIDUtil_TypeInfo->static_fields->V_INDEX_SHIFT = 10000;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall PanelUniqueIDUtil__GetID(int32_t hIndex, int32_t vIndex, const MethodInfo *method)
 {
   PanelUniqueIDUtil_c *v5; // x0
 
-  if ( (byte_4A2AB8B & 1) == 0 )
+  if ( (byte_4A57D96 & 1) == 0 )
   {
-    sub_1B761C0(&PanelUniqueIDUtil_TypeInfo, *(_QWORD *)&vIndex);
-    byte_4A2AB8B = 1;
+    sub_1B885B0(&PanelUniqueIDUtil_TypeInfo);
+    byte_4A57D96 = 1;
   }
   v5 = PanelUniqueIDUtil_TypeInfo;
   if ( !PanelUniqueIDUtil_TypeInfo->_2.cctor_finished )
@@ -31,24 +28,22 @@ int32_t __fastcall PanelUniqueIDUtil__GetID(int32_t hIndex, int32_t vIndex, cons
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall PanelUniqueIDUtil__HasID(
         int32_t hIndex,
         int32_t vIndex,
         System_Int32_array *uniqueIds,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   int32_t ID; // w0
 
-  if ( (byte_4A2AB8C & 1) == 0 )
+  if ( (byte_4A57D97 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Array_IndexOf_int___, *(_QWORD *)&vIndex);
-    sub_1B761C0(&PanelUniqueIDUtil_TypeInfo, v7);
-    byte_4A2AB8C = 1;
+    sub_1B885B0(&Method_System_Array_IndexOf_int___);
+    sub_1B885B0(&PanelUniqueIDUtil_TypeInfo);
+    byte_4A57D97 = 1;
   }
   if ( !PanelUniqueIDUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PanelUniqueIDUtil_TypeInfo);
   ID = PanelUniqueIDUtil__GetID(hIndex, vIndex, (const MethodInfo *)uniqueIds);
-  return System_Array__IndexOf_int_(uniqueIds, ID, (const MethodInfo_2F5CB30 *)Method_System_Array_IndexOf_int___) >= 0;
+  return System_Array__IndexOf_int_(uniqueIds, ID, (const MethodInfo_2F7A3D8 *)Method_System_Array_IndexOf_int___) >= 0;
 }

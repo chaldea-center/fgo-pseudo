@@ -10,7 +10,7 @@ void __fastcall LimitCountIconComponent__Clear(LimitCountIconComponent_o *this, 
 
   limitCountBase = this->fields.limitCountBase;
   if ( !limitCountBase )
-    sub_1B7641C(0LL, method);
+    sub_1B8880C(0LL, method);
   UnityEngine_GameObject__SetActive(limitCountBase, 0, 0LL);
 }
 
@@ -23,19 +23,18 @@ void __fastcall LimitCountIconComponent__Set(
         const MethodInfo *method)
 {
   LimitCountIconComponent_o *v6; // x20
-  __int64 v7; // x1
   struct UISprite_array *limitCountSpriteList; // x8
   int max_length; // w21
-  int32_t v10; // w22
-  struct UISprite_array *v11; // x8
-  System_String_o **v12; // x8
+  int32_t v9; // w22
+  struct UISprite_array *v10; // x8
+  System_String_o **v11; // x8
 
   v6 = this;
-  if ( (byte_4A2D44C & 1) == 0 )
+  if ( (byte_4A5A66A & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_20150/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
-    this = (LimitCountIconComponent_o *)sub_1B761C0(&StringLiteral_20149/*"icon_limit_off"*/, v7);
-    byte_4A2D44C = 1;
+    sub_1B885B0(&StringLiteral_20157/*"icon_limit_on"*/);
+    this = (LimitCountIconComponent_o *)sub_1B885B0(&StringLiteral_20156/*"icon_limit_off"*/);
+    byte_4A5A66A = 1;
   }
   if ( limitMax <= 0 )
   {
@@ -56,33 +55,33 @@ void __fastcall LimitCountIconComponent__Set(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     if ( max_length >= 1 )
     {
-      v10 = 0;
+      v9 = 0;
       while ( 1 )
       {
-        v11 = v6->fields.limitCountSpriteList;
-        if ( !v11 )
+        v10 = v6->fields.limitCountSpriteList;
+        if ( !v10 )
           break;
-        if ( v10 >= v11->max_length )
-          sub_1B76424(this, *(_QWORD *)&limitCount);
-        this = (LimitCountIconComponent_o *)v11->m_Items[v10];
+        if ( v9 >= v10->max_length )
+          sub_1B88814(this, *(_QWORD *)&limitCount);
+        this = (LimitCountIconComponent_o *)v10->m_Items[v9];
         if ( !this )
           break;
-        if ( v10 >= limitCount )
-          v12 = (System_String_o **)&StringLiteral_20149/*"icon_limit_off"*/;
+        if ( v9 >= limitCount )
+          v11 = (System_String_o **)&StringLiteral_20156/*"icon_limit_off"*/;
         else
-          v12 = (System_String_o **)&StringLiteral_20150/*"icon_limit_on"*/;
-        UISprite__set_spriteName((UISprite_o *)this, *v12, 0LL);
-        if ( max_length == ++v10 )
+          v11 = (System_String_o **)&StringLiteral_20157/*"icon_limit_on"*/;
+        UISprite__set_spriteName((UISprite_o *)this, *v11, 0LL);
+        if ( max_length == ++v9 )
           return;
       }
 LABEL_18:
-      sub_1B7641C(this, *(_QWORD *)&limitCount);
+      sub_1B8880C(this, *(_QWORD *)&limitCount);
     }
   }
 }
 
 
-void __fastcall LimitCountIconComponent__Set_37999888(
+void __fastcall LimitCountIconComponent__Set_38181316(
         LimitCountIconComponent_o *this,
         LimitCountIconComponent_o *limitCountIcon,
         const MethodInfo *method)
@@ -126,7 +125,7 @@ void __fastcall LimitCountIconComponent__Set_37999888(
         break;
       if ( v8 >= v10->max_length )
 LABEL_16:
-        sub_1B76424(this, limitCountIcon);
+        sub_1B88814(this, limitCountIcon);
       v11 = v10->m_Items[v8];
       if ( !v11 )
         break;
@@ -138,6 +137,6 @@ LABEL_16:
         return;
     }
 LABEL_15:
-    sub_1B7641C(this, limitCountIcon);
+    sub_1B8880C(this, limitCountIcon);
   }
 }

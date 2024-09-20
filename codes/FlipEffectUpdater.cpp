@@ -26,10 +26,10 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
   UnityEngine_Transform_o *v13; // x21
   UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_4A2D408 & 1) == 0 )
+  if ( (byte_4A5A626 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2D408 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5A626 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -55,35 +55,35 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     v11 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0LL);
     v12 = this->fields.mTrans;
-    if ( !byte_4A28BB1 )
+    if ( !byte_4A55CE1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4A28BB1 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4A55CE1 = 1;
     }
     if ( !v12 )
       goto LABEL_24;
     UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     v13 = *p_mTrans;
-    if ( !byte_4A28BB1 )
+    if ( !byte_4A55CE1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4A28BB1 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4A55CE1 = 1;
     }
     if ( !v13 )
       goto LABEL_24;
     UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     v14 = *p_mTrans;
-    if ( !byte_4A28BB6 )
+    if ( !byte_4A55CE6 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4A28BB6 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4A55CE6 = 1;
     }
     if ( !v14
       || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
           (parent = *p_mTrans) == 0LL) )
     {
 LABEL_24:
-      sub_1B7641C(parent, v6);
+      sub_1B8880C(parent, v6);
     }
     UnityEngine_Transform__set_parent(parent, v11, 0LL);
   }
@@ -98,5 +98,5 @@ void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const Method
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

@@ -1,13 +1,13 @@
 void __fastcall UserEventCooltimeRewardEntity___ctor(UserEventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2EB53 & 1) == 0 )
+  if ( (byte_4A5BD83 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A2EB53 = 1;
+    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
+    byte_4A5BD83 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_30FF5F8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,7 +19,6 @@ int64_t __fastcall UserEventCooltimeRewardEntity__CollectedAt(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventCooltimeRewardEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
@@ -27,17 +26,17 @@ System_String_o *__fastcall UserEventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4A2EB51 & 1) == 0 )
+  if ( (byte_4A5BD81 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___, *(_QWORD *)&eventId);
-    byte_4A2EB51 = 1;
+    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+    byte_4A5BD81 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            spotId,
            lv,
-           (const MethodInfo_2E610B4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_2E7E5B4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
@@ -60,23 +59,22 @@ EventCooltimeRewardEntity_o *__fastcall UserEventCooltimeRewardEntity__GetEventC
         UserEventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
   EventCooltimeRewardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A2EB52 & 1) == 0 )
+  if ( (byte_4A5BD82 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, method);
-    sub_1B761C0(&DataManager_TypeInfo, v3);
-    byte_4A2EB52 = 1;
+    sub_1B885B0(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+    sub_1B885B0(&DataManager_TypeInfo);
+    byte_4A5BD82 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E623B4 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_EventCooltimeRewardMaster___);
   if ( !Master_object )
-    sub_1B7641C(0LL, v5);
+    sub_1B8880C(0LL, v4);
   EventCooltimeRewardMaster__TryGetEntity(
     (EventCooltimeRewardMaster_o *)Master_object,
     &entity,

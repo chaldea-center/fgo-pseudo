@@ -1,14 +1,14 @@
 void __fastcall UserQuestRecordMaster___ctor(UserQuestRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2ECC8 & 1) == 0 )
+  if ( (byte_4A5BEF8 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__, method);
-    byte_4A2ECC8 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
+    byte_4A5BEF8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     60,
-    (const MethodInfo_30FFA98 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
+    (const MethodInfo_311DC4C *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string___ctor__);
 }
 
 
@@ -20,14 +20,13 @@ UserQuestRecordEntity_o *__fastcall UserQuestRecordMaster__GetEntity(
         int32_t recordType,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A2ECC6 & 1) == 0 )
+  if ( (byte_4A5BEF6 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__, userId);
-    sub_1B761C0(&UserQuestRecordEntity_TypeInfo, v9);
-    byte_4A2ECC6 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
+    sub_1B885B0(&UserQuestRecordEntity_TypeInfo);
+    byte_4A5BEF6 = 1;
   }
   if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
@@ -35,7 +34,7 @@ UserQuestRecordEntity_o *__fastcall UserQuestRecordMaster__GetEntity(
   return (UserQuestRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_30FFAD8 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
+                                      (const MethodInfo_311DC8C *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__GetEntity__);
 }
 
 
@@ -54,10 +53,10 @@ void __fastcall UserQuestRecordMaster__GetKnockdownRecordinfo(
   UserQuestRecordEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v8 = this;
-  if ( (byte_4A2ECCA & 1) == 0 )
+  if ( (byte_4A5BEFA & 1) == 0 )
   {
-    this = (UserQuestRecordMaster_o *)sub_1B761C0(&UserQuestRecordEntity_TypeInfo, userId);
-    byte_4A2ECCA = 1;
+    this = (UserQuestRecordMaster_o *)sub_1B885B0(&UserQuestRecordEntity_TypeInfo);
+    byte_4A5BEFA = 1;
   }
   entity = 0LL;
   if ( !knockdownInfo )
@@ -78,7 +77,7 @@ void __fastcall UserQuestRecordMaster__GetKnockdownRecordinfo(
         (this = (UserQuestRecordMaster_o *)entity) == 0LL) )
   {
 LABEL_11:
-    sub_1B7641C(this, userId);
+    sub_1B8880C(this, userId);
   }
   knockdownInfo->fields.totalDamage = UserQuestRecordEntity__getRecordLong(
                                         entity,
@@ -103,10 +102,10 @@ int64_t __fastcall UserQuestRecordMaster__GetMaxTurnDamage(
   UserQuestRecordEntity_c *v13; // x0
   UserQuestRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A2ECC9 & 1) == 0 )
+  if ( (byte_4A5BEF9 & 1) == 0 )
   {
-    sub_1B761C0(&UserQuestRecordEntity_TypeInfo, userId);
-    byte_4A2ECC9 = 1;
+    sub_1B885B0(&UserQuestRecordEntity_TypeInfo);
+    byte_4A5BEF9 = 1;
   }
   entity = 0LL;
   v10 = UserQuestRecordMaster__TryGetEntity(this, &entity, userId, questId, 1, v4);
@@ -118,7 +117,7 @@ int64_t __fastcall UserQuestRecordMaster__GetMaxTurnDamage(
     if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
     if ( !v12 )
-      sub_1B7641C(v13, v8);
+      sub_1B8880C(v13, v8);
     return UserQuestRecordEntity__getRecordLong(
              v12,
              UserQuestRecordEntity_TypeInfo->static_fields->KEY_RECORD_TURN_MAX_DAMAGE,
@@ -138,14 +137,13 @@ bool __fastcall UserQuestRecordMaster__TryGetEntity(
         int32_t recordType,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A2ECC7 & 1) == 0 )
+  if ( (byte_4A5BEF7 & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__, entity);
-    sub_1B761C0(&UserQuestRecordEntity_TypeInfo, v11);
-    byte_4A2ECC7 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
+    sub_1B885B0(&UserQuestRecordEntity_TypeInfo);
+    byte_4A5BEF7 = 1;
   }
   if ( !UserQuestRecordEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserQuestRecordEntity_TypeInfo);
@@ -154,5 +152,5 @@ bool __fastcall UserQuestRecordMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30FFB28 *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_311DCDC *)Method_DataMasterBase_UserQuestRecordMaster__UserQuestRecordEntity__string__TryGetEntity__);
 }

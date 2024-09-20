@@ -13,10 +13,10 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_4A31636 & 1) == 0 )
+  if ( (byte_4A5E891 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1266/*"1"*/, item);
-    byte_4A31636 = 1;
+    sub_1B885B0(&StringLiteral_1266/*"1"*/);
+    byte_4A5E891 = 1;
   }
   if ( item )
   {
@@ -33,7 +33,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
         return;
       }
 LABEL_10:
-      sub_1B7641C(selectImgObj, item);
+      sub_1B8880C(selectImgObj, item);
     }
     UnityEngine_GameObject__SetActive(selectImgObj, 0, 0LL);
   }
@@ -46,29 +46,26 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   ServantFaceIconComponent_o *icon; // x0
-  bool v11; // w1
-  bool v12; // w1
+  bool v8; // w1
+  bool v9; // w1
   UILabel_o *maskLabel; // x21
-  const MethodInfo *v14; // x4
+  const MethodInfo *v11; // x4
 
-  if ( (byte_4A31635 & 1) == 0 )
+  if ( (byte_4A5E890 & 1) == 0 )
   {
-    sub_1B761C0(&LocalizationManager_TypeInfo, item);
-    sub_1B761C0(&StringLiteral_9289/*"NOT_SELECT_MAX_EQUIP"*/, v7);
-    sub_1B761C0(&StringLiteral_1/*""*/, v8);
-    sub_1B761C0(&StringLiteral_1266/*"1"*/, v9);
-    byte_4A31635 = 1;
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_9292/*"NOT_SELECT_MAX_EQUIP"*/);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    sub_1B885B0(&StringLiteral_1266/*"1"*/);
+    byte_4A5E890 = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_38;
-    ServantFaceIconComponent__Set_38046420(
+    ServantFaceIconComponent__Set_38226284(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -80,16 +77,16 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
     icon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
     if ( !icon )
       goto LABEL_38;
-    v11 = item->fields.isSwapLock ? !item->fields.isLock : item->fields.isLock;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)icon, v11, 0LL);
+    v8 = item->fields.isSwapLock ? !item->fields.isLock : item->fields.isLock;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)icon, v8, 0LL);
     icon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
     if ( !icon )
       goto LABEL_38;
     icon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
     if ( !icon )
       goto LABEL_38;
-    v12 = item->fields.isSwapChoice ? !item->fields.isChoice : item->fields.isChoice;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)icon, v12, 0LL);
+    v9 = item->fields.isSwapChoice ? !item->fields.isChoice : item->fields.isChoice;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)icon, v9, 0LL);
     icon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
     if ( !icon )
       goto LABEL_38;
@@ -123,7 +120,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         maskLabel = this->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9289/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
+        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9292/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
         if ( !maskLabel )
           goto LABEL_38;
         UILabel__set_text(maskLabel, (System_String_o *)icon, 0LL);
@@ -140,7 +137,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         this->fields.nameLabel,
         item->fields._EquipedSvtId_k__BackingField,
         item->fields._EquipedSvtId_k__BackingField != item->fields._BaseSvtId_k__BackingField,
-        v14);
+        v11);
     }
     if ( item->fields.isSelect )
     {
@@ -156,7 +153,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         }
       }
 LABEL_38:
-      sub_1B7641C(icon, item);
+      sub_1B8880C(icon, item);
     }
   }
 }

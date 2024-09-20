@@ -1,16 +1,14 @@
 void __fastcall UserInterruptionQuestMaster___ctor(UserInterruptionQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2F020 & 1) == 0 )
+  if ( (byte_4A5C253 & 1) == 0 )
   {
-    sub_1B761C0(
-      &Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string___ctor__,
-      method);
-    byte_4A2F020 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string___ctor__);
+    byte_4A5C253 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     487,
-    (const MethodInfo_30FFA98 *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string___ctor__);
+    (const MethodInfo_311DC4C *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string___ctor__);
 }
 
 
@@ -23,18 +21,16 @@ UserInterruptionQuestEntity_o *__fastcall UserInterruptionQuestMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A2F021 & 1) == 0 )
+  if ( (byte_4A5C254 & 1) == 0 )
   {
-    sub_1B761C0(
-      &Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__GetEntity__,
-      userId);
-    byte_4A2F021 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__GetEntity__);
+    byte_4A5C254 = 1;
   }
   PK = (Il2CppObject *)UserInterruptionQuestEntity__CreatePK(userId, questId, phase, 0LL);
   return (UserInterruptionQuestEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_30FFAD8 *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__GetEntity__);
+                                            (const MethodInfo_311DC8C *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +44,15 @@ bool __fastcall UserInterruptionQuestMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A2F022 & 1) == 0 )
+  if ( (byte_4A5C255 & 1) == 0 )
   {
-    sub_1B761C0(
-      &Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__TryGetEntity__,
-      entity);
-    byte_4A2F022 = 1;
+    sub_1B885B0(&Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__TryGetEntity__);
+    byte_4A5C255 = 1;
   }
   PK = (Il2CppObject *)UserInterruptionQuestEntity__CreatePK(userId, questId, phase, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_30FFB28 *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__TryGetEntity__);
+           (const MethodInfo_311DCDC *)Method_DataMasterBase_UserInterruptionQuestMaster__UserInterruptionQuestEntity__string__TryGetEntity__);
 }

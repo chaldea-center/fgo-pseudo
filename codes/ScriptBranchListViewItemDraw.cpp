@@ -11,37 +11,36 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   System_String_o *title; // x1
   UILabel_o *titleTextLabel; // x0
   UILabel_o *commentTextLabel; // x22
   Il2CppObject *Component_object; // x22
-  float v12; // s0
-  float v13; // s3
-  float v14; // s1
-  float v15; // s2
-  const MethodInfo *v16; // x1
+  float v11; // s0
+  float v12; // s3
+  float v13; // s1
+  float v14; // s2
+  const MethodInfo *v15; // x1
   bool IsFlagOn; // w0
   UIWidget_o *checkSprite; // x21
-  const MethodInfo *v19; // x1
-  float v20; // s0
-  float v21; // s3
-  float v22; // s1
-  float v23; // s2
+  const MethodInfo *v18; // x1
+  float v19; // s0
+  float v20; // s3
+  float v21; // s1
+  float v22; // s2
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
-  int32_t v25; // w1
+  int32_t v24; // w1
 
-  if ( (byte_4A2B7E5 & 1) == 0 )
+  if ( (byte_4A589F3 & 1) == 0 )
   {
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A2B7E5 = 1;
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A589F3 = 1;
   }
   if ( !item || !mode )
   {
     this->fields.drawItem = 0LL;
     p_drawItem = &this->fields.drawItem;
-    v25 = 0;
+    v24 = 0;
     goto LABEL_28;
   }
   title = item->fields.title;
@@ -68,7 +67,7 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -79,30 +78,30 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
   }
   titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-  v12 = mode == 1 ? 0.5 : 1.0;
+  v11 = mode == 1 ? 0.5 : 1.0;
   if ( !titleTextLabel )
     goto LABEL_29;
-  v13 = 1.0;
-  v14 = v12;
-  v15 = v12;
-  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)&v12, 0LL);
-  IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v16);
+  v12 = 1.0;
+  v13 = v11;
+  v14 = v11;
+  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)&v11, 0LL);
+  IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v15);
   checkSprite = (UIWidget_o *)this->fields.checkSprite;
   this->fields.checkFlag = IsFlagOn;
-  titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, v19);
-  v20 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
+  titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, v18);
+  v19 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1B7641C(titleTextLabel, title);
-  v21 = 1.0;
-  v22 = v20;
-  v23 = v20;
-  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v20, 0LL);
+    sub_1B8880C(titleTextLabel, title);
+  v20 = 1.0;
+  v21 = v19;
+  v22 = v19;
+  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v19, 0LL);
   this->fields.drawItem = item;
   p_drawItem = &this->fields.drawItem;
-  v25 = (int)item;
+  v24 = (int)item;
 LABEL_28:
-  sub_1B76164((ServantStatusBattleListViewItem_o *)p_drawItem, v25, mode, (int32_t)method);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)p_drawItem, v24, mode, (int32_t)method);
 }
 
 
@@ -144,7 +143,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
     v6 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1B7641C(drawItem, method);
+    sub_1B8880C(drawItem, method);
   v7 = 1.0;
   v8 = v6;
   v9 = v6;

@@ -4,7 +4,6 @@ void __fastcall TradeStartRequest___ctor(TradeStartRequest_o *this, const Method
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall TradeStartRequest__beginRequest(
         TradeStartRequest_o *this,
         int32_t eventId,
@@ -13,41 +12,36 @@ void __fastcall TradeStartRequest__beginRequest(
         int32_t tradeGoodsNum,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-
-  if ( (byte_4A2F8BF & 1) == 0 )
+  if ( (byte_4A5CAF3 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_19126/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B761C0(&StringLiteral_24017/*"tradeGoodsNum"*/, v11);
-    sub_1B761C0(&StringLiteral_24018/*"tradeStoreIdx"*/, v12);
-    sub_1B761C0(&StringLiteral_24016/*"tradeGoodsId"*/, v13);
-    byte_4A2F8BF = 1;
+    sub_1B885B0(&StringLiteral_19132/*"eventId"*/);
+    sub_1B885B0(&StringLiteral_24030/*"tradeGoodsNum"*/);
+    sub_1B885B0(&StringLiteral_24031/*"tradeStoreIdx"*/);
+    sub_1B885B0(&StringLiteral_24029/*"tradeGoodsId"*/);
+    byte_4A5CAF3 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19126/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24018/*"tradeStoreIdx"*/, tradeStoreIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24016/*"tradeGoodsId"*/, tradeGoodsId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24017/*"tradeGoodsNum"*/, tradeGoodsNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19132/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24031/*"tradeStoreIdx"*/, tradeStoreIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24029/*"tradeGoodsId"*/, tradeGoodsId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24030/*"tradeGoodsNum"*/, tradeGoodsNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall TradeStartRequest__getURL(TradeStartRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A2F8BE & 1) == 0 )
+  if ( (byte_4A5CAF2 & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_19120/*"event/tradeStart"*/, v2);
-    byte_4A2F8BE = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_19126/*"event/tradeStart"*/);
+    byte_4A5CAF2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_19120/*"event/tradeStart"*/, 0LL);
+  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_19126/*"event/tradeStart"*/, 0LL);
 }
 
 
@@ -56,34 +50,32 @@ void __fastcall TradeStartRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  ResponseData_o *v8; // x20
+  ResponseData_o *v5; // x0
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x1
+  System_String_o *v8; // x1
 
-  if ( (byte_4A2F8C0 & 1) == 0 )
+  if ( (byte_4A5CAF4 & 1) == 0 )
   {
-    sub_1B761C0(&JsonManager_TypeInfo, responseList);
-    sub_1B761C0(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
-    byte_4A2F8C0 = 1;
+    sub_1B885B0(&JsonManager_TypeInfo);
+    sub_1B885B0(&ResponseCommandKind_TypeInfo);
+    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
+    byte_4A5CAF4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(129, responseList, 0LL);
-  if ( v7
-    && (v8 = v7, ResponseData__checkError_40940600(v7, 0LL))
-    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
+  v5 = ResponseCommandKind__SearchData(129, responseList, 0LL);
+  if ( v5
+    && (v6 = v5, ResponseData__checkError_41126424(v5, 0LL))
+    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v8 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_22046/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22055/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v8, 0LL);
 }

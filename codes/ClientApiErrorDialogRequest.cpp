@@ -6,38 +6,35 @@ void __fastcall ClientApiErrorDialogRequest__beginRequest(
         bool isSendLogDetail,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
+  const MethodInfo *v11; // x3
+  __int64 v12; // x0
   __int64 v13; // x1
   const MethodInfo *v14; // x3
-  __int64 v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x3
-  System_String_o *v18; // x2
-  const MethodInfo *v19; // x1
+  System_String_o *v15; // x2
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4A2F754 & 1) == 0 )
+  if ( (byte_4A5C988 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_19052/*"errorMessage"*/, errorTitle);
-    sub_1B761C0(&StringLiteral_21193/*"logDetail"*/, v11);
-    sub_1B761C0(&StringLiteral_19053/*"errorTitle"*/, v12);
-    sub_1B761C0(&StringLiteral_1/*""*/, v13);
-    byte_4A2F754 = 1;
+    sub_1B885B0(&StringLiteral_19058/*"errorMessage"*/);
+    sub_1B885B0(&StringLiteral_21200/*"logDetail"*/);
+    sub_1B885B0(&StringLiteral_19059/*"errorTitle"*/);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5C988 = 1;
   }
-  RequestBase__addField_40941128(
+  RequestBase__addField_41126952(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19053/*"errorTitle"*/,
+    (System_String_o *)StringLiteral_19059/*"errorTitle"*/,
     errorTitle,
     (const MethodInfo *)logDetail);
-  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_19052/*"errorMessage"*/, errorMessage, v14);
+  RequestBase__addField_41126952((RequestBase_o *)this, (System_String_o *)StringLiteral_19058/*"errorMessage"*/, errorMessage, v11);
   if ( !this )
-    sub_1B7641C(v15, v16);
+    sub_1B8880C(v12, v13);
   if ( isSendLogDetail )
-    v18 = logDetail;
+    v15 = logDetail;
   else
-    v18 = (System_String_o *)StringLiteral_1/*""*/;
-  RequestBase__addField_40941128((RequestBase_o *)this, (System_String_o *)StringLiteral_21193/*"logDetail"*/, v18, v17);
-  RequestBase__beginRequest((RequestBase_o *)this, v19);
+    v15 = (System_String_o *)StringLiteral_1/*""*/;
+  RequestBase__addField_41126952((RequestBase_o *)this, (System_String_o *)StringLiteral_21200/*"logDetail"*/, v15, v14);
+  RequestBase__beginRequest((RequestBase_o *)this, v16);
 }
 
 
@@ -45,10 +42,10 @@ System_String_o *__fastcall ClientApiErrorDialogRequest__getMockData(
         ClientApiErrorDialogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2F753 & 1) == 0 )
+  if ( (byte_4A5C987 & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1/*""*/, method);
-    byte_4A2F753 = 1;
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A5C987 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -58,19 +55,18 @@ System_String_o *__fastcall ClientApiErrorDialogRequest__getURL(
         ClientApiErrorDialogRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A2F752 & 1) == 0 )
+  if ( (byte_4A5C986 & 1) == 0 )
   {
-    sub_1B761C0(&NetworkManager_TypeInfo, method);
-    sub_1B761C0(&StringLiteral_4529/*"ClientApi/ErrorDialog"*/, v2);
-    byte_4A2F752 = 1;
+    sub_1B885B0(&NetworkManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_4530/*"ClientApi/ErrorDialog"*/);
+    byte_4A5C986 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61535060(BaseUrl, (System_String_o *)StringLiteral_4529/*"ClientApi/ErrorDialog"*/, 0LL);
+  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_4530/*"ClientApi/ErrorDialog"*/, 0LL);
 }
 
 
@@ -79,39 +75,37 @@ void __fastcall ClientApiErrorDialogRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
+  ResponseData_o *v5; // x0
+  const MethodInfo *v6; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v10; // x9
+  __int64 *v8; // x9
 
-  if ( (byte_4A2F755 & 1) == 0 )
+  if ( (byte_4A5C989 & 1) == 0 )
   {
-    sub_1B761C0(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B761C0(&StringLiteral_22216/*"ok"*/, v5);
-    sub_1B761C0(&StringLiteral_22046/*"ng"*/, v6);
-    byte_4A2F755 = 1;
+    sub_1B885B0(&ResponseCommandKind_TypeInfo);
+    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
+    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
+    byte_4A5C989 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(118, responseList, 0LL);
-  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
+  v5 = ResponseCommandKind__SearchData(118, responseList, 0LL);
+  if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22216/*"ok"*/;
+    v8 = &StringLiteral_22225/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22046/*"ng"*/;
+    v8 = &StringLiteral_22055/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v10,
+    *v8,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

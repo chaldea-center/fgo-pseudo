@@ -13,37 +13,36 @@ void __fastcall BattlePointGaugeCellTypeComponent__UpdateProgressGauge(
         BattlePointPhaseEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *progressGaugeCells; // x0
-  int32_t v7; // w21
+  int32_t v6; // w21
 
-  if ( (byte_4A30ECF & 1) == 0 )
+  if ( (byte_4A5E11E & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, entity);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5);
-    byte_4A30ECF = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4A5E11E = 1;
   }
   progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
   if ( !progressGaugeCells )
 LABEL_9:
-    sub_1B7641C(progressGaugeCells, entity);
-  v7 = 0;
-  while ( v7 < progressGaugeCells->fields._size )
+    sub_1B8880C(progressGaugeCells, entity);
+  v6 = 0;
+  while ( v6 < progressGaugeCells->fields._size )
   {
     progressGaugeCells = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         progressGaugeCells,
-                                                                        v7,
-                                                                        (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                        v6,
+                                                                        (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( entity )
     {
       if ( progressGaugeCells )
       {
         UnityEngine_GameObject__SetActive(
           (UnityEngine_GameObject_o *)progressGaugeCells,
-          v7 < entity->fields.phase,
+          v6 < entity->fields.phase,
           0LL);
         progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
-        ++v7;
+        ++v6;
         if ( progressGaugeCells )
           continue;
       }
@@ -57,15 +56,14 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         BattlePointGaugeCellTypeComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   BattlePointGaugeSetting_o *setting; // x0
-  int32_t v5; // w20
+  int32_t v4; // w20
 
-  if ( (byte_4A30ECE & 1) == 0 )
+  if ( (byte_4A5E11D & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
-    byte_4A30ECE = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4A5E11D = 1;
   }
   setting = this->fields.setting;
   if ( !setting
@@ -73,17 +71,17 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         (setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells) == 0LL) )
   {
 LABEL_8:
-    sub_1B7641C(setting, method);
+    sub_1B8880C(setting, method);
   }
-  v5 = 0;
-  while ( v5 < SLODWORD(setting->fields.sprite) )
+  v4 = 0;
+  while ( v4 < SLODWORD(setting->fields.sprite) )
   {
     System_Collections_Generic_List_object___get_Item(
       (System_Collections_Generic_List_object__o *)setting,
-      v5,
-      (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      v4,
+      (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells;
-    ++v5;
+    ++v4;
     if ( !setting )
       goto LABEL_8;
   }

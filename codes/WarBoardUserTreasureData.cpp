@@ -8,33 +8,31 @@ WarBoardUserTreasureData_o *__fastcall WarBoardUserTreasureData__FromJson(
         System_String_o *json,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  Il2CppObject *v5; // x19
+  Il2CppObject *v3; // x19
   WarBoardUserTreasureData_o *result; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   WarBoardUserTreasureData_c *klass; // x8
 
-  if ( (byte_4A2BD7A & 1) == 0 )
+  if ( (byte_4A58F88 & 1) == 0 )
   {
-    sub_1B761C0(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___, method);
-    sub_1B761C0(&JsonManager_TypeInfo, v3);
-    sub_1B761C0(&StringLiteral_16018/*"[{0}]"*/, v4);
-    byte_4A2BD7A = 1;
+    sub_1B885B0(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
+    sub_1B885B0(&JsonManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_16024/*"[{0}]"*/);
+    byte_4A58F88 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16018/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16024/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserTreasureData_o *)JsonManager__DeserializeArray_object_(
-                                           v5,
-                                           (const MethodInfo_2EC89B0 *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
+                                           v3,
+                                           (const MethodInfo_2EE5F40 *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
   if ( result )
   {
     klass = result[1].klass;
     if ( klass )
     {
       if ( !(_DWORD)klass )
-        sub_1B76424(result, v7);
+        sub_1B88814(result, v5);
       return (WarBoardUserTreasureData_o *)result[1].monitor;
     }
     else
@@ -50,10 +48,10 @@ System_String_o *__fastcall WarBoardUserTreasureData__ToJson(
         WarBoardUserTreasureData_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2BD79 & 1) == 0 )
+  if ( (byte_4A58F87 & 1) == 0 )
   {
-    sub_1B761C0(&JsonManager_TypeInfo, method);
-    byte_4A2BD79 = 1;
+    sub_1B885B0(&JsonManager_TypeInfo);
+    byte_4A58F87 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

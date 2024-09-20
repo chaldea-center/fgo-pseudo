@@ -4,61 +4,56 @@ void __fastcall RandomUtility___ctor(RandomUtility_o *this, const MethodInfo *me
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall RandomUtility__GetRandomRangeIndex(
         System_Int32_array *weightArray,
         int32_t defValue,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  WeightRate_int__o *v5; // x20
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  WeightRate_int__o *v9; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
-  __int64 v12; // x8
-  unsigned __int64 v13; // x21
-  int32_t v15; // w1
+  __int64 v8; // x8
+  unsigned __int64 v9; // x21
+  int32_t v11; // w1
 
-  if ( (byte_4A2D482 & 1) == 0 )
+  if ( (byte_4A5A6A0 & 1) == 0 )
   {
-    sub_1B761C0(&Method_WeightRate_int___ctor__, *(_QWORD *)&defValue);
-    sub_1B761C0(&Method_WeightRate_int__getData__, v5);
-    sub_1B761C0(&Method_WeightRate_int__getTotalWeight__, v6);
-    sub_1B761C0(&Method_WeightRate_int__setWeight__, v7);
-    sub_1B761C0(&WeightRate_int__TypeInfo, v8);
-    byte_4A2D482 = 1;
+    sub_1B885B0(&Method_WeightRate_int___ctor__);
+    sub_1B885B0(&Method_WeightRate_int__getData__);
+    sub_1B885B0(&Method_WeightRate_int__getTotalWeight__);
+    sub_1B885B0(&Method_WeightRate_int__setWeight__);
+    sub_1B885B0(&WeightRate_int__TypeInfo);
+    byte_4A5A6A0 = 1;
   }
   if ( !weightArray || !*(_QWORD *)&weightArray->max_length )
     return defValue;
-  v9 = (WeightRate_int__o *)sub_1B7640C(WeightRate_int__TypeInfo);
-  WeightRate_int____ctor(v9, (const MethodInfo_38B2814 *)Method_WeightRate_int___ctor__);
-  v12 = *(_QWORD *)&weightArray->max_length;
-  if ( (int)v12 >= 1 )
+  v5 = (WeightRate_int__o *)sub_1B887FC(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v5, (const MethodInfo_38DB260 *)Method_WeightRate_int___ctor__);
+  v8 = *(_QWORD *)&weightArray->max_length;
+  if ( (int)v8 >= 1 )
   {
-    v13 = 0LL;
+    v9 = 0LL;
     while ( 1 )
     {
-      if ( v13 >= (unsigned int)v12 )
-        sub_1B76424(v10, v11);
-      if ( !v9 )
+      if ( v9 >= (unsigned int)v8 )
+        sub_1B88814(v6, v7);
+      if ( !v5 )
         break;
       WeightRate_int___setWeight(
+        v5,
+        weightArray->m_Items[v9 + 1],
         v9,
-        weightArray->m_Items[v13 + 1],
-        v13,
-        (const MethodInfo_38B1D30 *)Method_WeightRate_int__setWeight__);
-      LODWORD(v12) = weightArray->max_length;
-      if ( (__int64)++v13 >= (int)v12 )
+        (const MethodInfo_38DA77C *)Method_WeightRate_int__setWeight__);
+      LODWORD(v8) = weightArray->max_length;
+      if ( (__int64)++v9 >= (int)v8 )
         goto LABEL_13;
     }
 LABEL_15:
-    sub_1B7641C(v10, v11);
+    sub_1B8880C(v6, v7);
   }
-  if ( !v9 )
+  if ( !v5 )
     goto LABEL_15;
 LABEL_13:
-  v15 = UnityEngine_Random__Range_69247148(0, v9->fields.totalweight, 0LL);
-  return WeightRate_int___getData(v9, v15, (const MethodInfo_38B21A4 *)Method_WeightRate_int__getData__);
+  v11 = UnityEngine_Random__Range_69419120(0, v5->fields.totalweight, 0LL);
+  return WeightRate_int___getData(v5, v11, (const MethodInfo_38DABF0 *)Method_WeightRate_int__getData__);
 }

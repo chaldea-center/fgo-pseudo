@@ -10,16 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__C
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  CharaGraphFilterLogicBase_o *v2; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4A2D344 & 1) == 0 )
+  if ( (byte_4A5A55F & 1) == 0 )
   {
-    sub_1B761C0(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method);
-    byte_4A2D344 = 1;
+    sub_1B885B0(&ServantCollectionCharaGraphFilterLogic_TypeInfo);
+    byte_4A5A55F = 1;
   }
-  v2 = (CharaGraphFilterLogicBase_o *)sub_1B7640C(ServantCollectionCharaGraphFilterLogic_TypeInfo);
-  CharaGraphFilterLogicBase___ctor(v2, 0LL);
-  return v2;
+  v2 = (Il2CppObject *)sub_1B887FC(ServantCollectionCharaGraphFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -27,17 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__Cre
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  CharaGraphSortLogicBase_o *v2; // x19
-  const MethodInfo *v3; // x1
+  ServantCollectionCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_4A2D343 & 1) == 0 )
+  if ( (byte_4A5A55E & 1) == 0 )
   {
-    sub_1B761C0(&ServantCollectionCharaGraphSortLogic_TypeInfo, method);
-    byte_4A2D343 = 1;
+    sub_1B885B0(&ServantCollectionCharaGraphSortLogic_TypeInfo);
+    byte_4A5A55E = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1B7640C(ServantCollectionCharaGraphSortLogic_TypeInfo);
-  CharaGraphSortLogicBase___ctor(v2, v3);
-  return v2;
+  v2 = (ServantCollectionCharaGraphSortLogic_o *)sub_1B887FC(ServantCollectionCharaGraphSortLogic_TypeInfo);
+  ServantCollectionCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -77,10 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitSvtCollection__get_SortSaveK
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2D342 & 1) == 0 )
+  if ( (byte_4A5A55D & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_1508/*"5"*/, method);
-    byte_4A2D342 = 1;
+    sub_1B885B0(&StringLiteral_1508/*"5"*/);
+    byte_4A5A55D = 1;
   }
   return (System_String_o *)StringLiteral_1508/*"5"*/;
 }

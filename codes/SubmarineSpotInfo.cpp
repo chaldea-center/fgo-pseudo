@@ -14,10 +14,10 @@ void __fastcall SubmarineSpotInfo___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&v8->fields, (int32_t)spot, v9, v10);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&v8->fields, (int32_t)spot, v9, v10);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_1B76164((ServantStatusBattleListViewItem_o *)v8, (int32_t)eventPanelSpotEntity, v11, v12);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)v8, (int32_t)eventPanelSpotEntity, v11, v12);
   LODWORD(v8->monitor) = panelId;
 }
 
@@ -56,7 +56,7 @@ void __fastcall SubmarineSpotInfo__set_EventPanelSpotEntity(
   int32_t v3; // w3
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_1B76164(
+  sub_1B88554(
     (ServantStatusBattleListViewItem_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -78,5 +78,5 @@ void __fastcall SubmarineSpotInfo__set_SpotEntity(
   int32_t v3; // w3
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

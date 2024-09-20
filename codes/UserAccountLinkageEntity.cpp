@@ -1,13 +1,13 @@
 void __fastcall UserAccountLinkageEntity___ctor(UserAccountLinkageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2EADA & 1) == 0 )
+  if ( (byte_4A5BD0A & 1) == 0 )
   {
-    sub_1B761C0(&Method_DataEntityBase_long___ctor__, method);
-    byte_4A2EADA = 1;
+    sub_1B885B0(&Method_DataEntityBase_long___ctor__);
+    byte_4A5BD0A = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_30FF5C8 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_311D77C *)Method_DataEntityBase_long___ctor__);
 }
 
 

@@ -1,7 +1,7 @@
 void __fastcall MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_BACE60;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_BB45D0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -39,7 +39,7 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
   v19 = layer;
   locationPrefix = this->fields.locationPrefix;
   v5 = System_Int32__ToString((int32_t)&v19, 0LL);
-  v6 = System_String__Concat_61535060(locationPrefix, v5, 0LL);
+  v6 = System_String__Concat_61707032(locationPrefix, v5, 0LL);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
@@ -51,10 +51,10 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
     v12 = v10 - 4;
     if ( (int)v10 - 4 >= max_length )
     {
-      if ( !byte_4A28BB1 )
+      if ( !byte_4A55CE1 )
       {
-        sub_1B761C0(&UnityEngine_Vector3_TypeInfo, v7);
-        byte_4A28BB1 = 1;
+        sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4A55CE1 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       x = static_fields->zeroVector.fields.x;
@@ -79,10 +79,10 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
   v18 = this->fields.cameraLocationObjectList;
   if ( !v18 )
 LABEL_8:
-    sub_1B7641C(v6, v7);
+    sub_1B8880C(v6, v7);
   if ( v12 >= v18->max_length )
 LABEL_15:
-    sub_1B76424(v6, v7);
+    sub_1B88814(v6, v7);
   *(UnityEngine_Vector3_o *)&x = GameObjectExtensions__GetLocalPosition(
                                    (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
                                    v7);
@@ -105,16 +105,16 @@ void __fastcall MapModelComponent__PlayAnimation(
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 5) = endAction,
-        sub_1B76164(
+        sub_1B88554(
           (ServantStatusBattleListViewItem_o *)(effectAction + 40),
           (int32_t)endAction,
           (int32_t)endAction,
           (int32_t)method),
         (effectAction = (char *)this->fields.animationComponent) == 0LL) )
   {
-    sub_1B7641C(effectAction, animationName);
+    sub_1B8880C(effectAction, animationName);
   }
-  SimpleAnimation__Play_63672732((SimpleAnimation_o *)effectAction, animationName, 0LL);
+  SimpleAnimation__Play_63844704((SimpleAnimation_o *)effectAction, animationName, 0LL);
 }
 
 

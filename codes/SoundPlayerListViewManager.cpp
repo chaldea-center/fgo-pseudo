@@ -1,12 +1,17 @@
 void __fastcall SoundPlayerListViewManager___ctor(SoundPlayerListViewManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A29A7B & 1) == 0 )
+  int32_t v2; // w2
+  int32_t v3; // w3
+  int32_t v5; // w1
+
+  if ( (byte_4A56DCD & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_5850/*"Effect/Soundplayer"*/, method);
-    byte_4A29A7B = 1;
+    sub_1B885B0(&StringLiteral_5851/*"Effect/Soundplayer"*/);
+    byte_4A56DCD = 1;
   }
-  this->fields.EFFECT_ASSET_PATH_NAME = (struct System_String_o *)StringLiteral_5850/*"Effect/Soundplayer"*/;
-  sub_1B76164(&this->fields.EFFECT_ASSET_PATH_NAME);
+  v5 = StringLiteral_5851/*"Effect/Soundplayer"*/;
+  this->fields.EFFECT_ASSET_PATH_NAME = (struct System_String_o *)StringLiteral_5851/*"Effect/Soundplayer"*/;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.EFFECT_ASSET_PATH_NAME, v5, v2, v3);
   ListViewManager___ctor((ListViewManager_o *)this, 0LL);
 }
 
@@ -21,7 +26,7 @@ int32_t __fastcall SoundPlayerListViewManager__CompareBgmEntity(
   int32_t v5; // w9
 
   if ( !a || !b )
-    sub_1B7641C(this, a);
+    sub_1B8880C(this, a);
   priority = a->fields.priority;
   v5 = b->fields.priority;
   if ( priority > v5 )
@@ -34,66 +39,71 @@ int32_t __fastcall SoundPlayerListViewManager__CompareBgmEntity(
 
 void __fastcall SoundPlayerListViewManager__CreateList(SoundPlayerListViewManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
+  int32_t v2; // w2
+  int32_t v3; // w3
   struct UnityEngine_GameObject_o **p_playEffect; // x20
   UnityEngine_Object_o *playEffect; // x21
-  const MethodInfo *v15; // x2
+  const MethodInfo *v7; // x2
   Il2CppObject *EffetData; // x21
-  __int64 v17; // x1
+  Il2CppObject *v9; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
+  __int64 v12; // x1
   UnityEngine_GameObject_o *Instance; // x0
   int32_t klass; // w26
-  System_Object_array *v20; // x21
-  System_Comparison_T__o *v21; // x22
-  __int64 isRelease; // x0
-  int32_t v23; // w22
-  il2cpp_array_size_t v24; // w28
-  Il2CppClass **v25; // x23
-  BgmEntity_o **v26; // x23
-  UnityEngine_GameObject_o *v27; // t1
-  BgmEntity_o *v28; // x24
-  SoundPlayerListViewItem_o *v29; // x23
-  const MethodInfo *v30; // x3
+  System_Object_array *v15; // x21
+  System_Comparison_T__o *v16; // x22
+  _BOOL8 isRelease; // x0
+  int32_t v18; // w22
+  il2cpp_array_size_t v19; // w28
+  Il2CppClass **v20; // x23
+  BgmEntity_o **v21; // x23
+  UnityEngine_GameObject_o *v22; // t1
+  BgmEntity_o *v23; // x24
+  __int64 v24; // x23
+  const MethodInfo *v25; // x3
+  int32_t v26; // w2
+  int32_t v27; // w3
+  struct UnityEngine_GameObject_o *v28; // x1
+  int32_t v29; // w2
+  int32_t v30; // w3
   __int64 v31; // x8
   _QWORD *v32; // x9
   __int64 klass_low; // x10
   __int64 v34; // x8
   SoundPlayerListViewItem_o *v35; // x0
   int32_t max_length; // w1
-  Il2CppObject *v37; // x21
+  SoundPlayerListViewItem_o *v37; // x21
   const MethodInfo *v38; // x3
-  __int64 v39; // x8
-  _QWORD *v40; // x9
-  __int64 v41; // x10
-  __int64 v42; // x8
+  int32_t v39; // w2
+  int32_t v40; // w3
+  struct UnityEngine_GameObject_o *v41; // x1
+  int32_t v42; // w2
+  int32_t v43; // w3
+  __int64 v44; // x8
+  _QWORD *v45; // x9
+  __int64 v46; // x10
+  __int64 v47; // x8
 
-  if ( (byte_4A29A71 & 1) == 0 )
+  if ( (byte_4A56DC3 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Array_Sort_BgmEntity___, method);
-    sub_1B761C0(&System_Comparison_BgmEntity__TypeInfo, v3);
-    sub_1B761C0(&Method_DataManager_GetMasterData_BgmMaster___, v4);
-    sub_1B761C0(&Method_DataMasterBase_getEntitys_BgmEntity___, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__Add__, v6);
-    sub_1B761C0(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B761C0(&SoundPlayerListViewItem_TypeInfo, v10);
-    sub_1B761C0(&Method_SoundPlayerListViewManager_CompareBgmEntity__, v11);
-    sub_1B761C0(&StringLiteral_18849/*"ef_soundplay"*/, v12);
-    byte_4A29A71 = 1;
+    sub_1B885B0(&Method_System_Array_Sort_BgmEntity___);
+    sub_1B885B0(&System_Comparison_BgmEntity__TypeInfo);
+    sub_1B885B0(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_1B885B0(&Method_DataMasterBase_getEntitys_BgmEntity___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1B885B0(&SoundPlayerListViewItem_TypeInfo);
+    sub_1B885B0(&Method_SoundPlayerListViewManager_CompareBgmEntity__);
+    sub_1B885B0(&StringLiteral_18855/*"ef_soundplay"*/);
+    byte_4A56DC3 = 1;
   }
   p_playEffect = &this->fields.playEffect;
   *(_QWORD *)&this->fields.canPlaySoundNum = 0LL;
   this->fields.playEffect = 0LL;
-  sub_1B76164(&this->fields.playEffect);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.playEffect, 0, v2, v3);
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   playEffect = (UnityEngine_Object_o *)this->fields.playEffect;
@@ -103,66 +113,68 @@ void __fastcall SoundPlayerListViewManager__CreateList(SoundPlayerListViewManage
   {
     EffetData = (Il2CppObject *)SoundPlayerListViewManager__getEffetData(
                                   this,
-                                  (System_String_o *)StringLiteral_18849/*"ef_soundplay"*/,
-                                  v15);
+                                  (System_String_o *)StringLiteral_18855/*"ef_soundplay"*/,
+                                  v7);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    *p_playEffect = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                                         EffetData,
-                                                         (const MethodInfo_2EE5790 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1B76164(&this->fields.playEffect);
+    v9 = UnityEngine_Object__Instantiate_object_(
+           EffetData,
+           (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    *p_playEffect = (struct UnityEngine_GameObject_o *)v9;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.playEffect, (int32_t)v9, v10, v11);
     Instance = *p_playEffect;
     if ( !*p_playEffect )
       goto LABEL_36;
     UnityEngine_GameObject__SetActive(Instance, 0, 0LL);
     GameObjectExtensions__SafeSetParent(this->fields.playEffect, (UnityEngine_Component_o *)this, 0LL);
   }
-  Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)Instance,
-                                           (const MethodInfo_2E62408 *)Method_DataManager_GetMasterData_BgmMaster___);
+                                           (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_BgmMaster___);
   if ( !Instance )
     goto LABEL_36;
   Instance = (UnityEngine_GameObject_o *)DataMasterBase__getEntitys_object_(
                                            (DataMasterBase_o *)Instance,
-                                           (const MethodInfo_2E62C9C *)Method_DataMasterBase_getEntitys_BgmEntity___);
+                                           (const MethodInfo_2E8019C *)Method_DataMasterBase_getEntitys_BgmEntity___);
   if ( !Instance )
     goto LABEL_36;
   klass = (int32_t)Instance[1].klass;
   this->fields.playSoundMax = klass;
-  v20 = (System_Object_array *)Instance;
-  v21 = (System_Comparison_T__o *)sub_1B7640C(System_Comparison_BgmEntity__TypeInfo);
-  System_Comparison_object____ctor(v21, (Il2CppObject *)this, Method_SoundPlayerListViewManager_CompareBgmEntity__, 0LL);
-  System_Array__Sort_object__48432360(v20, v21, (const MethodInfo_2E304E8 *)Method_System_Array_Sort_BgmEntity___);
+  v15 = (System_Object_array *)Instance;
+  v16 = (System_Comparison_T__o *)sub_1B887FC(System_Comparison_BgmEntity__TypeInfo);
+  System_Comparison_object____ctor(v16, (Il2CppObject *)this, Method_SoundPlayerListViewManager_CompareBgmEntity__, 0LL);
+  System_Array__Sort_object__48551928(v15, v16, (const MethodInfo_2E4D7F8 *)Method_System_Array_Sort_BgmEntity___);
   if ( klass >= 1 )
   {
-    v23 = 0;
-    v24 = 0;
+    v18 = 0;
+    v19 = 0;
     do
     {
-      if ( v24 >= v20->max_length )
+      if ( v19 >= v15->max_length )
 LABEL_37:
-        sub_1B76424(isRelease, v17);
-      v25 = &v20->obj.klass + (int)v24;
-      v27 = (UnityEngine_GameObject_o *)v25[4];
-      v26 = (BgmEntity_o **)(v25 + 4);
-      Instance = v27;
-      if ( !v27 )
+        sub_1B88814(isRelease, v12);
+      v20 = &v15->obj.klass + (int)v19;
+      v22 = (UnityEngine_GameObject_o *)v20[4];
+      v21 = (BgmEntity_o **)(v20 + 4);
+      Instance = v22;
+      if ( !v22 )
         goto LABEL_36;
       isRelease = BgmEntity__isRelease((BgmEntity_o *)Instance, 0LL);
-      if ( (isRelease & 1) != 0 )
+      if ( isRelease )
       {
-        if ( v24 >= v20->max_length )
+        if ( v19 >= v15->max_length )
           goto LABEL_37;
-        v28 = *v26;
-        v29 = (SoundPlayerListViewItem_o *)sub_1B7640C(SoundPlayerListViewItem_TypeInfo);
-        SoundPlayerListViewItem___ctor(v29, v23, v28, v30);
-        if ( !v29 )
+        v23 = *v21;
+        v24 = sub_1B887FC(SoundPlayerListViewItem_TypeInfo);
+        SoundPlayerListViewItem___ctor((SoundPlayerListViewItem_o *)v24, v18, v23, v25);
+        if ( !v24 )
           goto LABEL_36;
-        v29->fields._playEffect_k__BackingField = *p_playEffect;
-        sub_1B76164(&v29->fields._playEffect_k__BackingField);
+        v28 = *p_playEffect;
+        *(_QWORD *)(v24 + 128) = *p_playEffect;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v24 + 128), (int32_t)v28, v26, v27);
         Instance = (UnityEngine_GameObject_o *)this->fields.itemList;
         if ( !Instance )
           goto LABEL_36;
@@ -176,18 +188,18 @@ LABEL_37:
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Instance,
-            (Il2CppObject *)v29,
-            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+            (Il2CppObject *)v24,
+            *(const MethodInfo_34FD834 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
         }
         else
         {
           v34 = v31 + 8 * klass_low;
           LODWORD(Instance[1].klass) = klass_low + 1;
-          *(_QWORD *)(v34 + 32) = v29;
-          isRelease = sub_1B76164(v34 + 32);
+          *(_QWORD *)(v34 + 32) = v24;
+          sub_1B88554((ServantStatusBattleListViewItem_o *)(v34 + 32), v24, v29, v30);
         }
-        ++v23;
-        if ( !v29->fields.openType )
+        ++v18;
+        if ( !*(_DWORD *)(v24 + 136) )
           ++this->fields.canPlaySoundNum;
       }
       else
@@ -195,60 +207,62 @@ LABEL_37:
         --this->fields.playSoundMax;
       }
     }
-    while ( klass != ++v24 );
+    while ( klass != ++v19 );
   }
-  v35 = (SoundPlayerListViewItem_o *)sub_1B7640C(SoundPlayerListViewItem_TypeInfo);
-  max_length = v20->max_length;
-  v37 = (Il2CppObject *)v35;
+  v35 = (SoundPlayerListViewItem_o *)sub_1B887FC(SoundPlayerListViewItem_TypeInfo);
+  max_length = v15->max_length;
+  v37 = v35;
   SoundPlayerListViewItem___ctor(v35, max_length, 0LL, v38);
   if ( !v37
-    || (v37[8].klass = (Il2CppClass *)*p_playEffect,
-        sub_1B76164(&v37[8]),
+    || (v41 = *p_playEffect,
+        v37->fields._playEffect_k__BackingField = *p_playEffect,
+        sub_1B88554(
+          (ServantStatusBattleListViewItem_o *)&v37->fields._playEffect_k__BackingField,
+          (int32_t)v41,
+          v39,
+          v40),
         (Instance = (UnityEngine_GameObject_o *)this->fields.itemList) == 0LL)
-    || (v39 = *(_QWORD *)&Instance->fields.m_CachedPtr,
-        v40 = Method_System_Collections_Generic_List_ListViewItem__Add__,
+    || (v44 = *(_QWORD *)&Instance->fields.m_CachedPtr,
+        v45 = Method_System_Collections_Generic_List_ListViewItem__Add__,
         ++HIDWORD(Instance[1].klass),
-        !v39) )
+        !v44) )
   {
 LABEL_36:
-    sub_1B7641C(Instance, v17);
+    sub_1B8880C(Instance, v12);
   }
-  v41 = SLODWORD(Instance[1].klass);
-  if ( (unsigned int)v41 >= *(_DWORD *)(v39 + 24) )
+  v46 = SLODWORD(Instance[1].klass);
+  if ( (unsigned int)v46 >= *(_DWORD *)(v44 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Instance,
-      v37,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+      (Il2CppObject *)v37,
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
   }
   else
   {
-    v42 = v39 + 8 * v41;
-    LODWORD(Instance[1].klass) = v41 + 1;
-    *(_QWORD *)(v42 + 32) = v37;
-    sub_1B76164(v42 + 32);
+    v47 = v44 + 8 * v46;
+    LODWORD(Instance[1].klass) = v46 + 1;
+    *(_QWORD *)(v47 + 32) = v37;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v47 + 32), (int32_t)v37, v42, v43);
   }
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 SoundPlayerListViewItem_o *__fastcall SoundPlayerListViewManager__GetItem(
         SoundPlayerListViewManager_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   SoundPlayerListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A29A77 & 1) == 0 )
+  if ( (byte_4A56DC9 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, *(_QWORD *)&index);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
-    sub_1B761C0(&SoundPlayerListViewItem_TypeInfo, v6);
-    byte_4A29A77 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1B885B0(&SoundPlayerListViewItem_TypeInfo);
+    byte_4A56DC9 = 1;
   }
   result = (SoundPlayerListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -258,7 +272,7 @@ SoundPlayerListViewItem_o *__fastcall SoundPlayerListViewManager__GetItem(
     result = (SoundPlayerListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)result,
                                             index,
-                                            (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                            (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( !result )
       return result;
     methodPtr_low = LOBYTE(SoundPlayerListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -292,13 +306,15 @@ void __fastcall SoundPlayerListViewManager__OnMoveEnd(SoundPlayerListViewManager
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
   __int64 v7; // x1
-  struct UIScrollView_o *v8; // x0
+  int32_t v8; // w2
+  int32_t v9; // w3
+  struct UIScrollView_o *v10; // x0
   struct System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_4A29A7A & 1) == 0 )
+  if ( (byte_4A56DCC & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A29A7A = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A56DCC = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -313,17 +329,17 @@ void __fastcall SoundPlayerListViewManager__OnMoveEnd(SoundPlayerListViewManager
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
       {
-        v8 = this->fields.scrollView;
-        if ( !v8 )
-          sub_1B7641C(0LL, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._8_UpdateScrollbars.method)(
-          v8,
+        v10 = this->fields.scrollView;
+        if ( !v10 )
+          sub_1B8880C(0LL, v7);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._8_UpdateScrollbars.method)(
+          v10,
           1LL,
-          v8->klass->vtable._9_SetDragAmount.methodPtr);
+          v10->klass->vtable._9_SetDragAmount.methodPtr);
       }
       callbackFunc2 = this->fields.callbackFunc2;
       this->fields.callbackFunc2 = 0LL;
-      sub_1B76164(&this->fields.callbackFunc2);
+      sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2, 0, v8, v9);
       if ( callbackFunc2 )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc2->fields.m_target)(
           callbackFunc2->fields.original_method_info,
@@ -340,48 +356,41 @@ void __fastcall SoundPlayerListViewManager__RequestListObject(
         float delay,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  __int64 v15; // x1
+  __int64 v8; // x1
   int32_t size; // w8
   Il2CppObject *current; // x21
-  System_Action_o *v18; // x22
-  __int64 v19; // x0
-  __int64 v20; // x1
-  const MethodInfo *v21; // x3
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v11; // x22
+  __int64 v12; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4A29A78 & 1) == 0 )
+  if ( (byte_4A56DCA & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__, v8);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__get_Current__, v9);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__, v10);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__, v11);
-    sub_1B761C0(&Method_SoundPlayerListViewManager_OnMoveEnd__, v12);
-    sub_1B761C0(&StringLiteral_9932/*"OnMoveEnd"*/, v13);
-    byte_4A29A78 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__get_Current__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__);
+    sub_1B885B0(&Method_SoundPlayerListViewManager_OnMoveEnd__);
+    sub_1B885B0(&StringLiteral_9935/*"OnMoveEnd"*/);
+    byte_4A56DCA = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v15, 0, sizeof(v15));
   ObjectList = (System_Collections_Generic_List_object__o *)SoundPlayerListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B7641C(0LL, v15);
+    sub_1B8880C(0LL, v8);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9932/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9935/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -389,75 +398,68 @@ void __fastcall SoundPlayerListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       ObjectList,
-      (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
+      (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v22,
-              (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__) )
+              &v15,
+              (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__) )
     {
-      current = v22.fields._current;
-      v18 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-      System_Action___ctor(v18, (Il2CppObject *)this, Method_SoundPlayerListViewManager_OnMoveEnd__, 0LL);
+      current = v15.fields._current;
+      v11 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+      System_Action___ctor(v11, (Il2CppObject *)this, Method_SoundPlayerListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B7641C(v19, v20);
-      SoundPlayerListViewObject__Init_31454992((SoundPlayerListViewObject_o *)current, mode, v18, delay, v21);
+        sub_1B8880C(v12, v13);
+      SoundPlayerListViewObject__Init_31762904((SoundPlayerListViewObject_o *)current, mode, v11, delay, v14);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v22,
-      (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
+      &v15,
+      (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SoundPlayerListViewManager__RequestListObject_31453964(
+void __fastcall SoundPlayerListViewManager__RequestListObject_31761876(
         SoundPlayerListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  __int64 v13; // x1
+  __int64 v6; // x1
   int32_t size; // w8
   Il2CppObject *current; // x21
-  System_Action_o *v16; // x22
-  __int64 v17; // x0
-  __int64 v18; // x1
-  const MethodInfo *v19; // x3
-  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v9; // x22
+  __int64 v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4A29A79 & 1) == 0 )
+  if ( (byte_4A56DCB & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__, v6);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__get_Current__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__, v8);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__, v9);
-    sub_1B761C0(&Method_SoundPlayerListViewManager_OnMoveEnd__, v10);
-    sub_1B761C0(&StringLiteral_9932/*"OnMoveEnd"*/, v11);
-    byte_4A29A79 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__get_Current__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__);
+    sub_1B885B0(&Method_SoundPlayerListViewManager_OnMoveEnd__);
+    sub_1B885B0(&StringLiteral_9935/*"OnMoveEnd"*/);
+    byte_4A56DCB = 1;
   }
-  memset(&v20, 0, sizeof(v20));
+  memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)SoundPlayerListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1B7641C(0LL, v13);
+    sub_1B8880C(0LL, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9932/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9935/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -465,23 +467,23 @@ void __fastcall SoundPlayerListViewManager__RequestListObject_31453964(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v20,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
+      (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v20,
-              (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__) )
+              &v13,
+              (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__MoveNext__) )
     {
-      current = v20.fields._current;
-      v16 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-      System_Action___ctor(v16, (Il2CppObject *)this, Method_SoundPlayerListViewManager_OnMoveEnd__, 0LL);
+      current = v13.fields._current;
+      v9 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+      System_Action___ctor(v9, (Il2CppObject *)this, Method_SoundPlayerListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1B7641C(v17, v18);
-      SoundPlayerListViewObject__Init_31455076((SoundPlayerListViewObject_o *)current, mode, v16, v19);
+        sub_1B8880C(v10, v11);
+      SoundPlayerListViewObject__Init_31762988((SoundPlayerListViewObject_o *)current, mode, v9, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v20,
-      (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
+      &v13,
+      (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewObject__Dispose__);
   }
 }
 
@@ -495,12 +497,16 @@ void __fastcall SoundPlayerListViewManager__SetMode(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1B76164(&this->fields.callbackFunc);
-  SoundPlayerListViewManager__SetMode_31453816(this, mode, v6);
+  sub_1B88554(
+    (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    (int32_t)callback,
+    (int32_t)method);
+  SoundPlayerListViewManager__SetMode_31761728(this, mode, v6);
 }
 
 
-void __fastcall SoundPlayerListViewManager__SetMode_31453816(
+void __fastcall SoundPlayerListViewManager__SetMode_31761728(
         SoundPlayerListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -511,11 +517,11 @@ void __fastcall SoundPlayerListViewManager__SetMode_31453816(
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0LL);
   if ( (unsigned int)(mode - 1) <= 2 )
-    SoundPlayerListViewManager__RequestListObject_31453964(this, mode + 1, v5);
+    SoundPlayerListViewManager__RequestListObject_31761876(this, mode + 1, v5);
 }
 
 
-void __fastcall SoundPlayerListViewManager__SetMode_31453912(
+void __fastcall SoundPlayerListViewManager__SetMode_31761824(
         SoundPlayerListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -524,8 +530,12 @@ void __fastcall SoundPlayerListViewManager__SetMode_31453912(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc2 = callback;
-  sub_1B76164(&this->fields.callbackFunc2);
-  SoundPlayerListViewManager__SetMode_31453816(this, mode, v6);
+  sub_1B88554(
+    (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc2,
+    (int32_t)callback,
+    (int32_t)callback,
+    (int32_t)method);
+  SoundPlayerListViewManager__SetMode_31761728(this, mode, v6);
 }
 
 
@@ -540,23 +550,23 @@ void __fastcall SoundPlayerListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4A29A76 & 1) == 0 )
+  if ( (byte_4A56DC8 & 1) == 0 )
   {
-    this = (SoundPlayerListViewManager_o *)sub_1B761C0(&SoundPlayerListViewObject_TypeInfo, obj);
-    byte_4A29A76 = 1;
+    this = (SoundPlayerListViewManager_o *)sub_1B885B0(&SoundPlayerListViewObject_TypeInfo);
+    byte_4A56DC8 = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(SoundPlayerListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (SoundPlayerListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != SoundPlayerListViewObject_TypeInfo )
   {
-    sub_1B7641C(this, obj);
+    sub_1B8880C(this, obj);
   }
   if ( v5->fields.initMode == 2 )
     v7 = 3;
   else
     v7 = 2;
-  SoundPlayerListViewObject__Init_31453504((SoundPlayerListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  SoundPlayerListViewObject__Init_31761416((SoundPlayerListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -583,10 +593,10 @@ void __fastcall SoundPlayerListViewManager__add_callbackFunc(
   SoundPlayerListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4A29A6B & 1) == 0 )
+  if ( (byte_4A56DBD & 1) == 0 )
   {
-    sub_1B761C0(&SoundPlayerListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4A29A6B = 1;
+    sub_1B885B0(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    byte_4A56DBD = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -598,13 +608,13 @@ void __fastcall SoundPlayerListViewManager__add_callbackFunc(
       if ( (SoundPlayerListViewManager_CallbackFunc_c *)v7->klass != SoundPlayerListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1BB16B0(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1BC3AA0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (SoundPlayerListViewManager_o *)sub_1B766DC(v7);
+  v10 = (SoundPlayerListViewManager_o *)sub_1B88ACC(v7);
   SoundPlayerListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -623,10 +633,10 @@ void __fastcall SoundPlayerListViewManager__add_callbackFunc2(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4A29A6D & 1) == 0 )
+  if ( (byte_4A56DBF & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, value);
-    byte_4A29A6D = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    byte_4A56DBF = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -638,13 +648,13 @@ void __fastcall SoundPlayerListViewManager__add_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1BB16B0(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1BC3AA0(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (SoundPlayerListViewManager_o *)sub_1B766DC(v7);
+  v10 = (SoundPlayerListViewManager_o *)sub_1B88ACC(v7);
   SoundPlayerListViewManager__remove_callbackFunc2(v10, v11, v12);
 }
 
@@ -654,10 +664,12 @@ void __fastcall SoundPlayerListViewManager__endloadEffect(
         AssetData_o *data,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+
   if ( data )
   {
     this->fields.effectAssetData = data;
-    sub_1B76164(&this->fields.effectAssetData);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.effectAssetData, (int32_t)data, (int32_t)method, v3);
   }
 }
 
@@ -677,17 +689,17 @@ UnityEngine_GameObject_o *__fastcall SoundPlayerListViewManager__getEffetData(
 {
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_4A29A75 & 1) == 0 )
+  if ( (byte_4A56DC7 & 1) == 0 )
   {
-    sub_1B761C0(&Method_AssetData_GetObject_GameObject____75903216, name);
-    byte_4A29A75 = 1;
+    sub_1B885B0(&Method_AssetData_GetObject_GameObject____76085352);
+    byte_4A56DC7 = 1;
   }
   result = (UnityEngine_GameObject_o *)this->fields.effectAssetData;
   if ( result )
-    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__48515452(
+    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__48635516(
                                          (AssetData_o *)result,
                                          name,
-                                         (const MethodInfo_2E4497C *)Method_AssetData_GetObject_GameObject____75903216);
+                                         (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_GameObject____76085352);
   return result;
 }
 
@@ -704,127 +716,121 @@ System_Collections_Generic_List_SoundPlayerListViewObject__o *__fastcall SoundPl
         SoundPlayerListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
-  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x21
-  _BOOL8 v15; // x0
-  __int64 v16; // x1
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v18; // x1
-  Il2CppObject *v19; // x21
+  const MethodInfo *v10; // x1
+  Il2CppObject *v11; // x21
   ListViewItem_o *Item; // x0
-  __int64 v21; // x1
-  _BOOL8 v22; // x0
-  __int64 v23; // x1
+  __int64 v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  _BOOL8 v16; // x0
+  __int64 v17; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v19; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v21; // x0
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4A29A70 & 1) == 0 )
+  if ( (byte_4A56DC2 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__, v6);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__, v8);
-    sub_1B761C0(&System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo, v9);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
-    byte_4A29A70 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A56DC2 = 1;
   }
-  memset(&v30, 0, sizeof(v30));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
+  memset(&v24, 0, sizeof(v24));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
+    v3,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B7641C(0LL, v12);
+    sub_1B8880C(0LL, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v29,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v30 = v29;
+    (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v24 = v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v30,
-            (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v24,
+            (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v30.fields._current;
+    current = v24.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v15 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v7 )
     {
       if ( !current )
-        sub_1B7641C(v15, v16);
+        sub_1B8880C(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
-      v19 = Component_object;
+                           (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
+      v11 = Component_object;
       if ( !Component_object )
-        sub_1B7641C(0LL, v18);
-      Item = (ListViewItem_o *)SoundPlayerListViewObject__GetItem((SoundPlayerListViewObject_o *)Component_object, v18);
+        sub_1B8880C(0LL, v10);
+      Item = (ListViewItem_o *)SoundPlayerListViewObject__GetItem((SoundPlayerListViewObject_o *)Component_object, v10);
       if ( !Item )
-        sub_1B7641C(0LL, v21);
+        sub_1B8880C(0LL, v13);
       if ( Item->fields.isTermination )
       {
-        v22 = ListViewManager__ClippingItem_40537020((ListViewManager_o *)this, Item, 0LL);
-        if ( v22 )
+        v16 = ListViewManager__ClippingItem_40722428((ListViewManager_o *)this, Item, 0LL);
+        if ( v16 )
         {
-          if ( !v11 )
-            sub_1B7641C(v22, v23);
-          items = v11->fields._items;
-          v25 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
-          ++v11->fields._version;
+          if ( !v3 )
+            sub_1B8880C(v16, v17);
+          items = v3->fields._items;
+          v19 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
+          ++v3->fields._version;
           if ( !items )
-            sub_1B7641C(v22, v23);
-          size = v11->fields._size;
+            sub_1B8880C(v16, v17);
+          size = v3->fields._size;
           if ( (unsigned int)size < items->max_length )
             goto LABEL_17;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
+            v3,
             v11,
-            v19,
-            *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            *(const MethodInfo_34FD834 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
       }
       else
       {
-        if ( !v11 )
-          sub_1B7641C(Item, v21);
-        items = v11->fields._items;
-        v25 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
-        ++v11->fields._version;
+        if ( !v3 )
+          sub_1B8880C(Item, v13);
+        items = v3->fields._items;
+        v19 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
+        ++v3->fields._version;
         if ( !items )
-          sub_1B7641C(Item, v21);
-        size = v11->fields._size;
+          sub_1B8880C(Item, v13);
+        size = v3->fields._size;
         if ( (unsigned int)size >= items->max_length )
           goto LABEL_21;
 LABEL_17:
-        v27 = &items->obj.klass + size;
-        v11->fields._size = size + 1;
-        v27[4] = (Il2CppClass *)v19;
-        sub_1B76164(v27 + 4);
+        v21 = &items->obj.klass + size;
+        v3->fields._size = size + 1;
+        v21[4] = (Il2CppClass *)v11;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v11, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v30,
-    (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_SoundPlayerListViewObject__o *)v11;
+    &v24,
+    (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_SoundPlayerListViewObject__o *)v3;
 }
 
 
@@ -832,107 +838,104 @@ System_Collections_Generic_List_SoundPlayerListViewObject__o *__fastcall SoundPl
         SoundPlayerListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
-  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v15; // x0
-  __int64 v16; // x1
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x0
-  Il2CppObject *v18; // x1
+  int32_t v10; // w2
+  int32_t v11; // w3
+  Il2CppObject *v12; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v20; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  Il2CppClass **v22; // x0
-  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v16; // x0
+  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4A29A6F & 1) == 0 )
+  if ( (byte_4A56DC1 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1B761C0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1B761C0(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___, v5);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__, v6);
-    sub_1B761C0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__, v8);
-    sub_1B761C0(&System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo, v9);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v10);
-    byte_4A29A6F = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
+    sub_1B885B0(&System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A56DC1 = 1;
   }
-  memset(&v25, 0, sizeof(v25));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B7640C(System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
+  memset(&v19, 0, sizeof(v19));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_SoundPlayerListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_34D6DA0 *)Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
+    v3,
+    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_SoundPlayerListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1B7641C(0LL, v12);
+    sub_1B8880C(0LL, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v18,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_34D80CC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v25 = v24;
+    (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v19 = v18;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v25,
-            (const MethodInfo_32568D8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v19,
+            (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v25.fields._current;
+    current = v19.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v15 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v7 )
     {
       if ( !current )
-        sub_1B7641C(v15, v16);
+        sub_1B8880C(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2EB19B8 *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
-      v18 = Component_object;
-      if ( !v11 )
-        sub_1B7641C(Component_object, Component_object);
-      items = v11->fields._items;
-      v20 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
-      ++v11->fields._version;
+                           (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewObject___);
+      v12 = Component_object;
+      if ( !v3 )
+        sub_1B8880C(Component_object, Component_object);
+      items = v3->fields._items;
+      v14 = Method_System_Collections_Generic_List_SoundPlayerListViewObject__Add__;
+      ++v3->fields._version;
       if ( !items )
-        sub_1B7641C(Component_object, Component_object);
-      size = v11->fields._size;
+        sub_1B8880C(Component_object, Component_object);
+      size = v3->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v11,
+          v3,
           Component_object,
-          *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          *(const MethodInfo_34FD834 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
       }
       else
       {
-        v22 = &items->obj.klass + size;
-        v11->fields._size = size + 1;
-        v22[4] = (Il2CppClass *)v18;
-        sub_1B76164(v22 + 4);
+        v16 = &items->obj.klass + size;
+        v3->fields._size = size + 1;
+        v16[4] = (Il2CppClass *)v12;
+        sub_1B88554((ServantStatusBattleListViewItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v25,
-    (const MethodInfo_32568D4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_SoundPlayerListViewObject__o *)v11;
+    &v19,
+    (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_SoundPlayerListViewObject__o *)v3;
 }
 
 
 void __fastcall SoundPlayerListViewManager__init(SoundPlayerListViewManager_o *this, const MethodInfo *method)
 {
+  int32_t v2; // w2
+  int32_t v3; // w3
+
   *(_QWORD *)&this->fields.canPlaySoundNum = 0LL;
   this->fields.playEffect = 0LL;
-  sub_1B76164(&this->fields.playEffect);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.playEffect, 0, v2, v3);
 }
 
 
@@ -941,41 +944,42 @@ void __fastcall SoundPlayerListViewManager__loadSoundPlayerEffect(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  Il2CppObject *v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
   System_String_o *EFFECT_ASSET_PATH_NAME; // x19
-  AssetLoader_LoadEndDataHandler_o *v12; // x20
+  AssetLoader_LoadEndDataHandler_o *v13; // x20
 
-  if ( (byte_4A29A73 & 1) == 0 )
+  if ( (byte_4A56DC5 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, callback);
-    sub_1B761C0(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_1B761C0(&Method_SoundPlayerListViewManager___c__DisplayClass24_0__loadSoundPlayerEffect_b__0__, v6);
-    sub_1B761C0(&SoundPlayerListViewManager___c__DisplayClass24_0_TypeInfo, v7);
-    byte_4A29A73 = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1B885B0(&Method_SoundPlayerListViewManager___c__DisplayClass24_0__loadSoundPlayerEffect_b__0__);
+    sub_1B885B0(&SoundPlayerListViewManager___c__DisplayClass24_0_TypeInfo);
+    byte_4A56DC5 = 1;
   }
-  v8 = (Il2CppObject *)sub_1B7640C(SoundPlayerListViewManager___c__DisplayClass24_0_TypeInfo);
-  System_Object___ctor(v8, 0LL);
-  if ( !v8 )
-    sub_1B7641C(v9, v10);
-  v8[1].klass = (Il2CppClass *)this;
-  sub_1B76164(&v8[1]);
-  v8[1].monitor = callback;
-  sub_1B76164(&v8[1].monitor);
+  v5 = sub_1B887FC(SoundPlayerListViewManager___c__DisplayClass24_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
+    sub_1B8880C(v6, v7);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  *(_QWORD *)(v5 + 24) = callback;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 24), (int32_t)callback, v10, v11);
   EFFECT_ASSET_PATH_NAME = this->fields.EFFECT_ASSET_PATH_NAME;
-  v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1B7640C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v12,
-    v8,
+    v13,
+    (Il2CppObject *)v5,
     Method_SoundPlayerListViewManager___c__DisplayClass24_0__loadSoundPlayerEffect_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(EFFECT_ASSET_PATH_NAME, v12, 1, 0LL);
+  AssetManager__loadAssetStorage(EFFECT_ASSET_PATH_NAME, v13, 1, 0LL);
 }
 
 
@@ -984,18 +988,19 @@ void __fastcall SoundPlayerListViewManager__onClickCheckListView(
         ListViewObject_o *obj,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
   struct SoundPlayerListViewManager_CallbackFunc_o *callbackFunc; // x20
-  __int64 v5; // x0
-  __int64 v6; // x1
+  __int64 v6; // x0
+  __int64 v7; // x1
   unsigned int Index; // w0
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0LL;
-  v5 = sub_1B76164(&this->fields.callbackFunc);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
   if ( callbackFunc )
   {
     if ( !obj )
-      sub_1B7641C(v5, v6);
+      sub_1B8880C(v6, v7);
     Index = ListViewObject__get_Index(obj, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
@@ -1011,18 +1016,19 @@ void __fastcall SoundPlayerListViewManager__onClickSelectListView(
         ListViewObject_o *obj,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
   struct SoundPlayerListViewManager_CallbackFunc_o *callbackFunc; // x20
-  __int64 v5; // x0
-  __int64 v6; // x1
+  __int64 v6; // x0
+  __int64 v7; // x1
   unsigned int Index; // w0
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0LL;
-  v5 = sub_1B76164(&this->fields.callbackFunc);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
   if ( callbackFunc )
   {
     if ( !obj )
-      sub_1B7641C(v5, v6);
+      sub_1B8880C(v6, v7);
     Index = ListViewObject__get_Index(obj, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
@@ -1037,28 +1043,29 @@ void __fastcall SoundPlayerListViewManager__releaseSoundPlayerEffect(
         SoundPlayerListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *playEffect; // x20
-  UnityEngine_Object_o *v5; // x21
+  UnityEngine_Object_o *v4; // x21
+  int32_t v5; // w2
+  int32_t v6; // w3
   System_String_o *EFFECT_ASSET_PATH_NAME; // x19
 
-  if ( (byte_4A29A74 & 1) == 0 )
+  if ( (byte_4A56DC6 & 1) == 0 )
   {
-    sub_1B761C0(&AssetManager_TypeInfo, method);
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A29A74 = 1;
+    sub_1B885B0(&AssetManager_TypeInfo);
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A56DC6 = 1;
   }
   playEffect = (UnityEngine_Object_o *)this->fields.playEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(playEffect, 0LL, 0LL) )
   {
-    v5 = (UnityEngine_Object_o *)this->fields.playEffect;
+    v4 = (UnityEngine_Object_o *)this->fields.playEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69287408(v5, 0LL);
+    UnityEngine_Object__Destroy_69459380(v4, 0LL);
     this->fields.playEffect = 0LL;
-    sub_1B76164(&this->fields.playEffect);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.playEffect, 0, v5, v6);
   }
   EFFECT_ASSET_PATH_NAME = this->fields.EFFECT_ASSET_PATH_NAME;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -1081,10 +1088,10 @@ void __fastcall SoundPlayerListViewManager__remove_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4A29A6C & 1) == 0 )
+  if ( (byte_4A56DBE & 1) == 0 )
   {
-    sub_1B761C0(&SoundPlayerListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4A29A6C = 1;
+    sub_1B885B0(&SoundPlayerListViewManager_CallbackFunc_TypeInfo);
+    byte_4A56DBE = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1096,13 +1103,13 @@ void __fastcall SoundPlayerListViewManager__remove_callbackFunc(
       if ( (SoundPlayerListViewManager_CallbackFunc_c *)v7->klass != SoundPlayerListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1BB16B0(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1BC3AA0(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (SoundPlayerListViewManager_o *)sub_1B766DC(v7);
+  v10 = (SoundPlayerListViewManager_o *)sub_1B88ACC(v7);
   SoundPlayerListViewManager__add_callbackFunc2(v10, v11, v12);
 }
 
@@ -1120,10 +1127,10 @@ void __fastcall SoundPlayerListViewManager__remove_callbackFunc2(
   SoundPlayerListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A29A6E & 1) == 0 )
+  if ( (byte_4A56DC0 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, value);
-    byte_4A29A6E = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    byte_4A56DC0 = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
@@ -1135,13 +1142,13 @@ void __fastcall SoundPlayerListViewManager__remove_callbackFunc2(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1BB16B0(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1BC3AA0(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (SoundPlayerListViewManager_o *)sub_1B766DC(v7);
+  v10 = (SoundPlayerListViewManager_o *)sub_1B88ACC(v7);
   SoundPlayerListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -1152,23 +1159,20 @@ void __fastcall SoundPlayerListViewManager__setUiApplyAllItem(
         System_String_o *playSoundName,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   System_Collections_Generic_List_object__o *itemList; // x0
   int size; // w24
-  int32_t v12; // w22
-  SoundPlayerListViewItem_o *v13; // x23
+  int32_t v9; // w22
+  SoundPlayerListViewItem_o *v10; // x23
   __int64 methodPtr_low; // x10
   Il2CppObject *syncRoot; // x29
 
-  if ( (byte_4A29A72 & 1) == 0 )
+  if ( (byte_4A56DC4 & 1) == 0 )
   {
-    sub_1B761C0(&Method_System_Collections_Generic_List_int__Contains__, isNewList);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v8);
-    sub_1B761C0(&SoundPlayerListViewItem_TypeInfo, v9);
-    byte_4A29A72 = 1;
+    sub_1B885B0(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1B885B0(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1B885B0(&SoundPlayerListViewItem_TypeInfo);
+    byte_4A56DC4 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
@@ -1176,16 +1180,16 @@ void __fastcall SoundPlayerListViewManager__setUiApplyAllItem(
   size = itemList->fields._size;
   if ( size >= 1 )
   {
-    v12 = 0;
+    v9 = 0;
     do
     {
       itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 itemList,
-                                                                v12,
-                                                                (const MethodInfo_34D7304 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                                v9,
+                                                                (const MethodInfo_34FD564 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !itemList )
         break;
-      v13 = (SoundPlayerListViewItem_o *)itemList;
+      v10 = (SoundPlayerListViewItem_o *)itemList;
       methodPtr_low = LOBYTE(SoundPlayerListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(itemList->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
         || (SoundPlayerListViewItem_c *)itemList->klass->_2.typeHierarchy[methodPtr_low - 1] != SoundPlayerListViewItem_TypeInfo )
@@ -1200,27 +1204,27 @@ void __fastcall SoundPlayerListViewManager__setUiApplyAllItem(
         if ( System_Collections_Generic_List_int___Contains(
                isNewList,
                (int32_t)syncRoot[1].klass,
-               (const MethodInfo_34BA928 *)Method_System_Collections_Generic_List_int__Contains__) )
+               (const MethodInfo_34E0B88 *)Method_System_Collections_Generic_List_int__Contains__) )
         {
-          v13->fields._isNew_k__BackingField = 0;
+          v10->fields._isNew_k__BackingField = 0;
         }
         if ( !System_String__IsNullOrEmpty(playSoundName, 0LL) )
         {
           itemList = (System_Collections_Generic_List_object__o *)syncRoot[1].monitor;
           if ( !itemList )
             break;
-          if ( System_String__Equals_61543376((System_String_o *)itemList, playSoundName, 0LL) )
-            v13->fields._isPlaySound_k__BackingField = 1;
+          if ( System_String__Equals_61715348((System_String_o *)itemList, playSoundName, 0LL) )
+            v10->fields._isPlaySound_k__BackingField = 1;
         }
-        SoundPlayerListViewItem__applyUi(v13, (const MethodInfo *)isNewList);
+        SoundPlayerListViewItem__applyUi(v10, (const MethodInfo *)isNewList);
       }
-      if ( size == ++v12 )
+      if ( size == ++v9 )
         return;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
     }
     while ( itemList );
 LABEL_20:
-    sub_1B7641C(itemList, isNewList);
+    sub_1B8880C(itemList, isNewList);
   }
 }
 
@@ -1243,15 +1247,15 @@ void __fastcall SoundPlayerListViewManager_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B76164(&this->fields.method);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B76280(v6) & 1) == 0 )
+  if ( (sub_1B88670(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B76438(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B762E8(v10, 0LL);
+      v10 = sub_1B88828(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B886D8(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1263,9 +1267,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19B70DC;
+  this->fields.m_target = (Il2CppObject *)sub_19C8664;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19B7084;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19C860C;
 }
 
 
@@ -1278,31 +1282,30 @@ System_IAsyncResult_o *__fastcall SoundPlayerListViewManager_CallbackFunc__Begin
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v14[3]; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v15; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v16; // [xsp+2Ch] [xbp-34h] BYREF
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x4
+  __int64 v13[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v14; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v15; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v15 = result;
-  v16 = kind;
-  if ( (byte_4A29A7C & 1) == 0 )
+  v14 = result;
+  v15 = kind;
+  if ( (byte_4A56DCE & 1) == 0 )
   {
-    sub_1B761C0(&int_TypeInfo, *(_QWORD *)&kind);
-    sub_1B761C0(&SoundPlayerListViewManager_ResultKind_TypeInfo, v9);
-    byte_4A29A7C = 1;
+    sub_1B885B0(&int_TypeInfo);
+    sub_1B885B0(&SoundPlayerListViewManager_ResultKind_TypeInfo);
+    byte_4A56DCE = 1;
   }
-  v14[2] = 0LL;
-  v14[0] = j_il2cpp_value_box_0(
+  v13[2] = 0LL;
+  v13[0] = j_il2cpp_value_box_0(
              SoundPlayerListViewManager_ResultKind_TypeInfo,
-             &v16,
+             &v15,
              *(_QWORD *)&result,
              callback,
              object);
-  v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1B76174(this, v14, callback, object);
+  v13[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14, v9, v10, v11);
+  return (System_IAsyncResult_o *)sub_1B88564(this, v13, callback, object);
 }
 
 
@@ -1311,7 +1314,7 @@ void __fastcall SoundPlayerListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B76178(result, 0LL, method);
+  sub_1B88568(result, 0LL, method);
 }
 
 
@@ -1342,16 +1345,21 @@ void __fastcall SoundPlayerListViewManager___c__DisplayClass24_0___loadSoundPlay
         AssetData_o *data,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
   struct SoundPlayerListViewManager_o *_4__this; // x8
   System_Action_o *callback; // x0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B7641C(this, data);
+    sub_1B8880C(this, data);
   if ( data )
   {
     _4__this->fields.effectAssetData = data;
-    sub_1B76164(&_4__this->fields.effectAssetData);
+    sub_1B88554(
+      (ServantStatusBattleListViewItem_o *)&_4__this->fields.effectAssetData,
+      (int32_t)data,
+      (int32_t)method,
+      v3);
   }
   callback = this->fields.callback;
   if ( callback )

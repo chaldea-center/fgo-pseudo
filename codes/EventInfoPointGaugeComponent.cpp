@@ -8,58 +8,55 @@ void __fastcall EventInfoPointGaugeComponent__Awake(EventInfoPointGaugeComponent
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  BalanceConfig_c *v8; // x0
+  BalanceConfig_c *v5; // x0
   int64_t UserEventActivityPointMax; // x8
   UISprite_o *gaugeBgSprite; // x20
-  const MethodInfo *v11; // x1
+  const MethodInfo *v8; // x1
   struct UISprite_o *gaugeBarSprite; // x0
-  const MethodInfo *v13; // x2
-  struct UISprite_o *v14; // x8
+  const MethodInfo *v10; // x2
+  struct UISprite_o *v11; // x8
 
-  if ( (byte_4A2F5F6 & 1) == 0 )
+  if ( (byte_4A5C794 & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, method);
-    sub_1B761C0(&BalanceConfig_TypeInfo, v5);
-    sub_1B761C0(&StringLiteral_19198/*"event_point_bar"*/, v6);
-    sub_1B761C0(&StringLiteral_19141/*"event_bg_bar"*/, v7);
-    byte_4A2F5F6 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&BalanceConfig_TypeInfo);
+    sub_1B885B0(&StringLiteral_19204/*"event_point_bar"*/);
+    sub_1B885B0(&StringLiteral_19147/*"event_bg_bar"*/);
+    byte_4A5C794 = 1;
   }
   *(_QWORD *)&this->fields._MainPoint_k__BackingField = 0LL;
-  v8 = BalanceConfig_TypeInfo;
+  v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v8 = BalanceConfig_TypeInfo;
+    v5 = BalanceConfig_TypeInfo;
   }
-  UserEventActivityPointMax = v8->static_fields->UserEventActivityPointMax;
+  UserEventActivityPointMax = v5->static_fields->UserEventActivityPointMax;
   this->fields.gaugeTweenHeight = 0LL;
   *(_QWORD *)&this->fields.maxPoint = (unsigned int)UserEventActivityPointMax;
   this->fields._GaugeStateId_k__BackingField = 1;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, 0, v2, v3);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, 0, v2, v3);
   gaugeBgSprite = this->fields.gaugeBgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(gaugeBgSprite, (System_String_o *)StringLiteral_19141/*"event_bg_bar"*/, 0LL);
+  AtlasManager__SetEventSprite(gaugeBgSprite, (System_String_o *)StringLiteral_19147/*"event_bg_bar"*/, 0LL);
   gaugeBarSprite = this->fields.gaugeBgSprite;
   if ( !gaugeBarSprite
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))gaugeBarSprite->klass->vtable._33_MakePixelPerfect.method)(
           gaugeBarSprite,
           gaugeBarSprite->klass->vtable._34_get_minWidth.methodPtr),
-        AtlasManager__SetEventSprite(this->fields.gaugeBarSprite, (System_String_o *)StringLiteral_19198/*"event_point_bar"*/, 0LL),
+        AtlasManager__SetEventSprite(this->fields.gaugeBarSprite, (System_String_o *)StringLiteral_19204/*"event_point_bar"*/, 0LL),
         (gaugeBarSprite = this->fields.gaugeBarSprite) == 0LL)
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))gaugeBarSprite->klass->vtable._33_MakePixelPerfect.method)(
           gaugeBarSprite,
           gaugeBarSprite->klass->vtable._34_get_minWidth.methodPtr),
-        EventInfoPointGaugeComponent__ChangeDispGauge(this, this->fields._GaugeStateId_k__BackingField, v13),
-        (v14 = this->fields.gaugeBarSprite) == 0LL) )
+        EventInfoPointGaugeComponent__ChangeDispGauge(this, this->fields._GaugeStateId_k__BackingField, v10),
+        (v11 = this->fields.gaugeBarSprite) == 0LL) )
   {
-    sub_1B7641C(gaugeBarSprite, v11);
+    sub_1B8880C(gaugeBarSprite, v8);
   }
-  this->fields.gaugeHeight = (float)v14->fields.mHeight;
-  EventInfoPointGaugeComponent__UpdateGaugeBarHeight(this, v11);
+  this->fields.gaugeHeight = (float)v11->fields.mHeight;
+  EventInfoPointGaugeComponent__UpdateGaugeBarHeight(this, v8);
 }
 
 
@@ -69,23 +66,21 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
         int32_t gaugeState,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   UnityEngine_GameObject_o *gaugeBaseObj; // x0
   UISprite_o *iconImg; // x21
-  System_String_o *v9; // x0
-  System_String_o *v10; // x22
+  System_String_o *v7; // x0
+  System_String_o *v8; // x22
   UISprite_o *gaugeFrameSprite; // x21
-  System_String_o *v12; // x0
-  System_String_o *v13; // x0
-  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v10; // x0
+  System_String_o *v11; // x0
+  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A2F5F9 & 1) == 0 )
+  if ( (byte_4A5C797 & 1) == 0 )
   {
-    sub_1B761C0(&AtlasManager_TypeInfo, *(_QWORD *)&gaugeState);
-    sub_1B761C0(&StringLiteral_19167/*"event_frame_"*/, v5);
-    sub_1B761C0(&StringLiteral_19163/*"event_emblem_icon_"*/, v6);
-    byte_4A2F5F9 = 1;
+    sub_1B885B0(&AtlasManager_TypeInfo);
+    sub_1B885B0(&StringLiteral_19173/*"event_frame_"*/);
+    sub_1B885B0(&StringLiteral_19169/*"event_emblem_icon_"*/);
+    byte_4A5C797 = 1;
   }
   gaugeBaseObj = this->fields.gaugeBaseObj;
   if ( !gaugeBaseObj )
@@ -98,12 +93,12 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
     {
       UnityEngine_GameObject__SetActive(gaugeBaseObj, 1, 0LL);
       iconImg = this->fields.iconImg;
-      v14 = gaugeState;
-      v9 = System_Int32__ToString((int32_t)&v14, 0LL);
-      v10 = System_String__Concat_61535060((System_String_o *)StringLiteral_19163/*"event_emblem_icon_"*/, v9, 0LL);
+      v12 = gaugeState;
+      v7 = System_Int32__ToString((int32_t)&v12, 0LL);
+      v8 = System_String__Concat_61707032((System_String_o *)StringLiteral_19169/*"event_emblem_icon_"*/, v7, 0LL);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(iconImg, v10, 0LL);
+      AtlasManager__SetEventSprite(iconImg, v8, 0LL);
       gaugeBaseObj = (UnityEngine_GameObject_o *)this->fields.iconImg;
       if ( gaugeBaseObj )
       {
@@ -111,10 +106,10 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
           gaugeBaseObj,
           gaugeBaseObj->klass[2]._1.interopData);
         gaugeFrameSprite = this->fields.gaugeFrameSprite;
-        v14 = gaugeState;
-        v12 = System_Int32__ToString((int32_t)&v14, 0LL);
-        v13 = System_String__Concat_61535060((System_String_o *)StringLiteral_19167/*"event_frame_"*/, v12, 0LL);
-        AtlasManager__SetEventSprite(gaugeFrameSprite, v13, 0LL);
+        v12 = gaugeState;
+        v10 = System_Int32__ToString((int32_t)&v12, 0LL);
+        v11 = System_String__Concat_61707032((System_String_o *)StringLiteral_19173/*"event_frame_"*/, v10, 0LL);
+        AtlasManager__SetEventSprite(gaugeFrameSprite, v11, 0LL);
         gaugeBaseObj = (UnityEngine_GameObject_o *)this->fields.gaugeFrameSprite;
         if ( gaugeBaseObj )
         {
@@ -126,7 +121,7 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
       }
     }
 LABEL_14:
-    sub_1B7641C(gaugeBaseObj, *(_QWORD *)&gaugeState);
+    sub_1B8880C(gaugeBaseObj, *(_QWORD *)&gaugeState);
   }
   UnityEngine_GameObject__SetActive(gaugeBaseObj, 0, 0LL);
   gaugeBaseObj = this->fields.gaugeObj;
@@ -143,27 +138,24 @@ TweenHeight_o *__fastcall EventInfoPointGaugeComponent__CreateGaugeAnime(
         int32_t endHeight,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   void *gaugeBarSprite; // x0
-  UITweener_o *v11; // x19
-  System_Collections_Generic_List_object__o *v12; // x21
-  EventDelegate_o *v13; // x22
-  int32_t v14; // w2
-  int32_t v15; // w3
+  UITweener_o *v8; // x19
+  System_Collections_Generic_List_object__o *v9; // x21
+  EventDelegate_o *v10; // x22
+  int32_t v11; // w2
+  int32_t v12; // w3
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  Il2CppClass **v19; // x0
+  Il2CppClass **v16; // x0
 
-  if ( (byte_4A2F5F7 & 1) == 0 )
+  if ( (byte_4A5C795 & 1) == 0 )
   {
-    sub_1B761C0(&EventDelegate_TypeInfo, *(_QWORD *)&startHeight);
-    sub_1B761C0(&Method_UnityEngine_GameObject_AddComponent_TweenHeight___, v7);
-    sub_1B761C0(&Method_System_Collections_Generic_List_EventDelegate__Add__, v8);
-    sub_1B761C0(&StringLiteral_5969/*"EndGaugeAnime"*/, v9);
-    byte_4A2F5F7 = 1;
+    sub_1B885B0(&EventDelegate_TypeInfo);
+    sub_1B885B0(&Method_UnityEngine_GameObject_AddComponent_TweenHeight___);
+    sub_1B885B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1B885B0(&StringLiteral_5970/*"EndGaugeAnime"*/);
+    byte_4A5C795 = 1;
   }
   gaugeBarSprite = this->fields.gaugeBarSprite;
   if ( !gaugeBarSprite )
@@ -173,42 +165,42 @@ TweenHeight_o *__fastcall EventInfoPointGaugeComponent__CreateGaugeAnime(
     goto LABEL_12;
   gaugeBarSprite = UnityEngine_GameObject__AddComponent_object_(
                      (UnityEngine_GameObject_o *)gaugeBarSprite,
-                     (const MethodInfo_2EB18D0 *)Method_UnityEngine_GameObject_AddComponent_TweenHeight___);
+                     (const MethodInfo_2ECEDD0 *)Method_UnityEngine_GameObject_AddComponent_TweenHeight___);
   if ( !gaugeBarSprite )
     goto LABEL_12;
   *((_DWORD *)gaugeBarSprite + 32) = startHeight;
   *((_DWORD *)gaugeBarSprite + 33) = endHeight;
-  v11 = (UITweener_o *)gaugeBarSprite;
+  v8 = (UITweener_o *)gaugeBarSprite;
   *((_DWORD *)gaugeBarSprite + 14) = LODWORD(this->fields.gaugeAnimationTime);
-  v12 = (System_Collections_Generic_List_object__o *)*((_QWORD *)gaugeBarSprite + 9);
-  v13 = (EventDelegate_o *)sub_1B7640C(EventDelegate_TypeInfo);
-  EventDelegate___ctor_46674396(v13, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5969/*"EndGaugeAnime"*/, 0LL);
-  if ( !v12
-    || (items = v12->fields._items,
-        v17 = Method_System_Collections_Generic_List_EventDelegate__Add__,
-        ++v12->fields._version,
+  v9 = (System_Collections_Generic_List_object__o *)*((_QWORD *)gaugeBarSprite + 9);
+  v10 = (EventDelegate_o *)sub_1B887FC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_46787224(v10, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5970/*"EndGaugeAnime"*/, 0LL);
+  if ( !v9
+    || (items = v9->fields._items,
+        v14 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+        ++v9->fields._version,
         !items) )
   {
 LABEL_12:
-    sub_1B7641C(gaugeBarSprite, *(_QWORD *)&startHeight);
+    sub_1B8880C(gaugeBarSprite, *(_QWORD *)&startHeight);
   }
-  size = v12->fields._size;
+  size = v9->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v12,
-      (Il2CppObject *)v13,
-      *(const MethodInfo_34D75D4 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      v9,
+      (Il2CppObject *)v10,
+      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
-    v19 = &items->obj.klass + size;
-    v12->fields._size = size + 1;
-    v19[4] = (Il2CppClass *)v13;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)(v19 + 4), (int32_t)v13, v14, v15);
+    v16 = &items->obj.klass + size;
+    v9->fields._size = size + 1;
+    v16[4] = (Il2CppClass *)v10;
+    sub_1B88554((ServantStatusBattleListViewItem_o *)(v16 + 4), (int32_t)v10, v11, v12);
   }
-  UITweener__PlayForward(v11, 0LL);
-  return (TweenHeight_o *)v11;
+  UITweener__PlayForward(v8, 0LL);
+  return (TweenHeight_o *)v8;
 }
 
 
@@ -224,10 +216,10 @@ void __fastcall EventInfoPointGaugeComponent__EndGaugeAnime(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A2F5F8 & 1) == 0 )
+  if ( (byte_4A5C796 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2F5F8 = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5C796 = 1;
   }
   gaugeTweenHeight = (UnityEngine_Object_o *)this->fields.gaugeTweenHeight;
   MainPoint_k__BackingField = this->fields._MainPoint_k__BackingField;
@@ -242,9 +234,9 @@ void __fastcall EventInfoPointGaugeComponent__EndGaugeAnime(
   this->fields._BufferPoint_k__BackingField = 0;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69287408(gaugeTweenHeight, 0LL);
+  UnityEngine_Object__Destroy_69459380(gaugeTweenHeight, 0LL);
   this->fields.gaugeTweenHeight = 0LL;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, 0, v8, v9);
+  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, 0, v8, v9);
   ActionExtensions__Call(this->fields.endCallback, 0LL);
 }
 
@@ -265,10 +257,10 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeComponent__GetGenerateEf
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A2F5FA & 1) == 0 )
+  if ( (byte_4A5C798 & 1) == 0 )
   {
-    sub_1B761C0(&UnityEngine_Object_TypeInfo, method);
-    byte_4A2F5FA = 1;
+    sub_1B885B0(&UnityEngine_Object_TypeInfo);
+    byte_4A5C798 = 1;
   }
   rootFSOffset = (UnityEngine_Object_o *)this->fields.rootFSOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -278,7 +270,7 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeComponent__GetGenerateEf
   {
     this = (EventInfoPointGaugeComponent_o *)this->fields.rootFSOffset;
     if ( !this )
-      sub_1B7641C(v4, v5);
+      sub_1B8880C(v4, v5);
   }
   return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
 }
@@ -299,7 +291,7 @@ float __fastcall EventInfoPointGaugeComponent__GetPointBarUpPositionY(
         PositionY = GameObjectExtensions__GetPositionY(gameObject, 0LL),
         (v6 = this->fields.gaugeBarSprite) == 0LL) )
   {
-    sub_1B7641C(gaugeBarSprite, method);
+    sub_1B8880C(gaugeBarSprite, method);
   }
   return PositionY + (float)v6->fields.mHeight;
 }
@@ -342,7 +334,7 @@ void __fastcall EventInfoPointGaugeComponent__PlayGaugeAnime(
   if ( this->fields._BufferPoint_k__BackingField )
   {
     this->fields.endCallback = callback;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v3);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v3);
     MainPoint_k__BackingField = this->fields._MainPoint_k__BackingField;
     gaugeHeight = this->fields.gaugeHeight;
     maxPoint = (float)this->fields.maxPoint;
@@ -360,7 +352,7 @@ void __fastcall EventInfoPointGaugeComponent__PlayGaugeAnime(
     this->fields.animeState = 1;
     GaugeAnime = EventInfoPointGaugeComponent__CreateGaugeAnime(this, v11, v12, v5);
     this->fields.gaugeTweenHeight = GaugeAnime;
-    sub_1B76164((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, (int32_t)GaugeAnime, v14, v15);
+    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.gaugeTweenHeight, (int32_t)GaugeAnime, v14, v15);
   }
   else
   {
@@ -378,7 +370,7 @@ void __fastcall EventInfoPointGaugeComponent__SetGaugeBarHeight(
 
   gaugeBarSprite = (UIWidget_o *)this->fields.gaugeBarSprite;
   if ( !gaugeBarSprite )
-    sub_1B7641C(0LL, height);
+    sub_1B8880C(0LL, height);
   UIWidget__set_height(gaugeBarSprite, height, 0LL);
 }
 
@@ -415,27 +407,27 @@ void __fastcall EventInfoPointGaugeComponent__SetupSubMarginX(
         float subMarginX,
         const MethodInfo *method)
 {
-  __int64 rootFSOffset; // x0
+  UnityEngine_Component_o *rootFSOffset; // x0
   UnityEngine_Transform_o *v6; // x20
 
-  rootFSOffset = (__int64)this->fields.rootFSOffset;
+  rootFSOffset = (UnityEngine_Component_o *)this->fields.rootFSOffset;
   if ( !rootFSOffset )
     goto LABEL_7;
-  rootFSOffset = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)rootFSOffset, 0LL);
+  rootFSOffset = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(rootFSOffset, 0LL);
   v6 = (UnityEngine_Transform_o *)rootFSOffset;
-  if ( !byte_4A28BB1 )
+  if ( !byte_4A55CE1 )
   {
-    rootFSOffset = sub_1B761C0(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A28BB1 = 1;
+    rootFSOffset = (UnityEngine_Component_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4A55CE1 = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localPosition(v6, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL),
-        (rootFSOffset = (__int64)this->fields.rootFSOffset) == 0) )
+        (rootFSOffset = (UnityEngine_Component_o *)this->fields.rootFSOffset) == 0LL) )
   {
 LABEL_7:
-    sub_1B7641C(rootFSOffset, method);
+    sub_1B8880C(rootFSOffset, method);
   }
-  *(float *)(rootFSOffset + 100) = subMarginX;
+  *((float *)&rootFSOffset[4].klass + 1) = subMarginX;
   FSOffset__UpdateOffset((FSOffset_o *)rootFSOffset, 0LL);
 }
 
@@ -450,7 +442,7 @@ void __fastcall EventInfoPointGaugeComponent__UpdateGaugeBarHeight(
 
   gaugeBarSprite = (UIWidget_o *)this->fields.gaugeBarSprite;
   if ( !gaugeBarSprite )
-    sub_1B7641C(0LL, method);
+    sub_1B8880C(0LL, method);
   v4 = this->fields.gaugeHeight * (float)((float)this->fields._MainPoint_k__BackingField / (float)this->fields.maxPoint);
   if ( v4 == INFINITY )
     v5 = 0x80000000;

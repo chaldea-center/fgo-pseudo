@@ -1,47 +1,46 @@
 void __fastcall UserPresentBoxErrorDialog___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct UserPresentBoxErrorDialog_StaticFields *static_fields; // x8
-  UserPresentBoxErrorDialog_c *v3; // x8
+  UserPresentBoxErrorDialog_c *v2; // x8
+  struct UserPresentBoxErrorDialog_StaticFields *v3; // x9
   struct UserPresentBoxErrorDialog_StaticFields *v4; // x9
   struct UserPresentBoxErrorDialog_StaticFields *v5; // x9
   struct UserPresentBoxErrorDialog_StaticFields *v6; // x9
-  struct UserPresentBoxErrorDialog_StaticFields *v7; // x9
-  struct UserPresentBoxErrorDialog_StaticFields *v8; // x8
+  struct UserPresentBoxErrorDialog_StaticFields *v7; // x8
 
-  if ( (byte_4A2CC83 & 1) == 0 )
+  if ( (byte_4A59E9C & 1) == 0 )
   {
-    sub_1B761C0(&UserPresentBoxErrorDialog_TypeInfo, v1);
-    byte_4A2CC83 = 1;
+    sub_1B885B0(&UserPresentBoxErrorDialog_TypeInfo);
+    byte_4A59E9C = 1;
   }
   static_fields = UserPresentBoxErrorDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_POS.fields.x = 0LL;
   static_fields->MESSAGE_POS.fields.z = 0.0;
-  v3 = UserPresentBoxErrorDialog_TypeInfo;
-  v4 = UserPresentBoxErrorDialog_TypeInfo->static_fields;
-  *(_QWORD *)&v4->MESSAGE_COMMAND_CODE_POS.fields.x = 0xC220000000000000LL;
-  v4->MESSAGE_COMMAND_CODE_POS.fields.z = 0.0;
-  v5 = v3->static_fields;
-  *(_QWORD *)&v5->SHOP_POS.fields.x = 0xC322000000000000LL;
-  v5->SHOP_POS.fields.z = 0.0;
-  v6 = v3->static_fields;
-  *(_QWORD *)&v6->SHOP_COMMAND_CODE_POS.fields.x = 0xC322000043200000LL;
-  v6->SHOP_COMMAND_CODE_POS.fields.z = 0.0;
-  v7 = v3->static_fields;
-  *(_QWORD *)&v7->EXIT_POS.fields.x = 0xC2A40000C36B0000LL;
-  v7->EXIT_POS.fields.z = 0.0;
-  v8 = v3->static_fields;
-  *(_QWORD *)&v8->EXIT_COMMAND_CODE_POS.fields.x = 0xC3220000C3200000LL;
-  v8->EXIT_COMMAND_CODE_POS.fields.z = 0.0;
+  v2 = UserPresentBoxErrorDialog_TypeInfo;
+  v3 = UserPresentBoxErrorDialog_TypeInfo->static_fields;
+  *(_QWORD *)&v3->MESSAGE_COMMAND_CODE_POS.fields.x = 0xC220000000000000LL;
+  v3->MESSAGE_COMMAND_CODE_POS.fields.z = 0.0;
+  v4 = v2->static_fields;
+  *(_QWORD *)&v4->SHOP_POS.fields.x = 0xC322000000000000LL;
+  v4->SHOP_POS.fields.z = 0.0;
+  v5 = v2->static_fields;
+  *(_QWORD *)&v5->SHOP_COMMAND_CODE_POS.fields.x = 0xC322000043200000LL;
+  v5->SHOP_COMMAND_CODE_POS.fields.z = 0.0;
+  v6 = v2->static_fields;
+  *(_QWORD *)&v6->EXIT_POS.fields.x = 0xC2A40000C36B0000LL;
+  v6->EXIT_POS.fields.z = 0.0;
+  v7 = v2->static_fields;
+  *(_QWORD *)&v7->EXIT_COMMAND_CODE_POS.fields.x = 0xC3220000C3200000LL;
+  v7->EXIT_COMMAND_CODE_POS.fields.z = 0.0;
 }
 
 
 void __fastcall UserPresentBoxErrorDialog___ctor(UserPresentBoxErrorDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A2CC82 & 1) == 0 )
+  if ( (byte_4A59E9B & 1) == 0 )
   {
-    sub_1B761C0(&BaseDialog_TypeInfo, method);
-    byte_4A2CC82 = 1;
+    sub_1B885B0(&BaseDialog_TypeInfo);
+    byte_4A59E9B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -49,182 +48,166 @@ void __fastcall UserPresentBoxErrorDialog___ctor(UserPresentBoxErrorDialog_o *th
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall UserPresentBoxErrorDialog__ChangeScene(
         UserPresentBoxErrorDialog_o *this,
         int32_t scene,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x20
+  __int64 v5; // x20
   Il2CppObject *Instance; // x0
-  __int64 v16; // x1
+  __int64 v7; // x1
+  int32_t v8; // w2
+  int32_t v9; // w3
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  int v12; // w8
+  int32_t v13; // w22
+  Il2CppObject *v14; // x21
+  SceneJumpInfo_o *v15; // x0
+  SceneJumpInfo_o *v16; // x22
   int32_t v17; // w2
-  int32_t v18; // w3
-  _QWORD *v19; // x0
-  System_Reflection_MethodBase_o *v20; // x0
-  int v21; // w8
-  int32_t v22; // w22
-  Il2CppObject *v23; // x21
-  SceneJumpInfo_o *v24; // x0
-  SceneJumpInfo_o *v25; // x22
-  int32_t v26; // w2
-  System_String_o *v27; // x1
+  System_String_o *v18; // x1
   int32_t jumpType; // w21
-  bool v29; // zf
-  int32_t v30; // w1
-  int32_t v31; // w22
-  SceneJumpInfo_o *v32; // x0
-  Il2CppObject *v33; // x3
-  __int64 *v34; // x8
-  System_Action_o *v35; // x21
+  bool v20; // zf
+  int32_t v21; // w1
+  int32_t v22; // w22
+  SceneJumpInfo_o *v23; // x0
+  Il2CppObject *v24; // x3
+  __int64 *v25; // x8
+  System_Action_o *v26; // x21
 
-  if ( (byte_4A2CC80 & 1) == 0 )
+  if ( (byte_4A59E99 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, *(_QWORD *)&scene);
-    sub_1B761C0(&SceneJumpInfo_TypeInfo, v5);
-    sub_1B761C0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_1B761C0(&Method_UserPresentBoxErrorDialog___c__DisplayClass23_0__ChangeScene_b__0__, v7);
-    sub_1B761C0(&UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo, v8);
-    sub_1B761C0(&Method_UserPresentBoxErrorDialog_ChangeScene__, v9);
-    sub_1B761C0(&StringLiteral_12621/*"ServantEquipList"*/, v10);
-    sub_1B761C0(&StringLiteral_12580/*"SellServant"*/, v11);
-    sub_1B761C0(&StringLiteral_12620/*"ServantEQCombine"*/, v12);
-    sub_1B761C0(&StringLiteral_12617/*"ServantCombine"*/, v13);
-    byte_4A2CC80 = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&SceneJumpInfo_TypeInfo);
+    sub_1B885B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1B885B0(&Method_UserPresentBoxErrorDialog___c__DisplayClass23_0__ChangeScene_b__0__);
+    sub_1B885B0(&UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo);
+    sub_1B885B0(&Method_UserPresentBoxErrorDialog_ChangeScene__);
+    sub_1B885B0(&StringLiteral_12627/*"ServantEquipList"*/);
+    sub_1B885B0(&StringLiteral_12586/*"SellServant"*/);
+    sub_1B885B0(&StringLiteral_12626/*"ServantEQCombine"*/);
+    sub_1B885B0(&StringLiteral_12623/*"ServantCombine"*/);
+    byte_4A59E99 = 1;
   }
-  v14 = sub_1B7640C(UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v14, 0LL);
-  if ( !v14 )
+  v5 = sub_1B887FC(UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
     goto LABEL_30;
-  *(_QWORD *)(v14 + 16) = this;
-  sub_1B76164((ServantStatusBattleListViewItem_o *)(v14 + 16), (int32_t)this, v17, v18);
-  *(_DWORD *)(v14 + 24) = scene;
-  v19 = Method_UserPresentBoxErrorDialog_ChangeScene__;
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  *(_DWORD *)(v5 + 24) = scene;
+  v10 = Method_UserPresentBoxErrorDialog_ChangeScene__;
   if ( (*((_BYTE *)Method_UserPresentBoxErrorDialog_ChangeScene__ + 83) & 2) != 0 )
-    v19 = (_QWORD *)sub_1B761D8(Method_UserPresentBoxErrorDialog_ChangeScene__);
-  v20 = (System_Reflection_MethodBase_o *)sub_1B761A4(v19, v19[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v20, 0, 0LL);
-  v21 = *(_DWORD *)(v14 + 24);
-  switch ( v21 )
+    v10 = (_QWORD *)sub_1B885C8(Method_UserPresentBoxErrorDialog_ChangeScene__);
+  v11 = (System_Reflection_MethodBase_o *)sub_1B88594(v10, v10[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
+  v12 = *(_DWORD *)(v5 + 24);
+  switch ( v12 )
   {
     case 71:
       jumpType = this->fields.jumpType;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v29 = jumpType == 1;
-      v23 = Instance;
-      if ( !v29 )
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v20 = jumpType == 1;
+      v14 = Instance;
+      if ( !v20 )
       {
         if ( Instance )
         {
-          v30 = 71;
-          v33 = 0LL;
+          v21 = 71;
+          v24 = 0LL;
 LABEL_28:
-          AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, v30, 1, v33, 0LL);
+          AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, v21, 1, v24, 0LL);
           break;
         }
         goto LABEL_30;
       }
-      v25 = (SceneJumpInfo_o *)sub_1B7640C(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_38409692(v25, (System_String_o *)StringLiteral_12621/*"ServantEquipList"*/, 0LL);
-      if ( !v23 )
+      v16 = (SceneJumpInfo_o *)sub_1B887FC(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_38664344(v16, (System_String_o *)StringLiteral_12627/*"ServantEquipList"*/, 0LL);
+      if ( !v14 )
         goto LABEL_30;
-      v30 = 71;
+      v21 = 71;
 LABEL_27:
-      Instance = v23;
-      v33 = (Il2CppObject *)v25;
+      Instance = v14;
+      v24 = (Il2CppObject *)v16;
       goto LABEL_28;
     case 32:
-      v31 = this->fields.jumpType;
-      v23 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v32 = (SceneJumpInfo_o *)sub_1B7640C(SceneJumpInfo_TypeInfo);
-      v29 = v31 == 1;
-      v25 = v32;
-      if ( v29 )
-        v34 = &StringLiteral_12620/*"ServantEQCombine"*/;
+      v22 = this->fields.jumpType;
+      v14 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v23 = (SceneJumpInfo_o *)sub_1B887FC(SceneJumpInfo_TypeInfo);
+      v20 = v22 == 1;
+      v16 = v23;
+      if ( v20 )
+        v25 = &StringLiteral_12626/*"ServantEQCombine"*/;
       else
-        v34 = &StringLiteral_12617/*"ServantCombine"*/;
-      SceneJumpInfo___ctor_38409692(v32, (System_String_o *)*v34, 0LL);
-      if ( !v23 )
+        v25 = &StringLiteral_12623/*"ServantCombine"*/;
+      SceneJumpInfo___ctor_38664344(v23, (System_String_o *)*v25, 0LL);
+      if ( !v14 )
         goto LABEL_30;
-      v30 = 32;
+      v21 = 32;
       goto LABEL_27;
     case 22:
-      v22 = this->fields.jumpType;
-      if ( v22 == 1 )
+      v13 = this->fields.jumpType;
+      if ( v13 == 1 )
       {
-        v23 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-        v24 = (SceneJumpInfo_o *)sub_1B7640C(SceneJumpInfo_TypeInfo);
-        v25 = v24;
-        v26 = 1;
-        v27 = (System_String_o *)StringLiteral_12580/*"SellServant"*/;
+        v14 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+        v15 = (SceneJumpInfo_o *)sub_1B887FC(SceneJumpInfo_TypeInfo);
+        v16 = v15;
+        v17 = 1;
+        v18 = (System_String_o *)StringLiteral_12586/*"SellServant"*/;
       }
       else
       {
-        v23 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_371257C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-        v24 = (SceneJumpInfo_o *)sub_1B7640C(SceneJumpInfo_TypeInfo);
-        v29 = v22 == 2;
-        v25 = v24;
-        v27 = (System_String_o *)StringLiteral_12580/*"SellServant"*/;
-        if ( v29 )
-          v26 = 2;
+        v14 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+        v15 = (SceneJumpInfo_o *)sub_1B887FC(SceneJumpInfo_TypeInfo);
+        v20 = v13 == 2;
+        v16 = v15;
+        v18 = (System_String_o *)StringLiteral_12586/*"SellServant"*/;
+        if ( v20 )
+          v17 = 2;
         else
-          v26 = 0;
+          v17 = 0;
       }
-      SceneJumpInfo___ctor_38409780(v24, v27, v26, 0LL);
-      if ( v23 )
+      SceneJumpInfo___ctor_38664432(v15, v18, v17, 0LL);
+      if ( v14 )
       {
-        v30 = 22;
+        v21 = 22;
         goto LABEL_27;
       }
 LABEL_30:
-      sub_1B7641C(Instance, v16);
+      sub_1B8880C(Instance, v7);
   }
-  v35 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v35,
-    (Il2CppObject *)v14,
+    v26,
+    (Il2CppObject *)v5,
     Method_UserPresentBoxErrorDialog___c__DisplayClass23_0__ChangeScene_b__0__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v35, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v26, 0LL);
 }
 
 
 void __fastcall UserPresentBoxErrorDialog__Init(UserPresentBoxErrorDialog_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   UILabel_o *messageLabel; // x0
   UILabel_o *closeLabel; // x20
   UILabel_o *shopLabel; // x20
   UILabel_o *combineLabel; // x20
   UILabel_o *warehouseLabel; // x20
-  UserPresentBoxErrorDialog_c *v15; // x8
-  UnityEngine_Transform_o *v16; // x20
+  UserPresentBoxErrorDialog_c *v9; // x8
+  UnityEngine_Transform_o *v10; // x20
 
-  if ( (byte_4A2CC7D & 1) == 0 )
+  if ( (byte_4A59E96 & 1) == 0 )
   {
-    sub_1B761C0(&LocalizationManager_TypeInfo, method);
-    sub_1B761C0(&UserPresentBoxErrorDialog_TypeInfo, v3);
-    sub_1B761C0(&StringLiteral_12125/*"SHORT_SERVANT_SELL"*/, v4);
-    sub_1B761C0(&StringLiteral_3755/*"COMMON_CONFIRM_CLOSE"*/, v5);
-    sub_1B761C0(&StringLiteral_12128/*"SHORT_SERVANT_WAREHOUSE"*/, v6);
-    sub_1B761C0(&StringLiteral_12110/*"SHORT_SERVANT_COMBINE"*/, v7);
-    sub_1B761C0(&StringLiteral_1/*""*/, v8);
-    byte_4A2CC7D = 1;
+    sub_1B885B0(&LocalizationManager_TypeInfo);
+    sub_1B885B0(&UserPresentBoxErrorDialog_TypeInfo);
+    sub_1B885B0(&StringLiteral_12129/*"SHORT_SERVANT_SELL"*/);
+    sub_1B885B0(&StringLiteral_3756/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1B885B0(&StringLiteral_12132/*"SHORT_SERVANT_WAREHOUSE"*/);
+    sub_1B885B0(&StringLiteral_12114/*"SHORT_SERVANT_COMBINE"*/);
+    sub_1B885B0(&StringLiteral_1/*""*/);
+    byte_4A59E96 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   messageLabel = this->fields.messageLabel;
@@ -234,22 +217,22 @@ void __fastcall UserPresentBoxErrorDialog__Init(UserPresentBoxErrorDialog_o *thi
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3755/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3756/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_30;
   UILabel__set_text(closeLabel, (System_String_o *)messageLabel, 0LL);
   shopLabel = this->fields.shopLabel;
-  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12125/*"SHORT_SERVANT_SELL"*/, 0LL);
+  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12129/*"SHORT_SERVANT_SELL"*/, 0LL);
   if ( !shopLabel )
     goto LABEL_30;
   UILabel__set_text(shopLabel, (System_String_o *)messageLabel, 0LL);
   combineLabel = this->fields.combineLabel;
-  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12110/*"SHORT_SERVANT_COMBINE"*/, 0LL);
+  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12114/*"SHORT_SERVANT_COMBINE"*/, 0LL);
   if ( !combineLabel )
     goto LABEL_30;
   UILabel__set_text(combineLabel, (System_String_o *)messageLabel, 0LL);
   warehouseLabel = this->fields.warehouseLabel;
-  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12128/*"SHORT_SERVANT_WAREHOUSE"*/, 0LL);
+  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12132/*"SHORT_SERVANT_WAREHOUSE"*/, 0LL);
   if ( !warehouseLabel )
     goto LABEL_30;
   UILabel__set_text(warehouseLabel, (System_String_o *)messageLabel, 0LL);
@@ -260,16 +243,16 @@ void __fastcall UserPresentBoxErrorDialog__Init(UserPresentBoxErrorDialog_o *thi
   if ( !messageLabel )
     goto LABEL_30;
   messageLabel = (UILabel_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)messageLabel, 0LL);
-  v15 = UserPresentBoxErrorDialog_TypeInfo;
-  v16 = (UnityEngine_Transform_o *)messageLabel;
+  v9 = UserPresentBoxErrorDialog_TypeInfo;
+  v10 = (UnityEngine_Transform_o *)messageLabel;
   if ( !UserPresentBoxErrorDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserPresentBoxErrorDialog_TypeInfo);
-    v15 = UserPresentBoxErrorDialog_TypeInfo;
+    v9 = UserPresentBoxErrorDialog_TypeInfo;
   }
-  if ( !v16 )
+  if ( !v10 )
     goto LABEL_30;
-  UnityEngine_Transform__set_localPosition(v16, v15->static_fields->MESSAGE_POS, 0LL);
+  UnityEngine_Transform__set_localPosition(v10, v9->static_fields->MESSAGE_POS, 0LL);
   messageLabel = this->fields.closeLabel;
   if ( !messageLabel )
     goto LABEL_30;
@@ -310,7 +293,7 @@ void __fastcall UserPresentBoxErrorDialog__Init(UserPresentBoxErrorDialog_o *thi
     || (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageLabel, 0LL)) == 0LL )
   {
 LABEL_30:
-    sub_1B7641C(messageLabel, v9);
+    sub_1B8880C(messageLabel, v3);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 1, 0LL);
   this->fields.jumpType = 0;
@@ -321,27 +304,25 @@ void __fastcall UserPresentBoxErrorDialog__OnClickCloseButton(
         UserPresentBoxErrorDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  System_Action_o *v5; // x20
 
-  if ( (byte_4A2CC7E & 1) == 0 )
+  if ( (byte_4A59E97 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_TypeInfo, method);
-    sub_1B761C0(&Method_UserPresentBoxErrorDialog_OnClickCloseButton__, v3);
-    sub_1B761C0(&Method_UserPresentBoxErrorDialog__OnClickCloseButton_b__18_0__, v4);
-    byte_4A2CC7E = 1;
+    sub_1B885B0(&System_Action_TypeInfo);
+    sub_1B885B0(&Method_UserPresentBoxErrorDialog_OnClickCloseButton__);
+    sub_1B885B0(&Method_UserPresentBoxErrorDialog__OnClickCloseButton_b__18_0__);
+    byte_4A59E97 = 1;
   }
-  v5 = Method_UserPresentBoxErrorDialog_OnClickCloseButton__;
+  v3 = Method_UserPresentBoxErrorDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_UserPresentBoxErrorDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B761D8(Method_UserPresentBoxErrorDialog_OnClickCloseButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B761A4(v5, v5[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
-  v7 = (System_Action_o *)sub_1B7640C(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_UserPresentBoxErrorDialog__OnClickCloseButton_b__18_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+    v3 = (_QWORD *)sub_1B885C8(Method_UserPresentBoxErrorDialog_OnClickCloseButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+  v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_UserPresentBoxErrorDialog__OnClickCloseButton_b__18_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
 
 
@@ -386,7 +367,7 @@ void __fastcall UserPresentBoxErrorDialog__Open(
   UserPresentBoxErrorDialog__Init(this, (const MethodInfo *)message);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1B7641C(0LL, v5);
+    sub_1B8880C(0LL, v5);
   UILabel__set_text(messageLabel, message, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
 }
@@ -425,10 +406,10 @@ void __fastcall UserPresentBoxErrorDialog__add_OnErrorDialogClosed(
   System_Action_SceneList_Type__o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4A2CC7B & 1) == 0 )
+  if ( (byte_4A59E94 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_SceneList_Type__TypeInfo, value);
-    byte_4A2CC7B = 1;
+    sub_1B885B0(&System_Action_SceneList_Type__TypeInfo);
+    byte_4A59E94 = 1;
   }
   OnErrorDialogClosed = this->fields.OnErrorDialogClosed;
   p_OnErrorDialogClosed = &this->fields.OnErrorDialogClosed;
@@ -442,17 +423,17 @@ void __fastcall UserPresentBoxErrorDialog__add_OnErrorDialogClosed(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1B762FC(v8, System_Action_SceneList_Type__TypeInfo);
+    v10 = sub_1B886EC(v8, System_Action_SceneList_Type__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1BB16B0(p_OnErrorDialogClosed, v10, v6);
+    v11 = sub_1BC3AA0(p_OnErrorDialogClosed, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1B766DC(v9);
+  sub_1B88ACC(v9);
   UserPresentBoxErrorDialog__remove_OnErrorDialogClosed(v13, v14, v15);
 }
 
@@ -461,12 +442,12 @@ System_String_o *__fastcall UserPresentBoxErrorDialog__get_closeBtnPath(
         UserPresentBoxErrorDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A2CC81 & 1) == 0 )
+  if ( (byte_4A59E9A & 1) == 0 )
   {
-    sub_1B761C0(&StringLiteral_15639/*"Window/ExitButton"*/, method);
-    byte_4A2CC81 = 1;
+    sub_1B885B0(&StringLiteral_15645/*"Window/ExitButton"*/);
+    byte_4A59E9A = 1;
   }
-  return (System_String_o *)StringLiteral_15639/*"Window/ExitButton"*/;
+  return (System_String_o *)StringLiteral_15645/*"Window/ExitButton"*/;
 }
 
 
@@ -486,10 +467,10 @@ void __fastcall UserPresentBoxErrorDialog__remove_OnErrorDialogClosed(
   UserPresentBoxErrorDialog_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_4A2CC7C & 1) == 0 )
+  if ( (byte_4A59E95 & 1) == 0 )
   {
-    sub_1B761C0(&System_Action_SceneList_Type__TypeInfo, value);
-    byte_4A2CC7C = 1;
+    sub_1B885B0(&System_Action_SceneList_Type__TypeInfo);
+    byte_4A59E95 = 1;
   }
   OnErrorDialogClosed = this->fields.OnErrorDialogClosed;
   p_OnErrorDialogClosed = &this->fields.OnErrorDialogClosed;
@@ -503,17 +484,17 @@ void __fastcall UserPresentBoxErrorDialog__remove_OnErrorDialogClosed(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1B762FC(v8, System_Action_SceneList_Type__TypeInfo);
+    v10 = sub_1B886EC(v8, System_Action_SceneList_Type__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1BB16B0(p_OnErrorDialogClosed, v10, v6);
+    v11 = sub_1BC3AA0(p_OnErrorDialogClosed, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1B766DC(v9);
+  sub_1B88ACC(v9);
   UserPresentBoxErrorDialog__Init(v13, v14);
 }
 
@@ -528,10 +509,10 @@ void __fastcall UserPresentBoxErrorDialog__setJumpType(
   UnityEngine_Transform_o *v6; // x20
   UserPresentBoxErrorDialog_c *v7; // x8
 
-  if ( (byte_4A2CC7F & 1) == 0 )
+  if ( (byte_4A59E98 & 1) == 0 )
   {
-    sub_1B761C0(&UserPresentBoxErrorDialog_TypeInfo, *(_QWORD *)&type);
-    byte_4A2CC7F = 1;
+    sub_1B885B0(&UserPresentBoxErrorDialog_TypeInfo);
+    byte_4A59E98 = 1;
   }
   this->fields.jumpType = type;
   if ( type == 2 )
@@ -603,7 +584,7 @@ void __fastcall UserPresentBoxErrorDialog__setJumpType(
       || (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageLabel, 0LL)) == 0LL )
     {
 LABEL_25:
-      sub_1B7641C(messageLabel, *(_QWORD *)&type);
+      sub_1B8880C(messageLabel, *(_QWORD *)&type);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   }
@@ -628,7 +609,7 @@ void __fastcall UserPresentBoxErrorDialog___c__DisplayClass23_0___ChangeScene_b_
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (UserPresentBoxErrorDialog__Init(_4__this, method), (v4 = this->fields.__4__this) == 0LL) )
-    sub_1B7641C(_4__this, method);
+    sub_1B8880C(_4__this, method);
   OnErrorDialogClosed = v4->fields.OnErrorDialogClosed;
   if ( OnErrorDialogClosed )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))OnErrorDialogClosed->fields.m_target)(
