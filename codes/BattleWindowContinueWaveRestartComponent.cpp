@@ -13,18 +13,18 @@ void __fastcall BattleWindowContinueWaveRestartComponent__OnClickCancel(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4A5E242 & 1) == 0 )
+  if ( (byte_4A72F5B & 1) == 0 )
   {
-    sub_1B885B0(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
-    byte_4A5E242 = 1;
+    sub_1B90010(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__, method);
+    byte_4A72F5B = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0LL)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0LL) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     ActionExtensions__Call(this->fields.cancelCallback, 0LL);
   }
@@ -38,18 +38,18 @@ void __fastcall BattleWindowContinueWaveRestartComponent__OnClickDecide(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4A5E241 & 1) == 0 )
+  if ( (byte_4A72F5A & 1) == 0 )
   {
-    sub_1B885B0(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
-    byte_4A5E241 = 1;
+    sub_1B90010(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__, method);
+    byte_4A72F5A = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0LL)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0LL) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     ActionExtensions__Call(this->fields.decideCallback, 0LL);
   }
@@ -62,32 +62,36 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow(
         System_Action_o *cancelCall,
         const MethodInfo *method)
 {
-  System_String_o *v7; // x22
-  System_String_o *v8; // x23
-  System_String_o *v9; // x24
-  System_String_o *v10; // x6
-  const MethodInfo *v11; // x7
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_String_o *v11; // x22
+  System_String_o *v12; // x23
+  System_String_o *v13; // x24
+  System_String_o *v14; // x6
+  const MethodInfo *v15; // x7
 
-  if ( (byte_4A5E240 & 1) == 0 )
+  if ( (byte_4A72F59 & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/);
-    sub_1B885B0(&StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/);
-    sub_1B885B0(&StringLiteral_3886/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/);
-    sub_1B885B0(&StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/);
-    byte_4A5E240 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, decideCall);
+    sub_1B90010(&StringLiteral_3886/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, v7);
+    sub_1B90010(&StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, v8);
+    sub_1B90010(&StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, v9);
+    sub_1B90010(&StringLiteral_3888/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, v10);
+    byte_4A72F59 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0LL);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3886/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0LL);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0LL);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, 0LL);
-  BattleWindowContinueWaveRestartComponent__SetWindow_44084556(this, decideCall, cancelCall, v7, v8, v9, v10, v11);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3888/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3886/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, 0LL);
+  BattleWindowContinueWaveRestartComponent__SetWindow_44139932(this, decideCall, cancelCall, v11, v12, v13, v14, v15);
 }
 
 
-void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_44084556(
+void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_44139932(
         BattleWindowContinueWaveRestartComponent_o *this,
         System_Action_o *decideCall,
         System_Action_o *cancelCall,
@@ -103,20 +107,20 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_44084556(
   UILabel_o *titleLabel; // x0
 
   this->fields.decideCallback = decideCall;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields.decideCallback,
     (int32_t)decideCall,
     (int32_t)cancelCall,
     (int32_t)title);
   this->fields.cancelCallback = cancelCall;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.cancelCallback, (int32_t)cancelCall, v14, v15);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.cancelCallback, (int32_t)cancelCall, v14, v15);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, title, 0LL), (titleLabel = this->fields.messageLabel) == 0LL)
     || (UILabel__set_text(titleLabel, message, 0LL), (titleLabel = this->fields.decideButtonLabel) == 0LL)
     || (UILabel__set_text(titleLabel, decideLabel, 0LL), (titleLabel = this->fields.cancelButtonLabel) == 0LL) )
   {
-    sub_1B8880C(titleLabel, v16);
+    sub_1B9026C(titleLabel, v16);
   }
   UILabel__set_text(titleLabel, cancelLabel, 0LL);
 }

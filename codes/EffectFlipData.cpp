@@ -18,13 +18,13 @@ void __fastcall EffectFlipData__Flip(
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_69482044(trEffect, 0.0, 180.0, 0.0, 0LL);
+    UnityEngine_Transform__Rotate_69562104(trEffect, 0.0, 180.0, 0.0, 0LL);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1B8880C(this, trEffect);
+    sub_1B9026C(this, trEffect);
   *(UnityEngine_Vector3_o *)&v5 = UnityEngine_Transform__get_localScale(trEffect, 0LL);
   if ( this->fields.scaleX >= 1 )
     v5 = -v5;
@@ -53,6 +53,6 @@ void __fastcall EffectFlipData__OverwriteNodeName(
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
   }
 }

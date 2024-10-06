@@ -11,10 +11,10 @@ void __fastcall EventHeelPortraitListViewItem___ctor(
   int32_t v11; // w3
 
   v9 = this;
-  ListViewItem___ctor_40706472((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 112);
-  sub_1B88554((ServantStatusBattleListViewItem_o *)v9, (int32_t)heelPortraitEntity, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v9, (int32_t)heelPortraitEntity, v10, v11);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
@@ -61,7 +61,7 @@ void __fastcall EventHeelPortraitListViewItem__set_Entity(
   int32_t v3; // w3
 
   this->fields._Entity_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._Entity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

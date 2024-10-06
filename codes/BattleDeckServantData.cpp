@@ -8,12 +8,12 @@ bool __fastcall BattleDeckServantData__ExistKillType(BattleDeckServantData_o *th
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D62E & 1) == 0 )
+  if ( (byte_4A72345 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D62E = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72345 = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, v2);
 }
 
 
@@ -23,6 +23,7 @@ bool __fastcall BattleDeckServantData__ExistsScript(BattleDeckServantData_o *thi
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BattleDeckServantData__GetAiResetTiming(
         BattleDeckServantData_o *this,
         int32_t defTiming,
@@ -30,12 +31,12 @@ int32_t __fastcall BattleDeckServantData__GetAiResetTiming(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4A5D647 & 1) == 0 )
+  if ( (byte_4A7235E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16720/*"aiResetTiming"*/);
-    byte_4A5D647 = 1;
+    sub_1B90010(&StringLiteral_16745/*"aiResetTiming"*/, *(_QWORD *)&defTiming);
+    byte_4A7235E = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_16720/*"aiResetTiming"*/, defTiming, v3);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_16745/*"aiResetTiming"*/, defTiming, v3);
 }
 
 
@@ -43,14 +44,14 @@ System_Int32_array *__fastcall BattleDeckServantData__GetAssumedEffectId(
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5D665 & 1) == 0 )
+  if ( (byte_4A7237C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16943/*"assumedEffectId"*/);
-    byte_4A5D665 = 1;
+    sub_1B90010(&StringLiteral_16968/*"assumedEffectId"*/, method);
+    byte_4A7237C = 1;
   }
   return EntityScriptUtil__GetIntArrayDefaultEmpty(
            this->fields.enemyScript,
-           (System_String_o *)StringLiteral_16943/*"assumedEffectId"*/,
+           (System_String_o *)StringLiteral_16968/*"assumedEffectId"*/,
            0LL);
 }
 
@@ -59,12 +60,12 @@ int32_t __fastcall BattleDeckServantData__GetChangePersonality(BattleDeckServant
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D670 & 1) == 0 )
+  if ( (byte_4A72387 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17816/*"changePersonality"*/);
-    byte_4A5D670 = 1;
+    sub_1B90010(&StringLiteral_17842/*"changePersonality"*/, method);
+    byte_4A72387 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17816/*"changePersonality"*/, -1, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17842/*"changePersonality"*/, -1, v2);
 }
 
 
@@ -72,12 +73,12 @@ int32_t __fastcall BattleDeckServantData__GetChangePolicy(BattleDeckServantData_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D66F & 1) == 0 )
+  if ( (byte_4A72386 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17817/*"changePolicy"*/);
-    byte_4A5D66F = 1;
+    sub_1B90010(&StringLiteral_17843/*"changePolicy"*/, method);
+    byte_4A72386 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17817/*"changePolicy"*/, -1, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17843/*"changePolicy"*/, -1, v2);
 }
 
 
@@ -86,17 +87,19 @@ int32_t __fastcall BattleDeckServantData__GetDefShiftPosition(
         int64_t defVal,
         const MethodInfo *method)
 {
-  if ( (byte_4A5D650 & 1) == 0 )
+  __int64 v5; // x1
+
+  if ( (byte_4A72367 & 1) == 0 )
   {
-    sub_1B885B0(&Method_BasicHelper_GetValue_long___);
-    sub_1B885B0(&StringLiteral_23257/*"shiftPosition"*/);
-    byte_4A5D650 = 1;
+    sub_1B90010(&Method_BasicHelper_GetValue_long___, defVal);
+    sub_1B90010(&StringLiteral_23292/*"shiftPosition"*/, v5);
+    byte_4A72367 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.enemyScript,
-           (System_String_o *)StringLiteral_23257/*"shiftPosition"*/,
+           (System_String_o *)StringLiteral_23292/*"shiftPosition"*/,
            defVal,
-           (const MethodInfo_2E6DB7C *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_2E7C490 *)Method_BasicHelper_GetValue_long___);
 }
 
 
@@ -104,12 +107,12 @@ int32_t __fastcall BattleDeckServantData__GetDispBreakShift(BattleDeckServantDat
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D66B & 1) == 0 )
+  if ( (byte_4A72382 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18637/*"dispBreakShift"*/);
-    byte_4A5D66B = 1;
+    sub_1B90010(&StringLiteral_18662/*"dispBreakShift"*/, method);
+    byte_4A72382 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_18637/*"dispBreakShift"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_18662/*"dispBreakShift"*/, 0, v2);
 }
 
 
@@ -117,12 +120,12 @@ int32_t __fastcall BattleDeckServantData__GetDispLimitCnt(BattleDeckServantData_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D66D & 1) == 0 )
+  if ( (byte_4A72384 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18640/*"dispLimitCount"*/);
-    byte_4A5D66D = 1;
+    sub_1B90010(&StringLiteral_18665/*"dispLimitCount"*/, method);
+    byte_4A72384 = 1;
   }
-  return BattleDeckServantData__getScriptInt(this, (System_String_o *)StringLiteral_18640/*"dispLimitCount"*/, -1, v2);
+  return BattleDeckServantData__getScriptInt(this, (System_String_o *)StringLiteral_18665/*"dispLimitCount"*/, -1, v2);
 }
 
 
@@ -130,14 +133,14 @@ System_Int32_array *__fastcall BattleDeckServantData__GetDisplayChangeSkillIdArr
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5D677 & 1) == 0 )
+  if ( (byte_4A7238E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18638/*"dispChangeSkillIds"*/);
-    byte_4A5D677 = 1;
+    sub_1B90010(&StringLiteral_18663/*"dispChangeSkillIds"*/, method);
+    byte_4A7238E = 1;
   }
   return EntityScriptUtil__GetIntArrayDefaultEmpty(
            this->fields.enemyScript,
-           (System_String_o *)StringLiteral_18638/*"dispChangeSkillIds"*/,
+           (System_String_o *)StringLiteral_18663/*"dispChangeSkillIds"*/,
            0LL);
 }
 
@@ -160,12 +163,12 @@ int32_t __fastcall BattleDeckServantData__GetHideStatePersonality(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D675 & 1) == 0 )
+  if ( (byte_4A7238C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19918/*"hidePersonality"*/);
-    byte_4A5D675 = 1;
+    sub_1B90010(&StringLiteral_19945/*"hidePersonality"*/, method);
+    byte_4A7238C = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19918/*"hidePersonality"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19945/*"hidePersonality"*/, 0, v2);
 }
 
 
@@ -173,12 +176,12 @@ int32_t __fastcall BattleDeckServantData__GetHideStatePolicy(BattleDeckServantDa
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D674 & 1) == 0 )
+  if ( (byte_4A7238B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19919/*"hidePolicy"*/);
-    byte_4A5D674 = 1;
+    sub_1B90010(&StringLiteral_19946/*"hidePolicy"*/, method);
+    byte_4A7238B = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19919/*"hidePolicy"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19946/*"hidePolicy"*/, 0, v2);
 }
 
 
@@ -188,12 +191,12 @@ int32_t __fastcall BattleDeckServantData__GetHideStateSubAttribute(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D676 & 1) == 0 )
+  if ( (byte_4A7238D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19916/*"hideAttri"*/);
-    byte_4A5D676 = 1;
+    sub_1B90010(&StringLiteral_19943/*"hideAttri"*/, method);
+    byte_4A7238D = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19916/*"hideAttri"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19943/*"hideAttri"*/, 0, v2);
 }
 
 
@@ -201,12 +204,12 @@ int32_t __fastcall BattleDeckServantData__GetImageSvtId(BattleDeckServantData_o 
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D66C & 1) == 0 )
+  if ( (byte_4A72383 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20238/*"imageSvtId"*/);
-    byte_4A5D66C = 1;
+    sub_1B90010(&StringLiteral_20265/*"imageSvtId"*/, method);
+    byte_4A72383 = 1;
   }
-  return BattleDeckServantData__getScriptInt(this, (System_String_o *)StringLiteral_20238/*"imageSvtId"*/, 0, v2);
+  return BattleDeckServantData__getScriptInt(this, (System_String_o *)StringLiteral_20265/*"imageSvtId"*/, 0, v2);
 }
 
 
@@ -214,12 +217,12 @@ int32_t __fastcall BattleDeckServantData__GetKillType(BattleDeckServantData_o *t
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D62D & 1) == 0 )
+  if ( (byte_4A72344 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D62D = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72344 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 0, v2);
 }
 
 
@@ -227,12 +230,12 @@ int32_t __fastcall BattleDeckServantData__GetNoSkipDeadFirstId(BattleDeckServant
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D664 & 1) == 0 )
+  if ( (byte_4A7237B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_9499/*"NoSkipDeadFirstId"*/);
-    byte_4A5D664 = 1;
+    sub_1B90010(&StringLiteral_9503/*"NoSkipDeadFirstId"*/, method);
+    byte_4A7237B = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_9499/*"NoSkipDeadFirstId"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_9503/*"NoSkipDeadFirstId"*/, 0, v2);
 }
 
 
@@ -241,33 +244,35 @@ int32_t __fastcall BattleDeckServantData__GetNpcFriendShipRank(
         UserServantCollectionEntity_o *entity,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   _BOOL8 HasKey; // x0
-  __int64 v7; // x1
-  __int64 v8; // x20
-  __int64 v9; // x19
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
+  __int64 v9; // x1
+  __int64 v10; // x20
+  __int64 v11; // x19
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4A5D67E & 1) == 0 )
+  if ( (byte_4A72395 & 1) == 0 )
   {
-    sub_1B885B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1B885B0(&StringLiteral_12698/*"SetFriendShipRankFromUserServant"*/);
-    sub_1B885B0(&StringLiteral_6779/*"ForceSetFriendShipRank"*/);
-    byte_4A5D67E = 1;
+    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, entity);
+    sub_1B90010(&StringLiteral_12723/*"SetFriendShipRankFromUserServant"*/, v5);
+    sub_1B90010(&StringLiteral_6782/*"ForceSetFriendShipRank"*/, v6);
+    byte_4A72395 = 1;
   }
-  if ( EntityScriptUtil__ScriptHasKey(this->fields.enemyScript, (System_String_o *)StringLiteral_6779/*"ForceSetFriendShipRank"*/, 0LL) )
-    return EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_6779/*"ForceSetFriendShipRank"*/, 0, 0LL);
-  HasKey = EntityScriptUtil__ScriptHasKey(this->fields.enemyScript, (System_String_o *)StringLiteral_12698/*"SetFriendShipRankFromUserServant"*/, 0LL);
+  if ( EntityScriptUtil__ScriptHasKey(this->fields.enemyScript, (System_String_o *)StringLiteral_6782/*"ForceSetFriendShipRank"*/, 0LL) )
+    return EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_6782/*"ForceSetFriendShipRank"*/, 0, 0LL);
+  HasKey = EntityScriptUtil__ScriptHasKey(this->fields.enemyScript, (System_String_o *)StringLiteral_12723/*"SetFriendShipRankFromUserServant"*/, 0LL);
   if ( !HasKey )
     return 0;
   if ( !entity )
-    sub_1B8880C(HasKey, v7);
-  v8 = *(_QWORD *)&entity->fields.friendshipRank.fields.currentCryptoKey;
-  v9 = *(_QWORD *)&entity->fields.friendshipRank.fields.fakeValue;
+    sub_1B9026C(HasKey, v9);
+  v10 = *(_QWORD *)&entity->fields.friendshipRank.fields.currentCryptoKey;
+  v11 = *(_QWORD *)&entity->fields.friendshipRank.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v10.fields.currentCryptoKey = v8;
-  *(_QWORD *)&v10.fields.fakeValue = v9;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46449800(v10, 0LL);
+  *(_QWORD *)&v12.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v12.fields.fakeValue = v11;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v12, 0LL);
 }
 
 
@@ -275,30 +280,33 @@ EnemyScriptParam_OverwriteShiftIcon_array *__fastcall BattleDeckServantData__Get
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   EnemyScriptParam_OverwriteShiftIcon_array *result; // x0
-  EnemyScriptParam_OverwriteShiftIcon_array *v4; // x19
+  EnemyScriptParam_OverwriteShiftIcon_array *v7; // x19
 
-  if ( (byte_4A5D67F & 1) == 0 )
+  if ( (byte_4A72396 & 1) == 0 )
   {
-    sub_1B885B0(&Method_BasicHelper_GetValue_string__object___);
-    sub_1B885B0(&Method_JsonManager_Deserialize_EnemyScriptParam_OverwriteShiftIcon_____);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_22409/*"overwriteShiftIcon"*/);
-    byte_4A5D67F = 1;
+    sub_1B90010(&Method_BasicHelper_GetValue_string__object___, method);
+    sub_1B90010(&Method_JsonManager_Deserialize_EnemyScriptParam_OverwriteShiftIcon_____, v3);
+    sub_1B90010(&JsonManager_TypeInfo, v4);
+    sub_1B90010(&StringLiteral_22442/*"overwriteShiftIcon"*/, v5);
+    byte_4A72396 = 1;
   }
   result = (EnemyScriptParam_OverwriteShiftIcon_array *)BasicHelper__GetValue_object__object_(
                                                           (System_Collections_Generic_Dictionary_K__V__o *)this->fields.enemyScript,
-                                                          (Il2CppObject *)StringLiteral_22409/*"overwriteShiftIcon"*/,
+                                                          (Il2CppObject *)StringLiteral_22442/*"overwriteShiftIcon"*/,
                                                           0LL,
-                                                          (const MethodInfo_2E6E2D4 *)Method_BasicHelper_GetValue_string__object___);
+                                                          (const MethodInfo_2E7CBE8 *)Method_BasicHelper_GetValue_string__object___);
   if ( result )
   {
-    v4 = result;
+    v7 = result;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     return (EnemyScriptParam_OverwriteShiftIcon_array *)JsonManager__Deserialize_object_(
-                                                          &v4->obj,
-                                                          (const MethodInfo_2EE5DF0 *)Method_JsonManager_Deserialize_EnemyScriptParam_OverwriteShiftIcon_____);
+                                                          &v7->obj,
+                                                          (const MethodInfo_2EF4770 *)Method_JsonManager_Deserialize_EnemyScriptParam_OverwriteShiftIcon_____);
   }
   return result;
 }
@@ -310,12 +318,12 @@ System_String_o *__fastcall BattleDeckServantData__GetOverwriteBreakShiftVoiceNa
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D678 & 1) == 0 )
+  if ( (byte_4A7238F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22377/*"overwriteBreakShiftVoice"*/);
-    byte_4A5D678 = 1;
+    sub_1B90010(&StringLiteral_22410/*"overwriteBreakShiftVoice"*/, method);
+    byte_4A7238F = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22377/*"overwriteBreakShiftVoice"*/, 0LL, v2);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22410/*"overwriteBreakShiftVoice"*/, 0LL, v2);
 }
 
 
@@ -325,12 +333,12 @@ System_String_o *__fastcall BattleDeckServantData__GetOverwritePersonality(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D672 & 1) == 0 )
+  if ( (byte_4A72389 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22399/*"overwritePersonality"*/);
-    byte_4A5D672 = 1;
+    sub_1B90010(&StringLiteral_22432/*"overwritePersonality"*/, method);
+    byte_4A72389 = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22399/*"overwritePersonality"*/, 0LL, v2);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22432/*"overwritePersonality"*/, 0LL, v2);
 }
 
 
@@ -340,12 +348,12 @@ System_String_o *__fastcall BattleDeckServantData__GetOverwritePolicy(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D671 & 1) == 0 )
+  if ( (byte_4A72388 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22400/*"overwritePolicy"*/);
-    byte_4A5D671 = 1;
+    sub_1B90010(&StringLiteral_22433/*"overwritePolicy"*/, method);
+    byte_4A72388 = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22400/*"overwritePolicy"*/, 0LL, v2);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22433/*"overwritePolicy"*/, 0LL, v2);
 }
 
 
@@ -355,12 +363,12 @@ System_String_o *__fastcall BattleDeckServantData__GetOverwriteSubAttribute(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D673 & 1) == 0 )
+  if ( (byte_4A7238A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22375/*"overwriteAttri"*/);
-    byte_4A5D673 = 1;
+    sub_1B90010(&StringLiteral_22408/*"overwriteAttri"*/, method);
+    byte_4A7238A = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22375/*"overwriteAttri"*/, 0LL, v2);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_22408/*"overwriteAttri"*/, 0LL, v2);
 }
 
 
@@ -370,29 +378,35 @@ System_String_array *__fastcall BattleDeckServantData__GetScriptStringArrayParam
         System_String_array *defVal,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v14; // x1
   __int64 methodPtr_low; // x11
-  System_Collections_Generic_List_object__c *v10; // x10
-  System_Collections_Generic_List_object__o *v11; // x20
-  void *v12; // x0
-  System_Converter_TInput__TOutput__o *v13; // x19
-  Il2CppObject *v14; // x21
+  System_Collections_Generic_List_object__c *v16; // x10
+  System_Collections_Generic_List_object__o *v17; // x20
+  void *v18; // x0
+  System_Converter_TInput__TOutput__o *v19; // x19
+  Il2CppObject *v20; // x21
   struct BattleDeckServantData___c_StaticFields *static_fields; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
+  int32_t v22; // w2
+  int32_t v23; // w3
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5D666 & 1) == 0 )
+  if ( (byte_4A7237D & 1) == 0 )
   {
-    sub_1B885B0(&System_Converter_object__string__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__ConvertAll_string___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&Method_BattleDeckServantData___c__GetScriptStringArrayParam_b__75_0__);
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    byte_4A5D666 = 1;
+    sub_1B90010(&System_Converter_object__string__TypeInfo, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__ConvertAll_string___, v8);
+    sub_1B90010(&Method_System_Collections_Generic_List_string__ToArray__, v9);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v10);
+    sub_1B90010(&Method_BattleDeckServantData___c__GetScriptStringArrayParam_b__75_0__, v11);
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v12);
+    byte_4A7237D = 1;
   }
   value = 0LL;
   enemyScript = this->fields.enemyScript;
@@ -402,55 +416,55 @@ System_String_array *__fastcall BattleDeckServantData__GetScriptStringArrayParam
            (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       if ( value )
       {
         methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
         if ( LOBYTE(value->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low )
         {
-          v10 = (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[methodPtr_low - 1];
-          v11 = v10 == System_Collections_Generic_List_object__TypeInfo
+          v16 = (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[methodPtr_low - 1];
+          v17 = v16 == System_Collections_Generic_List_object__TypeInfo
               ? (System_Collections_Generic_List_object__o *)value
               : 0LL;
-          if ( v10 == System_Collections_Generic_List_object__TypeInfo )
+          if ( v16 == System_Collections_Generic_List_object__TypeInfo )
           {
-            v12 = BattleDeckServantData___c_TypeInfo;
+            v18 = BattleDeckServantData___c_TypeInfo;
             if ( !BattleDeckServantData___c_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(BattleDeckServantData___c_TypeInfo);
-              v12 = BattleDeckServantData___c_TypeInfo;
+              v18 = BattleDeckServantData___c_TypeInfo;
             }
-            v13 = *(System_Converter_TInput__TOutput__o **)(*((_QWORD *)v12 + 23) + 40LL);
-            if ( !v13 )
+            v19 = *(System_Converter_TInput__TOutput__o **)(*((_QWORD *)v18 + 23) + 40LL);
+            if ( !v19 )
             {
-              if ( !*((_DWORD *)v12 + 56) )
+              if ( !*((_DWORD *)v18 + 56) )
               {
-                j_il2cpp_runtime_class_init_0(v12);
-                v12 = BattleDeckServantData___c_TypeInfo;
+                j_il2cpp_runtime_class_init_0(v18);
+                v18 = BattleDeckServantData___c_TypeInfo;
               }
-              v14 = (Il2CppObject *)**((_QWORD **)v12 + 23);
-              v13 = (System_Converter_TInput__TOutput__o *)sub_1B887FC(System_Converter_object__string__TypeInfo);
+              v20 = (Il2CppObject *)**((_QWORD **)v18 + 23);
+              v19 = (System_Converter_TInput__TOutput__o *)sub_1B9025C(System_Converter_object__string__TypeInfo);
               System_Converter_object__object____ctor(
-                v13,
-                v14,
+                v19,
+                v20,
                 Method_BattleDeckServantData___c__GetScriptStringArrayParam_b__75_0__,
                 0LL);
               static_fields = BattleDeckServantData___c_TypeInfo->static_fields;
-              static_fields->__9__75_0 = (struct System_Converter_object__string__o *)v13;
-              sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__75_0, (int32_t)v13, v16, v17);
+              static_fields->__9__75_0 = (struct System_Converter_object__string__o *)v19;
+              sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__75_0, (int32_t)v19, v22, v23);
             }
-            if ( !v11
-              || (v12 = System_Collections_Generic_List_object___ConvertAll_object_(
-                          v11,
-                          (System_Converter_T__TOutput__o *)v13,
-                          (const MethodInfo_2DB32F8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___)) == 0LL )
+            if ( !v17
+              || (v18 = System_Collections_Generic_List_object___ConvertAll_object_(
+                          v17,
+                          (System_Converter_T__TOutput__o *)v19,
+                          (const MethodInfo_2DC0FF8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___)) == 0LL )
             {
-              sub_1B8880C(v12, v8);
+              sub_1B9026C(v18, v14);
             }
             return (System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                            (System_Collections_Generic_List_object__o *)v12,
-                                            (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                            (System_Collections_Generic_List_object__o *)v18,
+                                            (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_string__ToArray__);
           }
         }
       }
@@ -467,12 +481,12 @@ System_String_o *__fastcall BattleDeckServantData__GetTDErrorCardSelectVoiceSe(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4A5D667 & 1) == 0 )
+  if ( (byte_4A7237E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24055/*"treasureDeviceErrorCardSelectVoiceSe"*/);
-    byte_4A5D667 = 1;
+    sub_1B90010(&StringLiteral_24094/*"treasureDeviceErrorCardSelectVoiceSe"*/, defVal);
+    byte_4A7237E = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_24055/*"treasureDeviceErrorCardSelectVoiceSe"*/, defVal, v3);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_24094/*"treasureDeviceErrorCardSelectVoiceSe"*/, defVal, v3);
 }
 
 
@@ -482,12 +496,12 @@ System_String_array *__fastcall BattleDeckServantData__GetTDErrorVoiceSeArray(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D668 & 1) == 0 )
+  if ( (byte_4A7237F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24056/*"treasureDeviceErrorStatusVoiceSeList"*/);
-    byte_4A5D668 = 1;
+    sub_1B90010(&StringLiteral_24095/*"treasureDeviceErrorStatusVoiceSeList"*/, method);
+    byte_4A7237F = 1;
   }
-  return BattleDeckServantData__GetScriptStringArrayParam(this, (System_String_o *)StringLiteral_24056/*"treasureDeviceErrorStatusVoiceSeList"*/, 0LL, v2);
+  return BattleDeckServantData__GetScriptStringArrayParam(this, (System_String_o *)StringLiteral_24095/*"treasureDeviceErrorStatusVoiceSeList"*/, 0LL, v2);
 }
 
 
@@ -495,12 +509,12 @@ int32_t __fastcall BattleDeckServantData__GetVoicePatternId(BattleDeckServantDat
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D646 & 1) == 0 )
+  if ( (byte_4A7235D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24589/*"voicePatternId"*/);
-    byte_4A5D646 = 1;
+    sub_1B90010(&StringLiteral_24628/*"voicePatternId"*/, method);
+    byte_4A7235D = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_24589/*"voicePatternId"*/, -1, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_24628/*"voicePatternId"*/, -1, v2);
 }
 
 
@@ -508,12 +522,12 @@ bool __fastcall BattleDeckServantData__IsChangeDropItemByShift(BattleDeckServant
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D653 & 1) == 0 )
+  if ( (byte_4A7236A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20817/*"isSkillShiftInfo"*/);
-    byte_4A5D653 = 1;
+    sub_1B90010(&StringLiteral_20846/*"isSkillShiftInfo"*/, method);
+    byte_4A7236A = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20817/*"isSkillShiftInfo"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20846/*"isSkillShiftInfo"*/, v2);
 }
 
 
@@ -521,38 +535,40 @@ bool __fastcall BattleDeckServantData__IsDeadEnergy(BattleDeckServantData_o *thi
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D62C & 1) == 0 )
+  if ( (byte_4A72343 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D62C = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72343 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 5, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 5, v2);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleDeckServantData__IsHideBattlePointGauge(
         BattleDeckServantData_o *this,
         int32_t battlePointId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   System_Collections_Generic_IEnumerable_TSource__o *IntArray; // x0
 
-  if ( (byte_4A5D67D & 1) == 0 )
+  if ( (byte_4A72394 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1B885B0(&StringLiteral_7243/*"HideBattlePointGauge"*/);
-    byte_4A5D67D = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&battlePointId);
+    sub_1B90010(&StringLiteral_7247/*"HideBattlePointGauge"*/, v5);
+    byte_4A72394 = 1;
   }
   IntArray = (System_Collections_Generic_IEnumerable_TSource__o *)EntityScriptUtil__GetIntArray(
                                                                     this->fields.enemyScript,
-                                                                    (System_String_o *)StringLiteral_7243/*"HideBattlePointGauge"*/,
+                                                                    (System_String_o *)StringLiteral_7247/*"HideBattlePointGauge"*/,
                                                                     0LL,
                                                                     0LL);
   if ( IntArray )
     LOBYTE(IntArray) = System_Linq_Enumerable__Contains_int_(
                          IntArray,
                          battlePointId,
-                         (const MethodInfo_2E99A14 *)Method_System_Linq_Enumerable_Contains_int___);
+                         (const MethodInfo_2EA8328 *)Method_System_Linq_Enumerable_Contains_int___);
   return (char)IntArray;
 }
 
@@ -563,38 +579,40 @@ bool __fastcall BattleDeckServantData__IsHideClassSkillNpcFollower(
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D66A & 1) == 0 )
+  if ( (byte_4A72381 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19917/*"hideClassSkill"*/);
-    byte_4A5D66A = 1;
+    sub_1B90010(&StringLiteral_19944/*"hideClassSkill"*/, method);
+    byte_4A72381 = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19917/*"hideClassSkill"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19944/*"hideClassSkill"*/, v2);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleDeckServantData__IsIgnoreBattlePointUp(
         BattleDeckServantData_o *this,
         int32_t battlePointId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   System_Collections_Generic_IEnumerable_TSource__o *IntArray; // x0
 
-  if ( (byte_4A5D67C & 1) == 0 )
+  if ( (byte_4A72393 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1B885B0(&StringLiteral_7458/*"IgnoreBattlePointUp"*/);
-    byte_4A5D67C = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&battlePointId);
+    sub_1B90010(&StringLiteral_7462/*"IgnoreBattlePointUp"*/, v5);
+    byte_4A72393 = 1;
   }
   IntArray = (System_Collections_Generic_IEnumerable_TSource__o *)EntityScriptUtil__GetIntArray(
                                                                     this->fields.enemyScript,
-                                                                    (System_String_o *)StringLiteral_7458/*"IgnoreBattlePointUp"*/,
+                                                                    (System_String_o *)StringLiteral_7462/*"IgnoreBattlePointUp"*/,
                                                                     0LL,
                                                                     0LL);
   if ( IntArray )
     LOBYTE(IntArray) = System_Linq_Enumerable__Contains_int_(
                          IntArray,
                          battlePointId,
-                         (const MethodInfo_2E99A14 *)Method_System_Linq_Enumerable_Contains_int___);
+                         (const MethodInfo_2EA8328 *)Method_System_Linq_Enumerable_Contains_int___);
   return (char)IntArray;
 }
 
@@ -603,42 +621,44 @@ bool __fastcall BattleDeckServantData__IsLateUpdatePopup(BattleDeckServantData_o
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D669 & 1) == 0 )
+  if ( (byte_4A72380 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20797/*"isLateUpdatePopup"*/);
-    byte_4A5D669 = 1;
+    sub_1B90010(&StringLiteral_20825/*"isLateUpdatePopup"*/, method);
+    byte_4A72380 = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20797/*"isLateUpdatePopup"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20825/*"isLateUpdatePopup"*/, v2);
 }
 
 
 bool __fastcall BattleDeckServantData__IsLeaveEventJoin(BattleDeckServantData_o *this, const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5D65D & 1) == 0 )
+  if ( (byte_4A72374 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1B885B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5D65D = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1B90010(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v3);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4A72374 = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
   {
-    sub_1B8880C(Instance, v4);
+    sub_1B9026C(Instance, v6);
   }
   DataMasterBase_object__object__long___TryGetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
     &entity,
     this->fields.userSvtId,
-    (const MethodInfo_311DB34 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    (const MethodInfo_312C7A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   return entity && UserServantEntity__IsWithdrawal((UserServantEntity_o *)entity, 0LL);
 }
 
@@ -647,12 +667,12 @@ bool __fastcall BattleDeckServantData__IsNoAutoSkipDead(BattleDeckServantData_o 
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D663 & 1) == 0 )
+  if ( (byte_4A7237A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_9490/*"NoAutoSkipDead"*/);
-    byte_4A5D663 = 1;
+    sub_1B90010(&StringLiteral_9494/*"NoAutoSkipDead"*/, method);
+    byte_4A7237A = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9490/*"NoAutoSkipDead"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9494/*"NoAutoSkipDead"*/, 1, v2);
 }
 
 
@@ -660,12 +680,12 @@ bool __fastcall BattleDeckServantData__IsNoMotionOnBreakShift(BattleDeckServantD
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D679 & 1) == 0 )
+  if ( (byte_4A72390 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_9495/*"NoMotion"*/);
-    byte_4A5D679 = 1;
+    sub_1B90010(&StringLiteral_9499/*"NoMotion"*/, method);
+    byte_4A72390 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9495/*"NoMotion"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9499/*"NoMotion"*/, 1, v2);
 }
 
 
@@ -673,12 +693,12 @@ bool __fastcall BattleDeckServantData__IsNoSkipDead(BattleDeckServantData_o *thi
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D662 & 1) == 0 )
+  if ( (byte_4A72379 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_9498/*"NoSkipDead"*/);
-    byte_4A5D662 = 1;
+    sub_1B90010(&StringLiteral_9502/*"NoSkipDead"*/, method);
+    byte_4A72379 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9498/*"NoSkipDead"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_9502/*"NoSkipDead"*/, 1, v2);
 }
 
 
@@ -686,12 +706,12 @@ bool __fastcall BattleDeckServantData__IsNoVoice(BattleDeckServantData_o *this, 
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D630 & 1) == 0 )
+  if ( (byte_4A72347 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22098/*"noVoice"*/);
-    byte_4A5D630 = 1;
+    sub_1B90010(&StringLiteral_22131/*"noVoice"*/, method);
+    byte_4A72347 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_22098/*"noVoice"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_22131/*"noVoice"*/, 1, v2);
 }
 
 
@@ -699,12 +719,12 @@ bool __fastcall BattleDeckServantData__IsShadow(BattleDeckServantData_o *this, c
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D66E & 1) == 0 )
+  if ( (byte_4A72385 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20816/*"isShadow"*/);
-    byte_4A5D66E = 1;
+    sub_1B90010(&StringLiteral_20845/*"isShadow"*/, method);
+    byte_4A72385 = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20816/*"isShadow"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_20845/*"isShadow"*/, v2);
 }
 
 
@@ -712,12 +732,12 @@ bool __fastcall BattleDeckServantData__IsUseTdBeforeTactical(BattleDeckServantDa
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D67B & 1) == 0 )
+  if ( (byte_4A72392 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20824/*"isUseTdBeforeTactical"*/);
-    byte_4A5D67B = 1;
+    sub_1B90010(&StringLiteral_20853/*"isUseTdBeforeTactical"*/, method);
+    byte_4A72392 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20824/*"isUseTdBeforeTactical"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20853/*"isUseTdBeforeTactical"*/, 1, v2);
 }
 
 
@@ -726,41 +746,42 @@ System_Nullable_bool__o __fastcall BattleDeckServantData__IsVoiceEnabledOnBreakS
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  const MethodInfo *v4; // x3
+  __int64 v4; // x1
+  const MethodInfo *v5; // x3
   int32_t Script; // w0
-  System_Nullable_bool__o *v6; // x0
-  System_Nullable_bool__o *v8; // x0
-  System_Nullable_bool__o v10; // [xsp+8h] [xbp-28h] BYREF
-  System_Nullable_bool__o v11; // [xsp+Ch] [xbp-24h] BYREF
+  System_Nullable_bool__o *v7; // x0
+  System_Nullable_bool__o *v9; // x0
+  System_Nullable_bool__o v11; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_bool__o v12; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5D67A & 1) == 0 )
+  if ( (byte_4A72391 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Nullable_bool___ctor__);
-    sub_1B885B0(&StringLiteral_18983/*"enableBreakShiftVoice"*/);
-    byte_4A5D67A = 1;
+    sub_1B90010(&Method_System_Nullable_bool___ctor__, method);
+    sub_1B90010(&StringLiteral_19008/*"enableBreakShiftVoice"*/, v4);
+    byte_4A72391 = 1;
   }
-  if ( !BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_18983/*"enableBreakShiftVoice"*/, v2) )
+  if ( !BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19008/*"enableBreakShiftVoice"*/, v2) )
     return (System_Nullable_bool__o)0;
-  Script = BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_18983/*"enableBreakShiftVoice"*/, 1, v4);
+  Script = BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19008/*"enableBreakShiftVoice"*/, 1, v5);
   if ( !Script )
   {
-    v8 = &v10;
-    v10 = 0;
+    v9 = &v11;
+    v11 = 0;
     System_Nullable_bool____ctor(
-      (System_Nullable_bool__o)v8,
+      (System_Nullable_bool__o)v9,
       0,
-      (const MethodInfo_3616764 *)Method_System_Nullable_bool___ctor__);
-    return v10;
+      (const MethodInfo_36298D8 *)Method_System_Nullable_bool___ctor__);
+    return v11;
   }
   if ( Script == 1 )
   {
-    v6 = &v11;
-    v11 = 0;
+    v7 = &v12;
+    v12 = 0;
     System_Nullable_bool____ctor(
-      (System_Nullable_bool__o)v6,
+      (System_Nullable_bool__o)v7,
       1,
-      (const MethodInfo_3616764 *)Method_System_Nullable_bool___ctor__);
-    return v11;
+      (const MethodInfo_36298D8 *)Method_System_Nullable_bool___ctor__);
+    return v12;
   }
   else
   {
@@ -778,14 +799,14 @@ bool __fastcall BattleDeckServantData__TryGetAddFieldMotionIds(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A5D65F & 1) == 0 )
+  if ( (byte_4A72376 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19405/*"fieldMotionIds"*/);
-    byte_4A5D65F = 1;
+    sub_1B90010(&StringLiteral_19432/*"fieldMotionIds"*/, fieldMotionIds);
+    byte_4A72376 = 1;
   }
-  IntArray = EntityScriptUtil__GetIntArray(this->fields.enemyScript, (System_String_o *)StringLiteral_19405/*"fieldMotionIds"*/, 0LL, 0LL);
+  IntArray = EntityScriptUtil__GetIntArray(this->fields.enemyScript, (System_String_o *)StringLiteral_19432/*"fieldMotionIds"*/, 0LL, 0LL);
   *fieldMotionIds = IntArray;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)fieldMotionIds, (int32_t)IntArray, v6, v7);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)fieldMotionIds, (int32_t)IntArray, v6, v7);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)IntArray, 0LL);
 }
 
@@ -797,12 +818,12 @@ bool __fastcall BattleDeckServantData__TryGetOverwriteBaseUniqueCameraId(
 {
   int32_t IntValue; // w0
 
-  if ( (byte_4A5D660 & 1) == 0 )
+  if ( (byte_4A72377 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17081/*"baseUniqueCameraId"*/);
-    byte_4A5D660 = 1;
+    sub_1B90010(&StringLiteral_17106/*"baseUniqueCameraId"*/, uniqueCameraId);
+    byte_4A72377 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_17081/*"baseUniqueCameraId"*/, 0, 0LL);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_17106/*"baseUniqueCameraId"*/, 0, 0LL);
   *uniqueCameraId = IntValue;
   return IntValue > 0;
 }
@@ -815,14 +836,14 @@ bool __fastcall BattleDeckServantData__TryGetOverwriteFov(
 {
   float FloatValue; // s0
 
-  if ( (byte_4A5D65E & 1) == 0 )
+  if ( (byte_4A72375 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19590/*"fov"*/);
-    byte_4A5D65E = 1;
+    sub_1B90010(&StringLiteral_19617/*"fov"*/, fov);
+    byte_4A72375 = 1;
   }
   FloatValue = EntityScriptUtil__GetFloatValue(
                  this->fields.enemyScript,
-                 (System_String_o *)StringLiteral_19590/*"fov"*/,
+                 (System_String_o *)StringLiteral_19617/*"fov"*/,
                  0.0,
                  0LL);
   *fov = FloatValue;
@@ -830,6 +851,7 @@ bool __fastcall BattleDeckServantData__TryGetOverwriteFov(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleDeckServantData__checkEntryIndex(
         BattleDeckServantData_o *this,
         int32_t entryIndex,
@@ -837,13 +859,13 @@ bool __fastcall BattleDeckServantData__checkEntryIndex(
 {
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A5D655 & 1) == 0 )
+  if ( (byte_4A7236C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19035/*"entryIndex"*/);
-    byte_4A5D655 = 1;
+    sub_1B90010(&StringLiteral_19062/*"entryIndex"*/, *(_QWORD *)&entryIndex);
+    byte_4A7236C = 1;
   }
-  return !BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19035/*"entryIndex"*/, method)
-      || BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_19035/*"entryIndex"*/, entryIndex + 1, v5);
+  return !BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19062/*"entryIndex"*/, method)
+      || BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_19062/*"entryIndex"*/, entryIndex + 1, v5);
 }
 
 
@@ -853,20 +875,22 @@ bool __fastcall BattleDeckServantData__checkScript(
         int32_t val,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v10; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v10; // x2
-  __int64 v11; // x3
-  BattleDeckServantData_o *v12; // x0
-  const MethodInfo *v13; // x1
+  __int64 v12; // x2
+  __int64 v13; // x3
+  BattleDeckServantData_o *v14; // x0
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4A5D648 & 1) == 0 )
+  if ( (byte_4A7235F & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&long_TypeInfo);
-    byte_4A5D648 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&long_TypeInfo, v8);
+    byte_4A7235F = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( enemyScript )
@@ -874,25 +898,25 @@ bool __fastcall BattleDeckServantData__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
            (Il2CppObject *)key,
-           (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.enemyScript;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
       {
-        sub_1B8880C(Item, v8);
+        sub_1B9026C(Item, v10);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
-        LOBYTE(enemyScript) = *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11) == val;
+        LOBYTE(enemyScript) = *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13) == val;
       }
       else
       {
-        sub_1B88ACC(Item);
-        LOBYTE(enemyScript) = BattleDeckServantData__isDeadStand(v12, v13);
+        sub_1B9052C(Item);
+        LOBYTE(enemyScript) = BattleDeckServantData__isDeadStand(v14, v15);
       }
     }
     else
@@ -908,12 +932,12 @@ int32_t __fastcall BattleDeckServantData__getBillBoardGroup(BattleDeckServantDat
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D640 & 1) == 0 )
+  if ( (byte_4A72357 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17183/*"billBoardGroup"*/);
-    byte_4A5D640 = 1;
+    sub_1B90010(&StringLiteral_17208/*"billBoardGroup"*/, method);
+    byte_4A72357 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17183/*"billBoardGroup"*/, -1, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17208/*"billBoardGroup"*/, -1, v2);
 }
 
 
@@ -921,12 +945,12 @@ int32_t __fastcall BattleDeckServantData__getChangeAttri(BattleDeckServantData_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D63E & 1) == 0 )
+  if ( (byte_4A72355 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17804/*"changeAttri"*/);
-    byte_4A5D63E = 1;
+    sub_1B90010(&StringLiteral_17830/*"changeAttri"*/, method);
+    byte_4A72355 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17804/*"changeAttri"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_17830/*"changeAttri"*/, 0, v2);
 }
 
 
@@ -934,98 +958,107 @@ System_Int32_array *__fastcall BattleDeckServantData__getChangeList(
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
-  System_Collections_Generic_List_object__c *v4; // x1
+  System_Collections_Generic_List_object__c *v13; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  System_Collections_Generic_List_object__o *v6; // x19
-  BattleDeckServantData___c_c *v7; // x8
+  System_Collections_Generic_List_object__o *v15; // x19
+  BattleDeckServantData___c_c *v16; // x8
   System_Converter_object__int__o *_9__54_0; // x20
   __int64 methodPtr_low; // x10
-  Il2CppObject *v10; // x21
+  Il2CppObject *v19; // x21
   struct BattleDeckServantData___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  BattleDeckServantData_o *v15; // x0
-  const MethodInfo *v16; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  BattleDeckServantData_o *v24; // x0
+  const MethodInfo *v25; // x1
 
-  if ( (byte_4A5D652 & 1) == 0 )
+  if ( (byte_4A72369 & 1) == 0 )
   {
-    sub_1B885B0(&System_Converter_object__int__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&int___TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&Method_BattleDeckServantData___c__getChangeList_b__54_0__);
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    sub_1B885B0(&StringLiteral_17803/*"change"*/);
-    byte_4A5D652 = 1;
+    sub_1B90010(&System_Converter_object__int__TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B90010(&int___TypeInfo, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v7);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v8);
+    sub_1B90010(&Method_BattleDeckServantData___c__getChangeList_b__54_0__, v9);
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v10);
+    sub_1B90010(&StringLiteral_17829/*"change"*/, v11);
+    byte_4A72369 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-          (Il2CppObject *)StringLiteral_17803/*"change"*/,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_17829/*"change"*/,
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    return (System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B900B8(int___TypeInfo, 0LL);
   }
   Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.enemyScript;
   if ( !Item )
     goto LABEL_19;
   Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                       Item,
-                                                                      (Il2CppObject *)StringLiteral_17803/*"change"*/,
-                                                                      (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v6 = (System_Collections_Generic_List_object__o *)Item;
-  v7 = BattleDeckServantData___c_TypeInfo;
+                                                                      (Il2CppObject *)StringLiteral_17829/*"change"*/,
+                                                                      (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v15 = (System_Collections_Generic_List_object__o *)Item;
+  v16 = BattleDeckServantData___c_TypeInfo;
   if ( !BattleDeckServantData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDeckServantData___c_TypeInfo);
-    v7 = BattleDeckServantData___c_TypeInfo;
+    v16 = BattleDeckServantData___c_TypeInfo;
   }
-  _9__54_0 = v7->static_fields->__9__54_0;
-  if ( !v6
-    || (v4 = System_Collections_Generic_List_object__TypeInfo,
+  _9__54_0 = v16->static_fields->__9__54_0;
+  if ( !v15
+    || (v13 = System_Collections_Generic_List_object__TypeInfo,
         methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (System_Collections_Generic_List_object__c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
+        LOBYTE(v15->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
+    && (System_Collections_Generic_List_object__c *)v15->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
   {
     if ( !_9__54_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !v16->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = BattleDeckServantData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v16);
+        v16 = BattleDeckServantData___c_TypeInfo;
       }
-      v10 = (Il2CppObject *)v7->static_fields->__9;
-      _9__54_0 = (System_Converter_object__int__o *)sub_1B887FC(System_Converter_object__int__TypeInfo);
+      v19 = (Il2CppObject *)v16->static_fields->__9;
+      _9__54_0 = (System_Converter_object__int__o *)sub_1B9025C(System_Converter_object__int__TypeInfo);
       System_Converter_object__int____ctor(
         _9__54_0,
-        v10,
+        v19,
         Method_BattleDeckServantData___c__getChangeList_b__54_0__,
         0LL);
       static_fields = BattleDeckServantData___c_TypeInfo->static_fields;
       static_fields->__9__54_0 = _9__54_0;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__54_0, (int32_t)_9__54_0, v12, v13);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__54_0, (int32_t)_9__54_0, v21, v22);
     }
-    if ( v6 )
+    if ( v15 )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_List_object___ConvertAll_int_(
-                                                                          v6,
+                                                                          v15,
                                                                           (System_Converter_T__TOutput__o *)_9__54_0,
-                                                                          (const MethodInfo_2DB31F4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                                          (const MethodInfo_2DC0EF4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
       if ( Item )
         return System_Collections_Generic_List_int___ToArray(
                  (System_Collections_Generic_List_int__o *)Item,
-                 (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
 LABEL_19:
-    sub_1B8880C(Item, v4);
+    sub_1B9026C(Item, v13);
   }
-  sub_1B88ACC(v6);
-  return (System_Int32_array *)BattleDeckServantData__IsChangeDropItemByShift(v15, v16);
+  sub_1B9052C(v15);
+  return (System_Int32_array *)BattleDeckServantData__IsChangeDropItemByShift(v24, v25);
 }
 
 
@@ -1035,13 +1068,13 @@ bool __fastcall BattleDeckServantData__getEnableNpInfo(BattleDeckServantData_o *
   System_String_o *v4; // x20
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A5D658 & 1) == 0 )
+  if ( (byte_4A7236F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22160/*"npInfoEnable"*/);
-    byte_4A5D658 = 1;
+    sub_1B90010(&StringLiteral_22193/*"npInfoEnable"*/, method);
+    byte_4A7236F = 1;
   }
-  v4 = (System_String_o *)StringLiteral_22160/*"npInfoEnable"*/;
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22160/*"npInfoEnable"*/, v2)
+  v4 = (System_String_o *)StringLiteral_22193/*"npInfoEnable"*/;
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22193/*"npInfoEnable"*/, v2)
       && BattleDeckServantData__checkScript(this, v4, 1, v5);
 }
 
@@ -1050,12 +1083,12 @@ int32_t __fastcall BattleDeckServantData__getEnemyNameEffect(BattleDeckServantDa
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D63F & 1) == 0 )
+  if ( (byte_4A72356 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19025/*"enemyNameEffect"*/);
-    byte_4A5D63F = 1;
+    sub_1B90010(&StringLiteral_19052/*"enemyNameEffect"*/, method);
+    byte_4A72356 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19025/*"enemyNameEffect"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19052/*"enemyNameEffect"*/, 0, v2);
 }
 
 
@@ -1065,12 +1098,12 @@ System_String_o *__fastcall BattleDeckServantData__getEnemyTreasureDeviceVoiceId
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D63D & 1) == 0 )
+  if ( (byte_4A72354 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24060/*"treasureDeviceVoiceId"*/);
-    byte_4A5D63D = 1;
+    sub_1B90010(&StringLiteral_24099/*"treasureDeviceVoiceId"*/, method);
+    byte_4A72354 = 1;
   }
-  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_24060/*"treasureDeviceVoiceId"*/, 0LL, v2);
+  return BattleDeckServantData__getScriptStr(this, (System_String_o *)StringLiteral_24099/*"treasureDeviceVoiceId"*/, 0LL, v2);
 }
 
 
@@ -1078,31 +1111,32 @@ int32_t __fastcall BattleDeckServantData__getHpBarType(BattleDeckServantData_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D635 & 1) == 0 )
+  if ( (byte_4A7234C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19969/*"hpBarType"*/);
-    byte_4A5D635 = 1;
+    sub_1B90010(&StringLiteral_19996/*"hpBarType"*/, method);
+    byte_4A7234C = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19969/*"hpBarType"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19996/*"hpBarType"*/, 0, v2);
 }
 
 
 bool __fastcall BattleDeckServantData__getIsForceDropItem(BattleDeckServantData_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
 
-  if ( (byte_4A5D654 & 1) == 0 )
+  if ( (byte_4A7236B & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&StringLiteral_19532/*"forceDropItem"*/);
-    byte_4A5D654 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1B90010(&StringLiteral_19559/*"forceDropItem"*/, v3);
+    byte_4A7236B = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( enemyScript )
     LOBYTE(enemyScript) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                             (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-                            (Il2CppObject *)StringLiteral_19532/*"forceDropItem"*/,
-                            (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                            (Il2CppObject *)StringLiteral_19559/*"forceDropItem"*/,
+                            (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)enemyScript;
 }
 
@@ -1113,12 +1147,12 @@ int32_t __fastcall BattleDeckServantData__getMultiTargetBattleDeadChangePos(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D645 & 1) == 0 )
+  if ( (byte_4A7235C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18507/*"deadChangePos"*/);
-    byte_4A5D645 = 1;
+    sub_1B90010(&StringLiteral_18532/*"deadChangePos"*/, method);
+    byte_4A7235C = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_18507/*"deadChangePos"*/, -1, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_18532/*"deadChangePos"*/, -1, v2);
 }
 
 
@@ -1128,13 +1162,13 @@ int32_t __fastcall BattleDeckServantData__getNpCharge(BattleDeckServantData_o *t
   System_String_o *v4; // x20
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A5D659 & 1) == 0 )
+  if ( (byte_4A72370 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22159/*"npCharge"*/);
-    byte_4A5D659 = 1;
+    sub_1B90010(&StringLiteral_22192/*"npCharge"*/, method);
+    byte_4A72370 = 1;
   }
-  v4 = (System_String_o *)StringLiteral_22159/*"npCharge"*/;
-  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22159/*"npCharge"*/, v2) )
+  v4 = (System_String_o *)StringLiteral_22192/*"npCharge"*/;
+  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22192/*"npCharge"*/, v2) )
     return BattleDeckServantData__getScript(this, v4, -1, v5);
   else
     return -1;
@@ -1147,59 +1181,62 @@ int32_t __fastcall BattleDeckServantData__getOverWriteSvtVoiceIdOld(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D63B & 1) == 0 )
+  if ( (byte_4A72352 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23712/*"svtVoiceId"*/);
-    byte_4A5D63B = 1;
+    sub_1B90010(&StringLiteral_23749/*"svtVoiceId"*/, method);
+    byte_4A72352 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23712/*"svtVoiceId"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23749/*"svtVoiceId"*/, 0, v2);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BattleDeckServantData__getOverwriteSvtVoiceId(
         BattleDeckServantData_o *this,
         int32_t battleSvtId,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  ServantChangeEntity_o *v7; // x0
-  const MethodInfo *v8; // x1
-  ServantChangeEntity_o *v9; // x20
-  const MethodInfo *v10; // x4
+  Il2CppObject *Instance; // x0
+  __int64 v8; // x1
+  ServantChangeEntity_o *v9; // x0
+  const MethodInfo *v10; // x1
+  ServantChangeEntity_o *v11; // x20
+  const MethodInfo *v12; // x4
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5D65C & 1) == 0 )
+  if ( (byte_4A72373 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_ServantChangeMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1B885B0(&StringLiteral_23718/*"svt_voice_id"*/);
-    byte_4A5D65C = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_ServantChangeMaster___, *(_QWORD *)&battleSvtId);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1B90010(&StringLiteral_23755/*"svt_voice_id"*/, v6);
+    byte_4A72373 = 1;
   }
   value = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantChangeMaster___)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantChangeMaster___)) == 0LL )
   {
-    sub_1B8880C(Instance, v6);
+    sub_1B9026C(Instance, v8);
   }
-  v7 = ServantChangeMaster__TrueNameEntity((ServantChangeMaster_o *)Instance, battleSvtId, 0LL);
-  if ( v7
-    && (v9 = v7, ServantChangeEntity__IsEnable(v7, 0LL))
+  v9 = ServantChangeMaster__TrueNameEntity((ServantChangeMaster_o *)Instance, battleSvtId, 0LL);
+  if ( v9
+    && (v11 = v9, ServantChangeEntity__IsEnable(v9, 0LL))
     && BattleDeckServantData__tryGetSvtChangeInt(
          this,
-         (System_String_o *)StringLiteral_23718/*"svt_voice_id"*/,
-         v9->fields.priority,
+         (System_String_o *)StringLiteral_23755/*"svt_voice_id"*/,
+         v11->fields.priority,
          &value,
-         v10) )
+         v12) )
   {
     return value;
   }
   else
   {
-    return BattleDeckServantData__getOverWriteSvtVoiceIdOld(this, v8);
+    return BattleDeckServantData__getOverWriteSvtVoiceIdOld(this, v10);
   }
 }
 
@@ -1208,12 +1245,12 @@ int32_t __fastcall BattleDeckServantData__getRaidId(BattleDeckServantData_o *thi
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D632 & 1) == 0 )
+  if ( (byte_4A72349 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22756/*"raid"*/);
-    byte_4A5D632 = 1;
+    sub_1B90010(&StringLiteral_22789/*"raid"*/, method);
+    byte_4A72349 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_22756/*"raid"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_22789/*"raid"*/, 0, v2);
 }
 
 
@@ -1227,12 +1264,12 @@ int32_t __fastcall BattleDeckServantData__getScale(BattleDeckServantData_o *this
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D63A & 1) == 0 )
+  if ( (byte_4A72351 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23013/*"scale"*/);
-    byte_4A5D63A = 1;
+    sub_1B90010(&StringLiteral_23048/*"scale"*/, method);
+    byte_4A72351 = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23013/*"scale"*/, 100, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23048/*"scale"*/, 100, v2);
 }
 
 
@@ -1242,27 +1279,29 @@ int32_t __fastcall BattleDeckServantData__getScript(
         int32_t defVal,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v10; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v10; // x2
-  __int64 v11; // x3
-  BattleDeckServantData_o *v13; // x0
-  const MethodInfo *v14; // x1
+  __int64 v12; // x2
+  __int64 v13; // x3
+  BattleDeckServantData_o *v15; // x0
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4A5D64B & 1) == 0 )
+  if ( (byte_4A72362 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&long_TypeInfo);
-    byte_4A5D64B = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&long_TypeInfo, v8);
+    byte_4A72362 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -1271,14 +1310,14 @@ int32_t __fastcall BattleDeckServantData__getScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B8880C(Item, v8);
+    sub_1B9026C(Item, v10);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11);
-  sub_1B88ACC(Item);
-  return BattleDeckServantData__ExistKillType(v13, v14);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
+  sub_1B9052C(Item);
+  return BattleDeckServantData__ExistKillType(v15, v16);
 }
 
 
@@ -1288,19 +1327,20 @@ int32_t __fastcall BattleDeckServantData__getScriptInt(
         int32_t defVal,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  __int64 v10; // x3
-  BattleDeckServantData_o *v12; // x0
-  const MethodInfo *v13; // x1
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  BattleDeckServantData_o *v13; // x0
+  const MethodInfo *v14; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5D64D & 1) == 0 )
+  if ( (byte_4A72364 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&long_TypeInfo);
-    byte_4A5D64D = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    sub_1B90010(&long_TypeInfo, v7);
+    byte_4A72364 = 1;
   }
   value = 0LL;
   enemyScript = this->fields.enemyScript;
@@ -1309,16 +1349,16 @@ int32_t __fastcall BattleDeckServantData__getScriptInt(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defVal;
   }
   if ( !value )
-    sub_1B8880C(0LL, v8);
+    sub_1B9026C(0LL, v9);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v9, v10);
-  sub_1B88ACC(value);
-  return BattleDeckServantData__getUniqueID(v12, v13);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v10, v11);
+  sub_1B9052C(value);
+  return BattleDeckServantData__getUniqueID(v13, v14);
 }
 
 
@@ -1328,41 +1368,43 @@ System_String_o *__fastcall BattleDeckServantData__getScriptStr(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  struct System_Collections_Generic_Dictionary_string__object__o *v9; // x0
+  struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
+  __int64 v10; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *v11; // x0
   Il2CppObject *Item; // x0
-  BattleDeckServantData_o *v12; // x0
-  const MethodInfo *v13; // x1
+  BattleDeckServantData_o *v14; // x0
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4A5D64C & 1) == 0 )
+  if ( (byte_4A72363 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&string_TypeInfo);
-    byte_4A5D64C = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&string_TypeInfo, v8);
+    byte_4A72363 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
-  v9 = this->fields.enemyScript;
-  if ( !v9 )
-    sub_1B8880C(0LL, v8);
+  v11 = this->fields.enemyScript;
+  if ( !v11 )
+    sub_1B9026C(0LL, v10);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-           (System_Collections_Generic_Dictionary_object__object__o *)v9,
+           (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
-           (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   defVal = (System_String_o *)Item;
   if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
     return defVal;
-  sub_1B88ACC(Item);
-  return (System_String_o *)BattleDeckServantData__getChangeAttri(v12, v13);
+  sub_1B9052C(Item);
+  return (System_String_o *)BattleDeckServantData__getChangeAttri(v14, v15);
 }
 
 
@@ -1372,12 +1414,12 @@ int32_t __fastcall BattleDeckServantData__getSendDamageForSuperBossId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D638 & 1) == 0 )
+  if ( (byte_4A7234F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23098/*"sendDamageForSuperBossId"*/);
-    byte_4A5D638 = 1;
+    sub_1B90010(&StringLiteral_23133/*"sendDamageForSuperBossId"*/, method);
+    byte_4A7234F = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23098/*"sendDamageForSuperBossId"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23133/*"sendDamageForSuperBossId"*/, 0, v2);
 }
 
 
@@ -1385,98 +1427,107 @@ System_Int32_array *__fastcall BattleDeckServantData__getShiftClearBuffIndiv(
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
-  System_Collections_Generic_List_object__c *v4; // x1
+  System_Collections_Generic_List_object__c *v13; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  System_Collections_Generic_List_object__o *v6; // x19
-  BattleDeckServantData___c_c *v7; // x8
+  System_Collections_Generic_List_object__o *v15; // x19
+  BattleDeckServantData___c_c *v16; // x8
   System_Converter_object__int__o *_9__53_0; // x20
   __int64 methodPtr_low; // x10
-  Il2CppObject *v10; // x21
+  Il2CppObject *v19; // x21
   struct BattleDeckServantData___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  BattleDeckServantData_o *v15; // x0
-  const MethodInfo *v16; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  BattleDeckServantData_o *v24; // x0
+  const MethodInfo *v25; // x1
 
-  if ( (byte_4A5D651 & 1) == 0 )
+  if ( (byte_4A72368 & 1) == 0 )
   {
-    sub_1B885B0(&System_Converter_object__int__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&int___TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&Method_BattleDeckServantData___c__getShiftClearBuffIndiv_b__53_0__);
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    sub_1B885B0(&StringLiteral_23256/*"shiftClear"*/);
-    byte_4A5D651 = 1;
+    sub_1B90010(&System_Converter_object__int__TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B90010(&int___TypeInfo, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v7);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v8);
+    sub_1B90010(&Method_BattleDeckServantData___c__getShiftClearBuffIndiv_b__53_0__, v9);
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v10);
+    sub_1B90010(&StringLiteral_23291/*"shiftClear"*/, v11);
+    byte_4A72368 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-          (Il2CppObject *)StringLiteral_23256/*"shiftClear"*/,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_23291/*"shiftClear"*/,
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    return (System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B900B8(int___TypeInfo, 0LL);
   }
   Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.enemyScript;
   if ( !Item )
     goto LABEL_19;
   Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                       Item,
-                                                                      (Il2CppObject *)StringLiteral_23256/*"shiftClear"*/,
-                                                                      (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v6 = (System_Collections_Generic_List_object__o *)Item;
-  v7 = BattleDeckServantData___c_TypeInfo;
+                                                                      (Il2CppObject *)StringLiteral_23291/*"shiftClear"*/,
+                                                                      (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v15 = (System_Collections_Generic_List_object__o *)Item;
+  v16 = BattleDeckServantData___c_TypeInfo;
   if ( !BattleDeckServantData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDeckServantData___c_TypeInfo);
-    v7 = BattleDeckServantData___c_TypeInfo;
+    v16 = BattleDeckServantData___c_TypeInfo;
   }
-  _9__53_0 = v7->static_fields->__9__53_0;
-  if ( !v6
-    || (v4 = System_Collections_Generic_List_object__TypeInfo,
+  _9__53_0 = v16->static_fields->__9__53_0;
+  if ( !v15
+    || (v13 = System_Collections_Generic_List_object__TypeInfo,
         methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (System_Collections_Generic_List_object__c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
+        LOBYTE(v15->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
+    && (System_Collections_Generic_List_object__c *)v15->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
   {
     if ( !_9__53_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !v16->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = BattleDeckServantData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v16);
+        v16 = BattleDeckServantData___c_TypeInfo;
       }
-      v10 = (Il2CppObject *)v7->static_fields->__9;
-      _9__53_0 = (System_Converter_object__int__o *)sub_1B887FC(System_Converter_object__int__TypeInfo);
+      v19 = (Il2CppObject *)v16->static_fields->__9;
+      _9__53_0 = (System_Converter_object__int__o *)sub_1B9025C(System_Converter_object__int__TypeInfo);
       System_Converter_object__int____ctor(
         _9__53_0,
-        v10,
+        v19,
         Method_BattleDeckServantData___c__getShiftClearBuffIndiv_b__53_0__,
         0LL);
       static_fields = BattleDeckServantData___c_TypeInfo->static_fields;
       static_fields->__9__53_0 = _9__53_0;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v12, v13);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v21, v22);
     }
-    if ( v6 )
+    if ( v15 )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_List_object___ConvertAll_int_(
-                                                                          v6,
+                                                                          v15,
                                                                           (System_Converter_T__TOutput__o *)_9__53_0,
-                                                                          (const MethodInfo_2DB31F4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                                          (const MethodInfo_2DC0EF4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
       if ( Item )
         return System_Collections_Generic_List_int___ToArray(
                  (System_Collections_Generic_List_int__o *)Item,
-                 (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
 LABEL_19:
-    sub_1B8880C(Item, v4);
+    sub_1B9026C(Item, v13);
   }
-  sub_1B88ACC(v6);
-  return BattleDeckServantData__getChangeList(v15, v16);
+  sub_1B9052C(v15);
+  return BattleDeckServantData__getChangeList(v24, v25);
 }
 
 
@@ -1484,128 +1535,146 @@ System_Int32_array *__fastcall BattleDeckServantData__getShiftList(
         BattleDeckServantData_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
-  System_Collections_Generic_List_object__c *v4; // x1
+  System_Collections_Generic_List_object__c *v13; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  System_Collections_Generic_List_object__o *v6; // x19
-  BattleDeckServantData___c_c *v7; // x8
+  System_Collections_Generic_List_object__o *v15; // x19
+  BattleDeckServantData___c_c *v16; // x8
   System_Converter_object__int__o *_9__51_0; // x20
   __int64 methodPtr_low; // x10
-  Il2CppObject *v10; // x21
+  Il2CppObject *v19; // x21
   struct BattleDeckServantData___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  BattleDeckServantData_o *v15; // x0
-  int64_t v16; // x1
-  const MethodInfo *v17; // x2
+  int32_t v21; // w2
+  int32_t v22; // w3
+  BattleDeckServantData_o *v24; // x0
+  int64_t v25; // x1
+  const MethodInfo *v26; // x2
 
-  if ( (byte_4A5D64F & 1) == 0 )
+  if ( (byte_4A72366 & 1) == 0 )
   {
-    sub_1B885B0(&System_Converter_object__int__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&int___TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&Method_BattleDeckServantData___c__getShiftList_b__51_0__);
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    sub_1B885B0(&StringLiteral_23254/*"shift"*/);
-    byte_4A5D64F = 1;
+    sub_1B90010(&System_Converter_object__int__TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B90010(&int___TypeInfo, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v7);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v8);
+    sub_1B90010(&Method_BattleDeckServantData___c__getShiftList_b__51_0__, v9);
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v10);
+    sub_1B90010(&StringLiteral_23289/*"shift"*/, v11);
+    byte_4A72366 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-          (Il2CppObject *)StringLiteral_23254/*"shift"*/,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_23289/*"shift"*/,
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    return (System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B900B8(int___TypeInfo, 0LL);
   }
   Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.enemyScript;
   if ( !Item )
     goto LABEL_19;
   Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                       Item,
-                                                                      (Il2CppObject *)StringLiteral_23254/*"shift"*/,
-                                                                      (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v6 = (System_Collections_Generic_List_object__o *)Item;
-  v7 = BattleDeckServantData___c_TypeInfo;
+                                                                      (Il2CppObject *)StringLiteral_23289/*"shift"*/,
+                                                                      (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v15 = (System_Collections_Generic_List_object__o *)Item;
+  v16 = BattleDeckServantData___c_TypeInfo;
   if ( !BattleDeckServantData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDeckServantData___c_TypeInfo);
-    v7 = BattleDeckServantData___c_TypeInfo;
+    v16 = BattleDeckServantData___c_TypeInfo;
   }
-  _9__51_0 = v7->static_fields->__9__51_0;
-  if ( !v6
-    || (v4 = System_Collections_Generic_List_object__TypeInfo,
+  _9__51_0 = v16->static_fields->__9__51_0;
+  if ( !v15
+    || (v13 = System_Collections_Generic_List_object__TypeInfo,
         methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (System_Collections_Generic_List_object__c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
+        LOBYTE(v15->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
+    && (System_Collections_Generic_List_object__c *)v15->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
   {
     if ( !_9__51_0 )
     {
-      if ( !v7->_2.cctor_finished )
+      if ( !v16->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v7);
-        v7 = BattleDeckServantData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v16);
+        v16 = BattleDeckServantData___c_TypeInfo;
       }
-      v10 = (Il2CppObject *)v7->static_fields->__9;
-      _9__51_0 = (System_Converter_object__int__o *)sub_1B887FC(System_Converter_object__int__TypeInfo);
-      System_Converter_object__int____ctor(_9__51_0, v10, Method_BattleDeckServantData___c__getShiftList_b__51_0__, 0LL);
+      v19 = (Il2CppObject *)v16->static_fields->__9;
+      _9__51_0 = (System_Converter_object__int__o *)sub_1B9025C(System_Converter_object__int__TypeInfo);
+      System_Converter_object__int____ctor(_9__51_0, v19, Method_BattleDeckServantData___c__getShiftList_b__51_0__, 0LL);
       static_fields = BattleDeckServantData___c_TypeInfo->static_fields;
       static_fields->__9__51_0 = _9__51_0;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v12, v13);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v21, v22);
     }
-    if ( v6 )
+    if ( v15 )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_List_object___ConvertAll_int_(
-                                                                          v6,
+                                                                          v15,
                                                                           (System_Converter_T__TOutput__o *)_9__51_0,
-                                                                          (const MethodInfo_2DB31F4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                                          (const MethodInfo_2DC0EF4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
       if ( Item )
         return System_Collections_Generic_List_int___ToArray(
                  (System_Collections_Generic_List_int__o *)Item,
-                 (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
 LABEL_19:
-    sub_1B8880C(Item, v4);
+    sub_1B9026C(Item, v13);
   }
-  sub_1B88ACC(v6);
-  return (System_Int32_array *)BattleDeckServantData__GetDefShiftPosition(v15, v16, v17);
+  sub_1B9052C(v15);
+  return (System_Int32_array *)BattleDeckServantData__GetDefShiftPosition(v24, v25, v26);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BattleDeckServantData__getSummonNpcId(
         BattleDeckServantData_o *this,
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
-  System_Collections_Generic_List_object__c *v6; // x1
+  System_Collections_Generic_List_object__c *v14; // x1
   void *Item; // x0
-  System_Collections_Generic_List_object__o *v8; // x20
-  BattleDeckServantData___c_c *v9; // x8
+  System_Collections_Generic_List_object__o *v16; // x20
+  BattleDeckServantData___c_c *v17; // x8
   System_Converter_object__int__o *_9__50_0; // x21
   __int64 methodPtr_low; // x10
-  Il2CppObject *v12; // x22
+  Il2CppObject *v20; // x22
   struct BattleDeckServantData___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w8
+  int32_t v22; // w2
+  int32_t v23; // w3
+  int32_t v24; // w8
 
-  if ( (byte_4A5D64E & 1) == 0 )
+  if ( (byte_4A72365 & 1) == 0 )
   {
-    sub_1B885B0(&System_Converter_object__int__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&Method_BattleDeckServantData___c__getSummonNpcId_b__50_0__);
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    sub_1B885B0(&StringLiteral_17701/*"call"*/);
-    byte_4A5D64E = 1;
+    sub_1B90010(&System_Converter_object__int__TypeInfo, *(_QWORD *)&index);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v5);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v9);
+    sub_1B90010(&Method_BattleDeckServantData___c__getSummonNpcId_b__50_0__, v10);
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v11);
+    sub_1B90010(&StringLiteral_17727/*"call"*/, v12);
+    byte_4A72365 = 1;
   }
   if ( index == -1 )
     return this->fields.npcId;
@@ -1613,72 +1682,72 @@ int32_t __fastcall BattleDeckServantData__getSummonNpcId(
   if ( enemyScript
     && System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-         (Il2CppObject *)StringLiteral_17701/*"call"*/,
-         (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17727/*"call"*/,
+         (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = this->fields.enemyScript;
     if ( !Item )
       goto LABEL_24;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)Item,
-             (Il2CppObject *)StringLiteral_17701/*"call"*/,
-             (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v8 = (System_Collections_Generic_List_object__o *)Item;
-    v9 = BattleDeckServantData___c_TypeInfo;
+             (Il2CppObject *)StringLiteral_17727/*"call"*/,
+             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v16 = (System_Collections_Generic_List_object__o *)Item;
+    v17 = BattleDeckServantData___c_TypeInfo;
     if ( !BattleDeckServantData___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleDeckServantData___c_TypeInfo);
-      v9 = BattleDeckServantData___c_TypeInfo;
+      v17 = BattleDeckServantData___c_TypeInfo;
     }
-    _9__50_0 = v9->static_fields->__9__50_0;
-    if ( v8 )
+    _9__50_0 = v17->static_fields->__9__50_0;
+    if ( v16 )
     {
-      v6 = System_Collections_Generic_List_object__TypeInfo;
+      v14 = System_Collections_Generic_List_object__TypeInfo;
       methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(v8->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-        || (System_Collections_Generic_List_object__c *)v8->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
+      if ( LOBYTE(v16->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+        || (System_Collections_Generic_List_object__c *)v16->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
       {
-        sub_1B88ACC(v8);
+        sub_1B9052C(v16);
         goto LABEL_26;
       }
     }
     if ( !_9__50_0 )
     {
-      if ( !v9->_2.cctor_finished )
+      if ( !v17->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v9);
-        v9 = BattleDeckServantData___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v17);
+        v17 = BattleDeckServantData___c_TypeInfo;
       }
-      v12 = (Il2CppObject *)v9->static_fields->__9;
-      _9__50_0 = (System_Converter_object__int__o *)sub_1B887FC(System_Converter_object__int__TypeInfo);
+      v20 = (Il2CppObject *)v17->static_fields->__9;
+      _9__50_0 = (System_Converter_object__int__o *)sub_1B9025C(System_Converter_object__int__TypeInfo);
       System_Converter_object__int____ctor(
         _9__50_0,
-        v12,
+        v20,
         Method_BattleDeckServantData___c__getSummonNpcId_b__50_0__,
         0LL);
       static_fields = BattleDeckServantData___c_TypeInfo->static_fields;
       static_fields->__9__50_0 = _9__50_0;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__50_0, (int32_t)_9__50_0, v14, v15);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__50_0, (int32_t)_9__50_0, v22, v23);
     }
-    if ( !v8
+    if ( !v16
       || (Item = System_Collections_Generic_List_object___ConvertAll_int_(
-                   v8,
+                   v16,
                    (System_Converter_T__TOutput__o *)_9__50_0,
-                   (const MethodInfo_2DB31F4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___)) == 0LL
+                   (const MethodInfo_2DC0EF4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___)) == 0LL
       || (Item = System_Collections_Generic_List_int___ToArray(
                    (System_Collections_Generic_List_int__o *)Item,
-                   (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__)) == 0LL )
+                   (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__)) == 0LL )
     {
 LABEL_24:
-      sub_1B8880C(Item, v6);
+      sub_1B9026C(Item, v14);
     }
-    v16 = *((_DWORD *)Item + 6);
-    if ( v16 > index )
+    v24 = *((_DWORD *)Item + 6);
+    if ( v24 > index )
     {
-      if ( v16 > (unsigned int)index )
+      if ( v24 > (unsigned int)index )
         return *((_DWORD *)Item + index + 8);
 LABEL_26:
-      sub_1B88814(Item, v6);
+      sub_1B90274(Item, v14);
     }
   }
   return -1;
@@ -1689,12 +1758,12 @@ int32_t __fastcall BattleDeckServantData__getSuperBossId(BattleDeckServantData_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D634 & 1) == 0 )
+  if ( (byte_4A7234B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23685/*"superBoss"*/);
-    byte_4A5D634 = 1;
+    sub_1B90010(&StringLiteral_23722/*"superBoss"*/, method);
+    byte_4A7234B = 1;
   }
-  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23685/*"superBoss"*/, 0, v2);
+  return BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_23722/*"superBoss"*/, 0, v2);
 }
 
 
@@ -1704,13 +1773,13 @@ System_String_o *__fastcall BattleDeckServantData__getTDName(BattleDeckServantDa
   System_String_o *v4; // x20
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A5D656 & 1) == 0 )
+  if ( (byte_4A7236D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24058/*"treasureDeviceName"*/);
-    byte_4A5D656 = 1;
+    sub_1B90010(&StringLiteral_24097/*"treasureDeviceName"*/, method);
+    byte_4A7236D = 1;
   }
-  v4 = (System_String_o *)StringLiteral_24058/*"treasureDeviceName"*/;
-  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_24058/*"treasureDeviceName"*/, v2) )
+  v4 = (System_String_o *)StringLiteral_24097/*"treasureDeviceName"*/;
+  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_24097/*"treasureDeviceName"*/, v2) )
     return BattleDeckServantData__getScriptStr(this, v4, 0LL, v5);
   else
     return 0LL;
@@ -1723,13 +1792,13 @@ System_String_o *__fastcall BattleDeckServantData__getTDRuby(BattleDeckServantDa
   System_String_o *v4; // x20
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A5D657 & 1) == 0 )
+  if ( (byte_4A7236E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24059/*"treasureDeviceRuby"*/);
-    byte_4A5D657 = 1;
+    sub_1B90010(&StringLiteral_24098/*"treasureDeviceRuby"*/, method);
+    byte_4A7236E = 1;
   }
-  v4 = (System_String_o *)StringLiteral_24059/*"treasureDeviceRuby"*/;
-  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_24059/*"treasureDeviceRuby"*/, v2) )
+  v4 = (System_String_o *)StringLiteral_24098/*"treasureDeviceRuby"*/;
+  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_24098/*"treasureDeviceRuby"*/, v2) )
     return BattleDeckServantData__getScriptStr(this, v4, 0LL, v5);
   else
     return 0LL;
@@ -1752,12 +1821,12 @@ bool __fastcall BattleDeckServantData__isAddition(BattleDeckServantData_o *this,
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D63C & 1) == 0 )
+  if ( (byte_4A72353 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20780/*"isAddition"*/);
-    byte_4A5D63C = 1;
+    sub_1B90010(&StringLiteral_20808/*"isAddition"*/, method);
+    byte_4A72353 = 1;
   }
-  return BattleDeckServantData__isInfoScript(this, (System_String_o *)StringLiteral_20780/*"isAddition"*/, v2);
+  return BattleDeckServantData__isInfoScript(this, (System_String_o *)StringLiteral_20808/*"isAddition"*/, v2);
 }
 
 
@@ -1765,12 +1834,12 @@ bool __fastcall BattleDeckServantData__isAppear(BattleDeckServantData_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D62F & 1) == 0 )
+  if ( (byte_4A72346 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16815/*"appear"*/);
-    byte_4A5D62F = 1;
+    sub_1B90010(&StringLiteral_16840/*"appear"*/, method);
+    byte_4A72346 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_16815/*"appear"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_16840/*"appear"*/, 1, v2);
 }
 
 
@@ -1778,12 +1847,12 @@ bool __fastcall BattleDeckServantData__isDeadEffect(BattleDeckServantData_o *thi
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D62A & 1) == 0 )
+  if ( (byte_4A72341 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D62A = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72341 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 3, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 3, v2);
 }
 
 
@@ -1791,12 +1860,12 @@ bool __fastcall BattleDeckServantData__isDeadStand(BattleDeckServantData_o *this
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D629 & 1) == 0 )
+  if ( (byte_4A72340 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D629 = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72340 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 2, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 2, v2);
 }
 
 
@@ -1804,12 +1873,12 @@ bool __fastcall BattleDeckServantData__isDeadWait(BattleDeckServantData_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D62B & 1) == 0 )
+  if ( (byte_4A72342 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D62B = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A72342 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 4, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 4, v2);
 }
 
 
@@ -1817,12 +1886,12 @@ bool __fastcall BattleDeckServantData__isEscape(BattleDeckServantData_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D628 & 1) == 0 )
+  if ( (byte_4A7233F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20995/*"kill"*/);
-    byte_4A5D628 = 1;
+    sub_1B90010(&StringLiteral_21024/*"kill"*/, method);
+    byte_4A7233F = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20995/*"kill"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21024/*"kill"*/, 1, v2);
 }
 
 
@@ -1830,12 +1899,12 @@ bool __fastcall BattleDeckServantData__isHideShadow(BattleDeckServantData_o *thi
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D661 & 1) == 0 )
+  if ( (byte_4A72378 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20795/*"isHideShadow"*/);
-    byte_4A5D661 = 1;
+    sub_1B90010(&StringLiteral_20823/*"isHideShadow"*/, method);
+    byte_4A72378 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20795/*"isHideShadow"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_20823/*"isHideShadow"*/, 1, v2);
 }
 
 
@@ -1846,17 +1915,17 @@ bool __fastcall BattleDeckServantData__isInfoScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *infoScript; // x0
 
-  if ( (byte_4A5D64A & 1) == 0 )
+  if ( (byte_4A72361 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_4A5D64A = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_4A72361 = 1;
   }
   infoScript = this->fields.infoScript;
   if ( infoScript )
     LOBYTE(infoScript) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                            (System_Collections_Generic_Dictionary_object__object__o *)infoScript,
                            (Il2CppObject *)key,
-                           (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                           (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)infoScript;
 }
 
@@ -1865,12 +1934,12 @@ bool __fastcall BattleDeckServantData__isLeader(BattleDeckServantData_o *this, c
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D639 & 1) == 0 )
+  if ( (byte_4A72350 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_21063/*"leader"*/);
-    byte_4A5D639 = 1;
+    sub_1B90010(&StringLiteral_21092/*"leader"*/, method);
+    byte_4A72350 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21063/*"leader"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21092/*"leader"*/, 1, v2);
 }
 
 
@@ -1880,12 +1949,12 @@ bool __fastcall BattleDeckServantData__isMultiTargetBattleStartPos(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D644 & 1) == 0 )
+  if ( (byte_4A7235B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23496/*"startPos"*/);
-    byte_4A5D644 = 1;
+    sub_1B90010(&StringLiteral_23533/*"startPos"*/, method);
+    byte_4A7235B = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_23496/*"startPos"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_23533/*"startPos"*/, 1, v2);
 }
 
 
@@ -1893,12 +1962,12 @@ bool __fastcall BattleDeckServantData__isMultiTargetCore(BattleDeckServantData_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D641 & 1) == 0 )
+  if ( (byte_4A72358 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_21968/*"multiTargetCore"*/);
-    byte_4A5D641 = 1;
+    sub_1B90010(&StringLiteral_22001/*"multiTargetCore"*/, method);
+    byte_4A72358 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21968/*"multiTargetCore"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_22001/*"multiTargetCore"*/, 1, v2);
 }
 
 
@@ -1906,12 +1975,12 @@ bool __fastcall BattleDeckServantData__isMultiTargetUnder(BattleDeckServantData_
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D643 & 1) == 0 )
+  if ( (byte_4A7235A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_21969/*"multiTargetUnder"*/);
-    byte_4A5D643 = 1;
+    sub_1B90010(&StringLiteral_22002/*"multiTargetUnder"*/, method);
+    byte_4A7235A = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21969/*"multiTargetUnder"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_22002/*"multiTargetUnder"*/, 1, v2);
 }
 
 
@@ -1919,12 +1988,12 @@ bool __fastcall BattleDeckServantData__isMultiTargetUp(BattleDeckServantData_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5D642 & 1) == 0 )
+  if ( (byte_4A72359 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_21970/*"multiTargetUp"*/);
-    byte_4A5D642 = 1;
+    sub_1B90010(&StringLiteral_22003/*"multiTargetUp"*/, method);
+    byte_4A72359 = 1;
   }
-  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_21970/*"multiTargetUp"*/, 1, v2);
+  return BattleDeckServantData__checkScript(this, (System_String_o *)StringLiteral_22003/*"multiTargetUp"*/, 1, v2);
 }
 
 
@@ -1932,12 +2001,12 @@ bool __fastcall BattleDeckServantData__isRaid(BattleDeckServantData_o *this, con
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D631 & 1) == 0 )
+  if ( (byte_4A72348 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22756/*"raid"*/);
-    byte_4A5D631 = 1;
+    sub_1B90010(&StringLiteral_22789/*"raid"*/, method);
+    byte_4A72348 = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22756/*"raid"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_22789/*"raid"*/, v2);
 }
 
 
@@ -1948,17 +2017,17 @@ bool __fastcall BattleDeckServantData__isScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
 
-  if ( (byte_4A5D649 & 1) == 0 )
+  if ( (byte_4A72360 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_4A5D649 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_4A72360 = 1;
   }
   enemyScript = this->fields.enemyScript;
   if ( enemyScript )
     LOBYTE(enemyScript) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                             (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
                             (Il2CppObject *)key,
-                            (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                            (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)enemyScript;
 }
 
@@ -1969,12 +2038,12 @@ bool __fastcall BattleDeckServantData__isSendDamageForSuperBossId(
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D637 & 1) == 0 )
+  if ( (byte_4A7234E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23098/*"sendDamageForSuperBossId"*/);
-    byte_4A5D637 = 1;
+    sub_1B90010(&StringLiteral_23133/*"sendDamageForSuperBossId"*/, method);
+    byte_4A7234E = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23098/*"sendDamageForSuperBossId"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23133/*"sendDamageForSuperBossId"*/, v2);
 }
 
 
@@ -1982,12 +2051,12 @@ bool __fastcall BattleDeckServantData__isSuperBoss(BattleDeckServantData_o *this
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D633 & 1) == 0 )
+  if ( (byte_4A7234A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23685/*"superBoss"*/);
-    byte_4A5D633 = 1;
+    sub_1B90010(&StringLiteral_23722/*"superBoss"*/, method);
+    byte_4A7234A = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23685/*"superBoss"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23722/*"superBoss"*/, v2);
 }
 
 
@@ -1995,12 +2064,12 @@ bool __fastcall BattleDeckServantData__isSuperBossUi(BattleDeckServantData_o *th
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4A5D636 & 1) == 0 )
+  if ( (byte_4A7234D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23687/*"superBossUi"*/);
-    byte_4A5D636 = 1;
+    sub_1B90010(&StringLiteral_23724/*"superBossUi"*/, method);
+    byte_4A7234D = 1;
   }
-  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23687/*"superBossUi"*/, v2);
+  return BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_23724/*"superBossUi"*/, v2);
 }
 
 
@@ -2010,78 +2079,81 @@ bool __fastcall BattleDeckServantData__tryGetSvtChange(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  Il2CppObject *v6; // x21
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  Il2CppObject *v9; // x21
+  __int64 v10; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *enemyScript; // x0
   Il2CppObject *Item; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
+  int32_t v13; // w2
+  int32_t v14; // w3
   __int64 methodPtr_low; // x11
-  System_Collections_Generic_Dictionary_string__object__o *v13; // x9
-  int32_t v15; // w1
-  __int64 v16; // x10
+  System_Collections_Generic_Dictionary_string__object__o *v16; // x9
+  int32_t v18; // w1
+  __int64 v19; // x10
 
-  if ( (byte_4A5D65A & 1) == 0 )
+  if ( (byte_4A72371 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1B885B0(&StringLiteral_23714/*"svt_change"*/);
-    byte_4A5D65A = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, dict);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
+    sub_1B90010(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v7);
+    sub_1B90010(&StringLiteral_23751/*"svt_change"*/, v8);
+    byte_4A72371 = 1;
   }
-  v6 = (Il2CppObject *)StringLiteral_23714/*"svt_change"*/;
+  v9 = (Il2CppObject *)StringLiteral_23751/*"svt_change"*/;
   *dict = 0LL;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)dict, 0, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)dict, 0, (int32_t)method, v3);
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript )
     goto LABEL_20;
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-          v6,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          v9,
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   enemyScript = this->fields.enemyScript;
   if ( !enemyScript )
 LABEL_20:
-    sub_1B8880C(enemyScript, v7);
+    sub_1B9026C(enemyScript, v10);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)enemyScript,
-           v6,
-           (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           v9,
+           (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( Item )
   {
     methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low )
     {
       if ( (System_Collections_Generic_Dictionary_string__object__c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
-        v13 = (System_Collections_Generic_Dictionary_string__object__o *)Item;
+        v16 = (System_Collections_Generic_Dictionary_string__object__o *)Item;
       else
-        v13 = 0LL;
+        v16 = 0LL;
     }
     else
     {
-      v13 = 0LL;
+      v16 = 0LL;
     }
-    *dict = v13;
-    v16 = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)v16 )
+    *dict = v16;
+    v19 = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)v19 )
     {
-      if ( (System_Collections_Generic_Dictionary_string__object__c *)Item->klass->_2.typeHierarchy[v16 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
-        v15 = (int)Item;
+      if ( (System_Collections_Generic_Dictionary_string__object__c *)Item->klass->_2.typeHierarchy[v19 - 1] == System_Collections_Generic_Dictionary_string__object__TypeInfo )
+        v18 = (int)Item;
       else
-        v15 = 0;
+        v18 = 0;
     }
     else
     {
-      v15 = 0;
+      v18 = 0;
     }
   }
   else
   {
-    v15 = 0;
+    v18 = 0;
     *dict = 0LL;
   }
-  sub_1B88554((ServantStatusBattleListViewItem_o *)dict, v15, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)dict, v18, v13, v14);
   return *dict != 0LL;
 }
 
@@ -2095,42 +2167,52 @@ bool __fastcall BattleDeckServantData__tryGetSvtChangeInt(
         const MethodInfo *method)
 {
   __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
   System_Collections_Generic_List_object__o *Item; // x0
   __int64 methodPtr_low; // x10
-  System_Collections_Generic_List_object__c *v12; // x9
+  System_Collections_Generic_List_object__c *v22; // x9
   Il2CppObject *current; // x21
-  __int64 v14; // x9
-  Il2CppObject *v15; // x0
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x3
-  Il2CppObject *v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  void *v23; // x0
-  int v24; // w1
-  __int64 v25; // x21
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-70h] BYREF
+  __int64 v24; // x9
+  Il2CppObject *v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x2
+  __int64 v28; // x3
+  Il2CppObject *v29; // x0
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x3
+  void *v33; // x0
+  int v34; // w1
+  __int64 v35; // x21
+  System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+20h] [xbp-70h] BYREF
   System_Collections_Generic_Dictionary_string__object__o *dict; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_4A5D65B & 1) == 0 )
+  if ( (byte_4A72372 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
-    sub_1B885B0(&long_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_object__GetEnumerator__);
-    sub_1B885B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1B885B0(&StringLiteral_22600/*"priority"*/);
-    sub_1B885B0(&StringLiteral_24501/*"value"*/);
-    byte_4A5D65B = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
+    sub_1B90010(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__, v11);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__, v12);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__, v13);
+    sub_1B90010(&long_TypeInfo, v14);
+    sub_1B90010(&Method_System_Collections_Generic_List_object__GetEnumerator__, v15);
+    sub_1B90010(&System_Collections_Generic_List_object__TypeInfo, v16);
+    sub_1B90010(&StringLiteral_22633/*"priority"*/, v17);
+    sub_1B90010(&StringLiteral_24540/*"value"*/, v18);
+    byte_4A72372 = 1;
   }
-  memset(&v28, 0, sizeof(v28));
+  memset(&v38, 0, sizeof(v38));
   dict = 0LL;
   *value = -1;
   if ( !BattleDeckServantData__tryGetSvtChange(this, &dict, *(const MethodInfo **)&priority) )
@@ -2141,7 +2223,7 @@ bool __fastcall BattleDeckServantData__tryGetSvtChangeInt(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)dict,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_12;
   Item = (System_Collections_Generic_List_object__o *)dict;
   if ( !dict )
@@ -2149,16 +2231,16 @@ bool __fastcall BattleDeckServantData__tryGetSvtChangeInt(
   Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                         (System_Collections_Generic_Dictionary_object__object__o *)dict,
                                                         (Il2CppObject *)key,
-                                                        (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                        (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     return (char)Item;
   methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(Item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
     goto LABEL_12;
-  v12 = (System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1];
-  if ( v12 != System_Collections_Generic_List_object__TypeInfo )
+  v22 = (System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1];
+  if ( v22 != System_Collections_Generic_List_object__TypeInfo )
     Item = 0LL;
-  if ( v12 != System_Collections_Generic_List_object__TypeInfo )
+  if ( v22 != System_Collections_Generic_List_object__TypeInfo )
   {
 LABEL_12:
     LOBYTE(Item) = 0;
@@ -2166,76 +2248,76 @@ LABEL_12:
   }
   if ( !Item )
 LABEL_28:
-    sub_1B8880C(Item, v9);
+    sub_1B9026C(Item, v19);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v27,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     Item,
-    (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_object__GetEnumerator__);
-  v28 = v27;
+    (const MethodInfo_35114B8 *)Method_System_Collections_Generic_List_object__GetEnumerator__);
+  v38 = v37;
   do
   {
     do
     {
       if ( !System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v28,
-              (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
+              &v38,
+              (const MethodInfo_328A150 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
         goto LABEL_26;
-      current = v28.fields._current;
+      current = v38.fields._current;
     }
-    while ( !v28.fields._current );
-    v14 = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v28.fields._current->klass->vtable[0].methodPtr) < (unsigned int)v14
-      || (System_Collections_Generic_Dictionary_string__object__c *)v28.fields._current->klass->_2.typeHierarchy[v14 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
+    while ( !v38.fields._current );
+    v24 = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
+    if ( LOBYTE(v38.fields._current->klass->vtable[0].methodPtr) < (unsigned int)v24
+      || (System_Collections_Generic_Dictionary_string__object__c *)v38.fields._current->klass->_2.typeHierarchy[v24 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_1B88ACC(v28.fields._current);
+      sub_1B9052C(v38.fields._current);
 LABEL_30:
-      sub_1B8880C(v15, v16);
+      sub_1B9026C(v25, v26);
     }
-    v15 = System_Collections_Generic_Dictionary_object__object___get_Item(
-            (System_Collections_Generic_Dictionary_object__object__o *)v28.fields._current,
-            (Il2CppObject *)StringLiteral_22600/*"priority"*/,
-            (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    if ( !v15 )
+    v25 = System_Collections_Generic_Dictionary_object__object___get_Item(
+            (System_Collections_Generic_Dictionary_object__object__o *)v38.fields._current,
+            (Il2CppObject *)StringLiteral_22633/*"priority"*/,
+            (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    if ( !v25 )
       goto LABEL_30;
-    if ( v15->klass->_1.element_class != long_TypeInfo->_1.element_class )
+    if ( v25->klass->_1.element_class != long_TypeInfo->_1.element_class )
     {
-      sub_1B88ACC(v15);
+      sub_1B9052C(v25);
 LABEL_32:
-      sub_1B8880C(v19, v20);
+      sub_1B9026C(v29, v30);
     }
   }
-  while ( *(_DWORD *)j_il2cpp_object_unbox_0(v15, long_TypeInfo, v17, v18) != priority );
-  v19 = System_Collections_Generic_Dictionary_object__object___get_Item(
+  while ( *(_DWORD *)j_il2cpp_object_unbox_0(v25, long_TypeInfo, v27, v28) != priority );
+  v29 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)current,
-          (Il2CppObject *)StringLiteral_24501/*"value"*/,
-          (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v19 )
+          (Il2CppObject *)StringLiteral_24540/*"value"*/,
+          (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v29 )
     goto LABEL_32;
-  if ( v19->klass->_1.element_class == long_TypeInfo->_1.element_class )
+  if ( v29->klass->_1.element_class == long_TypeInfo->_1.element_class )
   {
-    *value = *(_QWORD *)j_il2cpp_object_unbox_0(v19, long_TypeInfo, v21, v22);
+    *value = *(_QWORD *)j_il2cpp_object_unbox_0(v29, long_TypeInfo, v31, v32);
 LABEL_26:
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v28,
-      (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+      &v38,
+      (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
   }
   else
   {
-    sub_1B88ACC(v19);
-    if ( v24 != 1 )
+    sub_1B9052C(v29);
+    if ( v34 != 1 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v28,
-        (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-      sub_1C73040();
+        &v38,
+        (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+      sub_1C7AAA0();
     }
-    v25 = *(_QWORD *)__cxa_begin_catch(v23);
+    v35 = *(_QWORD *)__cxa_begin_catch(v33);
     __cxa_end_catch();
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v28,
-      (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-    if ( v25 )
-      sub_1B88804(v25);
+      &v38,
+      (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+    if ( v35 )
+      sub_1B90264(v35);
   }
   LOBYTE(Item) = *value != -1;
   return (char)Item;
@@ -2244,23 +2326,24 @@ LABEL_26:
 
 void __fastcall BattleDeckServantData___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4A5D680 & 1) == 0 )
+  if ( (byte_4A72397 & 1) == 0 )
   {
-    sub_1B885B0(&BattleDeckServantData___c_TypeInfo);
-    byte_4A5D680 = 1;
+    sub_1B90010(&BattleDeckServantData___c_TypeInfo, v1);
+    byte_4A72397 = 1;
   }
-  v1 = (Il2CppObject *)sub_1B887FC(BattleDeckServantData___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  BattleDeckServantData___c_TypeInfo->static_fields->__9 = (struct BattleDeckServantData___c_o *)v1;
-  sub_1B88554(
+  v2 = (Il2CppObject *)sub_1B9025C(BattleDeckServantData___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  BattleDeckServantData___c_TypeInfo->static_fields->__9 = (struct BattleDeckServantData___c_o *)v2;
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)BattleDeckServantData___c_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -2276,7 +2359,7 @@ System_String_o *__fastcall BattleDeckServantData___c___GetScriptStringArrayPara
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B8880C(this, 0LL);
+    sub_1B9026C(this, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))x->klass->vtable[3].method)(
                               x,
                               x->klass->vtable[4].methodPtr);
@@ -2290,10 +2373,10 @@ int32_t __fastcall BattleDeckServantData___c___getChangeList_b__54_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4A5D684 & 1) == 0 )
+  if ( (byte_4A7239B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5D684 = 1;
+    sub_1B90010(&StringLiteral_1/*""*/, x);
+    byte_4A7239B = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(
@@ -2315,10 +2398,10 @@ int32_t __fastcall BattleDeckServantData___c___getShiftClearBuffIndiv_b__53_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4A5D683 & 1) == 0 )
+  if ( (byte_4A7239A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5D683 = 1;
+    sub_1B90010(&StringLiteral_1/*""*/, x);
+    byte_4A7239A = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(
@@ -2340,10 +2423,10 @@ int32_t __fastcall BattleDeckServantData___c___getShiftList_b__51_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4A5D682 & 1) == 0 )
+  if ( (byte_4A72399 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5D682 = 1;
+    sub_1B90010(&StringLiteral_1/*""*/, x);
+    byte_4A72399 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(
@@ -2365,10 +2448,10 @@ int32_t __fastcall BattleDeckServantData___c___getSummonNpcId_b__50_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4A5D681 & 1) == 0 )
+  if ( (byte_4A72398 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5D681 = 1;
+    sub_1B90010(&StringLiteral_1/*""*/, x);
+    byte_4A72398 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

@@ -1,14 +1,14 @@
 void __fastcall QuestHintMaster___ctor(QuestHintMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C22F & 1) == 0 )
+  if ( (byte_4A70F3E & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string___ctor__);
-    byte_4A5C22F = 1;
+    sub_1B90010(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string___ctor__, method);
+    byte_4A70F3E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     439,
-    (const MethodInfo_311DC4C *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string___ctor__);
+    (const MethodInfo_312C8C0 *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ QuestHintEntity_o *__fastcall QuestHintMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A5C230 & 1) == 0 )
+  if ( (byte_4A70F3F & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__GetEntity__);
-    byte_4A5C230 = 1;
+    sub_1B90010(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__GetEntity__, *(_QWORD *)&questId);
+    byte_4A70F3F = 1;
   }
   PK = (Il2CppObject *)QuestHintEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
   return (QuestHintEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_311DC8C *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__GetEntity__);
+                                (const MethodInfo_312C900 *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall QuestHintMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A5C231 & 1) == 0 )
+  if ( (byte_4A70F40 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__TryGetEntity__);
-    byte_4A5C231 = 1;
+    sub_1B90010(&Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__TryGetEntity__, entity);
+    byte_4A70F40 = 1;
   }
   PK = (Il2CppObject *)QuestHintEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_311DCDC *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__TryGetEntity__);
+           (const MethodInfo_312C950 *)Method_DataMasterBase_QuestHintMaster__QuestHintEntity__string__TryGetEntity__);
 }

@@ -1,77 +1,91 @@
 void __fastcall CacheFolderName___cctor(const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v1; // x19
-  __int64 v2; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
   __int64 v3; // x1
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v6; // x19
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v11; // x19
+  __int64 v12; // x0
+  __int64 v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v16; // x19
   struct CacheFolderName_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v18; // w2
+  int32_t v19; // w3
 
-  if ( (byte_4A5A06A & 1) == 0 )
+  if ( (byte_4A6ED72 & 1) == 0 )
   {
-    sub_1B885B0(&CacheFolderName_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__);
-    sub_1B885B0(&System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo);
-    sub_1B885B0(&StringLiteral_8898/*"MasterDataCaches"*/);
-    sub_1B885B0(&StringLiteral_17163/*"bfaa"*/);
-    sub_1B885B0(&StringLiteral_16622/*"a77d"*/);
-    sub_1B885B0(&StringLiteral_10589/*"PaymentHistorys"*/);
-    sub_1B885B0(&StringLiteral_18434/*"d713"*/);
-    sub_1B885B0(&StringLiteral_2492/*"AssetCaches"*/);
-    byte_4A5A06A = 1;
+    sub_1B90010(&CacheFolderName_TypeInfo, v1);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__, v2);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__, v3);
+    sub_1B90010(&System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo, v4);
+    sub_1B90010(&StringLiteral_8902/*"MasterDataCaches"*/, v5);
+    sub_1B90010(&StringLiteral_17188/*"bfaa"*/, v6);
+    sub_1B90010(&StringLiteral_16647/*"a77d"*/, v7);
+    sub_1B90010(&StringLiteral_10595/*"PaymentHistorys"*/, v8);
+    sub_1B90010(&StringLiteral_18460/*"d713"*/, v9);
+    sub_1B90010(&StringLiteral_2493/*"AssetCaches"*/, v10);
+    byte_4A6ED72 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B887FC(System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo);
+  v11 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B9025C(System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
-    v1,
-    (const MethodInfo_319C86C *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__);
-  if ( !v1
+    v11,
+    (const MethodInfo_31AB4E0 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__);
+  if ( !v11
     || (System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-          v1,
+          v11,
           0,
-          (Il2CppObject *)StringLiteral_2492/*"AssetCaches"*/,
-          (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
+          (Il2CppObject *)StringLiteral_2493/*"AssetCaches"*/,
+          (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
         System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-          v1,
+          v11,
           1,
-          (Il2CppObject *)StringLiteral_8898/*"MasterDataCaches"*/,
-          (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
+          (Il2CppObject *)StringLiteral_8902/*"MasterDataCaches"*/,
+          (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
         System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-          v1,
+          v11,
           2,
-          (Il2CppObject *)StringLiteral_10589/*"PaymentHistorys"*/,
-          (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
-        CacheFolderName_TypeInfo->static_fields->folderList = (struct System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__o *)v1,
-        sub_1B88554((ServantStatusBattleListViewItem_o *)CacheFolderName_TypeInfo->static_fields, (int32_t)v1, v4, v5),
-        v6 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B887FC(System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo),
+          (Il2CppObject *)StringLiteral_10595/*"PaymentHistorys"*/,
+          (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__),
+        CacheFolderName_TypeInfo->static_fields->folderList = (struct System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__o *)v11,
+        sub_1B8FFB4(
+          (ServantStatusBattleListViewItem_o *)CacheFolderName_TypeInfo->static_fields,
+          (int32_t)v11,
+          v14,
+          v15),
+        v16 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B9025C(System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo),
         System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
-          v6,
-          (const MethodInfo_319C86C *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__),
-        !v6) )
+          v16,
+          (const MethodInfo_31AB4E0 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__),
+        !v16) )
   {
-    sub_1B8880C(v2, v3);
+    sub_1B9026C(v12, v13);
   }
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v6,
+    v16,
     0,
-    (Il2CppObject *)StringLiteral_18434/*"d713"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_18460/*"d713"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v6,
+    v16,
     1,
-    (Il2CppObject *)StringLiteral_17163/*"bfaa"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_17188/*"bfaa"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v6,
+    v16,
     2,
-    (Il2CppObject *)StringLiteral_16622/*"a77d"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
+    (Il2CppObject *)StringLiteral_16647/*"a77d"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   static_fields = CacheFolderName_TypeInfo->static_fields;
-  static_fields->convertedFolderList = (struct System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__o *)v6;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->convertedFolderList, (int32_t)v6, v8, v9);
+  static_fields->convertedFolderList = (struct System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__o *)v16;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->convertedFolderList, (int32_t)v16, v18, v19);
 }
 
 
@@ -83,160 +97,179 @@ void __fastcall CacheFolderName___ctor(CacheFolderName_o *this, const MethodInfo
 
 System_String_o *__fastcall CacheFolderName__convertFolderName(System_String_o *name, const MethodInfo *method)
 {
-  CacheFolderName_c *v3; // x0
-  System_Collections_Generic_Dictionary_TKey__TValue__o *folderList; // x0
-  CacheFolderName_c *v5; // x0
-  int32_t key; // w20
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  CacheFolderName_c *v8; // x0
-  System_Collections_Generic_Dictionary_TKey__TValue__o *convertedFolderList; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
   __int64 v10; // x1
-  CacheFolderName_c *v11; // x0
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v12; // x0
+  __int64 v11; // x1
+  __int64 v12; // x1
+  CacheFolderName_c *v13; // x0
+  System_Collections_Generic_Dictionary_TKey__TValue__o *folderList; // x0
+  CacheFolderName_c *v15; // x0
+  int32_t key; // w20
+  __int64 v17; // x1
+  CacheFolderName_c *v18; // x0
+  System_Collections_Generic_Dictionary_TKey__TValue__o *convertedFolderList; // x0
+  __int64 v20; // x1
+  CacheFolderName_c *v21; // x0
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v22; // x0
   Il2CppObject *Item; // x19
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v15; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v16; // [xsp+30h] [xbp-60h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v26; // [xsp+30h] [xbp-60h] BYREF
 
-  if ( (byte_4A5A069 & 1) == 0 )
+  if ( (byte_4A6ED71 & 1) == 0 )
   {
-    sub_1B885B0(&CacheFolderName_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsValue__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__GetEnumerator__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__MoveNext__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__get_Current__);
-    sub_1B885B0(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Key__);
-    sub_1B885B0(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Value__);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5A069 = 1;
+    sub_1B90010(&CacheFolderName_TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsValue__, v4);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__GetEnumerator__, v5);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__, v6);
+    sub_1B90010(
+      &Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__,
+      v7);
+    sub_1B90010(
+      &Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__MoveNext__,
+      v8);
+    sub_1B90010(
+      &Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__get_Current__,
+      v9);
+    sub_1B90010(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Key__, v10);
+    sub_1B90010(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Value__, v11);
+    sub_1B90010(&StringLiteral_1/*""*/, v12);
+    byte_4A6ED71 = 1;
   }
-  v3 = CacheFolderName_TypeInfo;
-  memset(&v16, 0, sizeof(v16));
+  v13 = CacheFolderName_TypeInfo;
+  memset(&v26, 0, sizeof(v26));
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-    v3 = CacheFolderName_TypeInfo;
+    v13 = CacheFolderName_TypeInfo;
   }
-  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->folderList;
+  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v13->static_fields->folderList;
   if ( !folderList )
     goto LABEL_26;
   if ( !System_Collections_Generic_Dictionary_Int32Enum__object___ContainsValue(
           folderList,
           (Il2CppObject *)name,
-          (const MethodInfo_319D458 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsValue__) )
+          (const MethodInfo_31AC0CC *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsValue__) )
     return (System_String_o *)StringLiteral_1/*""*/;
-  v5 = CacheFolderName_TypeInfo;
+  v15 = CacheFolderName_TypeInfo;
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-    v5 = CacheFolderName_TypeInfo;
+    v15 = CacheFolderName_TypeInfo;
   }
-  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v5->static_fields->folderList;
+  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v15->static_fields->folderList;
   if ( !folderList )
 LABEL_26:
-    sub_1B8880C(folderList, method);
+    sub_1B9026C(folderList, method);
   System_Collections_Generic_Dictionary_Int32Enum__object___GetEnumerator(
-    &v15,
+    &v25,
     folderList,
-    (const MethodInfo_319D678 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__GetEnumerator__);
-  v16 = v15;
+    (const MethodInfo_31AC2EC *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__GetEnumerator__);
+  v26 = v25;
   do
   {
     if ( !System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___MoveNext(
-            &v16,
-            (const MethodInfo_32BC808 *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__MoveNext__) )
+            &v26,
+            (const MethodInfo_32CE654 *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__MoveNext__) )
     {
       System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___Dispose(
-        &v16,
-        (const MethodInfo_32BC92C *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
+        &v26,
+        (const MethodInfo_32CE778 *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
       return (System_String_o *)StringLiteral_1/*""*/;
     }
-    key = (int32_t)v16.fields._current.fields.key;
+    key = (int32_t)v26.fields._current.fields.key;
   }
-  while ( !System_String__op_Equality((System_String_o *)v16.fields._current.fields.value, name, 0LL) );
-  v8 = CacheFolderName_TypeInfo;
+  while ( !System_String__op_Equality((System_String_o *)v26.fields._current.fields.value, name, 0LL) );
+  v18 = CacheFolderName_TypeInfo;
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-    v8 = CacheFolderName_TypeInfo;
+    v18 = CacheFolderName_TypeInfo;
   }
-  convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v8->static_fields->convertedFolderList;
+  convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v18->static_fields->convertedFolderList;
   if ( !convertedFolderList )
-    sub_1B8880C(0LL, v7);
+    sub_1B9026C(0LL, v17);
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          convertedFolderList,
          key,
-         (const MethodInfo_319D434 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
+         (const MethodInfo_31AC0A8 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
   {
-    v11 = CacheFolderName_TypeInfo;
+    v21 = CacheFolderName_TypeInfo;
     if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-      v11 = CacheFolderName_TypeInfo;
+      v21 = CacheFolderName_TypeInfo;
     }
-    v12 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v11->static_fields->convertedFolderList;
-    if ( !v12 )
-      sub_1B8880C(0LL, v10);
+    v22 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v21->static_fields->convertedFolderList;
+    if ( !v22 )
+      sub_1B9026C(0LL, v20);
     Item = System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
-             v12,
+             v22,
              key,
-             (const MethodInfo_319D1A0 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
+             (const MethodInfo_31ABE14 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
   }
   else
   {
     Item = (Il2CppObject *)StringLiteral_1/*""*/;
   }
   System_Collections_Generic_Dictionary_Enumerator_Int32Enum__object___Dispose(
-    &v16,
-    (const MethodInfo_32BC92C *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
+    &v26,
+    (const MethodInfo_32CE778 *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
   return (System_String_o *)Item;
 }
 
 
 System_String_o *__fastcall CacheFolderName__getFolderName(int32_t name, const MethodInfo *method)
 {
-  CacheFolderName_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  CacheFolderName_c *v6; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *convertedFolderList; // x0
-  CacheFolderName_c *v5; // x0
+  CacheFolderName_c *v8; // x0
 
-  if ( (byte_4A5A067 & 1) == 0 )
+  if ( (byte_4A6ED6F & 1) == 0 )
   {
-    sub_1B885B0(&CacheFolderName_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5A067 = 1;
+    sub_1B90010(&CacheFolderName_TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__, v4);
+    sub_1B90010(&StringLiteral_1/*""*/, v5);
+    byte_4A6ED6F = 1;
   }
-  v3 = CacheFolderName_TypeInfo;
+  v6 = CacheFolderName_TypeInfo;
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-    v3 = CacheFolderName_TypeInfo;
+    v6 = CacheFolderName_TypeInfo;
   }
-  convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->convertedFolderList;
+  convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v6->static_fields->convertedFolderList;
   if ( !convertedFolderList )
     goto LABEL_12;
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          convertedFolderList,
          name,
-         (const MethodInfo_319D434 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
+         (const MethodInfo_31AC0A8 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
   {
-    v5 = CacheFolderName_TypeInfo;
+    v8 = CacheFolderName_TypeInfo;
     if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-      v5 = CacheFolderName_TypeInfo;
+      v8 = CacheFolderName_TypeInfo;
     }
-    convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v5->static_fields->convertedFolderList;
+    convertedFolderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v8->static_fields->convertedFolderList;
     if ( convertedFolderList )
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   convertedFolderList,
                                   name,
-                                  (const MethodInfo_319D1A0 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
+                                  (const MethodInfo_31ABE14 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
 LABEL_12:
-    sub_1B8880C(convertedFolderList, method);
+    sub_1B9026C(convertedFolderList, method);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -244,46 +277,49 @@ LABEL_12:
 
 System_String_o *__fastcall CacheFolderName__getFolderNameNotConverted(int32_t name, const MethodInfo *method)
 {
-  CacheFolderName_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  CacheFolderName_c *v6; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *folderList; // x0
-  CacheFolderName_c *v5; // x0
+  CacheFolderName_c *v8; // x0
 
-  if ( (byte_4A5A068 & 1) == 0 )
+  if ( (byte_4A6ED70 & 1) == 0 )
   {
-    sub_1B885B0(&CacheFolderName_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5A068 = 1;
+    sub_1B90010(&CacheFolderName_TypeInfo, method);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__, v3);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__, v4);
+    sub_1B90010(&StringLiteral_1/*""*/, v5);
+    byte_4A6ED70 = 1;
   }
-  v3 = CacheFolderName_TypeInfo;
+  v6 = CacheFolderName_TypeInfo;
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-    v3 = CacheFolderName_TypeInfo;
+    v6 = CacheFolderName_TypeInfo;
   }
-  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->folderList;
+  folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v6->static_fields->folderList;
   if ( !folderList )
     goto LABEL_12;
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          folderList,
          name,
-         (const MethodInfo_319D434 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
+         (const MethodInfo_31AC0A8 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__) )
   {
-    v5 = CacheFolderName_TypeInfo;
+    v8 = CacheFolderName_TypeInfo;
     if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
-      v5 = CacheFolderName_TypeInfo;
+      v8 = CacheFolderName_TypeInfo;
     }
-    folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v5->static_fields->folderList;
+    folderList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v8->static_fields->folderList;
     if ( folderList )
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   folderList,
                                   name,
-                                  (const MethodInfo_319D1A0 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
+                                  (const MethodInfo_31ABE14 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__);
 LABEL_12:
-    sub_1B8880C(folderList, method);
+    sub_1B9026C(folderList, method);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }

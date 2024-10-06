@@ -1,14 +1,14 @@
 void __fastcall ServantExceedMaster___ctor(ServantExceedMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B86D & 1) == 0 )
+  if ( (byte_4A70579 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
-    byte_4A5B86D = 1;
+    sub_1B90010(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__, method);
+    byte_4A70579 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     157,
-    (const MethodInfo_311DC4C *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
+    (const MethodInfo_312C8C0 *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
 }
 
 
@@ -21,19 +21,22 @@ ServantExceedEntity_o *__fastcall ServantExceedMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A5B86B & 1) == 0 )
+  if ( (byte_4A70577 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
-    byte_4A5B86B = 1;
+    sub_1B90010(
+      &Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__,
+      *(_QWORD *)&rarity);
+    byte_4A70577 = 1;
   }
   PK = (Il2CppObject *)ServantExceedEntity__CreatePK(rarity, exceedCount, *(const MethodInfo **)&exceedCount);
   return (ServantExceedEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_311DC8C *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
+                                    (const MethodInfo_312C900 *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantExceedMaster__GetFrameType(
         ServantExceedMaster_o *this,
         int32_t rarity,
@@ -42,10 +45,10 @@ int32_t __fastcall ServantExceedMaster__GetFrameType(
 {
   ServantExceedEntity_o *Entity; // x0
 
-  if ( (byte_4A5B86F & 1) == 0 )
+  if ( (byte_4A7057B & 1) == 0 )
   {
-    sub_1B885B0(&Rarity_TypeInfo);
-    byte_4A5B86F = 1;
+    sub_1B90010(&Rarity_TypeInfo, *(_QWORD *)&rarity);
+    byte_4A7057B = 1;
   }
   Entity = ServantExceedMaster__GetEntity(this, rarity, exceedCount, method);
   if ( Entity )
@@ -57,7 +60,7 @@ int32_t __fastcall ServantExceedMaster__GetFrameType(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall ServantExceedMaster__GetFrameType_39669416(
+int32_t __fastcall ServantExceedMaster__GetFrameType_39722824(
         ServantExceedMaster_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -65,28 +68,28 @@ int32_t __fastcall ServantExceedMaster__GetFrameType_39669416(
         const MethodInfo *method)
 {
   ServantExceedMaster_o *v8; // x21
-  int32_t Rarity_39669584; // w19
+  int32_t Rarity_39722992; // w19
   const MethodInfo *v10; // x3
   ServantExceedEntity_o *Entity; // x0
 
   v8 = this;
-  if ( (byte_4A5B870 & 1) == 0 )
+  if ( (byte_4A7057C & 1) == 0 )
   {
-    this = (ServantExceedMaster_o *)sub_1B885B0(&Rarity_TypeInfo);
-    byte_4A5B870 = 1;
+    this = (ServantExceedMaster_o *)sub_1B90010(&Rarity_TypeInfo, *(_QWORD *)&svtId);
+    byte_4A7057C = 1;
   }
-  Rarity_39669584 = ServantExceedMaster__GetRarity_39669584(this, svtId, limitCount, *(const MethodInfo **)&exceedCount);
-  Entity = ServantExceedMaster__GetEntity(v8, Rarity_39669584, exceedCount, v10);
+  Rarity_39722992 = ServantExceedMaster__GetRarity_39722992(this, svtId, limitCount, *(const MethodInfo **)&exceedCount);
+  Entity = ServantExceedMaster__GetEntity(v8, Rarity_39722992, exceedCount, v10);
   if ( Entity )
     return Entity->fields.frameType;
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
-  return Rarity__getFrameTypeImage(Rarity_39669584, 0, 0LL);
+  return Rarity__getFrameTypeImage(Rarity_39722992, 0, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall ServantExceedMaster__GetFrameType_39669872(
+int32_t __fastcall ServantExceedMaster__GetFrameType_39723280(
         ServantExceedMaster_o *this,
         int32_t *rarity,
         int32_t svtId,
@@ -95,20 +98,20 @@ int32_t __fastcall ServantExceedMaster__GetFrameType_39669872(
         const MethodInfo *method)
 {
   ServantExceedMaster_o *v10; // x21
-  int32_t Rarity_39669584; // w0
+  int32_t Rarity_39722992; // w0
   const MethodInfo *v12; // x3
   ServantExceedEntity_o *Entity; // x0
   int32_t v15; // w19
 
   v10 = this;
-  if ( (byte_4A5B871 & 1) == 0 )
+  if ( (byte_4A7057D & 1) == 0 )
   {
-    this = (ServantExceedMaster_o *)sub_1B885B0(&Rarity_TypeInfo);
-    byte_4A5B871 = 1;
+    this = (ServantExceedMaster_o *)sub_1B90010(&Rarity_TypeInfo, rarity);
+    byte_4A7057D = 1;
   }
-  Rarity_39669584 = ServantExceedMaster__GetRarity_39669584(this, svtId, limitCount, *(const MethodInfo **)&limitCount);
-  *rarity = Rarity_39669584;
-  Entity = ServantExceedMaster__GetEntity(v10, Rarity_39669584, exceedCount, v12);
+  Rarity_39722992 = ServantExceedMaster__GetRarity_39722992(this, svtId, limitCount, *(const MethodInfo **)&limitCount);
+  *rarity = Rarity_39722992;
+  Entity = ServantExceedMaster__GetEntity(v10, Rarity_39722992, exceedCount, v12);
   if ( Entity )
     return Entity->fields.frameType;
   v15 = *rarity;
@@ -122,7 +125,7 @@ int32_t __fastcall ServantExceedMaster__GetRarity(ServantExceedMaster_o *this, i
 {
   const MethodInfo *v3; // x3
 
-  return ServantExceedMaster__GetRarity_39669584(this, svtId, 0, v3);
+  return ServantExceedMaster__GetRarity_39722992(this, svtId, 0, v3);
 }
 
 
@@ -145,71 +148,74 @@ int32_t __fastcall ServantExceedMaster__GetRarityIcon(
 }
 
 
-int32_t __fastcall ServantExceedMaster__GetRarity_39669584(
+// local variable allocation has failed, the output may be wrong!
+int32_t __fastcall ServantExceedMaster__GetRarity_39722992(
         ServantExceedMaster_o *this,
         int32_t svtId,
         int32_t limitCount,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   __int64 v7; // x1
-  const MethodInfo *v8; // x4
-  const MethodInfo *v9; // x4
-  const MethodInfo *v10; // x3
-  ServantLimitEntity_o *v11; // x0
-  ServantLimitAddEntity_o *v13; // [xsp+8h] [xbp-38h] BYREF
+  Il2CppObject *Instance; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x4
+  const MethodInfo *v11; // x4
+  const MethodInfo *v12; // x3
+  ServantLimitEntity_o *v13; // x0
+  ServantLimitAddEntity_o *v15; // [xsp+8h] [xbp-38h] BYREF
   ServantLimitEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B872 & 1) == 0 )
+  if ( (byte_4A7057E & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_1B885B0(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5B872 = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, *(_QWORD *)&svtId);
+    sub_1B90010(&Method_DataManager_GetMasterData_ServantLimitMaster___, v6);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A7057E = 1;
   }
   entity = 0LL;
-  v13 = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v15 = 0LL;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !Instance )
     goto LABEL_17;
-  if ( ServantLimitMaster__TryGetEntity((ServantLimitMaster_o *)Instance, &entity, svtId, limitCount, v8) )
+  if ( ServantLimitMaster__TryGetEntity((ServantLimitMaster_o *)Instance, &entity, svtId, limitCount, v10) )
     goto LABEL_14;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0LL )
   {
 LABEL_17:
-    sub_1B8880C(Instance, v7);
+    sub_1B9026C(Instance, v9);
   }
-  if ( !ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Instance, &v13, svtId, limitCount, v9) )
+  if ( !ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Instance, &v15, svtId, limitCount, v11) )
   {
 LABEL_14:
-    v11 = entity;
+    v13 = entity;
     if ( !entity )
-      return (int)v11;
+      return (int)v13;
 LABEL_15:
-    LODWORD(v11) = v11->fields.rarity;
-    return (int)v11;
+    LODWORD(v13) = v13->fields.rarity;
+    return (int)v13;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
-  if ( !v13 || !Instance )
+               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+  if ( !v15 || !Instance )
     goto LABEL_17;
-  v11 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, v13->fields.battleCharaLimitCount, v10);
-  if ( v11 )
+  v13 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, v15->fields.battleCharaLimitCount, v12);
+  if ( v13 )
     goto LABEL_15;
-  return (int)v11;
+  return (int)v13;
 }
 
 
@@ -223,20 +229,21 @@ bool __fastcall ServantExceedMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A5B86C & 1) == 0 )
+  if ( (byte_4A70578 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
-    byte_4A5B86C = 1;
+    sub_1B90010(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__, entity);
+    byte_4A70578 = 1;
   }
   PK = (Il2CppObject *)ServantExceedEntity__CreatePK(rarity, exceedCount, *(const MethodInfo **)&rarity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_311DCDC *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
+           (const MethodInfo_312C950 *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ServantExceedEntity_o *__fastcall ServantExceedMaster__getEntity(
         ServantExceedMaster_o *this,
         int32_t svtId,
@@ -244,25 +251,26 @@ ServantExceedEntity_o *__fastcall ServantExceedMaster__getEntity(
         int32_t exceedCount,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
   void *Instance; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x3
+  __int64 v11; // x1
   const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4A5B86E & 1) == 0 )
+  if ( (byte_4A7057A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5B86E = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_ServantLimitMaster___, *(_QWORD *)&svtId);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4A7057A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0LL
-    || (Instance = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, limitCount, v11)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0LL
+    || (Instance = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, limitCount, v12)) == 0LL )
   {
-    sub_1B8880C(Instance, v10);
+    sub_1B9026C(Instance, v11);
   }
-  return ServantExceedMaster__GetEntity(this, *((_DWORD *)Instance + 6), exceedCount, v12);
+  return ServantExceedMaster__GetEntity(this, *((_DWORD *)Instance + 6), exceedCount, v13);
 }

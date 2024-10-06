@@ -4,22 +4,23 @@ void __fastcall FriendMessageHideSyncRequest__beginRequest(
         System_Int64_array *unHideUserIds,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4A5CA36 & 1) == 0 )
+  if ( (byte_4A7174A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19920/*"hideUserIds"*/);
-    sub_1B885B0(&StringLiteral_24153/*"unHideUserIds"*/);
-    byte_4A5CA36 = 1;
+    sub_1B90010(&StringLiteral_19947/*"hideUserIds"*/, hideUserIds);
+    sub_1B90010(&StringLiteral_24192/*"unHideUserIds"*/, v7);
+    byte_4A7174A = 1;
   }
-  RequestBase__addField_41136012(
+  RequestBase__addField_41190224(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19920/*"hideUserIds"*/,
+    (System_String_o *)StringLiteral_19947/*"hideUserIds"*/,
     &hideUserIds->obj,
     method);
-  RequestBase__addField_41136012((RequestBase_o *)this, (System_String_o *)StringLiteral_24153/*"unHideUserIds"*/, &unHideUserIds->obj, v7);
-  RequestBase__beginRequest((RequestBase_o *)this, v8);
+  RequestBase__addField_41190224((RequestBase_o *)this, (System_String_o *)StringLiteral_24192/*"unHideUserIds"*/, &unHideUserIds->obj, v8);
+  RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
 
@@ -27,18 +28,19 @@ System_String_o *__fastcall FriendMessageHideSyncRequest__getURL(
         FriendMessageHideSyncRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5CA35 & 1) == 0 )
+  if ( (byte_4A71749 & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_19637/*"friend/messageHideSync"*/);
-    byte_4A5CA35 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_19664/*"friend/messageHideSync"*/, v2);
+    byte_4A71749 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_19637/*"friend/messageHideSync"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_19664/*"friend/messageHideSync"*/, 0LL);
 }
 
 
@@ -47,37 +49,39 @@ void __fastcall FriendMessageHideSyncRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v8; // x9
+  __int64 *v10; // x9
 
-  if ( (byte_4A5CA37 & 1) == 0 )
+  if ( (byte_4A7174B & 1) == 0 )
   {
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
-    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    byte_4A5CA37 = 1;
+    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B90010(&StringLiteral_22258/*"ok"*/, v5);
+    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
+    byte_4A7174B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(66, responseList, 0LL);
-  if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
+  v7 = ResponseCommandKind__SearchData(66, responseList, 0LL);
+  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22225/*"ok"*/;
+    v10 = &StringLiteral_22258/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22055/*"ng"*/;
+    v10 = &StringLiteral_22088/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v8,
+    *v10,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

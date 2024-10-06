@@ -1,32 +1,33 @@
 void __fastcall SpotAddEntity___ctor(SpotAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BBDE & 1) == 0 )
+  if ( (byte_4A708EB & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5BBDE = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A708EB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall SpotAddEntity__CreatePK(
         int32_t spotId,
         int32_t priority,
         int32_t overrideType,
         const MethodInfo *method)
 {
-  if ( (byte_4A5BBDD & 1) == 0 )
+  if ( (byte_4A708EA & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4A5BBDD = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_4A708EA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            spotId,
            priority,
            overrideType,
-           (const MethodInfo_2E7DFBC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E8C8D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

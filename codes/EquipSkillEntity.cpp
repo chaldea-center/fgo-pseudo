@@ -1,27 +1,28 @@
 void __fastcall EquipSkillEntity___ctor(EquipSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B000 & 1) == 0 )
+  if ( (byte_4A6FD0B & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B000 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A6FD0B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EquipSkillEntity__CreatePK(int32_t equipId, int32_t num, const MethodInfo *method)
 {
-  if ( (byte_4A5AFFF & 1) == 0 )
+  if ( (byte_4A6FD0A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4A5AFFF = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&num);
+    byte_4A6FD0A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            equipId,
            num,
-           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

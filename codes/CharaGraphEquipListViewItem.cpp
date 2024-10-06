@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaGraphEquipListViewItem___ctor(
         CharaGraphEquipListViewItem_o *this,
         int32_t index,
@@ -6,22 +7,23 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
         System_Int64_array *partyUserEquipList,
         const MethodInfo *method)
 {
-  int64_t v11; // x0
-  __int64 v12; // x1
+  __int64 v11; // x1
+  int64_t v12; // x0
+  __int64 v13; // x1
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x8
-  __int128 v14; // q1
-  int64_t v15; // x21
+  __int128 v15; // q1
+  int64_t v16; // x21
   struct System_Int32_array *EquipCategoryIdList; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-60h]
+  int32_t v18; // w2
+  int32_t v19; // w3
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4A5A50C & 1) == 0 )
+  if ( (byte_4A6F214 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_Contains_long___);
-    sub_1B885B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4A5A50C = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_Contains_long___, *(_QWORD *)&index);
+    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
+    byte_4A6F214 = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -32,31 +34,31 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
     goto LABEL_10;
-  v14 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
-  *(_OWORD *)&v20.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v20.fields.fakeValue = v14;
+  v15 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
+  *(_OWORD *)&v21.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v21.fields.fakeValue = v15;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v19 = v20;
-  v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46453324(&v19, 0LL);
+  v20 = v21;
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(&v20, 0LL);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_10:
-    sub_1B8880C(v11, v12);
-  v15 = v11;
+    sub_1B9026C(v12, v13);
+  v16 = v12;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(
                           this->fields._UserServantEntity_k__BackingField,
                           1,
                           0LL);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)EquipCategoryIdList,
-    v17,
-    v18);
+    v18,
+    v19);
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
-         v15,
-         (const MethodInfo_2E99C0C *)Method_System_Linq_Enumerable_Contains_long___) )
+         v16,
+         (const MethodInfo_2EA8520 *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -79,7 +81,7 @@ void __fastcall CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   int32_t v3; // w3
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int32_t)value,
     (int32_t)method,

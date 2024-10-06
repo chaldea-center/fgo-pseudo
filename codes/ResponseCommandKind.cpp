@@ -1,829 +1,976 @@
 void __fastcall ResponseCommandKind___cctor(const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v1; // x19
-  __int64 v2; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
   __int64 v3; // x1
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x1
+  __int64 v36; // x1
+  __int64 v37; // x1
+  __int64 v38; // x1
+  __int64 v39; // x1
+  __int64 v40; // x1
+  __int64 v41; // x1
+  __int64 v42; // x1
+  __int64 v43; // x1
+  __int64 v44; // x1
+  __int64 v45; // x1
+  __int64 v46; // x1
+  __int64 v47; // x1
+  __int64 v48; // x1
+  __int64 v49; // x1
+  __int64 v50; // x1
+  __int64 v51; // x1
+  __int64 v52; // x1
+  __int64 v53; // x1
+  __int64 v54; // x1
+  __int64 v55; // x1
+  __int64 v56; // x1
+  __int64 v57; // x1
+  __int64 v58; // x1
+  __int64 v59; // x1
+  __int64 v60; // x1
+  __int64 v61; // x1
+  __int64 v62; // x1
+  __int64 v63; // x1
+  __int64 v64; // x1
+  __int64 v65; // x1
+  __int64 v66; // x1
+  __int64 v67; // x1
+  __int64 v68; // x1
+  __int64 v69; // x1
+  __int64 v70; // x1
+  __int64 v71; // x1
+  __int64 v72; // x1
+  __int64 v73; // x1
+  __int64 v74; // x1
+  __int64 v75; // x1
+  __int64 v76; // x1
+  __int64 v77; // x1
+  __int64 v78; // x1
+  __int64 v79; // x1
+  __int64 v80; // x1
+  __int64 v81; // x1
+  __int64 v82; // x1
+  __int64 v83; // x1
+  __int64 v84; // x1
+  __int64 v85; // x1
+  __int64 v86; // x1
+  __int64 v87; // x1
+  __int64 v88; // x1
+  __int64 v89; // x1
+  __int64 v90; // x1
+  __int64 v91; // x1
+  __int64 v92; // x1
+  __int64 v93; // x1
+  __int64 v94; // x1
+  __int64 v95; // x1
+  __int64 v96; // x1
+  __int64 v97; // x1
+  __int64 v98; // x1
+  __int64 v99; // x1
+  __int64 v100; // x1
+  __int64 v101; // x1
+  __int64 v102; // x1
+  __int64 v103; // x1
+  __int64 v104; // x1
+  __int64 v105; // x1
+  __int64 v106; // x1
+  __int64 v107; // x1
+  __int64 v108; // x1
+  __int64 v109; // x1
+  __int64 v110; // x1
+  __int64 v111; // x1
+  __int64 v112; // x1
+  __int64 v113; // x1
+  __int64 v114; // x1
+  __int64 v115; // x1
+  __int64 v116; // x1
+  __int64 v117; // x1
+  __int64 v118; // x1
+  __int64 v119; // x1
+  __int64 v120; // x1
+  __int64 v121; // x1
+  __int64 v122; // x1
+  __int64 v123; // x1
+  __int64 v124; // x1
+  __int64 v125; // x1
+  __int64 v126; // x1
+  __int64 v127; // x1
+  __int64 v128; // x1
+  __int64 v129; // x1
+  __int64 v130; // x1
+  __int64 v131; // x1
+  __int64 v132; // x1
+  __int64 v133; // x1
+  __int64 v134; // x1
+  __int64 v135; // x1
+  __int64 v136; // x1
+  __int64 v137; // x1
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v138; // x19
+  __int64 v139; // x0
+  __int64 v140; // x1
+  int32_t v141; // w2
+  int32_t v142; // w3
 
-  if ( (byte_4A5A186 & 1) == 0 )
+  if ( (byte_4A6EE8E & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__);
-    sub_1B885B0(&System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo);
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    sub_1B885B0(&StringLiteral_17766/*"card_combine"*/);
-    sub_1B885B0(&StringLiteral_17782/*"card_statussync"*/);
-    sub_1B885B0(&StringLiteral_19645/*"friend_accept"*/);
-    sub_1B885B0(&StringLiteral_19942/*"home"*/);
-    sub_1B885B0(&StringLiteral_24656/*"war_board_treasure"*/);
-    sub_1B885B0(&StringLiteral_17136/*"battle_scenario"*/);
-    sub_1B885B0(&StringLiteral_19250/*"event_scan_panel_map"*/);
-    sub_1B885B0(&StringLiteral_17399/*"box_gacha_draw"*/);
-    sub_1B885B0(&StringLiteral_24063/*"treasure_box_draw"*/);
-    sub_1B885B0(&StringLiteral_24650/*"war_board_master_attack"*/);
-    sub_1B885B0(&StringLiteral_24649/*"war_board_finish"*/);
-    sub_1B885B0(&StringLiteral_17142/*"battle_use_continue_item"*/);
-    sub_1B885B0(&StringLiteral_19163/*"event_deck_setup"*/);
-    sub_1B885B0(&StringLiteral_18045/*"coin_room_put"*/);
-    sub_1B885B0(&StringLiteral_18512/*"debug_delete_servant"*/);
-    sub_1B885B0(&StringLiteral_17767/*"card_combine_costume"*/);
-    sub_1B885B0(&StringLiteral_17134/*"battle_result"*/);
-    sub_1B885B0(&StringLiteral_19280/*"event_trade_start"*/);
-    sub_1B885B0(&StringLiteral_19649/*"friend_offer"*/);
-    sub_1B885B0(&StringLiteral_17337/*"blacklist_top"*/);
-    sub_1B885B0(&StringLiteral_21202/*"login"*/);
-    sub_1B885B0(&StringLiteral_19651/*"friend_remove"*/);
-    sub_1B885B0(&StringLiteral_24657/*"war_board_turn_end"*/);
-    sub_1B885B0(&StringLiteral_18511/*"debug_add_servant"*/);
-    sub_1B885B0(&StringLiteral_17771/*"card_combine_skill"*/);
-    sub_1B885B0(&StringLiteral_19198/*"event_mission_notify"*/);
-    sub_1B885B0(&StringLiteral_18515/*"debug_server_time"*/);
-    sub_1B885B0(&StringLiteral_22613/*"profile"*/);
-    sub_1B885B0(&StringLiteral_19237/*"event_receive_cooltime_reward"*/);
-    sub_1B885B0(&StringLiteral_24461/*"user_status_flag_set"*/);
-    sub_1B885B0(&StringLiteral_24652/*"war_board_reinforcements"*/);
-    sub_1B885B0(&StringLiteral_19279/*"event_trade_receive"*/);
-    sub_1B885B0(&StringLiteral_17774/*"card_favorite"*/);
-    sub_1B885B0(&StringLiteral_17140/*"battle_turn"*/);
-    sub_1B885B0(&StringLiteral_24655/*"war_board_start"*/);
-    sub_1B885B0(&StringLiteral_24648/*"war_board_continue"*/);
-    sub_1B885B0(&StringLiteral_23716/*"svt_equip_combine"*/);
-    sub_1B885B0(&StringLiteral_24104/*"tutorial_set"*/);
-    sub_1B885B0(&StringLiteral_23557/*"storage_takeout"*/);
-    sub_1B885B0(&StringLiteral_17059/*"bank_status"*/);
-    sub_1B885B0(&StringLiteral_22661/*"purchase_by_stone"*/);
-    sub_1B885B0(&StringLiteral_19648/*"friend_message_hide_sync"*/);
-    sub_1B885B0(&StringLiteral_18161/*"command_code_statussync"*/);
-    sub_1B885B0(&StringLiteral_24639/*"war_board_battle_result"*/);
-    sub_1B885B0(&StringLiteral_22618/*"profile_edit_name"*/);
-    sub_1B885B0(&StringLiteral_23323/*"signup"*/);
-    sub_1B885B0(&StringLiteral_19164/*"event_digging"*/);
-    sub_1B885B0(&StringLiteral_18159/*"command_code_lock"*/);
-    sub_1B885B0(&StringLiteral_17995/*"class_board_release_lock"*/);
-    sub_1B885B0(&StringLiteral_24651/*"war_board_move"*/);
-    sub_1B885B0(&StringLiteral_18162/*"command_code_unlock"*/);
-    sub_1B885B0(&StringLiteral_23097/*"sell_svt"*/);
-    sub_1B885B0(&StringLiteral_22840/*"regist_account"*/);
-    sub_1B885B0(&StringLiteral_17135/*"battle_resume"*/);
-    sub_1B885B0(&StringLiteral_19512/*"follower_edit_name"*/);
-    sub_1B885B0(&StringLiteral_18513/*"debug_edit_servant"*/);
-    sub_1B885B0(&StringLiteral_18157/*"command_code_attach"*/);
-    sub_1B885B0(&StringLiteral_19194/*"event_location"*/);
-    sub_1B885B0(&StringLiteral_18158/*"command_code_detach"*/);
-    sub_1B885B0(&StringLiteral_18160/*"command_code_setstatus"*/);
-    sub_1B885B0(&StringLiteral_19170/*"event_expedition_finish"*/);
-    sub_1B885B0(&StringLiteral_18514/*"debug_quest"*/);
-    sub_1B885B0(&StringLiteral_19199/*"event_mission_random_cancel"*/);
-    sub_1B885B0(&StringLiteral_22660/*"purchase_by_bank"*/);
-    sub_1B885B0(&StringLiteral_19652/*"friend_top"*/);
-    sub_1B885B0(&StringLiteral_19704/*"gamedata"*/);
-    sub_1B885B0(&StringLiteral_19251/*"event_script_flag_on"*/);
-    sub_1B885B0(&StringLiteral_19513/*"follower_setup"*/);
-    sub_1B885B0(&StringLiteral_19171/*"event_expedition_start"*/);
-    sub_1B885B0(&StringLiteral_18248/*"continue_decide"*/);
-    sub_1B885B0(&StringLiteral_19647/*"friend_lock_sync"*/);
-    sub_1B885B0(&StringLiteral_17783/*"card_svt_flag"*/);
-    sub_1B885B0(&StringLiteral_22594/*"present_receive"*/);
-    sub_1B885B0(&StringLiteral_18249/*"continue_input"*/);
-    sub_1B885B0(&StringLiteral_19650/*"friend_reject"*/);
-    sub_1B885B0(&StringLiteral_19172/*"event_fortification"*/);
-    sub_1B885B0(&StringLiteral_19241/*"event_reset_digging"*/);
-    sub_1B885B0(&StringLiteral_17336/*"blacklist_remove"*/);
-    sub_1B885B0(&StringLiteral_19238/*"event_recoverySync"*/);
-    sub_1B885B0(&StringLiteral_24658/*"war_board_wall_attack"*/);
-    sub_1B885B0(&StringLiteral_23556/*"storage_takein"*/);
-    sub_1B885B0(&StringLiteral_18041/*"code_input"*/);
-    sub_1B885B0(&StringLiteral_19697/*"gacha_draw"*/);
-    sub_1B885B0(&StringLiteral_24647/*"war_board_command_spell"*/);
-    sub_1B885B0(&StringLiteral_17996/*"class_board_release_square"*/);
-    sub_1B885B0(&StringLiteral_19646/*"friend_cancel"*/);
-    sub_1B885B0(&StringLiteral_17772/*"card_combine_td"*/);
-    sub_1B885B0(&StringLiteral_17133/*"battle_reset"*/);
-    sub_1B885B0(&StringLiteral_22648/*"purchase"*/);
-    sub_1B885B0(&StringLiteral_19200/*"event_mission_receive"*/);
-    sub_1B885B0(&StringLiteral_17770/*"card_combine_passive_skill"*/);
-    sub_1B885B0(&StringLiteral_20889/*"item_recover"*/);
-    sub_1B885B0(&StringLiteral_17132/*"battle_quest_route"*/);
-    sub_1B885B0(&StringLiteral_24103/*"tutorial_event_flag_set"*/);
-    sub_1B885B0(&StringLiteral_17125/*"battle_command_spell"*/);
-    sub_1B885B0(&StringLiteral_18525/*"deck_edit_name"*/);
-    sub_1B885B0(&StringLiteral_17126/*"battle_interruption"*/);
-    sub_1B885B0(&StringLiteral_18163/*"command_spell"*/);
-    sub_1B885B0(&StringLiteral_24654/*"war_board_setup"*/);
-    sub_1B885B0(&StringLiteral_17335/*"blacklist_regist"*/);
-    sub_1B885B0(&StringLiteral_17141/*"battle_use_continue"*/);
-    sub_1B885B0(&StringLiteral_17137/*"battle_setup"*/);
-    sub_1B885B0(&StringLiteral_19498/*"follow_remove"*/);
-    sub_1B885B0(&StringLiteral_19514/*"follower_setup_recommend_support"*/);
-    sub_1B885B0(&StringLiteral_20890/*"item_use"*/);
-    sub_1B885B0(&StringLiteral_22759/*"raid_auto_update"*/);
-    sub_1B885B0(&StringLiteral_17730/*"cancel_purchase_by_bank"*/);
-    sub_1B885B0(&StringLiteral_19497/*"follow_assign"*/);
-    sub_1B885B0(&StringLiteral_18250/*"continue_prepare"*/);
-    sub_1B885B0(&StringLiteral_22587/*"prepare_purchase_by_bank"*/);
-    sub_1B885B0(&StringLiteral_24102/*"tutorial_clear"*/);
-    sub_1B885B0(&StringLiteral_19162/*"event_daily_point"*/);
-    sub_1B885B0(&StringLiteral_17400/*"box_gacha_reset"*/);
-    sub_1B885B0(&StringLiteral_18015/*"client_api_error_dialog"*/);
-    sub_1B885B0(&StringLiteral_24653/*"war_board_resume"*/);
-    sub_1B885B0(&StringLiteral_17773/*"card_command_card_exceed"*/);
-    sub_1B885B0(&StringLiteral_24458/*"user_formation"*/);
-    sub_1B885B0(&StringLiteral_17775/*"card_friendship_exceed"*/);
-    sub_1B885B0(&StringLiteral_23717/*"svt_equip_set"*/);
-    sub_1B885B0(&StringLiteral_18516/*"debug_update_user"*/);
-    sub_1B885B0(&StringLiteral_17777/*"card_init_random_limit_count"*/);
-    sub_1B885B0(&StringLiteral_19240/*"event_reset_data_lost_battle"*/);
-    sub_1B885B0(&StringLiteral_24383/*"userDelete"*/);
-    sub_1B885B0(&StringLiteral_18526/*"deck_setup"*/);
-    sub_1B885B0(&StringLiteral_17769/*"card_combine_limit_special"*/);
-    sub_1B885B0(&StringLiteral_17951/*"check_date_version"*/);
-    sub_1B885B0(&StringLiteral_22617/*"profile_edit_birth"*/);
-    sub_1B885B0(&StringLiteral_17779/*"card_locksync"*/);
-    sub_1B885B0(&StringLiteral_17768/*"card_combine_exceed"*/);
-    sub_1B885B0(&StringLiteral_17778/*"card_limit"*/);
-    sub_1B885B0(&StringLiteral_24646/*"war_board_buff_save"*/);
-    sub_1B885B0(&StringLiteral_19161/*"event_create_recipe"*/);
-    byte_4A5A186 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__, v1);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__, v2);
+    sub_1B90010(&System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo, v3);
+    sub_1B90010(&ResponseCommandKind_TypeInfo, v4);
+    sub_1B90010(&StringLiteral_17792/*"card_combine"*/, v5);
+    sub_1B90010(&StringLiteral_17808/*"card_statussync"*/, v6);
+    sub_1B90010(&StringLiteral_19672/*"friend_accept"*/, v7);
+    sub_1B90010(&StringLiteral_19969/*"home"*/, v8);
+    sub_1B90010(&StringLiteral_24695/*"war_board_treasure"*/, v9);
+    sub_1B90010(&StringLiteral_17161/*"battle_scenario"*/, v10);
+    sub_1B90010(&StringLiteral_19277/*"event_scan_panel_map"*/, v11);
+    sub_1B90010(&StringLiteral_17424/*"box_gacha_draw"*/, v12);
+    sub_1B90010(&StringLiteral_24102/*"treasure_box_draw"*/, v13);
+    sub_1B90010(&StringLiteral_24689/*"war_board_master_attack"*/, v14);
+    sub_1B90010(&StringLiteral_24688/*"war_board_finish"*/, v15);
+    sub_1B90010(&StringLiteral_17167/*"battle_use_continue_item"*/, v16);
+    sub_1B90010(&StringLiteral_19190/*"event_deck_setup"*/, v17);
+    sub_1B90010(&StringLiteral_18071/*"coin_room_put"*/, v18);
+    sub_1B90010(&StringLiteral_18537/*"debug_delete_servant"*/, v19);
+    sub_1B90010(&StringLiteral_17793/*"card_combine_costume"*/, v20);
+    sub_1B90010(&StringLiteral_17159/*"battle_result"*/, v21);
+    sub_1B90010(&StringLiteral_19307/*"event_trade_start"*/, v22);
+    sub_1B90010(&StringLiteral_19676/*"friend_offer"*/, v23);
+    sub_1B90010(&StringLiteral_17362/*"blacklist_top"*/, v24);
+    sub_1B90010(&StringLiteral_21231/*"login"*/, v25);
+    sub_1B90010(&StringLiteral_19678/*"friend_remove"*/, v26);
+    sub_1B90010(&StringLiteral_24696/*"war_board_turn_end"*/, v27);
+    sub_1B90010(&StringLiteral_18536/*"debug_add_servant"*/, v28);
+    sub_1B90010(&StringLiteral_17797/*"card_combine_skill"*/, v29);
+    sub_1B90010(&StringLiteral_19225/*"event_mission_notify"*/, v30);
+    sub_1B90010(&StringLiteral_18540/*"debug_server_time"*/, v31);
+    sub_1B90010(&StringLiteral_22646/*"profile"*/, v32);
+    sub_1B90010(&StringLiteral_19264/*"event_receive_cooltime_reward"*/, v33);
+    sub_1B90010(&StringLiteral_24500/*"user_status_flag_set"*/, v34);
+    sub_1B90010(&StringLiteral_24691/*"war_board_reinforcements"*/, v35);
+    sub_1B90010(&StringLiteral_19306/*"event_trade_receive"*/, v36);
+    sub_1B90010(&StringLiteral_17800/*"card_favorite"*/, v37);
+    sub_1B90010(&StringLiteral_17165/*"battle_turn"*/, v38);
+    sub_1B90010(&StringLiteral_24694/*"war_board_start"*/, v39);
+    sub_1B90010(&StringLiteral_24687/*"war_board_continue"*/, v40);
+    sub_1B90010(&StringLiteral_23753/*"svt_equip_combine"*/, v41);
+    sub_1B90010(&StringLiteral_24143/*"tutorial_set"*/, v42);
+    sub_1B90010(&StringLiteral_23594/*"storage_takeout"*/, v43);
+    sub_1B90010(&StringLiteral_17084/*"bank_status"*/, v44);
+    sub_1B90010(&StringLiteral_22694/*"purchase_by_stone"*/, v45);
+    sub_1B90010(&StringLiteral_19675/*"friend_message_hide_sync"*/, v46);
+    sub_1B90010(&StringLiteral_18187/*"command_code_statussync"*/, v47);
+    sub_1B90010(&StringLiteral_24678/*"war_board_battle_result"*/, v48);
+    sub_1B90010(&StringLiteral_22651/*"profile_edit_name"*/, v49);
+    sub_1B90010(&StringLiteral_23360/*"signup"*/, v50);
+    sub_1B90010(&StringLiteral_19191/*"event_digging"*/, v51);
+    sub_1B90010(&StringLiteral_18185/*"command_code_lock"*/, v52);
+    sub_1B90010(&StringLiteral_18021/*"class_board_release_lock"*/, v53);
+    sub_1B90010(&StringLiteral_24690/*"war_board_move"*/, v54);
+    sub_1B90010(&StringLiteral_18188/*"command_code_unlock"*/, v55);
+    sub_1B90010(&StringLiteral_23132/*"sell_svt"*/, v56);
+    sub_1B90010(&StringLiteral_22873/*"regist_account"*/, v57);
+    sub_1B90010(&StringLiteral_17160/*"battle_resume"*/, v58);
+    sub_1B90010(&StringLiteral_19539/*"follower_edit_name"*/, v59);
+    sub_1B90010(&StringLiteral_18538/*"debug_edit_servant"*/, v60);
+    sub_1B90010(&StringLiteral_18183/*"command_code_attach"*/, v61);
+    sub_1B90010(&StringLiteral_19221/*"event_location"*/, v62);
+    sub_1B90010(&StringLiteral_18184/*"command_code_detach"*/, v63);
+    sub_1B90010(&StringLiteral_18186/*"command_code_setstatus"*/, v64);
+    sub_1B90010(&StringLiteral_19197/*"event_expedition_finish"*/, v65);
+    sub_1B90010(&StringLiteral_18539/*"debug_quest"*/, v66);
+    sub_1B90010(&StringLiteral_19226/*"event_mission_random_cancel"*/, v67);
+    sub_1B90010(&StringLiteral_22693/*"purchase_by_bank"*/, v68);
+    sub_1B90010(&StringLiteral_19679/*"friend_top"*/, v69);
+    sub_1B90010(&StringLiteral_19731/*"gamedata"*/, v70);
+    sub_1B90010(&StringLiteral_19278/*"event_script_flag_on"*/, v71);
+    sub_1B90010(&StringLiteral_19540/*"follower_setup"*/, v72);
+    sub_1B90010(&StringLiteral_19198/*"event_expedition_start"*/, v73);
+    sub_1B90010(&StringLiteral_18274/*"continue_decide"*/, v74);
+    sub_1B90010(&StringLiteral_19674/*"friend_lock_sync"*/, v75);
+    sub_1B90010(&StringLiteral_17809/*"card_svt_flag"*/, v76);
+    sub_1B90010(&StringLiteral_22627/*"present_receive"*/, v77);
+    sub_1B90010(&StringLiteral_18275/*"continue_input"*/, v78);
+    sub_1B90010(&StringLiteral_19677/*"friend_reject"*/, v79);
+    sub_1B90010(&StringLiteral_19199/*"event_fortification"*/, v80);
+    sub_1B90010(&StringLiteral_19268/*"event_reset_digging"*/, v81);
+    sub_1B90010(&StringLiteral_17361/*"blacklist_remove"*/, v82);
+    sub_1B90010(&StringLiteral_19265/*"event_recoverySync"*/, v83);
+    sub_1B90010(&StringLiteral_24697/*"war_board_wall_attack"*/, v84);
+    sub_1B90010(&StringLiteral_23593/*"storage_takein"*/, v85);
+    sub_1B90010(&StringLiteral_18067/*"code_input"*/, v86);
+    sub_1B90010(&StringLiteral_19724/*"gacha_draw"*/, v87);
+    sub_1B90010(&StringLiteral_24686/*"war_board_command_spell"*/, v88);
+    sub_1B90010(&StringLiteral_18022/*"class_board_release_square"*/, v89);
+    sub_1B90010(&StringLiteral_19673/*"friend_cancel"*/, v90);
+    sub_1B90010(&StringLiteral_17798/*"card_combine_td"*/, v91);
+    sub_1B90010(&StringLiteral_17158/*"battle_reset"*/, v92);
+    sub_1B90010(&StringLiteral_22681/*"purchase"*/, v93);
+    sub_1B90010(&StringLiteral_19227/*"event_mission_receive"*/, v94);
+    sub_1B90010(&StringLiteral_17796/*"card_combine_passive_skill"*/, v95);
+    sub_1B90010(&StringLiteral_20918/*"item_recover"*/, v96);
+    sub_1B90010(&StringLiteral_17157/*"battle_quest_route"*/, v97);
+    sub_1B90010(&StringLiteral_24142/*"tutorial_event_flag_set"*/, v98);
+    sub_1B90010(&StringLiteral_17150/*"battle_command_spell"*/, v99);
+    sub_1B90010(&StringLiteral_18550/*"deck_edit_name"*/, v100);
+    sub_1B90010(&StringLiteral_17151/*"battle_interruption"*/, v101);
+    sub_1B90010(&StringLiteral_18189/*"command_spell"*/, v102);
+    sub_1B90010(&StringLiteral_24693/*"war_board_setup"*/, v103);
+    sub_1B90010(&StringLiteral_17360/*"blacklist_regist"*/, v104);
+    sub_1B90010(&StringLiteral_17166/*"battle_use_continue"*/, v105);
+    sub_1B90010(&StringLiteral_17162/*"battle_setup"*/, v106);
+    sub_1B90010(&StringLiteral_19525/*"follow_remove"*/, v107);
+    sub_1B90010(&StringLiteral_19541/*"follower_setup_recommend_support"*/, v108);
+    sub_1B90010(&StringLiteral_20919/*"item_use"*/, v109);
+    sub_1B90010(&StringLiteral_22792/*"raid_auto_update"*/, v110);
+    sub_1B90010(&StringLiteral_22924/*"reset_purchase_num"*/, v111);
+    sub_1B90010(&StringLiteral_17756/*"cancel_purchase_by_bank"*/, v112);
+    sub_1B90010(&StringLiteral_19524/*"follow_assign"*/, v113);
+    sub_1B90010(&StringLiteral_18276/*"continue_prepare"*/, v114);
+    sub_1B90010(&StringLiteral_22620/*"prepare_purchase_by_bank"*/, v115);
+    sub_1B90010(&StringLiteral_24141/*"tutorial_clear"*/, v116);
+    sub_1B90010(&StringLiteral_19189/*"event_daily_point"*/, v117);
+    sub_1B90010(&StringLiteral_17425/*"box_gacha_reset"*/, v118);
+    sub_1B90010(&StringLiteral_18041/*"client_api_error_dialog"*/, v119);
+    sub_1B90010(&StringLiteral_24692/*"war_board_resume"*/, v120);
+    sub_1B90010(&StringLiteral_17799/*"card_command_card_exceed"*/, v121);
+    sub_1B90010(&StringLiteral_24497/*"user_formation"*/, v122);
+    sub_1B90010(&StringLiteral_17801/*"card_friendship_exceed"*/, v123);
+    sub_1B90010(&StringLiteral_23754/*"svt_equip_set"*/, v124);
+    sub_1B90010(&StringLiteral_18541/*"debug_update_user"*/, v125);
+    sub_1B90010(&StringLiteral_17803/*"card_init_random_limit_count"*/, v126);
+    sub_1B90010(&StringLiteral_19267/*"event_reset_data_lost_battle"*/, v127);
+    sub_1B90010(&StringLiteral_24422/*"userDelete"*/, v128);
+    sub_1B90010(&StringLiteral_18551/*"deck_setup"*/, v129);
+    sub_1B90010(&StringLiteral_17795/*"card_combine_limit_special"*/, v130);
+    sub_1B90010(&StringLiteral_17977/*"check_date_version"*/, v131);
+    sub_1B90010(&StringLiteral_22650/*"profile_edit_birth"*/, v132);
+    sub_1B90010(&StringLiteral_17805/*"card_locksync"*/, v133);
+    sub_1B90010(&StringLiteral_17794/*"card_combine_exceed"*/, v134);
+    sub_1B90010(&StringLiteral_17804/*"card_limit"*/, v135);
+    sub_1B90010(&StringLiteral_24685/*"war_board_buff_save"*/, v136);
+    sub_1B90010(&StringLiteral_19188/*"event_create_recipe"*/, v137);
+    byte_4A6EE8E = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B887FC(System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo);
+  v138 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B9025C(System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
-    v1,
-    (const MethodInfo_319C86C *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__);
-  if ( !v1 )
-    sub_1B8880C(v2, v3);
+    v138,
+    (const MethodInfo_31AB4E0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__);
+  if ( !v138 )
+    sub_1B9026C(v139, v140);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     0,
     0LL,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     1,
-    (Il2CppObject *)StringLiteral_23323/*"signup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23360/*"signup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     2,
-    (Il2CppObject *)StringLiteral_22840/*"regist_account"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22873/*"regist_account"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     3,
-    (Il2CppObject *)StringLiteral_19704/*"gamedata"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19731/*"gamedata"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     4,
-    (Il2CppObject *)StringLiteral_21202/*"login"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_21231/*"login"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     5,
-    (Il2CppObject *)StringLiteral_19942/*"home"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19969/*"home"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     6,
-    (Il2CppObject *)StringLiteral_19697/*"gacha_draw"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19724/*"gacha_draw"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     7,
-    (Il2CppObject *)StringLiteral_18526/*"deck_setup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18551/*"deck_setup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     8,
-    (Il2CppObject *)StringLiteral_24458/*"user_formation"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24497/*"user_formation"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     9,
-    (Il2CppObject *)StringLiteral_22648/*"purchase"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22681/*"purchase"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     10,
-    (Il2CppObject *)StringLiteral_22661/*"purchase_by_stone"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22694/*"purchase_by_stone"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     11,
-    (Il2CppObject *)StringLiteral_22660/*"purchase_by_bank"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22693/*"purchase_by_bank"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     12,
-    (Il2CppObject *)StringLiteral_23097/*"sell_svt"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23132/*"sell_svt"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     13,
-    (Il2CppObject *)StringLiteral_19649/*"friend_offer"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19676/*"friend_offer"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     14,
-    (Il2CppObject *)StringLiteral_19645/*"friend_accept"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19672/*"friend_accept"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     15,
-    (Il2CppObject *)StringLiteral_19650/*"friend_reject"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19677/*"friend_reject"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     16,
-    (Il2CppObject *)StringLiteral_19646/*"friend_cancel"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19673/*"friend_cancel"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     17,
-    (Il2CppObject *)StringLiteral_19651/*"friend_remove"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19678/*"friend_remove"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     18,
-    (Il2CppObject *)StringLiteral_22613/*"profile"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22646/*"profile"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     19,
-    (Il2CppObject *)StringLiteral_22618/*"profile_edit_name"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22651/*"profile_edit_name"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     20,
-    (Il2CppObject *)StringLiteral_17137/*"battle_setup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17162/*"battle_setup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     21,
-    (Il2CppObject *)StringLiteral_17140/*"battle_turn"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17165/*"battle_turn"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     22,
-    (Il2CppObject *)StringLiteral_17134/*"battle_result"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17159/*"battle_result"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     23,
-    (Il2CppObject *)StringLiteral_17125/*"battle_command_spell"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17150/*"battle_command_spell"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     24,
-    (Il2CppObject *)StringLiteral_17141/*"battle_use_continue"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17166/*"battle_use_continue"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     25,
-    (Il2CppObject *)StringLiteral_17766/*"card_combine"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17792/*"card_combine"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     26,
-    (Il2CppObject *)StringLiteral_17771/*"card_combine_skill"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17797/*"card_combine_skill"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     27,
-    (Il2CppObject *)StringLiteral_17772/*"card_combine_td"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17798/*"card_combine_td"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     28,
-    (Il2CppObject *)StringLiteral_17775/*"card_friendship_exceed"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17801/*"card_friendship_exceed"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     29,
-    (Il2CppObject *)StringLiteral_22594/*"present_receive"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22627/*"present_receive"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     30,
-    (Il2CppObject *)StringLiteral_18041/*"code_input"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18067/*"code_input"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     31,
-    (Il2CppObject *)StringLiteral_18250/*"continue_prepare"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18276/*"continue_prepare"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     32,
-    (Il2CppObject *)StringLiteral_18249/*"continue_input"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18275/*"continue_input"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     33,
-    (Il2CppObject *)StringLiteral_18248/*"continue_decide"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18274/*"continue_decide"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     34,
-    (Il2CppObject *)StringLiteral_17774/*"card_favorite"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17800/*"card_favorite"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     35,
-    (Il2CppObject *)StringLiteral_17777/*"card_init_random_limit_count"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17803/*"card_init_random_limit_count"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     36,
-    (Il2CppObject *)StringLiteral_24104/*"tutorial_set"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24143/*"tutorial_set"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     37,
-    (Il2CppObject *)StringLiteral_24102/*"tutorial_clear"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24141/*"tutorial_clear"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     38,
-    (Il2CppObject *)StringLiteral_17135/*"battle_resume"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17160/*"battle_resume"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     39,
-    (Il2CppObject *)StringLiteral_17778/*"card_limit"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17804/*"card_limit"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     40,
-    (Il2CppObject *)StringLiteral_23717/*"svt_equip_set"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23754/*"svt_equip_set"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     41,
-    (Il2CppObject *)StringLiteral_23716/*"svt_equip_combine"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23753/*"svt_equip_combine"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     42,
-    (Il2CppObject *)StringLiteral_18514/*"debug_quest"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18539/*"debug_quest"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     43,
-    (Il2CppObject *)StringLiteral_22617/*"profile_edit_birth"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22650/*"profile_edit_birth"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     44,
-    (Il2CppObject *)StringLiteral_20890/*"item_use"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_20919/*"item_use"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     45,
-    (Il2CppObject *)StringLiteral_20889/*"item_recover"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_20918/*"item_recover"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     46,
-    (Il2CppObject *)StringLiteral_18163/*"command_spell"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18189/*"command_spell"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     47,
-    (Il2CppObject *)StringLiteral_17399/*"box_gacha_draw"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17424/*"box_gacha_draw"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     48,
-    (Il2CppObject *)StringLiteral_17400/*"box_gacha_reset"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17425/*"box_gacha_reset"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     49,
-    (Il2CppObject *)StringLiteral_19198/*"event_mission_notify"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19225/*"event_mission_notify"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     50,
-    (Il2CppObject *)StringLiteral_19200/*"event_mission_receive"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19227/*"event_mission_receive"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     51,
-    (Il2CppObject *)StringLiteral_19513/*"follower_setup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19540/*"follower_setup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     52,
-    (Il2CppObject *)StringLiteral_17136/*"battle_scenario"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17161/*"battle_scenario"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     53,
-    (Il2CppObject *)StringLiteral_18525/*"deck_edit_name"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18550/*"deck_edit_name"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     54,
-    (Il2CppObject *)StringLiteral_18515/*"debug_server_time"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18540/*"debug_server_time"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     55,
-    (Il2CppObject *)StringLiteral_17768/*"card_combine_exceed"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17794/*"card_combine_exceed"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     56,
-    (Il2CppObject *)StringLiteral_17779/*"card_locksync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17805/*"card_locksync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     57,
-    (Il2CppObject *)StringLiteral_24103/*"tutorial_event_flag_set"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24142/*"tutorial_event_flag_set"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     58,
-    (Il2CppObject *)StringLiteral_23556/*"storage_takein"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23593/*"storage_takein"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     59,
-    (Il2CppObject *)StringLiteral_23557/*"storage_takeout"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_23594/*"storage_takeout"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     60,
-    (Il2CppObject *)StringLiteral_19512/*"follower_edit_name"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19539/*"follower_edit_name"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     61,
-    (Il2CppObject *)StringLiteral_17059/*"bank_status"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17084/*"bank_status"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     62,
-    (Il2CppObject *)StringLiteral_17767/*"card_combine_costume"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17793/*"card_combine_costume"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     63,
-    (Il2CppObject *)StringLiteral_17337/*"blacklist_top"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17362/*"blacklist_top"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     64,
-    (Il2CppObject *)StringLiteral_17335/*"blacklist_regist"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17360/*"blacklist_regist"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     65,
-    (Il2CppObject *)StringLiteral_17336/*"blacklist_remove"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17361/*"blacklist_remove"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     66,
-    (Il2CppObject *)StringLiteral_19648/*"friend_message_hide_sync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19675/*"friend_message_hide_sync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     67,
-    (Il2CppObject *)StringLiteral_19251/*"event_script_flag_on"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19278/*"event_script_flag_on"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     68,
-    (Il2CppObject *)StringLiteral_17783/*"card_svt_flag"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17809/*"card_svt_flag"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     69,
-    (Il2CppObject *)StringLiteral_19194/*"event_location"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19221/*"event_location"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     70,
-    (Il2CppObject *)StringLiteral_17782/*"card_statussync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17808/*"card_statussync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     71,
-    (Il2CppObject *)StringLiteral_18160/*"command_code_setstatus"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18186/*"command_code_setstatus"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     72,
-    (Il2CppObject *)StringLiteral_18161/*"command_code_statussync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18187/*"command_code_statussync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     73,
-    (Il2CppObject *)StringLiteral_19238/*"event_recoverySync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19265/*"event_recoverySync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     74,
-    (Il2CppObject *)StringLiteral_19163/*"event_deck_setup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19190/*"event_deck_setup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     75,
-    (Il2CppObject *)StringLiteral_24461/*"user_status_flag_set"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24500/*"user_status_flag_set"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     76,
-    (Il2CppObject *)StringLiteral_19652/*"friend_top"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19679/*"friend_top"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     77,
-    (Il2CppObject *)StringLiteral_18157/*"command_code_attach"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18183/*"command_code_attach"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     78,
-    (Il2CppObject *)StringLiteral_18158/*"command_code_detach"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18184/*"command_code_detach"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     79,
-    (Il2CppObject *)StringLiteral_18162/*"command_code_unlock"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18188/*"command_code_unlock"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     80,
-    (Il2CppObject *)StringLiteral_18516/*"debug_update_user"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18541/*"debug_update_user"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     81,
-    (Il2CppObject *)StringLiteral_19497/*"follow_assign"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19524/*"follow_assign"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     82,
-    (Il2CppObject *)StringLiteral_19498/*"follow_remove"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19525/*"follow_remove"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     83,
-    (Il2CppObject *)StringLiteral_19162/*"event_daily_point"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19189/*"event_daily_point"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     84,
-    (Il2CppObject *)StringLiteral_17773/*"card_command_card_exceed"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17799/*"card_command_card_exceed"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     85,
-    (Il2CppObject *)StringLiteral_17769/*"card_combine_limit_special"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17795/*"card_combine_limit_special"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     86,
-    (Il2CppObject *)StringLiteral_17132/*"battle_quest_route"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17157/*"battle_quest_route"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     87,
-    (Il2CppObject *)StringLiteral_19647/*"friend_lock_sync"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19674/*"friend_lock_sync"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     88,
-    (Il2CppObject *)StringLiteral_22759/*"raid_auto_update"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22792/*"raid_auto_update"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     89,
-    (Il2CppObject *)StringLiteral_18159/*"command_code_lock"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18185/*"command_code_lock"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     90,
-    (Il2CppObject *)StringLiteral_24655/*"war_board_start"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24694/*"war_board_start"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     91,
-    (Il2CppObject *)StringLiteral_24654/*"war_board_setup"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24693/*"war_board_setup"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     92,
-    (Il2CppObject *)StringLiteral_24646/*"war_board_buff_save"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24685/*"war_board_buff_save"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     93,
-    (Il2CppObject *)StringLiteral_24651/*"war_board_move"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24690/*"war_board_move"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     94,
-    (Il2CppObject *)StringLiteral_24656/*"war_board_treasure"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24695/*"war_board_treasure"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     95,
-    (Il2CppObject *)StringLiteral_24657/*"war_board_turn_end"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24696/*"war_board_turn_end"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     96,
-    (Il2CppObject *)StringLiteral_24650/*"war_board_master_attack"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24689/*"war_board_master_attack"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     97,
-    (Il2CppObject *)StringLiteral_24658/*"war_board_wall_attack"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24697/*"war_board_wall_attack"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     98,
-    (Il2CppObject *)StringLiteral_24647/*"war_board_command_spell"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24686/*"war_board_command_spell"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     99,
-    (Il2CppObject *)StringLiteral_24639/*"war_board_battle_result"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24678/*"war_board_battle_result"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     100,
-    (Il2CppObject *)StringLiteral_24649/*"war_board_finish"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24688/*"war_board_finish"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     101,
-    (Il2CppObject *)StringLiteral_24653/*"war_board_resume"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24692/*"war_board_resume"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     102,
-    (Il2CppObject *)StringLiteral_24648/*"war_board_continue"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24687/*"war_board_continue"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     103,
-    (Il2CppObject *)StringLiteral_24652/*"war_board_reinforcements"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24691/*"war_board_reinforcements"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     104,
-    (Il2CppObject *)StringLiteral_19250/*"event_scan_panel_map"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19277/*"event_scan_panel_map"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     105,
-    (Il2CppObject *)StringLiteral_17142/*"battle_use_continue_item"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17167/*"battle_use_continue_item"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     106,
-    (Il2CppObject *)StringLiteral_17951/*"check_date_version"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17977/*"check_date_version"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     107,
-    (Il2CppObject *)StringLiteral_20890/*"item_use"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_20919/*"item_use"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     108,
-    (Il2CppObject *)StringLiteral_17770/*"card_combine_passive_skill"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17796/*"card_combine_passive_skill"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     109,
-    (Il2CppObject *)StringLiteral_24063/*"treasure_box_draw"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24102/*"treasure_box_draw"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     110,
-    (Il2CppObject *)StringLiteral_19199/*"event_mission_random_cancel"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19226/*"event_mission_random_cancel"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     111,
-    (Il2CppObject *)StringLiteral_18045/*"coin_room_put"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18071/*"coin_room_put"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     112,
-    (Il2CppObject *)StringLiteral_24383/*"userDelete"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_24422/*"userDelete"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     113,
-    (Il2CppObject *)StringLiteral_17133/*"battle_reset"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17158/*"battle_reset"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     114,
-    (Il2CppObject *)StringLiteral_19164/*"event_digging"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19191/*"event_digging"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     115,
-    (Il2CppObject *)StringLiteral_19241/*"event_reset_digging"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19268/*"event_reset_digging"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     116,
-    (Il2CppObject *)StringLiteral_19171/*"event_expedition_start"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19198/*"event_expedition_start"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     117,
-    (Il2CppObject *)StringLiteral_19170/*"event_expedition_finish"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19197/*"event_expedition_finish"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     118,
-    (Il2CppObject *)StringLiteral_18015/*"client_api_error_dialog"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18041/*"client_api_error_dialog"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     119,
-    (Il2CppObject *)StringLiteral_19237/*"event_receive_cooltime_reward"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19264/*"event_receive_cooltime_reward"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     120,
-    (Il2CppObject *)StringLiteral_19161/*"event_create_recipe"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19188/*"event_create_recipe"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     121,
-    (Il2CppObject *)StringLiteral_19172/*"event_fortification"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19199/*"event_fortification"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     122,
-    (Il2CppObject *)StringLiteral_17996/*"class_board_release_square"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18022/*"class_board_release_square"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     123,
-    (Il2CppObject *)StringLiteral_17995/*"class_board_release_lock"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18021/*"class_board_release_lock"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     124,
-    (Il2CppObject *)StringLiteral_19240/*"event_reset_data_lost_battle"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19267/*"event_reset_data_lost_battle"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     125,
-    (Il2CppObject *)StringLiteral_18511/*"debug_add_servant"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18536/*"debug_add_servant"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     126,
-    (Il2CppObject *)StringLiteral_18513/*"debug_edit_servant"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18538/*"debug_edit_servant"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     127,
-    (Il2CppObject *)StringLiteral_18512/*"debug_delete_servant"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_18537/*"debug_delete_servant"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     128,
-    (Il2CppObject *)StringLiteral_17126/*"battle_interruption"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17151/*"battle_interruption"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     129,
-    (Il2CppObject *)StringLiteral_19280/*"event_trade_start"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19307/*"event_trade_start"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     130,
-    (Il2CppObject *)StringLiteral_19279/*"event_trade_receive"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_19306/*"event_trade_receive"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     131,
-    (Il2CppObject *)StringLiteral_22587/*"prepare_purchase_by_bank"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_22620/*"prepare_purchase_by_bank"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     132,
-    (Il2CppObject *)StringLiteral_17730/*"cancel_purchase_by_bank"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (Il2CppObject *)StringLiteral_17756/*"cancel_purchase_by_bank"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v1,
+    v138,
     133,
-    (Il2CppObject *)StringLiteral_19514/*"follower_setup_recommend_support"*/,
-    (const MethodInfo_319D240 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
-  ResponseCommandKind_TypeInfo->static_fields->nameList = (struct System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__o *)v1;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)ResponseCommandKind_TypeInfo->static_fields, (int32_t)v1, v4, v5);
+    (Il2CppObject *)StringLiteral_19541/*"follower_setup_recommend_support"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+  System_Collections_Generic_Dictionary_Int32Enum__object___Add(
+    v138,
+    134,
+    (Il2CppObject *)StringLiteral_22924/*"reset_purchase_num"*/,
+    (const MethodInfo_31ABEB4 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+  ResponseCommandKind_TypeInfo->static_fields->nameList = (struct System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__o *)v138;
+  sub_1B8FFB4(
+    (ServantStatusBattleListViewItem_o *)ResponseCommandKind_TypeInfo->static_fields,
+    (int32_t)v138,
+    v141,
+    v142);
 }
 
 
@@ -835,28 +982,29 @@ void __fastcall ResponseCommandKind___ctor(ResponseCommandKind_o *this, const Me
 
 System_String_o *__fastcall ResponseCommandKind__GetName(int32_t kind, const MethodInfo *method)
 {
-  ResponseCommandKind_c *v3; // x0
+  __int64 v3; // x1
+  ResponseCommandKind_c *v4; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *nameList; // x0
 
-  if ( (byte_4A5A184 & 1) == 0 )
+  if ( (byte_4A6EE8C & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__);
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    byte_4A5A184 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__, method);
+    sub_1B90010(&ResponseCommandKind_TypeInfo, v3);
+    byte_4A6EE8C = 1;
   }
-  v3 = ResponseCommandKind_TypeInfo;
+  v4 = ResponseCommandKind_TypeInfo;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-    v3 = ResponseCommandKind_TypeInfo;
+    v4 = ResponseCommandKind_TypeInfo;
   }
-  nameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->nameList;
+  nameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->nameList;
   if ( !nameList )
-    sub_1B8880C(0LL, method);
+    sub_1B9026C(0LL, method);
   return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                               nameList,
                               kind,
-                              (const MethodInfo_319D1A0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__);
+                              (const MethodInfo_31ABE14 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__);
 }
 
 
@@ -872,10 +1020,10 @@ ResponseData_o *__fastcall ResponseCommandKind__SearchData(
   unsigned int v9; // w22
   ResponseData_o *v10; // x21
 
-  if ( (byte_4A5A185 & 1) == 0 )
+  if ( (byte_4A6EE8D & 1) == 0 )
   {
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    byte_4A5A185 = 1;
+    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
+    byte_4A6EE8D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -890,7 +1038,7 @@ ResponseData_o *__fastcall ResponseCommandKind__SearchData(
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_1B88814(Name, v6);
+        sub_1B90274(Name, v6);
       v10 = responseList->m_Items[v9];
       if ( !v10 )
         break;
@@ -902,7 +1050,7 @@ ResponseData_o *__fastcall ResponseCommandKind__SearchData(
         return 0LL;
     }
 LABEL_15:
-    sub_1B8880C(Name, v6);
+    sub_1B9026C(Name, v6);
   }
   return 0LL;
 }

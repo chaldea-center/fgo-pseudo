@@ -1,9 +1,11 @@
 void __fastcall SkillEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4A5BB8E & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4A7089B & 1) == 0 )
   {
-    sub_1B885B0(&SkillEntity_TypeInfo);
-    byte_4A5BB8E = 1;
+    sub_1B90010(&SkillEntity_TypeInfo, v1);
+    byte_4A7089B = 1;
   }
   SkillEntity_TypeInfo->static_fields->CHECK_SCRIPT_TRUE = 1;
 }
@@ -11,14 +13,14 @@ void __fastcall SkillEntity___cctor(const MethodInfo *method)
 
 void __fastcall SkillEntity___ctor(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB8D & 1) == 0 )
+  if ( (byte_4A7089A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
-    byte_4A5BB8D = 1;
+    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A7089A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -36,84 +38,88 @@ int32_t __fastcall SkillEntity__CreatePrimaryKey(SkillEntity_o *this, const Meth
 
 System_Int32_array *__fastcall SkillEntity__GetAssumedEffectId(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB85 & 1) == 0 )
+  if ( (byte_4A70892 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16943/*"assumedEffectId"*/);
-    byte_4A5BB85 = 1;
+    sub_1B90010(&StringLiteral_16968/*"assumedEffectId"*/, method);
+    byte_4A70892 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16943/*"assumedEffectId"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16968/*"assumedEffectId"*/, 0LL);
 }
 
 
 SkillAddEntity_o *__fastcall SkillEntity__GetAvailableSkillAddEntity(SkillEntity_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct System_Collections_Generic_List_SkillAddEntity__o *SortedSkillAddEntityList_k__BackingField; // x19
-  SkillEntity___c_c *v4; // x0
+  SkillEntity___c_c *v8; // x0
   System_Func_object__bool__o *_9__22_0; // x20
-  Il2CppObject *v6; // x21
+  Il2CppObject *v10; // x21
   struct SkillEntity___c_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
 
-  if ( (byte_4A5BB6B & 1) == 0 )
+  if ( (byte_4A70878 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
-    sub_1B885B0(&System_Func_SkillAddEntity__bool__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
-    sub_1B885B0(&Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__);
-    sub_1B885B0(&SkillEntity___c_TypeInfo);
-    byte_4A5BB6B = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___, method);
+    sub_1B90010(&System_Func_SkillAddEntity__bool__TypeInfo, v3);
+    sub_1B90010(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__, v4);
+    sub_1B90010(&Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__, v5);
+    sub_1B90010(&SkillEntity___c_TypeInfo, v6);
+    byte_4A70878 = 1;
   }
   SortedSkillAddEntityList_k__BackingField = this->fields._SortedSkillAddEntityList_k__BackingField;
   if ( !SortedSkillAddEntityList_k__BackingField || SortedSkillAddEntityList_k__BackingField->fields._size < 1 )
     return 0LL;
-  v4 = SkillEntity___c_TypeInfo;
+  v8 = SkillEntity___c_TypeInfo;
   if ( !SkillEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SkillEntity___c_TypeInfo);
-    v4 = SkillEntity___c_TypeInfo;
+    v8 = SkillEntity___c_TypeInfo;
   }
-  _9__22_0 = (System_Func_object__bool__o *)v4->static_fields->__9__22_0;
+  _9__22_0 = (System_Func_object__bool__o *)v8->static_fields->__9__22_0;
   if ( !_9__22_0 )
   {
-    if ( !v4->_2.cctor_finished )
+    if ( !v8->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v4);
-      v4 = SkillEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v8);
+      v8 = SkillEntity___c_TypeInfo;
     }
-    v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__22_0 = (System_Func_object__bool__o *)sub_1B887FC(System_Func_SkillAddEntity__bool__TypeInfo);
-    System_Func_object__bool____ctor(_9__22_0, v6, Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__, 0LL);
+    v10 = (Il2CppObject *)v8->static_fields->__9;
+    _9__22_0 = (System_Func_object__bool__o *)sub_1B9025C(System_Func_SkillAddEntity__bool__TypeInfo);
+    System_Func_object__bool____ctor(_9__22_0, v10, Method_SkillEntity___c__GetAvailableSkillAddEntity_b__22_0__, 0LL);
     static_fields = SkillEntity___c_TypeInfo->static_fields;
     static_fields->__9__22_0 = (struct System_Func_SkillAddEntity__bool__o *)_9__22_0;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v8, v9);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v12, v13);
   }
-  return (SkillAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__48907856(
+  return (SkillAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__48967524(
                                (System_Collections_Generic_IEnumerable_TSource__o *)SortedSkillAddEntityList_k__BackingField,
                                (System_Func_TSource__bool__o *)_9__22_0,
-                               (const MethodInfo_2EA4650 *)Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
+                               (const MethodInfo_2EB2F64 *)Method_System_Linq_Enumerable_FirstOrDefault_SkillAddEntity___);
 }
 
 
 System_Int32_array *__fastcall SkillEntity__GetBattleEffectMovieIds(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB8B & 1) == 0 )
+  if ( (byte_4A70898 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_3237/*"BattleEffectMovieIds"*/);
-    byte_4A5BB8B = 1;
+    sub_1B90010(&StringLiteral_3238/*"BattleEffectMovieIds"*/, method);
+    byte_4A70898 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_3237/*"BattleEffectMovieIds"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_3238/*"BattleEffectMovieIds"*/, 0LL, 0LL);
 }
 
 
 float __fastcall SkillEntity__GetCutinAdditionalTime(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB80 & 1) == 0 )
+  if ( (byte_4A7088D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18416/*"cutinAdditionalTime"*/);
-    byte_4A5BB80 = 1;
+    sub_1B90010(&StringLiteral_18442/*"cutinAdditionalTime"*/, method);
+    byte_4A7088D = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18416/*"cutinAdditionalTime"*/, 0.0, 0LL);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18442/*"cutinAdditionalTime"*/, 0.0, 0LL);
 }
 
 
@@ -122,35 +128,37 @@ int32_t __fastcall SkillEntity__GetCutinFirstId(SkillEntity_o *this, const Metho
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB88 & 1) == 0 )
+  if ( (byte_4A70895 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18417/*"cutinFirstId"*/);
-    byte_4A5BB88 = 1;
+    sub_1B90010(&StringLiteral_18443/*"cutinFirstId"*/, method);
+    byte_4A70895 = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18417/*"cutinFirstId"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18443/*"cutinFirstId"*/, &param, v2);
   return param;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall SkillEntity__GetFieldCallEffectId(SkillEntity_o *this, bool isBefore, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  System_String_o **v6; // x8
+  __int64 v6; // x1
+  System_String_o **v7; // x8
   int32_t param; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A5BB82 & 1) == 0 )
+  if ( (byte_4A7088F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_3249/*"BeforeFieldCallEffect"*/);
-    sub_1B885B0(&StringLiteral_2268/*"AfterFieldCallEffect"*/);
-    byte_4A5BB82 = 1;
+    sub_1B90010(&StringLiteral_3250/*"BeforeFieldCallEffect"*/, isBefore);
+    sub_1B90010(&StringLiteral_2269/*"AfterFieldCallEffect"*/, v6);
+    byte_4A7088F = 1;
   }
   param = 0;
   if ( isBefore )
-    v6 = (System_String_o **)&StringLiteral_3249/*"BeforeFieldCallEffect"*/;
+    v7 = (System_String_o **)&StringLiteral_3250/*"BeforeFieldCallEffect"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_2268/*"AfterFieldCallEffect"*/;
-  if ( SkillEntity__checkScript(this, *v6, &param, v3) )
+    v7 = (System_String_o **)&StringLiteral_2269/*"AfterFieldCallEffect"*/;
+  if ( SkillEntity__checkScript(this, *v7, &param, v3) )
     return param;
   else
     return -1;
@@ -160,61 +168,63 @@ int32_t __fastcall SkillEntity__GetFieldCallEffectId(SkillEntity_o *this, bool i
 int32_t __fastcall SkillEntity__GetIconId(SkillEntity_o *this, const MethodInfo *method)
 {
   SkillEntity_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
   int64_t BaseTime; // x20
   System_Int32_array *Master_object; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
-  __int64 v7; // x8
-  System_Int32_array *v8; // x21
-  unsigned __int64 v9; // x24
-  int32_t v10; // w22
-  const MethodInfo *v11; // x4
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
+  __int64 v9; // x8
+  System_Int32_array *v10; // x21
+  unsigned __int64 v11; // x24
+  int32_t v12; // w22
+  const MethodInfo *v13; // x4
   int32_t *p_iconId; // x8
   SkillGroupOverwriteEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4A5BB87 & 1) == 0 )
+  if ( (byte_4A70894 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_SkillGroupMaster___);
-    sub_1B885B0(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
-    this = (SkillEntity_o *)sub_1B885B0(&DataManager_TypeInfo);
-    byte_4A5BB87 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_SkillGroupMaster___, method);
+    sub_1B90010(&Method_DataManager_GetMaster_SkillGroupOverwriteMaster___, v3);
+    this = (SkillEntity_o *)sub_1B90010(&DataManager_TypeInfo, v4);
+    byte_4A70894 = 1;
   }
   entity = 0LL;
   BaseTime = SkillLvMaster__GetBaseTime((const MethodInfo *)this);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_SkillGroupMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_SkillGroupMaster___);
   if ( !Master_object )
     goto LABEL_19;
-  Master_object = SkillGroupMaster__GetSkillGroupIdFromSkillId((SkillGroupMaster_o *)Master_object, v2->fields.id, v6);
+  Master_object = SkillGroupMaster__GetSkillGroupIdFromSkillId((SkillGroupMaster_o *)Master_object, v2->fields.id, v8);
   if ( !Master_object )
     goto LABEL_19;
-  v7 = *(_QWORD *)&Master_object->max_length;
-  v8 = Master_object;
-  if ( (int)v7 >= 1 )
+  v9 = *(_QWORD *)&Master_object->max_length;
+  v10 = Master_object;
+  if ( (int)v9 >= 1 )
   {
-    v9 = 0LL;
+    v11 = 0LL;
     while ( 1 )
     {
-      if ( v9 >= (unsigned int)v7 )
-        sub_1B88814(Master_object, v5);
-      v10 = v8->m_Items[v9 + 1];
+      if ( v11 >= (unsigned int)v9 )
+        sub_1B90274(Master_object, v7);
+      v12 = v10->m_Items[v11 + 1];
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
+      Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_SkillGroupOverwriteMaster___);
       if ( !Master_object )
         goto LABEL_19;
       Master_object = (System_Int32_array *)SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
                                               (SkillGroupOverwriteMaster_o *)Master_object,
                                               &entity,
-                                              v10,
+                                              v12,
                                               BaseTime,
-                                              v11);
+                                              v13);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
         break;
-      LODWORD(v7) = v8->max_length;
-      if ( (__int64)++v9 >= (int)v7 )
+      LODWORD(v9) = v10->max_length;
+      if ( (__int64)++v11 >= (int)v9 )
         goto LABEL_15;
     }
     if ( entity )
@@ -223,7 +233,7 @@ int32_t __fastcall SkillEntity__GetIconId(SkillEntity_o *this, const MethodInfo 
       return *p_iconId;
     }
 LABEL_19:
-    sub_1B8880C(Master_object, v5);
+    sub_1B9026C(Master_object, v7);
   }
 LABEL_15:
   p_iconId = &v2->fields.iconId;
@@ -236,44 +246,46 @@ int32_t __fastcall SkillEntity__GetLossCutinId(SkillEntity_o *this, const Method
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB81 & 1) == 0 )
+  if ( (byte_4A7088E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23345/*"skillScript_1"*/);
-    byte_4A5BB81 = 1;
+    sub_1B90010(&StringLiteral_23382/*"skillScript_1"*/, method);
+    byte_4A7088E = 1;
   }
   param = 0;
-  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_23345/*"skillScript_1"*/, &param, v2) )
+  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_23382/*"skillScript_1"*/, &param, v2) )
     return param;
   else
     return 0;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall SkillEntity__GetMotionId(SkillEntity_o *this, int32_t svtId, const MethodInfo *method)
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  Il2CppObject *v7; // x0
-  System_String_o *v8; // x0
-  const MethodInfo *v9; // x3
-  bool v10; // w0
+  __int64 v7; // x1
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x3
+  bool v11; // w0
   int32_t *p_motion; // x8
-  int32_t v13; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v14; // [xsp+8h] [xbp-38h] BYREF
   int32_t param; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A5BB7F & 1) == 0 )
+  if ( (byte_4A7088C & 1) == 0 )
   {
-    sub_1B885B0(&int_TypeInfo);
-    sub_1B885B0(&StringLiteral_10108/*"OverwriteMotion_{0}"*/);
-    byte_4A5BB7F = 1;
+    sub_1B90010(&int_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B90010(&StringLiteral_10114/*"OverwriteMotion_{0}"*/, v7);
+    byte_4A7088C = 1;
   }
-  v13 = svtId;
+  v14 = svtId;
   param = 0;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, method, v3, v4);
-  v8 = System_String__Format((System_String_o *)StringLiteral_10108/*"OverwriteMotion_{0}"*/, v7, 0LL);
-  v10 = SkillEntity__checkScript(this, v8, &param, v9);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, method, v3, v4);
+  v9 = System_String__Format((System_String_o *)StringLiteral_10114/*"OverwriteMotion_{0}"*/, v8, 0LL);
+  v11 = SkillEntity__checkScript(this, v9, &param, v10);
   p_motion = &this->fields.motion;
-  if ( v10 )
+  if ( v11 )
     p_motion = &param;
   return *p_motion;
 }
@@ -284,13 +296,13 @@ int32_t __fastcall SkillEntity__GetOverWriteSkillInfoId(SkillEntity_o *this, con
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB86 & 1) == 0 )
+  if ( (byte_4A70893 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_10103/*"OverWriteSkillInfoId"*/);
-    byte_4A5BB86 = 1;
+    sub_1B90010(&StringLiteral_10109/*"OverWriteSkillInfoId"*/, method);
+    byte_4A70893 = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_10103/*"OverWriteSkillInfoId"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_10109/*"OverWriteSkillInfoId"*/, &param, v2);
   return param;
 }
 
@@ -300,13 +312,13 @@ bool __fastcall SkillEntity__IsCheckUpdateShiftServant(SkillEntity_o *this, cons
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB89 & 1) == 0 )
+  if ( (byte_4A70896 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_4440/*"CheckUpdateShiftServant"*/);
-    byte_4A5BB89 = 1;
+    sub_1B90010(&StringLiteral_4441/*"CheckUpdateShiftServant"*/, method);
+    byte_4A70896 = 1;
   }
   param = 0;
-  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_4440/*"CheckUpdateShiftServant"*/, &param, v2);
+  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_4441/*"CheckUpdateShiftServant"*/, &param, v2);
 }
 
 
@@ -315,30 +327,32 @@ bool __fastcall SkillEntity__IsIgnoreBattlePointUp(
         System_Collections_Generic_IEnumerable_int__o *battlePointIds,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_Collections_Generic_IEnumerable_TSource__o *IntArray; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4A5BB8C & 1) == 0 )
+  if ( (byte_4A70899 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1B885B0(&Method_System_Linq_Enumerable_Intersect_int___);
-    sub_1B885B0(&StringLiteral_7458/*"IgnoreBattlePointUp"*/);
-    byte_4A5BB8C = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_Any_int___, battlePointIds);
+    sub_1B90010(&Method_System_Linq_Enumerable_Intersect_int___, v5);
+    sub_1B90010(&StringLiteral_7462/*"IgnoreBattlePointUp"*/, v6);
+    byte_4A70899 = 1;
   }
   IntArray = (System_Collections_Generic_IEnumerable_TSource__o *)EntityScriptUtil__GetIntArray(
                                                                     this->fields.script,
-                                                                    (System_String_o *)StringLiteral_7458/*"IgnoreBattlePointUp"*/,
+                                                                    (System_String_o *)StringLiteral_7462/*"IgnoreBattlePointUp"*/,
                                                                     0LL,
                                                                     0LL);
   if ( IntArray )
   {
-    v6 = System_Linq_Enumerable__Intersect_int_(
+    v8 = System_Linq_Enumerable__Intersect_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)battlePointIds,
            IntArray,
-           (const MethodInfo_2EA51C8 *)Method_System_Linq_Enumerable_Intersect_int___);
+           (const MethodInfo_2EB3ADC *)Method_System_Linq_Enumerable_Intersect_int___);
     LOBYTE(IntArray) = System_Linq_Enumerable__Any_int_(
-                         v6,
-                         (const MethodInfo_2E8CDAC *)Method_System_Linq_Enumerable_Any_int___);
+                         v8,
+                         (const MethodInfo_2E9B6C0 *)Method_System_Linq_Enumerable_Any_int___);
   }
   return (char)IntArray;
 }
@@ -349,45 +363,49 @@ bool __fastcall SkillEntity__IsIgnoreValueUp(SkillEntity_o *this, const MethodIn
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB8A & 1) == 0 )
+  if ( (byte_4A70897 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_7465/*"IgnoreValueUp"*/);
-    byte_4A5BB8A = 1;
+    sub_1B90010(&StringLiteral_7469/*"IgnoreValueUp"*/, method);
+    byte_4A70897 = 1;
   }
   param = 0;
-  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_7465/*"IgnoreValueUp"*/, &param, v2);
+  return SkillEntity__checkScript(this, (System_String_o *)StringLiteral_7469/*"IgnoreValueUp"*/, &param, v2);
 }
 
 
 bool __fastcall SkillEntity__IsSkippable(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB83 & 1) == 0 )
+  __int64 v3; // x1
+
+  if ( (byte_4A70890 & 1) == 0 )
   {
-    sub_1B885B0(&Method_BasicHelper_GetValue_long___);
-    sub_1B885B0(&StringLiteral_4052/*"CanNotSkip"*/);
-    byte_4A5BB83 = 1;
+    sub_1B90010(&Method_BasicHelper_GetValue_long___, method);
+    sub_1B90010(&StringLiteral_4053/*"CanNotSkip"*/, v3);
+    byte_4A70890 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
-           (System_String_o *)StringLiteral_4052/*"CanNotSkip"*/,
+           (System_String_o *)StringLiteral_4053/*"CanNotSkip"*/,
            0LL,
-           (const MethodInfo_2E6DB7C *)Method_BasicHelper_GetValue_long___) == 0;
+           (const MethodInfo_2E7C490 *)Method_BasicHelper_GetValue_long___) == 0;
 }
 
 
 bool __fastcall SkillEntity__IsWarBoardForcePassiveEveryBattle(SkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BB84 & 1) == 0 )
+  __int64 v3; // x1
+
+  if ( (byte_4A70891 & 1) == 0 )
   {
-    sub_1B885B0(&Method_BasicHelper_GetValue_long___);
-    sub_1B885B0(&StringLiteral_15586/*"WarBoardForcePassiveEveryBattle"*/);
-    byte_4A5BB84 = 1;
+    sub_1B90010(&Method_BasicHelper_GetValue_long___, method);
+    sub_1B90010(&StringLiteral_15611/*"WarBoardForcePassiveEveryBattle"*/, v3);
+    byte_4A70891 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
-           (System_String_o *)StringLiteral_15586/*"WarBoardForcePassiveEveryBattle"*/,
+           (System_String_o *)StringLiteral_15611/*"WarBoardForcePassiveEveryBattle"*/,
            0LL,
-           (const MethodInfo_2E6DB7C *)Method_BasicHelper_GetValue_long___) > 0;
+           (const MethodInfo_2E7C490 *)Method_BasicHelper_GetValue_long___) > 0;
 }
 
 
@@ -397,21 +415,23 @@ bool __fastcall SkillEntity__checkScript(
         int32_t *param,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v10; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x8
-  SkillEntity_o *v13; // x0
-  const MethodInfo *v14; // x1
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x8
+  SkillEntity_o *v15; // x0
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4A5BB72 & 1) == 0 )
+  if ( (byte_4A7087F & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&long_TypeInfo);
-    byte_4A5BB72 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&long_TypeInfo, v8);
+    byte_4A7087F = 1;
   }
   *param = 0;
   script = this->fields.script;
@@ -420,27 +440,27 @@ bool __fastcall SkillEntity__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
       {
-        sub_1B8880C(Item, v8);
+        sub_1B9026C(Item, v10);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
-        v12 = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11);
+        v14 = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
         LOBYTE(script) = 1;
-        *param = v12;
+        *param = v14;
       }
       else
       {
-        sub_1B88ACC(Item);
-        LOBYTE(script) = (unsigned __int8)SkillEntity__getActIndividuality(v13, v14);
+        sub_1B9052C(Item);
+        LOBYTE(script) = (unsigned __int8)SkillEntity__getActIndividuality(v15, v16);
       }
     }
     else
@@ -461,10 +481,10 @@ bool __fastcall SkillEntity__checkScriptFromIdx(SkillEntity_o *this, System_Stri
   SkillEntity_c *v9; // x0
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB75 & 1) == 0 )
+  if ( (byte_4A70882 & 1) == 0 )
   {
-    sub_1B885B0(&SkillEntity_TypeInfo);
-    byte_4A5BB75 = 1;
+    sub_1B90010(&SkillEntity_TypeInfo, key);
+    byte_4A70882 = 1;
   }
   param = 0;
   v6 = SkillEntity__checkScript(this, key, &param, v3);
@@ -484,22 +504,24 @@ bool __fastcall SkillEntity__checkScriptFromIdx(SkillEntity_o *this, System_Stri
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall SkillEntity__checkUseTreasure(SkillEntity_o *this, int32_t type, const MethodInfo *method)
 {
+  __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4A5BB74 & 1) == 0 )
+  if ( (byte_4A70881 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&StringLiteral_17949/*"checkUseTreasure"*/);
-    byte_4A5BB74 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, *(_QWORD *)&type);
+    sub_1B90010(&StringLiteral_17975/*"checkUseTreasure"*/, v5);
+    byte_4A70881 = 1;
   }
   script = this->fields.script;
   return !script
       || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
-            (Il2CppObject *)StringLiteral_17949/*"checkUseTreasure"*/,
-            (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+            (Il2CppObject *)StringLiteral_17975/*"checkUseTreasure"*/,
+            (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
       || Follower__isUseTreasure(type, 0LL);
 }
 
@@ -508,14 +530,14 @@ System_Int32_array *__fastcall SkillEntity__getActIndividuality(SkillEntity_o *t
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4A5BB73 & 1) == 0 )
+  if ( (byte_4A70880 & 1) == 0 )
   {
-    sub_1B885B0(&int___TypeInfo);
-    byte_4A5BB73 = 1;
+    sub_1B90010(&int___TypeInfo, method);
+    byte_4A70880 = 1;
   }
   result = this->fields.actIndividuality;
   if ( !result )
-    return (System_Int32_array *)sub_1B88658(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B900B8(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -523,37 +545,38 @@ System_Int32_array *__fastcall SkillEntity__getActIndividuality(SkillEntity_o *t
 // local variable allocation has failed, the output may be wrong!
 int32_t __fastcall SkillEntity__getEffectChargeTurn(SkillEntity_o *this, int32_t lv, const MethodInfo *method)
 {
-  __int64 v5; // x0
+  __int64 v5; // x1
   __int64 v6; // x0
+  __int64 v7; // x0
   Il2CppObject *MasterData_object; // x0
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_4A5BB6D & 1) == 0 )
+  if ( (byte_4A7087A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4A5BB6D = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&lv);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v5);
+    byte_4A7087A = 1;
   }
   if ( this->fields.type != 1 )
     return -1;
-  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1BDA48C(v5);
-  v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
+  v6 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1BDA48C(v6);
-  MasterData_object = **(Il2CppObject ***)(v6 + 184);
+    v6 = sub_1BE1EEC(v6);
+  v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
+  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
+    v7 = sub_1BE1EEC(v7);
+  MasterData_object = **(Il2CppObject ***)(v7 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
+                              (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
   {
-    sub_1B8880C(MasterData_object, *(_QWORD *)&lv);
+    sub_1B9026C(MasterData_object, *(_QWORD *)&lv);
   }
-  v9 = lv <= 1 ? 1 : lv;
-  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v9, v8);
+  v10 = lv <= 1 ? 1 : lv;
+  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v10, v9);
   if ( Entity )
     return Entity->fields.chargeTurn;
   else
@@ -567,57 +590,60 @@ System_String_o *__fastcall SkillEntity__getEffectExplanation(
         int32_t lv,
         const MethodInfo *method)
 {
-  __int64 v5; // x0
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x0
+  __int64 v8; // x0
   Il2CppObject *MasterData_object; // x0
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
   SkillLvEntity_o *Entity; // x0
-  const MethodInfo *v11; // x3
-  LocalizationManager_c *v13; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  LocalizationManager_c *v16; // x0
 
-  if ( (byte_4A5BB6E & 1) == 0 )
+  if ( (byte_4A7087B & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4A5BB6E = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&lv);
+    sub_1B90010(&LocalizationManager_TypeInfo, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v6);
+    byte_4A7087B = 1;
   }
-  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1BDA48C(v5);
-  v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
-  if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1BDA48C(v6);
-  MasterData_object = **(Il2CppObject ***)(v6 + 184);
+  v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
+    v7 = sub_1BE1EEC(v7);
+  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
+  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
+    v8 = sub_1BE1EEC(v8);
+  MasterData_object = **(Il2CppObject ***)(v8 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
+                              (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
   {
-    sub_1B8880C(MasterData_object, *(_QWORD *)&lv);
+    sub_1B9026C(MasterData_object, *(_QWORD *)&lv);
   }
   if ( lv <= 1 )
-    v9 = 1;
+    v11 = 1;
   else
-    v9 = lv;
-  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v9, v8);
+    v11 = lv;
+  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v11, v10);
   if ( Entity )
-    return SkillLvEntity__getDetail_39937016(Entity, lv, 0, v11);
+    return SkillLvEntity__getDetail_39990500(Entity, lv, 0, v14);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4A56A2D )
+  if ( !byte_4A6B70D )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    byte_4A56A2D = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, v13);
+    byte_4A6B70D = 1;
   }
-  v13 = LocalizationManager_TypeInfo;
+  v16 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager_TypeInfo;
+    v16 = LocalizationManager_TypeInfo;
   }
-  return v13->static_fields->unknownNameText;
+  return v16->static_fields->unknownNameText;
 }
 
 
@@ -627,43 +653,47 @@ System_Int32_array *__fastcall SkillEntity__getEffectList(SkillEntity_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall SkillEntity__getEffectTitle(SkillEntity_o *this, int32_t lv, const MethodInfo *method)
 {
-  System_String_o *v5; // x21
-  const MethodInfo *v6; // x1
-  Il2CppObject *v7; // x19
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
-  Il2CppObject *v11; // x0
-  System_String_o *v13; // x20
-  const MethodInfo *v14; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_String_o *v8; // x21
+  const MethodInfo *v9; // x1
+  Il2CppObject *v10; // x19
+  __int64 v11; // x2
+  __int64 v12; // x3
+  __int64 v13; // x4
+  Il2CppObject *v14; // x0
+  System_String_o *v16; // x20
+  const MethodInfo *v17; // x1
   Il2CppObject *Name; // x0
-  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB6C & 1) == 0 )
+  if ( (byte_4A70879 & 1) == 0 )
   {
-    sub_1B885B0(&int_TypeInfo);
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_12148/*"SKILL_EFFECT_TITLE"*/);
-    sub_1B885B0(&StringLiteral_12147/*"SKILL_EFFECT_LEVEL_TITLE"*/);
-    byte_4A5BB6C = 1;
+    sub_1B90010(&int_TypeInfo, *(_QWORD *)&lv);
+    sub_1B90010(&LocalizationManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_12173/*"SKILL_EFFECT_TITLE"*/, v6);
+    sub_1B90010(&StringLiteral_12172/*"SKILL_EFFECT_LEVEL_TITLE"*/, v7);
+    byte_4A70879 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( lv < 1 )
   {
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12148/*"SKILL_EFFECT_TITLE"*/, 0LL);
-    Name = (Il2CppObject *)SkillEntity__getName(this, v14);
-    return System_String__Format(v13, Name, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12173/*"SKILL_EFFECT_TITLE"*/, 0LL);
+    Name = (Il2CppObject *)SkillEntity__getName(this, v17);
+    return System_String__Format(v16, Name, 0LL);
   }
   else
   {
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12147/*"SKILL_EFFECT_LEVEL_TITLE"*/, 0LL);
-    v7 = (Il2CppObject *)SkillEntity__getName(this, v6);
-    v16 = lv;
-    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v8, v9, v10);
-    return System_String__Format_61721404(v5, v7, v11, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12172/*"SKILL_EFFECT_LEVEL_TITLE"*/, 0LL);
+    v10 = (Il2CppObject *)SkillEntity__getName(this, v9);
+    v19 = lv;
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v11, v12, v13);
+    return System_String__Format_61801464(v8, v10, v14, 0LL);
   }
 }
 
@@ -671,57 +701,59 @@ System_String_o *__fastcall SkillEntity__getEffectTitle(SkillEntity_o *this, int
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall SkillEntity__getFuncExplanation(SkillEntity_o *this, int32_t lv, const MethodInfo *method)
 {
-  __int64 v5; // x0
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x0
+  __int64 v8; // x0
   Il2CppObject *MasterData_object; // x0
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
   SkillLvEntity_o *Entity; // x0
-  const MethodInfo *v11; // x1
-  LocalizationManager_c *v13; // x0
+  const MethodInfo *v13; // x1
+  LocalizationManager_c *v15; // x0
 
-  if ( (byte_4A5BB6F & 1) == 0 )
+  if ( (byte_4A7087C & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4A5BB6F = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&lv);
+    sub_1B90010(&LocalizationManager_TypeInfo, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v6);
+    byte_4A7087C = 1;
   }
-  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1BDA48C(v5);
-  v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
-  if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1BDA48C(v6);
-  MasterData_object = **(Il2CppObject ***)(v6 + 184);
+  v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
+    v7 = sub_1BE1EEC(v7);
+  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
+  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
+    v8 = sub_1BE1EEC(v8);
+  MasterData_object = **(Il2CppObject ***)(v8 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
+                              (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
   {
-    sub_1B8880C(MasterData_object, *(_QWORD *)&lv);
+    sub_1B9026C(MasterData_object, *(_QWORD *)&lv);
   }
   if ( lv <= 1 )
-    v9 = 1;
+    v11 = 1;
   else
-    v9 = lv;
-  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v9, v8);
+    v11 = lv;
+  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_object, this->fields.id, v11, v10);
   if ( Entity )
-    return SkillLvEntity__getFuncDetail(Entity, v11);
+    return SkillLvEntity__getFuncDetail(Entity, v13);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4A56A2D )
+  if ( !byte_4A6B70D )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    byte_4A56A2D = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, v13);
+    byte_4A6B70D = 1;
   }
-  v13 = LocalizationManager_TypeInfo;
+  v15 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager_TypeInfo;
+    v15 = LocalizationManager_TypeInfo;
   }
-  return v13->static_fields->unknownNameText;
+  return v15->static_fields->unknownNameText;
 }
 
 
@@ -731,10 +763,10 @@ System_String_o *__fastcall SkillEntity__getName(SkillEntity_o *this, const Meth
   SkillAddEntity_o *AvailableSkillAddEntity; // x0
   System_String_o **p_name; // x8
 
-  if ( (byte_4A5BB6A & 1) == 0 )
+  if ( (byte_4A70877 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__);
-    byte_4A5BB6A = 1;
+    sub_1B90010(&Method_System_Collections_Generic_List_SkillAddEntity__get_Count__, method);
+    byte_4A70877 = 1;
   }
   SortedSkillAddEntityList_k__BackingField = this->fields._SortedSkillAddEntityList_k__BackingField;
   if ( SortedSkillAddEntityList_k__BackingField
@@ -757,16 +789,18 @@ System_String_array *__fastcall SkillEntity__getScriptStrings(
         uint16_t splitChar,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
-  SkillEntity_o *v9; // x0
-  const MethodInfo *v10; // x1
+  SkillEntity_o *v11; // x0
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4A5BB77 & 1) == 0 )
+  if ( (byte_4A70884 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&string_TypeInfo);
-    byte_4A5BB77 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&string_TypeInfo, v8);
+    byte_4A70884 = 1;
   }
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script )
@@ -774,47 +808,49 @@ System_String_array *__fastcall SkillEntity__getScriptStrings(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           script,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0LL;
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
 LABEL_10:
-    sub_1B8880C(script, key);
+    sub_1B9026C(script, key);
   }
   if ( (System_String_c *)script->klass == string_TypeInfo )
     return System_String__Split((System_String_o *)script, splitChar, 0, 0LL);
-  sub_1B88ACC(script);
-  return SkillEntity__getSkillCutInVoices(v9, v10);
+  sub_1B9052C(script);
+  return SkillEntity__getSkillCutInVoices(v11, v12);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall SkillEntity__getSkillChargeTime(SkillEntity_o *this, int32_t lv, const MethodInfo *method)
 {
+  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x3
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_4A5BB70 & 1) == 0 )
+  if ( (byte_4A7087D & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5BB70 = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&lv);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4A7087D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
   {
-    sub_1B8880C(Instance, v6);
+    sub_1B9026C(Instance, v7);
   }
-  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, this->fields.id, lv, v7);
+  Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, this->fields.id, lv, v8);
   if ( Entity )
     LODWORD(Entity) = Entity->fields.chargeTurn;
   return (int)Entity;
@@ -826,13 +862,13 @@ bool __fastcall SkillEntity__getSkillCutInCamPlayerAll(SkillEntity_o *this, cons
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB7C & 1) == 0 )
+  if ( (byte_4A70889 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18407/*"cutInCamPlayerAll"*/);
-    byte_4A5BB7C = 1;
+    sub_1B90010(&StringLiteral_18433/*"cutInCamPlayerAll"*/, method);
+    byte_4A70889 = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18407/*"cutInCamPlayerAll"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18433/*"cutInCamPlayerAll"*/, &param, v2);
   return param == 1;
 }
 
@@ -842,13 +878,13 @@ int32_t __fastcall SkillEntity__getSkillCutInId(SkillEntity_o *this, const Metho
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB71 & 1) == 0 )
+  if ( (byte_4A7087E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18408/*"cutInId"*/);
-    byte_4A5BB71 = 1;
+    sub_1B90010(&StringLiteral_18434/*"cutInId"*/, method);
+    byte_4A7087E = 1;
   }
   param = 0;
-  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18408/*"cutInId"*/, &param, v2) )
+  if ( SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18434/*"cutInId"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -860,13 +896,13 @@ int32_t __fastcall SkillEntity__getSkillCutInMessageMode(SkillEntity_o *this, co
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB7E & 1) == 0 )
+  if ( (byte_4A7088B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18409/*"cutInMessageMode"*/);
-    byte_4A5BB7E = 1;
+    sub_1B90010(&StringLiteral_18435/*"cutInMessageMode"*/, method);
+    byte_4A7088B = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18409/*"cutInMessageMode"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18435/*"cutInMessageMode"*/, &param, v2);
   return param;
 }
 
@@ -875,12 +911,12 @@ System_String_array *__fastcall SkillEntity__getSkillCutInPrefabInfo(SkillEntity
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5BB79 & 1) == 0 )
+  if ( (byte_4A70886 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18410/*"cutInPrefabInfo"*/);
-    byte_4A5BB79 = 1;
+    sub_1B90010(&StringLiteral_18436/*"cutInPrefabInfo"*/, method);
+    byte_4A70886 = 1;
   }
-  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18410/*"cutInPrefabInfo"*/, 0x2Cu, v2);
+  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18436/*"cutInPrefabInfo"*/, 0x2Cu, v2);
 }
 
 
@@ -889,88 +925,89 @@ UnityEngine_Vector3_array *__fastcall SkillEntity__getSkillCutInPrefabOffsets(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
   System_String_array *ScriptStrings; // x0
-  System_String_array *v5; // x19
-  System_String_array *v6; // x0
-  __int64 v7; // x1
+  System_String_array *v6; // x19
+  System_String_array *v7; // x0
+  __int64 v8; // x1
   int max_length; // w8
-  UnityEngine_Vector3_array *v9; // x20
-  __int64 v10; // x22
-  float *v11; // x23
-  int v12; // w8
-  System_String_array *v13; // x21
-  float v14; // s8
-  float v15; // s9
-  float v16; // s10
-  float v17; // s0
+  UnityEngine_Vector3_array *v10; // x20
+  __int64 v11; // x22
+  float *v12; // x23
+  int v13; // w8
+  System_String_array *v14; // x21
+  float v15; // s8
+  float v16; // s9
+  float v17; // s10
   float v18; // s0
+  float v19; // s0
 
-  if ( (byte_4A5BB7A & 1) == 0 )
+  if ( (byte_4A70887 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Vector3___TypeInfo);
-    sub_1B885B0(&StringLiteral_18411/*"cutInPrefabOffsets"*/);
-    byte_4A5BB7A = 1;
+    sub_1B90010(&UnityEngine_Vector3___TypeInfo, method);
+    sub_1B90010(&StringLiteral_18437/*"cutInPrefabOffsets"*/, v4);
+    byte_4A70887 = 1;
   }
-  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18411/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
+  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18437/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
   if ( !ScriptStrings )
     return 0LL;
-  v5 = ScriptStrings;
-  v6 = (System_String_array *)sub_1B88658(UnityEngine_Vector3___TypeInfo, ScriptStrings->max_length);
-  max_length = v5->max_length;
-  v9 = (UnityEngine_Vector3_array *)v6;
+  v6 = ScriptStrings;
+  v7 = (System_String_array *)sub_1B900B8(UnityEngine_Vector3___TypeInfo, ScriptStrings->max_length);
+  max_length = v6->max_length;
+  v10 = (UnityEngine_Vector3_array *)v7;
   if ( max_length >= 1 )
   {
-    v10 = 0LL;
-    v11 = (float *)&v6->m_Items[1];
+    v11 = 0LL;
+    v12 = (float *)&v7->m_Items[1];
     do
     {
-      if ( (unsigned int)v10 >= max_length )
+      if ( (unsigned int)v11 >= max_length )
         goto LABEL_22;
-      v6 = (System_String_array *)v5->m_Items[v10];
-      if ( !v6 )
+      v7 = (System_String_array *)v6->m_Items[v11];
+      if ( !v7 )
         goto LABEL_21;
-      v6 = System_String__Split((System_String_o *)v6, 0x3Au, 0, 0LL);
-      if ( !v6 )
+      v7 = System_String__Split((System_String_o *)v7, 0x3Au, 0, 0LL);
+      if ( !v7 )
         goto LABEL_21;
-      v12 = v6->max_length;
-      v13 = v6;
-      v14 = 0.0;
+      v13 = v7->max_length;
+      v14 = v7;
       v15 = 0.0;
       v16 = 0.0;
-      if ( v12 > 1 )
+      v17 = 0.0;
+      if ( v13 > 1 )
       {
-        v17 = System_Single__Parse(v6->m_Items[1], 0LL);
-        v12 = v13->max_length;
-        v15 = v17;
-        if ( v12 < 3 )
+        v18 = System_Single__Parse(v7->m_Items[1], 0LL);
+        v13 = v14->max_length;
+        v16 = v18;
+        if ( v13 < 3 )
         {
-          v16 = 0.0;
+          v17 = 0.0;
         }
         else
         {
-          v18 = System_Single__Parse(v13->m_Items[2], 0LL);
-          v12 = v13->max_length;
-          v16 = v18;
+          v19 = System_Single__Parse(v14->m_Items[2], 0LL);
+          v13 = v14->max_length;
+          v17 = v19;
         }
       }
-      if ( v12 >= 1 )
-        v14 = System_Single__Parse(v13->m_Items[0], 0LL);
-      if ( !v9 )
+      if ( v13 >= 1 )
+        v15 = System_Single__Parse(v14->m_Items[0], 0LL);
+      if ( !v10 )
 LABEL_21:
-        sub_1B8880C(v6, v7);
-      if ( (unsigned int)v10 >= v9->max_length )
+        sub_1B9026C(v7, v8);
+      if ( (unsigned int)v11 >= v10->max_length )
 LABEL_22:
-        sub_1B88814(v6, v7);
-      *(v11 - 2) = v15;
-      *(v11 - 1) = v16;
-      *v11 = v14;
-      v11 += 3;
-      max_length = v5->max_length;
-      ++v10;
+        sub_1B90274(v7, v8);
+      *(v12 - 2) = v16;
+      *(v12 - 1) = v17;
+      *v12 = v15;
+      v12 += 3;
+      max_length = v6->max_length;
+      ++v11;
     }
-    while ( (int)v10 < max_length );
+    while ( (int)v11 < max_length );
   }
-  return v9;
+  return v10;
 }
 
 
@@ -979,88 +1016,89 @@ UnityEngine_Vector3_array *__fastcall SkillEntity__getSkillCutInPrefabSizes(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
   System_String_array *ScriptStrings; // x0
-  System_String_array *v5; // x19
-  System_String_array *v6; // x0
-  __int64 v7; // x1
+  System_String_array *v6; // x19
+  System_String_array *v7; // x0
+  __int64 v8; // x1
   int max_length; // w8
-  UnityEngine_Vector3_array *v9; // x20
-  __int64 v10; // x22
-  float *v11; // x23
-  int v12; // w8
-  System_String_array *v13; // x21
-  float v14; // s8
-  float v15; // s9
-  float v16; // s10
-  float v17; // s0
+  UnityEngine_Vector3_array *v10; // x20
+  __int64 v11; // x22
+  float *v12; // x23
+  int v13; // w8
+  System_String_array *v14; // x21
+  float v15; // s8
+  float v16; // s9
+  float v17; // s10
   float v18; // s0
+  float v19; // s0
 
-  if ( (byte_4A5BB7B & 1) == 0 )
+  if ( (byte_4A70888 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Vector3___TypeInfo);
-    sub_1B885B0(&StringLiteral_18412/*"cutInPrefabSizes"*/);
-    byte_4A5BB7B = 1;
+    sub_1B90010(&UnityEngine_Vector3___TypeInfo, method);
+    sub_1B90010(&StringLiteral_18438/*"cutInPrefabSizes"*/, v4);
+    byte_4A70888 = 1;
   }
-  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18412/*"cutInPrefabSizes"*/, 0x2Fu, v2);
+  ScriptStrings = SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18438/*"cutInPrefabSizes"*/, 0x2Fu, v2);
   if ( !ScriptStrings )
     return 0LL;
-  v5 = ScriptStrings;
-  v6 = (System_String_array *)sub_1B88658(UnityEngine_Vector3___TypeInfo, ScriptStrings->max_length);
-  max_length = v5->max_length;
-  v9 = (UnityEngine_Vector3_array *)v6;
+  v6 = ScriptStrings;
+  v7 = (System_String_array *)sub_1B900B8(UnityEngine_Vector3___TypeInfo, ScriptStrings->max_length);
+  max_length = v6->max_length;
+  v10 = (UnityEngine_Vector3_array *)v7;
   if ( max_length >= 1 )
   {
-    v10 = 0LL;
-    v11 = (float *)&v6->m_Items[1];
+    v11 = 0LL;
+    v12 = (float *)&v7->m_Items[1];
     do
     {
-      if ( (unsigned int)v10 >= max_length )
+      if ( (unsigned int)v11 >= max_length )
         goto LABEL_22;
-      v6 = (System_String_array *)v5->m_Items[v10];
-      if ( !v6 )
+      v7 = (System_String_array *)v6->m_Items[v11];
+      if ( !v7 )
         goto LABEL_21;
-      v6 = System_String__Split((System_String_o *)v6, 0x3Au, 0, 0LL);
-      if ( !v6 )
+      v7 = System_String__Split((System_String_o *)v7, 0x3Au, 0, 0LL);
+      if ( !v7 )
         goto LABEL_21;
-      v12 = v6->max_length;
-      v13 = v6;
-      v14 = 0.0;
+      v13 = v7->max_length;
+      v14 = v7;
       v15 = 0.0;
       v16 = 0.0;
-      if ( v12 > 1 )
+      v17 = 0.0;
+      if ( v13 > 1 )
       {
-        v17 = System_Single__Parse(v6->m_Items[1], 0LL);
-        v12 = v13->max_length;
-        v15 = v17;
-        if ( v12 < 3 )
+        v18 = System_Single__Parse(v7->m_Items[1], 0LL);
+        v13 = v14->max_length;
+        v16 = v18;
+        if ( v13 < 3 )
         {
-          v16 = 0.0;
+          v17 = 0.0;
         }
         else
         {
-          v18 = System_Single__Parse(v13->m_Items[2], 0LL);
-          v12 = v13->max_length;
-          v16 = v18;
+          v19 = System_Single__Parse(v14->m_Items[2], 0LL);
+          v13 = v14->max_length;
+          v17 = v19;
         }
       }
-      if ( v12 >= 1 )
-        v14 = System_Single__Parse(v13->m_Items[0], 0LL);
-      if ( !v9 )
+      if ( v13 >= 1 )
+        v15 = System_Single__Parse(v14->m_Items[0], 0LL);
+      if ( !v10 )
 LABEL_21:
-        sub_1B8880C(v6, v7);
-      if ( (unsigned int)v10 >= v9->max_length )
+        sub_1B9026C(v7, v8);
+      if ( (unsigned int)v11 >= v10->max_length )
 LABEL_22:
-        sub_1B88814(v6, v7);
-      *(v11 - 2) = v15;
-      *(v11 - 1) = v16;
-      *v11 = v14;
-      v11 += 3;
-      max_length = v5->max_length;
-      ++v10;
+        sub_1B90274(v7, v8);
+      *(v12 - 2) = v16;
+      *(v12 - 1) = v17;
+      *v12 = v15;
+      v12 += 3;
+      max_length = v6->max_length;
+      ++v11;
     }
-    while ( (int)v10 < max_length );
+    while ( (int)v11 < max_length );
   }
-  return v9;
+  return v10;
 }
 
 
@@ -1068,12 +1106,12 @@ System_String_array *__fastcall SkillEntity__getSkillCutInVoices(SkillEntity_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5BB78 & 1) == 0 )
+  if ( (byte_4A70885 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18414/*"cutInVoices"*/);
-    byte_4A5BB78 = 1;
+    sub_1B90010(&StringLiteral_18440/*"cutInVoices"*/, method);
+    byte_4A70885 = 1;
   }
-  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18414/*"cutInVoices"*/, 0x2Fu, v2);
+  return SkillEntity__getScriptStrings(this, (System_String_o *)StringLiteral_18440/*"cutInVoices"*/, 0x2Fu, v2);
 }
 
 
@@ -1094,10 +1132,10 @@ void __fastcall SkillEntity__getSkillMessageInfo(
 
   v9 = SkillEntity__getName(this, (const MethodInfo *)name);
   *name = v9;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)name, (int32_t)v9, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)name, (int32_t)v9, v10, v11);
   EffectExplanation = SkillEntity__getEffectExplanation(this, lv, v12);
   *detail = EffectExplanation;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)detail, (int32_t)EffectExplanation, v14, v15);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)detail, (int32_t)EffectExplanation, v14, v15);
 }
 
 
@@ -1121,13 +1159,13 @@ bool __fastcall SkillEntity__isForcedSkillSpeedOne(SkillEntity_o *this, const Me
   bool v4; // w0
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB76 & 1) == 0 )
+  if ( (byte_4A70883 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_6783/*"ForcedSkillSpeed"*/);
-    byte_4A5BB76 = 1;
+    sub_1B90010(&StringLiteral_6786/*"ForcedSkillSpeed"*/, method);
+    byte_4A70883 = 1;
   }
   param = 0;
-  v4 = SkillEntity__checkScript(this, (System_String_o *)StringLiteral_6783/*"ForcedSkillSpeed"*/, &param, v2);
+  v4 = SkillEntity__checkScript(this, (System_String_o *)StringLiteral_6786/*"ForcedSkillSpeed"*/, &param, v2);
   return v4 && param == 1;
 }
 
@@ -1143,13 +1181,13 @@ bool __fastcall SkillEntity__isSkillCutInCamField(SkillEntity_o *this, const Met
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5BB7D & 1) == 0 )
+  if ( (byte_4A7088A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18407/*"cutInCamPlayerAll"*/);
-    byte_4A5BB7D = 1;
+    sub_1B90010(&StringLiteral_18433/*"cutInCamPlayerAll"*/, method);
+    byte_4A7088A = 1;
   }
   param = 0;
-  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18407/*"cutInCamPlayerAll"*/, &param, v2);
+  SkillEntity__checkScript(this, (System_String_o *)StringLiteral_18433/*"cutInCamPlayerAll"*/, &param, v2);
   return param == 2;
 }
 
@@ -1162,7 +1200,7 @@ void __fastcall SkillEntity__set_SortedSkillAddEntityList(
   int32_t v3; // w3
 
   this->fields._SortedSkillAddEntityList_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._SortedSkillAddEntityList_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1172,19 +1210,20 @@ void __fastcall SkillEntity__set_SortedSkillAddEntityList(
 
 void __fastcall SkillEntity___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4A5BB8F & 1) == 0 )
+  if ( (byte_4A7089C & 1) == 0 )
   {
-    sub_1B885B0(&SkillEntity___c_TypeInfo);
-    byte_4A5BB8F = 1;
+    sub_1B90010(&SkillEntity___c_TypeInfo, v1);
+    byte_4A7089C = 1;
   }
-  v1 = (Il2CppObject *)sub_1B887FC(SkillEntity___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  SkillEntity___c_TypeInfo->static_fields->__9 = (struct SkillEntity___c_o *)v1;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)SkillEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  v2 = (Il2CppObject *)sub_1B9025C(SkillEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  SkillEntity___c_TypeInfo->static_fields->__9 = (struct SkillEntity___c_o *)v2;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)SkillEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1200,6 +1239,6 @@ bool __fastcall SkillEntity___c___GetAvailableSkillAddEntity_b__22_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B8880C(this, 0LL);
+    sub_1B9026C(this, 0LL);
   return SkillAddEntity__IsOpen(x, (const MethodInfo *)x);
 }

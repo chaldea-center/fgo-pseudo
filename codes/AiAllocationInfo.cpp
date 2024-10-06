@@ -1,82 +1,89 @@
 void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const MethodInfo *method)
 {
-  System_Func_object__object__o *v5; // x21
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_Func_object__object__o *v12; // x21
   __int64 methodPtr_low; // x9
   Il2CppObject *ScriptValue_object__object; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
   int32_t IntValue; // w0
-  int32_t v11; // w2
-  int32_t v12; // w3
-  int32_t v13; // w20
-  __int64 v14; // x0
-  __int64 v15; // x1
-  struct System_Int32_array *v16; // x1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  int32_t v20; // w20
+  __int64 v21; // x0
+  __int64 v22; // x1
+  struct System_Int32_array *v23; // x1
 
-  if ( (byte_4A5AC3D & 1) == 0 )
+  if ( (byte_4A6F946 & 1) == 0 )
   {
-    sub_1B885B0(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1B885B0(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
-    sub_1B885B0(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
-    sub_1B885B0(&System_Func_List_object___List_int___TypeInfo);
-    sub_1B885B0(&int___TypeInfo);
-    sub_1B885B0(&StringLiteral_16717/*"aiIds"*/);
-    sub_1B885B0(&StringLiteral_20643/*"individuality"*/);
-    sub_1B885B0(&StringLiteral_16848/*"applySvtType"*/);
-    byte_4A5AC3D = 1;
+    sub_1B90010(&System_Collections_Generic_Dictionary_string__object__TypeInfo, obj);
+    sub_1B90010(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____, v5);
+    sub_1B90010(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__, v6);
+    sub_1B90010(&System_Func_List_object___List_int___TypeInfo, v7);
+    sub_1B90010(&int___TypeInfo, v8);
+    sub_1B90010(&StringLiteral_16742/*"aiIds"*/, v9);
+    sub_1B90010(&StringLiteral_20671/*"individuality"*/, v10);
+    sub_1B90010(&StringLiteral_16873/*"applySvtType"*/, v11);
+    byte_4A6F946 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = (System_Func_object__object__o *)sub_1B887FC(System_Func_List_object___List_int___TypeInfo);
-  System_Func_object__object____ctor(v5, 0LL, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0LL);
+  v12 = (System_Func_object__object__o *)sub_1B9025C(System_Func_List_object___List_int___TypeInfo);
+  System_Func_object__object____ctor(v12, 0LL, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0LL);
   if ( obj )
   {
     methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(obj->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_Dictionary_string__object__c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_1B88ACC(obj);
+      sub_1B9052C(obj);
       goto LABEL_13;
     }
   }
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                 (System_String_o *)StringLiteral_16717/*"aiIds"*/,
-                                 (System_Func_TSource__TDestination__o *)v5,
+                                 (System_String_o *)StringLiteral_16742/*"aiIds"*/,
+                                 (System_Func_TSource__TDestination__o *)v12,
                                  0LL,
-                                 (const MethodInfo_2E885D4 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+                                 (const MethodInfo_2E96EE8 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
   this->fields._AiIdList_k__BackingField = (struct System_Collections_Generic_List_int__o *)ScriptValue_object__object;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)ScriptValue_object__object, v8, v9);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)ScriptValue_object__object, v15, v16);
   this->fields._ApplyType_k__BackingField = EntityScriptUtil__GetIntValue(
                                               (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                              (System_String_o *)StringLiteral_16848/*"applySvtType"*/,
+                                              (System_String_o *)StringLiteral_16873/*"applySvtType"*/,
                                               0,
                                               0LL);
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)obj,
-               (System_String_o *)StringLiteral_20643/*"individuality"*/,
+               (System_String_o *)StringLiteral_20671/*"individuality"*/,
                0,
                0LL);
   if ( IntValue < 1 )
   {
-    v16 = 0LL;
+    v23 = 0LL;
     goto LABEL_11;
   }
-  v13 = IntValue;
-  v14 = sub_1B88658(int___TypeInfo, 1LL);
-  if ( !v14 )
+  v20 = IntValue;
+  v21 = sub_1B900B8(int___TypeInfo, 1LL);
+  if ( !v21 )
 LABEL_13:
-    sub_1B8880C(v14, v15);
-  v16 = (struct System_Int32_array *)v14;
-  if ( !*(_DWORD *)(v14 + 24) )
-    sub_1B88814(v14, v14);
-  *(_DWORD *)(v14 + 32) = v13;
+    sub_1B9026C(v21, v22);
+  v23 = (struct System_Int32_array *)v21;
+  if ( !*(_DWORD *)(v21 + 24) )
+    sub_1B90274(v21, v21);
+  *(_DWORD *)(v21 + 32) = v20;
 LABEL_11:
-  this->fields._AiIndividuality_k__BackingField = v16;
-  sub_1B88554(
+  this->fields._AiIndividuality_k__BackingField = v23;
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._AiIndividuality_k__BackingField,
-    (int32_t)v16,
-    v11,
-    v12);
+    (int32_t)v23,
+    v18,
+    v19);
 }
 
 
@@ -95,7 +102,7 @@ bool __fastcall AiAllocationInfo__IsMatch(
   if ( !v6 )
     return 0;
   if ( !svt || (deckSvt = svt->fields.deckSvt) == 0LL )
-    sub_1B8880C(v6, v7);
+    sub_1B9026C(v6, v7);
   return AiAllocationInfo__IsMatchApplyType(this, deckSvt->fields.isFollowerSvt, svt->fields.followerType, v8);
 }
 
@@ -162,7 +169,7 @@ void __fastcall AiAllocationInfo__set_AiIdList(
   int32_t v3; // w3
 
   this->fields._AiIdList_k__BackingField = value;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -174,7 +181,7 @@ void __fastcall AiAllocationInfo__set_AiIndividuality(
   int32_t v3; // w3
 
   this->fields._AiIndividuality_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._AiIndividuality_k__BackingField,
     (int32_t)value,
     (int32_t)method,

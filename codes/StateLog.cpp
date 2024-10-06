@@ -1,11 +1,11 @@
 void __fastcall StateLog___ctor(StateLog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C8AC & 1) == 0 )
+  if ( (byte_4A715C0 & 1) == 0 )
   {
-    sub_1B885B0(&Method_SingletonMonoBehaviour_StateLog___ctor__);
-    byte_4A5C8AC = 1;
+    sub_1B90010(&Method_SingletonMonoBehaviour_StateLog___ctor__, method);
+    byte_4A715C0 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3739B30 *)Method_SingletonMonoBehaviour_StateLog___ctor__);
+    (const MethodInfo_374CCA8 *)Method_SingletonMonoBehaviour_StateLog___ctor__);
 }

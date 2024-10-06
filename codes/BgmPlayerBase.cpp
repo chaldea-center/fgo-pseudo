@@ -56,10 +56,10 @@ bool __fastcall BgmPlayerBase__ChangeVolume(
   CriAtomSource_o *v20; // x21
 
   v7 = this;
-  if ( (byte_4A5A7CB & 1) == 0 )
+  if ( (byte_4A6F4D3 & 1) == 0 )
   {
-    this = (BgmPlayerBase_o *)sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7CB = 1;
+    this = (BgmPlayerBase_o *)sub_1B90010(&BgmManager_TypeInfo, method);
+    byte_4A6F4D3 = 1;
   }
   if ( v7->fields.fadeinTime > 0.0 )
   {
@@ -69,9 +69,9 @@ bool __fastcall BgmPlayerBase__ChangeVolume(
       bgmPlayer = v7->fields.bgmPlayer;
       bgmFadePlayer = v7->fields.bgmFadePlayer;
       v7->fields.bgmFadePlayer = bgmPlayer;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v7->fields.bgmFadePlayer, (int32_t)bgmPlayer, (int32_t)v4, v8);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v7->fields.bgmFadePlayer, (int32_t)bgmPlayer, (int32_t)v4, v8);
       v7->fields.bgmPlayer = bgmFadePlayer;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v7->fields.bgmPlayer, (int32_t)bgmFadePlayer, v11, v12);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v7->fields.bgmPlayer, (int32_t)bgmFadePlayer, v11, v12);
       v14 = v7->fields.bgmFadePlayer;
       if ( !v14 )
         goto LABEL_27;
@@ -88,10 +88,10 @@ bool __fastcall BgmPlayerBase__ChangeVolume(
       v20 = v7->fields.bgmPlayer;
       if ( !BgmManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      if ( !byte_4A56A30 )
+      if ( !byte_4A6B710 )
       {
-        sub_1B885B0(&BgmManager_TypeInfo);
-        byte_4A56A30 = 1;
+        sub_1B90010(&BgmManager_TypeInfo, v13);
+        byte_4A6B710 = 1;
       }
       v14 = (CriAtomSource_o *)BgmManager_TypeInfo;
       if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -116,10 +116,10 @@ LABEL_25:
         v7->fields.fadeBaseVolume = v16->fields._volume;
         if ( !BgmManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-        if ( !byte_4A56A30 )
+        if ( !byte_4A6B710 )
         {
-          sub_1B885B0(&BgmManager_TypeInfo);
-          byte_4A56A30 = 1;
+          sub_1B90010(&BgmManager_TypeInfo, v13);
+          byte_4A6B710 = 1;
         }
         v17 = BgmManager_TypeInfo;
         if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -136,7 +136,7 @@ LABEL_25:
       }
     }
 LABEL_27:
-    sub_1B8880C(v14, v13);
+    sub_1B9026C(v14, v13);
   }
   return v15 & 1;
 }
@@ -147,7 +147,7 @@ bool __fastcall BgmPlayerBase__CheckPlaying(BgmPlayerBase_o *this, CriAtomSource
   int32_t status; // w0
 
   if ( !player )
-    sub_1B8880C(this, 0LL);
+    sub_1B9026C(this, 0LL);
   status = CriAtomSource__get_status(player, 0LL);
   if ( status != 1 )
     LOBYTE(status) = CriAtomSource__get_status(player, 0LL) == 2;
@@ -162,20 +162,20 @@ bool __fastcall BgmPlayerBase__FadeoutBgm(BgmPlayerBase_o *this, float fadeoutTi
   struct System_String_o *bgmName; // x21
   BgmManager_c *v8; // x0
 
-  if ( (byte_4A5A7D0 & 1) == 0 )
+  if ( (byte_4A6F4D8 & 1) == 0 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7D0 = 1;
+    sub_1B90010(&BgmManager_TypeInfo, method);
+    byte_4A6F4D8 = 1;
   }
   bgmName = this->fields.bgmName;
   if ( bgmName )
   {
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4A5861A )
+    if ( !byte_4A6D3F4 )
     {
-      sub_1B885B0(&BgmManager_TypeInfo);
-      byte_4A5861A = 1;
+      sub_1B90010(&BgmManager_TypeInfo, method);
+      byte_4A6D3F4 = 1;
     }
     v8 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -186,7 +186,7 @@ bool __fastcall BgmPlayerBase__FadeoutBgm(BgmPlayerBase_o *this, float fadeoutTi
     if ( !v8->static_fields->isMute )
       BgmPlayerBase__FadeoutLocal(this, fadeoutTime, method);
     this->fields.bgmName = 0LL;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.bgmName, 0, v3, v4);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.bgmName, 0, v3, v4);
     this->fields.bgmVolume = 0.0;
   }
   return bgmName != 0LL;
@@ -223,9 +223,9 @@ void __fastcall BgmPlayerBase__FadeoutLocal(BgmPlayerBase_o *this, float fadeout
         klass = p_bgmPlayer->klass;
         v14 = (ServantStatusBattleListViewItem_c *)*p_bgmFadePlayer;
         *p_bgmFadePlayer = (struct CriAtomSource_o *)p_bgmPlayer->klass;
-        sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.bgmFadePlayer, (int32_t)klass, v11, v12);
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.bgmFadePlayer, (int32_t)klass, v11, v12);
         p_bgmPlayer->klass = v14;
-        sub_1B88554(p_bgmPlayer, (int32_t)v14, v15, v16);
+        sub_1B8FFB4(p_bgmPlayer, (int32_t)v14, v15, v16);
         v7 = (BgmPlayerBase_o *)*p_bgmFadePlayer;
         if ( !*p_bgmFadePlayer )
           goto LABEL_10;
@@ -244,51 +244,52 @@ void __fastcall BgmPlayerBase__FadeoutLocal(BgmPlayerBase_o *this, float fadeout
       return;
     }
 LABEL_10:
-    sub_1B8880C(v7, v8);
+    sub_1B9026C(v7, v8);
   }
 }
 
 
 void __fastcall BgmPlayerBase__FixedUpdate(BgmPlayerBase_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   CriAtomSource_o **p_bgmPlayer; // x20
   UnityEngine_Object_o *bgmPlayer; // x21
-  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x1
   float fixedUnscaledDeltaTime; // s8
-  CriAtomSource_o *v7; // x0
+  CriAtomSource_o *v8; // x0
   _BOOL8 IsPaused; // x0
-  const MethodInfo *v9; // x2
-  _BOOL8 v10; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v10; // x2
+  _BOOL8 v11; // x0
+  const MethodInfo *v12; // x2
   float fadeoutTime; // s0
   float playTime; // s1
-  float v14; // s2
-  bool v15; // nf
-  float v16; // s1
-  BgmManager_c *v17; // x0
+  float v15; // s2
+  bool v16; // nf
+  float v17; // s1
+  BgmManager_c *v18; // x0
   struct BgmManager_StaticFields *static_fields; // x8
-  float v19; // s0
+  float v20; // s0
   ServantStatusBattleListViewItem_o *p_bgmFadePlayer; // x23
-  CriAtomSource_o *v21; // x21
-  struct CriAtomSource_o **v22; // x8
-  float v23; // s0
+  CriAtomSource_o *v22; // x21
+  struct CriAtomSource_o **v23; // x8
+  float v24; // s0
   float fadeinTime; // s1
-  CriAtomSource_o *v25; // x22
-  float v26; // s2
-  float v27; // s0
+  CriAtomSource_o *v26; // x22
+  float v27; // s2
   float v28; // s0
-  CriAtomSource_o *v29; // x1
+  float v29; // s0
+  CriAtomSource_o *v30; // x1
   ServantStatusBattleListViewItem_c *klass; // x19
-  int32_t v31; // w2
-  int32_t v32; // w3
-  int32_t v33; // w2
-  int32_t v34; // w3
+  int32_t v32; // w2
+  int32_t v33; // w3
+  int32_t v34; // w2
+  int32_t v35; // w3
 
-  if ( (byte_4A5A7D1 & 1) == 0 )
+  if ( (byte_4A6F4D9 & 1) == 0 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5A7D1 = 1;
+    sub_1B90010(&BgmManager_TypeInfo, method);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A6F4D9 = 1;
   }
   p_bgmPlayer = &this->fields.bgmPlayer;
   bgmPlayer = (UnityEngine_Object_o *)this->fields.bgmPlayer;
@@ -299,138 +300,138 @@ void __fastcall BgmPlayerBase__FixedUpdate(BgmPlayerBase_o *this, const MethodIn
     fixedUnscaledDeltaTime = UnityEngine_Time__get_fixedUnscaledDeltaTime(0LL);
     if ( fixedUnscaledDeltaTime > 0.5 )
       fixedUnscaledDeltaTime = UnityEngine_Time__get_fixedDeltaTime(0LL);
-    v7 = *p_bgmPlayer;
+    v8 = *p_bgmPlayer;
     if ( !*p_bgmPlayer )
       goto LABEL_80;
-    IsPaused = CriAtomSource__IsPaused(v7, 0LL);
+    IsPaused = CriAtomSource__IsPaused(v8, 0LL);
     if ( !IsPaused )
     {
-      v10 = BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)IsPaused, *p_bgmPlayer, v9);
-      if ( v10
+      v11 = BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)IsPaused, *p_bgmPlayer, v10);
+      if ( v11
         || this->fields.fadeinTime > 0.0
-        && (v10 = BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)v10, this->fields.bgmFadePlayer, v11)) )
+        && (v11 = BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)v11, this->fields.bgmFadePlayer, v12)) )
       {
         fadeoutTime = this->fields.fadeoutTime;
         if ( fadeoutTime > 0.0 )
         {
           playTime = this->fields.playTime;
-          v14 = fixedUnscaledDeltaTime + playTime;
-          v15 = playTime < 0.0;
-          v16 = 0.0;
-          if ( !v15 )
-            v16 = v14;
-          this->fields.playTime = v16;
-          if ( v16 >= fadeoutTime )
+          v15 = fixedUnscaledDeltaTime + playTime;
+          v16 = playTime < 0.0;
+          v17 = 0.0;
+          if ( !v16 )
+            v17 = v15;
+          this->fields.playTime = v17;
+          if ( v17 >= fadeoutTime )
           {
-            BgmPlayerBase__StopLocal(this, v5);
+            BgmPlayerBase__StopLocal(this, v6);
             return;
           }
           if ( !BgmManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-          if ( !byte_4A5861A )
+          if ( !byte_4A6D3F4 )
           {
-            sub_1B885B0(&BgmManager_TypeInfo);
-            byte_4A5861A = 1;
+            sub_1B90010(&BgmManager_TypeInfo, v6);
+            byte_4A6D3F4 = 1;
           }
-          v17 = BgmManager_TypeInfo;
+          v18 = BgmManager_TypeInfo;
           if ( !BgmManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-            v17 = BgmManager_TypeInfo;
+            v18 = BgmManager_TypeInfo;
           }
-          static_fields = v17->static_fields;
-          v7 = *p_bgmPlayer;
+          static_fields = v18->static_fields;
+          v8 = *p_bgmPlayer;
           if ( static_fields->isMute )
           {
-            if ( v7 )
+            if ( v8 )
             {
-              v19 = 0.0;
+              v20 = 0.0;
 LABEL_79:
-              CriAtomSource__set_volume(v7, v19, 0LL);
+              CriAtomSource__set_volume(v8, v20, 0LL);
               return;
             }
           }
-          else if ( v7 )
+          else if ( v8 )
           {
-            v19 = this->fields.fadeBaseVolume * (float)(1.0 - (float)(this->fields.playTime / this->fields.fadeoutTime));
+            v20 = this->fields.fadeBaseVolume * (float)(1.0 - (float)(this->fields.playTime / this->fields.fadeoutTime));
             goto LABEL_79;
           }
 LABEL_80:
-          sub_1B8880C(v7, v5);
+          sub_1B9026C(v8, v6);
         }
         if ( this->fields.fadeinTime > 0.0 )
         {
           p_bgmFadePlayer = (ServantStatusBattleListViewItem_o *)&this->fields.bgmFadePlayer;
-          if ( BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)v10, this->fields.bgmFadePlayer, v11) )
+          if ( BgmPlayerBase__CheckPlaying((BgmPlayerBase_o *)v11, this->fields.bgmFadePlayer, v12) )
           {
-            v21 = *p_bgmPlayer;
-            v22 = &this->fields.bgmFadePlayer;
+            v22 = *p_bgmPlayer;
+            v23 = &this->fields.bgmFadePlayer;
           }
           else
           {
-            v21 = 0LL;
-            v22 = &this->fields.bgmPlayer;
+            v22 = 0LL;
+            v23 = &this->fields.bgmPlayer;
           }
-          v23 = this->fields.playTime;
+          v24 = this->fields.playTime;
           fadeinTime = this->fields.fadeinTime;
-          v25 = *v22;
-          v26 = fixedUnscaledDeltaTime + v23;
-          v15 = v23 < 0.0;
-          v27 = 0.0;
-          if ( !v15 )
-            v27 = v26;
-          this->fields.playTime = v27;
-          if ( v27 >= fadeinTime )
+          v26 = *v23;
+          v27 = fixedUnscaledDeltaTime + v24;
+          v16 = v24 < 0.0;
+          v28 = 0.0;
+          if ( !v16 )
+            v28 = v27;
+          this->fields.playTime = v28;
+          if ( v28 >= fadeinTime )
           {
             this->fields.fadeinTime = 0.0;
             if ( !BgmManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-            if ( !byte_4A5861A )
+            if ( !byte_4A6D3F4 )
             {
-              sub_1B885B0(&BgmManager_TypeInfo);
-              byte_4A5861A = 1;
+              sub_1B90010(&BgmManager_TypeInfo, v6);
+              byte_4A6D3F4 = 1;
             }
-            v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+            v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
             if ( !BgmManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-              v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+              v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
             }
-            v28 = 0.0;
-            if ( !LOBYTE(v7[1].klass->_1.byval_arg.data) )
+            v29 = 0.0;
+            if ( !LOBYTE(v8[1].klass->_1.byval_arg.data) )
             {
-              if ( !*(_DWORD *)&v7[1].fields._guid_k__BackingField.fields._d )
-                j_il2cpp_runtime_class_init_0(v7);
-              if ( !byte_4A56A30 )
+              if ( !*(_DWORD *)&v8[1].fields._guid_k__BackingField.fields._d )
+                j_il2cpp_runtime_class_init_0(v8);
+              if ( !byte_4A6B710 )
               {
-                sub_1B885B0(&BgmManager_TypeInfo);
-                byte_4A56A30 = 1;
+                sub_1B90010(&BgmManager_TypeInfo, v6);
+                byte_4A6B710 = 1;
               }
-              v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+              v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
               if ( !BgmManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-                v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+                v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
               }
-              v28 = *((float *)&v7[1].klass->_1.byval_arg.data + 1) * this->fields.playVolume;
+              v29 = *((float *)&v8[1].klass->_1.byval_arg.data + 1) * this->fields.playVolume;
             }
-            if ( !v25 )
+            if ( !v26 )
               goto LABEL_80;
-            CriAtomSource__set_volume(v25, v28, 0LL);
+            CriAtomSource__set_volume(v26, v29, 0LL);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            v7 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0LL, 0LL);
-            if ( ((unsigned __int8)v7 & 1) != 0 )
+            v8 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0LL, 0LL);
+            if ( ((unsigned __int8)v8 & 1) != 0 )
             {
-              if ( v21 )
+              if ( v22 )
               {
-                CriAtomSource__Stop(v21, 0LL);
-                v29 = *p_bgmPlayer;
+                CriAtomSource__Stop(v22, 0LL);
+                v30 = *p_bgmPlayer;
                 klass = p_bgmFadePlayer->klass;
                 p_bgmFadePlayer->klass = (ServantStatusBattleListViewItem_c *)*p_bgmPlayer;
-                sub_1B88554(p_bgmFadePlayer, (int32_t)v29, v31, v32);
+                sub_1B8FFB4(p_bgmFadePlayer, (int32_t)v30, v32, v33);
                 *p_bgmPlayer = (CriAtomSource_o *)klass;
-                sub_1B88554((ServantStatusBattleListViewItem_o *)p_bgmPlayer, (int32_t)klass, v33, v34);
+                sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_bgmPlayer, (int32_t)klass, v34, v35);
                 return;
               }
               goto LABEL_80;
@@ -440,58 +441,58 @@ LABEL_80:
           {
             if ( !BgmManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-            if ( !byte_4A5861A )
+            if ( !byte_4A6D3F4 )
             {
-              sub_1B885B0(&BgmManager_TypeInfo);
-              byte_4A5861A = 1;
+              sub_1B90010(&BgmManager_TypeInfo, v6);
+              byte_4A6D3F4 = 1;
             }
-            v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+            v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
             if ( !BgmManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-              v7 = (CriAtomSource_o *)BgmManager_TypeInfo;
+              v8 = (CriAtomSource_o *)BgmManager_TypeInfo;
             }
-            if ( !LOBYTE(v7[1].klass->_1.byval_arg.data) )
+            if ( !LOBYTE(v8[1].klass->_1.byval_arg.data) )
             {
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              v7 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0LL, 0LL);
-              if ( ((unsigned __int8)v7 & 1) == 0 )
+              v8 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0LL, 0LL);
+              if ( ((unsigned __int8)v8 & 1) == 0 )
               {
-                if ( v25 )
+                if ( v26 )
                 {
-                  v7 = v25;
-                  v19 = this->fields.fadeBaseVolume
+                  v8 = v26;
+                  v20 = this->fields.fadeBaseVolume
                       + (float)((float)(this->fields.playTime * this->fields.fadeChangeVolume) / this->fields.fadeinTime);
                   goto LABEL_79;
                 }
                 goto LABEL_80;
               }
-              if ( !v25 )
+              if ( !v26 )
                 goto LABEL_80;
               CriAtomSource__set_volume(
-                v25,
+                v26,
                 (float)(this->fields.playTime * this->fields.fadeChangeVolume) / this->fields.fadeinTime,
                 0LL);
-              if ( !v21 )
+              if ( !v22 )
                 goto LABEL_80;
-              v19 = this->fields.fadeBaseVolume
+              v20 = this->fields.fadeBaseVolume
                   * (float)(1.0 - (float)(this->fields.playTime / this->fields.fadeinTime));
 LABEL_76:
-              v7 = v21;
+              v8 = v22;
               goto LABEL_79;
             }
-            if ( !v25 )
+            if ( !v26 )
               goto LABEL_80;
-            CriAtomSource__set_volume(v25, 0.0, 0LL);
+            CriAtomSource__set_volume(v26, 0.0, 0LL);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            v7 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0LL, 0LL);
-            if ( ((unsigned __int8)v7 & 1) != 0 )
+            v8 = (CriAtomSource_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0LL, 0LL);
+            if ( ((unsigned __int8)v8 & 1) != 0 )
             {
-              if ( !v21 )
+              if ( !v22 )
                 goto LABEL_80;
-              v19 = 0.0;
+              v20 = 0.0;
               goto LABEL_76;
             }
           }
@@ -516,12 +517,12 @@ System_String_array *__fastcall BgmPlayerBase__GetUsingCueNames(BgmPlayerBase_o 
   struct CriAtomSource_o *bgmFadePlayer; // x8
   struct System_String_o *v13; // x1
 
-  if ( (byte_4A5A7CD & 1) == 0 )
+  if ( (byte_4A6F4D5 & 1) == 0 )
   {
-    sub_1B885B0(&string___TypeInfo);
-    byte_4A5A7CD = 1;
+    sub_1B90010(&string___TypeInfo, method);
+    byte_4A6F4D5 = 1;
   }
-  v3 = sub_1B88658(string___TypeInfo, 2LL);
+  v3 = sub_1B900B8(string___TypeInfo, 2LL);
   bgmPlayer = this->fields.bgmPlayer;
   if ( !bgmPlayer )
     goto LABEL_9;
@@ -532,51 +533,52 @@ System_String_array *__fastcall BgmPlayerBase__GetUsingCueNames(BgmPlayerBase_o 
     goto LABEL_10;
   cueName = bgmPlayer->fields._cueName;
   *(_QWORD *)(v3 + 32) = cueName;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)cueName, v5, v6);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)cueName, v5, v6);
   bgmFadePlayer = this->fields.bgmFadePlayer;
   if ( !bgmFadePlayer )
 LABEL_9:
-    sub_1B8880C(v3, v4);
+    sub_1B9026C(v3, v4);
   if ( *(_DWORD *)(v8 + 24) <= 1u )
 LABEL_10:
-    sub_1B88814(v3, v4);
+    sub_1B90274(v3, v4);
   v13 = bgmFadePlayer->fields._cueName;
   *(_QWORD *)(v8 + 40) = v13;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v8 + 40), (int32_t)v13, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v8 + 40), (int32_t)v13, v10, v11);
   return (System_String_array *)v8;
 }
 
 
 void __fastcall BgmPlayerBase__Initialize(BgmPlayerBase_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   struct CriAtomSource_o **p_bgmPlayer; // x20
   UnityEngine_Object_o *bgmPlayer; // x21
-  __int64 v5; // x1
+  __int64 v6; // x1
   Il2CppObject *Instance; // x0
   CriAtomSource_o *CriAtomSource; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  struct CriAtomSource_o *v10; // x20
-  __int64 v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w1
+  int32_t v9; // w2
+  int32_t v10; // w3
+  struct CriAtomSource_o *v11; // x20
+  __int64 v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w1
   struct System_String_o **p_cueSheet; // x0
   struct CriAtomSource_o **p_bgmFadePlayer; // x20
   UnityEngine_Object_o *bgmFadePlayer; // x21
-  CriAtomSource_o *v18; // x0
-  int32_t v19; // w2
-  int32_t v20; // w3
-  struct CriAtomSource_o *v21; // x20
-  __int64 v22; // x0
-  int32_t v23; // w2
-  int32_t v24; // w3
+  CriAtomSource_o *v19; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
+  struct CriAtomSource_o *v22; // x20
+  __int64 v23; // x0
+  int32_t v24; // w2
+  int32_t v25; // w3
 
-  if ( (byte_4A5A7C9 & 1) == 0 )
+  if ( (byte_4A6F4D1 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4A5A7C9 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    sub_1B90010(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4A6F4D1 = 1;
   }
   p_bgmPlayer = &this->fields.bgmPlayer;
   bgmPlayer = (UnityEngine_Object_o *)this->fields.bgmPlayer;
@@ -584,22 +586,22 @@ void __fastcall BgmPlayerBase__Initialize(BgmPlayerBase_o *this, const MethodInf
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(bgmPlayer, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( !Instance )
       goto LABEL_19;
     CriAtomSource = BgmManager__GenerateCriAtomSource((BgmManager_o *)Instance, 0LL);
     *p_bgmPlayer = CriAtomSource;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.bgmPlayer, (int32_t)CriAtomSource, v8, v9);
-    v10 = *p_bgmPlayer;
-    if ( !v10 )
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.bgmPlayer, (int32_t)CriAtomSource, v9, v10);
+    v11 = *p_bgmPlayer;
+    if ( !v11 )
       goto LABEL_19;
-    v10->fields._androidUseLowLatencyVoicePool = 0;
-    v11 = ((__int64 (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))this->klass->vtable._4_get_CueSheetName.method)(
+    v11->fields._androidUseLowLatencyVoicePool = 0;
+    v12 = ((__int64 (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))this->klass->vtable._4_get_CueSheetName.method)(
             this,
             this->klass->vtable._5_Initialize.methodPtr);
-    v10->fields._cueSheet = (struct System_String_o *)v11;
-    v14 = v11;
-    p_cueSheet = &v10->fields._cueSheet;
+    v11->fields._cueSheet = (struct System_String_o *)v12;
+    v15 = v12;
+    p_cueSheet = &v11->fields._cueSheet;
   }
   else
   {
@@ -609,35 +611,35 @@ void __fastcall BgmPlayerBase__Initialize(BgmPlayerBase_o *this, const MethodInf
     CriAtomSource__Stop((CriAtomSource_o *)Instance, 0LL);
     this->fields.bgmName = 0LL;
     p_cueSheet = &this->fields.bgmName;
-    v14 = 0;
+    v15 = 0;
   }
-  sub_1B88554((ServantStatusBattleListViewItem_o *)p_cueSheet, v14, v12, v13);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_cueSheet, v15, v13, v14);
   p_bgmFadePlayer = &this->fields.bgmFadePlayer;
   bgmFadePlayer = (UnityEngine_Object_o *)this->fields.bgmFadePlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(bgmFadePlayer, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( Instance )
     {
-      v18 = BgmManager__GenerateCriAtomSource((BgmManager_o *)Instance, 0LL);
-      *p_bgmFadePlayer = v18;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.bgmFadePlayer, (int32_t)v18, v19, v20);
-      v21 = *p_bgmFadePlayer;
-      if ( v21 )
+      v19 = BgmManager__GenerateCriAtomSource((BgmManager_o *)Instance, 0LL);
+      *p_bgmFadePlayer = v19;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.bgmFadePlayer, (int32_t)v19, v20, v21);
+      v22 = *p_bgmFadePlayer;
+      if ( v22 )
       {
-        v21->fields._androidUseLowLatencyVoicePool = 0;
-        v22 = ((__int64 (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))this->klass->vtable._4_get_CueSheetName.method)(
+        v22->fields._androidUseLowLatencyVoicePool = 0;
+        v23 = ((__int64 (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))this->klass->vtable._4_get_CueSheetName.method)(
                 this,
                 this->klass->vtable._5_Initialize.methodPtr);
-        v21->fields._cueSheet = (struct System_String_o *)v22;
-        sub_1B88554((ServantStatusBattleListViewItem_o *)&v21->fields._cueSheet, v22, v23, v24);
+        v22->fields._cueSheet = (struct System_String_o *)v23;
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v22->fields._cueSheet, v23, v24, v25);
         return;
       }
     }
 LABEL_19:
-    sub_1B8880C(Instance, v5);
+    sub_1B9026C(Instance, v6);
   }
   Instance = (Il2CppObject *)*p_bgmFadePlayer;
   if ( !*p_bgmFadePlayer )
@@ -677,6 +679,7 @@ bool __fastcall BgmPlayerBase__IsPlaying(BgmPlayerBase_o *this, const MethodInfo
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BgmPlayerBase__PauseBgm(BgmPlayerBase_o *this, bool isPause, const MethodInfo *method)
 {
   UnityEngine_Object_o *bgmPlayer; // x21
@@ -684,10 +687,10 @@ void __fastcall BgmPlayerBase__PauseBgm(BgmPlayerBase_o *this, bool isPause, con
   const MethodInfo *v7; // x2
   CriAtomSource_o *v8; // x1
 
-  if ( (byte_4A5A7C8 & 1) == 0 )
+  if ( (byte_4A6F4D0 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5A7C8 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, isPause);
+    byte_4A6F4D0 = 1;
   }
   bgmPlayer = (UnityEngine_Object_o *)this->fields.bgmPlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -715,7 +718,7 @@ LABEL_8:
           return;
         }
 LABEL_13:
-        sub_1B8880C(v6, v8);
+        sub_1B9026C(v6, v8);
       }
     }
   }
@@ -734,18 +737,19 @@ void __fastcall BgmPlayerBase__PlayBgm(
   const MethodInfo *v11; // x1
   int32_t v12; // w2
   int32_t v13; // w3
-  const MethodInfo *v14; // x3
-  BgmManager_c *v15; // x0
+  __int64 v14; // x1
+  const MethodInfo *v15; // x3
+  BgmManager_c *v16; // x0
 
   v10 = this;
-  if ( (byte_4A5A7CF & 1) == 0 )
+  if ( (byte_4A6F4D7 & 1) == 0 )
   {
-    this = (BgmPlayerBase_o *)sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7CF = 1;
+    this = (BgmPlayerBase_o *)sub_1B90010(&BgmManager_TypeInfo, name);
+    byte_4A6F4D7 = 1;
   }
   if ( !name )
-    sub_1B8880C(this, name);
-  if ( System_String__Equals_61715348(name, v10->fields.bgmName, 0LL) )
+    sub_1B9026C(this, name);
+  if ( System_String__Equals_61795408(name, v10->fields.bgmName, 0LL) )
   {
     if ( v10->fields.fadeoutTime > 0.0 || v10->fields.bgmVolume != volume )
     {
@@ -757,24 +761,24 @@ void __fastcall BgmPlayerBase__PlayBgm(
   else
   {
     v10->fields.bgmName = name;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&v10->fields.bgmName, (int32_t)name, v12, v13);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v10->fields.bgmName, (int32_t)name, v12, v13);
     v10->fields.startTime = startTime;
     v10->fields.bgmVolume = volume;
     v10->fields.bgmFadeTime = fadeTime;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4A5861A )
+    if ( !byte_4A6D3F4 )
     {
-      sub_1B885B0(&BgmManager_TypeInfo);
-      byte_4A5861A = 1;
+      sub_1B90010(&BgmManager_TypeInfo, v14);
+      byte_4A6D3F4 = 1;
     }
-    v15 = BgmManager_TypeInfo;
+    v16 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v15 = BgmManager_TypeInfo;
+      v16 = BgmManager_TypeInfo;
     }
-    if ( !v15->static_fields->isMute && BgmPlayerBase__PlayLocal(v10, name, volume, fadeTime, 1, v14) )
+    if ( !v16->static_fields->isMute && BgmPlayerBase__PlayLocal(v10, name, volume, fadeTime, 1, v15) )
       v10->fields.bgmFadeTime = 0.0;
   }
 }
@@ -788,70 +792,73 @@ bool __fastcall BgmPlayerBase__PlayLocal(
         bool loop,
         const MethodInfo *method)
 {
-  __int64 v11; // x21
-  CriAtomSource_o *Instance; // x0
+  __int64 v11; // x1
+  __int64 v12; // x1
   __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  BgmPlayerBase_o *v18; // x0
-  const MethodInfo *v19; // x2
+  __int64 v14; // x21
+  CriAtomSource_o *Instance; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
   int32_t v20; // w3
+  BgmPlayerBase_o *v21; // x0
+  const MethodInfo *v22; // x2
+  int32_t v23; // w3
   struct CriAtomSource_o *bgmFadePlayer; // x1
   struct CriAtomSource_o *bgmPlayer; // x8
-  float v23; // s0
-  struct CriAtomSource_o *v24; // x1
-  System_Action_o *v25; // x19
+  float v26; // s0
+  struct CriAtomSource_o *v27; // x1
+  System_Action_o *v28; // x19
 
-  if ( (byte_4A5A7CC & 1) == 0 )
+  if ( (byte_4A6F4D4 & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    sub_1B885B0(&Method_BgmPlayerBase___c__DisplayClass31_0__PlayLocal_b__0__);
-    sub_1B885B0(&BgmPlayerBase___c__DisplayClass31_0_TypeInfo);
-    byte_4A5A7CC = 1;
+    sub_1B90010(&System_Action_TypeInfo, name);
+    sub_1B90010(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v11);
+    sub_1B90010(&Method_BgmPlayerBase___c__DisplayClass31_0__PlayLocal_b__0__, v12);
+    sub_1B90010(&BgmPlayerBase___c__DisplayClass31_0_TypeInfo, v13);
+    byte_4A6F4D4 = 1;
   }
-  v11 = sub_1B887FC(BgmPlayerBase___c__DisplayClass31_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
+  v14 = sub_1B9025C(BgmPlayerBase___c__DisplayClass31_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v14, 0LL);
+  if ( !v14 )
     goto LABEL_12;
-  *(_QWORD *)(v11 + 16) = name;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v11 + 16), (int32_t)name, v14, v15);
-  *(_QWORD *)(v11 + 24) = this;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)this, v16, v17);
-  *(float *)(v11 + 40) = volume;
-  *(float *)(v11 + 44) = fadeTime;
-  *(_BYTE *)(v11 + 48) = loop;
-  if ( fadeTime > 0.0 && BgmPlayerBase__CheckPlaying(v18, this->fields.bgmPlayer, v19) )
+  *(_QWORD *)(v14 + 16) = name;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 16), (int32_t)name, v17, v18);
+  *(_QWORD *)(v14 + 24) = this;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 24), (int32_t)this, v19, v20);
+  *(float *)(v14 + 40) = volume;
+  *(float *)(v14 + 44) = fadeTime;
+  *(_BYTE *)(v14 + 48) = loop;
+  if ( fadeTime > 0.0 && BgmPlayerBase__CheckPlaying(v21, this->fields.bgmPlayer, v22) )
   {
     bgmFadePlayer = this->fields.bgmFadePlayer;
-    *(_QWORD *)(v11 + 32) = bgmFadePlayer;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)(v11 + 32), (int32_t)bgmFadePlayer, (int32_t)v19, v20);
+    *(_QWORD *)(v14 + 32) = bgmFadePlayer;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 32), (int32_t)bgmFadePlayer, (int32_t)v22, v23);
     bgmPlayer = this->fields.bgmPlayer;
     if ( !bgmPlayer )
       goto LABEL_12;
-    v23 = bgmPlayer->fields._volume;
+    v26 = bgmPlayer->fields._volume;
   }
   else
   {
-    v24 = this->fields.bgmPlayer;
-    *(_QWORD *)(v11 + 32) = v24;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)(v11 + 32), (int32_t)v24, (int32_t)v19, v20);
+    v27 = this->fields.bgmPlayer;
+    *(_QWORD *)(v14 + 32) = v27;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 32), (int32_t)v27, (int32_t)v22, v23);
     Instance = this->fields.bgmFadePlayer;
     if ( !Instance )
       goto LABEL_12;
     CriAtomSource__Stop(Instance, 0LL);
-    v23 = 0.0;
+    v26 = 0.0;
   }
-  this->fields.fadeBaseVolume = v23;
-  v25 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v25, (Il2CppObject *)v11, Method_BgmPlayerBase___c__DisplayClass31_0__PlayLocal_b__0__, 0LL);
-  Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  this->fields.fadeBaseVolume = v26;
+  v28 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v28, (Il2CppObject *)v14, Method_BgmPlayerBase___c__DisplayClass31_0__PlayLocal_b__0__, 0LL);
+  Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !Instance )
 LABEL_12:
-    sub_1B8880C(Instance, v13);
-  return BgmManager__PreloadBgm((BgmManager_o *)Instance, *(System_String_o **)(v11 + 16), v25, 0LL);
+    sub_1B9026C(Instance, v16);
+  return BgmManager__PreloadBgm((BgmManager_o *)Instance, *(System_String_o **)(v14 + 16), v28, 0LL);
 }
 
 
@@ -861,10 +868,10 @@ void __fastcall BgmPlayerBase__ReflectMasterVolume(BgmPlayerBase_o *this, const 
   float bgmVolume; // s8
   BgmManager_c *v5; // x0
 
-  if ( (byte_4A5A7CA & 1) == 0 )
+  if ( (byte_4A6F4D2 & 1) == 0 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7CA = 1;
+    sub_1B90010(&BgmManager_TypeInfo, method);
+    byte_4A6F4D2 = 1;
   }
   if ( this->fields.bgmName && (this->fields.fadeinTime == 0.0 || this->fields.fadeoutTime == 0.0) )
   {
@@ -872,10 +879,10 @@ void __fastcall BgmPlayerBase__ReflectMasterVolume(BgmPlayerBase_o *this, const 
     bgmVolume = this->fields.bgmVolume;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4A56A30 )
+    if ( !byte_4A6B710 )
     {
-      sub_1B885B0(&BgmManager_TypeInfo);
-      byte_4A56A30 = 1;
+      sub_1B90010(&BgmManager_TypeInfo, method);
+      byte_4A6B710 = 1;
     }
     v5 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -884,7 +891,7 @@ void __fastcall BgmPlayerBase__ReflectMasterVolume(BgmPlayerBase_o *this, const 
       v5 = BgmManager_TypeInfo;
     }
     if ( !bgmPlayer )
-      sub_1B8880C(v5, method);
+      sub_1B9026C(v5, method);
     CriAtomSource__set_volume(bgmPlayer, bgmVolume * v5->static_fields->masterVolume, 0LL);
   }
 }
@@ -903,7 +910,7 @@ void __fastcall BgmPlayerBase__Reset(BgmPlayerBase_o *this, const MethodInfo *me
   if ( bgmName )
   {
     p_bgmName->klass = 0LL;
-    sub_1B88554(p_bgmName, 0, v3, v4);
+    sub_1B8FFB4(p_bgmName, 0, v3, v4);
   }
 }
 
@@ -938,9 +945,9 @@ void __fastcall BgmPlayerBase__SetMute(BgmPlayerBase_o *this, bool isMute, const
     *(float *)&v4 = this->fields.bgmVolume;
     v10 = this->fields.bgmName;
     this->fields.preloadName = bgmName;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.preloadName, (int32_t)v10, (int32_t)method, v3);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.preloadName, (int32_t)v10, (int32_t)method, v3);
     this->fields.bgmName = 0LL;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)p_bgmName, 0, v11, v12);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_bgmName, 0, v11, v12);
     klass = this->klass;
     this->fields.bgmVolume = -1.0;
     ((void (__fastcall *)(BgmPlayerBase_o *, struct System_String_o *, _QWORD, Il2CppMethodPointer, long double, float))klass->vtable._9_PlayBgm.method)(
@@ -951,7 +958,7 @@ void __fastcall BgmPlayerBase__SetMute(BgmPlayerBase_o *this, bool isMute, const
       v4,
       0.0);
     *p_preloadName = preloadName;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.preloadName, (int32_t)preloadName, v14, v15);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.preloadName, (int32_t)preloadName, v14, v15);
   }
 }
 
@@ -970,7 +977,7 @@ bool __fastcall BgmPlayerBase__StopBgm(BgmPlayerBase_o *this, bool keepPlayArgs,
   if ( !keepPlayArgs )
   {
     this->fields.bgmName = 0LL;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)p_bgmName, 0, (int32_t)method, v3);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_bgmName, 0, (int32_t)method, v3);
     this->fields.bgmVolume = 0.0;
   }
   this->fields.bgmFadeTime = -1.0;
@@ -990,7 +997,7 @@ void __fastcall BgmPlayerBase__StopLocal(BgmPlayerBase_o *this, const MethodInfo
   {
     bgmPlayer = this->fields.bgmPlayer;
     if ( !bgmPlayer || (CriAtomSource__Stop(bgmPlayer, 0LL), (bgmPlayer = this->fields.bgmFadePlayer) == 0LL) )
-      sub_1B8880C(bgmPlayer, v4);
+      sub_1B9026C(bgmPlayer, v4);
     CriAtomSource__Stop(bgmPlayer, 0LL);
   }
   *(_QWORD *)&this->fields.fadeinTime = 0LL;
@@ -1002,18 +1009,18 @@ void __fastcall BgmPlayerBase__UpdateVolume(BgmPlayerBase_o *this, const MethodI
   CriAtomSource_o *bgmPlayer; // x20
   BgmManager_c *v4; // x0
 
-  if ( (byte_4A5A7C7 & 1) == 0 )
+  if ( (byte_4A6F4CF & 1) == 0 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7C7 = 1;
+    sub_1B90010(&BgmManager_TypeInfo, method);
+    byte_4A6F4CF = 1;
   }
   bgmPlayer = this->fields.bgmPlayer;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4A56A30 )
+  if ( !byte_4A6B710 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A56A30 = 1;
+    sub_1B90010(&BgmManager_TypeInfo, method);
+    byte_4A6B710 = 1;
   }
   v4 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -1022,7 +1029,7 @@ void __fastcall BgmPlayerBase__UpdateVolume(BgmPlayerBase_o *this, const MethodI
     v4 = BgmManager_TypeInfo;
   }
   if ( !bgmPlayer )
-    sub_1B8880C(v4, method);
+    sub_1B9026C(v4, method);
   CriAtomSource__set_volume(bgmPlayer, this->fields.bgmVolume * v4->static_fields->masterVolume, 0LL);
 }
 
@@ -1041,12 +1048,12 @@ float __fastcall BgmPlayerBase__get_BgmVolume(BgmPlayerBase_o *this, const Metho
 
 System_String_o *__fastcall BgmPlayerBase__get_CueSheetName(BgmPlayerBase_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5A7C4 & 1) == 0 )
+  if ( (byte_4A6F4CC & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_3014/*"BGM"*/);
-    byte_4A5A7C4 = 1;
+    sub_1B90010(&StringLiteral_3015/*"BGM"*/, method);
+    byte_4A6F4CC = 1;
   }
-  return (System_String_o *)StringLiteral_3014/*"BGM"*/;
+  return (System_String_o *)StringLiteral_3015/*"BGM"*/;
 }
 
 
@@ -1056,10 +1063,10 @@ int32_t __fastcall BgmPlayerBase__get_PlayTime(BgmPlayerBase_o *this, const Meth
   __int64 v4; // x1
   CriAtomSource_o *v5; // x0
 
-  if ( (byte_4A5A7C5 & 1) == 0 )
+  if ( (byte_4A6F4CD & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5A7C5 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A6F4CD = 1;
   }
   bgmPlayer = (UnityEngine_Object_o *)this->fields.bgmPlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1068,7 +1075,7 @@ int32_t __fastcall BgmPlayerBase__get_PlayTime(BgmPlayerBase_o *this, const Meth
     return 0;
   v5 = this->fields.bgmPlayer;
   if ( !v5 )
-    sub_1B8880C(0LL, v4);
+    sub_1B9026C(0LL, v4);
   return CriAtomSource__get_time(v5, 0LL);
 }
 
@@ -1089,20 +1096,21 @@ void __fastcall BgmPlayerBase__playStart(
   int32_t v18; // w3
   int32_t v19; // w2
   int32_t v20; // w3
-  float v21; // s0
-  BgmManager_c *v22; // x0
+  __int64 v21; // x1
+  float v22; // s0
+  BgmManager_c *v23; // x0
 
-  if ( (byte_4A5A7CE & 1) == 0 )
+  if ( (byte_4A6F4D6 & 1) == 0 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A5A7CE = 1;
+    sub_1B90010(&BgmManager_TypeInfo, player);
+    byte_4A6F4D6 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4A56A30 )
+  if ( !byte_4A6B710 )
   {
-    sub_1B885B0(&BgmManager_TypeInfo);
-    byte_4A56A30 = 1;
+    sub_1B90010(&BgmManager_TypeInfo, player);
+    byte_4A6B710 = 1;
   }
   v15 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -1117,31 +1125,31 @@ void __fastcall BgmPlayerBase__playStart(
   this->fields.fadeChangeVolume = masterVolume * volume;
   this->fields.playTime = -1.0;
   if ( !player )
-    sub_1B8880C(v15, player);
+    sub_1B9026C(v15, player);
   CriAtomSource__Stop(player, 0LL);
   player->fields._cueSheet = cueSheet;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&player->fields._cueSheet, (int32_t)cueSheet, v17, v18);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&player->fields._cueSheet, (int32_t)cueSheet, v17, v18);
   player->fields._cueName = cueName;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&player->fields._cueName, (int32_t)cueName, v19, v20);
-  v21 = 0.0;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&player->fields._cueName, (int32_t)cueName, v19, v20);
+  v22 = 0.0;
   if ( fadeTime <= 0.0 )
   {
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4A56A30 )
+    if ( !byte_4A6B710 )
     {
-      sub_1B885B0(&BgmManager_TypeInfo);
-      byte_4A56A30 = 1;
+      sub_1B90010(&BgmManager_TypeInfo, v21);
+      byte_4A6B710 = 1;
     }
-    v22 = BgmManager_TypeInfo;
+    v23 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v22 = BgmManager_TypeInfo;
+      v23 = BgmManager_TypeInfo;
     }
-    v21 = v22->static_fields->masterVolume * volume;
+    v22 = v23->static_fields->masterVolume * volume;
   }
-  CriAtomSource__set_volume(player, v21, 0LL);
+  CriAtomSource__set_volume(player, v22, 0LL);
   CriAtomSource__set_startTime(player, this->fields.startTime, 0LL);
   player->fields._loop = loop;
   CriAtomSource__Play(player, 0LL);
@@ -1155,16 +1163,17 @@ void __fastcall BgmPlayerBase__set_BgmVolume(BgmPlayerBase_o *this, float value,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BgmPlayerBase__set_PlayTime(BgmPlayerBase_o *this, int32_t value, const MethodInfo *method)
 {
   UnityEngine_Object_o *bgmPlayer; // x21
   __int64 v6; // x1
   CriAtomSource_o *v7; // x0
 
-  if ( (byte_4A5A7C6 & 1) == 0 )
+  if ( (byte_4A6F4CE & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5A7C6 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
+    byte_4A6F4CE = 1;
   }
   bgmPlayer = (UnityEngine_Object_o *)this->fields.bgmPlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1173,7 +1182,7 @@ void __fastcall BgmPlayerBase__set_PlayTime(BgmPlayerBase_o *this, int32_t value
   {
     v7 = this->fields.bgmPlayer;
     if ( !v7 )
-      sub_1B8880C(0LL, v6);
+      sub_1B9026C(0LL, v6);
     CriAtomSource__set_startTime(v7, value, 0LL);
   }
 }
@@ -1191,28 +1200,29 @@ void __fastcall BgmPlayerBase___c__DisplayClass31_0___PlayLocal_b__0(
         BgmPlayerBase___c__DisplayClass31_0_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   BgmManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v5; // x1
   System_String_o *CueName; // x20
-  const MethodInfo *v6; // x5
+  const MethodInfo *v7; // x5
   BgmPlayerBase_o *_4__this; // x8
 
-  if ( (byte_4A5A7D2 & 1) == 0 )
+  if ( (byte_4A6F4DA & 1) == 0 )
   {
-    sub_1B885B0(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
-    byte_4A5A7D2 = 1;
+    sub_1B90010(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
+    sub_1B90010(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4A6F4DA = 1;
   }
-  Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   if ( BgmManager__IsPreloadSucceeded(Instance, this->fields.name, 0LL) )
   {
-    Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( Instance )
     {
       CueName = BgmManager__ExtractCueName(Instance, this->fields.name, 0LL);
-      Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      Instance = (BgmManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( Instance )
       {
         Instance = (BgmManager_o *)SoundManager__GetCueSheet((SoundManager_o *)Instance, CueName, 0LL);
@@ -1227,12 +1237,12 @@ void __fastcall BgmPlayerBase___c__DisplayClass31_0___PlayLocal_b__0(
             this->fields.volume,
             this->fields.fadeTime,
             this->fields.loop,
-            v6);
+            v7);
           return;
         }
       }
     }
 LABEL_10:
-    sub_1B8880C(Instance, v4);
+    sub_1B9026C(Instance, v5);
   }
 }

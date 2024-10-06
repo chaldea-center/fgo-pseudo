@@ -6,43 +6,46 @@ void __fastcall PurchaseRequest__beginRequest(
         int32_t anotherPayFlag,
         const MethodInfo *method)
 {
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x1
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4A5CA75 & 1) == 0 )
+  if ( (byte_4A71789 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22178/*"num"*/);
-    sub_1B885B0(&StringLiteral_20200/*"id"*/);
-    sub_1B885B0(&StringLiteral_16791/*"anotherPayFlag"*/);
-    byte_4A5CA75 = 1;
+    sub_1B90010(&StringLiteral_22211/*"num"*/, *(_QWORD *)&id);
+    sub_1B90010(&StringLiteral_20227/*"id"*/, v9);
+    sub_1B90010(&StringLiteral_16816/*"anotherPayFlag"*/, v10);
+    byte_4A71789 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_20200/*"id"*/,
+    (System_String_o *)StringLiteral_20227/*"id"*/,
     id,
     *(const MethodInfo **)&anotherPayFlag);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22178/*"num"*/, num, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22211/*"num"*/, num, v11);
   if ( anotherPayFlag >= 1 )
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16791/*"anotherPayFlag"*/, anotherPayFlag, v11);
-  RequestBase__beginRequest((RequestBase_o *)this, v10);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16816/*"anotherPayFlag"*/, anotherPayFlag, v13);
+  RequestBase__beginRequest((RequestBase_o *)this, v12);
 }
 
 
 System_String_o *__fastcall PurchaseRequest__getURL(PurchaseRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5CA74 & 1) == 0 )
+  if ( (byte_4A71788 & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_23268/*"shop/purchase"*/);
-    byte_4A5CA74 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_23303/*"shop/purchase"*/, v2);
+    byte_4A71788 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_23268/*"shop/purchase"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_23303/*"shop/purchase"*/, 0LL);
 }
 
 
@@ -51,45 +54,47 @@ void __fastcall PurchaseRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
+  ResponseData_o *v9; // x20
   Il2CppObject *success; // x20
-  System_String_o *v9; // x0
+  System_String_o *v11; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A5CA76 & 1) == 0 )
+  if ( (byte_4A7178A & 1) == 0 )
   {
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    byte_4A5CA76 = 1;
+    sub_1B90010(&JsonManager_TypeInfo, responseList);
+    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
+    byte_4A7178A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(9, responseList, 0LL);
-  if ( v5
-    && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6))
-    && (success = (Il2CppObject *)v7->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(9, responseList, 0LL);
+  if ( v7
+    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
+    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0LL);
+    v11 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v9,
+        v11,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v11 = this->fields.CallBack;
-    if ( v11 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v11->fields.m_target)(
-        v11->fields.original_method_info,
-        StringLiteral_22055/*"ng"*/,
-        *(_QWORD *)&v11->fields.extra_arg);
+    v13 = this->fields.CallBack;
+    if ( v13 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
+        v13->fields.original_method_info,
+        StringLiteral_22088/*"ng"*/,
+        *(_QWORD *)&v13->fields.extra_arg);
   }
 }

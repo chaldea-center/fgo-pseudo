@@ -1,16 +1,17 @@
 void __fastcall QuestReleaseEntity___ctor(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B6C4 & 1) == 0 )
+  if ( (byte_4A703D0 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B6C4 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A703D0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestReleaseEntity__CreatePK(
         int32_t questId,
         int32_t type,
@@ -18,17 +19,17 @@ System_String_o *__fastcall QuestReleaseEntity__CreatePK(
         int64_t value,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B6C3 & 1) == 0 )
+  if ( (byte_4A703CF & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_4A5B6C3 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&type);
+    byte_4A703CF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            questId,
            type,
            targetId,
            value,
-           (const MethodInfo_2E7E518 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2E8CE2C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 

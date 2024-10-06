@@ -15,24 +15,24 @@ void __fastcall RoadmapBoardListViewItem___ctor(
   int32_t v18; // w2
   int32_t v19; // w3
 
-  ListViewItem___ctor_40706472((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v14, v15);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v14, v15);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)spriteName,
     v16,
     v17);
   this->fields._BoardPrefab_k__BackingField = 0LL;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField, 0, v18, v19);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField, 0, v18, v19);
 }
 
 
-void __fastcall RoadmapBoardListViewItem___ctor_45298420(
+void __fastcall RoadmapBoardListViewItem___ctor_45354968(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -46,18 +46,18 @@ void __fastcall RoadmapBoardListViewItem___ctor_45298420(
   int32_t v14; // w2
   int32_t v15; // w3
 
-  ListViewItem___ctor_40706472((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
     (int32_t)boardPrefab,
     v12,
     v13);
   this->fields._Atlas_k__BackingField = 0LL;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, 0, v14, v15);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, 0, v14, v15);
 }
 
 
@@ -109,7 +109,7 @@ void __fastcall RoadmapBoardListViewItem__set_Atlas(
   int32_t v3; // w3
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -134,7 +134,7 @@ void __fastcall RoadmapBoardListViewItem__set_BoardPrefab(
   int32_t v3; // w3
 
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -159,7 +159,7 @@ void __fastcall RoadmapBoardListViewItem__set_SpriteName(
   int32_t v3; // w3
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

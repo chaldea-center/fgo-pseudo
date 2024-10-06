@@ -1,18 +1,19 @@
 void __fastcall MissionListViewItemDraw___cctor(const MethodInfo *method)
 {
-  MissionListViewItemDraw_c *v1; // x8
+  __int64 v1; // x1
+  MissionListViewItemDraw_c *v2; // x8
   struct MissionListViewItemDraw_StaticFields *static_fields; // x9
 
-  if ( (byte_4A5E3DD & 1) == 0 )
+  if ( (byte_4A730F6 & 1) == 0 )
   {
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    byte_4A5E3DD = 1;
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, v1);
+    byte_4A730F6 = 1;
   }
-  v1 = MissionListViewItemDraw_TypeInfo;
+  v2 = MissionListViewItemDraw_TypeInfo;
   static_fields = MissionListViewItemDraw_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->TIME_UPDATE_ITVL_SEC = 0xF00000001LL;
-  static_fields->MISSION_COND_LB_LOCK_COLOR = (struct UnityEngine_Color_o)xmmword_BB44E0;
-  v1->static_fields->MISSION_COND_LB_DEPTH_INIT = 6;
+  static_fields->MISSION_COND_LB_LOCK_COLOR = (struct UnityEngine_Color_o)xmmword_BB7360;
+  v2->static_fields->MISSION_COND_LB_DEPTH_INIT = 6;
 }
 
 
@@ -36,10 +37,10 @@ void __fastcall MissionListViewItemDraw__Awake(MissionListViewItemDraw_o *this, 
   struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4A5E3D2 & 1) == 0 )
+  if ( (byte_4A730EB & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E3D2 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A730EB = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,14 +52,14 @@ void __fastcall MissionListViewItemDraw__Awake(MissionListViewItemDraw_o *this, 
     if ( !v8
       || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
           (v12 = this->fields.baseSprite) == 0LL) )
     {
-      sub_1B8880C(v4, v5);
+      sub_1B9026C(v4, v5);
     }
     mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -72,10 +73,10 @@ void __fastcall MissionListViewItemDraw__CheckLockMissionBoard(
   UIWidget_o *missionCondLb; // x21
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A5E3D4 & 1) == 0 )
+  if ( (byte_4A730ED & 1) == 0 )
   {
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    byte_4A5E3D4 = 1;
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, missionListViewItem);
+    byte_4A730ED = 1;
   }
   v5 = (UIWidget_o *)MissionListViewItemDraw_TypeInfo;
   missionCondLb = (UIWidget_o *)this->fields.missionCondLb;
@@ -94,7 +95,7 @@ void __fastcall MissionListViewItemDraw__CheckLockMissionBoard(
         UIWidget__set_color(v5, v7, 0LL),
         !missionListViewItem) )
   {
-    sub_1B8880C(v5, missionListViewItem);
+    sub_1B9026C(v5, missionListViewItem);
   }
   if ( missionListViewItem->fields.progStatus <= 1u && this->fields.isDispTime )
     ((void (__fastcall *)(MissionListViewItemDraw_o *, MissionListViewItem_o *, Il2CppMethodPointer))this->klass->vtable._6_SetLockMissionBoard.method)(
@@ -109,18 +110,19 @@ System_String_o *__fastcall MissionListViewItemDraw__GetTimeText(
         System_String_o *timrStr,
         const MethodInfo *method)
 {
-  System_String_o *v5; // x0
+  __int64 v5; // x1
+  System_String_o *v6; // x0
 
-  if ( (byte_4A5E3D8 & 1) == 0 )
+  if ( (byte_4A730F1 & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_117/*" "*/);
-    byte_4A5E3D8 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, timrStr);
+    sub_1B90010(&StringLiteral_117/*" "*/, v5);
+    byte_4A730F1 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get(key, 0LL);
-  return System_String__Concat_61718292(v5, (System_String_o *)StringLiteral_117/*" "*/, timrStr, 0LL);
+  v6 = LocalizationManager__Get(key, 0LL);
+  return System_String__Concat_61798352(v6, (System_String_o *)StringLiteral_117/*" "*/, timrStr, 0LL);
 }
 
 
@@ -131,22 +133,24 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
 {
   MissionListViewItem_o *v3; // x19
   MissionListViewItemDraw_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct EventMissionEntity_o *eventMissionEnt; // x8
-  MissionListViewItemDraw_o *v6; // x21
+  MissionListViewItemDraw_o *v8; // x21
   bool *p_isDispTime; // x23
   __int64 endedAt; // x8
-  char v9; // w24
-  bool v10; // w22
+  char v11; // w24
+  bool v12; // w22
   NotEndEventMissionFixEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v3 = missionListviewItem;
   v4 = this;
-  if ( (byte_4A5E3D5 & 1) == 0 )
+  if ( (byte_4A730EE & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    this = (MissionListViewItemDraw_o *)sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5E3D5 = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___, missionListviewItem);
+    sub_1B90010(&NetworkManager_TypeInfo, v5);
+    this = (MissionListViewItemDraw_o *)sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A730EE = 1;
   }
   entity = 0LL;
   if ( !v3 )
@@ -159,7 +163,7 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
     eventMissionEnt = v3->fields.eventMissionEnt;
     if ( !eventMissionEnt )
       goto LABEL_28;
-    v6 = this;
+    v8 = this;
     if ( (__int64)this >= eventMissionEnt->fields.startedAt )
     {
       if ( !v4 )
@@ -179,23 +183,23 @@ void __fastcall MissionListViewItemDraw__InitDispResTime(
     }
     if ( v3->fields.progStatus != 3 )
     {
-      v9 = 1;
+      v11 = 1;
       v3->fields.isNowMission = 1;
       goto LABEL_20;
     }
 LABEL_18:
-    v9 = 0;
+    v11 = 0;
     v4->fields.oldTime = 0LL;
 LABEL_20:
-    this = (MissionListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (MissionListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (MissionListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
+                                            (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
       if ( this )
       {
-        v10 = NotEndEventMissionFixMaster__TryGetEntity(
+        v12 = NotEndEventMissionFixMaster__TryGetEntity(
                 (NotEndEventMissionFixMaster_o *)this,
                 &entity,
                 v3->fields.currentEventId,
@@ -204,12 +208,12 @@ LABEL_20:
         ((void (__fastcall *)(MissionListViewItemDraw_o *, MissionListViewItem_o *, MissionListViewItemDraw_o *, Il2CppMethodPointer))v4->klass->vtable._9_UpdateDispResTime.method)(
           v4,
           v3,
-          v6,
+          v8,
           v4->klass->vtable._10_SetInput.methodPtr);
         this = (MissionListViewItemDraw_o *)v4->fields.timeOverInfo;
         if ( this )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v9 & !v10, 0LL);
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v11 & !v12, 0LL);
           this = (MissionListViewItemDraw_o *)v4->fields.resTimeLb;
           if ( this )
           {
@@ -233,7 +237,7 @@ LABEL_20:
       }
     }
 LABEL_28:
-    sub_1B8880C(this, missionListviewItem);
+    sub_1B9026C(this, missionListviewItem);
   }
   this = (MissionListViewItemDraw_o *)v4->fields.timeOverInfo;
   v4->fields.isDispTime = 0;
@@ -265,80 +269,86 @@ void __fastcall MissionListViewItemDraw__SetBoardImage(
         MissionListViewItem_o *missionListviewItem,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Object_o *baseSprite; // x21
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
   int32_t bannerGroupId; // w21
-  UISprite_o *v9; // x22
+  UISprite_o *v11; // x22
   System_String_o *baseSpriteName; // x19
   UIAtlas_o *baseAtlas; // x20
 
-  if ( (byte_4A5E3D7 & 1) == 0 )
+  if ( (byte_4A730F0 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&StringLiteral_5010/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/);
-    byte_4A5E3D7 = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, missionListviewItem);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_5011/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, v6);
+    byte_4A730F0 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
-  if ( !v6 )
+  v8 = UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
+  if ( !v8 )
   {
     if ( !missionListviewItem )
-      sub_1B8880C(v6, v7);
+      sub_1B9026C(v8, v9);
     bannerGroupId = missionListviewItem->fields.bannerGroupId;
     if ( (((__int64 (__fastcall *)(MissionListViewItemDraw_o *, Il2CppMethodPointer))this->klass->vtable._7_IsUseDefaultLockBoard.method)(
             this,
             this->klass->vtable._8_SetRewardStatusImg.methodPtr) & 1) != 0
       && missionListviewItem->fields.progStatus <= 1u )
     {
-      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_5010/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, 0LL);
+      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_5011/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, 0LL);
     }
-    v9 = this->fields.baseSprite;
+    v11 = this->fields.baseSprite;
     baseAtlas = this->fields.baseAtlas;
     baseSpriteName = this->fields.baseSpriteName;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetMissionBoardSprite(v9, baseAtlas, baseSpriteName, bannerGroupId, 0LL);
+    AtlasManager__SetMissionBoardSprite(v11, baseAtlas, baseSpriteName, bannerGroupId, 0LL);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MissionListViewItemDraw__SetChallengeButtonActive(
         MissionListViewItemDraw_o *this,
         bool isActive,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *challengeButtonBg; // x21
-  UISprite_o *v6; // x21
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  UnityEngine_Object_o *challengeButtonBg; // x21
+  UISprite_o *v9; // x21
+  __int64 v10; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A5E3DB & 1) == 0 )
+  if ( (byte_4A730F4 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&StringLiteral_17568/*"btn_txt_challenge"*/);
-    sub_1B885B0(&StringLiteral_17487/*"btn_bg_challenge"*/);
-    byte_4A5E3DB = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, isActive);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_17593/*"btn_txt_challenge"*/, v6);
+    sub_1B90010(&StringLiteral_17512/*"btn_bg_challenge"*/, v7);
+    byte_4A730F4 = 1;
   }
   challengeButtonBg = (UnityEngine_Object_o *)this->fields.challengeButtonBg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(challengeButtonBg, 0LL, 0LL) )
   {
-    v6 = this->fields.challengeButtonBg;
+    v9 = this->fields.challengeButtonBg;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBanner(v6, (System_String_o *)StringLiteral_17487/*"btn_bg_challenge"*/, 0LL);
-    AtlasManager__SetBanner(this->fields.challengeButtonText, (System_String_o *)StringLiteral_17568/*"btn_txt_challenge"*/, 0LL);
+    AtlasManager__SetBanner(v9, (System_String_o *)StringLiteral_17512/*"btn_bg_challenge"*/, 0LL);
+    AtlasManager__SetBanner(this->fields.challengeButtonText, (System_String_o *)StringLiteral_17593/*"btn_txt_challenge"*/, 0LL);
     gameObject = (UnityEngine_Component_o *)this->fields.challengeButtonBg;
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_1B8880C(gameObject, v7);
+      sub_1B9026C(gameObject, v10);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isActive, 0LL);
   }
@@ -350,25 +360,26 @@ void __fastcall MissionListViewItemDraw__SetInput(
         MissionListViewItem_o *missionListViewItem,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *baseButton; // x21
-  __int64 v6; // x1
+  __int64 v7; // x1
   UICommonButton_o *miniIconComponent; // x0
-  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x2
   UILabel_o *missionCondLb; // x21
   System_String_o *condMsg; // x22
-  MissionListViewItemDraw_c *v11; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
+  MissionListViewItemDraw_c *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
   float progVal; // s8
   UnityEngine_Object_o *rangeSprite; // x20
   UnityEngine_Object_o *addRangeSprite; // x20
   System_String_o *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A5E3DA & 1) == 0 )
+  if ( (byte_4A730F3 & 1) == 0 )
   {
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E3DA = 1;
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, missionListViewItem);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A730F3 = 1;
   }
   value = 0LL;
   if ( missionListViewItem )
@@ -401,18 +412,18 @@ void __fastcall MissionListViewItemDraw__SetInput(
               (MissionGiftMiniIconComponent_o *)miniIconComponent,
               missionListViewItem->fields.subGiftEntity,
               0LL);
-            MissionListViewItemDraw__CheckLockMissionBoard(this, missionListViewItem, v8);
+            MissionListViewItemDraw__CheckLockMissionBoard(this, missionListViewItem, v9);
             missionCondLb = this->fields.missionCondLb;
             condMsg = missionListViewItem->fields.condMsg;
-            v11 = MissionListViewItemDraw_TypeInfo;
+            v12 = MissionListViewItemDraw_TypeInfo;
             if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
-              v11 = MissionListViewItemDraw_TypeInfo;
+              v12 = MissionListViewItemDraw_TypeInfo;
             }
-            WrapControlText__textAdjust(missionCondLb, condMsg, v11->static_fields->DEFAULT_FONT_SIZE, 0, 0, 0LL);
+            WrapControlText__textAdjust(missionCondLb, condMsg, v12->static_fields->DEFAULT_FONT_SIZE, 0, 0, 0LL);
             value = missionListViewItem->fields.progTxt;
-            sub_1B88554((ServantStatusBattleListViewItem_o *)&value, (int32_t)value, v12, v13);
+            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&value, (int32_t)value, v13, v14);
             miniIconComponent = (UICommonButton_o *)this->fields.missionProgressLb;
             if ( miniIconComponent )
             {
@@ -434,7 +445,7 @@ void __fastcall MissionListViewItemDraw__SetInput(
         }
       }
 LABEL_29:
-      sub_1B8880C(miniIconComponent, v6);
+      sub_1B9026C(miniIconComponent, v7);
     }
   }
   else
@@ -480,49 +491,50 @@ bool __fastcall MissionListViewItemDraw__SetItem(
         ListViewManager_o *listViewManager,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
   UnityEngine_Object_o *rangeSprite; // x23
-  bool v10; // w0
-  __int64 v11; // x1
+  bool v11; // w0
+  __int64 v12; // x1
   UnityEngine_Component_o *gameObject; // x0
-  UnityEngine_Object_o *v13; // x23
+  UnityEngine_Object_o *v14; // x23
   struct GiftEntity_array *giftEnts; // x1
-  int32_t v15; // w2
-  int32_t v16; // w3
+  int32_t v16; // w2
+  int32_t v17; // w3
   struct GiftEntity_array *giftEntityList; // x8
   UILabel_o *missionCondLb; // x22
   System_String_o *condMsg; // x23
-  MissionListViewItemDraw_c *v20; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
+  MissionListViewItemDraw_c *v21; // x0
+  int32_t v22; // w2
+  int32_t v23; // w3
   float progVal; // s8
-  const MethodInfo *v24; // x2
+  const MethodInfo *v25; // x2
   UnityEngine_Object_o *baseButton; // x22
-  const MethodInfo *v26; // x2
+  const MethodInfo *v27; // x2
   UnityEngine_Object_o *challengeButtonBg; // x22
   bool MissionCondNaviAction; // w0
   UnityEngine_Object_o *addRangeSprite; // x20
-  bool v31; // w21
-  const MethodInfo *v32; // x2
+  bool v32; // w21
+  const MethodInfo *v33; // x2
   UnityEngine_Object_o *baseSprite; // x21
-  const MethodInfo *v34; // x2
+  const MethodInfo *v35; // x2
   System_Action_o *naviAction; // [xsp+8h] [xbp-58h] BYREF
   System_String_o *value; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4A5E3D3 & 1) == 0 )
+  if ( (byte_4A730EC & 1) == 0 )
   {
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E3D3 = 1;
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, missionListViewItem);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v9);
+    byte_4A730EC = 1;
   }
   value = 0LL;
   naviAction = 0LL;
   rangeSprite = (UnityEngine_Object_o *)this->fields.rangeSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v10 = UnityEngine_Object__op_Inequality(rangeSprite, 0LL, 0LL);
+  v11 = UnityEngine_Object__op_Inequality(rangeSprite, 0LL, 0LL);
   if ( !missionListViewItem )
   {
-    if ( v10 )
+    if ( v11 )
     {
       gameObject = (UnityEngine_Component_o *)this->fields.rangeSprite;
       if ( !gameObject )
@@ -547,7 +559,7 @@ bool __fastcall MissionListViewItemDraw__SetItem(
     }
     return 0;
   }
-  if ( v10 )
+  if ( v11 )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.rangeSprite;
     if ( !gameObject )
@@ -557,10 +569,10 @@ bool __fastcall MissionListViewItemDraw__SetItem(
       goto LABEL_67;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, mode == 0, 0LL);
   }
-  v13 = (UnityEngine_Object_o *)this->fields.addRangeSprite;
+  v14 = (UnityEngine_Object_o *)this->fields.addRangeSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v13, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v14, 0LL, 0LL) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.addRangeSprite;
     if ( !gameObject )
@@ -618,27 +630,27 @@ bool __fastcall MissionListViewItemDraw__SetItem(
                         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
                         giftEnts = missionListViewItem->fields.giftEnts;
                         this->fields.giftEntityList = giftEnts;
-                        sub_1B88554(
+                        sub_1B8FFB4(
                           (ServantStatusBattleListViewItem_o *)&this->fields.giftEntityList,
                           (int32_t)giftEnts,
-                          v15,
-                          v16);
+                          v16,
+                          v17);
                         giftEntityList = this->fields.giftEntityList;
                         if ( giftEntityList )
                         {
                           this->fields.isMultipleReward = (signed int)giftEntityList->max_length > 1;
                           missionCondLb = this->fields.missionCondLb;
                           condMsg = missionListViewItem->fields.condMsg;
-                          v20 = MissionListViewItemDraw_TypeInfo;
+                          v21 = MissionListViewItemDraw_TypeInfo;
                           if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
                           {
                             j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
-                            v20 = MissionListViewItemDraw_TypeInfo;
+                            v21 = MissionListViewItemDraw_TypeInfo;
                           }
                           WrapControlText__textAdjust(
                             missionCondLb,
                             condMsg,
-                            v20->static_fields->DEFAULT_FONT_SIZE,
+                            v21->static_fields->DEFAULT_FONT_SIZE,
                             0,
                             0,
                             0LL);
@@ -647,7 +659,7 @@ bool __fastcall MissionListViewItemDraw__SetItem(
                             (unsigned int)missionListViewItem->fields.progStatus,
                             this->klass->vtable._9_UpdateDispResTime.methodPtr);
                           value = missionListViewItem->fields.progTxt;
-                          sub_1B88554((ServantStatusBattleListViewItem_o *)&value, (int32_t)value, v21, v22);
+                          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&value, (int32_t)value, v22, v23);
                           gameObject = (UnityEngine_Component_o *)this->fields.missionProgressLb;
                           if ( gameObject )
                           {
@@ -672,7 +684,7 @@ bool __fastcall MissionListViewItemDraw__SetItem(
                                     this,
                                     missionListViewItem,
                                     this->klass->vtable._6_SetLockMissionBoard.methodPtr);
-                                  MissionListViewItemDraw__CheckLockMissionBoard(this, missionListViewItem, v24);
+                                  MissionListViewItemDraw__CheckLockMissionBoard(this, missionListViewItem, v25);
                                   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
                                   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -723,14 +735,14 @@ LABEL_61:
                                                               &naviAction,
                                                               0LL);
 LABEL_62:
-                                    v31 = MissionCondNaviAction;
-                                    MissionListViewItemDraw__SetItemIconColliderActive(this, MissionCondNaviAction, v26);
-                                    MissionListViewItemDraw__SetChallengeButtonActive(this, v31, v32);
+                                    v32 = MissionCondNaviAction;
+                                    MissionListViewItemDraw__SetItemIconColliderActive(this, MissionCondNaviAction, v27);
+                                    MissionListViewItemDraw__SetChallengeButtonActive(this, v32, v33);
                                     baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
                                     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                                     if ( UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL) )
-                                      MissionListViewItemDraw__SetBoardImage(this, missionListViewItem, v34);
+                                      MissionListViewItemDraw__SetBoardImage(this, missionListViewItem, v35);
                                     return 1;
                                   }
                                 }
@@ -749,7 +761,7 @@ LABEL_62:
       }
     }
 LABEL_67:
-    sub_1B8880C(gameObject, v11);
+    sub_1B9026C(gameObject, v12);
   }
   return 1;
 }
@@ -761,14 +773,15 @@ void __fastcall MissionListViewItemDraw__SetItemIconColliderActive(
         bool isActive,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Component_o *itemIcon; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4A5E3DC & 1) == 0 )
+  if ( (byte_4A730F5 & 1) == 0 )
   {
-    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E3DC = 1;
+    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, isActive);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A730F5 = 1;
   }
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
@@ -778,7 +791,7 @@ void __fastcall MissionListViewItemDraw__SetItemIconColliderActive(
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)itemIcon,
-                       (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   itemIcon = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(
@@ -793,7 +806,7 @@ void __fastcall MissionListViewItemDraw__SetItemIconColliderActive(
       return;
     }
 LABEL_10:
-    sub_1B8880C(itemIcon, isActive);
+    sub_1B9026C(itemIcon, isActive);
   }
 }
 
@@ -803,18 +816,20 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
         MissionListViewItem_o *missionListViewItem,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_GameObject_o *lockImgInfo; // x0
-  const MethodInfo *v6; // x2
+  const MethodInfo *v8; // x2
   UnityEngine_Object_o *Child; // x20
   UIWidget_o *missionCondLb; // x21
-  UIWidget_o *v9; // x19
+  UIWidget_o *v11; // x19
 
-  if ( (byte_4A5E3D6 & 1) == 0 )
+  if ( (byte_4A730EF & 1) == 0 )
   {
-    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E3D6 = 1;
+    sub_1B90010(&Method_UnityEngine_Component_GetComponent_UISprite___, missionListViewItem);
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, v5);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
+    byte_4A730EF = 1;
   }
   lockImgInfo = this->fields.lockImgInfo;
   if ( !lockImgInfo )
@@ -833,7 +848,7 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
   if ( !lockImgInfo )
     goto LABEL_22;
   UILabel__set_text((UILabel_o *)lockImgInfo, missionListViewItem->fields.closedMessage, 0LL);
-  if ( MissionListViewItem__HasMissionConditionFlag(missionListViewItem, 64, v6) )
+  if ( MissionListViewItem__HasMissionConditionFlag(missionListViewItem, 64, v8) )
   {
     lockImgInfo = this->fields.lockImgInfo;
     if ( !lockImgInfo )
@@ -852,23 +867,23 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
         missionCondLb = (UIWidget_o *)this->fields.missionCondLb;
         lockImgInfo = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                     (UnityEngine_Component_o *)Child,
-                                                    (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                                    (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
         if ( lockImgInfo )
         {
           if ( missionCondLb )
           {
             UIWidget__set_depth(missionCondLb, LODWORD(lockImgInfo[7].monitor) + 10, 0LL);
-            v9 = (UIWidget_o *)this->fields.missionCondLb;
+            v11 = (UIWidget_o *)this->fields.missionCondLb;
             lockImgInfo = (UnityEngine_GameObject_o *)MissionListViewItemDraw_TypeInfo;
             if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
               lockImgInfo = (UnityEngine_GameObject_o *)MissionListViewItemDraw_TypeInfo;
             }
-            if ( v9 )
+            if ( v11 )
             {
               UIWidget__set_color(
-                v9,
+                v11,
                 *(UnityEngine_Color_o *)(*(_QWORD *)&lockImgInfo[7].fields.m_CachedPtr + 8LL),
                 0LL);
               return;
@@ -877,7 +892,7 @@ void __fastcall MissionListViewItemDraw__SetLockMissionBoard(
         }
       }
 LABEL_22:
-      sub_1B8880C(lockImgInfo, missionListViewItem);
+      sub_1B9026C(lockImgInfo, missionListViewItem);
     }
   }
 }
@@ -894,7 +909,7 @@ void __fastcall MissionListViewItemDraw__SetRewardIconAlpha(
   {
     itemIcon = this->fields.itemIcon;
     if ( !itemIcon )
-      sub_1B8880C(0LL, method);
+      sub_1B9026C(0LL, method);
     ItemIconComponent__SetAlpha(itemIcon, alpha, 0LL);
   }
 }
@@ -948,7 +963,7 @@ LABEL_15:
       rewardImg = this->fields.lockImgInfo;
       if ( !rewardImg )
 LABEL_32:
-        sub_1B8880C(rewardImg, *(_QWORD *)&status);
+        sub_1B9026C(rewardImg, *(_QWORD *)&status);
 LABEL_30:
       v5 = 0;
       break;
@@ -1028,23 +1043,26 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
         const MethodInfo *method)
 {
   MissionListViewItemDraw_o *v5; // x19
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   int32_t progStatus; // w9
   struct EventMissionEntity_o *eventMissionEnt; // x8
   UILabel_o *resTimeLb; // x19
   int64_t closedAt; // x20
-  const MethodInfo *v10; // x2
+  const MethodInfo *v13; // x2
   System_String_o *RestTime; // x20
-  __int64 *v12; // x8
+  __int64 *v15; // x8
   int64_t endedAt; // x20
 
   v5 = this;
-  if ( (byte_4A5E3D9 & 1) == 0 )
+  if ( (byte_4A730F2 & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&MissionListViewItemDraw_TypeInfo);
-    sub_1B885B0(&StringLiteral_13337/*"TIME_REST_QUEST"*/);
-    this = (MissionListViewItemDraw_o *)sub_1B885B0(&StringLiteral_13325/*"TIME_REST_ACHIVE"*/);
-    byte_4A5E3D9 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, missionListViewItem);
+    sub_1B90010(&MissionListViewItemDraw_TypeInfo, v6);
+    sub_1B90010(&StringLiteral_13362/*"TIME_REST_QUEST"*/, v7);
+    this = (MissionListViewItemDraw_o *)sub_1B90010(&StringLiteral_13350/*"TIME_REST_ACHIVE"*/, v8);
+    byte_4A730F2 = 1;
   }
   if ( !missionListViewItem )
     goto LABEL_19;
@@ -1063,7 +1081,7 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     RestTime = LocalizationManager__GetRestTime(closedAt, 0LL);
     if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
-    v12 = &StringLiteral_13325/*"TIME_REST_ACHIVE"*/;
+    v15 = &StringLiteral_13350/*"TIME_REST_ACHIVE"*/;
   }
   else
   {
@@ -1073,11 +1091,11 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     RestTime = LocalizationManager__GetRestTime(endedAt, 0LL);
     if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
-    v12 = &StringLiteral_13337/*"TIME_REST_QUEST"*/;
+    v15 = &StringLiteral_13362/*"TIME_REST_QUEST"*/;
   }
-  this = (MissionListViewItemDraw_o *)MissionListViewItemDraw__GetTimeText((System_String_o *)*v12, RestTime, v10);
+  this = (MissionListViewItemDraw_o *)MissionListViewItemDraw__GetTimeText((System_String_o *)*v15, RestTime, v13);
   if ( !resTimeLb )
 LABEL_19:
-    sub_1B8880C(this, missionListViewItem);
+    sub_1B9026C(this, missionListViewItem);
   UILabel__set_text(resTimeLb, (System_String_o *)this, 0LL);
 }

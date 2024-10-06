@@ -17,20 +17,21 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
         const MethodInfo *method)
 {
   ShortestDistanceFromEnemyServant_o *v10; // x19
+  __int64 v11; // x1
   int32_t squareIndex_k__BackingField; // w20
   WarBoardPieceData_o *EnemyPieceSquareIndex; // x0
-  WarBoardPieceData_o *v13; // x20
-  int32_t v14; // w22
-  int32_t v15; // w21
+  WarBoardPieceData_o *v14; // x20
+  int32_t v15; // w22
+  int32_t v16; // w21
   ShortestDistanceFromEnemyServant_c *klass; // x21
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v10 = this;
-  if ( (byte_4A58D25 & 1) == 0 )
+  if ( (byte_4A6DA29 & 1) == 0 )
   {
-    sub_1B885B0(&AStarSearch_TypeInfo);
-    this = (ShortestDistanceFromEnemyServant_o *)sub_1B885B0(&WarBoardAIManager_TypeInfo);
-    byte_4A58D25 = 1;
+    sub_1B90010(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    this = (ShortestDistanceFromEnemyServant_o *)sub_1B90010(&WarBoardAIManager_TypeInfo, v11);
+    byte_4A6DA29 = 1;
   }
   if ( !targetSquare )
     goto LABEL_18;
@@ -42,7 +43,7 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
                             *(const MethodInfo **)&forceId);
   if ( EnemyPieceSquareIndex )
   {
-    v13 = EnemyPieceSquareIndex;
+    v14 = EnemyPieceSquareIndex;
     if ( EnemyPieceSquareIndex->fields._forceId_k__BackingField != forceId )
     {
       this = (ShortestDistanceFromEnemyServant_o *)WarBoardPieceData__get_isMaster(EnemyPieceSquareIndex, 0LL);
@@ -50,11 +51,11 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
       {
         if ( !calcSquare )
           goto LABEL_18;
-        v14 = calcSquare->fields._squareIndex_k__BackingField;
-        v15 = targetSquare->fields._squareIndex_k__BackingField;
+        v15 = calcSquare->fields._squareIndex_k__BackingField;
+        v16 = targetSquare->fields._squareIndex_k__BackingField;
         if ( !AStarSearch_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-        this = (ShortestDistanceFromEnemyServant_o *)AStarSearch__RouteSearch(v13, v14, v15, 0, 0LL, 0LL);
+        this = (ShortestDistanceFromEnemyServant_o *)AStarSearch__RouteSearch(v14, v15, v16, 0, 0LL, 0LL);
         if ( this )
         {
           klass = this[1].klass;
@@ -64,14 +65,14 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
           if ( ratingBase )
             return fmaxf(
                      (float)((float)(1.0
-                                   - (float)((float)(v13->fields._breakPoint_k__BackingField + 1)
-                                           / (float)(v13->fields._breakPointMax_k__BackingField + 1)))
+                                   - (float)((float)(v14->fields._breakPoint_k__BackingField + 1)
+                                           / (float)(v14->fields._breakPointMax_k__BackingField + 1)))
                            * (float)ratingBase->fields.adjustmentValueB)
                    + (float)(ratingBase->fields.adjustmentValueA1
                            - ratingBase->fields.adjustmentValueA2 * ((int)klass - 1)),
                      0.0);
 LABEL_18:
-          sub_1B8880C(this, *(_QWORD *)&forceId);
+          sub_1B9026C(this, *(_QWORD *)&forceId);
         }
       }
     }

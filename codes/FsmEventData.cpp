@@ -2,23 +2,24 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  int32_t v5; // w1
+  __int64 v5; // x1
   int32_t v6; // w1
-  int32_t v7; // w2
-  int32_t v8; // w3
+  int32_t v7; // w1
+  int32_t v8; // w2
+  int32_t v9; // w3
 
-  if ( (byte_4A5C54E & 1) == 0 )
+  if ( (byte_4A71262 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22113/*"none"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C54E = 1;
+    sub_1B90010(&StringLiteral_22146/*"none"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v5);
+    byte_4A71262 = 1;
   }
-  v5 = StringLiteral_22113/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_22113/*"none"*/;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
-  v6 = (int)StringLiteral_1/*""*/;
+  v6 = StringLiteral_22146/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_22146/*"none"*/;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, v6, v2, v3);
+  v7 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.title, v6, v7, v8);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.title, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -46,7 +47,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   int32_t v3; // w3
 
   this->fields.eventData = value;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -55,5 +56,5 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   int32_t v3; // w3
 
   this->fields.title = value;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
 }

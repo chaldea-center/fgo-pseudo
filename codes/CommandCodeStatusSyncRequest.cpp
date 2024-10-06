@@ -8,42 +8,46 @@ void __fastcall CommandCodeStatusSyncRequest__beginRequest(
         const MethodInfo *method)
 {
   RequestBase_o *v10; // x19
-  System_String_o *v11; // x0
-  const MethodInfo *v12; // x3
-  System_String_o *v13; // x0
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  System_String_o *v15; // x0
+  const MethodInfo *v16; // x3
+  System_String_o *v17; // x0
+  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x3
+  const MethodInfo *v20; // x1
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_4A5C9A7 & 1) == 0 )
+  if ( (byte_4A716BB & 1) == 0 )
   {
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_17807/*"changeCommandCodeIds"*/);
-    sub_1B885B0(&StringLiteral_22926/*"revokeCommandCodeIds"*/);
-    sub_1B885B0(&StringLiteral_20799/*"isLock"*/);
-    this = (CommandCodeStatusSyncRequest_o *)sub_1B885B0(&StringLiteral_20783/*"isChoice"*/);
-    byte_4A5C9A7 = 1;
+    sub_1B90010(&JsonManager_TypeInfo, changeCommandCodeIds);
+    sub_1B90010(&StringLiteral_17833/*"changeCommandCodeIds"*/, v11);
+    sub_1B90010(&StringLiteral_22961/*"revokeCommandCodeIds"*/, v12);
+    sub_1B90010(&StringLiteral_20827/*"isLock"*/, v13);
+    this = (CommandCodeStatusSyncRequest_o *)sub_1B90010(&StringLiteral_20811/*"isChoice"*/, v14);
+    byte_4A716BB = 1;
   }
   if ( changeCommandCodeIds && *(_QWORD *)&changeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v11 = JsonManager__toJson(&changeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_41126952(v10, (System_String_o *)StringLiteral_17807/*"changeCommandCodeIds"*/, v11, v12);
+    v15 = JsonManager__toJson(&changeCommandCodeIds->obj, 0, 0, 0LL);
+    RequestBase__addField_41181164(v10, (System_String_o *)StringLiteral_17833/*"changeCommandCodeIds"*/, v15, v16);
   }
   if ( revokeCommandCodeIds && *(_QWORD *)&revokeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v13 = JsonManager__toJson(&revokeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_41126952(v10, (System_String_o *)StringLiteral_22926/*"revokeCommandCodeIds"*/, v13, v14);
+    v17 = JsonManager__toJson(&revokeCommandCodeIds->obj, 0, 0, 0LL);
+    RequestBase__addField_41181164(v10, (System_String_o *)StringLiteral_22961/*"revokeCommandCodeIds"*/, v17, v18);
   }
   if ( !v10 )
-    sub_1B8880C(this, changeCommandCodeIds);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20799/*"isLock"*/, isLock, (const MethodInfo *)isLock);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20783/*"isChoice"*/, isChoice, v15);
-  RequestBase__beginRequest(v10, v16);
+    sub_1B9026C(this, changeCommandCodeIds);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20827/*"isLock"*/, isLock, (const MethodInfo *)isLock);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20811/*"isChoice"*/, isChoice, v19);
+  RequestBase__beginRequest(v10, v20);
 }
 
 
@@ -51,11 +55,13 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getMockData(
         CommandCodeStatusSyncRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C9A6 & 1) == 0 )
+  __int64 v2; // x1
+
+  if ( (byte_4A716BA & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C9A6 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v2);
+    byte_4A716BA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -67,18 +73,19 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getURL(
         CommandCodeStatusSyncRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5C9A5 & 1) == 0 )
+  if ( (byte_4A716B9 & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_18152/*"commandCode/statusSync"*/);
-    byte_4A5C9A5 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_18178/*"commandCode/statusSync"*/, v2);
+    byte_4A716B9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_18152/*"commandCode/statusSync"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_18178/*"commandCode/statusSync"*/, 0LL);
 }
 
 
@@ -87,37 +94,39 @@ void __fastcall CommandCodeStatusSyncRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v8; // x9
+  __int64 *v10; // x9
 
-  if ( (byte_4A5C9A8 & 1) == 0 )
+  if ( (byte_4A716BC & 1) == 0 )
   {
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
-    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    byte_4A5C9A8 = 1;
+    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B90010(&StringLiteral_22258/*"ok"*/, v5);
+    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
+    byte_4A716BC = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(72, responseList, 0LL);
-  if ( v5 && ResponseData__checkError(v5, v5->fields.resCode, v6) )
+  v7 = ResponseCommandKind__SearchData(72, responseList, 0LL);
+  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22225/*"ok"*/;
+    v10 = &StringLiteral_22258/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22055/*"ng"*/;
+    v10 = &StringLiteral_22088/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v8,
+    *v10,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

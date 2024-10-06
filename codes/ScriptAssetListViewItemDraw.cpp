@@ -11,27 +11,28 @@ void __fastcall ScriptAssetListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x1
+  __int64 v7; // x1
+  const MethodInfo *v8; // x1
   UILabel_o *titleTextLabel; // x22
   System_String_o *TitleText; // x0
   Il2CppObject *Component_object; // x21
-  float v11; // s0
-  float v12; // s3
-  float v13; // s1
-  float v14; // s2
+  float v12; // s0
+  float v13; // s3
+  float v14; // s1
+  float v15; // s2
 
-  if ( (byte_4A589CB & 1) == 0 )
+  if ( (byte_4A6D6CF & 1) == 0 )
   {
-    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A589CB = 1;
+    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A6D6CF = 1;
   }
   if ( item && mode )
   {
     if ( ScriptAssetListViewItem__get_TitleText(item, (const MethodInfo *)item) )
     {
       titleTextLabel = this->fields.titleTextLabel;
-      TitleText = ScriptAssetListViewItem__get_TitleText(item, v7);
+      TitleText = ScriptAssetListViewItem__get_TitleText(item, v8);
       if ( !titleTextLabel )
         goto LABEL_20;
       UILabel__set_text(titleTextLabel, TitleText, 0LL);
@@ -44,7 +45,7 @@ void __fastcall ScriptAssetListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)TitleText,
-                             (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         TitleText = (System_String_o *)UnityEngine_Object__op_Inequality(
@@ -58,20 +59,20 @@ void __fastcall ScriptAssetListViewItemDraw__SetItem(
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
         }
         TitleText = (System_String_o *)this->fields.baseImageTexture;
-        v11 = 1.0;
+        v12 = 1.0;
         if ( mode == 1 )
-          v11 = 0.5;
+          v12 = 0.5;
         if ( TitleText )
         {
-          v12 = 1.0;
-          v13 = v11;
-          v14 = v11;
-          UIWidget__set_color((UIWidget_o *)TitleText, *(UnityEngine_Color_o *)&v11, 0LL);
+          v13 = 1.0;
+          v14 = v12;
+          v15 = v12;
+          UIWidget__set_color((UIWidget_o *)TitleText, *(UnityEngine_Color_o *)&v12, 0LL);
           return;
         }
       }
     }
 LABEL_20:
-    sub_1B8880C(TitleText, v7);
+    sub_1B9026C(TitleText, v8);
   }
 }

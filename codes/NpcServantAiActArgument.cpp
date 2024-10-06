@@ -15,11 +15,11 @@ void __fastcall NpcServantAiActArgument___ctor(
   v8 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)svtData);
   v8->fields._SvtData_k__BackingField = svtData;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&v8->fields._SvtData_k__BackingField, (int32_t)svtData, v9, v10);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v8->fields._SvtData_k__BackingField, (int32_t)svtData, v9, v10);
   v8->fields._NpcAi_k__BackingField = npcAi;
   v8 = (NpcServantAiActArgument_o *)((char *)v8 + 48);
   LOBYTE(v8[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)v8, (int32_t)npcAi, v11, v12);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v8, (int32_t)npcAi, v11, v12);
 }
 
 
@@ -46,13 +46,13 @@ void __fastcall NpcServantAiActArgument__InitCommonTask(
   int32_t v20; // w3
   __int64 v21; // x0
 
-  if ( (byte_4A5DCD0 & 1) == 0 )
+  if ( (byte_4A729E8 & 1) == 0 )
   {
-    sub_1B885B0(&BattleActionData___TypeInfo);
-    byte_4A5DCD0 = 1;
+    sub_1B90010(&BattleActionData___TypeInfo, task);
+    byte_4A729E8 = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
-  v5 = sub_1B88658(BattleActionData___TypeInfo, 2LL);
+  v5 = sub_1B900B8(BattleActionData___TypeInfo, 2LL);
   NpcAi_k__BackingField = this->fields._NpcAi_k__BackingField;
   v7 = (struct BattleActionData_array *)v5;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
@@ -69,18 +69,18 @@ void __fastcall NpcServantAiActArgument__InitCommonTask(
   v12 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1B886EC(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1B9014C(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
     {
 LABEL_17:
-      v21 = sub_1B88830(LoadNpcPreStepInAction);
-      sub_1B886D8(v21, 0LL);
+      v21 = sub_1B90290(LoadNpcPreStepInAction);
+      sub_1B90138(v21, 0LL);
     }
   }
   if ( !v7->max_length )
     goto LABEL_16;
   v7->m_Items[0] = v12;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)v7->m_Items, (int32_t)v12, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v7->m_Items, (int32_t)v12, v10, v11);
   v13 = this->fields._NpcAi_k__BackingField;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
                              this,
@@ -92,25 +92,25 @@ LABEL_17:
         !v13) )
   {
 LABEL_15:
-    sub_1B8880C(LoadNpcPreStepInAction, v9);
+    sub_1B9026C(LoadNpcPreStepInAction, v9);
   }
   LoadNpcPreStepInAction = (__int64)BattleLogicNpcAi__MakeStepInAction(v13, v15, LoadNpcPreStepInAction & 1, 0LL);
   v18 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1B886EC(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1B9014C(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
       goto LABEL_17;
   }
   if ( v7->max_length <= 1 )
 LABEL_16:
-    sub_1B88814(LoadNpcPreStepInAction, v9);
+    sub_1B90274(LoadNpcPreStepInAction, v9);
   v7->m_Items[1] = v18;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&v7->m_Items[1], (int32_t)v18, v16, v17);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v7->m_Items[1], (int32_t)v18, v16, v17);
   if ( !task )
     goto LABEL_15;
   task->fields.interruptActions = v7;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&task->fields.interruptActions, (int32_t)v7, v19, v20);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&task->fields.interruptActions, (int32_t)v7, v19, v20);
 }
 
 
@@ -130,7 +130,7 @@ void __fastcall NpcServantAiActArgument__set_NpcAi(
   int32_t v3; // w3
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)value,
     (int32_t)method,

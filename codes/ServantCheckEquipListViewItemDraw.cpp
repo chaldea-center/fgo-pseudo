@@ -22,64 +22,70 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   ServantCheckEquipListViewItemDraw_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   struct UserServantEntity_o *materialUserServantEntity; // x8
-  __int128 v8; // q1
+  __int128 v14; // q1
   ServantFaceIconComponent_o *servantEquipIcon; // x21
-  struct UserServantEntity_o *v10; // x8
+  struct UserServantEntity_o *v16; // x8
   UISprite_o *subInfo; // x24
   int32_t rarity; // w23
   int32_t exceedCount; // w21
   int32_t lv; // w22
   UISprite_o *warningSprite; // x20
-  __int64 *v16; // x8
-  UISprite_o *v17; // x20
-  UISprite_o *v18; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-60h]
+  __int64 *v22; // x8
+  UISprite_o *v23; // x20
+  UISprite_o *v24; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+20h] [xbp-60h]
 
   v6 = this;
-  if ( (byte_4A574D3 & 1) == 0 )
+  if ( (byte_4A6C1B4 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1B885B0(&Rarity_TypeInfo);
-    sub_1B885B0(&StringLiteral_22936/*"ribbon_noblephantasmup_01"*/);
-    sub_1B885B0(&StringLiteral_20169/*"icon_reinforced"*/);
-    sub_1B885B0(&StringLiteral_20158/*"icon_noblephantasmup"*/);
-    this = (ServantCheckEquipListViewItemDraw_o *)sub_1B885B0(&StringLiteral_20168/*"icon_rarity5"*/);
-    byte_4A574D3 = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, item);
+    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    sub_1B90010(&Rarity_TypeInfo, v8);
+    sub_1B90010(&StringLiteral_22971/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1B90010(&StringLiteral_20196/*"icon_reinforced"*/, v10);
+    sub_1B90010(&StringLiteral_20185/*"icon_noblephantasmup"*/, v11);
+    this = (ServantCheckEquipListViewItemDraw_o *)sub_1B90010(&StringLiteral_20195/*"icon_rarity5"*/, v12);
+    byte_4A6C1B4 = 1;
   }
   if ( item && mode )
   {
     materialUserServantEntity = item->fields.materialUserServantEntity;
     if ( !materialUserServantEntity )
       goto LABEL_48;
-    v8 = *(_OWORD *)&materialUserServantEntity->fields.id.fields.fakeValue;
+    v14 = *(_OWORD *)&materialUserServantEntity->fields.id.fields.fakeValue;
     servantEquipIcon = v6->fields.servantEquipIcon;
-    *(_OWORD *)&v20.fields.currentCryptoKey = *(_OWORD *)&materialUserServantEntity->fields.id.fields.currentCryptoKey;
-    *(_OWORD *)&v20.fields.fakeValue = v8;
+    *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)&materialUserServantEntity->fields.id.fields.currentCryptoKey;
+    *(_OWORD *)&v26.fields.fakeValue = v14;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    v19 = v20;
-    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46453324(
-                                                    &v19,
+    v25 = v26;
+    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(
+                                                    &v25,
                                                     0LL);
     if ( !servantEquipIcon
-      || (ServantFaceIconComponent__Set_38220052(
+      || (ServantFaceIconComponent__Set_38272172(
             servantEquipIcon,
             (int64_t)this,
             item->fields.materialIconLabelInfo,
             0LL,
             0LL),
-          (v10 = item->fields.materialUserServantEntity) == 0LL) )
+          (v16 = item->fields.materialUserServantEntity) == 0LL) )
     {
 LABEL_48:
-      sub_1B8880C(this, item);
+      sub_1B9026C(this, item);
     }
     subInfo = v6->fields.subInfo;
     rarity = item->fields.rarity;
-    exceedCount = v10->fields.exceedCount;
-    lv = v10->fields.lv;
+    exceedCount = v16->fields.exceedCount;
+    lv = v16->fields.lv;
     if ( !Rarity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
     Rarity__setRarityIcon(subInfo, rarity, exceedCount, lv, 0LL);
@@ -131,7 +137,7 @@ LABEL_48:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_48;
-        v16 = &StringLiteral_20169/*"icon_reinforced"*/;
+        v22 = &StringLiteral_20196/*"icon_reinforced"*/;
         goto LABEL_34;
       case 2:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.equipSprite;
@@ -152,16 +158,16 @@ LABEL_48:
         if ( !this )
           goto LABEL_48;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        v17 = v6->fields.warningSprite;
+        v23 = v6->fields.warningSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetCommon(v17, 0LL);
+        AtlasManager__SetCommon(v23, 0LL);
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_48;
-        v16 = &StringLiteral_20168/*"icon_rarity5"*/;
+        v22 = &StringLiteral_20195/*"icon_rarity5"*/;
 LABEL_34:
-        UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v16, 0LL);
+        UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v22, 0LL);
 LABEL_35:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.materialTdSprite;
         if ( !this )
@@ -192,10 +198,10 @@ LABEL_35:
         if ( !this )
           goto LABEL_48;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        v18 = v6->fields.warningSprite;
+        v24 = v6->fields.warningSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetEventSprite(v18, (System_String_o *)StringLiteral_20158/*"icon_noblephantasmup"*/, 0LL);
+        AtlasManager__SetEventSprite(v24, (System_String_o *)StringLiteral_20185/*"icon_noblephantasmup"*/, 0LL);
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.materialTdSprite;
         if ( !this )
           goto LABEL_48;
@@ -205,7 +211,7 @@ LABEL_35:
         if ( !this )
           goto LABEL_48;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_22936/*"ribbon_noblephantasmup_01"*/, 0LL);
+        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_22971/*"ribbon_noblephantasmup_01"*/, 0LL);
         return;
       default:
         return;

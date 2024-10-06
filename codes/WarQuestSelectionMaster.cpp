@@ -1,14 +1,14 @@
 void __fastcall WarQuestSelectionMaster___ctor(WarQuestSelectionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C1F0 & 1) == 0 )
+  if ( (byte_4A70EFF & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___ctor__);
-    byte_4A5C1F0 = 1;
+    sub_1B90010(&Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___ctor__, method);
+    byte_4A70EFF = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     416,
-    (const MethodInfo_311DC4C *)Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___ctor__);
+    (const MethodInfo_312C8C0 *)Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___ctor__);
 }
 
 
@@ -16,69 +16,75 @@ System_Collections_Generic_List_int__o *__fastcall WarQuestSelectionMaster__GetA
         WarQuestSelectionMaster_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   System_Collections_Generic_List_int__o *result; // x0
-  System_Collections_Generic_List_int__o *v4; // x19
-  WarQuestSelectionMaster___c_c *v5; // x0
+  System_Collections_Generic_List_int__o *v10; // x19
+  WarQuestSelectionMaster___c_c *v11; // x0
   System_Func_object__int__o *_9__3_0; // x20
-  Il2CppObject *v7; // x21
+  Il2CppObject *v13; // x21
   struct WarQuestSelectionMaster___c_StaticFields *static_fields; // x0
-  int32_t v9; // w2
-  int32_t v10; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4A5C1F3 & 1) == 0 )
+  if ( (byte_4A70F02 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_getEntitys_WarQuestSelectionEntity___);
-    sub_1B885B0(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1B885B0(&Method_System_Linq_Enumerable_Select_WarQuestSelectionEntity__int___);
-    sub_1B885B0(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1B885B0(&System_Func_WarQuestSelectionEntity__int__TypeInfo);
-    sub_1B885B0(&Method_WarQuestSelectionMaster___c__GetAllRegisteredWarIds_b__3_0__);
-    sub_1B885B0(&WarQuestSelectionMaster___c_TypeInfo);
-    byte_4A5C1F3 = 1;
+    sub_1B90010(&Method_DataMasterBase_getEntitys_WarQuestSelectionEntity___, method);
+    sub_1B90010(&Method_System_Linq_Enumerable_Distinct_int___, v3);
+    sub_1B90010(&Method_System_Linq_Enumerable_Select_WarQuestSelectionEntity__int___, v4);
+    sub_1B90010(&Method_System_Linq_Enumerable_ToList_int___, v5);
+    sub_1B90010(&System_Func_WarQuestSelectionEntity__int__TypeInfo, v6);
+    sub_1B90010(&Method_WarQuestSelectionMaster___c__GetAllRegisteredWarIds_b__3_0__, v7);
+    sub_1B90010(&WarQuestSelectionMaster___c_TypeInfo, v8);
+    byte_4A70F02 = 1;
   }
   result = (System_Collections_Generic_List_int__o *)DataMasterBase__getEntitys_object_(
                                                        (DataMasterBase_o *)this,
-                                                       (const MethodInfo_2E8019C *)Method_DataMasterBase_getEntitys_WarQuestSelectionEntity___);
+                                                       (const MethodInfo_2E8EAB0 *)Method_DataMasterBase_getEntitys_WarQuestSelectionEntity___);
   if ( result )
   {
-    v4 = result;
-    v5 = WarQuestSelectionMaster___c_TypeInfo;
+    v10 = result;
+    v11 = WarQuestSelectionMaster___c_TypeInfo;
     if ( !WarQuestSelectionMaster___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WarQuestSelectionMaster___c_TypeInfo);
-      v5 = WarQuestSelectionMaster___c_TypeInfo;
+      v11 = WarQuestSelectionMaster___c_TypeInfo;
     }
-    _9__3_0 = (System_Func_object__int__o *)v5->static_fields->__9__3_0;
+    _9__3_0 = (System_Func_object__int__o *)v11->static_fields->__9__3_0;
     if ( !_9__3_0 )
     {
-      if ( !v5->_2.cctor_finished )
+      if ( !v11->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v5);
-        v5 = WarQuestSelectionMaster___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v11);
+        v11 = WarQuestSelectionMaster___c_TypeInfo;
       }
-      v7 = (Il2CppObject *)v5->static_fields->__9;
-      _9__3_0 = (System_Func_object__int__o *)sub_1B887FC(System_Func_WarQuestSelectionEntity__int__TypeInfo);
+      v13 = (Il2CppObject *)v11->static_fields->__9;
+      _9__3_0 = (System_Func_object__int__o *)sub_1B9025C(System_Func_WarQuestSelectionEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__3_0,
-        v7,
+        v13,
         Method_WarQuestSelectionMaster___c__GetAllRegisteredWarIds_b__3_0__,
         0LL);
       static_fields = WarQuestSelectionMaster___c_TypeInfo->static_fields;
       static_fields->__9__3_0 = (struct System_Func_WarQuestSelectionEntity__int__o *)_9__3_0;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v9, v10);
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v15, v16);
     }
-    v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)v4,
+    v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)v10,
                                                                  (System_Func_TSource__TResult__o *)_9__3_0,
-                                                                 (const MethodInfo_2EAFB30 *)Method_System_Linq_Enumerable_Select_WarQuestSelectionEntity__int___);
-    v12 = System_Linq_Enumerable__Distinct_int_(
-            v11,
-            (const MethodInfo_2E9EB0C *)Method_System_Linq_Enumerable_Distinct_int___);
+                                                                 (const MethodInfo_2EBE4B0 *)Method_System_Linq_Enumerable_Select_WarQuestSelectionEntity__int___);
+    v18 = System_Linq_Enumerable__Distinct_int_(
+            v17,
+            (const MethodInfo_2EAD420 *)Method_System_Linq_Enumerable_Distinct_int___);
     return (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__ToList_int_(
-                                                       v12,
-                                                       (const MethodInfo_2EBBD90 *)Method_System_Linq_Enumerable_ToList_int___);
+                                                       v18,
+                                                       (const MethodInfo_2ECA640 *)Method_System_Linq_Enumerable_ToList_int___);
   }
   return result;
 }
@@ -88,165 +94,185 @@ System_Collections_Generic_List_int__o *__fastcall WarQuestSelectionMaster__GetA
         WarQuestSelectionMaster_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   System_Collections_Generic_List_int__o *AllRegisteredWarIds; // x21
   Il2CppObject *Master_object; // x20
-  System_Collections_Generic_List_int__o *v5; // x19
-  __int64 v6; // x0
-  __int64 v7; // x1
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
+  System_Collections_Generic_List_int__o *v15; // x19
+  __int64 v16; // x0
+  __int64 v17; // x1
+  _BOOL8 v18; // x0
+  __int64 v19; // x1
   int32_t current; // w21
   Il2CppObject *Entity; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x2
-  WarEntity_o *v14; // x22
+  __int64 v22; // x1
+  const MethodInfo *v23; // x2
+  WarEntity_o *v24; // x22
   Il2CppObject *Instance; // x0
-  __int64 v16; // x1
+  __int64 v26; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v28; // x9
   __int64 size; // x10
-  System_Collections_Generic_List_Enumerator_int__o v21; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v22; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v31; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v32; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4A5C1F4 & 1) == 0 )
+  if ( (byte_4A70F03 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1B885B0(&DataManager_TypeInfo);
-    sub_1B885B0(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1B885B0(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1B885B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4A5C1F4 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_WarMaster___, method);
+    sub_1B90010(&DataManager_TypeInfo, v3);
+    sub_1B90010(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__, v4);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
+    sub_1B90010(&Method_System_Collections_Generic_List_int___ctor__, v10);
+    sub_1B90010(&System_Collections_Generic_List_int__TypeInfo, v11);
+    sub_1B90010(&Method_SingletonTemplate_QuestTree__get_Instance__, v12);
+    byte_4A70F03 = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v32, 0, sizeof(v32));
   AllRegisteredWarIds = WarQuestSelectionMaster__GetAllRegisteredWarIds(this, method);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_WarMaster___);
-  v5 = (System_Collections_Generic_List_int__o *)sub_1B887FC(System_Collections_Generic_List_int__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_WarMaster___);
+  v15 = (System_Collections_Generic_List_int__o *)sub_1B9025C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v5,
-    (const MethodInfo_34DFFBC *)Method_System_Collections_Generic_List_int___ctor__);
+    v15,
+    (const MethodInfo_34F3148 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !AllRegisteredWarIds )
-    sub_1B8880C(v6, v7);
+    sub_1B9026C(v16, v17);
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v21,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     AllRegisteredWarIds,
-    (const MethodInfo_34E12E4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v22 = v21;
+    (const MethodInfo_34F4470 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v32 = v31;
   while ( 1 )
   {
-    v8 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-           &v22,
-           (const MethodInfo_3274238 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    if ( !v8 )
+    v18 = System_Collections_Generic_List_Enumerator_int___MoveNext(
+            &v32,
+            (const MethodInfo_3286084 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    if ( !v18 )
       break;
     if ( !Master_object )
-      sub_1B8880C(v8, v9);
-    current = v22.fields._current;
+      sub_1B9026C(v18, v19);
+    current = v32.fields._current;
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-               v22.fields._current,
-               (const MethodInfo_311D934 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
-    v14 = (WarEntity_o *)Entity;
+               v32.fields._current,
+               (const MethodInfo_312C5A8 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
+    v24 = (WarEntity_o *)Entity;
     if ( Entity )
     {
-      Entity = (Il2CppObject *)WarEntity__HasFlag((WarEntity_o *)Entity, 32, v13);
+      Entity = (Il2CppObject *)WarEntity__HasFlag((WarEntity_o *)Entity, 32, v23);
       if ( ((unsigned __int8)Entity & 1) != 0 )
       {
-        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3739B38 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_374D460 *)Method_SingletonTemplate_QuestTree__get_Instance__);
         if ( !Instance )
-          sub_1B8880C(0LL, v16);
-        Entity = (Il2CppObject *)QuestTree__IsActiveEventWar_34115804((QuestTree_o *)Instance, v14, 0LL);
+          sub_1B9026C(0LL, v26);
+        Entity = (Il2CppObject *)QuestTree__IsActiveEventWar_34162424((QuestTree_o *)Instance, v24, 0LL);
         if ( ((unsigned __int8)Entity & 1) == 0 )
           continue;
       }
     }
-    if ( !v5 )
-      sub_1B8880C(Entity, v12);
-    items = v5->fields._items;
-    v18 = Method_System_Collections_Generic_List_int__Add__;
-    ++v5->fields._version;
+    if ( !v15 )
+      sub_1B9026C(Entity, v22);
+    items = v15->fields._items;
+    v28 = Method_System_Collections_Generic_List_int__Add__;
+    ++v15->fields._version;
     if ( !items )
-      sub_1B8880C(Entity, v12);
-    size = v5->fields._size;
+      sub_1B9026C(Entity, v22);
+    size = v15->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_int___AddWithResize(
-        v5,
+        v15,
         current,
-        *(const MethodInfo_34E0810 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        *(const MethodInfo_34F399C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
     }
     else
     {
-      v5->fields._size = size + 1;
+      v15->fields._size = size + 1;
       items->m_Items[size + 1] = current;
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v22,
-    (const MethodInfo_3274234 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  return v5;
+    &v32,
+    (const MethodInfo_3286080 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  return v15;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_List_WarQuestSelectionEntity__o *__fastcall WarQuestSelectionMaster__GetEntityListFromWarId(
         WarQuestSelectionMaster_o *this,
         int32_t warId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v5; // x19
-  Il2CppClass *v6; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  System_Collections_Generic_List_object__o *v14; // x19
+  Il2CppClass *v15; // x1
   void *list; // x0
   int32_t Count; // w0
-  int32_t v9; // w22
-  int32_t v10; // w23
-  int32_t v11; // w2
-  int32_t v12; // w3
+  int32_t v18; // w22
+  int32_t v19; // w23
+  int32_t v20; // w2
+  int32_t v21; // w3
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x8
-  _QWORD *v15; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v17; // x0
-  System_Comparison_T__o *v18; // x20
-  Il2CppObject *v19; // x21
+  Il2CppClass **v26; // x0
+  System_Comparison_T__o *v27; // x20
+  Il2CppObject *v28; // x21
   struct WarQuestSelectionMaster___c_StaticFields *static_fields; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
+  int32_t v30; // w2
+  int32_t v31; // w3
 
-  if ( (byte_4A5C1F2 & 1) == 0 )
+  if ( (byte_4A70F01 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_1B885B0(&System_Comparison_WarQuestSelectionEntity__TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_WarQuestSelectionEntity__Add__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_WarQuestSelectionEntity__Sort__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_WarQuestSelectionEntity___ctor__);
-    sub_1B885B0(&System_Collections_Generic_List_WarQuestSelectionEntity__TypeInfo);
-    sub_1B885B0(&Method_WarQuestSelectionMaster___c__GetEntityListFromWarId_b__2_0__);
-    sub_1B885B0(&WarQuestSelectionMaster___c_TypeInfo);
-    sub_1B885B0(&WarQuestSelectionEntity_TypeInfo);
-    byte_4A5C1F2 = 1;
+    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&warId);
+    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B90010(&System_Comparison_WarQuestSelectionEntity__TypeInfo, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_WarQuestSelectionEntity__Add__, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_WarQuestSelectionEntity__Sort__, v8);
+    sub_1B90010(&Method_System_Collections_Generic_List_WarQuestSelectionEntity___ctor__, v9);
+    sub_1B90010(&System_Collections_Generic_List_WarQuestSelectionEntity__TypeInfo, v10);
+    sub_1B90010(&Method_WarQuestSelectionMaster___c__GetEntityListFromWarId_b__2_0__, v11);
+    sub_1B90010(&WarQuestSelectionMaster___c_TypeInfo, v12);
+    sub_1B90010(&WarQuestSelectionEntity_TypeInfo, v13);
+    byte_4A70F01 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_WarQuestSelectionEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_WarQuestSelectionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_WarQuestSelectionEntity___ctor__);
+    v14,
+    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_WarQuestSelectionEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_25;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_30BA580 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v9 = Count;
-    v10 = 0;
+    v18 = Count;
+    v19 = 0;
     while ( 1 )
     {
       list = this->fields.list;
@@ -254,45 +280,45 @@ System_Collections_Generic_List_WarQuestSelectionEntity__o *__fastcall WarQuestS
         break;
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
-               v10,
-               (const MethodInfo_30BA610 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v19,
+               (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v6 = (Il2CppClass *)list;
+        v15 = (Il2CppClass *)list;
         methodPtr_low = LOBYTE(WarQuestSelectionEntity_TypeInfo->vtable._0_Equals.methodPtr);
         if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) >= (unsigned int)methodPtr_low
           && *(WarQuestSelectionEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) == WarQuestSelectionEntity_TypeInfo
           && *((_DWORD *)list + 4) == warId )
         {
-          if ( !v5 )
+          if ( !v14 )
             break;
-          items = v5->fields._items;
-          v15 = Method_System_Collections_Generic_List_WarQuestSelectionEntity__Add__;
-          ++v5->fields._version;
+          items = v14->fields._items;
+          v24 = Method_System_Collections_Generic_List_WarQuestSelectionEntity__Add__;
+          ++v14->fields._version;
           if ( !items )
             break;
-          size = v5->fields._size;
+          size = v14->fields._size;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v5,
+              v14,
               (Il2CppObject *)list,
-              *(const MethodInfo_34FD834 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              *(const MethodInfo_35109C0 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
           }
           else
           {
-            v17 = &items->obj.klass + size;
-            v5->fields._size = size + 1;
-            v17[4] = v6;
-            sub_1B88554((ServantStatusBattleListViewItem_o *)(v17 + 4), (int32_t)v6, v11, v12);
+            v26 = &items->obj.klass + size;
+            v14->fields._size = size + 1;
+            v26[4] = v15;
+            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v26 + 4), (int32_t)v15, v20, v21);
           }
         }
       }
-      if ( v9 == ++v10 )
+      if ( v18 == ++v19 )
         goto LABEL_17;
     }
 LABEL_25:
-    sub_1B8880C(list, v6);
+    sub_1B9026C(list, v15);
   }
 LABEL_17:
   list = WarQuestSelectionMaster___c_TypeInfo;
@@ -301,28 +327,28 @@ LABEL_17:
     j_il2cpp_runtime_class_init_0(WarQuestSelectionMaster___c_TypeInfo);
     list = WarQuestSelectionMaster___c_TypeInfo;
   }
-  v18 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v18 )
+  v27 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
+  if ( !v27 )
   {
     if ( !*((_DWORD *)list + 56) )
     {
       j_il2cpp_runtime_class_init_0(list);
       list = WarQuestSelectionMaster___c_TypeInfo;
     }
-    v19 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v18 = (System_Comparison_T__o *)sub_1B887FC(System_Comparison_WarQuestSelectionEntity__TypeInfo);
-    System_Comparison_object____ctor(v18, v19, Method_WarQuestSelectionMaster___c__GetEntityListFromWarId_b__2_0__, 0LL);
+    v28 = (Il2CppObject *)**((_QWORD **)list + 23);
+    v27 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_WarQuestSelectionEntity__TypeInfo);
+    System_Comparison_object____ctor(v27, v28, Method_WarQuestSelectionMaster___c__GetEntityListFromWarId_b__2_0__, 0LL);
     static_fields = WarQuestSelectionMaster___c_TypeInfo->static_fields;
-    static_fields->__9__2_0 = (struct System_Comparison_WarQuestSelectionEntity__o *)v18;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)v18, v21, v22);
+    static_fields->__9__2_0 = (struct System_Comparison_WarQuestSelectionEntity__o *)v27;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)v27, v30, v31);
   }
-  if ( !v5 )
+  if ( !v14 )
     goto LABEL_25;
-  System_Collections_Generic_List_object___Sort_55571192(
-    v5,
-    v18,
-    (const MethodInfo_34FF2F8 *)Method_System_Collections_Generic_List_WarQuestSelectionEntity__Sort__);
-  return (System_Collections_Generic_List_WarQuestSelectionEntity__o *)v5;
+  System_Collections_Generic_List_object___Sort_55649412(
+    v14,
+    v27,
+    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_WarQuestSelectionEntity__Sort__);
+  return (System_Collections_Generic_List_WarQuestSelectionEntity__o *)v14;
 }
 
 
@@ -332,32 +358,34 @@ bool __fastcall WarQuestSelectionMaster__HasWar(
         int32_t warId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v7; // w21
-  int32_t v8; // w22
-  bool v9; // w25
+  int32_t v9; // w21
+  int32_t v10; // w22
+  bool v11; // w25
   Il2CppObject *Item; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A5C1F5 & 1) == 0 )
+  if ( (byte_4A70F04 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    sub_1B885B0(&WarQuestSelectionEntity_TypeInfo);
-    byte_4A5C1F5 = 1;
+    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&warId);
+    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1B90010(&WarQuestSelectionEntity_TypeInfo, v6);
+    byte_4A70F04 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_30BA580 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v7 = Count;
-    v8 = 0;
-    v9 = 1;
+    v9 = Count;
+    v10 = 0;
+    v11 = 1;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -365,22 +393,22 @@ bool __fastcall WarQuestSelectionMaster__HasWar(
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
-               v8,
-               (const MethodInfo_30BA610 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v10,
+               (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Item
         || (methodPtr_low = LOBYTE(WarQuestSelectionEntity_TypeInfo->vtable._0_Equals.methodPtr),
             LOBYTE(Item->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low)
         || (WarQuestSelectionEntity_c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] != WarQuestSelectionEntity_TypeInfo
         || LODWORD(Item[1].klass) != warId )
       {
-        v9 = ++v8 < v7;
-        if ( v7 != v8 )
+        v11 = ++v10 < v9;
+        if ( v9 != v10 )
           continue;
       }
-      return v9;
+      return v11;
     }
 LABEL_15:
-    sub_1B8880C(list, *(_QWORD *)&warId);
+    sub_1B9026C(list, *(_QWORD *)&warId);
   }
   return 0;
 }
@@ -392,54 +420,57 @@ bool __fastcall WarQuestSelectionMaster__IsActiveRegisteredQuest(
         int32_t questId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *AvailableRegisteredWarIds; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x4
-  bool v8; // w21
-  int v9; // w19
-  System_Collections_Generic_List_Enumerator_int__o v11; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v12; // [xsp+20h] [xbp-50h] BYREF
+  __int64 v7; // x1
+  System_Collections_Generic_List_int__o *AvailableRegisteredWarIds; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x4
+  bool v11; // w21
+  int v12; // w19
+  System_Collections_Generic_List_Enumerator_int__o v14; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v15; // [xsp+20h] [xbp-50h] BYREF
   WarQuestSelectionEntity_o *entity; // [xsp+38h] [xbp-38h] BYREF
 
-  if ( (byte_4A5C1F6 & 1) == 0 )
+  if ( (byte_4A70F05 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    byte_4A5C1F6 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, *(_QWORD *)&questId);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__GetEnumerator__, v7);
+    byte_4A70F05 = 1;
   }
-  memset(&v12, 0, sizeof(v12));
+  memset(&v15, 0, sizeof(v15));
   AvailableRegisteredWarIds = WarQuestSelectionMaster__GetAvailableRegisteredWarIds(
                                 this,
                                 *(const MethodInfo **)&questId);
   entity = 0LL;
   if ( !AvailableRegisteredWarIds )
-    sub_1B8880C(0LL, v6);
+    sub_1B9026C(0LL, v9);
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     AvailableRegisteredWarIds,
-    (const MethodInfo_34E12E4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v12 = v11;
+    (const MethodInfo_34F4470 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v15 = v14;
   while ( 1 )
   {
-    v8 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-           &v12,
-           (const MethodInfo_3274238 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    if ( !v8 )
+    v11 = System_Collections_Generic_List_Enumerator_int___MoveNext(
+            &v15,
+            (const MethodInfo_3286084 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    if ( !v11 )
       break;
-    if ( WarQuestSelectionMaster__TryGetEntity(this, &entity, v12.fields._current, questId, v7) )
+    if ( WarQuestSelectionMaster__TryGetEntity(this, &entity, v15.fields._current, questId, v10) )
     {
-      v9 = 4;
+      v12 = 4;
       goto LABEL_9;
     }
   }
-  v9 = 5;
+  v12 = 5;
 LABEL_9:
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v12,
-    (const MethodInfo_3274234 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  return v8 && v9 == 4;
+    &v15,
+    (const MethodInfo_3286080 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  return v11 && v12 == 4;
 }
 
 
@@ -453,39 +484,40 @@ bool __fastcall WarQuestSelectionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A5C1F1 & 1) == 0 )
+  if ( (byte_4A70F00 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__TryGetEntity__);
-    byte_4A5C1F1 = 1;
+    sub_1B90010(&Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__TryGetEntity__, entity);
+    byte_4A70F00 = 1;
   }
   PK = (Il2CppObject *)WarQuestSelectionEntity__CreatePK(warId, questId, *(const MethodInfo **)&warId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_311DCDC *)Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__TryGetEntity__);
+           (const MethodInfo_312C950 *)Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__TryGetEntity__);
 }
 
 
 void __fastcall WarQuestSelectionMaster___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int32_t v2; // w2
-  int32_t v3; // w3
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  int32_t v4; // w3
 
-  if ( (byte_4A5C1F7 & 1) == 0 )
+  if ( (byte_4A70F06 & 1) == 0 )
   {
-    sub_1B885B0(&WarQuestSelectionMaster___c_TypeInfo);
-    byte_4A5C1F7 = 1;
+    sub_1B90010(&WarQuestSelectionMaster___c_TypeInfo, v1);
+    byte_4A70F06 = 1;
   }
-  v1 = (Il2CppObject *)sub_1B887FC(WarQuestSelectionMaster___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  WarQuestSelectionMaster___c_TypeInfo->static_fields->__9 = (struct WarQuestSelectionMaster___c_o *)v1;
-  sub_1B88554(
+  v2 = (Il2CppObject *)sub_1B9025C(WarQuestSelectionMaster___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  WarQuestSelectionMaster___c_TypeInfo->static_fields->__9 = (struct WarQuestSelectionMaster___c_o *)v2;
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)WarQuestSelectionMaster___c_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3);
+    (int32_t)v2,
+    v3,
+    v4);
 }
 
 
@@ -501,7 +533,7 @@ int32_t __fastcall WarQuestSelectionMaster___c___GetAllRegisteredWarIds_b__3_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1B8880C(this, 0LL);
+    sub_1B9026C(this, 0LL);
   return ent->fields.warId;
 }
 
@@ -513,6 +545,6 @@ int32_t __fastcall WarQuestSelectionMaster___c___GetEntityListFromWarId_b__2_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B8880C(this, a);
+    sub_1B9026C(this, a);
   return b->fields.priority - a->fields.priority;
 }

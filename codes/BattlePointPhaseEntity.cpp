@@ -1,30 +1,31 @@
 void __fastcall BattlePointPhaseEntity___ctor(BattlePointPhaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C203 & 1) == 0 )
+  if ( (byte_4A70F12 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5C203 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A70F12 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BattlePointPhaseEntity__CreatePK(
         int32_t battlePointId,
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C202 & 1) == 0 )
+  if ( (byte_4A70F11 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4A5C202 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase);
+    byte_4A70F11 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            battlePointId,
            phase,
-           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

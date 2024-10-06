@@ -9,5 +9,5 @@ void __fastcall EventDailyPoint___ctor(EventDailyPoint_o *this, const MethodInfo
   v2->fields.eventPointBehavior = 0LL;
   v2 = (EventDailyPoint_o *)((char *)v2 + 24);
   LODWORD(v2[-1].fields.eventPointBehavior) = 0;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
 }

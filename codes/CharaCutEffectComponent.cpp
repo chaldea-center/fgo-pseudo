@@ -9,28 +9,30 @@ void __fastcall CharaCutEffectComponent___ctor(CharaCutEffectComponent_o *this, 
 void __fastcall CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *this, const MethodInfo *method)
 {
   long double v2; // q9
+  __int64 v4; // x1
+  __int64 v5; // x1
   float duration; // s0
   UIImageRender_o *image; // x0
-  float v6; // s8
+  float v8; // s8
   AssetData_o *wipeData; // x0
-  UIImageRender_o *v8; // x20
+  UIImageRender_o *v10; // x20
   _BOOL4 isSkip; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  UIImageRender_o *v11; // x20
-  UnityEngine_GameObject_o *v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  int32_t v15; // w1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UIImageRender_o *v13; // x20
+  UnityEngine_GameObject_o *v14; // x0
+  int32_t v15; // w2
+  int32_t v16; // w3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A5C47B & 1) == 0 )
+  if ( (byte_4A7118F & 1) == 0 )
   {
-    sub_1B885B0(&Method_AssetData_GetObject_Texture2D___);
-    sub_1B885B0(&StringLiteral_9893/*"OnEndCutinEffect"*/);
-    sub_1B885B0(&StringLiteral_4961/*"Custom/Sprite-ScriptActionFigureCut"*/);
-    byte_4A5C47B = 1;
+    sub_1B90010(&Method_AssetData_GetObject_Texture2D___, method);
+    sub_1B90010(&StringLiteral_9899/*"OnEndCutinEffect"*/, v4);
+    sub_1B90010(&StringLiteral_4962/*"Custom/Sprite-ScriptActionFigureCut"*/, v5);
+    byte_4A7118F = 1;
   }
   duration = this->fields.duration;
   this->fields.isPause = 0;
@@ -48,36 +50,36 @@ void __fastcall CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *
     UIImageRender__SetAlpha(image, 1.0, 0LL);
   }
   image = (UIImageRender_o *)this->fields.image;
-  v6 = fmaxf(this->fields.mgd, 0.0);
-  this->fields.addVolume = v6;
+  v8 = fmaxf(this->fields.mgd, 0.0);
+  this->fields.addVolume = v8;
   if ( !image )
     goto LABEL_19;
-  UIImageRender__SetSharder(image, (System_String_o *)StringLiteral_4961/*"Custom/Sprite-ScriptActionFigureCut"*/, 0LL);
+  UIImageRender__SetSharder(image, (System_String_o *)StringLiteral_4962/*"Custom/Sprite-ScriptActionFigureCut"*/, 0LL);
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
-    v8 = (UIImageRender_o *)this->fields.image;
+    v10 = (UIImageRender_o *)this->fields.image;
     image = (UIImageRender_o *)AssetData__GetObject_object_(
                                  wipeData,
-                                 (const MethodInfo_2E61D74 *)Method_AssetData_GetObject_Texture2D___);
-    if ( !v8 )
+                                 (const MethodInfo_2E70688 *)Method_AssetData_GetObject_Texture2D___);
+    if ( !v10 )
       goto LABEL_19;
-    UIImageRender__SetWipeTexture(v8, (UnityEngine_Texture_o *)image, 0LL);
+    UIImageRender__SetWipeTexture(v10, (UnityEngine_Texture_o *)image, 0LL);
   }
   image = (UIImageRender_o *)this->fields.image;
   if ( !image
-    || (v18.fields.r = 1.0,
-        v18.fields.g = 1.0,
-        v18.fields.b = 1.0,
-        v18.fields.a = 1.0,
-        UIImageRender__SetFilterColor(image, v18, 0LL),
+    || (v20.fields.r = 1.0,
+        v20.fields.g = 1.0,
+        v20.fields.b = 1.0,
+        v20.fields.a = 1.0,
+        UIImageRender__SetFilterColor(image, v20, 0LL),
         (image = (UIImageRender_o *)this->fields.image) == 0LL) )
   {
 LABEL_19:
-    sub_1B8880C(image, method);
+    sub_1B9026C(image, method);
   }
-  *(float *)&v2 = v6 + 1.0039;
-  UIImageRender__SetGradation(image, v6, 0LL);
+  *(float *)&v2 = v8 + 1.0039;
+  UIImageRender__SetGradation(image, v8, 0LL);
   isSkip = this->fields.isSkip;
   this->fields.isStart = 1;
   if ( !isSkip && this->fields.duration > 0.0 )
@@ -90,14 +92,14 @@ LABEL_19:
     image = (UIImageRender_o *)TweenRenderVolume__Begin(gameObject, this->fields.duration, *(float *)&v2, 0LL);
     if ( image )
     {
-      v11 = image;
+      v13 = image;
       LODWORD(image->fields.leftAnchor) = 1;
-      v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v11->fields.mTrans = (struct UnityEngine_Transform_o *)v12;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v11->fields.mTrans, (int32_t)v12, v13, v14);
-      v15 = StringLiteral_9893/*"OnEndCutinEffect"*/;
-      v11->fields.mChildren = (struct BetterList_UIRect__o *)StringLiteral_9893/*"OnEndCutinEffect"*/;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v11->fields.mChildren, v15, v16, v17);
+      v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+      v13->fields.mTrans = (struct UnityEngine_Transform_o *)v14;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v13->fields.mTrans, (int32_t)v14, v15, v16);
+      v17 = StringLiteral_9899/*"OnEndCutinEffect"*/;
+      v13->fields.mChildren = (struct BetterList_UIRect__o *)StringLiteral_9899/*"OnEndCutinEffect"*/;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v13->fields.mChildren, v17, v18, v19);
       return;
     }
     goto LABEL_19;
@@ -117,34 +119,38 @@ void __fastcall CharaCutEffectComponent__CutinStart(
         float mgd,
         const MethodInfo *method)
 {
-  System_String_o *v9; // x20
-  AssetLoader_LoadEndDataHandler_o *v10; // x21
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_String_o *v12; // x20
+  AssetLoader_LoadEndDataHandler_o *v13; // x21
 
-  if ( (byte_4A5C479 & 1) == 0 )
+  if ( (byte_4A7118D & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&Method_CharaCutEffectComponent_EndLoadWipe__);
-    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1B885B0(&StringLiteral_15660/*"Wipe/"*/);
-    byte_4A5C479 = 1;
+    sub_1B90010(&AssetManager_TypeInfo, image);
+    sub_1B90010(&Method_CharaCutEffectComponent_EndLoadWipe__, v9);
+    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
+    sub_1B90010(&StringLiteral_15685/*"Wipe/"*/, v11);
+    byte_4A7118D = 1;
   }
   this->fields.isCutBusy = 1;
   this->fields.image = image;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields.image,
     (int32_t)image,
     (int32_t)wipeName,
     (int32_t)method);
   this->fields.mgd = mgd;
-  v9 = System_String__Concat_61707032((System_String_o *)StringLiteral_15660/*"Wipe/"*/, wipeName, 0LL);
-  v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(v10, (Il2CppObject *)this, Method_CharaCutEffectComponent_EndLoadWipe__, 0LL);
+  v12 = System_String__Concat_61787092((System_String_o *)StringLiteral_15685/*"Wipe/"*/, wipeName, 0LL);
+  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v13, (Il2CppObject *)this, Method_CharaCutEffectComponent_EndLoadWipe__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v9, v10, 1, 0LL);
+  AssetManager__loadAssetStorage(v12, v13, 1, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaCutEffectComponent__CutoutStart(
         CharaCutEffectComponent_o *this,
         float time,
@@ -152,24 +158,25 @@ void __fastcall CharaCutEffectComponent__CutoutStart(
         const MethodInfo *method)
 {
   bool v7; // w21
-  UnityEngine_GameObject_o *v8; // x0
-  TweenRenderVolume_o *v9; // x0
-  __int64 v10; // x1
-  TweenRenderVolume_o *v11; // x20
-  UnityEngine_GameObject_o *v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  int32_t v15; // w1
-  int32_t v16; // w2
-  int32_t v17; // w3
+  __int64 v8; // x1
+  UnityEngine_GameObject_o *v9; // x0
+  TweenRenderVolume_o *v10; // x0
+  __int64 v11; // x1
+  TweenRenderVolume_o *v12; // x20
+  UnityEngine_GameObject_o *v13; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  int32_t v16; // w1
+  int32_t v17; // w2
+  int32_t v18; // w3
   UnityEngine_Object_o *gameObject; // x19
 
   v7 = isSkip;
-  if ( (byte_4A5C47C & 1) == 0 )
+  if ( (byte_4A71190 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&StringLiteral_9894/*"OnEndCutoutEffect"*/);
-    byte_4A5C47C = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, isSkip);
+    sub_1B90010(&StringLiteral_9900/*"OnEndCutoutEffect"*/, v8);
+    byte_4A71190 = 1;
   }
   this->fields.duration = time;
   this->fields.isSkip = v7;
@@ -178,23 +185,23 @@ void __fastcall CharaCutEffectComponent__CutoutStart(
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69459380(gameObject, 0LL);
+    UnityEngine_Object__Destroy_69539440(gameObject, 0LL);
   }
   else
   {
     this->fields.isCutBusy = 1;
-    v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v9 = TweenRenderVolume__Begin(v8, this->fields.duration, 0.0, 0LL);
-    if ( !v9 )
-      sub_1B8880C(0LL, v10);
-    v11 = v9;
-    v9->fields.method = 1;
-    v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v11->fields.eventReceiver = v12;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&v11->fields.eventReceiver, (int32_t)v12, v13, v14);
-    v15 = StringLiteral_9894/*"OnEndCutoutEffect"*/;
-    v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9894/*"OnEndCutoutEffect"*/;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&v11->fields.callWhenFinished, v15, v16, v17);
+    v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    v10 = TweenRenderVolume__Begin(v9, this->fields.duration, 0.0, 0LL);
+    if ( !v10 )
+      sub_1B9026C(0LL, v11);
+    v12 = v10;
+    v10->fields.method = 1;
+    v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    v12->fields.eventReceiver = v13;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v12->fields.eventReceiver, (int32_t)v13, v14, v15);
+    v16 = StringLiteral_9900/*"OnEndCutoutEffect"*/;
+    v12->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9900/*"OnEndCutoutEffect"*/;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v12->fields.callWhenFinished, v16, v17, v18);
   }
 }
 
@@ -212,23 +219,23 @@ void __fastcall CharaCutEffectComponent__EndLoadWipe(
   struct UnityEngine_Vector2_o BodySize; // kr00_8
   _BOOL4 isPause; // w8
 
-  if ( (byte_4A5C47A & 1) == 0 )
+  if ( (byte_4A7118E & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    byte_4A5C47A = 1;
+    sub_1B90010(&AssetManager_TypeInfo, data);
+    byte_4A7118E = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_37790656(wipeData, 0LL);
+    AssetManager__releaseAsset_37842776(wipeData, 0LL);
   }
   this->fields.wipeData = data;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
   image = (UIImageRender_o *)this->fields.image;
   if ( !image )
-    sub_1B8880C(0LL, v7);
+    sub_1B9026C(0LL, v7);
   BodySize = UIImageRender__GetBodySize(image, 0LL);
   isPause = this->fields.isPause;
   this->fields.bodySize = BodySize;
@@ -248,30 +255,31 @@ bool __fastcall CharaCutEffectComponent__IsBusyCut(CharaCutEffectComponent_o *th
 
 void __fastcall CharaCutEffectComponent__OnDestroy(CharaCutEffectComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   AssetData_o *wipeData; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  int32_t v5; // w2
+  int32_t v6; // w3
   UnityEngine_Object_o *image; // x20
-  __int64 v7; // x1
+  __int64 v8; // x1
   ServantStatusBattleListViewItem_o *p_image; // x19
   UIImageRender_o *klass; // x0
-  int32_t v10; // w2
-  int32_t v11; // w3
+  int32_t v11; // w2
+  int32_t v12; // w3
 
-  if ( (byte_4A5C47E & 1) == 0 )
+  if ( (byte_4A71192 & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5C47E = 1;
+    sub_1B90010(&AssetManager_TypeInfo, method);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A71192 = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_37790656(wipeData, 0LL);
+    AssetManager__releaseAsset_37842776(wipeData, 0LL);
     this->fields.wipeData = 0LL;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.wipeData, 0, v4, v5);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.wipeData, 0, v5, v6);
   }
   image = (UnityEngine_Object_o *)this->fields.image;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -283,11 +291,11 @@ void __fastcall CharaCutEffectComponent__OnDestroy(CharaCutEffectComponent_o *th
     if ( !p_image->klass
       || (UIImageRender__RecoverSharder(klass, 0LL), (klass = (UIImageRender_o *)p_image->klass) == 0LL) )
     {
-      sub_1B8880C(klass, v7);
+      sub_1B9026C(klass, v8);
     }
     UIImageRender__SetAlpha(klass, 0.0, 0LL);
     p_image->klass = 0LL;
-    sub_1B88554(p_image, 0, v10, v11);
+    sub_1B8FFB4(p_image, 0, v11, v12);
   }
 }
 
@@ -302,16 +310,16 @@ void __fastcall CharaCutEffectComponent__OnEndCutoutEffect(CharaCutEffectCompone
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4A5C47D & 1) == 0 )
+  if ( (byte_4A71191 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5C47D = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A71191 = 1;
   }
   this->fields.isCutBusy = 0;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69459380(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69539440(gameObject, 0LL);
 }
 
 
@@ -352,7 +360,7 @@ void __fastcall CharaCutEffectComponent__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0LL);
   image = this->fields.image;
   if ( !image )
-    sub_1B8880C(0LL, v8);
+    sub_1B9026C(0LL, v8);
   ((void (__fastcall *)(struct UIImageM_o *, Il2CppMethodPointer, long double, long double, long double, long double))image->klass->vtable._39_SetTweenColor.method)(
     image,
     image->klass->vtable._40_GetTweenColor.methodPtr,
@@ -373,6 +381,6 @@ void __fastcall CharaCutEffectComponent__SetTweenVolume(
   image = (UIImageRender_o *)this->fields.image;
   this->fields.volume = v;
   if ( !image )
-    sub_1B8880C(0LL, method);
+    sub_1B9026C(0LL, method);
   UIImageRender__SetVolume(image, v, 0LL);
 }

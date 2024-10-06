@@ -18,22 +18,22 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__CreateInitActionData(
   int v9; // w8
   BattleActionData_o *result; // x0
 
-  if ( (byte_4A5DE13 & 1) == 0 )
+  if ( (byte_4A72B2B & 1) == 0 )
   {
-    sub_1B885B0(&BattleActionData_TypeInfo);
-    byte_4A5DE13 = 1;
+    sub_1B90010(&BattleActionData_TypeInfo, msgEnt);
+    byte_4A72B2B = 1;
   }
-  v5 = (BattleActionData_o *)sub_1B887FC(BattleActionData_TypeInfo);
+  v5 = (BattleActionData_o *)sub_1B9025C(BattleActionData_TypeInfo);
   BattleActionData___ctor(v5, 0LL);
   actorIdlist = this->fields.actorIdlist;
   if ( actorIdlist )
   {
     if ( !actorIdlist->max_length )
-      sub_1B88814(v6, v7);
+      sub_1B90274(v6, v7);
     v9 = actorIdlist->m_Items[1];
     if ( !v5 )
 LABEL_10:
-      sub_1B8880C(v6, v7);
+      sub_1B9026C(v6, v7);
   }
   else
   {
@@ -59,7 +59,7 @@ void __fastcall MessageBattleLogicTask__Init(
         const MethodInfo *method)
 {
   if ( !aiActEnt || (this->fields.isMsgGroup = aiActEnt->fields.type == 73, !aiEnt) )
-    sub_1B8880C(this, aiActEnt);
+    sub_1B9026C(this, aiActEnt);
   this->fields.value = AiBaseEntity__getActionValue(aiEnt, 0LL);
 }
 
@@ -70,24 +70,25 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
         const MethodInfo *method)
 {
   MessageBattleLogicTask_o *v4; // x20
+  __int64 v5; // x1
   struct BattleData_o *data; // x8
   int32_t value; // w21
   BattleMessageEntity_array *Entities; // x21
-  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x2
   BattleActionData_o *InitActionData; // x22
   int max_length; // w8
-  __int64 v11; // x25
-  BattleActionData_DisplayMessageData_o *v12; // x23
-  BattleMessageEntity_o *v13; // x24
+  __int64 v12; // x25
+  BattleActionData_DisplayMessageData_o *v13; // x23
+  BattleMessageEntity_o *v14; // x24
   int motionId; // w8
-  const MethodInfo *v15; // x2
+  const MethodInfo *v16; // x2
 
   v4 = this;
-  if ( (byte_4A5DE12 & 1) == 0 )
+  if ( (byte_4A72B2A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_BattleMessageMaster___);
-    this = (MessageBattleLogicTask_o *)sub_1B885B0(&DataManager_TypeInfo);
-    byte_4A5DE12 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_BattleMessageMaster___, logic);
+    this = (MessageBattleLogicTask_o *)sub_1B90010(&DataManager_TypeInfo, v5);
+    byte_4A72B2A = 1;
   }
   if ( v4->fields.isMsgGroup )
   {
@@ -107,10 +108,10 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_BattleMessageMaster___);
+  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BattleMessageMaster___);
   if ( !this )
 LABEL_31:
-    sub_1B8880C(this, logic);
+    sub_1B9026C(this, logic);
   Entities = BattleMessageMaster__GetEntities((BattleMessageMaster_o *)this, value, 0LL);
   this = (MessageBattleLogicTask_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)Entities, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -119,8 +120,8 @@ LABEL_31:
     {
       if ( !Entities->max_length )
 LABEL_32:
-        sub_1B88814(this, logic);
-      this = (MessageBattleLogicTask_o *)MessageBattleLogicTask__CreateInitActionData(v4, Entities->m_Items[0], v8);
+        sub_1B90274(this, logic);
+      this = (MessageBattleLogicTask_o *)MessageBattleLogicTask__CreateInitActionData(v4, Entities->m_Items[0], v9);
       if ( logic )
       {
         InitActionData = (BattleActionData_o *)this;
@@ -132,16 +133,16 @@ LABEL_32:
         max_length = Entities->max_length;
         if ( max_length >= 1 )
         {
-          v11 = 0LL;
           v12 = 0LL;
+          v13 = 0LL;
           while ( 1 )
           {
-            if ( (unsigned int)v11 >= max_length )
+            if ( (unsigned int)v12 >= max_length )
               goto LABEL_32;
-            v13 = Entities->m_Items[v11];
-            if ( !v13 )
+            v14 = Entities->m_Items[v12];
+            if ( !v14 )
               goto LABEL_31;
-            motionId = v13->fields.motionId;
+            motionId = v14->fields.motionId;
             if ( motionId < 1 )
               goto LABEL_26;
             if ( !InitActionData )
@@ -152,21 +153,21 @@ LABEL_32:
 LABEL_27:
             this = (MessageBattleLogicTask_o *)BattleActionData__AddDisplayMessage(
                                                  InitActionData,
-                                                 v13,
+                                                 v14,
                                                  (ParseBattleMessage_o *)this,
-                                                 v12,
+                                                 v13,
                                                  0LL);
             max_length = Entities->max_length;
-            ++v11;
-            v12 = (BattleActionData_DisplayMessageData_o *)this;
-            if ( (int)v11 >= max_length )
+            ++v12;
+            v13 = (BattleActionData_DisplayMessageData_o *)this;
+            if ( (int)v12 >= max_length )
               goto LABEL_28;
           }
           this = (MessageBattleLogicTask_o *)logic->fields.perf;
           if ( !this )
             goto LABEL_31;
-          BattlePerformance__addActionData_41826004((BattlePerformance_o *)this, InitActionData, 0LL);
-          InitActionData = MessageBattleLogicTask__CreateInitActionData(v4, v13, v15);
+          BattlePerformance__addActionData_41880732((BattlePerformance_o *)this, InitActionData, 0LL);
+          InitActionData = MessageBattleLogicTask__CreateInitActionData(v4, v14, v16);
 LABEL_26:
           this = (MessageBattleLogicTask_o *)BattleLogic__get_ParseBattleMsg(logic, 0LL);
           if ( !InitActionData )
@@ -177,7 +178,7 @@ LABEL_28:
         this = (MessageBattleLogicTask_o *)logic->fields.perf;
         if ( this )
         {
-          BattlePerformance__addActionData_41826004((BattlePerformance_o *)this, InitActionData, 0LL);
+          BattlePerformance__addActionData_41880732((BattlePerformance_o *)this, InitActionData, 0LL);
           return 0LL;
         }
       }

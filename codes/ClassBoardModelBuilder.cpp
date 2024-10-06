@@ -1,32 +1,35 @@
 void __fastcall ClassBoardModelBuilder___ctor(ClassBoardModelBuilder_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *v6; // x20
   int32_t v7; // w2
   int32_t v8; // w3
+  System_Collections_Generic_List_object__o *v9; // x20
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4A5E5BE & 1) == 0 )
+  if ( (byte_4A732D7 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardLineModel___ctor__);
-    sub_1B885B0(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    sub_1B885B0(&System_Collections_Generic_List_IClassBoardLineModel__TypeInfo);
-    byte_4A5E5BE = 1;
+    sub_1B90010(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__, method);
+    sub_1B90010(&Method_System_Collections_Generic_List_IClassBoardLineModel___ctor__, v3);
+    sub_1B90010(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo, v4);
+    sub_1B90010(&System_Collections_Generic_List_IClassBoardLineModel__TypeInfo, v5);
+    byte_4A732D7 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_IClassBoardLineModel__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_IClassBoardLineModel___ctor__);
-  this->fields.lineList = (struct System_Collections_Generic_List_IClassBoardLineModel__o *)v3;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_IClassBoardLineModel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-  this->fields.squareList = (struct System_Collections_Generic_List_IClassBoardSquareModel__o *)v6;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.squareList, (int32_t)v6, v7, v8);
+    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_IClassBoardLineModel___ctor__);
+  this->fields.lineList = (struct System_Collections_Generic_List_IClassBoardLineModel__o *)v6;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v9,
+    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+  this->fields.squareList = (struct System_Collections_Generic_List_IClassBoardSquareModel__o *)v9;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.squareList, (int32_t)v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -36,50 +39,51 @@ ClassBoardLineModel_o *__fastcall ClassBoardModelBuilder__AddLine(
         ClassBoardLineEntity_o *line,
         const MethodInfo *method)
 {
-  ClassBoardLineModel_o *v5; // x19
-  const MethodInfo *v6; // x2
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
+  __int64 v5; // x1
+  ClassBoardLineModel_o *v6; // x19
+  const MethodInfo *v7; // x2
+  __int64 v8; // x1
+  int32_t v9; // w2
+  int32_t v10; // w3
   System_Collections_Generic_List_object__o *lineList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x8
+  Il2CppClass **v15; // x8
 
-  if ( (byte_4A5E5BC & 1) == 0 )
+  if ( (byte_4A732D5 & 1) == 0 )
   {
-    sub_1B885B0(&ClassBoardLineModel_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardLineModel__Add__);
-    byte_4A5E5BC = 1;
+    sub_1B90010(&ClassBoardLineModel_TypeInfo, line);
+    sub_1B90010(&Method_System_Collections_Generic_List_IClassBoardLineModel__Add__, v5);
+    byte_4A732D5 = 1;
   }
-  v5 = (ClassBoardLineModel_o *)sub_1B887FC(ClassBoardLineModel_TypeInfo);
-  ClassBoardLineModel___ctor(v5, line, v6);
+  v6 = (ClassBoardLineModel_o *)sub_1B9025C(ClassBoardLineModel_TypeInfo);
+  ClassBoardLineModel___ctor(v6, line, v7);
   lineList = (System_Collections_Generic_List_object__o *)this->fields.lineList;
   if ( !lineList
     || (items = lineList->fields._items,
-        v12 = Method_System_Collections_Generic_List_IClassBoardLineModel__Add__,
+        v13 = Method_System_Collections_Generic_List_IClassBoardLineModel__Add__,
         ++lineList->fields._version,
         !items) )
   {
-    sub_1B8880C(lineList, v7);
+    sub_1B9026C(lineList, v8);
   }
   size = lineList->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       lineList,
-      (Il2CppObject *)v5,
-      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      (Il2CppObject *)v6,
+      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
-    v14 = &items->obj.klass + size;
+    v15 = &items->obj.klass + size;
     lineList->fields._size = size + 1;
-    v14[4] = (Il2CppClass *)v5;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)(v14 + 4), (int32_t)v5, v8, v9);
+    v15[4] = (Il2CppClass *)v6;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v15 + 4), (int32_t)v6, v9, v10);
   }
-  return v5;
+  return v6;
 }
 
 
@@ -89,101 +93,108 @@ ClassBoardSquareModel_o *__fastcall ClassBoardModelBuilder__AddSquare(
         const MethodInfo *method)
 {
   ClassBoardModelBuilder_o *v4; // x19
-  ClassBoardLockModel_o *v5; // x20
-  const MethodInfo *v6; // x2
-  int32_t v7; // w2
-  int32_t v8; // w3
-  const MethodInfo *v9; // x2
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ClassBoardLockModel_o *v7; // x20
+  const MethodInfo *v8; // x2
+  int32_t v9; // w2
+  int32_t v10; // w3
+  const MethodInfo *v11; // x2
   struct System_Collections_Generic_List_IClassBoardLineModel__o *lineList; // x8
-  _QWORD *v11; // x9
+  _QWORD *v13; // x9
   __int64 squareList_low; // x10
-  System_Collections_Generic_List_IClassBoardLineModel__c **v13; // x8
+  System_Collections_Generic_List_IClassBoardLineModel__c **v15; // x8
 
   v4 = this;
-  if ( (byte_4A5E5BD & 1) == 0 )
+  if ( (byte_4A732D6 & 1) == 0 )
   {
-    sub_1B885B0(&ClassBoardLockModel_TypeInfo);
-    sub_1B885B0(&ClassBoardSquareModel_TypeInfo);
-    this = (ClassBoardModelBuilder_o *)sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__);
-    byte_4A5E5BD = 1;
+    sub_1B90010(&ClassBoardLockModel_TypeInfo, squareEntity);
+    sub_1B90010(&ClassBoardSquareModel_TypeInfo, v5);
+    this = (ClassBoardModelBuilder_o *)sub_1B90010(
+                                         &Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__,
+                                         v6);
+    byte_4A732D6 = 1;
   }
   if ( !squareEntity )
     goto LABEL_13;
   if ( ClassBoardSquareEntity__get_HasLockId(squareEntity, 0LL) )
   {
-    v5 = (ClassBoardLockModel_o *)sub_1B887FC(ClassBoardLockModel_TypeInfo);
-    ClassBoardLockModel___ctor(v5, squareEntity, v6);
+    v7 = (ClassBoardLockModel_o *)sub_1B9025C(ClassBoardLockModel_TypeInfo);
+    ClassBoardLockModel___ctor(v7, squareEntity, v8);
   }
   else
   {
-    v5 = (ClassBoardLockModel_o *)sub_1B887FC(ClassBoardSquareModel_TypeInfo);
-    ClassBoardSquareModel___ctor((ClassBoardSquareModel_o *)v5, squareEntity, v9);
+    v7 = (ClassBoardLockModel_o *)sub_1B9025C(ClassBoardSquareModel_TypeInfo);
+    ClassBoardSquareModel___ctor((ClassBoardSquareModel_o *)v7, squareEntity, v11);
   }
   this = (ClassBoardModelBuilder_o *)v4->fields.squareList;
   if ( !this
     || (lineList = this->fields.lineList,
-        v11 = Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__,
+        v13 = Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__,
         ++HIDWORD(this->fields.squareList),
         !lineList) )
   {
 LABEL_13:
-    sub_1B8880C(this, squareEntity);
+    sub_1B9026C(this, squareEntity);
   }
   squareList_low = SLODWORD(this->fields.squareList);
   if ( (unsigned int)squareList_low >= lineList->fields._size )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
-      (Il2CppObject *)v5,
-      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      (Il2CppObject *)v7,
+      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
-    v13 = &lineList->klass + squareList_low;
+    v15 = &lineList->klass + squareList_low;
     LODWORD(this->fields.squareList) = squareList_low + 1;
-    v13[4] = (System_Collections_Generic_List_IClassBoardLineModel__c *)v5;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)(v13 + 4), (int32_t)v5, v7, v8);
+    v15[4] = (System_Collections_Generic_List_IClassBoardLineModel__c *)v7;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v15 + 4), (int32_t)v7, v9, v10);
   }
-  return (ClassBoardSquareModel_o *)v5;
+  return (ClassBoardSquareModel_o *)v7;
 }
 
 
 void __fastcall ClassBoardModelBuilder__Clear(ClassBoardModelBuilder_o *this, const MethodInfo *method)
 {
   ClassBoardModelBuilder_o *v2; // x19
+  __int64 v3; // x1
   struct System_Collections_Generic_List_IClassBoardLineModel__o *lineList; // x8
   int32_t size; // w2
-  int v5; // w9
+  int v6; // w9
   struct System_Collections_Generic_List_IClassBoardSquareModel__o *squareList; // x8
-  int32_t v7; // w2
-  int v8; // w9
+  int32_t v8; // w2
+  int v9; // w9
 
   v2 = this;
-  if ( (byte_4A5E5B8 & 1) == 0 )
+  if ( (byte_4A732D1 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardSquareModel__Clear__);
-    this = (ClassBoardModelBuilder_o *)sub_1B885B0(&Method_System_Collections_Generic_List_IClassBoardLineModel__Clear__);
-    byte_4A5E5B8 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_List_IClassBoardSquareModel__Clear__, method);
+    this = (ClassBoardModelBuilder_o *)sub_1B90010(
+                                         &Method_System_Collections_Generic_List_IClassBoardLineModel__Clear__,
+                                         v3);
+    byte_4A732D1 = 1;
   }
   lineList = v2->fields.lineList;
   if ( !lineList )
     goto LABEL_10;
   size = lineList->fields._size;
-  v5 = lineList->fields._version + 1;
+  v6 = lineList->fields._version + 1;
   lineList->fields._size = 0;
-  lineList->fields._version = v5;
+  lineList->fields._version = v6;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)lineList->fields._items, 0, size, 0LL);
   squareList = v2->fields.squareList;
   if ( !squareList )
 LABEL_10:
-    sub_1B8880C(this, method);
-  v7 = squareList->fields._size;
-  v8 = squareList->fields._version + 1;
+    sub_1B9026C(this, method);
+  v8 = squareList->fields._size;
+  v9 = squareList->fields._version + 1;
   squareList->fields._size = 0;
-  squareList->fields._version = v8;
-  if ( v7 >= 1 )
-    System_Array__Clear((System_Array_o *)squareList->fields._items, 0, v7, 0LL);
+  squareList->fields._version = v9;
+  if ( v8 >= 1 )
+    System_Array__Clear((System_Array_o *)squareList->fields._items, 0, v8, 0LL);
 }
 
 
@@ -196,110 +207,114 @@ void __fastcall ClassBoardModelBuilder__Make(ClassBoardModelBuilder_o *this, int
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ClassBoardModelBuilder__MakeLine(
         ClassBoardModelBuilder_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   ClassBoardLineEntity_array *Master_object; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
   int max_length; // w8
-  ClassBoardLineEntity_array *v8; // x20
-  unsigned int v9; // w23
-  ClassBoardLineEntity_o *v10; // x21
-  const MethodInfo *v11; // x3
-  IClassBoardLineModel_o *v12; // x22
-  const MethodInfo *v13; // x3
+  ClassBoardLineEntity_array *v9; // x20
+  unsigned int v10; // w23
+  ClassBoardLineEntity_o *v11; // x21
+  const MethodInfo *v12; // x3
+  IClassBoardLineModel_o *v13; // x22
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4A5E5BA & 1) == 0 )
+  if ( (byte_4A732D3 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_ClassBoardLineMaster___);
-    sub_1B885B0(&DataManager_TypeInfo);
-    byte_4A5E5BA = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_ClassBoardLineMaster___, *(_QWORD *)&baseId);
+    sub_1B90010(&DataManager_TypeInfo, v5);
+    byte_4A732D3 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardLineEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_ClassBoardLineMaster___);
+  Master_object = (ClassBoardLineEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ClassBoardLineMaster___);
   if ( !Master_object )
     goto LABEL_14;
   Master_object = ClassBoardLineMaster__GetAllEntity((ClassBoardLineMaster_o *)Master_object, baseId, 0LL);
   if ( !Master_object )
     goto LABEL_14;
   max_length = Master_object->max_length;
-  v8 = Master_object;
+  v9 = Master_object;
   if ( max_length >= 1 )
   {
-    v9 = 0;
+    v10 = 0;
     while ( 1 )
     {
-      if ( v9 >= max_length )
-        sub_1B88814(Master_object, v6);
-      v10 = v8->m_Items[v9];
+      if ( v10 >= max_length )
+        sub_1B90274(Master_object, v7);
+      v11 = v9->m_Items[v10];
       Master_object = (ClassBoardLineEntity_array *)((__int64 (__fastcall *)(ClassBoardModelBuilder_o *, ClassBoardLineEntity_o *, Il2CppMethodPointer))this->klass->vtable._4_AddLine.method)(
                                                       this,
-                                                      v10,
+                                                      v11,
                                                       this->klass->vtable._5_AddSquare.methodPtr);
-      if ( !v10 )
+      if ( !v11 )
         break;
-      v12 = (IClassBoardLineModel_o *)Master_object;
+      v13 = (IClassBoardLineModel_o *)Master_object;
       ClassBoardModelBuilder__UnionSquareLine(
         this,
         (IClassBoardLineModel_o *)Master_object,
-        v10->fields.prevSquareId,
-        v11);
-      ClassBoardModelBuilder__UnionSquareLine(this, v12, v10->fields.nextSquareId, v13);
-      max_length = v8->max_length;
-      if ( (int)++v9 >= max_length )
+        v11->fields.prevSquareId,
+        v12);
+      ClassBoardModelBuilder__UnionSquareLine(this, v13, v11->fields.nextSquareId, v14);
+      max_length = v9->max_length;
+      if ( (int)++v10 >= max_length )
         return;
     }
 LABEL_14:
-    sub_1B8880C(Master_object, v6);
+    sub_1B9026C(Master_object, v7);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ClassBoardModelBuilder__MakeSquare(
         ClassBoardModelBuilder_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   ClassBoardSquareEntity_array *Master_object; // x0
-  __int64 v6; // x1
-  __int64 v7; // x8
-  ClassBoardSquareEntity_array *v8; // x20
-  unsigned __int64 v9; // x21
+  __int64 v7; // x1
+  __int64 v8; // x8
+  ClassBoardSquareEntity_array *v9; // x20
+  unsigned __int64 v10; // x21
 
-  if ( (byte_4A5E5B9 & 1) == 0 )
+  if ( (byte_4A732D2 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_ClassBoardSquareMaster___);
-    sub_1B885B0(&DataManager_TypeInfo);
-    byte_4A5E5B9 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_ClassBoardSquareMaster___, *(_QWORD *)&baseId);
+    sub_1B90010(&DataManager_TypeInfo, v5);
+    byte_4A732D2 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardSquareEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
+  Master_object = (ClassBoardSquareEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ClassBoardSquareMaster___);
   if ( !Master_object
     || (Master_object = ClassBoardSquareMaster__GetAllEntity((ClassBoardSquareMaster_o *)Master_object, baseId, 0LL)) == 0LL )
   {
-    sub_1B8880C(Master_object, v6);
+    sub_1B9026C(Master_object, v7);
   }
-  v7 = *(_QWORD *)&Master_object->max_length;
-  v8 = Master_object;
-  if ( (int)v7 >= 1 )
+  v8 = *(_QWORD *)&Master_object->max_length;
+  v9 = Master_object;
+  if ( (int)v8 >= 1 )
   {
-    v9 = 0LL;
+    v10 = 0LL;
     do
     {
-      if ( v9 >= (unsigned int)v7 )
-        sub_1B88814(Master_object, v6);
+      if ( v10 >= (unsigned int)v8 )
+        sub_1B90274(Master_object, v7);
       Master_object = (ClassBoardSquareEntity_array *)((__int64 (__fastcall *)(ClassBoardModelBuilder_o *, ClassBoardSquareEntity_o *, void *))this->klass->vtable._5_AddSquare.method)(
                                                         this,
-                                                        v8->m_Items[v9],
+                                                        v9->m_Items[v10],
                                                         this->klass[1]._1.image);
-      LODWORD(v7) = v8->max_length;
-      ++v9;
+      LODWORD(v8) = v9->max_length;
+      ++v10;
     }
-    while ( (__int64)v9 < (int)v7 );
+    while ( (__int64)v10 < (int)v8 );
   }
 }
 
@@ -310,62 +325,67 @@ void __fastcall ClassBoardModelBuilder__UnionSquareLine(
         int32_t squareId,
         const MethodInfo *method)
 {
-  __int64 v7; // x22
-  Il2CppObject *v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x22
+  Il2CppObject *v13; // x0
+  __int64 v14; // x1
   struct System_Collections_Generic_List_IClassBoardSquareModel__o *squareList; // x20
-  System_Func_object__bool__o *v11; // x21
+  System_Func_object__bool__o *v16; // x21
   IClassBoardLineModel_c *klass; // x8
-  Il2CppObject *v13; // x20
-  __int64 v14; // x9
+  Il2CppObject *v18; // x20
+  __int64 v19; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  Il2CppClass *v17; // x8
-  __int64 v18; // x9
-  IClassBoardSquareModel_c **v19; // x10
-  __int64 v20; // x0
+  Il2CppClass *v22; // x8
+  __int64 v23; // x9
+  IClassBoardSquareModel_c **v24; // x10
+  __int64 v25; // x0
 
-  if ( (byte_4A5E5BB & 1) == 0 )
+  if ( (byte_4A732D4 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
-    sub_1B885B0(&System_Func_IClassBoardSquareModel__bool__TypeInfo);
-    sub_1B885B0(&IClassBoardLineModel_TypeInfo);
-    sub_1B885B0(&IClassBoardSquareModel_TypeInfo);
-    sub_1B885B0(&Method_ClassBoardModelBuilder___c__DisplayClass10_0__UnionSquareLine_b__0__);
-    sub_1B885B0(&ClassBoardModelBuilder___c__DisplayClass10_0_TypeInfo);
-    byte_4A5E5BB = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___, line);
+    sub_1B90010(&System_Func_IClassBoardSquareModel__bool__TypeInfo, v7);
+    sub_1B90010(&IClassBoardLineModel_TypeInfo, v8);
+    sub_1B90010(&IClassBoardSquareModel_TypeInfo, v9);
+    sub_1B90010(&Method_ClassBoardModelBuilder___c__DisplayClass10_0__UnionSquareLine_b__0__, v10);
+    sub_1B90010(&ClassBoardModelBuilder___c__DisplayClass10_0_TypeInfo, v11);
+    byte_4A732D4 = 1;
   }
-  v7 = sub_1B887FC(ClassBoardModelBuilder___c__DisplayClass10_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7 )
+  v12 = sub_1B9025C(ClassBoardModelBuilder___c__DisplayClass10_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v12, 0LL);
+  if ( !v12 )
     goto LABEL_21;
-  *(_DWORD *)(v7 + 16) = squareId;
+  *(_DWORD *)(v12 + 16) = squareId;
   if ( squareId < 1 )
     return;
   squareList = this->fields.squareList;
-  v11 = (System_Func_object__bool__o *)sub_1B887FC(System_Func_IClassBoardSquareModel__bool__TypeInfo);
+  v16 = (System_Func_object__bool__o *)sub_1B9025C(System_Func_IClassBoardSquareModel__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v11,
-    (Il2CppObject *)v7,
+    v16,
+    (Il2CppObject *)v12,
     Method_ClassBoardModelBuilder___c__DisplayClass10_0__UnionSquareLine_b__0__,
     0LL);
-  v8 = System_Linq_Enumerable__FirstOrDefault_object__48907856(
-         (System_Collections_Generic_IEnumerable_TSource__o *)squareList,
-         (System_Func_TSource__bool__o *)v11,
-         (const MethodInfo_2EA4650 *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
+  v13 = System_Linq_Enumerable__FirstOrDefault_object__48967524(
+          (System_Collections_Generic_IEnumerable_TSource__o *)squareList,
+          (System_Func_TSource__bool__o *)v16,
+          (const MethodInfo_2EB2F64 *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
   if ( !line )
     goto LABEL_21;
   klass = line->klass;
-  v13 = v8;
-  v14 = *(unsigned __int16 *)(&line->klass->_2.bitflags2 + 3);
+  v18 = v13;
+  v19 = *(unsigned __int16 *)(&line->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&line->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((IClassBoardLineModel_c **)p_offset - 1) != IClassBoardLineModel_TypeInfo )
     {
-      --v14;
+      --v19;
       p_offset += 4;
-      if ( !v14 )
+      if ( !v19 )
         goto LABEL_10;
     }
     p_method = (__int64)&klass->vtable[*p_offset + 3].method;
@@ -373,35 +393,35 @@ void __fastcall ClassBoardModelBuilder__UnionSquareLine(
   else
   {
 LABEL_10:
-    p_method = sub_1BDA590(line, IClassBoardLineModel_TypeInfo, 3LL);
+    p_method = sub_1BE1FF0(line, IClassBoardLineModel_TypeInfo, 3LL);
   }
-  v8 = (Il2CppObject *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, Il2CppObject *, _QWORD))p_method)(
-                         line,
-                         v13,
-                         *(_QWORD *)(p_method + 8));
-  if ( !v13 )
+  v13 = (Il2CppObject *)(*(__int64 (__fastcall **)(IClassBoardLineModel_o *, Il2CppObject *, _QWORD))p_method)(
+                          line,
+                          v18,
+                          *(_QWORD *)(p_method + 8));
+  if ( !v18 )
 LABEL_21:
-    sub_1B8880C(v8, v9);
-  v17 = v13->klass;
-  v18 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
+    sub_1B9026C(v13, v14);
+  v22 = v18->klass;
+  v23 = *(unsigned __int16 *)(&v18->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v18->klass->_2.bitflags2 + 3) )
   {
-    v19 = (IClassBoardSquareModel_c **)&v17->_1.interfaceOffsets->offset;
-    while ( *(v19 - 1) != IClassBoardSquareModel_TypeInfo )
+    v24 = (IClassBoardSquareModel_c **)&v22->_1.interfaceOffsets->offset;
+    while ( *(v24 - 1) != IClassBoardSquareModel_TypeInfo )
     {
-      --v18;
-      v19 += 2;
-      if ( !v18 )
+      --v23;
+      v24 += 2;
+      if ( !v23 )
         goto LABEL_18;
     }
-    v20 = (__int64)&v17->vtable[*(_DWORD *)v19 + 14].method;
+    v25 = (__int64)&v22->vtable[*(_DWORD *)v24 + 14].method;
   }
   else
   {
 LABEL_18:
-    v20 = sub_1BDA590(v13, IClassBoardSquareModel_TypeInfo, 14LL);
+    v25 = sub_1BE1FF0(v18, IClassBoardSquareModel_TypeInfo, 14LL);
   }
-  (*(void (__fastcall **)(Il2CppObject *, IClassBoardLineModel_o *, _QWORD))v20)(v13, line, *(_QWORD *)(v20 + 8));
+  (*(void (__fastcall **)(Il2CppObject *, IClassBoardLineModel_o *, _QWORD))v25)(v18, line, *(_QWORD *)(v25 + 8));
 }
 
 
@@ -441,13 +461,13 @@ bool __fastcall ClassBoardModelBuilder___c__DisplayClass10_0___UnionSquareLine_b
   __int64 p_method; // x0
 
   v4 = this;
-  if ( (byte_4A5E5BF & 1) == 0 )
+  if ( (byte_4A732D8 & 1) == 0 )
   {
-    this = (ClassBoardModelBuilder___c__DisplayClass10_0_o *)sub_1B885B0(&IClassBoardSquareModel_TypeInfo);
-    byte_4A5E5BF = 1;
+    this = (ClassBoardModelBuilder___c__DisplayClass10_0_o *)sub_1B90010(&IClassBoardSquareModel_TypeInfo, x);
+    byte_4A732D8 = 1;
   }
   if ( !x )
-    sub_1B8880C(this, x);
+    sub_1B9026C(this, x);
   klass = x->klass;
   v6 = *(unsigned __int16 *)(&x->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&x->klass->_2.bitflags2 + 3) )
@@ -465,7 +485,7 @@ bool __fastcall ClassBoardModelBuilder___c__DisplayClass10_0___UnionSquareLine_b
   else
   {
 LABEL_8:
-    p_method = sub_1BDA590(x, IClassBoardSquareModel_TypeInfo, 0LL);
+    p_method = sub_1BE1FF0(x, IClassBoardSquareModel_TypeInfo, 0LL);
   }
   return (*(unsigned int (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))p_method)(x, *(_QWORD *)(p_method + 8)) == v4->fields.squareId;
 }

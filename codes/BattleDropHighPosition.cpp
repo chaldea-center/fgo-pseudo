@@ -7,7 +7,7 @@ void __fastcall BattleDropHighPosition___ctor(BattleDropHighPosition_o *this, co
 void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *treasureObj; // x0
-  UnityEngine_Rigidbody_o *activeSelf; // x0
+  __int64 activeSelf; // x0
   __int64 v5; // x1
   _BOOL4 v6; // w20
   UnityEngine_Rigidbody_o *rigidbodyComp; // x20
@@ -19,43 +19,41 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
   treasureObj = this->fields.treasureObj;
   if ( treasureObj && this->fields.rigidbodyComp )
   {
-    activeSelf = (UnityEngine_Rigidbody_o *)UnityEngine_GameObject__get_activeSelf(treasureObj, 0LL);
+    activeSelf = UnityEngine_GameObject__get_activeSelf(treasureObj, 0LL);
     if ( !this->fields.rigidbodyComp )
       goto LABEL_23;
-    v6 = (unsigned __int8)activeSelf & 1;
-    UnityEngine_Rigidbody__set_isKinematic(this->fields.rigidbodyComp, !((unsigned __int8)activeSelf & 1), 0LL);
+    v6 = activeSelf & 1;
+    UnityEngine_Rigidbody__set_isKinematic(this->fields.rigidbodyComp, !(activeSelf & 1), 0LL);
     if ( this->fields.treasureEnable != v6 )
     {
       this->fields.treasureEnable = v6;
       if ( v6 )
       {
-        activeSelf = this->fields.rigidbodyComp;
+        activeSelf = (__int64)this->fields.rigidbodyComp;
         if ( !activeSelf )
           goto LABEL_23;
-        UnityEngine_Rigidbody__AddForce(activeSelf, this->fields.startAcceleration, 1, 0LL);
+        UnityEngine_Rigidbody__AddForce((UnityEngine_Rigidbody_o *)activeSelf, this->fields.startAcceleration, 1, 0LL);
       }
     }
     if ( this->fields.movingFlag )
     {
       if ( !this->fields.useAcceleration )
         return;
-      activeSelf = this->fields.rigidbodyComp;
+      activeSelf = (__int64)this->fields.rigidbodyComp;
       if ( activeSelf )
       {
-        UnityEngine_Rigidbody__AddForce(activeSelf, this->fields.localGravity, 5, 0LL);
-        activeSelf = (UnityEngine_Rigidbody_o *)UnityEngine_Component__get_transform(
-                                                  (UnityEngine_Component_o *)this,
-                                                  0LL);
+        UnityEngine_Rigidbody__AddForce((UnityEngine_Rigidbody_o *)activeSelf, this->fields.localGravity, 5, 0LL);
+        activeSelf = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
         if ( activeSelf )
         {
           localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)activeSelf, 0LL);
           if ( localPosition.fields.y > 0.0 )
             return;
           rigidbodyComp = this->fields.rigidbodyComp;
-          if ( !byte_4A55CE1 )
+          if ( !byte_4A6A9C1 )
           {
-            activeSelf = (UnityEngine_Rigidbody_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
-            byte_4A55CE1 = 1;
+            activeSelf = sub_1B90010(&UnityEngine_Vector3_TypeInfo, v5);
+            byte_4A6A9C1 = 1;
           }
           if ( rigidbodyComp )
           {
@@ -63,9 +61,7 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
               rigidbodyComp,
               UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
               0LL);
-            activeSelf = (UnityEngine_Rigidbody_o *)UnityEngine_Component__get_transform(
-                                                      (UnityEngine_Component_o *)this,
-                                                      0LL);
+            activeSelf = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
             if ( activeSelf )
             {
               v8 = (UnityEngine_Transform_o *)activeSelf;
@@ -82,10 +78,10 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
     else
     {
       v9 = this->fields.rigidbodyComp;
-      if ( !byte_4A55CE1 )
+      if ( !byte_4A6A9C1 )
       {
-        activeSelf = (UnityEngine_Rigidbody_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4A55CE1 = 1;
+        activeSelf = sub_1B90010(&UnityEngine_Vector3_TypeInfo, v5);
+        byte_4A6A9C1 = 1;
       }
       if ( v9 )
       {
@@ -94,7 +90,7 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
       }
     }
 LABEL_23:
-    sub_1B8880C(activeSelf, v5);
+    sub_1B9026C(activeSelf, v5);
   }
 }
 
@@ -122,10 +118,10 @@ void __fastcall BattleDropHighPosition__Initialize(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4A5D689 & 1) == 0 )
+  if ( (byte_4A723A0 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5D689 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A723A0 = 1;
   }
   this->fields.movingFlag = 1;
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
@@ -146,10 +142,10 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       v11 = this->fields.startAcceleration.fields.x;
       v12.n64_u64[0] = *(unsigned __int64 *)&this->fields.startAcceleration.fields.y;
-      if ( !byte_4A55CE1 )
+      if ( !byte_4A6A9C1 )
       {
-        sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4A55CE1 = 1;
+        sub_1B90010(&UnityEngine_Vector3_TypeInfo, v9);
+        byte_4A6A9C1 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v14.n64_u64[0] = vsub_f32(v12, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -166,7 +162,7 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       }
     }
-    sub_1B8880C(transform, v9);
+    sub_1B9026C(transform, v9);
   }
 }
 

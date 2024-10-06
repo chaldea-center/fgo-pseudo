@@ -10,29 +10,33 @@ void __fastcall SvtEqCombineListViewItemDraw__SetInput(
         bool isInput,
         const MethodInfo *method)
 {
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   int32_t type; // w8
   bool CanNotSelect; // w21
   UnityEngine_Object_o *baseButton; // x22
-  bool v9; // w0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
+  bool v13; // w0
+  __int64 v14; // x1
+  const MethodInfo *v15; // x2
   UnityEngine_Component_o *maskSprite; // x0
   bool isLock; // w8
   bool isChoice; // w8
   struct UILabel_o *maskLabel; // x21
-  __int64 *v16; // x8
-  UnityEngine_Object_o *v17; // x21
+  __int64 *v20; // x8
+  UnityEngine_Object_o *v21; // x21
   uint32_t cctor_finished; // w8
-  System_String_o *v19; // x1
+  System_String_o *v23; // x1
 
-  if ( (byte_4A5ED52 & 1) == 0 )
+  if ( (byte_4A73A6B & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&StringLiteral_9257/*"NONSELECT_MATERIAL"*/);
-    sub_1B885B0(&StringLiteral_9258/*"NONSELECT_MATERIAL_BASE_LVMAX"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5ED52 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, item);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B90010(&StringLiteral_9261/*"NONSELECT_MATERIAL"*/, v7);
+    sub_1B90010(&StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v8);
+    sub_1B90010(&StringLiteral_1/*""*/, v9);
+    byte_4A73A6B = 1;
   }
   if ( !item )
     goto LABEL_9;
@@ -53,10 +57,10 @@ LABEL_12:
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v9 = UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL);
+  v13 = UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL);
   if ( CanNotSelect )
   {
-    if ( v9 )
+    if ( v13 )
     {
       maskSprite = (UnityEngine_Component_o *)this->fields.baseButton;
       if ( !maskSprite )
@@ -97,15 +101,15 @@ LABEL_12:
             maskLabel = this->fields.maskLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v16 = &StringLiteral_9258/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
+            v20 = &StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
 LABEL_52:
-            maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
+            maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v20, 0LL);
             if ( maskLabel )
             {
-              v19 = (System_String_o *)maskSprite;
+              v23 = (System_String_o *)maskSprite;
               maskSprite = (UnityEngine_Component_o *)maskLabel;
 LABEL_65:
-              UILabel__set_text((UILabel_o *)maskSprite, v19, 0LL);
+              UILabel__set_text((UILabel_o *)maskSprite, v23, 0LL);
               goto LABEL_66;
             }
             goto LABEL_67;
@@ -116,7 +120,7 @@ LABEL_65:
   }
   else
   {
-    if ( v9 )
+    if ( v13 )
     {
       maskSprite = (UnityEngine_Component_o *)this->fields.baseButton;
       if ( !maskSprite )
@@ -143,13 +147,13 @@ LABEL_65:
     }
     if ( item )
     {
-      v17 = (UnityEngine_Object_o *)this->fields.baseButton;
+      v21 = (UnityEngine_Object_o *)this->fields.baseButton;
       cctor_finished = UnityEngine_Object_TypeInfo->_2.cctor_finished;
       if ( item->fields.isMaxSelect )
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality(v17, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality(v21, 0LL, 0LL) )
         {
           maskSprite = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( !maskSprite )
@@ -183,7 +187,7 @@ LABEL_65:
           maskLabel = this->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v16 = &StringLiteral_9257/*"NONSELECT_MATERIAL"*/;
+          v20 = &StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
           goto LABEL_52;
         }
       }
@@ -191,7 +195,7 @@ LABEL_65:
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality(v17, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality(v21, 0LL, 0LL) )
         {
           maskSprite = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( maskSprite )
@@ -225,7 +229,7 @@ LABEL_65:
                       maskSprite = (UnityEngine_Component_o *)this->fields.maskLabel;
                       if ( maskSprite )
                       {
-                        v19 = (System_String_o *)StringLiteral_1/*""*/;
+                        v23 = (System_String_o *)StringLiteral_1/*""*/;
                         goto LABEL_65;
                       }
                     }
@@ -235,13 +239,13 @@ LABEL_65:
             }
           }
 LABEL_67:
-          sub_1B8880C(maskSprite, v10);
+          sub_1B9026C(maskSprite, v14);
         }
       }
     }
   }
 LABEL_66:
-  SvtEqCombineListViewItemDraw__SetSelectDisp(this, item, v11);
+  SvtEqCombineListViewItemDraw__SetSelectDisp(this, item, v15);
 }
 
 
@@ -254,59 +258,68 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
 {
   SvtEqCombineListViewItem_o *v7; // x20
   SvtEqCombineListViewItemDraw_o *v8; // x19
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
   struct UserServantEntity_o *userSvtEntity; // x8
   ServantFaceIconComponent_o *servantface; // x22
-  __int128 v11; // q1
-  struct UserServantEntity_o *v12; // x8
-  __int128 v13; // q1
+  __int128 v20; // q1
+  struct UserServantEntity_o *v21; // x8
+  __int128 v22; // q1
   UIIconLabel_o *subIconLabel; // x8
-  struct UserServantEntity_o *v15; // x9
-  bool v16; // w1
+  struct UserServantEntity_o *v24; // x9
+  bool v25; // w1
   int32_t type; // w8
-  _BOOL4 v18; // w8
-  _BOOL4 v19; // w23
-  UnityEngine_Object_o *v20; // x22
-  bool v21; // w0
-  SvtEqCombineListViewItemDraw_o *v22; // x22
-  SvtEqCombineListViewItemDraw_o *v23; // x1
-  const MethodInfo *v24; // x2
+  _BOOL4 v27; // w8
+  _BOOL4 v28; // w23
+  UnityEngine_Object_o *v29; // x22
+  bool v30; // w0
+  SvtEqCombineListViewItemDraw_o *v31; // x22
+  SvtEqCombineListViewItemDraw_o *v32; // x1
+  const MethodInfo *v33; // x2
   UILabel_o *statusTextLabel; // x22
   _BOOL4 isLock; // w8
   UILabel_o *maskLabel; // x22
-  UILabel_o *v28; // x22
+  UILabel_o *v37; // x22
   _BOOL4 isChoice; // w8
-  UILabel_o *v30; // x22
-  const MethodInfo *v31; // x1
+  UILabel_o *v39; // x22
+  const MethodInfo *v40; // x1
   bool CanNotSelect; // w0
   UnityEngine_Object_o *baseButton; // x23
-  bool v34; // w22
-  bool v35; // w0
-  bool v36; // w8
-  bool v37; // w8
-  SvtEqCombineListViewItemDraw_o *v38; // x22
-  __int64 *v39; // x8
-  UnityEngine_Object_o *v40; // x22
+  bool v43; // w22
+  bool v44; // w0
+  bool v45; // w8
+  bool v46; // w8
+  SvtEqCombineListViewItemDraw_o *v47; // x22
+  __int64 *v48; // x8
+  UnityEngine_Object_o *v49; // x22
   uint32_t cctor_finished; // w8
-  SvtEqCombineListViewItemDraw_o *v42; // x1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v43; // [xsp+10h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v44; // [xsp+30h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v45; // [xsp+50h] [xbp-60h]
+  SvtEqCombineListViewItemDraw_o *v51; // x1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v52; // [xsp+10h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v53; // [xsp+30h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v54; // [xsp+50h] [xbp-60h]
 
   v7 = item;
   v8 = this;
-  if ( (byte_4A5ED51 & 1) == 0 )
+  if ( (byte_4A73A6A & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1B885B0(&StringLiteral_9257/*"NONSELECT_MATERIAL"*/);
-    sub_1B885B0(&StringLiteral_9258/*"NONSELECT_MATERIAL_BASE_LVMAX"*/);
-    sub_1B885B0(&StringLiteral_8754/*"MSG_ABLED_SVTEP_LIMITUP"*/);
-    sub_1B885B0(&StringLiteral_8290/*"LOCKMODE_SELECTED_SERVANT"*/);
-    sub_1B885B0(&StringLiteral_3465/*"CHOICE_SERVANT"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    this = (SvtEqCombineListViewItemDraw_o *)sub_1B885B0(&StringLiteral_8291/*"LOCK_SERVANT"*/);
-    byte_4A5ED51 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, item);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
+    sub_1B90010(&StringLiteral_9261/*"NONSELECT_MATERIAL"*/, v11);
+    sub_1B90010(&StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v12);
+    sub_1B90010(&StringLiteral_8758/*"MSG_ABLED_SVTEP_LIMITUP"*/, v13);
+    sub_1B90010(&StringLiteral_8294/*"LOCKMODE_SELECTED_SERVANT"*/, v14);
+    sub_1B90010(&StringLiteral_3466/*"CHOICE_SERVANT"*/, v15);
+    sub_1B90010(&StringLiteral_1/*""*/, v16);
+    this = (SvtEqCombineListViewItemDraw_o *)sub_1B90010(&StringLiteral_8295/*"LOCK_SERVANT"*/, v17);
+    byte_4A73A6A = 1;
   }
   if ( v7 && mode )
   {
@@ -316,34 +329,34 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     servantface = v8->fields.servantface;
     if ( v7->fields.type )
     {
-      v11 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-      *(_OWORD *)&v45.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v45.fields.fakeValue = v11;
+      v20 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+      *(_OWORD *)&v54.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v54.fields.fakeValue = v20;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v43 = v45;
-      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46453324(
-                                                 &v43,
+      v52 = v54;
+      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(
+                                                 &v52,
                                                  0LL);
       if ( !servantface )
         goto LABEL_197;
-      ServantFaceIconComponent__Set_38220052(
+      ServantFaceIconComponent__Set_38272172(
         servantface,
         (int64_t)this,
         v7->fields.iconLabelInfo1,
         v7->fields.iconLabelInfo2,
         0LL);
-      v12 = v7->fields.userSvtEntity;
-      if ( !v12 )
+      v21 = v7->fields.userSvtEntity;
+      if ( !v21 )
         goto LABEL_197;
       this = (SvtEqCombineListViewItemDraw_o *)v8->fields.subIconLabel;
       if ( !this )
         goto LABEL_197;
-      UIIconLabel__Set_38235604(
+      UIIconLabel__Set_38287724(
         (UIIconLabel_o *)this,
         36,
         v7->fields.rarity,
-        v12->fields.exceedCount,
+        v21->fields.exceedCount,
         0,
         0LL,
         0,
@@ -353,18 +366,18 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     }
     else
     {
-      v13 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
-      *(_OWORD *)&v45.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v45.fields.fakeValue = v13;
+      v22 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
+      *(_OWORD *)&v54.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v54.fields.fakeValue = v22;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v44 = v45;
-      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46453324(
-                                                 &v44,
+      v53 = v54;
+      this = (SvtEqCombineListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(
+                                                 &v53,
                                                  0LL);
       if ( !servantface )
         goto LABEL_197;
-      ServantFaceIconComponent__Set_38220052(servantface, (int64_t)this, v7->fields.iconLabelInfo1, 0LL, 0LL);
+      ServantFaceIconComponent__Set_38272172(servantface, (int64_t)this, v7->fields.iconLabelInfo1, 0LL, 0LL);
       this = (SvtEqCombineListViewItemDraw_o *)v7->fields.iconLabelInfo2;
       if ( !this )
         goto LABEL_197;
@@ -372,10 +385,10 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
       subIconLabel = v8->fields.subIconLabel;
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v15 = v7->fields.userSvtEntity;
-        if ( !v15 || !subIconLabel )
+        v24 = v7->fields.userSvtEntity;
+        if ( !v24 || !subIconLabel )
           goto LABEL_197;
-        UIIconLabel__Set_38235604(subIconLabel, 36, v7->fields.rarity, v15->fields.exceedCount, 0, 0LL, 0, 0, 0, 0LL);
+        UIIconLabel__Set_38287724(subIconLabel, 36, v7->fields.rarity, v24->fields.exceedCount, 0, 0LL, 0, 0, 0, 0LL);
       }
       else
       {
@@ -441,8 +454,8 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     this = (SvtEqCombineListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
       goto LABEL_197;
-    v16 = v7->fields.isSwapChoice ? !v7->fields.isChoice : v7->fields.isChoice;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v16, 0LL);
+    v25 = v7->fields.isSwapChoice ? !v7->fields.isChoice : v7->fields.isChoice;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v25, 0LL);
     this = (SvtEqCombineListViewItemDraw_o *)v8->fields.friendShipImg;
     if ( !this )
       goto LABEL_197;
@@ -485,7 +498,7 @@ LABEL_89:
         statusTextLabel = v8->fields.statusTextLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8754/*"MSG_ABLED_SVTEP_LIMITUP"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8758/*"MSG_ABLED_SVTEP_LIMITUP"*/, 0LL);
         if ( !statusTextLabel )
           goto LABEL_197;
         UILabel__set_text(statusTextLabel, (System_String_o *)this, 0LL);
@@ -528,7 +541,7 @@ LABEL_89:
         maskLabel = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8291/*"LOCK_SERVANT"*/, 0LL);
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8295/*"LOCK_SERVANT"*/, 0LL);
         if ( !maskLabel )
           goto LABEL_197;
         UILabel__set_text(maskLabel, (System_String_o *)this, 0LL);
@@ -544,13 +557,13 @@ LABEL_89:
       }
       if ( v7->fields.isNotSelection )
       {
-        v28 = v8->fields.maskLabel;
+        v37 = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9257/*"NONSELECT_MATERIAL"*/, 0LL);
-        if ( !v28 )
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+        if ( !v37 )
           goto LABEL_197;
-        UILabel__set_text(v28, (System_String_o *)this, 0LL);
+        UILabel__set_text(v37, (System_String_o *)this, 0LL);
         this = (SvtEqCombineListViewItemDraw_o *)v8->fields.statusTextLabel;
         if ( !this )
           goto LABEL_197;
@@ -566,13 +579,13 @@ LABEL_89:
         isChoice = v7->fields.isChoice;
       if ( isChoice )
       {
-        v30 = v8->fields.maskLabel;
+        v39 = v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3465/*"CHOICE_SERVANT"*/, 0LL);
-        if ( !v30 )
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3466/*"CHOICE_SERVANT"*/, 0LL);
+        if ( !v39 )
           goto LABEL_197;
-        UILabel__set_text(v30, (System_String_o *)this, 0LL);
+        UILabel__set_text(v39, (System_String_o *)this, 0LL);
         this = (SvtEqCombineListViewItemDraw_o *)v8->fields.statusTextLabel;
         if ( !this )
           goto LABEL_197;
@@ -583,16 +596,16 @@ LABEL_89:
           goto LABEL_197;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
       }
-      SvtEqCombineListViewItemDraw__SetSelectDisp(v8, v7, v24);
-      CanNotSelect = SvtEqCombineListViewItem__get_IsCanNotSelect(v7, v31);
+      SvtEqCombineListViewItemDraw__SetSelectDisp(v8, v7, v33);
+      CanNotSelect = SvtEqCombineListViewItem__get_IsCanNotSelect(v7, v40);
       baseButton = (UnityEngine_Object_o *)v8->fields.baseButton;
-      v34 = CanNotSelect;
+      v43 = CanNotSelect;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v35 = UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL);
-      if ( v34 )
+      v44 = UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL);
+      if ( v43 )
       {
-        if ( !v35 )
+        if ( !v44 )
           goto LABEL_186;
         this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
         if ( !this )
@@ -620,23 +633,23 @@ LABEL_89:
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
         if ( !v7->fields.isMaxNextLv && !v7->fields.isBaseLvMax )
           goto LABEL_186;
-        v36 = !v7->fields.isLock;
+        v45 = !v7->fields.isLock;
         if ( !v7->fields.isSwapLock )
-          v36 = v7->fields.isLock;
-        if ( v36 )
+          v45 = v7->fields.isLock;
+        if ( v45 )
           goto LABEL_186;
-        v37 = !v7->fields.isChoice;
+        v46 = !v7->fields.isChoice;
         if ( !v7->fields.isSwapChoice )
-          v37 = v7->fields.isChoice;
-        if ( v37 || v7->fields.isNotSelection )
+          v46 = v7->fields.isChoice;
+        if ( v46 || v7->fields.isNotSelection )
           goto LABEL_186;
-        v38 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
+        v47 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v39 = &StringLiteral_9258/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
+        v48 = &StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
         goto LABEL_172;
       }
-      if ( v35 )
+      if ( v44 )
       {
         this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
         if ( !this )
@@ -663,13 +676,13 @@ LABEL_89:
           goto LABEL_197;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
       }
-      v40 = (UnityEngine_Object_o *)v8->fields.baseButton;
+      v49 = (UnityEngine_Object_o *)v8->fields.baseButton;
       cctor_finished = UnityEngine_Object_TypeInfo->_2.cctor_finished;
       if ( v7->fields.isMaxSelect )
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality(v40, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality(v49, 0LL, 0LL) )
         {
           this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
           if ( !this )
@@ -704,25 +717,25 @@ LABEL_89:
           if ( !this )
             goto LABEL_197;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-          v38 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
+          v47 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v39 = &StringLiteral_9257/*"NONSELECT_MATERIAL"*/;
+          v48 = &StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
 LABEL_172:
-          this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v39, 0LL);
-          if ( !v38 )
+          this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v48, 0LL);
+          if ( !v47 )
             goto LABEL_197;
-          v42 = this;
-          this = v38;
+          v51 = this;
+          this = v47;
 LABEL_185:
-          UILabel__set_text((UILabel_o *)this, (System_String_o *)v42, 0LL);
+          UILabel__set_text((UILabel_o *)this, (System_String_o *)v51, 0LL);
         }
       }
       else
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality(v40, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality(v49, 0LL, 0LL) )
         {
           this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
           if ( !this )
@@ -760,7 +773,7 @@ LABEL_185:
           this = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
           if ( !this )
             goto LABEL_197;
-          v42 = (SvtEqCombineListViewItemDraw_o *)StringLiteral_1/*""*/;
+          v51 = (SvtEqCombineListViewItemDraw_o *)StringLiteral_1/*""*/;
           goto LABEL_185;
         }
       }
@@ -780,7 +793,7 @@ LABEL_186:
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            item = (SvtEqCombineListViewItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8290/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
+            item = (SvtEqCombineListViewItem_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8294/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
           }
           else
           {
@@ -795,7 +808,7 @@ LABEL_186:
         }
       }
 LABEL_197:
-      sub_1B8880C(this, item);
+      sub_1B9026C(this, item);
     }
     this = (SvtEqCombineListViewItemDraw_o *)v8->fields.limitCountIcon;
     if ( !this )
@@ -817,10 +830,10 @@ LABEL_197:
         goto LABEL_197;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     }
-    v18 = !v7->fields.isLock;
+    v27 = !v7->fields.isLock;
     if ( !v7->fields.isSwapLock )
-      v18 = v7->fields.isLock;
-    if ( v18 )
+      v27 = v7->fields.isLock;
+    if ( v27 )
     {
       this = (SvtEqCombineListViewItemDraw_o *)v8->fields.lockImg;
       if ( !this )
@@ -833,16 +846,16 @@ LABEL_197:
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     }
     if ( v7->fields.type )
-      v19 = 0;
+      v28 = 0;
     else
-      v19 = v7->fields.isLvMax && v7->fields.isLimitCntMax || v7->fields.isSvtEqMaterial;
-    v20 = (UnityEngine_Object_o *)v8->fields.baseButton;
+      v28 = v7->fields.isLvMax && v7->fields.isLimitCntMax || v7->fields.isSvtEqMaterial;
+    v29 = (UnityEngine_Object_o *)v8->fields.baseButton;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v21 = UnityEngine_Object__op_Inequality(v20, 0LL, 0LL);
-    if ( v19 )
+    v30 = UnityEngine_Object__op_Inequality(v29, 0LL, 0LL);
+    if ( v28 )
     {
-      if ( v21 )
+      if ( v30 )
       {
         this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
         if ( !this )
@@ -868,18 +881,18 @@ LABEL_197:
         if ( !this )
           goto LABEL_197;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        v22 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
+        v31 = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9258/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
-        if ( !v22 )
+        this = (SvtEqCombineListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
+        if ( !v31 )
           goto LABEL_197;
-        v23 = this;
-        this = v22;
+        v32 = this;
+        this = v31;
         goto LABEL_83;
       }
     }
-    else if ( v21 )
+    else if ( v30 )
     {
       this = (SvtEqCombineListViewItemDraw_o *)v8->fields.baseButton;
       if ( !this )
@@ -908,9 +921,9 @@ LABEL_197:
       this = (SvtEqCombineListViewItemDraw_o *)v8->fields.maskLabel;
       if ( !this )
         goto LABEL_197;
-      v23 = (SvtEqCombineListViewItemDraw_o *)StringLiteral_1/*""*/;
+      v32 = (SvtEqCombineListViewItemDraw_o *)StringLiteral_1/*""*/;
 LABEL_83:
-      UILabel__set_text((UILabel_o *)this, (System_String_o *)v23, 0LL);
+      UILabel__set_text((UILabel_o *)this, (System_String_o *)v32, 0LL);
     }
     if ( v7->fields.isBaseSvt )
     {
@@ -941,10 +954,10 @@ void __fastcall SvtEqCombineListViewItemDraw__SetSelectDisp(
   int32_t dragSelectNum; // w2
   int32_t selectNum; // w1
 
-  if ( (byte_4A5ED53 & 1) == 0 )
+  if ( (byte_4A73A6C & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5ED53 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, item);
+    byte_4A73A6C = 1;
   }
   dragSelect = (UnityEngine_Object_o *)this->fields.dragSelect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -969,6 +982,6 @@ LABEL_11:
       dragSelectNum = -1;
       goto LABEL_11;
     }
-    sub_1B8880C(v7, v6);
+    sub_1B9026C(v7, v6);
   }
 }

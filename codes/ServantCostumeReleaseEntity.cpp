@@ -1,16 +1,17 @@
 void __fastcall ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B826 & 1) == 0 )
+  if ( (byte_4A70532 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B826 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A70532 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t svtId,
         int32_t releaseType,
@@ -19,10 +20,10 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B824 & 1) == 0 )
+  if ( (byte_4A70530 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
-    byte_4A5B824 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___, *(_QWORD *)&releaseType);
+    byte_4A70530 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -30,7 +31,7 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_2E7E924 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_2E8D238 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
@@ -59,10 +60,10 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
   int32_t v7; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_4A5B825 & 1) == 0 )
+  if ( (byte_4A70531 & 1) == 0 )
   {
-    sub_1B885B0(&CondType_TypeInfo);
-    byte_4A5B825 = 1;
+    sub_1B90010(&CondType_TypeInfo, method);
+    byte_4A70531 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 64 )

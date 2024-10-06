@@ -15,10 +15,10 @@ void __fastcall ServantRepeatTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
   v8->fields.actiontype = 57;
   v8->fields.creator = creator;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&v8->fields.creator, (int32_t)creator, v9, v10);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v8->fields.creator, (int32_t)creator, v9, v10);
   v8->fields.targets = targets;
   v8 = (ServantRepeatTask_o *)((char *)v8 + 248);
-  sub_1B88554((ServantStatusBattleListViewItem_o *)v8, (int32_t)targets, v11, v12);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v8, (int32_t)targets, v11, v12);
   *(_DWORD *)&v8[-1].fields.IsNotShowSkillMessage = maxPriority;
 }
 
@@ -28,118 +28,127 @@ BattleLogicTask_array *__fastcall ServantRepeatTask__MakeActionTask(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  System_Collections_Generic_IEnumerable_TResult__o *IsNullOrEmpty; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
-  int32_t v10; // w2
-  int32_t v11; // w3
-  System_Collections_Generic_List_object__o *v12; // x20
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x21
+  System_Collections_Generic_IEnumerable_TResult__o *IsNullOrEmpty; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_Collections_Generic_List_object__o *v21; // x20
   System_Collections_Generic_IEnumerable_TSource__o *targets; // x22
-  System_Func_object__object__o *v14; // x23
+  System_Func_object__object__o *v23; // x23
   int32_t AiTimingPriority_k__BackingField; // w8
-  int32_t v16; // w21
+  int32_t v25; // w21
   ServantReactTaskCreator_o *creator; // x22
-  ReactTaskTarget_array *v18; // x23
-  ServantRepeatTask_o *v19; // x19
-  const MethodInfo *v20; // x4
-  int32_t v21; // w2
-  int32_t v22; // w3
+  ReactTaskTarget_array *v27; // x23
+  ServantRepeatTask_o *v28; // x19
+  const MethodInfo *v29; // x4
+  int32_t v30; // w2
+  int32_t v31; // w3
   struct System_Object_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v33; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
+  Il2CppClass **v35; // x0
 
-  if ( (byte_4A5DDCC & 1) == 0 )
+  if ( (byte_4A72AE4 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Linq_Enumerable_SelectMany_ReactTaskTarget__BattleLogicTask___);
-    sub_1B885B0(&System_Func_ReactTaskTarget__IEnumerable_BattleLogicTask___TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1B885B0(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    sub_1B885B0(&ServantRepeatTask_TypeInfo);
-    sub_1B885B0(&Method_ServantRepeatTask___c__DisplayClass3_0__MakeActionTask_b__0__);
-    sub_1B885B0(&ServantRepeatTask___c__DisplayClass3_0_TypeInfo);
-    byte_4A5DDCC = 1;
+    sub_1B90010(&Method_System_Linq_Enumerable_SelectMany_ReactTaskTarget__BattleLogicTask___, logic);
+    sub_1B90010(&System_Func_ReactTaskTarget__IEnumerable_BattleLogicTask___TypeInfo, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v8);
+    sub_1B90010(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v9);
+    sub_1B90010(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v10);
+    sub_1B90010(&ServantRepeatTask_TypeInfo, v11);
+    sub_1B90010(&Method_ServantRepeatTask___c__DisplayClass3_0__MakeActionTask_b__0__, v12);
+    sub_1B90010(&ServantRepeatTask___c__DisplayClass3_0_TypeInfo, v13);
+    byte_4A72AE4 = 1;
   }
-  v5 = sub_1B887FC(ServantRepeatTask___c__DisplayClass3_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
+  v14 = sub_1B9025C(ServantRepeatTask___c__DisplayClass3_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v14, 0LL);
+  if ( !v14 )
     goto LABEL_13;
-  *(_QWORD *)(v5 + 16) = this;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 16), (int32_t)this, v8, v9);
-  *(_QWORD *)(v5 + 24) = logic;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v5 + 24), (int32_t)logic, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  *(_QWORD *)(v14 + 16) = this;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 16), (int32_t)this, v17, v18);
+  *(_QWORD *)(v14 + 24) = logic;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v14 + 24), (int32_t)logic, v19, v20);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    v21,
+    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   IsNullOrEmpty = (System_Collections_Generic_IEnumerable_TResult__o *)BasicHelper__IsNullOrEmpty(
                                                                          (System_Collections_ICollection_o *)this->fields.targets,
                                                                          0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
     targets = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.targets;
-    v14 = (System_Func_object__object__o *)sub_1B887FC(System_Func_ReactTaskTarget__IEnumerable_BattleLogicTask___TypeInfo);
+    v23 = (System_Func_object__object__o *)sub_1B9025C(System_Func_ReactTaskTarget__IEnumerable_BattleLogicTask___TypeInfo);
     System_Func_object__object____ctor(
-      v14,
-      (Il2CppObject *)v5,
+      v23,
+      (Il2CppObject *)v14,
       Method_ServantRepeatTask___c__DisplayClass3_0__MakeActionTask_b__0__,
       0LL);
     IsNullOrEmpty = System_Linq_Enumerable__SelectMany_object__object_(
                       targets,
-                      (System_Func_TSource__IEnumerable_TResult___o *)v14,
-                      (const MethodInfo_2EB2990 *)Method_System_Linq_Enumerable_SelectMany_ReactTaskTarget__BattleLogicTask___);
-    if ( !v12 )
+                      (System_Func_TSource__IEnumerable_TResult___o *)v23,
+                      (const MethodInfo_2EC1310 *)Method_System_Linq_Enumerable_SelectMany_ReactTaskTarget__BattleLogicTask___);
+    if ( !v21 )
       goto LABEL_13;
     System_Collections_Generic_List_object___AddRange(
-      v12,
+      v21,
       (System_Collections_Generic_IEnumerable_T__o *)IsNullOrEmpty,
-      (const MethodInfo_34FDA40 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+      (const MethodInfo_3510BCC *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
   }
   AiTimingPriority_k__BackingField = this->fields._AiTimingPriority_k__BackingField;
-  v16 = AiTimingPriority_k__BackingField - 1;
+  v25 = AiTimingPriority_k__BackingField - 1;
   if ( AiTimingPriority_k__BackingField < 1 )
   {
-    if ( v12 )
+    if ( v21 )
       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
-                                        v12,
-                                        (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                        v21,
+                                        (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 LABEL_13:
-    sub_1B8880C(IsNullOrEmpty, v7);
+    sub_1B9026C(IsNullOrEmpty, v16);
   }
   creator = this->fields.creator;
-  v18 = this->fields.targets;
-  v19 = (ServantRepeatTask_o *)sub_1B887FC(ServantRepeatTask_TypeInfo);
-  ServantRepeatTask___ctor(v19, creator, v18, v16, v20);
-  if ( !v12 )
+  v27 = this->fields.targets;
+  v28 = (ServantRepeatTask_o *)sub_1B9025C(ServantRepeatTask_TypeInfo);
+  ServantRepeatTask___ctor(v28, creator, v27, v25, v29);
+  if ( !v21 )
     goto LABEL_13;
-  items = v12->fields._items;
-  v24 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
-  ++v12->fields._version;
+  items = v21->fields._items;
+  v33 = Method_System_Collections_Generic_List_BattleLogicTask__Add__;
+  ++v21->fields._version;
   if ( !items )
     goto LABEL_13;
-  size = v12->fields._size;
+  size = v21->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v12,
-      (Il2CppObject *)v19,
-      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      v21,
+      (Il2CppObject *)v28,
+      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
   }
   else
   {
-    v26 = &items->obj.klass + size;
-    v12->fields._size = size + 1;
-    v26[4] = (Il2CppClass *)v19;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)(v26 + 4), (int32_t)v19, v21, v22);
+    v35 = &items->obj.klass + size;
+    v21->fields._size = size + 1;
+    v35[4] = (Il2CppClass *)v28;
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v35 + 4), (int32_t)v28, v30, v31);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
-                                    v12,
-                                    (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    v21,
+                                    (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -161,7 +170,7 @@ System_Collections_Generic_IEnumerable_BattleLogicTask__o *__fastcall ServantRep
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !x )
-    sub_1B8880C(this, x);
+    sub_1B9026C(this, x);
   return (System_Collections_Generic_IEnumerable_BattleLogicTask__o *)ReactTaskTarget__CreateReactionTasks(
                                                                         x,
                                                                         _4__this->fields.creator,

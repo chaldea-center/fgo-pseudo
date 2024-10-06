@@ -1,9 +1,11 @@
 void __fastcall EventInfoTipsArchiveListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4A5C83C & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4A71550 & 1) == 0 )
   {
-    sub_1B885B0(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    byte_4A5C83C = 1;
+    sub_1B90010(&EventInfoTipsArchiveListViewItemDraw_TypeInfo, v1);
+    byte_4A71550 = 1;
   }
   EventInfoTipsArchiveListViewItemDraw_TypeInfo->static_fields->DEFAULT_FRAME_SIZE_HEIGHT = 200;
 }
@@ -36,10 +38,10 @@ UnityEngine_BoxCollider_o *__fastcall EventInfoTipsArchiveListViewItemDraw__GetF
   UnityEngine_BoxCollider_o *result; // x0
   struct EventInfoTipsArchiveListViewItemDrawSub_o *v7; // x8
 
-  if ( (byte_4A5C83B & 1) == 0 )
+  if ( (byte_4A7154F & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5C83B = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A7154F = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50,7 +52,7 @@ UnityEngine_BoxCollider_o *__fastcall EventInfoTipsArchiveListViewItemDraw__GetF
   {
     v7 = this->fields.currentSubDrawObject;
     if ( !v7 )
-      sub_1B8880C(0LL, v4);
+      sub_1B9026C(0LL, v4);
     return v7->fields.frameCollider;
   }
   return result;
@@ -61,36 +63,37 @@ int32_t __fastcall EventInfoTipsArchiveListViewItemDraw__GetHeight(
         EventInfoTipsArchiveListViewItemDraw_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *currentSubDrawObject; // x20
-  __int64 v4; // x1
-  EventInfoTipsArchiveListViewItemDrawSub_o *v5; // x0
-  EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
+  __int64 v5; // x1
+  EventInfoTipsArchiveListViewItemDrawSub_o *v6; // x0
+  EventInfoTipsArchiveListViewItemDraw_c *v8; // x0
 
-  if ( (byte_4A5C83A & 1) == 0 )
+  if ( (byte_4A7154E & 1) == 0 )
   {
-    sub_1B885B0(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5C83A = 1;
+    sub_1B90010(&EventInfoTipsArchiveListViewItemDraw_TypeInfo, method);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A7154E = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(currentSubDrawObject, 0LL, 0LL) )
   {
-    v5 = this->fields.currentSubDrawObject;
-    if ( !v5 )
-      sub_1B8880C(0LL, v4);
-    return EventInfoTipsArchiveListViewItemDrawSub__GetHeight(v5, 0LL);
+    v6 = this->fields.currentSubDrawObject;
+    if ( !v6 )
+      sub_1B9026C(0LL, v5);
+    return EventInfoTipsArchiveListViewItemDrawSub__GetHeight(v6, 0LL);
   }
   else
   {
-    v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+    v8 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
     if ( !EventInfoTipsArchiveListViewItemDraw_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-      v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+      v8 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
     }
-    return v7->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
+    return v8->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
   }
 }
 
@@ -140,10 +143,10 @@ void __fastcall EventInfoTipsArchiveListViewItemDraw__SetItem(
 
   v9 = id;
   v10 = this;
-  if ( (byte_4A5C839 & 1) == 0 )
+  if ( (byte_4A7154D & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5C839 = 1;
+    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_1B90010(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id);
+    byte_4A7154D = 1;
   }
   v10->fields.id = v9;
   v10->fields.dispMode = mode;
@@ -152,12 +155,12 @@ void __fastcall EventInfoTipsArchiveListViewItemDraw__SetItem(
   StateData = EventInfoTipsArchiveListViewItem__GetStateData(item, v9, (const MethodInfo *)item);
   v10->fields.stateData = StateData;
   p_stateData = &v10->fields.stateData;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&v10->fields.stateData, (int32_t)StateData, v13, v14);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v10->fields.stateData, (int32_t)StateData, v13, v14);
   *(_QWORD *)&id = v10->fields.stateData && v10->fields.stateData->fields.state & 1;
   this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;
   if ( !this )
     goto LABEL_17;
-  ShiningIconComponent__Set_38233872((ShiningIconComponent_o *)this, id, 0LL);
+  ShiningIconComponent__Set_38285992((ShiningIconComponent_o *)this, id, 0LL);
   if ( !*p_stateData )
     goto LABEL_17;
   subDrawList = v10->fields.subDrawList;
@@ -218,10 +221,10 @@ void __fastcall EventInfoTipsArchiveListViewItemDraw__SetItem(
     goto LABEL_17;
   if ( v18 >= v25->max_length )
 LABEL_41:
-    sub_1B88814(this, *(_QWORD *)&id);
+    sub_1B90274(this, *(_QWORD *)&id);
   v26 = (struct EventInfoTipsArchiveListViewItemDrawSub_o *)*((_QWORD *)&v25->obj.klass + v17);
   v10->fields.currentSubDrawObject = v26;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&v10->fields.currentSubDrawObject, (int32_t)v26, v23, v24);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v10->fields.currentSubDrawObject, (int32_t)v26, v23, v24);
 LABEL_28:
   FrameCollider = EventInfoTipsArchiveListViewItemDraw__GetFrameCollider(v10, *(const MethodInfo **)&id);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -254,7 +257,7 @@ LABEL_28:
       }
     }
 LABEL_17:
-    sub_1B8880C(this, *(_QWORD *)&id);
+    sub_1B9026C(this, *(_QWORD *)&id);
   }
 LABEL_36:
   this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;

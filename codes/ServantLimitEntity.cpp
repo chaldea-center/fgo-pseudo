@@ -1,28 +1,29 @@
 void __fastcall ServantLimitEntity___ctor(ServantLimitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B8D1 & 1) == 0 )
+  if ( (byte_4A705DD & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B8D1 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A705DD = 1;
   }
   this->fields.weaponColor = 0xFFFFFF;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantLimitEntity__CreatePK(int32_t svtId, int32_t limitCount, const MethodInfo *method)
 {
-  if ( (byte_4A5B8C9 & 1) == 0 )
+  if ( (byte_4A705D5 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4A5B8C9 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&limitCount);
+    byte_4A705D5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            limitCount,
-           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -34,23 +35,28 @@ System_String_o *__fastcall ServantLimitEntity__CreatePrimaryKey(ServantLimitEnt
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantLimitEntity__GetAscensionAfterDialogId(
         ServantLimitEntity_o *this,
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  int32_t v3; // w19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_object__object__o *Dictionary; // x0
-  __int64 v7; // x1
-  System_String_o *v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B8CC & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705D8 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_16922/*"ascensionAfterDialogId"*/);
-    byte_4A5B8CC = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_16947/*"ascensionAfterDialogId"*/, v6);
+    byte_4A705D8 = 1;
   }
   value = 0LL;
   strParam = this->fields.strParam;
@@ -61,42 +67,47 @@ int32_t __fastcall ServantLimitEntity__GetAscensionAfterDialogId(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          Dictionary,
-         (Il2CppObject *)StringLiteral_16922/*"ascensionAfterDialogId"*/,
+         (Il2CppObject *)StringLiteral_16947/*"ascensionAfterDialogId"*/,
          &value,
-         (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( value )
     {
-      v8 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
-                                value,
-                                value->klass->vtable[4].methodPtr);
-      return System_Int32__Parse(v8, 0LL);
+      v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
+                                 value,
+                                 value->klass->vtable[4].methodPtr);
+      return System_Int32__Parse(v10, 0LL);
     }
 LABEL_10:
-    sub_1B8880C(Dictionary, v7);
+    sub_1B9026C(Dictionary, v9);
   }
-  return defaultValue;
+  return v3;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantLimitEntity__GetChangeGraphCommonReleaseId(
         ServantLimitEntity_o *this,
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  int32_t v3; // w19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_object__object__o *Dictionary; // x0
-  __int64 v7; // x1
-  System_String_o *v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B8CD & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705D9 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_17808/*"changeGraphCommonReleaseId"*/);
-    byte_4A5B8CD = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_17834/*"changeGraphCommonReleaseId"*/, v6);
+    byte_4A705D9 = 1;
   }
   value = 0LL;
   strParam = this->fields.strParam;
@@ -107,22 +118,22 @@ int32_t __fastcall ServantLimitEntity__GetChangeGraphCommonReleaseId(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          Dictionary,
-         (Il2CppObject *)StringLiteral_17808/*"changeGraphCommonReleaseId"*/,
+         (Il2CppObject *)StringLiteral_17834/*"changeGraphCommonReleaseId"*/,
          &value,
-         (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( value )
     {
-      v8 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
-                                value,
-                                value->klass->vtable[4].methodPtr);
-      return System_Int32__Parse(v8, 0LL);
+      v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
+                                 value,
+                                 value->klass->vtable[4].methodPtr);
+      return System_Int32__Parse(v10, 0LL);
     }
 LABEL_10:
-    sub_1B8880C(Dictionary, v7);
+    sub_1B9026C(Dictionary, v9);
   }
-  return defaultValue;
+  return v3;
 }
 
 
@@ -131,17 +142,21 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeGraphSuffix(
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
+  System_String_o *v3; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_object__object__o *Dictionary; // x0
-  __int64 v7; // x1
+  __int64 v9; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B8CE & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705DA & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_17809/*"changeGraphSuffix"*/);
-    byte_4A5B8CE = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_17835/*"changeGraphSuffix"*/, v6);
+    byte_4A705DA = 1;
   }
   value = 0LL;
   strParam = this->fields.strParam;
@@ -152,9 +167,9 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeGraphSuffix(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          Dictionary,
-         (Il2CppObject *)StringLiteral_17809/*"changeGraphSuffix"*/,
+         (Il2CppObject *)StringLiteral_17835/*"changeGraphSuffix"*/,
          &value,
-         (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( value )
@@ -162,29 +177,34 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeGraphSuffix(
                                   value,
                                   value->klass->vtable[4].methodPtr);
 LABEL_10:
-    sub_1B8880C(Dictionary, v7);
+    sub_1B9026C(Dictionary, v9);
   }
-  return defaultValue;
+  return v3;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantLimitEntity__GetChangeIconCommonReleaseId(
         ServantLimitEntity_o *this,
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  int32_t v3; // w19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_object__object__o *Dictionary; // x0
-  __int64 v7; // x1
-  System_String_o *v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B8CF & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705DB & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_17811/*"changeIconCommonReleaseId"*/);
-    byte_4A5B8CF = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_17837/*"changeIconCommonReleaseId"*/, v6);
+    byte_4A705DB = 1;
   }
   value = 0LL;
   strParam = this->fields.strParam;
@@ -195,22 +215,22 @@ int32_t __fastcall ServantLimitEntity__GetChangeIconCommonReleaseId(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          Dictionary,
-         (Il2CppObject *)StringLiteral_17811/*"changeIconCommonReleaseId"*/,
+         (Il2CppObject *)StringLiteral_17837/*"changeIconCommonReleaseId"*/,
          &value,
-         (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( value )
     {
-      v8 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
-                                value,
-                                value->klass->vtable[4].methodPtr);
-      return System_Int32__Parse(v8, 0LL);
+      v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
+                                 value,
+                                 value->klass->vtable[4].methodPtr);
+      return System_Int32__Parse(v10, 0LL);
     }
 LABEL_10:
-    sub_1B8880C(Dictionary, v7);
+    sub_1B9026C(Dictionary, v9);
   }
-  return defaultValue;
+  return v3;
 }
 
 
@@ -219,17 +239,21 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeIconSuffix(
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
+  System_String_o *v3; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_object__object__o *Dictionary; // x0
-  __int64 v7; // x1
+  __int64 v9; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5B8D0 & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705DC & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_17812/*"changeIconSuffix"*/);
-    byte_4A5B8D0 = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_17838/*"changeIconSuffix"*/, v6);
+    byte_4A705DC = 1;
   }
   value = 0LL;
   strParam = this->fields.strParam;
@@ -240,9 +264,9 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeIconSuffix(
     goto LABEL_10;
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          Dictionary,
-         (Il2CppObject *)StringLiteral_17812/*"changeIconSuffix"*/,
+         (Il2CppObject *)StringLiteral_17838/*"changeIconSuffix"*/,
          &value,
-         (const MethodInfo_31C89D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+         (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)value;
     if ( value )
@@ -250,30 +274,35 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeIconSuffix(
                                   value,
                                   value->klass->vtable[4].methodPtr);
 LABEL_10:
-    sub_1B8880C(Dictionary, v7);
+    sub_1B9026C(Dictionary, v9);
   }
-  return defaultValue;
+  return v3;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantLimitEntity__GetSaintGraphNameIndex(
         ServantLimitEntity_o *this,
         int32_t defaultValue,
         const MethodInfo *method)
 {
+  int32_t v3; // w19
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_String_o *strParam; // x20
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
   Il2CppObject *Item; // x0
-  __int64 v8; // x1
-  System_String_o *v9; // x0
+  __int64 v10; // x1
+  System_String_o *v11; // x0
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5B8CB & 1) == 0 )
+  v3 = defaultValue;
+  if ( (byte_4A705D7 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_23000/*"saintGraphImageId"*/);
-    byte_4A5B8CB = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, *(_QWORD *)&defaultValue);
+    sub_1B90010(&JsonManager_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_23035/*"saintGraphImageId"*/, v6);
+    byte_4A705D7 = 1;
   }
   strParam = this->fields.strParam;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -281,34 +310,36 @@ int32_t __fastcall ServantLimitEntity__GetSaintGraphNameIndex(
   Dictionary = JsonManager__getDictionary(strParam, 0LL);
   if ( Dictionary )
   {
-    result = defaultValue;
+    result = v3;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-             (Il2CppObject *)StringLiteral_23000/*"saintGraphImageId"*/,
-             (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23035/*"saintGraphImageId"*/,
+             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
-      sub_1B8880C(0LL, v8);
-    v9 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
-                              Item,
-                              Item->klass->vtable[4].methodPtr);
-    if ( System_Int32__TryParse(v9, &result, 0LL) && result >= 0 )
+      sub_1B9026C(0LL, v10);
+    v11 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+                               Item,
+                               Item->klass->vtable[4].methodPtr);
+    if ( System_Int32__TryParse(v11, &result, 0LL) && result >= 0 )
       return result;
   }
-  return defaultValue;
+  return v3;
 }
 
 
 bool __fastcall ServantLimitEntity__IsNeedChangeSaintGraphName(ServantLimitEntity_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   System_String_o *strParam; // x19
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
 
-  if ( (byte_4A5B8CA & 1) == 0 )
+  if ( (byte_4A705D6 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_23000/*"saintGraphImageId"*/);
-    byte_4A5B8CA = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1B90010(&JsonManager_TypeInfo, v3);
+    sub_1B90010(&StringLiteral_23035/*"saintGraphImageId"*/, v4);
+    byte_4A705D6 = 1;
   }
   strParam = this->fields.strParam;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -317,8 +348,8 @@ bool __fastcall ServantLimitEntity__IsNeedChangeSaintGraphName(ServantLimitEntit
   if ( Dictionary )
     LOBYTE(Dictionary) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                            (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-                           (Il2CppObject *)StringLiteral_23000/*"saintGraphImageId"*/,
-                           (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                           (Il2CppObject *)StringLiteral_23035/*"saintGraphImageId"*/,
+                           (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)Dictionary;
 }
 

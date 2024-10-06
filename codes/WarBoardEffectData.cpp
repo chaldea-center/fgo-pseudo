@@ -3,37 +3,39 @@ void __fastcall WarBoardEffectData___ctor(
         WarBoardStageLayoutEntity_o *layout,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v8; // x1
   Il2CppObject *Entity; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4A58F3E & 1) == 0 )
+  if ( (byte_4A6DC42 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_WarBoardEffectMaster___);
-    sub_1B885B0(&Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A58F3E = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_WarBoardEffectMaster___, layout);
+    sub_1B90010(&Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4A6DC42 = 1;
   }
   this->fields.effectId = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !layout
     || (this->fields._squareIndex_k__BackingField = layout->fields.squareIndex,
         this->fields.effectId = layout->fields.effectId,
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_WarBoardEffectMaster___)) == 0LL )
+                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_WarBoardEffectMaster___)) == 0LL )
   {
-    sub_1B8880C(Instance, v6);
+    sub_1B9026C(Instance, v8);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.effectId,
-             (const MethodInfo_311D934 *)Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
+             (const MethodInfo_312C5A8 *)Method_DataMasterBase_WarBoardEffectMaster__WarBoardEffectEntity__int__GetEntity__);
   this->fields.effectEntity = (struct WarBoardEffectEntity_o *)Entity;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.effectEntity, (int32_t)Entity, v8, v9);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.effectEntity, (int32_t)Entity, v10, v11);
 }
 
 
@@ -53,7 +55,7 @@ void __fastcall WarBoardEffectData__SetComponent(
   int32_t v3; // w3
 
   this->fields.component = component;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.component, (int32_t)component, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.component, (int32_t)component, (int32_t)method, v3);
 }
 
 
@@ -63,7 +65,7 @@ void __fastcall WarBoardEffectData__SetEffectEnable(WarBoardEffectData_o *this, 
 
   component = this->fields.component;
   if ( !component )
-    sub_1B8880C(0LL, enable);
+    sub_1B9026C(0LL, enable);
   WarBoardEffectComponent__SetColliderEnable(component, enable, 0LL);
 }
 
@@ -74,7 +76,7 @@ void __fastcall WarBoardEffectData__SetTouchEnable(WarBoardEffectData_o *this, b
 
   component = this->fields.component;
   if ( !component )
-    sub_1B8880C(0LL, enable);
+    sub_1B9026C(0LL, enable);
   WarBoardEffectComponent__SetTouchEnable(component, enable, 0LL);
 }
 
@@ -92,10 +94,10 @@ System_String_o *__fastcall WarBoardEffectData__get_description(WarBoardEffectDa
   struct WarBoardEffectEntity_o *effectEntity; // x8
   struct System_String_StaticFields *p_effectName; // x8
 
-  if ( (byte_4A58F40 & 1) == 0 )
+  if ( (byte_4A6DC44 & 1) == 0 )
   {
-    sub_1B885B0(&string_TypeInfo);
-    byte_4A58F40 = 1;
+    sub_1B90010(&string_TypeInfo, method);
+    byte_4A6DC44 = 1;
   }
   effectEntity = this->fields.effectEntity;
   if ( effectEntity )
@@ -141,10 +143,10 @@ System_String_o *__fastcall WarBoardEffectData__get_name(WarBoardEffectData_o *t
   struct WarBoardEffectEntity_o *effectEntity; // x8
   struct System_String_StaticFields *p_name; // x8
 
-  if ( (byte_4A58F3F & 1) == 0 )
+  if ( (byte_4A6DC43 & 1) == 0 )
   {
-    sub_1B885B0(&string_TypeInfo);
-    byte_4A58F3F = 1;
+    sub_1B90010(&string_TypeInfo, method);
+    byte_4A6DC43 = 1;
   }
   effectEntity = this->fields.effectEntity;
   if ( effectEntity )

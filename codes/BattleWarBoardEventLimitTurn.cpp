@@ -5,20 +5,20 @@ void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A5D6E6 & 1) == 0 )
+  if ( (byte_4A723FD & 1) == 0 )
   {
-    sub_1B885B0(&int___TypeInfo);
-    byte_4A5D6E6 = 1;
+    sub_1B90010(&int___TypeInfo, method);
+    byte_4A723FD = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_1B88658(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_1B900B8(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1B8880C(0LL, v4);
+    sub_1B9026C(0LL, v4);
   if ( !v3->max_length )
-    sub_1B88814(v3, v3);
+    sub_1B90274(v3, v3);
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -69,7 +69,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         {
           TurnEffect = StageEntity__getTurnEffect(stage, (int32_t)battleEvent, 0LL);
           Data_k__BackingField->fields.turnEffect = TurnEffect;
-          sub_1B88554(
+          sub_1B8FFB4(
             (ServantStatusBattleListViewItem_o *)&Data_k__BackingField->fields.turnEffect,
             (int32_t)TurnEffect,
             v13,
@@ -85,7 +85,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
                       this->fields.defTurnEffect,
                       0LL);
               Data_k__BackingField->fields.turnEffect = v16;
-              sub_1B88554(
+              sub_1B8FFB4(
                 (ServantStatusBattleListViewItem_o *)&Data_k__BackingField->fields.turnEffect,
                 (int32_t)v16,
                 v17,
@@ -96,7 +96,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         }
       }
 LABEL_16:
-      sub_1B8880C(this, battleEvent);
+      sub_1B9026C(this, battleEvent);
     }
   }
 }

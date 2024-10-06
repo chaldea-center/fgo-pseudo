@@ -1,9 +1,9 @@
 void __fastcall CoinConfirmDialog___ctor(CoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5E67B & 1) == 0 )
+  if ( (byte_4A73394 & 1) == 0 )
   {
-    sub_1B885B0(&BaseDialog_TypeInfo);
-    byte_4A5E67B = 1;
+    sub_1B90010(&BaseDialog_TypeInfo, method);
+    byte_4A73394 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,30 +15,31 @@ void __fastcall CoinConfirmDialog__Close(CoinConfirmDialog_o *this, const Method
 {
   const MethodInfo *v2; // x2
 
-  CoinConfirmDialog__Close_44559128(this, 0LL, v2);
+  CoinConfirmDialog__Close_44614540(this, 0LL, v2);
 }
 
 
-void __fastcall CoinConfirmDialog__Close_44559128(
+void __fastcall CoinConfirmDialog__Close_44614540(
         CoinConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  System_Action_o *v6; // x20
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
 
-  if ( (byte_4A5E676 & 1) == 0 )
+  if ( (byte_4A7338F & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_CoinConfirmDialog_EndClose__);
-    byte_4A5E676 = 1;
+    sub_1B90010(&System_Action_TypeInfo, callback);
+    sub_1B90010(&Method_CoinConfirmDialog_EndClose__, v6);
+    byte_4A7338F = 1;
   }
   this->fields.onClose = callback;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.onClose, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.onClose, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 2;
-  v6 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_CoinConfirmDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
+  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_CoinConfirmDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
@@ -48,10 +49,10 @@ void __fastcall CoinConfirmDialog__DestroyList(CoinConfirmDialog_o *this, const 
   const MethodInfo *v4; // x1
   CoinRoomCoinListViewManager_o *v5; // x0
 
-  if ( (byte_4A5E679 & 1) == 0 )
+  if ( (byte_4A73392 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E679 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A73392 = 1;
   }
   viewManager = (UnityEngine_Object_o *)this->fields.viewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -60,7 +61,7 @@ void __fastcall CoinConfirmDialog__DestroyList(CoinConfirmDialog_o *this, const 
   {
     v5 = this->fields.viewManager;
     if ( !v5 )
-      sub_1B8880C(0LL, v4);
+      sub_1B9026C(0LL, v4);
     CoinRoomCoinListViewManager__DestroyList(v5, v4);
   }
 }
@@ -82,7 +83,7 @@ void __fastcall CoinConfirmDialog__EndClose(CoinConfirmDialog_o *this, const Met
   if ( onClose )
   {
     p_onClose->klass = 0LL;
-    sub_1B88554(p_onClose, 0, v3, v4);
+    sub_1B8FFB4(p_onClose, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -103,19 +104,19 @@ void __fastcall CoinConfirmDialog__OnClickCancel(CoinConfirmDialog_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A5E678 & 1) == 0 )
+  if ( (byte_4A73391 & 1) == 0 )
   {
-    sub_1B885B0(&Method_CoinConfirmDialog_OnClickCancel__);
-    byte_4A5E678 = 1;
+    sub_1B90010(&Method_CoinConfirmDialog_OnClickCancel__, method);
+    byte_4A73391 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_CoinConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CoinConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8(Method_CoinConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028(Method_CoinConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
-    CoinConfirmDialog__Close_44559128(this, 0LL, v5);
+    CoinConfirmDialog__Close_44614540(this, 0LL, v5);
   }
 }
 
@@ -132,10 +133,10 @@ void __fastcall CoinConfirmDialog__OnClickDecide(CoinConfirmDialog_o *this, cons
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4A5E677 & 1) == 0 )
+  if ( (byte_4A73390 & 1) == 0 )
   {
-    sub_1B885B0(&Method_CoinConfirmDialog_OnClickDecide__);
-    byte_4A5E677 = 1;
+    sub_1B90010(&Method_CoinConfirmDialog_OnClickDecide__, method);
+    byte_4A73390 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -145,14 +146,14 @@ void __fastcall CoinConfirmDialog__OnClickDecide(CoinConfirmDialog_o *this, cons
     {
       v5 = Method_CoinConfirmDialog_OnClickDecide__;
       if ( (*((_BYTE *)Method_CoinConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1B885C8(Method_CoinConfirmDialog_OnClickDecide__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1B88594(v5, v5[4]);
+        v5 = (_QWORD *)sub_1B90028(Method_CoinConfirmDialog_OnClickDecide__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0LL);
       klass = p_onDecide->klass;
       p_onDecide->klass = 0LL;
-      sub_1B88554(p_onDecide, 0, v8, v9);
+      sub_1B8FFB4(p_onDecide, 0, v8, v9);
       if ( !klass )
-        sub_1B8880C(v10, v11);
+        sub_1B9026C(v10, v11);
       ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
         klass->_1.element_class,
         *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -165,13 +166,13 @@ void __fastcall CoinConfirmDialog__OnEnable(CoinConfirmDialog_o *this, const Met
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4A5E67A & 1) == 0 )
+  if ( (byte_4A73393 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_15650/*"Window/Objects/CancelButton"*/);
-    byte_4A5E67A = 1;
+    sub_1B90010(&StringLiteral_15675/*"Window/Objects/CancelButton"*/, method);
+    byte_4A73393 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_41945856(transform, (System_String_o *)StringLiteral_15650/*"Window/Objects/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42000584(transform, (System_String_o *)StringLiteral_15675/*"Window/Objects/CancelButton"*/, 0LL);
 }
 
 
@@ -181,30 +182,34 @@ void __fastcall CoinConfirmDialog__Open(
         System_Action_o *onDecide,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  int32_t v9; // w2
-  int32_t v10; // w3
+  __int64 v9; // x1
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
   UILabel_o *titleLabel; // x21
-  System_String_o *v12; // x0
-  System_String_o *v13; // x21
-  int32_t v14; // w0
+  System_String_o *v16; // x0
+  System_String_o *v17; // x21
+  int32_t v18; // w0
   UILabel_o *detailLabel; // x22
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  Il2CppObject *v19; // x0
-  const MethodInfo *v20; // x5
-  int32_t v21; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v20; // x2
+  __int64 v21; // x3
+  __int64 v22; // x4
+  Il2CppObject *v23; // x0
+  const MethodInfo *v24; // x5
+  int32_t v25; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A5E675 & 1) == 0 )
+  if ( (byte_4A7338E & 1) == 0 )
   {
-    sub_1B885B0(&CoinRoomUtility_TypeInfo);
-    sub_1B885B0(&int_TypeInfo);
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_3623/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/);
-    sub_1B885B0(&StringLiteral_3624/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/);
-    byte_4A5E675 = 1;
+    sub_1B90010(&CoinRoomUtility_TypeInfo, selectedCoinDic);
+    sub_1B90010(&int_TypeInfo, v7);
+    sub_1B90010(&LocalizationManager_TypeInfo, v8);
+    sub_1B90010(&StringLiteral_3624/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, v9);
+    sub_1B90010(&StringLiteral_3625/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, v10);
+    byte_4A7338E = 1;
   }
   if ( !this->fields.state )
   {
@@ -213,29 +218,29 @@ void __fastcall CoinConfirmDialog__Open(
       goto LABEL_14;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
     this->fields.onDecide = onDecide;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.onDecide, (int32_t)onDecide, v9, v10);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.onDecide, (int32_t)onDecide, v13, v14);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3624/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3625/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_14;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3623/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, 0LL);
-    v13 = v12;
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3624/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, 0LL);
+    v17 = v16;
     if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-    v14 = CoinRoomUtility__MaxPoint((const MethodInfo *)v12);
+    v18 = CoinRoomUtility__MaxPoint((const MethodInfo *)v16);
     detailLabel = this->fields.detailLabel;
-    v21 = v14;
-    v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v16, v17, v18);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format(v13, v19, 0LL);
+    v25 = v18;
+    v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v20, v21, v22);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format(v17, v23, 0LL);
     if ( !detailLabel
       || (UILabel__set_text(detailLabel, (System_String_o *)gameObject, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.viewManager) == 0LL) )
     {
 LABEL_14:
-      sub_1B8880C(gameObject, v8);
+      sub_1B9026C(gameObject, v12);
     }
     CoinRoomCoinListViewManager__CreateConfirmList(
       (CoinRoomCoinListViewManager_o *)gameObject,
@@ -243,7 +248,7 @@ LABEL_14:
       1,
       0,
       1,
-      v20);
+      v24);
     this->fields.state = 1;
     BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
   }

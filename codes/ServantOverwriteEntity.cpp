@@ -1,32 +1,33 @@
 void __fastcall ServantOverwriteEntity___ctor(ServantOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B907 & 1) == 0 )
+  if ( (byte_4A70613 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B907 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A70613 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantOverwriteEntity__CreatePK(
         int32_t svtId,
         int32_t type,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B906 & 1) == 0 )
+  if ( (byte_4A70612 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4A5B906 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4A70612 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            type,
            priority,
-           (const MethodInfo_2E7DFBC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2E8C8D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -40,19 +41,20 @@ System_String_o *__fastcall ServantOverwriteEntity__CreatePrimaryKey(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ServantOverwriteEntity__GetOverwriteTreasureDeviceId(
         ServantOverwriteEntity_o *this,
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B905 & 1) == 0 )
+  if ( (byte_4A70611 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22415/*"overwriteTreasureDeviceId"*/);
-    byte_4A5B905 = 1;
+    sub_1B90010(&StringLiteral_22448/*"overwriteTreasureDeviceId"*/, *(_QWORD *)&defaultValue);
+    byte_4A70611 = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.overwriteValue,
-           (System_String_o *)StringLiteral_22415/*"overwriteTreasureDeviceId"*/,
+           (System_String_o *)StringLiteral_22448/*"overwriteTreasureDeviceId"*/,
            defaultValue,
            0LL);
 }

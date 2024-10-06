@@ -1,20 +1,20 @@
 void __fastcall WarBoardRatingBaseEntity___ctor(WarBoardRatingBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C14A & 1) == 0 )
+  if ( (byte_4A70E59 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
-    byte_4A5C14A = 1;
+    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A70E59 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.viewPoint = 0LL;
   *(_QWORD *)&this->fields.adjustmentValueA2 = 0LL;
 }
 
 
-void __fastcall WarBoardRatingBaseEntity___ctor_40348736(
+void __fastcall WarBoardRatingBaseEntity___ctor_40402476(
         WarBoardRatingBaseEntity_o *this,
         WarBoardRatingBaseEntity_o *cSrc,
         const MethodInfo *method)
@@ -22,16 +22,16 @@ void __fastcall WarBoardRatingBaseEntity___ctor_40348736(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A5C14B & 1) == 0 )
+  if ( (byte_4A70E5A & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
-    byte_4A5C14B = 1;
+    sub_1B90010(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_4A70E5A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1B8880C(v5, v6);
+    sub_1B9026C(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   *(_QWORD *)&this->fields.adjustmentValueA2 = *(_QWORD *)&cSrc->fields.adjustmentValueA2;
 }

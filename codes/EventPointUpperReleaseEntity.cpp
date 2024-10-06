@@ -1,16 +1,17 @@
 void __fastcall EventPointUpperReleaseEntity___ctor(EventPointUpperReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B1F1 & 1) == 0 )
+  if ( (byte_4A6FEFC & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B1F1 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A6FEFC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePK(
         int32_t version,
         int32_t eventPointUpperId,
@@ -18,17 +19,17 @@ System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B1F0 & 1) == 0 )
+  if ( (byte_4A6FEFB & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4A5B1F0 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&eventPointUpperId);
+    byte_4A6FEFB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            version,
            eventPointUpperId,
            priority,
            idx,
-           (const MethodInfo_2E7E47C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E8CD90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

@@ -1,91 +1,97 @@
 void __fastcall EventHeelPortraitAssetManager___ctor(EventHeelPortraitAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
-  __int64 v4; // x1
-  int32_t v5; // w2
-  int32_t v6; // w3
-  struct System_String_array *v7; // x20
-  int32_t v8; // w1
-  int32_t v9; // w2
-  int32_t v10; // w3
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x1
+  int32_t v6; // w2
+  int32_t v7; // w3
+  struct System_String_array *v8; // x20
+  int32_t v9; // w1
+  int32_t v10; // w2
+  int32_t v11; // w3
 
-  if ( (byte_4A5F0CF & 1) == 0 )
+  if ( (byte_4A73DE8 & 1) == 0 )
   {
-    sub_1B885B0(&string___TypeInfo);
-    sub_1B885B0(&StringLiteral_6228/*"EventUI/Prefabs/"*/);
-    byte_4A5F0CF = 1;
+    sub_1B90010(&string___TypeInfo, method);
+    sub_1B90010(&StringLiteral_6229/*"EventUI/Prefabs/"*/, v3);
+    byte_4A73DE8 = 1;
   }
-  v3 = sub_1B88658(string___TypeInfo, 1LL);
-  if ( !v3 )
-    sub_1B8880C(0LL, v4);
-  v7 = (struct System_String_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-    sub_1B88814(v3, v4);
-  v8 = StringLiteral_6228/*"EventUI/Prefabs/"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_6228/*"EventUI/Prefabs/"*/;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v3 + 32), v8, v5, v6);
-  this->fields.loadAssetNames = v7;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.loadAssetNames, (int32_t)v7, v9, v10);
+  v4 = sub_1B900B8(string___TypeInfo, 1LL);
+  if ( !v4 )
+    sub_1B9026C(0LL, v5);
+  v8 = (struct System_String_array *)v4;
+  if ( !*(_DWORD *)(v4 + 24) )
+    sub_1B90274(v4, v5);
+  v9 = StringLiteral_6229/*"EventUI/Prefabs/"*/;
+  *(_QWORD *)(v4 + 32) = StringLiteral_6229/*"EventUI/Prefabs/"*/;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v4 + 32), v9, v6, v7);
+  this->fields.loadAssetNames = v8;
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.loadAssetNames, (int32_t)v8, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventHeelPortraitAssetManager__GetAssets(
         EventHeelPortraitAssetManager_o *this,
         int32_t eventId,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x19
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  int32_t v10; // w2
-  int32_t v11; // w3
-  int32_t v12; // w2
-  int32_t v13; // w3
+  __int64 v10; // x19
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  int32_t v15; // w2
+  int32_t v16; // w3
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v15; // x20
-  System_String_o *v16; // x0
-  System_String_o *v17; // x20
-  AssetLoader_LoadEndDataHandler_o *v18; // x21
+  System_String_o *v18; // x20
+  System_String_o *v19; // x0
+  System_String_o *v20; // x20
+  AssetLoader_LoadEndDataHandler_o *v21; // x21
 
-  if ( (byte_4A5F0CD & 1) == 0 )
+  if ( (byte_4A73DE6 & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1B885B0(&Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__0__);
-    sub_1B885B0(&EventHeelPortraitAssetManager___c__DisplayClass5_0_TypeInfo);
-    byte_4A5F0CD = 1;
+    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1B90010(&Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__0__, v8);
+    sub_1B90010(&EventHeelPortraitAssetManager___c__DisplayClass5_0_TypeInfo, v9);
+    byte_4A73DE6 = 1;
   }
-  v7 = sub_1B887FC(EventHeelPortraitAssetManager___c__DisplayClass5_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7
-    || (*(_QWORD *)(v7 + 16) = this,
-        sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)this, v10, v11),
-        *(_DWORD *)(v7 + 24) = eventId,
-        *(_QWORD *)(v7 + 32) = finishCallback,
-        sub_1B88554((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)finishCallback, v12, v13),
+  v10 = sub_1B9025C(EventHeelPortraitAssetManager___c__DisplayClass5_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10
+    || (*(_QWORD *)(v10 + 16) = this,
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v10 + 16), (int32_t)this, v13, v14),
+        *(_DWORD *)(v10 + 24) = eventId,
+        *(_QWORD *)(v10 + 32) = finishCallback,
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v10 + 32), (int32_t)finishCallback, v15, v16),
         (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
   {
-    sub_1B8880C(v8, v9);
+    sub_1B9026C(v11, v12);
   }
   if ( !loadAssetNames->max_length )
-    sub_1B88814(v8, v9);
-  v15 = loadAssetNames->m_Items[0];
-  v16 = System_Int32__ToString((int)v7 + 24, 0LL);
-  v17 = System_String__Concat_61707032(v15, v16, 0LL);
-  v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1B90274(v11, v12);
+  v18 = loadAssetNames->m_Items[0];
+  v19 = System_Int32__ToString((int)v10 + 24, 0LL);
+  v20 = System_String__Concat_61787092(v18, v19, 0LL);
+  v21 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v18,
-    (Il2CppObject *)v7,
+    v21,
+    (Il2CppObject *)v10,
     Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v17, v18, 1, 0LL);
+  AssetManager__loadAssetStorage(v20, v21, 1, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventHeelPortraitAssetManager__Release(
         EventHeelPortraitAssetManager_o *this,
         int32_t eventId,
@@ -94,16 +100,16 @@ void __fastcall EventHeelPortraitAssetManager__Release(
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A5F0CE & 1) == 0 )
+  if ( (byte_4A73DE7 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    byte_4A5F0CE = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4A73DE7 = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_37859248(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_37911368(eventId, 0LL);
   this->fields._heelPortraitDetailDialog_k__BackingField = 0LL;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, 0, v5, v6);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, 0, v5, v6);
 }
 
 
@@ -123,7 +129,7 @@ void __fastcall EventHeelPortraitAssetManager__set_heelPortraitDetailDialog(
   int32_t v3; // w3
 
   this->fields._heelPortraitDetailDialog_k__BackingField = value;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -141,52 +147,56 @@ void __fastcall EventHeelPortraitAssetManager___c__DisplayClass5_0___GetAssets_b
         const MethodInfo *method)
 {
   EventHeelPortraitAssetManager___c__DisplayClass5_0_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   struct EventHeelPortraitAssetManager_o *_4__this; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  System_Action_o *_9__1; // x21
-  int32_t eventId; // w20
   int32_t v10; // w2
   int32_t v11; // w3
+  System_Action_o *_9__1; // x21
+  int32_t eventId; // w20
+  int32_t v14; // w2
+  int32_t v15; // w3
 
   v4 = this;
-  if ( (byte_4A5F0D0 & 1) == 0 )
+  if ( (byte_4A73DE9 & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_AssetData_GetObject_GameObject____76085352);
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__1__);
-    this = (EventHeelPortraitAssetManager___c__DisplayClass5_0_o *)sub_1B885B0(&StringLiteral_7209/*"HeelPortraitDetailDialog"*/);
-    byte_4A5F0D0 = 1;
+    sub_1B90010(&System_Action_TypeInfo, assetData);
+    sub_1B90010(&Method_AssetData_GetObject_GameObject____76169496, v5);
+    sub_1B90010(&AtlasManager_TypeInfo, v6);
+    sub_1B90010(&Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__1__, v7);
+    this = (EventHeelPortraitAssetManager___c__DisplayClass5_0_o *)sub_1B90010(&StringLiteral_7213/*"HeelPortraitDetailDialog"*/, v8);
+    byte_4A73DE9 = 1;
   }
   if ( !assetData
     || (_4__this = v4->fields.__4__this,
-        this = (EventHeelPortraitAssetManager___c__DisplayClass5_0_o *)AssetData__GetObject_object__48635516(
+        this = (EventHeelPortraitAssetManager___c__DisplayClass5_0_o *)AssetData__GetObject_object__48695184(
                                                                          assetData,
-                                                                         (System_String_o *)StringLiteral_7209/*"HeelPortraitDetailDialog"*/,
-                                                                         (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_GameObject____76085352),
+                                                                         (System_String_o *)StringLiteral_7213/*"HeelPortraitDetailDialog"*/,
+                                                                         (const MethodInfo_2E70790 *)Method_AssetData_GetObject_GameObject____76169496),
         !_4__this) )
   {
-    sub_1B8880C(this, assetData);
+    sub_1B9026C(this, assetData);
   }
   _4__this->fields._heelPortraitDetailDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&_4__this->fields, (int32_t)this, v6, v7);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&_4__this->fields, (int32_t)this, v10, v11);
   _9__1 = v4->fields.__9__1;
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v10, v11);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v14, v15);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_37859084(eventId, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_37911204(eventId, _9__1, 1, 0LL);
 }
 
 

@@ -23,6 +23,6 @@ void __fastcall ControlOtherBgmPriorityAtOverStageBgm__UpdatePriority(
   struct BattleFieldEnvironmentData_CommonData_o *comData; // x8
 
   if ( !bgmData || (comData = bgmData->fields.comData) == 0LL )
-    sub_1B8880C(this, bgmData);
+    sub_1B9026C(this, bgmData);
   comData->fields.priority = this->fields.priority;
 }

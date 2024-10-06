@@ -1,13 +1,13 @@
 void __fastcall UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5BEC9 & 1) == 0 )
+  if ( (byte_4A70BD8 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_long___ctor__);
-    byte_4A5BEC9 = 1;
+    sub_1B90010(&Method_DataEntityBase_long___ctor__, method);
+    byte_4A70BD8 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_311D77C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_312C3F0 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -82,21 +82,22 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
         UserPresentHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  GiftName_GiftNameBase_o *v3; // x19
-  System_String_o *v4; // x0
-  __int64 v5; // x1
+  __int64 v3; // x1
+  GiftName_GiftNameBase_o *v4; // x19
+  System_String_o *v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4A5BEC8 & 1) == 0 )
+  if ( (byte_4A70BD7 & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_10456/*"PRESENT_INFO"*/);
-    byte_4A5BEC8 = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_10462/*"PRESENT_INFO"*/, v3);
+    byte_4A70BD7 = 1;
   }
-  v3 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
+  v4 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10456/*"PRESENT_INFO"*/, 0LL);
-  if ( !v3 )
-    sub_1B8880C(v4, v5);
-  return System_String__Format_61721404(v4, (Il2CppObject *)v3->fields.name, (Il2CppObject *)v3->fields.count, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10462/*"PRESENT_INFO"*/, 0LL);
+  if ( !v4 )
+    sub_1B9026C(v5, v6);
+  return System_String__Format_61801464(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);
 }

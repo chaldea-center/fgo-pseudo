@@ -20,13 +20,13 @@ void __fastcall EventMissionActionInfo___ctor(
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void __fastcall EventMissionActionInfo___ctor_42169072(
+void __fastcall EventMissionActionInfo___ctor_42223824(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -45,7 +45,7 @@ void __fastcall EventMissionActionInfo___ctor_42169072(
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -69,7 +69,7 @@ int32_t __fastcall EventMissionActionInfo__getValID(EventMissionActionInfo_o *th
     if ( this->fields.missionActionType == 3 )
     {
       if ( !(_DWORD)v3 )
-        sub_1B88814(0xFFFFFFFFLL, method);
+        sub_1B90274(0xFFFFFFFFLL, method);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0LL) )
         return result;
       else
@@ -90,16 +90,16 @@ System_String_o *__fastcall EventMissionActionInfo__getValMessage(
   System_String_o **m_Items; // x8
 
   v2 = this;
-  if ( (byte_4A5D1AA & 1) == 0 )
+  if ( (byte_4A71EC1 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5D1AA = 1;
+    this = (EventMissionActionInfo_o *)sub_1B90010(&StringLiteral_1/*""*/, method);
+    byte_4A71EC1 = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (v4 = *(_QWORD *)&vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)v4 )
-      sub_1B88814(this, method);
+      sub_1B90274(this, method);
     m_Items = vals->m_Items;
   }
   else

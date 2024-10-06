@@ -1,14 +1,14 @@
 void __fastcall ServantOverwriteMaster___ctor(ServantOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B909 & 1) == 0 )
+  if ( (byte_4A70615 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
-    byte_4A5B909 = 1;
+    sub_1B90010(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__, method);
+    byte_4A70615 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     476,
-    (const MethodInfo_311DC4C *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
+    (const MethodInfo_312C8C0 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,18 @@ ServantOverwriteEntity_o *__fastcall ServantOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A5B90A & 1) == 0 )
+  if ( (byte_4A70616 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
-    byte_4A5B90A = 1;
+    sub_1B90010(
+      &Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__,
+      *(_QWORD *)&svtId);
+    byte_4A70616 = 1;
   }
   PK = (Il2CppObject *)ServantOverwriteEntity__CreatePK(svtId, type, priority, *(const MethodInfo **)&priority);
   return (ServantOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_311DC8C *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
+                                       (const MethodInfo_312C900 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -42,63 +44,68 @@ int32_t __fastcall ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
         int32_t type,
         const MethodInfo *method)
 {
-  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v13; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
-  ServantOverwriteEntity_o *v10; // x20
+  ServantOverwriteEntity_o *v15; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v12; // x9
+  __int64 v17; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v15; // x8
-  __int64 v16; // x9
-  int32_t *v17; // x10
-  __int64 v18; // x0
-  ServantOverwriteEntity_o *v19; // x0
-  __int64 v20; // x1
-  const MethodInfo *v21; // x2
-  ServantOverwriteEntity_o *v22; // x23
+  System_Collections_Generic_IEnumerator_T__c *v20; // x8
+  __int64 v21; // x9
+  int32_t *v22; // x10
+  __int64 v23; // x0
+  ServantOverwriteEntity_o *v24; // x0
+  __int64 v25; // x1
+  const MethodInfo *v26; // x2
+  ServantOverwriteEntity_o *v27; // x23
   __int64 methodPtr_low; // x9
   int32_t condTargetId; // w24
   int32_t condType; // w26
   int64_t condValue; // x25
-  System_Collections_Generic_IEnumerator_T__c *v27; // x8
-  __int64 v28; // x9
-  int32_t *v29; // x10
-  __int64 v30; // x0
-  const MethodInfo *v31; // x2
+  System_Collections_Generic_IEnumerator_T__c *v32; // x8
+  __int64 v33; // x9
+  int32_t *v34; // x10
+  __int64 v35; // x0
+  const MethodInfo *v36; // x2
 
-  if ( (byte_4A5B908 & 1) == 0 )
+  if ( (byte_4A70614 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
-    sub_1B885B0(&CondType_TypeInfo);
-    sub_1B885B0(&System_IDisposable_TypeInfo);
-    sub_1B885B0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo);
-    sub_1B885B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1B885B0(&ServantOverwriteEntity_TypeInfo);
-    byte_4A5B908 = 1;
+    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&svtId);
+    sub_1B90010(&CondType_TypeInfo, v7);
+    sub_1B90010(&System_IDisposable_TypeInfo, v8);
+    sub_1B90010(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1B90010(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1B90010(&ServantOverwriteEntity_TypeInfo, v11);
+    byte_4A70614 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B8880C(0LL, *(_QWORD *)&svtId);
+    sub_1B9026C(0LL, *(_QWORD *)&svtId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30BAB58 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_30C97CC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B8880C(0LL, v8);
-  v10 = 0LL;
+    sub_1B9026C(0LL, v13);
+  v15 = 0LL;
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v12 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v17 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v12;
+        --v17;
         p_offset += 4;
-        if ( !v12 )
+        if ( !v17 )
           goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -106,83 +113,83 @@ int32_t __fastcall ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
     else
     {
 LABEL_10:
-      p_method = sub_1BDA590(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BE1FF0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v15 = Enumerator->klass;
-    v16 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v20 = Enumerator->klass;
+    v21 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v17 = &v15->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v17 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v22 = &v20->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v22 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v16;
-        v17 += 4;
-        if ( !v16 )
+        --v21;
+        v22 += 4;
+        if ( !v21 )
           goto LABEL_17;
       }
-      v18 = (__int64)&v15->vtable[*v17].method;
+      v23 = (__int64)&v20->vtable[*v22].method;
     }
     else
     {
 LABEL_17:
-      v18 = sub_1BDA590(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v23 = sub_1BE1FF0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v19 = (ServantOverwriteEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
+    v24 = (ServantOverwriteEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
                                         Enumerator,
-                                        *(_QWORD *)(v18 + 8));
-    v22 = v19;
-    if ( !v19 )
+                                        *(_QWORD *)(v23 + 8));
+    v27 = v24;
+    if ( !v24 )
       goto LABEL_41;
     methodPtr_low = LOBYTE(ServantOverwriteEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v19->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (ServantOverwriteEntity_c *)v19->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOverwriteEntity_TypeInfo )
+    if ( LOBYTE(v24->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+      || (ServantOverwriteEntity_c *)v24->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOverwriteEntity_TypeInfo )
     {
-      sub_1B88ACC(v19);
+      sub_1B9052C(v24);
 LABEL_41:
-      sub_1B8880C(v19, v20);
+      sub_1B9026C(v24, v25);
     }
-    if ( v19->fields.svtId == svtId
-      && v19->fields.type == type
-      && ServantOverwriteEntity__GetOverwriteTreasureDeviceId(v19, 0, v21) )
+    if ( v24->fields.svtId == svtId
+      && v24->fields.type == type
+      && ServantOverwriteEntity__GetOverwriteTreasureDeviceId(v24, 0, v26) )
     {
-      condType = v22->fields.condType;
-      condTargetId = v22->fields.condTargetId;
-      condValue = v22->fields.condValue;
+      condType = v27->fields.condType;
+      condTargetId = v27->fields.condTargetId;
+      condValue = v27->fields.condValue;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
       if ( CondType__IsOpen(condType, condTargetId, condValue, 0, 0LL, 0LL)
-        && (!v10 || v22->fields.priority > v10->fields.priority) )
+        && (!v15 || v27->fields.priority > v15->fields.priority) )
       {
-        v10 = v22;
+        v15 = v27;
       }
     }
   }
-  v27 = Enumerator->klass;
-  v28 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v32 = Enumerator->klass;
+  v33 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v29 = &v27->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v29 - 1) != System_IDisposable_TypeInfo )
+    v34 = &v32->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v34 - 1) != System_IDisposable_TypeInfo )
     {
-      --v28;
-      v29 += 4;
-      if ( !v28 )
+      --v33;
+      v34 += 4;
+      if ( !v33 )
         goto LABEL_35;
     }
-    v30 = (__int64)&v27->vtable[*v29].method;
+    v35 = (__int64)&v32->vtable[*v34].method;
   }
   else
   {
 LABEL_35:
-    v30 = sub_1BDA590(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v35 = sub_1BE1FF0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
-  if ( v10 )
-    return ServantOverwriteEntity__GetOverwriteTreasureDeviceId(v10, 0, v31);
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v35)(Enumerator, *(_QWORD *)(v35 + 8));
+  if ( v15 )
+    return ServantOverwriteEntity__GetOverwriteTreasureDeviceId(v15, 0, v36);
   else
     return 0;
 }
@@ -199,15 +206,15 @@ bool __fastcall ServantOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A5B90B & 1) == 0 )
+  if ( (byte_4A70617 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
-    byte_4A5B90B = 1;
+    sub_1B90010(&Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__, entity);
+    byte_4A70617 = 1;
   }
   PK = (Il2CppObject *)ServantOverwriteEntity__CreatePK(svtId, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_311DCDC *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_312C950 *)Method_DataMasterBase_ServantOverwriteMaster__ServantOverwriteEntity__string__TryGetEntity__);
 }

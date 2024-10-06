@@ -6,31 +6,36 @@ void __fastcall CombineUICommonButton___ctor(CombineUICommonButton_o *this, cons
 
 void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   UnityEngine_Object_o *current; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  int32_t v9; // w2
+  int32_t v10; // w3
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
-  int32_t v7; // w2
-  int32_t v8; // w3
+  int32_t v12; // w2
+  int32_t v13; // w3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
+  __int64 v15; // x1
   void *monitor; // x8
   __int64 methodPtr_low; // x10
-  __int64 v13; // x9
-  _QWORD *v14; // x0
-  System_Reflection_MethodBase_o *v15; // x0
-  CombineUICommonButton_o *v16; // x0
-  const MethodInfo *v17; // x1
+  __int64 v18; // x9
+  _QWORD *v19; // x0
+  System_Reflection_MethodBase_o *v20; // x0
+  CombineUICommonButton_o *v21; // x0
+  const MethodInfo *v22; // x1
 
-  if ( (byte_4A5ECC8 & 1) == 0 )
+  if ( (byte_4A739E1 & 1) == 0 )
   {
-    sub_1B885B0(&CombineRootComponent_TypeInfo);
-    sub_1B885B0(&Method_CombineUICommonButton_OnClick__);
-    sub_1B885B0(&EventDelegate_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1B885B0(&UICommonButton_TypeInfo);
-    byte_4A5ECC8 = 1;
+    sub_1B90010(&CombineRootComponent_TypeInfo, method);
+    sub_1B90010(&Method_CombineUICommonButton_OnClick__, v3);
+    sub_1B90010(&EventDelegate_TypeInfo, v4);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
+    sub_1B90010(&UICommonButton_TypeInfo, v7);
+    byte_4A739E1 = 1;
   }
   if ( this->fields.isPassive && UICommonButtonColor__get_alpha((UICommonButtonColor_o *)this, 0LL) < 1.0 )
     return;
@@ -44,13 +49,13 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
           this->klass->vtable._5_set_isEnabled.methodPtr) & 1) != 0 )
   {
     UICommonButton_TypeInfo->static_fields->current = (struct UICommonButton_o *)this;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v9, v10);
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_46761624(onClick, 0LL);
+    EventDelegate__Execute_46818200(onClick, 0LL);
     UICommonButton_TypeInfo->static_fields->current = 0LL;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)UICommonButton_TypeInfo->static_fields, 0, v7, v8);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)UICommonButton_TypeInfo->static_fields, 0, v12, v13);
     return;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -58,7 +63,7 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
     goto LABEL_27;
   if ( !UnityEngine_GameObject__get_activeInHierarchy(gameObject, 0LL) )
     return;
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_27;
   monitor = gameObject[1].monitor;
@@ -68,23 +73,23 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
     || *(CombineRootComponent_c **)(*(_QWORD *)(*(_QWORD *)monitor + 200LL) + 8 * methodPtr_low - 8) != CombineRootComponent_TypeInfo )
   {
 LABEL_24:
-    v14 = Method_CombineUICommonButton_OnClick__;
+    v19 = Method_CombineUICommonButton_OnClick__;
     if ( (*((_BYTE *)Method_CombineUICommonButton_OnClick__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1B885C8(Method_CombineUICommonButton_OnClick__);
-    v15 = (System_Reflection_MethodBase_o *)sub_1B88594(v14, v14[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v15, 2, 0LL);
+      v19 = (_QWORD *)sub_1B90028(Method_CombineUICommonButton_OnClick__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v19, v19[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0LL);
     return;
   }
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject || (gameObject = (UnityEngine_GameObject_o *)gameObject[1].monitor) == 0LL )
 LABEL_27:
-    sub_1B8880C(gameObject, v10);
-  v13 = LOBYTE(CombineRootComponent_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(gameObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)v13
-    || (CombineRootComponent_c *)gameObject->klass->_2.typeHierarchy[v13 - 1] != CombineRootComponent_TypeInfo )
+    sub_1B9026C(gameObject, v15);
+  v18 = LOBYTE(CombineRootComponent_TypeInfo->vtable._0_Equals.methodPtr);
+  if ( LOBYTE(gameObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)v18
+    || (CombineRootComponent_c *)gameObject->klass->_2.typeHierarchy[v18 - 1] != CombineRootComponent_TypeInfo )
   {
-    sub_1B88ACC(gameObject);
-    CombineUICommonButton___ctor(v16, v17);
+    sub_1B9052C(gameObject);
+    CombineUICommonButton___ctor(v21, v22);
     return;
   }
   if ( *((_DWORD *)&gameObject[25].fields + 1) != 5 )

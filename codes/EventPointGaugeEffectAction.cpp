@@ -18,7 +18,7 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
   p_gaugeStartAction = (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction;
   v5 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_1B88554(p_gaugeStartAction, 0, v2, v3);
+  sub_1B8FFB4(p_gaugeStartAction, 0, v2, v3);
   if ( gaugeStartAction )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
@@ -34,7 +34,7 @@ void __fastcall EventPointGaugeEffectAction__Setup(
   int32_t v3; // w3
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction,
     (int32_t)gaugeStartAct,
     (int32_t)method,

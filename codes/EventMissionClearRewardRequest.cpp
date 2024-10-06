@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventMissionClearRewardRequest__beginRequest(
         EventMissionClearRewardRequest_o *this,
         int32_t missionId,
@@ -7,22 +8,22 @@ void __fastcall EventMissionClearRewardRequest__beginRequest(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4A5C9EA & 1) == 0 )
+  if ( (byte_4A716FE & 1) == 0 )
   {
-    sub_1B885B0(&int___TypeInfo);
-    byte_4A5C9EA = 1;
+    sub_1B90010(&int___TypeInfo, *(_QWORD *)&missionId);
+    byte_4A716FE = 1;
   }
-  v5 = (System_Int32_array *)sub_1B88658(int___TypeInfo, 1LL);
+  v5 = (System_Int32_array *)sub_1B900B8(int___TypeInfo, 1LL);
   if ( !v5 )
-    sub_1B8880C(0LL, v6);
+    sub_1B9026C(0LL, v6);
   if ( !v5->max_length )
-    sub_1B88814(v5, v5);
+    sub_1B90274(v5, v5);
   v5->m_Items[1] = missionId;
-  EventMissionClearRewardRequest__beginRequest_41179572(this, v5, v7);
+  EventMissionClearRewardRequest__beginRequest_41233784(this, v5, v7);
 }
 
 
-void __fastcall EventMissionClearRewardRequest__beginRequest_41179572(
+void __fastcall EventMissionClearRewardRequest__beginRequest_41233784(
         EventMissionClearRewardRequest_o *this,
         System_Int32_array *missionIds,
         const MethodInfo *method)
@@ -30,12 +31,12 @@ void __fastcall EventMissionClearRewardRequest__beginRequest_41179572(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4A5C9EB & 1) == 0 )
+  if ( (byte_4A716FF & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_21465/*"missionIds"*/);
-    byte_4A5C9EB = 1;
+    sub_1B90010(&StringLiteral_21494/*"missionIds"*/, missionIds);
+    byte_4A716FF = 1;
   }
-  RequestBase__addField_41136012((RequestBase_o *)this, (System_String_o *)StringLiteral_21465/*"missionIds"*/, &missionIds->obj, v3);
+  RequestBase__addField_41190224((RequestBase_o *)this, (System_String_o *)StringLiteral_21494/*"missionIds"*/, &missionIds->obj, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -44,18 +45,19 @@ System_String_o *__fastcall EventMissionClearRewardRequest__getURL(
         EventMissionClearRewardRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5C9E9 & 1) == 0 )
+  if ( (byte_4A716FD & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_19137/*"eventMission/receive"*/);
-    byte_4A5C9E9 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_19164/*"eventMission/receive"*/, v2);
+    byte_4A716FD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_19137/*"eventMission/receive"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_19164/*"eventMission/receive"*/, 0LL);
 }
 
 
@@ -64,45 +66,47 @@ void __fastcall EventMissionClearRewardRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
+  ResponseData_o *v9; // x20
   Il2CppObject *success; // x20
-  System_String_o *v9; // x0
+  System_String_o *v11; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4A5C9EC & 1) == 0 )
+  if ( (byte_4A71700 & 1) == 0 )
   {
-    sub_1B885B0(&JsonManager_TypeInfo);
-    sub_1B885B0(&ResponseCommandKind_TypeInfo);
-    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    byte_4A5C9EC = 1;
+    sub_1B90010(&JsonManager_TypeInfo, responseList);
+    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
+    byte_4A71700 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(50, responseList, 0LL);
-  if ( v5
-    && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6))
-    && (success = (Il2CppObject *)v7->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(50, responseList, 0LL);
+  if ( v7
+    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
+    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0LL);
+    v11 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v9,
+        v11,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v11 = this->fields.CallBack;
-    if ( v11 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v11->fields.m_target)(
-        v11->fields.original_method_info,
-        StringLiteral_22055/*"ng"*/,
-        *(_QWORD *)&v11->fields.extra_arg);
+    v13 = this->fields.CallBack;
+    if ( v13 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
+        v13->fields.original_method_info,
+        StringLiteral_22088/*"ng"*/,
+        *(_QWORD *)&v13->fields.extra_arg);
   }
 }

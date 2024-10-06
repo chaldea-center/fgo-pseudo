@@ -18,10 +18,10 @@ void __fastcall ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *th
   struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4A57799 & 1) == 0 )
+  if ( (byte_4A6C486 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A57799 = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A6C486 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,14 +33,14 @@ void __fastcall ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *th
     if ( !v8
       || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
           (v12 = this->fields.baseSprite) == 0LL) )
     {
-      sub_1B8880C(v4, v5);
+      sub_1B9026C(v4, v5);
     }
     mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
+    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -59,130 +59,131 @@ void __fastcall ShopEventListViewItemDraw__SetBaseButtonState(
         int32_t mode,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
   UnityEngine_Object_o *baseButton; // x22
-  void *v8; // x0
-  __int64 v9; // x1
+  void *v9; // x0
+  __int64 v10; // x1
   UnityEngine_Object_o *baseSprite; // x21
   bool isLocked; // w8
-  struct UISprite_o *v12; // x20
-  UIWidget_o *v13; // x19
-  int v14; // w21
-  __int64 v15; // x8
-  float *v16; // x12
-  __int64 v17; // x9
-  __int64 v18; // x10
-  __int64 v19; // x11
-  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UISprite_o *v13; // x20
+  UIWidget_o *v14; // x19
+  int v15; // w21
+  __int64 v16; // x8
+  float *v17; // x12
+  __int64 v18; // x9
+  __int64 v19; // x10
+  __int64 v20; // x11
+  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A5779D & 1) == 0 )
+  if ( (byte_4A6C48A & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&UICommonButtonColor_TypeInfo);
-    byte_4A5779D = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, item);
+    sub_1B90010(&UICommonButtonColor_TypeInfo, v7);
+    byte_4A6C48A = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v8 = (void *)UnityEngine_Object__op_Equality(baseButton, 0LL, 0LL);
-  if ( ((unsigned __int8)v8 & 1) == 0 )
+  v9 = (void *)UnityEngine_Object__op_Equality(baseButton, 0LL, 0LL);
+  if ( ((unsigned __int8)v9 & 1) == 0 )
   {
     if ( item )
     {
-      v8 = this->fields.baseButton;
+      v9 = this->fields.baseButton;
       if ( item->fields.isFinished || (isLocked = item->fields.isLocked) )
         isLocked = 1;
-      if ( v8 )
+      if ( v9 )
       {
-        UICommonButton__SetColliderEnable((UICommonButton_o *)v8, mode == 3 || isLocked, 1, 0LL);
-        v8 = this->fields.baseButton;
+        UICommonButton__SetColliderEnable((UICommonButton_o *)v9, mode == 3 || isLocked, 1, 0LL);
+        v9 = this->fields.baseButton;
         if ( item->fields.isFinished )
         {
-          v9 = 0LL;
-          if ( !v8 )
+          v10 = 0LL;
+          if ( !v9 )
             goto LABEL_35;
         }
         else
         {
-          v9 = !item->fields.isLocked;
-          if ( !v8 )
+          v10 = !item->fields.isLocked;
+          if ( !v9 )
             goto LABEL_35;
         }
-        (*(void (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)v8 + 392LL))(
-          v8,
+        (*(void (__fastcall **)(void *, __int64, _QWORD))(*(_QWORD *)v9 + 392LL))(
           v9,
-          *(_QWORD *)(*(_QWORD *)v8 + 400LL));
-        v8 = this->fields.baseButton;
+          v10,
+          *(_QWORD *)(*(_QWORD *)v9 + 400LL));
+        v9 = this->fields.baseButton;
         if ( item->fields.isFinished || item->fields.isLocked )
         {
-          v9 = 3LL;
-          if ( !v8 )
+          v10 = 3LL;
+          if ( !v9 )
             goto LABEL_35;
         }
         else
         {
-          v9 = 0LL;
-          if ( !v8 )
+          v10 = 0LL;
+          if ( !v9 )
             goto LABEL_35;
         }
-        (*(void (__fastcall **)(void *, __int64, __int64, _QWORD))(*(_QWORD *)v8 + 536LL))(
-          v8,
+        (*(void (__fastcall **)(void *, __int64, __int64, _QWORD))(*(_QWORD *)v9 + 536LL))(
           v9,
+          v10,
           1LL,
-          *(_QWORD *)(*(_QWORD *)v8 + 544LL));
+          *(_QWORD *)(*(_QWORD *)v9 + 544LL));
         return;
       }
     }
 LABEL_35:
-    sub_1B8880C(v8, v9);
+    sub_1B9026C(v9, v10);
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v8 = (void *)UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
-  if ( ((unsigned __int8)v8 & 1) == 0 )
+  v9 = (void *)UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
+  if ( ((unsigned __int8)v9 & 1) == 0 )
   {
     if ( item )
     {
-      v12 = this->fields.baseSprite;
+      v13 = this->fields.baseSprite;
       if ( item->fields.isFinished || item->fields.isLocked )
       {
-        v13 = 0LL;
-        v14 = 1;
+        v14 = 0LL;
+        v15 = 1;
       }
       else
       {
-        v14 = 0;
-        v13 = (UIWidget_o *)v12;
+        v15 = 0;
+        v14 = (UIWidget_o *)v13;
       }
-      v8 = UICommonButtonColor_TypeInfo;
+      v9 = UICommonButtonColor_TypeInfo;
       if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UICommonButtonColor_TypeInfo);
-        v8 = UICommonButtonColor_TypeInfo;
+        v9 = UICommonButtonColor_TypeInfo;
       }
-      v15 = *((_QWORD *)v8 + 23);
-      if ( v14 )
+      v16 = *((_QWORD *)v9 + 23);
+      if ( v15 )
       {
-        v16 = (float *)(v15 + 48);
-        v17 = 60LL;
-        v18 = 56LL;
-        v19 = 52LL;
-        v13 = (UIWidget_o *)v12;
+        v17 = (float *)(v16 + 48);
+        v18 = 60LL;
+        v19 = 56LL;
+        v20 = 52LL;
+        v14 = (UIWidget_o *)v13;
       }
       else
       {
-        v17 = 12LL;
-        v18 = 8LL;
-        v19 = 4LL;
-        v16 = (float *)*((_QWORD *)v8 + 23);
+        v18 = 12LL;
+        v19 = 8LL;
+        v20 = 4LL;
+        v17 = (float *)*((_QWORD *)v9 + 23);
       }
-      if ( v13 )
+      if ( v14 )
       {
-        v20.fields.a = *(float *)(v15 + v17);
-        v20.fields.b = *(float *)(v15 + v18);
-        v20.fields.g = *(float *)(v15 + v19);
-        v20.fields.r = *v16;
-        UIWidget__set_color(v13, v20, 0LL);
+        v21.fields.a = *(float *)(v16 + v18);
+        v21.fields.b = *(float *)(v16 + v19);
+        v21.fields.g = *(float *)(v16 + v20);
+        v21.fields.r = *v17;
+        UIWidget__set_color(v14, v21, 0LL);
         return;
       }
     }
@@ -196,51 +197,52 @@ bool __fastcall ShopEventListViewItemDraw__SetBaseSprite(
         ShopEventListViewItem_o *item,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *baseSprite; // x21
-  UISprite_o *v6; // x0
-  __int64 v7; // x1
-  UISprite_o *v9; // x21
+  UISprite_o *v7; // x0
+  __int64 v8; // x1
+  UISprite_o *v10; // x21
   int32_t eventId; // w20
   UnityEngine_Object_o *baseAtlas; // x20
 
-  if ( (byte_4A5779C & 1) == 0 )
+  if ( (byte_4A6C489 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5779C = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, item);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A6C489 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = (UISprite_o *)UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
-  if ( ((unsigned __int8)v6 & 1) != 0 )
+  v7 = (UISprite_o *)UnityEngine_Object__op_Equality(baseSprite, 0LL, 0LL);
+  if ( ((unsigned __int8)v7 & 1) != 0 )
     return 0;
   if ( !item )
     goto LABEL_18;
-  v9 = this->fields.baseSprite;
+  v10 = this->fields.baseSprite;
   eventId = item->fields.eventId;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( !AtlasManager__SetShopBanner(v9, eventId, 0LL) )
+  if ( !AtlasManager__SetShopBanner(v10, eventId, 0LL) )
   {
     baseAtlas = (UnityEngine_Object_o *)this->fields.baseAtlas;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality(baseAtlas, 0LL, 0LL) )
       return 0;
-    v6 = this->fields.baseSprite;
-    if ( v6 )
+    v7 = this->fields.baseSprite;
+    if ( v7 )
     {
-      UISprite__set_atlas(v6, this->fields.baseAtlas, 0LL);
-      v6 = this->fields.baseSprite;
-      if ( v6 )
+      UISprite__set_atlas(v7, this->fields.baseAtlas, 0LL);
+      v7 = this->fields.baseSprite;
+      if ( v7 )
       {
-        UISprite__set_spriteName(v6, this->fields.baseSpriteName, 0LL);
+        UISprite__set_spriteName(v7, this->fields.baseSpriteName, 0LL);
         return 0;
       }
     }
 LABEL_18:
-    sub_1B8880C(v6, v7);
+    sub_1B9026C(v7, v8);
   }
   return 1;
 }
@@ -253,67 +255,73 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   ShopEventListViewItemDraw_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
   UISprite_o *rangeSprite; // x1
-  ShopEventListViewItemDraw_o *v8; // x0
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  ShopEventListViewItemDraw_o *v14; // x0
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x2
   UnityEngine_GameObject_o *infoBase; // x22
   System_String_o *NameText; // x0
-  __int64 v13; // x1
+  __int64 v19; // x1
   UILabel_o *nameTextLabel; // x22
-  const MethodInfo *v15; // x1
+  const MethodInfo *v21; // x1
   UILabel_o *messageTextLabel; // x22
-  const MethodInfo *v17; // x1
+  const MethodInfo *v23; // x1
   System_String_o *DetailText; // x0
   struct EventEntity_o *eventEntity; // x8
   int64_t startedAt; // x22
   int64_t endedAt; // x24
-  ShopEventListViewItemDraw_o *v22; // x0
-  const MethodInfo *v23; // x3
+  ShopEventListViewItemDraw_o *v28; // x0
+  const MethodInfo *v29; // x3
   UILabel_o *eventPeriodLabel; // x23
   UILabel_o *changePeriodLabel; // x22
-  const MethodInfo *v26; // x3
-  UILabel_o *v27; // x22
+  const MethodInfo *v32; // x3
+  UILabel_o *v33; // x22
   UILabel_o *condMessageLabel; // x22
-  UILabel_o *v29; // x22
-  UILabel_o *v30; // x22
+  UILabel_o *v35; // x22
+  UILabel_o *v36; // x22
 
   v6 = this;
-  if ( (byte_4A5779A & 1) == 0 )
+  if ( (byte_4A6C487 & 1) == 0 )
   {
-    sub_1B885B0(&LocalizationManager_TypeInfo);
-    sub_1B885B0(&string_TypeInfo);
-    sub_1B885B0(&StringLiteral_5706/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/);
-    sub_1B885B0(&StringLiteral_15848/*"[000000]"*/);
-    sub_1B885B0(&StringLiteral_5704/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/);
-    sub_1B885B0(&StringLiteral_5707/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/);
-    this = (ShopEventListViewItemDraw_o *)sub_1B885B0(&StringLiteral_5705/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/);
-    byte_4A5779A = 1;
+    sub_1B90010(&LocalizationManager_TypeInfo, item);
+    sub_1B90010(&string_TypeInfo, v7);
+    sub_1B90010(&StringLiteral_5707/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, v8);
+    sub_1B90010(&StringLiteral_15873/*"[000000]"*/, v9);
+    sub_1B90010(&StringLiteral_5705/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, v10);
+    sub_1B90010(&StringLiteral_5708/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, v11);
+    this = (ShopEventListViewItemDraw_o *)sub_1B90010(&StringLiteral_5706/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, v12);
+    byte_4A6C487 = 1;
   }
   rangeSprite = v6->fields.rangeSprite;
   if ( !item )
   {
     ShopEventListViewItemDraw__SetSpriteActive(this, rangeSprite, 0, method);
-    ShopEventListViewItemDraw__SetSpriteActive(v22, v6->fields.addRangeSprite, 0, v23);
+    ShopEventListViewItemDraw__SetSpriteActive(v28, v6->fields.addRangeSprite, 0, v29);
     return;
   }
   ShopEventListViewItemDraw__SetSpriteActive(this, rangeSprite, mode == 0, method);
-  ShopEventListViewItemDraw__SetSpriteActive(v8, v6->fields.addRangeSprite, item->fields.isTerminationSpace, v9);
+  ShopEventListViewItemDraw__SetSpriteActive(v14, v6->fields.addRangeSprite, item->fields.isTerminationSpace, v15);
   if ( mode )
   {
     infoBase = v6->fields.infoBase;
-    NameText = (System_String_o *)ShopEventListViewItemDraw__SetBaseSprite(v6, item, v10);
+    NameText = (System_String_o *)ShopEventListViewItemDraw__SetBaseSprite(v6, item, v16);
     if ( !infoBase )
       goto LABEL_45;
     UnityEngine_GameObject__SetActive(infoBase, ((unsigned __int8)NameText & 1) == 0, 0LL);
     nameTextLabel = v6->fields.nameTextLabel;
-    NameText = ShopEventListViewItem__get_NameText(item, v15);
+    NameText = ShopEventListViewItem__get_NameText(item, v21);
     if ( !nameTextLabel )
       goto LABEL_45;
     UILabel__set_text(nameTextLabel, NameText, 0LL);
     messageTextLabel = v6->fields.messageTextLabel;
-    DetailText = ShopEventListViewItem__get_DetailText(item, v17);
-    NameText = System_String__Concat_61707032((System_String_o *)StringLiteral_15848/*"[000000]"*/, DetailText, 0LL);
+    DetailText = ShopEventListViewItem__get_DetailText(item, v23);
+    NameText = System_String__Concat_61787092((System_String_o *)StringLiteral_15873/*"[000000]"*/, DetailText, 0LL);
     if ( !messageTextLabel )
       goto LABEL_45;
     UILabel__set_text(messageTextLabel, NameText, 0LL);
@@ -347,7 +355,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
       condMessageLabel = v6->fields.condMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5707/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
+      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5708/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
       if ( !condMessageLabel )
         goto LABEL_45;
       UILabel__set_text(condMessageLabel, NameText, 0LL);
@@ -356,26 +364,26 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
 LABEL_48:
         if ( !item->fields.isClosedLimit )
           goto LABEL_41;
-        v29 = v6->fields.condMessageLabel;
+        v35 = v6->fields.condMessageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5704/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
-        if ( !v29 )
+        NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5705/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
+        if ( !v35 )
           goto LABEL_45;
-        UILabel__set_text(v29, NameText, 0LL);
+        UILabel__set_text(v35, NameText, 0LL);
         if ( !item->fields.isFinished )
           goto LABEL_41;
       }
     }
     if ( !item->fields.isLocked )
     {
-      v30 = v6->fields.condMessageLabel;
+      v36 = v6->fields.condMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5706/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0LL);
-      if ( !v30 )
+      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5707/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0LL);
+      if ( !v36 )
         goto LABEL_45;
-      UILabel__set_text(v30, NameText, 0LL);
+      UILabel__set_text(v36, NameText, 0LL);
       if ( !item->fields.isFinished )
       {
 LABEL_41:
@@ -388,22 +396,22 @@ LABEL_41:
             goto LABEL_44;
           }
 LABEL_45:
-          sub_1B8880C(NameText, v13);
+          sub_1B9026C(NameText, v19);
         }
 LABEL_44:
-        ShopEventListViewItemDraw__SetBaseButtonState(v6, item, mode, v26);
+        ShopEventListViewItemDraw__SetBaseButtonState(v6, item, mode, v32);
         return;
       }
       if ( !item->fields.isLocked )
         goto LABEL_44;
     }
-    v27 = v6->fields.condMessageLabel;
+    v33 = v6->fields.condMessageLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5705/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0LL);
-    if ( !v27 )
+    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5706/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0LL);
+    if ( !v33 )
       goto LABEL_45;
-    UILabel__set_text(v27, NameText, 0LL);
+    UILabel__set_text(v33, NameText, 0LL);
     if ( item->fields.isFinished )
       goto LABEL_44;
     goto LABEL_41;
@@ -420,10 +428,10 @@ void __fastcall ShopEventListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A5779B & 1) == 0 )
+  if ( (byte_4A6C488 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5779B = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, sprite);
+    byte_4A6C488 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -431,7 +439,7 @@ void __fastcall ShopEventListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_1B8880C(gameObject, v7);
+      sub_1B9026C(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }

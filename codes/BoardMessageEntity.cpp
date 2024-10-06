@@ -1,13 +1,13 @@
 void __fastcall BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5AE4C & 1) == 0 )
+  if ( (byte_4A6FB57 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_int___ctor__);
-    byte_4A5AE4C = 1;
+    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A6FB57 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_311D734 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -59,7 +59,7 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
     {
       v8 = script->m_Items[v6];
       if ( !v8 )
-        sub_1B8880C(this, nowTime);
+        sub_1B9026C(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -72,7 +72,7 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
     while ( (_DWORD)v4 != v6 );
   }
   if ( v5 >= (unsigned int)v4 )
-    sub_1B88814(this, nowTime);
+    sub_1B90274(this, nowTime);
   return script->m_Items[v5];
 }
 

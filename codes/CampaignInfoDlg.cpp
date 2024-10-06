@@ -1,36 +1,35 @@
 void __fastcall CampaignInfoDlg___cctor(const MethodInfo *method)
 {
-  struct CampaignInfoDlg_StaticFields *static_fields; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
   __int64 v3; // x1
-  struct CampaignInfoDlg_StaticFields *v4; // x0
+  struct CampaignInfoDlg_StaticFields *static_fields; // x0
+  struct CampaignInfoDlg_StaticFields *v5; // x0
 
-  if ( (byte_4A560D4 & 1) == 0 )
+  if ( (byte_4A6ADB4 & 1) == 0 )
   {
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&StringLiteral_14597/*"Tutorial/tutorial_alpha"*/);
-    sub_1B885B0(&StringLiteral_24101/*"tutorial_alpha"*/);
-    byte_4A560D4 = 1;
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v1);
+    sub_1B90010(&StringLiteral_14622/*"Tutorial/tutorial_alpha"*/, v2);
+    sub_1B90010(&StringLiteral_24140/*"tutorial_alpha"*/, v3);
+    byte_4A6ADB4 = 1;
   }
   static_fields = CampaignInfoDlg_TypeInfo->static_fields;
   static_fields->FADE_TIME = 0.3;
-  v2 = StringLiteral_14597/*"Tutorial/tutorial_alpha"*/;
-  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14597/*"Tutorial/tutorial_alpha"*/;
-  sub_1B88554(&static_fields->alphaImgPath, v2);
-  v3 = StringLiteral_24101/*"tutorial_alpha"*/;
-  v4 = CampaignInfoDlg_TypeInfo->static_fields;
-  v4->alphaImgName = (struct System_String_o *)StringLiteral_24101/*"tutorial_alpha"*/;
-  sub_1B88554(&v4->alphaImgName, v3);
+  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14622/*"Tutorial/tutorial_alpha"*/;
+  sub_1B8FFB4(&static_fields->alphaImgPath);
+  v5 = CampaignInfoDlg_TypeInfo->static_fields;
+  v5->alphaImgName = (struct System_String_o *)StringLiteral_24140/*"tutorial_alpha"*/;
+  sub_1B8FFB4(&v5->alphaImgName);
   *(_QWORD *)&CampaignInfoDlg_TypeInfo->static_fields->baseImgNo = 0xD200000006LL;
 }
 
 
 void __fastcall CampaignInfoDlg___ctor(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A560D3 & 1) == 0 )
+  if ( (byte_4A6ADB3 & 1) == 0 )
   {
-    sub_1B885B0(&BaseDialog_TypeInfo);
-    byte_4A560D3 = 1;
+    sub_1B90010(&BaseDialog_TypeInfo, method);
+    byte_4A6ADB3 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -45,47 +44,55 @@ void __fastcall CampaignInfoDlg__AddScrollImg(
         const MethodInfo *method)
 {
   CampaignInfoDlg_o *v6; // x21
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  const MethodInfo *v14; // x2
+  __int64 v15; // x3
   int m_CancellationTokenSource; // w8
-  CampaignInfoDlg_o *v8; // x25
-  unsigned int v9; // w27
-  int32_t v10; // w21
-  CampaignInfoDlg_o *v11; // x24
-  CampaignInfoDlg_o *v12; // x19
-  CampaignInfoDlg_c **v13; // x20
-  System_String_o **v14; // x20
-  CampaignInfoDlg_o *v15; // t1
-  char v16; // w26
-  const MethodInfo *v17; // x2
-  CampaignInfoDlg_o *v18; // x23
+  CampaignInfoDlg_o *v17; // x25
+  unsigned int v18; // w27
+  int32_t v19; // w21
+  CampaignInfoDlg_o *v20; // x24
+  CampaignInfoDlg_o *v21; // x19
+  CampaignInfoDlg_c **v22; // x20
+  System_String_o **v23; // x20
+  CampaignInfoDlg_o *v24; // t1
+  char v25; // w26
+  CampaignInfoDlg_o *v26; // x23
   Il2CppObject *ImagePrefab; // x22
-  Il2CppObject *v20; // x22
-  System_String_o *v21; // x0
+  Il2CppObject *v28; // x22
+  System_String_o *v29; // x0
   int32_t layer; // w25
-  const MethodInfo *v23; // x5
+  const MethodInfo *v31; // x5
   struct CampaignInformation_array *infoData; // x8
   __int64 loadIndex; // x9
-  CampaignInfoDlg_o *v26; // x23
-  CampaignInfoDlg_o *v27; // x23
-  __int64 v28; // x8
-  _QWORD *v29; // x9
+  CampaignInfoDlg_o *v34; // x23
+  CampaignInfoDlg_o *v35; // x23
+  __int64 v36; // x8
+  _QWORD *v37; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  __int64 v31; // x8
-  System_Action_o *v32; // [xsp+0h] [xbp-70h]
-  CampaignInfoDlg_o *v33; // [xsp+8h] [xbp-68h]
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v39; // x8
+  System_Action_o *v40; // [xsp+0h] [xbp-70h]
+  CampaignInfoDlg_o *v41; // [xsp+8h] [xbp-68h]
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4A560C6 & 1) == 0 )
+  if ( (byte_4A6ADA6 & 1) == 0 )
   {
-    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
-    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_CampaignInfoItem___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1B885B0(&NGUITools_TypeInfo);
-    sub_1B885B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    sub_1B885B0(&StringLiteral_16737/*"alpha"*/);
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&StringLiteral_7476/*"Image"*/);
-    byte_4A560C6 = 1;
+    sub_1B90010(&Method_AssetData_GetObject_Texture2D____76169520, data);
+    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_CampaignInfoItem___, v7);
+    sub_1B90010(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
+    sub_1B90010(&NGUITools_TypeInfo, v9);
+    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v11);
+    sub_1B90010(&StringLiteral_16762/*"alpha"*/, v12);
+    this = (CampaignInfoDlg_o *)sub_1B90010(&StringLiteral_7480/*"Image"*/, v13);
+    byte_4A6ADA6 = 1;
   }
   if ( !data )
     goto LABEL_38;
@@ -93,82 +100,82 @@ void __fastcall CampaignInfoDlg__AddScrollImg(
   if ( !this )
     goto LABEL_38;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
-  v8 = this;
-  v32 = callback;
-  v33 = v6;
+  v17 = this;
+  v40 = callback;
+  v41 = v6;
   if ( m_CancellationTokenSource >= 1 )
   {
-    v9 = 0;
-    v10 = 0;
-    v11 = 0LL;
-    v12 = 0LL;
-    while ( v9 < m_CancellationTokenSource )
+    v18 = 0;
+    v19 = 0;
+    v20 = 0LL;
+    v21 = 0LL;
+    while ( v18 < m_CancellationTokenSource )
     {
-      v13 = &v8->klass + (int)v9;
-      v15 = (CampaignInfoDlg_o *)v13[4];
-      v14 = (System_String_o **)(v13 + 4);
-      this = v15;
-      if ( !v15 )
+      v22 = &v17->klass + (int)v18;
+      v24 = (CampaignInfoDlg_o *)v22[4];
+      v23 = (System_String_o **)(v22 + 4);
+      this = v24;
+      if ( !v24 )
         goto LABEL_38;
       this = (CampaignInfoDlg_o *)System_String__Contains(
                                     (System_String_o *)this,
-                                    (System_String_o *)StringLiteral_16737/*"alpha"*/,
+                                    (System_String_o *)StringLiteral_16762/*"alpha"*/,
                                     0LL);
-      if ( v9 >= LODWORD(v8->fields.m_CancellationTokenSource) )
+      if ( v18 >= LODWORD(v17->fields.m_CancellationTokenSource) )
         break;
-      v16 = (char)this;
-      this = (CampaignInfoDlg_o *)AssetData__GetObject_object__48635516(
+      v25 = (char)this;
+      this = (CampaignInfoDlg_o *)AssetData__GetObject_object__48695184(
                                     data,
-                                    *v14,
-                                    (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
-      v18 = this;
-      if ( (v16 & 1) == 0 )
+                                    *v23,
+                                    (const MethodInfo_2E70790 *)Method_AssetData_GetObject_Texture2D____76169520);
+      v26 = this;
+      if ( (v25 & 1) == 0 )
       {
-        if ( v9 >= LODWORD(v8->fields.m_CancellationTokenSource) )
+        if ( v18 >= LODWORD(v17->fields.m_CancellationTokenSource) )
           break;
-        v12 = this;
-        this = (CampaignInfoDlg_o *)CampaignInfoDlg__GetScrollHeightWithName(this, *v14, v17);
-        v10 = (int)this;
-        v18 = v11;
+        v21 = this;
+        this = (CampaignInfoDlg_o *)CampaignInfoDlg__GetScrollHeightWithName(this, *v23, v14);
+        v19 = (int)this;
+        v26 = v20;
       }
-      m_CancellationTokenSource = (int)v8->fields.m_CancellationTokenSource;
-      ++v9;
-      v11 = v18;
-      if ( (int)v9 >= m_CancellationTokenSource )
+      m_CancellationTokenSource = (int)v17->fields.m_CancellationTokenSource;
+      ++v18;
+      v20 = v26;
+      if ( (int)v18 >= m_CancellationTokenSource )
         goto LABEL_16;
     }
 LABEL_37:
-    sub_1B88814(this, data);
+    sub_1B90274(this, data, v14, v15);
   }
-  v12 = 0LL;
-  v18 = 0LL;
-  v10 = 0;
+  v21 = 0LL;
+  v26 = 0LL;
+  v19 = 0;
 LABEL_16:
-  ImagePrefab = (Il2CppObject *)v33->fields.ImagePrefab;
+  ImagePrefab = (Il2CppObject *)v41->fields.ImagePrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v20 = UnityEngine_Object__Instantiate_object_(
+  v28 = UnityEngine_Object__Instantiate_object_(
           ImagePrefab,
-          (const MethodInfo_2F0385C *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  v21 = System_Int32__ToString((int)v33 + 224, 0LL);
-  this = (CampaignInfoDlg_o *)System_String__Concat_61707032((System_String_o *)StringLiteral_7476/*"Image"*/, v21, 0LL);
-  if ( !v20 )
+          (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  v29 = System_Int32__ToString((int)v41 + 224, 0LL);
+  this = (CampaignInfoDlg_o *)System_String__Concat_61787092((System_String_o *)StringLiteral_7480/*"Image"*/, v29, 0LL);
+  if ( !v28 )
     goto LABEL_38;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v20, (System_String_o *)this, 0LL);
-  this = (CampaignInfoDlg_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v33, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v28, (System_String_o *)this, 0LL);
+  this = (CampaignInfoDlg_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v41, 0LL);
   if ( !this )
     goto LABEL_38;
   layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__SetLayer((UnityEngine_GameObject_o *)v20, layer, 0LL);
+  NGUITools__SetLayer((UnityEngine_GameObject_o *)v28, layer, 0LL);
   this = (CampaignInfoDlg_o *)UnityEngine_GameObject__GetComponent_object_(
-                                (UnityEngine_GameObject_o *)v20,
-                                (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_CampaignInfoItem___);
-  infoData = v33->fields.infoData;
+                                (UnityEngine_GameObject_o *)v28,
+                                (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_CampaignInfoItem___);
+  infoData = v41->fields.infoData;
   if ( !infoData )
     goto LABEL_38;
-  loadIndex = v33->fields._loadIndex;
+  loadIndex = v41->fields._loadIndex;
   if ( (unsigned int)loadIndex >= infoData->max_length )
     goto LABEL_37;
   if ( !this )
@@ -176,66 +183,66 @@ LABEL_16:
   CampaignInfoItem__SetCampaignInfo(
     (CampaignInfoItem_o *)this,
     infoData->m_Items[loadIndex],
-    (UnityEngine_Texture2D_o *)v12,
-    (UnityEngine_Texture2D_o *)v18,
-    v10,
-    v23);
-  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v20, 0LL);
-  if ( !v33->fields.ImageGrid )
+    (UnityEngine_Texture2D_o *)v21,
+    (UnityEngine_Texture2D_o *)v26,
+    v19,
+    v31);
+  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v28, 0LL);
+  if ( !v41->fields.ImageGrid )
     goto LABEL_38;
-  v26 = this;
+  v34 = this;
   this = (CampaignInfoDlg_o *)UnityEngine_Component__get_transform(
-                                (UnityEngine_Component_o *)v33->fields.ImageGrid,
+                                (UnityEngine_Component_o *)v41->fields.ImageGrid,
                                 0LL);
-  if ( !v26 )
+  if ( !v34 )
     goto LABEL_38;
-  UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)v26, (UnityEngine_Transform_o *)this, 0LL);
-  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v20, 0LL);
+  UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)v34, (UnityEngine_Transform_o *)this, 0LL);
+  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v28, 0LL);
   if ( !this )
     goto LABEL_38;
-  v34.fields.y = v33->fields.setPosX;
-  v34.fields.x = 0.0;
-  v34.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v34, 0LL);
-  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v20, 0LL);
-  v27 = this;
-  if ( !byte_4A55CE6 )
+  v42.fields.y = v41->fields.setPosX;
+  v42.fields.x = 0.0;
+  v42.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v42, 0LL);
+  this = (CampaignInfoDlg_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v28, 0LL);
+  v35 = this;
+  if ( !byte_4A6A9C6 )
   {
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4A55CE6 = 1;
+    this = (CampaignInfoDlg_o *)sub_1B90010(&UnityEngine_Vector3_TypeInfo, data);
+    byte_4A6A9C6 = 1;
   }
-  if ( !v27
+  if ( !v35
     || (UnityEngine_Transform__set_localScale(
-          (UnityEngine_Transform_o *)v27,
+          (UnityEngine_Transform_o *)v35,
           UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
           0LL),
-        this = (CampaignInfoDlg_o *)v33->fields.ImagePageList,
-        v33->fields.setPosX = v33->fields.setPosX - (float)v10,
+        this = (CampaignInfoDlg_o *)v41->fields.ImagePageList,
+        v41->fields.setPosX = v41->fields.setPosX - (float)v19,
         !this)
-    || (v28 = *(_QWORD *)&this->fields.m_CachedPtr,
-        v29 = Method_System_Collections_Generic_List_GameObject__Add__,
+    || (v36 = *(_QWORD *)&this->fields.m_CachedPtr,
+        v37 = Method_System_Collections_Generic_List_GameObject__Add__,
         ++HIDWORD(this->fields.m_CancellationTokenSource),
-        !v28) )
+        !v36) )
   {
 LABEL_38:
-    sub_1B8880C(this, data);
+    sub_1B9026C(this, data);
   }
   m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-  if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v28 + 24) )
+  if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v36 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
-      v20,
-      *(const MethodInfo_34FD834 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      v28,
+      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
   }
   else
   {
-    v31 = v28 + 8 * m_CancellationTokenSource_low;
+    v39 = v36 + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-    *(_QWORD *)(v31 + 32) = v20;
-    sub_1B88554(v31 + 32, v20);
+    *(_QWORD *)(v39 + 32) = v28;
+    sub_1B8FFB4(v39 + 32);
   }
-  ActionExtensions__Call(v32, 0LL);
+  ActionExtensions__Call(v40, 0LL);
 }
 
 
@@ -247,22 +254,22 @@ void __fastcall CampaignInfoDlg__AfterLoad(CampaignInfoDlg_o *this, int32_t addC
   int v6; // w8
 
   v4 = this;
-  if ( (byte_4A560C7 & 1) == 0 )
+  if ( (byte_4A6ADA7 & 1) == 0 )
   {
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&StringLiteral_10004/*"OpenWindow"*/);
-    byte_4A560C7 = 1;
+    this = (CampaignInfoDlg_o *)sub_1B90010(&StringLiteral_10010/*"OpenWindow"*/, *(_QWORD *)&addCount);
+    byte_4A6ADA7 = 1;
   }
   infoData = v4->fields.infoData;
   v6 = v4->fields._loadIndex + addCount;
   v4->fields._loadIndex = v6;
   if ( !infoData )
-    sub_1B8880C(this, *(_QWORD *)&addCount);
+    sub_1B9026C(this, *(_QWORD *)&addCount);
   if ( v6 >= (signed int)infoData->max_length )
   {
     CampaignInfoDlg__UpdatePage(v4, *(const MethodInfo **)&addCount);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)v4,
-      (System_String_o *)StringLiteral_10004/*"OpenWindow"*/,
+      (System_String_o *)StringLiteral_10010/*"OpenWindow"*/,
       0.3,
       0LL);
   }
@@ -277,113 +284,121 @@ void __fastcall CampaignInfoDlg__Close(CampaignInfoDlg_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x2
 
-  CampaignInfoDlg__Close_30450988(this, 0LL, v2);
+  CampaignInfoDlg__Close_30482316(this, 0LL, v2);
 }
 
 
-void __fastcall CampaignInfoDlg__Close_30450988(
+void __fastcall CampaignInfoDlg__Close_30482316(
         CampaignInfoDlg_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  __int64 v5; // x1
+  System_Action_o *v6; // x20
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4A560CD & 1) == 0 )
+  if ( (byte_4A6ADAD & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg_EndClose__);
-    byte_4A560CD = 1;
+    sub_1B90010(&System_Action_TypeInfo, callback);
+    sub_1B90010(&Method_CampaignInfoDlg_EndClose__, v5);
+    byte_4A6ADAD = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B88554(&this->fields.closeCallbackFunc, callback);
+  sub_1B8FFB4(&this->fields.closeCallbackFunc);
   this->fields.isButtonEnable = 0;
-  v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_CampaignInfoDlg_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, v6);
+  v6 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_CampaignInfoDlg_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
 
 
 void __fastcall CampaignInfoDlg__EndClose(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   System_Collections_Generic_List_object__o *ImagePageList; // x0
   Il2CppObject *current; // x20
-  const MethodInfo *v5; // x2
-  CampaignInfoDlg_c *v6; // x0
+  const MethodInfo *v11; // x2
+  __int64 v12; // x3
+  CampaignInfoDlg_c *v13; // x0
   System_String_o *alphaImgPath; // x20
-  CampaignInfoDlg_c *v8; // x0
+  CampaignInfoDlg_c *v15; // x0
   System_String_o *TuorialImagePath; // x20
   struct CampaignInformation_array *infoData; // x23
   int max_length; // w8
-  __int64 v12; // x24
-  CampaignInformation_o *v13; // x8
+  __int64 v19; // x24
+  CampaignInformation_o *v20; // x8
   System_String_o *CampaignInfoImagePath; // x21
   struct System_Action_o *closeCallbackFunc; // x20
-  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4A560CE & 1) == 0 )
+  if ( (byte_4A6ADAE & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A560CE = 1;
+    sub_1B90010(&AssetManager_TypeInfo, method);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v3);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
+    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
+    sub_1B90010(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v8);
+    byte_4A6ADAE = 1;
   }
-  memset(&v17, 0, sizeof(v17));
+  memset(&v24, 0, sizeof(v24));
   ImagePageList = (System_Collections_Generic_List_object__o *)this->fields.ImagePageList;
   if ( !ImagePageList )
     goto LABEL_34;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     ImagePageList,
-    (const MethodInfo_34FE32C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v17 = v16;
+    (const MethodInfo_35114B8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v24 = v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v17,
-            (const MethodInfo_3278304 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v24,
+            (const MethodInfo_328A150 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v17.fields._current;
+    current = v24.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69459380((UnityEngine_Object_o *)current, 0LL);
+    UnityEngine_Object__Destroy_69539440((UnityEngine_Object_o *)current, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v17,
-    (const MethodInfo_3278300 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v24,
+    (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   if ( this->fields.alphaTexLoadRequested )
   {
-    v6 = CampaignInfoDlg_TypeInfo;
+    v13 = CampaignInfoDlg_TypeInfo;
     if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-      v6 = CampaignInfoDlg_TypeInfo;
+      v13 = CampaignInfoDlg_TypeInfo;
     }
-    alphaImgPath = v6->static_fields->alphaImgPath;
+    alphaImgPath = v13->static_fields->alphaImgPath;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(alphaImgPath, 0LL);
     this->fields.alphaTexAssetData = 0LL;
-    ImagePageList = (System_Collections_Generic_List_object__o *)sub_1B88554(&this->fields.alphaTexAssetData, 0LL);
+    ImagePageList = (System_Collections_Generic_List_object__o *)sub_1B8FFB4(&this->fields.alphaTexAssetData);
     this->fields.alphaTexLoadRequested = 0;
   }
   if ( this->fields.baseTexLoadRequested )
   {
-    v8 = CampaignInfoDlg_TypeInfo;
+    v15 = CampaignInfoDlg_TypeInfo;
     if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-      v8 = CampaignInfoDlg_TypeInfo;
+      v15 = CampaignInfoDlg_TypeInfo;
     }
-    TuorialImagePath = CampaignInfoDlg__GetTuorialImagePath(this, v8->static_fields->baseImgNo, v5);
+    TuorialImagePath = CampaignInfoDlg__GetTuorialImagePath(this, v15->static_fields->baseImgNo, v11);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(TuorialImagePath, 0LL);
     this->fields.baseTexAssetData = 0LL;
-    ImagePageList = (System_Collections_Generic_List_object__o *)sub_1B88554(&this->fields.baseTexAssetData, 0LL);
+    ImagePageList = (System_Collections_Generic_List_object__o *)sub_1B8FFB4(&this->fields.baseTexAssetData);
     this->fields.baseTexLoadRequested = 0;
   }
   infoData = this->fields.infoData;
@@ -392,28 +407,28 @@ void __fastcall CampaignInfoDlg__EndClose(CampaignInfoDlg_o *this, const MethodI
     max_length = infoData->max_length;
     if ( max_length >= 1 )
     {
-      v12 = 0LL;
+      v19 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v12 >= max_length )
-          sub_1B88814(ImagePageList, method);
-        v13 = infoData->m_Items[v12];
-        if ( !v13 )
+        if ( (unsigned int)v19 >= max_length )
+          sub_1B90274(ImagePageList, method, v11, v12);
+        v20 = infoData->m_Items[v19];
+        if ( !v20 )
           break;
-        CampaignInfoImagePath = CampaignInfoDlg__GetCampaignInfoImagePath(this, v13->fields.imageId, v5);
+        CampaignInfoImagePath = CampaignInfoDlg__GetCampaignInfoImagePath(this, v20->fields.imageId, v11);
         if ( !AssetManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
         AssetManager__releaseAssetStorage(CampaignInfoImagePath, 0LL);
         max_length = infoData->max_length;
-        if ( (int)++v12 >= max_length )
+        if ( (int)++v19 >= max_length )
           goto LABEL_29;
       }
 LABEL_34:
-      sub_1B8880C(ImagePageList, method);
+      sub_1B9026C(ImagePageList, method);
     }
 LABEL_29:
     this->fields.infoData = 0LL;
-    sub_1B88554(&this->fields.infoData, 0LL);
+    sub_1B8FFB4(&this->fields.infoData);
   }
   CampaignInfoDlg__Init(this, method);
   ImagePageList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
@@ -426,7 +441,7 @@ LABEL_29:
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_1B88554(&this->fields.closeCallbackFunc, 0LL);
+    sub_1B8FFB4(&this->fields.closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeCallbackFunc->fields.m_target)(
       closeCallbackFunc->fields.original_method_info,
       *(_QWORD *)&closeCallbackFunc->fields.extra_arg);
@@ -441,6 +456,7 @@ void __fastcall CampaignInfoDlg__EndOpen(CampaignInfoDlg_o *this, const MethodIn
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CampaignInfoDlg__GetCampaignInfoImageName(
         CampaignInfoDlg_o *this,
         int32_t imgId,
@@ -448,24 +464,27 @@ System_String_o *__fastcall CampaignInfoDlg__GetCampaignInfoImageName(
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v6; // x1
+  __int64 v7; // x1
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A560C3 & 1) == 0 )
+  if ( (byte_4A6ADA3 & 1) == 0 )
   {
-    sub_1B885B0(&int_TypeInfo);
-    sub_1B885B0(&StringLiteral_24952/*"{0:D4}"*/);
-    sub_1B885B0(&StringLiteral_20650/*"info_"*/);
-    byte_4A560C3 = 1;
+    sub_1B90010(&int_TypeInfo, *(_QWORD *)&imgId);
+    sub_1B90010(&StringLiteral_24992/*"{0:D4}"*/, v6);
+    sub_1B90010(&StringLiteral_20678/*"info_"*/, v7);
+    byte_4A6ADA3 = 1;
   }
-  v9 = imgId;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, method, v3, v4);
-  v7 = System_String__Format((System_String_o *)StringLiteral_24952/*"{0:D4}"*/, v6, 0LL);
-  return System_String__Concat_61707032((System_String_o *)StringLiteral_20650/*"info_"*/, v7, 0LL);
+  v11 = imgId;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
+  v9 = System_String__Format((System_String_o *)StringLiteral_24992/*"{0:D4}"*/, v8, 0LL);
+  return System_String__Concat_61787092((System_String_o *)StringLiteral_20678/*"info_"*/, v9, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CampaignInfoDlg__GetCampaignInfoImagePath(
         CampaignInfoDlg_o *this,
         int32_t imgId,
@@ -473,13 +492,13 @@ System_String_o *__fastcall CampaignInfoDlg__GetCampaignInfoImagePath(
 {
   System_String_o *CampaignInfoImageName; // x0
 
-  if ( (byte_4A560C2 & 1) == 0 )
+  if ( (byte_4A6ADA2 & 1) == 0 )
   {
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&StringLiteral_3989/*"CampaignInfo/"*/);
-    byte_4A560C2 = 1;
+    this = (CampaignInfoDlg_o *)sub_1B90010(&StringLiteral_3990/*"CampaignInfo/"*/, *(_QWORD *)&imgId);
+    byte_4A6ADA2 = 1;
   }
   CampaignInfoImageName = CampaignInfoDlg__GetCampaignInfoImageName(this, imgId, method);
-  return System_String__Concat_61707032((System_String_o *)StringLiteral_3989/*"CampaignInfo/"*/, CampaignInfoImageName, 0LL);
+  return System_String__Concat_61787092((System_String_o *)StringLiteral_3990/*"CampaignInfo/"*/, CampaignInfoImageName, 0LL);
 }
 
 
@@ -488,17 +507,20 @@ int32_t __fastcall CampaignInfoDlg__GetScrollHeightWithName(
         System_String_o *imageName,
         const MethodInfo *method)
 {
+  __int64 v3; // x2
+  __int64 v4; // x3
   int32_t result; // [xsp+Ch] [xbp-4h] BYREF
 
   if ( !imageName || (this = (CampaignInfoDlg_o *)System_String__Split(imageName, 0x5Fu, 0, 0LL), result = 0, !this) )
-    sub_1B8880C(this, imageName);
+    sub_1B9026C(this, imageName);
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 2 )
-    sub_1B88814(this, imageName);
+    sub_1B90274(this, imageName, v3, v4);
   System_Int32__TryParse((System_String_o *)this->fields.baseWindow, &result, 0LL);
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CampaignInfoDlg__GetTuorialImageName(
         CampaignInfoDlg_o *this,
         int32_t imgId,
@@ -506,24 +528,27 @@ System_String_o *__fastcall CampaignInfoDlg__GetTuorialImageName(
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v6; // x1
+  __int64 v7; // x1
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A560C1 & 1) == 0 )
+  if ( (byte_4A6ADA1 & 1) == 0 )
   {
-    sub_1B885B0(&int_TypeInfo);
-    sub_1B885B0(&StringLiteral_24952/*"{0:D4}"*/);
-    sub_1B885B0(&StringLiteral_24099/*"tutorial_"*/);
-    byte_4A560C1 = 1;
+    sub_1B90010(&int_TypeInfo, *(_QWORD *)&imgId);
+    sub_1B90010(&StringLiteral_24992/*"{0:D4}"*/, v6);
+    sub_1B90010(&StringLiteral_24138/*"tutorial_"*/, v7);
+    byte_4A6ADA1 = 1;
   }
-  v9 = imgId;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, method, v3, v4);
-  v7 = System_String__Format((System_String_o *)StringLiteral_24952/*"{0:D4}"*/, v6, 0LL);
-  return System_String__Concat_61707032((System_String_o *)StringLiteral_24099/*"tutorial_"*/, v7, 0LL);
+  v11 = imgId;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
+  v9 = System_String__Format((System_String_o *)StringLiteral_24992/*"{0:D4}"*/, v8, 0LL);
+  return System_String__Concat_61787092((System_String_o *)StringLiteral_24138/*"tutorial_"*/, v9, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CampaignInfoDlg__GetTuorialImagePath(
         CampaignInfoDlg_o *this,
         int32_t imgId,
@@ -531,13 +556,13 @@ System_String_o *__fastcall CampaignInfoDlg__GetTuorialImagePath(
 {
   System_String_o *TuorialImageName; // x0
 
-  if ( (byte_4A560C0 & 1) == 0 )
+  if ( (byte_4A6ADA0 & 1) == 0 )
   {
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&StringLiteral_14594/*"Tutorial/"*/);
-    byte_4A560C0 = 1;
+    this = (CampaignInfoDlg_o *)sub_1B90010(&StringLiteral_14619/*"Tutorial/"*/, *(_QWORD *)&imgId);
+    byte_4A6ADA0 = 1;
   }
   TuorialImageName = CampaignInfoDlg__GetTuorialImageName(this, imgId, method);
-  return System_String__Concat_61707032((System_String_o *)StringLiteral_14594/*"Tutorial/"*/, TuorialImageName, 0LL);
+  return System_String__Concat_61787092((System_String_o *)StringLiteral_14619/*"Tutorial/"*/, TuorialImageName, 0LL);
 }
 
 
@@ -550,7 +575,7 @@ void __fastcall CampaignInfoDlg__Init(CampaignInfoDlg_o *this, const MethodInfo 
   this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B8880C(0LL, v4);
+    sub_1B9026C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, v5);
 }
@@ -561,86 +586,94 @@ void __fastcall CampaignInfoDlg__LoadAlpha(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  Il2CppObject *v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  CampaignInfoDlg_c *v8; // x0
+  __int64 v8; // x1
+  Il2CppObject *v9; // x21
+  __int64 v10; // x0
+  __int64 v11; // x1
+  CampaignInfoDlg_c *v12; // x0
   System_String_o *alphaImgPath; // x19
-  AssetLoader_LoadEndDataHandler_o *v10; // x20
+  AssetLoader_LoadEndDataHandler_o *v14; // x20
 
-  if ( (byte_4A560C9 & 1) == 0 )
+  if ( (byte_4A6ADA9 & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg___c__DisplayClass45_0__LoadAlpha_b__0__);
-    sub_1B885B0(&CampaignInfoDlg___c__DisplayClass45_0_TypeInfo);
-    byte_4A560C9 = 1;
+    sub_1B90010(&AssetManager_TypeInfo, callback);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v5);
+    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
+    sub_1B90010(&Method_CampaignInfoDlg___c__DisplayClass45_0__LoadAlpha_b__0__, v7);
+    sub_1B90010(&CampaignInfoDlg___c__DisplayClass45_0_TypeInfo, v8);
+    byte_4A6ADA9 = 1;
   }
-  v5 = (Il2CppObject *)sub_1B887FC(CampaignInfoDlg___c__DisplayClass45_0_TypeInfo);
-  System_Object___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_1B8880C(v6, v7);
-  v5[1].klass = (Il2CppClass *)this;
-  sub_1B88554(&v5[1], this);
-  v5[1].monitor = callback;
-  sub_1B88554(&v5[1].monitor, callback);
+  v9 = (Il2CppObject *)sub_1B9025C(CampaignInfoDlg___c__DisplayClass45_0_TypeInfo);
+  System_Object___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_1B9026C(v10, v11);
+  v9[1].klass = (Il2CppClass *)this;
+  sub_1B8FFB4(&v9[1]);
+  v9[1].monitor = callback;
+  sub_1B8FFB4(&v9[1].monitor);
   this->fields.alphaTexLoadRequested = 1;
-  v8 = CampaignInfoDlg_TypeInfo;
+  v12 = CampaignInfoDlg_TypeInfo;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-    v8 = CampaignInfoDlg_TypeInfo;
+    v12 = CampaignInfoDlg_TypeInfo;
   }
-  alphaImgPath = v8->static_fields->alphaImgPath;
-  v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(v10, v5, Method_CampaignInfoDlg___c__DisplayClass45_0__LoadAlpha_b__0__, 0LL);
+  alphaImgPath = v12->static_fields->alphaImgPath;
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v14, v9, Method_CampaignInfoDlg___c__DisplayClass45_0__LoadAlpha_b__0__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(alphaImgPath, v10, 1, 0LL);
+  AssetManager__loadAssetStorage(alphaImgPath, v14, 1, 0LL);
 }
 
 
 void __fastcall CampaignInfoDlg__LoadBase(CampaignInfoDlg_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  Il2CppObject *v5; // x20
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  CampaignInfoDlg_c *v9; // x0
+  __int64 v8; // x1
+  Il2CppObject *v9; // x20
+  __int64 v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
+  CampaignInfoDlg_c *v13; // x0
   System_String_o *TuorialImagePath; // x19
-  AssetLoader_LoadEndDataHandler_o *v11; // x21
+  AssetLoader_LoadEndDataHandler_o *v15; // x21
 
-  if ( (byte_4A560C8 & 1) == 0 )
+  if ( (byte_4A6ADA8 & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg___c__DisplayClass44_0__LoadBase_b__0__);
-    sub_1B885B0(&CampaignInfoDlg___c__DisplayClass44_0_TypeInfo);
-    byte_4A560C8 = 1;
+    sub_1B90010(&AssetManager_TypeInfo, callback);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v5);
+    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
+    sub_1B90010(&Method_CampaignInfoDlg___c__DisplayClass44_0__LoadBase_b__0__, v7);
+    sub_1B90010(&CampaignInfoDlg___c__DisplayClass44_0_TypeInfo, v8);
+    byte_4A6ADA8 = 1;
   }
-  v5 = (Il2CppObject *)sub_1B887FC(CampaignInfoDlg___c__DisplayClass44_0_TypeInfo);
-  System_Object___ctor(v5, 0LL);
-  if ( !v5 )
-    sub_1B8880C(v6, v7);
-  v5[1].klass = (Il2CppClass *)this;
-  sub_1B88554(&v5[1], this);
-  v5[1].monitor = callback;
-  sub_1B88554(&v5[1].monitor, callback);
+  v9 = (Il2CppObject *)sub_1B9025C(CampaignInfoDlg___c__DisplayClass44_0_TypeInfo);
+  System_Object___ctor(v9, 0LL);
+  if ( !v9 )
+    sub_1B9026C(v10, v11);
+  v9[1].klass = (Il2CppClass *)this;
+  sub_1B8FFB4(&v9[1]);
+  v9[1].monitor = callback;
+  sub_1B8FFB4(&v9[1].monitor);
   this->fields.baseTexLoadRequested = 1;
-  v9 = CampaignInfoDlg_TypeInfo;
+  v13 = CampaignInfoDlg_TypeInfo;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-    v9 = CampaignInfoDlg_TypeInfo;
+    v13 = CampaignInfoDlg_TypeInfo;
   }
-  TuorialImagePath = CampaignInfoDlg__GetTuorialImagePath(this, v9->static_fields->baseImgNo, v8);
-  v11 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(v11, v5, Method_CampaignInfoDlg___c__DisplayClass44_0__LoadBase_b__0__, 0LL);
+  TuorialImagePath = CampaignInfoDlg__GetTuorialImagePath(this, v13->static_fields->baseImgNo, v12);
+  v15 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v15, v9, Method_CampaignInfoDlg___c__DisplayClass44_0__LoadBase_b__0__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(TuorialImagePath, v11, 1, 0LL);
+  AssetManager__loadAssetStorage(TuorialImagePath, v15, 1, 0LL);
 }
 
 
@@ -649,76 +682,83 @@ void __fastcall CampaignInfoDlg__LoadImages(
         CampaignInformation_array *images,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v4; // x20
-  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  System_Action_o *v7; // x20
-  const MethodInfo *v8; // x2
+  __int64 v7; // x1
+  System_Collections_Generic_List_object__o *v8; // x20
+  Il2CppObject *Instance; // x0
+  __int64 v10; // x1
+  System_Action_o *v11; // x20
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4A560BF & 1) == 0 )
+  if ( (byte_4A6AD9F & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg__LoadImages_b__34_0__);
-    sub_1B885B0(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1B885B0(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4A560BF = 1;
+    sub_1B90010(&System_Action_TypeInfo, images);
+    sub_1B90010(&Method_CampaignInfoDlg__LoadImages_b__34_0__, v4);
+    sub_1B90010(&Method_System_Collections_Generic_List_GameObject___ctor__, v5);
+    sub_1B90010(&System_Collections_Generic_List_GameObject__TypeInfo, v6);
+    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4A6AD9F = 1;
   }
   this->fields._loadIndex = 0;
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B887FC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_34FD000 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_1B88554(&this->fields.ImagePageList, v4);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8,
+    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.ImagePageList = (struct System_Collections_Generic_List_GameObject__o *)v8;
+  sub_1B8FFB4(&this->fields.ImagePageList);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B8880C(0LL, v6);
+    sub_1B9026C(0LL, v10);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
-  v7 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_CampaignInfoDlg__LoadImages_b__34_0__, 0LL);
-  CampaignInfoDlg__LoadAlpha(this, v7, v8);
+  v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_CampaignInfoDlg__LoadImages_b__34_0__, 0LL);
+  CampaignInfoDlg__LoadAlpha(this, v11, v12);
 }
 
 
 void __fastcall CampaignInfoDlg__LoadStart(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  CampaignInfoDlg_o *v3; // x19
+  __int64 v3; // x3
+  CampaignInfoDlg_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct CampaignInformation_array *infoData; // x8
   __int64 loadIndex; // x9
-  CampaignInformation_o *v6; // x8
+  CampaignInformation_o *v9; // x8
   System_String_o *CampaignInfoImagePath; // x20
-  AssetLoader_LoadEndDataHandler_o *v8; // x21
+  AssetLoader_LoadEndDataHandler_o *v11; // x21
 
-  v3 = this;
-  if ( (byte_4A560C4 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4A6ADA4 & 1) == 0 )
   {
-    sub_1B885B0(&AssetManager_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg__LoadStart_b__40_0__);
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4A560C4 = 1;
+    sub_1B90010(&AssetManager_TypeInfo, method);
+    sub_1B90010(&Method_CampaignInfoDlg__LoadStart_b__40_0__, v5);
+    this = (CampaignInfoDlg_o *)sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
+    byte_4A6ADA4 = 1;
   }
-  infoData = v3->fields.infoData;
+  infoData = v4->fields.infoData;
   if ( !infoData )
     goto LABEL_13;
-  loadIndex = v3->fields._loadIndex;
+  loadIndex = v4->fields._loadIndex;
   if ( (unsigned int)loadIndex >= infoData->max_length )
-    sub_1B88814(this, method);
-  v6 = infoData->m_Items[loadIndex];
-  if ( !v6 )
+    sub_1B90274(this, method, v2, v3);
+  v9 = infoData->m_Items[loadIndex];
+  if ( !v9 )
 LABEL_13:
-    sub_1B8880C(this, method);
-  CampaignInfoImagePath = CampaignInfoDlg__GetCampaignInfoImagePath(v3, v6->fields.imageId, v2);
+    sub_1B9026C(this, method);
+  CampaignInfoImagePath = CampaignInfoDlg__GetCampaignInfoImagePath(v4, v9->fields.imageId, v2);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__isExistAssetStorage(CampaignInfoImagePath, 0LL) )
   {
-    v8 = (AssetLoader_LoadEndDataHandler_o *)sub_1B887FC(AssetLoader_LoadEndDataHandler_TypeInfo);
-    AssetLoader_LoadEndDataHandler___ctor(v8, (Il2CppObject *)v3, Method_CampaignInfoDlg__LoadStart_b__40_0__, 0LL);
+    v11 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+    AssetLoader_LoadEndDataHandler___ctor(v11, (Il2CppObject *)v4, Method_CampaignInfoDlg__LoadStart_b__40_0__, 0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage(CampaignInfoImagePath, v8, 1, 0LL);
+    AssetManager__loadAssetStorage(CampaignInfoImagePath, v11, 1, 0LL);
   }
 }
 
@@ -731,22 +771,22 @@ void __fastcall CampaignInfoDlg__OnCancelButton(CampaignInfoDlg_o *this, const M
   __int64 v6; // x1
   struct CampaignInfoDlg_onButtonDelgate_o *btnCallbackFunc; // x8
 
-  if ( (byte_4A560D0 & 1) == 0 )
+  if ( (byte_4A6ADB0 & 1) == 0 )
   {
-    sub_1B885B0(&Method_CampaignInfoDlg_OnCancelButton__);
-    byte_4A560D0 = 1;
+    sub_1B90010(&Method_CampaignInfoDlg_OnCancelButton__, method);
+    byte_4A6ADB0 = 1;
   }
   if ( !this->fields.IsFading && this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v3 = Method_CampaignInfoDlg_OnCancelButton__;
     if ( (*((_BYTE *)Method_CampaignInfoDlg_OnCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     btnCallbackFunc = this->fields.btnCallbackFunc;
     if ( !btnCallbackFunc )
-      sub_1B8880C(v5, v6);
+      sub_1B9026C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))btnCallbackFunc->fields.m_target)(
       btnCallbackFunc->fields.original_method_info,
       0LL,
@@ -763,22 +803,22 @@ void __fastcall CampaignInfoDlg__OnClickClose(CampaignInfoDlg_o *this, const Met
   __int64 v6; // x1
   struct CampaignInfoDlg_onButtonDelgate_o *btnCallbackFunc; // x8
 
-  if ( (byte_4A560D1 & 1) == 0 )
+  if ( (byte_4A6ADB1 & 1) == 0 )
   {
-    sub_1B885B0(&Method_CampaignInfoDlg_OnClickClose__);
-    byte_4A560D1 = 1;
+    sub_1B90010(&Method_CampaignInfoDlg_OnClickClose__, method);
+    byte_4A6ADB1 = 1;
   }
   if ( !this->fields.IsFading && this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v3 = Method_CampaignInfoDlg_OnClickClose__;
     if ( (*((_BYTE *)Method_CampaignInfoDlg_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     btnCallbackFunc = this->fields.btnCallbackFunc;
     if ( !btnCallbackFunc )
-      sub_1B8880C(v5, v6);
+      sub_1B9026C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))btnCallbackFunc->fields.m_target)(
       btnCallbackFunc->fields.original_method_info,
       0LL,
@@ -795,21 +835,21 @@ void __fastcall CampaignInfoDlg__OnDecideButton(CampaignInfoDlg_o *this, const M
   __int64 v6; // x1
   struct CampaignInfoDlg_onButtonDelgate_o *btnCallbackFunc; // x8
 
-  if ( (byte_4A560CF & 1) == 0 )
+  if ( (byte_4A6ADAF & 1) == 0 )
   {
-    sub_1B885B0(&Method_CampaignInfoDlg_OnDecideButton__);
-    byte_4A560CF = 1;
+    sub_1B90010(&Method_CampaignInfoDlg_OnDecideButton__, method);
+    byte_4A6ADAF = 1;
   }
   if ( !this->fields.IsFading && this->fields.isButtonEnable )
   {
     v3 = Method_CampaignInfoDlg_OnDecideButton__;
     if ( (*((_BYTE *)Method_CampaignInfoDlg_OnDecideButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B885C8();
-    v4 = (System_Reflection_MethodBase_o *)sub_1B88594(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B90028();
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     btnCallbackFunc = this->fields.btnCallbackFunc;
     if ( !btnCallbackFunc )
-      sub_1B8880C(v5, v6);
+      sub_1B9026C(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))btnCallbackFunc->fields.m_target)(
       btnCallbackFunc->fields.original_method_info,
       1LL,
@@ -829,18 +869,17 @@ void __fastcall CampaignInfoDlg__Open(
 {
   UILabel_o *DecideBtnLb; // x0
   __int64 v14; // x1
-  struct CampaignInformation_array *script; // x1
+  const MethodInfo *v15; // x2
   const MethodInfo *v16; // x2
-  const MethodInfo *v17; // x2
-  CampaignInfoDlg_c *v18; // x0
-  CampaignInformation_array *v19; // x1
+  CampaignInfoDlg_c *v17; // x0
+  CampaignInformation_array *v18; // x1
+  const MethodInfo *v19; // x2
   const MethodInfo *v20; // x2
-  const MethodInfo *v21; // x2
 
-  if ( (byte_4A560BE & 1) == 0 )
+  if ( (byte_4A6AD9E & 1) == 0 )
   {
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    byte_4A560BE = 1;
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, cInfo);
+    byte_4A6AD9E = 1;
   }
   if ( !this->fields.IsInitialized )
   {
@@ -850,12 +889,11 @@ void __fastcall CampaignInfoDlg__Open(
   CampaignInfoDlg__SetTouchMask(this, 0, (const MethodInfo *)cancelBtnMsg);
   if ( !cInfo )
     goto LABEL_15;
-  script = cInfo->fields.script;
-  this->fields.infoData = script;
-  sub_1B88554(&this->fields.infoData, script);
+  this->fields.infoData = cInfo->fields.script;
+  sub_1B8FFB4(&this->fields.infoData);
   this->fields.isButtonEnable = 0;
   this->fields.isNotExistImg = 0;
-  CampaignInfoDlg__SetDecideActive(this, activeDecide, v16);
+  CampaignInfoDlg__SetDecideActive(this, activeDecide, v15);
   DecideBtnLb = this->fields.DecideBtnLb;
   if ( !DecideBtnLb )
     goto LABEL_15;
@@ -865,21 +903,21 @@ void __fastcall CampaignInfoDlg__Open(
     goto LABEL_15;
   UILabel__set_text(DecideBtnLb, cancelBtnMsg, 0LL);
   this->fields.btnCallbackFunc = onClickButton;
-  sub_1B88554(&this->fields.btnCallbackFunc, onClickButton);
-  v18 = CampaignInfoDlg_TypeInfo;
+  sub_1B8FFB4(&this->fields.btnCallbackFunc);
+  v17 = CampaignInfoDlg_TypeInfo;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-    v18 = CampaignInfoDlg_TypeInfo;
+    v17 = CampaignInfoDlg_TypeInfo;
   }
-  this->fields.setPosX = (float)v18->static_fields->basePosX;
-  BaseDialog__SetMask((BaseDialog_o *)this, 0, v17);
-  CampaignInfoDlg__LoadImages(this, v19, v20);
+  this->fields.setPosX = (float)v17->static_fields->basePosX;
+  BaseDialog__SetMask((BaseDialog_o *)this, 0, v16);
+  CampaignInfoDlg__LoadImages(this, v18, v19);
   DecideBtnLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !DecideBtnLb )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)DecideBtnLb, 1, 0LL);
-  CampaignInfoDlg__UpdateButtons(this, 1, v21);
+  CampaignInfoDlg__UpdateButtons(this, 1, v20);
   if ( this->fields.isNotExistImg )
   {
     DecideBtnLb = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -889,32 +927,34 @@ void __fastcall CampaignInfoDlg__Open(
       return;
     }
 LABEL_15:
-    sub_1B8880C(DecideBtnLb, v14);
+    sub_1B9026C(DecideBtnLb, v14);
   }
 }
 
 
 void __fastcall CampaignInfoDlg__OpenWindow(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x3
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4A560CA & 1) == 0 )
+  if ( (byte_4A6ADAA & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg_EndOpen__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4A560CA = 1;
+    sub_1B90010(&System_Action_TypeInfo, method);
+    sub_1B90010(&Method_CampaignInfoDlg_EndOpen__, v3);
+    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_4A6ADAA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B8880C(0LL, v4);
+    sub_1B9026C(0LL, v6);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0LL);
-  v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_CampaignInfoDlg_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v5, 1, v6);
+  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_CampaignInfoDlg_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v7, 1, v8);
 }
 
 
@@ -923,23 +963,28 @@ void __fastcall CampaignInfoDlg__SetBaseImage(
         UnityEngine_Texture2D_o *tex,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   UnityEngine_Component_o *BaseImg; // x0
   UnityEngine_GameObject_o *gameObject; // x21
   int32_t layer; // w22
-  UnityEngine_Shader_o *v8; // x22
-  UnityEngine_Material_o *v9; // x21
+  UnityEngine_Shader_o *v13; // x22
+  UnityEngine_Material_o *v14; // x21
   AssetData_o *alphaTexAssetData; // x20
-  Il2CppObject *Object_object__48635516; // x0
+  Il2CppObject *Object_object__48695184; // x0
 
-  if ( (byte_4A560C5 & 1) == 0 )
+  if ( (byte_4A6ADA5 & 1) == 0 )
   {
-    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&UnityEngine_Material_TypeInfo);
-    sub_1B885B0(&NGUITools_TypeInfo);
-    sub_1B885B0(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
-    sub_1B885B0(&StringLiteral_16267/*"_MaskTex"*/);
-    byte_4A560C5 = 1;
+    sub_1B90010(&Method_AssetData_GetObject_Texture2D____76169520, tex);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v5);
+    sub_1B90010(&UnityEngine_Material_TypeInfo, v6);
+    sub_1B90010(&NGUITools_TypeInfo, v7);
+    sub_1B90010(&StringLiteral_4976/*"Custom/SpriteWithMask"*/, v8);
+    sub_1B90010(&StringLiteral_16292/*"_MaskTex"*/, v9);
+    byte_4A6ADA5 = 1;
   }
   BaseImg = (UnityEngine_Component_o *)this->fields.BaseImg;
   if ( !BaseImg )
@@ -952,38 +997,38 @@ void __fastcall CampaignInfoDlg__SetBaseImage(
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__SetLayer(gameObject, layer, 0LL);
-  v8 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0LL);
-  v9 = (UnityEngine_Material_o *)sub_1B887FC(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v9, v8, 0LL);
+  v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4976/*"Custom/SpriteWithMask"*/, 0LL);
+  v14 = (UnityEngine_Material_o *)sub_1B9025C(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v14, v13, 0LL);
   BaseImg = (UnityEngine_Component_o *)this->fields.BaseImg;
   if ( !BaseImg )
     goto LABEL_15;
   BaseImg = (UnityEngine_Component_o *)((__int64 (__fastcall *)(UnityEngine_Component_o *, UnityEngine_Material_o *, Il2CppMethodPointer))BaseImg->klass[1].vtable._2_GetHashCode.method)(
                                          BaseImg,
-                                         v9,
+                                         v14,
                                          BaseImg->klass[1].vtable._3_ToString.methodPtr);
-  if ( !v9 )
+  if ( !v14 )
     goto LABEL_15;
-  UnityEngine_Material__set_mainTexture(v9, (UnityEngine_Texture_o *)tex, 0LL);
+  UnityEngine_Material__set_mainTexture(v14, (UnityEngine_Texture_o *)tex, 0LL);
   BaseImg = (UnityEngine_Component_o *)CampaignInfoDlg_TypeInfo;
   alphaTexAssetData = this->fields.alphaTexAssetData;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
     BaseImg = (UnityEngine_Component_o *)j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
   if ( !alphaTexAssetData
-    || (Object_object__48635516 = AssetData__GetObject_object__48635516(
+    || (Object_object__48695184 = AssetData__GetObject_object__48695184(
                                     alphaTexAssetData,
                                     CampaignInfoDlg_TypeInfo->static_fields->alphaImgName,
-                                    (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376),
+                                    (const MethodInfo_2E70790 *)Method_AssetData_GetObject_Texture2D____76169520),
         UnityEngine_Material__SetTexture(
-          v9,
-          (System_String_o *)StringLiteral_16267/*"_MaskTex"*/,
-          (UnityEngine_Texture_o *)Object_object__48635516,
+          v14,
+          (System_String_o *)StringLiteral_16292/*"_MaskTex"*/,
+          (UnityEngine_Texture_o *)Object_object__48695184,
           0LL),
         (BaseImg = (UnityEngine_Component_o *)this->fields.BaseImg) == 0LL)
     || (BaseImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(BaseImg, 0LL)) == 0LL )
   {
 LABEL_15:
-    sub_1B8880C(BaseImg, tex);
+    sub_1B9026C(BaseImg, tex);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)BaseImg, 0, 0LL);
 }
@@ -992,24 +1037,25 @@ LABEL_15:
 // local variable allocation has failed, the output may be wrong!
 void __fastcall CampaignInfoDlg__SetDecideActive(CampaignInfoDlg_o *this, bool onOff, const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_GameObject_o *DecideButton; // x0
-  float v6; // s0
-  float v7; // s3
-  float v8; // s1
-  float v9; // s2
+  float v7; // s0
+  float v8; // s3
+  float v9; // s1
+  float v10; // s2
 
-  if ( (byte_4A560D2 & 1) == 0 )
+  if ( (byte_4A6ADB2 & 1) == 0 )
   {
-    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    sub_1B885B0(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    byte_4A560D2 = 1;
+    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, onOff);
+    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5);
+    byte_4A6ADB2 = 1;
   }
   DecideButton = this->fields.DecideButton;
   if ( !DecideButton )
     goto LABEL_10;
   DecideButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                DecideButton,
-                                               (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                               (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !DecideButton )
     goto LABEL_10;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)DecideButton, onOff, 0LL);
@@ -1018,17 +1064,17 @@ void __fastcall CampaignInfoDlg__SetDecideActive(CampaignInfoDlg_o *this, bool o
     goto LABEL_10;
   DecideButton = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                DecideButton,
-                                               (const MethodInfo_2ECEEB8 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-  v6 = 0.5;
+                                               (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+  v7 = 0.5;
   if ( onOff )
-    v6 = 1.0;
+    v7 = 1.0;
   if ( !DecideButton )
 LABEL_10:
-    sub_1B8880C(DecideButton, onOff);
-  v7 = 1.0;
-  v8 = v6;
-  v9 = v6;
-  UIWidget__set_color((UIWidget_o *)DecideButton, *(UnityEngine_Color_o *)&v6, 0LL);
+    sub_1B9026C(DecideButton, onOff);
+  v8 = 1.0;
+  v9 = v7;
+  v10 = v7;
+  UIWidget__set_color((UIWidget_o *)DecideButton, *(UnityEngine_Color_o *)&v7, 0LL);
 }
 
 
@@ -1045,7 +1091,7 @@ void __fastcall CampaignInfoDlg__SetTouchMask(CampaignInfoDlg_o *this, bool isDi
                                                   0LL)) == 0LL
     || (TouchMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)TouchMask, 0LL)) == 0LL )
   {
-    sub_1B8880C(TouchMask, isDisp);
+    sub_1B9026C(TouchMask, isDisp);
   }
   UnityEngine_GameObject__SetActive(TouchMask, isDisp, 0LL);
 }
@@ -1075,7 +1121,7 @@ void __fastcall CampaignInfoDlg__UpdateButtons(CampaignInfoDlg_o *this, bool isD
       }
     }
 LABEL_10:
-    sub_1B8880C(CloseButton, isDisp);
+    sub_1B9026C(CloseButton, isDisp);
   }
   UnityEngine_GameObject__SetActive(CloseButton, 1, 0LL);
   CloseButton = this->fields.CancelButton;
@@ -1093,51 +1139,54 @@ LABEL_9:
 
 void __fastcall CampaignInfoDlg__UpdatePage(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
-  CampaignInfoDlg_c *v3; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
+  CampaignInfoDlg_c *v5; // x0
   UnityEngine_GameObject_o *ImageRoot; // x20
-  UITweener_o *v5; // x20
-  EventDelegate_Callback_o *v6; // x21
-  __int64 v7; // x0
-  __int64 v8; // x1
+  UITweener_o *v7; // x20
+  EventDelegate_Callback_o *v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
 
-  if ( (byte_4A560CB & 1) == 0 )
+  if ( (byte_4A6ADAB & 1) == 0 )
   {
-    sub_1B885B0(&EventDelegate_Callback_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg__UpdatePage_b__47_0__);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    byte_4A560CB = 1;
+    sub_1B90010(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B90010(&Method_CampaignInfoDlg__UpdatePage_b__47_0__, v3);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v4);
+    byte_4A6ADAB = 1;
   }
   this->fields.IsFading = 1;
-  v3 = CampaignInfoDlg_TypeInfo;
+  v5 = CampaignInfoDlg_TypeInfo;
   ImageRoot = this->fields.ImageRoot;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-    v3 = CampaignInfoDlg_TypeInfo;
+    v5 = CampaignInfoDlg_TypeInfo;
   }
-  v5 = (UITweener_o *)TweenAlpha__Begin(ImageRoot, v3->static_fields->FADE_TIME, 1.0, 0LL);
-  v6 = (EventDelegate_Callback_o *)sub_1B887FC(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v6, (Il2CppObject *)this, Method_CampaignInfoDlg__UpdatePage_b__47_0__, 0LL);
-  if ( !v5 )
-    sub_1B8880C(v7, v8);
-  UITweener__SetOnFinished(v5, v6, 0LL);
+  v7 = (UITweener_o *)TweenAlpha__Begin(ImageRoot, v5->static_fields->FADE_TIME, 1.0, 0LL);
+  v8 = (EventDelegate_Callback_o *)sub_1B9025C(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v8, (Il2CppObject *)this, Method_CampaignInfoDlg__UpdatePage_b__47_0__, 0LL);
+  if ( !v7 )
+    sub_1B9026C(v9, v10);
+  UITweener__SetOnFinished(v7, v8, 0LL);
 }
 
 
 void __fastcall CampaignInfoDlg___LoadImages_b__34_0(CampaignInfoDlg_o *this, const MethodInfo *method)
 {
-  System_Action_o *v3; // x20
-  const MethodInfo *v4; // x2
+  __int64 v3; // x1
+  System_Action_o *v4; // x20
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4A560D5 & 1) == 0 )
+  if ( (byte_4A6ADB5 & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    sub_1B885B0(&Method_CampaignInfoDlg_LoadStart__);
-    byte_4A560D5 = 1;
+    sub_1B90010(&System_Action_TypeInfo, method);
+    sub_1B90010(&Method_CampaignInfoDlg_LoadStart__, v3);
+    byte_4A6ADB5 = 1;
   }
-  v3 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v3, (Il2CppObject *)this, Method_CampaignInfoDlg_LoadStart__, 0LL);
-  CampaignInfoDlg__LoadBase(this, v3, v4);
+  v4 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_CampaignInfoDlg_LoadStart__, 0LL);
+  CampaignInfoDlg__LoadBase(this, v4, v5);
 }
 
 
@@ -1147,22 +1196,23 @@ void __fastcall CampaignInfoDlg___LoadStart_b__40_0(
         const MethodInfo *method)
 {
   Il2CppObject *v4; // x20
-  System_Action_o *v5; // x21
-  const MethodInfo *v6; // x3
+  __int64 v5; // x1
+  System_Action_o *v6; // x21
+  const MethodInfo *v7; // x3
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4A560D6 & 1) == 0 )
+  if ( (byte_4A6ADB6 & 1) == 0 )
   {
-    sub_1B885B0(&System_Action_TypeInfo);
-    this = (CampaignInfoDlg_o *)sub_1B885B0(&Method_CampaignInfoDlg__LoadStart_b__40_1__);
-    byte_4A560D6 = 1;
+    sub_1B90010(&System_Action_TypeInfo, data);
+    this = (CampaignInfoDlg_o *)sub_1B90010(&Method_CampaignInfoDlg__LoadStart_b__40_1__, v5);
+    byte_4A6ADB6 = 1;
   }
   if ( !data )
-    sub_1B8880C(this, data);
+    sub_1B9026C(this, data);
   AssetData__GetObjectNameList(data, 0LL);
-  v5 = (System_Action_o *)sub_1B887FC(System_Action_TypeInfo);
-  System_Action___ctor(v5, v4, Method_CampaignInfoDlg__LoadStart_b__40_1__, 0LL);
-  CampaignInfoDlg__AddScrollImg((CampaignInfoDlg_o *)v4, data, v5, v6);
+  v6 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  System_Action___ctor(v6, v4, Method_CampaignInfoDlg__LoadStart_b__40_1__, 0LL);
+  CampaignInfoDlg__AddScrollImg((CampaignInfoDlg_o *)v4, data, v6, v7);
 }
 
 
@@ -1190,10 +1240,10 @@ void __fastcall CampaignInfoDlg__refreshCurrent(CampaignInfoDlg_o *this, const M
   __int64 v4; // x1
   UIScrollView_o *v5; // x0
 
-  if ( (byte_4A560CC & 1) == 0 )
+  if ( (byte_4A6ADAC & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A560CC = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A6ADAC = 1;
   }
   ScrView = (UnityEngine_Object_o *)this->fields.ScrView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1202,7 +1252,7 @@ void __fastcall CampaignInfoDlg__refreshCurrent(CampaignInfoDlg_o *this, const M
   {
     v5 = this->fields.ScrView;
     if ( !v5 )
-      sub_1B8880C(0LL, v4);
+      sub_1B9026C(0LL, v4);
     UIScrollView__ResetPosition(v5, 0LL);
   }
 }
@@ -1221,72 +1271,76 @@ void __fastcall CampaignInfoDlg___c__DisplayClass44_0___LoadBase_b__0(
         AssetData_o *data,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   CampaignInfoDlg_o *_4__this; // x0
-  UnityEngine_Shader_o *v6; // x22
-  UnityEngine_Material_o *v7; // x21
-  struct CampaignInfoDlg_o *v8; // x8
-  const MethodInfo *v9; // x2
-  struct CampaignInfoDlg_o *v10; // x23
-  struct CampaignInfoDlg_o *v11; // x8
-  Il2CppObject *Object_object__48635516; // x0
+  UnityEngine_Shader_o *v10; // x22
+  UnityEngine_Material_o *v11; // x21
+  struct CampaignInfoDlg_o *v12; // x8
+  const MethodInfo *v13; // x2
+  struct CampaignInfoDlg_o *v14; // x23
+  struct CampaignInfoDlg_o *v15; // x8
+  Il2CppObject *Object_object__48695184; // x0
 
-  if ( (byte_4A560D8 & 1) == 0 )
+  if ( (byte_4A6ADB8 & 1) == 0 )
   {
-    sub_1B885B0(&Method_AssetData_GetObject_Texture2D____76085376);
-    sub_1B885B0(&CampaignInfoDlg_TypeInfo);
-    sub_1B885B0(&UnityEngine_Material_TypeInfo);
-    sub_1B885B0(&StringLiteral_4975/*"Custom/SpriteWithMask"*/);
-    sub_1B885B0(&StringLiteral_16267/*"_MaskTex"*/);
-    byte_4A560D8 = 1;
+    sub_1B90010(&Method_AssetData_GetObject_Texture2D____76169520, data);
+    sub_1B90010(&CampaignInfoDlg_TypeInfo, v5);
+    sub_1B90010(&UnityEngine_Material_TypeInfo, v6);
+    sub_1B90010(&StringLiteral_4976/*"Custom/SpriteWithMask"*/, v7);
+    sub_1B90010(&StringLiteral_16292/*"_MaskTex"*/, v8);
+    byte_4A6ADB8 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_14;
   _4__this->fields.baseTexAssetData = data;
-  sub_1B88554(&_4__this->fields.baseTexAssetData, data);
-  v6 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4975/*"Custom/SpriteWithMask"*/, 0LL);
-  v7 = (UnityEngine_Material_o *)sub_1B887FC(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v7, v6, 0LL);
-  v8 = this->fields.__4__this;
-  if ( !v8 )
+  sub_1B8FFB4(&_4__this->fields.baseTexAssetData);
+  v10 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4976/*"Custom/SpriteWithMask"*/, 0LL);
+  v11 = (UnityEngine_Material_o *)sub_1B9025C(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v11, v10, 0LL);
+  v12 = this->fields.__4__this;
+  if ( !v12 )
     goto LABEL_14;
-  _4__this = (CampaignInfoDlg_o *)v8->fields.BaseImg;
+  _4__this = (CampaignInfoDlg_o *)v12->fields.BaseImg;
   if ( !_4__this )
     goto LABEL_14;
   (*(void (__fastcall **)(CampaignInfoDlg_o *, UnityEngine_Material_o *, Il2CppMethodPointer))&_4__this->klass[1]._2.naturalAligment)(
     _4__this,
-    v7,
+    v11,
     _4__this->klass[1].vtable._0_Equals.methodPtr);
   _4__this = (CampaignInfoDlg_o *)CampaignInfoDlg_TypeInfo;
-  v10 = this->fields.__4__this;
+  v14 = this->fields.__4__this;
   if ( !CampaignInfoDlg_TypeInfo->_2.cctor_finished )
     _4__this = (CampaignInfoDlg_o *)j_il2cpp_runtime_class_init_0(CampaignInfoDlg_TypeInfo);
-  if ( !v10
+  if ( !v14
     || (_4__this = (CampaignInfoDlg_o *)CampaignInfoDlg__GetTuorialImageName(
                                           _4__this,
                                           CampaignInfoDlg_TypeInfo->static_fields->baseImgNo,
-                                          v9),
+                                          v13),
         !data)
-    || (_4__this = (CampaignInfoDlg_o *)AssetData__GetObject_object__48635516(
+    || (_4__this = (CampaignInfoDlg_o *)AssetData__GetObject_object__48695184(
                                           data,
                                           (System_String_o *)_4__this,
-                                          (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376),
-        !v7)
-    || (UnityEngine_Material__set_mainTexture(v7, (UnityEngine_Texture_o *)_4__this, 0LL),
-        (v11 = this->fields.__4__this) == 0LL)
-    || (_4__this = (CampaignInfoDlg_o *)v11->fields.alphaTexAssetData) == 0LL )
+                                          (const MethodInfo_2E70790 *)Method_AssetData_GetObject_Texture2D____76169520),
+        !v11)
+    || (UnityEngine_Material__set_mainTexture(v11, (UnityEngine_Texture_o *)_4__this, 0LL),
+        (v15 = this->fields.__4__this) == 0LL)
+    || (_4__this = (CampaignInfoDlg_o *)v15->fields.alphaTexAssetData) == 0LL )
   {
 LABEL_14:
-    sub_1B8880C(_4__this, data);
+    sub_1B9026C(_4__this, data);
   }
-  Object_object__48635516 = AssetData__GetObject_object__48635516(
+  Object_object__48695184 = AssetData__GetObject_object__48695184(
                               (AssetData_o *)_4__this,
                               CampaignInfoDlg_TypeInfo->static_fields->alphaImgName,
-                              (const MethodInfo_2E61E7C *)Method_AssetData_GetObject_Texture2D____76085376);
+                              (const MethodInfo_2E70790 *)Method_AssetData_GetObject_Texture2D____76169520);
   UnityEngine_Material__SetTexture(
-    v7,
-    (System_String_o *)StringLiteral_16267/*"_MaskTex"*/,
-    (UnityEngine_Texture_o *)Object_object__48635516,
+    v11,
+    (System_String_o *)StringLiteral_16292/*"_MaskTex"*/,
+    (UnityEngine_Texture_o *)Object_object__48695184,
     0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -1309,9 +1363,9 @@ void __fastcall CampaignInfoDlg___c__DisplayClass45_0___LoadAlpha_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B8880C(0LL, data);
+    sub_1B9026C(0LL, data);
   _4__this->fields.alphaTexAssetData = data;
-  sub_1B88554(&_4__this->fields.alphaTexAssetData, data);
+  sub_1B8FFB4(&_4__this->fields.alphaTexAssetData);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
 
@@ -1334,15 +1388,15 @@ void __fastcall CampaignInfoDlg_onButtonDelgate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B88554(&this->fields.method, object);
+  sub_1B8FFB4(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B88670(v6) & 1) == 0 )
+  if ( (sub_1B900D0(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B88828(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B886D8(v10, 0LL);
+      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B90138(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1354,12 +1408,13 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19C6CF8;
+  this->fields.m_target = (Il2CppObject *)sub_19CE0B0;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19C6CB0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CE068;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall CampaignInfoDlg_onButtonDelgate__BeginInvoke(
         CampaignInfoDlg_onButtonDelgate_o *this,
         bool decide,
@@ -1371,14 +1426,14 @@ System_IAsyncResult_o *__fastcall CampaignInfoDlg_onButtonDelgate__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = decide;
-  if ( (byte_4A560D7 & 1) == 0 )
+  if ( (byte_4A6ADB7 & 1) == 0 )
   {
-    sub_1B885B0(&bool_TypeInfo);
-    byte_4A560D7 = 1;
+    sub_1B90010(&bool_TypeInfo, decide);
+    byte_4A6ADB7 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B88564(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B8FFC4(this, v9, callback, object);
 }
 
 
@@ -1387,7 +1442,7 @@ void __fastcall CampaignInfoDlg_onButtonDelgate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B88568(result, 0LL, method);
+  sub_1B8FFC8(result, 0LL, method);
 }
 
 

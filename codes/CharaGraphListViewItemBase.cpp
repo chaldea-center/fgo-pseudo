@@ -26,25 +26,25 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   int32_t v25; // w3
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_40706472((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v11);
   this->fields.sortLogic = SortLogic;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v15);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)ItemDrawPattern,
     v17,
     v18);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)RootInfo_k__BackingField,
     v20,
@@ -52,14 +52,14 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_1B88554((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v22, v23),
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v22, v23),
         (v6 = (char *)this->fields.sortLogic) == 0LL) )
   {
 LABEL_5:
-    sub_1B8880C(v6, v7);
+    sub_1B9026C(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v24, v25);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v6 + 24), (int32_t)this, v24, v25);
 }
 
 
@@ -87,7 +87,7 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
   p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)IconInfo1_k__BackingField,
     v2,
@@ -95,10 +95,10 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   v10 = (__int64)*(p_IconInfo1_k__BackingField - 9);
   if ( !v10 )
 LABEL_4:
-    sub_1B8880C(this, method);
+    sub_1B9026C(this, method);
   v11 = *(struct IconLabelInfo_o **)(v10 + 96);
   this->fields._IconInfo2_k__BackingField = v11;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
 }
 
 
@@ -111,15 +111,15 @@ bool __fastcall CharaGraphListViewItemBase__GetNpInfo(
   int32_t v5; // w2
   int32_t v6; // w3
 
-  if ( (byte_4A5A502 & 1) == 0 )
+  if ( (byte_4A6F20A & 1) == 0 )
   {
-    sub_1B885B0(&TreasureDvcInfo_TypeInfo);
-    byte_4A5A502 = 1;
+    sub_1B90010(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_4A6F20A = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_1B887FC(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1B9025C(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0LL);
   *tdInfo = v4;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v4, v5, v6);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)tdInfo, (int32_t)v4, v5, v6);
   return 0;
 }
 
@@ -135,10 +135,10 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_1B88554((ServantStatusBattleListViewItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
+        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
         (filterLogic = this->fields.filterLogic) == 0LL) )
   {
-    sub_1B8880C(filterLogic, sort);
+    sub_1B9026C(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, Il2CppMethodPointer))filterLogic->klass->vtable._4_unknown.method)(
            filterLogic,
@@ -159,7 +159,7 @@ void __fastcall CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._11_OnBeforeMatchingFilter.methodPtr);
   if ( !args )
-    sub_1B8880C(v5, v6);
+    sub_1B9026C(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -221,10 +221,10 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_1B88554((ServantStatusBattleListViewItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
+          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
           (sortLogic = this->fields.sortLogic) == 0LL) )
     {
-      sub_1B8880C(sortLogic, v6);
+      sub_1B9026C(sortLogic, v6);
     }
     CharaGraphSortLogicBase__SetSortValue(sortLogic, 0LL);
     CharaGraphListViewItemBase__ApplySortValue(this, v11);
@@ -539,7 +539,7 @@ void __fastcall CharaGraphListViewItemBase__set_DrawPattern(
   int32_t v3; // w3
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._DrawPattern_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -582,7 +582,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo1(
   int32_t v3; // w3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -598,7 +598,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo2(
   int32_t v3; // w3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -758,7 +758,7 @@ void __fastcall CharaGraphListViewItemBase__set_RootInfo(
   int32_t v3; // w3
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1B88554(
+  sub_1B8FFB4(
     (ServantStatusBattleListViewItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,

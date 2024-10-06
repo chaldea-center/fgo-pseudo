@@ -4,25 +4,27 @@ void __fastcall AccountLinkageIssueTokenRequest__beginRequest(
         System_String_o *codeVerifier,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
-  const MethodInfo *v9; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x1
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4A5C90C & 1) == 0 )
+  if ( (byte_4A71620 & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_18038/*"codeVerifier"*/);
-    sub_1B885B0(&StringLiteral_16977/*"authorizationCode"*/);
-    byte_4A5C90C = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, authorizationCode);
+    sub_1B90010(&StringLiteral_18064/*"codeVerifier"*/, v7);
+    sub_1B90010(&StringLiteral_17002/*"authorizationCode"*/, v8);
+    byte_4A71620 = 1;
   }
-  RequestBase__addField_41126952(
+  RequestBase__addField_41181164(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_16977/*"authorizationCode"*/,
+    (System_String_o *)StringLiteral_17002/*"authorizationCode"*/,
     authorizationCode,
     method);
-  RequestBase__addField_41126952((RequestBase_o *)this, (System_String_o *)StringLiteral_18038/*"codeVerifier"*/, codeVerifier, v7);
-  RequestBase__addBaseField((RequestBase_o *)this, v8);
-  RequestBase__WriteParameter((RequestBase_o *)this, v9);
+  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_18064/*"codeVerifier"*/, codeVerifier, v9);
+  RequestBase__addBaseField((RequestBase_o *)this, v10);
+  RequestBase__WriteParameter((RequestBase_o *)this, v11);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__RequestStart((RequestBase_o *)this, 0LL);
@@ -33,18 +35,19 @@ System_String_o *__fastcall AccountLinkageIssueTokenRequest__getURL(
         AccountLinkageIssueTokenRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5C90B & 1) == 0 )
+  if ( (byte_4A7161F & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_16636/*"accountLinkageAnx/issueToken"*/);
-    byte_4A5C90B = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_16661/*"accountLinkageAnx/issueToken"*/, v2);
+    byte_4A7161F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_16636/*"accountLinkageAnx/issueToken"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_16661/*"accountLinkageAnx/issueToken"*/, 0LL);
 }
 
 
@@ -54,78 +57,89 @@ void __fastcall AccountLinkageIssueTokenRequest__requestCompleted(
         const MethodInfo *method)
 {
   AccountLinkageIssueTokenRequest_o *v4; // x19
-  ResponseData_o *v5; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  ResponseData_o *v16; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x20
-  AccountLinkageIssueTokenRequest_o *v7; // x21
+  AccountLinkageIssueTokenRequest_o *v18; // x21
   __int64 methodPtr_low; // x9
-  __int64 v9; // x0
+  __int64 v20; // x0
   struct AccountLinkageParams_StaticFields *static_fields; // x8
-  int32_t v11; // w2
-  int32_t v12; // w3
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x0
-  struct AccountLinkageParams_StaticFields *v16; // x8
-  int32_t v17; // w2
-  int32_t v18; // w3
-  __int64 v19; // x2
-  __int64 v20; // x3
-  Il2CppObject *v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  __int64 v24; // x2
+  __int64 v25; // x3
+  __int64 v26; // x0
+  struct AccountLinkageParams_StaticFields *v27; // x8
+  int32_t v28; // w2
+  int32_t v29; // w3
+  __int64 v30; // x2
+  __int64 v31; // x3
+  Il2CppObject *v32; // x1
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v23; // x9
-  __int64 v24; // x1
-  struct AccountLinkageParams_StaticFields *v25; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  AccountLinkageIssueTokenRequest_o *v28; // x0
-  const MethodInfo *v29; // x1
+  __int64 *v34; // x9
+  __int64 v35; // x1
+  struct AccountLinkageParams_StaticFields *v36; // x0
+  int32_t v37; // w2
+  int32_t v38; // w3
+  AccountLinkageIssueTokenRequest_o *v39; // x0
+  const MethodInfo *v40; // x1
 
   v4 = this;
-  if ( (byte_4A5C90D & 1) == 0 )
+  if ( (byte_4A71621 & 1) == 0 )
   {
-    sub_1B885B0(&AccountLinkageParams_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1B885B0(&long_TypeInfo);
-    sub_1B885B0(&StringLiteral_16640/*"accountLinkageToken"*/);
-    sub_1B885B0(&StringLiteral_21125/*"linkedAt"*/);
-    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
-    sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    sub_1B885B0(&StringLiteral_16639/*"accountLinkageInfo"*/);
-    sub_1B885B0(&StringLiteral_19642/*"friendCode"*/);
-    sub_1B885B0(&StringLiteral_21982/*"name"*/);
-    this = (AccountLinkageIssueTokenRequest_o *)sub_1B885B0(&StringLiteral_21231/*"lv"*/);
-    byte_4A5C90D = 1;
+    sub_1B90010(&AccountLinkageParams_TypeInfo, responseList);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
+    sub_1B90010(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v6);
+    sub_1B90010(&long_TypeInfo, v7);
+    sub_1B90010(&StringLiteral_16665/*"accountLinkageToken"*/, v8);
+    sub_1B90010(&StringLiteral_21154/*"linkedAt"*/, v9);
+    sub_1B90010(&StringLiteral_22258/*"ok"*/, v10);
+    sub_1B90010(&StringLiteral_22088/*"ng"*/, v11);
+    sub_1B90010(&StringLiteral_16664/*"accountLinkageInfo"*/, v12);
+    sub_1B90010(&StringLiteral_19669/*"friendCode"*/, v13);
+    sub_1B90010(&StringLiteral_22015/*"name"*/, v14);
+    this = (AccountLinkageIssueTokenRequest_o *)sub_1B90010(&StringLiteral_21260/*"lv"*/, v15);
+    byte_4A71621 = 1;
   }
   if ( !responseList )
     goto LABEL_27;
   if ( !responseList->max_length )
-    sub_1B88814(this, responseList);
-  v5 = responseList->m_Items[0];
-  if ( !v5 )
+    sub_1B90274(this, responseList);
+  v16 = responseList->m_Items[0];
+  if ( !v16 )
     goto LABEL_27;
   this = (AccountLinkageIssueTokenRequest_o *)ResponseData__checkError(
                                                 (ResponseData_o *)this,
-                                                v5->fields.resCode,
+                                                v16->fields.resCode,
                                                 method);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    success = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.success;
+    success = (System_Collections_Generic_Dictionary_object__object__o *)v16->fields.success;
     if ( !success )
       goto LABEL_27;
     if ( System_Collections_Generic_Dictionary_object__object___get_Item(
            success,
-           (Il2CppObject *)StringLiteral_16639/*"accountLinkageInfo"*/,
-           (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__) )
+           (Il2CppObject *)StringLiteral_16664/*"accountLinkageInfo"*/,
+           (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__) )
     {
       this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                     success,
-                                                    (Il2CppObject *)StringLiteral_16639/*"accountLinkageInfo"*/,
-                                                    (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (Il2CppObject *)StringLiteral_16664/*"accountLinkageInfo"*/,
+                                                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       AccountLinkageParams_TypeInfo->static_fields->isRequestedAccountLinked = 1;
       if ( !this )
         goto LABEL_27;
-      v7 = this;
+      v18 = this;
       methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
         || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
@@ -134,20 +148,20 @@ void __fastcall AccountLinkageIssueTokenRequest__requestCompleted(
       }
       this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                     (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                                    (Il2CppObject *)StringLiteral_21982/*"name"*/,
-                                                    (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (Il2CppObject *)StringLiteral_22015/*"name"*/,
+                                                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !this )
         goto LABEL_27;
-      v9 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
-             this,
-             this->klass->vtable._4_getURL.methodPtr);
+      v20 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
+              this,
+              this->klass->vtable._4_getURL.methodPtr);
       static_fields = AccountLinkageParams_TypeInfo->static_fields;
-      static_fields->requestedAccountName = (struct System_String_o *)v9;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&static_fields->requestedAccountName, v9, v11, v12);
+      static_fields->requestedAccountName = (struct System_String_o *)v20;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->requestedAccountName, v20, v22, v23);
       this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                                    (System_Collections_Generic_Dictionary_object__object__o *)v7,
-                                                    (Il2CppObject *)StringLiteral_21231/*"lv"*/,
-                                                    (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (System_Collections_Generic_Dictionary_object__object__o *)v18,
+                                                    (Il2CppObject *)StringLiteral_21260/*"lv"*/,
+                                                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !this )
         goto LABEL_27;
       if ( this->klass->_1.element_class != long_TypeInfo->_1.element_class )
@@ -155,75 +169,75 @@ void __fastcall AccountLinkageIssueTokenRequest__requestCompleted(
       AccountLinkageParams_TypeInfo->static_fields->requestedAccountLevel = *(_QWORD *)j_il2cpp_object_unbox_0(
                                                                                          this,
                                                                                          long_TypeInfo,
-                                                                                         v13,
-                                                                                         v14);
+                                                                                         v24,
+                                                                                         v25);
       this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                                    (System_Collections_Generic_Dictionary_object__object__o *)v7,
-                                                    (Il2CppObject *)StringLiteral_19642/*"friendCode"*/,
-                                                    (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (System_Collections_Generic_Dictionary_object__object__o *)v18,
+                                                    (Il2CppObject *)StringLiteral_19669/*"friendCode"*/,
+                                                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !this )
         goto LABEL_27;
-      v15 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
+      v26 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
               this,
               this->klass->vtable._4_getURL.methodPtr);
-      v16 = AccountLinkageParams_TypeInfo->static_fields;
-      v16->requestedAccountFriendCode = (struct System_String_o *)v15;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v16->requestedAccountFriendCode, v15, v17, v18);
+      v27 = AccountLinkageParams_TypeInfo->static_fields;
+      v27->requestedAccountFriendCode = (struct System_String_o *)v26;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v27->requestedAccountFriendCode, v26, v28, v29);
       this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                                    (System_Collections_Generic_Dictionary_object__object__o *)v7,
-                                                    (Il2CppObject *)StringLiteral_21125/*"linkedAt"*/,
-                                                    (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                    (System_Collections_Generic_Dictionary_object__object__o *)v18,
+                                                    (Il2CppObject *)StringLiteral_21154/*"linkedAt"*/,
+                                                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !this )
         goto LABEL_27;
       if ( this->klass->_1.element_class != long_TypeInfo->_1.element_class )
       {
 LABEL_29:
-        sub_1B88ACC(this);
-        AccountLinkageIssueTokenRequest___ctor(v28, v29);
+        sub_1B9052C(this);
+        AccountLinkageIssueTokenRequest___ctor(v39, v40);
         return;
       }
       AccountLinkageParams_TypeInfo->static_fields->requestedAccountLinkedTime = *(_QWORD *)j_il2cpp_object_unbox_0(
                                                                                               this,
                                                                                               long_TypeInfo,
-                                                                                              v19,
-                                                                                              v20);
-      v21 = (Il2CppObject *)StringLiteral_16640/*"accountLinkageToken"*/;
+                                                                                              v30,
+                                                                                              v31);
+      v32 = (Il2CppObject *)StringLiteral_16665/*"accountLinkageToken"*/;
     }
     else
     {
-      v21 = (Il2CppObject *)StringLiteral_16640/*"accountLinkageToken"*/;
+      v32 = (Il2CppObject *)StringLiteral_16665/*"accountLinkageToken"*/;
     }
     this = (AccountLinkageIssueTokenRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                   success,
-                                                  v21,
-                                                  (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                  v32,
+                                                  (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
     {
-      v24 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
+      v35 = ((__int64 (__fastcall *)(AccountLinkageIssueTokenRequest_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
               this,
               this->klass->vtable._4_getURL.methodPtr);
-      v25 = AccountLinkageParams_TypeInfo->static_fields;
-      v25->accountLinkageToken = (struct System_String_o *)v24;
-      sub_1B88554((ServantStatusBattleListViewItem_o *)&v25->accountLinkageToken, v24, v26, v27);
+      v36 = AccountLinkageParams_TypeInfo->static_fields;
+      v36->accountLinkageToken = (struct System_String_o *)v35;
+      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v36->accountLinkageToken, v35, v37, v38);
       CallBack = v4->fields.CallBack;
       if ( CallBack )
       {
-        v23 = &StringLiteral_22225/*"ok"*/;
+        v34 = &StringLiteral_22258/*"ok"*/;
         goto LABEL_25;
       }
       return;
     }
 LABEL_27:
-    sub_1B8880C(this, responseList);
+    sub_1B9026C(this, responseList);
   }
   CallBack = v4->fields.CallBack;
   if ( CallBack )
   {
-    v23 = &StringLiteral_22055/*"ng"*/;
+    v34 = &StringLiteral_22088/*"ng"*/;
 LABEL_25:
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
       CallBack->fields.original_method_info,
-      *v23,
+      *v34,
       *(_QWORD *)&CallBack->fields.extra_arg);
   }
 }

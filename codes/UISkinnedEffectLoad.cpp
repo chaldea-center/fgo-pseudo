@@ -4,33 +4,37 @@ void __fastcall UISkinnedEffectLoad___ctor(UISkinnedEffectLoad_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
         UISkinnedEffectLoad_o *this,
         int32_t uiChangeType,
         const MethodInfo *method)
 {
-  System_String_array *result; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
+  __int64 v7; // x1
+  System_String_array *result; // x0
+  __int64 v9; // x1
   int32_t OverwriteUiVersion; // w0
-  const MethodInfo *v8; // x3
+  const MethodInfo *v11; // x3
   struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5A04F & 1) == 0 )
+  if ( (byte_4A6ED57 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
-    sub_1B885B0(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1B885B0(&ServantCommentManager_TypeInfo);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A5A04F = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
+    sub_1B90010(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1B90010(&ServantCommentManager_TypeInfo, v6);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4A6ED57 = 1;
   }
   EffectNameList = 0LL;
-  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_16;
   result = (System_String_array *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)result,
-                                    (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                                    (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( result )
   {
     result = (System_String_array *)TerminalOverwriteMaster__TryGetOverwriteEffectNames(
@@ -44,9 +48,9 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
       if ( EffectNameList )
         return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                         (System_Collections_Generic_List_object__o *)EffectNameList,
-                                        (const MethodInfo_34FF38C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                        (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_16:
-      sub_1B8880C(result, v6);
+      sub_1B9026C(result, v9);
     }
   }
   if ( this->fields.skinType != 7 )
@@ -54,7 +58,7 @@ LABEL_16:
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
   OverwriteUiVersion = ServantCommentManager__GetOverwriteUiVersion(0LL);
-  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v8);
+  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v11);
   if ( !result )
   {
 LABEL_12:
@@ -62,7 +66,7 @@ LABEL_12:
     if ( !skinEffects )
       goto LABEL_16;
     if ( skinEffects->max_length <= uiChangeType )
-      sub_1B88814(result, v6);
+      sub_1B90274(result, v9);
     return skinEffects->m_Items[uiChangeType].fields.EffectName;
   }
   return result;
@@ -91,7 +95,7 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v7 = replaceDatas->m_Items[v6];
     if ( !v7 )
-      sub_1B8880C(this, uiChangeType);
+      sub_1B9026C(this, uiChangeType);
     if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
     if ( max_length == ++v6 )
@@ -113,20 +117,21 @@ void __fastcall UISkinnedEffectLoad__OnEnable(UISkinnedEffectLoad_o *this, const
 
 void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   __int64 UiFlag; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
   struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
   System_String_array *EffectNames; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   _BOOL4 SetDepthZero; // w21
-  UnityEngine_GameObject_o *v10; // x19
+  UnityEngine_GameObject_o *v11; // x19
 
-  if ( (byte_4A5A04E & 1) == 0 )
+  if ( (byte_4A6ED56 & 1) == 0 )
   {
-    sub_1B885B0(&CommonEffectManager_TypeInfo);
-    sub_1B885B0(&ServantCommentManager_TypeInfo);
-    byte_4A5A04E = 1;
+    sub_1B90010(&CommonEffectManager_TypeInfo, method);
+    sub_1B90010(&ServantCommentManager_TypeInfo, v3);
+    byte_4A6ED56 = 1;
   }
   if ( this->fields.skinEffects )
   {
@@ -135,16 +140,16 @@ void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, con
     UiFlag = ServantCommentManager__GetUiFlag(0LL);
     skinEffects = this->fields.skinEffects;
     if ( !skinEffects )
-      sub_1B8880C(UiFlag, v4);
+      sub_1B9026C(UiFlag, v5);
     if ( (int)UiFlag < (signed int)skinEffects->max_length )
     {
-      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v5);
+      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v6);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       SetDepthZero = this->fields.SetDepthZero;
-      v10 = gameObject;
+      v11 = gameObject;
       if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-      CommonEffectManager__SetSkinEffects(EffectNames, v10, SetDepthZero, 0LL);
+      CommonEffectManager__SetSkinEffects(EffectNames, v11, SetDepthZero, 0LL);
     }
   }
 }

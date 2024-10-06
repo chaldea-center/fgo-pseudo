@@ -2,10 +2,10 @@ void __fastcall AccountLinkageInfoRequest__beginRequest(AccountLinkageInfoReques
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4A5C909 & 1) == 0 )
+  if ( (byte_4A7161D & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    byte_4A5C909 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    byte_4A7161D = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, method);
   RequestBase__WriteParameter((RequestBase_o *)this, v3);
@@ -19,18 +19,19 @@ System_String_o *__fastcall AccountLinkageInfoRequest__getURL(
         AccountLinkageInfoRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A5C908 & 1) == 0 )
+  if ( (byte_4A7161C & 1) == 0 )
   {
-    sub_1B885B0(&NetworkManager_TypeInfo);
-    sub_1B885B0(&StringLiteral_16635/*"accountLinkageAnx/info"*/);
-    byte_4A5C908 = 1;
+    sub_1B90010(&NetworkManager_TypeInfo, method);
+    sub_1B90010(&StringLiteral_16660/*"accountLinkageAnx/info"*/, v2);
+    byte_4A7161C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61707032(BaseUrl, (System_String_o *)StringLiteral_16635/*"accountLinkageAnx/info"*/, 0LL);
+  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_16660/*"accountLinkageAnx/info"*/, 0LL);
 }
 
 
@@ -40,58 +41,65 @@ void __fastcall AccountLinkageInfoRequest__requestCompleted(
         const MethodInfo *method)
 {
   AccountLinkageInfoRequest_o *v4; // x19
-  ResponseData_o *v5; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  ResponseData_o *v12; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x20
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x22
-  __int64 v10; // x2
-  __int64 v11; // x3
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x22
+  __int64 v17; // x2
+  __int64 v18; // x3
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v13; // x9
-  AccountLinkageInfoRequest_o *v14; // x0
-  const MethodInfo *v15; // x1
+  __int64 *v20; // x9
+  AccountLinkageInfoRequest_o *v21; // x0
+  const MethodInfo *v22; // x1
 
   v4 = this;
-  if ( (byte_4A5C90A & 1) == 0 )
+  if ( (byte_4A7161E & 1) == 0 )
   {
-    sub_1B885B0(&AccountLinkageParams_TypeInfo);
-    sub_1B885B0(&bool_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&long_TypeInfo);
-    sub_1B885B0(&StringLiteral_22225/*"ok"*/);
-    sub_1B885B0(&StringLiteral_16785/*"aniplexPlusServerError"*/);
-    sub_1B885B0(&StringLiteral_22154/*"notificationType"*/);
-    this = (AccountLinkageInfoRequest_o *)sub_1B885B0(&StringLiteral_22055/*"ng"*/);
-    byte_4A5C90A = 1;
+    sub_1B90010(&AccountLinkageParams_TypeInfo, responseList);
+    sub_1B90010(&bool_TypeInfo, v5);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
+    sub_1B90010(&long_TypeInfo, v7);
+    sub_1B90010(&StringLiteral_22258/*"ok"*/, v8);
+    sub_1B90010(&StringLiteral_16810/*"aniplexPlusServerError"*/, v9);
+    sub_1B90010(&StringLiteral_22187/*"notificationType"*/, v10);
+    this = (AccountLinkageInfoRequest_o *)sub_1B90010(&StringLiteral_22088/*"ng"*/, v11);
+    byte_4A7161E = 1;
   }
   if ( !responseList )
     goto LABEL_18;
   if ( !responseList->max_length )
-    sub_1B88814(this, responseList);
-  v5 = responseList->m_Items[0];
-  if ( !v5 )
+    sub_1B90274(this, responseList);
+  v12 = responseList->m_Items[0];
+  if ( !v12 )
     goto LABEL_18;
-  this = (AccountLinkageInfoRequest_o *)ResponseData__checkError((ResponseData_o *)this, v5->fields.resCode, method);
+  this = (AccountLinkageInfoRequest_o *)ResponseData__checkError((ResponseData_o *)this, v12->fields.resCode, method);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    success = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.success;
+    success = (System_Collections_Generic_Dictionary_object__object__o *)v12->fields.success;
     if ( success )
     {
       this = (AccountLinkageInfoRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                               success,
-                                              (Il2CppObject *)StringLiteral_22154/*"notificationType"*/,
-                                              (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                              (Il2CppObject *)StringLiteral_22187/*"notificationType"*/,
+                                              (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( this )
       {
         if ( this->klass->_1.element_class != long_TypeInfo->_1.element_class )
           goto LABEL_20;
-        v9 = *(_QWORD *)j_il2cpp_object_unbox_0(this, long_TypeInfo, v7, v8);
+        v16 = *(_QWORD *)j_il2cpp_object_unbox_0(this, long_TypeInfo, v14, v15);
         this = (AccountLinkageInfoRequest_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                 success,
-                                                (Il2CppObject *)StringLiteral_16785/*"aniplexPlusServerError"*/,
-                                                (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-        AccountLinkageParams_TypeInfo->static_fields->notificationType = v9;
+                                                (Il2CppObject *)StringLiteral_16810/*"aniplexPlusServerError"*/,
+                                                (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+        AccountLinkageParams_TypeInfo->static_fields->notificationType = v16;
         if ( this )
         {
           if ( this->klass->_1.element_class == bool_TypeInfo->_1.element_class )
@@ -99,35 +107,35 @@ void __fastcall AccountLinkageInfoRequest__requestCompleted(
             AccountLinkageParams_TypeInfo->static_fields->isAniplexPlusServerError = *(_BYTE *)j_il2cpp_object_unbox_0(
                                                                                                  this,
                                                                                                  bool_TypeInfo,
-                                                                                                 v10,
-                                                                                                 v11);
+                                                                                                 v17,
+                                                                                                 v18);
             CallBack = v4->fields.CallBack;
             if ( CallBack )
             {
-              v13 = &StringLiteral_22225/*"ok"*/;
+              v20 = &StringLiteral_22258/*"ok"*/;
 LABEL_16:
               ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
                 CallBack->fields.original_method_info,
-                *v13,
+                *v20,
                 *(_QWORD *)&CallBack->fields.extra_arg);
               return;
             }
             return;
           }
 LABEL_20:
-          sub_1B88ACC(this);
-          AccountLinkageInfoRequest___ctor(v14, v15);
+          sub_1B9052C(this);
+          AccountLinkageInfoRequest___ctor(v21, v22);
           return;
         }
       }
     }
 LABEL_18:
-    sub_1B8880C(this, responseList);
+    sub_1B9026C(this, responseList);
   }
   CallBack = v4->fields.CallBack;
   if ( CallBack )
   {
-    v13 = &StringLiteral_22055/*"ng"*/;
+    v20 = &StringLiteral_22088/*"ng"*/;
     goto LABEL_16;
   }
 }

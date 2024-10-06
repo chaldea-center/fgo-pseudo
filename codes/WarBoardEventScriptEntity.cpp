@@ -1,27 +1,28 @@
 void __fastcall WarBoardEventScriptEntity___ctor(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C10F & 1) == 0 )
+  if ( (byte_4A70E1E & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5C10F = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A70E1E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardEventScriptEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4A5C10E & 1) == 0 )
+  if ( (byte_4A70E1D & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4A5C10E = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4A70E1D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_2E7DB2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,12 +40,12 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetActionTypes(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0FB & 1) == 0 )
+  if ( (byte_4A70E0A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16648/*"actionType"*/);
-    byte_4A5C0FB = 1;
+    sub_1B90010(&StringLiteral_16673/*"actionType"*/, method);
+    byte_4A70E0A = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16648/*"actionType"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16673/*"actionType"*/, 0LL);
 }
 
 
@@ -54,15 +55,15 @@ System_Int32_array_array *__fastcall WarBoardEventScriptEntity__GetActorEffectPi
 {
   System_Int32_array_array *resValue; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A5C10C & 1) == 0 )
+  if ( (byte_4A70E1B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16657/*"actorEffectPieceIndex"*/);
-    byte_4A5C10C = 1;
+    sub_1B90010(&StringLiteral_16682/*"actorEffectPieceIndex"*/, method);
+    byte_4A70E1B = 1;
   }
   resValue = 0LL;
   if ( EntityScriptUtil__TryGet2DimensionalIntArray(
          this->fields.script,
-         (System_String_o *)StringLiteral_16657/*"actorEffectPieceIndex"*/,
+         (System_String_o *)StringLiteral_16682/*"actorEffectPieceIndex"*/,
          &resValue,
          0LL) )
   {
@@ -79,12 +80,12 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetAiIds(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0FC & 1) == 0 )
+  if ( (byte_4A70E0B & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16716/*"aiId"*/);
-    byte_4A5C0FC = 1;
+    sub_1B90010(&StringLiteral_16741/*"aiId"*/, method);
+    byte_4A70E0B = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16716/*"aiId"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16741/*"aiId"*/, 0LL);
 }
 
 
@@ -93,16 +94,17 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetAnimationName(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4A5C103 & 1) == 0 )
+  if ( (byte_4A70E12 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_16784/*"animationName"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C103 = 1;
+    sub_1B90010(&StringLiteral_16809/*"animationName"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v4);
+    byte_4A70E12 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_16784/*"animationName"*/,
+           (System_String_o *)StringLiteral_16809/*"animationName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -112,12 +114,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBossIdx(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0F0 & 1) == 0 )
+  if ( (byte_4A70DFF & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17384/*"bossIdx"*/);
-    byte_4A5C0F0 = 1;
+    sub_1B90010(&StringLiteral_17409/*"bossIdx"*/, method);
+    byte_4A70DFF = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17384/*"bossIdx"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17409/*"bossIdx"*/, -1, v2);
 }
 
 
@@ -127,12 +129,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBossProcessType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C109 & 1) == 0 )
+  if ( (byte_4A70E18 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17385/*"bossProcessType"*/);
-    byte_4A5C109 = 1;
+    sub_1B90010(&StringLiteral_17410/*"bossProcessType"*/, method);
+    byte_4A70E18 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17385/*"bossProcessType"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17410/*"bossProcessType"*/, -1, v2);
 }
 
 
@@ -142,12 +144,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBreakPointDamageType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0F8 & 1) == 0 )
+  if ( (byte_4A70E07 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_15578/*"WarBoardBreakPointDamage"*/);
-    byte_4A5C0F8 = 1;
+    sub_1B90010(&StringLiteral_15603/*"WarBoardBreakPointDamage"*/, method);
+    byte_4A70E07 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15578/*"WarBoardBreakPointDamage"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15603/*"WarBoardBreakPointDamage"*/, -1, v2);
 }
 
 
@@ -157,12 +159,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetChangeWinCondition(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C10A & 1) == 0 )
+  if ( (byte_4A70E19 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_17820/*"changeWinCondition"*/);
-    byte_4A5C10A = 1;
+    sub_1B90010(&StringLiteral_17846/*"changeWinCondition"*/, method);
+    byte_4A70E19 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17820/*"changeWinCondition"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17846/*"changeWinCondition"*/, -1, v2);
 }
 
 
@@ -171,12 +173,12 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetEffect(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0EC & 1) == 0 )
+  if ( (byte_4A70DFB & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18868/*"effect"*/);
-    byte_4A5C0EC = 1;
+    sub_1B90010(&StringLiteral_18893/*"effect"*/, defVal);
+    byte_4A70DFB = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18868/*"effect"*/, defVal, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18893/*"effect"*/, defVal, 0LL);
 }
 
 
@@ -184,12 +186,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetEffectId(WarBoardEventScriptEnt
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0EA & 1) == 0 )
+  if ( (byte_4A70DF9 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18915/*"effectId"*/);
-    byte_4A5C0EA = 1;
+    sub_1B90010(&StringLiteral_18940/*"effectId"*/, method);
+    byte_4A70DF9 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18915/*"effectId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18940/*"effectId"*/, -1, v2);
 }
 
 
@@ -197,12 +199,12 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetEffectIds(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0EB & 1) == 0 )
+  if ( (byte_4A70DFA & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18916/*"effectIds"*/);
-    byte_4A5C0EB = 1;
+    sub_1B90010(&StringLiteral_18941/*"effectIds"*/, method);
+    byte_4A70DFA = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_18916/*"effectIds"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_18941/*"effectIds"*/, 0LL);
 }
 
 
@@ -210,12 +212,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetForceId(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0F3 & 1) == 0 )
+  if ( (byte_4A70E02 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19534/*"forceId"*/);
-    byte_4A5C0F3 = 1;
+    sub_1B90010(&StringLiteral_19561/*"forceId"*/, method);
+    byte_4A70E02 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19534/*"forceId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19561/*"forceId"*/, -1, v2);
 }
 
 
@@ -223,12 +225,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetGroupId(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0F2 & 1) == 0 )
+  if ( (byte_4A70E01 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_19854/*"groupId"*/);
-    byte_4A5C0F2 = 1;
+    sub_1B90010(&StringLiteral_19881/*"groupId"*/, method);
+    byte_4A70E01 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19854/*"groupId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19881/*"groupId"*/, -1, v2);
 }
 
 
@@ -238,27 +240,29 @@ int32_t __fastcall WarBoardEventScriptEntity__GetIntFromScript(
         int32_t defVal,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v10; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
-  __int64 v10; // x2
-  __int64 v11; // x3
-  WarBoardEventScriptEntity_o *v13; // x0
-  const MethodInfo *v14; // x1
+  __int64 v12; // x2
+  __int64 v13; // x3
+  WarBoardEventScriptEntity_o *v15; // x0
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4A5C0EE & 1) == 0 )
+  if ( (byte_4A70DFD & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&long_TypeInfo);
-    byte_4A5C0EE = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&long_TypeInfo, v8);
+    byte_4A70DFD = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -267,14 +271,14 @@ int32_t __fastcall WarBoardEventScriptEntity__GetIntFromScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B8880C(Item, v8);
+    sub_1B9026C(Item, v10);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11);
-  sub_1B88ACC(Item);
-  return WarBoardEventScriptEntity__GetSkillId(v13, v14);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
+  sub_1B9052C(Item);
+  return WarBoardEventScriptEntity__GetSkillId(v15, v16);
 }
 
 
@@ -284,12 +288,12 @@ bool __fastcall WarBoardEventScriptEntity__GetIsIncludeDeadPiece(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C108 & 1) == 0 )
+  if ( (byte_4A70E17 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20796/*"isIncludeDeadPiece"*/);
-    byte_4A5C108 = 1;
+    sub_1B90010(&StringLiteral_20824/*"isIncludeDeadPiece"*/, method);
+    byte_4A70E17 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20796/*"isIncludeDeadPiece"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20824/*"isIncludeDeadPiece"*/, -1, v2) == 1;
 }
 
 
@@ -299,12 +303,12 @@ bool __fastcall WarBoardEventScriptEntity__GetIsPlaySkillSe(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C10D & 1) == 0 )
+  if ( (byte_4A70E1C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20805/*"isPlaySkillSe"*/);
-    byte_4A5C10D = 1;
+    sub_1B90010(&StringLiteral_20833/*"isPlaySkillSe"*/, method);
+    byte_4A70E1C = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20805/*"isPlaySkillSe"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20833/*"isPlaySkillSe"*/, -1, v2) == 1;
 }
 
 
@@ -312,12 +316,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetIsStop(WarBoardEventScriptEntit
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C104 & 1) == 0 )
+  if ( (byte_4A70E13 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20819/*"isStop"*/);
-    byte_4A5C104 = 1;
+    sub_1B90010(&StringLiteral_20848/*"isStop"*/, method);
+    byte_4A70E13 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20819/*"isStop"*/, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20848/*"isStop"*/, 0, v2);
 }
 
 
@@ -327,12 +331,12 @@ bool __fastcall WarBoardEventScriptEntity__GetNoActorEffect(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C107 & 1) == 0 )
+  if ( (byte_4A70E16 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22086/*"noActorEffect"*/);
-    byte_4A5C107 = 1;
+    sub_1B90010(&StringLiteral_22119/*"noActorEffect"*/, method);
+    byte_4A70E16 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22086/*"noActorEffect"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22119/*"noActorEffect"*/, -1, v2) == 1;
 }
 
 
@@ -342,12 +346,12 @@ bool __fastcall WarBoardEventScriptEntity__GetNoMoveLastPieceCamera(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C101 & 1) == 0 )
+  if ( (byte_4A70E10 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22090/*"noMoveLastPieceCamera"*/);
-    byte_4A5C101 = 1;
+    sub_1B90010(&StringLiteral_22123/*"noMoveLastPieceCamera"*/, method);
+    byte_4A70E10 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22090/*"noMoveLastPieceCamera"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22123/*"noMoveLastPieceCamera"*/, -1, v2) == 1;
 }
 
 
@@ -357,12 +361,12 @@ bool __fastcall WarBoardEventScriptEntity__GetNoMoveTargetCamera(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C100 & 1) == 0 )
+  if ( (byte_4A70E0F & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22091/*"noMoveTargetCamera"*/);
-    byte_4A5C100 = 1;
+    sub_1B90010(&StringLiteral_22124/*"noMoveTargetCamera"*/, method);
+    byte_4A70E0F = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22091/*"noMoveTargetCamera"*/, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22124/*"noMoveTargetCamera"*/, -1, v2) == 1;
 }
 
 
@@ -371,16 +375,17 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetObjectName(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4A5C102 & 1) == 0 )
+  if ( (byte_4A70E11 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22197/*"objectName"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C102 = 1;
+    sub_1B90010(&StringLiteral_22230/*"objectName"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v4);
+    byte_4A70E11 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22197/*"objectName"*/,
+           (System_String_o *)StringLiteral_22230/*"objectName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -391,16 +396,17 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetOverlayEffectMessage(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4A5C0FF & 1) == 0 )
+  if ( (byte_4A70E0E & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22368/*"overlayEffectMessage"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C0FF = 1;
+    sub_1B90010(&StringLiteral_22401/*"overlayEffectMessage"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v4);
+    byte_4A70E0E = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22368/*"overlayEffectMessage"*/,
+           (System_String_o *)StringLiteral_22401/*"overlayEffectMessage"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -411,16 +417,17 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetOverlayEffectPrefabNam
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4A5C0FE & 1) == 0 )
+  if ( (byte_4A70E0D & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22369/*"overlayEffectPrefabName"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C0FE = 1;
+    sub_1B90010(&StringLiteral_22402/*"overlayEffectPrefabName"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v4);
+    byte_4A70E0D = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_22369/*"overlayEffectPrefabName"*/,
+           (System_String_o *)StringLiteral_22402/*"overlayEffectPrefabName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -430,12 +437,12 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetPieceIndex(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0FA & 1) == 0 )
+  if ( (byte_4A70E09 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22533/*"pieceIndex"*/);
-    byte_4A5C0FA = 1;
+    sub_1B90010(&StringLiteral_22566/*"pieceIndex"*/, method);
+    byte_4A70E09 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22533/*"pieceIndex"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22566/*"pieceIndex"*/, 0LL);
 }
 
 
@@ -443,12 +450,12 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetPieceIndexes(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0E6 & 1) == 0 )
+  if ( (byte_4A70DF5 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22535/*"pieceIndexes"*/);
-    byte_4A5C0E6 = 1;
+    sub_1B90010(&StringLiteral_22568/*"pieceIndexes"*/, method);
+    byte_4A70DF5 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22535/*"pieceIndexes"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22568/*"pieceIndexes"*/, 0LL);
 }
 
 
@@ -458,12 +465,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetPlayAfterCurrentAnim(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C105 & 1) == 0 )
+  if ( (byte_4A70E14 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22547/*"playAfterCurrentAnim"*/);
-    byte_4A5C105 = 1;
+    sub_1B90010(&StringLiteral_22580/*"playAfterCurrentAnim"*/, method);
+    byte_4A70E14 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22547/*"playAfterCurrentAnim"*/, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22580/*"playAfterCurrentAnim"*/, 0, v2);
 }
 
 
@@ -472,16 +479,17 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetSeName(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4A5C0ED & 1) == 0 )
+  if ( (byte_4A70DFC & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23058/*"seName"*/);
-    sub_1B885B0(&StringLiteral_1/*""*/);
-    byte_4A5C0ED = 1;
+    sub_1B90010(&StringLiteral_23093/*"seName"*/, method);
+    sub_1B90010(&StringLiteral_1/*""*/, v4);
+    byte_4A70DFC = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_23058/*"seName"*/,
+           (System_String_o *)StringLiteral_23093/*"seName"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
@@ -491,12 +499,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSkillId(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0E8 & 1) == 0 )
+  if ( (byte_4A70DF7 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23342/*"skillId"*/);
-    byte_4A5C0E8 = 1;
+    sub_1B90010(&StringLiteral_23379/*"skillId"*/, method);
+    byte_4A70DF7 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23342/*"skillId"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23379/*"skillId"*/, -1, v2);
 }
 
 
@@ -504,12 +512,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSkillLv(WarBoardEventScriptEnti
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0E9 & 1) == 0 )
+  if ( (byte_4A70DF8 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23343/*"skillLv"*/);
-    byte_4A5C0E9 = 1;
+    sub_1B90010(&StringLiteral_23380/*"skillLv"*/, method);
+    byte_4A70DF8 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23343/*"skillLv"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23380/*"skillLv"*/, -1, v2);
 }
 
 
@@ -519,12 +527,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSquareIndex(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0E7 & 1) == 0 )
+  if ( (byte_4A70DF6 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23452/*"squareIndex"*/);
-    byte_4A5C0E7 = 1;
+    sub_1B90010(&StringLiteral_23489/*"squareIndex"*/, method);
+    byte_4A70DF6 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23452/*"squareIndex"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23489/*"squareIndex"*/, -1, v2);
 }
 
 
@@ -533,43 +541,47 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetSquareIndexGroup(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   int32_t IntFromScript; // w0
-  int32_t v5; // w19
+  int32_t v9; // w19
   Il2CppObject *Master_object; // x20
   System_Collections_Generic_List_int__o *Instance; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  __int64 v12; // x1
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4A5C0F9 & 1) == 0 )
+  if ( (byte_4A70E08 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-    sub_1B885B0(&DataManager_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1B885B0(&StringLiteral_23455/*"squareIndexGroup"*/);
-    byte_4A5C0F9 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___, method);
+    sub_1B90010(&DataManager_TypeInfo, v4);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
+    sub_1B90010(&StringLiteral_23492/*"squareIndexGroup"*/, v7);
+    byte_4A70E08 = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23455/*"squareIndexGroup"*/, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23492/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
     return 0LL;
-  v5 = IntFromScript;
+  v9 = IntFromScript;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || !Master_object
     || (Instance = WarBoardSquareIndexGroupMaster__GetStageList(
                      (WarBoardSquareIndexGroupMaster_o *)Master_object,
-                     v5,
+                     v9,
                      HIDWORD(Instance[10].fields._items),
-                     v9)) == 0LL )
+                     v13)) == 0LL )
   {
-    sub_1B8880C(Instance, v8);
+    sub_1B9026C(Instance, v12);
   }
   return System_Collections_Generic_List_int___ToArray(
            Instance,
-           (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -578,44 +590,49 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetSquareIndexes(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   int32_t IntFromScript; // w0
-  int32_t v5; // w20
+  int32_t v10; // w20
   Il2CppObject *Master_object; // x19
   System_Collections_Generic_List_int__o *Instance; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4A5C0F6 & 1) == 0 )
+  if ( (byte_4A70E05 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-    sub_1B885B0(&DataManager_TypeInfo);
-    sub_1B885B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1B885B0(&StringLiteral_23455/*"squareIndexGroup"*/);
-    sub_1B885B0(&StringLiteral_23457/*"squareIndexes"*/);
-    byte_4A5C0F6 = 1;
+    sub_1B90010(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___, method);
+    sub_1B90010(&DataManager_TypeInfo, v4);
+    sub_1B90010(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
+    sub_1B90010(&StringLiteral_23492/*"squareIndexGroup"*/, v7);
+    sub_1B90010(&StringLiteral_23494/*"squareIndexes"*/, v8);
+    byte_4A70E05 = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23455/*"squareIndexGroup"*/, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23492/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
-    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23457/*"squareIndexes"*/, 0LL);
-  v5 = IntFromScript;
+    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_23494/*"squareIndexes"*/, 0LL);
+  v10 = IntFromScript;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E7F8B4 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
-  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+  Instance = (System_Collections_Generic_List_int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || !Master_object
     || (Instance = WarBoardSquareIndexGroupMaster__GetStageList(
                      (WarBoardSquareIndexGroupMaster_o *)Master_object,
-                     v5,
+                     v10,
                      HIDWORD(Instance[10].fields._items),
-                     v9)) == 0LL )
+                     v14)) == 0LL )
   {
-    sub_1B8880C(Instance, v8);
+    sub_1B9026C(Instance, v13);
   }
   return System_Collections_Generic_List_int___ToArray(
            Instance,
-           (const MethodInfo_34E22C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_34F5454 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -623,56 +640,57 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetSquareIndicesGreedi
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_Collections_ICollection_o *SquareIndexes; // x20
-  const MethodInfo *v4; // x1
+  const MethodInfo *v5; // x1
   int32_t SquareIndex; // w0
-  int32_t v6; // w19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  _QWORD *v9; // x19
-  __int64 v10; // x8
-  __int64 v11; // x0
+  int32_t v7; // w19
+  __int64 v8; // x0
+  __int64 v9; // x1
+  _QWORD *v10; // x19
+  __int64 v11; // x8
   __int64 v12; // x0
+  __int64 v13; // x0
 
-  if ( (byte_4A5C0F7 & 1) == 0 )
+  if ( (byte_4A70E06 & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Array_Empty_int___);
-    sub_1B885B0(&int___TypeInfo);
-    byte_4A5C0F7 = 1;
+    sub_1B90010(&Method_System_Array_Empty_int___, method);
+    sub_1B90010(&int___TypeInfo, v3);
+    byte_4A70E06 = 1;
   }
   SquareIndexes = (System_Collections_ICollection_o *)WarBoardEventScriptEntity__GetSquareIndexes(this, method);
   if ( BasicHelper__IsNullOrEmpty(SquareIndexes, 0LL) )
   {
-    SquareIndex = WarBoardEventScriptEntity__GetSquareIndex(this, v4);
+    SquareIndex = WarBoardEventScriptEntity__GetSquareIndex(this, v5);
     if ( SquareIndex < 1 )
     {
-      v9 = Method_System_Array_Empty_int___;
-      v10 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-      if ( !v10 )
+      v10 = Method_System_Array_Empty_int___;
+      v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+      if ( !v11 )
       {
-        sub_1BDA4E8(Method_System_Array_Empty_int___);
-        v10 = v9[7];
+        sub_1BE1F48(Method_System_Array_Empty_int___);
+        v11 = v10[7];
       }
-      v11 = *(_QWORD *)(v10 + 16);
-      if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-        v11 = sub_1BDA48C(v11);
-      if ( !*(_DWORD *)(v11 + 224) )
-        j_il2cpp_runtime_class_init_0(v11);
-      v12 = *(_QWORD *)(v9[7] + 16LL);
+      v12 = *(_QWORD *)(v11 + 16);
       if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-        v12 = sub_1BDA48C(v12);
-      return **(System_Int32_array ***)(v12 + 184);
+        v12 = sub_1BE1EEC(v12);
+      if ( !*(_DWORD *)(v12 + 224) )
+        j_il2cpp_runtime_class_init_0(v12);
+      v13 = *(_QWORD *)(v10[7] + 16LL);
+      if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+        v13 = sub_1BE1EEC(v13);
+      return **(System_Int32_array ***)(v13 + 184);
     }
     else
     {
-      v6 = SquareIndex;
-      v7 = sub_1B88658(int___TypeInfo, 1LL);
-      if ( !v7 )
-        sub_1B8880C(0LL, v8);
-      SquareIndexes = (System_Collections_ICollection_o *)v7;
-      if ( !*(_DWORD *)(v7 + 24) )
-        sub_1B88814(v7, v8);
-      *(_DWORD *)(v7 + 32) = v6;
+      v7 = SquareIndex;
+      v8 = sub_1B900B8(int___TypeInfo, 1LL);
+      if ( !v8 )
+        sub_1B9026C(0LL, v9);
+      SquareIndexes = (System_Collections_ICollection_o *)v8;
+      if ( !*(_DWORD *)(v8 + 24) )
+        sub_1B90274(v8, v9);
+      *(_DWORD *)(v8 + 32) = v7;
     }
   }
   return (System_Int32_array *)SquareIndexes;
@@ -685,12 +703,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetStageReinforcementsId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0FD & 1) == 0 )
+  if ( (byte_4A70E0C & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_22842/*"reinforcements"*/);
-    byte_4A5C0FD = 1;
+    sub_1B90010(&StringLiteral_22875/*"reinforcements"*/, method);
+    byte_4A70E0C = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22842/*"reinforcements"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22875/*"reinforcements"*/, -1, v2);
 }
 
 
@@ -698,12 +716,12 @@ int32_t __fastcall WarBoardEventScriptEntity__GetStatus(WarBoardEventScriptEntit
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C0F1 & 1) == 0 )
+  if ( (byte_4A70E00 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23522/*"status"*/);
-    byte_4A5C0F1 = 1;
+    sub_1B90010(&StringLiteral_23559/*"status"*/, method);
+    byte_4A70E00 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23522/*"status"*/, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23559/*"status"*/, -1, v2);
 }
 
 
@@ -713,41 +731,43 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetStringFromScript(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  struct System_Collections_Generic_Dictionary_string__object__o *v9; // x0
+  struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
+  __int64 v10; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *v11; // x0
   Il2CppObject *Item; // x0
-  WarBoardEventScriptEntity_o *v12; // x0
-  const MethodInfo *v13; // x1
+  WarBoardEventScriptEntity_o *v14; // x0
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4A5C0EF & 1) == 0 )
+  if ( (byte_4A70DFE & 1) == 0 )
   {
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1B885B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1B885B0(&string_TypeInfo);
-    byte_4A5C0EF = 1;
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B90010(&string_TypeInfo, v8);
+    byte_4A70DFE = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_31C73BC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
-  v9 = this->fields.script;
-  if ( !v9 )
-    sub_1B8880C(0LL, v8);
+  v11 = this->fields.script;
+  if ( !v11 )
+    sub_1B9026C(0LL, v10);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-           (System_Collections_Generic_Dictionary_object__object__o *)v9,
+           (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
-           (const MethodInfo_31C7148 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   defVal = (System_String_o *)Item;
   if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
     return defVal;
-  sub_1B88ACC(Item);
-  return (System_String_o *)WarBoardEventScriptEntity__GetBossIdx(v12, v13);
+  sub_1B9052C(Item);
+  return (System_String_o *)WarBoardEventScriptEntity__GetBossIdx(v14, v15);
 }
 
 
@@ -755,12 +775,12 @@ float __fastcall WarBoardEventScriptEntity__GetTargetAllCameraSize(
         WarBoardEventScriptEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C10B & 1) == 0 )
+  if ( (byte_4A70E1A & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_23850/*"targetAllCameraSize"*/);
-    byte_4A5C10B = 1;
+    sub_1B90010(&StringLiteral_23887/*"targetAllCameraSize"*/, method);
+    byte_4A70E1A = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_23850/*"targetAllCameraSize"*/, 0.0, 0LL);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_23887/*"targetAllCameraSize"*/, 0.0, 0LL);
 }
 
 
@@ -769,23 +789,23 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetUiType(
         System_String_o *defVal,
         const MethodInfo *method)
 {
-  if ( (byte_4A5C0F4 & 1) == 0 )
+  if ( (byte_4A70E03 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_24109/*"type"*/);
-    byte_4A5C0F4 = 1;
+    sub_1B90010(&StringLiteral_24148/*"type"*/, defVal);
+    byte_4A70E03 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24109/*"type"*/, defVal, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24148/*"type"*/, defVal, 0LL);
 }
 
 
 bool __fastcall WarBoardEventScriptEntity__IsDisp(WarBoardEventScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5C0F5 & 1) == 0 )
+  if ( (byte_4A70E04 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_18636/*"disp"*/);
-    byte_4A5C0F5 = 1;
+    sub_1B90010(&StringLiteral_18661/*"disp"*/, method);
+    byte_4A70E04 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18636/*"disp"*/, 1, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18661/*"disp"*/, 1, 0LL) == 1;
 }
 
 
@@ -795,10 +815,10 @@ bool __fastcall WarBoardEventScriptEntity__IsUseHoldReinforcements(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A5C106 & 1) == 0 )
+  if ( (byte_4A70E15 & 1) == 0 )
   {
-    sub_1B885B0(&StringLiteral_20823/*"isUseHoldReinforcements"*/);
-    byte_4A5C106 = 1;
+    sub_1B90010(&StringLiteral_20852/*"isUseHoldReinforcements"*/, method);
+    byte_4A70E15 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20823/*"isUseHoldReinforcements"*/, -1, v2) > 0;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_20852/*"isUseHoldReinforcements"*/, -1, v2) > 0;
 }

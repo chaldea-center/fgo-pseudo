@@ -8,23 +8,24 @@ void __fastcall TitleInfoEventUIPartsComponent__UpdateDisp(
         TitleInfoEventUIPartsComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   DataManager_o *Instance; // x0
-  __int64 v4; // x1
+  __int64 v5; // x1
   bool IsOpen; // w20
 
-  if ( (byte_4A59C7F & 1) == 0 )
+  if ( (byte_4A6E8C6 & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1B885B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4A59C7F = 1;
+    sub_1B90010(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A6E8C6 = 1;
   }
   if ( this->fields.commonReleaseId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3739718 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_2E7F908 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL
+                                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL
       || (IsOpen = CommonReleaseMaster__IsOpen(
                      (CommonReleaseMaster_o *)Instance,
                      this->fields.commonReleaseId,
@@ -33,7 +34,7 @@ void __fastcall TitleInfoEventUIPartsComponent__UpdateDisp(
                      0LL),
           (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1B8880C(Instance, v4);
+      sub_1B9026C(Instance, v5);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, IsOpen, 0LL);
   }

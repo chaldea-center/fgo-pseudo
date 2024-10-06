@@ -4,7 +4,7 @@ void __fastcall ClassBoardEffectPlayer___ctor(ClassBoardEffectPlayer_o *this, co
 }
 
 
-void __fastcall ClassBoardEffectPlayer___ctor_44452376(
+void __fastcall ClassBoardEffectPlayer___ctor_44507788(
         ClassBoardEffectPlayer_o *this,
         System_String_o *playerName,
         const MethodInfo *method)
@@ -14,7 +14,7 @@ void __fastcall ClassBoardEffectPlayer___ctor_44452376(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Name_k__BackingField = playerName;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)playerName, v5, v6);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)playerName, v5, v6);
 }
 
 
@@ -32,14 +32,14 @@ void __fastcall ClassBoardEffectPlayer__End(ClassBoardEffectPlayer_o *this, cons
       endCallback->fields.original_method_info,
       *(_QWORD *)&endCallback->fields.extra_arg);
   p_endCallback->klass = 0LL;
-  sub_1B88554(p_endCallback, 0, v2, v3);
+  sub_1B8FFB4(p_endCallback, 0, v2, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardEffectPlayer__GetData___Il2CppFullySharedGenericType_(
         ClassBoardEffectPlayer_o *this,
-        const MethodInfo_2E7374C *method)
+        const MethodInfo_2E82060 *method)
 {
   __int64 v2; // x2
   __int64 *v5; // x8
@@ -58,15 +58,15 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardEffe
   if ( !v5 )
   {
     v6 = v2;
-    sub_1BDA4E8();
+    sub_1BE1F48();
     v5 = *(__int64 **)(v6 + 56);
   }
   v7 = *v5;
   v8 = *(unsigned int *)(*v5 + 252);
   data = this->fields.data;
   if ( (*(_BYTE *)(*v5 + 309) & 1) == 0 )
-    v7 = sub_1BDA48C(v7);
-  v10 = (const void *)sub_1B886FC(data, v7, (char *)v13 - ((v8 + 15) & 0x1FFFFFFF0LL));
+    v7 = sub_1BE1EEC(v7);
+  v10 = (const void *)sub_1B9015C(data, v7, (char *)v13 - ((v8 + 15) & 0x1FFFFFFF0LL));
   v11 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v10, v8);
   result.monitor = v12;
   result.klass = v11;
@@ -74,72 +74,72 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardEffe
 }
 
 
-bool __fastcall ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_2E7365C *method)
+bool __fastcall ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_2E81F70 *method)
 {
   __int64 v2; // x2
   __int64 v3; // x3
-  const MethodInfo_2E7365C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E81F70_RGCTXs *rgctx_data; // x8
   ClassBoardEffectPlayer_o *v5; // x19
   ClassBoardEffectPlayer_o *_0_T; // x1
   Il2CppObject *data; // x19
   ClassBoardEffectPlayer_o *v10; // x0
-  const MethodInfo_2E736D4 *v11; // x1
+  const MethodInfo_2E81FE8 *v11; // x1
 
   rgctx_data = method->rgctx_data;
   v5 = this;
   if ( !rgctx_data )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1BDA4E8(method);
+    this = (ClassBoardEffectPlayer_o *)sub_1BE1F48(method);
     rgctx_data = method->rgctx_data;
   }
   _0_T = (ClassBoardEffectPlayer_o *)rgctx_data->_0_T;
   data = v5->fields.data;
   if ( (BYTE5(rgctx_data->_0_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1BDA48C(_0_T);
+    this = (ClassBoardEffectPlayer_o *)sub_1BE1EEC(_0_T);
     _0_T = this;
   }
   if ( !data )
-    sub_1B8880C(this, _0_T);
+    sub_1B9026C(this, _0_T);
   if ( data->klass->_1.element_class == (Il2CppClass *)_0_T[1].fields._Name_k__BackingField )
     return *(_BYTE *)j_il2cpp_object_unbox_0(data, _0_T, v2, v3);
-  sub_1B88ACC(data);
+  sub_1B9052C(data);
   return ClassBoardEffectPlayer__GetData_int_(v10, v11);
 }
 
 
 int32_t __fastcall ClassBoardEffectPlayer__GetData_int_(
         ClassBoardEffectPlayer_o *this,
-        const MethodInfo_2E736D4 *method)
+        const MethodInfo_2E81FE8 *method)
 {
   __int64 v2; // x2
   __int64 v3; // x3
-  const MethodInfo_2E736D4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E81FE8_RGCTXs *rgctx_data; // x8
   ClassBoardEffectPlayer_o *v5; // x19
   ClassBoardEffectPlayer_o *_0_T; // x1
   Il2CppObject *data; // x19
   ClassBoardEffectPlayer_o *v10; // x0
-  const MethodInfo_2E7374C *v11; // x1
+  const MethodInfo_2E82060 *v11; // x1
 
   rgctx_data = method->rgctx_data;
   v5 = this;
   if ( !rgctx_data )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1BDA4E8(method);
+    this = (ClassBoardEffectPlayer_o *)sub_1BE1F48(method);
     rgctx_data = method->rgctx_data;
   }
   _0_T = (ClassBoardEffectPlayer_o *)rgctx_data->_0_T;
   data = v5->fields.data;
   if ( (BYTE5(rgctx_data->_0_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    this = (ClassBoardEffectPlayer_o *)sub_1BDA48C(_0_T);
+    this = (ClassBoardEffectPlayer_o *)sub_1BE1EEC(_0_T);
     _0_T = this;
   }
   if ( !data )
-    sub_1B8880C(this, _0_T);
+    sub_1B9026C(this, _0_T);
   if ( data->klass->_1.element_class == (Il2CppClass *)_0_T[1].fields._Name_k__BackingField )
     return *(_DWORD *)j_il2cpp_object_unbox_0(data, _0_T, v2, v3);
-  sub_1B88ACC(data);
+  sub_1B9052C(data);
   return (unsigned int)ClassBoardEffectPlayer__GetData___Il2CppFullySharedGenericType_(v10, v11).klass;
 }
 
@@ -159,7 +159,7 @@ void __fastcall ClassBoardEffectPlayer__Play(ClassBoardEffectPlayer_o *this, con
 void __fastcall ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
         ClassBoardEffectPlayer_o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o obj,
-        const MethodInfo_2E738C8 *method)
+        const MethodInfo_2E821DC *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
   _QWORD *v5; // x23
@@ -182,7 +182,7 @@ void __fastcall ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
   if ( !v5 )
   {
     monitor = obj.monitor;
-    sub_1BDA4E8();
+    sub_1BE1F48();
     v5 = (_QWORD *)monitor[7];
   }
   v7 = *(unsigned int *)(*v5 + 252LL);
@@ -194,18 +194,18 @@ void __fastcall ClassBoardEffectPlayer__SetData___Il2CppFullySharedGenericType_(
   memcpy((char *)v16 - ((v7 + 15) & 0x1FFFFFFF0LL), v9, v7);
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(*v5, v8, v10, v11, v12);
   this->fields.data = v13;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v13, v14, v15);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v13, v14, v15);
 }
 
 
 void __fastcall ClassBoardEffectPlayer__SetData_bool_(
         ClassBoardEffectPlayer_o *this,
         bool obj,
-        const MethodInfo_2E7380C *method)
+        const MethodInfo_2E82120 *method)
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  const MethodInfo_2E7380C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E82120_RGCTXs *rgctx_data; // x8
   Il2CppObject *v9; // x0
   int32_t v10; // w2
   int32_t v11; // w3
@@ -214,24 +214,24 @@ void __fastcall ClassBoardEffectPlayer__SetData_bool_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1BDA4E8();
+    sub_1BE1F48();
     rgctx_data = method->rgctx_data;
   }
   v12[0] = obj;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(rgctx_data->_0_T, v12, method, v3, v4);
   this->fields.data = v9;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v9, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v9, v10, v11);
 }
 
 
 void __fastcall ClassBoardEffectPlayer__SetData_int_(
         ClassBoardEffectPlayer_o *this,
         int32_t obj,
-        const MethodInfo_2E7386C *method)
+        const MethodInfo_2E82180 *method)
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  const MethodInfo_2E7386C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_2E82180_RGCTXs *rgctx_data; // x8
   Il2CppObject *v9; // x0
   int32_t v10; // w2
   int32_t v11; // w3
@@ -240,13 +240,13 @@ void __fastcall ClassBoardEffectPlayer__SetData_int_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1BDA4E8();
+    sub_1BE1F48();
     rgctx_data = method->rgctx_data;
   }
   v12 = obj;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(rgctx_data->_0_T, &v12, method, v3, v4);
   this->fields.data = v9;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v9, v10, v11);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)v9, v10, v11);
 }
 
 
@@ -258,7 +258,7 @@ void __fastcall ClassBoardEffectPlayer__SetEndEvent(
   int32_t v3; // w3
 
   this->fields.endCallback = callback;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -270,7 +270,7 @@ void __fastcall ClassBoardEffectPlayer__SetPlayEvent(
   int32_t v3; // w3
 
   this->fields.playCallback = callback;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.playCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.playCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 

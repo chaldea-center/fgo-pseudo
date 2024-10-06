@@ -1,9 +1,9 @@
 void __fastcall CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5E907 & 1) == 0 )
+  if ( (byte_4A73620 & 1) == 0 )
   {
-    sub_1B885B0(&CommonEffectComponent_TypeInfo);
-    byte_4A5E907 = 1;
+    sub_1B90010(&CommonEffectComponent_TypeInfo, method);
+    byte_4A73620 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -23,28 +23,30 @@ void __fastcall CommandCodeEffectComponent__EndEffectFunc(CommandCodeEffectCompo
 
 void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   Il2CppObject *Component_object; // x20
-  Il2CppObject *v4; // x19
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
+  Il2CppObject *v6; // x19
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4A5E906 & 1) == 0 )
+  if ( (byte_4A7361F & 1) == 0 )
   {
-    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1B885B0(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E906 = 1;
+    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1B90010(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A7361F = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-  v4 = UnityEngine_Component__GetComponent_object_(
+                       (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+  v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2E763AC *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-  if ( v5 )
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( v7 )
   {
     if ( Component_object )
     {
@@ -52,16 +54,16 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
       return;
     }
 LABEL_14:
-    sub_1B8880C(v5, v6);
+    sub_1B9026C(v7, v8);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v4, 0LL, 0LL);
-  if ( v5 )
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v6, 0LL, 0LL);
+  if ( v7 )
   {
-    if ( !v4 )
+    if ( !v6 )
       goto LABEL_14;
-    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v4, 0LL);
+    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v6, 0LL);
   }
 }
 
@@ -78,29 +80,31 @@ void __fastcall CommandCodeEffectComponent__PlayDetachEffect(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CommandCodeEffectComponent__SetCommandCodeImg(
         CommandCodeEffectComponent_o *this,
         int32_t commandCodeId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   UnityEngine_Object_o *commandCodeImg; // x21
-  UISprite_o *v6; // x20
+  UISprite_o *v7; // x20
 
-  if ( (byte_4A5E905 & 1) == 0 )
+  if ( (byte_4A7361E & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5E905 = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A7361E = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(commandCodeImg, 0LL, 0LL) )
   {
-    v6 = this->fields.commandCodeImg;
+    v7 = this->fields.commandCodeImg;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetCommandCodeIcon(v6, commandCodeId, 0LL);
+    AtlasManager__SetCommandCodeIcon(v7, commandCodeId, 0LL);
   }
 }
 
@@ -115,7 +119,7 @@ void __fastcall CommandCodeEffectComponent__SetDetachEffect(
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_1B88554(
+    sub_1B8FFB4(
       (ServantStatusBattleListViewItem_o *)&this->fields.commandCodeDetachAction,
       (int32_t)action,
       (int32_t)method,
@@ -134,7 +138,7 @@ void __fastcall CommandCodeEffectComponent__SetEndEffectCallbak(
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_1B88554(
+    sub_1B8FFB4(
       (ServantStatusBattleListViewItem_o *)&this->fields.endEffectCallback,
       (int32_t)callback,
       (int32_t)method,

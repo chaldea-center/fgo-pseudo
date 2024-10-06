@@ -20,7 +20,7 @@ void __fastcall SyncTransformComponent__setChild(
   const MethodInfo *v5; // x1
 
   this->fields.child = trans;
-  sub_1B88554((ServantStatusBattleListViewItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v5);
 }
@@ -39,10 +39,10 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
   UnityEngine_Transform_o *v15; // x20
   int v16; // s0
 
-  if ( (byte_4A5A72A & 1) == 0 )
+  if ( (byte_4A6F432 & 1) == 0 )
   {
-    sub_1B885B0(&UnityEngine_Object_TypeInfo);
-    byte_4A5A72A = 1;
+    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
+    byte_4A6F432 = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,7 +95,7 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
           !v15) )
     {
 LABEL_20:
-      sub_1B8880C(gameObject, v4);
+      sub_1B9026C(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
   }

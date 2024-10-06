@@ -4,6 +4,7 @@ void __fastcall ServantCostumeEventBalloon___ctor(ServantCostumeEventBalloon_o *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantCostumeEventBalloon__Set(
         ServantCostumeEventBalloon_o *this,
         int32_t itemId,
@@ -11,10 +12,10 @@ void __fastcall ServantCostumeEventBalloon__Set(
 {
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_4A5EB5D & 1) == 0 )
+  if ( (byte_4A73876 & 1) == 0 )
   {
-    sub_1B885B0(&AtlasManager_TypeInfo);
-    byte_4A5EB5D = 1;
+    sub_1B90010(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
+    byte_4A73876 = 1;
   }
   itemSprite = this->fields.itemSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )

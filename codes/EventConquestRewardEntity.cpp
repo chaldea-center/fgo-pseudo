@@ -1,18 +1,19 @@
 void __fastcall EventConquestRewardEntity___ctor(EventConquestRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A5B091 & 1) == 0 )
+  if ( (byte_4A6FD9C & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_string___ctor__);
-    byte_4A5B091 = 1;
+    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A6FD9C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_311D7AC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
   this->fields.objectNum = 0;
-  *(_OWORD *)&this->fields.eventId = xmmword_BB3EC0;
+  *(_OWORD *)&this->fields.eventId = xmmword_BB6D40;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventConquestRewardEntity__CreatePK(
         int32_t eventId,
         int32_t questId,
@@ -20,17 +21,17 @@ System_String_o *__fastcall EventConquestRewardEntity__CreatePK(
         int32_t objectId,
         const MethodInfo *method)
 {
-  if ( (byte_4A5B092 & 1) == 0 )
+  if ( (byte_4A6FD9D & 1) == 0 )
   {
-    sub_1B885B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4A5B092 = 1;
+    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&questId);
+    byte_4A6FD9D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            questId,
            objectType,
            objectId,
-           (const MethodInfo_2E7E47C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2E8CD90 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
