@@ -2,10 +2,10 @@ void __fastcall FatigueRecoveryConfirmationDialog___cctor(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A740BE & 1) == 0 )
+  if ( (byte_4AB0DB2 & 1) == 0 )
   {
-    sub_1B90010(&FatigueRecoveryConfirmationDialog_TypeInfo, v1);
-    byte_4A740BE = 1;
+    sub_1BAB41C(&FatigueRecoveryConfirmationDialog_TypeInfo, v1);
+    byte_4AB0DB2 = 1;
   }
   FatigueRecoveryConfirmationDialog_TypeInfo->static_fields->SVT_ICON_POS = (struct UnityEngine_Vector2_o)0x4180000040000000LL;
   FatigueRecoveryConfirmationDialog_TypeInfo->static_fields->SVT_ICON_SCALE = 0.715;
@@ -85,61 +85,51 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
   UnityEngine_Object_o *inSvtIcon; // x29
   UnityEngine_GameObject_o **p_inSvtIcon; // x28
   UnityEngine_GameObject_o *v37; // x29
-  struct UnityEngine_GameObject_o *Object; // x0
-  int32_t v39; // w2
-  int32_t v40; // w3
-  FatigueRecoveryConfirmationDialog_c *v41; // x0
-  UnityEngine_GameObject_o *v42; // x29
-  const MethodInfo *v43; // x2
+  FatigueRecoveryConfirmationDialog_c *v38; // x0
+  UnityEngine_GameObject_o *v39; // x29
+  const MethodInfo *v40; // x2
   UILabel_o *inAfterTimeLabel; // x27
   UILabel_o *outLabel; // x26
   UnityEngine_Object_o *outSvtIcon; // x27
   UnityEngine_GameObject_o **p_outSvtIcon; // x26
-  UnityEngine_GameObject_o *v48; // x27
-  struct UnityEngine_GameObject_o *v49; // x0
-  int32_t v50; // w2
-  int32_t v51; // w3
-  FatigueRecoveryConfirmationDialog_c *v52; // x0
-  UnityEngine_GameObject_o *v53; // x27
-  const MethodInfo *v54; // x2
+  UnityEngine_GameObject_o *v45; // x27
+  FatigueRecoveryConfirmationDialog_c *v46; // x0
+  UnityEngine_GameObject_o *v47; // x27
+  const MethodInfo *v48; // x2
   UILabel_o *outBeforeTimeLabel; // x24
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v57; // x0
-  UILabel_o *v58; // x21
-  UnityEngine_GameObject_o *v59; // x0
-  UnityEngine_GameObject_o *v60; // x0
+  UnityEngine_GameObject_o *v51; // x0
+  UILabel_o *v52; // x21
+  UnityEngine_GameObject_o *v53; // x0
+  UnityEngine_GameObject_o *v54; // x0
   UILabel_o *confirmLabel; // x20
   UILabel_o *buttonDecideLabel; // x20
   UILabel_o *buttonCancelLabel; // x20
-  System_Action_o *v64; // x20
+  System_Action_o *v58; // x20
 
   v12 = isDecideSe;
-  if ( (byte_4A740BD & 1) == 0 )
+  if ( (byte_4AB0DB1 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, title);
-    sub_1B90010(&Method_CommonConfirmDialog_EndOpen__, v19);
-    sub_1B90010(&FatigueRecoveryConfirmationDialog_TypeInfo, v20);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___, v21);
-    sub_1B90010(&LocalizationManager_TypeInfo, v22);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v23);
-    sub_1B90010(&StringLiteral_11640/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, v24);
-    sub_1B90010(&StringLiteral_11635/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, v25);
-    sub_1B90010(&StringLiteral_3758/*"COMMON_CONFIRM_DECIDE"*/, v26);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v27);
-    sub_1B90010(&StringLiteral_11644/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, v28);
-    sub_1B90010(&StringLiteral_11555/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/, v29);
-    sub_1B90010(&StringLiteral_11627/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, v30);
-    byte_4A740BD = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, title);
+    sub_1BAB41C(&Method_CommonConfirmDialog_EndOpen__, v19);
+    sub_1BAB41C(&FatigueRecoveryConfirmationDialog_TypeInfo, v20);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___, v21);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v22);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v23);
+    sub_1BAB41C(&StringLiteral_11642/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, v24);
+    sub_1BAB41C(&StringLiteral_11637/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, v25);
+    sub_1BAB41C(&StringLiteral_3755/*"COMMON_CONFIRM_DECIDE"*/, v26);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v27);
+    sub_1BAB41C(&StringLiteral_11646/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, v28);
+    sub_1BAB41C(&StringLiteral_11557/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/, v29);
+    sub_1BAB41C(&StringLiteral_11629/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, v30);
+    byte_4AB0DB1 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)&this->fields.clickFunc,
-    (int32_t)func,
-    (int32_t)message,
-    (int32_t)inSvtEnt);
+  sub_1BAB3C0(&this->fields.clickFunc);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11644/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, 0LL);
+  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11646/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, 0LL);
   if ( !this->fields.titleLabel )
     goto LABEL_62;
   v33 = (System_String_o *)inRootGameObject;
@@ -163,7 +153,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     inLabel = this->fields.inLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11627/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, 0LL);
+    inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11629/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, 0LL);
     if ( !inLabel )
       goto LABEL_62;
     UILabel__set_text(inLabel, (System_String_o *)inRootGameObject, 0LL);
@@ -176,25 +166,24 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
       v37 = *p_inSvtIcon;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_69539628((UnityEngine_Object_o *)v37, 0LL);
+      UnityEngine_Object__DestroyImmediate_69800808((UnityEngine_Object_o *)v37, 0LL);
     }
-    Object = BaseMonoBehaviour__createObject(
-               (BaseMonoBehaviour_o *)this,
-               this->fields.servantIconPrefab,
-               this->fields.inRootGameObject,
-               0LL,
-               0LL);
-    this->fields.inSvtIcon = Object;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.inSvtIcon, (int32_t)Object, v39, v40);
-    v41 = FatigueRecoveryConfirmationDialog_TypeInfo;
-    v42 = this->fields.inSvtIcon;
+    this->fields.inSvtIcon = BaseMonoBehaviour__createObject(
+                               (BaseMonoBehaviour_o *)this,
+                               this->fields.servantIconPrefab,
+                               this->fields.inRootGameObject,
+                               0LL,
+                               0LL);
+    sub_1BAB3C0(&this->fields.inSvtIcon);
+    v38 = FatigueRecoveryConfirmationDialog_TypeInfo;
+    v39 = this->fields.inSvtIcon;
     if ( !FatigueRecoveryConfirmationDialog_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FatigueRecoveryConfirmationDialog_TypeInfo);
-      v41 = FatigueRecoveryConfirmationDialog_TypeInfo;
+      v38 = FatigueRecoveryConfirmationDialog_TypeInfo;
     }
-    GameObjectExtensions__SetLocalPosition_33770636(v42, v41->static_fields->SVT_ICON_POS, 0LL);
-    GameObjectExtensions__SetLocalScale_33772860(
+    GameObjectExtensions__SetLocalPosition_34019596(v39, v38->static_fields->SVT_ICON_POS, 0LL);
+    GameObjectExtensions__SetLocalScale_34021820(
       *p_inSvtIcon,
       FatigueRecoveryConfirmationDialog_TypeInfo->static_fields->SVT_ICON_SCALE,
       0LL);
@@ -203,17 +192,17 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
       goto LABEL_62;
     inRootGameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      inRootGameObject,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___);
     if ( !inRootGameObject )
       goto LABEL_62;
     v12 = isDecideSe;
-    EventServantFatigueChangeDialogItem__Set((EventServantFatigueChangeDialogItem_o *)inRootGameObject, inSvtEnt, v43);
+    EventServantFatigueChangeDialogItem__Set((EventServantFatigueChangeDialogItem_o *)inRootGameObject, inSvtEnt, v40);
     inRootGameObject = (UnityEngine_GameObject_o *)this->fields.inBeforeTimeLabel;
     if ( !inRootGameObject )
       goto LABEL_62;
     UILabel__set_text((UILabel_o *)inRootGameObject, inBeforeTime, 0LL);
     inAfterTimeLabel = this->fields.inAfterTimeLabel;
-    inRootGameObject = (UnityEngine_GameObject_o *)System_String__Concat_61787092(v33, inAfterTime, 0LL);
+    inRootGameObject = (UnityEngine_GameObject_o *)System_String__Concat_62048128(v33, inAfterTime, 0LL);
     if ( !inAfterTimeLabel )
       goto LABEL_62;
     UILabel__set_text(inAfterTimeLabel, (System_String_o *)inRootGameObject, 0LL);
@@ -223,7 +212,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     outLabel = this->fields.outLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11635/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, 0LL);
+    inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11637/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, 0LL);
     if ( !outLabel )
       goto LABEL_62;
     UILabel__set_text(outLabel, (System_String_o *)inRootGameObject, 0LL);
@@ -233,28 +222,27 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     p_outSvtIcon = &this->fields.outSvtIcon;
     if ( UnityEngine_Object__op_Inequality(0LL, outSvtIcon, 0LL) )
     {
-      v48 = *p_outSvtIcon;
+      v45 = *p_outSvtIcon;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_69539628((UnityEngine_Object_o *)v48, 0LL);
+      UnityEngine_Object__DestroyImmediate_69800808((UnityEngine_Object_o *)v45, 0LL);
     }
-    v49 = BaseMonoBehaviour__createObject(
-            (BaseMonoBehaviour_o *)this,
-            this->fields.servantIconPrefab,
-            this->fields.outRootGameObject,
-            0LL,
-            0LL);
-    this->fields.outSvtIcon = v49;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.outSvtIcon, (int32_t)v49, v50, v51);
-    v52 = FatigueRecoveryConfirmationDialog_TypeInfo;
-    v53 = this->fields.outSvtIcon;
+    this->fields.outSvtIcon = BaseMonoBehaviour__createObject(
+                                (BaseMonoBehaviour_o *)this,
+                                this->fields.servantIconPrefab,
+                                this->fields.outRootGameObject,
+                                0LL,
+                                0LL);
+    sub_1BAB3C0(&this->fields.outSvtIcon);
+    v46 = FatigueRecoveryConfirmationDialog_TypeInfo;
+    v47 = this->fields.outSvtIcon;
     if ( !FatigueRecoveryConfirmationDialog_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FatigueRecoveryConfirmationDialog_TypeInfo);
-      v52 = FatigueRecoveryConfirmationDialog_TypeInfo;
+      v46 = FatigueRecoveryConfirmationDialog_TypeInfo;
     }
-    GameObjectExtensions__SetLocalPosition_33770636(v53, v52->static_fields->SVT_ICON_POS, 0LL);
-    GameObjectExtensions__SetLocalScale_33772860(
+    GameObjectExtensions__SetLocalPosition_34019596(v47, v46->static_fields->SVT_ICON_POS, 0LL);
+    GameObjectExtensions__SetLocalScale_34021820(
       *p_outSvtIcon,
       FatigueRecoveryConfirmationDialog_TypeInfo->static_fields->SVT_ICON_SCALE,
       0LL);
@@ -263,12 +251,12 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
       goto LABEL_62;
     inRootGameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      inRootGameObject,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___);
     if ( !inRootGameObject )
       goto LABEL_62;
-    EventServantFatigueChangeDialogItem__Set((EventServantFatigueChangeDialogItem_o *)inRootGameObject, outSvtEnt, v54);
+    EventServantFatigueChangeDialogItem__Set((EventServantFatigueChangeDialogItem_o *)inRootGameObject, outSvtEnt, v48);
     outBeforeTimeLabel = this->fields.outBeforeTimeLabel;
-    inRootGameObject = (UnityEngine_GameObject_o *)System_String__Concat_61787092(v33, outBeforeTime, 0LL);
+    inRootGameObject = (UnityEngine_GameObject_o *)System_String__Concat_62048128(v33, outBeforeTime, 0LL);
     if ( !outBeforeTimeLabel )
       goto LABEL_62;
     UILabel__set_text(outBeforeTimeLabel, (System_String_o *)inRootGameObject, 0LL);
@@ -286,40 +274,40 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
         inRootGameObject = (UnityEngine_GameObject_o *)this->fields.inRootGameObject;
         if ( inRootGameObject )
         {
-          v57 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
-          GameObjectExtensions__SetLocalPositionX(v57, 127.0, 0LL);
+          v51 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
+          GameObjectExtensions__SetLocalPositionX(v51, 127.0, 0LL);
           inRootGameObject = this->fields.changeArrow;
           if ( inRootGameObject )
           {
             UnityEngine_GameObject__SetActive(inRootGameObject, 1, 0LL);
-            v58 = this->fields.outLabel;
+            v52 = this->fields.outLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_11555/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/,
+                                                             (System_String_o *)StringLiteral_11557/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/,
                                                              0LL);
-            if ( v58 )
+            if ( v52 )
             {
-              UILabel__set_text(v58, (System_String_o *)inRootGameObject, 0LL);
+              UILabel__set_text(v52, (System_String_o *)inRootGameObject, 0LL);
               goto LABEL_55;
             }
           }
         }
       }
 LABEL_62:
-      sub_1B9026C(inRootGameObject, v32);
+      sub_1BAB678(inRootGameObject, v32);
     }
   }
   inRootGameObject = (UnityEngine_GameObject_o *)this->fields.outRootGameObject;
   if ( !inRootGameObject )
     goto LABEL_62;
-  v59 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v59, 6.0, 0LL);
+  v53 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v53, 6.0, 0LL);
   inRootGameObject = (UnityEngine_GameObject_o *)this->fields.inRootGameObject;
   if ( !inRootGameObject )
     goto LABEL_62;
-  v60 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v60, 6.0, 0LL);
+  v54 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)inRootGameObject, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v54, 6.0, 0LL);
   inRootGameObject = this->fields.changeArrow;
   if ( !inRootGameObject )
     goto LABEL_62;
@@ -332,24 +320,24 @@ LABEL_55:
   confirmLabel = this->fields.confirmLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11640/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, 0LL);
+  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11642/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, 0LL);
   if ( !confirmLabel )
     goto LABEL_62;
   UILabel__set_text(confirmLabel, (System_String_o *)inRootGameObject, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3758/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3755/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !buttonDecideLabel )
     goto LABEL_62;
   UILabel__set_text(buttonDecideLabel, (System_String_o *)inRootGameObject, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  inRootGameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_62;
   UILabel__set_text(buttonCancelLabel, (System_String_o *)inRootGameObject, 0LL);
   this->fields.isButtonEnable = 0;
   this->fields.isDecideBtnSe = v12;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0LL);
-  v64 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
-  System_Action___ctor(v64, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v64, 0, 0LL);
+  v58 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+  System_Action___ctor(v58, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v58, 0, 0LL);
 }

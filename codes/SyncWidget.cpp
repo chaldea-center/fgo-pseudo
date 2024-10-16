@@ -2,73 +2,76 @@ void __fastcall SyncWidget___ctor(SyncWidget_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   int32_t v3; // w3
-  __int64 v5; // x1
-  _QWORD *v6; // x20
-  __int64 v7; // x8
-  __int64 v8; // x0
+  long double v4; // q0
+  __int64 v6; // x1
+  _QWORD *v7; // x20
+  __int64 v8; // x8
   __int64 v9; // x0
-  struct SyncWidget_SyncParamType_array **v10; // x8
-  struct SyncWidget_SyncParamType_array *v11; // x1
-  __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
-  _QWORD *v15; // x20
-  __int64 v16; // x8
-  __int64 v17; // x0
-  __int64 v18; // x0
-  struct System_Action_array **v19; // x8
-  struct System_Action_array *v20; // x1
+  __int64 v10; // x0
+  struct SyncWidget_SyncParamType_array **v11; // x8
+  struct SyncWidget_SyncParamType_array *v12; // x1
+  __int64 v13; // x1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  long double v16; // q0
+  _QWORD *v17; // x20
+  __int64 v18; // x8
+  __int64 v19; // x0
+  __int64 v20; // x0
+  struct System_Action_array **v21; // x8
+  struct System_Action_array *v22; // x1
 
-  if ( (byte_4A71325 & 1) == 0 )
+  if ( (byte_4AB71FF & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Array_Empty_Action___, method);
-    sub_1B90010(&Method_System_Array_Empty_SyncWidget_SyncParamType___, v5);
-    byte_4A71325 = 1;
+    sub_1BAB41C(&Method_System_Array_Empty_Action___, method);
+    sub_1BAB41C(&Method_System_Array_Empty_SyncWidget_SyncParamType___, v6);
+    byte_4AB71FF = 1;
   }
-  v6 = Method_System_Array_Empty_SyncWidget_SyncParamType___;
-  v7 = *((_QWORD *)Method_System_Array_Empty_SyncWidget_SyncParamType___ + 7);
-  if ( !v7 )
+  v7 = Method_System_Array_Empty_SyncWidget_SyncParamType___;
+  v8 = *((_QWORD *)Method_System_Array_Empty_SyncWidget_SyncParamType___ + 7);
+  if ( !v8 )
   {
-    sub_1BE1F48(Method_System_Array_Empty_SyncWidget_SyncParamType___);
-    v7 = v6[7];
+    sub_1BFD354(Method_System_Array_Empty_SyncWidget_SyncParamType___);
+    v8 = v7[7];
   }
-  v8 = *(_QWORD *)(v7 + 16);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1BE1EEC(v8);
-  if ( !*(_DWORD *)(v8 + 224) )
-    j_il2cpp_runtime_class_init_0(v8);
-  v9 = *(_QWORD *)(v6[7] + 16LL);
+  v9 = *(_QWORD *)(v8 + 16);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1BE1EEC(v9);
-  v10 = *(struct SyncWidget_SyncParamType_array ***)(v9 + 184);
-  v11 = *v10;
-  this->fields.syncParamTypeArray = *v10;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncParamTypeArray, (int32_t)v11, v2, v3);
-  if ( !byte_4A6A8BA )
+    v9 = sub_1BFD2F8(v4);
+  if ( !*(_DWORD *)(v9 + 224) )
+    *(__n128 *)&v4 = j_il2cpp_runtime_class_init_0(v9);
+  v10 = *(_QWORD *)(v7[7] + 16LL);
+  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    v10 = sub_1BFD2F8(v4);
+  v11 = *(struct SyncWidget_SyncParamType_array ***)(v10 + 184);
+  v12 = *v11;
+  this->fields.syncParamTypeArray = *v11;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncParamTypeArray, (int32_t)v12, v2, v3);
+  if ( !byte_4AB058A )
   {
-    sub_1B90010(&UnityEngine_Vector2_TypeInfo, v12);
-    byte_4A6A8BA = 1;
+    sub_1BAB41C(&UnityEngine_Vector2_TypeInfo, v13);
+    byte_4AB058A = 1;
   }
-  this->fields.blankSize = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
-  v15 = Method_System_Array_Empty_Action___;
-  v16 = *((_QWORD *)Method_System_Array_Empty_Action___ + 7);
-  if ( !v16 )
+  *(struct UnityEngine_Vector2_o *)&v16 = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
+  this->fields.blankSize = *(struct UnityEngine_Vector2_o *)&v16;
+  v17 = Method_System_Array_Empty_Action___;
+  v18 = *((_QWORD *)Method_System_Array_Empty_Action___ + 7);
+  if ( !v18 )
   {
-    sub_1BE1F48(Method_System_Array_Empty_Action___);
-    v16 = v15[7];
+    sub_1BFD354(Method_System_Array_Empty_Action___);
+    v18 = v17[7];
   }
-  v17 = *(_QWORD *)(v16 + 16);
-  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1BE1EEC(v17);
-  if ( !*(_DWORD *)(v17 + 224) )
-    j_il2cpp_runtime_class_init_0(v17);
-  v18 = *(_QWORD *)(v15[7] + 16LL);
-  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1BE1EEC(v18);
-  v19 = *(struct System_Action_array ***)(v18 + 184);
-  v20 = *v19;
-  this->fields.syncActionArray = *v19;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncActionArray, (int32_t)v20, v13, v14);
+  v19 = *(_QWORD *)(v18 + 16);
+  if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
+    v19 = sub_1BFD2F8(v16);
+  if ( !*(_DWORD *)(v19 + 224) )
+    *(__n128 *)&v16 = j_il2cpp_runtime_class_init_0(v19);
+  v20 = *(_QWORD *)(v17[7] + 16LL);
+  if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
+    v20 = sub_1BFD2F8(v16);
+  v21 = *(struct System_Action_array ***)(v20 + 184);
+  v22 = *v21;
+  this->fields.syncActionArray = *v21;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncActionArray, (int32_t)v22, v14, v15);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -88,21 +91,21 @@ void __fastcall SyncWidget__Awake(SyncWidget_o *this, const MethodInfo *method)
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_4A71322 & 1) == 0 )
+  if ( (byte_4AB71FC & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_1B90010(&Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___, v3);
-    sub_1B90010(&Method_System_Linq_Enumerable_ToArray_Action___, v4);
-    sub_1B90010(&System_Func_SyncWidget_SyncParamType__Action__TypeInfo, v5);
-    byte_4A71322 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___, v3);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_Action___, v4);
+    sub_1BAB41C(&System_Func_SyncWidget_SyncParamType__Action__TypeInfo, v5);
+    byte_4AB71FC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.self = (struct UIWidget_o *)Component_object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.self, (int32_t)Component_object, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.self, (int32_t)Component_object, v7, v8);
   syncParamTypeArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.syncParamTypeArray;
-  v10 = (System_Func_T__TResult__o *)sub_1B9025C(System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
+  v10 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_SyncWidget_SyncParamType__Action__TypeInfo);
   System_Func_Int32Enum__object____ctor(
     v10,
     (Il2CppObject *)this,
@@ -111,12 +114,12 @@ void __fastcall SyncWidget__Awake(SyncWidget_o *this, const MethodInfo *method)
   v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_Int32Enum__object_(
                                                                syncParamTypeArray,
                                                                (System_Func_TSource__TResult__o *)v10,
-                                                               (const MethodInfo_2EBD57C *)Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
+                                                               (const MethodInfo_2EF2B08 *)Method_System_Linq_Enumerable_Select_SyncWidget_SyncParamType__Action___);
   v12 = System_Linq_Enumerable__ToArray_object_(
           v11,
-          (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_Action___);
+          (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_Action___);
   this->fields.syncActionArray = (struct System_Action_array *)v12;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncActionArray, (int32_t)v12, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncActionArray, (int32_t)v12, v13, v14);
   ((void (__fastcall *)(SyncWidget_o *, Il2CppMethodPointer))this->klass->vtable._5_InitSync.method)(
     this,
     this->klass->vtable._6_DisabledSync.methodPtr);
@@ -143,33 +146,33 @@ System_Action_o *__fastcall SyncWidget__ConvertTypeToAction(SyncWidget_o *this, 
   System_Action_o *result; // x0
   System_Action_o *v20; // x20
 
-  if ( (byte_4A71324 & 1) == 0 )
+  if ( (byte_4AB71FE & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, *(_QWORD *)&type);
-    sub_1B90010(&Method_SyncWidget_SyncColorAlpha__, v5);
-    sub_1B90010(&Method_SyncWidget__ConvertTypeToAction_b__9_0__, v6);
-    sub_1B90010(&Method_SyncWidget__ConvertTypeToAction_b__9_1__, v7);
-    sub_1B90010(&Method_SyncWidget__ConvertTypeToAction_b__9_2__, v8);
-    sub_1B90010(&Method_SyncWidget___c__ConvertTypeToAction_b__9_3__, v9);
-    sub_1B90010(&SyncWidget___c_TypeInfo, v10);
-    byte_4A71324 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, *(_QWORD *)&type);
+    sub_1BAB41C(&Method_SyncWidget_SyncColorAlpha__, v5);
+    sub_1BAB41C(&Method_SyncWidget__ConvertTypeToAction_b__9_0__, v6);
+    sub_1BAB41C(&Method_SyncWidget__ConvertTypeToAction_b__9_1__, v7);
+    sub_1BAB41C(&Method_SyncWidget__ConvertTypeToAction_b__9_2__, v8);
+    sub_1BAB41C(&Method_SyncWidget___c__ConvertTypeToAction_b__9_3__, v9);
+    sub_1BAB41C(&SyncWidget___c_TypeInfo, v10);
+    byte_4AB71FE = 1;
   }
   switch ( type )
   {
     case 0:
-      v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       v12 = &Method_SyncWidget__ConvertTypeToAction_b__9_0__;
       goto LABEL_15;
     case 1:
-      v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       v12 = &Method_SyncWidget__ConvertTypeToAction_b__9_1__;
       goto LABEL_15;
     case 2:
-      v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       v12 = &Method_SyncWidget__ConvertTypeToAction_b__9_2__;
       goto LABEL_15;
     case 3:
-      v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       v12 = &Method_SyncWidget_SyncColorAlpha__;
 LABEL_15:
       v20 = v11;
@@ -192,11 +195,11 @@ LABEL_15:
           v13 = SyncWidget___c_TypeInfo;
         }
         v15 = (Il2CppObject *)v13->static_fields->__9;
-        _9__9_3 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+        _9__9_3 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
         System_Action___ctor(_9__9_3, v15, Method_SyncWidget___c__ConvertTypeToAction_b__9_3__, 0LL);
         static_fields = SyncWidget___c_TypeInfo->static_fields;
         static_fields->__9__9_3 = _9__9_3;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__9_3, (int32_t)_9__9_3, v17, v18);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__9_3, (int32_t)_9__9_3, v17, v18);
       }
       result = _9__9_3;
       break;
@@ -240,14 +243,14 @@ void __fastcall SyncWidget__Sync(SyncWidget_o *this, const MethodInfo *method)
   int32_t v14; // w2
   int32_t v15; // w3
 
-  if ( (byte_4A71323 & 1) == 0 )
+  if ( (byte_4AB71FD & 1) == 0 )
   {
-    sub_1B90010(&System_Action_Action__TypeInfo, method);
-    sub_1B90010(&Method_BasicHelper_ForEach_Action___, v3);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B90010(&Method_SyncWidget___c__Sync_b__8_0__, v5);
-    sub_1B90010(&SyncWidget___c_TypeInfo, v6);
-    byte_4A71323 = 1;
+    sub_1BAB41C(&System_Action_Action__TypeInfo, method);
+    sub_1BAB41C(&Method_BasicHelper_ForEach_Action___, v3);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BAB41C(&Method_SyncWidget___c__Sync_b__8_0__, v5);
+    sub_1BAB41C(&SyncWidget___c_TypeInfo, v6);
+    byte_4AB71FD = 1;
   }
   self = (UnityEngine_Object_o *)this->fields.self;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -278,16 +281,16 @@ void __fastcall SyncWidget__Sync(SyncWidget_o *this, const MethodInfo *method)
           v10 = SyncWidget___c_TypeInfo;
         }
         v12 = (Il2CppObject *)v10->static_fields->__9;
-        _9__8_0 = (System_Action_object__o *)sub_1B9025C(System_Action_Action__TypeInfo);
+        _9__8_0 = (System_Action_object__o *)sub_1BAB668(System_Action_Action__TypeInfo);
         System_Action_object____ctor(_9__8_0, v12, Method_SyncWidget___c__Sync_b__8_0__, 0LL);
         static_fields = SyncWidget___c_TypeInfo->static_fields;
         static_fields->__9__8_0 = (struct System_Action_Action__o *)_9__8_0;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v14, v15);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v14, v15);
       }
       BasicHelper__ForEach_object_(
         syncActionArray,
         (System_Action_T__o *)_9__8_0,
-        (const MethodInfo_2E7B5D4 *)Method_BasicHelper_ForEach_Action___);
+        (const MethodInfo_2EB172C *)Method_BasicHelper_ForEach_Action___);
     }
   }
 }
@@ -322,10 +325,10 @@ void __fastcall SyncWidget__SyncColorAlpha(SyncWidget_o *this, const MethodInfo 
   b = self->fields.mColor.fields.b;
   a = self->fields.mColor.fields.a;
   v9 = syncFrom->fields.mColor.fields.a;
-  if ( !byte_4A6A9C5 )
+  if ( !byte_4AB0695 )
   {
-    this = (SyncWidget_o *)sub_1B90010(&UnityEngine_Mathf_TypeInfo, method);
-    byte_4A6A9C5 = 1;
+    this = (SyncWidget_o *)sub_1BAB41C(&UnityEngine_Mathf_TypeInfo, method);
+    byte_4AB0695 = 1;
   }
   v10 = fabsf(a);
   v11 = fabsf(v9);
@@ -352,7 +355,7 @@ void __fastcall SyncWidget__SyncColorAlpha(SyncWidget_o *this, const MethodInfo 
       }
     }
 LABEL_14:
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   }
 }
 
@@ -367,7 +370,7 @@ void __fastcall SyncWidget___ConvertTypeToAction_b__9_0(SyncWidget_o *this, cons
 
   syncFrom = this->fields.syncFrom;
   if ( !syncFrom || (v3 = this, (this = (SyncWidget_o *)this->fields.self) == 0LL) )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   mWidth = syncFrom->fields.mWidth;
   v5 = v3->fields.blankSize.fields.x + v3->fields.blankSize.fields.x;
   v6 = (int)v5;
@@ -387,7 +390,7 @@ void __fastcall SyncWidget___ConvertTypeToAction_b__9_1(SyncWidget_o *this, cons
 
   syncFrom = this->fields.syncFrom;
   if ( !syncFrom || (v3 = this, (this = (SyncWidget_o *)this->fields.self) == 0LL) )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   mHeight = syncFrom->fields.mHeight;
   v5 = v3->fields.blankSize.fields.y + v3->fields.blankSize.fields.y;
   v6 = (int)v5;
@@ -413,7 +416,7 @@ void __fastcall SyncWidget___ConvertTypeToAction_b__9_2(SyncWidget_o *this, cons
         (self = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(syncFrom, 0LL)) == 0LL)
     || (*(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)self, 0LL), !v5) )
   {
-    sub_1B9026C(self, method);
+    sub_1BAB678(self, method);
   }
   UnityEngine_Transform__set_localScale(v5, *(UnityEngine_Vector3_o *)&v6, 0LL);
 }
@@ -426,15 +429,15 @@ void __fastcall SyncWidget___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A71326 & 1) == 0 )
+  if ( (byte_4AB7200 & 1) == 0 )
   {
-    sub_1B90010(&SyncWidget___c_TypeInfo, v1);
-    byte_4A71326 = 1;
+    sub_1BAB41C(&SyncWidget___c_TypeInfo, v1);
+    byte_4AB7200 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(SyncWidget___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(SyncWidget___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   SyncWidget___c_TypeInfo->static_fields->__9 = (struct SyncWidget___c_o *)v2;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)SyncWidget___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)SyncWidget___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

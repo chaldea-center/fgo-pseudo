@@ -2,10 +2,10 @@ void __fastcall ContinueDecideRequest__beginRequest(ContinueDecideRequest_o *thi
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4A716C9 & 1) == 0 )
+  if ( (byte_4AB75AB & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    byte_4A716C9 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    byte_4AB75AB = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, method);
   RequestBase__addDeviceInfoField((RequestBase_o *)this, v3);
@@ -27,16 +27,16 @@ void __fastcall ContinueDecideRequest__beginRequestCode(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A716C5 & 1) == 0 )
+  if ( (byte_4AB75A7 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_18269/*"continueKey"*/, continueKey);
-    sub_1B90010(&StringLiteral_18272/*"continueType"*/, v7);
-    sub_1B90010(&StringLiteral_18271/*"continuePass"*/, v8);
-    byte_4A716C5 = 1;
+    sub_1BAB41C(&StringLiteral_18273/*"continueKey"*/, continueKey);
+    sub_1BAB41C(&StringLiteral_18276/*"continueType"*/, v7);
+    sub_1BAB41C(&StringLiteral_18275/*"continuePass"*/, v8);
+    byte_4AB75A7 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18272/*"continueType"*/, 1, method);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_18269/*"continueKey"*/, continueKey, v9);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_18271/*"continuePass"*/, continuePass, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18276/*"continueType"*/, 1, method);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_18273/*"continueKey"*/, continueKey, v9);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_18275/*"continuePass"*/, continuePass, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
@@ -53,16 +53,16 @@ void __fastcall ContinueDecideRequest__beginRequestFacebook(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A716C7 & 1) == 0 )
+  if ( (byte_4AB75A9 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_19385/*"facebookId"*/, facebookId);
-    sub_1B90010(&StringLiteral_18272/*"continueType"*/, v7);
-    sub_1B90010(&StringLiteral_16656/*"accessToken"*/, v8);
-    byte_4A716C7 = 1;
+    sub_1BAB41C(&StringLiteral_19388/*"facebookId"*/, facebookId);
+    sub_1BAB41C(&StringLiteral_18276/*"continueType"*/, v7);
+    sub_1BAB41C(&StringLiteral_16662/*"accessToken"*/, v8);
+    byte_4AB75A9 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18272/*"continueType"*/, 3, method);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_19385/*"facebookId"*/, facebookId, v9);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_16656/*"accessToken"*/, accessToken, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18276/*"continueType"*/, 3, method);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_19388/*"facebookId"*/, facebookId, v9);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_16662/*"accessToken"*/, accessToken, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
@@ -79,26 +79,26 @@ void __fastcall ContinueDecideRequest__beginRequestTwitter(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A716C6 & 1) == 0 )
+  if ( (byte_4AB75A8 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_24145/*"twitterId"*/, twitterId);
-    sub_1B90010(&StringLiteral_18272/*"continueType"*/, v7);
-    sub_1B90010(&StringLiteral_16656/*"accessToken"*/, v8);
-    byte_4A716C6 = 1;
+    sub_1BAB41C(&StringLiteral_24146/*"twitterId"*/, twitterId);
+    sub_1BAB41C(&StringLiteral_18276/*"continueType"*/, v7);
+    sub_1BAB41C(&StringLiteral_16662/*"accessToken"*/, v8);
+    byte_4AB75A8 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18272/*"continueType"*/, 2, method);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_24145/*"twitterId"*/, twitterId, v9);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_16656/*"accessToken"*/, accessToken, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18276/*"continueType"*/, 2, method);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_24146/*"twitterId"*/, twitterId, v9);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_16662/*"accessToken"*/, accessToken, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
 
 System_String_o *__fastcall ContinueDecideRequest__getMockData(ContinueDecideRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A716C4 & 1) == 0 )
+  if ( (byte_4AB75A6 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A716C4 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB75A6 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -109,16 +109,16 @@ System_String_o *__fastcall ContinueDecideRequest__getURL(ContinueDecideRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A716C3 & 1) == 0 )
+  if ( (byte_4AB75A5 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_18266/*"continue/decide"*/, v2);
-    byte_4A716C3 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_18270/*"continue/decide"*/, v2);
+    byte_4AB75A5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_18266/*"continue/decide"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_18270/*"continue/decide"*/, 0LL);
 }
 
 
@@ -130,43 +130,42 @@ void __fastcall ContinueDecideRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
-  ResponseData_o *v9; // x20
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v11; // x0
+  System_String_o *v10; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4A716C8 & 1) == 0 )
+  if ( (byte_4AB75AA & 1) == 0 )
   {
-    sub_1B90010(&JsonManager_TypeInfo, responseList);
-    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
-    byte_4A716C8 = 1;
+    sub_1BAB41C(&JsonManager_TypeInfo, responseList);
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
+    byte_4AB75AA = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(33, responseList, 0LL);
-  if ( v7 && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_41605928(v7, 0LL)) )
   {
-    success = (Il2CppObject *)v9->fields.success;
+    success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v11 = JsonManager__toJson(success, 0, 0, 0LL);
+    v10 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v11,
+        v10,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v13 = this->fields.CallBack;
-    if ( v13 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
-        v13->fields.original_method_info,
-        StringLiteral_22088/*"ng"*/,
-        *(_QWORD *)&v13->fields.extra_arg);
+    v12 = this->fields.CallBack;
+    if ( v12 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
+        v12->fields.original_method_info,
+        StringLiteral_22090/*"ng"*/,
+        *(_QWORD *)&v12->fields.extra_arg);
   }
 }

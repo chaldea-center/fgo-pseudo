@@ -18,28 +18,28 @@ void __fastcall SoundPlayerShopItemComponent__OnClickItem(
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4A6BADA & 1) == 0 )
+  if ( (byte_4AB18C0 & 1) == 0 )
   {
-    sub_1B90010(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, method);
-    sub_1B90010(&Method_SoundPlayerShopItemComponent_OnClickItem__, v3);
-    sub_1B90010(&Method_SoundPlayerShopItemComponent_closeItemDetail__, v4);
-    byte_4A6BADA = 1;
+    sub_1BAB41C(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, method);
+    sub_1BAB41C(&Method_SoundPlayerShopItemComponent_OnClickItem__, v3);
+    sub_1BAB41C(&Method_SoundPlayerShopItemComponent_closeItemDetail__, v4);
+    byte_4AB18C0 = 1;
   }
   v5 = Method_SoundPlayerShopItemComponent_OnClickItem__;
   if ( (*((_BYTE *)Method_SoundPlayerShopItemComponent_OnClickItem__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B90028(Method_SoundPlayerShopItemComponent_OnClickItem__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
+    v5 = (_QWORD *)sub_1BAB434(Method_SoundPlayerShopItemComponent_OnClickItem__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BAB400(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
   itemDetailComp = this->fields.itemDetailComp;
   itemEnt = this->fields.itemEnt;
-  v9 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1B9025C(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+  v9 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BAB668(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
   ItemDetailInfoComponent_CallbackFunc___ctor(
     v9,
     (Il2CppObject *)this,
     (intptr_t)Method_SoundPlayerShopItemComponent_closeItemDetail__,
     0LL);
   if ( !itemDetailComp )
-    sub_1B9026C(v10, v11);
+    sub_1BAB678(v10, v11);
   ItemDetailInfoComponent__Open(itemDetailComp, itemEnt, v9, 50, 0LL);
 }
 
@@ -63,19 +63,19 @@ void __fastcall SoundPlayerShopItemComponent__closeItemDetail(
   __int64 v6; // x1
   ItemDetailInfoComponent_o *itemDetailComp; // x0
 
-  if ( (byte_4A6BADB & 1) == 0 )
+  if ( (byte_4AB18C1 & 1) == 0 )
   {
-    sub_1B90010(&Method_SoundPlayerShopItemComponent_closeItemDetail__, isDecide);
-    byte_4A6BADB = 1;
+    sub_1BAB41C(&Method_SoundPlayerShopItemComponent_closeItemDetail__, isDecide);
+    byte_4AB18C1 = 1;
   }
   v4 = Method_SoundPlayerShopItemComponent_closeItemDetail__;
   if ( (*((_BYTE *)Method_SoundPlayerShopItemComponent_closeItemDetail__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B90028(Method_SoundPlayerShopItemComponent_closeItemDetail__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+    v4 = (_QWORD *)sub_1BAB434(Method_SoundPlayerShopItemComponent_closeItemDetail__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
   itemDetailComp = this->fields.itemDetailComp;
   if ( !itemDetailComp )
-    sub_1B9026C(0LL, v6);
+    sub_1BAB678(0LL, v6);
   ItemDetailInfoComponent__Close(itemDetailComp, 0LL);
 }
 
@@ -88,7 +88,7 @@ void __fastcall SoundPlayerShopItemComponent__enableDispItemInfo(
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   UnityEngine_GameObject__SetActive(itemInfo, 0, 0LL);
 }
 
@@ -161,29 +161,29 @@ void __fastcall SoundPlayerShopItemComponent__setItemInfo(
   UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A6BAD9 & 1) == 0 )
+  if ( (byte_4AB18BF & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_ItemMaster___, usrId);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserItemMaster___, v11);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v13);
-    sub_1B90010(&int_TypeInfo, v14);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1B90010(&StringLiteral_25402/*"必要"*/, v16);
-    sub_1B90010(&StringLiteral_25403/*"所持"*/, v17);
-    sub_1B90010(&StringLiteral_24973/*"{0:#,0}"*/, v18);
-    byte_4A6BAD9 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ItemMaster___, usrId);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserItemMaster___, v11);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v13);
+    sub_1BAB41C(&int_TypeInfo, v14);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1BAB41C(&StringLiteral_25405/*"必要"*/, v16);
+    sub_1BAB41C(&StringLiteral_25406/*"所持"*/, v17);
+    sub_1BAB41C(&StringLiteral_24976/*"{0:#,0}"*/, v18);
+    byte_4AB18BF = 1;
   }
   entity = 0LL;
   v47 = 0LL;
   this->fields.haveItemNum = 0;
   this->fields.needItemNum = needNum;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserItemMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !Instance )
     goto LABEL_40;
   Instance = (void *)UserItemMaster__TryGetEntity((UserItemMaster_o *)Instance, &entity, usrId, itemId, 0LL);
@@ -196,19 +196,19 @@ LABEL_8:
     this->fields.haveItemNum = num;
     goto LABEL_17;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_40;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &v47,
          itemId,
-         (const MethodInfo_312C5FC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+         (const MethodInfo_3163DE4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
   {
     Instance = UserGameMaster__getSelfUserGame(0LL);
     if ( !v47 )
@@ -238,22 +238,22 @@ LABEL_17:
   Instance = this->fields.needTitleLb;
   if ( !Instance )
     goto LABEL_40;
-  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_25402/*"必要"*/, 0LL);
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_25405/*"必要"*/, 0LL);
   Instance = this->fields.haveTitleLb;
   if ( !Instance )
     goto LABEL_40;
-  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_25403/*"所持"*/, 0LL);
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_25406/*"所持"*/, 0LL);
   haveNumLb = this->fields.haveNumLb;
   haveItemNum = this->fields.haveItemNum;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveItemNum, v24, v25, v26);
-  Instance = System_String__Format((System_String_o *)StringLiteral_24973/*"{0:#,0}"*/, v27, 0LL);
+  Instance = System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v27, 0LL);
   if ( !haveNumLb )
     goto LABEL_40;
   UILabel__set_text(haveNumLb, (System_String_o *)Instance, 0LL);
   needNumLb = this->fields.needNumLb;
   needItemNum = this->fields.needItemNum;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &needItemNum, v29, v30, v31);
-  Instance = System_String__Format((System_String_o *)StringLiteral_24973/*"{0:#,0}"*/, v32, 0LL);
+  Instance = System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v32, 0LL);
   if ( !needNumLb )
     goto LABEL_40;
   UILabel__set_text(needNumLb, (System_String_o *)Instance, 0LL);
@@ -279,7 +279,7 @@ LABEL_17:
       }
     }
 LABEL_40:
-    sub_1B9026C(Instance, v20);
+    sub_1BAB678(Instance, v20);
   }
   Instance = this->fields.needTitleLb;
   this->fields.isItemNum = 0;
@@ -308,20 +308,20 @@ LABEL_29:
     goto LABEL_40;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   this->fields.currentItemId = itemId;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_40;
   v37 = DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           this->fields.currentItemId,
-          (const MethodInfo_312C5A8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+          (const MethodInfo_3163D90 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.itemEnt = (struct ItemEntity_o *)v37;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)v37, v38, v39);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)v37, v38, v39);
   itemEnt = this->fields.itemEnt;
   if ( !itemEnt )
     goto LABEL_40;

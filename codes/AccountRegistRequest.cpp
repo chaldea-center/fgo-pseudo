@@ -3,10 +3,10 @@ void __fastcall AccountRegistRequest__beginRequest(AccountRegistRequest_o *this,
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x1
 
-  if ( (byte_4A7162B & 1) == 0 )
+  if ( (byte_4AB750D & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    byte_4A7162B = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    byte_4AB750D = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, method);
   RequestBase__AddSignatureField((RequestBase_o *)this, v3);
@@ -21,15 +21,15 @@ System_String_o *__fastcall AccountRegistRequest__getMockData(AccountRegistReque
 {
   __int64 v2; // x1
 
-  if ( (byte_4A71629 & 1) == 0 )
+  if ( (byte_4AB750B & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_9102/*"MockAccountRegistRequest"*/, v2);
-    byte_4A71629 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_9103/*"MockAccountRegistRequest"*/, v2);
+    byte_4AB750B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9102/*"MockAccountRegistRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9103/*"MockAccountRegistRequest"*/, 0LL);
 }
 
 
@@ -38,16 +38,16 @@ System_String_o *__fastcall AccountRegistRequest__getURL(AccountRegistRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A71628 & 1) == 0 )
+  if ( (byte_4AB750A & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_16657/*"account/regist"*/, v2);
-    byte_4A71628 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_16663/*"account/regist"*/, v2);
+    byte_4AB750A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_16657/*"account/regist"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_16663/*"account/regist"*/, 0LL);
 }
 
 
@@ -64,76 +64,75 @@ void __fastcall AccountRegistRequest__requestCompleted(
   __int64 v10; // x1
   __int64 v11; // x1
   ResponseData_o *v12; // x0
-  const MethodInfo *v13; // x2
-  ResponseData_o *v14; // x20
+  ResponseData_o *v13; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x21
   Il2CppObject *Item; // x0
-  __int64 v17; // x1
-  System_String_o *v18; // x20
-  System_String_o *v19; // x22
-  System_String_o *v20; // x21
+  __int64 v16; // x1
+  System_String_o *v17; // x20
+  System_String_o *v18; // x22
+  System_String_o *v19; // x21
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v22; // x9
+  __int64 *v21; // x9
 
-  if ( (byte_4A7162A & 1) == 0 )
+  if ( (byte_4AB750C & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v6);
-    sub_1B90010(&StringLiteral_22258/*"ok"*/, v7);
-    sub_1B90010(&StringLiteral_16996/*"authKey"*/, v8);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v9);
-    sub_1B90010(&StringLiteral_23113/*"secretKey"*/, v10);
-    sub_1B90010(&StringLiteral_24463/*"userId"*/, v11);
-    byte_4A7162A = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v6);
+    sub_1BAB41C(&StringLiteral_22261/*"ok"*/, v7);
+    sub_1BAB41C(&StringLiteral_17004/*"authKey"*/, v8);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v9);
+    sub_1BAB41C(&StringLiteral_23116/*"secretKey"*/, v10);
+    sub_1BAB41C(&StringLiteral_24466/*"userId"*/, v11);
+    byte_4AB750C = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v12 = ResponseCommandKind__SearchData(2, responseList, 0LL);
   if ( v12
-    && (v14 = v12, ResponseData__checkError(v12, v12->fields.resCode, v13))
-    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v14->fields.success) != 0LL )
+    && (v13 = v12, ResponseData__checkError_41605928(v12, 0LL))
+    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v13->fields.success) != 0LL )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-             (System_Collections_Generic_Dictionary_object__object__o *)v14->fields.success,
-             (Il2CppObject *)StringLiteral_24463/*"userId"*/,
-             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (System_Collections_Generic_Dictionary_object__object__o *)v13->fields.success,
+             (Il2CppObject *)StringLiteral_24466/*"userId"*/,
+             (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_19;
-    v18 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+    v17 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                Item,
                                Item->klass->vtable[4].methodPtr);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_16996/*"authKey"*/,
-             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_17004/*"authKey"*/,
+             (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item
-      || (v19 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+      || (v18 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                      Item,
                                      Item->klass->vtable[4].methodPtr),
           (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                     success,
-                    (Il2CppObject *)StringLiteral_23113/*"secretKey"*/,
-                    (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL)
-      || (v20 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+                    (Il2CppObject *)StringLiteral_23116/*"secretKey"*/,
+                    (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL)
+      || (v19 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                      Item,
                                      Item->klass->vtable[4].methodPtr),
-          (Item = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
-      || (NetworkManager__SetAuth((NetworkManager_o *)Item, v18, v19, v20, 0LL),
-          (Item = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
+          (Item = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
+      || (NetworkManager__SetAuth((NetworkManager_o *)Item, v17, v18, v19, 0LL),
+          (Item = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
     {
 LABEL_19:
-      sub_1B9026C(Item, v17);
+      sub_1BAB678(Item, v16);
     }
     NetworkManager__WriteAuth((NetworkManager_o *)Item, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
     {
-      v22 = &StringLiteral_22258/*"ok"*/;
+      v21 = &StringLiteral_22261/*"ok"*/;
 LABEL_17:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        *v22,
+        *v21,
         *(_QWORD *)&CallBack->fields.extra_arg);
     }
   }
@@ -142,7 +141,7 @@ LABEL_17:
     CallBack = this->fields.CallBack;
     if ( CallBack )
     {
-      v22 = &StringLiteral_22088/*"ng"*/;
+      v21 = &StringLiteral_22090/*"ng"*/;
       goto LABEL_17;
     }
   }

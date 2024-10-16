@@ -1,13 +1,13 @@
 void __fastcall PaymentHistoryEntity___ctor(PaymentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A7027C & 1) == 0 )
+  if ( (byte_4AB6168 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A7027C = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4AB6168 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ System_String_o *__fastcall PaymentHistoryEntity__GetDispPrice(PaymentHistoryEnt
 {
   int32_t price; // w19
 
-  if ( (byte_4A7027B & 1) == 0 )
+  if ( (byte_4AB6167 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    byte_4A7027B = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    byte_4AB6167 = 1;
   }
   price = this->fields.price;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -42,12 +42,12 @@ System_String_o *__fastcall PaymentHistoryEntity__GetTypeText(PaymentHistoryEnti
   int32_t type; // w8
   __int64 *v6; // x8
 
-  if ( (byte_4A7027A & 1) == 0 )
+  if ( (byte_4AB6166 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_10358/*"PAYMENT_HISTORY_EXTERNAL"*/, v3);
-    sub_1B90010(&StringLiteral_10359/*"PAYMENT_HISTORY_INTERNAL"*/, v4);
-    byte_4A7027A = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_10358/*"PAYMENT_HISTORY_EXTERNAL"*/, v3);
+    sub_1BAB41C(&StringLiteral_10359/*"PAYMENT_HISTORY_INTERNAL"*/, v4);
+    byte_4AB6166 = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
@@ -78,10 +78,10 @@ System_String_o *__fastcall PaymentHistoryEntity__get_CreatedAtToString(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A70279 & 1) == 0 )
+  if ( (byte_4AB6165 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    byte_4A70279 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    byte_4AB6165 = 1;
   }
   p_createdAtString = (ServantStatusBattleListViewItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
@@ -91,7 +91,7 @@ System_String_o *__fastcall PaymentHistoryEntity__get_CreatedAtToString(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Date = LocalizationManager__GetDate(createdAt, 0LL);
     p_createdAtString->klass = (ServantStatusBattleListViewItem_c *)Date;
-    sub_1B8FFB4(p_createdAtString, (int32_t)Date, v6, v7);
+    sub_1BAB3C0(p_createdAtString, (int32_t)Date, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }

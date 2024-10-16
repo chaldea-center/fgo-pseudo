@@ -8,7 +8,7 @@ void __fastcall ClassBoardLockUser___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareEntity = masterEntity;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6);
 }
 
 
@@ -34,16 +34,16 @@ void __fastcall ClassBoardLockUser__RequestRelease(
   ClassBoardReleaseRequestData_o p_data; // 0:x0.8
   ClassBoardReleaseRequestData_o v20; // 0:x1.8
 
-  if ( (byte_4A7334E & 1) == 0 )
+  if ( (byte_4AB9271 & 1) == 0 )
   {
-    sub_1B90010(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
-    sub_1B90010(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___, v5);
-    sub_1B90010(&NetworkManager_TypeInfo, v6);
-    sub_1B90010(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    byte_4A7334E = 1;
+    sub_1BAB41C(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
+    sub_1BAB41C(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___, v5);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v6);
+    sub_1BAB41C(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    byte_4AB9271 = 1;
   }
-  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B9025C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1BAB668(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v9,
     (Il2CppObject *)this,
@@ -53,10 +53,10 @@ void __fastcall ClassBoardLockUser__RequestRelease(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v9,
-                     (const MethodInfo_2F10358 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
+                     (const MethodInfo_2F47108 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
   this->fields.releaseResponseCallback = callback;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.releaseResponseCallback, (int32_t)callback, v11, v12);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.releaseResponseCallback, (int32_t)callback, v11, v12);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL), (squareEntity = this->fields.squareEntity) == 0LL)
     || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
@@ -66,7 +66,7 @@ void __fastcall ClassBoardLockUser__RequestRelease(
         ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0LL),
         !Request_object) )
   {
-    sub_1B9026C(Instance, v14);
+    sub_1BAB678(Instance, v14);
   }
   v20 = data;
   ClassBoardReleaseLockRequest__beginRequest((ClassBoardReleaseLockRequest_o *)Request_object, v20, 0LL);

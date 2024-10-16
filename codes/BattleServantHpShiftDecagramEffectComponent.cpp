@@ -2,10 +2,10 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent___ctor(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A72EB2 & 1) == 0 )
+  if ( (byte_4AB8DD8 & 1) == 0 )
   {
-    sub_1B90010(&CommonEffectComponent_TypeInfo, method);
-    byte_4A72EB2 = 1;
+    sub_1BAB41C(&CommonEffectComponent_TypeInfo, method);
+    byte_4AB8DD8 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -24,10 +24,10 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
   const MethodInfo *v7; // x3
   BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_4A72EB0 & 1) == 0 )
+  if ( (byte_4AB8DD6 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A72EB0 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4AB8DD6 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -36,7 +36,7 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
   {
     v8 = this->fields._Parent_k__BackingField;
     if ( !v8 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     BattleServantHpShiftComponent__UpdateIconActive(v8, index, 1, v7);
   }
 }
@@ -53,10 +53,10 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
   const MethodInfo *v7; // x3
   BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_4A72EB1 & 1) == 0 )
+  if ( (byte_4AB8DD7 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4A72EB1 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4AB8DD7 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -65,7 +65,7 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
   {
     v8 = this->fields._Parent_k__BackingField;
     if ( !v8 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     BattleServantHpShiftComponent__UpdateIconActive(v8, index, 0, v7);
   }
 }
@@ -87,7 +87,7 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__set_Parent(
   int32_t v3; // w3
 
   this->fields._Parent_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._Parent_k__BackingField,
     (int32_t)value,
     (int32_t)method,

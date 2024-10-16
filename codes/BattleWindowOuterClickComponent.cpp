@@ -28,7 +28,7 @@ void __fastcall BattleWindowOuterClickComponent__setClickCallBack(
   int32_t v3; // w3
 
   this->fields.clickCallBack = call;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.clickCallBack, (int32_t)call, (int32_t)method, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.clickCallBack, (int32_t)call, (int32_t)method, v3);
 }
 
 
@@ -50,15 +50,15 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) == 0 )
+  if ( (sub_1BAB4DC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v10, 0LL);
+      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -70,9 +70,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D9940;
+  this->fields.m_target = (Il2CppObject *)sub_19F2D64;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_19D9900;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_19F2D24;
 }
 
 
@@ -85,7 +85,7 @@ System_IAsyncResult_o *__fastcall BattleWindowOuterClickComponent_OuterClickCall
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, &v5, callback, object);
 }
 
 
@@ -94,7 +94,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

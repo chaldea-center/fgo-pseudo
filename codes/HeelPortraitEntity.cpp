@@ -1,13 +1,13 @@
 void __fastcall HeelPortraitEntity___ctor(HeelPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A7015C & 1) == 0 )
+  if ( (byte_4AB6045 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A7015C = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB6045 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -35,22 +35,22 @@ int32_t __fastcall HeelPortraitEntity__GetOverwriteImageId(
   int32_t v14; // w23
   const MethodInfo *v15; // x3
 
-  if ( (byte_4A70159 & 1) == 0 )
+  if ( (byte_4AB6042 & 1) == 0 )
   {
-    sub_1B90010(&CondType_TypeInfo, *(_QWORD *)&originImageId);
-    sub_1B90010(&StringLiteral_22413/*"overwriteCondNum"*/, v6);
-    sub_1B90010(&StringLiteral_22414/*"overwriteCondTargetId"*/, v7);
-    sub_1B90010(&StringLiteral_22415/*"overwriteCondType"*/, v8);
-    sub_1B90010(&StringLiteral_22423/*"overwriteImageId"*/, v9);
-    byte_4A70159 = 1;
+    sub_1BAB41C(&CondType_TypeInfo, *(_QWORD *)&originImageId);
+    sub_1BAB41C(&StringLiteral_22417/*"overwriteCondNum"*/, v6);
+    sub_1BAB41C(&StringLiteral_22418/*"overwriteCondTargetId"*/, v7);
+    sub_1BAB41C(&StringLiteral_22419/*"overwriteCondType"*/, v8);
+    sub_1BAB41C(&StringLiteral_22427/*"overwriteImageId"*/, v9);
+    byte_4AB6042 = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22415/*"overwriteCondType"*/, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22414/*"overwriteCondTargetId"*/, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22413/*"overwriteCondNum"*/, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22419/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22418/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22417/*"overwriteCondNum"*/, 0, v13);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL, 0LL) )
-    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22423/*"overwriteImageId"*/, 0, v15);
+    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22427/*"overwriteImageId"*/, 0, v15);
   else
     return originImageId;
 }
@@ -73,22 +73,22 @@ System_String_o *__fastcall HeelPortraitEntity__GetOverwriteName(
   int32_t v14; // w23
   const MethodInfo *v15; // x3
 
-  if ( (byte_4A70157 & 1) == 0 )
+  if ( (byte_4AB6040 & 1) == 0 )
   {
-    sub_1B90010(&CondType_TypeInfo, originName);
-    sub_1B90010(&StringLiteral_22413/*"overwriteCondNum"*/, v6);
-    sub_1B90010(&StringLiteral_22414/*"overwriteCondTargetId"*/, v7);
-    sub_1B90010(&StringLiteral_22431/*"overwriteName"*/, v8);
-    sub_1B90010(&StringLiteral_22415/*"overwriteCondType"*/, v9);
-    byte_4A70157 = 1;
+    sub_1BAB41C(&CondType_TypeInfo, originName);
+    sub_1BAB41C(&StringLiteral_22417/*"overwriteCondNum"*/, v6);
+    sub_1BAB41C(&StringLiteral_22418/*"overwriteCondTargetId"*/, v7);
+    sub_1BAB41C(&StringLiteral_22435/*"overwriteName"*/, v8);
+    sub_1BAB41C(&StringLiteral_22419/*"overwriteCondType"*/, v9);
+    byte_4AB6040 = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22415/*"overwriteCondType"*/, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22414/*"overwriteCondTargetId"*/, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22413/*"overwriteCondNum"*/, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22419/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22418/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22417/*"overwriteCondNum"*/, 0, v13);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL, 0LL) )
-    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22431/*"overwriteName"*/, 0LL, v15);
+    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22435/*"overwriteName"*/, 0LL, v15);
   else
     return originName;
 }
@@ -98,12 +98,12 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteImageId(HeelPortraitEntity_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A70158 & 1) == 0 )
+  if ( (byte_4AB6041 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_22423/*"overwriteImageId"*/, method);
-    byte_4A70158 = 1;
+    sub_1BAB41C(&StringLiteral_22427/*"overwriteImageId"*/, method);
+    byte_4AB6041 = 1;
   }
-  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22423/*"overwriteImageId"*/, 0, v2) != 0;
+  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22427/*"overwriteImageId"*/, 0, v2) != 0;
 }
 
 
@@ -112,12 +112,12 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteName(HeelPortraitEntity_o *thi
   const MethodInfo *v2; // x3
   System_String_o *ScriptStr; // x0
 
-  if ( (byte_4A70156 & 1) == 0 )
+  if ( (byte_4AB603F & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_22431/*"overwriteName"*/, method);
-    byte_4A70156 = 1;
+    sub_1BAB41C(&StringLiteral_22435/*"overwriteName"*/, method);
+    byte_4AB603F = 1;
   }
-  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22431/*"overwriteName"*/, 0LL, v2);
+  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22435/*"overwriteName"*/, 0LL, v2);
   return !System_String__IsNullOrEmpty(ScriptStr, 0LL);
 }
 
@@ -138,19 +138,19 @@ int32_t __fastcall HeelPortraitEntity__getScript(
   HeelPortraitEntity_o *v15; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_4A7015A & 1) == 0 )
+  if ( (byte_4AB6043 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1B90010(&long_TypeInfo, v8);
-    byte_4A7015A = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1BAB41C(&long_TypeInfo, v8);
+    byte_4AB6043 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -159,13 +159,13 @@ int32_t __fastcall HeelPortraitEntity__getScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1B9026C(Item, v10);
+    sub_1BAB678(Item, v10);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
-  sub_1B9052C(Item);
+  sub_1BAB938(Item);
   return HeelPortraitEntity__IsSetOverwriteImageId(v15, v16);
 }
 
@@ -186,32 +186,32 @@ System_String_o *__fastcall HeelPortraitEntity__getScriptStr(
   System_String_o *v15; // x1
   const MethodInfo *v16; // x2
 
-  if ( (byte_4A7015B & 1) == 0 )
+  if ( (byte_4AB6044 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1B90010(&string_TypeInfo, v8);
-    byte_4A7015B = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1BAB41C(&string_TypeInfo, v8);
+    byte_4AB6044 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
   v11 = this->fields.script;
   if ( !v11 )
-    sub_1B9026C(0LL, v10);
+    sub_1BAB678(0LL, v10);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
-           (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   defVal = (System_String_o *)Item;
   if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
     return defVal;
-  sub_1B9052C(Item);
+  sub_1BAB938(Item);
   return HeelPortraitEntity__GetOverwriteName(v14, v15, v16);
 }

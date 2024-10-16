@@ -21,47 +21,47 @@ void __fastcall BattleSeManager___ctor(BattleSeManager_o *this, const MethodInfo
   int32_t v21; // w2
   int32_t v22; // w3
 
-  if ( (byte_4A72503 & 1) == 0 )
+  if ( (byte_4AB8403 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, method);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__, v3);
-    sub_1B90010(&System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo, v4);
-    sub_1B90010(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_string___ctor__, v7);
-    sub_1B90010(&System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo, v8);
-    sub_1B90010(&System_Collections_Generic_List_string__TypeInfo, v9);
-    sub_1B90010(&Method_SingletonMonoBehaviour_BattleSeManager___ctor__, v10);
-    byte_4A72503 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, method);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__, v3);
+    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo, v4);
+    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string___ctor__, v7);
+    sub_1BAB41C(&System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo, v8);
+    sub_1BAB41C(&System_Collections_Generic_List_string__TypeInfo, v9);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_BattleSeManager___ctor__, v10);
+    byte_4AB8403 = 1;
   }
   this->fields.volume = 1.0;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__);
   this->fields.playingList = (struct System_Collections_Generic_List_BattleSeManager_BattleSePlayer__o *)v11;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.playingList, (int32_t)v11, v12, v13);
-  v14 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.playingList, (int32_t)v11, v12, v13);
+  v14 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v14,
-    (const MethodInfo_31D8404 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__);
+    (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__);
   this->fields.loadInfos = (struct System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__o *)v14;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.loadInfos, (int32_t)v14, v15, v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_string__TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.loadInfos, (int32_t)v14, v15, v16);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.assetStorageList = (struct System_Collections_Generic_List_string__o *)v17;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.assetStorageList, (int32_t)v17, v18, v19);
-  v20 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.assetStorageList, (int32_t)v17, v18, v19);
+  v20 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v20,
-    (const MethodInfo_31D8404 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   this->fields.seToAssetTable = (struct System_Collections_Generic_Dictionary_string__string__o *)v20;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.seToAssetTable, (int32_t)v20, v21, v22);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.seToAssetTable, (int32_t)v20, v21, v22);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_374CCA8 *)Method_SingletonMonoBehaviour_BattleSeManager___ctor__);
+    (const MethodInfo_378A644 *)Method_SingletonMonoBehaviour_BattleSeManager___ctor__);
 }
 
 
@@ -80,32 +80,32 @@ void __fastcall BattleSeManager__DownloadSoundAsset(
   System_String_o *v13; // x20
   AssetLoader_LoadEndDataHandler_o *v14; // x21
 
-  if ( (byte_4A724FF & 1) == 0 )
+  if ( (byte_4AB83FF & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, cat);
-    sub_1B90010(&Method_BattleSeManager_LoadEndAsset__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
-    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1B90010(&StringLiteral_2597/*"Audio/Battle"*/, v10);
-    sub_1B90010(&StringLiteral_1074/*".acb.bytes"*/, v11);
-    byte_4A724FF = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, cat);
+    sub_1BAB41C(&Method_BattleSeManager_LoadEndAsset__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
+    sub_1BAB41C(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1BAB41C(&StringLiteral_2592/*"Audio/Battle"*/, v10);
+    sub_1BAB41C(&StringLiteral_1071/*".acb.bytes"*/, v11);
+    byte_4AB83FF = 1;
   }
   if ( !this->fields.effectMaster )
     BattleSeManager__Initialize(this, (const MethodInfo *)cat);
   loadInfos = this->fields.loadInfos;
   if ( !loadInfos )
-    sub_1B9026C(0LL, cat);
+    sub_1BAB678(0LL, cat);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)loadInfos,
     (Il2CppObject *)cat,
     (Il2CppObject *)callbackFunc,
-    (const MethodInfo_31D8DA0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
-  v13 = System_String__Concat_61798352(
-          (System_String_o *)StringLiteral_2597/*"Audio/Battle"*/,
+    (const MethodInfo_3213538 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
+  v13 = System_String__Concat_62059388(
+          (System_String_o *)StringLiteral_2592/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_1074/*".acb.bytes"*/,
+          (System_String_o *)StringLiteral_1071/*".acb.bytes"*/,
           0LL);
-  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1BAB668(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v14, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -122,20 +122,20 @@ void __fastcall BattleSeManager__Initialize(BattleSeManager_o *this, const Metho
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_4A724FD & 1) == 0 )
+  if ( (byte_4AB83FD & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EffectMaster___, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A724FD = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EffectMaster___, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4AB83FD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v5);
+    sub_1BAB678(0LL, v5);
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EffectMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EffectMaster___);
   this->fields.effectMaster = (struct EffectMaster_o *)MasterData_object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.effectMaster, (int32_t)MasterData_object, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.effectMaster, (int32_t)MasterData_object, v7, v8);
 }
 
 
@@ -158,15 +158,15 @@ void __fastcall BattleSeManager__LoadEndAsset(BattleSeManager_o *this, AssetData
 
   v4 = data;
   v5 = (BattleSeManager_o **)this;
-  if ( (byte_4A72500 & 1) == 0 )
+  if ( (byte_4AB8400 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__,
       data);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v7);
-    this = (BattleSeManager_o *)sub_1B90010(&Method_System_Collections_Generic_List_string__Add__, v8);
-    byte_4A72500 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v7);
+    this = (BattleSeManager_o *)sub_1BAB41C(&Method_System_Collections_Generic_List_string__Add__, v8);
+    byte_4AB8400 = 1;
   }
   if ( !v4 )
     goto LABEL_21;
@@ -185,14 +185,14 @@ void __fastcall BattleSeManager__LoadEndAsset(BattleSeManager_o *this, AssetData
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)data,
-      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_354D8BC **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v12 = v9 + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
     *(_QWORD *)(v12 + 32) = data;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 32), (int32_t)data, (int32_t)method, v3);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 32), (int32_t)data, (int32_t)method, v3);
   }
   this = (BattleSeManager_o *)AssetData__GetObjectNameList(v4, 0LL);
   if ( !this )
@@ -205,7 +205,7 @@ void __fastcall BattleSeManager__LoadEndAsset(BattleSeManager_o *this, AssetData
     while ( 1 )
     {
       if ( v15 >= (unsigned int)m_CancellationTokenSource )
-        sub_1B90274(this, data);
+        sub_1BAB680(this, data);
       this = v5[9];
       if ( !this )
         break;
@@ -213,13 +213,13 @@ void __fastcall BattleSeManager__LoadEndAsset(BattleSeManager_o *this, AssetData
         (System_Collections_Generic_Dictionary_object__object__o *)this,
         *((Il2CppObject **)&v14->fields.volume + v15),
         (Il2CppObject *)v4->fields.name,
-        (const MethodInfo_31D8DA0 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+        (const MethodInfo_3213538 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
       LODWORD(m_CancellationTokenSource) = v14->fields.m_CancellationTokenSource;
       if ( (__int64)++v15 >= (int)m_CancellationTokenSource )
         goto LABEL_15;
     }
 LABEL_21:
-    sub_1B9026C(this, data);
+    sub_1BAB678(this, data);
   }
 LABEL_15:
   this = v5[6];
@@ -228,7 +228,7 @@ LABEL_15:
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)this,
          (Il2CppObject *)v4->fields.name,
-         (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__) )
+         (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__) )
   {
     this = v5[6];
     if ( !this )
@@ -236,7 +236,7 @@ LABEL_15:
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)this,
              (Il2CppObject *)v4->fields.name,
-             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__);
+             (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__);
     if ( Item )
       ((void (__fastcall *)(Il2CppClass *, AssetData_o *, void *))Item[1].monitor)(Item[4].klass, v4, Item[2].monitor);
   }
@@ -258,32 +258,32 @@ void __fastcall BattleSeManager__LoadSoundAsset(
   System_String_o *v13; // x20
   AssetLoader_LoadEndDataHandler_o *v14; // x21
 
-  if ( (byte_4A724FE & 1) == 0 )
+  if ( (byte_4AB83FE & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, cat);
-    sub_1B90010(&Method_BattleSeManager_LoadEndAsset__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
-    sub_1B90010(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1B90010(&StringLiteral_2597/*"Audio/Battle"*/, v10);
-    sub_1B90010(&StringLiteral_1074/*".acb.bytes"*/, v11);
-    byte_4A724FE = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, cat);
+    sub_1BAB41C(&Method_BattleSeManager_LoadEndAsset__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
+    sub_1BAB41C(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1BAB41C(&StringLiteral_2592/*"Audio/Battle"*/, v10);
+    sub_1BAB41C(&StringLiteral_1071/*".acb.bytes"*/, v11);
+    byte_4AB83FE = 1;
   }
   if ( !this->fields.effectMaster )
     BattleSeManager__Initialize(this, (const MethodInfo *)cat);
   loadInfos = this->fields.loadInfos;
   if ( !loadInfos )
-    sub_1B9026C(0LL, cat);
+    sub_1BAB678(0LL, cat);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)loadInfos,
     (Il2CppObject *)cat,
     (Il2CppObject *)callbackFunc,
-    (const MethodInfo_31D8DA0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
-  v13 = System_String__Concat_61798352(
-          (System_String_o *)StringLiteral_2597/*"Audio/Battle"*/,
+    (const MethodInfo_3213538 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
+  v13 = System_String__Concat_62059388(
+          (System_String_o *)StringLiteral_2592/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_1074/*".acb.bytes"*/,
+          (System_String_o *)StringLiteral_1071/*".acb.bytes"*/,
           0LL);
-  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1B9025C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1BAB668(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v14, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -326,21 +326,21 @@ BattleSeManager_BattleSePlayer_o *__fastcall BattleSeManager__SearchPlayingSe(
   System_Collections_Generic_List_object__o *playingList; // x19
   System_Predicate_object__o *v14; // x20
 
-  if ( (byte_4A72501 & 1) == 0 )
+  if ( (byte_4AB8401 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__, seName);
-    sub_1B90010(&System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo, v5);
-    sub_1B90010(&Method_BattleSeManager___c__DisplayClass14_0__SearchPlayingSe_b__0__, v6);
-    sub_1B90010(&BattleSeManager___c__DisplayClass14_0_TypeInfo, v7);
-    byte_4A72501 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__, seName);
+    sub_1BAB41C(&System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo, v5);
+    sub_1BAB41C(&Method_BattleSeManager___c__DisplayClass14_0__SearchPlayingSe_b__0__, v6);
+    sub_1BAB41C(&BattleSeManager___c__DisplayClass14_0_TypeInfo, v7);
+    byte_4AB8401 = 1;
   }
-  v8 = sub_1B9025C(BattleSeManager___c__DisplayClass14_0_TypeInfo);
+  v8 = sub_1BAB668(BattleSeManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = seName,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)seName, v11, v12),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v8 + 16), (int32_t)seName, v11, v12),
         playingList = (System_Collections_Generic_List_object__o *)this->fields.playingList,
-        v14 = (System_Predicate_object__o *)sub_1B9025C(System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo),
+        v14 = (System_Predicate_object__o *)sub_1BAB668(System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo),
         System_Predicate_object____ctor(
           v14,
           (Il2CppObject *)v8,
@@ -348,12 +348,12 @@ BattleSeManager_BattleSePlayer_o *__fastcall BattleSeManager__SearchPlayingSe(
           0LL),
         !playingList) )
   {
-    sub_1B9026C(v9, v10);
+    sub_1BAB678(v9, v10);
   }
   return (BattleSeManager_BattleSePlayer_o *)System_Collections_Generic_List_object___Find(
                                                playingList,
                                                (System_Predicate_T__o *)v14,
-                                               (const MethodInfo_3511028 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__);
+                                               (const MethodInfo_354DF24 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__);
 }
 
 
@@ -386,18 +386,18 @@ BattleSeManager_BattleSePlayer_o *__fastcall BattleSeManager__playBattleSe(
   __int64 v16; // x0
   const MethodInfo *v17; // x1
 
-  if ( (byte_4A72502 & 1) == 0 )
+  if ( (byte_4AB8402 & 1) == 0 )
   {
-    sub_1B90010(&BattleSeManager_BattleSePlayer_TypeInfo, assetName);
-    byte_4A72502 = 1;
+    sub_1BAB41C(&BattleSeManager_BattleSePlayer_TypeInfo, assetName);
+    byte_4AB8402 = 1;
   }
   v12 = BattleSeManager__SearchPlayingSe(this, seName, (const MethodInfo *)seName);
   if ( v12 )
     BattleSeManager_BattleSePlayer__Stop(v12, v13);
-  v14 = (BattleSeManager_BattleSePlayer_o *)sub_1B9025C(BattleSeManager_BattleSePlayer_TypeInfo);
+  v14 = (BattleSeManager_BattleSePlayer_o *)sub_1BAB668(BattleSeManager_BattleSePlayer_TypeInfo);
   BattleSeManager_BattleSePlayer___ctor(v14, this, assetName, seName, volume, callback, v15);
   if ( !v14 )
-    sub_1B9026C(v16, v17);
+    sub_1BAB678(v16, v17);
   BattleSeManager_BattleSePlayer__Play(v14, v17);
   return v14;
 }
@@ -434,15 +434,15 @@ void __fastcall BattleSeManager_BattleSePlayer___ctor(
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields.manager = manager;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v12->fields, (int32_t)manager, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v12->fields, (int32_t)manager, v13, v14);
   v12->fields.assetName = assetName;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v12->fields.assetName, (int32_t)assetName, v15, v16);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v12->fields.assetName, (int32_t)assetName, v15, v16);
   v12->fields.seName = seName;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v12->fields.seName, (int32_t)seName, v17, v18);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v12->fields.seName, (int32_t)seName, v17, v18);
   v12->fields.callback = callback;
   v12 = (BattleSeManager_BattleSePlayer_o *)((char *)v12 + 48);
   *(float *)&v12[-1].fields.player = volume;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v12, (int32_t)callback, v19, v20);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v12, (int32_t)callback, v19, v20);
 }
 
 
@@ -455,14 +455,14 @@ void __fastcall BattleSeManager_BattleSePlayer__FinishCallback(
   struct System_Action_o *callback; // x8
 
   if ( !this->fields.manager )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   callback = this->fields.callback;
   if ( callback )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
       callback->fields.original_method_info,
       *(_QWORD *)&callback->fields.extra_arg);
   this->fields.player = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.player, 0, v2, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.player, 0, v2, v3);
 }
 
 
@@ -478,23 +478,23 @@ void __fastcall BattleSeManager_BattleSePlayer__Play(BattleSeManager_BattleSePla
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A72504 & 1) == 0 )
+  if ( (byte_4AB8404 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_BattleSeManager_BattleSePlayer_FinishCallback__, v3);
-    sub_1B90010(&SoundManager_TypeInfo, v4);
-    byte_4A72504 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_BattleSeManager_BattleSePlayer_FinishCallback__, v3);
+    sub_1BAB41C(&SoundManager_TypeInfo, v4);
+    byte_4AB8404 = 1;
   }
   assetName = this->fields.assetName;
   seName = this->fields.seName;
   volume = this->fields.volume;
-  v8 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_BattleSeManager_BattleSePlayer_FinishCallback__, 0LL);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  v9 = SoundManager__playVoice_38755844(assetName, seName, volume, v8, 0LL);
+  v9 = SoundManager__playVoice_39087920(assetName, seName, volume, v8, 0LL);
   this->fields.player = v9;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.player, (int32_t)v9, v10, v11);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.player, (int32_t)v9, v10, v11);
 }
 
 
@@ -513,9 +513,9 @@ void __fastcall BattleSeManager_BattleSePlayer__Stop(BattleSeManager_BattleSePla
   {
     SePlayer__StopSe(player, 0.0, 0LL);
     if ( !this->fields.manager )
-      sub_1B9026C(v5, v6);
+      sub_1BAB678(v5, v6);
     p_player->klass = 0LL;
-    sub_1B8FFB4(p_player, 0, v7, v8);
+    sub_1BAB3C0(p_player, 0, v7, v8);
   }
 }
 
@@ -548,6 +548,6 @@ bool __fastcall BattleSeManager___c__DisplayClass14_0___SearchPlayingSe_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return System_String__op_Equality(x->fields.seName, this->fields.seName, 0LL);
 }

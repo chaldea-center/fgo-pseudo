@@ -1,14 +1,14 @@
 void __fastcall UserEventPointMaster___ctor(UserEventPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70AF3 & 1) == 0 )
+  if ( (byte_4AB69E6 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string___ctor__, method);
-    byte_4A70AF3 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string___ctor__, method);
+    byte_4AB69E6 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     154,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserEventPointEntity_o *__fastcall UserEventPointMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A70AF1 & 1) == 0 )
+  if ( (byte_4AB69E4 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__GetEntity__, userId);
-    byte_4A70AF1 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__GetEntity__, userId);
+    byte_4AB69E4 = 1;
   }
   PK = (Il2CppObject *)UserEventPointEntity__CreatePK(userId, eventId, groupId, *(const MethodInfo **)&groupId);
   return (UserEventPointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_312C900 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__GetEntity__);
+                                     (const MethodInfo_31640E8 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__GetEntity__);
 }
 
 
@@ -62,11 +62,11 @@ UserEventPointEntity_o *__fastcall UserEventPointMaster__GetEntityDefinitely(
   UserEventPointEntity_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A70AF4 & 1) == 0 )
+  if ( (byte_4AB69E7 & 1) == 0 )
   {
-    sub_1B90010(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
-    sub_1B90010(&UserEventPointEntity_TypeInfo, v9);
-    byte_4A70AF4 = 1;
+    sub_1BAB41C(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
+    sub_1BAB41C(&UserEventPointEntity_TypeInfo, v9);
+    byte_4AB69E7 = 1;
   }
   PK = UserEventPointEntity__CreatePK(userId, eventId, groupId, *(const MethodInfo **)&groupId);
   lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
@@ -90,21 +90,21 @@ UserEventPointEntity_o *__fastcall UserEventPointMaster__GetEntityDefinitely(
   else
   {
 LABEL_8:
-    p_method = sub_1BE1FF0(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
+    p_method = sub_1BFD3FC(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
   if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *, System_String_o *, _QWORD))p_method)(
           v14,
           PK,
           *(_QWORD *)(p_method + 8)) & 1) == 0 )
   {
-    v23 = (UserEventPointEntity_o *)sub_1B9025C(UserEventPointEntity_TypeInfo);
-    UserEventPointEntity___ctor_40145456(v23, userId, eventId, groupId, v24);
+    v23 = (UserEventPointEntity_o *)sub_1BAB668(UserEventPointEntity_TypeInfo);
+    UserEventPointEntity___ctor_40483396(v23, userId, eventId, groupId, v24);
     return v23;
   }
   lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
   if ( !lookup )
 LABEL_25:
-    sub_1B9026C(lookup, v12);
+    sub_1BAB678(lookup, v12);
   v18 = lookup->klass;
   v19 = lookup;
   v20 = *(unsigned __int16 *)(&lookup->klass->_2.bitflags2 + 3);
@@ -123,7 +123,7 @@ LABEL_25:
   else
   {
 LABEL_16:
-    v22 = sub_1BE1FF0(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
+    v22 = sub_1BFD3FC(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
   }
   result = (UserEventPointEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__o *, System_String_o *, _QWORD))v22)(
                                        v19,
@@ -161,27 +161,27 @@ int64_t __fastcall UserEventPointMaster__GetEventActivityPoint(int32_t eventId, 
   int64_t v13; // x19
   int64_t UserEventActivityPointMax; // x20
 
-  if ( (byte_4A70AF8 & 1) == 0 )
+  if ( (byte_4AB69EB & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, method);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserEventPointMaster___, v3);
-    sub_1B90010(&System_Math_TypeInfo, v4);
-    sub_1B90010(&NetworkManager_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A70AF8 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEventPointMaster___, v3);
+    sub_1BAB41C(&System_Math_TypeInfo, v4);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AB69EB = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_12:
-    sub_1B9026C(Instance, v8);
+    sub_1BAB678(Instance, v8);
   Point = UserEventPointMaster__GetPoint(
             (UserEventPointMaster_o *)MasterData_object,
             (int64_t)Instance,
@@ -198,7 +198,7 @@ LABEL_12:
   UserEventActivityPointMax = v12->static_fields->UserEventActivityPointMax;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_62606080(v13, UserEventActivityPointMax, 0LL);
+  return System_Math__Min_62867116(v13, UserEventActivityPointMax, 0LL);
 }
 
 
@@ -218,27 +218,27 @@ int64_t __fastcall UserEventPointMaster__GetEventPoint(int32_t eventId, int32_t 
   int64_t v15; // x19
   int64_t UserPointEventMax; // x20
 
-  if ( (byte_4A70AF7 & 1) == 0 )
+  if ( (byte_4AB69EA & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, *(_QWORD *)&groupId);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserEventPointMaster___, v5);
-    sub_1B90010(&System_Math_TypeInfo, v6);
-    sub_1B90010(&NetworkManager_TypeInfo, v7);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4A70AF7 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, *(_QWORD *)&groupId);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEventPointMaster___, v5);
+    sub_1BAB41C(&System_Math_TypeInfo, v6);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v7);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4AB69EA = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_12:
-    sub_1B9026C(Instance, v10);
+    sub_1BAB678(Instance, v10);
   Point = UserEventPointMaster__GetPoint(
             (UserEventPointMaster_o *)MasterData_object,
             (int64_t)Instance,
@@ -255,7 +255,7 @@ LABEL_12:
   UserPointEventMax = v14->static_fields->UserPointEventMax;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_62606080(v15, UserPointEventMax, 0LL);
+  return System_Math__Min_62867116(v15, UserPointEventMax, 0LL);
 }
 
 
@@ -274,27 +274,27 @@ int64_t __fastcall UserEventPointMaster__GetEventPointNoGroup(int32_t eventId, c
   int64_t v13; // x19
   int64_t UserPointEventMax; // x20
 
-  if ( (byte_4A70AF6 & 1) == 0 )
+  if ( (byte_4AB69E9 & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, method);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserEventPointMaster___, v3);
-    sub_1B90010(&System_Math_TypeInfo, v4);
-    sub_1B90010(&NetworkManager_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A70AF6 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEventPointMaster___, v3);
+    sub_1BAB41C(&System_Math_TypeInfo, v4);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AB69E9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_12:
-    sub_1B9026C(Instance, v8);
+    sub_1BAB678(Instance, v8);
   Point = UserEventPointMaster__GetPoint(
             (UserEventPointMaster_o *)MasterData_object,
             (int64_t)Instance,
@@ -311,7 +311,7 @@ LABEL_12:
   UserPointEventMax = v12->static_fields->UserPointEventMax;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_62606080(v13, UserPointEventMax, 0LL);
+  return System_Math__Min_62867116(v13, UserPointEventMax, 0LL);
 }
 
 
@@ -339,22 +339,22 @@ int64_t __fastcall UserEventPointMaster__GetEventPointTotal(
   int64_t monitor; // x26
   int64_t UserPointEventMax; // x27
 
-  if ( (byte_4A70AF5 & 1) == 0 )
+  if ( (byte_4AB69E8 & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, userId);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v9);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v10);
-    sub_1B90010(&System_Math_TypeInfo, v11);
-    sub_1B90010(&UserEventPointEntity_TypeInfo, v12);
-    byte_4A70AF5 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, userId);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v9);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v10);
+    sub_1BAB41C(&System_Math_TypeInfo, v11);
+    sub_1BAB41C(&UserEventPointEntity_TypeInfo, v12);
+    byte_4AB69E8 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_31:
-    sub_1B9026C(list, userId);
+    sub_1BAB678(list, userId);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v15 = Count;
@@ -368,7 +368,7 @@ LABEL_31:
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v17,
-                                                                 (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list
         && (methodPtr_low = LOBYTE(UserEventPointEntity_TypeInfo->vtable._0_Equals.methodPtr),
             LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
@@ -410,7 +410,7 @@ LABEL_18:
           UserPointEventMax = v22->static_fields->UserPointEventMax;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v16 += System_Math__Min_62606080(monitor, UserPointEventMax, 0LL);
+          v16 += System_Math__Min_62867116(monitor, UserPointEventMax, 0LL);
         }
       }
       if ( v15 == ++v17 )
@@ -440,7 +440,7 @@ int64_t __fastcall UserEventPointMaster__GetPoint(
   if ( v7 )
   {
     if ( !entity )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     return entity->fields.value;
   }
   return result;
@@ -476,15 +476,15 @@ bool __fastcall UserEventPointMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A70AF2 & 1) == 0 )
+  if ( (byte_4AB69E5 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__TryGetEntity__, entity);
-    byte_4A70AF2 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__TryGetEntity__, entity);
+    byte_4AB69E5 = 1;
   }
   PK = (Il2CppObject *)UserEventPointEntity__CreatePK(userId, eventId, groupId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_UserEventPointMaster__UserEventPointEntity__string__TryGetEntity__);
 }

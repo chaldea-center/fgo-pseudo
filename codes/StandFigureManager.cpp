@@ -6,22 +6,22 @@ void __fastcall StandFigureManager___ctor(StandFigureManager_o *this, const Meth
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6F1A2 & 1) == 0 )
+  if ( (byte_4AB506A & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus___ctor__, method);
-    sub_1B90010(&System_Collections_Generic_Queue_StandFigureRenderWaitStatus__TypeInfo, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager___ctor__, v4);
-    byte_4A6F1A2 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus___ctor__, method);
+    sub_1BAB41C(&System_Collections_Generic_Queue_StandFigureRenderWaitStatus__TypeInfo, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager___ctor__, v4);
+    byte_4AB506A = 1;
   }
-  v5 = (System_Collections_Generic_Queue_T__o *)sub_1B9025C(System_Collections_Generic_Queue_StandFigureRenderWaitStatus__TypeInfo);
+  v5 = (System_Collections_Generic_Queue_T__o *)sub_1BAB668(System_Collections_Generic_Queue_StandFigureRenderWaitStatus__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v5,
-    (const MethodInfo_368241C *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus___ctor__);
+    (const MethodInfo_36BF608 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus___ctor__);
   this->fields.renderWaitList = (struct System_Collections_Generic_Queue_StandFigureRenderWaitStatus__o *)v5;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.renderWaitList, (int32_t)v5, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.renderWaitList, (int32_t)v5, v6, v7);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_374CCA8 *)Method_SingletonMonoBehaviour_StandFigureManager___ctor__);
+    (const MethodInfo_378A644 *)Method_SingletonMonoBehaviour_StandFigureManager___ctor__);
 }
 
 
@@ -32,18 +32,18 @@ void __fastcall StandFigureManager__AddRender(
 {
   System_Collections_Generic_Queue_T__o *renderWaitList; // x0
 
-  if ( (byte_4A6F19B & 1) == 0 )
+  if ( (byte_4AB5063 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Enqueue__, info);
-    byte_4A6F19B = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Enqueue__, info);
+    byte_4AB5063 = 1;
   }
   renderWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.renderWaitList;
   if ( !renderWaitList )
-    sub_1B9026C(0LL, info);
+    sub_1BAB678(0LL, info);
   System_Collections_Generic_Queue_object___Enqueue(
     renderWaitList,
     (Il2CppObject *)info,
-    (const MethodInfo_36829E4 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Enqueue__);
+    (const MethodInfo_36BFBD0 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Enqueue__);
 }
 
 
@@ -69,26 +69,26 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal(
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A6F19D & 1) == 0 )
+  if ( (byte_4AB5065 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureM___, parent);
-    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_12958/*"StandFigureM"*/, v7);
-    byte_4A6F19D = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureM___, parent);
+    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_12962/*"StandFigureM"*/, v7);
+    byte_4AB5065 = 1;
   }
   standFigureMPrefab = (Il2CppObject *)this->fields.standFigureMPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   layer = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                         standFigureMPrefab,
-                                        (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                        (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !layer )
     goto LABEL_15;
   v11 = layer;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        layer,
-                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureM___);
+                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureM___);
   transform = UnityEngine_GameObject__get_transform(v11, 0LL);
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0LL);
   if ( !layer )
@@ -97,23 +97,23 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_12958/*"StandFigureM"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_12962/*"StandFigureM"*/, 0LL);
   if ( !parent )
     goto LABEL_15;
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
   if ( !transform )
     goto LABEL_15;
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)layer, 0LL);
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4A6A9C1 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4AB0691 = 1;
   }
   UnityEngine_Transform__set_localPosition(transform, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  if ( !byte_4A6A9C7 )
+  if ( !byte_4AB0697 )
   {
-    sub_1B90010(&UnityEngine_Quaternion_TypeInfo, v18);
-    byte_4A6A9C7 = 1;
+    sub_1BAB41C(&UnityEngine_Quaternion_TypeInfo, v18);
+    byte_4AB0697 = 1;
   }
   UnityEngine_Transform__set_localRotation(
     transform,
@@ -126,14 +126,14 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal(
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(parent, 0LL);
   if ( !Component_object )
 LABEL_15:
-    sub_1B9026C(layer, v10);
+    sub_1BAB678(layer, v10);
   UIStandFigureRender__SetLayer((UIStandFigureRender_o *)Component_object, (int32_t)layer, 0LL);
   return (UIStandFigureM_o *)Component_object;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal_38027944(
+UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal_38361184(
         StandFigureManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
@@ -157,10 +157,10 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshLocal_38027944(
         MeshLocal = (UnityEngine_Component_o *)StandFigureManager__CreateStandFigureMName(svtId, imageLimitCount, v19),
         !gameObject) )
   {
-    sub_1B9026C(MeshLocal, v16);
+    sub_1BAB678(MeshLocal, v16);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)MeshLocal, 0LL);
-  UIStandFigureM__SetCharacter_41008900(v17, svtId, imageLimitCount, faceType, callbackFunc, loadRequiredResource, 0LL);
+  UIStandFigureM__SetCharacter_41412360(v17, svtId, imageLimitCount, faceType, callbackFunc, loadRequiredResource, 0LL);
   UIStandFigureRender__SetDepth((UIStandFigureRender_o *)v17, (float)panelDepth, 0LL);
   return v17;
 }
@@ -174,20 +174,20 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab(
   __int64 v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6F189 & 1) == 0 )
+  if ( (byte_4AB5051 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, method);
-    byte_4A6F189 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, method);
+    byte_4AB5051 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   return StandFigureManager__CreateMeshLocal((StandFigureManager_o *)Instance, parent, v5);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38027716(
+UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38360956(
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
         int32_t limitCount,
@@ -203,19 +203,19 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38027716(
   __int64 v17; // x1
   const MethodInfo *v19; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F18A & 1) == 0 )
+  if ( (byte_4AB5052 & 1) == 0 )
   {
-    sub_1B90010(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v14);
-    byte_4A6F18A = 1;
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v14);
+    byte_4AB5052 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
   if ( !Instance )
-    sub_1B9026C(ImageLimitCount, v17);
-  return StandFigureManager__CreateMeshLocal_38027944(
+    sub_1BAB678(ImageLimitCount, v17);
+  return StandFigureManager__CreateMeshLocal_38361184(
            (StandFigureManager_o *)Instance,
            parent,
            svtId,
@@ -229,7 +229,7 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38027716(
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38028124(
+UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38361364(
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -243,15 +243,15 @@ UIStandFigureM_o *__fastcall StandFigureManager__CreateMeshPrefab_38028124(
   __int64 v16; // x1
   const MethodInfo *v18; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F18B & 1) == 0 )
+  if ( (byte_4AB5053 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
-    byte_4A6F18B = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
+    byte_4AB5053 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v16);
-  return StandFigureManager__CreateMeshLocal_38027944(
+    sub_1BAB678(0LL, v16);
+  return StandFigureManager__CreateMeshLocal_38361184(
            (StandFigureManager_o *)Instance,
            parent,
            svtId,
@@ -289,15 +289,15 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreatePrefabForImageId(
   int32_t imageIda; // [xsp+Ch] [xbp-54h] BYREF
 
   imageIda = imageId;
-  if ( (byte_4A6F18F & 1) == 0 )
+  if ( (byte_4AB5057 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageId);
-    sub_1B90010(&UIStandFigureRender_TypeInfo, v17);
-    sub_1B90010(&StringLiteral_12961/*"StandFigureR("*/, v18);
-    sub_1B90010(&StringLiteral_814/*")"*/, v19);
-    byte_4A6F18F = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageId);
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, v17);
+    sub_1BAB41C(&StringLiteral_12965/*"StandFigureR("*/, v18);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v19);
+    byte_4AB5057 = 1;
   }
-  Instance = (StandFigureManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = (StandFigureManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (StandFigureManager_o *)StandFigureManager__CreateRenderLocal(Instance, parent, v22);
@@ -316,15 +316,15 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreatePrefabForImageId(
   if ( !v23
     || (gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v23, 0LL),
         v26 = System_Int32__ToString((int32_t)&imageIda, 0LL),
-        Instance = (StandFigureManager_o *)System_String__Concat_61798352(
-                                             (System_String_o *)StringLiteral_12961/*"StandFigureR("*/,
+        Instance = (StandFigureManager_o *)System_String__Concat_62059388(
+                                             (System_String_o *)StringLiteral_12965/*"StandFigureR("*/,
                                              v26,
-                                             (System_String_o *)StringLiteral_814/*")"*/,
+                                             (System_String_o *)StringLiteral_809/*")"*/,
                                              0LL),
         !gameObject) )
   {
 LABEL_12:
-    sub_1B9026C(Instance, v21);
+    sub_1BAB678(Instance, v21);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)Instance, 0LL);
   UIStandFigureR__SetCharacterForImageId(
@@ -363,14 +363,14 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreatePrefabForImageIdAndForm(
   int32_t imageIda; // [xsp+Ch] [xbp-54h] BYREF
 
   imageIda = imageId;
-  if ( (byte_4A6F190 & 1) == 0 )
+  if ( (byte_4AB5058 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageId);
-    sub_1B90010(&StringLiteral_12961/*"StandFigureR("*/, v14);
-    sub_1B90010(&StringLiteral_814/*")"*/, v15);
-    byte_4A6F190 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageId);
+    sub_1BAB41C(&StringLiteral_12965/*"StandFigureR("*/, v14);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v15);
+    byte_4AB5058 = 1;
   }
-  Instance = (StandFigureManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = (StandFigureManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance
     || (Instance = (StandFigureManager_o *)StandFigureManager__CreateRenderLocal(Instance, parent, v18)) == 0LL
     || (v19 = (UIStandFigureR_o *)Instance,
@@ -378,14 +378,14 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreatePrefabForImageIdAndForm(
                                                (UnityEngine_Component_o *)Instance,
                                                0LL),
         v21 = System_Int32__ToString((int32_t)&imageIda, 0LL),
-        Instance = (StandFigureManager_o *)System_String__Concat_61798352(
-                                             (System_String_o *)StringLiteral_12961/*"StandFigureR("*/,
+        Instance = (StandFigureManager_o *)System_String__Concat_62059388(
+                                             (System_String_o *)StringLiteral_12965/*"StandFigureR("*/,
                                              v21,
-                                             (System_String_o *)StringLiteral_814/*")"*/,
+                                             (System_String_o *)StringLiteral_809/*")"*/,
                                              0LL),
         !gameObject) )
   {
-    sub_1B9026C(Instance, v17);
+    sub_1BAB678(Instance, v17);
   }
   UnityEngine_Object__set_name(gameObject, (System_String_o *)Instance, 0LL);
   UIStandFigureR__SetCharacterForImageId(v19, imageIda, offsetKind, faceType, formId, callbackFunc, 0, 0LL);
@@ -416,26 +416,26 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal(
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A6F19F & 1) == 0 )
+  if ( (byte_4AB5067 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___, parent);
-    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_12960/*"StandFigureR"*/, v7);
-    byte_4A6F19F = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___, parent);
+    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_12964/*"StandFigureR"*/, v7);
+    byte_4AB5067 = 1;
   }
   standFigureRPrefab = (Il2CppObject *)this->fields.standFigureRPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                              standFigureRPrefab,
-                                             (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !gameObject )
     goto LABEL_16;
   v11 = gameObject;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___);
+                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___);
   transform = UnityEngine_GameObject__get_transform(v11, 0LL);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0LL);
   if ( !gameObject )
@@ -444,23 +444,23 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_12960/*"StandFigureR"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_12964/*"StandFigureR"*/, 0LL);
   if ( !parent )
     goto LABEL_16;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0LL);
   if ( !transform )
     goto LABEL_16;
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)gameObject, 0LL);
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4A6A9C1 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4AB0691 = 1;
   }
   UnityEngine_Transform__set_localPosition(transform, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  if ( !byte_4A6A9C7 )
+  if ( !byte_4AB0697 )
   {
-    sub_1B90010(&UnityEngine_Quaternion_TypeInfo, v18);
-    byte_4A6A9C7 = 1;
+    sub_1BAB41C(&UnityEngine_Quaternion_TypeInfo, v18);
+    byte_4AB0697 = 1;
   }
   UnityEngine_Transform__set_localRotation(
     transform,
@@ -475,7 +475,7 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal(
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0LL), !Component_object) )
   {
 LABEL_16:
-    sub_1B9026C(gameObject, v10);
+    sub_1BAB678(gameObject, v10);
   }
   UIStandFigureR__SetLayer((UIStandFigureR_o *)Component_object, (int32_t)gameObject, 0LL);
   UIStandFigureR__SetMaterial((UIStandFigureR_o *)Component_object, 0LL);
@@ -484,7 +484,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38029160(
+UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38362400(
         StandFigureManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
@@ -512,12 +512,12 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38029160(
 
   v30 = imageLimitCount;
   v31 = svtId;
-  if ( (byte_4A6F1A0 & 1) == 0 )
+  if ( (byte_4AB5068 & 1) == 0 )
   {
-    sub_1B90010(&UIStandFigureRender_TypeInfo, parent);
-    sub_1B90010(&StringLiteral_12961/*"StandFigureR("*/, v19);
-    sub_1B90010(&StringLiteral_814/*")"*/, v20);
-    byte_4A6F1A0 = 1;
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, parent);
+    sub_1BAB41C(&StringLiteral_12965/*"StandFigureR("*/, v19);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v20);
+    byte_4AB5068 = 1;
   }
   RenderLocal = (UnityEngine_Component_o *)StandFigureManager__CreateRenderLocal(
                                              this,
@@ -540,18 +540,18 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38029160(
     || (gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(RenderLocal, 0LL),
         v27 = System_Int32__ToString((int32_t)&v31, 0LL),
         v28 = System_Int32__ToString((int32_t)&v30, 0LL),
-        Id = System_String__Concat_61800356(
-               (System_String_o *)StringLiteral_12961/*"StandFigureR("*/,
+        Id = System_String__Concat_62061392(
+               (System_String_o *)StringLiteral_12965/*"StandFigureR("*/,
                v27,
                v28,
-               (System_String_o *)StringLiteral_814/*")"*/,
+               (System_String_o *)StringLiteral_809/*")"*/,
                0LL),
         !gameObject) )
   {
-    sub_1B9026C(Id, v23);
+    sub_1BAB678(Id, v23);
   }
   UnityEngine_Object__set_name(gameObject, Id, 0LL);
-  UIStandFigureR__SetCharacter_41095956(
+  UIStandFigureR__SetCharacter_41423188(
     (UIStandFigureR_o *)RenderLocal,
     v31,
     v30,
@@ -566,7 +566,7 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38029160(
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38030676(
+UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38363916(
         StandFigureManager_o *this,
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
@@ -592,11 +592,11 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38030676(
 
   v28 = imageLimitCount;
   v29 = svtId;
-  if ( (byte_4A6F1A1 & 1) == 0 )
+  if ( (byte_4AB5069 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_12961/*"StandFigureR("*/, parent);
-    sub_1B90010(&StringLiteral_814/*")"*/, v20);
-    byte_4A6F1A1 = 1;
+    sub_1BAB41C(&StringLiteral_12965/*"StandFigureR("*/, parent);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v20);
+    byte_4AB5069 = 1;
   }
   RenderLocal = (UnityEngine_Component_o *)StandFigureManager__CreateRenderLocal(
                                              this,
@@ -607,18 +607,18 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderLocal_38030676(
     || (gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(RenderLocal, 0LL),
         v25 = System_Int32__ToString((int32_t)&v29, 0LL),
         v26 = System_Int32__ToString((int32_t)&v28, 0LL),
-        Id = System_String__Concat_61800356(
-               (System_String_o *)StringLiteral_12961/*"StandFigureR("*/,
+        Id = System_String__Concat_62061392(
+               (System_String_o *)StringLiteral_12965/*"StandFigureR("*/,
                v25,
                v26,
-               (System_String_o *)StringLiteral_814/*")"*/,
+               (System_String_o *)StringLiteral_809/*")"*/,
                0LL),
         !gameObject) )
   {
-    sub_1B9026C(Id, v23);
+    sub_1BAB678(Id, v23);
   }
   UnityEngine_Object__set_name(gameObject, Id, 0LL);
-  UIStandFigureR__SetCharacter_41095956(
+  UIStandFigureR__SetCharacter_41423188(
     (UIStandFigureR_o *)RenderLocal,
     v29,
     v28,
@@ -640,20 +640,20 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab(
   __int64 v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6F18C & 1) == 0 )
+  if ( (byte_4AB5054 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, method);
-    byte_4A6F18C = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, method);
+    byte_4AB5054 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   return StandFigureManager__CreateRenderLocal((StandFigureManager_o *)Instance, parent, v5);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38028908(
+UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38362148(
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
         int32_t limitCount,
@@ -670,19 +670,19 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38028908(
   __int64 v19; // x1
   const MethodInfo *v21; // [xsp+10h] [xbp-70h]
 
-  if ( (byte_4A6F18D & 1) == 0 )
+  if ( (byte_4AB5055 & 1) == 0 )
   {
-    sub_1B90010(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v16);
-    byte_4A6F18D = 1;
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v16);
+    byte_4AB5055 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
   if ( !Instance )
-    sub_1B9026C(ImageLimitCount, v19);
-  return StandFigureManager__CreateRenderLocal_38029160(
+    sub_1BAB678(ImageLimitCount, v19);
+  return StandFigureManager__CreateRenderLocal_38362400(
            (StandFigureManager_o *)Instance,
            parent,
            svtId,
@@ -698,7 +698,7 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38028908(
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38029576(
+UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38362816(
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -714,15 +714,15 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38029576(
   __int64 v19; // x1
   const MethodInfo *v21; // [xsp+10h] [xbp-70h]
 
-  if ( (byte_4A6F18E & 1) == 0 )
+  if ( (byte_4AB5056 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
-    byte_4A6F18E = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
+    byte_4AB5056 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v19);
-  return StandFigureManager__CreateRenderLocal_38029160(
+    sub_1BAB678(0LL, v19);
+  return StandFigureManager__CreateRenderLocal_38362400(
            (StandFigureManager_o *)Instance,
            parent,
            svtId,
@@ -738,7 +738,7 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38029576(
 
 
 // local variable allocation has failed, the output may be wrong!
-UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38030488(
+UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38363728(
         UnityEngine_GameObject_o *parent,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -756,15 +756,15 @@ UIStandFigureR_o *__fastcall StandFigureManager__CreateRenderPrefab_38030488(
   int32_t v22; // [xsp+10h] [xbp-70h]
   const MethodInfo *v23; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4A6F191 & 1) == 0 )
+  if ( (byte_4AB5059 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
-    byte_4A6F191 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
+    byte_4AB5059 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v20);
-  return StandFigureManager__CreateRenderLocal_38030676(
+    sub_1BAB678(0LL, v20);
+  return StandFigureManager__CreateRenderLocal_38363916(
            (StandFigureManager_o *)Instance,
            parent,
            svtId,
@@ -794,19 +794,19 @@ System_String_o *__fastcall StandFigureManager__CreateStandFigureMName(
 
   v7 = imageLimitCount;
   v8 = svtId;
-  if ( (byte_4A6F19E & 1) == 0 )
+  if ( (byte_4AB5066 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_12959/*"StandFigureM("*/, *(_QWORD *)&imageLimitCount);
-    sub_1B90010(&StringLiteral_814/*")"*/, v3);
-    byte_4A6F19E = 1;
+    sub_1BAB41C(&StringLiteral_12963/*"StandFigureM("*/, *(_QWORD *)&imageLimitCount);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v3);
+    byte_4AB5066 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_61800356(
-           (System_String_o *)StringLiteral_12959/*"StandFigureM("*/,
+  return System_String__Concat_62061392(
+           (System_String_o *)StringLiteral_12963/*"StandFigureM("*/,
            v4,
            v5,
-           (System_String_o *)StringLiteral_814/*")"*/,
+           (System_String_o *)StringLiteral_809/*")"*/,
            0LL);
 }
 
@@ -822,42 +822,42 @@ void __fastcall StandFigureManager__DownloadAsset(
   __int64 v8; // x1
   int32_t ImageLimitCount; // w0
   const MethodInfo *v10; // x2
-  System_String_o *AssetName_38025896; // x20
+  System_String_o *AssetName_38359136; // x20
 
-  if ( (byte_4A6F183 & 1) == 0 )
+  if ( (byte_4AB504B & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
-    sub_1B90010(&ImageLimitCount_TypeInfo, v8);
-    byte_4A6F183 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, v8);
+    byte_4AB504B = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, ImageLimitCount, v10);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, ImageLimitCount, v10);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage(AssetName_38025896, callback, 1, 0LL);
+  AssetManager__downloadAssetStorage(AssetName_38359136, callback, 1, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__DownloadAsset_38026384(
+void __fastcall StandFigureManager__DownloadAsset_38359624(
         int32_t svtId,
         int32_t imageLimitCount,
         AssetLoader_LoadEndDataHandler_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *AssetName_38025896; // x20
+  System_String_o *AssetName_38359136; // x20
 
-  if ( (byte_4A6F184 & 1) == 0 )
+  if ( (byte_4AB504C & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
-    byte_4A6F184 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
+    byte_4AB504C = 1;
   }
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, imageLimitCount, (const MethodInfo *)callback);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, imageLimitCount, (const MethodInfo *)callback);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage(AssetName_38025896, callback, 1, 0LL);
+  AssetManager__downloadAssetStorage(AssetName_38359136, callback, 1, 0LL);
 }
 
 
@@ -871,11 +871,11 @@ System_String_o *__fastcall StandFigureManager__GetAssetName(
   __int64 v6; // x1
   int32_t ImageLimitCount; // w20
 
-  if ( (byte_4A6F17F & 1) == 0 )
+  if ( (byte_4AB5047 & 1) == 0 )
   {
-    sub_1B90010(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    sub_1B90010(&UIStandFigureRender_TypeInfo, v6);
-    byte_4A6F17F = 1;
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, v6);
+    byte_4AB5047 = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
@@ -893,27 +893,27 @@ System_String_o *__fastcall StandFigureManager__GetAssetNameByForm(
         int32_t formId,
         const MethodInfo *method)
 {
-  if ( (byte_4A6F182 & 1) == 0 )
+  if ( (byte_4AB504A & 1) == 0 )
   {
-    sub_1B90010(&UIStandFigureRender_TypeInfo, *(_QWORD *)&imageLimitCount);
-    byte_4A6F182 = 1;
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, *(_QWORD *)&imageLimitCount);
+    byte_4AB504A = 1;
   }
   if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
-  return UIStandFigureRender__GetAssetName_41111244(svtId, imageLimitCount, formId, 0LL);
+  return UIStandFigureRender__GetAssetName_41438368(svtId, imageLimitCount, formId, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall StandFigureManager__GetAssetName_38025896(
+System_String_o *__fastcall StandFigureManager__GetAssetName_38359136(
         int32_t svtId,
         int32_t imageLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4A6F180 & 1) == 0 )
+  if ( (byte_4AB5048 & 1) == 0 )
   {
-    sub_1B90010(&UIStandFigureRender_TypeInfo, *(_QWORD *)&imageLimitCount);
-    byte_4A6F180 = 1;
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, *(_QWORD *)&imageLimitCount);
+    byte_4AB5048 = 1;
   }
   if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
@@ -921,16 +921,16 @@ System_String_o *__fastcall StandFigureManager__GetAssetName_38025896(
 }
 
 
-System_String_o *__fastcall StandFigureManager__GetAssetName_38026000(int32_t id, const MethodInfo *method)
+System_String_o *__fastcall StandFigureManager__GetAssetName_38359240(int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4A6F181 & 1) == 0 )
+  if ( (byte_4AB5049 & 1) == 0 )
   {
-    sub_1B90010(&UIStandFigureRender_TypeInfo, method);
-    byte_4A6F181 = 1;
+    sub_1BAB41C(&UIStandFigureRender_TypeInfo, method);
+    byte_4AB5049 = 1;
   }
   if ( !UIStandFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo);
-  return UIStandFigureRender__GetAssetName_41112012(id, 0LL);
+  return UIStandFigureRender__GetAssetName_41439136(id, 0LL);
 }
 
 
@@ -994,7 +994,7 @@ LABEL_8:
         }
       }
 LABEL_15:
-      sub_1B9026C(standFigureCamera, v4);
+      sub_1BAB678(standFigureCamera, v4);
     }
   }
   else
@@ -1018,42 +1018,42 @@ void __fastcall StandFigureManager__LoadAsset(
   __int64 v8; // x1
   int32_t ImageLimitCount; // w0
   const MethodInfo *v10; // x2
-  System_String_o *AssetName_38025896; // x20
+  System_String_o *AssetName_38359136; // x20
 
-  if ( (byte_4A6F185 & 1) == 0 )
+  if ( (byte_4AB504D & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
-    sub_1B90010(&ImageLimitCount_TypeInfo, v8);
-    byte_4A6F185 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, v8);
+    byte_4AB504D = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, ImageLimitCount, v10);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, ImageLimitCount, v10);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(AssetName_38025896, callback, 1, 0LL);
+  AssetManager__loadAssetStorage(AssetName_38359136, callback, 1, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__LoadAsset_38026700(
+void __fastcall StandFigureManager__LoadAsset_38359940(
         int32_t svtId,
         int32_t imageLimitCount,
         AssetLoader_LoadEndDataHandler_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *AssetName_38025896; // x20
+  System_String_o *AssetName_38359136; // x20
 
-  if ( (byte_4A6F186 & 1) == 0 )
+  if ( (byte_4AB504E & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
-    byte_4A6F186 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
+    byte_4AB504E = 1;
   }
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, imageLimitCount, (const MethodInfo *)callback);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, imageLimitCount, (const MethodInfo *)callback);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(AssetName_38025896, callback, 1, 0LL);
+  AssetManager__loadAssetStorage(AssetName_38359136, callback, 1, 0LL);
 }
 
 
@@ -1073,7 +1073,7 @@ void __fastcall StandFigureManager__OnRenderEnd(
   {
     StandFigureRenderWaitStatus__Callback(renderInfo, renderTexture, method);
     p_renderInfo->klass = 0LL;
-    sub_1B8FFB4(p_renderInfo, 0, v5, v6);
+    sub_1BAB3C0(p_renderInfo, 0, v5, v6);
   }
 }
 
@@ -1085,21 +1085,21 @@ void __fastcall StandFigureManager__Reboot(StandFigureManager_o *this, const Met
   __int64 v5; // x1
   System_Collections_Generic_Queue_T__o *renderWaitList; // x0
 
-  if ( (byte_4A6F19A & 1) == 0 )
+  if ( (byte_4AB5062 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Clear__, method);
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__get_Count__, v5);
-    byte_4A6F19A = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Clear__, method);
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__get_Count__, v5);
+    byte_4AB5062 = 1;
   }
   renderWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.renderWaitList;
   if ( !renderWaitList )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   if ( renderWaitList->fields._size >= 1 )
     System_Collections_Generic_Queue_object___Clear(
       renderWaitList,
-      (const MethodInfo_36826A4 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Clear__);
+      (const MethodInfo_36BF890 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Clear__);
   this->fields.renderInfo = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.renderInfo, 0, v2, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.renderInfo, 0, v2, v3);
 }
 
 
@@ -1119,41 +1119,41 @@ void __fastcall StandFigureManager__ReleaseAsset(
   __int64 v6; // x1
   int32_t ImageLimitCount; // w0
   const MethodInfo *v8; // x2
-  System_String_o *AssetName_38025896; // x19
+  System_String_o *AssetName_38359136; // x19
 
-  if ( (byte_4A6F187 & 1) == 0 )
+  if ( (byte_4AB504F & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
-    sub_1B90010(&ImageLimitCount_TypeInfo, v6);
-    byte_4A6F187 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, v6);
+    byte_4AB504F = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, ImageLimitCount, v8);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, ImageLimitCount, v8);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage(AssetName_38025896, 0LL);
+  AssetManager__releaseAssetStorage(AssetName_38359136, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__ReleaseAsset_38027004(
+void __fastcall StandFigureManager__ReleaseAsset_38360244(
         int32_t svtId,
         int32_t imageLimitCount,
         const MethodInfo *method)
 {
-  System_String_o *AssetName_38025896; // x19
+  System_String_o *AssetName_38359136; // x19
 
-  if ( (byte_4A6F188 & 1) == 0 )
+  if ( (byte_4AB5050 & 1) == 0 )
   {
-    sub_1B90010(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
-    byte_4A6F188 = 1;
+    sub_1BAB41C(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
+    byte_4AB5050 = 1;
   }
-  AssetName_38025896 = StandFigureManager__GetAssetName_38025896(svtId, imageLimitCount, method);
+  AssetName_38359136 = StandFigureManager__GetAssetName_38359136(svtId, imageLimitCount, method);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage(AssetName_38025896, 0LL);
+  AssetManager__releaseAssetStorage(AssetName_38359136, 0LL);
 }
 
 
@@ -1166,13 +1166,13 @@ void __fastcall StandFigureManager__ReleaseCharaFigure(const MethodInfo *method)
   __int64 v5; // x1
   UnityEngine_Object_o *klass; // x20
 
-  if ( (byte_4A6F199 & 1) == 0 )
+  if ( (byte_4AB5061 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v1);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v2);
-    byte_4A6F199 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v2);
+    byte_4AB5061 = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = (UnityEngine_Object_c *)UnityEngine_Object__op_Inequality(Instance, 0LL, 0LL);
@@ -1192,7 +1192,7 @@ void __fastcall StandFigureManager__ReleaseCharaFigure(const MethodInfo *method)
         return;
       }
 LABEL_13:
-      sub_1B9026C(v4, v5);
+      sub_1BAB678(v4, v5);
     }
   }
 }
@@ -1218,22 +1218,22 @@ void __fastcall StandFigureManager__Render(
   const MethodInfo *v19; // x2
   const MethodInfo *v20; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4A6F192 & 1) == 0 )
+  if ( (byte_4AB505A & 1) == 0 )
   {
-    sub_1B90010(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v12);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v13);
-    byte_4A6F192 = 1;
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v12);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v13);
+    byte_4AB505A = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
   Id = ServantScriptMaster__getId(svtId, ImageLimitCount, 0LL);
-  v16 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v16, 0LL, Id, faceType, 0, 0, textureList, callback, v20);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v16 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v16, 0LL, Id, faceType, 0, 0, textureList, callback, v20);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v18);
+    sub_1BAB678(0LL, v18);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v16, v19);
 }
 
@@ -1255,17 +1255,17 @@ void __fastcall StandFigureManager__RenderFace(
   const MethodInfo *v17; // x2
   const MethodInfo *v18; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F198 & 1) == 0 )
+  if ( (byte_4AB5060 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&id);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v13);
-    byte_4A6F198 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&id);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v13);
+    byte_4AB5060 = 1;
   }
-  v14 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v14, renderTex, id, faceType, formId, 1, textureList, callback, v18);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v14 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v14, renderTex, id, faceType, formId, 1, textureList, callback, v18);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v16);
+    sub_1BAB678(0LL, v16);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v14, v17);
 }
 
@@ -1278,30 +1278,30 @@ bool __fastcall StandFigureManager__RenderStart(StandFigureManager_o *this, cons
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_4A6F19C & 1) == 0 )
+  if ( (byte_4AB5064 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Dequeue__, method);
-    sub_1B90010(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__get_Count__, v3);
-    byte_4A6F19C = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Dequeue__, method);
+    sub_1BAB41C(&Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__get_Count__, v3);
+    byte_4AB5064 = 1;
   }
   if ( this->fields.renderInfo )
     return 0;
   renderWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.renderWaitList;
   if ( !renderWaitList )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   if ( renderWaitList->fields._size < 1 )
     return 0;
   v6 = System_Collections_Generic_Queue_object___Dequeue(
          renderWaitList,
-         (const MethodInfo_3682B74 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Dequeue__);
+         (const MethodInfo_36BFD60 *)Method_System_Collections_Generic_Queue_StandFigureRenderWaitStatus__Dequeue__);
   this->fields.renderInfo = (struct StandFigureRenderWaitStatus_o *)v6;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.renderInfo, (int32_t)v6, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.renderInfo, (int32_t)v6, v7, v8);
   return 1;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__Render_38031416(
+void __fastcall StandFigureManager__Render_38364656(
         int32_t svtId,
         int32_t imageLimitCount,
         int32_t faceType,
@@ -1317,24 +1317,24 @@ void __fastcall StandFigureManager__Render_38031416(
   const MethodInfo *v16; // x2
   const MethodInfo *v17; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F193 & 1) == 0 )
+  if ( (byte_4AB505B & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageLimitCount);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v11);
-    byte_4A6F193 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&imageLimitCount);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v11);
+    byte_4AB505B = 1;
   }
   Id = ServantScriptMaster__getId(svtId, imageLimitCount, 0LL);
-  v13 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v13, 0LL, Id, faceType, 0, 0, textureList, callback, v17);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v13 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v13, 0LL, Id, faceType, 0, 0, textureList, callback, v17);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v15);
+    sub_1BAB678(0LL, v15);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v13, v16);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__Render_38031636(
+void __fastcall StandFigureManager__Render_38364876(
         int32_t id,
         int32_t faceType,
         UnityEngine_Texture2D_array *textureList,
@@ -1348,23 +1348,23 @@ void __fastcall StandFigureManager__Render_38031636(
   const MethodInfo *v13; // x2
   const MethodInfo *v14; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4A6F194 & 1) == 0 )
+  if ( (byte_4AB505C & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&faceType);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v9);
-    byte_4A6F194 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&faceType);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v9);
+    byte_4AB505C = 1;
   }
-  v10 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v10, 0LL, id, faceType, 0, 0, textureList, callback, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v10 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v10, 0LL, id, faceType, 0, 0, textureList, callback, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v12);
+    sub_1BAB678(0LL, v12);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v10, v13);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__Render_38031820(
+void __fastcall StandFigureManager__Render_38365060(
         UnityEngine_RenderTexture_o *renderTex,
         int32_t svtId,
         int32_t limitCount,
@@ -1384,28 +1384,28 @@ void __fastcall StandFigureManager__Render_38031820(
   const MethodInfo *v21; // x2
   const MethodInfo *v22; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F195 & 1) == 0 )
+  if ( (byte_4AB505D & 1) == 0 )
   {
-    sub_1B90010(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v14);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v15);
-    byte_4A6F195 = 1;
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&svtId);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, v14);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v15);
+    byte_4AB505D = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   ImageLimitCount = ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
   Id = ServantScriptMaster__getId(svtId, ImageLimitCount, 0LL);
-  v18 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v18, renderTex, Id, faceType, 0, 0, textureList, callback, v22);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v18 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v18, renderTex, Id, faceType, 0, 0, textureList, callback, v22);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v20);
+    sub_1BAB678(0LL, v20);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v18, v21);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__Render_38032136(
+void __fastcall StandFigureManager__Render_38365376(
         UnityEngine_RenderTexture_o *renderTex,
         int32_t svtId,
         int32_t imageLimitCount,
@@ -1422,24 +1422,24 @@ void __fastcall StandFigureManager__Render_38032136(
   const MethodInfo *v18; // x2
   const MethodInfo *v19; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F196 & 1) == 0 )
+  if ( (byte_4AB505E & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v13);
-    byte_4A6F196 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&svtId);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v13);
+    byte_4AB505E = 1;
   }
   Id = ServantScriptMaster__getId(svtId, imageLimitCount, 0LL);
-  v15 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v15, renderTex, Id, faceType, 0, 0, textureList, callback, v19);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v15 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v15, renderTex, Id, faceType, 0, 0, textureList, callback, v19);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v17);
+    sub_1BAB678(0LL, v17);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v15, v18);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall StandFigureManager__Render_38032360(
+void __fastcall StandFigureManager__Render_38365600(
         UnityEngine_RenderTexture_o *renderTex,
         int32_t id,
         int32_t faceType,
@@ -1455,16 +1455,16 @@ void __fastcall StandFigureManager__Render_38032360(
   const MethodInfo *v17; // x2
   const MethodInfo *v18; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4A6F197 & 1) == 0 )
+  if ( (byte_4AB505F & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&id);
-    sub_1B90010(&StandFigureRenderWaitStatus_TypeInfo, v13);
-    byte_4A6F197 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__, *(_QWORD *)&id);
+    sub_1BAB41C(&StandFigureRenderWaitStatus_TypeInfo, v13);
+    byte_4AB505F = 1;
   }
-  v14 = (StandFigureRenderWaitStatus_o *)sub_1B9025C(StandFigureRenderWaitStatus_TypeInfo);
-  StandFigureRenderWaitStatus___ctor_38032796(v14, renderTex, id, faceType, formId, 0, textureList, callback, v18);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+  v14 = (StandFigureRenderWaitStatus_o *)sub_1BAB668(StandFigureRenderWaitStatus_TypeInfo);
+  StandFigureRenderWaitStatus___ctor_38366036(v14, renderTex, id, faceType, formId, 0, textureList, callback, v18);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v16);
+    sub_1BAB678(0LL, v16);
   StandFigureManager__AddRender((StandFigureManager_o *)Instance, v14, v17);
 }

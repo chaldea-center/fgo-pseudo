@@ -21,13 +21,13 @@ void __fastcall ScriptMessageGestureReciver__FingerGestures_OnGestureEvent(
   UnityEngine_Component_o *v14; // x0
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A71A98 & 1) == 0 )
+  if ( (byte_4AB7980 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, gesture);
-    sub_1B90010(&SwipeGesture_TypeInfo, v5);
-    sub_1B90010(&UICamera_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_9969/*"OnSwipeBlockPanel"*/, v7);
-    byte_4A71A98 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, gesture);
+    sub_1BAB41C(&SwipeGesture_TypeInfo, v5);
+    sub_1BAB41C(&UICamera_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_9969/*"OnSwipeBlockPanel"*/, v7);
+    byte_4AB7980 = 1;
   }
   if ( gesture )
   {
@@ -58,7 +58,7 @@ void __fastcall ScriptMessageGestureReciver__FingerGestures_OnGestureEvent(
               j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
             v14 = (UnityEngine_Component_o *)this->fields.swipCallback;
             if ( !v14 )
-              sub_1B9026C(0LL, v13);
+              sub_1BAB678(0LL, v13);
             UnityEngine_Component__SendMessage(v14, (System_String_o *)StringLiteral_9969/*"OnSwipeBlockPanel"*/, (Il2CppObject *)gesture, 0LL);
           }
         }
@@ -74,14 +74,14 @@ void __fastcall ScriptMessageGestureReciver__OnDestroy(ScriptMessageGestureReciv
   __int64 v4; // x1
   Gesture_EventHandler_o *v5; // x20
 
-  if ( (byte_4A71A97 & 1) == 0 )
+  if ( (byte_4AB797F & 1) == 0 )
   {
-    sub_1B90010(&Gesture_EventHandler_TypeInfo, method);
-    sub_1B90010(&FingerGestures_TypeInfo, v3);
-    sub_1B90010(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__, v4);
-    byte_4A71A97 = 1;
+    sub_1BAB41C(&Gesture_EventHandler_TypeInfo, method);
+    sub_1BAB41C(&FingerGestures_TypeInfo, v3);
+    sub_1BAB41C(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__, v4);
+    byte_4AB797F = 1;
   }
-  v5 = (Gesture_EventHandler_o *)sub_1B9025C(Gesture_EventHandler_TypeInfo);
+  v5 = (Gesture_EventHandler_o *)sub_1BAB668(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(
     v5,
     (Il2CppObject *)this,
@@ -99,14 +99,14 @@ void __fastcall ScriptMessageGestureReciver__Start(ScriptMessageGestureReciver_o
   __int64 v4; // x1
   Gesture_EventHandler_o *v5; // x20
 
-  if ( (byte_4A71A96 & 1) == 0 )
+  if ( (byte_4AB797E & 1) == 0 )
   {
-    sub_1B90010(&Gesture_EventHandler_TypeInfo, method);
-    sub_1B90010(&FingerGestures_TypeInfo, v3);
-    sub_1B90010(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__, v4);
-    byte_4A71A96 = 1;
+    sub_1BAB41C(&Gesture_EventHandler_TypeInfo, method);
+    sub_1BAB41C(&FingerGestures_TypeInfo, v3);
+    sub_1BAB41C(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__, v4);
+    byte_4AB797E = 1;
   }
-  v5 = (Gesture_EventHandler_o *)sub_1B9025C(Gesture_EventHandler_TypeInfo);
+  v5 = (Gesture_EventHandler_o *)sub_1BAB668(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(
     v5,
     (Il2CppObject *)this,

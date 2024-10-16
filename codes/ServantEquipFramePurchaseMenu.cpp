@@ -17,7 +17,7 @@ void __fastcall ServantEquipFramePurchaseMenu__Callback(
   p_callbackFunc = &this->fields.callbackFunc;
   v4 = callbackFunc;
   *p_callbackFunc = 0LL;
-  sub_1B8FFB4(p_callbackFunc);
+  sub_1BAB3C0(p_callbackFunc);
   if ( callbackFunc )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
@@ -40,14 +40,14 @@ void __fastcall ServantEquipFramePurchaseMenu__Close(ServantEquipFramePurchaseMe
                                                                              (UnityEngine_Component_o *)this,
                                                                              0LL)) == 0LL) )
     {
-      sub_1B9026C(purchaseConfirmMenu, method);
+      sub_1BAB678(purchaseConfirmMenu, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)purchaseConfirmMenu, 0, 0LL);
     this->fields.stoneShopEntity = 0LL;
-    sub_1B8FFB4(&this->fields.stoneShopEntity);
+    sub_1BAB3C0(&this->fields.stoneShopEntity);
     this->fields.refreshCallbackFunc = 0LL;
     p_refreshCallbackFunc = &this->fields.refreshCallbackFunc;
-    sub_1B8FFB4(p_refreshCallbackFunc);
+    sub_1BAB3C0(p_refreshCallbackFunc);
     *((_DWORD *)p_refreshCallbackFunc + 4) = 0;
   }
 }
@@ -66,11 +66,11 @@ void __fastcall ServantEquipFramePurchaseMenu__EndBuyFrameConfirm(
   __int64 v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A6AF99 & 1) == 0 )
+  if ( (byte_4AB0C92 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, isDecide);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmCancel__, v5);
-    byte_4A6AF99 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, isDecide);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmCancel__, v5);
+    byte_4AB0C92 = 1;
   }
   if ( isDecide )
   {
@@ -80,15 +80,15 @@ void __fastcall ServantEquipFramePurchaseMenu__EndBuyFrameConfirm(
   else
   {
     purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
-    v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
       Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmCancel__,
       0LL);
     if ( !purchaseConfirmMenu )
-      sub_1B9026C(v8, v9);
-    ServantEquipFramePurchaseConfirmMenu__Close_30636928(purchaseConfirmMenu, v7, v10);
+      sub_1BAB678(v8, v9);
+    ServantEquipFramePurchaseConfirmMenu__Close_30768192(purchaseConfirmMenu, v7, v10);
   }
 }
 
@@ -106,22 +106,22 @@ void __fastcall ServantEquipFramePurchaseMenu__EndBuyFrameResultConfirm(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4A6AF9C & 1) == 0 )
+  if ( (byte_4AB0C95 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, isDecide);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmPurchase__, v4);
-    byte_4A6AF9C = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, isDecide);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmPurchase__, v4);
+    byte_4AB0C95 = 1;
   }
   purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
-  v6 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v6,
     (Il2CppObject *)this,
     Method_ServantEquipFramePurchaseMenu_EndCloseBuyFrameConfirmPurchase__,
     0LL);
   if ( !purchaseConfirmMenu )
-    sub_1B9026C(v7, v8);
-  ServantEquipFramePurchaseConfirmMenu__Close_30636928(purchaseConfirmMenu, v6, v9);
+    sub_1BAB678(v7, v8);
+  ServantEquipFramePurchaseConfirmMenu__Close_30768192(purchaseConfirmMenu, v6, v9);
 }
 
 
@@ -138,18 +138,18 @@ void __fastcall ServantEquipFramePurchaseMenu__EndBuyStoneConfirm(
   ServantEquipFramePurchaseConfirmMenu_o *purchaseConfirmMenu; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A6AF97 & 1) == 0 )
+  if ( (byte_4AB0C90 & 1) == 0 )
   {
-    sub_1B90010(&StonePurchaseMenu_CallbackFunc_TypeInfo, isDecide);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_SelectedBuyBankItemConfirm__, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4A6AF97 = 1;
+    sub_1BAB41C(&StonePurchaseMenu_CallbackFunc_TypeInfo, isDecide);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_SelectedBuyBankItemConfirm__, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4AB0C90 = 1;
   }
   if ( isDecide )
   {
     this->fields.state = 5;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v8 = (StonePurchaseMenu_CallbackFunc_o *)sub_1B9025C(StonePurchaseMenu_CallbackFunc_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = (StonePurchaseMenu_CallbackFunc_o *)sub_1BAB668(StonePurchaseMenu_CallbackFunc_TypeInfo);
     StonePurchaseMenu_CallbackFunc___ctor(
       v8,
       (Il2CppObject *)this,
@@ -161,12 +161,12 @@ void __fastcall ServantEquipFramePurchaseMenu__EndBuyStoneConfirm(
       return;
     }
 LABEL_8:
-    sub_1B9026C(purchaseConfirmMenu, isDecide);
+    sub_1BAB678(purchaseConfirmMenu, isDecide);
   }
   purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
   if ( !purchaseConfirmMenu )
     goto LABEL_8;
-  ServantEquipFramePurchaseConfirmMenu__Close_30636928(purchaseConfirmMenu, 0LL, method);
+  ServantEquipFramePurchaseConfirmMenu__Close_30768192(purchaseConfirmMenu, 0LL, method);
   ServantEquipFramePurchaseMenu__Callback(this, 0, v10);
 }
 
@@ -201,8 +201,8 @@ void __fastcall ServantEquipFramePurchaseMenu__EndMaxFrameConfirm(
 
   purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
   if ( !purchaseConfirmMenu )
-    sub_1B9026C(0LL, isDecide);
-  ServantEquipFramePurchaseConfirmMenu__Close_30636928(purchaseConfirmMenu, 0LL, method);
+    sub_1BAB678(0LL, isDecide);
+  ServantEquipFramePurchaseConfirmMenu__Close_30768192(purchaseConfirmMenu, 0LL, method);
   ServantEquipFramePurchaseMenu__Callback(this, 0, v5);
 }
 
@@ -217,8 +217,8 @@ void __fastcall ServantEquipFramePurchaseMenu__EndNoShopConfirm(
 
   purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
   if ( !purchaseConfirmMenu )
-    sub_1B9026C(0LL, isDecide);
-  ServantEquipFramePurchaseConfirmMenu__Close_30636928(purchaseConfirmMenu, 0LL, method);
+    sub_1BAB678(0LL, isDecide);
+  ServantEquipFramePurchaseConfirmMenu__Close_30768192(purchaseConfirmMenu, 0LL, method);
   ServantEquipFramePurchaseMenu__Callback(this, 1, v5);
 }
 
@@ -237,11 +237,11 @@ void __fastcall ServantEquipFramePurchaseMenu__EndRequestServantEquipFramePurcha
   const MethodInfo *v10; // x4
   struct System_Action_o *refreshCallbackFunc; // x8
 
-  if ( (byte_4A6AF9B & 1) == 0 )
+  if ( (byte_4AB0C94 & 1) == 0 )
   {
-    sub_1B90010(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, result);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameResultConfirm__, v4);
-    byte_4A6AF9B = 1;
+    sub_1BAB41C(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, result);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameResultConfirm__, v4);
+    byte_4AB0C94 = 1;
   }
   purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
   this->fields.state = 7;
@@ -249,7 +249,7 @@ void __fastcall ServantEquipFramePurchaseMenu__EndRequestServantEquipFramePurcha
     || (ServantEquipFramePurchaseConfirmMenu__Init(purchaseConfirmMenu, (const MethodInfo *)result),
         v6 = this->fields.purchaseConfirmMenu,
         stoneShopEntity = this->fields.stoneShopEntity,
-        v8 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo),
+        v8 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo),
         ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
           v8,
           (Il2CppObject *)this,
@@ -257,7 +257,7 @@ void __fastcall ServantEquipFramePurchaseMenu__EndRequestServantEquipFramePurcha
           v9),
         !v6) )
   {
-    sub_1B9026C(purchaseConfirmMenu, result);
+    sub_1BAB678(purchaseConfirmMenu, result);
   }
   ServantEquipFramePurchaseConfirmMenu__Open(v6, 2, stoneShopEntity, v8, v10);
   refreshCallbackFunc = this->fields.refreshCallbackFunc;
@@ -304,47 +304,47 @@ void __fastcall ServantEquipFramePurchaseMenu__Open(
   struct ServantEquipFramePurchaseConfirmMenu_o *purchaseConfirmMenu; // x20
   const MethodInfo *v35; // x3
 
-  if ( (byte_4A6AF96 & 1) == 0 )
+  if ( (byte_4AB0C8F & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, callback);
-    sub_1B90010(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, v7);
-    sub_1B90010(&Method_DataManager_GetMasterData_StoneShopMaster___, v8);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameConfirm__, v9);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndBuyStoneConfirm__, v10);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndMaxFrameConfirm__, v11);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndNoShopConfirm__, v12);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4A6AF96 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, callback);
+    sub_1BAB41C(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_StoneShopMaster___, v8);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameConfirm__, v9);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndBuyStoneConfirm__, v10);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndMaxFrameConfirm__, v11);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndNoShopConfirm__, v12);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_4AB0C8F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1B8FFB4(&this->fields.callbackFunc);
+    sub_1BAB3C0(&this->fields.callbackFunc);
     this->fields.refreshCallbackFunc = refreshCallback;
-    sub_1B8FFB4(&this->fields.refreshCallbackFunc);
+    sub_1BAB3C0(&this->fields.refreshCallbackFunc);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_27;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-    gameObject = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    gameObject = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
       goto LABEL_27;
     gameObject = DataManager__GetMasterData_object_(
                    (DataManager_o *)gameObject,
-                   (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_StoneShopMaster___);
+                   (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_StoneShopMaster___);
     if ( !gameObject )
       goto LABEL_27;
-    gameObject = StoneShopMaster__GetEnableEntitiyList_40048888((StoneShopMaster_o *)gameObject, 13, 0LL);
+    gameObject = StoneShopMaster__GetEnableEntitiyList_40386788((StoneShopMaster_o *)gameObject, 13, 0LL);
     if ( !gameObject )
       goto LABEL_27;
     v19 = *((_QWORD *)gameObject + 3);
     if ( v19 )
     {
       if ( !(_DWORD)v19 )
-        sub_1B90274(gameObject, v15, v17, v18);
+        sub_1BAB680(gameObject, v15, v17, v18);
       this->fields.stoneShopEntity = (struct StoneShopEntity_o *)*((_QWORD *)gameObject + 4);
-      gameObject = (void *)sub_1B8FFB4(&this->fields.stoneShopEntity);
+      gameObject = (void *)sub_1BAB3C0(&this->fields.stoneShopEntity);
       if ( !SelfUserGame )
         goto LABEL_27;
       svtEquipKeep = SelfUserGame->fields.svtEquipKeep;
@@ -363,7 +363,7 @@ void __fastcall ServantEquipFramePurchaseMenu__Open(
           {
             this->fields.state = 3;
             purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
-            v23 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+            v23 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
             ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
               v23,
               (Il2CppObject *)this,
@@ -380,7 +380,7 @@ void __fastcall ServantEquipFramePurchaseMenu__Open(
           {
             this->fields.state = 4;
             v22 = this->fields.purchaseConfirmMenu;
-            v23 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+            v23 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
             ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
               v23,
               (Il2CppObject *)this,
@@ -398,11 +398,11 @@ LABEL_25:
           }
         }
 LABEL_27:
-        sub_1B9026C(gameObject, v15);
+        sub_1BAB678(gameObject, v15);
       }
       this->fields.state = 2;
       v28 = this->fields.purchaseConfirmMenu;
-      v29 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+      v29 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
       ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
         v29,
         (Il2CppObject *)this,
@@ -416,7 +416,7 @@ LABEL_27:
     {
       this->fields.state = 1;
       v28 = this->fields.purchaseConfirmMenu;
-      v29 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+      v29 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
       ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
         v29,
         (Il2CppObject *)this,
@@ -448,17 +448,17 @@ void __fastcall ServantEquipFramePurchaseMenu__RequestServantEquipFramePurchase(
   __int64 v9; // x1
   struct StoneShopEntity_o *stoneShopEntity; // x8
 
-  if ( (byte_4A6AF9A & 1) == 0 )
+  if ( (byte_4AB0C93 & 1) == 0 )
   {
-    sub_1B90010(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___, method);
-    sub_1B90010(&NetworkManager_TypeInfo, v4);
-    sub_1B90010(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndRequestServantEquipFramePurchase__, v6);
-    byte_4A6AF9A = 1;
+    sub_1BAB41C(&Method_NetworkManager_getRequest_PurchaseByStoneRequest___, method);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v4);
+    sub_1BAB41C(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndRequestServantEquipFramePurchase__, v6);
+    byte_4AB0C93 = 1;
   }
   if ( this->fields.stoneShopEntity )
   {
-    v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B9025C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1BAB668(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
@@ -468,10 +468,10 @@ void __fastcall ServantEquipFramePurchaseMenu__RequestServantEquipFramePurchase(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v7,
-                       (const MethodInfo_2F10358 *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
+                       (const MethodInfo_2F47108 *)Method_NetworkManager_getRequest_PurchaseByStoneRequest___);
     stoneShopEntity = this->fields.stoneShopEntity;
     if ( !stoneShopEntity || !Request_object )
-      sub_1B9026C(Request_object, v9);
+      sub_1BAB678(Request_object, v9);
     PurchaseByStoneRequest__beginRequest((PurchaseByStoneRequest_o *)Request_object, stoneShopEntity->fields.id, 1, 0LL);
   }
   else
@@ -507,18 +507,18 @@ void __fastcall ServantEquipFramePurchaseMenu__SelectedBuyBankItemConfirm(
   struct StoneShopEntity_o *v22; // x20
   const MethodInfo *v23; // x3
 
-  if ( (byte_4A6AF98 & 1) == 0 )
+  if ( (byte_4AB0C91 & 1) == 0 )
   {
-    sub_1B90010(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&result);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameConfirm__, v5);
-    sub_1B90010(&Method_ServantEquipFramePurchaseMenu_EndBuyStoneConfirm__, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4A6AF98 = 1;
+    sub_1BAB41C(&ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&result);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndBuyFrameConfirm__, v5);
+    sub_1BAB41C(&Method_ServantEquipFramePurchaseMenu_EndBuyStoneConfirm__, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4AB0C91 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
 LABEL_15:
-    sub_1B9026C(Instance, v9);
+    sub_1BAB678(Instance, v9);
   CommonUI__CloseStonePurchaseMenu(Instance, 0LL);
   switch ( result )
   {
@@ -531,7 +531,7 @@ LABEL_15:
       ServantEquipFramePurchaseConfirmMenu__Init((ServantEquipFramePurchaseConfirmMenu_o *)Instance, v9);
       purchaseConfirmMenu = this->fields.purchaseConfirmMenu;
       stoneShopEntity = this->fields.stoneShopEntity;
-      v13 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+      v13 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
       ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -555,7 +555,7 @@ LABEL_15:
       ServantEquipFramePurchaseConfirmMenu__Init((ServantEquipFramePurchaseConfirmMenu_o *)Instance, v9);
       v21 = this->fields.purchaseConfirmMenu;
       v22 = this->fields.stoneShopEntity;
-      v13 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1B9025C(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
+      v13 = (ServantEquipFramePurchaseConfirmMenu_CallbackFunc_o *)sub_1BAB668(ServantEquipFramePurchaseConfirmMenu_CallbackFunc_TypeInfo);
       ServantEquipFramePurchaseConfirmMenu_CallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -596,10 +596,10 @@ void __fastcall ServantEquipFramePurchaseMenu__add_callbackFunc(
   ServantEquipFramePurchaseMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A6AF94 & 1) == 0 )
+  if ( (byte_4AB0C8D & 1) == 0 )
   {
-    sub_1B90010(&ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6AF94 = 1;
+    sub_1BAB41C(&ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB0C8D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -612,13 +612,13 @@ void __fastcall ServantEquipFramePurchaseMenu__add_callbackFunc(
       if ( (ServantEquipFramePurchaseMenu_CallbackFunc_c *)v8->klass != ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ServantEquipFramePurchaseMenu_o *)sub_1B9052C(v8);
+  v11 = (ServantEquipFramePurchaseMenu_o *)sub_1BAB938(v8);
   ServantEquipFramePurchaseMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -639,10 +639,10 @@ void __fastcall ServantEquipFramePurchaseMenu__remove_callbackFunc(
   System_Action_o *v13; // x2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4A6AF95 & 1) == 0 )
+  if ( (byte_4AB0C8E & 1) == 0 )
   {
-    sub_1B90010(&ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6AF95 = 1;
+    sub_1BAB41C(&ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB0C8E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -655,13 +655,13 @@ void __fastcall ServantEquipFramePurchaseMenu__remove_callbackFunc(
       if ( (ServantEquipFramePurchaseMenu_CallbackFunc_c *)v8->klass != ServantEquipFramePurchaseMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ServantEquipFramePurchaseMenu_o *)sub_1B9052C(v8);
+  v11 = (ServantEquipFramePurchaseMenu_o *)sub_1BAB938(v8);
   ServantEquipFramePurchaseMenu__Open(v11, v12, v13, v14);
 }
 
@@ -684,15 +684,15 @@ void __fastcall ServantEquipFramePurchaseMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4(&this->fields.method);
+  sub_1BAB3C0(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) == 0 )
+  if ( (sub_1BAB4DC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v10, 0LL);
+      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -704,9 +704,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19CE1DC;
+  this->fields.m_target = (Il2CppObject *)sub_19E717C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CE194;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19E7134;
 }
 
 
@@ -722,14 +722,14 @@ System_IAsyncResult_o *__fastcall ServantEquipFramePurchaseMenu_CallbackFunc__Be
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4A6AF9D & 1) == 0 )
+  if ( (byte_4AB0C96 & 1) == 0 )
   {
-    sub_1B90010(&ServantEquipFramePurchaseMenu_Result_TypeInfo, *(_QWORD *)&result);
-    byte_4A6AF9D = 1;
+    sub_1BAB41C(&ServantEquipFramePurchaseMenu_Result_TypeInfo, *(_QWORD *)&result);
+    byte_4AB0C96 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(ServantEquipFramePurchaseMenu_Result_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
 }
 
 
@@ -738,7 +738,7 @@ void __fastcall ServantEquipFramePurchaseMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

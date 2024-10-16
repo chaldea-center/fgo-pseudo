@@ -1,13 +1,13 @@
 void __fastcall BoxGachaEntity___ctor(BoxGachaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6FB74 & 1) == 0 )
+  if ( (byte_4AB5A57 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A6FB74 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB5A57 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,12 +24,12 @@ System_String_o *__fastcall BoxGachaEntity__GetMessagePrizeName(BoxGachaEntity_o
   System_String_o *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4A6FB73 & 1) == 0 )
+  if ( (byte_4AB5A56 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_1B90010(&string_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_21441/*"message_prize_name"*/, v4);
-    byte_4A6FB73 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
+    sub_1BAB41C(&string_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_21443/*"message_prize_name"*/, v4);
+    byte_4AB5A56 = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -37,14 +37,14 @@ System_String_o *__fastcall BoxGachaEntity__GetMessagePrizeName(BoxGachaEntity_o
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_21441/*"message_prize_name"*/,
+            (Il2CppObject *)StringLiteral_21443/*"message_prize_name"*/,
             &value,
-            (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
     result = (System_String_o *)value;
     if ( value && (System_String_c *)value->klass != string_TypeInfo )
     {
-      sub_1B9052C(value);
+      sub_1BAB938(value);
       return 0LL;
     }
   }
@@ -81,18 +81,18 @@ bool __fastcall BoxGachaEntity__IsResetTarget(BoxGachaEntity_o *this, int32_t id
   int32_t max_length; // w10
   int32_t v11; // w9
 
-  if ( (byte_4A6FB72 & 1) == 0 )
+  if ( (byte_4AB5A55 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_BoxGachaBaseMaster___, *(_QWORD *)&idx);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4A6FB72 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_BoxGachaBaseMaster___, *(_QWORD *)&idx);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4AB5A55 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_BoxGachaBaseMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_BoxGachaBaseMaster___);
   baseIds = this->fields.baseIds;
   if ( !baseIds )
     goto LABEL_10;
@@ -101,9 +101,9 @@ bool __fastcall BoxGachaEntity__IsResetTarget(BoxGachaEntity_o *this, int32_t id
   if ( max_length > idx )
     v11 = idx;
   if ( v11 >= (unsigned int)max_length )
-    sub_1B90274(Instance, v7);
+    sub_1BAB680(Instance, v7);
   if ( !Instance )
 LABEL_10:
-    sub_1B9026C(Instance, v7);
+    sub_1BAB678(Instance, v7);
   return BoxGachaBaseMaster__checkIsResetTarget((BoxGachaBaseMaster_o *)Instance, baseIds->m_Items[v11 + 1], v8);
 }

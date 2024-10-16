@@ -11,23 +11,23 @@ void __fastcall UserOwnSvtCoin___ctor(
   __int64 v11; // x1
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A710EC & 1) == 0 )
+  if ( (byte_4AB6FE1 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_UserSvtCoinMaster___, itemEntity);
-    sub_1B90010(&DataManager_TypeInfo, v7);
-    byte_4A710EC = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserSvtCoinMaster___, itemEntity);
+    sub_1BAB41C(&DataManager_TypeInfo, v7);
+    byte_4AB6FE1 = 1;
   }
   entity = 0LL;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v8,
     v9);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !userGameEntity || !itemEntity || !Master_object )
     goto LABEL_12;
   Master_object = (Il2CppObject *)UserSvtCoinMaster__TryGetEntity(
@@ -40,6 +40,6 @@ void __fastcall UserOwnSvtCoin___ctor(
     return;
   if ( !entity )
 LABEL_12:
-    sub_1B9026C(Master_object, v11);
+    sub_1BAB678(Master_object, v11);
   this->fields._Num_k__BackingField = entity->fields.num;
 }

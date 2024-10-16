@@ -4,16 +4,14 @@ void __fastcall DiggingSchedulerTaskWaitTimeOrCondition___ctor(
         System_Func_bool__o *cond,
         const MethodInfo *method)
 {
-  ServantStatusBattleListViewItem_o *v6; // x20
-  int32_t v7; // w2
-  int32_t v8; // w3
+  DiggingSchedulerTaskWaitTimeOrCondition_o *v6; // x20
 
-  v6 = (ServantStatusBattleListViewItem_o *)this;
+  v6 = this;
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0LL);
-  v6->fields.sortValue1 = (int64_t)cond;
-  v6 = (ServantStatusBattleListViewItem_o *)((char *)v6 + 48);
-  *((float *)&v6[-1].fields.isMine + 1) = waitTime;
-  sub_1B8FFB4(v6, (int32_t)cond, v7, v8);
+  *(_QWORD *)&v6->fields.waitTime = cond;
+  v6 = (DiggingSchedulerTaskWaitTimeOrCondition_o *)((char *)v6 + 48);
+  *((float *)&v6[-1].fields.Cond + 1) = waitTime;
+  sub_1BAB3C0(v6);
 }
 
 
@@ -22,19 +20,17 @@ System_Collections_IEnumerator_o *__fastcall DiggingSchedulerTaskWaitTimeOrCondi
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
 
-  if ( (byte_4A7405B & 1) == 0 )
+  if ( (byte_4AB0D4F & 1) == 0 )
   {
-    sub_1B90010(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method);
-    byte_4A7405B = 1;
+    sub_1BAB41C(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method);
+    byte_4AB0D4F = 1;
   }
-  v3 = sub_1B9025C(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
+  v3 = sub_1BAB668(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BAB3C0(v3 + 32);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -53,13 +49,11 @@ bool __fastcall DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
         DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
   int32_t _1__state; // w8
   struct DiggingSchedulerTaskWaitTimeOrCondition_o *_4__this; // x20
-  float v7; // s0
+  float v5; // s0
   float espTime_5__2; // s8
-  __int64 v9; // x8
+  __int64 v7; // x8
   bool result; // w0
   Il2CppObject **p__2__current; // x19
 
@@ -69,8 +63,8 @@ bool __fastcall DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   {
     espTime_5__2 = this->fields._espTime_5__2;
     this->fields.__1__state = -1;
-    v7 = espTime_5__2 + UnityEngine_Time__get_deltaTime(0LL);
-    this->fields._espTime_5__2 = v7;
+    v5 = espTime_5__2 + UnityEngine_Time__get_deltaTime(0LL);
+    this->fields._espTime_5__2 = v5;
     if ( _4__this )
       goto LABEL_7;
     goto LABEL_12;
@@ -80,23 +74,23 @@ bool __fastcall DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   this->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_12:
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   if ( *(float *)(&_4__this->fields._IsPause_k__BackingField + 3) < 0.0 )
     return 0;
   this->fields._espTime_5__2 = 0.0;
-  v7 = 0.0;
+  v5 = 0.0;
 LABEL_7:
-  if ( v7 >= *(float *)(&_4__this->fields._IsPause_k__BackingField + 3) )
+  if ( v5 >= *(float *)(&_4__this->fields._IsPause_k__BackingField + 3) )
     return 0;
-  v9 = *(_QWORD *)&_4__this->fields.waitTime;
-  if ( v9 )
+  v7 = *(_QWORD *)&_4__this->fields.waitTime;
+  if ( v7 )
   {
-    if ( ((*(__int64 (__fastcall **)(_QWORD, _QWORD))(v9 + 24))(*(_QWORD *)(v9 + 64), *(_QWORD *)(v9 + 40)) & 1) != 0 )
+    if ( ((*(__int64 (__fastcall **)(_QWORD, _QWORD))(v7 + 24))(*(_QWORD *)(v7 + 64), *(_QWORD *)(v7 + 40)) & 1) != 0 )
       return 0;
   }
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p__2__current, 0, v2, v3);
+  sub_1BAB3C0(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -119,11 +113,11 @@ void __fastcall __noreturn DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B90024(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B9025C(v2);
+  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B90024(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1B90138(v3, v4);
+  v4 = sub_1BAB430(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
+  sub_1BAB544(v3, v4);
 }
 
 

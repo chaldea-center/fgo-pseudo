@@ -1,14 +1,14 @@
 void __fastcall NpcFollowerMaster___ctor(NpcFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70239 & 1) == 0 )
+  if ( (byte_4AB6125 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string___ctor__, method);
-    byte_4A70239 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string___ctor__, method);
+    byte_4AB6125 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     95,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A70237 & 1) == 0 )
+  if ( (byte_4AB6123 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__GetEntity__, id);
-    byte_4A70237 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__GetEntity__, id);
+    byte_4AB6123 = 1;
   }
   PK = (Il2CppObject *)NpcFollowerEntity__CreatePK(id, questId, questPhase, *(const MethodInfo **)&questPhase);
   return (NpcFollowerEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_312C900 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__GetEntity__);
+                                  (const MethodInfo_31640E8 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__GetEntity__);
 }
 
 
@@ -82,35 +82,35 @@ NpcFollowerEntity_array *__fastcall NpcFollowerMaster__GetEntityArray(
   int32_t v44; // w3
   NpcFollowerReleaseEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4A7023A & 1) == 0 )
+  if ( (byte_4AB6126 & 1) == 0 )
   {
-    sub_1B90010(&Method_BasicHelper_StableSort_NpcFollowerEntity___, *(_QWORD *)&questId);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v7);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
-    sub_1B90010(&Method_DataManager_GetMasterData_NpcFollowerReleaseMaster___, v9);
-    sub_1B90010(&System_Func_NpcFollowerEntity__int__TypeInfo, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_NpcFollowerEntity__Add__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_NpcFollowerEntity__ToArray__, v12);
-    sub_1B90010(&Method_System_Collections_Generic_List_NpcFollowerEntity___ctor__, v13);
-    sub_1B90010(&System_Collections_Generic_List_NpcFollowerEntity__TypeInfo, v14);
-    sub_1B90010(&NetworkManager_TypeInfo, v15);
-    sub_1B90010(&NpcFollowerEntity_TypeInfo, v16);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1B90010(&Method_NpcFollowerMaster___c__GetEntityArray_b__3_0__, v18);
-    sub_1B90010(&NpcFollowerMaster___c_TypeInfo, v19);
-    byte_4A7023A = 1;
+    sub_1BAB41C(&Method_BasicHelper_StableSort_NpcFollowerEntity___, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v7);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_NpcFollowerReleaseMaster___, v9);
+    sub_1BAB41C(&System_Func_NpcFollowerEntity__int__TypeInfo, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_NpcFollowerEntity__Add__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_NpcFollowerEntity__ToArray__, v12);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_NpcFollowerEntity___ctor__, v13);
+    sub_1BAB41C(&System_Collections_Generic_List_NpcFollowerEntity__TypeInfo, v14);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v15);
+    sub_1BAB41C(&NpcFollowerEntity_TypeInfo, v16);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1BAB41C(&Method_NpcFollowerMaster___c__GetEntityArray_b__3_0__, v18);
+    sub_1BAB41C(&NpcFollowerMaster___c_TypeInfo, v19);
+    byte_4AB6126 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NpcFollowerReleaseMaster___);
-  v23 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_NpcFollowerEntity__TypeInfo);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_NpcFollowerReleaseMaster___);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_NpcFollowerEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v23,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_NpcFollowerEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_NpcFollowerEntity___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getTime(0LL);
@@ -119,7 +119,7 @@ NpcFollowerEntity_array *__fastcall NpcFollowerMaster__GetEntityArray(
   v24 = Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v26 = Count;
@@ -132,7 +132,7 @@ NpcFollowerEntity_array *__fastcall NpcFollowerMaster__GetEntityArray(
       Instance = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                             (System_Collections_ObjectModel_Collection_T__o *)Instance,
                             v27,
-                            (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                            (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Instance )
       {
         v29 = (Il2CppObject *)Instance;
@@ -179,14 +179,14 @@ LABEL_40:
                   System_Collections_Generic_List_object___AddWithResize(
                     v23,
                     v29,
-                    *(const MethodInfo_35109C0 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+                    *(const MethodInfo_354D8BC **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v38 = &items->obj.klass + size;
                   v23->fields._size = size + 1;
                   v38[4] = (Il2CppClass *)v29;
-                  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v29, v33, v34);
+                  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v29, v33, v34);
                 }
               }
             }
@@ -197,7 +197,7 @@ LABEL_40:
         goto LABEL_29;
     }
 LABEL_37:
-    sub_1B9026C(Instance, v21);
+    sub_1BAB678(Instance, v21);
   }
 LABEL_29:
   v39 = NpcFollowerMaster___c_TypeInfo;
@@ -215,27 +215,27 @@ LABEL_29:
       v39 = NpcFollowerMaster___c_TypeInfo;
     }
     v41 = (Il2CppObject *)v39->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1B9025C(System_Func_NpcFollowerEntity__int__TypeInfo);
+    _9__3_0 = (System_Func_object__int__o *)sub_1BAB668(System_Func_NpcFollowerEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__3_0, v41, Method_NpcFollowerMaster___c__GetEntityArray_b__3_0__, 0LL);
     static_fields = NpcFollowerMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_NpcFollowerEntity__int__o *)_9__3_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v43, v44);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v43, v44);
   }
   Instance = (int64_t)BasicHelper__StableSort_object_(
                         (System_Collections_Generic_List_T__o *)v23,
                         (System_Func_T__int__o *)_9__3_0,
                         1,
-                        (const MethodInfo_2E7E0F0 *)Method_BasicHelper_StableSort_NpcFollowerEntity___);
+                        (const MethodInfo_2EB4248 *)Method_BasicHelper_StableSort_NpcFollowerEntity___);
   if ( !Instance )
     goto LABEL_37;
   return (NpcFollowerEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       (System_Collections_Generic_List_object__o *)Instance,
-                                      (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_NpcFollowerEntity__ToArray__);
+                                      (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_NpcFollowerEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity_39486408(
+NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity_39822392(
         NpcFollowerMaster_o *this,
         int32_t questId,
         int32_t questPhase,
@@ -254,17 +254,17 @@ NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity_39486408(
   System_Collections_Generic_List_object__o *v18; // x19
   System_Predicate_object__o *v19; // x20
 
-  if ( (byte_4A7023D & 1) == 0 )
+  if ( (byte_4AB6129 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Linq_Enumerable_Cast_NpcFollowerEntity___, *(_QWORD *)&questId);
-    sub_1B90010(&Method_System_Linq_Enumerable_ToList_NpcFollowerEntity___, v9);
-    sub_1B90010(&Method_System_Collections_Generic_List_NpcFollowerEntity__Find__, v10);
-    sub_1B90010(&System_Predicate_NpcFollowerEntity__TypeInfo, v11);
-    sub_1B90010(&Method_NpcFollowerMaster___c__DisplayClass6_0__GetEntity_b__0__, v12);
-    sub_1B90010(&NpcFollowerMaster___c__DisplayClass6_0_TypeInfo, v13);
-    byte_4A7023D = 1;
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Cast_NpcFollowerEntity___, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToList_NpcFollowerEntity___, v9);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_NpcFollowerEntity__Find__, v10);
+    sub_1BAB41C(&System_Predicate_NpcFollowerEntity__TypeInfo, v11);
+    sub_1BAB41C(&Method_NpcFollowerMaster___c__DisplayClass6_0__GetEntity_b__0__, v12);
+    sub_1BAB41C(&NpcFollowerMaster___c__DisplayClass6_0_TypeInfo, v13);
+    byte_4AB6129 = 1;
   }
-  v14 = sub_1B9025C(NpcFollowerMaster___c__DisplayClass6_0_TypeInfo);
+  v14 = sub_1BAB668(NpcFollowerMaster___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14
     || (*(_DWORD *)(v14 + 16) = questId,
@@ -272,11 +272,11 @@ NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity_39486408(
         *(_QWORD *)(v14 + 24) = leaderSvtId,
         v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_object_(
                                                                      (System_Collections_IEnumerable_o *)this->fields.list,
-                                                                     (const MethodInfo_2E9E32C *)Method_System_Linq_Enumerable_Cast_NpcFollowerEntity___),
+                                                                     (const MethodInfo_2ED38B8 *)Method_System_Linq_Enumerable_Cast_NpcFollowerEntity___),
         v18 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                              v17,
-                                                             (const MethodInfo_2ECA8AC *)Method_System_Linq_Enumerable_ToList_NpcFollowerEntity___),
-        v19 = (System_Predicate_object__o *)sub_1B9025C(System_Predicate_NpcFollowerEntity__TypeInfo),
+                                                             (const MethodInfo_2F00A04 *)Method_System_Linq_Enumerable_ToList_NpcFollowerEntity___),
+        v19 = (System_Predicate_object__o *)sub_1BAB668(System_Predicate_NpcFollowerEntity__TypeInfo),
         System_Predicate_object____ctor(
           v19,
           (Il2CppObject *)v14,
@@ -284,12 +284,12 @@ NpcFollowerEntity_o *__fastcall NpcFollowerMaster__GetEntity_39486408(
           0LL),
         !v18) )
   {
-    sub_1B9026C(v15, v16);
+    sub_1BAB678(v15, v16);
   }
   return (NpcFollowerEntity_o *)System_Collections_Generic_List_object___Find(
                                   v18,
                                   (System_Predicate_T__o *)v19,
-                                  (const MethodInfo_3511028 *)Method_System_Collections_Generic_List_NpcFollowerEntity__Find__);
+                                  (const MethodInfo_354DF24 *)Method_System_Collections_Generic_List_NpcFollowerEntity__Find__);
 }
 
 
@@ -330,34 +330,34 @@ FollowerInfo_o *__fastcall NpcFollowerMaster__GetFollower(
   const MethodInfo *v36; // [xsp+0h] [xbp-50h]
   NpcFollowerEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A7023C & 1) == 0 )
+  if ( (byte_4AB6128 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_NpcServantEquipMaster___, *(_QWORD *)&questId);
-    sub_1B90010(&Method_DataManager_GetMasterData_NpcServantFollowerMaster___, v10);
-    sub_1B90010(&Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__, v11);
-    sub_1B90010(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__, v12);
-    sub_1B90010(&EquipTargetInfo_TypeInfo, v13);
-    sub_1B90010(&ImageLimitCount_TypeInfo, v14);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_4A7023C = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_NpcServantEquipMaster___, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_NpcServantFollowerMaster___, v10);
+    sub_1BAB41C(&Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__, v11);
+    sub_1BAB41C(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__, v12);
+    sub_1BAB41C(&EquipTargetInfo_TypeInfo, v13);
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, v14);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4AB6128 = 1;
   }
   entity = 0LL;
   v16 = NpcFollowerMaster__TryGetEntity(this, &entity, followerId, questId, questPhase, v5);
   v17 = 0LL;
   if ( v16 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NpcServantFollowerMaster___);
+                 (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_NpcServantFollowerMaster___);
     if ( !entity || !Instance )
       goto LABEL_24;
     Instance = DataMasterBase_object__object__long___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                  entity->fields.leaderSvtId,
-                 (const MethodInfo_312C754 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__);
+                 (const MethodInfo_3163F3C *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__);
     v17 = (NpcServantFollowerEntity_o *)Instance;
     if ( Instance )
     {
@@ -384,39 +384,39 @@ FollowerInfo_o *__fastcall NpcFollowerMaster__GetFollower(
       v17 = (NpcServantFollowerEntity_o *)Instance;
       if ( *(_QWORD *)&svtEquipIds->max_length )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_24;
         Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NpcServantEquipMaster___);
+                     (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_NpcServantEquipMaster___);
         if ( !entity )
           goto LABEL_24;
         v29 = entity->fields.svtEquipIds;
         if ( !v29 )
           goto LABEL_24;
         if ( !v29->max_length )
-          sub_1B90274(Instance, v19);
+          sub_1BAB680(Instance, v19);
         if ( !Instance )
           goto LABEL_24;
         v30 = DataMasterBase_object__object__long___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                 v29->m_Items[0],
-                (const MethodInfo_312C754 *)Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__);
+                (const MethodInfo_3163F3C *)Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__);
         if ( v30 )
         {
           monitor_high = HIDWORD(v30[1].monitor);
           klass = (int32_t)v30[2].klass;
           monitor = (int32_t)v30[1].monitor;
-          v34 = (EquipTargetInfo_o *)sub_1B9025C(EquipTargetInfo_TypeInfo);
-          EquipTargetInfo___ctor_38936620(v34, monitor, klass, monitor_high, 1, 0LL);
+          v34 = (EquipTargetInfo_o *)sub_1BAB668(EquipTargetInfo_TypeInfo);
+          EquipTargetInfo___ctor_39270488(v34, monitor, klass, monitor_high, 1, 0LL);
           if ( v17 )
           {
             FollowerInfo__SetEquipInfoForNpc((FollowerInfo_o *)v17, v34, 0LL);
             return (FollowerInfo_o *)v17;
           }
 LABEL_24:
-          sub_1B9026C(Instance, v19);
+          sub_1BAB678(Instance, v19);
         }
       }
     }
@@ -480,37 +480,37 @@ FollowerInfo_array *__fastcall NpcFollowerMaster__GetQuestFollowerList(
   Il2CppClass **v50; // x0
   const MethodInfo *v52; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4A7023B & 1) == 0 )
+  if ( (byte_4AB6127 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_NpcServantEquipMaster___, *(_QWORD *)&questId);
-    sub_1B90010(&Method_DataManager_GetMasterData_NpcServantFollowerMaster___, v5);
-    sub_1B90010(&Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__, v6);
-    sub_1B90010(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__, v7);
-    sub_1B90010(&EquipTargetInfo_TypeInfo, v8);
-    sub_1B90010(&ImageLimitCount_TypeInfo, v9);
-    sub_1B90010(&Method_System_Collections_Generic_List_FollowerInfo__Add__, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_FollowerInfo__ToArray__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_FollowerInfo___ctor__, v12);
-    sub_1B90010(&System_Collections_Generic_List_FollowerInfo__TypeInfo, v13);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4A7023B = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_NpcServantEquipMaster___, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_NpcServantFollowerMaster___, v5);
+    sub_1BAB41C(&Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__, v6);
+    sub_1BAB41C(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__, v7);
+    sub_1BAB41C(&EquipTargetInfo_TypeInfo, v8);
+    sub_1BAB41C(&ImageLimitCount_TypeInfo, v9);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FollowerInfo__Add__, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FollowerInfo__ToArray__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FollowerInfo___ctor__, v12);
+    sub_1BAB41C(&System_Collections_Generic_List_FollowerInfo__TypeInfo, v13);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4AB6127 = 1;
   }
-  Instance = (NpcFollowerEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (NpcFollowerEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NpcServantFollowerMaster___);
-  Instance = (NpcFollowerEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_NpcServantFollowerMaster___);
+  Instance = (NpcFollowerEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   v18 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_NpcServantEquipMaster___);
-  v19 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_FollowerInfo__TypeInfo);
+          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_NpcServantEquipMaster___);
+  v19 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_FollowerInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v19,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_FollowerInfo___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_FollowerInfo___ctor__);
   Instance = NpcFollowerMaster__GetEntityArray(this, questId, questPhase, v20);
   if ( !Instance )
     goto LABEL_29;
@@ -523,14 +523,14 @@ FollowerInfo_array *__fastcall NpcFollowerMaster__GetQuestFollowerList(
     {
       if ( v23 >= max_length )
 LABEL_30:
-        sub_1B90274(Instance, v16);
+        sub_1BAB680(Instance, v16);
       v24 = v22->m_Items[v23];
       if ( !v24 || !MasterData_object )
         break;
       Instance = (NpcFollowerEntity_array *)DataMasterBase_object__object__long___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                               v24->fields.leaderSvtId,
-                                              (const MethodInfo_312C754 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__);
+                                              (const MethodInfo_3163F3C *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__GetEntity__);
       if ( Instance )
       {
         v25 = (NpcServantFollowerEntity_o *)Instance;
@@ -572,14 +572,14 @@ LABEL_30:
           Instance = (NpcFollowerEntity_array *)DataMasterBase_object__object__long___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)v18,
                                                   svtEquipIds->m_Items[0],
-                                                  (const MethodInfo_312C754 *)Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__);
+                                                  (const MethodInfo_3163F3C *)Method_DataMasterBase_NpcServantEquipMaster__NpcServantEquipEntity__long__GetEntity__);
           if ( Instance )
           {
             v44 = *(&Instance->max_length + 1);
             v43 = (int32_t)Instance->m_Items[0];
             v45 = Instance->max_length;
-            v46 = (EquipTargetInfo_o *)sub_1B9025C(EquipTargetInfo_TypeInfo);
-            EquipTargetInfo___ctor_38936620(v46, v45, v43, v44, 1, 0LL);
+            v46 = (EquipTargetInfo_o *)sub_1BAB668(EquipTargetInfo_TypeInfo);
+            EquipTargetInfo___ctor_39270488(v46, v45, v43, v44, 1, 0LL);
             FollowerInfo__SetEquipInfoForNpc(FollowerInfo, v46, 0LL);
           }
         }
@@ -596,14 +596,14 @@ LABEL_30:
           System_Collections_Generic_List_object___AddWithResize(
             v19,
             (Il2CppObject *)FollowerInfo,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
         }
         else
         {
           v50 = &items->obj.klass + size;
           v19->fields._size = size + 1;
           v50[4] = (Il2CppClass *)FollowerInfo;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v50 + 4), (int32_t)FollowerInfo, v39, v40);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v50 + 4), (int32_t)FollowerInfo, v39, v40);
         }
       }
       max_length = v22->max_length;
@@ -611,14 +611,14 @@ LABEL_30:
         goto LABEL_27;
     }
 LABEL_29:
-    sub_1B9026C(Instance, v16);
+    sub_1BAB678(Instance, v16);
   }
 LABEL_27:
   if ( !v19 )
     goto LABEL_29;
   return (FollowerInfo_array *)System_Collections_Generic_List_object___ToArray(
                                  v19,
-                                 (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_FollowerInfo__ToArray__);
+                                 (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_FollowerInfo__ToArray__);
 }
 
 
@@ -633,17 +633,17 @@ bool __fastcall NpcFollowerMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A70238 & 1) == 0 )
+  if ( (byte_4AB6124 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__TryGetEntity__, entity);
-    byte_4A70238 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__TryGetEntity__, entity);
+    byte_4AB6124 = 1;
   }
   PK = (Il2CppObject *)NpcFollowerEntity__CreatePK(id, questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_NpcFollowerMaster__NpcFollowerEntity__string__TryGetEntity__);
 }
 
 
@@ -654,15 +654,15 @@ void __fastcall NpcFollowerMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A7023E & 1) == 0 )
+  if ( (byte_4AB612A & 1) == 0 )
   {
-    sub_1B90010(&NpcFollowerMaster___c_TypeInfo, v1);
-    byte_4A7023E = 1;
+    sub_1BAB41C(&NpcFollowerMaster___c_TypeInfo, v1);
+    byte_4AB612A = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(NpcFollowerMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(NpcFollowerMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   NpcFollowerMaster___c_TypeInfo->static_fields->__9 = (struct NpcFollowerMaster___c_o *)v2;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)NpcFollowerMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)NpcFollowerMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -678,7 +678,7 @@ int32_t __fastcall NpcFollowerMaster___c___GetEntityArray_b__3_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return e->fields.priority;
 }
 
@@ -697,7 +697,7 @@ bool __fastcall NpcFollowerMaster___c__DisplayClass6_0___GetEntity_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return x->fields.questId == this->fields.questId
       && x->fields.questPhase == this->fields.questPhase
       && x->fields.leaderSvtId == this->fields.leaderSvtId;

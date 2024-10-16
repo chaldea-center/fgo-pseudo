@@ -3,10 +3,10 @@ void __fastcall UserPresentDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct UserPresentDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4A6EBF4 & 1) == 0 )
+  if ( (byte_4AB4B88 & 1) == 0 )
   {
-    sub_1B90010(&UserPresentDialog_TypeInfo, v1);
-    byte_4A6EBF4 = 1;
+    sub_1BAB41C(&UserPresentDialog_TypeInfo, v1);
+    byte_4AB4B88 = 1;
   }
   static_fields = UserPresentDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_RECIEVE_POS_Y = 0xFFFFFF6200000032LL;
@@ -49,18 +49,18 @@ void __fastcall UserPresentDialog__OpenRecieve(
   UILabel_o *decideLabel; // x19
   int32_t PresentBoxCheckMax; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4A6EBF2 & 1) == 0 )
+  if ( (byte_4AB4B86 & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, message);
-    sub_1B90010(&int_TypeInfo, v9);
-    sub_1B90010(&LocalizationManager_TypeInfo, v10);
-    sub_1B90010(&UserPresentDialog_TypeInfo, v11);
-    sub_1B90010(&StringLiteral_10466/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, v12);
-    sub_1B90010(&StringLiteral_10469/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, v13);
-    sub_1B90010(&StringLiteral_10468/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, v14);
-    sub_1B90010(&StringLiteral_10467/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, v15);
-    sub_1B90010(&StringLiteral_10465/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, v16);
-    byte_4A6EBF2 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, message);
+    sub_1BAB41C(&int_TypeInfo, v9);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v10);
+    sub_1BAB41C(&UserPresentDialog_TypeInfo, v11);
+    sub_1BAB41C(&StringLiteral_10466/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, v12);
+    sub_1BAB41C(&StringLiteral_10469/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, v13);
+    sub_1BAB41C(&StringLiteral_10468/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, v14);
+    sub_1BAB41C(&StringLiteral_10467/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, v15);
+    sub_1BAB41C(&StringLiteral_10465/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, v16);
+    byte_4AB4B86 = 1;
   }
   v17 = UserPresentDialog_TypeInfo;
   messageRoot = this->fields.messageRoot;
@@ -119,7 +119,7 @@ void __fastcall UserPresentDialog__OpenRecieve(
         !decideLabel) )
   {
 LABEL_16:
-    sub_1B9026C(decideButton, v21);
+    sub_1BAB678(decideButton, v21);
   }
   UILabel__set_text(decideLabel, decideButton, 0LL);
 }
@@ -127,10 +127,10 @@ LABEL_16:
 
 System_String_o *__fastcall UserPresentDialog__get_closeBtnPath(UserPresentDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6EBF3 & 1) == 0 )
+  if ( (byte_4AB4B87 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_15668/*"Window/CloseButton"*/, method);
-    byte_4A6EBF3 = 1;
+    sub_1BAB41C(&StringLiteral_15674/*"Window/CloseButton"*/, method);
+    byte_4AB4B87 = 1;
   }
-  return (System_String_o *)StringLiteral_15668/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15674/*"Window/CloseButton"*/;
 }

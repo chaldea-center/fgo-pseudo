@@ -15,14 +15,14 @@ void __fastcall WrapBaseBattlePopupControl___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._TrParent_k__BackingField = parent;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)parent, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)parent, v7, v8);
   if ( !parent || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)parent, 0LL)) == 0LL )
-    sub_1B9026C(gameObject, v10);
+    sub_1BAB678(gameObject, v10);
   layer = UnityEngine_GameObject__get_layer(gameObject, 0LL);
   this->fields.perf = inPerf;
   p_perf = &this->fields.perf;
   *((_DWORD *)p_perf - 2) = layer;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_perf, (int32_t)inPerf, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_perf, (int32_t)inPerf, v13, v14);
 }
 
 
@@ -34,10 +34,10 @@ void __fastcall WrapBaseBattlePopupControl__ApplyLayerRecursively(
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A726B3 & 1) == 0 )
+  if ( (byte_4AB85C7 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, obj);
-    byte_4A726B3 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, obj);
+    byte_4AB85C7 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -45,8 +45,8 @@ void __fastcall WrapBaseBattlePopupControl__ApplyLayerRecursively(
   {
     GameObjectExtensions__SetLayerRecursively(obj, this->fields._Layer_k__BackingField, 0LL);
     if ( !obj || (transform = UnityEngine_GameObject__get_transform(obj, 0LL)) == 0LL )
-      sub_1B9026C(transform, v6);
-    UnityEngine_Transform__SetParent_69560688(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
+      sub_1BAB678(transform, v6);
+    UnityEngine_Transform__SetParent_69821868(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
   }
 }
 
@@ -60,10 +60,10 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObje
   struct BattlePerformance_o *perf; // x0
   UnityEngine_Object_o *Object; // x20
 
-  if ( (byte_4A726B1 & 1) == 0 )
+  if ( (byte_4AB85C5 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, prefab);
-    byte_4A726B1 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, prefab);
+    byte_4AB85C5 = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -85,7 +85,7 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObje
       return (UnityEngine_GameObject_o *)Object;
     }
 LABEL_10:
-    sub_1B9026C(perf, prefab);
+    sub_1BAB678(perf, prefab);
   }
   return (UnityEngine_GameObject_o *)Object;
 }
@@ -105,11 +105,11 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupText
   __int64 v12; // x1
   Il2CppObject *component; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A726B2 & 1) == 0 )
+  if ( (byte_4AB85C6 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___, prefab);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v9);
-    byte_4A726B2 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___, prefab);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
+    byte_4AB85C6 = 1;
   }
   component = 0LL;
   PopupObject = (UnityEngine_Object_o *)WrapBaseBattlePopupControl__CreatePopupObject(
@@ -129,7 +129,7 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupText
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)PopupObject,
              &component,
-             (const MethodInfo_2EDE9F8 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
+             (const MethodInfo_2F14C00 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
       {
         v11 = component;
         if ( component )
@@ -138,7 +138,7 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupText
           return (UnityEngine_GameObject_o *)PopupObject;
         }
 LABEL_12:
-        sub_1B9026C(v11, v12);
+        sub_1BAB678(v11, v12);
       }
     }
   }
@@ -178,10 +178,10 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__GetEffectInstan
   UnityEngine_Transform_o *transform; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A726B0 & 1) == 0 )
+  if ( (byte_4AB85C4 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id);
-    byte_4A726B0 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id);
+    byte_4AB85C4 = 1;
   }
   v5 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(WrapBaseBattlePopupControl_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._13_unknown.method)(
                                  this,
@@ -193,8 +193,8 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__GetEffectInstan
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
     if ( !v5 || (transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v5, 0LL)) == 0LL )
-      sub_1B9026C(transform, v7);
-    UnityEngine_Transform__SetParent_69560688(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
+      sub_1BAB678(transform, v7);
+    UnityEngine_Transform__SetParent_69821868(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
   }
   return (UnityEngine_GameObject_o *)v5;
 }
@@ -208,7 +208,7 @@ BattleEffectControl_o *__fastcall WrapBaseBattlePopupControl__get_EffectControl(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return perf->fields.effectcontrol;
 }
 

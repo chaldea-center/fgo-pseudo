@@ -1,14 +1,14 @@
 void __fastcall UserSupportDeckMaster___ctor(UserSupportDeckMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70D4B & 1) == 0 )
+  if ( (byte_4AB6C3F & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__, method);
-    byte_4A70D4B = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__, method);
+    byte_4AB6C3F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     184,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserSupportDeckEntity_o *__fastcall UserSupportDeckMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A70D49 & 1) == 0 )
+  if ( (byte_4AB6C3D & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__, userId);
-    byte_4A70D49 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__, userId);
+    byte_4AB6C3D = 1;
   }
   PK = (Il2CppObject *)UserSupportDeckEntity__CreatePK(userId, supportDeckId, *(const MethodInfo **)&supportDeckId);
   return (UserSupportDeckEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_312C900 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
+                                      (const MethodInfo_31640E8 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
 }
 
 
@@ -43,17 +43,17 @@ bool __fastcall UserSupportDeckMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A70D4A & 1) == 0 )
+  if ( (byte_4AB6C3E & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__, entity);
-    byte_4A70D4A = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__, entity);
+    byte_4AB6C3E = 1;
   }
   PK = (Il2CppObject *)UserSupportDeckEntity__CreatePK(userId, supportDeckId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
 }
 
 
@@ -71,11 +71,11 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   __int64 v10; // x1
   UserSupportDeckEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A70D4C & 1) == 0 )
+  if ( (byte_4AB6C40 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
-    sub_1B90010(&StringLiteral_1/*""*/, v5);
-    byte_4A70D4C = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v5);
+    byte_4AB6C40 = 1;
   }
   entity = 0LL;
   v6 = (System_String_o *)StringLiteral_1/*""*/;
@@ -86,7 +86,7 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   if ( v9 )
   {
     if ( !entity )
-      sub_1B9026C(v9, v10);
+      sub_1BAB678(v9, v10);
     return entity->fields.name;
   }
   return v6;

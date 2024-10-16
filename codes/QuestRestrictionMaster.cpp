@@ -1,14 +1,14 @@
 void __fastcall QuestRestrictionMaster___ctor(QuestRestrictionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A703FE & 1) == 0 )
+  if ( (byte_4AB62EF & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string___ctor__, method);
-    byte_4A703FE = 1;
+    sub_1BAB41C(&Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string___ctor__, method);
+    byte_4AB62EF = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     176,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string___ctor__);
 }
 
 
@@ -22,12 +22,12 @@ QuestRestrictionEntity_o *__fastcall QuestRestrictionMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A703FC & 1) == 0 )
+  if ( (byte_4AB62ED & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4A703FC = 1;
+    byte_4AB62ED = 1;
   }
   PK = (Il2CppObject *)QuestRestrictionEntity__CreatePK(
                          questId,
@@ -37,7 +37,7 @@ QuestRestrictionEntity_o *__fastcall QuestRestrictionMaster__GetEntity(
   return (QuestRestrictionEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_312C900 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__GetEntity__);
+                                       (const MethodInfo_31640E8 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__GetEntity__);
 }
 
 
@@ -64,28 +64,28 @@ System_String_o *__fastcall QuestRestrictionMaster__GetRestrictionName(
   int v20; // w8
   System_String_o *result; // x0
 
-  if ( (byte_4A70401 & 1) == 0 )
+  if ( (byte_4AB62F2 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1B90010(&Method_DataManager_GetMasterData_RestrictionMaster___, v8);
-    sub_1B90010(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v9);
-    sub_1B90010(&QuestRestrictionEntity_TypeInfo, v10);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4A70401 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_RestrictionMaster___, v8);
+    sub_1BAB41C(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v9);
+    sub_1BAB41C(&QuestRestrictionEntity_TypeInfo, v10);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4AB62F2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_RestrictionMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_RestrictionMaster___);
   if ( !this->fields.list )
     goto LABEL_26;
   v14 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0LL;
   v16 = Count;
@@ -98,7 +98,7 @@ System_String_o *__fastcall QuestRestrictionMaster__GetRestrictionName(
     Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                  (System_Collections_ObjectModel_Collection_T__o *)Instance,
                  i,
-                 (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                 (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( !Instance )
       goto LABEL_26;
     methodPtr_low = LOBYTE(QuestRestrictionEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -125,7 +125,7 @@ System_String_o *__fastcall QuestRestrictionMaster__GetRestrictionName(
             Entity = DataMasterBase_object__object__int___GetEntity(
                        v14,
                        *((_DWORD *)Instance + 6),
-                       (const MethodInfo_312C5A8 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
+                       (const MethodInfo_3163D90 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
           }
         }
         continue;
@@ -135,13 +135,13 @@ System_String_o *__fastcall QuestRestrictionMaster__GetRestrictionName(
         result = (System_String_o *)DataMasterBase_object__object__int___GetEntity(
                                       v14,
                                       *((_DWORD *)Instance + 6),
-                                      (const MethodInfo_312C5A8 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
+                                      (const MethodInfo_3163D90 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
         if ( result )
           return (System_String_o *)result[1].klass;
         return result;
       }
 LABEL_26:
-      sub_1B9026C(Instance, v13);
+      sub_1BAB678(Instance, v13);
     }
   }
   if ( Entity )
@@ -161,17 +161,17 @@ bool __fastcall QuestRestrictionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A703FD & 1) == 0 )
+  if ( (byte_4AB62EE & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__TryGetEntity__, entity);
-    byte_4A703FD = 1;
+    sub_1BAB41C(&Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__TryGetEntity__, entity);
+    byte_4AB62EE = 1;
   }
   PK = (Il2CppObject *)QuestRestrictionEntity__CreatePK(questId, phase, restrictionId, *(const MethodInfo **)&phase);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_QuestRestrictionMaster__QuestRestrictionEntity__string__TryGetEntity__);
 }
 
 
@@ -207,36 +207,36 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList(
   __int64 size; // x10
   Il2CppClass **v30; // x0
 
-  if ( (byte_4A703FF & 1) == 0 )
+  if ( (byte_4AB62F0 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1B90010(&Method_DataManager_GetMasterData_RestrictionMaster___, v8);
-    sub_1B90010(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v9);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity__Add__, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity__ToArray__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__, v12);
-    sub_1B90010(&System_Collections_Generic_List_RestrictionEntity__TypeInfo, v13);
-    sub_1B90010(&QuestRestrictionEntity_TypeInfo, v14);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_4A703FF = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&questId);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_RestrictionMaster___, v8);
+    sub_1BAB41C(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v9);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity__Add__, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity__ToArray__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__, v12);
+    sub_1BAB41C(&System_Collections_Generic_List_RestrictionEntity__TypeInfo, v13);
+    sub_1BAB41C(&QuestRestrictionEntity_TypeInfo, v14);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4AB62F0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_RestrictionMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_RestrictionMaster___);
   if ( !this->fields.list )
     goto LABEL_24;
   v18 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
   if ( Count >= 1 )
   {
     v21 = 0;
@@ -248,7 +248,7 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList(
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    (System_Collections_ObjectModel_Collection_T__o *)Instance,
                    v21,
-                   (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Instance )
         break;
       v22 = Instance;
@@ -265,7 +265,7 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList(
         Instance = DataMasterBase_object__object__int___GetEntity(
                      v18,
                      *((_DWORD *)Instance + 6),
-                     (const MethodInfo_312C5A8 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
+                     (const MethodInfo_3163D90 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
         if ( Instance )
         {
           v26 = v22[5];
@@ -285,14 +285,14 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList(
               System_Collections_Generic_List_object___AddWithResize(
                 v20,
                 (Il2CppObject *)Instance,
-                *(const MethodInfo_35109C0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+                *(const MethodInfo_354D8BC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
             }
             else
             {
               v30 = &items->obj.klass + size;
               v20->fields._size = size + 1;
               v30[4] = v17;
-              sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v30 + 4), (int32_t)v17, v24, v25);
+              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v30 + 4), (int32_t)v17, v24, v25);
             }
           }
         }
@@ -301,18 +301,18 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList(
         goto LABEL_22;
     }
 LABEL_24:
-    sub_1B9026C(Instance, v17);
+    sub_1BAB678(Instance, v17);
   }
 LABEL_22:
   if ( !v20 )
     goto LABEL_24;
   return (RestrictionEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v20,
-                                      (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_RestrictionEntity__ToArray__);
+                                      (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_RestrictionEntity__ToArray__);
 }
 
 
-RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_39591612(
+RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_39928488(
         QuestRestrictionMaster_o *this,
         QuestRestrictionEntity_array **questRestrictionEntityList,
         int32_t questId,
@@ -359,47 +359,47 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
   int32_t v45; // w3
   ServantStatusBattleListViewItem_o *v47; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4A70400 & 1) == 0 )
+  if ( (byte_4AB62F1 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__,
       questRestrictionEntityList);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
-    sub_1B90010(&Method_DataManager_GetMasterData_RestrictionMaster___, v9);
-    sub_1B90010(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_QuestRestrictionEntity__Add__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity__Add__, v12);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity__ToArray__, v13);
-    sub_1B90010(&Method_System_Collections_Generic_List_QuestRestrictionEntity__ToArray__, v14);
-    sub_1B90010(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__, v15);
-    sub_1B90010(&Method_System_Collections_Generic_List_QuestRestrictionEntity___ctor__, v16);
-    sub_1B90010(&System_Collections_Generic_List_QuestRestrictionEntity__TypeInfo, v17);
-    sub_1B90010(&System_Collections_Generic_List_RestrictionEntity__TypeInfo, v18);
-    sub_1B90010(&QuestRestrictionEntity_TypeInfo, v19);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    byte_4A70400 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_RestrictionMaster___, v9);
+    sub_1BAB41C(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_QuestRestrictionEntity__Add__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity__Add__, v12);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity__ToArray__, v13);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_QuestRestrictionEntity__ToArray__, v14);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_RestrictionEntity___ctor__, v15);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_QuestRestrictionEntity___ctor__, v16);
+    sub_1BAB41C(&System_Collections_Generic_List_QuestRestrictionEntity__TypeInfo, v17);
+    sub_1BAB41C(&System_Collections_Generic_List_RestrictionEntity__TypeInfo, v18);
+    sub_1BAB41C(&QuestRestrictionEntity_TypeInfo, v19);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
+    byte_4AB62F1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   v47 = (ServantStatusBattleListViewItem_o *)questRestrictionEntityList;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_RestrictionMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_RestrictionMaster___);
   if ( !this->fields.list )
     goto LABEL_30;
   v23 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v25 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v25 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_RestrictionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v25,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
-  v26 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_QuestRestrictionEntity__TypeInfo);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_RestrictionEntity___ctor__);
+  v26 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_QuestRestrictionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v26,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_QuestRestrictionEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_QuestRestrictionEntity___ctor__);
   if ( Count >= 1 )
   {
     v27 = 0;
@@ -411,7 +411,7 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    (System_Collections_ObjectModel_Collection_T__o *)Instance,
                    v27,
-                   (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Instance )
         break;
       v28 = (Il2CppObject *)Instance;
@@ -428,7 +428,7 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
         Instance = DataMasterBase_object__object__int___GetEntity(
                      v23,
                      *((_DWORD *)Instance + 6),
-                     (const MethodInfo_312C5A8 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
+                     (const MethodInfo_3163D90 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
         if ( Instance )
         {
           klass_high = HIDWORD(v28[1].klass);
@@ -448,14 +448,14 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
               System_Collections_Generic_List_object___AddWithResize(
                 v25,
                 (Il2CppObject *)Instance,
-                *(const MethodInfo_35109C0 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+                *(const MethodInfo_354D8BC **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
             }
             else
             {
               v36 = &items->obj.klass + size;
               v25->fields._size = size + 1;
               v36[4] = v22;
-              sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v36 + 4), (int32_t)v22, v30, v31);
+              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v36 + 4), (int32_t)v22, v30, v31);
             }
             if ( !v26 )
               break;
@@ -470,14 +470,14 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
               System_Collections_Generic_List_object___AddWithResize(
                 v26,
                 v28,
-                *(const MethodInfo_35109C0 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+                *(const MethodInfo_354D8BC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
             }
             else
             {
               v42 = &v39->obj.klass + v41;
               v26->fields._size = v41 + 1;
               v42[4] = (Il2CppClass *)v28;
-              sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v42 + 4), (int32_t)v28, v37, v38);
+              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v42 + 4), (int32_t)v28, v37, v38);
             }
           }
         }
@@ -486,19 +486,19 @@ RestrictionEntity_array *__fastcall QuestRestrictionMaster__getRestrictionList_3
         goto LABEL_27;
     }
 LABEL_30:
-    sub_1B9026C(Instance, v22);
+    sub_1BAB678(Instance, v22);
   }
 LABEL_27:
   if ( !v26 )
     goto LABEL_30;
   v43 = System_Collections_Generic_List_object___ToArray(
           v26,
-          (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_QuestRestrictionEntity__ToArray__);
+          (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_QuestRestrictionEntity__ToArray__);
   v47->klass = (ServantStatusBattleListViewItem_c *)v43;
-  sub_1B8FFB4(v47, (int32_t)v43, v44, v45);
+  sub_1BAB3C0(v47, (int32_t)v43, v44, v45);
   if ( !v25 )
     goto LABEL_30;
   return (RestrictionEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v25,
-                                      (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_RestrictionEntity__ToArray__);
+                                      (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_RestrictionEntity__ToArray__);
 }

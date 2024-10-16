@@ -20,36 +20,36 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   int32_t v18; // w2
   int32_t v19; // w3
 
-  if ( (byte_4A72829 & 1) == 0 )
+  if ( (byte_4AB880C & 1) == 0 )
   {
-    sub_1B90010(&BattleSelectCommandComponent_TypeInfo, v1);
-    sub_1B90010(&string___TypeInfo, v2);
-    sub_1B90010(&StringLiteral_18192/*"commandcard_select_3rd"*/, v3);
-    sub_1B90010(&StringLiteral_18191/*"commandcard_select_2nd"*/, v4);
-    sub_1B90010(&StringLiteral_18190/*"commandcard_select_1st"*/, v5);
-    byte_4A72829 = 1;
+    sub_1BAB41C(&BattleSelectCommandComponent_TypeInfo, v1);
+    sub_1BAB41C(&string___TypeInfo, v2);
+    sub_1BAB41C(&StringLiteral_18196/*"commandcard_select_3rd"*/, v3);
+    sub_1BAB41C(&StringLiteral_18195/*"commandcard_select_2nd"*/, v4);
+    sub_1BAB41C(&StringLiteral_18194/*"commandcard_select_1st"*/, v5);
+    byte_4AB880C = 1;
   }
-  v6 = sub_1B900B8(string___TypeInfo, 3LL);
+  v6 = sub_1BAB4C4(string___TypeInfo, 3LL);
   if ( !v6 )
-    sub_1B9026C(0LL, v7);
+    sub_1BAB678(0LL, v7);
   v10 = v6;
   if ( !*(_DWORD *)(v6 + 24)
-    || (v11 = StringLiteral_18190/*"commandcard_select_1st"*/,
-        *(_QWORD *)(v6 + 32) = StringLiteral_18190/*"commandcard_select_1st"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v6 + 32), v11, v8, v9),
+    || (v11 = StringLiteral_18194/*"commandcard_select_1st"*/,
+        *(_QWORD *)(v6 + 32) = StringLiteral_18194/*"commandcard_select_1st"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v6 + 32), v11, v8, v9),
         *(_DWORD *)(v10 + 24) <= 1u)
-    || (v14 = StringLiteral_18191/*"commandcard_select_2nd"*/,
-        *(_QWORD *)(v10 + 40) = StringLiteral_18191/*"commandcard_select_2nd"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v10 + 40), v14, v12, v13),
+    || (v14 = StringLiteral_18195/*"commandcard_select_2nd"*/,
+        *(_QWORD *)(v10 + 40) = StringLiteral_18195/*"commandcard_select_2nd"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v10 + 40), v14, v12, v13),
         *(_DWORD *)(v10 + 24) <= 2u) )
   {
-    sub_1B90274(v6, v7);
+    sub_1BAB680(v6, v7);
   }
-  v17 = StringLiteral_18192/*"commandcard_select_3rd"*/;
-  *(_QWORD *)(v10 + 48) = StringLiteral_18192/*"commandcard_select_3rd"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v10 + 48), v17, v15, v16);
+  v17 = StringLiteral_18196/*"commandcard_select_3rd"*/;
+  *(_QWORD *)(v10 + 48) = StringLiteral_18196/*"commandcard_select_3rd"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v10 + 48), v17, v15, v16);
   BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v10;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)BattleSelectCommandComponent_TypeInfo->static_fields, v10, v18, v19);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)BattleSelectCommandComponent_TypeInfo->static_fields, v10, v18, v19);
 }
 
 
@@ -72,12 +72,12 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   __int64 v9; // x8
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4A72828 & 1) == 0 )
+  if ( (byte_4AB880B & 1) == 0 )
   {
-    sub_1B90010(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    byte_4A72828 = 1;
+    sub_1BAB41C(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    byte_4AB880B = 1;
   }
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
   markSprite = this->fields.markSprite;
@@ -90,7 +90,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   if ( !v9 )
     goto LABEL_16;
   if ( *(_DWORD *)(v9 + 24) <= (unsigned int)index )
-    sub_1B90274(gameObject, *(_QWORD *)&index);
+    sub_1BAB680(gameObject, *(_QWORD *)&index);
   if ( !markSprite )
     goto LABEL_16;
   UISprite__set_spriteName(markSprite, *(System_String_o **)(v9 + 8LL * index + 32), 0LL);
@@ -102,7 +102,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -118,6 +118,6 @@ void __fastcall BattleSelectCommandComponent__setIndex(
       return;
     }
 LABEL_16:
-    sub_1B9026C(gameObject, *(_QWORD *)&index);
+    sub_1BAB678(gameObject, *(_QWORD *)&index);
   }
 }

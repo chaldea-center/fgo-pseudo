@@ -17,18 +17,18 @@ void __fastcall WarBoardFinishRequest__beginRequest(
   __int64 v12; // x1
   __int64 v13; // x1
 
-  if ( (byte_4A71846 & 1) == 0 )
+  if ( (byte_4AB7729 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_23514/*"stageId"*/, *(_QWORD *)&stageId);
-    sub_1B90010(&StringLiteral_24739/*"winCondId"*/, v11);
-    sub_1B90010(&StringLiteral_24738/*"winCondGroup"*/, v12);
-    sub_1B90010(&StringLiteral_20841/*"isResult"*/, v13);
-    byte_4A71846 = 1;
+    sub_1BAB41C(&StringLiteral_23516/*"stageId"*/, *(_QWORD *)&stageId);
+    sub_1BAB41C(&StringLiteral_24742/*"winCondId"*/, v11);
+    sub_1BAB41C(&StringLiteral_24741/*"winCondGroup"*/, v12);
+    sub_1BAB41C(&StringLiteral_20847/*"isResult"*/, v13);
+    byte_4AB7729 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23514/*"stageId"*/, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20841/*"isResult"*/, isResult, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24739/*"winCondId"*/, winCondId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24738/*"winCondGroup"*/, winCondGroup, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23516/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20847/*"isResult"*/, isResult, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24742/*"winCondId"*/, winCondId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24741/*"winCondGroup"*/, winCondGroup, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -38,16 +38,16 @@ System_String_o *__fastcall WarBoardFinishRequest__getURL(WarBoardFinishRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A71845 & 1) == 0 )
+  if ( (byte_4AB7728 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_24655/*"warBoard/finish"*/, v2);
-    byte_4A71845 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_24658/*"warBoard/finish"*/, v2);
+    byte_4AB7728 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_24655/*"warBoard/finish"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_24658/*"warBoard/finish"*/, 0LL);
 }
 
 
@@ -59,31 +59,32 @@ void __fastcall WarBoardFinishRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  ResponseData_o *v8; // x20
+  const MethodInfo *v8; // x2
+  ResponseData_o *v9; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x1
+  System_String_o *v11; // x1
 
-  if ( (byte_4A71847 & 1) == 0 )
+  if ( (byte_4AB772A & 1) == 0 )
   {
-    sub_1B90010(&JsonManager_TypeInfo, responseList);
-    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
-    byte_4A71847 = 1;
+    sub_1BAB41C(&JsonManager_TypeInfo, responseList);
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
+    byte_4AB772A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(100, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_41180636(v7, 0LL))
-    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
+    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
+    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v11 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_22088/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22090/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

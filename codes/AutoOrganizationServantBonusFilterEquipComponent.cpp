@@ -10,23 +10,23 @@ void __fastcall AutoOrganizationServantBonusFilterEquipComponent___cctor(const M
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A6BB72 & 1) == 0 )
+  if ( (byte_4AB1958 & 1) == 0 )
   {
-    sub_1B90010(&AutoOrganizationServantBonusFilterEquipComponent_TypeInfo, v1);
-    sub_1B90010(&StringLiteral_2617/*"AutoOrganizationBonusFilterEquipId"*/, v4);
-    sub_1B90010(&StringLiteral_2619/*"AutoOrganizationBonusFilterGroupId"*/, v5);
-    byte_4A6BB72 = 1;
+    sub_1BAB41C(&AutoOrganizationServantBonusFilterEquipComponent_TypeInfo, v1);
+    sub_1BAB41C(&StringLiteral_2612/*"AutoOrganizationBonusFilterEquipId"*/, v4);
+    sub_1BAB41C(&StringLiteral_2614/*"AutoOrganizationBonusFilterGroupId"*/, v5);
+    byte_4AB1958 = 1;
   }
-  AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID = (struct System_String_o *)StringLiteral_2617/*"AutoOrganizationBonusFilterEquipId"*/;
-  sub_1B8FFB4(
+  AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID = (struct System_String_o *)StringLiteral_2612/*"AutoOrganizationBonusFilterEquipId"*/;
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields,
-    StringLiteral_2617/*"AutoOrganizationBonusFilterEquipId"*/,
+    StringLiteral_2612/*"AutoOrganizationBonusFilterEquipId"*/,
     v2,
     v3);
-  v6 = StringLiteral_2619/*"AutoOrganizationBonusFilterGroupId"*/;
+  v6 = StringLiteral_2614/*"AutoOrganizationBonusFilterGroupId"*/;
   static_fields = AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields;
-  static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID = (struct System_String_o *)StringLiteral_2619/*"AutoOrganizationBonusFilterGroupId"*/;
-  sub_1B8FFB4(
+  static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID = (struct System_String_o *)StringLiteral_2614/*"AutoOrganizationBonusFilterGroupId"*/;
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID,
     v6,
     v8,
@@ -38,10 +38,10 @@ void __fastcall AutoOrganizationServantBonusFilterEquipComponent___ctor(
         AutoOrganizationServantBonusFilterEquipComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A6BB71 & 1) == 0 )
+  if ( (byte_4AB1957 & 1) == 0 )
   {
-    sub_1B90010(&ServantBonusFilterEquipComponent_TypeInfo, method);
-    byte_4A6BB71 = 1;
+    sub_1BAB41C(&ServantBonusFilterEquipComponent_TypeInfo, method);
+    byte_4AB1957 = 1;
   }
   if ( !ServantBonusFilterEquipComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantBonusFilterEquipComponent_TypeInfo);
@@ -175,68 +175,68 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v123; // 0:x0.16
 
   v3 = eventIdList;
-  if ( (byte_4A6BB6F & 1) == 0 )
+  if ( (byte_4AB1955 & 1) == 0 )
   {
-    sub_1B90010(&AutoOrganizationServantBonusFilterEquipComponent_TypeInfo, eventIdList);
-    sub_1B90010(&System_Comparison_EventBonusFilterEntity__TypeInfo, v5);
-    sub_1B90010(&Method_DataManager_GetMasterData_EventBonusFilterMaster___, v6);
-    sub_1B90010(&Method_DataManager_GetMasterData_ServantMaster___, v7);
-    sub_1B90010(&Method_DataManager_GetMasterData_ServantSkillMaster___, v8);
-    sub_1B90010(&Method_DataManager_GetMasterData_SkillLvMaster___, v9);
-    sub_1B90010(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v10);
-    sub_1B90010(&EventUpValInfo_TypeInfo, v11);
-    sub_1B90010(&EventUpValSetupInfo_TypeInfo, v12);
-    sub_1B90010(&Method_System_Collections_Generic_List_ServantBonusFilterEquipListViewObject__Add__, v13);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventUpValInfo__Add__, v14);
-    sub_1B90010(&Method_System_Collections_Generic_List_SkillInfo__Add__, v15);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventBonusFilterEntity__Sort__, v16);
-    sub_1B90010(&Method_System_Collections_Generic_List_SkillInfo__ToArray__, v17);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventUpValInfo__ToArray__, v18);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventUpValInfo___ctor__, v19);
-    sub_1B90010(&Method_System_Collections_Generic_List_SkillInfo___ctor__, v20);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Count__, v21);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Item__, v22);
-    sub_1B90010(&System_Collections_Generic_List_EventUpValInfo__TypeInfo, v23);
-    sub_1B90010(&System_Collections_Generic_List_SkillInfo__TypeInfo, v24);
-    sub_1B90010(&NetworkManager_TypeInfo, v25);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v26);
-    sub_1B90010(&ServantBonusFilterSelectMenu_TypeInfo, v27);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v28);
-    sub_1B90010(&SkillInfo_TypeInfo, v29);
-    sub_1B90010(&Method_AutoOrganizationServantBonusFilterEquipComponent___c__CreateList_b__2_0__, v30);
-    sub_1B90010(&AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo, v31);
-    byte_4A6BB6F = 1;
+    sub_1BAB41C(&AutoOrganizationServantBonusFilterEquipComponent_TypeInfo, eventIdList);
+    sub_1BAB41C(&System_Comparison_EventBonusFilterEntity__TypeInfo, v5);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventBonusFilterMaster___, v6);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ServantMaster___, v7);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ServantSkillMaster___, v8);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_SkillLvMaster___, v9);
+    sub_1BAB41C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v10);
+    sub_1BAB41C(&EventUpValInfo_TypeInfo, v11);
+    sub_1BAB41C(&EventUpValSetupInfo_TypeInfo, v12);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantBonusFilterEquipListViewObject__Add__, v13);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventUpValInfo__Add__, v14);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_SkillInfo__Add__, v15);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventBonusFilterEntity__Sort__, v16);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_SkillInfo__ToArray__, v17);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventUpValInfo__ToArray__, v18);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventUpValInfo___ctor__, v19);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_SkillInfo___ctor__, v20);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Count__, v21);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Item__, v22);
+    sub_1BAB41C(&System_Collections_Generic_List_EventUpValInfo__TypeInfo, v23);
+    sub_1BAB41C(&System_Collections_Generic_List_SkillInfo__TypeInfo, v24);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v25);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v26);
+    sub_1BAB41C(&ServantBonusFilterSelectMenu_TypeInfo, v27);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v28);
+    sub_1BAB41C(&SkillInfo_TypeInfo, v29);
+    sub_1BAB41C(&Method_AutoOrganizationServantBonusFilterEquipComponent___c__CreateList_b__2_0__, v30);
+    sub_1BAB41C(&AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo, v31);
+    byte_4AB1955 = 1;
   }
   *(_QWORD *)posY = 0LL;
   v120 = 0;
   v118 = 0LL;
   eventUpVallInfo = 0LL;
-  setupInfo = (EventUpValSetupInfo_o *)sub_1B9025C(EventUpValSetupInfo_TypeInfo);
-  EventUpValSetupInfo___ctor_38963848(setupInfo, v3, 0, 0, 0, 0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  setupInfo = (EventUpValSetupInfo_o *)sub_1BAB668(EventUpValSetupInfo_TypeInfo);
+  EventUpValSetupInfo___ctor_39297716(setupInfo, v3, 0, 0, 0, 0LL);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_85;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_85;
   v35 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantSkillMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ServantSkillMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_85;
   v36 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_SkillLvMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_85;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventBonusFilterMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventBonusFilterMaster___);
   if ( !Instance )
     goto LABEL_85;
   Instance = (int64_t)EventBonusFilterMaster__GetFilterList((EventBonusFilterMaster_o *)Instance, v3, 1, 0LL);
@@ -256,7 +256,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
       v37 = AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo;
     }
     v40 = (Il2CppObject *)v37->static_fields->__9;
-    _9__2_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_EventBonusFilterEntity__TypeInfo);
+    _9__2_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_EventBonusFilterEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__2_0,
       v40,
@@ -264,24 +264,24 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
       0LL);
     static_fields = AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Comparison_EventBonusFilterEntity__o *)_9__2_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v42, v43);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v42, v43);
   }
   v112 = (ServantSkillMaster_o *)v35;
   v113 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
   if ( !v38 )
     goto LABEL_85;
-  System_Collections_Generic_List_object___Sort_55649412(
+  System_Collections_Generic_List_object___Sort_55899008(
     v38,
     _9__2_0,
-    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_EventBonusFilterEntity__Sort__);
-  v115 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_EventUpValInfo__TypeInfo);
+    (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_EventBonusFilterEntity__Sort__);
+  v115 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_EventUpValInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v115,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_EventUpValInfo___ctor__);
-  v114 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_SkillInfo__TypeInfo);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_EventUpValInfo___ctor__);
+  v114 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_SkillInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v114,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_SkillInfo___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_SkillInfo___ctor__);
   *(_QWORD *)posY = 0LL;
   v120 = 0;
   if ( v38->fields._size >= 1 )
@@ -295,7 +295,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
       Instance = (int64_t)System_Collections_Generic_List_object___get_Item(
                             v38,
                             v44,
-                            (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Item__);
+                            (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_EventBonusFilterEntity__get_Item__);
       if ( !Instance )
         break;
       v45 = *(_DWORD *)(Instance + 20);
@@ -310,7 +310,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
         }
         SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID = v87->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID;
         v89 = System_Int32__ToString((int32_t)&v120, 0LL);
-        v90 = System_String__Concat_61787092(SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID, v89, 0LL);
+        v90 = System_String__Concat_62048128(SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID, v89, 0LL);
         Instance = (int64_t)AutoOrganizationServantBonusFilterEquipComponent__GetTheCreatedEventItemComponent(
                               this,
                               &posY[1],
@@ -318,7 +318,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
         if ( !Instance )
           break;
         v92 = (ServantBonusFilterEquipListViewObject_o *)Instance;
-        ServantBonusFilterEquipListViewObject__SetItem_30699608(
+        ServantBonusFilterEquipListViewObject__SetItem_30830876(
           (ServantBonusFilterEquipListViewObject_o *)Instance,
           v3,
           *(_DWORD *)(v46 + 24),
@@ -339,14 +339,14 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Instance,
             (Il2CppObject *)v92,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
         }
         else
         {
           v98 = v95 + 8 * v97;
           *(_DWORD *)(Instance + 24) = v97 + 1;
           *(_QWORD *)(v98 + 32) = v92;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v98 + 32), (int32_t)v92, v93, v94);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v98 + 32), (int32_t)v92, v93, v94);
         }
         ++v120;
       }
@@ -358,7 +358,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
         Instance = (int64_t)DataMasterBase_object__object__int___GetEntity(
                               v113,
                               *(_DWORD *)(v46 + 24),
-                              (const MethodInfo_312C5A8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                              (const MethodInfo_3163D90 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         if ( !Instance )
           break;
         v47 = Instance;
@@ -368,7 +368,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v122.fields.currentCryptoKey = v49;
         *(_QWORD *)&v122.fields.fakeValue = v48;
-        v50 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v122, 0LL);
+        v50 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v122, 0LL);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Instance = NetworkManager__get_UserId(0LL);
@@ -386,7 +386,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
           do
           {
             if ( v54 >= (unsigned int)v51 )
-              sub_1B90274(Instance, v33);
+              sub_1BAB680(Instance, v33);
             v55 = *(ServantSkillEntity_o **)(v52 + 32 + 8 * v54);
             if ( v55 )
             {
@@ -402,11 +402,11 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                 *(_QWORD *)&v123.fields.currentCryptoKey = v58;
                 *(_QWORD *)&v123.fields.fakeValue = v57;
-                v59 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v123, 0LL);
-                v60 = (EventUpValInfo_o *)sub_1B9025C(EventUpValInfo_TypeInfo);
+                v59 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v123, 0LL);
+                v60 = (EventUpValInfo_o *)sub_1BAB668(EventUpValInfo_TypeInfo);
                 EventUpValInfo___ctor(v60, setupInfo, v59, 1, 1, 0, 0LL);
                 eventUpVallInfo = v60;
-                Instance = SkillLvEntity__getEventUpVal_40007916(v56, &eventUpVallInfo, 1, 1, 0, 1, 0LL, 0LL);
+                Instance = SkillLvEntity__getEventUpVal_40345772(v56, &eventUpVallInfo, 1, 1, 0, 1, 0LL, 0LL);
                 if ( (Instance & 1) != 0 )
                 {
                   if ( !v115 )
@@ -423,16 +423,16 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
                     System_Collections_Generic_List_object___AddWithResize(
                       v115,
                       v33,
-                      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
+                      *(const MethodInfo_354D8BC **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v66 = &items->obj.klass + size;
                     v115->fields._size = size + 1;
                     v66[4] = (Il2CppClass *)v33;
-                    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v66 + 4), (int32_t)v33, v61, v62);
+                    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v66 + 4), (int32_t)v33, v61, v62);
                   }
-                  v67 = (SkillInfo_o *)sub_1B9025C(SkillInfo_TypeInfo);
+                  v67 = (SkillInfo_o *)sub_1BAB668(SkillInfo_TypeInfo);
                   SkillInfo___ctor(v67, 0LL);
                   if ( !v67 )
                     goto LABEL_85;
@@ -455,14 +455,14 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
                     System_Collections_Generic_List_object___AddWithResize(
                       v114,
                       (Il2CppObject *)v67,
-                      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+                      *(const MethodInfo_354D8BC **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v73 = &v70->obj.klass + v72;
                     v114->fields._size = v72 + 1;
                     v73[4] = (Il2CppClass *)v67;
-                    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v73 + 4), (int32_t)v67, v68, v69);
+                    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v73 + 4), (int32_t)v67, v68, v69);
                   }
                   v53 = 1;
                 }
@@ -484,7 +484,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
             }
             SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID = v74->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID;
             v76 = System_Int32__ToString((int32_t)posY, 0LL);
-            v77 = System_String__Concat_61787092(SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID, v76, 0LL);
+            v77 = System_String__Concat_62048128(SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID, v76, 0LL);
             Instance = (int64_t)AutoOrganizationServantBonusFilterEquipComponent__GetTheCreatedEventItemComponent(
                                   v110,
                                   &posY[1],
@@ -494,16 +494,16 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
             v79 = (ServantBonusFilterEquipListViewObject_o *)Instance;
             v80 = System_Collections_Generic_List_object___ToArray(
                     v115,
-                    (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_EventUpValInfo__ToArray__);
+                    (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_EventUpValInfo__ToArray__);
             Instance = (int64_t)v114;
             if ( !v114 )
               break;
             Instance = (int64_t)System_Collections_Generic_List_object___ToArray(
                                   v114,
-                                  (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_SkillInfo__ToArray__);
+                                  (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_SkillInfo__ToArray__);
             if ( !v79 )
               break;
-            ServantBonusFilterEquipListViewObject__SetItem_30699472(
+            ServantBonusFilterEquipListViewObject__SetItem_30830740(
               v79,
               (ServantEntity_o *)v47,
               (EventUpValInfo_array *)v80,
@@ -525,14 +525,14 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)Instance,
                 (Il2CppObject *)v79,
-                *(const MethodInfo_35109C0 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
+                *(const MethodInfo_354D8BC **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
             }
             else
             {
               v86 = v83 + 8 * v85;
               *(_DWORD *)(Instance + 24) = v85 + 1;
               *(_QWORD *)(v86 + 32) = v79;
-              sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v86 + 32), (int32_t)v79, v81, v82);
+              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v86 + 32), (int32_t)v79, v81, v82);
             }
             ++LODWORD(posY[0]);
           }
@@ -543,7 +543,7 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent__CreateList(
         goto LABEL_73;
     }
 LABEL_85:
-    sub_1B9026C(Instance, v33);
+    sub_1BAB678(Instance, v33);
   }
 LABEL_73:
   if ( !ServantBonusFilterSelectMenu_TypeInfo->_2.cctor_finished )
@@ -562,7 +562,7 @@ LABEL_73:
       }
       v101 = v100->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_EQUIP_ID;
       v102 = System_Int32__ToString((int32_t)&v118 + 4, 0LL);
-      v103 = System_String__Concat_61787092(v101, v102, 0LL);
+      v103 = System_String__Concat_62048128(v101, v102, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v103, 0LL);
       ++HIDWORD(v118);
     }
@@ -582,7 +582,7 @@ LABEL_73:
       }
       v106 = v105->static_fields->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID;
       v107 = System_Int32__ToString((int32_t)&v118, 0LL);
-      v108 = System_String__Concat_61787092(v106, v107, 0LL);
+      v108 = System_String__Concat_62048128(v106, v107, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v108, 0LL);
       LODWORD(v118) = v118 + 1;
     }
@@ -609,23 +609,23 @@ ServantBonusFilterEquipListViewObject_o *__fastcall AutoOrganizationServantBonus
   ServantBonusFilterEquipComponent_c *v13; // x0
   float v14; // s8
 
-  if ( (byte_4A6BB70 & 1) == 0 )
+  if ( (byte_4AB1956 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewObject___, posY);
-    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B90010(&ServantBonusFilterEquipComponent_TypeInfo, v7);
-    byte_4A6BB70 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewObject___, posY);
+    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BAB41C(&ServantBonusFilterEquipComponent_TypeInfo, v7);
+    byte_4AB1956 = 1;
   }
   prefab = (Il2CppObject *)this->fields.prefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__Instantiate_object_(
          prefab,
-         (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   parent = this->fields.parent;
   v11 = (UnityEngine_GameObject_o *)v9;
-  GameObjectExtensions__SafeSetParent_33776688((UnityEngine_GameObject_o *)v9, parent, 0LL);
+  GameObjectExtensions__SafeSetParent_34025648((UnityEngine_GameObject_o *)v9, parent, 0LL);
   GameObjectExtensions__SetLocalPositionY(v11, *posY, 0LL);
   v13 = ServantBonusFilterEquipComponent_TypeInfo;
   v14 = *posY;
@@ -636,10 +636,10 @@ ServantBonusFilterEquipListViewObject_o *__fastcall AutoOrganizationServantBonus
   }
   *posY = v14 - v13->static_fields->POS_Y_INTERVAL;
   if ( !v11 )
-    sub_1B9026C(v13, v12);
+    sub_1BAB678(v13, v12);
   return (ServantBonusFilterEquipListViewObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       v11,
-                                                      (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewObject___);
+                                                      (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_ServantBonusFilterEquipListViewObject___);
 }
 
 
@@ -650,15 +650,15 @@ void __fastcall AutoOrganizationServantBonusFilterEquipComponent___c___cctor(con
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A6BB79 & 1) == 0 )
+  if ( (byte_4AB195F & 1) == 0 )
   {
-    sub_1B90010(&AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo, v1);
-    byte_4A6BB79 = 1;
+    sub_1BAB41C(&AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo, v1);
+    byte_4AB195F = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo->static_fields->__9 = (struct AutoOrganizationServantBonusFilterEquipComponent___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)AutoOrganizationServantBonusFilterEquipComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -681,6 +681,6 @@ int32_t __fastcall AutoOrganizationServantBonusFilterEquipComponent___c___Create
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }

@@ -24,47 +24,47 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   int32_t v24; // w3
   int32_t v25; // w1
 
-  if ( (byte_4A6ED73 & 1) == 0 )
+  if ( (byte_4AB4C30 & 1) == 0 )
   {
-    sub_1B90010(&string___TypeInfo, method);
-    sub_1B90010(&StringLiteral_9510/*"NobleStartPos_enemy"*/, v3);
-    sub_1B90010(&StringLiteral_15075/*"Unit_Player2"*/, v4);
-    sub_1B90010(&StringLiteral_9511/*"NobleStartPos_player"*/, v5);
-    sub_1B90010(&StringLiteral_3240/*"BattleFazeCameraPos"*/, v6);
-    sub_1B90010(&StringLiteral_15074/*"Unit_Enemy2"*/, v7);
-    byte_4A6ED73 = 1;
+    sub_1BAB41C(&string___TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_9511/*"NobleStartPos_enemy"*/, v3);
+    sub_1BAB41C(&StringLiteral_15081/*"Unit_Player2"*/, v4);
+    sub_1BAB41C(&StringLiteral_9512/*"NobleStartPos_player"*/, v5);
+    sub_1BAB41C(&StringLiteral_3235/*"BattleFazeCameraPos"*/, v6);
+    sub_1BAB41C(&StringLiteral_15080/*"Unit_Enemy2"*/, v7);
+    byte_4AB4C30 = 1;
   }
-  v8 = sub_1B900B8(string___TypeInfo, 5LL);
+  v8 = sub_1BAB4C4(string___TypeInfo, 5LL);
   if ( !v8 )
-    sub_1B9026C(0LL, v9);
+    sub_1BAB678(0LL, v9);
   v12 = v8;
   if ( !*(_DWORD *)(v8 + 24) )
     goto LABEL_11;
-  v13 = StringLiteral_15075/*"Unit_Player2"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_15075/*"Unit_Player2"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v8 + 32), v13, v10, v11);
+  v13 = StringLiteral_15081/*"Unit_Player2"*/;
+  *(_QWORD *)(v8 + 32) = StringLiteral_15081/*"Unit_Player2"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v8 + 32), v13, v10, v11);
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_11;
-  v16 = StringLiteral_15074/*"Unit_Enemy2"*/;
-  *(_QWORD *)(v12 + 40) = StringLiteral_15074/*"Unit_Enemy2"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 40), v16, v14, v15);
+  v16 = StringLiteral_15080/*"Unit_Enemy2"*/;
+  *(_QWORD *)(v12 + 40) = StringLiteral_15080/*"Unit_Enemy2"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 40), v16, v14, v15);
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_11;
-  v19 = StringLiteral_9511/*"NobleStartPos_player"*/;
-  *(_QWORD *)(v12 + 48) = StringLiteral_9511/*"NobleStartPos_player"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 48), v19, v17, v18);
+  v19 = StringLiteral_9512/*"NobleStartPos_player"*/;
+  *(_QWORD *)(v12 + 48) = StringLiteral_9512/*"NobleStartPos_player"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 48), v19, v17, v18);
   if ( *(_DWORD *)(v12 + 24) <= 3u
-    || (v22 = StringLiteral_9510/*"NobleStartPos_enemy"*/,
-        *(_QWORD *)(v12 + 56) = StringLiteral_9510/*"NobleStartPos_enemy"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 56), v22, v20, v21),
+    || (v22 = StringLiteral_9511/*"NobleStartPos_enemy"*/,
+        *(_QWORD *)(v12 + 56) = StringLiteral_9511/*"NobleStartPos_enemy"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 56), v22, v20, v21),
         *(_DWORD *)(v12 + 24) <= 4u)
-    || (v25 = StringLiteral_3240/*"BattleFazeCameraPos"*/,
-        *(_QWORD *)(v12 + 64) = StringLiteral_3240/*"BattleFazeCameraPos"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 64), v25, v23, v24),
+    || (v25 = StringLiteral_3235/*"BattleFazeCameraPos"*/,
+        *(_QWORD *)(v12 + 64) = StringLiteral_3235/*"BattleFazeCameraPos"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 64), v25, v23, v24),
         *(_DWORD *)(v12 + 24) <= (unsigned int)camPos) )
   {
 LABEL_11:
-    sub_1B90274(v8, v9);
+    sub_1BAB680(v8, v9);
   }
   return *(System_String_o **)(v12 + 8LL * camPos + 32);
 }

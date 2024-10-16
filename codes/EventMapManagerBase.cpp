@@ -60,23 +60,23 @@ void __fastcall EventMapManagerBase__Finish(EventMapManagerBase_o *this, const M
     this,
     this->klass->vtable._28_Finish.methodPtr);
   this->fields.terminalMap = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.terminalMap, 0, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.terminalMap, 0, v3, v4);
   this->fields.mapCamera = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mapCamera, 0, v5, v6);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mapCamera, 0, v5, v6);
   this->fields.rootRoadP = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootRoadP, 0, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootRoadP, 0, v7, v8);
   this->fields.rootSpotP = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootSpotP, 0, v9, v10);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootSpotP, 0, v9, v10);
   this->fields.rootPathP = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootPathP, 0, v11, v12);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootPathP, 0, v11, v12);
   this->fields.rootGimmickP = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootGimmickP, 0, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootGimmickP, 0, v13, v14);
   this->fields.rootEffectP = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootEffectP, 0, v15, v16);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootEffectP, 0, v15, v16);
   this->fields.warInfo = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.warInfo, 0, v17, v18);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.warInfo, 0, v17, v18);
   this->fields.mapInfo = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mapInfo, 0, v19, v20);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mapInfo, 0, v19, v20);
 }
 
 
@@ -112,17 +112,17 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
   TerminalSceneComponent_o *mInstance; // x0
   System_Nullable_Vector3__o v6; // 0:x2.16
 
-  if ( (byte_4A6CAC4 & 1) == 0 )
+  if ( (byte_4AB290F & 1) == 0 )
   {
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4A6CAC4 = 1;
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_4AB290F = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A6AF7D )
+  if ( !byte_4AB0C49 )
   {
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4A6AF7D = 1;
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_4AB0C49 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -140,7 +140,7 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
                                                   (UnityEngine_Component_o *)dialog,
                                                   0LL)) == 0LL )
   {
-    sub_1B9026C(mInstance, dialog);
+    sub_1BAB678(mInstance, dialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mInstance, 0, 0LL);
 }
@@ -195,17 +195,17 @@ void __fastcall EventMapManagerBase__SetAllTouchBlock(
   int v5; // w10
 
   v4 = this;
-  if ( (byte_4A6CAC2 & 1) == 0 )
+  if ( (byte_4AB290D & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
-    byte_4A6CAC2 = 1;
+    this = (EventMapManagerBase_o *)sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
+    byte_4AB290D = 1;
   }
   if ( !v4
     || (value ? (v5 = 1) : (v5 = -1),
         v4->fields.touchBlockNum = (v4->fields.touchBlockNum + v5) & ~((v4->fields.touchBlockNum + v5) >> 31),
-        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1B9026C(this, value);
+    sub_1BAB678(this, value);
   }
   CommonUI__SetEventFadeMaskCollider((CommonUI_o *)this, v4->fields.touchBlockNum > 0, 0LL);
   ((void (__fastcall *)(EventMapManagerBase_o *, bool, Il2CppMethodPointer))v4->klass->vtable._31_SetCameraWorkBlock.method)(
@@ -227,10 +227,10 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
   struct MapCamera_o *v7; // x8
 
   v4 = this;
-  if ( (byte_4A6CAC3 & 1) == 0 )
+  if ( (byte_4AB290E & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_1B90010(&UnityEngine_Object_TypeInfo, value);
-    byte_4A6CAC3 = 1;
+    this = (EventMapManagerBase_o *)sub_1BAB41C(&UnityEngine_Object_TypeInfo, value);
+    byte_4AB290E = 1;
   }
   if ( !v4 )
     goto LABEL_13;
@@ -252,7 +252,7 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
       return;
     }
 LABEL_13:
-    sub_1B9026C(this, value);
+    sub_1BAB678(this, value);
   }
 }
 
@@ -297,25 +297,25 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
   int32_t v33; // w3
 
   this->fields.terminalMap = terminalMap;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.terminalMap,
     (int32_t)terminalMap,
     (int32_t)mapInfo,
     (int32_t)warInfo);
   this->fields.mapInfo = mapInfo;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mapInfo, (int32_t)mapInfo, v18, v19);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mapInfo, (int32_t)mapInfo, v18, v19);
   this->fields.warInfo = warInfo;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.warInfo, (int32_t)warInfo, v20, v21);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.warInfo, (int32_t)warInfo, v20, v21);
   this->fields.mapCamera = mapCamera;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v22, v23);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v22, v23);
   this->fields.rootEffectP = rootEffectP;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootEffectP, (int32_t)rootEffectP, v24, v25);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootEffectP, (int32_t)rootEffectP, v24, v25);
   this->fields.rootGimmickP = rootGimmickP;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootGimmickP, (int32_t)rootGimmickP, v26, v27);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootGimmickP, (int32_t)rootGimmickP, v26, v27);
   this->fields.rootPathP = rootPathP;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootPathP, (int32_t)rootPathP, v28, v29);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootPathP, (int32_t)rootPathP, v28, v29);
   this->fields.rootRoadP = rootRoadP;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootRoadP, (int32_t)rootRoadP, v30, v31);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootRoadP, (int32_t)rootRoadP, v30, v31);
   this->fields.rootSpotP = rootSpotP;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.rootSpotP, (int32_t)rootSpotP, v32, v33);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.rootSpotP, (int32_t)rootSpotP, v32, v33);
 }

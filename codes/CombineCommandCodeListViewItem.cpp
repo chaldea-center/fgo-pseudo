@@ -43,27 +43,27 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o commandCodeId; // 0:x0.16
 
-  if ( (byte_4A735A5 & 1) == 0 )
+  if ( (byte_4AB94C8 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_CommandCodeMaster___, userCommandCodeEntity);
-    sub_1B90010(&DataManager_TypeInfo, v15);
-    sub_1B90010(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v16);
-    sub_1B90010(&IconLabelInfo_TypeInfo, v17);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v18);
-    byte_4A735A5 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_CommandCodeMaster___, userCommandCodeEntity);
+    sub_1BAB41C(&DataManager_TypeInfo, v15);
+    sub_1BAB41C(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v16);
+    sub_1BAB41C(&IconLabelInfo_TypeInfo, v17);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v18);
+    byte_4AB94C8 = 1;
   }
-  v19 = (IconLabelInfo_o *)sub_1B9025C(IconLabelInfo_TypeInfo);
+  v19 = (IconLabelInfo_o *)sub_1BAB668(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v19, 0LL);
   this->fields.iconLabelInfo1 = v19;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo1, (int32_t)v19, v20, v21);
-  v22 = (IconLabelInfo_o *)sub_1B9025C(IconLabelInfo_TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo1, (int32_t)v19, v20, v21);
+  v22 = (IconLabelInfo_o *)sub_1BAB668(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v22, 0LL);
   this->fields.iconLabelInfo2 = v22;
   p_iconLabelInfo2 = &this->fields.iconLabelInfo2;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo2, (int32_t)v22, v24, v25);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.iconLabelInfo2, (int32_t)v22, v24, v25);
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.userCommandCode = userCommandCodeEntity;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.userCommandCode,
     (int32_t)userCommandCodeEntity,
     v26,
@@ -74,7 +74,7 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
   this->fields.commandCodeId = userCommandCode->fields.commandCodeId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_CommandCodeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_CommandCodeMaster___);
   v33 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v32 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
   v34 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -82,15 +82,15 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v47.fields.currentCryptoKey = v33;
   *(_QWORD *)&v47.fields.fakeValue = v32;
-  IsLock = (UserCommandCodeEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v47, 0LL);
+  IsLock = (UserCommandCodeEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v47, 0LL);
   if ( !v34 )
     goto LABEL_17;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v34,
              (int32_t)IsLock,
-             (const MethodInfo_312C5A8 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_3163D90 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   this->fields.commandCodeEntity = (struct CommandCodeEntity_o *)Entity;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.commandCodeEntity, (int32_t)Entity, v36, v37);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.commandCodeEntity, (int32_t)Entity, v36, v37);
   commandCodeEntity = this->fields.commandCodeEntity;
   if ( !commandCodeEntity )
     goto LABEL_17;
@@ -114,7 +114,7 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
     goto LABEL_17;
   CategoryIdList = UserCommandCodeEntity__GetCategoryIdList(userCommandCodeEntity, 0LL);
   this->fields.commandCodeCategoryIdList = CategoryIdList;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.commandCodeCategoryIdList,
     (int32_t)CategoryIdList,
     v41,
@@ -124,10 +124,10 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
   if ( !v43 )
     goto LABEL_17;
   rarity = (unsigned int)this->fields.rarity;
-  v45 = ((__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v43->fields.collectionNo, 0LL) << 16) | (rarity << 48);
+  v45 = ((__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v43->fields.collectionNo, 0LL) << 16) | (rarity << 48);
   commandCodeId = this->fields.commandCodeId;
   this->fields.sortValue2 = v45;
-  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(commandCodeId, 0LL);
+  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(commandCodeId, 0LL);
   IsLock = (UserCommandCodeEntity_o *)this->fields.iconLabelInfo1;
   this->fields.sortValue2B = v46;
   this->fields.amountSortValue = -1LL;
@@ -136,7 +136,7 @@ void __fastcall CombineCommandCodeListViewItem___ctor(
         (IsLock = (UserCommandCodeEntity_o *)*p_iconLabelInfo2) == 0LL) )
   {
 LABEL_17:
-    sub_1B9026C(IsLock, v29);
+    sub_1BAB678(IsLock, v29);
   }
   IconLabelInfo__Clear((IconLabelInfo_o *)IsLock, 0LL);
 }
@@ -153,12 +153,12 @@ bool __fastcall CombineCommandCodeListViewItem__IsMatchFilter(
   System_Int32Enum_array *RarityFilterKindList; // x0
   _BOOL4 v9; // w8
 
-  if ( (byte_4A735A7 & 1) == 0 )
+  if ( (byte_4AB94CA & 1) == 0 )
   {
-    sub_1B90010(&FilterKindList_TypeInfo, sort);
-    sub_1B90010(&ListViewSort_FilterKind___TypeInfo, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v6);
-    byte_4A735A7 = 1;
+    sub_1BAB41C(&FilterKindList_TypeInfo, sort);
+    sub_1BAB41C(&ListViewSort_FilterKind___TypeInfo, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v6);
+    byte_4AB94CA = 1;
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -171,7 +171,7 @@ bool __fastcall CombineCommandCodeListViewItem__IsMatchFilter(
     goto LABEL_20;
   RarityFilterKindList = System_Collections_Generic_List_Int32Enum___ToArray(
                            (System_Collections_Generic_List_T__o *)RarityFilterKindList,
-                           (const MethodInfo_34F7C80 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                           (const MethodInfo_3534B7C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( !sort )
     goto LABEL_20;
   if ( !ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)RarityFilterKindList, 0LL)
@@ -181,12 +181,12 @@ bool __fastcall CombineCommandCodeListViewItem__IsMatchFilter(
   {
     return 0;
   }
-  RarityFilterKindList = (System_Int32Enum_array *)sub_1B900B8(ListViewSort_FilterKind___TypeInfo, 1LL);
+  RarityFilterKindList = (System_Int32Enum_array *)sub_1BAB4C4(ListViewSort_FilterKind___TypeInfo, 1LL);
   if ( !RarityFilterKindList )
 LABEL_20:
-    sub_1B9026C(RarityFilterKindList, sort);
+    sub_1BAB678(RarityFilterKindList, sort);
   if ( !RarityFilterKindList->max_length )
-    sub_1B90274(RarityFilterKindList, RarityFilterKindList);
+    sub_1BAB680(RarityFilterKindList, RarityFilterKindList);
   RarityFilterKindList->m_Items[1] = 39;
   if ( ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)RarityFilterKindList, 0LL)
     || !ListViewSort__GetFilter(sort, 39, 0LL) )
@@ -210,7 +210,7 @@ void __fastcall CombineCommandCodeListViewItem__Modify(
   const MethodInfo *v6; // x1
 
   this->fields.userCommandCode = userCommandCodeEntity;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.userCommandCode,
     (int32_t)userCommandCodeEntity,
     (int32_t)method,
@@ -228,7 +228,7 @@ void __fastcall CombineCommandCodeListViewItem__ModifyChoiceItem(
 
   userCommandCode = this->fields.userCommandCode;
   if ( !userCommandCode )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   this->fields.isChoice = UserCommandCodeEntity__IsChoice(userCommandCode, 0LL);
   this->fields.isSwapChoice = 0;
 }
@@ -242,7 +242,7 @@ void __fastcall CombineCommandCodeListViewItem__ModifyLockItem(
 
   userCommandCode = this->fields.userCommandCode;
   if ( !userCommandCode )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   this->fields.isLock = UserCommandCodeEntity__IsLock(userCommandCode, 0LL);
   this->fields.isSwapLock = 0;
 }
@@ -256,7 +256,7 @@ void __fastcall CombineCommandCodeListViewItem__ModifyUserCommandCodeEntity(
   int32_t v3; // w3
 
   this->fields.userCommandCode = userCommandCodeEntity;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.userCommandCode,
     (int32_t)userCommandCodeEntity,
     (int32_t)method,
@@ -299,12 +299,12 @@ bool __fastcall CombineCommandCodeListViewItem__SetSortValue(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v32; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4A735A6 & 1) == 0 )
+  if ( (byte_4AB94C9 & 1) == 0 )
   {
-    sub_1B90010(&CombineCommandCodeListViewManager_TypeInfo, sort);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    this = (CombineCommandCodeListViewItem_o *)sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
-    byte_4A735A6 = 1;
+    sub_1BAB41C(&CombineCommandCodeListViewManager_TypeInfo, sort);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    this = (CombineCommandCodeListViewItem_o *)sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
+    byte_4AB94C9 = 1;
   }
   isSelect = v4->fields.isSelect;
   *(_WORD *)&v4->fields.isTermination = 0;
@@ -350,7 +350,7 @@ bool __fastcall CombineCommandCodeListViewItem__SetSortValue(
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v29 = v30;
-      this = (CombineCommandCodeListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(
+      this = (CombineCommandCodeListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46699376(
                                                    &v29,
                                                    0LL);
       v17 = v4->fields.userCommandCode;
@@ -385,7 +385,7 @@ bool __fastcall CombineCommandCodeListViewItem__SetSortValue(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v31.fields.currentCryptoKey = v23;
         *(_QWORD *)&v31.fields.fakeValue = v22;
-        this = (CombineCommandCodeListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(
+        this = (CombineCommandCodeListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(
                                                      v31,
                                                      0LL);
         if ( !v20 )
@@ -405,7 +405,7 @@ bool __fastcall CombineCommandCodeListViewItem__SetSortValue(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v32.fields.currentCryptoKey = v27;
       *(_QWORD *)&v32.fields.fakeValue = v26;
-      v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v32, 0LL);
+      v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v32, 0LL);
       this = (CombineCommandCodeListViewItem_o *)v4->fields.iconLabelInfo1;
       rarity = (((unsigned __int64)(unsigned int)v4->fields.rarity << 32) + (v4->fields.amountSortValue << 48)) | v28;
       goto LABEL_41;
@@ -420,7 +420,7 @@ LABEL_41:
         return 1;
       }
 LABEL_45:
-      sub_1B9026C(this, sort);
+      sub_1BAB678(this, sort);
   }
   return 1;
 }
@@ -474,10 +474,10 @@ int32_t __fastcall CombineCommandCodeListViewItem__get_CommandCodeId(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4A735A8 & 1) == 0 )
+  if ( (byte_4AB94CB & 1) == 0 )
   {
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4A735A8 = 1;
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_4AB94CB = 1;
   }
   v4 = *(_QWORD *)&this->fields.commandCodeId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.commandCodeId.fields.fakeValue;
@@ -485,7 +485,7 @@ int32_t __fastcall CombineCommandCodeListViewItem__get_CommandCodeId(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v6, 0LL);
 }
 
 

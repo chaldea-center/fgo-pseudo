@@ -14,11 +14,11 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6CAE1 & 1) == 0 )
+  if ( (byte_4AB292C & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A6CAE1 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AB292C = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -27,9 +27,9 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v6, v7);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mAnimation;
 }

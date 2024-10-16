@@ -1,14 +1,14 @@
 void __fastcall MyRoomAddMaster___ctor(MyRoomAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70211 & 1) == 0 )
+  if ( (byte_4AB60FD & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string___ctor__, method);
-    byte_4A70211 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string___ctor__, method);
+    byte_4AB60FD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     194,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string___ctor__);
 }
 
 
@@ -37,21 +37,21 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomBackObjId(MyRoomAddMaster_o *
   int32_t syncRoot; // w24
   int64_t klass_low; // x23
 
-  if ( (byte_4A70217 & 1) == 0 )
+  if ( (byte_4AB6103 & 1) == 0 )
   {
-    sub_1B90010(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
-    sub_1B90010(&CondType_TypeInfo, v4);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v7);
-    sub_1B90010(&Method_MyRoomAddMaster___c__GetChangeMyRoomBackObjId_b__8_0__, v8);
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v9);
-    byte_4A70217 = 1;
+    sub_1BAB41C(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
+    sub_1BAB41C(&CondType_TypeInfo, v4);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v7);
+    sub_1BAB41C(&Method_MyRoomAddMaster___c__GetChangeMyRoomBackObjId_b__8_0__, v8);
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v9);
+    byte_4AB6103 = 1;
   }
   EnableEntityList = (System_Collections_Generic_List_object__o *)MyRoomAddMaster__GetEnableEntityList(this, 8, v2);
   if ( !EnableEntityList )
 LABEL_19:
-    sub_1B9026C(EnableEntityList, v11);
+    sub_1BAB678(EnableEntityList, v11);
   size = EnableEntityList->fields._size;
   v13 = EnableEntityList;
   if ( size < 1 )
@@ -71,23 +71,23 @@ LABEL_19:
       v14 = MyRoomAddMaster___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v14->static_fields->__9;
-    _9__8_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_MyRoomAddEntity__TypeInfo);
+    _9__8_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_MyRoomAddEntity__TypeInfo);
     System_Comparison_object____ctor(_9__8_0, v16, Method_MyRoomAddMaster___c__GetChangeMyRoomBackObjId_b__8_0__, 0LL);
     static_fields = MyRoomAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Comparison_MyRoomAddEntity__o *)_9__8_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v18, v19);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v18, v19);
   }
-  System_Collections_Generic_List_object___Sort_55649412(
+  System_Collections_Generic_List_object___Sort_55899008(
     v13,
     _9__8_0,
-    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
+    (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
   v20 = 0;
   while ( 1 )
   {
     EnableEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       v13,
                                                                       v20,
-                                                                      (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
+                                                                      (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
     if ( !EnableEntityList )
       goto LABEL_19;
     v21 = EnableEntityList;
@@ -132,18 +132,18 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomBgId(MyRoomAddMaster_o *this,
   int64_t klass_low; // x23
   int32_t MyRoomBgImgId; // w0
 
-  if ( (byte_4A70213 & 1) == 0 )
+  if ( (byte_4AB60FF & 1) == 0 )
   {
-    sub_1B90010(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
-    sub_1B90010(&CondType_TypeInfo, v4);
-    sub_1B90010(&Method_DataManager_GetMasterData_EventMaster___, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B90010(&Method_MyRoomAddMaster___c__GetChangeMyRoomBgId_b__4_0__, v10);
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v11);
-    byte_4A70213 = 1;
+    sub_1BAB41C(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
+    sub_1BAB41C(&CondType_TypeInfo, v4);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventMaster___, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1BAB41C(&Method_MyRoomAddMaster___c__GetChangeMyRoomBgId_b__4_0__, v10);
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v11);
+    byte_4AB60FF = 1;
   }
   EnableEntityList = (System_Collections_Generic_List_object__o *)MyRoomAddMaster__GetEnableEntityList(this, 1, v2);
   if ( !EnableEntityList )
@@ -153,12 +153,12 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomBgId(MyRoomAddMaster_o *this,
   if ( size < 1 )
   {
 LABEL_17:
-    EnableEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    EnableEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( EnableEntityList )
     {
       EnableEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                         (DataManager_o *)EnableEntityList,
-                                                                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventMaster___);
+                                                                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( EnableEntityList )
       {
         MyRoomBgImgId = EventMaster__getMyRoomBgImgId((EventMaster_o *)EnableEntityList, 0LL);
@@ -166,7 +166,7 @@ LABEL_17:
       }
     }
 LABEL_21:
-    sub_1B9026C(EnableEntityList, v13);
+    sub_1BAB678(EnableEntityList, v13);
   }
   v16 = MyRoomAddMaster___c_TypeInfo;
   if ( !MyRoomAddMaster___c_TypeInfo->_2.cctor_finished )
@@ -183,23 +183,23 @@ LABEL_21:
       v16 = MyRoomAddMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__4_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_MyRoomAddEntity__TypeInfo);
+    _9__4_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_MyRoomAddEntity__TypeInfo);
     System_Comparison_object____ctor(_9__4_0, v18, Method_MyRoomAddMaster___c__GetChangeMyRoomBgId_b__4_0__, 0LL);
     static_fields = MyRoomAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Comparison_MyRoomAddEntity__o *)_9__4_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v20, v21);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v20, v21);
   }
-  System_Collections_Generic_List_object___Sort_55649412(
+  System_Collections_Generic_List_object___Sort_55899008(
     v15,
     _9__4_0,
-    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
+    (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
   v22 = 0;
   while ( 1 )
   {
     EnableEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       v15,
                                                                       v22,
-                                                                      (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
+                                                                      (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
     if ( !EnableEntityList )
       goto LABEL_21;
     v23 = EnableEntityList;
@@ -244,18 +244,18 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomBgm(MyRoomAddMaster_o *this, 
   int64_t klass_low; // x23
   int32_t MyRoomBgmId; // w0
 
-  if ( (byte_4A70214 & 1) == 0 )
+  if ( (byte_4AB6100 & 1) == 0 )
   {
-    sub_1B90010(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
-    sub_1B90010(&CondType_TypeInfo, v4);
-    sub_1B90010(&Method_DataManager_GetMasterData_EventMaster___, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B90010(&Method_MyRoomAddMaster___c__GetChangeMyRoomBgm_b__5_0__, v10);
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v11);
-    byte_4A70214 = 1;
+    sub_1BAB41C(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
+    sub_1BAB41C(&CondType_TypeInfo, v4);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventMaster___, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1BAB41C(&Method_MyRoomAddMaster___c__GetChangeMyRoomBgm_b__5_0__, v10);
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v11);
+    byte_4AB6100 = 1;
   }
   EnableEntityList = (System_Collections_Generic_List_object__o *)MyRoomAddMaster__GetEnableEntityList(this, 2, v2);
   if ( !EnableEntityList )
@@ -265,12 +265,12 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomBgm(MyRoomAddMaster_o *this, 
   if ( size < 1 )
   {
 LABEL_17:
-    EnableEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    EnableEntityList = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( EnableEntityList )
     {
       EnableEntityList = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                         (DataManager_o *)EnableEntityList,
-                                                                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventMaster___);
+                                                                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( EnableEntityList )
       {
         MyRoomBgmId = EventMaster__getMyRoomBgmId((EventMaster_o *)EnableEntityList, 0LL);
@@ -278,7 +278,7 @@ LABEL_17:
       }
     }
 LABEL_21:
-    sub_1B9026C(EnableEntityList, v13);
+    sub_1BAB678(EnableEntityList, v13);
   }
   v16 = MyRoomAddMaster___c_TypeInfo;
   if ( !MyRoomAddMaster___c_TypeInfo->_2.cctor_finished )
@@ -295,23 +295,23 @@ LABEL_21:
       v16 = MyRoomAddMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__5_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_MyRoomAddEntity__TypeInfo);
+    _9__5_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_MyRoomAddEntity__TypeInfo);
     System_Comparison_object____ctor(_9__5_0, v18, Method_MyRoomAddMaster___c__GetChangeMyRoomBgm_b__5_0__, 0LL);
     static_fields = MyRoomAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Comparison_MyRoomAddEntity__o *)_9__5_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v20, v21);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v20, v21);
   }
-  System_Collections_Generic_List_object___Sort_55649412(
+  System_Collections_Generic_List_object___Sort_55899008(
     v15,
     _9__5_0,
-    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
+    (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
   v22 = 0;
   while ( 1 )
   {
     EnableEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       v15,
                                                                       v22,
-                                                                      (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
+                                                                      (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
     if ( !EnableEntityList )
       goto LABEL_21;
     v23 = EnableEntityList;
@@ -358,21 +358,21 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomFrontObjId(
   int64_t klass_low; // x24
 
   v3 = defaultId;
-  if ( (byte_4A70215 & 1) == 0 )
+  if ( (byte_4AB6101 & 1) == 0 )
   {
-    sub_1B90010(&System_Comparison_MyRoomAddEntity__TypeInfo, *(_QWORD *)&defaultId);
-    sub_1B90010(&CondType_TypeInfo, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
-    sub_1B90010(&Method_MyRoomAddMaster___c__GetChangeMyRoomFrontObjId_b__6_0__, v9);
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v10);
-    byte_4A70215 = 1;
+    sub_1BAB41C(&System_Comparison_MyRoomAddEntity__TypeInfo, *(_QWORD *)&defaultId);
+    sub_1BAB41C(&CondType_TypeInfo, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v8);
+    sub_1BAB41C(&Method_MyRoomAddMaster___c__GetChangeMyRoomFrontObjId_b__6_0__, v9);
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v10);
+    byte_4AB6101 = 1;
   }
   EnableEntityList = (System_Collections_Generic_List_object__o *)MyRoomAddMaster__GetEnableEntityList(this, 6, method);
   if ( !EnableEntityList )
 LABEL_20:
-    sub_1B9026C(EnableEntityList, v12);
+    sub_1BAB678(EnableEntityList, v12);
   size = EnableEntityList->fields._size;
   v14 = EnableEntityList;
   if ( size >= 1 )
@@ -392,7 +392,7 @@ LABEL_20:
         v15 = MyRoomAddMaster___c_TypeInfo;
       }
       v17 = (Il2CppObject *)v15->static_fields->__9;
-      _9__6_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_MyRoomAddEntity__TypeInfo);
+      _9__6_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_MyRoomAddEntity__TypeInfo);
       System_Comparison_object____ctor(
         _9__6_0,
         v17,
@@ -400,19 +400,19 @@ LABEL_20:
         0LL);
       static_fields = MyRoomAddMaster___c_TypeInfo->static_fields;
       static_fields->__9__6_0 = (struct System_Comparison_MyRoomAddEntity__o *)_9__6_0;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v19, v20);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v19, v20);
     }
-    System_Collections_Generic_List_object___Sort_55649412(
+    System_Collections_Generic_List_object___Sort_55899008(
       v14,
       _9__6_0,
-      (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
+      (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
     v21 = 0;
     while ( 1 )
     {
       EnableEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         v14,
                                                                         v21,
-                                                                        (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
+                                                                        (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
       if ( !EnableEntityList )
         goto LABEL_20;
       v22 = EnableEntityList;
@@ -456,21 +456,21 @@ int32_t __fastcall MyRoomAddMaster__GetChangeMyRoomMultipleViewBgId(MyRoomAddMas
   int32_t syncRoot; // w25
   int64_t klass_low; // x24
 
-  if ( (byte_4A70216 & 1) == 0 )
+  if ( (byte_4AB6102 & 1) == 0 )
   {
-    sub_1B90010(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
-    sub_1B90010(&CondType_TypeInfo, v4);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v7);
-    sub_1B90010(&Method_MyRoomAddMaster___c__GetChangeMyRoomMultipleViewBgId_b__7_0__, v8);
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v9);
-    byte_4A70216 = 1;
+    sub_1BAB41C(&System_Comparison_MyRoomAddEntity__TypeInfo, method);
+    sub_1BAB41C(&CondType_TypeInfo, v4);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Count__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__, v7);
+    sub_1BAB41C(&Method_MyRoomAddMaster___c__GetChangeMyRoomMultipleViewBgId_b__7_0__, v8);
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v9);
+    byte_4AB6102 = 1;
   }
   EnableEntityList = (System_Collections_Generic_List_object__o *)MyRoomAddMaster__GetEnableEntityList(this, 7, v2);
   if ( !EnableEntityList )
 LABEL_19:
-    sub_1B9026C(EnableEntityList, v11);
+    sub_1BAB678(EnableEntityList, v11);
   size = EnableEntityList->fields._size;
   v13 = EnableEntityList;
   if ( size < 1 )
@@ -490,7 +490,7 @@ LABEL_19:
       v14 = MyRoomAddMaster___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v14->static_fields->__9;
-    _9__7_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_MyRoomAddEntity__TypeInfo);
+    _9__7_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_MyRoomAddEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__7_0,
       v16,
@@ -498,19 +498,19 @@ LABEL_19:
       0LL);
     static_fields = MyRoomAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Comparison_MyRoomAddEntity__o *)_9__7_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v18, v19);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v18, v19);
   }
-  System_Collections_Generic_List_object___Sort_55649412(
+  System_Collections_Generic_List_object___Sort_55899008(
     v13,
     _9__7_0,
-    (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
+    (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_MyRoomAddEntity__Sort__);
   v20 = 0;
   while ( 1 )
   {
     EnableEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       v13,
                                                                       v20,
-                                                                      (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
+                                                                      (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_MyRoomAddEntity__get_Item__);
     if ( !EnableEntityList )
       goto LABEL_19;
     v21 = EnableEntityList;
@@ -554,27 +554,27 @@ System_Collections_Generic_List_MyRoomAddEntity__o *__fastcall MyRoomAddMaster__
   __int64 size; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4A70212 & 1) == 0 )
+  if ( (byte_4AB60FE & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&type);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity__Add__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_MyRoomAddEntity___ctor__, v7);
-    sub_1B90010(&System_Collections_Generic_List_MyRoomAddEntity__TypeInfo, v8);
-    sub_1B90010(&MyRoomAddEntity_TypeInfo, v9);
-    sub_1B90010(&NetworkManager_TypeInfo, v10);
-    byte_4A70212 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&type);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity__Add__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_MyRoomAddEntity___ctor__, v7);
+    sub_1BAB41C(&System_Collections_Generic_List_MyRoomAddEntity__TypeInfo, v8);
+    sub_1BAB41C(&MyRoomAddEntity_TypeInfo, v9);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v10);
+    byte_4AB60FE = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_MyRoomAddEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_MyRoomAddEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_MyRoomAddEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_MyRoomAddEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_22;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
@@ -590,7 +590,7 @@ System_Collections_Generic_List_MyRoomAddEntity__o *__fastcall MyRoomAddMaster__
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v17,
-                                                                 (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !list )
         break;
       v12 = list;
@@ -615,21 +615,21 @@ System_Collections_Generic_List_MyRoomAddEntity__o *__fastcall MyRoomAddMaster__
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)list,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
           v24 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v24[4] = (Il2CppClass *)v12;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v24 + 4), (int32_t)v12, v18, v19);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v24 + 4), (int32_t)v12, v18, v19);
         }
       }
       if ( Count == ++v17 )
         return (System_Collections_Generic_List_MyRoomAddEntity__o *)v11;
     }
 LABEL_22:
-    sub_1B9026C(list, v12);
+    sub_1BAB678(list, v12);
   }
   return (System_Collections_Generic_List_MyRoomAddEntity__o *)v11;
 }
@@ -645,16 +645,16 @@ MyRoomAddEntity_o *__fastcall MyRoomAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A7020F & 1) == 0 )
+  if ( (byte_4AB60FB & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4A7020F = 1;
+    sub_1BAB41C(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4AB60FB = 1;
   }
   PK = (Il2CppObject *)MyRoomAddEntity__CreatePK(id, type, priority, *(const MethodInfo **)&priority);
   return (MyRoomAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_312C900 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__GetEntity__);
+                                (const MethodInfo_31640E8 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__GetEntity__);
 }
 
 
@@ -669,17 +669,17 @@ bool __fastcall MyRoomAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A70210 & 1) == 0 )
+  if ( (byte_4AB60FC & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__TryGetEntity__, entity);
-    byte_4A70210 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__TryGetEntity__, entity);
+    byte_4AB60FC = 1;
   }
   PK = (Il2CppObject *)MyRoomAddEntity__CreatePK(id, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_MyRoomAddMaster__MyRoomAddEntity__string__TryGetEntity__);
 }
 
 
@@ -690,15 +690,15 @@ void __fastcall MyRoomAddMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A70218 & 1) == 0 )
+  if ( (byte_4AB6104 & 1) == 0 )
   {
-    sub_1B90010(&MyRoomAddMaster___c_TypeInfo, v1);
-    byte_4A70218 = 1;
+    sub_1BAB41C(&MyRoomAddMaster___c_TypeInfo, v1);
+    byte_4AB6104 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(MyRoomAddMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(MyRoomAddMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MyRoomAddMaster___c_TypeInfo->static_fields->__9 = (struct MyRoomAddMaster___c_o *)v2;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)MyRoomAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)MyRoomAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -715,7 +715,7 @@ int32_t __fastcall MyRoomAddMaster___c___GetChangeMyRoomBackObjId_b__8_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -727,7 +727,7 @@ int32_t __fastcall MyRoomAddMaster___c___GetChangeMyRoomBgId_b__4_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -739,7 +739,7 @@ int32_t __fastcall MyRoomAddMaster___c___GetChangeMyRoomBgm_b__5_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -751,7 +751,7 @@ int32_t __fastcall MyRoomAddMaster___c___GetChangeMyRoomFrontObjId_b__6_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -763,6 +763,6 @@ int32_t __fastcall MyRoomAddMaster___c___GetChangeMyRoomMultipleViewBgId_b__7_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }

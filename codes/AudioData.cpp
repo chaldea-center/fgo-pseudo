@@ -10,16 +10,16 @@ void __fastcall AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *cli
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !clip )
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0LL);
   this->fields.name = name;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v8, v9);
   this->fields.data = clip;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)clip, v10, v11);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)clip, v10, v11);
 }
 
 
-void __fastcall AudioData___ctor_37955904(
+void __fastcall AudioData___ctor_38289144(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -32,13 +32,13 @@ void __fastcall AudioData___ctor_37955904(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v7, v8);
   this->fields.data = clip;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)clip, v9, v10);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)clip, v9, v10);
 }
 
 
-void __fastcall AudioData___ctor_37955972(
+void __fastcall AudioData___ctor_38289212(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -55,17 +55,17 @@ void __fastcall AudioData___ctor_37955972(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)name, v7, v8);
   if ( !buf
     || (v11 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0LL),
         this->fields.data = v11,
         p_data = &this->fields.data,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_data, (int32_t)v11, v13, v14),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_data, (int32_t)v11, v13, v14),
         (v9 = *p_data) == 0LL) )
   {
-    sub_1B9026C(v9, v10);
+    sub_1BAB678(v9, v10);
   }
-  UnityEngine_AudioClip__SetData_69314492(v9, buf, 0, 0LL);
+  UnityEngine_AudioClip__SetData_69575672(v9, buf, 0, 0LL);
 }
 
 
@@ -75,8 +75,8 @@ bool __fastcall AudioData__IsSame(AudioData_o *this, System_String_o *name, cons
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_1B9026C(0LL, name);
-  return System_String__Equals_61795408(v3, name, 0LL);
+    sub_1BAB678(0LL, name);
+  return System_String__Equals_62056444(v3, name, 0LL);
 }
 
 

@@ -16,17 +16,17 @@ System_String_o *__fastcall Gift__CountTextWithPrefix(
   int32_t v17; // [xsp+8h] [xbp-28h] BYREF
   int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A6EE5C & 1) == 0 )
+  if ( (byte_4AB4D19 & 1) == 0 )
   {
-    sub_1B90010(&int_TypeInfo, unitString);
-    sub_1B90010(&StringLiteral_860/*"+"*/, v7);
-    sub_1B90010(&StringLiteral_25203/*"×"*/, v8);
-    sub_1B90010(&StringLiteral_1/*""*/, v9);
-    byte_4A6EE5C = 1;
+    sub_1BAB41C(&int_TypeInfo, unitString);
+    sub_1BAB41C(&StringLiteral_855/*"+"*/, v7);
+    sub_1BAB41C(&StringLiteral_25206/*"×"*/, v8);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v9);
+    byte_4AB4D19 = 1;
   }
   if ( (unsigned int)(type - 3) < 2 )
   {
-    v14 = System_String__Concat_61787092((System_String_o *)StringLiteral_860/*"+"*/, unitString, 0LL);
+    v14 = System_String__Concat_62048128((System_String_o *)StringLiteral_855/*"+"*/, unitString, 0LL);
     v18 = num;
     v15 = &v18;
   }
@@ -34,7 +34,7 @@ System_String_o *__fastcall Gift__CountTextWithPrefix(
   {
     if ( type == 8 )
       return (System_String_o *)StringLiteral_1/*""*/;
-    v14 = System_String__Concat_61787092((System_String_o *)StringLiteral_25203/*"×"*/, unitString, 0LL);
+    v14 = System_String__Concat_62048128((System_String_o *)StringLiteral_25206/*"×"*/, unitString, 0LL);
     v15 = &v17;
     v17 = num;
   }
@@ -49,7 +49,7 @@ bool __fastcall Gift__IsCommandCode(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsCommandCode_37740312(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsCommandCode_38072200(int32_t type, const MethodInfo *method)
 {
   return type == 11;
 }
@@ -79,7 +79,7 @@ bool __fastcall Gift__IsEventPointBuff(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsEventPointBuff_37740336(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsEventPointBuff_38072224(int32_t type, const MethodInfo *method)
 {
   return type == 12;
 }
@@ -91,7 +91,7 @@ bool __fastcall Gift__IsEventSvtGet(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsEventSvtGet_37739968(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsEventSvtGet_38071856(int32_t type, const MethodInfo *method)
 {
   return type == 7;
 }
@@ -103,7 +103,7 @@ bool __fastcall Gift__IsEventSvtJoin(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsEventSvtJoin_37739992(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsEventSvtJoin_38071880(int32_t type, const MethodInfo *method)
 {
   return type == 6;
 }
@@ -115,7 +115,7 @@ bool __fastcall Gift__IsItem(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsItem_37739868(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsItem_38071756(int32_t type, const MethodInfo *method)
 {
   return (unsigned int)(type - 2) < 4;
 }
@@ -133,7 +133,7 @@ bool __fastcall Gift__IsServant(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall Gift__IsServant_37739920(int32_t type, const MethodInfo *method)
+bool __fastcall Gift__IsServant_38071808(int32_t type, const MethodInfo *method)
 {
   _BOOL4 v2; // w0
 

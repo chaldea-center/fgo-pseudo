@@ -1,9 +1,9 @@
 void __fastcall ScrollMessageDialog___ctor(ScrollMessageDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A739B0 & 1) == 0 )
+  if ( (byte_4AB0C71 & 1) == 0 )
   {
-    sub_1B90010(&BaseDialog_TypeInfo, method);
-    byte_4A739B0 = 1;
+    sub_1BAB41C(&BaseDialog_TypeInfo, method);
+    byte_4AB0C71 = 1;
   }
   *(_QWORD *)&this->fields.MULTILINE_TITLE_MESSAGE_HEIGHT = 0x4180000000000118LL;
   *(_QWORD *)&this->fields.TITLE_LABEL_MAX_WIDTH = 0x18000002BCLL;
@@ -18,53 +18,50 @@ void __fastcall ScrollMessageDialog__Close(ScrollMessageDialog_o *this, const Me
 {
   const MethodInfo *v2; // x2
 
-  ScrollMessageDialog__Close_45372604(this, 0LL, v2);
+  ScrollMessageDialog__Close_30760196(this, 0LL, v2);
 }
 
 
-void __fastcall ScrollMessageDialog__Close_45372604(
+void __fastcall ScrollMessageDialog__Close_30760196(
         ScrollMessageDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  __int64 v6; // x1
-  System_Action_o *v7; // x20
+  __int64 v5; // x1
+  System_Action_o *v6; // x20
 
-  if ( (byte_4A739AC & 1) == 0 )
+  if ( (byte_4AB0C6D & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, callback);
-    sub_1B90010(&Method_ScrollMessageDialog_EndClose__, v6);
-    byte_4A739AC = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, callback);
+    sub_1BAB41C(&Method_ScrollMessageDialog_EndClose__, v5);
+    byte_4AB0C6D = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1BAB3C0(&this->fields.closeEndFunc);
   this->fields.isButtonEnable = 0;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_ScrollMessageDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v6 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_ScrollMessageDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
 void __fastcall ScrollMessageDialog__EndClose(ScrollMessageDialog_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w2
-  int32_t v4; // w3
-  ServantStatusBattleListViewItem_o *p_closeEndFunc; // x19
-  struct System_Action_o *v6; // x20
+  struct System_Action_o **p_closeEndFunc; // x19
+  struct System_Action_o *v4; // x20
   struct System_Action_o *closeEndFunc; // t1
 
   ScrollMessageDialog__Init(this, method);
   closeEndFunc = this->fields.closeEndFunc;
-  p_closeEndFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc;
-  v6 = closeEndFunc;
+  p_closeEndFunc = &this->fields.closeEndFunc;
+  v4 = closeEndFunc;
   if ( closeEndFunc )
   {
-    p_closeEndFunc->klass = 0LL;
-    sub_1B8FFB4(p_closeEndFunc, 0, v3, v4);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
-      v6->fields.original_method_info,
-      *(_QWORD *)&v6->fields.extra_arg);
+    *p_closeEndFunc = 0LL;
+    sub_1BAB3C0(p_closeEndFunc);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
+      v4->fields.original_method_info,
+      *(_QWORD *)&v4->fields.extra_arg);
   }
 }
 
@@ -86,11 +83,11 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
   UnityEngine_Object_o *okBtn; // x20
   UnityEngine_Object_o *okBtnLabel; // x20
 
-  if ( (byte_4A739A9 & 1) == 0 )
+  if ( (byte_4AB0C6A & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    sub_1B90010(&StringLiteral_1/*""*/, v3);
-    byte_4A739A9 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v3);
+    byte_4AB0C6A = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -145,7 +142,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_30:
-    sub_1B9026C(gameObject, v5);
+    sub_1BAB678(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -160,22 +157,22 @@ void __fastcall ScrollMessageDialog__OnClickCancel(ScrollMessageDialog_o *this, 
   __int64 v7; // x1
   struct ScrollMessageDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4A739AE & 1) == 0 )
+  if ( (byte_4AB0C6F & 1) == 0 )
   {
-    sub_1B90010(&Method_ScrollMessageDialog_OnClickCancel__, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A739AE = 1;
+    sub_1BAB41C(&Method_ScrollMessageDialog_OnClickCancel__, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4AB0C6F = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v4 = Method_ScrollMessageDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ScrollMessageDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B90028(Method_ScrollMessageDialog_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+      v4 = (_QWORD *)sub_1BAB434();
+    v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, this->fields.onClickSeKind, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1B9026C(0LL, v7);
+      sub_1BAB678(0LL, v7);
     CommonUI__CloseScrollMessageDialog((CommonUI_o *)Instance, 0LL, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -196,22 +193,22 @@ void __fastcall ScrollMessageDialog__OnClickOk(ScrollMessageDialog_o *this, cons
   __int64 v7; // x1
   struct ScrollMessageDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4A739AD & 1) == 0 )
+  if ( (byte_4AB0C6E & 1) == 0 )
   {
-    sub_1B90010(&Method_ScrollMessageDialog_OnClickOk__, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A739AD = 1;
+    sub_1BAB41C(&Method_ScrollMessageDialog_OnClickOk__, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4AB0C6E = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v4 = Method_ScrollMessageDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_ScrollMessageDialog_OnClickOk__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1B90028(Method_ScrollMessageDialog_OnClickOk__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+      v4 = (_QWORD *)sub_1BAB434();
+    v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, this->fields.onClickSeKind, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1B9026C(0LL, v7);
+      sub_1BAB678(0LL, v7);
     CommonUI__CloseScrollMessageDialog((CommonUI_o *)Instance, 0LL, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -245,57 +242,59 @@ void __fastcall ScrollMessageDialog__Open(
   void *mPanel; // x0
   __int64 v23; // x1
   void *v24; // x28
+  __int64 v25; // x2
+  __int64 v26; // x3
   UnityEngine_Object_o *listViewBack; // x25
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *baseView; // x25
-  UnityEngine_GameObject_o *v28; // x0
+  UnityEngine_GameObject_o *v30; // x0
   struct UIScrollView_o *scrollView; // x8
   UnityEngine_Object_o *titleLabel; // x25
-  System_String_o *v31; // x1
-  UnityEngine_Object_o *secondTitleLabel; // x24
   System_String_o *v33; // x1
+  UnityEngine_Object_o *secondTitleLabel; // x24
+  System_String_o *v35; // x1
   UnityEngine_Object_o *messageLabel; // x24
-  UnityEngine_Transform_o *v35; // x24
+  UnityEngine_Transform_o *v37; // x24
   unsigned int localPosition; // s0
-  float v37; // s8
-  int v38; // s1
-  int v39; // s9
-  int v40; // s2
-  float v41; // s0
-  int v42; // s1
-  System_String_o *v43; // x1
+  float v39; // s8
+  int v40; // s1
+  int v41; // s9
+  int v42; // s2
+  float v43; // s0
+  int v44; // s1
+  System_String_o *v45; // x1
   UnityEngine_Object_o *messageCollider; // x22
-  UnityEngine_BoxCollider_o *v45; // x22
-  float v46; // s0
-  float v47; // s8
-  float v48; // s1
-  UnityEngine_BoxCollider_o *v49; // x22
-  int v50; // s0
-  int v51; // s8
-  int v52; // s1
-  float v53; // s2
-  int v54; // s0
+  UnityEngine_BoxCollider_o *v47; // x22
+  float v48; // s0
+  float v49; // s8
+  float v50; // s1
+  UnityEngine_BoxCollider_o *v51; // x22
+  int v52; // s0
+  int v53; // s8
+  int v54; // s1
+  float v55; // s2
+  int v56; // s0
   UnityEngine_Object_o *okBtnLabel; // x22
-  UILabel_o *v56; // x22
-  System_Action_o *v57; // x20
-  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UILabel_o *v58; // x22
+  System_Action_o *v59; // x20
+  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v13 = title;
-  if ( (byte_4A739AA & 1) == 0 )
+  if ( (byte_4AB0C6B & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, title);
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_UIWidget___, v15);
-    sub_1B90010(&LocalizationManager_TypeInfo, v16);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v17);
-    sub_1B90010(&Method_ScrollMessageDialog_EndOpen__, v18);
-    sub_1B90010(&StringLiteral_43/*"\n"*/, v19);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v20);
-    sub_1B90010(&StringLiteral_1/*""*/, v21);
-    byte_4A739AA = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, title);
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_UIWidget___, v15);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v16);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v17);
+    sub_1BAB41C(&Method_ScrollMessageDialog_EndOpen__, v18);
+    sub_1BAB41C(&StringLiteral_43/*"\n"*/, v19);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v20);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v21);
+    byte_4AB0C6B = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.clickFunc, (int32_t)func, (int32_t)message, leftIndent);
+  mPanel = (void *)sub_1BAB3C0(&this->fields.clickFunc);
   if ( !v13 )
     goto LABEL_84;
   v24 = StringLiteral_1/*""*/;
@@ -305,7 +304,7 @@ void __fastcall ScrollMessageDialog__Open(
     if ( !mPanel )
       goto LABEL_84;
     if ( *((_DWORD *)mPanel + 6) < 2u )
-      sub_1B90274(mPanel, v23);
+      sub_1BAB680(mPanel, v23, v25, v26);
     v13 = (System_String_o *)*((_QWORD *)mPanel + 4);
     v24 = (void *)*((_QWORD *)mPanel + 5);
     listViewBack = (UnityEngine_Object_o *)this->fields.listViewBack;
@@ -342,19 +341,19 @@ void __fastcall ScrollMessageDialog__Open(
       mPanel = this->fields.baseView;
       if ( !mPanel )
         goto LABEL_84;
-      v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mPanel, 0LL);
-      GameObjectExtensions__SetLocalPositionY(v28, this->fields.MULTILINE_TITLE_MESSAGE_POS_Y, 0LL);
+      v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mPanel, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v30, this->fields.MULTILINE_TITLE_MESSAGE_POS_Y, 0LL);
       scrollView = this->fields.scrollView;
       if ( !scrollView )
         goto LABEL_84;
       mPanel = scrollView->fields.mPanel;
       if ( !mPanel )
         goto LABEL_84;
-      v59.fields.x = *((float *)mPanel + 74);
-      v59.fields.y = *((float *)mPanel + 75);
-      v59.fields.z = *((float *)mPanel + 76);
-      v59.fields.w = 260.0;
-      UIPanel__set_baseClipRegion((UIPanel_o *)mPanel, v59, 0LL);
+      v61.fields.x = *((float *)mPanel + 74);
+      v61.fields.y = *((float *)mPanel + 75);
+      v61.fields.z = *((float *)mPanel + 76);
+      v61.fields.w = 260.0;
+      UIPanel__set_baseClipRegion((UIPanel_o *)mPanel, v61, 0LL);
       mPanel = this->fields.baseView;
       if ( !mPanel )
         goto LABEL_84;
@@ -372,8 +371,8 @@ void __fastcall ScrollMessageDialog__Open(
     mPanel = this->fields.titleLabel;
     if ( !mPanel )
       goto LABEL_84;
-    v31 = v13 ? v13 : (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text((UILabel_o *)mPanel, v31, 0LL);
+    v33 = v13 ? v13 : (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text((UILabel_o *)mPanel, v33, 0LL);
     mPanel = this->fields.titleLabel;
     if ( !mPanel )
       goto LABEL_84;
@@ -387,8 +386,8 @@ void __fastcall ScrollMessageDialog__Open(
     mPanel = this->fields.secondTitleLabel;
     if ( !mPanel )
       goto LABEL_84;
-    v33 = (System_String_o *)(v24 ? v24 : StringLiteral_1/*""*/);
-    UILabel__set_text((UILabel_o *)mPanel, v33, 0LL);
+    v35 = (System_String_o *)(v24 ? v24 : StringLiteral_1/*""*/);
+    UILabel__set_text((UILabel_o *)mPanel, v35, 0LL);
     mPanel = this->fields.secondTitleLabel;
     if ( !mPanel )
       goto LABEL_84;
@@ -415,7 +414,7 @@ void __fastcall ScrollMessageDialog__Open(
       mPanel = UnityEngine_Component__get_transform((UnityEngine_Component_o *)mPanel, 0LL);
       if ( !this->fields.messageLabel )
         goto LABEL_84;
-      v35 = (UnityEngine_Transform_o *)mPanel;
+      v37 = (UnityEngine_Transform_o *)mPanel;
       mPanel = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.messageLabel, 0LL);
       if ( !mPanel )
         goto LABEL_84;
@@ -423,34 +422,34 @@ void __fastcall ScrollMessageDialog__Open(
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v37 = *(float *)&localPosition;
+      v39 = *(float *)&localPosition;
       mPanel = UnityEngine_Component__get_transform((UnityEngine_Component_o *)mPanel, 0LL);
       if ( !mPanel )
         goto LABEL_84;
-      *(UnityEngine_Vector3_o *)(&v38 - 1) = UnityEngine_Transform__get_localPosition(
+      *(UnityEngine_Vector3_o *)(&v40 - 1) = UnityEngine_Transform__get_localPosition(
                                                (UnityEngine_Transform_o *)mPanel,
                                                0LL);
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v39 = v38;
+      v41 = v40;
       mPanel = UnityEngine_Component__get_transform((UnityEngine_Component_o *)mPanel, 0LL);
       if ( !mPanel )
         goto LABEL_84;
-      *(UnityEngine_Vector3_o *)(&v40 - 2) = UnityEngine_Transform__get_localPosition(
+      *(UnityEngine_Vector3_o *)(&v42 - 2) = UnityEngine_Transform__get_localPosition(
                                                (UnityEngine_Transform_o *)mPanel,
                                                0LL);
-      if ( !v35 )
+      if ( !v37 )
         goto LABEL_84;
-      v41 = (float)(v37 + -20.0) + (float)leftIndent;
-      v42 = v39;
-      UnityEngine_Transform__set_localPosition(v35, *(UnityEngine_Vector3_o *)(&v40 - 2), 0LL);
+      v43 = (float)(v39 + -20.0) + (float)leftIndent;
+      v44 = v41;
+      UnityEngine_Transform__set_localPosition(v37, *(UnityEngine_Vector3_o *)(&v42 - 2), 0LL);
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
       mPanel = UnityEngine_Component__GetComponent_object_(
                  (UnityEngine_Component_o *)mPanel,
-                 (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                 (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       if ( !mPanel )
         goto LABEL_84;
       UIWidget__set_width((UIWidget_o *)mPanel, 660 - leftIndent, 0LL);
@@ -458,11 +457,11 @@ void __fastcall ScrollMessageDialog__Open(
     mPanel = this->fields.messageLabel;
     if ( !mPanel
       || ((UILabel__set_fontSize((UILabel_o *)mPanel, this->fields.MESSAGE_FONT_SIZE, 0LL), message)
-        ? (v43 = message)
-        : (v43 = (System_String_o *)StringLiteral_1/*""*/),
+        ? (v45 = message)
+        : (v45 = (System_String_o *)StringLiteral_1/*""*/),
           WrapControlText__textBBCodeAdjust(
             this->fields.messageLabel,
-            v43,
+            v45,
             this->fields.MESSAGE_FONT_SIZE,
             0,
             9999,
@@ -470,7 +469,7 @@ void __fastcall ScrollMessageDialog__Open(
           (mPanel = this->fields.messageLabel) == 0LL) )
     {
 LABEL_84:
-      sub_1B9026C(mPanel, v23);
+      sub_1BAB678(mPanel, v23);
     }
     UILabel__set_overflowMethod((UILabel_o *)mPanel, 3, 0LL);
     messageCollider = (UnityEngine_Object_o *)this->fields.messageCollider;
@@ -481,42 +480,42 @@ LABEL_84:
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v45 = this->fields.messageCollider;
+      v47 = this->fields.messageCollider;
       (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)mPanel + 664LL))(
         mPanel,
         *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v47 = v46;
+      v49 = v48;
       mPanel = (void *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)mPanel + 664LL))(
                          mPanel,
                          *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
-      if ( !v45 )
+      if ( !v47 )
         goto LABEL_84;
-      v58.fields.y = v48 * -0.5;
-      v58.fields.x = v47 * 0.5;
-      v58.fields.z = 0.0;
-      UnityEngine_BoxCollider__set_center(v45, v58, 0LL);
+      v60.fields.y = v50 * -0.5;
+      v60.fields.x = v49 * 0.5;
+      v60.fields.z = 0.0;
+      UnityEngine_BoxCollider__set_center(v47, v60, 0LL);
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v49 = this->fields.messageCollider;
+      v51 = this->fields.messageCollider;
       (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)mPanel + 664LL))(
         mPanel,
         *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
       mPanel = this->fields.messageLabel;
       if ( !mPanel )
         goto LABEL_84;
-      v51 = v50;
+      v53 = v52;
       mPanel = (void *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)mPanel + 664LL))(
                          mPanel,
                          *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
-      if ( !v49 )
+      if ( !v51 )
         goto LABEL_84;
-      v53 = 1.0;
-      v54 = v51;
-      UnityEngine_BoxCollider__set_size(v49, *(UnityEngine_Vector3_o *)(&v52 - 1), 0LL);
+      v55 = 1.0;
+      v56 = v53;
+      UnityEngine_BoxCollider__set_size(v51, *(UnityEngine_Vector3_o *)(&v54 - 1), 0LL);
     }
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
@@ -524,13 +523,13 @@ LABEL_84:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(okBtnLabel, 0LL, 0LL) )
   {
-    v56 = this->fields.okBtnLabel;
+    v58 = this->fields.okBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    mPanel = LocalizationManager__Get((System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-    if ( v56 )
+    mPanel = LocalizationManager__Get((System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    if ( v58 )
     {
-      UILabel__set_text(v56, (System_String_o *)mPanel, 0LL);
+      UILabel__set_text(v58, (System_String_o *)mPanel, 0LL);
       goto LABEL_82;
     }
     goto LABEL_84;
@@ -543,13 +542,13 @@ LABEL_82:
     goto LABEL_84;
   UIScrollView__ResetPosition((UIScrollView_o *)mPanel, 0LL);
   this->fields.isButtonEnable = 0;
-  v57 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
-  System_Action___ctor(v57, (Il2CppObject *)this, Method_ScrollMessageDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v57, 0, 0LL);
+  v59 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+  System_Action___ctor(v59, (Il2CppObject *)this, Method_ScrollMessageDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v59, 0, 0LL);
 }
 
 
-void __fastcall ScrollMessageDialog__Open_45372312(
+void __fastcall ScrollMessageDialog__Open_30759904(
         ScrollMessageDialog_o *this,
         System_String_o *title,
         System_String_o *subTitle,
@@ -565,10 +564,10 @@ void __fastcall ScrollMessageDialog__Open_45372312(
   __int64 v19; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4A739AB & 1) == 0 )
+  if ( (byte_4AB0C6C & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, title);
-    byte_4A739AB = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, title);
+    byte_4AB0C6C = 1;
   }
   if ( !System_String__IsNullOrEmpty(subTitle, 0LL) )
   {
@@ -584,7 +583,7 @@ void __fastcall ScrollMessageDialog__Open_45372312(
             (gameObject = (UnityEngine_Component_o *)this->fields.subTitleLabel) == 0LL) )
       {
 LABEL_13:
-        sub_1B9026C(gameObject, v19);
+        sub_1BAB678(gameObject, v19);
       }
       UILabel__set_text((UILabel_o *)gameObject, subTitle, 0LL);
     }
@@ -605,10 +604,10 @@ UnityEngine_GameObject_o *__fastcall ScrollMessageDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A739AF & 1) == 0 )
+  if ( (byte_4AB0C70 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A739AF = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB0C70 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -617,7 +616,7 @@ UnityEngine_GameObject_o *__fastcall ScrollMessageDialog__get_closeBtnObject(
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -640,15 +639,15 @@ void __fastcall ScrollMessageDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1BAB3C0(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) == 0 )
+  if ( (sub_1BAB4DC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v10, 0LL);
+      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -660,9 +659,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19DA5B8;
+  this->fields.m_target = (Il2CppObject *)sub_19E6FEC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19DA570;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19E6FA4;
 }
 
 
@@ -678,14 +677,14 @@ System_IAsyncResult_o *__fastcall ScrollMessageDialog_ClickDelegate__BeginInvoke
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4A739B1 & 1) == 0 )
+  if ( (byte_4AB0C72 & 1) == 0 )
   {
-    sub_1B90010(&bool_TypeInfo, isOk);
-    byte_4A739B1 = 1;
+    sub_1BAB41C(&bool_TypeInfo, isOk);
+    byte_4AB0C72 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
 }
 
 
@@ -694,7 +693,7 @@ void __fastcall ScrollMessageDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

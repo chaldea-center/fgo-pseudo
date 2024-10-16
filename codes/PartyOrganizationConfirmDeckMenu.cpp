@@ -9,12 +9,12 @@ void __fastcall PartyOrganizationConfirmDeckMenu___ctor(
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_4A6BD11 & 1) == 0 )
+  if ( (byte_4AB1AF7 & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, method);
-    sub_1B90010(&BaseDialog_TypeInfo, v3);
-    sub_1B90010(&PartyOrganizationConfirmItemDraw___TypeInfo, v4);
-    byte_4A6BD11 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
+    sub_1BAB41C(&BaseDialog_TypeInfo, v3);
+    sub_1BAB41C(&PartyOrganizationConfirmItemDraw___TypeInfo, v4);
+    byte_4AB1AF7 = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -22,11 +22,11 @@ void __fastcall PartyOrganizationConfirmDeckMenu___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v5 = BalanceConfig_TypeInfo;
   }
-  v6 = (struct PartyOrganizationConfirmItemDraw_array *)sub_1B900B8(
+  v6 = (struct PartyOrganizationConfirmItemDraw_array *)sub_1BAB4C4(
                                                           PartyOrganizationConfirmItemDraw___TypeInfo,
                                                           (unsigned int)v5->static_fields->DeckMemberMax);
   this->fields.memberObjectList = v6;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.memberObjectList, (int32_t)v6, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.memberObjectList, (int32_t)v6, v7, v8);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -49,7 +49,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8FFB4(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1BAB3C0(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -64,11 +64,11 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Close(
 {
   const MethodInfo *v2; // x2
 
-  PartyOrganizationConfirmDeckMenu__Close_32047584(this, 0LL, v2);
+  PartyOrganizationConfirmDeckMenu__Close_32282988(this, 0LL, v2);
 }
 
 
-void __fastcall PartyOrganizationConfirmDeckMenu__Close_32047584(
+void __fastcall PartyOrganizationConfirmDeckMenu__Close_32282988(
         PartyOrganizationConfirmDeckMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -77,20 +77,20 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Close_32047584(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6BD0D & 1) == 0 )
+  if ( (byte_4AB1AF3 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, callback);
-    sub_1B90010(&Method_PartyOrganizationConfirmDeckMenu_EndClose__, v6);
-    byte_4A6BD0D = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, callback);
+    sub_1BAB41C(&Method_PartyOrganizationConfirmDeckMenu_EndClose__, v6);
+    byte_4AB1AF3 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 4;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_PartyOrganizationConfirmDeckMenu_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -113,7 +113,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B8FFB4(p_closeCallbackFunc, 0, v3, v4);
+    sub_1BAB3C0(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -135,10 +135,10 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Init(
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4A6BD0B & 1) == 0 )
+  if ( (byte_4AB1AF1 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A6BD0B = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB1AF1 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -158,7 +158,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Init(
         (titleLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1B9026C(titleLabel, method);
+    sub_1BAB678(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -174,18 +174,18 @@ void __fastcall PartyOrganizationConfirmDeckMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6BD0F & 1) == 0 )
+  if ( (byte_4AB1AF5 & 1) == 0 )
   {
-    sub_1B90010(&Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__, method);
-    byte_4A6BD0F = 1;
+    sub_1BAB41C(&Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__, method);
+    byte_4AB1AF5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_PartyOrganizationConfirmDeckMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     PartyOrganizationConfirmDeckMenu__Callback(this, 0, v5);
   }
@@ -200,18 +200,18 @@ void __fastcall PartyOrganizationConfirmDeckMenu__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6BD10 & 1) == 0 )
+  if ( (byte_4AB1AF6 & 1) == 0 )
   {
-    sub_1B90010(&Method_PartyOrganizationConfirmDeckMenu_OnClickClose__, method);
-    byte_4A6BD10 = 1;
+    sub_1BAB41C(&Method_PartyOrganizationConfirmDeckMenu_OnClickClose__, method);
+    byte_4AB1AF6 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmDeckMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmDeckMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_PartyOrganizationConfirmDeckMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_PartyOrganizationConfirmDeckMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     PartyOrganizationConfirmDeckMenu__Callback(this, 0, v5);
   }
@@ -226,18 +226,18 @@ void __fastcall PartyOrganizationConfirmDeckMenu__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6BD0E & 1) == 0 )
+  if ( (byte_4AB1AF4 & 1) == 0 )
   {
-    sub_1B90010(&Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__, method);
-    byte_4A6BD0E = 1;
+    sub_1BAB41C(&Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__, method);
+    byte_4AB1AF4 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_PartyOrganizationConfirmDeckMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     PartyOrganizationConfirmDeckMenu__Callback(this, 1, v5);
   }
@@ -410,94 +410,94 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Open(
   UILabel_o *v164; // x20
   NpcServantFollowerEntity_o *npcServantFollowerEntity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4A6BD0C & 1) == 0 )
+  if ( (byte_4AB1AF2 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B90010(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v9);
-    sub_1B90010(&DataManager_TypeInfo, v10);
-    sub_1B90010(&LocalizationManager_TypeInfo, v11);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
-    sub_1B90010(&Method_PartyOrganizationConfirmDeckMenu_EndOpen__, v13);
-    sub_1B90010(&StringLiteral_10211/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_MESSAGE"*/, v14);
-    sub_1B90010(&StringLiteral_10148/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_TITLE"*/, v15);
-    sub_1B90010(&StringLiteral_10191/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_MESSAGE"*/, v16);
-    sub_1B90010(&StringLiteral_10245/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_TITLE"*/, v17);
-    sub_1B90010(&StringLiteral_10166/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_CLOSE"*/, v18);
-    sub_1B90010(&StringLiteral_10193/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_CANCEL"*/, v19);
-    sub_1B90010(&StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_CANCEL"*/, v20);
-    sub_1B90010(&StringLiteral_10165/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, v21);
-    sub_1B90010(&StringLiteral_10238/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_MESSAGE"*/, v22);
-    sub_1B90010(&StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_MESSAGE"*/, v23);
-    sub_1B90010(&StringLiteral_10147/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_MESSAGE"*/, v24);
-    sub_1B90010(&StringLiteral_10149/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_CANCEL"*/, v25);
-    sub_1B90010(&StringLiteral_10237/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_CLOSE"*/, v26);
-    sub_1B90010(&StringLiteral_10152/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_TITLE"*/, v27);
-    sub_1B90010(&StringLiteral_10203/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_DECIDE"*/, v28);
-    sub_1B90010(&StringLiteral_10221/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_TITLE"*/, v29);
-    sub_1B90010(&StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_TITLE"*/, v30);
-    sub_1B90010(&StringLiteral_10239/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_TITLE"*/, v31);
-    sub_1B90010(&StringLiteral_10214/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_MESSAGE"*/, v32);
-    sub_1B90010(&StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_MESSAGE"*/, v33);
-    sub_1B90010(&StringLiteral_10184/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_DECIDE"*/, v34);
-    sub_1B90010(&StringLiteral_10205/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_TITLE"*/, v35);
-    sub_1B90010(&StringLiteral_10159/*"PARTY_ORGANIZATION_CONFIRM_COST_OVERT_TITLE"*/, v36);
-    sub_1B90010(&StringLiteral_10234/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_CLOSE"*/, v37);
-    sub_1B90010(&StringLiteral_10206/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_CANCEL"*/, v38);
-    sub_1B90010(&StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_MESSAGE"*/, v39);
-    sub_1B90010(&StringLiteral_10243/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_CLOSE"*/, v40);
-    sub_1B90010(&StringLiteral_10240/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_CLOSE"*/, v41);
-    sub_1B90010(&StringLiteral_10179/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_TITLE"*/, v42);
-    sub_1B90010(&StringLiteral_10242/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_TITLE"*/, v43);
-    sub_1B90010(&StringLiteral_10216/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_CLOSE"*/, v44);
-    sub_1B90010(&StringLiteral_10180/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_CLOSE"*/, v45);
-    sub_1B90010(&StringLiteral_10207/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_DECIDE"*/, v46);
-    sub_1B90010(&StringLiteral_10236/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_TITLE"*/, v47);
-    sub_1B90010(&StringLiteral_10168/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_TITLE"*/, v48);
-    sub_1B90010(&StringLiteral_10163/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_DECIDE"*/, v49);
-    sub_1B90010(&StringLiteral_10181/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_MESSAGE"*/, v50);
-    sub_1B90010(&StringLiteral_10146/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_CLOSE"*/, v51);
-    sub_1B90010(&StringLiteral_10213/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_CLOSE"*/, v52);
-    sub_1B90010(&StringLiteral_10235/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_MESSAGE"*/, v53);
-    sub_1B90010(&StringLiteral_10160/*"PARTY_ORGANIZATION_CONFIRM_COST_OVER_CLOSE"*/, v54);
-    sub_1B90010(&StringLiteral_10194/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_DECIDE"*/, v55);
-    sub_1B90010(&StringLiteral_10241/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v56);
-    sub_1B90010(&StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_CANCEL"*/, v57);
-    sub_1B90010(&StringLiteral_10208/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v58);
-    sub_1B90010(&StringLiteral_10220/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_MESSAGE"*/, v59);
-    sub_1B90010(&StringLiteral_10192/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_TITLE"*/, v60);
-    sub_1B90010(&StringLiteral_10219/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_CLOSE"*/, v61);
-    sub_1B90010(&StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_TITLE"*/, v62);
-    sub_1B90010(&StringLiteral_10167/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_MESSAGE"*/, v63);
-    sub_1B90010(&StringLiteral_10204/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_MESSAGE"*/, v64);
-    sub_1B90010(&StringLiteral_10218/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_TITLE"*/, v65);
-    sub_1B90010(&StringLiteral_10150/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_DECIDE"*/, v66);
-    sub_1B90010(&StringLiteral_10209/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_TITLE"*/, v67);
-    sub_1B90010(&StringLiteral_10175/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_CANCEL"*/, v68);
-    sub_1B90010(&StringLiteral_10178/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_NAME"*/, v69);
-    sub_1B90010(&StringLiteral_10190/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_DECIDE"*/, v70);
-    sub_1B90010(&StringLiteral_10161/*"PARTY_ORGANIZATION_CONFIRM_COST_OVER_MESSAGE"*/, v71);
-    sub_1B90010(&StringLiteral_10210/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_CLOSE"*/, v72);
-    sub_1B90010(&StringLiteral_10176/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_DECIDE"*/, v73);
-    sub_1B90010(&StringLiteral_10162/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_CANCEL"*/, v74);
-    sub_1B90010(&StringLiteral_10182/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_TITLE"*/, v75);
-    sub_1B90010(&StringLiteral_10196/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_MESSAGE"*/, v76);
-    sub_1B90010(&StringLiteral_10195/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_CLOSE"*/, v77);
-    sub_1B90010(&StringLiteral_10183/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_CANCEL"*/, v78);
-    sub_1B90010(&StringLiteral_10177/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_MESSAGE"*/, v79);
-    sub_1B90010(&StringLiteral_10244/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_MESSAGE"*/, v80);
-    sub_1B90010(&StringLiteral_10215/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_TITLE"*/, v81);
-    sub_1B90010(&StringLiteral_1/*""*/, v82);
-    sub_1B90010(&StringLiteral_10212/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_TITLE"*/, v83);
-    sub_1B90010(&StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_TITLE"*/, v84);
-    sub_1B90010(&StringLiteral_10151/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_MESSAGE"*/, v85);
-    sub_1B90010(&StringLiteral_10164/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_MESSAGE"*/, v86);
-    byte_4A6BD0C = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1BAB41C(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v9);
+    sub_1BAB41C(&DataManager_TypeInfo, v10);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v11);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
+    sub_1BAB41C(&Method_PartyOrganizationConfirmDeckMenu_EndOpen__, v13);
+    sub_1BAB41C(&StringLiteral_10211/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_MESSAGE"*/, v14);
+    sub_1BAB41C(&StringLiteral_10148/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_TITLE"*/, v15);
+    sub_1BAB41C(&StringLiteral_10191/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_MESSAGE"*/, v16);
+    sub_1BAB41C(&StringLiteral_10245/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_TITLE"*/, v17);
+    sub_1BAB41C(&StringLiteral_10166/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_CLOSE"*/, v18);
+    sub_1BAB41C(&StringLiteral_10193/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_CANCEL"*/, v19);
+    sub_1BAB41C(&StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_CANCEL"*/, v20);
+    sub_1BAB41C(&StringLiteral_10165/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, v21);
+    sub_1BAB41C(&StringLiteral_10238/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_MESSAGE"*/, v22);
+    sub_1BAB41C(&StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_MESSAGE"*/, v23);
+    sub_1BAB41C(&StringLiteral_10147/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_MESSAGE"*/, v24);
+    sub_1BAB41C(&StringLiteral_10149/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_CANCEL"*/, v25);
+    sub_1BAB41C(&StringLiteral_10237/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_CLOSE"*/, v26);
+    sub_1BAB41C(&StringLiteral_10152/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_TITLE"*/, v27);
+    sub_1BAB41C(&StringLiteral_10203/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_DECIDE"*/, v28);
+    sub_1BAB41C(&StringLiteral_10221/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_TITLE"*/, v29);
+    sub_1BAB41C(&StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_TITLE"*/, v30);
+    sub_1BAB41C(&StringLiteral_10239/*"PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_TITLE"*/, v31);
+    sub_1BAB41C(&StringLiteral_10214/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_MESSAGE"*/, v32);
+    sub_1BAB41C(&StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_MESSAGE"*/, v33);
+    sub_1BAB41C(&StringLiteral_10184/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_DECIDE"*/, v34);
+    sub_1BAB41C(&StringLiteral_10205/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_TITLE"*/, v35);
+    sub_1BAB41C(&StringLiteral_10159/*"PARTY_ORGANIZATION_CONFIRM_COST_OVERT_TITLE"*/, v36);
+    sub_1BAB41C(&StringLiteral_10234/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_CLOSE"*/, v37);
+    sub_1BAB41C(&StringLiteral_10206/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_CANCEL"*/, v38);
+    sub_1BAB41C(&StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_MESSAGE"*/, v39);
+    sub_1BAB41C(&StringLiteral_10243/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_CLOSE"*/, v40);
+    sub_1BAB41C(&StringLiteral_10240/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_CLOSE"*/, v41);
+    sub_1BAB41C(&StringLiteral_10179/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_TITLE"*/, v42);
+    sub_1BAB41C(&StringLiteral_10242/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_TITLE"*/, v43);
+    sub_1BAB41C(&StringLiteral_10216/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_CLOSE"*/, v44);
+    sub_1BAB41C(&StringLiteral_10180/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_CLOSE"*/, v45);
+    sub_1BAB41C(&StringLiteral_10207/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_DECIDE"*/, v46);
+    sub_1BAB41C(&StringLiteral_10236/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_TITLE"*/, v47);
+    sub_1BAB41C(&StringLiteral_10168/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_TITLE"*/, v48);
+    sub_1BAB41C(&StringLiteral_10163/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_DECIDE"*/, v49);
+    sub_1BAB41C(&StringLiteral_10181/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_MESSAGE"*/, v50);
+    sub_1BAB41C(&StringLiteral_10146/*"PARTY_ORGANIZATION_CONFIRM_ALLOUT_BATTLE_SERVANT_CLOSE"*/, v51);
+    sub_1BAB41C(&StringLiteral_10213/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_CLOSE"*/, v52);
+    sub_1BAB41C(&StringLiteral_10235/*"PARTY_ORGANIZATION_CONFIRM_START_LEAVE_SERVANT_MESSAGE"*/, v53);
+    sub_1BAB41C(&StringLiteral_10160/*"PARTY_ORGANIZATION_CONFIRM_COST_OVER_CLOSE"*/, v54);
+    sub_1BAB41C(&StringLiteral_10194/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_DECIDE"*/, v55);
+    sub_1BAB41C(&StringLiteral_10241/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v56);
+    sub_1BAB41C(&StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_CANCEL"*/, v57);
+    sub_1BAB41C(&StringLiteral_10208/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v58);
+    sub_1BAB41C(&StringLiteral_10220/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_MESSAGE"*/, v59);
+    sub_1BAB41C(&StringLiteral_10192/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_TITLE"*/, v60);
+    sub_1BAB41C(&StringLiteral_10219/*"PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_CLOSE"*/, v61);
+    sub_1BAB41C(&StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_TITLE"*/, v62);
+    sub_1BAB41C(&StringLiteral_10167/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_MESSAGE"*/, v63);
+    sub_1BAB41C(&StringLiteral_10204/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_MESSAGE"*/, v64);
+    sub_1BAB41C(&StringLiteral_10218/*"PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_TITLE"*/, v65);
+    sub_1BAB41C(&StringLiteral_10150/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_DECIDE"*/, v66);
+    sub_1BAB41C(&StringLiteral_10209/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_TITLE"*/, v67);
+    sub_1BAB41C(&StringLiteral_10175/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_CANCEL"*/, v68);
+    sub_1BAB41C(&StringLiteral_10178/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_NAME"*/, v69);
+    sub_1BAB41C(&StringLiteral_10190/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_EQUIP_DECIDE"*/, v70);
+    sub_1BAB41C(&StringLiteral_10161/*"PARTY_ORGANIZATION_CONFIRM_COST_OVER_MESSAGE"*/, v71);
+    sub_1BAB41C(&StringLiteral_10210/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_CLOSE"*/, v72);
+    sub_1BAB41C(&StringLiteral_10176/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_DECIDE"*/, v73);
+    sub_1BAB41C(&StringLiteral_10162/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_CANCEL"*/, v74);
+    sub_1BAB41C(&StringLiteral_10182/*"PARTY_ORGANIZATION_CONFIRM_LEAVE_SERVANT_TITLE"*/, v75);
+    sub_1BAB41C(&StringLiteral_10196/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_MESSAGE"*/, v76);
+    sub_1BAB41C(&StringLiteral_10195/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_CLOSE"*/, v77);
+    sub_1BAB41C(&StringLiteral_10183/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_ALL_CANCEL"*/, v78);
+    sub_1BAB41C(&StringLiteral_10177/*"PARTY_ORGANIZATION_CONFIRM_INIT_ALL_MESSAGE"*/, v79);
+    sub_1BAB41C(&StringLiteral_10244/*"PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_MESSAGE"*/, v80);
+    sub_1BAB41C(&StringLiteral_10215/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_TITLE"*/, v81);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v82);
+    sub_1BAB41C(&StringLiteral_10212/*"PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_TITLE"*/, v83);
+    sub_1BAB41C(&StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_TITLE"*/, v84);
+    sub_1BAB41C(&StringLiteral_10151/*"PARTY_ORGANIZATION_CONFIRM_CANCEL_MESSAGE"*/, v85);
+    sub_1BAB41C(&StringLiteral_10164/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_MESSAGE"*/, v86);
+    byte_4AB1AF2 = 1;
   }
   npcServantFollowerEntity = 0LL;
   if ( (this->fields.state | 4) != 4 )
     return;
   this->fields.callbackFunc = callback;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)partyItem,
@@ -508,7 +508,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Open(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+  gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___);
   memberObjectList = this->fields.memberObjectList;
   if ( !memberObjectList )
     goto LABEL_24;
@@ -530,7 +530,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu__Open(
     SvtId = PartyOrganizationListViewItem__get_SvtId((PartyOrganizationListViewItem_o *)gameObject, v88);
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(
+    gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(
                                                SvtId,
                                                0LL);
     if ( !v90 )
@@ -559,7 +559,7 @@ LABEL_19:
     if ( v98 )
     {
       if ( (unsigned int)v91 >= v98->max_length )
-        sub_1B90274(gameObject, v88);
+        sub_1BAB680(gameObject, v88);
       v99 = v98->m_Items[v91];
       if ( v99 )
       {
@@ -666,7 +666,7 @@ LABEL_46:
       }
     }
 LABEL_24:
-    sub_1B9026C(gameObject, v88);
+    sub_1BAB678(gameObject, v88);
   }
 LABEL_47:
   gameObject = (UnityEngine_GameObject_o *)this->fields.nameLabel;
@@ -1094,7 +1094,7 @@ LABEL_168:
       UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
 LABEL_170:
       this->fields.state = 1;
-      v156 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v156 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       System_Action___ctor(v156, (Il2CppObject *)this, Method_PartyOrganizationConfirmDeckMenu_EndOpen__, 0LL);
       BaseDialog__Open((BaseDialog_o *)this, v156, 0, 0LL);
       break;
@@ -1183,10 +1183,10 @@ void __fastcall PartyOrganizationConfirmDeckMenu__add_callbackFunc(
   PartyOrganizationConfirmDeckMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A6BD09 & 1) == 0 )
+  if ( (byte_4AB1AEF & 1) == 0 )
   {
-    sub_1B90010(&PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6BD09 = 1;
+    sub_1BAB41C(&PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB1AEF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1199,13 +1199,13 @@ void __fastcall PartyOrganizationConfirmDeckMenu__add_callbackFunc(
       if ( (PartyOrganizationConfirmDeckMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmDeckMenu_o *)sub_1B9052C(v8);
+  v11 = (PartyOrganizationConfirmDeckMenu_o *)sub_1BAB938(v8);
   PartyOrganizationConfirmDeckMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1224,10 +1224,10 @@ void __fastcall PartyOrganizationConfirmDeckMenu__remove_callbackFunc(
   PartyOrganizationConfirmDeckMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A6BD0A & 1) == 0 )
+  if ( (byte_4AB1AF0 & 1) == 0 )
   {
-    sub_1B90010(&PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6BD0A = 1;
+    sub_1BAB41C(&PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB1AF0 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1240,13 +1240,13 @@ void __fastcall PartyOrganizationConfirmDeckMenu__remove_callbackFunc(
       if ( (PartyOrganizationConfirmDeckMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmDeckMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmDeckMenu_o *)sub_1B9052C(v8);
+  v11 = (PartyOrganizationConfirmDeckMenu_o *)sub_1BAB938(v8);
   PartyOrganizationConfirmDeckMenu__Init(v11, v12);
 }
 
@@ -1269,15 +1269,15 @@ void __fastcall PartyOrganizationConfirmDeckMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) == 0 )
+  if ( (sub_1BAB4DC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v10, 0LL);
+      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1289,9 +1289,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D03A0;
+  this->fields.m_target = (Il2CppObject *)sub_19E9334;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D0358;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19E92EC;
 }
 
 
@@ -1307,14 +1307,14 @@ System_IAsyncResult_o *__fastcall PartyOrganizationConfirmDeckMenu_CallbackFunc_
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4A6BD12 & 1) == 0 )
+  if ( (byte_4AB1AF8 & 1) == 0 )
   {
-    sub_1B90010(&bool_TypeInfo, result);
-    byte_4A6BD12 = 1;
+    sub_1BAB41C(&bool_TypeInfo, result);
+    byte_4AB1AF8 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
 }
 
 
@@ -1323,7 +1323,7 @@ void __fastcall PartyOrganizationConfirmDeckMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

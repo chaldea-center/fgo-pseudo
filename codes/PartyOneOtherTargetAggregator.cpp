@@ -15,18 +15,18 @@ System_Int32_array *__fastcall PartyOneOtherTargetAggregator__GetCandidate(
   System_Func_int__bool__o *v7; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4A72B3C & 1) == 0 )
+  if ( (byte_4AB8A62 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Linq_Enumerable_ToArray_int___, method);
-    sub_1B90010(&Method_System_Linq_Enumerable_Where_int___, v3);
-    sub_1B90010(&System_Func_int__bool__TypeInfo, v4);
-    sub_1B90010(&Method_PartyOneOtherTargetAggregator__GetCandidate_b__0_0__, v5);
-    byte_4A72B3C = 1;
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_int___, method);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Where_int___, v3);
+    sub_1BAB41C(&System_Func_int__bool__TypeInfo, v4);
+    sub_1BAB41C(&Method_PartyOneOtherTargetAggregator__GetCandidate_b__0_0__, v5);
+    byte_4AB8A62 = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)PartyAllFieldTargetAggregator__GetCandidate(
                                                                      (PartyAllFieldTargetAggregator_o *)this,
                                                                      method);
-  v7 = (System_Func_int__bool__o *)sub_1B9025C(System_Func_int__bool__TypeInfo);
+  v7 = (System_Func_int__bool__o *)sub_1BAB668(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v7,
     (Il2CppObject *)this,
@@ -35,10 +35,10 @@ System_Int32_array *__fastcall PartyOneOtherTargetAggregator__GetCandidate(
   v8 = System_Linq_Enumerable__Where_int_(
          Candidate,
          (System_Func_TSource__bool__o *)v7,
-         (const MethodInfo_2ECC658 *)Method_System_Linq_Enumerable_Where_int___);
+         (const MethodInfo_2F02860 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v8,
-           (const MethodInfo_2EC6DFC *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_2EFCF54 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -51,6 +51,6 @@ bool __fastcall PartyOneOtherTargetAggregator___GetCandidate_b__0_0(
 
   args = this->fields.args;
   if ( !args )
-    sub_1B9026C(this, x);
+    sub_1BAB678(this, x);
   return args->fields._ptTargetId_k__BackingField != x;
 }

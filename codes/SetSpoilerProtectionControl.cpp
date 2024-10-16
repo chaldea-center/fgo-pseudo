@@ -16,13 +16,13 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
   UILabel_o *infoLabel; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4A6B416 & 1) == 0 )
+  if ( (byte_4AB126A & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&OptionManager_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_9710/*"OPTION_SPOILER_PROTECTION_INFO"*/, v4);
-    sub_1B90010(&StringLiteral_9711/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v5);
-    byte_4A6B416 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&OptionManager_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_9710/*"OPTION_SPOILER_PROTECTION_INFO"*/, v4);
+    sub_1BAB41C(&StringLiteral_9711/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v5);
+    byte_4AB126A = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -34,7 +34,7 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
         v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9710/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
         !infoLabel) )
   {
-    sub_1B9026C(v7, v8);
+    sub_1BAB678(v7, v8);
   }
   UILabel__set_text(infoLabel, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -54,16 +54,16 @@ void __fastcall SetSpoilerProtectionControl__OnClickSpoilerProtection(
   int v6; // w20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A6B419 & 1) == 0 )
+  if ( (byte_4AB126D & 1) == 0 )
   {
-    sub_1B90010(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__, method);
-    byte_4A6B419 = 1;
+    sub_1BAB41C(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__, method);
+    byte_4AB126D = 1;
   }
   v3 = Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__;
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( (*((_BYTE *)Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B90028(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BAB434(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
   v6 = !isSpoilerSetting;
   OverwriteAssetSoundName__PlaySystemSe(v5, v6, 0LL);
   this->fields.isSpoilerSetting = v6;
@@ -75,10 +75,10 @@ void __fastcall SetSpoilerProtectionControl__Reflection(SetSpoilerProtectionCont
 {
   _BOOL4 isSpoilerSetting; // w19
 
-  if ( (byte_4A6B418 & 1) == 0 )
+  if ( (byte_4AB126C & 1) == 0 )
   {
-    sub_1B90010(&OptionManager_TypeInfo, method);
-    byte_4A6B418 = 1;
+    sub_1BAB41C(&OptionManager_TypeInfo, method);
+    byte_4AB126C = 1;
   }
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -95,18 +95,18 @@ void __fastcall SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(
   UIButton_o *settingBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4A6B417 & 1) == 0 )
+  if ( (byte_4AB126B & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_17551/*"btn_on"*/, method);
-    sub_1B90010(&StringLiteral_17550/*"btn_off"*/, v3);
-    byte_4A6B417 = 1;
+    sub_1BAB41C(&StringLiteral_17556/*"btn_on"*/, method);
+    sub_1BAB41C(&StringLiteral_17555/*"btn_off"*/, v3);
+    byte_4AB126B = 1;
   }
   settingBtn = this->fields.settingBtn;
   if ( !settingBtn )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   if ( this->fields.isSpoilerSetting )
-    v5 = &StringLiteral_17550/*"btn_off"*/;
+    v5 = &StringLiteral_17555/*"btn_off"*/;
   else
-    v5 = &StringLiteral_17551/*"btn_on"*/;
+    v5 = &StringLiteral_17556/*"btn_on"*/;
   UIButton__set_normalSprite(settingBtn, (System_String_o *)*v5, 0LL);
 }

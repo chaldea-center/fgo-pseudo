@@ -19,37 +19,37 @@ UnityEngine_GameObject_o *__fastcall EventInfoSubmarineItemCounterCotrol__Create
   __int64 v10; // x1
   UnityEngine_Object_o *name; // x0
 
-  if ( (byte_4A7152B & 1) == 0 )
+  if ( (byte_4AB734C & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B90010(&StringLiteral_696/*"("*/, v6);
-    sub_1B90010(&StringLiteral_814/*")"*/, v7);
-    byte_4A7152B = 1;
+    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_691/*"("*/, v6);
+    sub_1BAB41C(&StringLiteral_809/*")"*/, v7);
+    byte_4AB734C = 1;
   }
   baseItemPrefab = (Il2CppObject *)this->fields.baseItemPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__Instantiate_object_(
          baseItemPrefab,
-         (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0LL, 0LL) )
   {
     name = (UnityEngine_Object_o *)this->fields.baseItemPrefab;
     if ( !name
       || (name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0LL), !ent)
-      || (name = (UnityEngine_Object_o *)System_String__Concat_61800356(
+      || (name = (UnityEngine_Object_o *)System_String__Concat_62061392(
                                            (System_String_o *)name,
-                                           (System_String_o *)StringLiteral_696/*"("*/,
+                                           (System_String_o *)StringLiteral_691/*"("*/,
                                            ent->fields.value,
-                                           (System_String_o *)StringLiteral_814/*")"*/,
+                                           (System_String_o *)StringLiteral_809/*")"*/,
                                            0LL),
           !v9) )
     {
-      sub_1B9026C(name, v10);
+      sub_1BAB678(name, v10);
     }
     UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)name, 0LL);
-    GameObjectExtensions__SafeSetParent_33776688((UnityEngine_GameObject_o *)v9, this->fields.rootObject, 0LL);
+    GameObjectExtensions__SafeSetParent_34025648((UnityEngine_GameObject_o *)v9, this->fields.rootObject, 0LL);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
   }
   return (UnityEngine_GameObject_o *)v9;
@@ -71,22 +71,22 @@ EventInfoSubmarineItemCounterCotrol_ItemData_o *__fastcall EventInfoSubmarineIte
   struct System_Collections_Generic_List_EventInfoSubmarineItemCounterCotrol_ItemData__o *itemDataList; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4A7152C & 1) == 0 )
+  if ( (byte_4AB734D & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterCotrol_ItemData__Find__,
       *(_QWORD *)&itemId);
-    sub_1B90010(&System_Predicate_EventInfoSubmarineItemCounterCotrol_ItemData__TypeInfo, v5);
-    sub_1B90010(&Method_EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0__GetItemData_b__0__, v6);
-    sub_1B90010(&EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0_TypeInfo, v7);
-    byte_4A7152C = 1;
+    sub_1BAB41C(&System_Predicate_EventInfoSubmarineItemCounterCotrol_ItemData__TypeInfo, v5);
+    sub_1BAB41C(&Method_EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0__GetItemData_b__0__, v6);
+    sub_1BAB41C(&EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0_TypeInfo, v7);
+    byte_4AB734D = 1;
   }
-  v8 = sub_1B9025C(EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0_TypeInfo);
+  v8 = sub_1BAB668(EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_DWORD *)(v8 + 16) = itemId,
         itemDataList = this->fields.itemDataList,
-        v12 = (System_Predicate_object__o *)sub_1B9025C(System_Predicate_EventInfoSubmarineItemCounterCotrol_ItemData__TypeInfo),
+        v12 = (System_Predicate_object__o *)sub_1BAB668(System_Predicate_EventInfoSubmarineItemCounterCotrol_ItemData__TypeInfo),
         System_Predicate_object____ctor(
           v12,
           (Il2CppObject *)v8,
@@ -94,12 +94,12 @@ EventInfoSubmarineItemCounterCotrol_ItemData_o *__fastcall EventInfoSubmarineIte
           0LL),
         !itemDataList) )
   {
-    sub_1B9026C(v9, v10);
+    sub_1BAB678(v9, v10);
   }
   return (EventInfoSubmarineItemCounterCotrol_ItemData_o *)System_Collections_Generic_List_object___Find(
                                                              (System_Collections_Generic_List_object__o *)itemDataList,
                                                              (System_Predicate_T__o *)v12,
-                                                             (const MethodInfo_3511028 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterCotrol_ItemData__Find__);
+                                                             (const MethodInfo_354DF24 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterCotrol_ItemData__Find__);
 }
 
 
@@ -118,26 +118,26 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Initialization(
   System_Action_o *v11; // x21
 
   v4 = this;
-  if ( (byte_4A71528 & 1) == 0 )
+  if ( (byte_4AB7349 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, entity);
-    sub_1B90010(&Method_EventInfoSubmarineItemCounterCotrol__Initialization_b__9_0__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent___ctor__, v6);
-    this = (EventInfoSubmarineItemCounterCotrol_o *)sub_1B90010(
+    sub_1BAB41C(&System_Action_TypeInfo, entity);
+    sub_1BAB41C(&Method_EventInfoSubmarineItemCounterCotrol__Initialization_b__9_0__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent___ctor__, v6);
+    this = (EventInfoSubmarineItemCounterCotrol_o *)sub_1BAB41C(
                                                       &System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__TypeInfo,
                                                       v7);
-    byte_4A71528 = 1;
+    byte_4AB7349 = 1;
   }
   if ( !entity )
-    sub_1B9026C(this, entity);
+    sub_1BAB678(this, entity);
   v4->fields.eventId = entity->fields.eventId;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent___ctor__);
   v4->fields.itemCompnentList = (struct System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__o *)v8;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v4->fields.itemCompnentList, (int32_t)v8, v9, v10);
-  v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields.itemCompnentList, (int32_t)v8, v9, v10);
+  v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v11,
     (Il2CppObject *)v4,
@@ -157,29 +157,29 @@ bool __fastcall EventInfoSubmarineItemCounterCotrol__IsMainInterlude(
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A7152D & 1) == 0 )
+  if ( (byte_4AB734E & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_EventDetailMaster___, method);
-    sub_1B90010(&DataManager_TypeInfo, v3);
-    sub_1B90010(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v4);
-    byte_4A7152D = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_EventDetailMaster___, method);
+    sub_1BAB41C(&DataManager_TypeInfo, v3);
+    sub_1BAB41C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v4);
+    byte_4AB734E = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           this->fields.eventId,
-          (const MethodInfo_312C5FC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_3163DE4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
 LABEL_11:
-    sub_1B9026C(Master_object, v6);
+    sub_1BAB678(Master_object, v6);
   return EventDetailEntity__IsMainInterlude((EventDetailEntity_o *)entity, 0LL);
 }
 
@@ -210,7 +210,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__PlayAnim(
   else
   {
     v7 = EventInfoSubmarineItemCounterCotrol__PlayCountAnim(this, callback, v6);
-    UnityEngine_MonoBehaviour__StartCoroutine_69524712((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
   }
 }
 
@@ -226,18 +226,18 @@ System_Collections_IEnumerator_o *__fastcall EventInfoSubmarineItemCounterCotrol
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A7152A & 1) == 0 )
+  if ( (byte_4AB734B & 1) == 0 )
   {
-    sub_1B90010(&EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_TypeInfo, callback);
-    byte_4A7152A = 1;
+    sub_1BAB41C(&EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_TypeInfo, callback);
+    byte_4AB734B = 1;
   }
-  v5 = sub_1B9025C(EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_TypeInfo);
+  v5 = sub_1BAB668(EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)callback, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)callback, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -286,20 +286,20 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
   __int64 v41; // x8
   UILabel_o *titleLabel; // x19
 
-  if ( (byte_4A71529 & 1) == 0 )
+  if ( (byte_4AB734A & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___, entitys);
-    sub_1B90010(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___, v5);
-    sub_1B90010(&System_Func_EventUiValueEntity__int__TypeInfo, v6);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_EventInfoSubmarineItemCounterComponent___, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__Add__, v8);
-    sub_1B90010(&LocalizationManager_TypeInfo, v9);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B90010(&Method_EventInfoSubmarineItemCounterCotrol___c__Setup_b__10_0__, v11);
-    sub_1B90010(&EventInfoSubmarineItemCounterCotrol___c_TypeInfo, v12);
-    sub_1B90010(&StringLiteral_5720/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, v13);
-    sub_1B90010(&StringLiteral_19220/*"event_itembase"*/, v14);
-    byte_4A71529 = 1;
+    sub_1BAB41C(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___, entitys);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___, v5);
+    sub_1BAB41C(&System_Func_EventUiValueEntity__int__TypeInfo, v6);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_EventInfoSubmarineItemCounterComponent___, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__Add__, v8);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v9);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BAB41C(&Method_EventInfoSubmarineItemCounterCotrol___c__Setup_b__10_0__, v11);
+    sub_1BAB41C(&EventInfoSubmarineItemCounterCotrol___c_TypeInfo, v12);
+    sub_1BAB41C(&StringLiteral_5721/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, v13);
+    sub_1BAB41C(&StringLiteral_19223/*"event_itembase"*/, v14);
+    byte_4AB734A = 1;
   }
   if ( entitys )
   {
@@ -311,7 +311,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
       EventInfoUIBase__SetSpriteByLocalAtlas(
         (EventInfoUIBase_o *)this,
         this->fields.bgSprite,
-        (System_String_o *)StringLiteral_19220/*"event_itembase"*/,
+        (System_String_o *)StringLiteral_19223/*"event_itembase"*/,
         0LL);
       if ( *(_QWORD *)&entitys->max_length )
       {
@@ -330,7 +330,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
             v16 = EventInfoSubmarineItemCounterCotrol___c_TypeInfo;
           }
           v18 = (Il2CppObject *)v16->static_fields->__9;
-          _9__10_0 = (System_Func_object__int__o *)sub_1B9025C(System_Func_EventUiValueEntity__int__TypeInfo);
+          _9__10_0 = (System_Func_object__int__o *)sub_1BAB668(System_Func_EventUiValueEntity__int__TypeInfo);
           System_Func_object__int____ctor(
             _9__10_0,
             v18,
@@ -338,15 +338,15 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
             0LL);
           static_fields = EventInfoSubmarineItemCounterCotrol___c_TypeInfo->static_fields;
           static_fields->__9__10_0 = (struct System_Func_EventUiValueEntity__int__o *)_9__10_0;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v20, v21);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v20, v21);
         }
         v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                      (System_Collections_Generic_IEnumerable_TSource__o *)entitys,
                                                                      (System_Func_TSource__TKey__o *)_9__10_0,
-                                                                     (const MethodInfo_2EB8C70 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+                                                                     (const MethodInfo_2EEE1FC *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
         ItemData = System_Linq_Enumerable__ToArray_object_(
                      v22,
-                     (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+                     (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
         if ( !ItemData )
           goto LABEL_40;
         v26 = *((_DWORD *)ItemData + 6);
@@ -357,7 +357,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
           while ( 1 )
           {
             if ( v28 >= v26 )
-              sub_1B90274(ItemData, v24);
+              sub_1BAB680(ItemData, v24);
             v29 = (EventUiValueEntity_o *)*((_QWORD *)v27 + (int)v28 + 4);
             if ( !v29 )
               break;
@@ -374,7 +374,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
                 if ( !ItemData )
                   break;
                 v33 = (EventInfoSubmarineItemCounterCotrol_ItemData_o *)ItemData;
-                GameObjectExtensions__SetLocalPosition_33770636(
+                GameObjectExtensions__SetLocalPosition_34019596(
                   (UnityEngine_GameObject_o *)ItemObject,
                   *(UnityEngine_Vector2_o *)((char *)ItemData + 20),
                   0LL);
@@ -382,7 +382,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
                   break;
                 Component_object = UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)ItemObject,
-                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSubmarineItemCounterComponent___);
+                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSubmarineItemCounterComponent___);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 ItemData = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -409,14 +409,14 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
                     System_Collections_Generic_List_object___AddWithResize(
                       (System_Collections_Generic_List_object__o *)ItemData,
                       Component_object,
-                      *(const MethodInfo_35109C0 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+                      *(const MethodInfo_354D8BC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v41 = v38 + 8 * v40;
                     *((_DWORD *)ItemData + 6) = v40 + 1;
                     *(_QWORD *)(v41 + 32) = Component_object;
-                    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v41 + 32), (int32_t)Component_object, v36, v37);
+                    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v41 + 32), (int32_t)Component_object, v36, v37);
                   }
                 }
               }
@@ -426,13 +426,13 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
               goto LABEL_35;
           }
 LABEL_40:
-          sub_1B9026C(ItemData, v24);
+          sub_1BAB678(ItemData, v24);
         }
 LABEL_35:
         titleLabel = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        ItemData = LocalizationManager__Get((System_String_o *)StringLiteral_5720/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, 0LL);
+        ItemData = LocalizationManager__Get((System_String_o *)StringLiteral_5721/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_40;
         UILabel__set_text(titleLabel, (System_String_o *)ItemData, 0LL);
@@ -517,21 +517,21 @@ bool __fastcall EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12__MoveNe
 
   v31 = this;
   v2 = this;
-  if ( (byte_4A7152F & 1) == 0 )
+  if ( (byte_4AB7350 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__,
       method);
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__MoveNext__,
       v3);
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__get_Current__,
       v4);
-    this = (EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_o *)sub_1B90010(
+    this = (EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_o *)sub_1BAB41C(
                                                                            &Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__GetEnumerator__,
                                                                            v5);
-    byte_4A7152F = 1;
+    byte_4AB7350 = 1;
   }
   memset(&i, 0, sizeof(i));
   v28 = 0LL;
@@ -544,61 +544,61 @@ bool __fastcall EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12__MoveNe
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1B9026C(this, method);
+      sub_1BAB678(this, method);
     itemCompnentList = (System_Collections_Generic_List_object__o *)_4__this->fields.itemCompnentList;
     if ( !itemCompnentList )
-      sub_1B9026C(0LL, method);
+      sub_1BAB678(0LL, method);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v27,
       itemCompnentList,
-      (const MethodInfo_35114B8 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__GetEnumerator__);
+      (const MethodInfo_354E3B4 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__GetEnumerator__);
     for ( i = v27;
           System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_328A150 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__MoveNext__);
+            (const MethodInfo_32C4C78 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__MoveNext__);
           EventInfoSubmarineItemCounterComponent__PlayAnimation(
             (EventInfoSubmarineItemCounterComponent_o *)i.fields._current,
             v9) )
     {
       if ( !i.fields._current )
-        sub_1B9026C(0LL, v9);
+        sub_1BAB678(0LL, v9);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &i,
-      (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__);
+      (const MethodInfo_32C4C74 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__);
     v11 = (System_Collections_Generic_List_object__o *)_4__this->fields.itemCompnentList;
     if ( !v11 )
-      sub_1B9026C(0LL, v10);
+      sub_1BAB678(0LL, v10);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v26,
       v11,
-      (const MethodInfo_35114B8 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__GetEnumerator__);
+      (const MethodInfo_354E3B4 *)Method_System_Collections_Generic_List_EventInfoSubmarineItemCounterComponent__GetEnumerator__);
     v12 = v31;
     v13 = *(_OWORD *)&v26.fields._list;
     p__7__wrap1 = &v31->fields.__7__wrap1;
     v27 = v26;
     v31->fields.__7__wrap1.fields._current = (struct EventInfoSubmarineItemCounterComponent_o *)v26.fields._current;
     *(_OWORD *)&v12->fields.__7__wrap1.fields._list = v13;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p__7__wrap1, 0, v15, v16);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p__7__wrap1, 0, v15, v16);
     v2 = v31;
   }
   v2->fields.__1__state = -3;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-            (const MethodInfo_328A150 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__MoveNext__) )
+            (const MethodInfo_32C4C78 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__MoveNext__) )
   {
     current = v31->fields.__7__wrap1.fields._current;
     if ( !current )
-      sub_1B9026C(v31, v17);
+      sub_1BAB678(v31, v17);
     countLabel = current->fields.countLabel;
     if ( !countLabel )
-      sub_1B9026C(0LL, v17);
+      sub_1BAB678(0LL, v17);
     IsAnimFinished = UICounterLabel__get_IsAnimFinished(countLabel, 0LL);
     v2 = v31;
     if ( !IsAnimFinished )
     {
       v31->fields.__2__current = 0LL;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v2->fields.__2__current, 0, v21, v22);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v2->fields.__2__current, 0, v21, v22);
       result = 1;
       v31->fields.__1__state = 1;
       return result;
@@ -631,11 +631,11 @@ void __fastcall __noreturn EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B90024(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B9025C(v2);
+  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B90024(&Method_EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_System_Collections_IEnumerator_Reset__);
-  sub_1B90138(v3, v4);
+  v4 = sub_1BAB430(&Method_EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1BAB544(v3, v4);
 }
 
 
@@ -663,17 +663,17 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12____m__F
         EventInfoSubmarineItemCounterCotrol__PlayCountAnim_d__12_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A71530 & 1) == 0 )
+  if ( (byte_4AB7351 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__,
       method);
-    byte_4A71530 = 1;
+    byte_4AB7351 = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
-    (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__);
+    (const MethodInfo_32C4C74 *)Method_System_Collections_Generic_List_Enumerator_EventInfoSubmarineItemCounterComponent__Dispose__);
 }
 
 
@@ -684,15 +684,15 @@ void __fastcall EventInfoSubmarineItemCounterCotrol___c___cctor(const MethodInfo
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A7152E & 1) == 0 )
+  if ( (byte_4AB734F & 1) == 0 )
   {
-    sub_1B90010(&EventInfoSubmarineItemCounterCotrol___c_TypeInfo, v1);
-    byte_4A7152E = 1;
+    sub_1BAB41C(&EventInfoSubmarineItemCounterCotrol___c_TypeInfo, v1);
+    byte_4AB734F = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(EventInfoSubmarineItemCounterCotrol___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(EventInfoSubmarineItemCounterCotrol___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventInfoSubmarineItemCounterCotrol___c_TypeInfo->static_fields->__9 = (struct EventInfoSubmarineItemCounterCotrol___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)EventInfoSubmarineItemCounterCotrol___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -714,7 +714,7 @@ int32_t __fastcall EventInfoSubmarineItemCounterCotrol___c___Setup_b__10_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return ent->fields.priority;
 }
 
@@ -733,6 +733,6 @@ bool __fastcall EventInfoSubmarineItemCounterCotrol___c__DisplayClass15_0___GetI
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return x->fields.ItemId == this->fields.itemId;
 }

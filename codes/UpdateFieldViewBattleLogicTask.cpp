@@ -13,12 +13,12 @@ BattleActionData_o *__fastcall UpdateFieldViewBattleLogicTask__MakeActionData(
 {
   UpdateFieldViewActionData_o *v3; // x19
 
-  if ( (byte_4A72B26 & 1) == 0 )
+  if ( (byte_4AB8A44 & 1) == 0 )
   {
-    sub_1B90010(&UpdateFieldViewActionData_TypeInfo, logic);
-    byte_4A72B26 = 1;
+    sub_1BAB41C(&UpdateFieldViewActionData_TypeInfo, logic);
+    byte_4AB8A44 = 1;
   }
-  v3 = (UpdateFieldViewActionData_o *)sub_1B9025C(UpdateFieldViewActionData_TypeInfo);
+  v3 = (UpdateFieldViewActionData_o *)sub_1BAB668(UpdateFieldViewActionData_TypeInfo);
   UpdateFieldViewActionData___ctor(v3, 0LL);
   return (BattleActionData_o *)v3;
 }

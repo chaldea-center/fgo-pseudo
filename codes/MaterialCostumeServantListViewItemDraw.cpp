@@ -17,10 +17,10 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   struct UICommonButton_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A6B561 & 1) == 0 )
+  if ( (byte_4AB13B5 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4A6B561 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_4AB13B5 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1B9026C(v7, v6);
+      sub_1BAB678(v7, v6);
     }
     if ( isEnable )
       v8 = 0LL;
@@ -78,20 +78,20 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x20
   __int64 *v16; // x8
 
-  if ( (byte_4A6B560 & 1) == 0 )
+  if ( (byte_4AB13B4 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, item);
-    sub_1B90010(&StringLiteral_1/*""*/, v7);
-    sub_1B90010(&StringLiteral_8555/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1B90010(&StringLiteral_8554/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_4A6B560 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
+    sub_1BAB41C(&StringLiteral_8555/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_1BAB41C(&StringLiteral_8554/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
+    byte_4AB13B4 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_38276456(
+    ServantFaceIconComponent__Set_38604704(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -180,6 +180,6 @@ LABEL_13:
       }
     }
 LABEL_33:
-    sub_1B9026C(servantFaceIcon, item);
+    sub_1BAB678(servantFaceIcon, item);
   }
 }

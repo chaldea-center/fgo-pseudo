@@ -15,22 +15,22 @@ BlankEarthGimmickEntity_o *__fastcall BlankEarthQuestAfterAction__GetGimmickEnti
   Il2CppObject *Master_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A6CD47 & 1) == 0 )
+  if ( (byte_4AB2B95 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_BlankEarthGimmickMaster___, *(_QWORD *)&gimmickId);
-    sub_1B90010(&DataManager_TypeInfo, v4);
-    sub_1B90010(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int__GetEntity__, v5);
-    byte_4A6CD47 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_BlankEarthGimmickMaster___, *(_QWORD *)&gimmickId);
+    sub_1BAB41C(&DataManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int__GetEntity__, v5);
+    byte_4AB2B95 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BlankEarthGimmickMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BlankEarthGimmickMaster___);
   if ( !Master_object )
-    sub_1B9026C(0LL, v7);
+    sub_1BAB678(0LL, v7);
   return (BlankEarthGimmickEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                         gimmickId,
-                                        (const MethodInfo_312C5A8 *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int__GetEntity__);
+                                        (const MethodInfo_3163D90 *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int__GetEntity__);
 }
 
 
@@ -45,22 +45,22 @@ BlankEarthSpotEntity_o *__fastcall BlankEarthQuestAfterAction__GetSpotEntity(
   Il2CppObject *Master_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A6CD46 & 1) == 0 )
+  if ( (byte_4AB2B94 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, *(_QWORD *)&spotId);
-    sub_1B90010(&DataManager_TypeInfo, v4);
-    sub_1B90010(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__GetEntity__, v5);
-    byte_4A6CD46 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, *(_QWORD *)&spotId);
+    sub_1BAB41C(&DataManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__GetEntity__, v5);
+    byte_4AB2B94 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
   if ( !Master_object )
-    sub_1B9026C(0LL, v7);
+    sub_1BAB678(0LL, v7);
   return (BlankEarthSpotEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                      spotId,
-                                     (const MethodInfo_312C5A8 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__GetEntity__);
+                                     (const MethodInfo_3163D90 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__GetEntity__);
 }
 
 
@@ -75,18 +75,18 @@ bool __fastcall BlankEarthQuestAfterAction__IsBlankEarthActive(
   __int64 v6; // x1
   UnityEngine_Object_o *mTerminalList; // x20
 
-  if ( (byte_4A6CD48 & 1) == 0 )
+  if ( (byte_4AB2B96 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, v2);
-    byte_4A6CD48 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, v2);
+    byte_4AB2B96 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A6AF7D )
+  if ( !byte_4AB0C49 )
   {
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, method);
-    byte_4A6AF7D = 1;
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, method);
+    byte_4AB0C49 = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -110,7 +110,7 @@ bool __fastcall BlankEarthQuestAfterAction__IsBlankEarthActive(
   v5 = mInstance->fields.mTerminalList;
   if ( !v5 )
 LABEL_19:
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   return ScrTerminalListTop__get_IsActiveBlankEarth(v5, 0LL);
 }
 
@@ -224,19 +224,19 @@ bool __fastcall BlankEarthQuestAfterAction__TryGetParam(
   BlankEarthQuestAfterAction_o *v107; // x0
   const MethodInfo *v108; // x2
 
-  if ( (byte_4A6CD45 & 1) == 0 )
+  if ( (byte_4AB2B93 & 1) == 0 )
   {
-    sub_1B90010(&BlankEarthQuestAfterAction_CommandParam_TypeInfo, command);
-    byte_4A6CD45 = 1;
+    sub_1BAB41C(&BlankEarthQuestAfterAction_CommandParam_TypeInfo, command);
+    byte_4AB2B93 = 1;
   }
   *errorMessage = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)errorMessage, 0, (int32_t)commandParam, (int32_t)errorMessage);
-  v8 = (Il2CppObject *)sub_1B9025C(BlankEarthQuestAfterAction_CommandParam_TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)errorMessage, 0, (int32_t)commandParam, (int32_t)errorMessage);
+  v8 = (Il2CppObject *)sub_1BAB668(BlankEarthQuestAfterAction_CommandParam_TypeInfo);
   System_Object___ctor(v8, 0LL);
   *commandParam = (BlankEarthQuestAfterAction_CommandParam_o *)v8;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)commandParam, (int32_t)v8, v9, v10);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)commandParam, (int32_t)v8, v9, v10);
   if ( !command )
-    sub_1B9026C(v11, v12);
+    sub_1BAB678(v11, v12);
   id = command->fields.id;
   if ( id <= 403 )
   {
@@ -253,34 +253,34 @@ bool __fastcall BlankEarthQuestAfterAction__TryGetParam(
         SpotEntity = BlankEarthQuestAfterAction__GetSpotEntity(v18, (int32_t)v18, v19);
         v23 = (int)SpotEntity;
         if ( !v17 )
-          sub_1B9026C(SpotEntity, SpotEntity);
+          sub_1BAB678(SpotEntity, SpotEntity);
 LABEL_13:
         v17->fields.blankEarthSpotEntity = SpotEntity;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v17->fields, v23, v21, v22);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v17->fields, v23, v21, v22);
         return 1;
       }
       param = command->fields.param;
       if ( !param )
-        sub_1B9026C(0LL, v12);
+        sub_1BAB678(0LL, v12);
       v56 = System_String__Split(param, 0x2Cu, 0, 0LL);
       v58 = v56;
       if ( !v56 )
-        sub_1B9026C(0LL, v57);
+        sub_1BAB678(0LL, v57);
       if ( !v56->max_length )
-        sub_1B90274(v56, v57);
+        sub_1BAB680(v56, v57);
       v59 = *commandParam;
       v60 = (BlankEarthQuestAfterAction_o *)System_Int32__Parse(v56->m_Items[0], 0LL);
       v62 = BlankEarthQuestAfterAction__GetSpotEntity(v60, (int32_t)v60, v61);
       if ( !v59 )
-        sub_1B9026C(v62, v62);
+        sub_1BAB678(v62, v62);
       v59->fields.blankEarthSpotEntity = v62;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v59->fields, (int32_t)v62, v63, v64);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v59->fields, (int32_t)v62, v63, v64);
       if ( v58->max_length <= 1 )
-        sub_1B90274(v65, v66);
+        sub_1BAB680(v65, v66);
       v52 = *commandParam;
       v53 = System_Int32__Parse(v58->m_Items[1], 0LL);
       if ( !v52 )
-        sub_1B9026C(v53, v67);
+        sub_1BAB678(v53, v67);
       goto LABEL_40;
     }
     switch ( id )
@@ -288,11 +288,11 @@ LABEL_13:
       case 300:
         v31 = command->fields.param;
         if ( !v31 )
-          sub_1B9026C(0LL, v12);
+          sub_1BAB678(0LL, v12);
         v32 = System_String__Split(v31, 0x2Cu, 0, 0LL);
         v34 = v32;
         if ( !v32 )
-          sub_1B9026C(0LL, v33);
+          sub_1BAB678(0LL, v33);
         max_length = v32->max_length;
         if ( max_length <= 0 )
           return 0;
@@ -301,7 +301,7 @@ LABEL_13:
         if ( max_length >= 3 )
           v37 = System_Single__Parse(v32->m_Items[2], 0LL) * 0.001;
         if ( !v36 )
-          sub_1B9026C(v32, v33);
+          sub_1BAB678(v32, v33);
         v36->fields.time = v37;
         v38 = *commandParam;
         if ( (int)v34->max_length >= 2 )
@@ -309,27 +309,27 @@ LABEL_13:
         else
           v39 = 15LL;
         if ( !v38 )
-          sub_1B9026C(v39, v33);
+          sub_1BAB678(v39, v33);
         v38->fields.easeType = v39;
         if ( !v34->max_length )
-          sub_1B90274(v39, v33);
+          sub_1BAB680(v39, v33);
         v17 = *commandParam;
         v105 = (BlankEarthQuestAfterAction_o *)System_Int32__Parse(v34->m_Items[0], 0LL);
         SpotEntity = BlankEarthQuestAfterAction__GetSpotEntity(v105, (int32_t)v105, v106);
         v23 = (int)SpotEntity;
         if ( !v17 )
-          sub_1B9026C(SpotEntity, SpotEntity);
+          sub_1BAB678(SpotEntity, SpotEntity);
         goto LABEL_13;
       case 301:
         return result;
       case 302:
         v75 = command->fields.param;
         if ( !v75 )
-          sub_1B9026C(0LL, v12);
+          sub_1BAB678(0LL, v12);
         v76 = System_String__Split(v75, 0x2Cu, 0, 0LL);
         v78 = v76;
         if ( !v76 )
-          sub_1B9026C(0LL, v77);
+          sub_1BAB678(0LL, v77);
         v79 = v76->max_length;
         if ( v79 <= 0 )
           return 0;
@@ -338,7 +338,7 @@ LABEL_13:
         if ( v79 >= 3 )
           v81 = System_Single__Parse(v76->m_Items[2], 0LL) * 0.001;
         if ( !v80 )
-          sub_1B9026C(v76, v77);
+          sub_1BAB678(v76, v77);
         v80->fields.time = v81;
         v82 = *commandParam;
         if ( (int)v78->max_length >= 2 )
@@ -346,52 +346,52 @@ LABEL_13:
         else
           v83 = 15LL;
         if ( !v82 )
-          sub_1B9026C(v83, v77);
+          sub_1BAB678(v83, v77);
         v82->fields.easeType = v83;
         if ( !v78->max_length )
-          sub_1B90274(v83, v77);
+          sub_1BAB680(v83, v77);
         v24 = *commandParam;
         v103 = (BlankEarthQuestAfterAction_o *)System_Int32__Parse(v78->m_Items[0], 0LL);
         GimmickEntity = BlankEarthQuestAfterAction__GetGimmickEntity(v103, (int32_t)v103, v104);
         v30 = (int)GimmickEntity;
         if ( !v24 )
-          sub_1B9026C(GimmickEntity, GimmickEntity);
+          sub_1BAB678(GimmickEntity, GimmickEntity);
         break;
       case 303:
         v84 = command->fields.param;
         if ( !v84 )
-          sub_1B9026C(0LL, v12);
+          sub_1BAB678(0LL, v12);
         v85 = System_String__Split(v84, 0x2Cu, 0, 0LL);
         v87 = v85;
         if ( !v85 )
-          sub_1B9026C(0LL, v86);
+          sub_1BAB678(0LL, v86);
         if ( (int)v85->max_length <= 3 )
           return 0;
         v88 = *commandParam;
         v91 = System_Single__Parse(v85->m_Items[2], 0LL);
         if ( !v88 )
-          sub_1B9026C(v89, v90);
+          sub_1BAB678(v89, v90);
         v88->fields.time = v91 * 0.001;
         v92 = *commandParam;
         if ( !*commandParam )
-          sub_1B9026C(v89, v90);
+          sub_1BAB678(v89, v90);
         if ( v92->fields.time < 0.0 )
           v92->fields.time = 0.5;
         if ( !v87->max_length )
-          sub_1B90274(v89, v90);
+          sub_1BAB680(v89, v90);
         v95 = System_Single__Parse(v87->m_Items[0], 0LL);
         if ( v87->max_length <= 1 )
-          sub_1B90274(v93, v94);
+          sub_1BAB680(v93, v94);
         v96 = v95;
         v99 = System_Single__Parse(v87->m_Items[1], 0LL);
         v92->fields.latLongVector.fields.x = v96;
         v92->fields.latLongVector.fields.y = v99;
         if ( v87->max_length <= 3 )
-          sub_1B90274(v97, v98);
+          sub_1BAB680(v97, v98);
         v100 = *commandParam;
         v101 = System_Int32__Parse(v87->m_Items[3], 0LL);
         if ( !v100 )
-          sub_1B9026C(v101, v102);
+          sub_1BAB678(v101, v102);
         v100->fields.easeType = v101;
         return 1;
       default:
@@ -399,11 +399,11 @@ LABEL_13:
           return 1;
         v68 = command->fields.param;
         if ( !v68 )
-          sub_1B9026C(0LL, v12);
+          sub_1BAB678(0LL, v12);
         v69 = System_String__Split(v68, 0x2Cu, 0, 0LL);
         v71 = v69;
         if ( !v69 )
-          sub_1B9026C(0LL, v70);
+          sub_1BAB678(0LL, v70);
         v72 = v69->max_length;
         if ( v72 <= 0 )
           return 0;
@@ -418,21 +418,21 @@ LABEL_13:
           v74 = (int)v69 > 0;
         }
         if ( !v73 )
-          sub_1B9026C(v69, v70);
+          sub_1BAB678(v69, v70);
         v73->fields.noWait = v74;
         if ( !v71->max_length )
-          sub_1B90274(v69, v70);
+          sub_1BAB680(v69, v70);
         v24 = *commandParam;
         v107 = (BlankEarthQuestAfterAction_o *)System_Int32__Parse(v71->m_Items[0], 0LL);
         GimmickEntity = BlankEarthQuestAfterAction__GetGimmickEntity(v107, (int32_t)v107, v108);
         v30 = (int)GimmickEntity;
         if ( !v24 )
-          sub_1B9026C(GimmickEntity, GimmickEntity);
+          sub_1BAB678(GimmickEntity, GimmickEntity);
         return result;
     }
 LABEL_83:
     v24->fields.blankEarthGimmickEntity = GimmickEntity;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v24->fields.blankEarthGimmickEntity, v30, v28, v29);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v24->fields.blankEarthGimmickEntity, v30, v28, v29);
     return 1;
   }
   v14 = id & 0xFFFFFFFE;
@@ -454,7 +454,7 @@ LABEL_15:
     GimmickEntity = BlankEarthQuestAfterAction__GetGimmickEntity(v25, (int32_t)v25, v26);
     v30 = (int)GimmickEntity;
     if ( !v24 )
-      sub_1B9026C(GimmickEntity, GimmickEntity);
+      sub_1BAB678(GimmickEntity, GimmickEntity);
     goto LABEL_83;
   }
   if ( id == 1002 )
@@ -462,26 +462,26 @@ LABEL_15:
 LABEL_27:
     v40 = command->fields.param;
     if ( !v40 )
-      sub_1B9026C(0LL, v12);
+      sub_1BAB678(0LL, v12);
     v41 = System_String__Split(v40, 0x2Cu, 0, 0LL);
     v43 = v41;
     if ( !v41 )
-      sub_1B9026C(0LL, v42);
+      sub_1BAB678(0LL, v42);
     if ( !v41->max_length )
-      sub_1B90274(v41, v42);
+      sub_1BAB680(v41, v42);
     v44 = *commandParam;
     v45 = (BlankEarthQuestAfterAction_o *)System_Int32__Parse(v41->m_Items[0], 0LL);
     v47 = BlankEarthQuestAfterAction__GetGimmickEntity(v45, (int32_t)v45, v46);
     if ( !v44 )
-      sub_1B9026C(v47, v47);
+      sub_1BAB678(v47, v47);
     v44->fields.blankEarthGimmickEntity = v47;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v44->fields.blankEarthGimmickEntity, (int32_t)v47, v48, v49);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v44->fields.blankEarthGimmickEntity, (int32_t)v47, v48, v49);
     if ( v43->max_length <= 1 )
-      sub_1B90274(v50, v51);
+      sub_1BAB680(v50, v51);
     v52 = *commandParam;
     v53 = System_Int32__Parse(v43->m_Items[1], 0LL);
     if ( !v52 )
-      sub_1B9026C(v53, v54);
+      sub_1BAB678(v53, v54);
 LABEL_40:
     v52->fields.intValue = v53;
   }
@@ -529,26 +529,26 @@ bool __fastcall BlankEarthQuestAfterAction__UpdateAnim(
   System_String_o *errorMessage; // [xsp+8h] [xbp-48h] BYREF
   BlankEarthQuestAfterAction_CommandParam_o *commandParam; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4A6CD44 & 1) == 0 )
+  if ( (byte_4AB2B92 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo, that);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, v11);
-    sub_1B90010(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__0__, v12);
-    sub_1B90010(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__1__, v13);
-    sub_1B90010(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__2__, v14);
-    sub_1B90010(&BlankEarthQuestAfterAction___c__DisplayClass1_0_TypeInfo, v15);
-    byte_4A6CD44 = 1;
+    sub_1BAB41C(&System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo, that);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, v11);
+    sub_1BAB41C(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__0__, v12);
+    sub_1BAB41C(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__1__, v13);
+    sub_1BAB41C(&Method_BlankEarthQuestAfterAction___c__DisplayClass1_0__UpdateAnim_b__2__, v14);
+    sub_1BAB41C(&BlankEarthQuestAfterAction___c__DisplayClass1_0_TypeInfo, v15);
+    byte_4AB2B92 = 1;
   }
   commandParam = 0LL;
   errorMessage = 0LL;
-  v16 = sub_1B9025C(BlankEarthQuestAfterAction___c__DisplayClass1_0_TypeInfo);
+  v16 = sub_1BAB668(BlankEarthQuestAfterAction___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v16, 0LL);
   if ( !v16 )
     goto LABEL_79;
   *(_QWORD *)(v16 + 16) = endAnimCallback;
   v21 = (System_Action_o **)(v16 + 16);
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v16 + 16), (int32_t)endAnimCallback, v19, v20);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v16 + 16), (int32_t)endAnimCallback, v19, v20);
   *isQuickUpdate = 0;
   IsBlankEarthActive = BlankEarthQuestAfterAction__IsBlankEarthActive(v22, v23);
   LOBYTE(v17) = 0;
@@ -558,10 +558,10 @@ bool __fastcall BlankEarthQuestAfterAction__UpdateAnim(
     {
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4A6AF7D )
+      if ( !byte_4AB0C49 )
       {
-        sub_1B90010(&TerminalSceneComponent_TypeInfo, v18);
-        byte_4A6AF7D = 1;
+        sub_1BAB41C(&TerminalSceneComponent_TypeInfo, v18);
+        byte_4AB0C49 = 1;
       }
       v17 = TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -608,7 +608,7 @@ LABEL_45:
             goto LABEL_58;
           }
 LABEL_79:
-          sub_1B9026C(v17, v18);
+          sub_1BAB678(v17, v18);
         }
         if ( !commandParam || !blankEarth )
           goto LABEL_79;
@@ -664,7 +664,7 @@ LABEL_79:
       switch ( id )
       {
         case 300:
-          v34 = (System_Action_object__o *)sub_1B9025C(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
+          v34 = (System_Action_object__o *)sub_1BAB668(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
           System_Action_object____ctor(
             v34,
             (Il2CppObject *)v16,
@@ -685,7 +685,7 @@ LABEL_79:
         case 301:
           return (char)v17;
         case 302:
-          v37 = (System_Action_object__o *)sub_1B9025C(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
+          v37 = (System_Action_object__o *)sub_1BAB668(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
           System_Action_object____ctor(
             v37,
             (Il2CppObject *)v16,
@@ -703,7 +703,7 @@ LABEL_79:
             0LL);
           break;
         case 303:
-          v38 = (System_Action_object__o *)sub_1B9025C(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
+          v38 = (System_Action_object__o *)sub_1BAB668(System_Action_BlankEarth_QAARotateEarthResponse__TypeInfo);
           System_Action_object____ctor(
             v38,
             (Il2CppObject *)v16,

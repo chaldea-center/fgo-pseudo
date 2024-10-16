@@ -75,41 +75,41 @@ void __fastcall WarBoardSetupRequest__beginRequest(
   System_String_o *v70; // x0
   System_Collections_Generic_IEnumerable_TSource__o *source; // [xsp+8h] [xbp-78h]
 
-  if ( (byte_4A71853 & 1) == 0 )
+  if ( (byte_4AB7736 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Linq_Enumerable_Select_int__string___, *(_QWORD *)&stageId);
-    sub_1B90010(&Method_System_Linq_Enumerable_Select_long__string___, v14);
-    sub_1B90010(&Method_System_Linq_Enumerable_ToArray_string___, v15);
-    sub_1B90010(&System_Func_long__string__TypeInfo, v16);
-    sub_1B90010(&System_Func_int__string__TypeInfo, v17);
-    sub_1B90010(&Method_WarBoardSetupRequest___c__beginRequest_b__1_0__, v18);
-    sub_1B90010(&Method_WarBoardSetupRequest___c__beginRequest_b__1_1__, v19);
-    sub_1B90010(&Method_WarBoardSetupRequest___c__beginRequest_b__1_2__, v20);
-    sub_1B90010(&WarBoardSetupRequest___c_TypeInfo, v21);
-    sub_1B90010(&StringLiteral_23514/*"stageId"*/, v22);
-    sub_1B90010(&StringLiteral_23494/*"squareIndexes"*/, v23);
-    sub_1B90010(&StringLiteral_24426/*"userEquipId"*/, v24);
-    sub_1B90010(&StringLiteral_24491/*"userSvtEquips"*/, v25);
-    sub_1B90010(&StringLiteral_22725/*"questPhase"*/, v26);
-    sub_1B90010(&StringLiteral_24493/*"userSvtIds"*/, v27);
-    sub_1B90010(&StringLiteral_22723/*"questId"*/, v28);
-    sub_1B90010(&StringLiteral_868/*","*/, v29);
-    sub_1B90010(&StringLiteral_16049/*"[{0}]"*/, v30);
-    byte_4A71853 = 1;
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_int__string___, *(_QWORD *)&stageId);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_long__string___, v14);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_string___, v15);
+    sub_1BAB41C(&System_Func_long__string__TypeInfo, v16);
+    sub_1BAB41C(&System_Func_int__string__TypeInfo, v17);
+    sub_1BAB41C(&Method_WarBoardSetupRequest___c__beginRequest_b__1_0__, v18);
+    sub_1BAB41C(&Method_WarBoardSetupRequest___c__beginRequest_b__1_1__, v19);
+    sub_1BAB41C(&Method_WarBoardSetupRequest___c__beginRequest_b__1_2__, v20);
+    sub_1BAB41C(&WarBoardSetupRequest___c_TypeInfo, v21);
+    sub_1BAB41C(&StringLiteral_23516/*"stageId"*/, v22);
+    sub_1BAB41C(&StringLiteral_23496/*"squareIndexes"*/, v23);
+    sub_1BAB41C(&StringLiteral_24429/*"userEquipId"*/, v24);
+    sub_1BAB41C(&StringLiteral_24494/*"userSvtEquips"*/, v25);
+    sub_1BAB41C(&StringLiteral_22730/*"questPhase"*/, v26);
+    sub_1BAB41C(&StringLiteral_24496/*"userSvtIds"*/, v27);
+    sub_1BAB41C(&StringLiteral_22728/*"questId"*/, v28);
+    sub_1BAB41C(&StringLiteral_863/*","*/, v29);
+    sub_1BAB41C(&StringLiteral_16054/*"[{0}]"*/, v30);
+    byte_4AB7736 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23514/*"stageId"*/, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22723/*"questId"*/, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22725/*"questPhase"*/, questPhase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23516/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22728/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22730/*"questPhase"*/, questPhase, 0LL);
   v31 = WarBoardSetupRequest___c_TypeInfo;
   if ( !WarBoardSetupRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardSetupRequest___c_TypeInfo);
     v31 = WarBoardSetupRequest___c_TypeInfo;
   }
-  v32 = (System_String_o *)StringLiteral_868/*","*/;
-  v33 = (System_String_o *)StringLiteral_16049/*"[{0}]"*/;
+  v32 = (System_String_o *)StringLiteral_863/*","*/;
+  v33 = (System_String_o *)StringLiteral_16054/*"[{0}]"*/;
   _9__1_0 = (System_Func_T__TResult__o *)v31->static_fields->__9__1_0;
-  v35 = (System_String_o *)StringLiteral_23494/*"squareIndexes"*/;
+  v35 = (System_String_o *)StringLiteral_23496/*"squareIndexes"*/;
   if ( !_9__1_0 )
   {
     if ( !v31->_2.cctor_finished )
@@ -118,34 +118,34 @@ void __fastcall WarBoardSetupRequest__beginRequest(
       v31 = WarBoardSetupRequest___c_TypeInfo;
     }
     v36 = (Il2CppObject *)v31->static_fields->__9;
-    _9__1_0 = (System_Func_T__TResult__o *)sub_1B9025C(System_Func_int__string__TypeInfo);
+    _9__1_0 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_int__string__TypeInfo);
     System_Func_int__object____ctor(_9__1_0, v36, Method_WarBoardSetupRequest___c__beginRequest_b__1_0__, 0LL);
     static_fields = WarBoardSetupRequest___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Func_int__string__o *)_9__1_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v38, v39);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v38, v39);
   }
   v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)squareIndexes,
                                                                (System_Func_TSource__TResult__o *)_9__1_0,
-                                                               (const MethodInfo_2EBC6B8 *)Method_System_Linq_Enumerable_Select_int__string___);
+                                                               (const MethodInfo_2EF1C44 *)Method_System_Linq_Enumerable_Select_int__string___);
   v41 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                  v40,
-                                 (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                 (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_string___);
   v42 = (Il2CppObject *)System_String__Join(v32, v41, 0LL);
   v43 = System_String__Format(v33, v42, 0LL);
   if ( !this )
-    sub_1B9026C(v43, v44);
-  RequestBase__addField_41181164((RequestBase_o *)this, v35, v43, 0LL);
+    sub_1BAB678(v43, v44);
+  RequestBase__addField_41516464((RequestBase_o *)this, v35, v43, 0LL);
   v45 = WarBoardSetupRequest___c_TypeInfo;
   if ( !WarBoardSetupRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardSetupRequest___c_TypeInfo);
     v45 = WarBoardSetupRequest___c_TypeInfo;
   }
-  v46 = (System_String_o *)StringLiteral_868/*","*/;
-  v47 = (System_String_o *)StringLiteral_16049/*"[{0}]"*/;
+  v46 = (System_String_o *)StringLiteral_863/*","*/;
+  v47 = (System_String_o *)StringLiteral_16054/*"[{0}]"*/;
   _9__1_1 = (System_Func_T__TResult__o *)v45->static_fields->__9__1_1;
-  v49 = (System_String_o *)StringLiteral_24493/*"userSvtIds"*/;
+  v49 = (System_String_o *)StringLiteral_24496/*"userSvtIds"*/;
   if ( !_9__1_1 )
   {
     if ( !v45->_2.cctor_finished )
@@ -154,32 +154,32 @@ void __fastcall WarBoardSetupRequest__beginRequest(
       v45 = WarBoardSetupRequest___c_TypeInfo;
     }
     v50 = (Il2CppObject *)v45->static_fields->__9;
-    _9__1_1 = (System_Func_T__TResult__o *)sub_1B9025C(System_Func_long__string__TypeInfo);
+    _9__1_1 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_long__string__TypeInfo);
     System_Func_long__object____ctor(_9__1_1, v50, Method_WarBoardSetupRequest___c__beginRequest_b__1_1__, 0LL);
     v51 = WarBoardSetupRequest___c_TypeInfo->static_fields;
     v51->__9__1_1 = (struct System_Func_long__string__o *)_9__1_1;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v51->__9__1_1, (int32_t)_9__1_1, v52, v53);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v51->__9__1_1, (int32_t)_9__1_1, v52, v53);
   }
   v54 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                source,
                                                                (System_Func_TSource__TResult__o *)_9__1_1,
-                                                               (const MethodInfo_2EBD870 *)Method_System_Linq_Enumerable_Select_long__string___);
+                                                               (const MethodInfo_2EF2DFC *)Method_System_Linq_Enumerable_Select_long__string___);
   v55 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                  v54,
-                                 (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                 (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_string___);
   v56 = (Il2CppObject *)System_String__Join(v46, v55, 0LL);
   v57 = System_String__Format(v47, v56, 0LL);
-  RequestBase__addField_41181164((RequestBase_o *)this, v49, v57, 0LL);
+  RequestBase__addField_41516464((RequestBase_o *)this, v49, v57, 0LL);
   v58 = WarBoardSetupRequest___c_TypeInfo;
   if ( !WarBoardSetupRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardSetupRequest___c_TypeInfo);
     v58 = WarBoardSetupRequest___c_TypeInfo;
   }
-  v59 = (System_String_o *)StringLiteral_16049/*"[{0}]"*/;
-  v60 = (System_String_o *)StringLiteral_868/*","*/;
+  v59 = (System_String_o *)StringLiteral_16054/*"[{0}]"*/;
+  v60 = (System_String_o *)StringLiteral_863/*","*/;
   _9__1_2 = (System_Func_T__TResult__o *)v58->static_fields->__9__1_2;
-  v62 = (System_String_o *)StringLiteral_24491/*"userSvtEquips"*/;
+  v62 = (System_String_o *)StringLiteral_24494/*"userSvtEquips"*/;
   if ( !_9__1_2 )
   {
     if ( !v58->_2.cctor_finished )
@@ -188,23 +188,23 @@ void __fastcall WarBoardSetupRequest__beginRequest(
       v58 = WarBoardSetupRequest___c_TypeInfo;
     }
     v63 = (Il2CppObject *)v58->static_fields->__9;
-    _9__1_2 = (System_Func_T__TResult__o *)sub_1B9025C(System_Func_long__string__TypeInfo);
+    _9__1_2 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_long__string__TypeInfo);
     System_Func_long__object____ctor(_9__1_2, v63, Method_WarBoardSetupRequest___c__beginRequest_b__1_2__, 0LL);
     v64 = WarBoardSetupRequest___c_TypeInfo->static_fields;
     v64->__9__1_2 = (struct System_Func_long__string__o *)_9__1_2;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v64->__9__1_2, (int32_t)_9__1_2, v65, v66);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v64->__9__1_2, (int32_t)_9__1_2, v65, v66);
   }
   v67 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)userSvtEquips,
                                                                (System_Func_TSource__TResult__o *)_9__1_2,
-                                                               (const MethodInfo_2EBD870 *)Method_System_Linq_Enumerable_Select_long__string___);
+                                                               (const MethodInfo_2EF2DFC *)Method_System_Linq_Enumerable_Select_long__string___);
   v68 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                  v67,
-                                 (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                 (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_string___);
   v69 = (Il2CppObject *)System_String__Join(v60, v68, 0LL);
   v70 = System_String__Format(v59, v69, 0LL);
-  RequestBase__addField_41181164((RequestBase_o *)this, v62, v70, 0LL);
-  RequestBase__addField_41187492((RequestBase_o *)this, (System_String_o *)StringLiteral_24426/*"userEquipId"*/, userEquipId, 0LL);
+  RequestBase__addField_41516464((RequestBase_o *)this, v62, v70, 0LL);
+  RequestBase__addField_41522804((RequestBase_o *)this, (System_String_o *)StringLiteral_24429/*"userEquipId"*/, userEquipId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -214,16 +214,16 @@ System_String_o *__fastcall WarBoardSetupRequest__getURL(WarBoardSetupRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A71852 & 1) == 0 )
+  if ( (byte_4AB7735 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_24659/*"warBoard/setup"*/, v2);
-    byte_4A71852 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_24662/*"warBoard/setup"*/, v2);
+    byte_4AB7735 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_24659/*"warBoard/setup"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_24662/*"warBoard/setup"*/, 0LL);
 }
 
 
@@ -238,48 +238,49 @@ void __fastcall WarBoardSetupRequest__requestCompleted(
   __int64 v8; // x1
   __int64 v9; // x1
   ResponseData_o *v10; // x0
-  ResponseData_o *v11; // x20
+  const MethodInfo *v11; // x2
+  ResponseData_o *v12; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x20
   Il2CppObject *Item; // x0
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x1
+  Il2CppObject *v15; // x0
+  System_String_o *v16; // x1
 
-  if ( (byte_4A71854 & 1) == 0 )
+  if ( (byte_4AB7737 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1B90010(&JsonManager_TypeInfo, v6);
-    sub_1B90010(&ResponseCommandKind_TypeInfo, v7);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v8);
-    sub_1B90010(&StringLiteral_24665/*"warBoardData"*/, v9);
-    byte_4A71854 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1BAB41C(&JsonManager_TypeInfo, v6);
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v7);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v8);
+    sub_1BAB41C(&StringLiteral_24668/*"warBoardData"*/, v9);
+    byte_4AB7737 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v10 = ResponseCommandKind__SearchData(91, responseList, 0LL);
   if ( v10
-    && (v11 = v10, ResponseData__checkError_41180636(v10, 0LL))
-    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v11->fields.success) != 0LL )
+    && (v12 = v10, ResponseData__checkError(v10, v10->fields.resCode, v11))
+    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v12->fields.success) != 0LL )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24665/*"warBoardData"*/,
-             (const MethodInfo_31D8D34 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v14 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
+             (Il2CppObject *)StringLiteral_24668/*"warBoardData"*/,
+             (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v15 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24665/*"warBoardData"*/,
-      v14,
-      (const MethodInfo_31D8DA0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (Il2CppObject *)StringLiteral_24668/*"warBoardData"*/,
+      v15,
+      (const MethodInfo_3213538 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v15 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
+    v16 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v15 = (System_String_o *)StringLiteral_22088/*"ng"*/;
+    v16 = (System_String_o *)StringLiteral_22090/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v15, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v16, 0LL);
 }
 
 
@@ -290,15 +291,15 @@ void __fastcall WarBoardSetupRequest___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A71855 & 1) == 0 )
+  if ( (byte_4AB7738 & 1) == 0 )
   {
-    sub_1B90010(&WarBoardSetupRequest___c_TypeInfo, v1);
-    byte_4A71855 = 1;
+    sub_1BAB41C(&WarBoardSetupRequest___c_TypeInfo, v1);
+    byte_4AB7738 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(WarBoardSetupRequest___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(WarBoardSetupRequest___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardSetupRequest___c_TypeInfo->static_fields->__9 = (struct WarBoardSetupRequest___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)WarBoardSetupRequest___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,

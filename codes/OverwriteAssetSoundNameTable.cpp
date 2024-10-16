@@ -15,15 +15,15 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpSystemTable(
   unsigned int v8; // w22
   OverwriteAssetSoundNameTable_SoundSystemAssetData_o *v9; // x21
 
-  if ( (byte_4A6F6FD & 1) == 0 )
+  if ( (byte_4AB5680 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__Add__,
       kvpSystemTable);
-    this = (OverwriteAssetSoundNameTable_o *)sub_1B90010(
+    this = (OverwriteAssetSoundNameTable_o *)sub_1BAB41C(
                                                &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__ContainsKey__,
                                                v6);
-    byte_4A6F6FD = 1;
+    byte_4AB5680 = 1;
   }
   if ( !table )
     goto LABEL_14;
@@ -34,7 +34,7 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpSystemTable(
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1B90274(this, kvpSystemTable);
+        sub_1BAB680(this, kvpSystemTable);
       v9 = table->m_Items[v8];
       if ( !v9 )
         break;
@@ -44,7 +44,7 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpSystemTable(
       this = (OverwriteAssetSoundNameTable_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                                  (System_Collections_Generic_Dictionary_object__object__o *)this,
                                                  (Il2CppObject *)v9->fields.UniqueKey,
-                                                 (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__ContainsKey__);
+                                                 (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__ContainsKey__);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         this = (OverwriteAssetSoundNameTable_o *)*kvpSystemTable;
@@ -54,14 +54,14 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpSystemTable(
           (System_Collections_Generic_Dictionary_object__object__o *)this,
           (Il2CppObject *)v9->fields.UniqueKey,
           (Il2CppObject *)v9,
-          (const MethodInfo_31D8DB4 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__Add__);
+          (const MethodInfo_321354C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__Add__);
       }
       max_length = table->max_length;
       if ( (int)++v8 >= max_length )
         return;
     }
 LABEL_14:
-    sub_1B9026C(this, kvpSystemTable);
+    sub_1BAB678(this, kvpSystemTable);
   }
 }
 
@@ -77,15 +77,15 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpTable(
   unsigned int v8; // w22
   OverwriteAssetSoundNameTable_SoundAssetData_o *v9; // x21
 
-  if ( (byte_4A6F6FC & 1) == 0 )
+  if ( (byte_4AB567F & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__Add__,
       kvpTable);
-    this = (OverwriteAssetSoundNameTable_o *)sub_1B90010(
+    this = (OverwriteAssetSoundNameTable_o *)sub_1BAB41C(
                                                &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__ContainsKey__,
                                                v6);
-    byte_4A6F6FC = 1;
+    byte_4AB567F = 1;
   }
   if ( !table )
     goto LABEL_14;
@@ -96,7 +96,7 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpTable(
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1B90274(this, kvpTable);
+        sub_1BAB680(this, kvpTable);
       v9 = table->m_Items[v8];
       if ( !v9 )
         break;
@@ -106,7 +106,7 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpTable(
       this = (OverwriteAssetSoundNameTable_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                                  (System_Collections_Generic_Dictionary_object__object__o *)this,
                                                  (Il2CppObject *)v9->fields.UniqueKey,
-                                                 (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__ContainsKey__);
+                                                 (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__ContainsKey__);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         this = (OverwriteAssetSoundNameTable_o *)*kvpTable;
@@ -116,14 +116,14 @@ void __fastcall OverwriteAssetSoundNameTable__AddKvpTable(
           (System_Collections_Generic_Dictionary_object__object__o *)this,
           (Il2CppObject *)v9->fields.UniqueKey,
           (Il2CppObject *)v9,
-          (const MethodInfo_31D8DB4 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__Add__);
+          (const MethodInfo_321354C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__Add__);
       }
       max_length = table->max_length;
       if ( (int)++v8 >= max_length )
         return;
     }
 LABEL_14:
-    sub_1B9026C(this, kvpTable);
+    sub_1BAB678(this, kvpTable);
   }
 }
 
@@ -141,7 +141,7 @@ int32_t __fastcall OverwriteAssetSoundNameTable__GetPlayCommonCount(
     return 0;
   playCommonTable = this->fields.playCommonTable;
   if ( !playCommonTable )
-    sub_1B9026C(IsNullOrEmpty, v4);
+    sub_1BAB678(IsNullOrEmpty, v4);
   return playCommonTable->max_length;
 }
 
@@ -154,7 +154,7 @@ int32_t __fastcall OverwriteAssetSoundNameTable__GetPlaySystemCount(
 
   playSystemTable = this->fields.playSystemTable;
   if ( !playSystemTable )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return playSystemTable->max_length;
 }
 
@@ -167,7 +167,7 @@ int32_t __fastcall OverwriteAssetSoundNameTable__GetPlayTableCount(
 
   playTable = this->fields.playTable;
   if ( !playTable )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return playTable->max_length;
 }
 
@@ -180,7 +180,7 @@ int32_t __fastcall OverwriteAssetSoundNameTable__GetStopTableCount(
 
   stopTable = this->fields.stopTable;
   if ( !stopTable )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return stopTable->max_length;
 }
 
@@ -198,24 +198,24 @@ void __fastcall OverwriteAssetSoundNameTable__Initialize(
   OverwriteAssetSoundNameTable_o *v10; // x0
   const MethodInfo *v11; // x3
 
-  if ( (byte_4A6F6FA & 1) == 0 )
+  if ( (byte_4AB567D & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData___ctor__,
       kvpTable);
-    sub_1B90010(
+    sub_1BAB41C(
       &System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TypeInfo,
       v6);
-    byte_4A6F6FA = 1;
+    byte_4AB567D = 1;
   }
   if ( !*kvpTable )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_31D8404 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData___ctor__);
+      (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData___ctor__);
     *kvpTable = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__o *)v7;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)kvpTable, (int32_t)v7, v8, v9);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)kvpTable, (int32_t)v7, v8, v9);
     OverwriteAssetSoundNameTable__AddKvpTable(v10, kvpTable, table, v11);
   }
 }
@@ -234,24 +234,24 @@ void __fastcall OverwriteAssetSoundNameTable__SystemInitialize(
   OverwriteAssetSoundNameTable_o *v10; // x0
   const MethodInfo *v11; // x3
 
-  if ( (byte_4A6F6FB & 1) == 0 )
+  if ( (byte_4AB567E & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData___ctor__,
       kvpSystemTable);
-    sub_1B90010(
+    sub_1BAB41C(
       &System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TypeInfo,
       v6);
-    byte_4A6F6FB = 1;
+    byte_4AB567E = 1;
   }
   if ( !*kvpSystemTable )
   {
-    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v7,
-      (const MethodInfo_31D8404 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData___ctor__);
+      (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData___ctor__);
     *kvpSystemTable = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__o *)v7;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)kvpSystemTable, (int32_t)v7, v8, v9);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)kvpSystemTable, (int32_t)v7, v8, v9);
     OverwriteAssetSoundNameTable__AddKvpSystemTable(v10, kvpSystemTable, table, v11);
   }
 }
@@ -278,34 +278,34 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetCommonData(
   unsigned int v20; // w24
   OverwriteAssetSoundNameTable_SoundCommonAssetData_o *v21; // x23
 
-  if ( (byte_4A6F6F9 & 1) == 0 )
+  if ( (byte_4AB567C & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__Add__,
       kvpCommonTable);
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__ContainsKey__,
       v10);
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TryGetValue__,
       v11);
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData___ctor__,
       v12);
-    sub_1B90010(
+    sub_1BAB41C(
       &System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TypeInfo,
       v13);
-    byte_4A6F6F9 = 1;
+    byte_4AB567C = 1;
   }
   v14 = *kvpCommonTable;
   if ( !*kvpCommonTable )
   {
-    v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TypeInfo);
+    v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TypeInfo);
     System_Collections_Generic_Dictionary_object__object____ctor(
       v15,
-      (const MethodInfo_31D8404 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData___ctor__);
+      (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData___ctor__);
     *kvpCommonTable = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__o *)v15;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)kvpCommonTable, (int32_t)v15, v16, v17);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)kvpCommonTable, (int32_t)v15, v16, v17);
     if ( !table )
       goto LABEL_16;
     max_length = table->max_length;
@@ -315,14 +315,14 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetCommonData(
       while ( 1 )
       {
         if ( v20 >= max_length )
-          sub_1B90274(v14, v18);
+          sub_1BAB680(v14, v18);
         v21 = table->m_Items[v20];
         if ( !v21 )
           break;
         v14 = *kvpCommonTable;
         if ( !*kvpCommonTable )
           break;
-        v14 = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__o *)System_Collections_Generic_Dictionary_object__object___ContainsKey((System_Collections_Generic_Dictionary_object__object__o *)v14, (Il2CppObject *)v21->fields.UniqueKey, (const MethodInfo_31D8FA8 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__ContainsKey__);
+        v14 = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__o *)System_Collections_Generic_Dictionary_object__object___ContainsKey((System_Collections_Generic_Dictionary_object__object__o *)v14, (Il2CppObject *)v21->fields.UniqueKey, (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__ContainsKey__);
         if ( ((unsigned __int8)v14 & 1) == 0 )
         {
           v14 = *kvpCommonTable;
@@ -332,14 +332,14 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetCommonData(
             (System_Collections_Generic_Dictionary_object__object__o *)v14,
             (Il2CppObject *)v21->fields.UniqueKey,
             (Il2CppObject *)v21,
-            (const MethodInfo_31D8DB4 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__Add__);
+            (const MethodInfo_321354C *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__Add__);
         }
         max_length = table->max_length;
         if ( (int)++v20 >= max_length )
           goto LABEL_14;
       }
 LABEL_16:
-      sub_1B9026C(v14, v18);
+      sub_1BAB678(v14, v18);
     }
 LABEL_14:
     v14 = *kvpCommonTable;
@@ -350,7 +350,7 @@ LABEL_14:
            (System_Collections_Generic_Dictionary_object__object__o *)v14,
            (Il2CppObject *)key,
            (Il2CppObject **)data,
-           (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TryGetValue__);
+           (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundCommonAssetData__TryGetValue__);
 }
 
 
@@ -365,12 +365,12 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetData(
   System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__o *v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A6F6F7 & 1) == 0 )
+  if ( (byte_4AB567A & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TryGetValue__,
       kvpTable);
-    byte_4A6F6F7 = 1;
+    byte_4AB567A = 1;
   }
   v11 = *kvpTable;
   if ( !*kvpTable )
@@ -378,13 +378,13 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetData(
     OverwriteAssetSoundNameTable__Initialize(this, kvpTable, table, (const MethodInfo *)key);
     v11 = *kvpTable;
     if ( !*kvpTable )
-      sub_1B9026C(0LL, v12);
+      sub_1BAB678(0LL, v12);
   }
   return System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
            (Il2CppObject **)data,
-           (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TryGetValue__);
+           (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__TryGetValue__);
 }
 
 
@@ -471,12 +471,12 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetSystemData(
   System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__o *v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4A6F6F8 & 1) == 0 )
+  if ( (byte_4AB567B & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TryGetValue__,
       kvpSystemTable);
-    byte_4A6F6F8 = 1;
+    byte_4AB567B = 1;
   }
   v11 = *kvpSystemTable;
   if ( !*kvpSystemTable )
@@ -484,13 +484,13 @@ bool __fastcall OverwriteAssetSoundNameTable__TryGetSystemData(
     OverwriteAssetSoundNameTable__SystemInitialize(this, kvpSystemTable, table, (const MethodInfo *)key);
     v11 = *kvpSystemTable;
     if ( !*kvpSystemTable )
-      sub_1B9026C(0LL, v12);
+      sub_1BAB678(0LL, v12);
   }
   return System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
            (Il2CppObject **)data,
-           (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TryGetValue__);
+           (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__TryGetValue__);
 }
 
 

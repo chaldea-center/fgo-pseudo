@@ -16,38 +16,38 @@ void __fastcall ClassBoardItemIconComponent__CloseItemDetail(
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A732B4 & 1) == 0 )
+  if ( (byte_4AB91D7 & 1) == 0 )
   {
-    sub_1B90010(&Method_ClassBoardItemIconComponent_CloseItemDetail__, isDecide);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A732B4 = 1;
+    sub_1BAB41C(&Method_ClassBoardItemIconComponent_CloseItemDetail__, isDecide);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4AB91D7 = 1;
   }
   v4 = Method_ClassBoardItemIconComponent_CloseItemDetail__;
   if ( (*((_BYTE *)Method_ClassBoardItemIconComponent_CloseItemDetail__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B90028(Method_ClassBoardItemIconComponent_CloseItemDetail__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+    v4 = (_QWORD *)sub_1BAB434(Method_ClassBoardItemIconComponent_CloseItemDetail__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   if ( CommonUI__get_IsEnableItemLinkInfoWindow((CommonUI_o *)Instance, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_13;
     if ( CommonUI__get_IsActiveItemLinkInfoWindow((CommonUI_o *)Instance, 0LL) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__CloseItemLinkInfoDetailWindow((CommonUI_o *)Instance, 0LL, 0LL);
         return;
       }
 LABEL_13:
-      sub_1B9026C(Instance, v7);
+      sub_1BAB678(Instance, v7);
     }
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0LL);
@@ -70,21 +70,21 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
   int32_t *p_mana; // x8
   Il2CppObject *MasterData_object; // x20
 
-  if ( (byte_4A732B2 & 1) == 0 )
+  if ( (byte_4AB91D5 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&objectId);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserItemMaster___, v4);
-    sub_1B90010(&NetworkManager_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A732B2 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&objectId);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserItemMaster___, v4);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AB91D5 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ItemMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_24;
   v10 = (ItemMaster_o *)Instance;
@@ -124,12 +124,12 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
         }
         else
         {
-          Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( Instance )
           {
             MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                  (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserItemMaster___);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
             Instance = NetworkManager__get_UserId(0LL);
@@ -151,7 +151,7 @@ int32_t __fastcall ClassBoardItemIconComponent__GetHaveNum(
       }
     }
 LABEL_24:
-    sub_1B9026C(Instance, v9);
+    sub_1BAB678(Instance, v9);
   }
   if ( !SelfUserGame )
     goto LABEL_24;
@@ -179,15 +179,15 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
   ItemLinkInfoWindowComponent_CallbackFunc_o *v17; // x22
   ItemDetailInfoComponent_CallbackFunc_o *v18; // x22
 
-  if ( (byte_4A732B3 & 1) == 0 )
+  if ( (byte_4AB91D6 & 1) == 0 )
   {
-    sub_1B90010(&ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo, method);
-    sub_1B90010(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
-    sub_1B90010(&Method_ClassBoardItemIconComponent_CloseItemDetail__, v4);
-    sub_1B90010(&Method_ClassBoardItemIconComponent_OnClickItem__, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4A732B3 = 1;
+    sub_1BAB41C(&ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo, method);
+    sub_1BAB41C(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
+    sub_1BAB41C(&Method_ClassBoardItemIconComponent_CloseItemDetail__, v4);
+    sub_1BAB41C(&Method_ClassBoardItemIconComponent_OnClickItem__, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4AB91D6 = 1;
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -207,19 +207,19 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
   {
     v11 = Method_ClassBoardItemIconComponent_OnClickItem__;
     if ( (*((_BYTE *)Method_ClassBoardItemIconComponent_OnClickItem__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1B90028(Method_ClassBoardItemIconComponent_OnClickItem__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v11, v11[4]);
+      v11 = (_QWORD *)sub_1BAB434(Method_ClassBoardItemIconComponent_OnClickItem__);
+    v12 = (System_Reflection_MethodBase_o *)sub_1BAB400(v11, v11[4]);
     OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0LL);
-    gameObject = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    gameObject = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( gameObject )
     {
       IsEnableItemLinkInfoWindow = CommonUI__get_IsEnableItemLinkInfoWindow((CommonUI_o *)gameObject, 0LL);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       itemEnt = this->fields.itemEnt;
       v16 = (CommonUI_o *)Instance;
       if ( IsEnableItemLinkInfoWindow )
       {
-        v17 = (ItemLinkInfoWindowComponent_CallbackFunc_o *)sub_1B9025C(ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo);
+        v17 = (ItemLinkInfoWindowComponent_CallbackFunc_o *)sub_1BAB668(ItemLinkInfoWindowComponent_CallbackFunc_TypeInfo);
         ItemLinkInfoWindowComponent_CallbackFunc___ctor(
           v17,
           (Il2CppObject *)this,
@@ -233,7 +233,7 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
       }
       else
       {
-        v18 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1B9025C(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+        v18 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BAB668(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v18,
           (Il2CppObject *)this,
@@ -247,7 +247,7 @@ void __fastcall ClassBoardItemIconComponent__OnClickItem(ClassBoardItemIconCompo
       }
     }
 LABEL_19:
-    sub_1B9026C(gameObject, v9);
+    sub_1BAB678(gameObject, v9);
   }
 }
 
@@ -323,35 +323,35 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   UnityEngine_Color_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A732B1 & 1) == 0 )
+  if ( (byte_4AB91D4 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
-    sub_1B90010(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v7);
-    sub_1B90010(&DataManager_TypeInfo, v8);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v9);
-    sub_1B90010(&int_TypeInfo, v10);
-    sub_1B90010(&LocalizationManager_TypeInfo, v11);
-    sub_1B90010(&NetworkManager_TypeInfo, v12);
-    sub_1B90010(&StringLiteral_3482/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, v13);
-    sub_1B90010(&StringLiteral_3484/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, v14);
-    sub_1B90010(&StringLiteral_24973/*"{0:#,0}"*/, v15);
-    byte_4A732B1 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v7);
+    sub_1BAB41C(&DataManager_TypeInfo, v8);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v9);
+    sub_1BAB41C(&int_TypeInfo, v10);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v11);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v12);
+    sub_1BAB41C(&StringLiteral_3479/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, v13);
+    sub_1BAB41C(&StringLiteral_3481/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, v14);
+    sub_1BAB41C(&StringLiteral_24976/*"{0:#,0}"*/, v15);
+    byte_4AB91D4 = 1;
   }
   this->fields.haveItemNum = 0;
   this->fields._NeedItemNum_k__BackingField = needNum;
   this->fields._CurrentItemId_k__BackingField = itemId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields._CurrentItemId_k__BackingField,
-             (const MethodInfo_312C5A8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_3163D90 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.itemEnt = (struct ItemEntity_o *)Entity;
   p_itemEnt = &this->fields.itemEnt;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)Entity, v20, v21);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.itemEnt, (int32_t)Entity, v20, v21);
   Master_object = (int64_t)this->fields.itemEnt;
   if ( !Master_object )
     goto LABEL_36;
@@ -364,7 +364,7 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v24 = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    v24 = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Master_object = NetworkManager__get_UserId(0LL);
@@ -388,26 +388,26 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   needTitleLb = this->fields.needTitleLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3484/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, 0LL);
+  Master_object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3481/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, 0LL);
   if ( !needTitleLb )
     goto LABEL_36;
   UILabel__set_text(needTitleLb, (System_String_o *)Master_object, 0LL);
   haveTitleLb = this->fields.haveTitleLb;
-  Master_object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3482/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, 0LL);
+  Master_object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_3479/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, 0LL);
   if ( !haveTitleLb )
     goto LABEL_36;
   UILabel__set_text(haveTitleLb, (System_String_o *)Master_object, 0LL);
   haveNumLb = this->fields.haveNumLb;
   haveItemNum = this->fields.haveItemNum;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveItemNum, v30, v31, v32);
-  Master_object = (int64_t)System_String__Format((System_String_o *)StringLiteral_24973/*"{0:#,0}"*/, v33, 0LL);
+  Master_object = (int64_t)System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v33, 0LL);
   if ( !haveNumLb )
     goto LABEL_36;
   UILabel__set_text(haveNumLb, (System_String_o *)Master_object, 0LL);
   needNumLb = this->fields.needNumLb;
   NeedItemNum_k__BackingField = this->fields._NeedItemNum_k__BackingField;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &NeedItemNum_k__BackingField, v35, v36, v37);
-  Master_object = (int64_t)System_String__Format((System_String_o *)StringLiteral_24973/*"{0:#,0}"*/, v38, 0LL);
+  Master_object = (int64_t)System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v38, 0LL);
   if ( !needNumLb )
     goto LABEL_36;
   UILabel__set_text(needNumLb, (System_String_o *)Master_object, 0LL);
@@ -430,7 +430,7 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
       }
     }
 LABEL_36:
-    sub_1B9026C(Master_object, v17);
+    sub_1BAB678(Master_object, v17);
   }
   if ( !Master_object )
     goto LABEL_36;

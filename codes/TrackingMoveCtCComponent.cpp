@@ -3,10 +3,10 @@ void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A6A9C1 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4AB0691 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -51,19 +51,19 @@ void __fastcall TrackingMoveCtCComponent__Set(
   y = d.fields.y;
   x = d.fields.x;
   v13 = isLate;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (int32_t)c);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (int32_t)c);
   this->fields.after = b;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.after, (int32_t)b, v14, v15);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.after, (int32_t)b, v14, v15);
   this->fields.targetObject = c;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
   this->fields.isLateUpdate = v13;
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, v18);
-    byte_4A6A9C1 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v18);
+    byte_4AB0691 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v20 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -131,10 +131,10 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A72F88 & 1) == 0 )
+  if ( (byte_4AB8F82 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A72F88 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB8F82 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -154,7 +154,7 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     v31.fields.z = v9 + this->fields.addpos.fields.z;
     v31.fields.y = v8 + this->fields.addpos.fields.y;
     v31.fields.x = v7 + this->fields.addpos.fields.x;
-    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_69345740(before, v31, 0LL);
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_69606920(before, v31, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_24;
@@ -208,7 +208,7 @@ LABEL_14:
         v32.fields.x = v13;
         v32.fields.y = v20;
         v32.fields.z = v15;
-        v33 = UnityEngine_Camera__ViewportToWorldPoint_69345748((UnityEngine_Camera_o *)transform, v32, 0LL);
+        v33 = UnityEngine_Camera__ViewportToWorldPoint_69606928((UnityEngine_Camera_o *)transform, v32, 0LL);
         x = v33.fields.x;
         y = v33.fields.y;
         z = v33.fields.z;
@@ -225,7 +225,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1B9026C(transform, v4);
+      sub_1BAB678(transform, v4);
     }
     v13 = v13 + this->fields.offset2D.fields.offset.fields.x;
     v20 = v20 + this->fields.offset2D.fields.offset.fields.y;

@@ -1,13 +1,13 @@
 void __fastcall ServantAddEntity___ctor(ServantAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A7049C & 1) == 0 )
+  if ( (byte_4AB638D & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A7049C = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB638D = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ int32_t __fastcall ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, 
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4A70498 & 1) == 0 )
+  if ( (byte_4AB6389 & 1) == 0 )
   {
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4A70498 = 1;
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_4AB6389 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -28,7 +28,7 @@ int32_t __fastcall ServantAddEntity__CreatePrimaryKey(ServantAddEntity_o *this, 
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v6, 0LL);
 }
 
 
@@ -41,12 +41,12 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   System_String_o *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4A7049B & 1) == 0 )
+  if ( (byte_4AB638C & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_1B90010(&string_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_22391/*"overWriteServantShortName"*/, v4);
-    byte_4A7049B = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
+    sub_1BAB41C(&string_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_22394/*"overWriteServantShortName"*/, v4);
+    byte_4AB638C = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -54,14 +54,14 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_22391/*"overWriteServantShortName"*/,
+            (Il2CppObject *)StringLiteral_22394/*"overWriteServantShortName"*/,
             &value,
-            (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
     result = (System_String_o *)value;
     if ( value && (System_String_c *)value->klass != string_TypeInfo )
     {
-      sub_1B9052C(value);
+      sub_1BAB938(value);
       return 0LL;
     }
   }
@@ -74,10 +74,10 @@ int32_t __fastcall ServantAddEntity__GetPresentDialogMessageId(ServantAddEntity_
   const MethodInfo *v2; // x3
   ServantAddMaster_c *v4; // x0
 
-  if ( (byte_4A7049A & 1) == 0 )
+  if ( (byte_4AB638B & 1) == 0 )
   {
-    sub_1B90010(&ServantAddMaster_TypeInfo, method);
-    byte_4A7049A = 1;
+    sub_1BAB41C(&ServantAddMaster_TypeInfo, method);
+    byte_4AB638B = 1;
   }
   v4 = ServantAddMaster_TypeInfo;
   if ( !ServantAddMaster_TypeInfo->_2.cctor_finished )
@@ -104,11 +104,11 @@ int32_t __fastcall ServantAddEntity__GetScript(
   const MethodInfo *v14; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A70499 & 1) == 0 )
+  if ( (byte_4AB638A & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    sub_1B90010(&long_TypeInfo, v7);
-    byte_4A70499 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    sub_1BAB41C(&long_TypeInfo, v7);
+    byte_4AB638A = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -117,14 +117,14 @@ int32_t __fastcall ServantAddEntity__GetScript(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_31DA5C0 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defaultValue;
   }
   if ( !value )
-    sub_1B9026C(0LL, v9);
+    sub_1BAB678(0LL, v9);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v10, v11);
-  sub_1B9052C(value);
+  sub_1BAB938(value);
   return ServantAddEntity__GetPresentDialogMessageId(v13, v14);
 }

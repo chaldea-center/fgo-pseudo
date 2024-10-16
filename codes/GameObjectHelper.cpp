@@ -11,13 +11,13 @@ bool __fastcall GameObjectHelper__IsInScene(
   int32_t m_Handle; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = self;
-  if ( (byte_4A715FF & 1) == 0 )
+  if ( (byte_4AB74E1 & 1) == 0 )
   {
-    self = (UnityEngine_GameObject_o *)sub_1B90010(&SceneList_TypeInfo, *(_QWORD *)&sceneType);
-    byte_4A715FF = 1;
+    self = (UnityEngine_GameObject_o *)sub_1BAB41C(&SceneList_TypeInfo, *(_QWORD *)&sceneType);
+    byte_4AB74E1 = 1;
   }
   if ( !v4 )
-    sub_1B9026C(self, *(_QWORD *)&sceneType);
+    sub_1BAB678(self, *(_QWORD *)&sceneType);
   m_Handle = UnityEngine_GameObject__get_scene(v4, 0LL).fields.m_Handle;
   p_m_Handle = &m_Handle;
   name = UnityEngine_SceneManagement_Scene__get_name((UnityEngine_SceneManagement_Scene_o)p_m_Handle, 0LL);
@@ -67,20 +67,20 @@ void __fastcall GameObjectHelper__addNguiDepth(
   __int64 v35; // x0
 
   v6 = self;
-  if ( (byte_4A715FE & 1) == 0 )
+  if ( (byte_4AB74E0 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&depth);
-    sub_1B90010(&System_IDisposable_TypeInfo, v7);
-    sub_1B90010(&System_Collections_IEnumerator_TypeInfo, v8);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v9);
-    self = (UnityEngine_GameObject_o *)sub_1B90010(&UnityEngine_Transform_TypeInfo, v10);
-    byte_4A715FE = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&depth);
+    sub_1BAB41C(&System_IDisposable_TypeInfo, v7);
+    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
+    self = (UnityEngine_GameObject_o *)sub_1BAB41C(&UnityEngine_Transform_TypeInfo, v10);
+    byte_4AB74E0 = 1;
   }
   if ( !v6 || (self = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0LL)) == 0LL )
-    sub_1B9026C(self, *(_QWORD *)&depth);
+    sub_1BAB678(self, *(_QWORD *)&depth);
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)self, 0LL);
   if ( !Enumerator )
-    sub_1B9026C(0LL, v11);
+    sub_1BAB678(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -100,7 +100,7 @@ void __fastcall GameObjectHelper__addNguiDepth(
     else
     {
 LABEL_10:
-      p_method = sub_1BE1FF0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -123,7 +123,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v20 = sub_1BE1FF0(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v20 = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v21 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v20)(
                                        Enumerator,
@@ -135,20 +135,20 @@ LABEL_17:
     if ( LOBYTE(v21->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (UnityEngine_Transform_c *)v21->klass->_2.typeHierarchy[methodPtr_low - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1B9052C(v21);
+      sub_1BAB938(v21);
 LABEL_39:
-      sub_1B9026C(v21, v22);
+      sub_1BAB678(v21, v22);
     }
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v21,
-                         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                         (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v26 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
     if ( v26 )
     {
       if ( !Component_object )
-        sub_1B9026C(v26, v27);
+        sub_1BAB678(v26, v27);
       UIWidget__set_depth((UIWidget_o *)Component_object, LODWORD(Component_object[11].klass) + depth, 0LL);
     }
     if ( flg )
@@ -157,7 +157,7 @@ LABEL_39:
       GameObjectHelper__addNguiDepth(gameObject, depth, 1, v29);
     }
   }
-  v30 = sub_1B9014C(Enumerator, System_IDisposable_TypeInfo);
+  v30 = sub_1BAB558(Enumerator, System_IDisposable_TypeInfo);
   if ( v30 )
   {
     v31 = *(_QWORD *)v30;
@@ -178,7 +178,7 @@ LABEL_39:
     else
     {
 LABEL_34:
-      v35 = sub_1BE1FF0(v30, System_IDisposable_TypeInfo, 0LL);
+      v35 = sub_1BFD3FC(v30, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
   }

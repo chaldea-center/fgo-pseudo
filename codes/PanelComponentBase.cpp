@@ -16,11 +16,8 @@ void __fastcall PanelComponentBase__ClickPanel(PanelComponentBase_o *this, const
 
 void __fastcall PanelComponentBase__Initialize(PanelComponentBase_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  int32_t v3; // w3
-
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField, 0, v2, v3);
+  sub_1BAB3C0(&this->fields._OnClickPanel_k__BackingField);
 }
 
 
@@ -34,10 +31,10 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4A7405C & 1) == 0 )
+  if ( (byte_4AB0D50 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, value);
-    byte_4A7405C = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, value);
+    byte_4AB0D50 = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,7 +43,7 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   {
     v7 = this->fields.closedPanel;
     if ( !v7 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, value, 0LL);
   }
 }
@@ -57,14 +54,8 @@ void __fastcall PanelComponentBase__SetTheCallBackWhenClickPanel(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField,
-    (int32_t)callback,
-    (int32_t)method,
-    v3);
+  sub_1BAB3C0(&this->fields._OnClickPanel_k__BackingField);
 }
 
 
@@ -79,12 +70,6 @@ void __fastcall PanelComponentBase__set_OnClickPanel(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickPanel_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BAB3C0(&this->fields._OnClickPanel_k__BackingField);
 }

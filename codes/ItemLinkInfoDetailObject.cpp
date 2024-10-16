@@ -30,7 +30,7 @@ void __fastcall ItemLinkInfoDetailObject__Setup(
           itemDetailLabel = (UILabel_o *)ItemEntity__GetImageId(itemEnt, 0LL),
           !itemIcon) )
     {
-      sub_1B9026C(itemDetailLabel, itemEnt);
+      sub_1BAB678(itemDetailLabel, itemEnt);
     }
     ItemIconComponent__SetCombineItemImage(
       itemIcon,
@@ -66,14 +66,14 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
   UserExternalPaymentStoneEntity_o *v19; // [xsp+8h] [xbp-38h] BYREF
   UserGameEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A71EF7 & 1) == 0 )
+  if ( (byte_4AB7D08 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___, method);
-    sub_1B90010(&DataManager_TypeInfo, v3);
-    sub_1B90010(&LocalizationManager_TypeInfo, v4);
-    sub_1B90010(&NetworkManager_TypeInfo, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    byte_4A71EF7 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___, method);
+    sub_1BAB41C(&DataManager_TypeInfo, v3);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v4);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    byte_4AB7D08 = 1;
   }
   entity = 0LL;
   v19 = 0LL;
@@ -81,7 +81,7 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     UserId = NetworkManager__get_UserId(0LL);
@@ -148,7 +148,7 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
         }
       }
 LABEL_36:
-      sub_1B9026C(UserId, v9);
+      sub_1BAB678(UserId, v9);
     }
   }
 }
@@ -160,6 +160,6 @@ float __fastcall ItemLinkInfoDetailObject__get_Height(ItemLinkInfoDetailObject_o
 
   widget = this->fields.widget;
   if ( !widget )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return (float)widget->fields.mHeight;
 }

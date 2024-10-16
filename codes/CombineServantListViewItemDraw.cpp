@@ -43,15 +43,15 @@ void __fastcall CombineServantListViewItemDraw__SetInput(
   UILabel_o *v35; // x21
 
   v4 = isSelectEnable;
-  if ( (byte_4A738A5 & 1) == 0 )
+  if ( (byte_4AB9884 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, item);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B90010(&StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, v8);
-    sub_1B90010(&StringLiteral_9261/*"NONSELECT_MATERIAL"*/, v9);
-    sub_1B90010(&StringLiteral_9264/*"NONSELECT_NPUP_BASE"*/, v10);
-    sub_1B90010(&StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v11);
-    byte_4A738A5 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BAB41C(&StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, v8);
+    sub_1BAB41C(&StringLiteral_9262/*"NONSELECT_MATERIAL"*/, v9);
+    sub_1BAB41C(&StringLiteral_9265/*"NONSELECT_NPUP_BASE"*/, v10);
+    sub_1BAB41C(&StringLiteral_9263/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v11);
+    byte_4AB9884 = 1;
   }
   if ( item )
   {
@@ -233,7 +233,7 @@ LABEL_47:
           v34 = this->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+          maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
           if ( !v34 )
             goto LABEL_92;
           UILabel__set_text(v34, (System_String_o *)maskSprite, 0LL);
@@ -248,7 +248,7 @@ LABEL_47:
           v35 = this->fields.maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+          maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
           if ( !v35 )
             goto LABEL_92;
           UILabel__set_text(v35, (System_String_o *)maskSprite, 0LL);
@@ -259,7 +259,7 @@ LABEL_47:
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v32 = &StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/;
+      v32 = &StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/;
 LABEL_78:
       maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v32, 0LL);
       if ( maskLabel )
@@ -268,7 +268,7 @@ LABEL_78:
         goto LABEL_80;
       }
 LABEL_92:
-      sub_1B9026C(maskSprite, v21);
+      sub_1BAB678(maskSprite, v21);
     }
     maskLabel = this->fields.maskLabel;
     v25 = LocalizationManager_TypeInfo;
@@ -276,7 +276,7 @@ LABEL_92:
 LABEL_75:
     if ( !v27 )
       j_il2cpp_runtime_class_init_0(v25);
-    v32 = &StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
+    v32 = &StringLiteral_9262/*"NONSELECT_MATERIAL"*/;
     goto LABEL_78;
   }
   if ( !CombineServantListViewItem__get_IsCanNotSelectMaterial(item, 0LL) )
@@ -284,7 +284,7 @@ LABEL_75:
     v24 = this->fields.maskLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
+    maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9263/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
     if ( !v24 )
       goto LABEL_92;
     UILabel__set_text(v24, (System_String_o *)maskSprite, 0LL);
@@ -296,7 +296,7 @@ LABEL_75:
 LABEL_57:
       if ( !v27 )
         j_il2cpp_runtime_class_init_0(v25);
-      v32 = &StringLiteral_9264/*"NONSELECT_NPUP_BASE"*/;
+      v32 = &StringLiteral_9265/*"NONSELECT_NPUP_BASE"*/;
       goto LABEL_78;
     }
   }
@@ -594,62 +594,62 @@ void __fastcall CombineServantListViewItemDraw__SetItem(
   UnityEngine_Vector3_o v288; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v289; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A738A4 & 1) == 0 )
+  if ( (byte_4AB9883 & 1) == 0 )
   {
-    sub_1B90010(&AtlasManager_TypeInfo, item);
-    sub_1B90010(&CombineServantListViewManager_TypeInfo, v11);
-    sub_1B90010(&int_TypeInfo, v12);
-    sub_1B90010(&Method_System_Collections_Generic_List_string__Add__, v13);
-    sub_1B90010(&Method_System_Collections_Generic_List_int__Contains__, v14);
-    sub_1B90010(&Method_System_Collections_Generic_List_string___ctor__, v15);
-    sub_1B90010(&Method_System_Collections_Generic_List_int__get_Count__, v16);
-    sub_1B90010(&System_Collections_Generic_List_string__TypeInfo, v17);
-    sub_1B90010(&LocalizationManager_TypeInfo, v18);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v19);
-    sub_1B90010(&System_Text_StringBuilder_TypeInfo, v20);
-    sub_1B90010(&TutorialFlag_TypeInfo, v21);
-    sub_1B90010(&StringLiteral_12178/*"SKILL_LVDISP_TXT"*/, v22);
-    sub_1B90010(&StringLiteral_10314/*"PARTY_ORGANIZATION_SERVANT_EVENT_JOIN"*/, v23);
-    sub_1B90010(&StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, v24);
-    sub_1B90010(&StringLiteral_6448/*"FORTIFICATION_APPOINTMENT"*/, v25);
-    sub_1B90010(&StringLiteral_3650/*"COMBINE_CAN_STATUS_UP_INFO"*/, v26);
-    sub_1B90010(&StringLiteral_8760/*"MSG_CAMPAIGN_COMBINE_EXP"*/, v27);
-    sub_1B90010(&StringLiteral_12176/*"SKILL_LVDISP_ENABLE_TXT"*/, v28);
-    sub_1B90010(&StringLiteral_9261/*"NONSELECT_MATERIAL"*/, v29);
-    sub_1B90010(&StringLiteral_22971/*"ribbon_noblephantasmup_01"*/, v30);
-    sub_1B90010(&StringLiteral_9260/*"NONSELECT_LIMITUP_BASE"*/, v31);
-    sub_1B90010(&StringLiteral_10129/*"PARTY_MEMBER_TXT"*/, v32);
-    sub_1B90010(&StringLiteral_9264/*"NONSELECT_NPUP_BASE"*/, v33);
-    sub_1B90010(&StringLiteral_12434/*"SUPPORT_MEMBER"*/, v34);
-    sub_1B90010(&StringLiteral_8756/*"MSG_ABLED_LIMITUP"*/, v35);
-    sub_1B90010(&StringLiteral_11526/*"SELECT_PUSH"*/, v36);
-    sub_1B90010(&StringLiteral_11503/*"SELECT_CANNOT"*/, v37);
-    sub_1B90010(&StringLiteral_9319/*"NPUP_BASE"*/, v38);
-    sub_1B90010(&StringLiteral_12175/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/, v39);
-    sub_1B90010(&StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, v40);
-    sub_1B90010(&StringLiteral_9307/*"NO_SELECT_FRIENDSHIP_EXCEED"*/, v41);
-    sub_1B90010(&StringLiteral_11427/*"SAME_SERVANT"*/, v42);
-    sub_1B90010(&StringLiteral_8755/*"MSG_ABLED_FRIENDSHIP_EXCEED"*/, v43);
-    sub_1B90010(&StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v44);
-    sub_1B90010(&StringLiteral_24973/*"{0:#,0}"*/, v45);
-    sub_1B90010(&StringLiteral_12177/*"SKILL_LVDISP_SINGLE_TXT"*/, v46);
-    sub_1B90010(&StringLiteral_8757/*"MSG_ABLED_SKILLUP"*/, v47);
-    sub_1B90010(&StringLiteral_9263/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/, v48);
-    sub_1B90010(&StringLiteral_9267/*"NONSKILL_TXT"*/, v49);
-    sub_1B90010(&StringLiteral_8294/*"LOCKMODE_SELECTED_SERVANT"*/, v50);
-    sub_1B90010(&StringLiteral_6361/*"FAVORITE_SERVANT"*/, v51);
-    sub_1B90010(&StringLiteral_3466/*"CHOICE_SERVANT"*/, v52);
-    sub_1B90010(&StringLiteral_11022/*"RECOMMEND_SUPPORT_MEMBER"*/, v53);
-    sub_1B90010(&StringLiteral_8759/*"MSG_ABLED_TDUP"*/, v54);
-    sub_1B90010(&StringLiteral_11497/*"SEAL_COMBINE_LIMIT_THIRD"*/, v55);
-    sub_1B90010(&StringLiteral_9259/*"NONSELECT_BASE_ALLMAX"*/, v56);
-    sub_1B90010(&StringLiteral_9308/*"NO_SELECT_LVEXCEED"*/, v57);
-    sub_1B90010(&StringLiteral_1/*""*/, v58);
-    sub_1B90010(&StringLiteral_9265/*"NONSELECT_SKILLUP_BASE"*/, v59);
-    sub_1B90010(&StringLiteral_11525/*"SELECT_PROTECTED_EVENT_SVT"*/, v60);
-    sub_1B90010(&StringLiteral_8295/*"LOCK_SERVANT"*/, v61);
-    sub_1B90010(&StringLiteral_9258/*"NONSEELECT_STATUSUP_MAX"*/, v62);
-    byte_4A738A4 = 1;
+    sub_1BAB41C(&AtlasManager_TypeInfo, item);
+    sub_1BAB41C(&CombineServantListViewManager_TypeInfo, v11);
+    sub_1BAB41C(&int_TypeInfo, v12);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string__Add__, v13);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int__Contains__, v14);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string___ctor__, v15);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int__get_Count__, v16);
+    sub_1BAB41C(&System_Collections_Generic_List_string__TypeInfo, v17);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v18);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v19);
+    sub_1BAB41C(&System_Text_StringBuilder_TypeInfo, v20);
+    sub_1BAB41C(&TutorialFlag_TypeInfo, v21);
+    sub_1BAB41C(&StringLiteral_12180/*"SKILL_LVDISP_TXT"*/, v22);
+    sub_1BAB41C(&StringLiteral_10314/*"PARTY_ORGANIZATION_SERVANT_EVENT_JOIN"*/, v23);
+    sub_1BAB41C(&StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, v24);
+    sub_1BAB41C(&StringLiteral_6446/*"FORTIFICATION_APPOINTMENT"*/, v25);
+    sub_1BAB41C(&StringLiteral_3647/*"COMBINE_CAN_STATUS_UP_INFO"*/, v26);
+    sub_1BAB41C(&StringLiteral_8761/*"MSG_CAMPAIGN_COMBINE_EXP"*/, v27);
+    sub_1BAB41C(&StringLiteral_12178/*"SKILL_LVDISP_ENABLE_TXT"*/, v28);
+    sub_1BAB41C(&StringLiteral_9262/*"NONSELECT_MATERIAL"*/, v29);
+    sub_1BAB41C(&StringLiteral_22976/*"ribbon_noblephantasmup_01"*/, v30);
+    sub_1BAB41C(&StringLiteral_9261/*"NONSELECT_LIMITUP_BASE"*/, v31);
+    sub_1BAB41C(&StringLiteral_10129/*"PARTY_MEMBER_TXT"*/, v32);
+    sub_1BAB41C(&StringLiteral_9265/*"NONSELECT_NPUP_BASE"*/, v33);
+    sub_1BAB41C(&StringLiteral_12436/*"SUPPORT_MEMBER"*/, v34);
+    sub_1BAB41C(&StringLiteral_8757/*"MSG_ABLED_LIMITUP"*/, v35);
+    sub_1BAB41C(&StringLiteral_11528/*"SELECT_PUSH"*/, v36);
+    sub_1BAB41C(&StringLiteral_11505/*"SELECT_CANNOT"*/, v37);
+    sub_1BAB41C(&StringLiteral_9320/*"NPUP_BASE"*/, v38);
+    sub_1BAB41C(&StringLiteral_12177/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/, v39);
+    sub_1BAB41C(&StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, v40);
+    sub_1BAB41C(&StringLiteral_9308/*"NO_SELECT_FRIENDSHIP_EXCEED"*/, v41);
+    sub_1BAB41C(&StringLiteral_11429/*"SAME_SERVANT"*/, v42);
+    sub_1BAB41C(&StringLiteral_8756/*"MSG_ABLED_FRIENDSHIP_EXCEED"*/, v43);
+    sub_1BAB41C(&StringLiteral_9263/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v44);
+    sub_1BAB41C(&StringLiteral_24976/*"{0:#,0}"*/, v45);
+    sub_1BAB41C(&StringLiteral_12179/*"SKILL_LVDISP_SINGLE_TXT"*/, v46);
+    sub_1BAB41C(&StringLiteral_8758/*"MSG_ABLED_SKILLUP"*/, v47);
+    sub_1BAB41C(&StringLiteral_9264/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/, v48);
+    sub_1BAB41C(&StringLiteral_9268/*"NONSKILL_TXT"*/, v49);
+    sub_1BAB41C(&StringLiteral_8295/*"LOCKMODE_SELECTED_SERVANT"*/, v50);
+    sub_1BAB41C(&StringLiteral_6364/*"FAVORITE_SERVANT"*/, v51);
+    sub_1BAB41C(&StringLiteral_3463/*"CHOICE_SERVANT"*/, v52);
+    sub_1BAB41C(&StringLiteral_11024/*"RECOMMEND_SUPPORT_MEMBER"*/, v53);
+    sub_1BAB41C(&StringLiteral_8760/*"MSG_ABLED_TDUP"*/, v54);
+    sub_1BAB41C(&StringLiteral_11499/*"SEAL_COMBINE_LIMIT_THIRD"*/, v55);
+    sub_1BAB41C(&StringLiteral_9260/*"NONSELECT_BASE_ALLMAX"*/, v56);
+    sub_1BAB41C(&StringLiteral_9309/*"NO_SELECT_LVEXCEED"*/, v57);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v58);
+    sub_1BAB41C(&StringLiteral_9266/*"NONSELECT_SKILLUP_BASE"*/, v59);
+    sub_1BAB41C(&StringLiteral_11527/*"SELECT_PROTECTED_EVENT_SVT"*/, v60);
+    sub_1BAB41C(&StringLiteral_8296/*"LOCK_SERVANT"*/, v61);
+    sub_1BAB41C(&StringLiteral_9259/*"NONSEELECT_STATUSUP_MAX"*/, v62);
+    byte_4AB9883 = 1;
   }
   v287.invoker_method = 0LL;
   skillInfoList = 0LL;
@@ -678,7 +678,7 @@ void __fastcall CombineServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_947;
-    ServantFaceIconComponent__Set_38272380(
+    ServantFaceIconComponent__Set_38600628(
       servantFaceIcon,
       (UserServantEntity_o *)gameObject,
       iconLabelInfo1,
@@ -694,7 +694,7 @@ void __fastcall CombineServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_947;
-    ServantFaceIconComponent__Set_38272380(servantFaceIcon, (UserServantEntity_o *)gameObject, iconLabelInfo1, 0LL, 0LL);
+    ServantFaceIconComponent__Set_38600628(servantFaceIcon, (UserServantEntity_o *)gameObject, iconLabelInfo1, 0LL, 0LL);
     gameObject = (__int64)item->fields.iconLabelInfo2;
     if ( !gameObject )
       goto LABEL_947;
@@ -716,7 +716,7 @@ void __fastcall CombineServantListViewItemDraw__SetItem(
   gameObject = (__int64)CombineServantListViewItem__get_UserSvtEntity(item, 0LL);
   if ( !gameObject || !subIconLabel )
     goto LABEL_947;
-  UIIconLabel__Set_38287724(subIconLabel, 36, rarity, v71, 0, 0LL, 0, 0, *(_DWORD *)(gameObject + 256), 0LL);
+  UIIconLabel__Set_38616660(subIconLabel, 36, rarity, v71, 0, 0LL, 0, 0, *(_DWORD *)(gameObject + 256), 0LL);
 LABEL_22:
   CombineServantListViewItem__GetNpInfo(
     item,
@@ -756,10 +756,10 @@ LABEL_22:
   if ( !*p_maskLabel )
     goto LABEL_947;
   v75 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-  if ( !byte_4A6A9C6 )
+  if ( !byte_4AB0696 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, v74);
-    byte_4A6A9C6 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v74);
+    byte_4AB0696 = 1;
   }
   GameObjectExtensions__SetLocalScale(v75, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   gameObject = (__int64)this->fields.skillLvLabel;
@@ -850,7 +850,7 @@ LABEL_22:
       v79 = this->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v79, (System_String_o *)StringLiteral_22971/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v79, (System_String_o *)StringLiteral_22976/*"ribbon_noblephantasmup_01"*/, 0LL);
       v81 = item->fields.type;
       if ( !CombineServantListViewManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CombineServantListViewManager_TypeInfo);
@@ -875,7 +875,7 @@ LABEL_22:
       if ( !gameObject )
         goto LABEL_947;
       v89 = SHIDWORD(v287.invoker_method) <= 0 ? -1 : LODWORD(v287.invoker_method);
-      UIIconLabel__Set_38287724(
+      UIIconLabel__Set_38616660(
         (UIIconLabel_o *)gameObject,
         33,
         v89,
@@ -912,7 +912,7 @@ LABEL_22:
         v126 = *p_maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11525/*"SELECT_PROTECTED_EVENT_SVT"*/, 0LL);
+        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_PROTECTED_EVENT_SVT"*/, 0LL);
         if ( !v126 )
           goto LABEL_947;
         UILabel__set_text(v126, (System_String_o *)gameObject, 0LL);
@@ -952,7 +952,7 @@ LABEL_101:
           v92 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6361/*"FAVORITE_SERVANT"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6364/*"FAVORITE_SERVANT"*/, 0LL);
           if ( !v92 )
             goto LABEL_947;
           UILabel__set_text(v92, (System_String_o *)gameObject, 0LL);
@@ -977,7 +977,7 @@ LABEL_101:
           v93 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8295/*"LOCK_SERVANT"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8296/*"LOCK_SERVANT"*/, 0LL);
           if ( !v93 )
             goto LABEL_947;
           UILabel__set_text(v93, (System_String_o *)gameObject, 0LL);
@@ -995,7 +995,7 @@ LABEL_101:
           v95 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3466/*"CHOICE_SERVANT"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3463/*"CHOICE_SERVANT"*/, 0LL);
           if ( !v95 )
             goto LABEL_947;
           UILabel__set_text(v95, (System_String_o *)gameObject, 0LL);
@@ -1013,7 +1013,7 @@ LABEL_101:
           v96 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11427/*"SAME_SERVANT"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11429/*"SAME_SERVANT"*/, 0LL);
           if ( !v96 )
             goto LABEL_947;
           UILabel__set_text(v96, (System_String_o *)gameObject, 0LL);
@@ -1031,7 +1031,7 @@ LABEL_101:
           v97 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/, 0LL);
           if ( !v97 )
             goto LABEL_947;
           UILabel__set_text(v97, (System_String_o *)gameObject, 0LL);
@@ -1049,7 +1049,7 @@ LABEL_101:
           v98 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/, 0LL);
           if ( !v98 )
             goto LABEL_947;
           UILabel__set_text(v98, (System_String_o *)gameObject, 0LL);
@@ -1067,7 +1067,7 @@ LABEL_101:
           v99 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
           if ( !v99 )
             goto LABEL_947;
           UILabel__set_text(v99, (System_String_o *)gameObject, 0LL);
@@ -1086,7 +1086,7 @@ LABEL_101:
           isParty = item->fields.isParty;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v102 = &StringLiteral_12434/*"SUPPORT_MEMBER"*/;
+          v102 = &StringLiteral_12436/*"SUPPORT_MEMBER"*/;
           if ( isParty )
             v102 = &StringLiteral_10129/*"PARTY_MEMBER_TXT"*/;
           gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v102, 0LL);
@@ -1109,7 +1109,7 @@ LABEL_101:
           v104 = item->fields.isParty;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v105 = &StringLiteral_11022/*"RECOMMEND_SUPPORT_MEMBER"*/;
+          v105 = &StringLiteral_11024/*"RECOMMEND_SUPPORT_MEMBER"*/;
           if ( v104 )
             v105 = &StringLiteral_10129/*"PARTY_MEMBER_TXT"*/;
           gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v105, 0LL);
@@ -1138,7 +1138,7 @@ LABEL_101:
           v106 = *p_maskLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11526/*"SELECT_PUSH"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11528/*"SELECT_PUSH"*/, 0LL);
           if ( !v106 )
             goto LABEL_947;
           UILabel__set_text(v106, (System_String_o *)gameObject, 0LL);
@@ -1146,10 +1146,10 @@ LABEL_101:
           if ( !*p_maskLabel )
             goto LABEL_947;
           v108 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-          if ( !byte_4A6A9C6 )
+          if ( !byte_4AB0696 )
           {
-            sub_1B90010(&UnityEngine_Vector3_TypeInfo, v107);
-            byte_4A6A9C6 = 1;
+            sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v107);
+            byte_4AB0696 = 1;
           }
           GameObjectExtensions__SetLocalScale(v108, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
           v90 = 1;
@@ -1196,7 +1196,7 @@ LABEL_101:
                 v127 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
+                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9263/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
                 if ( !v127 )
                   goto LABEL_947;
                 UILabel__set_text(v127, (System_String_o *)gameObject, 0LL);
@@ -1205,7 +1205,7 @@ LABEL_101:
                 v117 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                v118 = &StringLiteral_9264/*"NONSELECT_NPUP_BASE"*/;
+                v118 = &StringLiteral_9265/*"NONSELECT_NPUP_BASE"*/;
 LABEL_312:
                 v130 = (System_String_o *)*v118;
 LABEL_313:
@@ -1223,7 +1223,7 @@ LABEL_315:
                 v132 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9319/*"NPUP_BASE"*/, 0LL);
+                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9320/*"NPUP_BASE"*/, 0LL);
                 if ( !v132 )
                   goto LABEL_947;
                 UILabel__set_text(v132, (System_String_o *)gameObject, 0LL);
@@ -1231,10 +1231,10 @@ LABEL_315:
                 if ( !*v283 )
                   goto LABEL_947;
                 v134 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-                if ( !byte_4A6A9C6 )
+                if ( !byte_4AB0696 )
                 {
-                  sub_1B90010(&UnityEngine_Vector3_TypeInfo, v133);
-                  byte_4A6A9C6 = 1;
+                  sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v133);
+                  byte_4AB0696 = 1;
                 }
                 GameObjectExtensions__SetLocalScale(v134, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
               }
@@ -1267,7 +1267,7 @@ LABEL_315:
               fortificationAppointmentLabel = this->fields.fortificationAppointmentLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6448/*"FORTIFICATION_APPOINTMENT"*/, 0LL);
+              gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6446/*"FORTIFICATION_APPOINTMENT"*/, 0LL);
               if ( !fortificationAppointmentLabel )
                 goto LABEL_947;
               UILabel__set_text(fortificationAppointmentLabel, (System_String_o *)gameObject, 0LL);
@@ -1310,7 +1310,7 @@ LABEL_315:
               v117 = *v283;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v130 = (System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
+              v130 = (System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/;
               goto LABEL_313;
             }
             goto LABEL_315;
@@ -1325,7 +1325,7 @@ LABEL_315:
                 v128 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
                 if ( !v128 )
                   goto LABEL_947;
                 UILabel__set_text(v128, (System_String_o *)gameObject, 0LL);
@@ -1335,7 +1335,7 @@ LABEL_315:
                 v129 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
                 if ( !v129 )
                   goto LABEL_947;
                 UILabel__set_text(v129, (System_String_o *)gameObject, 0LL);
@@ -1345,7 +1345,7 @@ LABEL_315:
               v117 = *v283;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v118 = &StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/;
+              v118 = &StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/;
             }
             else
             {
@@ -1358,7 +1358,7 @@ LABEL_315:
                   v114 = *v283;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+                  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
                   if ( !v114 )
                     goto LABEL_947;
                   UILabel__set_text(v114, (System_String_o *)gameObject, 0LL);
@@ -1368,7 +1368,7 @@ LABEL_315:
                   v115 = *v283;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9263/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/, 0LL);
+                  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9264/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/, 0LL);
                   if ( !v115 )
                     goto LABEL_947;
                   UILabel__set_text(v115, (System_String_o *)gameObject, 0LL);
@@ -1381,7 +1381,7 @@ LABEL_315:
                 v116 = *v283;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
+                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSELECT_UNDER_STATUS_MAX"*/, 0LL);
                 if ( !v116 )
                   goto LABEL_947;
                 UILabel__set_text(v116, (System_String_o *)gameObject, 0LL);
@@ -1391,7 +1391,7 @@ LABEL_315:
               v117 = *v283;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v118 = &StringLiteral_9263/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/;
+              v118 = &StringLiteral_9264/*"NONSELECT_NOT_CLEAR_CONDITIONS"*/;
             }
             goto LABEL_312;
           }
@@ -1466,7 +1466,7 @@ LABEL_269:
             v125 = *v283;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+            gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/, 0LL);
             if ( !v125 )
               goto LABEL_947;
             UILabel__set_text(v125, (System_String_o *)gameObject, 0LL);
@@ -1569,7 +1569,7 @@ LABEL_100:
             v87 = *v283;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v88 = &StringLiteral_9259/*"NONSELECT_BASE_ALLMAX"*/;
+            v88 = &StringLiteral_9260/*"NONSELECT_BASE_ALLMAX"*/;
             goto LABEL_329;
           }
         }
@@ -1594,7 +1594,7 @@ LABEL_100:
           v87 = *v283;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v88 = &StringLiteral_11503/*"SELECT_CANNOT"*/;
+          v88 = &StringLiteral_11505/*"SELECT_CANNOT"*/;
 LABEL_329:
           gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v88, 0LL);
           if ( !v87 )
@@ -1627,7 +1627,7 @@ LABEL_326:
         v87 = *v283;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v88 = &StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
+        v88 = &StringLiteral_9262/*"NONSELECT_MATERIAL"*/;
         goto LABEL_329;
       }
       if ( !v86 )
@@ -1664,13 +1664,13 @@ LABEL_326:
           && CombineServantListViewItem__get_IsAtkAdjustMax(item, 0LL)
           && !CombineServantListViewItem__get_IsSecondAtkAdjustMax(item, 0LL) )
         {
-          v142 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_string__TypeInfo);
+          v142 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_string__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v142,
-            (const MethodInfo_351018C *)Method_System_Collections_Generic_List_string___ctor__);
+            (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_string___ctor__);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v143 = LocalizationManager__Get((System_String_o *)StringLiteral_8760/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
+          v143 = LocalizationManager__Get((System_String_o *)StringLiteral_8761/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
           *(float *)&v287.methodPointer = item->fields.combineExpCampaignValue;
           v144 = (Il2CppObject *)System_Single__ToString(*(float *)&v287.methodPointer, &v287);
           gameObject = (__int64)System_String__Format(v143, v144, 0LL);
@@ -1688,16 +1688,16 @@ LABEL_326:
             System_Collections_Generic_List_object___AddWithResize(
               v142,
               (Il2CppObject *)gameObject,
-              *(const MethodInfo_35109C0 **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
+              *(const MethodInfo_354D8BC **)(*(_QWORD *)(v148[4] + 192LL) + 112LL));
           }
           else
           {
             v151 = &items->obj.klass + size;
             v142->fields._size = size + 1;
             v151[4] = (Il2CppClass *)v150;
-            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v151 + 4), v150, v145, v146);
+            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v151 + 4), v150, v145, v146);
           }
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3650/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
           v163 = v142->fields._items;
           v164 = Method_System_Collections_Generic_List_string__Add__;
           ++v142->fields._version;
@@ -1720,7 +1720,7 @@ LABEL_326:
             v122 = *p_statusTxtLb;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v123 = LocalizationManager__Get((System_String_o *)StringLiteral_8760/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
+            v123 = LocalizationManager__Get((System_String_o *)StringLiteral_8761/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
             *(float *)&v287.methodPointer = item->fields.combineExpCampaignValue;
             v124 = (Il2CppObject *)System_Single__ToString(*(float *)&v287.methodPointer, &v287);
             gameObject = (__int64)System_String__Format(v123, v124, 0LL);
@@ -1738,13 +1738,13 @@ LABEL_390:
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
             goto LABEL_393;
           }
-          v142 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_string__TypeInfo);
+          v142 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_string__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v142,
-            (const MethodInfo_351018C *)Method_System_Collections_Generic_List_string___ctor__);
+            (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_string___ctor__);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v152 = LocalizationManager__Get((System_String_o *)StringLiteral_8760/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
+          v152 = LocalizationManager__Get((System_String_o *)StringLiteral_8761/*"MSG_CAMPAIGN_COMBINE_EXP"*/, 0LL);
           *(float *)&v287.methodPointer = item->fields.combineExpCampaignValue;
           v153 = (Il2CppObject *)System_Single__ToString(*(float *)&v287.methodPointer, &v287);
           gameObject = (__int64)System_String__Format(v152, v153, 0LL);
@@ -1762,16 +1762,16 @@ LABEL_390:
             System_Collections_Generic_List_object___AddWithResize(
               v142,
               (Il2CppObject *)gameObject,
-              *(const MethodInfo_35109C0 **)(*(_QWORD *)(v157[4] + 192LL) + 112LL));
+              *(const MethodInfo_354D8BC **)(*(_QWORD *)(v157[4] + 192LL) + 112LL));
           }
           else
           {
             v160 = &v156->obj.klass + v158;
             v142->fields._size = v158 + 1;
             v160[4] = (Il2CppClass *)v159;
-            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v160 + 4), v159, v154, v155);
+            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v160 + 4), v159, v154, v155);
           }
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3650/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
           v163 = v142->fields._items;
           v164 = Method_System_Collections_Generic_List_string__Add__;
           ++v142->fields._version;
@@ -1785,14 +1785,14 @@ LABEL_390:
           System_Collections_Generic_List_object___AddWithResize(
             v142,
             (Il2CppObject *)gameObject,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v164[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v164[4] + 192LL) + 112LL));
         }
         else
         {
           v167 = &v163->obj.klass + v165;
           v142->fields._size = v165 + 1;
           v167[4] = (Il2CppClass *)v166;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v167 + 4), v166, v161, v162);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v167 + 4), v166, v161, v162);
         }
         gameObject = (__int64)item->fields._NoticeTween_k__BackingField;
         if ( !gameObject )
@@ -1832,7 +1832,7 @@ LABEL_390:
       v122 = *p_statusTxtLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3650/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMBINE_CAN_STATUS_UP_INFO"*/, 0LL);
       if ( !v122 )
         goto LABEL_947;
       goto LABEL_261;
@@ -1904,14 +1904,14 @@ LABEL_398:
       v177 = *v283;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v178 = &StringLiteral_9261/*"NONSELECT_MATERIAL"*/;
+      v178 = &StringLiteral_9262/*"NONSELECT_MATERIAL"*/;
     }
     else if ( item->fields.isLimitCntMax )
     {
       v177 = *v283;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v178 = &StringLiteral_9260/*"NONSELECT_LIMITUP_BASE"*/;
+      v178 = &StringLiteral_9261/*"NONSELECT_LIMITUP_BASE"*/;
     }
     else
     {
@@ -1920,7 +1920,7 @@ LABEL_398:
       v177 = *v283;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v178 = &StringLiteral_11497/*"SEAL_COMBINE_LIMIT_THIRD"*/;
+      v178 = &StringLiteral_11499/*"SEAL_COMBINE_LIMIT_THIRD"*/;
     }
 LABEL_442:
     gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v178, 0LL);
@@ -1993,7 +1993,7 @@ LABEL_457:
       v171 = *v283;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v172 = (System_String_o **)(isHeroineSvt ? &StringLiteral_9261/*"NONSELECT_MATERIAL"*/ : &StringLiteral_9260/*"NONSELECT_LIMITUP_BASE"*/);
+      v172 = (System_String_o **)(isHeroineSvt ? &StringLiteral_9262/*"NONSELECT_MATERIAL"*/ : &StringLiteral_9261/*"NONSELECT_LIMITUP_BASE"*/);
       gameObject = (__int64)LocalizationManager__Get(*v172, 0LL);
       if ( !v171 )
         goto LABEL_947;
@@ -2105,7 +2105,7 @@ LABEL_450:
     v177 = *p_statusTxtLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v178 = &StringLiteral_8756/*"MSG_ABLED_LIMITUP"*/;
+    v178 = &StringLiteral_8757/*"MSG_ABLED_LIMITUP"*/;
     goto LABEL_442;
   }
 LABEL_467:
@@ -2128,7 +2128,7 @@ LABEL_471:
     goto LABEL_547;
   CombineServantListViewItem__GetSkillInfo(item, &skillInfoList, 0LL);
   enableSkillUp = item->fields.enableSkillUp;
-  v185 = (System_Text_StringBuilder_o *)sub_1B9025C(System_Text_StringBuilder_TypeInfo);
+  v185 = (System_Text_StringBuilder_o *)sub_1BAB668(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v185, 0LL);
   v186 = skillInfoList;
   if ( !skillInfoList )
@@ -2161,7 +2161,7 @@ LABEL_471:
       }
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSKILL_TXT"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9268/*"NONSKILL_TXT"*/, 0LL);
 LABEL_483:
       v195 = (Il2CppObject *)gameObject;
       if ( enableSkillUp )
@@ -2169,20 +2169,20 @@ LABEL_483:
         v196 = System_Collections_Generic_List_int___Contains(
                  enableSkillUp,
                  v194,
-                 (const MethodInfo_34F3D14 *)Method_System_Collections_Generic_List_int__Contains__);
+                 (const MethodInfo_3530C10 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v189 == v188 )
         {
-          v197 = (System_String_o **)&StringLiteral_12175/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
+          v197 = (System_String_o **)&StringLiteral_12177/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
           if ( !v196 )
-            v197 = (System_String_o **)&StringLiteral_12177/*"SKILL_LVDISP_SINGLE_TXT"*/;
+            v197 = (System_String_o **)&StringLiteral_12179/*"SKILL_LVDISP_SINGLE_TXT"*/;
         }
         else
         {
-          v197 = (System_String_o **)&StringLiteral_12176/*"SKILL_LVDISP_ENABLE_TXT"*/;
+          v197 = (System_String_o **)&StringLiteral_12178/*"SKILL_LVDISP_ENABLE_TXT"*/;
           if ( !v196 )
-            v197 = (System_String_o **)&StringLiteral_12178/*"SKILL_LVDISP_TXT"*/;
+            v197 = (System_String_o **)&StringLiteral_12180/*"SKILL_LVDISP_TXT"*/;
         }
         gameObject = (__int64)LocalizationManager__Get(*v197, 0LL);
         if ( v185 )
@@ -2266,7 +2266,7 @@ LABEL_497:
     v200 = *v283;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9265/*"NONSELECT_SKILLUP_BASE"*/, 0LL);
+    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_SKILLUP_BASE"*/, 0LL);
     if ( !v200 )
       goto LABEL_947;
     UILabel__set_text(v200, (System_String_o *)gameObject, 0LL);
@@ -2274,12 +2274,12 @@ LABEL_497:
       goto LABEL_542;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    if ( !TutorialFlag__Get_37740444(126, 0LL) )
+    if ( !TutorialFlag__Get_38072332(126, 0LL) )
       goto LABEL_542;
     v201 = *v283;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v202 = &StringLiteral_11503/*"SELECT_CANNOT"*/;
+    v202 = &StringLiteral_11505/*"SELECT_CANNOT"*/;
     goto LABEL_536;
   }
   isSkillUpItemNum = item->fields.isSkillUpItemNum;
@@ -2336,7 +2336,7 @@ LABEL_497:
     v201 = *v281;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v202 = &StringLiteral_8757/*"MSG_ABLED_SKILLUP"*/;
+    v202 = &StringLiteral_8758/*"MSG_ABLED_SKILLUP"*/;
 LABEL_536:
     gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v202, 0LL);
     if ( !v201 )
@@ -2362,7 +2362,7 @@ LABEL_547:
   AppendSkillData = CombineServantListViewItem__GetAppendSkillData(item, 0LL);
   enableAppendSkillUp = item->fields.enableAppendSkillUp;
   v208 = AppendSkillData;
-  v209 = (System_Text_StringBuilder_o *)sub_1B9025C(System_Text_StringBuilder_TypeInfo);
+  v209 = (System_Text_StringBuilder_o *)sub_1BAB668(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v209, 0LL);
   if ( !v208 )
     goto LABEL_947;
@@ -2390,7 +2390,7 @@ LABEL_547:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9267/*"NONSKILL_TXT"*/, 0LL);
+        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9268/*"NONSKILL_TXT"*/, 0LL);
       }
       else
       {
@@ -2402,20 +2402,20 @@ LABEL_547:
         v221 = System_Collections_Generic_List_int___Contains(
                  enableAppendSkillUp,
                  v217,
-                 (const MethodInfo_34F3D14 *)Method_System_Collections_Generic_List_int__Contains__);
+                 (const MethodInfo_3530C10 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v212 == v213 )
         {
-          v222 = (System_String_o **)&StringLiteral_12175/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
+          v222 = (System_String_o **)&StringLiteral_12177/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
           if ( !v221 )
-            v222 = (System_String_o **)&StringLiteral_12177/*"SKILL_LVDISP_SINGLE_TXT"*/;
+            v222 = (System_String_o **)&StringLiteral_12179/*"SKILL_LVDISP_SINGLE_TXT"*/;
         }
         else
         {
-          v222 = (System_String_o **)&StringLiteral_12176/*"SKILL_LVDISP_ENABLE_TXT"*/;
+          v222 = (System_String_o **)&StringLiteral_12178/*"SKILL_LVDISP_ENABLE_TXT"*/;
           if ( !v221 )
-            v222 = (System_String_o **)&StringLiteral_12178/*"SKILL_LVDISP_TXT"*/;
+            v222 = (System_String_o **)&StringLiteral_12180/*"SKILL_LVDISP_TXT"*/;
         }
         gameObject = (__int64)LocalizationManager__Get(*v222, 0LL);
         if ( v209 )
@@ -2431,7 +2431,7 @@ LABEL_547:
       goto LABEL_947;
     }
 LABEL_948:
-    sub_1B90274(gameObject, switchInfoList);
+    sub_1BAB680(gameObject, switchInfoList);
   }
   if ( !v209 )
     goto LABEL_947;
@@ -2483,7 +2483,7 @@ LABEL_574:
     v224 = *v283;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9265/*"NONSELECT_SKILLUP_BASE"*/, 0LL);
+    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9266/*"NONSELECT_SKILLUP_BASE"*/, 0LL);
     if ( !v224 )
       goto LABEL_947;
     UILabel__set_text(v224, (System_String_o *)gameObject, 0LL);
@@ -2501,12 +2501,12 @@ LABEL_574:
       goto LABEL_612;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    if ( !TutorialFlag__Get_37740444(126, 0LL) )
+    if ( !TutorialFlag__Get_38072332(126, 0LL) )
       goto LABEL_612;
     v226 = *v283;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v227 = &StringLiteral_11503/*"SELECT_CANNOT"*/;
+    v227 = &StringLiteral_11505/*"SELECT_CANNOT"*/;
     goto LABEL_610;
   }
   if ( !enableAppendSkillUp )
@@ -2523,7 +2523,7 @@ LABEL_574:
     v226 = *v281;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v227 = &StringLiteral_8757/*"MSG_ABLED_SKILLUP"*/;
+    v227 = &StringLiteral_8758/*"MSG_ABLED_SKILLUP"*/;
 LABEL_610:
     gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v227, 0LL);
     if ( !v226 )
@@ -2584,7 +2584,7 @@ LABEL_612:
         {
           SkillOpenItemNum = CombineServantListViewItem__get_SkillOpenItemNum(item, 0LL);
           v235 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &SkillOpenItemNum, v232, v233, v234);
-          gameObject = (__int64)System_String__Format((System_String_o *)StringLiteral_24973/*"{0:#,0}"*/, v235, 0LL);
+          gameObject = (__int64)System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v235, 0LL);
           switchInfoList = (System_String_o *)gameObject;
         }
         if ( !coinNumLabel )
@@ -2632,7 +2632,7 @@ LABEL_642:
     if ( !gameObject )
       goto LABEL_947;
     v238 = SHIDWORD(v287.invoker_method) <= 0 ? -1 : LODWORD(v287.invoker_method);
-    UIIconLabel__Set_38287724((UIIconLabel_o *)gameObject, 33, v238, SHIDWORD(v287.methodPointer), 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_38616660((UIIconLabel_o *)gameObject, 33, v238, SHIDWORD(v287.methodPointer), 0, 0LL, 0, 0, 0, 0LL);
     gameObject = (__int64)this->fields.npLvInfo;
     if ( !gameObject )
       goto LABEL_947;
@@ -2687,7 +2687,7 @@ LABEL_642:
         v241 = *v283;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v242 = (System_String_o **)(v240 ? &StringLiteral_9261/*"NONSELECT_MATERIAL"*/ : &StringLiteral_9264/*"NONSELECT_NPUP_BASE"*/);
+        v242 = (System_String_o **)(v240 ? &StringLiteral_9262/*"NONSELECT_MATERIAL"*/ : &StringLiteral_9265/*"NONSELECT_NPUP_BASE"*/);
         gameObject = (__int64)LocalizationManager__Get(*v242, 0LL);
         if ( !v241 )
           goto LABEL_947;
@@ -2729,7 +2729,7 @@ LABEL_642:
           v244 = *p_statusTxtLb;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8759/*"MSG_ABLED_TDUP"*/, 0LL);
+          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8760/*"MSG_ABLED_TDUP"*/, 0LL);
           if ( !v244 )
             goto LABEL_947;
           UILabel__set_text(v244, (System_String_o *)gameObject, 0LL);
@@ -2851,7 +2851,7 @@ LABEL_642:
                       v246 = *p_statusTxtLb;
                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8756/*"MSG_ABLED_LIMITUP"*/, 0LL);
+                      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8757/*"MSG_ABLED_LIMITUP"*/, 0LL);
                       if ( v246 )
                         goto LABEL_727;
                     }
@@ -2862,7 +2862,7 @@ LABEL_642:
           }
         }
 LABEL_947:
-        sub_1B9026C(gameObject, switchInfoList);
+        sub_1BAB678(gameObject, switchInfoList);
       }
       v168 = v283;
       if ( !v249 )
@@ -2935,7 +2935,7 @@ LABEL_947:
       v246 = *v168;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/, 0LL);
       if ( !v246 )
         goto LABEL_947;
 LABEL_727:
@@ -2949,13 +2949,13 @@ LABEL_727:
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isEventJoin )
     {
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
       if ( !v253 )
         goto LABEL_947;
     }
     else
     {
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9308/*"NO_SELECT_LVEXCEED"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9309/*"NO_SELECT_LVEXCEED"*/, 0LL);
       if ( !v253 )
         goto LABEL_947;
     }
@@ -3065,7 +3065,7 @@ LABEL_766:
       v263 = *v168;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9258/*"NONSEELECT_STATUSUP_MAX"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9259/*"NONSEELECT_STATUSUP_MAX"*/, 0LL);
       if ( !v263 )
         goto LABEL_947;
       UILabel__set_text(v263, (System_String_o *)gameObject, 0LL);
@@ -3075,7 +3075,7 @@ LABEL_766:
       v264 = *v168;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
       if ( !v264 )
         goto LABEL_947;
       UILabel__set_text(v264, (System_String_o *)gameObject, 0LL);
@@ -3085,7 +3085,7 @@ LABEL_766:
     v265 = *v168;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11503/*"SELECT_CANNOT"*/, 0LL);
+    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11505/*"SELECT_CANNOT"*/, 0LL);
     if ( !v265 )
       goto LABEL_947;
     v266 = (System_String_o *)gameObject;
@@ -3207,7 +3207,7 @@ LABEL_829:
         v270 = *v168;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NONSELECT_MATERIAL"*/, 0LL);
+        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9262/*"NONSELECT_MATERIAL"*/, 0LL);
         if ( !v270 )
           goto LABEL_947;
 LABEL_865:
@@ -3221,13 +3221,13 @@ LABEL_865:
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( v276 )
       {
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
+        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
         if ( !v277 )
           goto LABEL_947;
       }
       else
       {
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9307/*"NO_SELECT_FRIENDSHIP_EXCEED"*/, 0LL);
+        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_9308/*"NO_SELECT_FRIENDSHIP_EXCEED"*/, 0LL);
         if ( !v277 )
           goto LABEL_947;
       }
@@ -3307,7 +3307,7 @@ LABEL_875:
     v270 = *p_statusTxtLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8755/*"MSG_ABLED_FRIENDSHIP_EXCEED"*/, 0LL);
+    gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8756/*"MSG_ABLED_FRIENDSHIP_EXCEED"*/, 0LL);
     if ( !v270 )
       goto LABEL_947;
     goto LABEL_865;
@@ -3355,7 +3355,7 @@ LABEL_887:
       v278 = *v168;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11527/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, 0LL);
       if ( !v278 )
         goto LABEL_947;
     }
@@ -3410,7 +3410,7 @@ LABEL_887:
       v278 = *v168;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8294/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
+      gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8295/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
       if ( !v278 )
         goto LABEL_947;
     }
@@ -3429,7 +3429,7 @@ LABEL_926:
     goto LABEL_892;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( !TutorialFlag__Get_37740444(126, 0LL) )
+  if ( !TutorialFlag__Get_38072332(126, 0LL) )
   {
 LABEL_892:
     gameObject = (__int64)*p_maskSprite;
@@ -3443,7 +3443,7 @@ LABEL_892:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      switchInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_8294/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
+      switchInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_8295/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
     }
     else
     {
@@ -3472,10 +3472,10 @@ void __fastcall CombineServantListViewItemDraw__SetSelectDisp(
   int32_t dragSelectNum; // w2
   int32_t selectNum; // w1
 
-  if ( (byte_4A738A6 & 1) == 0 )
+  if ( (byte_4AB9885 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, item);
-    byte_4A738A6 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, item);
+    byte_4AB9885 = 1;
   }
   dragSelect = (UnityEngine_Object_o *)this->fields.dragSelect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3500,6 +3500,6 @@ LABEL_11:
       dragSelectNum = -1;
       goto LABEL_11;
     }
-    sub_1B9026C(v7, v6);
+    sub_1BAB678(v7, v6);
   }
 }

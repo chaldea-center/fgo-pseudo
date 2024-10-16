@@ -18,19 +18,19 @@ void __fastcall PaySummonInfoComponent__ClearAlpha(
   int32_t v10; // w2
   int32_t v11; // w3
 
-  if ( (byte_4A6C61B & 1) == 0 )
+  if ( (byte_4AB2442 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, target);
-    byte_4A6C61B = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, target);
+    byte_4AB2442 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)target, 0LL, 0LL) )
   {
-    if ( !byte_4A6A9C1 )
+    if ( !byte_4AB0691 )
     {
-      sub_1B90010(&UnityEngine_Vector3_TypeInfo, v5);
-      byte_4A6A9C1 = 1;
+      sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v5);
+      byte_4AB0691 = 1;
     }
     TweenScale__Begin(target, 0.2, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   }
@@ -41,11 +41,11 @@ void __fastcall PaySummonInfoComponent__ClearAlpha(
   if ( v7 )
   {
     if ( !v6 )
-      sub_1B9026C(v7, v8);
+      sub_1BAB678(v7, v8);
     v6->fields.method = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v6->fields.eventReceiver = gameObject;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v6->fields.eventReceiver, (int32_t)gameObject, v10, v11);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v6->fields.eventReceiver, (int32_t)gameObject, v10, v11);
   }
 }
 
@@ -65,20 +65,20 @@ void __fastcall PaySummonInfoComponent__MoveAlpha(
   int32_t v11; // w3
 
   v4 = (UnityEngine_Component_o *)this;
-  if ( (byte_4A6C61A & 1) == 0 )
+  if ( (byte_4AB2441 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, target);
-    this = (PaySummonInfoComponent_o *)sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A6C61A = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, target);
+    this = (PaySummonInfoComponent_o *)sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    byte_4AB2441 = 1;
   }
   if ( !target )
     goto LABEL_18;
   this = (PaySummonInfoComponent_o *)UnityEngine_GameObject__get_transform(target, 0LL);
   v6 = this;
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    this = (PaySummonInfoComponent_o *)sub_1B90010(&UnityEngine_Vector3_TypeInfo, target);
-    byte_4A6A9C1 = 1;
+    this = (PaySummonInfoComponent_o *)sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, target);
+    byte_4AB0691 = 1;
   }
   if ( !v6 )
     goto LABEL_18;
@@ -88,15 +88,15 @@ void __fastcall PaySummonInfoComponent__MoveAlpha(
     0LL);
   if ( !UnityEngine_GameObject__get_activeSelf(target, 0LL) )
     UnityEngine_GameObject__SetActive(target, 1, 0LL);
-  if ( !byte_4A6A9C6 )
+  if ( !byte_4AB0696 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4A6A9C6 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_4AB0696 = 1;
   }
   TweenScale__Begin(target, 0.2, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   this = (PaySummonInfoComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                        target,
-                                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !this )
     goto LABEL_18;
   ((void (__fastcall *)(PaySummonInfoComponent_o *, Il2CppClass *, float))this->klass[1]._1.castClass)(
@@ -114,11 +114,11 @@ void __fastcall PaySummonInfoComponent__MoveAlpha(
       v8->fields.method = 3;
       gameObject = UnityEngine_Component__get_gameObject(v4, 0LL);
       v8->fields.eventReceiver = gameObject;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v8->fields.eventReceiver, (int32_t)gameObject, v10, v11);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v8->fields.eventReceiver, (int32_t)gameObject, v10, v11);
       return;
     }
 LABEL_18:
-    sub_1B9026C(this, target);
+    sub_1BAB678(this, target);
   }
 }
 
@@ -140,25 +140,25 @@ void __fastcall PaySummonInfoComponent__OnClickGacha(PaySummonInfoComponent_o *t
   int32_t gachaTime; // w8
   struct PaySummonInfoComponent_ClickDelegate_o *clickCallbackFunc; // x8
 
-  if ( (byte_4A6C61C & 1) == 0 )
+  if ( (byte_4AB2443 & 1) == 0 )
   {
-    sub_1B90010(&GachaRqParamData_TypeInfo, method);
-    sub_1B90010(&Method_PaySummonInfoComponent_OnClickGacha__, v3);
-    byte_4A6C61C = 1;
+    sub_1BAB41C(&GachaRqParamData_TypeInfo, method);
+    sub_1BAB41C(&Method_PaySummonInfoComponent_OnClickGacha__, v3);
+    byte_4AB2443 = 1;
   }
   v4 = Method_PaySummonInfoComponent_OnClickGacha__;
   if ( (*((_BYTE *)Method_PaySummonInfoComponent_OnClickGacha__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B90028(Method_PaySummonInfoComponent_OnClickGacha__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+    v4 = (_QWORD *)sub_1BAB434(Method_PaySummonInfoComponent_OnClickGacha__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-  v6 = (Il2CppObject *)sub_1B9025C(GachaRqParamData_TypeInfo);
+  v6 = (Il2CppObject *)sub_1BAB668(GachaRqParamData_TypeInfo);
   System_Object___ctor(v6, 0LL);
   this->fields.requestData = (struct GachaRqParamData_o *)v6;
   p_requestData = &this->fields.requestData;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.requestData, (int32_t)v6, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.requestData, (int32_t)v6, v8, v9);
   currentGachaData = this->fields.currentGachaData;
   if ( !currentGachaData || (v11 = *p_requestData) == 0LL )
-    sub_1B9026C(v10, v11);
+    sub_1BAB678(v10, v11);
   v11->fields.gachaId = currentGachaData->fields.id;
   warId = currentGachaData->fields.warId;
   v11->fields.ticketItemId = 0;
@@ -211,7 +211,7 @@ void __fastcall PaySummonInfoComponent__init(PaySummonInfoComponent_o *this, con
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ticketTitle, 0, 0LL),
         (ticketTitle = (UnityEngine_Component_o *)this->fields.ticketInfo) == 0LL) )
   {
-    sub_1B9026C(ticketTitle, method);
+    sub_1BAB678(ticketTitle, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)ticketTitle, 0, 0LL);
   this->fields.ticketNum = 0;
@@ -240,10 +240,10 @@ void __fastcall PaySummonInfoComponent__setCurrentBannerInfo(
   int32_t v6; // w3
 
   if ( !gachaData )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   PaySummonInfoComponent__setEnableSummonBtn(this, gachaData->fields.isOpen, method);
   this->fields.currentGachaData = gachaData;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.currentGachaData, (int32_t)gachaData, v5, v6);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.currentGachaData, (int32_t)gachaData, v5, v6);
 }
 
 
@@ -267,11 +267,11 @@ void __fastcall PaySummonInfoComponent__setDispSummonBtn(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A6C619 & 1) == 0 )
+  if ( (byte_4AB2440 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___, isDisp);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A6C619 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___, isDisp);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    byte_4AB2440 = 1;
   }
   paySummonBtn = (UnityEngine_Behaviour_o *)this->fields.paySummonBtn;
   if ( !paySummonBtn )
@@ -325,11 +325,11 @@ LABEL_20:
         (paySummonBtn = (UnityEngine_Behaviour_o *)this->fields.stoneInfo) == 0LL) )
   {
 LABEL_23:
-    sub_1B9026C(paySummonBtn, isDisp);
+    sub_1BAB678(paySummonBtn, isDisp);
   }
   ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                  (UnityEngine_GameObject_o *)paySummonBtn,
-                                 (const MethodInfo_2EDD9CC *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
+                                 (const MethodInfo_2F13BD4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   paySummonBtn = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(
@@ -376,11 +376,11 @@ void __fastcall PaySummonInfoComponent__setEnableSummonBtn(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A6C618 & 1) == 0 )
+  if ( (byte_4AB243F & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___, isOpen);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A6C618 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___, isOpen);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    byte_4AB243F = 1;
   }
   paySummonBtn = (UnityEngine_Behaviour_o *)this->fields.paySummonBtn;
   if ( !paySummonBtn )
@@ -434,11 +434,11 @@ LABEL_20:
         (paySummonBtn = (UnityEngine_Behaviour_o *)this->fields.stoneInfo) == 0LL) )
   {
 LABEL_23:
-    sub_1B9026C(paySummonBtn, isOpen);
+    sub_1BAB678(paySummonBtn, isOpen);
   }
   ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                  (UnityEngine_GameObject_o *)paySummonBtn,
-                                 (const MethodInfo_2EDD9CC *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
+                                 (const MethodInfo_2F13BD4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   paySummonBtn = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality(
@@ -497,24 +497,24 @@ void __fastcall PaySummonInfoComponent__setPaySummonDispInfo(PaySummonInfoCompon
   int32_t price; // [xsp+8h] [xbp-28h] BYREF
   int32_t ticketNum; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A6C617 & 1) == 0 )
+  if ( (byte_4AB243E & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_UserItemMaster___, method);
-    sub_1B90010(&int_TypeInfo, v3);
-    sub_1B90010(&LocalizationManager_TypeInfo, v4);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1B90010(&StringLiteral_10369/*"PAY_SUMMON_DETAIL"*/, v6);
-    sub_1B90010(&StringLiteral_13322/*"TICKET_NUM"*/, v7);
-    sub_1B90010(&StringLiteral_13323/*"TICKET_SUMMON_DETAIL"*/, v8);
-    byte_4A6C617 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1BAB41C(&int_TypeInfo, v3);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1BAB41C(&StringLiteral_10369/*"PAY_SUMMON_DETAIL"*/, v6);
+    sub_1BAB41C(&StringLiteral_13327/*"TICKET_NUM"*/, v7);
+    sub_1BAB41C(&StringLiteral_13328/*"TICKET_SUMMON_DETAIL"*/, v8);
+    byte_4AB243E = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_32;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !SelfUserGame )
     goto LABEL_32;
   currentGachaData = this->fields.currentGachaData;
@@ -590,7 +590,7 @@ LABEL_13:
         }
       }
 LABEL_32:
-      sub_1B9026C(Instance, v11);
+      sub_1BAB678(Instance, v11);
     }
   }
   else
@@ -599,7 +599,7 @@ LABEL_32:
     if ( (v15 & 1) != 0 )
       goto LABEL_13;
   }
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13323/*"TICKET_SUMMON_DETAIL"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13328/*"TICKET_SUMMON_DETAIL"*/, 0LL);
   if ( !paySummonDetailLb )
     goto LABEL_32;
   UILabel__set_text(paySummonDetailLb, (System_String_o *)Instance, 0LL);
@@ -611,7 +611,7 @@ LABEL_32:
     goto LABEL_32;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   ticketNumLb = this->fields.ticketNumLb;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_13322/*"TICKET_NUM"*/, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_13327/*"TICKET_NUM"*/, 0LL);
   ticketNum = this->fields.ticketNum;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ticketNum, v26, v27, v28);
   Instance = (DataManager_o *)System_String__Format(v25, v29, 0LL);
@@ -651,13 +651,13 @@ void __fastcall PaySummonInfoComponent__setPaySummonInfo(
 
   PaySummonInfoComponent__init(this, (const MethodInfo *)gachaData);
   this->fields.clickCallbackFunc = callback;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.clickCallbackFunc, (int32_t)callback, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.clickCallbackFunc, (int32_t)callback, v7, v8);
   if ( gachaData )
   {
     this->fields.price = gachaData->fields.price;
     PaySummonInfoComponent__setEnableSummonBtn(this, gachaData->fields.isOpen, v9);
     this->fields.currentGachaData = gachaData;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.currentGachaData, (int32_t)gachaData, v10, v11);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.currentGachaData, (int32_t)gachaData, v10, v11);
     PaySummonInfoComponent__setPaySummonDispInfo(this, v12);
   }
   else
@@ -688,14 +688,14 @@ void __fastcall PaySummonInfoComponent_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) != 0 )
+  if ( (sub_1BAB4DC(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_19D1A40;
+      v9 = (Il2CppObject *)sub_19EA9DC;
 LABEL_16:
       this->fields.m_target = v9;
       goto LABEL_17;
@@ -707,41 +707,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v11 = sub_1B900C8(v6);
-        v12 = sub_1B90584(v6);
+        v11 = sub_1BAB4D4(v6);
+        v12 = sub_1BAB990(v6);
         if ( (v11 & 1) != 0 )
         {
           if ( (v12 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_19D1B3C;
+            v9 = (Il2CppObject *)sub_19EAAD8;
           else
-            v9 = (Il2CppObject *)sub_19D1B00;
+            v9 = (Il2CppObject *)sub_19EAA9C;
         }
         else if ( (v12 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_19D1A7C;
+          v9 = (Il2CppObject *)sub_19EAA18;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_19D1A50;
+          v9 = (Il2CppObject *)sub_19EA9EC;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_19D1A20;
+        v9 = (Il2CppObject *)sub_19EA9BC;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v13, 0LL);
+      v13 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v13, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D19D8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19EA974;
 }
 
 
@@ -755,7 +755,7 @@ System_IAsyncResult_o *__fastcall PaySummonInfoComponent_ClickDelegate__BeginInv
   GachaRqParamData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = paramData;
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, &v6, callback, object);
 }
 
 
@@ -764,7 +764,7 @@ void __fastcall PaySummonInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

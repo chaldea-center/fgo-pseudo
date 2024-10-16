@@ -1,9 +1,9 @@
 void __fastcall StoneShopDetailDialog___ctor(StoneShopDetailDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6C589 & 1) == 0 )
+  if ( (byte_4AB23B0 & 1) == 0 )
   {
-    sub_1B90010(&BaseDialog_TypeInfo, method);
-    byte_4A6C589 = 1;
+    sub_1BAB41C(&BaseDialog_TypeInfo, method);
+    byte_4AB23B0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,11 +15,11 @@ void __fastcall StoneShopDetailDialog__Close(StoneShopDetailDialog_o *this, cons
 {
   const MethodInfo *v2; // x2
 
-  StoneShopDetailDialog__Close_33031364(this, 0LL, v2);
+  StoneShopDetailDialog__Close_33281092(this, 0LL, v2);
 }
 
 
-void __fastcall StoneShopDetailDialog__Close_33031364(
+void __fastcall StoneShopDetailDialog__Close_33281092(
         StoneShopDetailDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -28,15 +28,15 @@ void __fastcall StoneShopDetailDialog__Close_33031364(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6C586 & 1) == 0 )
+  if ( (byte_4AB23AD & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, callback);
-    sub_1B90010(&Method_StoneShopDetailDialog_EndClose__, v6);
-    byte_4A6C586 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, callback);
+    sub_1BAB41C(&Method_StoneShopDetailDialog_EndClose__, v6);
+    byte_4AB23AD = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.closeEndFunc, (int32_t)callback, (int32_t)method, v3);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_StoneShopDetailDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -57,7 +57,7 @@ void __fastcall StoneShopDetailDialog__EndClose(StoneShopDetailDialog_o *this, c
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0LL;
-    sub_1B8FFB4(p_closeEndFunc, 0, v3, v4);
+    sub_1BAB3C0(p_closeEndFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -72,7 +72,7 @@ void __fastcall StoneShopDetailDialog__Init(StoneShopDetailDialog_o *this, const
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -87,29 +87,29 @@ void __fastcall StoneShopDetailDialog__OnClickClose(StoneShopDetailDialog_o *thi
   ServantStatusBattleListViewItem_o *p_clickFunc; // x0
   struct System_Action_o *clickFunc; // x20
 
-  if ( (byte_4A6C587 & 1) == 0 )
+  if ( (byte_4AB23AE & 1) == 0 )
   {
-    sub_1B90010(&Method_StoneShopDetailDialog_OnClickClose__, method);
-    byte_4A6C587 = 1;
+    sub_1BAB41C(&Method_StoneShopDetailDialog_OnClickClose__, method);
+    byte_4AB23AE = 1;
   }
   v3 = Method_StoneShopDetailDialog_OnClickClose__;
   if ( (*((_BYTE *)Method_StoneShopDetailDialog_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B90028(Method_StoneShopDetailDialog_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BAB434(Method_StoneShopDetailDialog_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
   p_clickFunc = (ServantStatusBattleListViewItem_o *)&this->fields.clickFunc;
   clickFunc = this->fields.clickFunc;
   if ( clickFunc )
   {
     p_clickFunc->klass = 0LL;
-    sub_1B8FFB4(p_clickFunc, 0, (int32_t)v5, v6);
+    sub_1BAB3C0(p_clickFunc, 0, (int32_t)v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))clickFunc->fields.m_target)(
       clickFunc->fields.original_method_info,
       *(_QWORD *)&clickFunc->fields.extra_arg);
   }
   else
   {
-    StoneShopDetailDialog__Close_33031364(this, 0LL, v5);
+    StoneShopDetailDialog__Close_33281092(this, 0LL, v5);
   }
 }
 
@@ -118,13 +118,13 @@ void __fastcall StoneShopDetailDialog__OnEnable(StoneShopDetailDialog_o *this, c
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4A6C588 & 1) == 0 )
+  if ( (byte_4AB23AF & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_15668/*"Window/CloseButton"*/, method);
-    byte_4A6C588 = 1;
+    sub_1BAB41C(&StringLiteral_15674/*"Window/CloseButton"*/, method);
+    byte_4AB23AF = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42000584(transform, (System_String_o *)StringLiteral_15668/*"Window/CloseButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42185032(transform, (System_String_o *)StringLiteral_15674/*"Window/CloseButton"*/, 0LL);
 }
 
 
@@ -181,24 +181,24 @@ void __fastcall StoneShopDetailDialog__Open(
   int v51; // [xsp+Ch] [xbp-64h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_4A6C585 & 1) == 0 )
+  if ( (byte_4AB23AC & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_ItemMaster___, bankShop);
-    sub_1B90010(&DataManager_TypeInfo, v7);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v8);
-    sub_1B90010(&int_TypeInfo, v9);
-    sub_1B90010(&LocalizationManager_TypeInfo, v10);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v11);
-    sub_1B90010(&StringLiteral_12319/*"STONE_SHOP_EXTRA_ITEM_TITLE"*/, v12);
-    sub_1B90010(&StringLiteral_12316/*"STONE_SHOP_DETAIL_TITLE"*/, v13);
-    sub_1B90010(&StringLiteral_12321/*"STONE_SHOP_STONE_INFO_TEMPLATE"*/, v14);
-    sub_1B90010(&StringLiteral_12322/*"STONE_SHOP_STONE_INFO_TITLE"*/, v15);
-    byte_4A6C585 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_ItemMaster___, bankShop);
+    sub_1BAB41C(&DataManager_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v8);
+    sub_1BAB41C(&int_TypeInfo, v9);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v10);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v11);
+    sub_1BAB41C(&StringLiteral_12321/*"STONE_SHOP_EXTRA_ITEM_TITLE"*/, v12);
+    sub_1BAB41C(&StringLiteral_12318/*"STONE_SHOP_DETAIL_TITLE"*/, v13);
+    sub_1BAB41C(&StringLiteral_12323/*"STONE_SHOP_STONE_INFO_TEMPLATE"*/, v14);
+    sub_1BAB41C(&StringLiteral_12324/*"STONE_SHOP_STONE_INFO_TITLE"*/, v15);
+    byte_4AB23AC = 1;
   }
   entity = 0LL;
   StoneShopDetailDialog__Init(this, (const MethodInfo *)bankShop);
   this->fields.clickFunc = func;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.clickFunc, (int32_t)func, v16, v17);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.clickFunc, (int32_t)func, v16, v17);
   if ( bankShop )
   {
     stoneShopDetailListViewManager = this->fields.stoneShopDetailListViewManager;
@@ -229,7 +229,7 @@ void __fastcall StoneShopDetailDialog__Open(
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)LocalizationManager__Get(
-                                                                                 (System_String_o *)StringLiteral_12316/*"STONE_SHOP_DETAIL_TITLE"*/,
+                                                                                 (System_String_o *)StringLiteral_12318/*"STONE_SHOP_DETAIL_TITLE"*/,
                                                                                  0LL);
           if ( titleLabel )
           {
@@ -246,20 +246,20 @@ void __fastcall StoneShopDetailDialog__Open(
               freeStoneNum = bankShop->fields.freeStoneNum;
               stoneInfoTitleLabel = this->fields.stoneInfoTitleLabel;
               stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)LocalizationManager__Get(
-                                                                                     (System_String_o *)StringLiteral_12322/*"STONE_SHOP_STONE_INFO_TITLE"*/,
+                                                                                     (System_String_o *)StringLiteral_12324/*"STONE_SHOP_STONE_INFO_TITLE"*/,
                                                                                      0LL);
               if ( stoneInfoTitleLabel )
               {
                 UILabel__set_text(stoneInfoTitleLabel, (System_String_o *)stoneShopDetailListViewManager, 0LL);
                 stoneInfoDetailLabel = this->fields.stoneInfoDetailLabel;
-                v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12321/*"STONE_SHOP_STONE_INFO_TEMPLATE"*/, 0LL);
+                v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12323/*"STONE_SHOP_STONE_INFO_TEMPLATE"*/, 0LL);
                 v51 = freeStoneNum + chargeStoneNum;
                 v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51, v29, v30, v31);
                 v50 = chargeStoneNum;
                 v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v33, v34, v35);
                 v49 = freeStoneNum;
                 v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v37, v38, v39);
-                stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)System_String__Format_61801532(
+                stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)System_String__Format_62062568(
                                                                                        v28,
                                                                                        v32,
                                                                                        v36,
@@ -270,14 +270,14 @@ void __fastcall StoneShopDetailDialog__Open(
                   UILabel__set_text(stoneInfoDetailLabel, (System_String_o *)stoneShopDetailListViewManager, 0LL);
                   if ( !DataManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                  stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ItemMaster___);
+                  stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ItemMaster___);
                   if ( stoneShopDetailListViewManager )
                   {
                     stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                                            (DataMasterBase_TMaster__TEntity__PKType__o *)stoneShopDetailListViewManager,
                                                                                            &entity,
                                                                                            2,
-                                                                                           (const MethodInfo_312C5FC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                                                                           (const MethodInfo_3163DE4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
                     if ( ((unsigned __int8)stoneShopDetailListViewManager & 1) != 0 )
                     {
                       if ( !entity )
@@ -317,7 +317,7 @@ void __fastcall StoneShopDetailDialog__Open(
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)LocalizationManager__Get(
-                                                                                                 (System_String_o *)StringLiteral_12319/*"STONE_SHOP_EXTRA_ITEM_TITLE"*/,
+                                                                                                 (System_String_o *)StringLiteral_12321/*"STONE_SHOP_EXTRA_ITEM_TITLE"*/,
                                                                                                  0LL);
                           if ( extraItemTitleLabel )
                           {
@@ -327,7 +327,7 @@ void __fastcall StoneShopDetailDialog__Open(
                               0LL);
                             buttonLabel = this->fields.buttonLabel;
                             stoneShopDetailListViewManager = (StoneShopDetailListViewManager_o *)LocalizationManager__Get(
-                                                                                                   (System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                                                   (System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                                    0LL);
                             if ( buttonLabel )
                             {
@@ -356,7 +356,7 @@ void __fastcall StoneShopDetailDialog__Open(
       }
     }
 LABEL_35:
-    sub_1B9026C(stoneShopDetailListViewManager, v18);
+    sub_1BAB678(stoneShopDetailListViewManager, v18);
   }
 LABEL_34:
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);

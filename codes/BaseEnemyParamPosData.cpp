@@ -30,10 +30,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4A6A9C1 )
+  if ( !byte_4AB0691 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A6A9C1 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4AB0691 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -56,10 +56,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalScale(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4A6A9C6 )
+  if ( !byte_4AB0696 )
   {
-    sub_1B90010(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4A6A9C6 = 1;
+    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4AB0696 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->oneVector.fields.x;

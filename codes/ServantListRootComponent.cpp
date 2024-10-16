@@ -14,17 +14,17 @@ void __fastcall ServantListRootComponent__EndClickBackRequest(
   __int64 v4; // x1
   bool IsStackScene; // w19
 
-  if ( (byte_4A6C1FA & 1) == 0 )
+  if ( (byte_4AB2093 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isRrquest);
-    byte_4A6C1FA = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isRrquest);
+    byte_4AB2093 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance
     || (IsStackScene = AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)Instance, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
-    sub_1B9026C(Instance, v4);
+    sub_1BAB678(Instance, v4);
   }
   if ( IsStackScene )
     AvalonSceneManager__popScene((AvalonSceneManager_o *)Instance, 1, 0LL, 0LL);
@@ -49,21 +49,21 @@ void __fastcall ServantListRootComponent__EndLoadCommonBg(ServantListRootCompone
   UnityEngine_Component_o *backSkinSprite; // x0
   System_Action_o *v6; // x20
 
-  if ( (byte_4A6C1F4 & 1) == 0 )
+  if ( (byte_4AB208D & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&AtlasManager_TypeInfo, v3);
-    sub_1B90010(&Method_ServantListRootComponent_EndLoadOutGameIconAtlas__, v4);
-    byte_4A6C1F4 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&AtlasManager_TypeInfo, v3);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndLoadOutGameIconAtlas__, v4);
+    byte_4AB208D = 1;
   }
   backSkinSprite = (UnityEngine_Component_o *)this->fields.backSkinSprite;
   if ( !backSkinSprite
     || (backSkinSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(backSkinSprite, 0LL)) == 0LL )
   {
-    sub_1B9026C(backSkinSprite, method);
+    sub_1BAB678(backSkinSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)backSkinSprite, 1, 0LL);
-  v6 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ServantListRootComponent_EndLoadOutGameIconAtlas__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -75,7 +75,7 @@ void __fastcall ServantListRootComponent__EndLoadOutGameIconAtlas(
         ServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_38719380((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_39051456((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -88,14 +88,14 @@ void __fastcall ServantListRootComponent__EndServantQuestRequest(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A6C1FB & 1) == 0 )
+  if ( (byte_4AB2094 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isRrquest);
-    byte_4A6C1FB = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isRrquest);
+    byte_4AB2094 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0, 0LL);
 }
 
@@ -110,21 +110,21 @@ void __fastcall ServantListRootComponent__ExitList(ServantListRootComponent_o *t
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4A6C1F8 & 1) == 0 )
+  if ( (byte_4AB2091 & 1) == 0 )
   {
-    sub_1B90010(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B90010(&Method_ServantListRootComponent_EndExitList__, v3);
-    byte_4A6C1F8 = 1;
+    sub_1BAB41C(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndExitList__, v3);
+    byte_4AB2091 = 1;
   }
   charaGraphListMenu = this->fields.charaGraphListMenu;
-  v5 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1B9025C(CharaGraphListMenu_RequestCallbackFunc_TypeInfo);
+  v5 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1BAB668(CharaGraphListMenu_RequestCallbackFunc_TypeInfo);
   CharaGraphListMenu_RequestCallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     Method_ServantListRootComponent_EndExitList__,
     v6);
   if ( !charaGraphListMenu )
-    sub_1B9026C(v7, v8);
+    sub_1BAB678(v7, v8);
   CharaGraphListMenu__StatusRequest(charaGraphListMenu, v5, v9);
 }
 
@@ -139,24 +139,24 @@ void __fastcall ServantListRootComponent__Init(ServantListRootComponent_o *this,
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A6C1F6 & 1) == 0 )
+  if ( (byte_4AB208F & 1) == 0 )
   {
-    sub_1B90010(&CharaGraphListMenu_CallbackFunc_TypeInfo, method);
-    sub_1B90010(&Method_ServantListRootComponent_SelectServantList__, v3);
-    byte_4A6C1F6 = 1;
+    sub_1BAB41C(&CharaGraphListMenu_CallbackFunc_TypeInfo, method);
+    sub_1BAB41C(&Method_ServantListRootComponent_SelectServantList__, v3);
+    byte_4AB208F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.state = 1;
     charaGraphListMenu = this->fields.charaGraphListMenu;
-    v5 = (CharaGraphListMenu_CallbackFunc_o *)sub_1B9025C(CharaGraphListMenu_CallbackFunc_TypeInfo);
+    v5 = (CharaGraphListMenu_CallbackFunc_o *)sub_1BAB668(CharaGraphListMenu_CallbackFunc_TypeInfo);
     CharaGraphListMenu_CallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
       Method_ServantListRootComponent_SelectServantList__,
       v6);
     if ( !charaGraphListMenu )
-      sub_1B9026C(v7, v8);
+      sub_1BAB678(v7, v8);
     CharaGraphListMenu__Open(charaGraphListMenu, 0, v5, v9);
   }
 }
@@ -175,27 +175,27 @@ void __fastcall ServantListRootComponent__OnClickBack(ServantListRootComponent_o
   __int64 v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4A6C1F9 & 1) == 0 )
+  if ( (byte_4AB2092 & 1) == 0 )
   {
-    sub_1B90010(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B90010(&Method_ServantListRootComponent_EndClickBackRequest__, v3);
-    sub_1B90010(&Method_ServantListRootComponent_OnClickBack__, v4);
-    byte_4A6C1F9 = 1;
+    sub_1BAB41C(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndClickBackRequest__, v3);
+    sub_1BAB41C(&Method_ServantListRootComponent_OnClickBack__, v4);
+    byte_4AB2092 = 1;
   }
   v5 = Method_ServantListRootComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_ServantListRootComponent_OnClickBack__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B90028(Method_ServantListRootComponent_OnClickBack__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
+    v5 = (_QWORD *)sub_1BAB434(Method_ServantListRootComponent_OnClickBack__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BAB400(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
   charaGraphListMenu = this->fields.charaGraphListMenu;
-  v8 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1B9025C(CharaGraphListMenu_RequestCallbackFunc_TypeInfo);
+  v8 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1BAB668(CharaGraphListMenu_RequestCallbackFunc_TypeInfo);
   CharaGraphListMenu_RequestCallbackFunc___ctor(
     v8,
     (Il2CppObject *)this,
     Method_ServantListRootComponent_EndClickBackRequest__,
     v9);
   if ( !charaGraphListMenu )
-    sub_1B9026C(v10, v11);
+    sub_1BAB678(v10, v11);
   CharaGraphListMenu__StatusRequest(charaGraphListMenu, v8, v12);
 }
 
@@ -207,7 +207,7 @@ void __fastcall ServantListRootComponent__Quit(ServantListRootComponent_o *this,
   charaGraphListMenu = this->fields.charaGraphListMenu;
   this->fields.state = 0;
   if ( !charaGraphListMenu )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   CharaGraphListMenu__Init(charaGraphListMenu, method);
 }
 
@@ -229,18 +229,18 @@ void __fastcall ServantListRootComponent__SelectServantList(
   __int64 *v13; // x8
   const MethodInfo *v14; // x2
 
-  if ( (byte_4A6C1F7 & 1) == 0 )
+  if ( (byte_4AB2090 & 1) == 0 )
   {
-    sub_1B90010(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, *(_QWORD *)&result);
-    sub_1B90010(&Method_ServantListRootComponent_EndClickBackRequest__, v5);
-    sub_1B90010(&Method_ServantListRootComponent_EndServantQuestRequest__, v6);
-    byte_4A6C1F7 = 1;
+    sub_1BAB41C(&CharaGraphListMenu_RequestCallbackFunc_TypeInfo, *(_QWORD *)&result);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndClickBackRequest__, v5);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndServantQuestRequest__, v6);
+    byte_4AB2090 = 1;
   }
   charaGraphListMenu = this->fields.charaGraphListMenu;
   if ( !charaGraphListMenu
     || ((CharaGraphListMenu__Init(charaGraphListMenu, *(const MethodInfo **)&result),
          v8 = this->fields.charaGraphListMenu,
-         v9 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1B9025C(CharaGraphListMenu_RequestCallbackFunc_TypeInfo),
+         v9 = (CharaGraphListMenu_RequestCallbackFunc_o *)sub_1BAB668(CharaGraphListMenu_RequestCallbackFunc_TypeInfo),
          v11 = result == 2,
          v12 = v9,
          v11)
@@ -249,7 +249,7 @@ void __fastcall ServantListRootComponent__SelectServantList(
         CharaGraphListMenu_RequestCallbackFunc___ctor(v9, (Il2CppObject *)this, *v13, v10),
         !v8) )
   {
-    sub_1B9026C(charaGraphListMenu, *(_QWORD *)&result);
+    sub_1BAB678(charaGraphListMenu, *(_QWORD *)&result);
   }
   CharaGraphListMenu__StatusRequest(v8, v12, v14);
 }
@@ -259,10 +259,10 @@ void __fastcall ServantListRootComponent__beginFinish(ServantListRootComponent_o
 {
   CharaGraphListMenu_o *charaGraphListMenu; // x0
 
-  if ( (byte_4A6C1F5 & 1) == 0 )
+  if ( (byte_4AB208E & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, method);
-    byte_4A6C1F5 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, method);
+    byte_4AB208E = 1;
   }
   charaGraphListMenu = this->fields.charaGraphListMenu;
   this->fields.state = 0;
@@ -273,9 +273,9 @@ void __fastcall ServantListRootComponent__beginFinish(ServantListRootComponent_o
                                                        (UnityEngine_Component_o *)charaGraphListMenu,
                                                        0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)charaGraphListMenu, 0, 0LL),
-        (charaGraphListMenu = (CharaGraphListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0LL) )
+        (charaGraphListMenu = (CharaGraphListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0LL) )
   {
-    sub_1B9026C(charaGraphListMenu, method);
+    sub_1BAB678(charaGraphListMenu, method);
   }
   AtlasManager__ReleaseUISkin((AtlasManager_o *)charaGraphListMenu, 2, 0, 0LL);
 }
@@ -286,15 +286,15 @@ void __fastcall ServantListRootComponent__beginInitialize(ServantListRootCompone
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A6C1F2 & 1) == 0 )
+  if ( (byte_4AB208B & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4A6C1F2 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4AB208B = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -311,14 +311,14 @@ void __fastcall ServantListRootComponent__beginStartUp(ServantListRootComponent_
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_o *v11; // x20
 
-  if ( (byte_4A6C1F3 & 1) == 0 )
+  if ( (byte_4AB208C & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&AtlasManager_TypeInfo, v3);
-    sub_1B90010(&BgmManager_TypeInfo, v4);
-    sub_1B90010(&Method_ServantListRootComponent_EndLoadCommonBg__, v5);
-    sub_1B90010(&SoundManager_TypeInfo, v6);
-    byte_4A6C1F3 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&AtlasManager_TypeInfo, v3);
+    sub_1BAB41C(&BgmManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_ServantListRootComponent_EndLoadCommonBg__, v5);
+    sub_1BAB41C(&SoundManager_TypeInfo, v6);
+    byte_4AB208C = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -333,7 +333,7 @@ void __fastcall ServantListRootComponent__beginStartUp(ServantListRootComponent_
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_16;
-  TitleInfoControl__changeTitleInfo_37240592(titleInfo, 1, 21, 0, 0LL);
+  TitleInfoControl__changeTitleInfo_37569240(titleInfo, 1, 21, 0, 0LL);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 0, 40, 0LL);
   MainMenuBar__setMenuActive(0, 0LL, 0LL);
   titleInfo = (TitleInfoControl_o *)this->fields.bgTxtSprite;
@@ -348,10 +348,10 @@ void __fastcall ServantListRootComponent__beginStartUp(ServantListRootComponent_
                                             0LL)) == 0LL )
   {
 LABEL_16:
-    sub_1B9026C(titleInfo, v8);
+    sub_1BAB678(titleInfo, v8);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 0, 0LL);
-  v11 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ServantListRootComponent_EndLoadCommonBg__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);

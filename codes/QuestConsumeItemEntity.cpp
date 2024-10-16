@@ -1,13 +1,13 @@
 void __fastcall QuestConsumeItemEntity___ctor(QuestConsumeItemEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A702AC & 1) == 0 )
+  if ( (byte_4AB6198 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A702AC = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB6198 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -53,23 +53,23 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
   int32_t v32; // w2
   int32_t v33; // w3
 
-  if ( (byte_4A702AA & 1) == 0 )
+  if ( (byte_4AB6196 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_ItemMaster___, method);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_1B90010(&string___TypeInfo, v5);
-    sub_1B90010(&StringLiteral_43/*"\n"*/, v6);
-    sub_1B90010(&StringLiteral_117/*" "*/, v7);
-    sub_1B90010(&StringLiteral_1/*""*/, v8);
-    byte_4A702AA = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ItemMaster___, method);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1BAB41C(&string___TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_43/*"\n"*/, v6);
+    sub_1BAB41C(&StringLiteral_116/*" "*/, v7);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v8);
+    byte_4AB6196 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ItemMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ItemMaster___);
   v12 = (System_String_o *)StringLiteral_1/*""*/;
   v13 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
   Instance = QuestConsumeItemEntity__IsAvailableAt(this, 0, v14);
@@ -88,35 +88,35 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
       Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
                             v13,
                             itemIds->m_Items[v15 + 1],
-                            (const MethodInfo_312C5A8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                            (const MethodInfo_3163D90 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( !Instance )
         break;
       v17 = (ItemEntity_o *)Instance;
       if ( ItemEntity__IsEnable((ItemEntity_o *)Instance, 0LL) )
       {
-        Instance = sub_1B900B8(string___TypeInfo, 5LL);
+        Instance = sub_1BAB4C4(string___TypeInfo, 5LL);
         if ( !Instance )
           break;
         v21 = Instance;
         if ( !*(_DWORD *)(Instance + 24) )
           goto LABEL_23;
         *(_QWORD *)(Instance + 32) = v12;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(Instance + 32), (int32_t)v12, v19, v20);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(Instance + 32), (int32_t)v12, v19, v20);
         if ( *(_DWORD *)(v21 + 24) <= 1u )
           goto LABEL_23;
         v24 = StringLiteral_43/*"\n"*/;
         *(_QWORD *)(v21 + 40) = StringLiteral_43/*"\n"*/;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v21 + 40), v24, v22, v23);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 40), v24, v22, v23);
         if ( *(_DWORD *)(v21 + 24) <= 2u )
           goto LABEL_23;
         name = v17->fields.name;
         *(_QWORD *)(v21 + 48) = name;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v21 + 48), (int32_t)name, v25, v26);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 48), (int32_t)name, v25, v26);
         if ( *(_DWORD *)(v21 + 24) <= 3u )
           goto LABEL_23;
-        v30 = (int)StringLiteral_117/*" "*/;
-        *(_QWORD *)(v21 + 56) = StringLiteral_117/*" "*/;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v21 + 56), v30, v28, v29);
+        v30 = (int)StringLiteral_116/*" "*/;
+        *(_QWORD *)(v21 + 56) = StringLiteral_116/*" "*/;
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 56), v30, v28, v29);
         nums = this->fields.nums;
         if ( !nums )
           break;
@@ -124,18 +124,18 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
           || (Instance = (__int64)ItemEntity__GetCountText(v17, nums->m_Items[v15 + 1], 0LL), *(_DWORD *)(v21 + 24) <= 4u) )
         {
 LABEL_23:
-          sub_1B90274(Instance, v10);
+          sub_1BAB680(Instance, v10);
         }
         *(_QWORD *)(v21 + 64) = Instance;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v21 + 64), Instance, v32, v33);
-        v12 = System_String__Concat_61800620((System_String_array *)v21, 0LL);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 64), Instance, v32, v33);
+        v12 = System_String__Concat_62061656((System_String_array *)v21, 0LL);
       }
       Instance = QuestConsumeItemEntity__IsAvailableAt(this, ++v15, v18);
       if ( (Instance & 1) == 0 )
         return v12;
     }
 LABEL_22:
-    sub_1B9026C(Instance, v10);
+    sub_1BAB678(Instance, v10);
   }
   return v12;
 }
@@ -158,26 +158,26 @@ QuestConsumeItemEntity_o *__fastcall QuestConsumeItemEntity__GetNotConsumeItemEn
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_4A702AB & 1) == 0 )
+  if ( (byte_4AB6197 & 1) == 0 )
   {
-    sub_1B90010(&int___TypeInfo, method);
-    sub_1B90010(&QuestConsumeItemEntity_TypeInfo, v3);
-    byte_4A702AB = 1;
+    sub_1BAB41C(&int___TypeInfo, method);
+    sub_1BAB41C(&QuestConsumeItemEntity_TypeInfo, v3);
+    byte_4AB6197 = 1;
   }
-  v4 = sub_1B9025C(QuestConsumeItemEntity_TypeInfo);
+  v4 = sub_1BAB668(QuestConsumeItemEntity_TypeInfo);
   QuestConsumeItemEntity___ctor((QuestConsumeItemEntity_o *)v4, v5);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = this->fields.questId,
         itemIds = this->fields.itemIds,
         *(_QWORD *)(v4 + 24) = itemIds,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v4 + 24), (int32_t)itemIds, v8, v9),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v4 + 24), (int32_t)itemIds, v8, v9),
         (v11 = *(_QWORD *)(v4 + 24)) == 0) )
   {
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   }
-  v12 = sub_1B900B8(int___TypeInfo, *(unsigned int *)(v11 + 24));
+  v12 = sub_1BAB4C4(int___TypeInfo, *(unsigned int *)(v11 + 24));
   *(_QWORD *)(v4 + 32) = v12;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v4 + 32), v12, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v4 + 32), v12, v13, v14);
   return (QuestConsumeItemEntity_o *)v4;
 }
 
@@ -194,7 +194,7 @@ bool __fastcall QuestConsumeItemEntity__IsAvailableAt(
 
   itemIds = this->fields.itemIds;
   if ( !itemIds || (nums = this->fields.nums) == 0LL )
-    sub_1B9026C(this, index);
+    sub_1BAB678(this, index);
   max_length = itemIds->max_length;
   v6 = nums->max_length;
   if ( max_length >= v6 )

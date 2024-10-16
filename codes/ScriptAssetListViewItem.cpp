@@ -7,9 +7,9 @@ void __fastcall ScriptAssetListViewItem___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
   this->fields.path = path;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.path, (int32_t)path, v6, v7);
 }
 
 
@@ -42,7 +42,7 @@ System_String_o *__fastcall ScriptAssetListViewItem__get_TitleText(
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0LL);
 LABEL_6:
-    sub_1B9026C(path, method);
+    sub_1BAB678(path, method);
   }
   return this->fields.path;
 }

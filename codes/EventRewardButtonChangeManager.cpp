@@ -1,8 +1,8 @@
 void __fastcall EventRewardButtonChangeManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
-  int32_t v3; // w3
+  __int64 v2; // x1
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -11,102 +11,60 @@ void __fastcall EventRewardButtonChangeManager___cctor(const MethodInfo *method)
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  int32_t v14; // w1
   struct EventRewardButtonChangeManager_StaticFields *static_fields; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w1
+  struct EventRewardButtonChangeManager_StaticFields *v13; // x0
+  struct EventRewardButtonChangeManager_StaticFields *v14; // x0
+  struct EventRewardButtonChangeManager_StaticFields *v15; // x0
+  struct EventRewardButtonChangeManager_StaticFields *v16; // x0
+  struct EventRewardButtonChangeManager_StaticFields *v17; // x0
+  struct EventRewardButtonChangeManager_StaticFields *v18; // x0
   struct EventRewardButtonChangeManager_StaticFields *v19; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
-  int32_t v22; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v23; // x0
-  int32_t v24; // w2
-  int32_t v25; // w3
-  int32_t v26; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v27; // x0
-  int32_t v28; // w2
-  int32_t v29; // w3
-  int32_t v30; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v31; // x0
-  int32_t v32; // w2
-  int32_t v33; // w3
-  int32_t v34; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v35; // x0
-  int32_t v36; // w2
-  int32_t v37; // w3
-  int32_t v38; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v39; // x0
-  int32_t v40; // w2
-  int32_t v41; // w3
-  int32_t v42; // w1
-  struct EventRewardButtonChangeManager_StaticFields *v43; // x0
-  int32_t v44; // w2
-  int32_t v45; // w3
-  struct EventRewardButtonChangeManager_StaticFields *v46; // x0
-  int32_t v47; // w1
-  int32_t v48; // w2
-  int32_t v49; // w3
+  struct EventRewardButtonChangeManager_StaticFields *v20; // x0
 
-  if ( (byte_4A7408B & 1) == 0 )
+  if ( (byte_4AB0D7F & 1) == 0 )
   {
-    sub_1B90010(&EventRewardButtonChangeManager_TypeInfo, v1);
-    sub_1B90010(&StringLiteral_17520/*"btn_bg_on_1"*/, v4);
-    sub_1B90010(&StringLiteral_17521/*"btn_bg_on_2"*/, v5);
-    sub_1B90010(&StringLiteral_17522/*"btn_bg_on_4"*/, v6);
-    sub_1B90010(&StringLiteral_18820/*"ef_2tab_open"*/, v7);
-    sub_1B90010(&StringLiteral_17517/*"btn_bg_off_4"*/, v8);
-    sub_1B90010(&StringLiteral_17515/*"btn_bg_off_1"*/, v9);
-    sub_1B90010(&StringLiteral_18822/*"ef_4tab_open"*/, v10);
-    sub_1B90010(&StringLiteral_18821/*"ef_3tab_open"*/, v11);
-    sub_1B90010(&StringLiteral_17516/*"btn_bg_off_2"*/, v12);
-    sub_1B90010(&StringLiteral_17530/*"btn_disable_txt_"*/, v13);
-    byte_4A7408B = 1;
+    sub_1BAB41C(&EventRewardButtonChangeManager_TypeInfo, v1);
+    sub_1BAB41C(&StringLiteral_17525/*"btn_bg_on_1"*/, v2);
+    sub_1BAB41C(&StringLiteral_17526/*"btn_bg_on_2"*/, v3);
+    sub_1BAB41C(&StringLiteral_17527/*"btn_bg_on_4"*/, v4);
+    sub_1BAB41C(&StringLiteral_18824/*"ef_2tab_open"*/, v5);
+    sub_1BAB41C(&StringLiteral_17522/*"btn_bg_off_4"*/, v6);
+    sub_1BAB41C(&StringLiteral_17520/*"btn_bg_off_1"*/, v7);
+    sub_1BAB41C(&StringLiteral_18826/*"ef_4tab_open"*/, v8);
+    sub_1BAB41C(&StringLiteral_18825/*"ef_3tab_open"*/, v9);
+    sub_1BAB41C(&StringLiteral_17521/*"btn_bg_off_2"*/, v10);
+    sub_1BAB41C(&StringLiteral_17535/*"btn_disable_txt_"*/, v11);
+    byte_4AB0D7F = 1;
   }
-  EventRewardButtonChangeManager_TypeInfo->static_fields->BTN_NAME_TYPE3_ON = (struct System_String_o *)StringLiteral_17520/*"btn_bg_on_1"*/;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)EventRewardButtonChangeManager_TypeInfo->static_fields,
-    StringLiteral_17520/*"btn_bg_on_1"*/,
-    v2,
-    v3);
-  v14 = StringLiteral_17515/*"btn_bg_off_1"*/;
+  EventRewardButtonChangeManager_TypeInfo->static_fields->BTN_NAME_TYPE3_ON = (struct System_String_o *)StringLiteral_17525/*"btn_bg_on_1"*/;
+  sub_1BAB3C0(EventRewardButtonChangeManager_TypeInfo->static_fields);
   static_fields = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  static_fields->BTN_NAME_TYPE3_OFF = (struct System_String_o *)StringLiteral_17515/*"btn_bg_off_1"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->BTN_NAME_TYPE3_OFF, v14, v16, v17);
-  v18 = StringLiteral_17521/*"btn_bg_on_2"*/;
+  static_fields->BTN_NAME_TYPE3_OFF = (struct System_String_o *)StringLiteral_17520/*"btn_bg_off_1"*/;
+  sub_1BAB3C0(&static_fields->BTN_NAME_TYPE3_OFF);
+  v13 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v13->BTN_NAME_TYPE2_ON = (struct System_String_o *)StringLiteral_17526/*"btn_bg_on_2"*/;
+  sub_1BAB3C0(&v13->BTN_NAME_TYPE2_ON);
+  v14 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v14->BTN_NAME_TYPE2_OFF = (struct System_String_o *)StringLiteral_17521/*"btn_bg_off_2"*/;
+  sub_1BAB3C0(&v14->BTN_NAME_TYPE2_OFF);
+  v15 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v15->BTN_NAME_TYPE4_ON = (struct System_String_o *)StringLiteral_17527/*"btn_bg_on_4"*/;
+  sub_1BAB3C0(&v15->BTN_NAME_TYPE4_ON);
+  v16 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v16->BTN_NAME_TYPE4_OFF = (struct System_String_o *)StringLiteral_17522/*"btn_bg_off_4"*/;
+  sub_1BAB3C0(&v16->BTN_NAME_TYPE4_OFF);
+  v17 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v17->RELEASE_EFFECT_4TAB_NAME = (struct System_String_o *)StringLiteral_18826/*"ef_4tab_open"*/;
+  sub_1BAB3C0(&v17->RELEASE_EFFECT_4TAB_NAME);
+  v18 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v18->RELEASE_EFFECT_3TAB_NAME = (struct System_String_o *)StringLiteral_18825/*"ef_3tab_open"*/;
+  sub_1BAB3C0(&v18->RELEASE_EFFECT_3TAB_NAME);
   v19 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v19->BTN_NAME_TYPE2_ON = (struct System_String_o *)StringLiteral_17521/*"btn_bg_on_2"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v19->BTN_NAME_TYPE2_ON, v18, v20, v21);
-  v22 = StringLiteral_17516/*"btn_bg_off_2"*/;
-  v23 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v23->BTN_NAME_TYPE2_OFF = (struct System_String_o *)StringLiteral_17516/*"btn_bg_off_2"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v23->BTN_NAME_TYPE2_OFF, v22, v24, v25);
-  v26 = StringLiteral_17522/*"btn_bg_on_4"*/;
-  v27 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v27->BTN_NAME_TYPE4_ON = (struct System_String_o *)StringLiteral_17522/*"btn_bg_on_4"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v27->BTN_NAME_TYPE4_ON, v26, v28, v29);
-  v30 = StringLiteral_17517/*"btn_bg_off_4"*/;
-  v31 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v31->BTN_NAME_TYPE4_OFF = (struct System_String_o *)StringLiteral_17517/*"btn_bg_off_4"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v31->BTN_NAME_TYPE4_OFF, v30, v32, v33);
-  v34 = StringLiteral_18822/*"ef_4tab_open"*/;
-  v35 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v35->RELEASE_EFFECT_4TAB_NAME = (struct System_String_o *)StringLiteral_18822/*"ef_4tab_open"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v35->RELEASE_EFFECT_4TAB_NAME, v34, v36, v37);
-  v38 = StringLiteral_18821/*"ef_3tab_open"*/;
-  v39 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v39->RELEASE_EFFECT_3TAB_NAME = (struct System_String_o *)StringLiteral_18821/*"ef_3tab_open"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v39->RELEASE_EFFECT_3TAB_NAME, v38, v40, v41);
-  v42 = StringLiteral_18820/*"ef_2tab_open"*/;
-  v43 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v43->RELEASE_EFFECT_2TAB_NAME = (struct System_String_o *)StringLiteral_18820/*"ef_2tab_open"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v43->RELEASE_EFFECT_2TAB_NAME, v42, v44, v45);
-  v46 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v47 = StringLiteral_17530/*"btn_disable_txt_"*/;
-  v46->DISABLE_BTN_TXT = (struct System_String_o *)StringLiteral_17530/*"btn_disable_txt_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v46->DISABLE_BTN_TXT, v47, v48, v49);
+  v19->RELEASE_EFFECT_2TAB_NAME = (struct System_String_o *)StringLiteral_18824/*"ef_2tab_open"*/;
+  sub_1BAB3C0(&v19->RELEASE_EFFECT_2TAB_NAME);
+  v20 = EventRewardButtonChangeManager_TypeInfo->static_fields;
+  v20->DISABLE_BTN_TXT = (struct System_String_o *)StringLiteral_17535/*"btn_disable_txt_"*/;
+  sub_1BAB3C0(&v20->DISABLE_BTN_TXT);
 }
 
 
@@ -184,15 +142,15 @@ void __fastcall EventRewardButtonChangeManager__ChangeTabInfo(
 
   v11 = this;
   v65 = currentEventId;
-  if ( (byte_4A74082 & 1) == 0 )
+  if ( (byte_4AB0D76 & 1) == 0 )
   {
-    sub_1B90010(&EventRewardButtonChangeManager_TypeInfo, *(_QWORD *)&priorityId);
-    sub_1B90010(&EventRewardRootComponent_TypeInfo, v12);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v13);
-    sub_1B90010(&StringLiteral_17617/*"btn_txt_on_"*/, v14);
-    sub_1B90010(&StringLiteral_16148/*"_"*/, v15);
-    this = (EventRewardButtonChangeManager_o *)sub_1B90010(&StringLiteral_17611/*"btn_txt_off_"*/, v16);
-    byte_4A74082 = 1;
+    sub_1BAB41C(&EventRewardButtonChangeManager_TypeInfo, *(_QWORD *)&priorityId);
+    sub_1BAB41C(&EventRewardRootComponent_TypeInfo, v12);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v13);
+    sub_1BAB41C(&StringLiteral_17622/*"btn_txt_on_"*/, v14);
+    sub_1BAB41C(&StringLiteral_16153/*"_"*/, v15);
+    this = (EventRewardButtonChangeManager_o *)sub_1BAB41C(&StringLiteral_17616/*"btn_txt_off_"*/, v16);
+    byte_4AB0D76 = 1;
   }
   if ( !eventRewardSceneEnt )
     goto LABEL_97;
@@ -270,7 +228,7 @@ void __fastcall EventRewardButtonChangeManager__ChangeTabInfo(
           goto LABEL_97;
         this = (EventRewardButtonChangeManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
         if ( !this )
           goto LABEL_97;
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0LL);
@@ -323,7 +281,7 @@ void __fastcall EventRewardButtonChangeManager__ChangeTabInfo(
           goto LABEL_97;
         v35 = (System_String_o *)this[1].fields.backImgObjs->m_Items[5];
         v36 = System_Int32__ToString((int)v34 + 36, 0LL);
-        v37 = System_String__Concat_61787092(v35, v36, 0LL);
+        v37 = System_String__Concat_62048128(v35, v36, 0LL);
         if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
         this = (EventRewardButtonChangeManager_o *)EventRewardRootComponent__setRewardInfoImg(v32, v37, 0LL);
@@ -378,7 +336,7 @@ LABEL_51:
           goto LABEL_97;
         this = (EventRewardButtonChangeManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
         if ( !this )
           goto LABEL_97;
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v41, 0LL);
@@ -409,7 +367,7 @@ LABEL_51:
         this = (EventRewardButtonChangeManager_o *)v46->m_Items[v23];
         if ( !this )
           goto LABEL_97;
-        v47 = (System_String_o **)(v24 == priorityId ? &StringLiteral_17617/*"btn_txt_on_"*/ : &StringLiteral_17611/*"btn_txt_off_"*/);
+        v47 = (System_String_o **)(v24 == priorityId ? &StringLiteral_17622/*"btn_txt_on_"*/ : &StringLiteral_17616/*"btn_txt_off_"*/);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v24 == priorityId, 0LL);
         v48 = v11->fields.btnTxtSprites;
         if ( !v48 )
@@ -426,10 +384,10 @@ LABEL_51:
           goto LABEL_97;
         v52 = this;
         v53 = System_Int32__ToString((int)v51 + 20, 0LL);
-        v54 = System_String__Concat_61800356(
+        v54 = System_String__Concat_62061392(
                 v49,
                 (System_String_o *)v52,
-                (System_String_o *)StringLiteral_16148/*"_"*/,
+                (System_String_o *)StringLiteral_16153/*"_"*/,
                 v53,
                 0LL);
         if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
@@ -470,7 +428,7 @@ LABEL_51:
     }
     DISABLE_BTN_TXT = v57->static_fields->DISABLE_BTN_TXT;
     v60 = System_Int32__ToString((int)v11 + 116, 0LL);
-    v61 = System_String__Concat_61787092(DISABLE_BTN_TXT, v60, 0LL);
+    v61 = System_String__Concat_62048128(DISABLE_BTN_TXT, v60, 0LL);
     if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
     this = (EventRewardButtonChangeManager_o *)EventRewardRootComponent__setRewardInfoImg(v58, v61, 0LL);
@@ -479,7 +437,7 @@ LABEL_51:
       goto LABEL_97;
     if ( v62->max_length <= v63 )
 LABEL_98:
-      sub_1B90274(this, *(_QWORD *)&priorityId);
+      sub_1BAB680(this, *(_QWORD *)&priorityId);
     this = (EventRewardButtonChangeManager_o *)v62->m_Items[v63];
     if ( this )
     {
@@ -491,7 +449,7 @@ LABEL_98:
       return;
     }
 LABEL_97:
-    sub_1B9026C(this, *(_QWORD *)&priorityId);
+    sub_1BAB678(this, *(_QWORD *)&priorityId);
   }
 }
 
@@ -501,21 +459,20 @@ void __fastcall EventRewardButtonChangeManager__EndTutorialRequest(
         System_String_o *result,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_RequestEndCallBack; // x0
-  struct System_Action_o *v5; // x19
+  struct System_Action_o **p_RequestEndCallBack; // x0
+  struct System_Action_o *v4; // x19
   struct System_Action_o *RequestEndCallBack; // t1
 
   RequestEndCallBack = this->fields.RequestEndCallBack;
-  p_RequestEndCallBack = (ServantStatusBattleListViewItem_o *)&this->fields.RequestEndCallBack;
-  v5 = RequestEndCallBack;
+  p_RequestEndCallBack = &this->fields.RequestEndCallBack;
+  v4 = RequestEndCallBack;
   if ( RequestEndCallBack )
   {
-    p_RequestEndCallBack->klass = 0LL;
-    sub_1B8FFB4(p_RequestEndCallBack, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
-      *(_QWORD *)&v5->fields.extra_arg);
+    *p_RequestEndCallBack = 0LL;
+    sub_1BAB3C0(p_RequestEndCallBack);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
+      v4->fields.original_method_info,
+      *(_QWORD *)&v4->fields.extra_arg);
   }
 }
 
@@ -537,20 +494,20 @@ System_String_o *__fastcall EventRewardButtonChangeManager__GetReleaseBtnSpriteN
   System_String_o *v13; // x0
   int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A74085 & 1) == 0 )
+  if ( (byte_4AB0D79 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EventRewardSceneReleaseMaster___, *(_QWORD *)&eventId);
-    sub_1B90010(&EventRewardButtonChangeManager_TypeInfo, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A74085 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventRewardSceneReleaseMaster___, *(_QWORD *)&eventId);
+    sub_1BAB41C(&EventRewardButtonChangeManager_TypeInfo, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4AB0D79 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventRewardSceneReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventRewardSceneReleaseMaster___)) == 0LL )
   {
-    sub_1B9026C(Instance, v9);
+    sub_1BAB678(Instance, v9);
   }
   ReleaseTabImageId = EventRewardSceneReleaseMaster__getReleaseTabImageId(
                         (EventRewardSceneReleaseMaster_o *)Instance,
@@ -566,7 +523,7 @@ System_String_o *__fastcall EventRewardButtonChangeManager__GetReleaseBtnSpriteN
   }
   DISABLE_BTN_TXT = v11->static_fields->DISABLE_BTN_TXT;
   v13 = System_Int32__ToString((int32_t)&v15, 0LL);
-  return System_String__Concat_61787092(DISABLE_BTN_TXT, v13, 0LL);
+  return System_String__Concat_62048128(DISABLE_BTN_TXT, v13, 0LL);
 }
 
 
@@ -591,30 +548,28 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableCenterButton(
   System_Action_o *v17; // x22
   Il2CppObject *v18; // x23
   struct EventRewardButtonChangeManager___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
 
-  if ( (byte_4A74088 & 1) == 0 )
+  if ( (byte_4AB0D7C & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B90010(&Method_EventRewardButtonChangeManager___c__OnClickDisableCenterButton_b__35_0__, v5);
-    sub_1B90010(&EventRewardButtonChangeManager___c_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_1/*""*/, v7);
-    byte_4A74088 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager___c__OnClickDisableCenterButton_b__35_0__, v5);
+    sub_1BAB41C(&EventRewardButtonChangeManager___c_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
+    byte_4AB0D7C = 1;
   }
   v8 = Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__;
   if ( (*((_BYTE *)Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B90028(Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v8, v8[4]);
+    v8 = (_QWORD *)sub_1BAB434(Method_EventRewardButtonChangeManager_OnClickDisableCenterButton__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1BAB400(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   releaseEntityArray = this->fields.releaseEntityArray;
   if ( !releaseEntityArray )
     goto LABEL_16;
   if ( releaseEntityArray->max_length <= 1 )
-    sub_1B90274(Instance, v11);
+    sub_1BAB680(Instance, v11);
   v13 = releaseEntityArray->m_Items[1];
   if ( !v13 )
     goto LABEL_16;
@@ -636,15 +591,15 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableCenterButton(
       Instance = EventRewardButtonChangeManager___c_TypeInfo;
     }
     v18 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v17 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     System_Action___ctor(v17, v18, Method_EventRewardButtonChangeManager___c__OnClickDisableCenterButton_b__35_0__, 0LL);
     static_fields = EventRewardButtonChangeManager___c_TypeInfo->static_fields;
     static_fields->__9__35_0 = v17;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__35_0, (int32_t)v17, v20, v21);
+    Instance = (void *)sub_1BAB3C0(&static_fields->__9__35_0);
   }
   if ( !v14 )
 LABEL_16:
-    sub_1B9026C(Instance, v11);
+    sub_1BAB678(Instance, v11);
   CommonUI__OpenNotificationDialog(v14, v16, closedMessage, v17, -1, 0, 0, 0, 1, 0, 1, 0, 0LL, 0.0, 0LL);
 }
 
@@ -670,30 +625,28 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableLeftButton(
   System_Action_o *v17; // x22
   Il2CppObject *v18; // x23
   struct EventRewardButtonChangeManager___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  int32_t v21; // w3
 
-  if ( (byte_4A74087 & 1) == 0 )
+  if ( (byte_4AB0D7B & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B90010(&Method_EventRewardButtonChangeManager___c__OnClickDisableLeftButton_b__34_0__, v5);
-    sub_1B90010(&EventRewardButtonChangeManager___c_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_1/*""*/, v7);
-    byte_4A74087 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager___c__OnClickDisableLeftButton_b__34_0__, v5);
+    sub_1BAB41C(&EventRewardButtonChangeManager___c_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
+    byte_4AB0D7B = 1;
   }
   v8 = Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__;
   if ( (*((_BYTE *)Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B90028(Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v8, v8[4]);
+    v8 = (_QWORD *)sub_1BAB434(Method_EventRewardButtonChangeManager_OnClickDisableLeftButton__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1BAB400(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   releaseEntityArray = this->fields.releaseEntityArray;
   if ( !releaseEntityArray )
     goto LABEL_16;
   if ( !releaseEntityArray->max_length )
-    sub_1B90274(Instance, v11);
+    sub_1BAB680(Instance, v11);
   v13 = releaseEntityArray->m_Items[0];
   if ( !v13 )
     goto LABEL_16;
@@ -715,15 +668,15 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableLeftButton(
       Instance = EventRewardButtonChangeManager___c_TypeInfo;
     }
     v18 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v17 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     System_Action___ctor(v17, v18, Method_EventRewardButtonChangeManager___c__OnClickDisableLeftButton_b__34_0__, 0LL);
     static_fields = EventRewardButtonChangeManager___c_TypeInfo->static_fields;
     static_fields->__9__34_0 = v17;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__34_0, (int32_t)v17, v20, v21);
+    Instance = (void *)sub_1BAB3C0(&static_fields->__9__34_0);
   }
   if ( !v14 )
 LABEL_16:
-    sub_1B9026C(Instance, v11);
+    sub_1BAB678(Instance, v11);
   CommonUI__OpenNotificationDialog(v14, v16, closedMessage, v17, -1, 0, 0, 0, 1, 0, 0, 0, 0LL, 0.0, 0LL);
 }
 
@@ -750,42 +703,39 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableRightButton(
   System_Action_o *v18; // x22
   System_String_o *v19; // x21
   Il2CppObject *v20; // x23
-  int32_t v21; // w2
-  int32_t v22; // w3
-  int32_t v23; // w1
   struct EventRewardButtonChangeManager___c_StaticFields *static_fields; // x0
-  ServantStatusBattleListViewItem_o *p__9__36_0; // x0
-  struct EventRewardSceneReleaseEntity_array *v26; // x8
-  EventRewardSceneReleaseEntity_o *v27; // x8
-  Il2CppObject *v28; // x23
-  struct EventRewardButtonChangeManager___c_StaticFields *v29; // x0
+  struct System_Action_o **p__9__36_0; // x0
+  struct EventRewardSceneReleaseEntity_array *v23; // x8
+  EventRewardSceneReleaseEntity_o *v24; // x8
+  Il2CppObject *v25; // x23
+  struct EventRewardButtonChangeManager___c_StaticFields *v26; // x0
 
-  if ( (byte_4A74089 & 1) == 0 )
+  if ( (byte_4AB0D7D & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_EventRewardButtonChangeManager_OnClickDisableRightButton__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B90010(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_0__, v5);
-    sub_1B90010(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_1__, v6);
-    sub_1B90010(&EventRewardButtonChangeManager___c_TypeInfo, v7);
-    sub_1B90010(&StringLiteral_1/*""*/, v8);
-    byte_4A74089 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager_OnClickDisableRightButton__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_0__, v5);
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_1__, v6);
+    sub_1BAB41C(&EventRewardButtonChangeManager___c_TypeInfo, v7);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v8);
+    byte_4AB0D7D = 1;
   }
   v9 = Method_EventRewardButtonChangeManager_OnClickDisableRightButton__;
   if ( (*((_BYTE *)Method_EventRewardButtonChangeManager_OnClickDisableRightButton__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_1B90028(Method_EventRewardButtonChangeManager_OnClickDisableRightButton__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v9, v9[4]);
+    v9 = (_QWORD *)sub_1BAB434(Method_EventRewardButtonChangeManager_OnClickDisableRightButton__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1BAB400(v9, v9[4]);
   OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0LL);
   eventCount = this->fields.eventCount;
   if ( eventCount != 3 )
   {
     if ( eventCount != 2 )
       return;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     releaseEntityArray = this->fields.releaseEntityArray;
     if ( !releaseEntityArray )
 LABEL_29:
-      sub_1B9026C(Instance, v13);
+      sub_1BAB678(Instance, v13);
     if ( releaseEntityArray->max_length > 1 )
     {
       v15 = releaseEntityArray->m_Items[1];
@@ -809,36 +759,35 @@ LABEL_29:
           Instance = EventRewardButtonChangeManager___c_TypeInfo;
         }
         v20 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-        v18 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+        v18 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
         System_Action___ctor(
           v18,
           v20,
           Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_0__,
           0LL);
-        v23 = (int)v18;
         static_fields = EventRewardButtonChangeManager___c_TypeInfo->static_fields;
         static_fields->__9__36_0 = v18;
-        p__9__36_0 = (ServantStatusBattleListViewItem_o *)&static_fields->__9__36_0;
+        p__9__36_0 = &static_fields->__9__36_0;
 LABEL_25:
-        sub_1B8FFB4(p__9__36_0, v23, v21, v22);
+        Instance = (void *)sub_1BAB3C0(p__9__36_0);
         goto LABEL_26;
       }
       goto LABEL_26;
     }
 LABEL_30:
-    sub_1B90274(Instance, v13);
+    sub_1BAB680(Instance, v13);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v26 = this->fields.releaseEntityArray;
-  if ( !v26 )
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v23 = this->fields.releaseEntityArray;
+  if ( !v23 )
     goto LABEL_29;
-  if ( v26->max_length <= 2 )
+  if ( v23->max_length <= 2 )
     goto LABEL_30;
-  v27 = v26->m_Items[2];
-  if ( !v27 )
+  v24 = v23->m_Items[2];
+  if ( !v24 )
     goto LABEL_29;
   v16 = (CommonUI_o *)Instance;
-  closedMessage = v27->fields.closedMessage;
+  closedMessage = v24->fields.closedMessage;
   Instance = EventRewardButtonChangeManager___c_TypeInfo;
   if ( !EventRewardButtonChangeManager___c_TypeInfo->_2.cctor_finished )
   {
@@ -854,13 +803,12 @@ LABEL_30:
       j_il2cpp_runtime_class_init_0(Instance);
       Instance = EventRewardButtonChangeManager___c_TypeInfo;
     }
-    v28 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v18 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
-    System_Action___ctor(v18, v28, Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_1__, 0LL);
-    v23 = (int)v18;
-    v29 = EventRewardButtonChangeManager___c_TypeInfo->static_fields;
-    v29->__9__36_1 = v18;
-    p__9__36_0 = (ServantStatusBattleListViewItem_o *)&v29->__9__36_1;
+    v25 = (Il2CppObject *)**((_QWORD **)Instance + 23);
+    v18 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+    System_Action___ctor(v18, v25, Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_1__, 0LL);
+    v26 = EventRewardButtonChangeManager___c_TypeInfo->static_fields;
+    v26->__9__36_1 = v18;
+    p__9__36_0 = &v26->__9__36_1;
     goto LABEL_25;
   }
 LABEL_26:
@@ -889,17 +837,17 @@ void __fastcall EventRewardButtonChangeManager__SetBtnCollider(
   struct UICommonButton_array *v15; // x9
 
   v6 = this;
-  if ( (byte_4A74083 & 1) == 0 )
+  if ( (byte_4AB0D77 & 1) == 0 )
   {
-    this = (EventRewardButtonChangeManager_o *)sub_1B90010(
+    this = (EventRewardButtonChangeManager_o *)sub_1BAB41C(
                                                  &Method_UnityEngine_Component_GetComponent_BoxCollider___,
                                                  isDisp);
-    byte_4A74083 = 1;
+    byte_4AB0D77 = 1;
   }
   eventBtns = v6->fields.eventBtns;
   if ( !eventBtns )
 LABEL_21:
-    sub_1B9026C(this, isDisp);
+    sub_1BAB678(this, isDisp);
   v8 = *(_QWORD *)&eventBtns->max_length;
   if ( (int)v8 >= 1 )
   {
@@ -925,7 +873,7 @@ LABEL_21:
           goto LABEL_21;
         this = (EventRewardButtonChangeManager_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)this,
-                                                     (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                     (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
         if ( !this )
           goto LABEL_21;
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0LL);
@@ -938,13 +886,13 @@ LABEL_14:
           goto LABEL_21;
         if ( v13 >= v15->max_length )
 LABEL_22:
-          sub_1B90274(this, isDisp);
+          sub_1BAB680(this, isDisp);
         this = (EventRewardButtonChangeManager_o *)*((_QWORD *)&v15->obj.klass + i);
         if ( !this )
           goto LABEL_21;
         this = (EventRewardButtonChangeManager_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)this,
-                                                     (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                     (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
         if ( !this )
           goto LABEL_21;
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v9++ != currentEventSlotIndex && isDisp, 0LL);
@@ -979,12 +927,12 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseBeforeTabInfo(
   System_String_o *v23; // x21
   struct UICommonButton_array *v24; // x8
 
-  if ( (byte_4A74086 & 1) == 0 )
+  if ( (byte_4AB0D7A & 1) == 0 )
   {
-    sub_1B90010(&EventRewardButtonChangeManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B90010(&EventRewardRootComponent_TypeInfo, v9);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v10);
-    byte_4A74086 = 1;
+    sub_1BAB41C(&EventRewardButtonChangeManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BAB41C(&EventRewardRootComponent_TypeInfo, v9);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v10);
+    byte_4AB0D7A = 1;
   }
   if ( eventCount == 3 )
   {
@@ -1039,7 +987,7 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseBeforeTabInfo(
     goto LABEL_39;
   gameObject = (UICommonButton_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)gameObject,
-                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !gameObject )
     goto LABEL_39;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
@@ -1087,10 +1035,10 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseBeforeTabInfo(
   v24 = this->fields.eventBtns;
   if ( !v24 )
 LABEL_39:
-    sub_1B9026C(gameObject, *(_QWORD *)&eventId);
+    sub_1BAB678(gameObject, *(_QWORD *)&eventId);
   if ( v24->max_length <= tabPriority )
 LABEL_40:
-    sub_1B90274(gameObject, *(_QWORD *)&eventId);
+    sub_1BAB680(gameObject, *(_QWORD *)&eventId);
   gameObject = v24->m_Items[tabPriority];
   if ( !gameObject )
     goto LABEL_39;
@@ -1110,20 +1058,14 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseBtnState(
         const MethodInfo *method)
 {
   EventRewardButtonChangeManager_o *v5; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
 
   v5 = this;
   this->fields.releaseEntityArray = entitys;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)&this->fields.releaseEntityArray,
-    (int32_t)entitys,
-    closedImageId,
-    (int32_t)effectEndCallBack);
+  sub_1BAB3C0(&this->fields.releaseEntityArray);
   v5->fields.RequestEndCallBack = effectEndCallBack;
   v5 = (EventRewardButtonChangeManager_o *)((char *)v5 + 128);
   v5[-1].fields.releaseSlot = closedImageId;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v5, (int32_t)effectEndCallBack, v8, v9);
+  sub_1BAB3C0(v5);
 }
 
 
@@ -1145,32 +1087,28 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseEffect(
   __int64 Component_object; // x0
   __int64 v19; // x9
   struct UnityEngine_GameObject_array *effectObject; // x25
-  Il2CppObject *Object_object__48695184; // x23
-  int32_t v22; // w2
-  int32_t v23; // w3
-  __int64 v24; // x1
-  Il2CppClass **v25; // x0
+  Il2CppObject *Object_object__48916712; // x23
+  __int64 v22; // x1
+  Il2CppClass **v23; // x0
+  struct UnityEngine_GameObject_array *v24; // x8
+  TabOpenEffectComponent_o *v25; // x23
   struct UnityEngine_GameObject_array *v26; // x8
-  int32_t v27; // w2
-  int32_t v28; // w3
-  __int64 v29; // x23
-  struct UnityEngine_GameObject_array *v30; // x8
   struct UISprite_array *eventBtnImages; // x8
-  UnityEngine_Transform_o *v32; // x21
-  struct UnityEngine_GameObject_array *v33; // x8
-  UnityEngine_Transform_o *v34; // x21
-  struct UnityEngine_GameObject_array *v35; // x8
-  UnityEngine_Transform_o *v36; // x19
-  const MethodInfo *v37; // x1
+  UnityEngine_Transform_o *v28; // x21
+  struct UnityEngine_GameObject_array *v29; // x8
+  UnityEngine_Transform_o *v30; // x21
+  struct UnityEngine_GameObject_array *v31; // x8
+  UnityEngine_Transform_o *v32; // x19
+  const MethodInfo *v33; // x1
 
-  if ( (byte_4A74084 & 1) == 0 )
+  if ( (byte_4AB0D78 & 1) == 0 )
   {
-    sub_1B90010(&Method_AssetData_GetObject_GameObject____76169496, *(_QWORD *)&eventId);
-    sub_1B90010(&EventRewardButtonChangeManager_TypeInfo, v13);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___, v14);
-    sub_1B90010(&Method_UnityEngine_Object_Instantiate_GameObject___, v15);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v16);
-    byte_4A74084 = 1;
+    sub_1BAB41C(&Method_AssetData_GetObject_GameObject____76450888, *(_QWORD *)&eventId);
+    sub_1BAB41C(&EventRewardButtonChangeManager_TypeInfo, v13);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___, v14);
+    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, v15);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v16);
+    byte_4AB0D78 = 1;
   }
   this->fields.releaseSlot = slot;
   EventRewardButtonChangeManager__SetReleaseBeforeTabInfo(
@@ -1212,54 +1150,54 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseEffect(
   if ( !this->fields.efffectData )
     goto LABEL_47;
   effectObject = this->fields.effectObject;
-  Object_object__48695184 = AssetData__GetObject_object__48695184(
+  Object_object__48916712 = AssetData__GetObject_object__48916712(
                               this->fields.efffectData,
                               *(System_String_o **)(*(_QWORD *)(Component_object + 184) + v19),
-                              (const MethodInfo_2E70790 *)Method_AssetData_GetObject_GameObject____76169496);
+                              (const MethodInfo_2EA68E8 *)Method_AssetData_GetObject_GameObject____76450888);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
-                                Object_object__48695184,
-                                (const MethodInfo_2F121DC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                Object_object__48916712,
+                                (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectObject )
     goto LABEL_47;
   if ( effectObject->max_length <= slot )
     goto LABEL_48;
-  v24 = Component_object;
-  v25 = &effectObject->obj.klass + slot;
-  v25[4] = (Il2CppClass *)v24;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v25 + 4), v24, v22, v23);
-  v26 = this->fields.effectObject;
-  if ( !v26 )
+  v22 = Component_object;
+  v23 = &effectObject->obj.klass + slot;
+  v23[4] = (Il2CppClass *)v22;
+  Component_object = sub_1BAB3C0(v23 + 4);
+  v24 = this->fields.effectObject;
+  if ( !v24 )
     goto LABEL_47;
-  if ( v26->max_length <= slot )
+  if ( v24->max_length <= slot )
     goto LABEL_48;
-  Component_object = (__int64)v26->m_Items[slot];
+  Component_object = (__int64)v24->m_Items[slot];
   if ( !Component_object )
     goto LABEL_47;
   Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                 (UnityEngine_GameObject_o *)Component_object,
-                                (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
+                                (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
   if ( !Component_object )
     goto LABEL_47;
-  v29 = Component_object;
+  v25 = (TabOpenEffectComponent_o *)Component_object;
   if ( changeCallback )
   {
     *(_QWORD *)(Component_object + 208) = changeCallback;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(Component_object + 208), (int32_t)changeCallback, v27, v28);
+    Component_object = sub_1BAB3C0(Component_object + 208);
   }
   if ( endCallback )
   {
-    *(_QWORD *)(v29 + 216) = endCallback;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v29 + 216), (int32_t)endCallback, v27, v28);
+    v25->fields.animEndCallback = endCallback;
+    Component_object = sub_1BAB3C0(&v25->fields.animEndCallback);
   }
-  v30 = this->fields.effectObject;
-  if ( !v30 )
+  v26 = this->fields.effectObject;
+  if ( !v26 )
 LABEL_47:
-    sub_1B9026C(Component_object, v17);
-  if ( v30->max_length <= slot )
+    sub_1BAB678(Component_object, v17);
+  if ( v26->max_length <= slot )
     goto LABEL_48;
-  Component_object = (__int64)v30->m_Items[slot];
+  Component_object = (__int64)v26->m_Items[slot];
   if ( !Component_object )
     goto LABEL_47;
   Component_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Component_object, 0LL);
@@ -1268,52 +1206,52 @@ LABEL_47:
     goto LABEL_47;
   if ( eventBtnImages->max_length <= slot )
     goto LABEL_48;
-  v32 = (UnityEngine_Transform_o *)Component_object;
+  v28 = (UnityEngine_Transform_o *)Component_object;
   Component_object = (__int64)eventBtnImages->m_Items[slot];
   if ( !Component_object )
     goto LABEL_47;
   Component_object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0LL);
+  if ( !v28 )
+    goto LABEL_47;
+  UnityEngine_Transform__set_parent(v28, (UnityEngine_Transform_o *)Component_object, 0LL);
+  v29 = this->fields.effectObject;
+  if ( !v29 )
+    goto LABEL_47;
+  if ( v29->max_length <= slot )
+LABEL_48:
+    sub_1BAB680(Component_object, v17);
+  Component_object = (__int64)v29->m_Items[slot];
+  if ( !Component_object )
+    goto LABEL_47;
+  Component_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Component_object, 0LL);
+  v30 = (UnityEngine_Transform_o *)Component_object;
+  if ( !byte_4AB0691 )
+  {
+    Component_object = sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4AB0691 = 1;
+  }
+  if ( !v30 )
+    goto LABEL_47;
+  UnityEngine_Transform__set_localPosition(v30, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  v31 = this->fields.effectObject;
+  if ( !v31 )
+    goto LABEL_47;
+  if ( v31->max_length <= slot )
+    goto LABEL_48;
+  Component_object = (__int64)v31->m_Items[slot];
+  if ( !Component_object )
+    goto LABEL_47;
+  Component_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Component_object, 0LL);
+  v32 = (UnityEngine_Transform_o *)Component_object;
+  if ( !byte_4AB0696 )
+  {
+    Component_object = sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4AB0696 = 1;
+  }
   if ( !v32 )
     goto LABEL_47;
-  UnityEngine_Transform__set_parent(v32, (UnityEngine_Transform_o *)Component_object, 0LL);
-  v33 = this->fields.effectObject;
-  if ( !v33 )
-    goto LABEL_47;
-  if ( v33->max_length <= slot )
-LABEL_48:
-    sub_1B90274(Component_object, v17);
-  Component_object = (__int64)v33->m_Items[slot];
-  if ( !Component_object )
-    goto LABEL_47;
-  Component_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Component_object, 0LL);
-  v34 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4A6A9C1 )
-  {
-    Component_object = sub_1B90010(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4A6A9C1 = 1;
-  }
-  if ( !v34 )
-    goto LABEL_47;
-  UnityEngine_Transform__set_localPosition(v34, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  v35 = this->fields.effectObject;
-  if ( !v35 )
-    goto LABEL_47;
-  if ( v35->max_length <= slot )
-    goto LABEL_48;
-  Component_object = (__int64)v35->m_Items[slot];
-  if ( !Component_object )
-    goto LABEL_47;
-  Component_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Component_object, 0LL);
-  v36 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4A6A9C6 )
-  {
-    Component_object = sub_1B90010(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4A6A9C6 = 1;
-  }
-  if ( !v36 )
-    goto LABEL_47;
-  UnityEngine_Transform__set_localScale(v36, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-  TabOpenEffectComponent__PlayAnimation((TabOpenEffectComponent_o *)v29, v37);
+  UnityEngine_Transform__set_localScale(v32, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+  TabOpenEffectComponent__PlayAnimation(v25, v33);
 }
 
 
@@ -1322,12 +1260,10 @@ void __fastcall EventRewardButtonChangeManager__SetReleaseEffectData(
         AssetData_o *data,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   if ( data )
   {
     this->fields.efffectData = data;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.efffectData, (int32_t)data, (int32_t)method, v3);
+    sub_1BAB3C0(&this->fields.efffectData);
   }
 }
 
@@ -1345,16 +1281,16 @@ void __fastcall EventRewardButtonChangeManager__StartTutorialRequest(
   __int64 v9; // x1
   int32_t v10; // w1
 
-  if ( (byte_4A7408A & 1) == 0 )
+  if ( (byte_4AB0D7E & 1) == 0 )
   {
-    sub_1B90010(&Method_EventRewardButtonChangeManager_EndTutorialRequest__, method);
-    sub_1B90010(&Method_NetworkManager_getRequest_TutorialEventSetRequest___, v3);
-    sub_1B90010(&NetworkManager_TypeInfo, v4);
-    sub_1B90010(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    byte_4A7408A = 1;
+    sub_1BAB41C(&Method_EventRewardButtonChangeManager_EndTutorialRequest__, method);
+    sub_1BAB41C(&Method_NetworkManager_getRequest_TutorialEventSetRequest___, v3);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v4);
+    sub_1BAB41C(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    byte_4AB0D7E = 1;
   }
   releaseSlot = this->fields.releaseSlot;
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1B9025C(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1BAB668(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -1364,9 +1300,9 @@ void __fastcall EventRewardButtonChangeManager__StartTutorialRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_2F10358 *)Method_NetworkManager_getRequest_TutorialEventSetRequest___);
+                     (const MethodInfo_2F47108 *)Method_NetworkManager_getRequest_TutorialEventSetRequest___);
   if ( !Request_object )
-    sub_1B9026C(0LL, v9);
+    sub_1BAB678(0LL, v9);
   if ( releaseSlot >= 3 )
     v10 = -1;
   else
@@ -1389,24 +1325,21 @@ void __fastcall EventRewardButtonChangeManager__TabInitialize(
   DataManager_o *v10; // x20
   __int64 v11; // x22
   int max_length; // w9
-  struct UnityEngine_GameObject_array *v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
 
-  if ( (byte_4A74081 & 1) == 0 )
+  if ( (byte_4AB0D75 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EventRewardSceneMaster___, *(_QWORD *)&eventId);
-    sub_1B90010(&UnityEngine_GameObject___TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A74081 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventRewardSceneMaster___, *(_QWORD *)&eventId);
+    sub_1BAB41C(&UnityEngine_GameObject___TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AB0D75 = 1;
   }
   this->fields.eventId = eventId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventRewardSceneMaster___);
+                                (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventRewardSceneMaster___);
   if ( !Instance )
     goto LABEL_12;
   Instance = (DataManager_o *)EventRewardSceneMaster__GetEntityList((EventRewardSceneMaster_o *)Instance, eventId, 0LL);
@@ -1421,7 +1354,7 @@ void __fastcall EventRewardButtonChangeManager__TabInitialize(
     if ( (int)v11 >= max_length )
       break;
     if ( (unsigned int)v11 >= max_length )
-      sub_1B90274(Instance, v8);
+      sub_1BAB680(Instance, v8);
     Instance = (DataManager_o *)tabColliders->m_Items[v11];
     if ( Instance )
     {
@@ -1439,12 +1372,11 @@ void __fastcall EventRewardButtonChangeManager__TabInitialize(
   }
   if ( !v10 )
 LABEL_12:
-    sub_1B9026C(Instance, v8);
-  v13 = (struct UnityEngine_GameObject_array *)sub_1B900B8(
-                                                 UnityEngine_GameObject___TypeInfo,
-                                                 LODWORD(v10->fields.m_CancellationTokenSource));
-  this->fields.effectObject = v13;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.effectObject, (int32_t)v13, v14, v15);
+    sub_1BAB678(Instance, v8);
+  this->fields.effectObject = (struct UnityEngine_GameObject_array *)sub_1BAB4C4(
+                                                                       UnityEngine_GameObject___TypeInfo,
+                                                                       LODWORD(v10->fields.m_CancellationTokenSource));
+  sub_1BAB3C0(&this->fields.effectObject);
 }
 
 
@@ -1452,22 +1384,16 @@ void __fastcall EventRewardButtonChangeManager___c___cctor(const MethodInfo *met
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
 
-  if ( (byte_4A7408C & 1) == 0 )
+  if ( (byte_4AB0D80 & 1) == 0 )
   {
-    sub_1B90010(&EventRewardButtonChangeManager___c_TypeInfo, v1);
-    byte_4A7408C = 1;
+    sub_1BAB41C(&EventRewardButtonChangeManager___c_TypeInfo, v1);
+    byte_4AB0D80 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(EventRewardButtonChangeManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(EventRewardButtonChangeManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventRewardButtonChangeManager___c_TypeInfo->static_fields->__9 = (struct EventRewardButtonChangeManager___c_o *)v2;
-  sub_1B8FFB4(
-    (ServantStatusBattleListViewItem_o *)EventRewardButtonChangeManager___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+  sub_1BAB3C0(EventRewardButtonChangeManager___c_TypeInfo->static_fields);
 }
 
 
@@ -1486,14 +1412,14 @@ void __fastcall EventRewardButtonChangeManager___c___OnClickDisableCenterButton_
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A7408E & 1) == 0 )
+  if ( (byte_4AB0D82 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A7408E = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4AB0D82 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -1505,14 +1431,14 @@ void __fastcall EventRewardButtonChangeManager___c___OnClickDisableLeftButton_b_
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A7408D & 1) == 0 )
+  if ( (byte_4AB0D81 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A7408D = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4AB0D81 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -1524,14 +1450,14 @@ void __fastcall EventRewardButtonChangeManager___c___OnClickDisableRightButton_b
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A7408F & 1) == 0 )
+  if ( (byte_4AB0D83 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A7408F = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4AB0D83 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -1543,13 +1469,13 @@ void __fastcall EventRewardButtonChangeManager___c___OnClickDisableRightButton_b
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A74090 & 1) == 0 )
+  if ( (byte_4AB0D84 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A74090 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4AB0D84 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }

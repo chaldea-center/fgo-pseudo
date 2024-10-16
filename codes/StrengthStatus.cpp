@@ -8,18 +8,18 @@ System_String_o *__fastcall StrengthStatus__GetIconName(int32_t strengthStatus, 
 {
   __int64 v3; // x1
 
-  if ( (byte_4A6EE95 & 1) == 0 )
+  if ( (byte_4AB4D5D & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_20214/*"icon_stateup_on"*/, method);
-    sub_1B90010(&StringLiteral_20213/*"icon_stateup_off"*/, v3);
-    byte_4A6EE95 = 1;
+    sub_1BAB41C(&StringLiteral_20217/*"icon_stateup_on"*/, method);
+    sub_1BAB41C(&StringLiteral_20216/*"icon_stateup_off"*/, v3);
+    byte_4AB4D5D = 1;
   }
   if ( !strengthStatus )
     return 0LL;
   if ( (unsigned int)(strengthStatus - 1) <= 0x61 )
-    return (System_String_o *)StringLiteral_20213/*"icon_stateup_off"*/;
+    return (System_String_o *)StringLiteral_20216/*"icon_stateup_off"*/;
   if ( strengthStatus == 99 )
-    return (System_String_o *)StringLiteral_20214/*"icon_stateup_on"*/;
+    return (System_String_o *)StringLiteral_20217/*"icon_stateup_on"*/;
   return 0LL;
 }
 
@@ -35,18 +35,18 @@ System_String_o *__fastcall StrengthStatus__GetTreasureDeviceIconName(
   __int64 *v7; // x8
   unsigned int v8; // w8
 
-  if ( (byte_4A6EE96 & 1) == 0 )
+  if ( (byte_4AB4D5E & 1) == 0 )
   {
-    sub_1B90010(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
-    sub_1B90010(&StringLiteral_20187/*"icon_np_off"*/, v5);
-    sub_1B90010(&StringLiteral_20188/*"icon_np_on"*/, v6);
-    byte_4A6EE96 = 1;
+    sub_1BAB41C(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    sub_1BAB41C(&StringLiteral_20190/*"icon_np_off"*/, v5);
+    sub_1BAB41C(&StringLiteral_20191/*"icon_np_on"*/, v6);
+    byte_4AB4D5E = 1;
   }
   if ( !strengthStatus )
     return 0LL;
   if ( strengthStatus == 99 )
   {
-    v7 = &StringLiteral_20188/*"icon_np_on"*/;
+    v7 = &StringLiteral_20191/*"icon_np_on"*/;
     return (System_String_o *)*v7;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -57,14 +57,14 @@ System_String_o *__fastcall StrengthStatus__GetTreasureDeviceIconName(
     v8 = treasureDeviceNum - strengthStatus;
   if ( v8 == 1 )
   {
-    v7 = &StringLiteral_20187/*"icon_np_off"*/;
+    v7 = &StringLiteral_20190/*"icon_np_off"*/;
     return (System_String_o *)*v7;
   }
   if ( strengthStatus == treasureDeviceNum )
     return 0LL;
   if ( v8 >= 0x63 )
     return 0LL;
-  return (System_String_o *)StringLiteral_20188/*"icon_np_on"*/;
+  return (System_String_o *)StringLiteral_20191/*"icon_np_on"*/;
 }
 
 
@@ -77,10 +77,10 @@ int32_t __fastcall StrengthStatus__GetTreasureDeviceStrengthAdjustData(
   int32_t result; // w0
   int32_t v6; // w8
 
-  if ( (byte_4A6EE94 & 1) == 0 )
+  if ( (byte_4AB4D5C & 1) == 0 )
   {
-    sub_1B90010(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
-    byte_4A6EE94 = 1;
+    sub_1BAB41C(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    byte_4AB4D5C = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

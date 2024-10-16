@@ -11,17 +11,17 @@ void __fastcall ParticleSystemSyncComponent__Awake(ParticleSystemSyncComponent_o
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A6ED55 & 1) == 0 )
+  if ( (byte_4AB4C12 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____76191728, method);
-    byte_4A6ED55 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____76473152, method);
+    byte_4AB4C12 = 1;
   }
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_2E857AC *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____76191728);
+                                  (const MethodInfo_2EBB904 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem____76473152);
   this->fields.particles = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.particles,
     (int32_t)ComponentsInChildren_object,
     v4,
@@ -66,11 +66,11 @@ bool __fastcall ParticleSystemSyncComponent__IsUnderMinTimeDiff(
       do
       {
         if ( (unsigned int)v5 >= max_length )
-          sub_1B90274(this, method);
+          sub_1BAB680(this, method);
         v6 = particles->m_Items[v5];
         time = UnityEngine_Time__get_time(0LL);
         if ( !v6 )
-          sub_1B9026C(v7, v8);
+          sub_1BAB678(v7, v8);
         v10 = time;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v6, 0LL).fields.m_ParticleSystem;
         v18.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
@@ -131,18 +131,18 @@ void __fastcall ParticleSystemSyncComponent__SimulateParticles(
       do
       {
         if ( (unsigned int)v4 >= max_length )
-          sub_1B90274(this, method);
+          sub_1BAB680(this, method);
         v5 = particles->m_Items[v4];
         time = UnityEngine_Time__get_time(0LL);
         if ( !v5 )
-          sub_1B9026C(v6, v7);
+          sub_1BAB678(v6, v7);
         v9 = time;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v5, 0LL).fields.m_ParticleSystem;
         v13.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
         duration = UnityEngine_ParticleSystem_MainModule__get_duration(v13, 0LL);
         v11 = fmodf(v9, duration);
-        UnityEngine_ParticleSystem__Simulate_69819420(v5, v11, 0LL);
-        UnityEngine_ParticleSystem__Play_69819576(v5, 0LL);
+        UnityEngine_ParticleSystem__Simulate_70080560(v5, v11, 0LL);
+        UnityEngine_ParticleSystem__Play_70080716(v5, 0LL);
         max_length = particles->max_length;
         ++v4;
       }

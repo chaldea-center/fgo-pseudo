@@ -57,18 +57,18 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   __int64 v56; // x10
   Il2CppObject *v57; // x8
 
-  if ( (byte_4A6CAC7 & 1) == 0 )
+  if ( (byte_4AB2912 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_List_Rect__Add__, method);
-    sub_1B90010(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
-    sub_1B90010(&System_Collections_Generic_List_Rect__TypeInfo, v4);
-    byte_4A6CAC7 = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Rect__Add__, method);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
+    sub_1BAB41C(&System_Collections_Generic_List_Rect__TypeInfo, v4);
+    byte_4AB2912 = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0LL);
-  v5 = (System_Collections_Generic_List_Rect__o *)sub_1B9025C(System_Collections_Generic_List_Rect__TypeInfo);
+  v5 = (System_Collections_Generic_List_Rect__o *)sub_1BAB668(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v5,
-    (const MethodInfo_3520ED4 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_355DDD0 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v6 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
          this,
          this->klass->vtable._9_GetStorageRect.methodPtr);
@@ -85,7 +85,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v8,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
@@ -110,7 +110,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v16,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
@@ -135,7 +135,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v24,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
   }
   else
   {
@@ -160,7 +160,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v32,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
   }
   else
   {
@@ -185,7 +185,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v40,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
   }
   else
   {
@@ -204,14 +204,14 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   ++v5->fields._version;
   if ( !v54 )
 LABEL_29:
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   v56 = v5->fields._size;
   if ( (unsigned int)v56 >= v54->max_length )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v50,
-      *(const MethodInfo_3521760 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+      *(const MethodInfo_355E65C **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
   }
   else
   {
@@ -223,7 +223,7 @@ LABEL_29:
     HIDWORD(v57[2].monitor) = v53;
   }
   this->fields._rects_k__BackingField = v5;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v48, v49);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v5, v48, v49);
 }
 
 

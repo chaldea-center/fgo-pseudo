@@ -1,13 +1,13 @@
 void __fastcall QuestReleaseOverwriteEntity___ctor(QuestReleaseOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A703E3 & 1) == 0 )
+  if ( (byte_4AB62D4 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A703E3 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4AB62D4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,15 +21,15 @@ QuestReleaseEntity_o *__fastcall QuestReleaseOverwriteEntity__ConvertToQuestRele
   __int64 v6; // x1
   QuestReleaseEntity_o *result; // x0
 
-  if ( (byte_4A703E1 & 1) == 0 )
+  if ( (byte_4AB62D2 & 1) == 0 )
   {
-    sub_1B90010(&QuestReleaseEntity_TypeInfo, method);
-    byte_4A703E1 = 1;
+    sub_1BAB41C(&QuestReleaseEntity_TypeInfo, method);
+    byte_4AB62D2 = 1;
   }
-  v3 = sub_1B9025C(QuestReleaseEntity_TypeInfo);
+  v3 = sub_1BAB668(QuestReleaseEntity_TypeInfo);
   QuestReleaseEntity___ctor((QuestReleaseEntity_o *)v3, v4);
   if ( !v3 )
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   result = (QuestReleaseEntity_o *)v3;
   *(_DWORD *)(v3 + 16) = this->fields.questId;
   *(_QWORD *)(v3 + 20) = *(_QWORD *)&this->fields.condType;
@@ -47,16 +47,16 @@ System_String_o *__fastcall QuestReleaseOverwriteEntity__CreatePK(
         int32_t imagePriority,
         const MethodInfo *method)
 {
-  if ( (byte_4A703E0 & 1) == 0 )
+  if ( (byte_4AB62D1 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_4A703E0 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_4AB62D1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            priority,
            imagePriority,
-           (const MethodInfo_2E8C8D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -89,13 +89,13 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   Time = nowTime;
-  if ( (byte_4A703E2 & 1) == 0 )
+  if ( (byte_4AB62D3 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_EventMaster___, nowTime);
-    sub_1B90010(&DataManager_TypeInfo, v5);
-    sub_1B90010(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
-    sub_1B90010(&NetworkManager_TypeInfo, v7);
-    byte_4A703E2 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_EventMaster___, nowTime);
+    sub_1BAB41C(&DataManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v7);
+    byte_4AB62D3 = 1;
   }
   entity = 0LL;
   if ( !Time )
@@ -108,15 +108,15 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
     goto LABEL_17;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
 LABEL_22:
-    sub_1B9026C(Master_object, v9);
+    sub_1BAB678(Master_object, v9);
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.eventId,
-                                    (const MethodInfo_312C5FC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3163DE4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
 LABEL_17:

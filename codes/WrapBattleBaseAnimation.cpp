@@ -31,15 +31,15 @@ WrapBattleBaseAnimation_o *__fastcall WrapBattleBaseAnimation__MakeWrapAnimation
   Il2CppObject *v16; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *component; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A72F89 & 1) == 0 )
+  if ( (byte_4AB8F83 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_TryGetComponent_Animation___, method);
-    sub_1B90010(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___, v3);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B90010(&WrapBattleAnimation_TypeInfo, v5);
-    sub_1B90010(&WrapBattleBaseAnimation_TypeInfo, v6);
-    sub_1B90010(&WrapBattleSimpleAnimation_TypeInfo, v7);
-    byte_4A72F89 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_TryGetComponent_Animation___, method);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___, v3);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BAB41C(&WrapBattleAnimation_TypeInfo, v5);
+    sub_1BAB41C(&WrapBattleBaseAnimation_TypeInfo, v6);
+    sub_1BAB41C(&WrapBattleSimpleAnimation_TypeInfo, v7);
+    byte_4AB8F83 = 1;
   }
   v16 = 0LL;
   component = 0LL;
@@ -49,33 +49,33 @@ WrapBattleBaseAnimation_o *__fastcall WrapBattleBaseAnimation__MakeWrapAnimation
   if ( !v8 )
     goto LABEL_12;
   if ( !obj )
-    sub_1B9026C(v8, v9);
+    sub_1BAB678(v8, v9);
   if ( !UnityEngine_GameObject__TryGetComponent_object_(
           obj,
           &component,
-          (const MethodInfo_2EDE9F8 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
+          (const MethodInfo_2F14C00 *)Method_UnityEngine_GameObject_TryGetComponent_SimpleAnimation___) )
   {
     if ( UnityEngine_GameObject__TryGetComponent_object_(
            obj,
            &v16,
-           (const MethodInfo_2EDE9F8 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
+           (const MethodInfo_2F14C00 *)Method_UnityEngine_GameObject_TryGetComponent_Animation___) )
     {
       v10 = v16;
       v11 = &WrapBattleAnimation_TypeInfo;
       goto LABEL_11;
     }
 LABEL_12:
-    v12 = sub_1B9025C(WrapBattleBaseAnimation_TypeInfo);
+    v12 = sub_1BAB668(WrapBattleBaseAnimation_TypeInfo);
     System_Object___ctor((Il2CppObject *)v12, 0LL);
     return (WrapBattleBaseAnimation_o *)v12;
   }
   v10 = component;
   v11 = &WrapBattleSimpleAnimation_TypeInfo;
 LABEL_11:
-  v12 = sub_1B9025C(*v11);
+  v12 = sub_1BAB668(*v11);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   *(_QWORD *)(v12 + 16) = v10;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)v10, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)v10, v13, v14);
   return (WrapBattleBaseAnimation_o *)v12;
 }
 
@@ -104,6 +104,6 @@ void __fastcall WrapBattleBaseAnimation_SimpleData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.animName = name;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)((char *)v6 + 16);
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v6, (int32_t)name, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v6, (int32_t)name, v7, v8);
   *(float *)&v6->monitor = time;
 }

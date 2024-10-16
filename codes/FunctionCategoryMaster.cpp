@@ -1,14 +1,14 @@
 void __fastcall FunctionCategoryMaster___ctor(FunctionCategoryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A700A6 & 1) == 0 )
+  if ( (byte_4AB5F89 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_FunctionCategoryMaster__FunctionCategoryEntity__int___ctor__, method);
-    byte_4A700A6 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_FunctionCategoryMaster__FunctionCategoryEntity__int___ctor__, method);
+    byte_4AB5F89 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     269,
-    (const MethodInfo_312C568 *)Method_DataMasterBase_FunctionCategoryMaster__FunctionCategoryEntity__int___ctor__);
+    (const MethodInfo_3163D50 *)Method_DataMasterBase_FunctionCategoryMaster__FunctionCategoryEntity__int___ctor__);
 }
 
 
@@ -36,21 +36,21 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByFl
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_4A700A8 & 1) == 0 )
+  if ( (byte_4AB5F8B & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&flag);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1B90010(&FunctionCategoryEntity_TypeInfo, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity__Add__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__, v8);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__, v9);
-    sub_1B90010(&System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo, v10);
-    byte_4A700A8 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&flag);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1BAB41C(&FunctionCategoryEntity_TypeInfo, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity__Add__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__, v8);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__, v9);
+    sub_1BAB41C(&System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo, v10);
+    byte_4AB5F8B = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_20;
@@ -59,7 +59,7 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByFl
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                list,
-                                                               (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                               (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( v14 >= (int)list )
       break;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -68,7 +68,7 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByFl
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v14,
-                                                               (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                               (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
       v12 = list;
@@ -90,14 +90,14 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByFl
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)list,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v12;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v12, v15, v16);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 4), (int32_t)v12, v15, v16);
         }
       }
     }
@@ -108,10 +108,10 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByFl
   }
   if ( !v11 )
 LABEL_20:
-    sub_1B9026C(list, v12);
+    sub_1BAB678(list, v12);
   return (FunctionCategoryEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v11,
-                                           (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__);
+                                           (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__);
 }
 
 
@@ -140,21 +140,21 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByGr
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4A700A7 & 1) == 0 )
+  if ( (byte_4AB5F8A & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&groupType);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1B90010(&FunctionCategoryEntity_TypeInfo, v8);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity__Add__, v9);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__, v11);
-    sub_1B90010(&System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo, v12);
-    byte_4A700A7 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&groupType);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1BAB41C(&FunctionCategoryEntity_TypeInfo, v8);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity__Add__, v9);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__, v11);
+    sub_1BAB41C(&System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo, v12);
+    byte_4AB5F8A = 1;
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_FunctionCategoryEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_FunctionCategoryEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_21;
@@ -163,7 +163,7 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByGr
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                list,
-                                                               (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                                                               (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( v16 >= (int)list )
       break;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -172,7 +172,7 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByGr
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v16,
-                                                               (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                               (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( list )
     {
       v14 = list;
@@ -195,14 +195,14 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByGr
           System_Collections_Generic_List_object___AddWithResize(
             v13,
             (Il2CppObject *)list,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
           v23 = &items->obj.klass + size;
           v13->fields._size = size + 1;
           v23[4] = (Il2CppClass *)v14;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v14, v17, v18);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v23 + 4), (int32_t)v14, v17, v18);
         }
       }
     }
@@ -213,8 +213,8 @@ FunctionCategoryEntity_array *__fastcall FunctionCategoryMaster__GetEntitiesByGr
   }
   if ( !v13 )
 LABEL_21:
-    sub_1B9026C(list, v14);
+    sub_1BAB678(list, v14);
   return (FunctionCategoryEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v13,
-                                           (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__);
+                                           (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_FunctionCategoryEntity__ToArray__);
 }

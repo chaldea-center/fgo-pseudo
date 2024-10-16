@@ -11,29 +11,29 @@ int32_t __fastcall EventFortificationDataLogic__CalculationGetPoint(
   int32_t lv; // w19
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A73BDD & 1) == 0 )
+  if ( (byte_4AB9B04 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&eventId);
-    sub_1B90010(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A73BDD = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&eventId);
+    sub_1BAB41C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AB9B04 = 1;
   }
   entity = 0LL;
   if ( userServantEntity )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_12;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                 (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !Instance )
       goto LABEL_12;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
            &entity,
            eventId,
-           (const MethodInfo_312C5FC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+           (const MethodInfo_3163DE4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     {
       Instance = entity;
       if ( entity )
@@ -47,7 +47,7 @@ int32_t __fastcall EventFortificationDataLogic__CalculationGetPoint(
         }
       }
 LABEL_12:
-      sub_1B9026C(Instance, v8);
+      sub_1BAB678(Instance, v8);
     }
   }
   return 0;
@@ -74,36 +74,36 @@ void __fastcall EventFortificationDataLogic__SetFortification(
   __int64 v19; // x26
   EventEntity_o *v20; // x25
 
-  if ( (byte_4A73BDE & 1) == 0 )
+  if ( (byte_4AB9B05 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EventMaster___, fortificationName);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserEventFortificationMaster___, v9);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1B90010(&StringLiteral_1/*""*/, v11);
-    byte_4A73BDE = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventMaster___, fortificationName);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEventFortificationMaster___, v9);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v11);
+    byte_4AB9B05 = 1;
   }
   *isFortification = 0;
   *fortificationName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)fortificationName,
     (int32_t)StringLiteral_1/*""*/,
     (int32_t)fortificationDetailName,
     userSvtId);
   *fortificationDetailName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)fortificationDetailName, (int32_t)StringLiteral_1/*""*/, v12, v13);
-  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)fortificationDetailName, (int32_t)StringLiteral_1/*""*/, v12, v13);
+  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
-        (Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                              (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEventFortificationMaster___),
+        (Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = (EventEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
+                                          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
     || (Instance = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 12, 1, 0LL)) == 0LL )
   {
 LABEL_19:
-    sub_1B9026C(Instance, v15);
+    sub_1BAB678(Instance, v15);
   }
   v17 = *(_QWORD *)&Instance->max_length;
   v18 = Instance;
@@ -115,7 +115,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( (unsigned int)v19 >= (unsigned int)v17 )
-        sub_1B90274(Instance, v15);
+        sub_1BAB680(Instance, v15);
       v20 = v18->m_Items[v19];
       if ( !v20 || !MasterData_object )
         goto LABEL_19;
@@ -157,11 +157,11 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
 
   v8 = colorCodeA;
   v11 = colorCodeMilitsry;
-  if ( (byte_4A73BDF & 1) == 0 )
+  if ( (byte_4AB9B06 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_401/*"#"*/, colorCodeMilitsry);
-    sub_1B90010(&StringLiteral_1/*""*/, v13);
-    byte_4A73BDF = 1;
+    sub_1BAB41C(&StringLiteral_396/*"#"*/, colorCodeMilitsry);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v13);
+    byte_4AB9B06 = 1;
   }
   if ( workType != 1 )
   {
@@ -174,7 +174,7 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
         v11 = (System_String_o *)StringLiteral_1/*""*/;
     }
   }
-  v14 = System_String__Concat_61787092((System_String_o *)StringLiteral_401/*"#"*/, v11, 0LL);
+  v14 = System_String__Concat_62048128((System_String_o *)StringLiteral_396/*"#"*/, v11, 0LL);
   v15 = UnityEngine_ColorUtility__TryParseHtmlString(v14, color, 0LL);
   color->fields.a = (float)v8 / 255.0;
   return v15;

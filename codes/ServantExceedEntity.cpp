@@ -35,66 +35,66 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   int32_t v35; // w2
   int32_t v36; // w3
 
-  if ( (byte_4A70576 & 1) == 0 )
+  if ( (byte_4AB6469 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    sub_1B90010(&string___TypeInfo, v3);
-    sub_1B90010(&StringLiteral_18019/*"class_b_"*/, v4);
-    sub_1B90010(&StringLiteral_18023/*"class_g_"*/, v5);
-    sub_1B90010(&StringLiteral_18024/*"class_n_"*/, v6);
-    sub_1B90010(&StringLiteral_18025/*"class_s_"*/, v7);
-    byte_4A70576 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    sub_1BAB41C(&string___TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_18023/*"class_b_"*/, v4);
+    sub_1BAB41C(&StringLiteral_18027/*"class_g_"*/, v5);
+    sub_1BAB41C(&StringLiteral_18028/*"class_n_"*/, v6);
+    sub_1BAB41C(&StringLiteral_18029/*"class_s_"*/, v7);
+    byte_4AB6469 = 1;
   }
-  v8 = sub_1B900B8(string___TypeInfo, 8LL);
+  v8 = sub_1BAB4C4(string___TypeInfo, 8LL);
   if ( !v8 )
-    sub_1B9026C(0LL, v9);
+    sub_1BAB678(0LL, v9);
   v12 = v8;
   if ( !*(_DWORD *)(v8 + 24) )
     goto LABEL_13;
-  v13 = StringLiteral_18024/*"class_n_"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_18024/*"class_n_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v8 + 32), v13, v10, v11);
+  v13 = StringLiteral_18028/*"class_n_"*/;
+  *(_QWORD *)(v8 + 32) = StringLiteral_18028/*"class_n_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v8 + 32), v13, v10, v11);
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_13;
-  v16 = StringLiteral_18019/*"class_b_"*/;
-  *(_QWORD *)(v12 + 40) = StringLiteral_18019/*"class_b_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 40), v16, v14, v15);
+  v16 = StringLiteral_18023/*"class_b_"*/;
+  *(_QWORD *)(v12 + 40) = StringLiteral_18023/*"class_b_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 40), v16, v14, v15);
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_13;
-  v19 = StringLiteral_18025/*"class_s_"*/;
-  *(_QWORD *)(v12 + 48) = StringLiteral_18025/*"class_s_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 48), v19, v17, v18);
+  v19 = StringLiteral_18029/*"class_s_"*/;
+  *(_QWORD *)(v12 + 48) = StringLiteral_18029/*"class_s_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 48), v19, v17, v18);
   if ( *(_DWORD *)(v12 + 24) <= 3u )
     goto LABEL_13;
-  v22 = StringLiteral_18023/*"class_g_"*/;
-  *(_QWORD *)(v12 + 56) = StringLiteral_18023/*"class_g_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 56), v22, v20, v21);
+  v22 = StringLiteral_18027/*"class_g_"*/;
+  *(_QWORD *)(v12 + 56) = StringLiteral_18027/*"class_g_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 56), v22, v20, v21);
   if ( *(_DWORD *)(v12 + 24) <= 4u )
     goto LABEL_13;
-  v25 = StringLiteral_18023/*"class_g_"*/;
-  *(_QWORD *)(v12 + 64) = StringLiteral_18023/*"class_g_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 64), v25, v23, v24);
+  v25 = StringLiteral_18027/*"class_g_"*/;
+  *(_QWORD *)(v12 + 64) = StringLiteral_18027/*"class_g_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 64), v25, v23, v24);
   if ( *(_DWORD *)(v12 + 24) <= 5u
-    || (v28 = StringLiteral_18023/*"class_g_"*/,
-        *(_QWORD *)(v12 + 72) = StringLiteral_18023/*"class_g_"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 72), v28, v26, v27),
+    || (v28 = StringLiteral_18027/*"class_g_"*/,
+        *(_QWORD *)(v12 + 72) = StringLiteral_18027/*"class_g_"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 72), v28, v26, v27),
         *(_DWORD *)(v12 + 24) <= 6u)
-    || (v31 = StringLiteral_18024/*"class_n_"*/,
-        *(_QWORD *)(v12 + 80) = StringLiteral_18024/*"class_n_"*/,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 80), v31, v29, v30),
+    || (v31 = StringLiteral_18028/*"class_n_"*/,
+        *(_QWORD *)(v12 + 80) = StringLiteral_18028/*"class_n_"*/,
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 80), v31, v29, v30),
         *(_DWORD *)(v12 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1B90274(v8, v9);
+    sub_1BAB680(v8, v9);
   }
-  v34 = StringLiteral_18024/*"class_n_"*/;
-  *(_QWORD *)(v12 + 88) = StringLiteral_18024/*"class_n_"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 88), v34, v32, v33);
+  v34 = StringLiteral_18028/*"class_n_"*/;
+  *(_QWORD *)(v12 + 88) = StringLiteral_18028/*"class_n_"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 88), v34, v32, v33);
   this->fields.frameCardFileList = (struct System_String_array *)v12;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, v12, v35, v36);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, v12, v35, v36);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -104,15 +104,15 @@ System_String_o *__fastcall ServantExceedEntity__CreatePK(
         int32_t exceedCount,
         const MethodInfo *method)
 {
-  if ( (byte_4A70575 & 1) == 0 )
+  if ( (byte_4AB6468 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
-    byte_4A70575 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
+    byte_4AB6468 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -135,9 +135,9 @@ System_String_o *__fastcall ServantExceedEntity__getFrameCardPrefix(
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= frameCardFileList->max_length )
-    sub_1B90274(this, method);
+    sub_1BAB680(this, method);
   return frameCardFileList->m_Items[frameType];
 }

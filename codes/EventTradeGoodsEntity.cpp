@@ -1,13 +1,13 @@
 void __fastcall EventTradeGoodsEntity___ctor(EventTradeGoodsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A7000A & 1) == 0 )
+  if ( (byte_4AB5EED & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A7000A = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB5EED = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -28,17 +28,17 @@ int32_t __fastcall EventTradeGoodsEntity__GetPickUpRateNow(EventTradeGoodsEntity
   EventTradePickupMaster_c *v9; // x0
   EventTradePickupEntity_o *pickupEntity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A70002 & 1) == 0 )
+  if ( (byte_4AB5EE5 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_EventTradePickupMaster___, method);
-    sub_1B90010(&DataManager_TypeInfo, v3);
-    sub_1B90010(&EventTradePickupMaster_TypeInfo, v4);
-    byte_4A70002 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_EventTradePickupMaster___, method);
+    sub_1BAB41C(&DataManager_TypeInfo, v3);
+    sub_1BAB41C(&EventTradePickupMaster_TypeInfo, v4);
+    byte_4AB5EE5 = 1;
   }
   pickupEntity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   if ( !Master_object )
     goto LABEL_13;
   Master_object = (Il2CppObject *)EventTradePickupMaster__TryGetEntityTargetTime(
@@ -56,7 +56,7 @@ int32_t __fastcall EventTradeGoodsEntity__GetPickUpRateNow(EventTradeGoodsEntity
       return *p_tradeTimeRate;
     }
 LABEL_13:
-    sub_1B9026C(Master_object, v6);
+    sub_1BAB678(Master_object, v6);
   }
   v9 = EventTradePickupMaster_TypeInfo;
   if ( !EventTradePickupMaster_TypeInfo->_2.cctor_finished )
@@ -73,14 +73,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradeAbleReceiveReward
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70008 & 1) == 0 )
+  if ( (byte_4AB5EEB & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_24720/*"welcomeAbleReceive"*/, method);
-    byte_4A70008 = 1;
+    sub_1BAB41C(&StringLiteral_24723/*"welcomeAbleReceive"*/, method);
+    byte_4AB5EEB = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_24720/*"welcomeAbleReceive"*/,
+           (System_String_o *)StringLiteral_24723/*"welcomeAbleReceive"*/,
            0LL);
 }
 
@@ -89,14 +89,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradeDefaultWelcomeVoi
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70006 & 1) == 0 )
+  if ( (byte_4AB5EE9 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_24721/*"welcomeDefault"*/, method);
-    byte_4A70006 = 1;
+    sub_1BAB41C(&StringLiteral_24724/*"welcomeDefault"*/, method);
+    byte_4AB5EE9 = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_24721/*"welcomeDefault"*/,
+           (System_String_o *)StringLiteral_24724/*"welcomeDefault"*/,
            0LL);
 }
 
@@ -105,14 +105,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradePickupVoiceIds(
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70005 & 1) == 0 )
+  if ( (byte_4AB5EE8 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_22559/*"pickup"*/, method);
-    byte_4A70005 = 1;
+    sub_1BAB41C(&StringLiteral_22564/*"pickup"*/, method);
+    byte_4AB5EE8 = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_22559/*"pickup"*/,
+           (System_String_o *)StringLiteral_22564/*"pickup"*/,
            0LL);
 }
 
@@ -121,14 +121,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradeRefillableWelcome
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70007 & 1) == 0 )
+  if ( (byte_4AB5EEA & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_24722/*"welcomeRefillable"*/, method);
-    byte_4A70007 = 1;
+    sub_1BAB41C(&StringLiteral_24725/*"welcomeRefillable"*/, method);
+    byte_4AB5EEA = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_24722/*"welcomeRefillable"*/,
+           (System_String_o *)StringLiteral_24725/*"welcomeRefillable"*/,
            0LL);
 }
 
@@ -137,14 +137,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradeReplenishmentVoic
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70004 & 1) == 0 )
+  if ( (byte_4AB5EE7 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_16686/*"add"*/, method);
-    byte_4A70004 = 1;
+    sub_1BAB41C(&StringLiteral_16692/*"add"*/, method);
+    byte_4AB5EE7 = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_16686/*"add"*/,
+           (System_String_o *)StringLiteral_16692/*"add"*/,
            0LL);
 }
 
@@ -153,14 +153,14 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetTradeStartVoiceIds(
         EventTradeGoodsEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A70003 & 1) == 0 )
+  if ( (byte_4AB5EE6 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_23517/*"start"*/, method);
-    byte_4A70003 = 1;
+    sub_1BAB41C(&StringLiteral_23519/*"start"*/, method);
+    byte_4AB5EE6 = 1;
   }
   return EntityScriptUtil__GetStringArrayDefaultEmpty(
            this->fields.voiceData,
-           (System_String_o *)StringLiteral_23517/*"start"*/,
+           (System_String_o *)StringLiteral_23519/*"start"*/,
            0LL);
 }
 
@@ -179,20 +179,20 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetWelcomeVoiceIds(
   System_Collections_Generic_List_object__o *v10; // x20
   UserEventTradeEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A70009 & 1) == 0 )
+  if ( (byte_4AB5EEC & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_UserEventTradeMaster___, method);
-    sub_1B90010(&DataManager_TypeInfo, v3);
-    sub_1B90010(&Method_System_Collections_Generic_List_string__AddRange__, v4);
-    sub_1B90010(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_string___ctor__, v6);
-    sub_1B90010(&System_Collections_Generic_List_string__TypeInfo, v7);
-    byte_4A70009 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserEventTradeMaster___, method);
+    sub_1BAB41C(&DataManager_TypeInfo, v3);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string__AddRange__, v4);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_string___ctor__, v6);
+    sub_1BAB41C(&System_Collections_Generic_List_string__TypeInfo, v7);
+    byte_4AB5EEC = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !Master_object )
     goto LABEL_23;
   if ( !UserEventTradeMaster__TryGetEntity(Master_object, &entity, this->fields.eventId, 0LL) )
@@ -208,10 +208,10 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetWelcomeVoiceIds(
     if ( !UserEventTradeEntity__IsAbleReceiveRewards(entity, 0LL) )
       return EventTradeGoodsEntity__GetTradeDefaultWelcomeVoiceIds(this, v9);
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_string__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_string___ctor__);
   Master_object = (UserEventTradeMaster_o *)entity;
   if ( !entity )
     goto LABEL_23;
@@ -223,19 +223,19 @@ System_String_array *__fastcall EventTradeGoodsEntity__GetWelcomeVoiceIds(
     System_Collections_Generic_List_object___AddRange(
       v10,
       (System_Collections_Generic_IEnumerable_T__o *)Master_object,
-      (const MethodInfo_3510BCC *)Method_System_Collections_Generic_List_string__AddRange__);
+      (const MethodInfo_354DAC8 *)Method_System_Collections_Generic_List_string__AddRange__);
   }
   Master_object = (UserEventTradeMaster_o *)entity;
   if ( !entity )
 LABEL_23:
-    sub_1B9026C(Master_object, v9);
+    sub_1BAB678(Master_object, v9);
   Master_object = (UserEventTradeMaster_o *)UserEventTradeEntity__IsAbleReceiveRewards(entity, 0LL);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
     if ( v10 )
       return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                       v10,
-                                      (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                      (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_string__ToArray__);
     goto LABEL_23;
   }
   Master_object = (UserEventTradeMaster_o *)EventTradeGoodsEntity__GetTradeAbleReceiveRewardsWelcomeVoiceIds(this, v9);
@@ -244,8 +244,8 @@ LABEL_23:
   System_Collections_Generic_List_object___AddRange(
     v10,
     (System_Collections_Generic_IEnumerable_T__o *)Master_object,
-    (const MethodInfo_3510BCC *)Method_System_Collections_Generic_List_string__AddRange__);
+    (const MethodInfo_354DAC8 *)Method_System_Collections_Generic_List_string__AddRange__);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v10,
-                                  (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_string__ToArray__);
 }

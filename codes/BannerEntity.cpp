@@ -1,13 +1,13 @@
 void __fastcall BannerEntity___ctor(BannerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6FAD7 & 1) == 0 )
+  if ( (byte_4AB59BA & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A6FAD7 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4AB59BA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_312C3A8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,17 +25,17 @@ int32_t __fastcall BannerEntity__GetBannerId(BannerEntity_o *this, const MethodI
   const MethodInfo *v6; // x3
   int32_t result; // w0
 
-  if ( (byte_4A6FAD6 & 1) == 0 )
+  if ( (byte_4AB59B9 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_BannerAddMaster___, method);
-    sub_1B90010(&DataManager_TypeInfo, v3);
-    byte_4A6FAD6 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_BannerAddMaster___, method);
+    sub_1BAB41C(&DataManager_TypeInfo, v3);
+    byte_4AB59B9 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BannerAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BannerAddMaster___);
   if ( !Master_object )
-    sub_1B9026C(0LL, v5);
+    sub_1BAB678(0LL, v5);
   result = BannerAddMaster__getOverwriteBannerId((BannerAddMaster_o *)Master_object, this->fields.bannerId, 1, v6);
   if ( result == -1 )
     return this->fields.bannerId;
@@ -58,7 +58,7 @@ System_String_array *__fastcall BannerEntity__GetLinkBody(
 
   linkBody = this->fields.linkBody;
   if ( !linkBody )
-    sub_1B9026C(0LL, separator);
+    sub_1BAB678(0LL, separator);
   return System_String__Split(linkBody, separator, 0, 0LL);
 }
 
@@ -67,10 +67,10 @@ bool __fastcall BannerEntity__IsEnable(BannerEntity_o *this, const MethodInfo *m
 {
   int64_t Time; // x0
 
-  if ( (byte_4A6FAD5 & 1) == 0 )
+  if ( (byte_4AB59B8 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    byte_4A6FAD5 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    byte_4AB59B8 = 1;
   }
   if ( this->fields.bannerId < 1 || this->fields.terminalBannerPriority < 1 || this->fields.deviceType > 1u )
     return 0;

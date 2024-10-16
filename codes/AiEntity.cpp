@@ -2,12 +2,12 @@ bool __fastcall AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4A6FA90 & 1) == 0 )
+  if ( (byte_4AB5973 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_9495/*"NoBackStepNpc"*/, method);
-    byte_4A6FA90 = 1;
+    sub_1BAB41C(&StringLiteral_9496/*"NoBackStepNpc"*/, method);
+    byte_4AB5973 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9495/*"NoBackStepNpc"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9496/*"NoBackStepNpc"*/, -1, v2) == 1;
 }
 
 

@@ -4,14 +4,14 @@ void __fastcall QuestPhaseRewardComponent___ctor(QuestPhaseRewardComponent_o *th
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_4A73958 & 1) == 0 )
+  if ( (byte_4AB97DD & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_22707/*"qev79"*/, method);
-    byte_4A73958 = 1;
+    sub_1BAB41C(&StringLiteral_22712/*"qev79"*/, method);
+    byte_4AB97DD = 1;
   }
-  v5 = StringLiteral_22707/*"qev79"*/;
-  this->fields.DISP_SE = (struct System_String_o *)StringLiteral_22707/*"qev79"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.DISP_SE, v5, v2, v3);
+  v5 = StringLiteral_22712/*"qev79"*/;
+  this->fields.DISP_SE = (struct System_String_o *)StringLiteral_22712/*"qev79"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.DISP_SE, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -33,46 +33,46 @@ void __fastcall QuestPhaseRewardComponent__Awake(QuestPhaseRewardComponent_o *th
   Il2CppObject *v15; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4A73950 & 1) == 0 )
+  if ( (byte_4AB97D5 & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_QuestPhaseRewardComponent___ctor__, method);
-    sub_1B90010(&Method_CStateManager_QuestPhaseRewardComponent__add__, v3);
-    sub_1B90010(&CStateManager_QuestPhaseRewardComponent__TypeInfo, v4);
-    sub_1B90010(&QuestPhaseRewardComponent_StateNone_TypeInfo, v5);
-    sub_1B90010(&QuestPhaseRewardComponent_StatePlay_TypeInfo, v6);
-    byte_4A73950 = 1;
+    sub_1BAB41C(&Method_CStateManager_QuestPhaseRewardComponent___ctor__, method);
+    sub_1BAB41C(&Method_CStateManager_QuestPhaseRewardComponent__add__, v3);
+    sub_1BAB41C(&CStateManager_QuestPhaseRewardComponent__TypeInfo, v4);
+    sub_1BAB41C(&QuestPhaseRewardComponent_StateNone_TypeInfo, v5);
+    sub_1BAB41C(&QuestPhaseRewardComponent_StatePlay_TypeInfo, v6);
+    byte_4AB97D5 = 1;
   }
   if ( !this->fields.mFSM )
   {
-    v7 = (CStateManager_T__o *)sub_1B9025C(CStateManager_QuestPhaseRewardComponent__TypeInfo);
+    v7 = (CStateManager_T__o *)sub_1BAB668(CStateManager_QuestPhaseRewardComponent__TypeInfo);
     CStateManager_object____ctor(
       v7,
       (Il2CppObject *)this,
       2,
-      (const MethodInfo_30B99A8 *)Method_CStateManager_QuestPhaseRewardComponent___ctor__);
+      (const MethodInfo_30F0B14 *)Method_CStateManager_QuestPhaseRewardComponent___ctor__);
     this->fields.mFSM = (struct CStateManager_QuestPhaseRewardComponent__o *)v7;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mFSM, (int32_t)v7, v8, v9);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mFSM, (int32_t)v7, v8, v9);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v11 = (Il2CppObject *)sub_1B9025C(QuestPhaseRewardComponent_StateNone_TypeInfo);
+    v11 = (Il2CppObject *)sub_1BAB668(QuestPhaseRewardComponent_StateNone_TypeInfo);
     System_Object___ctor(v11, 0LL);
     if ( !mFSM
       || (CStateManager_object___add(
             mFSM,
             0,
             (IState_T__o *)v11,
-            (const MethodInfo_30B9A50 *)Method_CStateManager_QuestPhaseRewardComponent__add__),
+            (const MethodInfo_30F0BBC *)Method_CStateManager_QuestPhaseRewardComponent__add__),
           v14 = (CStateManager_T__o *)this->fields.mFSM,
-          v15 = (Il2CppObject *)sub_1B9025C(QuestPhaseRewardComponent_StatePlay_TypeInfo),
+          v15 = (Il2CppObject *)sub_1BAB668(QuestPhaseRewardComponent_StatePlay_TypeInfo),
           System_Object___ctor(v15, 0LL),
           !v14) )
     {
-      sub_1B9026C(v12, v13);
+      sub_1BAB678(v12, v13);
     }
     CStateManager_object___add(
       v14,
       1,
       (IState_T__o *)v15,
-      (const MethodInfo_30B9A50 *)Method_CStateManager_QuestPhaseRewardComponent__add__);
+      (const MethodInfo_30F0BBC *)Method_CStateManager_QuestPhaseRewardComponent__add__);
     QuestPhaseRewardComponent__SetState(this, 0, v16);
   }
 }
@@ -84,16 +84,16 @@ int32_t __fastcall QuestPhaseRewardComponent__GetState(QuestPhaseRewardComponent
   struct CStateManager_QuestPhaseRewardComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4A73956 & 1) == 0 )
+  if ( (byte_4AB97DB & 1) == 0 )
   {
-    this = (QuestPhaseRewardComponent_o *)sub_1B90010(
+    this = (QuestPhaseRewardComponent_o *)sub_1BAB41C(
                                             &Method_CStateManager_QuestPhaseRewardComponent__getState__,
                                             method);
-    byte_4A73956 = 1;
+    byte_4AB97DB = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -113,7 +113,7 @@ void __fastcall QuestPhaseRewardComponent__Init(QuestPhaseRewardComponent_o *thi
   int32_t v13; // w3
   UnityEngine_Component_o *transform; // x0
   __int64 v15; // x1
-  Il2CppObject *ComponentInChildren_object__48779044; // x0
+  Il2CppObject *ComponentInChildren_object__49000572; // x0
   struct SimpleAnimation_o **p_mSimpleAnimation; // x21
   int32_t v18; // w2
   int32_t v19; // w3
@@ -141,35 +141,35 @@ void __fastcall QuestPhaseRewardComponent__Init(QuestPhaseRewardComponent_o *thi
   int32_t v41; // w2
   int32_t v42; // w3
 
-  if ( (byte_4A73952 & 1) == 0 )
+  if ( (byte_4AB97D7 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, method);
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Animation___, v3);
-    sub_1B90010(&Method_DataManager_GetMaster_ConstantStrMaster___, v4);
-    sub_1B90010(&DataManager_TypeInfo, v5);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B90010(&SimpleAnimation_State_TypeInfo, v7);
-    sub_1B90010(&StringLiteral_22654/*"progress_reward_board"*/, v8);
-    sub_1B90010(&StringLiteral_10907/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, v9);
-    byte_4A73952 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, method);
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Animation___, v3);
+    sub_1BAB41C(&Method_DataManager_GetMaster_ConstantStrMaster___, v4);
+    sub_1BAB41C(&DataManager_TypeInfo, v5);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BAB41C(&SimpleAnimation_State_TypeInfo, v7);
+    sub_1BAB41C(&StringLiteral_22659/*"progress_reward_board"*/, v8);
+    sub_1BAB41C(&StringLiteral_10909/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, v9);
+    byte_4AB97D7 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.mAnimation = (struct UnityEngine_Animation_o *)Component_object;
   p_mAnimation = &this->fields.mAnimation;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v12, v13);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mAnimation, (int32_t)Component_object, v12, v13);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_44;
-  ComponentInChildren_object__48779044 = UnityEngine_Component__GetComponentInChildren_object__48779044(
+  ComponentInChildren_object__49000572 = UnityEngine_Component__GetComponentInChildren_object__49000572(
                                            transform,
-                                           (const MethodInfo_2E84F24 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-  this->fields.mSimpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__48779044;
+                                           (const MethodInfo_2EBB07C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+  this->fields.mSimpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__49000572;
   p_mSimpleAnimation = &this->fields.mSimpleAnimation;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.mSimpleAnimation,
-    (int32_t)ComponentInChildren_object__48779044,
+    (int32_t)ComponentInChildren_object__49000572,
     v18,
     v19);
   mSimpleAnimation = (UnityEngine_Object_o *)this->fields.mSimpleAnimation;
@@ -206,7 +206,7 @@ void __fastcall QuestPhaseRewardComponent__Init(QuestPhaseRewardComponent_o *thi
           else
           {
 LABEL_14:
-            v27 = sub_1BE1FF0(transform, SimpleAnimation_State_TypeInfo, 8LL);
+            v27 = sub_1BFD3FC(transform, SimpleAnimation_State_TypeInfo, 8LL);
           }
           transform = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(UnityEngine_Component_o *, _QWORD, float))v27)(
                                                    v24,
@@ -240,7 +240,7 @@ LABEL_14:
                 else
                 {
 LABEL_33:
-                  v39 = sub_1BE1FF0(transform, SimpleAnimation_State_TypeInfo, 6LL);
+                  v39 = sub_1BFD3FC(transform, SimpleAnimation_State_TypeInfo, 6LL);
                 }
                 (*(void (__fastcall **)(UnityEngine_Component_o *, _QWORD, float))v39)(v36, *(_QWORD *)(v39 + 8), 0.0);
                 goto LABEL_36;
@@ -251,7 +251,7 @@ LABEL_33:
       }
     }
 LABEL_44:
-    sub_1B9026C(transform, v15);
+    sub_1BAB678(transform, v15);
   }
   v28 = *p_mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -285,12 +285,12 @@ LABEL_44:
 LABEL_36:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  transform = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  transform = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !transform )
     goto LABEL_44;
-  Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)transform, (System_String_o *)StringLiteral_10907/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, 0LL);
+  Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)transform, (System_String_o *)StringLiteral_10909/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, 0LL);
   this->fields.overwriteSpriteName = Value;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.overwriteSpriteName, (int32_t)Value, v41, v42);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.overwriteSpriteName, (int32_t)Value, v41, v42);
   transform = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !transform )
     goto LABEL_44;
@@ -298,7 +298,7 @@ LABEL_36:
   transform = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !transform )
     goto LABEL_44;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)transform, (System_String_o *)StringLiteral_22654/*"progress_reward_board"*/, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)transform, (System_String_o *)StringLiteral_22659/*"progress_reward_board"*/, 0LL);
   transform = (UnityEngine_Component_o *)this->fields.countLabel;
   if ( !transform )
     goto LABEL_44;
@@ -337,15 +337,15 @@ void __fastcall QuestPhaseRewardComponent__Open(
   System_Collections_IEnumerator_o *v25; // x0
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A73953 & 1) == 0 )
+  if ( (byte_4AB97D8 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponentsInChildren_ItemIconComponent___, callback);
-    sub_1B90010(&Method_DataManager_GetMaster_GiftDetailMaster___, v5);
-    sub_1B90010(&Method_DataManager_GetMaster_QuestPhaseMaster___, v6);
-    sub_1B90010(&DataManager_TypeInfo, v7);
-    sub_1B90010(&TerminalPramsManager_TypeInfo, v8);
-    sub_1B90010(&StringLiteral_1/*""*/, v9);
-    byte_4A73953 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponentsInChildren_ItemIconComponent___, callback);
+    sub_1BAB41C(&Method_DataManager_GetMaster_GiftDetailMaster___, v5);
+    sub_1BAB41C(&Method_DataManager_GetMaster_QuestPhaseMaster___, v6);
+    sub_1BAB41C(&DataManager_TypeInfo, v7);
+    sub_1BAB41C(&TerminalPramsManager_TypeInfo, v8);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v9);
+    byte_4AB97D8 = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   entity = 0LL;
@@ -362,16 +362,16 @@ void __fastcall QuestPhaseRewardComponent__Open(
   ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                   (UnityEngine_Component_o *)this,
                                   1,
-                                  (const MethodInfo_2E857AC *)Method_UnityEngine_Component_GetComponentsInChildren_ItemIconComponent___);
+                                  (const MethodInfo_2EBB904 *)Method_UnityEngine_Component_GetComponentsInChildren_ItemIconComponent___);
   IsNullOrEmpty = (GiftDetailMaster_o *)System_String__IsNullOrEmpty(this->fields.overwriteSpriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4A6CB17 )
+    if ( !byte_4AB2962 )
     {
-      sub_1B90010(&TerminalPramsManager_TypeInfo, v13);
-      byte_4A6CB17 = 1;
+      sub_1BAB41C(&TerminalPramsManager_TypeInfo, v13);
+      byte_4AB2962 = 1;
     }
     v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -382,11 +382,11 @@ void __fastcall QuestPhaseRewardComponent__Open(
     PhaseCnt_k__BackingField = v15->static_fields->_PhaseCnt_k__BackingField;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
-    if ( !byte_4A6CB0C )
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+    if ( !byte_4AB2957 )
     {
-      sub_1B90010(&TerminalPramsManager_TypeInfo, v13);
-      byte_4A6CB0C = 1;
+      sub_1BAB41C(&TerminalPramsManager_TypeInfo, v13);
+      byte_4AB2957 = 1;
     }
     IsNullOrEmpty = (GiftDetailMaster_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -411,7 +411,7 @@ void __fastcall QuestPhaseRewardComponent__Open(
       goto LABEL_37;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    IsNullOrEmpty = (GiftDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_GiftDetailMaster___);
+    IsNullOrEmpty = (GiftDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_GiftDetailMaster___);
     if ( !IsNullOrEmpty )
       goto LABEL_52;
     OverwriteImageIdByQuestPhaseReward = GiftDetailMaster__GetOverwriteImageIdByQuestPhaseReward(
@@ -496,14 +496,14 @@ LABEL_37:
         goto LABEL_36;
       }
 LABEL_52:
-      sub_1B9026C(IsNullOrEmpty, v13);
+      sub_1BAB678(IsNullOrEmpty, v13);
     }
 LABEL_53:
-    sub_1B90274(IsNullOrEmpty, v13);
+    sub_1BAB680(IsNullOrEmpty, v13);
   }
 LABEL_51:
   v25 = QuestPhaseRewardComponent__Play(this, callback, v14);
-  UnityEngine_MonoBehaviour__StartCoroutine_69524712((UnityEngine_MonoBehaviour_o *)this, v25, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v25, 0LL);
 }
 
 
@@ -535,26 +535,26 @@ void __fastcall QuestPhaseRewardComponent__OpenByItemIdAndNum(
   int32_t v26; // [xsp+8h] [xbp-58h] BYREF
   int32_t v27; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4A73954 & 1) == 0 )
+  if ( (byte_4AB97D9 & 1) == 0 )
   {
-    sub_1B90010(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
-    sub_1B90010(&int_TypeInfo, v9);
-    sub_1B90010(&LocalizationManager_TypeInfo, v10);
-    sub_1B90010(&StringLiteral_22655/*"progress_reward_board_{0}"*/, v11);
-    sub_1B90010(&StringLiteral_8780/*"MULTIPLE_INFO"*/, v12);
-    byte_4A73954 = 1;
+    sub_1BAB41C(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
+    sub_1BAB41C(&int_TypeInfo, v9);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v10);
+    sub_1BAB41C(&StringLiteral_22660/*"progress_reward_board_{0}"*/, v11);
+    sub_1BAB41C(&StringLiteral_8781/*"MULTIPLE_INFO"*/, v12);
+    byte_4AB97D9 = 1;
   }
   bgSprite = this->fields.bgSprite;
   v27 = itemId;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, *(_QWORD *)&itemNum, endAction, method);
-  v15 = System_String__Format((System_String_o *)StringLiteral_22655/*"progress_reward_board_{0}"*/, v14, 0LL);
+  v15 = System_String__Format((System_String_o *)StringLiteral_22660/*"progress_reward_board_{0}"*/, v14, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventSprite(bgSprite, v15, 0LL);
   countLabel = this->fields.countLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8780/*"MULTIPLE_INFO"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8781/*"MULTIPLE_INFO"*/, 0LL);
   v26 = itemNum;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v18, v19, v20);
   gameObject = System_String__Format(v17, v21, 0LL);
@@ -564,11 +564,11 @@ void __fastcall QuestPhaseRewardComponent__OpenByItemIdAndNum(
                                           (UnityEngine_Component_o *)gameObject,
                                           0LL)) == 0LL )
   {
-    sub_1B9026C(gameObject, v23);
+    sub_1BAB678(gameObject, v23);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   v25 = QuestPhaseRewardComponent__Play(this, endAction, v24);
-  UnityEngine_MonoBehaviour__StartCoroutine_69524712((UnityEngine_MonoBehaviour_o *)this, v25, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v25, 0LL);
 }
 
 
@@ -583,18 +583,18 @@ System_Collections_IEnumerator_o *__fastcall QuestPhaseRewardComponent__Play(
   int32_t v8; // w2
   int32_t v9; // w3
 
-  if ( (byte_4A73955 & 1) == 0 )
+  if ( (byte_4AB97DA & 1) == 0 )
   {
-    sub_1B90010(&QuestPhaseRewardComponent__Play_d__21_TypeInfo, end_act);
-    byte_4A73955 = 1;
+    sub_1BAB41C(&QuestPhaseRewardComponent__Play_d__21_TypeInfo, end_act);
+    byte_4AB97DA = 1;
   }
-  v5 = sub_1B9025C(QuestPhaseRewardComponent__Play_d__21_TypeInfo);
+  v5 = sub_1BAB668(QuestPhaseRewardComponent__Play_d__21_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = end_act;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)end_act, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)end_act, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -607,18 +607,18 @@ void __fastcall QuestPhaseRewardComponent__SetState(
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4A73957 & 1) == 0 )
+  if ( (byte_4AB97DC & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_QuestPhaseRewardComponent__setState__, *(_QWORD *)&state);
-    byte_4A73957 = 1;
+    sub_1BAB41C(&Method_CStateManager_QuestPhaseRewardComponent__setState__, *(_QWORD *)&state);
+    byte_4AB97DC = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1B9026C(0LL, *(_QWORD *)&state);
+    sub_1BAB678(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_30B9ADC *)Method_CStateManager_QuestPhaseRewardComponent__setState__);
+    (const MethodInfo_30F0C48 *)Method_CStateManager_QuestPhaseRewardComponent__setState__);
 }
 
 
@@ -626,16 +626,16 @@ void __fastcall QuestPhaseRewardComponent__Update(QuestPhaseRewardComponent_o *t
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4A73951 & 1) == 0 )
+  if ( (byte_4AB97D6 & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_QuestPhaseRewardComponent__update__, method);
-    byte_4A73951 = 1;
+    sub_1BAB41C(&Method_CStateManager_QuestPhaseRewardComponent__update__, method);
+    byte_4AB97D6 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_30B9AB8 *)Method_CStateManager_QuestPhaseRewardComponent__update__);
+      (const MethodInfo_30F0C24 *)Method_CStateManager_QuestPhaseRewardComponent__update__);
 }
 
 
@@ -643,10 +643,10 @@ bool __fastcall QuestPhaseRewardComponent___Play_b__21_0(QuestPhaseRewardCompone
 {
   System_String_o *DISP_SE; // x19
 
-  if ( (byte_4A73959 & 1) == 0 )
+  if ( (byte_4AB97DE & 1) == 0 )
   {
-    sub_1B90010(&SeManager_TypeInfo, method);
-    byte_4A73959 = 1;
+    sub_1BAB41C(&SeManager_TypeInfo, method);
+    byte_4AB97DE = 1;
   }
   DISP_SE = this->fields.DISP_SE;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -741,11 +741,11 @@ void __fastcall QuestPhaseRewardComponent_StatePlay__begin(
   int32_t *v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_4A7395A & 1) == 0 )
+  if ( (byte_4AB97DF & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, that);
-    this = (QuestPhaseRewardComponent_StatePlay_o *)sub_1B90010(&SimpleAnimation_State_TypeInfo, v4);
-    byte_4A7395A = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, that);
+    this = (QuestPhaseRewardComponent_StatePlay_o *)sub_1BAB41C(&SimpleAnimation_State_TypeInfo, v4);
+    byte_4AB97DF = 1;
   }
   if ( !that )
     goto LABEL_49;
@@ -778,7 +778,7 @@ void __fastcall QuestPhaseRewardComponent_StatePlay__begin(
           if ( !this )
             goto LABEL_49;
           v21 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-          this = (QuestPhaseRewardComponent_StatePlay_o *)UnityEngine_Animation__Play_69284532(v20, v21, 0LL);
+          this = (QuestPhaseRewardComponent_StatePlay_o *)UnityEngine_Animation__Play_69545712(v20, v21, 0LL);
         }
         v22 = that->fields.mAnimation;
         if ( v22 )
@@ -812,7 +812,7 @@ void __fastcall QuestPhaseRewardComponent_StatePlay__begin(
       }
     }
 LABEL_49:
-    sub_1B9026C(this, that);
+    sub_1BAB678(this, that);
   }
   v6 = that->fields.mSimpleAnimation;
   if ( !v6 )
@@ -831,7 +831,7 @@ LABEL_49:
     if ( !this )
       goto LABEL_49;
     v9 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-    this = (QuestPhaseRewardComponent_StatePlay_o *)SimpleAnimation__Play_63924764(v8, v9, 0LL);
+    this = (QuestPhaseRewardComponent_StatePlay_o *)SimpleAnimation__Play_64185800(v8, v9, 0LL);
   }
   v10 = that->fields.mSimpleAnimation;
   if ( !v10 )
@@ -861,7 +861,7 @@ LABEL_49:
   else
   {
 LABEL_20:
-    v16 = sub_1BE1FF0(this, SimpleAnimation_State_TypeInfo, 6LL);
+    v16 = sub_1BFD3FC(this, SimpleAnimation_State_TypeInfo, 6LL);
   }
   this = (QuestPhaseRewardComponent_StatePlay_o *)(*(__int64 (__fastcall **)(QuestPhaseRewardComponent_StatePlay_o *, _QWORD, float))v16)(
                                                     v13,
@@ -895,7 +895,7 @@ LABEL_20:
   else
   {
 LABEL_46:
-    v32 = sub_1BE1FF0(this, SimpleAnimation_State_TypeInfo, 8LL);
+    v32 = sub_1BFD3FC(this, SimpleAnimation_State_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(QuestPhaseRewardComponent_StatePlay_o *, _QWORD, float))v32)(v29, *(_QWORD *)(v32 + 8), 1.0);
 }
@@ -923,10 +923,10 @@ void __fastcall QuestPhaseRewardComponent_StatePlay__update(
   System_String_o *v9; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A7395B & 1) == 0 )
+  if ( (byte_4AB97E0 & 1) == 0 )
   {
-    this = (QuestPhaseRewardComponent_StatePlay_o *)sub_1B90010(&UnityEngine_Object_TypeInfo, that);
-    byte_4A7395B = 1;
+    this = (QuestPhaseRewardComponent_StatePlay_o *)sub_1BAB41C(&UnityEngine_Object_TypeInfo, that);
+    byte_4AB97E0 = 1;
   }
   if ( !that )
     goto LABEL_19;
@@ -949,7 +949,7 @@ void __fastcall QuestPhaseRewardComponent_StatePlay__update(
       }
     }
 LABEL_19:
-    sub_1B9026C(this, that);
+    sub_1BAB678(this, that);
   }
   mAnimation = (UnityEngine_Object_o *)that->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1007,13 +1007,13 @@ bool __fastcall QuestPhaseRewardComponent__Play_d__21__MoveNext(
   int32_t v19; // w3
 
   v4 = this;
-  if ( (byte_4A7395C & 1) == 0 )
+  if ( (byte_4AB97E1 & 1) == 0 )
   {
-    sub_1B90010(&System_Func_bool__TypeInfo, method);
-    sub_1B90010(&Method_QuestPhaseRewardComponent__Play_b__21_0__, v5);
-    sub_1B90010(&Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__, v6);
-    this = (QuestPhaseRewardComponent__Play_d__21_o *)sub_1B90010(&UnityEngine_WaitUntil_TypeInfo, v7);
-    byte_4A7395C = 1;
+    sub_1BAB41C(&System_Func_bool__TypeInfo, method);
+    sub_1BAB41C(&Method_QuestPhaseRewardComponent__Play_b__21_0__, v5);
+    sub_1BAB41C(&Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__, v6);
+    this = (QuestPhaseRewardComponent__Play_d__21_o *)sub_1BAB41C(&UnityEngine_WaitUntil_TypeInfo, v7);
+    byte_4AB97E1 = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -1026,7 +1026,7 @@ bool __fastcall QuestPhaseRewardComponent__Play_d__21__MoveNext(
       return 0;
     }
 LABEL_14:
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   }
   if ( _1__state != 1 )
   {
@@ -1035,7 +1035,7 @@ LABEL_14:
       v4->fields.__2__current = 0LL;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
       *(_DWORD *)&p__2__current[-1].fields.isMine = -1;
-      sub_1B8FFB4(p__2__current, 0, (int32_t)v2, v3);
+      sub_1BAB3C0(p__2__current, 0, (int32_t)v2, v3);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
       return result;
@@ -1047,19 +1047,19 @@ LABEL_14:
     goto LABEL_14;
   end_act = v4->fields.end_act;
   _4__this->fields.mEndAct = end_act;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&_4__this->fields.mEndAct, (int32_t)end_act, (int32_t)v2, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.mEndAct, (int32_t)end_act, (int32_t)v2, v3);
   v13 = Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__;
   if ( (*((_BYTE *)Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__ + 83) & 2) != 0 )
-    v13 = (_QWORD *)sub_1B90028(Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__);
-  v14 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v13, v13[4]);
+    v13 = (_QWORD *)sub_1BAB434(Method_QuestPhaseRewardComponent__Play_d__21_MoveNext__);
+  v14 = (System_Reflection_MethodBase_o *)sub_1BAB400(v13, v13[4]);
   OverwriteAssetSoundName__PlaySe(v14, _4__this->fields.DISP_SE, 0LL);
-  v15 = (System_Func_bool__o *)sub_1B9025C(System_Func_bool__TypeInfo);
+  v15 = (System_Func_bool__o *)sub_1BAB668(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v15, (Il2CppObject *)_4__this, Method_QuestPhaseRewardComponent__Play_b__21_0__, 0LL);
-  v16 = (UnityEngine_WaitUntil_o *)sub_1B9025C(UnityEngine_WaitUntil_TypeInfo);
+  v16 = (UnityEngine_WaitUntil_o *)sub_1BAB668(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v16, v15, 0LL);
   v4->fields.__2__current = (Il2CppObject *)v16;
   v17 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-  sub_1B8FFB4(v17, (int32_t)v16, v18, v19);
+  sub_1BAB3C0(v17, (int32_t)v16, v18, v19);
   *(_DWORD *)&v17[-1].fields.isMine = 2;
   return 1;
 }
@@ -1081,11 +1081,11 @@ void __fastcall __noreturn QuestPhaseRewardComponent__Play_d__21__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B90024(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B9025C(v2);
+  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B90024(&Method_QuestPhaseRewardComponent__Play_d__21_System_Collections_IEnumerator_Reset__);
-  sub_1B90138(v3, v4);
+  v4 = sub_1BAB430(&Method_QuestPhaseRewardComponent__Play_d__21_System_Collections_IEnumerator_Reset__);
+  sub_1BAB544(v3, v4);
 }
 
 

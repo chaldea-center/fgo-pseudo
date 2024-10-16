@@ -16,11 +16,11 @@ void __fastcall CharaGraphPartyServantListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4A6F213 & 1) == 0 )
+  if ( (byte_4AB50DB & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Array_IndexOf_long___, *(_QWORD *)&index);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    byte_4A6F213 = 1;
+    sub_1BAB41C(&Method_System_Array_IndexOf_long___, *(_QWORD *)&index);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
+    byte_4AB50DB = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -30,18 +30,18 @@ void __fastcall CharaGraphPartyServantListViewItem___ctor(
     (const MethodInfo *)partyUserServantList);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1B9026C(v12, v13);
+    sub_1BAB678(v12, v13);
   v15 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
   *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v18.fields.fakeValue = v15;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v17 = v18;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(&v17, 0LL);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46699376(&v17, 0LL);
   this->fields._PartyIndex_k__BackingField = System_Array__IndexOf_long_(
                                                partyUserServantList,
                                                v16,
-                                               (const MethodInfo_2F88E68 *)Method_System_Array_IndexOf_long___);
+                                               (const MethodInfo_2FBF5EC *)Method_System_Array_IndexOf_long___);
 }
 
 

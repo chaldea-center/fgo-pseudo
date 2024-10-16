@@ -2,10 +2,10 @@ void __fastcall FortuneBonusResultAction___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A6CBFE & 1) == 0 )
+  if ( (byte_4AB2A49 & 1) == 0 )
   {
-    sub_1B90010(&FortuneBonusResultAction_TypeInfo, v1);
-    byte_4A6CBFE = 1;
+    sub_1BAB41C(&FortuneBonusResultAction_TypeInfo, v1);
+    byte_4AB2A49 = 1;
   }
   *FortuneBonusResultAction_TypeInfo->static_fields = (struct FortuneBonusResultAction_StaticFields)0x200000016LL;
 }
@@ -38,29 +38,29 @@ void __fastcall FortuneBonusResultAction__Awake(FortuneBonusResultAction_o *this
   Il2CppObject *v19; // x21
   const MethodInfo *v20; // x2
 
-  if ( (byte_4A6CBF6 & 1) == 0 )
+  if ( (byte_4AB2A41 & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_FortuneBonusResultAction___ctor__, method);
-    sub_1B90010(&Method_CStateManager_FortuneBonusResultAction__add__, v3);
-    sub_1B90010(&CStateManager_FortuneBonusResultAction__TypeInfo, v4);
-    sub_1B90010(&FortuneBonusResultAction_StateNone_TypeInfo, v5);
-    sub_1B90010(&FortuneBonusResultAction_StatePlay_TypeInfo, v6);
-    sub_1B90010(&FortuneBonusResultAction_StateTouchWait_TypeInfo, v7);
-    byte_4A6CBF6 = 1;
+    sub_1BAB41C(&Method_CStateManager_FortuneBonusResultAction___ctor__, method);
+    sub_1BAB41C(&Method_CStateManager_FortuneBonusResultAction__add__, v3);
+    sub_1BAB41C(&CStateManager_FortuneBonusResultAction__TypeInfo, v4);
+    sub_1BAB41C(&FortuneBonusResultAction_StateNone_TypeInfo, v5);
+    sub_1BAB41C(&FortuneBonusResultAction_StatePlay_TypeInfo, v6);
+    sub_1BAB41C(&FortuneBonusResultAction_StateTouchWait_TypeInfo, v7);
+    byte_4AB2A41 = 1;
   }
   p_fsm = &this->fields.fsm;
   if ( !this->fields.fsm )
   {
-    v9 = (CStateManager_T__o *)sub_1B9025C(CStateManager_FortuneBonusResultAction__TypeInfo);
+    v9 = (CStateManager_T__o *)sub_1BAB668(CStateManager_FortuneBonusResultAction__TypeInfo);
     CStateManager_object____ctor(
       v9,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_30B99A8 *)Method_CStateManager_FortuneBonusResultAction___ctor__);
+      (const MethodInfo_30F0B14 *)Method_CStateManager_FortuneBonusResultAction___ctor__);
     this->fields.fsm = (struct CStateManager_FortuneBonusResultAction__o *)v9;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.fsm, (int32_t)v9, v10, v11);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.fsm, (int32_t)v9, v10, v11);
     fsm = (CStateManager_T__o *)this->fields.fsm;
-    v13 = (Il2CppObject *)sub_1B9025C(FortuneBonusResultAction_StateNone_TypeInfo);
+    v13 = (Il2CppObject *)sub_1BAB668(FortuneBonusResultAction_StateNone_TypeInfo);
     System_Object___ctor(v13, 0LL);
     if ( !fsm )
       goto LABEL_8;
@@ -68,29 +68,29 @@ void __fastcall FortuneBonusResultAction__Awake(FortuneBonusResultAction_o *this
       fsm,
       0,
       (IState_T__o *)v13,
-      (const MethodInfo_30B9A50 *)Method_CStateManager_FortuneBonusResultAction__add__);
+      (const MethodInfo_30F0BBC *)Method_CStateManager_FortuneBonusResultAction__add__);
     v16 = (CStateManager_T__o *)*p_fsm;
-    v17 = (Il2CppObject *)sub_1B9025C(FortuneBonusResultAction_StatePlay_TypeInfo);
+    v17 = (Il2CppObject *)sub_1BAB668(FortuneBonusResultAction_StatePlay_TypeInfo);
     System_Object___ctor(v17, 0LL);
     if ( !v16
       || (CStateManager_object___add(
             v16,
             1,
             (IState_T__o *)v17,
-            (const MethodInfo_30B9A50 *)Method_CStateManager_FortuneBonusResultAction__add__),
+            (const MethodInfo_30F0BBC *)Method_CStateManager_FortuneBonusResultAction__add__),
           v18 = (CStateManager_T__o *)*p_fsm,
-          v19 = (Il2CppObject *)sub_1B9025C(FortuneBonusResultAction_StateTouchWait_TypeInfo),
+          v19 = (Il2CppObject *)sub_1BAB668(FortuneBonusResultAction_StateTouchWait_TypeInfo),
           System_Object___ctor(v19, 0LL),
           !v18) )
     {
 LABEL_8:
-      sub_1B9026C(v14, v15);
+      sub_1BAB678(v14, v15);
     }
     CStateManager_object___add(
       v18,
       2,
       (IState_T__o *)v19,
-      (const MethodInfo_30B9A50 *)Method_CStateManager_FortuneBonusResultAction__add__);
+      (const MethodInfo_30F0BBC *)Method_CStateManager_FortuneBonusResultAction__add__);
     FortuneBonusResultAction__SetState(this, 0, v20);
   }
 }
@@ -112,18 +112,18 @@ CommonUI_FortuneBonusDetailData_o *__fastcall FortuneBonusResultAction__GetFortu
   struct CommonUI_FortuneBonusDetailData_array *details; // x19
   System_Func_object__bool__o *v13; // x20
 
-  if ( (byte_4A6CBF9 & 1) == 0 )
+  if ( (byte_4AB2A44 & 1) == 0 )
   {
-    sub_1B90010(&Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___, *(_QWORD *)&index);
-    sub_1B90010(&System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo, v5);
-    sub_1B90010(&Method_FortuneBonusResultAction___c__DisplayClass16_0__GetFortuneBonusDetailData_b__0__, v6);
-    sub_1B90010(&FortuneBonusResultAction___c__DisplayClass16_0_TypeInfo, v7);
-    byte_4A6CBF9 = 1;
+    sub_1BAB41C(&Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___, *(_QWORD *)&index);
+    sub_1BAB41C(&System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo, v5);
+    sub_1BAB41C(&Method_FortuneBonusResultAction___c__DisplayClass16_0__GetFortuneBonusDetailData_b__0__, v6);
+    sub_1BAB41C(&FortuneBonusResultAction___c__DisplayClass16_0_TypeInfo, v7);
+    byte_4AB2A44 = 1;
   }
-  v8 = sub_1B9025C(FortuneBonusResultAction___c__DisplayClass16_0_TypeInfo);
+  v8 = sub_1BAB668(FortuneBonusResultAction___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1B9026C(v9, v10);
+    sub_1BAB678(v9, v10);
   *(_DWORD *)(v8 + 16) = index;
   fortuneBonusData = this->fields.fortuneBonusData;
   if ( !fortuneBonusData )
@@ -131,7 +131,7 @@ CommonUI_FortuneBonusDetailData_o *__fastcall FortuneBonusResultAction__GetFortu
   details = fortuneBonusData->fields.details;
   if ( !details || !*(_QWORD *)&details->max_length )
     return 0LL;
-  v13 = (System_Func_object__bool__o *)sub_1B9025C(System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_1BAB668(System_Func_CommonUI_FortuneBonusDetailData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v13,
     (Il2CppObject *)v8,
@@ -140,7 +140,7 @@ CommonUI_FortuneBonusDetailData_o *__fastcall FortuneBonusResultAction__GetFortu
   return (CommonUI_FortuneBonusDetailData_o *)BasicHelper__Find_object_(
                                                 (System_Object_array *)details,
                                                 (System_Func_T__bool__o *)v13,
-                                                (const MethodInfo_2E7A1B0 *)Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
+                                                (const MethodInfo_2EB0308 *)Method_BasicHelper_Find_CommonUI_FortuneBonusDetailData___);
 }
 
 
@@ -162,7 +162,7 @@ CommonUI_FortuneBonusRewardData_o *__fastcall FortuneBonusResultAction__GetFortu
   if ( !v4 )
     return 0LL;
   if ( !(_DWORD)v4 )
-    sub_1B90274(this, method);
+    sub_1BAB680(this, method);
   return rewards->m_Items[0];
 }
 
@@ -173,10 +173,10 @@ bool __fastcall FortuneBonusResultAction__IsPlayingAnim(FortuneBonusResultAction
   __int64 v4; // x1
   UnityEngine_Animation_o *v6; // x0
 
-  if ( (byte_4A6CBFC & 1) == 0 )
+  if ( (byte_4AB2A47 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6CBFC = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB2A47 = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -185,7 +185,7 @@ bool __fastcall FortuneBonusResultAction__IsPlayingAnim(FortuneBonusResultAction
     return 0;
   v6 = this->fields.anim;
   if ( !v6 )
-    sub_1B9026C(0LL, v4);
+    sub_1BAB678(0LL, v4);
   return UnityEngine_Animation__IsPlaying(v6, this->fields.animationName, 0LL);
 }
 
@@ -202,10 +202,10 @@ void __fastcall FortuneBonusResultAction__Play(
   const MethodInfo *v8; // x2
 
   this->fields.endAction = endAct;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.endAction, (int32_t)endAct, (int32_t)method, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.endAction, (int32_t)endAct, (int32_t)method, v3);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B9026C(0LL, v6);
+    sub_1BAB678(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   FortuneBonusResultAction__SetAnimSpeed(this, 0.0, v7);
   FortuneBonusResultAction__SetState(this, 1, v8);
@@ -220,8 +220,8 @@ void __fastcall FortuneBonusResultAction__PlayAnim(FortuneBonusResultAction_o *t
   FortuneBonusResultAction__SetAnimSpeed(this, 1.0, method);
   commonEffectComponent = this->fields.commonEffectComponent;
   if ( !commonEffectComponent )
-    sub_1B9026C(0LL, v3);
-  CommonEffectComponent__Init_40695208(commonEffectComponent, this->fields.animationName, 0, 0, 0LL);
+    sub_1BAB678(0LL, v3);
+  CommonEffectComponent__Init_41036900(commonEffectComponent, this->fields.animationName, 0, 0, 0LL);
 }
 
 
@@ -234,10 +234,10 @@ void __fastcall FortuneBonusResultAction__SetAnimSpeed(
   __int64 v6; // x1
   UnityEngine_Animation_o *Item; // x0
 
-  if ( (byte_4A6CBFB & 1) == 0 )
+  if ( (byte_4AB2A46 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6CBFB = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB2A46 = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -248,7 +248,7 @@ void __fastcall FortuneBonusResultAction__SetAnimSpeed(
     if ( !Item
       || (Item = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(Item, this->fields.animationName, 0LL)) == 0LL )
     {
-      sub_1B9026C(Item, v6);
+      sub_1BAB678(Item, v6);
     }
     UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)Item, speed, 0LL);
   }
@@ -263,18 +263,18 @@ void __fastcall FortuneBonusResultAction__SetState(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4A6CBFD & 1) == 0 )
+  if ( (byte_4AB2A48 & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_FortuneBonusResultAction__setState__, *(_QWORD *)&state);
-    byte_4A6CBFD = 1;
+    sub_1BAB41C(&Method_CStateManager_FortuneBonusResultAction__setState__, *(_QWORD *)&state);
+    byte_4AB2A48 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_1B9026C(0LL, *(_QWORD *)&state);
+    sub_1BAB678(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_30B9ADC *)Method_CStateManager_FortuneBonusResultAction__setState__);
+    (const MethodInfo_30F0C48 *)Method_CStateManager_FortuneBonusResultAction__setState__);
 }
 
 
@@ -343,32 +343,32 @@ void __fastcall FortuneBonusResultAction__Setup(
   int32_t iconId; // [xsp+Ch] [xbp-64h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4A6CBF8 & 1) == 0 )
+  if ( (byte_4AB2A43 & 1) == 0 )
   {
-    sub_1B90010(&AndroidBackKeyManager_TypeInfo, fortuneBonus);
-    sub_1B90010(&AtlasManager_TypeInfo, v6);
-    sub_1B90010(&System_Comparison_GiftEntity__TypeInfo, v7);
-    sub_1B90010(&Method_DataManager_GetMaster_GiftMaster___, v8);
-    sub_1B90010(&Method_DataManager_GetMaster_ItemMaster___, v9);
-    sub_1B90010(&DataManager_TypeInfo, v10);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v11);
-    sub_1B90010(&FortuneBonusResultAction_TypeInfo, v12);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v13);
-    sub_1B90010(&int_TypeInfo, v14);
-    sub_1B90010(&Method_System_Collections_Generic_List_GiftEntity__Sort__, v15);
-    sub_1B90010(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v16);
-    sub_1B90010(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v17);
-    sub_1B90010(&NGUITools_TypeInfo, v18);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v19);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v20);
-    sub_1B90010(&Method_FortuneBonusResultAction___c__Setup_b__14_0__, v21);
-    sub_1B90010(&FortuneBonusResultAction___c_TypeInfo, v22);
-    sub_1B90010(&StringLiteral_22267/*"omikuzi_{0}"*/, v23);
-    byte_4A6CBF8 = 1;
+    sub_1BAB41C(&AndroidBackKeyManager_TypeInfo, fortuneBonus);
+    sub_1BAB41C(&AtlasManager_TypeInfo, v6);
+    sub_1BAB41C(&System_Comparison_GiftEntity__TypeInfo, v7);
+    sub_1BAB41C(&Method_DataManager_GetMaster_GiftMaster___, v8);
+    sub_1BAB41C(&Method_DataManager_GetMaster_ItemMaster___, v9);
+    sub_1BAB41C(&DataManager_TypeInfo, v10);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v11);
+    sub_1BAB41C(&FortuneBonusResultAction_TypeInfo, v12);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v13);
+    sub_1BAB41C(&int_TypeInfo, v14);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_GiftEntity__Sort__, v15);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v16);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v17);
+    sub_1BAB41C(&NGUITools_TypeInfo, v18);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v19);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v20);
+    sub_1BAB41C(&Method_FortuneBonusResultAction___c__Setup_b__14_0__, v21);
+    sub_1BAB41C(&FortuneBonusResultAction___c_TypeInfo, v22);
+    sub_1BAB41C(&StringLiteral_22270/*"omikuzi_{0}"*/, v23);
+    byte_4AB2A43 = 1;
   }
   entity = 0LL;
   this->fields.fortuneBonusData = fortuneBonus;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.fortuneBonusData,
     (int32_t)fortuneBonus,
     (int32_t)method,
@@ -391,13 +391,13 @@ void __fastcall FortuneBonusResultAction__Setup(
       v35 = FortuneBonusDetailData;
       iconId = FortuneBonusDetailData->fields.iconId;
       v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId, v31, v32, v33);
-      Master_object = System_String__Format((System_String_o *)StringLiteral_22267/*"omikuzi_{0}"*/, v36, 0LL);
+      Master_object = System_String__Format((System_String_o *)StringLiteral_22270/*"omikuzi_{0}"*/, v36, 0LL);
       if ( !fortuneResultSprite )
         goto LABEL_48;
       UISprite__set_spriteName(fortuneResultSprite, (System_String_o *)Master_object, 0LL);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_GiftMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_GiftMaster___);
       if ( !Master_object )
         goto LABEL_48;
       ListById = GiftMaster__GetListById((GiftMaster_o *)Master_object, v35->fields.giftId, 0LL);
@@ -428,16 +428,16 @@ void __fastcall FortuneBonusResultAction__Setup(
               v50 = FortuneBonusResultAction___c_TypeInfo;
             }
             v52 = (Il2CppObject *)v50->static_fields->__9;
-            _9__14_0 = (System_Comparison_T__o *)sub_1B9025C(System_Comparison_GiftEntity__TypeInfo);
+            _9__14_0 = (System_Comparison_T__o *)sub_1BAB668(System_Comparison_GiftEntity__TypeInfo);
             System_Comparison_object____ctor(_9__14_0, v52, Method_FortuneBonusResultAction___c__Setup_b__14_0__, 0LL);
             static_fields = FortuneBonusResultAction___c_TypeInfo->static_fields;
             static_fields->__9__14_0 = (struct System_Comparison_GiftEntity__o *)_9__14_0;
-            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v54, v55);
+            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v54, v55);
           }
-          System_Collections_Generic_List_object___Sort_55649412(
+          System_Collections_Generic_List_object___Sort_55899008(
             v38,
             _9__14_0,
-            (const MethodInfo_3512484 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
+            (const MethodInfo_354F380 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
           itemSpriteList = this->fields.itemSpriteList;
           if ( !itemSpriteList )
             goto LABEL_48;
@@ -446,25 +446,25 @@ void __fastcall FortuneBonusResultAction__Setup(
           {
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            v58 = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ItemMaster___);
+            v58 = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ItemMaster___);
             Master_object = System_Collections_Generic_List_object___get_Item(
                               v38,
                               v57,
-                              (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                              (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
             if ( !Master_object || !v58 )
               goto LABEL_48;
             Master_object = (void *)DataMasterBase_object__object__int___TryGetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)v58,
                                       &entity,
                                       *((_DWORD *)Master_object + 6),
-                                      (const MethodInfo_312C5FC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                      (const MethodInfo_3163DE4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)Master_object & 1) != 0 )
             {
               v59 = this->fields.itemSpriteList;
               if ( !v59 )
                 goto LABEL_48;
               if ( v57 >= v59->max_length )
-                sub_1B90274(Master_object, v26);
+                sub_1BAB680(Master_object, v26);
               if ( !entity )
                 goto LABEL_48;
               v60 = v59->m_Items[v57];
@@ -488,7 +488,7 @@ void __fastcall FortuneBonusResultAction__Setup(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Master_object = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( Instance )
     {
@@ -511,14 +511,14 @@ void __fastcall FortuneBonusResultAction__Setup(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              ScreeenTouchInfo,
-                             (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                             (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
         p_screenTouchInfo->klass = (ServantStatusBattleListViewItem_c *)Component_object;
-        sub_1B8FFB4(p_screenTouchInfo, (int32_t)Component_object, v48, v49);
+        sub_1BAB3C0(p_screenTouchInfo, (int32_t)Component_object, v48, v49);
         goto LABEL_24;
       }
     }
 LABEL_48:
-    sub_1B9026C(Master_object, v26);
+    sub_1BAB678(Master_object, v26);
   }
 LABEL_24:
   Master_object = p_screenTouchInfo->klass;
@@ -538,10 +538,10 @@ void __fastcall FortuneBonusResultAction__SetupAnim(FortuneBonusResultAction_o *
   __int64 v4; // x1
   UnityEngine_Animation_o *Item; // x0
 
-  if ( (byte_4A6CBFA & 1) == 0 )
+  if ( (byte_4AB2A45 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6CBFA = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB2A45 = 1;
   }
   anim = (UnityEngine_Object_o *)this->fields.anim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -555,7 +555,7 @@ void __fastcall FortuneBonusResultAction__SetupAnim(FortuneBonusResultAction_o *
           (Item = this->fields.anim) == 0LL)
       || (Item = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(Item, this->fields.animationName, 0LL)) == 0LL )
     {
-      sub_1B9026C(Item, v4);
+      sub_1BAB678(Item, v4);
     }
     UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)Item, 0.0, 0LL);
   }
@@ -567,11 +567,11 @@ void __fastcall FortuneBonusResultAction__Update(FortuneBonusResultAction_o *thi
   __int64 v3; // x1
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4A6CBF7 & 1) == 0 )
+  if ( (byte_4AB2A42 & 1) == 0 )
   {
-    sub_1B90010(&Method_CStateManager_FortuneBonusResultAction__update__, method);
-    sub_1B90010(&CTouch_TypeInfo, v3);
-    byte_4A6CBF7 = 1;
+    sub_1BAB41C(&Method_CStateManager_FortuneBonusResultAction__update__, method);
+    sub_1BAB41C(&CTouch_TypeInfo, v3);
+    byte_4AB2A42 = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -580,7 +580,7 @@ void __fastcall FortuneBonusResultAction__Update(FortuneBonusResultAction_o *thi
   if ( fsm )
     CStateManager_object___update(
       fsm,
-      (const MethodInfo_30B9AB8 *)Method_CStateManager_FortuneBonusResultAction__update__);
+      (const MethodInfo_30F0C24 *)Method_CStateManager_FortuneBonusResultAction__update__);
 }
 
 
@@ -633,7 +633,7 @@ void __fastcall FortuneBonusResultAction_StatePlay__begin(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   FortuneBonusResultAction__PlayAnim(that, (const MethodInfo *)that);
 }
 
@@ -657,7 +657,7 @@ void __fastcall FortuneBonusResultAction_StatePlay__update(
   if ( this->fields.isStarted )
   {
     if ( !that )
-      sub_1B9026C(this, 0LL);
+      sub_1BAB678(this, 0LL);
     if ( !FortuneBonusResultAction__IsPlayingAnim(that, (const MethodInfo *)that) )
       FortuneBonusResultAction__SetState(that, 2, v5);
   }
@@ -684,7 +684,7 @@ void __fastcall FortuneBonusResultAction_StateTouchWait__begin(
                                                               (UnityEngine_Component_o *)this,
                                                               0LL)) == 0LL )
   {
-    sub_1B9026C(this, that);
+    sub_1BAB678(this, that);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }
@@ -726,26 +726,26 @@ void __fastcall FortuneBonusResultAction_StateTouchWait__update(
   System_Action_o *v23; // x22
   const MethodInfo *v24; // x2
 
-  if ( (byte_4A6CBFF & 1) == 0 )
+  if ( (byte_4AB2A4A & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, that);
-    sub_1B90010(&AndroidBackKeyManager_TypeInfo, v4);
-    sub_1B90010(&AvalonSceneManager_TypeInfo, v5);
-    sub_1B90010(&CTouch_TypeInfo, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B90010(&Method_FortuneBonusResultAction_StateTouchWait_update__, v8);
-    sub_1B90010(&TerminalSceneComponent_TypeInfo, v9);
-    sub_1B90010(&Method_FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0__update_b__0__, v10);
-    sub_1B90010(&FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo, v11);
-    byte_4A6CBFF = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, that);
+    sub_1BAB41C(&AndroidBackKeyManager_TypeInfo, v4);
+    sub_1BAB41C(&AvalonSceneManager_TypeInfo, v5);
+    sub_1BAB41C(&CTouch_TypeInfo, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1BAB41C(&Method_FortuneBonusResultAction_StateTouchWait_update__, v8);
+    sub_1BAB41C(&TerminalSceneComponent_TypeInfo, v9);
+    sub_1BAB41C(&Method_FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0__update_b__0__, v10);
+    sub_1BAB41C(&FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo, v11);
+    byte_4AB2A4A = 1;
   }
-  v12 = sub_1B9025C(FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+  v12 = sub_1BAB668(FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_25;
   *(_QWORD *)(v12 + 16) = that;
   v17 = v12 + 16;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)that, v15, v16);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v12 + 16), (int32_t)that, v15, v16);
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
   isTouchPush = (void *)CTouch__isTouchPush(0LL);
@@ -763,15 +763,15 @@ void __fastcall FortuneBonusResultAction_StateTouchWait__update(
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)isTouchPush, 0, 0LL);
           v18 = Method_FortuneBonusResultAction_StateTouchWait_update__;
           if ( (*((_BYTE *)Method_FortuneBonusResultAction_StateTouchWait_update__ + 83) & 2) != 0 )
-            v18 = (_QWORD *)sub_1B90028(Method_FortuneBonusResultAction_StateTouchWait_update__);
-          v19 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v18, v18[4]);
+            v18 = (_QWORD *)sub_1BAB434(Method_FortuneBonusResultAction_StateTouchWait_update__);
+          v19 = (System_Reflection_MethodBase_o *)sub_1BAB400(v18, v18[4]);
           OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0LL);
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4A6AF7D )
+          if ( !byte_4AB0C49 )
           {
-            sub_1B90010(&TerminalSceneComponent_TypeInfo, v14);
-            byte_4A6AF7D = 1;
+            sub_1BAB41C(&TerminalSceneComponent_TypeInfo, v14);
+            byte_4AB0C49 = 1;
           }
           isTouchPush = TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -785,9 +785,9 @@ void __fastcall FortuneBonusResultAction_StateTouchWait__update(
           if ( v20 )
           {
             TerminalSceneComponent__fadeoutBgm(v20, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL);
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
             DEFAULT_FADE_TIME = AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME;
-            v23 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+            v23 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
             System_Action___ctor(
               v23,
               (Il2CppObject *)v12,
@@ -808,7 +808,7 @@ void __fastcall FortuneBonusResultAction_StateTouchWait__update(
       }
     }
 LABEL_25:
-    sub_1B9026C(isTouchPush, v14);
+    sub_1BAB678(isTouchPush, v14);
   }
 }
 
@@ -829,7 +829,7 @@ void __fastcall FortuneBonusResultAction_StateTouchWait___c__DisplayClass1_0___u
 
   that = this->fields.that;
   if ( !that )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   ActionExtensions__Call(that->fields.endAction, 0LL);
 }
 
@@ -841,15 +841,15 @@ void __fastcall FortuneBonusResultAction___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A6CC00 & 1) == 0 )
+  if ( (byte_4AB2A4B & 1) == 0 )
   {
-    sub_1B90010(&FortuneBonusResultAction___c_TypeInfo, v1);
-    byte_4A6CC00 = 1;
+    sub_1BAB41C(&FortuneBonusResultAction___c_TypeInfo, v1);
+    byte_4AB2A4B = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(FortuneBonusResultAction___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(FortuneBonusResultAction___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   FortuneBonusResultAction___c_TypeInfo->static_fields->__9 = (struct FortuneBonusResultAction___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)FortuneBonusResultAction___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -870,7 +870,7 @@ int32_t __fastcall FortuneBonusResultAction___c___Setup_b__14_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B9026C(this, a);
+    sub_1BAB678(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -889,6 +889,6 @@ bool __fastcall FortuneBonusResultAction___c__DisplayClass16_0___GetFortuneBonus
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return n->fields.idx == this->fields.index;
 }

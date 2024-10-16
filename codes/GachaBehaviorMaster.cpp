@@ -40,71 +40,71 @@ void __fastcall GachaBehaviorMaster___cctor(const MethodInfo *method)
   int32_t v38; // w2
   int32_t v39; // w3
 
-  if ( (byte_4A700D1 & 1) == 0 )
+  if ( (byte_4AB5FB5 & 1) == 0 )
   {
-    sub_1B90010(&GachaBehaviorMaster_TypeInfo, v1);
-    sub_1B90010(&StringLiteral_11154/*"RankupBeforeClassImageId"*/, v4);
-    sub_1B90010(&StringLiteral_11151/*"RankupAfterClassImageId"*/, v5);
-    sub_1B90010(&StringLiteral_11153/*"RankupAnimation"*/, v6);
-    sub_1B90010(&StringLiteral_11162/*"RarityAnimation"*/, v7);
-    sub_1B90010(&StringLiteral_11155/*"RankupBeforeRarity"*/, v8);
-    sub_1B90010(&StringLiteral_11152/*"RankupAfterRarity"*/, v9);
-    sub_1B90010(&StringLiteral_6995/*"GetAnimation"*/, v10);
-    sub_1B90010(&StringLiteral_7607/*"InitializeAnimation"*/, v11);
-    byte_4A700D1 = 1;
+    sub_1BAB41C(&GachaBehaviorMaster_TypeInfo, v1);
+    sub_1BAB41C(&StringLiteral_11156/*"RankupBeforeClassImageId"*/, v4);
+    sub_1BAB41C(&StringLiteral_11153/*"RankupAfterClassImageId"*/, v5);
+    sub_1BAB41C(&StringLiteral_11155/*"RankupAnimation"*/, v6);
+    sub_1BAB41C(&StringLiteral_11164/*"RarityAnimation"*/, v7);
+    sub_1BAB41C(&StringLiteral_11157/*"RankupBeforeRarity"*/, v8);
+    sub_1BAB41C(&StringLiteral_11154/*"RankupAfterRarity"*/, v9);
+    sub_1BAB41C(&StringLiteral_6995/*"GetAnimation"*/, v10);
+    sub_1BAB41C(&StringLiteral_7607/*"InitializeAnimation"*/, v11);
+    byte_4AB5FB5 = 1;
   }
-  GachaBehaviorMaster_TypeInfo->static_fields->SCRIPT_KEY_RANKUP_ANIMATION = (struct System_String_o *)StringLiteral_11153/*"RankupAnimation"*/;
-  sub_1B8FFB4(
+  GachaBehaviorMaster_TypeInfo->static_fields->SCRIPT_KEY_RANKUP_ANIMATION = (struct System_String_o *)StringLiteral_11155/*"RankupAnimation"*/;
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)GachaBehaviorMaster_TypeInfo->static_fields,
-    StringLiteral_11153/*"RankupAnimation"*/,
+    StringLiteral_11155/*"RankupAnimation"*/,
     v2,
     v3);
-  v12 = StringLiteral_11154/*"RankupBeforeClassImageId"*/;
+  v12 = StringLiteral_11156/*"RankupBeforeClassImageId"*/;
   static_fields = GachaBehaviorMaster_TypeInfo->static_fields;
-  static_fields->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11154/*"RankupBeforeClassImageId"*/;
-  sub_1B8FFB4(
+  static_fields->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11156/*"RankupBeforeClassImageId"*/;
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&static_fields->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID,
     v12,
     v14,
     v15);
-  v16 = StringLiteral_11155/*"RankupBeforeRarity"*/;
+  v16 = StringLiteral_11157/*"RankupBeforeRarity"*/;
   v17 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v17->SCRIPT_KEY_RANKUP_BEFORE_RARITY = (struct System_String_o *)StringLiteral_11155/*"RankupBeforeRarity"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v17->SCRIPT_KEY_RANKUP_BEFORE_RARITY, v16, v18, v19);
-  v20 = StringLiteral_11151/*"RankupAfterClassImageId"*/;
+  v17->SCRIPT_KEY_RANKUP_BEFORE_RARITY = (struct System_String_o *)StringLiteral_11157/*"RankupBeforeRarity"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v17->SCRIPT_KEY_RANKUP_BEFORE_RARITY, v16, v18, v19);
+  v20 = StringLiteral_11153/*"RankupAfterClassImageId"*/;
   v21 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v21->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11151/*"RankupAfterClassImageId"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v21->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID, v20, v22, v23);
-  v24 = StringLiteral_11152/*"RankupAfterRarity"*/;
+  v21->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11153/*"RankupAfterClassImageId"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v21->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID, v20, v22, v23);
+  v24 = StringLiteral_11154/*"RankupAfterRarity"*/;
   v25 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v25->SCRIPT_KEY_RANKUP_AFTER_RARITY = (struct System_String_o *)StringLiteral_11152/*"RankupAfterRarity"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v25->SCRIPT_KEY_RANKUP_AFTER_RARITY, v24, v26, v27);
-  v28 = StringLiteral_11162/*"RarityAnimation"*/;
+  v25->SCRIPT_KEY_RANKUP_AFTER_RARITY = (struct System_String_o *)StringLiteral_11154/*"RankupAfterRarity"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v25->SCRIPT_KEY_RANKUP_AFTER_RARITY, v24, v26, v27);
+  v28 = StringLiteral_11164/*"RarityAnimation"*/;
   v29 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v29->SCRIPT_KEY_RARITY_ANIMATION = (struct System_String_o *)StringLiteral_11162/*"RarityAnimation"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v29->SCRIPT_KEY_RARITY_ANIMATION, v28, v30, v31);
+  v29->SCRIPT_KEY_RARITY_ANIMATION = (struct System_String_o *)StringLiteral_11164/*"RarityAnimation"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v29->SCRIPT_KEY_RARITY_ANIMATION, v28, v30, v31);
   v32 = StringLiteral_6995/*"GetAnimation"*/;
   v33 = GachaBehaviorMaster_TypeInfo->static_fields;
   v33->SCRIPT_KEY_GET_ANIMATION = (struct System_String_o *)StringLiteral_6995/*"GetAnimation"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v33->SCRIPT_KEY_GET_ANIMATION, v32, v34, v35);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v33->SCRIPT_KEY_GET_ANIMATION, v32, v34, v35);
   v36 = StringLiteral_7607/*"InitializeAnimation"*/;
   v37 = GachaBehaviorMaster_TypeInfo->static_fields;
   v37->SCRIPT_KEY_INITIALIZE_ANIMATION = (struct System_String_o *)StringLiteral_7607/*"InitializeAnimation"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v37->SCRIPT_KEY_INITIALIZE_ANIMATION, v36, v38, v39);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v37->SCRIPT_KEY_INITIALIZE_ANIMATION, v36, v38, v39);
 }
 
 
 void __fastcall GachaBehaviorMaster___ctor(GachaBehaviorMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A700CF & 1) == 0 )
+  if ( (byte_4AB5FB3 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string___ctor__, method);
-    byte_4A700CF = 1;
+    sub_1BAB41C(&Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string___ctor__, method);
+    byte_4AB5FB3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     315,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string___ctor__);
 }
 
 
@@ -117,18 +117,18 @@ GachaBehaviorEntity_o *__fastcall GachaBehaviorMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A700CD & 1) == 0 )
+  if ( (byte_4AB5FB1 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__GetEntity__,
       *(_QWORD *)&gachaId);
-    byte_4A700CD = 1;
+    byte_4AB5FB1 = 1;
   }
   PK = (Il2CppObject *)GachaBehaviorEntity__CreatePK(gachaId, svtId, *(const MethodInfo **)&svtId);
   return (GachaBehaviorEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_312C900 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__GetEntity__);
+                                    (const MethodInfo_31640E8 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__GetEntity__);
 }
 
 
@@ -176,30 +176,30 @@ System_Collections_Generic_List_GachaBehaviorEntity__o *__fastcall GachaBehavior
   int32_t *v41; // x10
   __int64 v42; // x0
 
-  if ( (byte_4A700D0 & 1) == 0 )
+  if ( (byte_4AB5FB4 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&gachaId);
-    sub_1B90010(&GachaBehaviorEntity_TypeInfo, v7);
-    sub_1B90010(&System_IDisposable_TypeInfo, v8);
-    sub_1B90010(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1B90010(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_GachaBehaviorEntity__Add__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_GachaBehaviorEntity___ctor__, v12);
-    sub_1B90010(&System_Collections_Generic_List_GachaBehaviorEntity__TypeInfo, v13);
-    byte_4A700D0 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&gachaId);
+    sub_1BAB41C(&GachaBehaviorEntity_TypeInfo, v7);
+    sub_1BAB41C(&System_IDisposable_TypeInfo, v8);
+    sub_1BAB41C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_GachaBehaviorEntity__Add__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_GachaBehaviorEntity___ctor__, v12);
+    sub_1BAB41C(&System_Collections_Generic_List_GachaBehaviorEntity__TypeInfo, v13);
+    byte_4AB5FB4 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_GachaBehaviorEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_GachaBehaviorEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_GachaBehaviorEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_GachaBehaviorEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B9026C(0LL, v15);
+    sub_1BAB678(0LL, v15);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_30C97CC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_3100938 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B9026C(0LL, v17);
+    sub_1BAB678(0LL, v17);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -219,7 +219,7 @@ System_Collections_Generic_List_GachaBehaviorEntity__o *__fastcall GachaBehavior
     else
     {
 LABEL_9:
-      p_method = sub_1BE1FF0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -242,7 +242,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v26 = sub_1BE1FF0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v26 = sub_1BFD3FC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v27 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
                             Enumerator,
@@ -255,34 +255,34 @@ LABEL_16:
     if ( LOBYTE(v27->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
       || (GachaBehaviorEntity_c *)v27->klass->_2.typeHierarchy[methodPtr_low - 1] != GachaBehaviorEntity_TypeInfo )
     {
-      sub_1B9052C(v27);
+      sub_1BAB938(v27);
 LABEL_37:
-      sub_1B9026C(v27, v28);
+      sub_1BAB678(v27, v28);
     }
     v34 = (int)v27[1].klass;
     if ( (!v34 || v34 == gachaId) && HIDWORD(v27[1].klass) == svtId )
     {
       if ( !v14 )
-        sub_1B9026C(v27, GachaBehaviorEntity_TypeInfo);
+        sub_1BAB678(v27, GachaBehaviorEntity_TypeInfo);
       items = v14->fields._items;
       v36 = Method_System_Collections_Generic_List_GachaBehaviorEntity__Add__;
       ++v14->fields._version;
       if ( !items )
-        sub_1B9026C(v27, v32);
+        sub_1BAB678(v27, v32);
       size = v14->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v14,
           v27,
-          *(const MethodInfo_35109C0 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+          *(const MethodInfo_354D8BC **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
       }
       else
       {
         v38 = &items->obj.klass + size;
         v14->fields._size = size + 1;
         v38[4] = (Il2CppClass *)v31;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v31, v29, v30);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v38 + 4), (int32_t)v31, v29, v30);
       }
     }
   }
@@ -303,7 +303,7 @@ LABEL_37:
   else
   {
 LABEL_33:
-    v42 = sub_1BE1FF0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v42 = sub_1BFD3FC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v42)(Enumerator, *(_QWORD *)(v42 + 8));
   return (System_Collections_Generic_List_GachaBehaviorEntity__o *)v14;
@@ -320,15 +320,15 @@ bool __fastcall GachaBehaviorMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A700CE & 1) == 0 )
+  if ( (byte_4AB5FB2 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__TryGetEntity__, entity);
-    byte_4A700CE = 1;
+    sub_1BAB41C(&Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__TryGetEntity__, entity);
+    byte_4AB5FB2 = 1;
   }
   PK = (Il2CppObject *)GachaBehaviorEntity__CreatePK(gachaId, svtId, *(const MethodInfo **)&gachaId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_GachaBehaviorMaster__GachaBehaviorEntity__string__TryGetEntity__);
 }

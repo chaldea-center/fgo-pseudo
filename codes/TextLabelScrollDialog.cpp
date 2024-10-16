@@ -1,9 +1,9 @@
 void __fastcall TextLabelScrollDialog___ctor(TextLabelScrollDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6EB9B & 1) == 0 )
+  if ( (byte_4AB4B2F & 1) == 0 )
   {
-    sub_1B90010(&BaseDialog_TypeInfo, method);
-    byte_4A6EB9B = 1;
+    sub_1BAB41C(&BaseDialog_TypeInfo, method);
+    byte_4AB4B2F = 1;
   }
   this->fields.state = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -29,14 +29,14 @@ void __fastcall TextLabelScrollDialog__Init(TextLabelScrollDialog_o *this, const
   int32_t v15; // w2
   int32_t v16; // w3
 
-  if ( (byte_4A6EB96 & 1) == 0 )
+  if ( (byte_4AB4B2A & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_3758/*"COMMON_CONFIRM_DECIDE"*/, v4);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v5);
-    sub_1B90010(&StringLiteral_1/*""*/, v6);
-    byte_4A6EB96 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_3755/*"COMMON_CONFIRM_DECIDE"*/, v4);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v5);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v6);
+    byte_4AB4B2A = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -50,7 +50,7 @@ void __fastcall TextLabelScrollDialog__Init(TextLabelScrollDialog_o *this, const
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_16;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
@@ -62,21 +62,21 @@ void __fastcall TextLabelScrollDialog__Init(TextLabelScrollDialog_o *this, const
     v13 = this->fields.decideLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3758/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+    titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3755/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     if ( v13 )
     {
       UILabel__set_text(v13, (System_String_o *)titleLabel, 0LL);
       goto LABEL_15;
     }
 LABEL_16:
-    sub_1B9026C(titleLabel, v7);
+    sub_1BAB678(titleLabel, v7);
   }
 LABEL_15:
   this->fields.closeAction = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v11, v12);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v11, v12);
   this->fields.decideAction = 0LL;
   p_decideAction = (ServantStatusBattleListViewItem_o *)&this->fields.decideAction;
-  sub_1B8FFB4(p_decideAction, 0, v15, v16);
+  sub_1BAB3C0(p_decideAction, 0, v15, v16);
   p_decideAction->fields.selectNum = 8;
   p_decideAction->monitor = (void *)0x100000002LL;
 }
@@ -90,23 +90,23 @@ void __fastcall TextLabelScrollDialog__OnClickCloseButton(TextLabelScrollDialog_
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6EB98 & 1) == 0 )
+  if ( (byte_4AB4B2C & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_TextLabelScrollDialog_OnClickCloseButton__, v3);
-    sub_1B90010(&Method_TextLabelScrollDialog__OnClickCloseButton_b__14_0__, v4);
-    byte_4A6EB98 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_TextLabelScrollDialog_OnClickCloseButton__, v3);
+    sub_1BAB41C(&Method_TextLabelScrollDialog__OnClickCloseButton_b__14_0__, v4);
+    byte_4AB4B2C = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_TextLabelScrollDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_TextLabelScrollDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B90028(Method_TextLabelScrollDialog_OnClickCloseButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BAB434(Method_TextLabelScrollDialog_OnClickCloseButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BAB400(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, this->fields.closeSE, 0LL);
   }
   this->fields.state = 2;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_TextLabelScrollDialog__OnClickCloseButton_b__14_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -120,23 +120,23 @@ void __fastcall TextLabelScrollDialog__OnClickDecideButton(TextLabelScrollDialog
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6EB99 & 1) == 0 )
+  if ( (byte_4AB4B2D & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_TextLabelScrollDialog_OnClickDecideButton__, v3);
-    sub_1B90010(&Method_TextLabelScrollDialog__OnClickDecideButton_b__15_0__, v4);
-    byte_4A6EB99 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_TextLabelScrollDialog_OnClickDecideButton__, v3);
+    sub_1BAB41C(&Method_TextLabelScrollDialog__OnClickDecideButton_b__15_0__, v4);
+    byte_4AB4B2D = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_TextLabelScrollDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_TextLabelScrollDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B90028(Method_TextLabelScrollDialog_OnClickDecideButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BAB434(Method_TextLabelScrollDialog_OnClickDecideButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BAB400(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, this->fields.decideSE, 0LL);
   }
   this->fields.state = 1;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_TextLabelScrollDialog__OnClickDecideButton_b__15_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -168,12 +168,12 @@ void __fastcall TextLabelScrollDialog__Open(
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel || (UILabel__set_text(titleLabel, title, 0LL), (titleLabel = this->fields.messageLabel) == 0LL) )
-    sub_1B9026C(titleLabel, v11);
+    sub_1BAB678(titleLabel, v11);
   UILabel__set_text(titleLabel, message, 0LL);
   this->fields.closeAction = closeAction;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, (int32_t)closeAction, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, (int32_t)closeAction, v13, v14);
   this->fields.decideAction = decideAction;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.decideAction, (int32_t)decideAction, v15, v16);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.decideAction, (int32_t)decideAction, v15, v16);
   TextLabelScrollDialog__ResetScrollPosition(this, v17);
   this->fields.state = 0;
 }
@@ -188,10 +188,10 @@ void __fastcall TextLabelScrollDialog__ResetScrollPosition(TextLabelScrollDialog
   struct UILabel_o *v7; // x8
   int v8; // w8
 
-  if ( (byte_4A6EB97 & 1) == 0 )
+  if ( (byte_4AB4B2B & 1) == 0 )
   {
-    sub_1B90010(&NGUITools_TypeInfo, method);
-    byte_4A6EB97 = 1;
+    sub_1BAB41C(&NGUITools_TypeInfo, method);
+    byte_4AB4B2B = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -199,7 +199,7 @@ void __fastcall TextLabelScrollDialog__ResetScrollPosition(TextLabelScrollDialog
   gameObject = UnityEngine_Component__get_gameObject(messageLabel, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_46917908(gameObject, 1, 0LL);
+  NGUITools__UpdateWidgetCollider_47107688(gameObject, 1, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_14;
@@ -215,7 +215,7 @@ void __fastcall TextLabelScrollDialog__ResetScrollPosition(TextLabelScrollDialog
   messageLabel = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !messageLabel )
 LABEL_14:
-    sub_1B9026C(messageLabel, method);
+    sub_1BAB678(messageLabel, method);
   UIScrollView__ResetPosition((UIScrollView_o *)messageLabel, 0LL);
 }
 
@@ -264,10 +264,10 @@ System_String_o *__fastcall TextLabelScrollDialog__get_closeBtnPath(
         TextLabelScrollDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A6EB9A & 1) == 0 )
+  if ( (byte_4AB4B2E & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_15668/*"Window/CloseButton"*/, method);
-    byte_4A6EB9A = 1;
+    sub_1BAB41C(&StringLiteral_15674/*"Window/CloseButton"*/, method);
+    byte_4AB4B2E = 1;
   }
-  return (System_String_o *)StringLiteral_15668/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15674/*"Window/CloseButton"*/;
 }

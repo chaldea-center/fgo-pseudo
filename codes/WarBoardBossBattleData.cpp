@@ -4,7 +4,7 @@ void __fastcall WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, co
 }
 
 
-void __fastcall WarBoardBossBattleData___ctor_35385516(
+void __fastcall WarBoardBossBattleData___ctor_35627204(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
@@ -17,11 +17,11 @@ void __fastcall WarBoardBossBattleData___ctor_35385516(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.script, (int32_t)script, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.script, (int32_t)script, v7, v8);
 }
 
 
@@ -38,11 +38,11 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor(
   v2->fields.script = 0LL;
   v2 = (WarBoardBossBattleData_SaveData_o *)((char *)v2 + 24);
   v2[-1].fields.script = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v2, 0, v3, v4);
 }
 
 
-void __fastcall WarBoardBossBattleData_SaveData___ctor_35385620(
+void __fastcall WarBoardBossBattleData_SaveData___ctor_35627308(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
@@ -55,9 +55,9 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor_35385620(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.script, (int32_t)script, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.script, (int32_t)script, v7, v8);
 }

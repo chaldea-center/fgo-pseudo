@@ -1,14 +1,14 @@
 void __fastcall UserProfileMaster___ctor(UserProfileMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70BE4 & 1) == 0 )
+  if ( (byte_4AB6AD7 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_UserProfileMaster__UserProfileEntity__long___ctor__, method);
-    byte_4A70BE4 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_UserProfileMaster__UserProfileEntity__long___ctor__, method);
+    byte_4AB6AD7 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     98,
-    (const MethodInfo_312C714 *)Method_DataMasterBase_UserProfileMaster__UserProfileEntity__long___ctor__);
+    (const MethodInfo_3163EFC *)Method_DataMasterBase_UserProfileMaster__UserProfileEntity__long___ctor__);
 }
 
 
@@ -40,36 +40,36 @@ OtherUserGameEntity_array *__fastcall UserProfileMaster__GetOtherUserList(
   Il2CppClass *v24; // x1
   Il2CppClass **v25; // x0
 
-  if ( (byte_4A70BE6 & 1) == 0 )
+  if ( (byte_4AB6AD9 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_1B90010(&Method_DataManager_GetMasterData_OtherUserGameMaster___, v4);
-    sub_1B90010(&Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long__GetEntity__, v5);
-    sub_1B90010(&Method_System_Collections_Generic_List_OtherUserGameEntity__Add__, v6);
-    sub_1B90010(&Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__, v7);
-    sub_1B90010(&Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__, v8);
-    sub_1B90010(&System_Collections_Generic_List_OtherUserGameEntity__TypeInfo, v9);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1B90010(&UserProfileEntity_TypeInfo, v11);
-    byte_4A70BE6 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_OtherUserGameMaster___, v4);
+    sub_1BAB41C(&Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long__GetEntity__, v5);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_OtherUserGameEntity__Add__, v6);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__, v7);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__, v8);
+    sub_1BAB41C(&System_Collections_Generic_List_OtherUserGameEntity__TypeInfo, v9);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1BAB41C(&UserProfileEntity_TypeInfo, v11);
+    byte_4AB6AD9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_OtherUserGameMaster___);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_OtherUserGameEntity__TypeInfo);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_OtherUserGameMaster___);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_OtherUserGameEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_351018C *)Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__);
+    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__);
   Instance = this->fields.list;
   if ( !Instance )
     goto LABEL_20;
   Instance = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
                        (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                       (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+                       (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( (int)Instance >= 1 )
   {
     v16 = (int)Instance;
@@ -82,7 +82,7 @@ OtherUserGameEntity_array *__fastcall UserProfileMaster__GetOtherUserList(
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    (System_Collections_ObjectModel_Collection_T__o *)Instance,
                    v17,
-                   (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Instance )
       {
         methodPtr_low = LOBYTE(UserProfileEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -94,7 +94,7 @@ OtherUserGameEntity_array *__fastcall UserProfileMaster__GetOtherUserList(
           Instance = DataMasterBase_object__object__long___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                        *((_QWORD *)Instance + 2),
-                       (const MethodInfo_312C754 *)Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long__GetEntity__);
+                       (const MethodInfo_3163F3C *)Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long__GetEntity__);
           if ( !v15 )
             break;
           items = v15->fields._items;
@@ -109,14 +109,14 @@ OtherUserGameEntity_array *__fastcall UserProfileMaster__GetOtherUserList(
             System_Collections_Generic_List_object___AddWithResize(
               v15,
               (Il2CppObject *)Instance,
-              *(const MethodInfo_35109C0 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+              *(const MethodInfo_354D8BC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
           }
           else
           {
             v25 = &items->obj.klass + size;
             v15->fields._size = size + 1;
             v25[4] = v24;
-            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v25 + 4), (int32_t)v24, v19, v20);
+            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v25 + 4), (int32_t)v24, v19, v20);
           }
         }
       }
@@ -124,14 +124,14 @@ OtherUserGameEntity_array *__fastcall UserProfileMaster__GetOtherUserList(
         goto LABEL_18;
     }
 LABEL_20:
-    sub_1B9026C(Instance, v13);
+    sub_1BAB678(Instance, v13);
   }
 LABEL_18:
   if ( !v15 )
     goto LABEL_20;
   return (OtherUserGameEntity_array *)System_Collections_Generic_List_object___ToArray(
                                         v15,
-                                        (const MethodInfo_3512518 *)Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__);
+                                        (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__);
 }
 
 
@@ -147,19 +147,19 @@ int32_t __fastcall UserProfileMaster__GetOtherUserSum(UserProfileMaster_o *this,
   Il2CppObject *Item; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4A70BE5 & 1) == 0 )
+  if ( (byte_4AB6AD8 & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_1B90010(&UserProfileEntity_TypeInfo, v4);
-    byte_4A70BE5 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_1BAB41C(&UserProfileEntity_TypeInfo, v4);
+    byte_4AB6AD8 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v7 = Count;
@@ -173,7 +173,7 @@ int32_t __fastcall UserProfileMaster__GetOtherUserSum(UserProfileMaster_o *this,
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v9,
-               (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
         methodPtr_low = LOBYTE(UserProfileEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -187,7 +187,7 @@ int32_t __fastcall UserProfileMaster__GetOtherUserSum(UserProfileMaster_o *this,
         return v8;
     }
 LABEL_15:
-    sub_1B9026C(list, method);
+    sub_1BAB678(list, method);
   }
   return 0;
 }

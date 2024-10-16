@@ -5,20 +5,20 @@ void __fastcall UserItemListViewItemDraw___ctor(UserItemListViewItemDraw_o *this
   struct System_Single_array *v5; // x20
   System_RuntimeFieldHandle_o v6; // 0:w1.4
 
-  if ( (byte_4A6B445 & 1) == 0 )
+  if ( (byte_4AB1299 & 1) == 0 )
   {
-    sub_1B90010(&float___TypeInfo, method);
-    sub_1B90010(
+    sub_1BAB41C(&float___TypeInfo, method);
+    sub_1BAB41C(
       &Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD,
       v3);
-    byte_4A6B445 = 1;
+    byte_4AB1299 = 1;
   }
-  v4 = (System_Array_o *)sub_1B900B8(float___TypeInfo, 5LL);
+  v4 = (System_Array_o *)sub_1BAB4C4(float___TypeInfo, 5LL);
   v6.fields.value = Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD;
   v5 = (struct System_Single_array *)v4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61695172(v4, v6, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61956208(v4, v6, 0LL);
   this->fields.enableTimePos = v5;
-  sub_1B8FFB4(&this->fields.enableTimePos);
+  sub_1BAB3C0(&this->fields.enableTimePos);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -48,30 +48,30 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
   UserItemListViewItemDraw_o *Time; // x0
   const MethodInfo *v24; // x3
 
-  if ( (byte_4A6B444 & 1) == 0 )
+  if ( (byte_4AB1298 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&NetworkManager_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_13375/*"TIME_REST_USER_ITEM"*/, v4);
-    sub_1B90010(&StringLiteral_13331/*"TIME_OVER_USER_ITEM"*/, v5);
-    sub_1B90010(&StringLiteral_13332/*"TIME_OVER_WORD"*/, v6);
-    sub_1B90010(&StringLiteral_13338/*"TIME_REST2_TIMEOVER"*/, v7);
-    byte_4A6B444 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_13380/*"TIME_REST_USER_ITEM"*/, v4);
+    sub_1BAB41C(&StringLiteral_13336/*"TIME_OVER_USER_ITEM"*/, v5);
+    sub_1BAB41C(&StringLiteral_13337/*"TIME_OVER_WORD"*/, v6);
+    sub_1BAB41C(&StringLiteral_13343/*"TIME_REST2_TIMEOVER"*/, v7);
+    byte_4AB1298 = 1;
   }
   dispEndTime = this->fields.dispEndTime;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   RestTime2 = LocalizationManager__GetRestTime2(dispEndTime, -1LL, 0LL);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13338/*"TIME_REST2_TIMEOVER"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13343/*"TIME_REST2_TIMEOVER"*/, 0LL);
   v11 = System_String__op_Equality(RestTime2, v10, 0LL);
   stringLabel = this->fields.stringLabel;
   v13 = v11;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( v13 )
-    v14 = (System_String_o **)&StringLiteral_13331/*"TIME_OVER_USER_ITEM"*/;
+    v14 = (System_String_o **)&StringLiteral_13336/*"TIME_OVER_USER_ITEM"*/;
   else
-    v14 = (System_String_o **)&StringLiteral_13375/*"TIME_REST_USER_ITEM"*/;
+    v14 = (System_String_o **)&StringLiteral_13380/*"TIME_REST_USER_ITEM"*/;
   gameObject = LocalizationManager__Get(*v14, 0LL);
   if ( !stringLabel )
     goto LABEL_24;
@@ -81,7 +81,7 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_13332/*"TIME_OVER_WORD"*/, 0LL);
+    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_13337/*"TIME_OVER_WORD"*/, 0LL);
     RestTime2 = gameObject;
   }
   if ( !enableTimeLabel
@@ -95,11 +95,11 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
     || (enableTimePos = this->fields.enableTimePos) == 0LL )
   {
 LABEL_24:
-    sub_1B9026C(gameObject, v16);
+    sub_1BAB678(gameObject, v16);
   }
   stringLength = mText->fields._stringLength;
   if ( (unsigned int)stringLength >= enableTimePos->max_length )
-    sub_1B90274(gameObject, v16);
+    sub_1BAB680(gameObject, v16);
   GameObjectExtensions__SetLocalPositionX(
     (UnityEngine_GameObject_o *)gameObject,
     enableTimePos->m_Items[stringLength + 1],
@@ -128,13 +128,13 @@ void __fastcall UserItemListViewItemDraw__SetInput(
   int64_t v14; // x21
   const MethodInfo *v15; // x1
 
-  if ( (byte_4A6B443 & 1) == 0 )
+  if ( (byte_4AB1297 & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, item);
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B90010(&StringLiteral_12720/*"SetEnableTime"*/, v9);
-    byte_4A6B443 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, item);
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BAB41C(&StringLiteral_12722/*"SetEnableTime"*/, v9);
+    byte_4AB1297 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -146,7 +146,7 @@ void __fastcall UserItemListViewItemDraw__SetInput(
       goto LABEL_25;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     Component_object,
-                                                    (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                    (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !Component_object )
       goto LABEL_25;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
@@ -177,7 +177,7 @@ void __fastcall UserItemListViewItemDraw__SetInput(
                                                          0LL)) == 0LL) )
   {
 LABEL_25:
-    sub_1B9026C(Component_object, v11);
+    sub_1BAB678(Component_object, v11);
   }
   if ( itemLostTime < v14 )
   {
@@ -190,13 +190,13 @@ LABEL_25:
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0LL);
         UserItemListViewItemDraw__SetEnableTime(this, v15);
-        if ( !UnityEngine_MonoBehaviour__IsInvoking_69524156(
+        if ( !UnityEngine_MonoBehaviour__IsInvoking_69785336(
                 (UnityEngine_MonoBehaviour_o *)this,
-                (System_String_o *)StringLiteral_12720/*"SetEnableTime"*/,
+                (System_String_o *)StringLiteral_12722/*"SetEnableTime"*/,
                 0LL) )
           UnityEngine_MonoBehaviour__InvokeRepeating(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_12720/*"SetEnableTime"*/,
+            (System_String_o *)StringLiteral_12722/*"SetEnableTime"*/,
             1.0,
             1.0,
             0LL);
@@ -213,14 +213,14 @@ LABEL_25:
   if ( !Component_object )
     goto LABEL_25;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 0, 0LL);
-  if ( UnityEngine_MonoBehaviour__IsInvoking_69524156(
+  if ( UnityEngine_MonoBehaviour__IsInvoking_69785336(
          (UnityEngine_MonoBehaviour_o *)this,
-         (System_String_o *)StringLiteral_12720/*"SetEnableTime"*/,
+         (System_String_o *)StringLiteral_12722/*"SetEnableTime"*/,
          0LL) )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_69524020(
+    UnityEngine_MonoBehaviour__CancelInvoke_69785200(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12720/*"SetEnableTime"*/,
+      (System_String_o *)StringLiteral_12722/*"SetEnableTime"*/,
       0LL);
   }
 }
@@ -270,22 +270,22 @@ void __fastcall UserItemListViewItemDraw__SetItem(
   int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4A6B442 & 1) == 0 )
+  if ( (byte_4AB1296 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_int__TypeInfo, item);
-    sub_1B90010(&BalanceConfig_TypeInfo, v7);
-    sub_1B90010(&Method_DataManager_GetMaster_ItemMaster___, v8);
-    sub_1B90010(&DataManager_TypeInfo, v9);
-    sub_1B90010(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v10);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, v11);
-    sub_1B90010(&int_TypeInfo, v12);
-    sub_1B90010(&LocalizationManager_TypeInfo, v13);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B90010(&Method_UserItemListViewItemDraw__SetItem_b__10_0__, v15);
-    sub_1B90010(&StringLiteral_14823/*"UNIT_INFO_LIMITED"*/, v16);
-    sub_1B90010(&StringLiteral_12720/*"SetEnableTime"*/, v17);
-    sub_1B90010(&StringLiteral_14824/*"UNIT_INFO_LIMITED_MAX"*/, v18);
-    byte_4A6B442 = 1;
+    sub_1BAB41C(&System_Action_int__TypeInfo, item);
+    sub_1BAB41C(&BalanceConfig_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataManager_GetMaster_ItemMaster___, v8);
+    sub_1BAB41C(&DataManager_TypeInfo, v9);
+    sub_1BAB41C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v10);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, v11);
+    sub_1BAB41C(&int_TypeInfo, v12);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v13);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BAB41C(&Method_UserItemListViewItemDraw__SetItem_b__10_0__, v15);
+    sub_1BAB41C(&StringLiteral_14828/*"UNIT_INFO_LIMITED"*/, v16);
+    sub_1BAB41C(&StringLiteral_12722/*"SetEnableTime"*/, v17);
+    sub_1BAB41C(&StringLiteral_14829/*"UNIT_INFO_LIMITED_MAX"*/, v18);
+    byte_4AB1296 = 1;
   }
   entity = 0LL;
   if ( item && mode )
@@ -309,20 +309,20 @@ void __fastcall UserItemListViewItemDraw__SetItem(
     if ( item->fields.itemType == 2 )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v23 = (System_Action_int__o *)sub_1B9025C(System_Action_int__TypeInfo);
+      v23 = (System_Action_int__o *)sub_1BAB668(System_Action_int__TypeInfo);
       System_Action_int____ctor(v23, (Il2CppObject *)this, Method_UserItemListViewItemDraw__SetItem_b__10_0__, 0LL);
       StoneCountRefreshComponent__AttachToGameObject(gameObject, v23, 1, 0LL);
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    itemIconInfo = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ItemMaster___);
+    itemIconInfo = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ItemMaster___);
     if ( !itemIconInfo )
       goto LABEL_46;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)itemIconInfo,
            &entity,
            item->fields.itemId,
-           (const MethodInfo_312C5FC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+           (const MethodInfo_3163DE4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     {
       itemIconInfo = (ItemIconComponent_o *)entity;
       if ( !entity )
@@ -335,9 +335,9 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         v24 = this->fields.numTextLabel;
         v25 = item->fields.itemNum;
         if ( v25 >= ItemEntity__GetMaxNum((ItemEntity_o *)entity, 0LL) )
-          v26 = (System_String_o **)&StringLiteral_14824/*"UNIT_INFO_LIMITED_MAX"*/;
+          v26 = (System_String_o **)&StringLiteral_14829/*"UNIT_INFO_LIMITED_MAX"*/;
         else
-          v26 = (System_String_o **)&StringLiteral_14823/*"UNIT_INFO_LIMITED"*/;
+          v26 = (System_String_o **)&StringLiteral_14828/*"UNIT_INFO_LIMITED"*/;
         v27 = *v26;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -349,7 +349,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         v32 = (Il2CppObject *)itemIconInfo;
         MaxNum = ItemEntity__GetMaxNum((ItemEntity_o *)entity, 0LL);
         v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MaxNum, v33, v34, v35);
-        itemIconInfo = (ItemIconComponent_o *)System_String__Format_61801464(v28, v32, v36, 0LL);
+        itemIconInfo = (ItemIconComponent_o *)System_String__Format_62062500(v28, v32, v36, 0LL);
         if ( !v24 )
           goto LABEL_46;
         UILabel__set_text(v24, (System_String_o *)itemIconInfo, 0LL);
@@ -387,7 +387,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
       UserItemListViewItemDraw__SetEnableTime(this, v39);
       UnityEngine_MonoBehaviour__InvokeRepeating(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_12720/*"SetEnableTime"*/,
+        (System_String_o *)StringLiteral_12722/*"SetEnableTime"*/,
         1.0,
         1.0,
         0LL);
@@ -415,7 +415,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
       goto LABEL_46;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)itemIconInfo,
-                         (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                         (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     itemIconInfo = (ItemIconComponent_o *)UnityEngine_Object__op_Inequality(
@@ -430,7 +430,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         return;
       }
 LABEL_46:
-      sub_1B9026C(itemIconInfo, item);
+      sub_1BAB678(itemIconInfo, item);
     }
   }
 }
@@ -446,7 +446,7 @@ void __fastcall UserItemListViewItemDraw__SetRemainTimeColor(
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !label )
-    sub_1B9026C(this, remainTime);
+    sub_1BAB678(this, remainTime);
   v6.fields.r = 255.0;
   v6.fields.b = 0.0;
   v6.fields.g = 255.0;
@@ -475,16 +475,16 @@ void __fastcall UserItemListViewItemDraw___SetItem_b__10_0(
   System_String_o *UnitInfo; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A6B446 & 1) == 0 )
+  if ( (byte_4AB129A & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
-    byte_4A6B446 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
+    byte_4AB129A = 1;
   }
   numTextLabel = this->fields.numTextLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   UnitInfo = LocalizationManager__GetUnitInfo(stoneCount, 0LL);
   if ( !numTextLabel )
-    sub_1B9026C(UnitInfo, v7);
+    sub_1BAB678(UnitInfo, v7);
   UILabel__set_text(numTextLabel, UnitInfo, 0LL);
 }

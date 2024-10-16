@@ -16,13 +16,13 @@ void __fastcall ClassBoardLockModel___ctor(
   int32_t v15; // w3
   const MethodInfo *v16; // x3
 
-  if ( (byte_4A7334C & 1) == 0 )
+  if ( (byte_4AB926F & 1) == 0 )
   {
-    sub_1B90010(&ClassBoardLockUser_TypeInfo, entity);
-    sub_1B90010(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v5);
-    sub_1B90010(&DataManager_TypeInfo, v6);
-    sub_1B90010(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v7);
-    byte_4A7334C = 1;
+    sub_1BAB41C(&ClassBoardLockUser_TypeInfo, entity);
+    sub_1BAB41C(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v5);
+    sub_1BAB41C(&DataManager_TypeInfo, v6);
+    sub_1BAB41C(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v7);
+    byte_4AB926F = 1;
   }
   ClassBoardSquareModel___ctor((ClassBoardSquareModel_o *)this, entity, method);
   if ( !entity )
@@ -30,22 +30,22 @@ void __fastcall ClassBoardLockModel___ctor(
   this->fields.lockId = entity->fields.lockId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_object
     || (v10 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                 this->fields.lockId,
-                (const MethodInfo_312C5A8 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__),
-        v11 = sub_1B9025C(ClassBoardLockUser_TypeInfo),
+                (const MethodInfo_3163D90 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__),
+        v11 = sub_1BAB668(ClassBoardLockUser_TypeInfo),
         System_Object___ctor((Il2CppObject *)v11, 0LL),
         *(_QWORD *)(v11 + 24) = entity,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)entity, v12, v13),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 24), (int32_t)entity, v12, v13),
         this->fields.user = (struct IClassBoardSquareUser_o *)v11,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.user, v11, v14, v15),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.user, v11, v14, v15),
         !v10) )
   {
 LABEL_9:
-    sub_1B9026C(Master_object, v9);
+    sub_1BAB678(Master_object, v9);
   }
   ClassBoardSquareModel__InitializeItemList(
     (ClassBoardSquareModel_o *)this,
@@ -98,14 +98,14 @@ int32_t __fastcall ClassBoardLockModel__GetAcquireFlag(
   ClassBoardCondData_o CondData; // [xsp+0h] [xbp-50h] BYREF
   ClassBoardCondData_o v42; // 0:x0.12
 
-  if ( (byte_4A7334D & 1) == 0 )
+  if ( (byte_4AB9270 & 1) == 0 )
   {
-    sub_1B90010(&IClassBoardItemModel_TypeInfo, checkedBlankIdHashSet);
-    sub_1B90010(&System_IDisposable_TypeInfo, v5);
-    sub_1B90010(&System_Collections_Generic_IEnumerable_IClassBoardItemModel__TypeInfo, v6);
-    sub_1B90010(&System_Collections_Generic_IEnumerator_IClassBoardItemModel__TypeInfo, v7);
-    sub_1B90010(&System_Collections_IEnumerator_TypeInfo, v8);
-    byte_4A7334D = 1;
+    sub_1BAB41C(&IClassBoardItemModel_TypeInfo, checkedBlankIdHashSet);
+    sub_1BAB41C(&System_IDisposable_TypeInfo, v5);
+    sub_1BAB41C(&System_Collections_Generic_IEnumerable_IClassBoardItemModel__TypeInfo, v6);
+    sub_1BAB41C(&System_Collections_Generic_IEnumerator_IClassBoardItemModel__TypeInfo, v7);
+    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v8);
+    byte_4AB9270 = 1;
   }
   AcquireFlag = ClassBoardSquareModel__GetAcquireFlag((ClassBoardSquareModel_o *)this, checkedBlankIdHashSet, method);
   if ( (AcquireFlag & 1) == 0 )
@@ -118,7 +118,7 @@ int32_t __fastcall ClassBoardLockModel__GetAcquireFlag(
     if ( !IsOpen )
       AcquireFlag |= 4u;
     if ( !itemList )
-      sub_1B9026C(IsOpen, v13);
+      sub_1BAB678(IsOpen, v13);
     klass = itemList->klass;
     v16 = *(unsigned __int16 *)(&itemList->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&itemList->klass->_2.bitflags2 + 3) )
@@ -136,13 +136,13 @@ int32_t __fastcall ClassBoardLockModel__GetAcquireFlag(
     else
     {
 LABEL_11:
-      v18 = sub_1BE1FF0(itemList, System_Collections_Generic_IEnumerable_IClassBoardItemModel__TypeInfo, 0LL);
+      v18 = sub_1BFD3FC(itemList, System_Collections_Generic_IEnumerable_IClassBoardItemModel__TypeInfo, 0LL);
     }
     v20 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_List_IClassBoardItemModel__o *, _QWORD))v18)(
             itemList,
             *(_QWORD *)(v18 + 8));
     if ( !v20 )
-      sub_1B9026C(0LL, v19);
+      sub_1BAB678(0LL, v19);
     while ( 1 )
     {
       v21 = *(_QWORD *)v20;
@@ -162,7 +162,7 @@ LABEL_11:
       else
       {
 LABEL_18:
-        v24 = sub_1BE1FF0(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v24 = sub_1BFD3FC(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
       if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
         break;
@@ -183,12 +183,12 @@ LABEL_18:
       else
       {
 LABEL_25:
-        v28 = sub_1BE1FF0(v20, System_Collections_Generic_IEnumerator_IClassBoardItemModel__TypeInfo, 0LL);
+        v28 = sub_1BFD3FC(v20, System_Collections_Generic_IEnumerator_IClassBoardItemModel__TypeInfo, 0LL);
       }
       v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
       v31 = v29;
       if ( !v29 )
-        sub_1B9026C(0LL, v30);
+        sub_1BAB678(0LL, v30);
       v32 = *(_QWORD *)v29;
       v33 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
       if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
@@ -206,7 +206,7 @@ LABEL_25:
       else
       {
 LABEL_32:
-        v35 = sub_1BE1FF0(v29, IClassBoardItemModel_TypeInfo, 2LL);
+        v35 = sub_1BFD3FC(v29, IClassBoardItemModel_TypeInfo, 2LL);
       }
       if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v35)(v31, *(_QWORD *)(v35 + 8)) & 1) == 0 )
       {
@@ -231,7 +231,7 @@ LABEL_32:
     else
     {
 LABEL_40:
-      v39 = sub_1BE1FF0(v20, System_IDisposable_TypeInfo, 0LL);
+      v39 = sub_1BFD3FC(v20, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v39)(v20, *(_QWORD *)(v39 + 8));
   }
@@ -255,12 +255,12 @@ ClassBoardCondData_o __fastcall ClassBoardLockModel__get_CondData(
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   v8.fields.Num = entity->fields.lockId;
   *(_QWORD *)&v8.fields.Type = &v6;
   v7 = 0;
   v6 = 0LL;
-  ClassBoardCondData___ctor_44592952(v8, 0, v2);
+  ClassBoardCondData___ctor_44967024(v8, 0, v2);
   v4 = v6;
   v5 = v7;
   *(_QWORD *)&result.fields.Type = v4;

@@ -1,10 +1,10 @@
 void __fastcall BattleMenuWindowComponent___ctor(BattleMenuWindowComponent_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.waveRestartButtonPosInInterruptionQuest.fields.x = xmmword_BB8870;
-  *(_OWORD *)&this->fields.retireButtonPosInInterruptionQuest.fields.y = xmmword_BB8880;
+  *(_OWORD *)&this->fields.waveRestartButtonPosInInterruptionQuest.fields.x = xmmword_BC4510;
+  *(_OWORD *)&this->fields.retireButtonPosInInterruptionQuest.fields.y = xmmword_BC4520;
   __asm { FMOV            V0.2S, #1.0 }
-  *(_OWORD *)&this->fields.classChartPosInWaveRestartQuest.fields.z = xmmword_BB8300;
-  *(_OWORD *)&this->fields.closeButtonPosInInterruptionQuest.fields.x = xmmword_BB78B0;
+  *(_OWORD *)&this->fields.classChartPosInWaveRestartQuest.fields.z = xmmword_BC3FA0;
+  *(_OWORD *)&this->fields.closeButtonPosInInterruptionQuest.fields.x = xmmword_BC3550;
   *(_QWORD *)&this->fields.waveRestartButtonLabelScaleInInterruptionQuest.fields.y = _D0;
   BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0LL);
 }
@@ -26,21 +26,21 @@ void __fastcall BattleMenuWindowComponent__CancelInterruption(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A72CB8 & 1) == 0 )
+  if ( (byte_4AB8BDE & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent__CancelInterruption_b__60_0__, method);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    byte_4A72CB8 = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__CancelInterruption_b__60_0__, method);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_4AB8BDE = 1;
   }
   interruptionWindow = this->fields.interruptionWindow;
-  v5 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+  v5 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v5,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent__CancelInterruption_b__60_0__,
     0LL);
   if ( !interruptionWindow )
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   ((void (__fastcall *)(struct BattleWindowInterruptionComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))interruptionWindow->klass->vtable._12_Close.method)(
     interruptionWindow,
     v5,
@@ -61,14 +61,14 @@ void __fastcall BattleMenuWindowComponent__CheckCanOpenWaveRestartOrInterruption
   System_Reflection_MethodBase_o *v9; // x0
   struct System_String_o *Empty; // x20
 
-  if ( (byte_4A72CB3 & 1) == 0 )
+  if ( (byte_4AB8BD9 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__, method);
-    sub_1B90010(&string_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_3398/*"CANCEL"*/, v4);
-    sub_1B90010(&StringLiteral_9655/*"OPEN_WAVE_RESTART_WINDOW"*/, v5);
-    sub_1B90010(&StringLiteral_9643/*"OPEN_INTERRUPTION_WINDOW"*/, v6);
-    byte_4A72CB3 = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__, method);
+    sub_1BAB41C(&string_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_3395/*"CANCEL"*/, v4);
+    sub_1BAB41C(&StringLiteral_9655/*"OPEN_WAVE_RESTART_WINDOW"*/, v5);
+    sub_1BAB41C(&StringLiteral_9643/*"OPEN_INTERRUPTION_WINDOW"*/, v6);
+    byte_4AB8BD9 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -95,7 +95,7 @@ LABEL_13:
     if ( data )
       goto LABEL_20;
 LABEL_21:
-    sub_1B9026C(data, method);
+    sub_1BAB678(data, method);
   }
   if ( BattleData__IsInterruptionQuest(data, 0LL) )
   {
@@ -112,13 +112,13 @@ LABEL_21:
   }
   v8 = Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v8, v8[4]);
+    v8 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_CheckCanOpenWaveRestartOrInterruption__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1BAB400(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0LL);
   data = (BattleData_o *)this->fields.myFsm;
   if ( !data )
     goto LABEL_21;
-  method = (const MethodInfo *)StringLiteral_3398/*"CANCEL"*/;
+  method = (const MethodInfo *)StringLiteral_3395/*"CANCEL"*/;
 LABEL_20:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)method, 0LL);
 }
@@ -142,10 +142,10 @@ void __fastcall BattleMenuWindowComponent__CloseInterruptionWindowGroup(
   WaveBattleSelectWaveDialog_o *v5; // x0
   UnityEngine_Object_o *waveSelectDialog; // x20
 
-  if ( (byte_4A72CBB & 1) == 0 )
+  if ( (byte_4AB8BE1 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A72CBB = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB8BE1 = 1;
   }
   BattleWindowComponent__Close((BattleWindowComponent_o *)this, 0LL, 0LL);
   interruptionWindow = (UnityEngine_Object_o *)this->fields.interruptionWindow;
@@ -173,7 +173,7 @@ void __fastcall BattleMenuWindowComponent__CloseInterruptionWindowGroup(
       return;
     }
 LABEL_14:
-    sub_1B9026C(v5, v4);
+    sub_1BAB678(v5, v4);
   }
 }
 
@@ -188,21 +188,21 @@ void __fastcall BattleMenuWindowComponent__CloseWaveRestartWindow(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A72CB5 & 1) == 0 )
+  if ( (byte_4AB8BDB & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent__CloseWaveRestartWindow_b__57_0__, method);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    byte_4A72CB5 = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__CloseWaveRestartWindow_b__57_0__, method);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_4AB8BDB = 1;
   }
   waveRestartWindow = this->fields.waveRestartWindow;
-  v5 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+  v5 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v5,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent__CloseWaveRestartWindow_b__57_0__,
     0LL);
   if ( !waveRestartWindow )
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   ((void (__fastcall *)(struct BattleWindowContinueWaveRestartComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))waveRestartWindow->klass->vtable._12_Close.method)(
     waveRestartWindow,
     v5,
@@ -220,10 +220,10 @@ void __fastcall BattleMenuWindowComponent__CompOpen(BattleMenuWindowComponent_o 
 {
   UnityEngine_GameObject_o *data; // x0
 
-  if ( (byte_4A72CA8 & 1) == 0 )
+  if ( (byte_4AB8BCE & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
-    byte_4A72CA8 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
+    byte_4AB8BCE = 1;
   }
   data = (UnityEngine_GameObject_o *)this->fields.data;
   if ( !data )
@@ -235,7 +235,7 @@ void __fastcall BattleMenuWindowComponent__CompOpen(BattleMenuWindowComponent_o 
     {
       data = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                            data,
-                                           (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                           (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( data )
       {
         UIWidget__ResizeCollider((UIWidget_o *)data, 0LL);
@@ -244,7 +244,7 @@ void __fastcall BattleMenuWindowComponent__CompOpen(BattleMenuWindowComponent_o 
         {
           data = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                data,
-                                               (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                               (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
           if ( data )
           {
             UIWidget__ResizeCollider((UIWidget_o *)data, 0LL);
@@ -253,7 +253,7 @@ void __fastcall BattleMenuWindowComponent__CompOpen(BattleMenuWindowComponent_o 
             {
               data = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    data,
-                                                   (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                   (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
               if ( data )
               {
                 UIWidget__ResizeCollider((UIWidget_o *)data, 0LL);
@@ -265,7 +265,7 @@ void __fastcall BattleMenuWindowComponent__CompOpen(BattleMenuWindowComponent_o 
       }
     }
 LABEL_13:
-    sub_1B9026C(data, method);
+    sub_1BAB678(data, method);
   }
 LABEL_12:
   BattleWindowComponent__CompOpen((BattleWindowComponent_o *)this, 0LL);
@@ -285,22 +285,22 @@ void __fastcall BattleMenuWindowComponent__Init(BattleMenuWindowComponent_o *thi
   __int64 v11; // x1
   AssetData_o *data; // x0
 
-  if ( (byte_4A72CA6 & 1) == 0 )
+  if ( (byte_4AB8BCC & 1) == 0 )
   {
-    sub_1B90010(&Method_AssetData_GetObject_GameObject____76169496, method);
-    sub_1B90010(&AssetManager_TypeInfo, v3);
-    sub_1B90010(&AtlasManager_TypeInfo, v4);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v5);
-    sub_1B90010(&StringLiteral_3210/*"Battle/Common"*/, v6);
-    sub_1B90010(&StringLiteral_3228/*"BattleAssetUIAtlas"*/, v7);
-    sub_1B90010(&StringLiteral_20303/*"img_classchart"*/, v8);
-    sub_1B90010(&StringLiteral_17701/*"buttontxt_save"*/, v9);
-    byte_4A72CA6 = 1;
+    sub_1BAB41C(&Method_AssetData_GetObject_GameObject____76450888, method);
+    sub_1BAB41C(&AssetManager_TypeInfo, v3);
+    sub_1BAB41C(&AtlasManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v5);
+    sub_1BAB41C(&StringLiteral_3205/*"Battle/Common"*/, v6);
+    sub_1BAB41C(&StringLiteral_3223/*"BattleAssetUIAtlas"*/, v7);
+    sub_1BAB41C(&StringLiteral_20306/*"img_classchart"*/, v8);
+    sub_1BAB41C(&StringLiteral_17706/*"buttontxt_save"*/, v9);
+    byte_4AB8BCC = 1;
   }
   classChartSp = this->fields.classChartSp;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetClassChart(classChartSp, (System_String_o *)StringLiteral_20303/*"img_classchart"*/, 0LL);
+  AtlasManager__SetClassChart(classChartSp, (System_String_o *)StringLiteral_20306/*"img_classchart"*/, 0LL);
   data = (AssetData_o *)this->fields.data;
   if ( !data )
     goto LABEL_16;
@@ -308,25 +308,25 @@ void __fastcall BattleMenuWindowComponent__Init(BattleMenuWindowComponent_o *thi
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    data = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3210/*"Battle/Common"*/, 0LL);
+    data = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3205/*"Battle/Common"*/, 0LL);
     if ( data )
     {
-      data = (AssetData_o *)AssetData__GetObject_object__48695184(
+      data = (AssetData_o *)AssetData__GetObject_object__48916712(
                               data,
-                              (System_String_o *)StringLiteral_3228/*"BattleAssetUIAtlas"*/,
-                              (const MethodInfo_2E70790 *)Method_AssetData_GetObject_GameObject____76169496);
+                              (System_String_o *)StringLiteral_3223/*"BattleAssetUIAtlas"*/,
+                              (const MethodInfo_2EA68E8 *)Method_AssetData_GetObject_GameObject____76450888);
       if ( data )
       {
         data = (AssetData_o *)UnityEngine_GameObject__GetComponent_object_(
                                 (UnityEngine_GameObject_o *)data,
-                                (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
         if ( this->fields.interruptionButtonLabelSprite )
         {
           UISprite__set_atlas(this->fields.interruptionButtonLabelSprite, (UIAtlas_o *)data, 0LL);
           data = (AssetData_o *)this->fields.interruptionButtonLabelSprite;
           if ( data )
           {
-            UISprite__set_spriteName((UISprite_o *)data, (System_String_o *)StringLiteral_17701/*"buttontxt_save"*/, 0LL);
+            UISprite__set_spriteName((UISprite_o *)data, (System_String_o *)StringLiteral_17706/*"buttontxt_save"*/, 0LL);
             data = (AssetData_o *)this->fields.interruptionButtonLabelSprite;
             if ( data )
             {
@@ -340,7 +340,7 @@ void __fastcall BattleMenuWindowComponent__Init(BattleMenuWindowComponent_o *thi
       }
     }
 LABEL_16:
-    sub_1B9026C(data, v11);
+    sub_1BAB678(data, v11);
   }
 }
 
@@ -426,18 +426,18 @@ void __fastcall BattleMenuWindowComponent__OpenImpl(
   UnityEngine_Color_o v65; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A72CA7 & 1) == 0 )
+  if ( (byte_4AB8BCD & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___, call);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_Collider___, v5);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___, v6);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
-    sub_1B90010(&LocalizationManager_TypeInfo, v8);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B90010(&StringLiteral_3552/*"CLICK_INTERRUPTION_MENU"*/, v10);
-    sub_1B90010(&StringLiteral_442/*"#606060"*/, v11);
-    sub_1B90010(&StringLiteral_2921/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/, v12);
-    byte_4A72CA7 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___, call);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_Collider___, v5);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___, v6);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v8);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BAB41C(&StringLiteral_3549/*"CLICK_INTERRUPTION_MENU"*/, v10);
+    sub_1BAB41C(&StringLiteral_437/*"#606060"*/, v11);
+    sub_1BAB41C(&StringLiteral_2916/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/, v12);
+    byte_4AB8BCD = 1;
   }
   *(_QWORD *)&v46.fields.r = 0LL;
   *(_QWORD *)&v46.fields.b = 0LL;
@@ -492,9 +492,9 @@ void __fastcall BattleMenuWindowComponent__OpenImpl(
         goto LABEL_141;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)checkRetireWindow,
-                           (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
+                           (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_BattleWindowInterruptionComponent___);
       *p_interruptionWindow = (struct BattleWindowInterruptionComponent_o *)Component_object;
-      sub_1B8FFB4(
+      sub_1BAB3C0(
         (ServantStatusBattleListViewItem_o *)&this->fields.interruptionWindow,
         (int32_t)Component_object,
         v17,
@@ -530,7 +530,7 @@ void __fastcall BattleMenuWindowComponent__OpenImpl(
       goto LABEL_141;
     checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)checkRetireWindow,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !checkRetireWindow )
       goto LABEL_141;
     v61.fields.r = 0.5;
@@ -543,7 +543,7 @@ void __fastcall BattleMenuWindowComponent__OpenImpl(
       goto LABEL_141;
     checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)checkRetireWindow,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
     if ( !checkRetireWindow )
       goto LABEL_141;
     v19 = 0;
@@ -562,7 +562,7 @@ LABEL_52:
       goto LABEL_141;
     checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      this->fields.RetireButton,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !checkRetireWindow )
       goto LABEL_141;
     v66.fields.r = 1.0;
@@ -575,7 +575,7 @@ LABEL_52:
       goto LABEL_141;
     checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)checkRetireWindow,
-                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
     if ( !checkRetireWindow )
       goto LABEL_141;
     v19 = 1;
@@ -585,7 +585,7 @@ LABEL_52:
     goto LABEL_141;
   v21 = UnityEngine_GameObject__GetComponent_object_(
           this->fields.RetireButton,
-          (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+          (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_Object__op_Inequality(
@@ -603,7 +603,7 @@ LABEL_52:
     goto LABEL_141;
   v22 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)checkRetireWindow,
-          (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+          (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_Object__op_Inequality(
@@ -671,7 +671,7 @@ LABEL_53:
     {
       checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        (UnityEngine_GameObject_o *)checkRetireWindow,
-                                                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( checkRetireWindow )
       {
         v25 = (UIWidget_o *)checkRetireWindow;
@@ -696,13 +696,13 @@ LABEL_53:
             if ( checkRetireWindow )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkRetireWindow, 1, 0LL);
-              UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_442/*"#606060"*/, &v46, 0LL);
+              UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_437/*"#606060"*/, &v46, 0LL);
               checkRetireWindow = (BattleWindowComponent_o *)this->fields.waveRestartButton;
               if ( checkRetireWindow )
               {
                 checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                  (UnityEngine_GameObject_o *)checkRetireWindow,
-                                                                 (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                 (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
                 data = this->fields.data;
                 if ( data )
                 {
@@ -759,7 +759,7 @@ LABEL_68:
                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       checkRetireWindow = (BattleWindowComponent_o *)LocalizationManager__Get(
-                                                                       (System_String_o *)StringLiteral_2921/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/,
+                                                                       (System_String_o *)StringLiteral_2916/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/,
                                                                        0LL);
                       if ( waveRestartExplanationLabel )
                       {
@@ -815,7 +815,7 @@ LABEL_104:
                                     {
                                       v39 = UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)checkRetireWindow,
-                                              (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
+                                              (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_SendEventToFsm___);
                                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                                       checkRetireWindow = (BattleWindowComponent_o *)UnityEngine_Object__op_Inequality(
@@ -826,9 +826,9 @@ LABEL_104:
                                       {
                                         if ( !v39 )
                                           goto LABEL_141;
-                                        v42 = StringLiteral_3552/*"CLICK_INTERRUPTION_MENU"*/;
-                                        v39[2].monitor = (void *)StringLiteral_3552/*"CLICK_INTERRUPTION_MENU"*/;
-                                        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v39[2].monitor, v42, v40, v41);
+                                        v42 = StringLiteral_3549/*"CLICK_INTERRUPTION_MENU"*/;
+                                        v39[2].monitor = (void *)StringLiteral_3549/*"CLICK_INTERRUPTION_MENU"*/;
+                                        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v39[2].monitor, v42, v40, v41);
                                       }
                                       UIWidget__set_width(v25, 160, 0LL);
                                       checkRetireWindow = (BattleWindowComponent_o *)this->fields.RetireButton;
@@ -941,7 +941,7 @@ LABEL_104:
       }
     }
 LABEL_141:
-    sub_1B9026C(checkRetireWindow, call);
+    sub_1BAB678(checkRetireWindow, call);
   }
 LABEL_106:
   if ( !ConstantMaster__IsFLAG20240804(0LL) )
@@ -1211,36 +1211,36 @@ void __fastcall BattleMenuWindowComponent__OpenInterruptionConfirmWindow(
   System_String_o *v19; // x24
   CommonConfirmDialog_ClickDelegate_o *v20; // x25
 
-  if ( (byte_4A72CBA & 1) == 0 )
+  if ( (byte_4AB8BE0 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_0__, v3);
-    sub_1B90010(&CommonConfirmDialog_ClickDelegate_TypeInfo, v4);
-    sub_1B90010(&LocalizationManager_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B90010(&StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, v7);
-    sub_1B90010(&StringLiteral_2901/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, v8);
-    sub_1B90010(&StringLiteral_3756/*"COMMON_CONFIRM_CANCEL"*/, v9);
-    sub_1B90010(&StringLiteral_2900/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, v10);
-    byte_4A72CBA = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_0__, v3);
+    sub_1BAB41C(&CommonConfirmDialog_ClickDelegate_TypeInfo, v4);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BAB41C(&StringLiteral_2898/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, v7);
+    sub_1BAB41C(&StringLiteral_2896/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, v8);
+    sub_1BAB41C(&StringLiteral_3753/*"COMMON_CONFIRM_CANCEL"*/, v9);
+    sub_1BAB41C(&StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, v10);
+    byte_4AB8BE0 = 1;
   }
   v11 = Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__ + 83) & 2) != 0 )
-    v11 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__);
-  v12 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v11, v11[4]);
+    v11 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_OpenInterruptionConfirmWindow__);
+  v12 = (System_Reflection_MethodBase_o *)sub_1BAB400(v11, v11[4]);
   OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   CommonUI__SetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0, 0LL);
-  v15 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v15 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2901/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, 0LL);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_2900/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0LL);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3756/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
-  v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B9025C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2896/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_2895/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2898/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3753/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BAB668(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v20,
     (Il2CppObject *)this,
@@ -1248,7 +1248,7 @@ void __fastcall BattleMenuWindowComponent__OpenInterruptionConfirmWindow(
     0LL);
   if ( !v15 )
 LABEL_10:
-    sub_1B9026C(Instance, v14);
+    sub_1BAB678(Instance, v14);
   CommonUI__OpenConfirmDecideDialog((CommonUI_o *)v15, v16, v17, v18, v19, v20, 23, 280, 13.0, 22, 1, 0LL);
 }
 
@@ -1275,36 +1275,36 @@ void __fastcall BattleMenuWindowComponent__OpenInterruptionWindow(
   struct BattleWindowInterruptionComponent_o *v18; // x20
   BattleWindowComponent_EndCall_o *v19; // x21
 
-  if ( (byte_4A72CB7 & 1) == 0 )
+  if ( (byte_4AB8BDD & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent_OpenInterruptionWindow__, v3);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_0__, v4);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_1__, v5);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_2__, v6);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_3__, v7);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v8);
-    byte_4A72CB7 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_OpenInterruptionWindow__, v3);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_0__, v4);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_1__, v5);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_2__, v6);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_3__, v7);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v8);
+    byte_4AB8BDD = 1;
   }
   v9 = Method_BattleMenuWindowComponent_OpenInterruptionWindow__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_OpenInterruptionWindow__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_OpenInterruptionWindow__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v9, v9[4]);
+    v9 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_OpenInterruptionWindow__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1BAB400(v9, v9[4]);
   OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0LL);
   interruptionWindow = this->fields.interruptionWindow;
-  v12 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v12,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_0__,
     0LL);
-  v13 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v13,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent__OpenInterruptionWindow_b__59_1__,
     0LL);
-  v14 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)this,
@@ -1323,7 +1323,7 @@ void __fastcall BattleMenuWindowComponent__OpenInterruptionWindow(
           data->fields.turnCount > 1,
           0LL),
         v18 = this->fields.interruptionWindow,
-        v19 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo),
+        v19 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v19,
           (Il2CppObject *)this,
@@ -1331,7 +1331,7 @@ void __fastcall BattleMenuWindowComponent__OpenInterruptionWindow(
           0LL),
         !v18) )
   {
-    sub_1B9026C(v15, v16);
+    sub_1BAB678(v15, v16);
   }
   ((void (__fastcall *)(struct BattleWindowInterruptionComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))v18->klass->vtable._10_Open.method)(
     v18,
@@ -1367,29 +1367,29 @@ void __fastcall BattleMenuWindowComponent__OpenWaveRestartWindow(
   struct BattleWindowContinueWaveRestartComponent_o *v23; // x20
   BattleWindowComponent_EndCall_o *v24; // x21
 
-  if ( (byte_4A72CB4 & 1) == 0 )
+  if ( (byte_4AB8BDA & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent_OpenWaveRestartWindow__, v3);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_0__, v4);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_1__, v5);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_2__, v6);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v7);
-    sub_1B90010(&LocalizationManager_TypeInfo, v8);
-    sub_1B90010(&StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, v9);
-    sub_1B90010(&StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, v10);
-    sub_1B90010(&StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_CANCEL_BUTTON"*/, v11);
-    sub_1B90010(&StringLiteral_3888/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, v12);
-    byte_4A72CB4 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_OpenWaveRestartWindow__, v3);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_0__, v4);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_1__, v5);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_2__, v6);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v7);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v8);
+    sub_1BAB41C(&StringLiteral_3882/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, v9);
+    sub_1BAB41C(&StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, v10);
+    sub_1BAB41C(&StringLiteral_3881/*"CONTINUE_WAVE_RESTART_WINDOW_CANCEL_BUTTON"*/, v11);
+    sub_1BAB41C(&StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, v12);
+    byte_4AB8BDA = 1;
   }
   waveRestartWindow = this->fields.waveRestartWindow;
-  v14 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent__OpenWaveRestartWindow_b__56_0__,
     0LL);
-  v15 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v15,
     (Il2CppObject *)this,
@@ -1397,20 +1397,20 @@ void __fastcall BattleMenuWindowComponent__OpenWaveRestartWindow(
     0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3888/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0LL);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3887/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0LL);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_CANCEL_BUTTON"*/, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3884/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3882/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3881/*"CONTINUE_WAVE_RESTART_WINDOW_CANCEL_BUTTON"*/, 0LL);
   if ( !waveRestartWindow )
     goto LABEL_10;
-  BattleWindowContinueWaveRestartComponent__SetWindow_44139932(waveRestartWindow, v14, v15, v16, v17, v18, v19, 0LL);
+  BattleWindowContinueWaveRestartComponent__SetWindow_44602684(waveRestartWindow, v14, v15, v16, v17, v18, v19, 0LL);
   v21 = Method_BattleMenuWindowComponent_OpenWaveRestartWindow__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_OpenWaveRestartWindow__ + 83) & 2) != 0 )
-    v21 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_OpenWaveRestartWindow__);
-  v22 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v21, v21[4]);
+    v21 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_OpenWaveRestartWindow__);
+  v22 = (System_Reflection_MethodBase_o *)sub_1BAB400(v21, v21[4]);
   OverwriteAssetSoundName__PlaySystemSe(v22, 0, 0LL);
   v23 = this->fields.waveRestartWindow;
-  v24 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+  v24 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v24,
     (Il2CppObject *)this,
@@ -1418,7 +1418,7 @@ void __fastcall BattleMenuWindowComponent__OpenWaveRestartWindow(
     0LL);
   if ( !v23 )
 LABEL_10:
-    sub_1B9026C(v19, v20);
+    sub_1BAB678(v19, v20);
   ((void (__fastcall *)(struct BattleWindowContinueWaveRestartComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))v23->klass->vtable._10_Open.method)(
     v23,
     v24,
@@ -1468,20 +1468,20 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectConfirmDialog(
   int32_t decideTxtSize; // w8
   int32_t v39; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A72CBD & 1) == 0 )
+  if ( (byte_4AB8BE3 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectConfirmDialog_b__65_0__, method);
-    sub_1B90010(&CommonConfirmDialog_ClickDelegate_TypeInfo, v3);
-    sub_1B90010(&LocalizationManager_TypeInfo, v4);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B90010(&StringLiteral_2910/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, v6);
-    sub_1B90010(&StringLiteral_2908/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, v7);
-    sub_1B90010(&StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, v8);
-    sub_1B90010(&StringLiteral_2909/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, v9);
-    sub_1B90010(&StringLiteral_2912/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, v10);
-    sub_1B90010(&StringLiteral_1221/*"00"*/, v11);
-    sub_1B90010(&StringLiteral_2911/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, v12);
-    byte_4A72CBD = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectConfirmDialog_b__65_0__, method);
+    sub_1BAB41C(&CommonConfirmDialog_ClickDelegate_TypeInfo, v3);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BAB41C(&StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, v6);
+    sub_1BAB41C(&StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, v7);
+    sub_1BAB41C(&StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, v8);
+    sub_1BAB41C(&StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, v9);
+    sub_1BAB41C(&StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, v10);
+    sub_1BAB41C(&StringLiteral_1217/*"00"*/, v11);
+    sub_1BAB41C(&StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, v12);
+    byte_4AB8BE3 = 1;
   }
   v39 = 0;
   data = this->fields.data;
@@ -1493,28 +1493,28 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectConfirmDialog(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( selectedInterruptionWave == DispWaveCount )
   {
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2911/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, 0LL);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2906/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, 0LL);
     v16 = this->fields.data;
     if ( !v16 )
       goto LABEL_28;
     v17 = (System_String_o *)data;
-    v18 = (Il2CppObject *)System_Int32__ToString_62592372((int)v16 + 1040, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
+    v18 = (Il2CppObject *)System_Int32__ToString_62853408((int)v16 + 1040, (System_String_o *)StringLiteral_1217/*"00"*/, 0LL);
     v19 = System_String__Format(v17, v18, 0LL);
   }
   else
   {
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2910/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0LL);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2905/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, 0LL);
     v20 = this->fields.data;
     if ( !v20 )
       goto LABEL_28;
     v21 = (System_String_o *)data;
-    data = (BattleData_o *)System_Int32__ToString_62592372((int)v20 + 1040, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
+    data = (BattleData_o *)System_Int32__ToString_62853408((int)v20 + 1040, (System_String_o *)StringLiteral_1217/*"00"*/, 0LL);
     if ( !this->fields.data )
       goto LABEL_28;
     v22 = (Il2CppObject *)data;
     v39 = BattleData__getDispWaveCount(this->fields.data, 0LL);
-    v23 = (Il2CppObject *)System_Int32__ToString_62592372((int32_t)&v39, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
-    v19 = System_String__Format_61801464(v21, v22, v23, 0LL);
+    v23 = (Il2CppObject *)System_Int32__ToString_62853408((int32_t)&v39, (System_String_o *)StringLiteral_1217/*"00"*/, 0LL);
+    v19 = System_String__Format_62062500(v21, v22, v23, 0LL);
   }
   v24 = v19;
   data = this->fields.data;
@@ -1526,16 +1526,16 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectConfirmDialog(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( v25 == v26 )
   {
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2909/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2904/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, 0LL);
   }
   else
   {
-    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2908/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0LL);
+    data = (BattleData_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2903/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, 0LL);
     v28 = this->fields.data;
     if ( !v28 )
       goto LABEL_28;
     v29 = (System_String_o *)data;
-    v30 = (Il2CppObject *)System_Int32__ToString_62592372((int)v28 + 1040, (System_String_o *)StringLiteral_1221/*"00"*/, 0LL);
+    v30 = (Il2CppObject *)System_Int32__ToString_62853408((int)v28 + 1040, (System_String_o *)StringLiteral_1217/*"00"*/, 0LL);
     v27 = System_String__Format(v29, v30, 0LL);
   }
   v31 = v27;
@@ -1544,16 +1544,16 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectConfirmDialog(
     goto LABEL_28;
   v32 = data->fields.selectedInterruptionWave;
   v33 = BattleData__getDispWaveCount(data, 0LL);
-  data = (BattleData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  data = (BattleData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !data )
     goto LABEL_28;
   CommonUI__SetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)data, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_2912/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, 0LL);
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, 0LL);
-  v37 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B9025C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_2907/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2902/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, 0LL);
+  v37 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BAB668(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v37,
     (Il2CppObject *)this,
@@ -1561,7 +1561,7 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectConfirmDialog(
     0LL);
   if ( !Instance )
 LABEL_28:
-    sub_1B9026C(data, method);
+    sub_1BAB678(data, method);
   if ( v32 == v33 )
     decideTxtSize = 30;
   else
@@ -1627,24 +1627,24 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
   WaveBattleSelectWaveDialog_o *v41; // x20
   System_Action_o *v42; // x21
 
-  if ( (byte_4A72CBC & 1) == 0 )
+  if ( (byte_4AB8BE2 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_int__TypeInfo, method);
-    sub_1B90010(&System_Action_TypeInfo, v3);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_0__, v4);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__, v5);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_2__, v6);
-    sub_1B90010(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, v7);
-    sub_1B90010(&Method_DataManager_GetMaster_QuestGroupMaster___, v8);
-    sub_1B90010(&Method_DataManager_GetMaster_UserEventDeckMaster___, v9);
-    sub_1B90010(&DataManager_TypeInfo, v10);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___, v11);
-    sub_1B90010(&LocalizationManager_TypeInfo, v12);
-    sub_1B90010(&NetworkManager_TypeInfo, v13);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B90010(&QuestRestrictionInfo_TypeInfo, v15);
-    sub_1B90010(&StringLiteral_2898/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/, v16);
-    byte_4A72CBC = 1;
+    sub_1BAB41C(&System_Action_int__TypeInfo, method);
+    sub_1BAB41C(&System_Action_TypeInfo, v3);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_0__, v4);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__, v5);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_2__, v6);
+    sub_1BAB41C(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataManager_GetMaster_QuestGroupMaster___, v8);
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserEventDeckMaster___, v9);
+    sub_1BAB41C(&DataManager_TypeInfo, v10);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___, v11);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v12);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v13);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BAB41C(&QuestRestrictionInfo_TypeInfo, v15);
+    sub_1BAB41C(&StringLiteral_2893/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/, v16);
+    byte_4AB8BE2 = 1;
   }
   waveSelectDialog = (UnityEngine_Object_o *)this->fields.waveSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1662,9 +1662,9 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
       goto LABEL_31;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)Object,
-                         (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
+                         (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_WaveBattleSelectWaveDialog___);
     *p_waveSelectDialog = (struct WaveBattleSelectWaveDialog_o *)Component_object;
-    sub_1B8FFB4(
+    sub_1BAB3C0(
       (ServantStatusBattleListViewItem_o *)&this->fields.waveSelectDialog,
       (int32_t)Component_object,
       v22,
@@ -1684,11 +1684,11 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
   Phase = BattleData__getPhase(this->fields.data, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+  Object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_QuestGroupMaster___);
   if ( !Object )
     goto LABEL_31;
   EventId = QuestGroupMaster__GetEventId((QuestGroupMaster_o *)Object, v24, 0LL);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserEventDeckMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserEventDeckMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Object = NetworkManager__get_UserId(0LL);
@@ -1704,10 +1704,10 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
   if ( !Object )
     goto LABEL_31;
   if ( !*(_DWORD *)(Object + 24) )
-    sub_1B90274(Object, v19);
+    sub_1BAB680(Object, v19);
   v28 = *(UserEventDeckEntity_o **)(Object + 32);
-  v29 = (QuestRestrictionInfo_o *)sub_1B9025C(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_40470592(v29, EventId, v24, Phase, 0LL);
+  v29 = (QuestRestrictionInfo_o *)sub_1BAB668(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_40808752(v29, EventId, v24, Phase, 0LL);
   Object = (int64_t)this->fields.data;
   if ( !Object )
     goto LABEL_31;
@@ -1720,7 +1720,7 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
   DispWaveCount = BattleData__getDispWaveCount(this->fields.data, 0LL);
   v34 = this->fields.waveSelectDialog;
   v35 = DispWaveCount;
-  v36 = (WaveBattleSelectWaveDialog_CloseDelegate_o *)sub_1B9025C(WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
+  v36 = (WaveBattleSelectWaveDialog_CloseDelegate_o *)sub_1BAB668(WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo);
   WaveBattleSelectWaveDialog_CloseDelegate___ctor(
     v36,
     (Il2CppObject *)this,
@@ -1730,7 +1730,7 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
     goto LABEL_31;
   WaveBattleSelectWaveDialog__SetDialog(v34, v28, v29, v32, v35 - (turnCount < 2), 1, v36, 0LL);
   v37 = this->fields.waveSelectDialog;
-  v38 = (System_Action_int__o *)sub_1B9025C(System_Action_int__TypeInfo);
+  v38 = (System_Action_int__o *)sub_1BAB668(System_Action_int__TypeInfo);
   System_Action_int____ctor(
     v38,
     (Il2CppObject *)this,
@@ -1748,18 +1748,18 @@ void __fastcall BattleMenuWindowComponent__OpenWaveSelectWindow(
   v40 = BattleData__getDispWaveCount((BattleData_o *)Object, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2898/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/, 0LL);
+  Object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2893/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/, 0LL);
   if ( !v39 )
 LABEL_31:
-    sub_1B9026C(Object, v19);
+    sub_1BAB678(Object, v19);
   WaveBattleSelectWaveDialog__OverwriteSpecifiedWaveCanNotSelectLabel(v39, v40, (System_String_o *)Object, 0LL);
 LABEL_29:
   v41 = this->fields.waveSelectDialog;
-  v42 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v42 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v42, (Il2CppObject *)this, Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_2__, 0LL);
   if ( !v41 )
     goto LABEL_31;
-  WaveBattleSelectWaveDialog__Open_32424712(v41, v42, 0LL);
+  WaveBattleSelectWaveDialog__Open_32663540(v41, v42, 0LL);
 }
 
 
@@ -1774,19 +1774,19 @@ void __fastcall BattleMenuWindowComponent__ProcSelectWaveRestart(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A72CBE & 1) == 0 )
+  if ( (byte_4AB8BE4 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent__ProcSelectWaveRestart_b__66_0__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    byte_4A72CBE = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__ProcSelectWaveRestart_b__66_0__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_4AB8BE4 = 1;
   }
   BattleMenuWindowComponent__CloseInterruptionWindowGroup(this, method);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_BattleMenuWindowComponent__ProcSelectWaveRestart_b__66_0__, 0LL);
   if ( !Instance )
-    sub_1B9026C(v7, v8);
+    sub_1BAB678(v7, v8);
   CommonUI__CloseTripleButtonDlg((CommonUI_o *)Instance, v6, 0LL);
 }
 
@@ -1797,10 +1797,10 @@ void __fastcall BattleMenuWindowComponent__ProcWaveRestart(BattleMenuWindowCompo
   BattleWindowComponent_o *waveRestartWindow; // x0
   UnityEngine_Object_o *interruptionWindow; // x20
 
-  if ( (byte_4A72CB6 & 1) == 0 )
+  if ( (byte_4AB8BDC & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A72CB6 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB8BDC = 1;
   }
   BattleWindowComponent__Close((BattleWindowComponent_o *)this, 0LL, 0LL);
   waveRestartWindow = (BattleWindowComponent_o *)this->fields.waveRestartWindow;
@@ -1830,7 +1830,7 @@ void __fastcall BattleMenuWindowComponent__ProcWaveRestart(BattleMenuWindowCompo
         return;
       }
 LABEL_12:
-      sub_1B9026C(waveRestartWindow, v3);
+      sub_1BAB678(waveRestartWindow, v3);
     }
   }
 }
@@ -1847,19 +1847,19 @@ void __fastcall BattleMenuWindowComponent__SetCancelInterruptionEvent(
   __int64 v7; // x1
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CB9 & 1) == 0 )
+  if ( (byte_4AB8BDF & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    sub_1B90010(&StringLiteral_3399/*"CANCEL_INTERRUPTION"*/, v5);
-    byte_4A72CB9 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    sub_1BAB41C(&StringLiteral_3396/*"CANCEL_INTERRUPTION"*/, v5);
+    byte_4AB8BDF = 1;
   }
-  v6 = StringLiteral_3399/*"CANCEL_INTERRUPTION"*/;
-  this->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3399/*"CANCEL_INTERRUPTION"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.cancelInterruptionEvent, v6, v2, v3);
+  v6 = StringLiteral_3396/*"CANCEL_INTERRUPTION"*/;
+  this->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3396/*"CANCEL_INTERRUPTION"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.cancelInterruptionEvent, v6, v2, v3);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, v7);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, v7);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1869,15 +1869,15 @@ void __fastcall BattleMenuWindowComponent___CancelInterruption_b__60_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC8 & 1) == 0 )
+  if ( (byte_4AB8BEE & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CC8 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BEE = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1887,15 +1887,15 @@ void __fastcall BattleMenuWindowComponent___CloseWaveRestartWindow_b__57_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC3 & 1) == 0 )
+  if ( (byte_4AB8BE9 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CC3 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BE9 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1915,32 +1915,32 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionConfirmWindow_b__62_
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_4A72CC9 & 1) == 0 )
+  if ( (byte_4AB8BEF & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, isDecide);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_1__, v5);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_2__, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4A72CC9 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, isDecide);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_1__, v5);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_2__, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4AB8BEF = 1;
   }
   if ( isDecide )
   {
     BattleMenuWindowComponent__CloseInterruptionWindowGroup(this, (const MethodInfo *)isDecide);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v9 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     v10 = Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_1__;
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v9 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     v10 = Method_BattleMenuWindowComponent__OpenInterruptionConfirmWindow_b__62_2__;
   }
   v11 = v9;
   System_Action___ctor(v9, (Il2CppObject *)this, v10, 0LL);
   if ( !Instance )
-    sub_1B9026C(v12, v13);
-  CommonUI__CloseConfirmDialog_30525912((CommonUI_o *)Instance, v11, 0LL);
+    sub_1BAB678(v12, v13);
+  CommonUI__CloseConfirmDialog_30637300((CommonUI_o *)Instance, v11, 0LL);
 }
 
 
@@ -1952,18 +1952,18 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionConfirmWindow_b__62_
   CommonUI_o *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A72CCA & 1) == 0 )
+  if ( (byte_4AB8BF0 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_1B90010(&StringLiteral_5007/*"DECIDE_INTERRUPTION"*/, v3);
-    byte_4A72CCA = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    sub_1BAB41C(&StringLiteral_5007/*"DECIDE_INTERRUPTION"*/, v3);
+    byte_4AB8BF0 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount(Instance, 0LL),
         (Instance = (CommonUI_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_1B9026C(Instance, v5);
+    sub_1BAB678(Instance, v5);
   }
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5007/*"DECIDE_INTERRUPTION"*/, 0LL);
 }
@@ -1976,17 +1976,17 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionConfirmWindow_b__62_
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A72CCB & 1) == 0 )
+  if ( (byte_4AB8BF1 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4A72CCB = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4AB8BF1 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount(Instance, 0LL),
         (Instance = (CommonUI_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_1B9026C(Instance, v4);
+    sub_1BAB678(Instance, v4);
   }
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, this->fields.cancelInterruptionEvent, 0LL);
 }
@@ -1998,15 +1998,15 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionWindow_b__59_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC4 & 1) == 0 )
+  if ( (byte_4AB8BEA & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_3399/*"CANCEL_INTERRUPTION"*/, method);
-    byte_4A72CC4 = 1;
+    sub_1BAB41C(&StringLiteral_3396/*"CANCEL_INTERRUPTION"*/, method);
+    byte_4AB8BEA = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3399/*"CANCEL_INTERRUPTION"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3396/*"CANCEL_INTERRUPTION"*/, 0LL);
 }
 
 
@@ -2018,10 +2018,10 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionWindow_b__59_1(
   struct BattleData_o *data; // x8
 
   v2 = this;
-  if ( (byte_4A72CC5 & 1) == 0 )
+  if ( (byte_4AB8BEB & 1) == 0 )
   {
-    this = (BattleMenuWindowComponent_o *)sub_1B90010(&StringLiteral_3540/*"CLICK_CURRENT_WAVE_RESTART"*/, method);
-    byte_4A72CC5 = 1;
+    this = (BattleMenuWindowComponent_o *)sub_1BAB41C(&StringLiteral_3537/*"CLICK_CURRENT_WAVE_RESTART"*/, method);
+    byte_4AB8BEB = 1;
   }
   data = v2->fields.data;
   if ( !data )
@@ -2031,8 +2031,8 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionWindow_b__59_1(
   this = (BattleMenuWindowComponent_o *)v2->fields.myFsm;
   if ( !this )
 LABEL_7:
-    sub_1B9026C(this, method);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3540/*"CLICK_CURRENT_WAVE_RESTART"*/, 0LL);
+    sub_1BAB678(this, method);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3537/*"CLICK_CURRENT_WAVE_RESTART"*/, 0LL);
 }
 
 
@@ -2042,15 +2042,15 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionWindow_b__59_2(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC6 & 1) == 0 )
+  if ( (byte_4AB8BEC & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_3564/*"CLICK_SELECT_WAVE_RESTART"*/, method);
-    byte_4A72CC6 = 1;
+    sub_1BAB41C(&StringLiteral_3561/*"CLICK_SELECT_WAVE_RESTART"*/, method);
+    byte_4AB8BEC = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3564/*"CLICK_SELECT_WAVE_RESTART"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3561/*"CLICK_SELECT_WAVE_RESTART"*/, 0LL);
 }
 
 
@@ -2060,15 +2060,15 @@ void __fastcall BattleMenuWindowComponent___OpenInterruptionWindow_b__59_3(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC7 & 1) == 0 )
+  if ( (byte_4AB8BED & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CC7 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BED = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2078,14 +2078,14 @@ void __fastcall BattleMenuWindowComponent___OpenWaveRestartWindow_b__56_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC0 & 1) == 0 )
+  if ( (byte_4AB8BE6 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5008/*"DECIDE_WAVE_RESTART"*/, method);
-    byte_4A72CC0 = 1;
+    sub_1BAB41C(&StringLiteral_5008/*"DECIDE_WAVE_RESTART"*/, method);
+    byte_4AB8BE6 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
+    sub_1BAB678(0LL, method);
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5008/*"DECIDE_WAVE_RESTART"*/, 0LL);
 }
 
@@ -2096,15 +2096,15 @@ void __fastcall BattleMenuWindowComponent___OpenWaveRestartWindow_b__56_1(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC1 & 1) == 0 )
+  if ( (byte_4AB8BE7 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_3402/*"CANCEL_WAVE_RESTART"*/, method);
-    byte_4A72CC1 = 1;
+    sub_1BAB41C(&StringLiteral_3399/*"CANCEL_WAVE_RESTART"*/, method);
+    byte_4AB8BE7 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3402/*"CANCEL_WAVE_RESTART"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3399/*"CANCEL_WAVE_RESTART"*/, 0LL);
 }
 
 
@@ -2114,15 +2114,15 @@ void __fastcall BattleMenuWindowComponent___OpenWaveRestartWindow_b__56_2(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CC2 & 1) == 0 )
+  if ( (byte_4AB8BE8 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CC2 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BE8 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2145,24 +2145,24 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectConfirmDialog_b__65_0(
   System_Action_o *v15; // x22
   UnityEngine_Object_o *waveSelectDialog; // x20
 
-  if ( (byte_4A72CD0 & 1) == 0 )
+  if ( (byte_4AB8BF6 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, isDecide);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B90010(&Method_BattleMenuWindowComponent___c__DisplayClass65_0__OpenWaveSelectConfirmDialog_b__1__, v7);
-    sub_1B90010(&BattleMenuWindowComponent___c__DisplayClass65_0_TypeInfo, v8);
-    byte_4A72CD0 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, isDecide);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent___c__DisplayClass65_0__OpenWaveSelectConfirmDialog_b__1__, v7);
+    sub_1BAB41C(&BattleMenuWindowComponent___c__DisplayClass65_0_TypeInfo, v8);
+    byte_4AB8BF6 = 1;
   }
-  v9 = sub_1B9025C(BattleMenuWindowComponent___c__DisplayClass65_0_TypeInfo);
+  v9 = sub_1BAB668(BattleMenuWindowComponent___c__DisplayClass65_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_12;
   *(_QWORD *)(v9 + 24) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)this, v12, v13);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v9 + 24), (int32_t)this, v12, v13);
   *(_BYTE *)(v9 + 16) = isDecide;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v15 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v15 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
     v15,
     (Il2CppObject *)v9,
@@ -2170,7 +2170,7 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectConfirmDialog_b__65_0(
     0LL);
   if ( !Instance )
     goto LABEL_12;
-  CommonUI__CloseConfirmDialog_30525912((CommonUI_o *)Instance, v15, 0LL);
+  CommonUI__CloseConfirmDialog_30637300((CommonUI_o *)Instance, v15, 0LL);
   if ( *(_BYTE *)(v9 + 16) )
   {
     waveSelectDialog = (UnityEngine_Object_o *)this->fields.waveSelectDialog;
@@ -2185,7 +2185,7 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectConfirmDialog_b__65_0(
         return;
       }
 LABEL_12:
-      sub_1B9026C(v10, v11);
+      sub_1BAB678(v10, v11);
     }
   }
 }
@@ -2208,13 +2208,13 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_0(
   System_Action_o *v12; // x21
 
   v5 = this;
-  if ( (byte_4A72CCC & 1) == 0 )
+  if ( (byte_4AB8BF2 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, isDecide);
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_3__, v6);
-    sub_1B90010(&StringLiteral_3400/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/, v7);
-    this = (BattleMenuWindowComponent_o *)sub_1B90010(&StringLiteral_3551/*"CLICK_INTERRUPTION"*/, v8);
-    byte_4A72CCC = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, isDecide);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_3__, v6);
+    sub_1BAB41C(&StringLiteral_3397/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/, v7);
+    this = (BattleMenuWindowComponent_o *)sub_1BAB41C(&StringLiteral_3548/*"CLICK_INTERRUPTION"*/, v8);
+    byte_4AB8BF2 = 1;
   }
   data = v5->fields.data;
   if ( !data )
@@ -2222,24 +2222,24 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_0(
   data->fields.selectedInterruptionWave = -1;
   if ( isDecide )
   {
-    v10 = StringLiteral_3400/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
-    v5->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3400/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v5->fields.cancelInterruptionEvent, v10, (int32_t)method, v3);
+    v10 = StringLiteral_3397/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
+    v5->fields.cancelInterruptionEvent = (struct System_String_o *)StringLiteral_3397/*"CANCEL_INTERRUPTION_TO_WAVE_SELECT"*/;
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v5->fields.cancelInterruptionEvent, v10, (int32_t)method, v3);
     this = (BattleMenuWindowComponent_o *)v5->fields.myFsm;
     if ( this )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3551/*"CLICK_INTERRUPTION"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3548/*"CLICK_INTERRUPTION"*/, 0LL);
       return;
     }
 LABEL_9:
-    sub_1B9026C(this, isDecide);
+    sub_1BAB678(this, isDecide);
   }
   waveSelectDialog = v5->fields.waveSelectDialog;
-  v12 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)v5, Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_3__, 0LL);
   if ( !waveSelectDialog )
     goto LABEL_9;
-  WaveBattleSelectWaveDialog__Close_32423232(waveSelectDialog, v12, 0LL);
+  WaveBattleSelectWaveDialog__Close_32662060(waveSelectDialog, v12, 0LL);
 }
 
 
@@ -2256,21 +2256,21 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_1(
   __int64 v9; // x1
   struct BattleData_o *data; // x8
 
-  if ( (byte_4A72CCE & 1) == 0 )
+  if ( (byte_4AB8BF4 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__, *(_QWORD *)&wave);
-    sub_1B90010(&StringLiteral_3580/*"CLICK_WAVE_BANNER"*/, v5);
-    byte_4A72CCE = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__, *(_QWORD *)&wave);
+    sub_1BAB41C(&StringLiteral_3577/*"CLICK_WAVE_BANNER"*/, v5);
+    byte_4AB8BF4 = 1;
   }
   v6 = Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent__OpenWaveSelectWindow_b__64_1__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BAB400(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
   data = this->fields.data;
   if ( !data || (data->fields.selectedInterruptionWave = wave, (myFsm = this->fields.myFsm) == 0LL) )
-    sub_1B9026C(myFsm, v9);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3580/*"CLICK_WAVE_BANNER"*/, 0LL);
+    sub_1BAB678(myFsm, v9);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3577/*"CLICK_WAVE_BANNER"*/, 0LL);
 }
 
 
@@ -2280,15 +2280,15 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_2(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CCF & 1) == 0 )
+  if ( (byte_4AB8BF5 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CCF = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BF5 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2302,11 +2302,11 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_3(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A72CCD & 1) == 0 )
+  if ( (byte_4AB8BF3 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    sub_1B90010(&StringLiteral_3398/*"CANCEL"*/, v3);
-    byte_4A72CCD = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_3395/*"CANCEL"*/, v3);
+    byte_4AB8BF3 = 1;
   }
   waveSelectDialog = (UnityEngine_Component_o *)this->fields.waveSelectDialog;
   if ( !waveSelectDialog )
@@ -2314,14 +2314,14 @@ void __fastcall BattleMenuWindowComponent___OpenWaveSelectWindow_b__64_3(
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(waveSelectDialog, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69539440(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69800620(gameObject, 0LL);
   this->fields.waveSelectDialog = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.waveSelectDialog, 0, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.waveSelectDialog, 0, v6, v7);
   waveSelectDialog = (UnityEngine_Component_o *)this->fields.myFsm;
   if ( !waveSelectDialog )
 LABEL_8:
-    sub_1B9026C(waveSelectDialog, method);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)waveSelectDialog, (System_String_o *)StringLiteral_3398/*"CANCEL"*/, 0LL);
+    sub_1BAB678(waveSelectDialog, method);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)waveSelectDialog, (System_String_o *)StringLiteral_3395/*"CANCEL"*/, 0LL);
 }
 
 
@@ -2331,15 +2331,15 @@ void __fastcall BattleMenuWindowComponent___ProcSelectWaveRestart_b__66_0(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CD1 & 1) == 0 )
+  if ( (byte_4AB8BF7 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CD1 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BF7 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2352,11 +2352,11 @@ void __fastcall BattleMenuWindowComponent__closeSetVolumeWindow(
   struct BattleWindowComponent_o *setVolumeWindow; // x20
   BattleWindowComponent_EndCall_o *v6; // x21
 
-  if ( (byte_4A72CB1 & 1) == 0 )
+  if ( (byte_4AB8BD7 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_endCloseSetVolumeWindow__, method);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    byte_4A72CB1 = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_endCloseSetVolumeWindow__, method);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_4AB8BD7 = 1;
   }
   setVolumeWindowMask = this->fields.setVolumeWindowMask;
   if ( !setVolumeWindowMask
@@ -2364,7 +2364,7 @@ void __fastcall BattleMenuWindowComponent__closeSetVolumeWindow(
         (setVolumeWindowMask = (UnityEngine_GameObject_o *)this->fields.setVolumeControl) == 0LL)
     || (SetVolumeControl__reflectionVolume((SetVolumeControl_o *)setVolumeWindowMask, 0LL),
         setVolumeWindow = this->fields.setVolumeWindow,
-        v6 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo),
+        v6 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v6,
           (Il2CppObject *)this,
@@ -2372,7 +2372,7 @@ void __fastcall BattleMenuWindowComponent__closeSetVolumeWindow(
           0LL),
         !setVolumeWindow) )
   {
-    sub_1B9026C(setVolumeWindowMask, method);
+    sub_1BAB678(setVolumeWindowMask, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))setVolumeWindow->klass->vtable._12_Close.method)(
     setVolumeWindow,
@@ -2387,15 +2387,15 @@ void __fastcall BattleMenuWindowComponent__endCloseCkRetire(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CAA & 1) == 0 )
+  if ( (byte_4AB8BD0 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CAA = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BD0 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2405,15 +2405,15 @@ void __fastcall BattleMenuWindowComponent__endCloseSetVolumeWindow(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CB2 & 1) == 0 )
+  if ( (byte_4AB8BD8 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CB2 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BD8 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2421,15 +2421,15 @@ void __fastcall BattleMenuWindowComponent__endOpenCkRetire(BattleMenuWindowCompo
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CAC & 1) == 0 )
+  if ( (byte_4AB8BD2 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CAC = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BD2 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2439,15 +2439,15 @@ void __fastcall BattleMenuWindowComponent__endOpenItemListWindow(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4A72CAE & 1) == 0 )
+  if ( (byte_4AB8BD4 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CAE = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BD4 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1B9026C(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+    sub_1BAB678(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2457,19 +2457,19 @@ void __fastcall BattleMenuWindowComponent__endOpenSetVolumeWindow(
 {
   UnityEngine_GameObject_o *setVolumeWindowMask; // x0
 
-  if ( (byte_4A72CB0 & 1) == 0 )
+  if ( (byte_4AB8BD6 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_5490/*"END_PROC"*/, method);
-    byte_4A72CB0 = 1;
+    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
+    byte_4AB8BD6 = 1;
   }
   setVolumeWindowMask = this->fields.setVolumeWindowMask;
   if ( !setVolumeWindowMask
     || (UnityEngine_GameObject__SetActive(setVolumeWindowMask, 0, 0LL),
         (setVolumeWindowMask = (UnityEngine_GameObject_o *)this->fields.myFsm) == 0LL) )
   {
-    sub_1B9026C(setVolumeWindowMask, method);
+    sub_1BAB678(setVolumeWindowMask, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)setVolumeWindowMask, (System_String_o *)StringLiteral_5490/*"END_PROC"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)setVolumeWindowMask, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, 0LL);
 }
 
 
@@ -2477,12 +2477,12 @@ System_String_o *__fastcall BattleMenuWindowComponent__get_closeBtnPath(
         BattleMenuWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A72CBF & 1) == 0 )
+  if ( (byte_4AB8BE5 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_20920/*"itemlist_win/Scroll Bar/close"*/, method);
-    byte_4A72CBF = 1;
+    sub_1BAB41C(&StringLiteral_20924/*"itemlist_win/Scroll Bar/close"*/, method);
+    byte_4AB8BE5 = 1;
   }
-  return (System_String_o *)StringLiteral_20920/*"itemlist_win/Scroll Bar/close"*/;
+  return (System_String_o *)StringLiteral_20924/*"itemlist_win/Scroll Bar/close"*/;
 }
 
 
@@ -2494,21 +2494,21 @@ void __fastcall BattleMenuWindowComponent__modeCkRetire(BattleMenuWindowComponen
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A72CA9 & 1) == 0 )
+  if ( (byte_4AB8BCF & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_endCloseCkRetire__, method);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    byte_4A72CA9 = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_endCloseCkRetire__, method);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    byte_4AB8BCF = 1;
   }
   checkRetireWindow = this->fields.checkRetireWindow;
-  v5 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+  v5 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v5,
     (Il2CppObject *)this,
     Method_BattleMenuWindowComponent_endCloseCkRetire__,
     0LL);
   if ( !checkRetireWindow )
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   ((void (__fastcall *)(struct BattleRetireWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))checkRetireWindow->klass->vtable._12_Close.method)(
     checkRetireWindow,
     v5,
@@ -2532,13 +2532,13 @@ void __fastcall BattleMenuWindowComponent__modeItemListWindow(
   _QWORD *v12; // x0
   System_Reflection_MethodBase_o *v13; // x0
 
-  if ( (byte_4A72CAD & 1) == 0 )
+  if ( (byte_4AB8BD3 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_endOpenItemListWindow__, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent_modeItemListWindow__, v3);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v4);
-    sub_1B90010(&StringLiteral_3398/*"CANCEL"*/, v5);
-    byte_4A72CAD = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_endOpenItemListWindow__, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_modeItemListWindow__, v3);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    sub_1BAB41C(&StringLiteral_3395/*"CANCEL"*/, v5);
+    byte_4AB8BD3 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -2553,11 +2553,11 @@ void __fastcall BattleMenuWindowComponent__modeItemListWindow(
 LABEL_7:
     v7 = Method_BattleMenuWindowComponent_modeItemListWindow__;
     if ( (*((_BYTE *)Method_BattleMenuWindowComponent_modeItemListWindow__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_modeItemListWindow__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v7, v7[4]);
+      v7 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_modeItemListWindow__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1BAB400(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
     itemListWindow = this->fields.itemListWindow;
-    v10 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+    v10 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
     BattleWindowComponent_EndCall___ctor(
       v10,
       (Il2CppObject *)this,
@@ -2569,17 +2569,17 @@ LABEL_7:
       return;
     }
 LABEL_15:
-    sub_1B9026C(data, method);
+    sub_1BAB678(data, method);
   }
   v12 = Method_BattleMenuWindowComponent_modeItemListWindow__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_modeItemListWindow__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_modeItemListWindow__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v12, v12[4]);
+    v12 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_modeItemListWindow__);
+  v13 = (System_Reflection_MethodBase_o *)sub_1BAB400(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 2, 0LL);
   data = (BattleData_o *)this->fields.myFsm;
   if ( !data )
     goto LABEL_15;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3398/*"CANCEL"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3395/*"CANCEL"*/, 0LL);
 }
 
 
@@ -2596,13 +2596,13 @@ void __fastcall BattleMenuWindowComponent__modeRetire(BattleMenuWindowComponent_
   BattleRetireWindowComponent_o *checkRetireWindow; // x20
   BattleWindowComponent_EndCall_o *v12; // x21
 
-  if ( (byte_4A72CAB & 1) == 0 )
+  if ( (byte_4AB8BD1 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_endOpenCkRetire__, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent_modeRetire__, v3);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v4);
-    sub_1B90010(&StringLiteral_3398/*"CANCEL"*/, v5);
-    byte_4A72CAB = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_endOpenCkRetire__, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_modeRetire__, v3);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    sub_1BAB41C(&StringLiteral_3395/*"CANCEL"*/, v5);
+    byte_4AB8BD1 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -2611,23 +2611,23 @@ void __fastcall BattleMenuWindowComponent__modeRetire(BattleMenuWindowComponent_
   v8 = Method_BattleMenuWindowComponent_modeRetire__;
   v9 = IsWarBoard;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_modeRetire__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_modeRetire__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v8, v8[4]);
+    v8 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_modeRetire__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1BAB400(v8, v8[4]);
   if ( v9 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0LL);
     data = (BattleData_o *)this->fields.myFsm;
     if ( data )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3398/*"CANCEL"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)data, (System_String_o *)StringLiteral_3395/*"CANCEL"*/, 0LL);
       return;
     }
 LABEL_11:
-    sub_1B9026C(data, method);
+    sub_1BAB678(data, method);
   }
   OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0LL);
   checkRetireWindow = this->fields.checkRetireWindow;
-  v12 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo);
+  v12 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(
     v12,
     (Il2CppObject *)this,
@@ -2651,12 +2651,12 @@ void __fastcall BattleMenuWindowComponent__modeSetVolumeWindow(
   struct BattleWindowComponent_o *setVolumeWindow; // x20
   BattleWindowComponent_EndCall_o *v9; // x21
 
-  if ( (byte_4A72CAF & 1) == 0 )
+  if ( (byte_4AB8BD5 & 1) == 0 )
   {
-    sub_1B90010(&Method_BattleMenuWindowComponent_endOpenSetVolumeWindow__, method);
-    sub_1B90010(&Method_BattleMenuWindowComponent_modeSetVolumeWindow__, v3);
-    sub_1B90010(&BattleWindowComponent_EndCall_TypeInfo, v4);
-    byte_4A72CAF = 1;
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_endOpenSetVolumeWindow__, method);
+    sub_1BAB41C(&Method_BattleMenuWindowComponent_modeSetVolumeWindow__, v3);
+    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, v4);
+    byte_4AB8BD5 = 1;
   }
   setVolumeWindowMask = this->fields.setVolumeWindowMask;
   if ( !setVolumeWindowMask )
@@ -2664,14 +2664,14 @@ void __fastcall BattleMenuWindowComponent__modeSetVolumeWindow(
   UnityEngine_GameObject__SetActive(setVolumeWindowMask, 1, 0LL);
   v6 = Method_BattleMenuWindowComponent_modeSetVolumeWindow__;
   if ( (*((_BYTE *)Method_BattleMenuWindowComponent_modeSetVolumeWindow__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1B90028(Method_BattleMenuWindowComponent_modeSetVolumeWindow__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BAB434(Method_BattleMenuWindowComponent_modeSetVolumeWindow__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BAB400(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
   setVolumeWindowMask = (UnityEngine_GameObject_o *)this->fields.setVolumeControl;
   if ( !setVolumeWindowMask
     || (SetVolumeControl__initSetVolume((SetVolumeControl_o *)setVolumeWindowMask, 0LL),
         setVolumeWindow = this->fields.setVolumeWindow,
-        v9 = (BattleWindowComponent_EndCall_o *)sub_1B9025C(BattleWindowComponent_EndCall_TypeInfo),
+        v9 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v9,
           (Il2CppObject *)this,
@@ -2680,7 +2680,7 @@ void __fastcall BattleMenuWindowComponent__modeSetVolumeWindow(
         !setVolumeWindow) )
   {
 LABEL_9:
-    sub_1B9026C(setVolumeWindowMask, method);
+    sub_1BAB678(setVolumeWindowMask, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))setVolumeWindow->klass->vtable._10_Open.method)(
     setVolumeWindow,
@@ -2717,24 +2717,24 @@ void __fastcall BattleMenuWindowComponent___c__DisplayClass65_0___OpenWaveSelect
   struct BattleMenuWindowComponent_o *_4__this; // x8
   System_String_o *v8; // x1
 
-  if ( (byte_4A72CD2 & 1) == 0 )
+  if ( (byte_4AB8BF8 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_1B90010(&StringLiteral_3398/*"CANCEL"*/, v3);
-    sub_1B90010(&StringLiteral_3563/*"CLICK_SELECT_WAVE_DECIDE"*/, v4);
-    byte_4A72CD2 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    sub_1BAB41C(&StringLiteral_3395/*"CANCEL"*/, v3);
+    sub_1BAB41C(&StringLiteral_3560/*"CLICK_SELECT_WAVE_DECIDE"*/, v4);
+    byte_4AB8BF8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ResetConfirmDialogDecideButtonLabelMaxLineCount((CommonUI_o *)Instance, 0LL),
         (_4__this = this->fields.__4__this) == 0LL)
     || (Instance = (Il2CppObject *)_4__this->fields.myFsm) == 0LL )
   {
-    sub_1B9026C(Instance, v6);
+    sub_1BAB678(Instance, v6);
   }
   if ( this->fields.isDecide )
-    v8 = (System_String_o *)StringLiteral_3563/*"CLICK_SELECT_WAVE_DECIDE"*/;
+    v8 = (System_String_o *)StringLiteral_3560/*"CLICK_SELECT_WAVE_DECIDE"*/;
   else
-    v8 = (System_String_o *)StringLiteral_3398/*"CANCEL"*/;
+    v8 = (System_String_o *)StringLiteral_3395/*"CANCEL"*/;
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, v8, 0LL);
 }

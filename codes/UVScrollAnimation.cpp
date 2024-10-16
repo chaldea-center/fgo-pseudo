@@ -38,16 +38,16 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
   float v18; // s2
   float v19; // s0
 
-  if ( (byte_4A6D58D & 1) == 0 )
+  if ( (byte_4AB3367 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_16287/*"_MainTex"*/, v4);
-    byte_4A6D58D = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_16293/*"_MainTex"*/, v4);
+    byte_4AB3367 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality(
@@ -60,9 +60,9 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
     || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0LL)) == 0LL )
   {
 LABEL_18:
-    sub_1B9026C(material, v7);
+    sub_1BAB678(material, v7);
   }
-  if ( !UnityEngine_Material__HasProperty_69405708(material, (System_String_o *)StringLiteral_16287/*"_MainTex"*/, 0LL) )
+  if ( !UnityEngine_Material__HasProperty_69666888(material, (System_String_o *)StringLiteral_16293/*"_MainTex"*/, 0LL) )
   {
 LABEL_17:
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0LL);
@@ -90,7 +90,7 @@ LABEL_17:
     v19 = v18;
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16287/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16293/*"_MainTex"*/,
     *(UnityEngine_Vector2_o *)(&v17 - 1),
     0LL);
 }

@@ -3,7 +3,7 @@ void __fastcall BattleCallBack_object__object____ctor(
         Il2CppObject *arg1,
         Il2CppObject *arg2,
         System_Action_T1__T2__o *callBack,
-        const MethodInfo_30A4DD8 *method)
+        const MethodInfo_30DBF44 *method)
 {
   int32_t v9; // w2
   int32_t v10; // w3
@@ -14,19 +14,19 @@ void __fastcall BattleCallBack_object__object____ctor(
 
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.arg1 = arg1;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)arg1, v9, v10);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)arg1, v9, v10);
   this->fields.arg2 = arg2;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.arg2, (int32_t)arg2, v11, v12);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.arg2, (int32_t)arg2, v11, v12);
   this->fields.callBack = callBack;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callBack, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callBack, v13, v14);
 }
 
 
-void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_30A4E38 *method)
+void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_30DBFA4 *method)
 {
   ActionExtensions__Call_object__object_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
-    (const MethodInfo_2DE389C *)method->klass->rgctx_data->_4_ActionExtensions_Call_T1__T2_);
+    (const MethodInfo_2E1880C *)method->klass->rgctx_data->_4_ActionExtensions_Call_T1__T2_);
 }

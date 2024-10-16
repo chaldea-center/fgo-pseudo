@@ -10,19 +10,19 @@ GiftEntity_o *__fastcall MasterLvRewardInfo__getGiftEntity(MasterLvRewardInfo_o 
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A72B4E & 1) == 0 )
+  if ( (byte_4AB8A74 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_GiftMaster___, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A72B4E = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4AB8A74 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                     (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_1B9026C(Instance, v5);
+    sub_1BAB678(Instance, v5);
   }
   return GiftMaster__GetEntity(
            (GiftMaster_o *)Instance,

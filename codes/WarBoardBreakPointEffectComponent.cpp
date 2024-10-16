@@ -14,7 +14,7 @@ void __fastcall WarBoardBreakPointEffectComponent__Initialize(
   int32_t v3; // w3
 
   this->fields.parentComponent = parentComponent;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.parentComponent,
     (int32_t)parentComponent,
     (int32_t)method,
@@ -33,10 +33,10 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointActive(
   const MethodInfo *v7; // x3
   WarBoardBreakPointComponent_o *v8; // x0
 
-  if ( (byte_4A6D92F & 1) == 0 )
+  if ( (byte_4AB370A & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, active);
-    byte_4A6D92F = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, active);
+    byte_4AB370A = 1;
   }
   parentComponent = (UnityEngine_Object_o *)this->fields.parentComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointActive(
   {
     v8 = this->fields.parentComponent;
     if ( !v8 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     WarBoardBreakPointComponent__SetActive(v8, active, 0, v7);
   }
 }
@@ -60,10 +60,10 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointFadeIn(
   const MethodInfo *v6; // x1
   WarBoardBreakPointComponent_o *v7; // x0
 
-  if ( (byte_4A6D92E & 1) == 0 )
+  if ( (byte_4AB3709 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6D92E = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB3709 = 1;
   }
   parentComponent = (UnityEngine_Object_o *)this->fields.parentComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -72,7 +72,7 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointFadeIn(
   {
     v7 = this->fields.parentComponent;
     if ( !v7 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     WarBoardBreakPointComponent__SetBreakPointFadeIn(v7, duration, v6);
   }
 }
@@ -87,10 +87,10 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointFadeOut(
   const MethodInfo *v6; // x1
   WarBoardBreakPointComponent_o *v7; // x0
 
-  if ( (byte_4A6D92D & 1) == 0 )
+  if ( (byte_4AB3708 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6D92D = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB3708 = 1;
   }
   parentComponent = (UnityEngine_Object_o *)this->fields.parentComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -99,7 +99,7 @@ void __fastcall WarBoardBreakPointEffectComponent__SetBreakPointFadeOut(
   {
     v7 = this->fields.parentComponent;
     if ( !v7 )
-      sub_1B9026C(0LL, v6);
+      sub_1BAB678(0LL, v6);
     WarBoardBreakPointComponent__SetBreakPointFadeOut(v7, duration, v6);
   }
 }

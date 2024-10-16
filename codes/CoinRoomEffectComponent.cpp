@@ -13,28 +13,28 @@ void __fastcall CoinRoomEffectComponent___ctor(CoinRoomEffectComponent_o *this, 
   int32_t v13; // w2
   int32_t v14; // w3
 
-  if ( (byte_4A733EA & 1) == 0 )
+  if ( (byte_4AB930D & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__, method);
-    sub_1B90010(&System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo, v5);
-    sub_1B90010(&StringLiteral_16897/*"ar154"*/, v6);
-    sub_1B90010(&StringLiteral_1/*""*/, v7);
-    byte_4A733EA = 1;
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__, method);
+    sub_1BAB41C(&System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_16905/*"ar154"*/, v6);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
+    byte_4AB930D = 1;
   }
-  v8 = StringLiteral_16897/*"ar154"*/;
-  this->fields.arrivedPlaySeName = (struct System_String_o *)StringLiteral_16897/*"ar154"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.arrivedPlaySeName, v8, v2, v3);
+  v8 = StringLiteral_16905/*"ar154"*/;
+  this->fields.arrivedPlaySeName = (struct System_String_o *)StringLiteral_16905/*"ar154"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.arrivedPlaySeName, v8, v2, v3);
   *(_QWORD *)&this->fields.arrivedPlaySeIntervalTime = 0x3E83D4CCCCDLL;
   this->fields.TARGET_ITEM_ID = 7999;
-  v9 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo);
+  v9 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v9,
-    (const MethodInfo_317BBF8 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__);
+    (const MethodInfo_31B6460 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__);
   this->fields.selectedCoinDic = (struct System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__o *)v9;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.selectedCoinDic, (int32_t)v9, v10, v11);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.selectedCoinDic, (int32_t)v9, v10, v11);
   v12 = (int)StringLiteral_1/*""*/;
   this->fields.stateName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.stateName, v12, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.stateName, v12, v13, v14);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -44,19 +44,19 @@ UnityEngine_ParticleSystem_EmissionModule_o __fastcall CoinRoomEffectComponent__
         UnityEngine_GameObject_o *targetObject,
         const MethodInfo *method)
 {
-  if ( (byte_4A733E7 & 1) == 0 )
+  if ( (byte_4AB930A & 1) == 0 )
   {
-    this = (CoinRoomEffectComponent_o *)sub_1B90010(
+    this = (CoinRoomEffectComponent_o *)sub_1BAB41C(
                                           &Method_UnityEngine_GameObject_GetComponent_ParticleSystem___,
                                           targetObject);
-    byte_4A733E7 = 1;
+    byte_4AB930A = 1;
   }
   if ( !targetObject
     || (this = (CoinRoomEffectComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                               targetObject,
-                                              (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___)) == 0LL )
+                                              (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___)) == 0LL )
   {
-    sub_1B9026C(this, targetObject);
+    sub_1BAB678(this, targetObject);
   }
   return UnityEngine_ParticleSystem__get_emission((UnityEngine_ParticleSystem_o *)this, 0LL);
 }
@@ -81,21 +81,21 @@ void __fastcall CoinRoomEffectComponent__NextAcquiredEffect(CoinRoomEffectCompon
   Il2CppObject *Instance; // x19
   System_Action_o *v18; // x21
 
-  if ( (byte_4A733E8 & 1) == 0 )
+  if ( (byte_4AB930B & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&QuestRewardInfo_TypeInfo, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1B90010(&Method_CoinRoomEffectComponent___c__DisplayClass27_0__NextAcquiredEffect_b__0__, v5);
-    sub_1B90010(&CoinRoomEffectComponent___c__DisplayClass27_0_TypeInfo, v6);
-    byte_4A733E8 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&QuestRewardInfo_TypeInfo, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent___c__DisplayClass27_0__NextAcquiredEffect_b__0__, v5);
+    sub_1BAB41C(&CoinRoomEffectComponent___c__DisplayClass27_0_TypeInfo, v6);
+    byte_4AB930B = 1;
   }
-  v7 = sub_1B9025C(CoinRoomEffectComponent___c__DisplayClass27_0_TypeInfo);
+  v7 = sub_1BAB668(CoinRoomEffectComponent___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
     goto LABEL_11;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   if ( this->fields.state == 1 )
   {
     acquiredEffect = this->fields.acquiredEffect;
@@ -107,10 +107,10 @@ void __fastcall CoinRoomEffectComponent__NextAcquiredEffect(CoinRoomEffectCompon
       if ( acquiredEffect )
       {
         UnityEngine_GameObject__SetActive(acquiredEffect, 1, 0LL);
-        v12 = (QuestRewardInfo_o *)sub_1B9025C(QuestRewardInfo_TypeInfo);
+        v12 = (QuestRewardInfo_o *)sub_1BAB668(QuestRewardInfo_TypeInfo);
         QuestRewardInfo___ctor(v12, 0LL);
         *(_QWORD *)(v7 + 24) = v12;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v7 + 24), (int32_t)v12, v13, v14);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v7 + 24), (int32_t)v12, v13, v14);
         v15 = *(_DWORD **)(v7 + 24);
         if ( v15 )
         {
@@ -118,8 +118,8 @@ void __fastcall CoinRoomEffectComponent__NextAcquiredEffect(CoinRoomEffectCompon
           v15[4] = 2;
           v15[5] = TARGET_ITEM_ID;
           v15[6] = 1;
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v18 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v18 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
           System_Action___ctor(
             v18,
             (Il2CppObject *)v7,
@@ -134,7 +134,7 @@ void __fastcall CoinRoomEffectComponent__NextAcquiredEffect(CoinRoomEffectCompon
       }
     }
 LABEL_11:
-    sub_1B9026C(acquiredEffect, v9);
+    sub_1BAB678(acquiredEffect, v9);
   }
 }
 
@@ -170,38 +170,38 @@ void __fastcall CoinRoomEffectComponent__OpenEffect(
   const MethodInfo *v28; // x1
 
   v5 = beforeUserCoinRoomEntity;
-  if ( (byte_4A733E5 & 1) == 0 )
+  if ( (byte_4AB9308 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_UserCoinRoomMaster___, beforeUserCoinRoomEntity);
-    sub_1B90010(&Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__GetEntity__, v7);
-    sub_1B90010(&NetworkManager_TypeInfo, v8);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B90010(&SoundManager_TypeInfo, v10);
-    sub_1B90010(&UserCoinRoomEntity_TypeInfo, v11);
-    sub_1B90010(&StringLiteral_18948/*"effect_Circle_act2"*/, v12);
-    sub_1B90010(&StringLiteral_18947/*"effect_Circle_act1"*/, v13);
-    byte_4A733E5 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserCoinRoomMaster___, beforeUserCoinRoomEntity);
+    sub_1BAB41C(&Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__GetEntity__, v7);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v8);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1BAB41C(&SoundManager_TypeInfo, v10);
+    sub_1BAB41C(&UserCoinRoomEntity_TypeInfo, v11);
+    sub_1BAB41C(&StringLiteral_18952/*"effect_Circle_act2"*/, v12);
+    sub_1BAB41C(&StringLiteral_18951/*"effect_Circle_act1"*/, v13);
+    byte_4AB9308 = 1;
   }
   this->fields.state = 1;
   if ( !v5 )
   {
-    v5 = (UserCoinRoomEntity_o *)sub_1B9025C(UserCoinRoomEntity_TypeInfo);
+    v5 = (UserCoinRoomEntity_o *)sub_1BAB668(UserCoinRoomEntity_TypeInfo);
     UserCoinRoomEntity___ctor(v5, 0LL);
   }
   this->fields.beforeEntity = v5;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.beforeEntity,
     (int32_t)v5,
     (int32_t)selectedCoinDic,
     (int32_t)method);
   this->fields.selectedCoinDic = selectedCoinDic;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.selectedCoinDic, (int32_t)selectedCoinDic, v14, v15);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.selectedCoinDic, (int32_t)selectedCoinDic, v14, v15);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserCoinRoomMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserCoinRoomMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
@@ -209,23 +209,23 @@ void __fastcall CoinRoomEffectComponent__OpenEffect(
     || (Entity = DataMasterBase_object__object__long___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                    (int64_t)Instance,
-                   (const MethodInfo_312C754 *)Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__GetEntity__),
+                   (const MethodInfo_3163F3C *)Method_DataMasterBase_UserCoinRoomMaster__UserCoinRoomEntity__long__GetEntity__),
         this->fields.afterEntity = (struct UserCoinRoomEntity_o *)Entity,
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.afterEntity, (int32_t)Entity, v20, v21),
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.afterEntity, (int32_t)Entity, v20, v21),
         (afterEntity = this->fields.afterEntity) == 0LL) )
   {
 LABEL_16:
-    sub_1B9026C(Instance, v17);
+    sub_1BAB678(Instance, v17);
   }
   cnt = afterEntity->fields.cnt;
   this->fields.isAcquired = cnt == 0;
   if ( cnt )
-    v26 = &StringLiteral_18947/*"effect_Circle_act1"*/;
+    v26 = &StringLiteral_18951/*"effect_Circle_act1"*/;
   else
-    v26 = &StringLiteral_18948/*"effect_Circle_act2"*/;
+    v26 = &StringLiteral_18952/*"effect_Circle_act2"*/;
   v27 = (struct System_String_o *)*v26;
   this->fields.stateName = (struct System_String_o *)*v26;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.stateName, (int32_t)v27, v22, v23);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.stateName, (int32_t)v27, v22, v23);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopBgm(0LL);
@@ -243,16 +243,16 @@ System_Collections_IEnumerator_o *__fastcall CoinRoomEffectComponent__PlayCoinAr
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A733E9 & 1) == 0 )
+  if ( (byte_4AB930C & 1) == 0 )
   {
-    sub_1B90010(&CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_TypeInfo, *(_QWORD *)&totalCount);
-    byte_4A733E9 = 1;
+    sub_1BAB41C(&CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_TypeInfo, *(_QWORD *)&totalCount);
+    byte_4AB930C = 1;
   }
-  v5 = sub_1B9025C(CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_TypeInfo);
+  v5 = sub_1BAB668(CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_DWORD *)(v5 + 40) = totalCount;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -304,25 +304,25 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+48h] [xbp-48h] BYREF
   UnityEngine_ParticleSystem_EmissionModule_o v45; // 0:x0.8
 
-  if ( (byte_4A733E6 & 1) == 0 )
+  if ( (byte_4AB9309 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_CoinRoomEffectComponent_NextAcquiredEffect__, v3);
-    sub_1B90010(&CoinRoomUtility_TypeInfo, v4);
-    sub_1B90010(&Method_System_Linq_Enumerable_Sum_KeyValuePair_int__SelectedUserSvtCoin____, v5);
-    sub_1B90010(&System_Func_KeyValuePair_int__SelectedUserSvtCoin___int__TypeInfo, v6);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___, v7);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v8);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___, v9);
-    sub_1B90010(&Method_CoinRoomEffectComponent___c__StartPutInAnimation_b__25_0__, v10);
-    sub_1B90010(&CoinRoomEffectComponent___c_TypeInfo, v11);
-    byte_4A733E6 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent_NextAcquiredEffect__, v3);
+    sub_1BAB41C(&CoinRoomUtility_TypeInfo, v4);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Sum_KeyValuePair_int__SelectedUserSvtCoin____, v5);
+    sub_1BAB41C(&System_Func_KeyValuePair_int__SelectedUserSvtCoin___int__TypeInfo, v6);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___, v7);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v8);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___, v9);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent___c__StartPutInAnimation_b__25_0__, v10);
+    sub_1BAB41C(&CoinRoomEffectComponent___c_TypeInfo, v11);
+    byte_4AB9309 = 1;
   }
   m_ParticleSystem = 0LL;
-  v12 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_CoinRoomEffectComponent_NextAcquiredEffect__, 0LL);
   this->fields.endCallBack = v12;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.endCallBack, (int32_t)v12, v13, v14);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.endCallBack, (int32_t)v12, v13, v14);
   v15 = CoinRoomUtility_TypeInfo;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
@@ -344,7 +344,7 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
       v17 = CoinRoomEffectComponent___c_TypeInfo;
     }
     v21 = (Il2CppObject *)v17->static_fields->__9;
-    _9__25_0 = (System_Func_T__TResult__o *)sub_1B9025C(System_Func_KeyValuePair_int__SelectedUserSvtCoin___int__TypeInfo);
+    _9__25_0 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_KeyValuePair_int__SelectedUserSvtCoin___int__TypeInfo);
     System_Func_KeyValuePair_int__object___int____ctor(
       _9__25_0,
       v21,
@@ -352,21 +352,21 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
       0LL);
     static_fields = CoinRoomEffectComponent___c_TypeInfo->static_fields;
     static_fields->__9__25_0 = (struct System_Func_KeyValuePair_int__SelectedUserSvtCoin___int__o *)_9__25_0;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__25_0, (int32_t)_9__25_0, v23, v24);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__25_0, (int32_t)_9__25_0, v23, v24);
   }
   coinListPanel = (UnityEngine_GameObject_o *)System_Linq_Enumerable__Sum_KeyValuePair_int__object__(
                                                 (System_Collections_Generic_IEnumerable_TSource__o *)selectedCoinDic,
                                                 (System_Func_TSource__int__o *)_9__25_0,
-                                                (const MethodInfo_2EC59F4 *)Method_System_Linq_Enumerable_Sum_KeyValuePair_int__SelectedUserSvtCoin____);
+                                                (const MethodInfo_2EFBB4C *)Method_System_Linq_Enumerable_Sum_KeyValuePair_int__SelectedUserSvtCoin____);
   if ( !this->fields.effectCircleObject )
     goto LABEL_31;
   energyPartLoopRateOverTimeMax = (int)coinListPanel;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        this->fields.effectCircleObject,
-                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   this->fields.circleAnimation = (struct SimpleAnimation_o *)Component_object;
   p_circleAnimation = &this->fields.circleAnimation;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.circleAnimation, (int32_t)Component_object, v30, v31);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.circleAnimation, (int32_t)Component_object, v30, v31);
   coinListPanel = this->fields.coinListPanel;
   if ( !coinListPanel )
     goto LABEL_31;
@@ -384,7 +384,7 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
     goto LABEL_31;
   coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 coinListPanel,
-                                                (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
+                                                (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoControl___);
   if ( !coinListPanel )
     goto LABEL_31;
   TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)coinListPanel, 0, 0LL);
@@ -397,7 +397,7 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
   v42 = v43;
   UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v45, &v42, 0LL);
   v35 = CoinRoomEffectComponent__PlayCoinArrivedSE(this, energyPartLoopRateOverTimeMax, v34);
-  coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_MonoBehaviour__StartCoroutine_69524712(
+  coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_MonoBehaviour__StartCoroutine_69785892(
                                                 (UnityEngine_MonoBehaviour_o *)this,
                                                 v35,
                                                 0LL);
@@ -411,7 +411,7 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
     goto LABEL_31;
   coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 coinListPanel,
-                                                (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
+                                                (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomControlEffect___);
   beforeEntity = this->fields.beforeEntity;
   if ( !beforeEntity
     || !coinListPanel
@@ -428,9 +428,9 @@ void __fastcall CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectCompo
         (coinListPanel = (UnityEngine_GameObject_o *)*p_circleAnimation) == 0LL) )
   {
 LABEL_31:
-    sub_1B9026C(coinListPanel, v26);
+    sub_1BAB678(coinListPanel, v26);
   }
-  SimpleAnimation__Play_63924764((SimpleAnimation_o *)coinListPanel, this->fields.stateName, 0LL);
+  SimpleAnimation__Play_64185800((SimpleAnimation_o *)coinListPanel, this->fields.stateName, 0LL);
 }
 
 
@@ -458,17 +458,17 @@ void __fastcall CoinRoomEffectComponent__Update(CoinRoomEffectComponent_o *this,
   System_Action_o *v22; // x21
   System_String_o *MainBgmName; // x19
 
-  if ( (byte_4A733E4 & 1) == 0 )
+  if ( (byte_4AB9307 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&BgmManager_TypeInfo, v3);
-    sub_1B90010(&Method_CoinRoomEffectComponent__Update_b__23_0__, v4);
-    sub_1B90010(&CoinRoomUtility_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
-    sub_1B90010(&SoundManager_TypeInfo, v8);
-    sub_1B90010(&SimpleAnimation_State_TypeInfo, v9);
-    byte_4A733E4 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&BgmManager_TypeInfo, v3);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent__Update_b__23_0__, v4);
+    sub_1BAB41C(&CoinRoomUtility_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
+    sub_1BAB41C(&SoundManager_TypeInfo, v8);
+    sub_1BAB41C(&SimpleAnimation_State_TypeInfo, v9);
+    byte_4AB9307 = 1;
   }
   if ( !this->fields.endCallBack || this->fields.isEffectEnd )
     return;
@@ -477,7 +477,7 @@ void __fastcall CoinRoomEffectComponent__Update(CoinRoomEffectComponent_o *this,
     || (circleAnimation = (SimpleAnimation_o *)SimpleAnimation__GetState(circleAnimation, this->fields.stateName, 0LL)) == 0LL )
   {
 LABEL_26:
-    sub_1B9026C(circleAnimation, method);
+    sub_1BAB678(circleAnimation, method);
   }
   klass = circleAnimation->klass;
   v12 = circleAnimation;
@@ -497,7 +497,7 @@ LABEL_26:
   else
   {
 LABEL_11:
-    v15 = sub_1BE1FF0(circleAnimation, SimpleAnimation_State_TypeInfo, 5LL);
+    v15 = sub_1BFD3FC(circleAnimation, SimpleAnimation_State_TypeInfo, 5LL);
   }
   if ( (*(float (__fastcall **)(SimpleAnimation_o *, _QWORD))v15)(v12, *(_QWORD *)(v15 + 8)) >= 0.95 )
   {
@@ -505,7 +505,7 @@ LABEL_11:
     this->fields.isEffectEnd = 1;
     if ( isAcquired )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v20 = CoinRoomUtility_TypeInfo;
       if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
       {
@@ -513,7 +513,7 @@ LABEL_11:
         v20 = CoinRoomUtility_TypeInfo;
       }
       EFFECT_FADE_TIME = v20->static_fields->EFFECT_FADE_TIME;
-      v22 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+      v22 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
       System_Action___ctor(v22, (Il2CppObject *)this, Method_CoinRoomEffectComponent__Update_b__23_0__, 0LL);
       if ( Instance )
       {
@@ -524,7 +524,7 @@ LABEL_11:
     else
     {
       this->fields.endCallBack = 0LL;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.endCallBack, 0, v16, v17);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.endCallBack, 0, v16, v17);
       this->fields.isEffectEnd = 0;
       this->fields.state = 2;
       if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -533,7 +533,7 @@ LABEL_11:
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       SoundManager__playBgm(MainBgmName, 0LL);
-      circleAnimation = (SimpleAnimation_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      circleAnimation = (SimpleAnimation_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( circleAnimation )
       {
         AvalonSceneManager__transitionScene((AvalonSceneManager_o *)circleAnimation, 90, 1, 0LL, 0LL);
@@ -555,11 +555,11 @@ void __fastcall CoinRoomEffectComponent___Update_b__23_0(CoinRoomEffectComponent
   CommonUI_o *v7; // x19
 
   v2 = this;
-  if ( (byte_4A733EB & 1) == 0 )
+  if ( (byte_4AB930E & 1) == 0 )
   {
-    sub_1B90010(&CoinRoomUtility_TypeInfo, method);
-    this = (CoinRoomEffectComponent_o *)sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4A733EB = 1;
+    sub_1BAB41C(&CoinRoomUtility_TypeInfo, method);
+    this = (CoinRoomEffectComponent_o *)sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4AB930E = 1;
   }
   endCallBack = v2->fields.endCallBack;
   if ( !endCallBack )
@@ -568,15 +568,15 @@ void __fastcall CoinRoomEffectComponent___Update_b__23_0(CoinRoomEffectComponent
     endCallBack->fields.original_method_info,
     *(_QWORD *)&endCallBack->fields.extra_arg);
   v2->fields.endCallBack = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v2->fields.endCallBack, 0, v5, v6);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v2->fields.endCallBack, 0, v5, v6);
   v2->fields.isEffectEnd = 0;
-  this = (CoinRoomEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (CoinRoomEffectComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = (CommonUI_o *)this;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
   if ( !v7 )
 LABEL_8:
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   CommonUI__maskFadein(v7, CoinRoomUtility_TypeInfo->static_fields->EFFECT_FADE_TIME, 0LL, 0LL);
 }
 
@@ -639,13 +639,13 @@ bool __fastcall CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
   UnityEngine_ParticleSystem_MainModule_o v43; // 0:x0.8
 
   v4 = this;
-  if ( (byte_4A733F0 & 1) == 0 )
+  if ( (byte_4AB9313 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_CoinRoomGaugeEffectComponent___, method);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___, v5);
-    sub_1B90010(&Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__, v6);
-    this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)sub_1B90010(&UnityEngine_WaitForSeconds_TypeInfo, v7);
-    byte_4A733F0 = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_CoinRoomGaugeEffectComponent___, method);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___, v5);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__, v6);
+    this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)sub_1BAB41C(&UnityEngine_WaitForSeconds_TypeInfo, v7);
+    byte_4AB9313 = 1;
   }
   m_ParticleSystem = 0LL;
   memset(&v40, 0, sizeof(v40));
@@ -661,7 +661,7 @@ bool __fastcall CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
         goto LABEL_32;
       this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                      (UnityEngine_GameObject_o *)this,
-                                                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                                                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
       if ( !this )
         goto LABEL_32;
       v9 = this;
@@ -686,9 +686,9 @@ bool __fastcall CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
         goto LABEL_32;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)this,
-                           (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomGaugeEffectComponent___);
+                           (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomGaugeEffectComponent___);
       v4->fields._gaugeEffectComponent_5__6 = (struct CoinRoomGaugeEffectComponent_o *)Component_object;
-      sub_1B8FFB4(
+      sub_1BAB3C0(
         (ServantStatusBattleListViewItem_o *)&v4->fields._gaugeEffectComponent_5__6,
         (int32_t)Component_object,
         v15,
@@ -700,11 +700,11 @@ LABEL_12:
       if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)this, 0LL) )
       {
         lifeTime_5__2 = v4->fields._lifeTime_5__2;
-        v20 = (UnityEngine_WaitForSeconds_o *)sub_1B9025C(UnityEngine_WaitForSeconds_TypeInfo);
+        v20 = (UnityEngine_WaitForSeconds_o *)sub_1BAB668(UnityEngine_WaitForSeconds_TypeInfo);
         UnityEngine_WaitForSeconds___ctor(v20, lifeTime_5__2 * 0.9, 0LL);
         v4->fields.__2__current = (Il2CppObject *)v20;
         p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-        sub_1B8FFB4(p__2__current, (int32_t)v20, v22, v23);
+        sub_1BAB3C0(p__2__current, (int32_t)v20, v22, v23);
         v24 = 2;
 LABEL_29:
         *(_DWORD *)&p__2__current[-1].fields.isMine = v24;
@@ -714,7 +714,7 @@ LABEL_29:
       {
         v4->fields.__2__current = 0LL;
         v38 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-        sub_1B8FFB4(v38, 0, v17, v18);
+        sub_1BAB3C0(v38, 0, v17, v18);
         result = 1;
         *(_DWORD *)&v38[-1].fields.isMine = 1;
       }
@@ -750,8 +750,8 @@ LABEL_17:
         goto LABEL_28;
       v32 = Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__;
       if ( (*((_BYTE *)Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__ + 83) & 2) != 0 )
-        v32 = (_QWORD *)sub_1B90028(Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__);
-      this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)sub_1B8FFF4(v32, v32[4]);
+        v32 = (_QWORD *)sub_1BAB434(Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__);
+      this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)sub_1BAB400(v32, v32[4]);
       if ( !_4__this )
         goto LABEL_32;
       this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)OverwriteAssetSoundName__PlaySeContinue(
@@ -770,7 +770,7 @@ LABEL_17:
           || (this = (CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_o *)v4->fields._gaugeEffectComponent_5__6) == 0LL )
         {
 LABEL_32:
-          sub_1B9026C(this, method);
+          sub_1BAB678(this, method);
         }
         CoinRoomGaugeEffectComponent__StartAnimation(
           (CoinRoomGaugeEffectComponent_o *)this,
@@ -782,7 +782,7 @@ LABEL_32:
 LABEL_28:
       v4->fields.__2__current = 0LL;
       p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-      sub_1B8FFB4(p__2__current, 0, v2, (int32_t)v3);
+      sub_1BAB3C0(p__2__current, 0, v2, (int32_t)v3);
       v24 = 3;
       goto LABEL_29;
     default:
@@ -807,11 +807,11 @@ void __fastcall __noreturn CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B90024(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B9025C(v2);
+  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B90024(&Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_System_Collections_IEnumerator_Reset__);
-  sub_1B90138(v3, v4);
+  v4 = sub_1BAB430(&Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_System_Collections_IEnumerator_Reset__);
+  sub_1BAB544(v3, v4);
 }
 
 
@@ -838,15 +838,15 @@ void __fastcall CoinRoomEffectComponent___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A733EC & 1) == 0 )
+  if ( (byte_4AB930F & 1) == 0 )
   {
-    sub_1B90010(&CoinRoomEffectComponent___c_TypeInfo, v1);
-    byte_4A733EC = 1;
+    sub_1BAB41C(&CoinRoomEffectComponent___c_TypeInfo, v1);
+    byte_4AB930F = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(CoinRoomEffectComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(CoinRoomEffectComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CoinRoomEffectComponent___c_TypeInfo->static_fields->__9 = (struct CoinRoomEffectComponent___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)CoinRoomEffectComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -871,15 +871,15 @@ void __fastcall CoinRoomEffectComponent___c___NextAcquiredEffect_b__27_1(
   __int64 v6; // x1
   System_String_o *MainBgmName; // x19
 
-  if ( (byte_4A733EE & 1) == 0 )
+  if ( (byte_4AB9311 & 1) == 0 )
   {
-    sub_1B90010(&BgmManager_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v2);
-    sub_1B90010(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_1B90010(&SoundManager_TypeInfo, v4);
-    byte_4A733EE = 1;
+    sub_1BAB41C(&BgmManager_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v2);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
+    sub_1BAB41C(&SoundManager_TypeInfo, v4);
+    byte_4AB9311 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   CommonUI__ReleaseCoinRoomGetEffect((CommonUI_o *)Instance, 0LL);
@@ -889,10 +889,10 @@ void __fastcall CoinRoomEffectComponent___c___NextAcquiredEffect_b__27_1(
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playBgm(MainBgmName, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
 LABEL_10:
-    sub_1B9026C(Instance, v6);
+    sub_1BAB678(Instance, v6);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 90, 1, 0LL, 0LL);
 }
 
@@ -905,15 +905,15 @@ int32_t __fastcall CoinRoomEffectComponent___c___StartPutInAnimation_b__25_0(
   struct SelectedUserSvtCoin_o *value; // x19
 
   value = x.fields.value;
-  if ( (byte_4A733ED & 1) == 0 )
+  if ( (byte_4AB9310 & 1) == 0 )
   {
-    this = (CoinRoomEffectComponent___c_o *)sub_1B90010(
+    this = (CoinRoomEffectComponent___c_o *)sub_1BAB41C(
                                               &Method_System_Collections_Generic_KeyValuePair_int__SelectedUserSvtCoin__get_Value__,
                                               *(_QWORD *)&x.fields.key);
-    byte_4A733ED = 1;
+    byte_4AB9310 = 1;
   }
   if ( !value )
-    sub_1B9026C(this, *(_QWORD *)&x.fields.key);
+    sub_1BAB678(this, *(_QWORD *)&x.fields.key);
   return value->fields._num_k__BackingField;
 }
 
@@ -947,13 +947,13 @@ void __fastcall CoinRoomEffectComponent___c__DisplayClass27_0___NextAcquiredEffe
   int32_t v16; // w3
 
   v2 = this;
-  if ( (byte_4A733EF & 1) == 0 )
+  if ( (byte_4AB9312 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B90010(&Method_CoinRoomEffectComponent___c__NextAcquiredEffect_b__27_1__, v4);
-    this = (CoinRoomEffectComponent___c__DisplayClass27_0_o *)sub_1B90010(&CoinRoomEffectComponent___c_TypeInfo, v5);
-    byte_4A733EF = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1BAB41C(&Method_CoinRoomEffectComponent___c__NextAcquiredEffect_b__27_1__, v4);
+    this = (CoinRoomEffectComponent___c__DisplayClass27_0_o *)sub_1BAB41C(&CoinRoomEffectComponent___c_TypeInfo, v5);
+    byte_4AB9312 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -962,7 +962,7 @@ void __fastcall CoinRoomEffectComponent___c__DisplayClass27_0___NextAcquiredEffe
   if ( !this )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  this = (CoinRoomEffectComponent___c__DisplayClass27_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (CoinRoomEffectComponent___c__DisplayClass27_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = v2->fields.__4__this;
   if ( !v7 )
     goto LABEL_15;
@@ -990,14 +990,14 @@ void __fastcall CoinRoomEffectComponent___c__DisplayClass27_0___NextAcquiredEffe
       v9 = CoinRoomEffectComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v9->static_fields->__9;
-    _9__27_1 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    _9__27_1 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
     System_Action___ctor(_9__27_1, v13, Method_CoinRoomEffectComponent___c__NextAcquiredEffect_b__27_1__, 0LL);
     static_fields = CoinRoomEffectComponent___c_TypeInfo->static_fields;
     static_fields->__9__27_1 = _9__27_1;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__27_1, (int32_t)_9__27_1, v15, v16);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__27_1, (int32_t)_9__27_1, v15, v16);
   }
   if ( !v8 )
 LABEL_15:
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   CommonUI__OpenCoinRoomGetEffect(v8, (UnityEngine_Transform_o *)v11, 0, questRewardInfo, _9__27_1, 0LL);
 }

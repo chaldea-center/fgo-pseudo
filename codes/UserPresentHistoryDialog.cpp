@@ -3,10 +3,10 @@ void __fastcall UserPresentHistoryDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct UserPresentHistoryDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4A6EBF7 & 1) == 0 )
+  if ( (byte_4AB4B8B & 1) == 0 )
   {
-    sub_1B90010(&UserPresentHistoryDialog_TypeInfo, v1);
-    byte_4A6EBF7 = 1;
+    sub_1BAB41C(&UserPresentHistoryDialog_TypeInfo, v1);
+    byte_4AB4B8B = 1;
   }
   static_fields = UserPresentHistoryDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_HISTORY_POS_Y = 5LL;
@@ -22,7 +22,7 @@ void __fastcall UserPresentHistoryDialog__Init(UserPresentHistoryDialog_o *this,
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, method);
   userPresentHistoryListViewManager = (ListViewManager_o *)this->fields.userPresentHistoryListViewManager;
   if ( !userPresentHistoryListViewManager )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   ListViewManager__DestroyList(userPresentHistoryListViewManager, 0LL);
 }
 
@@ -35,23 +35,23 @@ void __fastcall UserPresentHistoryDialog__OnClickClose(UserPresentHistoryDialog_
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6EBF6 & 1) == 0 )
+  if ( (byte_4AB4B8A & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_UserPresentHistoryDialog_OnClickClose__, v3);
-    sub_1B90010(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, v4);
-    byte_4A6EBF6 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_UserPresentHistoryDialog_OnClickClose__, v3);
+    sub_1BAB41C(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, v4);
+    byte_4AB4B8A = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_UserPresentHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_UserPresentHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B90028(Method_UserPresentHistoryDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BAB434(Method_UserPresentHistoryDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BAB400(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
   }
   this->fields.state = 2;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -81,16 +81,16 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   int32_t v22; // w2
   int32_t v23; // w3
 
-  if ( (byte_4A6EBF5 & 1) == 0 )
+  if ( (byte_4AB4B89 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&UserPresentHistoryDialog_TypeInfo, v3);
-    sub_1B90010(&StringLiteral_10461/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
-    sub_1B90010(&StringLiteral_10459/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
-    sub_1B90010(&StringLiteral_10460/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v7);
-    sub_1B90010(&StringLiteral_1/*""*/, v8);
-    byte_4A6EBF5 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&UserPresentHistoryDialog_TypeInfo, v3);
+    sub_1BAB41C(&StringLiteral_10461/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
+    sub_1BAB41C(&StringLiteral_10459/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
+    sub_1BAB41C(&StringLiteral_10460/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v8);
+    byte_4AB4B89 = 1;
   }
   ((void (__fastcall *)(UserPresentHistoryDialog_o *, void *))this->klass->vtable._7_Init.method)(
     this,
@@ -164,7 +164,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
       }
     }
 LABEL_28:
-    sub_1B9026C(userPresentHistoryListViewManager, v9);
+    sub_1BAB678(userPresentHistoryListViewManager, v9);
   }
 LABEL_20:
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.scrollView;
@@ -185,19 +185,19 @@ LABEL_20:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                               (System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                0LL);
   if ( !closeLabel )
     goto LABEL_28;
   UILabel__set_text(closeLabel, (System_String_o *)userPresentHistoryListViewManager, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v20, v21);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.closeAction, 0, v20, v21);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.decideButton;
   if ( !userPresentHistoryListViewManager )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)userPresentHistoryListViewManager, 0, 0LL);
   this->fields.decideAction = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.decideAction, 0, v22, v23);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.decideAction, 0, v22, v23);
 }
 
 

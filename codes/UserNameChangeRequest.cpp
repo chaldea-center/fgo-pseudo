@@ -4,14 +4,14 @@ void __fastcall UserNameChangeRequest___ctor(UserNameChangeRequest_o *this, cons
   int32_t v3; // w3
   int32_t v5; // w1
 
-  if ( (byte_4A71824 & 1) == 0 )
+  if ( (byte_4AB7707 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_9109/*"MockChangeUserNameResponse"*/, method);
-    byte_4A71824 = 1;
+    sub_1BAB41C(&StringLiteral_9110/*"MockChangeUserNameResponse"*/, method);
+    byte_4AB7707 = 1;
   }
-  v5 = StringLiteral_9109/*"MockChangeUserNameResponse"*/;
-  this->fields.resMsg = (struct System_String_o *)StringLiteral_9109/*"MockChangeUserNameResponse"*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v5, v2, v3);
+  v5 = StringLiteral_9110/*"MockChangeUserNameResponse"*/;
+  this->fields.resMsg = (struct System_String_o *)StringLiteral_9110/*"MockChangeUserNameResponse"*/;
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.resMsg, v5, v2, v3);
   RequestBase___ctor((RequestBase_o *)this, 0LL);
 }
 
@@ -26,16 +26,16 @@ void __fastcall UserNameChangeRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4A71822 & 1) == 0 )
+  if ( (byte_4AB7705 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_22015/*"name"*/, name);
-    sub_1B90010(&StringLiteral_21424/*"message"*/, v9);
-    sub_1B90010(&StringLiteral_19741/*"genderType"*/, v10);
-    byte_4A71822 = 1;
+    sub_1BAB41C(&StringLiteral_22017/*"name"*/, name);
+    sub_1BAB41C(&StringLiteral_21426/*"message"*/, v9);
+    sub_1BAB41C(&StringLiteral_19744/*"genderType"*/, v10);
+    byte_4AB7705 = 1;
   }
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_22015/*"name"*/, name, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19741/*"genderType"*/, genderType, 0LL);
-  RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_21424/*"message"*/, message, 0LL);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_22017/*"name"*/, name, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19744/*"genderType"*/, genderType, 0LL);
+  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_21426/*"message"*/, message, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -44,10 +44,10 @@ System_String_o *__fastcall UserNameChangeRequest__getMockData(UserNameChangeReq
 {
   System_String_o *resMsg; // x19
 
-  if ( (byte_4A71821 & 1) == 0 )
+  if ( (byte_4AB7704 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    byte_4A71821 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    byte_4AB7704 = 1;
   }
   resMsg = this->fields.resMsg;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -61,16 +61,16 @@ System_String_o *__fastcall UserNameChangeRequest__getURL(UserNameChangeRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A71820 & 1) == 0 )
+  if ( (byte_4AB7703 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_22648/*"profile/editName"*/, v2);
-    byte_4A71820 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_22653/*"profile/editName"*/, v2);
+    byte_4AB7703 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_22648/*"profile/editName"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_22653/*"profile/editName"*/, 0LL);
 }
 
 
@@ -82,21 +82,22 @@ void __fastcall UserNameChangeRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  const MethodInfo *v8; // x2
+  __int64 *v9; // x8
 
-  if ( (byte_4A71823 & 1) == 0 )
+  if ( (byte_4AB7706 & 1) == 0 )
   {
-    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B90010(&StringLiteral_22258/*"ok"*/, v5);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
-    byte_4A71823 = 1;
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BAB41C(&StringLiteral_22261/*"ok"*/, v5);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
+    byte_4AB7706 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(19, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_41180636(v7, 0LL) )
-    v8 = &StringLiteral_22258/*"ok"*/;
+  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
+    v9 = &StringLiteral_22261/*"ok"*/;
   else
-    v8 = &StringLiteral_22088/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v9 = &StringLiteral_22090/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v9, 0LL);
 }

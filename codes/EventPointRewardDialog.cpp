@@ -1,9 +1,9 @@
 void __fastcall EventPointRewardDialog___ctor(EventPointRewardDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A74068 & 1) == 0 )
+  if ( (byte_4AB0D5C & 1) == 0 )
   {
-    sub_1B90010(&BaseDialog_TypeInfo, method);
-    byte_4A74068 = 1;
+    sub_1BAB41C(&BaseDialog_TypeInfo, method);
+    byte_4AB0D5C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,10 +21,10 @@ void __fastcall EventPointRewardDialog__Init(EventPointRewardDialog_o *this, con
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4A74064 & 1) == 0 )
+  if ( (byte_4AB0D58 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A74064 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB0D58 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -44,7 +44,7 @@ void __fastcall EventPointRewardDialog__Init(EventPointRewardDialog_o *this, con
         (titleLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1B9026C(titleLabel, method);
+    sub_1BAB678(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -58,17 +58,17 @@ void __fastcall EventPointRewardDialog__OnClickClose(EventPointRewardDialog_o *t
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *callback; // x0
 
-  if ( (byte_4A74067 & 1) == 0 )
+  if ( (byte_4AB0D5B & 1) == 0 )
   {
-    sub_1B90010(&Method_EventPointRewardDialog_OnClickClose__, method);
-    byte_4A74067 = 1;
+    sub_1BAB41C(&Method_EventPointRewardDialog_OnClickClose__, method);
+    byte_4AB0D5B = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_EventPointRewardDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_EventPointRewardDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_EventPointRewardDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434();
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     callback = this->fields.callback;
     this->fields.state = 0;
@@ -91,27 +91,26 @@ void __fastcall EventPointRewardDialog__Open(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
+  __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
+  __int64 v9; // x1
   UILabel_o *closeLabel; // x20
-  System_Action_o *v12; // x20
+  System_Action_o *v11; // x20
 
-  if ( (byte_4A74066 & 1) == 0 )
+  if ( (byte_4AB0D5A & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, callback);
-    sub_1B90010(&Method_EventPointRewardDialog_EndOpen__, v6);
-    sub_1B90010(&LocalizationManager_TypeInfo, v7);
-    sub_1B90010(&StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, v8);
-    byte_4A74066 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, callback);
+    sub_1BAB41C(&Method_EventPointRewardDialog_EndOpen__, v5);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    byte_4AB0D5A = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callback = callback;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.callback, (int32_t)callback, (int32_t)method, v3);
+    sub_1BAB3C0(&this->fields.callback);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_11;
@@ -127,14 +126,14 @@ void __fastcall EventPointRewardDialog__Open(
     closeLabel = this->fields.closeLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3757/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3754/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !closeLabel )
 LABEL_11:
-      sub_1B9026C(gameObject, v10);
+      sub_1BAB678(gameObject, v9);
     UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
-    v12 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
-    System_Action___ctor(v12, (Il2CppObject *)this, Method_EventPointRewardDialog_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v12, 0, 0LL);
+    v11 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+    System_Action___ctor(v11, (Il2CppObject *)this, Method_EventPointRewardDialog_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v11, 0, 0LL);
   }
 }
 
@@ -185,46 +184,46 @@ void __fastcall EventPointRewardDialog__SetData(
   int32_t v47; // [xsp+Ch] [xbp-64h] BYREF
   int64_t v48; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4A74065 & 1) == 0 )
+  if ( (byte_4AB0D59 & 1) == 0 )
   {
-    sub_1B90010(&BattleDropItemComponent_ClickDelegate_TypeInfo, itemArray);
-    sub_1B90010(&Method_EventPointRewardDialog_OnItemClick__, v13);
-    sub_1B90010(&int_TypeInfo, v14);
-    sub_1B90010(&long_TypeInfo, v15);
-    sub_1B90010(&LocalizationManager_TypeInfo, v16);
-    sub_1B90010(&StringLiteral_14826/*"UNIT_REST_NONE"*/, v17);
-    sub_1B90010(&StringLiteral_5652/*"EVENT_POINT_NEXT_NUM"*/, v18);
-    sub_1B90010(&StringLiteral_5657/*"EVENT_POINT_REWARD_GET"*/, v19);
-    sub_1B90010(&StringLiteral_5653/*"EVENT_POINT_NEXT_TITLE"*/, v20);
-    sub_1B90010(&StringLiteral_5658/*"EVENT_POINT_TOTAL_NUM"*/, v21);
-    sub_1B90010(&StringLiteral_5659/*"EVENT_POINT_TOTAL_TITLE"*/, v22);
-    byte_4A74065 = 1;
+    sub_1BAB41C(&BattleDropItemComponent_ClickDelegate_TypeInfo, itemArray);
+    sub_1BAB41C(&Method_EventPointRewardDialog_OnItemClick__, v13);
+    sub_1BAB41C(&int_TypeInfo, v14);
+    sub_1BAB41C(&long_TypeInfo, v15);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v16);
+    sub_1BAB41C(&StringLiteral_14831/*"UNIT_REST_NONE"*/, v17);
+    sub_1BAB41C(&StringLiteral_5653/*"EVENT_POINT_NEXT_NUM"*/, v18);
+    sub_1BAB41C(&StringLiteral_5658/*"EVENT_POINT_REWARD_GET"*/, v19);
+    sub_1BAB41C(&StringLiteral_5654/*"EVENT_POINT_NEXT_TITLE"*/, v20);
+    sub_1BAB41C(&StringLiteral_5659/*"EVENT_POINT_TOTAL_NUM"*/, v21);
+    sub_1BAB41C(&StringLiteral_5660/*"EVENT_POINT_TOTAL_TITLE"*/, v22);
+    byte_4AB0D59 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5657/*"EVENT_POINT_REWARD_GET"*/, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5658/*"EVENT_POINT_REWARD_GET"*/, 0LL);
   v25 = System_String__Format(v24, (Il2CppObject *)itemName, 0LL);
   if ( !titleLabel )
     goto LABEL_17;
   UILabel__set_text(titleLabel, v25, 0LL);
   totalTitleLabel = this->fields.totalTitleLabel;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_POINT_TOTAL_TITLE"*/, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5660/*"EVENT_POINT_TOTAL_TITLE"*/, 0LL);
   if ( !totalTitleLabel )
     goto LABEL_17;
   UILabel__set_text(totalTitleLabel, v25, 0LL);
   totalNumLabel = this->fields.totalNumLabel;
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5658/*"EVENT_POINT_TOTAL_NUM"*/, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_POINT_TOTAL_NUM"*/, 0LL);
   v48 = totalCount;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v48, v30, v31, v32);
   v47 = addCount;
   v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47, v34, v35, v36);
-  v25 = System_String__Format_61801464(v29, v33, v37, 0LL);
+  v25 = System_String__Format_62062500(v29, v33, v37, 0LL);
   if ( !totalNumLabel )
     goto LABEL_17;
   UILabel__set_text(totalNumLabel, v25, 0LL);
   nextTitleLabel = this->fields.nextTitleLabel;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5653/*"EVENT_POINT_NEXT_TITLE"*/, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5654/*"EVENT_POINT_NEXT_TITLE"*/, 0LL);
   if ( !nextTitleLabel )
     goto LABEL_17;
   UILabel__set_text(nextTitleLabel, v25, 0LL);
@@ -233,11 +232,11 @@ void __fastcall EventPointRewardDialog__SetData(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( nextCount <= 0 )
   {
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_14826/*"UNIT_REST_NONE"*/, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_14831/*"UNIT_REST_NONE"*/, 0LL);
   }
   else
   {
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_5652/*"EVENT_POINT_NEXT_NUM"*/, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_5653/*"EVENT_POINT_NEXT_NUM"*/, 0LL);
     v48 = nextCount;
     v44 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v48, v41, v42, v43);
     v25 = System_String__Format(v40, v44, 0LL);
@@ -246,7 +245,7 @@ void __fastcall EventPointRewardDialog__SetData(
   if ( !nextNumLabel
     || (UILabel__set_text(nextNumLabel, v25, 0LL),
         itemWindow = this->fields.itemWindow,
-        v46 = (BattleDropItemComponent_ClickDelegate_o *)sub_1B9025C(BattleDropItemComponent_ClickDelegate_TypeInfo),
+        v46 = (BattleDropItemComponent_ClickDelegate_o *)sub_1BAB668(BattleDropItemComponent_ClickDelegate_TypeInfo),
         BattleDropItemComponent_ClickDelegate___ctor(
           v46,
           (Il2CppObject *)this,
@@ -255,7 +254,7 @@ void __fastcall EventPointRewardDialog__SetData(
         !itemWindow) )
   {
 LABEL_17:
-    sub_1B9026C(v25, v26);
+    sub_1BAB678(v25, v26);
   }
   BattleViewItemlistComponent__setListDataCustomColumn(itemWindow, itemArray, v46, 0, 0LL);
 }

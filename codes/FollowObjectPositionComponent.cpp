@@ -16,7 +16,7 @@ void __fastcall FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v5 = IsInversion;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, (int32_t)method);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, (int32_t)method);
   *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
@@ -36,10 +36,10 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
   float v12; // s1
   float v13; // s0
 
-  if ( (byte_4A6F32F & 1) == 0 )
+  if ( (byte_4AB51F5 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A6F32F = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB51F5 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -84,6 +84,6 @@ LABEL_14:
         }
       }
     }
-    sub_1B9026C(transform, v6);
+    sub_1BAB678(transform, v6);
   }
 }

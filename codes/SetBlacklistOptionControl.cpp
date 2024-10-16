@@ -11,18 +11,18 @@ void __fastcall SetBlacklistOptionControl__Init(SetBlacklistOptionControl_o *thi
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A6B3D8 & 1) == 0 )
+  if ( (byte_4AB122C & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_9663/*"OPTION_BLACKLIST_EXPLANATION"*/, v3);
-    byte_4A6B3D8 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_9663/*"OPTION_BLACKLIST_EXPLANATION"*/, v3);
+    byte_4AB122C = 1;
   }
   blackListExpLabel = this->fields.blackListExpLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9663/*"OPTION_BLACKLIST_EXPLANATION"*/, 0LL);
   if ( !blackListExpLabel )
-    sub_1B9026C(v5, v6);
+    sub_1BAB678(v5, v6);
   UILabel__set_text(blackListExpLabel, v5, 0LL);
 }
 
@@ -37,19 +37,19 @@ void __fastcall SetBlacklistOptionControl__onClickOpenButton(
   __int64 v6; // x1
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4A6B3D9 & 1) == 0 )
+  if ( (byte_4AB122D & 1) == 0 )
   {
-    sub_1B90010(&Method_SetBlacklistOptionControl_onClickOpenButton__, method);
-    sub_1B90010(&StringLiteral_3532/*"CLICK_BLACKLIST"*/, v3);
-    byte_4A6B3D9 = 1;
+    sub_1BAB41C(&Method_SetBlacklistOptionControl_onClickOpenButton__, method);
+    sub_1BAB41C(&StringLiteral_3529/*"CLICK_BLACKLIST"*/, v3);
+    byte_4AB122D = 1;
   }
   v4 = Method_SetBlacklistOptionControl_onClickOpenButton__;
   if ( (*((_BYTE *)Method_SetBlacklistOptionControl_onClickOpenButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B90028(Method_SetBlacklistOptionControl_onClickOpenButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+    v4 = (_QWORD *)sub_1BAB434(Method_SetBlacklistOptionControl_onClickOpenButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1B9026C(0LL, v6);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3532/*"CLICK_BLACKLIST"*/, 0LL);
+    sub_1BAB678(0LL, v6);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3529/*"CLICK_BLACKLIST"*/, 0LL);
 }

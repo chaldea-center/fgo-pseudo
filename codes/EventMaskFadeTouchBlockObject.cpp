@@ -21,7 +21,7 @@ void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
       onClickCallback->fields.original_method_info,
       *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_1B8FFB4(p_onClickCallback, 0, v4, v5);
+    sub_1BAB3C0(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -42,7 +42,7 @@ void __fastcall EventMaskFadeTouchBlockObject__RemoveCallback(
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_1B8FFB4(p_onClickCallback, 0, v3, v4);
+      sub_1BAB3C0(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -65,7 +65,7 @@ void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (ServantStatusBattleListViewItem_c *)callback;
-      sub_1B8FFB4(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1BAB3C0(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

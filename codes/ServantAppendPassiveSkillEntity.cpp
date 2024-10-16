@@ -2,14 +2,14 @@ void __fastcall ServantAppendPassiveSkillEntity___ctor(
         ServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A704A9 & 1) == 0 )
+  if ( (byte_4AB639A & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A704A9 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4AB639A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ System_String_o *__fastcall ServantAppendPassiveSkillEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4A704A7 & 1) == 0 )
+  if ( (byte_4AB6398 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4A704A7 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
+    byte_4AB6398 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_2E8C8D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -71,30 +71,30 @@ void __fastcall ServantAppendPassiveSkillEntity__GetEffectExplanation(
   LocalizationManager_c *v27; // x0
   System_String_o *unknownNameText; // x1
 
-  if ( (byte_4A704A8 & 1) == 0 )
+  if ( (byte_4AB6399 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_SkillMaster___, title);
-    sub_1B90010(&DataManager_TypeInfo, v9);
-    sub_1B90010(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
-    sub_1B90010(&LocalizationManager_TypeInfo, v11);
-    sub_1B90010(&StringLiteral_1/*""*/, v12);
-    byte_4A704A8 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_SkillMaster___, title);
+    sub_1BAB41C(&DataManager_TypeInfo, v9);
+    sub_1BAB41C(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v11);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v12);
+    byte_4AB6399 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
-    sub_1B9026C(0LL, v14);
+    sub_1BAB678(0LL, v14);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields.skillId,
-             (const MethodInfo_312C5A8 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_3163D90 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
     v19 = (SkillEntity_o *)Entity;
     EffectTitle = SkillEntity__getEffectTitle((SkillEntity_o *)Entity, skillLv, 0LL);
     *title = EffectTitle;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)title, (int32_t)EffectTitle, v21, v22);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)title, (int32_t)EffectTitle, v21, v22);
     EffectExplanation = SkillEntity__getEffectExplanation(v19, skillLv, 0LL);
     v26 = (int)EffectExplanation;
     *explanation = EffectExplanation;
@@ -103,10 +103,10 @@ void __fastcall ServantAppendPassiveSkillEntity__GetEffectExplanation(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4A6B70D )
+    if ( !byte_4AB1560 )
     {
-      sub_1B90010(&LocalizationManager_TypeInfo, v16);
-      byte_4A6B70D = 1;
+      sub_1BAB41C(&LocalizationManager_TypeInfo, v16);
+      byte_4AB1560 = 1;
     }
     v27 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -116,9 +116,9 @@ void __fastcall ServantAppendPassiveSkillEntity__GetEffectExplanation(
     }
     unknownNameText = v27->static_fields->unknownNameText;
     *title = unknownNameText;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)title, (int32_t)unknownNameText, v17, v18);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)title, (int32_t)unknownNameText, v17, v18);
     *explanation = (System_String_o *)StringLiteral_1/*""*/;
     v26 = (int)StringLiteral_1/*""*/;
   }
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)explanation, v26, v24, v25);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)explanation, v26, v24, v25);
 }

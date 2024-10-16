@@ -22,23 +22,23 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
   int32_t v25; // w3
 
   v17 = this;
-  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v17->fields._Name_k__BackingField, (int32_t)name, v18, v19);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v17->fields._Name_k__BackingField, (int32_t)name, v18, v19);
   v17->fields._Detail_k__BackingField = detail;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v17->fields._Detail_k__BackingField, (int32_t)detail, v20, v21);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v17->fields._Detail_k__BackingField, (int32_t)detail, v20, v21);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&v17->fields._BeforeName_k__BackingField,
     (int32_t)beforeName,
     v22,
     v23);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)v17, (int32_t)beforeDetail, v24, v25);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v17, (int32_t)beforeDetail, v24, v25);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -124,7 +124,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
   int32_t v3; // w3
 
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._BeforeDetail_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -140,7 +140,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
   int32_t v3; // w3
 
   this->fields._BeforeName_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._BeforeName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -156,7 +156,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Detail(
   int32_t v3; // w3
 
   this->fields._Detail_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._Detail_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -199,7 +199,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Name(
   int32_t v3; // w3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,

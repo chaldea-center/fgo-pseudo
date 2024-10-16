@@ -17,7 +17,7 @@ int32_t __fastcall WrapControlText__CalcApproximateLabelHeight(
   int v8; // w8
 
   if ( !text )
-    sub_1B9026C(0LL, width);
+    sub_1BAB678(0LL, width);
   stringLength = text->fields._stringLength;
   v7 = stringLength / (width / fontSize);
   v8 = stringLength % (width / fontSize);
@@ -52,13 +52,13 @@ void __fastcall WrapControlText__EndLine(System_Text_StringBuilder_o **s, const 
         return;
       }
 LABEL_10:
-      sub_1B9026C(v3, method);
+      sub_1BAB678(v3, method);
     }
   }
   v3 = *s;
   if ( !*s )
     goto LABEL_10;
-  System_Text_StringBuilder__Append_60951316(v3, 0xAu, 0LL);
+  System_Text_StringBuilder__Append_61212352(v3, 0xAu, 0LL);
 }
 
 
@@ -100,7 +100,7 @@ void __fastcall WrapControlText__ReplaceSpaceWithNewline(System_Text_StringBuild
         return;
       }
 LABEL_9:
-      sub_1B9026C(v3, method);
+      sub_1BAB678(v3, method);
     }
   }
 }
@@ -118,17 +118,17 @@ void __fastcall WrapControlText__fontSizeAdjust(
   const MethodInfo *v10; // [xsp+8h] [xbp-38h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A6F441 & 1) == 0 )
+  if ( (byte_4AB5307 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, text);
-    byte_4A6F441 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, text);
+    byte_4AB5307 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
   if ( IsNullOrEmpty )
   {
     if ( !label )
-      sub_1B9026C(IsNullOrEmpty, v8);
+      sub_1BAB678(IsNullOrEmpty, v8);
     UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   else
@@ -150,17 +150,17 @@ float __fastcall WrapControlText__getFontWidth(
   const MethodInfo *v11; // [xsp+8h] [xbp-38h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A6F442 & 1) == 0 )
+  if ( (byte_4AB5308 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, text);
-    byte_4A6F442 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, text);
+    byte_4AB5308 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
   if ( IsNullOrEmpty )
   {
     if ( !label )
-      sub_1B9026C(IsNullOrEmpty, v8);
+      sub_1BAB678(IsNullOrEmpty, v8);
     UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     return 0.0;
   }
@@ -190,13 +190,13 @@ int32_t __fastcall WrapControlText__textAdjust(
   const MethodInfo *v18; // [xsp+8h] [xbp-48h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4A6F440 & 1) == 0 )
+  if ( (byte_4AB5306 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Debug_TypeInfo, text);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B90010(&StringLiteral_15693/*"WrapControlText textAdjust error: "*/, v11);
-    sub_1B90010(&StringLiteral_1/*""*/, v12);
-    byte_4A6F440 = 1;
+    sub_1BAB41C(&UnityEngine_Debug_TypeInfo, text);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BAB41C(&StringLiteral_15699/*"WrapControlText textAdjust error: "*/, v11);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v12);
+    byte_4AB5306 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -212,7 +212,7 @@ int32_t __fastcall WrapControlText__textAdjust(
       return 0;
     }
 LABEL_19:
-    sub_1B9026C(IsNullOrEmpty, v14);
+    sub_1BAB678(IsNullOrEmpty, v14);
   }
   do
   {
@@ -230,7 +230,7 @@ LABEL_19:
   if ( !label )
     goto LABEL_19;
   UILabel__set_text(label, text, 0LL);
-  v16 = (Il2CppObject *)System_String__Concat_61787092((System_String_o *)StringLiteral_15693/*"WrapControlText textAdjust error: "*/, text, 0LL);
+  v16 = (Il2CppObject *)System_String__Concat_62048128((System_String_o *)StringLiteral_15699/*"WrapControlText textAdjust error: "*/, text, 0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__Log(v16, 0LL);
@@ -361,13 +361,13 @@ bool __fastcall WrapControlText__wrapText(
   double iptr; // [xsp+68h] [xbp-A8h] BYREF
 
   v14 = text;
-  if ( (byte_4A6F443 & 1) == 0 )
+  if ( (byte_4AB5309 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, text);
-    sub_1B90010(&NGUIText_TypeInfo, v16);
-    sub_1B90010(&System_Text_StringBuilder_TypeInfo, v17);
-    sub_1B90010(&StringLiteral_1/*""*/, v18);
-    byte_4A6F443 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
+    sub_1BAB41C(&NGUIText_TypeInfo, v16);
+    sub_1BAB41C(&System_Text_StringBuilder_TypeInfo, v17);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v18);
+    byte_4AB5309 = 1;
   }
   s = 0LL;
   index = 0;
@@ -375,10 +375,10 @@ bool __fastcall WrapControlText__wrapText(
   *lineOut = 1;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4A6F4B2 )
+  if ( !byte_4AB5377 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, text);
-    byte_4A6F4B2 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
+    byte_4AB5377 = 1;
   }
   Chars = (System_String_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -387,11 +387,11 @@ bool __fastcall WrapControlText__wrapText(
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
   }
   v128 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 56LL);
-  if ( !byte_4A6F4B3 )
+  if ( !byte_4AB5378 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, text);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
-    byte_4A6F4B3 = 1;
+    byte_4AB5378 = 1;
   }
   if ( !LODWORD(Chars[9].monitor) )
   {
@@ -399,11 +399,11 @@ bool __fastcall WrapControlText__wrapText(
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
   }
   v20 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 64LL);
-  if ( !byte_4A6F4B4 )
+  if ( !byte_4AB5379 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, text);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
-    byte_4A6F4B4 = 1;
+    byte_4AB5379 = 1;
   }
   if ( !LODWORD(Chars[9].monitor) )
   {
@@ -431,10 +431,10 @@ bool __fastcall WrapControlText__wrapText(
   __asm { FMOV            V0.2S, #1.0 }
   static_fields->fontSize = fsize;
   *(_QWORD *)&static_fields->fontScale = _D0;
-  if ( !byte_4A6B493 )
+  if ( !byte_4AB12E8 )
   {
-    sub_1B90010(&System_Math_TypeInfo, v22);
-    byte_4A6B493 = 1;
+    sub_1BAB41C(&System_Math_TypeInfo, v22);
+    byte_4AB12E8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -550,10 +550,10 @@ LABEL_54:
     v48 = v45 / v36->static_fields->finalLineHeight;
   else
     v48 = (float)v47;
-  if ( !byte_4A6A9C0 )
+  if ( !byte_4AB0690 )
   {
-    sub_1B90010(&System_Math_TypeInfo, v31);
-    byte_4A6A9C0 = 1;
+    sub_1BAB41C(&System_Math_TypeInfo, v31);
+    byte_4AB0690 = 1;
   }
   v49 = v48 + 0.01;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -575,7 +575,7 @@ LABEL_80:
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   NGUIText__Prepare(v14, 0LL);
-  v52 = (System_Text_StringBuilder_o *)sub_1B9025C(System_Text_StringBuilder_TypeInfo);
+  v52 = (System_Text_StringBuilder_o *)sub_1BAB668(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v52, 0LL);
   s = v52;
   if ( !v14 )
@@ -722,19 +722,19 @@ LABEL_115:
               v77 = v76;
           }
           v79 = s;
-          Chars = System_String__Substring_61806096(v14, v60, v77, 0LL);
+          Chars = System_String__Substring_62067132(v14, v60, v77, 0LL);
           if ( !v79 )
             goto LABEL_261;
-          System_Text_StringBuilder__Append_60948988(v79, Chars, 0LL);
+          System_Text_StringBuilder__Append_61210024(v79, Chars, 0LL);
           v61 = v68;
           v125 = 0;
           v60 = index + 1;
         }
       }
-      if ( !byte_4A6B493 )
+      if ( !byte_4AB12E8 )
       {
-        sub_1B90010(&System_Math_TypeInfo, text);
-        byte_4A6B493 = 1;
+        sub_1BAB41C(&System_Math_TypeInfo, text);
+        byte_4AB12E8 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -872,10 +872,10 @@ LABEL_180:
       if ( ((v67 != v127) & (v94 ^ 1)) == 0 )
       {
         v95 = s;
-        Chars = System_String__Substring_61806096(v14, v60, (index - v60) & (unsigned int)~((index - v60) >> 31), 0LL);
+        Chars = System_String__Substring_62067132(v14, v60, (index - v60) & (unsigned int)~((index - v60) >> 31), 0LL);
         if ( !v95 )
           goto LABEL_261;
-        System_Text_StringBuilder__Append_60948988(v95, Chars, 0LL);
+        System_Text_StringBuilder__Append_61210024(v95, Chars, 0LL);
         v96 = 1;
         if ( (unsigned int)v71 - 8201 >= 3 )
         {
@@ -951,14 +951,14 @@ LABEL_193:
     {
       if ( !s )
         goto LABEL_261;
-      System_Text_StringBuilder__Append_60951316(s, 0xAu, 0LL);
+      System_Text_StringBuilder__Append_61212352(s, 0xAu, 0LL);
     }
     else
     {
-      Chars = System_String__Substring_61806096(v14, v60, index - v60 + 1, 0LL);
+      Chars = System_String__Substring_62067132(v14, v60, index - v60 + 1, 0LL);
       if ( !v69 )
         goto LABEL_261;
-      System_Text_StringBuilder__Append_60948988(v69, Chars, 0LL);
+      System_Text_StringBuilder__Append_61210024(v69, Chars, 0LL);
     }
     v61 = 0;
     ++v67;
@@ -981,14 +981,14 @@ LABEL_217:
   if ( (int)text > v60 )
   {
     v101 = s;
-    Chars = System_String__Substring_61806096(v14, v60, v53, 0LL);
+    Chars = System_String__Substring_62067132(v14, v60, v53, 0LL);
     if ( v101 )
     {
-      System_Text_StringBuilder__Append_60948988(v101, Chars, 0LL);
+      System_Text_StringBuilder__Append_61210024(v101, Chars, 0LL);
       goto LABEL_220;
     }
 LABEL_261:
-    sub_1B9026C(Chars, text);
+    sub_1BAB678(Chars, text);
   }
 LABEL_220:
   if ( v66 >= v63 )

@@ -14,25 +14,25 @@ void __fastcall BattleUseContinueRequest__beginRequest(
   const MethodInfo *v14; // x1
   const MethodInfo *v15; // x1
 
-  if ( (byte_4A71660 & 1) == 0 )
+  if ( (byte_4AB7542 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, battleId);
-    sub_1B90010(&StringLiteral_24406/*"usedTurnList"*/, v9);
-    sub_1B90010(&StringLiteral_18270/*"continueNum"*/, v10);
-    sub_1B90010(&StringLiteral_17138/*"battleId"*/, v11);
-    byte_4A71660 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, battleId);
+    sub_1BAB41C(&StringLiteral_24409/*"usedTurnList"*/, v9);
+    sub_1BAB41C(&StringLiteral_18274/*"continueNum"*/, v10);
+    sub_1BAB41C(&StringLiteral_17146/*"battleId"*/, v11);
+    byte_4AB7542 = 1;
   }
-  RequestBase__addField_41187492(
+  RequestBase__addField_41522804(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17138/*"battleId"*/,
+    (System_String_o *)StringLiteral_17146/*"battleId"*/,
     battleId,
     *(const MethodInfo **)&continueCount);
-  RequestBase__addField_41190224(
+  RequestBase__addField_41524956(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24406/*"usedTurnList"*/,
+    (System_String_o *)StringLiteral_24409/*"usedTurnList"*/,
     &usedTurnArray->obj,
     v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18270/*"continueNum"*/, continueCount, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18274/*"continueNum"*/, continueCount, v13);
   RequestBase__addBaseField((RequestBase_o *)this, v14);
   RequestBase__WriteParameter((RequestBase_o *)this, v15);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -47,15 +47,15 @@ System_String_o *__fastcall BattleUseContinueRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4A7165F & 1) == 0 )
+  if ( (byte_4AB7541 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_9108/*"MockBattleUseContinueRequest"*/, v2);
-    byte_4A7165F = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_9109/*"MockBattleUseContinueRequest"*/, v2);
+    byte_4AB7541 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9108/*"MockBattleUseContinueRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9109/*"MockBattleUseContinueRequest"*/, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ System_String_o *__fastcall BattleUseContinueRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4A71661 & 1) == 0 )
+  if ( (byte_4AB7543 & 1) == 0 )
   {
-    sub_1B90010(&AndroidUtil_TypeInfo, method);
-    sub_1B90010(&DatFileName_TypeInfo, v2);
-    sub_1B90010(&StringLiteral_1123/*"/"*/, v3);
-    byte_4A71661 = 1;
+    sub_1BAB41C(&AndroidUtil_TypeInfo, method);
+    sub_1BAB41C(&DatFileName_TypeInfo, v2);
+    sub_1BAB41C(&StringLiteral_1120/*"/"*/, v3);
+    byte_4AB7543 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -81,7 +81,7 @@ System_String_o *__fastcall BattleUseContinueRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(2, 0LL);
-  return System_String__Concat_61798352(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+  return System_String__Concat_62059388(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
@@ -92,16 +92,16 @@ System_String_o *__fastcall BattleUseContinueRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A7165E & 1) == 0 )
+  if ( (byte_4AB7540 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_17125/*"battle/useContinue"*/, v2);
-    byte_4A7165E = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_17133/*"battle/useContinue"*/, v2);
+    byte_4AB7540 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_17125/*"battle/useContinue"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_17133/*"battle/useContinue"*/, 0LL);
 }
 
 
@@ -116,12 +116,12 @@ void __fastcall BattleUseContinueRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4A71662 & 1) == 0 )
+  if ( (byte_4AB7544 & 1) == 0 )
   {
-    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B90010(&StringLiteral_22258/*"ok"*/, v5);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
-    byte_4A71662 = 1;
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BAB41C(&StringLiteral_22261/*"ok"*/, v5);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
+    byte_4AB7544 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -131,14 +131,14 @@ void __fastcall BattleUseContinueRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22258/*"ok"*/;
+    v9 = &StringLiteral_22261/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22088/*"ng"*/;
+    v9 = &StringLiteral_22090/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

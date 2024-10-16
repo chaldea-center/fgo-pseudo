@@ -1,13 +1,13 @@
 void __fastcall MapGimmickPathEntity___ctor(MapGimmickPathEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A701CC & 1) == 0 )
+  if ( (byte_4AB60B7 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A701CC = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4AB60B7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall MapGimmickPathEntity__CreatePK(
         int32_t commonReleaseId,
         const MethodInfo *method)
 {
-  if ( (byte_4A701CB & 1) == 0 )
+  if ( (byte_4AB60B6 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&pathId);
-    byte_4A701CB = 1;
+    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&pathId);
+    byte_4AB60B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            mapGimmickId,
            pathId,
            commonReleaseId,
-           (const MethodInfo_2E8C8D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

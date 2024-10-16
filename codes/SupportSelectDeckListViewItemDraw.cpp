@@ -8,11 +8,11 @@ void __fastcall SupportSelectDeckListViewItemDraw___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6C7D5 & 1) == 0 )
+  if ( (byte_4AB25FF & 1) == 0 )
   {
-    sub_1B90010(&BalanceConfig_TypeInfo, method);
-    sub_1B90010(&SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo, v3);
-    byte_4A6C7D5 = 1;
+    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
+    sub_1BAB41C(&SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo, v3);
+    byte_4AB25FF = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -20,11 +20,11 @@ void __fastcall SupportSelectDeckListViewItemDraw___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct SupportSelectDeckListViewItemDraw_ClassInfo_array *)sub_1B900B8(
+  v5 = (struct SupportSelectDeckListViewItemDraw_ClassInfo_array *)sub_1BAB4C4(
                                                                      SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo,
                                                                      (unsigned int)v4->static_fields->SupportDeckMemberMax);
   this->fields.memberObjectList = v5;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.memberObjectList, (int32_t)v5, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.memberObjectList, (int32_t)v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -95,22 +95,22 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v65; // [xsp+30h] [xbp-90h]
   Il2CppObject *entity; // [xsp+58h] [xbp-68h] BYREF
 
-  if ( (byte_4A6C7D4 & 1) == 0 )
+  if ( (byte_4AB25FE & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_UserServantMaster___, data);
-    sub_1B90010(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v9);
-    sub_1B90010(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v10);
-    sub_1B90010(&long___TypeInfo, v11);
-    sub_1B90010(&LocalizationManager_TypeInfo, v12);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1B90010(&SupportSelectListViewObject_TypeInfo, v16);
-    sub_1B90010(&StringLiteral_12446/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/, v17);
-    sub_1B90010(&StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, v18);
-    sub_1B90010(&StringLiteral_12478/*"SUPPORT_SELECT_NAME"*/, v19);
-    sub_1B90010(&StringLiteral_12447/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/, v20);
-    byte_4A6C7D4 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserServantMaster___, data);
+    sub_1BAB41C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v9);
+    sub_1BAB41C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v10);
+    sub_1BAB41C(&long___TypeInfo, v11);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v12);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v13);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1BAB41C(&SupportSelectListViewObject_TypeInfo, v16);
+    sub_1BAB41C(&StringLiteral_12448/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/, v17);
+    sub_1BAB41C(&StringLiteral_12461/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, v18);
+    sub_1BAB41C(&StringLiteral_12480/*"SUPPORT_SELECT_NAME"*/, v19);
+    sub_1BAB41C(&StringLiteral_12449/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/, v20);
+    byte_4AB25FE = 1;
   }
   entity = 0LL;
   if ( data )
@@ -120,26 +120,26 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
     v23 = SelfUserGame;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12461/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, 0LL);
     v25 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(data->fields._deckId_k__BackingField, 0LL);
     Instance = (int64_t)System_String__Format(v24, v25, 0LL);
     if ( !supportNumberLabel )
       goto LABEL_83;
     UILabel__set_text(supportNumberLabel, (System_String_o *)Instance, 0LL);
     deckNameLabel = this->fields.deckNameLabel;
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12478/*"SUPPORT_SELECT_NAME"*/, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12480/*"SUPPORT_SELECT_NAME"*/, 0LL);
     Instance = (int64_t)System_String__Format(v29, (Il2CppObject *)data->fields._deckName_k__BackingField, 0LL);
     if ( !deckNameLabel )
       goto LABEL_83;
     v62 = isSameKind;
     v63 = isPossibleSelect;
     UILabel__set_text(deckNameLabel, (System_String_o *)Instance, 0LL);
-    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_83;
     Instance = (int64_t)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserServantMaster___);
     memberObjectList = this->fields.memberObjectList;
     if ( !memberObjectList )
       goto LABEL_83;
@@ -190,7 +190,7 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
           goto LABEL_83;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
       }
-      v41 = (System_Int64_array *)sub_1B900B8(long___TypeInfo, 1LL);
+      v41 = (System_Int64_array *)sub_1BAB4C4(long___TypeInfo, 1LL);
       Instance = SupportServantData__getEquip(data, v34, 0LL);
       if ( !v41 )
         goto LABEL_83;
@@ -203,7 +203,7 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
         goto LABEL_83;
       if ( v34 >= v43->max_length )
 LABEL_84:
-        sub_1B90274(Instance, v27);
+        sub_1BAB680(Instance, v27);
       v44 = *((_QWORD *)&v43->obj.klass + v32);
       if ( !v44 )
         goto LABEL_83;
@@ -228,7 +228,7 @@ LABEL_84:
                        v31,
                        &entity,
                        v57,
-                       (const MethodInfo_312C7A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                       (const MethodInfo_3163F90 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
           if ( (Instance & 1) != 0 )
           {
             v58 = this->fields.memberObjectList;
@@ -261,7 +261,7 @@ LABEL_84:
         Instance = (int64_t)DataMasterBase_object__object__long___GetEntity(
                               v31,
                               Instance,
-                              (const MethodInfo_312C754 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                              (const MethodInfo_3163F3C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         v47 = this->fields.memberObjectList;
         if ( !v47 )
           goto LABEL_83;
@@ -274,7 +274,7 @@ LABEL_84:
         Instance = *(_QWORD *)(v48 + 24);
         if ( !Instance )
           goto LABEL_83;
-        ServantFaceIconComponent__Set_38273416(
+        ServantFaceIconComponent__Set_38601664(
           (ServantFaceIconComponent_o *)Instance,
           (UserServantEntity_o *)v49,
           v41,
@@ -304,7 +304,7 @@ LABEL_84:
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v64 = v65;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46509900(&v64, 0LL);
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_46699376(&v64, 0LL);
           if ( pushUserSvtId == Instance )
           {
             v55 = this->fields.memberObjectList;
@@ -342,7 +342,7 @@ LABEL_84:
       maskMessageLabel = this->fields.maskMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v61 = &StringLiteral_12447/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/;
+      v61 = &StringLiteral_12449/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/;
     }
     else
     {
@@ -351,12 +351,12 @@ LABEL_84:
       maskMessageLabel = this->fields.maskMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v61 = &StringLiteral_12446/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/;
+      v61 = &StringLiteral_12448/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/;
     }
     Instance = (int64_t)LocalizationManager__Get((System_String_o *)*v61, 0LL);
     if ( !maskMessageLabel )
 LABEL_83:
-      sub_1B9026C(Instance, v27);
+      sub_1BAB678(Instance, v27);
     UILabel__set_text(maskMessageLabel, (System_String_o *)Instance, 0LL);
   }
 }

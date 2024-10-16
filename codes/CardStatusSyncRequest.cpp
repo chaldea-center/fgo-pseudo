@@ -18,29 +18,29 @@ void __fastcall CardStatusSyncRequest__beginRequest(
   System_String_o *v20; // x0
   const MethodInfo *v21; // x3
 
-  if ( (byte_4A71690 & 1) == 0 )
+  if ( (byte_4AB7572 & 1) == 0 )
   {
-    sub_1B90010(&JsonManager_TypeInfo, changeUserSvtIds);
-    sub_1B90010(&StringLiteral_20849/*"isStorage"*/, v13);
-    sub_1B90010(&StringLiteral_17845/*"changeUserSvtIds"*/, v14);
-    sub_1B90010(&StringLiteral_20827/*"isLock"*/, v15);
-    sub_1B90010(&StringLiteral_20811/*"isChoice"*/, v16);
-    sub_1B90010(&StringLiteral_22962/*"revokeUserSvtIds"*/, v17);
-    byte_4A71690 = 1;
+    sub_1BAB41C(&JsonManager_TypeInfo, changeUserSvtIds);
+    sub_1BAB41C(&StringLiteral_20855/*"isStorage"*/, v13);
+    sub_1BAB41C(&StringLiteral_17850/*"changeUserSvtIds"*/, v14);
+    sub_1BAB41C(&StringLiteral_20832/*"isLock"*/, v15);
+    sub_1BAB41C(&StringLiteral_20816/*"isChoice"*/, v16);
+    sub_1BAB41C(&StringLiteral_22967/*"revokeUserSvtIds"*/, v17);
+    byte_4AB7572 = 1;
   }
   if ( changeUserSvtIds && *(_QWORD *)&changeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v18 = JsonManager__toJson(&changeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_17845/*"changeUserSvtIds"*/, v18, v19);
+    RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_17850/*"changeUserSvtIds"*/, v18, v19);
   }
   if ( revokeUserSvtIds && *(_QWORD *)&revokeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v20 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_41181164((RequestBase_o *)this, (System_String_o *)StringLiteral_22962/*"revokeUserSvtIds"*/, v20, v21);
+    RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_22967/*"revokeUserSvtIds"*/, v20, v21);
   }
   if ( !isStorage )
   {
@@ -49,14 +49,14 @@ void __fastcall CardStatusSyncRequest__beginRequest(
 LABEL_19:
     RequestBase__addField(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_20827/*"isLock"*/,
+      (System_String_o *)StringLiteral_20832/*"isLock"*/,
       1,
       (const MethodInfo *)isStorage);
     if ( !isChoice )
       goto LABEL_17;
     goto LABEL_16;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20849/*"isStorage"*/, 1, (const MethodInfo *)isStorage);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20855/*"isStorage"*/, 1, (const MethodInfo *)isStorage);
   if ( isLock )
     goto LABEL_19;
 LABEL_15:
@@ -64,7 +64,7 @@ LABEL_15:
 LABEL_16:
     RequestBase__addField(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_20811/*"isChoice"*/,
+      (System_String_o *)StringLiteral_20816/*"isChoice"*/,
       1,
       (const MethodInfo *)isStorage);
 LABEL_17:
@@ -76,11 +76,11 @@ System_String_o *__fastcall CardStatusSyncRequest__getMockData(CardStatusSyncReq
 {
   __int64 v2; // x1
 
-  if ( (byte_4A7168F & 1) == 0 )
+  if ( (byte_4AB7571 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_1/*""*/, v2);
-    byte_4A7168F = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v2);
+    byte_4AB7571 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -93,16 +93,16 @@ System_String_o *__fastcall CardStatusSyncRequest__getURL(CardStatusSyncRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A7168E & 1) == 0 )
+  if ( (byte_4AB7570 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_17783/*"card/statusSync"*/, v2);
-    byte_4A7168E = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_17788/*"card/statusSync"*/, v2);
+    byte_4AB7570 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_17783/*"card/statusSync"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_17788/*"card/statusSync"*/, 0LL);
 }
 
 
@@ -114,36 +114,35 @@ void __fastcall CardStatusSyncRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v10; // x9
+  __int64 *v9; // x9
 
-  if ( (byte_4A71691 & 1) == 0 )
+  if ( (byte_4AB7573 & 1) == 0 )
   {
-    sub_1B90010(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B90010(&StringLiteral_22258/*"ok"*/, v5);
-    sub_1B90010(&StringLiteral_22088/*"ng"*/, v6);
-    byte_4A71691 = 1;
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BAB41C(&StringLiteral_22261/*"ok"*/, v5);
+    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
+    byte_4AB7573 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
-  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
+  if ( v7 && ResponseData__checkError_41605928(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22258/*"ok"*/;
+    v9 = &StringLiteral_22261/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22088/*"ng"*/;
+    v9 = &StringLiteral_22090/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v10,
+    *v9,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

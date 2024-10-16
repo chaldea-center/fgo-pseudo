@@ -10,7 +10,7 @@ __int64 __fastcall mono_domain_get_assemblies_iter(__int64 a1, __int64 **a2)
 
   if ( !a2 )
     return 0LL;
-  v3 = sub_1BE7FE0();
+  v3 = sub_1C033EC();
   v4 = *a2;
   v5 = (__int64 *)v3;
   if ( *a2 )

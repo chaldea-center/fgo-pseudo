@@ -4,15 +4,15 @@ void __fastcall BattleSyncTransformComponent___ctor(BattleSyncTransformComponent
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A72F3F & 1) == 0 )
+  if ( (byte_4AB8F39 & 1) == 0 )
   {
-    sub_1B90010(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
-    byte_4A72F3F = 1;
+    sub_1BAB41C(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
+    byte_4AB8F39 = 1;
   }
-  v3 = (Il2CppObject *)sub_1B9025C(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1BAB668(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -38,10 +38,10 @@ void __fastcall BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, 0, v3, v4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, 0, v3, v4);
   v11 = (float *)*(p_targetObj - 1);
   if ( !v11 )
-    sub_1B9026C(v9, v10);
+    sub_1BAB678(v9, v10);
   v11[5] = x;
   v11[6] = y;
   v11[7] = z;
@@ -72,21 +72,21 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSetting,
     (int32_t)method);
   if ( !syncSetting )
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncData, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncData, v8, v9);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_44128840(
+BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_44591316(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -96,13 +96,13 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   int32_t v7; // w3
 
   this->fields.targetObj = target;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.targetObj,
     (int32_t)target,
     (int32_t)syncSettingData,
     (int32_t)method);
   this->fields.syncData = syncSettingData;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
   return this;
 }
 
@@ -131,10 +131,10 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A72F3E & 1) == 0 )
+  if ( (byte_4AB8F38 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    byte_4A72F3E = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    byte_4AB8F38 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -195,7 +195,7 @@ LABEL_23:
         }
       }
     }
-    sub_1B9026C(transform, v5);
+    sub_1BAB678(transform, v5);
   }
 }
 
@@ -208,7 +208,7 @@ void __fastcall BattleSyncTransformComponent__UpdateTarget(
   int32_t v3; // w3
 
   this->fields.targetObj = target;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
 }
 
 
@@ -220,7 +220,7 @@ bool __fastcall BattleSyncTransformComponent__get_IsNotExecSync(
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return syncData->fields.syncType == 0;
 }
 

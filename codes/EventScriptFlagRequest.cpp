@@ -9,14 +9,14 @@ void __fastcall EventScriptFlagRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4A71715 & 1) == 0 )
+  if ( (byte_4AB75F7 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_19159/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B90010(&StringLiteral_19483/*"flagId"*/, v7);
-    byte_4A71715 = 1;
+    sub_1BAB41C(&StringLiteral_19162/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1BAB41C(&StringLiteral_19486/*"flagId"*/, v7);
+    byte_4AB75F7 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19159/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19483/*"flagId"*/, flagId, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19162/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19486/*"flagId"*/, flagId, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall EventScriptFlagRequest__getURL(EventScriptFlagReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A71714 & 1) == 0 )
+  if ( (byte_4AB75F6 & 1) == 0 )
   {
-    sub_1B90010(&NetworkManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_19151/*"event/scriptFlag"*/, v2);
-    byte_4A71714 = 1;
+    sub_1BAB41C(&NetworkManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_19154/*"event/scriptFlag"*/, v2);
+    byte_4AB75F6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61787092(BaseUrl, (System_String_o *)StringLiteral_19151/*"event/scriptFlag"*/, 0LL);
+  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_19154/*"event/scriptFlag"*/, 0LL);
 }
 
 
@@ -46,42 +46,41 @@ void __fastcall EventScriptFlagRequest__requestCompleted(
 {
   __int64 v5; // x1
   ResponseData_o *v6; // x0
-  const MethodInfo *v7; // x2
-  ResponseData_o *v8; // x20
+  ResponseData_o *v7; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_String_o *v9; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4A71716 & 1) == 0 )
+  if ( (byte_4AB75F8 & 1) == 0 )
   {
-    sub_1B90010(&JsonManager_TypeInfo, responseList);
-    sub_1B90010(&ResponseCommandKind_TypeInfo, v5);
-    byte_4A71716 = 1;
+    sub_1BAB41C(&JsonManager_TypeInfo, responseList);
+    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v5);
+    byte_4AB75F8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(67, responseList, 0LL);
-  if ( v6 && (v8 = v6, ResponseData__checkError(v6, v6->fields.resCode, v7)) )
+  if ( v6 && (v7 = v6, ResponseData__checkError_41605928(v6, 0LL)) )
   {
-    success = (Il2CppObject *)v8->fields.success;
+    success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v9 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v10,
+        v9,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
+    v11 = this->fields.CallBack;
+    if ( v11 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v11->fields.m_target)(
+        v11->fields.original_method_info,
         0LL,
-        *(_QWORD *)&v12->fields.extra_arg);
+        *(_QWORD *)&v11->fields.extra_arg);
   }
 }

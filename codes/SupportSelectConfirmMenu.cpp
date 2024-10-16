@@ -1,9 +1,9 @@
 void __fastcall SupportSelectConfirmMenu___ctor(SupportSelectConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A6C7C8 & 1) == 0 )
+  if ( (byte_4AB25F2 & 1) == 0 )
   {
-    sub_1B90010(&BaseDialog_TypeInfo, method);
-    byte_4A6C7C8 = 1;
+    sub_1BAB41C(&BaseDialog_TypeInfo, method);
+    byte_4AB25F2 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall SupportSelectConfirmMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8FFB4(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1BAB3C0(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -40,11 +40,11 @@ void __fastcall SupportSelectConfirmMenu__Close(SupportSelectConfirmMenu_o *this
 {
   const MethodInfo *v2; // x2
 
-  SupportSelectConfirmMenu__Close_33272308(this, 0LL, v2);
+  SupportSelectConfirmMenu__Close_33523992(this, 0LL, v2);
 }
 
 
-void __fastcall SupportSelectConfirmMenu__Close_33272308(
+void __fastcall SupportSelectConfirmMenu__Close_33523992(
         SupportSelectConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -53,20 +53,20 @@ void __fastcall SupportSelectConfirmMenu__Close_33272308(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4A6C7C4 & 1) == 0 )
+  if ( (byte_4AB25EE & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, callback);
-    sub_1B90010(&Method_SupportSelectConfirmMenu_EndClose__, v6);
-    byte_4A6C7C4 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, callback);
+    sub_1BAB41C(&Method_SupportSelectConfirmMenu_EndClose__, v6);
+    byte_4AB25EE = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
     v3);
   this->fields.state = 4;
-  v7 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_SupportSelectConfirmMenu_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -87,7 +87,7 @@ void __fastcall SupportSelectConfirmMenu__EndClose(SupportSelectConfirmMenu_o *t
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B8FFB4(p_closeCallbackFunc, 0, v3, v4);
+    sub_1BAB3C0(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -105,10 +105,10 @@ void __fastcall SupportSelectConfirmMenu__Init(SupportSelectConfirmMenu_o *this,
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4A6C7C1 & 1) == 0 )
+  if ( (byte_4AB25EB & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A6C7C1 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB25EB = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -124,7 +124,7 @@ void __fastcall SupportSelectConfirmMenu__Init(SupportSelectConfirmMenu_o *this,
         (titleLabel = this->fields.decideLabel) == 0LL) )
   {
 LABEL_9:
-    sub_1B9026C(titleLabel, method);
+    sub_1BAB678(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -138,18 +138,18 @@ void __fastcall SupportSelectConfirmMenu__OnCancelClose(SupportSelectConfirmMenu
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6C7C6 & 1) == 0 )
+  if ( (byte_4AB25F0 & 1) == 0 )
   {
-    sub_1B90010(&Method_SupportSelectConfirmMenu_OnCancelClose__, method);
-    byte_4A6C7C6 = 1;
+    sub_1BAB41C(&Method_SupportSelectConfirmMenu_OnCancelClose__, method);
+    byte_4AB25F0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SupportSelectConfirmMenu_OnCancelClose__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmMenu_OnCancelClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_SupportSelectConfirmMenu_OnCancelClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_SupportSelectConfirmMenu_OnCancelClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     SupportSelectConfirmMenu__Callback(this, 0, v5);
   }
@@ -162,18 +162,18 @@ void __fastcall SupportSelectConfirmMenu__OnClickClose(SupportSelectConfirmMenu_
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6C7C5 & 1) == 0 )
+  if ( (byte_4AB25EF & 1) == 0 )
   {
-    sub_1B90010(&Method_SupportSelectConfirmMenu_OnClickClose__, method);
-    byte_4A6C7C5 = 1;
+    sub_1BAB41C(&Method_SupportSelectConfirmMenu_OnClickClose__, method);
+    byte_4AB25EF = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SupportSelectConfirmMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_SupportSelectConfirmMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_SupportSelectConfirmMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     SupportSelectConfirmMenu__Callback(this, 1, v5);
   }
@@ -186,18 +186,18 @@ void __fastcall SupportSelectConfirmMenu__OnDecideClose(SupportSelectConfirmMenu
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A6C7C7 & 1) == 0 )
+  if ( (byte_4AB25F1 & 1) == 0 )
   {
-    sub_1B90010(&Method_SupportSelectConfirmMenu_OnDecideClose__, method);
-    byte_4A6C7C7 = 1;
+    sub_1BAB41C(&Method_SupportSelectConfirmMenu_OnDecideClose__, method);
+    byte_4AB25F1 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SupportSelectConfirmMenu_OnDecideClose__;
     if ( (*((_BYTE *)Method_SupportSelectConfirmMenu_OnDecideClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B90028(Method_SupportSelectConfirmMenu_OnDecideClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BAB434(Method_SupportSelectConfirmMenu_OnDecideClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     SupportSelectConfirmMenu__Callback(this, 1, v5);
   }
@@ -213,12 +213,12 @@ void __fastcall SupportSelectConfirmMenu__Open(
 {
   const MethodInfo *v4; // x5
 
-  if ( (byte_4A6C7C2 & 1) == 0 )
+  if ( (byte_4AB25EC & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, *(_QWORD *)&kind);
-    byte_4A6C7C2 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, *(_QWORD *)&kind);
+    byte_4AB25EC = 1;
   }
-  SupportSelectConfirmMenu__Open_33270900(
+  SupportSelectConfirmMenu__Open_33522584(
     this,
     kind,
     callback,
@@ -229,7 +229,7 @@ void __fastcall SupportSelectConfirmMenu__Open(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SupportSelectConfirmMenu__Open_33270900(
+void __fastcall SupportSelectConfirmMenu__Open_33522584(
         SupportSelectConfirmMenu_o *this,
         int32_t kind,
         SupportSelectConfirmMenu_CallbackFunc_o *callback,
@@ -274,30 +274,30 @@ void __fastcall SupportSelectConfirmMenu__Open_33270900(
   UnityEngine_GameObject_o *v45; // x0
   System_Action_o *v46; // x20
 
-  if ( (byte_4A6C7C3 & 1) == 0 )
+  if ( (byte_4AB25ED & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B90010(&LocalizationManager_TypeInfo, v11);
-    sub_1B90010(&Method_SupportSelectConfirmMenu_EndOpen__, v12);
-    sub_1B90010(&StringLiteral_12472/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, v13);
-    sub_1B90010(&StringLiteral_12435/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, v14);
-    sub_1B90010(&StringLiteral_12474/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/, v15);
-    sub_1B90010(&StringLiteral_12489/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, v16);
-    sub_1B90010(&StringLiteral_12484/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, v17);
-    sub_1B90010(&StringLiteral_12481/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, v18);
-    sub_1B90010(&StringLiteral_12482/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, v19);
-    sub_1B90010(&StringLiteral_12471/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, v20);
-    sub_1B90010(&StringLiteral_12490/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, v21);
-    sub_1B90010(&StringLiteral_12485/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/, v22);
-    sub_1B90010(&StringLiteral_12488/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, v23);
-    sub_1B90010(&StringLiteral_12436/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/, v24);
-    sub_1B90010(&StringLiteral_12473/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, v25);
-    byte_4A6C7C3 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v11);
+    sub_1BAB41C(&Method_SupportSelectConfirmMenu_EndOpen__, v12);
+    sub_1BAB41C(&StringLiteral_12474/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, v13);
+    sub_1BAB41C(&StringLiteral_12437/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, v14);
+    sub_1BAB41C(&StringLiteral_12476/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/, v15);
+    sub_1BAB41C(&StringLiteral_12491/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, v16);
+    sub_1BAB41C(&StringLiteral_12486/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, v17);
+    sub_1BAB41C(&StringLiteral_12483/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, v18);
+    sub_1BAB41C(&StringLiteral_12484/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, v19);
+    sub_1BAB41C(&StringLiteral_12473/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, v20);
+    sub_1BAB41C(&StringLiteral_12492/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, v21);
+    sub_1BAB41C(&StringLiteral_12487/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/, v22);
+    sub_1BAB41C(&StringLiteral_12490/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, v23);
+    sub_1BAB41C(&StringLiteral_12438/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/, v24);
+    sub_1BAB41C(&StringLiteral_12475/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, v25);
+    byte_4AB25ED = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.callbackFunc = callback;
-    sub_1B8FFB4(
+    sub_1BAB3C0(
       (ServantStatusBattleListViewItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)callback,
@@ -305,7 +305,7 @@ void __fastcall SupportSelectConfirmMenu__Open_33270900(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
 LABEL_61:
-      sub_1B9026C(gameObject, v27);
+      sub_1BAB678(gameObject, v27);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
     switch ( kind )
     {
@@ -313,12 +313,12 @@ LABEL_61:
         titleLabel = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12481/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12483/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_61;
         UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
         messageLabel = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12482/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12484/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, 0LL);
         if ( !messageLabel )
           goto LABEL_61;
         UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
@@ -348,34 +348,34 @@ LABEL_61:
         v31 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12484/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12486/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, 0LL);
         if ( !v31 )
           goto LABEL_61;
         UILabel__set_text(v31, (System_String_o *)gameObject, 0LL);
         v32 = this->fields.messageLabel;
-        v33 = &StringLiteral_12485/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/;
+        v33 = &StringLiteral_12487/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/;
         goto LABEL_30;
       case 3:
         v34 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12473/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12475/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, 0LL);
         if ( !v34 )
           goto LABEL_61;
         UILabel__set_text(v34, (System_String_o *)gameObject, 0LL);
         v32 = this->fields.messageLabel;
-        v33 = &StringLiteral_12474/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/;
+        v33 = &StringLiteral_12476/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/;
         goto LABEL_30;
       case 4:
         v35 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12435/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12437/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, 0LL);
         if ( !v35 )
           goto LABEL_61;
         UILabel__set_text(v35, (System_String_o *)gameObject, 0LL);
         v32 = this->fields.messageLabel;
-        v33 = &StringLiteral_12436/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/;
+        v33 = &StringLiteral_12438/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/;
 LABEL_30:
         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v33, 0LL);
         if ( !v32 )
@@ -411,17 +411,17 @@ LABEL_45:
         closeLabel = this->fields.closeLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12489/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12491/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, 0LL);
         if ( !closeLabel )
           goto LABEL_61;
         UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12488/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12490/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, 0LL);
         if ( !cancelLabel )
           goto LABEL_61;
         UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
         decideLabel = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12490/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12492/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, 0LL);
         if ( !decideLabel )
           goto LABEL_61;
         UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
@@ -454,7 +454,7 @@ LABEL_55:
         AndroidBackKeyManager__AddBackBtn(v45, 0LL);
 LABEL_60:
         this->fields.state = 1;
-        v46 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+        v46 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
         System_Action___ctor(v46, (Il2CppObject *)this, Method_SupportSelectConfirmMenu_EndOpen__, 0LL);
         BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0LL);
         break;
@@ -462,13 +462,13 @@ LABEL_60:
         v38 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12472/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12474/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, 0LL);
         if ( !v38 )
           goto LABEL_61;
         UILabel__set_text(v38, (System_String_o *)gameObject, 0LL);
         v39 = this->fields.messageLabel;
-        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12471/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, 0LL);
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format_61801464(
+        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12473/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format_62062500(
                                                    v40,
                                                    (Il2CppObject *)class1,
                                                    (Il2CppObject *)class2,
@@ -500,10 +500,10 @@ void __fastcall SupportSelectConfirmMenu__add_callbackFunc(
   SupportSelectConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A6C7BF & 1) == 0 )
+  if ( (byte_4AB25E9 & 1) == 0 )
   {
-    sub_1B90010(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6C7BF = 1;
+    sub_1BAB41C(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB25E9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -516,13 +516,13 @@ void __fastcall SupportSelectConfirmMenu__add_callbackFunc(
       if ( (SupportSelectConfirmMenu_CallbackFunc_c *)v8->klass != SupportSelectConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B9052C(v8);
+  sub_1BAB938(v8);
   SupportSelectConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -541,10 +541,10 @@ void __fastcall SupportSelectConfirmMenu__remove_callbackFunc(
   SupportSelectConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A6C7C0 & 1) == 0 )
+  if ( (byte_4AB25EA & 1) == 0 )
   {
-    sub_1B90010(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_4A6C7C0 = 1;
+    sub_1BAB41C(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4AB25EA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -557,13 +557,13 @@ void __fastcall SupportSelectConfirmMenu__remove_callbackFunc(
       if ( (SupportSelectConfirmMenu_CallbackFunc_c *)v8->klass != SupportSelectConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BCB500(p_callbackFunc, v8, v6);
+    v9 = sub_1BE690C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B9052C(v8);
+  sub_1BAB938(v8);
   SupportSelectConfirmMenu__Init(v11, v12);
 }
 
@@ -586,15 +586,15 @@ void __fastcall SupportSelectConfirmMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B900D0(v6) & 1) == 0 )
+  if ( (sub_1BAB4DC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B90288(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B90138(v10, 0LL);
+      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BAB544(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -606,9 +606,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D246C;
+  this->fields.m_target = (Il2CppObject *)sub_19EB408;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D2424;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19EB3C0;
 }
 
 
@@ -624,14 +624,14 @@ System_IAsyncResult_o *__fastcall SupportSelectConfirmMenu_CallbackFunc__BeginIn
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4A6C7C9 & 1) == 0 )
+  if ( (byte_4AB25F3 & 1) == 0 )
   {
-    sub_1B90010(&bool_TypeInfo, result);
-    byte_4A6C7C9 = 1;
+    sub_1BAB41C(&bool_TypeInfo, result);
+    byte_4AB25F3 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8FFC4(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
 }
 
 
@@ -640,7 +640,7 @@ void __fastcall SupportSelectConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B8FFC8(result, 0LL, method);
+  sub_1BAB3D4(result, 0LL, method);
 }
 
 

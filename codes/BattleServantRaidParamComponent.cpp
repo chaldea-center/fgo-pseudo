@@ -2,10 +2,10 @@ void __fastcall BattleServantRaidParamComponent___ctor(
         BattleServantRaidParamComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A72EFD & 1) == 0 )
+  if ( (byte_4AB8E28 & 1) == 0 )
   {
-    sub_1B90010(&BattleServantParamComponent_TypeInfo, method);
-    byte_4A72EFD = 1;
+    sub_1BAB41C(&BattleServantParamComponent_TypeInfo, method);
+    byte_4AB8E28 = 1;
   }
   if ( !BattleServantParamComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleServantParamComponent_TypeInfo);
@@ -41,7 +41,7 @@ int64_t __fastcall BattleServantRaidParamComponent__getTurnSituationParam(
 
   newinfo = this->fields.newinfo;
   if ( !newinfo )
-    sub_1B9026C(this, method);
+    sub_1BAB678(this, method);
   return newinfo->fields.totalDamage;
 }
 
@@ -61,24 +61,24 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
   int32_t v11; // w2
   int32_t v12; // w3
 
-  if ( (byte_4A72EF7 & 1) == 0 )
+  if ( (byte_4AB8E22 & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&StringLiteral_2938/*"BATTLE_RAID_TOTALHP"*/, v3);
-    byte_4A72EF7 = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&StringLiteral_2933/*"BATTLE_RAID_TOTALHP"*/, v3);
+    byte_4AB8E22 = 1;
   }
   p_hpformat = (ServantStatusBattleListViewItem_o *)&this->fields.hpformat;
   if ( !this->fields.hpformat )
   {
-    v5 = (_DWORD)this + 484;
+    v5 = (_DWORD)this + 492;
     v6 = System_Int32__ToString(v5, 0LL);
-    v7 = System_String__Concat_61787092((System_String_o *)StringLiteral_2938/*"BATTLE_RAID_TOTALHP"*/, v6, 0LL);
+    v7 = System_String__Concat_62048128((System_String_o *)StringLiteral_2933/*"BATTLE_RAID_TOTALHP"*/, v6, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( LocalizationManager__ContainsKey(v7, 0LL) )
     {
       v8 = System_Int32__ToString(v5, 0LL);
-      v9 = System_String__Concat_61787092((System_String_o *)StringLiteral_2938/*"BATTLE_RAID_TOTALHP"*/, v8, 0LL);
+      v9 = System_String__Concat_62048128((System_String_o *)StringLiteral_2933/*"BATTLE_RAID_TOTALHP"*/, v8, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
@@ -86,11 +86,11 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = (System_String_o *)StringLiteral_2938/*"BATTLE_RAID_TOTALHP"*/;
+      v9 = (System_String_o *)StringLiteral_2933/*"BATTLE_RAID_TOTALHP"*/;
     }
     v10 = LocalizationManager__Get(v9, 0LL);
     p_hpformat->klass = (ServantStatusBattleListViewItem_c *)v10;
-    sub_1B8FFB4(p_hpformat, (int32_t)v10, v11, v12);
+    sub_1BAB3C0(p_hpformat, (int32_t)v10, v11, v12);
   }
   return (System_String_o *)p_hpformat->klass;
 }
@@ -150,40 +150,40 @@ void __fastcall BattleServantRaidParamComponent__setData(
   int32_t v50; // [xsp+1Ch] [xbp-34h] BYREF
   UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A72EF8 & 1) == 0 )
+  if ( (byte_4AB8E23 & 1) == 0 )
   {
-    sub_1B90010(&Method_AssetData_GetObject_GameObject____76169496, data);
-    sub_1B90010(&AssetManager_TypeInfo, v5);
-    sub_1B90010(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___, v6);
-    sub_1B90010(&Method_DataManager_GetMaster_BattleMaster___, v7);
-    sub_1B90010(&DataManager_TypeInfo, v8);
-    sub_1B90010(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v9);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v10);
-    sub_1B90010(&int_TypeInfo, v11);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1B90010(&StringLiteral_22800/*"raid_down_last_"*/, v13);
-    sub_1B90010(&StringLiteral_3210/*"Battle/Common"*/, v14);
-    sub_1B90010(&StringLiteral_3228/*"BattleAssetUIAtlas"*/, v15);
-    sub_1B90010(&StringLiteral_22799/*"raid_down_end_"*/, v16);
-    sub_1B90010(&StringLiteral_22801/*"raid_down_normal_"*/, v17);
-    byte_4A72EF8 = 1;
+    sub_1BAB41C(&Method_AssetData_GetObject_GameObject____76450888, data);
+    sub_1BAB41C(&AssetManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventBossStatusUiMaster___, v6);
+    sub_1BAB41C(&Method_DataManager_GetMaster_BattleMaster___, v7);
+    sub_1BAB41C(&DataManager_TypeInfo, v8);
+    sub_1BAB41C(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v9);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v10);
+    sub_1BAB41C(&int_TypeInfo, v11);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1BAB41C(&StringLiteral_22805/*"raid_down_last_"*/, v13);
+    sub_1BAB41C(&StringLiteral_3205/*"Battle/Common"*/, v14);
+    sub_1BAB41C(&StringLiteral_3223/*"BattleAssetUIAtlas"*/, v15);
+    sub_1BAB41C(&StringLiteral_22804/*"raid_down_end_"*/, v16);
+    sub_1BAB41C(&StringLiteral_22806/*"raid_down_normal_"*/, v17);
+    byte_4AB8E23 = 1;
   }
   if ( data )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BattleMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BattleMaster___);
     if ( !Master_object )
       goto LABEL_30;
     SingleEntity = DataMasterBase_object__object__long___GetSingleEntity(
                      Master_object,
-                     (const MethodInfo_312C810 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                     (const MethodInfo_3163FF8 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_30;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                     (DataManager_o *)Master_object,
-                                                                    (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
+                                                                    (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventBossStatusUiMaster___);
     if ( !SingleEntity || !Master_object )
       goto LABEL_30;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)EventBossStatusUiMaster__GetEntityFromEventIdAndIndex(
@@ -228,19 +228,19 @@ void __fastcall BattleServantRaidParamComponent__setData(
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)AssetManager__getAssetStorage(
-                                                                    (System_String_o *)StringLiteral_3210/*"Battle/Common"*/,
+                                                                    (System_String_o *)StringLiteral_3205/*"Battle/Common"*/,
                                                                     0LL);
     if ( !Master_object )
       goto LABEL_30;
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)AssetData__GetObject_object__48695184(
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)AssetData__GetObject_object__48916712(
                                                                     (AssetData_o *)Master_object,
-                                                                    (System_String_o *)StringLiteral_3228/*"BattleAssetUIAtlas"*/,
-                                                                    (const MethodInfo_2E70790 *)Method_AssetData_GetObject_GameObject____76169496);
+                                                                    (System_String_o *)StringLiteral_3223/*"BattleAssetUIAtlas"*/,
+                                                                    (const MethodInfo_2EA68E8 *)Method_AssetData_GetObject_GameObject____76450888);
     if ( !Master_object )
       goto LABEL_30;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     (UnityEngine_GameObject_o *)Master_object,
-                                                                    (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                                                    (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     if ( !this->fields.raidDownNormalSprite )
       goto LABEL_30;
     v32 = (UIAtlas_o *)Master_object;
@@ -249,7 +249,7 @@ void __fastcall BattleServantRaidParamComponent__setData(
     v50 = this->fields.hpBarType;
     v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v34, v35, v36);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
-                                                                    (Il2CppObject *)StringLiteral_22801/*"raid_down_normal_"*/,
+                                                                    (Il2CppObject *)StringLiteral_22806/*"raid_down_normal_"*/,
                                                                     v37,
                                                                     0LL);
     if ( !raidDownNormalSprite )
@@ -263,7 +263,7 @@ void __fastcall BattleServantRaidParamComponent__setData(
     v49 = this->fields.hpBarType;
     v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v39, v40, v41);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
-                                                                    (Il2CppObject *)StringLiteral_22800/*"raid_down_last_"*/,
+                                                                    (Il2CppObject *)StringLiteral_22805/*"raid_down_last_"*/,
                                                                     v42,
                                                                     0LL);
     if ( !raidDownLastSprite
@@ -274,13 +274,13 @@ void __fastcall BattleServantRaidParamComponent__setData(
           v48 = this->fields.hpBarType,
           v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48, v44, v45, v46),
           Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
-                                                                          (Il2CppObject *)StringLiteral_22799/*"raid_down_end_"*/,
+                                                                          (Il2CppObject *)StringLiteral_22804/*"raid_down_end_"*/,
                                                                           v47,
                                                                           0LL),
           !raidDownEndSprite) )
     {
 LABEL_30:
-      sub_1B9026C(Master_object, v19);
+      sub_1BAB678(Master_object, v19);
     }
     UISprite__set_spriteName(raidDownEndSprite, (System_String_o *)Master_object, 0LL);
   }
@@ -303,11 +303,11 @@ void __fastcall BattleServantRaidParamComponent__setRaidDownMessage(
   UnityEngine_Object_o *raidDownLastSprite; // x21
 
   v2 = this;
-  if ( (byte_4A72EFB & 1) == 0 )
+  if ( (byte_4AB8E26 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    this = (BattleServantRaidParamComponent_o *)sub_1B90010(&StringLiteral_1/*""*/, v3);
-    byte_4A72EFB = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    this = (BattleServantRaidParamComponent_o *)sub_1BAB41C(&StringLiteral_1/*""*/, v3);
+    byte_4AB8E26 = 1;
   }
   if ( v2->fields.isDefeatCount )
   {
@@ -376,7 +376,7 @@ LABEL_24:
         }
       }
 LABEL_29:
-      sub_1B9026C(this, method);
+      sub_1BAB678(this, method);
     }
   }
 LABEL_25:
@@ -406,7 +406,7 @@ void __fastcall BattleServantRaidParamComponent__setSplitHp(
 
   changeGauge = this->fields.changeGauge;
   if ( !changeGauge )
-    sub_1B9026C(0LL, split);
+    sub_1BAB678(0LL, split);
   BattleServantChangeBarComponent__setSplitHp(changeGauge, split, maxhp, 0LL);
 }
 
@@ -441,7 +441,7 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHp(
 
   newinfo = this->fields.newinfo;
   this->fields.previnfo = newinfo;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.previnfo, (int32_t)newinfo, v2, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.previnfo, (int32_t)newinfo, v2, v3);
   data = this->fields.data;
   this->fields.flgUpdate = 0;
   BattleServantRaidParamComponent__updateRaidHpBase(this, data, v7);
@@ -484,18 +484,18 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpBase(
   int64_t v32; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_4A72EF9 & 1) == 0 )
+  if ( (byte_4AB8E24 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_EventPointBuffMaster___, svtData);
-    sub_1B90010(&Method_DataManager_GetMasterData_EventRaidMaster___, v5);
-    sub_1B90010(&Method_DataManager_GetMaster_BattleMaster___, v6);
-    sub_1B90010(&DataManager_TypeInfo, v7);
-    sub_1B90010(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v8);
-    sub_1B90010(&long_TypeInfo, v9);
-    this = (BattleServantRaidParamComponent_o *)sub_1B90010(
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventPointBuffMaster___, svtData);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_EventRaidMaster___, v5);
+    sub_1BAB41C(&Method_DataManager_GetMaster_BattleMaster___, v6);
+    sub_1BAB41C(&DataManager_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v8);
+    sub_1BAB41C(&long_TypeInfo, v9);
+    this = (BattleServantRaidParamComponent_o *)sub_1BAB41C(
                                                   &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
                                                   v10);
-    byte_4A72EF9 = 1;
+    byte_4AB8E24 = 1;
   }
   previnfo = v4->fields.previnfo;
   if ( !previnfo )
@@ -528,18 +528,18 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpBase(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (BattleServantRaidParamComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_BattleMaster___);
+  this = (BattleServantRaidParamComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BattleMaster___);
   if ( !this )
     goto LABEL_41;
   SingleEntity = DataMasterBase_object__object__long___GetSingleEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                   (const MethodInfo_312C810 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
-  this = (BattleServantRaidParamComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                   (const MethodInfo_3163FF8 *)Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__);
+  this = (BattleServantRaidParamComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_41;
   this = (BattleServantRaidParamComponent_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)this,
-                                                (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventPointBuffMaster___);
+                                                (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventPointBuffMaster___);
   if ( this )
   {
     if ( !SingleEntity )
@@ -556,12 +556,12 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpBase(
   {
     v21 = 0;
   }
-  this = (BattleServantRaidParamComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (BattleServantRaidParamComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_41;
   this = (BattleServantRaidParamComponent_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)this,
-                                                (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_EventRaidMaster___);
+                                                (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventRaidMaster___);
   if ( !this )
     goto LABEL_30;
   if ( !SingleEntity )
@@ -576,7 +576,7 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpBase(
     if ( p_klass )
     {
       if ( !(_DWORD)p_klass )
-        sub_1B90274(this, svtData);
+        sub_1BAB680(this, svtData);
       p_klass = &this->fields.root->klass;
       if ( !p_klass )
         goto LABEL_41;
@@ -603,7 +603,7 @@ LABEL_30:
       goto LABEL_33;
     }
 LABEL_41:
-    sub_1B9026C(this, svtData);
+    sub_1BAB678(this, svtData);
   }
   raidhplabel = v4->fields.raidhplabel;
   RaidHPFormat = BattleServantRaidParamComponent__get_RaidHPFormat(v4, (const MethodInfo *)svtData);
@@ -635,10 +635,10 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpbar(
   BattleHpGaugeBarComponent_o *v10; // x0
   int64_t v11; // x1
 
-  if ( (byte_4A72EFA & 1) == 0 )
+  if ( (byte_4AB8E25 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, now);
-    byte_4A72EFA = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, now);
+    byte_4AB8E25 = 1;
   }
   raidhpGauge = (UnityEngine_Object_o *)this->fields.raidhpGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -655,7 +655,7 @@ void __fastcall BattleServantRaidParamComponent__updateRaidHpbar(
         goto LABEL_12;
       }
 LABEL_14:
-      sub_1B9026C(v10, v9);
+      sub_1BAB678(v10, v9);
     }
   }
   else if ( v8 )
@@ -665,7 +665,7 @@ LABEL_14:
     {
       v11 = now;
 LABEL_12:
-      BattleHpGaugeBarComponent__setValue_43846012(v10, v11, max, 0LL);
+      BattleHpGaugeBarComponent__setValue_44216384(v10, v11, max, 0LL);
       return;
     }
     goto LABEL_14;
@@ -690,10 +690,10 @@ void __fastcall BattleServantRaidParamComponent__updateRaidInfo(
   if ( fixUpdate )
   {
     this->fields.newinfo = info;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_newinfo, (int32_t)info, fixUpdate, (int32_t)method);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_newinfo, (int32_t)info, fixUpdate, (int32_t)method);
     newinfo = this->fields.newinfo;
     this->fields.previnfo = newinfo;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.previnfo, (int32_t)newinfo, v7, v8);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.previnfo, (int32_t)newinfo, v7, v8);
     data = this->fields.data;
     this->fields.flgUpdate = 0;
     BattleServantRaidParamComponent__updateRaidHpBase(this, data, v10);
@@ -703,12 +703,12 @@ void __fastcall BattleServantRaidParamComponent__updateRaidInfo(
     if ( !*p_newinfo )
       goto LABEL_6;
     if ( !info )
-      sub_1B9026C(p_newinfo, 0LL);
+      sub_1BAB678(p_newinfo, 0LL);
     if ( info->fields.totalDamage != (*p_newinfo)->fields.totalDamage )
     {
 LABEL_6:
       this->fields.newinfo = info;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_newinfo, (int32_t)info, fixUpdate, (int32_t)method);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_newinfo, (int32_t)info, fixUpdate, (int32_t)method);
       this->fields.flgUpdate = 1;
     }
   }
@@ -727,10 +727,10 @@ void __fastcall BattleServantRaidParamComponent__updateStateString(
   System_String_o *v8; // x1
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A72EFC & 1) == 0 )
+  if ( (byte_4AB8E27 & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A72EFC = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB8E27 = 1;
   }
   data = this->fields.data;
   if ( !data )
@@ -744,7 +744,7 @@ void __fastcall BattleServantRaidParamComponent__updateStateString(
     || !stateLabel )
   {
 LABEL_19:
-    sub_1B9026C(stateLabel, method);
+    sub_1BAB678(stateLabel, method);
   }
   v9.fields.z = 0.0;
   v9.fields.x = (float)(mText->fields._stringLength * shortNameLabel->fields.mFontSize) + 10.0;

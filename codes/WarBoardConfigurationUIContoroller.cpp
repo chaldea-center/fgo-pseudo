@@ -16,7 +16,7 @@ void __fastcall WarBoardConfigurationUIContoroller__Active(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -28,14 +28,14 @@ void __fastcall WarBoardConfigurationUIContoroller__CloseHintDialog(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4A6DE7B & 1) == 0 )
+  if ( (byte_4AB3C86 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4A6DE7B = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4AB3C86 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL);
 }
 
@@ -51,13 +51,13 @@ void __fastcall WarBoardConfigurationUIContoroller__CloseRuleDialog(
   int32_t winCondId; // w19
   WarBoardManager_c *v7; // x0
 
-  if ( (byte_4A6DE7E & 1) == 0 )
+  if ( (byte_4AB3C89 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    sub_1B90010(&WarBoardManager_TypeInfo, v2);
-    byte_4A6DE7E = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    sub_1BAB41C(&WarBoardManager_TypeInfo, v2);
+    byte_4AB3C89 = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField;
@@ -72,13 +72,13 @@ void __fastcall WarBoardConfigurationUIContoroller__CloseRuleDialog(
   }
   UnityEngine_PlayerPrefs__SetInt(v7->static_fields->SAVE_KEY_WAR_BOARD_CONFIRMED_RULE, winCondId, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (WarBoardManager__UpdateRuleButton(Instance, 0LL),
-        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
+        (Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
   {
 LABEL_10:
-    sub_1B9026C(Instance, v4);
+    sub_1BAB678(Instance, v4);
   }
   WarBoardManager__SetMapTouchEnable(Instance, 1, 0, 0LL);
 }
@@ -93,7 +93,7 @@ void __fastcall WarBoardConfigurationUIContoroller__Deactive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B9026C(0LL, v3);
+    sub_1BAB678(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -114,7 +114,7 @@ void __fastcall WarBoardConfigurationUIContoroller__EndNoticeHint(
   if ( endCallbackNoticeHint )
   {
     p_endCallbackNoticeHint->klass = 0LL;
-    sub_1B8FFB4(p_endCallbackNoticeHint, 0, v2, v3);
+    sub_1BAB3C0(p_endCallbackNoticeHint, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -150,13 +150,13 @@ void __fastcall WarBoardConfigurationUIContoroller__InitClassCompatibility(
   int32_t ClassBoardReleaseQuestId; // w20
   UISprite_o *classCompatibilitySprite; // x19
 
-  if ( (byte_4A6DE74 & 1) == 0 )
+  if ( (byte_4AB3C7F & 1) == 0 )
   {
-    sub_1B90010(&AtlasManager_TypeInfo, method);
-    sub_1B90010(&BalanceConfig_TypeInfo, v3);
-    sub_1B90010(&CondType_TypeInfo, v4);
-    sub_1B90010(&StringLiteral_17697/*"buttontxt_formation_20"*/, v5);
-    byte_4A6DE74 = 1;
+    sub_1BAB41C(&AtlasManager_TypeInfo, method);
+    sub_1BAB41C(&BalanceConfig_TypeInfo, v3);
+    sub_1BAB41C(&CondType_TypeInfo, v4);
+    sub_1BAB41C(&StringLiteral_17702/*"buttontxt_formation_20"*/, v5);
+    byte_4AB3C7F = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -167,12 +167,12 @@ void __fastcall WarBoardConfigurationUIContoroller__InitClassCompatibility(
   ClassBoardReleaseQuestId = v6->static_fields->ClassBoardReleaseQuestId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  if ( CondType__IsQuestClear_37648724(ClassBoardReleaseQuestId, -1, 0, 0LL) )
+  if ( CondType__IsQuestClear_37980612(ClassBoardReleaseQuestId, -1, 0, 0LL) )
   {
     classCompatibilitySprite = this->fields.classCompatibilitySprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetPartyOrganizationImage(classCompatibilitySprite, (System_String_o *)StringLiteral_17697/*"buttontxt_formation_20"*/, 0LL);
+    AtlasManager__SetPartyOrganizationImage(classCompatibilitySprite, (System_String_o *)StringLiteral_17702/*"buttontxt_formation_20"*/, 0LL);
   }
 }
 
@@ -188,7 +188,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
   __int64 v7; // x1
   intptr_t v8; // w20
   System_Type_o *TypeFromHandle; // x0
-  UnityEngine_Object_o *_69499368; // x0
+  UnityEngine_Object_o *_69760548; // x0
   UnityEngine_Object_o *v11; // x20
   UIFont_o *Component_object; // x0
   const MethodInfo *v13; // x1
@@ -196,26 +196,26 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
   const MethodInfo *v15; // x2
   System_RuntimeTypeHandle_o v16; // 0:w0.4
 
-  if ( (byte_4A6DE6E & 1) == 0 )
+  if ( (byte_4AB3C79 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_UIFont___, method);
-    sub_1B90010(&UnityEngine_GameObject_var, v3);
-    sub_1B90010(&UnityEngine_GameObject_TypeInfo, v4);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B90010(&System_Type_TypeInfo, v6);
-    sub_1B90010(&StringLiteral_6773/*"Fonts/FGO-NumberFont-02"*/, v7);
-    byte_4A6DE6E = 1;
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UIFont___, method);
+    sub_1BAB41C(&UnityEngine_GameObject_var, v3);
+    sub_1BAB41C(&UnityEngine_GameObject_TypeInfo, v4);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BAB41C(&System_Type_TypeInfo, v6);
+    sub_1BAB41C(&StringLiteral_6773/*"Fonts/FGO-NumberFont-02"*/, v7);
+    byte_4AB3C79 = 1;
   }
   v8 = (int)UnityEngine_GameObject_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v16.fields.value = v8;
   TypeFromHandle = System_Type__GetTypeFromHandle(v16, 0LL);
-  _69499368 = UnityEngine_Resources__Load_69499368((System_String_o *)StringLiteral_6773/*"Fonts/FGO-NumberFont-02"*/, TypeFromHandle, 0LL);
-  if ( _69499368 )
+  _69760548 = UnityEngine_Resources__Load_69760548((System_String_o *)StringLiteral_6773/*"Fonts/FGO-NumberFont-02"*/, TypeFromHandle, 0LL);
+  if ( _69760548 )
   {
-    if ( (UnityEngine_GameObject_c *)_69499368->klass == UnityEngine_GameObject_TypeInfo )
-      v11 = _69499368;
+    if ( (UnityEngine_GameObject_c *)_69760548->klass == UnityEngine_GameObject_TypeInfo )
+      v11 = _69760548;
     else
       v11 = 0LL;
   }
@@ -232,7 +232,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
       goto LABEL_20;
     Component_object = (UIFont_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)v11,
-                                     (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
+                                     (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
     if ( !this->fields.currentCostLabel
       || (v14 = Component_object,
           UILabel__set_bitmapFont(this->fields.currentCostLabel, Component_object, 0LL),
@@ -243,7 +243,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
           (Component_object = (UIFont_o *)this->fields.currentApLabel) == 0LL) )
     {
 LABEL_20:
-      sub_1B9026C(Component_object, v13);
+      sub_1BAB678(Component_object, v13);
     }
     UILabel__set_bitmapFont((UILabel_o *)Component_object, v14, 0LL);
   }
@@ -269,20 +269,20 @@ void __fastcall WarBoardConfigurationUIContoroller__InitHintButton(
   QuestPhaseEntity_o **p_questPhaseEntity; // x21
   System_String_o *message; // x0
 
-  if ( (byte_4A6DE77 & 1) == 0 )
+  if ( (byte_4AB3C82 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_QuestHintMaster___, method);
-    sub_1B90010(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
-    sub_1B90010(&DataManager_TypeInfo, v4);
-    sub_1B90010(&QuestHintDialogOpenManager_TypeInfo, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    byte_4A6DE77 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_QuestHintMaster___, method);
+    sub_1BAB41C(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
+    sub_1BAB41C(&DataManager_TypeInfo, v4);
+    sub_1BAB41C(&QuestHintDialogOpenManager_TypeInfo, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
+    byte_4AB3C82 = 1;
   }
   hintButtonObj = (QuestPhaseEntity_o *)this->fields.hintButtonObj;
   if ( !hintButtonObj )
     goto LABEL_30;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)hintButtonObj, 1, 0LL);
-  hintButtonObj = (QuestPhaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  hintButtonObj = (QuestPhaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !hintButtonObj )
     goto LABEL_30;
   hintButtonObj = *(QuestPhaseEntity_o **)&hintButtonObj[5].fields.friendshipExp;
@@ -290,7 +290,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitHintButton(
     goto LABEL_30;
   if ( WarBoardData__GetPartySkillId((WarBoardData_o *)hintButtonObj, 0LL) )
     GameObjectExtensions__AddLocalPositionX(this->fields.hintButtonObj, (float)this->fields.hintXPartyBuffExist, 0LL);
-  hintButtonObj = (QuestPhaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  hintButtonObj = (QuestPhaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !hintButtonObj )
     goto LABEL_30;
   v8 = *(_QWORD *)&hintButtonObj[5].fields.friendshipExp;
@@ -299,7 +299,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitHintButton(
   v9 = *(_QWORD *)(v8 + 104);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  hintButtonObj = (QuestPhaseEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_QuestHintMaster___);
+  hintButtonObj = (QuestPhaseEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_QuestHintMaster___);
   if ( !v9 )
     goto LABEL_30;
   if ( !hintButtonObj )
@@ -311,7 +311,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitHintButton(
     *(_DWORD *)(v9 + 124),
     *(_DWORD *)(v9 + 128),
     0LL);
-  hintButtonObj = (QuestPhaseEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  hintButtonObj = (QuestPhaseEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !hintButtonObj )
     goto LABEL_30;
   v11 = *(_DWORD *)(v9 + 124);
@@ -338,7 +338,7 @@ LABEL_20:
       return;
     }
 LABEL_30:
-    sub_1B9026C(hintButtonObj, method);
+    sub_1BAB678(hintButtonObj, method);
   }
   if ( *p_questHintEntity )
   {
@@ -400,19 +400,19 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
   struct UnityEngine_GameObject_array *v37; // x1
   const MethodInfo *v38; // x1
 
-  if ( (byte_4A6DE6C & 1) == 0 )
+  if ( (byte_4AB3C77 & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76191824, method);
-    sub_1B90010(&Method_System_Linq_Enumerable_Select_UIWidget__GameObject___, v3);
-    sub_1B90010(&Method_System_Linq_Enumerable_ToArray_GameObject___, v4);
-    sub_1B90010(&Method_System_Linq_Enumerable_Where_UIWidget___, v5);
-    sub_1B90010(&System_Func_UIWidget__GameObject__TypeInfo, v6);
-    sub_1B90010(&System_Func_UIWidget__bool__TypeInfo, v7);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller___c__InitStartButton_b__5_0__, v9);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller___c__InitStartButton_b__5_1__, v10);
-    sub_1B90010(&WarBoardConfigurationUIContoroller___c_TypeInfo, v11);
-    byte_4A6DE6C = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76473248, method);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_UIWidget__GameObject___, v3);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_GameObject___, v4);
+    sub_1BAB41C(&Method_System_Linq_Enumerable_Where_UIWidget___, v5);
+    sub_1BAB41C(&System_Func_UIWidget__GameObject__TypeInfo, v6);
+    sub_1BAB41C(&System_Func_UIWidget__bool__TypeInfo, v7);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller___c__InitStartButton_b__5_0__, v9);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller___c__InitStartButton_b__5_1__, v10);
+    sub_1BAB41C(&WarBoardConfigurationUIContoroller___c_TypeInfo, v11);
+    byte_4AB3C77 = 1;
   }
   startButton = (UnityEngine_Object_o *)this->fields.startButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -425,7 +425,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
     ComponentsInChildren_object = (System_Collections_Generic_IEnumerable_TSource__o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                                                          (UnityEngine_Component_o *)v14,
                                                                                          1,
-                                                                                         (const MethodInfo_2E857AC *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76191824);
+                                                                                         (const MethodInfo_2EBB904 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76473248);
     v16 = WarBoardConfigurationUIContoroller___c_TypeInfo;
     if ( !WarBoardConfigurationUIContoroller___c_TypeInfo->_2.cctor_finished )
     {
@@ -441,7 +441,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
         v16 = WarBoardConfigurationUIContoroller___c_TypeInfo;
       }
       v18 = (Il2CppObject *)v16->static_fields->__9;
-      _9__5_0 = (System_Func_object__bool__o *)sub_1B9025C(System_Func_UIWidget__bool__TypeInfo);
+      _9__5_0 = (System_Func_object__bool__o *)sub_1BAB668(System_Func_UIWidget__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__5_0,
         v18,
@@ -449,12 +449,12 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
         0LL);
       static_fields = WarBoardConfigurationUIContoroller___c_TypeInfo->static_fields;
       static_fields->__9__5_0 = (struct System_Func_UIWidget__bool__o *)_9__5_0;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v20, v21);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v20, v21);
     }
     v22 = System_Linq_Enumerable__Where_object_(
             ComponentsInChildren_object,
             (System_Func_TSource__bool__o *)_9__5_0,
-            (const MethodInfo_2ECC92C *)Method_System_Linq_Enumerable_Where_UIWidget___);
+            (const MethodInfo_2F02B34 *)Method_System_Linq_Enumerable_Where_UIWidget___);
     v23 = WarBoardConfigurationUIContoroller___c_TypeInfo;
     v24 = v22;
     if ( !WarBoardConfigurationUIContoroller___c_TypeInfo->_2.cctor_finished )
@@ -471,7 +471,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
         v23 = WarBoardConfigurationUIContoroller___c_TypeInfo;
       }
       v26 = (Il2CppObject *)v23->static_fields->__9;
-      _9__5_1 = (System_Func_object__object__o *)sub_1B9025C(System_Func_UIWidget__GameObject__TypeInfo);
+      _9__5_1 = (System_Func_object__object__o *)sub_1BAB668(System_Func_UIWidget__GameObject__TypeInfo);
       System_Func_object__object____ctor(
         _9__5_1,
         v26,
@@ -479,25 +479,25 @@ void __fastcall WarBoardConfigurationUIContoroller__InitStartButton(
         0LL);
       v27 = WarBoardConfigurationUIContoroller___c_TypeInfo->static_fields;
       v27->__9__5_1 = (struct System_Func_UIWidget__GameObject__o *)_9__5_1;
-      sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v27->__9__5_1, (int32_t)_9__5_1, v28, v29);
+      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v27->__9__5_1, (int32_t)_9__5_1, v28, v29);
     }
     v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  v24,
                                                                  (System_Func_TSource__TResult__o *)_9__5_1,
-                                                                 (const MethodInfo_2EBED8C *)Method_System_Linq_Enumerable_Select_UIWidget__GameObject___);
+                                                                 (const MethodInfo_2EF4318 *)Method_System_Linq_Enumerable_Select_UIWidget__GameObject___);
     v31 = (struct UnityEngine_GameObject_array *)System_Linq_Enumerable__ToArray_object_(
                                                    v30,
-                                                   (const MethodInfo_2EC6F94 *)Method_System_Linq_Enumerable_ToArray_GameObject___);
+                                                   (const MethodInfo_2EFD0EC *)Method_System_Linq_Enumerable_ToArray_GameObject___);
     this->fields.startButtonTweenTargetCache = v31;
     p_startButtonTweenTargetCache = &this->fields.startButtonTweenTargetCache;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.startButtonTweenTargetCache, (int32_t)v31, v33, v34);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.startButtonTweenTargetCache, (int32_t)v31, v33, v34);
     v14 = this->fields.startButton;
     if ( !v14 )
 LABEL_21:
-      sub_1B9026C(v14, v13);
+      sub_1BAB678(v14, v13);
     v37 = *p_startButtonTweenTargetCache;
     v14->fields.tweenTargets = *p_startButtonTweenTargetCache;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v14->fields.tweenTargets, (int32_t)v37, v35, v36);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v14->fields.tweenTargets, (int32_t)v37, v35, v36);
     WarBoardConfigurationUIContoroller__ModifyStartButton(this, v38);
   }
 }
@@ -566,50 +566,50 @@ bool __fastcall WarBoardConfigurationUIContoroller__IsEnabledPutOnFreeSquare(
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v61; // 0:x0.16
 
-  if ( (byte_4A6DE83 & 1) == 0 )
+  if ( (byte_4AB3C8E & 1) == 0 )
   {
-    sub_1B90010(&Method_BasicHelper_Any_UserServantEntity___, warBoardData);
-    sub_1B90010(&Method_DataManager_GetMasterData_RestrictionMaster___, v4);
-    sub_1B90010(&Method_DataManager_GetMasterData_ServantClassMaster___, v5);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserServantMaster___, v6);
-    sub_1B90010(&Method_DataManager_GetMasterData_WarBoardIndividualityClassMaster___, v7);
-    sub_1B90010(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
-    sub_1B90010(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__TryGetEntity__, v9);
-    sub_1B90010(&System_Func_UserServantEntity__bool__TypeInfo, v10);
-    sub_1B90010(&Method_System_Collections_Generic_List_int__Add__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_List_int___ctor__, v12);
-    sub_1B90010(&System_Collections_Generic_List_int__TypeInfo, v13);
-    sub_1B90010(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller___c__DisplayClass45_0__IsEnabledPutOnFreeSquare_b__0__, v16);
-    sub_1B90010(&WarBoardConfigurationUIContoroller___c__DisplayClass45_0_TypeInfo, v17);
-    sub_1B90010(&WarBoardIndividualityClassMaster_TypeInfo, v18);
-    byte_4A6DE83 = 1;
+    sub_1BAB41C(&Method_BasicHelper_Any_UserServantEntity___, warBoardData);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_RestrictionMaster___, v4);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ServantClassMaster___, v5);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserServantMaster___, v6);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_WarBoardIndividualityClassMaster___, v7);
+    sub_1BAB41C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
+    sub_1BAB41C(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__TryGetEntity__, v9);
+    sub_1BAB41C(&System_Func_UserServantEntity__bool__TypeInfo, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int__Add__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int___ctor__, v12);
+    sub_1BAB41C(&System_Collections_Generic_List_int__TypeInfo, v13);
+    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller___c__DisplayClass45_0__IsEnabledPutOnFreeSquare_b__0__, v16);
+    sub_1BAB41C(&WarBoardConfigurationUIContoroller___c__DisplayClass45_0_TypeInfo, v17);
+    sub_1BAB41C(&WarBoardIndividualityClassMaster_TypeInfo, v18);
+    byte_4AB3C8E = 1;
   }
   entity = 0LL;
-  v19 = (Il2CppObject *)sub_1B9025C(WarBoardConfigurationUIContoroller___c__DisplayClass45_0_TypeInfo);
+  v19 = (Il2CppObject *)sub_1BAB668(WarBoardConfigurationUIContoroller___c__DisplayClass45_0_TypeInfo);
   System_Object___ctor(v19, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
   v22 = (DataManager_o *)Instance;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !warBoardData )
     goto LABEL_66;
   v23 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   EditableServantPieces = WarBoardData__GetEditableServantPieces(warBoardData, 0LL);
-  v25 = (System_Collections_Generic_List_int__o *)sub_1B9025C(System_Collections_Generic_List_int__TypeInfo);
+  v25 = (System_Collections_Generic_List_int__o *)sub_1BAB668(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v25,
-    (const MethodInfo_34F3148 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3530044 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !v19 )
     goto LABEL_66;
   v59 = v19;
   v19[1].monitor = v25;
   p_monitor = (ServantStatusBattleListViewItem_o *)&v19[1].monitor;
-  sub_1B8FFB4(p_monitor, (int32_t)v25, v26, v27);
+  sub_1BAB3C0(p_monitor, (int32_t)v25, v26, v27);
   if ( !EditableServantPieces )
     goto LABEL_66;
   max_length = EditableServantPieces->max_length;
@@ -620,7 +620,7 @@ bool __fastcall WarBoardConfigurationUIContoroller__IsEnabledPutOnFreeSquare(
     {
       if ( v30 >= max_length )
 LABEL_67:
-        sub_1B90274(Instance, UserServantId_k__BackingField);
+        sub_1BAB680(Instance, UserServantId_k__BackingField);
       v31 = EditableServantPieces->m_Items[v30];
       if ( !v31 )
         break;
@@ -632,7 +632,7 @@ LABEL_67:
         Instance = DataMasterBase_object__object__long___GetEntity(
                      v23,
                      UserServantId_k__BackingField,
-                     (const MethodInfo_312C754 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                     (const MethodInfo_3163F3C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         if ( !Instance )
           break;
         klass = (System_Collections_Generic_List_int__o *)p_monitor->klass;
@@ -642,7 +642,7 @@ LABEL_67:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v61.fields.currentCryptoKey = v34;
         *(_QWORD *)&v61.fields.fakeValue = v33;
-        Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46506376(v61, 0LL);
+        Instance = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v61, 0LL);
         if ( !klass )
           break;
         items = klass->fields._items;
@@ -657,7 +657,7 @@ LABEL_67:
           System_Collections_Generic_List_int___AddWithResize(
             klass,
             (int32_t)Instance,
-            *(const MethodInfo_34F399C **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_3530898 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
@@ -670,7 +670,7 @@ LABEL_67:
         goto LABEL_22;
     }
 LABEL_66:
-    sub_1B9026C(Instance, UserServantId_k__BackingField);
+    sub_1BAB678(Instance, UserServantId_k__BackingField);
   }
 LABEL_22:
   Instance = (void *)WarBoardData__get_FormationLimitCost(warBoardData, 0LL);
@@ -694,19 +694,19 @@ LABEL_22:
       {
         Instance = DataManager__GetMasterData_object_(
                      v22,
-                     (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_RestrictionMaster___);
+                     (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_RestrictionMaster___);
         if ( !Instance )
           goto LABEL_66;
         Instance = (void *)DataMasterBase_object__object__int___TryGetEntity(
                              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                              &entity,
                              v41->fields._restrictionId_k__BackingField,
-                             (const MethodInfo_312C5FC *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__TryGetEntity__);
+                             (const MethodInfo_3163DE4 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
           Instance = DataManager__GetMasterData_object_(
                        v22,
-                       (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_WarBoardIndividualityClassMaster___);
+                       (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_WarBoardIndividualityClassMaster___);
           if ( !entity || !Instance )
             goto LABEL_66;
           Instance = WarBoardIndividualityClassMaster__GetServantClassEntities(
@@ -757,7 +757,7 @@ LABEL_22:
             {
               Instance = DataManager__GetMasterData_object_(
                            v22,
-                           (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantClassMaster___);
+                           (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ServantClassMaster___);
               if ( !Instance )
                 goto LABEL_66;
               Instance = ServantClassMaster__getExtraClassIdList((ServantClassMaster_o *)Instance, 0LL);
@@ -768,10 +768,10 @@ LABEL_22:
             }
             else
             {
-              v50 = (System_Collections_Generic_List_int__o *)sub_1B9025C(System_Collections_Generic_List_int__TypeInfo);
+              v50 = (System_Collections_Generic_List_int__o *)sub_1BAB668(System_Collections_Generic_List_int__TypeInfo);
               System_Collections_Generic_List_int____ctor(
                 v50,
-                (const MethodInfo_34F3148 *)Method_System_Collections_Generic_List_int___ctor__);
+                (const MethodInfo_3530044 *)Method_System_Collections_Generic_List_int___ctor__);
               if ( !v50 )
                 goto LABEL_66;
               v51 = v50->fields._items;
@@ -785,7 +785,7 @@ LABEL_22:
                 System_Collections_Generic_List_int___AddWithResize(
                   v50,
                   v45,
-                  *(const MethodInfo_34F399C **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+                  *(const MethodInfo_3530898 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
               }
               else
               {
@@ -803,19 +803,19 @@ LABEL_22:
           v55 = (System_Collections_Generic_List_T__o *)ServantList;
           if ( !*v40 )
           {
-            v54 = (System_Func_object__bool__o *)sub_1B9025C(System_Func_UserServantEntity__bool__TypeInfo);
+            v54 = (System_Func_object__bool__o *)sub_1BAB668(System_Func_UserServantEntity__bool__TypeInfo);
             System_Func_object__bool____ctor(
               v54,
               v59,
               Method_WarBoardConfigurationUIContoroller___c__DisplayClass45_0__IsEnabledPutOnFreeSquare_b__0__,
               0LL);
             v59[2].klass = (Il2CppClass *)v54;
-            sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v59[2], (int32_t)v54, v56, v57);
+            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v59[2], (int32_t)v54, v56, v57);
           }
           Instance = (void *)BasicHelper__Any_object_(
                                v55,
                                (System_Func_T__bool__o *)v54,
-                               (const MethodInfo_2E795E4 *)Method_BasicHelper_Any_UserServantEntity___);
+                               (const MethodInfo_2EAF73C *)Method_BasicHelper_Any_UserServantEntity___);
           if ( ((unsigned __int8)Instance & 1) != 0 )
             return 1;
         }
@@ -834,64 +834,65 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyAP(
         int32_t ap,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  long double v3; // q0
+  __int64 v6; // x1
   struct UILabel_o *currentApLabel; // x19
   int32_t *p_BaseActionPoint; // x0
-  __int64 v8; // x0
-  System_String_o *v9; // x0
-  __int64 v10; // x8
-  WarBoardData_o *v11; // x20
+  __int64 v9; // x0
+  System_String_o *v10; // x0
+  __int64 v11; // x8
+  WarBoardData_o *v12; // x20
   WarBoardActionPointEntity_o *ActionPointEntity; // x0
-  System_String_o *v13; // x1
+  System_String_o *v14; // x1
   int32_t BaseActionPoint; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  v15 = ap;
-  if ( (byte_4A6DE70 & 1) == 0 )
+  v16 = ap;
+  if ( (byte_4AB3C7B & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, *(_QWORD *)&ap);
-    sub_1B90010(&StringLiteral_1212/*"0"*/, v5);
-    byte_4A6DE70 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, *(_QWORD *)&ap);
+    sub_1BAB41C(&StringLiteral_1209/*"0"*/, v6);
+    byte_4AB3C7B = 1;
   }
   BaseActionPoint = 0;
   if ( ap )
   {
     currentApLabel = this->fields.currentApLabel;
-    p_BaseActionPoint = &v15;
+    p_BaseActionPoint = &v16;
     goto LABEL_14;
   }
-  v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1BE1EEC(v8);
-  v9 = *(System_String_o **)(*(_QWORD *)(v8 + 192) + 16LL);
-  if ( (v9[12].fields._firstChar & 0x100) == 0 )
-    v9 = (System_String_o *)sub_1BE1EEC(v9);
-  v10 = **(_QWORD **)&v9[7].fields;
-  if ( !v10 || (v11 = *(WarBoardData_o **)(v10 + 440)) == 0LL )
+  v9 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+    v9 = sub_1BFD2F8(v3);
+  v10 = *(System_String_o **)(*(_QWORD *)(v9 + 192) + 16LL);
+  if ( (v10[12].fields._firstChar & 0x100) == 0 )
+    v10 = (System_String_o *)sub_1BFD2F8(v3);
+  v11 = **(_QWORD **)&v10[7].fields;
+  if ( !v11 || (v12 = *(WarBoardData_o **)(v11 + 440)) == 0LL )
 LABEL_19:
-    sub_1B9026C(v9, *(_QWORD *)&ap);
-  ActionPointEntity = WarBoardData__GetActionPointEntity(*(WarBoardData_o **)(v10 + 440), 0, 0, 0LL);
+    sub_1BAB678(v10, *(_QWORD *)&ap);
+  ActionPointEntity = WarBoardData__GetActionPointEntity(*(WarBoardData_o **)(v11 + 440), 0, 0, 0LL);
   if ( ActionPointEntity && !WarBoardActionPointEntity__get_HasCost(ActionPointEntity, 0LL) )
   {
-    v9 = (System_String_o *)this->fields.currentApLabel;
-    if ( v9 )
+    v10 = (System_String_o *)this->fields.currentApLabel;
+    if ( v10 )
     {
-      v13 = (System_String_o *)StringLiteral_1212/*"0"*/;
+      v14 = (System_String_o *)StringLiteral_1209/*"0"*/;
       goto LABEL_16;
     }
     goto LABEL_19;
   }
   currentApLabel = this->fields.currentApLabel;
-  BaseActionPoint = WarBoardData__GetBaseActionPoint(v11, 0, 0, 0LL);
+  BaseActionPoint = WarBoardData__GetBaseActionPoint(v12, 0, 0, 0LL);
   p_BaseActionPoint = &BaseActionPoint;
 LABEL_14:
-  v9 = System_Int32__ToString((int32_t)p_BaseActionPoint, 0LL);
+  v10 = System_Int32__ToString((int32_t)p_BaseActionPoint, 0LL);
   if ( !currentApLabel )
     goto LABEL_19;
-  v13 = v9;
-  v9 = (System_String_o *)currentApLabel;
+  v14 = v10;
+  v10 = (System_String_o *)currentApLabel;
 LABEL_16:
-  UILabel__set_text((UILabel_o *)v9, v13, 0LL);
+  UILabel__set_text((UILabel_o *)v10, v14, 0LL);
 }
 
 
@@ -901,43 +902,44 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyAPFromSquareIndex(
         int32_t squareIndex,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  long double v3; // q0
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x0
+  __int64 v10; // x1
+  __int64 v11; // x0
   WarBoardData_o *Instance; // x0
   System_Collections_Generic_List_HoldReinforcementsData__c *klass; // x8
   WarBoardActionPointEntity_o *ActionPointEntity; // x20
-  WarBoardPieceData_o *Piece_35409936; // x0
-  WarBoardPieceData_o *v15; // x21
+  WarBoardPieceData_o *Piece_35651624; // x0
+  WarBoardPieceData_o *v16; // x21
   bool HasCost; // w0
-  WarBoardActionPointClassMaster_o *v17; // x21
-  const MethodInfo *v18; // x2
+  WarBoardActionPointClassMaster_o *v18; // x21
+  const MethodInfo *v19; // x2
   BattleServantData_o *battleServant_k__BackingField; // x8
   WarBoardActionPointClassEntity_o *EntityFromActionPointEntity; // x0
   int32_t baseActionPoint; // w1
-  WarBoardConfigurationUIContoroller_o *v22; // x0
+  WarBoardConfigurationUIContoroller_o *v23; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A6DE71 & 1) == 0 )
+  if ( (byte_4AB3C7C & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMaster_UserServantMaster___, *(_QWORD *)&squareIndex);
-    sub_1B90010(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___, v5);
-    sub_1B90010(&DataManager_TypeInfo, v6);
-    sub_1B90010(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v7);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v8);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
-    byte_4A6DE71 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMaster_UserServantMaster___, *(_QWORD *)&squareIndex);
+    sub_1BAB41C(&Method_DataManager_GetMaster_WarBoardActionPointClassMaster___, v6);
+    sub_1BAB41C(&DataManager_TypeInfo, v7);
+    sub_1BAB41C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v8);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v9);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v10);
+    byte_4AB3C7C = 1;
   }
   entity = 0LL;
-  v10 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1BE1EEC(v10);
-  Instance = *(WarBoardData_o **)(*(_QWORD *)(v10 + 192) + 16LL);
+  v11 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+    v11 = sub_1BFD2F8(v3);
+  Instance = *(WarBoardData_o **)(*(_QWORD *)(v11 + 192) + 16LL);
   if ( (BYTE5(Instance[1].fields.squares) & 1) == 0 )
-    Instance = (WarBoardData_o *)sub_1BE1EEC(Instance);
+    Instance = (WarBoardData_o *)sub_1BFD2F8(v3);
   klass = Instance->fields.reinforcementsSaveList->klass;
   if ( !klass )
     goto LABEL_35;
@@ -945,51 +947,51 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyAPFromSquareIndex(
   if ( !Instance )
     goto LABEL_35;
   ActionPointEntity = WarBoardData__GetActionPointEntity(Instance, 0, 0, 0LL);
-  Instance = (WarBoardData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   Instance = (WarBoardData_o *)Instance[1].fields.playedStageReinforcementsList;
   if ( !Instance )
     goto LABEL_35;
-  Piece_35409936 = WarBoardData__GetPiece_35409936(Instance, squareIndex, 0LL);
+  Piece_35651624 = WarBoardData__GetPiece_35651624(Instance, squareIndex, 0LL);
   if ( ActionPointEntity )
   {
-    v15 = Piece_35409936;
+    v16 = Piece_35651624;
     HasCost = WarBoardActionPointEntity__get_HasCost(ActionPointEntity, 0LL);
-    if ( v15 )
+    if ( v16 )
     {
       if ( !HasCost )
       {
-        if ( v15->fields._UserServantId_k__BackingField < 1 )
+        if ( v16->fields._UserServantId_k__BackingField < 1 )
         {
-          if ( !WarBoardPieceData__get_IsNpc(v15, 0LL) || !v15->fields._battleServant_k__BackingField )
+          if ( !WarBoardPieceData__get_IsNpc(v16, 0LL) || !v16->fields._battleServant_k__BackingField )
           {
-            v22 = this;
+            v23 = this;
             baseActionPoint = 0;
 LABEL_33:
-            WarBoardConfigurationUIContoroller__ModifyAP(v22, baseActionPoint, v18);
+            WarBoardConfigurationUIContoroller__ModifyAP(v23, baseActionPoint, v19);
             return;
           }
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
-          battleServant_k__BackingField = v15->fields._battleServant_k__BackingField;
+          Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+          battleServant_k__BackingField = v16->fields._battleServant_k__BackingField;
           if ( battleServant_k__BackingField )
           {
-            v17 = (WarBoardActionPointClassMaster_o *)Instance;
+            v18 = (WarBoardActionPointClassMaster_o *)Instance;
             Instance = (WarBoardData_o *)BattleServantData__getClassId(battleServant_k__BackingField, 0LL);
-            if ( v17 )
+            if ( v18 )
             {
 LABEL_30:
               EntityFromActionPointEntity = WarBoardActionPointClassMaster__GetEntityFromActionPointEntity(
-                                              v17,
+                                              v18,
                                               ActionPointEntity,
                                               (int32_t)Instance,
                                               0LL);
               if ( !EntityFromActionPointEntity )
                 return;
               baseActionPoint = EntityFromActionPointEntity->fields.baseActionPoint;
-              v22 = this;
+              v23 = this;
               goto LABEL_33;
             }
           }
@@ -998,29 +1000,29 @@ LABEL_30:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_UserServantMaster___);
+          Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserServantMaster___);
           if ( Instance )
           {
             if ( !DataMasterBase_object__object__long___TryGetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                     &entity,
-                    v15->fields._UserServantId_k__BackingField,
-                    (const MethodInfo_312C7A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+                    v16->fields._UserServantId_k__BackingField,
+                    (const MethodInfo_3163F90 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
               return;
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2E8E1C8 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
+            Instance = (WarBoardData_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_WarBoardActionPointClassMaster___);
             if ( !entity )
               goto LABEL_35;
-            v17 = (WarBoardActionPointClassMaster_o *)Instance;
+            v18 = (WarBoardActionPointClassMaster_o *)Instance;
             Instance = (WarBoardData_o *)UserServantEntity__getSvtClassId((UserServantEntity_o *)entity, 0, 0LL);
-            if ( !v17 )
+            if ( !v18 )
               goto LABEL_35;
             goto LABEL_30;
           }
         }
 LABEL_35:
-        sub_1B9026C(Instance, *(_QWORD *)&squareIndex);
+        sub_1BAB678(Instance, *(_QWORD *)&squareIndex);
       }
     }
   }
@@ -1031,81 +1033,82 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyCost(
         WarBoardConfigurationUIContoroller_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  long double v2; // q0
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x0
-  System_String_o *v8; // x0
-  __int64 v9; // x8
-  WarBoardData_o *v10; // x21
+  __int64 v7; // x1
+  __int64 v8; // x0
+  System_String_o *v9; // x0
+  __int64 v10; // x8
+  WarBoardData_o *v11; // x21
   bool IsPartyCostOver; // w20
-  System_String_o *v12; // x0
+  System_String_o *v13; // x0
   UILabel_o *maxCostLabel; // x22
-  System_String_o *v14; // x21
-  System_String_o *v15; // x0
+  System_String_o *v15; // x21
+  System_String_o *v16; // x0
   UILabel_o *spritLabel; // x22
-  System_String_o *v17; // x0
+  System_String_o *v18; // x0
   UILabel_o *currentCostLabel; // x22
-  System_String_o *v19; // x0
-  const MethodInfo *v20; // x1
+  System_String_o *v20; // x0
+  const MethodInfo *v21; // x1
   int32_t FormationLimitCost; // [xsp+8h] [xbp-38h] BYREF
   int32_t CurrentPartyCost_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A6DE6F & 1) == 0 )
+  if ( (byte_4AB3C7A & 1) == 0 )
   {
-    sub_1B90010(&LocalizationManager_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v3);
-    sub_1B90010(&StringLiteral_15448/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, v4);
-    sub_1B90010(&StringLiteral_15446/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, v5);
-    sub_1B90010(&StringLiteral_15447/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v6);
-    byte_4A6DE6F = 1;
+    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v4);
+    sub_1BAB41C(&StringLiteral_15454/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, v5);
+    sub_1BAB41C(&StringLiteral_15452/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, v6);
+    sub_1BAB41C(&StringLiteral_15453/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v7);
+    byte_4AB3C7A = 1;
   }
-  v7 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1BE1EEC(v7);
-  v8 = *(System_String_o **)(*(_QWORD *)(v7 + 192) + 16LL);
-  if ( (v8[12].fields._firstChar & 0x100) == 0 )
-    v8 = (System_String_o *)sub_1BE1EEC(v8);
-  v9 = **(_QWORD **)&v8[7].fields;
-  if ( !v9 )
-    goto LABEL_19;
-  v10 = *(WarBoardData_o **)(v9 + 440);
+  v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
+    v8 = sub_1BFD2F8(v2);
+  v9 = *(System_String_o **)(*(_QWORD *)(v8 + 192) + 16LL);
+  if ( (v9[12].fields._firstChar & 0x100) == 0 )
+    v9 = (System_String_o *)sub_1BFD2F8(v2);
+  v10 = **(_QWORD **)&v9[7].fields;
   if ( !v10 )
     goto LABEL_19;
-  IsPartyCostOver = WarBoardData__get_IsPartyCostOver(*(WarBoardData_o **)(v9 + 440), 0LL);
-  CurrentPartyCost_k__BackingField = v10->fields._CurrentPartyCost_k__BackingField;
-  FormationLimitCost = WarBoardData__get_FormationLimitCost(v10, 0LL);
+  v11 = *(WarBoardData_o **)(v10 + 440);
+  if ( !v11 )
+    goto LABEL_19;
+  IsPartyCostOver = WarBoardData__get_IsPartyCostOver(*(WarBoardData_o **)(v10 + 440), 0LL);
+  CurrentPartyCost_k__BackingField = v11->fields._CurrentPartyCost_k__BackingField;
+  FormationLimitCost = WarBoardData__get_FormationLimitCost(v11, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15446/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_15452/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, 0LL);
   maxCostLabel = this->fields.maxCostLabel;
-  v14 = v12;
-  v15 = System_Int32__ToString((int32_t)&FormationLimitCost, 0LL);
-  v8 = System_String__Concat_61787092(v14, v15, 0LL);
+  v15 = v13;
+  v16 = System_Int32__ToString((int32_t)&FormationLimitCost, 0LL);
+  v9 = System_String__Concat_62048128(v15, v16, 0LL);
   if ( !maxCostLabel )
     goto LABEL_19;
-  UILabel__set_text(maxCostLabel, v8, 0LL);
+  UILabel__set_text(maxCostLabel, v9, 0LL);
   spritLabel = this->fields.spritLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15448/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
-  v8 = System_String__Concat_61787092(v14, v17, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_15454/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
+  v9 = System_String__Concat_62048128(v15, v18, 0LL);
   if ( !spritLabel )
     goto LABEL_19;
-  UILabel__set_text(spritLabel, v8, 0LL);
+  UILabel__set_text(spritLabel, v9, 0LL);
   currentCostLabel = this->fields.currentCostLabel;
   if ( IsPartyCostOver )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15447/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15453/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
   }
-  v19 = System_Int32__ToString((int32_t)&CurrentPartyCost_k__BackingField, 0LL);
-  v8 = System_String__Concat_61787092(v14, v19, 0LL);
+  v20 = System_Int32__ToString((int32_t)&CurrentPartyCost_k__BackingField, 0LL);
+  v9 = System_String__Concat_62048128(v15, v20, 0LL);
   if ( !currentCostLabel )
 LABEL_19:
-    sub_1B9026C(v8, method);
-  UILabel__set_text(currentCostLabel, v8, 0LL);
-  WarBoardConfigurationUIContoroller__ModifyStartButton(this, v20);
+    sub_1BAB678(v9, method);
+  UILabel__set_text(currentCostLabel, v9, 0LL);
+  WarBoardConfigurationUIContoroller__ModifyStartButton(this, v21);
 }
 
 
@@ -1118,67 +1121,68 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyStartButton(
   __int64 v5; // x1
   int32_t v6; // w2
   int32_t v7; // w3
-  __int64 v8; // x0
-  struct UICommonButton_o *v9; // x0
-  __int64 v10; // x8
+  long double v8; // q0
+  __int64 v9; // x0
+  struct UICommonButton_o *v10; // x0
   __int64 v11; // x8
+  __int64 v12; // x8
   struct UnityEngine_GameObject_array *startButtonTweenTargetCache; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int32_t v14; // w2
+  int32_t v15; // w3
 
-  if ( (byte_4A6DE6D & 1) == 0 )
+  if ( (byte_4AB3C78 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v3);
-    byte_4A6DE6D = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v3);
+    byte_4AB3C78 = 1;
   }
   startButton = (UnityEngine_Object_o *)this->fields.startButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(startButton, 0LL, 0LL) )
   {
-    v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-    if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1BE1EEC(v8);
-    v9 = *(struct UICommonButton_o **)(*(_QWORD *)(v8 + 192) + 16LL);
-    if ( (BYTE1(v9[2].fields.specifyPressedColor.fields.g) & 1) == 0 )
-      v9 = (struct UICommonButton_o *)sub_1BE1EEC(v9);
-    v10 = **(_QWORD **)&v9[1].fields.specifyHoverColor.fields.b;
-    if ( !v10 )
-      goto LABEL_19;
-    v11 = *(_QWORD *)(v10 + 440);
+    v9 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+    if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+      v9 = sub_1BFD2F8(v8);
+    v10 = *(struct UICommonButton_o **)(*(_QWORD *)(v9 + 192) + 16LL);
+    if ( (BYTE1(v10[2].fields.specifyPressedColor.fields.g) & 1) == 0 )
+      v10 = (struct UICommonButton_o *)sub_1BFD2F8(v8);
+    v11 = **(_QWORD **)&v10[1].fields.specifyHoverColor.fields.b;
     if ( !v11 )
       goto LABEL_19;
-    v9 = this->fields.startButton;
-    if ( *(int *)(v11 + 212) >= 1 )
+    v12 = *(_QWORD *)(v11 + 440);
+    if ( !v12 )
+      goto LABEL_19;
+    v10 = this->fields.startButton;
+    if ( *(int *)(v12 + 212) >= 1 )
     {
-      if ( v9 )
+      if ( v10 )
       {
         startButtonTweenTargetCache = this->fields.startButtonTweenTargetCache;
-        v9->fields.tweenTargets = startButtonTweenTargetCache;
-        sub_1B8FFB4(
-          (ServantStatusBattleListViewItem_o *)&v9->fields.tweenTargets,
+        v10->fields.tweenTargets = startButtonTweenTargetCache;
+        sub_1BAB3C0(
+          (ServantStatusBattleListViewItem_o *)&v10->fields.tweenTargets,
           (int32_t)startButtonTweenTargetCache,
           v6,
           v7);
-        v9 = this->fields.startButton;
-        if ( v9 )
+        v10 = this->fields.startButton;
+        if ( v10 )
         {
-          UICommonButton__SetButtonEnable(v9, 1, 1, 0LL);
+          UICommonButton__SetButtonEnable(v10, 1, 1, 0LL);
           return;
         }
       }
 LABEL_19:
-      sub_1B9026C(v9, v5);
+      sub_1BAB678(v10, v5);
     }
-    if ( !v9 )
+    if ( !v10 )
       goto LABEL_19;
-    UICommonButton__SetButtonEnable(v9, 0, 1, 0LL);
-    v9 = this->fields.startButton;
-    if ( !v9 )
+    UICommonButton__SetButtonEnable(v10, 0, 1, 0LL);
+    v10 = this->fields.startButton;
+    if ( !v10 )
       goto LABEL_19;
-    v9->fields.tweenTargets = 0LL;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&v9->fields.tweenTargets, 0, v13, v14);
+    v10->fields.tweenTargets = 0LL;
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v10->fields.tweenTargets, 0, v14, v15);
   }
 }
 
@@ -1193,42 +1197,43 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyUserEquip(
   __int64 Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x20
-  __int64 v9; // x8
+  long double v9; // q0
   __int64 v10; // x8
+  __int64 v11; // x8
   Il2CppObject *Entity; // x0
   int32_t genderImageId; // [xsp+4h] [xbp-3Ch] BYREF
   System_String_o *detail; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *equipName; // [xsp+10h] [xbp-30h] BYREF
   __int64 maxLv; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A6DE72 & 1) == 0 )
+  if ( (byte_4AB3C7D & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_UserEquipMaster___, method);
-    sub_1B90010(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v4);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4A6DE72 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEquipMaster___, method);
+    sub_1BAB41C(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v4);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4AB3C7D = 1;
   }
   equipName = 0LL;
   maxLv = 0LL;
   detail = 0LL;
   genderImageId = 0;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserEquipMaster___);
-  v9 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1BE1EEC(v9);
-  Instance = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEquipMaster___);
+  v10 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    v10 = sub_1BFD2F8(v9);
+  Instance = *(_QWORD *)(*(_QWORD *)(v10 + 192) + 16LL);
   if ( (*(_BYTE *)(Instance + 309) & 1) == 0 )
-    Instance = sub_1BE1EEC(Instance);
-  v10 = **(_QWORD **)(Instance + 184);
-  if ( !v10 )
+    Instance = sub_1BFD2F8(v9);
+  v11 = **(_QWORD **)(Instance + 184);
+  if ( !v11 )
     goto LABEL_15;
-  Instance = *(_QWORD *)(v10 + 440);
+  Instance = *(_QWORD *)(v11 + 440);
   if ( !Instance )
     goto LABEL_15;
   Instance = WarBoardData__get_PlayerMasterUserEquipId((WarBoardData_o *)Instance, 0LL);
@@ -1237,7 +1242,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyUserEquip(
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              Instance,
-             (const MethodInfo_312C754 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+             (const MethodInfo_3163F3C *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
   if ( !Entity )
     return;
   UserEquipEntity__getEquipInfo(
@@ -1251,7 +1256,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyUserEquip(
   Instance = (__int64)this->fields.userEquipIcon;
   if ( !Instance )
 LABEL_15:
-    sub_1B9026C(Instance, v7);
+    sub_1BAB678(Instance, v7);
   ItemIconComponent__SetEquipItem((ItemIconComponent_o *)Instance, genderImageId, 0LL);
 }
 
@@ -1271,13 +1276,13 @@ void __fastcall WarBoardConfigurationUIContoroller__NoticeHint(
   _DWORD *v12; // x8
   int32_t v13; // w20
 
-  if ( (byte_4A6DE79 & 1) == 0 )
+  if ( (byte_4AB3C84 & 1) == 0 )
   {
-    sub_1B90010(&QuestHintDialogOpenManager_TypeInfo, callback);
-    byte_4A6DE79 = 1;
+    sub_1BAB41C(&QuestHintDialogOpenManager_TypeInfo, callback);
+    byte_4AB3C84 = 1;
   }
   this->fields.endCallbackNoticeHint = callback;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields.endCallbackNoticeHint,
     (int32_t)callback,
     (int32_t)method,
@@ -1320,7 +1325,7 @@ LABEL_8:
     v12 = this->fields.questPhaseEntity;
     if ( !v12 )
 LABEL_23:
-      sub_1B9026C(openType, v6);
+      sub_1BAB678(openType, v6);
   }
   v13 = v12[4];
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -1348,50 +1353,51 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickClassCompatibilityBut
   System_Reflection_MethodBase_o *v8; // x0
   Il2CppObject *Instance; // x0
   __int64 v10; // x1
-  __int64 v11; // x0
+  long double v11; // q0
   __int64 v12; // x0
-  CommonUI_o *v13; // x20
-  System_Action_o *v14; // x21
+  __int64 v13; // x0
+  CommonUI_o *v14; // x20
+  System_Action_o *v15; // x21
 
-  if ( (byte_4A6DE75 & 1) == 0 )
+  if ( (byte_4AB3C80 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__, v5);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnCloseClassCompatibility__, v6);
-    byte_4A6DE75 = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__, v5);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnCloseClassCompatibility__, v6);
+    byte_4AB3C80 = 1;
   }
   v7 = Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__;
   if ( (*((_BYTE *)Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1B90028(Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v7, v7[4]);
+    v7 = (_QWORD *)sub_1BAB434(Method_WarBoardConfigurationUIContoroller_OnClickClassCompatibilityButton__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1BAB400(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 0, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   WarBoardManager__HideSimplePopup((WarBoardManager_o *)Instance, 0LL, 0LL);
-  v11 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1BE1EEC(v11);
-  v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
+  v12 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1BE1EEC(v12);
-  v13 = **(CommonUI_o ***)(v12 + 184);
-  v14 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+    v12 = sub_1BFD2F8(v11);
+  v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1BFD2F8(v11);
+  v14 = **(CommonUI_o ***)(v13 + 184);
+  v15 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(
-    v14,
+    v15,
     (Il2CppObject *)this,
     Method_WarBoardConfigurationUIContoroller_OnCloseClassCompatibility__,
     0LL);
-  if ( !v13 )
+  if ( !v14 )
 LABEL_13:
-    sub_1B9026C(Instance, v10);
-  CommonUI__OpenClassCompatibilityMenu(v13, v14, 0LL);
+    sub_1BAB678(Instance, v10);
+  CommonUI__OpenClassCompatibilityMenu(v14, v15, 0LL);
 }
 
 
@@ -1408,15 +1414,15 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickHintButton(
   int32_t v9; // w3
   const MethodInfo *v10; // x1
 
-  if ( (byte_4A6DE78 & 1) == 0 )
+  if ( (byte_4AB3C83 & 1) == 0 )
   {
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickHintButton__, method);
-    byte_4A6DE78 = 1;
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickHintButton__, method);
+    byte_4AB3C83 = 1;
   }
   v3 = Method_WarBoardConfigurationUIContoroller_OnClickHintButton__;
   if ( (*((_BYTE *)Method_WarBoardConfigurationUIContoroller_OnClickHintButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B90028(Method_WarBoardConfigurationUIContoroller_OnClickHintButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BAB434(Method_WarBoardConfigurationUIContoroller_OnClickHintButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
   questHintEntity = this->fields.questHintEntity;
   if ( questHintEntity )
@@ -1433,7 +1439,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickHintButton(
   if ( !System_String__IsNullOrEmpty(message, 0LL) )
   {
     this->fields.endCallbackNoticeHint = 0LL;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.endCallbackNoticeHint, 0, v8, v9);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.endCallbackNoticeHint, 0, v8, v9);
     WarBoardConfigurationUIContoroller__OpenHintDialog(this, v10);
   }
 }
@@ -1456,65 +1462,66 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickReturnButton(
   System_Reflection_MethodBase_o *v13; // x0
   Il2CppObject *Instance; // x0
   __int64 v15; // x1
-  __int64 v16; // x0
+  long double v16; // q0
   __int64 v17; // x0
-  CommonUI_o *v18; // x20
-  System_String_o *v19; // x21
-  System_String_o *v20; // x22
-  System_String_o *v21; // x23
-  System_String_o *v22; // x24
-  CommonConfirmDialog_ClickDelegate_o *v23; // x25
+  __int64 v18; // x0
+  CommonUI_o *v19; // x20
+  System_String_o *v20; // x21
+  System_String_o *v21; // x22
+  System_String_o *v22; // x23
+  System_String_o *v23; // x24
+  CommonConfirmDialog_ClickDelegate_o *v24; // x25
 
-  if ( (byte_4A6DE81 & 1) == 0 )
+  if ( (byte_4AB3C8C & 1) == 0 )
   {
-    sub_1B90010(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1B90010(&LocalizationManager_TypeInfo, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, v4);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v5);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__, v6);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickReturnConfirmDialog__, v7);
-    sub_1B90010(&StringLiteral_15455/*"WARBOARD_RETURN_CONFIRM_NO"*/, v8);
-    sub_1B90010(&StringLiteral_15454/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, v9);
-    sub_1B90010(&StringLiteral_15457/*"WARBOARD_RETURN_CONFIRM_YES"*/, v10);
-    sub_1B90010(&StringLiteral_15456/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, v11);
-    byte_4A6DE81 = 1;
+    sub_1BAB41C(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, v4);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v5);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__, v6);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickReturnConfirmDialog__, v7);
+    sub_1BAB41C(&StringLiteral_15461/*"WARBOARD_RETURN_CONFIRM_NO"*/, v8);
+    sub_1BAB41C(&StringLiteral_15460/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, v9);
+    sub_1BAB41C(&StringLiteral_15463/*"WARBOARD_RETURN_CONFIRM_YES"*/, v10);
+    sub_1BAB41C(&StringLiteral_15462/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, v11);
+    byte_4AB3C8C = 1;
   }
   v12 = Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__;
   if ( (*((_BYTE *)Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1B90028(Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v12, v12[4]);
+    v12 = (_QWORD *)sub_1BAB434(Method_WarBoardConfigurationUIContoroller_OnClickReturnButton__);
+  v13 = (System_Reflection_MethodBase_o *)sub_1BAB400(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 1, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 0, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   WarBoardManager__HideSimplePopup((WarBoardManager_o *)Instance, 0LL, 0LL);
-  v16 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
-  if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1BE1EEC(v16);
-  v17 = *(_QWORD *)(*(_QWORD *)(v16 + 192) + 16LL);
+  v17 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
   if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1BE1EEC(v17);
-  v18 = **(CommonUI_o ***)(v17 + 184);
+    v17 = sub_1BFD2F8(v16);
+  v18 = *(_QWORD *)(*(_QWORD *)(v17 + 192) + 16LL);
+  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
+    v18 = sub_1BFD2F8(v16);
+  v19 = **(CommonUI_o ***)(v18 + 184);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_15456/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, 0LL);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15454/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, 0LL);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15457/*"WARBOARD_RETURN_CONFIRM_YES"*/, 0LL);
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_15455/*"WARBOARD_RETURN_CONFIRM_NO"*/, 0LL);
-  v23 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B9025C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15462/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15460/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_15463/*"WARBOARD_RETURN_CONFIRM_YES"*/, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_15461/*"WARBOARD_RETURN_CONFIRM_NO"*/, 0LL);
+  v24 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BAB668(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v23,
+    v24,
     (Il2CppObject *)this,
     Method_WarBoardConfigurationUIContoroller_OnClickReturnConfirmDialog__,
     0LL);
-  if ( !v18 )
+  if ( !v19 )
 LABEL_15:
-    sub_1B9026C(Instance, v15);
-  CommonUI__OpenConfirmDialog_30525284(v18, v19, v20, v21, v22, 0, v23, 0, 28, 180.0, 43.0, 0, 0, 0LL);
+    sub_1BAB678(Instance, v15);
+  CommonUI__OpenConfirmDialog_30636672(v19, v20, v21, v22, v23, 0, v24, 0, 28, 180.0, 43.0, 0, 0, 0LL);
 }
 
 
@@ -1530,21 +1537,21 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickReturnConfirmDialog(
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A6DE82 & 1) == 0 )
+  if ( (byte_4AB3C8D & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_1B90010(&TerminalPramsManager_TypeInfo, v5);
-    byte_4A6DE82 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    sub_1BAB41C(&TerminalPramsManager_TypeInfo, v5);
+    byte_4AB3C8D = 1;
   }
   if ( isDecide )
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4A6B12B )
+    if ( !byte_4AB0F7F )
     {
-      sub_1B90010(&TerminalPramsManager_TypeInfo, isDecide);
-      byte_4A6B12B = 1;
+      sub_1BAB41C(&TerminalPramsManager_TypeInfo, isDecide);
+      byte_4AB0F7F = 1;
     }
     v6 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1553,17 +1560,17 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickReturnConfirmDialog(
       v6 = TerminalPramsManager_TypeInfo;
     }
     v6->static_fields->_IsAutoResume_k__BackingField = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !Instance )
 LABEL_15:
-      sub_1B9026C(Instance, v8);
+      sub_1BAB678(Instance, v8);
     WarBoardManager__Exit((WarBoardManager_o *)Instance, 0LL);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
@@ -1578,13 +1585,13 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickRuleButton(
   System_Action_o *v4; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A6DE7D & 1) == 0 )
+  if ( (byte_4AB3C88 & 1) == 0 )
   {
-    sub_1B90010(&System_Action_TypeInfo, method);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_CloseRuleDialog__, v3);
-    byte_4A6DE7D = 1;
+    sub_1BAB41C(&System_Action_TypeInfo, method);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_CloseRuleDialog__, v3);
+    byte_4AB3C88 = 1;
   }
-  v4 = (System_Action_o *)sub_1B9025C(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_WarBoardConfigurationUIContoroller_CloseRuleDialog__, 0LL);
   WarBoardUIUtility__ShowRuleDialog(v4, v5);
 }
@@ -1642,37 +1649,37 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
   System_Nullable_float__o p_titlePosY; // 0:x0.8
   System_Nullable_float__o v49; // 0:x0.8
 
-  if ( (byte_4A6DE7F & 1) == 0 )
+  if ( (byte_4AB3C8A & 1) == 0 )
   {
-    sub_1B90010(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1B90010(&NotificationDialog_ClickDelegate_TypeInfo, v3);
-    sub_1B90010(&LocalizationManager_TypeInfo, v4);
-    sub_1B90010(&Method_System_Nullable_float___ctor__, v5);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v7);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller___c__OnClickStartButton_b__41_0__, v8);
-    sub_1B90010(&WarBoardConfigurationUIContoroller___c_TypeInfo, v9);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickStartButton__, v10);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickStartConfirmDialog__, v11);
-    sub_1B90010(&StringLiteral_15444/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, v12);
-    sub_1B90010(&StringLiteral_15463/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, v13);
-    sub_1B90010(&StringLiteral_15460/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, v14);
-    sub_1B90010(&StringLiteral_15445/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, v15);
-    sub_1B90010(&StringLiteral_15462/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, v16);
-    sub_1B90010(&StringLiteral_15461/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, v17);
-    sub_1B90010(&StringLiteral_15464/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, v18);
-    byte_4A6DE7F = 1;
+    sub_1BAB41C(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1BAB41C(&NotificationDialog_ClickDelegate_TypeInfo, v3);
+    sub_1BAB41C(&LocalizationManager_TypeInfo, v4);
+    sub_1BAB41C(&Method_System_Nullable_float___ctor__, v5);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v7);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller___c__OnClickStartButton_b__41_0__, v8);
+    sub_1BAB41C(&WarBoardConfigurationUIContoroller___c_TypeInfo, v9);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickStartButton__, v10);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickStartConfirmDialog__, v11);
+    sub_1BAB41C(&StringLiteral_15450/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, v12);
+    sub_1BAB41C(&StringLiteral_15469/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, v13);
+    sub_1BAB41C(&StringLiteral_15466/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, v14);
+    sub_1BAB41C(&StringLiteral_15451/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, v15);
+    sub_1BAB41C(&StringLiteral_15468/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, v16);
+    sub_1BAB41C(&StringLiteral_15467/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, v17);
+    sub_1BAB41C(&StringLiteral_15470/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, v18);
+    byte_4AB3C8A = 1;
   }
   v19 = Method_WarBoardConfigurationUIContoroller_OnClickStartButton__;
   if ( (*((_BYTE *)Method_WarBoardConfigurationUIContoroller_OnClickStartButton__ + 83) & 2) != 0 )
-    v19 = (_QWORD *)sub_1B90028(Method_WarBoardConfigurationUIContoroller_OnClickStartButton__);
-  v20 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v19, v19[4]);
+    v19 = (_QWORD *)sub_1BAB434(Method_WarBoardConfigurationUIContoroller_OnClickStartButton__);
+  v20 = (System_Reflection_MethodBase_o *)sub_1BAB400(v19, v19[4]);
   OverwriteAssetSoundName__PlaySystemSe(v20, 0, 0LL);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   WarBoardManager__HideSimplePopup(Instance, 0LL, 0LL);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField;
@@ -1681,15 +1688,15 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
   IsPartyCostOver = WarBoardData__get_IsPartyCostOver(Instance->fields._warBoardData_k__BackingField, 0LL);
   if ( IsPartyCostOver )
   {
-    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( Instance )
     {
       WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0LL);
-      v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_15445/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, 0LL);
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15444/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, 0LL);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_15451/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, 0LL);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15450/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, 0LL);
       v29 = WarBoardConfigurationUIContoroller___c_TypeInfo;
       if ( !WarBoardConfigurationUIContoroller___c_TypeInfo->_2.cctor_finished )
       {
@@ -1705,7 +1712,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
           v29 = WarBoardConfigurationUIContoroller___c_TypeInfo;
         }
         v31 = (Il2CppObject *)v29->static_fields->__9;
-        _9__41_0 = (NotificationDialog_ClickDelegate_o *)sub_1B9025C(NotificationDialog_ClickDelegate_TypeInfo);
+        _9__41_0 = (NotificationDialog_ClickDelegate_o *)sub_1BAB668(NotificationDialog_ClickDelegate_TypeInfo);
         NotificationDialog_ClickDelegate___ctor(
           _9__41_0,
           v31,
@@ -1713,20 +1720,20 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
           0LL);
         static_fields = WarBoardConfigurationUIContoroller___c_TypeInfo->static_fields;
         static_fields->__9__41_0 = _9__41_0;
-        sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&static_fields->__9__41_0, (int32_t)_9__41_0, v33, v34);
+        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__41_0, (int32_t)_9__41_0, v33, v34);
       }
       p_titlePosY = (System_Nullable_float__o)&titlePosY;
       titlePosY = 0LL;
       System_Nullable_float____ctor(
         p_titlePosY,
         90.0,
-        (const MethodInfo_362FB34 *)Method_System_Nullable_float___ctor__);
+        (const MethodInfo_366C7F8 *)Method_System_Nullable_float___ctor__);
       v49 = (System_Nullable_float__o)&v46;
       v46 = 0LL;
-      System_Nullable_float____ctor(v49, 15.0, (const MethodInfo_362FB34 *)Method_System_Nullable_float___ctor__);
+      System_Nullable_float____ctor(v49, 15.0, (const MethodInfo_366C7F8 *)Method_System_Nullable_float___ctor__);
       if ( v26 )
       {
-        CommonUI__OpenNotificationDialog_30527836(
+        CommonUI__OpenNotificationDialog_30639228(
           (CommonUI_o *)v26,
           v27,
           v28,
@@ -1751,26 +1758,26 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
       }
     }
 LABEL_29:
-    sub_1B9026C(Instance, v22);
+    sub_1BAB678(Instance, v22);
   }
   IsEnabledPutOnFreeSquare = WarBoardConfigurationUIContoroller__IsEnabledPutOnFreeSquare(
                                (WarBoardConfigurationUIContoroller_o *)IsPartyCostOver,
                                warBoardData_k__BackingField,
                                v25);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0LL);
-  v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15463/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15469/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0LL);
   if ( IsEnabledPutOnFreeSquare )
   {
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15461/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, 0LL);
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15464/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15462/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
-    v41 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B9025C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15467/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, 0LL);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15470/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15468/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
+    v41 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BAB668(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
       v41,
       (Il2CppObject *)this,
@@ -1778,14 +1785,14 @@ LABEL_29:
       0LL);
     if ( !v36 )
       goto LABEL_29;
-    CommonUI__OpenConfirmDialog_30525284((CommonUI_o *)v36, v37, v38, v39, v40, 1, v41, 0, 28, 180.0, 40.0, 0, 0, 0LL);
+    CommonUI__OpenConfirmDialog_30636672((CommonUI_o *)v36, v37, v38, v39, v40, 1, v41, 0, 28, 180.0, 40.0, 0, 0, 0LL);
   }
   else
   {
-    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_15460/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, 0LL);
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_15464/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_15462/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
-    v45 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B9025C(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_15466/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_15470/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_15468/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
+    v45 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BAB668(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
       v45,
       (Il2CppObject *)this,
@@ -1793,7 +1800,7 @@ LABEL_29:
       0LL);
     if ( !v36 )
       goto LABEL_29;
-    CommonUI__OpenConfirmDialog_30525284((CommonUI_o *)v36, v37, v42, v43, v44, 1, v45, 0, 28, 180.0, 43.0, 0, 0, 0LL);
+    CommonUI__OpenConfirmDialog_30636672((CommonUI_o *)v36, v37, v42, v43, v44, 1, v45, 0, 28, 180.0, 43.0, 0, 0, 0LL);
   }
 }
 
@@ -1808,26 +1815,26 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartConfirmDialog(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4A6DE80 & 1) == 0 )
+  if ( (byte_4AB3C8B & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4A6DE80 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4AB3C8B = 1;
   }
   if ( isDecide )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !Instance )
       goto LABEL_9;
     WarBoardManager__TransitionPlayFromConfigurationMode((WarBoardManager_o *)Instance, 0LL);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
 LABEL_9:
-    sub_1B9026C(Instance, v6);
+    sub_1BAB678(Instance, v6);
   }
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
 }
@@ -1842,34 +1849,35 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickUserEquipButton(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
   __int64 v6; // x1
-  __int64 v7; // x0
+  long double v7; // q0
   __int64 v8; // x0
+  __int64 v9; // x0
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4A6DE73 & 1) == 0 )
+  if ( (byte_4AB3C7E & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v2);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__, v3);
-    byte_4A6DE73 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v2);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__, v3);
+    byte_4AB3C7E = 1;
   }
   v4 = Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__;
   if ( (*((_BYTE *)Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B90028(Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B8FFF4(v4, v4[4]);
+    v4 = (_QWORD *)sub_1BAB434(Method_WarBoardConfigurationUIContoroller_OnClickUserEquipButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-  v7 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1BE1EEC(v7);
-  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
+  v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1BE1EEC(v8);
-  Instance = **(Il2CppObject ***)(v8 + 184);
+    v8 = sub_1BFD2F8(v7);
+  v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
+  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+    v9 = sub_1BFD2F8(v7);
+  Instance = **(Il2CppObject ***)(v9 + 184);
   if ( !Instance
     || (WarBoardManager__OpenUserEquipScene((WarBoardManager_o *)Instance, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL) )
   {
-    sub_1B9026C(Instance, v6);
+    sub_1BAB678(Instance, v6);
   }
   WarBoardManager__HideSimplePopup((WarBoardManager_o *)Instance, 0LL, 0LL);
 }
@@ -1882,29 +1890,30 @@ void __fastcall WarBoardConfigurationUIContoroller__OnCloseClassCompatibility(
   __int64 v2; // x1
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
-  __int64 v5; // x0
+  long double v5; // q0
   __int64 v6; // x0
+  __int64 v7; // x0
 
-  if ( (byte_4A6DE76 & 1) == 0 )
+  if ( (byte_4AB3C81 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v2);
-    byte_4A6DE76 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v2);
+    byte_4AB3C81 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL);
-  v5 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
-  if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1BE1EEC(v5);
-  v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
+  v6 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1BE1EEC(v6);
-  Instance = **(Il2CppObject ***)(v6 + 184);
+    v6 = sub_1BFD2F8(v5);
+  v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
+  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
+    v7 = sub_1BFD2F8(v5);
+  Instance = **(Il2CppObject ***)(v7 + 184);
   if ( !Instance )
 LABEL_10:
-    sub_1B9026C(Instance, v4);
+    sub_1BAB678(Instance, v4);
   CommonUI__CloseClassCompatibilityMenu((CommonUI_o *)Instance, 0LL, 0LL);
 }
 
@@ -1915,13 +1924,13 @@ void __fastcall WarBoardConfigurationUIContoroller__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4A6DE84 & 1) == 0 )
+  if ( (byte_4AB3C8F & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_14559/*"TopBase/BackButton"*/, method);
-    byte_4A6DE84 = 1;
+    sub_1BAB41C(&StringLiteral_14564/*"TopBase/BackButton"*/, method);
+    byte_4AB3C8F = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42000584(transform, (System_String_o *)StringLiteral_14559/*"TopBase/BackButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42185032(transform, (System_String_o *)StringLiteral_14564/*"TopBase/BackButton"*/, 0LL);
 }
 
 
@@ -1942,22 +1951,22 @@ void __fastcall WarBoardConfigurationUIContoroller__OpenHintDialog(
   Il2CppObject *v13; // x23
   ScrollMessageDialog_ClickDelegate_o *v14; // x24
 
-  if ( (byte_4A6DE7A & 1) == 0 )
+  if ( (byte_4AB3C85 & 1) == 0 )
   {
-    sub_1B90010(&ScrollMessageDialog_ClickDelegate_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_1B90010(&Method_WarBoardConfigurationUIContoroller__OpenHintDialog_b__33_0__, v5);
-    sub_1B90010(&StringLiteral_1/*""*/, v6);
-    byte_4A6DE7A = 1;
+    sub_1BAB41C(&ScrollMessageDialog_ClickDelegate_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    sub_1BAB41C(&Method_WarBoardConfigurationUIContoroller__OpenHintDialog_b__33_0__, v5);
+    sub_1BAB41C(&StringLiteral_1/*""*/, v6);
+    byte_4AB3C85 = 1;
   }
   if ( this->fields.questHintEntity || this->fields.questPhaseEntity )
   {
-    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( Instance )
     {
       WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0LL);
-      Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( Instance )
       {
         WarBoardManager__HideSimplePopup(Instance, 0LL, 0LL);
@@ -1983,8 +1992,8 @@ void __fastcall WarBoardConfigurationUIContoroller__OpenHintDialog(
           message = (System_String_o *)Instance;
           leftIndent = QuestPhaseEntity__getHintLeftIndent(this->fields.questPhaseEntity, 0LL);
         }
-        v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v14 = (ScrollMessageDialog_ClickDelegate_o *)sub_1B9025C(ScrollMessageDialog_ClickDelegate_TypeInfo);
+        v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v14 = (ScrollMessageDialog_ClickDelegate_o *)sub_1BAB668(ScrollMessageDialog_ClickDelegate_TypeInfo);
         ScrollMessageDialog_ClickDelegate___ctor(
           v14,
           (Il2CppObject *)this,
@@ -1998,7 +2007,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OpenHintDialog(
       }
     }
 LABEL_16:
-    sub_1B9026C(Instance, v8);
+    sub_1BAB678(Instance, v8);
   }
   WarBoardConfigurationUIContoroller__EndNoticeHint(this, method);
 }
@@ -2013,7 +2022,7 @@ void __fastcall WarBoardConfigurationUIContoroller__SetActiveCostLabel(
 
   costBaseObj = this->fields.costBaseObj;
   if ( !costBaseObj )
-    sub_1B9026C(0LL, isActive);
+    sub_1BAB678(0LL, isActive);
   UnityEngine_GameObject__SetActive(costBaseObj, isActive, 0LL);
 }
 
@@ -2029,12 +2038,12 @@ void __fastcall WarBoardConfigurationUIContoroller__UpdateRuleButton(
   UISprite_o *Instance; // x0
   UnityEngine_GameObject_o *newRuleObject; // x19
 
-  if ( (byte_4A6DE7C & 1) == 0 )
+  if ( (byte_4AB3C87 & 1) == 0 )
   {
-    sub_1B90010(&AtlasManager_TypeInfo, method);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
-    sub_1B90010(&StringLiteral_20186/*"icon_noticebg_01"*/, v4);
-    byte_4A6DE7C = 1;
+    sub_1BAB41C(&AtlasManager_TypeInfo, method);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
+    sub_1BAB41C(&StringLiteral_20189/*"icon_noticebg_01"*/, v4);
+    byte_4AB3C87 = 1;
   }
   newRuleBg = this->fields.newRuleBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -2042,13 +2051,13 @@ void __fastcall WarBoardConfigurationUIContoroller__UpdateRuleButton(
   AtlasManager__SetCommon(newRuleBg, 0LL);
   Instance = this->fields.newRuleBg;
   if ( !Instance
-    || (UISprite__set_spriteName(Instance, (System_String_o *)StringLiteral_20186/*"icon_noticebg_01"*/, 0LL),
+    || (UISprite__set_spriteName(Instance, (System_String_o *)StringLiteral_20189/*"icon_noticebg_01"*/, 0LL),
         newRuleObject = this->fields.newRuleObject,
-        (Instance = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
+        (Instance = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
     || (Instance = *(UISprite_o **)&Instance->fields.mOuterUV.fields.m_Height) == 0LL
     || (Instance = (UISprite_o *)WarBoardData__HasNewWinCond((WarBoardData_o *)Instance, 0LL), !newRuleObject) )
   {
-    sub_1B9026C(Instance, v6);
+    sub_1BAB678(Instance, v6);
   }
   UnityEngine_GameObject__SetActive(newRuleObject, (unsigned __int8)Instance & 1, 0LL);
 }
@@ -2074,15 +2083,15 @@ void __fastcall WarBoardConfigurationUIContoroller___c___cctor(const MethodInfo 
   int32_t v3; // w2
   int32_t v4; // w3
 
-  if ( (byte_4A6DE85 & 1) == 0 )
+  if ( (byte_4AB3C90 & 1) == 0 )
   {
-    sub_1B90010(&WarBoardConfigurationUIContoroller___c_TypeInfo, v1);
-    byte_4A6DE85 = 1;
+    sub_1BAB41C(&WarBoardConfigurationUIContoroller___c_TypeInfo, v1);
+    byte_4AB3C90 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B9025C(WarBoardConfigurationUIContoroller___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BAB668(WarBoardConfigurationUIContoroller___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardConfigurationUIContoroller___c_TypeInfo->static_fields->__9 = (struct WarBoardConfigurationUIContoroller___c_o *)v2;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)WarBoardConfigurationUIContoroller___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -2103,10 +2112,10 @@ bool __fastcall WarBoardConfigurationUIContoroller___c___InitStartButton_b__5_0(
         UIWidget_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_4A6DE86 & 1) == 0 )
+  if ( (byte_4AB3C91 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Object_TypeInfo, x);
-    byte_4A6DE86 = 1;
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, x);
+    byte_4AB3C91 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2120,7 +2129,7 @@ UnityEngine_GameObject_o *__fastcall WarBoardConfigurationUIContoroller___c___In
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B9026C(this, 0LL);
+    sub_1BAB678(this, 0LL);
   return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0LL);
 }
 
@@ -2135,18 +2144,18 @@ void __fastcall WarBoardConfigurationUIContoroller___c___OnClickStartButton_b__4
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A6DE87 & 1) == 0 )
+  if ( (byte_4AB3C92 & 1) == 0 )
   {
-    sub_1B90010(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, ok);
-    sub_1B90010(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
-    byte_4A6DE87 = 1;
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, ok);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
+    byte_4AB3C92 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)Instance, 1, 0, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1B9026C(Instance, v5);
+    sub_1BAB678(Instance, v5);
   }
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
@@ -2169,12 +2178,12 @@ bool __fastcall WarBoardConfigurationUIContoroller___c__DisplayClass45_0___IsEna
   System_Collections_Generic_List_int__o *pieceSvtIdList; // x20
 
   v4 = this;
-  if ( (byte_4A6DE88 & 1) == 0 )
+  if ( (byte_4AB3C93 & 1) == 0 )
   {
-    this = (WarBoardConfigurationUIContoroller___c__DisplayClass45_0_o *)sub_1B90010(
+    this = (WarBoardConfigurationUIContoroller___c__DisplayClass45_0_o *)sub_1BAB41C(
                                                                            &Method_System_Collections_Generic_List_int__Contains__,
                                                                            svt);
-    byte_4A6DE88 = 1;
+    byte_4AB3C93 = 1;
   }
   if ( !svt )
     goto LABEL_10;
@@ -2186,9 +2195,9 @@ bool __fastcall WarBoardConfigurationUIContoroller___c__DisplayClass45_0___IsEna
       return !System_Collections_Generic_List_int___Contains(
                 pieceSvtIdList,
                 (int32_t)this,
-                (const MethodInfo_34F3D14 *)Method_System_Collections_Generic_List_int__Contains__);
+                (const MethodInfo_3530C10 *)Method_System_Collections_Generic_List_int__Contains__);
 LABEL_10:
-    sub_1B9026C(this, svt);
+    sub_1BAB678(this, svt);
   }
   return 0;
 }

@@ -7,9 +7,9 @@ void __fastcall MasterMissionReceiveConfirmListViewItem___ctor(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  ListViewItem___ctor_40760684((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
@@ -29,7 +29,7 @@ void __fastcall MasterMissionReceiveConfirmListViewItem__set_Message(
   int32_t v3; // w3
 
   this->fields._Message_k__BackingField = value;
-  sub_1B8FFB4(
+  sub_1BAB3C0(
     (ServantStatusBattleListViewItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -2,10 +2,10 @@ void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A70067 & 1) == 0 )
+  if ( (byte_4AB5F4A & 1) == 0 )
   {
-    sub_1B90010(&EventUiEntity_TypeInfo, v1);
-    byte_4A70067 = 1;
+    sub_1BAB41C(&EventUiEntity_TypeInfo, v1);
+    byte_4AB5F4A = 1;
   }
   LODWORD(EventUiEntity_TypeInfo->static_fields->EVNET_UI_POSITION_MAGNIFICATION) = (struct EventUiEntity_StaticFields)1008981770;
 }
@@ -17,20 +17,20 @@ void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *me
   int32_t v4; // w2
   int32_t v5; // w3
 
-  if ( (byte_4A70064 & 1) == 0 )
+  if ( (byte_4AB5F47 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A70064 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4AB5F47 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_312C420 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
   this->fields.spotIds = 0LL;
   p_spotIds = &this->fields.spotIds;
   *(p_spotIds - 3) = 0LL;
   *(p_spotIds - 2) = 0LL;
   *((_DWORD *)p_spotIds - 2) = 0;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_spotIds, 0, v4, v5);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_spotIds, 0, v4, v5);
   *(struct System_Int32_array **)((char *)p_spotIds + 20) = 0LL;
   *(struct System_Int32_array **)((char *)p_spotIds + 12) = 0LL;
   *((_DWORD *)p_spotIds + 2) = 1;
@@ -41,15 +41,15 @@ void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *me
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventUiEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4A70066 & 1) == 0 )
+  if ( (byte_4AB5F49 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4A70066 = 1;
+    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4AB5F49 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2E8C440 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -59,10 +59,10 @@ System_String_o *__fastcall EventUiEntity__CreatePrimaryKey(EventUiEntity_o *thi
   int32_t priority; // w19
   int32_t id; // w20
 
-  if ( (byte_4A70065 & 1) == 0 )
+  if ( (byte_4AB5F48 & 1) == 0 )
   {
-    sub_1B90010(&EventUiEntity_TypeInfo, method);
-    byte_4A70065 = 1;
+    sub_1BAB41C(&EventUiEntity_TypeInfo, method);
+    byte_4AB5F48 = 1;
   }
   id = this->fields.id;
   priority = this->fields.priority;

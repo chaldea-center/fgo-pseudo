@@ -31,21 +31,21 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
   UnityEngine_Object_o *sharedMaterial; // x21
   UnityEngine_Material_o *v12; // x22
 
-  if ( (byte_4A6ED58 & 1) == 0 )
+  if ( (byte_4AB4C15 & 1) == 0 )
   {
-    sub_1B90010(&UnityEngine_Application_TypeInfo, method);
-    sub_1B90010(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v3);
-    sub_1B90010(&UnityEngine_Material_TypeInfo, v4);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B90010(&StringLiteral_16287/*"_MainTex"*/, v6);
-    byte_4A6ED58 = 1;
+    sub_1BAB41C(&UnityEngine_Application_TypeInfo, method);
+    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v3);
+    sub_1BAB41C(&UnityEngine_Material_TypeInfo, v4);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BAB41C(&StringLiteral_16293/*"_MainTex"*/, v6);
+    byte_4AB4C15 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_21;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2EDD768 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -64,7 +64,7 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
       if ( gameObject )
       {
 LABEL_12:
-        UnityEngine_Material__SetTextureOffset(v10, (System_String_o *)StringLiteral_16287/*"_MainTex"*/, this->fields.m_Offset, 0LL);
+        UnityEngine_Material__SetTextureOffset(v10, (System_String_o *)StringLiteral_16293/*"_MainTex"*/, this->fields.m_Offset, 0LL);
         if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
         if ( !UnityEngine_Application__get_isPlaying(0LL) )
@@ -72,7 +72,7 @@ LABEL_12:
         return;
       }
 LABEL_21:
-      sub_1B9026C(gameObject, v8);
+      sub_1BAB678(gameObject, v8);
     }
     sharedMaterial = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial(
                                                (UnityEngine_Renderer_o *)Component_object,
@@ -82,8 +82,8 @@ LABEL_21:
     if ( !UnityEngine_Object__op_Equality(sharedMaterial, 0LL, 0LL) )
     {
       v12 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)Component_object, 0LL);
-      v10 = (UnityEngine_Material_o *)sub_1B9025C(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_69402800(v10, v12, 0LL);
+      v10 = (UnityEngine_Material_o *)sub_1BAB668(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_69663980(v10, v12, 0LL);
       if ( v10 )
         goto LABEL_12;
       goto LABEL_21;

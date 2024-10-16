@@ -1,14 +1,14 @@
 void __fastcall ServantFlagReleaseMaster___ctor(ServantFlagReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A70596 & 1) == 0 )
+  if ( (byte_4AB6489 & 1) == 0 )
   {
-    sub_1B90010(&Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string___ctor__, method);
-    byte_4A70596 = 1;
+    sub_1BAB41C(&Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string___ctor__, method);
+    byte_4AB6489 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     225,
-    (const MethodInfo_312C8C0 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string___ctor__);
+    (const MethodInfo_31640A8 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ ServantFlagReleaseEntity_o *__fastcall ServantFlagReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A70594 & 1) == 0 )
+  if ( (byte_4AB6487 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4A70594 = 1;
+    byte_4AB6487 = 1;
   }
   PK = (Il2CppObject *)ServantFlagReleaseEntity__CreatePK(svtId, flagId, idx, *(const MethodInfo **)&idx);
   return (ServantFlagReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_312C900 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__GetEntity__);
+                                         (const MethodInfo_31640E8 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__GetEntity__);
 }
 
 
@@ -48,19 +48,19 @@ bool __fastcall ServantFlagReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A70595 & 1) == 0 )
+  if ( (byte_4AB6488 & 1) == 0 )
   {
-    sub_1B90010(
+    sub_1BAB41C(
       &Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_4A70595 = 1;
+    byte_4AB6488 = 1;
   }
   PK = (Il2CppObject *)ServantFlagReleaseEntity__CreatePK(svtId, flagId, idx, *(const MethodInfo **)&flagId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_312C950 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_3164138 *)Method_DataMasterBase_ServantFlagReleaseMaster__ServantFlagReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -80,20 +80,20 @@ bool __fastcall ServantFlagReleaseMaster__checkTresureDeviceEffectFlag(
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = flagId;
-  if ( (byte_4A70598 & 1) == 0 )
+  if ( (byte_4AB648B & 1) == 0 )
   {
-    sub_1B90010(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, *(_QWORD *)&svtId);
-    sub_1B90010(&NetworkManager_TypeInfo, v6);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4A70598 = 1;
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, *(_QWORD *)&svtId);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v6);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4AB648B = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
@@ -109,7 +109,7 @@ bool __fastcall ServantFlagReleaseMaster__checkTresureDeviceEffectFlag(
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_12:
-    sub_1B9026C(Instance, v9);
+    sub_1BAB678(Instance, v9);
   return UserServantCollectionEntity__HasFlag(entity, 1 << v4, 0LL);
 }
 
@@ -123,12 +123,12 @@ bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice(
   ServantFlagEntity_o *svtFlagEntity; // [xsp+8h] [xbp-8h] BYREF
 
   svtFlagEntity = 0LL;
-  return ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(this, svtId, &svtFlagEntity, v3);
+  return ServantFlagReleaseMaster__isSecretTreasureDevice_40065008(this, svtId, &svtFlagEntity, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(
+bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_40065008(
         ServantFlagReleaseMaster_o *this,
         int32_t svtId,
         ServantFlagEntity_o **svtFlagEntity,
@@ -206,64 +206,64 @@ bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(
   System_Collections_Generic_List_Enumerator_object__o v77; // [xsp+30h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v78; // [xsp+50h] [xbp-80h] BYREF
 
-  if ( (byte_4A70597 & 1) == 0 )
+  if ( (byte_4AB648A & 1) == 0 )
   {
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&svtId);
-    sub_1B90010(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1B90010(&CondType_TypeInfo, v8);
-    sub_1B90010(&Method_DataManager_GetMasterData_ServantFlagMaster___, v9);
-    sub_1B90010(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v10);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___ContainsKey__, v11);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity____ctor__, v12);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Count__, v13);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__, v14);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Keys__, v15);
-    sub_1B90010(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___set_Item__, v16);
-    sub_1B90010(&System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___TypeInfo, v17);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v18);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__Dispose__, v19);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v20);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__MoveNext__, v21);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__get_Current__, v22);
-    sub_1B90010(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v23);
-    sub_1B90010(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity__Add__, v24);
-    sub_1B90010(&Method_System_Collections_Generic_List_int__GetEnumerator__, v25);
-    sub_1B90010(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity__GetEnumerator__, v26);
-    sub_1B90010(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity___ctor__, v27);
-    sub_1B90010(&Method_System_Collections_Generic_List_int___ctor___76120648, v28);
-    sub_1B90010(&System_Collections_Generic_List_int__TypeInfo, v29);
-    sub_1B90010(&System_Collections_Generic_List_ServantFlagReleaseEntity__TypeInfo, v30);
-    sub_1B90010(&NetworkManager_TypeInfo, v31);
-    sub_1B90010(&ServantFlagReleaseEntity_TypeInfo, v32);
-    sub_1B90010(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v33);
-    byte_4A70597 = 1;
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&svtId);
+    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_1BAB41C(&CondType_TypeInfo, v8);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_ServantFlagMaster___, v9);
+    sub_1BAB41C(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v10);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___ContainsKey__, v11);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity____ctor__, v12);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Count__, v13);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__, v14);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Keys__, v15);
+    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___set_Item__, v16);
+    sub_1BAB41C(&System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___TypeInfo, v17);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v18);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__Dispose__, v19);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v20);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__MoveNext__, v21);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__get_Current__, v22);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v23);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity__Add__, v24);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int__GetEnumerator__, v25);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity__GetEnumerator__, v26);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantFlagReleaseEntity___ctor__, v27);
+    sub_1BAB41C(&Method_System_Collections_Generic_List_int___ctor___76401816, v28);
+    sub_1BAB41C(&System_Collections_Generic_List_int__TypeInfo, v29);
+    sub_1BAB41C(&System_Collections_Generic_List_ServantFlagReleaseEntity__TypeInfo, v30);
+    sub_1BAB41C(&NetworkManager_TypeInfo, v31);
+    sub_1BAB41C(&ServantFlagReleaseEntity_TypeInfo, v32);
+    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v33);
+    byte_4AB648A = 1;
   }
   memset(&v78, 0, sizeof(v78));
   memset(&v77, 0, sizeof(v77));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_50;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_ServantFlagMaster___);
+               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ServantFlagMaster___);
   if ( !Instance )
     goto LABEL_50;
   Entity = ServantFlagMaster__getEntity((ServantFlagMaster_o *)Instance, svtId, 1, v36);
   *svtFlagEntity = 0LL;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)svtFlagEntity, 0, v38, v39);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)svtFlagEntity, 0, v38, v39);
   if ( !Entity )
     return 0;
   svtIda = svtId;
-  v40 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B9025C(System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___TypeInfo);
+  v40 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v40,
-    (const MethodInfo_317BBF8 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity____ctor__);
+    (const MethodInfo_31B6460 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity____ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_50;
   if ( System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
+         (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
   {
     v42 = 0;
     while ( 1 )
@@ -271,7 +271,7 @@ bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    list,
                    v42,
-                   (const MethodInfo_30C9284 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !Instance )
         break;
       v43 = Instance;
@@ -288,23 +288,23 @@ bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(
         if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
                 v40,
                 HIDWORD(Instance[1].monitor),
-                (const MethodInfo_317C7C0 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___ContainsKey__) )
+                (const MethodInfo_31B7028 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___ContainsKey__) )
         {
           monitor_high = HIDWORD(v43[1].monitor);
-          v46 = (System_Collections_Generic_List_object__o *)sub_1B9025C(System_Collections_Generic_List_ServantFlagReleaseEntity__TypeInfo);
+          v46 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ServantFlagReleaseEntity__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v46,
-            (const MethodInfo_351018C *)Method_System_Collections_Generic_List_ServantFlagReleaseEntity___ctor__);
+            (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ServantFlagReleaseEntity___ctor__);
           System_Collections_Generic_Dictionary_int__object___set_Item(
             v40,
             monitor_high,
             (Il2CppObject *)v46,
-            (const MethodInfo_317C5B8 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___set_Item__);
+            (const MethodInfo_31B6E20 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___set_Item__);
         }
         Instance = System_Collections_Generic_Dictionary_int__object___get_Item(
                      v40,
                      HIDWORD(v43[1].monitor),
-                     (const MethodInfo_317C52C *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__);
+                     (const MethodInfo_31B6D94 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__);
         if ( !Instance )
           break;
         klass = Instance[1].klass;
@@ -318,53 +318,53 @@ bool __fastcall ServantFlagReleaseMaster__isSecretTreasureDevice_39727488(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Instance,
             v43,
-            *(const MethodInfo_35109C0 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
+            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
         }
         else
         {
           v52 = &klass->_1.image + monitor_low;
           LODWORD(Instance[1].monitor) = monitor_low + 1;
           v52[4] = v43;
-          sub_1B8FFB4((ServantStatusBattleListViewItem_o *)(v52 + 4), (int32_t)v43, v47, v48);
+          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v52 + 4), (int32_t)v43, v47, v48);
         }
       }
       if ( ++v42 >= System_Collections_ObjectModel_Collection_object___get_Count(
                       list,
-                      (const MethodInfo_30C91F4 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                      (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
         goto LABEL_23;
     }
 LABEL_50:
-    sub_1B9026C(Instance, v35);
+    sub_1BAB678(Instance, v35);
   }
 LABEL_23:
   if ( !v40
     || System_Collections_Generic_Dictionary_int__object___get_Count(
          v40,
-         (const MethodInfo_317C27C *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Count__) < 1 )
+         (const MethodInfo_31B6AE4 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Count__) < 1 )
   {
     return 0;
   }
   Keys = System_Collections_Generic_Dictionary_int__object___get_Keys(
            v40,
-           (const MethodInfo_317C28C *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Keys__);
-  v54 = (System_Collections_Generic_List_int__o *)sub_1B9025C(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_55521904(
+           (const MethodInfo_31B6AF4 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Keys__);
+  v54 = (System_Collections_Generic_List_int__o *)sub_1BAB668(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_55771500(
     v54,
     (System_Collections_Generic_IEnumerable_T__o *)Keys,
-    (const MethodInfo_34F3270 *)Method_System_Collections_Generic_List_int___ctor___76120648);
+    (const MethodInfo_353016C *)Method_System_Collections_Generic_List_int___ctor___76401816);
   if ( !v54 )
     goto LABEL_50;
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v76,
     v54,
-    (const MethodInfo_34F4470 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_353136C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v55 = 0;
   v78 = v76;
   do
   {
     if ( !System_Collections_Generic_List_Enumerator_int___MoveNext(
             (System_Collections_Generic_List_Enumerator_int__o *)&v78,
-            (const MethodInfo_3286084 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_32C0BAC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
       v65 = 0;
       v66 = 7;
@@ -373,24 +373,24 @@ LABEL_23:
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
              v40,
              (int32_t)v78.fields._current,
-             (const MethodInfo_317C52C *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__);
+             (const MethodInfo_31B6D94 *)Method_System_Collections_Generic_Dictionary_int__List_ServantFlagReleaseEntity___get_Item__);
     if ( !Item )
-      sub_1B9026C(0LL, v57);
+      sub_1BAB678(0LL, v57);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v76,
       (System_Collections_Generic_List_object__o *)Item,
-      (const MethodInfo_35114B8 *)Method_System_Collections_Generic_List_ServantFlagReleaseEntity__GetEnumerator__);
+      (const MethodInfo_354E3B4 *)Method_System_Collections_Generic_List_ServantFlagReleaseEntity__GetEnumerator__);
     v58 = v55;
     v77 = v76;
     while ( 1 )
     {
       v59 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v77,
-              (const MethodInfo_328A150 *)Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__MoveNext__);
+              (const MethodInfo_32C4C78 *)Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__MoveNext__);
       if ( !v59 )
         break;
       if ( !v77.fields._current )
-        sub_1B9026C(v59, v60);
+        sub_1BAB678(v59, v60);
       v62 = (int32_t)v77.fields._current[2].klass;
       klass_high = HIDWORD(v77.fields._current[2].klass);
       v63 = SLODWORD(v77.fields._current[2].monitor);
@@ -400,28 +400,28 @@ LABEL_23:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v77,
-      (const MethodInfo_328A14C *)Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__Dispose__);
+      (const MethodInfo_32C4C74 *)Method_System_Collections_Generic_List_Enumerator_ServantFlagReleaseEntity__Dispose__);
     v55 = 1;
   }
   while ( (v58 & 1) != 0 );
-  v67 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_374C890 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v67 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !v67 )
-    sub_1B9026C(0LL, v68);
+    sub_1BAB678(0LL, v68);
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)v67,
-                        (const MethodInfo_2E8E21C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   UserId = NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
-    sub_1B9026C(UserId, UserId);
+    sub_1BAB678(UserId, UserId);
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(
                        (UserServantCollectionMaster_o *)MasterData_object,
                        UserId,
                        svtIda,
                        0LL);
   if ( !EntityDefinitely )
-    sub_1B9026C(0LL, v72);
+    sub_1BAB678(0LL, v72);
   if ( UserServantCollectionEntity__HasFlag(EntityDefinitely, 1 << Entity->fields.flagId, 0LL) )
   {
     v65 = 0;
@@ -429,13 +429,13 @@ LABEL_23:
   else
   {
     *svtFlagEntity = Entity;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)svtFlagEntity, (int32_t)Entity, v73, v74);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)svtFlagEntity, (int32_t)Entity, v73, v74);
     v65 = 1;
   }
   v66 = 14;
 LABEL_49:
   System_Collections_Generic_List_Enumerator_int___Dispose(
     (System_Collections_Generic_List_Enumerator_int__o *)&v78,
-    (const MethodInfo_3286080 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_32C0BA8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   return v65 & (v66 == 14);
 }

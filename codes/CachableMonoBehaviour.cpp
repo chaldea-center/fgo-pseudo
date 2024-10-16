@@ -14,11 +14,11 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6CC01 & 1) == 0 )
+  if ( (byte_4AB2A4C & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A6CC01 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AB2A4C = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -27,9 +27,9 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v6, v7);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRenderer;
 }
@@ -45,11 +45,11 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6CC02 & 1) == 0 )
+  if ( (byte_4AB2A4D & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A6CC02 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AB2A4D = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,9 +58,9 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v6, v7);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRigidbody;
 }
@@ -76,11 +76,11 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   int32_t v6; // w2
   int32_t v7; // w3
 
-  if ( (byte_4A6CC03 & 1) == 0 )
+  if ( (byte_4AB2A4E & 1) == 0 )
   {
-    sub_1B90010(&Method_UnityEngine_Component_GetComponent_Transform___, method);
-    sub_1B90010(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A6CC03 = 1;
+    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Transform___, method);
+    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AB2A4E = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -89,9 +89,9 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2E84CC0 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.mTransform, (int32_t)Component_object, v6, v7);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.mTransform, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mTransform;
 }

@@ -16,10 +16,10 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A72E34 & 1) == 0 )
+  if ( (byte_4AB8D5A & 1) == 0 )
   {
-    sub_1B90010(&BattlePlayAnimationComponent_SaveData_TypeInfo, method);
-    byte_4A72E34 = 1;
+    sub_1BAB41C(&BattlePlayAnimationComponent_SaveData_TypeInfo, method);
+    byte_4AB8D5A = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
@@ -30,12 +30,12 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   if ( !v5 )
     return 0LL;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)v5;
-  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_1B9025C(BattlePlayAnimationComponent_SaveData_TypeInfo);
+  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_1BAB668(BattlePlayAnimationComponent_SaveData_TypeInfo);
   BattlePlayAnimationComponent_SaveData___ctor(v7, v8);
   WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
   if ( !v7 )
 LABEL_9:
-    sub_1B9026C(WrapAnimation, v4);
+    sub_1BAB678(WrapAnimation, v4);
   BattlePlayAnimationComponent_SaveData__Init(v7, WrapAnimation, v6, v9);
   return v7;
 }
@@ -70,7 +70,7 @@ void __fastcall BattlePlayAnimationComponent__PlayAnimation(
   v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_1B9026C(0LL, v7);
+    sub_1BAB678(0LL, v7);
   ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, Il2CppMethodPointer, long double))WrapAnimation->klass->vtable._4_PlayAnimation.method)(
     WrapAnimation,
     animName,
@@ -111,7 +111,7 @@ WrapBattleBaseAnimation_o *__fastcall BattlePlayAnimationComponent__get_WrapAnim
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0LL);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_1B8FFB4((ServantStatusBattleListViewItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
+    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
   }
   return wrapAnimation;
 }
@@ -128,17 +128,17 @@ void __fastcall BattlePlayAnimationComponent_SaveData___ctor(
   int32_t v7; // w2
   int32_t v8; // w3
 
-  if ( (byte_4A72E35 & 1) == 0 )
+  if ( (byte_4AB8D5B & 1) == 0 )
   {
-    sub_1B90010(&StringLiteral_1/*""*/, method);
-    byte_4A72E35 = 1;
+    sub_1BAB41C(&StringLiteral_1/*""*/, method);
+    byte_4AB8D5B = 1;
   }
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, v5, v2, v3);
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.animName, v6, v7, v8);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.animName, v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -157,12 +157,12 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)objName, (int32_t)data, (int32_t)method);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)objName, (int32_t)data, (int32_t)method);
   if ( !data )
-    sub_1B9026C(v6, v7);
+    sub_1BAB678(v6, v7);
   animName = data->fields.animName;
   this->fields.animName = animName;
-  sub_1B8FFB4((ServantStatusBattleListViewItem_o *)&this->fields.animName, (int32_t)animName, v8, v9);
+  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.animName, (int32_t)animName, v8, v9);
   result = this;
   this->fields.timeline = data->fields.timeline;
   return result;
