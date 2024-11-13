@@ -8,13 +8,14 @@ EventMissionItemListViewItem_o *__fastcall EventMissionItemListViewObject__GetIt
         EventMissionItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4AB9C30 & 1) == 0 )
+  if ( (byte_4B1A1E1 & 1) == 0 )
   {
-    sub_1BAB41C(&EventMissionItemListViewItem_TypeInfo, method);
-    byte_4AB9C30 = 1;
+    sub_1BCA7E0(&EventMissionItemListViewItem_TypeInfo, method, v2);
+    byte_4B1A1E1 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -41,7 +42,7 @@ void __fastcall EventMissionItemListViewObject__ModifyBoardImage(
   EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
   Item = EventMissionItemListViewObject__GetItem(this, v4);
   if ( !Item || !EventMissionItemDraw )
-    sub_1BAB678(Item, v6);
+    sub_1BCAA3C(Item, v6);
   EventMissionItemListViewItemDraw__ModifyBoardImage(EventMissionItemDraw, Item->fields.bannerGroupId, v7);
 }
 
@@ -50,18 +51,19 @@ void __fastcall EventMissionItemListViewObject__OnChangeAlphaAnim(
         EventMissionItemListViewObject_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
+  __int64 v2; // x2
+  const MethodInfo *v4; // x1
   struct ListViewManager_o *manager; // x8
   __int64 methodPtr_low; // x11
-  struct ListViewManager_o *v6; // x20
+  struct ListViewManager_o *v7; // x20
   EventMissionItemListViewItemDraw_o *EventMissionItemDraw; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4AB9C31 & 1) == 0 )
+  if ( (byte_4B1A1E2 & 1) == 0 )
   {
-    sub_1BAB41C(&EventMissionItemListViewManager_TypeInfo, method);
-    byte_4AB9C31 = 1;
+    sub_1BCA7E0(&EventMissionItemListViewManager_TypeInfo, method, v2);
+    byte_4B1A1E2 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -72,21 +74,21 @@ void __fastcall EventMissionItemListViewObject__OnChangeAlphaAnim(
           LOBYTE(manager->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
       if ( (EventMissionItemListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] == EventMissionItemListViewManager_TypeInfo )
-        v6 = this->fields.manager;
+        v7 = this->fields.manager;
       else
-        v6 = 0LL;
+        v7 = 0LL;
     }
     else
     {
-      v6 = 0LL;
+      v7 = 0LL;
     }
-    EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, v3);
+    EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, v4);
     if ( !EventMissionItemDraw )
-      sub_1BAB678(0LL, v8);
+      sub_1BCAA3C(0LL, v9);
     EventMissionItemListViewItemDraw__ChangeNextRewardIcon(
       EventMissionItemDraw,
-      (EventMissionItemListViewManager_o *)v6,
-      v9);
+      (EventMissionItemListViewManager_o *)v7,
+      v10);
   }
 }
 
@@ -95,18 +97,19 @@ void __fastcall EventMissionItemListViewObject__Update(
         EventMissionItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
-  EventMissionItemListViewItem_c *v5; // x10
-  EventMissionItemListViewItem_o *v6; // x20
+  EventMissionItemListViewItem_c *v6; // x10
+  EventMissionItemListViewItem_o *v7; // x20
   EventMissionItemListViewItemDraw_o *EventMissionItemDraw; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4AB9C2F & 1) == 0 )
+  if ( (byte_4B1A1E0 & 1) == 0 )
   {
-    sub_1BAB41C(&EventMissionItemListViewItem_TypeInfo, method);
-    byte_4AB9C2F = 1;
+    sub_1BCA7E0(&EventMissionItemListViewItem_TypeInfo, method, v2);
+    byte_4B1A1E0 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -114,14 +117,14 @@ void __fastcall EventMissionItemListViewObject__Update(
     methodPtr_low = LOBYTE(EventMissionItemListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low )
     {
-      v5 = (EventMissionItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1];
-      v6 = v5 == EventMissionItemListViewItem_TypeInfo ? (EventMissionItemListViewItem_o *)this->fields.linkItem : 0LL;
-      if ( v5 == EventMissionItemListViewItem_TypeInfo )
+      v6 = (EventMissionItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1];
+      v7 = v6 == EventMissionItemListViewItem_TypeInfo ? (EventMissionItemListViewItem_o *)this->fields.linkItem : 0LL;
+      if ( v6 == EventMissionItemListViewItem_TypeInfo )
       {
         EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
         if ( !EventMissionItemDraw )
-          sub_1BAB678(0LL, v8);
-        EventMissionItemListViewItemDraw__UpdateItem(EventMissionItemDraw, v6, this->fields.dispMode, v9);
+          sub_1BCAA3C(0LL, v9);
+        EventMissionItemListViewItemDraw__UpdateItem(EventMissionItemDraw, v7, this->fields.dispMode, v10);
       }
     }
   }
@@ -132,13 +135,14 @@ EventMissionItemListViewItemDraw_o *__fastcall EventMissionItemListViewObject__g
         EventMissionItemListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4AB9C2E & 1) == 0 )
+  if ( (byte_4B1A1DF & 1) == 0 )
   {
-    sub_1BAB41C(&EventMissionItemListViewItemDraw_TypeInfo, method);
-    byte_4AB9C2E = 1;
+    sub_1BCA7E0(&EventMissionItemListViewItemDraw_TypeInfo, method, v2);
+    byte_4B1A1DF = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

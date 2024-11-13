@@ -2,13 +2,15 @@ void __fastcall RecommendSupportCancelConfirmDialog___ctor(
         RecommendSupportCancelConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB1E10 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B12321 & 1) == 0 )
   {
-    sub_1BAB41C(&BaseDialog_TypeInfo, method);
-    byte_4AB1E10 = 1;
+    sub_1BCA7E0(&BaseDialog_TypeInfo, method, v2);
+    byte_4B12321 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
 
@@ -27,25 +29,37 @@ void __fastcall RecommendSupportCancelConfirmDialog__Close(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  __int64 v6; // x1
-  System_Action_o *v7; // x20
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
+  System_Action_o *v15; // x20
 
-  if ( (byte_4AB1E0D & 1) == 0 )
+  if ( (byte_4B1231E & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, callback);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog_EndClose__, v6);
-    byte_4AB1E0D = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, callback, method);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog_EndClose__, v10, v11);
+    byte_4B1231E = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc,
-    (int32_t)callback,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
+    (int64_t)callback,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.state = 4;
-  v7 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_RecommendSupportCancelConfirmDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v15 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v12, v13, v14);
+  System_Action___ctor(v15, (Il2CppObject *)this, Method_RecommendSupportCancelConfirmDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
 }
 
 
@@ -53,23 +67,27 @@ void __fastcall RecommendSupportCancelConfirmDialog__EndClose(
         RecommendSupportCancelConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  int32_t v3; // w2
+  int64_t v3; // x2
   int32_t v4; // w3
-  ServantStatusBattleListViewItem_o *p_closeCallbackFunc; // x19
-  struct System_Action_o *v6; // x20
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
+  PartyOrganizationUtility_o *p_closeCallbackFunc; // x19
+  struct System_Action_o *v10; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   RecommendSupportCancelConfirmDialog__Init(this, method);
   closeCallbackFunc = this->fields.closeCallbackFunc;
-  p_closeCallbackFunc = (ServantStatusBattleListViewItem_o *)&this->fields.closeCallbackFunc;
-  v6 = closeCallbackFunc;
+  p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
+  v10 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1BAB3C0(p_closeCallbackFunc, 0, v3, v4);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
-      v6->fields.original_method_info,
-      *(_QWORD *)&v6->fields.extra_arg);
+    sub_1BCA784(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
+      v10->fields.original_method_info,
+      *(_QWORD *)&v10->fields.extra_arg);
   }
 }
 
@@ -78,12 +96,13 @@ void __fastcall RecommendSupportCancelConfirmDialog__Init(
         RecommendSupportCancelConfirmDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4AB1E0B & 1) == 0 )
+  if ( (byte_4B1231C & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, method);
-    byte_4AB1E0B = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
+    byte_4B1231C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -103,7 +122,7 @@ void __fastcall RecommendSupportCancelConfirmDialog__Init(
         (titleLabel = this->fields.cancelLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1BAB678(titleLabel, method);
+    sub_1BCAA3C(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -115,59 +134,77 @@ void __fastcall RecommendSupportCancelConfirmDialog__OnClickCancel(
         RecommendSupportCancelConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x2
-  RecommendSupportCancelConfirmDialog___c_c *v10; // x0
+  __int64 v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  const MethodInfo *v12; // x2
+  __int64 v13; // x1
+  const MethodInfo *v14; // x2
+  __int64 v15; // x3
+  RecommendSupportCancelConfirmDialog___c_c *v16; // x0
   System_Action_o *_9__23_0; // x20
-  Il2CppObject *v12; // x21
+  Il2CppObject *v18; // x21
   struct RecommendSupportCancelConfirmDialog___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4AB1E0F & 1) == 0 )
+  if ( (byte_4B12320 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, method);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog_OnClickCancel__, v3);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog___c__OnClickCancel_b__23_0__, v4);
-    sub_1BAB41C(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v5);
-    byte_4AB1E0F = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog_OnClickCancel__, v4, v5);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog___c__OnClickCancel_b__23_0__, v6, v7);
+    sub_1BCA7E0(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v8, v9);
+    byte_4B12320 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v6 = Method_RecommendSupportCancelConfirmDialog_OnClickCancel__;
+    v10 = Method_RecommendSupportCancelConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_RecommendSupportCancelConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1BAB434(Method_RecommendSupportCancelConfirmDialog_OnClickCancel__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1BAB400(v6, v6[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0LL);
-    RecommendSupportCancelConfirmDialog__ResultCallback(this, 0, v8);
-    v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+      v10 = (_QWORD *)sub_1BCA7F8(Method_RecommendSupportCancelConfirmDialog_OnClickCancel__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 1, 0LL);
+    RecommendSupportCancelConfirmDialog__ResultCallback(this, 0, v12);
+    v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
     if ( !RecommendSupportCancelConfirmDialog___c_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(RecommendSupportCancelConfirmDialog___c_TypeInfo);
-      v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(RecommendSupportCancelConfirmDialog___c_TypeInfo, v13);
+      v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
     }
-    _9__23_0 = v10->static_fields->__9__23_0;
+    _9__23_0 = v16->static_fields->__9__23_0;
     if ( !_9__23_0 )
     {
-      if ( !v10->_2.cctor_finished )
+      if ( !v16->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v10);
-        v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v16, v13);
+        v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
       }
-      v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__23_0 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
-      System_Action___ctor(_9__23_0, v12, Method_RecommendSupportCancelConfirmDialog___c__OnClickCancel_b__23_0__, 0LL);
+      v18 = (Il2CppObject *)v16->static_fields->__9;
+      _9__23_0 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v13, v14, v15);
+      System_Action___ctor(_9__23_0, v18, Method_RecommendSupportCancelConfirmDialog___c__OnClickCancel_b__23_0__, 0LL);
       static_fields = RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields;
       static_fields->__9__23_0 = _9__23_0;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__23_0, (int32_t)_9__23_0, v14, v15);
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&static_fields->__9__23_0,
+        (int64_t)_9__23_0,
+        v20,
+        v21,
+        v22,
+        v23,
+        v24,
+        v25);
     }
-    RecommendSupportCancelConfirmDialog__Close(this, _9__23_0, v9);
+    RecommendSupportCancelConfirmDialog__Close(this, _9__23_0, v14);
   }
 }
 
@@ -176,59 +213,77 @@ void __fastcall RecommendSupportCancelConfirmDialog__OnClickDecide(
         RecommendSupportCancelConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x2
-  RecommendSupportCancelConfirmDialog___c_c *v10; // x0
+  __int64 v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  const MethodInfo *v12; // x2
+  __int64 v13; // x1
+  const MethodInfo *v14; // x2
+  __int64 v15; // x3
+  RecommendSupportCancelConfirmDialog___c_c *v16; // x0
   System_Action_o *_9__22_0; // x20
-  Il2CppObject *v12; // x21
+  Il2CppObject *v18; // x21
   struct RecommendSupportCancelConfirmDialog___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4AB1E0E & 1) == 0 )
+  if ( (byte_4B1231F & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, method);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog_OnClickDecide__, v3);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog___c__OnClickDecide_b__22_0__, v4);
-    sub_1BAB41C(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v5);
-    byte_4AB1E0E = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog_OnClickDecide__, v4, v5);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog___c__OnClickDecide_b__22_0__, v6, v7);
+    sub_1BCA7E0(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v8, v9);
+    byte_4B1231F = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v6 = Method_RecommendSupportCancelConfirmDialog_OnClickDecide__;
+    v10 = Method_RecommendSupportCancelConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_RecommendSupportCancelConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1BAB434(Method_RecommendSupportCancelConfirmDialog_OnClickDecide__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1BAB400(v6, v6[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0LL);
-    RecommendSupportCancelConfirmDialog__ResultCallback(this, 1, v8);
-    v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+      v10 = (_QWORD *)sub_1BCA7F8(Method_RecommendSupportCancelConfirmDialog_OnClickDecide__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 8, 0LL);
+    RecommendSupportCancelConfirmDialog__ResultCallback(this, 1, v12);
+    v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
     if ( !RecommendSupportCancelConfirmDialog___c_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(RecommendSupportCancelConfirmDialog___c_TypeInfo);
-      v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(RecommendSupportCancelConfirmDialog___c_TypeInfo, v13);
+      v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
     }
-    _9__22_0 = v10->static_fields->__9__22_0;
+    _9__22_0 = v16->static_fields->__9__22_0;
     if ( !_9__22_0 )
     {
-      if ( !v10->_2.cctor_finished )
+      if ( !v16->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v10);
-        v10 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v16, v13);
+        v16 = RecommendSupportCancelConfirmDialog___c_TypeInfo;
       }
-      v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__22_0 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
-      System_Action___ctor(_9__22_0, v12, Method_RecommendSupportCancelConfirmDialog___c__OnClickDecide_b__22_0__, 0LL);
+      v18 = (Il2CppObject *)v16->static_fields->__9;
+      _9__22_0 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v13, v14, v15);
+      System_Action___ctor(_9__22_0, v18, Method_RecommendSupportCancelConfirmDialog___c__OnClickDecide_b__22_0__, 0LL);
       static_fields = RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields;
       static_fields->__9__22_0 = _9__22_0;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__22_0, (int32_t)_9__22_0, v14, v15);
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&static_fields->__9__22_0,
+        (int64_t)_9__22_0,
+        v20,
+        v21,
+        v22,
+        v23,
+        v24,
+        v25);
     }
-    RecommendSupportCancelConfirmDialog__Close(this, _9__22_0, v9);
+    RecommendSupportCancelConfirmDialog__Close(this, _9__22_0, v14);
   }
 }
 
@@ -239,49 +294,66 @@ void __fastcall RecommendSupportCancelConfirmDialog__Open(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v14; // x2
   __int64 v15; // x1
-  const MethodInfo *v16; // x2
-  int32_t v17; // w2
-  int32_t v18; // w3
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
+  __int64 v21; // x1
+  __int64 v22; // x2
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v24; // x1
+  const MethodInfo *v25; // x2
+  int64_t v26; // x2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  BattleSetupInfo_o *v29; // x5
+  FollowerInfo_o *v30; // x6
+  PartyListViewItem_o *v31; // x7
   RecommendSupportListViewItemDraw_o *currentSupportMemberObject; // x20
-  __int64 v20; // x8
-  __int64 v21; // x21
+  __int64 v33; // x8
+  __int64 v34; // x21
   __int64 klass_low; // x8
   RecommendSupportListViewItemDraw_o *oldSupportMemberObject; // x20
-  __int64 v24; // x8
-  __int64 v25; // x21
-  __int64 v26; // x8
+  __int64 v37; // x8
+  __int64 v38; // x21
+  __int64 v39; // x8
+  __int64 v40; // x1
   UILabel_o *currentSupportMemberTitleLabel; // x20
   UILabel_o *oldSupportMemberTitleLabel; // x20
   UILabel_o *titleLabel; // x20
   UILabel_o *messageLabel; // x20
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  UnityEngine_GameObject_o *v33; // x0
-  System_Action_o *v34; // x20
+  UnityEngine_GameObject_o *v47; // x0
+  __int64 v48; // x1
+  __int64 v49; // x2
+  __int64 v50; // x3
+  System_Action_o *v51; // x20
 
-  if ( (byte_4AB1E0C & 1) == 0 )
+  if ( (byte_4B1231D & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, callback);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v5);
-    sub_1BAB41C(&Method_RecommendSupportCancelConfirmDialog__Open_b__18_0__, v6);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v7);
-    sub_1BAB41C(&StringLiteral_11046/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_OLD_STATE"*/, v8);
-    sub_1BAB41C(&StringLiteral_11045/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_MESSAGE"*/, v9);
-    sub_1BAB41C(&StringLiteral_11043/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CURRENT_STATE"*/, v10);
-    sub_1BAB41C(&StringLiteral_11042/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CANCEL"*/, v11);
-    sub_1BAB41C(&StringLiteral_11047/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_TITLE"*/, v12);
-    sub_1BAB41C(&StringLiteral_11044/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_DECIDE"*/, v13);
-    byte_4AB1E0C = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, callback, method);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_RecommendSupportCancelConfirmDialog__Open_b__18_0__, v7, v8);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v9, v10);
+    sub_1BCA7E0(&StringLiteral_11174/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_OLD_STATE"*/, v11, v12);
+    sub_1BCA7E0(&StringLiteral_11173/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_MESSAGE"*/, v13, v14);
+    sub_1BCA7E0(&StringLiteral_11171/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CURRENT_STATE"*/, v15, v16);
+    sub_1BCA7E0(&StringLiteral_11170/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CANCEL"*/, v17, v18);
+    sub_1BCA7E0(&StringLiteral_11175/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_TITLE"*/, v19, v20);
+    sub_1BCA7E0(&StringLiteral_11172/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_DECIDE"*/, v21, v22);
+    byte_4B1231D = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
@@ -289,51 +361,59 @@ void __fastcall RecommendSupportCancelConfirmDialog__Open(
     if ( gameObject )
     {
       UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-      RecommendSupportCancelConfirmDialog__SetActiveInfo(this, 1, v16);
+      RecommendSupportCancelConfirmDialog__SetActiveInfo(this, 1, v25);
       this->fields.resultCallback = callback;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.resultCallback, (int32_t)callback, v17, v18);
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&this->fields.resultCallback,
+        (int64_t)callback,
+        v26,
+        v27,
+        v28,
+        v29,
+        v30,
+        v31);
       currentSupportMemberObject = this->fields.currentSupportMemberObject;
-      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
       if ( gameObject )
       {
-        v20 = *(_QWORD *)&gameObject[4].fields.m_CachedPtr;
-        if ( v20 )
+        v33 = *(_QWORD *)&gameObject[4].fields.m_CachedPtr;
+        if ( v33 )
         {
-          v21 = *(_QWORD *)(v20 + 16);
-          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+          v34 = *(_QWORD *)(v33 + 16);
+          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
           if ( gameObject )
           {
-            if ( v21 )
+            if ( v34 )
             {
               klass_low = SLODWORD(gameObject[5].klass);
-              if ( (unsigned int)klass_low >= *(_DWORD *)(v21 + 24) )
+              if ( (unsigned int)klass_low >= *(_DWORD *)(v34 + 24) )
                 goto LABEL_35;
               if ( !currentSupportMemberObject )
                 goto LABEL_34;
               RecommendSupportListViewItemDraw__SetConfirmItem(
                 currentSupportMemberObject,
-                *(RecommendSupportData_RecommendDeckData_o **)(v21 + 8 * klass_low + 32),
+                *(RecommendSupportData_RecommendDeckData_o **)(v34 + 8 * klass_low + 32),
                 0LL);
               oldSupportMemberObject = this->fields.oldSupportMemberObject;
-              gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+              gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
               if ( !gameObject )
                 goto LABEL_34;
-              v24 = *(_QWORD *)&gameObject[4].fields.m_CachedPtr;
-              if ( !v24 )
+              v37 = *(_QWORD *)&gameObject[4].fields.m_CachedPtr;
+              if ( !v37 )
                 goto LABEL_34;
-              v25 = *(_QWORD *)(v24 + 24);
-              gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-              if ( !gameObject || !v25 )
+              v38 = *(_QWORD *)(v37 + 24);
+              gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+              if ( !gameObject || !v38 )
                 goto LABEL_34;
-              v26 = SLODWORD(gameObject[5].klass);
-              if ( (unsigned int)v26 >= *(_DWORD *)(v25 + 24) )
+              v39 = SLODWORD(gameObject[5].klass);
+              if ( (unsigned int)v39 >= *(_DWORD *)(v38 + 24) )
 LABEL_35:
-                sub_1BAB680(gameObject, v15);
+                sub_1BCAA44(gameObject, v24);
               if ( oldSupportMemberObject )
               {
                 RecommendSupportListViewItemDraw__SetConfirmItem(
                   oldSupportMemberObject,
-                  *(RecommendSupportData_RecommendDeckData_o **)(v25 + 8 * v26 + 32),
+                  *(RecommendSupportData_RecommendDeckData_o **)(v38 + 8 * v39 + 32),
                   0LL);
                 gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton;
                 if ( gameObject )
@@ -367,44 +447,44 @@ LABEL_35:
                               gameObject->klass[1]._1.interfaceOffsets);
                             currentSupportMemberTitleLabel = this->fields.currentSupportMemberTitleLabel;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v40);
                             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                       (System_String_o *)StringLiteral_11043/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CURRENT_STATE"*/,
+                                                                       (System_String_o *)StringLiteral_11171/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CURRENT_STATE"*/,
                                                                        0LL);
                             if ( currentSupportMemberTitleLabel )
                             {
                               UILabel__set_text(currentSupportMemberTitleLabel, (System_String_o *)gameObject, 0LL);
                               oldSupportMemberTitleLabel = this->fields.oldSupportMemberTitleLabel;
                               gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                         (System_String_o *)StringLiteral_11046/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_OLD_STATE"*/,
+                                                                         (System_String_o *)StringLiteral_11174/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_OLD_STATE"*/,
                                                                          0LL);
                               if ( oldSupportMemberTitleLabel )
                               {
                                 UILabel__set_text(oldSupportMemberTitleLabel, (System_String_o *)gameObject, 0LL);
                                 titleLabel = this->fields.titleLabel;
                                 gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                           (System_String_o *)StringLiteral_11047/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_TITLE"*/,
+                                                                           (System_String_o *)StringLiteral_11175/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_TITLE"*/,
                                                                            0LL);
                                 if ( titleLabel )
                                 {
                                   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
                                   messageLabel = this->fields.messageLabel;
                                   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                             (System_String_o *)StringLiteral_11045/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_MESSAGE"*/,
+                                                                             (System_String_o *)StringLiteral_11173/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_MESSAGE"*/,
                                                                              0LL);
                                   if ( messageLabel )
                                   {
                                     UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
                                     decideLabel = this->fields.decideLabel;
                                     gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_11044/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_DECIDE"*/,
+                                                                               (System_String_o *)StringLiteral_11172/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_DECIDE"*/,
                                                                                0LL);
                                     if ( decideLabel )
                                     {
                                       UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
                                       cancelLabel = this->fields.cancelLabel;
                                       gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                 (System_String_o *)StringLiteral_11042/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CANCEL"*/,
+                                                                                 (System_String_o *)StringLiteral_11170/*"RECOMMEND_SUPPORT_SELECT_CANCEL_CONFIRM_CANCEL"*/,
                                                                                  0LL);
                                       if ( cancelLabel )
                                       {
@@ -412,18 +492,18 @@ LABEL_35:
                                         gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton;
                                         if ( gameObject )
                                         {
-                                          v33 = UnityEngine_Component__get_gameObject(
+                                          v47 = UnityEngine_Component__get_gameObject(
                                                   (UnityEngine_Component_o *)gameObject,
                                                   0LL);
-                                          AndroidBackKeyManager__AddBackBtn(v33, 0LL);
+                                          AndroidBackKeyManager__AddBackBtn(v47, 0LL);
                                           this->fields.state = 1;
-                                          v34 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+                                          v51 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v48, v49, v50);
                                           System_Action___ctor(
-                                            v34,
+                                            v51,
                                             (Il2CppObject *)this,
                                             Method_RecommendSupportCancelConfirmDialog__Open_b__18_0__,
                                             0LL);
-                                          BaseDialog__Open((BaseDialog_o *)this, v34, 1, 0LL);
+                                          BaseDialog__Open((BaseDialog_o *)this, v51, 1, 0LL);
                                           return;
                                         }
                                       }
@@ -445,7 +525,7 @@ LABEL_35:
       }
     }
 LABEL_34:
-    sub_1BAB678(gameObject, v15);
+    sub_1BCAA3C(gameObject, v24);
   }
 }
 
@@ -456,21 +536,25 @@ void __fastcall RecommendSupportCancelConfirmDialog__ResultCallback(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_resultCallback; // x0
-  struct RecommendSupportSelectControl_DialogResultCallBack_o *v5; // x20
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  PartyOrganizationUtility_o *p_resultCallback; // x0
+  struct RecommendSupportSelectControl_DialogResultCallBack_o *v9; // x20
   struct RecommendSupportSelectControl_DialogResultCallBack_o *resultCallback; // t1
 
   resultCallback = this->fields.resultCallback;
-  p_resultCallback = (ServantStatusBattleListViewItem_o *)&this->fields.resultCallback;
-  v5 = resultCallback;
+  p_resultCallback = (PartyOrganizationUtility_o *)&this->fields.resultCallback;
+  v9 = resultCallback;
   if ( resultCallback )
   {
     p_resultCallback->klass = 0LL;
-    sub_1BAB3C0(p_resultCallback, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
+    sub_1BCA784(p_resultCallback, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v9->fields.m_target)(
+      v9->fields.original_method_info,
       (unsigned int)result,
-      *(_QWORD *)&v5->fields.extra_arg);
+      *(_QWORD *)&v9->fields.extra_arg);
   }
 }
 
@@ -504,7 +588,7 @@ void __fastcall RecommendSupportCancelConfirmDialog__SetActiveInfo(
     || (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageLabel, 0LL)) == 0LL )
   {
 LABEL_10:
-    sub_1BAB678(messageLabel, active);
+    sub_1BCAA3C(messageLabel, active);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, active, 0LL);
 }
@@ -521,23 +605,33 @@ void __fastcall RecommendSupportCancelConfirmDialog___Open_b__18_0(
 void __fastcall RecommendSupportCancelConfirmDialog___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB1E11 & 1) == 0 )
+  if ( (byte_4B12322 & 1) == 0 )
   {
-    sub_1BAB41C(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v1);
-    byte_4AB1E11 = 1;
+    sub_1BCA7E0(&RecommendSupportCancelConfirmDialog___c_TypeInfo, v1, v2);
+    byte_4B12322 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BAB668(RecommendSupportCancelConfirmDialog___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields->__9 = (struct RecommendSupportCancelConfirmDialog___c_o *)v2;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+  v4 = (Il2CppObject *)sub_1BCAA2C(RecommendSupportCancelConfirmDialog___c_TypeInfo, v1, v2, v3);
+  System_Object___ctor(v4, 0LL);
+  RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields->__9 = (struct RecommendSupportCancelConfirmDialog___c_o *)v4;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)RecommendSupportCancelConfirmDialog___c_TypeInfo->static_fields,
+    (int64_t)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 

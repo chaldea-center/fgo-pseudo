@@ -14,17 +14,17 @@ void __fastcall MstHaveItemInfoComponent___setInfoTxt_b__4_0(
   System_String_o *UnitInfo; // x0
   __int64 v7; // x1
 
-  if ( (byte_4AB12E6 & 1) == 0 )
+  if ( (byte_4B116D4 & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
-    byte_4AB12E6 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount, method);
+    byte_4B116D4 = 1;
   }
   itemNumTxt = this->fields.itemNumTxt;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
   UnitInfo = LocalizationManager__GetUnitInfo(stoneCount, 0LL);
   if ( !itemNumTxt )
-    sub_1BAB678(UnitInfo, v7);
+    sub_1BCAA3C(UnitInfo, v7);
   UILabel__set_text(itemNumTxt, UnitInfo, 0LL);
 }
 
@@ -37,90 +37,101 @@ void __fastcall MstHaveItemInfoComponent__setInfoTxt(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
+  __int64 v18; // x2
   __int64 v19; // x1
-  __int64 v20; // x1
+  __int64 v20; // x2
   __int64 v21; // x1
-  __int64 v22; // x1
+  __int64 v22; // x2
   __int64 v23; // x1
-  DataManager_o *Instance; // x0
-  UILabel_o *itemNumTxt; // x21
-  System_String_o *v26; // x22
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
+  __int64 v24; // x2
+  __int64 v25; // x1
+  __int64 v26; // x2
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x1
   __int64 v30; // x2
-  __int64 v31; // x3
-  __int64 v32; // x4
+  __int64 v31; // x1
+  __int64 v32; // x2
+  __int64 v33; // x1
+  __int64 v34; // x2
+  __int64 v35; // x1
+  __int64 v36; // x2
+  __int64 v37; // x1
+  __int64 v38; // x2
+  __int64 v39; // x1
+  __int64 v40; // x2
+  DataManager_o *Instance; // x0
+  __int64 v42; // x1
+  UILabel_o *itemNumTxt; // x21
+  System_String_o *v44; // x22
   int32_t CommandCodeFrameMax; // w8
   int32_t Count; // w23
-  __int64 v35; // x2
-  __int64 v36; // x3
-  __int64 v37; // x4
-  System_String_o *v38; // x22
-  System_Int32_c *v39; // x0
-  __int64 v40; // x2
-  __int64 v41; // x3
-  __int64 v42; // x4
-  Il2CppObject *v43; // x23
-  BalanceConfig_c *v44; // x0
-  __int64 v45; // x2
-  __int64 v46; // x3
-  __int64 v47; // x4
-  Il2CppObject *v48; // x0
+  __int64 v47; // x1
+  System_String_o *v48; // x22
+  System_Int32_c *v49; // x0
+  __int64 v50; // x1
+  __int64 v51; // x2
+  Il2CppObject *v52; // x23
+  BalanceConfig_c *v53; // x0
+  __int64 v54; // x1
+  Il2CppObject *v55; // x0
   int32_t mana; // w20
-  UILabel_o *v50; // x21
+  UILabel_o *v57; // x21
   int32_t stone; // w20
   UnityEngine_GameObject_o *gameObject; // x20
-  System_Action_int__o *v53; // x21
-  Il2CppObject *v54; // x0
-  int32_t v55; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v60; // x1
+  __int64 v61; // x2
+  __int64 v62; // x3
+  System_Action_int__o *v63; // x21
+  __int64 v64; // x1
+  Il2CppObject *v65; // x0
+  int32_t v66; // [xsp+8h] [xbp-48h] BYREF
   int32_t qp; // [xsp+Ch] [xbp-44h] BYREF
   int32_t servantEquipSum[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4AB12E5 & 1) == 0 )
+  if ( (byte_4B116D3 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_int__TypeInfo, *(_QWORD *)&imgId);
-    sub_1BAB41C(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v7);
-    sub_1BAB41C(&Method_DataManager_GetMasterData_UserServantMaster___, v8);
-    sub_1BAB41C(&int_TypeInfo, v9);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v10);
-    sub_1BAB41C(&Method_MstHaveItemInfoComponent__setInfoTxt_b__4_0__, v11);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1BAB41C(&StringLiteral_20473/*"img_servant"*/, v13);
-    sub_1BAB41C(&StringLiteral_20427/*"img_qp"*/, v14);
-    sub_1BAB41C(&StringLiteral_3948/*"CURRENT_QP_UNIT"*/, v15);
-    sub_1BAB41C(&StringLiteral_20336/*"img_fp"*/, v16);
-    sub_1BAB41C(&StringLiteral_3946/*"CURRENT_FRIEND_POINT_UNIT"*/, v17);
-    sub_1BAB41C(&StringLiteral_20332/*"img_craftessence"*/, v18);
-    sub_1BAB41C(&StringLiteral_12403/*"SUM_INFO"*/, v19);
-    sub_1BAB41C(&StringLiteral_20304/*"img_cc"*/, v20);
-    sub_1BAB41C(&StringLiteral_20505/*"img_sq"*/, v21);
-    sub_1BAB41C(&StringLiteral_20472/*"img_rp"*/, v22);
-    sub_1BAB41C(&StringLiteral_20394/*"img_mp"*/, v23);
-    byte_4AB12E5 = 1;
+    sub_1BCA7E0(&System_Action_int__TypeInfo, *(_QWORD *)&imgId, info);
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v7, v8);
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserServantMaster___, v9, v10);
+    sub_1BCA7E0(&int_TypeInfo, v11, v12);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v13, v14);
+    sub_1BCA7E0(&Method_MstHaveItemInfoComponent__setInfoTxt_b__4_0__, v15, v16);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17, v18);
+    sub_1BCA7E0(&StringLiteral_20661/*"img_servant"*/, v19, v20);
+    sub_1BCA7E0(&StringLiteral_20615/*"img_qp"*/, v21, v22);
+    sub_1BCA7E0(&StringLiteral_4016/*"CURRENT_QP_UNIT"*/, v23, v24);
+    sub_1BCA7E0(&StringLiteral_20524/*"img_fp"*/, v25, v26);
+    sub_1BCA7E0(&StringLiteral_4014/*"CURRENT_FRIEND_POINT_UNIT"*/, v27, v28);
+    sub_1BCA7E0(&StringLiteral_20520/*"img_craftessence"*/, v29, v30);
+    sub_1BCA7E0(&StringLiteral_12532/*"SUM_INFO"*/, v31, v32);
+    sub_1BCA7E0(&StringLiteral_20488/*"img_cc"*/, v33, v34);
+    sub_1BCA7E0(&StringLiteral_20693/*"img_sq"*/, v35, v36);
+    sub_1BCA7E0(&StringLiteral_20660/*"img_rp"*/, v37, v38);
+    sub_1BCA7E0(&StringLiteral_20582/*"img_mp"*/, v39, v40);
+    byte_4B116D3 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
   if ( (unsigned int)(imgId - 8008) >= 2 )
   {
     if ( imgId == 8014 )
     {
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_69;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
+                                    (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
       if ( !Instance )
         goto LABEL_69;
       Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)Instance, 0LL);
@@ -134,46 +145,46 @@ void __fastcall MstHaveItemInfoComponent__setInfoTxt(
           Instance = (DataManager_o *)this->fields.itemNameImg;
           if ( !Instance )
             goto LABEL_69;
-          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20427/*"img_qp"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20615/*"img_qp"*/, 0LL);
           itemNumTxt = this->fields.itemNumTxt;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3948/*"CURRENT_QP_UNIT"*/, 0LL);
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v47);
+          Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4016/*"CURRENT_QP_UNIT"*/, 0LL);
           if ( !info )
             goto LABEL_69;
-          v38 = (System_String_o *)Instance;
+          v48 = (System_String_o *)Instance;
           qp = info->fields.qp;
-          v39 = int_TypeInfo;
+          v49 = int_TypeInfo;
           goto LABEL_68;
         case 6:
           Instance = (DataManager_o *)this->fields.itemNameImg;
           if ( !Instance )
             goto LABEL_69;
-          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20505/*"img_sq"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20693/*"img_sq"*/, 0LL);
           if ( !info )
             goto LABEL_69;
-          v50 = this->fields.itemNumTxt;
+          v57 = this->fields.itemNumTxt;
           stone = info->fields.stone;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&imgId);
           Instance = (DataManager_o *)LocalizationManager__GetUnitInfo(stone, 0LL);
-          if ( !v50 )
+          if ( !v57 )
             goto LABEL_69;
-          UILabel__set_text(v50, (System_String_o *)Instance, 0LL);
+          UILabel__set_text(v57, (System_String_o *)Instance, 0LL);
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-          v53 = (System_Action_int__o *)sub_1BAB668(System_Action_int__TypeInfo);
+          v63 = (System_Action_int__o *)sub_1BCAA2C(System_Action_int__TypeInfo, v60, v61, v62);
           System_Action_int____ctor(
-            v53,
+            v63,
             (Il2CppObject *)this,
             Method_MstHaveItemInfoComponent__setInfoTxt_b__4_0__,
             0LL);
-          StoneCountRefreshComponent__AttachToGameObject(gameObject, v53, 1, 0LL);
+          StoneCountRefreshComponent__AttachToGameObject(gameObject, v63, 1, 0LL);
           goto LABEL_44;
         case 7:
           Instance = (DataManager_o *)this->fields.itemNameImg;
           if ( !Instance )
             goto LABEL_69;
-          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20394/*"img_mp"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20582/*"img_mp"*/, 0LL);
           if ( !info )
             goto LABEL_69;
           itemNumTxt = this->fields.itemNumTxt;
@@ -188,19 +199,19 @@ void __fastcall MstHaveItemInfoComponent__setInfoTxt(
           Instance = (DataManager_o *)this->fields.itemNameImg;
           if ( !Instance )
             goto LABEL_69;
-          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20336/*"img_fp"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20524/*"img_fp"*/, 0LL);
           itemNumTxt = this->fields.itemNumTxt;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3946/*"CURRENT_FRIEND_POINT_UNIT"*/, 0LL);
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v64);
+          Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4014/*"CURRENT_FRIEND_POINT_UNIT"*/, 0LL);
           if ( !info )
             goto LABEL_69;
-          v38 = (System_String_o *)Instance;
+          v48 = (System_String_o *)Instance;
           qp = UserGameEntity__GetFriendPoint(info, 0LL);
-          v39 = int_TypeInfo;
+          v49 = int_TypeInfo;
 LABEL_68:
-          v54 = (Il2CppObject *)j_il2cpp_value_box_0(v39, &qp, v35, v36, v37);
-          Instance = (DataManager_o *)System_String__Format(v38, v54, 0LL);
+          v65 = (Il2CppObject *)j_il2cpp_value_box_0(v49, &qp);
+          Instance = (DataManager_o *)System_String__Format(v48, v65, 0LL);
           if ( !itemNumTxt )
             goto LABEL_69;
           goto LABEL_43;
@@ -210,14 +221,14 @@ LABEL_68:
           Instance = (DataManager_o *)this->fields.itemNameImg;
           if ( !Instance )
             goto LABEL_69;
-          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20472/*"img_rp"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20660/*"img_rp"*/, 0LL);
           if ( !info )
             goto LABEL_69;
           itemNumTxt = this->fields.itemNumTxt;
           mana = info->fields.rarePri;
 LABEL_59:
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&imgId);
           Instance = (DataManager_o *)LocalizationManager__GetUnitInfo(mana, 0LL);
           if ( !itemNumTxt )
             goto LABEL_69;
@@ -227,12 +238,12 @@ LABEL_59:
   }
   else
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_69;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                  (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !Instance )
       goto LABEL_69;
     UserServantMaster__getCount((UserServantMaster_o *)Instance, &servantEquipSum[1], servantEquipSum, 1, 0LL);
@@ -244,28 +255,28 @@ LABEL_27:
     Instance = (DataManager_o *)this->fields.itemNameImg;
     if ( Instance )
     {
-      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20304/*"img_cc"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20488/*"img_cc"*/, 0LL);
       itemNumTxt = this->fields.itemNumTxt;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12403/*"SUM_INFO"*/, 0LL);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v50);
+      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12532/*"SUM_INFO"*/, 0LL);
       qp = Count;
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp, v40, v41, v42);
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp);
       if ( info )
       {
-        v43 = (Il2CppObject *)Instance;
-        if ( !byte_4AB0EC3 )
+        v52 = (Il2CppObject *)Instance;
+        if ( !byte_4B112D7 )
         {
-          sub_1BAB41C(&BalanceConfig_TypeInfo, *(_QWORD *)&imgId);
-          byte_4AB0EC3 = 1;
+          sub_1BCA7E0(&BalanceConfig_TypeInfo, *(_QWORD *)&imgId, v51);
+          byte_4B112D7 = 1;
         }
-        v44 = BalanceConfig_TypeInfo;
+        v53 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          v44 = BalanceConfig_TypeInfo;
+          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *(_QWORD *)&imgId);
+          v53 = BalanceConfig_TypeInfo;
         }
-        CommandCodeFrameMax = v44->static_fields->CommandCodeFrameMax;
+        CommandCodeFrameMax = v53->static_fields->CommandCodeFrameMax;
         goto LABEL_42;
       }
     }
@@ -276,13 +287,13 @@ LABEL_27:
     Instance = (DataManager_o *)this->fields.itemNameImg;
     if ( Instance )
     {
-      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20332/*"img_craftessence"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20520/*"img_craftessence"*/, 0LL);
       itemNumTxt = this->fields.itemNumTxt;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12403/*"SUM_INFO"*/, 0LL);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v54);
+      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12532/*"SUM_INFO"*/, 0LL);
       qp = servantEquipSum[0];
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp, v45, v46, v47);
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp);
       if ( info )
       {
         CommandCodeFrameMax = info->fields.svtEquipKeep;
@@ -290,29 +301,29 @@ LABEL_27:
       }
     }
 LABEL_69:
-    sub_1BAB678(Instance, *(_QWORD *)&imgId);
+    sub_1BCAA3C(Instance, *(_QWORD *)&imgId);
   }
   if ( imgId != 8008 )
     goto LABEL_44;
   Instance = (DataManager_o *)this->fields.itemNameImg;
   if ( !Instance )
     goto LABEL_69;
-  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20473/*"img_servant"*/, 0LL);
+  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)StringLiteral_20661/*"img_servant"*/, 0LL);
   itemNumTxt = this->fields.itemNumTxt;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12403/*"SUM_INFO"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v42);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12532/*"SUM_INFO"*/, 0LL);
   qp = servantEquipSum[1];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp, v27, v28, v29);
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &qp);
   if ( !info )
     goto LABEL_69;
   CommandCodeFrameMax = info->fields.svtKeep;
 LABEL_41:
-  v43 = (Il2CppObject *)Instance;
+  v52 = (Il2CppObject *)Instance;
 LABEL_42:
-  v55 = CommandCodeFrameMax;
-  v48 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v55, v30, v31, v32);
-  Instance = (DataManager_o *)System_String__Format_62062500(v26, v43, v48, 0LL);
+  v66 = CommandCodeFrameMax;
+  v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66);
+  Instance = (DataManager_o *)System_String__Format_62415592(v44, v52, v55, 0LL);
   if ( !itemNumTxt )
     goto LABEL_69;
 LABEL_43:
@@ -337,24 +348,25 @@ void __fastcall MstHaveItemInfoComponent__setItemInfo(
         const MethodInfo *method)
 {
   __int64 v7; // x1
+  __int64 v8; // x2
   UISprite_o *itemIcon; // x22
-  __int64 v9; // x1
+  __int64 v10; // x1
   UILabel_o *itemNumTxt; // x0
-  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4AB12E4 & 1) == 0 )
+  if ( (byte_4B116D2 & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, *(_QWORD *)&itemImgId);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
-    byte_4AB12E4 = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, *(_QWORD *)&itemImgId, data);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v7, v8);
+    byte_4B116D2 = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&itemImgId);
   AtlasManager__SetItem(itemIcon, itemImgId, 0LL);
   itemNumTxt = this->fields.itemNumTxt;
   if ( !itemNumTxt )
-    sub_1BAB678(0LL, v9);
+    sub_1BCAA3C(0LL, v10);
   UILabel__set_text(itemNumTxt, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  MstHaveItemInfoComponent__setInfoTxt(this, itemImgId, data, v11);
+  MstHaveItemInfoComponent__setInfoTxt(this, itemImgId, data, v12);
 }

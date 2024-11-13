@@ -1,16 +1,19 @@
 void __fastcall EventEquipSkillReleaseMaster___ctor(EventEquipSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5CCF & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16170 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__,
-      method);
-    byte_4AB5CCF = 1;
+      method,
+      v2);
+    byte_4B16170 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     267,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -25,12 +28,13 @@ EventEquipSkillReleaseEntity_o *__fastcall EventEquipSkillReleaseMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB5CCD & 1) == 0 )
+  if ( (byte_4B1616E & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__,
-      *(_QWORD *)&eventId);
-    byte_4AB5CCD = 1;
+      *(_QWORD *)&eventId,
+      *(_QWORD *)&type);
+    byte_4B1616E = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -41,7 +45,7 @@ EventEquipSkillReleaseEntity_o *__fastcall EventEquipSkillReleaseMaster__GetEnti
   return (EventEquipSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_31640E8 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
+                                             (const MethodInfo_31B3198 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -57,12 +61,13 @@ bool __fastcall EventEquipSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB5CCE & 1) == 0 )
+  if ( (byte_4B1616F & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__,
-      entity);
-    byte_4AB5CCE = 1;
+      entity,
+      *(_QWORD *)&eventId);
+    byte_4B1616F = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -74,7 +79,7 @@ bool __fastcall EventEquipSkillReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -85,66 +90,81 @@ bool __fastcall EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEn
         EventEquipSkillReleaseEntity_o **outEnt,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v12; // x2
   __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v21; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   int priority; // w27
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v17; // x9
+  __int64 v25; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v20; // x8
-  __int64 v21; // x9
-  int32_t *v22; // x10
-  __int64 v23; // x0
-  EventEquipSkillReleaseEntity_o *v24; // x0
-  __int64 v25; // x1
-  EventEquipSkillReleaseEntity_o *v26; // x22
+  System_Collections_Generic_IEnumerator_T__c *v28; // x8
+  __int64 v29; // x9
+  int32_t *v30; // x10
+  __int64 v31; // x0
+  EventEquipSkillReleaseEntity_o *v32; // x0
+  __int64 v33; // x1
+  EventEquipSkillReleaseEntity_o *v34; // x22
   __int64 methodPtr_low; // x9
-  int32_t v28; // w2
-  int32_t v29; // w3
-  System_Collections_Generic_IEnumerator_T__c *v30; // x8
-  __int64 v31; // x9
-  int32_t *v32; // x10
-  __int64 v33; // x0
+  int64_t v36; // x2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  BattleSetupInfo_o *v39; // x5
+  FollowerInfo_o *v40; // x6
+  PartyListViewItem_o *v41; // x7
+  System_Collections_Generic_IEnumerator_T__c *v42; // x8
+  __int64 v43; // x9
+  int32_t *v44; // x10
+  __int64 v45; // x0
 
-  if ( (byte_4AB5CD0 & 1) == 0 )
+  if ( (byte_4B16171 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&eventId);
-    sub_1BAB41C(&EventEquipSkillReleaseEntity_TypeInfo, v7);
-    sub_1BAB41C(&System_IDisposable_TypeInfo, v8);
-    sub_1BAB41C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_4AB5CD0 = 1;
+    sub_1BCA7E0(
+      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
+      *(_QWORD *)&eventId,
+      outEnt);
+    sub_1BCA7E0(&EventEquipSkillReleaseEntity_TypeInfo, v11, v12);
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, v13, v14);
+    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v15, v16);
+    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v17, v18);
+    byte_4B16171 = 1;
   }
   *outEnt = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)outEnt, 0, (int32_t)outEnt, (int32_t)method);
+  sub_1BCA784((PartyOrganizationUtility_o *)outEnt, 0LL, (int64_t)outEnt, (int32_t)method, v4, v5, v6, v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BAB678(0LL, v11);
+    sub_1BCAA3C(0LL, v19);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3100938 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_314F9E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BAB678(0LL, v13);
+    sub_1BCAA3C(0LL, v21);
   priority = -1;
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v17 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v17;
+        --v25;
         p_offset += 4;
-        if ( !v17 )
+        if ( !v25 )
           goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -152,73 +172,73 @@ bool __fastcall EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEn
     else
     {
 LABEL_10:
-      p_method = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1C7C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v20 = Enumerator->klass;
-    v21 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v28 = Enumerator->klass;
+    v29 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v22 = &v20->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v22 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v30 = &v28->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v30 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v21;
-        v22 += 4;
-        if ( !v21 )
+        --v29;
+        v30 += 4;
+        if ( !v29 )
           goto LABEL_17;
       }
-      v23 = (__int64)&v20->vtable[*v22].method;
+      v31 = (__int64)&v28->vtable[*v30].method;
     }
     else
     {
 LABEL_17:
-      v23 = sub_1BFD3FC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v31 = sub_1C1C7C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v24 = (EventEquipSkillReleaseEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
+    v32 = (EventEquipSkillReleaseEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(
                                               Enumerator,
-                                              *(_QWORD *)(v23 + 8));
-    v26 = v24;
-    if ( !v24 )
+                                              *(_QWORD *)(v31 + 8));
+    v34 = v32;
+    if ( !v32 )
       goto LABEL_34;
     methodPtr_low = LOBYTE(EventEquipSkillReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v24->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (EventEquipSkillReleaseEntity_c *)v24->klass->_2.typeHierarchy[methodPtr_low - 1] != EventEquipSkillReleaseEntity_TypeInfo )
+    if ( LOBYTE(v32->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+      || (EventEquipSkillReleaseEntity_c *)v32->klass->_2.typeHierarchy[methodPtr_low - 1] != EventEquipSkillReleaseEntity_TypeInfo )
     {
-      sub_1BAB938(v24);
+      sub_1BCACFC(v32);
 LABEL_34:
-      sub_1BAB678(v24, v25);
+      sub_1BCAA3C(v32, v33);
     }
-    if ( v24->fields.eventId == eventId
-      && EventEquipSkillReleaseEntity__isOpen(v24, (const MethodInfo *)EventEquipSkillReleaseEntity_TypeInfo)
-      && priority < v26->fields.priority )
+    if ( v32->fields.eventId == eventId
+      && EventEquipSkillReleaseEntity__isOpen(v32, (const MethodInfo *)EventEquipSkillReleaseEntity_TypeInfo)
+      && priority < v34->fields.priority )
     {
-      *outEnt = v26;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)outEnt, (int32_t)v26, v28, v29);
-      priority = v26->fields.priority;
+      *outEnt = v34;
+      sub_1BCA784((PartyOrganizationUtility_o *)outEnt, (int64_t)v34, v36, v37, v38, v39, v40, v41);
+      priority = v34->fields.priority;
     }
   }
-  v30 = Enumerator->klass;
-  v31 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v42 = Enumerator->klass;
+  v43 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v32 = &v30->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
+    v44 = &v42->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v44 - 1) != System_IDisposable_TypeInfo )
     {
-      --v31;
-      v32 += 4;
-      if ( !v31 )
+      --v43;
+      v44 += 4;
+      if ( !v43 )
         goto LABEL_30;
     }
-    v33 = (__int64)&v30->vtable[*v32].method;
+    v45 = (__int64)&v42->vtable[*v44].method;
   }
   else
   {
 LABEL_30:
-    v33 = sub_1BFD3FC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v45 = sub_1C1C7C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(Enumerator, *(_QWORD *)(v33 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v45)(Enumerator, *(_QWORD *)(v45 + 8));
   return *outEnt != 0LL;
 }

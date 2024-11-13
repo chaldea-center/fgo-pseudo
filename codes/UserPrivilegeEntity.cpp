@@ -1,13 +1,15 @@
 void __fastcall UserPrivilegeEntity___ctor(UserPrivilegeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6AD2 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16F85 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB6AD2 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16F85 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +19,15 @@ System_String_o *__fastcall UserPrivilegeEntity__CreatePK(
         int32_t privilegeId,
         const MethodInfo *method)
 {
-  if ( (byte_4AB6AD1 & 1) == 0 )
+  if ( (byte_4B16F84 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&privilegeId);
-    byte_4AB6AD1 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&privilegeId, method);
+    byte_4B16F84 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            privilegeId,
-           (const MethodInfo_2EC26A0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2F10FBC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

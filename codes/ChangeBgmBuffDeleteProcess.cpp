@@ -4,6 +4,7 @@ void __fastcall ChangeBgmBuffDeleteProcess___ctor(ChangeBgmBuffDeleteProcess_o *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ChangeBgmBuffDeleteProcess__Exec(
         ChangeBgmBuffDeleteProcess_o *this,
         BattleBuffData_BuffData_o *buff,
@@ -13,44 +14,56 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
   BattleFieldEnvironmentData_o *FieldEnvData_k__BackingField; // x21
   BattleFieldEnvironmentData_o *v7; // x0
   const MethodInfo *v8; // x1
-  int32_t v9; // w2
+  int64_t v9; // x2
   int32_t v10; // w3
-  BattleFieldEnvironmentData_o *v11; // x22
-  const MethodInfo *v12; // x2
-  __int64 v13; // x0
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  BattleFieldEnvironmentData_o *v15; // x22
+  const MethodInfo *v16; // x2
+  __int64 v17; // x0
 
-  if ( (byte_4AB837B & 1) == 0 )
+  if ( (byte_4B1884B & 1) == 0 )
   {
-    sub_1BAB41C(&BattleBuffData_BuffData___TypeInfo, buff);
-    byte_4AB837B = 1;
+    sub_1BCA7E0(&BattleBuffData_BuffData___TypeInfo, buff, isAddAfterTask);
+    byte_4B1884B = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1BAB4C4(BattleBuffData_BuffData___TypeInfo, 1LL);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1BCA888(BattleBuffData_BuffData___TypeInfo, 1LL);
   if ( !v7 )
     goto LABEL_10;
-  v11 = v7;
+  v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1BAB558(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1BCA91C(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v13 = sub_1BAB69C(0LL);
-      sub_1BAB544(v13, 0LL);
+      v17 = sub_1BCAA60(0LL);
+      sub_1BCA908(v17, 0LL);
     }
   }
-  if ( !LODWORD(v11->fields._Data_k__BackingField) )
-    sub_1BAB680(v7, v8);
-  v11->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v11->fields._Perf_k__BackingField, (int32_t)buff, v9, v10);
+  if ( !LODWORD(v15->fields._Data_k__BackingField) )
+    sub_1BCAA44(v7, v8);
+  v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&v15->fields._Perf_k__BackingField,
+    (int64_t)buff,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   if ( !FieldEnvData_k__BackingField
     || (BattleFieldEnvironmentData__RemoveBgmRelateBuff(
           FieldEnvData_k__BackingField,
-          (BattleBuffData_BuffData_array *)v11,
-          v12),
+          (BattleBuffData_BuffData_array *)v15,
+          v16),
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0LL) )
   {
 LABEL_10:
-    sub_1BAB678(v7, v8);
+    sub_1BCAA3C(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

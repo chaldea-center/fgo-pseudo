@@ -4,16 +4,32 @@ void __fastcall WarBoardSimpleAnimationPerformance___ctor(
         System_String_o *animationName,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)animation);
   this->fields.animation = animation;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.animation, (int32_t)animation, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)animation, v7, v8, v9, v10, v11, v12);
   this->fields.animationName = animationName;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.animationName, (int32_t)animationName, v9, v10);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.animationName,
+    (int64_t)animationName,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
@@ -21,21 +37,27 @@ System_Collections_IEnumerator_o *__fastcall WarBoardSimpleAnimationPerformance_
         WarBoardSimpleAnimationPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB3C11 & 1) == 0 )
+  if ( (byte_4B1408D & 1) == 0 )
   {
-    sub_1BAB41C(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo, method);
-    byte_4AB3C11 = 1;
+    sub_1BCA7E0(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo, method, v2);
+    byte_4B1408D = 1;
   }
-  v3 = sub_1BAB668(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
-  return (System_Collections_IEnumerator_o *)v3;
+  v5 = sub_1BCAA2C(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
+  *(_QWORD *)(v5 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -58,15 +80,16 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
         WarBoardSimpleAnimationPerformance_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct WarBoardTaskBase_TaskCallback_o *StartCallback; // x8
   UnityEngine_Object_o *animation; // x20
-  __int64 v5; // x1
-  SimpleAnimation_o *v6; // x0
+  __int64 v6; // x1
+  SimpleAnimation_o *v7; // x0
 
-  if ( (byte_4AB3C10 & 1) == 0 )
+  if ( (byte_4B1408C & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB3C10 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B1408C = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -77,13 +100,13 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
   this->fields.isStart = 0;
   animation = (UnityEngine_Object_o *)this->fields.animation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(animation, 0LL, 0LL) )
   {
-    v6 = this->fields.animation;
-    if ( !v6 || (SimpleAnimation__Rewind(v6, 0LL), (v6 = this->fields.animation) == 0LL) )
-      sub_1BAB678(v6, v5);
-    if ( SimpleAnimation__Play_64185800(v6, this->fields.animationName, 0LL) )
+    v7 = this->fields.animation;
+    if ( !v7 || (SimpleAnimation__Rewind(v7, 0LL), (v7 = this->fields.animation) == 0LL) )
+      sub_1BCAA3C(v7, v6);
+    if ( SimpleAnimation__Play_64539336(v7, this->fields.animationName, 0LL) )
       this->fields.isStart = 1;
   }
 }
@@ -97,7 +120,7 @@ bool __fastcall WarBoardSimpleAnimationPerformance___Execute_b__5_0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   return !SimpleAnimation__CheckPlaying(animation, 0LL) || this->fields.IsForceEnd;
 }
 
@@ -116,61 +139,73 @@ bool __fastcall WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
         WarBoardSimpleAnimationPerformance__Execute_d__5_o *this,
         const MethodInfo *method)
 {
-  WarBoardSimpleAnimationPerformance__Execute_d__5_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
+  WarBoardSimpleAnimationPerformance__Execute_d__5_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   int32_t _1__state; // w8
   struct WarBoardSimpleAnimationPerformance_o *_4__this; // x20
-  System_Func_bool__o *v7; // x21
-  UnityEngine_WaitUntil_o *v8; // x20
-  ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v10; // w2
-  int32_t v11; // w3
+  System_Func_bool__o *v11; // x21
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
+  UnityEngine_WaitUntil_o *v15; // x20
+  PartyOrganizationUtility_o *p__2__current; // x19
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   bool result; // w0
 
-  v2 = this;
-  if ( (byte_4AB3C12 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4B1408E & 1) == 0 )
   {
-    sub_1BAB41C(&System_Func_bool__TypeInfo, method);
-    sub_1BAB41C(&UnityEngine_WaitUntil_TypeInfo, v3);
-    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1BAB41C(
+    sub_1BCA7E0(&System_Func_bool__TypeInfo, method, v2);
+    sub_1BCA7E0(&UnityEngine_WaitUntil_TypeInfo, v5, v6);
+    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1BCA7E0(
                                                                    &Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
-                                                                   v4);
-    byte_4AB3C12 = 1;
+                                                                   v7,
+                                                                   v8);
+    byte_4B1408E = 1;
   }
-  _1__state = v2->fields.__1__state;
+  _1__state = v4->fields.__1__state;
   if ( _1__state == 1 )
   {
     result = 0;
-    v2->fields.__1__state = -1;
+    v4->fields.__1__state = -1;
   }
   else
   {
     if ( _1__state )
       return 0;
-    _4__this = v2->fields.__4__this;
-    v2->fields.__1__state = -1;
+    _4__this = v4->fields.__4__this;
+    v4->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     if ( !_4__this->fields.isStart )
     {
       return 0;
     }
     else
     {
-      v7 = (System_Func_bool__o *)sub_1BAB668(System_Func_bool__TypeInfo);
+      v11 = (System_Func_bool__o *)sub_1BCAA2C(System_Func_bool__TypeInfo, method, v2, v3);
       System_Func_bool____ctor(
-        v7,
+        v11,
         (Il2CppObject *)_4__this,
         Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
         0LL);
-      v8 = (UnityEngine_WaitUntil_o *)sub_1BAB668(UnityEngine_WaitUntil_TypeInfo);
-      UnityEngine_WaitUntil___ctor(v8, v7, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v8;
-      p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-      sub_1BAB3C0(p__2__current, (int32_t)v8, v10, v11);
+      v15 = (UnityEngine_WaitUntil_o *)sub_1BCAA2C(UnityEngine_WaitUntil_TypeInfo, v12, v13, v14);
+      UnityEngine_WaitUntil___ctor(v15, v11, 0LL);
+      v4->fields.__2__current = (Il2CppObject *)v15;
+      p__2__current = (PartyOrganizationUtility_o *)&v4->fields.__2__current;
+      sub_1BCA784(p__2__current, (int64_t)v15, v17, v18, v19, v20, v21, v22);
       result = 1;
-      *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
+      *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
     }
   }
   return result;
@@ -190,14 +225,18 @@ void __fastcall __noreturn WarBoardSimpleAnimationPerformance__Execute_d__5__Sys
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 

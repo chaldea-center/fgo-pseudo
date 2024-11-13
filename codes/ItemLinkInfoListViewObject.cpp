@@ -6,24 +6,29 @@ void __fastcall ItemLinkInfoListViewObject___ctor(ItemLinkInfoListViewObject_o *
 
 void __fastcall ItemLinkInfoListViewObject__Awake(ItemLinkInfoListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB7D21 & 1) == 0 )
+  if ( (byte_4B18B19 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___, method);
-    byte_4AB7D21 = 1;
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___, method, v2);
+    byte_4B18B19 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
+                       (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_ItemLinkInfoListViewItemDraw___);
   this->fields.itemDraw = (struct ItemLinkInfoListViewItemDraw_o *)Component_object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -31,61 +36,64 @@ void __fastcall ItemLinkInfoListViewObject__DeleteCallback(
         ItemLinkInfoListViewObject_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v4; // x1
-  ItemLinkInfoListViewItemDraw_o *v5; // x0
+  __int64 v5; // x1
+  ItemLinkInfoListViewItemDraw_o *v6; // x0
 
-  if ( (byte_4AB7D25 & 1) == 0 )
+  if ( (byte_4B18B1D & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB7D25 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B18B1D = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v5 = this->fields.itemDraw;
-    if ( !v5 )
-      sub_1BAB678(0LL, v4);
-    ItemLinkInfoListViewItemDraw__DeleteCallback(v5, v4);
+    v6 = this->fields.itemDraw;
+    if ( !v6 )
+      sub_1BCAA3C(0LL, v5);
+    ItemLinkInfoListViewItemDraw__DeleteCallback(v6, 0LL);
   }
 }
 
 
 float __fastcall ItemLinkInfoListViewObject__GetHeight(ItemLinkInfoListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v5; // x1
-  ItemLinkInfoListViewItemDraw_o *v6; // x0
-  ItemLinkInfoListViewItemDraw_c *v8; // x0
+  __int64 v7; // x1
+  ItemLinkInfoListViewItemDraw_o *v8; // x0
+  ItemLinkInfoListViewItemDraw_c *v10; // x0
 
-  if ( (byte_4AB7D24 & 1) == 0 )
+  if ( (byte_4B18B1C & 1) == 0 )
   {
-    sub_1BAB41C(&ItemLinkInfoListViewItemDraw_TypeInfo, method);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AB7D24 = 1;
+    sub_1BCA7E0(&ItemLinkInfoListViewItemDraw_TypeInfo, method, v2);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
+    byte_4B18B1C = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v6 = this->fields.itemDraw;
-    if ( !v6 )
-      sub_1BAB678(0LL, v5);
-    return ItemLinkInfoListViewItemDraw__GetHeight(v6, v5);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1BCAA3C(0LL, v7);
+    return ItemLinkInfoListViewItemDraw__GetHeight(v8, 0LL);
   }
   else
   {
-    v8 = ItemLinkInfoListViewItemDraw_TypeInfo;
+    v10 = ItemLinkInfoListViewItemDraw_TypeInfo;
     if ( !ItemLinkInfoListViewItemDraw_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(ItemLinkInfoListViewItemDraw_TypeInfo);
-      v8 = ItemLinkInfoListViewItemDraw_TypeInfo;
+      j_il2cpp_runtime_class_init_0(ItemLinkInfoListViewItemDraw_TypeInfo, v7);
+      v10 = ItemLinkInfoListViewItemDraw_TypeInfo;
     }
-    return v8->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
+    return v10->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
   }
 }
 
@@ -96,11 +104,15 @@ void __fastcall ItemLinkInfoListViewObject__SetItem(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  const MethodInfo *v5; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v9; // x1
 
   this->fields.linkItem = item;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.linkItem, (int32_t)item, (int32_t)method, v3);
-  ItemLinkInfoListViewObject__SetupDisp(this, v5);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.linkItem, (int64_t)item, (int64_t)method, v3, v4, v5, v6, v7);
+  ItemLinkInfoListViewObject__SetupDisp(this, v9);
 }
 
 
@@ -114,19 +126,19 @@ void __fastcall ItemLinkInfoListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4AB7D23 & 1) == 0 )
+  if ( (byte_4B18B1B & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, isVisible);
-    byte_4AB7D23 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, isVisible, method);
+    byte_4B18B1B = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isVisible);
   if ( UnityEngine_Object__op_Inequality(dispObject, 0LL, 0LL) )
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_1BAB678(0LL, v6);
+      sub_1BCAA3C(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0LL);
   }
 }
@@ -136,28 +148,29 @@ void __fastcall ItemLinkInfoListViewObject__SetupDisp(ItemLinkInfoListViewObject
 {
   const MethodInfo *v2; // x2
   struct ItemLinkInfoListViewItem_o *linkItem; // x20
+  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v6; // x1
-  struct ItemLinkInfoListViewItemDraw_o *v7; // x0
+  __int64 v7; // x1
+  struct ItemLinkInfoListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4AB7D22 & 1) == 0 )
+  if ( (byte_4B18B1A & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB7D22 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B18B1A = 1;
   }
   linkItem = this->fields.linkItem;
   ItemLinkInfoListViewObject__SetVisible(this, linkItem != 0LL, v2);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v7 = this->fields.itemDraw;
-    if ( !v7 )
-      sub_1BAB678(0LL, v6);
-    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, void *))v7->klass->vtable._4_SetItem.method)(
-      v7,
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1BCAA3C(0LL, v7);
+    ((void (__fastcall *)(struct ItemLinkInfoListViewItemDraw_o *, struct ItemLinkInfoListViewItem_o *, void *))v8->klass->vtable._4_SetItem.method)(
+      v8,
       linkItem,
-      v7->klass[1]._1.image);
+      v8->klass[1]._1.image);
   }
 }

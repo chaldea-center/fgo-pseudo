@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SelectedUserSvtCoin___ctor(
         SelectedUserSvtCoin_o *this,
         CoinRoomCoinIconObject_o *iconObject,
@@ -6,40 +7,44 @@ void __fastcall SelectedUserSvtCoin___ctor(
 {
   __int64 v7; // x0
   __int64 v8; // x1
-  int32_t v9; // w2
+  int64_t v9; // x2
   int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
   struct ListViewItem_o *linkItem; // x22
   __int64 methodPtr_low; // x9
   SelectedUserSvtCoin_Fields *p_fields; // x20
-  __int64 v14; // x0
-  __int64 v15; // x1
+  __int64 v18; // x0
+  __int64 v19; // x1
 
-  if ( (byte_4AB9305 & 1) == 0 )
+  if ( (byte_4B197F7 & 1) == 0 )
   {
-    sub_1BAB41C(&CoinRoomCoinIconItem_TypeInfo, iconObject);
-    byte_4AB9305 = 1;
+    sub_1BCA7E0(&CoinRoomCoinIconItem_TypeInfo, iconObject, *(_QWORD *)&num);
+    byte_4B197F7 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !iconObject )
 LABEL_9:
-    sub_1BAB678(v7, v8);
+    sub_1BCAA3C(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
-    sub_1BAB678(v14, v15);
+    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
+    sub_1BCAA3C(v18, v19);
   }
   methodPtr_low = LOBYTE(CoinRoomCoinIconItem_TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1BAB938(iconObject->fields.linkItem);
+    sub_1BCACFC(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)iconObject, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

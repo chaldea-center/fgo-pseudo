@@ -28,40 +28,45 @@ System_String_o *__fastcall BonusSelectSummonPartyServantListViewItemDraw__GetSu
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
   int32_t SummonCategoryId; // w0
-  __int64 *v9; // x8
+  __int64 *v13; // x8
 
-  if ( (byte_4AB2402 & 1) == 0 )
+  if ( (byte_4B1286E & 1) == 0 )
   {
-    sub_1BAB41C(&string_TypeInfo, lineupEntity);
-    sub_1BAB41C(&StringLiteral_23604/*"story"*/, v4);
-    sub_1BAB41C(&StringLiteral_20469/*"img_ribbon_{0}"*/, v5);
-    sub_1BAB41C(&StringLiteral_18244/*"constant"*/, v6);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BAB41C(&StringLiteral_21139/*"limited"*/, v7);
-    byte_4AB2402 = 1;
+    sub_1BCA7E0(&string_TypeInfo, lineupEntity, method);
+    sub_1BCA7E0(&StringLiteral_23813/*"story"*/, v4, v5);
+    sub_1BCA7E0(&StringLiteral_20657/*"img_ribbon_{0}"*/, v6, v7);
+    sub_1BCA7E0(&StringLiteral_18398/*"constant"*/, v8, v9);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BCA7E0(&StringLiteral_21333/*"limited"*/, v10, v11);
+    byte_4B1286E = 1;
   }
   if ( !lineupEntity )
-    sub_1BAB678(this, lineupEntity);
+    sub_1BCAA3C(this, lineupEntity);
   SummonCategoryId = GachaBonusSelectLineupEntity__GetSummonCategoryId(lineupEntity, -1, 0LL);
   switch ( SummonCategoryId )
   {
     case 2:
-      v9 = &StringLiteral_23604/*"story"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20469/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v13 = &StringLiteral_23813/*"story"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20657/*"img_ribbon_{0}"*/, (Il2CppObject *)*v13, 0LL);
     case 1:
-      v9 = &StringLiteral_21139/*"limited"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20469/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v13 = &StringLiteral_21333/*"limited"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20657/*"img_ribbon_{0}"*/, (Il2CppObject *)*v13, 0LL);
     case 0:
-      v9 = &StringLiteral_18244/*"constant"*/;
-      return System_String__Format((System_String_o *)StringLiteral_20469/*"img_ribbon_{0}"*/, (Il2CppObject *)*v9, 0LL);
+      v13 = &StringLiteral_18398/*"constant"*/;
+      return System_String__Format((System_String_o *)StringLiteral_20657/*"img_ribbon_{0}"*/, (Il2CppObject *)*v13, 0LL);
   }
   return string_TypeInfo->static_fields->Empty;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
         BonusSelectSummonPartyServantListViewItemDraw_o *this,
         BonusSelectSummonPartyServantListViewItem_o *item,
@@ -75,10 +80,10 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
   struct BonusSelectSummonPartyOrganizationListViewItem_o *baseItem; // x9
 
   v5 = item;
-  if ( (byte_4AB23FF & 1) == 0 )
+  if ( (byte_4B1286B & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    byte_4AB23FF = 1;
+    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Collider___, item, isInput);
+    byte_4B1286B = 1;
   }
   if ( v5 )
   {
@@ -87,7 +92,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
       goto LABEL_14;
     baseButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               baseButton,
-                                              (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                              (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !baseButton )
       goto LABEL_14;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, isInput, 0LL);
@@ -108,12 +113,13 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetInput(
       item = 0LL;
     if ( !baseButton )
 LABEL_14:
-      sub_1BAB678(baseButton, item);
+      sub_1BCAA3C(baseButton, item);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseButton, (bool)item, 0LL);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
         BonusSelectSummonPartyServantListViewItemDraw_o *this,
         BonusSelectSummonPartyServantListViewItem_o *item,
@@ -123,46 +129,57 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   BonusSelectSummonPartyServantListViewItem_o *v5; // x19
   BonusSelectSummonPartyServantListViewItemDraw_o *v6; // x20
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
   struct ServantEntity_o *servantEntity; // x8
   ServantFaceIconComponent_o *servantFaceIcon; // x21
-  __int64 v16; // x22
-  __int64 v17; // x23
+  __int64 v23; // x22
+  __int64 v24; // x23
   UISprite_o *summonCategorySprite; // x21
-  BonusSelectSummonPartyServantListViewItemDraw_o *v19; // x0
-  const MethodInfo *v20; // x2
+  BonusSelectSummonPartyServantListViewItemDraw_o *v26; // x0
+  const MethodInfo *v27; // x2
+  __int64 v28; // x1
   System_String_o *SummonCategorySpriteName; // x22
+  __int64 v30; // x1
+  __int64 v31; // x1
   Il2CppObject *Master_object; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v23; // x8
-  BonusSelectSummonPartyServantListViewItemDraw_o *v24; // x22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v33; // x8
+  BonusSelectSummonPartyServantListViewItemDraw_o *v34; // x22
   UISprite_o *summonInfoSprite; // x21
-  __int64 *v26; // x8
-  System_String_o *v27; // x22
-  const MethodInfo *v28; // x2
+  __int64 *v36; // x8
+  System_String_o *v37; // x22
+  const MethodInfo *v38; // x2
+  __int64 v39; // x1
   UnityEngine_Object_o *selectObject; // x21
-  struct ServantEntity_o *v30; // x8
+  struct ServantEntity_o *v41; // x8
   struct BonusSelectSummonPartyOrganizationListViewItem_o *baseItem; // x9
   UserServantCollectionEntity_o *entity; // [xsp+48h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v44; // 0:x0.16
 
   v5 = item;
   v6 = this;
-  if ( (byte_4AB2400 & 1) == 0 )
+  if ( (byte_4B1286C & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, item);
-    sub_1BAB41C(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
-    sub_1BAB41C(&DataManager_TypeInfo, v8);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v9);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1BAB41C(&StringLiteral_20356/*"img_icon_summoned"*/, v12);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BAB41C(&StringLiteral_20355/*"img_icon_not_summoned"*/, v13);
-    byte_4AB2400 = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, item, *(_QWORD *)&mode);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7, v8);
+    sub_1BCA7E0(&DataManager_TypeInfo, v9, v10);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v11, v12);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v13, v14);
+    sub_1BCA7E0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15, v16);
+    sub_1BCA7E0(&StringLiteral_20544/*"img_icon_summoned"*/, v17, v18);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BCA7E0(&StringLiteral_20543/*"img_icon_not_summoned"*/, v19, v20);
+    byte_4B1286C = 1;
   }
   entity = 0LL;
   if ( !v5 || !mode )
@@ -171,18 +188,18 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   if ( !servantEntity )
     goto LABEL_37;
   servantFaceIcon = v6->fields.servantFaceIcon;
-  v17 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
-  v16 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
+  v24 = *(_QWORD *)&servantEntity->fields.id.fields.currentCryptoKey;
+  v23 = *(_QWORD *)&servantEntity->fields.id.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v33.fields.currentCryptoKey = v17;
-  *(_QWORD *)&v33.fields.fakeValue = v16;
-  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(
-                                                              v33,
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, item);
+  *(_QWORD *)&v44.fields.currentCryptoKey = v24;
+  *(_QWORD *)&v44.fields.fakeValue = v23;
+  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
+                                                              v44,
                                                               0LL);
   if ( !servantFaceIcon )
     goto LABEL_37;
-  ServantFaceIconComponent__Set_38597804(
+  ServantFaceIconComponent__Set_38928428(
     servantFaceIcon,
     (int32_t)this,
     0,
@@ -209,31 +226,31 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   UIIconLabel__Set((UIIconLabel_o *)this, v5->fields.iconLabelInfo, 0LL);
   summonCategorySprite = v6->fields.summonCategorySprite;
   SummonCategorySpriteName = BonusSelectSummonPartyServantListViewItemDraw__GetSummonCategorySpriteName(
-                               v19,
+                               v26,
                                v5->fields.lineupEntity,
-                               v20);
+                               v27);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v28);
   AtlasManager__SetEventSprite(summonCategorySprite, SummonCategorySpriteName, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v30);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v31);
   this = (BonusSelectSummonPartyServantListViewItemDraw_o *)NetworkManager__get_UserId(0LL);
-  v23 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v5->fields.servantEntity;
-  if ( !v23 )
+  v33 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v5->fields.servantEntity;
+  if ( !v33 )
     goto LABEL_37;
-  v24 = this;
-  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(
-                                                              v23[1],
+  v34 = this;
+  this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
+                                                              v33[1],
                                                               0LL);
   if ( !Master_object )
     goto LABEL_37;
   this = (BonusSelectSummonPartyServantListViewItemDraw_o *)UserServantCollectionMaster__TryGetEntity(
                                                               (UserServantCollectionMaster_o *)Master_object,
                                                               &entity,
-                                                              (int64_t)v24,
+                                                              (int64_t)v34,
                                                               (int32_t)this,
                                                               0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -243,7 +260,7 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
     summonInfoSprite = v6->fields.summonInfoSprite;
     if ( entity->fields.status == 2 )
     {
-      v26 = &StringLiteral_20356/*"img_icon_summoned"*/;
+      v36 = &StringLiteral_20544/*"img_icon_summoned"*/;
       goto LABEL_25;
     }
   }
@@ -251,22 +268,22 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   {
     summonInfoSprite = v6->fields.summonInfoSprite;
   }
-  v26 = &StringLiteral_20355/*"img_icon_not_summoned"*/;
+  v36 = &StringLiteral_20543/*"img_icon_not_summoned"*/;
 LABEL_25:
-  v27 = (System_String_o *)*v26;
+  v37 = (System_String_o *)*v36;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(summonInfoSprite, v27, 0LL);
-  BonusSelectSummonPartyServantListViewItemDraw__SetMessageLabel(v6, v5, v28);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, item);
+  AtlasManager__SetEventSprite(summonInfoSprite, v37, 0LL);
+  BonusSelectSummonPartyServantListViewItemDraw__SetMessageLabel(v6, v5, v38);
   selectObject = (UnityEngine_Object_o *)v6->fields.selectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39);
   if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
   {
-    v30 = v5->fields.servantEntity;
+    v41 = v5->fields.servantEntity;
     this = (BonusSelectSummonPartyServantListViewItemDraw_o *)v6->fields.selectObject;
-    if ( v30 && (baseItem = v5->fields.baseItem) != 0LL )
-      item = (BonusSelectSummonPartyServantListViewItem_o *)(v30 == baseItem->fields.servantEntity);
+    if ( v41 && (baseItem = v5->fields.baseItem) != 0LL )
+      item = (BonusSelectSummonPartyServantListViewItem_o *)(v41 == baseItem->fields.servantEntity);
     else
       item = 0LL;
     if ( this )
@@ -275,7 +292,7 @@ LABEL_25:
       return;
     }
 LABEL_37:
-    sub_1BAB678(this, item);
+    sub_1BCAA3C(this, item);
   }
 }
 
@@ -288,20 +305,22 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetMessageLabel(
   BonusSelectSummonPartyServantListViewItem_o *v3; // x20
   BonusSelectSummonPartyServantListViewItemDraw_o *v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   UILabel_o *maskMessageLabel; // x20
-  bool v8; // w21
+  bool v10; // w21
   struct ServantEntity_o *servantEntity; // x8
   struct BonusSelectSummonPartyOrganizationListViewItem_o *baseItem; // x9
 
   v3 = item;
   v4 = this;
-  if ( (byte_4AB2401 & 1) == 0 )
+  if ( (byte_4B1286D & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
-    sub_1BAB41C(&string_TypeInfo, v5);
-    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BAB41C(&StringLiteral_12356/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/, v6);
-    byte_4AB2401 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, item, method);
+    sub_1BCA7E0(&string_TypeInfo, v5, v6);
+    this = (BonusSelectSummonPartyServantListViewItemDraw_o *)sub_1BCA7E0(&StringLiteral_12485/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/, v7, v8);
+    byte_4B1286D = 1;
   }
   if ( !v3 )
     goto LABEL_19;
@@ -316,22 +335,22 @@ void __fastcall BonusSelectSummonPartyServantListViewItemDraw__SetMessageLabel(
     maskMessageLabel = v4->fields.maskMessageLabel;
 LABEL_13:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item);
     this = (BonusSelectSummonPartyServantListViewItemDraw_o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_12356/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/,
+                                                                (System_String_o *)StringLiteral_12485/*"SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE"*/,
                                                                 0LL);
     item = (BonusSelectSummonPartyServantListViewItem_o *)this;
-    v8 = 1;
+    v10 = 1;
     if ( maskMessageLabel )
       goto LABEL_16;
 LABEL_19:
-    sub_1BAB678(this, item);
+    sub_1BCAA3C(this, item);
   }
   maskMessageLabel = v4->fields.maskMessageLabel;
   if ( servantEntity != baseItem->fields.servantEntity )
     goto LABEL_13;
 LABEL_6:
-  v8 = 0;
+  v10 = 0;
   item = (BonusSelectSummonPartyServantListViewItem_o *)string_TypeInfo->static_fields->Empty;
   if ( !maskMessageLabel )
     goto LABEL_19;
@@ -345,5 +364,5 @@ LABEL_16:
                                                               0LL);
   if ( !this )
     goto LABEL_19;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v8, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v10, 0LL);
 }

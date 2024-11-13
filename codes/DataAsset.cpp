@@ -1,36 +1,44 @@
 void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, const MethodInfo *method)
 {
-  int32_t v5; // w2
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB4F72 & 1) == 0 )
+  if ( (byte_4B1540B & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, bytes);
-    byte_4AB4F72 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, bytes, method);
+    byte_4B1540B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, bytes);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.byteData = bytes;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.byteData, (int64_t)bytes, v5, v6, v7, v8, v9, v10);
 }
 
 
-void __fastcall DataAsset___ctor_38299300(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void __fastcall DataAsset___ctor_38629140(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
-  int32_t v5; // w2
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB4F73 & 1) == 0 )
+  if ( (byte_4B1540C & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, text);
-    byte_4AB4F73 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, text, method);
+    byte_4B1540C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, text);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.textData = text;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.textData, (int64_t)text, v5, v6, v7, v8, v9, v10);
 }
 
 

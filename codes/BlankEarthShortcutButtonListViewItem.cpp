@@ -7,53 +7,97 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
         System_Action_o *onClickAction,
         const MethodInfo *method)
 {
-  int32_t v12; // w2
+  int64_t v12; // x2
   int32_t v13; // w3
-  __int64 v14; // x0
-  __int64 v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
+  __int64 v18; // x0
+  __int64 v19; // x1
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
   struct BlankEarthSpotNavimenuEntity_o *blankEarthSpotNavimenuEntity_k__BackingField; // x8
   struct System_String_o *name; // x1
-  int32_t v20; // w2
-  int32_t v21; // w3
-  int32_t v22; // w2
-  int32_t v23; // w3
-  int32_t v24; // w2
-  int32_t v25; // w3
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
 
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
-    (int32_t)ent,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
+    (int64_t)ent,
     v12,
-    v13);
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_1BAB678(v14, v15);
+    sub_1BCAA3C(v18, v19);
   this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._Name_k__BackingField = name;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v16, v17);
-  this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
-    (int32_t)commonUiAtlas,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
+    (int64_t)name,
     v20,
-    v21);
-  this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
-    (int32_t)iconAtlas,
+    v21,
     v22,
-    v23);
-  this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
-    (int32_t)onClickAction,
+    v23,
     v24,
     v25);
+  this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._CommonUiAtlas_k__BackingField,
+    (int64_t)commonUiAtlas,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33);
+  this->fields._IconAtlas_k__BackingField = iconAtlas;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._IconAtlas_k__BackingField,
+    (int64_t)iconAtlas,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
+  this->fields._OnClickAction_k__BackingField = onClickAction;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._OnClickAction_k__BackingField,
+    (int64_t)onClickAction,
+    v40,
+    v41,
+    v42,
+    v43,
+    v44,
+    v45);
 }
 
 
@@ -111,13 +155,21 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._CommonUiAtlas_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -127,13 +179,21 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_IconAtlas(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._IconAtlas_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._IconAtlas_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -152,13 +212,21 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_Name(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._Name_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -168,13 +236,21 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_OnClickAction(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._OnClickAction_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._OnClickAction_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -184,11 +260,19 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenu
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

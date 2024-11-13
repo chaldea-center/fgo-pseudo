@@ -17,14 +17,14 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   struct UICommonButton_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4AB13B5 & 1) == 0 )
+  if ( (byte_4B117A7 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4AB13B5 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, isEnable, method);
+    byte_4B117A7 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isEnable);
   if ( !UnityEngine_Object__op_Equality(baseButton, 0LL, 0LL) )
   {
     v7 = this->fields.baseButton;
@@ -35,7 +35,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1BAB678(v7, v6);
+      sub_1BCAA3C(v7, v6);
     }
     if ( isEnable )
       v8 = 0LL;
@@ -61,6 +61,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetInput(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
         MaterialCostumeServantListViewItemDraw_o *this,
         MaterialCostumeServantListViewItem_o *item,
@@ -68,30 +69,35 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
   ServantFaceIconComponent_o *servantFaceIcon; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v14; // x2
   struct UserServantCollectionEntity_o *userSvtCollectionEntity_k__BackingField; // x8
   int32_t status; // w8
   int32_t costumeOpenStatus_k__BackingField; // w8
+  __int64 v18; // x1
   UILabel_o *maskLabel; // x20
-  __int64 *v16; // x8
+  __int64 *v20; // x8
+  __int64 v21; // x1
 
-  if ( (byte_4AB13B4 & 1) == 0 )
+  if ( (byte_4B117A6 & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
-    sub_1BAB41C(&StringLiteral_8555/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1BAB41C(&StringLiteral_8554/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_4AB13B4 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, item, *(_QWORD *)&mode);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v7, v8);
+    sub_1BCA7E0(&StringLiteral_8677/*"MATERIAL_FIND_SERVANT"*/, v9, v10);
+    sub_1BCA7E0(&StringLiteral_8676/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v11, v12);
+    byte_4B117A6 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_38604704(
+    ServantFaceIconComponent__Set_38935328(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -120,8 +126,8 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8555/*"MATERIAL_FIND_SERVANT"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18);
+      v20 = &StringLiteral_8677/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -147,7 +153,7 @@ LABEL_9:
             {
               UILabel__set_text((UILabel_o *)servantFaceIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 LABEL_13:
-              MaterialCostumeServantListViewItemDraw__SetButtonState(this, 1, v11);
+              MaterialCostumeServantListViewItemDraw__SetButtonState(this, 1, v14);
               return;
             }
           }
@@ -165,10 +171,10 @@ LABEL_13:
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8554/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
+      v20 = &StringLiteral_8676/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
-    servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v20, 0LL);
     if ( maskLabel )
     {
       UILabel__set_text(maskLabel, (System_String_o *)servantFaceIcon, 0LL);
@@ -180,6 +186,6 @@ LABEL_13:
       }
     }
 LABEL_33:
-    sub_1BAB678(servantFaceIcon, item);
+    sub_1BCAA3C(servantFaceIcon, item);
   }
 }

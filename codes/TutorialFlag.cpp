@@ -1,223 +1,287 @@
 void __fastcall TutorialFlag___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v11; // x2
   __int64 v12; // x1
-  __int64 v13; // x1
+  __int64 v13; // x2
   __int64 v14; // x1
-  __int64 v15; // x1
+  __int64 v15; // x2
   __int64 v16; // x1
-  __int64 v17; // x1
+  __int64 v17; // x2
   __int64 v18; // x1
-  __int64 v19; // x1
+  __int64 v19; // x2
   __int64 v20; // x1
-  __int64 v21; // x1
+  __int64 v21; // x2
   __int64 v22; // x1
-  __int64 v23; // x1
+  __int64 v23; // x2
   __int64 v24; // x1
-  __int64 v25; // x1
+  __int64 v25; // x2
   __int64 v26; // x1
-  __int64 v27; // x1
+  __int64 v27; // x2
   __int64 v28; // x1
-  __int64 v29; // x1
+  __int64 v29; // x2
   __int64 v30; // x1
-  __int64 v31; // x1
+  __int64 v31; // x2
   __int64 v32; // x1
-  int32_t v33; // w1
+  __int64 v33; // x2
+  __int64 v34; // x1
+  __int64 v35; // x2
+  __int64 v36; // x1
+  __int64 v37; // x2
+  __int64 v38; // x1
+  __int64 v39; // x2
+  __int64 v40; // x1
+  __int64 v41; // x2
+  __int64 v42; // x1
+  __int64 v43; // x2
+  __int64 v44; // x1
+  __int64 v45; // x2
+  __int64 v46; // x1
+  __int64 v47; // x2
+  __int64 v48; // x1
+  __int64 v49; // x2
+  __int64 v50; // x1
+  __int64 v51; // x2
+  __int64 v52; // x1
+  __int64 v53; // x2
+  __int64 v54; // x1
+  __int64 v55; // x2
+  __int64 v56; // x1
+  __int64 v57; // x2
+  __int64 v58; // x1
+  __int64 v59; // x2
+  __int64 v60; // x1
+  __int64 v61; // x2
+  __int64 v62; // x1
+  __int64 v63; // x2
+  __int64 v64; // x1
+  __int64 v65; // x2
+  int64_t v66; // x1
   struct TutorialFlag_StaticFields *static_fields; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
-  int32_t v37; // w1
-  struct TutorialFlag_StaticFields *v38; // x0
-  int32_t v39; // w2
-  int32_t v40; // w3
-  int32_t v41; // w1
-  struct TutorialFlag_StaticFields *v42; // x0
-  int32_t v43; // w2
-  int32_t v44; // w3
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v45; // x19
-  __int64 v46; // x0
-  __int64 v47; // x1
-  struct TutorialFlag_StaticFields *v48; // x0
-  int32_t v49; // w2
-  int32_t v50; // w3
+  int64_t v68; // x2
+  int32_t v69; // w3
+  System_String_o *v70; // x4
+  BattleSetupInfo_o *v71; // x5
+  FollowerInfo_o *v72; // x6
+  PartyListViewItem_o *v73; // x7
+  int64_t v74; // x1
+  struct TutorialFlag_StaticFields *v75; // x0
+  int64_t v76; // x2
+  int32_t v77; // w3
+  System_String_o *v78; // x4
+  BattleSetupInfo_o *v79; // x5
+  FollowerInfo_o *v80; // x6
+  PartyListViewItem_o *v81; // x7
+  int64_t v82; // x1
+  struct TutorialFlag_StaticFields *v83; // x0
+  int64_t v84; // x2
+  int32_t v85; // w3
+  System_String_o *v86; // x4
+  BattleSetupInfo_o *v87; // x5
+  FollowerInfo_o *v88; // x6
+  PartyListViewItem_o *v89; // x7
+  __int64 v90; // x1
+  __int64 v91; // x2
+  __int64 v92; // x3
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v93; // x19
+  __int64 v94; // x0
+  __int64 v95; // x1
+  struct TutorialFlag_StaticFields *v96; // x0
+  int64_t v97; // x2
+  int32_t v98; // w3
+  System_String_o *v99; // x4
+  BattleSetupInfo_o *v100; // x5
+  FollowerInfo_o *v101; // x6
+  PartyListViewItem_o *v102; // x7
 
-  if ( (byte_4AB4D7E & 1) == 0 )
+  if ( (byte_4B15217 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v4);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v5);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v6);
-    sub_1BAB41C(&StringLiteral_13484/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v7);
-    sub_1BAB41C(&StringLiteral_13497/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v8);
-    sub_1BAB41C(&StringLiteral_13479/*"TUTORIAL_LABEL_COMBINE"*/, v9);
-    sub_1BAB41C(&StringLiteral_13495/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v10);
-    sub_1BAB41C(&StringLiteral_13483/*"TUTORIAL_LABEL_END"*/, v11);
-    sub_1BAB41C(&StringLiteral_13493/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v12);
-    sub_1BAB41C(&StringLiteral_14628/*"TutorialFlagConfigId"*/, v13);
-    sub_1BAB41C(&StringLiteral_13480/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v14);
-    sub_1BAB41C(&StringLiteral_14631/*"TutorialFlagProgress"*/, v15);
-    sub_1BAB41C(&StringLiteral_13487/*"TUTORIAL_LABEL_FAVORITE1"*/, v16);
-    sub_1BAB41C(&StringLiteral_14629/*"TutorialFlagGachaId"*/, v17);
-    sub_1BAB41C(&StringLiteral_13486/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v18);
-    sub_1BAB41C(&StringLiteral_13482/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v19);
-    sub_1BAB41C(&StringLiteral_13492/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v20);
-    sub_1BAB41C(&StringLiteral_13499/*"TUTORIAL_LABEL_STONE_GACHA"*/, v21);
-    sub_1BAB41C(&StringLiteral_13500/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v22);
-    sub_1BAB41C(&StringLiteral_13498/*"TUTORIAL_LABEL_SHOP"*/, v23);
-    sub_1BAB41C(&StringLiteral_13491/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v24);
-    sub_1BAB41C(&StringLiteral_14630/*"TutorialFlagLocalId"*/, v25);
-    sub_1BAB41C(&StringLiteral_13494/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v26);
-    sub_1BAB41C(&StringLiteral_13485/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v27);
-    sub_1BAB41C(&StringLiteral_13490/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v28);
-    sub_1BAB41C(&StringLiteral_13481/*"TUTORIAL_LABEL_DECK_SCENE"*/, v29);
-    sub_1BAB41C(&StringLiteral_13496/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v30);
-    sub_1BAB41C(&StringLiteral_13488/*"TUTORIAL_LABEL_FAVORITE2"*/, v31);
-    sub_1BAB41C(&StringLiteral_13489/*"TUTORIAL_LABEL_FES"*/, v32);
-    byte_4AB4D7E = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v8, v9);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v10, v11);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v12, v13);
+    sub_1BCA7E0(&StringLiteral_13617/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v14, v15);
+    sub_1BCA7E0(&StringLiteral_13630/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v16, v17);
+    sub_1BCA7E0(&StringLiteral_13612/*"TUTORIAL_LABEL_COMBINE"*/, v18, v19);
+    sub_1BCA7E0(&StringLiteral_13628/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v20, v21);
+    sub_1BCA7E0(&StringLiteral_13616/*"TUTORIAL_LABEL_END"*/, v22, v23);
+    sub_1BCA7E0(&StringLiteral_13626/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v24, v25);
+    sub_1BCA7E0(&StringLiteral_14763/*"TutorialFlagConfigId"*/, v26, v27);
+    sub_1BCA7E0(&StringLiteral_13613/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v28, v29);
+    sub_1BCA7E0(&StringLiteral_14766/*"TutorialFlagProgress"*/, v30, v31);
+    sub_1BCA7E0(&StringLiteral_13620/*"TUTORIAL_LABEL_FAVORITE1"*/, v32, v33);
+    sub_1BCA7E0(&StringLiteral_14764/*"TutorialFlagGachaId"*/, v34, v35);
+    sub_1BCA7E0(&StringLiteral_13619/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v36, v37);
+    sub_1BCA7E0(&StringLiteral_13615/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v38, v39);
+    sub_1BCA7E0(&StringLiteral_13625/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v40, v41);
+    sub_1BCA7E0(&StringLiteral_13632/*"TUTORIAL_LABEL_STONE_GACHA"*/, v42, v43);
+    sub_1BCA7E0(&StringLiteral_13633/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v44, v45);
+    sub_1BCA7E0(&StringLiteral_13631/*"TUTORIAL_LABEL_SHOP"*/, v46, v47);
+    sub_1BCA7E0(&StringLiteral_13624/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v48, v49);
+    sub_1BCA7E0(&StringLiteral_14765/*"TutorialFlagLocalId"*/, v50, v51);
+    sub_1BCA7E0(&StringLiteral_13627/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v52, v53);
+    sub_1BCA7E0(&StringLiteral_13618/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v54, v55);
+    sub_1BCA7E0(&StringLiteral_13623/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v56, v57);
+    sub_1BCA7E0(&StringLiteral_13614/*"TUTORIAL_LABEL_DECK_SCENE"*/, v58, v59);
+    sub_1BCA7E0(&StringLiteral_13629/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v60, v61);
+    sub_1BCA7E0(&StringLiteral_13621/*"TUTORIAL_LABEL_FAVORITE2"*/, v62, v63);
+    sub_1BCA7E0(&StringLiteral_13622/*"TUTORIAL_LABEL_FES"*/, v64, v65);
+    byte_4B15217 = 1;
   }
-  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14631/*"TutorialFlagProgress"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)TutorialFlag_TypeInfo->static_fields, StringLiteral_14631/*"TutorialFlagProgress"*/, v2, v3);
-  v33 = StringLiteral_14630/*"TutorialFlagLocalId"*/;
+  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14766/*"TutorialFlagProgress"*/;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)TutorialFlag_TypeInfo->static_fields,
+    StringLiteral_14766/*"TutorialFlagProgress"*/,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v66 = StringLiteral_14765/*"TutorialFlagLocalId"*/;
   static_fields = TutorialFlag_TypeInfo->static_fields;
-  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14630/*"TutorialFlagLocalId"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->SAVE_KEY2, v33, v35, v36);
-  v37 = StringLiteral_14628/*"TutorialFlagConfigId"*/;
-  v38 = TutorialFlag_TypeInfo->static_fields;
-  v38->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14628/*"TutorialFlagConfigId"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v38->SAVE_KEY3, v37, v39, v40);
-  v41 = StringLiteral_14629/*"TutorialFlagGachaId"*/;
-  v42 = TutorialFlag_TypeInfo->static_fields;
-  v42->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14629/*"TutorialFlagGachaId"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v42->SAVE_KEY4, v41, v43, v44);
-  v45 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
+  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14765/*"TutorialFlagLocalId"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY2, v66, v68, v69, v70, v71, v72, v73);
+  v74 = StringLiteral_14763/*"TutorialFlagConfigId"*/;
+  v75 = TutorialFlag_TypeInfo->static_fields;
+  v75->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14763/*"TutorialFlagConfigId"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&v75->SAVE_KEY3, v74, v76, v77, v78, v79, v80, v81);
+  v82 = StringLiteral_14764/*"TutorialFlagGachaId"*/;
+  v83 = TutorialFlag_TypeInfo->static_fields;
+  v83->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14764/*"TutorialFlagGachaId"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&v83->SAVE_KEY4, v82, v84, v85, v86, v87, v88, v89);
+  v93 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BCAA2C(
+                                                                   System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo,
+                                                                   v90,
+                                                                   v91,
+                                                                   v92);
   System_Collections_Generic_Dictionary_object__Int32Enum____ctor(
-    v45,
-    (const MethodInfo_320CD70 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
-  if ( !v45 )
-    sub_1BAB678(v46, v47);
+    v93,
+    (const MethodInfo_325EA84 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
+  if ( !v93 )
+    sub_1BCAA3C(v94, v95);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13499/*"TUTORIAL_LABEL_STONE_GACHA"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13632/*"TUTORIAL_LABEL_STONE_GACHA"*/,
     101,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13483/*"TUTORIAL_LABEL_END"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13616/*"TUTORIAL_LABEL_END"*/,
     102,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13498/*"TUTORIAL_LABEL_SHOP"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13631/*"TUTORIAL_LABEL_SHOP"*/,
     103,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13479/*"TUTORIAL_LABEL_COMBINE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13612/*"TUTORIAL_LABEL_COMBINE"*/,
     104,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13487/*"TUTORIAL_LABEL_FAVORITE1"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13620/*"TUTORIAL_LABEL_FAVORITE1"*/,
     105,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13488/*"TUTORIAL_LABEL_FAVORITE2"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13621/*"TUTORIAL_LABEL_FAVORITE2"*/,
     106,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13490/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13623/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
     107,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13491/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13624/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
     108,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13481/*"TUTORIAL_LABEL_DECK_SCENE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13614/*"TUTORIAL_LABEL_DECK_SCENE"*/,
     109,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13482/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13615/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
     110,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13484/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13617/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
     111,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13486/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13619/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
     112,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13480/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13613/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
     113,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13485/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13618/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
     114,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13494/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13627/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
     115,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13492/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13625/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
     117,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13493/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13626/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
     118,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13495/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13628/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
     120,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13497/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13630/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
     121,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13496/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13629/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
     122,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13500/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13633/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
     126,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v45,
-    (Il2CppObject *)StringLiteral_13489/*"TUTORIAL_LABEL_FES"*/,
+    v93,
+    (Il2CppObject *)StringLiteral_13622/*"TUTORIAL_LABEL_FES"*/,
     127,
-    (const MethodInfo_320D724 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
-  v48 = TutorialFlag_TypeInfo->static_fields;
-  v48->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v45;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v48->flagNameList, (int32_t)v45, v49, v50);
+    (const MethodInfo_325F438 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+  v96 = TutorialFlag_TypeInfo->static_fields;
+  v96->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v93;
+  sub_1BCA784((PartyOrganizationUtility_o *)&v96->flagNameList, (int64_t)v93, v97, v98, v99, v100, v101, v102);
 }
 
 
@@ -230,31 +294,33 @@ void __fastcall TutorialFlag___ctor(TutorialFlag_o *this, const MethodInfo *meth
 void __fastcall TutorialFlag__ClearProgress(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
-  ManagerConfig_c *v3; // x0
-  TutorialFlag_c *v4; // x0
+  __int64 v2; // x2
+  __int64 v3; // x1
+  __int64 v4; // x2
+  ManagerConfig_c *v5; // x0
+  TutorialFlag_c *v6; // x0
 
-  if ( (byte_4AB4D70 & 1) == 0 )
+  if ( (byte_4B15209 & 1) == 0 )
   {
-    sub_1BAB41C(&ManagerConfig_TypeInfo, v1);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v2);
-    byte_4AB4D70 = 1;
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, v1, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v3, v4);
+    byte_4B15209 = 1;
   }
-  v3 = ManagerConfig_TypeInfo;
+  v5 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v3 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v1);
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( !v3->static_fields->UseMock )
+  if ( !v5->static_fields->UseMock )
   {
-    v4 = TutorialFlag_TypeInfo;
+    v6 = TutorialFlag_TypeInfo;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      v4 = TutorialFlag_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
+      v6 = TutorialFlag_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__DeleteKey(v4->static_fields->SAVE_KEY, 0LL);
+    UnityEngine_PlayerPrefs__DeleteKey(v6->static_fields->SAVE_KEY, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -263,14 +329,15 @@ void __fastcall TutorialFlag__ClearProgress(const MethodInfo *method)
 void __fastcall TutorialFlag__CompleteProgress(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
+  __int64 v2; // x2
 
-  if ( (byte_4AB4D71 & 1) == 0 )
+  if ( (byte_4B1520A & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v1);
-    byte_4AB4D71 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v1, v2);
+    byte_4B1520A = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
   TutorialFlag__SetProgress(4, v1);
 }
 
@@ -278,20 +345,21 @@ void __fastcall TutorialFlag__CompleteProgress(const MethodInfo *method)
 void __fastcall TutorialFlag__DeleteContinueData(const MethodInfo *method)
 {
   __int64 v1; // x1
-  TutorialFlag_c *v2; // x0
+  __int64 v2; // x2
+  TutorialFlag_c *v3; // x0
 
-  if ( (byte_4AB4D66 & 1) == 0 )
+  if ( (byte_4B151FF & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v1);
-    byte_4AB4D66 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v1, v2);
+    byte_4B151FF = 1;
   }
-  v2 = TutorialFlag_TypeInfo;
+  v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v2 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
+    v3 = TutorialFlag_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__DeleteKey(v2->static_fields->SAVE_KEY, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey(v3->static_fields->SAVE_KEY, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(TutorialFlag_TypeInfo->static_fields->SAVE_KEY2, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(TutorialFlag_TypeInfo->static_fields->SAVE_KEY3, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(TutorialFlag_TypeInfo->static_fields->SAVE_KEY4, 0LL);
@@ -300,205 +368,225 @@ void __fastcall TutorialFlag__DeleteContinueData(const MethodInfo *method)
 
 bool __fastcall TutorialFlag__Get(System_String_o *flagIdName, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t Id; // w0
-  const MethodInfo *v4; // x1
+  const MethodInfo *v5; // x1
 
-  if ( (byte_4AB4D69 & 1) == 0 )
+  if ( (byte_4B15202 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D69 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15202 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
   Id = TutorialFlag__GetId(flagIdName, method);
-  return TutorialFlag__Get_38072332(Id, v4);
+  return TutorialFlag__Get_38402052(Id, v5);
 }
 
 
 bool __fastcall TutorialFlag__GetConfigFlg(int32_t configFlagId, const MethodInfo *method)
 {
-  TutorialFlag_c *v3; // x0
-  int v4; // w19
+  __int64 v2; // x2
+  TutorialFlag_c *v4; // x0
+  int v5; // w19
 
-  if ( (byte_4AB4D7A & 1) == 0 )
+  if ( (byte_4B15213 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D7A = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15213 = 1;
   }
   if ( (unsigned int)configFlagId > 0x63 )
     return 0;
-  v3 = TutorialFlag_TypeInfo;
-  v4 = 1 << ((configFlagId + 100) % 100);
+  v4 = TutorialFlag_TypeInfo;
+  v5 = 1 << ((configFlagId + 100) % 100);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v3 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+    v4 = TutorialFlag_TypeInfo;
   }
-  return (UnityEngine_PlayerPrefs__GetInt(v3->static_fields->SAVE_KEY3, 0, 0LL) & v4) != 0;
+  return (UnityEngine_PlayerPrefs__GetInt(v4->static_fields->SAVE_KEY3, 0, 0LL) & v5) != 0;
 }
 
 
 bool __fastcall TutorialFlag__GetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
 {
-  char v2; // w19
-  TutorialFlag_c *v3; // x0
+  __int64 v2; // x2
+  char v3; // w19
+  TutorialFlag_c *v4; // x0
 
-  v2 = gachaFlagId;
-  if ( (byte_4AB4D7C & 1) == 0 )
+  v3 = gachaFlagId;
+  if ( (byte_4B15215 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D7C = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15215 = 1;
   }
-  v3 = TutorialFlag_TypeInfo;
+  v4 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v3 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+    v4 = TutorialFlag_TypeInfo;
   }
-  return ((unsigned int)UnityEngine_PlayerPrefs__GetInt(v3->static_fields->SAVE_KEY4, 0, 0LL) >> v2) & 1;
+  return ((unsigned int)UnityEngine_PlayerPrefs__GetInt(v4->static_fields->SAVE_KEY4, 0, 0LL) >> v3) & 1;
 }
 
 
 int32_t __fastcall TutorialFlag__GetId(System_String_o *flagIdName, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  TutorialFlag_c *v4; // x0
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
+  TutorialFlag_c *v6; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *flagNameList; // x0
 
-  if ( (byte_4AB4D68 & 1) == 0 )
+  if ( (byte_4B15201 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v3);
-    byte_4AB4D68 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v4, v5);
+    byte_4B15201 = 1;
   }
-  v4 = TutorialFlag_TypeInfo;
+  v6 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v4 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+    v6 = TutorialFlag_TypeInfo;
   }
-  flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->flagNameList;
+  flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v6->static_fields->flagNameList;
   if ( !flagNameList )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   return System_Collections_Generic_Dictionary_object__Int32Enum___get_Item(
            flagNameList,
            (Il2CppObject *)flagIdName,
-           (const MethodInfo_320D6A4 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
+           (const MethodInfo_325F3B8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
 }
 
 
 TutorialFlag_Id_array *__fastcall TutorialFlag__GetIdList(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v4; // x2
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
-  TutorialFlag_c *v9; // x0
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  TutorialFlag_c *v17; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *flagNameList; // x0
   unsigned int Count; // w0
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v12; // x9
-  TutorialFlag_Id_array *v13; // x19
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v20; // x9
+  TutorialFlag_Id_array *v21; // x19
   il2cpp_array_size_t i; // w22
-  _BOOL8 v15; // x0
-  __int64 v16; // x1
-  char *v17; // x9
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v19; // [xsp+0h] [xbp-60h] BYREF
+  _BOOL8 v23; // x0
+  __int64 v24; // x1
+  char *v25; // x9
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v27; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4AB4D67 & 1) == 0 )
+  if ( (byte_4B15200 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v2);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__, v5);
-    sub_1BAB41C(&TutorialFlag_Id___TypeInfo, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v7);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v8);
-    byte_4AB4D67 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v3, v4);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v5, v6);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v7, v8);
+    sub_1BCA7E0(
+      &Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__,
+      v9,
+      v10);
+    sub_1BCA7E0(&TutorialFlag_Id___TypeInfo, v11, v12);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v13, v14);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v15, v16);
+    byte_4B15200 = 1;
   }
-  v9 = TutorialFlag_TypeInfo;
-  memset(&v19, 0, sizeof(v19));
+  v17 = TutorialFlag_TypeInfo;
+  memset(&v27, 0, sizeof(v27));
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v9 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
+    v17 = TutorialFlag_TypeInfo;
   }
-  flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v9->static_fields->flagNameList;
+  flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v17->static_fields->flagNameList;
   if ( !flagNameList
     || (Count = System_Collections_Generic_Dictionary_object__Int32Enum___get_Count(
                   flagNameList,
-                  (const MethodInfo_320D3F4 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
-        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BAB4C4(
+                  (const MethodInfo_325F108 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
+        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BCA888(
                                                                                   TutorialFlag_Id___TypeInfo,
                                                                                   Count),
-        (v12 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)TutorialFlag_TypeInfo->static_fields->flagNameList) == 0LL) )
+        (v20 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)TutorialFlag_TypeInfo->static_fields->flagNameList) == 0LL) )
   {
-    sub_1BAB678(flagNameList, v1);
+    sub_1BCAA3C(flagNameList, v1);
   }
-  v13 = (TutorialFlag_Id_array *)flagNameList;
+  v21 = (TutorialFlag_Id_array *)flagNameList;
   System_Collections_Generic_Dictionary_object__Int32Enum___GetEnumerator(
-    &v19,
-    v12,
-    (const MethodInfo_320DB14 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
+    &v27,
+    v20,
+    (const MethodInfo_325F828 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
   for ( i = 0; ; ++i )
   {
-    v15 = System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___MoveNext(
-            &v19,
-            (const MethodInfo_33105AC *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
-    if ( !v15 )
+    v23 = System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___MoveNext(
+            &v27,
+            (const MethodInfo_3362FD0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
+    if ( !v23 )
       break;
-    if ( !v13 )
-      sub_1BAB678(v15, v16);
-    if ( i >= v13->max_length )
-      sub_1BAB680(v15, v16);
-    v17 = (char *)v13 + 4 * (int)i;
-    *((_DWORD *)v17 + 8) = v19.fields._current.fields.value;
+    if ( !v21 )
+      sub_1BCAA3C(v23, v24);
+    if ( i >= v21->max_length )
+      sub_1BCAA44(v23, v24);
+    v25 = (char *)v21 + 4 * (int)i;
+    *((_DWORD *)v25 + 8) = v27.fields._current.fields.value;
   }
   System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___Dispose(
-    &v19,
-    (const MethodInfo_33106D0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
-  return v13;
+    &v27,
+    (const MethodInfo_33630F4 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
+  return v21;
 }
 
 
 int32_t __fastcall TutorialFlag__GetProgress(const MethodInfo *method)
 {
   __int64 v1; // x1
-  TutorialFlag_c *v2; // x0
+  __int64 v2; // x2
+  TutorialFlag_c *v3; // x0
 
-  if ( (byte_4AB4D6F & 1) == 0 )
+  if ( (byte_4B15208 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v1);
-    byte_4AB4D6F = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v1, v2);
+    byte_4B15208 = 1;
   }
-  v2 = TutorialFlag_TypeInfo;
+  v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v2 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
+    v3 = TutorialFlag_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY, 0, 0LL);
+  return UnityEngine_PlayerPrefs__GetInt(v3->static_fields->SAVE_KEY, 0, 0LL);
 }
 
 
-bool __fastcall TutorialFlag__Get_38072332(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_38402052(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4AB4D6A & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B15203 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D6A = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15203 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_38105324(flagId, method);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+  return TutorialFlag__Get_38435200(flagId, method);
 }
 
 
-bool __fastcall TutorialFlag__Get_38072512(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+bool __fastcall TutorialFlag__Get_38402232(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial1; // x8
 
@@ -525,13 +613,14 @@ bool __fastcall TutorialFlag__Get_38072512(UserGameEntity_o *userGameEntity, int
                                                  + (1374389535LL * flagId < 0))))) != 0;
     }
 LABEL_9:
-    sub_1BAB678(userGameEntity, flagId);
+    sub_1BCAA3C(userGameEntity, *(_QWORD *)&flagId);
   }
   return 0;
 }
 
 
-bool __fastcall TutorialFlag__Get_38072732(
+// local variable allocation has failed, the output may be wrong!
+bool __fastcall TutorialFlag__Get_38402452(
         OtherUserGameEntity_o *otherUserGameEntity,
         int32_t flagId,
         const MethodInfo *method)
@@ -539,7 +628,7 @@ bool __fastcall TutorialFlag__Get_38072732(
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !otherUserGameEntity )
-    sub_1BAB678(0LL, flagId);
+    sub_1BCAA3C(0LL, *(_QWORD *)&flagId);
   return (otherUserGameEntity->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                                      - 100
                                                                      * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -547,12 +636,13 @@ bool __fastcall TutorialFlag__Get_38072732(
 }
 
 
-bool __fastcall TutorialFlag__Get_38072924(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+bool __fastcall TutorialFlag__Get_38402644(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !followerInfo )
-    sub_1BAB678(0LL, flagId);
+    sub_1BCAA3C(0LL, *(_QWORD *)&flagId);
   return (followerInfo->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                               - 100
                                                               * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -560,72 +650,78 @@ bool __fastcall TutorialFlag__Get_38072924(FollowerInfo_o *followerInfo, int32_t
 }
 
 
-bool __fastcall TutorialFlag__Get_38105324(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_38435200(int32_t flagId, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  __int64 v2; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4AB4D6B & 1) == 0 )
+  if ( (byte_4B15204 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D6B = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15204 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_38072512(SelfUserGame, flagId, v3);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v4);
+  return TutorialFlag__Get_38402232(SelfUserGame, flagId, v5);
 }
 
 
-bool __fastcall TutorialFlag__Get_38106760(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_38436636(int32_t flagId, const MethodInfo *method)
 {
-  TutorialFlag_c *v3; // x0
-  int v4; // w19
+  __int64 v2; // x2
+  TutorialFlag_c *v4; // x0
+  int v5; // w19
 
-  if ( (byte_4AB4D77 & 1) == 0 )
+  if ( (byte_4B15210 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D77 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15210 = 1;
   }
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
-  v3 = TutorialFlag_TypeInfo;
-  v4 = 1 << (flagId % 100);
+  v4 = TutorialFlag_TypeInfo;
+  v5 = 1 << (flagId % 100);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v3 = TutorialFlag_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+    v4 = TutorialFlag_TypeInfo;
   }
-  return (UnityEngine_PlayerPrefs__GetInt(v3->static_fields->SAVE_KEY2, 0, 0LL) & v4) != 0;
+  return (UnityEngine_PlayerPrefs__GetInt(v4->static_fields->SAVE_KEY2, 0, 0LL) & v5) != 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall TutorialFlag__Get_38107184(int32_t flagId, int32_t eventId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_38437060(int32_t flagId, int32_t eventId, const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   DataManager_o *Instance; // x0
-  __int64 v8; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   Il2CppObject *MasterData_object; // x21
   UserEventEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4AB4D79 & 1) == 0 )
+  if ( (byte_4B15212 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4AB4D79 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId, method);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7, v8);
+    byte_4B15212 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
     goto LABEL_12;
@@ -634,7 +730,7 @@ bool __fastcall TutorialFlag__Get_38107184(int32_t flagId, int32_t eventId, cons
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_12:
-    sub_1BAB678(Instance, v8);
+    sub_1BCAA3C(Instance, v10);
   return UserEventEntity__getTutorialFlag(entity, flagId, 0LL);
 }
 
@@ -642,103 +738,109 @@ LABEL_12:
 bool __fastcall TutorialFlag__IsProgressComplete(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
-  const MethodInfo *v2; // x1
+  __int64 v2; // x2
+  const MethodInfo *v3; // x1
 
-  if ( (byte_4AB4D76 & 1) == 0 )
+  if ( (byte_4B1520F & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v1);
-    byte_4AB4D76 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v1, v2);
+    byte_4B1520F = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_38072332(102, v1) )
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v1);
+  if ( TutorialFlag__Get_38402052(102, v1) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__IsProgressDone(4, v2);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v3);
+  return TutorialFlag__IsProgressDone(4, v3);
 }
 
 
 bool __fastcall TutorialFlag__IsProgressDone(int32_t count, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
+  __int64 v2; // x2
+  const MethodInfo *v4; // x1
 
-  if ( (byte_4AB4D74 & 1) == 0 )
+  if ( (byte_4B1520D & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D74 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B1520D = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_38072332(102, method) )
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+  if ( TutorialFlag__Get_38402052(102, method) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__IsProgressDone_38106544(count, v3);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v4);
+  return TutorialFlag__IsProgressDone_38436420(count, v4);
 }
 
 
-bool __fastcall TutorialFlag__IsProgressDone_38106544(int32_t count, const MethodInfo *method)
+bool __fastcall TutorialFlag__IsProgressDone_38436420(int32_t count, const MethodInfo *method)
 {
-  TutorialFlag_c *v3; // x0
+  __int64 v2; // x2
+  TutorialFlag_c *v4; // x0
 
-  if ( (byte_4AB4D75 & 1) == 0 )
+  if ( (byte_4B1520E & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D75 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B1520E = 1;
   }
-  v3 = TutorialFlag_TypeInfo;
+  v4 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__GetProgress((const MethodInfo *)v3) >= count;
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+  return TutorialFlag__GetProgress((const MethodInfo *)v4) >= count;
 }
 
 
 void __fastcall TutorialFlag__Set(System_String_o *flagIdName, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t Id; // w0
-  const MethodInfo *v4; // x1
+  const MethodInfo *v5; // x1
 
-  if ( (byte_4AB4D6C & 1) == 0 )
+  if ( (byte_4B15205 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D6C = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15205 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
   Id = TutorialFlag__GetId(flagIdName, method);
-  TutorialFlag__Set_38105516(Id, v4);
+  TutorialFlag__Set_38435392(Id, v5);
 }
 
 
 void __fastcall TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  ManagerConfig_c *v4; // x0
-  TutorialFlag_c *v5; // x0
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
+  ManagerConfig_c *v6; // x0
+  TutorialFlag_c *v7; // x0
   int32_t Int; // w0
 
-  if ( (byte_4AB4D7B & 1) == 0 )
+  if ( (byte_4B15214 & 1) == 0 )
   {
-    sub_1BAB41C(&ManagerConfig_TypeInfo, method);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v3);
-    byte_4AB4D7B = 1;
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v4, v5);
+    byte_4B15214 = 1;
   }
-  v4 = ManagerConfig_TypeInfo;
+  v6 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+    v6 = ManagerConfig_TypeInfo;
   }
-  if ( !v4->static_fields->UseMock && (unsigned int)configFlagId <= 0x63 )
+  if ( !v6->static_fields->UseMock && (unsigned int)configFlagId <= 0x63 )
   {
-    v5 = TutorialFlag_TypeInfo;
+    v7 = TutorialFlag_TypeInfo;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      v5 = TutorialFlag_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+      v7 = TutorialFlag_TypeInfo;
     }
-    Int = UnityEngine_PlayerPrefs__GetInt(v5->static_fields->SAVE_KEY3, 0, 0LL);
+    Int = UnityEngine_PlayerPrefs__GetInt(v7->static_fields->SAVE_KEY3, 0, 0LL);
     UnityEngine_PlayerPrefs__SetInt(
       TutorialFlag_TypeInfo->static_fields->SAVE_KEY3,
       Int | (1 << ((configFlagId + 100) % 100)),
@@ -750,37 +852,39 @@ void __fastcall TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInf
 
 void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
 {
-  char v2; // w19
-  __int64 v3; // x1
-  ManagerConfig_c *v4; // x0
-  int v5; // w19
-  TutorialFlag_c *v6; // x0
+  __int64 v2; // x2
+  char v3; // w19
+  __int64 v4; // x1
+  __int64 v5; // x2
+  ManagerConfig_c *v6; // x0
+  int v7; // w19
+  TutorialFlag_c *v8; // x0
   int32_t Int; // w0
 
-  v2 = gachaFlagId;
-  if ( (byte_4AB4D7D & 1) == 0 )
+  v3 = gachaFlagId;
+  if ( (byte_4B15216 & 1) == 0 )
   {
-    sub_1BAB41C(&ManagerConfig_TypeInfo, method);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v3);
-    byte_4AB4D7D = 1;
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v4, v5);
+    byte_4B15216 = 1;
   }
-  v4 = ManagerConfig_TypeInfo;
+  v6 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+    v6 = ManagerConfig_TypeInfo;
   }
-  if ( !v4->static_fields->UseMock )
+  if ( !v6->static_fields->UseMock )
   {
-    v5 = 1 << v2;
-    v6 = TutorialFlag_TypeInfo;
+    v7 = 1 << v3;
+    v8 = TutorialFlag_TypeInfo;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      v6 = TutorialFlag_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+      v8 = TutorialFlag_TypeInfo;
     }
-    Int = UnityEngine_PlayerPrefs__GetInt(v6->static_fields->SAVE_KEY4, 0, 0LL);
-    UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY4, Int | v5, 0LL);
+    Int = UnityEngine_PlayerPrefs__GetInt(v8->static_fields->SAVE_KEY4, 0, 0LL);
+    UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY4, Int | v7, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -788,80 +892,89 @@ void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo 
 
 void __fastcall TutorialFlag__SetProgress(int32_t count, const MethodInfo *method)
 {
-  if ( (byte_4AB4D72 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B1520B & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D72 = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B1520B = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__SetProgress_38106244(count, method);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+  TutorialFlag__SetProgress_38436120(count, method);
 }
 
 
-void __fastcall TutorialFlag__SetProgress_38106244(int32_t count, const MethodInfo *method)
+void __fastcall TutorialFlag__SetProgress_38436120(int32_t count, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  ManagerConfig_c *v4; // x0
-  TutorialFlag_c *v5; // x0
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
+  ManagerConfig_c *v6; // x0
+  TutorialFlag_c *v7; // x0
 
-  if ( (byte_4AB4D73 & 1) == 0 )
+  if ( (byte_4B1520C & 1) == 0 )
   {
-    sub_1BAB41C(&ManagerConfig_TypeInfo, method);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v3);
-    byte_4AB4D73 = 1;
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v4, v5);
+    byte_4B1520C = 1;
   }
-  v4 = ManagerConfig_TypeInfo;
+  v6 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+    v6 = ManagerConfig_TypeInfo;
   }
-  if ( !v4->static_fields->UseMock )
+  if ( !v6->static_fields->UseMock )
   {
-    v5 = TutorialFlag_TypeInfo;
+    v7 = TutorialFlag_TypeInfo;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      v5 = TutorialFlag_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+      v7 = TutorialFlag_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetInt(v5->static_fields->SAVE_KEY, count, 0LL);
+    UnityEngine_PlayerPrefs__SetInt(v7->static_fields->SAVE_KEY, count, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
 
 
-void __fastcall TutorialFlag__Set_38105516(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_38435392(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4AB4D6D & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B15206 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D6D = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15206 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_38105600(flagId, method);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+  TutorialFlag__Set_38435476(flagId, method);
 }
 
 
-void __fastcall TutorialFlag__Set_38105600(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_38435476(int32_t flagId, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
+  __int64 v2; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4AB4D6E & 1) == 0 )
+  if ( (byte_4B15207 & 1) == 0 )
   {
-    sub_1BAB41C(&TutorialFlag_TypeInfo, method);
-    byte_4AB4D6E = 1;
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, method, v2);
+    byte_4B15207 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_38105704(SelfUserGame, flagId, v3);
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, v4);
+  TutorialFlag__Set_38435580(SelfUserGame, flagId, v5);
 }
 
 
-void __fastcall TutorialFlag__Set_38105704(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+void __fastcall TutorialFlag__Set_38435580(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial2; // x8
 
@@ -875,7 +988,7 @@ void __fastcall TutorialFlag__Set_38105704(UserGameEntity_o *userGameEntity, int
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1BAB678(userGameEntity, flagId);
+    sub_1BCAA3C(userGameEntity, *(_QWORD *)&flagId);
   }
   if ( !userGameEntity )
     goto LABEL_9;
@@ -887,37 +1000,39 @@ LABEL_7:
 }
 
 
-void __fastcall TutorialFlag__Set_38106932(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_38436808(int32_t flagId, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  ManagerConfig_c *v4; // x0
-  TutorialFlag_c *v5; // x0
-  int v6; // w19
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
+  ManagerConfig_c *v6; // x0
+  TutorialFlag_c *v7; // x0
+  int v8; // w19
   int32_t Int; // w0
 
-  if ( (byte_4AB4D78 & 1) == 0 )
+  if ( (byte_4B15211 & 1) == 0 )
   {
-    sub_1BAB41C(&ManagerConfig_TypeInfo, method);
-    sub_1BAB41C(&TutorialFlag_TypeInfo, v3);
-    byte_4AB4D78 = 1;
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&TutorialFlag_TypeInfo, v4, v5);
+    byte_4B15211 = 1;
   }
-  v4 = ManagerConfig_TypeInfo;
+  v6 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+    v6 = ManagerConfig_TypeInfo;
   }
-  if ( !v4->static_fields->UseMock && (unsigned int)(flagId - 100) <= 0x63 )
+  if ( !v6->static_fields->UseMock && (unsigned int)(flagId - 100) <= 0x63 )
   {
-    v5 = TutorialFlag_TypeInfo;
-    v6 = 1 << (flagId % 100);
+    v7 = TutorialFlag_TypeInfo;
+    v8 = 1 << (flagId % 100);
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      v5 = TutorialFlag_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo, method);
+      v7 = TutorialFlag_TypeInfo;
     }
-    Int = UnityEngine_PlayerPrefs__GetInt(v5->static_fields->SAVE_KEY2, 0, 0LL);
-    UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY2, Int | v6, 0LL);
+    Int = UnityEngine_PlayerPrefs__GetInt(v7->static_fields->SAVE_KEY2, 0, 0LL);
+    UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY2, Int | v8, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }

@@ -13,24 +13,28 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
 {
   UnityEngine_Object_o *outerPanel; // x21
   __int64 v6; // x1
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  struct BattleWindowOuterClickComponent_o *v9; // x0
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  struct BattleWindowOuterClickComponent_o *v13; // x0
 
-  if ( (byte_4AB8F5B & 1) == 0 )
+  if ( (byte_4B1944B & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, callBack);
-    byte_4AB8F5B = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, callBack, method);
+    byte_4B1944B = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, callBack);
   if ( UnityEngine_Object__op_Inequality(outerPanel, 0LL, 0LL) )
   {
-    v9 = this->fields.outerPanel;
-    if ( !v9 )
-      sub_1BAB678(0LL, v6);
-    v9->fields.clickCallBack = callBack;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v9->fields.clickCallBack, (int32_t)callBack, v7, v8);
+    v13 = this->fields.outerPanel;
+    if ( !v13 )
+      sub_1BCAA3C(0LL, v6);
+    v13->fields.clickCallBack = callBack;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v13->fields.clickCallBack, (int64_t)callBack, v7, v8, v9, v10, v11, v12);
   }
 }

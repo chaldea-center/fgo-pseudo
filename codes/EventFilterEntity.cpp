@@ -1,28 +1,30 @@
 void __fastcall EventFilterEntity___ctor(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5CED & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B1618E & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5CED = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B1618E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventFilterEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4AB5CEB & 1) == 0 )
+  if ( (byte_4B1618C & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&type);
-    byte_4AB5CEB = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&type, method);
+    byte_4B1618C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -48,18 +50,19 @@ bool __fastcall EventFilterEntity__IsExistButtonText(EventFilterEntity_o *this, 
 
 bool __fastcall EventFilterEntity__IsOpen(EventFilterEntity_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t closeQuestId; // w19
   int32_t openQuestId; // w20
 
-  if ( (byte_4AB5CEC & 1) == 0 )
+  if ( (byte_4B1618D & 1) == 0 )
   {
-    sub_1BAB41C(&CondType_TypeInfo, method);
-    byte_4AB5CEC = 1;
+    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
+    byte_4B1618D = 1;
   }
   openQuestId = this->fields.openQuestId;
   closeQuestId = this->fields.closeQuestId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsQuestEnable(openQuestId, closeQuestId, 0LL);
 }
 

@@ -4,12 +4,9 @@ void __fastcall DeckListViewItem___ctor(
         PartyListViewItem_o *partyItem,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  int32_t v7; // w3
-
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   this->fields.partyItem = partyItem;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.partyItem, (int32_t)partyItem, v6, v7);
+  sub_1BCA784(&this->fields.partyItem, partyItem);
 }
 
 
@@ -19,6 +16,7 @@ void __fastcall DeckListViewItem__Finalize(DeckListViewItem_o *this, const Metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 PartyOrganizationListViewItem_o *__fastcall DeckListViewItem__GetMember(
         DeckListViewItem_o *this,
         int32_t num,
@@ -28,7 +26,7 @@ PartyOrganizationListViewItem_o *__fastcall DeckListViewItem__GetMember(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1BAB678(0LL, num);
+    sub_1BCAA3C(0LL, *(_QWORD *)&num);
   return PartyListViewItem__GetMember(partyItem, num, 0LL);
 }
 
@@ -50,7 +48,7 @@ UserDeckEntity_o *__fastcall DeckListViewItem__GetUserDeck(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1BAB678(0LL, baseItem);
+    sub_1BCAA3C(0LL, baseItem);
   return PartyListViewItem__GetUserDeck(partyItem, baseItem, 0LL);
 }
 
@@ -61,7 +59,7 @@ int64_t __fastcall DeckListViewItem__get_DeckId(DeckListViewItem_o *this, const 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return partyItem->fields.id;
 }
 
@@ -72,7 +70,7 @@ System_String_o *__fastcall DeckListViewItem__get_DeckName(DeckListViewItem_o *t
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return partyItem->fields.deckName;
 }
 
@@ -83,6 +81,6 @@ int32_t __fastcall DeckListViewItem__get_DeckNum(DeckListViewItem_o *this, const
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   return PartyListViewItem__get_DeckNum(partyItem, 0LL);
 }

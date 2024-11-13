@@ -1,28 +1,30 @@
 void __fastcall CombineCostumeEntity___ctor(CombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5B09 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B15FA7 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5B09 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B15FA7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CombineCostumeEntity__CreatePK(int32_t svtId, int32_t costumeId, const MethodInfo *method)
 {
-  if ( (byte_4AB5B08 & 1) == 0 )
+  if ( (byte_4B15FA6 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&costumeId);
-    byte_4AB5B08 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&costumeId, method);
+    byte_4B15FA6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            costumeId,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

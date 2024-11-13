@@ -4,6 +4,7 @@ void __fastcall BattleSpeedButtonComponent___ctor(BattleSpeedButtonComponent_o *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleSpeedButtonComponent__OnPress(
         BattleSpeedButtonComponent_o *this,
         bool isPressed,
@@ -14,7 +15,7 @@ void __fastcall BattleSpeedButtonComponent__OnPress(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1BAB678(0LL, isPressed);
+    sub_1BCAA3C(0LL, isPressed);
   v4 = 1.0;
   if ( isPressed )
     v4 = 2.0;

@@ -10,69 +10,78 @@ void __fastcall ServantNpInfoIconComponent__SetCommandCardComponent(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
   BattleCommandComponent_o *commandCard; // x0
-  struct BattleCommandComponent_o *v9; // x21
-  int32_t v10; // w2
-  int32_t v11; // w3
+  struct BattleCommandComponent_o *v12; // x21
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  __int64 v19; // x2
+  __int64 v20; // x3
   int32_t npCardId; // w22
   int32_t svtId; // w23
   int32_t limitCount; // w24
-  BattleCommandData_o *v15; // x21
+  BattleCommandData_o *v24; // x21
 
-  if ( (byte_4AB996C & 1) == 0 )
+  if ( (byte_4B19E98 & 1) == 0 )
   {
-    sub_1BAB41C(&BattleCommandData_TypeInfo, npData);
-    sub_1BAB41C(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BAB41C(&StringLiteral_15160/*"Unlit/Transparent Colored"*/, v7);
-    byte_4AB996C = 1;
+    sub_1BCA7E0(&BattleCommandData_TypeInfo, npData, method);
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7, v8);
+    sub_1BCA7E0(&StringLiteral_15295/*"Unlit/Transparent Colored"*/, v9, v10);
+    byte_4B19E98 = 1;
   }
   commandCard = this->fields.commandCard;
   if ( !commandCard )
     goto LABEL_14;
   BattleCommandComponent__setDepth(commandCard, 110, 0LL);
-  v9 = this->fields.commandCard;
+  v12 = this->fields.commandCard;
   commandCard = (BattleCommandComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( !v9 )
+  if ( !v12 )
     goto LABEL_14;
-  v9->fields.target = (struct UnityEngine_GameObject_o *)commandCard;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v9->fields.target, (int32_t)commandCard, v10, v11);
+  v12->fields.target = (struct UnityEngine_GameObject_o *)commandCard;
+  sub_1BCA784((PartyOrganizationUtility_o *)&v12->fields.target, (int64_t)commandCard, v13, v14, v15, v16, v17, v18);
   if ( !npData )
     goto LABEL_14;
   npCardId = npData->fields.npCardId;
   svtId = npData->fields.svtId;
   limitCount = npData->fields.limitCount;
-  v15 = (BattleCommandData_o *)sub_1BAB668(BattleCommandData_TypeInfo);
-  BattleCommandData___ctor_43715172(v15, npCardId, svtId, limitCount, 0, -1, 0LL);
-  if ( !v15 )
+  v24 = (BattleCommandData_o *)sub_1BCAA2C(BattleCommandData_TypeInfo, npData, v19, v20);
+  BattleCommandData___ctor_44072696(v24, npCardId, svtId, limitCount, 0, -1, 0LL);
+  if ( !v24 )
     goto LABEL_14;
-  v15->fields.treasureDvc = npData->fields.svtDispNpId;
-  commandCard = (BattleCommandComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v24->fields.treasureDvc = npData->fields.svtDispNpId;
+  commandCard = (BattleCommandComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !commandCard )
     goto LABEL_14;
   commandCard = (BattleCommandComponent_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)commandCard,
-                                              (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                              (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
   if ( !commandCard )
     goto LABEL_14;
-  v15->fields._loadsvtLimit = ServantLimitImageMaster__GetServantLimitCountSealAfter(
+  v24->fields._loadsvtLimit = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                 (ServantLimitImageMaster_o *)commandCard,
                                 npData->fields.svtId,
                                 npData->fields.dispLimitCount,
                                 0LL);
   commandCard = this->fields.commandCard;
   if ( !commandCard
-    || (BattleCommandComponent__setData(commandCard, v15, 0LL, 0, 1, 0, 1, 0LL),
+    || (BattleCommandComponent__setData(commandCard, v24, 0LL, 0, 1, 0, 1, 0LL),
         (commandCard = this->fields.commandCard) == 0LL)
-    || (BattleCommandComponent__setShader(commandCard, (System_String_o *)StringLiteral_15160/*"Unlit/Transparent Colored"*/, 0LL),
+    || (BattleCommandComponent__setShader(commandCard, (System_String_o *)StringLiteral_15295/*"Unlit/Transparent Colored"*/, 0LL),
         (commandCard = this->fields.commandCard) == 0LL)
     || (BattleCommandComponent__updateView(commandCard, 1, 0, 1, 0, npData->fields.isCardHide, 0LL),
         (commandCard = this->fields.commandCard) == 0LL) )
   {
 LABEL_14:
-    sub_1BAB678(commandCard, npData);
+    sub_1BCAA3C(commandCard, npData);
   }
   BattleCommandComponent__setTouchFlg(commandCard, 0, 0LL);
 }
@@ -102,11 +111,11 @@ void __fastcall ServantNpInfoIconComponent__SetNpInfo(
     || (UILabel__set_text((UILabel_o *)backSprite, npData->fields.npRuby, 0LL),
         (backSprite = (UnityEngine_Component_o *)this->fields.tdNameLabel) == 0LL) )
   {
-    sub_1BAB678(backSprite, baseData);
+    sub_1BCAA3C(backSprite, baseData);
   }
   UILabel__set_text((UILabel_o *)backSprite, npData->fields.svtNpName, 0LL);
   GameObjectExtensions__AddLocalPositionY(this->fields.commandCardBase, npBasePosY, 0LL);
-  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_45347224(
+  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_45724180(
     npData->fields.svtId,
     npData->fields.dispLimitCount,
     this->fields.tdNameLabel,
@@ -150,32 +159,41 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
 {
   ServantNpInfoIconComponent_o *v7; // x20
   __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
   UnityEngine_Object_o *commandCard; // x22
-  const MethodInfo *v12; // x2
+  __int64 v15; // x1
+  const MethodInfo *v16; // x2
   Il2CppObject *commandCardPrefab; // x22
-  ServantNpInfoIconComponent_o *v14; // x22
+  ServantNpInfoIconComponent_o *v18; // x22
   UnityEngine_Transform_o *transform; // x23
   float x; // s9
   float y; // s10
   float z; // s11
-  __int64 v19; // x1
+  __int64 v23; // x1
+  __int64 v24; // x2
   Il2CppObject *Component_object; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
+  int64_t v26; // x2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  BattleSetupInfo_o *v29; // x5
+  FollowerInfo_o *v30; // x6
+  PartyListViewItem_o *v31; // x7
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = this;
-  if ( (byte_4AB996B & 1) == 0 )
+  if ( (byte_4B19E97 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___, baseUsrSvtData);
-    sub_1BAB41C(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
-    this = (ServantNpInfoIconComponent_o *)sub_1BAB41C(&StringLiteral_4610/*"CommandCard"*/, v10);
-    byte_4AB996B = 1;
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___, baseUsrSvtData, npData);
+    sub_1BCA7E0(&Method_UnityEngine_Object_Instantiate_GameObject___, v8, v9);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v10, v11);
+    this = (ServantNpInfoIconComponent_o *)sub_1BCA7E0(&StringLiteral_4679/*"CommandCard"*/, v12, v13);
+    byte_4B19E97 = 1;
   }
   if ( !npData )
     goto LABEL_19;
@@ -183,27 +201,27 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
   {
     commandCard = (UnityEngine_Object_o *)v7->fields.commandCard;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, baseUsrSvtData);
     if ( UnityEngine_Object__op_Inequality(commandCard, 0LL, 0LL) )
       goto LABEL_17;
     commandCardPrefab = (Il2CppObject *)v7->fields.commandCardPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
     this = (ServantNpInfoIconComponent_o *)UnityEngine_Object__Instantiate_object_(
                                              commandCardPrefab,
-                                             (const MethodInfo_2F483D8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_2F9779C *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( this )
     {
-      v14 = this;
+      v18 = this;
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-      this = (ServantNpInfoIconComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v14, 0LL);
+      this = (ServantNpInfoIconComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v18, 0LL);
       if ( this )
       {
         localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0LL);
         x = localScale.fields.x;
         y = localScale.fields.y;
         z = localScale.fields.z;
-        UnityEngine_Object__set_name((UnityEngine_Object_o *)v14, (System_String_o *)StringLiteral_4610/*"CommandCard"*/, 0LL);
+        UnityEngine_Object__set_name((UnityEngine_Object_o *)v18, (System_String_o *)StringLiteral_4679/*"CommandCard"*/, 0LL);
         this = (ServantNpInfoIconComponent_o *)v7->fields.commandCardBase;
         if ( this )
         {
@@ -213,41 +231,45 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
           if ( transform )
           {
             UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)this, 0LL);
-            v24.fields.x = 0.0;
-            v24.fields.z = 0.0;
-            v24.fields.y = npIconPosY;
-            UnityEngine_Transform__set_localPosition(transform, v24, 0LL);
-            if ( !byte_4AB0697 )
+            v33.fields.x = 0.0;
+            v33.fields.z = 0.0;
+            v33.fields.y = npIconPosY;
+            UnityEngine_Transform__set_localPosition(transform, v33, 0LL);
+            if ( !byte_4B109C7 )
             {
-              sub_1BAB41C(&UnityEngine_Quaternion_TypeInfo, v19);
-              byte_4AB0697 = 1;
+              sub_1BCA7E0(&UnityEngine_Quaternion_TypeInfo, v23, v24);
+              byte_4B109C7 = 1;
             }
             UnityEngine_Transform__set_localRotation(
               transform,
               UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
               0LL);
-            v25.fields.x = x;
-            v25.fields.y = y;
-            v25.fields.z = z;
-            UnityEngine_Transform__set_localScale(transform, v25, 0LL);
+            v34.fields.x = x;
+            v34.fields.y = y;
+            v34.fields.z = z;
+            UnityEngine_Transform__set_localScale(transform, v34, 0LL);
             Component_object = UnityEngine_GameObject__GetComponent_object_(
-                                 (UnityEngine_GameObject_o *)v14,
-                                 (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
+                                 (UnityEngine_GameObject_o *)v18,
+                                 (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
             v7->fields.commandCard = (struct BattleCommandComponent_o *)Component_object;
-            sub_1BAB3C0(
-              (ServantStatusBattleListViewItem_o *)&v7->fields.commandCard,
-              (int32_t)Component_object,
-              v21,
-              v22);
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v7->fields.commandCard,
+              (int64_t)Component_object,
+              v26,
+              v27,
+              v28,
+              v29,
+              v30,
+              v31);
 LABEL_17:
-            ServantNpInfoIconComponent__SetCommandCardComponent(v7, npData, v12);
+            ServantNpInfoIconComponent__SetCommandCardComponent(v7, npData, v16);
             return;
           }
         }
       }
     }
 LABEL_19:
-    sub_1BAB678(this, baseUsrSvtData);
+    sub_1BCAA3C(this, baseUsrSvtData);
   }
 }
 
@@ -259,38 +281,37 @@ void __fastcall ServantNpInfoIconComponent__setNpLv(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   UILabel_o *levelLabel; // x21
-  System_String_o *v8; // x22
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  Il2CppObject *v12; // x0
+  System_String_o *v10; // x22
+  Il2CppObject *v11; // x0
   System_String_o *gameObject; // x0
-  __int64 v14; // x1
-  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v13; // x1
+  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4AB996D & 1) == 0 )
+  if ( (byte_4B19E99 & 1) == 0 )
   {
-    sub_1BAB41C(&int_TypeInfo, *(_QWORD *)&lv);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v5);
-    sub_1BAB41C(&StringLiteral_8241/*"LEVEL_INFO"*/, v6);
-    byte_4AB996D = 1;
+    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&lv, method);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v5, v6);
+    sub_1BCA7E0(&StringLiteral_8362/*"LEVEL_INFO"*/, v7, v8);
+    byte_4B19E99 = 1;
   }
   levelLabel = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8241/*"LEVEL_INFO"*/, 0LL);
-  v15 = lv;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v9, v10, v11);
-  gameObject = System_String__Format(v8, v12, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&lv);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8362/*"LEVEL_INFO"*/, 0LL);
+  v14 = lv;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
+  gameObject = System_String__Format(v10, v11, 0LL);
   if ( !levelLabel
     || (UILabel__set_text(levelLabel, gameObject, 0LL), (gameObject = (System_String_o *)this->fields.levelLabel) == 0LL)
     || (gameObject = (System_String_o *)UnityEngine_Component__get_gameObject(
                                           (UnityEngine_Component_o *)gameObject,
                                           0LL)) == 0LL )
   {
-    sub_1BAB678(gameObject, v14);
+    sub_1BCAA3C(gameObject, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
 }
@@ -312,40 +333,52 @@ void __fastcall ServantNpInfoIconComponent_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
-  int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
-  __int64 v10; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x8
+  __int64 v10; // x21
+  int v12; // w22
+  struct System_Reflection_MethodInfo_o *v13; // x9
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
+  v10 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.method,
+    (int64_t)object,
+    *(int64_t *)&method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BAB4DC(v6) & 1) == 0 )
+  if ( (sub_1BCA8A0(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BAB544(v10, 0LL);
+      v14 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCA908(v14, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19F3B18;
+  this->fields.m_target = (Il2CppObject *)sub_1A11A54;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19F3AD0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A11A0C;
 }
 
 
@@ -361,14 +394,14 @@ System_IAsyncResult_o *__fastcall ServantNpInfoIconComponent_ClickDelegate__Begi
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4AB996E & 1) == 0 )
+  if ( (byte_4B19E9A & 1) == 0 )
   {
-    sub_1BAB41C(&bool_TypeInfo, isDecide);
-    byte_4AB996E = 1;
+    sub_1BCA7E0(&bool_TypeInfo, isDecide, callback);
+    byte_4B19E9A = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1BCA794(this, v9, callback, object);
 }
 
 
@@ -377,7 +410,7 @@ void __fastcall ServantNpInfoIconComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BAB3D4(result, 0LL, method);
+  sub_1BCA798(result, 0LL, method);
 }
 
 

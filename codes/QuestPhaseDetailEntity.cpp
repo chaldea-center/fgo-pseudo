@@ -1,28 +1,30 @@
 void __fastcall QuestPhaseDetailEntity___ctor(QuestPhaseDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB61ED & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B166A1 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB61ED = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B166A1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestPhaseDetailEntity__CreatePK(int32_t questId, int32_t phase, const MethodInfo *method)
 {
-  if ( (byte_4AB61EC & 1) == 0 )
+  if ( (byte_4B166A0 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase);
-    byte_4AB61EC = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase, method);
+    byte_4B166A0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            phase,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -65,43 +67,46 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  __int64 v6; // x2
   UnityEngine_GameObject_o *IsNullOrEmpty; // x0
-  __int64 v7; // x1
-  char v8; // w21
+  __int64 v8; // x1
+  char v9; // w21
+  __int64 v11; // x1
   System_String_o *bannerSp; // x21
   struct System_Int32_array *setSize; // x8
-  struct System_Int32_array *v12; // x8
+  struct System_Int32_array *v14; // x8
   struct System_Int32_array *offset; // x8
-  __int64 v14; // x1
+  __int64 v16; // x1
+  __int64 v17; // x2
   UnityEngine_GameObject_o *gameObject; // x21
-  struct System_Int32_array *v16; // x8
-  struct System_Int32_array *v17; // x8
+  struct System_Int32_array *v19; // x8
+  struct System_Int32_array *v20; // x8
   float r; // s0
   float g; // s1
   float b; // s2
   float a; // s3
-  UnityEngine_Color_o v22; // [xsp+0h] [xbp-40h] BYREF
+  UnityEngine_Color_o v25; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4AB61F1 & 1) == 0 )
+  if ( (byte_4B166A5 & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, sprite);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
-    byte_4AB61F1 = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, sprite, method);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v5, v6);
+    byte_4B166A5 = 1;
   }
-  *(_QWORD *)&v22.fields.r = 0LL;
-  *(_QWORD *)&v22.fields.b = 0LL;
+  *(_QWORD *)&v25.fields.r = 0LL;
+  *(_QWORD *)&v25.fields.b = 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, sprite);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0LL, 0LL) )
     return 0;
   IsNullOrEmpty = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(this->fields.bannerSp, 0LL);
   if ( !sprite )
     goto LABEL_34;
-  v8 = (char)IsNullOrEmpty;
+  v9 = (char)IsNullOrEmpty;
   IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL);
   if ( !IsNullOrEmpty )
     goto LABEL_34;
-  if ( (v8 & 1) != 0 )
+  if ( (v9 & 1) != 0 )
   {
     UnityEngine_GameObject__SetActive(IsNullOrEmpty, 0, 0LL);
     return 0;
@@ -109,18 +114,18 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   UnityEngine_GameObject__SetActive(IsNullOrEmpty, 1, 0LL);
   bannerSp = this->fields.bannerSp;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v11);
   AtlasManager__SetBanner(sprite, bannerSp, 0LL);
   setSize = this->fields.setSize;
   if ( setSize && (int)setSize->max_length >= 2 )
   {
     UIWidget__set_width((UIWidget_o *)sprite, setSize->m_Items[1], 0LL);
-    v12 = this->fields.setSize;
-    if ( !v12 )
+    v14 = this->fields.setSize;
+    if ( !v14 )
       goto LABEL_34;
-    if ( v12->max_length <= 1 )
+    if ( v14->max_length <= 1 )
       goto LABEL_35;
-    UIWidget__set_height((UIWidget_o *)sprite, v12->m_Items[2], 0LL);
+    UIWidget__set_height((UIWidget_o *)sprite, v14->m_Items[2], 0LL);
   }
   else
   {
@@ -132,30 +137,30 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   if ( !offset || (int)offset->max_length < 2 )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL);
-    if ( !byte_4AB0691 )
+    if ( !byte_4B109C1 )
     {
-      sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v14);
-      byte_4AB0691 = 1;
+      sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v16, v17);
+      byte_4B109C1 = 1;
     }
     GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     goto LABEL_29;
   }
   IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL);
-  v16 = this->fields.offset;
-  if ( !v16 )
+  v19 = this->fields.offset;
+  if ( !v19 )
     goto LABEL_34;
-  if ( !v16->max_length )
+  if ( !v19->max_length )
     goto LABEL_35;
-  GameObjectExtensions__SetLocalPositionX(IsNullOrEmpty, (float)v16->m_Items[1], 0LL);
+  GameObjectExtensions__SetLocalPositionX(IsNullOrEmpty, (float)v19->m_Items[1], 0LL);
   IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL);
-  v17 = this->fields.offset;
-  if ( !v17 )
+  v20 = this->fields.offset;
+  if ( !v20 )
 LABEL_34:
-    sub_1BAB678(IsNullOrEmpty, v7);
-  if ( v17->max_length <= 1 )
+    sub_1BCAA3C(IsNullOrEmpty, v8);
+  if ( v20->max_length <= 1 )
 LABEL_35:
-    sub_1BAB680(IsNullOrEmpty, v7);
-  GameObjectExtensions__SetLocalPositionY(IsNullOrEmpty, (float)v17->m_Items[2], 0LL);
+    sub_1BCAA44(IsNullOrEmpty, v8);
+  GameObjectExtensions__SetLocalPositionY(IsNullOrEmpty, (float)v20->m_Items[2], 0LL);
 LABEL_29:
   if ( System_String__IsNullOrEmpty(this->fields.imgColor, 0LL) )
   {
@@ -166,11 +171,11 @@ LABEL_29:
   }
   else
   {
-    UnityEngine_ColorUtility__TryParseHtmlString(this->fields.imgColor, &v22, 0LL);
-    g = v22.fields.g;
-    r = v22.fields.r;
-    b = v22.fields.b;
-    a = v22.fields.a;
+    UnityEngine_ColorUtility__TryParseHtmlString(this->fields.imgColor, &v25, 0LL);
+    g = v25.fields.g;
+    r = v25.fields.r;
+    b = v25.fields.b;
+    a = v25.fields.a;
   }
   UIWidget__set_color((UIWidget_o *)sprite, *(UnityEngine_Color_o *)&r, 0LL);
   return 1;
@@ -196,27 +201,28 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
   bool v9; // w20
   struct System_Int32_array *offset; // x8
   __int64 v11; // x1
+  __int64 v12; // x2
   UnityEngine_GameObject_o *gameObject; // x21
-  struct System_Int32_array *v13; // x8
   struct System_Int32_array *v14; // x8
+  struct System_Int32_array *v15; // x8
   int fontSize; // w1
   struct System_String_array *gradation; // x8
-  struct System_String_array *v17; // x8
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-50h] BYREF
+  struct System_String_array *v18; // x8
+  UnityEngine_Color_o v20; // [xsp+0h] [xbp-50h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
-  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4AB61F0 & 1) == 0 )
+  if ( (byte_4B166A4 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, label);
-    byte_4AB61F0 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, label, method);
+    byte_4B166A4 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
-  *(_QWORD *)&v19.fields.r = 0LL;
-  *(_QWORD *)&v19.fields.b = 0LL;
+  *(_QWORD *)&v20.fields.r = 0LL;
+  *(_QWORD *)&v20.fields.b = 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, label);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL) )
     return 0;
   IsNullOrEmpty = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(this->fields.textString, 0LL);
@@ -228,29 +234,29 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
       if ( !label )
         goto LABEL_34;
       IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL);
-      v13 = this->fields.offset;
-      if ( !v13 )
-        goto LABEL_34;
-      if ( !v13->max_length )
-        goto LABEL_35;
-      GameObjectExtensions__SetLocalPositionX(IsNullOrEmpty, (float)v13->m_Items[1], 0LL);
-      IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL);
       v14 = this->fields.offset;
       if ( !v14 )
         goto LABEL_34;
-      if ( v14->max_length <= 1 )
+      if ( !v14->max_length )
         goto LABEL_35;
-      GameObjectExtensions__SetLocalPositionY(IsNullOrEmpty, (float)v14->m_Items[2], 0LL);
+      GameObjectExtensions__SetLocalPositionX(IsNullOrEmpty, (float)v14->m_Items[1], 0LL);
+      IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL);
+      v15 = this->fields.offset;
+      if ( !v15 )
+        goto LABEL_34;
+      if ( v15->max_length <= 1 )
+        goto LABEL_35;
+      GameObjectExtensions__SetLocalPositionY(IsNullOrEmpty, (float)v15->m_Items[2], 0LL);
     }
     else
     {
       if ( !label )
         goto LABEL_34;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL);
-      if ( !byte_4AB0691 )
+      if ( !byte_4B109C1 )
       {
-        sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v11);
-        byte_4AB0691 = 1;
+        sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v11, v12);
+        byte_4B109C1 = 1;
       }
       GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     }
@@ -261,25 +267,25 @@ bool __fastcall QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
     if ( !gradation || (int)gradation->max_length < 2 )
     {
       UILabel__set_applyGradient(label, 0, 0LL);
-      v21.fields.r = 1.0;
-      v21.fields.g = 1.0;
-      v21.fields.b = 1.0;
-      v21.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)label, v21, 0LL);
+      v22.fields.r = 1.0;
+      v22.fields.g = 1.0;
+      v22.fields.b = 1.0;
+      v22.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)label, v22, 0LL);
       goto LABEL_31;
     }
     IsNullOrEmpty = (UnityEngine_GameObject_o *)UnityEngine_ColorUtility__TryParseHtmlString(
                                                   gradation->m_Items[0],
                                                   &color,
                                                   0LL);
-    v17 = this->fields.gradation;
-    if ( !v17 )
+    v18 = this->fields.gradation;
+    if ( !v18 )
       goto LABEL_34;
-    if ( v17->max_length > 1 )
+    if ( v18->max_length > 1 )
     {
-      UnityEngine_ColorUtility__TryParseHtmlString(v17->m_Items[1], &v19, 0LL);
+      UnityEngine_ColorUtility__TryParseHtmlString(v18->m_Items[1], &v20, 0LL);
       UILabel__set_gradientTop(label, color, 0LL);
-      UILabel__set_gradientBottom(label, v19, 0LL);
+      UILabel__set_gradientBottom(label, v20, 0LL);
       UILabel__set_applyGradient(label, 1, 0LL);
 LABEL_31:
       UILabel__set_text(label, this->fields.textString, 0LL);
@@ -288,14 +294,14 @@ LABEL_31:
       {
         v9 = 1;
         UnityEngine_GameObject__SetActive(IsNullOrEmpty, 1, 0LL);
-        UILabel__SetCondensedScale_47285224(label, maxWidth, 0LL);
+        UILabel__SetCondensedScale_47600808(label, maxWidth, 0LL);
         return v9;
       }
 LABEL_34:
-      sub_1BAB678(IsNullOrEmpty, v8);
+      sub_1BCAA3C(IsNullOrEmpty, v8);
     }
 LABEL_35:
-    sub_1BAB680(IsNullOrEmpty, v8);
+    sub_1BCAA44(IsNullOrEmpty, v8);
   }
   if ( !label )
     goto LABEL_34;
@@ -324,13 +330,13 @@ bool __fastcall QuestPhaseDetailEntity_BoardList__SetImage(
   const MethodInfo *v6; // x2
   QuestPhaseDetailEntity_BoardInfo_ImageInfo_o *image; // x0
 
-  if ( (byte_4AB61EF & 1) == 0 )
+  if ( (byte_4B166A3 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4AB61EF = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, sprite, method);
+    byte_4B166A3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, sprite);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0LL, 0LL) )
   {
     image = this->fields.image;
@@ -341,7 +347,7 @@ bool __fastcall QuestPhaseDetailEntity_BoardList__SetImage(
                                                                     (UnityEngine_Component_o *)sprite,
                                                                     0LL)) == 0LL )
     {
-      sub_1BAB678(image, v5);
+      sub_1BCAA3C(image, v5);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)image, 0, 0LL);
   }
@@ -358,13 +364,13 @@ bool __fastcall QuestPhaseDetailEntity_BoardList__SetText(
   const MethodInfo *v6; // x2
   QuestPhaseDetailEntity_BoardInfo_TextInfo_o *text; // x0
 
-  if ( (byte_4AB61EE & 1) == 0 )
+  if ( (byte_4B166A2 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, label);
-    byte_4AB61EE = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, label, method);
+    byte_4B166A2 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, label);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL) )
   {
     text = this->fields.text;
@@ -375,7 +381,7 @@ bool __fastcall QuestPhaseDetailEntity_BoardList__SetText(
                                                                   (UnityEngine_Component_o *)label,
                                                                   0LL)) == 0LL )
     {
-      sub_1BAB678(text, v5);
+      sub_1BCAA3C(text, v5);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)text, 0, 0LL);
   }

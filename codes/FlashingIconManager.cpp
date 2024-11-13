@@ -1,30 +1,43 @@
 void __fastcall FlashingIconManager___ctor(FlashingIconManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  System_Collections_Generic_List_object__o *v5; // x20
-  int32_t v6; // w2
-  int32_t v7; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  System_Collections_Generic_List_object__o *v9; // x20
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
 
-  if ( (byte_4AB4F78 & 1) == 0 )
+  if ( (byte_4B15411 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents___ctor__, method);
-    sub_1BAB41C(&System_Collections_Generic_List_FlashingIconManager_FlashIconContents__TypeInfo, v3);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_FlashingIconManager___ctor__, v4);
-    byte_4AB4F78 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents___ctor__, method, v2);
+    sub_1BCA7E0(&System_Collections_Generic_List_FlashingIconManager_FlashIconContents__TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FlashingIconManager___ctor__, v7, v8);
+    byte_4B15411 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_FlashingIconManager_FlashIconContents__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                      System_Collections_Generic_List_FlashingIconManager_FlashIconContents__TypeInfo,
+                                                      method,
+                                                      v2,
+                                                      v3);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents___ctor__);
-  this->fields.flashIconList = (struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *)v5;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.flashIconList, (int32_t)v5, v6, v7);
+    v9,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents___ctor__);
+  this->fields.flashIconList = (struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *)v9;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.flashIconList, (int64_t)v9, v10, v11, v12, v13, v14, v15);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_378A644 *)Method_SingletonMonoBehaviour_FlashingIconManager___ctor__);
+    (const MethodInfo_37DEF2C *)Method_SingletonMonoBehaviour_FlashingIconManager___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FlashingIconManager__AddIcon(
         FlashingIconManager_o *this,
         FlashingIconComponent_o *icon,
@@ -33,127 +46,144 @@ void __fastcall FlashingIconManager__AddIcon(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  const MethodInfo *v13; // x2
+  __int64 v14; // x1
+  __int64 v15; // x2
+  __int64 v16; // x3
   struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *flashIconList; // x20
-  __int64 v13; // x21
-  int32_t v14; // w2
-  int32_t v15; // w3
-  __int64 v16; // x0
-  __int64 v17; // x1
-  int32_t v18; // w2
-  int32_t v19; // w3
+  __int64 v18; // x21
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  __int64 v25; // x0
+  __int64 v26; // x1
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
   struct FlashingIconManager_FlashIconContents_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v34; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
-  ServantStatusBattleListViewItem_o *v24; // x0
-  int32_t v25; // w1
-  struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *v26; // x21
-  __int64 v27; // x20
-  int32_t v28; // w2
-  int32_t v29; // w3
-  struct FlashingIconManager_FlashIconContents_array *v30; // x8
-  _QWORD *v31; // x9
-  __int64 v32; // x10
-  Il2CppClass **v33; // x0
-  __int64 v34; // x8
-  System_Collections_Generic_List_object__o *v35; // x0
-  Il2CppObject *v36; // x1
+  Il2CppClass **v36; // x0
+  PartyOrganizationUtility_o *v37; // x0
+  int64_t v38; // x1
+  struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *v39; // x21
+  __int64 v40; // x20
+  int64_t v41; // x2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  BattleSetupInfo_o *v44; // x5
+  FollowerInfo_o *v45; // x6
+  PartyListViewItem_o *v46; // x7
+  struct FlashingIconManager_FlashIconContents_array *v47; // x8
+  _QWORD *v48; // x9
+  __int64 v49; // x10
+  Il2CppClass **v50; // x0
+  __int64 v51; // x8
+  System_Collections_Generic_List_object__o *v52; // x0
+  Il2CppObject *v53; // x1
 
-  if ( (byte_4AB4F75 & 1) == 0 )
+  if ( (byte_4B1540E & 1) == 0 )
   {
-    sub_1BAB41C(&FlashingIconManager_FlashIconContents_TypeInfo, icon);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__, v9);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
-    byte_4AB4F75 = 1;
+    sub_1BCA7E0(&FlashingIconManager_FlashIconContents_TypeInfo, icon, isFast);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__, v9, v10);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v11, v12);
+    byte_4B1540E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, icon);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)icon, 0LL, 0LL) )
   {
-    FlashingIconManager__RemoveIcon(this, icon, v11);
+    FlashingIconManager__RemoveIcon(this, icon, v13);
     if ( isFast )
     {
       flashIconList = this->fields.flashIconList;
-      v13 = sub_1BAB668(FlashingIconManager_FlashIconContents_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v13, 0LL);
-      *(_QWORD *)(v13 + 24) = icon;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v13 + 24), (int32_t)icon, v14, v15);
-      *(_DWORD *)(v13 + 16) = 1056964608;
+      v18 = sub_1BCAA2C(FlashingIconManager_FlashIconContents_TypeInfo, v14, v15, v16);
+      System_Object___ctor((Il2CppObject *)v18, 0LL);
+      *(_QWORD *)(v18 + 24) = icon;
+      sub_1BCA784((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)icon, v19, v20, v21, v22, v23, v24);
+      *(_DWORD *)(v18 + 16) = 1056964608;
       if ( flashIconList )
       {
         items = flashIconList->fields._items;
-        v21 = Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__;
+        v34 = Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__;
         ++flashIconList->fields._version;
         if ( items )
         {
           size = flashIconList->fields._size;
           if ( (unsigned int)size < items->max_length )
           {
-            v23 = &items->obj.klass + size;
+            v36 = &items->obj.klass + size;
             flashIconList->fields._size = size + 1;
-            v23[4] = (Il2CppClass *)v13;
-            v24 = (ServantStatusBattleListViewItem_o *)(v23 + 4);
-            v25 = v13;
+            v36[4] = (Il2CppClass *)v18;
+            v37 = (PartyOrganizationUtility_o *)(v36 + 4);
+            v38 = v18;
 LABEL_18:
-            sub_1BAB3C0(v24, v25, v18, v19);
+            sub_1BCA784(v37, v38, v27, v28, v29, v30, v31, v32);
             return;
           }
-          v34 = v21[4];
-          v35 = (System_Collections_Generic_List_object__o *)flashIconList;
-          v36 = (Il2CppObject *)v13;
+          v51 = v34[4];
+          v52 = (System_Collections_Generic_List_object__o *)flashIconList;
+          v53 = (Il2CppObject *)v18;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
-            v35,
-            v36,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v34 + 192) + 112LL));
+            v52,
+            v53,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v51 + 192) + 112LL));
           return;
         }
       }
     }
     else
     {
-      v26 = this->fields.flashIconList;
-      v27 = sub_1BAB668(FlashingIconManager_FlashIconContents_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v27, 0LL);
-      *(_QWORD *)(v27 + 24) = icon;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v27 + 24), (int32_t)icon, v28, v29);
+      v39 = this->fields.flashIconList;
+      v40 = sub_1BCAA2C(FlashingIconManager_FlashIconContents_TypeInfo, v14, v15, v16);
+      System_Object___ctor((Il2CppObject *)v40, 0LL);
+      *(_QWORD *)(v40 + 24) = icon;
+      sub_1BCA784((PartyOrganizationUtility_o *)(v40 + 24), (int64_t)icon, v41, v42, v43, v44, v45, v46);
       if ( extraCycleTime <= 0.0 )
       {
-        *(_DWORD *)(v27 + 16) = 1065353216;
-        if ( !v26 )
+        *(_DWORD *)(v40 + 16) = 1065353216;
+        if ( !v39 )
           goto LABEL_22;
       }
       else
       {
-        *(float *)(v27 + 16) = extraCycleTime;
-        if ( !v26 )
+        *(float *)(v40 + 16) = extraCycleTime;
+        if ( !v39 )
           goto LABEL_22;
       }
-      v30 = v26->fields._items;
-      v31 = Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__;
-      ++v26->fields._version;
-      if ( v30 )
+      v47 = v39->fields._items;
+      v48 = Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Add__;
+      ++v39->fields._version;
+      if ( v47 )
       {
-        v32 = v26->fields._size;
-        if ( (unsigned int)v32 < v30->max_length )
+        v49 = v39->fields._size;
+        if ( (unsigned int)v49 < v47->max_length )
         {
-          v33 = &v30->obj.klass + v32;
-          v26->fields._size = v32 + 1;
-          v33[4] = (Il2CppClass *)v27;
-          v24 = (ServantStatusBattleListViewItem_o *)(v33 + 4);
-          v25 = v27;
+          v50 = &v47->obj.klass + v49;
+          v39->fields._size = v49 + 1;
+          v50[4] = (Il2CppClass *)v40;
+          v37 = (PartyOrganizationUtility_o *)(v50 + 4);
+          v38 = v40;
           goto LABEL_18;
         }
-        v34 = v31[4];
-        v35 = (System_Collections_Generic_List_object__o *)v26;
-        v36 = (Il2CppObject *)v27;
+        v51 = v48[4];
+        v52 = (System_Collections_Generic_List_object__o *)v39;
+        v53 = (Il2CppObject *)v40;
         goto LABEL_21;
       }
     }
 LABEL_22:
-    sub_1BAB678(v16, v17);
+    sub_1BCAA3C(v25, v26);
   }
 }
 
@@ -176,27 +206,29 @@ float __fastcall FlashingIconManager__CalcAlpha(
 
 void __fastcall FlashingIconManager__Reboot(FlashingIconManager_o *this, const MethodInfo *method)
 {
-  FlashingIconManager_o *v2; // x19
+  __int64 v2; // x2
+  FlashingIconManager_o *v3; // x19
   struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *flashIconList; // x8
   int32_t size; // w2
-  int v5; // w9
+  int v6; // w9
 
-  v2 = this;
-  if ( (byte_4AB4F74 & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B1540D & 1) == 0 )
   {
-    this = (FlashingIconManager_o *)sub_1BAB41C(
+    this = (FlashingIconManager_o *)sub_1BCA7E0(
                                       &Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Clear__,
-                                      method);
-    byte_4AB4F74 = 1;
+                                      method,
+                                      v2);
+    byte_4B1540D = 1;
   }
-  flashIconList = v2->fields.flashIconList;
-  v2->fields.dispTime = 0.0;
+  flashIconList = v3->fields.flashIconList;
+  v3->fields.dispTime = 0.0;
   if ( !flashIconList )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   size = flashIconList->fields._size;
-  v5 = flashIconList->fields._version + 1;
+  v6 = flashIconList->fields._version + 1;
   flashIconList->fields._size = 0;
-  flashIconList->fields._version = v5;
+  flashIconList->fields._version = v6;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)flashIconList->fields._items, 0, size, 0LL);
 }
@@ -208,78 +240,87 @@ void __fastcall FlashingIconManager__RemoveIcon(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
   System_Collections_Generic_List_object__o *flashIconList; // x0
-  _BOOL8 v13; // x0
-  __int64 v14; // x1
+  _BOOL8 v19; // x0
+  __int64 v20; // x1
   Il2CppObject *current; // x21
-  __int64 v16; // x1
-  struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *v17; // x0
-  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v22; // x1
+  struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *v23; // x0
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4AB4F76 & 1) == 0 )
+  if ( (byte_4B1540F & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__Dispose__,
-      icon);
-    sub_1BAB41C(
+      icon,
+      method);
+    sub_1BCA7E0(
       &Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__MoveNext__,
-      v5);
-    sub_1BAB41C(
-      &Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__get_Current__,
+      v5,
       v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__GetEnumerator__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Remove__, v8);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Count__, v9);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
-    byte_4AB4F76 = 1;
+    sub_1BCA7E0(
+      &Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__get_Current__,
+      v7,
+      v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__GetEnumerator__, v9, v10);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Remove__, v11, v12);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Count__, v13, v14);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v15, v16);
+    byte_4B1540F = 1;
   }
-  memset(&v18, 0, sizeof(v18));
+  memset(&v24, 0, sizeof(v24));
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, icon);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)icon, 0LL, 0LL) )
   {
     flashIconList = (System_Collections_Generic_List_object__o *)this->fields.flashIconList;
     if ( !flashIconList )
-      sub_1BAB678(0LL, v11);
+      sub_1BCAA3C(0LL, v17);
     if ( flashIconList->fields._size )
     {
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v18,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v24,
         flashIconList,
-        (const MethodInfo_354E3B4 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__GetEnumerator__);
+        (const MethodInfo_35A2754 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__GetEnumerator__);
       while ( 1 )
       {
-        v13 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v18,
-                (const MethodInfo_32C4C78 *)Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__MoveNext__);
-        if ( !v13 )
+        v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v24,
+                (const MethodInfo_3316D1C *)Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__MoveNext__);
+        if ( !v19 )
           break;
-        current = v18.fields._current;
-        if ( !v18.fields._current )
-          sub_1BAB678(v13, v14);
-        if ( (((__int64 (__fastcall *)(Il2CppObject *, FlashingIconComponent_o *, Il2CppMethodPointer))v18.fields._current->klass->vtable[0].method)(
-                v18.fields._current,
+        current = v24.fields._current;
+        if ( !v24.fields._current )
+          sub_1BCAA3C(v19, v20);
+        if ( (((__int64 (__fastcall *)(Il2CppObject *, FlashingIconComponent_o *, Il2CppMethodPointer))v24.fields._current->klass->vtable[0].method)(
+                v24.fields._current,
                 icon,
-                v18.fields._current->klass->vtable[1].methodPtr) & 1) != 0 )
+                v24.fields._current->klass->vtable[1].methodPtr) & 1) != 0 )
         {
-          v17 = this->fields.flashIconList;
-          if ( !v17 )
-            sub_1BAB678(0LL, v16);
+          v23 = this->fields.flashIconList;
+          if ( !v23 )
+            sub_1BCAA3C(0LL, v22);
           System_Collections_Generic_List_object___Remove(
-            (System_Collections_Generic_List_object__o *)v17,
+            (System_Collections_Generic_List_object__o *)v23,
             current,
-            (const MethodInfo_354EDE4 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Remove__);
+            (const MethodInfo_35A3184 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__Remove__);
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v18,
-        (const MethodInfo_32C4C74 *)Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__Dispose__);
+        &v24,
+        (const MethodInfo_3316D18 *)Method_System_Collections_Generic_List_Enumerator_FlashingIconManager_FlashIconContents__Dispose__);
     }
   }
 }
@@ -287,24 +328,27 @@ void __fastcall FlashingIconManager__RemoveIcon(
 
 void __fastcall FlashingIconManager__Update(FlashingIconManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
+  __int64 v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
   struct System_Collections_Generic_List_FlashingIconManager_FlashIconContents__o *flashIconList; // x8
   float dispTime; // s8
-  __int64 v7; // x1
+  __int64 v10; // x1
   float deltaTime; // s0
   void *Item; // x0
-  int32_t v10; // w20
-  float v11; // s9
-  _QWORD *v12; // x21
-  float v13; // s0
+  int32_t v13; // w20
+  float v14; // s9
+  _QWORD *v15; // x21
+  float v16; // s0
 
-  if ( (byte_4AB4F77 & 1) == 0 )
+  if ( (byte_4B15410 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__RemoveAt__, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Count__, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Item__, v4);
-    byte_4AB4F77 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__RemoveAt__, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Count__, v4, v5);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Item__, v6, v7);
+    byte_4B15410 = 1;
   }
   flashIconList = this->fields.flashIconList;
   if ( flashIconList && flashIconList->fields._size )
@@ -315,42 +359,42 @@ void __fastcall FlashingIconManager__Update(FlashingIconManager_o *this, const M
     this->fields.dispTime = dispTime + deltaTime;
     if ( !Item )
       goto LABEL_16;
-    v10 = *((_DWORD *)Item + 6) - 1;
-    if ( v10 >= 0 )
+    v13 = *((_DWORD *)Item + 6) - 1;
+    if ( v13 >= 0 )
     {
       do
       {
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)Item,
-                 v10,
-                 (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Item__);
+                 v13,
+                 (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__get_Item__);
         if ( !Item )
           break;
-        v11 = *((float *)Item + 4);
-        v12 = Item;
-        v13 = fmodf(this->fields.dispTime, v11 + v11);
-        Item = (void *)v12[3];
+        v14 = *((float *)Item + 4);
+        v15 = Item;
+        v16 = fmodf(this->fields.dispTime, v14 + v14);
+        Item = (void *)v15[3];
         if ( !Item )
           break;
-        if ( v13 > v11 )
-          v13 = (float)(v11 + v11) - v13;
-        if ( !FlashingIconComponent__UpdateIcon((FlashingIconComponent_o *)Item, v13 / v11, 0LL) )
+        if ( v16 > v14 )
+          v16 = (float)(v14 + v14) - v16;
+        if ( !FlashingIconComponent__UpdateIcon((FlashingIconComponent_o *)Item, v16 / v14, 0LL) )
         {
           Item = this->fields.flashIconList;
           if ( !Item )
             break;
           System_Collections_Generic_List_object___RemoveAt(
             (System_Collections_Generic_List_object__o *)Item,
-            v10,
-            (const MethodInfo_354F090 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__RemoveAt__);
+            v13,
+            (const MethodInfo_35A3430 *)Method_System_Collections_Generic_List_FlashingIconManager_FlashIconContents__RemoveAt__);
         }
-        if ( --v10 < 0 )
+        if ( --v13 < 0 )
           return;
         Item = this->fields.flashIconList;
       }
       while ( Item );
 LABEL_16:
-      sub_1BAB678(Item, v7);
+      sub_1BCAA3C(Item, v10);
     }
   }
 }
@@ -362,16 +406,20 @@ void __fastcall FlashingIconManager_FlashIconContents___ctor(
         float cycleTime,
         const MethodInfo *method)
 {
-  FlashingIconManager_FlashIconContents_o *v6; // x20
-  int32_t v7; // w2
+  PartyOrganizationUtility_o *v6; // x20
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
-  v6 = this;
+  v6 = (PartyOrganizationUtility_o *)this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v6->fields._icon_k__BackingField = icon;
-  v6 = (FlashingIconManager_FlashIconContents_o *)((char *)v6 + 24);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v6, (int32_t)icon, v7, v8);
-  *(float *)&v6[-1].fields._icon_k__BackingField = cycleTime;
+  v6->fields._normalFollowerInfo = (struct FollowerInfo_o *)icon;
+  v6 = (PartyOrganizationUtility_o *)((char *)v6 + 24);
+  sub_1BCA784(v6, (int64_t)icon, v7, v8, v9, v10, v11, v12);
+  *(float *)&v6[-1].fields._IsQuestStartMenuMode_k__BackingField = cycleTime;
 }
 
 
@@ -406,11 +454,19 @@ void __fastcall FlashingIconManager_FlashIconContents__set_icon(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._icon_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._icon_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._icon_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

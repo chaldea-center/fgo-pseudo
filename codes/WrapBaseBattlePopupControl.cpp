@@ -4,25 +4,33 @@ void __fastcall WrapBaseBattlePopupControl___ctor(
         BattlePerformance_o *inPerf,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
+  __int64 v14; // x1
   int32_t layer; // w0
   struct BattlePerformance_o **p_perf; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._TrParent_k__BackingField = parent;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)parent, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)parent, v7, v8, v9, v10, v11, v12);
   if ( !parent || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)parent, 0LL)) == 0LL )
-    sub_1BAB678(gameObject, v10);
+    sub_1BCAA3C(gameObject, v14);
   layer = UnityEngine_GameObject__get_layer(gameObject, 0LL);
   this->fields.perf = inPerf;
   p_perf = &this->fields.perf;
   *((_DWORD *)p_perf - 2) = layer;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_perf, (int32_t)inPerf, v13, v14);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_perf, (int64_t)inPerf, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -34,23 +42,24 @@ void __fastcall WrapBaseBattlePopupControl__ApplyLayerRecursively(
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
 
-  if ( (byte_4AB85C7 & 1) == 0 )
+  if ( (byte_4B18A9C & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, obj);
-    byte_4AB85C7 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, obj, method);
+    byte_4B18A9C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, obj);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)obj, 0LL, 0LL) )
   {
     GameObjectExtensions__SetLayerRecursively(obj, this->fields._Layer_k__BackingField, 0LL);
     if ( !obj || (transform = UnityEngine_GameObject__get_transform(obj, 0LL)) == 0LL )
-      sub_1BAB678(transform, v6);
-    UnityEngine_Transform__SetParent_69821868(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
+      sub_1BCAA3C(transform, v6);
+    UnityEngine_Transform__SetParent_70175492(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObject(
         WrapBaseBattlePopupControl_o *this,
         UnityEngine_GameObject_o *prefab,
@@ -58,12 +67,13 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObje
         const MethodInfo *method)
 {
   struct BattlePerformance_o *perf; // x0
+  __int64 v8; // x1
   UnityEngine_Object_o *Object; // x20
 
-  if ( (byte_4AB85C5 & 1) == 0 )
+  if ( (byte_4B18A9A & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, prefab);
-    byte_4AB85C5 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, prefab, isActive);
+    byte_4B18A9A = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -75,7 +85,7 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObje
                                      0LL,
                                      0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   perf = (struct BattlePerformance_o *)UnityEngine_Object__op_Inequality(Object, 0LL, 0LL);
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
@@ -85,7 +95,7 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupObje
       return (UnityEngine_GameObject_o *)Object;
     }
 LABEL_10:
-    sub_1BAB678(perf, prefab);
+    sub_1BCAA3C(perf, prefab);
   }
   return (UnityEngine_GameObject_o *)Object;
 }
@@ -100,16 +110,18 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupText
         const MethodInfo *method)
 {
   __int64 v9; // x1
+  __int64 v10; // x2
   UnityEngine_Object_o *PopupObject; // x20
-  Il2CppObject *v11; // x0
   __int64 v12; // x1
+  Il2CppObject *v13; // x0
+  __int64 v14; // x1
   Il2CppObject *component; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4AB85C6 & 1) == 0 )
+  if ( (byte_4B18A9B & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___, prefab);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
-    byte_4AB85C6 = 1;
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___, prefab, text);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v9, v10);
+    byte_4B18A9B = 1;
   }
   component = 0LL;
   PopupObject = (UnityEngine_Object_o *)WrapBaseBattlePopupControl__CreatePopupObject(
@@ -120,25 +132,25 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__CreatePopupText
   if ( !System_String__IsNullOrEmpty(text, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v11 = (Il2CppObject *)UnityEngine_Object__op_Inequality(PopupObject, 0LL, 0LL);
-    if ( ((unsigned __int8)v11 & 1) != 0 )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
+    v13 = (Il2CppObject *)UnityEngine_Object__op_Inequality(PopupObject, 0LL, 0LL);
+    if ( ((unsigned __int8)v13 & 1) != 0 )
     {
       if ( !PopupObject )
         goto LABEL_12;
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)PopupObject,
              &component,
-             (const MethodInfo_2F14C00 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
+             (const MethodInfo_2F63960 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
       {
-        v11 = component;
+        v13 = component;
         if ( component )
         {
           UIRangeLabel__Set((UIRangeLabel_o *)component, text, 0LL, 1, 0, 0LL);
           return (UnityEngine_GameObject_o *)PopupObject;
         }
 LABEL_12:
-        sub_1BAB678(v11, v12);
+        sub_1BCAA3C(v13, v14);
       }
     }
   }
@@ -174,29 +186,30 @@ UnityEngine_GameObject_o *__fastcall WrapBaseBattlePopupControl__GetEffectInstan
         int32_t id,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *v5; // x20
+  __int64 v5; // x1
+  UnityEngine_Object_o *v6; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
 
-  if ( (byte_4AB85C4 & 1) == 0 )
+  if ( (byte_4B18A99 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id);
-    byte_4AB85C4 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&id, method);
+    byte_4B18A99 = 1;
   }
-  v5 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(WrapBaseBattlePopupControl_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._13_unknown.method)(
+  v6 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(WrapBaseBattlePopupControl_o *, _QWORD, Il2CppMethodPointer))this->klass->vtable._13_unknown.method)(
                                  this,
                                  (unsigned int)id,
                                  this->klass->vtable._14_GetEffectInstantiate.methodPtr);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(v5, 0LL, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+  transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
-    if ( !v5 || (transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v5, 0LL)) == 0LL )
-      sub_1BAB678(transform, v7);
-    UnityEngine_Transform__SetParent_69821868(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
+    if ( !v6 || (transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v6, 0LL)) == 0LL )
+      sub_1BCAA3C(transform, v8);
+    UnityEngine_Transform__SetParent_70175492(transform, this->fields._TrParent_k__BackingField, 0, 0LL);
   }
-  return (UnityEngine_GameObject_o *)v5;
+  return (UnityEngine_GameObject_o *)v6;
 }
 
 
@@ -208,7 +221,7 @@ BattleEffectControl_o *__fastcall WrapBaseBattlePopupControl__get_EffectControl(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return perf->fields.effectcontrol;
 }
 

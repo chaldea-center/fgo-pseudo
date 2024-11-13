@@ -1,32 +1,46 @@
 void __fastcall BoardOptionEventTargetComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  __int64 v4; // x1
-  __int64 v5; // x1
-  int32_t v6; // w1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  int64_t v12; // x1
   struct BoardOptionEventTargetComponent_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4AB286E & 1) == 0 )
+  if ( (byte_4B12CDA & 1) == 0 )
   {
-    sub_1BAB41C(&BoardOptionEventTargetComponent_TypeInfo, v1);
-    sub_1BAB41C(&StringLiteral_15161/*"Unlit/Transparent Colored_Choco"*/, v4);
-    sub_1BAB41C(&StringLiteral_4977/*"Custom/SpriteWithMask_Choco"*/, v5);
-    byte_4AB286E = 1;
+    sub_1BCA7E0(&BoardOptionEventTargetComponent_TypeInfo, v1, v2);
+    sub_1BCA7E0(&StringLiteral_15296/*"Unlit/Transparent Colored_Choco"*/, v8, v9);
+    sub_1BCA7E0(&StringLiteral_5049/*"Custom/SpriteWithMask_Choco"*/, v10, v11);
+    byte_4B12CDA = 1;
   }
-  BoardOptionEventTargetComponent_TypeInfo->static_fields->CHOCO_SHADER_TX = (struct System_String_o *)StringLiteral_15161/*"Unlit/Transparent Colored_Choco"*/;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)BoardOptionEventTargetComponent_TypeInfo->static_fields,
-    StringLiteral_15161/*"Unlit/Transparent Colored_Choco"*/,
+  BoardOptionEventTargetComponent_TypeInfo->static_fields->CHOCO_SHADER_TX = (struct System_String_o *)StringLiteral_15296/*"Unlit/Transparent Colored_Choco"*/;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)BoardOptionEventTargetComponent_TypeInfo->static_fields,
+    StringLiteral_15296/*"Unlit/Transparent Colored_Choco"*/,
     v2,
-    v3);
-  v6 = StringLiteral_4977/*"Custom/SpriteWithMask_Choco"*/;
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = StringLiteral_5049/*"Custom/SpriteWithMask_Choco"*/;
   static_fields = BoardOptionEventTargetComponent_TypeInfo->static_fields;
-  static_fields->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_4977/*"Custom/SpriteWithMask_Choco"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->CHOCO_SHADER_SP, v6, v8, v9);
+  static_fields->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_5049/*"Custom/SpriteWithMask_Choco"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->CHOCO_SHADER_SP, v12, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -46,215 +60,303 @@ void __fastcall BoardOptionEventTargetComponent__CreateEnemyList(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
+  __int64 v18; // x2
   __int64 v19; // x1
-  __int64 v20; // x1
+  __int64 v20; // x2
   __int64 v21; // x1
-  __int64 v22; // x1
+  __int64 v22; // x2
   __int64 v23; // x1
-  __int64 v24; // x1
+  __int64 v24; // x2
   __int64 v25; // x1
-  __int64 v26; // x1
+  __int64 v26; // x2
   __int64 v27; // x1
-  __int64 v28; // x1
+  __int64 v28; // x2
   __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x20
-  __int64 UserId; // x0
+  __int64 v30; // x2
+  __int64 v31; // x1
+  __int64 v32; // x2
   __int64 v33; // x1
-  int32_t v34; // w2
-  int32_t v35; // w3
-  __int64 *v36; // x22
-  int32_t v37; // w2
-  int32_t v38; // w3
-  System_Collections_Generic_List_object__o *v39; // x21
-  int32_t v40; // w2
-  int32_t v41; // w3
-  struct System_Int32_array *v42; // x1
-  int32_t v43; // w2
-  int32_t v44; // w3
-  Il2CppObject *Master_object; // x23
-  Il2CppObject *v46; // x24
-  System_Collections_Generic_List_object__o *v47; // x27
-  unsigned int **v48; // x25
-  int32_t v49; // w2
-  int32_t v50; // w3
-  Il2CppObject *v51; // x26
-  const MethodInfo *v52; // x2
-  __int64 v53; // x8
-  __int64 v54; // x0
-  int32_t v55; // w2
-  int32_t v56; // w3
-  int32_t v57; // w3
-  __int64 v58; // x8
-  __int64 v59; // x29
-  __int64 v60; // x28
-  unsigned __int64 v61; // x21
-  unsigned int *v62; // x8
-  __int64 v63; // x8
-  __int64 v64; // x8
-  int32_t v65; // w2
+  __int64 v34; // x2
+  __int64 v35; // x1
+  __int64 v36; // x2
+  __int64 v37; // x1
+  __int64 v38; // x2
+  __int64 v39; // x1
+  __int64 v40; // x2
+  __int64 v41; // x1
+  __int64 v42; // x2
+  __int64 v43; // x1
+  __int64 v44; // x2
+  __int64 v45; // x1
+  __int64 v46; // x2
+  __int64 v47; // x1
+  __int64 v48; // x2
+  __int64 v49; // x1
+  __int64 v50; // x2
+  __int64 v51; // x1
+  __int64 v52; // x2
+  __int64 v53; // x1
+  __int64 v54; // x2
+  __int64 v55; // x20
+  __int64 UserId; // x0
+  __int64 v57; // x1
+  int64_t v58; // x2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  BattleSetupInfo_o *v61; // x5
+  FollowerInfo_o *v62; // x6
+  PartyListViewItem_o *v63; // x7
+  __int64 *v64; // x22
+  int64_t v65; // x2
   int32_t v66; // w3
-  ViewEnemyEntity_o *v67; // x26
-  System_String_o *v68; // x0
-  Il2CppObject *v69; // x26
-  int32_t v70; // w2
-  int32_t v71; // w3
+  System_String_o *v67; // x4
+  BattleSetupInfo_o *v68; // x5
+  FollowerInfo_o *v69; // x6
+  PartyListViewItem_o *v70; // x7
+  __int64 v71; // x1
+  __int64 v72; // x2
+  __int64 v73; // x3
+  System_Collections_Generic_List_object__o *v74; // x21
+  int64_t v75; // x2
+  int32_t v76; // w3
+  System_String_o *v77; // x4
+  BattleSetupInfo_o *v78; // x5
+  FollowerInfo_o *v79; // x6
+  PartyListViewItem_o *v80; // x7
+  struct System_Int32_array *v81; // x1
+  int64_t v82; // x2
+  int32_t v83; // w3
+  System_String_o *v84; // x4
+  BattleSetupInfo_o *v85; // x5
+  FollowerInfo_o *v86; // x6
+  PartyListViewItem_o *v87; // x7
+  __int64 v88; // x1
+  Il2CppObject *Master_object; // x23
+  Il2CppObject *v90; // x24
+  __int64 v91; // x1
+  __int64 v92; // x2
+  __int64 v93; // x3
+  System_Collections_Generic_List_object__o *v94; // x27
+  unsigned int **v95; // x25
+  int64_t v96; // x2
+  int32_t v97; // w3
+  System_String_o *v98; // x4
+  BattleSetupInfo_o *v99; // x5
+  FollowerInfo_o *v100; // x6
+  PartyListViewItem_o *v101; // x7
+  __int64 v102; // x1
+  Il2CppObject *v103; // x26
+  const MethodInfo *v104; // x2
+  __int64 v105; // x3
+  __int64 v106; // x8
+  int64_t v107; // x0
+  int64_t v108; // x2
+  int32_t v109; // w3
+  System_String_o *v110; // x4
+  BattleSetupInfo_o *v111; // x5
+  FollowerInfo_o *v112; // x6
+  PartyListViewItem_o *v113; // x7
+  System_String_o *v114; // x4
+  BattleSetupInfo_o *v115; // x5
+  FollowerInfo_o *v116; // x6
+  PartyListViewItem_o *v117; // x7
+  __int64 v118; // x8
+  __int64 v119; // x29
+  __int64 v120; // x28
+  unsigned __int64 v121; // x21
+  unsigned int *v122; // x8
+  __int64 v123; // x8
+  __int64 v124; // x8
+  int64_t v125; // x2
+  int32_t v126; // w3
+  System_String_o *v127; // x4
+  BattleSetupInfo_o *v128; // x5
+  FollowerInfo_o *v129; // x6
+  PartyListViewItem_o *v130; // x7
+  ViewEnemyEntity_o *v131; // x26
+  System_String_o *v132; // x0
+  Il2CppObject *v133; // x26
+  int64_t v134; // x2
+  __int64 v135; // x3
+  System_String_o *v136; // x4
+  BattleSetupInfo_o *v137; // x5
+  FollowerInfo_o *v138; // x6
+  PartyListViewItem_o *v139; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v73; // x9
+  _QWORD *v141; // x9
   __int64 size; // x10
-  Il2CppClass **v75; // x0
-  ViewEnemyEntity_o *v76; // x27
-  unsigned int *v77; // x27
-  System_Collections_Generic_IEnumerable_TSource__o *v78; // x22
-  BoardOptionEventTargetComponent___c_c *v79; // x0
+  Il2CppClass **v143; // x0
+  ViewEnemyEntity_o *v144; // x27
+  unsigned int *v145; // x27
+  System_Collections_Generic_IEnumerable_TSource__o *v146; // x22
+  BoardOptionEventTargetComponent___c_c *v147; // x0
   System_Func_object__bool__o *_9__8_0; // x23
-  Il2CppObject *v81; // x24
+  Il2CppObject *v149; // x24
   struct BoardOptionEventTargetComponent___c_StaticFields *static_fields; // x0
-  int32_t v83; // w2
-  int32_t v84; // w3
-  int32_t v85; // w1
-  struct System_String_array *v86; // x0
+  int64_t v151; // x2
+  int32_t v152; // w3
+  System_String_o *v153; // x4
+  BattleSetupInfo_o *v154; // x5
+  FollowerInfo_o *v155; // x6
+  PartyListViewItem_o *v156; // x7
+  int32_t v157; // w1
+  struct System_String_array *v158; // x0
   struct System_String_array **p_loadedAssets; // x19
-  int32_t v88; // w2
-  int32_t v89; // w3
-  System_Action_o *v90; // x19
-  __int64 v91; // x0
-  System_Collections_Generic_List_object__o *v92; // [xsp+8h] [xbp-88h]
+  int64_t v160; // x2
+  int32_t v161; // w3
+  System_String_o *v162; // x4
+  BattleSetupInfo_o *v163; // x5
+  FollowerInfo_o *v164; // x6
+  PartyListViewItem_o *v165; // x7
+  __int64 v166; // x1
+  __int64 v167; // x2
+  __int64 v168; // x3
+  System_Action_o *v169; // x19
+  __int64 v170; // x1
+  __int64 v171; // x0
+  System_Collections_Generic_List_object__o *v172; // [xsp+8h] [xbp-88h]
   QuestInformationListViewItem_MissionTargetState_o missionTargetState; // [xsp+14h] [xbp-7Ch] BYREF
   UserQuestInfoEntity_o *entity; // [xsp+18h] [xbp-78h] BYREF
-  ViewEnemyEntity_o *v95; // [xsp+20h] [xbp-70h] BYREF
-  Il2CppObject *v96; // [xsp+28h] [xbp-68h] BYREF
+  ViewEnemyEntity_o *v175; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppObject *v176; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4AB2865 & 1) == 0 )
+  if ( (byte_4B12CD1 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, *(_QWORD *)&questId);
-    sub_1BAB41C(&AtlasManager_TypeInfo, v7);
-    sub_1BAB41C(&Method_DataManager_GetMaster_ServantMaster___, v8);
-    sub_1BAB41C(&Method_DataManager_GetMaster_UserQuestInfoMaster___, v9);
-    sub_1BAB41C(&Method_DataManager_GetMaster_ViewEnemyMaster___, v10);
-    sub_1BAB41C(&DataManager_TypeInfo, v11);
-    sub_1BAB41C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v12);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Contains_int___, v13);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Count_ViewEnemyEntity___, v14);
-    sub_1BAB41C(&System_Func_ViewEnemyEntity__bool__TypeInfo, v15);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string__Add__, v16);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string__Contains__, v17);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string__ToArray__, v18);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ListViewItem___ctor__, v19);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string___ctor__, v20);
-    sub_1BAB41C(&System_Collections_Generic_List_ListViewItem__TypeInfo, v21);
-    sub_1BAB41C(&System_Collections_Generic_List_string__TypeInfo, v22);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v23);
-    sub_1BAB41C(&Method_BoardOptionEventTargetComponent___c__CreateEnemyList_b__8_0__, v24);
-    sub_1BAB41C(&Method_BoardOptionEventTargetComponent___c__DisplayClass8_0__CreateEnemyList_b__1__, v25);
-    sub_1BAB41C(&BoardOptionEventTargetComponent___c__DisplayClass8_0_TypeInfo, v26);
-    sub_1BAB41C(&BoardOptionEventTargetComponent___c_TypeInfo, v27);
-    sub_1BAB41C(&ViewEnemyEntity___TypeInfo, v28);
-    sub_1BAB41C(&ViewEnemyEntity_TypeInfo, v29);
-    sub_1BAB41C(&StringLiteral_12683/*"Servants/Commands/"*/, v30);
-    byte_4AB2865 = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, *(_QWORD *)&questId, enemies);
+    sub_1BCA7E0(&AtlasManager_TypeInfo, v7, v8);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_ServantMaster___, v9, v10);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_UserQuestInfoMaster___, v11, v12);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_ViewEnemyMaster___, v13, v14);
+    sub_1BCA7E0(&DataManager_TypeInfo, v15, v16);
+    sub_1BCA7E0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v17, v18);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Contains_int___, v19, v20);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Count_ViewEnemyEntity___, v21, v22);
+    sub_1BCA7E0(&System_Func_ViewEnemyEntity__bool__TypeInfo, v23, v24);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string__Add__, v25, v26);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string__Contains__, v27, v28);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string__ToArray__, v29, v30);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ListViewItem___ctor__, v31, v32);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string___ctor__, v33, v34);
+    sub_1BCA7E0(&System_Collections_Generic_List_ListViewItem__TypeInfo, v35, v36);
+    sub_1BCA7E0(&System_Collections_Generic_List_string__TypeInfo, v37, v38);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v39, v40);
+    sub_1BCA7E0(&Method_BoardOptionEventTargetComponent___c__CreateEnemyList_b__8_0__, v41, v42);
+    sub_1BCA7E0(&Method_BoardOptionEventTargetComponent___c__DisplayClass8_0__CreateEnemyList_b__1__, v43, v44);
+    sub_1BCA7E0(&BoardOptionEventTargetComponent___c__DisplayClass8_0_TypeInfo, v45, v46);
+    sub_1BCA7E0(&BoardOptionEventTargetComponent___c_TypeInfo, v47, v48);
+    sub_1BCA7E0(&ViewEnemyEntity___TypeInfo, v49, v50);
+    sub_1BCA7E0(&ViewEnemyEntity_TypeInfo, v51, v52);
+    sub_1BCA7E0(&StringLiteral_12814/*"Servants/Commands/"*/, v53, v54);
+    byte_4B12CD1 = 1;
   }
-  v95 = 0LL;
-  v96 = 0LL;
+  v175 = 0LL;
+  v176 = 0LL;
   entity = 0LL;
   missionTargetState = 0;
-  v31 = sub_1BAB668(BoardOptionEventTargetComponent___c__DisplayClass8_0_TypeInfo);
+  v55 = sub_1BCAA2C(BoardOptionEventTargetComponent___c__DisplayClass8_0_TypeInfo, *(_QWORD *)&questId, enemies, method);
   BoardOptionEventTargetComponent___c__DisplayClass8_0___ctor(
-    (BoardOptionEventTargetComponent___c__DisplayClass8_0_o *)v31,
+    (BoardOptionEventTargetComponent___c__DisplayClass8_0_o *)v55,
     0LL);
-  if ( !v31 )
+  if ( !v55 )
     goto LABEL_53;
-  *(_QWORD *)(v31 + 16) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v31 + 16), (int32_t)this, v34, v35);
-  *(_QWORD *)(v31 + 32) = enemies;
-  v36 = (__int64 *)(v31 + 32);
-  *(_DWORD *)(v31 + 24) = questId;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v31 + 32), (int32_t)enemies, v37, v38);
-  v39 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ListViewItem__TypeInfo);
+  *(_QWORD *)(v55 + 16) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v55 + 16), (int64_t)this, v58, v59, v60, v61, v62, v63);
+  *(_QWORD *)(v55 + 32) = enemies;
+  v64 = (__int64 *)(v55 + 32);
+  *(_DWORD *)(v55 + 24) = questId;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v55 + 32), (int64_t)enemies, v65, v66, v67, v68, v69, v70);
+  v74 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                       System_Collections_Generic_List_ListViewItem__TypeInfo,
+                                                       v71,
+                                                       v72,
+                                                       v73);
   System_Collections_Generic_List_object____ctor(
-    v39,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ListViewItem___ctor__);
-  this->fields.itemList = (struct System_Collections_Generic_List_ListViewItem__o *)v39;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.itemList, (int32_t)v39, v40, v41);
-  this->fields.dispQuestId = *(_DWORD *)(v31 + 24);
-  v42 = *(struct System_Int32_array **)(v31 + 32);
-  this->fields.dispEnemies = v42;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.dispEnemies, (int32_t)v42, v43, v44);
+    v74,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_ListViewItem___ctor__);
+  this->fields.itemList = (struct System_Collections_Generic_List_ListViewItem__o *)v74;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.itemList, (int64_t)v74, v75, v76, v77, v78, v79, v80);
+  this->fields.dispQuestId = *(_DWORD *)(v55 + 24);
+  v81 = *(struct System_Int32_array **)(v55 + 32);
+  this->fields.dispEnemies = v81;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.dispEnemies, (int64_t)v81, v82, v83, v84, v85, v86, v87);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ViewEnemyMaster___);
-  v46 = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ServantMaster___);
-  v47 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_string__TypeInfo);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v88);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_ViewEnemyMaster___);
+  v90 = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_ServantMaster___);
+  v94 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                       System_Collections_Generic_List_string__TypeInfo,
+                                                       v91,
+                                                       v92,
+                                                       v93);
   System_Collections_Generic_List_object____ctor(
-    v47,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_string___ctor__);
-  *(_QWORD *)(v31 + 40) = 0LL;
-  v48 = (unsigned int **)(v31 + 40);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v31 + 40), 0, v49, v50);
-  v51 = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserQuestInfoMaster___);
+    v94,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_string___ctor__);
+  *(_QWORD *)(v55 + 40) = 0LL;
+  v95 = (unsigned int **)(v55 + 40);
+  sub_1BCA784((PartyOrganizationUtility_o *)(v55 + 40), 0LL, v96, v97, v98, v99, v100, v101);
+  v103 = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserQuestInfoMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v102);
   UserId = NetworkManager__get_UserId(0LL);
-  if ( !v51 )
+  if ( !v103 )
     goto LABEL_53;
-  UserQuestInfoMaster__TryGetEntity((UserQuestInfoMaster_o *)v51, &entity, UserId, *(_DWORD *)(v31 + 24), 0LL);
-  v53 = *(_QWORD *)(v31 + 32);
-  if ( v53 )
+  UserQuestInfoMaster__TryGetEntity((UserQuestInfoMaster_o *)v103, &entity, UserId, *(_DWORD *)(v55 + 24), 0LL);
+  v106 = *(_QWORD *)(v55 + 32);
+  if ( v106 )
   {
-    v54 = sub_1BAB4C4(ViewEnemyEntity___TypeInfo, *(unsigned int *)(v53 + 24));
-    *v48 = (unsigned int *)v54;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v31 + 40), v54, v55, v56);
-    v58 = *v36;
-    if ( !*v36 )
+    v107 = sub_1BCA888(ViewEnemyEntity___TypeInfo, *(unsigned int *)(v106 + 24));
+    *v95 = (unsigned int *)v107;
+    sub_1BCA784((PartyOrganizationUtility_o *)(v55 + 40), v107, v108, v109, v110, v111, v112, v113);
+    v118 = *v64;
+    if ( !*v64 )
       goto LABEL_53;
-    v59 = 8LL;
-    v60 = 8LL;
-    v92 = v47;
+    v119 = 8LL;
+    v120 = 8LL;
+    v172 = v94;
     while ( 1 )
     {
-      v61 = v59 - 8;
-      if ( v59 - 8 >= *(int *)(v58 + 24) )
+      v121 = v119 - 8;
+      if ( v119 - 8 >= *(int *)(v118 + 24) )
         break;
-      v62 = *v48;
-      if ( !*v48 )
+      v122 = *v95;
+      if ( !*v95 )
         goto LABEL_53;
-      if ( v61 >= v62[6] )
+      if ( v121 >= v122[6] )
         goto LABEL_67;
-      *(_QWORD *)&v62[v60] = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v62[v60], 0, (int32_t)v52, v57);
-      v63 = *v36;
-      if ( !*v36 )
+      *(_QWORD *)&v122[v120] = 0LL;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v122[v120], 0LL, (int64_t)v104, v105, v114, v115, v116, v117);
+      v123 = *v64;
+      if ( !*v64 )
         goto LABEL_53;
-      if ( v61 >= *(unsigned int *)(v63 + 24) )
+      if ( v121 >= *(unsigned int *)(v123 + 24) )
         goto LABEL_67;
-      v57 = *(_DWORD *)(v63 + 4 * v59);
-      if ( v57 >= 1 )
+      v105 = *(unsigned int *)(v123 + 4 * v119);
+      if ( (int)v105 >= 1 )
       {
         if ( !Master_object )
           goto LABEL_53;
         UserId = ViewEnemyMaster__TryGetEntity(
                    (ViewEnemyMaster_o *)Master_object,
-                   &v95,
-                   *(_DWORD *)(v31 + 24),
-                   v57,
+                   &v175,
+                   *(_DWORD *)(v55 + 24),
+                   v105,
                    0LL);
         if ( (UserId & 1) != 0 )
         {
-          UserId = (__int64)v95;
-          if ( !v95 )
+          UserId = (__int64)v175;
+          if ( !v175 )
             goto LABEL_53;
-          ViewEnemyEntity__IsMissionTarget(v95, v95->fields.questId, &missionTargetState, 0LL);
+          ViewEnemyEntity__IsMissionTarget(v175, v175->fields.questId, &missionTargetState, 0LL);
           if ( missionTargetState.fields.IsEventMission )
           {
             if ( !entity )
@@ -262,181 +364,197 @@ void __fastcall BoardOptionEventTargetComponent__CreateEnemyList(
             UserId = (__int64)entity->fields.enemyIds;
             if ( !UserId || !*(_QWORD *)(UserId + 24) )
               goto LABEL_27;
-            if ( !v95 )
+            if ( !v175 )
               goto LABEL_53;
             UserId = System_Linq_Enumerable__Contains_int_(
                        (System_Collections_Generic_IEnumerable_TSource__o *)UserId,
-                       v95->fields.enemyId,
-                       (const MethodInfo_2EDD8B4 *)Method_System_Linq_Enumerable_Contains_int___);
+                       v175->fields.enemyId,
+                       (const MethodInfo_2F2AF7C *)Method_System_Linq_Enumerable_Contains_int___);
             if ( (UserId & 1) == 0 )
             {
 LABEL_27:
-              v64 = *v36;
-              if ( !*v36 )
+              v124 = *v64;
+              if ( !*v64 )
                 goto LABEL_53;
-              if ( v61 >= *(unsigned int *)(v64 + 24) )
+              if ( v121 >= *(unsigned int *)(v124 + 24) )
                 goto LABEL_67;
-              *(_DWORD *)(v64 + 4 * v59) = 0;
+              *(_DWORD *)(v124 + 4 * v119) = 0;
             }
-            if ( !v95 || !v46 )
+            if ( !v175 || !v90 )
               goto LABEL_53;
             UserId = DataMasterBase_object__object__int___TryGetEntity(
-                       (DataMasterBase_TMaster__TEntity__PKType__o *)v46,
-                       &v96,
-                       v95->fields.svtId,
-                       (const MethodInfo_3163DE4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                       (DataMasterBase_TMaster__TEntity__PKType__o *)v90,
+                       &v176,
+                       v175->fields.svtId,
+                       (const MethodInfo_31B2E94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
             if ( (UserId & 1) != 0 )
             {
-              UserId = (__int64)v96;
-              if ( !v96 )
+              UserId = (__int64)v176;
+              if ( !v176 )
                 goto LABEL_53;
-              UserId = ServantEntity__get_IsOrganization((ServantEntity_o *)v96, 0LL);
+              UserId = ServantEntity__get_IsOrganization((ServantEntity_o *)v176, 0LL);
               if ( (UserId & 1) == 0 )
                 goto LABEL_37;
-              UserId = (__int64)v95;
-              if ( !v95 )
+              UserId = (__int64)v175;
+              if ( !v175 )
                 goto LABEL_53;
-              UserId = ViewEnemyEntity__IsIconIdUnique(v95, 0LL);
+              UserId = ViewEnemyEntity__IsIconIdUnique(v175, 0LL);
               if ( (UserId & 1) == 0 )
               {
-                if ( !v95 )
+                if ( !v175 )
                   goto LABEL_53;
-                v68 = System_Int32__ToString((int)v95 + 36, 0LL);
-                UserId = (__int64)System_String__Concat_62048128((System_String_o *)StringLiteral_12683/*"Servants/Commands/"*/, v68, 0LL);
-                if ( !v47 )
+                v132 = System_Int32__ToString((int)v175 + 36, 0LL);
+                UserId = (__int64)System_String__Concat_62401220((System_String_o *)StringLiteral_12814/*"Servants/Commands/"*/, v132, 0LL);
+                if ( !v94 )
                   goto LABEL_53;
-                v69 = (Il2CppObject *)UserId;
+                v133 = (Il2CppObject *)UserId;
                 UserId = System_Collections_Generic_List_object___Contains(
-                           v47,
+                           v94,
                            (Il2CppObject *)UserId,
-                           (const MethodInfo_354DC4C *)Method_System_Collections_Generic_List_string__Contains__);
+                           (const MethodInfo_35A1FEC *)Method_System_Collections_Generic_List_string__Contains__);
                 if ( (UserId & 1) == 0 )
                 {
-                  items = v47->fields._items;
-                  v73 = Method_System_Collections_Generic_List_string__Add__;
-                  ++v47->fields._version;
+                  items = v94->fields._items;
+                  v141 = Method_System_Collections_Generic_List_string__Add__;
+                  ++v94->fields._version;
                   if ( !items )
                     goto LABEL_53;
-                  size = v47->fields._size;
+                  size = v94->fields._size;
                   if ( (unsigned int)size >= items->max_length )
                   {
                     System_Collections_Generic_List_object___AddWithResize(
-                      v47,
-                      v69,
-                      *(const MethodInfo_354D8BC **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+                      v94,
+                      v133,
+                      *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v141[4] + 192LL) + 112LL));
                   }
                   else
                   {
-                    v75 = &items->obj.klass + size;
-                    v47->fields._size = size + 1;
-                    v75[4] = (Il2CppClass *)v69;
-                    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v75 + 4), (int32_t)v69, v70, v71);
+                    v143 = &items->obj.klass + size;
+                    v94->fields._size = size + 1;
+                    v143[4] = (Il2CppClass *)v133;
+                    sub_1BCA784(
+                      (PartyOrganizationUtility_o *)(v143 + 4),
+                      (int64_t)v133,
+                      v134,
+                      v135,
+                      v136,
+                      v137,
+                      v138,
+                      v139);
                   }
                 }
-                v76 = v95;
-                v67 = (ViewEnemyEntity_o *)sub_1BAB668(ViewEnemyEntity_TypeInfo);
-                ViewEnemyEntity___ctor_40674084(v67, v76, 0LL);
-                v95 = v67;
-                if ( !v67 )
+                v144 = v175;
+                v131 = (ViewEnemyEntity_o *)sub_1BCAA2C(ViewEnemyEntity_TypeInfo, v57, v134, v135);
+                ViewEnemyEntity___ctor_41013736(v131, v144, 0LL);
+                v175 = v131;
+                if ( !v131 )
                   goto LABEL_53;
-                v67->fields.iconId = 0;
+                v131->fields.iconId = 0;
               }
               else
               {
 LABEL_37:
-                v67 = v95;
+                v131 = v175;
               }
-              v77 = *v48;
-              if ( !*v48 )
+              v145 = *v95;
+              if ( !*v95 )
                 goto LABEL_53;
-              if ( v67 )
+              if ( v131 )
               {
-                UserId = sub_1BAB558(v67, *(_QWORD *)(*(_QWORD *)v77 + 64LL));
+                UserId = sub_1BCA91C(v131, *(_QWORD *)(*(_QWORD *)v145 + 64LL));
                 if ( !UserId )
                 {
-                  v91 = sub_1BAB69C();
-                  sub_1BAB544(v91, 0LL);
+                  v171 = sub_1BCAA60();
+                  sub_1BCA908(v171, 0LL);
                 }
               }
-              if ( v61 >= v77[6] )
+              if ( v121 >= v145[6] )
 LABEL_67:
-                sub_1BAB680(UserId, v33);
-              *(_QWORD *)&v77[v60] = v67;
-              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v77[v60], (int32_t)v67, v65, v66);
-              v47 = v92;
+                sub_1BCAA44(UserId, v57);
+              *(_QWORD *)&v145[v120] = v131;
+              sub_1BCA784((PartyOrganizationUtility_o *)&v145[v120], (int64_t)v131, v125, v126, v127, v128, v129, v130);
+              v94 = v172;
             }
           }
         }
       }
-      v58 = *v36;
-      ++v59;
-      v60 += 2LL;
-      if ( !*v36 )
+      v118 = *v64;
+      ++v119;
+      v120 += 2LL;
+      if ( !*v64 )
         goto LABEL_53;
     }
   }
-  v78 = (System_Collections_Generic_IEnumerable_TSource__o *)*v48;
-  if ( *v48 )
+  v146 = (System_Collections_Generic_IEnumerable_TSource__o *)*v95;
+  if ( *v95 )
   {
-    v79 = BoardOptionEventTargetComponent___c_TypeInfo;
+    v147 = BoardOptionEventTargetComponent___c_TypeInfo;
     if ( !BoardOptionEventTargetComponent___c_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent___c_TypeInfo);
-      v79 = BoardOptionEventTargetComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent___c_TypeInfo, v57);
+      v147 = BoardOptionEventTargetComponent___c_TypeInfo;
     }
-    _9__8_0 = (System_Func_object__bool__o *)v79->static_fields->__9__8_0;
+    _9__8_0 = (System_Func_object__bool__o *)v147->static_fields->__9__8_0;
     if ( !_9__8_0 )
     {
-      if ( !v79->_2.cctor_finished )
+      if ( !v147->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v79);
-        v79 = BoardOptionEventTargetComponent___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v147, v57);
+        v147 = BoardOptionEventTargetComponent___c_TypeInfo;
       }
-      v81 = (Il2CppObject *)v79->static_fields->__9;
-      _9__8_0 = (System_Func_object__bool__o *)sub_1BAB668(System_Func_ViewEnemyEntity__bool__TypeInfo);
+      v149 = (Il2CppObject *)v147->static_fields->__9;
+      _9__8_0 = (System_Func_object__bool__o *)sub_1BCAA2C(System_Func_ViewEnemyEntity__bool__TypeInfo, v57, v104, v105);
       System_Func_object__bool____ctor(
         _9__8_0,
-        v81,
+        v149,
         Method_BoardOptionEventTargetComponent___c__CreateEnemyList_b__8_0__,
         0LL);
       static_fields = BoardOptionEventTargetComponent___c_TypeInfo->static_fields;
       static_fields->__9__8_0 = (struct System_Func_ViewEnemyEntity__bool__o *)_9__8_0;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v83, v84);
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&static_fields->__9__8_0,
+        (int64_t)_9__8_0,
+        v151,
+        v152,
+        v153,
+        v154,
+        v155,
+        v156);
     }
-    v85 = System_Linq_Enumerable__Count_object__49159736(
-            v78,
-            (System_Func_TSource__bool__o *)_9__8_0,
-            (const MethodInfo_2EE1E38 *)Method_System_Linq_Enumerable_Count_ViewEnemyEntity___);
+    v157 = System_Linq_Enumerable__Count_object__49476864(
+             v146,
+             (System_Func_TSource__bool__o *)_9__8_0,
+             (const MethodInfo_2F2F500 *)Method_System_Linq_Enumerable_Count_ViewEnemyEntity___);
   }
   else
   {
-    v85 = 0;
+    v157 = 0;
   }
-  BoardOptionEventTargetComponent__DispEmptyList(this, v85, v52);
-  if ( !v47 )
+  BoardOptionEventTargetComponent__DispEmptyList(this, v157, v104);
+  if ( !v94 )
 LABEL_53:
-    sub_1BAB678(UserId, v33);
-  v86 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                        v47,
-                                        (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_string__ToArray__);
-  this->fields.loadedAssets = v86;
+    sub_1BCAA3C(UserId, v57);
+  v158 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                         v94,
+                                         (const MethodInfo_35A37B4 *)Method_System_Collections_Generic_List_string__ToArray__);
+  this->fields.loadedAssets = v158;
   p_loadedAssets = &this->fields.loadedAssets;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_loadedAssets, (int32_t)v86, v88, v89);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_loadedAssets, (int64_t)v158, v160, v161, v162, v163, v164, v165);
   *((_BYTE *)p_loadedAssets + 8) = 1;
-  v90 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+  v169 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v166, v167, v168);
   System_Action___ctor(
-    v90,
-    (Il2CppObject *)v31,
+    v169,
+    (Il2CppObject *)v55,
     Method_BoardOptionEventTargetComponent___c__DisplayClass8_0__CreateEnemyList_b__1__,
     0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEnemyAtlas(v90, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v170);
+  AtlasManager__LoadEnemyAtlas(v169, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoardOptionEventTargetComponent__CreateEnemyList_33830636(
+void __fastcall BoardOptionEventTargetComponent__CreateEnemyList_34141980(
         BoardOptionEventTargetComponent_o *this,
         int32_t questId,
         System_Int32_array *enemies,
@@ -445,98 +563,111 @@ void __fastcall BoardOptionEventTargetComponent__CreateEnemyList_33830636(
 {
   BoardOptionEventTargetComponent_o *v8; // x19
   __int64 v9; // x1
-  __int64 v10; // x8
-  unsigned __int64 v11; // x25
-  int32_t v12; // w22
-  ViewEnemyEntity_o *v13; // x24
-  QuestInformationListViewItem_o *v14; // x0
-  Il2CppObject *v15; // x23
-  int32_t v16; // w1
-  ViewEnemyEntity_o *v17; // x2
-  int32_t v18; // w2
-  int32_t v19; // w3
-  __int64 v20; // x8
-  _QWORD *v21; // x9
+  __int64 v10; // x2
+  __int64 v11; // x8
+  unsigned __int64 v12; // x25
+  int32_t v13; // w22
+  ViewEnemyEntity_o *v14; // x24
+  QuestInformationListViewItem_o *v15; // x0
+  Il2CppObject *v16; // x23
+  int32_t v17; // w1
+  ViewEnemyEntity_o *v18; // x2
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  __int64 v25; // x8
+  _QWORD *v26; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  __int64 v23; // x8
-  const MethodInfo *v24; // x3
+  __int64 v28; // x8
+  const MethodInfo *v29; // x3
   int32_t dispQuestId; // w1
   System_Int32_array *dispEnemies; // x2
 
   v8 = this;
-  if ( (byte_4AB2867 & 1) == 0 )
+  if ( (byte_4B12CD3 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ListViewItem__Add__, *(_QWORD *)&questId);
-    this = (BoardOptionEventTargetComponent_o *)sub_1BAB41C(&QuestInformationListViewItem_TypeInfo, v9);
-    byte_4AB2867 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ListViewItem__Add__, *(_QWORD *)&questId, enemies);
+    this = (BoardOptionEventTargetComponent_o *)sub_1BCA7E0(&QuestInformationListViewItem_TypeInfo, v9, v10);
+    byte_4B12CD3 = 1;
   }
   if ( v8->fields.loading && v8->fields.dispQuestId == questId )
   {
     v8->fields.loading = 0;
     if ( enemies )
     {
-      v10 = *(_QWORD *)&enemies->max_length;
-      if ( (int)v10 >= 1 )
+      v11 = *(_QWORD *)&enemies->max_length;
+      if ( (int)v11 >= 1 )
       {
-        v11 = 0LL;
-        v12 = 0;
+        v12 = 0LL;
+        v13 = 0;
         while ( 1 )
         {
-          if ( v11 >= (unsigned int)v10 )
+          if ( v12 >= (unsigned int)v11 )
 LABEL_28:
-            sub_1BAB680(this, *(_QWORD *)&questId);
-          if ( enemies->m_Items[v11 + 1] <= 0 )
+            sub_1BCAA44(this, *(_QWORD *)&questId);
+          if ( enemies->m_Items[v12 + 1] <= 0 )
             break;
           if ( !veEnts )
             goto LABEL_27;
-          if ( v11 >= veEnts->max_length )
+          if ( v12 >= veEnts->max_length )
             goto LABEL_28;
-          v13 = veEnts->m_Items[v11];
-          if ( v13 )
+          v14 = veEnts->m_Items[v12];
+          if ( v14 )
           {
-            v14 = (QuestInformationListViewItem_o *)sub_1BAB668(QuestInformationListViewItem_TypeInfo);
-            v15 = (Il2CppObject *)v14;
-            v16 = v12;
+            v15 = (QuestInformationListViewItem_o *)sub_1BCAA2C(
+                                                      QuestInformationListViewItem_TypeInfo,
+                                                      *(_QWORD *)&questId,
+                                                      enemies,
+                                                      veEnts);
+            v16 = (Il2CppObject *)v15;
             v17 = v13;
+            v18 = v14;
             goto LABEL_15;
           }
 LABEL_21:
-          if ( (__int64)++v11 >= (int)v10 )
+          if ( (__int64)++v12 >= (int)v11 )
             goto LABEL_22;
         }
-        v14 = (QuestInformationListViewItem_o *)sub_1BAB668(QuestInformationListViewItem_TypeInfo);
-        v15 = (Il2CppObject *)v14;
-        v16 = v12;
-        v17 = 0LL;
+        v15 = (QuestInformationListViewItem_o *)sub_1BCAA2C(
+                                                  QuestInformationListViewItem_TypeInfo,
+                                                  *(_QWORD *)&questId,
+                                                  enemies,
+                                                  veEnts);
+        v16 = (Il2CppObject *)v15;
+        v17 = v13;
+        v18 = 0LL;
 LABEL_15:
-        QuestInformationListViewItem___ctor_34350216(v14, v16, v17, 0, 0LL);
+        QuestInformationListViewItem___ctor_34662932(v15, v17, v18, 0, 0LL);
         this = (BoardOptionEventTargetComponent_o *)v8->fields.itemList;
         if ( !this
-          || (v20 = *(_QWORD *)&this->fields.m_CachedPtr,
-              v21 = Method_System_Collections_Generic_List_ListViewItem__Add__,
+          || (v25 = *(_QWORD *)&this->fields.m_CachedPtr,
+              v26 = Method_System_Collections_Generic_List_ListViewItem__Add__,
               ++HIDWORD(this->fields.m_CancellationTokenSource),
-              !v20) )
+              !v25) )
         {
 LABEL_27:
-          sub_1BAB678(this, *(_QWORD *)&questId);
+          sub_1BCAA3C(this, *(_QWORD *)&questId);
         }
         m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v20 + 24) )
+        if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v25 + 24) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
-            v15,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            v16,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
-          v23 = v20 + 8 * m_CancellationTokenSource_low;
+          v28 = v25 + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-          *(_QWORD *)(v23 + 32) = v15;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v23 + 32), (int32_t)v15, v18, v19);
+          *(_QWORD *)(v28 + 32) = v16;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v28 + 32), (int64_t)v16, v19, v20, v21, v22, v23, v24);
         }
-        LODWORD(v10) = enemies->max_length;
-        ++v12;
+        LODWORD(v11) = enemies->max_length;
+        ++v13;
         goto LABEL_21;
       }
     }
@@ -551,7 +682,7 @@ LABEL_22:
     {
       dispEnemies = v8->fields.dispEnemies;
       if ( dispEnemies )
-        BoardOptionEventTargetComponent__CreateEnemyList(v8, dispQuestId, dispEnemies, v24);
+        BoardOptionEventTargetComponent__CreateEnemyList(v8, dispQuestId, dispEnemies, v29);
     }
   }
 }
@@ -561,16 +692,21 @@ void __fastcall BoardOptionEventTargetComponent__DestroyList(
         BoardOptionEventTargetComponent_o *this,
         const MethodInfo *method)
 {
-  ServantStatusBattleListViewItem_o *p_loadedAssets; // x19
-  System_String_array *v4; // x20
+  __int64 v2; // x2
+  PartyOrganizationUtility_o *p_loadedAssets; // x19
+  System_String_array *v5; // x20
   struct System_String_array *loadedAssets; // t1
-  int32_t v6; // w2
-  int32_t v7; // w3
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4AB2869 & 1) == 0 )
+  if ( (byte_4B12CD5 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetManager_TypeInfo, method);
-    byte_4AB2869 = 1;
+    sub_1BCA7E0(&AssetManager_TypeInfo, method, v2);
+    byte_4B12CD5 = 1;
   }
   if ( this->fields.loading )
   {
@@ -579,15 +715,15 @@ void __fastcall BoardOptionEventTargetComponent__DestroyList(
   else
   {
     loadedAssets = this->fields.loadedAssets;
-    p_loadedAssets = (ServantStatusBattleListViewItem_o *)&this->fields.loadedAssets;
-    v4 = loadedAssets;
+    p_loadedAssets = (PartyOrganizationUtility_o *)&this->fields.loadedAssets;
+    v5 = loadedAssets;
     if ( loadedAssets )
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAssetStorage_38184992(v4, 0LL);
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
+      AssetManager__releaseAssetStorage_38514680(v5, 0LL);
       p_loadedAssets->klass = 0LL;
-      sub_1BAB3C0(p_loadedAssets, 0, v6, v7);
+      sub_1BCA784(p_loadedAssets, 0LL, v7, v8, v9, v10, v11, v12);
     }
   }
 }
@@ -611,14 +747,14 @@ void __fastcall BoardOptionEventTargetComponent__DispEmptyList(
   struct BoardOptionEventTargetListViewItemDraw_array *v13; // x8
 
   v3 = useNum;
-  if ( (byte_4AB2866 & 1) == 0 )
+  if ( (byte_4B12CD2 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&useNum);
-    byte_4AB2866 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&useNum, method);
+    byte_4B12CD2 = 1;
   }
   missionTargetLabel = (UnityEngine_Object_o *)this->fields.missionTargetLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&useNum);
   gameObject = (BoardOptionEventTargetListViewItemDraw_o *)UnityEngine_Object__op_Equality(missionTargetLabel, 0LL, 0LL);
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
@@ -633,7 +769,7 @@ void __fastcall BoardOptionEventTargetComponent__DispEmptyList(
           (v9 = this->fields.eventTargetItemDrawList) == 0LL) )
     {
 LABEL_26:
-      sub_1BAB678(gameObject, v7);
+      sub_1BCAA3C(gameObject, v7);
     }
     max_length = v9->max_length;
     if ( max_length < v3 )
@@ -645,7 +781,7 @@ LABEL_26:
       {
         if ( v11 >= max_length )
 LABEL_27:
-          sub_1BAB680(gameObject, v7);
+          sub_1BCAA44(gameObject, v7);
         v12 = (int)v11;
         gameObject = v9->m_Items[v11];
         if ( !gameObject )
@@ -691,33 +827,36 @@ void __fastcall BoardOptionEventTargetComponent__DispList(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
   UnityEngine_Object_o *missionTargetLabel; // x21
   BoardOptionEventTargetListViewItemDraw_o *gameObject; // x0
-  QuestInformationListViewItem_o *v10; // x1
+  QuestInformationListViewItem_o *v13; // x1
   struct BoardOptionEventTargetListViewItemDraw_array *eventTargetItemDrawList; // x8
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x8
-  struct System_Collections_Generic_List_ListViewItem__o *v13; // x9
-  struct BoardOptionEventTargetListViewItemDraw_array *v14; // x8
-  int v15; // w21
-  unsigned int v16; // w23
-  __int64 v17; // x9
+  struct System_Collections_Generic_List_ListViewItem__o *v16; // x9
+  struct BoardOptionEventTargetListViewItemDraw_array *v17; // x8
+  int v18; // w21
+  unsigned int v19; // w23
+  __int64 v20; // x9
   __int64 methodPtr_low; // x10
-  struct BoardOptionEventTargetListViewItemDraw_array *v19; // x8
-  struct System_Collections_Generic_List_ListViewItem__o *v20; // x8
+  struct BoardOptionEventTargetListViewItemDraw_array *v22; // x8
+  struct System_Collections_Generic_List_ListViewItem__o *v23; // x8
 
-  if ( (byte_4AB2868 & 1) == 0 )
+  if ( (byte_4B12CD4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, *(_QWORD *)&offset);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BAB41C(&QuestInformationListViewItem_TypeInfo, v7);
-    byte_4AB2868 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, *(_QWORD *)&offset, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5, v6);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v7, v8);
+    sub_1BCA7E0(&QuestInformationListViewItem_TypeInfo, v9, v10);
+    byte_4B12CD4 = 1;
   }
   missionTargetLabel = (UnityEngine_Object_o *)this->fields.missionTargetLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&offset);
   gameObject = (BoardOptionEventTargetListViewItemDraw_o *)UnityEngine_Object__op_Equality(missionTargetLabel, 0LL, 0LL);
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
@@ -738,23 +877,23 @@ void __fastcall BoardOptionEventTargetComponent__DispList(
       return;
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-    v13 = this->fields.itemList;
+    v16 = this->fields.itemList;
     this->fields.nowOffset = offset;
-    if ( !v13 )
+    if ( !v16 )
       goto LABEL_32;
-    v14 = this->fields.eventTargetItemDrawList;
-    if ( !v14 )
+    v17 = this->fields.eventTargetItemDrawList;
+    if ( !v17 )
       goto LABEL_32;
-    v15 = 0;
-    v16 = (v13->fields._size - offset) & ~((v13->fields._size - offset) >> 31);
+    v18 = 0;
+    v19 = (v16->fields._size - offset) & ~((v16->fields._size - offset) >> 31);
     while ( 1 )
     {
-      v17 = *(_QWORD *)&v14->max_length;
-      if ( v15 >= (int)v17 )
+      v20 = *(_QWORD *)&v17->max_length;
+      if ( v18 >= (int)v20 )
         break;
-      if ( v15 >= (unsigned int)v17 )
+      if ( v18 >= (unsigned int)v20 )
         goto LABEL_38;
-      gameObject = v14->m_Items[v15];
+      gameObject = v17->m_Items[v18];
       if ( !gameObject )
         goto LABEL_32;
       gameObject = (BoardOptionEventTargetListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
@@ -762,7 +901,7 @@ void __fastcall BoardOptionEventTargetComponent__DispList(
                                                                  0LL);
       if ( !gameObject )
         goto LABEL_32;
-      if ( v15 >= v16 )
+      if ( v18 >= v19 )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
       }
@@ -774,42 +913,42 @@ void __fastcall BoardOptionEventTargetComponent__DispList(
           goto LABEL_32;
         gameObject = (BoardOptionEventTargetListViewItemDraw_o *)System_Collections_Generic_List_object___get_Item(
                                                                    (System_Collections_Generic_List_object__o *)gameObject,
-                                                                   offset + v15,
-                                                                   (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                                   offset + v18,
+                                                                   (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
         if ( gameObject
           && (methodPtr_low = LOBYTE(QuestInformationListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
               LOBYTE(gameObject->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
         {
-          v10 = (QuestInformationListViewItem_c *)gameObject->klass->_2.typeHierarchy[methodPtr_low - 1] == QuestInformationListViewItem_TypeInfo
+          v13 = (QuestInformationListViewItem_c *)gameObject->klass->_2.typeHierarchy[methodPtr_low - 1] == QuestInformationListViewItem_TypeInfo
               ? (QuestInformationListViewItem_o *)gameObject
               : 0LL;
         }
         else
         {
-          v10 = 0LL;
+          v13 = 0LL;
         }
-        v19 = this->fields.eventTargetItemDrawList;
-        if ( !v19 )
+        v22 = this->fields.eventTargetItemDrawList;
+        if ( !v22 )
           goto LABEL_32;
-        if ( v15 >= v19->max_length )
+        if ( v18 >= v22->max_length )
 LABEL_38:
-          sub_1BAB680(gameObject, v10);
-        gameObject = v19->m_Items[v15];
+          sub_1BCAA44(gameObject, v13);
+        gameObject = v22->m_Items[v18];
         if ( !gameObject )
           goto LABEL_32;
-        BoardOptionEventTargetListViewItemDraw__SetItem(gameObject, v10, 2, 0LL);
+        BoardOptionEventTargetListViewItemDraw__SetItem(gameObject, v13, 2, 0LL);
       }
-      v14 = this->fields.eventTargetItemDrawList;
-      ++v15;
-      if ( !v14 )
+      v17 = this->fields.eventTargetItemDrawList;
+      ++v18;
+      if ( !v17 )
         goto LABEL_32;
     }
-    v20 = this->fields.itemList;
-    if ( !v20 )
+    v23 = this->fields.itemList;
+    if ( !v23 )
 LABEL_32:
-      sub_1BAB678(gameObject, v10);
-    if ( v20->fields._size <= (int)v17 )
-      BoardOptionEventTargetComponent__SetAlpha(this, 1.0, (const MethodInfo *)v10);
+      sub_1BCAA3C(gameObject, v13);
+    if ( v23->fields._size <= (int)v20 )
+      BoardOptionEventTargetComponent__SetAlpha(this, 1.0, (const MethodInfo *)v13);
   }
 }
 
@@ -818,24 +957,26 @@ bool __fastcall BoardOptionEventTargetComponent__IsNeedAnim(
         BoardOptionEventTargetComponent_o *this,
         const MethodInfo *method)
 {
-  BoardOptionEventTargetComponent_o *v2; // x19
+  __int64 v2; // x2
+  BoardOptionEventTargetComponent_o *v3; // x19
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x8
   struct BoardOptionEventTargetListViewItemDraw_array *eventTargetItemDrawList; // x9
 
-  v2 = this;
-  if ( (byte_4AB286C & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B12CD8 & 1) == 0 )
   {
-    this = (BoardOptionEventTargetComponent_o *)sub_1BAB41C(
+    this = (BoardOptionEventTargetComponent_o *)sub_1BCA7E0(
                                                   &Method_System_Collections_Generic_List_ListViewItem__get_Count__,
-                                                  method);
-    byte_4AB286C = 1;
+                                                  method,
+                                                  v2);
+    byte_4B12CD8 = 1;
   }
-  itemList = v2->fields.itemList;
+  itemList = v3->fields.itemList;
   if ( !itemList )
     return 0;
-  eventTargetItemDrawList = v2->fields.eventTargetItemDrawList;
+  eventTargetItemDrawList = v3->fields.eventTargetItemDrawList;
   if ( !eventTargetItemDrawList )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return itemList->fields._size > (signed int)eventTargetItemDrawList->max_length;
 }
 
@@ -844,71 +985,90 @@ UnityEngine_Material_o *__fastcall BoardOptionEventTargetComponent__NewChocoMate
         BoardOptionEventTargetComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  __int64 v7; // x1
-  ServantStatusBattleListViewItem_o *p_mChocoMaterialSp; // x20
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  PartyOrganizationUtility_o *p_mChocoMaterialSp; // x20
   UnityEngine_Object_o *mChocoMaterialSp; // x21
-  ServantStatusBattleListViewItem_o *p_mChocoTex; // x19
-  UnityEngine_Object_o *v11; // x21
+  __int64 v16; // x1
+  PartyOrganizationUtility_o *p_mChocoTex; // x19
+  UnityEngine_Object_o *v18; // x21
   struct UnityEngine_Texture2D_o *mChocoTex; // t1
+  __int64 v20; // x1
   Il2CppObject *object; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  BoardOptionEventTargetComponent_c *v16; // x0
-  UnityEngine_Shader_o *v17; // x21
-  UnityEngine_Material_o *v18; // x22
-  int32_t v19; // w2
-  int32_t v20; // w3
-  __int64 v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  BoardOptionEventTargetComponent_c *v28; // x0
+  UnityEngine_Shader_o *v29; // x21
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x3
+  UnityEngine_Material_o *v33; // x22
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  __int64 v40; // x1
 
-  if ( (byte_4AB286B & 1) == 0 )
+  if ( (byte_4B12CD7 & 1) == 0 )
   {
-    sub_1BAB41C(&BoardOptionEventTargetComponent_TypeInfo, method);
-    sub_1BAB41C(&UnityEngine_Material_TypeInfo, v3);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BAB41C(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
-    sub_1BAB41C(&StringLiteral_16190/*"_ChocoTex"*/, v6);
-    sub_1BAB41C(&StringLiteral_12762/*"Shaders/ChocoMap"*/, v7);
-    byte_4AB286B = 1;
+    sub_1BCA7E0(&BoardOptionEventTargetComponent_TypeInfo, method, v2);
+    sub_1BCA7E0(&UnityEngine_Material_TypeInfo, v4, v5);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v6, v7);
+    sub_1BCA7E0(&Method_UnityEngine_Resources_Load_Texture2D___, v8, v9);
+    sub_1BCA7E0(&StringLiteral_16327/*"_ChocoTex"*/, v10, v11);
+    sub_1BCA7E0(&StringLiteral_12893/*"Shaders/ChocoMap"*/, v12, v13);
+    byte_4B12CD7 = 1;
   }
-  p_mChocoMaterialSp = (ServantStatusBattleListViewItem_o *)&this->fields.mChocoMaterialSp;
+  p_mChocoMaterialSp = (PartyOrganizationUtility_o *)&this->fields.mChocoMaterialSp;
   mChocoMaterialSp = (UnityEngine_Object_o *)this->fields.mChocoMaterialSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(mChocoMaterialSp, 0LL, 0LL) )
   {
     mChocoTex = this->fields.mChocoTex;
-    p_mChocoTex = (ServantStatusBattleListViewItem_o *)&this->fields.mChocoTex;
-    v11 = (UnityEngine_Object_o *)mChocoTex;
+    p_mChocoTex = (PartyOrganizationUtility_o *)&this->fields.mChocoTex;
+    v18 = (UnityEngine_Object_o *)mChocoTex;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v11, 0LL, 0LL) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
+    if ( UnityEngine_Object__op_Equality(v18, 0LL, 0LL) )
     {
       object = UnityEngine_Resources__Load_object_(
-                 (System_String_o *)StringLiteral_12762/*"Shaders/ChocoMap"*/,
-                 (const MethodInfo_2F57C2C *)Method_UnityEngine_Resources_Load_Texture2D___);
-      p_mChocoTex->klass = (ServantStatusBattleListViewItem_c *)object;
-      sub_1BAB3C0(p_mChocoTex, (int32_t)object, v14, v15);
+                 (System_String_o *)StringLiteral_12893/*"Shaders/ChocoMap"*/,
+                 (const MethodInfo_2FA6FF0 *)Method_UnityEngine_Resources_Load_Texture2D___);
+      p_mChocoTex->klass = (PartyOrganizationUtility_c *)object;
+      sub_1BCA784(p_mChocoTex, (int64_t)object, v22, v23, v24, v25, v26, v27);
     }
-    v16 = BoardOptionEventTargetComponent_TypeInfo;
+    v28 = BoardOptionEventTargetComponent_TypeInfo;
     if ( !BoardOptionEventTargetComponent_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent_TypeInfo);
-      v16 = BoardOptionEventTargetComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent_TypeInfo, v20);
+      v28 = BoardOptionEventTargetComponent_TypeInfo;
     }
-    v17 = UnityEngine_Shader__Find(v16->static_fields->CHOCO_SHADER_SP, 0LL);
-    v18 = (UnityEngine_Material_o *)sub_1BAB668(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor(v18, v17, 0LL);
-    p_mChocoMaterialSp->klass = (ServantStatusBattleListViewItem_c *)v18;
-    sub_1BAB3C0(p_mChocoMaterialSp, (int32_t)v18, v19, v20);
+    v29 = UnityEngine_Shader__Find(v28->static_fields->CHOCO_SHADER_SP, 0LL);
+    v33 = (UnityEngine_Material_o *)sub_1BCAA2C(UnityEngine_Material_TypeInfo, v30, v31, v32);
+    UnityEngine_Material___ctor(v33, v29, 0LL);
+    p_mChocoMaterialSp->klass = (PartyOrganizationUtility_c *)v33;
+    sub_1BCA784(p_mChocoMaterialSp, (int64_t)v33, v34, v35, v36, v37, v38, v39);
     if ( !p_mChocoMaterialSp->klass )
-      sub_1BAB678(0LL, v21);
+      sub_1BCAA3C(0LL, v40);
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)p_mChocoMaterialSp->klass,
-      (System_String_o *)StringLiteral_16190/*"_ChocoTex"*/,
+      (System_String_o *)StringLiteral_16327/*"_ChocoTex"*/,
       (UnityEngine_Texture_o *)p_mChocoTex->klass,
       0LL);
   }
@@ -920,71 +1080,90 @@ UnityEngine_Material_o *__fastcall BoardOptionEventTargetComponent__NewChocoMate
         BoardOptionEventTargetComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  __int64 v7; // x1
-  ServantStatusBattleListViewItem_o *p_mChocoMaterialTx; // x20
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  PartyOrganizationUtility_o *p_mChocoMaterialTx; // x20
   UnityEngine_Object_o *mChocoMaterialTx; // x21
-  ServantStatusBattleListViewItem_o *p_mChocoTex; // x19
-  UnityEngine_Object_o *v11; // x21
+  __int64 v16; // x1
+  PartyOrganizationUtility_o *p_mChocoTex; // x19
+  UnityEngine_Object_o *v18; // x21
   struct UnityEngine_Texture2D_o *mChocoTex; // t1
+  __int64 v20; // x1
   Il2CppObject *object; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  BoardOptionEventTargetComponent_c *v16; // x0
-  UnityEngine_Shader_o *v17; // x21
-  UnityEngine_Material_o *v18; // x22
-  int32_t v19; // w2
-  int32_t v20; // w3
-  __int64 v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  BoardOptionEventTargetComponent_c *v28; // x0
+  UnityEngine_Shader_o *v29; // x21
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x3
+  UnityEngine_Material_o *v33; // x22
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  __int64 v40; // x1
 
-  if ( (byte_4AB286A & 1) == 0 )
+  if ( (byte_4B12CD6 & 1) == 0 )
   {
-    sub_1BAB41C(&BoardOptionEventTargetComponent_TypeInfo, method);
-    sub_1BAB41C(&UnityEngine_Material_TypeInfo, v3);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BAB41C(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
-    sub_1BAB41C(&StringLiteral_16190/*"_ChocoTex"*/, v6);
-    sub_1BAB41C(&StringLiteral_12762/*"Shaders/ChocoMap"*/, v7);
-    byte_4AB286A = 1;
+    sub_1BCA7E0(&BoardOptionEventTargetComponent_TypeInfo, method, v2);
+    sub_1BCA7E0(&UnityEngine_Material_TypeInfo, v4, v5);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v6, v7);
+    sub_1BCA7E0(&Method_UnityEngine_Resources_Load_Texture2D___, v8, v9);
+    sub_1BCA7E0(&StringLiteral_16327/*"_ChocoTex"*/, v10, v11);
+    sub_1BCA7E0(&StringLiteral_12893/*"Shaders/ChocoMap"*/, v12, v13);
+    byte_4B12CD6 = 1;
   }
-  p_mChocoMaterialTx = (ServantStatusBattleListViewItem_o *)&this->fields.mChocoMaterialTx;
+  p_mChocoMaterialTx = (PartyOrganizationUtility_o *)&this->fields.mChocoMaterialTx;
   mChocoMaterialTx = (UnityEngine_Object_o *)this->fields.mChocoMaterialTx;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(mChocoMaterialTx, 0LL, 0LL) )
   {
     mChocoTex = this->fields.mChocoTex;
-    p_mChocoTex = (ServantStatusBattleListViewItem_o *)&this->fields.mChocoTex;
-    v11 = (UnityEngine_Object_o *)mChocoTex;
+    p_mChocoTex = (PartyOrganizationUtility_o *)&this->fields.mChocoTex;
+    v18 = (UnityEngine_Object_o *)mChocoTex;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v11, 0LL, 0LL) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
+    if ( UnityEngine_Object__op_Equality(v18, 0LL, 0LL) )
     {
       object = UnityEngine_Resources__Load_object_(
-                 (System_String_o *)StringLiteral_12762/*"Shaders/ChocoMap"*/,
-                 (const MethodInfo_2F57C2C *)Method_UnityEngine_Resources_Load_Texture2D___);
-      p_mChocoTex->klass = (ServantStatusBattleListViewItem_c *)object;
-      sub_1BAB3C0(p_mChocoTex, (int32_t)object, v14, v15);
+                 (System_String_o *)StringLiteral_12893/*"Shaders/ChocoMap"*/,
+                 (const MethodInfo_2FA6FF0 *)Method_UnityEngine_Resources_Load_Texture2D___);
+      p_mChocoTex->klass = (PartyOrganizationUtility_c *)object;
+      sub_1BCA784(p_mChocoTex, (int64_t)object, v22, v23, v24, v25, v26, v27);
     }
-    v16 = BoardOptionEventTargetComponent_TypeInfo;
+    v28 = BoardOptionEventTargetComponent_TypeInfo;
     if ( !BoardOptionEventTargetComponent_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent_TypeInfo);
-      v16 = BoardOptionEventTargetComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BoardOptionEventTargetComponent_TypeInfo, v20);
+      v28 = BoardOptionEventTargetComponent_TypeInfo;
     }
-    v17 = UnityEngine_Shader__Find(v16->static_fields->CHOCO_SHADER_TX, 0LL);
-    v18 = (UnityEngine_Material_o *)sub_1BAB668(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor(v18, v17, 0LL);
-    p_mChocoMaterialTx->klass = (ServantStatusBattleListViewItem_c *)v18;
-    sub_1BAB3C0(p_mChocoMaterialTx, (int32_t)v18, v19, v20);
+    v29 = UnityEngine_Shader__Find(v28->static_fields->CHOCO_SHADER_TX, 0LL);
+    v33 = (UnityEngine_Material_o *)sub_1BCAA2C(UnityEngine_Material_TypeInfo, v30, v31, v32);
+    UnityEngine_Material___ctor(v33, v29, 0LL);
+    p_mChocoMaterialTx->klass = (PartyOrganizationUtility_c *)v33;
+    sub_1BCA784(p_mChocoMaterialTx, (int64_t)v33, v34, v35, v36, v37, v38, v39);
     if ( !p_mChocoMaterialTx->klass )
-      sub_1BAB678(0LL, v21);
+      sub_1BCAA3C(0LL, v40);
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)p_mChocoMaterialTx->klass,
-      (System_String_o *)StringLiteral_16190/*"_ChocoTex"*/,
+      (System_String_o *)StringLiteral_16327/*"_ChocoTex"*/,
       (UnityEngine_Texture_o *)p_mChocoTex->klass,
       0LL);
   }
@@ -1023,7 +1202,7 @@ void __fastcall BoardOptionEventTargetComponent__SetAlpha(
   eventTargetItemDrawList = this->fields.eventTargetItemDrawList;
   if ( !eventTargetItemDrawList )
 LABEL_7:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   v4 = this;
   v6 = 0LL;
   while ( 1 )
@@ -1032,7 +1211,7 @@ LABEL_7:
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1BAB680(this, method);
+      sub_1BCAA44(this, method);
     this = (BoardOptionEventTargetComponent_o *)eventTargetItemDrawList->m_Items[v6];
     if ( this )
     {
@@ -1061,19 +1240,20 @@ void __fastcall BoardOptionEventTargetComponent__SetNextTarget(
   int32_t v9; // w1
 
   v3 = this;
-  if ( (byte_4AB286D & 1) == 0 )
+  if ( (byte_4B12CD9 & 1) == 0 )
   {
-    this = (BoardOptionEventTargetComponent_o *)sub_1BAB41C(
+    this = (BoardOptionEventTargetComponent_o *)sub_1BCA7E0(
                                                   &Method_System_Collections_Generic_List_ListViewItem__get_Count__,
-                                                  method);
-    byte_4AB286D = 1;
+                                                  method,
+                                                  v2);
+    byte_4B12CD9 = 1;
   }
   itemList = v3->fields.itemList;
   if ( itemList )
   {
     eventTargetItemDrawList = v3->fields.eventTargetItemDrawList;
     if ( !eventTargetItemDrawList )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     size = itemList->fields._size;
     max_length = eventTargetItemDrawList->max_length;
     if ( size > max_length )
@@ -1092,23 +1272,33 @@ void __fastcall BoardOptionEventTargetComponent__SetNextTarget(
 void __fastcall BoardOptionEventTargetComponent___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB287A & 1) == 0 )
+  if ( (byte_4B12CE6 & 1) == 0 )
   {
-    sub_1BAB41C(&BoardOptionEventTargetComponent___c_TypeInfo, v1);
-    byte_4AB287A = 1;
+    sub_1BCA7E0(&BoardOptionEventTargetComponent___c_TypeInfo, v1, v2);
+    byte_4B12CE6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BAB668(BoardOptionEventTargetComponent___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  BoardOptionEventTargetComponent___c_TypeInfo->static_fields->__9 = (struct BoardOptionEventTargetComponent___c_o *)v2;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)BoardOptionEventTargetComponent___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+  v4 = (Il2CppObject *)sub_1BCAA2C(BoardOptionEventTargetComponent___c_TypeInfo, v1, v2, v3);
+  System_Object___ctor(v4, 0LL);
+  BoardOptionEventTargetComponent___c_TypeInfo->static_fields->__9 = (struct BoardOptionEventTargetComponent___c_o *)v4;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)BoardOptionEventTargetComponent___c_TypeInfo->static_fields,
+    (int64_t)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -1141,44 +1331,53 @@ void __fastcall BoardOptionEventTargetComponent___c__DisplayClass8_0___CreateEne
         BoardOptionEventTargetComponent___c__DisplayClass8_0_o *this,
         const MethodInfo *method)
 {
-  BoardOptionEventTargetComponent___c__DisplayClass8_0_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
+  BoardOptionEventTargetComponent___c__DisplayClass8_0_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   struct BoardOptionEventTargetComponent_o *_4__this; // x8
   System_String_array *loadedAssets; // x20
   System_Action_o *_9__2; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
 
-  v2 = this;
-  if ( (byte_4AB287B & 1) == 0 )
+  v4 = this;
+  if ( (byte_4B12CE7 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, method);
-    sub_1BAB41C(&AssetManager_TypeInfo, v3);
-    this = (BoardOptionEventTargetComponent___c__DisplayClass8_0_o *)sub_1BAB41C(
+    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
+    sub_1BCA7E0(&AssetManager_TypeInfo, v5, v6);
+    this = (BoardOptionEventTargetComponent___c__DisplayClass8_0_o *)sub_1BCA7E0(
                                                                        &Method_BoardOptionEventTargetComponent___c__DisplayClass8_0__CreateEnemyList_b__2__,
-                                                                       v4);
-    byte_4AB287B = 1;
+                                                                       v7,
+                                                                       v8);
+    byte_4B12CE7 = 1;
   }
-  _4__this = v2->fields.__4__this;
+  _4__this = v4->fields.__4__this;
   if ( !_4__this )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   loadedAssets = _4__this->fields.loadedAssets;
-  _9__2 = v2->fields.__9__2;
+  _9__2 = v4->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, method, v2, v3);
     System_Action___ctor(
       _9__2,
-      (Il2CppObject *)v2,
+      (Il2CppObject *)v4,
       Method_BoardOptionEventTargetComponent___c__DisplayClass8_0__CreateEnemyList_b__2__,
       0LL);
-    v2->fields.__9__2 = _9__2;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v2->fields.__9__2, (int32_t)_9__2, v8, v9);
+    v4->fields.__9__2 = _9__2;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v4->fields.__9__2, (int64_t)_9__2, v12, v13, v14, v15, v16, v17);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_38182648(loadedAssets, _9__2, 1, 0LL);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
+  AssetManager__loadAssetStorage_38512336(loadedAssets, _9__2, 1, 0LL);
 }
 
 
@@ -1190,8 +1389,8 @@ void __fastcall BoardOptionEventTargetComponent___c__DisplayClass8_0___CreateEne
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BAB678(0LL, method);
-  BoardOptionEventTargetComponent__CreateEnemyList_33830636(
+    sub_1BCAA3C(0LL, method);
+  BoardOptionEventTargetComponent__CreateEnemyList_34141980(
     _4__this,
     this->fields.questId,
     this->fields.enemies,

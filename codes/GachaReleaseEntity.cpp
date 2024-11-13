@@ -1,13 +1,15 @@
 void __fastcall GachaReleaseEntity___ctor(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5FF5 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B1649A & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5FF5 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B1649A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +20,16 @@ System_String_o *__fastcall GachaReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4AB5FF3 & 1) == 0 )
+  if ( (byte_4B16498 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4AB5FF3 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type, *(_QWORD *)&targetId);
+    byte_4B16498 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            type,
            targetId,
-           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -41,15 +43,16 @@ System_String_o *__fastcall GachaReleaseEntity__CreatePrimaryKey(GachaReleaseEnt
 
 bool __fastcall GachaReleaseEntity__IsEnable(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t type; // w20
   int32_t targetId; // w21
   int64_t value; // x19
-  int32_t v7; // w19
+  int32_t v8; // w19
 
-  if ( (byte_4AB5FF4 & 1) == 0 )
+  if ( (byte_4B16499 & 1) == 0 )
   {
-    sub_1BAB41C(&CondType_TypeInfo, method);
-    byte_4AB5FF4 = 1;
+    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
+    byte_4B16499 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
@@ -58,7 +61,7 @@ LABEL_6:
     targetId = this->fields.targetId;
     value = this->fields.value;
     if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
     return CondType__IsOpen(type, targetId, value, 0, 0LL, 0LL);
   }
   if ( type != 113 )
@@ -67,8 +70,8 @@ LABEL_6:
       return 0;
     goto LABEL_6;
   }
-  v7 = this->fields.targetId;
+  v8 = this->fields.targetId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsCommonRelease(v7, 0LL);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
+  return CondType__IsCommonRelease(v8, 0LL);
 }

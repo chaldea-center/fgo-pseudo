@@ -1,13 +1,15 @@
 void __fastcall EventCooltimeRewardEntity___ctor(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5C88 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16128 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5C88 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16128 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +20,16 @@ System_String_o *__fastcall EventCooltimeRewardEntity__CreatePK(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4AB5C84 & 1) == 0 )
+  if ( (byte_4B16124 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&spotId);
-    byte_4AB5C84 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&spotId, *(_QWORD *)&lv);
+    byte_4B16124 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            spotId,
            lv,
-           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -53,21 +55,23 @@ GiftEntity_o *__fastcall EventCooltimeRewardEntity__GetGiftEntity(
         EventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v7; // x1
 
-  if ( (byte_4AB5C87 & 1) == 0 )
+  if ( (byte_4B16127 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMaster_GiftMaster___, method);
-    sub_1BAB41C(&DataManager_TypeInfo, v3);
-    byte_4AB5C87 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMaster_GiftMaster___, method, v2);
+    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
+    byte_4B16127 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_GiftMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
-    sub_1BAB678(0LL, v5);
+    sub_1BCAA3C(0LL, v7);
   return GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0LL);
 }
 
@@ -76,34 +80,36 @@ EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *__fastcall EventCooltimeRewa
         EventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
+  __int64 v3; // x3
   int32_t cooltime; // w20
   int32_t upperLimitGiftNum; // w21
-  __int64 v5; // x19
-  int v6; // w8
-  int v7; // w9
+  __int64 v7; // x19
+  int v8; // w8
+  int v9; // w9
 
-  if ( (byte_4AB5C85 & 1) == 0 )
+  if ( (byte_4B16125 & 1) == 0 )
   {
-    sub_1BAB41C(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo, method);
-    byte_4AB5C85 = 1;
+    sub_1BCA7E0(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo, method, v2);
+    byte_4B16125 = 1;
   }
   cooltime = this->fields.cooltime;
   upperLimitGiftNum = this->fields.upperLimitGiftNum;
-  v5 = sub_1BAB668(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  v7 = sub_1BCAA2C(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( cooltime >= upperLimitGiftNum )
   {
-    v7 = cooltime / upperLimitGiftNum;
-    v6 = 1;
+    v9 = cooltime / upperLimitGiftNum;
+    v8 = 1;
   }
   else
   {
-    v6 = upperLimitGiftNum / cooltime;
-    v7 = 1;
+    v8 = upperLimitGiftNum / cooltime;
+    v9 = 1;
   }
-  *(_DWORD *)(v5 + 16) = v7;
-  *(_DWORD *)(v5 + 20) = v6;
-  return (EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *)v5;
+  *(_DWORD *)(v7 + 16) = v9;
+  *(_DWORD *)(v7 + 20) = v8;
+  return (EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *)v7;
 }
 
 
@@ -123,21 +129,23 @@ int32_t __fastcall EventCooltimeRewardEntity__GetRewardUnitTime(
 
 bool __fastcall EventCooltimeRewardEntity__IsOpen(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v7; // x1
 
-  if ( (byte_4AB5C86 & 1) == 0 )
+  if ( (byte_4B16126 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
-    sub_1BAB41C(&DataManager_TypeInfo, v3);
-    byte_4AB5C86 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMaster_CommonReleaseMaster___, method, v2);
+    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
+    byte_4B16126 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_1BAB678(0LL, v5);
+    sub_1BCAA3C(0LL, v7);
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }
 

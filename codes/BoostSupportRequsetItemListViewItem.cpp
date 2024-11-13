@@ -8,71 +8,62 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  struct BoostEntity_o **p_boostEntity; // x22
-  Il2CppObject *Instance; // x0
-  __int64 v16; // x1
-  bool v17; // w0
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v19; // x1
+  struct CommonConsumeEntity_array *IdEntityList; // x0
+  CommonReleaseMaster_o *v21; // x22
+  bool v22; // w0
 
-  if ( (byte_4AB0A6D & 1) == 0 )
+  if ( (byte_4B10D9D & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_1BAB41C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Contains_int___, v12);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4AB0A6D = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index, boostEntity);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11, v12);
+    sub_1BCA7E0(&DataManager_TypeInfo, v13, v14);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Contains_int___, v15, v16);
+    byte_4B10D9D = 1;
   }
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   this->fields.boostEntity = boostEntity;
-  p_boostEntity = &this->fields.boostEntity;
-  sub_1BAB3C0(&this->fields.boostEntity);
+  sub_1BCA784(&this->fields.boostEntity, boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_1BAB3C0(&this->fields.usrItemEntityList);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
-    goto LABEL_14;
-  Instance = DataManager__GetMasterData_object_(
-               (DataManager_o *)Instance,
-               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
-  if ( !*p_boostEntity )
-    goto LABEL_14;
-  if ( !Instance )
-    goto LABEL_14;
-  this->fields.commonConsumeEntity = CommonConsumeMaster__GetIdEntityList(
-                                       (CommonConsumeMaster_o *)Instance,
-                                       (*p_boostEntity)->fields.commonConsumeId,
-                                       0LL);
-  sub_1BAB3C0(&this->fields.commonConsumeEntity);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
-    goto LABEL_14;
-  Instance = DataManager__GetMasterData_object_(
-               (DataManager_o *)Instance,
-               (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
-  if ( !*p_boostEntity || !Instance )
-    goto LABEL_14;
-  Instance = (Il2CppObject *)CommonReleaseMaster__IsOpen(
-                               (CommonReleaseMaster_o *)Instance,
-                               (*p_boostEntity)->fields.commonReleaseId,
-                               0LL,
-                               0,
-                               0LL);
-  this->fields.isRelease = (unsigned __int8)Instance & 1;
-  if ( !recommendedBoostIds )
+  sub_1BCA784(&this->fields.usrItemEntityList, usrItemEntityList);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v17);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  if ( !boostEntity
+    || !Master_object
+    || (IdEntityList = CommonConsumeMaster__GetIdEntityList(
+                         (CommonConsumeMaster_o *)Master_object,
+                         boostEntity->fields.commonConsumeId,
+                         0LL),
+        this->fields.commonConsumeEntity = IdEntityList,
+        sub_1BCA784(&this->fields.commonConsumeEntity, IdEntityList),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0LL) )
   {
-    v17 = 0;
-    goto LABEL_13;
+    sub_1BCAA3C(Master_object, v19);
   }
-  if ( !boostEntity )
-LABEL_14:
-    sub_1BAB678(Instance, v16);
-  v17 = System_Linq_Enumerable__Contains_int_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
-          boostEntity->fields.id,
-          (const MethodInfo_2EDD8B4 *)Method_System_Linq_Enumerable_Contains_int___);
-LABEL_13:
-  this->fields.isRecommended = v17;
+  v21 = (CommonReleaseMaster_o *)Master_object;
+  this->fields.isRelease = CommonReleaseMaster__IsOpen(
+                             (CommonReleaseMaster_o *)Master_object,
+                             boostEntity->fields.commonReleaseId,
+                             0LL,
+                             0,
+                             0LL);
+  if ( recommendedBoostIds )
+    v22 = System_Linq_Enumerable__Contains_int_(
+            (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
+            boostEntity->fields.id,
+            (const MethodInfo_2F2AF7C *)Method_System_Linq_Enumerable_Contains_int___);
+  else
+    v22 = 0;
+  this->fields.isRecommended = v22;
+  this->fields.isHide = CommonReleaseMaster__IsOpen(v21, boostEntity->fields.hideCommonReleaseId, 0LL, 0, 0LL);
 }
 
 
@@ -111,6 +102,14 @@ int32_t __fastcall BoostSupportRequsetItemListViewItem__get_Image_id(
     return boostEntity->fields.imageId;
   else
     return 0;
+}
+
+
+bool __fastcall BoostSupportRequsetItemListViewItem__get_IsHide(
+        BoostSupportRequsetItemListViewItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.isHide;
 }
 
 

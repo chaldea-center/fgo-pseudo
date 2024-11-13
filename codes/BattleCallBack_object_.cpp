@@ -2,28 +2,36 @@ void __fastcall BattleCallBack_object____ctor(
         BattleCallBack_T__o *this,
         Il2CppObject *argument,
         System_Action_T__o *callBack,
-        const MethodInfo_30DBCE8 *method)
+        const MethodInfo_312AD98 *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.argument = argument;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)argument, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)argument, v7, v8, v9, v10, v11, v12);
   this->fields.callBack = callBack;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.callBack, (int32_t)callBack, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.callBack, (int64_t)callBack, v13, v14, v15, v16, v17, v18);
 }
 
 
-void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_30DBD2C *method)
+void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_312ADDC *method)
 {
   struct System_Action_T__o *callBack; // x8
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, Il2CppObject *, _QWORD))callBack->fields.m_target)(
     callBack->fields.original_method_info,
     this->fields.argument,

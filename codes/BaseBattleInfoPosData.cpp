@@ -10,9 +10,13 @@ void __fastcall BaseBattleInfoPosData__Init(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._Perf_k__BackingField = perf;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)perf, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -39,16 +43,17 @@ UnityEngine_Vector3_o __fastcall BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
         BaseBattleInfoPosData_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float x; // s0
   float y; // s1
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4AB0691 )
+  if ( !byte_4B109C1 )
   {
-    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4AB0691 = 1;
+    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, method, v2);
+    byte_4B109C1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -67,7 +72,11 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._Perf_k__BackingField = value;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

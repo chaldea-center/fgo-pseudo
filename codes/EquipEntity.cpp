@@ -1,32 +1,35 @@
 void __fastcall EquipEntity___ctor(EquipEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5BE1 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16081 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
-    byte_4AB5BE1 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_int___ctor__, method, v2);
+    byte_4B16081 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31B2C40 *)Method_DataEntityBase_int___ctor__);
 }
 
 
 int32_t __fastcall EquipEntity__CreatePrimaryKey(EquipEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x19
-  __int64 v4; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
+  __int64 v2; // x2
+  __int64 v4; // x19
+  __int64 v5; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v7; // 0:x0.16
 
-  if ( (byte_4AB5BE0 & 1) == 0 )
+  if ( (byte_4B16080 & 1) == 0 )
   {
-    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4AB5BE0 = 1;
+    sub_1BCA7E0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method, v2);
+    byte_4B16080 = 1;
   }
-  v4 = *(_QWORD *)&this->fields.id.fields.currentCryptoKey;
-  v3 = *(_QWORD *)&this->fields.id.fields.fakeValue;
+  v5 = *(_QWORD *)&this->fields.id.fields.currentCryptoKey;
+  v4 = *(_QWORD *)&this->fields.id.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v6.fields.currentCryptoKey = v4;
-  *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v6, 0LL);
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+  *(_QWORD *)&v7.fields.currentCryptoKey = v5;
+  *(_QWORD *)&v7.fields.fakeValue = v4;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(v7, 0LL);
 }

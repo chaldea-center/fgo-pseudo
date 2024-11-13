@@ -22,36 +22,52 @@ void __fastcall AutoFortificationButtonComponent__Init(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
   UISprite_o *ButtonBg; // x22
+  __int64 v14; // x1
   UILabel_o *ButtonLb; // x21
-  System_String_o *v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  int32_t v15; // w3
+  System_String_o *v16; // x0
+  __int64 v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4AB9B03 & 1) == 0 )
+  if ( (byte_4B1A0B2 & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v7);
-    sub_1BAB41C(&StringLiteral_2148/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
-    sub_1BAB41C(&StringLiteral_17516/*"btn_bg_auto_organization"*/, v9);
-    byte_4AB9B03 = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, *(_QWORD *)&eventId, onClickAction);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v7, v8);
+    sub_1BCA7E0(&StringLiteral_2171/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v9, v10);
+    sub_1BCA7E0(&StringLiteral_17659/*"btn_bg_auto_organization"*/, v11, v12);
+    byte_4B1A0B2 = 1;
   }
   ButtonBg = this->fields.ButtonBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_38244724(eventId, ButtonBg, (System_String_o *)StringLiteral_17516/*"btn_bg_auto_organization"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+  AtlasManager__SetEventUI_38574572(eventId, ButtonBg, (System_String_o *)StringLiteral_17659/*"btn_bg_auto_organization"*/, 0LL);
   ButtonLb = this->fields.ButtonLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2148/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v14);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2171/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
   if ( !ButtonLb )
-    sub_1BAB678(v12, v13);
-  UILabel__set_text(ButtonLb, v12, 0LL);
+    sub_1BCAA3C(v16, v17);
+  UILabel__set_text(ButtonLb, v16, 0LL);
   this->fields.onClickAction = onClickAction;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v14, v15);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.onClickAction,
+    (int64_t)onClickAction,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
 }
 
 

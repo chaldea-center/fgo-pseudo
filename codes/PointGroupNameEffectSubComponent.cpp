@@ -12,24 +12,27 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
   __int64 methodPtr_low; // x10
   DataManager_o *Instance; // x0
   System_String_o **p_name; // x8
   void *monitor; // x8
-  __int64 v12; // x9
-  int32_t v13; // w20
-  int32_t v14; // w21
+  __int64 v15; // x9
+  int32_t v16; // w20
+  int32_t v17; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4AB7122 & 1) == 0 )
+  if ( (byte_4B175E4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
-    sub_1BAB41C(&RaceResultEffectParam_TypeInfo, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v7);
-    byte_4AB7122 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param, method);
+    sub_1BCA7E0(&RaceResultEffectParam_TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7, v8);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v9, v10);
+    byte_4B175E4 = 1;
   }
   entity = 0LL;
   if ( param )
@@ -41,26 +44,26 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
       monitor = param[1].monitor;
       if ( monitor )
       {
-        v12 = *((_QWORD *)monitor + 3);
-        if ( v12 )
+        v15 = *((_QWORD *)monitor + 3);
+        if ( v15 )
         {
-          if ( (int)v12 >= 3 )
+          if ( (int)v15 >= 3 )
           {
-            v13 = *((_DWORD *)monitor + 8);
-            v14 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            v16 = *((_DWORD *)monitor + 8);
+            v17 = *((_DWORD *)monitor + 12);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
                                           (EventPointGroupMaster_o *)Instance,
                                           &entity,
-                                          v13,
-                                          v14,
+                                          v16,
+                                          v17,
                                           0LL);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
@@ -74,7 +77,7 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1BAB678(Instance, param);
+              sub_1BCAA3C(Instance, param);
             }
           }
         }

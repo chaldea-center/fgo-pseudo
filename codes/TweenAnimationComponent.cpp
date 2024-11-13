@@ -23,14 +23,18 @@ int32_t __fastcall TweenAnimationComponent__GetEaseType(
 
 void __fastcall TweenAnimationComponent__OnFinishAnimation(TweenAnimationComponent_o *this, const MethodInfo *method)
 {
-  ServantStatusBattleListViewItem_o *p_onFinishAnimation; // x19
-  int32_t v3; // w2
+  PartyOrganizationUtility_o *p_onFinishAnimation; // x19
+  int64_t v3; // x2
   int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  p_onFinishAnimation = (ServantStatusBattleListViewItem_o *)&this->fields.onFinishAnimation;
+  p_onFinishAnimation = (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0LL);
   p_onFinishAnimation->klass = 0LL;
-  sub_1BAB3C0(p_onFinishAnimation, 0, v3, v4);
+  sub_1BCA784(p_onFinishAnimation, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -43,28 +47,41 @@ void __fastcall TweenAnimationComponent__Setup(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
+  __int64 v10; // x2
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
   int32_t *p_closeEaseType; // x8
   struct UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w1
-  int32_t v17; // w2
-  int32_t v18; // w3
-  int32_t v19; // w2
-  int32_t v20; // w3
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  int64_t v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
 
-  if ( (byte_4AB4A10 & 1) == 0 )
+  if ( (byte_4B14EA1 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-    sub_1BAB41C(&StringLiteral_9907/*"OnFinishAnimation"*/, v9);
-    byte_4AB4A10 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType, tweener);
+    sub_1BCA7E0(&StringLiteral_10034/*"OnFinishAnimation"*/, v9, v10);
+    byte_4B14EA1 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
-  if ( !v10 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
+  v11 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
+  if ( !v11 )
   {
     if ( animationType == 1 )
     {
@@ -81,16 +98,32 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         tweener->fields.eventReceiver = gameObject;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&tweener->fields.eventReceiver, (int32_t)gameObject, v14, v15);
-        v16 = StringLiteral_9907/*"OnFinishAnimation"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9907/*"OnFinishAnimation"*/;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&tweener->fields.callWhenFinished, v16, v17, v18);
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&tweener->fields.eventReceiver,
+          (int64_t)gameObject,
+          v15,
+          v16,
+          v17,
+          v18,
+          v19,
+          v20);
+        v21 = StringLiteral_10034/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10034/*"OnFinishAnimation"*/;
+        sub_1BCA784((PartyOrganizationUtility_o *)&tweener->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
         this->fields.onFinishAnimation = onFinish;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.onFinishAnimation, (int32_t)onFinish, v19, v20);
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation,
+          (int64_t)onFinish,
+          v28,
+          v29,
+          v30,
+          v31,
+          v32,
+          v33);
         return;
       }
     }
-    sub_1BAB678(v10, v11);
+    sub_1BCAA3C(v11, v12);
   }
 }
 
@@ -105,16 +138,17 @@ UnityEngine_GameObject_o *__fastcall TweenAnimationComponent__get_Target(
         TweenAnimationComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_4AB4A0F & 1) == 0 )
+  if ( (byte_4B14EA0 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB4A0F = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B14EA0 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(target, 0LL, 0LL) )
     return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   else

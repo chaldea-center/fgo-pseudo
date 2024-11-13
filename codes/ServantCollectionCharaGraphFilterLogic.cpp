@@ -36,15 +36,15 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
   __int64 v12; // x1
   ListViewSort_o *v13; // x20
 
-  if ( (byte_4AB50A8 & 1) == 0 )
+  if ( (byte_4B15544 & 1) == 0 )
   {
-    sub_1BAB41C(&FilterKindList_TypeInfo, method);
-    byte_4AB50A8 = 1;
+    sub_1BCA7E0(&FilterKindList_TypeInfo, method, v2);
+    byte_4B15544 = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo, method);
     v4 = FilterKindList_TypeInfo;
   }
   if ( !CharaGraphFilterLogicBase__IsAllFilterOff(
@@ -57,12 +57,12 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
     if ( ListViewItem && sort )
       return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
 LABEL_16:
-    sub_1BAB678(ListViewItem, v12);
+    sub_1BCAA3C(ListViewItem, v12);
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo, v5);
     v7 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
@@ -84,21 +84,25 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
         ServantCollectionCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_listViewItem; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  PartyOrganizationUtility_o *p_listViewItem; // x0
   CharaGraphServantCollectionListViewItem_o *listViewItem; // x19
   __int64 methodPtr_low; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
-  ServantCollectionCharaGraphFilterLogic_o *v10; // x0
-  const MethodInfo *v11; // x1
+  ServantCollectionCharaGraphFilterLogic_o *v14; // x0
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4AB50A7 & 1) == 0 )
+  if ( (byte_4B15543 & 1) == 0 )
   {
-    sub_1BAB41C(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_4AB50A7 = 1;
+    sub_1BCA7E0(&CharaGraphServantCollectionListViewItem_TypeInfo, method, v2);
+    byte_4B15543 = 1;
   }
-  p_listViewItem = (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem;
+  p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
   if ( listViewItem )
     return listViewItem;
@@ -109,10 +113,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
     && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
   {
     item = this->fields.item;
-    p_listViewItem->klass = (ServantStatusBattleListViewItem_c *)listViewItem;
-    sub_1BAB3C0(p_listViewItem, (int32_t)item, v2, v3);
+    p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
+    sub_1BCA784(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1BAB938(this->fields.item);
-  return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
+  sub_1BCACFC(this->fields.item);
+  return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
 }

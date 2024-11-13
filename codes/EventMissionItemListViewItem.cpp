@@ -1,32 +1,53 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventMissionItemListViewItem___ctor(
         EventMissionItemListViewItem_o *this,
         EventMissionEntity_o *missionData,
         bool isDaily,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   EventMissionEntity_o *eventMissionEnt; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
+  __int64 v14; // x1
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
   int32_t id; // w8
-  int32_t v14; // w1
-  int32_t v15; // w1
-  int32_t v16; // w2
-  int32_t v17; // w3
+  void *v22; // x1
+  void *v23; // x1
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
   bool isNowMission; // w0
   EventMissionItemListViewItem_c *klass; // x8
-  struct EventMissionEntity_o *v20; // x8
+  struct EventMissionEntity_o *v32; // x8
 
-  if ( (byte_4AB9BE5 & 1) == 0 )
+  if ( (byte_4B1A195 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, missionData);
-    byte_4AB9BE5 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, missionData, isDaily);
+    byte_4B1A195 = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0LL);
   this->fields.eventMissionEnt = missionData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.eventMissionEnt,
+    (int64_t)missionData,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   if ( !missionData )
     goto LABEL_7;
   this->fields.currentEventId = missionData->fields.missionTargetId;
@@ -34,15 +55,15 @@ void __fastcall EventMissionItemListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v14 = (int)StringLiteral_1/*""*/;
+  v22 = StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.condMsg, v14, v11, v12);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.condMsg, (int64_t)v22, v15, v16, v17, v18, v19, v20);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0LL;
   this->fields.progNum = 0LL;
-  v15 = (int)StringLiteral_1/*""*/;
+  v23 = StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.progTxt, v15, v16, v17);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.progTxt, (int64_t)v23, v24, v25, v26, v27, v28, v29);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -56,12 +77,12 @@ void __fastcall EventMissionItemListViewItem___ctor(
           this,
           klass->vtable._7_SetGiftData.methodPtr),
         MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0LL),
-        (v20 = this->fields.eventMissionEnt) == 0LL) )
+        (v32 = this->fields.eventMissionEnt) == 0LL) )
   {
 LABEL_7:
-    sub_1BAB678(eventMissionEnt, v10);
+    sub_1BCAA3C(eventMissionEnt, v14);
   }
-  this->fields.sortValue2 = -v20->fields.id;
+  this->fields.sortValue2 = -v32->fields.id;
   MissionListViewItem__CheckEventMissionAdd((MissionListViewItem_o *)this, 0LL);
 }
 
@@ -70,25 +91,27 @@ bool __fastcall EventMissionItemListViewItem__ExistClearConditionEntity(
         EventMissionItemListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   EventMissionConditionEntity_array *Instance; // x0
-  __int64 v5; // x1
+  __int64 v7; // x1
   int max_length; // w8
-  int v7; // w9
-  EventMissionConditionEntity_o *v8; // x10
+  int v9; // w9
+  EventMissionConditionEntity_o *v10; // x10
 
-  if ( (byte_4AB9BE7 & 1) == 0 )
+  if ( (byte_4B1A197 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4AB9BE7 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method, v2);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4, v5);
+    byte_4B1A197 = 1;
   }
-  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (EventMissionConditionEntity_array *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)Instance,
-                                                    (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+                                                    (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = EventMissionConditionMaster__getMissionCondList(
@@ -101,23 +124,23 @@ bool __fastcall EventMissionItemListViewItem__ExistClearConditionEntity(
   max_length = Instance->max_length;
   if ( max_length >= 1 )
   {
-    v7 = 0;
+    v9 = 0;
     while ( 1 )
     {
-      if ( max_length == v7 )
-        sub_1BAB680(Instance, v5);
-      v8 = Instance->m_Items[v7];
-      if ( !v8 )
+      if ( max_length == v9 )
+        sub_1BCAA44(Instance, v7);
+      v10 = Instance->m_Items[v9];
+      if ( !v10 )
         break;
-      if ( v8->fields.missionProgressType != 4 && max_length != ++v7 )
+      if ( v10->fields.missionProgressType != 4 && max_length != ++v9 )
         continue;
-      return v7 < max_length;
+      return v9 < max_length;
     }
 LABEL_15:
-    sub_1BAB678(Instance, v5);
+    sub_1BCAA3C(Instance, v7);
   }
-  v7 = 0;
-  return v7 < max_length;
+  v9 = 0;
+  return v9 < max_length;
 }
 
 
@@ -140,10 +163,10 @@ GiftEntity_o *__fastcall EventMissionItemListViewItem__GetIsRewardQp(
   while ( 1 )
   {
     if ( (unsigned int)v4 >= max_length )
-      sub_1BAB680(this, method);
+      sub_1BCAA44(this, method);
     v5 = giftEnts->m_Items[v4];
     if ( !v5 )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     this = (EventMissionItemListViewItem_o *)GiftEntity__isQp(giftEnts->m_Items[v4], 0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
       break;
@@ -159,22 +182,23 @@ void __fastcall EventMissionItemListViewItem__SetGiftData(
         EventMissionItemListViewItem_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   GiftEntity_array *giftEnts; // x20
   GiftEntity_o *IconGiftEntity; // x20
-  __int64 v5; // x0
-  __int64 v6; // x1
+  __int64 v6; // x0
+  __int64 v7; // x1
   int32_t num; // w8
 
-  if ( (byte_4AB9BE6 & 1) == 0 )
+  if ( (byte_4B1A196 & 1) == 0 )
   {
-    sub_1BAB41C(&MissionInfoMaker_TypeInfo, method);
-    byte_4AB9BE6 = 1;
+    sub_1BCA7E0(&MissionInfoMaker_TypeInfo, method, v2);
+    byte_4B1A196 = 1;
   }
   giftEnts = this->fields.giftEnts;
   if ( giftEnts )
   {
     if ( !MissionInfoMaker_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo);
+      j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo, method);
     IconGiftEntity = MissionInfoMaker__GetIconGiftEntity(giftEnts, 0LL);
     MissionInfoMaker__SetGiftInfo(
       IconGiftEntity,
@@ -184,7 +208,7 @@ void __fastcall EventMissionItemListViewItem__SetGiftData(
       &this->fields.servantCostumeEnt,
       0LL);
     if ( !IconGiftEntity )
-      sub_1BAB678(v5, v6);
+      sub_1BCAA3C(v6, v7);
     this->fields.rewardObjectId = IconGiftEntity->fields.objectId;
     num = IconGiftEntity->fields.num;
     if ( num <= 1 )
@@ -247,7 +271,7 @@ LABEL_13:
   eventMissionEnt = v4->fields.eventMissionEnt;
   if ( !eventMissionEnt )
 LABEL_16:
-    sub_1BAB678(this, sort);
+    sub_1BCAA3C(this, sort);
   result = 1;
   v4->fields.sortValue1 = eventMissionEnt->fields.dispNo;
   return result;
@@ -279,7 +303,7 @@ bool __fastcall EventMissionItemListViewItem__get_IsHideReward(
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0LL);
 }

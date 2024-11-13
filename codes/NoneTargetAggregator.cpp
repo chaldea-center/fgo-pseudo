@@ -8,10 +8,12 @@ System_Int32_array *__fastcall NoneTargetAggregator__GetCandidate(
         NoneTargetAggregator_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB8A5F & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B18F3F & 1) == 0 )
   {
-    sub_1BAB41C(&int___TypeInfo, method);
-    byte_4AB8A5F = 1;
+    sub_1BCA7E0(&int___TypeInfo, method, v2);
+    byte_4B18F3F = 1;
   }
-  return (System_Int32_array *)sub_1BAB4C4(int___TypeInfo, 0LL);
+  return (System_Int32_array *)sub_1BCA888(int___TypeInfo, 0LL);
 }

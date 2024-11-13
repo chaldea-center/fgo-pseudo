@@ -1,15 +1,16 @@
 bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 {
+  __int64 v2; // x2
   bool result; // w0
-  int v4; // w9
+  int v5; // w9
 
-  if ( (byte_4AB51B6 & 1) == 0 )
+  if ( (byte_4B15652 & 1) == 0 )
   {
-    sub_1BAB41C(&char_TypeInfo, method);
-    byte_4AB51B6 = 1;
+    sub_1BCA7E0(&char_TypeInfo, method, v2);
+    byte_4B15652 = 1;
   }
   if ( !char_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(char_TypeInfo);
+    j_il2cpp_runtime_class_init_0(char_TypeInfo, method);
   if ( System_Char__IsSurrogate(ch, 0LL) )
     return 1;
   result = 1;
@@ -47,13 +48,13 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
     {
       if ( (unsigned int)ch - 65038 < 2 )
         return result;
-      v4 = 12953;
+      v5 = 12953;
     }
     else
     {
       if ( ch == 12336 || ch == 12349 )
         return result;
-      v4 = 12951;
+      v5 = 12951;
     }
   }
   else
@@ -188,13 +189,13 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
       {
         return result;
       }
-      v4 = 9410;
+      v5 = 9410;
     }
     else if ( ch > 0x2121u )
     {
       if ( (unsigned int)ch - 8596 <= 0x16 && ((1 << (ch + 108)) & 0x60003F) != 0 || ch == 8482 )
         return result;
-      v4 = 8505;
+      v5 = 8505;
     }
     else
     {
@@ -209,10 +210,10 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
       {
         return result;
       }
-      v4 = 8419;
+      v5 = 8419;
     }
   }
-  if ( ch != v4 )
+  if ( ch != v5 )
     return 0;
   return result;
 }

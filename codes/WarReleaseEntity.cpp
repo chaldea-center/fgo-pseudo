@@ -1,13 +1,15 @@
 void __fastcall WarReleaseEntity___ctor(WarReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6DFD & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B172B3 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB6DFD = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B172B3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +21,20 @@ System_String_o *__fastcall WarReleaseEntity__CreatePK(
         int64_t condNum,
         const MethodInfo *method)
 {
-  if ( (byte_4AB6DFC & 1) == 0 )
+  if ( (byte_4B172B2 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&condType);
-    byte_4AB6DFC = 1;
+    sub_1BCA7E0(
+      &Method_DataEntityBase_CreateMultiplePK_int__int__int__long___,
+      *(_QWORD *)&condType,
+      *(_QWORD *)&condId);
+    byte_4B172B2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            warId,
            condType,
            condId,
            condNum,
-           (const MethodInfo_2EC41D8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2F118A0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -78,20 +83,21 @@ bool __fastcall WarReleaseEntity__IsOpen(WarReleaseEntity_o *this, const MethodI
 
 bool __fastcall WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t condId; // w20
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4AB6DFB & 1) == 0 )
+  if ( (byte_4B172B1 & 1) == 0 )
   {
-    sub_1BAB41C(&CondType_TypeInfo, method);
-    byte_4AB6DFB = 1;
+    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
+    byte_4B172B1 = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
   condNum = this->fields.condNum;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsOpen(condType, condId, condNum, 0, 0LL, 0LL);
 }
 

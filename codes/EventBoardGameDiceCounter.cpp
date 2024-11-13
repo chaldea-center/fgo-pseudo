@@ -1,17 +1,21 @@
 void __fastcall EventBoardGameDiceCounter___ctor(EventBoardGameDiceCounter_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  int32_t v5; // w1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  int64_t v9; // x1
 
-  if ( (byte_4AB9A3D & 1) == 0 )
+  if ( (byte_4B19F6D & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_19731/*"game1_count_"*/, method);
-    byte_4AB9A3D = 1;
+    sub_1BCA7E0(&StringLiteral_19903/*"game1_count_"*/, method, v2);
+    byte_4B19F6D = 1;
   }
-  v5 = StringLiteral_19731/*"game1_count_"*/;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_19731/*"game1_count_"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.spriteName, v5, v2, v3);
+  v9 = StringLiteral_19903/*"game1_count_"*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_19903/*"game1_count_"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.spriteName, v9, v2, v3, v4, v5, v6, v7);
   this->fields.delayTime = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -27,7 +31,7 @@ void __fastcall EventBoardGameDiceCounter__CountDown(EventBoardGameDiceCounter_o
   if ( currentNum >= 1 )
   {
     v5 = EventBoardGameDiceCounter__SetNum(this, currentNum - 1, v2);
-    UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_70139516((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
   }
 }
 
@@ -38,22 +42,27 @@ System_Collections_IEnumerator_o *__fastcall EventBoardGameDiceCounter__SetNum(
         int32_t num,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
+  __int64 v3; // x3
+  __int64 v6; // x21
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4AB9A3C & 1) == 0 )
+  if ( (byte_4B19F6C & 1) == 0 )
   {
-    sub_1BAB41C(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo, *(_QWORD *)&num);
-    byte_4AB9A3C = 1;
+    sub_1BCA7E0(&EventBoardGameDiceCounter__SetNum_d__7_TypeInfo, *(_QWORD *)&num, method);
+    byte_4B19F6C = 1;
   }
-  v5 = sub_1BAB668(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
-  *(_DWORD *)(v5 + 40) = num;
-  return (System_Collections_IEnumerator_o *)v5;
+  v6 = sub_1BCAA2C(EventBoardGameDiceCounter__SetNum_d__7_TypeInfo, *(_QWORD *)&num, method, v3);
+  System_Object___ctor((Il2CppObject *)v6, 0LL);
+  *(_DWORD *)(v6 + 16) = 0;
+  *(_QWORD *)(v6 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)this, v7, v8, v9, v10, v11, v12);
+  *(_DWORD *)(v6 + 40) = num;
+  return (System_Collections_IEnumerator_o *)v6;
 }
 
 
@@ -73,9 +82,9 @@ void __fastcall EventBoardGameDiceCounter__SetNumSprite(
   spriteName = this->fields.spriteName;
   counterSp = this->fields.counterSp;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_62048128(spriteName, v6, 0LL);
+  v7 = System_String__Concat_62401220(spriteName, v6, 0LL);
   if ( !counterSp )
-    sub_1BAB678(v7, v8);
+    sub_1BCAA3C(v7, v8);
   UISprite__set_spriteName(counterSp, v7, 0LL);
   this->fields.currentNum = v9;
 }
@@ -106,19 +115,24 @@ bool __fastcall EventBoardGameDiceCounter__SetNum_d__7__MoveNext(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
+  __int64 v3; // x3
   int32_t _1__state; // w8
   struct EventBoardGameDiceCounter_o *_4__this; // x0
   float delayTime; // s8
-  UnityEngine_WaitForSeconds_o *v7; // x20
+  UnityEngine_WaitForSeconds_o *v8; // x20
   Il2CppObject **p__2__current; // x19
-  int32_t v9; // w2
-  int32_t v10; // w3
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
   bool result; // w0
 
-  if ( (byte_4AB9A3E & 1) == 0 )
+  if ( (byte_4B19F6E & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_WaitForSeconds_TypeInfo, method);
-    byte_4AB9A3E = 1;
+    sub_1BCA7E0(&UnityEngine_WaitForSeconds_TypeInfo, method, v2);
+    byte_4B19F6E = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -135,17 +149,17 @@ bool __fastcall EventBoardGameDiceCounter__SetNum_d__7__MoveNext(
     if ( _4__this )
     {
       delayTime = _4__this->fields.delayTime;
-      v7 = (UnityEngine_WaitForSeconds_o *)sub_1BAB668(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v7, delayTime, 0LL);
-      this->fields.__2__current = (Il2CppObject *)v7;
+      v8 = (UnityEngine_WaitForSeconds_o *)sub_1BCAA2C(UnityEngine_WaitForSeconds_TypeInfo, method, v2, v3);
+      UnityEngine_WaitForSeconds___ctor(v8, delayTime, 0LL);
+      this->fields.__2__current = (Il2CppObject *)v8;
       p__2__current = &this->fields.__2__current;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p__2__current, (int32_t)v7, v9, v10);
+      sub_1BCA784((PartyOrganizationUtility_o *)p__2__current, (int64_t)v8, v10, v11, v12, v13, v14, v15);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
     }
 LABEL_10:
-    sub_1BAB678(_4__this, method);
+    sub_1BCAA3C(_4__this, method);
   }
   return 0;
 }
@@ -164,14 +178,18 @@ void __fastcall __noreturn EventBoardGameDiceCounter__SetNum_d__7__System_Collec
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_EventBoardGameDiceCounter__SetNum_d__7_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 

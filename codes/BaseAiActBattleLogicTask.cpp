@@ -28,8 +28,12 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
   BattleActionData_array **p_interruptActions; // x19
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
+  int64_t v8; // x2
   int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
   if ( addAction )
   {
@@ -38,10 +42,10 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_1BAB678(IsNullOrEmpty, v7);
+        sub_1BCAA3C(IsNullOrEmpty, v7);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_interruptActions, 0, v8, v9);
+      sub_1BCA784((PartyOrganizationUtility_o *)p_interruptActions, 0LL, v8, v9, v10, v11, v12, v13);
     }
   }
 }
@@ -53,11 +57,19 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.interruptActions = actions;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.interruptActions,
-    (int32_t)actions,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.interruptActions,
+    (int64_t)actions,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

@@ -1,14 +1,16 @@
 void __fastcall TotalLoginMaster___ctor(TotalLoginMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB68AF & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16D62 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string___ctor__, method);
-    byte_4AB68AF = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string___ctor__, method, v2);
+    byte_4B16D62 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     203,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,19 @@ TotalLoginEntity_o *__fastcall TotalLoginMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB68AD & 1) == 0 )
+  if ( (byte_4B16D60 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__GetEntity__, *(_QWORD *)&eventId);
-    byte_4AB68AD = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__GetEntity__,
+      *(_QWORD *)&eventId,
+      *(_QWORD *)&day);
+    byte_4B16D60 = 1;
   }
   PK = (Il2CppObject *)TotalLoginEntity__CreatePK(eventId, day, *(const MethodInfo **)&day);
   return (TotalLoginEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_31640E8 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__GetEntity__);
+                                 (const MethodInfo_31B3198 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +49,20 @@ bool __fastcall TotalLoginMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB68AE & 1) == 0 )
+  if ( (byte_4B16D61 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__TryGetEntity__, entity);
-    byte_4AB68AE = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__TryGetEntity__,
+      entity,
+      *(_QWORD *)&eventId);
+    byte_4B16D61 = 1;
   }
   PK = (Il2CppObject *)TotalLoginEntity__CreatePK(eventId, day, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_TotalLoginMaster__TotalLoginEntity__string__TryGetEntity__);
 }
 
 
@@ -65,25 +73,28 @@ int32_t __fastcall TotalLoginMaster__getNextLoginBonusDay(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4AB68B0 & 1) == 0 )
+  if ( (byte_4B16D63 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__,
-      *(_QWORD *)&totalLoginCnt);
-    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BAB41C(&TotalLoginEntity_TypeInfo, v6);
-    byte_4AB68B0 = 1;
+      *(_QWORD *)&totalLoginCnt,
+      method);
+    sub_1BCA7E0(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5, v6);
+    sub_1BCA7E0(&TotalLoginEntity_TypeInfo, v7, v8);
+    byte_4B16D63 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_11;
   if ( System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_3100360 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
+         (const MethodInfo_314F410 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) >= 1 )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( list )
@@ -91,7 +102,7 @@ int32_t __fastcall TotalLoginMaster__getNextLoginBonusDay(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  0,
-                                                                 (const MethodInfo_31003F0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 (const MethodInfo_314F4A0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         methodPtr_low = LOBYTE(TotalLoginEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -103,7 +114,7 @@ int32_t __fastcall TotalLoginMaster__getNextLoginBonusDay(
       }
     }
 LABEL_11:
-    sub_1BAB678(list, *(_QWORD *)&totalLoginCnt);
+    sub_1BCAA3C(list, *(_QWORD *)&totalLoginCnt);
   }
   return 0;
 }

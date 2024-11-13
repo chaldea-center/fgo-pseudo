@@ -4,23 +4,31 @@ void __fastcall UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo
 }
 
 
-void __fastcall UserOwnItemInfo___ctor_40951592(
+void __fastcall UserOwnItemInfo___ctor_41294564(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   int32_t num; // w8
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._ItemEntity_k__BackingField,
-    (int32_t)itemEntity,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
+    (int64_t)itemEntity,
     v7,
-    v8);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   if ( userItemEntity )
     num = userItemEntity->fields.num;
   else
@@ -37,28 +45,30 @@ bool __fastcall UserOwnItemInfo__IsExpired(
   int64_t value; // x20
   bool hasValue; // w21
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
   ItemEntity_o *ItemEntity_k__BackingField; // x0
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_4AB6FE2 & 1) == 0 )
+  if ( (byte_4B174A2 & 1) == 0 )
   {
-    sub_1BAB41C(&NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
-    sub_1BAB41C(&Method_System_Nullable_long__GetValueOrDefault__, v6);
-    sub_1BAB41C(&Method_System_Nullable_long__get_HasValue__, v7);
-    byte_4AB6FE2 = 1;
+    sub_1BCA7E0(&NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue, time.fields.value);
+    sub_1BCA7E0(&Method_System_Nullable_long__GetValueOrDefault__, v6, v7);
+    sub_1BCA7E0(&Method_System_Nullable_long__get_HasValue__, v8, v9);
+    byte_4B174A2 = 1;
   }
   if ( !hasValue )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
     value = NetworkManager__getTime(0LL);
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1BAB678(0LL, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_39772156(ItemEntity_k__BackingField, value, 0LL);
+    sub_1BCAA3C(0LL, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_40107724(ItemEntity_k__BackingField, value, 0LL);
 }
 
 
@@ -68,7 +78,7 @@ int32_t __fastcall UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const M
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -85,7 +95,7 @@ int32_t __fastcall UserOwnItemInfo__get_ItemId(UserOwnItemInfo_o *this, const Me
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ItemEntity_k__BackingField->fields.id;
 }
 
@@ -102,7 +112,7 @@ int32_t __fastcall UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const Meth
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ItemEntity_k__BackingField->fields.type;
 }
 
@@ -110,13 +120,21 @@ int32_t __fastcall UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const Meth
 void __fastcall UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEntity_o *value, const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._ItemEntity_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

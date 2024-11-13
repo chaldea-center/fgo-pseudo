@@ -10,9 +10,13 @@ void __fastcall FieldBuffDeleteProcess__Init(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)fieldEnvData, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -30,7 +34,11 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

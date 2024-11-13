@@ -1,22 +1,31 @@
 void __fastcall FileMergeAndSplit___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  __int64 v4; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x2
 
-  if ( (byte_4AB4D90 & 1) == 0 )
+  if ( (byte_4B15229 & 1) == 0 )
   {
-    sub_1BAB41C(&FileMergeAndSplit_TypeInfo, v1);
-    sub_1BAB41C(&StringLiteral_10588/*"PathCRC"*/, v4);
-    byte_4AB4D90 = 1;
+    sub_1BCA7E0(&FileMergeAndSplit_TypeInfo, v1, v2);
+    sub_1BCA7E0(&StringLiteral_10716/*"PathCRC"*/, v8, v9);
+    byte_4B15229 = 1;
   }
-  FileMergeAndSplit_TypeInfo->static_fields->PathCRCFileName = (struct System_String_o *)StringLiteral_10588/*"PathCRC"*/;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)FileMergeAndSplit_TypeInfo->static_fields,
-    StringLiteral_10588/*"PathCRC"*/,
+  FileMergeAndSplit_TypeInfo->static_fields->PathCRCFileName = (struct System_String_o *)StringLiteral_10716/*"PathCRC"*/;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)FileMergeAndSplit_TypeInfo->static_fields,
+    StringLiteral_10716/*"PathCRC"*/,
     v2,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -26,254 +35,274 @@ void __fastcall FileMergeAndSplit__Split(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
-  System_String_o *v19; // x0
-  FileMergeAndSplit_c *v20; // x8
-  System_String_o *v21; // x23
-  System_String_o *v22; // x24
-  System_IO_FileStream_o *v23; // x19
-  __int64 v24; // x0
+  __int64 v18; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
+  __int64 v21; // x1
+  __int64 v22; // x2
+  __int64 v23; // x1
+  __int64 v24; // x2
   __int64 v25; // x1
-  __int64 v26; // x23
-  System_IO_StreamWriter_o *v27; // x25
-  int v28; // w21
-  Il2CppObject *v29; // x24
+  __int64 v26; // x2
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x1
   __int64 v30; // x2
-  __int64 v31; // x3
-  __int64 v32; // x4
-  Il2CppObject *v33; // x2
-  Il2CppObject *v34; // x27
-  System_String_o *v35; // x29
-  System_IO_StreamWriter_o *v36; // x20
-  System_IO_FileStream_o *v37; // x28
-  __int64 v38; // x25
-  int32_t v39; // w24
+  __int64 v31; // x1
+  __int64 v32; // x2
+  System_String_o *v33; // x0
+  __int64 v34; // x1
+  FileMergeAndSplit_c *v35; // x8
+  System_String_o *v36; // x23
+  System_String_o *v37; // x24
+  __int64 v38; // x1
+  __int64 v39; // x2
   __int64 v40; // x3
-  __int64 v41; // x0
-  __int64 v42; // x1
-  int v43; // w26
+  System_IO_FileStream_o *v41; // x19
+  __int64 v42; // x0
+  __int64 v43; // x1
+  __int64 v44; // x23
+  __int64 v45; // x1
+  __int64 v46; // x2
+  __int64 v47; // x3
+  System_IO_StreamWriter_o *v48; // x25
+  int v49; // w21
+  Il2CppObject *v50; // x24
+  Il2CppObject *v51; // x2
+  Il2CppObject *v52; // x27
+  System_String_o *v53; // x29
+  System_IO_StreamWriter_o *v54; // x20
+  __int64 v55; // x1
+  __int64 v56; // x2
+  __int64 v57; // x3
+  System_IO_FileStream_o *v58; // x28
+  __int64 v59; // x1
+  __int64 v60; // x25
+  int32_t v61; // w24
+  __int64 v62; // x3
+  __int64 v63; // x0
+  __int64 v64; // x1
+  int v65; // w26
   System_IO_FileStream_c *klass; // x8
-  __int64 v45; // x9
+  __int64 v67; // x9
   int32_t *p_offset; // x10
-  __int64 v47; // x0
+  __int64 v69; // x0
+  __int64 v70; // x1
   System_Byte_array *AllBytes; // x24
-  __int64 v49; // x2
-  __int64 v50; // x3
-  __int64 v51; // x4
-  Il2CppObject *v52; // x2
-  System_String_o *v53; // x0
-  System_IO_StreamWriter_c *v54; // x8
-  __int64 v55; // x9
-  int32_t *v56; // x10
-  __int64 v57; // x0
-  System_IO_FileStream_c *v58; // x8
-  __int64 v59; // x9
-  int32_t *v60; // x10
-  __int64 v61; // x0
+  Il2CppObject *v72; // x2
+  System_String_o *v73; // x0
+  System_IO_StreamWriter_c *v74; // x8
+  __int64 v75; // x9
+  int32_t *v76; // x10
+  __int64 v77; // x0
+  System_IO_FileStream_c *v78; // x8
+  __int64 v79; // x9
+  int32_t *v80; // x10
+  __int64 v81; // x0
   Il2CppObject *arg0; // [xsp+8h] [xbp-88h]
   Il2CppObject *arg1; // [xsp+10h] [xbp-80h]
-  __int64 v64; // [xsp+18h] [xbp-78h]
-  uint32_t v65; // [xsp+24h] [xbp-6Ch] BYREF
-  __int16 v66[2]; // [xsp+28h] [xbp-68h] BYREF
-  int v67; // [xsp+2Ch] [xbp-64h] BYREF
+  __int64 v84; // [xsp+18h] [xbp-78h]
+  uint32_t v85; // [xsp+24h] [xbp-6Ch] BYREF
+  __int16 v86[2]; // [xsp+28h] [xbp-68h] BYREF
+  int v87; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4AB4D8F & 1) == 0 )
+  if ( (byte_4B15228 & 1) == 0 )
   {
-    sub_1BAB41C(&byte___TypeInfo, outputPath);
-    sub_1BAB41C(&char_TypeInfo, v5);
-    sub_1BAB41C(&Crc32_TypeInfo, v6);
-    sub_1BAB41C(&FileMergeAndSplit_TypeInfo, v7);
-    sub_1BAB41C(&System_IO_FileStream_TypeInfo, v8);
-    sub_1BAB41C(&System_IDisposable_TypeInfo, v9);
-    sub_1BAB41C(&System_Math_TypeInfo, v10);
-    sub_1BAB41C(&System_IO_Path_TypeInfo, v11);
-    sub_1BAB41C(&System_IO_StreamWriter_TypeInfo, v12);
-    sub_1BAB41C(&uint_TypeInfo, v13);
-    sub_1BAB41C(&StringLiteral_25154/*"{0}{1}{2}"*/, v14);
-    sub_1BAB41C(&StringLiteral_12928/*"SplitFile/{0},{1}"*/, v15);
-    sub_1BAB41C(&StringLiteral_25097/*"{0}/{1}"*/, v16);
-    sub_1BAB41C(&StringLiteral_25102/*"{0}/{1}/{2}"*/, v17);
-    sub_1BAB41C(&StringLiteral_25100/*"{0}/{1}/SplitFile"*/, v18);
-    byte_4AB4D8F = 1;
+    sub_1BCA7E0(&byte___TypeInfo, outputPath, method);
+    sub_1BCA7E0(&char_TypeInfo, v5, v6);
+    sub_1BCA7E0(&Crc32_TypeInfo, v7, v8);
+    sub_1BCA7E0(&FileMergeAndSplit_TypeInfo, v9, v10);
+    sub_1BCA7E0(&System_IO_FileStream_TypeInfo, v11, v12);
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, v13, v14);
+    sub_1BCA7E0(&System_Math_TypeInfo, v15, v16);
+    sub_1BCA7E0(&System_IO_Path_TypeInfo, v17, v18);
+    sub_1BCA7E0(&System_IO_StreamWriter_TypeInfo, v19, v20);
+    sub_1BCA7E0(&uint_TypeInfo, v21, v22);
+    sub_1BCA7E0(&StringLiteral_25366/*"{0}{1}{2}"*/, v23, v24);
+    sub_1BCA7E0(&StringLiteral_13059/*"SplitFile/{0},{1}"*/, v25, v26);
+    sub_1BCA7E0(&StringLiteral_25309/*"{0}/{1}"*/, v27, v28);
+    sub_1BCA7E0(&StringLiteral_25314/*"{0}/{1}/{2}"*/, v29, v30);
+    sub_1BCA7E0(&StringLiteral_25312/*"{0}/{1}/SplitFile"*/, v31, v32);
+    byte_4B15228 = 1;
   }
-  v67 = 0;
+  v87 = 0;
   if ( !System_IO_Path_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
+    j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, outputPath);
   arg1 = (Il2CppObject *)System_IO_Path__GetFileNameWithoutExtension(targetFilePath, 0LL);
-  v19 = System_String__Format_62062500((System_String_o *)StringLiteral_25100/*"{0}/{1}/SplitFile"*/, (Il2CppObject *)outputPath, arg1, 0LL);
-  v20 = FileMergeAndSplit_TypeInfo;
-  v21 = v19;
+  v33 = System_String__Format_62415592((System_String_o *)StringLiteral_25312/*"{0}/{1}/SplitFile"*/, (Il2CppObject *)outputPath, arg1, 0LL);
+  v35 = FileMergeAndSplit_TypeInfo;
+  v36 = v33;
   if ( !FileMergeAndSplit_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FileMergeAndSplit_TypeInfo);
-    v20 = FileMergeAndSplit_TypeInfo;
+    j_il2cpp_runtime_class_init_0(FileMergeAndSplit_TypeInfo, v34);
+    v35 = FileMergeAndSplit_TypeInfo;
   }
-  v22 = System_String__Format_62062568(
-          (System_String_o *)StringLiteral_25102/*"{0}/{1}/{2}"*/,
+  v37 = System_String__Format_62415660(
+          (System_String_o *)StringLiteral_25314/*"{0}/{1}/{2}"*/,
           (Il2CppObject *)outputPath,
           arg1,
-          (Il2CppObject *)v20->static_fields->PathCRCFileName,
+          (Il2CppObject *)v35->static_fields->PathCRCFileName,
           0LL);
   if ( !System_IO_Directory__Exists(outputPath, 0LL) )
     System_IO_Directory__CreateDirectory(outputPath, 0LL);
-  if ( System_IO_Directory__Exists(v21, 0LL) )
-    System_IO_Directory__Delete(v21, 1, 0LL);
-  System_IO_Directory__CreateDirectory(v21, 0LL);
-  v23 = (System_IO_FileStream_o *)sub_1BAB668(System_IO_FileStream_TypeInfo);
-  System_IO_FileStream___ctor_62293460(v23, targetFilePath, 3, 1, 0LL);
-  if ( !v23 )
-    sub_1BAB678(v24, v25);
-  v64 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, Il2CppMethodPointer))v23->klass->vtable._11_get_Length.method)(
-          v23,
-          v23->klass->vtable._12_get_Position.methodPtr);
-  arg0 = (Il2CppObject *)v21;
-  v26 = sub_1BAB4C4(byte___TypeInfo, 104857LL);
-  v27 = (System_IO_StreamWriter_o *)sub_1BAB668(System_IO_StreamWriter_TypeInfo);
-  System_IO_StreamWriter___ctor_62217144(v27, v22, 0, 0LL);
-  if ( v64 < 1 )
+  if ( System_IO_Directory__Exists(v36, 0LL) )
+    System_IO_Directory__Delete(v36, 1, 0LL);
+  System_IO_Directory__CreateDirectory(v36, 0LL);
+  v41 = (System_IO_FileStream_o *)sub_1BCAA2C(System_IO_FileStream_TypeInfo, v38, v39, v40);
+  System_IO_FileStream___ctor_62646880(v41, targetFilePath, 3, 1, 0LL);
+  if ( !v41 )
+    sub_1BCAA3C(v42, v43);
+  v84 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, Il2CppMethodPointer))v41->klass->vtable._11_get_Length.method)(
+          v41,
+          v41->klass->vtable._12_get_Position.methodPtr);
+  arg0 = (Il2CppObject *)v36;
+  v44 = sub_1BCA888(byte___TypeInfo, 104857LL);
+  v48 = (System_IO_StreamWriter_o *)sub_1BCAA2C(System_IO_StreamWriter_TypeInfo, v45, v46, v47);
+  System_IO_StreamWriter___ctor_62570236(v48, v37, 0, 0LL);
+  if ( v84 < 1 )
   {
-    if ( !v27 )
+    if ( !v48 )
       goto LABEL_43;
   }
   else
   {
-    v28 = 0;
+    v49 = 0;
     do
     {
-      v67 = ++v28;
-      v29 = (Il2CppObject *)System_Int32__ToString((int32_t)&v67, 0LL);
-      v66[0] = 46;
-      v33 = (Il2CppObject *)j_il2cpp_value_box_0(char_TypeInfo, v66, v30, v31, v32);
-      v34 = (Il2CppObject *)System_String__Format_62062568((System_String_o *)StringLiteral_25154/*"{0}{1}{2}"*/, v29, v33, arg1, 0LL);
-      v35 = System_String__Format_62062500((System_String_o *)StringLiteral_25097/*"{0}/{1}"*/, arg0, v34, 0LL);
-      v36 = v27;
-      v37 = (System_IO_FileStream_o *)sub_1BAB668(System_IO_FileStream_TypeInfo);
-      System_IO_FileStream___ctor_62293460(v37, v35, 2, 2, 0LL);
-      v38 = v64;
-      v39 = 0x100000;
-      while ( v39 > 0 )
+      v87 = ++v49;
+      v50 = (Il2CppObject *)System_Int32__ToString((int32_t)&v87, 0LL);
+      v86[0] = 46;
+      v51 = (Il2CppObject *)j_il2cpp_value_box_0(char_TypeInfo, v86);
+      v52 = (Il2CppObject *)System_String__Format_62415660((System_String_o *)StringLiteral_25366/*"{0}{1}{2}"*/, v50, v51, arg1, 0LL);
+      v53 = System_String__Format_62415592((System_String_o *)StringLiteral_25309/*"{0}/{1}"*/, arg0, v52, 0LL);
+      v54 = v48;
+      v58 = (System_IO_FileStream_o *)sub_1BCAA2C(System_IO_FileStream_TypeInfo, v55, v56, v57);
+      System_IO_FileStream___ctor_62646880(v58, v53, 2, 2, 0LL);
+      v60 = v84;
+      v61 = 0x100000;
+      while ( v61 > 0 )
       {
         if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v40 = (unsigned int)System_Math__Min_62867104(104857, v39, 0LL);
-        v41 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, __int64, Il2CppMethodPointer))v23->klass->vtable._33_Read.method)(
-                v23,
-                v26,
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v59);
+        v62 = (unsigned int)System_Math__Min_63220524(104857, v61, 0LL);
+        v63 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, __int64, Il2CppMethodPointer))v41->klass->vtable._33_Read.method)(
+                v41,
+                v44,
                 0LL,
-                v40,
-                v23->klass->vtable._34_Read.methodPtr);
-        if ( !v37 )
-          sub_1BAB678(v41, v42);
-        v43 = v41;
-        ((void (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v37->klass->vtable._36_Write.method)(
-          v37,
-          v26,
+                v62,
+                v41->klass->vtable._34_Read.methodPtr);
+        if ( !v58 )
+          sub_1BCAA3C(v63, v64);
+        v65 = v63;
+        ((void (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v58->klass->vtable._36_Write.method)(
+          v58,
+          v44,
           0LL,
-          (unsigned int)v41,
-          v37->klass->vtable._37_Write.methodPtr);
-        v38 -= v43;
-        v39 -= v43;
-        if ( !v38 )
+          (unsigned int)v63,
+          v58->klass->vtable._37_Write.methodPtr);
+        v60 -= v65;
+        v61 -= v65;
+        if ( !v60 )
         {
-          v64 = 0LL;
-          v27 = v36;
+          v84 = 0LL;
+          v48 = v54;
           goto LABEL_22;
         }
       }
-      v64 = v38;
-      v27 = v36;
-      if ( !v37 )
+      v84 = v60;
+      v48 = v54;
+      if ( !v58 )
         goto LABEL_29;
 LABEL_22:
-      klass = v37->klass;
-      v45 = *(unsigned __int16 *)(&v37->klass->_2.bitflags2 + 3);
-      if ( *(_WORD *)(&v37->klass->_2.bitflags2 + 3) )
+      klass = v58->klass;
+      v67 = *(unsigned __int16 *)(&v58->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v58->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          --v45;
+          --v67;
           p_offset += 4;
-          if ( !v45 )
+          if ( !v67 )
             goto LABEL_26;
         }
-        v47 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v69 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
 LABEL_26:
-        v47 = sub_1BFD3FC(v37, System_IDisposable_TypeInfo, 0LL);
+        v69 = sub_1C1C7C0(v58, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v47)(v37, *(_QWORD *)(v47 + 8));
+      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v69)(v58, *(_QWORD *)(v69 + 8));
 LABEL_29:
-      AllBytes = System_IO_File__ReadAllBytes(v35, 0LL);
+      AllBytes = System_IO_File__ReadAllBytes(v53, 0LL);
       if ( !Crc32_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-      v65 = Crc32__Compute(AllBytes, 0LL);
-      v52 = (Il2CppObject *)j_il2cpp_value_box_0(uint_TypeInfo, &v65, v49, v50, v51);
-      v53 = System_String__Format_62062500((System_String_o *)StringLiteral_12928/*"SplitFile/{0},{1}"*/, v34, v52, 0LL);
-      if ( !v27 )
-        sub_1BAB678(v53, v53);
-      ((void (__fastcall *)(System_IO_StreamWriter_o *, System_String_o *, Il2CppMethodPointer))v27->klass->vtable._19_WriteLine.method)(
-        v27,
-        v53,
-        v27->klass->vtable._20_set_AutoFlush.methodPtr);
+        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v70);
+      v85 = Crc32__Compute(AllBytes, 0LL);
+      v72 = (Il2CppObject *)j_il2cpp_value_box_0(uint_TypeInfo, &v85);
+      v73 = System_String__Format_62415592((System_String_o *)StringLiteral_13059/*"SplitFile/{0},{1}"*/, v52, v72, 0LL);
+      if ( !v48 )
+        sub_1BCAA3C(v73, v73);
+      ((void (__fastcall *)(System_IO_StreamWriter_o *, System_String_o *, Il2CppMethodPointer))v48->klass->vtable._19_WriteLine.method)(
+        v48,
+        v73,
+        v48->klass->vtable._20_WriteLine.methodPtr);
     }
-    while ( v64 > 0 );
+    while ( v84 > 0 );
   }
-  v54 = v27->klass;
-  v55 = *(unsigned __int16 *)(&v27->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v27->klass->_2.bitflags2 + 3) )
+  v74 = v48->klass;
+  v75 = *(unsigned __int16 *)(&v48->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v48->klass->_2.bitflags2 + 3) )
   {
-    v56 = &v54->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v56 - 1) != System_IDisposable_TypeInfo )
+    v76 = &v74->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v76 - 1) != System_IDisposable_TypeInfo )
     {
-      --v55;
-      v56 += 4;
-      if ( !v55 )
+      --v75;
+      v76 += 4;
+      if ( !v75 )
         goto LABEL_40;
     }
-    v57 = (__int64)(&v54->vtable._0_Equals.method + 2 * *v56);
+    v77 = (__int64)(&v74->vtable._0_Equals.method + 2 * *v76);
   }
   else
   {
 LABEL_40:
-    v57 = sub_1BFD3FC(v27, System_IDisposable_TypeInfo, 0LL);
+    v77 = sub_1C1C7C0(v48, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_StreamWriter_o *, _QWORD))v57)(v27, *(_QWORD *)(v57 + 8));
+  (*(void (__fastcall **)(System_IO_StreamWriter_o *, _QWORD))v77)(v48, *(_QWORD *)(v77 + 8));
 LABEL_43:
-  v58 = v23->klass;
-  v59 = *(unsigned __int16 *)(&v23->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v23->klass->_2.bitflags2 + 3) )
+  v78 = v41->klass;
+  v79 = *(unsigned __int16 *)(&v41->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v41->klass->_2.bitflags2 + 3) )
   {
-    v60 = &v58->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v60 - 1) != System_IDisposable_TypeInfo )
+    v80 = &v78->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v80 - 1) != System_IDisposable_TypeInfo )
     {
-      --v59;
-      v60 += 4;
-      if ( !v59 )
+      --v79;
+      v80 += 4;
+      if ( !v79 )
         goto LABEL_47;
     }
-    v61 = (__int64)(&v58->vtable._0_Equals.method + 2 * *v60);
+    v81 = (__int64)(&v78->vtable._0_Equals.method + 2 * *v80);
   }
   else
   {
 LABEL_47:
-    v61 = sub_1BFD3FC(v23, System_IDisposable_TypeInfo, 0LL);
+    v81 = sub_1C1C7C0(v41, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v61)(v23, *(_QWORD *)(v61 + 8));
+  (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v81)(v41, *(_QWORD *)(v81 + 8));
 }
 
 
@@ -284,18 +313,26 @@ void __fastcall FileMergeAndSplit_CRCChecker___ctor(
         const MethodInfo *method)
 {
   FileMergeAndSplit_CRCChecker_o *v6; // x21
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.outputFilePath = outputFilePath;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v6->fields, (int32_t)outputFilePath, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&v6->fields, (int64_t)outputFilePath, v7, v8, v9, v10, v11, v12);
   v6->fields.crcList = crcList;
   v6 = (FileMergeAndSplit_CRCChecker_o *)((char *)v6 + 24);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v6, (int32_t)crcList, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)v6, (int64_t)crcList, v13, v14, v15, v16, v17, v18);
   LOWORD(v6->monitor) = 0;
 }
 
@@ -320,21 +357,27 @@ System_Collections_IEnumerator_o *__fastcall FileMergeAndSplit_CRCChecker__Run(
         FileMergeAndSplit_CRCChecker_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB4D95 & 1) == 0 )
+  if ( (byte_4B1522E & 1) == 0 )
   {
-    sub_1BAB41C(&FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo, method);
-    byte_4AB4D95 = 1;
+    sub_1BCA7E0(&FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo, method, v2);
+    byte_4B1522E = 1;
   }
-  v3 = sub_1BAB668(FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
-  return (System_Collections_IEnumerator_o *)v3;
+  v5 = sub_1BCAA2C(FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
+  *(_QWORD *)(v5 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -352,214 +395,267 @@ bool __fastcall FileMergeAndSplit_CRCChecker__Run_d__7__MoveNext(
         FileMergeAndSplit_CRCChecker__Run_d__7_o *this,
         const MethodInfo *method)
 {
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v2; // x19
-  __int64 v3; // x1
+  __int64 v2; // x2
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
   __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x1
+  __int64 v15; // x2
   int32_t _1__state; // w8
   struct FileMergeAndSplit_CRCChecker_o *_4__this; // x21
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x3
   System_String_o *outputFilePath; // x20
-  System_IO_FileStream_o *v12; // x19
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
-  __int64 v16; // x1
-  struct System_IO_FileStream_o *v17; // x0
-  int64_t v18; // x0
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v19; // x8
-  struct System_Byte_array *v20; // x1
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v21; // x0
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_Diagnostics_Stopwatch_o *v24; // x19
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v25; // x0
-  int32_t v26; // w2
-  int32_t v27; // w3
-  __int64 v28; // x1
-  System_Diagnostics_Stopwatch_o *v29; // x0
+  System_IO_FileStream_o *v22; // x19
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v23; // x0
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
   __int64 v30; // x1
+  struct System_IO_FileStream_o *v31; // x0
+  int64_t v32; // x0
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v33; // x8
+  struct System_Byte_array *v34; // x1
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v35; // x0
+  int64_t v36; // x2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  BattleSetupInfo_o *v39; // x5
+  FollowerInfo_o *v40; // x6
+  PartyListViewItem_o *v41; // x7
+  __int64 v42; // x1
+  __int64 v43; // x2
+  __int64 v44; // x3
+  System_Diagnostics_Stopwatch_o *v45; // x19
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v46; // x0
+  int64_t v47; // x2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  BattleSetupInfo_o *v50; // x5
+  FollowerInfo_o *v51; // x6
+  PartyListViewItem_o *v52; // x7
+  __int64 v53; // x1
+  System_Diagnostics_Stopwatch_o *v54; // x0
+  __int64 v55; // x1
   System_Collections_Generic_List_uint__o *crcList; // x0
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v32; // x9
-  __int128 v33; // q0
-  ServantStatusBattleListViewItem_o *p__7__wrap6; // x0
-  int32_t v35; // w2
-  int32_t v36; // w3
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v57; // x9
+  __int128 v58; // q0
+  struct System_Collections_Generic_List_Enumerator_uint__o *p__7__wrap6; // x0
+  int64_t v60; // x2
+  int32_t v61; // w3
+  System_String_o *v62; // x4
+  BattleSetupInfo_o *v63; // x5
+  FollowerInfo_o *v64; // x6
+  PartyListViewItem_o *v65; // x7
   System_Diagnostics_Stopwatch_o *sw_5__6; // x0
-  __int64 v38; // x1
-  System_Diagnostics_Stopwatch_o *v39; // x0
-  _BOOL8 v40; // x0
-  const MethodInfo *v41; // x1
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v42; // x8
-  System_Diagnostics_Stopwatch_o *v43; // x0
+  __int64 v67; // x1
+  System_Diagnostics_Stopwatch_o *v68; // x0
+  _BOOL8 v69; // x0
+  const MethodInfo *v70; // x1
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v71; // x8
+  System_Diagnostics_Stopwatch_o *v72; // x0
   uint32_t current; // w25
-  __int64 v45; // x1
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v46; // x8
-  float readCheckByte_5__2; // s0
-  int v48; // w20
-  int32_t v49; // w19
-  struct System_IO_FileStream_o *mergeFileStream_5__3; // x0
-  __int64 v51; // x3
-  int v52; // w0
-  System_Byte_array *readBuf_5__5; // x20
-  __int64 v54; // x0
-  System_Diagnostics_Stopwatch_o *v55; // x0
-  int32_t v56; // w2
-  int32_t v57; // w3
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v58; // x0
-  bool result; // w0
-  __int64 v60; // x1
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v61; // x8
-  System_Diagnostics_Stopwatch_o *v62; // x0
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v63; // x0
-  int32_t v64; // w2
-  int32_t v65; // w3
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v66; // x0
-  int32_t v67; // w2
-  int32_t v68; // w3
-  const MethodInfo *v69; // x1
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v70; // x0
-  int32_t v71; // w2
-  int32_t v72; // w3
-  __int64 v73; // x0
   __int64 v74; // x1
-  const MethodInfo *v75; // x1
-  System_Collections_Generic_List_Enumerator_T__o v76[2]; // [xsp+8h] [xbp-88h] BYREF
-  FileMergeAndSplit_CRCChecker__Run_d__7_o **v77; // [xsp+40h] [xbp-50h]
-  FileMergeAndSplit_CRCChecker__Run_d__7_o *v78; // [xsp+48h] [xbp-48h] BYREF
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v75; // x8
+  float readCheckByte_5__2; // s0
+  int v77; // w20
+  int32_t v78; // w19
+  struct System_IO_FileStream_o *mergeFileStream_5__3; // x0
+  __int64 v80; // x3
+  int v81; // w0
+  System_Byte_array *readBuf_5__5; // x20
+  __int64 v83; // x0
+  System_Diagnostics_Stopwatch_o *v84; // x0
+  int64_t v85; // x2
+  int32_t v86; // w3
+  System_String_o *v87; // x4
+  BattleSetupInfo_o *v88; // x5
+  FollowerInfo_o *v89; // x6
+  PartyListViewItem_o *v90; // x7
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v91; // x0
+  bool result; // w0
+  __int64 v93; // x1
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v94; // x8
+  System_Diagnostics_Stopwatch_o *v95; // x0
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v96; // x0
+  int64_t v97; // x2
+  int32_t v98; // w3
+  System_String_o *v99; // x4
+  BattleSetupInfo_o *v100; // x5
+  FollowerInfo_o *v101; // x6
+  PartyListViewItem_o *v102; // x7
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v103; // x0
+  int64_t v104; // x2
+  int32_t v105; // w3
+  System_String_o *v106; // x4
+  BattleSetupInfo_o *v107; // x5
+  FollowerInfo_o *v108; // x6
+  PartyListViewItem_o *v109; // x7
+  const MethodInfo *v110; // x1
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v111; // x0
+  int64_t v112; // x2
+  int32_t v113; // w3
+  System_String_o *v114; // x4
+  BattleSetupInfo_o *v115; // x5
+  FollowerInfo_o *v116; // x6
+  PartyListViewItem_o *v117; // x7
+  __int64 v118; // x0
+  __int64 v119; // x1
+  const MethodInfo *v120; // x1
+  System_Collections_Generic_List_Enumerator_T__o v121[2]; // [xsp+8h] [xbp-88h] BYREF
+  FileMergeAndSplit_CRCChecker__Run_d__7_o **v122; // [xsp+40h] [xbp-50h]
+  FileMergeAndSplit_CRCChecker__Run_d__7_o *v123; // [xsp+48h] [xbp-48h] BYREF
 
-  v2 = this;
-  v78 = this;
-  if ( (byte_4AB4D96 & 1) == 0 )
+  v3 = this;
+  v123 = this;
+  if ( (byte_4B1522F & 1) == 0 )
   {
-    sub_1BAB41C(&byte___TypeInfo, method);
-    sub_1BAB41C(&Crc32_TypeInfo, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_uint__get_Current__, v5);
-    sub_1BAB41C(&System_IO_FileStream_TypeInfo, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_uint__GetEnumerator__, v7);
-    this = (FileMergeAndSplit_CRCChecker__Run_d__7_o *)sub_1BAB41C(&System_Diagnostics_Stopwatch_TypeInfo, v8);
-    byte_4AB4D96 = 1;
+    sub_1BCA7E0(&byte___TypeInfo, method, v2);
+    sub_1BCA7E0(&Crc32_TypeInfo, v4, v5);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__, v6, v7);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_uint__get_Current__, v8, v9);
+    sub_1BCA7E0(&System_IO_FileStream_TypeInfo, v10, v11);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_uint__GetEnumerator__, v12, v13);
+    this = (FileMergeAndSplit_CRCChecker__Run_d__7_o *)sub_1BCA7E0(&System_Diagnostics_Stopwatch_TypeInfo, v14, v15);
+    byte_4B1522F = 1;
   }
-  v77 = &v78;
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  v122 = &v123;
+  _1__state = v3->fields.__1__state;
+  _4__this = v3->fields.__4__this;
   if ( _1__state == 1 )
   {
-    sw_5__6 = v2->fields._sw_5__6;
-    v2->fields.__1__state = -4;
+    sw_5__6 = v3->fields._sw_5__6;
+    v3->fields.__1__state = -4;
     if ( !sw_5__6 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method);
     System_Diagnostics_Stopwatch__Reset(sw_5__6, 0LL);
-    v39 = v78->fields._sw_5__6;
-    if ( !v39 )
-      sub_1BAB678(0LL, v38);
-    System_Diagnostics_Stopwatch__Start(v39, 0LL);
+    v68 = v123->fields._sw_5__6;
+    if ( !v68 )
+      sub_1BCAA3C(0LL, v67);
+    System_Diagnostics_Stopwatch__Start(v68, 0LL);
 LABEL_14:
     while ( 1 )
     {
-      v40 = System_Collections_Generic_List_Enumerator_uint___MoveNext(
-              &v78->fields.__7__wrap6,
-              (const MethodInfo_32E74C8 *)Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
-      v42 = v78;
-      if ( !v40 )
+      v69 = System_Collections_Generic_List_Enumerator_uint___MoveNext(
+              &v123->fields.__7__wrap6,
+              (const MethodInfo_3339670 *)Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
+      v71 = v123;
+      if ( !v69 )
         break;
-      if ( (v78->fields._leftByte_5__4 & 0x8000000000000000LL) != 0 )
+      if ( (v123->fields._leftByte_5__4 & 0x8000000000000000LL) != 0 )
       {
         if ( !_4__this )
-          sub_1BAB678(v40, v41);
+          sub_1BCAA3C(v69, v70);
         _4__this->fields.isCRCCheckEnd = 1;
         goto LABEL_41;
       }
-      v43 = v78->fields._sw_5__6;
-      if ( !v43 )
-        sub_1BAB678(0LL, v41);
-      current = v78->fields.__7__wrap6.fields._current;
-      System_Diagnostics_Stopwatch__Start(v43, 0LL);
-      v46 = v78;
-      readCheckByte_5__2 = (float)v78->fields._readCheckByte_5__2;
-      if ( readCheckByte_5__2 >= (float)v78->fields._leftByte_5__4 )
-        readCheckByte_5__2 = (float)v78->fields._leftByte_5__4;
-      v48 = (int)readCheckByte_5__2;
+      v72 = v123->fields._sw_5__6;
+      if ( !v72 )
+        sub_1BCAA3C(0LL, v70);
+      current = v123->fields.__7__wrap6.fields._current;
+      System_Diagnostics_Stopwatch__Start(v72, 0LL);
+      v75 = v123;
+      readCheckByte_5__2 = (float)v123->fields._readCheckByte_5__2;
+      if ( readCheckByte_5__2 >= (float)v123->fields._leftByte_5__4 )
+        readCheckByte_5__2 = (float)v123->fields._leftByte_5__4;
+      v77 = (int)readCheckByte_5__2;
       if ( (int)readCheckByte_5__2 < 1 )
       {
-        v49 = 0;
+        v78 = 0;
       }
       else
       {
-        v49 = 0;
+        v78 = 0;
         do
         {
-          mergeFileStream_5__3 = v46->fields._mergeFileStream_5__3;
+          mergeFileStream_5__3 = v75->fields._mergeFileStream_5__3;
           if ( !mergeFileStream_5__3 )
-            sub_1BAB678(0LL, v45);
-          if ( v48 - v49 >= 104857 )
-            v51 = 104857LL;
+            sub_1BCAA3C(0LL, v74);
+          if ( v77 - v78 >= 104857 )
+            v80 = 104857LL;
           else
-            v51 = (unsigned int)(v48 - v49);
-          v52 = ((__int64 (__fastcall *)(struct System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))mergeFileStream_5__3->klass->vtable._33_Read.method)(
+            v80 = (unsigned int)(v77 - v78);
+          v81 = ((__int64 (__fastcall *)(struct System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, __int64, Il2CppMethodPointer))mergeFileStream_5__3->klass->vtable._33_Read.method)(
                   mergeFileStream_5__3,
-                  v46->fields._readBuf_5__5,
-                  (unsigned int)v49,
-                  v51,
+                  v75->fields._readBuf_5__5,
+                  (unsigned int)v78,
+                  v80,
                   mergeFileStream_5__3->klass->vtable._34_Read.methodPtr);
-          v46 = v78;
-          v49 += v52;
+          v75 = v123;
+          v78 += v81;
         }
-        while ( v49 < v48 );
+        while ( v78 < v77 );
       }
-      readBuf_5__5 = v46->fields._readBuf_5__5;
+      readBuf_5__5 = v75->fields._readBuf_5__5;
       if ( !Crc32_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-      v54 = Crc32__Compute_38749280(readBuf_5__5, v49, 0LL);
-      if ( current != (_DWORD)v54 )
+        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v74);
+      v83 = Crc32__Compute_39080772(readBuf_5__5, v78, 0LL);
+      if ( current != (_DWORD)v83 )
       {
         if ( !_4__this )
-          sub_1BAB678(v54, v41);
+          sub_1BCAA3C(v83, v70);
         _4__this->fields.isCRCCheckEnd = 1;
-        v42 = v78;
+        v71 = v123;
 LABEL_41:
-        FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(v42, v41);
-        FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(v78, v75);
+        FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(v71, v70);
+        FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(v123, v120);
         return 0;
       }
-      v55 = v78->fields._sw_5__6;
-      v78->fields._leftByte_5__4 -= v49;
-      if ( !v55 )
-        sub_1BAB678(0LL, v41);
-      if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v55, 0LL) >= 301 )
+      v84 = v123->fields._sw_5__6;
+      v123->fields._leftByte_5__4 -= v78;
+      if ( !v84 )
+        sub_1BCAA3C(0LL, v70);
+      if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v84, 0LL) >= 301 )
       {
-        v58 = v78;
-        v78->fields.__2__current = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v58->fields.__2__current, 0, v56, v57);
+        v91 = v123;
+        v123->fields.__2__current = 0LL;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v91->fields.__2__current, 0LL, v85, v86, v87, v88, v89, v90);
         result = 1;
-        v78->fields.__1__state = 1;
+        v123->fields.__1__state = 1;
         return result;
       }
     }
-    FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(v78, v41);
-    v61 = v78;
-    v62 = v78->fields._sw_5__6;
-    v78->fields.__7__wrap6.fields._list = 0LL;
-    *(_QWORD *)&v61->fields.__7__wrap6.fields._index = 0LL;
-    *(_QWORD *)&v61->fields.__7__wrap6.fields._current = 0LL;
-    if ( !v62 )
-      sub_1BAB678(0LL, v60);
-    System_Diagnostics_Stopwatch__Stop(v62, 0LL);
-    v63 = v78;
-    v78->fields._readBuf_5__5 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v63->fields._readBuf_5__5, 0, v64, v65);
-    v66 = v78;
-    v78->fields._sw_5__6 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v66->fields._sw_5__6, 0, v67, v68);
-    FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(v78, v69);
-    v70 = v78;
-    v78->fields._mergeFileStream_5__3 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v70->fields._mergeFileStream_5__3, 0, v71, v72);
+    FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(v123, v70);
+    v94 = v123;
+    v95 = v123->fields._sw_5__6;
+    v123->fields.__7__wrap6.fields._list = 0LL;
+    *(_QWORD *)&v94->fields.__7__wrap6.fields._index = 0LL;
+    *(_QWORD *)&v94->fields.__7__wrap6.fields._current = 0LL;
+    if ( !v95 )
+      sub_1BCAA3C(0LL, v93);
+    System_Diagnostics_Stopwatch__Stop(v95, 0LL);
+    v96 = v123;
+    v123->fields._readBuf_5__5 = 0LL;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v96->fields._readBuf_5__5, 0LL, v97, v98, v99, v100, v101, v102);
+    v103 = v123;
+    v123->fields._sw_5__6 = 0LL;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v103->fields._sw_5__6, 0LL, v104, v105, v106, v107, v108, v109);
+    FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(v123, v110);
+    v111 = v123;
+    v123->fields._mergeFileStream_5__3 = 0LL;
+    sub_1BCA784(
+      (PartyOrganizationUtility_o *)&v111->fields._mergeFileStream_5__3,
+      0LL,
+      v112,
+      v113,
+      v114,
+      v115,
+      v116,
+      v117);
     if ( !_4__this )
-      sub_1BAB678(v73, v74);
+      sub_1BCAA3C(v118, v119);
     result = 0;
     *(_WORD *)&_4__this->fields.isCRCMatch = 257;
   }
@@ -567,55 +663,71 @@ LABEL_41:
   {
     if ( !_1__state )
     {
-      v2->fields.__1__state = -1;
-      v2->fields._readCheckByte_5__2 = 0x100000;
+      v3->fields.__1__state = -1;
+      v3->fields._readCheckByte_5__2 = 0x100000;
       if ( !_4__this )
-        sub_1BAB678(this, method);
+        sub_1BCAA3C(this, method);
       if ( System_IO_File__Exists(_4__this->fields.outputFilePath, 0LL) )
       {
         outputFilePath = _4__this->fields.outputFilePath;
-        v12 = (System_IO_FileStream_o *)sub_1BAB668(System_IO_FileStream_TypeInfo);
-        System_IO_FileStream___ctor_62293460(v12, outputFilePath, 3, 1, 0LL);
-        v13 = v78;
-        v78->fields._mergeFileStream_5__3 = v12;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v13->fields._mergeFileStream_5__3, (int32_t)v12, v14, v15);
-        v17 = v78->fields._mergeFileStream_5__3;
-        v78->fields.__1__state = -3;
-        if ( !v17 )
-          sub_1BAB678(0LL, v16);
-        v18 = ((__int64 (__fastcall *)(struct System_IO_FileStream_o *, Il2CppMethodPointer))v17->klass->vtable._11_get_Length.method)(
-                v17,
-                v17->klass->vtable._12_get_Position.methodPtr);
-        v19 = v78;
-        v78->fields._leftByte_5__4 = v18;
-        v20 = (struct System_Byte_array *)sub_1BAB4C4(byte___TypeInfo, (unsigned int)v19->fields._readCheckByte_5__2);
-        v21 = v78;
-        v78->fields._readBuf_5__5 = v20;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v21->fields._readBuf_5__5, (int32_t)v20, v22, v23);
-        v24 = (System_Diagnostics_Stopwatch_o *)sub_1BAB668(System_Diagnostics_Stopwatch_TypeInfo);
-        System_Diagnostics_Stopwatch___ctor(v24, 0LL);
-        v25 = v78;
-        v78->fields._sw_5__6 = v24;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v25->fields._sw_5__6, (int32_t)v24, v26, v27);
-        v29 = v78->fields._sw_5__6;
-        if ( !v29 )
-          sub_1BAB678(0LL, v28);
-        System_Diagnostics_Stopwatch__Start(v29, 0LL);
+        v22 = (System_IO_FileStream_o *)sub_1BCAA2C(System_IO_FileStream_TypeInfo, v18, v19, v20);
+        System_IO_FileStream___ctor_62646880(v22, outputFilePath, 3, 1, 0LL);
+        v23 = v123;
+        v123->fields._mergeFileStream_5__3 = v22;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v23->fields._mergeFileStream_5__3,
+          (int64_t)v22,
+          v24,
+          v25,
+          v26,
+          v27,
+          v28,
+          v29);
+        v31 = v123->fields._mergeFileStream_5__3;
+        v123->fields.__1__state = -3;
+        if ( !v31 )
+          sub_1BCAA3C(0LL, v30);
+        v32 = ((__int64 (__fastcall *)(struct System_IO_FileStream_o *, Il2CppMethodPointer))v31->klass->vtable._11_get_Length.method)(
+                v31,
+                v31->klass->vtable._12_get_Position.methodPtr);
+        v33 = v123;
+        v123->fields._leftByte_5__4 = v32;
+        v34 = (struct System_Byte_array *)sub_1BCA888(byte___TypeInfo, (unsigned int)v33->fields._readCheckByte_5__2);
+        v35 = v123;
+        v123->fields._readBuf_5__5 = v34;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v35->fields._readBuf_5__5,
+          (int64_t)v34,
+          v36,
+          v37,
+          v38,
+          v39,
+          v40,
+          v41);
+        v45 = (System_Diagnostics_Stopwatch_o *)sub_1BCAA2C(System_Diagnostics_Stopwatch_TypeInfo, v42, v43, v44);
+        System_Diagnostics_Stopwatch___ctor(v45, 0LL);
+        v46 = v123;
+        v123->fields._sw_5__6 = v45;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v46->fields._sw_5__6, (int64_t)v45, v47, v48, v49, v50, v51, v52);
+        v54 = v123->fields._sw_5__6;
+        if ( !v54 )
+          sub_1BCAA3C(0LL, v53);
+        System_Diagnostics_Stopwatch__Start(v54, 0LL);
         crcList = _4__this->fields.crcList;
         if ( !crcList )
-          sub_1BAB678(0LL, v30);
+          sub_1BCAA3C(0LL, v55);
         System_Collections_Generic_List_uint___GetEnumerator(
-          v76,
+          v121,
           crcList,
-          (const MethodInfo_359CDA8 *)Method_System_Collections_Generic_List_uint__GetEnumerator__);
-        v32 = v78;
-        v33 = *(_OWORD *)&v76[0].fields._list;
-        p__7__wrap6 = (ServantStatusBattleListViewItem_o *)&v78->fields.__7__wrap6;
-        v76[1] = v76[0];
-        *(_QWORD *)&v78->fields.__7__wrap6.fields._current = v76[0].fields._current;
-        *(_OWORD *)&v32->fields.__7__wrap6.fields._list = v33;
-        sub_1BAB3C0(p__7__wrap6, 0, v35, v36);
-        v78->fields.__1__state = -4;
+          (const MethodInfo_35F1148 *)Method_System_Collections_Generic_List_uint__GetEnumerator__);
+        v57 = v123;
+        v58 = *(_OWORD *)&v121[0].fields._list;
+        p__7__wrap6 = &v123->fields.__7__wrap6;
+        v121[1] = v121[0];
+        *(_QWORD *)&v123->fields.__7__wrap6.fields._current = v121[0].fields._current;
+        *(_OWORD *)&v57->fields.__7__wrap6.fields._list = v58;
+        sub_1BCA784((PartyOrganizationUtility_o *)p__7__wrap6, 0LL, v60, v61, v62, v63, v64, v65);
+        v123->fields.__1__state = -4;
         goto LABEL_14;
       }
     }
@@ -638,14 +750,18 @@ void __fastcall __noreturn FileMergeAndSplit_CRCChecker__Run_d__7__System_Collec
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_FileMergeAndSplit_CRCChecker__Run_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_FileMergeAndSplit_CRCChecker__Run_d__7_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -683,41 +799,42 @@ void __fastcall FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(
         FileMergeAndSplit_CRCChecker__Run_d__7_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct System_IO_FileStream_o *mergeFileStream_5__3; // x19
   System_IO_FileStream_c *klass; // x8
-  __int64 v5; // x9
+  __int64 v6; // x9
   int32_t *p_offset; // x10
-  __int64 v7; // x0
+  __int64 v8; // x0
 
-  if ( (byte_4AB4D97 & 1) == 0 )
+  if ( (byte_4B15230 & 1) == 0 )
   {
-    sub_1BAB41C(&System_IDisposable_TypeInfo, method);
-    byte_4AB4D97 = 1;
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, method, v2);
+    byte_4B15230 = 1;
   }
   mergeFileStream_5__3 = this->fields._mergeFileStream_5__3;
   this->fields.__1__state = -1;
   if ( mergeFileStream_5__3 )
   {
     klass = mergeFileStream_5__3->klass;
-    v5 = *(unsigned __int16 *)(&mergeFileStream_5__3->klass->_2.bitflags2 + 3);
+    v6 = *(unsigned __int16 *)(&mergeFileStream_5__3->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&mergeFileStream_5__3->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v5;
+        --v6;
         p_offset += 4;
-        if ( !v5 )
+        if ( !v6 )
           goto LABEL_8;
       }
-      v7 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v8 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_8:
-      v7 = sub_1BFD3FC(mergeFileStream_5__3, System_IDisposable_TypeInfo, 0LL);
+      v8 = sub_1C1C7C0(mergeFileStream_5__3, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v7)(mergeFileStream_5__3, *(_QWORD *)(v7 + 8));
+    (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v8)(mergeFileStream_5__3, *(_QWORD *)(v8 + 8));
   }
 }
 
@@ -726,15 +843,17 @@ void __fastcall FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(
         FileMergeAndSplit_CRCChecker__Run_d__7_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB4D98 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B15231 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_uint__Dispose__, method);
-    byte_4AB4D98 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_uint__Dispose__, method, v2);
+    byte_4B15231 = 1;
   }
   this->fields.__1__state = -3;
   System_Collections_Generic_List_Enumerator_uint___Dispose(
     &this->fields.__7__wrap6,
-    (const MethodInfo_32E74C4 *)Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
+    (const MethodInfo_333966C *)Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
 }
 
 
@@ -745,18 +864,26 @@ void __fastcall FileMergeAndSplit_Merge___ctor(
         const MethodInfo *method)
 {
   FileMergeAndSplit_Merge_o *v6; // x21
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.splitFileList = splitFileList;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v6->fields, (int32_t)splitFileList, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&v6->fields, (int64_t)splitFileList, v7, v8, v9, v10, v11, v12);
   v6->fields.outputFilePath = outputFilePath;
   v6 = (FileMergeAndSplit_Merge_o *)((char *)v6 + 24);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v6, (int32_t)outputFilePath, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)v6, (int64_t)outputFilePath, v13, v14, v15, v16, v17, v18);
   LODWORD(v6->monitor) = 0;
   BYTE5(v6->monitor) = 0;
 }
@@ -785,25 +912,34 @@ System_Collections_IEnumerator_o *__fastcall FileMergeAndSplit_Merge__Run(
         System_Action_Exception__o *errorCallBack,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  int32_t v8; // w2
-  int32_t v9; // w3
+  __int64 v3; // x3
+  __int64 v6; // x21
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4AB4D91 & 1) == 0 )
+  if ( (byte_4B1522A & 1) == 0 )
   {
-    sub_1BAB41C(&FileMergeAndSplit_Merge__Run_d__9_TypeInfo, errorCallBack);
-    byte_4AB4D91 = 1;
+    sub_1BCA7E0(&FileMergeAndSplit_Merge__Run_d__9_TypeInfo, errorCallBack, method);
+    byte_4B1522A = 1;
   }
-  v5 = sub_1BAB668(FileMergeAndSplit_Merge__Run_d__9_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
-  *(_QWORD *)(v5 + 40) = errorCallBack;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)errorCallBack, v8, v9);
-  return (System_Collections_IEnumerator_o *)v5;
+  v6 = sub_1BCAA2C(FileMergeAndSplit_Merge__Run_d__9_TypeInfo, errorCallBack, method, v3);
+  System_Object___ctor((Il2CppObject *)v6, 0LL);
+  *(_DWORD *)(v6 + 16) = 0;
+  *(_QWORD *)(v6 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)this, v7, v8, v9, v10, v11, v12);
+  *(_QWORD *)(v6 + 40) = errorCallBack;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 40), (int64_t)errorCallBack, v13, v14, v15, v16, v17, v18);
+  return (System_Collections_IEnumerator_o *)v6;
 }
 
 
@@ -821,250 +957,311 @@ bool __fastcall FileMergeAndSplit_Merge__Run_d__9__MoveNext(
         FileMergeAndSplit_Merge__Run_d__9_o *this,
         const MethodInfo *method)
 {
-  FileMergeAndSplit_Merge__Run_d__9_o *v2; // x19
-  __int64 v3; // x1
+  __int64 v2; // x2
+  FileMergeAndSplit_Merge__Run_d__9_o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
   __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v11; // x2
   __int64 v12; // x1
-  __int64 v13; // x1
+  __int64 v13; // x2
+  __int64 v14; // x1
+  __int64 v15; // x2
+  __int64 v16; // x1
+  __int64 v17; // x2
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x1
+  __int64 v21; // x2
+  __int64 v22; // x1
+  __int64 v23; // x2
+  __int64 v24; // x1
+  __int64 v25; // x2
   int32_t _1__state; // w8
   struct FileMergeAndSplit_Merge_o *_4__this; // x24
   System_IO_DirectoryInfo_o *Parent; // x0
-  __int64 v17; // x1
-  System_IO_DirectoryInfo_o *v18; // x19
-  System_String_o *v19; // x0
-  System_IO_DirectoryInfo_o *v20; // x0
-  __int64 v21; // x1
-  System_String_o *v22; // x19
-  int64_t FreeSize; // x0
-  __int64 v24; // x1
-  struct System_Collections_Generic_List_string__o *v25; // x8
-  struct System_Action_Exception__o *errorCallBack; // x20
-  System_Exception_o *v27; // x19
-  __int64 v28; // x0
   __int64 v29; // x1
+  System_IO_DirectoryInfo_o *v30; // x19
+  System_String_o *v31; // x0
+  System_IO_DirectoryInfo_o *v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x1
+  System_String_o *v35; // x19
+  int64_t FreeSize; // x0
+  __int64 v37; // x1
+  __int64 v38; // x2
+  __int64 v39; // x3
+  struct System_Collections_Generic_List_string__o *v40; // x8
+  struct System_Action_Exception__o *errorCallBack; // x20
+  System_Exception_o *v42; // x19
+  __int64 v43; // x0
+  __int64 v44; // x1
   bool result; // w0
   System_Diagnostics_Stopwatch_o *sw_5__5; // x0
-  __int64 v32; // x1
-  System_Diagnostics_Stopwatch_o *v33; // x0
-  System_String_o *outputFilePath; // x20
-  System_IO_FileStream_o *v35; // x19
-  FileMergeAndSplit_Merge__Run_d__9_o *v36; // x0
-  int32_t v37; // w2
-  int32_t v38; // w3
-  struct System_Byte_array *v39; // x1
-  FileMergeAndSplit_Merge__Run_d__9_o *v40; // x0
-  int32_t v41; // w2
-  int32_t v42; // w3
-  System_Diagnostics_Stopwatch_o *v43; // x19
-  FileMergeAndSplit_Merge__Run_d__9_o *v44; // x0
-  int32_t v45; // w2
-  int32_t v46; // w3
   __int64 v47; // x1
   System_Diagnostics_Stopwatch_o *v48; // x0
-  __int64 v49; // x1
-  System_Collections_Generic_List_object__o *v50; // x0
-  FileMergeAndSplit_Merge__Run_d__9_o *v51; // x9
-  __int128 v52; // q0
-  ServantStatusBattleListViewItem_o *p__7__wrap5; // x0
-  int32_t v54; // w2
-  int32_t v55; // w3
-  const MethodInfo *v56; // x1
+  System_String_o *outputFilePath; // x20
+  System_IO_FileStream_o *v50; // x19
+  FileMergeAndSplit_Merge__Run_d__9_o *v51; // x0
+  int64_t v52; // x2
+  int32_t v53; // w3
+  System_String_o *v54; // x4
+  BattleSetupInfo_o *v55; // x5
+  FollowerInfo_o *v56; // x6
+  PartyListViewItem_o *v57; // x7
+  struct System_Byte_array *v58; // x1
+  FileMergeAndSplit_Merge__Run_d__9_o *v59; // x0
+  int64_t v60; // x2
+  int32_t v61; // w3
+  System_String_o *v62; // x4
+  BattleSetupInfo_o *v63; // x5
+  FollowerInfo_o *v64; // x6
+  PartyListViewItem_o *v65; // x7
+  __int64 v66; // x1
+  __int64 v67; // x2
+  __int64 v68; // x3
+  System_Diagnostics_Stopwatch_o *v69; // x19
+  FileMergeAndSplit_Merge__Run_d__9_o *v70; // x0
+  int64_t v71; // x2
+  int32_t v72; // w3
+  System_String_o *v73; // x4
+  BattleSetupInfo_o *v74; // x5
+  FollowerInfo_o *v75; // x6
+  PartyListViewItem_o *v76; // x7
+  __int64 v77; // x1
+  System_Diagnostics_Stopwatch_o *v78; // x0
+  __int64 v79; // x1
+  System_Collections_Generic_List_object__o *v80; // x0
+  FileMergeAndSplit_Merge__Run_d__9_o *v81; // x9
+  __int128 v82; // q0
+  struct System_Collections_Generic_List_Enumerator_string__o *p__7__wrap5; // x0
+  int64_t v84; // x2
+  int32_t v85; // w3
+  System_String_o *v86; // x4
+  BattleSetupInfo_o *v87; // x5
+  FollowerInfo_o *v88; // x6
+  PartyListViewItem_o *v89; // x7
+  const MethodInfo *v90; // x1
   System_String_o *current; // x22
-  _BOOL8 v58; // x0
-  const MethodInfo *v59; // x1
-  int32_t v60; // w8
+  _BOOL8 v92; // x0
+  const MethodInfo *v93; // x1
+  __int64 v94; // x2
+  __int64 v95; // x3
+  int32_t v96; // w8
   struct System_Collections_Generic_List_string__o *splitFileList; // x9
-  System_IO_FileStream_o *v62; // x21
-  __int64 v63; // x0
-  __int64 v64; // x1
-  int64_t v65; // x22
+  System_IO_FileStream_o *v98; // x21
+  __int64 v99; // x0
+  __int64 v100; // x1
+  __int64 v101; // x1
+  int64_t v102; // x22
   struct System_Byte_array *readBuf_5__3; // x23
-  int64_t v67; // x3
-  __int64 v68; // x1
-  unsigned int v69; // w23
+  int64_t v104; // x3
+  __int64 v105; // x1
+  unsigned int v106; // w23
   struct System_IO_FileStream_o *mergeFileStream_5__2; // x0
   System_IO_FileStream_c *klass; // x8
-  __int64 v72; // x9
+  __int64 v109; // x9
   int32_t *p_offset; // x10
-  __int64 v74; // x0
-  __int64 v75; // x1
-  System_Diagnostics_Stopwatch_o *v76; // x0
-  int32_t v77; // w2
-  int32_t v78; // w3
-  __int64 v79; // x1
-  FileMergeAndSplit_Merge__Run_d__9_o *v80; // x8
-  System_Diagnostics_Stopwatch_o *v81; // x0
-  FileMergeAndSplit_Merge__Run_d__9_o *v82; // x0
-  int32_t v83; // w2
-  int32_t v84; // w3
-  FileMergeAndSplit_Merge__Run_d__9_o *v85; // x0
-  int32_t v86; // w2
-  int32_t v87; // w3
-  const MethodInfo *v88; // x1
-  FileMergeAndSplit_Merge__Run_d__9_o *v89; // x0
-  int32_t v90; // w2
-  int32_t v91; // w3
-  __int64 v92; // x0
-  __int64 v93; // x1
-  const MethodInfo *v94; // x1
-  FileMergeAndSplit_Merge__Run_d__9_o *v95; // x0
-  System_Collections_Generic_List_Enumerator_T__o v96[2]; // [xsp+8h] [xbp-A8h] BYREF
-  __int64 v97; // [xsp+38h] [xbp-78h]
-  FileMergeAndSplit_Merge__Run_d__9_o **v98; // [xsp+40h] [xbp-70h]
-  FileMergeAndSplit_Merge__Run_d__9_o *v99; // [xsp+48h] [xbp-68h] BYREF
+  __int64 v111; // x0
+  __int64 v112; // x1
+  System_Diagnostics_Stopwatch_o *v113; // x0
+  int64_t v114; // x2
+  int32_t v115; // w3
+  System_String_o *v116; // x4
+  BattleSetupInfo_o *v117; // x5
+  FollowerInfo_o *v118; // x6
+  PartyListViewItem_o *v119; // x7
+  __int64 v120; // x1
+  FileMergeAndSplit_Merge__Run_d__9_o *v121; // x8
+  System_Diagnostics_Stopwatch_o *v122; // x0
+  FileMergeAndSplit_Merge__Run_d__9_o *v123; // x0
+  int64_t v124; // x2
+  int32_t v125; // w3
+  System_String_o *v126; // x4
+  BattleSetupInfo_o *v127; // x5
+  FollowerInfo_o *v128; // x6
+  PartyListViewItem_o *v129; // x7
+  FileMergeAndSplit_Merge__Run_d__9_o *v130; // x0
+  int64_t v131; // x2
+  int32_t v132; // w3
+  System_String_o *v133; // x4
+  BattleSetupInfo_o *v134; // x5
+  FollowerInfo_o *v135; // x6
+  PartyListViewItem_o *v136; // x7
+  const MethodInfo *v137; // x1
+  FileMergeAndSplit_Merge__Run_d__9_o *v138; // x0
+  int64_t v139; // x2
+  int32_t v140; // w3
+  System_String_o *v141; // x4
+  BattleSetupInfo_o *v142; // x5
+  FollowerInfo_o *v143; // x6
+  PartyListViewItem_o *v144; // x7
+  __int64 v145; // x0
+  __int64 v146; // x1
+  const MethodInfo *v147; // x1
+  FileMergeAndSplit_Merge__Run_d__9_o *v148; // x0
+  System_Collections_Generic_List_Enumerator_T__o v149[2]; // [xsp+8h] [xbp-A8h] BYREF
+  __int64 v150; // [xsp+38h] [xbp-78h]
+  FileMergeAndSplit_Merge__Run_d__9_o **v151; // [xsp+40h] [xbp-70h]
+  FileMergeAndSplit_Merge__Run_d__9_o *v152; // [xsp+48h] [xbp-68h] BYREF
 
-  v2 = this;
-  v99 = this;
-  if ( (byte_4AB4D92 & 1) == 0 )
+  v3 = this;
+  v152 = this;
+  if ( (byte_4B1522B & 1) == 0 )
   {
-    sub_1BAB41C(&byte___TypeInfo, method);
-    sub_1BAB41C(&CommonServicePluginScript_TypeInfo, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v5);
-    sub_1BAB41C(&System_Exception_TypeInfo, v6);
-    sub_1BAB41C(&System_IO_FileStream_TypeInfo, v7);
-    sub_1BAB41C(&System_IDisposable_TypeInfo, v8);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string__GetEnumerator__, v9);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_string__get_Count__, v10);
-    sub_1BAB41C(&System_Math_TypeInfo, v11);
-    sub_1BAB41C(&System_Diagnostics_Stopwatch_TypeInfo, v12);
-    this = (FileMergeAndSplit_Merge__Run_d__9_o *)sub_1BAB41C(&StringLiteral_5328/*"Disk full"*/, v13);
-    byte_4AB4D92 = 1;
+    sub_1BCA7E0(&byte___TypeInfo, method, v2);
+    sub_1BCA7E0(&CommonServicePluginScript_TypeInfo, v4, v5);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v6, v7);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v8, v9);
+    sub_1BCA7E0(&System_Exception_TypeInfo, v10, v11);
+    sub_1BCA7E0(&System_IO_FileStream_TypeInfo, v12, v13);
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, v14, v15);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string__GetEnumerator__, v16, v17);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_string__get_Count__, v18, v19);
+    sub_1BCA7E0(&System_Math_TypeInfo, v20, v21);
+    sub_1BCA7E0(&System_Diagnostics_Stopwatch_TypeInfo, v22, v23);
+    this = (FileMergeAndSplit_Merge__Run_d__9_o *)sub_1BCA7E0(&StringLiteral_5402/*"Disk full"*/, v24, v25);
+    byte_4B1522B = 1;
   }
-  v97 = 0LL;
-  v98 = &v99;
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  v150 = 0LL;
+  v151 = &v152;
+  _1__state = v3->fields.__1__state;
+  _4__this = v3->fields.__4__this;
   if ( _1__state == 1 )
   {
-    sw_5__5 = v2->fields._sw_5__5;
-    v2->fields.__1__state = -4;
+    sw_5__5 = v3->fields._sw_5__5;
+    v3->fields.__1__state = -4;
     if ( !sw_5__5 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method);
     System_Diagnostics_Stopwatch__Reset(sw_5__5, 0LL);
-    v33 = v99->fields._sw_5__5;
-    if ( !v33 )
-      sub_1BAB678(0LL, v32);
-    System_Diagnostics_Stopwatch__Start(v33, 0LL);
+    v48 = v152->fields._sw_5__5;
+    if ( !v48 )
+      sub_1BCAA3C(0LL, v47);
+    System_Diagnostics_Stopwatch__Start(v48, 0LL);
 LABEL_25:
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              (System_Collections_Generic_List_Enumerator_object__o *)&v99->fields.__7__wrap5,
-              (const MethodInfo_32C4C78 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (System_Collections_Generic_List_Enumerator_object__o *)&v152->fields.__7__wrap5,
+              (const MethodInfo_3316D1C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
-      current = v99->fields.__7__wrap5.fields._current;
-      v58 = System_IO_File__Exists(current, 0LL);
-      if ( !v58 )
+      current = v152->fields.__7__wrap5.fields._current;
+      v92 = System_IO_File__Exists(current, 0LL);
+      if ( !v92 )
       {
         if ( !_4__this )
-          sub_1BAB678(v58, v59);
+          sub_1BCAA3C(v92, v93);
         *(_WORD *)&_4__this->fields.isMerge = 256;
-        FileMergeAndSplit_Merge__Run_d__9____m__Finally2(v99, v59);
-        FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v99, v94);
+        FileMergeAndSplit_Merge__Run_d__9____m__Finally2(v152, v93);
+        FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v152, v147);
         return 0;
       }
-      v60 = v99->fields._count_5__4 + 1;
-      v99->fields._count_5__4 = v60;
+      v96 = v152->fields._count_5__4 + 1;
+      v152->fields._count_5__4 = v96;
       if ( !_4__this )
-        sub_1BAB678(v58, v59);
+        sub_1BCAA3C(v92, v93);
       splitFileList = _4__this->fields.splitFileList;
       if ( !splitFileList )
-        sub_1BAB678(v58, v59);
-      _4__this->fields.progress = (float)v60 / (float)splitFileList->fields._size;
-      v62 = (System_IO_FileStream_o *)sub_1BAB668(System_IO_FileStream_TypeInfo);
-      System_IO_FileStream___ctor_62293460(v62, current, 3, 1, 0LL);
-      if ( !v62 )
-        sub_1BAB678(v63, v64);
-      v65 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, Il2CppMethodPointer))v62->klass->vtable._11_get_Length.method)(
-              v62,
-              v62->klass->vtable._12_get_Position.methodPtr);
-      if ( v65 >= 1 )
+        sub_1BCAA3C(v92, v93);
+      _4__this->fields.progress = (float)v96 / (float)splitFileList->fields._size;
+      v98 = (System_IO_FileStream_o *)sub_1BCAA2C(System_IO_FileStream_TypeInfo, v93, v94, v95);
+      System_IO_FileStream___ctor_62646880(v98, current, 3, 1, 0LL);
+      if ( !v98 )
+        sub_1BCAA3C(v99, v100);
+      v102 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, Il2CppMethodPointer))v98->klass->vtable._11_get_Length.method)(
+               v98,
+               v98->klass->vtable._12_get_Position.methodPtr);
+      if ( v102 >= 1 )
       {
         do
         {
-          readBuf_5__3 = v99->fields._readBuf_5__3;
+          readBuf_5__3 = v152->fields._readBuf_5__3;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v67 = System_Math__Min_62867116(104857LL, v65, 0LL);
-          v69 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, int64_t, Il2CppMethodPointer))v62->klass->vtable._33_Read.method)(
-                  v62,
-                  readBuf_5__3,
-                  0LL,
-                  v67,
-                  v62->klass->vtable._34_Read.methodPtr);
-          mergeFileStream_5__2 = v99->fields._mergeFileStream_5__2;
+            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v101);
+          v104 = System_Math__Min_63220536(104857LL, v102, 0LL);
+          v106 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, int64_t, Il2CppMethodPointer))v98->klass->vtable._33_Read.method)(
+                   v98,
+                   readBuf_5__3,
+                   0LL,
+                   v104,
+                   v98->klass->vtable._34_Read.methodPtr);
+          mergeFileStream_5__2 = v152->fields._mergeFileStream_5__2;
           if ( !mergeFileStream_5__2 )
-            sub_1BAB678(0LL, v68);
+            sub_1BCAA3C(0LL, v105);
           ((void (__fastcall *)(struct System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))mergeFileStream_5__2->klass->vtable._36_Write.method)(
             mergeFileStream_5__2,
-            v99->fields._readBuf_5__3,
+            v152->fields._readBuf_5__3,
             0LL,
-            v69,
+            v106,
             mergeFileStream_5__2->klass->vtable._37_Write.methodPtr);
-          v65 -= (int)v69;
+          v102 -= (int)v106;
         }
-        while ( v65 > 0 );
+        while ( v102 > 0 );
       }
-      klass = v62->klass;
-      v72 = *(unsigned __int16 *)(&v62->klass->_2.bitflags2 + 3);
-      if ( *(_WORD *)(&v62->klass->_2.bitflags2 + 3) )
+      klass = v98->klass;
+      v109 = *(unsigned __int16 *)(&v98->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v98->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          --v72;
+          --v109;
           p_offset += 4;
-          if ( !v72 )
+          if ( !v109 )
             goto LABEL_39;
         }
-        v74 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v111 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
 LABEL_39:
-        v74 = sub_1BFD3FC(v62, System_IDisposable_TypeInfo, 0LL);
+        v111 = sub_1C1C7C0(v98, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v74)(v62, *(_QWORD *)(v74 + 8));
-      v76 = v99->fields._sw_5__5;
-      if ( !v76 )
-        sub_1BAB678(0LL, v75);
-      if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v76, 0LL) >= 301 )
+      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v111)(v98, *(_QWORD *)(v111 + 8));
+      v113 = v152->fields._sw_5__5;
+      if ( !v113 )
+        sub_1BCAA3C(0LL, v112);
+      if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v113, 0LL) >= 301 )
       {
-        v95 = v99;
-        v99->fields.__2__current = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v95->fields.__2__current, 0, v77, v78);
+        v148 = v152;
+        v152->fields.__2__current = 0LL;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v148->fields.__2__current, 0LL, v114, v115, v116, v117, v118, v119);
         result = 1;
-        v99->fields.__1__state = 1;
+        v152->fields.__1__state = 1;
         return result;
       }
     }
-    FileMergeAndSplit_Merge__Run_d__9____m__Finally2(v99, v56);
-    v80 = v99;
-    v81 = v99->fields._sw_5__5;
-    v99->fields.__7__wrap5.fields._list = 0LL;
-    *(_QWORD *)&v80->fields.__7__wrap5.fields._index = 0LL;
-    v80->fields.__7__wrap5.fields._current = 0LL;
-    if ( !v81 )
-      sub_1BAB678(0LL, v79);
-    System_Diagnostics_Stopwatch__Stop(v81, 0LL);
-    v82 = v99;
-    v99->fields._readBuf_5__3 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v82->fields._readBuf_5__3, 0, v83, v84);
-    v85 = v99;
-    v99->fields._sw_5__5 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v85->fields._sw_5__5, 0, v86, v87);
-    FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v99, v88);
-    v89 = v99;
-    v99->fields._mergeFileStream_5__2 = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v89->fields._mergeFileStream_5__2, 0, v90, v91);
+    FileMergeAndSplit_Merge__Run_d__9____m__Finally2(v152, v90);
+    v121 = v152;
+    v122 = v152->fields._sw_5__5;
+    v152->fields.__7__wrap5.fields._list = 0LL;
+    *(_QWORD *)&v121->fields.__7__wrap5.fields._index = 0LL;
+    v121->fields.__7__wrap5.fields._current = 0LL;
+    if ( !v122 )
+      sub_1BCAA3C(0LL, v120);
+    System_Diagnostics_Stopwatch__Stop(v122, 0LL);
+    v123 = v152;
+    v152->fields._readBuf_5__3 = 0LL;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v123->fields._readBuf_5__3, 0LL, v124, v125, v126, v127, v128, v129);
+    v130 = v152;
+    v152->fields._sw_5__5 = 0LL;
+    sub_1BCA784((PartyOrganizationUtility_o *)&v130->fields._sw_5__5, 0LL, v131, v132, v133, v134, v135, v136);
+    FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v152, v137);
+    v138 = v152;
+    v152->fields._mergeFileStream_5__2 = 0LL;
+    sub_1BCA784(
+      (PartyOrganizationUtility_o *)&v138->fields._mergeFileStream_5__2,
+      0LL,
+      v139,
+      v140,
+      v141,
+      v142,
+      v143,
+      v144);
     if ( !_4__this )
-      sub_1BAB678(v92, v93);
+      sub_1BCAA3C(v145, v146);
     result = 0;
     _4__this->fields.isMerge = 0;
   }
@@ -1074,88 +1271,96 @@ LABEL_39:
   }
   else
   {
-    v2->fields.__1__state = -1;
+    v3->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     Parent = System_IO_Directory__GetParent(_4__this->fields.outputFilePath, 0LL);
-    v18 = Parent;
+    v30 = Parent;
     if ( !Parent )
-      sub_1BAB678(0LL, v17);
+      sub_1BCAA3C(0LL, v29);
     if ( (((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, Il2CppMethodPointer))Parent->klass->vtable._10_get_Exists.method)(
             Parent,
             Parent->klass->vtable._11_Delete.methodPtr) & 1) == 0 )
     {
-      v19 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, Il2CppMethodPointer))v18->klass->vtable._8_get_FullName.method)(
-                                 v18,
-                                 v18->klass->vtable._9_get_Name.methodPtr);
-      System_IO_Directory__CreateDirectory(v19, 0LL);
+      v31 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, Il2CppMethodPointer))v30->klass->vtable._8_get_FullName.method)(
+                                 v30,
+                                 v30->klass->vtable._9_get_Name.methodPtr);
+      System_IO_Directory__CreateDirectory(v31, 0LL);
     }
     if ( System_IO_File__Exists(_4__this->fields.outputFilePath, 0LL) )
       System_IO_File__Delete(_4__this->fields.outputFilePath, 0LL);
-    v20 = System_IO_Directory__GetParent(_4__this->fields.outputFilePath, 0LL);
-    if ( !v20 )
-      sub_1BAB678(0LL, v21);
-    v22 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, Il2CppMethodPointer))v20->klass->vtable._8_get_FullName.method)(
-                               v20,
-                               v20->klass->vtable._9_get_Name.methodPtr);
+    v32 = System_IO_Directory__GetParent(_4__this->fields.outputFilePath, 0LL);
+    if ( !v32 )
+      sub_1BCAA3C(0LL, v33);
+    v35 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, Il2CppMethodPointer))v32->klass->vtable._8_get_FullName.method)(
+                               v32,
+                               v32->klass->vtable._9_get_Name.methodPtr);
     if ( !CommonServicePluginScript_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CommonServicePluginScript_TypeInfo);
-    FreeSize = CommonServicePluginScript__GetFreeSize(v22, 0LL);
+      j_il2cpp_runtime_class_init_0(CommonServicePluginScript_TypeInfo, v34);
+    FreeSize = CommonServicePluginScript__GetFreeSize(v35, 0LL);
     if ( FreeSize < 1 )
       goto LABEL_22;
-    v25 = _4__this->fields.splitFileList;
-    if ( !v25 )
-      sub_1BAB678(FreeSize, v24);
-    if ( FreeSize >= v25->fields._size << 20 )
+    v40 = _4__this->fields.splitFileList;
+    if ( !v40 )
+      sub_1BCAA3C(FreeSize, v37);
+    if ( FreeSize >= v40->fields._size << 20 )
     {
 LABEL_22:
       _4__this->fields.isMerge = 1;
       outputFilePath = _4__this->fields.outputFilePath;
-      v35 = (System_IO_FileStream_o *)sub_1BAB668(System_IO_FileStream_TypeInfo);
-      System_IO_FileStream___ctor_62293460(v35, outputFilePath, 1, 2, 0LL);
-      v36 = v99;
-      v99->fields._mergeFileStream_5__2 = v35;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v36->fields._mergeFileStream_5__2, (int32_t)v35, v37, v38);
-      v99->fields.__1__state = -3;
-      v39 = (struct System_Byte_array *)sub_1BAB4C4(byte___TypeInfo, 104857LL);
-      v40 = v99;
-      v99->fields._readBuf_5__3 = v39;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v40->fields._readBuf_5__3, (int32_t)v39, v41, v42);
-      v99->fields._count_5__4 = 0;
-      v43 = (System_Diagnostics_Stopwatch_o *)sub_1BAB668(System_Diagnostics_Stopwatch_TypeInfo);
-      System_Diagnostics_Stopwatch___ctor(v43, 0LL);
-      v44 = v99;
-      v99->fields._sw_5__5 = v43;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v44->fields._sw_5__5, (int32_t)v43, v45, v46);
-      v48 = v99->fields._sw_5__5;
-      if ( !v48 )
-        sub_1BAB678(0LL, v47);
-      System_Diagnostics_Stopwatch__Start(v48, 0LL);
-      v50 = (System_Collections_Generic_List_object__o *)_4__this->fields.splitFileList;
-      if ( !v50 )
-        sub_1BAB678(0LL, v49);
+      v50 = (System_IO_FileStream_o *)sub_1BCAA2C(System_IO_FileStream_TypeInfo, v37, v38, v39);
+      System_IO_FileStream___ctor_62646880(v50, outputFilePath, 1, 2, 0LL);
+      v51 = v152;
+      v152->fields._mergeFileStream_5__2 = v50;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v51->fields._mergeFileStream_5__2,
+        (int64_t)v50,
+        v52,
+        v53,
+        v54,
+        v55,
+        v56,
+        v57);
+      v152->fields.__1__state = -3;
+      v58 = (struct System_Byte_array *)sub_1BCA888(byte___TypeInfo, 104857LL);
+      v59 = v152;
+      v152->fields._readBuf_5__3 = v58;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v59->fields._readBuf_5__3, (int64_t)v58, v60, v61, v62, v63, v64, v65);
+      v152->fields._count_5__4 = 0;
+      v69 = (System_Diagnostics_Stopwatch_o *)sub_1BCAA2C(System_Diagnostics_Stopwatch_TypeInfo, v66, v67, v68);
+      System_Diagnostics_Stopwatch___ctor(v69, 0LL);
+      v70 = v152;
+      v152->fields._sw_5__5 = v69;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v70->fields._sw_5__5, (int64_t)v69, v71, v72, v73, v74, v75, v76);
+      v78 = v152->fields._sw_5__5;
+      if ( !v78 )
+        sub_1BCAA3C(0LL, v77);
+      System_Diagnostics_Stopwatch__Start(v78, 0LL);
+      v80 = (System_Collections_Generic_List_object__o *)_4__this->fields.splitFileList;
+      if ( !v80 )
+        sub_1BCAA3C(0LL, v79);
       System_Collections_Generic_List_object___GetEnumerator(
-        v96,
-        v50,
-        (const MethodInfo_354E3B4 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
-      v51 = v99;
-      v52 = *(_OWORD *)&v96[0].fields._list;
-      p__7__wrap5 = (ServantStatusBattleListViewItem_o *)&v99->fields.__7__wrap5;
-      v96[1] = v96[0];
-      v99->fields.__7__wrap5.fields._current = (struct System_String_o *)v96[0].fields._current;
-      *(_OWORD *)&v51->fields.__7__wrap5.fields._list = v52;
-      sub_1BAB3C0(p__7__wrap5, 0, v54, v55);
-      v99->fields.__1__state = -4;
+        v149,
+        v80,
+        (const MethodInfo_35A2754 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      v81 = v152;
+      v82 = *(_OWORD *)&v149[0].fields._list;
+      p__7__wrap5 = &v152->fields.__7__wrap5;
+      v149[1] = v149[0];
+      v152->fields.__7__wrap5.fields._current = (struct System_String_o *)v149[0].fields._current;
+      *(_OWORD *)&v81->fields.__7__wrap5.fields._list = v82;
+      sub_1BCA784((PartyOrganizationUtility_o *)p__7__wrap5, 0LL, v84, v85, v86, v87, v88, v89);
+      v152->fields.__1__state = -4;
       goto LABEL_25;
     }
-    errorCallBack = v99->fields.errorCallBack;
-    v27 = (System_Exception_o *)sub_1BAB668(System_Exception_TypeInfo);
-    System_Exception___ctor_63088908(v27, (System_String_o *)StringLiteral_5328/*"Disk full"*/, 0LL);
+    errorCallBack = v152->fields.errorCallBack;
+    v42 = (System_Exception_o *)sub_1BCAA2C(System_Exception_TypeInfo, v37, v38, v39);
+    System_Exception___ctor_63442328(v42, (System_String_o *)StringLiteral_5402/*"Disk full"*/, 0LL);
     if ( !errorCallBack )
-      sub_1BAB678(v28, v29);
+      sub_1BCAA3C(v43, v44);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Exception_o *, _QWORD))errorCallBack->fields.m_target)(
       errorCallBack->fields.original_method_info,
-      v27,
+      v42,
       *(_QWORD *)&errorCallBack->fields.extra_arg);
     result = 0;
     _4__this->fields.isError = 1;
@@ -1177,14 +1382,18 @@ void __fastcall __noreturn FileMergeAndSplit_Merge__Run_d__9__System_Collections
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_FileMergeAndSplit_Merge__Run_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_FileMergeAndSplit_Merge__Run_d__9_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -1222,41 +1431,42 @@ void __fastcall FileMergeAndSplit_Merge__Run_d__9____m__Finally1(
         FileMergeAndSplit_Merge__Run_d__9_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct System_IO_FileStream_o *mergeFileStream_5__2; // x19
   System_IO_FileStream_c *klass; // x8
-  __int64 v5; // x9
+  __int64 v6; // x9
   int32_t *p_offset; // x10
-  __int64 v7; // x0
+  __int64 v8; // x0
 
-  if ( (byte_4AB4D93 & 1) == 0 )
+  if ( (byte_4B1522C & 1) == 0 )
   {
-    sub_1BAB41C(&System_IDisposable_TypeInfo, method);
-    byte_4AB4D93 = 1;
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, method, v2);
+    byte_4B1522C = 1;
   }
   mergeFileStream_5__2 = this->fields._mergeFileStream_5__2;
   this->fields.__1__state = -1;
   if ( mergeFileStream_5__2 )
   {
     klass = mergeFileStream_5__2->klass;
-    v5 = *(unsigned __int16 *)(&mergeFileStream_5__2->klass->_2.bitflags2 + 3);
+    v6 = *(unsigned __int16 *)(&mergeFileStream_5__2->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&mergeFileStream_5__2->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v5;
+        --v6;
         p_offset += 4;
-        if ( !v5 )
+        if ( !v6 )
           goto LABEL_8;
       }
-      v7 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v8 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_8:
-      v7 = sub_1BFD3FC(mergeFileStream_5__2, System_IDisposable_TypeInfo, 0LL);
+      v8 = sub_1C1C7C0(mergeFileStream_5__2, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v7)(mergeFileStream_5__2, *(_QWORD *)(v7 + 8));
+    (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v8)(mergeFileStream_5__2, *(_QWORD *)(v8 + 8));
   }
 }
 
@@ -1265,13 +1475,15 @@ void __fastcall FileMergeAndSplit_Merge__Run_d__9____m__Finally2(
         FileMergeAndSplit_Merge__Run_d__9_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB4D94 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B1522D & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, method);
-    byte_4AB4D94 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, method, v2);
+    byte_4B1522D = 1;
   }
   this->fields.__1__state = -3;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap5,
-    (const MethodInfo_32C4C74 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_3316D18 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
 }

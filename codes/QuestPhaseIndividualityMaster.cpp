@@ -1,16 +1,19 @@
 void __fastcall QuestPhaseIndividualityMaster___ctor(QuestPhaseIndividualityMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6E35 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B172F3 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string___ctor__,
-      method);
-    byte_4AB6E35 = 1;
+      method,
+      v2);
+    byte_4B172F3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     500,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string___ctor__);
 }
 
 
@@ -23,21 +26,23 @@ QuestPhaseIndividualityEntity_o *__fastcall QuestPhaseIndividualityMaster__GetEn
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB6E36 & 1) == 0 )
+  if ( (byte_4B172F4 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__GetEntity__,
-      *(_QWORD *)&questId);
-    byte_4AB6E36 = 1;
+      *(_QWORD *)&questId,
+      *(_QWORD *)&phase);
+    byte_4B172F4 = 1;
   }
   PK = (Il2CppObject *)QuestPhaseIndividualityEntity__CreatePK(questId, phase, 0LL);
   return (QuestPhaseIndividualityEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_31640E8 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__GetEntity__);
+                                              (const MethodInfo_31B3198 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall QuestPhaseIndividualityMaster__TryGetEntity(
         QuestPhaseIndividualityMaster_o *this,
         QuestPhaseIndividualityEntity_o **entity,
@@ -47,17 +52,18 @@ bool __fastcall QuestPhaseIndividualityMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB6E37 & 1) == 0 )
+  if ( (byte_4B172F5 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__TryGetEntity__,
-      entity);
-    byte_4AB6E37 = 1;
+      entity,
+      *(_QWORD *)&questId);
+    byte_4B172F5 = 1;
   }
   PK = (Il2CppObject *)QuestPhaseIndividualityEntity__CreatePK(questId, phase, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_QuestPhaseIndividualityMaster__QuestPhaseIndividualityEntity__string__TryGetEntity__);
 }

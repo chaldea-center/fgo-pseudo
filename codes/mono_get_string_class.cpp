@@ -1,4 +1,4 @@
 __int64 mono_get_string_class()
 {
-  return qword_4AC8638;
+  return qword_4B28B38;
 }

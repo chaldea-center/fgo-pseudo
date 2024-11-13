@@ -7,14 +7,18 @@ void __fastcall FieldAiActArgument___ctor(
         const MethodInfo *method)
 {
   FieldAiActArgument_o *v8; // x21
-  int32_t v9; // w2
+  int64_t v9; // x2
   int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
 
   v8 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)fieldData);
   v8->fields._FieldData_k__BackingField = fieldData;
   v8 = (FieldAiActArgument_o *)((char *)v8 + 32);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v8, (int32_t)fieldData, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)v8, (int64_t)fieldData, v9, v10, v11, v12, v13, v14);
   LOBYTE(v8->monitor) = isForcedSpeedOne;
 }
 
@@ -25,6 +29,10 @@ void __fastcall FieldAiActArgument__InitCommonTask(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   struct AiBaseEntity_o *AiEnt_k__BackingField; // x8
   struct System_String_o *infoText; // x8
 
@@ -32,11 +40,19 @@ void __fastcall FieldAiActArgument__InitCommonTask(
     || (task->fields.isForcedSpeedOne = this->fields._IsForcedSpeedOne_k__BackingField,
         (AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField) == 0LL) )
   {
-    sub_1BAB678(this, task);
+    sub_1BCAA3C(this, task);
   }
   infoText = AiEnt_k__BackingField->fields.infoText;
   task->fields.motionMessage = infoText;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&task->fields.motionMessage,
+    (int64_t)infoText,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -58,7 +74,7 @@ int32_t __fastcall FieldAiActArgument__get_UniqueId(FieldAiActArgument_o *this, 
 
   FieldData_k__BackingField = this->fields._FieldData_k__BackingField;
   if ( !FieldData_k__BackingField )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return FieldData_k__BackingField->fields.uniqueId;
 }
 
@@ -69,13 +85,21 @@ void __fastcall FieldAiActArgument__set_FieldData(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._FieldData_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._FieldData_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._FieldData_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

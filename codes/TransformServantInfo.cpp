@@ -1,40 +1,49 @@
 void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w1
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  void *v4; // x1
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB6F97 & 1) == 0 )
+  if ( (byte_4B17457 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, method);
-    byte_4AB6F97 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
+    byte_4B17457 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
-  v3 = (int)StringLiteral_1/*""*/;
+  v4 = StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.titleText, v3, v4, v5);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
-void __fastcall TransformServantInfo___ctor_40926660(
+void __fastcall TransformServantInfo___ctor_41269632(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
         System_String_o *titleText,
         const MethodInfo *method)
 {
-  TransformServantInfo_o *v8; // x22
-  int32_t v9; // w2
+  PartyOrganizationUtility_o *v8; // x22
+  int64_t v9; // x2
   int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
 
-  v8 = this;
+  v8 = (PartyOrganizationUtility_o *)this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v8->fields.titleText = titleText;
-  v8 = (TransformServantInfo_o *)((char *)v8 + 24);
-  LODWORD(v8[-1].fields.titleText) = svtId;
-  HIDWORD(v8[-1].fields.titleText) = dispLimitCount;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v8, (int32_t)titleText, v9, v10);
+  v8->fields._normalFollowerInfo = (struct FollowerInfo_o *)titleText;
+  v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
+  *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = svtId;
+  *(_DWORD *)(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = dispLimitCount;
+  sub_1BCA784(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -48,10 +57,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4AB6F98 & 1) == 0 )
+  if ( (byte_4B17458 & 1) == 0 )
   {
-    sub_1BAB41C(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    byte_4AB6F98 = 1;
+    sub_1BCA7E0(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount, method);
+    byte_4B17458 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )
@@ -61,7 +70,7 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
     {
       svtId = this->fields.svtId;
       if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
+        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
       return ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
     }
   }

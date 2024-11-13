@@ -8,21 +8,25 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
         EventPointGaugeEffectAction_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_gaugeStartAction; // x0
-  struct System_Action_o *v5; // x19
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  PartyOrganizationUtility_o *p_gaugeStartAction; // x0
+  struct System_Action_o *v9; // x19
   struct System_Action_o *gaugeStartAction; // t1
 
   gaugeStartAction = this->fields.gaugeStartAction;
-  p_gaugeStartAction = (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction;
-  v5 = gaugeStartAction;
+  p_gaugeStartAction = (PartyOrganizationUtility_o *)&this->fields.gaugeStartAction;
+  v9 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_1BAB3C0(p_gaugeStartAction, 0, v2, v3);
+  sub_1BCA784(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeStartAction )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
-      *(_QWORD *)&v5->fields.extra_arg);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
+      v9->fields.original_method_info,
+      *(_QWORD *)&v9->fields.extra_arg);
 }
 
 
@@ -32,11 +36,19 @@ void __fastcall EventPointGaugeEffectAction__Setup(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.gaugeStartAction,
-    (int32_t)gaugeStartAct,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.gaugeStartAction,
+    (int64_t)gaugeStartAct,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

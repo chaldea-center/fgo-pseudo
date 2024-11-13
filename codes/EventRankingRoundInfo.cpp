@@ -1,32 +1,46 @@
 void __fastcall EventRankingRoundInfo___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  __int64 v4; // x1
-  __int64 v5; // x1
-  int32_t v6; // w1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  int64_t v12; // x1
   struct EventRankingRoundInfo_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4AB9D7A & 1) == 0 )
+  if ( (byte_4B1A32E & 1) == 0 )
   {
-    sub_1BAB41C(&EventRankingRoundInfo_TypeInfo, v1);
-    sub_1BAB41C(&StringLiteral_17509/*"btn_bg_20"*/, v4);
-    sub_1BAB41C(&StringLiteral_17510/*"btn_bg_21"*/, v5);
-    byte_4AB9D7A = 1;
+    sub_1BCA7E0(&EventRankingRoundInfo_TypeInfo, v1, v2);
+    sub_1BCA7E0(&StringLiteral_17652/*"btn_bg_20"*/, v8, v9);
+    sub_1BCA7E0(&StringLiteral_17653/*"btn_bg_21"*/, v10, v11);
+    byte_4B1A32E = 1;
   }
-  EventRankingRoundInfo_TypeInfo->static_fields->SELECTED_SPRITE_NAME = (struct System_String_o *)StringLiteral_17510/*"btn_bg_21"*/;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)EventRankingRoundInfo_TypeInfo->static_fields,
-    StringLiteral_17510/*"btn_bg_21"*/,
+  EventRankingRoundInfo_TypeInfo->static_fields->SELECTED_SPRITE_NAME = (struct System_String_o *)StringLiteral_17653/*"btn_bg_21"*/;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)EventRankingRoundInfo_TypeInfo->static_fields,
+    StringLiteral_17653/*"btn_bg_21"*/,
     v2,
-    v3);
-  v6 = StringLiteral_17509/*"btn_bg_20"*/;
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = StringLiteral_17652/*"btn_bg_20"*/;
   static_fields = EventRankingRoundInfo_TypeInfo->static_fields;
-  static_fields->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_17509/*"btn_bg_20"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->NON_SELECT_SPRITE_NAME, v6, v8, v9);
+  static_fields->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_17652/*"btn_bg_20"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->NON_SELECT_SPRITE_NAME, v12, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -38,33 +52,34 @@ void __fastcall EventRankingRoundInfo___ctor(EventRankingRoundInfo_o *this, cons
 
 void __fastcall EventRankingRoundInfo__OnClikcButton(EventRankingRoundInfo_o *this, const MethodInfo *method)
 {
-  EventRankingRoundInfo_o *v2; // x19
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v2; // x2
+  EventRankingRoundInfo_o *v3; // x19
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
   struct EventRankingRoundInfo_ClickFunc_o *onClickFunc; // x8
 
-  v2 = this;
-  if ( (byte_4AB9D79 & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B1A32D & 1) == 0 )
   {
-    this = (EventRankingRoundInfo_o *)sub_1BAB41C(&Method_EventRankingRoundInfo_OnClikcButton__, method);
-    byte_4AB9D79 = 1;
+    this = (EventRankingRoundInfo_o *)sub_1BCA7E0(&Method_EventRankingRoundInfo_OnClikcButton__, method, v2);
+    byte_4B1A32D = 1;
   }
-  if ( v2->fields.isSelect )
+  if ( v3->fields.isSelect )
   {
-    v3 = Method_EventRankingRoundInfo_OnClikcButton__;
+    v4 = Method_EventRankingRoundInfo_OnClikcButton__;
     if ( (*((_BYTE *)Method_EventRankingRoundInfo_OnClikcButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BAB434(Method_EventRankingRoundInfo_OnClikcButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 2, 0LL);
+      v4 = (_QWORD *)sub_1BCA7F8(Method_EventRankingRoundInfo_OnClikcButton__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0LL);
   }
   else
   {
-    onClickFunc = v2->fields.onClickFunc;
+    onClickFunc = v3->fields.onClickFunc;
     if ( !onClickFunc )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))onClickFunc->fields.m_target)(
       onClickFunc->fields.original_method_info,
-      (unsigned int)v2->fields.roundNum,
+      (unsigned int)v3->fields.roundNum,
       *(_QWORD *)&onClickFunc->fields.extra_arg);
   }
 }
@@ -82,8 +97,12 @@ void __fastcall EventRankingRoundInfo__SetRoundInfo(
   UnityEngine_GameObject_o *baseButton; // x0
   __int64 v11; // x1
   struct EventRankingRoundInfo_ClickFunc_o **p_onClickFunc; // x19
-  int32_t v14; // w2
+  int64_t v14; // x2
   int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
   baseButton = (UnityEngine_GameObject_o *)this->fields.baseButton;
   if ( !baseButton
@@ -101,12 +120,12 @@ void __fastcall EventRankingRoundInfo__SetRoundInfo(
          this->fields.roundNum = roundIndex,
          !baseButton)) )
   {
-    sub_1BAB678(baseButton, isOpen);
+    sub_1BCAA3C(baseButton, isOpen);
   }
   UILabel__set_text((UILabel_o *)baseButton, roundName, 0LL);
   this->fields.onClickFunc = callback;
   p_onClickFunc = &this->fields.onClickFunc;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_onClickFunc, (int32_t)callback, v14, v15);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_onClickFunc, (int64_t)callback, v14, v15, v16, v17, v18, v19);
   *((_BYTE *)p_onClickFunc - 4) = 0;
 }
 
@@ -132,10 +151,10 @@ void __fastcall EventRankingRoundInfo__SetSelectInfo(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4AB9D78 & 1) == 0 )
+  if ( (byte_4B1A32C & 1) == 0 )
   {
-    sub_1BAB41C(&EventRankingRoundInfo_TypeInfo, isSelect);
-    byte_4AB9D78 = 1;
+    sub_1BCA7E0(&EventRankingRoundInfo_TypeInfo, isSelect, method);
+    byte_4B1A32C = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -155,12 +174,12 @@ void __fastcall EventRankingRoundInfo__SetSelectInfo(
   gameObject = EventRankingRoundInfo_TypeInfo;
   if ( !EventRankingRoundInfo_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(EventRankingRoundInfo_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventRankingRoundInfo_TypeInfo, v11);
     gameObject = EventRankingRoundInfo_TypeInfo;
   }
   if ( !roundSprite )
 LABEL_13:
-    sub_1BAB678(gameObject, v11);
+    sub_1BCAA3C(gameObject, v11);
   v13 = (System_String_o **)*((_QWORD *)gameObject + 23);
   if ( !isSelect )
     ++v13;
@@ -175,40 +194,52 @@ void __fastcall EventRankingRoundInfo_ClickFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
-  int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
-  __int64 v10; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x8
+  __int64 v10; // x21
+  int v12; // w22
+  struct System_Reflection_MethodInfo_o *v13; // x9
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
+  v10 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.method,
+    (int64_t)object,
+    *(int64_t *)&method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BAB4DC(v6) & 1) == 0 )
+  if ( (sub_1BCA8A0(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BAB544(v10, 0LL);
+      v14 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCA908(v14, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19F40CC;
+  this->fields.m_target = (Il2CppObject *)sub_1A12008;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19F4084;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A11FC0;
 }
 
 
@@ -224,14 +255,14 @@ System_IAsyncResult_o *__fastcall EventRankingRoundInfo_ClickFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = num;
-  if ( (byte_4AB9D7B & 1) == 0 )
+  if ( (byte_4B1A32F & 1) == 0 )
   {
-    sub_1BAB41C(&int_TypeInfo, *(_QWORD *)&num);
-    byte_4AB9D7B = 1;
+    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&num, callback);
+    byte_4B1A32F = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BAB3D0(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
+  return (System_IAsyncResult_o *)sub_1BCA794(this, v9, callback, object);
 }
 
 
@@ -240,7 +271,7 @@ void __fastcall EventRankingRoundInfo_ClickFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BAB3D4(result, 0LL, method);
+  sub_1BCA798(result, 0LL, method);
 }
 
 

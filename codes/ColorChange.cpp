@@ -79,7 +79,7 @@ UnityEngine_Color_o __fastcall ColorChange__PingPong(
     to.fields.b = b;
     to.fields.a = a;
   }
-  *(UnityEngine_Color_o *)&v10 = Easing__Func_46814632(from, to, v14, easingType, 0LL);
+  *(UnityEngine_Color_o *)&v10 = Easing__Func_47130208(from, to, v14, easingType, 0LL);
   result.fields.a = v13;
   result.fields.b = v12;
   result.fields.g = v11;
@@ -107,10 +107,18 @@ void __fastcall ColorChange__Play(
   float b; // s9
   float g; // s10
   float r; // s11
-  int32_t v21; // w2
+  int64_t v21; // x2
   int32_t v22; // w3
-  int32_t v23; // w2
-  int32_t v24; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
   System_Action_o *klass; // x0
 
   v11 = this;
@@ -127,14 +135,14 @@ void __fastcall ColorChange__Play(
   v11->fields.mCount = count;
   v11->fields.mNowCount = 0;
   v11->fields.mEndAct = endAct;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v11->fields.mEndAct, (int32_t)endAct, v21, v22);
+  sub_1BCA784((PartyOrganizationUtility_o *)&v11->fields.mEndAct, (int64_t)endAct, v21, v22, v23, v24, v25, v26);
   v11->fields.mProcessAct = procAct;
   v11 = (ColorChange_o *)((char *)v11 + 112);
   *(float *)&v11[-1].fields.mNowCount = r;
   v11[-1].fields.mDelay = g;
   *(&v11[-1].fields.mDelay + 1) = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v11, (int32_t)procAct, v23, v24);
+  sub_1BCA784((PartyOrganizationUtility_o *)v11, (int64_t)procAct, v27, v28, v29, v30, v31, v32);
   klass = (System_Action_o *)v11->klass;
   LODWORD(v11->fields.m_CancellationTokenSource) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
@@ -254,7 +262,7 @@ void __fastcall ColorChange__Update(ColorChange_o *this, const MethodInfo *metho
                                        time,
                                        mEasingType,
                                        v5)
-                                   : Easing__Func_46814632(
+                                   : Easing__Func_47130208(
                                        *(UnityEngine_Color_o *)&r,
                                        *(UnityEngine_Color_o *)&v13,
                                        time,

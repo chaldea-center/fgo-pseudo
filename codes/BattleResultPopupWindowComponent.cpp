@@ -12,25 +12,40 @@ void __fastcall BattleResultPopupWindowComponent__Close(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  BattleWindowComponent_EndCall_o *v6; // x20
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x3
+  BattleWindowComponent_EndCall_o *v13; // x20
 
-  if ( (byte_4AB9096 & 1) == 0 )
+  if ( (byte_4B19588 & 1) == 0 )
   {
-    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, call);
-    byte_4AB9096 = 1;
+    sub_1BCA7E0(&BattleWindowComponent_EndCall_TypeInfo, call, method);
+    byte_4B19588 = 1;
   }
   this->fields.callbackClose = call;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.callbackClose, (int32_t)call, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.callbackClose,
+    (int64_t)call,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   ((void (__fastcall *)(BattleResultPopupWindowComponent_o *, Il2CppMethodPointer))this->klass->vtable._18_ClosePreProcess.method)(
     this,
     this->klass->vtable._19_EndCloseCallback.methodPtr);
-  v6 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
+  v13 = (BattleWindowComponent_EndCall_o *)sub_1BCAA2C(BattleWindowComponent_EndCall_TypeInfo, v10, v11, v12);
   BattleWindowComponent_EndCall___ctor(
-    v6,
+    v13,
     (Il2CppObject *)this,
     (intptr_t)this->klass->vtable._20_ClosedPostProcess.methodPtr,
     0LL);
-  BattleWindowComponent__Close((BattleWindowComponent_o *)this, v6, 0LL);
+  BattleWindowComponent__Close((BattleWindowComponent_o *)this, v13, 0LL);
   ((void (__fastcall *)(BattleResultPopupWindowComponent_o *, void *))this->klass->vtable._20_ClosedPostProcess.method)(
     this,
     this->klass[1]._1.image);
@@ -45,7 +60,7 @@ void __fastcall BattleResultPopupWindowComponent__ClosePreProcess(
 
   ownerComp = this->fields.ownerComp;
   if ( !ownerComp )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   BattleResultComponent__setTouch(ownerComp, 0, 0LL);
 }
 
@@ -62,14 +77,15 @@ void __fastcall BattleResultPopupWindowComponent__EndCloseCallback(
         BattleResultPopupWindowComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct BattleWindowComponent_EndCall_o *callbackClose; // x8
   UnityEngine_GameObject_o *rootObj; // x0
-  const MethodInfo *v5; // x2
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4AB9097 & 1) == 0 )
+  if ( (byte_4B19589 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_5491/*"END_PROC"*/, method);
-    byte_4AB9097 = 1;
+    sub_1BCA7E0(&StringLiteral_5565/*"END_PROC"*/, method, v2);
+    byte_4B19589 = 1;
   }
   callbackClose = this->fields.callbackClose;
   if ( callbackClose )
@@ -78,9 +94,9 @@ void __fastcall BattleResultPopupWindowComponent__EndCloseCallback(
       *(_QWORD *)&callbackClose->fields.extra_arg);
   rootObj = this->fields.rootObj;
   if ( !rootObj )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   UnityEngine_GameObject__SetActive(rootObj, 0, 0LL);
-  BattleResultPopupWindowComponent__SendFsmEvent(this, (System_String_o *)StringLiteral_5491/*"END_PROC"*/, v5);
+  BattleResultPopupWindowComponent__SendFsmEvent(this, (System_String_o *)StringLiteral_5565/*"END_PROC"*/, v6);
 }
 
 
@@ -93,7 +109,7 @@ void __fastcall BattleResultPopupWindowComponent__EndOpenCallback(
 
   ownerComp = this->fields.ownerComp;
   if ( !ownerComp )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   BattleResultComponent__setTouch(ownerComp, 1, 0LL);
   callbackOpen = this->fields.callbackOpen;
   if ( callbackOpen )
@@ -108,11 +124,19 @@ void __fastcall BattleResultPopupWindowComponent__InitPopup(
         const MethodInfo *method)
 {
   BattleResultPopupWindowComponent_o *v2; // x19
-  int32_t v3; // w2
+  int64_t v3; // x2
   int32_t v4; // w3
-  int32_t v5; // w2
-  int32_t v6; // w3
-  __int64 v7; // x1
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  __int64 v15; // x1
   UnityEngine_GameObject_o *titleAnim; // x0
 
   v2 = this;
@@ -121,14 +145,14 @@ void __fastcall BattleResultPopupWindowComponent__InitPopup(
     v2,
     v2->klass->vtable._10_Open.methodPtr);
   v2->fields.callbackOpen = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v2->fields.callbackOpen, 0, v3, v4);
+  sub_1BCA784((PartyOrganizationUtility_o *)&v2->fields.callbackOpen, 0LL, v3, v4, v5, v6, v7, v8);
   v2->fields.callbackClose = 0LL;
   v2 = (BattleResultPopupWindowComponent_o *)((char *)v2 + 128);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v2, 0, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
   titleAnim = (UnityEngine_GameObject_o *)v2[-1].fields.titleAnim;
   LOBYTE(v2->monitor) = 0;
   if ( !titleAnim )
-    sub_1BAB678(0LL, v7);
+    sub_1BCAA3C(0LL, v15);
   UnityEngine_GameObject__SetActive(titleAnim, 0, 0LL);
 }
 
@@ -147,25 +171,40 @@ void __fastcall BattleResultPopupWindowComponent__Open(
         const MethodInfo *method)
 {
   int32_t v3; // w3
-  BattleWindowComponent_EndCall_o *v6; // x20
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x3
+  BattleWindowComponent_EndCall_o *v13; // x20
 
-  if ( (byte_4AB9093 & 1) == 0 )
+  if ( (byte_4B19585 & 1) == 0 )
   {
-    sub_1BAB41C(&BattleWindowComponent_EndCall_TypeInfo, call);
-    byte_4AB9093 = 1;
+    sub_1BCA7E0(&BattleWindowComponent_EndCall_TypeInfo, call, method);
+    byte_4B19585 = 1;
   }
   this->fields.callbackOpen = call;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.callbackOpen, (int32_t)call, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.callbackOpen,
+    (int64_t)call,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   ((void (__fastcall *)(BattleResultPopupWindowComponent_o *, Il2CppMethodPointer))this->klass->vtable._15_OpenPreProcess.method)(
     this,
     this->klass->vtable._16_EndOpenCallback.methodPtr);
-  v6 = (BattleWindowComponent_EndCall_o *)sub_1BAB668(BattleWindowComponent_EndCall_TypeInfo);
+  v13 = (BattleWindowComponent_EndCall_o *)sub_1BCAA2C(BattleWindowComponent_EndCall_TypeInfo, v10, v11, v12);
   BattleWindowComponent_EndCall___ctor(
-    v6,
+    v13,
     (Il2CppObject *)this,
     (intptr_t)this->klass->vtable._17_OpenedPostProcess.methodPtr,
     0LL);
-  BattleWindowComponent__Open((BattleWindowComponent_o *)this, v6, 0LL);
+  BattleWindowComponent__Open((BattleWindowComponent_o *)this, v13, 0LL);
   ((void (__fastcall *)(BattleResultPopupWindowComponent_o *, Il2CppMethodPointer))this->klass->vtable._17_OpenedPostProcess.method)(
     this,
     this->klass->vtable._18_ClosePreProcess.methodPtr);
@@ -176,32 +215,33 @@ void __fastcall BattleResultPopupWindowComponent__OpenPreProcess(
         BattleResultPopupWindowComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_GameObject_o *rootObj; // x0
-  BattleResultPopupWindowComponent_o *v4; // x0
-  const MethodInfo *v5; // x3
-  _BOOL8 v6; // x0
-  const MethodInfo *v7; // x3
+  BattleResultPopupWindowComponent_o *v5; // x0
+  const MethodInfo *v6; // x3
+  _BOOL8 v7; // x0
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4AB9094 & 1) == 0 )
+  if ( (byte_4B19586 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, method);
-    byte_4AB9094 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
+    byte_4B19586 = 1;
   }
   rootObj = this->fields.rootObj;
   if ( !rootObj )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   UnityEngine_GameObject__SetActive(rootObj, 1, 0LL);
-  v6 = BattleResultPopupWindowComponent__PlayTargetSimpleAnimation(
-         v4,
+  v7 = BattleResultPopupWindowComponent__PlayTargetSimpleAnimation(
+         v5,
          this->fields.titleSimpleAnim,
          (System_String_o *)StringLiteral_1/*""*/,
-         v5);
-  if ( !v6 )
+         v6);
+  if ( !v7 )
     BattleResultPopupWindowComponent__PlayTargetAnimation(
-      (BattleResultPopupWindowComponent_o *)v6,
+      (BattleResultPopupWindowComponent_o *)v7,
       this->fields.titleAnim,
       (System_String_o *)StringLiteral_1/*""*/,
-      v7);
+      v8);
 }
 
 
@@ -209,19 +249,20 @@ void __fastcall BattleResultPopupWindowComponent__OpenedPostProcess(
         BattleResultPopupWindowComponent_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v2; // x0
-  System_Reflection_MethodBase_o *v3; // x0
+  __int64 v2; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4AB9095 & 1) == 0 )
+  if ( (byte_4B19587 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_BattleResultPopupWindowComponent_OpenedPostProcess__, method);
-    byte_4AB9095 = 1;
+    sub_1BCA7E0(&Method_BattleResultPopupWindowComponent_OpenedPostProcess__, method, v2);
+    byte_4B19587 = 1;
   }
-  v2 = Method_BattleResultPopupWindowComponent_OpenedPostProcess__;
+  v3 = Method_BattleResultPopupWindowComponent_OpenedPostProcess__;
   if ( (*((_BYTE *)Method_BattleResultPopupWindowComponent_OpenedPostProcess__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1BAB434(Method_BattleResultPopupWindowComponent_OpenedPostProcess__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1BAB400(v2, v2[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v3, 6, 0LL);
+    v3 = (_QWORD *)sub_1BCA7F8(Method_BattleResultPopupWindowComponent_OpenedPostProcess__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 6, 0LL);
 }
 
 
@@ -231,19 +272,21 @@ void __fastcall BattleResultPopupWindowComponent__PlayTargetAnimation(
         System_String_o *clipName,
         const MethodInfo *method)
 {
+  System_String_o *name; // x20
   UnityEngine_Object_o *IsNullOrEmpty; // x0
   __int64 v7; // x1
 
-  if ( (byte_4AB909A & 1) == 0 )
+  name = clipName;
+  if ( (byte_4B1958C & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, anim);
-    byte_4AB909A = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, anim, clipName);
+    byte_4B1958C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, anim);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)anim, 0LL, 0LL) )
   {
-    IsNullOrEmpty = (UnityEngine_Object_o *)System_String__IsNullOrEmpty(clipName, 0LL);
+    IsNullOrEmpty = (UnityEngine_Object_o *)System_String__IsNullOrEmpty(name, 0LL);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
       if ( !anim )
@@ -251,21 +294,21 @@ void __fastcall BattleResultPopupWindowComponent__PlayTargetAnimation(
       IsNullOrEmpty = (UnityEngine_Object_o *)UnityEngine_Animation__get_clip(anim, 0LL);
       if ( !IsNullOrEmpty )
         goto LABEL_14;
-      clipName = UnityEngine_Object__get_name(IsNullOrEmpty, 0LL);
+      name = UnityEngine_Object__get_name(IsNullOrEmpty, 0LL);
     }
     else if ( !anim )
     {
       goto LABEL_14;
     }
-    IsNullOrEmpty = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(anim, clipName, 0LL);
+    IsNullOrEmpty = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(anim, name, 0LL);
     if ( IsNullOrEmpty )
     {
       UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)IsNullOrEmpty, 0.0, 0LL);
-      UnityEngine_Animation__Play_69545712(anim, clipName, 0LL);
+      UnityEngine_Animation__Play_69899248(anim, name, 0LL);
       return;
     }
 LABEL_14:
-    sub_1BAB678(IsNullOrEmpty, v7);
+    sub_1BCAA3C(IsNullOrEmpty, v7);
   }
 }
 
@@ -276,65 +319,68 @@ bool __fastcall BattleResultPopupWindowComponent__PlayTargetSimpleAnimation(
         System_String_o *clipName,
         const MethodInfo *method)
 {
+  System_String_o *name; // x20
   __int64 v6; // x1
-  bool v7; // w21
+  __int64 v7; // x2
+  bool v8; // w21
   UnityEngine_Object_o *IsNullOrEmpty; // x0
-  __int64 v9; // x1
+  __int64 v10; // x1
   UnityEngine_Object_c *klass; // x8
-  UnityEngine_Object_o *v11; // x22
-  __int64 v12; // x9
+  UnityEngine_Object_o *v12; // x22
+  __int64 v13; // x9
   SimpleAnimation_State_c **p_offset; // x10
-  __int64 v14; // x0
+  __int64 v15; // x0
 
-  if ( (byte_4AB9099 & 1) == 0 )
+  name = clipName;
+  if ( (byte_4B1958B & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, anim);
-    sub_1BAB41C(&SimpleAnimation_State_TypeInfo, v6);
-    byte_4AB9099 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, anim, clipName);
+    sub_1BCA7E0(&SimpleAnimation_State_TypeInfo, v6, v7);
+    byte_4B1958B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)anim, 0LL, 0LL);
-  if ( !v7 )
-    return v7;
-  IsNullOrEmpty = (UnityEngine_Object_o *)System_String__IsNullOrEmpty(clipName, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, anim);
+  v8 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)anim, 0LL, 0LL);
+  if ( !v8 )
+    return v8;
+  IsNullOrEmpty = (UnityEngine_Object_o *)System_String__IsNullOrEmpty(name, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
   {
     if ( !anim || (IsNullOrEmpty = (UnityEngine_Object_o *)anim[1].monitor) == 0LL )
 LABEL_20:
-      sub_1BAB678(IsNullOrEmpty, v9);
-    clipName = UnityEngine_Object__get_name(IsNullOrEmpty, 0LL);
+      sub_1BCAA3C(IsNullOrEmpty, v10);
+    name = UnityEngine_Object__get_name(IsNullOrEmpty, 0LL);
   }
   else if ( !anim )
   {
     goto LABEL_20;
   }
-  IsNullOrEmpty = (UnityEngine_Object_o *)SimpleAnimation__get_Item(anim, clipName, 0LL);
+  IsNullOrEmpty = (UnityEngine_Object_o *)SimpleAnimation__get_Item(anim, name, 0LL);
   if ( !IsNullOrEmpty )
     goto LABEL_20;
   klass = IsNullOrEmpty->klass;
-  v11 = IsNullOrEmpty;
-  v12 = *(unsigned __int16 *)(&IsNullOrEmpty->klass->_2.bitflags2 + 3);
+  v12 = IsNullOrEmpty;
+  v13 = *(unsigned __int16 *)(&IsNullOrEmpty->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&IsNullOrEmpty->klass->_2.bitflags2 + 3) )
   {
     p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
     {
-      --v12;
+      --v13;
       p_offset += 2;
-      if ( !v12 )
+      if ( !v13 )
         goto LABEL_16;
     }
-    v14 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
+    v15 = (__int64)(&klass[1]._1.gc_desc + 2 * *(_DWORD *)p_offset);
   }
   else
   {
 LABEL_16:
-    v14 = sub_1BFD3FC(IsNullOrEmpty, SimpleAnimation_State_TypeInfo, 4LL);
+    v15 = sub_1C1C7C0(IsNullOrEmpty, SimpleAnimation_State_TypeInfo, 4LL);
   }
-  (*(void (__fastcall **)(UnityEngine_Object_o *, _QWORD, float))v14)(v11, *(_QWORD *)(v14 + 8), 0.0);
-  SimpleAnimation__Play_64185800(anim, clipName, 0LL);
-  return v7;
+  (*(void (__fastcall **)(UnityEngine_Object_o *, _QWORD, float))v15)(v12, *(_QWORD *)(v15 + 8), 0.0);
+  SimpleAnimation__Play_64539336(anim, name, 0LL);
+  return v8;
 }
 
 
@@ -347,19 +393,19 @@ void __fastcall BattleResultPopupWindowComponent__SendFsmEvent(
   __int64 v6; // x1
   PlayMakerFSM_o *v7; // x0
 
-  if ( (byte_4AB9098 & 1) == 0 )
+  if ( (byte_4B1958A & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, eventName);
-    byte_4AB9098 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, eventName, method);
+    byte_4B1958A = 1;
   }
   notifyFsm = (UnityEngine_Object_o *)this->fields.notifyFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, eventName);
   if ( UnityEngine_Object__op_Inequality(notifyFsm, 0LL, 0LL) )
   {
     v7 = this->fields.notifyFsm;
     if ( !v7 )
-      sub_1BAB678(0LL, v6);
+      sub_1BCAA3C(0LL, v6);
     PlayMakerFSM__SendEvent(v7, eventName, 0LL);
   }
 }

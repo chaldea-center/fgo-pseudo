@@ -14,36 +14,37 @@ void __fastcall BattlePointGaugeCellTypeComponent__UpdateProgressGauge(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  __int64 v6; // x2
   System_Collections_Generic_List_object__o *progressGaugeCells; // x0
-  int32_t v7; // w21
+  int32_t v8; // w21
 
-  if ( (byte_4AB8D5D & 1) == 0 )
+  if ( (byte_4B19242 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_GameObject__get_Count__, entity);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5);
-    byte_4AB8D5D = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_GameObject__get_Count__, entity, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v5, v6);
+    byte_4B19242 = 1;
   }
   progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
   if ( !progressGaugeCells )
 LABEL_9:
-    sub_1BAB678(progressGaugeCells, entity);
-  v7 = 0;
-  while ( v7 < progressGaugeCells->fields._size )
+    sub_1BCAA3C(progressGaugeCells, entity);
+  v8 = 0;
+  while ( v8 < progressGaugeCells->fields._size )
   {
     progressGaugeCells = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         progressGaugeCells,
-                                                                        v7,
-                                                                        (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                        v8,
+                                                                        (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( entity )
     {
       if ( progressGaugeCells )
       {
         UnityEngine_GameObject__SetActive(
           (UnityEngine_GameObject_o *)progressGaugeCells,
-          v7 < entity->fields.phase,
+          v8 < entity->fields.phase,
           0LL);
         progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
-        ++v7;
+        ++v8;
         if ( progressGaugeCells )
           continue;
       }
@@ -57,15 +58,17 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         BattlePointGaugeCellTypeComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   BattlePointGaugeSetting_o *setting; // x0
-  int32_t v5; // w20
+  int32_t v7; // w20
 
-  if ( (byte_4AB8D5C & 1) == 0 )
+  if ( (byte_4B19241 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
-    byte_4AB8D5C = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_GameObject__get_Count__, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4, v5);
+    byte_4B19241 = 1;
   }
   setting = this->fields.setting;
   if ( !setting
@@ -73,17 +76,17 @@ void __fastcall BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         (setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells) == 0LL) )
   {
 LABEL_8:
-    sub_1BAB678(setting, method);
+    sub_1BCAA3C(setting, method);
   }
-  v5 = 0;
-  while ( v5 < SLODWORD(setting->fields.sprite) )
+  v7 = 0;
+  while ( v7 < SLODWORD(setting->fields.sprite) )
   {
     System_Collections_Generic_List_object___get_Item(
       (System_Collections_Generic_List_object__o *)setting,
-      v5,
-      (const MethodInfo_354D5EC *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      v7,
+      (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells;
-    ++v5;
+    ++v7;
     if ( !setting )
       goto LABEL_8;
   }

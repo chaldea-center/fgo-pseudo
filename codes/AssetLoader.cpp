@@ -21,7 +21,7 @@ void __fastcall AssetLoader__AddEntry(AssetLoader_o *this, const MethodInfo *met
 
   data = this->fields.data;
   if ( !data )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   entryCount = data->fields.entryCount;
   if ( (entryCount & 0x80000000) == 0 )
     data->fields.entryCount = entryCount + 1;
@@ -35,445 +35,636 @@ void __fastcall AssetLoader__AssetLoadLogError(
 {
   System_String_o *v3; // x19
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
+  __int64 v18; // x2
   __int64 v19; // x1
-  __int64 v20; // x1
+  __int64 v20; // x2
   __int64 v21; // x1
-  __int64 v22; // x1
+  __int64 v22; // x2
   __int64 v23; // x1
-  __int64 v24; // x1
+  __int64 v24; // x2
   __int64 v25; // x1
-  __int64 v26; // x1
+  __int64 v26; // x2
   __int64 v27; // x1
-  __int64 v28; // x1
+  __int64 v28; // x2
   __int64 v29; // x1
-  __int64 v30; // x1
+  __int64 v30; // x2
   __int64 v31; // x1
-  __int64 v32; // x1
+  __int64 v32; // x2
   __int64 v33; // x1
-  __int64 v34; // x1
+  __int64 v34; // x2
   __int64 v35; // x1
-  __int64 v36; // x1
+  __int64 v36; // x2
   __int64 v37; // x1
-  __int64 v38; // x1
+  __int64 v38; // x2
   __int64 v39; // x1
-  __int64 v40; // x1
+  __int64 v40; // x2
   __int64 v41; // x1
-  __int64 v42; // x1
+  __int64 v42; // x2
   __int64 v43; // x1
-  __int64 v44; // x1
+  __int64 v44; // x2
   __int64 v45; // x1
-  __int64 v46; // x1
+  __int64 v46; // x2
+  __int64 v47; // x1
+  __int64 v48; // x2
+  __int64 v49; // x1
+  __int64 v50; // x2
+  __int64 v51; // x1
+  __int64 v52; // x2
+  __int64 v53; // x1
+  __int64 v54; // x2
+  __int64 v55; // x1
+  __int64 v56; // x2
+  __int64 v57; // x1
+  __int64 v58; // x2
+  __int64 v59; // x1
+  __int64 v60; // x2
+  __int64 v61; // x1
+  __int64 v62; // x2
+  __int64 v63; // x1
+  __int64 v64; // x2
+  __int64 v65; // x1
+  __int64 v66; // x2
+  __int64 v67; // x1
+  __int64 v68; // x2
+  __int64 v69; // x1
+  __int64 v70; // x2
+  __int64 v71; // x1
+  __int64 v72; // x2
+  __int64 v73; // x1
+  __int64 v74; // x2
+  __int64 v75; // x1
+  __int64 v76; // x2
+  __int64 v77; // x1
+  __int64 v78; // x2
+  __int64 v79; // x1
+  __int64 v80; // x2
+  __int64 v81; // x1
+  __int64 v82; // x2
+  __int64 v83; // x1
+  __int64 v84; // x2
+  __int64 v85; // x1
+  __int64 v86; // x2
+  __int64 v87; // x1
+  __int64 v88; // x2
   __int64 Instance; // x0
-  const MethodInfo *v48; // x1
-  int32_t v49; // w2
-  int32_t v50; // w3
-  __int64 v51; // x21
-  int32_t v52; // w1
-  int32_t v53; // w2
-  int32_t v54; // w3
-  int32_t v55; // w1
-  int32_t v56; // w2
-  int32_t v57; // w3
-  int32_t v58; // w1
-  int32_t v59; // w2
-  int32_t v60; // w3
-  int32_t v61; // w1
-  int32_t v62; // w2
-  int32_t v63; // w3
-  int32_t v64; // w1
-  int32_t v65; // w2
-  int32_t v66; // w3
-  int32_t v67; // w1
-  int32_t v68; // w2
-  int32_t v69; // w3
-  int32_t v70; // w1
-  int32_t v71; // w2
-  int32_t v72; // w3
-  int32_t v73; // w1
-  int32_t v74; // w2
-  int32_t v75; // w3
-  int32_t v76; // w1
-  int32_t v77; // w2
-  int32_t v78; // w3
-  int32_t v79; // w1
-  int32_t v80; // w2
-  int32_t v81; // w3
-  int32_t v82; // w1
-  int32_t v83; // w2
-  int32_t v84; // w3
-  int32_t v85; // w1
-  int32_t v86; // w2
-  int32_t v87; // w3
-  int32_t v88; // w1
-  int32_t v89; // w2
-  int32_t v90; // w3
-  int32_t v91; // w1
-  int32_t v92; // w2
-  int32_t v93; // w3
-  int32_t v94; // w1
-  int32_t v95; // w2
-  int32_t v96; // w3
-  int32_t v97; // w1
-  int32_t v98; // w2
-  int32_t v99; // w3
-  int32_t v100; // w1
-  int32_t v101; // w2
-  int32_t v102; // w3
-  int32_t v103; // w1
-  int32_t v104; // w2
-  int32_t v105; // w3
-  int32_t v106; // w1
-  int32_t v107; // w2
-  int32_t v108; // w3
-  int32_t v109; // w1
-  int32_t v110; // w2
-  int32_t v111; // w3
-  int32_t v112; // w1
-  int32_t v113; // w2
+  const MethodInfo *v90; // x1
+  int64_t v91; // x2
+  int32_t v92; // w3
+  System_String_o *v93; // x4
+  BattleSetupInfo_o *v94; // x5
+  FollowerInfo_o *v95; // x6
+  PartyListViewItem_o *v96; // x7
+  __int64 v97; // x21
+  int64_t v98; // x1
+  int64_t v99; // x2
+  int32_t v100; // w3
+  System_String_o *v101; // x4
+  BattleSetupInfo_o *v102; // x5
+  FollowerInfo_o *v103; // x6
+  PartyListViewItem_o *v104; // x7
+  int64_t v105; // x1
+  int64_t v106; // x2
+  int32_t v107; // w3
+  System_String_o *v108; // x4
+  BattleSetupInfo_o *v109; // x5
+  FollowerInfo_o *v110; // x6
+  PartyListViewItem_o *v111; // x7
+  int64_t v112; // x1
+  int64_t v113; // x2
   int32_t v114; // w3
-  int32_t v115; // w1
-  int32_t v116; // w2
-  int32_t v117; // w3
-  int32_t v118; // w1
-  int32_t v119; // w2
-  int32_t v120; // w3
-  int32_t v121; // w1
-  int32_t v122; // w2
-  int32_t v123; // w3
-  int32_t v124; // w1
-  int32_t v125; // w2
-  int32_t v126; // w3
-  int32_t v127; // w1
-  int32_t v128; // w2
-  int32_t v129; // w3
-  int32_t v130; // w1
-  int32_t v131; // w2
-  int32_t v132; // w3
-  int32_t v133; // w1
-  int32_t v134; // w2
+  System_String_o *v115; // x4
+  BattleSetupInfo_o *v116; // x5
+  FollowerInfo_o *v117; // x6
+  PartyListViewItem_o *v118; // x7
+  int64_t v119; // x1
+  int64_t v120; // x2
+  int32_t v121; // w3
+  System_String_o *v122; // x4
+  BattleSetupInfo_o *v123; // x5
+  FollowerInfo_o *v124; // x6
+  PartyListViewItem_o *v125; // x7
+  int64_t v126; // x1
+  int64_t v127; // x2
+  int32_t v128; // w3
+  System_String_o *v129; // x4
+  BattleSetupInfo_o *v130; // x5
+  FollowerInfo_o *v131; // x6
+  PartyListViewItem_o *v132; // x7
+  int64_t v133; // x1
+  int64_t v134; // x2
   int32_t v135; // w3
-  int32_t v136; // w1
-  int32_t v137; // w2
-  int32_t v138; // w3
-  int32_t v139; // w1
-  int32_t v140; // w2
-  int32_t v141; // w3
-  int32_t v142; // w1
-  int32_t v143; // w2
-  int32_t v144; // w3
-  int32_t v145; // w1
-  int32_t v146; // w2
-  int32_t v147; // w3
-  int32_t v148; // w1
-  int32_t v149; // w2
-  int32_t v150; // w3
-  int32_t v151; // w1
-  int32_t v152; // w2
-  int32_t v153; // w3
-  int32_t v154; // w1
-  int32_t v155; // w2
+  System_String_o *v136; // x4
+  BattleSetupInfo_o *v137; // x5
+  FollowerInfo_o *v138; // x6
+  PartyListViewItem_o *v139; // x7
+  int64_t v140; // x1
+  int64_t v141; // x2
+  int32_t v142; // w3
+  System_String_o *v143; // x4
+  BattleSetupInfo_o *v144; // x5
+  FollowerInfo_o *v145; // x6
+  PartyListViewItem_o *v146; // x7
+  int64_t v147; // x1
+  int64_t v148; // x2
+  int32_t v149; // w3
+  System_String_o *v150; // x4
+  BattleSetupInfo_o *v151; // x5
+  FollowerInfo_o *v152; // x6
+  PartyListViewItem_o *v153; // x7
+  int64_t v154; // x1
+  int64_t v155; // x2
   int32_t v156; // w3
-  int32_t v157; // w1
-  int32_t v158; // w2
-  int32_t v159; // w3
-  int32_t v160; // w1
-  __int64 v161; // x23
-  __int64 v162; // x24
-  CrashReporter_o *v163; // x19
+  System_String_o *v157; // x4
+  BattleSetupInfo_o *v158; // x5
+  FollowerInfo_o *v159; // x6
+  PartyListViewItem_o *v160; // x7
+  int64_t v161; // x1
+  int64_t v162; // x2
+  int32_t v163; // w3
+  System_String_o *v164; // x4
+  BattleSetupInfo_o *v165; // x5
+  FollowerInfo_o *v166; // x6
+  PartyListViewItem_o *v167; // x7
+  int64_t v168; // x1
+  int64_t v169; // x2
+  int32_t v170; // w3
+  System_String_o *v171; // x4
+  BattleSetupInfo_o *v172; // x5
+  FollowerInfo_o *v173; // x6
+  PartyListViewItem_o *v174; // x7
+  int64_t v175; // x1
+  int64_t v176; // x2
+  int32_t v177; // w3
+  System_String_o *v178; // x4
+  BattleSetupInfo_o *v179; // x5
+  FollowerInfo_o *v180; // x6
+  PartyListViewItem_o *v181; // x7
+  int64_t v182; // x1
+  int64_t v183; // x2
+  int32_t v184; // w3
+  System_String_o *v185; // x4
+  BattleSetupInfo_o *v186; // x5
+  FollowerInfo_o *v187; // x6
+  PartyListViewItem_o *v188; // x7
+  int64_t v189; // x1
+  int64_t v190; // x2
+  int32_t v191; // w3
+  System_String_o *v192; // x4
+  BattleSetupInfo_o *v193; // x5
+  FollowerInfo_o *v194; // x6
+  PartyListViewItem_o *v195; // x7
+  int64_t v196; // x1
+  int64_t v197; // x2
+  int32_t v198; // w3
+  System_String_o *v199; // x4
+  BattleSetupInfo_o *v200; // x5
+  FollowerInfo_o *v201; // x6
+  PartyListViewItem_o *v202; // x7
+  int64_t v203; // x1
+  int64_t v204; // x2
+  int32_t v205; // w3
+  System_String_o *v206; // x4
+  BattleSetupInfo_o *v207; // x5
+  FollowerInfo_o *v208; // x6
+  PartyListViewItem_o *v209; // x7
+  int64_t v210; // x1
+  int64_t v211; // x2
+  int32_t v212; // w3
+  System_String_o *v213; // x4
+  BattleSetupInfo_o *v214; // x5
+  FollowerInfo_o *v215; // x6
+  PartyListViewItem_o *v216; // x7
+  int64_t v217; // x1
+  int64_t v218; // x2
+  int32_t v219; // w3
+  System_String_o *v220; // x4
+  BattleSetupInfo_o *v221; // x5
+  FollowerInfo_o *v222; // x6
+  PartyListViewItem_o *v223; // x7
+  int64_t v224; // x1
+  int64_t v225; // x2
+  int32_t v226; // w3
+  System_String_o *v227; // x4
+  BattleSetupInfo_o *v228; // x5
+  FollowerInfo_o *v229; // x6
+  PartyListViewItem_o *v230; // x7
+  int64_t v231; // x1
+  int64_t v232; // x2
+  int32_t v233; // w3
+  System_String_o *v234; // x4
+  BattleSetupInfo_o *v235; // x5
+  FollowerInfo_o *v236; // x6
+  PartyListViewItem_o *v237; // x7
+  int64_t v238; // x1
+  int64_t v239; // x2
+  int32_t v240; // w3
+  System_String_o *v241; // x4
+  BattleSetupInfo_o *v242; // x5
+  FollowerInfo_o *v243; // x6
+  PartyListViewItem_o *v244; // x7
+  int64_t v245; // x1
+  int64_t v246; // x2
+  int32_t v247; // w3
+  System_String_o *v248; // x4
+  BattleSetupInfo_o *v249; // x5
+  FollowerInfo_o *v250; // x6
+  PartyListViewItem_o *v251; // x7
+  int64_t v252; // x1
+  int64_t v253; // x2
+  int32_t v254; // w3
+  System_String_o *v255; // x4
+  BattleSetupInfo_o *v256; // x5
+  FollowerInfo_o *v257; // x6
+  PartyListViewItem_o *v258; // x7
+  int64_t v259; // x1
+  int64_t v260; // x2
+  int32_t v261; // w3
+  System_String_o *v262; // x4
+  BattleSetupInfo_o *v263; // x5
+  FollowerInfo_o *v264; // x6
+  PartyListViewItem_o *v265; // x7
+  int64_t v266; // x1
+  int64_t v267; // x2
+  int32_t v268; // w3
+  System_String_o *v269; // x4
+  BattleSetupInfo_o *v270; // x5
+  FollowerInfo_o *v271; // x6
+  PartyListViewItem_o *v272; // x7
+  int64_t v273; // x1
+  int64_t v274; // x2
+  int32_t v275; // w3
+  System_String_o *v276; // x4
+  BattleSetupInfo_o *v277; // x5
+  FollowerInfo_o *v278; // x6
+  PartyListViewItem_o *v279; // x7
+  int64_t v280; // x1
+  int64_t v281; // x2
+  int32_t v282; // w3
+  System_String_o *v283; // x4
+  BattleSetupInfo_o *v284; // x5
+  FollowerInfo_o *v285; // x6
+  PartyListViewItem_o *v286; // x7
+  int64_t v287; // x1
+  int64_t v288; // x2
+  int32_t v289; // w3
+  System_String_o *v290; // x4
+  BattleSetupInfo_o *v291; // x5
+  FollowerInfo_o *v292; // x6
+  PartyListViewItem_o *v293; // x7
+  int64_t v294; // x1
+  int64_t v295; // x2
+  int32_t v296; // w3
+  System_String_o *v297; // x4
+  BattleSetupInfo_o *v298; // x5
+  FollowerInfo_o *v299; // x6
+  PartyListViewItem_o *v300; // x7
+  int64_t v301; // x1
+  int64_t v302; // x2
+  int32_t v303; // w3
+  System_String_o *v304; // x4
+  BattleSetupInfo_o *v305; // x5
+  FollowerInfo_o *v306; // x6
+  PartyListViewItem_o *v307; // x7
+  int64_t v308; // x1
+  int64_t v309; // x2
+  int32_t v310; // w3
+  System_String_o *v311; // x4
+  BattleSetupInfo_o *v312; // x5
+  FollowerInfo_o *v313; // x6
+  PartyListViewItem_o *v314; // x7
+  int64_t v315; // x1
+  int64_t v316; // x2
+  int32_t v317; // w3
+  System_String_o *v318; // x4
+  BattleSetupInfo_o *v319; // x5
+  FollowerInfo_o *v320; // x6
+  PartyListViewItem_o *v321; // x7
+  int64_t v322; // x1
+  int64_t v323; // x2
+  int32_t v324; // w3
+  System_String_o *v325; // x4
+  BattleSetupInfo_o *v326; // x5
+  FollowerInfo_o *v327; // x6
+  PartyListViewItem_o *v328; // x7
+  int64_t v329; // x1
+  int64_t v330; // x2
+  int32_t v331; // w3
+  System_String_o *v332; // x4
+  BattleSetupInfo_o *v333; // x5
+  FollowerInfo_o *v334; // x6
+  PartyListViewItem_o *v335; // x7
+  int64_t v336; // x1
+  int64_t v337; // x2
+  int32_t v338; // w3
+  System_String_o *v339; // x4
+  BattleSetupInfo_o *v340; // x5
+  FollowerInfo_o *v341; // x6
+  PartyListViewItem_o *v342; // x7
+  int64_t v343; // x1
+  int64_t v344; // x2
+  int32_t v345; // w3
+  System_String_o *v346; // x4
+  BattleSetupInfo_o *v347; // x5
+  FollowerInfo_o *v348; // x6
+  PartyListViewItem_o *v349; // x7
+  int64_t v350; // x1
+  __int64 v351; // x23
+  __int64 v352; // x24
+  CrashReporter_o *v353; // x19
+  __int64 v354; // x1
 
   v3 = errorCode;
-  if ( (byte_4AB4DD0 & 1) == 0 )
+  if ( (byte_4B15269 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Debug_TypeInfo, errorCode);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5);
-    sub_1BAB41C(&string___TypeInfo, v6);
-    sub_1BAB41C(&StringLiteral_14137/*"The request timed out."*/, v7);
-    sub_1BAB41C(&StringLiteral_20959/*"java.net.SocketException"*/, v8);
-    sub_1BAB41C(&StringLiteral_12241/*"SSL CA certificate error"*/, v9);
-    sub_1BAB41C(&StringLiteral_1499/*"404: Not Found"*/, v10);
-    sub_1BAB41C(&StringLiteral_14067/*"The network connection was lost."*/, v11);
-    sub_1BAB41C(&StringLiteral_1494/*"400: Bad Request"*/, v12);
-    sub_1BAB41C(&StringLiteral_14913/*"Unable to complete SSL connection"*/, v13);
-    sub_1BAB41C(&StringLiteral_14944/*"Unable to read data"*/, v14);
-    sub_1BAB41C(&StringLiteral_18236/*"connect failed"*/, v15);
-    sub_1BAB41C(&StringLiteral_7171/*"HTTP/1.1 500 Internal Server Error"*/, v16);
-    sub_1BAB41C(&StringLiteral_20961/*"java.net.UnknownHostException"*/, v17);
-    sub_1BAB41C(&StringLiteral_1507/*"500: Internal Server Error"*/, v18);
-    sub_1BAB41C(&StringLiteral_1509/*"502:"*/, v19);
-    sub_1BAB41C(&StringLiteral_11316/*"Request timeout"*/, v20);
-    sub_1BAB41C(&StringLiteral_4693/*"Connection reset by peer"*/, v21);
-    sub_1BAB41C(&StringLiteral_5055/*"DLErrorType"*/, v22);
-    sub_1BAB41C(&StringLiteral_5054/*"DLErrorAsset"*/, v23);
-    sub_1BAB41C(&StringLiteral_1521/*"504: Gateway Timeout"*/, v24);
-    sub_1BAB41C(&StringLiteral_15121/*"Unknown Error"*/, v25);
-    sub_1BAB41C(&StringLiteral_1511/*"503 Auto retry count"*/, v26);
-    sub_1BAB41C(&StringLiteral_20942/*"java.io.EOFException"*/, v27);
-    sub_1BAB41C(&StringLiteral_20956/*"java.net.ConnectException"*/, v28);
-    sub_1BAB41C(&StringLiteral_1497/*"403: Forbidden"*/, v29);
-    sub_1BAB41C(&StringLiteral_4692/*"Connection refused"*/, v30);
-    sub_1BAB41C(&StringLiteral_7172/*"HTTP/1.1 504 Gateway Timeout"*/, v31);
-    sub_1BAB41C(&StringLiteral_1496/*"401: Authorization Required"*/, v32);
-    sub_1BAB41C(&StringLiteral_20943/*"java.io.IOException"*/, v33);
-    sub_1BAB41C(&StringLiteral_9434/*"No address associated with hostname"*/, v34);
-    sub_1BAB41C(&StringLiteral_20958/*"java.net.ProtocolException"*/, v35);
-    sub_1BAB41C(&StringLiteral_2487/*"AssetBundle file download time over"*/, v36);
-    sub_1BAB41C(&StringLiteral_1500/*"408: Request Time-out"*/, v37);
-    sub_1BAB41C(&StringLiteral_14554/*"Too many redirects"*/, v38);
-    sub_1BAB41C(&StringLiteral_12850/*"Software caused connection abort"*/, v39);
-    sub_1BAB41C(&StringLiteral_2486/*"AssetBundle file check sum error"*/, v40);
-    sub_1BAB41C(&StringLiteral_20957/*"java.net.NoRouteToHostException"*/, v41);
-    sub_1BAB41C(&StringLiteral_5291/*"Destination host has an erroneous SSL certificate"*/, v42);
-    sub_1BAB41C(&StringLiteral_4694/*"Connection timed out"*/, v43);
-    sub_1BAB41C(&StringLiteral_4291/*"Cannot resolve destination host"*/, v44);
-    sub_1BAB41C(&StringLiteral_20960/*"java.net.SocketTimeoutException"*/, v45);
-    sub_1BAB41C(&StringLiteral_2490/*"AssetLoadError"*/, v46);
-    byte_4AB4DD0 = 1;
+    sub_1BCA7E0(&UnityEngine_Debug_TypeInfo, errorCode, method);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5, v6);
+    sub_1BCA7E0(&string___TypeInfo, v7, v8);
+    sub_1BCA7E0(&StringLiteral_14271/*"The request timed out."*/, v9, v10);
+    sub_1BCA7E0(&StringLiteral_21153/*"java.net.SocketException"*/, v11, v12);
+    sub_1BCA7E0(&StringLiteral_12370/*"SSL CA certificate error"*/, v13, v14);
+    sub_1BCA7E0(&StringLiteral_1498/*"404: Not Found"*/, v15, v16);
+    sub_1BCA7E0(&StringLiteral_14201/*"The network connection was lost."*/, v17, v18);
+    sub_1BCA7E0(&StringLiteral_1493/*"400: Bad Request"*/, v19, v20);
+    sub_1BCA7E0(&StringLiteral_15048/*"Unable to complete SSL connection"*/, v21, v22);
+    sub_1BCA7E0(&StringLiteral_15079/*"Unable to read data"*/, v23, v24);
+    sub_1BCA7E0(&StringLiteral_18390/*"connect failed"*/, v25, v26);
+    sub_1BCA7E0(&StringLiteral_7292/*"HTTP/1.1 500 Internal Server Error"*/, v27, v28);
+    sub_1BCA7E0(&StringLiteral_21155/*"java.net.UnknownHostException"*/, v29, v30);
+    sub_1BCA7E0(&StringLiteral_1507/*"500: Internal Server Error"*/, v31, v32);
+    sub_1BCA7E0(&StringLiteral_1509/*"502:"*/, v33, v34);
+    sub_1BCA7E0(&StringLiteral_11444/*"Request timeout"*/, v35, v36);
+    sub_1BCA7E0(&StringLiteral_4763/*"Connection reset by peer"*/, v37, v38);
+    sub_1BCA7E0(&StringLiteral_5128/*"DLErrorType"*/, v39, v40);
+    sub_1BCA7E0(&StringLiteral_5127/*"DLErrorAsset"*/, v41, v42);
+    sub_1BCA7E0(&StringLiteral_1521/*"504: Gateway Timeout"*/, v43, v44);
+    sub_1BCA7E0(&StringLiteral_15256/*"Unknown Error"*/, v45, v46);
+    sub_1BCA7E0(&StringLiteral_1511/*"503 Auto retry count"*/, v47, v48);
+    sub_1BCA7E0(&StringLiteral_21136/*"java.io.EOFException"*/, v49, v50);
+    sub_1BCA7E0(&StringLiteral_21150/*"java.net.ConnectException"*/, v51, v52);
+    sub_1BCA7E0(&StringLiteral_1496/*"403: Forbidden"*/, v53, v54);
+    sub_1BCA7E0(&StringLiteral_4762/*"Connection refused"*/, v55, v56);
+    sub_1BCA7E0(&StringLiteral_7293/*"HTTP/1.1 504 Gateway Timeout"*/, v57, v58);
+    sub_1BCA7E0(&StringLiteral_1495/*"401: Authorization Required"*/, v59, v60);
+    sub_1BCA7E0(&StringLiteral_21137/*"java.io.IOException"*/, v61, v62);
+    sub_1BCA7E0(&StringLiteral_9561/*"No address associated with hostname"*/, v63, v64);
+    sub_1BCA7E0(&StringLiteral_21152/*"java.net.ProtocolException"*/, v65, v66);
+    sub_1BCA7E0(&StringLiteral_2512/*"AssetBundle file download time over"*/, v67, v68);
+    sub_1BCA7E0(&StringLiteral_1499/*"408: Request Time-out"*/, v69, v70);
+    sub_1BCA7E0(&StringLiteral_14689/*"Too many redirects"*/, v71, v72);
+    sub_1BCA7E0(&StringLiteral_12981/*"Software caused connection abort"*/, v73, v74);
+    sub_1BCA7E0(&StringLiteral_2511/*"AssetBundle file check sum error"*/, v75, v76);
+    sub_1BCA7E0(&StringLiteral_21151/*"java.net.NoRouteToHostException"*/, v77, v78);
+    sub_1BCA7E0(&StringLiteral_5364/*"Destination host has an erroneous SSL certificate"*/, v79, v80);
+    sub_1BCA7E0(&StringLiteral_4764/*"Connection timed out"*/, v81, v82);
+    sub_1BCA7E0(&StringLiteral_4360/*"Cannot resolve destination host"*/, v83, v84);
+    sub_1BCA7E0(&StringLiteral_21154/*"java.net.SocketTimeoutException"*/, v85, v86);
+    sub_1BCA7E0(&StringLiteral_2515/*"AssetLoadError"*/, v87, v88);
+    byte_4B15269 = 1;
   }
-  Instance = sub_1BAB4C4(string___TypeInfo, 37LL);
+  Instance = sub_1BCA888(string___TypeInfo, 37LL);
   if ( !Instance )
     goto LABEL_58;
-  v51 = Instance;
+  v97 = Instance;
   if ( !*(_DWORD *)(Instance + 24) )
     goto LABEL_47;
-  v52 = StringLiteral_9434/*"No address associated with hostname"*/;
-  *(_QWORD *)(Instance + 32) = StringLiteral_9434/*"No address associated with hostname"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(Instance + 32), v52, v49, v50);
-  if ( *(_DWORD *)(v51 + 24) <= 1u )
+  v98 = StringLiteral_9561/*"No address associated with hostname"*/;
+  *(_QWORD *)(Instance + 32) = StringLiteral_9561/*"No address associated with hostname"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(Instance + 32), v98, v91, v92, v93, v94, v95, v96);
+  if ( *(_DWORD *)(v97 + 24) <= 1u )
     goto LABEL_47;
-  v55 = StringLiteral_2487/*"AssetBundle file download time over"*/;
-  *(_QWORD *)(v51 + 40) = StringLiteral_2487/*"AssetBundle file download time over"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 40), v55, v53, v54);
-  if ( *(_DWORD *)(v51 + 24) <= 2u )
+  v105 = StringLiteral_2512/*"AssetBundle file download time over"*/;
+  *(_QWORD *)(v97 + 40) = StringLiteral_2512/*"AssetBundle file download time over"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 40), v105, v99, v100, v101, v102, v103, v104);
+  if ( *(_DWORD *)(v97 + 24) <= 2u )
     goto LABEL_47;
-  v58 = StringLiteral_14067/*"The network connection was lost."*/;
-  *(_QWORD *)(v51 + 48) = StringLiteral_14067/*"The network connection was lost."*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 48), v58, v56, v57);
-  if ( *(_DWORD *)(v51 + 24) <= 3u )
+  v112 = StringLiteral_14201/*"The network connection was lost."*/;
+  *(_QWORD *)(v97 + 48) = StringLiteral_14201/*"The network connection was lost."*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 48), v112, v106, v107, v108, v109, v110, v111);
+  if ( *(_DWORD *)(v97 + 24) <= 3u )
     goto LABEL_47;
-  v61 = StringLiteral_4693/*"Connection reset by peer"*/;
-  *(_QWORD *)(v51 + 56) = StringLiteral_4693/*"Connection reset by peer"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 56), v61, v59, v60);
-  if ( *(_DWORD *)(v51 + 24) <= 4u )
+  v119 = StringLiteral_4763/*"Connection reset by peer"*/;
+  *(_QWORD *)(v97 + 56) = StringLiteral_4763/*"Connection reset by peer"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 56), v119, v113, v114, v115, v116, v117, v118);
+  if ( *(_DWORD *)(v97 + 24) <= 4u )
     goto LABEL_47;
-  v64 = StringLiteral_12850/*"Software caused connection abort"*/;
-  *(_QWORD *)(v51 + 64) = StringLiteral_12850/*"Software caused connection abort"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 64), v64, v62, v63);
-  if ( *(_DWORD *)(v51 + 24) <= 5u )
+  v126 = StringLiteral_12981/*"Software caused connection abort"*/;
+  *(_QWORD *)(v97 + 64) = StringLiteral_12981/*"Software caused connection abort"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 64), v126, v120, v121, v122, v123, v124, v125);
+  if ( *(_DWORD *)(v97 + 24) <= 5u )
     goto LABEL_47;
-  v67 = StringLiteral_4694/*"Connection timed out"*/;
-  *(_QWORD *)(v51 + 72) = StringLiteral_4694/*"Connection timed out"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 72), v67, v65, v66);
-  if ( *(_DWORD *)(v51 + 24) <= 6u )
+  v133 = StringLiteral_4764/*"Connection timed out"*/;
+  *(_QWORD *)(v97 + 72) = StringLiteral_4764/*"Connection timed out"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 72), v133, v127, v128, v129, v130, v131, v132);
+  if ( *(_DWORD *)(v97 + 24) <= 6u )
     goto LABEL_47;
-  v70 = StringLiteral_4692/*"Connection refused"*/;
-  *(_QWORD *)(v51 + 80) = StringLiteral_4692/*"Connection refused"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 80), v70, v68, v69);
-  if ( *(_DWORD *)(v51 + 24) <= 7u )
+  v140 = StringLiteral_4762/*"Connection refused"*/;
+  *(_QWORD *)(v97 + 80) = StringLiteral_4762/*"Connection refused"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 80), v140, v134, v135, v136, v137, v138, v139);
+  if ( *(_DWORD *)(v97 + 24) <= 7u )
     goto LABEL_47;
-  v73 = StringLiteral_14137/*"The request timed out."*/;
-  *(_QWORD *)(v51 + 88) = StringLiteral_14137/*"The request timed out."*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 88), v73, v71, v72);
-  if ( *(_DWORD *)(v51 + 24) <= 8u )
+  v147 = StringLiteral_14271/*"The request timed out."*/;
+  *(_QWORD *)(v97 + 88) = StringLiteral_14271/*"The request timed out."*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 88), v147, v141, v142, v143, v144, v145, v146);
+  if ( *(_DWORD *)(v97 + 24) <= 8u )
     goto LABEL_47;
-  v76 = StringLiteral_4291/*"Cannot resolve destination host"*/;
-  *(_QWORD *)(v51 + 96) = StringLiteral_4291/*"Cannot resolve destination host"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 96), v76, v74, v75);
-  if ( *(_DWORD *)(v51 + 24) <= 9u )
+  v154 = StringLiteral_4360/*"Cannot resolve destination host"*/;
+  *(_QWORD *)(v97 + 96) = StringLiteral_4360/*"Cannot resolve destination host"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 96), v154, v148, v149, v150, v151, v152, v153);
+  if ( *(_DWORD *)(v97 + 24) <= 9u )
     goto LABEL_47;
-  v79 = StringLiteral_14913/*"Unable to complete SSL connection"*/;
-  *(_QWORD *)(v51 + 104) = StringLiteral_14913/*"Unable to complete SSL connection"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 104), v79, v77, v78);
-  if ( *(_DWORD *)(v51 + 24) <= 0xAu )
+  v161 = StringLiteral_15048/*"Unable to complete SSL connection"*/;
+  *(_QWORD *)(v97 + 104) = StringLiteral_15048/*"Unable to complete SSL connection"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 104), v161, v155, v156, v157, v158, v159, v160);
+  if ( *(_DWORD *)(v97 + 24) <= 0xAu )
     goto LABEL_47;
-  v82 = StringLiteral_15121/*"Unknown Error"*/;
-  *(_QWORD *)(v51 + 112) = StringLiteral_15121/*"Unknown Error"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 112), v82, v80, v81);
-  if ( *(_DWORD *)(v51 + 24) <= 0xBu )
+  v168 = StringLiteral_15256/*"Unknown Error"*/;
+  *(_QWORD *)(v97 + 112) = StringLiteral_15256/*"Unknown Error"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 112), v168, v162, v163, v164, v165, v166, v167);
+  if ( *(_DWORD *)(v97 + 24) <= 0xBu )
     goto LABEL_47;
-  v85 = StringLiteral_11316/*"Request timeout"*/;
-  *(_QWORD *)(v51 + 120) = StringLiteral_11316/*"Request timeout"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 120), v85, v83, v84);
-  if ( *(_DWORD *)(v51 + 24) <= 0xCu )
+  v175 = StringLiteral_11444/*"Request timeout"*/;
+  *(_QWORD *)(v97 + 120) = StringLiteral_11444/*"Request timeout"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 120), v175, v169, v170, v171, v172, v173, v174);
+  if ( *(_DWORD *)(v97 + 24) <= 0xCu )
     goto LABEL_47;
-  v88 = StringLiteral_2486/*"AssetBundle file check sum error"*/;
-  *(_QWORD *)(v51 + 128) = StringLiteral_2486/*"AssetBundle file check sum error"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 128), v88, v86, v87);
-  if ( *(_DWORD *)(v51 + 24) <= 0xDu )
+  v182 = StringLiteral_2511/*"AssetBundle file check sum error"*/;
+  *(_QWORD *)(v97 + 128) = StringLiteral_2511/*"AssetBundle file check sum error"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 128), v182, v176, v177, v178, v179, v180, v181);
+  if ( *(_DWORD *)(v97 + 24) <= 0xDu )
     goto LABEL_47;
-  v91 = StringLiteral_12241/*"SSL CA certificate error"*/;
-  *(_QWORD *)(v51 + 136) = StringLiteral_12241/*"SSL CA certificate error"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 136), v91, v89, v90);
-  if ( *(_DWORD *)(v51 + 24) <= 0xEu )
+  v189 = StringLiteral_12370/*"SSL CA certificate error"*/;
+  *(_QWORD *)(v97 + 136) = StringLiteral_12370/*"SSL CA certificate error"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 136), v189, v183, v184, v185, v186, v187, v188);
+  if ( *(_DWORD *)(v97 + 24) <= 0xEu )
     goto LABEL_47;
-  v94 = StringLiteral_7171/*"HTTP/1.1 500 Internal Server Error"*/;
-  *(_QWORD *)(v51 + 144) = StringLiteral_7171/*"HTTP/1.1 500 Internal Server Error"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 144), v94, v92, v93);
-  if ( *(_DWORD *)(v51 + 24) <= 0xFu )
+  v196 = StringLiteral_7292/*"HTTP/1.1 500 Internal Server Error"*/;
+  *(_QWORD *)(v97 + 144) = StringLiteral_7292/*"HTTP/1.1 500 Internal Server Error"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 144), v196, v190, v191, v192, v193, v194, v195);
+  if ( *(_DWORD *)(v97 + 24) <= 0xFu )
     goto LABEL_47;
-  v97 = StringLiteral_7172/*"HTTP/1.1 504 Gateway Timeout"*/;
-  *(_QWORD *)(v51 + 152) = StringLiteral_7172/*"HTTP/1.1 504 Gateway Timeout"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 152), v97, v95, v96);
-  if ( *(_DWORD *)(v51 + 24) <= 0x10u )
+  v203 = StringLiteral_7293/*"HTTP/1.1 504 Gateway Timeout"*/;
+  *(_QWORD *)(v97 + 152) = StringLiteral_7293/*"HTTP/1.1 504 Gateway Timeout"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 152), v203, v197, v198, v199, v200, v201, v202);
+  if ( *(_DWORD *)(v97 + 24) <= 0x10u )
     goto LABEL_47;
-  v100 = StringLiteral_5291/*"Destination host has an erroneous SSL certificate"*/;
-  *(_QWORD *)(v51 + 160) = StringLiteral_5291/*"Destination host has an erroneous SSL certificate"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 160), v100, v98, v99);
-  if ( *(_DWORD *)(v51 + 24) <= 0x11u )
+  v210 = StringLiteral_5364/*"Destination host has an erroneous SSL certificate"*/;
+  *(_QWORD *)(v97 + 160) = StringLiteral_5364/*"Destination host has an erroneous SSL certificate"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 160), v210, v204, v205, v206, v207, v208, v209);
+  if ( *(_DWORD *)(v97 + 24) <= 0x11u )
     goto LABEL_47;
-  v103 = StringLiteral_14554/*"Too many redirects"*/;
-  *(_QWORD *)(v51 + 168) = StringLiteral_14554/*"Too many redirects"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 168), v103, v101, v102);
-  if ( *(_DWORD *)(v51 + 24) <= 0x12u )
+  v217 = StringLiteral_14689/*"Too many redirects"*/;
+  *(_QWORD *)(v97 + 168) = StringLiteral_14689/*"Too many redirects"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 168), v217, v211, v212, v213, v214, v215, v216);
+  if ( *(_DWORD *)(v97 + 24) <= 0x12u )
     goto LABEL_47;
-  v106 = StringLiteral_20942/*"java.io.EOFException"*/;
-  *(_QWORD *)(v51 + 176) = StringLiteral_20942/*"java.io.EOFException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 176), v106, v104, v105);
-  if ( *(_DWORD *)(v51 + 24) <= 0x13u )
+  v224 = StringLiteral_21136/*"java.io.EOFException"*/;
+  *(_QWORD *)(v97 + 176) = StringLiteral_21136/*"java.io.EOFException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 176), v224, v218, v219, v220, v221, v222, v223);
+  if ( *(_DWORD *)(v97 + 24) <= 0x13u )
     goto LABEL_47;
-  v109 = StringLiteral_20959/*"java.net.SocketException"*/;
-  *(_QWORD *)(v51 + 184) = StringLiteral_20959/*"java.net.SocketException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 184), v109, v107, v108);
-  if ( *(_DWORD *)(v51 + 24) <= 0x14u )
+  v231 = StringLiteral_21153/*"java.net.SocketException"*/;
+  *(_QWORD *)(v97 + 184) = StringLiteral_21153/*"java.net.SocketException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 184), v231, v225, v226, v227, v228, v229, v230);
+  if ( *(_DWORD *)(v97 + 24) <= 0x14u )
     goto LABEL_47;
-  v112 = StringLiteral_20960/*"java.net.SocketTimeoutException"*/;
-  *(_QWORD *)(v51 + 192) = StringLiteral_20960/*"java.net.SocketTimeoutException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 192), v112, v110, v111);
-  if ( *(_DWORD *)(v51 + 24) <= 0x15u )
+  v238 = StringLiteral_21154/*"java.net.SocketTimeoutException"*/;
+  *(_QWORD *)(v97 + 192) = StringLiteral_21154/*"java.net.SocketTimeoutException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 192), v238, v232, v233, v234, v235, v236, v237);
+  if ( *(_DWORD *)(v97 + 24) <= 0x15u )
     goto LABEL_47;
-  v115 = StringLiteral_20957/*"java.net.NoRouteToHostException"*/;
-  *(_QWORD *)(v51 + 200) = StringLiteral_20957/*"java.net.NoRouteToHostException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 200), v115, v113, v114);
-  if ( *(_DWORD *)(v51 + 24) <= 0x16u )
+  v245 = StringLiteral_21151/*"java.net.NoRouteToHostException"*/;
+  *(_QWORD *)(v97 + 200) = StringLiteral_21151/*"java.net.NoRouteToHostException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 200), v245, v239, v240, v241, v242, v243, v244);
+  if ( *(_DWORD *)(v97 + 24) <= 0x16u )
     goto LABEL_47;
-  v118 = StringLiteral_20943/*"java.io.IOException"*/;
-  *(_QWORD *)(v51 + 208) = StringLiteral_20943/*"java.io.IOException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 208), v118, v116, v117);
-  if ( *(_DWORD *)(v51 + 24) <= 0x17u )
+  v252 = StringLiteral_21137/*"java.io.IOException"*/;
+  *(_QWORD *)(v97 + 208) = StringLiteral_21137/*"java.io.IOException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 208), v252, v246, v247, v248, v249, v250, v251);
+  if ( *(_DWORD *)(v97 + 24) <= 0x17u )
     goto LABEL_47;
-  v121 = StringLiteral_20956/*"java.net.ConnectException"*/;
-  *(_QWORD *)(v51 + 216) = StringLiteral_20956/*"java.net.ConnectException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 216), v121, v119, v120);
-  if ( *(_DWORD *)(v51 + 24) <= 0x18u )
+  v259 = StringLiteral_21150/*"java.net.ConnectException"*/;
+  *(_QWORD *)(v97 + 216) = StringLiteral_21150/*"java.net.ConnectException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 216), v259, v253, v254, v255, v256, v257, v258);
+  if ( *(_DWORD *)(v97 + 24) <= 0x18u )
     goto LABEL_47;
-  v124 = StringLiteral_18236/*"connect failed"*/;
-  *(_QWORD *)(v51 + 224) = StringLiteral_18236/*"connect failed"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 224), v124, v122, v123);
-  if ( *(_DWORD *)(v51 + 24) <= 0x19u )
+  v266 = StringLiteral_18390/*"connect failed"*/;
+  *(_QWORD *)(v97 + 224) = StringLiteral_18390/*"connect failed"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 224), v266, v260, v261, v262, v263, v264, v265);
+  if ( *(_DWORD *)(v97 + 24) <= 0x19u )
     goto LABEL_47;
-  v127 = StringLiteral_20958/*"java.net.ProtocolException"*/;
-  *(_QWORD *)(v51 + 232) = StringLiteral_20958/*"java.net.ProtocolException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 232), v127, v125, v126);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Au )
+  v273 = StringLiteral_21152/*"java.net.ProtocolException"*/;
+  *(_QWORD *)(v97 + 232) = StringLiteral_21152/*"java.net.ProtocolException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 232), v273, v267, v268, v269, v270, v271, v272);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Au )
     goto LABEL_47;
-  v130 = StringLiteral_20961/*"java.net.UnknownHostException"*/;
-  *(_QWORD *)(v51 + 240) = StringLiteral_20961/*"java.net.UnknownHostException"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 240), v130, v128, v129);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Bu )
+  v280 = StringLiteral_21155/*"java.net.UnknownHostException"*/;
+  *(_QWORD *)(v97 + 240) = StringLiteral_21155/*"java.net.UnknownHostException"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 240), v280, v274, v275, v276, v277, v278, v279);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Bu )
     goto LABEL_47;
-  v133 = StringLiteral_1494/*"400: Bad Request"*/;
-  *(_QWORD *)(v51 + 248) = StringLiteral_1494/*"400: Bad Request"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 248), v133, v131, v132);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Cu )
+  v287 = StringLiteral_1493/*"400: Bad Request"*/;
+  *(_QWORD *)(v97 + 248) = StringLiteral_1493/*"400: Bad Request"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 248), v287, v281, v282, v283, v284, v285, v286);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Cu )
     goto LABEL_47;
-  v136 = StringLiteral_1496/*"401: Authorization Required"*/;
-  *(_QWORD *)(v51 + 256) = StringLiteral_1496/*"401: Authorization Required"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 256), v136, v134, v135);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Du )
+  v294 = StringLiteral_1495/*"401: Authorization Required"*/;
+  *(_QWORD *)(v97 + 256) = StringLiteral_1495/*"401: Authorization Required"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 256), v294, v288, v289, v290, v291, v292, v293);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Du )
     goto LABEL_47;
-  v139 = StringLiteral_1497/*"403: Forbidden"*/;
-  *(_QWORD *)(v51 + 264) = StringLiteral_1497/*"403: Forbidden"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 264), v139, v137, v138);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Eu )
+  v301 = StringLiteral_1496/*"403: Forbidden"*/;
+  *(_QWORD *)(v97 + 264) = StringLiteral_1496/*"403: Forbidden"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 264), v301, v295, v296, v297, v298, v299, v300);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Eu )
     goto LABEL_47;
-  v142 = StringLiteral_1499/*"404: Not Found"*/;
-  *(_QWORD *)(v51 + 272) = StringLiteral_1499/*"404: Not Found"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 272), v142, v140, v141);
-  if ( *(_DWORD *)(v51 + 24) <= 0x1Fu )
+  v308 = StringLiteral_1498/*"404: Not Found"*/;
+  *(_QWORD *)(v97 + 272) = StringLiteral_1498/*"404: Not Found"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 272), v308, v302, v303, v304, v305, v306, v307);
+  if ( *(_DWORD *)(v97 + 24) <= 0x1Fu )
     goto LABEL_47;
-  v145 = StringLiteral_1500/*"408: Request Time-out"*/;
-  *(_QWORD *)(v51 + 280) = StringLiteral_1500/*"408: Request Time-out"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 280), v145, v143, v144);
-  if ( *(_DWORD *)(v51 + 24) <= 0x20u )
+  v315 = StringLiteral_1499/*"408: Request Time-out"*/;
+  *(_QWORD *)(v97 + 280) = StringLiteral_1499/*"408: Request Time-out"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 280), v315, v309, v310, v311, v312, v313, v314);
+  if ( *(_DWORD *)(v97 + 24) <= 0x20u )
     goto LABEL_47;
-  v148 = StringLiteral_1507/*"500: Internal Server Error"*/;
-  *(_QWORD *)(v51 + 288) = StringLiteral_1507/*"500: Internal Server Error"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 288), v148, v146, v147);
-  if ( *(_DWORD *)(v51 + 24) <= 0x21u )
+  v322 = StringLiteral_1507/*"500: Internal Server Error"*/;
+  *(_QWORD *)(v97 + 288) = StringLiteral_1507/*"500: Internal Server Error"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 288), v322, v316, v317, v318, v319, v320, v321);
+  if ( *(_DWORD *)(v97 + 24) <= 0x21u )
     goto LABEL_47;
-  v151 = StringLiteral_1509/*"502:"*/;
-  *(_QWORD *)(v51 + 296) = StringLiteral_1509/*"502:"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 296), v151, v149, v150);
-  if ( *(_DWORD *)(v51 + 24) <= 0x22u
-    || (v154 = StringLiteral_1511/*"503 Auto retry count"*/,
-        *(_QWORD *)(v51 + 304) = StringLiteral_1511/*"503 Auto retry count"*/,
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 304), v154, v152, v153),
-        *(_DWORD *)(v51 + 24) <= 0x23u)
-    || (v157 = StringLiteral_1521/*"504: Gateway Timeout"*/,
-        *(_QWORD *)(v51 + 312) = StringLiteral_1521/*"504: Gateway Timeout"*/,
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 312), v157, v155, v156),
-        *(_DWORD *)(v51 + 24) <= 0x24u) )
+  v329 = StringLiteral_1509/*"502:"*/;
+  *(_QWORD *)(v97 + 296) = StringLiteral_1509/*"502:"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 296), v329, v323, v324, v325, v326, v327, v328);
+  if ( *(_DWORD *)(v97 + 24) <= 0x22u
+    || (v336 = StringLiteral_1511/*"503 Auto retry count"*/,
+        *(_QWORD *)(v97 + 304) = StringLiteral_1511/*"503 Auto retry count"*/,
+        sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 304), v336, v330, v331, v332, v333, v334, v335),
+        *(_DWORD *)(v97 + 24) <= 0x23u)
+    || (v343 = StringLiteral_1521/*"504: Gateway Timeout"*/,
+        *(_QWORD *)(v97 + 312) = StringLiteral_1521/*"504: Gateway Timeout"*/,
+        sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 312), v343, v337, v338, v339, v340, v341, v342),
+        *(_DWORD *)(v97 + 24) <= 0x24u) )
   {
 LABEL_47:
-    sub_1BAB680(Instance, v48);
+    sub_1BCAA44(Instance, v90);
   }
-  v160 = StringLiteral_14944/*"Unable to read data"*/;
-  *(_QWORD *)(v51 + 320) = StringLiteral_14944/*"Unable to read data"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v51 + 320), v160, v158, v159);
-  if ( (int)*(_QWORD *)(v51 + 24) < 1 )
+  v350 = StringLiteral_15079/*"Unable to read data"*/;
+  *(_QWORD *)(v97 + 320) = StringLiteral_15079/*"Unable to read data"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v97 + 320), v350, v344, v345, v346, v347, v348, v349);
+  if ( (int)*(_QWORD *)(v97 + 24) < 1 )
   {
 LABEL_48:
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v90);
     goto LABEL_57;
   }
-  v161 = 0LL;
-  v162 = (unsigned int)*(_QWORD *)(v51 + 24) - 1LL;
+  v351 = 0LL;
+  v352 = (unsigned int)*(_QWORD *)(v97 + 24) - 1LL;
   while ( 1 )
   {
     if ( !v3 )
       goto LABEL_58;
-    Instance = System_String__Contains(v3, *(System_String_o **)(v51 + 32 + 8 * v161), 0LL);
+    Instance = System_String__Contains(v3, *(System_String_o **)(v97 + 32 + 8 * v351), 0LL);
     if ( (Instance & 1) != 0 )
       break;
-    if ( v162 == v161 )
+    if ( v352 == v351 )
       goto LABEL_48;
-    if ( ++v161 >= (unsigned __int64)*(unsigned int *)(v51 + 24) )
+    if ( ++v351 >= (unsigned __int64)*(unsigned int *)(v97 + 24) )
       goto LABEL_47;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( !this->fields.data
-    || (v163 = (CrashReporter_o *)Instance, Instance = (__int64)AssetData__get_CacheName(this->fields.data, v48), !v163) )
+    || (v353 = (CrashReporter_o *)Instance, Instance = (__int64)AssetData__get_CacheName(this->fields.data, v90), !v353) )
   {
 LABEL_58:
-    sub_1BAB678(Instance, v48);
+    sub_1BCAA3C(Instance, v90);
   }
-  CrashReporter__AddCustomKey(v163, (System_String_o *)StringLiteral_5054/*"DLErrorAsset"*/, (System_String_o *)Instance, 0LL);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-  if ( (unsigned int)v161 >= *(_DWORD *)(v51 + 24) )
+  CrashReporter__AddCustomKey(v353, (System_String_o *)StringLiteral_5127/*"DLErrorAsset"*/, (System_String_o *)Instance, 0LL);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  if ( (unsigned int)v351 >= *(_DWORD *)(v97 + 24) )
     goto LABEL_47;
   if ( !Instance )
     goto LABEL_58;
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)Instance,
-    (System_String_o *)StringLiteral_5055/*"DLErrorType"*/,
-    *(System_String_o **)(v51 + 32 + 8 * v161),
+    (System_String_o *)StringLiteral_5128/*"DLErrorType"*/,
+    *(System_String_o **)(v97 + 32 + 8 * v351),
     0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  v3 = (System_String_o *)StringLiteral_2490/*"AssetLoadError"*/;
+    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v354);
+  v3 = (System_String_o *)StringLiteral_2515/*"AssetLoadError"*/;
 LABEL_57:
   UnityEngine_Debug__LogError((Il2CppObject *)v3, 0LL);
 }
@@ -481,13 +672,14 @@ LABEL_57:
 
 void __fastcall AssetLoader__EndLoad(AssetLoader_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct AssetLoader_LoadEndHandler_o *endCallback; // x8
   struct AssetLoader_LoadEndDataHandler_o *endCallback2; // x8
 
-  if ( (byte_4AB4DCD & 1) == 0 )
+  if ( (byte_4B15266 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB4DCD = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B15266 = 1;
   }
   endCallback = this->fields.endCallback;
   this->fields.isEndLoad = 1;
@@ -503,8 +695,8 @@ void __fastcall AssetLoader__EndLoad(AssetLoader_o *this, const MethodInfo *meth
       this->fields.data,
       *(_QWORD *)&endCallback2->fields.extra_arg);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69800620((UnityEngine_Object_o *)this, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+  UnityEngine_Object__Destroy_70154244((UnityEngine_Object_o *)this, 0LL);
 }
 
 
@@ -527,9 +719,13 @@ void __fastcall AssetLoader__EndWarningDialog(AssetLoader_o *this, bool isDecide
 void __fastcall AssetLoader__Init(AssetLoader_o *this, AssetData_o *data, const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.data = data;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.data, (int32_t)data, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -543,12 +739,12 @@ bool __fastcall AssetLoader__IsSame(AssetLoader_o *this, System_String_o *name, 
     return 0;
   v4 = data->fields.name;
   if ( !v4 )
-    sub_1BAB678(0LL, name);
-  return System_String__Equals_62056444(v4, name, 0LL);
+    sub_1BCAA3C(0LL, name);
+  return System_String__Equals_62409536(v4, name, 0LL);
 }
 
 
-bool __fastcall AssetLoader__IsSame_38157204(
+bool __fastcall AssetLoader__IsSame_38487064(
         AssetLoader_o *this,
         int32_t type,
         System_String_o *name,
@@ -558,7 +754,7 @@ bool __fastcall AssetLoader__IsSame_38157204(
 
   data = this->fields.data;
   if ( data )
-    LOBYTE(data) = AssetData__IsSame_38149648(data, type, name, method);
+    LOBYTE(data) = AssetData__IsSame_38479508(data, type, name, method);
   return (char)data;
 }
 
@@ -568,103 +764,128 @@ System_Collections_IEnumerator_o *__fastcall AssetLoader__LoadDataCR(
         System_String_array *resourceNames,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  int32_t v6; // w2
-  int32_t v7; // w3
-  int32_t v8; // w2
-  int32_t v9; // w3
+  __int64 v3; // x3
+  __int64 v6; // x21
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4AB4DCC & 1) == 0 )
+  if ( (byte_4B15265 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader__LoadDataCR_d__29_TypeInfo, resourceNames);
-    byte_4AB4DCC = 1;
+    sub_1BCA7E0(&AssetLoader__LoadDataCR_d__29_TypeInfo, resourceNames, method);
+    byte_4B15265 = 1;
   }
-  v5 = sub_1BAB668(AssetLoader__LoadDataCR_d__29_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 32), (int32_t)this, v6, v7);
-  *(_QWORD *)(v5 + 40) = resourceNames;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v5 + 40), (int32_t)resourceNames, v8, v9);
-  return (System_Collections_IEnumerator_o *)v5;
+  v6 = sub_1BCAA2C(AssetLoader__LoadDataCR_d__29_TypeInfo, resourceNames, method, v3);
+  System_Object___ctor((Il2CppObject *)v6, 0LL);
+  *(_DWORD *)(v6 + 16) = 0;
+  *(_QWORD *)(v6 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)this, v7, v8, v9, v10, v11, v12);
+  *(_QWORD *)(v6 + 40) = resourceNames;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 40), (int64_t)resourceNames, v13, v14, v15, v16, v17, v18);
+  return (System_Collections_IEnumerator_o *)v6;
 }
 
 
 void __fastcall AssetLoader__LoadUseThread(AssetLoader_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   System_Byte_array *readData; // x20
-  struct System_Byte_array *v4; // x0
-  int32_t v5; // w2
-  int32_t v6; // w3
+  struct System_Byte_array *v5; // x0
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB4DCE & 1) == 0 )
+  if ( (byte_4B15267 & 1) == 0 )
   {
-    sub_1BAB41C(&CatAndMouseGame_TypeInfo, method);
-    byte_4AB4DCE = 1;
+    sub_1BCA7E0(&CatAndMouseGame_TypeInfo, method, v2);
+    byte_4B15267 = 1;
   }
   readData = this->fields.readData;
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v4 = CatAndMouseGame__MouseGame4(readData, 0LL);
-  this->fields._decData = v4;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._decData, (int32_t)v4, v5, v6);
+    j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, method);
+  v5 = CatAndMouseGame__MouseGame4(readData, 0LL);
+  this->fields._decData = v5;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields._decData, (int64_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
 void __fastcall AssetLoader__Reboot(AssetLoader_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  __int64 v5; // x1
-  __int64 v6; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
   UnityEngine_Networking_UnityWebRequest_o *loader; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
-  __int64 v10; // x1
-  ManagementManager_c *v11; // x0
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  __int64 v20; // x1
+  __int64 v21; // x2
+  ManagementManager_c *v22; // x0
   Il2CppObject *Instance; // x0
-  __int64 v13; // x1
+  __int64 v24; // x1
 
-  if ( (byte_4AB4DCF & 1) == 0 )
+  if ( (byte_4B15268 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Application_TypeInfo, method);
-    sub_1BAB41C(&ManagementManager_TypeInfo, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v6);
-    byte_4AB4DCF = 1;
+    sub_1BCA7E0(&UnityEngine_Application_TypeInfo, method, v2);
+    sub_1BCA7E0(&ManagementManager_TypeInfo, v9, v10);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v11, v12);
+    byte_4B15268 = 1;
   }
   loader = this->fields.loader;
   if ( loader )
   {
     UnityEngine_Networking_UnityWebRequest__Dispose(loader, 0LL);
     this->fields.loader = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.loader, 0, v8, v9);
+    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.loader, 0LL, v14, v15, v16, v17, v18, v19);
   }
   this->fields.readData = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.readData, 0, v2, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.readData, 0LL, v2, v3, v4, v5, v6, v7);
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-  if ( !byte_4AB4E4F )
+    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, v20);
+  if ( !byte_4B152DA )
   {
-    sub_1BAB41C(&ManagementManager_TypeInfo, v10);
-    byte_4AB4E4F = 1;
+    sub_1BCA7E0(&ManagementManager_TypeInfo, v20, v21);
+    byte_4B152DA = 1;
   }
-  v11 = ManagementManager_TypeInfo;
+  v22 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-    v11 = ManagementManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, v20);
+    v22 = ManagementManager_TypeInfo;
   }
-  if ( v11->static_fields->isDuringStartup )
+  if ( v22->static_fields->isDuringStartup )
   {
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-    UnityEngine_Application__Quit_69594576(0LL);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v20);
+    UnityEngine_Application__Quit_69948112(0LL);
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_1BAB678(0LL, v13);
+      sub_1BCAA3C(0LL, v24);
     ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
   }
 }
@@ -676,50 +897,62 @@ void __fastcall AssetLoader__StartLoad(
         System_String_array *resourceNames,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   struct AssetLoader_LoadEndHandler_o **p_endCallback; // x21
-  __int64 v7; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
-  __int64 v10; // x8
-  bool v11; // w8
+  __int64 v11; // x0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x2
+  __int64 v14; // x8
+  bool v15; // w8
   System_Collections_IEnumerator_o *DataCR; // x1
 
   this->fields.endCallback = callbackFunc;
   p_endCallback = &this->fields.endCallback;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.endCallback,
-    (int32_t)callbackFunc,
-    (int32_t)resourceNames,
-    (int32_t)method);
-  v10 = (__int64)*(p_endCallback - 1);
-  if ( !v10 )
-    sub_1BAB678(v7, v8);
-  v11 = *(_DWORD *)(v10 + 40) != *(_DWORD *)(v10 + 44);
-  this->fields.isDownload = v11;
-  this->fields.isRequestDownload = v11;
-  DataCR = AssetLoader__LoadDataCR(this, resourceNames, v9);
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, DataCR, 0LL);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.endCallback,
+    (int64_t)callbackFunc,
+    (int64_t)resourceNames,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
+  v14 = (__int64)*(p_endCallback - 1);
+  if ( !v14 )
+    sub_1BCAA3C(v11, v12);
+  v15 = *(_DWORD *)(v14 + 40) != *(_DWORD *)(v14 + 44);
+  this->fields.isDownload = v15;
+  this->fields.isRequestDownload = v15;
+  DataCR = AssetLoader__LoadDataCR(this, resourceNames, v13);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516((UnityEngine_MonoBehaviour_o *)this, DataCR, 0LL);
 }
 
 
 void __fastcall AssetLoader__abort_thread(AssetLoader_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   System_Threading_Thread_o *threadDecrypt; // x0
   System_Threading_Thread_o **p_threadDecrypt; // x19
-  __int64 v6; // x1
+  __int64 v10; // x1
 
   p_threadDecrypt = &this->fields.threadDecrypt;
   threadDecrypt = this->fields.threadDecrypt;
   if ( threadDecrypt && !System_Threading_Thread__get_ThreadState(threadDecrypt, 0LL) )
   {
     if ( !*p_threadDecrypt )
-      sub_1BAB678(0LL, v6);
+      sub_1BCAA3C(0LL, v10);
     System_Threading_Thread__Abort(*p_threadDecrypt, 0LL);
   }
   *p_threadDecrypt = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_threadDecrypt, 0, v2, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_threadDecrypt, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -738,10 +971,10 @@ void __fastcall AssetLoader__add_endCallback(
   AssetLoader_LoadEndHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AB4DC8 & 1) == 0 )
+  if ( (byte_4B15261 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader_LoadEndHandler_TypeInfo, value);
-    byte_4AB4DC8 = 1;
+    sub_1BCA7E0(&AssetLoader_LoadEndHandler_TypeInfo, value, method);
+    byte_4B15261 = 1;
   }
   endCallback = this->fields.endCallback;
   p_endCallback = &this->fields.endCallback;
@@ -754,13 +987,13 @@ void __fastcall AssetLoader__add_endCallback(
       if ( (AssetLoader_LoadEndHandler_c *)v8->klass != AssetLoader_LoadEndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1BE690C(p_endCallback, v8, v6);
+    v9 = sub_1C05CD0(p_endCallback, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BAB938(v8);
+  sub_1BCACFC(v8);
   AssetLoader__remove_endCallback(v11, v12, v13);
 }
 
@@ -780,10 +1013,10 @@ void __fastcall AssetLoader__add_endCallback2(
   AssetLoader_LoadEndDataHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AB4DCA & 1) == 0 )
+  if ( (byte_4B15263 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
-    byte_4AB4DCA = 1;
+    sub_1BCA7E0(&AssetLoader_LoadEndDataHandler_TypeInfo, value, method);
+    byte_4B15263 = 1;
   }
   endCallback2 = this->fields.endCallback2;
   p_endCallback2 = &this->fields.endCallback2;
@@ -796,13 +1029,13 @@ void __fastcall AssetLoader__add_endCallback2(
       if ( (AssetLoader_LoadEndDataHandler_c *)v8->klass != AssetLoader_LoadEndDataHandler_TypeInfo )
         break;
     }
-    v9 = sub_1BE690C(p_endCallback2, v8, v6);
+    v9 = sub_1C05CD0(p_endCallback2, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BAB938(v8);
+  sub_1BCACFC(v8);
   AssetLoader__remove_endCallback2(v11, v12, v13);
 }
 
@@ -838,7 +1071,7 @@ int32_t __fastcall AssetLoader__get_LoadSize(AssetLoader_o *this, const MethodIn
   v5 = this->fields.data;
   if ( !v5 )
 LABEL_10:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   v6 = downloadProgress * (float)v5->fields.size;
   if ( v6 == INFINITY )
     LODWORD(loader) = 0x80000000;
@@ -854,7 +1087,7 @@ System_String_o *__fastcall AssetLoader__get_Name(AssetLoader_o *this, const Met
 
   data = this->fields.data;
   if ( !data )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return data->fields.name;
 }
 
@@ -865,7 +1098,7 @@ int32_t __fastcall AssetLoader__get_Size(AssetLoader_o *this, const MethodInfo *
 
   data = this->fields.data;
   if ( !data )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return data->fields.size;
 }
 
@@ -885,10 +1118,10 @@ void __fastcall AssetLoader__remove_endCallback(
   AssetLoader_LoadEndDataHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AB4DC9 & 1) == 0 )
+  if ( (byte_4B15262 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader_LoadEndHandler_TypeInfo, value);
-    byte_4AB4DC9 = 1;
+    sub_1BCA7E0(&AssetLoader_LoadEndHandler_TypeInfo, value, method);
+    byte_4B15262 = 1;
   }
   endCallback = this->fields.endCallback;
   p_endCallback = &this->fields.endCallback;
@@ -901,13 +1134,13 @@ void __fastcall AssetLoader__remove_endCallback(
       if ( (AssetLoader_LoadEndHandler_c *)v8->klass != AssetLoader_LoadEndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1BE690C(p_endCallback, v8, v6);
+    v9 = sub_1C05CD0(p_endCallback, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BAB938(v8);
+  sub_1BCACFC(v8);
   AssetLoader__add_endCallback2(v11, v12, v13);
 }
 
@@ -926,10 +1159,10 @@ void __fastcall AssetLoader__remove_endCallback2(
   AssetLoader_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4AB4DCB & 1) == 0 )
+  if ( (byte_4B15264 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
-    byte_4AB4DCB = 1;
+    sub_1BCA7E0(&AssetLoader_LoadEndDataHandler_TypeInfo, value, method);
+    byte_4B15264 = 1;
   }
   endCallback2 = this->fields.endCallback2;
   p_endCallback2 = &this->fields.endCallback2;
@@ -942,13 +1175,13 @@ void __fastcall AssetLoader__remove_endCallback2(
       if ( (AssetLoader_LoadEndDataHandler_c *)v8->klass != AssetLoader_LoadEndDataHandler_TypeInfo )
         break;
     }
-    v9 = sub_1BE690C(p_endCallback2, v8, v6);
+    v9 = sub_1C05CD0(p_endCallback2, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BAB938(v8);
+  sub_1BCACFC(v8);
   AssetLoader__get_IsRequestDownload(v11, v12);
 }
 
@@ -960,74 +1193,86 @@ void __fastcall AssetLoader_LoadEndDataHandler___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x20
-  int v8; // w22
-  Il2CppObject *v9; // x8
-  struct System_Reflection_MethodInfo_o *v10; // x9
-  char v11; // w21
-  char v12; // w0
-  __int64 v13; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x8
+  __int64 v10; // x20
+  int v12; // w22
+  Il2CppObject *v13; // x8
+  struct System_Reflection_MethodInfo_o *v14; // x9
+  char v15; // w21
+  char v16; // w0
+  __int64 v17; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
+  v10 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.method,
+    (int64_t)object,
+    *(int64_t *)&method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BAB4DC(v6) & 1) != 0 )
+  if ( (sub_1BCA8A0(v10) & 1) != 0 )
   {
-    if ( v8 == 1 )
+    if ( v12 == 1 )
     {
-      v9 = (Il2CppObject *)sub_19EE744;
+      v13 = (Il2CppObject *)sub_1A0C700;
 LABEL_16:
-      this->fields.m_target = v9;
+      this->fields.m_target = v13;
       goto LABEL_17;
     }
   }
   else
   {
-    if ( !v8 )
+    if ( !v12 )
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v11 = sub_1BAB4D4(v6);
-        v12 = sub_1BAB990(v6);
-        if ( (v11 & 1) != 0 )
+        v15 = sub_1BCA898(v10);
+        v16 = sub_1BCAD54(v10);
+        if ( (v15 & 1) != 0 )
         {
-          if ( (v12 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_19EE840;
+          if ( (v16 & 1) != 0 )
+            v13 = (Il2CppObject *)sub_1A0C7FC;
           else
-            v9 = (Il2CppObject *)sub_19EE804;
+            v13 = (Il2CppObject *)sub_1A0C7C0;
         }
-        else if ( (v12 & 1) != 0 )
+        else if ( (v16 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_19EE780;
+          v13 = (Il2CppObject *)sub_1A0C73C;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_19EE754;
+          v13 = (Il2CppObject *)sub_1A0C710;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_19EE724;
+        v13 = (Il2CppObject *)sub_1A0C6E0;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BAB544(v13, 0LL);
+      v17 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCA908(v17, 0LL);
     }
   }
-  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-  this->fields.original_method_info = v10;
+  this->fields.original_method_info = v14;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19EE6DC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0C698;
 }
 
 
@@ -1041,7 +1286,7 @@ System_IAsyncResult_o *__fastcall AssetLoader_LoadEndDataHandler__BeginInvoke(
   AssetData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = data;
-  return (System_IAsyncResult_o *)sub_1BAB3D0(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1BCA794(this, &v6, callback, object);
 }
 
 
@@ -1050,7 +1295,7 @@ void __fastcall AssetLoader_LoadEndDataHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BAB3D4(result, 0LL, method);
+  sub_1BCA798(result, 0LL, method);
 }
 
 
@@ -1073,74 +1318,86 @@ void __fastcall AssetLoader_LoadEndHandler___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x20
-  int v8; // w22
-  Il2CppObject *v9; // x8
-  struct System_Reflection_MethodInfo_o *v10; // x9
-  char v11; // w21
-  char v12; // w0
-  __int64 v13; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x8
+  __int64 v10; // x20
+  int v12; // w22
+  Il2CppObject *v13; // x8
+  struct System_Reflection_MethodInfo_o *v14; // x9
+  char v15; // w21
+  char v16; // w0
+  __int64 v17; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
+  v10 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.method, (int32_t)object, method, (int32_t)a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.method,
+    (int64_t)object,
+    *(int64_t *)&method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BAB4DC(v6) & 1) != 0 )
+  if ( (sub_1BCA8A0(v10) & 1) != 0 )
   {
-    if ( v8 == 1 )
+    if ( v12 == 1 )
     {
-      v9 = (Il2CppObject *)sub_19EE554;
+      v13 = (Il2CppObject *)sub_1A0C510;
 LABEL_16:
-      this->fields.m_target = v9;
+      this->fields.m_target = v13;
       goto LABEL_17;
     }
   }
   else
   {
-    if ( !v8 )
+    if ( !v12 )
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v11 = sub_1BAB4D4(v6);
-        v12 = sub_1BAB990(v6);
-        if ( (v11 & 1) != 0 )
+        v15 = sub_1BCA898(v10);
+        v16 = sub_1BCAD54(v10);
+        if ( (v15 & 1) != 0 )
         {
-          if ( (v12 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_19EE650;
+          if ( (v16 & 1) != 0 )
+            v13 = (Il2CppObject *)sub_1A0C60C;
           else
-            v9 = (Il2CppObject *)sub_19EE614;
+            v13 = (Il2CppObject *)sub_1A0C5D0;
         }
-        else if ( (v12 & 1) != 0 )
+        else if ( (v16 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_19EE590;
+          v13 = (Il2CppObject *)sub_1A0C54C;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_19EE564;
+          v13 = (Il2CppObject *)sub_1A0C520;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_19EE534;
+        v13 = (Il2CppObject *)sub_1A0C4F0;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1BAB694(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BAB544(v13, 0LL);
+      v17 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCA908(v17, 0LL);
     }
   }
-  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-  this->fields.original_method_info = v10;
+  this->fields.original_method_info = v14;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19EE4EC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0C4A8;
 }
 
 
@@ -1154,7 +1411,7 @@ System_IAsyncResult_o *__fastcall AssetLoader_LoadEndHandler__BeginInvoke(
   AssetLoader_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = loader;
-  return (System_IAsyncResult_o *)sub_1BAB3D0(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1BCA794(this, &v6, callback, object);
 }
 
 
@@ -1163,7 +1420,7 @@ void __fastcall AssetLoader_LoadEndHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BAB3D4(result, 0LL, method);
+  sub_1BCA798(result, 0LL, method);
 }
 
 
@@ -1194,492 +1451,773 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  int32_t v3; // w3
-  AssetLoader__LoadDataCR_d__29_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v3; // x3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  AssetLoader__LoadDataCR_d__29_o *v8; // x19
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
+  __int64 v18; // x2
   __int64 v19; // x1
-  __int64 v20; // x1
+  __int64 v20; // x2
   __int64 v21; // x1
-  __int64 v22; // x1
+  __int64 v22; // x2
   __int64 v23; // x1
-  __int64 v24; // x1
+  __int64 v24; // x2
   __int64 v25; // x1
-  __int64 v26; // x1
+  __int64 v26; // x2
   __int64 v27; // x1
-  __int64 v28; // x1
+  __int64 v28; // x2
   __int64 v29; // x1
-  __int64 v30; // x1
+  __int64 v30; // x2
   __int64 v31; // x1
-  __int64 v32; // x1
+  __int64 v32; // x2
   __int64 v33; // x1
-  __int64 v34; // x1
+  __int64 v34; // x2
   __int64 v35; // x1
-  __int64 v36; // x1
+  __int64 v36; // x2
   __int64 v37; // x1
-  __int64 v38; // x1
+  __int64 v38; // x2
   __int64 v39; // x1
-  __int64 v40; // x1
+  __int64 v40; // x2
   __int64 v41; // x1
-  __int64 v42; // x1
+  __int64 v42; // x2
   __int64 v43; // x1
-  __int64 v44; // x1
+  __int64 v44; // x2
   __int64 v45; // x1
-  __int64 v46; // x1
+  __int64 v46; // x2
   __int64 v47; // x1
-  __int64 v48; // x1
+  __int64 v48; // x2
   __int64 v49; // x1
-  __int64 v50; // x1
+  __int64 v50; // x2
   __int64 v51; // x1
-  __int64 v52; // x1
+  __int64 v52; // x2
   __int64 v53; // x1
-  __int64 v54; // x1
+  __int64 v54; // x2
   __int64 v55; // x1
-  __int64 v56; // x1
+  __int64 v56; // x2
+  __int64 v57; // x1
+  __int64 v58; // x2
+  __int64 v59; // x1
+  __int64 v60; // x2
+  __int64 v61; // x1
+  __int64 v62; // x2
+  __int64 v63; // x1
+  __int64 v64; // x2
+  __int64 v65; // x1
+  __int64 v66; // x2
+  __int64 v67; // x1
+  __int64 v68; // x2
+  __int64 v69; // x1
+  __int64 v70; // x2
+  __int64 v71; // x1
+  __int64 v72; // x2
+  __int64 v73; // x1
+  __int64 v74; // x2
+  __int64 v75; // x1
+  __int64 v76; // x2
+  __int64 v77; // x1
+  __int64 v78; // x2
+  __int64 v79; // x1
+  __int64 v80; // x2
+  __int64 v81; // x1
+  __int64 v82; // x2
+  __int64 v83; // x1
+  __int64 v84; // x2
+  __int64 v85; // x1
+  __int64 v86; // x2
+  __int64 v87; // x1
+  __int64 v88; // x2
+  __int64 v89; // x1
+  __int64 v90; // x2
+  __int64 v91; // x1
+  __int64 v92; // x2
+  __int64 v93; // x1
+  __int64 v94; // x2
+  __int64 v95; // x1
+  __int64 v96; // x2
+  __int64 v97; // x1
+  __int64 v98; // x2
+  __int64 v99; // x1
+  __int64 v100; // x2
+  __int64 v101; // x1
+  __int64 v102; // x2
+  __int64 v103; // x1
+  __int64 v104; // x2
+  __int64 v105; // x1
+  __int64 v106; // x2
+  __int64 v107; // x1
+  __int64 v108; // x2
+  __int64 v109; // x1
+  __int64 v110; // x2
+  __int64 v111; // x1
+  __int64 v112; // x2
   struct AssetLoader_o *_4__this; // x20
-  bool v58; // w8
-  const MethodInfo *v59; // x1
+  bool v114; // w8
+  const MethodInfo *v115; // x1
   UnityEngine_Networking_UnityWebRequest_o **p_loader; // x21
   System_String_o *error; // x0
-  char v62; // w22
+  char v118; // w22
   UnityEngine_Networking_DownloadHandler_o *downloadHandler; // x0
   __int64 methodPtr_low; // x10
-  UnityEngine_Networking_DownloadHandler_o *v65; // x8
-  AssetData_o *v66; // x20
-  const MethodInfo *v67; // x3
-  System_Collections_IEnumerator_o *v68; // x0
-  ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v70; // w2
-  int32_t v71; // w3
-  int v72; // w8
+  UnityEngine_Networking_DownloadHandler_o *v121; // x8
+  AssetData_o *v122; // x20
+  const MethodInfo *v123; // x3
+  System_Collections_IEnumerator_o *v124; // x0
+  PartyOrganizationUtility_o *p__2__current; // x19
+  int64_t v126; // x2
+  int32_t v127; // w3
+  System_String_o *v128; // x4
+  BattleSetupInfo_o *v129; // x5
+  FollowerInfo_o *v130; // x6
+  PartyListViewItem_o *v131; // x7
+  int v132; // w8
   UnityEngine_Networking_UnityWebRequest_o *loader; // x0
-  int32_t v74; // w2
-  int32_t v75; // w3
-  const MethodInfo *v76; // x1
-  int32_t v77; // w2
-  int32_t v78; // w3
+  int64_t v134; // x2
+  int32_t v135; // w3
+  System_String_o *v136; // x4
+  BattleSetupInfo_o *v137; // x5
+  FollowerInfo_o *v138; // x6
+  PartyListViewItem_o *v139; // x7
+  const MethodInfo *v140; // x1
+  int64_t v141; // x2
+  int32_t v142; // w3
+  System_String_o *v143; // x4
+  BattleSetupInfo_o *v144; // x5
+  FollowerInfo_o *v145; // x6
+  PartyListViewItem_o *v146; // x7
   struct AssetData_o *data; // x8
-  System_Byte_array *v80; // x0
-  int32_t v81; // w2
-  int32_t v82; // w3
+  System_Byte_array *v148; // x0
+  int64_t v149; // x2
+  int32_t v150; // w3
+  System_String_o *v151; // x4
+  BattleSetupInfo_o *v152; // x5
+  FollowerInfo_o *v153; // x6
+  PartyListViewItem_o *v154; // x7
+  __int64 v155; // x1
   System_Byte_array *readData; // x22
-  struct AssetData_o *v84; // x8
-  int32_t v85; // w2
-  int32_t v86; // w3
-  int32_t v87; // w2
-  int32_t v88; // w3
-  int32_t v89; // w2
-  int32_t v90; // w3
+  struct AssetData_o *v157; // x8
+  int64_t v158; // x2
+  int32_t v159; // w3
+  System_String_o *v160; // x4
+  BattleSetupInfo_o *v161; // x5
+  FollowerInfo_o *v162; // x6
+  PartyListViewItem_o *v163; // x7
+  int64_t v164; // x2
+  int32_t v165; // w3
+  System_String_o *v166; // x4
+  BattleSetupInfo_o *v167; // x5
+  FollowerInfo_o *v168; // x6
+  PartyListViewItem_o *v169; // x7
+  int64_t v170; // x2
+  int32_t v171; // w3
+  System_String_o *v172; // x4
+  BattleSetupInfo_o *v173; // x5
+  FollowerInfo_o *v174; // x6
+  PartyListViewItem_o *v175; // x7
+  __int64 v176; // x1
+  __int64 v177; // x2
+  __int64 v178; // x3
   float unscaledTime; // s0
-  ManagerConfig_c *v92; // x0
-  float v93; // s8
+  ManagerConfig_c *v180; // x0
+  float v181; // s8
   float TIMEOUT; // s0
-  UnityEngine_WaitForEndOfFrame_o *v95; // x23
-  int32_t v96; // w2
-  int32_t v97; // w3
-  const MethodInfo *v98; // x0
+  UnityEngine_WaitForEndOfFrame_o *v183; // x23
+  int64_t v184; // x2
+  int32_t v185; // w3
+  System_String_o *v186; // x4
+  BattleSetupInfo_o *v187; // x5
+  FollowerInfo_o *v188; // x6
+  PartyListViewItem_o *v189; // x7
+  __int64 v190; // x1
   System_String_o *Path; // x23
   int64_t FreeSize; // x0
-  int32_t v101; // w2
-  int32_t v102; // w3
-  int64_t v103; // x23
-  ManagerConfig_c *v104; // x0
-  int32_t v105; // w1
-  int32_t v106; // w2
-  int32_t v107; // w3
-  ServantStatusBattleListViewItem_o *p_errorLocalizeCode_5__7; // x0
-  int32_t v109; // w1
+  int64_t v193; // x2
+  int32_t v194; // w3
+  System_String_o *v195; // x4
+  BattleSetupInfo_o *v196; // x5
+  FollowerInfo_o *v197; // x6
+  PartyListViewItem_o *v198; // x7
+  int64_t v199; // x23
+  ManagerConfig_c *v200; // x0
+  int64_t v201; // x1
+  int64_t v202; // x2
+  int32_t v203; // w3
+  System_String_o *v204; // x4
+  BattleSetupInfo_o *v205; // x5
+  FollowerInfo_o *v206; // x6
+  PartyListViewItem_o *v207; // x7
+  PartyOrganizationUtility_o *p_errorLocalizeCode_5__7; // x0
+  int64_t v209; // x1
   System_String_o *Url; // x0
-  int32_t v111; // w2
-  int32_t v112; // w3
+  int64_t v211; // x2
+  int32_t v212; // w3
+  System_String_o *v213; // x4
+  BattleSetupInfo_o *v214; // x5
+  FollowerInfo_o *v215; // x6
+  PartyListViewItem_o *v216; // x7
   System_String_o *url_5__11; // x21
-  struct AssetData_o *v114; // x8
-  AssetLoader__LoadDataCR_d__29_o *v115; // x22
-  bool v116; // w23
+  struct AssetData_o *v218; // x8
+  AssetLoader__LoadDataCR_d__29_o *v219; // x22
+  bool v220; // w23
   System_String_o *Key; // x0
-  UnityEngine_Networking_UnityWebRequest_o *v118; // x0
-  int32_t v119; // w2
-  int32_t v120; // w3
-  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v121; // x0
-  int32_t v122; // w2
-  int32_t v123; // w3
+  UnityEngine_Networking_UnityWebRequest_o *v222; // x0
+  int64_t v223; // x2
+  int32_t v224; // w3
+  System_String_o *v225; // x4
+  BattleSetupInfo_o *v226; // x5
+  FollowerInfo_o *v227; // x6
+  PartyListViewItem_o *v228; // x7
+  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v229; // x0
+  int64_t v230; // x2
+  int32_t v231; // w3
+  System_String_o *v232; // x4
+  BattleSetupInfo_o *v233; // x5
+  FollowerInfo_o *v234; // x6
+  PartyListViewItem_o *v235; // x7
   AssetLoader__LoadDataCR_d__29_o **p_asyncOperater_5__12; // x21
   float progress; // s0
   float loadProgress_5__9; // s9
-  float v127; // s8
-  int32_t v128; // w2
-  int32_t v129; // w3
-  float v130; // s0
-  bool v131; // zf
-  float v132; // s8
-  UnityEngine_Networking_DownloadHandler_o *v133; // x0
-  __int64 v134; // x10
-  UnityEngine_Networking_DownloadHandler_o *v135; // x22
-  System_String_o *v136; // x0
-  int32_t v137; // w2
-  int32_t v138; // w3
+  float v239; // s8
+  int64_t v240; // x2
+  int32_t v241; // w3
+  System_String_o *v242; // x4
+  BattleSetupInfo_o *v243; // x5
+  FollowerInfo_o *v244; // x6
+  PartyListViewItem_o *v245; // x7
+  float v246; // s0
+  bool v247; // zf
+  float v248; // s8
+  UnityEngine_Networking_DownloadHandler_o *v249; // x0
+  __int64 v250; // x10
+  UnityEngine_Networking_DownloadHandler_o *v251; // x22
+  System_String_o *v252; // x0
+  int64_t v253; // x2
+  int32_t v254; // w3
+  System_String_o *v255; // x4
+  BattleSetupInfo_o *v256; // x5
+  FollowerInfo_o *v257; // x6
+  PartyListViewItem_o *v258; // x7
   int klass; // w8
-  System_String_o *v140; // x0
-  int32_t v141; // w2
-  int32_t v142; // w3
-  UnityEngine_Networking_DownloadHandler_c *v143; // x0
+  System_String_o *v260; // x0
+  int64_t v261; // x2
+  int32_t v262; // w3
+  System_String_o *v263; // x4
+  BattleSetupInfo_o *v264; // x5
+  FollowerInfo_o *v265; // x6
+  PartyListViewItem_o *v266; // x7
+  UnityEngine_Networking_DownloadHandler_c *v267; // x0
   __int64 (**image)(void); // x8
-  __int64 v145; // x10
-  UnityEngine_Networking_DownloadHandler_c *v146; // x8
-  AssetLoader__LoadDataCR_d__29_o *v147; // x22
-  System_String_o *v148; // x0
-  System_String_o *v149; // x0
-  int32_t v150; // w2
-  int32_t v151; // w3
-  int32_t v152; // w1
-  ServantStatusBattleListViewItem_o *p_errorCode_5__6; // x0
-  System_String_o *v154; // x22
-  System_String_o *v155; // x0
-  System_String_o *v156; // x0
-  int32_t v157; // w2
-  int32_t v158; // w3
+  __int64 v269; // x10
+  UnityEngine_Networking_DownloadHandler_c *v270; // x8
+  AssetLoader__LoadDataCR_d__29_o *v271; // x22
+  System_String_o *v272; // x0
+  System_String_o *v273; // x0
+  int64_t v274; // x2
+  int32_t v275; // w3
+  System_String_o *v276; // x4
+  BattleSetupInfo_o *v277; // x5
+  FollowerInfo_o *v278; // x6
+  PartyListViewItem_o *v279; // x7
+  System_String_o *v280; // x1
+  PartyOrganizationUtility_o *p_errorCode_5__6; // x0
+  System_String_o *v282; // x22
+  System_String_o *v283; // x0
+  System_String_o *v284; // x0
+  int64_t v285; // x2
+  int32_t v286; // w3
+  System_String_o *v287; // x4
+  BattleSetupInfo_o *v288; // x5
+  FollowerInfo_o *v289; // x6
+  PartyListViewItem_o *v290; // x7
   System_Collections_Generic_Dictionary_string__string__o *ResponseHeaders; // x0
-  System_Collections_Generic_Dictionary_object__object__o *v160; // x23
-  Il2CppObject *v161; // x23
-  AssetLoader__LoadDataCR_d__29_o *v162; // x23
-  System_String_o *v163; // x24
-  int v164; // w8
-  System_String_o *v165; // x0
-  System_String_o *v166; // x0
-  struct AssetData_o *v167; // x9
-  int32_t v168; // w2
-  int32_t v169; // w3
-  AssetLoader__LoadDataCR_d__29_o *v170; // x22
-  int32_t v171; // w1
-  int32_t v172; // w2
-  int32_t v173; // w3
-  struct System_String_o *v174; // x1
-  int32_t v175; // w2
-  int32_t v176; // w3
-  int32_t v177; // w1
-  struct AssetData_o *v178; // x8
-  int32_t v179; // w2
-  int32_t v180; // w3
-  int32_t v181; // w2
-  int32_t v182; // w3
-  int32_t v183; // w1
-  int32_t v184; // w2
-  int32_t v185; // w3
-  int32_t v186; // w2
-  int32_t v187; // w3
-  int32_t v188; // w1
-  System_String_o *v189; // x0
-  int32_t v190; // w2
-  int32_t v191; // w3
-  ManagerConfig_c *v192; // x0
-  struct AssetData_o *v193; // x8
-  CommonUI_o *v194; // x21
-  System_String_o *v195; // x22
-  ErrorDialog_ClickDelegate_o *v196; // x23
-  ManagementManager_c *v197; // x0
+  System_Collections_Generic_Dictionary_object__object__o *v292; // x23
+  Il2CppObject *v293; // x23
+  AssetLoader__LoadDataCR_d__29_o *v294; // x23
+  System_String_o *v295; // x24
+  int v296; // w8
+  System_String_o *v297; // x0
+  struct AssetData_o *v298; // x9
+  int64_t v299; // x2
+  int32_t v300; // w3
+  System_String_o *v301; // x4
+  BattleSetupInfo_o *v302; // x5
+  FollowerInfo_o *v303; // x6
+  PartyListViewItem_o *v304; // x7
+  AssetLoader__LoadDataCR_d__29_o *v305; // x22
+  int64_t v306; // x1
+  int64_t v307; // x2
+  int32_t v308; // w3
+  System_String_o *v309; // x4
+  BattleSetupInfo_o *v310; // x5
+  FollowerInfo_o *v311; // x6
+  PartyListViewItem_o *v312; // x7
+  int64_t v313; // x1
+  int64_t v314; // x2
+  int32_t v315; // w3
+  System_String_o *v316; // x4
+  BattleSetupInfo_o *v317; // x5
+  FollowerInfo_o *v318; // x6
+  PartyListViewItem_o *v319; // x7
+  int64_t v320; // x1
+  struct AssetData_o *v321; // x8
+  int64_t v322; // x2
+  int32_t v323; // w3
+  System_String_o *v324; // x4
+  BattleSetupInfo_o *v325; // x5
+  FollowerInfo_o *v326; // x6
+  PartyListViewItem_o *v327; // x7
+  int64_t v328; // x2
+  int32_t v329; // w3
+  System_String_o *v330; // x4
+  BattleSetupInfo_o *v331; // x5
+  FollowerInfo_o *v332; // x6
+  PartyListViewItem_o *v333; // x7
+  int64_t v334; // x1
+  int64_t v335; // x2
+  int32_t v336; // w3
+  System_String_o *v337; // x4
+  BattleSetupInfo_o *v338; // x5
+  FollowerInfo_o *v339; // x6
+  PartyListViewItem_o *v340; // x7
+  int64_t v341; // x2
+  int32_t v342; // w3
+  System_String_o *v343; // x4
+  BattleSetupInfo_o *v344; // x5
+  FollowerInfo_o *v345; // x6
+  PartyListViewItem_o *v346; // x7
+  int64_t v347; // x1
+  System_String_o *v348; // x0
+  int64_t v349; // x2
+  int32_t v350; // w3
+  System_String_o *v351; // x4
+  BattleSetupInfo_o *v352; // x5
+  FollowerInfo_o *v353; // x6
+  PartyListViewItem_o *v354; // x7
+  ManagerConfig_c *v355; // x0
+  struct AssetData_o *v356; // x8
+  CommonUI_o *v357; // x21
+  System_String_o *v358; // x22
+  __int64 v359; // x1
+  __int64 v360; // x2
+  __int64 v361; // x3
+  ErrorDialog_ClickDelegate_o *v362; // x23
+  ManagementManager_c *v363; // x0
   _BOOL4 isDuringStartup; // w23
   Il2CppObject *Instance; // x0
+  __int64 v366; // x1
   struct System_String_o *errorLocalizeCode_5__7; // x8
-  CommonUI_o *v201; // x22
-  System_String_o *v202; // x21
-  System_String_o *v203; // x23
-  System_String_o *v204; // x23
-  ErrorDialog_ClickDelegate_o *v205; // x24
-  System_String_o *v206; // x23
-  System_String_o *v207; // x23
-  ErrorDialog_ClickDelegate_o *v208; // x24
-  UnityEngine_Networking_UnityWebRequest_o *v209; // x0
-  int32_t v210; // w2
-  int32_t v211; // w3
-  int32_t v212; // w2
-  int32_t v213; // w3
-  AssetManager_c *v214; // x0
+  CommonUI_o *v368; // x22
+  System_String_o *v369; // x21
+  System_String_o *v370; // x23
+  System_String_o *v371; // x23
+  __int64 v372; // x1
+  __int64 v373; // x2
+  __int64 v374; // x3
+  ErrorDialog_ClickDelegate_o *v375; // x24
+  System_String_o *v376; // x23
+  System_String_o *v377; // x23
+  __int64 v378; // x1
+  __int64 v379; // x2
+  __int64 v380; // x3
+  ErrorDialog_ClickDelegate_o *v381; // x24
+  UnityEngine_Networking_UnityWebRequest_o *v382; // x0
+  int64_t v383; // x2
+  int32_t v384; // w3
+  System_String_o *v385; // x4
+  BattleSetupInfo_o *v386; // x5
+  FollowerInfo_o *v387; // x6
+  PartyListViewItem_o *v388; // x7
+  int64_t v389; // x2
+  int32_t v390; // w3
+  System_String_o *v391; // x4
+  BattleSetupInfo_o *v392; // x5
+  FollowerInfo_o *v393; // x6
+  PartyListViewItem_o *v394; // x7
+  AssetManager_c *v395; // x0
   System_String_o *ConfigFileAddress; // x0
-  int32_t v216; // w2
-  int32_t v217; // w3
-  System_String_o *v218; // x21
+  int64_t v397; // x2
+  int32_t v398; // w3
+  System_String_o *v399; // x4
+  BattleSetupInfo_o *v400; // x5
+  FollowerInfo_o *v401; // x6
+  PartyListViewItem_o *v402; // x7
+  System_String_o *v403; // x21
   System_String_o *UrlString; // x0
-  int32_t v220; // w2
-  int32_t v221; // w3
-  AssetLoader__LoadDataCR_d__29_o **v222; // x21
-  float v223; // s0
-  ManagerConfig_c *v224; // x0
-  float v225; // s8
-  float v226; // s0
-  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v227; // x0
-  int32_t v228; // w2
-  int32_t v229; // w3
-  int32_t v230; // w2
-  int32_t v231; // w3
-  float v232; // s0
-  float v233; // s9
-  float v234; // s8
-  float v235; // s0
-  float v236; // s8
-  System_String_o **v237; // x21
-  UnityEngine_Networking_UnityWebRequest_o **v238; // x22
-  System_String_o *v239; // x0
+  int64_t v405; // x2
+  int32_t v406; // w3
+  System_String_o *v407; // x4
+  BattleSetupInfo_o *v408; // x5
+  FollowerInfo_o *v409; // x6
+  PartyListViewItem_o *v410; // x7
+  AssetLoader__LoadDataCR_d__29_o **v411; // x21
+  float v412; // s0
+  ManagerConfig_c *v413; // x0
+  float v414; // s8
+  float v415; // s0
+  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v416; // x0
+  int64_t v417; // x2
+  int32_t v418; // w3
+  System_String_o *v419; // x4
+  BattleSetupInfo_o *v420; // x5
+  FollowerInfo_o *v421; // x6
+  PartyListViewItem_o *v422; // x7
+  int64_t v423; // x2
+  int32_t v424; // w3
+  System_String_o *v425; // x4
+  BattleSetupInfo_o *v426; // x5
+  FollowerInfo_o *v427; // x6
+  PartyListViewItem_o *v428; // x7
+  float v429; // s0
+  float v430; // s9
+  float v431; // s8
+  float v432; // s0
+  float v433; // s8
+  System_String_o **v434; // x21
+  UnityEngine_Networking_UnityWebRequest_o **v435; // x22
+  System_String_o *v436; // x0
+  __int64 v437; // x1
   System_String_o *text; // x23
-  System_String_o *v241; // x23
-  int32_t v242; // w2
-  int32_t v243; // w3
-  AssetLoader__LoadDataCR_d__29_o *v244; // x23
+  System_String_o *v439; // x23
+  int64_t v440; // x2
+  int32_t v441; // w3
+  System_String_o *v442; // x4
+  BattleSetupInfo_o *v443; // x5
+  FollowerInfo_o *v444; // x6
+  PartyListViewItem_o *v445; // x7
+  AssetLoader__LoadDataCR_d__29_o *v446; // x23
   int _2__current; // w8
-  int32_t v246; // w0
-  int32_t v247; // w25
-  System_String_o *v248; // x24
-  System_String_o *v249; // x23
-  System_Byte_array *v250; // x25
-  uint32_t v251; // w25
-  int v252; // w8
-  Il2CppObject *v253; // x8
-  AssetLoader__LoadDataCR_d__29_o *v254; // x21
-  int v255; // w25
-  int v256; // w27
-  System_String_o *v257; // x22
-  Il2CppObject *v258; // x8
-  AssetLoader__LoadDataCR_d__29_o *v259; // x22
-  char v260; // w8
-  const MethodInfo *v261; // x2
-  System_String_o *v262; // x23
+  int32_t v448; // w0
+  int32_t v449; // w25
+  System_String_o *v450; // x24
+  System_String_o *v451; // x23
+  __int64 v452; // x1
+  System_Byte_array *v453; // x25
+  uint32_t v454; // w25
+  int v455; // w8
+  Il2CppObject *v456; // x8
+  AssetLoader__LoadDataCR_d__29_o *v457; // x21
+  int v458; // w25
+  int v459; // w27
+  System_String_o *v460; // x22
+  Il2CppObject *v461; // x8
+  AssetLoader__LoadDataCR_d__29_o *v462; // x22
+  char v463; // w8
+  __int64 v464; // x1
+  const MethodInfo *v465; // x2
+  System_String_o *v466; // x23
   System_String_o **p_resourceNames; // x9
-  System_String_o *v264; // x22
-  System_String_o *v265; // x0
-  const MethodInfo *v266; // x2
-  int v267; // w23
-  struct AssetData_o *v268; // x8
-  ManagementManager_c *v269; // x0
-  _BOOL4 v270; // w22
-  Il2CppObject *v271; // x21
-  System_String_o *v272; // x22
-  ErrorDialog_ClickDelegate_o *v273; // x23
-  ManagementManager_c *v274; // x0
-  _BOOL4 v275; // w21
-  Il2CppObject *v276; // x19
-  __int64 *v277; // x8
-  System_String_o *v278; // x21
-  ErrorDialog_ClickDelegate_o *v279; // x22
+  System_String_o *v468; // x22
+  System_String_o *v469; // x0
+  const MethodInfo *v470; // x2
+  int v471; // w23
+  struct AssetData_o *v472; // x8
+  ManagementManager_c *v473; // x0
+  _BOOL4 v474; // w22
+  __int64 v475; // x1
+  Il2CppObject *v476; // x21
+  System_String_o *v477; // x22
+  __int64 v478; // x1
+  __int64 v479; // x2
+  __int64 v480; // x3
+  ErrorDialog_ClickDelegate_o *v481; // x23
+  ManagementManager_c *v482; // x0
+  _BOOL4 v483; // w21
+  __int64 v484; // x1
+  Il2CppObject *v485; // x19
+  __int64 *v486; // x8
+  System_String_o *v487; // x21
+  __int64 v488; // x1
+  __int64 v489; // x2
+  __int64 v490; // x3
+  ErrorDialog_ClickDelegate_o *v491; // x22
   bool result; // w0
-  __int64 *v281; // x8
-  System_String_o *v282; // x22
-  ErrorDialog_ClickDelegate_o *v283; // x23
-  int32_t v284; // w2
-  int32_t v285; // w3
-  int32_t v286; // w2
-  int32_t v287; // w3
+  __int64 *v493; // x8
+  System_String_o *v494; // x22
+  __int64 v495; // x1
+  __int64 v496; // x2
+  __int64 v497; // x3
+  ErrorDialog_ClickDelegate_o *v498; // x23
+  int64_t v499; // x2
+  int32_t v500; // w3
+  System_String_o *v501; // x4
+  BattleSetupInfo_o *v502; // x5
+  FollowerInfo_o *v503; // x6
+  PartyListViewItem_o *v504; // x7
+  int64_t v505; // x2
+  int32_t v506; // w3
+  System_String_o *v507; // x4
+  BattleSetupInfo_o *v508; // x5
+  FollowerInfo_o *v509; // x6
+  PartyListViewItem_o *v510; // x7
   System_String_o *name; // x21
-  AssetData_o *v289; // x22
-  AssetLoader__LoadDataCR_d__29_o **v290; // x21
-  __int64 v291; // x10
-  __int64 v292; // x10
-  System_Byte_array *v293; // x0
-  UnityEngine_AssetBundleCreateRequest_o *v294; // x0
-  int32_t v295; // w2
-  int32_t v296; // w3
-  int32_t v297; // w2
-  int32_t v298; // w3
-  Il2CppObject *req_5__13; // x1
-  int32_t v300; // w2
-  int32_t v301; // w3
+  AssetData_o *v512; // x22
+  AssetLoader__LoadDataCR_d__29_o **v513; // x21
+  __int64 v514; // x10
+  __int64 v515; // x10
+  System_Byte_array *v516; // x0
+  UnityEngine_AssetBundleCreateRequest_o *v517; // x0
+  int64_t v518; // x2
+  int32_t v519; // w3
+  System_String_o *v520; // x4
+  BattleSetupInfo_o *v521; // x5
+  FollowerInfo_o *v522; // x6
+  PartyListViewItem_o *v523; // x7
+  int64_t v524; // x2
+  int32_t v525; // w3
+  System_String_o *v526; // x4
+  BattleSetupInfo_o *v527; // x5
+  FollowerInfo_o *v528; // x6
+  PartyListViewItem_o *v529; // x7
+  int64_t req_5__13; // x1
+  int64_t v531; // x2
+  int32_t v532; // w3
+  System_String_o *v533; // x4
+  BattleSetupInfo_o *v534; // x5
+  FollowerInfo_o *v535; // x6
+  PartyListViewItem_o *v536; // x7
   UnityEngine_Networking_UnityWebRequest_o *LoadRequest; // x0
-  ServantStatusBattleListViewItem_o *v303; // x20
-  int32_t v304; // w2
-  int32_t v305; // w3
-  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v306; // x0
-  int32_t v307; // w2
-  int32_t v308; // w3
-  ManagerConfig_c *v309; // x0
+  PartyOrganizationUtility_o *v538; // x20
+  int64_t v539; // x2
+  int32_t v540; // w3
+  System_String_o *v541; // x4
+  BattleSetupInfo_o *v542; // x5
+  FollowerInfo_o *v543; // x6
+  PartyListViewItem_o *v544; // x7
+  UnityEngine_Networking_UnityWebRequestAsyncOperation_o *v545; // x0
+  int64_t v546; // x2
+  int32_t v547; // w3
+  System_String_o *v548; // x4
+  BattleSetupInfo_o *v549; // x5
+  FollowerInfo_o *v550; // x6
+  PartyListViewItem_o *v551; // x7
+  ManagerConfig_c *v552; // x0
   int autoRetryCount_5__3; // w21
   float DOWNLOAD_RETRY_DELAY_TIME; // s8
-  UnityEngine_WaitForSeconds_o *v312; // x20
-  int32_t v313; // w2
-  int32_t v314; // w3
-  Il2CppObject *v315; // x1
-  Il2CppObject *v316; // x1
-  int32_t v317; // w2
-  int32_t v318; // w3
-  int32_t v319; // w2
-  int32_t v320; // w3
-  Il2CppObject *v321; // x1
-  System_String_o *v322; // x1
-  int32_t v323; // w2
-  int32_t v324; // w3
-  ManagerConfig_c *v325; // x0
-  struct AssetData_o *v326; // x8
-  CommonUI_o *v327; // x22
-  System_String_o *v328; // x21
-  ErrorDialog_ClickDelegate_o *v329; // x23
-  Il2CppObject *v330; // x1
-  ManagementManager_c *v331; // x0
-  _BOOL4 v332; // w22
-  Il2CppObject *v333; // x21
-  System_String_o *v334; // x22
-  ErrorDialog_ClickDelegate_o *v335; // x23
-  System_String_o *v336; // x22
-  ErrorDialog_ClickDelegate_o *v337; // x23
-  Il2CppObject *v338; // x1
-  UnityEngine_WaitForSeconds_o *v339; // x20
-  int32_t v340; // w2
-  int32_t v341; // w3
-  AssetLoader___c_c *v342; // x0
+  UnityEngine_WaitForSeconds_o *v555; // x20
+  int64_t v556; // x2
+  int32_t v557; // w3
+  System_String_o *v558; // x4
+  BattleSetupInfo_o *v559; // x5
+  FollowerInfo_o *v560; // x6
+  PartyListViewItem_o *v561; // x7
+  int64_t v562; // x1
+  int64_t v563; // x1
+  int64_t v564; // x2
+  int32_t v565; // w3
+  System_String_o *v566; // x4
+  BattleSetupInfo_o *v567; // x5
+  FollowerInfo_o *v568; // x6
+  PartyListViewItem_o *v569; // x7
+  int64_t v570; // x2
+  int32_t v571; // w3
+  System_String_o *v572; // x4
+  BattleSetupInfo_o *v573; // x5
+  FollowerInfo_o *v574; // x6
+  PartyListViewItem_o *v575; // x7
+  int64_t v576; // x1
+  System_String_o *v577; // x1
+  int64_t v578; // x2
+  int32_t v579; // w3
+  System_String_o *v580; // x4
+  BattleSetupInfo_o *v581; // x5
+  FollowerInfo_o *v582; // x6
+  PartyListViewItem_o *v583; // x7
+  ManagerConfig_c *v584; // x0
+  struct AssetData_o *v585; // x8
+  CommonUI_o *v586; // x22
+  System_String_o *v587; // x21
+  __int64 v588; // x1
+  __int64 v589; // x2
+  __int64 v590; // x3
+  ErrorDialog_ClickDelegate_o *v591; // x23
+  int64_t v592; // x1
+  ManagementManager_c *v593; // x0
+  _BOOL4 v594; // w22
+  __int64 v595; // x1
+  Il2CppObject *v596; // x21
+  System_String_o *v597; // x22
+  __int64 v598; // x1
+  __int64 v599; // x2
+  __int64 v600; // x3
+  ErrorDialog_ClickDelegate_o *v601; // x23
+  System_String_o *v602; // x22
+  __int64 v603; // x1
+  __int64 v604; // x2
+  __int64 v605; // x3
+  ErrorDialog_ClickDelegate_o *v606; // x23
+  int64_t v607; // x1
+  UnityEngine_WaitForSeconds_o *v608; // x20
+  int64_t v609; // x2
+  int32_t v610; // w3
+  System_String_o *v611; // x4
+  BattleSetupInfo_o *v612; // x5
+  FollowerInfo_o *v613; // x6
+  PartyListViewItem_o *v614; // x7
+  AssetLoader___c_c *v615; // x0
   System_Func_bool__o *_9__29_0; // x20
-  Il2CppObject *v344; // x21
+  Il2CppObject *v617; // x21
   struct AssetLoader___c_StaticFields *static_fields; // x0
-  int32_t v346; // w2
-  int32_t v347; // w3
-  UnityEngine_WaitUntil_o *v348; // x21
-  int32_t v349; // w2
-  int32_t v350; // w3
-  UnityEngine_Networking_DownloadHandler_o *v351; // x0
-  const MethodInfo *v352; // x2
-  ManagerConfig_c *v353; // x0
-  struct ManagerConfig_StaticFields *v354; // x8
-  Il2CppObject *wait_5__10; // x1
-  ServantStatusBattleListViewItem_o *v356; // x19
-  ManagerConfig_c *v357; // x0
-  struct ManagerConfig_StaticFields *v358; // x8
-  Il2CppObject *v359; // x1
+  int64_t v619; // x2
+  int32_t v620; // w3
+  System_String_o *v621; // x4
+  BattleSetupInfo_o *v622; // x5
+  FollowerInfo_o *v623; // x6
+  PartyListViewItem_o *v624; // x7
+  UnityEngine_WaitUntil_o *v625; // x21
+  int64_t v626; // x2
+  int32_t v627; // w3
+  System_String_o *v628; // x4
+  BattleSetupInfo_o *v629; // x5
+  FollowerInfo_o *v630; // x6
+  PartyListViewItem_o *v631; // x7
+  UnityEngine_Networking_DownloadHandler_o *v632; // x0
+  const MethodInfo *v633; // x2
+  ManagerConfig_c *v634; // x0
+  struct ManagerConfig_StaticFields *v635; // x8
+  int64_t wait_5__10; // x1
+  PartyOrganizationUtility_o *v637; // x19
+  ManagerConfig_c *v638; // x0
+  struct ManagerConfig_StaticFields *v639; // x8
+  int64_t v640; // x1
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-A0h]
   System_Nullable_Vector2__o effectDistancea; // [xsp+0h] [xbp-A0h]
-  __int64 v362; // [xsp+18h] [xbp-88h]
-  __int64 v363; // [xsp+20h] [xbp-80h] BYREF
+  __int64 v643; // [xsp+18h] [xbp-88h]
+  __int64 v644; // [xsp+20h] [xbp-80h] BYREF
   Il2CppObject *value; // [xsp+28h] [xbp-78h] BYREF
 
-  v4 = this;
-  if ( (byte_4AB4DD3 & 1) == 0 )
+  v8 = this;
+  if ( (byte_4B1526C & 1) == 0 )
   {
-    sub_1BAB41C(&Method_AssetLoader_EndRebootDialog__, method);
-    sub_1BAB41C(&Method_AssetLoader_EndRetryDialog__, v5);
-    sub_1BAB41C(&Method_AssetLoader_EndWarningDialog__, v6);
-    sub_1BAB41C(&AssetManager_TypeInfo, v7);
-    sub_1BAB41C(&CatAndMouseGame_TypeInfo, v8);
-    sub_1BAB41C(&char___TypeInfo, v9);
-    sub_1BAB41C(&ErrorDialog_ClickDelegate_TypeInfo, v10);
-    sub_1BAB41C(&CommonServicePluginScript_TypeInfo, v11);
-    sub_1BAB41C(&Crc32_TypeInfo, v12);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v13);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v14);
-    sub_1BAB41C(&DownloadHandlerDecryptFileWithCrc_TypeInfo, v15);
-    sub_1BAB41C(&DownloadHandlerFileWithCrcCheck_TypeInfo, v16);
-    sub_1BAB41C(&System_Func_bool__TypeInfo, v17);
-    sub_1BAB41C(&System_IO_IOException_TypeInfo, v18);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v19);
-    sub_1BAB41C(&ManagementManager_TypeInfo, v20);
-    sub_1BAB41C(&ManagerConfig_TypeInfo, v21);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v22);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v23);
-    sub_1BAB41C(&string___TypeInfo, v24);
-    sub_1BAB41C(&Method_AssetLoader___c__LoadDataCR_b__29_0__, v25);
-    sub_1BAB41C(&AssetLoader___c_TypeInfo, v26);
-    sub_1BAB41C(&UnityEngine_WaitForEndOfFrame_TypeInfo, v27);
-    sub_1BAB41C(&UnityEngine_WaitForSeconds_TypeInfo, v28);
-    sub_1BAB41C(&UnityEngine_WaitUntil_TypeInfo, v29);
-    sub_1BAB41C(&StringLiteral_43/*"\n"*/, v30);
-    sub_1BAB41C(&StringLiteral_9222/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/, v31);
-    sub_1BAB41C(&StringLiteral_7166/*"HTTP"*/, v32);
-    sub_1BAB41C(&StringLiteral_5328/*"Disk full"*/, v33);
-    sub_1BAB41C(&StringLiteral_2504/*"AssetStorageList download time over"*/, v34);
-    sub_1BAB41C(&StringLiteral_9231/*"NETWORK_ERROR_DISK_FULL"*/, v35);
-    sub_1BAB41C(&StringLiteral_116/*" "*/, v36);
-    sub_1BAB41C(&StringLiteral_2491/*"AssetName : "*/, v37);
-    sub_1BAB41C(&StringLiteral_812/*")\n\n503 Auto retry count "*/, v38);
-    sub_1BAB41C(&StringLiteral_815/*")\nfile crc ("*/, v39);
-    sub_1BAB41C(&StringLiteral_1510/*"503"*/, v40);
-    sub_1BAB41C(&StringLiteral_2134/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, v41);
-    sub_1BAB41C(&StringLiteral_15968/*"[FFFF80]Download error for debug"*/, v42);
-    sub_1BAB41C(&StringLiteral_2501/*"AssetStorageList download data error"*/, v43);
-    sub_1BAB41C(&StringLiteral_25199/*"~"*/, v44);
-    sub_1BAB41C(&StringLiteral_12287/*"STATUS"*/, v45);
-    sub_1BAB41C(&StringLiteral_811/*")\n\n"*/, v46);
-    sub_1BAB41C(&StringLiteral_9221/*"NETWORK_ERROR_ASSET_UPDATE"*/, v47);
-    sub_1BAB41C(&StringLiteral_691/*"("*/, v48);
-    sub_1BAB41C(&StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v49);
-    sub_1BAB41C(&StringLiteral_809/*")"*/, v50);
-    sub_1BAB41C(&StringLiteral_19083/*"error "*/, v51);
-    sub_1BAB41C(&StringLiteral_1883/*"@"*/, v52);
-    sub_1BAB41C(&StringLiteral_2135/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, v53);
-    sub_1BAB41C(&StringLiteral_2502/*"AssetStorageList download error"*/, v54);
-    sub_1BAB41C(&StringLiteral_814/*")\n\nAssetBundle file download time over"*/, v55);
-    this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB41C(&StringLiteral_1/*""*/, v56);
-    byte_4AB4DD3 = 1;
+    sub_1BCA7E0(&Method_AssetLoader_EndRebootDialog__, method, v2);
+    sub_1BCA7E0(&Method_AssetLoader_EndRetryDialog__, v9, v10);
+    sub_1BCA7E0(&Method_AssetLoader_EndWarningDialog__, v11, v12);
+    sub_1BCA7E0(&AssetManager_TypeInfo, v13, v14);
+    sub_1BCA7E0(&CatAndMouseGame_TypeInfo, v15, v16);
+    sub_1BCA7E0(&char___TypeInfo, v17, v18);
+    sub_1BCA7E0(&ErrorDialog_ClickDelegate_TypeInfo, v19, v20);
+    sub_1BCA7E0(&CommonServicePluginScript_TypeInfo, v21, v22);
+    sub_1BCA7E0(&Crc32_TypeInfo, v23, v24);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v25, v26);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v27, v28);
+    sub_1BCA7E0(&DownloadHandlerDecryptFileWithCrc_TypeInfo, v29, v30);
+    sub_1BCA7E0(&DownloadHandlerFileWithCrcCheck_TypeInfo, v31, v32);
+    sub_1BCA7E0(&System_Func_bool__TypeInfo, v33, v34);
+    sub_1BCA7E0(&System_IO_IOException_TypeInfo, v35, v36);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v37, v38);
+    sub_1BCA7E0(&ManagementManager_TypeInfo, v39, v40);
+    sub_1BCA7E0(&ManagerConfig_TypeInfo, v41, v42);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v43, v44);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v45, v46);
+    sub_1BCA7E0(&string___TypeInfo, v47, v48);
+    sub_1BCA7E0(&Method_AssetLoader___c__LoadDataCR_b__29_0__, v49, v50);
+    sub_1BCA7E0(&AssetLoader___c_TypeInfo, v51, v52);
+    sub_1BCA7E0(&UnityEngine_WaitForEndOfFrame_TypeInfo, v53, v54);
+    sub_1BCA7E0(&UnityEngine_WaitForSeconds_TypeInfo, v55, v56);
+    sub_1BCA7E0(&UnityEngine_WaitUntil_TypeInfo, v57, v58);
+    sub_1BCA7E0(&StringLiteral_43/*"\n"*/, v59, v60);
+    sub_1BCA7E0(&StringLiteral_9348/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/, v61, v62);
+    sub_1BCA7E0(&StringLiteral_7287/*"HTTP"*/, v63, v64);
+    sub_1BCA7E0(&StringLiteral_5402/*"Disk full"*/, v65, v66);
+    sub_1BCA7E0(&StringLiteral_2529/*"AssetStorageList download time over"*/, v67, v68);
+    sub_1BCA7E0(&StringLiteral_9357/*"NETWORK_ERROR_DISK_FULL"*/, v69, v70);
+    sub_1BCA7E0(&StringLiteral_116/*" "*/, v71, v72);
+    sub_1BCA7E0(&StringLiteral_2516/*"AssetName : "*/, v73, v74);
+    sub_1BCA7E0(&StringLiteral_812/*")\n\n503 Auto retry count "*/, v75, v76);
+    sub_1BCA7E0(&StringLiteral_815/*")\nfile crc ("*/, v77, v78);
+    sub_1BCA7E0(&StringLiteral_1510/*"503"*/, v79, v80);
+    sub_1BCA7E0(&StringLiteral_2157/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, v81, v82);
+    sub_1BCA7E0(&StringLiteral_16105/*"[FFFF80]Download error for debug"*/, v83, v84);
+    sub_1BCA7E0(&StringLiteral_2526/*"AssetStorageList download data error"*/, v85, v86);
+    sub_1BCA7E0(&StringLiteral_25411/*"~"*/, v87, v88);
+    sub_1BCA7E0(&StringLiteral_12416/*"STATUS"*/, v89, v90);
+    sub_1BCA7E0(&StringLiteral_811/*")\n\n"*/, v91, v92);
+    sub_1BCA7E0(&StringLiteral_9347/*"NETWORK_ERROR_ASSET_UPDATE"*/, v93, v94);
+    sub_1BCA7E0(&StringLiteral_691/*"("*/, v95, v96);
+    sub_1BCA7E0(&StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v97, v98);
+    sub_1BCA7E0(&StringLiteral_809/*")"*/, v99, v100);
+    sub_1BCA7E0(&StringLiteral_19250/*"error "*/, v101, v102);
+    sub_1BCA7E0(&StringLiteral_1883/*"@"*/, v103, v104);
+    sub_1BCA7E0(&StringLiteral_2158/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, v105, v106);
+    sub_1BCA7E0(&StringLiteral_2527/*"AssetStorageList download error"*/, v107, v108);
+    sub_1BCA7E0(&StringLiteral_814/*")\n\nAssetBundle file download time over"*/, v109, v110);
+    this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA7E0(&StringLiteral_1/*""*/, v111, v112);
+    byte_4B1526C = 1;
   }
-  v363 = 0LL;
+  v644 = 0LL;
   value = 0LL;
-  _4__this = v4->fields.__4__this;
-  switch ( v4->fields.__1__state )
+  _4__this = v8->fields.__4__this;
+  switch ( v8->fields.__1__state )
   {
     case 0:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.data;
       if ( !this )
         goto LABEL_375;
       if ( this->fields.__1__state )
-        v58 = 0;
+        v114 = 0;
       else
-        v58 = AssetData__GetExt((AssetData_o *)this, method) == 0LL;
-      v4->fields._isEncrypted_5__2 = v58;
-      v4->fields._autoRetryCount_5__3 = 0;
+        v114 = AssetData__GetExt((AssetData_o *)this, method) == 0LL;
+      v8->fields._isEncrypted_5__2 = v114;
+      v8->fields._autoRetryCount_5__3 = 0;
       goto LABEL_59;
     case 1:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_78;
     case 2:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_148;
     case 3:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_173;
     case 4:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_172;
     case 5:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_196;
     case 6:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_337;
     case 7:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_352;
     case 8:
-      v4->fields._asyncOperater_5__12 = 0LL;
-      v4->fields.__1__state = -1;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._asyncOperater_5__12, 0, (int32_t)v2, v3);
+      v8->fields._asyncOperater_5__12 = 0LL;
+      v8->fields.__1__state = -1;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
       goto LABEL_189;
     case 9:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_289;
     case 0xA:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       goto LABEL_312;
     case 0xB:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_375;
       p_loader = &_4__this->fields.loader;
@@ -1690,7 +2228,7 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
       this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IsNullOrEmpty(error, 0LL);
       if ( !*p_loader )
         goto LABEL_375;
-      v62 = (char)this;
+      v118 = (char)this;
       downloadHandler = UnityEngine_Networking_UnityWebRequest__get_downloadHandler(*p_loader, 0LL);
       if ( downloadHandler )
       {
@@ -1698,10 +2236,10 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
         if ( LOBYTE(downloadHandler->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low )
         {
           if ( (DownloadHandlerDecryptFileWithCrc_c *)downloadHandler->klass->_2.typeHierarchy[methodPtr_low - 1] == DownloadHandlerDecryptFileWithCrc_TypeInfo )
-            v65 = downloadHandler;
+            v121 = downloadHandler;
           else
-            v65 = 0LL;
-          if ( (v62 & 1) != 0 )
+            v121 = 0LL;
+          if ( (v118 & 1) != 0 )
             goto LABEL_30;
 LABEL_47:
           this = (AssetLoader__LoadDataCR_d__29_o *)*p_loader;
@@ -1709,7 +2247,7 @@ LABEL_47:
             goto LABEL_375;
           UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
           _4__this->fields.loader = 0LL;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v77, v78);
+          sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v141, v142, v143, v144, v145, v146);
           data = _4__this->fields.data;
           *(_WORD *)&_4__this->fields.isRequestDownload = 257;
           if ( !data )
@@ -1718,13 +2256,13 @@ LABEL_47:
           goto LABEL_59;
         }
       }
-      v65 = 0LL;
-      if ( (v62 & 1) == 0 )
+      v121 = 0LL;
+      if ( (v118 & 1) == 0 )
         goto LABEL_47;
 LABEL_30:
-      if ( v65 )
+      if ( v121 )
       {
-        this = (AssetLoader__LoadDataCR_d__29_o *)LODWORD(v65[1].klass);
+        this = (AssetLoader__LoadDataCR_d__29_o *)LODWORD(v121[1].klass);
       }
       else
       {
@@ -1736,43 +2274,51 @@ LABEL_30:
                                                     0LL);
         if ( !this )
           goto LABEL_375;
-        v80 = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
-        _4__this->fields.readData = v80;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, (int32_t)v80, v81, v82);
+        v148 = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
+        _4__this->fields.readData = v148;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&_4__this->fields.readData,
+          (int64_t)v148,
+          v149,
+          v150,
+          v151,
+          v152,
+          v153,
+          v154);
         readData = _4__this->fields.readData;
         if ( !Crc32_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
+          j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v155);
         this = (AssetLoader__LoadDataCR_d__29_o *)Crc32__Compute(readData, 0LL);
       }
-      v84 = _4__this->fields.data;
-      if ( !v84 )
+      v157 = _4__this->fields.data;
+      if ( !v157 )
         goto LABEL_375;
-      if ( (_DWORD)this == v84->fields.crc )
+      if ( (_DWORD)this == v157->fields.crc )
         goto LABEL_294;
       *(_WORD *)&_4__this->fields.isRequestDownload = 257;
-      v84->fields.nowVersion = 0;
+      v157->fields.nowVersion = 0;
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
       UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
       _4__this->fields.loader = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v85, v86);
+      sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v158, v159, v160, v161, v162, v163);
       _4__this->fields.readData = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, 0, v87, v88);
+      sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v164, v165, v166, v167, v168, v169);
 LABEL_59:
       while ( 1 )
       {
         _4__this->fields.readData = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, 0, (int32_t)v2, v3);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
         if ( _4__this->fields.isDownload )
           break;
 LABEL_292:
-        v84 = _4__this->fields.data;
-        if ( !v84 )
+        v157 = _4__this->fields.data;
+        if ( !v157 )
           goto LABEL_375;
-        if ( v84->fields.entryCount >= 1 )
+        if ( v157->fields.entryCount >= 1 )
         {
-          if ( v4->fields._isEncrypted_5__2 )
+          if ( v8->fields._isEncrypted_5__2 )
           {
 LABEL_312:
             this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.data;
@@ -1780,70 +2326,78 @@ LABEL_312:
               goto LABEL_375;
             LoadRequest = AssetData__GetLoadRequest((AssetData_o *)this, method);
             _4__this->fields.loader = LoadRequest;
-            v303 = (ServantStatusBattleListViewItem_o *)&_4__this->fields.loader;
-            sub_1BAB3C0(v303, (int32_t)LoadRequest, v304, v305);
-            this = (AssetLoader__LoadDataCR_d__29_o *)v303->klass;
-            if ( !v303->klass )
+            v538 = (PartyOrganizationUtility_o *)&_4__this->fields.loader;
+            sub_1BCA784(v538, (int64_t)LoadRequest, v539, v540, v541, v542, v543, v544);
+            this = (AssetLoader__LoadDataCR_d__29_o *)v538->klass;
+            if ( !v538->klass )
               goto LABEL_375;
-            v306 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
+            v545 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
                      (UnityEngine_Networking_UnityWebRequest_o *)this,
                      0LL);
-            v4->fields.__2__current = (Il2CppObject *)v306;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)v306, v307, v308);
-            v72 = 11;
+            v8->fields.__2__current = (Il2CppObject *)v545;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, (int64_t)v545, v546, v547, v548, v549, v550, v551);
+            v132 = 11;
           }
           else
           {
-            v342 = AssetLoader___c_TypeInfo;
+            v615 = AssetLoader___c_TypeInfo;
             if ( !AssetLoader___c_TypeInfo->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(AssetLoader___c_TypeInfo);
-              v342 = AssetLoader___c_TypeInfo;
+              j_il2cpp_runtime_class_init_0(AssetLoader___c_TypeInfo, method);
+              v615 = AssetLoader___c_TypeInfo;
             }
-            _9__29_0 = v342->static_fields->__9__29_0;
+            _9__29_0 = v615->static_fields->__9__29_0;
             if ( !_9__29_0 )
             {
-              if ( !v342->_2.cctor_finished )
+              if ( !v615->_2.cctor_finished )
               {
-                j_il2cpp_runtime_class_init_0(v342);
-                v342 = AssetLoader___c_TypeInfo;
+                j_il2cpp_runtime_class_init_0(v615, method);
+                v615 = AssetLoader___c_TypeInfo;
               }
-              v344 = (Il2CppObject *)v342->static_fields->__9;
-              _9__29_0 = (System_Func_bool__o *)sub_1BAB668(System_Func_bool__TypeInfo);
-              System_Func_bool____ctor(_9__29_0, v344, Method_AssetLoader___c__LoadDataCR_b__29_0__, 0LL);
+              v617 = (Il2CppObject *)v615->static_fields->__9;
+              _9__29_0 = (System_Func_bool__o *)sub_1BCAA2C(System_Func_bool__TypeInfo, method, v2, v3);
+              System_Func_bool____ctor(_9__29_0, v617, Method_AssetLoader___c__LoadDataCR_b__29_0__, 0LL);
               static_fields = AssetLoader___c_TypeInfo->static_fields;
               static_fields->__9__29_0 = _9__29_0;
-              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__29_0, (int32_t)_9__29_0, v346, v347);
+              sub_1BCA784(
+                (PartyOrganizationUtility_o *)&static_fields->__9__29_0,
+                (int64_t)_9__29_0,
+                v619,
+                v620,
+                v621,
+                v622,
+                v623,
+                v624);
             }
-            v348 = (UnityEngine_WaitUntil_o *)sub_1BAB668(UnityEngine_WaitUntil_TypeInfo);
-            UnityEngine_WaitUntil___ctor(v348, _9__29_0, 0LL);
-            v4->fields.__2__current = (Il2CppObject *)v348;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)v348, v349, v350);
-            v72 = 10;
+            v625 = (UnityEngine_WaitUntil_o *)sub_1BCAA2C(UnityEngine_WaitUntil_TypeInfo, method, v2, v3);
+            UnityEngine_WaitUntil___ctor(v625, _9__29_0, 0LL);
+            v8->fields.__2__current = (Il2CppObject *)v625;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, (int64_t)v625, v626, v627, v628, v629, v630, v631);
+            v132 = 10;
           }
           goto LABEL_355;
         }
 LABEL_294:
         if ( _4__this->fields.isDownload )
         {
-          name = v84->fields.name;
+          name = v157->fields.name;
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+            j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
           this = (AssetLoader__LoadDataCR_d__29_o *)AssetManager__isExistAssetStorage(name, method);
           if ( ((unsigned __int8)this & 1) != 0 )
             continue;
         }
 LABEL_298:
-        v289 = _4__this->fields.data;
-        if ( !v289 )
+        v512 = _4__this->fields.data;
+        if ( !v512 )
           goto LABEL_375;
-        if ( v289->fields.entryCount >= 1 )
+        if ( v512->fields.entryCount >= 1 )
         {
-          v290 = (AssetLoader__LoadDataCR_d__29_o **)&_4__this->fields.loader;
+          v513 = (AssetLoader__LoadDataCR_d__29_o **)&_4__this->fields.loader;
           this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
-          if ( v4->fields._isEncrypted_5__2 )
+          if ( v8->fields._isEncrypted_5__2 )
           {
             if ( !this )
               goto LABEL_375;
@@ -1851,50 +2405,58 @@ LABEL_298:
                                                         (UnityEngine_Networking_UnityWebRequest_o *)this,
                                                         0LL);
             if ( !this
-              || (v291 = LOBYTE(DownloadHandlerDecryptFileWithCrc_TypeInfo->vtable._0_Equals.methodPtr),
-                  LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)v291)
-              || (DownloadHandlerDecryptFileWithCrc_c *)this->klass->_2.typeHierarchy[v291 - 1] != DownloadHandlerDecryptFileWithCrc_TypeInfo )
+              || (v514 = LOBYTE(DownloadHandlerDecryptFileWithCrc_TypeInfo->vtable._0_Equals.methodPtr),
+                  LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)v514)
+              || (DownloadHandlerDecryptFileWithCrc_c *)this->klass->_2.typeHierarchy[v514 - 1] != DownloadHandlerDecryptFileWithCrc_TypeInfo )
             {
-              this = *v290;
-              if ( !*v290 )
+              this = *v513;
+              if ( !*v513 )
                 goto LABEL_375;
               this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
                                                           (UnityEngine_Networking_UnityWebRequest_o *)this,
                                                           0LL);
               if ( !this )
                 goto LABEL_375;
-              v292 = LOBYTE(DownloadHandlerFileWithCrcCheck_TypeInfo->vtable._0_Equals.methodPtr);
-              if ( LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)v292
-                || (DownloadHandlerFileWithCrcCheck_c *)this->klass->_2.typeHierarchy[v292 - 1] != DownloadHandlerFileWithCrcCheck_TypeInfo )
+              v515 = LOBYTE(DownloadHandlerFileWithCrcCheck_TypeInfo->vtable._0_Equals.methodPtr);
+              if ( LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)v515
+                || (DownloadHandlerFileWithCrcCheck_c *)this->klass->_2.typeHierarchy[v515 - 1] != DownloadHandlerFileWithCrcCheck_TypeInfo )
               {
                 goto LABEL_375;
               }
             }
-            v293 = UnityEngine_Networking_DownloadHandler__get_data(
+            v516 = UnityEngine_Networking_DownloadHandler__get_data(
                      (UnityEngine_Networking_DownloadHandler_o *)this,
                      0LL);
-            v294 = UnityEngine_AssetBundle__LoadFromMemoryAsync(v293, 0LL);
-            v4->fields._req_5__13 = v294;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._req_5__13, (int32_t)v294, v295, v296);
-            this = *v290;
-            if ( !*v290 )
+            v517 = UnityEngine_AssetBundle__LoadFromMemoryAsync(v516, 0LL);
+            v8->fields._req_5__13 = v517;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v8->fields._req_5__13,
+              (int64_t)v517,
+              v518,
+              v519,
+              v520,
+              v521,
+              v522,
+              v523);
+            this = *v513;
+            if ( !*v513 )
               goto LABEL_375;
             UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-            *v290 = 0LL;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v297, v298);
-            req_5__13 = (Il2CppObject *)v4->fields._req_5__13;
-            v4->fields.__2__current = req_5__13;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)req_5__13, v300, v301);
-            v72 = 12;
+            *v513 = 0LL;
+            sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v524, v525, v526, v527, v528, v529);
+            req_5__13 = (int64_t)v8->fields._req_5__13;
+            v8->fields.__2__current = (Il2CppObject *)req_5__13;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, req_5__13, v531, v532, v533, v534, v535, v536);
+            v132 = 12;
             goto LABEL_355;
           }
           if ( !this )
             goto LABEL_375;
-          v351 = UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
+          v632 = UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
                    (UnityEngine_Networking_UnityWebRequest_o *)this,
                    0LL);
-          AssetData__SetData(v289, v351, v352);
+          AssetData__SetData(v512, v632, v633);
         }
 LABEL_38:
         loader = _4__this->fields.loader;
@@ -1902,55 +2464,79 @@ LABEL_38:
         {
           UnityEngine_Networking_UnityWebRequest__Dispose(loader, 0LL);
           _4__this->fields.loader = 0LL;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v74, v75);
+          sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v134, v135, v136, v137, v138, v139);
         }
         _4__this->fields.readData = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, 0, (int32_t)v2, v3);
-        AssetLoader__EndLoad(_4__this, v76);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+        AssetLoader__EndLoad(_4__this, v140);
         return 0;
       }
-      *(_WORD *)&v4->fields._isAutoRetry_5__4 = 0;
-      v4->fields._errorCode_5__6 = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, 0, (int32_t)v2, v3);
-      v4->fields._errorLocalizeCode_5__7 = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorLocalizeCode_5__7, 0, v89, v90);
+      *(_WORD *)&v8->fields._isAutoRetry_5__4 = 0;
+      v8->fields._errorCode_5__6 = 0LL;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+      v8->fields._errorLocalizeCode_5__7 = 0LL;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7,
+        0LL,
+        v170,
+        v171,
+        v172,
+        v173,
+        v174,
+        v175);
       unscaledTime = UnityEngine_Time__get_unscaledTime(0LL);
-      v92 = ManagerConfig_TypeInfo;
-      v93 = unscaledTime;
+      v180 = ManagerConfig_TypeInfo;
+      v181 = unscaledTime;
       if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v92 = ManagerConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v176);
+        v180 = ManagerConfig_TypeInfo;
       }
-      TIMEOUT = v92->static_fields->TIMEOUT;
-      v4->fields._loadProgress_5__9 = 0.0;
-      v4->fields._requestTime_5__8 = v93 + TIMEOUT;
-      v95 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BAB668(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v95, 0LL);
-      v4->fields._wait_5__10 = v95;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._wait_5__10, (int32_t)v95, v96, v97);
-      Path = AssetStorageCache__GetPath(v98);
+      TIMEOUT = v180->static_fields->TIMEOUT;
+      v8->fields._loadProgress_5__9 = 0.0;
+      v8->fields._requestTime_5__8 = v181 + TIMEOUT;
+      v183 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BCAA2C(UnityEngine_WaitForEndOfFrame_TypeInfo, v176, v177, v178);
+      UnityEngine_WaitForEndOfFrame___ctor(v183, 0LL);
+      v8->fields._wait_5__10 = v183;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._wait_5__10,
+        (int64_t)v183,
+        v184,
+        v185,
+        v186,
+        v187,
+        v188,
+        v189);
+      Path = AssetStorageCache__GetPath(0LL);
       if ( !CommonServicePluginScript_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CommonServicePluginScript_TypeInfo);
+        j_il2cpp_runtime_class_init_0(CommonServicePluginScript_TypeInfo, v190);
       FreeSize = CommonServicePluginScript__GetFreeSize(Path, 0LL);
       if ( FreeSize >= 1 )
       {
-        v103 = FreeSize;
-        v104 = ManagerConfig_TypeInfo;
+        v199 = FreeSize;
+        v200 = ManagerConfig_TypeInfo;
         if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v104 = ManagerConfig_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+          v200 = ManagerConfig_TypeInfo;
         }
-        if ( v103 < v104->static_fields->LIMIT_FREE_SIZE )
+        if ( v199 < v200->static_fields->LIMIT_FREE_SIZE )
         {
           _4__this->fields.isErrorDialog = 1;
-          v105 = StringLiteral_5328/*"Disk full"*/;
-          v4->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_5328/*"Disk full"*/;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, v105, v101, v102);
-          p_errorLocalizeCode_5__7 = (ServantStatusBattleListViewItem_o *)&v4->fields._errorLocalizeCode_5__7;
-          v109 = StringLiteral_9231/*"NETWORK_ERROR_DISK_FULL"*/;
-          v4->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9231/*"NETWORK_ERROR_DISK_FULL"*/;
+          v201 = StringLiteral_5402/*"Disk full"*/;
+          v8->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_5402/*"Disk full"*/;
+          sub_1BCA784(
+            (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
+            v201,
+            v193,
+            v194,
+            v195,
+            v196,
+            v197,
+            v198);
+          p_errorLocalizeCode_5__7 = (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7;
+          v209 = StringLiteral_9357/*"NETWORK_ERROR_DISK_FULL"*/;
+          v8->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9357/*"NETWORK_ERROR_DISK_FULL"*/;
           goto LABEL_141;
         }
       }
@@ -1958,45 +2544,69 @@ LABEL_38:
       if ( !this )
         goto LABEL_375;
       Url = AssetData__get_Url((AssetData_o *)this, method);
-      v4->fields._url_5__11 = Url;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._url_5__11, (int32_t)Url, v111, v112);
+      v8->fields._url_5__11 = Url;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._url_5__11,
+        (int64_t)Url,
+        v211,
+        v212,
+        v213,
+        v214,
+        v215,
+        v216);
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.data;
       if ( !this )
         goto LABEL_375;
-      url_5__11 = v4->fields._url_5__11;
+      url_5__11 = v8->fields._url_5__11;
       this = (AssetLoader__LoadDataCR_d__29_o *)AssetData__get_Path((AssetData_o *)this, method);
-      v114 = _4__this->fields.data;
-      v115 = this;
-      if ( v4->fields._isEncrypted_5__2 )
+      v218 = _4__this->fields.data;
+      v219 = this;
+      if ( v8->fields._isEncrypted_5__2 )
       {
-        if ( !v114 )
+        if ( !v218 )
           goto LABEL_375;
-        v116 = v114->fields.entryCount > 0;
+        v220 = v218->fields.entryCount > 0;
       }
       else
       {
-        if ( !v114 )
+        if ( !v218 )
           goto LABEL_375;
-        v116 = 0;
+        v220 = 0;
       }
       Key = AssetData__get_Key(_4__this->fields.data, method);
-      v118 = UnityWebRequestFileWithCrcCheck__CreateRequest(url_5__11, (System_String_o *)v115, v116, Key, 0LL);
-      _4__this->fields.loader = v118;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, (int32_t)v118, v119, v120);
+      v222 = UnityWebRequestFileWithCrcCheck__CreateRequest(url_5__11, (System_String_o *)v219, v220, Key, 0LL);
+      _4__this->fields.loader = v222;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&_4__this->fields.loader,
+        (int64_t)v222,
+        v223,
+        v224,
+        v225,
+        v226,
+        v227,
+        v228);
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
-      v121 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
+      v229 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
                (UnityEngine_Networking_UnityWebRequest_o *)this,
                0LL);
-      v4->fields._asyncOperater_5__12 = v121;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._asyncOperater_5__12, (int32_t)v121, v122, v123);
+      v8->fields._asyncOperater_5__12 = v229;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12,
+        (int64_t)v229,
+        v230,
+        v231,
+        v232,
+        v233,
+        v234,
+        v235);
 LABEL_78:
-      p_asyncOperater_5__12 = (AssetLoader__LoadDataCR_d__29_o **)&v4->fields._asyncOperater_5__12;
-      this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._asyncOperater_5__12;
+      p_asyncOperater_5__12 = (AssetLoader__LoadDataCR_d__29_o **)&v8->fields._asyncOperater_5__12;
+      this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
       if ( !this )
 LABEL_375:
-        sub_1BAB678(this, method);
+        sub_1BCAA3C(this, method);
       this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_AsyncOperation__get_isDone(
                                                   (UnityEngine_AsyncOperation_o *)this,
                                                   0LL);
@@ -2006,37 +2616,37 @@ LABEL_375:
         if ( !*p_asyncOperater_5__12 )
           goto LABEL_375;
         progress = UnityEngine_AsyncOperation__get_progress((UnityEngine_AsyncOperation_o *)this, 0LL);
-        loadProgress_5__9 = v4->fields._loadProgress_5__9;
-        v127 = progress;
-        v130 = UnityEngine_Time__get_unscaledTime(0LL);
-        v131 = v127 == loadProgress_5__9;
-        v132 = v130;
-        if ( !v131 )
+        loadProgress_5__9 = v8->fields._loadProgress_5__9;
+        v239 = progress;
+        v246 = UnityEngine_Time__get_unscaledTime(0LL);
+        v247 = v239 == loadProgress_5__9;
+        v248 = v246;
+        if ( !v247 )
         {
-          v353 = ManagerConfig_TypeInfo;
+          v634 = ManagerConfig_TypeInfo;
           if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-            v353 = ManagerConfig_TypeInfo;
+            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+            v634 = ManagerConfig_TypeInfo;
           }
-          v354 = v353->static_fields;
-          this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._asyncOperater_5__12;
-          v4->fields._requestTime_5__8 = v132 + v354->TIMEOUT;
+          v635 = v634->static_fields;
+          this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
+          v8->fields._requestTime_5__8 = v248 + v635->TIMEOUT;
           if ( !this )
             goto LABEL_375;
-          v4->fields._loadProgress_5__9 = UnityEngine_AsyncOperation__get_progress(
+          v8->fields._loadProgress_5__9 = UnityEngine_AsyncOperation__get_progress(
                                             (UnityEngine_AsyncOperation_o *)this,
                                             0LL);
 LABEL_369:
-          wait_5__10 = (Il2CppObject *)v4->fields._wait_5__10;
-          v4->fields.__2__current = wait_5__10;
-          v356 = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-          sub_1BAB3C0(v356, (int32_t)wait_5__10, v128, v129);
+          wait_5__10 = (int64_t)v8->fields._wait_5__10;
+          v8->fields.__2__current = (Il2CppObject *)wait_5__10;
+          v637 = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+          sub_1BCA784(v637, wait_5__10, v240, v241, v242, v243, v244, v245);
           result = 1;
-          *(_DWORD *)&v356[-1].fields.isMine = 1;
+          *(_DWORD *)&v637[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
           return result;
         }
-        if ( v130 < v4->fields._requestTime_5__8 )
+        if ( v246 < v8->fields._requestTime_5__8 )
           goto LABEL_369;
       }
       if ( !_4__this )
@@ -2044,139 +2654,207 @@ LABEL_369:
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
-      v133 = UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
+      v249 = UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
                (UnityEngine_Networking_UnityWebRequest_o *)this,
                0LL);
-      if ( v133
-        && (v134 = LOBYTE(DownloadHandlerFileWithCrcCheck_TypeInfo->vtable._0_Equals.methodPtr),
-            LOBYTE(v133->klass->vtable._0_Equals.methodPtr) >= (unsigned int)v134) )
+      if ( v249
+        && (v250 = LOBYTE(DownloadHandlerFileWithCrcCheck_TypeInfo->vtable._0_Equals.methodPtr),
+            LOBYTE(v249->klass->vtable._0_Equals.methodPtr) >= (unsigned int)v250) )
       {
-        v135 = (DownloadHandlerFileWithCrcCheck_c *)v133->klass->_2.typeHierarchy[v134 - 1] == DownloadHandlerFileWithCrcCheck_TypeInfo
-             ? v133
+        v251 = (DownloadHandlerFileWithCrcCheck_c *)v249->klass->_2.typeHierarchy[v250 - 1] == DownloadHandlerFileWithCrcCheck_TypeInfo
+             ? v249
              : 0LL;
       }
       else
       {
-        v135 = 0LL;
+        v251 = 0LL;
       }
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
       if ( !UnityEngine_Networking_UnityWebRequest__get_isDone((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL) )
       {
-        v140 = System_String__Concat_62059388(
+        v260 = System_String__Concat_62412480(
                  (System_String_o *)StringLiteral_691/*"("*/,
-                 v4->fields._url_5__11,
+                 v8->fields._url_5__11,
                  (System_String_o *)StringLiteral_814/*")\n\nAssetBundle file download time over"*/,
                  0LL);
-        v4->fields._errorCode_5__6 = v140;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, (int32_t)v140, v141, v142);
+        v8->fields._errorCode_5__6 = v260;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
+          (int64_t)v260,
+          v261,
+          v262,
+          v263,
+          v264,
+          v265,
+          v266);
         this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
         if ( !this )
           goto LABEL_375;
         UnityEngine_Networking_UnityWebRequest__Abort((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-        if ( v135 )
-          DownloadHandlerFileWithCrcCheck__CloseStream((DownloadHandlerFileWithCrcCheck_o *)v135, 0LL);
+        if ( v251 )
+          DownloadHandlerFileWithCrcCheck__CloseStream((DownloadHandlerFileWithCrcCheck_o *)v251, 0LL);
         goto LABEL_140;
       }
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
-      v136 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IsNullOrEmpty(v136, 0LL);
+      v252 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IsNullOrEmpty(v252, 0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        if ( !v135 )
+        if ( !v251 )
         {
           klass = 0;
 LABEL_127:
-          HIDWORD(v363) = klass;
-          v167 = _4__this->fields.data;
-          if ( !v167 )
+          HIDWORD(v644) = klass;
+          v298 = _4__this->fields.data;
+          if ( !v298 )
             goto LABEL_375;
-          if ( klass == v167->fields.crc )
+          if ( klass == v298->fields.crc )
           {
-            v167->fields.nowVersion = v167->fields.newVersion;
+            v298->fields.nowVersion = v298->fields.newVersion;
             _4__this->fields.isDownload = 0;
           }
           else
           {
-            this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(string___TypeInfo, 7LL);
+            this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(string___TypeInfo, 7LL);
             if ( !this )
               goto LABEL_375;
-            v170 = this;
+            v305 = this;
             if ( !LODWORD(this->fields.__2__current) )
               goto LABEL_258;
-            v171 = StringLiteral_691/*"("*/;
+            v306 = StringLiteral_691/*"("*/;
             this->fields.__4__this = (struct AssetLoader_o *)StringLiteral_691/*"("*/;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.__4__this, v171, v168, v169);
-            if ( LODWORD(v170->fields.__2__current) <= 1 )
+            sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.__4__this, v306, v299, v300, v301, v302, v303, v304);
+            if ( LODWORD(v305->fields.__2__current) <= 1 )
               goto LABEL_258;
-            v174 = v4->fields._url_5__11;
-            v170->fields.resourceNames = (struct System_String_array *)v174;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v170->fields.resourceNames, (int32_t)v174, v172, v173);
-            if ( LODWORD(v170->fields.__2__current) <= 2 )
+            v313 = (int64_t)v8->fields._url_5__11;
+            v305->fields.resourceNames = (struct System_String_array *)v313;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields.resourceNames,
+              v313,
+              v307,
+              v308,
+              v309,
+              v310,
+              v311,
+              v312);
+            if ( LODWORD(v305->fields.__2__current) <= 2 )
               goto LABEL_258;
-            v177 = StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
-            *(_QWORD *)&v170->fields._isEncrypted_5__2 = StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v170->fields._isEncrypted_5__2, v177, v175, v176);
-            v178 = _4__this->fields.data;
-            if ( !v178 )
+            v320 = StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
+            *(_QWORD *)&v305->fields._isEncrypted_5__2 = StringLiteral_813/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields._isEncrypted_5__2,
+              v320,
+              v314,
+              v315,
+              v316,
+              v317,
+              v318,
+              v319);
+            v321 = _4__this->fields.data;
+            if ( !v321 )
               goto LABEL_375;
-            LODWORD(v363) = v178->fields.crc;
-            this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__ToString((uint32_t)&v363, 0LL);
-            if ( LODWORD(v170->fields.__2__current) <= 3 )
+            LODWORD(v644) = v321->fields.crc;
+            this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__ToString((uint32_t)&v644, 0LL);
+            if ( LODWORD(v305->fields.__2__current) <= 3 )
               goto LABEL_258;
-            *(_QWORD *)&v170->fields._isAutoRetry_5__4 = this;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v170->fields._isAutoRetry_5__4, (int32_t)this, v179, v180);
-            if ( LODWORD(v170->fields.__2__current) <= 4 )
+            *(_QWORD *)&v305->fields._isAutoRetry_5__4 = this;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields._isAutoRetry_5__4,
+              (int64_t)this,
+              v322,
+              v323,
+              v324,
+              v325,
+              v326,
+              v327);
+            if ( LODWORD(v305->fields.__2__current) <= 4 )
               goto LABEL_258;
-            v183 = StringLiteral_815/*")\nfile crc ("*/;
-            v170->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_815/*")\nfile crc ("*/;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v170->fields._errorCode_5__6, v183, v181, v182);
-            this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__ToString((uint32_t)&v363 + 4, 0LL);
-            if ( LODWORD(v170->fields.__2__current) <= 5 )
+            v334 = StringLiteral_815/*")\nfile crc ("*/;
+            v305->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_815/*")\nfile crc ("*/;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields._errorCode_5__6,
+              v334,
+              v328,
+              v329,
+              v330,
+              v331,
+              v332,
+              v333);
+            this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__ToString((uint32_t)&v644 + 4, 0LL);
+            if ( LODWORD(v305->fields.__2__current) <= 5 )
               goto LABEL_258;
-            v170->fields._errorLocalizeCode_5__7 = (struct System_String_o *)this;
-            sub_1BAB3C0(
-              (ServantStatusBattleListViewItem_o *)&v170->fields._errorLocalizeCode_5__7,
-              (int32_t)this,
-              v184,
-              v185);
-            if ( LODWORD(v170->fields.__2__current) <= 6 )
+            v305->fields._errorLocalizeCode_5__7 = (struct System_String_o *)this;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields._errorLocalizeCode_5__7,
+              (int64_t)this,
+              v335,
+              v336,
+              v337,
+              v338,
+              v339,
+              v340);
+            if ( LODWORD(v305->fields.__2__current) <= 6 )
               goto LABEL_258;
-            v188 = StringLiteral_809/*")"*/;
-            *(_QWORD *)&v170->fields._requestTime_5__8 = StringLiteral_809/*")"*/;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v170->fields._requestTime_5__8, v188, v186, v187);
-            v189 = System_String__Concat_62061656((System_String_array *)v170, 0LL);
-            v4->fields._errorCode_5__6 = v189;
-            sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, (int32_t)v189, v190, v191);
-            v4->fields._isCrcError_5__5 = 1;
+            v347 = StringLiteral_809/*")"*/;
+            *(_QWORD *)&v305->fields._requestTime_5__8 = StringLiteral_809/*")"*/;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v305->fields._requestTime_5__8,
+              v347,
+              v341,
+              v342,
+              v343,
+              v344,
+              v345,
+              v346);
+            v348 = System_String__Concat_62414748((System_String_array *)v305, 0LL);
+            v8->fields._errorCode_5__6 = v348;
+            sub_1BCA784(
+              (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
+              (int64_t)v348,
+              v349,
+              v350,
+              v351,
+              v352,
+              v353,
+              v354);
+            v8->fields._isCrcError_5__5 = 1;
           }
           goto LABEL_140;
         }
-        if ( !v135[4].klass )
+        if ( !v251[4].klass )
         {
-          klass = (int)v135[1].klass;
+          klass = (int)v251[1].klass;
           goto LABEL_127;
         }
       }
-      else if ( !v135 )
+      else if ( !v251 )
       {
 LABEL_110:
         this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
         if ( !this )
           goto LABEL_375;
-        v154 = v4->fields._url_5__11;
-        v155 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-        v156 = System_String__Concat_62061392(
+        v282 = v8->fields._url_5__11;
+        v283 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
+        v284 = System_String__Concat_62414484(
                  (System_String_o *)StringLiteral_691/*"("*/,
-                 v154,
+                 v282,
                  (System_String_o *)StringLiteral_811/*")\n\n"*/,
-                 v155,
+                 v283,
                  0LL);
-        v4->fields._errorCode_5__6 = v156;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, (int32_t)v156, v157, v158);
+        v8->fields._errorCode_5__6 = v284;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
+          (int64_t)v284,
+          v285,
+          v286,
+          v287,
+          v288,
+          v289,
+          v290);
         this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
         if ( !this )
           goto LABEL_375;
@@ -2185,36 +2863,36 @@ LABEL_110:
                             0LL);
         if ( !ResponseHeaders )
           goto LABEL_140;
-        v160 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
+        v292 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
         if ( System_Collections_Generic_Dictionary_object__object___get_Count(
                (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders,
-               (const MethodInfo_321321C *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
+               (const MethodInfo_3264F30 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
           || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
-                v160,
-                (Il2CppObject *)StringLiteral_12287/*"STATUS"*/,
+                v292,
+                (Il2CppObject *)StringLiteral_12416/*"STATUS"*/,
                 &value,
-                (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+                (const MethodInfo_3266A6C *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
         {
           goto LABEL_140;
         }
-        v161 = value;
-        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(char___TypeInfo, 1LL);
+        v293 = value;
+        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(char___TypeInfo, 1LL);
         if ( !this )
           goto LABEL_375;
         method = (const MethodInfo *)this;
         if ( !LODWORD(this->fields.__2__current) )
           goto LABEL_258;
         LOWORD(this->fields.__4__this) = 32;
-        if ( !v161 )
+        if ( !v293 )
           goto LABEL_375;
-        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62070520(
-                                                    (System_String_o *)v161,
+        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62423612(
+                                                    (System_String_o *)v293,
                                                     (System_Char_array *)this,
                                                     1,
                                                     0LL);
         if ( !this )
           goto LABEL_375;
-        v162 = this;
+        v294 = this;
         if ( SLODWORD(this->fields.__2__current) < 2 )
           goto LABEL_140;
         this = (AssetLoader__LoadDataCR_d__29_o *)this->fields.__4__this;
@@ -2222,115 +2900,114 @@ LABEL_110:
           goto LABEL_375;
         this = (AssetLoader__LoadDataCR_d__29_o *)System_String__StartsWith(
                                                     (System_String_o *)this,
-                                                    (System_String_o *)StringLiteral_7166/*"HTTP"*/,
+                                                    (System_String_o *)StringLiteral_7287/*"HTTP"*/,
                                                     0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_140;
-        if ( LODWORD(v162->fields.__2__current) <= 1 )
+        if ( LODWORD(v294->fields.__2__current) <= 1 )
           goto LABEL_258;
-        this = (AssetLoader__LoadDataCR_d__29_o *)v162->fields.resourceNames;
+        this = (AssetLoader__LoadDataCR_d__29_o *)v294->fields.resourceNames;
         if ( !this )
           goto LABEL_375;
-        if ( !System_String__Equals_62056444((System_String_o *)this, (System_String_o *)StringLiteral_1510/*"503"*/, 0LL) )
+        if ( !System_String__Equals_62409536((System_String_o *)this, (System_String_o *)StringLiteral_1510/*"503"*/, 0LL) )
           goto LABEL_140;
-        v163 = v4->fields._url_5__11;
-        v164 = v4->fields._autoRetryCount_5__3 + 1;
-        v4->fields._isAutoRetry_5__4 = 1;
-        v4->fields._autoRetryCount_5__3 = v164;
-        v165 = System_Int32__ToString((int)v4 + 52, 0LL);
-        v166 = System_String__Concat_62061392(
+        v295 = v8->fields._url_5__11;
+        v296 = v8->fields._autoRetryCount_5__3 + 1;
+        v8->fields._isAutoRetry_5__4 = 1;
+        v8->fields._autoRetryCount_5__3 = v296;
+        v297 = System_Int32__ToString((int)v8 + 52, 0LL);
+        v280 = System_String__Concat_62414484(
                  (System_String_o *)StringLiteral_691/*"("*/,
-                 v163,
+                 v295,
                  (System_String_o *)StringLiteral_812/*")\n\n503 Auto retry count "*/,
-                 v165,
+                 v297,
                  0LL);
-        v152 = (int)v166;
-        v4->fields._errorCode_5__6 = v166;
-        p_errorCode_5__6 = (ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6;
+        v8->fields._errorCode_5__6 = v280;
+        p_errorCode_5__6 = (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6;
         goto LABEL_109;
       }
-      DownloadHandlerFileWithCrcCheck__CloseStream((DownloadHandlerFileWithCrcCheck_o *)v135, 0LL);
-      v143 = v135[4].klass;
-      if ( !v143 )
+      DownloadHandlerFileWithCrcCheck__CloseStream((DownloadHandlerFileWithCrcCheck_o *)v251, 0LL);
+      v267 = v251[4].klass;
+      if ( !v267 )
         goto LABEL_110;
-      image = (__int64 (**)(void))v143->_1.image;
-      v145 = LOBYTE(System_IO_IOException_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *((unsigned __int8 *)v143->_1.image + 304) >= (unsigned int)v145
-        && *((System_IO_IOException_c **)image[25] + v145 - 1) == System_IO_IOException_TypeInfo )
+      image = (__int64 (**)(void))v267->_1.image;
+      v269 = LOBYTE(System_IO_IOException_TypeInfo->vtable._0_Equals.methodPtr);
+      if ( *((unsigned __int8 *)v267->_1.image + 304) >= (unsigned int)v269
+        && *((System_IO_IOException_c **)image[25] + v269 - 1) == System_IO_IOException_TypeInfo )
       {
         _4__this->fields.isErrorDialog = 1;
-        v149 = (System_String_o *)(*((__int64 (__fastcall **)(UnityEngine_Networking_DownloadHandler_c *, _QWORD))v143->_1.image
+        v273 = (System_String_o *)(*((__int64 (__fastcall **)(UnityEngine_Networking_DownloadHandler_c *, _QWORD))v267->_1.image
                                    + 49))(
-                                    v143,
-                                    *((_QWORD *)v143->_1.image + 50));
+                                    v267,
+                                    *((_QWORD *)v267->_1.image + 50));
       }
       else
       {
         this = (AssetLoader__LoadDataCR_d__29_o *)image[45]();
-        v146 = v135[4].klass;
-        if ( !v146 )
+        v270 = v251[4].klass;
+        if ( !v270 )
           goto LABEL_375;
-        v147 = this;
-        v148 = (System_String_o *)(*((__int64 (__fastcall **)(UnityEngine_Networking_DownloadHandler_c *, _QWORD))v146->_1.image
+        v271 = this;
+        v272 = (System_String_o *)(*((__int64 (__fastcall **)(UnityEngine_Networking_DownloadHandler_c *, _QWORD))v270->_1.image
                                    + 49))(
-                                    v146,
-                                    *((_QWORD *)v146->_1.image + 50));
-        v149 = System_String__Concat_62061392(
-                 (System_String_o *)StringLiteral_19083/*"error "*/,
-                 (System_String_o *)v147,
+                                    v270,
+                                    *((_QWORD *)v270->_1.image + 50));
+        v273 = System_String__Concat_62414484(
+                 (System_String_o *)StringLiteral_19250/*"error "*/,
+                 (System_String_o *)v271,
                  (System_String_o *)StringLiteral_116/*" "*/,
-                 v148,
+                 v272,
                  0LL);
       }
-      v152 = (int)v149;
-      v4->fields._errorCode_5__6 = v149;
-      p_errorCode_5__6 = (ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6;
+      v280 = v273;
+      v8->fields._errorCode_5__6 = v273;
+      p_errorCode_5__6 = (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6;
 LABEL_109:
-      sub_1BAB3C0(p_errorCode_5__6, v152, v150, v151);
+      sub_1BCA784(p_errorCode_5__6, (int64_t)v280, v274, v275, v276, v277, v278, v279);
 LABEL_140:
-      v4->fields._url_5__11 = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._url_5__11, 0, v137, v138);
-      p_errorLocalizeCode_5__7 = (ServantStatusBattleListViewItem_o *)&v4->fields._asyncOperater_5__12;
-      v109 = 0;
-      v4->fields._asyncOperater_5__12 = 0LL;
+      v8->fields._url_5__11 = 0LL;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, v253, v254, v255, v256, v257, v258);
+      p_errorLocalizeCode_5__7 = (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12;
+      v209 = 0LL;
+      v8->fields._asyncOperater_5__12 = 0LL;
 LABEL_141:
-      sub_1BAB3C0(p_errorLocalizeCode_5__7, v109, v106, v107);
-      method = (const MethodInfo *)v4->fields._errorCode_5__6;
+      sub_1BCA784(p_errorLocalizeCode_5__7, v209, v202, v203, v204, v205, v206, v207);
+      method = (const MethodInfo *)v8->fields._errorCode_5__6;
       if ( method )
       {
         AssetLoader__AssetLoadLogError(_4__this, (System_String_o *)method, v2);
-        v192 = ManagerConfig_TypeInfo;
+        v355 = ManagerConfig_TypeInfo;
         if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v192 = ManagerConfig_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+          v355 = ManagerConfig_TypeInfo;
         }
-        if ( v192->static_fields->UseDebugCommand )
+        if ( v355->static_fields->UseDebugCommand )
         {
           _4__this->fields.isErrorDialog = 1;
-          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v193 = _4__this->fields.data;
-          if ( !v193 )
+          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v356 = _4__this->fields.data;
+          if ( !v356 )
             goto LABEL_375;
-          v194 = (CommonUI_o *)this;
-          v195 = System_String__Concat_62061392(
-                   (System_String_o *)StringLiteral_2491/*"AssetName : "*/,
-                   v193->fields.name,
+          v357 = (CommonUI_o *)this;
+          v358 = System_String__Concat_62414484(
+                   (System_String_o *)StringLiteral_2516/*"AssetName : "*/,
+                   v356->fields.name,
                    (System_String_o *)StringLiteral_43/*"\n"*/,
-                   v4->fields._errorCode_5__6,
+                   v8->fields._errorCode_5__6,
                    0LL);
-          v196 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-          ErrorDialog_ClickDelegate___ctor(v196, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
-          if ( !v194 )
+          v362 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v359, v360, v361);
+          ErrorDialog_ClickDelegate___ctor(v362, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
+          if ( !v357 )
             goto LABEL_375;
-          v362 &= 0xFFFFFFFF00000000LL;
+          v643 &= 0xFFFFFFFF00000000LL;
           *(_QWORD *)&effectDistance.fields.hasValue = 0LL;
-          LODWORD(effectDistance.fields.value.fields.y) = v362;
+          LODWORD(effectDistance.fields.value.fields.y) = v643;
           CommonUI__OpenWarningDialog(
-            v194,
-            (System_String_o *)StringLiteral_15968/*"[FFFF80]Download error for debug"*/,
-            v195,
-            v196,
+            v357,
+            (System_String_o *)StringLiteral_16105/*"[FFFF80]Download error for debug"*/,
+            v358,
+            v362,
             1,
             0,
             -1.0,
@@ -2340,107 +3017,107 @@ LABEL_141:
 LABEL_148:
           if ( _4__this->fields.isErrorDialog )
           {
-            v315 = (Il2CppObject *)v4->fields._wait_5__10;
-            v4->fields.__2__current = v315;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)v315, (int32_t)v2, v3);
-            v72 = 2;
+            v562 = (int64_t)v8->fields._wait_5__10;
+            v8->fields.__2__current = (Il2CppObject *)v562;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, v562, (int64_t)v2, v3, v4, v5, v6, v7);
+            v132 = 2;
             goto LABEL_355;
           }
         }
-        if ( v4->fields._isAutoRetry_5__4 )
+        if ( v8->fields._isAutoRetry_5__4 )
         {
-          v309 = ManagerConfig_TypeInfo;
-          autoRetryCount_5__3 = v4->fields._autoRetryCount_5__3;
+          v552 = ManagerConfig_TypeInfo;
+          autoRetryCount_5__3 = v8->fields._autoRetryCount_5__3;
           if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-            v309 = ManagerConfig_TypeInfo;
+            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+            v552 = ManagerConfig_TypeInfo;
           }
-          DOWNLOAD_RETRY_DELAY_TIME = v309->static_fields->DOWNLOAD_RETRY_DELAY_TIME;
-          v312 = (UnityEngine_WaitForSeconds_o *)sub_1BAB668(UnityEngine_WaitForSeconds_TypeInfo);
-          UnityEngine_WaitForSeconds___ctor(v312, DOWNLOAD_RETRY_DELAY_TIME * (float)autoRetryCount_5__3, 0LL);
-          v4->fields.__2__current = (Il2CppObject *)v312;
-          p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-          sub_1BAB3C0(p__2__current, (int32_t)v312, v313, v314);
-          v72 = 3;
+          DOWNLOAD_RETRY_DELAY_TIME = v552->static_fields->DOWNLOAD_RETRY_DELAY_TIME;
+          v555 = (UnityEngine_WaitForSeconds_o *)sub_1BCAA2C(UnityEngine_WaitForSeconds_TypeInfo, method, v2, v3);
+          UnityEngine_WaitForSeconds___ctor(v555, DOWNLOAD_RETRY_DELAY_TIME * (float)autoRetryCount_5__3, 0LL);
+          v8->fields.__2__current = (Il2CppObject *)v555;
+          p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+          sub_1BCA784(p__2__current, (int64_t)v555, v556, v557, v558, v559, v560, v561);
+          v132 = 3;
           goto LABEL_355;
         }
-        if ( !v4->fields._isCrcError_5__5 )
+        if ( !v8->fields._isCrcError_5__5 )
         {
           _4__this->fields.isErrorDialog = 1;
           if ( !ManagementManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          if ( !byte_4AB4E4F )
+            j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+          if ( !byte_4B152DA )
           {
-            sub_1BAB41C(&ManagementManager_TypeInfo, method);
-            byte_4AB4E4F = 1;
+            sub_1BCA7E0(&ManagementManager_TypeInfo, method, v2);
+            byte_4B152DA = 1;
           }
-          v197 = ManagementManager_TypeInfo;
+          v363 = ManagementManager_TypeInfo;
           if ( !ManagementManager_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-            v197 = ManagementManager_TypeInfo;
+            j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+            v363 = ManagementManager_TypeInfo;
           }
-          isDuringStartup = v197->static_fields->isDuringStartup;
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          errorLocalizeCode_5__7 = v4->fields._errorLocalizeCode_5__7;
-          v201 = (CommonUI_o *)Instance;
-          v202 = (System_String_o *)StringLiteral_1/*""*/;
+          isDuringStartup = v363->static_fields->isDuringStartup;
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          errorLocalizeCode_5__7 = v8->fields._errorLocalizeCode_5__7;
+          v368 = (CommonUI_o *)Instance;
+          v369 = (System_String_o *)StringLiteral_1/*""*/;
           if ( isDuringStartup )
           {
             if ( errorLocalizeCode_5__7 )
-              v203 = v4->fields._errorLocalizeCode_5__7;
+              v370 = v8->fields._errorLocalizeCode_5__7;
             else
-              v203 = (System_String_o *)StringLiteral_2134/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
+              v370 = (System_String_o *)StringLiteral_2157/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v204 = LocalizationManager__Get(v203, 0LL);
-            v205 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-            ErrorDialog_ClickDelegate___ctor(v205, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-            if ( !v201 )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v366);
+            v371 = LocalizationManager__Get(v370, 0LL);
+            v375 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v372, v373, v374);
+            ErrorDialog_ClickDelegate___ctor(v375, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+            if ( !v368 )
               goto LABEL_375;
-            CommonUI__OpenRetryBootDialog(v201, v202, v204, v205, 1, 0LL);
+            CommonUI__OpenRetryBootDialog(v368, v369, v371, v375, 1, 0LL);
           }
           else
           {
             if ( errorLocalizeCode_5__7 )
-              v206 = v4->fields._errorLocalizeCode_5__7;
+              v376 = v8->fields._errorLocalizeCode_5__7;
             else
-              v206 = (System_String_o *)StringLiteral_2135/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
+              v376 = (System_String_o *)StringLiteral_2158/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v207 = LocalizationManager__Get(v206, 0LL);
-            v208 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-            ErrorDialog_ClickDelegate___ctor(v208, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-            if ( !v201 )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v366);
+            v377 = LocalizationManager__Get(v376, 0LL);
+            v381 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v378, v379, v380);
+            ErrorDialog_ClickDelegate___ctor(v381, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+            if ( !v368 )
               goto LABEL_375;
-            CommonUI__OpenRetryDialog(v201, v202, v207, v208, 1, 0LL);
+            CommonUI__OpenRetryDialog(v368, v369, v377, v381, 1, 0LL);
           }
 LABEL_172:
           if ( _4__this->fields.isErrorDialog )
           {
-            v316 = (Il2CppObject *)v4->fields._wait_5__10;
-            v4->fields.__2__current = v316;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)v316, (int32_t)v2, v3);
-            v72 = 4;
+            v563 = (int64_t)v8->fields._wait_5__10;
+            v8->fields.__2__current = (Il2CppObject *)v563;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, v563, (int64_t)v2, v3, v4, v5, v6, v7);
+            v132 = 4;
             goto LABEL_355;
           }
         }
       }
 LABEL_173:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4AB1562 )
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+      if ( !byte_4B1194F )
       {
-        sub_1BAB41C(&NetworkManager_TypeInfo, method);
-        byte_4AB1562 = 1;
+        sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
+        byte_4B1194F = 1;
       }
       this = (AssetLoader__LoadDataCR_d__29_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
         this = (AssetLoader__LoadDataCR_d__29_o *)NetworkManager_TypeInfo;
       }
       if ( !_4__this )
@@ -2452,170 +3129,202 @@ LABEL_173:
           goto LABEL_375;
         UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
         _4__this->fields.loader = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v317, v318);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v564, v565, v566, v567, v568, v569);
         _4__this->fields.readData = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, 0, v319, v320);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v570, v571, v572, v573, v574, v575);
         return 0;
       }
-      if ( !_4__this->fields.isDownload && !v4->fields._isEncrypted_5__2 )
+      if ( !_4__this->fields.isDownload && !v8->fields._isEncrypted_5__2 )
         goto LABEL_298;
-      v209 = _4__this->fields.loader;
-      if ( v209 )
+      v382 = _4__this->fields.loader;
+      if ( v382 )
       {
-        UnityEngine_Networking_UnityWebRequest__Dispose(v209, 0LL);
+        UnityEngine_Networking_UnityWebRequest__Dispose(v382, 0LL);
         _4__this->fields.loader = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v210, v211);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v383, v384, v385, v386, v387, v388);
         _4__this->fields.readData = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.readData, 0, v212, v213);
+        sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v389, v390, v391, v392, v393, v394);
       }
-      if ( !v4->fields._isCrcError_5__5 )
+      if ( !v8->fields._isCrcError_5__5 )
       {
 LABEL_291:
-        v4->fields._errorCode_5__6 = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, 0, (int32_t)v2, v3);
-        v4->fields._errorLocalizeCode_5__7 = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorLocalizeCode_5__7, 0, v284, v285);
-        v4->fields._wait_5__10 = 0LL;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._wait_5__10, 0, v286, v287);
+        v8->fields._errorCode_5__6 = 0LL;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+        v8->fields._errorLocalizeCode_5__7 = 0LL;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7,
+          0LL,
+          v499,
+          v500,
+          v501,
+          v502,
+          v503,
+          v504);
+        v8->fields._wait_5__10 = 0LL;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._wait_5__10, 0LL, v505, v506, v507, v508, v509, v510);
         goto LABEL_292;
       }
-      v214 = AssetManager_TypeInfo;
+      v395 = AssetManager_TypeInfo;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      ConfigFileAddress = AssetManager__get_ConfigFileAddress((const MethodInfo *)v214);
-      v4->fields._url_5__11 = ConfigFileAddress;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._url_5__11, (int32_t)ConfigFileAddress, v216, v217);
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, method);
+      ConfigFileAddress = AssetManager__get_ConfigFileAddress((const MethodInfo *)v395);
+      v8->fields._url_5__11 = ConfigFileAddress;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._url_5__11,
+        (int64_t)ConfigFileAddress,
+        v397,
+        v398,
+        v399,
+        v400,
+        v401,
+        v402);
 LABEL_189:
-      v218 = v4->fields._url_5__11;
+      v403 = v8->fields._url_5__11;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      UrlString = AssetManager__getUrlString(v218, v59);
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v115);
+      UrlString = AssetManager__getUrlString(v403, v115);
       this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_Networking_UnityWebRequest__Get(UrlString, 0LL);
       if ( !_4__this )
         goto LABEL_375;
       _4__this->fields.loader = (struct UnityEngine_Networking_UnityWebRequest_o *)this;
-      v222 = (AssetLoader__LoadDataCR_d__29_o **)&_4__this->fields.loader;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, (int32_t)this, v220, v221);
-      v223 = UnityEngine_Time__get_unscaledTime(0LL);
-      v224 = ManagerConfig_TypeInfo;
-      v225 = v223;
+      v411 = (AssetLoader__LoadDataCR_d__29_o **)&_4__this->fields.loader;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&_4__this->fields.loader,
+        (int64_t)this,
+        v405,
+        v406,
+        v407,
+        v408,
+        v409,
+        v410);
+      v412 = UnityEngine_Time__get_unscaledTime(0LL);
+      v413 = ManagerConfig_TypeInfo;
+      v414 = v412;
       if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v224 = ManagerConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+        v413 = ManagerConfig_TypeInfo;
       }
-      v226 = v224->static_fields->TIMEOUT;
-      v4->fields._loadProgress_5__9 = 0.0;
-      v4->fields._requestTime_5__8 = v225 + v226;
-      this = *v222;
-      if ( !*v222 )
+      v415 = v413->static_fields->TIMEOUT;
+      v8->fields._loadProgress_5__9 = 0.0;
+      v8->fields._requestTime_5__8 = v414 + v415;
+      this = *v411;
+      if ( !*v411 )
         goto LABEL_375;
-      v227 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
+      v416 = UnityEngine_Networking_UnityWebRequest__SendWebRequest(
                (UnityEngine_Networking_UnityWebRequest_o *)this,
                0LL);
-      v4->fields._asyncOperater_5__12 = v227;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._asyncOperater_5__12, (int32_t)v227, v228, v229);
+      v8->fields._asyncOperater_5__12 = v416;
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12,
+        (int64_t)v416,
+        v417,
+        v418,
+        v419,
+        v420,
+        v421,
+        v422);
 LABEL_196:
-      this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._asyncOperater_5__12;
+      this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
       if ( !this )
         goto LABEL_375;
       if ( !UnityEngine_AsyncOperation__get_isDone((UnityEngine_AsyncOperation_o *)this, 0LL) )
       {
-        this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._asyncOperater_5__12;
+        this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
         if ( !this )
           goto LABEL_375;
-        v232 = UnityEngine_AsyncOperation__get_progress((UnityEngine_AsyncOperation_o *)this, 0LL);
-        v233 = v4->fields._loadProgress_5__9;
-        v234 = v232;
-        v235 = UnityEngine_Time__get_unscaledTime(0LL);
-        v131 = v234 == v233;
-        v236 = v235;
-        if ( !v131 )
+        v429 = UnityEngine_AsyncOperation__get_progress((UnityEngine_AsyncOperation_o *)this, 0LL);
+        v430 = v8->fields._loadProgress_5__9;
+        v431 = v429;
+        v432 = UnityEngine_Time__get_unscaledTime(0LL);
+        v247 = v431 == v430;
+        v433 = v432;
+        if ( !v247 )
         {
-          v357 = ManagerConfig_TypeInfo;
+          v638 = ManagerConfig_TypeInfo;
           if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-            v357 = ManagerConfig_TypeInfo;
+            j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+            v638 = ManagerConfig_TypeInfo;
           }
-          v358 = v357->static_fields;
-          this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._asyncOperater_5__12;
-          v4->fields._requestTime_5__8 = v236 + v358->TIMEOUT;
+          v639 = v638->static_fields;
+          this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
+          v8->fields._requestTime_5__8 = v433 + v639->TIMEOUT;
           if ( !this )
             goto LABEL_375;
-          v4->fields._loadProgress_5__9 = UnityEngine_AsyncOperation__get_progress(
+          v8->fields._loadProgress_5__9 = UnityEngine_AsyncOperation__get_progress(
                                             (UnityEngine_AsyncOperation_o *)this,
                                             0LL);
           goto LABEL_374;
         }
-        if ( v235 < v4->fields._requestTime_5__8 )
+        if ( v432 < v8->fields._requestTime_5__8 )
         {
 LABEL_374:
-          v359 = (Il2CppObject *)v4->fields._wait_5__10;
-          v4->fields.__2__current = v359;
-          p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-          sub_1BAB3C0(p__2__current, (int32_t)v359, v230, v231);
-          v72 = 5;
+          v640 = (int64_t)v8->fields._wait_5__10;
+          v8->fields.__2__current = (Il2CppObject *)v640;
+          p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+          sub_1BCA784(p__2__current, v640, v423, v424, v425, v426, v427, v428);
+          v132 = 5;
           goto LABEL_355;
         }
       }
-      v4->fields._errorCode_5__6 = 0LL;
-      v237 = &v4->fields._errorCode_5__6;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, 0, v230, v231);
+      v8->fields._errorCode_5__6 = 0LL;
+      v434 = &v8->fields._errorCode_5__6;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, v423, v424, v425, v426, v427, v428);
       if ( !_4__this )
         goto LABEL_375;
-      v238 = &_4__this->fields.loader;
+      v435 = &_4__this->fields.loader;
       this = (AssetLoader__LoadDataCR_d__29_o *)_4__this->fields.loader;
       if ( !this )
         goto LABEL_375;
       this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_Networking_UnityWebRequest__get_isDone(
                                                   (UnityEngine_Networking_UnityWebRequest_o *)this,
                                                   0LL);
-      if ( !*v238 )
+      if ( !*v435 )
         goto LABEL_375;
       if ( ((unsigned __int8)this & 1) == 0 )
       {
-        UnityEngine_Networking_UnityWebRequest__Abort(*v238, 0LL);
-        v281 = &StringLiteral_2504/*"AssetStorageList download time over"*/;
+        UnityEngine_Networking_UnityWebRequest__Abort(*v435, 0LL);
+        v493 = &StringLiteral_2529/*"AssetStorageList download time over"*/;
         goto LABEL_327;
       }
-      v239 = UnityEngine_Networking_UnityWebRequest__get_error(*v238, 0LL);
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IsNullOrEmpty(v239, 0LL);
-      if ( !*v238 )
+      v436 = UnityEngine_Networking_UnityWebRequest__get_error(*v435, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IsNullOrEmpty(v436, 0LL);
+      if ( !*v435 )
         goto LABEL_375;
       if ( ((unsigned __int8)this & 1) == 0 )
       {
-        v322 = UnityEngine_Networking_UnityWebRequest__get_error(*v238, 0LL);
+        v577 = UnityEngine_Networking_UnityWebRequest__get_error(*v435, 0LL);
         goto LABEL_328;
       }
-      this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_Networking_UnityWebRequest__get_downloadHandler(*v238, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_Networking_UnityWebRequest__get_downloadHandler(*v435, 0LL);
       if ( !this )
         goto LABEL_375;
       text = UnityEngine_Networking_DownloadHandler__get_text((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
       if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-      v241 = CatAndMouseGame__MouseGame3(text, 0LL);
-      if ( System_String__IsNullOrEmpty(v241, 0LL) )
+        j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo, v437);
+      v439 = CatAndMouseGame__MouseGame3(text, 0LL);
+      if ( System_String__IsNullOrEmpty(v439, 0LL) )
       {
-        v281 = &StringLiteral_2502/*"AssetStorageList download error"*/;
+        v493 = &StringLiteral_2527/*"AssetStorageList download error"*/;
         goto LABEL_327;
       }
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(char___TypeInfo, 1LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(char___TypeInfo, 1LL);
       if ( !this )
         goto LABEL_375;
       method = (const MethodInfo *)this;
       if ( !LODWORD(this->fields.__2__current) )
         goto LABEL_258;
       LOWORD(this->fields.__4__this) = -257;
-      if ( !v241 )
+      if ( !v439 )
         goto LABEL_375;
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Trim_62077876(v241, (System_Char_array *)this, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Trim_62430968(v439, (System_Char_array *)this, 0LL);
       if ( !this )
         goto LABEL_375;
-      v244 = this;
-      if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25199/*"~"*/, 0LL) )
+      v446 = this;
+      if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25411/*"~"*/, 0LL) )
         goto LABEL_286;
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(char___TypeInfo, 2LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(char___TypeInfo, 2LL);
       if ( !this )
         goto LABEL_375;
       _2__current = (int)this->fields.__2__current;
@@ -2626,70 +3335,78 @@ LABEL_374:
       if ( _2__current == 1 )
         goto LABEL_258;
       WORD1(this->fields.__4__this) = 10;
-      v246 = System_String__IndexOfAny((System_String_o *)v244, (System_Char_array *)this, 0LL);
-      if ( v246 < 2 )
+      v448 = System_String__IndexOfAny((System_String_o *)v446, (System_Char_array *)this, 0LL);
+      if ( v448 < 2 )
         goto LABEL_286;
-      v247 = v246;
-      v248 = System_String__Substring_62067132((System_String_o *)v244, 1, v246 - 1, 0LL);
-      v249 = System_String__Substring((System_String_o *)v244, v247 + 1, 0LL);
+      v449 = v448;
+      v450 = System_String__Substring_62420224((System_String_o *)v446, 1, v448 - 1, 0LL);
+      v451 = System_String__Substring((System_String_o *)v446, v449 + 1, 0LL);
       this = (AssetLoader__LoadDataCR_d__29_o *)System_Text_Encoding__get_UTF8(0LL);
       if ( !this )
         goto LABEL_375;
-      v250 = (System_Byte_array *)((__int64 (__fastcall *)(AssetLoader__LoadDataCR_d__29_o *, System_String_o *, Il2CppRuntimeInterfaceOffsetPair *))this->klass[1]._1.implementedInterfaces)(
+      v453 = (System_Byte_array *)((__int64 (__fastcall *)(AssetLoader__LoadDataCR_d__29_o *, System_String_o *, Il2CppRuntimeInterfaceOffsetPair *))this->klass[1]._1.implementedInterfaces)(
                                     this,
-                                    v249,
+                                    v451,
                                     this->klass[1]._1.interfaceOffsets);
       if ( !Crc32_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-      v251 = Crc32__Compute(v250, 0LL);
-      if ( System_UInt32__Parse(v248, 0LL) != v251 )
+        j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v452);
+      v454 = Crc32__Compute(v453, 0LL);
+      if ( System_UInt32__Parse(v450, 0LL) != v454 )
       {
 LABEL_286:
-        v281 = &StringLiteral_2501/*"AssetStorageList download data error"*/;
+        v493 = &StringLiteral_2526/*"AssetStorageList download data error"*/;
 LABEL_327:
-        v322 = (System_String_o *)*v281;
+        v577 = (System_String_o *)*v493;
 LABEL_328:
-        *v237 = v322;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._errorCode_5__6, (int32_t)v322, v242, v243);
-        if ( *v238 )
+        *v434 = v577;
+        sub_1BCA784(
+          (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
+          (int64_t)v577,
+          v440,
+          v441,
+          v442,
+          v443,
+          v444,
+          v445);
+        if ( *v435 )
         {
-          UnityEngine_Networking_UnityWebRequest__Dispose(*v238, 0LL);
-          *v238 = 0LL;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&_4__this->fields.loader, 0, v323, v324);
+          UnityEngine_Networking_UnityWebRequest__Dispose(*v435, 0LL);
+          *v435 = 0LL;
+          sub_1BCA784((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v578, v579, v580, v581, v582, v583);
         }
-        if ( !*v237 )
+        if ( !*v434 )
           goto LABEL_354;
-        v325 = ManagerConfig_TypeInfo;
+        v584 = ManagerConfig_TypeInfo;
         if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v325 = ManagerConfig_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
+          v584 = ManagerConfig_TypeInfo;
         }
-        if ( v325->static_fields->UseDebugCommand )
+        if ( v584->static_fields->UseDebugCommand )
         {
           _4__this->fields.isErrorDialog = 1;
-          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v326 = _4__this->fields.data;
-          if ( !v326 )
+          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v585 = _4__this->fields.data;
+          if ( !v585 )
             goto LABEL_375;
-          v327 = (CommonUI_o *)this;
-          v328 = System_String__Concat_62061392(
-                   (System_String_o *)StringLiteral_2491/*"AssetName : "*/,
-                   v326->fields.name,
+          v586 = (CommonUI_o *)this;
+          v587 = System_String__Concat_62414484(
+                   (System_String_o *)StringLiteral_2516/*"AssetName : "*/,
+                   v585->fields.name,
                    (System_String_o *)StringLiteral_43/*"\n"*/,
-                   *v237,
+                   *v434,
                    0LL);
-          v329 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-          ErrorDialog_ClickDelegate___ctor(v329, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
-          if ( !v327 )
+          v591 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v588, v589, v590);
+          ErrorDialog_ClickDelegate___ctor(v591, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
+          if ( !v586 )
             goto LABEL_375;
           *(_QWORD *)&effectDistancea.fields.hasValue = 0LL;
           effectDistancea.fields.value.fields.y = 0.0;
           CommonUI__OpenWarningDialog(
-            v327,
-            (System_String_o *)StringLiteral_15968/*"[FFFF80]Download error for debug"*/,
-            v328,
-            v329,
+            v586,
+            (System_String_o *)StringLiteral_16105/*"[FFFF80]Download error for debug"*/,
+            v587,
+            v591,
             1,
             0,
             -1.0,
@@ -2699,111 +3416,111 @@ LABEL_328:
 LABEL_337:
           if ( _4__this->fields.isErrorDialog )
           {
-            v330 = (Il2CppObject *)v4->fields._wait_5__10;
-            v4->fields.__2__current = v330;
-            p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-            sub_1BAB3C0(p__2__current, (int32_t)v330, (int32_t)v2, v3);
-            v72 = 6;
+            v592 = (int64_t)v8->fields._wait_5__10;
+            v8->fields.__2__current = (Il2CppObject *)v592;
+            p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+            sub_1BCA784(p__2__current, v592, (int64_t)v2, v3, v4, v5, v6, v7);
+            v132 = 6;
             goto LABEL_355;
           }
         }
         _4__this->fields.isErrorDialog = 1;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        if ( !byte_4AB4E4F )
+          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+        if ( !byte_4B152DA )
         {
-          sub_1BAB41C(&ManagementManager_TypeInfo, method);
-          byte_4AB4E4F = 1;
+          sub_1BCA7E0(&ManagementManager_TypeInfo, method, v2);
+          byte_4B152DA = 1;
         }
-        v331 = ManagementManager_TypeInfo;
+        v593 = ManagementManager_TypeInfo;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          v331 = ManagementManager_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+          v593 = ManagementManager_TypeInfo;
         }
-        v332 = v331->static_fields->isDuringStartup;
-        v333 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v594 = v593->static_fields->isDuringStartup;
+        v596 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        if ( v332 )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v595);
+        if ( v594 )
         {
-          v334 = LocalizationManager__Get((System_String_o *)StringLiteral_2134/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
-          v335 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-          ErrorDialog_ClickDelegate___ctor(v335, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-          if ( !v333 )
+          v597 = LocalizationManager__Get((System_String_o *)StringLiteral_2157/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
+          v601 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v598, v599, v600);
+          ErrorDialog_ClickDelegate___ctor(v601, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+          if ( !v596 )
             goto LABEL_375;
-          CommonUI__OpenRetryBootDialog((CommonUI_o *)v333, (System_String_o *)StringLiteral_1/*""*/, v334, v335, 0, 0LL);
+          CommonUI__OpenRetryBootDialog((CommonUI_o *)v596, (System_String_o *)StringLiteral_1/*""*/, v597, v601, 0, 0LL);
         }
         else
         {
-          v336 = LocalizationManager__Get((System_String_o *)StringLiteral_2135/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
-          v337 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-          ErrorDialog_ClickDelegate___ctor(v337, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-          if ( !v333 )
+          v602 = LocalizationManager__Get((System_String_o *)StringLiteral_2158/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
+          v606 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v603, v604, v605);
+          ErrorDialog_ClickDelegate___ctor(v606, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+          if ( !v596 )
             goto LABEL_375;
-          CommonUI__OpenRetryDialog((CommonUI_o *)v333, (System_String_o *)StringLiteral_1/*""*/, v336, v337, 0, 0LL);
+          CommonUI__OpenRetryDialog((CommonUI_o *)v596, (System_String_o *)StringLiteral_1/*""*/, v602, v606, 0, 0LL);
         }
 LABEL_352:
         if ( _4__this->fields.isErrorDialog )
         {
-          v338 = (Il2CppObject *)v4->fields._wait_5__10;
-          v4->fields.__2__current = v338;
-          p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-          sub_1BAB3C0(p__2__current, (int32_t)v338, (int32_t)v2, v3);
-          v72 = 7;
+          v607 = (int64_t)v8->fields._wait_5__10;
+          v8->fields.__2__current = (Il2CppObject *)v607;
+          p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+          sub_1BCA784(p__2__current, v607, (int64_t)v2, v3, v4, v5, v6, v7);
+          v132 = 7;
         }
         else
         {
 LABEL_354:
-          v339 = (UnityEngine_WaitForSeconds_o *)sub_1BAB668(UnityEngine_WaitForSeconds_TypeInfo);
-          UnityEngine_WaitForSeconds___ctor(v339, 1.0, 0LL);
-          v4->fields.__2__current = (Il2CppObject *)v339;
-          p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-          sub_1BAB3C0(p__2__current, (int32_t)v339, v340, v341);
-          v72 = 8;
+          v608 = (UnityEngine_WaitForSeconds_o *)sub_1BCAA2C(UnityEngine_WaitForSeconds_TypeInfo, method, v2, v3);
+          UnityEngine_WaitForSeconds___ctor(v608, 1.0, 0LL);
+          v8->fields.__2__current = (Il2CppObject *)v608;
+          p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+          sub_1BCA784(p__2__current, (int64_t)v608, v609, v610, v611, v612, v613, v614);
+          v132 = 8;
         }
 LABEL_355:
-        *(_DWORD *)&p__2__current[-1].fields.isMine = v72;
+        *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = v132;
         return 1;
       }
-      if ( !v249 )
+      if ( !v451 )
         goto LABEL_272;
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(char___TypeInfo, 2LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(char___TypeInfo, 2LL);
       if ( !this )
         goto LABEL_375;
-      v252 = (int)this->fields.__2__current;
+      v455 = (int)this->fields.__2__current;
       method = (const MethodInfo *)this;
-      if ( !v252 || (LOWORD(this->fields.__4__this) = 13, v252 == 1) )
+      if ( !v455 || (LOWORD(this->fields.__4__this) = 13, v455 == 1) )
 LABEL_258:
-        sub_1BAB680(this, method);
+        sub_1BCAA44(this, method);
       WORD1(this->fields.__4__this) = 10;
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62070520(v249, (System_Char_array *)this, 1, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62423612(v451, (System_Char_array *)this, 1, 0LL);
       if ( !this )
         goto LABEL_375;
-      v253 = this->fields.__2__current;
-      v254 = this;
-      v255 = (_DWORD)v253 - 1;
-      if ( (int)v253 < 1 )
+      v456 = this->fields.__2__current;
+      v457 = this;
+      v458 = (_DWORD)v456 - 1;
+      if ( (int)v456 < 1 )
         goto LABEL_272;
-      v256 = 0;
+      v459 = 0;
       while ( 2 )
       {
-        v257 = (System_String_o *)*((_QWORD *)&v254->fields.__4__this + v256);
-        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BAB4C4(char___TypeInfo, 1LL);
+        v460 = (System_String_o *)*((_QWORD *)&v457->fields.__4__this + v459);
+        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1BCA888(char___TypeInfo, 1LL);
         if ( !this )
           goto LABEL_375;
         method = (const MethodInfo *)this;
         if ( !LODWORD(this->fields.__2__current) )
           goto LABEL_258;
         LOWORD(this->fields.__4__this) = 44;
-        if ( !v257 )
+        if ( !v460 )
           goto LABEL_375;
-        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62070284(v257, (System_Char_array *)this, 0LL);
+        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_62423376(v460, (System_Char_array *)this, 0LL);
         if ( !this )
           goto LABEL_375;
-        v258 = this->fields.__2__current;
-        v259 = this;
-        if ( (int)v258 >= 1 )
+        v461 = this->fields.__2__current;
+        v462 = this;
+        if ( (int)v461 >= 1 )
         {
           this = (AssetLoader__LoadDataCR_d__29_o *)this->fields.__4__this;
           if ( !this )
@@ -2812,183 +3529,183 @@ LABEL_258:
                                                       (System_String_o *)this,
                                                       (System_String_o *)StringLiteral_1883/*"@"*/,
                                                       0LL);
-          if ( !LODWORD(v259->fields.__2__current) )
+          if ( !LODWORD(v462->fields.__2__current) )
             goto LABEL_258;
-          v260 = (char)this;
-          this = (AssetLoader__LoadDataCR_d__29_o *)v259->fields.__4__this;
+          v463 = (char)this;
+          this = (AssetLoader__LoadDataCR_d__29_o *)v462->fields.__4__this;
           if ( !this )
             goto LABEL_375;
-          if ( (v260 & 1) != 0 )
+          if ( (v463 & 1) != 0 )
           {
-            v262 = System_String__Substring((System_String_o *)this, 1, 0LL);
+            v466 = System_String__Substring((System_String_o *)this, 1, 0LL);
             p_resourceNames = (System_String_o **)&StringLiteral_1/*""*/;
-            if ( SLODWORD(v259->fields.__2__current) > 1 )
-              p_resourceNames = (System_String_o **)&v259->fields.resourceNames;
-            v264 = *p_resourceNames;
+            if ( SLODWORD(v462->fields.__2__current) > 1 )
+              p_resourceNames = (System_String_o **)&v462->fields.resourceNames;
+            v468 = *p_resourceNames;
             if ( !AssetManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-            this = (AssetLoader__LoadDataCR_d__29_o *)AssetManager__CheckVersion(v262, v264, v261);
+              j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v464);
+            this = (AssetLoader__LoadDataCR_d__29_o *)AssetManager__CheckVersion(v466, v468, v465);
             if ( ((unsigned __int8)this & 1) == 0 )
               goto LABEL_272;
             goto LABEL_256;
           }
           this = (AssetLoader__LoadDataCR_d__29_o *)System_String__StartsWith(
                                                       (System_String_o *)this,
-                                                      (System_String_o *)StringLiteral_25199/*"~"*/,
+                                                      (System_String_o *)StringLiteral_25411/*"~"*/,
                                                       0LL);
           if ( ((unsigned __int8)this & 1) == 0 )
           {
-            if ( !LODWORD(v259->fields.__2__current) )
+            if ( !LODWORD(v462->fields.__2__current) )
               goto LABEL_258;
-            this = (AssetLoader__LoadDataCR_d__29_o *)v259->fields.__4__this;
+            this = (AssetLoader__LoadDataCR_d__29_o *)v462->fields.__4__this;
             if ( !this )
               goto LABEL_375;
             this = (AssetLoader__LoadDataCR_d__29_o *)System_String__IndexOf((System_String_o *)this, 0x7Eu, 0LL);
             if ( (_DWORD)this != 1 )
             {
-              v258 = v259->fields.__2__current;
+              v461 = v462->fields.__2__current;
               break;
             }
           }
 LABEL_256:
-          if ( v255 == v256 )
+          if ( v458 == v459 )
             goto LABEL_272;
-          if ( (unsigned int)++v256 >= LODWORD(v254->fields.__2__current) )
+          if ( (unsigned int)++v459 >= LODWORD(v457->fields.__2__current) )
             goto LABEL_258;
           continue;
         }
         break;
       }
-      if ( (_DWORD)v258 != 5 )
+      if ( (_DWORD)v461 != 5 )
         goto LABEL_272;
-      this = *(AssetLoader__LoadDataCR_d__29_o **)&v259->fields._isAutoRetry_5__4;
+      this = *(AssetLoader__LoadDataCR_d__29_o **)&v462->fields._isAutoRetry_5__4;
       if ( !this )
         goto LABEL_375;
-      v265 = System_String__Trim((System_String_o *)this, 0LL);
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__Parse(v265, 0LL);
-      if ( LODWORD(v259->fields.__2__current) <= 4 )
+      v469 = System_String__Trim((System_String_o *)this, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_UInt32__Parse(v469, 0LL);
+      if ( LODWORD(v462->fields.__2__current) <= 4 )
         goto LABEL_258;
-      v267 = (int)this;
-      this = (AssetLoader__LoadDataCR_d__29_o *)AssetLoader__IsSame(_4__this, v259->fields._errorCode_5__6, v266);
+      v471 = (int)this;
+      this = (AssetLoader__LoadDataCR_d__29_o *)AssetLoader__IsSame(_4__this, v462->fields._errorCode_5__6, v470);
       if ( ((unsigned __int8)this & 1) == 0 )
         goto LABEL_256;
-      v268 = _4__this->fields.data;
-      if ( !v268 )
+      v472 = _4__this->fields.data;
+      if ( !v472 )
         goto LABEL_375;
-      if ( v267 == v268->fields.crc )
+      if ( v471 == v472->fields.crc )
       {
         _4__this->fields.isErrorDialog = 1;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        if ( !byte_4AB4E4F )
+          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+        if ( !byte_4B152DA )
         {
-          sub_1BAB41C(&ManagementManager_TypeInfo, method);
-          byte_4AB4E4F = 1;
+          sub_1BCA7E0(&ManagementManager_TypeInfo, method, v440);
+          byte_4B152DA = 1;
         }
-        v269 = ManagementManager_TypeInfo;
+        v473 = ManagementManager_TypeInfo;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          v269 = ManagementManager_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+          v473 = ManagementManager_TypeInfo;
         }
-        v270 = v269->static_fields->isDuringStartup;
-        v271 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v474 = v473->static_fields->isDuringStartup;
+        v476 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        if ( v270 )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v475);
+        if ( v474 )
         {
-          v272 = LocalizationManager__Get((System_String_o *)StringLiteral_2134/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
-          v273 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-          ErrorDialog_ClickDelegate___ctor(v273, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-          if ( v271 )
+          v477 = LocalizationManager__Get((System_String_o *)StringLiteral_2157/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
+          v481 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v478, v479, v480);
+          ErrorDialog_ClickDelegate___ctor(v481, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+          if ( v476 )
           {
-            CommonUI__OpenRetryBootDialog((CommonUI_o *)v271, (System_String_o *)StringLiteral_1/*""*/, v272, v273, 1, 0LL);
+            CommonUI__OpenRetryBootDialog((CommonUI_o *)v476, (System_String_o *)StringLiteral_1/*""*/, v477, v481, 1, 0LL);
             goto LABEL_289;
           }
           goto LABEL_375;
         }
-        v282 = LocalizationManager__Get((System_String_o *)StringLiteral_2135/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
-        v283 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-        ErrorDialog_ClickDelegate___ctor(v283, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
-        if ( !v271 )
+        v494 = LocalizationManager__Get((System_String_o *)StringLiteral_2158/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
+        v498 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v495, v496, v497);
+        ErrorDialog_ClickDelegate___ctor(v498, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
+        if ( !v476 )
           goto LABEL_375;
-        CommonUI__OpenRetryDialog((CommonUI_o *)v271, (System_String_o *)StringLiteral_1/*""*/, v282, v283, 1, 0LL);
+        CommonUI__OpenRetryDialog((CommonUI_o *)v476, (System_String_o *)StringLiteral_1/*""*/, v494, v498, 1, 0LL);
 LABEL_289:
         if ( !_4__this->fields.isErrorDialog )
         {
-          v4->fields._url_5__11 = 0LL;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._url_5__11, 0, (int32_t)v2, v3);
+          v8->fields._url_5__11 = 0LL;
+          sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
           goto LABEL_291;
         }
-        v321 = (Il2CppObject *)v4->fields._wait_5__10;
-        v4->fields.__2__current = v321;
-        p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-        sub_1BAB3C0(p__2__current, (int32_t)v321, (int32_t)v2, v3);
-        v72 = 9;
+        v576 = (int64_t)v8->fields._wait_5__10;
+        v8->fields.__2__current = (Il2CppObject *)v576;
+        p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+        sub_1BCA784(p__2__current, v576, (int64_t)v2, v3, v4, v5, v6, v7);
+        v132 = 9;
         goto LABEL_355;
       }
 LABEL_272:
       if ( !ManagementManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-      if ( !byte_4AB4E4F )
+        j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+      if ( !byte_4B152DA )
       {
-        sub_1BAB41C(&ManagementManager_TypeInfo, method);
-        byte_4AB4E4F = 1;
+        sub_1BCA7E0(&ManagementManager_TypeInfo, method, v440);
+        byte_4B152DA = 1;
       }
-      v274 = ManagementManager_TypeInfo;
+      v482 = ManagementManager_TypeInfo;
       if ( !ManagementManager_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        v274 = ManagementManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo, method);
+        v482 = ManagementManager_TypeInfo;
       }
-      v275 = v274->static_fields->isDuringStartup;
-      v276 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v483 = v482->static_fields->isDuringStartup;
+      v485 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( LocalizationManager_TypeInfo->_2.cctor_finished )
       {
-        if ( v275 )
+        if ( v483 )
           goto LABEL_280;
 LABEL_282:
-        v277 = &StringLiteral_9221/*"NETWORK_ERROR_ASSET_UPDATE"*/;
+        v486 = &StringLiteral_9347/*"NETWORK_ERROR_ASSET_UPDATE"*/;
       }
       else
       {
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        if ( !v275 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v484);
+        if ( !v483 )
           goto LABEL_282;
 LABEL_280:
-        v277 = &StringLiteral_9222/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/;
+        v486 = &StringLiteral_9348/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/;
       }
-      v278 = LocalizationManager__Get((System_String_o *)*v277, 0LL);
-      v279 = (ErrorDialog_ClickDelegate_o *)sub_1BAB668(ErrorDialog_ClickDelegate_TypeInfo);
-      ErrorDialog_ClickDelegate___ctor(v279, (Il2CppObject *)_4__this, Method_AssetLoader_EndRebootDialog__, 0LL);
-      if ( !v276 )
+      v487 = LocalizationManager__Get((System_String_o *)*v486, 0LL);
+      v491 = (ErrorDialog_ClickDelegate_o *)sub_1BCAA2C(ErrorDialog_ClickDelegate_TypeInfo, v488, v489, v490);
+      ErrorDialog_ClickDelegate___ctor(v491, (Il2CppObject *)_4__this, Method_AssetLoader_EndRebootDialog__, 0LL);
+      if ( !v485 )
         goto LABEL_375;
-      CommonUI__OpenErrorDialog((CommonUI_o *)v276, (System_String_o *)StringLiteral_1/*""*/, v278, v279, 0, 0LL);
+      CommonUI__OpenErrorDialog((CommonUI_o *)v485, (System_String_o *)StringLiteral_1/*""*/, v487, v491, 0, 0LL);
       return 0;
     case 0xC:
-      this = (AssetLoader__LoadDataCR_d__29_o *)v4->fields._req_5__13;
-      v4->fields.__1__state = -1;
+      this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._req_5__13;
+      v8->fields.__1__state = -1;
       if ( !this )
         goto LABEL_37;
       if ( !_4__this )
         goto LABEL_375;
-      v66 = _4__this->fields.data;
+      v122 = _4__this->fields.data;
       this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_AssetBundleCreateRequest__get_assetBundle(
                                                   (UnityEngine_AssetBundleCreateRequest_o *)this,
                                                   0LL);
-      if ( !v66 )
+      if ( !v122 )
         goto LABEL_375;
-      v68 = AssetData__SetAssetBundleData(v66, (UnityEngine_AssetBundle_o *)this, v4->fields.resourceNames, v67);
-      v4->fields.__2__current = (Il2CppObject *)v68;
-      p__2__current = (ServantStatusBattleListViewItem_o *)&v4->fields.__2__current;
-      sub_1BAB3C0(p__2__current, (int32_t)v68, v70, v71);
-      v72 = 13;
+      v124 = AssetData__SetAssetBundleData(v122, (UnityEngine_AssetBundle_o *)this, v8->fields.resourceNames, v123);
+      v8->fields.__2__current = (Il2CppObject *)v124;
+      p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
+      sub_1BCA784(p__2__current, (int64_t)v124, v126, v127, v128, v129, v130, v131);
+      v132 = 13;
       goto LABEL_355;
     case 0xD:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
 LABEL_37:
-      v4->fields._req_5__13 = 0LL;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v4->fields._req_5__13, 0, (int32_t)v2, v3);
+      v8->fields._req_5__13 = 0LL;
+      sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields._req_5__13, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
       if ( _4__this )
         goto LABEL_38;
       goto LABEL_375;
@@ -3011,14 +3728,18 @@ void __fastcall __noreturn AssetLoader__LoadDataCR_d__29__System_Collections_IEn
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_AssetLoader__LoadDataCR_d__29_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_AssetLoader__LoadDataCR_d__29_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -3041,19 +3762,33 @@ void __fastcall AssetLoader__LoadDataCR_d__29__System_IDisposable_Dispose(
 void __fastcall AssetLoader___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB4DD1 & 1) == 0 )
+  if ( (byte_4B1526A & 1) == 0 )
   {
-    sub_1BAB41C(&AssetLoader___c_TypeInfo, v1);
-    byte_4AB4DD1 = 1;
+    sub_1BCA7E0(&AssetLoader___c_TypeInfo, v1, v2);
+    byte_4B1526A = 1;
   }
-  v2 = (Il2CppObject *)sub_1BAB668(AssetLoader___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  AssetLoader___c_TypeInfo->static_fields->__9 = (struct AssetLoader___c_o *)v2;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)AssetLoader___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v4 = (Il2CppObject *)sub_1BCAA2C(AssetLoader___c_TypeInfo, v1, v2, v3);
+  System_Object___ctor(v4, 0LL);
+  AssetLoader___c_TypeInfo->static_fields->__9 = (struct AssetLoader___c_o *)v4;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)AssetLoader___c_TypeInfo->static_fields,
+    (int64_t)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -3065,16 +3800,17 @@ void __fastcall AssetLoader___c___ctor(AssetLoader___c_o *this, const MethodInfo
 
 bool __fastcall AssetLoader___c___LoadDataCR_b__29_0(AssetLoader___c_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   Il2CppObject *Instance; // x0
-  __int64 v3; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4AB4DD2 & 1) == 0 )
+  if ( (byte_4B1526B & 1) == 0 )
   {
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
-    byte_4AB4DD2 = 1;
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method, v2);
+    byte_4B1526B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance )
-    sub_1BAB678(0LL, v3);
+    sub_1BCAA3C(0LL, v4);
   return BYTE4(Instance[7].monitor) == 0;
 }

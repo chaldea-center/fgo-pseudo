@@ -2,15 +2,18 @@ void __fastcall WarBoardFutureActionTrendMaster___ctor(
         WarBoardFutureActionTrendMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB6D1B & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B171D1 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int___ctor__,
-      method);
-    byte_4AB6D1B = 1;
+      method,
+      v2);
+    byte_4B171D1 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     472,
-    (const MethodInfo_3163D50 *)Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int___ctor__);
+    (const MethodInfo_31B2E00 *)Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int___ctor__);
 }

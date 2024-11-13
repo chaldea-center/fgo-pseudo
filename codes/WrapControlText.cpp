@@ -4,6 +4,7 @@ void __fastcall WrapControlText___ctor(WrapControlText_o *this, const MethodInfo
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall WrapControlText__CalcApproximateLabelHeight(
         System_String_o *text,
         int32_t width,
@@ -17,7 +18,7 @@ int32_t __fastcall WrapControlText__CalcApproximateLabelHeight(
   int v8; // w8
 
   if ( !text )
-    sub_1BAB678(0LL, width);
+    sub_1BCAA3C(0LL, *(_QWORD *)&width);
   stringLength = text->fields._stringLength;
   v7 = stringLength / (width / fontSize);
   v8 = stringLength % (width / fontSize);
@@ -52,13 +53,13 @@ void __fastcall WrapControlText__EndLine(System_Text_StringBuilder_o **s, const 
         return;
       }
 LABEL_10:
-      sub_1BAB678(v3, method);
+      sub_1BCAA3C(v3, method);
     }
   }
   v3 = *s;
   if ( !*s )
     goto LABEL_10;
-  System_Text_StringBuilder__Append_61212352(v3, 0xAu, 0LL);
+  System_Text_StringBuilder__Append_61565444(v3, 0xAu, 0LL);
 }
 
 
@@ -100,12 +101,13 @@ void __fastcall WrapControlText__ReplaceSpaceWithNewline(System_Text_StringBuild
         return;
       }
 LABEL_9:
-      sub_1BAB678(v3, method);
+      sub_1BCAA3C(v3, method);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall WrapControlText__fontSizeAdjust(
         UILabel_o *label,
         System_String_o *text,
@@ -118,17 +120,17 @@ void __fastcall WrapControlText__fontSizeAdjust(
   const MethodInfo *v10; // [xsp+8h] [xbp-38h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4AB5307 & 1) == 0 )
+  if ( (byte_4B157A3 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, text);
-    byte_4AB5307 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, text, *(_QWORD *)&defaultSize);
+    byte_4B157A3 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
   if ( IsNullOrEmpty )
   {
     if ( !label )
-      sub_1BAB678(IsNullOrEmpty, v8);
+      sub_1BCAA3C(IsNullOrEmpty, v8);
     UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   else
@@ -138,6 +140,7 @@ void __fastcall WrapControlText__fontSizeAdjust(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 float __fastcall WrapControlText__getFontWidth(
         UILabel_o *label,
         System_String_o *text,
@@ -150,17 +153,17 @@ float __fastcall WrapControlText__getFontWidth(
   const MethodInfo *v11; // [xsp+8h] [xbp-38h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4AB5308 & 1) == 0 )
+  if ( (byte_4B157A4 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, text);
-    byte_4AB5308 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, text, *(_QWORD *)&maxSize);
+    byte_4B157A4 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
   if ( IsNullOrEmpty )
   {
     if ( !label )
-      sub_1BAB678(IsNullOrEmpty, v8);
+      sub_1BCAA3C(IsNullOrEmpty, v8);
     UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     return 0.0;
   }
@@ -172,6 +175,7 @@ float __fastcall WrapControlText__getFontWidth(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall WrapControlText__textAdjust(
         UILabel_o *label,
         System_String_o *text,
@@ -180,27 +184,33 @@ int32_t __fastcall WrapControlText__textAdjust(
         int32_t maxHeight,
         const MethodInfo *method)
 {
+  int32_t v7; // w22
   __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v11; // x2
   __int64 v12; // x1
-  _BOOL8 IsNullOrEmpty; // x0
+  __int64 v13; // x2
   __int64 v14; // x1
-  Il2CppObject *v16; // x19
-  int32_t v17; // [xsp+0h] [xbp-50h]
-  const MethodInfo *v18; // [xsp+8h] [xbp-48h]
+  __int64 v15; // x2
+  _BOOL8 IsNullOrEmpty; // x0
+  __int64 v17; // x1
+  __int64 v19; // x1
+  Il2CppObject *v20; // x19
+  int32_t v21; // [xsp+0h] [xbp-50h]
+  const MethodInfo *v22; // [xsp+8h] [xbp-48h]
   int32_t lineOut[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4AB5306 & 1) == 0 )
+  v7 = maxSize;
+  if ( (byte_4B157A2 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Debug_TypeInfo, text);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BAB41C(&StringLiteral_15699/*"WrapControlText textAdjust error: "*/, v11);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v12);
-    byte_4AB5306 = 1;
+    sub_1BCA7E0(&UnityEngine_Debug_TypeInfo, text, *(_QWORD *)&maxSize);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v10, v11);
+    sub_1BCA7E0(&StringLiteral_15835/*"WrapControlText textAdjust error: "*/, v12, v13);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v14, v15);
+    byte_4B157A2 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, text);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL) )
     return 0;
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
@@ -212,32 +222,33 @@ int32_t __fastcall WrapControlText__textAdjust(
       return 0;
     }
 LABEL_19:
-    sub_1BAB678(IsNullOrEmpty, v14);
+    sub_1BCAA3C(IsNullOrEmpty, v17);
   }
   do
   {
-    IsNullOrEmpty = WrapControlText__wrapText(label, text, maxSize, 0, 0, (float *)&lineOut[1], lineOut, 0, v17, v18);
+    IsNullOrEmpty = WrapControlText__wrapText(label, text, v7, 0, 0, (float *)&lineOut[1], lineOut, 0, v21, v22);
     if ( !IsNullOrEmpty )
       return lineOut[0];
-    if ( minSize == maxSize )
+    if ( minSize == v7 )
     {
-      WrapControlText__wrapText(label, text, minSize, 0, 0, (float *)&lineOut[1], lineOut, minSize, v17, v18);
+      WrapControlText__wrapText(label, text, minSize, 0, 0, (float *)&lineOut[1], lineOut, minSize, v21, v22);
       return lineOut[0];
     }
-    --maxSize;
+    --v7;
   }
-  while ( maxSize );
+  while ( v7 );
   if ( !label )
     goto LABEL_19;
   UILabel__set_text(label, text, 0LL);
-  v16 = (Il2CppObject *)System_String__Concat_62048128((System_String_o *)StringLiteral_15699/*"WrapControlText textAdjust error: "*/, text, 0LL);
+  v20 = (Il2CppObject *)System_String__Concat_62401220((System_String_o *)StringLiteral_15835/*"WrapControlText textAdjust error: "*/, text, 0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__Log(v16, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v19);
+  UnityEngine_Debug__Log(v20, 0LL);
   return lineOut[0];
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall WrapControlText__wrapText(
         UILabel_o *label,
         System_String_o *text,
@@ -250,573 +261,585 @@ bool __fastcall WrapControlText__wrapText(
         int32_t maxHeight,
         const MethodInfo *method)
 {
+  int v13; // w21
   System_String_o *v14; // x24
   __int64 v16; // x1
-  __int64 v17; // x1
+  __int64 v17; // x2
   __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x1
+  __int64 v21; // x2
   System_String_o *Chars; // x0
-  System_String_o *v20; // x28
+  System_String_o *v23; // x28
   int32_t mHeight; // w22
-  __int64 v22; // x1
-  NGUIText_c *v23; // x0
+  __int64 v25; // x1
+  __int64 v26; // x2
+  NGUIText_c *v27; // x0
   struct NGUIText_StaticFields *static_fields; // x8
-  double v30; // d8
-  __int64 v31; // x1
-  double v32; // d0
-  double v33; // d0
-  double v34; // d1
-  double v35; // d1
-  NGUIText_c *v36; // x0
-  struct NGUIText_StaticFields *v37; // x8
-  int v38; // w9
+  double v34; // d8
+  __int64 v35; // x1
+  __int64 v36; // x2
+  double v37; // d0
+  double v38; // d0
+  double v39; // d1
+  double v40; // d1
+  NGUIText_c *v41; // x0
+  struct NGUIText_StaticFields *v42; // x8
+  int v43; // w9
   float fontScale; // s0
   int fontSize; // s1
   float spacingY; // s2
   int regionWidth; // w9
   int regionHeight; // w9
   float finalLineHeight; // s1
-  float v45; // s8
+  float v50; // s8
   int maxLines; // w21
-  int32_t v47; // w21
-  float v48; // s8
-  float v49; // s8
-  unsigned int v50; // w9
-  unsigned int v51; // w8
-  System_Text_StringBuilder_o *v52; // x20
-  __int64 v53; // x2
+  int32_t v52; // w21
+  float v53; // s8
+  float v54; // s8
+  unsigned int v55; // w9
+  unsigned int v56; // w8
+  __int64 v57; // x1
+  __int64 v58; // x2
+  __int64 v59; // x3
+  System_Text_StringBuilder_o *v60; // x20
+  __int64 v61; // x2
   int32_t stringLength; // w26
-  float v55; // s10
-  System_String_o *v56; // x1
-  NGUIText_c *v58; // x0
-  int v59; // s0
-  int v60; // w23
-  int32_t v61; // w22
-  int v62; // w27
-  float v63; // s12
-  double v64; // d14
-  float v65; // s15
-  float v66; // s9
-  int v67; // w25
-  int32_t v68; // w28
-  System_Text_StringBuilder_o *v69; // x21
-  NGUIText_c *v70; // x8
-  uint16_t v71; // w29
-  int32_t v72; // w8
-  int32_t v73; // w20
+  float v63; // s10
+  System_String_o *v64; // x1
+  NGUIText_c *v66; // x0
+  int v67; // s0
+  int v68; // w23
+  int32_t v69; // w22
+  int v70; // w27
+  float v71; // s12
+  double v72; // d14
+  float v73; // s15
+  float v74; // s9
+  int v75; // w25
+  __int64 v76; // x2
+  int32_t v77; // w28
+  System_Text_StringBuilder_o *v78; // x21
+  NGUIText_c *v79; // x8
+  uint16_t v80; // w29
+  int32_t v81; // w8
+  int32_t v82; // w20
   BMSymbol_o *Symbol; // x21
-  float v75; // s11
-  int32_t v76; // w20
-  int32_t v77; // w22
-  uint16_t v78; // w0
-  System_Text_StringBuilder_o *v79; // x20
-  double v80; // d8
-  double v81; // d0
-  double v82; // d0
-  double v83; // d1
-  double v84; // d1
+  float v84; // s11
+  int32_t v85; // w20
+  int32_t v86; // w22
+  uint16_t v87; // w0
+  System_Text_StringBuilder_o *v88; // x20
+  double v89; // d8
+  double v90; // d0
+  double v91; // d0
+  double v92; // d1
+  double v93; // d1
   float GlyphWidth; // s0
-  NGUIText_c *v86; // x0
-  float v87; // s8
-  float v88; // s14
-  System_String_o *v89; // x21
-  int32_t v90; // w0
-  unsigned __int16 v91; // w21
-  NGUIText_c *v92; // x8
-  int32_t v93; // w20
-  int v94; // w9
-  System_Text_StringBuilder_o *v95; // x22
-  int v96; // w20
-  float v97; // s0
-  int32_t v98; // w20
-  NGUIText_c *v99; // x0
-  float v100; // s8
-  System_Text_StringBuilder_o *v101; // x20
-  float v102; // s8
-  _BOOL4 v103; // w20
-  int32_t *v104; // x8
-  NGUIText_c *v105; // x0
+  NGUIText_c *v95; // x0
+  float v96; // s8
+  float v97; // s14
+  System_String_o *v98; // x21
+  int32_t v99; // w0
+  unsigned __int16 v100; // w21
+  NGUIText_c *v101; // x8
+  int32_t v102; // w20
+  int v103; // w9
+  System_Text_StringBuilder_o *v104; // x22
+  int v105; // w20
   float v106; // s0
-  float v107; // s0
-  int32_t v108; // w1
-  int32_t *v109; // x8
-  System_String_o *v110; // x0
-  NGUIText_c *v111; // x0
-  float v112; // s0
-  int v113; // w8
-  int32_t v114; // w1
-  NGUIText_c *v115; // x0
-  int v116; // w8
-  char v117; // [xsp+Ch] [xbp-104h]
-  int32_t *v118; // [xsp+10h] [xbp-100h]
-  int32_t v119; // [xsp+1Ch] [xbp-F4h]
-  float *v120; // [xsp+20h] [xbp-F0h]
-  System_String_o *v121; // [xsp+28h] [xbp-E8h]
-  int32_t v122; // [xsp+34h] [xbp-DCh]
-  System_String_o *v123; // [xsp+38h] [xbp-D8h]
-  int v125; // [xsp+44h] [xbp-CCh]
-  int v127; // [xsp+4Ch] [xbp-C4h]
-  System_String_o *v128; // [xsp+50h] [xbp-C0h]
+  int32_t v107; // w20
+  NGUIText_c *v108; // x0
+  float v109; // s8
+  System_Text_StringBuilder_o *v110; // x20
+  float v111; // s8
+  _BOOL4 v112; // w20
+  int32_t *v113; // x8
+  NGUIText_c *v114; // x0
+  float v115; // s0
+  float v116; // s0
+  int32_t v117; // w1
+  int32_t *v118; // x8
+  System_String_o *v119; // x0
+  __int64 v120; // x1
+  NGUIText_c *v121; // x0
+  float v122; // s0
+  int v123; // w8
+  int32_t v124; // w1
+  NGUIText_c *v125; // x0
+  int v126; // w8
+  char v127; // [xsp+Ch] [xbp-104h]
+  int32_t *v128; // [xsp+10h] [xbp-100h]
+  int32_t v129; // [xsp+1Ch] [xbp-F4h]
+  float *v130; // [xsp+20h] [xbp-F0h]
+  System_String_o *v131; // [xsp+28h] [xbp-E8h]
+  int32_t v132; // [xsp+34h] [xbp-DCh]
+  System_String_o *v133; // [xsp+38h] [xbp-D8h]
+  int v135; // [xsp+44h] [xbp-CCh]
+  int v137; // [xsp+4Ch] [xbp-C4h]
+  System_String_o *v138; // [xsp+50h] [xbp-C0h]
   int32_t index; // [xsp+5Ch] [xbp-B4h] BYREF
   System_Text_StringBuilder_o *s; // [xsp+60h] [xbp-B0h] BYREF
   double iptr; // [xsp+68h] [xbp-A8h] BYREF
 
+  v13 = fsize;
   v14 = text;
-  if ( (byte_4AB5309 & 1) == 0 )
+  if ( (byte_4B157A5 & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
-    sub_1BAB41C(&NGUIText_TypeInfo, v16);
-    sub_1BAB41C(&System_Text_StringBuilder_TypeInfo, v17);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v18);
-    byte_4AB5309 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, text, *(_QWORD *)&fsize);
+    sub_1BCA7E0(&NGUIText_TypeInfo, v16, v17);
+    sub_1BCA7E0(&System_Text_StringBuilder_TypeInfo, v18, v19);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v20, v21);
+    byte_4B157A5 = 1;
   }
   s = 0LL;
   index = 0;
   *widthOut = 0.0;
   *lineOut = 1;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4AB5377 )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, text);
+  if ( !byte_4B15813 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
-    byte_4AB5377 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, text, *(_QWORD *)&fsize);
+    byte_4B15813 = 1;
   }
   Chars = (System_String_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, text);
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
   }
-  v128 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 56LL);
-  if ( !byte_4AB5378 )
+  v138 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 56LL);
+  if ( !byte_4B15814 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, text, *(_QWORD *)&fsize);
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
-    byte_4AB5378 = 1;
-  }
-  if ( !LODWORD(Chars[9].monitor) )
-  {
-    j_il2cpp_runtime_class_init_0(Chars);
-    Chars = (System_String_o *)LocalizationManager_TypeInfo;
-  }
-  v20 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 64LL);
-  if ( !byte_4AB5379 )
-  {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, text);
-    Chars = (System_String_o *)LocalizationManager_TypeInfo;
-    byte_4AB5379 = 1;
+    byte_4B15814 = 1;
   }
   if ( !LODWORD(Chars[9].monitor) )
   {
-    j_il2cpp_runtime_class_init_0(Chars);
+    j_il2cpp_runtime_class_init_0(Chars, text);
+    Chars = (System_String_o *)LocalizationManager_TypeInfo;
+  }
+  v23 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 64LL);
+  if ( !byte_4B15815 )
+  {
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, text, *(_QWORD *)&fsize);
+    Chars = (System_String_o *)LocalizationManager_TypeInfo;
+    byte_4B15815 = 1;
+  }
+  if ( !LODWORD(Chars[9].monitor) )
+  {
+    j_il2cpp_runtime_class_init_0(Chars, text);
     Chars = (System_String_o *)LocalizationManager_TypeInfo;
   }
   if ( !label )
     goto LABEL_261;
   mHeight = label->fields.mHeight;
-  v123 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 72LL);
+  v133 = *(System_String_o **)(*(_QWORD *)&Chars[7].fields + 72LL);
   if ( minSize >= 1 )
   {
     UIWidget__set_height((UIWidget_o *)label, 1000000, 0LL);
-    fsize = minSize;
+    v13 = minSize;
   }
-  UILabel__set_fontSize(label, fsize, 0LL);
+  UILabel__set_fontSize(label, v13, 0LL);
   UILabel__UpdateNGUIText(label, 0LL);
-  v23 = NGUIText_TypeInfo;
+  v27 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-    v23 = NGUIText_TypeInfo;
+    j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, v25);
+    v27 = NGUIText_TypeInfo;
   }
-  static_fields = v23->static_fields;
+  static_fields = v27->static_fields;
   __asm { FMOV            V0.2S, #1.0 }
-  static_fields->fontSize = fsize;
+  static_fields->fontSize = v13;
   *(_QWORD *)&static_fields->fontScale = _D0;
-  if ( !byte_4AB12E8 )
+  if ( !byte_4B11755 )
   {
-    sub_1BAB41C(&System_Math_TypeInfo, v22);
-    byte_4AB12E8 = 1;
+    sub_1BCA7E0(&System_Math_TypeInfo, v25, v26);
+    byte_4B11755 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v30 = (float)fsize;
-  v32 = modf(v30, &iptr);
-  if ( (fsize & 0x80000000) != 0 )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v25);
+  v34 = (float)v13;
+  v37 = modf(v34, &iptr);
+  if ( (v13 & 0x80000000) != 0 )
   {
-    if ( v32 != -0.5 )
+    if ( v37 != -0.5 )
     {
-      v33 = ceil(v30 + -0.5);
+      v38 = ceil(v34 + -0.5);
       goto LABEL_36;
     }
-    v33 = iptr;
-    v34 = -1.0;
+    v38 = iptr;
+    v39 = -1.0;
   }
   else
   {
-    if ( v32 != 0.5 )
+    if ( v37 != 0.5 )
     {
-      v33 = floor(v30 + 0.5);
+      v38 = floor(v34 + 0.5);
       goto LABEL_36;
     }
-    v33 = iptr;
-    v34 = 1.0;
+    v38 = iptr;
+    v39 = 1.0;
   }
-  v35 = v33 + v34;
-  if ( ((__int64)v33 & 1) != 0 )
-    v33 = v35;
+  v40 = v38 + v39;
+  if ( ((__int64)v38 & 1) != 0 )
+    v38 = v40;
 LABEL_36:
-  v36 = NGUIText_TypeInfo;
-  v37 = NGUIText_TypeInfo->static_fields;
-  v38 = (int)v33;
-  _ZF = v33 == INFINITY;
-  fontSize = v37->fontSize;
-  fontScale = v37->fontScale;
+  v41 = NGUIText_TypeInfo;
+  v42 = NGUIText_TypeInfo->static_fields;
+  v43 = (int)v38;
+  _ZF = v38 == INFINITY;
+  fontSize = v42->fontSize;
+  fontScale = v42->fontScale;
   if ( _ZF )
-    v38 = 0x80000000;
-  spacingY = v37->spacingY;
-  v37->finalSize = v38;
-  regionWidth = v37->regionWidth;
-  v37->finalLineHeight = (float)(spacingY + (float)fontSize) * fontScale;
+    v43 = 0x80000000;
+  spacingY = v42->spacingY;
+  v42->finalSize = v43;
+  regionWidth = v42->regionWidth;
+  v42->finalLineHeight = (float)(spacingY + (float)fontSize) * fontScale;
   if ( regionWidth < 1 )
     goto LABEL_79;
-  if ( !v36->_2.cctor_finished )
+  if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
-    v37 = NGUIText_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
+    v42 = NGUIText_TypeInfo->static_fields;
   }
-  if ( v37->regionHeight < 1 )
+  if ( v42->regionHeight < 1 )
     goto LABEL_79;
-  if ( !v36->_2.cctor_finished )
+  if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
-    v37 = NGUIText_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
+    v42 = NGUIText_TypeInfo->static_fields;
   }
-  if ( v37->finalLineHeight < 1.0 )
+  if ( v42->finalLineHeight < 1.0 )
     goto LABEL_79;
-  v122 = mHeight;
-  if ( !v36->_2.cctor_finished )
+  v132 = mHeight;
+  if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
-    v37 = NGUIText_TypeInfo->static_fields;
-    maxLines = v37->maxLines;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
+    v42 = NGUIText_TypeInfo->static_fields;
+    maxLines = v42->maxLines;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-      v36 = NGUIText_TypeInfo;
-      v37 = NGUIText_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, v35);
+      v41 = NGUIText_TypeInfo;
+      v42 = NGUIText_TypeInfo->static_fields;
     }
-    regionHeight = v37->regionHeight;
+    regionHeight = v42->regionHeight;
     if ( maxLines > 0 )
       goto LABEL_47;
 LABEL_53:
-    v45 = (float)regionHeight;
+    v50 = (float)regionHeight;
     goto LABEL_54;
   }
-  regionHeight = v37->regionHeight;
-  if ( v37->maxLines <= 0 )
+  regionHeight = v42->regionHeight;
+  if ( v42->maxLines <= 0 )
     goto LABEL_53;
 LABEL_47:
-  finalLineHeight = v37->finalLineHeight;
-  if ( (float)(finalLineHeight * (float)v37->maxLines) <= (float)regionHeight )
-    v45 = finalLineHeight * (float)v37->maxLines;
+  finalLineHeight = v42->finalLineHeight;
+  if ( (float)(finalLineHeight * (float)v42->maxLines) <= (float)regionHeight )
+    v50 = finalLineHeight * (float)v42->maxLines;
   else
-    v45 = (float)regionHeight;
+    v50 = (float)regionHeight;
 LABEL_54:
-  if ( !v36->_2.cctor_finished )
+  if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
-    v37 = NGUIText_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
+    v42 = NGUIText_TypeInfo->static_fields;
   }
-  v47 = v37->maxLines;
-  if ( v47 < 1 )
+  v52 = v42->maxLines;
+  if ( v52 < 1 )
   {
-    v47 = 1000000;
+    v52 = 1000000;
   }
-  else if ( !v36->_2.cctor_finished )
+  else if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
-    v47 = NGUIText_TypeInfo->static_fields->maxLines;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
+    v52 = NGUIText_TypeInfo->static_fields->maxLines;
   }
-  if ( !v36->_2.cctor_finished )
+  if ( !v41->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v36);
-    v36 = NGUIText_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v41, v35);
+    v41 = NGUIText_TypeInfo;
   }
-  if ( (float)(v45 / v36->static_fields->finalLineHeight) <= (float)v47 )
-    v48 = v45 / v36->static_fields->finalLineHeight;
+  if ( (float)(v50 / v41->static_fields->finalLineHeight) <= (float)v52 )
+    v53 = v50 / v41->static_fields->finalLineHeight;
   else
-    v48 = (float)v47;
-  if ( !byte_4AB0690 )
+    v53 = (float)v52;
+  if ( !byte_4B109C0 )
   {
-    sub_1BAB41C(&System_Math_TypeInfo, v31);
-    byte_4AB0690 = 1;
+    sub_1BCA7E0(&System_Math_TypeInfo, v35, v36);
+    byte_4B109C0 = 1;
   }
-  v49 = v48 + 0.01;
+  v54 = v53 + 0.01;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v50 = vcvtms_s32_f32(v49);
-  if ( floorf(v49) == INFINITY )
-    v51 = 0x80000000;
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v35);
+  v55 = vcvtms_s32_f32(v54);
+  if ( floorf(v54) == INFINITY )
+    v56 = 0x80000000;
   else
-    v51 = v50;
-  v127 = v51;
-  if ( !v51 )
+    v56 = v55;
+  v137 = v56;
+  if ( !v56 )
   {
 LABEL_79:
-    v56 = (System_String_o *)StringLiteral_1/*""*/;
+    v64 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_80:
-    UILabel__set_text(label, v56, 0LL);
+    UILabel__set_text(label, v64, 0LL);
     return 0;
   }
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, v35);
   NGUIText__Prepare(v14, 0LL);
-  v52 = (System_Text_StringBuilder_o *)sub_1BAB668(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor(v52, 0LL);
-  s = v52;
+  v60 = (System_Text_StringBuilder_o *)sub_1BCAA2C(System_Text_StringBuilder_TypeInfo, v57, v58, v59);
+  System_Text_StringBuilder___ctor(v60, 0LL);
+  s = v60;
   if ( !v14 )
     goto LABEL_261;
   stringLength = v14->fields._stringLength;
-  v121 = v20;
+  v131 = v23;
   if ( fontSizeAdjust )
   {
     index = 0;
-    v120 = widthOut;
+    v130 = widthOut;
     if ( stringLength <= 0 )
     {
-      v104 = lineOut;
-      v67 = 1;
+      v113 = lineOut;
+      v75 = 1;
       *widthOut = 0.0;
-      *v104 = 1;
-      v102 = 0.0;
+      *v113 = 1;
+      v111 = 0.0;
       if ( !fontSizeAdjust )
         goto LABEL_240;
       goto LABEL_228;
     }
-    v55 = 1000000.0;
-    v118 = lineOut;
-    v119 = minSize;
+    v63 = 1000000.0;
+    v128 = lineOut;
+    v129 = minSize;
   }
   else
   {
-    v58 = NGUIText_TypeInfo;
+    v66 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-      v58 = NGUIText_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+      v66 = NGUIText_TypeInfo;
     }
-    v59 = v58->static_fields->regionWidth;
+    v67 = v66->static_fields->regionWidth;
     index = 0;
     if ( stringLength <= 0 )
     {
-      v109 = lineOut;
-      v67 = 1;
+      v118 = lineOut;
+      v75 = 1;
       *widthOut = 0.0;
-      *v109 = 1;
+      *v118 = 1;
       goto LABEL_240;
     }
-    v118 = lineOut;
-    v120 = widthOut;
-    v119 = minSize;
-    v55 = (float)v59;
+    v128 = lineOut;
+    v130 = widthOut;
+    v129 = minSize;
+    v63 = (float)v67;
   }
-  v60 = 0;
-  v61 = 0;
-  v62 = 0;
+  v68 = 0;
+  v69 = 0;
+  v70 = 0;
   LODWORD(text) = 0;
-  v63 = 0.0;
-  v64 = -0.5;
-  v65 = v55;
-  v66 = 0.0;
-  v67 = 1;
-  v125 = 1;
-  v117 = 1;
+  v71 = 0.0;
+  v72 = -0.5;
+  v73 = v63;
+  v74 = 0.0;
+  v75 = 1;
+  v135 = 1;
+  v127 = 1;
   while ( 1 )
   {
     Chars = (System_String_o *)System_String__get_Chars(v14, (int32_t)text, 0LL);
-    v68 = (unsigned __int16)Chars;
-    v62 |= (unsigned __int16)((unsigned __int16)Chars >> 12) > 2u;
+    v77 = (unsigned __int16)Chars;
+    v70 |= (unsigned __int16)((unsigned __int16)Chars >> 12) > 2u;
     if ( (unsigned __int16)Chars != 10 )
     {
-      v70 = NGUIText_TypeInfo;
-      v71 = (unsigned __int16)Chars;
+      v79 = NGUIText_TypeInfo;
+      v80 = (unsigned __int16)Chars;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-        v70 = NGUIText_TypeInfo;
+        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+        v79 = NGUIText_TypeInfo;
       }
-      if ( v70->static_fields->encoding )
+      if ( v79->static_fields->encoding )
       {
-        if ( !v70->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v70);
+        if ( !v79->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v79, text);
         if ( NGUIText__ParseSymbol(v14, &index, 0LL) )
         {
-          v72 = index;
+          v81 = index;
 LABEL_209:
-          index = v72 - 1;
+          index = v81 - 1;
           goto LABEL_211;
         }
-        v70 = NGUIText_TypeInfo;
+        v79 = NGUIText_TypeInfo;
       }
-      if ( !v70->_2.cctor_finished )
+      if ( !v79->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v70);
-        v70 = NGUIText_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v79, text);
+        v79 = NGUIText_TypeInfo;
       }
-      if ( v70->static_fields->useSymbols )
+      if ( v79->static_fields->useSymbols )
       {
-        v73 = index;
-        if ( !v70->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v70);
-        Symbol = NGUIText__GetSymbol(v14, v73, stringLength, 0LL);
-        v70 = NGUIText_TypeInfo;
+        v82 = index;
+        if ( !v79->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v79, text);
+        Symbol = NGUIText__GetSymbol(v14, v82, stringLength, 0LL);
+        v79 = NGUIText_TypeInfo;
       }
       else
       {
         Symbol = 0LL;
       }
-      if ( v70->_2.cctor_finished )
+      if ( v79->_2.cctor_finished )
       {
         if ( Symbol )
         {
 LABEL_114:
-          v75 = NGUIText_TypeInfo->static_fields->finalSpacingX
+          v84 = NGUIText_TypeInfo->static_fields->finalSpacingX
               + (float)(NGUIText_TypeInfo->static_fields->fontScale * (float)Symbol->fields.mAdvance);
           goto LABEL_115;
         }
       }
       else
       {
-        j_il2cpp_runtime_class_init_0(v70);
+        j_il2cpp_runtime_class_init_0(v79, text);
         if ( Symbol )
           goto LABEL_114;
       }
-      GlyphWidth = NGUIText__GetGlyphWidth(v68, v61, 0LL);
+      GlyphWidth = NGUIText__GetGlyphWidth(v77, v69, 0LL);
       if ( GlyphWidth == 0.0 )
         goto LABEL_211;
-      v86 = NGUIText_TypeInfo;
-      v87 = GlyphWidth;
+      v95 = NGUIText_TypeInfo;
+      v96 = GlyphWidth;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-        v86 = NGUIText_TypeInfo;
+        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+        v95 = NGUIText_TypeInfo;
       }
-      v75 = v87 + v86->static_fields->finalSpacingX;
+      v84 = v96 + v95->static_fields->finalSpacingX;
 LABEL_115:
-      v65 = v65 - v75;
-      if ( (unsigned int)v71 - 8201 < 3 || v71 == 32 )
+      v73 = v73 - v84;
+      if ( (unsigned int)v80 - 8201 < 3 || v80 == 32 )
       {
         text = (System_String_o *)(unsigned int)index;
-        v76 = index - v60;
-        if ( index > v60 && ((v62 ^ 1) & 1) != 0 )
+        v85 = index - v68;
+        if ( index > v68 && ((v70 ^ 1) & 1) != 0 )
         {
-          v77 = v76 + 1;
-          if ( v67 == v127 && v65 <= 0.0 && index < stringLength )
+          v86 = v85 + 1;
+          if ( v75 == v137 && v73 <= 0.0 && index < stringLength )
           {
-            v78 = System_String__get_Chars(v14, index, 0LL);
-            if ( v78 < 0x20u || (unsigned int)v78 - 8201 < 3 || v78 == 32 )
-              v77 = v76;
+            v87 = System_String__get_Chars(v14, index, 0LL);
+            if ( v87 < 0x20u || (unsigned int)v87 - 8201 < 3 || v87 == 32 )
+              v86 = v85;
           }
-          v79 = s;
-          Chars = System_String__Substring_62067132(v14, v60, v77, 0LL);
-          if ( !v79 )
+          v88 = s;
+          Chars = System_String__Substring_62420224(v14, v68, v86, 0LL);
+          if ( !v88 )
             goto LABEL_261;
-          System_Text_StringBuilder__Append_61210024(v79, Chars, 0LL);
-          v61 = v68;
-          v125 = 0;
-          v60 = index + 1;
+          System_Text_StringBuilder__Append_61563116(v88, Chars, 0LL);
+          v69 = v77;
+          v135 = 0;
+          v68 = index + 1;
         }
       }
-      if ( !byte_4AB12E8 )
+      if ( !byte_4B11755 )
       {
-        sub_1BAB41C(&System_Math_TypeInfo, text);
-        byte_4AB12E8 = 1;
+        sub_1BCA7E0(&System_Math_TypeInfo, text, v76);
+        byte_4B11755 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v80 = v65;
-      v81 = modf(v65, &iptr);
-      if ( v65 >= 0.0 )
+        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, text);
+      v89 = v73;
+      v90 = modf(v73, &iptr);
+      if ( v73 >= 0.0 )
       {
-        if ( v81 != 0.5 )
+        if ( v90 != 0.5 )
         {
-          v82 = floor(v80 + 0.5);
+          v91 = floor(v89 + 0.5);
           goto LABEL_147;
         }
-        v82 = iptr;
-        v83 = 1.0;
+        v91 = iptr;
+        v92 = 1.0;
       }
       else
       {
-        if ( v81 != v64 )
+        if ( v90 != v72 )
         {
-          v82 = ceil(v80 + v64);
+          v91 = ceil(v89 + v72);
           goto LABEL_147;
         }
-        v82 = iptr;
-        v83 = -1.0;
+        v91 = iptr;
+        v92 = -1.0;
       }
-      v84 = v82 + v83;
-      if ( ((__int64)v82 & 1) != 0 )
-        v82 = v84;
+      v93 = v91 + v92;
+      if ( ((__int64)v91 & 1) != 0 )
+        v91 = v93;
 LABEL_147:
-      v88 = v63 + v75;
-      if ( v82 != INFINITY && ((int)v82 & 0x80000000) == 0 )
+      v97 = v71 + v84;
+      if ( v91 != INFINITY && ((int)v91 & 0x80000000) == 0 )
       {
-        v63 = v63 + v75;
+        v71 = v71 + v84;
 LABEL_207:
-        v64 = -0.5;
+        v72 = -0.5;
         if ( !Symbol )
         {
-          v61 = v68;
+          v69 = v77;
           goto LABEL_211;
         }
-        v98 = index;
-        v72 = v98 + BMSymbol__get_length(Symbol, 0LL);
-        v61 = 0;
+        v107 = index;
+        v81 = v107 + BMSymbol__get_length(Symbol, 0LL);
+        v69 = 0;
         goto LABEL_209;
       }
       if ( !fontSizeAdjust )
       {
         text = (System_String_o *)(unsigned int)index;
-        v89 = v128;
+        v98 = v138;
         while ( (_DWORD)text )
         {
           Chars = (System_String_o *)System_String__get_Chars(v14, (int32_t)text, 0LL);
-          if ( !v89 )
+          if ( !v98 )
             goto LABEL_261;
-          v71 = (unsigned __int16)Chars;
-          v90 = System_String__IndexOf(v89, (uint16_t)Chars, 0LL);
+          v80 = (unsigned __int16)Chars;
+          v99 = System_String__IndexOf(v98, (uint16_t)Chars, 0LL);
           text = (System_String_o *)(unsigned int)(index - 1);
-          if ( (v90 & 0x80000000) != 0 )
+          if ( (v99 & 0x80000000) != 0 )
           {
             Chars = (System_String_o *)System_String__get_Chars(v14, (int32_t)text, 0LL);
-            if ( !v121 )
+            if ( !v131 )
               goto LABEL_261;
-            v91 = (unsigned __int16)Chars;
-            if ( (System_String__IndexOf(v121, (uint16_t)Chars, 0LL) & 0x80000000) != 0 )
+            v100 = (unsigned __int16)Chars;
+            if ( (System_String__IndexOf(v131, (uint16_t)Chars, 0LL) & 0x80000000) != 0 )
             {
-              if ( v71 != v91 )
+              if ( v80 != v100 )
                 goto LABEL_167;
-              Chars = v123;
-              if ( !v123 )
+              Chars = v133;
+              if ( !v133 )
                 goto LABEL_261;
-              if ( (System_String__IndexOf(v123, v71, 0LL) & 0x80000000) != 0 )
+              if ( (System_String__IndexOf(v133, v80, 0LL) & 0x80000000) != 0 )
               {
 LABEL_167:
-                if ( ((unsigned __int16)(v71 - 48) > 9u || (unsigned __int16)(v91 - 48) > 9u)
-                  && ((unsigned __int16)(v91 - 58) >= 0x21u && (unsigned __int16)(v91 - 97) > 0x19u
-                   || (unsigned __int16)(v71 - 58) >= 0x21u && (unsigned __int16)(v71 - 97) > 0x19u) )
+                if ( ((unsigned __int16)(v80 - 48) > 9u || (unsigned __int16)(v100 - 48) > 9u)
+                  && ((unsigned __int16)(v100 - 58) >= 0x21u && (unsigned __int16)(v100 - 97) > 0x19u
+                   || (unsigned __int16)(v80 - 58) >= 0x21u && (unsigned __int16)(v80 - 97) > 0x19u) )
                 {
                   break;
                 }
               }
             }
-            v89 = v128;
+            v98 = v138;
             text = (System_String_o *)(unsigned int)--index;
           }
           else
@@ -824,77 +847,77 @@ LABEL_167:
             --index;
           }
         }
-        v92 = NGUIText_TypeInfo;
+        v101 = NGUIText_TypeInfo;
         if ( !NGUIText_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-          v92 = NGUIText_TypeInfo;
+          j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+          v101 = NGUIText_TypeInfo;
         }
-        if ( v92->static_fields->useSymbols )
+        if ( v101->static_fields->useSymbols )
         {
-          v93 = index;
-          if ( !v92->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(v92);
-          Symbol = NGUIText__GetSymbol(v14, v93, stringLength, 0LL);
-          v92 = NGUIText_TypeInfo;
+          v102 = index;
+          if ( !v101->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(v101, text);
+          Symbol = NGUIText__GetSymbol(v14, v102, stringLength, 0LL);
+          v101 = NGUIText_TypeInfo;
         }
         else
         {
           Symbol = 0LL;
         }
-        if ( !v92->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v92);
+        if ( !v101->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v101, text);
         if ( !Symbol )
         {
-          v97 = NGUIText__GetGlyphWidth(v71, v61, 0LL);
-          if ( v97 == 0.0 )
+          v106 = NGUIText__GetGlyphWidth(v80, v69, 0LL);
+          if ( v106 == 0.0 )
           {
-            v63 = v63 + v75;
+            v71 = v71 + v84;
             goto LABEL_193;
           }
-          v99 = NGUIText_TypeInfo;
-          v100 = v97;
+          v108 = NGUIText_TypeInfo;
+          v109 = v106;
           if ( !NGUIText_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-            v99 = NGUIText_TypeInfo;
+            j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+            v108 = NGUIText_TypeInfo;
           }
-          v94 = v125;
+          v103 = v135;
           Symbol = 0LL;
-          v75 = v100 + v99->static_fields->finalSpacingX;
+          v84 = v109 + v108->static_fields->finalSpacingX;
           goto LABEL_180;
         }
-        v75 = NGUIText_TypeInfo->static_fields->finalSpacingX
+        v84 = NGUIText_TypeInfo->static_fields->finalSpacingX
             + (float)(NGUIText_TypeInfo->static_fields->fontScale * (float)Symbol->fields.mAdvance);
       }
-      v94 = v125;
+      v103 = v135;
 LABEL_180:
-      if ( ((v67 != v127) & (v94 ^ 1)) == 0 )
+      if ( ((v75 != v137) & (v103 ^ 1)) == 0 )
       {
-        v95 = s;
-        Chars = System_String__Substring_62067132(v14, v60, (index - v60) & (unsigned int)~((index - v60) >> 31), 0LL);
-        if ( !v95 )
+        v104 = s;
+        Chars = System_String__Substring_62420224(v14, v68, (index - v68) & (unsigned int)~((index - v68) >> 31), 0LL);
+        if ( !v104 )
           goto LABEL_261;
-        System_Text_StringBuilder__Append_61210024(v95, Chars, 0LL);
-        v96 = 1;
-        if ( (unsigned int)v71 - 8201 >= 3 )
+        System_Text_StringBuilder__Append_61563116(v104, Chars, 0LL);
+        v105 = 1;
+        if ( (unsigned int)v80 - 8201 >= 3 )
         {
-          mHeight = v122;
-          if ( v71 != 32 )
+          mHeight = v132;
+          if ( v80 != 32 )
           {
-            v96 = 0;
-            v117 &= v62;
+            v105 = 0;
+            v127 &= v70;
           }
         }
         else
         {
-          mHeight = v122;
+          mHeight = v132;
         }
-        _ZF = v67++ == v127;
+        _ZF = v75++ == v137;
         if ( _ZF )
         {
-          minSize = v119;
-          v63 = v88;
+          minSize = v129;
+          v71 = v97;
           goto LABEL_220;
         }
         if ( keepCharCount )
@@ -904,185 +927,185 @@ LABEL_180:
         else
         {
           if ( !NGUIText_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
+            j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
           NGUIText__EndLine(&s, 0LL);
         }
-        if ( v96 )
-          v65 = v55;
+        if ( v105 )
+          v73 = v63;
         else
-          v65 = v55 - v75;
-        v60 = index + v96;
-        v63 = 0.0;
-        v68 = 0;
-        v125 = 1;
-        if ( v66 < v88 )
-          v66 = v88;
+          v73 = v63 - v84;
+        v68 = index + v105;
+        v71 = 0.0;
+        v77 = 0;
+        v135 = 1;
+        if ( v74 < v97 )
+          v74 = v97;
         goto LABEL_207;
       }
-      index = v60 - 1;
-      if ( v66 < v88 )
-        v66 = v88;
-      ++v67;
+      index = v68 - 1;
+      if ( v74 < v97 )
+        v74 = v97;
+      ++v75;
       if ( keepCharCount )
       {
         WrapControlText__ReplaceSpaceWithNewline(&s, (const MethodInfo *)text);
-        v61 = 0;
-        v63 = 0.0;
-        v125 = 1;
-        v65 = v55;
+        v69 = 0;
+        v71 = 0.0;
+        v135 = 1;
+        v73 = v63;
 LABEL_193:
-        v64 = -0.5;
+        v72 = -0.5;
         goto LABEL_211;
       }
-      v64 = -0.5;
+      v72 = -0.5;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
+        j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
       NGUIText__EndLine(&s, 0LL);
-      v61 = 0;
-      v63 = 0.0;
+      v69 = 0;
+      v71 = 0.0;
       goto LABEL_103;
     }
-    if ( v67 == v127 )
+    if ( v75 == v137 )
       break;
-    v69 = s;
-    if ( v66 < v63 )
-      v66 = v63;
-    if ( index <= v60 )
+    v78 = s;
+    if ( v74 < v71 )
+      v74 = v71;
+    if ( index <= v68 )
     {
       if ( !s )
         goto LABEL_261;
-      System_Text_StringBuilder__Append_61212352(s, 0xAu, 0LL);
+      System_Text_StringBuilder__Append_61565444(s, 0xAu, 0LL);
     }
     else
     {
-      Chars = System_String__Substring_62067132(v14, v60, index - v60 + 1, 0LL);
-      if ( !v69 )
+      Chars = System_String__Substring_62420224(v14, v68, index - v68 + 1, 0LL);
+      if ( !v78 )
         goto LABEL_261;
-      System_Text_StringBuilder__Append_61210024(v69, Chars, 0LL);
+      System_Text_StringBuilder__Append_61563116(v78, Chars, 0LL);
     }
-    v61 = 0;
-    ++v67;
-    v63 = 0.0;
-    v60 = index + 1;
+    v69 = 0;
+    ++v75;
+    v71 = 0.0;
+    v68 = index + 1;
 LABEL_103:
-    v125 = 1;
-    v65 = v55;
+    v135 = 1;
+    v73 = v63;
 LABEL_211:
     text = (System_String_o *)(unsigned int)++index;
     if ( index >= stringLength )
       goto LABEL_217;
   }
   text = (System_String_o *)(unsigned int)index;
-  v67 = v127;
+  v75 = v137;
 LABEL_217:
-  minSize = v119;
-  mHeight = v122;
-  v53 = (unsigned int)((_DWORD)text - v60);
-  if ( (int)text > v60 )
+  minSize = v129;
+  mHeight = v132;
+  v61 = (unsigned int)((_DWORD)text - v68);
+  if ( (int)text > v68 )
   {
-    v101 = s;
-    Chars = System_String__Substring_62067132(v14, v60, v53, 0LL);
-    if ( v101 )
+    v110 = s;
+    Chars = System_String__Substring_62420224(v14, v68, v61, 0LL);
+    if ( v110 )
     {
-      System_Text_StringBuilder__Append_61210024(v101, Chars, 0LL);
+      System_Text_StringBuilder__Append_61563116(v110, Chars, 0LL);
       goto LABEL_220;
     }
 LABEL_261:
-    sub_1BAB678(Chars, text);
+    sub_1BCAA3C(Chars, text);
   }
 LABEL_220:
-  if ( v66 >= v63 )
-    v102 = v66;
+  if ( v74 >= v71 )
+    v111 = v74;
   else
-    v102 = v63;
-  *v120 = v102;
-  *v118 = v67;
+    v111 = v71;
+  *v130 = v111;
+  *v128 = v75;
   if ( fontSizeAdjust )
   {
 LABEL_228:
-    v105 = NGUIText_TypeInfo;
+    v114 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-      v105 = NGUIText_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+      v114 = NGUIText_TypeInfo;
     }
-    v106 = (float)v105->static_fields->regionWidth;
-    if ( v102 > v106 )
+    v115 = (float)v114->static_fields->regionWidth;
+    if ( v111 > v115 )
     {
-      if ( !v105->_2.cctor_finished )
+      if ( !v114->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v105);
-        v106 = (float)NGUIText_TypeInfo->static_fields->regionWidth;
+        j_il2cpp_runtime_class_init_0(v114, text);
+        v115 = (float)NGUIText_TypeInfo->static_fields->regionWidth;
       }
-      v107 = (float)(v106 / v102) * (float)label->fields.mFontSize;
-      if ( v107 == INFINITY )
-        v108 = 0x80000000;
+      v116 = (float)(v115 / v111) * (float)label->fields.mFontSize;
+      if ( v116 == INFINITY )
+        v117 = 0x80000000;
       else
-        v108 = (int)v107;
-      UILabel__set_fontSize(label, v108, 0LL);
-      *v120 = (float)NGUIText_TypeInfo->static_fields->regionWidth;
+        v117 = (int)v116;
+      UILabel__set_fontSize(label, v117, 0LL);
+      *v130 = (float)NGUIText_TypeInfo->static_fields->regionWidth;
     }
     Chars = (System_String_o *)s;
     if ( !s )
       goto LABEL_261;
-    v56 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))s->klass->vtable._3_ToString.method)(
+    v64 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))s->klass->vtable._3_ToString.method)(
                                s,
                                s->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
     goto LABEL_80;
   }
-  if ( (v117 & 1) == 0 )
+  if ( (v127 & 1) == 0 )
   {
-    v103 = 1;
+    v112 = 1;
     if ( minSize < 1 )
-      return v103;
+      return v112;
     goto LABEL_242;
   }
 LABEL_240:
   if ( index == stringLength )
   {
-    v103 = 0;
+    v112 = 0;
   }
   else
   {
-    v115 = NGUIText_TypeInfo;
+    v125 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-      v115 = NGUIText_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, text);
+      v125 = NGUIText_TypeInfo;
     }
-    v116 = v115->static_fields->maxLines;
-    if ( v116 >= v127 )
-      v116 = v127;
-    v103 = v67 > v116;
-    if ( v67 > v116 && minSize <= 0 )
+    v126 = v125->static_fields->maxLines;
+    if ( v126 >= v137 )
+      v126 = v137;
+    v112 = v75 > v126;
+    if ( v75 > v126 && minSize <= 0 )
       return 1;
   }
 LABEL_242:
   Chars = (System_String_o *)s;
   if ( !s )
     goto LABEL_261;
-  v110 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer, __int64))s->klass->vtable._3_ToString.method)(
+  v119 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer, __int64))s->klass->vtable._3_ToString.method)(
                               s,
                               s->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr,
-                              v53);
-  UILabel__set_text(label, v110, 0LL);
+                              v61);
+  UILabel__set_text(label, v119, 0LL);
   if ( minSize >= 1 )
   {
-    v111 = NGUIText_TypeInfo;
+    v121 = NGUIText_TypeInfo;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
-      v111 = NGUIText_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo, v120);
+      v121 = NGUIText_TypeInfo;
     }
-    v112 = v111->static_fields->finalLineHeight * (float)v67;
-    v113 = (int)v112;
-    if ( v112 == INFINITY )
-      v113 = 0x80000000;
-    if ( mHeight >= v113 )
-      v114 = mHeight;
+    v122 = v121->static_fields->finalLineHeight * (float)v75;
+    v123 = (int)v122;
+    if ( v122 == INFINITY )
+      v123 = 0x80000000;
+    if ( mHeight >= v123 )
+      v124 = mHeight;
     else
-      v114 = v113;
-    UIWidget__set_height((UIWidget_o *)label, v114, 0LL);
+      v124 = v123;
+    UIWidget__set_height((UIWidget_o *)label, v124, 0LL);
   }
-  return v103;
+  return v112;
 }

@@ -10,16 +10,22 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantMission__
         CharaGraphSortManageUnitServantMission_o *this,
         const MethodInfo *method)
 {
-  ServantCollectionCharaGraphFilterLogic_o *v2; // x19
+  __int64 v2; // x2
+  __int64 v3; // x3
+  ServantCollectionCharaGraphFilterLogic_o *v4; // x19
 
-  if ( (byte_4AB20D2 & 1) == 0 )
+  if ( (byte_4B12536 & 1) == 0 )
   {
-    sub_1BAB41C(&ServantMissionCharaGraphFilterLogic_TypeInfo, method);
-    byte_4AB20D2 = 1;
+    sub_1BCA7E0(&ServantMissionCharaGraphFilterLogic_TypeInfo, method, v2);
+    byte_4B12536 = 1;
   }
-  v2 = (ServantCollectionCharaGraphFilterLogic_o *)sub_1BAB668(ServantMissionCharaGraphFilterLogic_TypeInfo);
-  ServantCollectionCharaGraphFilterLogic___ctor(v2, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v2;
+  v4 = (ServantCollectionCharaGraphFilterLogic_o *)sub_1BCAA2C(
+                                                     ServantMissionCharaGraphFilterLogic_TypeInfo,
+                                                     method,
+                                                     v2,
+                                                     v3);
+  ServantCollectionCharaGraphFilterLogic___ctor(v4, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v4;
 }
 
 
@@ -27,14 +33,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantMission__Cr
         CharaGraphSortManageUnitServantMission_o *this,
         const MethodInfo *method)
 {
-  ServantCollectionCharaGraphSortLogic_o *v2; // x19
+  __int64 v2; // x2
+  __int64 v3; // x3
+  ServantCollectionCharaGraphSortLogic_o *v4; // x19
 
-  if ( (byte_4AB20D1 & 1) == 0 )
+  if ( (byte_4B12535 & 1) == 0 )
   {
-    sub_1BAB41C(&ServantMissionCharaGraphSortLogic_TypeInfo, method);
-    byte_4AB20D1 = 1;
+    sub_1BCA7E0(&ServantMissionCharaGraphSortLogic_TypeInfo, method, v2);
+    byte_4B12535 = 1;
   }
-  v2 = (ServantCollectionCharaGraphSortLogic_o *)sub_1BAB668(ServantMissionCharaGraphSortLogic_TypeInfo);
-  ServantCollectionCharaGraphSortLogic___ctor(v2, 0LL);
-  return (CharaGraphSortLogicBase_o *)v2;
+  v4 = (ServantCollectionCharaGraphSortLogic_o *)sub_1BCAA2C(ServantMissionCharaGraphSortLogic_TypeInfo, method, v2, v3);
+  ServantCollectionCharaGraphSortLogic___ctor(v4, 0LL);
+  return (CharaGraphSortLogicBase_o *)v4;
 }

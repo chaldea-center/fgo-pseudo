@@ -4,16 +4,32 @@ void __fastcall BaseAiActArgument___ctor(
         AiBaseEntity_o *aiEnt,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)aiActEnt, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)aiActEnt, v7, v8, v9, v10, v11, v12);
   this->fields._AiEnt_k__BackingField = aiEnt;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._AiEnt_k__BackingField, (int32_t)aiEnt, v9, v10);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._AiEnt_k__BackingField,
+    (int64_t)aiEnt,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
@@ -26,6 +42,7 @@ void __fastcall BaseAiActArgument__InitCommonTask(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
         BaseAiActArgument_o *this,
         BattleLogicBaseAi_o *logicAi,
@@ -35,18 +52,22 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
   BaseAiActBattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4AB88FD & 1) == 0 )
+  if ( (byte_4B18DDC & 1) == 0 )
   {
-    sub_1BAB41C(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
-    byte_4AB88FD = 1;
+    sub_1BCA7E0(&BaseAiActBattleLogicTask_TypeInfo, logicAi, *(_QWORD *)&actType);
+    byte_4B18DDC = 1;
   }
-  v7 = (BaseAiActBattleLogicTask_o *)sub_1BAB668(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BaseAiActBattleLogicTask_o *)sub_1BCAA2C(
+                                       BaseAiActBattleLogicTask_TypeInfo,
+                                       logicAi,
+                                       *(_QWORD *)&actType,
+                                       method);
   BaseAiActBattleLogicTask___ctor(v7, actType, 0LL);
-  return BaseAiActArgument__MakeTask_43872916(this, v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_44230892(this, v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_43872916(
+BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_44230892(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -65,7 +86,7 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_43872916(
                                         v5->klass->vtable._5_InitCommonTask.methodPtr),
         !task) )
   {
-    sub_1BAB678(this, task);
+    sub_1BCAA3C(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0LL);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._8_Init.method)(
@@ -105,9 +126,13 @@ void __fastcall BaseAiActArgument__set_AiActEnt(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._AiActEnt_k__BackingField = value;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -117,11 +142,19 @@ void __fastcall BaseAiActArgument__set_AiEnt(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._AiEnt_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._AiEnt_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._AiEnt_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

@@ -11,17 +11,17 @@ void __fastcall BattleChrControl__OnAnimEvent(
 {
   UnityEngine_GameObject_o *targetObject; // x0
 
-  if ( (byte_4AB516E & 1) == 0 )
+  if ( (byte_4B1560A & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_9836/*"OnAnimEvent"*/, ev);
-    byte_4AB516E = 1;
+    sub_1BCA7E0(&StringLiteral_9963/*"OnAnimEvent"*/, ev, method);
+    byte_4B1560A = 1;
   }
   targetObject = this->fields.targetObject;
   if ( !targetObject )
-    sub_1BAB678(0LL, ev);
-  UnityEngine_GameObject__SendMessage_69781992(
+    sub_1BCAA3C(0LL, ev);
+  UnityEngine_GameObject__SendMessage_70135616(
     targetObject,
-    (System_String_o *)StringLiteral_9836/*"OnAnimEvent"*/,
+    (System_String_o *)StringLiteral_9963/*"OnAnimEvent"*/,
     (Il2CppObject *)ev,
     0LL);
 }
@@ -33,7 +33,19 @@ void __fastcall BattleChrControl__setTarget(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.targetObject = obj;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObject, (int32_t)obj, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.targetObject,
+    (int64_t)obj,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

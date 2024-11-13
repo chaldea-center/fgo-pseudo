@@ -2,22 +2,28 @@ System_Collections_Generic_IEnumerable_SimpleTreasureDeviceData__o *__fastcall T
         BattleEntity_o *battleEntity,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB7F08 & 1) == 0 )
+  if ( (byte_4B183D2 & 1) == 0 )
   {
-    sub_1BAB41C(&TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo, method);
-    byte_4AB7F08 = 1;
+    sub_1BCA7E0(&TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo, method, v2);
+    byte_4B183D2 = 1;
   }
-  v3 = sub_1BAB668(TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = -2;
-  *(_DWORD *)(v3 + 28) = System_Environment__get_CurrentManagedThreadId(0LL);
-  *(_QWORD *)(v3 + 40) = battleEntity;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v3 + 40), (int32_t)battleEntity, v4, v5);
-  return (System_Collections_Generic_IEnumerable_SimpleTreasureDeviceData__o *)v3;
+  v5 = sub_1BCAA2C(TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = -2;
+  *(_DWORD *)(v5 + 28) = System_Environment__get_CurrentManagedThreadId(0LL);
+  *(_QWORD *)(v5 + 40) = battleEntity;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)battleEntity, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_Generic_IEnumerable_SimpleTreasureDeviceData__o *)v5;
 }
 
 
@@ -36,22 +42,26 @@ bool __fastcall TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0__MoveN
         TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   int32_t _1__state; // w8
   struct BattleEntity_o *battleEntity; // x8
   struct BattleInfoData_o *battleInfo; // x8
   struct BattleUserServantData_array *userSvt; // x1
   int32_t _7__wrap2; // w8
-  BattleUserServantData_o *v10; // x9
-  ServantStatusBattleListViewItem_o *p__7__wrap1; // x0
+  BattleUserServantData_o *v14; // x9
+  PartyOrganizationUtility_o *p__7__wrap1; // x0
   struct BattleUserServantData_array *_7__wrap1; // x9
   il2cpp_array_size_t max_length; // w10
   bool result; // w0
   int32_t treasureDeviceLv; // w2
-  struct SimpleTreasureDeviceData_o v16; // x8
-  struct SimpleTreasureDeviceData_o v17; // [xsp+8h] [xbp-18h] BYREF
-  SimpleTreasureDeviceData_o v18; // 0:x0.8
+  struct SimpleTreasureDeviceData_o v20; // x8
+  struct SimpleTreasureDeviceData_o v21; // [xsp+8h] [xbp-18h] BYREF
+  SimpleTreasureDeviceData_o v22; // 0:x0.8
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -73,41 +83,41 @@ bool __fastcall TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0__MoveN
   if ( !userSvt )
     return 0;
   this->fields.__7__wrap1 = userSvt;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.__7__wrap1, (int32_t)userSvt, v2, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.__7__wrap1, (int64_t)userSvt, v2, v3, v4, v5, v6, v7);
   _7__wrap2 = 0;
   for ( this->fields.__7__wrap2 = 0; ; this->fields.__7__wrap2 = _7__wrap2 )
   {
-    p__7__wrap1 = (ServantStatusBattleListViewItem_o *)&this->fields.__7__wrap1;
+    p__7__wrap1 = (PartyOrganizationUtility_o *)&this->fields.__7__wrap1;
     _7__wrap1 = this->fields.__7__wrap1;
     if ( !_7__wrap1 )
 LABEL_17:
-      sub_1BAB678(p__7__wrap1, method);
+      sub_1BCAA3C(p__7__wrap1, method);
     max_length = _7__wrap1->max_length;
     if ( _7__wrap2 >= (int)max_length )
     {
       p__7__wrap1->klass = 0LL;
-      sub_1BAB3C0(p__7__wrap1, 0, v2, v3);
+      sub_1BCA784(p__7__wrap1, 0LL, v2, v3, v4, v5, v6, v7);
       return 0;
     }
     if ( _7__wrap2 >= max_length )
-      sub_1BAB680(p__7__wrap1, method);
-    v10 = _7__wrap1->m_Items[_7__wrap2];
-    if ( !v10 )
+      sub_1BCAA44(p__7__wrap1, method);
+    v14 = _7__wrap1->m_Items[_7__wrap2];
+    if ( !v14 )
       goto LABEL_17;
-    method = (const MethodInfo *)(unsigned int)v10->fields.treasureDeviceId;
+    method = (const MethodInfo *)(unsigned int)v14->fields.treasureDeviceId;
     if ( (int)method >= 1 )
       break;
 LABEL_11:
     ++_7__wrap2;
   }
-  treasureDeviceLv = v10->fields.treasureDeviceLv;
-  v18 = (SimpleTreasureDeviceData_o)&v17;
-  v17 = 0LL;
-  SimpleTreasureDeviceData___ctor(v18, (int32_t)method, treasureDeviceLv, 0LL);
-  v16 = v17;
+  treasureDeviceLv = v14->fields.treasureDeviceLv;
+  v22 = (SimpleTreasureDeviceData_o)&v21;
+  v21 = 0LL;
+  SimpleTreasureDeviceData___ctor(v22, (int32_t)method, treasureDeviceLv, 0LL);
+  v20 = v21;
   result = 1;
   this->fields.__1__state = 1;
-  this->fields.__2__current = v16;
+  this->fields.__2__current = v20;
   return result;
 }
 
@@ -116,35 +126,51 @@ System_Collections_Generic_IEnumerator_SimpleTreasureDeviceData__o *__fastcall T
         TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *this,
         const MethodInfo *method)
 {
+  int64_t v2; // x2
+  __int64 v3; // x3
   int32_t l__initialThreadId; // w20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *v6; // x20
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
+  TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *v10; // x20
   struct BattleEntity_o *_3__battleEntity; // x1
 
-  if ( (byte_4AB7F0A & 1) == 0 )
+  if ( (byte_4B183D4 & 1) == 0 )
   {
-    sub_1BAB41C(&TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo, method);
-    byte_4AB7F0A = 1;
+    sub_1BCA7E0(&TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo, method, v2);
+    byte_4B183D4 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
         l__initialThreadId == System_Environment__get_CurrentManagedThreadId(0LL)) )
   {
     this->fields.__1__state = 0;
-    v6 = this;
+    v10 = this;
   }
   else
   {
-    v6 = (TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *)sub_1BAB668(TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v6, 0LL);
-    v6->fields.__1__state = 0;
-    v6->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
+    v10 = (TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_o *)sub_1BCAA2C(
+                                                                           TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_TypeInfo,
+                                                                           method,
+                                                                           v2,
+                                                                           v3);
+    System_Object___ctor((Il2CppObject *)v10, 0LL);
+    v10->fields.__1__state = 0;
+    v10->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
   }
   _3__battleEntity = this->fields.__3__battleEntity;
-  v6->fields.battleEntity = _3__battleEntity;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v6->fields.battleEntity, (int32_t)_3__battleEntity, v4, v5);
-  return (System_Collections_Generic_IEnumerator_SimpleTreasureDeviceData__o *)v6;
+  v10->fields.battleEntity = _3__battleEntity;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&v10->fields.battleEntity,
+    (int64_t)_3__battleEntity,
+    v2,
+    v3,
+    v6,
+    v7,
+    v8,
+    v9);
+  return (System_Collections_Generic_IEnumerator_SimpleTreasureDeviceData__o *)v10;
 }
 
 
@@ -161,14 +187,20 @@ void __fastcall __noreturn TreasureDeviceExtractor__EnumerateTreasureDeviceData_
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -177,17 +209,15 @@ Il2CppObject *__fastcall TreasureDeviceExtractor__EnumerateTreasureDeviceData_d_
         const MethodInfo *method)
 {
   __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
   struct SimpleTreasureDeviceData_o _2__current; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4AB7F09 & 1) == 0 )
+  if ( (byte_4B183D3 & 1) == 0 )
   {
-    sub_1BAB41C(&SimpleTreasureDeviceData_TypeInfo, method);
-    byte_4AB7F09 = 1;
+    sub_1BCA7E0(&SimpleTreasureDeviceData_TypeInfo, method, v2);
+    byte_4B183D3 = 1;
   }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleTreasureDeviceData_TypeInfo, &_2__current, v2, v3, v4);
+  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleTreasureDeviceData_TypeInfo, &_2__current);
 }
 
 

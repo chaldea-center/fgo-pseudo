@@ -1,14 +1,19 @@
 void __fastcall ServantSkillReleaseMaster___ctor(ServantSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6664 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16B13 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string___ctor__, method);
-    byte_4AB6664 = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string___ctor__,
+      method,
+      v2);
+    byte_4B16B13 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     246,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -17,98 +22,135 @@ System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___o *_
         ServantSkillEntity_o *servantSkillEntity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  __int64 v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
   __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v11; // x2
   __int64 v12; // x1
-  __int64 v13; // x1
+  __int64 v13; // x2
   __int64 v14; // x1
-  __int64 v15; // x1
+  __int64 v15; // x2
   __int64 v16; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v17; // x20
+  __int64 v17; // x2
   __int64 v18; // x1
-  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v19; // x2
   __int64 v20; // x1
+  __int64 v21; // x2
+  __int64 v22; // x1
+  __int64 v23; // x2
+  __int64 v24; // x1
+  __int64 v25; // x2
+  __int64 v26; // x1
+  __int64 v27; // x2
+  __int64 v28; // x1
+  __int64 v29; // x2
+  System_Collections_Generic_Dictionary_int__object__o *v30; // x20
+  __int64 v31; // x1
+  System_Collections_ObjectModel_Collection_T__o *list; // x0
+  __int64 v33; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v23; // x9
+  __int64 v36; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v26; // x8
-  __int64 v27; // x9
-  int32_t *v28; // x10
-  __int64 v29; // x0
-  Il2CppObject *v30; // x0
-  __int64 v31; // x1
-  Il2CppObject *v32; // x22
-  __int64 methodPtr_low; // x9
-  System_Collections_Generic_List_object__o *Item; // x0
-  __int64 v35; // x1
-  int32_t v36; // w2
-  int32_t v37; // w3
-  struct System_Object_array *items; // x8
-  _QWORD *v39; // x9
-  __int64 size; // x10
-  Il2CppClass **v41; // x8
-  System_Collections_Generic_List_object__o *v42; // x23
-  __int64 v43; // x0
+  System_Collections_Generic_IEnumerator_T__c *v39; // x8
+  __int64 v40; // x9
+  int32_t *v41; // x10
+  __int64 v42; // x0
+  _DWORD *v43; // x0
   __int64 v44; // x1
-  int32_t v45; // w2
-  int32_t v46; // w3
-  struct System_Object_array *v47; // x8
-  _QWORD *v48; // x9
-  __int64 v49; // x10
-  Il2CppClass **v50; // x0
-  System_Collections_Generic_IEnumerator_T__c *v51; // x8
-  __int64 v52; // x9
-  int32_t *v53; // x10
-  __int64 v54; // x0
+  int64_t v45; // x22
+  __int64 methodPtr_low; // x9
+  __int64 v47; // x1
+  __int64 v48; // x2
+  __int64 v49; // x3
+  System_Collections_Generic_List_object__o *Item; // x0
+  __int64 v51; // x1
+  int64_t v52; // x2
+  int32_t v53; // w3
+  System_String_o *v54; // x4
+  BattleSetupInfo_o *v55; // x5
+  FollowerInfo_o *v56; // x6
+  PartyListViewItem_o *v57; // x7
+  struct System_Object_array *items; // x8
+  _QWORD *v59; // x9
+  __int64 size; // x10
+  Il2CppClass **v61; // x8
+  System_Collections_Generic_List_object__o *v62; // x23
+  __int64 v63; // x0
+  __int64 v64; // x1
+  int64_t v65; // x2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  BattleSetupInfo_o *v68; // x5
+  FollowerInfo_o *v69; // x6
+  PartyListViewItem_o *v70; // x7
+  struct System_Object_array *v71; // x8
+  _QWORD *v72; // x9
+  __int64 v73; // x10
+  Il2CppClass **v74; // x0
+  System_Collections_Generic_IEnumerator_T__c *v75; // x8
+  __int64 v76; // x9
+  int32_t *v77; // x10
+  __int64 v78; // x0
 
-  if ( (byte_4AB6666 & 1) == 0 )
+  if ( (byte_4B16B15 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, servantSkillEntity);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___Add__, v5);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___ContainsKey__, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity____ctor__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___get_Item__, v8);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___TypeInfo, v9);
-    sub_1BAB41C(&System_IDisposable_TypeInfo, v10);
-    sub_1BAB41C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v11);
-    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__, v13);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__, v14);
-    sub_1BAB41C(&System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo, v15);
-    sub_1BAB41C(&ServantSkillReleaseEntity_TypeInfo, v16);
-    byte_4AB6666 = 1;
+    sub_1BCA7E0(
+      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
+      servantSkillEntity,
+      method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___Add__, v6, v7);
+    sub_1BCA7E0(
+      &Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___ContainsKey__,
+      v8,
+      v9);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity____ctor__, v10, v11);
+    sub_1BCA7E0(
+      &Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___get_Item__,
+      v12,
+      v13);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___TypeInfo, v14, v15);
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, v16, v17);
+    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v18, v19);
+    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v20, v21);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__, v22, v23);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__, v24, v25);
+    sub_1BCA7E0(&System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo, v26, v27);
+    sub_1BCA7E0(&ServantSkillReleaseEntity_TypeInfo, v28, v29);
+    byte_4B16B15 = 1;
   }
-  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___TypeInfo);
+  v30 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCAA2C(
+                                                                  System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___TypeInfo,
+                                                                  servantSkillEntity,
+                                                                  method,
+                                                                  v3);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v17,
-    (const MethodInfo_31B6460 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity____ctor__);
+    v30,
+    (const MethodInfo_3205510 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity____ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BAB678(0LL, v18);
+    sub_1BCAA3C(0LL, v31);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3100938 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_314F9E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BAB678(0LL, v20);
+    sub_1BCAA3C(0LL, v33);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v23 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v36 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v23;
+        --v36;
         p_offset += 4;
-        if ( !v23 )
+        if ( !v36 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -116,142 +158,146 @@ System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___o *_
     else
     {
 LABEL_9:
-      p_method = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1C7C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v26 = Enumerator->klass;
-    v27 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v39 = Enumerator->klass;
+    v40 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v28 = &v26->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v28 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v41 = &v39->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v41 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v27;
-        v28 += 4;
-        if ( !v27 )
+        --v40;
+        v41 += 4;
+        if ( !v40 )
           goto LABEL_16;
       }
-      v29 = (__int64)&v26->vtable[*v28].method;
+      v42 = (__int64)&v39->vtable[*v41].method;
     }
     else
     {
 LABEL_16:
-      v29 = sub_1BFD3FC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v42 = sub_1C1C7C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v30 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(
-                            Enumerator,
-                            *(_QWORD *)(v29 + 8));
-    v32 = v30;
-    if ( !v30 )
+    v43 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v42)(
+                      Enumerator,
+                      *(_QWORD *)(v42 + 8));
+    v45 = (int64_t)v43;
+    if ( !v43 )
       goto LABEL_46;
     methodPtr_low = LOBYTE(ServantSkillReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v30->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
-      || (ServantSkillReleaseEntity_c *)v30->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantSkillReleaseEntity_TypeInfo )
+    if ( *(unsigned __int8 *)(*(_QWORD *)v43 + 304LL) < (unsigned int)methodPtr_low
+      || *(ServantSkillReleaseEntity_c **)(*(_QWORD *)(*(_QWORD *)v43 + 200LL) + 8 * methodPtr_low - 8) != ServantSkillReleaseEntity_TypeInfo )
     {
-      sub_1BAB938(v30);
+      sub_1BCACFC(v43);
 LABEL_46:
-      sub_1BAB678(v30, v31);
+      sub_1BCAA3C(v43, v44);
     }
     if ( !servantSkillEntity )
-      sub_1BAB678(v30, ServantSkillReleaseEntity_TypeInfo);
-    if ( LODWORD(v30[1].klass) == servantSkillEntity->fields.svtId
-      && HIDWORD(v30[1].klass) == servantSkillEntity->fields.num
-      && LODWORD(v30[1].monitor) == servantSkillEntity->fields.priority )
+      sub_1BCAA3C(v43, ServantSkillReleaseEntity_TypeInfo);
+    if ( v43[4] == servantSkillEntity->fields.svtId
+      && v43[5] == servantSkillEntity->fields.num
+      && v43[6] == servantSkillEntity->fields.priority )
     {
-      if ( !v17 )
-        sub_1BAB678(v30, ServantSkillReleaseEntity_TypeInfo);
+      if ( !v30 )
+        sub_1BCAA3C(v43, ServantSkillReleaseEntity_TypeInfo);
       if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
-             v17,
-             HIDWORD(v30[2].monitor),
-             (const MethodInfo_31B7028 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___ContainsKey__) )
+             v30,
+             v43[11],
+             (const MethodInfo_32060D8 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___ContainsKey__) )
       {
         Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
-                                                              v17,
-                                                              HIDWORD(v32[2].monitor),
-                                                              (const MethodInfo_31B6D94 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___get_Item__);
+                                                              v30,
+                                                              *(_DWORD *)(v45 + 44),
+                                                              (const MethodInfo_3205E44 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___get_Item__);
         if ( !Item )
-          sub_1BAB678(0LL, v35);
+          sub_1BCAA3C(0LL, v51);
         items = Item->fields._items;
-        v39 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
+        v59 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
         ++Item->fields._version;
         if ( !items )
-          sub_1BAB678(Item, v35);
+          sub_1BCAA3C(Item, v51);
         size = Item->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             Item,
-            v32,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+            (Il2CppObject *)v45,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
         }
         else
         {
-          v41 = &items->obj.klass + size;
+          v61 = &items->obj.klass + size;
           Item->fields._size = size + 1;
-          v41[4] = (Il2CppClass *)v32;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v41 + 4), (int32_t)v32, v36, v37);
+          v61[4] = (Il2CppClass *)v45;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v61 + 4), v45, v52, v53, v54, v55, v56, v57);
         }
       }
       else
       {
-        v42 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo);
+        v62 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                             System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo,
+                                                             v47,
+                                                             v48,
+                                                             v49);
         System_Collections_Generic_List_object____ctor(
-          v42,
-          (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__);
-        if ( !v42 )
-          sub_1BAB678(v43, v44);
-        v47 = v42->fields._items;
-        v48 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
-        ++v42->fields._version;
-        if ( !v47 )
-          sub_1BAB678(v43, v44);
-        v49 = v42->fields._size;
-        if ( (unsigned int)v49 >= v47->max_length )
+          v62,
+          (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__);
+        if ( !v62 )
+          sub_1BCAA3C(v63, v64);
+        v71 = v62->fields._items;
+        v72 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
+        ++v62->fields._version;
+        if ( !v71 )
+          sub_1BCAA3C(v63, v64);
+        v73 = v62->fields._size;
+        if ( (unsigned int)v73 >= v71->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v42,
-            v32,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+            v62,
+            (Il2CppObject *)v45,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
         }
         else
         {
-          v50 = &v47->obj.klass + v49;
-          v42->fields._size = v49 + 1;
-          v50[4] = (Il2CppClass *)v32;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v50 + 4), (int32_t)v32, v45, v46);
+          v74 = &v71->obj.klass + v73;
+          v62->fields._size = v73 + 1;
+          v74[4] = (Il2CppClass *)v45;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v74 + 4), v45, v65, v66, v67, v68, v69, v70);
         }
         System_Collections_Generic_Dictionary_int__object___Add(
-          v17,
-          HIDWORD(v32[2].monitor),
-          (Il2CppObject *)v42,
-          (const MethodInfo_31B6E34 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___Add__);
+          v30,
+          *(_DWORD *)(v45 + 44),
+          (Il2CppObject *)v62,
+          (const MethodInfo_3205EE4 *)Method_System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___Add__);
       }
     }
   }
-  v51 = Enumerator->klass;
-  v52 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v75 = Enumerator->klass;
+  v76 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v53 = &v51->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v53 - 1) != System_IDisposable_TypeInfo )
+    v77 = &v75->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v77 - 1) != System_IDisposable_TypeInfo )
     {
-      --v52;
-      v53 += 4;
-      if ( !v52 )
+      --v76;
+      v77 += 4;
+      if ( !v76 )
         goto LABEL_42;
     }
-    v54 = (__int64)&v51->vtable[*v53].method;
+    v78 = (__int64)&v75->vtable[*v77].method;
   }
   else
   {
 LABEL_42:
-    v54 = sub_1BFD3FC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v78 = sub_1C1C7C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v54)(Enumerator, *(_QWORD *)(v54 + 8));
-  return (System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___o *)v17;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v78)(Enumerator, *(_QWORD *)(v78 + 8));
+  return (System_Collections_Generic_Dictionary_int__List_ServantSkillReleaseEntity___o *)v30;
 }
 
 
@@ -266,18 +312,19 @@ ServantSkillReleaseEntity_o *__fastcall ServantSkillReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB6662 & 1) == 0 )
+  if ( (byte_4B16B11 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__GetEntity__,
-      *(_QWORD *)&svtId);
-    byte_4AB6662 = 1;
+      *(_QWORD *)&svtId,
+      *(_QWORD *)&num);
+    byte_4B16B11 = 1;
   }
   PK = (Il2CppObject *)ServantSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&idx);
   return (ServantSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_31640E8 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__GetEntity__);
+                                          (const MethodInfo_31B3198 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -287,78 +334,97 @@ System_Collections_Generic_List_ServantSkillReleaseEntity__o *__fastcall Servant
         int32_t condType,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  __int64 v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v7; // x2
   __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_object__o *v12; // x20
-  __int64 v13; // x1
+  __int64 v11; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x1
+  __int64 v15; // x2
+  __int64 v16; // x1
+  __int64 v17; // x2
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_Collections_Generic_List_object__o *v20; // x20
+  __int64 v21; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v15; // x1
+  __int64 v23; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v18; // x9
+  __int64 v26; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v21; // x8
-  __int64 v22; // x9
-  int32_t *v23; // x10
-  __int64 v24; // x0
-  __int64 v25; // x0
-  __int64 v26; // x1
-  int32_t v27; // w2
-  int32_t v28; // w3
-  __int64 v29; // x8
-  ServantSkillReleaseEntity_c *v30; // x1
+  System_Collections_Generic_IEnumerator_T__c *v29; // x8
+  __int64 v30; // x9
+  int32_t *v31; // x10
+  __int64 v32; // x0
+  __int64 v33; // x0
+  __int64 v34; // x1
+  int64_t v35; // x2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  BattleSetupInfo_o *v38; // x5
+  FollowerInfo_o *v39; // x6
+  PartyListViewItem_o *v40; // x7
+  int64_t v41; // x8
+  ServantSkillReleaseEntity_c *v42; // x1
   __int64 methodPtr_low; // x10
   struct System_Object_array *items; // x9
-  _QWORD *v33; // x10
+  _QWORD *v45; // x10
   __int64 size; // x11
-  Il2CppClass **v35; // x0
-  System_Collections_Generic_IEnumerator_T__c *v36; // x8
-  __int64 v37; // x9
-  int32_t *v38; // x10
-  __int64 v39; // x0
+  Il2CppClass **v47; // x0
+  System_Collections_Generic_IEnumerator_T__c *v48; // x8
+  __int64 v49; // x9
+  int32_t *v50; // x10
+  __int64 v51; // x0
 
-  if ( (byte_4AB6667 & 1) == 0 )
+  if ( (byte_4B16B16 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&condType);
-    sub_1BAB41C(&System_IDisposable_TypeInfo, v5);
-    sub_1BAB41C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BAB41C(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__, v8);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__, v9);
-    sub_1BAB41C(&System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo, v10);
-    sub_1BAB41C(&ServantSkillReleaseEntity_TypeInfo, v11);
-    byte_4AB6667 = 1;
+    sub_1BCA7E0(
+      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
+      *(_QWORD *)&condType,
+      method);
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, v6, v7);
+    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8, v9);
+    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v10, v11);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__, v12, v13);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__, v14, v15);
+    sub_1BCA7E0(&System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo, v16, v17);
+    sub_1BCA7E0(&ServantSkillReleaseEntity_TypeInfo, v18, v19);
+    byte_4B16B16 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                       System_Collections_Generic_List_ServantSkillReleaseEntity__TypeInfo,
+                                                       *(_QWORD *)&condType,
+                                                       method,
+                                                       v3);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__);
+    v20,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_ServantSkillReleaseEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BAB678(0LL, v13);
+    sub_1BCAA3C(0LL, v21);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3100938 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_314F9E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BAB678(0LL, v15);
+    sub_1BCAA3C(0LL, v23);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v18 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v26 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v18;
+        --v26;
         p_offset += 4;
-        if ( !v18 )
+        if ( !v26 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -366,93 +432,93 @@ System_Collections_Generic_List_ServantSkillReleaseEntity__o *__fastcall Servant
     else
     {
 LABEL_9:
-      p_method = sub_1BFD3FC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1C7C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v21 = Enumerator->klass;
-    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v29 = Enumerator->klass;
+    v30 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v23 = &v21->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v23 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v31 = &v29->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v31 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v22;
-        v23 += 4;
-        if ( !v22 )
+        --v30;
+        v31 += 4;
+        if ( !v30 )
           goto LABEL_16;
       }
-      v24 = (__int64)&v21->vtable[*v23].method;
+      v32 = (__int64)&v29->vtable[*v31].method;
     }
     else
     {
 LABEL_16:
-      v24 = sub_1BFD3FC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v32 = sub_1C1C7C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
+    v33 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(
             Enumerator,
-            *(_QWORD *)(v24 + 8));
-    v29 = v25;
-    if ( !v25 )
+            *(_QWORD *)(v32 + 8));
+    v41 = v33;
+    if ( !v33 )
       goto LABEL_35;
-    v30 = ServantSkillReleaseEntity_TypeInfo;
+    v42 = ServantSkillReleaseEntity_TypeInfo;
     methodPtr_low = LOBYTE(ServantSkillReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v25 + 304LL) < (unsigned int)methodPtr_low
-      || *(ServantSkillReleaseEntity_c **)(*(_QWORD *)(*(_QWORD *)v25 + 200LL) + 8 * methodPtr_low - 8) != ServantSkillReleaseEntity_TypeInfo )
+    if ( *(unsigned __int8 *)(*(_QWORD *)v33 + 304LL) < (unsigned int)methodPtr_low
+      || *(ServantSkillReleaseEntity_c **)(*(_QWORD *)(*(_QWORD *)v33 + 200LL) + 8 * methodPtr_low - 8) != ServantSkillReleaseEntity_TypeInfo )
     {
-      sub_1BAB938(v25);
+      sub_1BCACFC(v33);
 LABEL_35:
-      sub_1BAB678(v25, v26);
+      sub_1BCAA3C(v33, v34);
     }
-    if ( *(_DWORD *)(v25 + 32) == condType )
+    if ( *(_DWORD *)(v33 + 32) == condType )
     {
-      if ( !v12 )
-        sub_1BAB678(v25, ServantSkillReleaseEntity_TypeInfo);
-      items = v12->fields._items;
-      v33 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
-      ++v12->fields._version;
+      if ( !v20 )
+        sub_1BCAA3C(v33, ServantSkillReleaseEntity_TypeInfo);
+      items = v20->fields._items;
+      v45 = Method_System_Collections_Generic_List_ServantSkillReleaseEntity__Add__;
+      ++v20->fields._version;
       if ( !items )
-        sub_1BAB678(v25, v30);
-      size = v12->fields._size;
+        sub_1BCAA3C(v33, v42);
+      size = v20->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v12,
-          (Il2CppObject *)v25,
-          *(const MethodInfo_354D8BC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+          v20,
+          (Il2CppObject *)v33,
+          *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
       }
       else
       {
-        v35 = &items->obj.klass + size;
-        v12->fields._size = size + 1;
-        v35[4] = (Il2CppClass *)v29;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v35 + 4), v29, v27, v28);
+        v47 = &items->obj.klass + size;
+        v20->fields._size = size + 1;
+        v47[4] = (Il2CppClass *)v41;
+        sub_1BCA784((PartyOrganizationUtility_o *)(v47 + 4), v41, v35, v36, v37, v38, v39, v40);
       }
     }
   }
-  v36 = Enumerator->klass;
-  v37 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v48 = Enumerator->klass;
+  v49 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v38 = &v36->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
+    v50 = &v48->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v50 - 1) != System_IDisposable_TypeInfo )
     {
-      --v37;
-      v38 += 4;
-      if ( !v37 )
+      --v49;
+      v50 += 4;
+      if ( !v49 )
         goto LABEL_31;
     }
-    v39 = (__int64)&v36->vtable[*v38].method;
+    v51 = (__int64)&v48->vtable[*v50].method;
   }
   else
   {
 LABEL_31:
-    v39 = sub_1BFD3FC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v51 = sub_1C1C7C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(Enumerator, *(_QWORD *)(v39 + 8));
-  return (System_Collections_Generic_List_ServantSkillReleaseEntity__o *)v12;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v51)(Enumerator, *(_QWORD *)(v51 + 8));
+  return (System_Collections_Generic_List_ServantSkillReleaseEntity__o *)v20;
 }
 
 
@@ -468,19 +534,20 @@ bool __fastcall ServantSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB6663 & 1) == 0 )
+  if ( (byte_4B16B12 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__TryGetEntity__,
-      entity);
-    byte_4AB6663 = 1;
+      entity,
+      *(_QWORD *)&svtId);
+    byte_4B16B12 = 1;
   }
   PK = (Il2CppObject *)ServantSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&priority);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_ServantSkillReleaseMaster__ServantSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -498,109 +565,113 @@ bool __fastcall ServantSkillReleaseMaster__isUse(
         const MethodInfo *method)
 {
   __int64 v15; // x1
+  __int64 v16; // x2
   int32_t condGroup; // w19
-  int32_t v17; // w27
-  bool v18; // w25
+  int32_t v18; // w27
+  bool v19; // w25
   System_String_o *Primarykey; // x28
   __int64 *lookup; // x0
-  __int64 v21; // x1
-  __int64 v22; // x8
-  void *v23; // x29
-  __int64 v24; // x9
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v25; // x10
-  __int64 v26; // x0
-  const MethodInfo *v27; // x5
+  __int64 v22; // x1
+  __int64 v23; // x8
+  void *v24; // x29
+  __int64 v25; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v26; // x10
+  __int64 v27; // x0
+  const MethodInfo *v28; // x5
   __int64 methodPtr_low; // x9
   bool result; // w0
-  ServantSkillEntity_o *v30; // x0
-  int32_t *v31; // x1
-  System_String_o **v32; // x2
-  System_String_o **v33; // x3
-  int32_t v34; // w4
-  bool v35; // w5
-  const MethodInfo *v36; // x6
-  ServantSkillReleaseEntity_o *v40; // [xsp+18h] [xbp-68h] BYREF
+  ServantSkillEntity_o *v31; // x0
+  int32_t *v32; // x1
+  System_String_o **v33; // x2
+  System_String_o **v34; // x3
+  int32_t v35; // w4
+  bool v36; // w5
+  const MethodInfo *v37; // x6
+  ServantSkillReleaseEntity_o *v41; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4AB6665 & 1) == 0 )
+  if ( (byte_4B16B14 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&svtId);
-    sub_1BAB41C(&ServantSkillReleaseEntity_TypeInfo, v15);
-    byte_4AB6665 = 1;
+    sub_1BCA7E0(
+      &System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
+      *(_QWORD *)&svtId,
+      *(_QWORD *)&num);
+    sub_1BCA7E0(&ServantSkillReleaseEntity_TypeInfo, v15, v16);
+    byte_4B16B14 = 1;
   }
   condGroup = 0;
-  v17 = 1;
-  v40 = 0LL;
+  v18 = 1;
+  v41 = 0LL;
   while ( 1 )
   {
-    v18 = isBaseResult;
+    v19 = isBaseResult;
     Primarykey = ServantSkillReleaseEntity__getCreatePrimarykey(
                    svtId,
                    num,
                    priority,
-                   v17,
+                   v18,
                    *(const MethodInfo **)&dispLimitCount);
     lookup = (__int64 *)DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
 LABEL_21:
-      sub_1BAB678(lookup, v21);
-    v22 = *lookup;
-    v23 = lookup;
-    v24 = *(unsigned __int16 *)(*lookup + 302);
+      sub_1BCAA3C(lookup, v22);
+    v23 = *lookup;
+    v24 = lookup;
+    v25 = *(unsigned __int16 *)(*lookup + 302);
     if ( *(_WORD *)(*lookup + 302) )
     {
-      v25 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)(*(_QWORD *)(v22 + 176) + 8LL);
-      while ( *(v25 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+      v26 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)(*(_QWORD *)(v23 + 176) + 8LL);
+      while ( *(v26 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
       {
-        --v24;
-        v25 += 2;
-        if ( !v24 )
+        --v25;
+        v26 += 2;
+        if ( !v25 )
           goto LABEL_9;
       }
-      v26 = v22 + 16LL * (*(_DWORD *)v25 + 1) + 312;
+      v27 = v23 + 16LL * (*(_DWORD *)v26 + 1) + 312;
     }
     else
     {
 LABEL_9:
-      v26 = sub_1BFD3FC(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 1LL);
+      v27 = sub_1C1C7C0(lookup, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 1LL);
     }
-    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantSkillReleaseEntity_o **, _QWORD))v26)(
-            v23,
+    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantSkillReleaseEntity_o **, _QWORD))v27)(
+            v24,
             Primarykey,
-            &v40,
-            *(_QWORD *)(v26 + 8)) & 1) == 0 )
-      return v18;
-    lookup = (__int64 *)v40;
-    if ( !v40 )
+            &v41,
+            *(_QWORD *)(v27 + 8)) & 1) == 0 )
+      return v19;
+    lookup = (__int64 *)v41;
+    if ( !v41 )
       goto LABEL_21;
     methodPtr_low = LOBYTE(ServantSkillReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v40->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (ServantSkillReleaseEntity_c *)v40->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantSkillReleaseEntity_TypeInfo )
+    if ( LOBYTE(v41->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
+      || (ServantSkillReleaseEntity_c *)v41->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantSkillReleaseEntity_TypeInfo )
     {
       break;
     }
-    ++v17;
-    if ( condGroup == v40->fields.condGroup )
+    ++v18;
+    if ( condGroup == v41->fields.condGroup )
     {
       isBaseResult = 0;
-      if ( v18 )
+      if ( v19 )
         goto LABEL_19;
     }
     else
     {
-      condGroup = v40->fields.condGroup;
-      if ( v18 )
-        return v18;
+      condGroup = v41->fields.condGroup;
+      if ( v19 )
+        return v19;
 LABEL_19:
       isBaseResult = ServantSkillReleaseEntity__isUse(
-                       v40,
+                       v41,
                        dispLimitCount,
                        beforeClearQuestId,
                        specificLimitCount,
                        userSvtId,
-                       v27);
+                       v28);
     }
   }
-  sub_1BAB938(v40);
-  ServantSkillEntity__getEffectExplanation(v30, v31, v32, v33, v34, v35, v36);
+  sub_1BCACFC(v41);
+  ServantSkillEntity__getEffectExplanation(v31, v32, v33, v34, v35, v36, v37);
   return result;
 }

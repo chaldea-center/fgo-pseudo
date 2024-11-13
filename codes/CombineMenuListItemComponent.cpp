@@ -16,56 +16,61 @@ void __fastcall CombineMenuListItemComponent__InitButton(
         CombineMenuListItemComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
   UILabel_o *preparationLabel; // x20
-  System_String_o *v8; // x0
-  __int64 v9; // x1
+  System_String_o *v13; // x0
+  __int64 v14; // x1
   struct UICommonButton_o *button; // x8
-  struct UICommonButton_o *v11; // x8
-  struct UICommonButton_o *v12; // x8
-  unsigned __int128 v13; // [xsp+0h] [xbp-60h] BYREF
-  UnityEngine_Color_o v14; // [xsp+10h] [xbp-50h] BYREF
+  struct UICommonButton_o *v16; // x8
+  struct UICommonButton_o *v17; // x8
+  unsigned __int128 v18; // [xsp+0h] [xbp-60h] BYREF
+  UnityEngine_Color_o v19; // [xsp+10h] [xbp-50h] BYREF
   UnityEngine_Color_o color; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4AB94AF & 1) == 0 )
+  if ( (byte_4B199C3 & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
-    sub_1BAB41C(&StringLiteral_3687/*"COMBINE_PREPARATION"*/, v3);
-    sub_1BAB41C(&StringLiteral_438/*"#6B6B6B"*/, v4);
-    sub_1BAB41C(&StringLiteral_445/*"#E1C896"*/, v5);
-    sub_1BAB41C(&StringLiteral_443/*"#B7A37B"*/, v6);
-    byte_4AB94AF = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, method, v2);
+    sub_1BCA7E0(&StringLiteral_3720/*"COMBINE_PREPARATION"*/, v4, v5);
+    sub_1BCA7E0(&StringLiteral_438/*"#6B6B6B"*/, v6, v7);
+    sub_1BCA7E0(&StringLiteral_445/*"#E1C896"*/, v8, v9);
+    sub_1BCA7E0(&StringLiteral_443/*"#B7A37B"*/, v10, v11);
+    byte_4B199C3 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
-  *(_QWORD *)&v14.fields.r = 0LL;
-  *(_QWORD *)&v14.fields.b = 0LL;
-  v13 = 0uLL;
+  *(_QWORD *)&v19.fields.r = 0LL;
+  *(_QWORD *)&v19.fields.b = 0LL;
+  v18 = 0uLL;
   preparationLabel = this->fields.preparationLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3687/*"COMBINE_PREPARATION"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3720/*"COMBINE_PREPARATION"*/, 0LL);
   if ( !preparationLabel )
     goto LABEL_10;
-  UILabel__set_text(preparationLabel, v8, 0LL);
+  UILabel__set_text(preparationLabel, v13, 0LL);
   UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_445/*"#E1C896"*/, &color, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_443/*"#B7A37B"*/, &v14, 0LL);
-  v8 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
-                            (System_String_o *)StringLiteral_438/*"#6B6B6B"*/,
-                            (UnityEngine_Color_o *)&v13,
-                            0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_443/*"#B7A37B"*/, &v19, 0LL);
+  v13 = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(
+                             (System_String_o *)StringLiteral_438/*"#6B6B6B"*/,
+                             (UnityEngine_Color_o *)&v18,
+                             0LL);
   button = this->fields.button;
   if ( !button
-    || (button->fields.specifyHoverColor = color, (v11 = this->fields.button) == 0LL)
-    || (v11->fields.specifyPressedColor = v14, (v12 = this->fields.button) == 0LL) )
+    || (button->fields.specifyHoverColor = color, (v16 = this->fields.button) == 0LL)
+    || (v16->fields.specifyPressedColor = v19, (v17 = this->fields.button) == 0LL) )
   {
 LABEL_10:
-    sub_1BAB678(v8, v9);
+    sub_1BCAA3C(v13, v14);
   }
-  v12->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v13;
+  v17->fields.specifyDisabledColor = (struct UnityEngine_Color_o)v18;
 }
 
 
@@ -79,7 +84,7 @@ void __fastcall CombineMenuListItemComponent__ResetDisableState(
   {
     button = this->fields.button;
     if ( !button )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method);
     ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
       button,
       3LL,
@@ -110,7 +115,7 @@ void __fastcall CombineMenuListItemComponent__SetButtonState(
 LABEL_5:
   button = this->fields.button;
   if ( !button )
-    sub_1BAB678(0LL, *(_QWORD *)&state);
+    sub_1BCAA3C(0LL, *(_QWORD *)&state);
   ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, bool, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
     button,
     v5,
@@ -129,7 +134,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableMessage(
 
   disableMessageLabel = this->fields.disableMessageLabel;
   if ( !disableMessageLabel )
-    sub_1BAB678(0LL, disableMessage);
+    sub_1BCAA3C(0LL, disableMessage);
   UILabel__set_text(disableMessageLabel, disableMessage, 0LL);
 }
 
@@ -149,7 +154,7 @@ void __fastcall CombineMenuListItemComponent__SetDisableUiActivity(
         (preparationLabel = (UnityEngine_Component_o *)this->fields.disableMessageLabel) == 0LL)
     || (preparationLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(preparationLabel, 0LL)) == 0LL )
   {
-    sub_1BAB678(preparationLabel, isActive);
+    sub_1BCAA3C(preparationLabel, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)preparationLabel, isActive, 0LL);
 }
@@ -162,13 +167,13 @@ void __fastcall CombineMenuListItemComponent__SetEventSprite(
 {
   UISprite_o *baseSprite; // x20
 
-  if ( (byte_4AB94B0 & 1) == 0 )
+  if ( (byte_4B199C4 & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, spriteName);
-    byte_4AB94B0 = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, spriteName, method);
+    byte_4B199C4 = 1;
   }
   baseSprite = this->fields.baseSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, spriteName);
   AtlasManager__SetEventSprite(baseSprite, spriteName, 0LL);
 }

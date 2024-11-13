@@ -5,18 +5,19 @@ void __fastcall FollowerEditNameRequest__beginRequest(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  __int64 v8; // x2
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x1
 
-  if ( (byte_4AB7605 & 1) == 0 )
+  if ( (byte_4B17AD0 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_23727/*"supportDeckId"*/, supportDeckId);
-    sub_1BAB41C(&StringLiteral_18552/*"deckName"*/, v7);
-    byte_4AB7605 = 1;
+    sub_1BCA7E0(&StringLiteral_23936/*"supportDeckId"*/, supportDeckId, deckName);
+    sub_1BCA7E0(&StringLiteral_18711/*"deckName"*/, v7, v8);
+    byte_4B17AD0 = 1;
   }
-  RequestBase__addField_41522804((RequestBase_o *)this, (System_String_o *)StringLiteral_23727/*"supportDeckId"*/, supportDeckId, method);
-  RequestBase__addField_41516464((RequestBase_o *)this, (System_String_o *)StringLiteral_18552/*"deckName"*/, deckName, v8);
-  RequestBase__beginRequest((RequestBase_o *)this, v9);
+  RequestBase__addField_41868688((RequestBase_o *)this, (System_String_o *)StringLiteral_23936/*"supportDeckId"*/, supportDeckId, method);
+  RequestBase__addField_41862348((RequestBase_o *)this, (System_String_o *)StringLiteral_18711/*"deckName"*/, deckName, v9);
+  RequestBase__beginRequest((RequestBase_o *)this, v10);
 }
 
 
@@ -24,10 +25,12 @@ System_String_o *__fastcall FollowerEditNameRequest__getMockData(
         FollowerEditNameRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB7604 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B17ACF & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, method);
-    byte_4AB7604 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
+    byte_4B17ACF = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -35,19 +38,21 @@ System_String_o *__fastcall FollowerEditNameRequest__getMockData(
 
 System_String_o *__fastcall FollowerEditNameRequest__getURL(FollowerEditNameRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  __int64 v2; // x2
+  __int64 v3; // x1
+  __int64 v4; // x2
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4AB7603 & 1) == 0 )
+  if ( (byte_4B17ACE & 1) == 0 )
   {
-    sub_1BAB41C(&NetworkManager_TypeInfo, method);
-    sub_1BAB41C(&StringLiteral_19529/*"follower/editName"*/, v2);
-    byte_4AB7603 = 1;
+    sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
+    sub_1BCA7E0(&StringLiteral_19701/*"follower/editName"*/, v3, v4);
+    byte_4B17ACE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_19529/*"follower/editName"*/, 0LL);
+  return System_String__Concat_62401220(BaseUrl, (System_String_o *)StringLiteral_19701/*"follower/editName"*/, 0LL);
 }
 
 
@@ -57,37 +62,39 @@ void __fastcall FollowerEditNameRequest__requestCompleted(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  ResponseData_o *v9; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v9; // x9
+  __int64 *v11; // x9
 
-  if ( (byte_4AB7606 & 1) == 0 )
+  if ( (byte_4B17AD1 & 1) == 0 )
   {
-    sub_1BAB41C(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BAB41C(&StringLiteral_22261/*"ok"*/, v5);
-    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
-    byte_4AB7606 = 1;
+    sub_1BCA7E0(&ResponseCommandKind_TypeInfo, responseList, method);
+    sub_1BCA7E0(&StringLiteral_22465/*"ok"*/, v5, v6);
+    sub_1BCA7E0(&StringLiteral_22292/*"ng"*/, v7, v8);
+    byte_4B17AD1 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(60, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_41605928(v7, 0LL) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
+  v9 = ResponseCommandKind__SearchData(60, responseList, 0LL);
+  if ( v9 && ResponseData__checkError_41952396(v9, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22261/*"ok"*/;
+    v11 = &StringLiteral_22465/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22090/*"ng"*/;
+    v11 = &StringLiteral_22292/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v9,
+    *v11,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

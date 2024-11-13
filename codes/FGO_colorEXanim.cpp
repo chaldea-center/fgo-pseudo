@@ -1,41 +1,50 @@
 void __fastcall FGO_colorEXanim___ctor(FGO_colorEXanim_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  int32_t v10; // w1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  int64_t v14; // x1
 
-  if ( (byte_4AB4BFE & 1) == 0 )
+  if ( (byte_4B15097 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_16638/*"_xxxColor"*/, method);
-    byte_4AB4BFE = 1;
+    sub_1BCA7E0(&StringLiteral_16776/*"_xxxColor"*/, method, v2);
+    byte_4B15097 = 1;
   }
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.customColor = _Q0;
-  v10 = StringLiteral_16638/*"_xxxColor"*/;
-  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16638/*"_xxxColor"*/;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetColorName, v10, v2, v3);
+  v14 = StringLiteral_16776/*"_xxxColor"*/;
+  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16776/*"_xxxColor"*/;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.targetColorName, v14, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall FGO_colorEXanim__Start(FGO_colorEXanim_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   Il2CppObject *Component_object; // x0
-  int32_t v4; // w2
-  int32_t v5; // w3
-  __int64 v6; // x1
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
+  __int64 v11; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4AB4BFD & 1) == 0 )
+  if ( (byte_4B15096 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_4AB4BFD = 1;
+    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Renderer___, method, v2);
+    byte_4B15096 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields._renderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
   renderer = this->fields._renderer;
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL)) == 0LL
@@ -43,7 +52,7 @@ void __fastcall FGO_colorEXanim__Start(FGO_colorEXanim_o *this, const MethodInfo
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL)) == 0LL )
   {
-    sub_1BAB678(renderer, v6);
+    sub_1BCAA3C(renderer, v11);
   }
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
@@ -61,7 +70,7 @@ void __fastcall FGO_colorEXanim__Update(FGO_colorEXanim_o *this, const MethodInf
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL)) == 0LL )
   {
-    sub_1BAB678(renderer, method);
+    sub_1BCAA3C(renderer, method);
   }
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,

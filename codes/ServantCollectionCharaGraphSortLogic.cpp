@@ -29,7 +29,7 @@ void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1BAB678(ListViewItem, v4);
+    sub_1BCAA3C(ListViewItem, v4);
   }
   if ( sortKind == 8 )
   {
@@ -58,22 +58,26 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
         ServantCollectionCharaGraphSortLogic_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
-  ServantStatusBattleListViewItem_o *p_listViewItem; // x0
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  PartyOrganizationUtility_o *p_listViewItem; // x0
   CharaGraphServantCollectionListViewItem_o *listViewItem; // x19
   __int64 methodPtr_low; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
   CharaGraphServantCollectionListViewItem_o *result; // x0
-  ServantCollectionCharaGraphSortLogic_o *v10; // x0
-  const MethodInfo *v11; // x1
+  ServantCollectionCharaGraphSortLogic_o *v14; // x0
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4AB5147 & 1) == 0 )
+  if ( (byte_4B155E3 & 1) == 0 )
   {
-    sub_1BAB41C(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_4AB5147 = 1;
+    sub_1BCA7E0(&CharaGraphServantCollectionListViewItem_TypeInfo, method, v2);
+    byte_4B155E3 = 1;
   }
-  p_listViewItem = (ServantStatusBattleListViewItem_o *)&this->fields.listViewItem;
+  p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
   if ( listViewItem )
     return listViewItem;
@@ -84,11 +88,11 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
     && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
   {
     item = this->fields.item;
-    p_listViewItem->klass = (ServantStatusBattleListViewItem_c *)listViewItem;
-    sub_1BAB3C0(p_listViewItem, (int32_t)item, v2, v3);
+    p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
+    sub_1BCA784(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1BAB938(this->fields.item);
-  ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v10, v11);
+  sub_1BCACFC(this->fields.item);
+  ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v14, v15);
   return result;
 }

@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall AssetLoadWrapper__LoadAssetStorage(
         AssetLoadWrapper_o *this,
         System_String_o *path,
@@ -11,23 +10,19 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
   bool AssetStorage; // w21
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4AB4E4D & 1) == 0 )
+  if ( (byte_4B152E9 & 1) == 0 )
   {
-    sub_1BAB41C(&AssetManager_TypeInfo, path);
-    byte_4AB4E4D = 1;
+    sub_1BCA7E0(&AssetManager_TypeInfo, path, callbackFunc);
+    byte_4B152E9 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__loadAssetStorage(
-                   path,
-                   callbackFunc,
-                   maxParallelLoad,
-                   *(const MethodInfo **)&maxParallelLoad);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, path);
+  AssetStorage = AssetManager__loadAssetStorage(path, callbackFunc, maxParallelLoad, 0LL);
   if ( AssetStorage )
   {
     pathCounter = this->fields.pathCounter;
     if ( !pathCounter )
-      sub_1BAB678(0LL, v9);
+      sub_1BCAA3C(0LL, v9);
     AssetPathLoadCounter__AddCount(pathCounter, path, v10);
   }
   return AssetStorage;
@@ -36,14 +31,14 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
 
 void __fastcall AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4AB4E4E & 1) == 0 )
+  if ( (byte_4B152EA & 1) == 0 )
   {
-    sub_1BAB41C(&AssetManager_TypeInfo, path);
-    byte_4AB4E4E = 1;
+    sub_1BCA7E0(&AssetManager_TypeInfo, path, method);
+    byte_4B152EA = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage(path, (const MethodInfo *)path);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, path);
+  AssetManager__releaseAssetStorage(path, 0LL);
 }
 
 
@@ -62,6 +57,6 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1BAB678(0LL, v5);
+    sub_1BCAA3C(0LL, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, v6);
 }

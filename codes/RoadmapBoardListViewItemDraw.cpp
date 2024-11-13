@@ -27,20 +27,17 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
   UnityEngine_GameObject_o *v6; // x21
   UnityEngine_Object_o *Atlas_k__BackingField; // x22
   struct UnityEngine_GameObject_o **p_boardPrefab; // x21
-  UnityEngine_Object_o *v9; // x22
-  int32_t v10; // w2
-  int32_t v11; // w3
+  __int64 v9; // x1
+  UnityEngine_Object_o *v10; // x22
   UnityEngine_Object_o *BoardPrefab_k__BackingField; // x22
-  UnityEngine_GameObject_o *v13; // x22
+  UnityEngine_GameObject_o *v12; // x22
   UnityEngine_Transform_o *transform; // x0
   struct UnityEngine_GameObject_o *Object; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
 
-  if ( (byte_4AB9812 & 1) == 0 )
+  if ( (byte_4B10FA6 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, item);
-    byte_4AB9812 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, item, method);
+    byte_4B10FA6 = 1;
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite )
@@ -51,7 +48,7 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
   v6 = (UnityEngine_GameObject_o *)boardSprite;
   Atlas_k__BackingField = (UnityEngine_Object_o *)item->fields._Atlas_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
   boardSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(Atlas_k__BackingField, 0LL, 0LL);
   if ( !v6 )
     goto LABEL_21;
@@ -63,23 +60,23 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
     if ( !*p_boardPrefab )
       goto LABEL_21;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)boardSprite, 0, 0LL);
-    v9 = (UnityEngine_Object_o *)*p_boardPrefab;
+    v10 = (UnityEngine_Object_o *)*p_boardPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69800620(v9, 0LL);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+    UnityEngine_Object__Destroy_70154244(v10, 0LL);
     *p_boardPrefab = 0LL;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, 0, v10, v11);
+    sub_1BCA784(&this->fields.boardPrefab, 0LL);
   }
   BoardPrefab_k__BackingField = (UnityEngine_Object_o *)item->fields._BoardPrefab_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
   if ( UnityEngine_Object__op_Inequality(BoardPrefab_k__BackingField, 0LL, 0LL) )
   {
-    v13 = item->fields._BoardPrefab_k__BackingField;
+    v12 = item->fields._BoardPrefab_k__BackingField;
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v13, transform, 0LL, 0LL);
+    Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v12, transform, 0LL, 0LL);
     this->fields.boardPrefab = Object;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.boardPrefab, (int32_t)Object, v16, v17);
+    sub_1BCA784(&this->fields.boardPrefab, Object);
     boardSprite = (UnityEngine_Component_o *)this->fields.boardPrefab;
     if ( !boardSprite )
       goto LABEL_21;
@@ -91,7 +88,7 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
         (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0LL) )
   {
 LABEL_21:
-    sub_1BAB678(boardSprite, item);
+    sub_1BCAA3C(boardSprite, item);
   }
   UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0LL);
 }

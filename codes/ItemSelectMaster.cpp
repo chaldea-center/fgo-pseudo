@@ -1,14 +1,16 @@
 void __fastcall ItemSelectMaster___ctor(ItemSelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB607A & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16527 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__, method);
-    byte_4AB607A = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__, method, v2);
+    byte_4B16527 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     210,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,19 @@ ItemSelectEntity_o *__fastcall ItemSelectMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB6078 & 1) == 0 )
+  if ( (byte_4B16525 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__, *(_QWORD *)&itemId);
-    byte_4AB6078 = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__,
+      *(_QWORD *)&itemId,
+      *(_QWORD *)&idx);
+    byte_4B16525 = 1;
   }
   PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&idx);
   return (ItemSelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_31640E8 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
+                                 (const MethodInfo_31B3198 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__GetEntity__);
 }
 
 
@@ -40,80 +45,92 @@ ItemSelectEntity_array *__fastcall ItemSelectMaster__GetSelectables(
         int32_t itemId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  __int64 v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x21
-  const MethodInfo *v9; // x4
-  _BOOL8 v10; // x0
-  Il2CppObject *v11; // x1
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w22
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  System_Collections_Generic_List_object__o *v12; // x21
+  const MethodInfo *v13; // x4
+  _BOOL8 v14; // x0
+  Il2CppObject *v15; // x1
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  int32_t v22; // w22
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
-  const MethodInfo *v19; // x4
+  Il2CppClass **v26; // x0
+  const MethodInfo *v27; // x4
   ItemSelectEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4AB607B & 1) == 0 )
+  if ( (byte_4B16528 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__, *(_QWORD *)&itemId);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__, v5);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__, v6);
-    sub_1BAB41C(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo, v7);
-    byte_4AB607B = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemSelectEntity__Add__, *(_QWORD *)&itemId, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__, v6, v7);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemSelectEntity___ctor__, v8, v9);
+    sub_1BCA7E0(&System_Collections_Generic_List_ItemSelectEntity__TypeInfo, v10, v11);
+    byte_4B16528 = 1;
   }
   entity = 0LL;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ItemSelectEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                       System_Collections_Generic_List_ItemSelectEntity__TypeInfo,
+                                                       *(_QWORD *)&itemId,
+                                                       method,
+                                                       v3);
   System_Collections_Generic_List_object____ctor(
-    v8,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
-  v10 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, 1, v9);
-  if ( v10 )
+    v12,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_ItemSelectEntity___ctor__);
+  v14 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, 1, v13);
+  if ( v14 )
   {
-    if ( v8 )
+    if ( v12 )
     {
-      v14 = 2;
+      v22 = 2;
       while ( 1 )
       {
-        v11 = (Il2CppObject *)entity;
-        items = v8->fields._items;
-        v16 = Method_System_Collections_Generic_List_ItemSelectEntity__Add__;
-        ++v8->fields._version;
+        v15 = (Il2CppObject *)entity;
+        items = v12->fields._items;
+        v24 = Method_System_Collections_Generic_List_ItemSelectEntity__Add__;
+        ++v12->fields._version;
         if ( !items )
           break;
-        size = v8->fields._size;
+        size = v12->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v8,
-            v11,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            v12,
+            v15,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
         }
         else
         {
-          v18 = &items->obj.klass + size;
-          v8->fields._size = size + 1;
-          v18[4] = (Il2CppClass *)v11;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v18 + 4), (int32_t)v11, v12, v13);
+          v26 = &items->obj.klass + size;
+          v12->fields._size = size + 1;
+          v26[4] = (Il2CppClass *)v15;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v26 + 4), (int64_t)v15, v16, v17, v18, v19, v20, v21);
         }
-        v10 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, v14++, v19);
-        if ( !v10 )
+        v14 = ItemSelectMaster__TryGetEntity(this, &entity, itemId, v22++, v27);
+        if ( !v14 )
           return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                             v8,
-                                             (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+                                             v12,
+                                             (const MethodInfo_35A37B4 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
       }
     }
 LABEL_14:
-    sub_1BAB678(v10, v11);
+    sub_1BCAA3C(v14, v15);
   }
-  if ( !v8 )
+  if ( !v12 )
     goto LABEL_14;
   return (ItemSelectEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                     v8,
-                                     (const MethodInfo_354F414 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
+                                     v12,
+                                     (const MethodInfo_35A37B4 *)Method_System_Collections_Generic_List_ItemSelectEntity__ToArray__);
 }
 
 
@@ -127,15 +144,18 @@ bool __fastcall ItemSelectMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB6079 & 1) == 0 )
+  if ( (byte_4B16526 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__, entity);
-    byte_4AB6079 = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__,
+      entity,
+      *(_QWORD *)&itemId);
+    byte_4B16526 = 1;
   }
   PK = (Il2CppObject *)ItemSelectEntity__CreatePK(itemId, idx, *(const MethodInfo **)&itemId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_ItemSelectMaster__ItemSelectEntity__string__TryGetEntity__);
 }

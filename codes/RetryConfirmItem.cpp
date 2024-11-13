@@ -1,11 +1,12 @@
 void __fastcall RetryConfirmItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
+  __int64 v2; // x2
 
-  if ( (byte_4AB90BC & 1) == 0 )
+  if ( (byte_4B195AE & 1) == 0 )
   {
-    sub_1BAB41C(&RetryConfirmItem_TypeInfo, v1);
-    byte_4AB90BC = 1;
+    sub_1BCA7E0(&RetryConfirmItem_TypeInfo, v1, v2);
+    byte_4B195AE = 1;
   }
   RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH = 130;
 }
@@ -79,7 +80,7 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         }
       }
 LABEL_15:
-      sub_1BAB678(useAmount, method);
+      sub_1BCAA3C(useAmount, method);
     }
   }
 }
@@ -128,7 +129,7 @@ void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0LL) )
   {
 LABEL_15:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   }
   v12 = LocalPositionX;
   if ( useAmount + mWidth >= v9 + v8 )
@@ -148,21 +149,27 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
         RetryConfirmItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB90BB & 1) == 0 )
+  if ( (byte_4B195AD & 1) == 0 )
   {
-    sub_1BAB41C(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method);
-    byte_4AB90BB = 1;
+    sub_1BCA7E0(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method, v2);
+    byte_4B195AD = 1;
   }
-  v3 = sub_1BAB668(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
-  return (System_Collections_IEnumerator_o *)v3;
+  v5 = sub_1BCAA2C(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
+  *(_QWORD *)(v5 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -180,28 +187,36 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *this,
         const MethodInfo *method)
 {
-  RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *v2; // x19
+  __int64 v2; // x2
+  RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *v3; // x19
   int32_t _1__state; // w8
   struct RetryConfirmItem_o *_4__this; // x20
-  ServantStatusBattleListViewItem_o *p__2__current; // x19
-  int32_t v6; // w2
-  int32_t v7; // w3
+  PartyOrganizationUtility_o *p__2__current; // x19
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   bool result; // w0
   struct UILabel_o *possessionAmount; // x8
   int32_t mWidth; // w19
-  UILabel_o *v11; // x19
+  UILabel_o *v16; // x19
 
-  v2 = this;
-  if ( (byte_4AB90BD & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B195AF & 1) == 0 )
   {
-    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_1BAB41C(&RetryConfirmItem_TypeInfo, method);
-    byte_4AB90BD = 1;
+    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_1BCA7E0(
+                                                                           &RetryConfirmItem_TypeInfo,
+                                                                           method,
+                                                                           v2);
+    byte_4B195AF = 1;
   }
-  _1__state = v2->fields.__1__state;
-  _4__this = v2->fields.__4__this;
+  _1__state = v3->fields.__1__state;
+  _4__this = v3->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v2->fields.__1__state = -1;
+    v3->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_18;
     possessionAmount = _4__this->fields.possessionAmount;
@@ -211,38 +226,38 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
     this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)RetryConfirmItem_TypeInfo;
     if ( !RetryConfirmItem_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(RetryConfirmItem_TypeInfo);
+      j_il2cpp_runtime_class_init_0(RetryConfirmItem_TypeInfo, method);
       this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)RetryConfirmItem_TypeInfo;
     }
     if ( mWidth > (__int64)this[4].fields.__2__current->klass )
     {
-      v11 = _4__this->fields.possessionAmount;
+      v16 = _4__this->fields.possessionAmount;
       if ( !LODWORD(this[5].fields.__2__current) )
-        j_il2cpp_runtime_class_init_0(this);
-      if ( !v11 )
+        j_il2cpp_runtime_class_init_0(this, method);
+      if ( !v16 )
         goto LABEL_18;
-      UILabel__SetCondensedScale(v11, RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH, 0LL);
+      UILabel__SetCondensedScale(v16, RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH, 0LL);
     }
   }
   else if ( !_1__state )
   {
-    v2->fields.__1__state = -1;
+    v3->fields.__1__state = -1;
     if ( _4__this )
     {
       this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)_4__this->fields.possessionAmount;
       if ( this )
       {
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
-        v2->fields.__2__current = 0LL;
-        p__2__current = (ServantStatusBattleListViewItem_o *)&v2->fields.__2__current;
-        sub_1BAB3C0(p__2__current, 0, v6, v7);
+        v3->fields.__2__current = 0LL;
+        p__2__current = (PartyOrganizationUtility_o *)&v3->fields.__2__current;
+        sub_1BCA784(p__2__current, 0LL, v7, v8, v9, v10, v11, v12);
         result = 1;
-        *(_DWORD *)&p__2__current[-1].fields.isMine = 1;
+        *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
         return result;
       }
     }
 LABEL_18:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   }
   return 0;
 }
@@ -261,14 +276,20 @@ void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 

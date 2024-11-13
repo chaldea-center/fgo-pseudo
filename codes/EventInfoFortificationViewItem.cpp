@@ -24,23 +24,31 @@ void __fastcall EventInfoFortificationViewItem__Setup(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   struct EventFortificationEntity_o **p_eventFortificationEntity; // x0
-  EventFortificationEntity_o *v6; // t1
-  const MethodInfo *v8; // x2
-  const MethodInfo *v9; // x2
+  EventFortificationEntity_o *v10; // t1
+  const MethodInfo *v12; // x2
+  const MethodInfo *v13; // x2
 
-  v6 = this->fields.eventFortificationEntity;
+  v10 = this->fields.eventFortificationEntity;
   p_eventFortificationEntity = &this->fields.eventFortificationEntity;
-  if ( eventFortificationEntity != v6 )
+  if ( eventFortificationEntity != v10 )
   {
     this->fields.eventFortificationEntity = eventFortificationEntity;
-    sub_1BAB3C0(
-      (ServantStatusBattleListViewItem_o *)p_eventFortificationEntity,
-      (int32_t)eventFortificationEntity,
-      (int32_t)method,
-      v3);
-    EventInfoFortificationViewItem__SetupGiftIcon(this, eventFortificationEntity, v8);
-    EventInfoFortificationViewItem__SetupWorkBgColor(this, eventFortificationEntity, v9);
+    sub_1BCA784(
+      (PartyOrganizationUtility_o *)p_eventFortificationEntity,
+      (int64_t)eventFortificationEntity,
+      (int64_t)method,
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
+    EventInfoFortificationViewItem__SetupGiftIcon(this, eventFortificationEntity, v12);
+    EventInfoFortificationViewItem__SetupWorkBgColor(this, eventFortificationEntity, v13);
   }
 }
 
@@ -51,26 +59,28 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   DataManager_o *Instance; // x0
-  __int64 v8; // x1
-  DataManager_o *v9; // x20
+  __int64 v10; // x1
+  DataManager_o *v11; // x20
   UnityEngine_Object_o *itemIcon; // x21
-  int32_t *v11; // x8
+  int32_t *v13; // x8
 
-  if ( (byte_4AB65B2 & 1) == 0 )
+  if ( (byte_4B1776A & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_GiftMaster___, eventFortificationEntity);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4AB65B2 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_GiftMaster___, eventFortificationEntity, method);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7, v8);
+    byte_4B1776A = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !eventFortificationEntity )
     goto LABEL_17;
   if ( !Instance )
@@ -81,32 +91,32 @@ void __fastcall EventInfoFortificationViewItem__SetupGiftIcon(
                                 0LL);
   if ( !Instance )
     goto LABEL_17;
-  v9 = Instance;
+  v11 = Instance;
   if ( !LODWORD(Instance->fields.m_CancellationTokenSource) )
 LABEL_18:
-    sub_1BAB680(Instance, v8);
+    sub_1BCAA44(Instance, v10);
   if ( *(_QWORD *)&Instance->fields._DispLog )
   {
     itemIcon = (UnityEngine_Object_o *)this->fields.itemIcon;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
     Instance = (DataManager_o *)UnityEngine_Object__op_Inequality(itemIcon, 0LL, 0LL);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
-      if ( LODWORD(v9->fields.m_CancellationTokenSource) )
+      if ( LODWORD(v11->fields.m_CancellationTokenSource) )
       {
-        v11 = *(int32_t **)&v9->fields._DispLog;
-        if ( v11 )
+        v13 = *(int32_t **)&v11->fields._DispLog;
+        if ( v13 )
         {
           Instance = (DataManager_o *)this->fields.itemIcon;
           if ( Instance )
           {
-            ItemIconComponent__SetGift_38524704((ItemIconComponent_o *)Instance, v11[5], v11[6], v11[7], 0, 0LL);
+            ItemIconComponent__SetGift_38855180((ItemIconComponent_o *)Instance, v13[5], v13[6], v13[7], 0, 0LL);
             return;
           }
         }
 LABEL_17:
-        sub_1BAB678(Instance, v8);
+        sub_1BCAA3C(Instance, v10);
       }
       goto LABEL_18;
     }
@@ -119,51 +129,49 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
         EventFortificationEntity_o *eventFortificationEntity,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  EventInfoFortificationViewItem_o *v6; // x19
+  EventInfoFortificationViewItem_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   Il2CppObject *v9; // x21
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x0
-  System_String_o *v20; // x20
-  System_String_o *v21; // x0
-  unsigned __int128 v22; // [xsp+0h] [xbp-50h] BYREF
+  Il2CppObject *v10; // x0
+  System_String_o *v11; // x0
+  __int64 v12; // x1
+  System_String_o *v18; // x20
+  System_String_o *v19; // x0
+  unsigned __int128 v20; // [xsp+0h] [xbp-50h] BYREF
   int32_t workType; // [xsp+18h] [xbp-38h] BYREF
   int32_t eventId; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v6 = this;
-  if ( (byte_4AB65B3 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4B1776B & 1) == 0 )
   {
-    sub_1BAB41C(&int_TypeInfo, eventFortificationEntity);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v7);
-    this = (EventInfoFortificationViewItem_o *)sub_1BAB41C(&StringLiteral_6461/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v8);
-    byte_4AB65B3 = 1;
+    sub_1BCA7E0(&int_TypeInfo, eventFortificationEntity, method);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v5, v6);
+    this = (EventInfoFortificationViewItem_o *)sub_1BCA7E0(&StringLiteral_6580/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v7, v8);
+    byte_4B1776B = 1;
   }
-  v22 = 0uLL;
+  v20 = 0uLL;
   if ( !eventFortificationEntity )
     goto LABEL_8;
   eventId = eventFortificationEntity->fields.eventId;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, method, v3, v4);
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
   workType = eventFortificationEntity->fields.workType;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType, v10, v11, v12);
-  v14 = System_String__Format_62062500((System_String_o *)StringLiteral_6461/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v9, v13, 0LL);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType);
+  v11 = System_String__Format_62415592((System_String_o *)StringLiteral_6580/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v9, v10, 0LL);
   __asm { FMOV            V0.4S, #1.0 }
-  v22 = (unsigned __int128)_Q0;
-  v20 = v14;
+  v20 = (unsigned __int128)_Q0;
+  v18 = v11;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v21 = LocalizationManager__Get(v20, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString(v21, (UnityEngine_Color_o *)&v22, 0LL);
-  this = (EventInfoFortificationViewItem_o *)v6->fields.workBgSprite;
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v12);
+  v19 = LocalizationManager__Get(v18, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString(v19, (UnityEngine_Color_o *)&v20, 0LL);
+  this = (EventInfoFortificationViewItem_o *)v4->fields.workBgSprite;
   if ( !this )
 LABEL_8:
-    sub_1BAB678(this, eventFortificationEntity);
-  UIWidget__set_color((UIWidget_o *)this, (UnityEngine_Color_o)v22, 0LL);
+    sub_1BCAA3C(this, eventFortificationEntity);
+  UIWidget__set_color((UIWidget_o *)this, (UnityEngine_Color_o)v20, 0LL);
 }
 
 
@@ -176,7 +184,7 @@ void __fastcall EventInfoFortificationViewItem__UpdateProgressBar(
 
   gaugeSprite = (UIBasicSprite_o *)this->fields.gaugeSprite;
   if ( !gaugeSprite )
-    sub_1BAB678(0LL, method);
+    sub_1BCAA3C(0LL, method);
   UIBasicSprite__set_fillAmount(gaugeSprite, value, 0LL);
 }
 

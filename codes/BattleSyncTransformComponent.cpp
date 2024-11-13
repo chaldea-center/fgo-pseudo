@@ -1,18 +1,24 @@
 void __fastcall BattleSyncTransformComponent___ctor(BattleSyncTransformComponent_o *this, const MethodInfo *method)
 {
-  Il2CppObject *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB8F39 & 1) == 0 )
+  if ( (byte_4B19429 & 1) == 0 )
   {
-    sub_1BAB41C(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
-    byte_4AB8F39 = 1;
+    sub_1BCA7E0(&BattleSyncTransformComponent_SyncData_TypeInfo, method, v2);
+    byte_4B19429 = 1;
   }
-  v3 = (Il2CppObject *)sub_1BAB668(BattleSyncTransformComponent_SyncData_TypeInfo);
-  System_Object___ctor(v3, 0LL);
-  this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
+  v5 = (Il2CppObject *)sub_1BCAA2C(BattleSyncTransformComponent_SyncData_TypeInfo, method, v2, v3);
+  System_Object___ctor(v5, 0LL);
+  this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v5;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -23,29 +29,33 @@ void __fastcall BattleSyncTransformComponent__InitSyncPos(
         UnityEngine_Vector3_o posDiff,
         const MethodInfo *method)
 {
-  int32_t v3; // w2
+  int64_t v3; // x2
   int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
   struct UnityEngine_Transform_o **p_targetObj; // x19
   float z; // s8
   float y; // s9
   float x; // s10
-  __int64 v9; // x0
-  __int64 v10; // x1
-  float *v11; // x8
+  __int64 v13; // x0
+  __int64 v14; // x1
+  float *v15; // x8
 
   this->fields.targetObj = 0LL;
   p_targetObj = &this->fields.targetObj;
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, 0, v3, v4);
-  v11 = (float *)*(p_targetObj - 1);
-  if ( !v11 )
-    sub_1BAB678(v9, v10);
-  v11[5] = x;
-  v11[6] = y;
-  v11[7] = z;
-  *((_DWORD *)v11 + 4) = 1;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.targetObj, 0LL, v3, v4, v5, v6, v7, v8);
+  v15 = (float *)*(p_targetObj - 1);
+  if ( !v15 )
+    sub_1BCAA3C(v13, v14);
+  v15[5] = x;
+  v15[6] = y;
+  v15[7] = z;
+  *((_DWORD *)v15 + 4) = 1;
 }
 
 
@@ -65,44 +75,76 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
         BattleSyncTransformComponent_o *syncSetting,
         const MethodInfo *method)
 {
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  int32_t v9; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.targetObj,
-    (int32_t)target,
-    (int32_t)syncSetting,
-    (int32_t)method);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.targetObj,
+    (int64_t)target,
+    (int64_t)syncSetting,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   if ( !syncSetting )
-    sub_1BAB678(v6, v7);
+    sub_1BCAA3C(v10, v11);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncData, v8, v9);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)syncData, v12, v13, v14, v15, v16, v17);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_44591316(
+BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_44950084(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  int32_t v7; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
 
   this->fields.targetObj = target;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.targetObj,
-    (int32_t)target,
-    (int32_t)syncSettingData,
-    (int32_t)method);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.targetObj,
+    (int64_t)target,
+    (int64_t)syncSettingData,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.syncData = syncSettingData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.syncData,
+    (int64_t)syncSettingData,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   return this;
 }
 
@@ -112,33 +154,34 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
         BattleSyncTransformComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *targetObj; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v5; // x1
+  __int64 v6; // x1
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x20
-  UnityEngine_Transform_o *v7; // x21
-  float v8; // s0
-  float v9; // s1
-  float v10; // s2
-  UnityEngine_Transform_o *v11; // x21
-  const MethodInfo *v12; // x1
-  int v13; // s0
-  UnityEngine_Transform_o *v17; // x21
-  float v18; // s0
-  float v19; // s1
-  float v20; // s2
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Transform_o *v8; // x21
+  float v9; // s0
+  float v10; // s1
+  float v11; // s2
+  UnityEngine_Transform_o *v12; // x21
+  const MethodInfo *v13; // x1
+  int v14; // s0
+  UnityEngine_Transform_o *v18; // x21
+  float v19; // s0
+  float v20; // s1
+  float v21; // s2
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4AB8F38 & 1) == 0 )
+  if ( (byte_4B19428 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB8F38 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B19428 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(targetObj, 0LL, 0LL);
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
@@ -147,46 +190,46 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
     {
       if ( (syncData->fields.syncType & 1) == 0 )
         goto LABEL_23;
-      v7 = this->fields.targetObj;
+      v8 = this->fields.targetObj;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( transform )
       {
-        *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(transform, 0LL);
-        if ( v7 )
+        *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Transform__get_position(transform, 0LL);
+        if ( v8 )
         {
-          v21.fields.z = v10 + syncData->fields.positionDiff.fields.z;
-          v21.fields.y = v9 + syncData->fields.positionDiff.fields.y;
-          v21.fields.x = v8 + syncData->fields.positionDiff.fields.x;
-          UnityEngine_Transform__set_position(v7, v21, 0LL);
+          v22.fields.z = v11 + syncData->fields.positionDiff.fields.z;
+          v22.fields.y = v10 + syncData->fields.positionDiff.fields.y;
+          v22.fields.x = v9 + syncData->fields.positionDiff.fields.x;
+          UnityEngine_Transform__set_position(v8, v22, 0LL);
           syncData = this->fields.syncData;
           if ( syncData )
           {
 LABEL_23:
             if ( (syncData->fields.syncType & 2) == 0
-              || (v11 = this->fields.targetObj,
+              || (v12 = this->fields.targetObj,
                   (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) != 0LL)
               && (rotation = UnityEngine_Transform__get_rotation(transform, 0LL),
-                  *(UnityEngine_Quaternion_o *)&v13 = BattleSyncTransformComponent_SyncData__GetFixRotation(
+                  *(UnityEngine_Quaternion_o *)&v14 = BattleSyncTransformComponent_SyncData__GetFixRotation(
                                                         syncData,
                                                         rotation,
-                                                        v12),
-                  v11)
-              && (UnityEngine_Transform__set_rotation(v11, *(UnityEngine_Quaternion_o *)&v13, 0LL),
+                                                        v13),
+                  v12)
+              && (UnityEngine_Transform__set_rotation(v12, *(UnityEngine_Quaternion_o *)&v14, 0LL),
                   (syncData = this->fields.syncData) != 0LL) )
             {
               if ( (syncData->fields.syncType & 4) == 0 )
                 return;
-              v17 = this->fields.targetObj;
+              v18 = this->fields.targetObj;
               transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
               if ( transform )
               {
-                *(UnityEngine_Vector3_o *)&v18 = UnityEngine_Transform__get_localScale(transform, 0LL);
-                if ( v17 )
+                *(UnityEngine_Vector3_o *)&v19 = UnityEngine_Transform__get_localScale(transform, 0LL);
+                if ( v18 )
                 {
-                  v22.fields.z = v20 + syncData->fields.scaleDiff.fields.z;
-                  v22.fields.y = v19 + syncData->fields.scaleDiff.fields.y;
-                  v22.fields.x = v18 + syncData->fields.scaleDiff.fields.x;
-                  UnityEngine_Transform__set_localScale(v17, v22, 0LL);
+                  v23.fields.z = v21 + syncData->fields.scaleDiff.fields.z;
+                  v23.fields.y = v20 + syncData->fields.scaleDiff.fields.y;
+                  v23.fields.x = v19 + syncData->fields.scaleDiff.fields.x;
+                  UnityEngine_Transform__set_localScale(v18, v23, 0LL);
                   return;
                 }
               }
@@ -195,7 +238,7 @@ LABEL_23:
         }
       }
     }
-    sub_1BAB678(transform, v5);
+    sub_1BCAA3C(transform, v6);
   }
 }
 
@@ -206,9 +249,21 @@ void __fastcall BattleSyncTransformComponent__UpdateTarget(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.targetObj = target;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.targetObj,
+    (int64_t)target,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -220,7 +275,7 @@ bool __fastcall BattleSyncTransformComponent__get_IsNotExecSync(
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return syncData->fields.syncType == 0;
 }
 

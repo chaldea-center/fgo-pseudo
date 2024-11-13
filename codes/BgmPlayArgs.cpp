@@ -7,35 +7,42 @@ void __fastcall BgmPlayArgs___ctor(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x1
-  int32_t v13; // w2
-  int32_t v14; // w3
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  __int64 v21; // x1
   float value; // s0
-  BgmManager_c *v16; // x0
+  BgmManager_c *v23; // x0
 
-  if ( (byte_4AB5380 & 1) == 0 )
+  if ( (byte_4B1581C & 1) == 0 )
   {
-    sub_1BAB41C(&BgmManager_TypeInfo, bgmName);
-    sub_1BAB41C(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_1BAB41C(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4AB5380 = 1;
+    sub_1BCA7E0(&BgmManager_TypeInfo, bgmName, volume);
+    sub_1BCA7E0(&Method_System_Nullable_float__GetValueOrDefault__, v11, v12);
+    sub_1BCA7E0(&Method_System_Nullable_float__get_HasValue__, v13, v14);
+    byte_4B1581C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)bgmName, v13, v14);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)bgmName, v15, v16, v17, v18, v19, v20);
   if ( volume.fields.hasValue )
   {
     value = volume.fields.value;
   }
   else
   {
-    v16 = BgmManager_TypeInfo;
+    v23 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v16 = BgmManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v21);
+      v23 = BgmManager_TypeInfo;
     }
-    value = v16->static_fields->DEFAULT_VOLUME;
+    value = v23->static_fields->DEFAULT_VOLUME;
   }
   this->fields._Volume_k__BackingField = value;
   this->fields._FadeTime_k__BackingField = fadeTime;
@@ -54,26 +61,29 @@ void __fastcall BgmPlayArgs__Update(
   bool hasValue; // w21
   BgmPlayArgs_o *v9; // x20
   __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v11; // x2
   __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x1
+  __int64 v15; // x2
   float Volume_k__BackingField; // s0
   float FadeTime_k__BackingField; // s0
 
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4AB5381 & 1) == 0 )
+  if ( (byte_4B1581D & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Nullable_float__GetValueOrDefault__, volume);
-    sub_1BAB41C(&Method_System_Nullable_long__GetValueOrDefault__, v10);
-    sub_1BAB41C(&Method_System_Nullable_long__get_HasValue__, v11);
-    this = (BgmPlayArgs_o *)sub_1BAB41C(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4AB5381 = 1;
+    sub_1BCA7E0(&Method_System_Nullable_float__GetValueOrDefault__, volume, fadeTime);
+    sub_1BCA7E0(&Method_System_Nullable_long__GetValueOrDefault__, v10, v11);
+    sub_1BCA7E0(&Method_System_Nullable_long__get_HasValue__, v12, v13);
+    this = (BgmPlayArgs_o *)sub_1BCA7E0(&Method_System_Nullable_float__get_HasValue__, v14, v15);
+    byte_4B1581D = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BAB678)(this, volume);
+      sub_1BCAA3C(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -119,9 +129,13 @@ float __fastcall BgmPlayArgs__get_Volume(BgmPlayArgs_o *this, const MethodInfo *
 void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *value, const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 

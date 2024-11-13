@@ -3,17 +3,21 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  ServantStatusBattleListViewItem_o *v4; // x20
-  int32_t v5; // w2
+  UpdateIntervalBuffViewBattleLogicTask_o *v4; // x20
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  v4 = (ServantStatusBattleListViewItem_o *)this;
+  v4 = this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)actData);
-  v4[1].fields.sortValue2 = (int64_t)actData;
-  v4 = (ServantStatusBattleListViewItem_o *)((char *)v4 + 240);
-  *(_DWORD *)&v4[-2].fields.isEnabled = 58;
-  sub_1BAB3C0(v4, (int32_t)actData, v5, v6);
-  HIBYTE(v4[-1].fields.dispLimitCount.fields.fakeValue) = 1;
+  v4->fields.baseActData = actData;
+  v4 = (UpdateIntervalBuffViewBattleLogicTask_o *)((char *)v4 + 240);
+  LODWORD(v4[-1].fields.command) = 58;
+  sub_1BCA784((PartyOrganizationUtility_o *)v4, (int64_t)actData, v5, v6, v7, v8, v9, v10);
+  BYTE3(v4[-1].fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.key) = 1;
 }
 
 
@@ -22,16 +26,17 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
+  __int64 v3; // x3
   BattleActionData_o *baseActData; // x19
-  UpdateViewIntervalBuffActionData_o *v5; // x20
+  UpdateViewIntervalBuffActionData_o *v6; // x20
 
-  if ( (byte_4AB8A47 & 1) == 0 )
+  if ( (byte_4B18F27 & 1) == 0 )
   {
-    sub_1BAB41C(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_4AB8A47 = 1;
+    sub_1BCA7E0(&UpdateViewIntervalBuffActionData_TypeInfo, logic, method);
+    byte_4B18F27 = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1BAB668(UpdateViewIntervalBuffActionData_TypeInfo);
-  UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0LL);
-  return (BattleActionData_o *)v5;
+  v6 = (UpdateViewIntervalBuffActionData_o *)sub_1BCAA2C(UpdateViewIntervalBuffActionData_TypeInfo, logic, method, v3);
+  UpdateViewIntervalBuffActionData___ctor(v6, baseActData, 0LL);
+  return (BattleActionData_o *)v6;
 }

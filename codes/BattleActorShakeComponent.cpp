@@ -15,21 +15,22 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
   UnityEngine_Transform_o *v8; // x20
   float v9; // s0
   float elapsedTime; // s8
-  UnityEngine_Transform_o *v11; // x19
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v11; // x2
+  UnityEngine_Transform_o *v12; // x19
+  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !this->fields.IsAnimation )
   {
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    v11 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4AB0691 )
+    v12 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_4B109C1 )
     {
-      transform = sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4AB0691 = 1;
+      transform = sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v4, v11);
+      byte_4B109C1 = 1;
     }
-    if ( v11 )
+    if ( v12 )
     {
-      UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+      UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
       return;
     }
     goto LABEL_11;
@@ -49,12 +50,12 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
         !v8) )
   {
 LABEL_11:
-    sub_1BAB678(transform, v4);
+    sub_1BCAA3C(transform, v4);
   }
-  v12.fields.z = z * v9;
-  v12.fields.y = y * v9;
-  v12.fields.x = x * v9;
-  UnityEngine_Transform__set_localPosition(v8, v12, 0LL);
+  v13.fields.z = z * v9;
+  v13.fields.y = y * v9;
+  v13.fields.x = x * v9;
+  UnityEngine_Transform__set_localPosition(v8, v13, 0LL);
   elapsedTime = this->fields.elapsedTime;
   this->fields.elapsedTime = elapsedTime + UnityEngine_Time__get_deltaTime(0LL);
 }

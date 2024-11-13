@@ -1,13 +1,15 @@
 void __fastcall BattleLogicDebug___ctor(BattleLogicDebug_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB8911 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B18DF0 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_BattleLogicDebug___ctor__, method);
-    byte_4AB8911 = 1;
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_BattleLogicDebug___ctor__, method, v2);
+    byte_4B18DF0 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_378A644 *)Method_SingletonMonoBehaviour_BattleLogicDebug___ctor__);
+    (const MethodInfo_37DEF2C *)Method_SingletonMonoBehaviour_BattleLogicDebug___ctor__);
 }
 
 

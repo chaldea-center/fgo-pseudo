@@ -1,4 +1,4 @@
-void __fastcall MoveToSubMemberWaveTurnEvent___ctor_44056468(
+void __fastcall MoveToSubMemberWaveTurnEvent___ctor_44414692(
         MoveToSubMemberWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
@@ -14,23 +14,25 @@ MoveToSubMemberWaveTurnEvent_o *__fastcall MoveToSubMemberWaveTurnEvent__CreateB
         ServantWaveTurnEvent_SaveData_o *saveData,
         const MethodInfo *method)
 {
-  ServantWaveTurnEvent_SaveData_o *v2; // x19
-  Il2CppClass *v3; // d8
-  Il2CppObject *v4; // x19
+  __int64 v2; // x2
+  __int64 v3; // x3
+  ServantWaveTurnEvent_SaveData_o *v4; // x19
+  Il2CppClass *v5; // d8
+  Il2CppObject *v6; // x19
 
-  v2 = saveData;
-  if ( (byte_4AB8A58 & 1) == 0 )
+  v4 = saveData;
+  if ( (byte_4B18F38 & 1) == 0 )
   {
-    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1BAB41C(&MoveToSubMemberWaveTurnEvent_TypeInfo, method);
-    byte_4AB8A58 = 1;
+    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1BCA7E0(&MoveToSubMemberWaveTurnEvent_TypeInfo, method, v2);
+    byte_4B18F38 = 1;
   }
-  if ( !v2 )
-    sub_1BAB678(saveData, method);
-  v3 = *(Il2CppClass **)&v2->fields.Wave;
-  v4 = (Il2CppObject *)sub_1BAB668(MoveToSubMemberWaveTurnEvent_TypeInfo);
-  System_Object___ctor(v4, 0LL);
-  v4[1].klass = v3;
-  return (MoveToSubMemberWaveTurnEvent_o *)v4;
+  if ( !v4 )
+    sub_1BCAA3C(saveData, method);
+  v5 = *(Il2CppClass **)&v4->fields.Wave;
+  v6 = (Il2CppObject *)sub_1BCAA2C(MoveToSubMemberWaveTurnEvent_TypeInfo, method, v2, v3);
+  System_Object___ctor(v6, 0LL);
+  v6[1].klass = v5;
+  return (MoveToSubMemberWaveTurnEvent_o *)v6;
 }
 
 

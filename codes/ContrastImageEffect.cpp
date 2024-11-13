@@ -11,28 +11,31 @@ void __fastcall ContrastImageEffect__OnRenderImage(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
   UnityEngine_Material_o *material; // x0
-  __int64 v10; // x1
-  UnityEngine_Material_o *v11; // x21
+  __int64 v12; // x1
+  __int64 v13; // x1
+  UnityEngine_Material_o *v14; // x21
 
-  if ( (byte_4AB880E & 1) == 0 )
+  if ( (byte_4B18CEC & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Graphics_TypeInfo, source);
-    sub_1BAB41C(&StringLiteral_16215/*"_Contrast"*/, v7);
-    sub_1BAB41C(&StringLiteral_16353/*"_Saturation"*/, v8);
-    byte_4AB880E = 1;
+    sub_1BCA7E0(&UnityEngine_Graphics_TypeInfo, source, destination);
+    sub_1BCA7E0(&StringLiteral_16352/*"_Contrast"*/, v7, v8);
+    sub_1BCA7E0(&StringLiteral_16491/*"_Saturation"*/, v9, v10);
+    byte_4B18CEC = 1;
   }
   material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !material
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16353/*"_Saturation"*/, this->fields.saturation, 0LL),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16491/*"_Saturation"*/, this->fields.saturation, 0LL),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BAB678(material, v10);
+    sub_1BCAA3C(material, v12);
   }
-  UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16215/*"_Contrast"*/, this->fields.contrast, 0LL);
-  v11 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
+  UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16352/*"_Contrast"*/, this->fields.contrast, 0LL);
+  v14 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_69646668((UnityEngine_Texture_o *)source, destination, v11, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo, v13);
+  UnityEngine_Graphics__Blit_70000204((UnityEngine_Texture_o *)source, destination, v14, 0LL);
 }

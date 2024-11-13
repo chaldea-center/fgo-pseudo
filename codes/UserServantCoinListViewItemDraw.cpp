@@ -6,6 +6,7 @@ void __fastcall UserServantCoinListViewItemDraw___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall UserServantCoinListViewItemDraw__SetInput(
         UserServantCoinListViewItemDraw_o *this,
         UserServantCoinListViewItem_o *item,
@@ -16,14 +17,14 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_4AB1821 & 1) == 0 )
+  if ( (byte_4B11C0A & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, item);
-    byte_4AB1821 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, item, isInput);
+    byte_4B11C0A = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
     v7 = this->fields.baseButton;
@@ -34,7 +35,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1BAB678(v7, v6);
+      sub_1BCAA3C(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
@@ -45,6 +46,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall UserServantCoinListViewItemDraw__SetItem(
         UserServantCoinListViewItemDraw_o *this,
         UserServantCoinListViewItem_o *item,
@@ -52,22 +54,20 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   __int64 v7; // x1
+  __int64 v8; // x2
   struct SvtCoinEntity_o *svtCoinEntity; // x8
   ItemIconComponent_o *itemIcon; // x0
   __int64 itemId; // x1
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
   struct UserSvtCoinEntity_o *userSvtCoinEntity; // x8
   UILabel_o *possessionNum; // x19
-  Il2CppObject *v16; // x0
-  int v17; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v14; // x0
+  int v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4AB1820 & 1) == 0 )
+  if ( (byte_4B11C09 & 1) == 0 )
   {
-    sub_1BAB41C(&int_TypeInfo, item);
-    sub_1BAB41C(&StringLiteral_24976/*"{0:#,0}"*/, v7);
-    byte_4AB1820 = 1;
+    sub_1BCA7E0(&int_TypeInfo, item, *(_QWORD *)&mode);
+    sub_1BCA7E0(&StringLiteral_25188/*"{0:#,0}"*/, v7, v8);
+    byte_4B11C09 = 1;
   }
   if ( item && mode )
   {
@@ -94,12 +94,12 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
     possessionNum = this->fields.possessionNum;
     if ( userSvtCoinEntity )
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
-    v17 = (int)userSvtCoinEntity;
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v11, v12, v13);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_24976/*"{0:#,0}"*/, v16, 0LL);
+    v15 = (int)userSvtCoinEntity;
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25188/*"{0:#,0}"*/, v14, 0LL);
     if ( !possessionNum )
 LABEL_15:
-      sub_1BAB678(itemIcon, itemId);
+      sub_1BCAA3C(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
   }
 }

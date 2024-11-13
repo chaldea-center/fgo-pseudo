@@ -8,23 +8,15 @@ void __fastcall MasterEquipSettingListViewItem___ctor(
         const MethodInfo *method)
 {
   MasterEquipSettingListViewItem_o *v11; // x23
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
 
   v11 = this;
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&v11->fields._EquipTexture_k__BackingField,
-    (int32_t)equipTexture,
-    v12,
-    v13);
+  sub_1BCA784(&v11->fields._EquipTexture_k__BackingField, equipTexture);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 128);
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v11, (int32_t)shortName, v14, v15);
+  sub_1BCA784(v11, shortName);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -43,14 +35,8 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
         UnityEngine_Texture2D_o *texture,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._EquipTexture_k__BackingField,
-    (int32_t)texture,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._EquipTexture_k__BackingField, texture);
 }
 
 
@@ -106,14 +92,8 @@ void __fastcall MasterEquipSettingListViewItem__set_EquipTexture(
         UnityEngine_Texture2D_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._EquipTexture_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._EquipTexture_k__BackingField, value);
 }
 
 

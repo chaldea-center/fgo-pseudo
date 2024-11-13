@@ -1,41 +1,51 @@
 void __fastcall LotteryShopBuyItemConfirmMenu___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v4; // x2
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
   struct LotteryShopBuyItemConfirmMenu_StaticFields *static_fields; // x0
-  struct LotteryShopBuyItemConfirmMenu_StaticFields *v6; // x0
+  __int64 v11; // x1
+  struct LotteryShopBuyItemConfirmMenu_StaticFields *v12; // x0
 
-  if ( (byte_4AB0DCA & 1) == 0 )
+  if ( (byte_4B111BA & 1) == 0 )
   {
-    sub_1BAB41C(&LotteryShopBuyItemConfirmMenu_TypeInfo, v1);
-    sub_1BAB41C(&StringLiteral_24110/*"treasurechest_img_bg"*/, v2);
-    sub_1BAB41C(&StringLiteral_17606/*"btn_txt_event_"*/, v3);
-    sub_1BAB41C(&StringLiteral_24114/*"treasurechest_img_line"*/, v4);
-    byte_4AB0DCA = 1;
+    sub_1BCA7E0(&LotteryShopBuyItemConfirmMenu_TypeInfo, v1, v2);
+    sub_1BCA7E0(&StringLiteral_24322/*"treasurechest_img_bg"*/, v3, v4);
+    sub_1BCA7E0(&StringLiteral_17753/*"btn_txt_event_"*/, v5, v6);
+    sub_1BCA7E0(&StringLiteral_24326/*"treasurechest_img_line"*/, v7, v8);
+    byte_4B111BA = 1;
   }
-  LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->VALENTINE_BTN_NAME = (struct System_String_o *)StringLiteral_17606/*"btn_txt_event_"*/;
-  sub_1BAB3C0(LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields);
+  LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->VALENTINE_BTN_NAME = (struct System_String_o *)StringLiteral_17753/*"btn_txt_event_"*/;
+  sub_1BCA784(LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields, StringLiteral_17753/*"btn_txt_event_"*/);
+  v9 = StringLiteral_24322/*"treasurechest_img_bg"*/;
   static_fields = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
-  static_fields->PAY_INFO_BG_SPITE_NAME = (struct System_String_o *)StringLiteral_24110/*"treasurechest_img_bg"*/;
-  sub_1BAB3C0(&static_fields->PAY_INFO_BG_SPITE_NAME);
-  v6 = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
-  v6->PAY_INFO_LINE_SPITE_NAME = (struct System_String_o *)StringLiteral_24114/*"treasurechest_img_line"*/;
-  sub_1BAB3C0(&v6->PAY_INFO_LINE_SPITE_NAME);
+  static_fields->PAY_INFO_BG_SPITE_NAME = (struct System_String_o *)StringLiteral_24322/*"treasurechest_img_bg"*/;
+  sub_1BCA784(&static_fields->PAY_INFO_BG_SPITE_NAME, v9);
+  v11 = StringLiteral_24326/*"treasurechest_img_line"*/;
+  v12 = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
+  v12->PAY_INFO_LINE_SPITE_NAME = (struct System_String_o *)StringLiteral_24326/*"treasurechest_img_line"*/;
+  sub_1BCA784(&v12->PAY_INFO_LINE_SPITE_NAME, v11);
   LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->randomShopBuyLimit = 10;
 }
 
 
 void __fastcall LotteryShopBuyItemConfirmMenu___ctor(LotteryShopBuyItemConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB0DC9 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B111B9 & 1) == 0 )
   {
-    sub_1BAB41C(&BaseDialog_TypeInfo, method);
-    byte_4AB0DC9 = 1;
+    sub_1BCA7E0(&BaseDialog_TypeInfo, method, v2);
+    byte_4B111B9 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
 
@@ -53,7 +63,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__CallOnDecide(
   {
     p_onDecide = &this->fields.onDecide;
     *p_onDecide = 0LL;
-    sub_1BAB3C0(p_onDecide);
+    sub_1BCA784(p_onDecide, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       (unsigned int)result,
@@ -66,30 +76,34 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Close(LotteryShopBuyItemConfirmMe
 {
   const MethodInfo *v2; // x2
 
-  LotteryShopBuyItemConfirmMenu__Close_30917096(this, 0LL, v2);
+  LotteryShopBuyItemConfirmMenu__Close_31181480(this, 0LL, v2);
 }
 
 
-void __fastcall LotteryShopBuyItemConfirmMenu__Close_30917096(
+void __fastcall LotteryShopBuyItemConfirmMenu__Close_31181480(
         LotteryShopBuyItemConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  System_Action_o *v6; // x20
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x3
+  System_Action_o *v10; // x20
 
-  if ( (byte_4AB0DC3 & 1) == 0 )
+  if ( (byte_4B111B3 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, callback);
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_EndClose__, v5);
-    byte_4AB0DC3 = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, callback, method);
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_EndClose__, v5, v6);
+    byte_4B111B3 = 1;
   }
   this->fields.onClose = callback;
-  sub_1BAB3C0(&this->fields.onClose);
+  sub_1BCA784(&this->fields.onClose, callback);
   this->fields.state = 4;
-  v6 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_LotteryShopBuyItemConfirmMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
+  v10 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v7, v8, v9);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_LotteryShopBuyItemConfirmMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
 
 
@@ -104,13 +118,13 @@ void __fastcall LotteryShopBuyItemConfirmMenu__EndClose(
   LotteryShopBuyItemConfirmMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BAB678(0LL, v4);
+    sub_1BCAA3C(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   onClose = this->fields.onClose;
   if ( onClose )
   {
     this->fields.onClose = 0LL;
-    sub_1BAB3C0(&this->fields.onClose);
+    sub_1BCA784(&this->fields.onClose, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onClose->fields.m_target)(
       onClose->fields.original_method_info,
       *(_QWORD *)&onClose->fields.extra_arg);
@@ -131,25 +145,26 @@ void __fastcall LotteryShopBuyItemConfirmMenu__EndShowItemDetailDialog(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  __int64 v4; // x2
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
 
-  if ( (byte_4AB0DC8 & 1) == 0 )
+  if ( (byte_4B111B8 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__, isDecide);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4AB0DC8 = 1;
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__, isDecide, method);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3, v4);
+    byte_4B111B8 = 1;
   }
-  v4 = Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__;
+  v5 = Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__;
   if ( (*((_BYTE *)Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1BAB434(Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1BAB400(v4, v4[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v5 = (_QWORD *)sub_1BCA7F8(Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v5, v5[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BAB678(0LL, v7);
+    sub_1BCAA3C(0LL, v8);
   CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -158,38 +173,43 @@ int32_t __fastcall LotteryShopBuyItemConfirmMenu__GetPresentBoxSpace(
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
-  __int64 v4; // x1
-  Il2CppObject *Master_object; // x19
-  __int64 UserId; // x0
+  __int64 v4; // x2
+  __int64 v5; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x19
+  __int64 v8; // x2
+  __int64 v9; // x1
+  Il2CppObject *Master_object; // x19
+  int64_t UserId; // x0
+  __int64 v12; // x1
+  int64_t v13; // x19
 
-  if ( (byte_4AB0DBC & 1) == 0 )
+  if ( (byte_4B111AC & 1) == 0 )
   {
-    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
-    sub_1BAB41C(&Method_DataManager_GetMaster_UserPresentBoxMaster___, v2);
-    sub_1BAB41C(&DataManager_TypeInfo, v3);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v4);
-    byte_4AB0DBC = 1;
+    sub_1BCA7E0(&BalanceConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_UserPresentBoxMaster___, v3, v4);
+    sub_1BCA7E0(&DataManager_TypeInfo, v5, v6);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v7, v8);
+    byte_4B111AC = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserPresentBoxMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserPresentBoxMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9);
   UserId = NetworkManager__get_UserId(0LL);
   if ( !Master_object )
     goto LABEL_12;
-  UserId = (__int64)UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)Master_object, UserId, 0LL);
-  v8 = UserId;
+  UserId = (int64_t)UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)Master_object, UserId, 0LL);
+  v13 = UserId;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
-    UserId = j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-  if ( !v8 )
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v12);
+  if ( !v13 )
 LABEL_12:
-    sub_1BAB678(UserId, v7);
-  return BalanceConfig_TypeInfo->static_fields->PresentBoxMax - *(_DWORD *)(v8 + 24);
+    sub_1BCAA3C(UserId, v12);
+  return BalanceConfig_TypeInfo->static_fields->PresentBoxMax - *(_DWORD *)(v13 + 24);
 }
 
 
@@ -199,80 +219,85 @@ int32_t __fastcall LotteryShopBuyItemConfirmMenu__GetUserItemBuyableCount(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
   ShopGroupMaster_o *Master_object; // x0
-  __int64 v10; // x1
-  ShopGroupMaster_o *v11; // x21
+  __int64 v14; // x1
+  ShopGroupMaster_o *v15; // x21
   int BuyableCount; // w21
-  Il2CppObject *v13; // x22
+  __int64 v17; // x1
+  Il2CppObject *v18; // x22
   int64_t UserId; // x23
-  ShopEntity_o *v15; // x8
+  ShopEntity_o *v20; // x8
   int MasterName_k__BackingField_high; // w20
-  __int64 Prices; // x0
-  const MethodInfo *v18; // x1
-  LotteryShopBuyItemConfirmMenu_c *v19; // x8
+  LotteryShopBuyItemConfirmMenu_o *Prices; // x0
+  const MethodInfo *v23; // x1
+  LotteryShopBuyItemConfirmMenu_c *v24; // x8
   int randomShopBuyLimit; // w20
   int32_t PresentBoxSpace; // w0
 
-  if ( (byte_4AB0DC0 & 1) == 0 )
+  if ( (byte_4B111B0 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMaster_ShopGroupMaster___, shopEntity);
-    sub_1BAB41C(&Method_DataManager_GetMaster_UserItemMaster___, v5);
-    sub_1BAB41C(&DataManager_TypeInfo, v6);
-    sub_1BAB41C(&LotteryShopBuyItemConfirmMenu_TypeInfo, v7);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v8);
-    byte_4AB0DC0 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMaster_ShopGroupMaster___, shopEntity, method);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_UserItemMaster___, v5, v6);
+    sub_1BCA7E0(&DataManager_TypeInfo, v7, v8);
+    sub_1BCA7E0(&LotteryShopBuyItemConfirmMenu_TypeInfo, v9, v10);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v11, v12);
+    byte_4B111B0 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ShopGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ShopGroupMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, shopEntity);
+  Master_object = (ShopGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_ShopGroupMaster___);
   if ( !shopEntity )
     goto LABEL_23;
-  v11 = Master_object;
+  v15 = Master_object;
   Master_object = (ShopGroupMaster_o *)ShopEntity__getTargetId(shopEntity, 0, 0LL);
-  if ( !v11 )
+  if ( !v15 )
     goto LABEL_23;
-  BuyableCount = ShopGroupMaster__GetBuyableCount(v11, (int32_t)Master_object, 0LL);
-  v13 = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserItemMaster___);
+  BuyableCount = ShopGroupMaster__GetBuyableCount(v15, (int32_t)Master_object, 0LL);
+  v18 = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v17);
   UserId = NetworkManager__get_UserId(0LL);
   Master_object = (ShopGroupMaster_o *)ShopEntity__GetItemID(shopEntity, 0LL);
-  if ( !v13
+  if ( !v18
     || (Master_object = (ShopGroupMaster_o *)UserItemMaster__GetEntityDefinitely(
-                                               (UserItemMaster_o *)v13,
+                                               (UserItemMaster_o *)v18,
                                                UserId,
                                                (int32_t)Master_object,
                                                0LL)) == 0LL
-    || (v15 = this->fields.shopEntity) == 0LL )
+    || (v20 = this->fields.shopEntity) == 0LL )
   {
 LABEL_23:
-    sub_1BAB678(Master_object, v10);
+    sub_1BCAA3C(Master_object, v14);
   }
   MasterName_k__BackingField_high = HIDWORD(Master_object->fields._MasterName_k__BackingField);
-  Prices = ShopEntity__GetPrices(v15, 0, 0LL);
-  v19 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+  Prices = (LotteryShopBuyItemConfirmMenu_o *)ShopEntity__GetPrices(v20, 0, 0LL);
+  v24 = LotteryShopBuyItemConfirmMenu_TypeInfo;
   if ( BuyableCount <= MasterName_k__BackingField_high / (int)Prices )
     randomShopBuyLimit = BuyableCount;
   else
     randomShopBuyLimit = MasterName_k__BackingField_high / (int)Prices;
   if ( !LotteryShopBuyItemConfirmMenu_TypeInfo->_2.cctor_finished )
   {
-    Prices = j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo);
-    v19 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo, v23);
+    v24 = LotteryShopBuyItemConfirmMenu_TypeInfo;
   }
-  if ( randomShopBuyLimit > v19->static_fields->randomShopBuyLimit )
+  if ( randomShopBuyLimit > v24->static_fields->randomShopBuyLimit )
   {
-    randomShopBuyLimit = v19->static_fields->randomShopBuyLimit;
-    if ( !v19->_2.cctor_finished )
+    randomShopBuyLimit = v24->static_fields->randomShopBuyLimit;
+    if ( !v24->_2.cctor_finished )
     {
-      Prices = j_il2cpp_runtime_class_init_0(v19);
+      j_il2cpp_runtime_class_init_0(v24, v23);
       randomShopBuyLimit = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->randomShopBuyLimit;
     }
   }
-  PresentBoxSpace = LotteryShopBuyItemConfirmMenu__GetPresentBoxSpace((LotteryShopBuyItemConfirmMenu_o *)Prices, v18);
+  PresentBoxSpace = LotteryShopBuyItemConfirmMenu__GetPresentBoxSpace(Prices, v23);
   if ( randomShopBuyLimit <= (PresentBoxSpace & ~(PresentBoxSpace >> 31)) )
     return randomShopBuyLimit;
   else
@@ -282,31 +307,34 @@ LABEL_23:
 
 void __fastcall LotteryShopBuyItemConfirmMenu__Init(LotteryShopBuyItemConfirmMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
+  __int64 v5; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   UILabel_o *messageLabel; // x20
 
-  if ( (byte_4AB0DC2 & 1) == 0 )
+  if ( (byte_4B111B2 & 1) == 0 )
   {
-    sub_1BAB41C(&ShopBuyItemUtility_TypeInfo, method);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v3);
-    byte_4AB0DC2 = 1;
+    sub_1BCA7E0(&ShopBuyItemUtility_TypeInfo, method, v2);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v4, v5);
+    byte_4B111B2 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
         this->fields.state = 0,
         this->fields.shopEntity = 0LL,
-        sub_1BAB3C0(&this->fields.shopEntity),
+        sub_1BCA784(&this->fields.shopEntity, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.nameLabel) == 0LL) )
   {
-    sub_1BAB678(gameObject, v5);
+    sub_1BCAA3C(gameObject, v7);
   }
   UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !ShopBuyItemUtility_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ShopBuyItemUtility_TypeInfo);
+    j_il2cpp_runtime_class_init_0(ShopBuyItemUtility_TypeInfo, v8);
   ShopBuyItemUtility__SetDefaultMessageLabel(messageLabel, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -331,15 +359,15 @@ int64_t __fastcall LotteryShopBuyItemConfirmMenu__ItemMaxOverCheck(
   int64_t UserItemMax; // x8
 
   v5 = count;
-  if ( (byte_4AB0DBF & 1) == 0 )
+  if ( (byte_4B111AF & 1) == 0 )
   {
-    sub_1BAB41C(&BalanceConfig_TypeInfo, count);
-    byte_4AB0DBF = 1;
+    sub_1BCA7E0(&BalanceConfig_TypeInfo, count, price);
+    byte_4B111AF = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, count);
     v6 = BalanceConfig_TypeInfo;
   }
   UserItemMax = v6->static_fields->UserItemMax;
@@ -347,7 +375,7 @@ int64_t __fastcall LotteryShopBuyItemConfirmMenu__ItemMaxOverCheck(
   {
     if ( !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
+      j_il2cpp_runtime_class_init_0(v6, count);
       UserItemMax = BalanceConfig_TypeInfo->static_fields->UserItemMax;
     }
     return UserItemMax / price;
@@ -360,30 +388,31 @@ void __fastcall LotteryShopBuyItemConfirmMenu__OnClickCancel(
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  __int64 v6; // x1
   UISliderWithButton_o *itemSlider; // x0
-  const MethodInfo *v7; // x2
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4AB0DC4 & 1) == 0 )
+  if ( (byte_4B111B4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__, method);
-    byte_4AB0DC4 = 1;
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__, method, v2);
+    byte_4B111B4 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v3 = Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__;
+    v4 = Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BAB434(Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+      v4 = (_QWORD *)sub_1BCA7F8(Method_LotteryShopBuyItemConfirmMenu_OnClickCancel__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_1BAB678(0LL, v5);
+      sub_1BCAA3C(0LL, v6);
     UISliderWithButton__grayMode(itemSlider, 0LL);
-    LotteryShopBuyItemConfirmMenu__CallOnDecide(this, 0, v7);
+    LotteryShopBuyItemConfirmMenu__CallOnDecide(this, 0, v8);
   }
 }
 
@@ -392,31 +421,32 @@ void __fastcall LotteryShopBuyItemConfirmMenu__OnClickCheckbox(
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v2; // x2
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
   _BOOL4 isPlayedScriptSkipSelected; // w8
-  bool v6; // zf
-  bool v7; // w8
-  bool v8; // w0
-  const MethodInfo *v9; // x1
+  bool v7; // zf
+  bool v8; // w8
+  bool v9; // w0
+  const MethodInfo *v10; // x1
 
-  if ( (byte_4AB0DC1 & 1) == 0 )
+  if ( (byte_4B111B1 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__, method);
-    byte_4AB0DC1 = 1;
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__, method, v2);
+    byte_4B111B1 = 1;
   }
-  v3 = Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__;
+  v4 = Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__;
   if ( (*((_BYTE *)Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BAB434(Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    v4 = (_QWORD *)sub_1BCA7F8(Method_LotteryShopBuyItemConfirmMenu_OnClickCheckbox__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
   isPlayedScriptSkipSelected = this->fields.isPlayedScriptSkipSelected;
-  v6 = !isPlayedScriptSkipSelected;
   v7 = !isPlayedScriptSkipSelected;
-  v8 = v6;
-  this->fields.isPlayedScriptSkipSelected = v7;
-  EventRewardSaveData__SetLotteryShopSkipState(v8, 0LL);
-  LotteryShopBuyItemConfirmMenu__SetCheckMark(this, v9);
+  v8 = !isPlayedScriptSkipSelected;
+  v9 = v7;
+  this->fields.isPlayedScriptSkipSelected = v8;
+  EventRewardSaveData__SetLotteryShopSkipState(v9, 0LL);
+  LotteryShopBuyItemConfirmMenu__SetCheckMark(this, v10);
 }
 
 
@@ -424,24 +454,25 @@ void __fastcall LotteryShopBuyItemConfirmMenu__OnClickDecide(
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  const MethodInfo *v5; // x2
+  __int64 v2; // x2
+  _QWORD *v4; // x0
+  System_Reflection_MethodBase_o *v5; // x0
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4AB0DC5 & 1) == 0 )
+  if ( (byte_4B111B5 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__, method);
-    byte_4AB0DC5 = 1;
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__, method, v2);
+    byte_4B111B5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v3 = Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__;
+    v4 = Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BAB434(Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BAB400(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
-    LotteryShopBuyItemConfirmMenu__CallOnDecide(this, this->fields.buyCount, v5);
+      v4 = (_QWORD *)sub_1BCA7F8(Method_LotteryShopBuyItemConfirmMenu_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0LL);
+    LotteryShopBuyItemConfirmMenu__CallOnDecide(this, this->fields.buyCount, v6);
   }
 }
 
@@ -450,49 +481,59 @@ void __fastcall LotteryShopBuyItemConfirmMenu__OnClickDetail(
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
+  __int64 v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
   Il2CppObject *Instance; // x0
-  __int64 v9; // x1
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x3
   struct ShopEntity_o *shopEntity; // x8
-  CommonUI_o *v11; // x20
+  CommonUI_o *v17; // x20
   System_String_o *name; // x21
   System_String_o *infoMessage; // x22
-  ItemDetailInfoComponent_CallbackFunc_o *v14; // x23
+  ItemDetailInfoComponent_CallbackFunc_o *v20; // x23
 
-  if ( (byte_4AB0DC7 & 1) == 0 )
+  if ( (byte_4B111B7 & 1) == 0 )
   {
-    sub_1BAB41C(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, method);
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__, v3);
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__, v4);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4AB0DC7 = 1;
+    sub_1BCA7E0(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, method, v2);
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__, v4, v5);
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__, v6, v7);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8, v9);
+    byte_4B111B7 = 1;
   }
-  v6 = Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__;
+  v10 = Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__;
   if ( (*((_BYTE *)Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BAB434(Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BAB400(v6, v6[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = (_QWORD *)sub_1BCA7F8(Method_LotteryShopBuyItemConfirmMenu_OnClickDetail__);
+  v11 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v10, v10[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   shopEntity = this->fields.shopEntity;
   if ( !shopEntity
-    || (v11 = (CommonUI_o *)Instance,
+    || (v17 = (CommonUI_o *)Instance,
         name = shopEntity->fields.name,
         infoMessage = shopEntity->fields.infoMessage,
-        v14 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BAB668(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
+        v20 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BCAA2C(
+                                                          ItemDetailInfoComponent_CallbackFunc_TypeInfo,
+                                                          v13,
+                                                          v14,
+                                                          v15),
         ItemDetailInfoComponent_CallbackFunc___ctor(
-          v14,
+          v20,
           (Il2CppObject *)this,
           (intptr_t)Method_LotteryShopBuyItemConfirmMenu_EndShowItemDetailDialog__,
           0LL),
-        !v11) )
+        !v17) )
   {
-    sub_1BAB678(Instance, v9);
+    sub_1BCAA3C(Instance, v13);
   }
-  CommonUI__OpenItemDetailDialog_30700800(v11, name, infoMessage, v14, 0LL);
+  CommonUI__OpenItemDetailDialog_30842472(v17, name, infoMessage, v20, 0LL);
 }
 
 
@@ -504,94 +545,115 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  __int64 v16; // x1
+  __int64 v16; // x2
   __int64 v17; // x1
-  __int64 v18; // x1
+  __int64 v18; // x2
   __int64 v19; // x1
-  __int64 v20; // x1
+  __int64 v20; // x2
   __int64 v21; // x1
-  __int64 v22; // x1
+  __int64 v22; // x2
+  __int64 v23; // x1
+  __int64 v24; // x2
+  __int64 v25; // x1
+  __int64 v26; // x2
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x1
+  __int64 v30; // x2
+  __int64 v31; // x1
+  __int64 v32; // x2
+  __int64 v33; // x1
+  __int64 v34; // x2
+  __int64 v35; // x1
+  __int64 v36; // x2
   struct ShopEntity_o **p_shopEntity; // x22
   int64_t gameObject; // x0
-  System_String_o *v25; // x1
-  const MethodInfo *v26; // x1
+  System_String_o *v39; // x1
+  const MethodInfo *v40; // x1
   bool IsPreparation; // w20
-  const MethodInfo *v28; // x2
+  const MethodInfo *v42; // x2
   UILabel_o *nameLabel; // x23
   struct ShopEntity_o *shopEntity; // x8
   ItemIconComponent_o *shopItemIcon; // x23
-  int32_t v32; // w24
+  int32_t v46; // w24
   ItemIconComponent_o *payItemIcon; // x22
+  __int64 v48; // x1
   UISprite_o *payInfoBg; // x22
-  LotteryShopBuyItemConfirmMenu_c *v35; // x0
+  LotteryShopBuyItemConfirmMenu_c *v50; // x0
   System_String_o *PAY_INFO_BG_SPITE_NAME; // x23
-  _BOOL8 v37; // x0
-  const MethodInfo *v38; // x1
-  int v39; // w23
+  _BOOL8 v52; // x0
+  const MethodInfo *v53; // x1
+  int v54; // w23
+  __int64 v55; // x1
   UILabel_o *warningLabel; // x22
+  __int64 v57; // x1
+  __int64 v58; // x1
   Il2CppObject *Master_object; // x22
   ShopEntity_o *Shop_k__BackingField; // x8
-  int64_t v43; // x21
+  int64_t v61; // x21
   int32_t *p_UserItemMax; // x21
-  int32_t v45; // w23
-  BalanceConfig_c *v46; // x0
+  int32_t v63; // w23
+  BalanceConfig_c *v64; // x0
   struct BalanceConfig_StaticFields *static_fields; // x8
-  int64_t v48; // x22
+  int64_t v66; // x22
   UILabel_o *haveNum; // x21
   UILabel_o *haveText; // x21
   UILabel_o *needText; // x21
   UILabel_o *payInfoLabel; // x21
   UILabel_o *checkboxLabel; // x21
-  const MethodInfo *v54; // x2
+  const MethodInfo *v72; // x2
   int UserItemBuyableCount; // w21
-  const MethodInfo *v56; // x3
-  __int64 v57; // x1
-  const MethodInfo *v58; // x2
-  System_Action_o *v59; // x20
+  const MethodInfo *v74; // x3
+  __int64 v75; // x1
+  const MethodInfo *v76; // x2
+  __int64 v77; // x1
+  __int64 v78; // x2
+  __int64 v79; // x3
+  System_Action_o *v80; // x20
   System_String_o *itemName; // [xsp+8h] [xbp-48h] BYREF
   System_String_o *message; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4AB0DBB & 1) == 0 )
+  if ( (byte_4B111AB & 1) == 0 )
   {
-    sub_1BAB41C(&System_Action_TypeInfo, entity);
-    sub_1BAB41C(&AtlasManager_TypeInfo, v9);
-    sub_1BAB41C(&BalanceConfig_TypeInfo, v10);
-    sub_1BAB41C(&Method_DataManager_GetMaster_UserItemMaster___, v11);
-    sub_1BAB41C(&DataManager_TypeInfo, v12);
-    sub_1BAB41C(&LocalizationManager_TypeInfo, v13);
-    sub_1BAB41C(&Method_LotteryShopBuyItemConfirmMenu_EndOpen__, v14);
-    sub_1BAB41C(&LotteryShopBuyItemConfirmMenu_TypeInfo, v15);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v16);
-    sub_1BAB41C(&StringLiteral_8320/*"LOTTERY_SHOP_PAY_INFO"*/, v17);
-    sub_1BAB41C(&StringLiteral_8318/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/, v18);
-    sub_1BAB41C(&StringLiteral_8321/*"LOTTERY_SHOP_SKIP_INFO"*/, v19);
-    sub_1BAB41C(&StringLiteral_8319/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/, v20);
-    sub_1BAB41C(&StringLiteral_8647/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/, v21);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v22);
-    byte_4AB0DBB = 1;
+    sub_1BCA7E0(&System_Action_TypeInfo, entity, item);
+    sub_1BCA7E0(&AtlasManager_TypeInfo, v9, v10);
+    sub_1BCA7E0(&BalanceConfig_TypeInfo, v11, v12);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_UserItemMaster___, v13, v14);
+    sub_1BCA7E0(&DataManager_TypeInfo, v15, v16);
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, v17, v18);
+    sub_1BCA7E0(&Method_LotteryShopBuyItemConfirmMenu_EndOpen__, v19, v20);
+    sub_1BCA7E0(&LotteryShopBuyItemConfirmMenu_TypeInfo, v21, v22);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v23, v24);
+    sub_1BCA7E0(&StringLiteral_8441/*"LOTTERY_SHOP_PAY_INFO"*/, v25, v26);
+    sub_1BCA7E0(&StringLiteral_8439/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/, v27, v28);
+    sub_1BCA7E0(&StringLiteral_8442/*"LOTTERY_SHOP_SKIP_INFO"*/, v29, v30);
+    sub_1BCA7E0(&StringLiteral_8440/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/, v31, v32);
+    sub_1BCA7E0(&StringLiteral_8769/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/, v33, v34);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v35, v36);
+    byte_4B111AB = 1;
   }
   message = 0LL;
   itemName = 0LL;
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecide;
-    sub_1BAB3C0(&this->fields.onDecide);
+    sub_1BCA784(&this->fields.onDecide, onDecide);
     p_shopEntity = &this->fields.shopEntity;
     this->fields.shopEntity = entity;
-    sub_1BAB3C0(&this->fields.shopEntity);
+    sub_1BCA784(&this->fields.shopEntity, entity);
     gameObject = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( gameObject )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
       this->fields.buyCount = 1;
       this->fields.isPlayedScriptSkipSelected = EventRewardSaveData__GetLotteryShopSkipState(0LL);
-      LotteryShopBuyItemConfirmMenu__SetCheckMark(this, v26);
+      LotteryShopBuyItemConfirmMenu__SetCheckMark(this, v40);
       gameObject = (int64_t)this->fields.shopEntity;
       if ( gameObject )
       {
@@ -600,7 +662,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
         if ( item )
         {
           IsPreparation = ShopBuyItemListViewItem__GetIsPreparation(item, &message, &itemName, 0LL);
-          LotteryShopBuyItemConfirmMenu__UpdateCountValue(this, this->fields.buyCount, v28);
+          LotteryShopBuyItemConfirmMenu__UpdateCountValue(this, this->fields.buyCount, v42);
           gameObject = (int64_t)this->fields.shopEntity;
           if ( gameObject )
           {
@@ -620,7 +682,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                   if ( gameObject )
                   {
                     shopItemIcon = this->fields.shopItemIcon;
-                    v32 = *(_DWORD *)(gameObject + 48);
+                    v46 = *(_DWORD *)(gameObject + 48);
                     gameObject = ShopEntity__get_TargetId((ShopEntity_o *)gameObject, 0LL);
                     if ( *p_shopEntity )
                     {
@@ -628,7 +690,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                       {
                         ItemIconComponent__SetPurchase(
                           shopItemIcon,
-                          v32,
+                          v46,
                           gameObject,
                           (*p_shopEntity)->fields.imageId,
                           0LL);
@@ -641,116 +703,116 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                           {
                             ItemIconComponent__SetItem(payItemIcon, gameObject, -1, 0LL);
                             payInfoBg = this->fields.payInfoBg;
-                            v35 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+                            v50 = LotteryShopBuyItemConfirmMenu_TypeInfo;
                             if ( !LotteryShopBuyItemConfirmMenu_TypeInfo->_2.cctor_finished )
                             {
-                              j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo);
-                              v35 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+                              j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo, v48);
+                              v50 = LotteryShopBuyItemConfirmMenu_TypeInfo;
                             }
-                            PAY_INFO_BG_SPITE_NAME = v35->static_fields->PAY_INFO_BG_SPITE_NAME;
+                            PAY_INFO_BG_SPITE_NAME = v50->static_fields->PAY_INFO_BG_SPITE_NAME;
                             if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v48);
                             AtlasManager__SetEventUI(payInfoBg, PAY_INFO_BG_SPITE_NAME, 0LL);
-                            v37 = AtlasManager__SetEventUI(
+                            v52 = AtlasManager__SetEventUI(
                                     this->fields.payInfoLine,
                                     LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->PAY_INFO_LINE_SPITE_NAME,
                                     0LL);
                             gameObject = LotteryShopBuyItemConfirmMenu__GetPresentBoxSpace(
-                                           (LotteryShopBuyItemConfirmMenu_o *)v37,
-                                           v38);
+                                           (LotteryShopBuyItemConfirmMenu_o *)v52,
+                                           v53);
                             if ( this->fields.payInfo )
                             {
-                              v39 = gameObject;
+                              v54 = gameObject;
                               UnityEngine_GameObject__SetActive(this->fields.payInfo, (int)gameObject > 0, 0LL);
                               warningLabel = this->fields.warningLabel;
-                              if ( v39 <= 0 )
+                              if ( v54 <= 0 )
                               {
                                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v55);
                                 gameObject = (int64_t)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_8647/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/,
+                                                        (System_String_o *)StringLiteral_8769/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/,
                                                         0LL);
-                                v25 = (System_String_o *)gameObject;
+                                v39 = (System_String_o *)gameObject;
                                 if ( !warningLabel )
                                   goto LABEL_53;
                               }
                               else
                               {
-                                v25 = (System_String_o *)StringLiteral_1/*""*/;
+                                v39 = (System_String_o *)StringLiteral_1/*""*/;
                                 if ( !warningLabel )
                                   goto LABEL_53;
                               }
-                              UILabel__set_text(warningLabel, v25, 0LL);
+                              UILabel__set_text(warningLabel, v39, 0LL);
                               if ( !DataManager_TypeInfo->_2.cctor_finished )
-                                j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                              Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_UserItemMaster___);
+                                j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v57);
+                              Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserItemMaster___);
                               if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-                                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+                                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v58);
                               gameObject = NetworkManager__get_UserId(0LL);
                               Shop_k__BackingField = item->fields._Shop_k__BackingField;
                               if ( Shop_k__BackingField )
                               {
-                                v43 = gameObject;
+                                v61 = gameObject;
                                 gameObject = ShopEntity__GetItemID(Shop_k__BackingField, 0LL);
                                 if ( Master_object )
                                 {
                                   gameObject = (int64_t)UserItemMaster__GetEntityDefinitely(
                                                           (UserItemMaster_o *)Master_object,
-                                                          v43,
+                                                          v61,
                                                           gameObject,
                                                           0LL);
                                   if ( gameObject )
                                   {
                                     p_UserItemMax = (int32_t *)(gameObject + 28);
-                                    v45 = *(_DWORD *)(gameObject + 28);
-                                    v46 = BalanceConfig_TypeInfo;
+                                    v63 = *(_DWORD *)(gameObject + 28);
+                                    v64 = BalanceConfig_TypeInfo;
                                     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
                                     {
-                                      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-                                      v46 = BalanceConfig_TypeInfo;
+                                      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v39);
+                                      v64 = BalanceConfig_TypeInfo;
                                     }
-                                    static_fields = v46->static_fields;
-                                    if ( v45 > static_fields->UserItemMax )
+                                    static_fields = v64->static_fields;
+                                    if ( v63 > static_fields->UserItemMax )
                                     {
-                                      if ( !v46->_2.cctor_finished )
+                                      if ( !v64->_2.cctor_finished )
                                       {
-                                        j_il2cpp_runtime_class_init_0(v46);
+                                        j_il2cpp_runtime_class_init_0(v64, v39);
                                         static_fields = BalanceConfig_TypeInfo->static_fields;
                                       }
                                       p_UserItemMax = &static_fields->UserItemMax;
                                     }
-                                    v48 = *p_UserItemMax;
+                                    v66 = *p_UserItemMax;
                                     haveNum = this->fields.haveNum;
                                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                                      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                    gameObject = (int64_t)LocalizationManager__GetNumberFormatLong(v48, 0LL);
+                                      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39);
+                                    gameObject = (int64_t)LocalizationManager__GetNumberFormatLong(v66, 0LL);
                                     if ( haveNum )
                                     {
                                       UILabel__set_text(haveNum, (System_String_o *)gameObject, 0LL);
                                       haveText = this->fields.haveText;
                                       gameObject = (int64_t)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8318/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/,
+                                                              (System_String_o *)StringLiteral_8439/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/,
                                                               0LL);
                                       if ( haveText )
                                       {
                                         UILabel__set_text(haveText, (System_String_o *)gameObject, 0LL);
                                         needText = this->fields.needText;
                                         gameObject = (int64_t)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_8319/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/,
+                                                                (System_String_o *)StringLiteral_8440/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/,
                                                                 0LL);
                                         if ( needText )
                                         {
                                           UILabel__set_text(needText, (System_String_o *)gameObject, 0LL);
                                           payInfoLabel = this->fields.payInfoLabel;
                                           gameObject = (int64_t)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_8320/*"LOTTERY_SHOP_PAY_INFO"*/,
+                                                                  (System_String_o *)StringLiteral_8441/*"LOTTERY_SHOP_PAY_INFO"*/,
                                                                   0LL);
                                           if ( payInfoLabel )
                                           {
                                             UILabel__set_text(payInfoLabel, (System_String_o *)gameObject, 0LL);
                                             checkboxLabel = this->fields.checkboxLabel;
                                             gameObject = (int64_t)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_8321/*"LOTTERY_SHOP_SKIP_INFO"*/,
+                                                                    (System_String_o *)StringLiteral_8442/*"LOTTERY_SHOP_SKIP_INFO"*/,
                                                                     0LL);
                                             if ( checkboxLabel )
                                             {
@@ -758,36 +820,40 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                                               UserItemBuyableCount = LotteryShopBuyItemConfirmMenu__GetUserItemBuyableCount(
                                                                        this,
                                                                        this->fields.shopEntity,
-                                                                       v54);
+                                                                       v72);
                                               LotteryShopBuyItemConfirmMenu__SetItemSlider(
                                                 this,
                                                 UserItemBuyableCount,
                                                 IsPreparation,
-                                                v56);
+                                                v74);
                                               gameObject = (int64_t)this->fields.decideButton;
                                               if ( gameObject )
                                               {
                                                 if ( UserItemBuyableCount <= 0 )
-                                                  v57 = 3LL;
+                                                  v75 = 3LL;
                                                 else
-                                                  v57 = 0LL;
+                                                  v75 = 0LL;
                                                 (*(void (__fastcall **)(int64_t, __int64, __int64, _QWORD))(*(_QWORD *)gameObject + 536LL))(
                                                   gameObject,
-                                                  v57,
+                                                  v75,
                                                   1LL,
                                                   *(_QWORD *)(*(_QWORD *)gameObject + 544LL));
                                                 LotteryShopBuyItemConfirmMenu__SetDecideButtonImage(
                                                   this,
                                                   this->fields.shopEntity,
-                                                  v58);
+                                                  v76);
                                                 this->fields.state = 1;
-                                                v59 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+                                                v80 = (System_Action_o *)sub_1BCAA2C(
+                                                                           System_Action_TypeInfo,
+                                                                           v77,
+                                                                           v78,
+                                                                           v79);
                                                 System_Action___ctor(
-                                                  v59,
+                                                  v80,
                                                   (Il2CppObject *)this,
                                                   Method_LotteryShopBuyItemConfirmMenu_EndOpen__,
                                                   0LL);
-                                                BaseDialog__Open((BaseDialog_o *)this, v59, 0, 0LL);
+                                                BaseDialog__Open((BaseDialog_o *)this, v80, 0, 0LL);
                                                 return;
                                               }
                                             }
@@ -812,7 +878,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
       }
     }
 LABEL_53:
-    sub_1BAB678(gameObject, v25);
+    sub_1BCAA3C(gameObject, v39);
   }
 }
 
@@ -827,7 +893,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SetCheckMark(
   if ( !checkMarkSprite
     || (checkMarkSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkMarkSprite, 0LL)) == 0LL )
   {
-    sub_1BAB678(checkMarkSprite, method);
+    sub_1BCAA3C(checkMarkSprite, method);
   }
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)checkMarkSprite,
@@ -855,55 +921,63 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SetDecideButtonImage(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
   ShopDetailMaster_o *Master_object; // x0
-  __int64 v12; // x1
+  __int64 v18; // x1
   ShopDetailEntity_o *ShopDetailEntity; // x0
+  __int64 v20; // x1
   int okTextImageId; // w8
-  UISprite_o *v15; // x21
-  LotteryShopBuyItemConfirmMenu_c *v16; // x0
+  UISprite_o *v22; // x21
+  LotteryShopBuyItemConfirmMenu_c *v23; // x0
   System_String_o *VALENTINE_BTN_NAME; // x22
-  System_String_o *v18; // x20
-  System_String_o *v19; // x0
-  System_String_o *v20; // x20
+  System_String_o *v25; // x20
+  System_String_o *v26; // x0
+  __int64 v27; // x1
+  System_String_o *v28; // x20
   UISprite_o *decideButtonImg; // x20
-  int v22; // [xsp+Ch] [xbp-24h] BYREF
+  int v30; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4AB0DBD & 1) == 0 )
+  if ( (byte_4B111AD & 1) == 0 )
   {
-    sub_1BAB41C(&AtlasManager_TypeInfo, shopEntity);
-    sub_1BAB41C(&Method_DataManager_GetMaster_ShopDetailMaster___, v5);
-    sub_1BAB41C(&DataManager_TypeInfo, v6);
-    sub_1BAB41C(&EventRewardRootComponent_TypeInfo, v7);
-    sub_1BAB41C(&LotteryShopBuyItemConfirmMenu_TypeInfo, v8);
-    sub_1BAB41C(&StringLiteral_16153/*"_"*/, v9);
-    sub_1BAB41C(&StringLiteral_17657/*"btn_txt_trade"*/, v10);
-    byte_4AB0DBD = 1;
+    sub_1BCA7E0(&AtlasManager_TypeInfo, shopEntity, method);
+    sub_1BCA7E0(&Method_DataManager_GetMaster_ShopDetailMaster___, v5, v6);
+    sub_1BCA7E0(&DataManager_TypeInfo, v7, v8);
+    sub_1BCA7E0(&EventRewardRootComponent_TypeInfo, v9, v10);
+    sub_1BCA7E0(&LotteryShopBuyItemConfirmMenu_TypeInfo, v11, v12);
+    sub_1BCA7E0(&StringLiteral_16290/*"_"*/, v13, v14);
+    sub_1BCA7E0(&StringLiteral_17804/*"btn_txt_trade"*/, v15, v16);
+    byte_4B111AD = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ShopDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_ShopDetailMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, shopEntity);
+  Master_object = (ShopDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_ShopDetailMaster___);
   if ( !shopEntity || !Master_object )
     goto LABEL_23;
   ShopDetailEntity = ShopDetailMaster__getShopDetailEntity(Master_object, shopEntity->fields.id, 0LL);
   if ( !ShopDetailEntity )
   {
-    v22 = 0;
+    v30 = 0;
     if ( shopEntity->fields.payType != 6 )
       return;
 LABEL_17:
     decideButtonImg = this->fields.decideButtonImg;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v20);
     AtlasManager__SetCommon(decideButtonImg, 0LL);
     Master_object = (ShopDetailMaster_o *)this->fields.decideButtonImg;
     if ( Master_object )
     {
-      UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)StringLiteral_17657/*"btn_txt_trade"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)StringLiteral_17804/*"btn_txt_trade"*/, 0LL);
       Master_object = (ShopDetailMaster_o *)this->fields.decideButtonImg;
       if ( Master_object )
       {
@@ -914,28 +988,28 @@ LABEL_17:
       }
     }
 LABEL_23:
-    sub_1BAB678(Master_object, v12);
+    sub_1BCAA3C(Master_object, v18);
   }
   okTextImageId = ShopDetailEntity->fields.okTextImageId;
-  v22 = okTextImageId;
+  v30 = okTextImageId;
   if ( shopEntity->fields.payType == 6 )
   {
     if ( !okTextImageId )
       goto LABEL_17;
-    v15 = this->fields.decideButtonImg;
-    v16 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+    v22 = this->fields.decideButtonImg;
+    v23 = LotteryShopBuyItemConfirmMenu_TypeInfo;
     if ( !LotteryShopBuyItemConfirmMenu_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo);
-      v16 = LotteryShopBuyItemConfirmMenu_TypeInfo;
+      j_il2cpp_runtime_class_init_0(LotteryShopBuyItemConfirmMenu_TypeInfo, v20);
+      v23 = LotteryShopBuyItemConfirmMenu_TypeInfo;
     }
-    VALENTINE_BTN_NAME = v16->static_fields->VALENTINE_BTN_NAME;
-    v18 = System_Int32__ToString((int)shopEntity + 24, 0LL);
-    v19 = System_Int32__ToString((int32_t)&v22, 0LL);
-    v20 = System_String__Concat_62061392(VALENTINE_BTN_NAME, v18, (System_String_o *)StringLiteral_16153/*"_"*/, v19, 0LL);
+    VALENTINE_BTN_NAME = v23->static_fields->VALENTINE_BTN_NAME;
+    v25 = System_Int32__ToString((int)shopEntity + 24, 0LL);
+    v26 = System_Int32__ToString((int32_t)&v30, 0LL);
+    v28 = System_String__Concat_62414484(VALENTINE_BTN_NAME, v25, (System_String_o *)StringLiteral_16290/*"_"*/, v26, 0LL);
     if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
-    if ( !EventRewardRootComponent__setRewardInfoImg(v15, v20, 0LL) )
+      j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo, v27);
+    if ( !EventRewardRootComponent__setRewardInfoImg(v22, v28, 0LL) )
       goto LABEL_17;
   }
 }
@@ -961,7 +1035,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SetItemSlider(
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
 LABEL_11:
-    sub_1BAB678(itemSlider, *(_QWORD *)&buyableCount);
+    sub_1BCAA3C(itemSlider, *(_QWORD *)&buyableCount);
   if ( buyableCount <= 1 )
     v7 = 1;
   else
@@ -1007,7 +1081,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SliderValueChange(
         goto LABEL_9;
     }
 LABEL_10:
-    sub_1BAB678(itemSlider, method);
+    sub_1BCAA3C(itemSlider, method);
   }
 LABEL_9:
   v9 = LotteryShopBuyItemConfirmMenu__ItemMaxOverCheck(Prices, v4, v7, v6);
@@ -1028,10 +1102,10 @@ void __fastcall LotteryShopBuyItemConfirmMenu__UpdateCountValue(
   __int64 setNum; // x21
 
   v4 = this;
-  if ( (byte_4AB0DBE & 1) == 0 )
+  if ( (byte_4B111AE & 1) == 0 )
   {
-    this = (LotteryShopBuyItemConfirmMenu_o *)sub_1BAB41C(&LocalizationManager_TypeInfo, *(_QWORD *)&count);
-    byte_4AB0DBE = 1;
+    this = (LotteryShopBuyItemConfirmMenu_o *)sub_1BCA7E0(&LocalizationManager_TypeInfo, *(_QWORD *)&count, method);
+    byte_4B111AE = 1;
   }
   shopEntity = v4->fields.shopEntity;
   if ( !shopEntity )
@@ -1039,11 +1113,11 @@ void __fastcall LotteryShopBuyItemConfirmMenu__UpdateCountValue(
   needNum = v4->fields.needNum;
   setNum = shopEntity->fields.setNum;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&count);
   this = (LotteryShopBuyItemConfirmMenu_o *)LocalizationManager__GetNumberFormatLong(setNum * count, 0LL);
   if ( !needNum )
 LABEL_8:
-    sub_1BAB678(this, *(_QWORD *)&count);
+    sub_1BCAA3C(this, *(_QWORD *)&count);
   UILabel__set_text(needNum, (System_String_o *)this, 0LL);
 }
 
@@ -1052,22 +1126,23 @@ UnityEngine_GameObject_o *__fastcall LotteryShopBuyItemConfirmMenu__get_closeBtn
         LotteryShopBuyItemConfirmMenu_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *cancelButton; // x20
-  __int64 v4; // x1
-  UnityEngine_Component_o *v6; // x0
+  __int64 v5; // x1
+  UnityEngine_Component_o *v7; // x0
 
-  if ( (byte_4AB0DC6 & 1) == 0 )
+  if ( (byte_4B111B6 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB0DC6 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B111B6 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Equality(cancelButton, 0LL, 0LL) )
     return 0LL;
-  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v6 )
-    sub_1BAB678(0LL, v4);
-  return UnityEngine_Component__get_gameObject(v6, 0LL);
+  v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v7 )
+    sub_1BCAA3C(0LL, v5);
+  return UnityEngine_Component__get_gameObject(v7, 0LL);
 }

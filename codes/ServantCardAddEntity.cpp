@@ -1,28 +1,30 @@
 void __fastcall ServantCardAddEntity___ctor(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB63B1 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16865 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB63B1 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16865 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCardAddEntity__CreatePK(int32_t svtId, int32_t cardId, const MethodInfo *method)
 {
-  if ( (byte_4AB63AB & 1) == 0 )
+  if ( (byte_4B1685F & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&cardId);
-    byte_4AB63AB = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&cardId, method);
+    byte_4B1685F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            cardId,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -38,45 +40,53 @@ System_String_o *__fastcall ServantCardAddEntity__CreatePrimaryKey(
 
 float __fastcall ServantCardAddEntity__GetAttackNpRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB63AD & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16861 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_16985/*"attackNpRate"*/, method);
-    byte_4AB63AD = 1;
+    sub_1BCA7E0(&StringLiteral_17123/*"attackNpRate"*/, method, v2);
+    byte_4B16861 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_16985/*"attackNpRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17123/*"attackNpRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDamageRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB63AC & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16860 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_18469/*"damageRate"*/, method);
-    byte_4AB63AC = 1;
+    sub_1BCA7E0(&StringLiteral_18625/*"damageRate"*/, method, v2);
+    byte_4B16860 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18469/*"damageRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18625/*"damageRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDefenseNpRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB63AE & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16862 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_18574/*"defenseNpRate"*/, method);
-    byte_4AB63AE = 1;
+    sub_1BCA7E0(&StringLiteral_18733/*"defenseNpRate"*/, method, v2);
+    byte_4B16862 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18574/*"defenseNpRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18733/*"defenseNpRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDropStarRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB63AF & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16863 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_18699/*"dropStarRate"*/, method);
-    byte_4AB63AF = 1;
+    sub_1BCA7E0(&StringLiteral_18864/*"dropStarRate"*/, method, v2);
+    byte_4B16863 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18699/*"dropStarRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18864/*"dropStarRate"*/, 1.0, 0LL);
 }
 
 
@@ -94,10 +104,12 @@ bool __fastcall ServantCardAddEntity__IsForceAttackFunctionTargetAll(
         ServantCardAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB63B0 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16864 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_6778/*"ForceAttackFunctionTargetAll"*/, method);
-    byte_4AB63B0 = 1;
+    sub_1BCA7E0(&StringLiteral_6897/*"ForceAttackFunctionTargetAll"*/, method, v2);
+    byte_4B16864 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_6778/*"ForceAttackFunctionTargetAll"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_6897/*"ForceAttackFunctionTargetAll"*/, 0LL);
 }

@@ -4,6 +4,7 @@ void __fastcall FavoriteChangeListViewItemDraw___ctor(FavoriteChangeListViewItem
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         FavoriteChangeListViewItemDraw_o *this,
         FavoriteChangeListViewItem_o *item,
@@ -11,7 +12,9 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         const MethodInfo *method)
 {
   __int64 v7; // x1
+  __int64 v8; // x2
   UnityEngine_Component_o *maskLb; // x0
+  __int64 v10; // x1
   UnityEngine_Object_o *baseButton; // x22
   UnityEngine_Object_o *lockSprite; // x21
   bool isLock; // w1
@@ -19,13 +22,13 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
   bool isChoice; // w1
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
-  const MethodInfo *v16; // x2
+  const MethodInfo *v18; // x2
 
-  if ( (byte_4AB11D2 & 1) == 0 )
+  if ( (byte_4B115C0 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4AB11D2 = 1;
+    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Collider___, item, isInput);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v7, v8);
+    byte_4B115C0 = 1;
   }
   if ( item )
   {
@@ -38,7 +41,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, 0, 0LL);
         baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
         if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
         {
           maskLb = (UnityEngine_Component_o *)this->fields.baseButton;
@@ -46,7 +49,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
             goto LABEL_49;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_49;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -61,7 +64,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         }
         lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
         if ( UnityEngine_Object__op_Inequality(lockSprite, 0LL, 0LL) )
         {
           maskLb = (UnityEngine_Component_o *)this->fields.lockSprite;
@@ -78,7 +81,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         }
         choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
         if ( UnityEngine_Object__op_Inequality(choiceSprite, 0LL, 0LL) )
         {
           maskLb = (UnityEngine_Component_o *)this->fields.choiceSprite;
@@ -95,7 +98,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         }
         pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
         if ( UnityEngine_Object__op_Inequality(pushSprite, 0LL, 0LL) )
         {
           maskLb = (UnityEngine_Component_o *)this->fields.pushSprite;
@@ -108,7 +111,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         }
         maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
         if ( UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
         {
           maskLb = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -122,7 +125,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
         if ( !item->fields.isFavorite )
         {
 LABEL_47:
-          FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v16);
+          FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v18);
           return;
         }
         maskLb = (UnityEngine_Component_o *)this->fields.statusLb;
@@ -138,11 +141,12 @@ LABEL_47:
       }
     }
 LABEL_49:
-    sub_1BAB678(maskLb, item);
+    sub_1BCAA3C(maskLb, item);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FavoriteChangeListViewItemDraw__SetItem(
         FavoriteChangeListViewItemDraw_o *this,
         FavoriteChangeListViewItem_o *item,
@@ -150,8 +154,11 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
   ServantFaceIconComponent_o *servantFaceIcon; // x0
+  __int64 v12; // x1
   UnityEngine_Object_o *partyIcon; // x21
   UnityEngine_Object_o *lockSprite; // x21
   bool isLock; // w1
@@ -159,22 +166,23 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
   bool isChoice; // w1
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
-  const MethodInfo *v17; // x2
+  const MethodInfo *v20; // x2
+  __int64 v21; // x1
   UILabel_o *statusLb; // x21
 
-  if ( (byte_4AB11D1 & 1) == 0 )
+  if ( (byte_4B115BF & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BAB41C(&StringLiteral_8787/*"MYROOM_FAVORITE_STATUS"*/, v8);
-    byte_4AB11D1 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, item, *(_QWORD *)&mode);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v7, v8);
+    sub_1BCA7E0(&StringLiteral_8911/*"MYROOM_FAVORITE_STATUS"*/, v9, v10);
+    byte_4B115BF = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_38600628(
+      ServantFaceIconComponent__Set_38931252(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -200,20 +208,20 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
               partyIcon = (UnityEngine_Object_o *)this->fields.partyIcon;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
               if ( UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL) )
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
                   goto LABEL_54;
-                FlashingIconComponent__Set_38506036(
+                FlashingIconComponent__Set_38836528(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
               }
               lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
               if ( UnityEngine_Object__op_Inequality(lockSprite, 0LL, 0LL) )
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.lockSprite;
@@ -232,7 +240,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               }
               choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
               if ( UnityEngine_Object__op_Inequality(choiceSprite, 0LL, 0LL) )
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
@@ -251,7 +259,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               }
               pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
               if ( UnityEngine_Object__op_Inequality(pushSprite, 0LL, 0LL) )
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.pushSprite;
@@ -266,7 +274,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               }
               maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
               if ( UnityEngine_Object__op_Inequality(maskSprite, 0LL, 0LL) )
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
@@ -282,7 +290,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               if ( !item->fields.isFavorite )
               {
 LABEL_52:
-                FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v17);
+                FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v20);
                 return;
               }
               servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.statusLb;
@@ -296,9 +304,9 @@ LABEL_52:
                   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
                   statusLb = this->fields.statusLb;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21);
                   servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_8787/*"MYROOM_FAVORITE_STATUS"*/,
+                                                                    (System_String_o *)StringLiteral_8911/*"MYROOM_FAVORITE_STATUS"*/,
                                                                     0LL);
                   if ( statusLb )
                   {
@@ -313,7 +321,7 @@ LABEL_52:
       }
     }
 LABEL_54:
-    sub_1BAB678(servantFaceIcon, item);
+    sub_1BCAA3C(servantFaceIcon, item);
   }
 }
 
@@ -325,18 +333,22 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
 {
   FavoriteChangeListViewItemDraw_o **v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   UserServantEntity_o *userSvtEntity; // x0
-  UILabel_o *v8; // x19
-  __int64 *v9; // x8
+  __int64 v10; // x1
+  UILabel_o *v11; // x19
+  __int64 *v12; // x8
+  __int64 v13; // x1
 
   v4 = (FavoriteChangeListViewItemDraw_o **)this;
-  if ( (byte_4AB11D3 & 1) == 0 )
+  if ( (byte_4B115C1 & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, item);
-    sub_1BAB41C(&StringLiteral_11505/*"SELECT_CANNOT"*/, v5);
-    this = (FavoriteChangeListViewItemDraw_o *)sub_1BAB41C(&StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    byte_4AB11D3 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, item, method);
+    sub_1BCA7E0(&StringLiteral_11634/*"SELECT_CANNOT"*/, v5, v6);
+    this = (FavoriteChangeListViewItemDraw_o *)sub_1BCA7E0(&StringLiteral_11658/*"SELECT_SERVANT_EVENT_JOIN"*/, v7, v8);
+    byte_4B115C1 = 1;
   }
   if ( !item )
     goto LABEL_38;
@@ -375,19 +387,19 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
       if ( !this )
         goto LABEL_38;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-      v8 = (UILabel_o *)v4[12];
+      v11 = (UILabel_o *)v4[12];
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_11529/*"SELECT_SERVANT_EVENT_JOIN"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v10);
+      v12 = &StringLiteral_11658/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_36:
-      this = (FavoriteChangeListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v9, 0LL);
-      if ( v8 )
+      this = (FavoriteChangeListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v12, 0LL);
+      if ( v11 )
       {
-        UILabel__set_text(v8, (System_String_o *)this, 0LL);
+        UILabel__set_text(v11, (System_String_o *)this, 0LL);
         return;
       }
 LABEL_38:
-      sub_1BAB678(this, item);
+      sub_1BCAA3C(this, item);
     }
     if ( FavoriteChangeListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
     {
@@ -422,10 +434,10 @@ LABEL_31:
       if ( !this )
         goto LABEL_38;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-      v8 = (UILabel_o *)v4[12];
+      v11 = (UILabel_o *)v4[12];
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_11505/*"SELECT_CANNOT"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
+      v12 = &StringLiteral_11634/*"SELECT_CANNOT"*/;
       goto LABEL_36;
     }
   }

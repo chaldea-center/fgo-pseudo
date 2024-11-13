@@ -1,14 +1,16 @@
 void __fastcall CombineTdMaster___ctor(CombineTdMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5B37 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B15FD5 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string___ctor__, method);
-    byte_4AB5B37 = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string___ctor__, method, v2);
+    byte_4B15FD5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     89,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,19 @@ CombineTdEntity_o *__fastcall CombineTdMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB5B35 & 1) == 0 )
+  if ( (byte_4B15FD3 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4AB5B35 = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__GetEntity__,
+      *(_QWORD *)&id,
+      *(_QWORD *)&treasureDeviceLv);
+    byte_4B15FD3 = 1;
   }
   PK = (Il2CppObject *)CombineTdEntity__CreatePK(id, treasureDeviceLv, *(const MethodInfo **)&treasureDeviceLv);
   return (CombineTdEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_31640E8 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__GetEntity__);
+                                (const MethodInfo_31B3198 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +49,15 @@ bool __fastcall CombineTdMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB5B36 & 1) == 0 )
+  if ( (byte_4B15FD4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__TryGetEntity__, entity);
-    byte_4AB5B36 = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__TryGetEntity__, entity, *(_QWORD *)&id);
+    byte_4B15FD4 = 1;
   }
   PK = (Il2CppObject *)CombineTdEntity__CreatePK(id, treasureDeviceLv, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_CombineTdMaster__CombineTdEntity__string__TryGetEntity__);
 }

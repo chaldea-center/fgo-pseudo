@@ -20,7 +20,19 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.dropObject = value;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.dropObject,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

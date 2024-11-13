@@ -11,16 +11,20 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float v10; // s1
   BattleInfoOffsetPosData_Fields *p_fields; // x20
-  int32_t v12; // w2
+  int64_t v12; // x2
   int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
 
   z = offset.fields.z;
   y = offset.fields.y;
   x = offset.fields.x;
-  if ( !byte_4AB0691 )
+  if ( !byte_4B109C1 )
   {
-    sub_1BAB41C(&UnityEngine_Vector3_TypeInfo, obj);
-    byte_4AB0691 = 1;
+    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, obj, method);
+    byte_4B109C1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v10 = static_fields->zeroVector.fields.z;
@@ -29,7 +33,7 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.obj = obj;
   p_fields = &this->fields;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_fields, (int32_t)obj, v12, v13);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_fields, (int64_t)obj, v12, v13, v14, v15, v16, v17);
   p_fields->offset.fields.x = x;
   p_fields->offset.fields.y = y;
   p_fields->offset.fields.z = z;
@@ -38,24 +42,25 @@ void __fastcall BattleInfoOffsetPosData___ctor(
 
 bool __fastcall BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   UnityEngine_Object_o *obj; // x20
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x0
+  __int64 v5; // x1
+  UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_4AB821B & 1) == 0 )
+  if ( (byte_4B186E5 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, method);
-    byte_4AB821B = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
+    byte_4B186E5 = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( !UnityEngine_Object__op_Inequality(obj, 0LL, 0LL) )
     return 0;
-  v5 = this->fields.obj;
-  if ( !v5 )
-    sub_1BAB678(0LL, v4);
-  return UnityEngine_GameObject__get_activeInHierarchy(v5, 0LL);
+  v6 = this->fields.obj;
+  if ( !v6 )
+    sub_1BCAA3C(0LL, v5);
+  return UnityEngine_GameObject__get_activeInHierarchy(v6, 0LL);
 }
 
 

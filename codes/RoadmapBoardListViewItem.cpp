@@ -8,31 +8,20 @@ void __fastcall RoadmapBoardListViewItem___ctor(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v14, v15);
+  sub_1BCA784(&this->fields._Atlas_k__BackingField, atlas);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
-    (int32_t)spriteName,
-    v16,
-    v17);
+  sub_1BCA784(&this->fields._SpriteName_k__BackingField, spriteName);
   this->fields._BoardPrefab_k__BackingField = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField, 0, v18, v19);
+  sub_1BCA784(&this->fields._BoardPrefab_k__BackingField, 0LL);
 }
 
 
-void __fastcall RoadmapBoardListViewItem___ctor_45599364(
+void __fastcall RoadmapBoardListViewItem___ctor_30899508(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -41,23 +30,14 @@ void __fastcall RoadmapBoardListViewItem___ctor_45599364(
         UnityEngine_GameObject_o *boardPrefab,
         const MethodInfo *method)
 {
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
-
-  ListViewItem___ctor_41102532((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
-    (int32_t)boardPrefab,
-    v12,
-    v13);
+  sub_1BCA784(&this->fields._BoardPrefab_k__BackingField, boardPrefab);
   this->fields._Atlas_k__BackingField = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField, 0, v14, v15);
+  sub_1BCA784(&this->fields._Atlas_k__BackingField, 0LL);
 }
 
 
@@ -106,14 +86,8 @@ void __fastcall RoadmapBoardListViewItem__set_Atlas(
         UIAtlas_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._Atlas_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._Atlas_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._Atlas_k__BackingField, value);
 }
 
 
@@ -131,14 +105,8 @@ void __fastcall RoadmapBoardListViewItem__set_BoardPrefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._BoardPrefab_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._BoardPrefab_k__BackingField, value);
 }
 
 
@@ -156,14 +124,8 @@ void __fastcall RoadmapBoardListViewItem__set_SpriteName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._SpriteName_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._SpriteName_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._SpriteName_k__BackingField, value);
 }
 
 

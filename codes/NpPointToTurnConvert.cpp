@@ -18,18 +18,19 @@ float __fastcall NpPointToTurnConvert__PointToTurn(
 
 float __fastcall NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *this, const MethodInfo *method)
 {
-  BattleDataDefine_c *v2; // x0
+  __int64 v2; // x2
+  BattleDataDefine_c *v3; // x0
 
-  if ( (byte_4AB8990 & 1) == 0 )
+  if ( (byte_4B18E6F & 1) == 0 )
   {
-    sub_1BAB41C(&BattleDataDefine_TypeInfo, method);
-    byte_4AB8990 = 1;
+    sub_1BCA7E0(&BattleDataDefine_TypeInfo, method, v2);
+    byte_4B18E6F = 1;
   }
-  v2 = BattleDataDefine_TypeInfo;
+  v3 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v2 = BattleDataDefine_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, method);
+    v3 = BattleDataDefine_TypeInfo;
   }
-  return v2->static_fields->PERCENTAGE_DENOMINATOR;
+  return v3->static_fields->PERCENTAGE_DENOMINATOR;
 }

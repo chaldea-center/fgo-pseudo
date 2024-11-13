@@ -8,64 +8,71 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
         PresentBoxInfoComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
-  DataManager_o *Instance; // x0
+  __int64 v4; // x2
   __int64 v5; // x1
+  __int64 v6; // x2
+  DataManager_o *Instance; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
   Il2CppObject *MasterData_object; // x19
 
-  if ( (byte_4AB0DCF & 1) == 0 )
+  if ( (byte_4B111BF & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v2);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4AB0DCF = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method, v2);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v3, v4);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5, v6);
+    byte_4B111BF = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2EC55C8 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9);
   Instance = (DataManager_o *)NetworkManager__get_UserId(0LL);
   if ( !MasterData_object )
 LABEL_8:
-    sub_1BAB678(Instance, v5);
+    sub_1BCAA3C(Instance, v8);
   return UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)MasterData_object, (int64_t)Instance, 0LL);
 }
 
 
 void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoComponent_o *this, const MethodInfo *method)
 {
-  PresentBoxInfoComponent_o *v2; // x19
-  __int64 v3; // x1
+  __int64 v2; // x2
+  PresentBoxInfoComponent_o *v3; // x19
   __int64 v4; // x1
-  SimpleAnimation_o *PresentList; // x0
+  __int64 v5; // x2
   __int64 v6; // x1
+  __int64 v7; // x2
+  SimpleAnimation_o *PresentList; // x0
+  __int64 v9; // x1
   int m_CancellationTokenSource; // w20
   struct System_String_array *animFiles; // x8
-  int v9; // w9
-  bool v10; // w25
-  int32_t v11; // w27
+  int v12; // w9
+  bool v13; // w25
+  int32_t v14; // w27
   int32_t max_length; // w10
-  System_String_o *v13; // x21
-  System_String_o *v14; // x22
+  System_String_o *v16; // x21
+  System_String_o *v17; // x22
   struct System_String_array *sprFiles; // x8
-  int32_t v16; // w9
+  int32_t v19; // w9
   UnityEngine_Object_o *presentBoxSimpleAnimation; // x23
   UnityEngine_Object_o *presentBoxAnimation; // x23
   UnityEngine_Object_o *presentBoxSprite; // x22
-  int32_t v20; // w1
+  int32_t v23; // w1
 
-  v2 = this;
-  if ( (byte_4AB0DCE & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B111BE & 1) == 0 )
   {
-    sub_1BAB41C(&BalanceConfig_TypeInfo, method);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
-    this = (PresentBoxInfoComponent_o *)sub_1BAB41C(&StringLiteral_1/*""*/, v4);
-    byte_4AB0DCE = 1;
+    sub_1BCA7E0(&BalanceConfig_TypeInfo, method, v2);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
+    this = (PresentBoxInfoComponent_o *)sub_1BCA7E0(&StringLiteral_1/*""*/, v6, v7);
+    byte_4B111BE = 1;
   }
   PresentList = (SimpleAnimation_o *)PresentBoxInfoComponent__GetPresentList(this, method);
   if ( !PresentList )
@@ -74,119 +81,119 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
   PresentList = (SimpleAnimation_o *)BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v9);
     PresentList = (SimpleAnimation_o *)BalanceConfig_TypeInfo;
   }
-  animFiles = v2->fields.animFiles;
-  v9 = PresentList[1].fields.m_Playable[1].fields.m_ActualPlayable.fields.m_Handle.fields.m_Version
-     - *((_DWORD *)&PresentList[1].fields.m_Playable[1].fields.m_Mixer + 2);
-  v10 = v9 > m_CancellationTokenSource;
-  v11 = v9 <= m_CancellationTokenSource ? 2 : m_CancellationTokenSource > 0;
+  animFiles = v3->fields.animFiles;
+  v12 = PresentList[1].fields.m_Playable[1].fields.m_ActualPlayable.fields.m_Handle.fields.m_Version
+      - *((_DWORD *)&PresentList[1].fields.m_Playable[1].fields.m_Mixer + 2);
+  v13 = v12 > m_CancellationTokenSource;
+  v14 = v12 <= m_CancellationTokenSource ? 2 : m_CancellationTokenSource > 0;
   if ( !animFiles )
     goto LABEL_49;
   max_length = animFiles->max_length;
-  v13 = (System_String_o *)StringLiteral_1/*""*/;
-  v14 = (System_String_o *)StringLiteral_1/*""*/;
-  if ( v11 <= max_length )
+  v16 = (System_String_o *)StringLiteral_1/*""*/;
+  v17 = (System_String_o *)StringLiteral_1/*""*/;
+  if ( v14 <= max_length )
   {
-    if ( v11 >= (unsigned int)max_length )
+    if ( v14 >= (unsigned int)max_length )
       goto LABEL_50;
-    v14 = animFiles->m_Items[v11];
+    v17 = animFiles->m_Items[v14];
   }
-  sprFiles = v2->fields.sprFiles;
+  sprFiles = v3->fields.sprFiles;
   if ( !sprFiles )
     goto LABEL_49;
-  v16 = sprFiles->max_length;
-  if ( v11 <= v16 )
+  v19 = sprFiles->max_length;
+  if ( v14 <= v19 )
   {
-    if ( v11 < (unsigned int)v16 )
+    if ( v14 < (unsigned int)v19 )
     {
-      v13 = sprFiles->m_Items[v11];
+      v16 = sprFiles->m_Items[v14];
       goto LABEL_17;
     }
 LABEL_50:
-    sub_1BAB680(PresentList, v6);
+    sub_1BCAA44(PresentList, v9);
   }
 LABEL_17:
-  presentBoxSimpleAnimation = (UnityEngine_Object_o *)v2->fields.presentBoxSimpleAnimation;
+  presentBoxSimpleAnimation = (UnityEngine_Object_o *)v3->fields.presentBoxSimpleAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   if ( UnityEngine_Object__op_Inequality(presentBoxSimpleAnimation, 0LL, 0LL) )
   {
-    PresentList = v2->fields.presentBoxSimpleAnimation;
+    PresentList = v3->fields.presentBoxSimpleAnimation;
     if ( !PresentList )
       goto LABEL_49;
     SimpleAnimation__Stop(PresentList, 0LL);
-    PresentList = v2->fields.presentBoxSimpleAnimation;
+    PresentList = v3->fields.presentBoxSimpleAnimation;
     if ( !PresentList )
       goto LABEL_49;
-    if ( SimpleAnimation__GetClipCount(PresentList, 0LL) >= v11 && !System_String__IsNullOrEmpty(v14, 0LL) )
+    if ( SimpleAnimation__GetClipCount(PresentList, 0LL) >= v14 && !System_String__IsNullOrEmpty(v17, 0LL) )
     {
-      PresentList = v2->fields.presentBoxSimpleAnimation;
+      PresentList = v3->fields.presentBoxSimpleAnimation;
       if ( !PresentList )
         goto LABEL_49;
-      SimpleAnimation__Play_64185800(PresentList, v14, 0LL);
+      SimpleAnimation__Play_64539336(PresentList, v17, 0LL);
     }
   }
   else
   {
-    presentBoxAnimation = (UnityEngine_Object_o *)v2->fields.presentBoxAnimation;
+    presentBoxAnimation = (UnityEngine_Object_o *)v3->fields.presentBoxAnimation;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     if ( UnityEngine_Object__op_Inequality(presentBoxAnimation, 0LL, 0LL) )
     {
-      PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
+      PresentList = (SimpleAnimation_o *)v3->fields.presentBoxAnimation;
       if ( !PresentList )
         goto LABEL_49;
       UnityEngine_Animation__Stop((UnityEngine_Animation_o *)PresentList, 0LL);
-      PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
+      PresentList = (SimpleAnimation_o *)v3->fields.presentBoxAnimation;
       if ( !PresentList )
         goto LABEL_49;
-      if ( UnityEngine_Animation__GetClipCount((UnityEngine_Animation_o *)PresentList, 0LL) >= v11
-        && !System_String__IsNullOrEmpty(v14, 0LL) )
+      if ( UnityEngine_Animation__GetClipCount((UnityEngine_Animation_o *)PresentList, 0LL) >= v14
+        && !System_String__IsNullOrEmpty(v17, 0LL) )
       {
-        PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
+        PresentList = (SimpleAnimation_o *)v3->fields.presentBoxAnimation;
         if ( !PresentList )
           goto LABEL_49;
-        UnityEngine_Animation__Play_69545712((UnityEngine_Animation_o *)PresentList, v14, 0LL);
+        UnityEngine_Animation__Play_69899248((UnityEngine_Animation_o *)PresentList, v17, 0LL);
       }
     }
   }
-  presentBoxSprite = (UnityEngine_Object_o *)v2->fields.presentBoxSprite;
+  presentBoxSprite = (UnityEngine_Object_o *)v3->fields.presentBoxSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(presentBoxSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v13, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+  if ( UnityEngine_Object__op_Inequality(presentBoxSprite, 0LL, 0LL) && !System_String__IsNullOrEmpty(v16, 0LL) )
   {
-    PresentList = (SimpleAnimation_o *)v2->fields.presentBoxSprite;
+    PresentList = (SimpleAnimation_o *)v3->fields.presentBoxSprite;
     if ( !PresentList )
       goto LABEL_49;
-    UISprite__set_spriteName((UISprite_o *)PresentList, v13, 0LL);
+    UISprite__set_spriteName((UISprite_o *)PresentList, v16, 0LL);
   }
-  PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
+  PresentList = (SimpleAnimation_o *)v3->fields.presentBoxNoticeNumber;
   if ( !PresentList
     || (PresentList = (SimpleAnimation_o *)UnityEngine_Component__get_gameObject(
                                              (UnityEngine_Component_o *)PresentList,
                                              0LL)) == 0LL )
   {
 LABEL_49:
-    sub_1BAB678(PresentList, v6);
+    sub_1BCAA3C(PresentList, v9);
   }
-  if ( !v10 || m_CancellationTokenSource >= 1 )
+  if ( !v13 || m_CancellationTokenSource >= 1 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)PresentList, 1, 0LL);
-    PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
+    PresentList = (SimpleAnimation_o *)v3->fields.presentBoxNoticeNumber;
     if ( PresentList )
     {
-      v20 = m_CancellationTokenSource;
+      v23 = m_CancellationTokenSource;
       goto LABEL_48;
     }
     goto LABEL_49;
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)PresentList, 0, 0LL);
-  PresentList = (SimpleAnimation_o *)v2->fields.presentBoxNoticeNumber;
+  PresentList = (SimpleAnimation_o *)v3->fields.presentBoxNoticeNumber;
   if ( !PresentList )
     goto LABEL_49;
-  v20 = 0;
+  v23 = 0;
 LABEL_48:
-  NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)PresentList, v20, 0LL);
+  NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)PresentList, v23, 0LL);
 }

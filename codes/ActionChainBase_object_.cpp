@@ -1,7 +1,7 @@
 void __fastcall ActionChainBase_object____ctor(
         ActionChainBase_T__o *this,
         System_Object_array *chains,
-        const MethodInfo_31D1E34 *method)
+        const MethodInfo_3221C14 *method)
 {
   ChainableActionBase___ctor((ChainableActionBase_o *)this, 0LL);
   ((void (__fastcall *)(ActionChainBase_T__o *, void *))this->klass->vtable._6_Init.method)(
@@ -10,61 +10,70 @@ void __fastcall ActionChainBase_object____ctor(
   ActionChainBase_object___AddRange(
     this,
     chains,
-    (const MethodInfo_31D1EE8 *)method->klass->rgctx_data->_3_ActionChainBase_T__AddRange);
+    (const MethodInfo_3221CC8 *)method->klass->rgctx_data->_3_ActionChainBase_T__AddRange);
 }
 
 
 ActionChainBase_T__o *__fastcall ActionChainBase_object___AddRange(
         ActionChainBase_T__o *this,
         System_Object_array *chainElems,
-        const MethodInfo_31D1EE8 *method)
+        const MethodInfo_3221CC8 *method)
 {
-  ActionChainBase_T__o *v5; // x21
+  __int64 v3; // x3
+  ActionChainBase_T__o *v6; // x21
   signed int max_length; // w8
-  unsigned int v7; // w24
-  Il2CppObject *v8; // x22
-  System_Action_o *v9; // x23
-  int32_t v10; // w2
-  int32_t v11; // w3
-  int32_t v12; // w2
-  int32_t v13; // w3
+  unsigned int v8; // w24
+  Il2CppObject *v9; // x22
+  System_Action_o *v10; // x23
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   struct System_Action_o *endCallback; // x8
   MethodInfo *_8_System_Collections_Generic_List_T__Add; // x9
   __int64 nextAction_low; // x10
-  System_Action_c **v17; // x8
+  System_Action_c **v26; // x8
 
-  v5 = this;
-  if ( (byte_4ABBBFC & 1) == 0 )
+  v6 = this;
+  if ( (byte_4B1C0E0 & 1) == 0 )
   {
-    this = (ActionChainBase_T__o *)sub_1BAB41C(&System_Action_TypeInfo, chainElems);
-    byte_4ABBBFC = 1;
+    this = (ActionChainBase_T__o *)sub_1BCA7E0(&System_Action_TypeInfo, chainElems, method);
+    byte_4B1C0E0 = 1;
   }
-  if ( !v5 )
+  if ( !v6 )
     goto LABEL_17;
-  if ( !v5->fields._IsExecuted_k__BackingField )
+  if ( !v6->fields._IsExecuted_k__BackingField )
   {
     if ( !chainElems )
       goto LABEL_17;
     max_length = chainElems->max_length;
     if ( max_length >= 1 )
     {
-      v7 = 0;
+      v8 = 0;
       while ( 1 )
       {
-        if ( v7 >= max_length )
-          sub_1BAB680(this, chainElems);
-        v8 = chainElems->m_Items[v7];
-        v9 = (System_Action_o *)sub_1BAB668(System_Action_TypeInfo);
+        if ( v8 >= max_length )
+          sub_1BCAA44(this, chainElems);
+        v9 = chainElems->m_Items[v8];
+        v10 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, chainElems, method, v3);
         System_Action___ctor(
-          v9,
-          (Il2CppObject *)v5,
+          v10,
+          (Il2CppObject *)v6,
           (intptr_t)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext,
           0LL);
-        if ( !v8 )
+        if ( !v9 )
           break;
-        v8[1].monitor = v9;
-        sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v8[1].monitor, (int32_t)v9, v10, v11);
-        this = *(ActionChainBase_T__o **)&v5->fields.currentIndex;
+        v9[1].monitor = v10;
+        sub_1BCA784((PartyOrganizationUtility_o *)&v9[1].monitor, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+        this = *(ActionChainBase_T__o **)&v6->fields.currentIndex;
         if ( !this )
           break;
         endCallback = this->fields.endCallback;
@@ -77,29 +86,29 @@ ActionChainBase_T__o *__fastcall ActionChainBase_object___AddRange(
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
-            v8,
-            (const MethodInfo_354D8BC *)_8_System_Collections_Generic_List_T__Add->klass->rgctx_data[14].rgctxDataDummy);
+            v9,
+            (const MethodInfo_35A1C5C *)_8_System_Collections_Generic_List_T__Add->klass->rgctx_data[14].rgctxDataDummy);
         }
         else
         {
-          v17 = &endCallback->klass + nextAction_low;
+          v26 = &endCallback->klass + nextAction_low;
           LODWORD(this->fields.nextAction) = nextAction_low + 1;
-          v17[4] = (System_Action_c *)v8;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v17 + 4), (int32_t)v8, v12, v13);
+          v26[4] = (System_Action_c *)v9;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v26 + 4), (int64_t)v9, v17, v18, v19, v20, v21, v22);
         }
         max_length = chainElems->max_length;
-        if ( (int)++v7 >= max_length )
-          return v5;
+        if ( (int)++v8 >= max_length )
+          return v6;
       }
 LABEL_17:
-      sub_1BAB678(this, chainElems);
+      sub_1BCAA3C(this, chainElems);
     }
   }
-  return v5;
+  return v6;
 }
 
 
-void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, const MethodInfo_31D23B0 *method)
+void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, const MethodInfo_3222190 *method)
 {
   System_Collections_Generic_List_object__o *v3; // x0
   int32_t v4; // w8
@@ -115,7 +124,7 @@ void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, cons
     v4 = *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) + 1;
     *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) = v4;
     if ( !v3 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method);
     if ( v4 >= v3->fields._size )
     {
       ((void (__fastcall *)(ActionChainBase_T__o *, Il2CppMethodPointer))this->klass->vtable._5_End.method)(
@@ -127,7 +136,7 @@ void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, cons
       Item = System_Collections_Generic_List_object___get_Item(
                v3,
                v4,
-               (const MethodInfo_354D5EC *)method->klass->rgctx_data->_19_ActionChainBase_T__ExecuteCurrentAction);
+               (const MethodInfo_35A198C *)method->klass->rgctx_data->_19_ActionChainBase_T__ExecuteCurrentAction);
       ((void (__fastcall *)(ActionChainBase_T__o *, Il2CppObject *, const char *))this->klass[1]._1.gc_desc)(
         this,
         Item,
@@ -137,59 +146,65 @@ void __fastcall ActionChainBase_object___DoNext(ActionChainBase_T__o *this, cons
 }
 
 
-void __fastcall ActionChainBase_object___ExecuteOnDetail(ActionChainBase_T__o *this, const MethodInfo_31D23A0 *method)
+void __fastcall ActionChainBase_object___ExecuteOnDetail(ActionChainBase_T__o *this, const MethodInfo_3222180 *method)
 {
   ActionChainBase_object___DoNext(
     this,
-    (const MethodInfo_31D23B0 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
+    (const MethodInfo_3222190 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
 }
 
 
-void __fastcall ActionChainBase_object___Init(ActionChainBase_T__o *this, const MethodInfo_31D1E80 *method)
+void __fastcall ActionChainBase_object___Init(ActionChainBase_T__o *this, const MethodInfo_3221C60 *method)
 {
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 _4_System_Collections_Generic_List_T; // x0
-  System_Collections_Generic_List_object__o *v5; // x0
+  System_Collections_Generic_List_object__o *v7; // x0
   ActionChainBase_T__c *klass; // x8
-  System_Collections_Generic_List_object__o *v7; // x20
+  int64_t v9; // x20
   int32_t *p_currentIndex; // x19
-  int32_t v9; // w2
-  int32_t v10; // w3
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
 
   *((_DWORD *)&this->fields._IsExecuted_k__BackingField + 1) = -1;
   _4_System_Collections_Generic_List_T = (__int64)method->klass->rgctx_data->_4_System_Collections_Generic_List_T_;
   if ( (*(_BYTE *)(_4_System_Collections_Generic_List_T + 309) & 1) == 0 )
-    _4_System_Collections_Generic_List_T = sub_1BFD2F8();
-  v5 = (System_Collections_Generic_List_object__o *)sub_1BAB668(_4_System_Collections_Generic_List_T);
+    _4_System_Collections_Generic_List_T = sub_1C1C6BC();
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(_4_System_Collections_Generic_List_T, method, v2, v3);
   klass = method->klass;
-  v7 = v5;
+  v9 = (int64_t)v7;
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_354D088 *)klass->rgctx_data->_5_System_Collections_Generic_List_T___ctor);
-  *(_QWORD *)&this->fields.currentIndex = v7;
+    v7,
+    (const MethodInfo_35A1428 *)klass->rgctx_data->_5_System_Collections_Generic_List_T___ctor);
+  *(_QWORD *)&this->fields.currentIndex = v9;
   p_currentIndex = &this->fields.currentIndex;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_currentIndex, (int32_t)v7, v9, v10);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_currentIndex, v9, v11, v12, v13, v14, v15, v16);
   *((_WORD *)p_currentIndex + 4) = 0;
 }
 
 
-void __fastcall ActionChainBase_object___PauseNext(ActionChainBase_T__o *this, const MethodInfo_31D2030 *method)
+void __fastcall ActionChainBase_object___PauseNext(ActionChainBase_T__o *this, const MethodInfo_3221E10 *method)
 {
   ActionChainBase_object___SetIsPausing(
     this,
     1,
-    (const MethodInfo_31D2084 *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
+    (const MethodInfo_3221E64 *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
 }
 
 
-void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, const MethodInfo_31D2044 *method)
+void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, const MethodInfo_3221E24 *method)
 {
   ActionChainBase_object___SetIsPausing(
     this,
     0,
-    (const MethodInfo_31D2084 *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
+    (const MethodInfo_3221E64 *)method->klass->rgctx_data->_9_ActionChainBase_T__SetIsPausing);
   ActionChainBase_object___StartPendingNextAction(
     this,
-    (const MethodInfo_31D2210 *)method->klass->rgctx_data->_10_ActionChainBase_T__StartPendingNextAction);
+    (const MethodInfo_3221FF0 *)method->klass->rgctx_data->_10_ActionChainBase_T__StartPendingNextAction);
 }
 
 
@@ -197,106 +212,109 @@ void __fastcall ActionChainBase_object___ResumeNext(ActionChainBase_T__o *this, 
 void __fastcall ActionChainBase_object___SetIsPausing(
         ActionChainBase_T__o *this,
         bool value,
-        const MethodInfo_31D2084 *method)
+        const MethodInfo_3221E64 *method)
 {
   bool v6; // w22
   __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x0
-  bool v9; // w20
+  __int64 v8; // x2
+  System_Collections_Generic_List_object__o *v9; // x0
+  bool v10; // w20
   __int64 methodPtr_low; // x10
-  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+20h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+20h] [xbp-50h] BYREF
 
   v6 = value;
-  if ( (byte_4ABBBFD & 1) == 0 )
+  if ( (byte_4B1C0E1 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_ActionChainBase_ChainableActionBase__SetIsPausing__, value);
-    sub_1BAB41C(&ActionChainBase_ChainableActionBase__TypeInfo, v7);
-    byte_4ABBBFD = 1;
+    sub_1BCA7E0(&Method_ActionChainBase_ChainableActionBase__SetIsPausing__, value, method);
+    sub_1BCA7E0(&ActionChainBase_ChainableActionBase__TypeInfo, v7, v8);
+    byte_4B1C0E1 = 1;
   }
-  memset(&v12, 0, sizeof(v12));
-  v8 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
+  memset(&v13, 0, sizeof(v13));
+  v9 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
   LOBYTE(this->fields.children) = v6;
-  if ( !v8 )
-    sub_1BAB678(0LL, value);
+  if ( !v9 )
+    sub_1BCAA3C(0LL, value);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
-    v8,
-    (const MethodInfo_354E3B4 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
-  v9 = value;
-  v12 = v11;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+    v9,
+    (const MethodInfo_35A2754 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
+  v10 = value;
+  v13 = v12;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v12,
-            (const MethodInfo_32C4C78 *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
+            &v13,
+            (const MethodInfo_3316D1C *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
   {
-    if ( v12.fields._current )
+    if ( v13.fields._current )
     {
       methodPtr_low = LOBYTE(ActionChainBase_ChainableActionBase__TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(v12.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
-        && (ActionChainBase_ChainableActionBase__c *)v12.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
+      if ( LOBYTE(v13.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
+        && (ActionChainBase_ChainableActionBase__c *)v13.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
       {
         ActionChainBase_object___SetIsPausing(
-          (ActionChainBase_T__o *)v12.fields._current,
-          v9,
-          (const MethodInfo_31D2084 *)Method_ActionChainBase_ChainableActionBase__SetIsPausing__);
+          (ActionChainBase_T__o *)v13.fields._current,
+          v10,
+          (const MethodInfo_3221E64 *)Method_ActionChainBase_ChainableActionBase__SetIsPausing__);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v12,
-    (const MethodInfo_32C4C74 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
+    &v13,
+    (const MethodInfo_3316D18 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
 }
 
 
 void __fastcall ActionChainBase_object___StartPendingNextAction(
         ActionChainBase_T__o *this,
-        const MethodInfo_31D2210 *method)
+        const MethodInfo_3221FF0 *method)
 {
-  __int64 v4; // x1
-  System_Collections_Generic_List_object__o *v5; // x0
+  __int64 v2; // x2
+  __int64 v5; // x1
+  __int64 v6; // x2
+  System_Collections_Generic_List_object__o *v7; // x0
   __int64 methodPtr_low; // x10
-  System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-58h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+20h] [xbp-40h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4ABBBFE & 1) == 0 )
+  if ( (byte_4B1C0E2 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__, method);
-    sub_1BAB41C(&ActionChainBase_ChainableActionBase__TypeInfo, v4);
-    byte_4ABBBFE = 1;
+    sub_1BCA7E0(&Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__, method, v2);
+    sub_1BCA7E0(&ActionChainBase_ChainableActionBase__TypeInfo, v5, v6);
+    byte_4B1C0E2 = 1;
   }
-  memset(&v8, 0, sizeof(v8));
+  memset(&v10, 0, sizeof(v10));
   if ( BYTE1(this->fields.children) )
   {
     BYTE1(this->fields.children) = 0;
     ActionChainBase_object___DoNext(
       this,
-      (const MethodInfo_31D23B0 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
+      (const MethodInfo_3222190 *)method->klass->rgctx_data->_7_ActionChainBase_T__DoNext);
   }
-  v5 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
-  if ( !v5 )
-    sub_1BAB678(0LL, method);
+  v7 = *(System_Collections_Generic_List_object__o **)&this->fields.currentIndex;
+  if ( !v7 )
+    sub_1BCAA3C(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v7,
-    v5,
-    (const MethodInfo_354E3B4 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
-  v8 = v7;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
+    v7,
+    (const MethodInfo_35A2754 *)method->klass->rgctx_data->_11_System_Collections_Generic_List_T__GetEnumerator);
+  v10 = v9;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v8,
-            (const MethodInfo_32C4C78 *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
+            &v10,
+            (const MethodInfo_3316D1C *)method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_T__MoveNext) )
   {
-    if ( v8.fields._current )
+    if ( v10.fields._current )
     {
       methodPtr_low = LOBYTE(ActionChainBase_ChainableActionBase__TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(v8.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
-        && (ActionChainBase_ChainableActionBase__c *)v8.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
+      if ( LOBYTE(v10.fields._current->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
+        && (ActionChainBase_ChainableActionBase__c *)v10.fields._current->klass->_2.typeHierarchy[methodPtr_low - 1] == ActionChainBase_ChainableActionBase__TypeInfo )
       {
         ActionChainBase_object___StartPendingNextAction(
-          (ActionChainBase_T__o *)v8.fields._current,
-          (const MethodInfo_31D2210 *)Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__);
+          (ActionChainBase_T__o *)v10.fields._current,
+          (const MethodInfo_3221FF0 *)Method_ActionChainBase_ChainableActionBase__StartPendingNextAction__);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v8,
-    (const MethodInfo_32C4C74 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
+    &v10,
+    (const MethodInfo_3316D18 *)method->klass->rgctx_data->_17_System_Collections_Generic_List_T__get_Count);
 }

@@ -3,20 +3,24 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB7FE3 & 1) == 0 )
+  if ( (byte_4B184AD & 1) == 0 )
   {
-    sub_1BAB41C(&BattleActionData_TypeInfo, actData);
-    byte_4AB7FE3 = 1;
+    sub_1BCA7E0(&BattleActionData_TypeInfo, actData, method);
+    byte_4B184AD = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo, actData);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.targetActionData, (int64_t)actData, v5, v6, v7, v8, v9, v10);
 }
 
 

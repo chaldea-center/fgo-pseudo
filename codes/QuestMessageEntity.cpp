@@ -1,32 +1,35 @@
 void __fastcall QuestMessageEntity___ctor(QuestMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB61E0 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16694 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB61E0 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16694 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 bool __fastcall QuestMessageEntity__CheckValid(QuestMessageEntity_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t targetId; // w20
   int32_t condType; // w21
   int64_t targetNum; // x19
 
-  if ( (byte_4AB61DF & 1) == 0 )
+  if ( (byte_4B16693 & 1) == 0 )
   {
-    sub_1BAB41C(&CondType_TypeInfo, method);
-    byte_4AB61DF = 1;
+    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
+    byte_4B16693 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
   targetNum = this->fields.targetNum;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
   return CondType__IsOpen(condType, targetId, targetNum, 0, 0LL, 0LL);
 }
 
@@ -38,16 +41,16 @@ System_String_o *__fastcall QuestMessageEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4AB61DE & 1) == 0 )
+  if ( (byte_4B16692 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase);
-    byte_4AB61DE = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase, *(_QWORD *)&idx);
+    byte_4B16692 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            phase,
            idx,
-           (const MethodInfo_2EC2A28 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

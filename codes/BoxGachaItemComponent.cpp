@@ -6,18 +6,19 @@ void __fastcall BoxGachaItemComponent___ctor(BoxGachaItemComponent_o *this, cons
 
 void __fastcall BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   ItemIconComponent_o *itemIcon; // x0
 
-  if ( (byte_4AB9BA9 & 1) == 0 )
+  if ( (byte_4B1A159 & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_1/*""*/, method);
-    byte_4AB9BA9 = 1;
+    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
+    byte_4B1A159 = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon
     || (ItemIconComponent__Clear(itemIcon, 0LL), (itemIcon = (ItemIconComponent_o *)this->fields.dataLabel) == 0LL) )
   {
-    sub_1BAB678(itemIcon, method);
+    sub_1BCAA3C(itemIcon, method);
   }
   UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -31,12 +32,13 @@ void __fastcall BoxGachaItemComponent__Set(
         const MethodInfo *method)
 {
   ItemIconComponent_o *itemIcon; // x0
+  __int64 v8; // x1
   UILabel_o *dataLabel; // x20
 
-  if ( (byte_4AB9BAA & 1) == 0 )
+  if ( (byte_4B1A15A & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, *(_QWORD *)&itemId);
-    byte_4AB9BAA = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, *(_QWORD *)&itemId, *(_QWORD *)&payNum);
+    byte_4B1A15A = 1;
   }
   if ( itemId < 1 )
   {
@@ -50,11 +52,11 @@ void __fastcall BoxGachaItemComponent__Set(
     ItemIconComponent__SetItem(itemIcon, itemId, -1, 0LL);
     dataLabel = this->fields.dataLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8);
     itemIcon = (ItemIconComponent_o *)LocalizationManager__GetNumberFormat(payNum, 0LL);
     if ( !dataLabel )
 LABEL_10:
-      sub_1BAB678(itemIcon, *(_QWORD *)&itemId);
+      sub_1BCAA3C(itemIcon, *(_QWORD *)&itemId);
     UILabel__set_text(dataLabel, (System_String_o *)itemIcon, 0LL);
   }
 }

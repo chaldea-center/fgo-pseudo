@@ -2,21 +2,23 @@
 void __fastcall BgResourceData___ctor(BgResourceData_o *this, int32_t bgId, int32_t bgType, const MethodInfo *method)
 {
   __int64 v7; // x1
-  Il2CppObject *Master_object; // x0
+  __int64 v8; // x2
   __int64 v9; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v11; // x1
 
-  if ( (byte_4AB8233 & 1) == 0 )
+  if ( (byte_4B186FD & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataManager_GetMaster_BattleBgMaster___, *(_QWORD *)&bgId);
-    sub_1BAB41C(&DataManager_TypeInfo, v7);
-    byte_4AB8233 = 1;
+    sub_1BCA7E0(&Method_DataManager_GetMaster_BattleBgMaster___, *(_QWORD *)&bgId, *(_QWORD *)&bgType);
+    sub_1BCA7E0(&DataManager_TypeInfo, v7, v8);
+    byte_4B186FD = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2EC5574 *)Method_DataManager_GetMaster_BattleBgMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_BattleBgMaster___);
   if ( !Master_object )
-    sub_1BAB678(0LL, v9);
+    sub_1BCAA3C(0LL, v11);
   this->fields = (BgResourceData_Fields)BattleBgMaster__GetBgResourceIdType(
                                           (BattleBgMaster_o *)Master_object,
                                           bgId,
@@ -27,16 +29,17 @@ void __fastcall BgResourceData___ctor(BgResourceData_o *this, int32_t bgId, int3
 
 System_String_o *__fastcall BgResourceData__get_AssetPath(BgResourceData_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   int32_t Id_k__BackingField; // w19
 
-  if ( (byte_4AB8232 & 1) == 0 )
+  if ( (byte_4B186FC & 1) == 0 )
   {
-    sub_1BAB41C(&BattleDataDefine_TypeInfo, method);
-    byte_4AB8232 = 1;
+    sub_1BCA7E0(&BattleDataDefine_TypeInfo, method, v2);
+    byte_4B186FC = 1;
   }
   Id_k__BackingField = this->fields._Id_k__BackingField;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, method);
   return BattleDataDefine__MakeBgPath(Id_k__BackingField, method);
 }
 

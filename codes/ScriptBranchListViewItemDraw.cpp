@@ -11,35 +11,41 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v11; // x1
+  __int64 v12; // x2
   System_String_o *title; // x1
   UILabel_o *titleTextLabel; // x0
   UILabel_o *commentTextLabel; // x22
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x22
-  float v12; // s0
-  float v13; // s3
-  float v14; // s1
-  float v15; // s2
-  bool IsFlagOn; // w0
-  UIWidget_o *checkSprite; // x21
   float v18; // s0
   float v19; // s3
   float v20; // s1
   float v21; // s2
+  bool IsFlagOn; // w0
+  UIWidget_o *checkSprite; // x21
+  float v24; // s0
+  float v25; // s3
+  float v26; // s1
+  float v27; // s2
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
-  int32_t v23; // w1
+  ScriptBranchListViewItem_o *v29; // x1
 
-  if ( (byte_4AB34E2 & 1) == 0 )
+  if ( (byte_4B1395E & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4AB34E2 = 1;
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item, *(_QWORD *)&mode);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v11, v12);
+    byte_4B1395E = 1;
   }
   if ( !item || !mode )
   {
     this->fields.drawItem = 0LL;
     p_drawItem = &this->fields.drawItem;
-    v23 = 0;
+    v29 = 0LL;
     goto LABEL_28;
   }
   title = item->fields.title;
@@ -66,9 +72,9 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( ((unsigned __int8)titleTextLabel & 1) != 0 )
   {
@@ -77,30 +83,38 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
   }
   titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
-  v12 = mode == 1 ? 0.5 : 1.0;
+  v18 = mode == 1 ? 0.5 : 1.0;
   if ( !titleTextLabel )
     goto LABEL_29;
-  v13 = 1.0;
-  v14 = v12;
-  v15 = v12;
-  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)&v12, 0LL);
+  v19 = 1.0;
+  v20 = v18;
+  v21 = v18;
+  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)&v18, 0LL);
   IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, 0LL);
   checkSprite = (UIWidget_o *)this->fields.checkSprite;
   this->fields.checkFlag = IsFlagOn;
   titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, 0LL);
-  v18 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
+  v24 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1BAB678(titleTextLabel, title);
-  v19 = 1.0;
-  v20 = v18;
-  v21 = v18;
-  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v18, 0LL);
+    sub_1BCAA3C(titleTextLabel, title);
+  v25 = 1.0;
+  v26 = v24;
+  v27 = v24;
+  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)&v24, 0LL);
   this->fields.drawItem = item;
   p_drawItem = &this->fields.drawItem;
-  v23 = (int)item;
+  v29 = item;
 LABEL_28:
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_drawItem, v23, mode, (int32_t)method);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)p_drawItem,
+    (int64_t)v29,
+    *(int64_t *)&mode,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -145,7 +159,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
     v8 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1BAB678(drawItem, method);
+    sub_1BCAA3C(drawItem, method);
   v9 = 1.0;
   v10 = v8;
   v11 = v8;

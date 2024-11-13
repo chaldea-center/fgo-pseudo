@@ -3,14 +3,18 @@ void __fastcall BattleLogicCameraTask___ctor(
         System_String_o *cameraName,
         const MethodInfo *method)
 {
-  BattleLogicCameraTask_o *v4; // x20
-  int32_t v5; // w2
+  PartyOrganizationUtility_o *v4; // x20
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  v4 = this;
+  v4 = (PartyOrganizationUtility_o *)this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)cameraName);
-  v4->fields.endCameraName = cameraName;
-  v4 = (BattleLogicCameraTask_o *)((char *)v4 + 128);
-  *(_DWORD *)&v4[-1].fields.isForcedSpeedOne = 27;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v4, (int32_t)cameraName, v5, v6);
+  v4->fields._TransitionDestinationFromDetail_k__BackingField = cameraName;
+  v4 = (PartyOrganizationUtility_o *)((char *)v4 + 128);
+  LODWORD(v4[-1].fields._BasePartyItem_k__BackingField) = 27;
+  sub_1BCA784(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
 }

@@ -1,100 +1,176 @@
 void __fastcall WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w2
+  int64_t v3; // x2
   int32_t v4; // w3
-  int32_t v5; // w2
-  int32_t v6; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields._keys_k__BackingField = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField, 0LL, v9, v10, v11, v12, v13, v14);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35959840(
+void __fastcall WarBoardUiData___ctor_36278136(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   struct System_Int32_array *pieceIndex; // x1
   struct System_String_array *keys; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_1BAB678(v5, v6);
+    sub_1BCAA3C(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField,
-    (int32_t)pieceIndex,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
+    (int64_t)pieceIndex,
     v7,
-    v8);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v11, v12);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
+    (int64_t)keys,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35959920(
+void __fastcall WarBoardUiData___ctor_36278216(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v7, v8, v9, v10, v11, v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
+    (int64_t)setKeys,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
-void __fastcall WarBoardUiData___ctor_35959992(
+void __fastcall WarBoardUiData___ctor_36278288(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  int32_t v9; // w2
-  int32_t v10; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
+    (int64_t)indexes,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
+    (int64_t)setKeys,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
 void __fastcall WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_array *setKeys, const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField,
-    (int32_t)setKeys,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
+    (int64_t)setKeys,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -119,13 +195,21 @@ int32_t __fastcall WarBoardUiData__get_squareIndex(WarBoardUiData_o *this, const
 void __fastcall WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_array *value, const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._keys_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._keys_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -135,13 +219,21 @@ void __fastcall WarBoardUiData__set_pieceIndex(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._pieceIndex_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
+    (int64_t)value,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -153,46 +245,74 @@ void __fastcall WarBoardUiData__set_squareIndex(WarBoardUiData_o *this, int32_t 
 
 void __fastcall WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, const MethodInfo *method)
 {
-  int32_t v3; // w2
+  int64_t v3; // x2
   int32_t v4; // w3
-  int32_t v5; // w2
-  int32_t v6; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.pieceIndex, 0, v3, v4);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.pieceIndex, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.keys = 0LL;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.keys, 0, v5, v6);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.keys, 0LL, v9, v10, v11, v12, v13, v14);
 }
 
 
-void __fastcall WarBoardUiData_SaveData___ctor_35917048(
+void __fastcall WarBoardUiData_SaveData___ctor_36235344(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   struct System_Int32_array *pieceIndex_k__BackingField; // x1
   struct System_String_array *keys_k__BackingField; // x1
-  int32_t v11; // w2
-  int32_t v12; // w3
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !uiData )
-    sub_1BAB678(v5, v6);
+    sub_1BCAA3C(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.pieceIndex,
-    (int32_t)pieceIndex_k__BackingField,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.pieceIndex,
+    (int64_t)pieceIndex_k__BackingField,
     v7,
-    v8);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v11, v12);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.keys,
+    (int64_t)keys_k__BackingField,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }

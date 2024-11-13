@@ -20,7 +20,7 @@ int32_t __fastcall WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const M
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ratingBase->fields.id;
 }
 
@@ -44,7 +44,7 @@ int32_t __fastcall WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, 
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ratingBase->fields.viewPoint;
 }
 
@@ -55,9 +55,13 @@ void __fastcall WarBoardRatingBase__Init(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.ratingBase = ratingBase;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)ratingBase, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -67,7 +71,7 @@ int32_t __fastcall WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ratingBase->fields.adjustmentValueA1;
 }
 
@@ -78,6 +82,6 @@ int32_t __fastcall WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ratingBase->fields.adjustmentValueB;
 }

@@ -1,10 +1,11 @@
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall RarityRestrictedSkillUtil__GetOverwrittenRarity(
         ServantEntity_o *servantEntity,
         int32_t defaultRarity,
         const MethodInfo *method)
 {
   if ( !servantEntity )
-    sub_1BAB678(0LL, defaultRarity);
+    sub_1BCAA3C(0LL, *(_QWORD *)&defaultRarity);
   if ( ServantEntity__checkIsHeroineSvt(servantEntity, 0LL) )
     return 3;
   else
@@ -12,6 +13,7 @@ int32_t __fastcall RarityRestrictedSkillUtil__GetOverwrittenRarity(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall RarityRestrictedSkillUtil__IsDisabled(
         SkillLvEntity_o *skillLvEntity,
         ServantEntity_o *servantEntity,
@@ -25,10 +27,13 @@ bool __fastcall RarityRestrictedSkillUtil__IsDisabled(
 
   v5 = servantEntity;
   v6 = skillLvEntity;
-  if ( (byte_4AB6EF9 & 1) == 0 )
+  if ( (byte_4B173B9 & 1) == 0 )
   {
-    skillLvEntity = (SkillLvEntity_o *)sub_1BAB41C(&Method_System_Array_IndexOf_int___, servantEntity);
-    byte_4AB6EF9 = 1;
+    skillLvEntity = (SkillLvEntity_o *)sub_1BCA7E0(
+                                         &Method_System_Array_IndexOf_int___,
+                                         servantEntity,
+                                         *(_QWORD *)&servantRarity);
+    byte_4B173B9 = 1;
   }
   if ( !v6
     || (skillLvEntity = (SkillLvEntity_o *)SkillLvEntity__GetActRarity(v6, 0LL), !v5)
@@ -39,13 +44,13 @@ bool __fastcall RarityRestrictedSkillUtil__IsDisabled(
       : (servantEntity = (ServantEntity_o *)(&dword_0 + 3)),
         !v7) )
   {
-    sub_1BAB678(skillLvEntity, servantEntity);
+    sub_1BCAA3C(skillLvEntity, servantEntity);
   }
   if ( *(_QWORD *)&v7->fields.chargeTurn )
     return (unsigned int)System_Array__IndexOf_int_(
                            (System_Int32_array *)v7,
                            (int32_t)servantEntity,
-                           (const MethodInfo_2FBF4DC *)Method_System_Array_IndexOf_int___) >> 31;
+                           (const MethodInfo_300E9A0 *)Method_System_Array_IndexOf_int___) >> 31;
   else
     LOBYTE(v8) = 0;
   return v8;

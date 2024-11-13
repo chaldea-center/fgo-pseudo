@@ -23,18 +23,22 @@ UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
-  ServantStatusBattleListViewItem_o *p_userGameEntity; // x19
+  PartyOrganizationUtility_o *p_userGameEntity; // x19
   UserGameEntity_o *userGameEntity; // x20
-  int32_t v4; // w2
+  int64_t v4; // x2
   int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  p_userGameEntity = (ServantStatusBattleListViewItem_o *)&this->fields.userGameEntity;
+  p_userGameEntity = (PartyOrganizationUtility_o *)&this->fields.userGameEntity;
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0LL);
-    p_userGameEntity->klass = (ServantStatusBattleListViewItem_c *)userGameEntity;
-    sub_1BAB3C0(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
+    p_userGameEntity->klass = (PartyOrganizationUtility_c *)userGameEntity;
+    sub_1BCA784(p_userGameEntity, (int64_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

@@ -4,44 +4,52 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWW___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v7; // x21
-  int32_t v8; // w2
-  int32_t v9; // w3
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  System_Collections_Generic_Dictionary_object__object__o *v12; // x21
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x3
-  UnityEngine_MonoBehaviour_o *v13; // x21
-  System_Collections_IEnumerator_o *v14; // x1
+  __int64 v14; // x1
+  __int64 v15; // x2
+  const MethodInfo *v16; // x3
+  UnityEngine_MonoBehaviour_o *v17; // x21
+  System_Collections_IEnumerator_o *v18; // x1
 
-  if ( (byte_4AB4793 & 1) == 0 )
+  if ( (byte_4B14C19 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, url);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__, v6);
-    byte_4AB4793 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, url, method);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5, v6);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__, v7, v8);
+    byte_4B14C19 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v12 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BCAA2C(
+                                                                     System_Collections_Generic_Dictionary_string__string__TypeInfo,
+                                                                     v9,
+                                                                     v10,
+                                                                     v11);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v7,
-    (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v7;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields._responseHeaders_k__BackingField, (int32_t)v7, v8, v9);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
+    v12,
+    (const MethodInfo_32648B0 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v12;
+  sub_1BCA784(&this->fields._responseHeaders_k__BackingField, v12);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
   if ( !Instance )
-    sub_1BAB678(0LL, v11);
-  v13 = (UnityEngine_MonoBehaviour_o *)Instance;
-  v14 = DelightWorks_Network_UnityWebRequestWWWSingleton__Get(
+    sub_1BCAA3C(0LL, v14, v15, v16);
+  v17 = (UnityEngine_MonoBehaviour_o *)Instance;
+  v18 = DelightWorks_Network_UnityWebRequestWWWSingleton__Get(
           (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)Instance,
           url,
           this,
-          v12);
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892(v13, v14, 0LL);
+          v16);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516(v17, v18, 0LL);
 }
 
 
-void __fastcall DelightWorks_Network_UnityWebRequestWWW___ctor_37422940(
+void __fastcall DelightWorks_Network_UnityWebRequestWWW___ctor_37745356(
         DelightWorks_Network_UnityWebRequestWWW_o *this,
         System_String_o *url,
         UnityEngine_WWWForm_o *postData,
@@ -50,99 +58,102 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWW___ctor_37422940(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
-  NetworkManager_c *v15; // x0
-  System_Collections_Generic_Dictionary_object__object__o *v16; // x23
-  int32_t v17; // w2
-  int32_t v18; // w3
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x3
+  NetworkManager_c *v20; // x0
+  System_Collections_Generic_Dictionary_object__object__o *v21; // x23
   Il2CppObject *Instance; // x0
-  __int64 v20; // x1
-  const MethodInfo *v21; // x5
-  UnityEngine_MonoBehaviour_o *v22; // x23
-  System_Collections_IEnumerator_o *v23; // x0
-  System_Collections_Generic_Dictionary_object__object__o *v24; // x23
-  int32_t v25; // w2
-  int32_t v26; // w3
-  const MethodInfo *v27; // x5
+  __int64 v23; // x1
+  __int64 v24; // x2
+  __int64 v25; // x3
+  const MethodInfo *v26; // x5
+  UnityEngine_MonoBehaviour_o *v27; // x23
+  System_Collections_IEnumerator_o *v28; // x0
+  System_Collections_Generic_Dictionary_object__object__o *v29; // x23
+  const MethodInfo *v30; // x5
 
-  if ( (byte_4AB4794 & 1) == 0 )
+  if ( (byte_4B14C1A & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, url);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v11);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v12);
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__, v13);
-    byte_4AB4794 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, url, postData);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v11, v12);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v13, v14);
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__, v15, v16);
+    byte_4B14C1A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( checkServerTimeFlag )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4AB47BF )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v17);
+    if ( !byte_4B14C45 )
     {
-      sub_1BAB41C(&NetworkManager_TypeInfo, v14);
-      byte_4AB47BF = 1;
+      sub_1BCA7E0(&NetworkManager_TypeInfo, v17, v18);
+      byte_4B14C45 = 1;
     }
-    v15 = NetworkManager_TypeInfo;
+    v20 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v15 = NetworkManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v17);
+      v20 = NetworkManager_TypeInfo;
     }
-    if ( !v15->static_fields->serverTimeChkMovie )
+    if ( !v20->static_fields->serverTimeChkMovie )
     {
-      v24 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+      v29 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BCAA2C(
+                                                                         System_Collections_Generic_Dictionary_string__string__TypeInfo,
+                                                                         v17,
+                                                                         v18,
+                                                                         v19);
       System_Collections_Generic_Dictionary_object__object____ctor(
-        v24,
-        (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-      this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v24;
-      sub_1BAB3C0(
-        (ServantStatusBattleListViewItem_o *)&this->fields._responseHeaders_k__BackingField,
-        (int32_t)v24,
-        v25,
-        v26);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
+        v29,
+        (const MethodInfo_32648B0 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+      this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v29;
+      sub_1BCA784(&this->fields._responseHeaders_k__BackingField, v29);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
       if ( Instance )
       {
-        v22 = (UnityEngine_MonoBehaviour_o *)Instance;
-        v23 = DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect(
+        v27 = (UnityEngine_MonoBehaviour_o *)Instance;
+        v28 = DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect(
                 (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)Instance,
                 url,
                 postData,
                 headers,
                 this,
-                v27);
+                v30);
         goto LABEL_13;
       }
 LABEL_16:
-      sub_1BAB678(Instance, v20);
+      sub_1BCAA3C(Instance, v23, v24, v25);
     }
   }
-  v16 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BCAA2C(
+                                                                     System_Collections_Generic_Dictionary_string__string__TypeInfo,
+                                                                     v17,
+                                                                     v18,
+                                                                     v19);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v16,
-    (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v16;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._responseHeaders_k__BackingField,
-    (int32_t)v16,
-    v17,
-    v18);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_378A22C *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
+    v21,
+    (const MethodInfo_32648B0 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  this->fields._responseHeaders_k__BackingField = (struct System_Collections_Generic_Dictionary_string__string__o *)v21;
+  sub_1BCA784(&this->fields._responseHeaders_k__BackingField, v21);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
-  v22 = (UnityEngine_MonoBehaviour_o *)Instance;
-  v23 = DelightWorks_Network_UnityWebRequestWWWSingleton__Post(
+  v27 = (UnityEngine_MonoBehaviour_o *)Instance;
+  v28 = DelightWorks_Network_UnityWebRequestWWWSingleton__Post(
           (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)Instance,
           url,
           postData,
           headers,
           this,
-          v21);
+          v26);
 LABEL_13:
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892(v22, v23, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516(v27, v28, 0LL);
 }
 
 
@@ -166,73 +177,83 @@ System_Text_Encoding_o *__fastcall DelightWorks_Network_UnityWebRequestWWW__GetT
         DelightWorks_Network_UnityWebRequestWWW_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v5; // x2
   __int64 v6; // x1
-  struct System_Collections_Generic_Dictionary_string__string__o *responseHeaders_k__BackingField; // x0
+  __int64 v7; // x2
   __int64 v8; // x1
-  __int64 v9; // x0
-  System_String_o *v10; // x19
-  int v11; // w8
-  System_String_o *v12; // x19
-  int32_t v13; // w0
+  __int64 v9; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  struct System_Collections_Generic_Dictionary_string__string__o *responseHeaders_k__BackingField; // x0
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x0
+  System_String_o *v17; // x19
+  int v18; // w8
+  System_String_o *v19; // x19
+  int32_t v20; // w0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4AB4795 & 1) == 0 )
+  if ( (byte_4B14C1B & 1) == 0 )
   {
-    sub_1BAB41C(&char___TypeInfo, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v3);
-    sub_1BAB41C(&StringLiteral_1576/*";"*/, v4);
-    sub_1BAB41C(&StringLiteral_3855/*"CONTENT-TYPE"*/, v5);
-    sub_1BAB41C(&StringLiteral_17964/*"charset="*/, v6);
-    byte_4AB4795 = 1;
+    sub_1BCA7E0(&char___TypeInfo, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v4, v5);
+    sub_1BCA7E0(&StringLiteral_1576/*";"*/, v6, v7);
+    sub_1BCA7E0(&StringLiteral_3890/*"CONTENT-TYPE"*/, v8, v9);
+    sub_1BCA7E0(&StringLiteral_18116/*"charset="*/, v10, v11);
+    byte_4B14C1B = 1;
   }
   value = 0LL;
   responseHeaders_k__BackingField = this->fields._responseHeaders_k__BackingField;
   if ( !responseHeaders_k__BackingField
     || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)responseHeaders_k__BackingField,
-          (Il2CppObject *)StringLiteral_3855/*"CONTENT-TYPE"*/,
+          (Il2CppObject *)StringLiteral_3890/*"CONTENT-TYPE"*/,
           &value,
-          (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+          (const MethodInfo_3266A6C *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
   {
     return System_Text_Encoding__get_UTF8(0LL);
   }
-  v9 = (__int64)value;
+  v16 = (__int64)value;
   if ( !value )
     goto LABEL_19;
-  v9 = System_String__IndexOf_62078284((System_String_o *)value, (System_String_o *)StringLiteral_17964/*"charset="*/, 5, 0LL);
-  if ( !StringLiteral_17964/*"charset="*/ )
+  v16 = System_String__IndexOf_62431376((System_String_o *)value, (System_String_o *)StringLiteral_18116/*"charset="*/, 5, 0LL);
+  if ( !StringLiteral_18116/*"charset="*/ )
     goto LABEL_19;
-  if ( (v9 & 0x80000000) != 0 )
+  if ( (v16 & 0x80000000) != 0 )
     return System_Text_Encoding__get_UTF8(0LL);
   if ( !value )
     goto LABEL_19;
-  v9 = (__int64)System_String__Substring((System_String_o *)value, *((_DWORD *)StringLiteral_17964/*"charset="*/ + 4) + (int)v9, 0LL);
-  if ( !v9 )
+  v16 = (__int64)System_String__Substring(
+                   (System_String_o *)value,
+                   *((_DWORD *)StringLiteral_18116/*"charset="*/ + 4) + (int)v16,
+                   0LL);
+  if ( !v16 )
     goto LABEL_19;
-  v10 = System_String__Trim((System_String_o *)v9, 0LL);
-  v9 = sub_1BAB4C4(char___TypeInfo, 2LL);
-  if ( !v9 )
+  v17 = System_String__Trim((System_String_o *)v16, 0LL);
+  v16 = sub_1BCA888(char___TypeInfo, 2LL);
+  if ( !v16 )
     goto LABEL_19;
-  v11 = *(_DWORD *)(v9 + 24);
-  v8 = v9;
-  if ( !v11 || (*(_WORD *)(v9 + 32) = 39, v11 == 1) )
-    sub_1BAB680(v9, v9);
-  *(_WORD *)(v9 + 34) = 34;
-  if ( !v10
-    || (v9 = (__int64)System_String__Trim_62077876(v10, (System_Char_array *)v9, 0LL)) == 0
-    || (v9 = (__int64)System_String__Trim((System_String_o *)v9, 0LL)) == 0 )
+  v18 = *(_DWORD *)(v16 + 24);
+  v13 = v16;
+  if ( !v18 || (*(_WORD *)(v16 + 32) = 39, v18 == 1) )
+    sub_1BCAA44(v16, v16);
+  *(_WORD *)(v16 + 34) = 34;
+  if ( !v17
+    || (v16 = (__int64)System_String__Trim_62430968(v17, (System_Char_array *)v16, 0LL)) == 0
+    || (v16 = (__int64)System_String__Trim((System_String_o *)v16, 0LL)) == 0 )
   {
 LABEL_19:
-    sub_1BAB678(v9, v8);
+    sub_1BCAA3C(v16, v13, v14, v15);
   }
-  v12 = (System_String_o *)v9;
-  v13 = System_String__IndexOf_62078284((System_String_o *)v9, (System_String_o *)StringLiteral_1576/*";"*/, 0, 0LL);
-  if ( (v13 & 0x80000000) == 0 )
-    v12 = System_String__Substring_62067132(v12, 0, v13, 0LL);
-  return System_Text_Encoding__GetEncoding_61277976(v12, 0LL);
+  v19 = (System_String_o *)v16;
+  v20 = System_String__IndexOf_62431376((System_String_o *)v16, (System_String_o *)StringLiteral_1576/*";"*/, 0, 0LL);
+  if ( (v20 & 0x80000000) == 0 )
+    v19 = System_String__Substring_62420224(v19, 0, v20, 0LL);
+  return System_Text_Encoding__GetEncoding_61631068(v19, 0LL);
 }
 
 
@@ -281,25 +302,32 @@ System_String_o *__fastcall DelightWorks_Network_UnityWebRequestWWW__get_text(
         const MethodInfo *method)
 {
   System_Text_Encoding_o *TextEncoding; // x0
+  __int64 v4; // x2
+  __int64 v5; // x3
   struct System_Byte_array *bytes_k__BackingField; // x1
-  __int64 v6; // x0
-  UnityEngine_UnityException_o *v7; // x19
-  System_String_o *v8; // x0
-  __int64 v9; // x0
+  __int64 v8; // x0
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  UnityEngine_UnityException_o *v12; // x19
+  __int64 v13; // x1
+  System_String_o *v14; // x0
+  __int64 v15; // x1
+  __int64 v16; // x0
 
   if ( !this->fields._isDone_k__BackingField )
   {
-    v6 = sub_1BAB430(&UnityEngine_UnityException_TypeInfo);
-    v7 = (UnityEngine_UnityException_o *)sub_1BAB668(v6);
-    v8 = (System_String_o *)sub_1BAB430(&StringLiteral_15591/*"WWW is not ready downloading yet"*/);
-    UnityEngine_UnityException___ctor_69785080(v7, v8, 0LL);
-    v9 = sub_1BAB430(&Method_DelightWorks_Network_UnityWebRequestWWW_get_text__);
-    sub_1BAB544(v7, v9);
+    v8 = sub_1BCA7F4(&UnityEngine_UnityException_TypeInfo, method);
+    v12 = (UnityEngine_UnityException_o *)sub_1BCAA2C(v8, v9, v10, v11);
+    v14 = (System_String_o *)sub_1BCA7F4(&StringLiteral_15727/*"WWW is not ready downloading yet"*/, v13);
+    UnityEngine_UnityException___ctor_70138704(v12, v14, 0LL);
+    v16 = sub_1BCA7F4(&Method_DelightWorks_Network_UnityWebRequestWWW_get_text__, v15);
+    sub_1BCA908(v12, v16);
   }
   TextEncoding = DelightWorks_Network_UnityWebRequestWWW__GetTextEncoding(this, method);
   bytes_k__BackingField = this->fields._bytes_k__BackingField;
   if ( !bytes_k__BackingField || !TextEncoding )
-    sub_1BAB678(TextEncoding, bytes_k__BackingField);
+    sub_1BCAA3C(TextEncoding, bytes_k__BackingField, v4, v5);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, struct System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))TextEncoding->klass->vtable._37_GetString.method)(
                               TextEncoding,
                               bytes_k__BackingField,
@@ -314,14 +342,8 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWW__set_bytes(
         System_Byte_array *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._bytes_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._bytes_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._bytes_k__BackingField, value);
 }
 
 
@@ -330,14 +352,8 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWW__set_error(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._error_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._error_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._error_k__BackingField, value);
 }
 
 
@@ -364,14 +380,8 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWW__set_responseHeaders(
         System_Collections_Generic_Dictionary_string__string__o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields._responseHeaders_k__BackingField = value;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._responseHeaders_k__BackingField,
-    (int32_t)value,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields._responseHeaders_k__BackingField, value);
 }
 
 
@@ -379,14 +389,16 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton___ctor(
         DelightWorks_Network_UnityWebRequestWWWSingleton_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB478B & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B14C11 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton___ctor__, method);
-    byte_4AB478B = 1;
+    sub_1BCA7E0(&Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton___ctor__, method, v2);
+    byte_4B14C11 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_378A644 *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton___ctor__);
+    (const MethodInfo_37DEF2C *)Method_SingletonMonoBehaviour_UnityWebRequestWWWSingleton___ctor__);
 }
 
 
@@ -395,103 +407,110 @@ System_String_o *__fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Fi
         System_String_o *inStr,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton___c_c *v11; // x0
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  DelightWorks_Network_UnityWebRequestWWWSingleton___c_c *v19; // x0
   System_Func_char__bool__o *_9__8_0; // x20
-  Il2CppObject *v13; // x21
+  Il2CppObject *v21; // x21
   struct DelightWorks_Network_UnityWebRequestWWWSingleton___c_StaticFields *static_fields; // x0
-  int32_t v15; // w2
-  int32_t v16; // w3
-  DelightWorks_Network_UnityWebRequestWWWSingleton___c_c *v17; // x0
+  __int64 v23; // x1
+  __int64 v24; // x2
+  __int64 v25; // x3
+  DelightWorks_Network_UnityWebRequestWWWSingleton___c_c *v26; // x0
   System_Func_char__char__o *_9__8_1; // x20
-  Il2CppObject *v19; // x21
-  struct DelightWorks_Network_UnityWebRequestWWWSingleton___c_StaticFields *v20; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
-  System_Char_array *v24; // x0
+  Il2CppObject *v28; // x21
+  struct DelightWorks_Network_UnityWebRequestWWWSingleton___c_StaticFields *v29; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
+  System_Char_array *v31; // x0
 
-  if ( (byte_4AB478A & 1) == 0 )
+  if ( (byte_4B14C10 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Any_char___, inStr);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_char__char___, v4);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_char___, v5);
-    sub_1BAB41C(&System_Func_char__char__TypeInfo, v6);
-    sub_1BAB41C(&System_Func_char__bool__TypeInfo, v7);
-    sub_1BAB41C(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_0__, v8);
-    sub_1BAB41C(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_1__, v9);
-    sub_1BAB41C(&DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v10);
-    byte_4AB478A = 1;
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Any_char___, inStr, method);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Select_char__char___, v5, v6);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_ToArray_char___, v7, v8);
+    sub_1BCA7E0(&System_Func_char__char__TypeInfo, v9, v10);
+    sub_1BCA7E0(&System_Func_char__bool__TypeInfo, v11, v12);
+    sub_1BCA7E0(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_0__, v13, v14);
+    sub_1BCA7E0(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_1__, v15, v16);
+    sub_1BCA7E0(&DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v17, v18);
+    byte_4B14C10 = 1;
   }
-  v11 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+  v19 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
   if ( !DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo);
-    v11 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, inStr);
+    v19 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
   }
-  _9__8_0 = v11->static_fields->__9__8_0;
+  _9__8_0 = v19->static_fields->__9__8_0;
   if ( !_9__8_0 )
   {
-    if ( !v11->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19, inStr);
+      v19 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
     }
-    v13 = (Il2CppObject *)v11->static_fields->__9;
-    _9__8_0 = (System_Func_char__bool__o *)sub_1BAB668(System_Func_char__bool__TypeInfo);
+    v21 = (Il2CppObject *)v19->static_fields->__9;
+    _9__8_0 = (System_Func_char__bool__o *)sub_1BCAA2C(System_Func_char__bool__TypeInfo, inStr, method, v3);
     System_Func_char__bool____ctor(
       _9__8_0,
-      v13,
+      v21,
       Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_0__,
       0LL);
     static_fields = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = _9__8_0;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v15, v16);
+    sub_1BCA784(&static_fields->__9__8_0, _9__8_0);
   }
   if ( !System_Linq_Enumerable__Any_char_(
           (System_Collections_Generic_IEnumerable_TSource__o *)inStr,
           (System_Func_TSource__bool__o *)_9__8_0,
-          (const MethodInfo_2ED29F0 *)Method_System_Linq_Enumerable_Any_char___) )
+          (const MethodInfo_2F200B8 *)Method_System_Linq_Enumerable_Any_char___) )
     return inStr;
-  v17 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+  v26 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
   if ( !DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo);
-    v17 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v23);
+    v26 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
   }
-  _9__8_1 = v17->static_fields->__9__8_1;
+  _9__8_1 = v26->static_fields->__9__8_1;
   if ( !_9__8_1 )
   {
-    if ( !v17->_2.cctor_finished )
+    if ( !v26->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v17);
-      v17 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v26, v23);
+      v26 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo;
     }
-    v19 = (Il2CppObject *)v17->static_fields->__9;
-    _9__8_1 = (System_Func_char__char__o *)sub_1BAB668(System_Func_char__char__TypeInfo);
+    v28 = (Il2CppObject *)v26->static_fields->__9;
+    _9__8_1 = (System_Func_char__char__o *)sub_1BCAA2C(System_Func_char__char__TypeInfo, v23, v24, v25);
     System_Func_char__char____ctor(
       _9__8_1,
-      v19,
+      v28,
       Method_DelightWorks_Network_UnityWebRequestWWWSingleton___c__FilterNonAsciiChar_b__8_1__,
       0LL);
-    v20 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields;
-    v20->__9__8_1 = _9__8_1;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v20->__9__8_1, (int32_t)_9__8_1, v21, v22);
+    v29 = DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields;
+    v29->__9__8_1 = _9__8_1;
+    sub_1BCA784(&v29->__9__8_1, _9__8_1);
   }
-  v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_char__char_(
+  v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_char__char_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)inStr,
                                                                (System_Func_TSource__TResult__o *)_9__8_1,
-                                                               (const MethodInfo_2EF0D10 *)Method_System_Linq_Enumerable_Select_char__char___);
-  v24 = System_Linq_Enumerable__ToArray_char_(
-          v23,
-          (const MethodInfo_2EFCECC *)Method_System_Linq_Enumerable_ToArray_char___);
-  return System_String__CreateString_62051992(0LL, v24, 0LL);
+                                                               (const MethodInfo_2F3E3D8 *)Method_System_Linq_Enumerable_Select_char__char___);
+  v31 = System_Linq_Enumerable__ToArray_char_(
+          v30,
+          (const MethodInfo_2F4B7E8 *)Method_System_Linq_Enumerable_ToArray_char___);
+  return System_String__CreateString_62405084(0LL, v31, 0LL);
 }
 
 
@@ -502,27 +521,21 @@ System_Collections_IEnumerator_o *__fastcall DelightWorks_Network_UnityWebReques
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  int32_t v8; // w2
-  int32_t v9; // w3
-  int32_t v10; // w2
-  int32_t v11; // w3
-  int32_t v12; // w2
-  int32_t v13; // w3
 
-  if ( (byte_4AB4785 & 1) == 0 )
+  if ( (byte_4B14C0B & 1) == 0 )
   {
-    sub_1BAB41C(&DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_TypeInfo, url);
-    byte_4AB4785 = 1;
+    sub_1BCA7E0(&DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_TypeInfo, url, unityWebRequestWww, method);
+    byte_4B14C0B = 1;
   }
-  v7 = sub_1BAB668(DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_TypeInfo);
+  v7 = sub_1BCAA2C(DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_TypeInfo, url, unityWebRequestWww, method);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 40) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v7 + 40), (int32_t)this, v8, v9);
+  sub_1BCA784(v7 + 40, this);
   *(_QWORD *)(v7 + 32) = url;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v7 + 32), (int32_t)url, v10, v11);
+  sub_1BCA784(v7 + 32, url);
   *(_QWORD *)(v7 + 48) = unityWebRequestWww;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v7 + 48), (int32_t)unityWebRequestWww, v12, v13);
+  sub_1BCA784(v7 + 48, unityWebRequestWww);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -535,52 +548,68 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedire
 {
   UnityEngine_Networking_UnityWebRequest_o *v5; // x20
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x2
+  __int64 v8; // x3
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
   __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
   __int64 v15; // x1
-  int32_t v16; // w2
-  int32_t v17; // w3
-  _QWORD *v18; // x21
-  __int64 v19; // x8
-  __int64 v20; // x0
+  __int64 v16; // x2
+  __int64 v17; // x3
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x3
+  __int64 v21; // x1
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x1
+  __int64 v25; // x2
+  __int64 v26; // x3
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x3
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x3
+  __int64 v33; // x1
+  __int64 v34; // x2
+  __int64 v35; // x3
+  _QWORD *v36; // x21
+  __int64 v37; // x8
+  __int64 v38; // x0
   struct System_Collections_Generic_Dictionary_string__string__o *ResponseHeaders; // x0
-  int32_t v22; // w2
-  int32_t v23; // w3
-  System_Collections_Generic_Dictionary_object__object__o *v24; // x21
-  Il2CppObject *v25; // x0
-  __int64 v26; // x1
-  int32_t v27; // w2
-  int32_t v28; // w3
-  int64_t v29; // x20
-  NetworkManager_c *v30; // x0
-  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v31; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v40; // x21
+  Il2CppObject *v41; // x0
+  __int64 v42; // x1
+  __int64 v43; // x2
+  __int64 v44; // x3
+  int64_t v45; // x20
+  NetworkManager_c *v46; // x0
+  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v47; // x1
   System_String_o *error; // x21
-  System_String_o *v33; // x0
+  System_String_o *v49; // x0
   int64_t responseCode; // [xsp+0h] [xbp-40h] BYREF
   int64_t result; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *value; // [xsp+18h] [xbp-28h] BYREF
 
   v5 = req;
-  if ( (byte_4AB4789 & 1) == 0 )
+  if ( (byte_4B14C0F & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Array_Empty_byte___, req);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v7);
-    sub_1BAB41C(&long_TypeInfo, v8);
-    sub_1BAB41C(&NetworkManager_TypeInfo, v9);
-    sub_1BAB41C(&StringLiteral_116/*" "*/, v10);
-    sub_1BAB41C(&StringLiteral_12287/*"STATUS"*/, v11);
-    sub_1BAB41C(&StringLiteral_15728/*"X-Server-Time"*/, v12);
-    sub_1BAB41C(&StringLiteral_1/*""*/, v13);
-    sub_1BAB41C(&StringLiteral_7173/*"HTTP/1.1 {0} "*/, v14);
-    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BAB41C(&StringLiteral_11227/*"Redirect limit exceeded"*/, v15);
-    byte_4AB4789 = 1;
+    sub_1BCA7E0(&Method_System_Array_Empty_byte___, req, unityWebRequestWww, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v6, v7, v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v9, v10, v11);
+    sub_1BCA7E0(&long_TypeInfo, v12, v13, v14);
+    sub_1BCA7E0(&NetworkManager_TypeInfo, v15, v16, v17);
+    sub_1BCA7E0(&StringLiteral_116/*" "*/, v18, v19, v20);
+    sub_1BCA7E0(&StringLiteral_12416/*"STATUS"*/, v21, v22, v23);
+    sub_1BCA7E0(&StringLiteral_15864/*"X-Server-Time"*/, v24, v25, v26);
+    sub_1BCA7E0(&StringLiteral_1/*""*/, v27, v28, v29);
+    sub_1BCA7E0(&StringLiteral_7294/*"HTTP/1.1 {0} "*/, v30, v31, v32);
+    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BCA7E0(&StringLiteral_11355/*"Redirect limit exceeded"*/, v33, v34, v35);
+    byte_4B14C0F = 1;
   }
   value = 0LL;
   result = 0LL;
@@ -598,7 +627,7 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedire
                                                                      0LL);
       if ( !this )
         goto LABEL_38;
-      if ( System_String__Contains((System_String_o *)this, (System_String_o *)StringLiteral_11227/*"Redirect limit exceeded"*/, 0LL) )
+      if ( System_String__Contains((System_String_o *)this, (System_String_o *)StringLiteral_11355/*"Redirect limit exceeded"*/, 0LL) )
       {
         this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
                                                                        v5,
@@ -611,77 +640,69 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedire
         req = (UnityEngine_Networking_UnityWebRequest_o *)this;
         if ( !this )
         {
-          v18 = Method_System_Array_Empty_byte___;
-          v19 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
-          if ( !v19 )
+          v36 = Method_System_Array_Empty_byte___;
+          v37 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
+          if ( !v37 )
           {
-            sub_1BFD354();
-            v19 = v18[7];
+            sub_1C1C718(Method_System_Array_Empty_byte___, 0LL);
+            v37 = v36[7];
           }
-          v20 = *(_QWORD *)(v19 + 16);
-          if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
-            v20 = sub_1BFD2F8();
-          if ( !*(_DWORD *)(v20 + 224) )
-            j_il2cpp_runtime_class_init_0(v20);
-          this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v18[7] + 16LL);
+          v38 = *(_QWORD *)(v37 + 16);
+          if ( (*(_BYTE *)(v38 + 309) & 1) == 0 )
+            v38 = sub_1C1C6BC();
+          if ( !*(_DWORD *)(v38 + 224) )
+            j_il2cpp_runtime_class_init_0(v38, req);
+          this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v36[7] + 16LL);
           if ( (*((_BYTE *)&this[9].fields.UnityEngine_Behaviour_Fields + 5) & 1) == 0 )
-            this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BFD2F8();
+            this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1C1C6BC();
           req = (UnityEngine_Networking_UnityWebRequest_o *)this[5].fields.m_CancellationTokenSource->klass;
         }
         if ( !unityWebRequestWww )
           goto LABEL_38;
         unityWebRequestWww->fields._bytes_k__BackingField = (struct System_Byte_array *)req;
-        sub_1BAB3C0(
-          (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._bytes_k__BackingField,
-          (int32_t)req,
-          v16,
-          v17);
+        sub_1BCA784(&unityWebRequestWww->fields._bytes_k__BackingField, req);
         ResponseHeaders = UnityEngine_Networking_UnityWebRequest__GetResponseHeaders(v5, 0LL);
         if ( ResponseHeaders )
         {
-          v24 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
+          v40 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
           unityWebRequestWww->fields._responseHeaders_k__BackingField = ResponseHeaders;
-          sub_1BAB3C0(
-            (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._responseHeaders_k__BackingField,
-            (int32_t)ResponseHeaders,
-            v22,
-            v23);
+          sub_1BCA784(&unityWebRequestWww->fields._responseHeaders_k__BackingField, ResponseHeaders);
           responseCode = UnityEngine_Networking_UnityWebRequest__get_responseCode(v5, 0LL);
-          v25 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &responseCode);
+          v41 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &responseCode);
           this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Format(
-                                                                         (System_String_o *)StringLiteral_7173/*"HTTP/1.1 {0} "*/,
-                                                                         v25,
+                                                                         (System_String_o *)StringLiteral_7294/*"HTTP/1.1 {0} "*/,
+                                                                         v41,
                                                                          0LL);
           if ( !unityWebRequestWww->fields._responseHeaders_k__BackingField )
             goto LABEL_38;
           System_Collections_Generic_Dictionary_object__object___Add(
             (System_Collections_Generic_Dictionary_object__object__o *)unityWebRequestWww->fields._responseHeaders_k__BackingField,
-            (Il2CppObject *)StringLiteral_12287/*"STATUS"*/,
+            (Il2CppObject *)StringLiteral_12416/*"STATUS"*/,
             (Il2CppObject *)this,
-            (const MethodInfo_321354C *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+            (const MethodInfo_3265260 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
           if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
-                 v24,
-                 (Il2CppObject *)StringLiteral_15728/*"X-Server-Time"*/,
+                 v40,
+                 (Il2CppObject *)StringLiteral_15864/*"X-Server-Time"*/,
                  &value,
-                 (const MethodInfo_3214D58 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__)
+                 (const MethodInfo_3266A6C *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__)
             && System_Int64__TryParse((System_String_o *)value, &result, 0LL) )
           {
-            v29 = result;
+            v45 = result;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4AB47BE )
+              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v42);
+            if ( !byte_4B14C44 )
             {
-              sub_1BAB41C(&NetworkManager_TypeInfo, v26);
-              byte_4AB47BE = 1;
+              sub_1BCA7E0(&NetworkManager_TypeInfo, v42, v43, v44);
+              byte_4B14C44 = 1;
             }
-            v30 = NetworkManager_TypeInfo;
+            v46 = NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              v30 = NetworkManager_TypeInfo;
+              j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v42);
+              v46 = NetworkManager_TypeInfo;
             }
-            v30->static_fields->serverTimeChkMovie = v29;
-            v31 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)StringLiteral_1/*""*/;
+            v46->static_fields->serverTimeChkMovie = v45;
+            v47 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)StringLiteral_1/*""*/;
             goto LABEL_36;
           }
         }
@@ -693,27 +714,23 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedire
                                                                    0LL);
     if ( this )
     {
-      v33 = UnityEngine_Networking_DownloadHandler__get_error((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
-      this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Concat_62059388(
+      v49 = UnityEngine_Networking_DownloadHandler__get_error((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
+      this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Concat_62412480(
                                                                      error,
                                                                      (System_String_o *)StringLiteral_116/*" "*/,
-                                                                     v33,
+                                                                     v49,
                                                                      0LL);
       if ( unityWebRequestWww )
       {
-        v31 = this;
+        v47 = this;
 LABEL_36:
-        unityWebRequestWww->fields._error_k__BackingField = (struct System_String_o *)v31;
-        sub_1BAB3C0(
-          (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._error_k__BackingField,
-          (int32_t)v31,
-          v27,
-          v28);
+        unityWebRequestWww->fields._error_k__BackingField = (struct System_String_o *)v47;
+        sub_1BCA784(&unityWebRequestWww->fields._error_k__BackingField, v47);
         goto LABEL_37;
       }
     }
 LABEL_38:
-    sub_1BAB678(this, req);
+    sub_1BCAA3C(this, req, unityWebRequestWww, method);
   }
   if ( !unityWebRequestWww )
     goto LABEL_38;
@@ -730,35 +747,39 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestR
 {
   UnityEngine_Networking_UnityWebRequest_o *v5; // x20
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x2
+  __int64 v8; // x3
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x3
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x3
   System_String_o *error; // x21
-  System_String_o *v12; // x0
-  int32_t v13; // w2
-  int32_t v14; // w3
-  int32_t v15; // w2
-  int32_t v16; // w3
-  _QWORD *v17; // x21
-  __int64 v18; // x8
-  __int64 v19; // x0
+  System_String_o *v22; // x0
+  _QWORD *v23; // x21
+  __int64 v24; // x8
+  __int64 v25; // x0
   struct System_Collections_Generic_Dictionary_string__string__o *ResponseHeaders; // x0
-  int32_t v21; // w2
-  int32_t v22; // w3
-  Il2CppObject *v23; // x0
+  Il2CppObject *v27; // x0
   int64_t responseCode; // [xsp+8h] [xbp-38h] BYREF
 
   v5 = req;
-  if ( (byte_4AB4788 & 1) == 0 )
+  if ( (byte_4B14C0E & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Array_Empty_byte___, req);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v6);
-    sub_1BAB41C(&long_TypeInfo, v7);
-    sub_1BAB41C(&StringLiteral_116/*" "*/, v8);
-    sub_1BAB41C(&StringLiteral_12287/*"STATUS"*/, v9);
-    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BAB41C(&StringLiteral_7173/*"HTTP/1.1 {0} "*/, v10);
-    byte_4AB4788 = 1;
+    sub_1BCA7E0(&Method_System_Array_Empty_byte___, req, unityWebRequestWww, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v6, v7, v8);
+    sub_1BCA7E0(&long_TypeInfo, v9, v10, v11);
+    sub_1BCA7E0(&StringLiteral_116/*" "*/, v12, v13, v14);
+    sub_1BCA7E0(&StringLiteral_12416/*"STATUS"*/, v15, v16, v17);
+    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BCA7E0(&StringLiteral_7294/*"HTTP/1.1 {0} "*/, v18, v19, v20);
+    byte_4B14C0E = 1;
   }
   if ( !v5 )
     goto LABEL_24;
@@ -770,20 +791,16 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestR
                                                                    0LL);
     if ( !this )
       goto LABEL_24;
-    v12 = UnityEngine_Networking_DownloadHandler__get_error((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
-    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Concat_62059388(
+    v22 = UnityEngine_Networking_DownloadHandler__get_error((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
+    this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Concat_62412480(
                                                                    error,
                                                                    (System_String_o *)StringLiteral_116/*" "*/,
-                                                                   v12,
+                                                                   v22,
                                                                    0LL);
     if ( !unityWebRequestWww )
       goto LABEL_24;
     unityWebRequestWww->fields._error_k__BackingField = (struct System_String_o *)this;
-    sub_1BAB3C0(
-      (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._error_k__BackingField,
-      (int32_t)this,
-      v13,
-      v14);
+    sub_1BCA784(&unityWebRequestWww->fields._error_k__BackingField, this);
   }
   this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)UnityEngine_Networking_UnityWebRequest__get_downloadHandler(
                                                                  v5,
@@ -796,54 +813,46 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestR
   req = (UnityEngine_Networking_UnityWebRequest_o *)this;
   if ( !this )
   {
-    v17 = Method_System_Array_Empty_byte___;
-    v18 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
-    if ( !v18 )
+    v23 = Method_System_Array_Empty_byte___;
+    v24 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
+    if ( !v24 )
     {
-      sub_1BFD354();
-      v18 = v17[7];
+      sub_1C1C718(Method_System_Array_Empty_byte___, 0LL);
+      v24 = v23[7];
     }
-    v19 = *(_QWORD *)(v18 + 16);
-    if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
-      v19 = sub_1BFD2F8();
-    if ( !*(_DWORD *)(v19 + 224) )
-      j_il2cpp_runtime_class_init_0(v19);
-    this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v17[7] + 16LL);
+    v25 = *(_QWORD *)(v24 + 16);
+    if ( (*(_BYTE *)(v25 + 309) & 1) == 0 )
+      v25 = sub_1C1C6BC();
+    if ( !*(_DWORD *)(v25 + 224) )
+      j_il2cpp_runtime_class_init_0(v25, req);
+    this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v23[7] + 16LL);
     if ( (*((_BYTE *)&this[9].fields.UnityEngine_Behaviour_Fields + 5) & 1) == 0 )
-      this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1BFD2F8();
+      this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_1C1C6BC();
     req = (UnityEngine_Networking_UnityWebRequest_o *)this[5].fields.m_CancellationTokenSource->klass;
   }
   if ( !unityWebRequestWww )
 LABEL_24:
-    sub_1BAB678(this, req);
+    sub_1BCAA3C(this, req, unityWebRequestWww, method);
   unityWebRequestWww->fields._bytes_k__BackingField = (struct System_Byte_array *)req;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._bytes_k__BackingField,
-    (int32_t)req,
-    v15,
-    v16);
+  sub_1BCA784(&unityWebRequestWww->fields._bytes_k__BackingField, req);
   ResponseHeaders = UnityEngine_Networking_UnityWebRequest__GetResponseHeaders(v5, 0LL);
   if ( ResponseHeaders )
   {
     unityWebRequestWww->fields._responseHeaders_k__BackingField = ResponseHeaders;
-    sub_1BAB3C0(
-      (ServantStatusBattleListViewItem_o *)&unityWebRequestWww->fields._responseHeaders_k__BackingField,
-      (int32_t)ResponseHeaders,
-      v21,
-      v22);
+    sub_1BCA784(&unityWebRequestWww->fields._responseHeaders_k__BackingField, ResponseHeaders);
     responseCode = UnityEngine_Networking_UnityWebRequest__get_responseCode(v5, 0LL);
-    v23 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &responseCode);
+    v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &responseCode);
     this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)System_String__Format(
-                                                                   (System_String_o *)StringLiteral_7173/*"HTTP/1.1 {0} "*/,
-                                                                   v23,
+                                                                   (System_String_o *)StringLiteral_7294/*"HTTP/1.1 {0} "*/,
+                                                                   v27,
                                                                    0LL);
     if ( unityWebRequestWww->fields._responseHeaders_k__BackingField )
     {
       System_Collections_Generic_Dictionary_object__object___Add(
         (System_Collections_Generic_Dictionary_object__object__o *)unityWebRequestWww->fields._responseHeaders_k__BackingField,
-        (Il2CppObject *)StringLiteral_12287/*"STATUS"*/,
+        (Il2CppObject *)StringLiteral_12416/*"STATUS"*/,
         (Il2CppObject *)this,
-        (const MethodInfo_321354C *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+        (const MethodInfo_3265260 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
       goto LABEL_23;
     }
     goto LABEL_24;
@@ -862,35 +871,25 @@ System_Collections_IEnumerator_o *__fastcall DelightWorks_Network_UnityWebReques
         const MethodInfo *method)
 {
   __int64 v11; // x24
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-  int32_t v20; // w2
-  int32_t v21; // w3
 
-  if ( (byte_4AB4786 & 1) == 0 )
+  if ( (byte_4B14C0C & 1) == 0 )
   {
-    sub_1BAB41C(&DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_TypeInfo, url);
-    byte_4AB4786 = 1;
+    sub_1BCA7E0(&DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_TypeInfo, url, postData, headers);
+    byte_4B14C0C = 1;
   }
-  v11 = sub_1BAB668(DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_TypeInfo);
+  v11 = sub_1BCAA2C(DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_TypeInfo, url, postData, headers);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   *(_DWORD *)(v11 + 16) = 0;
   *(_QWORD *)(v11 + 56) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 56), (int32_t)this, v12, v13);
+  sub_1BCA784(v11 + 56, this);
   *(_QWORD *)(v11 + 32) = url;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 32), (int32_t)url, v14, v15);
+  sub_1BCA784(v11 + 32, url);
   *(_QWORD *)(v11 + 40) = postData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 40), (int32_t)postData, v16, v17);
+  sub_1BCA784(v11 + 40, postData);
   *(_QWORD *)(v11 + 48) = headers;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 48), (int32_t)headers, v18, v19);
+  sub_1BCA784(v11 + 48, headers);
   *(_QWORD *)(v11 + 64) = unityWebRequestWww;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 64), (int32_t)unityWebRequestWww, v20, v21);
+  sub_1BCA784(v11 + 64, unityWebRequestWww);
   return (System_Collections_IEnumerator_o *)v11;
 }
 
@@ -904,35 +903,29 @@ System_Collections_IEnumerator_o *__fastcall DelightWorks_Network_UnityWebReques
         const MethodInfo *method)
 {
   __int64 v11; // x24
-  int32_t v12; // w2
-  int32_t v13; // w3
-  int32_t v14; // w2
-  int32_t v15; // w3
-  int32_t v16; // w2
-  int32_t v17; // w3
-  int32_t v18; // w2
-  int32_t v19; // w3
-  int32_t v20; // w2
-  int32_t v21; // w3
 
-  if ( (byte_4AB4787 & 1) == 0 )
+  if ( (byte_4B14C0D & 1) == 0 )
   {
-    sub_1BAB41C(&DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_TypeInfo, url);
-    byte_4AB4787 = 1;
+    sub_1BCA7E0(&DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_TypeInfo, url, postData, headers);
+    byte_4B14C0D = 1;
   }
-  v11 = sub_1BAB668(DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_TypeInfo);
+  v11 = sub_1BCAA2C(
+          DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_TypeInfo,
+          url,
+          postData,
+          headers);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   *(_DWORD *)(v11 + 16) = 0;
   *(_QWORD *)(v11 + 56) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 56), (int32_t)this, v12, v13);
+  sub_1BCA784(v11 + 56, this);
   *(_QWORD *)(v11 + 32) = url;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 32), (int32_t)url, v14, v15);
+  sub_1BCA784(v11 + 32, url);
   *(_QWORD *)(v11 + 40) = postData;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 40), (int32_t)postData, v16, v17);
+  sub_1BCA784(v11 + 40, postData);
   *(_QWORD *)(v11 + 48) = headers;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 48), (int32_t)headers, v18, v19);
+  sub_1BCA784(v11 + 48, headers);
   *(_QWORD *)(v11 + 64) = unityWebRequestWww;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v11 + 64), (int32_t)unityWebRequestWww, v20, v21);
+  sub_1BCA784(v11 + 64, unityWebRequestWww);
   return (System_Collections_IEnumerator_o *)v11;
 }
 
@@ -946,7 +939,7 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__StartGet(
   System_Collections_IEnumerator_o *v5; // x1
 
   v5 = DelightWorks_Network_UnityWebRequestWWWSingleton__Get(this, url, unityWebRequestWww, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
 }
 
 
@@ -967,7 +960,7 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__StartNoRedirec
          headers,
          unityWebRequestWww,
          method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
 }
 
 
@@ -982,7 +975,7 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__StartPost(
   System_Collections_IEnumerator_o *v7; // x1
 
   v7 = DelightWorks_Network_UnityWebRequestWWWSingleton__Post(this, url, postData, headers, unityWebRequestWww, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_69785892((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70139516((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
 }
 
 
@@ -1000,37 +993,38 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3__Move
         DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
+  __int64 v3; // x3
   int32_t _1__state; // w8
   System_String_o *url; // x20
-  System_Uri_o *v5; // x19
-  struct UnityEngine_Networking_UnityWebRequest_o *_72305616; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v7; // x0
-  int32_t v8; // w2
-  int32_t v9; // w3
+  System_Uri_o *v7; // x19
+  struct UnityEngine_Networking_UnityWebRequest_o *_72669944; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v9; // x0
   __int64 v10; // x1
-  UnityEngine_Networking_UnityWebRequest_o *v11; // x0
-  Il2CppObject *v12; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v13; // x0
-  int32_t v14; // w2
-  int32_t v15; // w3
+  __int64 v11; // x2
+  __int64 v12; // x3
+  UnityEngine_Networking_UnityWebRequest_o *v13; // x0
+  Il2CppObject *v14; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v15; // x0
   bool result; // w0
   UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x0
   struct DelightWorks_Network_UnityWebRequestWWWSingleton_o *_4__this; // x20
   System_String_o *error; // x0
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v21; // x1
-  const MethodInfo *v22; // x3
-  const MethodInfo *v23; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o **v24; // [xsp+8h] [xbp-28h]
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v25; // [xsp+18h] [xbp-18h] BYREF
+  __int64 v22; // x2
+  const MethodInfo *v23; // x3
+  const MethodInfo *v24; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o **v25; // [xsp+8h] [xbp-28h]
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *v26; // [xsp+18h] [xbp-18h] BYREF
 
-  v25 = this;
-  if ( (byte_4AB478D & 1) == 0 )
+  v26 = this;
+  if ( (byte_4B14C13 & 1) == 0 )
   {
-    sub_1BAB41C(&System_Uri_TypeInfo, method);
-    byte_4AB478D = 1;
+    sub_1BCA7E0(&System_Uri_TypeInfo, method, v2);
+    byte_4B14C13 = 1;
   }
-  v24 = &v25;
+  v25 = &v26;
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
@@ -1038,39 +1032,39 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3__Move
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -3;
     if ( !req_5__2 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method, v2, v3);
     error = UnityEngine_Networking_UnityWebRequest__get_error(req_5__2, 0LL);
     IsNullOrEmpty = System_String__IsNullOrEmpty(error, 0LL);
     if ( !_4__this )
-      sub_1BAB678(IsNullOrEmpty, v21);
+      sub_1BCAA3C(IsNullOrEmpty, v21, v22, v23);
     DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestResult(
       (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)IsNullOrEmpty,
-      v25->fields._req_5__2,
-      v25->fields.unityWebRequestWww,
-      v22);
-    DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3____m__Finally1(v25, v23);
+      v26->fields._req_5__2,
+      v26->fields.unityWebRequestWww,
+      v23);
+    DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3____m__Finally1(v26, v24);
     return 0;
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
   url = this->fields.url;
-  v5 = (System_Uri_o *)sub_1BAB668(System_Uri_TypeInfo);
-  System_Uri___ctor(v5, url, 0LL);
-  _72305616 = UnityEngine_Networking_UnityWebRequest__Get_72305616(v5, 0LL);
-  v7 = v25;
-  v25->fields._req_5__2 = _72305616;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v7->fields._req_5__2, (int32_t)_72305616, v8, v9);
-  v11 = v25->fields._req_5__2;
-  v25->fields.__1__state = -3;
-  if ( !v11 )
-    sub_1BAB678(0LL, v10);
-  v12 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v11, 0LL);
-  v13 = v25;
-  v25->fields.__2__current = v12;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v13->fields.__2__current, (int32_t)v12, v14, v15);
+  v7 = (System_Uri_o *)sub_1BCAA2C(System_Uri_TypeInfo, method, v2, v3);
+  System_Uri___ctor(v7, url, 0LL);
+  _72669944 = UnityEngine_Networking_UnityWebRequest__Get_72669944(v7, 0LL);
+  v9 = v26;
+  v26->fields._req_5__2 = _72669944;
+  sub_1BCA784(&v9->fields._req_5__2, _72669944);
+  v13 = v26->fields._req_5__2;
+  v26->fields.__1__state = -3;
+  if ( !v13 )
+    sub_1BCAA3C(0LL, v10, v11, v12);
+  v14 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v13, 0LL);
+  v15 = v26;
+  v26->fields.__2__current = v14;
+  sub_1BCA784(&v15->fields.__2__current, v14);
   result = 1;
-  v25->fields.__1__state = 1;
+  v26->fields.__1__state = 1;
   return result;
 }
 
@@ -1088,14 +1082,20 @@ void __fastcall __noreturn DelightWorks_Network_UnityWebRequestWWWSingleton__Get
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -1123,43 +1123,44 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3____m_
         DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x19
   UnityEngine_Networking_UnityWebRequest_c *klass; // x8
-  __int64 v5; // x9
+  __int64 v6; // x9
   int32_t *p_offset; // x10
-  __int64 v7; // x0
+  __int64 v8; // x0
 
-  if ( (byte_4AB478E & 1) == 0 )
+  if ( (byte_4B14C14 & 1) == 0 )
   {
-    sub_1BAB41C(&System_IDisposable_TypeInfo, method);
-    byte_4AB478E = 1;
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, method, v2);
+    byte_4B14C14 = 1;
   }
   req_5__2 = this->fields._req_5__2;
   this->fields.__1__state = -1;
   if ( req_5__2 )
   {
     klass = req_5__2->klass;
-    v5 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
+    v6 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&req_5__2->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v5;
+        --v6;
         p_offset += 4;
-        if ( !v5 )
+        if ( !v6 )
           goto LABEL_8;
       }
-      v7 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v8 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_8:
-      v7 = sub_1BFD3FC(req_5__2, System_IDisposable_TypeInfo, 0LL);
+      v8 = sub_1C1C7C0(req_5__2, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v7)(
+    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v8)(
       req_5__2,
-      *(_QWORD *)(v7 + 8));
+      *(_QWORD *)(v8 + 8));
   }
 }
 
@@ -1178,75 +1179,92 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect
         DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
   int32_t _1__state; // w8
   struct DelightWorks_Network_UnityWebRequestWWWSingleton_o *_4__this; // x22
   System_String_o *url; // x20
-  System_Uri_o *v14; // x19
-  struct UnityEngine_Networking_UnityWebRequest_o *v15; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v16; // x0
-  int32_t v17; // w2
-  int32_t v18; // w3
-  __int64 v19; // x1
-  UnityEngine_Networking_UnityWebRequest_o *v20; // x0
-  __int64 v21; // x1
+  System_Uri_o *v24; // x19
+  struct UnityEngine_Networking_UnityWebRequest_o *v25; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x3
+  UnityEngine_Networking_UnityWebRequest_o *v30; // x0
+  __int64 v31; // x1
+  __int64 v32; // x2
+  __int64 v33; // x3
   struct System_Collections_Generic_Dictionary_string__string__o *headers; // x0
-  struct System_Collections_Generic_Dictionary_string__string__o *v23; // x0
-  _BOOL8 v24; // x0
-  __int64 v25; // x1
-  const MethodInfo *v26; // x2
+  struct System_Collections_Generic_Dictionary_string__string__o *v35; // x0
+  _BOOL8 v36; // x0
+  __int64 v37; // x1
+  const MethodInfo *v38; // x2
+  __int64 v39; // x3
   Il2CppObject *value; // x21
-  UnityEngine_Networking_UnityWebRequest_o *v28; // x19
-  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v29; // x20
-  const MethodInfo *v30; // x2
-  System_String_o *v31; // x0
-  __int64 v32; // x1
+  UnityEngine_Networking_UnityWebRequest_o *v41; // x19
+  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v42; // x20
+  const MethodInfo *v43; // x2
+  System_String_o *v44; // x0
+  __int64 v45; // x1
+  __int64 v46; // x2
+  __int64 v47; // x3
   UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x0
   System_String_o *error; // x0
-  __int64 v35; // x1
-  const MethodInfo *v36; // x3
+  __int64 v50; // x1
+  __int64 v51; // x2
+  const MethodInfo *v52; // x3
   bool IsNullOrEmpty; // w8
   int64_t responseCode; // x0
-  const MethodInfo *v39; // x1
-  __int64 v40; // x1
-  UnityEngine_Networking_UnityWebRequest_o *v41; // x0
-  UnityEngine_Networking_UnityWebRequest_o *v42; // x0
-  System_String_o *v43; // x0
-  __int64 v44; // x1
+  const MethodInfo *v55; // x1
+  __int64 v56; // x1
+  __int64 v57; // x2
+  UnityEngine_Networking_UnityWebRequest_o *v58; // x0
+  UnityEngine_Networking_UnityWebRequest_o *v59; // x0
+  System_String_o *v60; // x0
+  __int64 v61; // x1
+  __int64 v62; // x2
+  __int64 v63; // x3
   bool result; // w0
-  UnityEngine_Networking_UnityWebRequest_o *v46; // x0
-  Il2CppObject *v47; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v48; // x0
-  int32_t v49; // w2
-  int32_t v50; // w3
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v51; // [xsp+8h] [xbp-98h] BYREF
-  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o **v52; // [xsp+38h] [xbp-68h]
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v53; // [xsp+40h] [xbp-60h] BYREF
-  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v54; // [xsp+68h] [xbp-38h] BYREF
+  UnityEngine_Networking_UnityWebRequest_o *v65; // x0
+  Il2CppObject *v66; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v67; // x0
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v68; // [xsp+8h] [xbp-98h] BYREF
+  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o **v69; // [xsp+38h] [xbp-68h]
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v70; // [xsp+40h] [xbp-60h] BYREF
+  DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *v71; // [xsp+68h] [xbp-38h] BYREF
 
-  v54 = this;
-  if ( (byte_4AB4791 & 1) == 0 )
+  v71 = this;
+  if ( (byte_4B14C17 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__, v5);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v8);
-    sub_1BAB41C(&System_Uri_TypeInfo, v9);
-    sub_1BAB41C(&StringLiteral_11227/*"Redirect limit exceeded"*/, v10);
-    byte_4AB4791 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v5, v6);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__, v7, v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__, v9, v10);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__, v11, v12);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v13, v14);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v15, v16);
+    sub_1BCA7E0(&System_Uri_TypeInfo, v17, v18);
+    sub_1BCA7E0(&StringLiteral_11355/*"Redirect limit exceeded"*/, v19, v20);
+    byte_4B14C17 = 1;
   }
-  memset(&v53, 0, sizeof(v53));
-  v52 = &v54;
+  memset(&v70, 0, sizeof(v70));
+  v69 = &v71;
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
   if ( _1__state == 1 )
@@ -1254,123 +1272,123 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect
     req_5__2 = this->fields._req_5__2;
     this->fields.__1__state = -3;
     if ( !req_5__2 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method, v2, v3);
     error = UnityEngine_Networking_UnityWebRequest__get_error(req_5__2, 0LL);
     IsNullOrEmpty = System_String__IsNullOrEmpty(error, 0LL);
-    responseCode = (int64_t)v54->fields._req_5__2;
+    responseCode = (int64_t)v71->fields._req_5__2;
     if ( IsNullOrEmpty )
     {
       if ( !_4__this )
-        sub_1BAB678(responseCode, v35);
+        sub_1BCAA3C(responseCode, v50, v51, v52);
     }
     else
     {
       if ( !responseCode )
-        sub_1BAB678(0LL, v35);
+        sub_1BCAA3C(0LL, v50, v51, v52);
       responseCode = UnityEngine_Networking_UnityWebRequest__get_result(
                        (UnityEngine_Networking_UnityWebRequest_o *)responseCode,
                        0LL);
       if ( (_DWORD)responseCode != 2 )
         goto LABEL_27;
-      v41 = v54->fields._req_5__2;
-      if ( !v41 )
-        sub_1BAB678(0LL, v40);
-      responseCode = UnityEngine_Networking_UnityWebRequest__get_responseCode(v41, 0LL);
+      v58 = v71->fields._req_5__2;
+      if ( !v58 )
+        sub_1BCAA3C(0LL, v56, v57, v52);
+      responseCode = UnityEngine_Networking_UnityWebRequest__get_responseCode(v58, 0LL);
       if ( responseCode != 303 )
         goto LABEL_27;
-      v42 = v54->fields._req_5__2;
-      if ( !v42 )
-        sub_1BAB678(0LL, v40);
-      v43 = UnityEngine_Networking_UnityWebRequest__get_error(v42, 0LL);
-      if ( !v43 )
-        sub_1BAB678(0LL, v44);
-      responseCode = System_String__Contains(v43, (System_String_o *)StringLiteral_11227/*"Redirect limit exceeded"*/, 0LL);
+      v59 = v71->fields._req_5__2;
+      if ( !v59 )
+        sub_1BCAA3C(0LL, v56, v57, v52);
+      v60 = UnityEngine_Networking_UnityWebRequest__get_error(v59, 0LL);
+      if ( !v60 )
+        sub_1BCAA3C(0LL, v61, v62, v63);
+      responseCode = System_String__Contains(v60, (System_String_o *)StringLiteral_11355/*"Redirect limit exceeded"*/, 0LL);
       if ( (responseCode & 1) == 0 )
       {
 LABEL_27:
         if ( !_4__this )
-          sub_1BAB678(responseCode, v40);
+          sub_1BCAA3C(responseCode, v56, v57, v52);
         DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestResult(
           (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)responseCode,
-          v54->fields._req_5__2,
-          v54->fields.unityWebRequestWww,
-          v36);
+          v71->fields._req_5__2,
+          v71->fields.unityWebRequestWww,
+          v52);
         goto LABEL_29;
       }
       if ( !_4__this )
-        sub_1BAB678(responseCode, v40);
+        sub_1BCAA3C(responseCode, v56, v57, v52);
     }
     DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedirectRequestResult(
       (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)responseCode,
-      v54->fields._req_5__2,
-      v54->fields.unityWebRequestWww,
-      v36);
+      v71->fields._req_5__2,
+      v71->fields.unityWebRequestWww,
+      v52);
 LABEL_29:
-    DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5____m__Finally1(v54, v39);
+    DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5____m__Finally1(v71, v55);
     return 0;
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
   url = this->fields.url;
-  v14 = (System_Uri_o *)sub_1BAB668(System_Uri_TypeInfo);
-  System_Uri___ctor(v14, url, 0LL);
-  v15 = UnityEngine_Networking_UnityWebRequest__Post(v14, v54->fields.postData, 0LL);
-  v16 = v54;
-  v54->fields._req_5__2 = v15;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v16->fields._req_5__2, (int32_t)v15, v17, v18);
-  v20 = v54->fields._req_5__2;
-  v54->fields.__1__state = -3;
-  if ( !v20 )
-    sub_1BAB678(0LL, v19);
-  UnityEngine_Networking_UnityWebRequest__set_redirectLimit(v20, 0, 0LL);
-  headers = v54->fields.headers;
+  v24 = (System_Uri_o *)sub_1BCAA2C(System_Uri_TypeInfo, method, v2, v3);
+  System_Uri___ctor(v24, url, 0LL);
+  v25 = UnityEngine_Networking_UnityWebRequest__Post(v24, v71->fields.postData, 0LL);
+  v26 = v71;
+  v71->fields._req_5__2 = v25;
+  sub_1BCA784(&v26->fields._req_5__2, v25);
+  v30 = v71->fields._req_5__2;
+  v71->fields.__1__state = -3;
+  if ( !v30 )
+    sub_1BCAA3C(0LL, v27, v28, v29);
+  UnityEngine_Networking_UnityWebRequest__set_redirectLimit(v30, 0, 0LL);
+  headers = v71->fields.headers;
   if ( headers
     && System_Collections_Generic_Dictionary_object__object___get_Count(
          (System_Collections_Generic_Dictionary_object__object__o *)headers,
-         (const MethodInfo_321321C *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) >= 1 )
+         (const MethodInfo_3264F30 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) >= 1 )
   {
-    v23 = v54->fields.headers;
-    if ( !v23 )
-      sub_1BAB678(0LL, v21);
+    v35 = v71->fields.headers;
+    if ( !v35 )
+      sub_1BCAA3C(0LL, v31, v32, v33);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v51,
-      (System_Collections_Generic_Dictionary_object__object__o *)v23,
-      (const MethodInfo_321397C *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
-    v53 = v51;
+      &v68,
+      (System_Collections_Generic_Dictionary_object__object__o *)v35,
+      (const MethodInfo_3265690 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
+    v70 = v68;
     while ( 1 )
     {
-      v24 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v53,
-              (const MethodInfo_331195C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__);
-      if ( !v24 )
+      v36 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
+              &v70,
+              (const MethodInfo_3364380 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__);
+      if ( !v36 )
         break;
       if ( !_4__this )
-        sub_1BAB678(v24, v25);
-      value = v53.fields._current.fields.value;
-      v28 = v54->fields._req_5__2;
-      v29 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
-                                                                    (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v24,
-                                                                    (System_String_o *)v53.fields._current.fields.key,
-                                                                    v26);
-      v31 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v29, (System_String_o *)value, v30);
-      if ( !v28 )
-        sub_1BAB678(v31, v32);
-      UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v28, (System_String_o *)v29, v31, 0LL);
+        sub_1BCAA3C(v36, v37, v38, v39);
+      value = v70.fields._current.fields.value;
+      v41 = v71->fields._req_5__2;
+      v42 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
+                                                                    (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v36,
+                                                                    (System_String_o *)v70.fields._current.fields.key,
+                                                                    v38);
+      v44 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v42, (System_String_o *)value, v43);
+      if ( !v41 )
+        sub_1BCAA3C(v44, v45, v46, v47);
+      UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v41, (System_String_o *)v42, v44, 0LL);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v53,
-      (const MethodInfo_3311A7C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
+      &v70,
+      (const MethodInfo_33644A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
   }
-  v46 = v54->fields._req_5__2;
-  if ( !v46 )
-    sub_1BAB678(0LL, v21);
-  v47 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v46, 0LL);
-  v48 = v54;
-  v54->fields.__2__current = v47;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v48->fields.__2__current, (int32_t)v47, v49, v50);
+  v65 = v71->fields._req_5__2;
+  if ( !v65 )
+    sub_1BCAA3C(0LL, v31, v32, v33);
+  v66 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v65, 0LL);
+  v67 = v71;
+  v71->fields.__2__current = v66;
+  sub_1BCA784(&v67->fields.__2__current, v66);
   result = 1;
-  v54->fields.__1__state = 1;
+  v71->fields.__1__state = 1;
   return result;
 }
 
@@ -1388,14 +1406,20 @@ void __fastcall __noreturn DelightWorks_Network_UnityWebRequestWWWSingleton__Pos
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -1423,43 +1447,44 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect
         DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x19
   UnityEngine_Networking_UnityWebRequest_c *klass; // x8
-  __int64 v5; // x9
+  __int64 v6; // x9
   int32_t *p_offset; // x10
-  __int64 v7; // x0
+  __int64 v8; // x0
 
-  if ( (byte_4AB4792 & 1) == 0 )
+  if ( (byte_4B14C18 & 1) == 0 )
   {
-    sub_1BAB41C(&System_IDisposable_TypeInfo, method);
-    byte_4AB4792 = 1;
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, method, v2);
+    byte_4B14C18 = 1;
   }
   req_5__2 = this->fields._req_5__2;
   this->fields.__1__state = -1;
   if ( req_5__2 )
   {
     klass = req_5__2->klass;
-    v5 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
+    v6 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&req_5__2->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v5;
+        --v6;
         p_offset += 4;
-        if ( !v5 )
+        if ( !v6 )
           goto LABEL_8;
       }
-      v7 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v8 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_8:
-      v7 = sub_1BFD3FC(req_5__2, System_IDisposable_TypeInfo, 0LL);
+      v8 = sub_1C1C7C0(req_5__2, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v7)(
+    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v8)(
       req_5__2,
-      *(_QWORD *)(v7 + 8));
+      *(_QWORD *)(v8 + 8));
   }
 }
 
@@ -1478,65 +1503,76 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4__Mov
         DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x1
+  __int64 v18; // x2
   int32_t _1__state; // w8
   struct DelightWorks_Network_UnityWebRequestWWWSingleton_o *_4__this; // x22
   System_String_o *url; // x20
-  System_Uri_o *v13; // x19
-  struct UnityEngine_Networking_UnityWebRequest_o *v14; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v15; // x0
-  int32_t v16; // w2
-  int32_t v17; // w3
-  __int64 v18; // x1
+  System_Uri_o *v22; // x19
+  struct UnityEngine_Networking_UnityWebRequest_o *v23; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v24; // x0
+  __int64 v25; // x1
+  __int64 v26; // x2
+  __int64 v27; // x3
   struct System_Collections_Generic_Dictionary_string__string__o *headers; // x0
-  struct System_Collections_Generic_Dictionary_string__string__o *v20; // x0
-  _BOOL8 v21; // x0
-  __int64 v22; // x1
-  const MethodInfo *v23; // x2
+  struct System_Collections_Generic_Dictionary_string__string__o *v29; // x0
+  _BOOL8 v30; // x0
+  __int64 v31; // x1
+  const MethodInfo *v32; // x2
+  __int64 v33; // x3
   Il2CppObject *value; // x21
-  UnityEngine_Networking_UnityWebRequest_o *v25; // x19
-  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v26; // x20
-  const MethodInfo *v27; // x2
-  System_String_o *v28; // x0
-  __int64 v29; // x1
+  UnityEngine_Networking_UnityWebRequest_o *v35; // x19
+  DelightWorks_Network_UnityWebRequestWWWSingleton_o *v36; // x20
+  const MethodInfo *v37; // x2
+  System_String_o *v38; // x0
+  __int64 v39; // x1
+  __int64 v40; // x2
+  __int64 v41; // x3
   UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x0
   System_String_o *error; // x0
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v33; // x1
-  const MethodInfo *v34; // x3
-  const MethodInfo *v35; // x1
+  __int64 v45; // x1
+  __int64 v46; // x2
+  const MethodInfo *v47; // x3
+  const MethodInfo *v48; // x1
   bool result; // w0
-  UnityEngine_Networking_UnityWebRequest_o *v37; // x0
-  Il2CppObject *v38; // x1
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v39; // x0
-  int32_t v40; // w2
-  int32_t v41; // w3
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v42; // [xsp+8h] [xbp-98h] BYREF
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o **v43; // [xsp+38h] [xbp-68h]
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v44; // [xsp+40h] [xbp-60h] BYREF
-  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v45; // [xsp+68h] [xbp-38h] BYREF
+  UnityEngine_Networking_UnityWebRequest_o *v50; // x0
+  Il2CppObject *v51; // x1
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v52; // x0
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v53; // [xsp+8h] [xbp-98h] BYREF
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o **v54; // [xsp+38h] [xbp-68h]
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v55; // [xsp+40h] [xbp-60h] BYREF
+  DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *v56; // [xsp+68h] [xbp-38h] BYREF
 
-  v45 = this;
-  if ( (byte_4AB478F & 1) == 0 )
+  v56 = this;
+  if ( (byte_4B14C15 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__, v5);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v8);
-    sub_1BAB41C(&System_Uri_TypeInfo, v9);
-    byte_4AB478F = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v5, v6);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__, v7, v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__, v9, v10);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string__get_Current__, v11, v12);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v13, v14);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v15, v16);
+    sub_1BCA7E0(&System_Uri_TypeInfo, v17, v18);
+    byte_4B14C15 = 1;
   }
-  memset(&v44, 0, sizeof(v44));
-  v43 = &v45;
+  memset(&v55, 0, sizeof(v55));
+  v54 = &v56;
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
   if ( _1__state == 1 )
@@ -1544,77 +1580,77 @@ bool __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4__Mov
     req_5__2 = this->fields._req_5__2;
     this->fields.__1__state = -3;
     if ( !req_5__2 )
-      sub_1BAB678(0LL, method);
+      sub_1BCAA3C(0LL, method, v2, v3);
     error = UnityEngine_Networking_UnityWebRequest__get_error(req_5__2, 0LL);
     IsNullOrEmpty = System_String__IsNullOrEmpty(error, 0LL);
     if ( !_4__this )
-      sub_1BAB678(IsNullOrEmpty, v33);
+      sub_1BCAA3C(IsNullOrEmpty, v45, v46, v47);
     DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestResult(
       (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)IsNullOrEmpty,
-      v45->fields._req_5__2,
-      v45->fields.unityWebRequestWww,
-      v34);
-    DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4____m__Finally1(v45, v35);
+      v56->fields._req_5__2,
+      v56->fields.unityWebRequestWww,
+      v47);
+    DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4____m__Finally1(v56, v48);
     return 0;
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
   url = this->fields.url;
-  v13 = (System_Uri_o *)sub_1BAB668(System_Uri_TypeInfo);
-  System_Uri___ctor(v13, url, 0LL);
-  v14 = UnityEngine_Networking_UnityWebRequest__Post(v13, v45->fields.postData, 0LL);
-  v15 = v45;
-  v45->fields._req_5__2 = v14;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v15->fields._req_5__2, (int32_t)v14, v16, v17);
-  headers = v45->fields.headers;
-  v45->fields.__1__state = -3;
+  v22 = (System_Uri_o *)sub_1BCAA2C(System_Uri_TypeInfo, method, v2, v3);
+  System_Uri___ctor(v22, url, 0LL);
+  v23 = UnityEngine_Networking_UnityWebRequest__Post(v22, v56->fields.postData, 0LL);
+  v24 = v56;
+  v56->fields._req_5__2 = v23;
+  sub_1BCA784(&v24->fields._req_5__2, v23);
+  headers = v56->fields.headers;
+  v56->fields.__1__state = -3;
   if ( headers
     && System_Collections_Generic_Dictionary_object__object___get_Count(
          (System_Collections_Generic_Dictionary_object__object__o *)headers,
-         (const MethodInfo_321321C *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) >= 1 )
+         (const MethodInfo_3264F30 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) >= 1 )
   {
-    v20 = v45->fields.headers;
-    if ( !v20 )
-      sub_1BAB678(0LL, v18);
+    v29 = v56->fields.headers;
+    if ( !v29 )
+      sub_1BCAA3C(0LL, v25, v26, v27);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v42,
-      (System_Collections_Generic_Dictionary_object__object__o *)v20,
-      (const MethodInfo_321397C *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
-    v44 = v42;
+      &v53,
+      (System_Collections_Generic_Dictionary_object__object__o *)v29,
+      (const MethodInfo_3265690 *)Method_System_Collections_Generic_Dictionary_string__string__GetEnumerator__);
+    v55 = v53;
     while ( 1 )
     {
-      v21 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v44,
-              (const MethodInfo_331195C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__);
-      if ( !v21 )
+      v30 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
+              &v55,
+              (const MethodInfo_3364380 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__MoveNext__);
+      if ( !v30 )
         break;
       if ( !_4__this )
-        sub_1BAB678(v21, v22);
-      value = v44.fields._current.fields.value;
-      v25 = v45->fields._req_5__2;
-      v26 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
-                                                                    (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v21,
-                                                                    (System_String_o *)v44.fields._current.fields.key,
-                                                                    v23);
-      v28 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v26, (System_String_o *)value, v27);
-      if ( !v25 )
-        sub_1BAB678(v28, v29);
-      UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v25, (System_String_o *)v26, v28, 0LL);
+        sub_1BCAA3C(v30, v31, v32, v33);
+      value = v55.fields._current.fields.value;
+      v35 = v56->fields._req_5__2;
+      v36 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
+                                                                    (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v30,
+                                                                    (System_String_o *)v55.fields._current.fields.key,
+                                                                    v32);
+      v38 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v36, (System_String_o *)value, v37);
+      if ( !v35 )
+        sub_1BCAA3C(v38, v39, v40, v41);
+      UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v35, (System_String_o *)v36, v38, 0LL);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v44,
-      (const MethodInfo_3311A7C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
+      &v55,
+      (const MethodInfo_33644A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string__Dispose__);
   }
-  v37 = v45->fields._req_5__2;
-  if ( !v37 )
-    sub_1BAB678(0LL, v18);
-  v38 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v37, 0LL);
-  v39 = v45;
-  v45->fields.__2__current = v38;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&v39->fields.__2__current, (int32_t)v38, v40, v41);
+  v50 = v56->fields._req_5__2;
+  if ( !v50 )
+    sub_1BCAA3C(0LL, v25, v26, v27);
+  v51 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v50, 0LL);
+  v52 = v56;
+  v56->fields.__2__current = v51;
+  sub_1BCA784(&v52->fields.__2__current, v51);
   result = 1;
-  v45->fields.__1__state = 1;
+  v56->fields.__1__state = 1;
   return result;
 }
 
@@ -1632,14 +1668,20 @@ void __fastcall __noreturn DelightWorks_Network_UnityWebRequestWWWSingleton__Pos
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 
@@ -1667,43 +1709,44 @@ void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4____m
         DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x19
   UnityEngine_Networking_UnityWebRequest_c *klass; // x8
-  __int64 v5; // x9
+  __int64 v6; // x9
   int32_t *p_offset; // x10
-  __int64 v7; // x0
+  __int64 v8; // x0
 
-  if ( (byte_4AB4790 & 1) == 0 )
+  if ( (byte_4B14C16 & 1) == 0 )
   {
-    sub_1BAB41C(&System_IDisposable_TypeInfo, method);
-    byte_4AB4790 = 1;
+    sub_1BCA7E0(&System_IDisposable_TypeInfo, method, v2);
+    byte_4B14C16 = 1;
   }
   req_5__2 = this->fields._req_5__2;
   this->fields.__1__state = -1;
   if ( req_5__2 )
   {
     klass = req_5__2->klass;
-    v5 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
+    v6 = *(unsigned __int16 *)(&req_5__2->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&req_5__2->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v5;
+        --v6;
         p_offset += 4;
-        if ( !v5 )
+        if ( !v6 )
           goto LABEL_8;
       }
-      v7 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v8 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_8:
-      v7 = sub_1BFD3FC(req_5__2, System_IDisposable_TypeInfo, 0LL);
+      v8 = sub_1C1C7C0(req_5__2, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v7)(
+    (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v8)(
       req_5__2,
-      *(_QWORD *)(v7 + 8));
+      *(_QWORD *)(v8 + 8));
   }
 }
 
@@ -1711,23 +1754,19 @@ LABEL_8:
 void __fastcall DelightWorks_Network_UnityWebRequestWWWSingleton___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
 
-  if ( (byte_4AB478C & 1) == 0 )
+  if ( (byte_4B14C12 & 1) == 0 )
   {
-    sub_1BAB41C(&DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v1);
-    byte_4AB478C = 1;
+    sub_1BCA7E0(&DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v1, v2);
+    byte_4B14C12 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BAB668(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields->__9 = (struct DelightWorks_Network_UnityWebRequestWWWSingleton___c_o *)v2;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+  v4 = (Il2CppObject *)sub_1BCAA2C(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo, v1, v2, v3);
+  System_Object___ctor(v4, 0LL);
+  DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields->__9 = (struct DelightWorks_Network_UnityWebRequestWWWSingleton___c_o *)v4;
+  sub_1BCA784(DelightWorks_Network_UnityWebRequestWWWSingleton___c_TypeInfo->static_fields, v4);
 }
 
 

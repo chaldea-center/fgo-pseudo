@@ -32,13 +32,13 @@ void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4AB8F81 & 1) == 0 )
+  if ( (byte_4B19472 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, data);
-    byte_4AB8F81 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, data, method);
+    byte_4B19472 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, data);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)data, 0LL, 0LL) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -47,7 +47,7 @@ void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
            data,
            this->klass[1]._1.image);
     if ( !gameObject )
-      sub_1BAB678(v6, v7);
+      sub_1BCAA3C(v6, v7);
     UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0LL);
   }
 }

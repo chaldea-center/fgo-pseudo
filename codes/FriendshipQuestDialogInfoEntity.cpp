@@ -2,14 +2,16 @@ void __fastcall FriendshipQuestDialogInfoEntity___ctor(
         FriendshipQuestDialogInfoEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AB5F81 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16426 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5F81 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16426 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,15 +21,15 @@ System_String_o *__fastcall FriendshipQuestDialogInfoEntity__CreatePK(
         int32_t questId,
         const MethodInfo *method)
 {
-  if ( (byte_4AB5F80 & 1) == 0 )
+  if ( (byte_4B16425 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questId);
-    byte_4AB5F80 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questId, method);
+    byte_4B16425 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            questId,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -35,23 +37,24 @@ System_String_o *__fastcall FriendshipQuestDialogInfoEntity__CreatePrimaryKey(
         FriendshipQuestDialogInfoEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x21
-  int32_t v5; // w0
-  const MethodInfo *v6; // x2
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
+  __int64 v2; // x2
+  __int64 v4; // x20
+  __int64 v5; // x21
+  int32_t v6; // w0
+  const MethodInfo *v7; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
-  if ( (byte_4AB5F7F & 1) == 0 )
+  if ( (byte_4B16424 & 1) == 0 )
   {
-    sub_1BAB41C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4AB5F7F = 1;
+    sub_1BCA7E0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method, v2);
+    byte_4B16424 = 1;
   }
-  v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
-  v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
+  v5 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
+  v4 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v8.fields.currentCryptoKey = v4;
-  *(_QWORD *)&v8.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_46695852(v8, 0LL);
-  return FriendshipQuestDialogInfoEntity__CreatePK(v5, this->fields.questId, v6);
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+  *(_QWORD *)&v9.fields.currentCryptoKey = v5;
+  *(_QWORD *)&v9.fields.fakeValue = v4;
+  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(v9, 0LL);
+  return FriendshipQuestDialogInfoEntity__CreatePK(v6, this->fields.questId, v7);
 }

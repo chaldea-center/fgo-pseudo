@@ -1,26 +1,30 @@
 void __fastcall UserHeelPortraitEntity___ctor(UserHeelPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6A9B & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16F4E & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB6A9B = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B16F4E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall UserHeelPortraitEntity__CreatePK(int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4AB6A9A & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16F4D & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int___, method);
-    byte_4AB6A9A = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int___, method, v2);
+    byte_4B16F4D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            eventId,
-           (const MethodInfo_2EC242C *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_2F10D48 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 

@@ -3,16 +3,24 @@ void __fastcall WarBoardCallbackTask___ctor(
         UnityEngine_CustomYieldInstruction_o *waitYieldInstruction,
         const MethodInfo *method)
 {
-  int32_t v5; // w2
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)waitYieldInstruction);
   this->fields.waitYieldInstruction = waitYieldInstruction;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.waitYieldInstruction,
-    (int32_t)waitYieldInstruction,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.waitYieldInstruction,
+    (int64_t)waitYieldInstruction,
     v5,
-    v6);
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -20,21 +28,27 @@ System_Collections_IEnumerator_o *__fastcall WarBoardCallbackTask__Execute(
         WarBoardCallbackTask_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4AB3BE4 & 1) == 0 )
+  if ( (byte_4B14060 & 1) == 0 )
   {
-    sub_1BAB41C(&WarBoardCallbackTask__Execute_d__2_TypeInfo, method);
-    byte_4AB3BE4 = 1;
+    sub_1BCA7E0(&WarBoardCallbackTask__Execute_d__2_TypeInfo, method, v2);
+    byte_4B14060 = 1;
   }
-  v3 = sub_1BAB668(WarBoardCallbackTask__Execute_d__2_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v3 + 32), (int32_t)this, v4, v5);
-  return (System_Collections_IEnumerator_o *)v3;
+  v5 = sub_1BCAA2C(WarBoardCallbackTask__Execute_d__2_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
+  *(_QWORD *)(v5 + 32) = this;
+  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -52,8 +66,12 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
         WarBoardCallbackTask__Execute_d__2_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
+  int64_t v2; // x2
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
   int32_t _1__state; // w8
   struct WarBoardCallbackTask_o *_4__this; // x8
   Il2CppObject *waitYieldInstruction; // x1
@@ -73,7 +91,7 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1BAB678(this, method);
+      sub_1BCAA3C(this, method);
     waitYieldInstruction = (Il2CppObject *)_4__this->fields.waitYieldInstruction;
     if ( !waitYieldInstruction )
     {
@@ -83,11 +101,15 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     {
       this->fields.__2__current = waitYieldInstruction;
       p__2__current = &this->fields.__2__current;
-      sub_1BAB3C0(
-        (ServantStatusBattleListViewItem_o *)&this->fields.__2__current,
-        (int32_t)waitYieldInstruction,
+      sub_1BCA784(
+        (PartyOrganizationUtility_o *)&this->fields.__2__current,
+        (int64_t)waitYieldInstruction,
         v2,
-        v3);
+        v3,
+        v4,
+        v5,
+        v6,
+        v7);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -109,14 +131,18 @@ void __fastcall __noreturn WarBoardCallbackTask__Execute_d__2__System_Collection
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__, v7);
+  sub_1BCA908(v6, v8);
 }
 
 

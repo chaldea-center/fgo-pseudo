@@ -1,12 +1,14 @@
 void __fastcall VoiceEffectComponent___ctor(VoiceEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB7143 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B17605 & 1) == 0 )
   {
-    sub_1BAB41C(&CommonEffectComponent_TypeInfo, method);
-    byte_4AB7143 = 1;
+    sub_1BCA7E0(&CommonEffectComponent_TypeInfo, method, v2);
+    byte_4B17605 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, method);
 }
 
@@ -16,35 +18,40 @@ void __fastcall VoiceEffectComponent__LoadVoiceAsset(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v5; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   Il2CppObject *voiceDataStr; // x21
   Il2CppObject *v10; // x0
   struct System_String_o *v11; // x0
   struct System_String_o **p_voicePath; // x20
-  int32_t v13; // w2
+  int64_t v13; // x2
   int32_t v14; // w3
-  System_String_o *v15; // x20
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  __int64 v19; // x1
+  System_String_o *v20; // x20
   int32_t voiceId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4AB7142 & 1) == 0 )
+  if ( (byte_4B17604 & 1) == 0 )
   {
-    sub_1BAB41C(&int_TypeInfo, callback);
-    sub_1BAB41C(&SoundManager_TypeInfo, v7);
-    sub_1BAB41C(&StringLiteral_25141/*"{0}_{1}"*/, v8);
-    byte_4AB7142 = 1;
+    sub_1BCA7E0(&int_TypeInfo, callback, method);
+    sub_1BCA7E0(&SoundManager_TypeInfo, v5, v6);
+    sub_1BCA7E0(&StringLiteral_25353/*"{0}_{1}"*/, v7, v8);
+    byte_4B17604 = 1;
   }
   voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
   voiceId = this->fields.voiceId;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voiceId, method, v3, v4);
-  v11 = System_String__Format_62062500((System_String_o *)StringLiteral_25141/*"{0}_{1}"*/, voiceDataStr, v10, 0LL);
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voiceId);
+  v11 = System_String__Format_62415592((System_String_o *)StringLiteral_25353/*"{0}_{1}"*/, voiceDataStr, v10, 0LL);
   this->fields.voicePath = v11;
   p_voicePath = &this->fields.voicePath;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_voicePath, (int32_t)v11, v13, v14);
-  v15 = *p_voicePath;
+  sub_1BCA784((PartyOrganizationUtility_o *)p_voicePath, (int64_t)v11, v13, v14, v15, v16, v17, v18);
+  v20 = *p_voicePath;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__loadAudioAssetStorage(v15, callback, 1, 0LL);
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v19);
+  SoundManager__loadAudioAssetStorage(v20, callback, 1, 0LL);
 }

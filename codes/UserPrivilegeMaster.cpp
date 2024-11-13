@@ -1,14 +1,16 @@
 void __fastcall UserPrivilegeMaster___ctor(UserPrivilegeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6AD5 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16F88 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string___ctor__, method);
-    byte_4AB6AD5 = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string___ctor__, method, v2);
+    byte_4B16F88 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     283,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,19 @@ UserPrivilegeEntity_o *__fastcall UserPrivilegeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB6AD3 & 1) == 0 )
+  if ( (byte_4B16F86 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__GetEntity__, userId);
-    byte_4AB6AD3 = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__GetEntity__,
+      userId,
+      *(_QWORD *)&privilegeId);
+    byte_4B16F86 = 1;
   }
   PK = (Il2CppObject *)UserPrivilegeEntity__CreatePK(userId, privilegeId, *(const MethodInfo **)&privilegeId);
   return (UserPrivilegeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_31640E8 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__GetEntity__);
+                                    (const MethodInfo_31B3198 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +48,15 @@ bool __fastcall UserPrivilegeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB6AD4 & 1) == 0 )
+  if ( (byte_4B16F87 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__TryGetEntity__, entity);
-    byte_4AB6AD4 = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__TryGetEntity__, entity, userId);
+    byte_4B16F87 = 1;
   }
   PK = (Il2CppObject *)UserPrivilegeEntity__CreatePK(userId, privilegeId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_UserPrivilegeMaster__UserPrivilegeEntity__string__TryGetEntity__);
 }

@@ -18,6 +18,7 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventSaveData__SetValueByArray(
         EventSaveData_o *this,
         System_String_array *valueArray,
@@ -26,23 +27,27 @@ void __fastcall EventSaveData__SetValueByArray(
 {
   System_String_o *v6; // x0
   struct System_String_o *v7; // x0
-  int32_t v8; // w2
+  int64_t v8; // x2
   int32_t v9; // w3
-  uint16_t v10; // [xsp+Ch] [xbp-24h] BYREF
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
-  v10 = separator;
-  if ( (byte_4AB31F9 & 1) == 0 )
+  v14 = separator;
+  if ( (byte_4B13671 & 1) == 0 )
   {
-    sub_1BAB41C(&char_TypeInfo, valueArray);
-    byte_4AB31F9 = 1;
+    sub_1BCA7E0(&char_TypeInfo, valueArray, separator);
+    byte_4B13671 = 1;
   }
   if ( valueArray )
   {
     if ( !char_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(char_TypeInfo);
-    v6 = System_Char__ToString((uint16_t)&v10, 0LL);
+      j_il2cpp_runtime_class_init_0(char_TypeInfo, valueArray);
+    v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.value, (int32_t)v7, v8, v9);
+    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

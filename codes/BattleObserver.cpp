@@ -6,14 +6,18 @@ void __fastcall BattleObserver___ctor(BattleObserver_o *this, const MethodInfo *
 
 void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *subject, const MethodInfo *method)
 {
-  int32_t v5; // w2
+  int64_t v5; // x2
   int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
   if ( subject )
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)subject, v5, v6);
+    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)subject, v5, v6, v7, v8, v9, v10);
   }
 }
 

@@ -4,6 +4,7 @@ void __fastcall ServantCostumeCombineRequest___ctor(ServantCostumeCombineRequest
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantCostumeCombineRequest__beginRequest(
         ServantCostumeCombineRequest_o *this,
         int64_t baseUserSvtId,
@@ -12,18 +13,20 @@ void __fastcall ServantCostumeCombineRequest__beginRequest(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
 
-  if ( (byte_4AB76A4 & 1) == 0 )
+  if ( (byte_4B17B6F & 1) == 0 )
   {
-    sub_1BAB41C(&StringLiteral_17117/*"baseUserSvtId"*/, baseUserSvtId);
-    sub_1BAB41C(&StringLiteral_19162/*"eventId"*/, v9);
-    sub_1BAB41C(&StringLiteral_18307/*"costumeId"*/, v10);
-    byte_4AB76A4 = 1;
+    sub_1BCA7E0(&StringLiteral_17256/*"baseUserSvtId"*/, baseUserSvtId, *(_QWORD *)&costumeId);
+    sub_1BCA7E0(&StringLiteral_19329/*"eventId"*/, v9, v10);
+    sub_1BCA7E0(&StringLiteral_18461/*"costumeId"*/, v11, v12);
+    byte_4B17B6F = 1;
   }
-  RequestBase__addField_41522804((RequestBase_o *)this, (System_String_o *)StringLiteral_17117/*"baseUserSvtId"*/, baseUserSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18307/*"costumeId"*/, costumeId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19162/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField_41868688((RequestBase_o *)this, (System_String_o *)StringLiteral_17256/*"baseUserSvtId"*/, baseUserSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18461/*"costumeId"*/, costumeId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19329/*"eventId"*/, eventId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,19 +35,21 @@ System_String_o *__fastcall ServantCostumeCombineRequest__getURL(
         ServantCostumeCombineRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
+  __int64 v2; // x2
+  __int64 v3; // x1
+  __int64 v4; // x2
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4AB76A3 & 1) == 0 )
+  if ( (byte_4B17B6E & 1) == 0 )
   {
-    sub_1BAB41C(&NetworkManager_TypeInfo, method);
-    sub_1BAB41C(&StringLiteral_17777/*"card/combineCostume"*/, v2);
-    byte_4AB76A3 = 1;
+    sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
+    sub_1BCA7E0(&StringLiteral_17927/*"card/combineCostume"*/, v3, v4);
+    byte_4B17B6E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62048128(BaseUrl, (System_String_o *)StringLiteral_17777/*"card/combineCostume"*/, 0LL);
+  return System_String__Concat_62401220(BaseUrl, (System_String_o *)StringLiteral_17927/*"card/combineCostume"*/, 0LL);
 }
 
 
@@ -54,33 +59,36 @@ void __fastcall ServantCostumeCombineRequest__requestCompleted(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
-  ResponseData_o *v9; // x20
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  ResponseData_o *v9; // x0
+  const MethodInfo *v10; // x2
+  ResponseData_o *v11; // x20
+  __int64 v12; // x1
   Il2CppObject *success; // x20
-  System_String_o *v11; // x1
+  System_String_o *v14; // x1
 
-  if ( (byte_4AB76A5 & 1) == 0 )
+  if ( (byte_4B17B70 & 1) == 0 )
   {
-    sub_1BAB41C(&JsonManager_TypeInfo, responseList);
-    sub_1BAB41C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BAB41C(&StringLiteral_22090/*"ng"*/, v6);
-    byte_4AB76A5 = 1;
+    sub_1BCA7E0(&JsonManager_TypeInfo, responseList, method);
+    sub_1BCA7E0(&ResponseCommandKind_TypeInfo, v5, v6);
+    sub_1BCA7E0(&StringLiteral_22292/*"ng"*/, v7, v8);
+    byte_4B17B70 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(62, responseList, 0LL);
-  if ( v7 && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8)) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
+  v9 = ResponseCommandKind__SearchData(62, responseList, 0LL);
+  if ( v9 && (v11 = v9, ResponseData__checkError(v9, v9->fields.resCode, v10)) )
   {
-    success = (Il2CppObject *)v9->fields.success;
+    success = (Il2CppObject *)v11->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v11 = JsonManager__toJson(success, 0, 0, 0LL);
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v12);
+    v14 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22090/*"ng"*/;
+    v14 = (System_String_o *)StringLiteral_22292/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v11, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v14, 0LL);
 }

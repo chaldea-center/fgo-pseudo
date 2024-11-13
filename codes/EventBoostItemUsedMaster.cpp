@@ -1,14 +1,16 @@
 void __fastcall EventBoostItemUsedMaster___ctor(EventBoostItemUsedMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB5C22 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B160C2 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__, method);
-    byte_4AB5C22 = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__, method, v2);
+    byte_4B160C2 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     300,
-    (const MethodInfo_3163EFC *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
+    (const MethodInfo_31B2FAC *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
 }
 
 
@@ -25,24 +27,25 @@ UsedCount_o *__fastcall EventBoostItemUsedMaster__GetUsedCount(
   UsedCount_o *result; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4AB5C23 & 1) == 0 )
+  if ( (byte_4B160C3 & 1) == 0 )
   {
-    sub_1BAB41C(
+    sub_1BCA7E0(
       &Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__,
-      *(_QWORD *)&eventId);
-    byte_4AB5C23 = 1;
+      *(_QWORD *)&eventId,
+      userId);
+    byte_4B160C3 = 1;
   }
   entity = 0LL;
   v9 = DataMasterBase_object__object__long___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          eventId,
-         (const MethodInfo_3163F90 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
+         (const MethodInfo_31B3040 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
   result = 0LL;
   if ( v9 )
   {
     if ( !entity )
-      sub_1BAB678(0LL, v7);
+      sub_1BCAA3C(0LL, v7);
     return EventBoostItemUsedEntity__GetUsedCount((EventBoostItemUsedEntity_o *)entity, userId, v8);
   }
   return result;

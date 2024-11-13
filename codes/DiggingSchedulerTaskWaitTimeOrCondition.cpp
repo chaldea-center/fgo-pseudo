@@ -11,7 +11,7 @@ void __fastcall DiggingSchedulerTaskWaitTimeOrCondition___ctor(
   *(_QWORD *)&v6->fields.waitTime = cond;
   v6 = (DiggingSchedulerTaskWaitTimeOrCondition_o *)((char *)v6 + 48);
   *((float *)&v6[-1].fields.Cond + 1) = waitTime;
-  sub_1BAB3C0(v6);
+  sub_1BCA784(v6, cond);
 }
 
 
@@ -19,19 +19,21 @@ System_Collections_IEnumerator_o *__fastcall DiggingSchedulerTaskWaitTimeOrCondi
         DiggingSchedulerTaskWaitTimeOrCondition_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x20
 
-  if ( (byte_4AB0D4F & 1) == 0 )
+  if ( (byte_4B1113E & 1) == 0 )
   {
-    sub_1BAB41C(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method);
-    byte_4AB0D4F = 1;
+    sub_1BCA7E0(&DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method, v2);
+    byte_4B1113E = 1;
   }
-  v3 = sub_1BAB668(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  *(_DWORD *)(v3 + 16) = 0;
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1BAB3C0(v3 + 32);
-  return (System_Collections_IEnumerator_o *)v3;
+  v5 = sub_1BCAA2C(DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_TypeInfo, method, v2, v3);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  *(_DWORD *)(v5 + 16) = 0;
+  *(_QWORD *)(v5 + 32) = this;
+  sub_1BCA784(v5 + 32, this);
+  return (System_Collections_IEnumerator_o *)v5;
 }
 
 
@@ -74,7 +76,7 @@ bool __fastcall DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   this->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_12:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   if ( *(float *)(&_4__this->fields._IsPause_k__BackingField + 3) < 0.0 )
     return 0;
   this->fields._espTime_5__2 = 0.0;
@@ -90,7 +92,7 @@ LABEL_7:
   }
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_1BAB3C0(p__2__current);
+  sub_1BCA784(p__2__current, 0LL);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -110,14 +112,20 @@ void __fastcall __noreturn DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  __int64 v5; // x3
+  System_NotSupportedException_o *v6; // x19
+  __int64 v7; // x1
+  __int64 v8; // x0
 
-  v2 = sub_1BAB430(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BAB668(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BAB430(&Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1BAB544(v3, v4);
+  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
+  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
+  System_NotSupportedException___ctor(v6, 0LL);
+  v8 = sub_1BCA7F4(
+         &Method_DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3_System_Collections_IEnumerator_Reset__,
+         v7);
+  sub_1BCA908(v6, v8);
 }
 
 

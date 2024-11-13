@@ -16,11 +16,15 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
   UnityEngine_GameObject_o *v14; // x25
   UnityEngine_Transform_o *v15; // x20
   struct UnityEngine_GameObject_o *v16; // x0
-  int32_t v17; // w2
+  int64_t v17; // x2
   int32_t v18; // w3
-  const MethodInfo *v19; // [xsp+28h] [xbp-68h]
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
+  const MethodInfo *v23; // [xsp+28h] [xbp-68h]
 
-  if ( (byte_4AB3C0E & 1) == 0 )
+  if ( (byte_4B1408A & 1) == 0 )
   {
     v10 = *(_QWORD *)&angle.fields.value.fields.y;
     v11 = *(_QWORD *)&angle.fields.hasValue;
@@ -28,14 +32,14 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     v13 = *(_QWORD *)&position.fields.hasValue;
     v14 = effetctPrefab;
     v15 = parent;
-    sub_1BAB41C(&StringLiteral_23004/*"root_text/type01/dm_base"*/, parent);
+    sub_1BCA7E0(&StringLiteral_23211/*"root_text/type01/dm_base"*/, parent, effetctPrefab);
     parent = v15;
     effetctPrefab = v14;
     *(_QWORD *)&position.fields.hasValue = v13;
     *(_QWORD *)&position.fields.value.fields.y = v12;
     *(_QWORD *)&angle.fields.hasValue = v11;
     *(_QWORD *)&angle.fields.value.fields.y = v10;
-    byte_4AB3C0E = 1;
+    byte_4B1408A = 1;
   }
   WarBoardCommonEffectPerformance___ctor(
     (WarBoardCommonEffectPerformance_o *)this,
@@ -47,13 +51,14 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     isLocal,
     doInstantiate,
     1,
-    v19);
-  v16 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_23004/*"root_text/type01/dm_base"*/, 0LL);
+    v23);
+  v16 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_23211/*"root_text/type01/dm_base"*/, 0LL);
   this->fields.textObject = v16;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.textObject, (int32_t)v16, v17, v18);
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.textObject, (int64_t)v16, v17, v18, v19, v20, v21, v22);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         WarBoardPopTextEffectPerformance_o *this,
         System_String_o *text,
@@ -61,35 +66,37 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         const MethodInfo *method)
 {
   __int64 v6; // x1
+  __int64 v7; // x2
   UnityEngine_Object_o *textObject; // x21
-  __int64 v8; // x1
-  UnityEngine_GameObject_o *v9; // x0
+  __int64 v9; // x1
+  UnityEngine_GameObject_o *v10; // x0
+  __int64 v11; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4AB3C0F & 1) == 0 )
+  if ( (byte_4B1408B & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, text);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4AB3C0F = 1;
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_UILabel___, text, *(_QWORD *)&color);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v6, v7);
+    byte_4B1408B = 1;
   }
   textObject = (UnityEngine_Object_o *)this->fields.textObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, text);
   if ( !UnityEngine_Object__op_Equality(textObject, 0LL, 0LL) )
   {
-    v9 = this->fields.textObject;
-    if ( v9 )
+    v10 = this->fields.textObject;
+    if ( v10 )
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
-                           v9,
-                           (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           v10,
+                           (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
-                                         (UnityEngine_Object_o *)Component_object,
-                                         0LL,
-                                         0LL);
-      if ( ((unsigned __int8)v9 & 1) != 0 )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+      v10 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
+                                          (UnityEngine_Object_o *)Component_object,
+                                          0LL,
+                                          0LL);
+      if ( ((unsigned __int8)v10 & 1) != 0 )
         return;
       if ( Component_object )
       {
@@ -97,6 +104,6 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         return;
       }
     }
-    sub_1BAB678(v9, v8);
+    sub_1BCAA3C(v10, v9);
   }
 }

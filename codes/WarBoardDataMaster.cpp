@@ -1,14 +1,16 @@
 void __fastcall WarBoardDataMaster___ctor(WarBoardDataMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB6CDC & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B17192 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__, method);
-    byte_4AB6CDC = 1;
+    sub_1BCA7E0(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__, method, v2);
+    byte_4B17192 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     335,
-    (const MethodInfo_31640A8 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
+    (const MethodInfo_31B3158 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,19 @@ WarBoardDataEntity_o *__fastcall WarBoardDataMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4AB6CDA & 1) == 0 )
+  if ( (byte_4B17190 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__, *(_QWORD *)&questId);
-    byte_4AB6CDA = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__,
+      *(_QWORD *)&questId,
+      *(_QWORD *)&questPhase);
+    byte_4B17190 = 1;
   }
   PK = (Il2CppObject *)WarBoardDataEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
   return (WarBoardDataEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_31640E8 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
+                                   (const MethodInfo_31B3198 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +49,18 @@ bool __fastcall WarBoardDataMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4AB6CDB & 1) == 0 )
+  if ( (byte_4B17191 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__, entity);
-    byte_4AB6CDB = 1;
+    sub_1BCA7E0(
+      &Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__,
+      entity,
+      *(_QWORD *)&questId);
+    byte_4B17191 = 1;
   }
   PK = (Il2CppObject *)WarBoardDataEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3164138 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
+           (const MethodInfo_31B31E8 *)Method_DataMasterBase_WarBoardDataMaster__WarBoardDataEntity__string__TryGetEntity__);
 }

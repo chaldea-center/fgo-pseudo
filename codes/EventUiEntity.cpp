@@ -1,11 +1,12 @@
 void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
+  __int64 v2; // x2
 
-  if ( (byte_4AB5F4A & 1) == 0 )
+  if ( (byte_4B163EF & 1) == 0 )
   {
-    sub_1BAB41C(&EventUiEntity_TypeInfo, v1);
-    byte_4AB5F4A = 1;
+    sub_1BCA7E0(&EventUiEntity_TypeInfo, v1, v2);
+    byte_4B163EF = 1;
   }
   LODWORD(EventUiEntity_TypeInfo->static_fields->EVNET_UI_POSITION_MAGNIFICATION) = (struct EventUiEntity_StaticFields)1008981770;
 }
@@ -13,24 +14,29 @@ void __fastcall EventUiEntity___cctor(const MethodInfo *method)
 
 void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x2
   struct System_Int32_array **p_spotIds; // x19
-  int32_t v4; // w2
-  int32_t v5; // w3
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB5F47 & 1) == 0 )
+  if ( (byte_4B163EC & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4AB5F47 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
+    byte_4B163EC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3163C08 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
   this->fields.spotIds = 0LL;
   p_spotIds = &this->fields.spotIds;
   *(p_spotIds - 3) = 0LL;
   *(p_spotIds - 2) = 0LL;
   *((_DWORD *)p_spotIds - 2) = 0;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)p_spotIds, 0, v4, v5);
+  sub_1BCA784((PartyOrganizationUtility_o *)p_spotIds, 0LL, v5, v6, v7, v8, v9, v10);
   *(struct System_Int32_array **)((char *)p_spotIds + 20) = 0LL;
   *(struct System_Int32_array **)((char *)p_spotIds + 12) = 0LL;
   *((_DWORD *)p_spotIds + 2) = 1;
@@ -41,15 +47,15 @@ void __fastcall EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *me
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventUiEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4AB5F49 & 1) == 0 )
+  if ( (byte_4B163EE & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4AB5F49 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority, method);
+    byte_4B163EE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2EC2598 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -59,15 +65,15 @@ System_String_o *__fastcall EventUiEntity__CreatePrimaryKey(EventUiEntity_o *thi
   int32_t priority; // w19
   int32_t id; // w20
 
-  if ( (byte_4AB5F48 & 1) == 0 )
+  if ( (byte_4B163ED & 1) == 0 )
   {
-    sub_1BAB41C(&EventUiEntity_TypeInfo, method);
-    byte_4AB5F48 = 1;
+    sub_1BCA7E0(&EventUiEntity_TypeInfo, method, v2);
+    byte_4B163ED = 1;
   }
   id = this->fields.id;
   priority = this->fields.priority;
   if ( !EventUiEntity_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventUiEntity_TypeInfo);
+    j_il2cpp_runtime_class_init_0(EventUiEntity_TypeInfo, method);
   return EventUiEntity__CreatePK(id, priority, v2);
 }
 

@@ -12,7 +12,7 @@ int32_t __fastcall BattleFieldEffectComponent__getAmbientColors(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   return ambientlist->max_length;
 }
 
@@ -21,57 +21,62 @@ System_String_array *__fastcall BattleFieldEffectComponent__getFieldEffects(
         BattleFieldEffectComponent_o *this,
         const MethodInfo *method)
 {
-  BattleFieldEffectComponent_o *v2; // x19
+  __int64 v2; // x2
+  BattleFieldEffectComponent_o *v3; // x19
   struct UnityEngine_GameObject_array *fieldeffect; // x8
-  System_String_array *v4; // x20
-  il2cpp_array_size_t v5; // w21
-  struct UnityEngine_GameObject_array *v6; // x8
-  int32_t v7; // w2
-  int32_t v8; // w3
-  BattleFieldEffectComponent_o *v9; // x1
-  Il2CppClass **v10; // x0
+  System_String_array *v5; // x20
+  il2cpp_array_size_t v6; // w21
+  struct UnityEngine_GameObject_array *v7; // x8
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  BattleFieldEffectComponent_o *v14; // x1
+  Il2CppClass **v15; // x0
 
-  v2 = this;
-  if ( (byte_4AB8341 & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B18811 & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_1BAB41C(&string___TypeInfo, method);
-    byte_4AB8341 = 1;
+    this = (BattleFieldEffectComponent_o *)sub_1BCA7E0(&string___TypeInfo, method, v2);
+    byte_4B18811 = 1;
   }
-  fieldeffect = v2->fields.fieldeffect;
+  fieldeffect = v3->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_13;
-  this = (BattleFieldEffectComponent_o *)sub_1BAB4C4(string___TypeInfo, fieldeffect->max_length);
+  this = (BattleFieldEffectComponent_o *)sub_1BCA888(string___TypeInfo, fieldeffect->max_length);
   if ( !this )
     goto LABEL_13;
-  v4 = (System_String_array *)this;
+  v5 = (System_String_array *)this;
   if ( SLODWORD(this->fields.m_CancellationTokenSource) >= 1 )
   {
-    v5 = 0;
+    v6 = 0;
     while ( 1 )
     {
-      v6 = v2->fields.fieldeffect;
-      if ( !v6 )
+      v7 = v3->fields.fieldeffect;
+      if ( !v7 )
         break;
-      if ( v5 >= v6->max_length )
+      if ( v6 >= v7->max_length )
         goto LABEL_14;
-      this = (BattleFieldEffectComponent_o *)v6->m_Items[v5];
+      this = (BattleFieldEffectComponent_o *)v7->m_Items[v6];
       if ( !this )
         break;
       this = (BattleFieldEffectComponent_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-      if ( v5 >= v4->max_length )
+      if ( v6 >= v5->max_length )
 LABEL_14:
-        sub_1BAB680(this, method);
-      v9 = this;
-      v10 = &v4->obj.klass + (int)v5;
-      v10[4] = (Il2CppClass *)v9;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
-      if ( (signed int)++v5 >= (signed int)v4->max_length )
-        return v4;
+        sub_1BCAA44(this, method);
+      v14 = this;
+      v15 = &v5->obj.klass + (int)v6;
+      v15[4] = (Il2CppClass *)v14;
+      sub_1BCA784((PartyOrganizationUtility_o *)(v15 + 4), (int64_t)v14, v8, v9, v10, v11, v12, v13);
+      if ( (signed int)++v6 >= (signed int)v5->max_length )
+        return v5;
     }
 LABEL_13:
-    sub_1BAB678(this, method);
+    sub_1BCAA3C(this, method);
   }
-  return v4;
+  return v5;
 }
 
 
@@ -85,9 +90,9 @@ void __fastcall BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1BAB678(this, index);
+    sub_1BCAA3C(this, *(_QWORD *)&index);
   if ( ambientlist->max_length <= index )
-    sub_1BAB680(this, *(_QWORD *)&index);
+    sub_1BCAA44(this, index);
   UnityEngine_RenderSettings__set_ambientLight(*(UnityEngine_Color_o *)&ambientlist->m_Items[index].fields.g, 0LL);
 }
 
@@ -104,36 +109,40 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
   UnityEngine_Object_o *v8; // x22
   struct UnityEngine_GameObject_array *fieldeffect; // x8
   int32_t max_length; // w9
-  struct UnityEngine_GameObject_o *Object; // x0
-  int32_t v12; // w2
+  struct UnityEngine_GameObject_o *Object; // x1
+  int64_t v12; // x2
   int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4AB8342 & 1) == 0 )
+  if ( (byte_4B18812 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4AB8342 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index, method);
+    byte_4B18812 = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
   v6 = UnityEngine_Object__op_Inequality(viewobject, 0LL, 0LL);
   if ( v6 )
   {
     v8 = (UnityEngine_Object_o *)this->fields.viewobject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69800620(v8, 0LL);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+    UnityEngine_Object__Destroy_70154244(v8, 0LL);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_1BAB678(v6, v7);
+      sub_1BCAA3C(v6, v7);
     max_length = fieldeffect->max_length;
     if ( max_length > index )
     {
       if ( max_length <= (unsigned int)index )
-        sub_1BAB680(v6, v7);
+        sub_1BCAA44(v6, v7);
       Object = BaseMonoBehaviour__createObject(
                  (BaseMonoBehaviour_o *)this,
                  fieldeffect->m_Items[index],
@@ -141,7 +150,7 @@ void __fastcall BattleFieldEffectComponent__setFieldEffect(
                  0LL,
                  0LL);
       this->fields.viewobject = Object;
-      sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.viewobject, (int32_t)Object, v12, v13);
+      sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.viewobject, (int64_t)Object, v12, v13, v14, v15, v16, v17);
     }
   }
 }

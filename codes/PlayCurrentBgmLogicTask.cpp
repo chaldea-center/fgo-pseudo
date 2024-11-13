@@ -11,14 +11,15 @@ BattleActionData_o *__fastcall PlayCurrentBgmLogicTask__MakeActionData(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  PlayCurrentBgmActionData_o *v3; // x19
+  __int64 v3; // x3
+  PlayCurrentBgmActionData_o *v4; // x19
 
-  if ( (byte_4AB8A46 & 1) == 0 )
+  if ( (byte_4B18F26 & 1) == 0 )
   {
-    sub_1BAB41C(&PlayCurrentBgmActionData_TypeInfo, logic);
-    byte_4AB8A46 = 1;
+    sub_1BCA7E0(&PlayCurrentBgmActionData_TypeInfo, logic, method);
+    byte_4B18F26 = 1;
   }
-  v3 = (PlayCurrentBgmActionData_o *)sub_1BAB668(PlayCurrentBgmActionData_TypeInfo);
-  PlayCurrentBgmActionData___ctor(v3, 0LL);
-  return (BattleActionData_o *)v3;
+  v4 = (PlayCurrentBgmActionData_o *)sub_1BCAA2C(PlayCurrentBgmActionData_TypeInfo, logic, method, v3);
+  PlayCurrentBgmActionData___ctor(v4, 0LL);
+  return (BattleActionData_o *)v4;
 }

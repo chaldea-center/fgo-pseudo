@@ -1,22 +1,33 @@
 void __fastcall ItemDroppedSkillShiftInfo___ctor(ItemDroppedSkillShiftInfo_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x1
+  __int64 v6; // x2
+  System_Collections_Generic_List_object__o *v7; // x20
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4AB881E & 1) == 0 )
+  if ( (byte_4B18CFC & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo___ctor__, method);
-    sub_1BAB41C(&System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__TypeInfo, v3);
-    byte_4AB881E = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo___ctor__, method, v2);
+    sub_1BCA7E0(&System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__TypeInfo, v5, v6);
+    byte_4B18CFC = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BAB668(System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BCAA2C(
+                                                      System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__TypeInfo,
+                                                      method,
+                                                      v2,
+                                                      v3);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_354D088 *)Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo___ctor__);
-  this->fields.servantInfoList = (struct System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__o *)v4;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields, (int32_t)v4, v5, v6);
+    v7,
+    (const MethodInfo_35A1428 *)Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo___ctor__);
+  this->fields.servantInfoList = (struct System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__o *)v7;
+  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -25,57 +36,71 @@ System_Int64_array *__fastcall ItemDroppedSkillShiftInfo__GetNpcSvtIdArray(
         ItemDroppedSkillShiftInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
-  ItemDroppedSkillShiftInfo___c_c *v7; // x0
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  ItemDroppedSkillShiftInfo___c_c *v13; // x0
   struct System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__o *servantInfoList; // x19
   System_Func_T__TResult__o *_9__3_0; // x20
-  Il2CppObject *v10; // x21
+  Il2CppObject *v16; // x21
   struct ItemDroppedSkillShiftInfo___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
 
-  if ( (byte_4AB881A & 1) == 0 )
+  if ( (byte_4B18CF8 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__long___, method);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_long___, v3);
-    sub_1BAB41C(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__TypeInfo, v4);
-    sub_1BAB41C(&Method_ItemDroppedSkillShiftInfo___c__GetNpcSvtIdArray_b__3_0__, v5);
-    sub_1BAB41C(&ItemDroppedSkillShiftInfo___c_TypeInfo, v6);
-    byte_4AB881A = 1;
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__long___, method, v2);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_ToArray_long___, v5, v6);
+    sub_1BCA7E0(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__TypeInfo, v7, v8);
+    sub_1BCA7E0(&Method_ItemDroppedSkillShiftInfo___c__GetNpcSvtIdArray_b__3_0__, v9, v10);
+    sub_1BCA7E0(&ItemDroppedSkillShiftInfo___c_TypeInfo, v11, v12);
+    byte_4B18CF8 = 1;
   }
-  v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+  v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
   servantInfoList = this->fields.servantInfoList;
   if ( !ItemDroppedSkillShiftInfo___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ItemDroppedSkillShiftInfo___c_TypeInfo);
-    v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ItemDroppedSkillShiftInfo___c_TypeInfo, method);
+    v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
   }
-  _9__3_0 = (System_Func_T__TResult__o *)v7->static_fields->__9__3_0;
+  _9__3_0 = (System_Func_T__TResult__o *)v13->static_fields->__9__3_0;
   if ( !_9__3_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v13->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v13, method);
+      v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__3_0 = (System_Func_T__TResult__o *)sub_1BAB668(System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__TypeInfo);
-    System_Func_object__long____ctor(_9__3_0, v10, Method_ItemDroppedSkillShiftInfo___c__GetNpcSvtIdArray_b__3_0__, 0LL);
+    v16 = (Il2CppObject *)v13->static_fields->__9;
+    _9__3_0 = (System_Func_T__TResult__o *)sub_1BCAA2C(
+                                             System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__TypeInfo,
+                                             method,
+                                             v2,
+                                             v3);
+    System_Func_object__long____ctor(_9__3_0, v16, Method_ItemDroppedSkillShiftInfo___c__GetNpcSvtIdArray_b__3_0__, 0LL);
     static_fields = ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_ItemDroppedSkillShiftInfo_ServantInfo__long__o *)_9__3_0;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v12, v13);
+    sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v18, v19, v20, v21, v22, v23);
   }
-  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
+  v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)servantInfoList,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_2EF4024 *)Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__long___);
+                                                               (const MethodInfo_2F4377C *)Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__long___);
   return System_Linq_Enumerable__ToArray_long_(
-           v14,
-           (const MethodInfo_2EFD064 *)Method_System_Linq_Enumerable_ToArray_long___);
+           v24,
+           (const MethodInfo_2F4B980 *)Method_System_Linq_Enumerable_ToArray_long___);
 }
 
 
@@ -83,57 +108,71 @@ System_Int32_array *__fastcall ItemDroppedSkillShiftInfo__GetUniqueIdArray(
         ItemDroppedSkillShiftInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
-  ItemDroppedSkillShiftInfo___c_c *v7; // x0
+  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  ItemDroppedSkillShiftInfo___c_c *v13; // x0
   struct System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__o *servantInfoList; // x19
   System_Func_object__int__o *_9__2_0; // x20
-  Il2CppObject *v10; // x21
+  Il2CppObject *v16; // x21
   struct ItemDroppedSkillShiftInfo___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
 
-  if ( (byte_4AB8819 & 1) == 0 )
+  if ( (byte_4B18CF7 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__int___, method);
-    sub_1BAB41C(&Method_System_Linq_Enumerable_ToArray_int___, v3);
-    sub_1BAB41C(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__int__TypeInfo, v4);
-    sub_1BAB41C(&Method_ItemDroppedSkillShiftInfo___c__GetUniqueIdArray_b__2_0__, v5);
-    sub_1BAB41C(&ItemDroppedSkillShiftInfo___c_TypeInfo, v6);
-    byte_4AB8819 = 1;
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__int___, method, v2);
+    sub_1BCA7E0(&Method_System_Linq_Enumerable_ToArray_int___, v5, v6);
+    sub_1BCA7E0(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__int__TypeInfo, v7, v8);
+    sub_1BCA7E0(&Method_ItemDroppedSkillShiftInfo___c__GetUniqueIdArray_b__2_0__, v9, v10);
+    sub_1BCA7E0(&ItemDroppedSkillShiftInfo___c_TypeInfo, v11, v12);
+    byte_4B18CF7 = 1;
   }
-  v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+  v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
   servantInfoList = this->fields.servantInfoList;
   if ( !ItemDroppedSkillShiftInfo___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(ItemDroppedSkillShiftInfo___c_TypeInfo);
-    v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ItemDroppedSkillShiftInfo___c_TypeInfo, method);
+    v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
   }
-  _9__2_0 = (System_Func_object__int__o *)v7->static_fields->__9__2_0;
+  _9__2_0 = (System_Func_object__int__o *)v13->static_fields->__9__2_0;
   if ( !_9__2_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v13->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = ItemDroppedSkillShiftInfo___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v13, method);
+      v13 = ItemDroppedSkillShiftInfo___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__2_0 = (System_Func_object__int__o *)sub_1BAB668(System_Func_ItemDroppedSkillShiftInfo_ServantInfo__int__TypeInfo);
-    System_Func_object__int____ctor(_9__2_0, v10, Method_ItemDroppedSkillShiftInfo___c__GetUniqueIdArray_b__2_0__, 0LL);
+    v16 = (Il2CppObject *)v13->static_fields->__9;
+    _9__2_0 = (System_Func_object__int__o *)sub_1BCAA2C(
+                                              System_Func_ItemDroppedSkillShiftInfo_ServantInfo__int__TypeInfo,
+                                              method,
+                                              v2,
+                                              v3);
+    System_Func_object__int____ctor(_9__2_0, v16, Method_ItemDroppedSkillShiftInfo___c__GetUniqueIdArray_b__2_0__, 0LL);
     static_fields = ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_ItemDroppedSkillShiftInfo_ServantInfo__int__o *)_9__2_0;
-    sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v12, v13);
+    sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->__9__2_0, (int64_t)_9__2_0, v18, v19, v20, v21, v22, v23);
   }
-  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+  v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)servantInfoList,
                                                                (System_Func_TSource__TResult__o *)_9__2_0,
-                                                               (const MethodInfo_2EF3A3C *)Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__int___);
+                                                               (const MethodInfo_2F43194 *)Method_System_Linq_Enumerable_Select_ItemDroppedSkillShiftInfo_ServantInfo__int___);
   return System_Linq_Enumerable__ToArray_int_(
-           v14,
-           (const MethodInfo_2EFCF54 *)Method_System_Linq_Enumerable_ToArray_int___);
+           v24,
+           (const MethodInfo_2F4B870 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -143,39 +182,49 @@ bool __fastcall ItemDroppedSkillShiftInfo__HasUniqueId(
         int32_t uniqueId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  __int64 v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x21
-  __int64 v9; // x0
+  __int64 v7; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
   __int64 v10; // x1
+  __int64 v11; // x2
+  __int64 v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
+  __int64 v15; // x2
+  __int64 v16; // x3
   System_Collections_Generic_List_T__o *servantInfoList; // x19
-  System_Func_object__bool__o *v12; // x20
+  System_Func_object__bool__o *v18; // x20
 
-  if ( (byte_4AB881B & 1) == 0 )
+  if ( (byte_4B18CF9 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_BasicHelper_Any_ItemDroppedSkillShiftInfo_ServantInfo___, *(_QWORD *)&uniqueId);
-    sub_1BAB41C(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__bool__TypeInfo, v5);
-    sub_1BAB41C(&Method_ItemDroppedSkillShiftInfo___c__DisplayClass4_0__HasUniqueId_b__0__, v6);
-    sub_1BAB41C(&ItemDroppedSkillShiftInfo___c__DisplayClass4_0_TypeInfo, v7);
-    byte_4AB881B = 1;
+    sub_1BCA7E0(&Method_BasicHelper_Any_ItemDroppedSkillShiftInfo_ServantInfo___, *(_QWORD *)&uniqueId, method);
+    sub_1BCA7E0(&System_Func_ItemDroppedSkillShiftInfo_ServantInfo__bool__TypeInfo, v6, v7);
+    sub_1BCA7E0(&Method_ItemDroppedSkillShiftInfo___c__DisplayClass4_0__HasUniqueId_b__0__, v8, v9);
+    sub_1BCA7E0(&ItemDroppedSkillShiftInfo___c__DisplayClass4_0_TypeInfo, v10, v11);
+    byte_4B18CF9 = 1;
   }
-  v8 = sub_1BAB668(ItemDroppedSkillShiftInfo___c__DisplayClass4_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
-    sub_1BAB678(v9, v10);
-  *(_DWORD *)(v8 + 16) = uniqueId;
+  v12 = sub_1BCAA2C(ItemDroppedSkillShiftInfo___c__DisplayClass4_0_TypeInfo, *(_QWORD *)&uniqueId, method, v3);
+  System_Object___ctor((Il2CppObject *)v12, 0LL);
+  if ( !v12 )
+    sub_1BCAA3C(v13, v14);
+  *(_DWORD *)(v12 + 16) = uniqueId;
   servantInfoList = (System_Collections_Generic_List_T__o *)this->fields.servantInfoList;
-  v12 = (System_Func_object__bool__o *)sub_1BAB668(System_Func_ItemDroppedSkillShiftInfo_ServantInfo__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1BCAA2C(
+                                         System_Func_ItemDroppedSkillShiftInfo_ServantInfo__bool__TypeInfo,
+                                         v14,
+                                         v15,
+                                         v16);
   System_Func_object__bool____ctor(
-    v12,
-    (Il2CppObject *)v8,
+    v18,
+    (Il2CppObject *)v12,
     Method_ItemDroppedSkillShiftInfo___c__DisplayClass4_0__HasUniqueId_b__0__,
     0LL);
   return BasicHelper__Any_object_(
            servantInfoList,
-           (System_Func_T__bool__o *)v12,
-           (const MethodInfo_2EAF73C *)Method_BasicHelper_Any_ItemDroppedSkillShiftInfo_ServantInfo___);
+           (System_Func_T__bool__o *)v18,
+           (const MethodInfo_2EFDC94 *)Method_BasicHelper_Any_ItemDroppedSkillShiftInfo_ServantInfo___);
 }
 
 
@@ -188,7 +237,7 @@ bool __fastcall ItemDroppedSkillShiftInfo__IsSaveDataAvailable(
   struct System_Int64_array *skillShiftNpcSvtIds; // x9
 
   if ( !saveData )
-    sub_1BAB678(this, 0LL);
+    sub_1BCAA3C(this, 0LL);
   skillShiftUniqueIds = saveData->fields.skillShiftUniqueIds;
   return skillShiftUniqueIds
       && (skillShiftNpcSvtIds = saveData->fields.skillShiftNpcSvtIds) != 0LL
@@ -202,25 +251,32 @@ void __fastcall ItemDroppedSkillShiftInfo__Register(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  __int64 v6; // x2
   _BOOL8 HasUniqueId; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x2
+  __int64 v10; // x3
   struct BattleDeckServantData_o *deckSvt; // x8
   __int64 npcId; // x22
   System_Collections_Generic_List_object__o *servantInfoList; // x19
   int32_t uniqueId; // w21
-  __int64 v12; // x20
-  int32_t v13; // w2
-  int32_t v14; // w3
+  int64_t v15; // x20
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v25; // x0
 
-  if ( (byte_4AB881C & 1) == 0 )
+  if ( (byte_4B18CFA & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__, svtData);
-    sub_1BAB41C(&ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, v5);
-    byte_4AB881C = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__, svtData, method);
+    sub_1BCA7E0(&ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, v5, v6);
+    byte_4B18CFA = 1;
   }
   if ( svtData )
   {
@@ -235,33 +291,33 @@ void __fastcall ItemDroppedSkillShiftInfo__Register(
         npcId = deckSvt->fields.npcId;
         servantInfoList = (System_Collections_Generic_List_object__o *)this->fields.servantInfoList;
         uniqueId = svtData->fields.uniqueId;
-        v12 = sub_1BAB668(ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v12, 0LL);
-        *(_DWORD *)(v12 + 16) = uniqueId;
-        *(_QWORD *)(v12 + 24) = npcId;
+        v15 = sub_1BCAA2C(ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, v8, v9, v10);
+        System_Object___ctor((Il2CppObject *)v15, 0LL);
+        *(_DWORD *)(v15 + 16) = uniqueId;
+        *(_QWORD *)(v15 + 24) = npcId;
         if ( !servantInfoList
           || (items = servantInfoList->fields._items,
-              v16 = Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__,
+              v23 = Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__,
               ++servantInfoList->fields._version,
               !items) )
         {
 LABEL_13:
-          sub_1BAB678(HasUniqueId, v7);
+          sub_1BCAA3C(HasUniqueId, v8);
         }
         size = servantInfoList->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             servantInfoList,
-            (Il2CppObject *)v12,
-            *(const MethodInfo_354D8BC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            (Il2CppObject *)v15,
+            *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
-          v18 = &items->obj.klass + size;
+          v25 = &items->obj.klass + size;
           servantInfoList->fields._size = size + 1;
-          v18[4] = (Il2CppClass *)v12;
-          sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v18 + 4), v12, v13, v14);
+          v25[4] = (Il2CppClass *)v15;
+          sub_1BCA784((PartyOrganizationUtility_o *)(v25 + 4), v15, v16, v17, v18, v19, v20, v21);
         }
       }
     }
@@ -274,31 +330,37 @@ void __fastcall ItemDroppedSkillShiftInfo__SetSaveData(
         BattleData_SaveData_o *saveData,
         const MethodInfo *method)
 {
-  ItemDroppedSkillShiftInfo_o *v4; // x20
-  __int64 v5; // x1
+  __int64 v3; // x3
+  ItemDroppedSkillShiftInfo_o *v5; // x20
+  __int64 v6; // x1
+  __int64 v7; // x2
   struct System_Int32_array *skillShiftUniqueIds; // x8
   struct System_Int64_array *skillShiftNpcSvtIds; // x9
-  __int64 v8; // x10
+  __int64 v10; // x10
   il2cpp_array_size_t max_length; // w9
-  unsigned __int64 v10; // x23
-  struct System_Int64_array *v11; // x9
+  unsigned __int64 v12; // x23
+  struct System_Int64_array *v13; // x9
   System_Collections_Generic_List_object__o *servantInfoList; // x21
-  int32_t v13; // w26
-  int64_t v14; // x27
-  __int64 v15; // x22
-  int32_t v16; // w2
-  int32_t v17; // w3
+  int32_t v15; // w26
+  int64_t v16; // x27
+  int64_t v17; // x22
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v21; // x0
+  Il2CppClass **v27; // x0
 
-  v4 = this;
-  if ( (byte_4AB881D & 1) == 0 )
+  v5 = this;
+  if ( (byte_4B18CFB & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__, saveData);
-    this = (ItemDroppedSkillShiftInfo_o *)sub_1BAB41C(&ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, v5);
-    byte_4AB881D = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__, saveData, method);
+    this = (ItemDroppedSkillShiftInfo_o *)sub_1BCA7E0(&ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, v6, v7);
+    byte_4B18CFB = 1;
   }
   if ( !saveData )
     goto LABEL_20;
@@ -308,34 +370,34 @@ void __fastcall ItemDroppedSkillShiftInfo__SetSaveData(
     skillShiftNpcSvtIds = saveData->fields.skillShiftNpcSvtIds;
     if ( skillShiftNpcSvtIds )
     {
-      v8 = *(_QWORD *)&skillShiftUniqueIds->max_length;
-      if ( (_DWORD)v8 == skillShiftNpcSvtIds->max_length )
+      v10 = *(_QWORD *)&skillShiftUniqueIds->max_length;
+      if ( (_DWORD)v10 == skillShiftNpcSvtIds->max_length )
       {
         max_length = *(_QWORD *)&skillShiftUniqueIds->max_length;
-        if ( (int)v8 >= 1 )
+        if ( (int)v10 >= 1 )
         {
-          v10 = 0LL;
+          v12 = 0LL;
           while ( 1 )
           {
-            if ( v10 >= max_length )
+            if ( v12 >= max_length )
               goto LABEL_21;
-            v11 = saveData->fields.skillShiftNpcSvtIds;
-            if ( !v11 )
+            v13 = saveData->fields.skillShiftNpcSvtIds;
+            if ( !v13 )
               break;
-            if ( v10 >= v11->max_length )
+            if ( v12 >= v13->max_length )
 LABEL_21:
-              sub_1BAB680(this, saveData);
-            servantInfoList = (System_Collections_Generic_List_object__o *)v4->fields.servantInfoList;
-            v13 = skillShiftUniqueIds->m_Items[v10 + 1];
-            v14 = v11->m_Items[v10];
-            v15 = sub_1BAB668(ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo);
-            System_Object___ctor((Il2CppObject *)v15, 0LL);
-            *(_DWORD *)(v15 + 16) = v13;
-            *(_QWORD *)(v15 + 24) = v14;
+              sub_1BCAA44(this, saveData);
+            servantInfoList = (System_Collections_Generic_List_object__o *)v5->fields.servantInfoList;
+            v15 = skillShiftUniqueIds->m_Items[v12 + 1];
+            v16 = v13->m_Items[v12];
+            v17 = sub_1BCAA2C(ItemDroppedSkillShiftInfo_ServantInfo_TypeInfo, saveData, method, v3);
+            System_Object___ctor((Il2CppObject *)v17, 0LL);
+            *(_DWORD *)(v17 + 16) = v15;
+            *(_QWORD *)(v17 + 24) = v16;
             if ( !servantInfoList )
               break;
             items = servantInfoList->fields._items;
-            v19 = Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__;
+            v25 = Method_System_Collections_Generic_List_ItemDroppedSkillShiftInfo_ServantInfo__Add__;
             ++servantInfoList->fields._version;
             if ( !items )
               break;
@@ -344,25 +406,25 @@ LABEL_21:
             {
               System_Collections_Generic_List_object___AddWithResize(
                 servantInfoList,
-                (Il2CppObject *)v15,
-                *(const MethodInfo_354D8BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+                (Il2CppObject *)v17,
+                *(const MethodInfo_35A1C5C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
             }
             else
             {
-              v21 = &items->obj.klass + size;
+              v27 = &items->obj.klass + size;
               servantInfoList->fields._size = size + 1;
-              v21[4] = (Il2CppClass *)v15;
-              sub_1BAB3C0((ServantStatusBattleListViewItem_o *)(v21 + 4), v15, v16, v17);
+              v27[4] = (Il2CppClass *)v17;
+              sub_1BCA784((PartyOrganizationUtility_o *)(v27 + 4), v17, v18, v19, v20, v21, v22, v23);
             }
             skillShiftUniqueIds = saveData->fields.skillShiftUniqueIds;
             if ( !skillShiftUniqueIds )
               break;
             max_length = skillShiftUniqueIds->max_length;
-            if ( (__int64)++v10 >= (int)max_length )
+            if ( (__int64)++v12 >= (int)max_length )
               return;
           }
 LABEL_20:
-          sub_1BAB678(this, saveData);
+          sub_1BCAA3C(this, saveData);
         }
       }
     }
@@ -419,23 +481,33 @@ void __fastcall ItemDroppedSkillShiftInfo_ServantInfo__set_uniqueId(
 void __fastcall ItemDroppedSkillShiftInfo___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  int32_t v4; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  Il2CppObject *v4; // x19
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4AB881F & 1) == 0 )
+  if ( (byte_4B18CFD & 1) == 0 )
   {
-    sub_1BAB41C(&ItemDroppedSkillShiftInfo___c_TypeInfo, v1);
-    byte_4AB881F = 1;
+    sub_1BCA7E0(&ItemDroppedSkillShiftInfo___c_TypeInfo, v1, v2);
+    byte_4B18CFD = 1;
   }
-  v2 = (Il2CppObject *)sub_1BAB668(ItemDroppedSkillShiftInfo___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields->__9 = (struct ItemDroppedSkillShiftInfo___c_o *)v2;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+  v4 = (Il2CppObject *)sub_1BCAA2C(ItemDroppedSkillShiftInfo___c_TypeInfo, v1, v2, v3);
+  System_Object___ctor(v4, 0LL);
+  ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields->__9 = (struct ItemDroppedSkillShiftInfo___c_o *)v4;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)ItemDroppedSkillShiftInfo___c_TypeInfo->static_fields,
+    (int64_t)v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10);
 }
 
 
@@ -451,7 +523,7 @@ int64_t __fastcall ItemDroppedSkillShiftInfo___c___GetNpcSvtIdArray_b__3_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BAB678(this, 0LL);
+    sub_1BCAA3C(this, 0LL);
   return x->fields._npcSvtId_k__BackingField;
 }
 
@@ -462,7 +534,7 @@ int32_t __fastcall ItemDroppedSkillShiftInfo___c___GetUniqueIdArray_b__2_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BAB678(this, 0LL);
+    sub_1BCAA3C(this, 0LL);
   return x->fields._uniqueId_k__BackingField;
 }
 
@@ -481,6 +553,6 @@ bool __fastcall ItemDroppedSkillShiftInfo___c__DisplayClass4_0___HasUniqueId_b__
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BAB678(this, 0LL);
+    sub_1BCAA3C(this, 0LL);
   return x->fields._uniqueId_k__BackingField == this->fields.uniqueId;
 }

@@ -20,36 +20,40 @@ void __fastcall UVScrollAnimation__Update(UVScrollAnimation_o *this, const Metho
 // local variable allocation has failed, the output may be wrong!
 void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
+  __int64 v5; // x2
+  __int64 v6; // x1
+  __int64 v7; // x2
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x20
   UnityEngine_Material_o *material; // x0
-  __int64 v7; // x1
+  __int64 v11; // x1
   float time; // s0
   float offsetXPerSec; // s10
-  float v10; // s8
-  float v11; // s0
+  float v14; // s8
+  float v15; // s0
   float offsetYPerSec; // s11
-  float v13; // s9
-  float v14; // s0
-  float v15; // s1
-  bool v16; // nf
-  float v17; // s1
-  float v18; // s2
-  float v19; // s0
+  float v17; // s9
+  float v18; // s0
+  float v19; // s1
+  bool v20; // nf
+  float v21; // s1
+  float v22; // s2
+  float v23; // s0
 
-  if ( (byte_4AB3367 & 1) == 0 )
+  if ( (byte_4B137E4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BAB41C(&StringLiteral_16293/*"_MainTex"*/, v4);
-    byte_4AB3367 = 1;
+    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Renderer___, method, v2);
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
+    sub_1BCA7E0(&StringLiteral_16431/*"_MainTex"*/, v6, v7);
+    byte_4B137E4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EBAE18 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality(
                                          (UnityEngine_Object_o *)Component_object,
                                          0LL,
@@ -60,9 +64,9 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
     || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0LL)) == 0LL )
   {
 LABEL_18:
-    sub_1BAB678(material, v7);
+    sub_1BCAA3C(material, v11);
   }
-  if ( !UnityEngine_Material__HasProperty_69666888(material, (System_String_o *)StringLiteral_16293/*"_MainTex"*/, 0LL) )
+  if ( !UnityEngine_Material__HasProperty_70020424(material, (System_String_o *)StringLiteral_16431/*"_MainTex"*/, 0LL) )
   {
 LABEL_17:
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0LL);
@@ -70,27 +74,27 @@ LABEL_17:
   }
   time = UnityEngine_Time__get_time(0LL);
   offsetXPerSec = this->fields.offsetXPerSec;
-  v10 = time;
-  v11 = UnityEngine_Time__get_time(0LL);
+  v14 = time;
+  v15 = UnityEngine_Time__get_time(0LL);
   offsetYPerSec = this->fields.offsetYPerSec;
-  v13 = v11;
+  v17 = v15;
   material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0LL);
   if ( !material )
     goto LABEL_18;
-  v14 = (float)(v10 * offsetXPerSec) - floorf(v10 * offsetXPerSec);
-  v15 = (float)(v13 * offsetYPerSec) - floorf(v13 * offsetYPerSec);
-  v16 = v15 < 0.0;
-  v17 = fminf(v15, 1.0);
-  v18 = fminf(v14, 1.0);
-  if ( v16 )
-    v17 = 0.0;
-  if ( v14 < 0.0 )
-    v19 = 0.0;
+  v18 = (float)(v14 * offsetXPerSec) - floorf(v14 * offsetXPerSec);
+  v19 = (float)(v17 * offsetYPerSec) - floorf(v17 * offsetYPerSec);
+  v20 = v19 < 0.0;
+  v21 = fminf(v19, 1.0);
+  v22 = fminf(v18, 1.0);
+  if ( v20 )
+    v21 = 0.0;
+  if ( v18 < 0.0 )
+    v23 = 0.0;
   else
-    v19 = v18;
+    v23 = v22;
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16293/*"_MainTex"*/,
-    *(UnityEngine_Vector2_o *)(&v17 - 1),
+    (System_String_o *)StringLiteral_16431/*"_MainTex"*/,
+    *(UnityEngine_Vector2_o *)(&v21 - 1),
     0LL);
 }

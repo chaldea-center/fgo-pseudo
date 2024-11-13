@@ -17,10 +17,10 @@ __int64 __fastcall CloseZStream(void **a1)
         {
           while ( 1 )
           {
-            v4 = sub_1C33AB4();
+            v4 = sub_1C52E78();
             if ( !*((_BYTE *)a1 + 32) )
               break;
-            v5 = sub_1BF79D4(a1);
+            v5 = sub_1C16D98(a1);
             if ( v4 )
               goto LABEL_11;
           }
@@ -35,11 +35,11 @@ LABEL_11:
       {
         v4 = 0;
       }
-      sub_1C33610(*a1);
+      sub_1C529D4(*a1);
     }
     else
     {
-      sub_1C33338(v3);
+      sub_1C526FC(v3);
       v4 = 0;
     }
     free(a1[1]);

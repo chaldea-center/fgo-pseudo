@@ -20,27 +20,40 @@ void __fastcall WarBoardPartyOrganizationListViewObject__Init(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v10; // x1
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  WarBoardPartyOrganizationListViewItemDraw_o *v9; // x0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x3
+  WarBoardPartyOrganizationListViewItemDraw_o *v14; // x0
 
-  if ( (byte_4AB3BC7 & 1) == 0 )
+  if ( (byte_4B14043 & 1) == 0 )
   {
-    sub_1BAB41C(&UnityEngine_Object_TypeInfo, onTapEvent);
-    byte_4AB3BC7 = 1;
+    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, onTapEvent, method);
+    byte_4B14043 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.onTapEvent,
+    (int64_t)onTapEvent,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1BAB678(0LL, v7);
-    WarBoardPartyOrganizationListViewItemDraw__SetItem(v9, this->fields.listViewItem, 3, v8);
+    v14 = this->fields.itemDraw;
+    if ( !v14 )
+      sub_1BCAA3C(0LL, v12);
+    WarBoardPartyOrganizationListViewItemDraw__SetItem(v14, this->fields.listViewItem, 3, v13);
   }
 }
 
@@ -162,7 +175,19 @@ void __fastcall WarBoardPartyOrganizationListViewObject__SetItem(
         const MethodInfo *method)
 {
   int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
   this->fields.listViewItem = item;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.listViewItem,
+    (int64_t)item,
+    (int64_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

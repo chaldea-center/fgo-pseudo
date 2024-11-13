@@ -4,129 +4,152 @@ void __fastcall EventRaidDefeatedEffectInfo___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v10; // x21
-  ServantStatusBattleListViewItem_o *p_fields; // x19
-  int32_t v12; // w2
-  int32_t v13; // w3
-  System_String_o *IsNullOrEmpty; // x0
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
+  __int64 v16; // x2
+  __int64 v17; // x3
+  System_Collections_Generic_Dictionary_int__object__o *v18; // x21
+  PartyOrganizationUtility_o *p_fields; // x19
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
+  System_String_o *IsNullOrEmpty; // x0
+  __int64 v27; // x1
   int klass; // w8
-  System_String_o *v17; // x20
+  System_String_o *v29; // x20
   int i; // w23
-  System_String_array *v19; // x22
-  System_Collections_Generic_List_int__o *v20; // x21
-  System_String_c *v21; // x8
-  System_String_o *v22; // x22
-  unsigned __int64 v23; // x28
-  System_String_o *v24; // x0
+  System_String_array *v31; // x22
+  __int64 v32; // x1
+  __int64 v33; // x2
+  __int64 v34; // x3
+  System_Collections_Generic_List_int__o *v35; // x21
+  System_String_c *v36; // x8
+  System_String_o *v37; // x22
+  unsigned __int64 v38; // x28
+  System_String_o *v39; // x0
   struct System_Int32_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v41; // x9
   __int64 size; // x10
   int32_t result[2]; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4AB31FA & 1) == 0 )
+  if ( (byte_4B13672 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__, strInfo);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__, v5);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_int___ctor__, v8);
-    sub_1BAB41C(&System_Collections_Generic_List_int__TypeInfo, v9);
-    byte_4AB31FA = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_int__List_int___Add__, strInfo, method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_int__List_int____ctor__, v5, v6);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_int__List_int___TypeInfo, v7, v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_int__Add__, v9, v10);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_int___ctor__, v11, v12);
+    sub_1BCA7E0(&System_Collections_Generic_List_int__TypeInfo, v13, v14);
+    byte_4B13672 = 1;
   }
   *(_QWORD *)result = 0LL;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_int__List_int___TypeInfo);
+  v18 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCAA2C(
+                                                                  System_Collections_Generic_Dictionary_int__List_int___TypeInfo,
+                                                                  v15,
+                                                                  v16,
+                                                                  v17);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v10,
-    (const MethodInfo_31B6460 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
-  this->fields.playedEffectList = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v10;
-  p_fields = (ServantStatusBattleListViewItem_o *)&this->fields;
-  sub_1BAB3C0(p_fields, (int32_t)v10, v12, v13);
+    v18,
+    (const MethodInfo_3205510 *)Method_System_Collections_Generic_Dictionary_int__List_int____ctor__);
+  this->fields.playedEffectList = (struct System_Collections_Generic_Dictionary_int__List_int___o *)v18;
+  p_fields = (PartyOrganizationUtility_o *)&this->fields;
+  sub_1BCA784(p_fields, (int64_t)v18, v20, v21, v22, v23, v24, v25);
   if ( !strInfo || (IsNullOrEmpty = (System_String_o *)System_String__Split(strInfo, 0x3Bu, 0, 0LL)) == 0LL )
 LABEL_32:
-    sub_1BAB678(IsNullOrEmpty, v15);
+    sub_1BCAA3C(IsNullOrEmpty, v27);
   klass = (int)IsNullOrEmpty[1].klass;
-  v17 = IsNullOrEmpty;
+  v29 = IsNullOrEmpty;
   if ( klass >= 1 )
   {
     for ( i = 0; i < klass; ++i )
     {
       if ( i >= (unsigned int)klass )
         goto LABEL_31;
-      IsNullOrEmpty = (System_String_o *)*((_QWORD *)&v17[1].monitor + i);
+      IsNullOrEmpty = (System_String_o *)*((_QWORD *)&v29[1].monitor + i);
       if ( !IsNullOrEmpty )
         goto LABEL_32;
-      v19 = System_String__Split(IsNullOrEmpty, 0x3Au, 0, 0LL);
+      v31 = System_String__Split(IsNullOrEmpty, 0x3Au, 0, 0LL);
       result[1] = 0;
-      v20 = (System_Collections_Generic_List_int__o *)sub_1BAB668(System_Collections_Generic_List_int__TypeInfo);
+      v35 = (System_Collections_Generic_List_int__o *)sub_1BCAA2C(
+                                                        System_Collections_Generic_List_int__TypeInfo,
+                                                        v32,
+                                                        v33,
+                                                        v34);
       System_Collections_Generic_List_int____ctor(
-        v20,
-        (const MethodInfo_3530044 *)Method_System_Collections_Generic_List_int___ctor__);
-      if ( !v19 )
+        v35,
+        (const MethodInfo_35843E4 *)Method_System_Collections_Generic_List_int___ctor__);
+      if ( !v31 )
         goto LABEL_32;
-      if ( !v19->max_length )
+      if ( !v31->max_length )
         goto LABEL_31;
-      IsNullOrEmpty = (System_String_o *)System_Int32__TryParse(v19->m_Items[0], &result[1], 0LL);
+      IsNullOrEmpty = (System_String_o *)System_Int32__TryParse(v31->m_Items[0], &result[1], 0LL);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
-        if ( v19->max_length <= 1 )
+        if ( v31->max_length <= 1 )
           goto LABEL_31;
-        IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(v19->m_Items[1], 0LL);
+        IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(v31->m_Items[1], 0LL);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
         {
-          if ( v19->max_length <= 1 )
+          if ( v31->max_length <= 1 )
             goto LABEL_31;
-          IsNullOrEmpty = v19->m_Items[1];
+          IsNullOrEmpty = v31->m_Items[1];
           if ( !IsNullOrEmpty )
             goto LABEL_32;
           IsNullOrEmpty = (System_String_o *)System_String__Split(IsNullOrEmpty, 0x2Cu, 0, 0LL);
           if ( !IsNullOrEmpty )
             goto LABEL_32;
-          v21 = IsNullOrEmpty[1].klass;
-          v22 = IsNullOrEmpty;
-          if ( (int)v21 >= 1 )
+          v36 = IsNullOrEmpty[1].klass;
+          v37 = IsNullOrEmpty;
+          if ( (int)v36 >= 1 )
           {
-            v23 = 0LL;
-            while ( v23 < (unsigned int)v21 )
+            v38 = 0LL;
+            while ( v38 < (unsigned int)v36 )
             {
-              v24 = (System_String_o *)*((_QWORD *)&v22[1].monitor + v23);
+              v39 = (System_String_o *)*((_QWORD *)&v37[1].monitor + v38);
               result[0] = 0;
-              IsNullOrEmpty = (System_String_o *)System_Int32__TryParse(v24, result, 0LL);
+              IsNullOrEmpty = (System_String_o *)System_Int32__TryParse(v39, result, 0LL);
               if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
               {
-                if ( !v20 )
+                if ( !v35 )
                   goto LABEL_32;
-                v15 = (unsigned int)result[0];
-                items = v20->fields._items;
-                v26 = Method_System_Collections_Generic_List_int__Add__;
-                ++v20->fields._version;
+                v27 = (unsigned int)result[0];
+                items = v35->fields._items;
+                v41 = Method_System_Collections_Generic_List_int__Add__;
+                ++v35->fields._version;
                 if ( !items )
                   goto LABEL_32;
-                size = v20->fields._size;
+                size = v35->fields._size;
                 if ( (unsigned int)size >= items->max_length )
                 {
                   System_Collections_Generic_List_int___AddWithResize(
-                    v20,
-                    v15,
-                    *(const MethodInfo_3530898 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+                    v35,
+                    v27,
+                    *(const MethodInfo_3584C38 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
                 }
                 else
                 {
-                  v20->fields._size = size + 1;
-                  items->m_Items[size + 1] = v15;
+                  v35->fields._size = size + 1;
+                  items->m_Items[size + 1] = v27;
                 }
               }
-              LODWORD(v21) = v22[1].klass;
-              if ( (__int64)++v23 >= (int)v21 )
+              LODWORD(v36) = v37[1].klass;
+              if ( (__int64)++v38 >= (int)v36 )
                 goto LABEL_27;
             }
 LABEL_31:
-            sub_1BAB680(IsNullOrEmpty, v15);
+            sub_1BCAA44(IsNullOrEmpty, v27);
           }
         }
 LABEL_27:
@@ -136,10 +159,10 @@ LABEL_27:
         System_Collections_Generic_Dictionary_int__object___Add(
           (System_Collections_Generic_Dictionary_int__object__o *)IsNullOrEmpty,
           result[1],
-          (Il2CppObject *)v20,
-          (const MethodInfo_31B6E34 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
+          (Il2CppObject *)v35,
+          (const MethodInfo_3205EE4 *)Method_System_Collections_Generic_Dictionary_int__List_int___Add__);
       }
-      klass = (int)v17[1].klass;
+      klass = (int)v29[1].klass;
     }
   }
 }
@@ -149,108 +172,123 @@ System_String_o *__fastcall EventRaidDefeatedEffectInfo__ConvertToStringData(
         EventRaidDefeatedEffectInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v2; // x2
+  __int64 v3; // x3
   __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v6; // x2
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
-  __int64 v10; // x1
+  __int64 v10; // x2
   __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v12; // x2
   __int64 v13; // x1
-  __int64 v14; // x1
+  __int64 v14; // x2
   __int64 v15; // x1
-  System_Text_StringBuilder_o *v16; // x19
+  __int64 v16; // x2
   __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x1
+  __int64 v20; // x2
+  __int64 v21; // x1
+  __int64 v22; // x2
+  __int64 v23; // x1
+  __int64 v24; // x2
+  __int64 v25; // x1
+  __int64 v26; // x2
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x1
+  __int64 v30; // x2
+  System_Text_StringBuilder_o *v31; // x19
+  __int64 v32; // x1
   struct System_Collections_Generic_Dictionary_int__List_int___o *playedEffectList; // x0
   Il2CppObject *value; // x20
-  System_String_o *v20; // x0
-  System_String_o *v21; // x0
+  System_String_o *v35; // x0
+  System_String_o *v36; // x0
   System_Text_StringBuilder_o *appended; // x0
-  __int64 v23; // x1
-  char v24; // w20
-  System_String_o *v25; // x1
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v27; // [xsp+18h] [xbp-D8h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v28; // [xsp+40h] [xbp-B0h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v29; // [xsp+60h] [xbp-90h] BYREF
-  __int64 v30; // [xsp+98h] [xbp-58h] BYREF
+  __int64 v38; // x1
+  char v39; // w20
+  System_String_o *v40; // x1
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v42; // [xsp+18h] [xbp-D8h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v43; // [xsp+40h] [xbp-B0h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v44; // [xsp+60h] [xbp-90h] BYREF
+  __int64 v45; // [xsp+98h] [xbp-58h] BYREF
 
-  if ( (byte_4AB31FB & 1) == 0 )
+  if ( (byte_4B13673 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__, method);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v3);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__, v4);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__, v5);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__, v8);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__, v9);
-    sub_1BAB41C(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__, v10);
-    sub_1BAB41C(&Method_System_Collections_Generic_List_int__GetEnumerator__, v11);
-    sub_1BAB41C(&System_Text_StringBuilder_TypeInfo, v12);
-    sub_1BAB41C(&StringLiteral_1541/*":"*/, v13);
-    sub_1BAB41C(&StringLiteral_1576/*";"*/, v14);
-    sub_1BAB41C(&StringLiteral_863/*","*/, v15);
-    byte_4AB31FB = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__, method, v2);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5, v6);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__, v7, v8);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__, v9, v10);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v11, v12);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v13, v14);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___get_Current__, v15, v16);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Key__, v17, v18);
+    sub_1BCA7E0(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__, v19, v20);
+    sub_1BCA7E0(&Method_System_Collections_Generic_List_int__GetEnumerator__, v21, v22);
+    sub_1BCA7E0(&System_Text_StringBuilder_TypeInfo, v23, v24);
+    sub_1BCA7E0(&StringLiteral_1541/*":"*/, v25, v26);
+    sub_1BCA7E0(&StringLiteral_1576/*";"*/, v27, v28);
+    sub_1BCA7E0(&StringLiteral_863/*","*/, v29, v30);
+    byte_4B13673 = 1;
   }
-  v30 = 0LL;
-  memset(&v29, 0, sizeof(v29));
-  memset(&v28, 0, sizeof(v28));
-  v16 = (System_Text_StringBuilder_o *)sub_1BAB668(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor(v16, 0LL);
+  v45 = 0LL;
+  memset(&v44, 0, sizeof(v44));
+  memset(&v43, 0, sizeof(v43));
+  v31 = (System_Text_StringBuilder_o *)sub_1BCAA2C(System_Text_StringBuilder_TypeInfo, method, v2, v3);
+  System_Text_StringBuilder___ctor(v31, 0LL);
   playedEffectList = this->fields.playedEffectList;
   if ( !playedEffectList )
     goto LABEL_18;
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
-    &v27,
+    &v42,
     (System_Collections_Generic_Dictionary_int__object__o *)playedEffectList,
-    (const MethodInfo_31B726C *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
-  v29 = v27;
+    (const MethodInfo_320631C *)Method_System_Collections_Generic_Dictionary_int__List_int___GetEnumerator__);
+  v44 = v42;
   while ( System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
-            &v29,
-            (const MethodInfo_3304574 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__) )
+            &v44,
+            (const MethodInfo_335671C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__) )
   {
-    value = v29.fields._current.fields.value;
-    HIDWORD(v30) = v29.fields._current.fields.key;
-    v20 = System_Int32__ToString((int32_t)&v30 + 4, 0LL);
-    v21 = System_String__Concat_62048128(v20, (System_String_o *)StringLiteral_1541/*":"*/, 0LL);
-    if ( !v16 )
-      sub_1BAB678(v21, v21);
-    appended = System_Text_StringBuilder__Append_61210024(v16, v21, 0LL);
+    value = v44.fields._current.fields.value;
+    HIDWORD(v45) = v44.fields._current.fields.key;
+    v35 = System_Int32__ToString((int32_t)&v45 + 4, 0LL);
+    v36 = System_String__Concat_62401220(v35, (System_String_o *)StringLiteral_1541/*":"*/, 0LL);
+    if ( !v31 )
+      sub_1BCAA3C(v36, v36);
+    appended = System_Text_StringBuilder__Append_61563116(v31, v36, 0LL);
     if ( !value )
-      sub_1BAB678(appended, v23);
+      sub_1BCAA3C(appended, v38);
     System_Collections_Generic_List_int___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v27,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v42,
       (System_Collections_Generic_List_int__o *)value,
-      (const MethodInfo_353136C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-    v24 = 0;
-    *(_OWORD *)&v28.fields._list = *(_OWORD *)&v27.fields._dictionary;
-    *(_QWORD *)&v28.fields._current = v27.fields._current.fields.key;
+      (const MethodInfo_358570C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    v39 = 0;
+    *(_OWORD *)&v43.fields._list = *(_OWORD *)&v42.fields._dictionary;
+    *(_QWORD *)&v43.fields._current = v42.fields._current.fields.key;
     while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-              &v28,
-              (const MethodInfo_32C0BAC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+              &v43,
+              (const MethodInfo_3312C50 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
-      LODWORD(v30) = v28.fields._current;
-      if ( (v24 & 1) != 0 )
-        System_Text_StringBuilder__Append_61210024(v16, (System_String_o *)StringLiteral_863/*","*/, 0LL);
-      v25 = System_Int32__ToString((int32_t)&v30, 0LL);
-      v24 = 1;
-      System_Text_StringBuilder__Append_61210024(v16, v25, 0LL);
+      LODWORD(v45) = v43.fields._current;
+      if ( (v39 & 1) != 0 )
+        System_Text_StringBuilder__Append_61563116(v31, (System_String_o *)StringLiteral_863/*","*/, 0LL);
+      v40 = System_Int32__ToString((int32_t)&v45, 0LL);
+      v39 = 1;
+      System_Text_StringBuilder__Append_61563116(v31, v40, 0LL);
     }
     System_Collections_Generic_List_Enumerator_int___Dispose(
-      &v28,
-      (const MethodInfo_32C0BA8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    System_Text_StringBuilder__Append_61210024(v16, (System_String_o *)StringLiteral_1576/*";"*/, 0LL);
+      &v43,
+      (const MethodInfo_3312C4C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    System_Text_StringBuilder__Append_61563116(v31, (System_String_o *)StringLiteral_1576/*";"*/, 0LL);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
-    &v29,
-    (const MethodInfo_3304698 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
-  if ( !v16 )
+    &v44,
+    (const MethodInfo_3356840 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___Dispose__);
+  if ( !v31 )
 LABEL_18:
-    sub_1BAB678(playedEffectList, v17);
-  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v16->klass->vtable._3_ToString.method)(
-                              v16,
-                              v16->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+    sub_1BCAA3C(playedEffectList, v32);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v31->klass->vtable._3_ToString.method)(
+                              v31,
+                              v31->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
 }

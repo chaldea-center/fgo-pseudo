@@ -1,13 +1,15 @@
 void __fastcall TreasureDvcDetailEntity___ctor(TreasureDvcDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB68C9 & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B16D7C & 1) == 0 )
   {
-    sub_1BAB41C(&Method_DataEntityBase_int___ctor__, method);
-    byte_4AB68C9 = 1;
+    sub_1BCA7E0(&Method_DataEntityBase_int___ctor__, method, v2);
+    byte_4B16D7C = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3163B90 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31B2C40 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,16 +23,17 @@ System_String_o *__fastcall TreasureDvcDetailEntity__getDetail(
         TreasureDvcDetailEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   System_String_o *detail; // x19
 
-  if ( (byte_4AB68C7 & 1) == 0 )
+  if ( (byte_4B16D7A & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
-    byte_4AB68C7 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, method, v2);
+    byte_4B16D7A = 1;
   }
   detail = this->fields.detail;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
   return LocalizationManager__ReplaceCommonTag(detail, 0, 0LL);
 }
 
@@ -39,15 +42,16 @@ System_String_o *__fastcall TreasureDvcDetailEntity__getDetailShort(
         TreasureDvcDetailEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x2
   System_String_o *detailShort; // x19
 
-  if ( (byte_4AB68C8 & 1) == 0 )
+  if ( (byte_4B16D7B & 1) == 0 )
   {
-    sub_1BAB41C(&LocalizationManager_TypeInfo, method);
-    byte_4AB68C8 = 1;
+    sub_1BCA7E0(&LocalizationManager_TypeInfo, method, v2);
+    byte_4B16D7B = 1;
   }
   detailShort = this->fields.detailShort;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
   return LocalizationManager__ReplaceCommonTag(detailShort, 0, 0LL);
 }

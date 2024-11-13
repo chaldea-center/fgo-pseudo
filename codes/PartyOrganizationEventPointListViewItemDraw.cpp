@@ -122,6 +122,6 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
       }
     }
 LABEL_17:
-    sub_1BAB678(titleLabel, item);
+    sub_1BCAA3C(titleLabel, item);
   }
 }

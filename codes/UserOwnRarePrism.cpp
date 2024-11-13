@@ -4,19 +4,27 @@ void __fastcall UserOwnRarePrism___ctor(
         UserGameEntity_o *userGameEntity,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
-  __int64 v9; // x0
-  __int64 v10; // x1
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  __int64 v13; // x0
+  __int64 v14; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields._ItemEntity_k__BackingField,
-    (int32_t)itemEntity,
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
+    (int64_t)itemEntity,
     v7,
-    v8);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   if ( !userGameEntity )
-    sub_1BAB678(v9, v10);
+    sub_1BCAA3C(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.rarePri;
 }

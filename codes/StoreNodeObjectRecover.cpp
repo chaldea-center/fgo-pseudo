@@ -1,22 +1,41 @@
 void __fastcall StoreNodeObjectRecover___ctor(StoreNodeObjectRecover_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v4; // x20
-  int32_t v5; // w2
-  int32_t v6; // w3
+  __int64 v2; // x2
+  __int64 v3; // x3
+  __int64 v5; // x1
+  __int64 v6; // x2
+  System_Collections_Generic_Dictionary_object__object__o *v7; // x20
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4AB90E4 & 1) == 0 )
+  if ( (byte_4B195D6 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__Action___ctor__, method);
-    sub_1BAB41C(&System_Collections_Generic_Dictionary_string__Action__TypeInfo, v3);
-    byte_4AB90E4 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__Action___ctor__, method, v2);
+    sub_1BCA7E0(&System_Collections_Generic_Dictionary_string__Action__TypeInfo, v5, v6);
+    byte_4B195D6 = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BAB668(System_Collections_Generic_Dictionary_string__Action__TypeInfo);
+  v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BCAA2C(
+                                                                    System_Collections_Generic_Dictionary_string__Action__TypeInfo,
+                                                                    method,
+                                                                    v2,
+                                                                    v3);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v4,
-    (const MethodInfo_3212B9C *)Method_System_Collections_Generic_Dictionary_string__Action___ctor__);
-  this->fields.recoverPairDictionary = (struct System_Collections_Generic_Dictionary_string__Action__o *)v4;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)&this->fields.recoverPairDictionary, (int32_t)v4, v5, v6);
+    v7,
+    (const MethodInfo_32648B0 *)Method_System_Collections_Generic_Dictionary_string__Action___ctor__);
+  this->fields.recoverPairDictionary = (struct System_Collections_Generic_Dictionary_string__Action__o *)v7;
+  sub_1BCA784(
+    (PartyOrganizationUtility_o *)&this->fields.recoverPairDictionary,
+    (int64_t)v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -29,26 +48,30 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
 {
   UnityEngine_GameObject_o *v6; // x21
   __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v8; // x2
   __int64 v9; // x1
+  __int64 v10; // x2
+  __int64 v11; // x1
+  __int64 v12; // x2
+  __int64 v13; // x1
   void *Component_object; // x22
 
   v6 = gameObject;
-  if ( (byte_4AB90E2 & 1) == 0 )
+  if ( (byte_4B195D4 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__Action__set_Item__, storeObject);
-    sub_1BAB41C(&Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___, v7);
-    sub_1BAB41C(&Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___, v8);
-    gameObject = (UnityEngine_GameObject_o *)sub_1BAB41C(&UnityEngine_Object_TypeInfo, v9);
-    byte_4AB90E2 = 1;
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__Action__set_Item__, storeObject, recovery);
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___, v7, v8);
+    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___, v9, v10);
+    gameObject = (UnityEngine_GameObject_o *)sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v11, v12);
+    byte_4B195D4 = 1;
   }
   if ( !v6 )
     goto LABEL_12;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v6,
-                       (const MethodInfo_2F13970 *)Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___);
+                       (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_StoreNodeObjectRecover___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
                                              (UnityEngine_Object_o *)Component_object,
                                              0LL,
@@ -57,7 +80,7 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
   {
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                                v6,
-                                               (const MethodInfo_2F13888 *)Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___);
+                                               (const MethodInfo_2F625E8 *)Method_UnityEngine_GameObject_AddComponent_StoreNodeObjectRecover___);
     Component_object = gameObject;
   }
   if ( !Component_object
@@ -65,13 +88,13 @@ void __fastcall StoreNodeObjectRecover__AddRecoverComponent(
     || (gameObject = (UnityEngine_GameObject_o *)*((_QWORD *)Component_object + 4)) == 0LL )
   {
 LABEL_12:
-    sub_1BAB678(gameObject, storeObject);
+    sub_1BCAA3C(gameObject, storeObject);
   }
   System_Collections_Generic_Dictionary_object__object___set_Item(
     (System_Collections_Generic_Dictionary_object__object__o *)gameObject,
     (Il2CppObject *)storeObject->fields.name,
     (Il2CppObject *)recovery,
-    (const MethodInfo_3213538 *)Method_System_Collections_Generic_Dictionary_string__Action__set_Item__);
+    (const MethodInfo_326524C *)Method_System_Collections_Generic_Dictionary_string__Action__set_Item__);
 }
 
 
@@ -81,14 +104,18 @@ void __fastcall StoreNodeObjectRecover__Recovery(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  __int64 v6; // x2
   struct System_Collections_Generic_Dictionary_string__Action__o *recoverPairDictionary; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_4AB90E3 & 1) == 0 )
+  if ( (byte_4B195D5 & 1) == 0 )
   {
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__, recoverTargetVarName);
-    sub_1BAB41C(&Method_System_Collections_Generic_Dictionary_string__Action__get_Item__, v5);
-    byte_4AB90E3 = 1;
+    sub_1BCA7E0(
+      &Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__,
+      recoverTargetVarName,
+      method);
+    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__Action__get_Item__, v5, v6);
+    byte_4B195D5 = 1;
   }
   recoverPairDictionary = this->fields.recoverPairDictionary;
   if ( !recoverPairDictionary )
@@ -96,16 +123,16 @@ void __fastcall StoreNodeObjectRecover__Recovery(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)recoverPairDictionary,
           (Il2CppObject *)recoverTargetVarName,
-          (const MethodInfo_3213740 *)Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__) )
+          (const MethodInfo_3265454 *)Method_System_Collections_Generic_Dictionary_string__Action__ContainsKey__) )
     return;
   recoverPairDictionary = this->fields.recoverPairDictionary;
   if ( !recoverPairDictionary )
 LABEL_9:
-    sub_1BAB678(recoverPairDictionary, recoverTargetVarName);
+    sub_1BCAA3C(recoverPairDictionary, recoverTargetVarName);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)recoverPairDictionary,
            (Il2CppObject *)recoverTargetVarName,
-           (const MethodInfo_32134CC *)Method_System_Collections_Generic_Dictionary_string__Action__get_Item__);
+           (const MethodInfo_32651E0 *)Method_System_Collections_Generic_Dictionary_string__Action__get_Item__);
   if ( Item )
     ((void (__fastcall *)(Il2CppClass *, void *))Item[1].monitor)(Item[4].klass, Item[2].monitor);
 }

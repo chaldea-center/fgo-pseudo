@@ -1,12 +1,14 @@
 void __fastcall SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AB18BE & 1) == 0 )
+  __int64 v2; // x2
+
+  if ( (byte_4B11CD7 & 1) == 0 )
   {
-    sub_1BAB41C(&CommonEffectComponent_TypeInfo, method);
-    byte_4AB18BE = 1;
+    sub_1BCA7E0(&CommonEffectComponent_TypeInfo, method, v2);
+    byte_4B11CD7 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -52,14 +54,8 @@ void __fastcall SoundPlayerOpenEffectComponent__setAnimEndCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields.animEndCallback = callback;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.animEndCallback,
-    (int32_t)callback,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields.animEndCallback, callback);
 }
 
 
@@ -68,14 +64,8 @@ void __fastcall SoundPlayerOpenEffectComponent__setChangeUiCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields.changeUiCallback = callback;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.changeUiCallback,
-    (int32_t)callback,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields.changeUiCallback, callback);
 }
 
 
@@ -84,12 +74,6 @@ void __fastcall SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-
   this->fields.playIconAnimCallback = callback;
-  sub_1BAB3C0(
-    (ServantStatusBattleListViewItem_o *)&this->fields.playIconAnimCallback,
-    (int32_t)callback,
-    (int32_t)method,
-    v3);
+  sub_1BCA784(&this->fields.playIconAnimCallback, callback);
 }

@@ -6,8 +6,12 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
 {
   PlayFieldMotionBattleLogicTask_o *v5; // x20
   bool v6; // w21
-  int32_t v7; // w2
+  int64_t v7; // x2
   int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
   v5 = this;
   v6 = isForcedSpeedOne;
@@ -15,6 +19,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 104);
   v5[-1].fields._AiTimingPriority_k__BackingField = 44;
-  sub_1BAB3C0((ServantStatusBattleListViewItem_o *)v5, (int32_t)motionName, v7, v8);
+  sub_1BCA784((PartyOrganizationUtility_o *)v5, (int64_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v5->fields.command) = v6;
 }
