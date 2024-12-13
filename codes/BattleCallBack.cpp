@@ -9,7 +9,7 @@ void __fastcall BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *c
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.callBack = callBack;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)callBack, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)callBack, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -19,7 +19,7 @@ void __fastcall BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *m
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callBack->fields.m_target)(
     callBack->fields.original_method_info,
     *(_QWORD *)&callBack->fields.extra_arg);

@@ -5,12 +5,12 @@ void __fastcall ServantWaveTurnEvent___ctor(ServantWaveTurnEvent_o *this, Battle
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !data )
-    sub_1BCAA3C(v5, v6);
+    sub_1BD36B4(v5, v6);
   this->fields = *(ServantWaveTurnEvent_Fields *)&data->fields.wavecount;
 }
 
 
-void __fastcall ServantWaveTurnEvent___ctor_44414504(
+void __fastcall ServantWaveTurnEvent___ctor_44524320(
         ServantWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
@@ -26,28 +26,26 @@ ServantWaveTurnEvent_SaveData_o *__fastcall ServantWaveTurnEvent__ExportSaveData
         ServantWaveTurnEvent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   ServantWaveTurnEvent_SaveData_o *result; // x0
 
-  if ( (byte_4B18F37 & 1) == 0 )
+  if ( (byte_4B39F15 & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantWaveTurnEvent_SaveData_TypeInfo, method, v2);
-    byte_4B18F37 = 1;
+    sub_1BD3458(&ServantWaveTurnEvent_SaveData_TypeInfo, method);
+    byte_4B39F15 = 1;
   }
-  v5 = sub_1BCAA2C(ServantWaveTurnEvent_SaveData_TypeInfo, method, v2, v3);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  v6 = ((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, Il2CppMethodPointer))this->klass->vtable._4_unknown.method)(
+  v3 = sub_1BD36A4(ServantWaveTurnEvent_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  v4 = ((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, Il2CppMethodPointer))this->klass->vtable._4_unknown.method)(
          this,
          this->klass->vtable._5_ExportSaveData.methodPtr);
-  if ( !v5 )
-    sub_1BCAA3C(v6, v7);
-  *(_DWORD *)(v5 + 16) = v6;
-  result = (ServantWaveTurnEvent_SaveData_o *)v5;
-  *(ServantWaveTurnEvent_Fields *)(v5 + 20) = this->fields;
+  if ( !v3 )
+    sub_1BD36B4(v4, v5);
+  *(_DWORD *)(v3 + 16) = v4;
+  result = (ServantWaveTurnEvent_SaveData_o *)v3;
+  *(ServantWaveTurnEvent_Fields *)(v3 + 20) = this->fields;
   return result;
 }
 

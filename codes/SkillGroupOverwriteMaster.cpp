@@ -1,19 +1,14 @@
 void __fastcall SkillGroupOverwriteMaster___ctor(SkillGroupOverwriteMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16C49 & 1) == 0 )
+  if ( (byte_4B37BFF & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string___ctor__,
-      method,
-      v2);
-    byte_4B16C49 = 1;
+    sub_1BD3458(&Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string___ctor__, method);
+    byte_4B37BFF = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     443,
-    (const MethodInfo_31B3158 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string___ctor__);
+    (const MethodInfo_31D2208 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string___ctor__);
 }
 
 
@@ -26,23 +21,21 @@ SkillGroupOverwriteEntity_o *__fastcall SkillGroupOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B16C4A & 1) == 0 )
+  if ( (byte_4B37C00 & 1) == 0 )
   {
-    sub_1BCA7E0(
+    sub_1BD3458(
       &Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__GetEntity__,
-      *(_QWORD *)&skillGroupId,
-      startedAt);
-    byte_4B16C4A = 1;
+      *(_QWORD *)&skillGroupId);
+    byte_4B37C00 = 1;
   }
   PK = (Il2CppObject *)SkillGroupOverwriteEntity__CreatePK(skillGroupId, startedAt, 0LL);
   return (SkillGroupOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_31B3198 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__GetEntity__);
+                                          (const MethodInfo_31D2248 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall SkillGroupOverwriteMaster__TryGetEntity(
         SkillGroupOverwriteMaster_o *this,
         SkillGroupOverwriteEntity_o **entity,
@@ -52,20 +45,19 @@ bool __fastcall SkillGroupOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B16C4B & 1) == 0 )
+  if ( (byte_4B37C01 & 1) == 0 )
   {
-    sub_1BCA7E0(
+    sub_1BD3458(
       &Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__TryGetEntity__,
-      entity,
-      *(_QWORD *)&skillGroupId);
-    byte_4B16C4B = 1;
+      entity);
+    byte_4B37C01 = 1;
   }
   PK = (Il2CppObject *)SkillGroupOverwriteEntity__CreatePK(skillGroupId, startedAt, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31B31E8 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_31D2298 *)Method_DataMasterBase_SkillGroupOverwriteMaster__SkillGroupOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -81,53 +73,46 @@ bool __fastcall SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v12; // x1
-  __int64 v13; // x2
+  __int64 v13; // x1
   __int64 v14; // x1
-  __int64 v15; // x2
+  __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x1
-  __int64 v19; // x2
-  __int64 v20; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v22; // x1
+  __int64 v18; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v25; // x9
+  __int64 v21; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v28; // x8
-  __int64 v29; // x9
-  int32_t *v30; // x10
-  __int64 v31; // x0
-  SkillGroupOverwriteEntity_o *v32; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  System_Collections_Generic_IEnumerator_T__c *v24; // x8
+  __int64 v25; // x9
+  int32_t *v26; // x10
+  __int64 v27; // x0
+  SkillGroupOverwriteEntity_o *v28; // x0
+  int64_t v29; // x2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  BattleSetupInfo_o *v32; // x5
+  FollowerInfo_o *v33; // x6
+  PartyListViewItem_o *v34; // x7
   __int64 methodPtr_low; // x10
-  bool v40; // w21
-  System_Collections_Generic_IEnumerator_T__c *v41; // x8
-  __int64 v42; // x9
-  int32_t *v43; // x10
-  __int64 v44; // x0
+  bool v36; // w21
+  System_Collections_Generic_IEnumerator_T__c *v37; // x8
+  __int64 v38; // x9
+  int32_t *v39; // x10
+  __int64 v40; // x0
 
-  if ( (byte_4B16C48 & 1) == 0 )
+  if ( (byte_4B37BFE & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
-      entity,
-      *(_QWORD *)&skillGroupId);
-    sub_1BCA7E0(&System_IDisposable_TypeInfo, v12, v13);
-    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v14, v15);
-    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v16, v17);
-    sub_1BCA7E0(&SkillGroupOverwriteEntity_TypeInfo, v18, v19);
-    byte_4B16C48 = 1;
+    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, entity);
+    sub_1BD3458(&System_IDisposable_TypeInfo, v12);
+    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v13);
+    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1BD3458(&SkillGroupOverwriteEntity_TypeInfo, v15);
+    byte_4B37BFE = 1;
   }
   *entity = 0LL;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)entity,
     0LL,
     *(int64_t *)&skillGroupId,
@@ -138,24 +123,24 @@ bool __fastcall SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
     v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BCAA3C(0LL, v20);
+    sub_1BD36B4(0LL, v16);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_314F9E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BCAA3C(0LL, v22);
+    sub_1BD36B4(0LL, v18);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v21 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v25;
+        --v21;
         p_offset += 4;
-        if ( !v25 )
+        if ( !v21 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -163,71 +148,71 @@ bool __fastcall SkillGroupOverwriteMaster__TryGetSkillGroupOverwriteEntity(
     else
     {
 LABEL_9:
-      p_method = sub_1C1C7C0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v28 = Enumerator->klass;
-    v29 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v24 = Enumerator->klass;
+    v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v30 = &v28->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v30 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v26 = &v24->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v26 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        --v29;
-        v30 += 4;
-        if ( !v29 )
+        --v25;
+        v26 += 4;
+        if ( !v25 )
           goto LABEL_16;
       }
-      v31 = (__int64)&v28->vtable[*v30].method;
+      v27 = (__int64)&v24->vtable[*v26].method;
     }
     else
     {
 LABEL_16:
-      v31 = sub_1C1C7C0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v27 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v32 = (SkillGroupOverwriteEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(
+    v28 = (SkillGroupOverwriteEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(
                                            Enumerator,
-                                           *(_QWORD *)(v31 + 8));
-    if ( v32 )
+                                           *(_QWORD *)(v27 + 8));
+    if ( v28 )
     {
       methodPtr_low = LOBYTE(SkillGroupOverwriteEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(v32->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-        && (SkillGroupOverwriteEntity_c *)v32->klass->_2.typeHierarchy[methodPtr_low - 1] == SkillGroupOverwriteEntity_TypeInfo
-        && v32->fields.skillGroupId == skillGroupId
-        && v32->fields.startedAt <= time
-        && v32->fields.endedAt >= time )
+      if ( LOBYTE(v28->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
+        && (SkillGroupOverwriteEntity_c *)v28->klass->_2.typeHierarchy[methodPtr_low - 1] == SkillGroupOverwriteEntity_TypeInfo
+        && v28->fields.skillGroupId == skillGroupId
+        && v28->fields.startedAt <= time
+        && v28->fields.endedAt >= time )
       {
-        *entity = v32;
-        sub_1BCA784((PartyOrganizationUtility_o *)entity, (int64_t)v32, v33, v34, v35, v36, v37, v38);
-        v40 = 1;
+        *entity = v28;
+        sub_1BD33FC((PartyOrganizationUtility_o *)entity, (int64_t)v28, v29, v30, v31, v32, v33, v34);
+        v36 = 1;
         goto LABEL_26;
       }
     }
   }
-  v40 = 0;
+  v36 = 0;
 LABEL_26:
-  v41 = Enumerator->klass;
-  v42 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v37 = Enumerator->klass;
+  v38 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v43 = &v41->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
+    v39 = &v37->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
     {
-      --v42;
-      v43 += 4;
-      if ( !v42 )
+      --v38;
+      v39 += 4;
+      if ( !v38 )
         goto LABEL_30;
     }
-    v44 = (__int64)&v41->vtable[*v43].method;
+    v40 = (__int64)&v37->vtable[*v39].method;
   }
   else
   {
 LABEL_30:
-    v44 = sub_1C1C7C0(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v40 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v44)(Enumerator, *(_QWORD *)(v44 + 8));
-  return v40;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v40)(Enumerator, *(_QWORD *)(v40 + 8));
+  return v36;
 }

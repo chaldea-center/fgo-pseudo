@@ -23,7 +23,7 @@ bool __fastcall IconLabelInfo__IsClear(IconLabelInfo_o *this, const MethodInfo *
 void __fastcall IconLabelInfo__Set(IconLabelInfo_o *this, IconLabelInfo_o *info, const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   *(_OWORD *)&this->fields.iconKind = *(_OWORD *)&info->fields.iconKind;
   this->fields.time = info->fields.time;
   this->fields.isHide = info->fields.isHide;
@@ -66,7 +66,7 @@ void __fastcall IconLabelInfo__SetTime(
 }
 
 
-void __fastcall IconLabelInfo__Set_38850420(
+void __fastcall IconLabelInfo__Set_38919304(
         IconLabelInfo_o *this,
         int32_t iconKind,
         int32_t data,

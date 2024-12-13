@@ -1,14 +1,13 @@
 void __fastcall LimitUpResultInfoRewardComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
 
-  if ( (byte_4B19BCC & 1) == 0 )
+  if ( (byte_4B3ABBC & 1) == 0 )
   {
-    sub_1BCA7E0(&LimitUpResultInfoRewardComponent_TypeInfo, v1, v2);
-    byte_4B19BCC = 1;
+    sub_1BD3458(&LimitUpResultInfoRewardComponent_TypeInfo, v1);
+    byte_4B3ABBC = 1;
   }
-  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BD2DF0;
+  *LimitUpResultInfoRewardComponent_TypeInfo->static_fields = (struct LimitUpResultInfoRewardComponent_StaticFields)xmmword_BD8230;
 }
 
 
@@ -38,69 +37,67 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v12; // x1
   UISprite_o *rewardInfoGetIcon; // x24
-  __int64 v16; // x1
+  __int64 v14; // x1
   void *rewardInfoIcon; // x0
   UILabel_o *detailLabel; // x22
-  bool v19; // w1
-  const MethodInfo *v20; // x3
+  bool v17; // w1
+  const MethodInfo *v18; // x3
+  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B19BCB & 1) == 0 )
+  if ( (byte_4B3ABBB & 1) == 0 )
   {
-    sub_1BCA7E0(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId, isHaving);
-    sub_1BCA7E0(&LimitUpResultInfoRewardComponent_TypeInfo, v11, v12);
-    sub_1BCA7E0(&StringLiteral_20384/*"icon_reward_get"*/, v13, v14);
-    byte_4B19BCB = 1;
+    sub_1BD3458(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
+    sub_1BD3458(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
+    sub_1BD3458(&StringLiteral_20414/*"icon_reward_get"*/, v12);
+    byte_4B3ABBB = 1;
   }
   rewardInfoGetIcon = this->fields.rewardInfoGetIcon;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
-  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_20384/*"icon_reward_get"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_20414/*"icon_reward_get"*/, 0LL);
   rewardInfoIcon = this->fields.rewardInfoIcon;
   if ( !rewardInfoIcon )
     goto LABEL_22;
-  ItemIconComponent__SetItem((ItemIconComponent_o *)rewardInfoIcon, iconImageId, -1, 0LL);
+  ItemIconComponent__SetItem((ItemIconComponent_o *)rewardInfoIcon, iconImageId, -1, 1, 0LL);
   rewardInfoIcon = this->fields.rewardInfoIcon;
   if ( !isHaving )
   {
     if ( rewardInfoIcon )
     {
-      v23.fields.r = 1.0;
-      v23.fields.g = 1.0;
-      v23.fields.b = 1.0;
-      v23.fields.a = 1.0;
-      ItemIconComponent__SetColor((ItemIconComponent_o *)rewardInfoIcon, v23, 0LL);
+      v21.fields.r = 1.0;
+      v21.fields.g = 1.0;
+      v21.fields.b = 1.0;
+      v21.fields.a = 1.0;
+      ItemIconComponent__SetColor((ItemIconComponent_o *)rewardInfoIcon, v21, 0LL);
       rewardInfoIcon = this->fields.detailLabel;
       if ( rewardInfoIcon )
       {
-        v24.fields.r = 1.0;
-        v24.fields.g = 1.0;
-        v24.fields.b = 1.0;
-        v24.fields.a = 1.0;
-        UIWidget__set_color((UIWidget_o *)rewardInfoIcon, v24, 0LL);
+        v22.fields.r = 1.0;
+        v22.fields.g = 1.0;
+        v22.fields.b = 1.0;
+        v22.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)rewardInfoIcon, v22, 0LL);
         rewardInfoIcon = this->fields.detailLabel;
         if ( rewardInfoIcon )
         {
-          v25.fields.r = 0.0;
-          v25.fields.g = 0.0;
-          v25.fields.b = 0.0;
-          v25.fields.a = 1.0;
-          UILabel__set_effectColor((UILabel_o *)rewardInfoIcon, v25, 0LL);
+          v23.fields.r = 0.0;
+          v23.fields.g = 0.0;
+          v23.fields.b = 0.0;
+          v23.fields.a = 1.0;
+          UILabel__set_effectColor((UILabel_o *)rewardInfoIcon, v23, 0LL);
           rewardInfoIcon = this->fields.rewardInfoGetIcon;
           if ( rewardInfoIcon )
           {
             rewardInfoIcon = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)rewardInfoIcon, 0LL);
             if ( rewardInfoIcon )
             {
-              v19 = 0;
+              v17 = 0;
               goto LABEL_21;
             }
           }
@@ -108,28 +105,28 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
       }
     }
 LABEL_22:
-    sub_1BCAA3C(rewardInfoIcon, v16);
+    sub_1BD36B4(rewardInfoIcon, v14);
   }
   if ( !rewardInfoIcon )
     goto LABEL_22;
-  v21.fields.r = 0.5;
-  v21.fields.g = 0.5;
-  v21.fields.b = 0.5;
-  v21.fields.a = 1.0;
-  ItemIconComponent__SetColor((ItemIconComponent_o *)rewardInfoIcon, v21, 0LL);
+  v19.fields.r = 0.5;
+  v19.fields.g = 0.5;
+  v19.fields.b = 0.5;
+  v19.fields.a = 1.0;
+  ItemIconComponent__SetColor((ItemIconComponent_o *)rewardInfoIcon, v19, 0LL);
   rewardInfoIcon = this->fields.detailLabel;
   if ( !rewardInfoIcon )
     goto LABEL_22;
-  v22.fields.r = 0.5;
-  v22.fields.g = 0.5;
-  v22.fields.b = 0.5;
-  v22.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)rewardInfoIcon, v22, 0LL);
+  v20.fields.r = 0.5;
+  v20.fields.g = 0.5;
+  v20.fields.b = 0.5;
+  v20.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)rewardInfoIcon, v20, 0LL);
   detailLabel = this->fields.detailLabel;
   rewardInfoIcon = LimitUpResultInfoRewardComponent_TypeInfo;
   if ( !LimitUpResultInfoRewardComponent_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(LimitUpResultInfoRewardComponent_TypeInfo, v16);
+    j_il2cpp_runtime_class_init_0(LimitUpResultInfoRewardComponent_TypeInfo);
     rewardInfoIcon = LimitUpResultInfoRewardComponent_TypeInfo;
   }
   if ( !detailLabel )
@@ -141,8 +138,8 @@ LABEL_22:
   rewardInfoIcon = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)rewardInfoIcon, 0LL);
   if ( !rewardInfoIcon )
     goto LABEL_22;
-  v19 = 1;
+  v17 = 1;
 LABEL_21:
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rewardInfoIcon, v19, 0LL);
-  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v20);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rewardInfoIcon, v17, 0LL);
+  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v18);
 }

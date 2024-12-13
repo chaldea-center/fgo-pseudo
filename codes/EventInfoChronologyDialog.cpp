@@ -1,154 +1,142 @@
 void __fastcall EventInfoChronologyDialog___ctor(EventInfoChronologyDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B169E1 & 1) == 0 )
+  if ( (byte_4B3797E & 1) == 0 )
   {
-    sub_1BCA7E0(&BaseDialog_TypeInfo, method, v2);
-    byte_4B169E1 = 1;
+    sub_1BD3458(&BaseDialog_TypeInfo, method);
+    byte_4B3797E = 1;
   }
   this->fields.gridSpace = 3.0;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
 
 
 void __fastcall EventInfoChronologyDialog__Init(EventInfoChronologyDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x2
-  __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x1
-  __int64 v15; // x2
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  __int64 v22; // x1
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
   UnityEngine_Object_o *titleLabel; // x20
   System_String_o *grid; // x0
-  __int64 v25; // x1
-  struct UILabel_o *v26; // x8
-  UILabel_o *v27; // x20
+  __int64 v17; // x1
+  struct UILabel_o *v18; // x8
+  UILabel_o *v19; // x20
   UnityEngine_Object_o *closeLabel; // x20
-  struct UILabel_o *v29; // x8
-  UILabel_o *v30; // x20
+  struct UILabel_o *v21; // x8
+  UILabel_o *v22; // x20
   UnityEngine_Object_o *failySprite; // x20
-  __int64 v32; // x1
-  UISprite_o *v33; // x20
+  UISprite_o *v24; // x20
   UnityEngine_Object_o *queenSprite; // x20
-  UISprite_o *v35; // x20
-  int32_t v36; // w20
-  __int64 v37; // x1
+  UISprite_o *v26; // x20
+  int32_t v27; // w20
   Il2CppObject *Component_object; // x21
-  const MethodInfo *v39; // x3
-  UISprite_o *v40; // x22
-  EventInfoChronologyComponent_o *v41; // x0
-  const MethodInfo *v42; // x3
+  const MethodInfo *v29; // x3
+  UISprite_o *v30; // x22
+  EventInfoChronologyComponent_o *v31; // x0
+  const MethodInfo *v32; // x3
 
-  if ( (byte_4B169DB & 1) == 0 )
+  if ( (byte_4B37978 & 1) == 0 )
   {
-    sub_1BCA7E0(&AtlasManager_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___, v4, v5);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v6, v7);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v8, v9);
-    sub_1BCA7E0(&StringLiteral_3496/*"CHRONOLOGY_DIALOG_TITLE"*/, v10, v11);
-    sub_1BCA7E0(&StringLiteral_18149/*"chronology_line"*/, v12, v13);
-    sub_1BCA7E0(&StringLiteral_3495/*"CHRONOLOGY_DIALOG_CLOSE"*/, v14, v15);
-    byte_4B169DB = 1;
+    sub_1BD3458(&AtlasManager_TypeInfo, method);
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___, v3);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v4);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BD3458(&StringLiteral_3503/*"CHRONOLOGY_DIALOG_TITLE"*/, v6);
+    sub_1BD3458(&StringLiteral_18176/*"chronology_line"*/, v7);
+    sub_1BD3458(&StringLiteral_3502/*"CHRONOLOGY_DIALOG_CLOSE"*/, v8);
+    byte_4B37978 = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v9, v10, v11, v12, v13, v14);
   if ( this->fields.initialized )
     return;
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   grid = (System_String_o *)UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL);
   if ( ((unsigned __int8)grid & 1) != 0 )
   {
-    v26 = this->fields.titleLabel;
-    if ( !v26 )
+    v18 = this->fields.titleLabel;
+    if ( !v18 )
       goto LABEL_48;
-    if ( System_String__IsNullOrEmpty(v26->fields.mText, 0LL) )
+    if ( System_String__IsNullOrEmpty(v18->fields.mText, 0LL) )
     {
-      v27 = this->fields.titleLabel;
+      v19 = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25);
-      grid = LocalizationManager__Get((System_String_o *)StringLiteral_3496/*"CHRONOLOGY_DIALOG_TITLE"*/, 0LL);
-      if ( !v27 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      grid = LocalizationManager__Get((System_String_o *)StringLiteral_3503/*"CHRONOLOGY_DIALOG_TITLE"*/, 0LL);
+      if ( !v19 )
         goto LABEL_48;
-      UILabel__set_text(v27, grid, 0LL);
+      UILabel__set_text(v19, grid, 0LL);
     }
   }
   closeLabel = (UnityEngine_Object_o *)this->fields.closeLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   grid = (System_String_o *)UnityEngine_Object__op_Inequality(closeLabel, 0LL, 0LL);
   if ( ((unsigned __int8)grid & 1) != 0 )
   {
-    v29 = this->fields.closeLabel;
-    if ( !v29 )
+    v21 = this->fields.closeLabel;
+    if ( !v21 )
       goto LABEL_48;
-    if ( System_String__IsNullOrEmpty(v29->fields.mText, 0LL) )
+    if ( System_String__IsNullOrEmpty(v21->fields.mText, 0LL) )
     {
-      v30 = this->fields.closeLabel;
+      v22 = this->fields.closeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25);
-      grid = LocalizationManager__Get((System_String_o *)StringLiteral_3495/*"CHRONOLOGY_DIALOG_CLOSE"*/, 0LL);
-      if ( v30 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      grid = LocalizationManager__Get((System_String_o *)StringLiteral_3502/*"CHRONOLOGY_DIALOG_CLOSE"*/, 0LL);
+      if ( v22 )
       {
-        UILabel__set_text(v30, grid, 0LL);
+        UILabel__set_text(v22, grid, 0LL);
         goto LABEL_22;
       }
 LABEL_48:
-      sub_1BCAA3C(grid, v25);
+      sub_1BD36B4(grid, v17);
     }
   }
 LABEL_22:
   failySprite = (UnityEngine_Object_o *)this->fields.failySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(failySprite, 0LL, 0LL) )
   {
-    v33 = this->fields.failySprite;
+    v24 = this->fields.failySprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v32);
-    AtlasManager__SetEventUI(v33, (System_String_o *)StringLiteral_18149/*"chronology_line"*/, 0LL);
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    AtlasManager__SetEventUI(v24, (System_String_o *)StringLiteral_18176/*"chronology_line"*/, 0LL);
   }
   queenSprite = (UnityEngine_Object_o *)this->fields.queenSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(queenSprite, 0LL, 0LL) )
   {
-    v35 = this->fields.queenSprite;
+    v26 = this->fields.queenSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v25);
-    AtlasManager__SetEventUI(v35, (System_String_o *)StringLiteral_18149/*"chronology_line"*/, 0LL);
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    AtlasManager__SetEventUI(v26, (System_String_o *)StringLiteral_18176/*"chronology_line"*/, 0LL);
   }
   grid = (System_String_o *)this->fields.grid;
   if ( !grid )
     goto LABEL_48;
-  v36 = 0;
+  v27 = 0;
   while ( 1 )
   {
     grid = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)grid, 0LL);
     if ( !grid )
       goto LABEL_48;
-    if ( v36 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)grid, 0LL) )
+    if ( v27 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)grid, 0LL) )
       break;
     grid = (System_String_o *)this->fields.grid;
     if ( grid )
@@ -156,7 +144,7 @@ LABEL_22:
       grid = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)grid, 0LL);
       if ( grid )
       {
-        grid = (System_String_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)grid, v36, 0LL);
+        grid = (System_String_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)grid, v27, 0LL);
         if ( grid )
         {
           grid = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)grid, 0LL);
@@ -164,9 +152,9 @@ LABEL_22:
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)grid,
-                                 (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___);
+                                 (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37);
+              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             grid = (System_String_o *)UnityEngine_Object__op_Inequality(
                                         (UnityEngine_Object_o *)Component_object,
                                         0LL,
@@ -175,16 +163,16 @@ LABEL_22:
             {
               if ( !Component_object )
                 goto LABEL_48;
-              v40 = this->fields.queenSprite;
+              v30 = this->fields.queenSprite;
               EventInfoChronologyComponent__SetSprite(
                 (EventInfoChronologyComponent_o *)grid,
-                v40,
+                v30,
                 (UISprite_o *)Component_object[3].monitor,
-                v39);
-              EventInfoChronologyComponent__SetSprite(v41, v40, (UISprite_o *)Component_object[4].klass, v42);
+                v29);
+              EventInfoChronologyComponent__SetSprite(v31, v30, (UISprite_o *)Component_object[4].klass, v32);
             }
             grid = (System_String_o *)this->fields.grid;
-            ++v36;
+            ++v27;
             if ( grid )
               continue;
           }
@@ -199,43 +187,39 @@ LABEL_22:
 
 void __fastcall EventInfoChronologyDialog__Layout(EventInfoChronologyDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   UnityEngine_GameObject_o *grid; // x0
-  int32_t v9; // w20
-  float v10; // s8
-  UnityEngine_Component_o *v11; // x21
-  __int64 v12; // x1
+  int32_t v6; // w20
+  float v7; // s8
+  UnityEngine_Component_o *v8; // x21
   Il2CppObject *Component_object; // x22
-  Il2CppObject *v14; // x22
+  Il2CppObject *v10; // x22
   float gridSpace; // s10
-  UnityEngine_GameObject_o *v16; // x21
-  float v17; // s10
+  UnityEngine_GameObject_o *v12; // x21
+  float v13; // s10
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B169E0 & 1) == 0 )
+  if ( (byte_4B3797D & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method, v2);
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___, v4, v5);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v6, v7);
-    byte_4B169E0 = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___, v3);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B3797D = 1;
   }
   grid = this->fields.grid;
   if ( !grid )
 LABEL_22:
-    sub_1BCAA3C(grid, method);
-  v9 = 0;
-  v10 = 0.5;
+    sub_1BD36B4(grid, method);
+  v6 = 0;
+  v7 = 0.5;
   while ( 1 )
   {
     grid = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(grid, 0LL);
     if ( !grid )
       goto LABEL_22;
-    if ( v9 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)grid, 0LL) )
+    if ( v6 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)grid, 0LL) )
       break;
     grid = this->fields.grid;
     if ( !grid )
@@ -243,23 +227,23 @@ LABEL_22:
     grid = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(grid, 0LL);
     if ( !grid )
       goto LABEL_22;
-    grid = (UnityEngine_GameObject_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)grid, v9, 0LL);
+    grid = (UnityEngine_GameObject_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)grid, v6, 0LL);
     if ( !grid )
       goto LABEL_22;
-    v11 = (UnityEngine_Component_o *)grid;
+    v8 = (UnityEngine_Component_o *)grid;
     grid = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)grid, 0LL);
     if ( !grid )
       goto LABEL_22;
     if ( UnityEngine_GameObject__get_activeSelf(grid, 0LL) )
     {
-      grid = UnityEngine_Component__get_gameObject(v11, 0LL);
+      grid = UnityEngine_Component__get_gameObject(v8, 0LL);
       if ( !grid )
         goto LABEL_22;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            grid,
-                           (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___);
+                           (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       grid = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                            (UnityEngine_Object_o *)Component_object,
                                            0LL,
@@ -270,25 +254,25 @@ LABEL_22:
           goto LABEL_22;
         EventInfoChronologyComponent__Refresh((EventInfoChronologyComponent_o *)Component_object, method);
       }
-      grid = UnityEngine_Component__get_gameObject(v11, 0LL);
+      grid = UnityEngine_Component__get_gameObject(v8, 0LL);
       if ( !grid )
         goto LABEL_22;
-      v14 = UnityEngine_GameObject__GetComponent_object_(
+      v10 = UnityEngine_GameObject__GetComponent_object_(
               grid,
-              (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-      grid = UnityEngine_Component__get_gameObject(v11, 0LL);
-      if ( !v14 )
+              (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+      grid = UnityEngine_Component__get_gameObject(v8, 0LL);
+      if ( !v10 )
         goto LABEL_22;
       gridSpace = this->fields.gridSpace;
-      v16 = grid;
-      size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v14, 0LL);
-      GameObjectExtensions__SetLocalPositionY(v16, (float)(v10 - gridSpace) + (float)(size.fields.y * -0.5), 0LL);
-      v17 = this->fields.gridSpace;
-      v19 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v14, 0LL);
-      v10 = v10 - (float)(v17 + v19.fields.y);
+      v12 = grid;
+      size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v10, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v12, (float)(v7 - gridSpace) + (float)(size.fields.y * -0.5), 0LL);
+      v13 = this->fields.gridSpace;
+      v15 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v10, 0LL);
+      v7 = v7 - (float)(v13 + v15.fields.y);
     }
     grid = this->fields.grid;
-    ++v9;
+    ++v6;
     if ( !grid )
       goto LABEL_22;
   }
@@ -299,36 +283,30 @@ void __fastcall EventInfoChronologyDialog__OnClickCloseButton(
         EventInfoChronologyDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x3
-  System_Action_o *v13; // x20
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  System_Action_o *v7; // x20
 
-  if ( (byte_4B169DD & 1) == 0 )
+  if ( (byte_4B3797A & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_EventInfoChronologyDialog_OnClickCloseButton__, v4, v5);
-    sub_1BCA7E0(&Method_EventInfoChronologyDialog__OnClickCloseButton_b__17_0__, v6, v7);
-    byte_4B169DD = 1;
+    sub_1BD3458(&System_Action_TypeInfo, method);
+    sub_1BD3458(&Method_EventInfoChronologyDialog_OnClickCloseButton__, v3);
+    sub_1BD3458(&Method_EventInfoChronologyDialog__OnClickCloseButton_b__17_0__, v4);
+    byte_4B3797A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v8 = Method_EventInfoChronologyDialog_OnClickCloseButton__;
+    v5 = Method_EventInfoChronologyDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoChronologyDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1BCA7F8(Method_EventInfoChronologyDialog_OnClickCloseButton__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v8, v8[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0LL);
-    v13 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v10, v11, v12);
-    System_Action___ctor(v13, (Il2CppObject *)this, Method_EventInfoChronologyDialog__OnClickCloseButton_b__17_0__, 0LL);
-    BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+      v5 = (_QWORD *)sub_1BD3470(Method_EventInfoChronologyDialog_OnClickCloseButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BD343C(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
+    v7 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoChronologyDialog__OnClickCloseButton_b__17_0__, 0LL);
+    BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
 }
 
@@ -339,46 +317,42 @@ void __fastcall EventInfoChronologyDialog__Open(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  EventInfoChronologyDialog_o *v13; // x0
-  const MethodInfo *v14; // x2
-  const MethodInfo *v15; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  EventInfoChronologyDialog_o *v12; // x0
+  const MethodInfo *v13; // x2
+  const MethodInfo *v14; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x2
-  __int64 v20; // x3
-  System_Action_o *v21; // x20
+  __int64 v16; // x1
+  System_Action_o *v17; // x20
 
-  if ( (byte_4B169DC & 1) == 0 )
+  if ( (byte_4B37979 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, closeAction, method);
-    sub_1BCA7E0(&Method_EventInfoChronologyDialog__Open_b__16_0__, v5, v6);
-    byte_4B169DC = 1;
+    sub_1BD3458(&System_Action_TypeInfo, closeAction);
+    sub_1BD3458(&Method_EventInfoChronologyDialog__Open_b__16_0__, v5);
+    byte_4B37979 = 1;
   }
   EventInfoChronologyDialog__Init(this, (const MethodInfo *)closeAction);
   this->fields.state = 1;
   this->fields.closeAction = closeAction;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.closeAction, (int64_t)closeAction, v7, v8, v9, v10, v11, v12);
-  EventInfoChronologyDialog__SetTitleInfoTouchEnable(v13, 0, v14);
-  EventInfoChronologyDialog__Layout(this, v15);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.closeAction, (int64_t)closeAction, v6, v7, v8, v9, v10, v11);
+  EventInfoChronologyDialog__SetTitleInfoTouchEnable(v12, 0, v13);
+  EventInfoChronologyDialog__Layout(this, v14);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.scrollView) == 0LL) )
   {
-    sub_1BCAA3C(gameObject, v17);
+    sub_1BD36B4(gameObject, v16);
   }
   UIScrollView__ResetPosition((UIScrollView_o *)gameObject, 0LL);
-  v21 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v18, v19, v20);
-  System_Action___ctor(v21, (Il2CppObject *)this, Method_EventInfoChronologyDialog__Open_b__16_0__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v21, 0, 0LL);
+  v17 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v17, (Il2CppObject *)this, Method_EventInfoChronologyDialog__Open_b__16_0__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v17, 0, 0LL);
 }
 
 
@@ -389,55 +363,53 @@ void __fastcall EventInfoChronologyDialog__SetTitleInfoTouchEnable(
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x2
-  TerminalSceneComponent_c *v6; // x0
+  TerminalSceneComponent_c *v5; // x0
   UnityEngine_Object_o *mInstance; // x20
-  __int64 v8; // x1
-  __int64 v9; // x2
-  TitleInfoControl_o *v10; // x0
+  __int64 v7; // x1
+  TitleInfoControl_o *v8; // x0
   ExUITexture_c *klass; // x8
 
-  if ( (byte_4B169DE & 1) == 0 )
+  if ( (byte_4B3797B & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, enable, method);
-    sub_1BCA7E0(&TerminalSceneComponent_TypeInfo, v4, v5);
-    byte_4B169DE = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, enable);
+    sub_1BD3458(&TerminalSceneComponent_TypeInfo, v4);
+    byte_4B3797B = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, enable);
-  if ( !byte_4B10F83 )
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+  if ( !byte_4B31F06 )
   {
-    sub_1BCA7E0(&TerminalSceneComponent_TypeInfo, enable, method);
-    byte_4B10F83 = 1;
+    sub_1BD3458(&TerminalSceneComponent_TypeInfo, enable);
+    byte_4B31F06 = 1;
   }
-  v6 = TerminalSceneComponent_TypeInfo;
+  v5 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, enable);
-    v6 = TerminalSceneComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    v5 = TerminalSceneComponent_TypeInfo;
   }
-  mInstance = (UnityEngine_Object_o *)v6->static_fields->mInstance;
+  mInstance = (UnityEngine_Object_o *)v5->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, enable);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(mInstance, 0LL, 0LL) )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v8);
-    if ( !byte_4B10F83 )
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+    if ( !byte_4B31F06 )
     {
-      sub_1BCA7E0(&TerminalSceneComponent_TypeInfo, v8, v9);
-      byte_4B10F83 = 1;
+      sub_1BD3458(&TerminalSceneComponent_TypeInfo, v7);
+      byte_4B31F06 = 1;
     }
-    v10 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+    v8 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v8);
-      v10 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
+      v8 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     }
-    klass = v10->fields.mEventBgTexture->klass;
-    if ( !klass || (v10 = *(TitleInfoControl_o **)&klass->_2.instance_size) == 0LL )
-      sub_1BCAA3C(v10, v8);
-    TitleInfoControl__SetTouchEnable(v10, enable, 0LL);
+    klass = v8->fields.mEventBgTexture->klass;
+    if ( !klass || (v8 = *(TitleInfoControl_o **)&klass->_2.instance_size) == 0LL )
+      sub_1BD36B4(v8, v7);
+    TitleInfoControl__SetTouchEnable(v8, enable, 0LL);
   }
 }
 
@@ -465,7 +437,7 @@ void __fastcall EventInfoChronologyDialog___OnClickCloseButton_b__17_0(
   {
     ActionExtensions__Call(v4, 0LL);
     p_closeAction->klass = 0LL;
-    sub_1BCA784(p_closeAction, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_1BD33FC(p_closeAction, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -486,23 +458,22 @@ UnityEngine_GameObject_o *__fastcall EventInfoChronologyDialog__get_closeBtnObje
         EventInfoChronologyDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *closeButton; // x20
-  __int64 v5; // x1
-  UnityEngine_Component_o *v7; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B169DF & 1) == 0 )
+  if ( (byte_4B3797C & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B169DF = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3797C = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(closeButton, 0LL, 0LL) )
     return 0LL;
-  v7 = (UnityEngine_Component_o *)this->fields.closeButton;
-  if ( !v7 )
-    sub_1BCAA3C(0LL, v5);
-  return UnityEngine_Component__get_gameObject(v7, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.closeButton;
+  if ( !v6 )
+    sub_1BD36B4(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

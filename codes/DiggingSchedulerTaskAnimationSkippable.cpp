@@ -7,11 +7,11 @@ void __fastcall DiggingSchedulerTaskAnimationSkippable___ctor(
 {
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0LL);
   this->fields.animation = animation;
-  sub_1BCA784(&this->fields.animation, animation);
+  sub_1BD33FC(&this->fields.animation);
   this->fields.animationName = animationName;
-  sub_1BCA784(&this->fields.animationName, animationName);
+  sub_1BD33FC(&this->fields.animationName);
   this->fields.SkipCond = skipCond;
-  sub_1BCA784(&this->fields.SkipCond, skipCond);
+  sub_1BD33FC(&this->fields.SkipCond);
 }
 
 
@@ -19,21 +19,19 @@ System_Collections_IEnumerator_o *__fastcall DiggingSchedulerTaskAnimationSkippa
         DiggingSchedulerTaskAnimationSkippable_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x20
+  __int64 v3; // x20
 
-  if ( (byte_4B1113D & 1) == 0 )
+  if ( (byte_4B320BF & 1) == 0 )
   {
-    sub_1BCA7E0(&DiggingSchedulerTaskAnimationSkippable__Execute_d__6_TypeInfo, method, v2);
-    byte_4B1113D = 1;
+    sub_1BD3458(&DiggingSchedulerTaskAnimationSkippable__Execute_d__6_TypeInfo, method);
+    byte_4B320BF = 1;
   }
-  v5 = sub_1BCAA2C(DiggingSchedulerTaskAnimationSkippable__Execute_d__6_TypeInfo, method, v2, v3);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BCA784(v5 + 32, this);
-  return (System_Collections_IEnumerator_o *)v5;
+  v3 = sub_1BD36A4(DiggingSchedulerTaskAnimationSkippable__Execute_d__6_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
+  *(_QWORD *)(v3 + 32) = this;
+  sub_1BD33FC(v3 + 32);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -57,17 +55,15 @@ void __fastcall DiggingSchedulerTaskAnimationSkippable__OnStart(
         DiggingSchedulerTaskAnimationSkippable_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
   struct System_Func_bool__o *SkipCond; // x8
   UnityEngine_Object_o *animation; // x20
-  __int64 v7; // x1
-  UnityEngine_Animation_o *v8; // x0
+  __int64 v5; // x1
+  UnityEngine_Animation_o *v6; // x0
 
-  if ( (byte_4B1113C & 1) == 0 )
+  if ( (byte_4B320BE & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B1113C = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B320BE = 1;
   }
   SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0LL);
   SkipCond = this->fields.SkipCond;
@@ -79,13 +75,13 @@ void __fastcall DiggingSchedulerTaskAnimationSkippable__OnStart(
   {
     animation = (UnityEngine_Object_o *)this->fields.animation;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(animation, 0LL, 0LL) )
     {
-      v8 = this->fields.animation;
-      if ( !v8 || (UnityEngine_Animation__Rewind(v8, 0LL), (v8 = this->fields.animation) == 0LL) )
-        sub_1BCAA3C(v8, v7);
-      if ( UnityEngine_Animation__Play_69899248(v8, this->fields.animationName, 0LL) )
+      v6 = this->fields.animation;
+      if ( !v6 || (UnityEngine_Animation__Rewind(v6, 0LL), (v6 = this->fields.animation) == 0LL) )
+        sub_1BD36B4(v6, v5);
+      if ( UnityEngine_Animation__Play_70023276(v6, this->fields.animationName, 0LL) )
         this->fields.isStart = 1;
     }
   }
@@ -129,7 +125,7 @@ bool __fastcall DiggingSchedulerTaskAnimationSkippable__Execute_d__6__MoveNext(
     this->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_13:
-      sub_1BCAA3C(this, method);
+      sub_1BD36B4(this, method);
     if ( !_4__this->fields.isStart )
       return 0;
   }
@@ -148,7 +144,7 @@ LABEL_13:
   }
   v4->fields.__2__current = 0LL;
   p__2__current = &v4->fields.__2__current;
-  sub_1BCA784(p__2__current, 0LL);
+  sub_1BD33FC(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -168,20 +164,14 @@ void __fastcall __noreturn DiggingSchedulerTaskAnimationSkippable__Execute_d__6_
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  __int64 v5; // x3
-  System_NotSupportedException_o *v6; // x19
-  __int64 v7; // x1
-  __int64 v8; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
-  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
-  System_NotSupportedException___ctor(v6, 0LL);
-  v8 = sub_1BCA7F4(
-         &Method_DiggingSchedulerTaskAnimationSkippable__Execute_d__6_System_Collections_IEnumerator_Reset__,
-         v7);
-  sub_1BCA908(v6, v8);
+  v2 = sub_1BD346C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BD36A4(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1BD346C(&Method_DiggingSchedulerTaskAnimationSkippable__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1BD3580(v3, v4);
 }
 
 

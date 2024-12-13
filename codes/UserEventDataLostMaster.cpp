@@ -1,20 +1,17 @@
 void __fastcall UserEventDataLostMaster___ctor(UserEventDataLostMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B1730E & 1) == 0 )
+  if ( (byte_4B382D4 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string___ctor__, method, v2);
-    byte_4B1730E = 1;
+    sub_1BD3458(&Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string___ctor__, method);
+    byte_4B382D4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     438,
-    (const MethodInfo_31B3158 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string___ctor__);
+    (const MethodInfo_31D2208 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UserEventDataLostEntity_o *__fastcall UserEventDataLostMaster__GetEntity(
         UserEventDataLostMaster_o *this,
         int64_t userId,
@@ -23,19 +20,16 @@ UserEventDataLostEntity_o *__fastcall UserEventDataLostMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1730F & 1) == 0 )
+  if ( (byte_4B382D5 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__GetEntity__,
-      userId,
-      *(_QWORD *)&dataLostBattleId);
-    byte_4B1730F = 1;
+    sub_1BD3458(&Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__GetEntity__, userId);
+    byte_4B382D5 = 1;
   }
   PK = (Il2CppObject *)UserEventDataLostEntity__CreatePK(userId, dataLostBattleId, 0LL);
   return (UserEventDataLostEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_31B3198 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__GetEntity__);
+                                        (const MethodInfo_31D2248 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__GetEntity__);
 }
 
 
@@ -48,18 +42,15 @@ bool __fastcall UserEventDataLostMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B17310 & 1) == 0 )
+  if ( (byte_4B382D6 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__TryGetEntity__,
-      entity,
-      userId);
-    byte_4B17310 = 1;
+    sub_1BD3458(&Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__TryGetEntity__, entity);
+    byte_4B382D6 = 1;
   }
   PK = (Il2CppObject *)UserEventDataLostEntity__CreatePK(userId, dataLostBattleId, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31B31E8 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__TryGetEntity__);
+           (const MethodInfo_31D2298 *)Method_DataMasterBase_UserEventDataLostMaster__UserEventDataLostEntity__string__TryGetEntity__);
 }

@@ -16,21 +16,19 @@ int32_t __fastcall ResponseCommandBase__ExecuteResponse(
 
 System_String_o *__fastcall ResponseCommandBase__GetCommandName(ResponseCommandBase_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  int32_t v5; // w19
+  int32_t v3; // w19
 
-  if ( (byte_4B17B5E & 1) == 0 )
+  if ( (byte_4B38B2D & 1) == 0 )
   {
-    sub_1BCA7E0(&ResponseCommandKind_TypeInfo, method, v2);
-    byte_4B17B5E = 1;
+    sub_1BD3458(&ResponseCommandKind_TypeInfo, method);
+    byte_4B38B2D = 1;
   }
-  v5 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, Il2CppMethodPointer))this->klass->vtable._4_GetKind.method)(
+  v3 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, Il2CppMethodPointer))this->klass->vtable._4_GetKind.method)(
          this,
          this->klass->vtable._5_ExecuteResponse.methodPtr);
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, v4);
-  return ResponseCommandKind__GetName(v5, 0LL);
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  return ResponseCommandKind__GetName(v3, 0LL);
 }
 
 

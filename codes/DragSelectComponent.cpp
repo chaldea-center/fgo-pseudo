@@ -21,15 +21,15 @@ void __fastcall DragSelectComponent__Set(
   int32_t condensedWidth; // w1
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B15651 & 1) == 0 )
+  if ( (byte_4B365EC & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum, *(_QWORD *)&dragSelectNum);
-    byte_4B15651 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    byte_4B365EC = 1;
   }
   v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0LL, 0LL) )
   {
     v9 = this->fields.dragSelectObject;
@@ -39,7 +39,7 @@ void __fastcall DragSelectComponent__Set(
   }
   dragSeletBase = (UnityEngine_Object_o *)this->fields.dragSeletBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0LL, 0LL) )
   {
     v9 = this->fields.dragSeletBase;
@@ -49,7 +49,7 @@ void __fastcall DragSelectComponent__Set(
   }
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
   {
     v9 = this->fields.selectObject;
@@ -89,7 +89,7 @@ LABEL_26:
       }
     }
 LABEL_28:
-    sub_1BCAA3C(v9, v8);
+    sub_1BD36B4(v9, v8);
   }
 }
 

@@ -1,15 +1,13 @@
 void __fastcall EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B160FD & 1) == 0 )
+  if ( (byte_4B370A9 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B160FD = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B370A9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +18,16 @@ System_String_o *__fastcall EventCampaignReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B160FC & 1) == 0 )
+  if ( (byte_4B370A8 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target, *(_QWORD *)&idx);
-    byte_4B160FC = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
+    byte_4B370A8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F2FD38 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,83 +49,82 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x19
-  System_String_o *v7; // x0
-  __int64 v8; // x1
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  int64_t v34; // x1
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  int32_t v42; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v43; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v44; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v5; // x19
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  int64_t v20; // x1
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  int64_t v33; // x1
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  int32_t v41; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v42; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v43; // [xsp+Ch] [xbp-24h] BYREF
 
-  v43 = target;
-  v44 = eventId;
-  v42 = idx;
-  if ( (byte_4B160FB & 1) == 0 )
+  v42 = target;
+  v43 = eventId;
+  v41 = idx;
+  if ( (byte_4B370A7 & 1) == 0 )
   {
-    sub_1BCA7E0(&string___TypeInfo, *(_QWORD *)&target, *(_QWORD *)&idx);
-    sub_1BCA7E0(&StringLiteral_1541/*":"*/, v4, v5);
-    byte_4B160FB = 1;
+    sub_1BD3458(&string___TypeInfo, *(_QWORD *)&target);
+    sub_1BD3458(&StringLiteral_1541/*":"*/, v4);
+    byte_4B370A7 = 1;
   }
-  v6 = sub_1BCA888(string___TypeInfo, 5LL);
-  v7 = System_Int32__ToString((int32_t)&v44, 0LL);
-  if ( !v6 )
-    sub_1BCAA3C(v7, v8);
-  if ( !*(_DWORD *)(v6 + 24) )
+  v5 = sub_1BD3500(string___TypeInfo, 5LL);
+  v6 = System_Int32__ToString((int32_t)&v43, 0LL);
+  if ( !v5 )
+    sub_1BD36B4(v6, v7);
+  if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_10;
-  *(_QWORD *)(v6 + 32) = v7;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)v7, v9, v10, v11, v12, v13, v14);
-  if ( *(_DWORD *)(v6 + 24) <= 1u )
+  *(_QWORD *)(v5 + 32) = v6;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)v6, v8, v9, v10, v11, v12, v13);
+  if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_10;
-  v21 = StringLiteral_1541/*":"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_1541/*":"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 40), v21, v15, v16, v17, v18, v19, v20);
-  v7 = System_Int32__ToString((int32_t)&v43, 0LL);
-  if ( *(_DWORD *)(v6 + 24) <= 2u
-    || (*(_QWORD *)(v6 + 48) = v7,
-        sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 48), (int64_t)v7, v22, v23, v24, v25, v26, v27),
-        *(_DWORD *)(v6 + 24) <= 3u)
-    || (v34 = StringLiteral_1541/*":"*/,
-        *(_QWORD *)(v6 + 56) = StringLiteral_1541/*":"*/,
-        sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 56), v34, v28, v29, v30, v31, v32, v33),
-        v7 = System_Int32__ToString((int32_t)&v42, 0LL),
-        *(_DWORD *)(v6 + 24) <= 4u) )
+  v20 = StringLiteral_1541/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1541/*":"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
+  v6 = System_Int32__ToString((int32_t)&v42, 0LL);
+  if ( *(_DWORD *)(v5 + 24) <= 2u
+    || (*(_QWORD *)(v5 + 48) = v6,
+        sub_1BD33FC((PartyOrganizationUtility_o *)(v5 + 48), (int64_t)v6, v21, v22, v23, v24, v25, v26),
+        *(_DWORD *)(v5 + 24) <= 3u)
+    || (v33 = StringLiteral_1541/*":"*/,
+        *(_QWORD *)(v5 + 56) = StringLiteral_1541/*":"*/,
+        sub_1BD33FC((PartyOrganizationUtility_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32),
+        v6 = System_Int32__ToString((int32_t)&v41, 0LL),
+        *(_DWORD *)(v5 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1BCAA44(v7, v8);
+    sub_1BD36BC(v6, v7);
   }
-  *(_QWORD *)(v6 + 64) = v7;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v6 + 64), (int64_t)v7, v35, v36, v37, v38, v39, v40);
-  return System_String__Concat_62414748((System_String_array *)v6, 0LL);
+  *(_QWORD *)(v5 + 64) = v6;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v5 + 64), (int64_t)v6, v34, v35, v36, v37, v38, v39);
+  return System_String__Concat_62538776((System_String_array *)v5, 0LL);
 }

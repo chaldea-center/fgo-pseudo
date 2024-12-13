@@ -10,26 +10,23 @@ void __fastcall MaterialEventLogServantListViewManager__Awake(
         MaterialEventLogServantListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
-  Il2CppObject *Component_object; // x0
+  __int64 v4; // x1
 
-  if ( (byte_4B11820 & 1) == 0 )
+  if ( (byte_4B327DB & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method, v2);
-    byte_4B11820 = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, method);
+    byte_4B327DB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
-    || (Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             gameObject,
-                             (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___),
-        this->fields.mBoxCollider = (struct UnityEngine_BoxCollider_o *)Component_object,
-        sub_1BCA784(&this->fields.mBoxCollider, Component_object),
+    || (this->fields.mBoxCollider = (struct UnityEngine_BoxCollider_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                          gameObject,
+                                                                          (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___),
+        sub_1BD33FC(&this->fields.mBoxCollider),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.mBoxCollider) == 0LL) )
   {
-    sub_1BCAA3C(gameObject, v5);
+    sub_1BD36B4(gameObject, v4);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
 }
@@ -43,64 +40,41 @@ void __fastcall MaterialEventLogServantListViewManager__RequestListObject(
         const MethodInfo *method)
 {
   __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x19
+  __int64 v11; // x19
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v18; // x1
+  __int64 v13; // x1
   int32_t initMode; // w8
-  UnityEngine_GameObject_o *v20; // x0
-  __int64 v21; // x1
-  Il2CppObject *v22; // x20
-  float v23; // s8
-  __int64 v24; // x1
-  __int64 v25; // x2
-  __int64 v26; // x3
-  System_Action_o *v27; // x21
-  UnityEngine_GameObject_o *v28; // x0
-  __int64 v29; // x1
+  UnityEngine_GameObject_o *v15; // x0
+  Il2CppObject *v16; // x20
+  float v17; // s8
+  System_Action_o *v18; // x21
+  UnityEngine_GameObject_o *v19; // x0
   Il2CppObject *Component_object; // x21
   float IntpTime_AutoResume; // s8
-  __int64 v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x3
-  System_Action_o *v35; // x20
+  System_Action_o *v22; // x20
 
-  if ( (byte_4B11821 & 1) == 0 )
+  if ( (byte_4B327DC & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, *(_QWORD *)&mode, end_act);
-    sub_1BCA7E0(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___, v6, v7);
-    sub_1BCA7E0(&TerminalPramsManager_TypeInfo, v8, v9);
-    sub_1BCA7E0(
-      &Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__0__,
-      v10,
-      v11);
-    sub_1BCA7E0(
-      &Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__1__,
-      v12,
-      v13);
-    sub_1BCA7E0(&MaterialEventLogServantListViewManager___c__DisplayClass18_0_TypeInfo, v14, v15);
-    byte_4B11821 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1BD3458(&Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___, v6);
+    sub_1BD3458(&TerminalPramsManager_TypeInfo, v7);
+    sub_1BD3458(&Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__0__, v8);
+    sub_1BD3458(&Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__1__, v9);
+    sub_1BD3458(&MaterialEventLogServantListViewManager___c__DisplayClass18_0_TypeInfo, v10);
+    byte_4B327DC = 1;
   }
-  v16 = sub_1BCAA2C(
-          MaterialEventLogServantListViewManager___c__DisplayClass18_0_TypeInfo,
-          *(_QWORD *)&mode,
-          end_act,
-          method);
-  System_Object___ctor((Il2CppObject *)v16, 0LL);
-  if ( !v16 )
+  v11 = sub_1BD36A4(MaterialEventLogServantListViewManager___c__DisplayClass18_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v11, 0LL);
+  if ( !v11 )
     goto LABEL_17;
-  *(_QWORD *)(v16 + 16) = this;
-  sub_1BCA784(v16 + 16, this);
-  *(_QWORD *)(v16 + 24) = end_act;
-  sub_1BCA784(v16 + 24, end_act);
+  *(_QWORD *)(v11 + 16) = this;
+  sub_1BD33FC(v11 + 16);
+  *(_QWORD *)(v11 + 24) = end_act;
+  sub_1BD33FC(v11 + 24);
   initMode = this->fields.initMode;
   if ( initMode == 4 )
   {
@@ -108,23 +82,23 @@ void __fastcall MaterialEventLogServantListViewManager__RequestListObject(
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_17;
-    v28 = UnityEngine_GameObject__get_gameObject(gameObject, 0LL);
+    v19 = UnityEngine_GameObject__get_gameObject(gameObject, 0LL);
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
-                         v28,
-                         (const MethodInfo_2F641B8 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+                         v19,
+                         (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v29);
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0LL);
     ListViewManager__CheckEmptyMessageBase((ListViewManager_o *)this, 0, 0LL);
-    v35 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v32, v33, v34);
+    v22 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
     System_Action___ctor(
-      v35,
-      (Il2CppObject *)v16,
+      v22,
+      (Il2CppObject *)v11,
       Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__1__,
       0LL);
     if ( !Component_object )
       goto LABEL_17;
-    SlideFadeObject__SlideOut_34347584((SlideFadeObject_o *)Component_object, 580.0, IntpTime_AutoResume, 0.0, v35, 0LL);
+    SlideFadeObject__SlideOut_34397444((SlideFadeObject_o *)Component_object, 580.0, IntpTime_AutoResume, 0.0, v22, 0LL);
   }
   else
   {
@@ -135,29 +109,29 @@ void __fastcall MaterialEventLogServantListViewManager__RequestListObject(
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( gameObject )
       {
-        v20 = UnityEngine_GameObject__get_gameObject(gameObject, 0LL);
-        v22 = GameObjectExtensions__SafeGetComponent_object_(
-                v20,
-                (const MethodInfo_2F641B8 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
+        v15 = UnityEngine_GameObject__get_gameObject(gameObject, 0LL);
+        v16 = GameObjectExtensions__SafeGetComponent_object_(
+                v15,
+                (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_SlideFadeObject___);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v21);
-        v23 = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0LL);
-        v27 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v24, v25, v26);
+          j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+        v17 = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0LL);
+        v18 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
         System_Action___ctor(
-          v27,
-          (Il2CppObject *)v16,
+          v18,
+          (Il2CppObject *)v11,
           Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__0__,
           0LL);
-        if ( v22 )
+        if ( v16 )
         {
-          SlideFadeObject__SlideIn_34346640((SlideFadeObject_o *)v22, 580.0, v23, 0.0, v27, 0LL);
+          SlideFadeObject__SlideIn_34396500((SlideFadeObject_o *)v16, 580.0, v17, 0.0, v18, 0LL);
           return;
         }
       }
 LABEL_17:
-      sub_1BCAA3C(gameObject, v18);
+      sub_1BD36B4(gameObject, v13);
     }
-    ActionExtensions__Call(*(System_Action_o **)(v16 + 24), 0LL);
+    ActionExtensions__Call(*(System_Action_o **)(v11 + 24), 0LL);
   }
 }
 
@@ -166,47 +140,43 @@ void __fastcall MaterialEventLogServantListViewManager__SetFilterButtonImage(
         MaterialEventLogServantListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   ListViewSort_o *sort; // x0
-  System_String_o **v11; // x9
-  bool v12; // zf
+  System_String_o **v7; // x9
+  bool v8; // zf
   UISprite_o *filterSprite; // x0
-  System_String_o **v14; // x19
-  UnityEngine_Color_o v15; // [xsp+0h] [xbp-30h] BYREF
+  System_String_o **v10; // x19
+  UnityEngine_Color_o v11; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4B11822 & 1) == 0 )
+  if ( (byte_4B327DD & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_17645/*"btn_bg_05"*/, method, v2);
-    sub_1BCA7E0(&StringLiteral_17646/*"btn_bg_06"*/, v4, v5);
-    sub_1BCA7E0(&StringLiteral_448/*"#FE4545"*/, v6, v7);
-    sub_1BCA7E0(&StringLiteral_431/*"#000000"*/, v8, v9);
-    byte_4B11822 = 1;
+    sub_1BD3458(&StringLiteral_17671/*"btn_bg_05"*/, method);
+    sub_1BD3458(&StringLiteral_17672/*"btn_bg_06"*/, v3);
+    sub_1BD3458(&StringLiteral_448/*"#FE4545"*/, v4);
+    sub_1BD3458(&StringLiteral_431/*"#000000"*/, v5);
+    byte_4B327DD = 1;
   }
   sort = this->fields.sort;
   if ( !sort
     || (sort = (ListViewSort_o *)ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL), !this->fields.filterSprite) )
   {
-    sub_1BCAA3C(sort, method);
+    sub_1BD36B4(sort, method);
   }
-  v11 = (System_String_o **)&StringLiteral_17645/*"btn_bg_05"*/;
-  v12 = ((unsigned __int8)sort & 1) == 0;
+  v7 = (System_String_o **)&StringLiteral_17671/*"btn_bg_05"*/;
+  v8 = ((unsigned __int8)sort & 1) == 0;
   filterSprite = this->fields.filterSprite;
-  if ( v12 )
-    v11 = (System_String_o **)&StringLiteral_17646/*"btn_bg_06"*/;
-  if ( v12 )
-    v14 = (System_String_o **)&StringLiteral_448/*"#FE4545"*/;
+  if ( v8 )
+    v7 = (System_String_o **)&StringLiteral_17672/*"btn_bg_06"*/;
+  if ( v8 )
+    v10 = (System_String_o **)&StringLiteral_448/*"#FE4545"*/;
   else
-    v14 = (System_String_o **)&StringLiteral_431/*"#000000"*/;
-  UISprite__set_spriteName(filterSprite, *v11, 0LL);
-  *(_QWORD *)&v15.fields.r = 0LL;
-  *(_QWORD *)&v15.fields.b = 0LL;
-  UnityEngine_ColorUtility__TryParseHtmlString(*v14, &v15, 0LL);
+    v10 = (System_String_o **)&StringLiteral_431/*"#000000"*/;
+  UISprite__set_spriteName(filterSprite, *v7, 0LL);
+  *(_QWORD *)&v11.fields.r = 0LL;
+  *(_QWORD *)&v11.fields.b = 0LL;
+  UnityEngine_ColorUtility__TryParseHtmlString(*v10, &v11, 0LL);
 }
 
 
@@ -255,7 +225,7 @@ LABEL_9:
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0LL);
   mBoxCollider = (UnityEngine_Collider_o *)this->fields.mBoxCollider;
   if ( !mBoxCollider )
-    sub_1BCAA3C(0LL, v8);
+    sub_1BD36B4(0LL, v8);
   UnityEngine_Collider__set_enabled(mBoxCollider, this->fields.isInput, 0LL);
   if ( (unsigned int)(mode - 3) < 2 || mode == 2 || mode == 1 )
     MaterialEventLogServantListViewManager__RequestListObject(this, v10, end_act, v11);
@@ -288,7 +258,7 @@ void __fastcall MaterialEventLogServantListViewManager___c__DisplayClass18_0___R
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   _4__this->fields.isDoingSlide = 0;
   MaterialEventLogServantListViewManager__SetMode(_4__this, 2, this->fields.end_act, v2);
 }
@@ -298,41 +268,38 @@ void __fastcall MaterialEventLogServantListViewManager___c__DisplayClass18_0___R
         MaterialEventLogServantListViewManager___c__DisplayClass18_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  const MethodInfo *v3; // x3
-  Il2CppObject *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x2
+  const MethodInfo *v2; // x3
+  Il2CppObject *v3; // x19
+  __int64 v4; // x1
   MaterialEventLogServantListViewManager_o *klass; // x20
-  System_Action_o *v8; // x22
+  System_Action_o *v6; // x22
 
-  v4 = (Il2CppObject *)this;
-  if ( (byte_4B11823 & 1) == 0 )
+  v3 = (Il2CppObject *)this;
+  if ( (byte_4B327DE & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
-    this = (MaterialEventLogServantListViewManager___c__DisplayClass18_0_o *)sub_1BCA7E0(
+    sub_1BD3458(&System_Action_TypeInfo, method);
+    this = (MaterialEventLogServantListViewManager___c__DisplayClass18_0_o *)sub_1BD3458(
                                                                                &Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__2__,
-                                                                               v5,
-                                                                               v6);
-    byte_4B11823 = 1;
+                                                                               v4);
+    byte_4B327DE = 1;
   }
-  klass = (MaterialEventLogServantListViewManager_o *)v4[1].klass;
+  klass = (MaterialEventLogServantListViewManager_o *)v3[1].klass;
   if ( !klass )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   klass->fields.isDoingSlide = 0;
-  v8 = (System_Action_o *)v4[2].klass;
-  if ( !v8 )
+  v6 = (System_Action_o *)v3[2].klass;
+  if ( !v6 )
   {
-    v8 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, method, v2, v3);
+    v6 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
     System_Action___ctor(
-      v8,
-      v4,
+      v6,
+      v3,
       Method_MaterialEventLogServantListViewManager___c__DisplayClass18_0__RequestListObject_b__2__,
       0LL);
-    v4[2].klass = (Il2CppClass *)v8;
-    sub_1BCA784(&v4[2], v8);
+    v3[2].klass = (Il2CppClass *)v6;
+    sub_1BD33FC(&v3[2]);
   }
-  MaterialEventLogServantListViewManager__SetMode(klass, 0, v8, v3);
+  MaterialEventLogServantListViewManager__SetMode(klass, 0, v6, v2);
 }
 
 

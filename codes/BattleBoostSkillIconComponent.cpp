@@ -8,31 +8,29 @@ void __fastcall BattleBoostSkillIconComponent__OnClickIcon(
         BattleBoostSkillIconComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   UnityEngine_Object_o *target; // x20
-  __int64 v7; // x1
+  __int64 v5; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4B19068 & 1) == 0 )
+  if ( (byte_4B3A048 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method, v2);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
-    byte_4B19068 = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B3A048 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(target, 0LL, 0LL) )
   {
     Component_object = this->fields.target;
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
+                                                           (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
     {
-      sub_1BCAA3C(Component_object, v7);
+      sub_1BD36B4(Component_object, v5);
     }
     BattlePerformanceMaster__clickBoostSkillIcon(
       (BattlePerformanceMaster_o *)Component_object,
@@ -46,22 +44,20 @@ void __fastcall BattleBoostSkillIconComponent__procFlash(
         BattleBoostSkillIconComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_GameObject_o *flashEffect; // x0
-  __int64 v5; // x1
-  UnityEngine_Object_o *v6; // x19
+  UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4B19069 & 1) == 0 )
+  if ( (byte_4B3A049 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B19069 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3A049 = 1;
   }
   flashEffect = this->fields.flashEffect;
   if ( !flashEffect )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   UnityEngine_GameObject__SetActive(flashEffect, 1, 0LL);
-  v6 = (UnityEngine_Object_o *)this->fields.flashEffect;
+  v4 = (UnityEngine_Object_o *)this->fields.flashEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-  UnityEngine_Object__Destroy(v6, 3.0, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  UnityEngine_Object__Destroy(v4, 3.0, 0LL);
 }

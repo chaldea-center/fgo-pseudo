@@ -1,22 +1,21 @@
 void __fastcall ServantStatusLimitCountGauge___ctor(ServantStatusLimitCountGauge_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  struct UISprite_array *v4; // x0
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  struct UISprite_array *v3; // x0
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B12AA6 & 1) == 0 )
+  if ( (byte_4B33A30 & 1) == 0 )
   {
-    sub_1BCA7E0(&UISprite___TypeInfo, method, v2);
-    byte_4B12AA6 = 1;
+    sub_1BD3458(&UISprite___TypeInfo, method);
+    byte_4B33A30 = 1;
   }
-  v4 = (struct UISprite_array *)sub_1BCA888(UISprite___TypeInfo, 4LL);
-  this->fields.gaugeSpriteList = v4;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.gaugeSpriteList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v3 = (struct UISprite_array *)sub_1BD3500(UISprite___TypeInfo, 4LL);
+  this->fields.gaugeSpriteList = v3;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.gaugeSpriteList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -30,52 +29,51 @@ void __fastcall ServantStatusLimitCountGauge__Set(
 {
   ServantStatusLimitCountGauge_o *v6; // x19
   __int64 v7; // x1
-  __int64 v8; // x2
   struct UISprite_array *gaugeSpriteList; // x8
-  signed __int64 v10; // x22
+  signed __int64 v9; // x22
   unsigned __int64 max_length; // x9
-  System_String_o **v12; // x8
-  System_String_o *v13; // x1
+  System_String_o **v11; // x8
+  System_String_o *v12; // x1
 
   v6 = this;
-  if ( (byte_4B12AA5 & 1) == 0 )
+  if ( (byte_4B33A2F & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_20370/*"icon_limit_on"*/, *(_QWORD *)&limitCount, *(_QWORD *)&limitMax);
-    this = (ServantStatusLimitCountGauge_o *)sub_1BCA7E0(&StringLiteral_20369/*"icon_limit_off"*/, v7, v8);
-    byte_4B12AA5 = 1;
+    sub_1BD3458(&StringLiteral_20400/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    this = (ServantStatusLimitCountGauge_o *)sub_1BD3458(&StringLiteral_20399/*"icon_limit_off"*/, v7);
+    byte_4B33A2F = 1;
   }
   gaugeSpriteList = v6->fields.gaugeSpriteList;
   if ( !gaugeSpriteList )
 LABEL_16:
-    sub_1BCAA3C(this, *(_QWORD *)&limitCount);
-  v10 = 0LL;
+    sub_1BD36B4(this, *(_QWORD *)&limitCount);
+  v9 = 0LL;
   while ( 1 )
   {
     max_length = gaugeSpriteList->max_length;
-    if ( v10 >= (int)max_length )
+    if ( v9 >= (int)max_length )
       break;
-    if ( v10 >= max_length )
-      sub_1BCAA44(this, *(_QWORD *)&limitCount);
-    this = (ServantStatusLimitCountGauge_o *)gaugeSpriteList->m_Items[v10];
-    if ( v10 >= limitMax )
+    if ( v9 >= max_length )
+      sub_1BD36BC(this, *(_QWORD *)&limitCount);
+    this = (ServantStatusLimitCountGauge_o *)gaugeSpriteList->m_Items[v9];
+    if ( v9 >= limitMax )
     {
       if ( !this )
         goto LABEL_16;
-      v13 = 0LL;
+      v12 = 0LL;
     }
     else
     {
       if ( !this )
         goto LABEL_16;
-      if ( v10 >= limitCount )
-        v12 = (System_String_o **)&StringLiteral_20369/*"icon_limit_off"*/;
+      if ( v9 >= limitCount )
+        v11 = (System_String_o **)&StringLiteral_20399/*"icon_limit_off"*/;
       else
-        v12 = (System_String_o **)&StringLiteral_20370/*"icon_limit_on"*/;
-      v13 = *v12;
+        v11 = (System_String_o **)&StringLiteral_20400/*"icon_limit_on"*/;
+      v12 = *v11;
     }
-    UISprite__set_spriteName((UISprite_o *)this, v13, 0LL);
+    UISprite__set_spriteName((UISprite_o *)this, v12, 0LL);
     gaugeSpriteList = v6->fields.gaugeSpriteList;
-    ++v10;
+    ++v9;
     if ( !gaugeSpriteList )
       goto LABEL_16;
   }

@@ -10,7 +10,7 @@ void __fastcall ShiningIconComponent__Awake(ShiningIconComponent_o *this, const 
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
 }
 
@@ -31,7 +31,7 @@ void __fastcall ShiningIconComponent__Clear(ShiningIconComponent_o *this, const 
       return;
     }
 LABEL_6:
-    sub_1BCAA3C(widget, method);
+    sub_1BD36B4(widget, method);
   }
 }
 
@@ -55,13 +55,13 @@ void __fastcall ShiningIconComponent__Set(ShiningIconComponent_o *this, const Me
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
 LABEL_5:
-    sub_1BCAA3C(widget, method);
+    sub_1BD36B4(widget, method);
   UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ShiningIconComponent__Set_38945552(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
+void __fastcall ShiningIconComponent__Set_39015744(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
 {
   if ( isDisp )
     ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);
@@ -70,7 +70,7 @@ void __fastcall ShiningIconComponent__Set_38945552(ShiningIconComponent_o *this,
 }
 
 
-void __fastcall ShiningIconComponent__Set_38945564(
+void __fastcall ShiningIconComponent__Set_39015756(
         ShiningIconComponent_o *this,
         System_String_o *spriteName,
         const MethodInfo *method)
@@ -79,10 +79,10 @@ void __fastcall ShiningIconComponent__Set_38945564(
   struct UIWidget_o *v6; // x20
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4B1575E & 1) == 0 )
+  if ( (byte_4B366FA & 1) == 0 )
   {
-    sub_1BCA7E0(&UISprite_TypeInfo, spriteName, method);
-    byte_4B1575E = 1;
+    sub_1BD3458(&UISprite_TypeInfo, spriteName);
+    byte_4B366FA = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -96,7 +96,7 @@ void __fastcall ShiningIconComponent__Set_38945564(
       goto LABEL_7;
     }
 LABEL_13:
-    sub_1BCAA3C(widget, spriteName);
+    sub_1BD36B4(widget, spriteName);
   }
 LABEL_7:
   v6 = this->fields.widget;

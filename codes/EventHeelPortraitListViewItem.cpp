@@ -15,10 +15,10 @@ void __fastcall EventHeelPortraitListViewItem___ctor(
   PartyListViewItem_o *v15; // x7
 
   v9 = this;
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 112);
-  sub_1BCA784((PartyOrganizationUtility_o *)v9, (int64_t)heelPortraitEntity, v10, v11, v12, v13, v14, v15);
+  sub_1BD33FC((PartyOrganizationUtility_o *)v9, (int64_t)heelPortraitEntity, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
@@ -69,7 +69,7 @@ void __fastcall EventHeelPortraitListViewItem__set_Entity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Entity_k__BackingField = value;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields._Entity_k__BackingField,
     (int64_t)value,
     (int64_t)method,

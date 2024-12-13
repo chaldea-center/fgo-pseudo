@@ -63,7 +63,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice2__SetItem(
     illustLabel = this->fields.illustLabel;
     if ( !illustLabel )
       goto LABEL_23;
-    WrapControlText__textAdjust(illustLabel, illust, illustLabel->fields.mFontSize, 0, 0, 0LL);
+    WrapControlText__textAdjust(illustLabel, illust, illustLabel->fields.mFontSize, 0, 0LL);
     illustLabel = this->fields.illustLabel;
     if ( !illustLabel )
       goto LABEL_23;
@@ -105,7 +105,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawVoice2__SetItem(
       || (illustLabel = (UILabel_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)illustLabel, 0LL)) == 0LL )
     {
 LABEL_23:
-      sub_1BCAA3C(illustLabel, v9);
+      sub_1BD36B4(illustLabel, v9);
     }
     v29.fields.y = v23 + (float)(v25 >> 1);
     v29.fields.x = v22;

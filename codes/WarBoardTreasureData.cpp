@@ -4,33 +4,31 @@ void __fastcall WarBoardTreasureData___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v6; // x1
   Il2CppObject *Instance; // x0
-  __int64 v10; // x1
+  __int64 v8; // x1
   struct System_Int32_array *Individuality; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
   Il2CppObject *Entity; // x0
   struct WarBoardTreasureEntity_o **p_treasureEntity; // x19
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4B13FAB & 1) == 0 )
+  if ( (byte_4B34F41 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___, layout, method);
-    sub_1BCA7E0(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__, v5, v6);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7, v8);
-    byte_4B13FAB = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___, layout);
+    sub_1BD3458(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__, v5);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4B34F41 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !layout
@@ -38,29 +36,29 @@ void __fastcall WarBoardTreasureData___ctor(
         this->fields._treasureId_k__BackingField = layout->fields.effectId,
         Individuality = WarBoardStageLayoutEntity__GetIndividuality(layout, 0LL),
         this->fields._individuality_k__BackingField = Individuality,
-        sub_1BCA784(
+        sub_1BD33FC(
           (PartyOrganizationUtility_o *)&this->fields._individuality_k__BackingField,
           (int64_t)Individuality,
+          v10,
+          v11,
           v12,
           v13,
           v14,
-          v15,
-          v16,
-          v17),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+          v15),
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v10);
+    sub_1BD36B4(Instance, v8);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields._treasureId_k__BackingField,
-             (const MethodInfo_31B2E40 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
+             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
   this->fields.treasureEntity = (struct WarBoardTreasureEntity_o *)Entity;
   p_treasureEntity = &this->fields.treasureEntity;
-  sub_1BCA784((PartyOrganizationUtility_o *)p_treasureEntity, (int64_t)Entity, v20, v21, v22, v23, v24, v25);
+  sub_1BD33FC((PartyOrganizationUtility_o *)p_treasureEntity, (int64_t)Entity, v18, v19, v20, v21, v22, v23);
   *((_BYTE *)p_treasureEntity - 20) = 0;
 }
 
@@ -78,7 +76,7 @@ bool __fastcall WarBoardTreasureData__Get(
   this = (WarBoardTreasureData_o *)this->fields.component;
   if ( !this )
 LABEL_7:
-    sub_1BCAA3C(this, piece);
+    sub_1BD36B4(this, piece);
   WarBoardTreasureComponent__OnUse(
     (WarBoardTreasureComponent_o *)this,
     piece->fields._nowSquareIndex_k__BackingField,
@@ -117,7 +115,7 @@ void __fastcall WarBoardTreasureData__SetComponent(
   PartyListViewItem_o *v7; // x7
 
   this->fields.component = component;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.component,
     (int64_t)component,
     (int64_t)method,
@@ -129,7 +127,6 @@ void __fastcall WarBoardTreasureData__SetComponent(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardTreasureData__SetTouchEnable(
         WarBoardTreasureData_o *this,
         bool enable,
@@ -139,12 +136,11 @@ void __fastcall WarBoardTreasureData__SetTouchEnable(
 
   component = this->fields.component;
   if ( !component )
-    sub_1BCAA3C(0LL, enable);
+    sub_1BD36B4(0LL, enable);
   WarBoardTreasureComponent__SetTouchEnable(component, enable, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardTreasureData__SetTreasureEnable(
         WarBoardTreasureData_o *this,
         bool enable,
@@ -154,7 +150,7 @@ void __fastcall WarBoardTreasureData__SetTreasureEnable(
 
   component = this->fields.component;
   if ( !component )
-    sub_1BCAA3C(0LL, enable);
+    sub_1BD36B4(0LL, enable);
   WarBoardTreasureComponent__SetColliderEnable(component, enable, 0LL);
 }
 
@@ -255,14 +251,13 @@ System_String_o *__fastcall WarBoardTreasureData__get_treasureName(
         WarBoardTreasureData_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   struct WarBoardTreasureEntity_o *treasureEntity; // x8
   struct System_String_StaticFields *p_name; // x8
 
-  if ( (byte_4B13FAC & 1) == 0 )
+  if ( (byte_4B34F42 & 1) == 0 )
   {
-    sub_1BCA7E0(&string_TypeInfo, method, v2);
-    byte_4B13FAC = 1;
+    sub_1BD3458(&string_TypeInfo, method);
+    byte_4B34F42 = 1;
   }
   treasureEntity = this->fields.treasureEntity;
   if ( treasureEntity )
@@ -285,7 +280,7 @@ void __fastcall WarBoardTreasureData__set_individuality(
   PartyListViewItem_o *v7; // x7
 
   this->fields._individuality_k__BackingField = value;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields._individuality_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -330,7 +325,7 @@ void __fastcall WarBoardTreasureData_SaveData___ctor(WarBoardTreasureData_SaveDa
 }
 
 
-void __fastcall WarBoardTreasureData_SaveData___ctor_36234856(
+void __fastcall WarBoardTreasureData_SaveData___ctor_36295672(
         WarBoardTreasureData_SaveData_o *this,
         WarBoardTreasureData_o *owner,
         const MethodInfo *method)
@@ -353,10 +348,10 @@ void __fastcall WarBoardTreasureData_SaveData___ctor_36234856(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.owner = owner;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)owner, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)owner, v5, v6, v7, v8, v9, v10);
   v18 = this->fields.owner;
   if ( !v18 )
-    sub_1BCAA3C(0LL, v11);
+    sub_1BD36B4(0LL, v11);
   this->fields.squareIndex = v18->fields._squareIndex_k__BackingField;
   this->fields.isUse = v18->fields._isUse_k__BackingField;
   this->fields.treasureId = v18->fields._treasureId_k__BackingField;
@@ -365,7 +360,7 @@ void __fastcall WarBoardTreasureData_SaveData___ctor_36234856(
     LODWORD(treasureEntity) = treasureEntity->fields.rarity;
   this->fields.iconId = (int)treasureEntity;
   v18->fields.localSaveData = this;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v18->fields.localSaveData, (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v18->fields.localSaveData, (int64_t)this, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -419,15 +414,15 @@ void __fastcall WarBoardTreasureData_SaveData__SetOwner(
   struct WarBoardTreasureData_o *owner; // x0
 
   if ( !data )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   Treasure = WarBoardData__GetTreasure(data, this->fields.squareIndex, 0LL);
   this->fields.owner = Treasure;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)Treasure, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)Treasure, v5, v6, v7, v8, v9, v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_1BCA784((PartyOrganizationUtility_o *)&owner->fields.localSaveData, (int64_t)this, v11, v12, v13, v14, v15, v16);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&owner->fields.localSaveData, (int64_t)this, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -436,23 +431,22 @@ int32_t __fastcall WarBoardTreasureData_SaveData__get_Effect(
         WarBoardTreasureData_SaveData_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  WarBoardTreasureComponent_c *v4; // x0
+  WarBoardTreasureComponent_c *v3; // x0
   int32_t iconId; // w19
 
-  if ( (byte_4B13FAE & 1) == 0 )
+  if ( (byte_4B34F44 & 1) == 0 )
   {
-    sub_1BCA7E0(&WarBoardTreasureComponent_TypeInfo, method, v2);
-    byte_4B13FAE = 1;
+    sub_1BD3458(&WarBoardTreasureComponent_TypeInfo, method);
+    byte_4B34F44 = 1;
   }
-  v4 = WarBoardTreasureComponent_TypeInfo;
+  v3 = WarBoardTreasureComponent_TypeInfo;
   iconId = this->fields.iconId;
   if ( !WarBoardTreasureComponent_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(WarBoardTreasureComponent_TypeInfo, method);
-    v4 = WarBoardTreasureComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(WarBoardTreasureComponent_TypeInfo);
+    v3 = WarBoardTreasureComponent_TypeInfo;
   }
-  return iconId / v4->static_fields->RARITY_TYPE;
+  return iconId / v3->static_fields->RARITY_TYPE;
 }
 
 
@@ -460,21 +454,20 @@ int32_t __fastcall WarBoardTreasureData_SaveData__get_Rarity(
         WarBoardTreasureData_SaveData_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  WarBoardTreasureComponent_c *v4; // x0
+  WarBoardTreasureComponent_c *v3; // x0
   int32_t iconId; // w19
 
-  if ( (byte_4B13FAD & 1) == 0 )
+  if ( (byte_4B34F43 & 1) == 0 )
   {
-    sub_1BCA7E0(&WarBoardTreasureComponent_TypeInfo, method, v2);
-    byte_4B13FAD = 1;
+    sub_1BD3458(&WarBoardTreasureComponent_TypeInfo, method);
+    byte_4B34F43 = 1;
   }
-  v4 = WarBoardTreasureComponent_TypeInfo;
+  v3 = WarBoardTreasureComponent_TypeInfo;
   iconId = this->fields.iconId;
   if ( !WarBoardTreasureComponent_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(WarBoardTreasureComponent_TypeInfo, method);
-    v4 = WarBoardTreasureComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(WarBoardTreasureComponent_TypeInfo);
+    v3 = WarBoardTreasureComponent_TypeInfo;
   }
-  return iconId % v4->static_fields->RARITY_TYPE;
+  return iconId % v3->static_fields->RARITY_TYPE;
 }

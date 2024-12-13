@@ -1,15 +1,13 @@
 void __fastcall EventItemDisplayReleaseEntity___ctor(EventItemDisplayReleaseEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B161C5 & 1) == 0 )
+  if ( (byte_4B37171 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_int___ctor__, method, v2);
-    byte_4B161C5 = 1;
+    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B37171 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31B2C40 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,18 +23,17 @@ bool __fastcall EventItemDisplayReleaseEntity__IsCondEnable(
         EventItemDisplayReleaseEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   int32_t targetId; // w19
   int32_t condType; // w20
 
-  if ( (byte_4B161C4 & 1) == 0 )
+  if ( (byte_4B37170 & 1) == 0 )
   {
-    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
-    byte_4B161C4 = 1;
+    sub_1BD3458(&CondType_TypeInfo, method);
+    byte_4B37170 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(condType, targetId, 0LL, 0, 0LL, 0LL);
 }

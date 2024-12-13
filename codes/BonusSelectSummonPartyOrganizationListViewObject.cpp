@@ -2,15 +2,13 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B12864 & 1) == 0 )
+  if ( (byte_4B337EE & 1) == 0 )
   {
-    sub_1BCA7E0(&ListViewObject_TypeInfo, method, v2);
-    byte_4B12864 = 1;
+    sub_1BD3458(&ListViewObject_TypeInfo, method);
+    byte_4B337EE = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
   ListViewObject___ctor((ListViewObject_o *)this, 0LL);
 }
 
@@ -44,7 +42,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.listViewItem,
     (int64_t)item,
     (int64_t)onTapEvent,
@@ -54,10 +52,10 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
     v6,
     v7);
   this->fields.onTapEvent = onTapEvent;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.onTapEvent, (int64_t)onTapEvent, v10, v11, v12, v13, v14, v15);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.onTapEvent, (int64_t)onTapEvent, v10, v11, v12, v13, v14, v15);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1BCAA3C(0LL, v16);
+    sub_1BD36B4(0LL, v16);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v17);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
@@ -75,7 +73,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

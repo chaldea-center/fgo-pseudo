@@ -1,14 +1,12 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B175FD & 1) == 0 )
+  if ( (byte_4B385C3 & 1) == 0 )
   {
-    sub_1BCA7E0(&CommonEffectComponent_TypeInfo, method, v2);
-    byte_4B175FD = 1;
+    sub_1BD3458(&CommonEffectComponent_TypeInfo, method);
+    byte_4B385C3 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, method);
 }
 
@@ -41,18 +39,18 @@ void __fastcall RaceResultEffectComponent__SetParam(
   System_Object_array *v17; // x20
   __int64 v18; // x24
 
-  if ( (byte_4B175FC & 1) == 0 )
+  if ( (byte_4B385C2 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param, method);
-    byte_4B175FC = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_4B385C2 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1BCA784((PartyOrganizationUtility_o *)p_param, (int64_t)param, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BD33FC((PartyOrganizationUtility_o *)p_param, (int64_t)param, (int64_t)method, v3, v4, v5, v6, v7);
   v13 = (__int64)*(p_param - 1);
   if ( !v13 )
 LABEL_17:
-    sub_1BCAA3C(Components_object, v12);
+    sub_1BD36B4(Components_object, v12);
   v14 = *(_DWORD *)(v13 + 24);
   if ( v14 >= 1 )
   {
@@ -66,7 +64,7 @@ LABEL_17:
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_2F6302C *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_2F823D8 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -94,6 +92,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1BCAA44(Components_object, v12);
+    sub_1BD36BC(Components_object, v12);
   }
 }

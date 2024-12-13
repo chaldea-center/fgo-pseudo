@@ -1,4 +1,4 @@
 __int64 mono_get_byte_class()
 {
-  return qword_4B28AC0;
+  return qword_4B49AB0;
 }

@@ -1,13 +1,12 @@
 void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4B109C1 )
+  if ( !byte_4B31941 )
   {
-    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, method, v2);
-    byte_4B109C1 = 1;
+    sub_1BD3458(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4B31941 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -53,17 +52,16 @@ void __fastcall TrackingMoveCtCComponent__Set(
   FollowerInfo_o *v26; // x6
   PartyListViewItem_o *v27; // x7
   __int64 v28; // x1
-  __int64 v29; // x2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  __int64 v31; // d0
-  float v32; // s1
+  __int64 v30; // d0
+  float v31; // s1
 
   this->fields.before = a;
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
   v15 = isLate;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.before,
     (int64_t)a,
     (int64_t)b,
@@ -73,24 +71,24 @@ void __fastcall TrackingMoveCtCComponent__Set(
     v7,
     v8);
   this->fields.after = b;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.after, (int64_t)b, v16, v17, v18, v19, v20, v21);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.after, (int64_t)b, v16, v17, v18, v19, v20, v21);
   this->fields.targetObject = c;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.targetObject, (int64_t)c, v22, v23, v24, v25, v26, v27);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.targetObject, (int64_t)c, v22, v23, v24, v25, v26, v27);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
   this->fields.isLateUpdate = v15;
-  if ( !byte_4B109C1 )
+  if ( !byte_4B31941 )
   {
-    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v28, v29);
-    byte_4B109C1 = 1;
+    sub_1BD3458(&UnityEngine_Vector3_TypeInfo, v28);
+    byte_4B31941 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v31 = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  v32 = static_fields->zeroVector.fields.z;
+  v30 = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  v31 = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.offset2D.fields.condition = 0LL;
-  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v31;
-  this->fields.offset2D.fields.offset.fields.z = v32;
+  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v30;
+  this->fields.offset2D.fields.offset.fields.z = v31;
 }
 
 
@@ -117,49 +115,48 @@ void __fastcall TrackingMoveCtCComponent__stopAct(TrackingMoveCtCComponent_o *th
 // local variable allocation has failed, the output may be wrong!
 void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *targetObject; // x20
-  __int64 v5; // x1
+  __int64 v4; // x1
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Camera_o *before; // x20
-  float v8; // s0
-  float v9; // s1
-  float v10; // s2
-  float v11; // s0
-  float v12; // s1
-  float v13; // s2
-  float v14; // s8
-  float v15; // s10
-  float v16; // s9
+  float v7; // s0
+  float v8; // s1
+  float v9; // s2
+  float v10; // s0
+  float v11; // s1
+  float v12; // s2
+  float v13; // s8
+  float v14; // s10
+  float v15; // s9
   float aspect; // s0
-  float v18; // s11
-  float v19; // s0
+  float v17; // s11
+  float v18; // s0
   int32_t condition; // w8
-  float v21; // s10
+  float v20; // s10
   float x; // s8
   float y; // s9
   float z; // s10
   float conditionValue; // s14
-  float v26; // s0
-  float v27; // s1
-  float v28; // s2
-  float v29; // s11
-  float v30; // s12
-  float v31; // s13
+  float v25; // s0
+  float v26; // s1
+  float v27; // s2
+  float v28; // s11
+  float v29; // s12
+  float v30; // s13
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B19473 & 1) == 0 )
+  if ( (byte_4B3A457 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B19473 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3A457 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(targetObject, 0LL, 0LL) )
   {
     transform = this->fields.targetObject;
@@ -169,27 +166,27 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
     if ( !transform )
       goto LABEL_24;
-    *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
+    *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
     if ( !before )
       goto LABEL_24;
-    v32.fields.z = v10 + this->fields.addpos.fields.z;
-    v32.fields.y = v9 + this->fields.addpos.fields.y;
-    v32.fields.x = v8 + this->fields.addpos.fields.x;
-    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToViewportPoint_69960456(before, v32, 0LL);
+    v31.fields.z = v9 + this->fields.addpos.fields.z;
+    v31.fields.y = v8 + this->fields.addpos.fields.y;
+    v31.fields.x = v7 + this->fields.addpos.fields.x;
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_70084484(before, v31, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_24;
+    v13 = v10;
     v14 = v11;
     v15 = v12;
-    v16 = v13;
     aspect = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.after;
     if ( !transform )
       goto LABEL_24;
-    v18 = aspect;
-    v19 = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
+    v17 = aspect;
+    v18 = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0LL);
     condition = this->fields.offset2D.fields.condition;
-    v21 = (float)((float)((float)(v15 + -0.5) / v18) * v19) + 0.5;
+    v20 = (float)((float)((float)(v14 + -0.5) / v17) * v18) + 0.5;
     if ( condition == 2 )
     {
       transform = (UnityEngine_GameObject_o *)this->fields.before;
@@ -201,23 +198,23 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
                                                 0LL);
       if ( !transform )
         goto LABEL_24;
-      *(UnityEngine_Vector3_o *)&v26 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
+      *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
       transform = this->fields.targetObject;
       if ( !transform )
         goto LABEL_24;
+      v28 = v25;
       v29 = v26;
       v30 = v27;
-      v31 = v28;
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL);
       if ( !transform )
         goto LABEL_24;
       position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
-      if ( (float)(conditionValue * conditionValue) >= (float)((float)((float)(v31 - position.fields.z)
-                                                                     * (float)(v31 - position.fields.z))
-                                                             + (float)((float)((float)(v29 - position.fields.x)
-                                                                             * (float)(v29 - position.fields.x))
-                                                                     + (float)((float)(v30 - position.fields.y)
-                                                                             * (float)(v30 - position.fields.y)))) )
+      if ( (float)(conditionValue * conditionValue) >= (float)((float)((float)(v30 - position.fields.z)
+                                                                     * (float)(v30 - position.fields.z))
+                                                             + (float)((float)((float)(v28 - position.fields.x)
+                                                                             * (float)(v28 - position.fields.x))
+                                                                     + (float)((float)(v29 - position.fields.y)
+                                                                             * (float)(v29 - position.fields.y)))) )
         goto LABEL_14;
     }
     else if ( condition != 1 )
@@ -226,31 +223,31 @@ LABEL_14:
       transform = (UnityEngine_GameObject_o *)this->fields.after;
       if ( transform )
       {
-        v33.fields.x = v14;
-        v33.fields.y = v21;
-        v33.fields.z = v16;
-        v34 = UnityEngine_Camera__ViewportToWorldPoint_69960464((UnityEngine_Camera_o *)transform, v33, 0LL);
-        x = v34.fields.x;
-        y = v34.fields.y;
-        z = v34.fields.z;
+        v32.fields.x = v13;
+        v32.fields.y = v20;
+        v32.fields.z = v15;
+        v33 = UnityEngine_Camera__ViewportToWorldPoint_70084492((UnityEngine_Camera_o *)transform, v32, 0LL);
+        x = v33.fields.x;
+        y = v33.fields.y;
+        z = v33.fields.z;
         transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)this,
                                                   0LL);
         if ( transform )
         {
-          v35.fields.x = x;
-          v35.fields.y = y;
-          v35.fields.z = z;
-          UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v35, 0LL);
+          v34.fields.x = x;
+          v34.fields.y = y;
+          v34.fields.z = z;
+          UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v34, 0LL);
           return;
         }
       }
 LABEL_24:
-      sub_1BCAA3C(transform, v5);
+      sub_1BD36B4(transform, v4);
     }
-    v14 = v14 + this->fields.offset2D.fields.offset.fields.x;
-    v21 = v21 + this->fields.offset2D.fields.offset.fields.y;
-    v16 = v16 + this->fields.offset2D.fields.offset.fields.z;
+    v13 = v13 + this->fields.offset2D.fields.offset.fields.x;
+    v20 = v20 + this->fields.offset2D.fields.offset.fields.y;
+    v15 = v15 + this->fields.offset2D.fields.offset.fields.z;
     goto LABEL_14;
   }
 }

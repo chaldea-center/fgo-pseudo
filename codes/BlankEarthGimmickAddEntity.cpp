@@ -1,15 +1,13 @@
 void __fastcall BlankEarthGimmickAddEntity___ctor(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B15EAA & 1) == 0 )
+  if ( (byte_4B36E4F & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B15EAA = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B36E4F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,19 +18,16 @@ System_String_o *__fastcall BlankEarthGimmickAddEntity__CreatePK(
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4B15EA8 & 1) == 0 )
+  if ( (byte_4B36E4D & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataEntityBase_CreateMultiplePK_int__int__int___,
-      *(_QWORD *)&priority,
-      *(_QWORD *)&overwriteType);
-    byte_4B15EA8 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_4B36E4D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            blankEarthSpotId,
            priority,
            overwriteType,
-           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F2FD38 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -69,16 +64,16 @@ bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
   int32_t condTargetType; // w23
   int64_t condNum; // x21
 
-  if ( (byte_4B15EA9 & 1) == 0 )
+  if ( (byte_4B36E4E & 1) == 0 )
   {
-    sub_1BCA7E0(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId, isCheckResetFlag);
-    byte_4B15EA9 = 1;
+    sub_1BD3458(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4B36E4E = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpenExcludeBeforeClearQuest(
            condTargetType,
            condTargetId,

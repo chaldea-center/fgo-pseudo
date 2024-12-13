@@ -8,137 +8,119 @@ void __fastcall EventTradeListViewItem___ctor(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
+  __int64 v16; // x1
   __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
-  __int64 v21; // x1
-  __int64 v22; // x2
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x1
-  __int64 v26; // x2
-  Il2CppObject *v27; // x25
+  __int64 v18; // x1
+  __int64 v19; // x25
   Il2CppObject *Master_object; // x0
-  __int64 v29; // x1
-  Il2CppObject *v30; // x20
-  struct EventTradeGoodsEntity_o *klass; // x1
-  const MethodInfo *v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x2
-  __int64 v35; // x3
+  __int64 v21; // x1
+  __int64 v22; // x20
+  const MethodInfo *v23; // x1
   struct UserEventTradeEntity_o *UserTradeEntity_k__BackingField; // x8
   System_Collections_Generic_IEnumerable_TSource__o *tradeList; // x21
-  System_Func_object__bool__o *v38; // x22
-  Il2CppObject *v39; // x1
-  __int64 v40; // x1
-  Il2CppObject *v41; // x1
-  struct CommonConsumeEntity_array *SortedEntityList; // x0
+  System_Func_object__bool__o *v26; // x22
+  Il2CppObject *v27; // x1
   bool IsOpen; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B11279 & 1) == 0 )
+  if ( (byte_4B321FD & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index, tradeGoodsEntity);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11, v12);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_EventMaster___, v13, v14);
-    sub_1BCA7E0(&DataManager_TypeInfo, v15, v16);
-    sub_1BCA7E0(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v17, v18);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v19, v20);
-    sub_1BCA7E0(&System_Func_EventTradeInfo__bool__TypeInfo, v21, v22);
-    sub_1BCA7E0(&Method_EventTradeListViewItem___c__DisplayClass25_0___ctor_b__0__, v23, v24);
-    sub_1BCA7E0(&EventTradeListViewItem___c__DisplayClass25_0_TypeInfo, v25, v26);
-    byte_4B11279 = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1BD3458(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
+    sub_1BD3458(&Method_DataManager_GetMaster_EventMaster___, v12);
+    sub_1BD3458(&DataManager_TypeInfo, v13);
+    sub_1BD3458(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v14);
+    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v15);
+    sub_1BD3458(&System_Func_EventTradeInfo__bool__TypeInfo, v16);
+    sub_1BD3458(&Method_EventTradeListViewItem___c__DisplayClass25_0___ctor_b__0__, v17);
+    sub_1BD3458(&EventTradeListViewItem___c__DisplayClass25_0_TypeInfo, v18);
+    byte_4B321FD = 1;
   }
   entity = 0LL;
-  v27 = (Il2CppObject *)sub_1BCAA2C(
-                          EventTradeListViewItem___c__DisplayClass25_0_TypeInfo,
-                          *(_QWORD *)&index,
-                          tradeGoodsEntity,
-                          *(_QWORD *)&eventId);
-  System_Object___ctor(v27, 0LL);
-  if ( !v27 )
+  v19 = sub_1BD36A4(EventTradeListViewItem___c__DisplayClass25_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v19, 0LL);
+  if ( !v19 )
     goto LABEL_27;
-  v27[1].klass = (Il2CppClass *)tradeGoodsEntity;
-  v30 = v27 + 1;
-  sub_1BCA784(&v27[1], tradeGoodsEntity);
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
-  klass = (struct EventTradeGoodsEntity_o *)v27[1].klass;
-  this->fields._TradeGoodsEntity_k__BackingField = klass;
-  sub_1BCA784(&this->fields._TradeGoodsEntity_k__BackingField, klass);
+  *(_QWORD *)(v19 + 16) = tradeGoodsEntity;
+  v22 = v19 + 16;
+  sub_1BD33FC(v19 + 16);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
+  this->fields._TradeGoodsEntity_k__BackingField = *(struct EventTradeGoodsEntity_o **)(v19 + 16);
+  sub_1BD33FC(&this->fields._TradeGoodsEntity_k__BackingField);
   this->fields._EventId_k__BackingField = eventId;
   this->fields._UpdateReceiveAllButtonState_k__BackingField = updateReceiveAllButton;
-  sub_1BCA784(&this->fields._UpdateReceiveAllButtonState_k__BackingField, updateReceiveAllButton);
-  EventTradeListViewItem__UpdateTradeUserInfo(this, v32);
+  sub_1BD33FC(&this->fields._UpdateReceiveAllButtonState_k__BackingField);
+  EventTradeListViewItem__UpdateTradeUserInfo(this, v23);
   UserTradeEntity_k__BackingField = this->fields._UserTradeEntity_k__BackingField;
   if ( UserTradeEntity_k__BackingField
     && (tradeList = (System_Collections_Generic_IEnumerable_TSource__o *)UserTradeEntity_k__BackingField->fields.tradeList) != 0LL )
   {
-    v38 = (System_Func_object__bool__o *)sub_1BCAA2C(System_Func_EventTradeInfo__bool__TypeInfo, v33, v34, v35);
-    System_Func_object__bool____ctor(v38, v27, Method_EventTradeListViewItem___c__DisplayClass25_0___ctor_b__0__, 0LL);
-    v39 = System_Linq_Enumerable__FirstOrDefault_object__49503160(
+    v26 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_EventTradeInfo__bool__TypeInfo);
+    System_Func_object__bool____ctor(
+      v26,
+      (Il2CppObject *)v19,
+      Method_EventTradeListViewItem___c__DisplayClass25_0___ctor_b__0__,
+      0LL);
+    v27 = System_Linq_Enumerable__FirstOrDefault_object__49631076(
             tradeList,
-            (System_Func_TSource__bool__o *)v38,
-            (const MethodInfo_2F35BB8 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
+            (System_Func_TSource__bool__o *)v26,
+            (const MethodInfo_2F54F64 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
   }
   else
   {
-    v39 = 0LL;
+    v27 = 0LL;
   }
-  this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v39;
-  sub_1BCA784(&this->fields._TradeInfo_k__BackingField, v39);
+  this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v27;
+  sub_1BD33FC(&this->fields._TradeInfo_k__BackingField);
   if ( this->fields._EventId_k__BackingField >= 1 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v40);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_EventMaster___);
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventMaster___);
     if ( !Master_object )
       goto LABEL_27;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
            &entity,
            this->fields._EventId_k__BackingField,
-           (const MethodInfo_31B2E94 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+           (const MethodInfo_31D1F44 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     {
-      v41 = entity;
       this->fields.eventEntity = (struct EventEntity_o *)entity;
-      sub_1BCA784(&this->fields.eventEntity, v41);
+      sub_1BD33FC(&this->fields.eventEntity);
     }
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v40);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_CommonConsumeMaster___);
-  if ( !v30->klass )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  if ( !*(_QWORD *)v22 )
     goto LABEL_27;
   if ( !Master_object )
     goto LABEL_27;
-  SortedEntityList = CommonConsumeMaster__GetSortedEntityList(
-                       (CommonConsumeMaster_o *)Master_object,
-                       v30->klass->_1.byval_arg.bits,
-                       0LL);
-  this->fields._CommonConsumeEntityArray_k__BackingField = SortedEntityList;
-  Master_object = (Il2CppObject *)sub_1BCA784(&this->fields._CommonConsumeEntityArray_k__BackingField, SortedEntityList);
-  if ( !v30->klass )
+  this->fields._CommonConsumeEntityArray_k__BackingField = CommonConsumeMaster__GetSortedEntityList(
+                                                             (CommonConsumeMaster_o *)Master_object,
+                                                             *(_DWORD *)(*(_QWORD *)v22 + 48LL),
+                                                             0LL);
+  Master_object = (Il2CppObject *)sub_1BD33FC(&this->fields._CommonConsumeEntityArray_k__BackingField);
+  if ( !*(_QWORD *)v22 )
     goto LABEL_27;
-  if ( !HIDWORD(v30->klass->_1.element_class) )
+  if ( !*(_DWORD *)(*(_QWORD *)v22 + 76LL) )
   {
     IsOpen = 1;
     goto LABEL_26;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v29);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  if ( !v30->klass || !Master_object )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  if ( !*(_QWORD *)v22 || !Master_object )
 LABEL_27:
-    sub_1BCAA3C(Master_object, v29);
+    sub_1BD36B4(Master_object, v21);
   IsOpen = CommonReleaseMaster__IsOpen(
              (CommonReleaseMaster_o *)Master_object,
-             HIDWORD(v30->klass->_1.element_class),
+             *(_DWORD *)(*(_QWORD *)v22 + 76LL),
              0LL,
              0,
              0LL);
@@ -166,7 +148,7 @@ bool __fastcall EventTradeListViewItem__SetSortValue(
   TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !TradeGoodsEntity_k__BackingField )
-    sub_1BCAA3C(this, sort);
+    sub_1BD36B4(this, sort);
   TradeInfo_k__BackingField = this->fields._TradeInfo_k__BackingField;
   this->fields.sortValue1 = TradeGoodsEntity_k__BackingField->fields.id;
   if ( TradeInfo_k__BackingField )
@@ -218,73 +200,63 @@ LABEL_21:
 
 void __fastcall EventTradeListViewItem__UpdateTradeUserInfo(EventTradeListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
-  __int64 v10; // x1
-  __int64 v11; // x2
   Il2CppObject *Master_object; // x0
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x3
-  UserEventTradeEntity_o *v17; // x1
+  __int64 v8; // x1
   struct UserEventTradeEntity_o *UserTradeEntity_k__BackingField; // x8
   System_Collections_Generic_IEnumerable_TSource__o *tradeList; // x20
-  System_Func_object__bool__o *v20; // x21
-  Il2CppObject *v21; // x1
+  System_Func_object__bool__o *v11; // x21
+  Il2CppObject *v12; // x1
   UserEventTradeEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1127A & 1) == 0 )
+  if ( (byte_4B321FE & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_UserEventTradeMaster___, method, v2);
-    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v6, v7);
-    sub_1BCA7E0(&Method_EventTradeListViewItem__UpdateTradeUserInfo_b__26_0__, v8, v9);
-    sub_1BCA7E0(&System_Func_EventTradeInfo__bool__TypeInfo, v10, v11);
-    byte_4B1127A = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_UserEventTradeMaster___, method);
+    sub_1BD3458(&DataManager_TypeInfo, v3);
+    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v4);
+    sub_1BD3458(&Method_EventTradeListViewItem__UpdateTradeUserInfo_b__26_0__, v5);
+    sub_1BD3458(&System_Func_EventTradeInfo__bool__TypeInfo, v6);
+    byte_4B321FE = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !Master_object )
-    sub_1BCAA3C(0LL, v13);
+    sub_1BD36B4(0LL, v8);
   if ( UserEventTradeMaster__TryGetEntity(
          (UserEventTradeMaster_o *)Master_object,
          &entity,
          this->fields._EventId_k__BackingField,
          0LL) )
   {
-    v17 = entity;
     this->fields._UserTradeEntity_k__BackingField = entity;
-    sub_1BCA784(&this->fields._UserTradeEntity_k__BackingField, v17);
+    sub_1BD33FC(&this->fields._UserTradeEntity_k__BackingField);
   }
   UserTradeEntity_k__BackingField = this->fields._UserTradeEntity_k__BackingField;
   if ( UserTradeEntity_k__BackingField
     && (tradeList = (System_Collections_Generic_IEnumerable_TSource__o *)UserTradeEntity_k__BackingField->fields.tradeList) != 0LL )
   {
-    v20 = (System_Func_object__bool__o *)sub_1BCAA2C(System_Func_EventTradeInfo__bool__TypeInfo, v14, v15, v16);
+    v11 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_EventTradeInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
-      v20,
+      v11,
       (Il2CppObject *)this,
       Method_EventTradeListViewItem__UpdateTradeUserInfo_b__26_0__,
       0LL);
-    v21 = System_Linq_Enumerable__FirstOrDefault_object__49503160(
+    v12 = System_Linq_Enumerable__FirstOrDefault_object__49631076(
             tradeList,
-            (System_Func_TSource__bool__o *)v20,
-            (const MethodInfo_2F35BB8 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
+            (System_Func_TSource__bool__o *)v11,
+            (const MethodInfo_2F54F64 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
   }
   else
   {
-    v21 = 0LL;
+    v12 = 0LL;
   }
-  this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v21;
-  sub_1BCA784(&this->fields._TradeInfo_k__BackingField, v21);
+  this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v12;
+  sub_1BD33FC(&this->fields._TradeInfo_k__BackingField);
 }
 
 
@@ -296,7 +268,7 @@ bool __fastcall EventTradeListViewItem___UpdateTradeUserInfo_b__26_0(
   struct EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x8
 
   if ( !info || (TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField) == 0LL )
-    sub_1BCAA3C(this, info);
+    sub_1BD36B4(this, info);
   return info->fields.tradeGoodsId == TradeGoodsEntity_k__BackingField->fields.id;
 }
 
@@ -315,7 +287,7 @@ int64_t __fastcall EventTradeListViewItem__get_EventEndedAt(EventTradeListViewIt
 
   eventEntity = this->fields.eventEntity;
   if ( !eventEntity )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   return eventEntity->fields.endedAt;
 }
 
@@ -359,7 +331,7 @@ bool __fastcall EventTradeListViewItem__get_IsBuyAble(EventTradeListViewItem_o *
     while ( 1 )
     {
       if ( v5 >= (unsigned int)max_length )
-        sub_1BCAA44(this, method);
+        sub_1BD36BC(this, method);
       this = (EventTradeListViewItem_o *)CommonConsumeEntityArray_k__BackingField->m_Items[v5];
       if ( !this )
         break;
@@ -374,7 +346,7 @@ bool __fastcall EventTradeListViewItem__get_IsBuyAble(EventTradeListViewItem_o *
       return !v4;
     }
 LABEL_10:
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   }
   return !v4;
 }
@@ -382,56 +354,53 @@ LABEL_10:
 
 bool __fastcall EventTradeListViewItem__get_IsEventEnd(EventTradeListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   int64_t Time; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
   struct EventEntity_o *eventEntity; // x8
 
-  if ( (byte_4B1127B & 1) == 0 )
+  if ( (byte_4B321FF & 1) == 0 )
   {
-    sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
-    byte_4B1127B = 1;
+    sub_1BD3458(&NetworkManager_TypeInfo, method);
+    byte_4B321FF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   eventEntity = this->fields.eventEntity;
   if ( !eventEntity )
-    sub_1BCAA3C(Time, v5);
+    sub_1BD36B4(Time, v4);
   return Time >= eventEntity->fields.endedAt;
 }
 
 
 bool __fastcall EventTradeListViewItem__get_IsRefillable(EventTradeListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   struct EventTradeInfo_o *TradeInfo_k__BackingField; // x8
+  const MethodInfo *v4; // x1
   const MethodInfo *v5; // x1
-  const MethodInfo *v6; // x1
   int32_t NowTradeNum; // w0
-  __int64 v8; // x1
   EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x20
-  int32_t v10; // w19
+  int32_t v8; // w19
 
-  if ( (byte_4B1127D & 1) == 0 )
+  if ( (byte_4B32201 & 1) == 0 )
   {
-    sub_1BCA7E0(&EventTradeTimeCalculation_TypeInfo, method, v2);
-    byte_4B1127D = 1;
+    sub_1BD3458(&EventTradeTimeCalculation_TypeInfo, method);
+    byte_4B32201 = 1;
   }
   TradeInfo_k__BackingField = this->fields._TradeInfo_k__BackingField;
   if ( !TradeInfo_k__BackingField
     || TradeInfo_k__BackingField->fields.getNum > 0
     || EventTradeListViewItem__get_NowCompleteNum(this, method) > 0
-    || !EventTradeListViewItem__get_IsBuyAble(this, v5) )
+    || !EventTradeListViewItem__get_IsBuyAble(this, v4) )
   {
     return 0;
   }
-  NowTradeNum = EventTradeListViewItem__get_NowTradeNum(this, v6);
+  NowTradeNum = EventTradeListViewItem__get_NowTradeNum(this, v5);
   TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField;
-  v10 = NowTradeNum;
+  v8 = NowTradeNum;
   if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v8);
-  return v10 < EventTradeTimeCalculation__GetTradeMaxNum(TradeGoodsEntity_k__BackingField, 0LL);
+    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
+  return v8 < EventTradeTimeCalculation__GetTradeMaxNum(TradeGoodsEntity_k__BackingField, 0LL);
 }
 
 
@@ -467,25 +436,22 @@ int32_t __fastcall EventTradeListViewItem__get_ItemCount(EventTradeListViewItem_
 
 int32_t __fastcall EventTradeListViewItem__get_NowCompleteNum(EventTradeListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
+  __int64 v3; // x1
   int64_t Time; // x20
 
-  if ( (byte_4B1127C & 1) == 0 )
+  if ( (byte_4B32200 & 1) == 0 )
   {
-    sub_1BCA7E0(&EventTradeTimeCalculation_TypeInfo, method, v2);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v4, v5);
-    byte_4B1127C = 1;
+    sub_1BD3458(&EventTradeTimeCalculation_TypeInfo, method);
+    sub_1BD3458(&NetworkManager_TypeInfo, v3);
+    byte_4B32200 = 1;
   }
   if ( !this->fields._TradeInfo_k__BackingField )
     return 0;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v6);
+    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
   return EventTradeTimeCalculation__GetCompleteNum(this, Time, 0LL);
 }
 
@@ -505,7 +471,7 @@ int32_t __fastcall EventTradeListViewItem__get_NowTradeNum(EventTradeListViewIte
   NowCompleteNum = EventTradeListViewItem__get_NowCompleteNum(this, method);
   v7 = this->fields._TradeInfo_k__BackingField;
   if ( !v7 )
-    sub_1BCAA3C(NowCompleteNum, v6);
+    sub_1BD36B4(NowCompleteNum, v6);
   return tradeNum - NowCompleteNum + v7->fields.getNum;
 }
 
@@ -548,7 +514,7 @@ void __fastcall EventTradeListViewItem__set_TradeInfo(
         const MethodInfo *method)
 {
   this->fields._TradeInfo_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeInfo_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeInfo_k__BackingField);
 }
 
 
@@ -558,7 +524,7 @@ void __fastcall EventTradeListViewItem__set_UpdateReceiveAllButtonState(
         const MethodInfo *method)
 {
   this->fields._UpdateReceiveAllButtonState_k__BackingField = value;
-  sub_1BCA784(&this->fields._UpdateReceiveAllButtonState_k__BackingField, value);
+  sub_1BD33FC(&this->fields._UpdateReceiveAllButtonState_k__BackingField);
 }
 
 
@@ -568,7 +534,7 @@ void __fastcall EventTradeListViewItem__set_UserTradeEntity(
         const MethodInfo *method)
 {
   this->fields._UserTradeEntity_k__BackingField = value;
-  sub_1BCA784(&this->fields._UserTradeEntity_k__BackingField, value);
+  sub_1BD33FC(&this->fields._UserTradeEntity_k__BackingField);
 }
 
 
@@ -588,6 +554,6 @@ bool __fastcall EventTradeListViewItem___c__DisplayClass25_0____ctor_b__0(
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
 
   if ( !info || (tradeGoodsEntity = this->fields.tradeGoodsEntity) == 0LL )
-    sub_1BCAA3C(this, info);
+    sub_1BD36B4(this, info);
   return info->fields.tradeGoodsId == tradeGoodsEntity->fields.id;
 }

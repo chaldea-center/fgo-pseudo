@@ -1,15 +1,13 @@
 void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B165DA & 1) == 0 )
+  if ( (byte_4B37586 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B165DA = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37586 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +18,16 @@ System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4B165D8 & 1) == 0 )
+  if ( (byte_4B37584 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId, *(_QWORD *)&questPhase);
-    byte_4B165D8 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
+    byte_4B37584 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_2F11500 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2F2FEF4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -51,20 +49,19 @@ int32_t __fastcall NpcFollowerReleaseEntity__GetCondType(NpcFollowerReleaseEntit
 
 bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4B165D9 & 1) == 0 )
+  if ( (byte_4B37585 & 1) == 0 )
   {
-    sub_1BCA7E0(&CondType_TypeInfo, method, v2);
-    byte_4B165D9 = 1;
+    sub_1BD3458(&CondType_TypeInfo, method);
+    byte_4B37585 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condValue = this->fields.condValue;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   return CondType__IsOpen(condType, condTargetId, condValue, 0, 0LL, 0LL);
 }

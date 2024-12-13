@@ -8,39 +8,37 @@ void __fastcall CommonParticleControlComponent__Update(
         CommonParticleControlComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  const MethodInfo *v3; // x3
-  CommonParticleControlComponent_o *v4; // x19
+  const MethodInfo *v2; // x3
+  CommonParticleControlComponent_o *v3; // x19
   struct System_Collections_Generic_List_ParticleSystem__o *particleParent; // x8
-  int32_t v6; // w20
+  int32_t v5; // w20
 
-  v4 = this;
-  if ( (byte_4B175C3 & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B38589 & 1) == 0 )
   {
-    this = (CommonParticleControlComponent_o *)sub_1BCA7E0(
+    this = (CommonParticleControlComponent_o *)sub_1BD3458(
                                                  &Method_System_Collections_Generic_List_ParticleSystem__get_Count__,
-                                                 method,
-                                                 v2);
-    byte_4B175C3 = 1;
+                                                 method);
+    byte_4B38589 = 1;
   }
-  particleParent = v4->fields.particleParent;
+  particleParent = v3->fields.particleParent;
   if ( !particleParent )
     goto LABEL_8;
-  v6 = 0;
-  while ( v6 < particleParent->fields._size )
+  v5 = 0;
+  while ( v5 < particleParent->fields._size )
   {
-    this = (CommonParticleControlComponent_o *)CommonParticleControlComponent__isAlive(v4, v6, 1, v3);
+    this = (CommonParticleControlComponent_o *)CommonParticleControlComponent__isAlive(v3, v5, 1, v2);
     if ( ((unsigned __int8)this & 1) != 0 )
       return;
-    particleParent = v4->fields.particleParent;
-    ++v6;
+    particleParent = v3->fields.particleParent;
+    ++v5;
     if ( !particleParent )
       goto LABEL_8;
   }
-  this = (CommonParticleControlComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
+  this = (CommonParticleControlComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0LL);
   if ( !this )
 LABEL_8:
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
 
@@ -56,7 +54,7 @@ void __fastcall CommonParticleControlComponent__init(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BCAA3C(0LL, v6);
+    sub_1BD36B4(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   CommonParticleControlComponent__setupLayer(this, layer, v7);
 }
@@ -70,14 +68,13 @@ bool __fastcall CommonParticleControlComponent__isAlive(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
   System_Collections_Generic_List_object__o *particleParent; // x0
 
-  if ( (byte_4B175C7 & 1) == 0 )
+  if ( (byte_4B3858D & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx, withChildren);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7, v8);
-    byte_4B175C7 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx);
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7);
+    byte_4B3858D = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
@@ -87,11 +84,11 @@ bool __fastcall CommonParticleControlComponent__isAlive(
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
                                                                     idx,
-                                                                    (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
       return UnityEngine_ParticleSystem__IsAlive((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0LL);
 LABEL_8:
-    sub_1BCAA3C(particleParent, *(_QWORD *)&idx);
+    sub_1BD36B4(particleParent, *(_QWORD *)&idx);
   }
   return 0;
 }
@@ -104,33 +101,32 @@ void __fastcall CommonParticleControlComponent__particleAllStop(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
   System_Collections_Generic_List_object__o *particleParent; // x0
-  int32_t v8; // w20
-  bool v9; // w21
+  int32_t v7; // w20
+  bool v8; // w21
 
-  if ( (byte_4B175C5 & 1) == 0 )
+  if ( (byte_4B3858B & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren, method);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5, v6);
-    byte_4B175C5 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren);
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5);
+    byte_4B3858B = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
     goto LABEL_11;
-  v8 = 0;
-  v9 = withChildren;
-  while ( v8 < particleParent->fields._size )
+  v7 = 0;
+  v8 = withChildren;
+  while ( v7 < particleParent->fields._size )
   {
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
-                                                                    v8,
-                                                                    (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    v7,
+                                                                    (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
     {
-      UnityEngine_ParticleSystem__Stop_70434620((UnityEngine_ParticleSystem_o *)particleParent, v9, 0LL);
+      UnityEngine_ParticleSystem__Stop_70558648((UnityEngine_ParticleSystem_o *)particleParent, v8, 0LL);
       particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
-      ++v8;
+      ++v7;
       if ( particleParent )
         continue;
     }
@@ -141,7 +137,7 @@ void __fastcall CommonParticleControlComponent__particleAllStop(
                                                                   0LL);
   if ( !particleParent )
 LABEL_11:
-    sub_1BCAA3C(particleParent, withChildren);
+    sub_1BD36B4(particleParent, withChildren);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)particleParent, 0, 0LL);
 }
 
@@ -153,17 +149,16 @@ void __fastcall CommonParticleControlComponent__particleStart(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v8; // x1
-  int32_t v9; // w21
-  bool v10; // w20
+  __int64 v7; // x1
+  int32_t v8; // w21
+  bool v9; // w20
 
-  if ( (byte_4B175C4 & 1) == 0 )
+  if ( (byte_4B3858A & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren, method);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5, v6);
-    byte_4B175C4 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren);
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5);
+    byte_4B3858A = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
@@ -171,21 +166,21 @@ void __fastcall CommonParticleControlComponent__particleStart(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.particleParent) == 0LL) )
   {
 LABEL_9:
-    sub_1BCAA3C(gameObject, v8);
+    sub_1BD36B4(gameObject, v7);
   }
-  v9 = 0;
-  v10 = withChildren;
-  while ( v9 < SLODWORD(gameObject[1].klass) )
+  v8 = 0;
+  v9 = withChildren;
+  while ( v8 < SLODWORD(gameObject[1].klass) )
   {
     gameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)gameObject,
-                                               v9,
-                                               (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                               v8,
+                                               (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( gameObject )
     {
-      UnityEngine_ParticleSystem__Play((UnityEngine_ParticleSystem_o *)gameObject, v10, 0LL);
+      UnityEngine_ParticleSystem__Play((UnityEngine_ParticleSystem_o *)gameObject, v9, 0LL);
       gameObject = (UnityEngine_GameObject_o *)this->fields.particleParent;
-      ++v9;
+      ++v8;
       if ( gameObject )
         continue;
     }
@@ -202,14 +197,13 @@ void __fastcall CommonParticleControlComponent__particleStop(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
   System_Collections_Generic_List_object__o *particleParent; // x0
 
-  if ( (byte_4B175C6 & 1) == 0 )
+  if ( (byte_4B3858C & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx, withChildren);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7, v8);
-    byte_4B175C6 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx);
+    sub_1BD3458(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7);
+    byte_4B3858C = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
@@ -219,14 +213,14 @@ void __fastcall CommonParticleControlComponent__particleStop(
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
                                                                     idx,
-                                                                    (const MethodInfo_35A198C *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
     {
-      UnityEngine_ParticleSystem__Stop_70434620((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0LL);
+      UnityEngine_ParticleSystem__Stop_70558648((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0LL);
       return;
     }
 LABEL_8:
-    sub_1BCAA3C(particleParent, *(_QWORD *)&idx);
+    sub_1BD36B4(particleParent, *(_QWORD *)&idx);
   }
 }
 
@@ -259,7 +253,7 @@ void __fastcall CommonParticleControlComponent__setupLayer(
     while ( 1 )
     {
       if ( v10 >= v8 )
-        sub_1BCAA44(gameObject, v6);
+        sub_1BD36BC(gameObject, v6);
       gameObject = (void *)*((_QWORD *)v9 + (int)v10 + 4);
       if ( !gameObject )
         break;
@@ -269,6 +263,6 @@ void __fastcall CommonParticleControlComponent__setupLayer(
         return;
     }
 LABEL_10:
-    sub_1BCAA3C(gameObject, v6);
+    sub_1BD36B4(gameObject, v6);
   }
 }

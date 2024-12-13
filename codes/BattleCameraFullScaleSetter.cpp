@@ -1,12 +1,11 @@
 void __fastcall BattleCameraFullScaleSetter___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
 
-  if ( (byte_4B186BC & 1) == 0 )
+  if ( (byte_4B39693 & 1) == 0 )
   {
-    sub_1BCA7E0(&BattleCameraFullScaleSetter_TypeInfo, v1, v2);
-    byte_4B186BC = 1;
+    sub_1BD3458(&BattleCameraFullScaleSetter_TypeInfo, v1);
+    byte_4B39693 = 1;
   }
   LODWORD(BattleCameraFullScaleSetter_TypeInfo->static_fields->DefaultFov) = (struct BattleCameraFullScaleSetter_StaticFields)1109393408;
 }
@@ -24,94 +23,91 @@ void __fastcall BattleCameraFullScaleSetter___ctor(BattleCameraFullScaleSetter_o
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleCameraFullScaleSetter__CalcScale(BattleCameraFullScaleSetter_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  BattleCameraFullScaleSetter_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x2
+  BattleCameraFullScaleSetter_o *v2; // x19
+  __int64 v3; // x1
   struct BattlePerformance_o *perf; // x8
   UnityEngine_Object_o *actorcamera; // x20
-  struct BattlePerformance_o *v8; // x8
+  struct BattlePerformance_o *v6; // x8
   float fieldOfView; // s8
-  BattleCameraFullScaleSetter_c *v10; // x20
+  BattleCameraFullScaleSetter_c *v8; // x20
   float baseScale; // s1
-  float v12; // s2
-  float v13; // s0
+  float v10; // s2
+  float v11; // s0
   float DefaultFov; // s10
-  __int64 v15; // x1
-  float v16; // s8
-  float v17; // s9
+  float v13; // s8
+  float v14; // s9
 
-  v3 = this;
-  if ( (byte_4B186BB & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B39692 & 1) == 0 )
   {
-    sub_1BCA7E0(&BattleCameraFullScaleSetter_TypeInfo, method, v2);
-    this = (BattleCameraFullScaleSetter_o *)sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
-    byte_4B186BB = 1;
+    sub_1BD3458(&BattleCameraFullScaleSetter_TypeInfo, method);
+    this = (BattleCameraFullScaleSetter_o *)sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B39692 = 1;
   }
-  if ( !v3->fields.parentCameraType )
+  if ( !v2->fields.parentCameraType )
   {
-    this = (BattleCameraFullScaleSetter_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v3, 0LL);
+    this = (BattleCameraFullScaleSetter_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0LL);
     if ( this )
     {
-      baseScale = v3->fields.baseScale;
-      v12 = 1.0;
-      v13 = baseScale * v3->fields.aspect;
+      baseScale = v2->fields.baseScale;
+      v10 = 1.0;
+      v11 = baseScale * v2->fields.aspect;
 LABEL_23:
-      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, *(UnityEngine_Vector3_o *)&v13, 0LL);
+      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, *(UnityEngine_Vector3_o *)&v11, 0LL);
       return;
     }
 LABEL_25:
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   }
-  perf = v3->fields.perf;
+  perf = v2->fields.perf;
   if ( !perf )
     goto LABEL_25;
   actorcamera = (UnityEngine_Object_o *)perf->fields.actorcamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (BattleCameraFullScaleSetter_o *)UnityEngine_Object__op_Implicit(actorcamera, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v8 = v3->fields.perf;
-    if ( !v8 )
+    v6 = v2->fields.perf;
+    if ( !v6 )
       goto LABEL_25;
-    this = (BattleCameraFullScaleSetter_o *)v8->fields.actorcamera;
+    this = (BattleCameraFullScaleSetter_o *)v6->fields.actorcamera;
     if ( !this )
       goto LABEL_25;
     fieldOfView = UnityEngine_Camera__get_fieldOfView((UnityEngine_Camera_o *)this, 0LL);
-    v10 = BattleCameraFullScaleSetter_TypeInfo;
+    v8 = BattleCameraFullScaleSetter_TypeInfo;
   }
   else
   {
-    v10 = BattleCameraFullScaleSetter_TypeInfo;
+    v8 = BattleCameraFullScaleSetter_TypeInfo;
     if ( !BattleCameraFullScaleSetter_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(BattleCameraFullScaleSetter_TypeInfo, method);
-      v10 = BattleCameraFullScaleSetter_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BattleCameraFullScaleSetter_TypeInfo);
+      v8 = BattleCameraFullScaleSetter_TypeInfo;
     }
-    fieldOfView = v10->static_fields->DefaultFov;
+    fieldOfView = v8->static_fields->DefaultFov;
   }
-  if ( !v10->_2.cctor_finished )
+  if ( !v8->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v10, method);
-    v10 = BattleCameraFullScaleSetter_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v8);
+    v8 = BattleCameraFullScaleSetter_TypeInfo;
   }
-  DefaultFov = v10->static_fields->DefaultFov;
+  DefaultFov = v8->static_fields->DefaultFov;
   if ( fieldOfView != DefaultFov )
   {
-    v16 = tanf((float)(fieldOfView * 0.5) * 0.017453);
-    if ( !v10->_2.cctor_finished )
+    v13 = tanf((float)(fieldOfView * 0.5) * 0.017453);
+    if ( !v8->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10, v15);
+      j_il2cpp_runtime_class_init_0(v8);
       DefaultFov = BattleCameraFullScaleSetter_TypeInfo->static_fields->DefaultFov;
     }
-    v17 = tanf((float)(DefaultFov * 0.5) * 0.017453);
-    this = (BattleCameraFullScaleSetter_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v3, 0LL);
+    v14 = tanf((float)(DefaultFov * 0.5) * 0.017453);
+    this = (BattleCameraFullScaleSetter_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0LL);
     if ( this )
     {
-      v12 = (float)(v16 / v17) * v3->fields.panelScale.fields.z;
-      baseScale = (float)(v16 / v17) * v3->fields.panelScale.fields.y;
-      v13 = (float)(v16 / v17) * v3->fields.panelScale.fields.x;
+      v10 = (float)(v13 / v14) * v2->fields.panelScale.fields.z;
+      baseScale = (float)(v13 / v14) * v2->fields.panelScale.fields.y;
+      v11 = (float)(v13 / v14) * v2->fields.panelScale.fields.x;
       goto LABEL_23;
     }
     goto LABEL_25;
@@ -131,62 +127,55 @@ void __fastcall BattleCameraFullScaleSetter__Initialize(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
+  __int64 v14; // x1
   struct UnityEngine_Camera_o **p_parentCamera; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v21; // x1
-  __int64 v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
+  __int64 v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   struct BattlePerformance_o **p_perf; // x0
   struct BattlePerformance_o *Component_object; // x1
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
+  int64_t v26; // x2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  BattleSetupInfo_o *v29; // x5
+  FollowerInfo_o *v30; // x6
+  PartyListViewItem_o *v31; // x7
   struct BattlePerformance_o *perf; // x8
   int64_t uicamera; // x1
-  UnityEngine_Object_o *v39; // x21
-  __int64 v40; // x1
+  UnityEngine_Object_o *v34; // x21
   Il2CppObject *Instance; // x21
-  struct BattlePerformance_o *v42; // x8
-  UnityEngine_Object_o *v43; // x21
-  __int64 v44; // x1
-  Il2CppObject *v45; // x21
-  UnityEngine_Object_o *v46; // x20
-  const MethodInfo *v47; // x1
+  struct BattlePerformance_o *v36; // x8
+  UnityEngine_Object_o *v37; // x21
+  Il2CppObject *v38; // x21
+  UnityEngine_Object_o *v39; // x20
+  const MethodInfo *v40; // x1
 
-  if ( (byte_4B186BA & 1) == 0 )
+  if ( (byte_4B39691 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BattlePerformance___, performance, isUI);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v11, v12);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__, v13, v14);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v15, v16);
-    sub_1BCA7E0(&StringLiteral_10734/*"Performance"*/, v17, v18);
-    byte_4B186BA = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_BattlePerformance___, performance);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v11);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__, v12);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v13);
+    sub_1BD3458(&StringLiteral_10749/*"Performance"*/, v14);
+    byte_4B39691 = 1;
   }
   this->fields.aspect = this->fields.baseWidth / this->fields.baseHeight;
   this->fields.parentCamera = 0LL;
   p_parentCamera = &this->fields.parentCamera;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.parentCamera, 0LL, isUI, (int32_t)method, v4, v5, v6, v7);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.parentCamera, 0LL, isUI, (int32_t)method, v4, v5, v6, v7);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_37;
   this->fields.panelScale = UnityEngine_Transform__get_localScale(transform, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)performance, 0LL, 0LL) )
   {
     this->fields.perf = performance;
@@ -195,16 +184,16 @@ void __fastcall BattleCameraFullScaleSetter__Initialize(
   }
   else
   {
-    transform = (UnityEngine_Transform_o *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_10734/*"Performance"*/, 0LL);
+    transform = (UnityEngine_Transform_o *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_10749/*"Performance"*/, 0LL);
     if ( !transform )
       goto LABEL_37;
     Component_object = (struct BattlePerformance_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        (UnityEngine_GameObject_o *)transform,
-                                                       (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
+                                                       (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformance___);
     this->fields.perf = Component_object;
     p_perf = &this->fields.perf;
   }
-  sub_1BCA784((PartyOrganizationUtility_o *)p_perf, (int64_t)Component_object, v23, v24, v25, v26, v27, v28);
+  sub_1BD33FC((PartyOrganizationUtility_o *)p_perf, (int64_t)Component_object, v18, v19, v20, v21, v22, v23);
   this->fields.parentCameraType = !isUI;
   if ( isUI )
   {
@@ -214,49 +203,49 @@ void __fastcall BattleCameraFullScaleSetter__Initialize(
       uicamera = (int64_t)perf->fields.uicamera;
 LABEL_13:
       *p_parentCamera = (struct UnityEngine_Camera_o *)uicamera;
-      sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.parentCamera, uicamera, v31, v32, v33, v34, v35, v36);
+      sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.parentCamera, uicamera, v26, v27, v28, v29, v30, v31);
       goto LABEL_32;
     }
     goto LABEL_37;
   }
-  v39 = (UnityEngine_Object_o *)*p_parentCamera;
+  v34 = (UnityEngine_Object_o *)*p_parentCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
-  if ( !UnityEngine_Object__op_Equality(v39, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Equality(v34, 0LL, 0LL) )
     goto LABEL_23;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
     if ( this->fields.parentCameraType == 1 )
     {
-      v42 = this->fields.perf;
-      if ( v42 )
+      v36 = this->fields.perf;
+      if ( v36 )
       {
-        uicamera = (int64_t)v42->fields.actorcamera;
+        uicamera = (int64_t)v36->fields.actorcamera;
         goto LABEL_13;
       }
 LABEL_37:
-      sub_1BCAA3C(transform, v21);
+      sub_1BD36B4(transform, v17);
     }
   }
   else
   {
 LABEL_23:
-    v43 = (UnityEngine_Object_o *)*p_parentCamera;
+    v37 = (UnityEngine_Object_o *)*p_parentCamera;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
-    if ( UnityEngine_Object__op_Equality(v43, 0LL, 0LL) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Equality(v37, 0LL, 0LL) )
     {
-      v45 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__);
+      v38 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v45, 0LL, 0LL)
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v38, 0LL, 0LL)
         && this->fields.parentCameraType == 1 )
       {
-        transform = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__);
+        transform = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FGOSequenceManager__get_Instance__);
         if ( transform )
         {
           uicamera = (int64_t)transform[1].monitor;
@@ -267,13 +256,13 @@ LABEL_23:
     }
   }
 LABEL_32:
-  v46 = (UnityEngine_Object_o *)*p_parentCamera;
+  v39 = (UnityEngine_Object_o *)*p_parentCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21);
-  if ( UnityEngine_Object__op_Equality(v46, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Equality(v39, 0LL, 0LL) )
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0LL);
   else
-    BattleCameraFullScaleSetter__CalcScale(this, v47);
+    BattleCameraFullScaleSetter__CalcScale(this, v40);
 }
 
 
@@ -285,7 +274,7 @@ void __fastcall BattleCameraFullScaleSetter__Update(BattleCameraFullScaleSetter_
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1BCAA3C(0LL, v4);
+    sub_1BD36B4(0LL, v4);
   if ( UnityEngine_Transform__get_hasChanged(transform, 0LL) )
     BattleCameraFullScaleSetter__CalcScale(this, v5);
 }

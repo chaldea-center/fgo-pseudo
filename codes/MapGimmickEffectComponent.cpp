@@ -1,14 +1,12 @@
 void __fastcall MapGimmickEffectComponent___ctor(MapGimmickEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B12F8D & 1) == 0 )
+  if ( (byte_4B33F17 & 1) == 0 )
   {
-    sub_1BCA7E0(&CommonEffectComponent_TypeInfo, method, v2);
-    byte_4B12F8D = 1;
+    sub_1BD3458(&CommonEffectComponent_TypeInfo, method);
+    byte_4B33F17 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -20,38 +18,35 @@ void __fastcall MapGimmickEffectComponent__ForceLoop(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
   int32_t status; // w8
-  __int64 v8; // x1
   UnityEngine_Object_o *simpleAnimationComponent; // x20
-  __int64 v10; // x1
+  __int64 v8; // x1
   SimpleAnimation_o *AnimationName; // x0
-  UnityEngine_Object_o *v12; // x20
-  __int64 v13; // x1
-  const MethodInfo *v14; // x2
-  SimpleAnimation_o *v15; // x20
+  UnityEngine_Object_o *v10; // x20
+  const MethodInfo *v11; // x2
+  SimpleAnimation_o *v12; // x20
   SimpleAnimation_State_o *Item; // x0
   SimpleAnimation_State_c *klass; // x8
-  SimpleAnimation_State_o *v18; // x20
-  __int64 v19; // x9
+  SimpleAnimation_State_o *v15; // x20
+  __int64 v16; // x9
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
-  UnityEngine_Object_o *v22; // x20
-  const MethodInfo *v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  UnityEngine_Animation_o *v29; // x20
-  UnityEngine_TrackedReference_o *v30; // x20
+  UnityEngine_Object_o *v19; // x20
+  const MethodInfo *v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
+  UnityEngine_Animation_o *v26; // x20
+  UnityEngine_TrackedReference_o *v27; // x20
   UnityEngine_Object_o *animationComponent; // x20
 
-  if ( (byte_4B12F8B & 1) == 0 )
+  if ( (byte_4B33F15 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, isOverWrite, method);
-    sub_1BCA7E0(&SimpleAnimation_State_TypeInfo, v5, v6);
-    byte_4B12F8B = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, isOverWrite);
+    sub_1BD3458(&SimpleAnimation_State_TypeInfo, v5);
+    byte_4B33F15 = 1;
   }
   status = this->fields.status;
   if ( !status )
@@ -61,7 +56,7 @@ void __fastcall MapGimmickEffectComponent__ForceLoop(
     {
       simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
       {
         AnimationName = this->fields.simpleAnimationComponent;
@@ -73,7 +68,7 @@ void __fastcall MapGimmickEffectComponent__ForceLoop(
       {
         animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( !UnityEngine_Object__op_Inequality(animationComponent, 0LL, 0LL) )
           goto LABEL_41;
         AnimationName = (SimpleAnimation_o *)this->fields.animationComponent;
@@ -91,29 +86,29 @@ LABEL_41:
   }
   if ( status != 2 )
   {
-    v12 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
+    v10 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isOverWrite);
-    if ( UnityEngine_Object__op_Inequality(v12, 0LL, 0LL) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Inequality(v10, 0LL, 0LL) )
     {
-      v15 = this->fields.simpleAnimationComponent;
-      AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v14);
-      if ( v15 )
+      v12 = this->fields.simpleAnimationComponent;
+      AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v11);
+      if ( v12 )
       {
-        Item = SimpleAnimation__get_Item(v15, (System_String_o *)AnimationName, 0LL);
+        Item = SimpleAnimation__get_Item(v12, (System_String_o *)AnimationName, 0LL);
         if ( Item )
         {
           klass = Item->klass;
-          v18 = Item;
-          v19 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
+          v15 = Item;
+          v16 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
           if ( *(_WORD *)(&Item->klass->_2.bitflags2 + 3) )
           {
             p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
             while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
             {
-              --v19;
+              --v16;
               p_offset += 2;
-              if ( !v19 )
+              if ( !v16 )
                 goto LABEL_21;
             }
             p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 18].method;
@@ -121,10 +116,10 @@ LABEL_41:
           else
           {
 LABEL_21:
-            p_method = sub_1C1C7C0(Item, SimpleAnimation_State_TypeInfo, 18LL);
+            p_method = sub_1C25438(Item, SimpleAnimation_State_TypeInfo, 18LL);
           }
           (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(
-            v18,
+            v15,
             2LL,
             *(_QWORD *)(p_method + 8));
         }
@@ -138,25 +133,25 @@ LABEL_21:
     }
     else
     {
-      v22 = (UnityEngine_Object_o *)this->fields.animationComponent;
+      v19 = (UnityEngine_Object_o *)this->fields.animationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
-      if ( !UnityEngine_Object__op_Inequality(v22, 0LL, 0LL) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( !UnityEngine_Object__op_Inequality(v19, 0LL, 0LL) )
         goto LABEL_40;
-      v29 = this->fields.animationComponent;
-      AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v23);
-      if ( v29 )
+      v26 = this->fields.animationComponent;
+      AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v20);
+      if ( v26 )
       {
-        v30 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
-                                                  v29,
+        v27 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
+                                                  v26,
                                                   (System_String_o *)AnimationName,
                                                   0LL);
-        AnimationName = (SimpleAnimation_o *)UnityEngine_TrackedReference__op_Inequality(v30, 0LL, 0LL);
+        AnimationName = (SimpleAnimation_o *)UnityEngine_TrackedReference__op_Inequality(v27, 0LL, 0LL);
         if ( ((unsigned __int8)AnimationName & 1) != 0 )
         {
-          if ( !v30 )
+          if ( !v27 )
             goto LABEL_42;
-          UnityEngine_AnimationState__set_wrapMode((UnityEngine_AnimationState_o *)v30, 2, 0LL);
+          UnityEngine_AnimationState__set_wrapMode((UnityEngine_AnimationState_o *)v27, 2, 0LL);
         }
         AnimationName = (SimpleAnimation_o *)this->fields.animationComponent;
         if ( AnimationName )
@@ -166,21 +161,21 @@ LABEL_40:
           this->fields.totaltime = 0.0;
           this->fields.loop = 1;
           this->fields.playAnimation = 0LL;
-          sub_1BCA784(
+          sub_1BD33FC(
             (PartyOrganizationUtility_o *)&this->fields.playAnimation,
             0LL,
-            (int64_t)v23,
+            (int64_t)v20,
+            v21,
+            v22,
+            v23,
             v24,
-            v25,
-            v26,
-            v27,
-            v28);
+            v25);
           goto LABEL_41;
         }
       }
     }
 LABEL_42:
-    sub_1BCAA3C(AnimationName, v10);
+    sub_1BD36B4(AnimationName, v8);
   }
 }
 
@@ -197,37 +192,34 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  UnityEngine_Object_o *v14; // x20
-  __int64 v15; // x1
-  const MethodInfo *v16; // x2
-  SimpleAnimation_o *v17; // x20
+  UnityEngine_Object_o *v12; // x20
+  const MethodInfo *v13; // x2
+  SimpleAnimation_o *v14; // x20
   SimpleAnimation_o *AnimationName; // x0
-  __int64 v19; // x1
+  __int64 v16; // x1
   SimpleAnimation_State_o *Item; // x0
   SimpleAnimation_State_c *klass; // x8
-  SimpleAnimation_State_o *v22; // x20
-  __int64 v23; // x9
+  SimpleAnimation_State_o *v19; // x20
+  __int64 v20; // x9
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
   UnityEngine_Object_o *simpleAnimationComponent; // x20
-  UnityEngine_Object_o *v27; // x20
-  const MethodInfo *v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  UnityEngine_Animation_o *v34; // x20
-  UnityEngine_TrackedReference_o *v35; // x20
+  UnityEngine_Object_o *v24; // x20
+  const MethodInfo *v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  UnityEngine_Animation_o *v31; // x20
+  UnityEngine_TrackedReference_o *v32; // x20
   UnityEngine_Object_o *animationComponent; // x20
 
-  if ( (byte_4B12F8A & 1) == 0 )
+  if ( (byte_4B33F14 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, isOverWrite, callback);
-    sub_1BCA7E0(&SimpleAnimation_State_TypeInfo, v11, v12);
-    byte_4B12F8A = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, isOverWrite);
+    sub_1BD3458(&SimpleAnimation_State_TypeInfo, v11);
+    byte_4B33F14 = 1;
   }
   if ( this->fields.status == 2 )
   {
@@ -235,7 +227,7 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
     return;
   }
   this->fields.callAfterStart = callback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.callAfterStart,
     (int64_t)callback,
     (int64_t)callback,
@@ -250,7 +242,7 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
     {
       simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
       {
         AnimationName = this->fields.simpleAnimationComponent;
@@ -262,7 +254,7 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
       {
         animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Inequality(animationComponent, 0LL, 0LL) )
         {
           AnimationName = (SimpleAnimation_o *)this->fields.animationComponent;
@@ -275,29 +267,29 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
     CommonEffectComponent__Init((CommonEffectComponent_o *)this, 0, 0, 0LL);
     return;
   }
-  v14 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
+  v12 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
-  if ( UnityEngine_Object__op_Inequality(v14, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(v12, 0LL, 0LL) )
   {
-    v17 = this->fields.simpleAnimationComponent;
-    AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v16);
-    if ( v17 )
+    v14 = this->fields.simpleAnimationComponent;
+    AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v13);
+    if ( v14 )
     {
-      Item = SimpleAnimation__get_Item(v17, (System_String_o *)AnimationName, 0LL);
+      Item = SimpleAnimation__get_Item(v14, (System_String_o *)AnimationName, 0LL);
       if ( Item )
       {
         klass = Item->klass;
-        v22 = Item;
-        v23 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
+        v19 = Item;
+        v20 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
         if ( *(_WORD *)(&Item->klass->_2.bitflags2 + 3) )
         {
           p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
           while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
           {
-            --v23;
+            --v20;
             p_offset += 2;
-            if ( !v23 )
+            if ( !v20 )
               goto LABEL_15;
           }
           p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 18].method;
@@ -305,10 +297,10 @@ void __fastcall MapGimmickEffectComponent__ForceStart(
         else
         {
 LABEL_15:
-          p_method = sub_1C1C7C0(Item, SimpleAnimation_State_TypeInfo, 18LL);
+          p_method = sub_1C25438(Item, SimpleAnimation_State_TypeInfo, 18LL);
         }
         (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(
-          v22,
+          v19,
           2LL,
           *(_QWORD *)(p_method + 8));
       }
@@ -321,33 +313,33 @@ LABEL_15:
     }
     goto LABEL_42;
   }
-  v27 = (UnityEngine_Object_o *)this->fields.animationComponent;
+  v24 = (UnityEngine_Object_o *)this->fields.animationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
-  if ( !UnityEngine_Object__op_Inequality(v27, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Inequality(v24, 0LL, 0LL) )
     goto LABEL_41;
-  v34 = this->fields.animationComponent;
-  AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v28);
-  if ( !v34 )
+  v31 = this->fields.animationComponent;
+  AnimationName = (SimpleAnimation_o *)MapGimmickEffectComponent__GetAnimationName(this, 4, v25);
+  if ( !v31 )
     goto LABEL_42;
-  v35 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v34, (System_String_o *)AnimationName, 0LL);
-  AnimationName = (SimpleAnimation_o *)UnityEngine_TrackedReference__op_Inequality(v35, 0LL, 0LL);
+  v32 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v31, (System_String_o *)AnimationName, 0LL);
+  AnimationName = (SimpleAnimation_o *)UnityEngine_TrackedReference__op_Inequality(v32, 0LL, 0LL);
   if ( ((unsigned __int8)AnimationName & 1) != 0 )
   {
-    if ( !v35 )
+    if ( !v32 )
       goto LABEL_42;
-    UnityEngine_AnimationState__set_wrapMode((UnityEngine_AnimationState_o *)v35, 2, 0LL);
+    UnityEngine_AnimationState__set_wrapMode((UnityEngine_AnimationState_o *)v32, 2, 0LL);
   }
   AnimationName = (SimpleAnimation_o *)this->fields.animationComponent;
   if ( !AnimationName )
 LABEL_42:
-    sub_1BCAA3C(AnimationName, v19);
+    sub_1BD36B4(AnimationName, v16);
   UnityEngine_Animation__Stop((UnityEngine_Animation_o *)AnimationName, 0LL);
 LABEL_41:
   this->fields.totaltime = 0.0;
   this->fields.loop = 1;
   this->fields.playAnimation = 0LL;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.playAnimation, 0LL, (int64_t)v28, v29, v30, v31, v32, v33);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.playAnimation, 0LL, (int64_t)v25, v26, v27, v28, v29, v30);
   ((void (__fastcall *)(MapGimmickEffectComponent_o *, __int64, Il2CppMethodPointer))this->klass->vtable._5_NextPlayAnimation.method)(
     this,
     3LL,
@@ -362,38 +354,31 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  UnityEngine_Object_o *v14; // x20
-  __int64 v15; // x1
-  UnityEngine_Animation_o *v16; // x0
-  UnityEngine_TrackedReference_o *v17; // x0
-  UnityEngine_Object_o *v18; // x20
-  __int64 v20; // x1
+  __int64 v8; // x1
+  UnityEngine_Object_o *v9; // x20
+  __int64 v10; // x1
+  UnityEngine_Animation_o *v11; // x0
+  UnityEngine_TrackedReference_o *v12; // x0
+  UnityEngine_Object_o *v13; // x20
   UnityEngine_Object_o *animationComponent; // x20
   UnityEngine_TrackedReference_o *Item; // x0
   UnityEngine_Object_o *simpleAnimationComponent; // x20
-  __int64 v24; // x1
-  UnityEngine_Object_o *v25; // x20
-  UnityEngine_TrackedReference_o *v26; // x0
-  UnityEngine_Object_o *v27; // x20
+  UnityEngine_Object_o *v18; // x20
+  UnityEngine_TrackedReference_o *v19; // x0
+  UnityEngine_Object_o *v20; // x20
   System_String_o *baseName; // x0
-  __int64 *v29; // x8
+  __int64 *v22; // x8
 
-  if ( (byte_4B12F88 & 1) == 0 )
+  if ( (byte_4B33F12 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&status, method);
-    sub_1BCA7E0(&string_TypeInfo, v5, v6);
-    sub_1BCA7E0(&StringLiteral_16721/*"_loop"*/, v7, v8);
-    sub_1BCA7E0(&StringLiteral_16742/*"_start"*/, v9, v10);
-    sub_1BCA7E0(&StringLiteral_16706/*"_end"*/, v11, v12);
-    byte_4B12F88 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, *(_QWORD *)&status);
+    sub_1BD3458(&string_TypeInfo, v5);
+    sub_1BD3458(&StringLiteral_16741/*"_loop"*/, v6);
+    sub_1BD3458(&StringLiteral_16762/*"_start"*/, v7);
+    sub_1BD3458(&StringLiteral_16726/*"_end"*/, v8);
+    byte_4B33F12 = 1;
   }
   if ( status == 6 )
   {
@@ -401,14 +386,14 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
     {
       animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(animationComponent, 0LL, 0LL) )
       {
-        v16 = this->fields.animationComponent;
-        if ( !v16 )
+        v11 = this->fields.animationComponent;
+        if ( !v11 )
           goto LABEL_47;
         Item = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
-                                                   v16,
+                                                   v11,
                                                    this->fields.endAnimationName,
                                                    0LL);
         if ( UnityEngine_TrackedReference__op_Inequality(Item, 0LL, 0LL) )
@@ -416,90 +401,90 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
       }
       simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
       {
-        v16 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
-        if ( !v16 )
+        v11 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
+        if ( !v11 )
           goto LABEL_47;
-        if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v16, this->fields.endAnimationName, 0LL) )
+        if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v11, this->fields.endAnimationName, 0LL) )
           return this->fields.endAnimationName;
       }
     }
     baseName = this->fields.baseName;
-    v29 = &StringLiteral_16706/*"_end"*/;
-    return System_String__Concat_62401220(baseName, (System_String_o *)*v29, 0LL);
+    v22 = &StringLiteral_16726/*"_end"*/;
+    return System_String__Concat_62525248(baseName, (System_String_o *)*v22, 0LL);
   }
   if ( status == 4 )
   {
     if ( !System_String__IsNullOrEmpty(this->fields.loopAnimationName, 0LL) )
     {
-      v25 = (UnityEngine_Object_o *)this->fields.animationComponent;
+      v18 = (UnityEngine_Object_o *)this->fields.animationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
-      if ( UnityEngine_Object__op_Inequality(v25, 0LL, 0LL) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( UnityEngine_Object__op_Inequality(v18, 0LL, 0LL) )
       {
-        v16 = this->fields.animationComponent;
-        if ( !v16 )
+        v11 = this->fields.animationComponent;
+        if ( !v11 )
           goto LABEL_47;
-        v26 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
-                                                  v16,
+        v19 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
+                                                  v11,
                                                   this->fields.loopAnimationName,
                                                   0LL);
-        if ( UnityEngine_TrackedReference__op_Inequality(v26, 0LL, 0LL) )
+        if ( UnityEngine_TrackedReference__op_Inequality(v19, 0LL, 0LL) )
           return this->fields.loopAnimationName;
       }
-      v27 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
+      v20 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
-      if ( UnityEngine_Object__op_Inequality(v27, 0LL, 0LL) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( UnityEngine_Object__op_Inequality(v20, 0LL, 0LL) )
       {
-        v16 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
-        if ( !v16 )
+        v11 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
+        if ( !v11 )
           goto LABEL_47;
-        if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v16, this->fields.loopAnimationName, 0LL) )
+        if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v11, this->fields.loopAnimationName, 0LL) )
           return this->fields.loopAnimationName;
       }
     }
     baseName = this->fields.baseName;
-    v29 = &StringLiteral_16721/*"_loop"*/;
-    return System_String__Concat_62401220(baseName, (System_String_o *)*v29, 0LL);
+    v22 = &StringLiteral_16741/*"_loop"*/;
+    return System_String__Concat_62525248(baseName, (System_String_o *)*v22, 0LL);
   }
   if ( status != 3 )
     return string_TypeInfo->static_fields->Empty;
   if ( System_String__IsNullOrEmpty(this->fields.startAnimationName, 0LL) )
     goto LABEL_43;
-  v14 = (UnityEngine_Object_o *)this->fields.animationComponent;
+  v9 = (UnityEngine_Object_o *)this->fields.animationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
-  if ( UnityEngine_Object__op_Inequality(v14, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
   {
-    v16 = this->fields.animationComponent;
-    if ( !v16 )
+    v11 = this->fields.animationComponent;
+    if ( !v11 )
       goto LABEL_47;
-    v17 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v16, this->fields.startAnimationName, 0LL);
-    if ( UnityEngine_TrackedReference__op_Inequality(v17, 0LL, 0LL) )
+    v12 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v11, this->fields.startAnimationName, 0LL);
+    if ( UnityEngine_TrackedReference__op_Inequality(v12, 0LL, 0LL) )
       return this->fields.startAnimationName;
   }
-  v18 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
+  v13 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
-  if ( UnityEngine_Object__op_Inequality(v18, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(v13, 0LL, 0LL) )
   {
-    v16 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
-    if ( v16 )
+    v11 = (UnityEngine_Animation_o *)this->fields.simpleAnimationComponent;
+    if ( v11 )
     {
-      if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v16, this->fields.startAnimationName, 0LL) )
+      if ( SimpleAnimation__get_Item((SimpleAnimation_o *)v11, this->fields.startAnimationName, 0LL) )
         return this->fields.startAnimationName;
       goto LABEL_43;
     }
 LABEL_47:
-    sub_1BCAA3C(v16, v15);
+    sub_1BD36B4(v11, v10);
   }
 LABEL_43:
   baseName = this->fields.baseName;
-  v29 = &StringLiteral_16742/*"_start"*/;
-  return System_String__Concat_62401220(baseName, (System_String_o *)*v29, 0LL);
+  v22 = &StringLiteral_16762/*"_start"*/;
+  return System_String__Concat_62525248(baseName, (System_String_o *)*v22, 0LL);
 }
 
 
@@ -511,52 +496,49 @@ void __fastcall MapGimmickEffectComponent__NextPlayAnimation(
 {
   int32_t v3; // w20
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v6; // x1
   UnityEngine_Object_o *simpleAnimationComponent; // x21
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  SimpleAnimation_o *v17; // x20
+  const MethodInfo *v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  SimpleAnimation_o *v14; // x20
   System_String_o *AnimationName; // x0
-  __int64 v19; // x1
+  __int64 v16; // x1
   SimpleAnimation_State_o *Item; // x21
   UnityEngine_Object_o *animationComponent; // x21
-  UnityEngine_Animation_o *v22; // x20
-  UnityEngine_TrackedReference_o *v23; // x21
-  PartyOrganizationUtility_o *v24; // x0
-  System_Action_o *v25; // x20
+  UnityEngine_Animation_o *v19; // x20
+  UnityEngine_TrackedReference_o *v20; // x21
+  PartyOrganizationUtility_o *v21; // x0
+  System_Action_o *v22; // x20
   PartyOrganizationUtility_o *p_callAfterStart; // x0
   System_Action_o *callAfterStart; // x20
-  SimpleAnimation_o *v28; // x20
-  SimpleAnimation_State_o *v29; // x0
-  SimpleAnimation_o *v30; // x20
+  SimpleAnimation_o *v25; // x20
+  SimpleAnimation_State_o *v26; // x0
+  SimpleAnimation_o *v27; // x20
   SimpleAnimation_State_c *klass; // x8
-  __int64 v32; // x9
+  __int64 v29; // x9
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
-  PartyOrganizationUtility_o *v35; // x0
-  System_Action_o *v36; // x20
-  UnityEngine_Animation_o *v37; // x20
-  UnityEngine_Animation_o *v38; // x20
-  struct System_String_o *v39; // x1
+  PartyOrganizationUtility_o *v32; // x0
+  System_Action_o *v33; // x20
+  UnityEngine_Animation_o *v34; // x20
+  UnityEngine_Animation_o *v35; // x20
+  struct System_String_o *v36; // x1
 
   v3 = next;
-  if ( (byte_4B12F89 & 1) == 0 )
+  if ( (byte_4B33F13 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&next, method);
-    sub_1BCA7E0(&SimpleAnimation_State_TypeInfo, v5, v6);
-    sub_1BCA7E0(&StringLiteral_1/*""*/, v7, v8);
-    byte_4B12F89 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, *(_QWORD *)&next);
+    sub_1BD3458(&SimpleAnimation_State_TypeInfo, v5);
+    sub_1BD3458(&StringLiteral_1/*""*/, v6);
+    byte_4B33F13 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&next);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
   {
     if ( v3 != 6 )
@@ -565,11 +547,11 @@ void __fastcall MapGimmickEffectComponent__NextPlayAnimation(
       {
         if ( v3 != 3 )
           goto LABEL_64;
-        v17 = this->fields.simpleAnimationComponent;
-        AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 3, v11);
-        if ( !v17 )
+        v14 = this->fields.simpleAnimationComponent;
+        AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 3, v8);
+        if ( !v14 )
           goto LABEL_66;
-        Item = SimpleAnimation__get_Item(v17, AnimationName, 0LL);
+        Item = SimpleAnimation__get_Item(v14, AnimationName, 0LL);
         if ( Item )
           goto LABEL_13;
         AnimationName = (System_String_o *)this->fields.simpleAnimationComponent;
@@ -589,43 +571,43 @@ LABEL_13:
       if ( callAfterStart )
       {
         p_callAfterStart->klass = 0LL;
-        sub_1BCA784(p_callAfterStart, 0LL, (int64_t)v11, v12, v13, v14, v15, v16);
+        sub_1BD33FC(p_callAfterStart, 0LL, (int64_t)v8, v9, v10, v11, v12, v13);
         ActionExtensions__Call(callAfterStart, 0LL);
       }
       if ( this->fields.loop )
       {
-        v28 = this->fields.simpleAnimationComponent;
-        AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v11);
-        if ( !v28 )
+        v25 = this->fields.simpleAnimationComponent;
+        AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v8);
+        if ( !v25 )
           goto LABEL_66;
-        v29 = SimpleAnimation__get_Item(v28, AnimationName, 0LL);
-        if ( v29 )
+        v26 = SimpleAnimation__get_Item(v25, AnimationName, 0LL);
+        if ( v26 )
         {
-          Item = v29;
+          Item = v26;
           v3 = 4;
           goto LABEL_36;
         }
       }
     }
-    v30 = this->fields.simpleAnimationComponent;
-    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 6, v11);
-    if ( !v30 )
+    v27 = this->fields.simpleAnimationComponent;
+    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 6, v8);
+    if ( !v27 )
       goto LABEL_66;
-    Item = SimpleAnimation__get_Item(v30, AnimationName, 0LL);
+    Item = SimpleAnimation__get_Item(v27, AnimationName, 0LL);
     v3 = 6;
     if ( Item )
     {
 LABEL_36:
       klass = Item->klass;
-      v32 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
+      v29 = *(unsigned __int16 *)(&Item->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&Item->klass->_2.bitflags2 + 3) )
       {
         p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
         while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
         {
-          --v32;
+          --v29;
           p_offset += 2;
-          if ( !v32 )
+          if ( !v29 )
             goto LABEL_40;
         }
         p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 9].method;
@@ -633,34 +615,34 @@ LABEL_36:
       else
       {
 LABEL_40:
-        p_method = sub_1C1C7C0(Item, SimpleAnimation_State_TypeInfo, 9LL);
+        p_method = sub_1C25438(Item, SimpleAnimation_State_TypeInfo, 9LL);
       }
       AnimationName = (System_String_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))p_method)(
                                            Item,
                                            *(_QWORD *)(p_method + 8));
       if ( !this )
 LABEL_66:
-        sub_1BCAA3C(AnimationName, v19);
+        sub_1BD36B4(AnimationName, v16);
       goto LABEL_63;
     }
 LABEL_64:
-    v39 = (struct System_String_o *)StringLiteral_1/*""*/;
+    v36 = (struct System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_65;
   }
   animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(animationComponent, 0LL, 0LL) )
   {
     if ( v3 == 3 )
     {
-      v24 = (PartyOrganizationUtility_o *)&this->fields.callAfterStart;
-      v25 = this->fields.callAfterStart;
-      if ( v25 )
+      v21 = (PartyOrganizationUtility_o *)&this->fields.callAfterStart;
+      v22 = this->fields.callAfterStart;
+      if ( v22 )
       {
-        v24->klass = 0LL;
-        sub_1BCA784(v24, 0LL, (int64_t)v11, v12, v13, v14, v15, v16);
-        ActionExtensions__Call(v25, 0LL);
+        v21->klass = 0LL;
+        sub_1BD33FC(v21, 0LL, (int64_t)v8, v9, v10, v11, v12, v13);
+        ActionExtensions__Call(v22, 0LL);
       }
       v3 = 3;
     }
@@ -676,22 +658,22 @@ LABEL_64:
   switch ( v3 )
   {
     case 3:
-      v22 = this->fields.animationComponent;
-      AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 3, v11);
-      if ( !v22 )
+      v19 = this->fields.animationComponent;
+      AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 3, v8);
+      if ( !v19 )
         goto LABEL_66;
-      v23 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v22, AnimationName, 0LL);
-      if ( UnityEngine_TrackedReference__op_Equality(v23, 0LL, 0LL) )
+      v20 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v19, AnimationName, 0LL);
+      if ( UnityEngine_TrackedReference__op_Equality(v20, 0LL, 0LL) )
       {
         AnimationName = (System_String_o *)this->fields.animationComponent;
         if ( !AnimationName )
           goto LABEL_66;
-        v23 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
+        v20 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(
                                                   (UnityEngine_Animation_o *)AnimationName,
                                                   this->fields.baseName,
                                                   0LL);
       }
-      if ( !UnityEngine_TrackedReference__op_Equality(v23, 0LL, 0LL) )
+      if ( !UnityEngine_TrackedReference__op_Equality(v20, 0LL, 0LL) )
       {
         this->fields.endtime = 0.0;
         v3 = 3;
@@ -708,54 +690,54 @@ LABEL_64:
         goto LABEL_66;
       goto LABEL_64;
   }
-  v35 = (PartyOrganizationUtility_o *)&this->fields.callAfterStart;
-  v36 = this->fields.callAfterStart;
-  if ( v36 )
+  v32 = (PartyOrganizationUtility_o *)&this->fields.callAfterStart;
+  v33 = this->fields.callAfterStart;
+  if ( v33 )
   {
-    v35->klass = 0LL;
-    sub_1BCA784(v35, 0LL, (int64_t)v11, v12, v13, v14, v15, v16);
-    ActionExtensions__Call(v36, 0LL);
+    v32->klass = 0LL;
+    sub_1BD33FC(v32, 0LL, (int64_t)v8, v9, v10, v11, v12, v13);
+    ActionExtensions__Call(v33, 0LL);
   }
   if ( this->fields.loop )
   {
-    v37 = this->fields.animationComponent;
-    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v11);
-    if ( !v37 )
+    v34 = this->fields.animationComponent;
+    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v8);
+    if ( !v34 )
       goto LABEL_66;
-    v23 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v37, AnimationName, 0LL);
-    if ( !UnityEngine_TrackedReference__op_Equality(v23, 0LL, 0LL) )
+    v20 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v34, AnimationName, 0LL);
+    if ( !UnityEngine_TrackedReference__op_Equality(v20, 0LL, 0LL) )
     {
       v3 = 4;
       goto LABEL_60;
     }
   }
 LABEL_48:
-  v38 = this->fields.animationComponent;
-  AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 6, v11);
-  if ( !v38 )
+  v35 = this->fields.animationComponent;
+  AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 6, v8);
+  if ( !v35 )
     goto LABEL_66;
-  v23 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v38, AnimationName, 0LL);
+  v20 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v35, AnimationName, 0LL);
   v3 = 6;
 LABEL_60:
-  AnimationName = (System_String_o *)UnityEngine_TrackedReference__op_Inequality(v23, 0LL, 0LL);
+  AnimationName = (System_String_o *)UnityEngine_TrackedReference__op_Inequality(v20, 0LL, 0LL);
   if ( ((unsigned __int8)AnimationName & 1) == 0 )
     goto LABEL_64;
-  if ( !v23 )
+  if ( !v20 )
     goto LABEL_66;
-  AnimationName = UnityEngine_AnimationState__get_name((UnityEngine_AnimationState_o *)v23, 0LL);
+  AnimationName = UnityEngine_AnimationState__get_name((UnityEngine_AnimationState_o *)v20, 0LL);
 LABEL_63:
-  v39 = AnimationName;
+  v36 = AnimationName;
 LABEL_65:
-  this->fields.requestAnimation = v39;
-  sub_1BCA784(
+  this->fields.requestAnimation = v36;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.requestAnimation,
-    (int64_t)v39,
-    (int64_t)v11,
+    (int64_t)v36,
+    (int64_t)v8,
+    v9,
+    v10,
+    v11,
     v12,
-    v13,
-    v14,
-    v15,
-    v16);
+    v13);
   this->fields.status = v3;
 }
 
@@ -772,30 +754,27 @@ void __fastcall MapGimmickEffectComponent__Stop(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
   UnityEngine_Object_o *simpleAnimationComponent; // x20
-  __int64 v15; // x1
-  const MethodInfo *v16; // x2
-  SimpleAnimation_o *v17; // x20
+  const MethodInfo *v13; // x2
+  SimpleAnimation_o *v14; // x20
   System_String_o *AnimationName; // x0
-  __int64 v19; // x1
-  SimpleAnimation_State_o *v20; // x0
+  __int64 v16; // x1
+  SimpleAnimation_State_o *v17; // x0
   SimpleAnimation_State_c *klass; // x8
-  SimpleAnimation_State_o *v22; // x19
-  __int64 v23; // x9
+  SimpleAnimation_State_o *v19; // x19
+  __int64 v20; // x9
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
   UnityEngine_Object_o *animationComponent; // x20
-  const MethodInfo *v27; // x2
-  UnityEngine_Animation_o *v28; // x20
+  const MethodInfo *v24; // x2
+  UnityEngine_Animation_o *v25; // x20
   UnityEngine_TrackedReference_o *Item; // x19
 
-  if ( (byte_4B12F8C & 1) == 0 )
+  if ( (byte_4B33F16 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, isDestroy, callback);
-    sub_1BCA7E0(&SimpleAnimation_State_TypeInfo, v11, v12);
-    byte_4B12F8C = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, isDestroy);
+    sub_1BD3458(&SimpleAnimation_State_TypeInfo, v11);
+    byte_4B33F16 = 1;
   }
   if ( this->fields.status == 2 )
   {
@@ -805,7 +784,7 @@ void __fastcall MapGimmickEffectComponent__Stop(
   this->fields.callAfterStop = callback;
   this->fields.loop = 0;
   this->fields.isDestroy = isDestroy;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.callAfterStop,
     (int64_t)callback,
     (int64_t)callback,
@@ -816,19 +795,19 @@ void __fastcall MapGimmickEffectComponent__Stop(
     v7);
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
   {
     animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Inequality(animationComponent, 0LL, 0LL) )
       return;
-    v28 = this->fields.animationComponent;
-    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v27);
-    if ( v28 )
+    v25 = this->fields.animationComponent;
+    AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v24);
+    if ( v25 )
     {
-      Item = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v28, AnimationName, 0LL);
+      Item = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v25, AnimationName, 0LL);
       AnimationName = (System_String_o *)UnityEngine_TrackedReference__op_Inequality(Item, 0LL, 0LL);
       if ( ((unsigned __int8)AnimationName & 1) == 0 )
         return;
@@ -839,26 +818,26 @@ void __fastcall MapGimmickEffectComponent__Stop(
       }
     }
 LABEL_25:
-    sub_1BCAA3C(AnimationName, v19);
+    sub_1BD36B4(AnimationName, v16);
   }
-  v17 = this->fields.simpleAnimationComponent;
-  AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v16);
-  if ( !v17 )
+  v14 = this->fields.simpleAnimationComponent;
+  AnimationName = MapGimmickEffectComponent__GetAnimationName(this, 4, v13);
+  if ( !v14 )
     goto LABEL_25;
-  v20 = SimpleAnimation__get_Item(v17, AnimationName, 0LL);
-  if ( v20 )
+  v17 = SimpleAnimation__get_Item(v14, AnimationName, 0LL);
+  if ( v17 )
   {
-    klass = v20->klass;
-    v22 = v20;
-    v23 = *(unsigned __int16 *)(&v20->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&v20->klass->_2.bitflags2 + 3) )
+    klass = v17->klass;
+    v19 = v17;
+    v20 = *(unsigned __int16 *)(&v17->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v17->klass->_2.bitflags2 + 3) )
     {
       p_offset = (SimpleAnimation_State_c **)&klass->_1.interfaceOffsets->offset;
       while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
       {
-        --v23;
+        --v20;
         p_offset += 2;
-        if ( !v23 )
+        if ( !v20 )
           goto LABEL_14;
       }
       p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 18].method;
@@ -866,8 +845,8 @@ LABEL_25:
     else
     {
 LABEL_14:
-      p_method = sub_1C1C7C0(v20, SimpleAnimation_State_TypeInfo, 18LL);
+      p_method = sub_1C25438(v17, SimpleAnimation_State_TypeInfo, 18LL);
     }
-    (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(v22, 1LL, *(_QWORD *)(p_method + 8));
+    (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(v19, 1LL, *(_QWORD *)(p_method + 8));
   }
 }

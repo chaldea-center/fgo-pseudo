@@ -21,10 +21,10 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   z = offset.fields.z;
   y = offset.fields.y;
   x = offset.fields.x;
-  if ( !byte_4B109C1 )
+  if ( !byte_4B31941 )
   {
-    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, obj, method);
-    byte_4B109C1 = 1;
+    sub_1BD3458(&UnityEngine_Vector3_TypeInfo, obj);
+    byte_4B31941 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v10 = static_fields->zeroVector.fields.z;
@@ -33,7 +33,7 @@ void __fastcall BattleInfoOffsetPosData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.obj = obj;
   p_fields = &this->fields;
-  sub_1BCA784((PartyOrganizationUtility_o *)p_fields, (int64_t)obj, v12, v13, v14, v15, v16, v17);
+  sub_1BD33FC((PartyOrganizationUtility_o *)p_fields, (int64_t)obj, v12, v13, v14, v15, v16, v17);
   p_fields->offset.fields.x = x;
   p_fields->offset.fields.y = y;
   p_fields->offset.fields.z = z;
@@ -42,25 +42,24 @@ void __fastcall BattleInfoOffsetPosData___ctor(
 
 bool __fastcall BattleInfoOffsetPosData__get_IsActive(BattleInfoOffsetPosData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *obj; // x20
-  __int64 v5; // x1
-  UnityEngine_GameObject_o *v6; // x0
+  __int64 v4; // x1
+  UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4B186E5 & 1) == 0 )
+  if ( (byte_4B396BC & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B186E5 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B396BC = 1;
   }
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(obj, 0LL, 0LL) )
     return 0;
-  v6 = this->fields.obj;
-  if ( !v6 )
-    sub_1BCAA3C(0LL, v5);
-  return UnityEngine_GameObject__get_activeInHierarchy(v6, 0LL);
+  v5 = this->fields.obj;
+  if ( !v5 )
+    sub_1BD36B4(0LL, v4);
+  return UnityEngine_GameObject__get_activeInHierarchy(v5, 0LL);
 }
 
 

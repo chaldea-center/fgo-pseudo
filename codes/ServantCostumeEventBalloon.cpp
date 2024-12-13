@@ -12,13 +12,13 @@ void __fastcall ServantCostumeEventBalloon__Set(
 {
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_4B19D80 & 1) == 0 )
+  if ( (byte_4B3AD70 & 1) == 0 )
   {
-    sub_1BCA7E0(&AtlasManager_TypeInfo, *(_QWORD *)&itemId, method);
-    byte_4B19D80 = 1;
+    sub_1BD3458(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
+    byte_4B3AD70 = 1;
   }
   itemSprite = this->fields.itemSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&itemId);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetItem(itemSprite, itemId, 0LL);
 }

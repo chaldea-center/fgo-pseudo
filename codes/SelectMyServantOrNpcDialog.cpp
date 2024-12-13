@@ -1,14 +1,12 @@
 void __fastcall SelectMyServantOrNpcDialog___ctor(SelectMyServantOrNpcDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B12293 & 1) == 0 )
+  if ( (byte_4B3321D & 1) == 0 )
   {
-    sub_1BCA7E0(&BaseDialog_TypeInfo, method, v2);
-    byte_4B12293 = 1;
+    sub_1BD3458(&BaseDialog_TypeInfo, method);
+    byte_4B3321D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
 
@@ -33,7 +31,7 @@ void __fastcall SelectMyServantOrNpcDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BCA784(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1BD33FC(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       (unsigned int)result,
@@ -46,11 +44,11 @@ void __fastcall SelectMyServantOrNpcDialog__Close(SelectMyServantOrNpcDialog_o *
 {
   const MethodInfo *v2; // x2
 
-  SelectMyServantOrNpcDialog__Close_33023004(this, 0LL, v2);
+  SelectMyServantOrNpcDialog__Close_33068524(this, 0LL, v2);
 }
 
 
-void __fastcall SelectMyServantOrNpcDialog__Close_33023004(
+void __fastcall SelectMyServantOrNpcDialog__Close_33068524(
         SelectMyServantOrNpcDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -61,20 +59,16 @@ void __fastcall SelectMyServantOrNpcDialog__Close_33023004(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x3
-  System_Action_o *v15; // x20
+  System_Action_o *v11; // x20
 
-  if ( (byte_4B1228F & 1) == 0 )
+  if ( (byte_4B33219 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, callback, method);
-    sub_1BCA7E0(&Method_SelectMyServantOrNpcDialog_EndClose__, v10, v11);
-    byte_4B1228F = 1;
+    sub_1BD3458(&System_Action_TypeInfo, callback);
+    sub_1BD3458(&Method_SelectMyServantOrNpcDialog_EndClose__, v10);
+    byte_4B33219 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -84,9 +78,9 @@ void __fastcall SelectMyServantOrNpcDialog__Close_33023004(
     v6,
     v7);
   this->fields.state = 4;
-  v15 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v12, v13, v14);
-  System_Action___ctor(v15, (Il2CppObject *)this, Method_SelectMyServantOrNpcDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
+  v11 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_SelectMyServantOrNpcDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -109,7 +103,7 @@ void __fastcall SelectMyServantOrNpcDialog__EndClose(SelectMyServantOrNpcDialog_
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1BCA784(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1BD33FC(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -125,13 +119,12 @@ void __fastcall SelectMyServantOrNpcDialog__EndOpen(SelectMyServantOrNpcDialog_o
 
 void __fastcall SelectMyServantOrNpcDialog__Init(SelectMyServantOrNpcDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4B1228D & 1) == 0 )
+  if ( (byte_4B33217 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
-    byte_4B1228D = 1;
+    sub_1BD3458(&StringLiteral_1/*""*/, method);
+    byte_4B33217 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -140,7 +133,7 @@ void __fastcall SelectMyServantOrNpcDialog__Init(SelectMyServantOrNpcDialog_o *t
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BCAA3C(titleLabel, method);
+    sub_1BD36B4(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
@@ -150,24 +143,23 @@ void __fastcall SelectMyServantOrNpcDialog__Init(SelectMyServantOrNpcDialog_o *t
 
 void __fastcall SelectMyServantOrNpcDialog__OnClickCancel(SelectMyServantOrNpcDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4B12292 & 1) == 0 )
+  if ( (byte_4B3321C & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_SelectMyServantOrNpcDialog_OnClickCancel__, method, v2);
-    byte_4B12292 = 1;
+    sub_1BD3458(&Method_SelectMyServantOrNpcDialog_OnClickCancel__, method);
+    byte_4B3321C = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_SelectMyServantOrNpcDialog_OnClickCancel__;
+    v3 = Method_SelectMyServantOrNpcDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SelectMyServantOrNpcDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_SelectMyServantOrNpcDialog_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
-    SelectMyServantOrNpcDialog__Callback(this, 2, v6);
+      v3 = (_QWORD *)sub_1BD3470(Method_SelectMyServantOrNpcDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+    SelectMyServantOrNpcDialog__Callback(this, 2, v5);
   }
 }
 
@@ -176,48 +168,46 @@ void __fastcall SelectMyServantOrNpcDialog__OnClickMyServant(
         SelectMyServantOrNpcDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4B12290 & 1) == 0 )
+  if ( (byte_4B3321A & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_SelectMyServantOrNpcDialog_OnClickMyServant__, method, v2);
-    byte_4B12290 = 1;
+    sub_1BD3458(&Method_SelectMyServantOrNpcDialog_OnClickMyServant__, method);
+    byte_4B3321A = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_SelectMyServantOrNpcDialog_OnClickMyServant__;
+    v3 = Method_SelectMyServantOrNpcDialog_OnClickMyServant__;
     if ( (*((_BYTE *)Method_SelectMyServantOrNpcDialog_OnClickMyServant__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_SelectMyServantOrNpcDialog_OnClickMyServant__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-    SelectMyServantOrNpcDialog__Callback(this, 0, v6);
+      v3 = (_QWORD *)sub_1BD3470(Method_SelectMyServantOrNpcDialog_OnClickMyServant__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    SelectMyServantOrNpcDialog__Callback(this, 0, v5);
   }
 }
 
 
 void __fastcall SelectMyServantOrNpcDialog__OnClickNpc(SelectMyServantOrNpcDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4B12291 & 1) == 0 )
+  if ( (byte_4B3321B & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_SelectMyServantOrNpcDialog_OnClickNpc__, method, v2);
-    byte_4B12291 = 1;
+    sub_1BD3458(&Method_SelectMyServantOrNpcDialog_OnClickNpc__, method);
+    byte_4B3321B = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_SelectMyServantOrNpcDialog_OnClickNpc__;
+    v3 = Method_SelectMyServantOrNpcDialog_OnClickNpc__;
     if ( (*((_BYTE *)Method_SelectMyServantOrNpcDialog_OnClickNpc__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_SelectMyServantOrNpcDialog_OnClickNpc__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-    SelectMyServantOrNpcDialog__Callback(this, 1, v6);
+      v3 = (_QWORD *)sub_1BD3470(Method_SelectMyServantOrNpcDialog_OnClickNpc__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    SelectMyServantOrNpcDialog__Callback(this, 1, v5);
   }
 }
 
@@ -232,97 +222,78 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
         const MethodInfo *method)
 {
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
+  __int64 v16; // x1
   __int64 v17; // x1
-  __int64 v18; // x2
+  __int64 v18; // x1
   __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v20; // x1
   __int64 v21; // x1
-  __int64 v22; // x2
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x1
-  __int64 v28; // x2
-  __int64 v29; // x1
-  __int64 v30; // x2
-  __int64 v31; // x1
-  __int64 v32; // x2
+  __int64 v22; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v34; // x1
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  __int64 v41; // x1
+  __int64 v24; // x1
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
   UnityEngine_Object_o *titleLabel; // x24
-  __int64 v43; // x1
-  UILabel_o *v44; // x24
+  UILabel_o *v32; // x24
   UnityEngine_Object_o *messageLabel; // x24
-  __int64 v46; // x1
-  UILabel_o *v47; // x24
-  __int64 *v48; // x8
-  System_String_o *v49; // x0
+  UILabel_o *v34; // x24
+  __int64 *v35; // x8
+  System_String_o *v36; // x0
   UnityEngine_Object_o *closeBtnLabel; // x21
-  __int64 v51; // x1
-  UILabel_o *v52; // x21
+  UILabel_o *v38; // x21
   UnityEngine_Object_o *myServantBtnLabel; // x21
-  __int64 v54; // x1
-  UILabel_o *v55; // x21
+  UILabel_o *v40; // x21
   UnityEngine_Object_o *npcBtnLabel; // x21
-  __int64 v57; // x1
-  UILabel_o *v58; // x21
-  __int64 v59; // x1
-  __int64 v60; // x2
-  __int64 v61; // x3
-  System_Action_o *v62; // x20
+  UILabel_o *v42; // x21
+  System_Action_o *v43; // x20
 
-  if ( (byte_4B1228E & 1) == 0 )
+  if ( (byte_4B33218 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, name, callback);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v13, v14);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v15, v16);
-    sub_1BCA7E0(&Method_SelectMyServantOrNpcDialog_EndOpen__, v17, v18);
-    sub_1BCA7E0(&StringLiteral_10472/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/, v19, v20);
-    sub_1BCA7E0(&StringLiteral_3786/*"COMMON_CONFIRM_CANCEL"*/, v21, v22);
-    sub_1BCA7E0(&StringLiteral_10469/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, v23, v24);
-    sub_1BCA7E0(&StringLiteral_10468/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, v25, v26);
-    sub_1BCA7E0(&StringLiteral_10470/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, v27, v28);
-    sub_1BCA7E0(&StringLiteral_10473/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/, v29, v30);
-    sub_1BCA7E0(&StringLiteral_10471/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, v31, v32);
-    byte_4B1228E = 1;
+    sub_1BD3458(&System_Action_TypeInfo, name);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v13);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BD3458(&Method_SelectMyServantOrNpcDialog_EndOpen__, v15);
+    sub_1BD3458(&StringLiteral_10487/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/, v16);
+    sub_1BD3458(&StringLiteral_3793/*"COMMON_CONFIRM_CANCEL"*/, v17);
+    sub_1BD3458(&StringLiteral_10484/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, v18);
+    sub_1BD3458(&StringLiteral_10483/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, v19);
+    sub_1BD3458(&StringLiteral_10485/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, v20);
+    sub_1BD3458(&StringLiteral_10488/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/, v21);
+    sub_1BD3458(&StringLiteral_10486/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, v22);
+    byte_4B33218 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_46;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.callbackFunc = callback;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v35, v36, v37, v38, v39, v40);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v25, v26, v27, v28, v29, v30);
   this->fields.state = 1;
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v41);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL) )
   {
-    v44 = this->fields.titleLabel;
+    v32 = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v43);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10471/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, 0LL);
-    if ( !v44 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10486/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, 0LL);
+    if ( !v32 )
       goto LABEL_46;
-    UILabel__set_text(v44, (System_String_o *)gameObject, 0LL);
+    UILabel__set_text(v32, (System_String_o *)gameObject, 0LL);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v43);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(messageLabel, 0LL, 0LL) )
     goto LABEL_24;
-  v47 = this->fields.messageLabel;
+  v34 = this->fields.messageLabel;
   if ( LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     if ( isSelectableSupport )
@@ -330,76 +301,76 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
   }
   else
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v46);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isSelectableSupport )
     {
 LABEL_16:
       if ( isNotIndividuality )
-        v48 = &StringLiteral_10473/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/;
+        v35 = &StringLiteral_10488/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/;
       else
-        v48 = &StringLiteral_10472/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/;
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v48, 0LL);
-      if ( !v47 )
+        v35 = &StringLiteral_10487/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/;
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v35, 0LL);
+      if ( !v34 )
         goto LABEL_46;
       goto LABEL_23;
     }
   }
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10468/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, 0LL);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format(v49, (Il2CppObject *)name, 0LL);
-  if ( !v47 )
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10483/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format(v36, (Il2CppObject *)name, 0LL);
+  if ( !v34 )
     goto LABEL_46;
 LABEL_23:
-  UILabel__set_text(v47, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(v34, (System_String_o *)gameObject, 0LL);
 LABEL_24:
   closeBtnLabel = (UnityEngine_Object_o *)this->fields.closeBtnLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v46);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(closeBtnLabel, 0LL, 0LL) )
   {
-    v52 = this->fields.closeBtnLabel;
+    v38 = this->fields.closeBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v51);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3786/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
-    if ( !v52 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3793/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+    if ( !v38 )
       goto LABEL_46;
-    UILabel__set_text(v52, (System_String_o *)gameObject, 0LL);
+    UILabel__set_text(v38, (System_String_o *)gameObject, 0LL);
   }
   myServantBtnLabel = (UnityEngine_Object_o *)this->fields.myServantBtnLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v51);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(myServantBtnLabel, 0LL, 0LL) )
   {
-    v55 = this->fields.myServantBtnLabel;
+    v40 = this->fields.myServantBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v54);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10469/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, 0LL);
-    if ( !v55 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10484/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, 0LL);
+    if ( !v40 )
       goto LABEL_46;
-    UILabel__set_text(v55, (System_String_o *)gameObject, 0LL);
+    UILabel__set_text(v40, (System_String_o *)gameObject, 0LL);
   }
   npcBtnLabel = (UnityEngine_Object_o *)this->fields.npcBtnLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v54);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(npcBtnLabel, 0LL, 0LL) )
   {
-    v58 = this->fields.npcBtnLabel;
+    v42 = this->fields.npcBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v57);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10470/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, 0LL);
-    if ( v58 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10485/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, 0LL);
+    if ( v42 )
     {
-      UILabel__set_text(v58, (System_String_o *)gameObject, 0LL);
+      UILabel__set_text(v42, (System_String_o *)gameObject, 0LL);
       goto LABEL_45;
     }
 LABEL_46:
-    sub_1BCAA3C(gameObject, v34);
+    sub_1BD36B4(gameObject, v24);
   }
 LABEL_45:
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0LL);
   AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0LL);
-  v62 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v59, v60, v61);
-  System_Action___ctor(v62, (Il2CppObject *)this, Method_SelectMyServantOrNpcDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v62, 0, 0LL);
+  v43 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v43, (Il2CppObject *)this, Method_SelectMyServantOrNpcDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0LL);
 }
 
 
@@ -418,10 +389,10 @@ void __fastcall SelectMyServantOrNpcDialog__add_callbackFunc(
   SelectMyServantOrNpcDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B1228B & 1) == 0 )
+  if ( (byte_4B33215 & 1) == 0 )
   {
-    sub_1BCA7E0(&SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo, value, method);
-    byte_4B1228B = 1;
+    sub_1BD3458(&SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo, value);
+    byte_4B33215 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -434,13 +405,13 @@ void __fastcall SelectMyServantOrNpcDialog__add_callbackFunc(
       if ( (SelectMyServantOrNpcDialog_CallbackFunc_c *)v8->klass != SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05CD0(p_callbackFunc, v8, v6);
+    v9 = sub_1C0E948(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectMyServantOrNpcDialog_o *)sub_1BCACFC(v8);
+  v11 = (SelectMyServantOrNpcDialog_o *)sub_1BD3974(v8);
   SelectMyServantOrNpcDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -459,10 +430,10 @@ void __fastcall SelectMyServantOrNpcDialog__remove_callbackFunc(
   SelectMyServantOrNpcDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B1228C & 1) == 0 )
+  if ( (byte_4B33216 & 1) == 0 )
   {
-    sub_1BCA7E0(&SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo, value, method);
-    byte_4B1228C = 1;
+    sub_1BD3458(&SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo, value);
+    byte_4B33216 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -475,13 +446,13 @@ void __fastcall SelectMyServantOrNpcDialog__remove_callbackFunc(
       if ( (SelectMyServantOrNpcDialog_CallbackFunc_c *)v8->klass != SelectMyServantOrNpcDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05CD0(p_callbackFunc, v8, v6);
+    v9 = sub_1C0E948(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectMyServantOrNpcDialog_o *)sub_1BCACFC(v8);
+  v11 = (SelectMyServantOrNpcDialog_o *)sub_1BD3974(v8);
   SelectMyServantOrNpcDialog__Init(v11, v12);
 }
 
@@ -508,7 +479,7 @@ void __fastcall SelectMyServantOrNpcDialog_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -519,12 +490,12 @@ void __fastcall SelectMyServantOrNpcDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCA8A0(v10) & 1) == 0 )
+  if ( (sub_1BD3518(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCA908(v14, 0LL);
+      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BD3580(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -536,9 +507,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A07B84;
+  this->fields.m_target = (Il2CppObject *)sub_1A104CC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A07B3C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A10484;
 }
 
 
@@ -554,14 +525,14 @@ System_IAsyncResult_o *__fastcall SelectMyServantOrNpcDialog_CallbackFunc__Begin
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4B12294 & 1) == 0 )
+  if ( (byte_4B3321E & 1) == 0 )
   {
-    sub_1BCA7E0(&SelectMyServantOrNpcDialog_ResultClicked_TypeInfo, *(_QWORD *)&result, callback);
-    byte_4B12294 = 1;
+    sub_1BD3458(&SelectMyServantOrNpcDialog_ResultClicked_TypeInfo, *(_QWORD *)&result);
+    byte_4B3321E = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(SelectMyServantOrNpcDialog_ResultClicked_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1BCA794(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(SelectMyServantOrNpcDialog_ResultClicked_TypeInfo, &v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1BD340C(this, v9, callback, object);
 }
 
 
@@ -570,7 +541,7 @@ void __fastcall SelectMyServantOrNpcDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCA798(result, 0LL, method);
+  sub_1BD3410(result, 0LL, method);
 }
 
 

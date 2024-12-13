@@ -1,109 +1,107 @@
 void __fastcall ScriptSelectDialog___ctor(ScriptSelectDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x20
-  __int64 v15; // x8
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  int64_t v12; // x20
+  __int64 v13; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x10
   float z; // s1
+  struct UnityEngine_Vector3_StaticFields *v16; // x10
+  float v17; // s1
   struct UnityEngine_Vector3_StaticFields *v18; // x10
   float v19; // s1
-  struct UnityEngine_Vector3_StaticFields *v20; // x10
+  struct UnityEngine_Vector3_StaticFields *v20; // x9
   float v21; // s1
-  struct UnityEngine_Vector3_StaticFields *v22; // x9
-  float v23; // s1
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  unsigned int v30; // w8
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  unsigned int v28; // w8
 
-  if ( (byte_4B17E90 & 1) == 0 )
+  if ( (byte_4B38E60 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Vector2___TypeInfo, method, v2);
-    sub_1BCA7E0(&UnityEngine_Vector3___TypeInfo, v4, v5);
-    byte_4B17E90 = 1;
+    sub_1BD3458(&UnityEngine_Vector2___TypeInfo, method);
+    sub_1BD3458(&UnityEngine_Vector3___TypeInfo, v3);
+    byte_4B38E60 = 1;
   }
-  v6 = sub_1BCA888(UnityEngine_Vector3___TypeInfo, 6LL);
-  v14 = v6;
-  if ( !byte_4B109C1 )
+  v4 = sub_1BD3500(UnityEngine_Vector3___TypeInfo, 6LL);
+  v12 = v4;
+  if ( !byte_4B31941 )
   {
-    v6 = sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v7, v8);
-    byte_4B109C1 = 1;
+    v4 = sub_1BD3458(&UnityEngine_Vector3_TypeInfo, v5);
+    byte_4B31941 = 1;
   }
-  if ( !v14 )
+  if ( !v12 )
     goto LABEL_21;
-  v15 = *(_QWORD *)(v14 + 24);
-  if ( !(_DWORD)v15 )
+  v13 = *(_QWORD *)(v12 + 24);
+  if ( !(_DWORD)v13 )
     goto LABEL_20;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
-  *(_QWORD *)(v14 + 32) = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  *(float *)(v14 + 40) = z;
-  if ( (_DWORD)v15 == 1 )
+  *(_QWORD *)(v12 + 32) = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  *(float *)(v12 + 40) = z;
+  if ( (_DWORD)v13 == 1 )
+    goto LABEL_20;
+  v16 = UnityEngine_Vector3_TypeInfo->static_fields;
+  v17 = v16->zeroVector.fields.z;
+  *(_QWORD *)(v12 + 44) = *(_QWORD *)&v16->zeroVector.fields.x;
+  *(float *)(v12 + 52) = v17;
+  if ( (unsigned int)v13 <= 2 )
     goto LABEL_20;
   v18 = UnityEngine_Vector3_TypeInfo->static_fields;
   v19 = v18->zeroVector.fields.z;
-  *(_QWORD *)(v14 + 44) = *(_QWORD *)&v18->zeroVector.fields.x;
-  *(float *)(v14 + 52) = v19;
-  if ( (unsigned int)v15 <= 2 )
-    goto LABEL_20;
-  v20 = UnityEngine_Vector3_TypeInfo->static_fields;
-  v21 = v20->zeroVector.fields.z;
-  *(_QWORD *)(v14 + 56) = *(_QWORD *)&v20->zeroVector.fields.x;
-  *(float *)(v14 + 64) = v21;
-  if ( (unsigned int)v15 <= 3
-    || (v22 = UnityEngine_Vector3_TypeInfo->static_fields,
-        v23 = v22->zeroVector.fields.z,
-        *(_QWORD *)(v14 + 68) = *(_QWORD *)&v22->zeroVector.fields.x,
-        *(float *)(v14 + 76) = v23,
-        (_DWORD)v15 == 4)
-    || (*(_DWORD *)(v14 + 88) = 0, *(_QWORD *)(v14 + 80) = 0x41B0000000000000LL, (unsigned int)v15 <= 5) )
+  *(_QWORD *)(v12 + 56) = *(_QWORD *)&v18->zeroVector.fields.x;
+  *(float *)(v12 + 64) = v19;
+  if ( (unsigned int)v13 <= 3
+    || (v20 = UnityEngine_Vector3_TypeInfo->static_fields,
+        v21 = v20->zeroVector.fields.z,
+        *(_QWORD *)(v12 + 68) = *(_QWORD *)&v20->zeroVector.fields.x,
+        *(float *)(v12 + 76) = v21,
+        (_DWORD)v13 == 4)
+    || (*(_DWORD *)(v12 + 88) = 0, *(_QWORD *)(v12 + 80) = 0x41B0000000000000LL, (unsigned int)v13 <= 5) )
   {
 LABEL_20:
-    sub_1BCAA44(v6, v7);
+    sub_1BD36BC(v4, v5);
   }
-  *(_QWORD *)(v14 + 92) = 0x41B0000000000000LL;
-  *(_DWORD *)(v14 + 100) = 0;
-  this->fields.BASE_VIEW_POSITIONS = (struct UnityEngine_Vector3_array *)v14;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.BASE_VIEW_POSITIONS, v14, v8, v9, v10, v11, v12, v13);
-  v6 = sub_1BCA888(UnityEngine_Vector2___TypeInfo, 6LL);
-  if ( !v6 )
+  *(_QWORD *)(v12 + 92) = 0x41B0000000000000LL;
+  *(_DWORD *)(v12 + 100) = 0;
+  this->fields.BASE_VIEW_POSITIONS = (struct UnityEngine_Vector3_array *)v12;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.BASE_VIEW_POSITIONS, v12, v6, v7, v8, v9, v10, v11);
+  v4 = sub_1BD3500(UnityEngine_Vector2___TypeInfo, 6LL);
+  if ( !v4 )
 LABEL_21:
-    sub_1BCAA3C(v6, v7);
-  v30 = *(_DWORD *)(v6 + 24);
-  v7 = v6;
-  if ( !v30 )
+    sub_1BD36B4(v4, v5);
+  v28 = *(_DWORD *)(v4 + 24);
+  v5 = v4;
+  if ( !v28 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 32) = 0xC2C8000000000000LL;
-  if ( v30 == 1 )
+  *(_QWORD *)(v4 + 32) = 0xC2C8000000000000LL;
+  if ( v28 == 1 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 40) = 0xC2C8000000000000LL;
-  if ( v30 <= 2 )
+  *(_QWORD *)(v4 + 40) = 0xC2C8000000000000LL;
+  if ( v28 <= 2 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 48) = 0xC2C8000000000000LL;
-  if ( v30 == 3 )
+  *(_QWORD *)(v4 + 48) = 0xC2C8000000000000LL;
+  if ( v28 == 3 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 56) = 0xC2C8000000000000LL;
-  if ( v30 <= 4 )
+  *(_QWORD *)(v4 + 56) = 0xC2C8000000000000LL;
+  if ( v28 <= 4 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 64) = 0xC2BE000000000000LL;
-  if ( v30 == 5 )
+  *(_QWORD *)(v4 + 64) = 0xC2BE000000000000LL;
+  if ( v28 == 5 )
     goto LABEL_20;
-  *(_QWORD *)(v6 + 72) = 0xC29A000000000000LL;
-  this->fields.LIST_VIEW_ITEM_SEED_PITCH = (struct UnityEngine_Vector2_array *)v6;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.LIST_VIEW_ITEM_SEED_PITCH, v6, v24, v25, v26, v27, v28, v29);
+  *(_QWORD *)(v4 + 72) = 0xC29A000000000000LL;
+  this->fields.LIST_VIEW_ITEM_SEED_PITCH = (struct UnityEngine_Vector2_array *)v4;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.LIST_VIEW_ITEM_SEED_PITCH, v4, v22, v23, v24, v25, v26, v27);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -163,15 +161,15 @@ void __fastcall ScriptSelectDialog__Close(ScriptSelectDialog_o *this, const Meth
     v9 = this;
     if ( !listViewManager
       || (listViewManager->fields.clickFunc = 0LL,
-          sub_1BCA784((PartyOrganizationUtility_o *)&listViewManager->fields.clickFunc, 0LL, v2, v3, v4, v5, v6, v7),
+          sub_1BD33FC((PartyOrganizationUtility_o *)&listViewManager->fields.clickFunc, 0LL, v2, v3, v4, v5, v6, v7),
           ListViewManager__DestroyList((ListViewManager_o *)listViewManager, 0LL),
           (this = (ScriptSelectDialog_o *)v9->fields.rootObject) == 0LL) )
     {
-      sub_1BCAA3C(this, method);
+      sub_1BD36B4(this, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
     v9->fields.callbackFunc = 0LL;
-    sub_1BCA784((PartyOrganizationUtility_o *)&v9->fields.callbackFunc, 0LL, v10, v11, v12, v13, v14, v15);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&v9->fields.callbackFunc, 0LL, v10, v11, v12, v13, v14, v15);
     limitTimeLoopSe = v9->fields.limitTimeLoopSe;
     p_limitTimeLoopSe = (PartyOrganizationUtility_o *)&v9->fields.limitTimeLoopSe;
     v16 = limitTimeLoopSe;
@@ -182,7 +180,7 @@ void __fastcall ScriptSelectDialog__Close(ScriptSelectDialog_o *this, const Meth
       {
         SePlayer__StopSe(v16, 0.0, 0LL);
         p_limitTimeLoopSe->klass = 0LL;
-        sub_1BCA784(p_limitTimeLoopSe, 0LL, v19, v20, v21, v22, v23, v24);
+        sub_1BD33FC(p_limitTimeLoopSe, 0LL, v19, v20, v21, v22, v23, v24);
       }
     }
   }
@@ -204,33 +202,30 @@ void __fastcall ScriptSelectDialog__EndSelectDecide(ScriptSelectDialog_o *this, 
 
 void __fastcall ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   UnityEngine_GameObject_o *rootLimitTimeObject; // x0
-  UnityEngine_GameObject_o *v9; // x20
-  struct System_Single_array *v10; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  UnityEngine_GameObject_o *v6; // x20
+  struct System_Single_array *v7; // x0
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
   float maxLimitTimeSeconds; // s0
   struct System_Single_array *changeGaugeTimes; // x8
-  float v19; // s1
+  float v16; // s1
   il2cpp_array_size_t max_length; // w9
-  float v21; // s0
-  float v22; // s1
+  float v18; // s0
+  float v19; // s1
 
-  if ( (byte_4B17E8E & 1) == 0 )
+  if ( (byte_4B38E5E & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___, method, v2);
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v4, v5);
-    sub_1BCA7E0(&float___TypeInfo, v6, v7);
-    byte_4B17E8E = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___, method);
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
+    sub_1BD3458(&float___TypeInfo, v4);
+    byte_4B38E5E = 1;
   }
   rootLimitTimeObject = this->fields.rootLimitTimeObject;
   if ( !rootLimitTimeObject )
@@ -243,7 +238,7 @@ void __fastcall ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, 
     goto LABEL_22;
   rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       rootLimitTimeObject,
-                                                      (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                                                      (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
   if ( !rootLimitTimeObject )
     goto LABEL_22;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)rootLimitTimeObject, 0, 0LL);
@@ -252,40 +247,40 @@ void __fastcall ScriptSelectDialog__InitLimitTimeUI(ScriptSelectDialog_o *this, 
     goto LABEL_22;
   rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       rootLimitTimeObject,
-                                                      (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                                      (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !rootLimitTimeObject )
     goto LABEL_22;
-  v9 = rootLimitTimeObject;
+  v6 = rootLimitTimeObject;
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))rootLimitTimeObject->klass[1]._1.castClass)(
     rootLimitTimeObject,
     rootLimitTimeObject->klass[1]._1.declaringType,
     1.0);
-  (*(void (__fastcall **)(UnityEngine_GameObject_o *, Il2CppClass *))&v9->klass[2]._1.this_arg.bits)(
-    v9,
-    v9->klass[2]._1.element_class);
-  v10 = (struct System_Single_array *)sub_1BCA888(float___TypeInfo, 2LL);
-  this->fields.changeGaugeTimes = v10;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.changeGaugeTimes, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+  (*(void (__fastcall **)(UnityEngine_GameObject_o *, Il2CppClass *))&v6->klass[2]._1.this_arg.bits)(
+    v6,
+    v6->klass[2]._1.element_class);
+  v7 = (struct System_Single_array *)sub_1BD3500(float___TypeInfo, 2LL);
+  this->fields.changeGaugeTimes = v7;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.changeGaugeTimes, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   maxLimitTimeSeconds = this->fields.maxLimitTimeSeconds;
   changeGaugeTimes = this->fields.changeGaugeTimes;
-  v19 = floorf(maxLimitTimeSeconds * 0.2);
-  if ( v19 <= maxLimitTimeSeconds )
-    maxLimitTimeSeconds = v19;
-  if ( v19 < 1.0 )
+  v16 = floorf(maxLimitTimeSeconds * 0.2);
+  if ( v16 <= maxLimitTimeSeconds )
+    maxLimitTimeSeconds = v16;
+  if ( v16 < 1.0 )
     maxLimitTimeSeconds = 1.0;
   if ( !changeGaugeTimes )
 LABEL_22:
-    sub_1BCAA3C(rootLimitTimeObject, method);
+    sub_1BD36B4(rootLimitTimeObject, method);
   max_length = changeGaugeTimes->max_length;
   if ( !max_length || (changeGaugeTimes->m_Items[1] = maxLimitTimeSeconds, max_length == 1) )
-    sub_1BCAA44(rootLimitTimeObject, method);
-  v21 = this->fields.maxLimitTimeSeconds;
-  v22 = floorf(v21 * 0.5);
-  if ( v22 <= v21 )
-    v21 = v22;
-  if ( v22 < 1.0 )
-    v21 = 1.0;
-  changeGaugeTimes->m_Items[2] = v21;
+    sub_1BD36BC(rootLimitTimeObject, method);
+  v18 = this->fields.maxLimitTimeSeconds;
+  v19 = floorf(v18 * 0.5);
+  if ( v19 <= v18 )
+    v18 = v19;
+  if ( v19 < 1.0 )
+    v18 = 1.0;
+  changeGaugeTimes->m_Items[2] = v18;
   ScriptSelectDialog__UpdateLimitTimeUI(this, method);
 }
 
@@ -321,11 +316,11 @@ void __fastcall ScriptSelectDialog__InitListViewManagerUI(
         (v7 = this->fields.BASE_VIEW_POSITIONS) == 0LL) )
   {
 LABEL_13:
-    sub_1BCAA3C(this, *(_QWORD *)&itemCount);
+    sub_1BD36B4(this, itemCount);
   }
   if ( v5 >= v7->max_length )
 LABEL_14:
-    sub_1BCAA44(this, itemCount);
+    sub_1BD36BC(this, *(_QWORD *)&itemCount);
   this = (ScriptSelectDialog_o *)this->fields.baseView;
   if ( !this )
     goto LABEL_13;
@@ -336,7 +331,6 @@ LABEL_14:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptSelectDialog__OnClickSelect(ScriptSelectDialog_o *this, int32_t index, const MethodInfo *method)
 {
   SePlayer_o *limitTimeLoopSe; // x0
@@ -353,10 +347,10 @@ void __fastcall ScriptSelectDialog__OnClickSelect(ScriptSelectDialog_o *this, in
     limitTimeLoopSe = this->fields.limitTimeLoopSe;
     this->fields.limitTimeMode = 0;
     if ( !limitTimeLoopSe )
-      sub_1BCAA3C(0LL, *(_QWORD *)&index);
+      sub_1BD36B4(0LL, index);
     SePlayer__StopSe(limitTimeLoopSe, 0.0, 0LL);
     this->fields.limitTimeLoopSe = 0LL;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.limitTimeLoopSe, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.limitTimeLoopSe, 0LL, v6, v7, v8, v9, v10, v11);
   }
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
@@ -375,30 +369,26 @@ void __fastcall ScriptSelectDialog__Open(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x2
   UnityEngine_GameObject_o *rootObject; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  const MethodInfo *v18; // x2
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  const MethodInfo *v17; // x2
   ScriptSelectListViewManager_o *listViewManager; // x22
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  ScriptSelectListViewManager_ClickDelegate_o *v23; // x23
-  const MethodInfo *v24; // x3
-  const MethodInfo *v25; // x4
-  const MethodInfo *v26; // x4
-  const MethodInfo *v27; // x1
+  ScriptSelectListViewManager_ClickDelegate_o *v19; // x23
+  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x4
+  const MethodInfo *v22; // x4
+  const MethodInfo *v23; // x1
 
-  if ( (byte_4B17E8A & 1) == 0 )
+  if ( (byte_4B38E5A & 1) == 0 )
   {
-    sub_1BCA7E0(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList, fontType);
-    sub_1BCA7E0(&Method_ScriptSelectDialog_OnClickSelect__, v9, v10);
-    byte_4B17E8A = 1;
+    sub_1BD3458(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList);
+    sub_1BD3458(&Method_ScriptSelectDialog_OnClickSelect__, v9);
+    byte_4B38E5A = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -406,30 +396,26 @@ void __fastcall ScriptSelectDialog__Open(
   UnityEngine_GameObject__SetActive(rootObject, 1, 0LL);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v12, v13, v14, v15, v16, v17);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v11, v12, v13, v14, v15, v16);
   if ( !selectMessageList
-    || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v18),
+    || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v17),
         listViewManager = this->fields.listViewManager,
-        v23 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BCAA2C(
-                                                               ScriptSelectListViewManager_ClickDelegate_TypeInfo,
-                                                               v20,
-                                                               v21,
-                                                               v22),
+        v19 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BD36A4(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
-          v23,
+          v19,
           (Il2CppObject *)this,
           Method_ScriptSelectDialog_OnClickSelect__,
-          v24),
+          v20),
         !listViewManager)
-    || (ScriptSelectListViewManager__CreateList(listViewManager, selectMessageList, fontType, v23, v25),
+    || (ScriptSelectListViewManager__CreateList(listViewManager, selectMessageList, fontType, v19, v21),
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0LL) )
   {
 LABEL_8:
-    sub_1BCAA3C(rootObject, selectMessageList);
+    sub_1BD36B4(rootObject, selectMessageList);
   }
-  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v26);
+  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v22);
   this->fields.limitTimeMode = 0;
-  ScriptSelectDialog__InitLimitTimeUI(this, v27);
+  ScriptSelectDialog__InitLimitTimeUI(this, v23);
 }
 
 
@@ -442,30 +428,26 @@ void __fastcall ScriptSelectDialog__OpenHidden(
         const MethodInfo *method)
 {
   __int64 v11; // x1
-  __int64 v12; // x2
   UnityEngine_GameObject_o *rootObject; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  const MethodInfo *v20; // x2
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  const MethodInfo *v19; // x2
   ScriptSelectListViewManager_o *listViewManager; // x23
-  __int64 v22; // x1
-  __int64 v23; // x2
-  __int64 v24; // x3
-  ScriptSelectListViewManager_ClickDelegate_o *v25; // x24
-  const MethodInfo *v26; // x3
-  const MethodInfo *v27; // x5
-  const MethodInfo *v28; // x4
-  const MethodInfo *v29; // x1
+  ScriptSelectListViewManager_ClickDelegate_o *v21; // x24
+  const MethodInfo *v22; // x3
+  const MethodInfo *v23; // x5
+  const MethodInfo *v24; // x4
+  const MethodInfo *v25; // x1
 
-  if ( (byte_4B17E8B & 1) == 0 )
+  if ( (byte_4B38E5B & 1) == 0 )
   {
-    sub_1BCA7E0(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList, itemIds);
-    sub_1BCA7E0(&Method_ScriptSelectDialog_OnClickSelect__, v11, v12);
-    byte_4B17E8B = 1;
+    sub_1BD3458(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList);
+    sub_1BD3458(&Method_ScriptSelectDialog_OnClickSelect__, v11);
+    byte_4B38E5B = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -473,30 +455,26 @@ void __fastcall ScriptSelectDialog__OpenHidden(
   UnityEngine_GameObject__SetActive(rootObject, 1, 0LL);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v14, v15, v16, v17, v18, v19);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v13, v14, v15, v16, v17, v18);
   if ( !selectMessageList
-    || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v20),
+    || (ScriptSelectDialog__InitListViewManagerUI(this, selectMessageList->max_length, v19),
         listViewManager = this->fields.listViewManager,
-        v25 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BCAA2C(
-                                                               ScriptSelectListViewManager_ClickDelegate_TypeInfo,
-                                                               v22,
-                                                               v23,
-                                                               v24),
+        v21 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BD36A4(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
-          v25,
+          v21,
           (Il2CppObject *)this,
           Method_ScriptSelectDialog_OnClickSelect__,
-          v26),
+          v22),
         !listViewManager)
-    || (ScriptSelectListViewManager__CreateListHidden(listViewManager, selectMessageList, itemIds, fontType, v25, v27),
+    || (ScriptSelectListViewManager__CreateListHidden(listViewManager, selectMessageList, itemIds, fontType, v21, v23),
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0LL) )
   {
 LABEL_8:
-    sub_1BCAA3C(rootObject, selectMessageList);
+    sub_1BD36B4(rootObject, selectMessageList);
   }
-  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v28);
+  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v24);
   this->fields.limitTimeMode = 0;
-  ScriptSelectDialog__InitLimitTimeUI(this, v29);
+  ScriptSelectDialog__InitLimitTimeUI(this, v25);
 }
 
 
@@ -510,50 +488,42 @@ void __fastcall ScriptSelectDialog__OpenLimitTime(
         const MethodInfo *method)
 {
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v16; // x1
   void *rootObject; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v28; // x0
-  const MethodInfo *v29; // x2
-  System_String_array *v30; // x23
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  const MethodInfo *v25; // x2
+  System_String_array *v26; // x23
   ScriptSelectListViewManager_o *listViewManager; // x24
-  __int64 v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x3
-  ScriptSelectListViewManager_ClickDelegate_o *v35; // x25
-  const MethodInfo *v36; // x3
-  const MethodInfo *v37; // x4
-  const MethodInfo *v38; // x4
-  __int64 v39; // x8
-  const MethodInfo *v40; // x1
-  __int64 v41; // x1
-  struct SePlayer_o *v42; // x0
-  int64_t v43; // x2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  BattleSetupInfo_o *v46; // x5
-  FollowerInfo_o *v47; // x6
-  PartyListViewItem_o *v48; // x7
+  ScriptSelectListViewManager_ClickDelegate_o *v28; // x25
+  const MethodInfo *v29; // x3
+  const MethodInfo *v30; // x4
+  const MethodInfo *v31; // x4
+  __int64 v32; // x8
+  const MethodInfo *v33; // x1
+  struct SePlayer_o *v34; // x0
+  int64_t v35; // x2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  BattleSetupInfo_o *v38; // x5
+  FollowerInfo_o *v39; // x6
+  PartyListViewItem_o *v40; // x7
 
-  if ( (byte_4B17E8C & 1) == 0 )
+  if ( (byte_4B38E5C & 1) == 0 )
   {
-    sub_1BCA7E0(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList, fontType);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_Take_string___, v13, v14);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_ToArray_string___, v15, v16);
-    sub_1BCA7E0(&Method_ScriptSelectDialog_OnClickSelect__, v17, v18);
-    sub_1BCA7E0(&SoundManager_TypeInfo, v19, v20);
-    byte_4B17E8C = 1;
+    sub_1BD3458(&ScriptSelectListViewManager_ClickDelegate_TypeInfo, selectMessageList);
+    sub_1BD3458(&Method_System_Linq_Enumerable_Take_string___, v13);
+    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_string___, v14);
+    sub_1BD3458(&Method_ScriptSelectDialog_OnClickSelect__, v15);
+    sub_1BD3458(&SoundManager_TypeInfo, v16);
+    byte_4B38E5C = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -561,49 +531,45 @@ void __fastcall ScriptSelectDialog__OpenLimitTime(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rootObject, 1, 0LL);
   this->fields.callbackFunc = callback;
   this->fields.isOpen = 1;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v22, v23, v24, v25, v26, v27);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v18, v19, v20, v21, v22, v23);
   if ( !selectMessageList )
     goto LABEL_11;
-  v28 = System_Linq_Enumerable__Take_object_(
+  v24 = System_Linq_Enumerable__Take_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)selectMessageList,
           selectMessageList->max_length - 1,
-          (const MethodInfo_2F4A7BC *)Method_System_Linq_Enumerable_Take_string___);
+          (const MethodInfo_2F69B68 *)Method_System_Linq_Enumerable_Take_string___);
   rootObject = System_Linq_Enumerable__ToArray_object_(
-                 v28,
-                 (const MethodInfo_2F4BA08 *)Method_System_Linq_Enumerable_ToArray_string___);
+                 v24,
+                 (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_string___);
   if ( !rootObject
-    || (v30 = (System_String_array *)rootObject,
-        ScriptSelectDialog__InitListViewManagerUI(this, *((_DWORD *)rootObject + 6), v29),
+    || (v26 = (System_String_array *)rootObject,
+        ScriptSelectDialog__InitListViewManagerUI(this, *((_DWORD *)rootObject + 6), v25),
         listViewManager = this->fields.listViewManager,
-        v35 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BCAA2C(
-                                                               ScriptSelectListViewManager_ClickDelegate_TypeInfo,
-                                                               v32,
-                                                               v33,
-                                                               v34),
+        v28 = (ScriptSelectListViewManager_ClickDelegate_o *)sub_1BD36A4(ScriptSelectListViewManager_ClickDelegate_TypeInfo),
         ScriptSelectListViewManager_ClickDelegate___ctor(
-          v35,
+          v28,
           (Il2CppObject *)this,
           Method_ScriptSelectDialog_OnClickSelect__,
-          v36),
+          v29),
         !listViewManager)
-    || (ScriptSelectListViewManager__CreateList(listViewManager, v30, fontType, v35, v37),
+    || (ScriptSelectListViewManager__CreateList(listViewManager, v26, fontType, v28, v30),
         (rootObject = this->fields.listViewManager) == 0LL) )
   {
 LABEL_11:
-    sub_1BCAA3C(rootObject, selectMessageList);
+    sub_1BD36B4(rootObject, selectMessageList);
   }
-  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v38);
+  ScriptSelectListViewManager__SetMode((ScriptSelectListViewManager_o *)rootObject, 2, 0, 0LL, v31);
   this->fields.limitTimeMode = 1;
-  v39 = *(_QWORD *)&selectMessageList->max_length;
+  v32 = *(_QWORD *)&selectMessageList->max_length;
   this->fields.maxLimitTimeSeconds = limitTime;
   this->fields.limitTimeSeconds = limitTime;
-  this->fields.selectMessageLength = v39;
-  ScriptSelectDialog__InitLimitTimeUI(this, v40);
+  this->fields.selectMessageLength = v32;
+  ScriptSelectDialog__InitLimitTimeUI(this, v33);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, v41);
-  v42 = SoundManager__playSeLoop(seName, 0LL);
-  this->fields.limitTimeLoopSe = v42;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.limitTimeLoopSe, (int64_t)v42, v43, v44, v45, v46, v47, v48);
+    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+  v34 = SoundManager__playSeLoop(seName, 0LL);
+  this->fields.limitTimeLoopSe = v34;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.limitTimeLoopSe, (int64_t)v34, v35, v36, v37, v38, v39, v40);
 }
 
 
@@ -619,29 +585,24 @@ void __fastcall ScriptSelectDialog__SelectDecide(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v12; // x1
   ScriptSelectListViewManager_o *listViewManager; // x21
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x3
-  System_Action_o *v19; // x22
+  System_Action_o *v14; // x22
   UnityEngine_GameObject_o *rootLimitTimeObject; // x0
-  __int64 v21; // x1
-  const MethodInfo *v22; // x4
-  UITweener_o *v23; // x19
+  __int64 v16; // x1
+  const MethodInfo *v17; // x4
+  UITweener_o *v18; // x19
 
-  if ( (byte_4B17E8D & 1) == 0 )
+  if ( (byte_4B38E5D & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, *(_QWORD *)&index, callback);
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___, v11, v12);
-    sub_1BCA7E0(&Method_ScriptSelectDialog_EndSelectDecide__, v13, v14);
-    byte_4B17E8D = 1;
+    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___, v11);
+    sub_1BD3458(&Method_ScriptSelectDialog_EndSelectDecide__, v12);
+    byte_4B38E5D = 1;
   }
   this->fields.index = index;
   this->fields.callbackFunc = callback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     (int64_t)callback,
@@ -651,11 +612,11 @@ void __fastcall ScriptSelectDialog__SelectDecide(
     v6,
     v7);
   listViewManager = this->fields.listViewManager;
-  v19 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v16, v17, v18);
-  System_Action___ctor(v19, (Il2CppObject *)this, Method_ScriptSelectDialog_EndSelectDecide__, 0LL);
+  v14 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v14, (Il2CppObject *)this, Method_ScriptSelectDialog_EndSelectDecide__, 0LL);
   if ( !listViewManager )
     goto LABEL_10;
-  ScriptSelectListViewManager__SetMode(listViewManager, 3, index, v19, v22);
+  ScriptSelectListViewManager__SetMode(listViewManager, 3, index, v14, v17);
   rootLimitTimeObject = this->fields.rootLimitTimeObject;
   if ( !rootLimitTimeObject )
     goto LABEL_10;
@@ -666,23 +627,22 @@ void __fastcall ScriptSelectDialog__SelectDecide(
     {
       rootLimitTimeObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           rootLimitTimeObject,
-                                                          (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+                                                          (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
       if ( rootLimitTimeObject )
       {
-        v23 = (UITweener_o *)rootLimitTimeObject;
+        v18 = (UITweener_o *)rootLimitTimeObject;
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)rootLimitTimeObject, 1, 0LL);
-        UITweener__ResetToBeginning(v23, 0LL);
-        UITweener__PlayForward(v23, 0LL);
+        UITweener__ResetToBeginning(v18, 0LL);
+        UITweener__PlayForward(v18, 0LL);
         return;
       }
     }
 LABEL_10:
-    sub_1BCAA3C(rootLimitTimeObject, v21);
+    sub_1BD36B4(rootLimitTimeObject, v16);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptSelectDialog__SetActive(ScriptSelectDialog_o *this, bool flag, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *rootObject; // x0
@@ -691,7 +651,7 @@ void __fastcall ScriptSelectDialog__SetActive(ScriptSelectDialog_o *this, bool f
   {
     rootObject = this->fields.rootObject;
     if ( !rootObject )
-      sub_1BCAA3C(0LL, flag);
+      sub_1BD36B4(0LL, flag);
     UnityEngine_GameObject__SetActive(rootObject, flag, 0LL);
   }
 }
@@ -730,83 +690,79 @@ void __fastcall ScriptSelectDialog__UpdateLimitTime(ScriptSelectDialog_o *this, 
 
 void __fastcall ScriptSelectDialog__UpdateLimitTimeUI(ScriptSelectDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ScriptSelectDialog_o *v3; // x19
+  ScriptSelectDialog_o *v2; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   struct System_Single_array *changeGaugeTimes; // x8
   unsigned int max_length; // w9
   float limitTimeSeconds; // s0
-  float v11; // s1
-  System_String_o **v12; // x8
-  __int64 v13; // x1
-  __int64 v14; // x2
+  float v8; // s1
+  System_String_o **v9; // x8
+  __int64 v10; // x1
   UILabel_o *limitTimeValueLabel; // x20
-  float v16; // s8
-  unsigned int v17; // w9
-  unsigned int v18; // w8
-  unsigned int v19; // [xsp+Ch] [xbp-24h] BYREF
+  float v12; // s8
+  unsigned int v13; // w9
+  unsigned int v14; // w8
+  unsigned int v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  v3 = this;
-  if ( (byte_4B17E8F & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B38E5F & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_20702/*"img_timer_meter_yellow"*/, method, v2);
-    sub_1BCA7E0(&StringLiteral_20700/*"img_timer_meter_blue"*/, v4, v5);
-    this = (ScriptSelectDialog_o *)sub_1BCA7E0(&StringLiteral_20701/*"img_timer_meter_red"*/, v6, v7);
-    byte_4B17E8F = 1;
+    sub_1BD3458(&StringLiteral_20732/*"img_timer_meter_yellow"*/, method);
+    sub_1BD3458(&StringLiteral_20730/*"img_timer_meter_blue"*/, v3);
+    this = (ScriptSelectDialog_o *)sub_1BD3458(&StringLiteral_20731/*"img_timer_meter_red"*/, v4);
+    byte_4B38E5F = 1;
   }
-  changeGaugeTimes = v3->fields.changeGaugeTimes;
+  changeGaugeTimes = v2->fields.changeGaugeTimes;
   if ( !changeGaugeTimes )
 LABEL_23:
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   max_length = changeGaugeTimes->max_length;
   if ( !max_length )
     goto LABEL_24;
-  limitTimeSeconds = v3->fields.limitTimeSeconds;
+  limitTimeSeconds = v2->fields.limitTimeSeconds;
   if ( limitTimeSeconds > changeGaugeTimes->m_Items[1] )
   {
     if ( max_length > 1 )
     {
-      this = (ScriptSelectDialog_o *)v3->fields.limitTimeGaugeSprite;
+      this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
       if ( !this )
         goto LABEL_23;
-      v11 = changeGaugeTimes->m_Items[2];
-      v12 = (System_String_o **)&StringLiteral_20702/*"img_timer_meter_yellow"*/;
-      if ( limitTimeSeconds > v11 )
-        v12 = (System_String_o **)&StringLiteral_20700/*"img_timer_meter_blue"*/;
+      v8 = changeGaugeTimes->m_Items[2];
+      v9 = (System_String_o **)&StringLiteral_20732/*"img_timer_meter_yellow"*/;
+      if ( limitTimeSeconds > v8 )
+        v9 = (System_String_o **)&StringLiteral_20730/*"img_timer_meter_blue"*/;
       goto LABEL_13;
     }
 LABEL_24:
-    sub_1BCAA44(this, method);
+    sub_1BD36BC(this, method);
   }
-  this = (ScriptSelectDialog_o *)v3->fields.limitTimeGaugeSprite;
+  this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
   if ( !this )
     goto LABEL_23;
-  v12 = (System_String_o **)&StringLiteral_20701/*"img_timer_meter_red"*/;
+  v9 = (System_String_o **)&StringLiteral_20731/*"img_timer_meter_red"*/;
 LABEL_13:
-  UISprite__set_spriteName((UISprite_o *)this, *v12, 0LL);
-  this = (ScriptSelectDialog_o *)v3->fields.limitTimeGaugeSprite;
+  UISprite__set_spriteName((UISprite_o *)this, *v9, 0LL);
+  this = (ScriptSelectDialog_o *)v2->fields.limitTimeGaugeSprite;
   if ( !this )
     goto LABEL_23;
   UIBasicSprite__set_fillAmount(
     (UIBasicSprite_o *)this,
-    v3->fields.limitTimeSeconds / v3->fields.maxLimitTimeSeconds,
+    v2->fields.limitTimeSeconds / v2->fields.maxLimitTimeSeconds,
     0LL);
-  limitTimeValueLabel = v3->fields.limitTimeValueLabel;
-  v16 = v3->fields.limitTimeSeconds;
-  if ( !byte_4B1103A )
+  limitTimeValueLabel = v2->fields.limitTimeValueLabel;
+  v12 = v2->fields.limitTimeSeconds;
+  if ( !byte_4B31FBE )
   {
-    sub_1BCA7E0(&System_Math_TypeInfo, v13, v14);
-    byte_4B1103A = 1;
+    sub_1BD3458(&System_Math_TypeInfo, v10);
+    byte_4B31FBE = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v13);
-  v17 = vcvtps_s32_f32(v16);
-  v18 = ceilf(v16) == INFINITY ? 0x80000000 : v17;
-  v19 = v18;
-  this = (ScriptSelectDialog_o *)System_Int32__ToString((int32_t)&v19, 0LL);
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+  v13 = vcvtps_s32_f32(v12);
+  v14 = ceilf(v12) == INFINITY ? 0x80000000 : v13;
+  v15 = v14;
+  this = (ScriptSelectDialog_o *)System_Int32__ToString((int32_t)&v15, 0LL);
   if ( !limitTimeValueLabel )
     goto LABEL_23;
   UILabel__set_text(limitTimeValueLabel, (System_String_o *)this, 0LL);
@@ -835,7 +791,7 @@ void __fastcall ScriptSelectDialog_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -846,12 +802,12 @@ void __fastcall ScriptSelectDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCA8A0(v10) & 1) == 0 )
+  if ( (sub_1BD3518(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BCAA58(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCA908(v14, 0LL);
+      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BD3580(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -863,9 +819,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0E754;
+  this->fields.m_target = (Il2CppObject *)sub_1A17084;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0E70C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1703C;
 }
 
 
@@ -881,14 +837,14 @@ System_IAsyncResult_o *__fastcall ScriptSelectDialog_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = index;
-  if ( (byte_4B17E91 & 1) == 0 )
+  if ( (byte_4B38E61 & 1) == 0 )
   {
-    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&index, callback);
-    byte_4B17E91 = 1;
+    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&index);
+    byte_4B38E61 = 1;
   }
   v9[1] = 0LL;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1BCA794(this, v9, callback, object);
+  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
+  return (System_IAsyncResult_o *)sub_1BD340C(this, v9, callback, object);
 }
 
 
@@ -897,7 +853,7 @@ void __fastcall ScriptSelectDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCA798(result, 0LL, method);
+  sub_1BD3410(result, 0LL, method);
 }
 
 

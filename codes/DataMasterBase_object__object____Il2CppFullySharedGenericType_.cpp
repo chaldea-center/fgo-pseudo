@@ -1,24 +1,24 @@
 void __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType____ctor(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
         int32_t kind,
-        const MethodInfo_31B32EC *method)
+        const MethodInfo_31D239C *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
 
   DataMasterBase___ctor((DataMasterBase_o *)this, kind, 0LL);
   if ( !this )
-    sub_1BCAA3C(v5, v6);
+    sub_1BD36B4(v5, v6);
   DataMasterBase__RegisterKindAndName_object_(
     this->fields._MasterKind_k__BackingField,
     this->fields._MasterName_k__BackingField,
-    (const MethodInfo_2F130A8 *)method->klass->rgctx_data->_0_DataMasterBase_RegisterKindAndName_TMaster_);
+    (const MethodInfo_2F31A9C *)method->klass->rgctx_data->_0_DataMasterBase_RegisterKindAndName_TMaster_);
 }
 
 
 void __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___ForForceDerived(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31B361C *method)
+        const MethodInfo_31D26CC *method)
 {
   ;
 }
@@ -27,7 +27,7 @@ void __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___
 Il2CppObject *__fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___GetEntity(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o key,
-        const MethodInfo_31B332C *method)
+        const MethodInfo_31D23DC *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
@@ -55,7 +55,7 @@ Il2CppObject *__fastcall DataMasterBase_object__object____Il2CppFullySharedGener
   }
   else
   {
-    v9 = sub_1C1C6BC();
+    v9 = sub_1C25334();
     v6 = *(_QWORD *)(monitor[4] + 192LL);
     v7 = *(_QWORD *)(v6 + 8);
     v8 = *(_WORD *)(v7 + 309);
@@ -67,7 +67,7 @@ Il2CppObject *__fastcall DataMasterBase_object__object____Il2CppFullySharedGener
   }
   else
   {
-    v11 = sub_1C1C6BC();
+    v11 = sub_1C25334();
     v6 = *(_QWORD *)(monitor[4] + 192LL);
     v7 = *(_QWORD *)(v6 + 8);
   }
@@ -75,25 +75,25 @@ Il2CppObject *__fastcall DataMasterBase_object__object____Il2CppFullySharedGener
     v12 = v17;
   else
     v12 = (__int64 *)klass;
-  v13 = sub_1BCB248(v11, *(_QWORD *)(v6 + 16), (int)v10, v12);
+  v13 = sub_1BD3EC0(v11, *(_QWORD *)(v6 + 16), (int)v10, v12);
   if ( !this )
-    sub_1BCAA3C(v13, v14);
+    sub_1BD36B4(v13, v14);
   return DataMasterBase__getEntityFromKey_object_(
            (DataMasterBase_o *)this,
            (System_String_o *)v17[1],
-           *(const MethodInfo_2F13408 **)(*(_QWORD *)(monitor[4] + 192LL) + 24LL));
+           *(const MethodInfo_2F31DFC **)(*(_QWORD *)(monitor[4] + 192LL) + 24LL));
 }
 
 
 Il2CppObject *__fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___GetSingleEntity(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31B3570 *method)
+        const MethodInfo_31D2620 *method)
 {
   if ( !this )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   return DataMasterBase__GetSingleEntity_object_(
            (DataMasterBase_o *)this,
-           (const MethodInfo_2F12FC8 *)method->klass->rgctx_data->_8_DataMasterBase_TryGetSingleEntity_TEntity_);
+           (const MethodInfo_2F319BC *)method->klass->rgctx_data->_8_DataMasterBase_TryGetSingleEntity_TEntity_);
 }
 
 
@@ -101,7 +101,7 @@ bool __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___
         DataMasterBase_TMaster__TEntity__PKType__o *this,
         Il2CppObject **entity,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o key,
-        const MethodInfo_31B3448 *method)
+        const MethodInfo_31D24F8 *method)
 {
   _QWORD *monitor; // x20
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x22
@@ -129,7 +129,7 @@ bool __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___
   }
   else
   {
-    v11 = sub_1C1C6BC();
+    v11 = sub_1C25334();
     v8 = *(_QWORD *)(monitor[4] + 192LL);
     v9 = *(_QWORD *)(v8 + 8);
     v10 = *(_WORD *)(v9 + 309);
@@ -141,7 +141,7 @@ bool __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___
   }
   else
   {
-    v13 = sub_1C1C6BC();
+    v13 = sub_1C25334();
     v8 = *(_QWORD *)(monitor[4] + 192LL);
     v9 = *(_QWORD *)(v8 + 8);
   }
@@ -149,44 +149,44 @@ bool __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___
     v14 = v19;
   else
     v14 = (__int64 *)klass;
-  v15 = sub_1BCB248(v13, *(_QWORD *)(v8 + 16), (int)v12, v14);
+  v15 = sub_1BD3EC0(v13, *(_QWORD *)(v8 + 16), (int)v12, v14);
   if ( !this )
-    sub_1BCAA3C(v15, v16);
+    sub_1BD36B4(v15, v16);
   return DataMasterBase__TryGetEntityFromId_object_(
            (DataMasterBase_o *)this,
            entity,
            (System_String_o *)v19[1],
-           *(const MethodInfo_2F13130 **)(*(_QWORD *)(monitor[4] + 192LL) + 48LL));
+           *(const MethodInfo_2F31B24 **)(*(_QWORD *)(monitor[4] + 192LL) + 48LL));
 }
 
 
 bool __fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___TryGetSingleEntity(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
         Il2CppObject **entity,
-        const MethodInfo_31B3590 *method)
+        const MethodInfo_31D2640 *method)
 {
   if ( !this )
-    sub_1BCAA3C(0LL, entity);
+    sub_1BD36B4(0LL, entity);
   return DataMasterBase__TryGetSingleEntity_object_(
            (DataMasterBase_o *)this,
            entity,
-           (const MethodInfo_2F132B8 *)method->klass->rgctx_data->_9_JsonManager_DeserializeArray_TEntity_);
+           (const MethodInfo_2F31CAC *)method->klass->rgctx_data->_9_JsonManager_DeserializeArray_TEntity_);
 }
 
 
 DataEntityBase_array *__fastcall DataMasterBase_object__object____Il2CppFullySharedGenericType___getList(
         DataMasterBase_TMaster__TEntity__PKType__o *this,
         Il2CppObject *obj,
-        const MethodInfo_31B35B0 *method)
+        const MethodInfo_31D2660 *method)
 {
-  if ( (byte_4B1BF58 & 1) == 0 )
+  if ( (byte_4B3CF58 & 1) == 0 )
   {
-    sub_1BCA7E0(&JsonManager_TypeInfo, obj, method);
-    byte_4B1BF58 = 1;
+    sub_1BD3458(&JsonManager_TypeInfo, obj);
+    byte_4B3CF58 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, obj);
+    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return (DataEntityBase_array *)JsonManager__DeserializeArray_object_(
                                    obj,
-                                   (const MethodInfo_2F79784 *)method->klass->rgctx_data->_10_TEntity__);
+                                   (const MethodInfo_2F98C0C *)method->klass->rgctx_data->_10_TEntity__);
 }

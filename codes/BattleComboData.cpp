@@ -1,49 +1,47 @@
 void __fastcall BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  struct System_Boolean_array *v4; // x0
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  struct System_Boolean_array *v3; // x0
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B18ABE & 1) == 0 )
+  if ( (byte_4B39A99 & 1) == 0 )
   {
-    sub_1BCA7E0(&bool___TypeInfo, method, v2);
-    byte_4B18ABE = 1;
+    sub_1BD3458(&bool___TypeInfo, method);
+    byte_4B39A99 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v4 = (struct System_Boolean_array *)sub_1BCA888(bool___TypeInfo, 3LL);
-  this->fields.sameflg = v4;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.sameflg, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v3 = (struct System_Boolean_array *)sub_1BD3500(bool___TypeInfo, 3LL);
+  this->fields.sameflg = v3;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.sameflg, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
 bool __fastcall BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   int32_t samecount; // w20
-  BattleDataDefine_c *v5; // x0
+  BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4B18ABF & 1) == 0 )
+  if ( (byte_4B39A9A & 1) == 0 )
   {
-    sub_1BCA7E0(&BattleDataDefine_TypeInfo, method, v2);
-    byte_4B18ABF = 1;
+    sub_1BD3458(&BattleDataDefine_TypeInfo, method);
+    byte_4B39A9A = 1;
   }
   if ( this->fields.flash )
     return 1;
   samecount = this->fields.samecount;
-  v5 = BattleDataDefine_TypeInfo;
+  v4 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo, method);
-    v5 = BattleDataDefine_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
+    v4 = BattleDataDefine_TypeInfo;
   }
-  return samecount == v5->static_fields->COMMAND_CARD_NUM_TO_SELECT || this->fields.isMighty;
+  return samecount == v4->static_fields->COMMAND_CARD_NUM_TO_SELECT || this->fields.isMighty;
 }
 
 

@@ -7,29 +7,27 @@ void __fastcall BattleDropItem___ctor(BattleDropItem_o *this, const MethodInfo *
 
 DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
   DropInfo_o *result; // x0
 
-  if ( (byte_4B1876B & 1) == 0 )
+  if ( (byte_4B39745 & 1) == 0 )
   {
-    sub_1BCA7E0(&DropInfo_TypeInfo, method, v2);
-    byte_4B1876B = 1;
+    sub_1BD3458(&DropInfo_TypeInfo, method);
+    byte_4B39745 = 1;
   }
-  v5 = sub_1BCAA2C(DropInfo_TypeInfo, method, v2, v3);
-  DropInfo___ctor((DropInfo_o *)v5, 0LL);
-  if ( !v5 )
-    sub_1BCAA3C(v6, v7);
-  result = (DropInfo_o *)v5;
-  *(_QWORD *)(v5 + 16) = *(_QWORD *)&this->fields.type;
-  *(int32x2_t *)(v5 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
-  *(_BYTE *)(v5 + 40) = this->fields.isRateUp;
-  *(_DWORD *)(v5 + 44) = this->fields.originalNum;
-  *(_DWORD *)(v5 + 36) = this->fields.rarity;
-  *(_BYTE *)(v5 + 52) = this->fields.isAdd;
+  v3 = sub_1BD36A4(DropInfo_TypeInfo);
+  DropInfo___ctor((DropInfo_o *)v3, 0LL);
+  if ( !v3 )
+    sub_1BD36B4(v4, v5);
+  result = (DropInfo_o *)v3;
+  *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
+  *(int32x2_t *)(v3 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
+  *(_BYTE *)(v3 + 40) = this->fields.isRateUp;
+  *(_DWORD *)(v3 + 44) = this->fields.originalNum;
+  *(_DWORD *)(v3 + 36) = this->fields.rarity;
+  *(_BYTE *)(v3 + 52) = this->fields.isAdd;
   return result;
 }
 
@@ -126,7 +124,7 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
   int32_t num; // w8
 
   if ( !info )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&info->fields.type;
   this->fields.limitCount = info->fields.limitCount;
   num = info->fields.num;

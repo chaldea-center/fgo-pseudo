@@ -1,16 +1,14 @@
 void __fastcall EventRewardExtraMaster___ctor(EventRewardExtraMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B162F7 & 1) == 0 )
+  if ( (byte_4B372A3 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__, method, v2);
-    byte_4B162F7 = 1;
+    sub_1BD3458(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__, method);
+    byte_4B372A3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     133,
-    (const MethodInfo_31B3158 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
+    (const MethodInfo_31D2208 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
 }
 
 
@@ -23,19 +21,18 @@ EventRewardExtraEntity_o *__fastcall EventRewardExtraMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B162F5 & 1) == 0 )
+  if ( (byte_4B372A1 & 1) == 0 )
   {
-    sub_1BCA7E0(
+    sub_1BD3458(
       &Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__,
-      *(_QWORD *)&eventId,
-      point);
-    byte_4B162F5 = 1;
+      *(_QWORD *)&eventId);
+    byte_4B372A1 = 1;
   }
   PK = (Il2CppObject *)EventRewardExtraEntity__CreatePK(eventId, point, (const MethodInfo *)point);
   return (EventRewardExtraEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_31B3198 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
+                                       (const MethodInfo_31D2248 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
 }
 
 
@@ -49,18 +46,15 @@ bool __fastcall EventRewardExtraMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B162F6 & 1) == 0 )
+  if ( (byte_4B372A2 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__,
-      entity,
-      *(_QWORD *)&eventId);
-    byte_4B162F6 = 1;
+    sub_1BD3458(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__, entity);
+    byte_4B372A2 = 1;
   }
   PK = (Il2CppObject *)EventRewardExtraEntity__CreatePK(eventId, point, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31B31E8 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
+           (const MethodInfo_31D2298 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
 }

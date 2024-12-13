@@ -13,104 +13,98 @@ void __fastcall WarBoardCommonEffectPerformance___ctor(
 {
   bool hasValue; // w20
   __int64 v14; // x1
-  __int64 v15; // x2
+  __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x1
-  __int64 v19; // x2
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x1
-  __int64 v23; // x1
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  struct UnityEngine_GameObject_o *v30; // x1
+  __int64 v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  struct UnityEngine_GameObject_o *v24; // x1
   struct UnityEngine_GameObject_o **p_effectObject; // x0
-  __int64 v32; // x1
+  __int64 v26; // x1
   UnityEngine_GameObject_o *effectObject; // x0
   Il2CppObject *Component_object; // x0
   struct CommonEffectComponent_o **p_commonEffect; // x21
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
+  int64_t v30; // x2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  BattleSetupInfo_o *v33; // x5
+  FollowerInfo_o *v34; // x6
+  PartyListViewItem_o *v35; // x7
   UnityEngine_Transform_o *transform; // x20
-  const MethodInfo_36C2D44 *v43; // x2
-  int v44; // s0
-  UnityEngine_Transform_o *v47; // x20
-  const MethodInfo_36C2D44 *v48; // x2
-  int v49; // s0
-  UnityEngine_Transform_o *v52; // x20
-  const MethodInfo_36C2D44 *v53; // x2
-  int v54; // s0
-  System_Nullable_Vector3__o v57; // [xsp+0h] [xbp-70h] BYREF
-  System_Nullable_Vector3__o v58; // [xsp+10h] [xbp-60h] BYREF
-  System_Nullable_Vector3__o v59; // [xsp+20h] [xbp-50h] BYREF
-  System_Nullable_Vector3__o v60; // 0:x0.16
-  System_Nullable_Vector3__o v61; // 0:x0.16
-  System_Nullable_Vector3__o v62; // 0:x0.16
+  const MethodInfo_36E1E78 *v37; // x2
+  int v38; // s0
+  UnityEngine_Transform_o *v41; // x20
+  const MethodInfo_36E1E78 *v42; // x2
+  int v43; // s0
+  UnityEngine_Transform_o *v46; // x20
+  const MethodInfo_36E1E78 *v47; // x2
+  int v48; // s0
+  System_Nullable_Vector3__o v51; // [xsp+0h] [xbp-70h] BYREF
+  System_Nullable_Vector3__o v52; // [xsp+10h] [xbp-60h] BYREF
+  System_Nullable_Vector3__o v53; // [xsp+20h] [xbp-50h] BYREF
+  System_Nullable_Vector3__o v54; // 0:x0.16
+  System_Nullable_Vector3__o v55; // 0:x0.16
+  System_Nullable_Vector3__o v56; // 0:x0.16
 
-  v59 = position;
-  v58 = angle;
-  v57 = scale;
+  v53 = position;
+  v52 = angle;
+  v51 = scale;
   hasValue = position.fields.hasValue;
-  if ( (byte_4B14063 & 1) == 0 )
+  if ( (byte_4B34FF9 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, parent, effetctPrefab);
-    sub_1BCA7E0(&Method_System_Nullable_Vector3__get_HasValue__, v14, v15);
-    sub_1BCA7E0(&Method_System_Nullable_Vector3__get_Value__, v16, v17);
-    sub_1BCA7E0(&Method_UnityEngine_Object_Instantiate_GameObject____76924656, v18, v19);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v20, v21);
-    byte_4B14063 = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, parent);
+    sub_1BD3458(&Method_System_Nullable_Vector3__get_HasValue__, v14);
+    sub_1BD3458(&Method_System_Nullable_Vector3__get_Value__, v15);
+    sub_1BD3458(&Method_UnityEngine_Object_Instantiate_GameObject____77057408, v16);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v17);
+    byte_4B34FF9 = 1;
   }
   this->fields.destroyOnEnd = 1;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)parent);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)effetctPrefab, 0LL, 0LL) )
   {
     if ( doInstantiate )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
-      v30 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__49903928(
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      v24 = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__50032064(
                                                  (Il2CppObject *)effetctPrefab,
                                                  parent,
                                                  0,
-                                                 (const MethodInfo_2F97938 *)Method_UnityEngine_Object_Instantiate_GameObject____76924656);
-      this->fields.effectObject = v30;
+                                                 (const MethodInfo_2FB6DC0 *)Method_UnityEngine_Object_Instantiate_GameObject____77057408);
+      this->fields.effectObject = v24;
       p_effectObject = &this->fields.effectObject;
     }
     else
     {
       this->fields.effectObject = effetctPrefab;
       p_effectObject = &this->fields.effectObject;
-      v30 = effetctPrefab;
+      v24 = effetctPrefab;
     }
-    sub_1BCA784((PartyOrganizationUtility_o *)p_effectObject, (int64_t)v30, v24, v25, v26, v27, v28, v29);
+    sub_1BD33FC((PartyOrganizationUtility_o *)p_effectObject, (int64_t)v24, v18, v19, v20, v21, v22, v23);
     effectObject = this->fields.effectObject;
     if ( !effectObject )
       goto LABEL_33;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          effectObject,
-                         (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                         (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
     this->fields.commonEffect = (struct CommonEffectComponent_o *)Component_object;
     p_commonEffect = &this->fields.commonEffect;
-    sub_1BCA784(
+    sub_1BD33FC(
       (PartyOrganizationUtility_o *)&this->fields.commonEffect,
       (int64_t)Component_object,
-      v36,
-      v37,
-      v38,
-      v39,
-      v40,
-      v41);
+      v30,
+      v31,
+      v32,
+      v33,
+      v34,
+      v35);
     effectObject = (UnityEngine_GameObject_o *)this->fields.commonEffect;
     if ( !effectObject )
       goto LABEL_33;
@@ -121,30 +115,30 @@ void __fastcall WarBoardCommonEffectPerformance___ctor(
       if ( !*p_commonEffect )
         goto LABEL_33;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)effectObject, 0LL);
-      *(_QWORD *)&v60.fields.hasValue = &v59;
-      *(_QWORD *)&v60.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-      *(UnityEngine_Vector3_o *)&v44 = System_Nullable_Vector3___get_Value(v60, v43);
+      *(_QWORD *)&v54.fields.hasValue = &v53;
+      *(_QWORD *)&v54.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+      *(UnityEngine_Vector3_o *)&v38 = System_Nullable_Vector3___get_Value(v54, v37);
       if ( !transform )
         goto LABEL_33;
       if ( isLocal )
-        UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v44, 0LL);
+        UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v38, 0LL);
       else
-        UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v44, 0LL);
+        UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v38, 0LL);
     }
-    if ( v58.fields.hasValue )
+    if ( v52.fields.hasValue )
     {
       effectObject = (UnityEngine_GameObject_o *)*p_commonEffect;
       if ( !*p_commonEffect )
         goto LABEL_33;
-      v47 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)effectObject, 0LL);
-      *(_QWORD *)&v61.fields.hasValue = &v58;
-      *(_QWORD *)&v61.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-      *(UnityEngine_Vector3_o *)&v49 = System_Nullable_Vector3___get_Value(v61, v48);
-      if ( !v47 )
+      v41 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)effectObject, 0LL);
+      *(_QWORD *)&v55.fields.hasValue = &v52;
+      *(_QWORD *)&v55.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+      *(UnityEngine_Vector3_o *)&v43 = System_Nullable_Vector3___get_Value(v55, v42);
+      if ( !v41 )
         goto LABEL_33;
       if ( !isLocal )
       {
-        UnityEngine_Transform__set_eulerAngles(v47, *(UnityEngine_Vector3_o *)&v49, 0LL);
+        UnityEngine_Transform__set_eulerAngles(v41, *(UnityEngine_Vector3_o *)&v43, 0LL);
 LABEL_30:
         effectObject = this->fields.effectObject;
         this->fields.destroyOnEnd = destroyOnEnd;
@@ -154,22 +148,22 @@ LABEL_30:
           return;
         }
 LABEL_33:
-        sub_1BCAA3C(effectObject, v32);
+        sub_1BD36B4(effectObject, v26);
       }
-      UnityEngine_Transform__set_localEulerAngles(v47, *(UnityEngine_Vector3_o *)&v49, 0LL);
+      UnityEngine_Transform__set_localEulerAngles(v41, *(UnityEngine_Vector3_o *)&v43, 0LL);
     }
-    if ( v57.fields.hasValue && isLocal )
+    if ( v51.fields.hasValue && isLocal )
     {
       effectObject = (UnityEngine_GameObject_o *)*p_commonEffect;
       if ( !*p_commonEffect )
         goto LABEL_33;
-      v52 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)effectObject, 0LL);
-      *(_QWORD *)&v62.fields.hasValue = &v57;
-      *(_QWORD *)&v62.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-      *(UnityEngine_Vector3_o *)&v54 = System_Nullable_Vector3___get_Value(v62, v53);
-      if ( !v52 )
+      v46 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)effectObject, 0LL);
+      *(_QWORD *)&v56.fields.hasValue = &v51;
+      *(_QWORD *)&v56.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+      *(UnityEngine_Vector3_o *)&v48 = System_Nullable_Vector3___get_Value(v56, v47);
+      if ( !v46 )
         goto LABEL_33;
-      UnityEngine_Transform__set_localScale(v52, *(UnityEngine_Vector3_o *)&v54, 0LL);
+      UnityEngine_Transform__set_localScale(v46, *(UnityEngine_Vector3_o *)&v48, 0LL);
     }
     goto LABEL_30;
   }
@@ -192,30 +186,27 @@ void __fastcall WarBoardCommonEffectPerformance__AnimantionEndStartCallback(
         WarBoardCommonEffectPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v3; // x1
   struct CommonEffectComponent_o *commonEffect; // x20
-  System_Action_o *v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4B14065 & 1) == 0 )
+  if ( (byte_4B34FFB & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_WarBoardCommonEffectPerformance_AnimantionEndCallback__, v5, v6);
-    byte_4B14065 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, method);
+    sub_1BD3458(&Method_WarBoardCommonEffectPerformance_AnimantionEndCallback__, v3);
+    byte_4B34FFB = 1;
   }
   commonEffect = this->fields.commonEffect;
-  v8 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, method, v2, v3);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_WarBoardCommonEffectPerformance_AnimantionEndCallback__, 0LL);
+  v5 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_WarBoardCommonEffectPerformance_AnimantionEndCallback__, 0LL);
   if ( !commonEffect )
-    sub_1BCAA3C(v9, v10);
+    sub_1BD36B4(v6, v7);
   ((void (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, Il2CppMethodPointer))commonEffect->klass->vtable._8_Stop.method)(
     commonEffect,
     0LL,
-    v8,
+    v5,
     commonEffect->klass->vtable._9_ForceStop.methodPtr);
   ActionExtensions__Call(this->fields.animantionStartEndCallback, 0LL);
 }
@@ -225,27 +216,25 @@ System_Collections_IEnumerator_o *__fastcall WarBoardCommonEffectPerformance__Ex
         WarBoardCommonEffectPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x20
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  __int64 v3; // x20
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B14066 & 1) == 0 )
+  if ( (byte_4B34FFC & 1) == 0 )
   {
-    sub_1BCA7E0(&WarBoardCommonEffectPerformance__Execute_d__12_TypeInfo, method, v2);
-    byte_4B14066 = 1;
+    sub_1BD3458(&WarBoardCommonEffectPerformance__Execute_d__12_TypeInfo, method);
+    byte_4B34FFC = 1;
   }
-  v5 = sub_1BCAA2C(WarBoardCommonEffectPerformance__Execute_d__12_TypeInfo, method, v2, v3);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v5;
+  v3 = sub_1BD36A4(WarBoardCommonEffectPerformance__Execute_d__12_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
+  *(_QWORD *)(v3 + 32) = this;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -253,43 +242,41 @@ void __fastcall WarBoardCommonEffectPerformance__OnEnd(
         WarBoardCommonEffectPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_GameObject_o **p_effectObject; // x20
   UnityEngine_Object_o *effectObject; // x21
-  __int64 v6; // x1
-  __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  UnityEngine_GameObject_o *v14; // x21
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  UnityEngine_GameObject_o *v12; // x21
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_4B14067 & 1) == 0 )
+  if ( (byte_4B34FFD & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B14067 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B34FFD = 1;
   }
   p_effectObject = &this->fields.effectObject;
   effectObject = (UnityEngine_Object_o *)this->fields.effectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(effectObject, 0LL, 0LL) )
   {
     if ( !*p_effectObject )
-      sub_1BCAA3C(0LL, v6);
+      sub_1BD36B4(0LL, v5);
     UnityEngine_GameObject__SetActive(*p_effectObject, 0, 0LL);
     if ( this->fields.destroyOnEnd )
     {
-      v14 = *p_effectObject;
+      v12 = *p_effectObject;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-      UnityEngine_Object__Destroy_70154244((UnityEngine_Object_o *)v14, 0LL);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      UnityEngine_Object__Destroy_70278272((UnityEngine_Object_o *)v12, 0LL);
     }
     *p_effectObject = 0LL;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.effectObject, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.effectObject, 0LL, v6, v7, v8, v9, v10, v11);
   }
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -304,28 +291,22 @@ void __fastcall WarBoardCommonEffectPerformance__OnStart(
         WarBoardCommonEffectPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   struct WarBoardTaskBase_TaskCallback_o *StartCallback; // x8
   UnityEngine_Object_o *effectObject; // x20
-  __int64 v10; // x1
-  UnityEngine_GameObject_o *v11; // x0
+  __int64 v7; // x1
+  UnityEngine_GameObject_o *v8; // x0
   UnityEngine_Object_o *commonEffect; // x20
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  struct CommonEffectComponent_o *v16; // x20
-  System_Action_o *v17; // x21
+  struct CommonEffectComponent_o *v10; // x20
+  System_Action_o *v11; // x21
 
-  if ( (byte_4B14064 & 1) == 0 )
+  if ( (byte_4B34FFA & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
-    sub_1BCA7E0(&Method_WarBoardCommonEffectPerformance_AnimantionEndStartCallback__, v6, v7);
-    byte_4B14064 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, method);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BD3458(&Method_WarBoardCommonEffectPerformance_AnimantionEndStartCallback__, v4);
+    byte_4B34FFA = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -335,39 +316,39 @@ void __fastcall WarBoardCommonEffectPerformance__OnStart(
       *(_QWORD *)&StartCallback->fields.extra_arg);
   effectObject = (UnityEngine_Object_o *)this->fields.effectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(effectObject, 0LL, 0LL) )
   {
-    v11 = this->fields.effectObject;
-    if ( !v11 )
+    v8 = this->fields.effectObject;
+    if ( !v8 )
       goto LABEL_16;
-    UnityEngine_GameObject__SetActive(v11, 1, 0LL);
+    UnityEngine_GameObject__SetActive(v8, 1, 0LL);
   }
   this->fields.animationPlay = 0;
   commonEffect = (UnityEngine_Object_o *)this->fields.commonEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(commonEffect, 0LL, 0LL) )
   {
-    v16 = this->fields.commonEffect;
-    v17 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v13, v14, v15);
+    v10 = this->fields.commonEffect;
+    v11 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
     System_Action___ctor(
-      v17,
+      v11,
       (Il2CppObject *)this,
       Method_WarBoardCommonEffectPerformance_AnimantionEndStartCallback__,
       0LL);
-    if ( v16 )
+    if ( v10 )
     {
-      ((void (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, Il2CppMethodPointer))v16->klass->vtable._6_ForceStart.method)(
-        v16,
+      ((void (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, Il2CppMethodPointer))v10->klass->vtable._6_ForceStart.method)(
+        v10,
         0LL,
-        v17,
-        v16->klass->vtable._7_ForceLoop.methodPtr);
+        v11,
+        v10->klass->vtable._7_ForceLoop.methodPtr);
       this->fields.animationPlay = 1;
       return;
     }
 LABEL_16:
-    sub_1BCAA3C(v11, v10);
+    sub_1BD36B4(v8, v7);
   }
 }
 
@@ -384,7 +365,7 @@ void __fastcall WarBoardCommonEffectPerformance__SetAnimantionEndCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.animantionEndCallback = callback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.animantionEndCallback,
     (int64_t)callback,
     (int64_t)method,
@@ -408,7 +389,7 @@ void __fastcall WarBoardCommonEffectPerformance__SetAnimantionStartEndCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.animantionStartEndCallback = callback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.animantionStartEndCallback,
     (int64_t)callback,
     (int64_t)method,
@@ -442,76 +423,65 @@ bool __fastcall WarBoardCommonEffectPerformance__Execute_d__12__MoveNext(
         WarBoardCommonEffectPerformance__Execute_d__12_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  WarBoardCommonEffectPerformance__Execute_d__12_o *v3; // x19
+  WarBoardCommonEffectPerformance__Execute_d__12_o *v2; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   int32_t _1__state; // w8
   Il2CppObject *_4__this; // x20
   UnityEngine_Object_o *klass; // x21
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  System_Func_bool__o *v16; // x21
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x3
-  UnityEngine_WaitWhile_o *v20; // x20
+  System_Func_bool__o *v9; // x21
+  UnityEngine_WaitWhile_o *v10; // x20
   PartyOrganizationUtility_o *p__2__current; // x19
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
   bool result; // w0
 
-  v3 = this;
-  if ( (byte_4B14068 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B34FFE & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Func_bool__TypeInfo, method, v2);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
-    sub_1BCA7E0(&UnityEngine_WaitWhile_TypeInfo, v6, v7);
-    this = (WarBoardCommonEffectPerformance__Execute_d__12_o *)sub_1BCA7E0(
+    sub_1BD3458(&System_Func_bool__TypeInfo, method);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BD3458(&UnityEngine_WaitWhile_TypeInfo, v4);
+    this = (WarBoardCommonEffectPerformance__Execute_d__12_o *)sub_1BD3458(
                                                                  &Method_WarBoardCommonEffectPerformance__Execute_b__12_0__,
-                                                                 v8,
-                                                                 v9);
-    byte_4B14068 = 1;
+                                                                 v5);
+    byte_4B34FFE = 1;
   }
-  _1__state = v3->fields.__1__state;
+  _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
   {
     result = 0;
-    v3->fields.__1__state = -1;
+    v2->fields.__1__state = -1;
   }
   else
   {
     if ( _1__state )
       return 0;
-    _4__this = (Il2CppObject *)v3->fields.__4__this;
-    v3->fields.__1__state = -1;
+    _4__this = (Il2CppObject *)v2->fields.__4__this;
+    v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1BCAA3C(this, method);
+      sub_1BD36B4(this, method);
     klass = (UnityEngine_Object_o *)_4__this[4].klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
     {
       return 0;
     }
     else
     {
-      v16 = (System_Func_bool__o *)sub_1BCAA2C(System_Func_bool__TypeInfo, v13, v14, v15);
-      System_Func_bool____ctor(v16, _4__this, Method_WarBoardCommonEffectPerformance__Execute_b__12_0__, 0LL);
-      v20 = (UnityEngine_WaitWhile_o *)sub_1BCAA2C(UnityEngine_WaitWhile_TypeInfo, v17, v18, v19);
-      UnityEngine_WaitWhile___ctor(v20, v16, 0LL);
-      v3->fields.__2__current = (Il2CppObject *)v20;
-      p__2__current = (PartyOrganizationUtility_o *)&v3->fields.__2__current;
-      sub_1BCA784(p__2__current, (int64_t)v20, v22, v23, v24, v25, v26, v27);
+      v9 = (System_Func_bool__o *)sub_1BD36A4(System_Func_bool__TypeInfo);
+      System_Func_bool____ctor(v9, _4__this, Method_WarBoardCommonEffectPerformance__Execute_b__12_0__, 0LL);
+      v10 = (UnityEngine_WaitWhile_o *)sub_1BD36A4(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v10, v9, 0LL);
+      v2->fields.__2__current = (Il2CppObject *)v10;
+      p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
+      sub_1BD33FC(p__2__current, (int64_t)v10, v12, v13, v14, v15, v16, v17);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
     }
@@ -533,18 +503,14 @@ void __fastcall __noreturn WarBoardCommonEffectPerformance__Execute_d__12__Syste
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  __int64 v5; // x3
-  System_NotSupportedException_o *v6; // x19
-  __int64 v7; // x1
-  __int64 v8; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
-  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
-  System_NotSupportedException___ctor(v6, 0LL);
-  v8 = sub_1BCA7F4(&Method_WarBoardCommonEffectPerformance__Execute_d__12_System_Collections_IEnumerator_Reset__, v7);
-  sub_1BCA908(v6, v8);
+  v2 = sub_1BD346C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BD36A4(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1BD346C(&Method_WarBoardCommonEffectPerformance__Execute_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1BD3580(v3, v4);
 }
 
 

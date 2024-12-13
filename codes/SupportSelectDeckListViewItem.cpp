@@ -19,10 +19,10 @@ void __fastcall SupportSelectDeckListViewItem___ctor(
   v7 = this;
   v8 = isSameKind;
   v9 = isPossibleCopy;
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   v7->fields.supportData = data;
   v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 112);
-  sub_1BCA784((PartyOrganizationUtility_o *)v7, (int64_t)data, v10, v11, v12, v13, v14, v15);
+  sub_1BD33FC((PartyOrganizationUtility_o *)v7, (int64_t)data, v10, v11, v12, v13, v14, v15);
   LOBYTE(v7->monitor) = v8;
   BYTE1(v7->monitor) = v9;
 }

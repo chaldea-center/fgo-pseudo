@@ -24,7 +24,7 @@ void __fastcall SyncPositionComponent__SetTarget(
   const MethodInfo *v9; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.targetTransform,
     (int64_t)targetTransform,
     (int64_t)method,
@@ -40,28 +40,27 @@ void __fastcall SyncPositionComponent__SetTarget(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *targetTransform; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v6; // x1
-  UnityEngine_Transform_o *v7; // x8
-  UnityEngine_Transform_o *v8; // x19
-  int v9; // s0
+  __int64 v5; // x1
+  UnityEngine_Transform_o *v6; // x8
+  UnityEngine_Transform_o *v7; // x19
+  int v8; // s0
 
-  if ( (byte_4B1A2BA & 1) == 0 )
+  if ( (byte_4B3B2B9 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B1A2BA = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3B2B9 = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(targetTransform, 0LL, 0LL) )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    v7 = this->fields.targetTransform;
-    if ( !v7 || (v8 = transform, *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Transform__get_position(v7, 0LL), !v8) )
-      sub_1BCAA3C(transform, v6);
-    UnityEngine_Transform__set_position(v8, *(UnityEngine_Vector3_o *)&v9, 0LL);
+    v6 = this->fields.targetTransform;
+    if ( !v6 || (v7 = transform, *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(v6, 0LL), !v7) )
+      sub_1BD36B4(transform, v5);
+    UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
   }
 }

@@ -6,103 +6,99 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  __int64 v10; // x1
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   PartyOrganizationUtility_o *p_itemEntity; // x20
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
   Il2CppObject *Instance; // x0
-  __int64 v35; // x1
+  __int64 v31; // x1
   int32_t giftType; // w8
   Il2CppObject *Entity; // x1
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
 
-  if ( (byte_4B19CF8 & 1) == 0 )
+  if ( (byte_4B3ACE8 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index, e);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_ServantMaster___, v7, v8);
-    sub_1BCA7E0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v9, v10);
-    sub_1BCA7E0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11, v12);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13, v14);
-    byte_4B19CF8 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
+    sub_1BD3458(&Method_DataManager_GetMasterData_ServantMaster___, v7);
+    sub_1BD3458(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    sub_1BD3458(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_4B3ACE8 = 1;
   }
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.entity = e;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.entity, (int64_t)e, v15, v16, v17, v18, v19, v20);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.entity, (int64_t)e, v11, v12, v13, v14, v15, v16);
   this->fields.itemEntity = 0LL;
   p_itemEntity = (PartyOrganizationUtility_o *)&this->fields.itemEntity;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.itemEntity, 0LL, v22, v23, v24, v25, v26, v27);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.itemEntity, 0LL, v18, v19, v20, v21, v22, v23);
   this->fields.svtEntity = 0LL;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.svtEntity, 0LL, v28, v29, v30, v31, v32, v33);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.svtEntity, 0LL, v24, v25, v26, v27, v28, v29);
   if ( !e )
     goto LABEL_15;
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0LL);
   giftType = e->fields.giftType;
   if ( (unsigned int)(giftType - 6) < 2 || giftType == 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    e->fields.objectId,
-                   (const MethodInfo_31B2E40 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                   (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         p_itemEntity = (PartyOrganizationUtility_o *)&this->fields.svtEntity;
         this->fields.svtEntity = (struct ServantEntity_o *)Entity;
         goto LABEL_13;
       }
     }
 LABEL_15:
-    sub_1BCAA3C(Instance, v35);
+    sub_1BD36B4(Instance, v31);
   }
   if ( giftType == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ItemMaster___);
+                   (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Instance )
       {
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    e->fields.objectId,
-                   (const MethodInfo_31B2E40 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                   (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         p_itemEntity->klass = (PartyOrganizationUtility_c *)Entity;
 LABEL_13:
-        sub_1BCA784(p_itemEntity, (int64_t)Entity, v38, v39, v40, v41, v42, v43);
+        sub_1BD33FC(p_itemEntity, (int64_t)Entity, v34, v35, v36, v37, v38, v39);
         return;
       }
     }
@@ -123,14 +119,12 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B19CF9 & 1) == 0 )
+  if ( (byte_4B3ACE9 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_10862/*"Present "*/, method, v2);
-    byte_4B19CF9 = 1;
+    sub_1BD3458(&StringLiteral_10879/*"Present "*/, method);
+    byte_4B3ACE9 = 1;
   }
-  return System_String__Concat_62401220((System_String_o *)StringLiteral_10862/*"Present "*/, this->fields.presentName, 0LL);
+  return System_String__Concat_62525248((System_String_o *)StringLiteral_10879/*"Present "*/, this->fields.presentName, 0LL);
 }
 
 

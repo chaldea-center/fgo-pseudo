@@ -1,15 +1,13 @@
 void __fastcall SvtMultiPortraitEntity___ctor(SvtMultiPortraitEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16D20 & 1) == 0 )
+  if ( (byte_4B37CDA & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16D20 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37CDA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,17 +19,17 @@ System_String_o *__fastcall SvtMultiPortraitEntity__CreatePK(
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_4B16D1F & 1) == 0 )
+  if ( (byte_4B37CD9 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&limitCount, *(_QWORD *)&idx);
-    byte_4B16D1F = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&limitCount);
+    byte_4B37CD9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            limitCount,
            idx,
            type,
-           (const MethodInfo_2F11804 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2F301F8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

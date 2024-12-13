@@ -10,25 +10,22 @@ void __fastcall FlashingIconComponent__Awake(FlashingIconComponent_o *this, cons
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
 }
 
 
 void __fastcall FlashingIconComponent__Clear(FlashingIconComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   UnityEngine_Behaviour_o *widget; // x0
-  __int64 v7; // x1
   Il2CppObject *Instance; // x20
 
-  if ( (byte_4B1568B & 1) == 0 )
+  if ( (byte_4B36626 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v4, v5);
-    byte_4B1568B = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v3);
+    byte_4B36626 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -39,19 +36,19 @@ void __fastcall FlashingIconComponent__Clear(FlashingIconComponent_o *this, cons
     if ( !widget )
       goto LABEL_12;
     UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
       if ( widget )
       {
         FlashingIconManager__RemoveIcon((FlashingIconManager_o *)widget, this, 0LL);
         return;
       }
 LABEL_12:
-      sub_1BCAA3C(widget, method);
+      sub_1BD36B4(widget, method);
     }
   }
 }
@@ -66,18 +63,15 @@ void __fastcall FlashingIconComponent__OnDestroy(FlashingIconComponent_o *this, 
 
 void __fastcall FlashingIconComponent__Set(FlashingIconComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   UnityEngine_Behaviour_o *widget; // x0
-  __int64 v7; // x1
   Il2CppObject *Instance; // x20
 
-  if ( (byte_4B1568C & 1) == 0 )
+  if ( (byte_4B36627 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v4, v5);
-    byte_4B1568C = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v3);
+    byte_4B36627 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -88,19 +82,19 @@ void __fastcall FlashingIconComponent__Set(FlashingIconComponent_o *this, const 
     if ( !widget )
       goto LABEL_12;
     UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
       if ( widget )
       {
         FlashingIconManager__AddIcon((FlashingIconManager_o *)widget, this, 0, 0.0, 0LL);
         return;
       }
 LABEL_12:
-      sub_1BCAA3C(widget, method);
+      sub_1BD36B4(widget, method);
     }
   }
 }
@@ -108,18 +102,15 @@ LABEL_12:
 
 void __fastcall FlashingIconComponent__SetFast(FlashingIconComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   UnityEngine_Behaviour_o *widget; // x0
-  __int64 v7; // x1
   Il2CppObject *Instance; // x20
 
-  if ( (byte_4B1568E & 1) == 0 )
+  if ( (byte_4B36629 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v4, v5);
-    byte_4B1568E = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v3);
+    byte_4B36629 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -130,26 +121,26 @@ void __fastcall FlashingIconComponent__SetFast(FlashingIconComponent_o *this, co
     if ( !widget )
       goto LABEL_12;
     UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
       if ( widget )
       {
         FlashingIconManager__AddIcon((FlashingIconManager_o *)widget, this, 1, 0.0, 0LL);
         return;
       }
 LABEL_12:
-      sub_1BCAA3C(widget, method);
+      sub_1BD36B4(widget, method);
     }
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FlashingIconComponent__SetFast_38836996(
+void __fastcall FlashingIconComponent__SetFast_38905880(
         FlashingIconComponent_o *this,
         bool isDisp,
         const MethodInfo *method)
@@ -162,7 +153,7 @@ void __fastcall FlashingIconComponent__SetFast_38836996(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FlashingIconComponent__Set_38836528(
+void __fastcall FlashingIconComponent__Set_38905412(
         FlashingIconComponent_o *this,
         bool isDisp,
         const MethodInfo *method)
@@ -174,23 +165,20 @@ void __fastcall FlashingIconComponent__Set_38836528(
 }
 
 
-void __fastcall FlashingIconComponent__Set_38836540(
+void __fastcall FlashingIconComponent__Set_38905424(
         FlashingIconComponent_o *this,
         float cycleTime,
         const MethodInfo *method)
 {
-  __int64 v3; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v5; // x1
   UnityEngine_Behaviour_o *widget; // x0
-  __int64 v9; // x1
   Il2CppObject *Instance; // x20
 
-  if ( (byte_4B1568D & 1) == 0 )
+  if ( (byte_4B36628 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v3);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v6, v7);
-    byte_4B1568D = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__, v5);
+    byte_4B36628 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -201,19 +189,19 @@ void __fastcall FlashingIconComponent__Set_38836540(
     if ( !widget )
       goto LABEL_12;
     UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
+      widget = (UnityEngine_Behaviour_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_FlashingIconManager__get_Instance__);
       if ( widget )
       {
         FlashingIconManager__AddIcon((FlashingIconManager_o *)widget, this, 0, cycleTime, 0LL);
         return;
       }
 LABEL_12:
-      sub_1BCAA3C(widget, method);
+      sub_1BD36B4(widget, method);
     }
   }
 }
@@ -222,32 +210,31 @@ LABEL_12:
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall FlashingIconComponent__UpdateIcon(FlashingIconComponent_o *this, float alpha, const MethodInfo *method)
 {
-  __int64 v3; // x2
-  long double v4; // q8
+  long double v3; // q8
   UnityEngine_Object_o *widget; // x20
-  __int64 v7; // x1
-  bool v8; // w20
-  struct UIWidget_o *v9; // x0
+  __int64 v6; // x1
+  bool v7; // w20
+  struct UIWidget_o *v8; // x0
 
-  v4 = *(long double *)&alpha;
-  if ( (byte_4B1568F & 1) == 0 )
+  v3 = *(long double *)&alpha;
+  if ( (byte_4B3662A & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v3);
-    byte_4B1568F = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3662A = 1;
   }
   widget = (UnityEngine_Object_o *)this->fields.widget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  v8 = UnityEngine_Object__op_Equality(widget, 0LL, 0LL);
-  if ( !v8 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v7 = UnityEngine_Object__op_Equality(widget, 0LL, 0LL);
+  if ( !v7 )
   {
-    v9 = this->fields.widget;
-    if ( !v9 )
-      sub_1BCAA3C(0LL, v7);
-    ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, long double))v9->klass->vtable._8_set_alpha.method)(
-      v9,
-      v9->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-      v4);
+    v8 = this->fields.widget;
+    if ( !v8 )
+      sub_1BD36B4(0LL, v6);
+    ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, long double))v8->klass->vtable._8_set_alpha.method)(
+      v8,
+      v8->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+      v3);
   }
-  return !v8;
+  return !v7;
 }

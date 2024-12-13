@@ -18,33 +18,32 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
 {
   ShortestDistanceFromEnemyServant_o *v10; // x19
   __int64 v11; // x1
-  __int64 v12; // x2
-  int32_t squareIndex_k__BackingField; // w20
+  int32_t squareIndex_k__BackingField; // w22
   WarBoardPieceData_o *EnemyPieceSquareIndex; // x0
-  WarBoardPieceData_o *v15; // x20
-  int32_t v16; // w22
-  int32_t v17; // w21
-  ShortestDistanceFromEnemyServant_c *klass; // x21
+  WarBoardPieceData_o *v14; // x22
+  int32_t v15; // w21
+  int32_t v16; // w20
+  System_Int32_array *v17; // x0
+  __int64 v18; // x20
+  float BreakPoint; // s0
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v10 = this;
-  if ( (byte_4B13C80 & 1) == 0 )
+  if ( (byte_4B34C16 & 1) == 0 )
   {
-    sub_1BCA7E0(&AStarSearch_TypeInfo, *(_QWORD *)&forceId, calcSquare);
-    this = (ShortestDistanceFromEnemyServant_o *)sub_1BCA7E0(&WarBoardAIManager_TypeInfo, v11, v12);
-    byte_4B13C80 = 1;
+    sub_1BD3458(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    this = (ShortestDistanceFromEnemyServant_o *)sub_1BD3458(&WarBoardAIManager_TypeInfo, v11);
+    byte_4B34C16 = 1;
   }
   if ( !targetSquare )
     goto LABEL_18;
   squareIndex_k__BackingField = targetSquare->fields._squareIndex_k__BackingField;
   if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, *(_QWORD *)&forceId);
-  EnemyPieceSquareIndex = WarBoardAIManager__GetEnemyPieceSquareIndex(
-                            squareIndex_k__BackingField,
-                            *(const MethodInfo **)&forceId);
+    j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
+  EnemyPieceSquareIndex = WarBoardAIManager__GetEnemyPieceSquareIndex(squareIndex_k__BackingField, 0LL);
   if ( EnemyPieceSquareIndex )
   {
-    v15 = EnemyPieceSquareIndex;
+    v14 = EnemyPieceSquareIndex;
     if ( EnemyPieceSquareIndex->fields._forceId_k__BackingField != forceId )
     {
       this = (ShortestDistanceFromEnemyServant_o *)WarBoardPieceData__get_isMaster(EnemyPieceSquareIndex, 0LL);
@@ -52,28 +51,25 @@ float __fastcall ShortestDistanceFromEnemyServant__GetRatingBase(
       {
         if ( !calcSquare )
           goto LABEL_18;
-        v16 = calcSquare->fields._squareIndex_k__BackingField;
-        v17 = targetSquare->fields._squareIndex_k__BackingField;
+        v15 = calcSquare->fields._squareIndex_k__BackingField;
+        v16 = targetSquare->fields._squareIndex_k__BackingField;
         if ( !AStarSearch_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo, *(_QWORD *)&forceId);
-        this = (ShortestDistanceFromEnemyServant_o *)AStarSearch__RouteSearch(v15, v16, v17, 0, 0LL, 0LL);
-        if ( this )
+          j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
+        v17 = AStarSearch__RouteSearch(v14, v15, v16, 0, 0LL, 0LL);
+        if ( v17 )
         {
-          klass = this[1].klass;
+          v18 = *(_QWORD *)&v17->max_length;
           if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo, *(_QWORD *)&forceId);
+            j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
+          BreakPoint = WarBoardAIManager__GetBreakPoint(v14, 0LL);
           ratingBase = v10->fields.ratingBase;
           if ( ratingBase )
             return fmaxf(
-                     (float)((float)(1.0
-                                   - (float)((float)(v15->fields._breakPoint_k__BackingField + 1)
-                                           / (float)(v15->fields._breakPointMax_k__BackingField + 1)))
-                           * (float)ratingBase->fields.adjustmentValueB)
-                   + (float)(ratingBase->fields.adjustmentValueA1
-                           - ratingBase->fields.adjustmentValueA2 * ((int)klass - 1)),
+                     (float)((float)(1.0 - BreakPoint) * (float)ratingBase->fields.adjustmentValueB)
+                   + (float)(ratingBase->fields.adjustmentValueA1 - ratingBase->fields.adjustmentValueA2 * (v18 - 1)),
                      0.0);
 LABEL_18:
-          sub_1BCAA3C(this, *(_QWORD *)&forceId);
+          sub_1BD36B4(this, *(_QWORD *)&forceId);
         }
       }
     }

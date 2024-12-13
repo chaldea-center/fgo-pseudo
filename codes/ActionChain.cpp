@@ -3,19 +3,19 @@ void __fastcall ActionChain___ctor(
         ChainableActionBase_array *chainableActions,
         const MethodInfo *method)
 {
-  if ( (byte_4B1A8A5 & 1) == 0 )
+  if ( (byte_4B3B8A5 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_ActionChainBase_ChainableActionBase___ctor__, chainableActions, method);
-    byte_4B1A8A5 = 1;
+    sub_1BD3458(&Method_ActionChainBase_ChainableActionBase___ctor__, chainableActions);
+    byte_4B3B8A5 = 1;
   }
   ActionChainBase_object____ctor(
     (ActionChainBase_T__o *)this,
     (System_Object_array *)chainableActions,
-    (const MethodInfo_3221C14 *)Method_ActionChainBase_ChainableActionBase___ctor__);
+    (const MethodInfo_3240D48 *)Method_ActionChainBase_ChainableActionBase___ctor__);
 }
 
 
-void __fastcall ActionChain___ctor_47118216(
+void __fastcall ActionChain___ctor_47243408(
         ActionChain_o *this,
         System_Action_Action__array *actions,
         const MethodInfo *method)
@@ -37,16 +37,16 @@ ActionChain_o *__fastcall ActionChain__AddRange(
 {
   System_Object_array *v5; // x0
 
-  if ( (byte_4B1A8A6 & 1) == 0 )
+  if ( (byte_4B3B8A6 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_ActionChainBase_ChainableActionBase__AddRange__, actions, method);
-    byte_4B1A8A6 = 1;
+    sub_1BD3458(&Method_ActionChainBase_ChainableActionBase__AddRange__, actions);
+    byte_4B3B8A6 = 1;
   }
   v5 = (System_Object_array *)SimpleChainableAction__ConvertToChainableActionArray(actions, (const MethodInfo *)actions);
   ActionChainBase_object___AddRange(
     (ActionChainBase_T__o *)this,
     v5,
-    (const MethodInfo_3221CC8 *)Method_ActionChainBase_ChainableActionBase__AddRange__);
+    (const MethodInfo_3240DFC *)Method_ActionChainBase_ChainableActionBase__AddRange__);
   return this;
 }
 
@@ -59,7 +59,7 @@ void __fastcall ActionChain__ExecuteCurrentAction(
   ChainableActionBase_c *klass; // x8
 
   if ( !action )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   if ( !action->fields._IsExecuted_k__BackingField )
   {
     klass = action->klass;

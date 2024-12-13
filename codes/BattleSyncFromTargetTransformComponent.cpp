@@ -11,32 +11,31 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
         BattleSyncFromTargetTransformComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *targetObj; // x20
-  __int64 v5; // x1
+  __int64 v4; // x1
   BattleSyncTransformComponent_SyncData_o *syncData; // x0
-  BattleSyncTransformComponent_SyncData_o *v7; // x21
-  UnityEngine_Transform_o *v8; // x20
-  int v9; // s0
-  int v12; // s0
-  BattleSyncTransformComponent_SyncData_o *v15; // x21
-  UnityEngine_Transform_o *v16; // x20
-  int v17; // s0
-  int v21; // s0
-  UnityEngine_Transform_o *v25; // x8
-  BattleSyncTransformComponent_SyncData_o *v26; // x19
-  UnityEngine_Transform_o *v27; // x20
-  int v28; // s0
-  int v31; // s0
+  BattleSyncTransformComponent_SyncData_o *v6; // x21
+  UnityEngine_Transform_o *v7; // x20
+  int v8; // s0
+  int v11; // s0
+  BattleSyncTransformComponent_SyncData_o *v14; // x21
+  UnityEngine_Transform_o *v15; // x20
+  int v16; // s0
+  int v20; // s0
+  UnityEngine_Transform_o *v24; // x8
+  BattleSyncTransformComponent_SyncData_o *v25; // x19
+  UnityEngine_Transform_o *v26; // x20
+  int v27; // s0
+  int v30; // s0
 
-  if ( (byte_4B1934D & 1) == 0 )
+  if ( (byte_4B3A32E & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B1934D = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3A32E = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(targetObj, 0LL, 0LL) )
   {
     syncData = this->fields.syncData;
@@ -49,18 +48,18 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
                                                               0LL);
       if ( !this->fields.targetObj )
         goto LABEL_25;
-      v7 = this->fields.syncData;
-      v8 = (UnityEngine_Transform_o *)syncData;
-      *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Transform__get_position(this->fields.targetObj, 0LL);
+      v6 = this->fields.syncData;
+      v7 = (UnityEngine_Transform_o *)syncData;
+      *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(this->fields.targetObj, 0LL);
+      if ( !v6 )
+        goto LABEL_25;
+      *(UnityEngine_Vector3_o *)&v11 = BattleSyncTransformComponent_SyncData__GetFixPosition(
+                                         v6,
+                                         *(UnityEngine_Vector3_o *)&v8,
+                                         0LL);
       if ( !v7 )
         goto LABEL_25;
-      *(UnityEngine_Vector3_o *)&v12 = BattleSyncTransformComponent_SyncData__GetFixPosition(
-                                         v7,
-                                         *(UnityEngine_Vector3_o *)&v9,
-                                         0LL);
-      if ( !v8 )
-        goto LABEL_25;
-      UnityEngine_Transform__set_position(v8, *(UnityEngine_Vector3_o *)&v12, 0LL);
+      UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v11, 0LL);
     }
     syncData = this->fields.syncData;
     if ( !syncData )
@@ -72,18 +71,18 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
                                                               0LL);
       if ( !this->fields.targetObj )
         goto LABEL_25;
-      v15 = this->fields.syncData;
-      v16 = (UnityEngine_Transform_o *)syncData;
-      *(UnityEngine_Quaternion_o *)&v17 = UnityEngine_Transform__get_rotation(this->fields.targetObj, 0LL);
+      v14 = this->fields.syncData;
+      v15 = (UnityEngine_Transform_o *)syncData;
+      *(UnityEngine_Quaternion_o *)&v16 = UnityEngine_Transform__get_rotation(this->fields.targetObj, 0LL);
+      if ( !v14 )
+        goto LABEL_25;
+      *(UnityEngine_Quaternion_o *)&v20 = BattleSyncTransformComponent_SyncData__GetFixRotation(
+                                            v14,
+                                            *(UnityEngine_Quaternion_o *)&v16,
+                                            0LL);
       if ( !v15 )
         goto LABEL_25;
-      *(UnityEngine_Quaternion_o *)&v21 = BattleSyncTransformComponent_SyncData__GetFixRotation(
-                                            v15,
-                                            *(UnityEngine_Quaternion_o *)&v17,
-                                            0LL);
-      if ( !v16 )
-        goto LABEL_25;
-      UnityEngine_Transform__set_rotation(v16, *(UnityEngine_Quaternion_o *)&v21, 0LL);
+      UnityEngine_Transform__set_rotation(v15, *(UnityEngine_Quaternion_o *)&v20, 0LL);
     }
     syncData = this->fields.syncData;
     if ( !syncData )
@@ -93,27 +92,27 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
       syncData = (BattleSyncTransformComponent_SyncData_o *)UnityEngine_Component__get_transform(
                                                               (UnityEngine_Component_o *)this,
                                                               0LL);
-      v25 = this->fields.targetObj;
-      if ( v25 )
+      v24 = this->fields.targetObj;
+      if ( v24 )
       {
-        v26 = this->fields.syncData;
-        v27 = (UnityEngine_Transform_o *)syncData;
-        *(UnityEngine_Vector3_o *)&v28 = UnityEngine_Transform__get_localScale(v25, 0LL);
-        if ( v26 )
+        v25 = this->fields.syncData;
+        v26 = (UnityEngine_Transform_o *)syncData;
+        *(UnityEngine_Vector3_o *)&v27 = UnityEngine_Transform__get_localScale(v24, 0LL);
+        if ( v25 )
         {
-          *(UnityEngine_Vector3_o *)&v31 = BattleSyncTransformComponent_SyncData__GetFixScale(
-                                             v26,
-                                             *(UnityEngine_Vector3_o *)&v28,
+          *(UnityEngine_Vector3_o *)&v30 = BattleSyncTransformComponent_SyncData__GetFixScale(
+                                             v25,
+                                             *(UnityEngine_Vector3_o *)&v27,
                                              0LL);
-          if ( v27 )
+          if ( v26 )
           {
-            UnityEngine_Transform__set_localScale(v27, *(UnityEngine_Vector3_o *)&v31, 0LL);
+            UnityEngine_Transform__set_localScale(v26, *(UnityEngine_Vector3_o *)&v30, 0LL);
             return;
           }
         }
       }
 LABEL_25:
-      sub_1BCAA3C(syncData, v5);
+      sub_1BD36B4(syncData, v4);
     }
   }
 }

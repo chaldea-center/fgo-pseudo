@@ -13,7 +13,7 @@ void __fastcall BattleLogicServantTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actionType);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_1BCAA3C(v7, v8);
+    sub_1BD36B4(v7, v8);
   if ( svtData->fields.isEnemy )
     v10 = 3;
   else

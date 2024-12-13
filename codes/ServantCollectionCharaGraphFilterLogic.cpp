@@ -36,15 +36,15 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
   __int64 v12; // x1
   ListViewSort_o *v13; // x20
 
-  if ( (byte_4B15544 & 1) == 0 )
+  if ( (byte_4B364DF & 1) == 0 )
   {
-    sub_1BCA7E0(&FilterKindList_TypeInfo, method, v2);
-    byte_4B15544 = 1;
+    sub_1BD3458(&FilterKindList_TypeInfo, method);
+    byte_4B364DF = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
     v4 = FilterKindList_TypeInfo;
   }
   if ( !CharaGraphFilterLogicBase__IsAllFilterOff(
@@ -57,12 +57,12 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
     if ( ListViewItem && sort )
       return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
 LABEL_16:
-    sub_1BCAA3C(ListViewItem, v12);
+    sub_1BD36B4(ListViewItem, v12);
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo, v5);
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
     v7 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(
@@ -97,10 +97,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   ServantCollectionCharaGraphFilterLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4B15543 & 1) == 0 )
+  if ( (byte_4B364DE & 1) == 0 )
   {
-    sub_1BCA7E0(&CharaGraphServantCollectionListViewItem_TypeInfo, method, v2);
-    byte_4B15543 = 1;
+    sub_1BD3458(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
+    byte_4B364DE = 1;
   }
   p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -114,9 +114,9 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   {
     item = this->fields.item;
     p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
-    sub_1BCA784(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
+    sub_1BD33FC(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1BCACFC(this->fields.item);
+  sub_1BD3974(this->fields.item);
   return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
 }

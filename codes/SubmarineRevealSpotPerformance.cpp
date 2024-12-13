@@ -12,7 +12,7 @@ void __fastcall SubmarineRevealSpotPerformance___ctor(
 
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0LL);
   this->fields.spot = spot;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.spot, (int64_t)spot, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.spot, (int64_t)spot, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -20,27 +20,25 @@ System_Collections_IEnumerator_o *__fastcall SubmarineRevealSpotPerformance__Exe
         SubmarineRevealSpotPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x20
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  __int64 v3; // x20
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B12E1E & 1) == 0 )
+  if ( (byte_4B33DA8 & 1) == 0 )
   {
-    sub_1BCA7E0(&SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo, method, v2);
-    byte_4B12E1E = 1;
+    sub_1BD3458(&SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo, method);
+    byte_4B33DA8 = 1;
   }
-  v5 = sub_1BCAA2C(SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo, method, v2, v3);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  *(_DWORD *)(v5 + 16) = 0;
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v5;
+  v3 = sub_1BD36A4(SubmarineRevealSpotPerformance__Execute_d__4_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = 0;
+  *(_QWORD *)(v3 + 32) = this;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -48,31 +46,26 @@ void __fastcall SubmarineRevealSpotPerformance__OnStart(
         SubmarineRevealSpotPerformance_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   SrcSpotBasePrefab_o *spot; // x20
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x3
-  System_Action_o *v10; // x21
-  __int64 v11; // x0
-  __int64 v12; // x1
 
-  if ( (byte_4B12E1D & 1) == 0 )
+  if ( (byte_4B33DA7 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__, v4, v5);
-    byte_4B12E1D = 1;
+    sub_1BD3458(&System_Action_TypeInfo, method);
+    sub_1BD3458(&Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__, v3);
+    byte_4B33DA7 = 1;
   }
   SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0LL);
   this->fields.spotAnimFinished = 0;
   spot = this->fields.spot;
-  v10 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v7, v8, v9);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__, 0LL);
+  v5 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineRevealSpotPerformance__OnStart_b__3_0__, 0LL);
   if ( !spot )
-    sub_1BCAA3C(v11, v12);
-  SrcSpotBasePrefab__SetState(spot, 3, v10, 0LL);
+    sub_1BD36B4(v6, v7);
+  SrcSpotBasePrefab__SetState(spot, 3, v5, 0LL);
 }
 
 
@@ -93,7 +86,7 @@ void __fastcall SubmarineRevealSpotPerformance___OnStart_b__3_0(
 
   spot = this->fields.spot;
   if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0LL )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   mMapCtrl_SpotInfo->fields.dispType = 2;
   this->fields.spotAnimFinished = 1;
 }
@@ -113,40 +106,33 @@ bool __fastcall SubmarineRevealSpotPerformance__Execute_d__4__MoveNext(
         SubmarineRevealSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
   int32_t _1__state; // w8
   bool result; // w0
   Il2CppObject *_4__this; // x20
-  System_Func_bool__o *v12; // x21
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  UnityEngine_WaitUntil_o *v16; // x20
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  int32_t v23; // w8
+  System_Func_bool__o *v8; // x21
+  UnityEngine_WaitUntil_o *v9; // x20
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  int32_t v16; // w8
 
-  if ( (byte_4B12E1F & 1) == 0 )
+  if ( (byte_4B33DA9 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Func_bool__TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_SubmarineRevealSpotPerformance__Execute_b__4_0__, v5, v6);
-    sub_1BCA7E0(&UnityEngine_WaitUntil_TypeInfo, v7, v8);
-    byte_4B12E1F = 1;
+    sub_1BD3458(&System_Func_bool__TypeInfo, method);
+    sub_1BD3458(&Method_SubmarineRevealSpotPerformance__Execute_b__4_0__, v3);
+    sub_1BD3458(&UnityEngine_WaitUntil_TypeInfo, v4);
+    byte_4B33DA9 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
   if ( _1__state == 1 )
   {
-    v23 = -1;
+    v16 = -1;
   }
   else
   {
@@ -154,16 +140,16 @@ bool __fastcall SubmarineRevealSpotPerformance__Execute_d__4__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v12 = (System_Func_bool__o *)sub_1BCAA2C(System_Func_bool__TypeInfo, method, v2, v3);
-    System_Func_bool____ctor(v12, _4__this, Method_SubmarineRevealSpotPerformance__Execute_b__4_0__, 0LL);
-    v16 = (UnityEngine_WaitUntil_o *)sub_1BCAA2C(UnityEngine_WaitUntil_TypeInfo, v13, v14, v15);
-    UnityEngine_WaitUntil___ctor(v16, v12, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v16;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.__2__current, (int64_t)v16, v17, v18, v19, v20, v21, v22);
-    v23 = 1;
+    v8 = (System_Func_bool__o *)sub_1BD36A4(System_Func_bool__TypeInfo);
+    System_Func_bool____ctor(v8, _4__this, Method_SubmarineRevealSpotPerformance__Execute_b__4_0__, 0LL);
+    v9 = (UnityEngine_WaitUntil_o *)sub_1BD36A4(UnityEngine_WaitUntil_TypeInfo);
+    UnityEngine_WaitUntil___ctor(v9, v8, 0LL);
+    this->fields.__2__current = (Il2CppObject *)v9;
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.__2__current, (int64_t)v9, v10, v11, v12, v13, v14, v15);
+    v16 = 1;
     result = 1;
   }
-  this->fields.__1__state = v23;
+  this->fields.__1__state = v16;
   return result;
 }
 
@@ -181,18 +167,14 @@ void __fastcall __noreturn SubmarineRevealSpotPerformance__Execute_d__4__System_
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  __int64 v3; // x1
-  __int64 v4; // x2
-  __int64 v5; // x3
-  System_NotSupportedException_o *v6; // x19
-  __int64 v7; // x1
-  __int64 v8; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
 
-  v2 = sub_1BCA7F4(&System_NotSupportedException_TypeInfo, method);
-  v6 = (System_NotSupportedException_o *)sub_1BCAA2C(v2, v3, v4, v5);
-  System_NotSupportedException___ctor(v6, 0LL);
-  v8 = sub_1BCA7F4(&Method_SubmarineRevealSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__, v7);
-  sub_1BCA908(v6, v8);
+  v2 = sub_1BD346C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BD36A4(v2);
+  System_NotSupportedException___ctor(v3, 0LL);
+  v4 = sub_1BD346C(&Method_SubmarineRevealSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1BD3580(v3, v4);
 }
 
 

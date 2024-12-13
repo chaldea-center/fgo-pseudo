@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SelectedUserSvtCoin___ctor(
         SelectedUserSvtCoin_o *this,
         CoinRoomCoinIconObject_o *iconObject,
@@ -19,32 +18,32 @@ void __fastcall SelectedUserSvtCoin___ctor(
   __int64 v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4B197F7 & 1) == 0 )
+  if ( (byte_4B3A7DC & 1) == 0 )
   {
-    sub_1BCA7E0(&CoinRoomCoinIconItem_TypeInfo, iconObject, *(_QWORD *)&num);
-    byte_4B197F7 = 1;
+    sub_1BD3458(&CoinRoomCoinIconItem_TypeInfo, iconObject);
+    byte_4B3A7DC = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !iconObject )
 LABEL_9:
-    sub_1BCAA3C(v7, v8);
+    sub_1BD36B4(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
-    sub_1BCAA3C(v18, v19);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
+    sub_1BD36B4(v18, v19);
   }
   methodPtr_low = LOBYTE(CoinRoomCoinIconItem_TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1BCACFC(iconObject->fields.linkItem);
+    sub_1BD3974(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1BCA784((PartyOrganizationUtility_o *)p_fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
+  sub_1BD33FC((PartyOrganizationUtility_o *)p_fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

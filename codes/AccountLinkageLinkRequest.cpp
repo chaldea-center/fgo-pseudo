@@ -5,22 +5,20 @@ void __fastcall AccountLinkageLinkRequest__beginRequest(
 {
   const MethodInfo *v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x2
+  const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
-  const MethodInfo *v9; // x1
-  __int64 v10; // x1
 
-  if ( (byte_4B179CD & 1) == 0 )
+  if ( (byte_4B38999 & 1) == 0 )
   {
-    sub_1BCA7E0(&NetworkManager_TypeInfo, accountLinkageToken, method);
-    sub_1BCA7E0(&StringLiteral_16809/*"accountLinkageToken"*/, v6, v7);
-    byte_4B179CD = 1;
+    sub_1BD3458(&NetworkManager_TypeInfo, accountLinkageToken);
+    sub_1BD3458(&StringLiteral_16830/*"accountLinkageToken"*/, v6);
+    byte_4B38999 = 1;
   }
-  RequestBase__addField_41862348((RequestBase_o *)this, (System_String_o *)StringLiteral_16809/*"accountLinkageToken"*/, accountLinkageToken, v3);
-  RequestBase__addBaseField((RequestBase_o *)this, v8);
-  RequestBase__WriteParameter((RequestBase_o *)this, v9);
+  RequestBase__addField_41965080((RequestBase_o *)this, (System_String_o *)StringLiteral_16830/*"accountLinkageToken"*/, accountLinkageToken, v3);
+  RequestBase__addBaseField((RequestBase_o *)this, v7);
+  RequestBase__WriteParameter((RequestBase_o *)this, v8);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v10);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__RequestStart((RequestBase_o *)this, 0LL);
 }
 
@@ -29,21 +27,19 @@ System_String_o *__fastcall AccountLinkageLinkRequest__getURL(
         AccountLinkageLinkRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x1
-  __int64 v4; // x2
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B179CC & 1) == 0 )
+  if ( (byte_4B38998 & 1) == 0 )
   {
-    sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
-    sub_1BCA7E0(&StringLiteral_16806/*"accountLinkageAnx/link"*/, v3, v4);
-    byte_4B179CC = 1;
+    sub_1BD3458(&NetworkManager_TypeInfo, method);
+    sub_1BD3458(&StringLiteral_16827/*"accountLinkageAnx/link"*/, v2);
+    byte_4B38998 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62401220(BaseUrl, (System_String_o *)StringLiteral_16806/*"accountLinkageAnx/link"*/, 0LL);
+  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_16827/*"accountLinkageAnx/link"*/, 0LL);
 }
 
 
@@ -54,43 +50,42 @@ void __fastcall AccountLinkageLinkRequest__requestCompleted(
 {
   AccountLinkageLinkRequest_o *v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
-  bool v7; // w0
+  bool v6; // w0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v9; // x9
+  __int64 *v8; // x9
 
   v4 = this;
-  if ( (byte_4B179CE & 1) == 0 )
+  if ( (byte_4B3899A & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_22465/*"ok"*/, responseList, method);
-    this = (AccountLinkageLinkRequest_o *)sub_1BCA7E0(&StringLiteral_22292/*"ng"*/, v5, v6);
-    byte_4B179CE = 1;
+    sub_1BD3458(&StringLiteral_22498/*"ok"*/, responseList);
+    this = (AccountLinkageLinkRequest_o *)sub_1BD3458(&StringLiteral_22325/*"ng"*/, v5);
+    byte_4B3899A = 1;
   }
   if ( !responseList )
     goto LABEL_13;
   if ( !responseList->max_length )
-    sub_1BCAA44(this, responseList);
+    sub_1BD36BC(this, responseList);
   this = (AccountLinkageLinkRequest_o *)responseList->m_Items[0];
   if ( !this )
 LABEL_13:
-    sub_1BCAA3C(this, responseList);
-  v7 = ResponseData__checkError_41952396((ResponseData_o *)this, 0LL);
+    sub_1BD36B4(this, responseList);
+  v6 = ResponseData__checkError_42055668((ResponseData_o *)this, 0LL);
   CallBack = v4->fields.CallBack;
-  if ( v7 )
+  if ( v6 )
   {
     if ( CallBack )
     {
-      v9 = &StringLiteral_22465/*"ok"*/;
+      v8 = &StringLiteral_22498/*"ok"*/;
 LABEL_11:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        *v9,
+        *v8,
         *(_QWORD *)&CallBack->fields.extra_arg);
     }
   }
   else if ( CallBack )
   {
-    v9 = &StringLiteral_22292/*"ng"*/;
+    v8 = &StringLiteral_22325/*"ng"*/;
     goto LABEL_11;
   }
 }

@@ -5,23 +5,22 @@ void __fastcall FriendMessageHideSyncRequest__beginRequest(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x1
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4B17AF7 & 1) == 0 )
+  if ( (byte_4B38AC6 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_20128/*"hideUserIds"*/, hideUserIds, unHideUserIds);
-    sub_1BCA7E0(&StringLiteral_24405/*"unHideUserIds"*/, v7, v8);
-    byte_4B17AF7 = 1;
+    sub_1BD3458(&StringLiteral_20158/*"hideUserIds"*/, hideUserIds);
+    sub_1BD3458(&StringLiteral_24440/*"unHideUserIds"*/, v7);
+    byte_4B38AC6 = 1;
   }
-  RequestBase__addField_41870840(
+  RequestBase__addField_41973572(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_20128/*"hideUserIds"*/,
+    (System_String_o *)StringLiteral_20158/*"hideUserIds"*/,
     &hideUserIds->obj,
     method);
-  RequestBase__addField_41870840((RequestBase_o *)this, (System_String_o *)StringLiteral_24405/*"unHideUserIds"*/, &unHideUserIds->obj, v9);
-  RequestBase__beginRequest((RequestBase_o *)this, v10);
+  RequestBase__addField_41973572((RequestBase_o *)this, (System_String_o *)StringLiteral_24440/*"unHideUserIds"*/, &unHideUserIds->obj, v8);
+  RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
 
@@ -29,21 +28,19 @@ System_String_o *__fastcall FriendMessageHideSyncRequest__getURL(
         FriendMessageHideSyncRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x1
-  __int64 v4; // x2
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B17AF6 & 1) == 0 )
+  if ( (byte_4B38AC5 & 1) == 0 )
   {
-    sub_1BCA7E0(&NetworkManager_TypeInfo, method, v2);
-    sub_1BCA7E0(&StringLiteral_19839/*"friend/messageHideSync"*/, v3, v4);
-    byte_4B17AF6 = 1;
+    sub_1BD3458(&NetworkManager_TypeInfo, method);
+    sub_1BD3458(&StringLiteral_19869/*"friend/messageHideSync"*/, v2);
+    byte_4B38AC5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62401220(BaseUrl, (System_String_o *)StringLiteral_19839/*"friend/messageHideSync"*/, 0LL);
+  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_19869/*"friend/messageHideSync"*/, 0LL);
 }
 
 
@@ -53,39 +50,37 @@ void __fastcall FriendMessageHideSyncRequest__requestCompleted(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
-  ResponseData_o *v9; // x0
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v11; // x9
+  __int64 *v9; // x9
 
-  if ( (byte_4B17AF8 & 1) == 0 )
+  if ( (byte_4B38AC7 & 1) == 0 )
   {
-    sub_1BCA7E0(&ResponseCommandKind_TypeInfo, responseList, method);
-    sub_1BCA7E0(&StringLiteral_22465/*"ok"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_22292/*"ng"*/, v7, v8);
-    byte_4B17AF8 = 1;
+    sub_1BD3458(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BD3458(&StringLiteral_22498/*"ok"*/, v5);
+    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v6);
+    byte_4B38AC7 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo, responseList);
-  v9 = ResponseCommandKind__SearchData(66, responseList, 0LL);
-  if ( v9 && ResponseData__checkError_41952396(v9, 0LL) )
+    j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
+  v7 = ResponseCommandKind__SearchData(66, responseList, 0LL);
+  if ( v7 && ResponseData__checkError_42055668(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v11 = &StringLiteral_22465/*"ok"*/;
+    v9 = &StringLiteral_22498/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v11 = &StringLiteral_22292/*"ng"*/;
+    v9 = &StringLiteral_22325/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v11,
+    *v9,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

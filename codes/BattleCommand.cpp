@@ -5,34 +5,32 @@ System_String_o *__fastcall BattleCommand__GetCardTypeChangeSpriteNameSuffix(
 {
   System_String_o *v3; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 *v9; // x8
+  __int64 v6; // x1
+  __int64 *v7; // x8
 
   v3 = defaultValue;
-  if ( (byte_4B150B7 & 1) == 0 )
+  if ( (byte_4B36050 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_17088/*"arts_quick"*/, defaultValue, method);
-    sub_1BCA7E0(&StringLiteral_22976/*"quick_buster"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_17822/*"buster_arts"*/, v7, v8);
-    byte_4B150B7 = 1;
+    sub_1BD3458(&StringLiteral_17109/*"arts_quick"*/, defaultValue);
+    sub_1BD3458(&StringLiteral_23009/*"quick_buster"*/, v5);
+    sub_1BD3458(&StringLiteral_17848/*"buster_arts"*/, v6);
+    byte_4B36050 = 1;
   }
   switch ( type )
   {
     case 1:
     case 3:
-      v9 = &StringLiteral_17822/*"buster_arts"*/;
+      v7 = &StringLiteral_17848/*"buster_arts"*/;
       goto LABEL_7;
     case 2:
     case 5:
-      v9 = &StringLiteral_17088/*"arts_quick"*/;
+      v7 = &StringLiteral_17109/*"arts_quick"*/;
       goto LABEL_7;
     case 4:
     case 6:
-      v9 = &StringLiteral_22976/*"quick_buster"*/;
+      v7 = &StringLiteral_23009/*"quick_buster"*/;
 LABEL_7:
-      v3 = (System_String_o *)*v9;
+      v3 = (System_String_o *)*v7;
       break;
     default:
       return v3;
@@ -48,30 +46,28 @@ System_String_o *__fastcall BattleCommand__GetCommandTypeName(
 {
   System_String_o *v3; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 *v9; // x8
+  __int64 v6; // x1
+  __int64 *v7; // x8
 
   v3 = defaultText;
-  if ( (byte_4B150B5 & 1) == 0 )
+  if ( (byte_4B3604E & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_3394/*"Buster"*/, defaultText, method);
-    sub_1BCA7E0(&StringLiteral_11069/*"Quick"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_2498/*"Arts"*/, v7, v8);
-    byte_4B150B5 = 1;
+    sub_1BD3458(&StringLiteral_3401/*"Buster"*/, defaultText);
+    sub_1BD3458(&StringLiteral_11086/*"Quick"*/, v5);
+    sub_1BD3458(&StringLiteral_2503/*"Arts"*/, v6);
+    byte_4B3604E = 1;
   }
   switch ( type )
   {
     case 1:
-      v9 = &StringLiteral_2498/*"Arts"*/;
-      return (System_String_o *)*v9;
+      v7 = &StringLiteral_2503/*"Arts"*/;
+      return (System_String_o *)*v7;
     case 3:
-      v9 = &StringLiteral_11069/*"Quick"*/;
-      return (System_String_o *)*v9;
+      v7 = &StringLiteral_11086/*"Quick"*/;
+      return (System_String_o *)*v7;
     case 2:
-      v9 = &StringLiteral_3394/*"Buster"*/;
-      return (System_String_o *)*v9;
+      v7 = &StringLiteral_3401/*"Buster"*/;
+      return (System_String_o *)*v7;
   }
   return v3;
 }
@@ -120,13 +116,13 @@ float __fastcall BattleCommand__getCriticalMagnification(BattleCommandData_o *da
   int32_t CommandType; // w0
 
   if ( !data )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   CommandType = BattleCommandData__getCommandType(data, 0LL);
   return CardMaster__getCritical(CommandType, data->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getCriticalMagnification_38275068(
+float __fastcall BattleCommand__getCriticalMagnification_38338200(
         int32_t type,
         int32_t index,
         const MethodInfo *method)
@@ -146,13 +142,13 @@ float __fastcall BattleCommand__getMagnification(BattleCommandData_o *data, cons
   int32_t CommandType; // w0
 
   if ( !data )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   CommandType = BattleCommandData__getCommandType(data, 0LL);
   return CardMaster__getAtk(CommandType, data->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getMagnification_38274972(int32_t type, int32_t index, const MethodInfo *method)
+float __fastcall BattleCommand__getMagnification_38338104(int32_t type, int32_t index, const MethodInfo *method)
 {
   return CardMaster__getAtk(type, index, 0LL);
 }
@@ -163,13 +159,13 @@ float __fastcall BattleCommand__getNpMagnification(BattleCommandData_o *command,
   int32_t CommandType; // w0
 
   if ( !command )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   CommandType = BattleCommandData__getCommandType(command, 0LL);
   return CardMaster__getTdGauge(CommandType, command->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getNpMagnification_38275020(int32_t type, int32_t index, const MethodInfo *method)
+float __fastcall BattleCommand__getNpMagnification_38338152(int32_t type, int32_t index, const MethodInfo *method)
 {
   return CardMaster__getTdGauge(type, index, 0LL);
 }
@@ -234,18 +230,16 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
 {
   UnityEngine_Behaviour_o *v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 *v9; // x8
+  __int64 v6; // x1
+  __int64 *v7; // x8
 
   v4 = (UnityEngine_Behaviour_o *)sprite;
-  if ( (byte_4B150B6 & 1) == 0 )
+  if ( (byte_4B3604F & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_20336/*"icon_commandcard_quick"*/, *(_QWORD *)&type, method);
-    sub_1BCA7E0(&StringLiteral_20334/*"icon_commandcard_buster"*/, v5, v6);
-    sprite = (UISprite_o *)sub_1BCA7E0(&StringLiteral_20333/*"icon_commandcard_arts"*/, v7, v8);
-    byte_4B150B6 = 1;
+    sub_1BD3458(&StringLiteral_20366/*"icon_commandcard_quick"*/, *(_QWORD *)&type);
+    sub_1BD3458(&StringLiteral_20364/*"icon_commandcard_buster"*/, v5);
+    sprite = (UISprite_o *)sub_1BD3458(&StringLiteral_20363/*"icon_commandcard_arts"*/, v6);
+    byte_4B3604F = 1;
   }
   switch ( type )
   {
@@ -253,7 +247,7 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
       if ( v4 )
       {
         UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
-        v9 = &StringLiteral_20336/*"icon_commandcard_quick"*/;
+        v7 = &StringLiteral_20366/*"icon_commandcard_quick"*/;
         goto LABEL_12;
       }
       goto LABEL_15;
@@ -261,18 +255,18 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
       if ( v4 )
       {
         UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
-        v9 = &StringLiteral_20334/*"icon_commandcard_buster"*/;
+        v7 = &StringLiteral_20364/*"icon_commandcard_buster"*/;
         goto LABEL_12;
       }
 LABEL_15:
-      sub_1BCAA3C(sprite, *(_QWORD *)&type);
+      sub_1BD36B4(sprite, *(_QWORD *)&type);
     case 1:
       if ( v4 )
       {
         UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
-        v9 = &StringLiteral_20333/*"icon_commandcard_arts"*/;
+        v7 = &StringLiteral_20363/*"icon_commandcard_arts"*/;
 LABEL_12:
-        UISprite__set_spriteName((UISprite_o *)v4, (System_String_o *)*v9, 0LL);
+        UISprite__set_spriteName((UISprite_o *)v4, (System_String_o *)*v7, 0LL);
         return;
       }
       goto LABEL_15;

@@ -1,30 +1,26 @@
 void __fastcall EventTradeAssetManager___ctor(EventTradeAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x0
-  __int64 v7; // x1
-  struct System_String_array *v8; // x20
-  __int64 v9; // x1
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x1
+  struct System_String_array *v6; // x20
 
-  if ( (byte_4B11277 & 1) == 0 )
+  if ( (byte_4B321FB & 1) == 0 )
   {
-    sub_1BCA7E0(&string___TypeInfo, method, v2);
-    sub_1BCA7E0(&StringLiteral_6348/*"EventUI/Prefabs/"*/, v4, v5);
-    byte_4B11277 = 1;
+    sub_1BD3458(&string___TypeInfo, method);
+    sub_1BD3458(&StringLiteral_6360/*"EventUI/Prefabs/"*/, v3);
+    byte_4B321FB = 1;
   }
-  v6 = sub_1BCA888(string___TypeInfo, 1LL);
-  if ( !v6 )
-    sub_1BCAA3C(0LL, v7);
-  v8 = (struct System_String_array *)v6;
-  if ( !*(_DWORD *)(v6 + 24) )
-    sub_1BCAA44(v6, v7);
-  v9 = StringLiteral_6348/*"EventUI/Prefabs/"*/;
-  *(_QWORD *)(v6 + 32) = StringLiteral_6348/*"EventUI/Prefabs/"*/;
-  sub_1BCA784(v6 + 32, v9);
-  this->fields.loadAssetNames = v8;
-  sub_1BCA784(&this->fields.loadAssetNames, v8);
+  v4 = sub_1BD3500(string___TypeInfo, 1LL);
+  if ( !v4 )
+    sub_1BD36B4(0LL, v5);
+  v6 = (struct System_String_array *)v4;
+  if ( !*(_DWORD *)(v4 + 24) )
+    sub_1BD36BC(v4, v5);
+  *(_QWORD *)(v4 + 32) = StringLiteral_6360/*"EventUI/Prefabs/"*/;
+  sub_1BD33FC(v4 + 32);
+  this->fields.loadAssetNames = v6;
+  sub_1BD33FC(&this->fields.loadAssetNames);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -37,58 +33,51 @@ void __fastcall EventTradeAssetManager__GetAssets(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x19
-  __int64 v14; // x0
-  __int64 v15; // x1
+  __int64 v10; // x19
+  __int64 v11; // x0
+  __int64 v12; // x1
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v17; // x20
-  System_String_o *v18; // x0
-  System_String_o *v19; // x20
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  AssetLoader_LoadEndDataHandler_o *v23; // x21
-  __int64 v24; // x1
+  System_String_o *v14; // x20
+  System_String_o *v15; // x0
+  System_String_o *v16; // x20
+  AssetLoader_LoadEndDataHandler_o *v17; // x21
 
-  if ( (byte_4B11275 & 1) == 0 )
+  if ( (byte_4B321F9 & 1) == 0 )
   {
-    sub_1BCA7E0(&AssetManager_TypeInfo, *(_QWORD *)&eventId, finishCallback);
-    sub_1BCA7E0(&AssetLoader_LoadEndDataHandler_TypeInfo, v7, v8);
-    sub_1BCA7E0(&Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__0__, v9, v10);
-    sub_1BCA7E0(&EventTradeAssetManager___c__DisplayClass37_0_TypeInfo, v11, v12);
-    byte_4B11275 = 1;
+    sub_1BD3458(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1BD3458(&Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__0__, v8);
+    sub_1BD3458(&EventTradeAssetManager___c__DisplayClass37_0_TypeInfo, v9);
+    byte_4B321F9 = 1;
   }
-  v13 = sub_1BCAA2C(EventTradeAssetManager___c__DisplayClass37_0_TypeInfo, *(_QWORD *)&eventId, finishCallback, method);
-  System_Object___ctor((Il2CppObject *)v13, 0LL);
-  if ( !v13
-    || (*(_QWORD *)(v13 + 16) = this,
-        sub_1BCA784(v13 + 16, this),
-        *(_DWORD *)(v13 + 24) = eventId,
-        *(_QWORD *)(v13 + 32) = finishCallback,
-        v14 = sub_1BCA784(v13 + 32, finishCallback),
+  v10 = sub_1BD36A4(EventTradeAssetManager___c__DisplayClass37_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10
+    || (*(_QWORD *)(v10 + 16) = this,
+        sub_1BD33FC(v10 + 16),
+        *(_DWORD *)(v10 + 24) = eventId,
+        *(_QWORD *)(v10 + 32) = finishCallback,
+        v11 = sub_1BD33FC(v10 + 32),
         (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
   {
-    sub_1BCAA3C(v14, v15);
+    sub_1BD36B4(v11, v12);
   }
   if ( !loadAssetNames->max_length )
-    sub_1BCAA44(v14, v15);
-  v17 = loadAssetNames->m_Items[0];
-  v18 = System_Int32__ToString((int)v13 + 24, 0LL);
-  v19 = System_String__Concat_62401220(v17, v18, 0LL);
-  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCAA2C(AssetLoader_LoadEndDataHandler_TypeInfo, v20, v21, v22);
+    sub_1BD36BC(v11, v12);
+  v14 = loadAssetNames->m_Items[0];
+  v15 = System_Int32__ToString((int)v10 + 24, 0LL);
+  v16 = System_String__Concat_62525248(v14, v15, 0LL);
+  v17 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v23,
-    (Il2CppObject *)v13,
+    v17,
+    (Il2CppObject *)v10,
     Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v24);
-  AssetManager__loadAssetStorage(v19, v23, 1, 0LL);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+  AssetManager__loadAssetStorage(v16, v17, 1, 0LL);
 }
 
 
@@ -98,32 +87,32 @@ void __fastcall EventTradeAssetManager__Release(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4B11276 & 1) == 0 )
+  if ( (byte_4B321FA & 1) == 0 )
   {
-    sub_1BCA7E0(&AtlasManager_TypeInfo, *(_QWORD *)&eventId, method);
-    byte_4B11276 = 1;
+    sub_1BD3458(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4B321FA = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-  AtlasManager__ReleaseEventUI_38574456(eventId, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__ReleaseEventUI_38642768(eventId, 0LL);
   this->fields._TradeSweetsSelectConfirmDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields, 0LL);
+  sub_1BD33FC(&this->fields);
   this->fields._TradeSweetsNumConfirmDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradeSweetsNumConfirmDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradeSweetsNumConfirmDialog_k__BackingField);
   this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField);
   this->fields._TradeRewardDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradeRewardDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradeRewardDialog_k__BackingField);
   this->fields._TradePointRewardDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradePointRewardDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradePointRewardDialog_k__BackingField);
   this->fields._TradeRankUpDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradeRankUpDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradeRankUpDialog_k__BackingField);
   this->fields._TradePopularSweetsNotificationDialog_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradePopularSweetsNotificationDialog_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradePopularSweetsNotificationDialog_k__BackingField);
   this->fields._TradeButtonBlinkEffect_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradeButtonBlinkEffect_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradeButtonBlinkEffect_k__BackingField);
   this->fields._TradePickupInfoBoard_k__BackingField = 0LL;
-  sub_1BCA784(&this->fields._TradePickupInfoBoard_k__BackingField, 0LL);
+  sub_1BD33FC(&this->fields._TradePickupInfoBoard_k__BackingField);
 }
 
 
@@ -205,7 +194,7 @@ void __fastcall EventTradeAssetManager__set_TradeButtonBlinkEffect(
         const MethodInfo *method)
 {
   this->fields._TradeButtonBlinkEffect_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeButtonBlinkEffect_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeButtonBlinkEffect_k__BackingField);
 }
 
 
@@ -215,7 +204,7 @@ void __fastcall EventTradeAssetManager__set_TradePickupInfoBoard(
         const MethodInfo *method)
 {
   this->fields._TradePickupInfoBoard_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradePickupInfoBoard_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradePickupInfoBoard_k__BackingField);
 }
 
 
@@ -225,7 +214,7 @@ void __fastcall EventTradeAssetManager__set_TradePointRewardDialog(
         const MethodInfo *method)
 {
   this->fields._TradePointRewardDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradePointRewardDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradePointRewardDialog_k__BackingField);
 }
 
 
@@ -235,7 +224,7 @@ void __fastcall EventTradeAssetManager__set_TradePopularSweetsNotificationDialog
         const MethodInfo *method)
 {
   this->fields._TradePopularSweetsNotificationDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradePopularSweetsNotificationDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradePopularSweetsNotificationDialog_k__BackingField);
 }
 
 
@@ -245,7 +234,7 @@ void __fastcall EventTradeAssetManager__set_TradeRankUpDialog(
         const MethodInfo *method)
 {
   this->fields._TradeRankUpDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeRankUpDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeRankUpDialog_k__BackingField);
 }
 
 
@@ -255,7 +244,7 @@ void __fastcall EventTradeAssetManager__set_TradeRewardDialog(
         const MethodInfo *method)
 {
   this->fields._TradeRewardDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeRewardDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeRewardDialog_k__BackingField);
 }
 
 
@@ -265,7 +254,7 @@ void __fastcall EventTradeAssetManager__set_TradeSweetsNumConfirmDialog(
         const MethodInfo *method)
 {
   this->fields._TradeSweetsNumConfirmDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeSweetsNumConfirmDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeSweetsNumConfirmDialog_k__BackingField);
 }
 
 
@@ -275,7 +264,7 @@ void __fastcall EventTradeAssetManager__set_TradeSweetsSelectConfirmDialog(
         const MethodInfo *method)
 {
   this->fields._TradeSweetsSelectConfirmDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields, value);
+  sub_1BD33FC(&this->fields);
 }
 
 
@@ -285,7 +274,7 @@ void __fastcall EventTradeAssetManager__set_TradeSweetsWithdrawalConfirmDialog(
         const MethodInfo *method)
 {
   this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField = value;
-  sub_1BCA784(&this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField, value);
+  sub_1BD33FC(&this->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField);
 }
 
 
@@ -304,163 +293,148 @@ void __fastcall EventTradeAssetManager___c__DisplayClass37_0___GetAssets_b__0(
 {
   EventTradeAssetManager___c__DisplayClass37_0_o *v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
-  __int64 v21; // x1
-  __int64 v22; // x2
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x1
-  __int64 v28; // x2
+  __int64 v16; // x1
   struct EventTradeAssetManager_o *_4__this; // x21
-  struct EventTradeAssetManager_o *v30; // x21
-  struct EventTradeAssetManager_o *v31; // x21
-  struct EventTradeAssetManager_o *v32; // x21
-  struct EventTradeAssetManager_o *v33; // x21
-  struct EventTradeAssetManager_o *v34; // x21
-  struct EventTradeAssetManager_o *v35; // x21
-  struct EventTradeAssetManager_o *v36; // x21
-  struct EventTradeAssetManager_o *v37; // x21
-  __int64 v38; // x1
-  __int64 v39; // x2
-  __int64 v40; // x3
+  struct EventTradeAssetManager_o *v18; // x21
+  struct EventTradeAssetManager_o *v19; // x21
+  struct EventTradeAssetManager_o *v20; // x21
+  struct EventTradeAssetManager_o *v21; // x21
+  struct EventTradeAssetManager_o *v22; // x21
+  struct EventTradeAssetManager_o *v23; // x21
+  struct EventTradeAssetManager_o *v24; // x21
+  struct EventTradeAssetManager_o *v25; // x21
   System_Action_o *_9__1; // x21
   int32_t eventId; // w20
 
   v4 = this;
-  if ( (byte_4B11278 & 1) == 0 )
+  if ( (byte_4B321FC & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, assetData, method);
-    sub_1BCA7E0(&Method_AssetData_GetObject_GameObject____76836696, v5, v6);
-    sub_1BCA7E0(&AtlasManager_TypeInfo, v7, v8);
-    sub_1BCA7E0(&Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__1__, v9, v10);
-    sub_1BCA7E0(&StringLiteral_6339/*"EventTradePointRewardDialog"*/, v11, v12);
-    sub_1BCA7E0(&StringLiteral_17485/*"bit_trade_blink"*/, v13, v14);
-    sub_1BCA7E0(&StringLiteral_6343/*"EventTradeSweetsNumConfirmDialog"*/, v15, v16);
-    sub_1BCA7E0(&StringLiteral_6341/*"EventTradeRankUpDialog"*/, v17, v18);
-    sub_1BCA7E0(&StringLiteral_6342/*"EventTradeRewardDialog"*/, v19, v20);
-    sub_1BCA7E0(&StringLiteral_6344/*"EventTradeSweetsSelectConfirmDialog"*/, v21, v22);
-    sub_1BCA7E0(&StringLiteral_6340/*"EventTradePopularSweetsNotificationDialog"*/, v23, v24);
-    sub_1BCA7E0(&StringLiteral_6338/*"EventTradePickupInfoBoard"*/, v25, v26);
-    this = (EventTradeAssetManager___c__DisplayClass37_0_o *)sub_1BCA7E0(&StringLiteral_6345/*"EventTradeSweetsWithdrawalConfirmDialog"*/, v27, v28);
-    byte_4B11278 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, assetData);
+    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, v5);
+    sub_1BD3458(&AtlasManager_TypeInfo, v6);
+    sub_1BD3458(&Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__1__, v7);
+    sub_1BD3458(&StringLiteral_6351/*"EventTradePointRewardDialog"*/, v8);
+    sub_1BD3458(&StringLiteral_17510/*"bit_trade_blink"*/, v9);
+    sub_1BD3458(&StringLiteral_6355/*"EventTradeSweetsNumConfirmDialog"*/, v10);
+    sub_1BD3458(&StringLiteral_6353/*"EventTradeRankUpDialog"*/, v11);
+    sub_1BD3458(&StringLiteral_6354/*"EventTradeRewardDialog"*/, v12);
+    sub_1BD3458(&StringLiteral_6356/*"EventTradeSweetsSelectConfirmDialog"*/, v13);
+    sub_1BD3458(&StringLiteral_6352/*"EventTradePopularSweetsNotificationDialog"*/, v14);
+    sub_1BD3458(&StringLiteral_6350/*"EventTradePickupInfoBoard"*/, v15);
+    this = (EventTradeAssetManager___c__DisplayClass37_0_o *)sub_1BD3458(&StringLiteral_6357/*"EventTradeSweetsWithdrawalConfirmDialog"*/, v16);
+    byte_4B321FC = 1;
   }
   if ( !assetData )
     goto LABEL_18;
   _4__this = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6344/*"EventTradeSweetsSelectConfirmDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
+                                                             (System_String_o *)StringLiteral_6356/*"EventTradeSweetsSelectConfirmDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
   if ( !_4__this )
     goto LABEL_18;
   _4__this->fields._TradeSweetsSelectConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&_4__this->fields, this);
-  v30 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  sub_1BD33FC(&_4__this->fields);
+  v18 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6343/*"EventTradeSweetsNumConfirmDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v30 )
+                                                             (System_String_o *)StringLiteral_6355/*"EventTradeSweetsNumConfirmDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v18 )
     goto LABEL_18;
-  v30->fields._TradeSweetsNumConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v30->fields._TradeSweetsNumConfirmDialog_k__BackingField, this);
-  v31 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v18->fields._TradeSweetsNumConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v18->fields._TradeSweetsNumConfirmDialog_k__BackingField);
+  v19 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6345/*"EventTradeSweetsWithdrawalConfirmDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v31 )
+                                                             (System_String_o *)StringLiteral_6357/*"EventTradeSweetsWithdrawalConfirmDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v19 )
     goto LABEL_18;
-  v31->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v31->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField, this);
-  v32 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v19->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v19->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField);
+  v20 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6342/*"EventTradeRewardDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v32 )
+                                                             (System_String_o *)StringLiteral_6354/*"EventTradeRewardDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v20 )
     goto LABEL_18;
-  v32->fields._TradeRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v32->fields._TradeRewardDialog_k__BackingField, this);
-  v33 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v20->fields._TradeRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v20->fields._TradeRewardDialog_k__BackingField);
+  v21 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6339/*"EventTradePointRewardDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v33 )
+                                                             (System_String_o *)StringLiteral_6351/*"EventTradePointRewardDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v21 )
     goto LABEL_18;
-  v33->fields._TradePointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v33->fields._TradePointRewardDialog_k__BackingField, this);
-  v34 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v21->fields._TradePointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v21->fields._TradePointRewardDialog_k__BackingField);
+  v22 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6341/*"EventTradeRankUpDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v34 )
+                                                             (System_String_o *)StringLiteral_6353/*"EventTradeRankUpDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v22 )
     goto LABEL_18;
-  v34->fields._TradeRankUpDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v34->fields._TradeRankUpDialog_k__BackingField, this);
-  v35 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v22->fields._TradeRankUpDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v22->fields._TradeRankUpDialog_k__BackingField);
+  v23 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6340/*"EventTradePopularSweetsNotificationDialog"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v35 )
+                                                             (System_String_o *)StringLiteral_6352/*"EventTradePopularSweetsNotificationDialog"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v23 )
     goto LABEL_18;
-  v35->fields._TradePopularSweetsNotificationDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v35->fields._TradePopularSweetsNotificationDialog_k__BackingField, this);
-  v36 = v4->fields.__4__this;
-  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+  v23->fields._TradePopularSweetsNotificationDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v23->fields._TradePopularSweetsNotificationDialog_k__BackingField);
+  v24 = v4->fields.__4__this;
+  this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_17485/*"bit_trade_blink"*/,
-                                                             (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696);
-  if ( !v36
-    || (v36->fields._TradeButtonBlinkEffect_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_1BCA784(&v36->fields._TradeButtonBlinkEffect_k__BackingField, this),
-        v37 = v4->fields.__4__this,
-        this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49237568(
+                                                             (System_String_o *)StringLiteral_17510/*"bit_trade_blink"*/,
+                                                             (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+  if ( !v24
+    || (v24->fields._TradeButtonBlinkEffect_k__BackingField = (struct UnityEngine_GameObject_o *)this,
+        sub_1BD33FC(&v24->fields._TradeButtonBlinkEffect_k__BackingField),
+        v25 = v4->fields.__4__this,
+        this = (EventTradeAssetManager___c__DisplayClass37_0_o *)AssetData__GetObject_object__49362760(
                                                                    assetData,
-                                                                   (System_String_o *)StringLiteral_6338/*"EventTradePickupInfoBoard"*/,
-                                                                   (const MethodInfo_2EF4E40 *)Method_AssetData_GetObject_GameObject____76836696),
-        !v37) )
+                                                                   (System_String_o *)StringLiteral_6350/*"EventTradePickupInfoBoard"*/,
+                                                                   (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040),
+        !v25) )
   {
 LABEL_18:
-    sub_1BCAA3C(this, assetData);
+    sub_1BD36B4(this, assetData);
   }
-  v37->fields._TradePickupInfoBoard_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCA784(&v37->fields._TradePickupInfoBoard_k__BackingField, this);
+  v25->fields._TradePickupInfoBoard_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1BD33FC(&v25->fields._TradePickupInfoBoard_k__BackingField);
   _9__1 = v4->fields.__9__1;
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v38, v39, v40);
+    _9__1 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_EventTradeAssetManager___c__DisplayClass37_0__GetAssets_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_1BCA784(&v4->fields.__9__1, _9__1);
+    sub_1BD33FC(&v4->fields.__9__1);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v38);
-  AtlasManager__LoadEventUI_38574292(eventId, _9__1, 1, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__LoadEventUI_38642604(eventId, _9__1, 1, 0LL);
 }
 
 

@@ -6,55 +6,51 @@ void __fastcall FOVSync___ctor(FOVSync_o *this, const MethodInfo *method)
 
 void __fastcall FOVSync__LateUpdate(FOVSync_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   Il2CppObject *Component_object; // x0
-  __int64 v7; // x1
   UnityEngine_Object_o *observeCamera; // x21
-  UnityEngine_Camera_o *v9; // x20
-  __int64 v10; // x1
-  __int64 v11; // x1
-  UnityEngine_Camera_o *v12; // x0
+  UnityEngine_Camera_o *v6; // x20
+  __int64 v7; // x1
+  UnityEngine_Camera_o *v8; // x0
   float fieldOfView; // s0
-  float v14; // s0
+  float v10; // s0
 
-  if ( (byte_4B15692 & 1) == 0 )
+  if ( (byte_4B3662D & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Camera___, method, v2);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v4, v5);
-    byte_4B15692 = 1;
+    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_Camera___, method);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B3662D = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_Camera___);
   observeCamera = (UnityEngine_Object_o *)this->fields.observeCamera;
-  v9 = (UnityEngine_Camera_o *)Component_object;
+  v6 = (UnityEngine_Camera_o *)Component_object;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Implicit(observeCamera, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
-    if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v9, 0LL) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v6, 0LL) )
     {
-      v12 = this->fields.observeCamera;
-      if ( !v12 )
+      v8 = this->fields.observeCamera;
+      if ( !v8 )
         goto LABEL_15;
-      fieldOfView = UnityEngine_Camera__get_fieldOfView(v12, 0LL);
-      if ( !v9 )
+      fieldOfView = UnityEngine_Camera__get_fieldOfView(v8, 0LL);
+      if ( !v6 )
         goto LABEL_15;
-      if ( fieldOfView != UnityEngine_Camera__get_fieldOfView(v9, 0LL) )
+      if ( fieldOfView != UnityEngine_Camera__get_fieldOfView(v6, 0LL) )
       {
-        v12 = this->fields.observeCamera;
-        if ( v12 )
+        v8 = this->fields.observeCamera;
+        if ( v8 )
         {
-          v14 = UnityEngine_Camera__get_fieldOfView(v12, 0LL);
-          UnityEngine_Camera__set_fieldOfView(v9, v14, 0LL);
+          v10 = UnityEngine_Camera__get_fieldOfView(v8, 0LL);
+          UnityEngine_Camera__set_fieldOfView(v6, v10, 0LL);
           return;
         }
 LABEL_15:
-        sub_1BCAA3C(v12, v11);
+        sub_1BD36B4(v8, v7);
       }
     }
   }

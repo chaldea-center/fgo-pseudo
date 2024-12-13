@@ -1,15 +1,13 @@
 void __fastcall OpeningMovieEntity___ctor(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B165FA & 1) == 0 )
+  if ( (byte_4B375A6 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_int___ctor__, method, v2);
-    byte_4B165FA = 1;
+    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B375A6 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31B2C40 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,87 +19,87 @@ int32_t __fastcall OpeningMovieEntity__CreatePrimaryKey(OpeningMovieEntity_o *th
 
 int32_t __fastcall OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B165F7 & 1) == 0 )
+  if ( (byte_4B375A3 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_20062/*"groupId"*/, method, v2);
-    byte_4B165F7 = 1;
+    sub_1BD3458(&StringLiteral_20092/*"groupId"*/, method);
+    byte_4B375A3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20062/*"groupId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20092/*"groupId"*/, 0, 0LL);
 }
 
 
 System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   int32_t moviePlayTime; // w19
-  __int64 v11; // x1
   int32_t Minutes; // w19
-  Il2CppObject *v13; // x19
-  Il2CppObject *v14; // x0
-  Il2CppObject *v16; // x0
-  int32_t v17; // [xsp+0h] [xbp-30h] BYREF
+  __int64 v8; // x2
+  __int64 v9; // x3
+  __int64 v10; // x4
+  Il2CppObject *v11; // x19
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  Il2CppObject *v15; // x0
+  __int64 v17; // x2
+  __int64 v18; // x3
+  __int64 v19; // x4
+  Il2CppObject *v20; // x0
+  int32_t v21; // [xsp+0h] [xbp-30h] BYREF
   int32_t Seconds; // [xsp+4h] [xbp-2Ch] BYREF
-  __int64 v19; // [xsp+8h] [xbp-28h] BYREF
-  System_TimeSpan_o v20; // 0:x0.8
-  System_TimeSpan_o v21; // 0:x0.8
-  System_TimeSpan_o v22; // 0:x0.8
-  System_TimeSpan_o v23; // 0:x0.8
+  __int64 v23; // [xsp+8h] [xbp-28h] BYREF
+  System_TimeSpan_o v24; // 0:x0.8
+  System_TimeSpan_o v25; // 0:x0.8
+  System_TimeSpan_o v26; // 0:x0.8
+  System_TimeSpan_o v27; // 0:x0.8
 
-  if ( (byte_4B165F8 & 1) == 0 )
+  if ( (byte_4B375A4 & 1) == 0 )
   {
-    sub_1BCA7E0(&int_TypeInfo, method, v2);
-    sub_1BCA7E0(&System_TimeSpan_TypeInfo, v4, v5);
-    sub_1BCA7E0(&StringLiteral_25373/*"{0}分{1}秒"*/, v6, v7);
-    sub_1BCA7E0(&StringLiteral_25375/*"{0}秒"*/, v8, v9);
-    byte_4B165F8 = 1;
+    sub_1BD3458(&int_TypeInfo, method);
+    sub_1BD3458(&System_TimeSpan_TypeInfo, v3);
+    sub_1BD3458(&StringLiteral_25409/*"{0}分{1}秒"*/, v4);
+    sub_1BD3458(&StringLiteral_25411/*"{0}秒"*/, v5);
+    byte_4B375A4 = 1;
   }
-  v19 = 0LL;
+  v23 = 0LL;
   moviePlayTime = this->fields.moviePlayTime;
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, method);
-  v20.fields._ticks = (int64_t)&v19;
-  System_TimeSpan___ctor_63306412(v20, 0, 0, moviePlayTime, 0LL);
-  v21.fields._ticks = (int64_t)&v19;
-  Minutes = System_TimeSpan__get_Minutes(v21, 0LL);
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
+  v24.fields._ticks = (int64_t)&v23;
+  System_TimeSpan___ctor_63430440(v24, 0, 0, moviePlayTime, 0LL);
+  v25.fields._ticks = (int64_t)&v23;
+  Minutes = System_TimeSpan__get_Minutes(v25, 0LL);
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v11);
-  v22.fields._ticks = (int64_t)&v19;
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
+  v26.fields._ticks = (int64_t)&v23;
   if ( Minutes < 1 )
   {
-    Seconds = System_TimeSpan__get_Seconds(v22, 0LL);
-    v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_25375/*"{0}秒"*/, v16, 0LL);
+    Seconds = System_TimeSpan__get_Seconds(v26, 0LL);
+    v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v17, v18, v19);
+    return System_String__Format((System_String_o *)StringLiteral_25411/*"{0}秒"*/, v20, 0LL);
   }
   else
   {
-    Seconds = System_TimeSpan__get_Minutes(v22, 0LL);
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
-    v23.fields._ticks = (int64_t)&v19;
-    v17 = System_TimeSpan__get_Seconds(v23, 0LL);
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    return System_String__Format_62415592((System_String_o *)StringLiteral_25373/*"{0}分{1}秒"*/, v13, v14, 0LL);
+    Seconds = System_TimeSpan__get_Minutes(v26, 0LL);
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v8, v9, v10);
+    v27.fields._ticks = (int64_t)&v23;
+    v21 = System_TimeSpan__get_Seconds(v27, 0LL);
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v12, v13, v14);
+    return System_String__Format_62539620((System_String_o *)StringLiteral_25409/*"{0}分{1}秒"*/, v11, v15, 0LL);
   }
 }
 
 
 int32_t __fastcall OpeningMovieEntity__GetTargetTiming(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B165F9 & 1) == 0 )
+  if ( (byte_4B375A5 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_24203/*"timing"*/, method, v2);
-    byte_4B165F9 = 1;
+    sub_1BD3458(&StringLiteral_24238/*"timing"*/, method);
+    byte_4B375A5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24203/*"timing"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24238/*"timing"*/, 0, 0LL);
 }
 
 
@@ -120,48 +118,46 @@ bool __fastcall OpeningMovieEntity__IsEnable(
 {
   int64_t Time; // x21
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x8
-  int32_t v12; // w22
+  __int64 v8; // x1
+  __int64 v9; // x8
+  int32_t v10; // w22
   Il2CppObject *Instance; // x0
-  __int64 v14; // x1
+  __int64 v12; // x1
   bool IsOpen; // w0
 
   Time = nowTime;
-  if ( (byte_4B165F4 & 1) == 0 )
+  if ( (byte_4B375A0 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime, isMaterial);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v7, v8);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9, v10);
-    byte_4B165F4 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime);
+    sub_1BD3458(&NetworkManager_TypeInfo, v7);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4B375A0 = 1;
   }
   if ( !Time )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, nowTime);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Time = NetworkManager__getTime(0LL);
   }
-  v11 = 40LL;
+  v9 = 40LL;
   if ( isMaterial )
-    v11 = 44LL;
-  v12 = *(_DWORD *)((char *)&this->klass + v11);
-  if ( v12 < 1 )
+    v9 = 44LL;
+  v10 = *(_DWORD *)((char *)&this->klass + v9);
+  if ( v10 < 1 )
   {
     if ( isMaterial )
       return Time >= this->fields.startedAt;
     goto LABEL_19;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v14);
+    sub_1BD36B4(Instance, v12);
   }
-  IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v12, 0LL, 0, 0LL);
+  IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v10, 0LL, 0, 0LL);
   if ( isMaterial )
   {
     if ( !IsOpen )
@@ -199,15 +195,15 @@ bool __fastcall OpeningMovieEntity__IsEventPeriod(
   int64_t Time; // x20
 
   Time = nowTime;
-  if ( (byte_4B165F5 & 1) == 0 )
+  if ( (byte_4B375A1 & 1) == 0 )
   {
-    sub_1BCA7E0(&NetworkManager_TypeInfo, nowTime, method);
-    byte_4B165F5 = 1;
+    sub_1BD3458(&NetworkManager_TypeInfo, nowTime);
+    byte_4B375A1 = 1;
   }
   if ( !Time )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, nowTime);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Time = NetworkManager__getTime(0LL);
   }
   return this->fields.startedAt <= Time && Time < this->fields.endedAt;
@@ -216,25 +212,23 @@ bool __fastcall OpeningMovieEntity__IsEventPeriod(
 
 bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   CommonReleaseEntity_array *Instance; // x0
-  __int64 v7; // x1
-  CommonReleaseEntity_o *v8; // x8
+  __int64 v5; // x1
+  CommonReleaseEntity_o *v6; // x8
 
-  if ( (byte_4B165F6 & 1) == 0 )
+  if ( (byte_4B375A2 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method, v2);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4, v5);
-    byte_4B165F6 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B375A2 = 1;
   }
-  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (CommonReleaseEntity_array *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)Instance,
-                                            (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                            (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = CommonReleaseMaster__getList((CommonReleaseMaster_o *)Instance, this->fields.materialCommonReleaseId, 0LL);
@@ -242,11 +236,11 @@ bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *thi
     goto LABEL_10;
   if ( Instance->max_length == 1 )
   {
-    v8 = Instance->m_Items[0];
-    if ( v8 )
-      return v8->fields.condType != 92;
+    v6 = Instance->m_Items[0];
+    if ( v6 )
+      return v6->fields.condType != 92;
 LABEL_10:
-    sub_1BCAA3C(Instance, v7);
+    sub_1BD36B4(Instance, v5);
   }
   return 1;
 }

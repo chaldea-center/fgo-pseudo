@@ -11,15 +11,14 @@ BattleActionData_o *__fastcall UpdateAllViewBattleLogicTask__MakeActionData(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  UpdateAllViewActionData_o *v4; // x19
+  UpdateAllViewActionData_o *v3; // x19
 
-  if ( (byte_4B18F25 & 1) == 0 )
+  if ( (byte_4B39F03 & 1) == 0 )
   {
-    sub_1BCA7E0(&UpdateAllViewActionData_TypeInfo, logic, method);
-    byte_4B18F25 = 1;
+    sub_1BD3458(&UpdateAllViewActionData_TypeInfo, logic);
+    byte_4B39F03 = 1;
   }
-  v4 = (UpdateAllViewActionData_o *)sub_1BCAA2C(UpdateAllViewActionData_TypeInfo, logic, method, v3);
-  UpdateAllViewActionData___ctor(v4, 0LL);
-  return (BattleActionData_o *)v4;
+  v3 = (UpdateAllViewActionData_o *)sub_1BD36A4(UpdateAllViewActionData_TypeInfo);
+  UpdateAllViewActionData___ctor(v3, 0LL);
+  return (BattleActionData_o *)v3;
 }

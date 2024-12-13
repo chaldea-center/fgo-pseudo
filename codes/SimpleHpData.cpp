@@ -5,7 +5,7 @@ void __fastcall SimpleHpData___ctor(SimpleHpData_o *this, BattleServantData_o *s
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_1BCAA3C(v5, v6);
+    sub_1BD36B4(v5, v6);
   this->fields._Hp_k__BackingField = BattleServantData__getNowHp(svtData, 0LL);
   this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0LL);
 }

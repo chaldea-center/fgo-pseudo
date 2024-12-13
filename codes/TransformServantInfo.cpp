@@ -1,28 +1,27 @@
 void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  void *v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  void *v3; // x1
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B17457 & 1) == 0 )
+  if ( (byte_4B3841D & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_1/*""*/, method, v2);
-    byte_4B17457 = 1;
+    sub_1BD3458(&StringLiteral_1/*""*/, method);
+    byte_4B3841D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
-  v4 = StringLiteral_1/*""*/;
+  v3 = StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
-void __fastcall TransformServantInfo___ctor_41269632(
+void __fastcall TransformServantInfo___ctor_41370448(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -43,7 +42,7 @@ void __fastcall TransformServantInfo___ctor_41269632(
   v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = svtId;
   *(_DWORD *)(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = dispLimitCount;
-  sub_1BCA784(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
+  sub_1BD33FC(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -57,10 +56,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4B17458 & 1) == 0 )
+  if ( (byte_4B3841E & 1) == 0 )
   {
-    sub_1BCA7E0(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount, method);
-    byte_4B17458 = 1;
+    sub_1BD3458(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    byte_4B3841E = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )
@@ -70,7 +69,7 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
     {
       svtId = this->fields.svtId;
       if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+        j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
       return ImageLimitCount__GetImageLimitCount(svtId, limitCount, 0LL);
     }
   }

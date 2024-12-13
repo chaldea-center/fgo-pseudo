@@ -1,30 +1,28 @@
 void __fastcall EventRewardSceneEntity___ctor(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B1630B & 1) == 0 )
+  if ( (byte_4B372B7 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B1630B = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B372B7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRewardSceneEntity__CreatePK(int32_t eventId, int32_t slot, const MethodInfo *method)
 {
-  if ( (byte_4B16309 & 1) == 0 )
+  if ( (byte_4B372B5 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot, method);
-    byte_4B16309 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot);
+    byte_4B372B5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            slot,
-           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F2F8A8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,51 +38,46 @@ System_String_o *__fastcall EventRewardSceneEntity__CreatePrimaryKey(
 
 int32_t __fastcall EventRewardSceneEntity__GetBgmId(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
+  __int64 v7; // x1
   Il2CppObject *Entity; // x0
-  __int64 v13; // x1
-  Il2CppObject *v14; // x20
-  bool v15; // cc
-  __int64 v16; // x8
+  Il2CppObject *v9; // x20
+  bool v10; // cc
+  __int64 v11; // x8
 
-  if ( (byte_4B1630A & 1) == 0 )
+  if ( (byte_4B372B6 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_EventMaster___, method, v2);
-    sub_1BCA7E0(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v4, v5);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v6, v7);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8, v9);
-    byte_4B1630A = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_1BD3458(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
+    sub_1BD3458(&NetworkManager_TypeInfo, v4);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B372B6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v11);
+    sub_1BD36B4(Instance, v7);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.eventId,
-             (const MethodInfo_31B2E40 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( Entity )
   {
-    v14 = Entity;
+    v9 = Entity;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v13);
-    v15 = NetworkManager__getTime(0LL) <= (__int64)v14[6].klass;
-    v16 = 48LL;
-    if ( v15 )
-      v16 = 44LL;
-    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v16);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    v10 = NetworkManager__getTime(0LL) <= (__int64)v9[6].klass;
+    v11 = 48LL;
+    if ( v10 )
+      v11 = 44LL;
+    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v11);
   }
   return (int)Entity;
 }

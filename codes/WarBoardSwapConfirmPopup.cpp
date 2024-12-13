@@ -1,15 +1,13 @@
 void __fastcall WarBoardSwapConfirmPopup___ctor(WarBoardSwapConfirmPopup_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B140E7 & 1) == 0 )
+  if ( (byte_4B3507D & 1) == 0 )
   {
-    sub_1BCA7E0(&WarBoardInfoPopupBase_TypeInfo, method, v2);
-    byte_4B140E7 = 1;
+    sub_1BD3458(&WarBoardInfoPopupBase_TypeInfo, method);
+    byte_4B3507D = 1;
   }
   this->fields.nameLabelMaxWidth = 440.0;
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -36,14 +34,14 @@ void __fastcall WarBoardSwapConfirmPopup__ClosePopup(
   System_Action_c *v19; // x1
   const MethodInfo *v20; // x1
 
-  if ( (byte_4B140E6 & 1) == 0 )
+  if ( (byte_4B3507C & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, hideCallback, method);
-    byte_4B140E6 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, hideCallback);
+    byte_4B3507C = 1;
   }
   this->fields.hideCompleteCallback = 0LL;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback,
     0LL,
     (int64_t)method,
@@ -63,11 +61,11 @@ void __fastcall WarBoardSwapConfirmPopup__ClosePopup(
   if ( (System_Action_c *)v11->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v11, (System_Action_c *)v11->klass != v19) )
   {
-    sub_1BCACFC(v11);
+    sub_1BD3974(v11);
 LABEL_7:
     *p_hideCompleteCallback = (struct System_Action_o *)v18;
   }
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback, v18, v12, v13, v14, v15, v16, v17);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback, v18, v12, v13, v14, v15, v16, v17);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v20);
 }
 
@@ -80,32 +78,31 @@ void __fastcall WarBoardSwapConfirmPopup__Initialize(WarBoardSwapConfirmPopup_o 
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1BCAA3C(0LL, v3);
+    sub_1BD36B4(0LL, v3);
   UISkinSprite__setupSprite(windowBase, 0LL);
 }
 
 
 void __fastcall WarBoardSwapConfirmPopup__OnClickNo(WarBoardSwapConfirmPopup_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4B140E5 & 1) == 0 )
+  if ( (byte_4B3507B & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_WarBoardSwapConfirmPopup_OnClickNo__, method, v2);
-    byte_4B140E5 = 1;
+    sub_1BD3458(&Method_WarBoardSwapConfirmPopup_OnClickNo__, method);
+    byte_4B3507B = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
     && !this->fields._isHideAnimating_k__BackingField )
   {
-    v4 = Method_WarBoardSwapConfirmPopup_OnClickNo__;
+    v3 = Method_WarBoardSwapConfirmPopup_OnClickNo__;
     if ( (*((_BYTE *)Method_WarBoardSwapConfirmPopup_OnClickNo__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_WarBoardSwapConfirmPopup_OnClickNo__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
+      v3 = (_QWORD *)sub_1BD3470(Method_WarBoardSwapConfirmPopup_OnClickNo__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickCallback->fields.m_target)(
@@ -118,25 +115,24 @@ void __fastcall WarBoardSwapConfirmPopup__OnClickNo(WarBoardSwapConfirmPopup_o *
 
 void __fastcall WarBoardSwapConfirmPopup__OnClickYes(WarBoardSwapConfirmPopup_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4B140E4 & 1) == 0 )
+  if ( (byte_4B3507A & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_WarBoardSwapConfirmPopup_OnClickYes__, method, v2);
-    byte_4B140E4 = 1;
+    sub_1BD3458(&Method_WarBoardSwapConfirmPopup_OnClickYes__, method);
+    byte_4B3507A = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
     && !this->fields._isHideAnimating_k__BackingField )
   {
-    v4 = Method_WarBoardSwapConfirmPopup_OnClickYes__;
+    v3 = Method_WarBoardSwapConfirmPopup_OnClickYes__;
     if ( (*((_BYTE *)Method_WarBoardSwapConfirmPopup_OnClickYes__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_WarBoardSwapConfirmPopup_OnClickYes__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0LL);
+      v3 = (_QWORD *)sub_1BD3470(Method_WarBoardSwapConfirmPopup_OnClickYes__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickCallback->fields.m_target)(
@@ -164,7 +160,7 @@ void __fastcall WarBoardSwapConfirmPopup__OpenConfirmPopup(
 
   this->fields.clickCallback = clickCallback;
   p_clickCallback = &this->fields.clickCallback;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.clickCallback,
     (int64_t)clickCallback,
     (int64_t)message,
@@ -189,12 +185,12 @@ void __fastcall WarBoardSwapConfirmPopup__OpenConfirmPopup(
   if ( !nameLabel01
     || (UILabel__set_text(nameLabel01, yesButton, 0LL), (nameLabel01 = this->fields.noButtonLabel) == 0LL)
     || (UILabel__set_text(nameLabel01, noButton, 0LL), (nameLabel01 = this->fields.nameLabel01) == 0LL)
-    || (UILabel__SetCondensedScale_47600808(nameLabel01, this->fields.nameLabelMaxWidth, 0LL),
+    || (UILabel__SetCondensedScale_47726000(nameLabel01, this->fields.nameLabelMaxWidth, 0LL),
         (nameLabel01 = this->fields.nameLabel02) == 0LL) )
   {
 LABEL_9:
-    sub_1BCAA3C(nameLabel01, v15);
+    sub_1BD36B4(nameLabel01, v15);
   }
-  UILabel__SetCondensedScale_47600808(nameLabel01, this->fields.nameLabelMaxWidth, 0LL);
+  UILabel__SetCondensedScale_47726000(nameLabel01, this->fields.nameLabelMaxWidth, 0LL);
   WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v17);
 }

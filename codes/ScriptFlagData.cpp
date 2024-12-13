@@ -12,12 +12,12 @@ void __fastcall ScriptFlagData___ctor(ScriptFlagData_o *this, System_String_o *n
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v4->fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)name;
   v4 = (PartyOrganizationUtility_o *)((char *)v4 + 16);
-  sub_1BCA784(v4, (int64_t)name, v5, v6, v7, v8, v9, v10);
+  sub_1BD33FC(v4, (int64_t)name, v5, v6, v7, v8, v9, v10);
   v4->monitor = 0LL;
 }
 
 
-void __fastcall ScriptFlagData___ctor_42375960(
+void __fastcall ScriptFlagData___ctor_42479560(
         ScriptFlagData_o *this,
         System_String_o *name,
         int64_t v,
@@ -35,7 +35,7 @@ void __fastcall ScriptFlagData___ctor_42375960(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)name;
   v6 = (PartyOrganizationUtility_o *)((char *)v6 + 16);
-  sub_1BCA784(v6, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1BD33FC(v6, (int64_t)name, v7, v8, v9, v10, v11, v12);
   v6->monitor = (void *)v;
 }
 
@@ -49,7 +49,7 @@ bool __fastcall ScriptFlagData__Comp(ScriptFlagData_o *this, System_String_o *vs
 }
 
 
-bool __fastcall ScriptFlagData__Comp_42376048(ScriptFlagData_o *this, const MethodInfo *method)
+bool __fastcall ScriptFlagData__Comp_42479648(ScriptFlagData_o *this, const MethodInfo *method)
 {
   return this->fields.v != 0;
 }
@@ -58,37 +58,34 @@ bool __fastcall ScriptFlagData__Comp_42376048(ScriptFlagData_o *this, const Meth
 int64_t __fastcall ScriptFlagData__Conv(ScriptFlagData_o *this, System_String_o *vs, const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
   int64_t result; // x0
-  bool v11; // w8
-  bool v12; // w8
+  bool v8; // w8
+  bool v9; // w8
 
-  if ( (byte_4B17DDC & 1) == 0 )
+  if ( (byte_4B38DAB & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_22445/*"off"*/, vs, method);
-    sub_1BCA7E0(&StringLiteral_22475/*"on"*/, v4, v5);
-    sub_1BCA7E0(&StringLiteral_19579/*"false"*/, v6, v7);
-    sub_1BCA7E0(&StringLiteral_24331/*"true"*/, v8, v9);
-    byte_4B17DDC = 1;
+    sub_1BD3458(&StringLiteral_22478/*"off"*/, vs);
+    sub_1BD3458(&StringLiteral_22508/*"on"*/, v4);
+    sub_1BD3458(&StringLiteral_19609/*"false"*/, v5);
+    sub_1BD3458(&StringLiteral_24366/*"true"*/, v6);
+    byte_4B38DAB = 1;
   }
-  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24331/*"true"*/, 0LL)
-    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22475/*"on"*/, 0LL) )
+  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24366/*"true"*/, 0LL)
+    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22508/*"on"*/, 0LL) )
   {
     return 1LL;
   }
   if ( !vs )
     return 0LL;
-  v11 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19579/*"false"*/, 0LL);
+  v8 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19609/*"false"*/, 0LL);
   result = 0LL;
-  if ( !v11 )
+  if ( !v8 )
   {
-    v12 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22445/*"off"*/, 0LL);
+    v9 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22478/*"off"*/, 0LL);
     result = 0LL;
-    if ( !v12 )
+    if ( !v9 )
       return System_Int64__Parse(vs, 0LL);
   }
   return result;
@@ -116,14 +113,14 @@ void __fastcall ScriptFlagData__SetRahdom(
   v6 = (ScriptFlagData_o *)ScriptFlagData__Conv(this, ss, (const MethodInfo *)es);
   v7 = (int)v6;
   v9 = ScriptFlagData__Conv(v6, es, v8);
-  v10 = UnityEngine_Random__Range_70113984(v7, v9 + 1, 0LL);
+  v10 = UnityEngine_Random__Range_70238012(v7, v9 + 1, 0LL);
   if ( v9 < v10 )
     v10 = v9;
   this->fields.v = v10;
 }
 
 
-void __fastcall ScriptFlagData__Set_42376088(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
+void __fastcall ScriptFlagData__Set_42479688(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
 {
   this->fields.v = v;
 }

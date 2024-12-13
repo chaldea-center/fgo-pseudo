@@ -14,3 +14,45 @@ float __fastcall ServantVoiceData__GetFadeTime(ServantVoiceData_o *this, const M
   else
     return (float)fadeTime / 1000.0;
 }
+
+
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_AfterPerformance(
+        ServantVoiceData_o *this,
+        const MethodInfo *method)
+{
+  struct ServantVoicePerformance_o *additionalPerformances; // x8
+
+  additionalPerformances = this->fields.additionalPerformances;
+  if ( additionalPerformances )
+    return additionalPerformances->fields.afterPerformance;
+  else
+    return 0LL;
+}
+
+
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_BeforePerformance(
+        ServantVoiceData_o *this,
+        const MethodInfo *method)
+{
+  struct ServantVoicePerformance_o *additionalPerformances; // x8
+
+  additionalPerformances = this->fields.additionalPerformances;
+  if ( additionalPerformances )
+    return additionalPerformances->fields.beforePerformance;
+  else
+    return 0LL;
+}
+
+
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_StartPerformance(
+        ServantVoiceData_o *this,
+        const MethodInfo *method)
+{
+  struct ServantVoicePerformance_o *additionalPerformances; // x8
+
+  additionalPerformances = this->fields.additionalPerformances;
+  if ( additionalPerformances )
+    return additionalPerformances->fields.startPerformance;
+  else
+    return 0LL;
+}

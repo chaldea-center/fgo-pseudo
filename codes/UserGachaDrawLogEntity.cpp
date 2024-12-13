@@ -1,15 +1,13 @@
 void __fastcall UserGachaDrawLogEntity___ctor(UserGachaDrawLogEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16F14 & 1) == 0 )
+  if ( (byte_4B37ED1 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16F14 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37ED1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +18,16 @@ System_String_o *__fastcall UserGachaDrawLogEntity__CreatePK(
         int64_t drawAt,
         const MethodInfo *method)
 {
-  if ( (byte_4B16F13 & 1) == 0 )
+  if ( (byte_4B37ED0 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__long___, *(_QWORD *)&idx, drawAt);
-    byte_4B16F13 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__long___, *(_QWORD *)&idx);
+    byte_4B37ED0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__long_(
            gachaId,
            idx,
            drawAt,
-           (const MethodInfo_2F113D8 *)Method_DataEntityBase_CreateMultiplePK_int__int__long___);
+           (const MethodInfo_2F2FDCC *)Method_DataEntityBase_CreateMultiplePK_int__int__long___);
 }
 
 

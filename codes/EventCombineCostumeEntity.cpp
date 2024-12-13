@@ -1,15 +1,13 @@
 void __fastcall EventCombineCostumeEntity___ctor(EventCombineCostumeEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16104 & 1) == 0 )
+  if ( (byte_4B370B0 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16104 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B370B0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +18,16 @@ System_String_o *__fastcall EventCombineCostumeEntity__CreatePK(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4B16102 & 1) == 0 )
+  if ( (byte_4B370AE & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&costumeId, *(_QWORD *)&eventId);
-    byte_4B16102 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&costumeId);
+    byte_4B370AE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            costumeId,
            eventId,
-           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F2FD38 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -47,51 +45,57 @@ bool __fastcall EventCombineCostumeEntity__IsShortEventItem(
         EventCombineCostumeEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
+  DataManager_o *Instance; // x0
   __int64 v6; // x1
-  __int64 v7; // x2
-  int64_t Instance; // x0
-  __int64 v9; // x1
-  __int64 v10; // x1
   Il2CppObject *MasterData_object; // x20
   struct System_Int32_array *itemIds; // x8
   struct System_Int32_array *itemNums; // x9
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B16103 & 1) == 0 )
+  if ( (byte_4B370AF & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserItemMaster___, method, v2);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v4, v5);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6, v7);
-    byte_4B16103 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1BD3458(&NetworkManager_TypeInfo, v3);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4B370AF = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_16;
+    goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
-                        (DataManager_o *)Instance,
-                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        Instance,
+                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v10);
-  Instance = NetworkManager__get_UserId(0LL);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !byte_4B31D77 )
+  {
+    sub_1BD3458(&NetworkManager_TypeInfo, v6);
+    byte_4B31D77 = 1;
+  }
+  Instance = (DataManager_o *)NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    Instance = (DataManager_o *)NetworkManager_TypeInfo;
+  }
   itemIds = this->fields.itemIds;
   if ( !itemIds )
-    goto LABEL_16;
+    goto LABEL_19;
   if ( !itemIds->max_length )
-    goto LABEL_17;
+    goto LABEL_20;
   if ( !MasterData_object )
-LABEL_16:
-    sub_1BCAA3C(Instance, v9);
-  Instance = UserItemMaster__TryGetEntity(
-               (UserItemMaster_o *)MasterData_object,
-               &entity,
-               Instance,
-               itemIds->m_Items[1],
-               0LL);
-  if ( (Instance & 1) != 0 )
+LABEL_19:
+    sub_1BD36B4(Instance, v6);
+  Instance = (DataManager_o *)UserItemMaster__TryGetEntity(
+                                (UserItemMaster_o *)MasterData_object,
+                                &entity,
+                                *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
+                                itemIds->m_Items[1],
+                                0LL);
+  if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
     {
@@ -100,11 +104,11 @@ LABEL_16:
       {
         if ( itemNums->max_length )
           return entity->fields.num < itemNums->m_Items[1];
-LABEL_17:
-        sub_1BCAA44(Instance, v9);
+LABEL_20:
+        sub_1BD36BC(Instance, v6);
       }
     }
-    goto LABEL_16;
+    goto LABEL_19;
   }
   return 1;
 }

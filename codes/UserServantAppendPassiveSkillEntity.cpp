@@ -2,16 +2,14 @@ void __fastcall UserServantAppendPassiveSkillEntity___ctor(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16FC6 & 1) == 0 )
+  if ( (byte_4B37F87 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16FC6 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37F87 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,15 +19,15 @@ System_String_o *__fastcall UserServantAppendPassiveSkillEntity__CreatePK(
         int32_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_4B16FC5 & 1) == 0 )
+  if ( (byte_4B37F86 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId, method);
-    byte_4B16FC5 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
+    byte_4B37F86 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_2F10FBC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2F2F9B0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -55,23 +53,22 @@ int32_t __fastcall UserServantAppendPassiveSkillEntity__GetRemainingExchangeNum(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  BalanceConfig_c *v4; // x0
+  BalanceConfig_c *v3; // x0
   int32_t exchangeNum; // w19
 
-  if ( (byte_4B16FC4 & 1) == 0 )
+  if ( (byte_4B37F85 & 1) == 0 )
   {
-    sub_1BCA7E0(&BalanceConfig_TypeInfo, method, v2);
-    byte_4B16FC4 = 1;
+    sub_1BD3458(&BalanceConfig_TypeInfo, method);
+    byte_4B37F85 = 1;
   }
-  v4 = BalanceConfig_TypeInfo;
+  v3 = BalanceConfig_TypeInfo;
   exchangeNum = this->fields.exchangeNum;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
-    v4 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    v3 = BalanceConfig_TypeInfo;
   }
-  return exchangeNum - v4->static_fields->AppendPassiveSkillMaxExchangeNum;
+  return exchangeNum - v3->static_fields->AppendPassiveSkillMaxExchangeNum;
 }
 
 

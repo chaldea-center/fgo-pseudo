@@ -19,6 +19,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 104);
   v5[-1].fields._AiTimingPriority_k__BackingField = 44;
-  sub_1BCA784((PartyOrganizationUtility_o *)v5, (int64_t)motionName, v7, v8, v9, v10, v11, v12);
+  sub_1BD33FC((PartyOrganizationUtility_o *)v5, (int64_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v5->fields.command) = v6;
 }

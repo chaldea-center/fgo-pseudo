@@ -1,15 +1,13 @@
 void __fastcall EventPointActivityEntity___ctor(EventPointActivityEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16250 & 1) == 0 )
+  if ( (byte_4B371FC & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16250 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B371FC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.eventId = 0LL;
   *(_QWORD *)&this->fields.objectType = 0LL;
   this->fields.point = 0;
@@ -26,13 +24,10 @@ System_String_o *__fastcall EventPointActivityEntity__CreatePK(
         int64_t objectValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B1624F & 1) == 0 )
+  if ( (byte_4B371FB & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___,
-      *(_QWORD *)&groupId,
-      *(_QWORD *)&objectType);
-    byte_4B1624F = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___, *(_QWORD *)&groupId);
+    byte_4B371FB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__long_(
            eventId,
@@ -40,7 +35,7 @@ System_String_o *__fastcall EventPointActivityEntity__CreatePK(
            objectType,
            objectId,
            objectValue,
-           (const MethodInfo_2F11D58 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___);
+           (const MethodInfo_2F3074C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___);
 }
 
 

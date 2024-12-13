@@ -1,16 +1,14 @@
 void __fastcall MasterPhotoMaster___ctor(MasterPhotoMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B172E3 & 1) == 0 )
+  if ( (byte_4B382A9 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__, method, v2);
-    byte_4B172E3 = 1;
+    sub_1BD3458(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__, method);
+    byte_4B382A9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     483,
-    (const MethodInfo_31B3158 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__);
+    (const MethodInfo_31D2208 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__);
 }
 
 
@@ -24,19 +22,16 @@ MasterPhotoEntity_o *__fastcall MasterPhotoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B172E4 & 1) == 0 )
+  if ( (byte_4B382AA & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__,
-      *(_QWORD *)&equipId,
-      *(_QWORD *)&type);
-    byte_4B172E4 = 1;
+    sub_1BD3458(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__, *(_QWORD *)&equipId);
+    byte_4B382AA = 1;
   }
   PK = (Il2CppObject *)MasterPhotoEntity__CreatePK(equipId, type, position, *(const MethodInfo **)&position);
   return (MasterPhotoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_31B3198 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__);
+                                  (const MethodInfo_31D2248 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__);
 }
 
 
@@ -51,18 +46,15 @@ bool __fastcall MasterPhotoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B172E5 & 1) == 0 )
+  if ( (byte_4B382AB & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__,
-      entity,
-      *(_QWORD *)&equipId);
-    byte_4B172E5 = 1;
+    sub_1BD3458(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__, entity);
+    byte_4B382AB = 1;
   }
   PK = (Il2CppObject *)MasterPhotoEntity__CreatePK(equipId, type, position, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31B31E8 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__);
+           (const MethodInfo_31D2298 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__);
 }

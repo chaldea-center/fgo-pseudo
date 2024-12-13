@@ -34,7 +34,7 @@ void __fastcall TweenAnimationComponent__OnFinishAnimation(TweenAnimationCompone
   p_onFinishAnimation = (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0LL);
   p_onFinishAnimation->klass = 0LL;
-  sub_1BCA784(p_onFinishAnimation, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1BD33FC(p_onFinishAnimation, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -47,41 +47,40 @@ void __fastcall TweenAnimationComponent__Setup(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x2
-  _BOOL8 v11; // x0
-  __int64 v12; // x1
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
   int32_t *p_closeEaseType; // x8
   struct UnityEngine_GameObject_o *gameObject; // x0
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  int64_t v20; // x1
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
 
-  if ( (byte_4B14EA1 & 1) == 0 )
+  if ( (byte_4B35E3A & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType, tweener);
-    sub_1BCA7E0(&StringLiteral_10034/*"OnFinishAnimation"*/, v9, v10);
-    byte_4B14EA1 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
+    sub_1BD3458(&StringLiteral_10048/*"OnFinishAnimation"*/, v9);
+    byte_4B35E3A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-  v11 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
-  if ( !v11 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tweener, 0LL, 0LL);
+  if ( !v10 )
   {
     if ( animationType == 1 )
     {
@@ -98,32 +97,32 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         tweener->fields.eventReceiver = gameObject;
-        sub_1BCA784(
+        sub_1BD33FC(
           (PartyOrganizationUtility_o *)&tweener->fields.eventReceiver,
           (int64_t)gameObject,
+          v14,
           v15,
           v16,
           v17,
           v18,
-          v19,
-          v20);
-        v21 = StringLiteral_10034/*"OnFinishAnimation"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10034/*"OnFinishAnimation"*/;
-        sub_1BCA784((PartyOrganizationUtility_o *)&tweener->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
+          v19);
+        v20 = StringLiteral_10048/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10048/*"OnFinishAnimation"*/;
+        sub_1BD33FC((PartyOrganizationUtility_o *)&tweener->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
         this->fields.onFinishAnimation = onFinish;
-        sub_1BCA784(
+        sub_1BD33FC(
           (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation,
           (int64_t)onFinish,
+          v27,
           v28,
           v29,
           v30,
           v31,
-          v32,
-          v33);
+          v32);
         return;
       }
     }
-    sub_1BCAA3C(v11, v12);
+    sub_1BD36B4(v10, v11);
   }
 }
 
@@ -138,17 +137,16 @@ UnityEngine_GameObject_o *__fastcall TweenAnimationComponent__get_Target(
         TweenAnimationComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_4B14EA0 & 1) == 0 )
+  if ( (byte_4B35E39 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B14EA0 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B35E39 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(target, 0LL, 0LL) )
     return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   else

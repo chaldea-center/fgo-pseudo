@@ -5,7 +5,7 @@ void __fastcall QuestInformationListViewItem___ctor(
         int32_t target,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.infoType = 0;
   this->fields.mRewardType = type;
   this->fields.targetId = target;
@@ -14,7 +14,7 @@ void __fastcall QuestInformationListViewItem___ctor(
 }
 
 
-void __fastcall QuestInformationListViewItem___ctor_34662932(
+void __fastcall QuestInformationListViewItem___ctor_34715640(
         QuestInformationListViewItem_o *this,
         int32_t index,
         ViewEnemyEntity_o *viewEnemyEnt,
@@ -45,7 +45,7 @@ void __fastcall QuestInformationListViewItem___ctor_34662932(
   QuestInformationListViewItem_MissionTargetState_o missionTargetState; // [xsp+Ch] [xbp-24h] BYREF
 
   missionTargetState = 0;
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.infoType = 1;
   if ( viewEnemyEnt )
   {
@@ -56,7 +56,7 @@ void __fastcall QuestInformationListViewItem___ctor_34662932(
       *(_QWORD *)&this->fields.targetId = 0LL;
       *(_QWORD *)&this->fields.iconId = 0LL;
       *(_QWORD *)&this->fields.dispType = 0LL;
-      sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.nameText, 0LL, v14, v15, v16, v17, v18, v19);
+      sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.nameText, 0LL, v14, v15, v16, v17, v18, v19);
       *(_WORD *)&this->fields.weeklyMissionTarget = 0;
       IsEventMission = missionTargetState.fields.IsEventMission;
       this->fields.completeMissionTarget = 0;
@@ -72,7 +72,7 @@ void __fastcall QuestInformationListViewItem___ctor_34662932(
       this->fields.enemyNameEffectId = ViewEnemyEntity__getEnemyNameEffect(viewEnemyEnt, 0LL);
       BattleName = ViewEnemyEntity__getBattleName(viewEnemyEnt, 0LL);
       this->fields.nameText = BattleName;
-      sub_1BCA784(
+      sub_1BD33FC(
         (PartyOrganizationUtility_o *)&this->fields.nameText,
         (int64_t)BattleName,
         v22,
@@ -93,7 +93,7 @@ void __fastcall QuestInformationListViewItem___ctor_34662932(
     *(_QWORD *)&this->fields.targetId = 0LL;
     *(_QWORD *)&this->fields.dispType = 0LL;
     *(_QWORD *)&this->fields.iconId = 0LL;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.nameText, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.nameText, 0LL, v8, v9, v10, v11, v12, v13);
     *(_DWORD *)&this->fields.weeklyMissionTarget = 0;
   }
   if ( this->fields.targetId )

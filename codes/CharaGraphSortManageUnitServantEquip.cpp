@@ -10,18 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Cr
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4B155C5 & 1) == 0 )
+  if ( (byte_4B36560 & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantCharaGraphEquipFilterLogic_TypeInfo, method, v2);
-    byte_4B155C5 = 1;
+    sub_1BD3458(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
+    byte_4B36560 = 1;
   }
-  v4 = (Il2CppObject *)sub_1BCAA2C(ServantCharaGraphEquipFilterLogic_TypeInfo, method, v2, v3);
-  System_Object___ctor(v4, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v4;
+  v2 = (Il2CppObject *)sub_1BD36A4(ServantCharaGraphEquipFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -29,18 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Crea
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  ServantEquipCharaGraphSortLogic_o *v4; // x19
+  ServantEquipCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_4B155C4 & 1) == 0 )
+  if ( (byte_4B3655F & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantEquipCharaGraphSortLogic_TypeInfo, method, v2);
-    byte_4B155C4 = 1;
+    sub_1BD3458(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
+    byte_4B3655F = 1;
   }
-  v4 = (ServantEquipCharaGraphSortLogic_o *)sub_1BCAA2C(ServantEquipCharaGraphSortLogic_TypeInfo, method, v2, v3);
-  ServantEquipCharaGraphSortLogic___ctor(v4, 0LL);
-  return (CharaGraphSortLogicBase_o *)v4;
+  v2 = (ServantEquipCharaGraphSortLogic_o *)sub_1BD36A4(ServantEquipCharaGraphSortLogic_TypeInfo);
+  ServantEquipCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -80,12 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServantEquip__get_SortSaveKe
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B155C3 & 1) == 0 )
+  if ( (byte_4B3655E & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_1409/*"2"*/, method, v2);
-    byte_4B155C3 = 1;
+    sub_1BD3458(&StringLiteral_1409/*"2"*/, method);
+    byte_4B3655E = 1;
   }
   return (System_String_o *)StringLiteral_1409/*"2"*/;
 }

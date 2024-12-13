@@ -15,10 +15,10 @@ bool __fastcall SimpleSkillData__Equals(SimpleSkillData_o this, Il2CppObject *ob
   _QWORD *v6; // x0
   bool result; // w0
 
-  if ( (byte_4B186DA & 1) == 0 )
+  if ( (byte_4B396B1 & 1) == 0 )
   {
-    sub_1BCA7E0(&SimpleSkillData_TypeInfo, obj, method);
-    byte_4B186DA = 1;
+    sub_1BD3458(&SimpleSkillData_TypeInfo, obj);
+    byte_4B396B1 = 1;
   }
   result = obj
         && (SimpleSkillData_c *)obj->klass == SimpleSkillData_TypeInfo
@@ -28,7 +28,7 @@ bool __fastcall SimpleSkillData__Equals(SimpleSkillData_o this, Il2CppObject *ob
 }
 
 
-bool __fastcall SimpleSkillData__Equals_43413816(
+bool __fastcall SimpleSkillData__Equals_43522076(
         SimpleSkillData_o this,
         SimpleSkillData_o toCompare,
         const MethodInfo *method)
@@ -39,21 +39,20 @@ bool __fastcall SimpleSkillData__Equals_43413816(
 
 int32_t __fastcall SimpleSkillData__GetHashCode(SimpleSkillData_o this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   System_Tuple_T1__T2__o *int__int; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4B186DB & 1) == 0 )
+  if ( (byte_4B396B2 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Tuple_Create_int__int___, method, v2);
-    byte_4B186DB = 1;
+    sub_1BD3458(&Method_System_Tuple_Create_int__int___, method);
+    byte_4B396B2 = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_2FC26CC *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_2FE1B54 *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_1BCAA3C(0LL, v5);
+    sub_1BD36B4(0LL, v4);
   return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, Il2CppMethodPointer))int__int->klass->vtable._2_GetHashCode.method)(
            int__int,
            int__int->klass->vtable._3_ToString.methodPtr);

@@ -1,38 +1,30 @@
 void __fastcall UseSkillEachTurn___ctor(UseSkillEachTurn_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x1
-  __int64 v6; // x2
-  System_Collections_Generic_HashSet_long__o *v7; // x20
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_HashSet_long__o *v4; // x20
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B186EA & 1) == 0 )
+  if ( (byte_4B396C1 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_HashSet_long___ctor__, method, v2);
-    sub_1BCA7E0(&System_Collections_Generic_HashSet_long__TypeInfo, v5, v6);
-    byte_4B186EA = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_HashSet_long___ctor__, method);
+    sub_1BD3458(&System_Collections_Generic_HashSet_long__TypeInfo, v3);
+    byte_4B396C1 = 1;
   }
-  v7 = (System_Collections_Generic_HashSet_long__o *)sub_1BCAA2C(
-                                                       System_Collections_Generic_HashSet_long__TypeInfo,
-                                                       method,
-                                                       v2,
-                                                       v3);
+  v4 = (System_Collections_Generic_HashSet_long__o *)sub_1BD36A4(System_Collections_Generic_HashSet_long__TypeInfo);
   System_Collections_Generic_HashSet_long____ctor(
-    v7,
-    (const MethodInfo_3458EAC *)Method_System_Collections_Generic_HashSet_long___ctor__);
-  this->fields.hashSkillId = v7;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.hashSkillId, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    v4,
+    (const MethodInfo_3477FE0 *)Method_System_Collections_Generic_HashSet_long___ctor__);
+  this->fields.hashSkillId = v4;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.hashSkillId, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall UseSkillEachTurn__AddUseSkillId(
         UseSkillEachTurn_o *this,
         int64_t waveTurn,
@@ -40,14 +32,13 @@ void __fastcall UseSkillEachTurn__AddUseSkillId(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
   System_Collections_Generic_HashSet_long__o *hashSkillId; // x0
 
-  if ( (byte_4B186E6 & 1) == 0 )
+  if ( (byte_4B396BD & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_HashSet_long__Add__, waveTurn, *(_QWORD *)&skillId);
-    sub_1BCA7E0(&Method_System_Collections_Generic_HashSet_long__Clear__, v7, v8);
-    byte_4B186E6 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_HashSet_long__Add__, waveTurn);
+    sub_1BD3458(&Method_System_Collections_Generic_HashSet_long__Clear__, v7);
+    byte_4B396BD = 1;
   }
   if ( this->fields.waveTurn != waveTurn )
   {
@@ -57,16 +48,16 @@ void __fastcall UseSkillEachTurn__AddUseSkillId(
       goto LABEL_8;
     System_Collections_Generic_HashSet_long___Clear(
       hashSkillId,
-      (const MethodInfo_3459540 *)Method_System_Collections_Generic_HashSet_long__Clear__);
+      (const MethodInfo_3478674 *)Method_System_Collections_Generic_HashSet_long__Clear__);
   }
   hashSkillId = this->fields.hashSkillId;
   if ( !hashSkillId )
 LABEL_8:
-    sub_1BCAA3C(hashSkillId, waveTurn);
+    sub_1BD36B4(hashSkillId, waveTurn);
   System_Collections_Generic_HashSet_long___Add(
     hashSkillId,
     skillId,
-    (const MethodInfo_345A08C *)Method_System_Collections_Generic_HashSet_long__Add__);
+    (const MethodInfo_34791C0 *)Method_System_Collections_Generic_HashSet_long__Add__);
 }
 
 
@@ -74,38 +65,35 @@ UseSkillEachTurn_SaveData_o *__fastcall UseSkillEachTurn__GetSaveData(
         UseSkillEachTurn_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x20
-  __int64 v8; // x0
-  __int64 v9; // x1
-  System_Int64_array *v10; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  __int64 v3; // x1
+  __int64 v4; // x20
+  __int64 v5; // x0
+  __int64 v6; // x1
+  System_Int64_array *v7; // x0
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B186E8 & 1) == 0 )
+  if ( (byte_4B396BF & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_ToArray_long___, method, v2);
-    sub_1BCA7E0(&UseSkillEachTurn_SaveData_TypeInfo, v5, v6);
-    byte_4B186E8 = 1;
+    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_long___, method);
+    sub_1BD3458(&UseSkillEachTurn_SaveData_TypeInfo, v3);
+    byte_4B396BF = 1;
   }
-  v7 = sub_1BCAA2C(UseSkillEachTurn_SaveData_TypeInfo, method, v2, v3);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7 )
-    sub_1BCAA3C(v8, v9);
-  *(_QWORD *)(v7 + 16) = this->fields.waveTurn;
-  v10 = System_Linq_Enumerable__ToArray_long_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.hashSkillId,
-          (const MethodInfo_2F4B980 *)Method_System_Linq_Enumerable_ToArray_long___);
-  *(_QWORD *)(v7 + 24) = v10;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)v10, v11, v12, v13, v14, v15, v16);
-  return (UseSkillEachTurn_SaveData_o *)v7;
+  v4 = sub_1BD36A4(UseSkillEachTurn_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v4, 0LL);
+  if ( !v4 )
+    sub_1BD36B4(v5, v6);
+  *(_QWORD *)(v4 + 16) = this->fields.waveTurn;
+  v7 = System_Linq_Enumerable__ToArray_long_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.hashSkillId,
+         (const MethodInfo_2F6AD2C *)Method_System_Linq_Enumerable_ToArray_long___);
+  *(_QWORD *)(v4 + 24) = v7;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v4 + 24), (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  return (UseSkillEachTurn_SaveData_o *)v4;
 }
 
 
@@ -117,32 +105,27 @@ bool __fastcall UseSkillEachTurn__IsUseThisTurn(
 {
   UseSkillEachTurn_o *v6; // x20
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x3
-  System_Func_long__bool__o *v14; // x21
+  __int64 v8; // x1
+  System_Func_long__bool__o *v9; // x21
 
   v6 = this;
-  if ( (byte_4B186E7 & 1) == 0 )
+  if ( (byte_4B396BE & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_BasicHelper_Any_long___, data, skillIds);
-    sub_1BCA7E0(&System_Func_long__bool__TypeInfo, v7, v8);
-    this = (UseSkillEachTurn_o *)sub_1BCA7E0(&Method_UseSkillEachTurn__IsUseThisTurn_b__3_0__, v9, v10);
-    byte_4B186E7 = 1;
+    sub_1BD3458(&Method_BasicHelper_Any_long___, data);
+    sub_1BD3458(&System_Func_long__bool__TypeInfo, v7);
+    this = (UseSkillEachTurn_o *)sub_1BD3458(&Method_UseSkillEachTurn__IsUseThisTurn_b__3_0__, v8);
+    byte_4B396BE = 1;
   }
   if ( !data )
-    sub_1BCAA3C(this, data);
+    sub_1BD36B4(this, data);
   if ( !BattleData__EqualCurrentUniqueWaveTurn(data, v6->fields.waveTurn, 0LL) )
     return 0;
-  v14 = (System_Func_long__bool__o *)sub_1BCAA2C(System_Func_long__bool__TypeInfo, v11, v12, v13);
-  System_Func_long__bool____ctor(v14, (Il2CppObject *)v6, Method_UseSkillEachTurn__IsUseThisTurn_b__3_0__, 0LL);
+  v9 = (System_Func_long__bool__o *)sub_1BD36A4(System_Func_long__bool__TypeInfo);
+  System_Func_long__bool____ctor(v9, (Il2CppObject *)v6, Method_UseSkillEachTurn__IsUseThisTurn_b__3_0__, 0LL);
   return BasicHelper__Any_long_(
            skillIds,
-           (System_Func_T__bool__o *)v14,
-           (const MethodInfo_2EFDBF8 *)Method_BasicHelper_Any_long___);
+           (System_Func_T__bool__o *)v9,
+           (const MethodInfo_2F1C554 *)Method_BasicHelper_Any_long___);
 }
 
 
@@ -151,39 +134,33 @@ void __fastcall UseSkillEachTurn__SetSaveData(
         UseSkillEachTurn_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v5; // x1
   System_Collections_Generic_IEnumerable_T__o *skillIds; // x20
-  System_Collections_Generic_HashSet_long__o *v9; // x21
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  System_Collections_Generic_HashSet_long__o *v7; // x21
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B186E9 & 1) == 0 )
+  if ( (byte_4B396C0 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_HashSet_long___ctor___76767336, sv, method);
-    sub_1BCA7E0(&System_Collections_Generic_HashSet_long__TypeInfo, v6, v7);
-    byte_4B186E9 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_HashSet_long___ctor___76899576, sv);
+    sub_1BD3458(&System_Collections_Generic_HashSet_long__TypeInfo, v5);
+    byte_4B396C0 = 1;
   }
   if ( sv )
   {
     this->fields.waveTurn = sv->fields.waveTurn;
     skillIds = (System_Collections_Generic_IEnumerable_T__o *)sv->fields.skillIds;
-    v9 = (System_Collections_Generic_HashSet_long__o *)sub_1BCAA2C(
-                                                         System_Collections_Generic_HashSet_long__TypeInfo,
-                                                         sv,
-                                                         method,
-                                                         v3);
-    System_Collections_Generic_HashSet_long____ctor_54890396(
-      v9,
+    v7 = (System_Collections_Generic_HashSet_long__o *)sub_1BD36A4(System_Collections_Generic_HashSet_long__TypeInfo);
+    System_Collections_Generic_HashSet_long____ctor_55017680(
+      v7,
       skillIds,
-      (const MethodInfo_3458F9C *)Method_System_Collections_Generic_HashSet_long___ctor___76767336);
-    this->fields.hashSkillId = v9;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.hashSkillId, (int64_t)v9, v10, v11, v12, v13, v14, v15);
+      (const MethodInfo_34780D0 *)Method_System_Collections_Generic_HashSet_long___ctor___76899576);
+    this->fields.hashSkillId = v7;
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.hashSkillId, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -192,18 +169,18 @@ bool __fastcall UseSkillEachTurn___IsUseThisTurn_b__3_0(UseSkillEachTurn_o *this
 {
   System_Collections_Generic_HashSet_long__o *hashSkillId; // x0
 
-  if ( (byte_4B186EB & 1) == 0 )
+  if ( (byte_4B396C2 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_HashSet_long__Contains__, id, method);
-    byte_4B186EB = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_HashSet_long__Contains__, id);
+    byte_4B396C2 = 1;
   }
   hashSkillId = this->fields.hashSkillId;
   if ( !hashSkillId )
-    sub_1BCAA3C(0LL, id);
+    sub_1BD36B4(0LL, id);
   return System_Collections_Generic_HashSet_long___Contains(
            hashSkillId,
            id,
-           (const MethodInfo_34595A0 *)Method_System_Collections_Generic_HashSet_long__Contains__);
+           (const MethodInfo_34786D4 *)Method_System_Collections_Generic_HashSet_long__Contains__);
 }
 
 

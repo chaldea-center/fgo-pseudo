@@ -4,9 +4,9 @@ void __fastcall OrganizationTopListViewItem___ctor(
         OrganizationTopItemInfo_o *info,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_1BCA784(&this->fields.info, info);
+  sub_1BD33FC(&this->fields.info);
 }
 
 
@@ -20,20 +20,19 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
         OrganizationTopListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  OrganizationTopListViewItem_o *v3; // x19
+  OrganizationTopListViewItem_o *v2; // x19
   struct OrganizationTopItemInfo_o *info; // x8
 
-  v3 = this;
-  if ( (byte_4B11D03 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B32C8E & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1BCA7E0(&StringLiteral_10192/*"OrganizationTopItem "*/, method, v2);
-    byte_4B11D03 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1BD3458(&StringLiteral_10206/*"OrganizationTopItem "*/, method);
+    byte_4B32C8E = 1;
   }
-  info = v3->fields.info;
+  info = v2->fields.info;
   if ( !info )
-    sub_1BCAA3C(this, method);
-  return System_String__Concat_62401220((System_String_o *)StringLiteral_10192/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
+    sub_1BD36B4(this, method);
+  return System_String__Concat_62525248((System_String_o *)StringLiteral_10206/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 
@@ -45,7 +44,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   return info->fields.eventData;
 }
 
@@ -58,7 +57,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   return info->fields.imageName;
 }
 
@@ -75,22 +74,21 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_InfoText(
         OrganizationTopListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  OrganizationTopListViewItem_o *v3; // x19
+  OrganizationTopListViewItem_o *v2; // x19
   struct OrganizationTopItemInfo_o *info; // x8
   System_String_o *textCode; // x19
 
-  v3 = this;
-  if ( (byte_4B11D02 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B32C8D & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1BCA7E0(&LocalizationManager_TypeInfo, method, v2);
-    byte_4B11D02 = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1BD3458(&LocalizationManager_TypeInfo, method);
+    byte_4B32C8D = 1;
   }
-  info = v3->fields.info;
+  info = v2->fields.info;
   if ( !info )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   return LocalizationManager__Get(textCode, 0LL);
 }

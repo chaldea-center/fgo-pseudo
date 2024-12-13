@@ -11,34 +11,30 @@ UnityEngine_GameObject_o *__fastcall FGOActionUtil__getEffectObject(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 *v15; // x8
-  System_String_o *v16; // x0
+  __int64 v10; // x1
+  __int64 *v11; // x8
+  System_String_o *v12; // x0
   UnityEngine_GameObject_o *result; // x0
-  __int64 v18; // x1
-  bool v19; // w8
+  __int64 v14; // x1
+  bool v15; // w8
 
-  if ( (byte_4B1796A & 1) == 0 )
+  if ( (byte_4B38934 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name, actorObject);
-    sub_1BCA7E0(&UnityEngine_GameObject_TypeInfo, v7, v8);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v9, v10);
-    sub_1BCA7E0(&StringLiteral_3234/*"Battle/CommonEffects/"*/, v11, v12);
-    sub_1BCA7E0(&StringLiteral_19064/*"effect/"*/, v13, v14);
-    byte_4B1796A = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
+    sub_1BD3458(&UnityEngine_GameObject_TypeInfo, v7);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BD3458(&StringLiteral_3241/*"Battle/CommonEffects/"*/, v9);
+    sub_1BD3458(&StringLiteral_19093/*"effect/"*/, v10);
+    byte_4B38934 = 1;
   }
   if ( folder == 2 )
   {
-    v15 = &StringLiteral_19064/*"effect/"*/;
+    v11 = &StringLiteral_19093/*"effect/"*/;
 LABEL_8:
-    v16 = System_String__Concat_62401220((System_String_o *)*v15, name, 0LL);
-    result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v16, 0LL);
+    v12 = System_String__Concat_62525248((System_String_o *)*v11, name, 0LL);
+    result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v12, 0LL);
     if ( result )
     {
       if ( result->klass != UnityEngine_GameObject_TypeInfo )
@@ -50,21 +46,21 @@ LABEL_8:
   {
     if ( folder )
       return 0LL;
-    v15 = &StringLiteral_3234/*"Battle/CommonEffects/"*/;
+    v11 = &StringLiteral_3241/*"Battle/CommonEffects/"*/;
     goto LABEL_8;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, name);
-  v19 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)actorObject, 0LL, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)actorObject, 0LL, 0LL);
   result = 0LL;
-  if ( v19 )
+  if ( v15 )
   {
     if ( !actorObject
       || (result = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  actorObject,
-                                                 (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
+                                                 (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
     {
-      sub_1BCAA3C(result, v18);
+      sub_1BD36B4(result, v14);
     }
     return BattleActorControl__getActorEffect((BattleActorControl_o *)result, name, 0LL);
   }

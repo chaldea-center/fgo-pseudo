@@ -24,7 +24,7 @@ UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast(
 {
   const MethodInfo *v3; // x2
 
-  return MapModelCamera__RayCast_34406416(
+  return MapModelCamera__RayCast_34456376(
            this->fields.cameraInstance,
            this->fields.screenUI,
            this->fields.renderTextureSize,
@@ -34,7 +34,7 @@ UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast(
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast_34406416(
+UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast_34456376(
         UnityEngine_Camera_o *renderTextureCamera,
         UnityEngine_GameObject_o *renderTextureUI,
         UnityEngine_Vector3_o renderTextureSize,
@@ -51,21 +51,20 @@ UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast_34406416(
   float v13; // s0
   float v14; // s1
   float v15; // s2
-  __int64 v16; // x1
   UnityEngine_Camera_c *klass; // x8
-  UnityEngine_Camera_o *v18; // x20
-  unsigned __int64 v19; // x22
+  UnityEngine_Camera_o *v17; // x20
+  unsigned __int64 v18; // x22
   void **i; // x23
-  struct UnityEngine_Vector2_o v21; // x9
-  __int128 v22; // q0
-  __int128 v23; // q1
+  struct UnityEngine_Vector2_o v20; // x9
+  __int128 v21; // q0
+  __int128 v22; // q1
   unsigned int cullingMask; // w21
-  UnityEngine_Ray_o v26; // [xsp+0h] [xbp-E0h] BYREF
-  UnityEngine_Ray_o v27; // [xsp+18h] [xbp-C8h] BYREF
-  UnityEngine_Ray_o v28; // [xsp+30h] [xbp-B0h]
-  UnityEngine_RaycastHit_o v29; // [xsp+50h] [xbp-90h] BYREF
+  UnityEngine_Ray_o v25; // [xsp+0h] [xbp-E0h] BYREF
+  UnityEngine_Ray_o v26; // [xsp+18h] [xbp-C8h] BYREF
+  UnityEngine_Ray_o v27; // [xsp+30h] [xbp-B0h]
+  UnityEngine_RaycastHit_o v28; // [xsp+50h] [xbp-90h] BYREF
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   z = worldPosition.fields.z;
   y = worldPosition.fields.y;
@@ -74,55 +73,55 @@ UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast_34406416(
   v9 = renderTextureSize.fields.y;
   v10 = renderTextureSize.fields.x;
   v12 = renderTextureCamera;
-  if ( (byte_4B12F93 & 1) == 0 )
+  if ( (byte_4B33F1D & 1) == 0 )
   {
-    renderTextureCamera = (UnityEngine_Camera_o *)sub_1BCA7E0(&UnityEngine_Physics_TypeInfo, renderTextureUI, method);
-    byte_4B12F93 = 1;
+    renderTextureCamera = (UnityEngine_Camera_o *)sub_1BD3458(&UnityEngine_Physics_TypeInfo, renderTextureUI);
+    byte_4B33F1D = 1;
   }
-  memset(&v29, 0, sizeof(v29));
+  memset(&v28, 0, sizeof(v28));
   if ( !renderTextureUI )
     goto LABEL_19;
   renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_GameObject__get_transform(renderTextureUI, 0LL);
   if ( !renderTextureCamera )
     goto LABEL_19;
-  v30.fields.x = x;
-  v30.fields.y = y;
-  v30.fields.z = z;
+  v29.fields.x = x;
+  v29.fields.y = y;
+  v29.fields.z = z;
   *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__InverseTransformPoint(
                                      (UnityEngine_Transform_o *)renderTextureCamera,
-                                     v30,
+                                     v29,
                                      0LL);
   if ( !v12 )
     goto LABEL_19;
-  v31.fields.z = (float)(v8 * 0.5) + v15;
-  v31.fields.y = (float)(v9 * 0.5) + v14;
-  v31.fields.x = (float)(v10 * 0.5) + v13;
-  UnityEngine_Camera__ScreenPointToRay_69960936(&v27, v12, v31, 0LL);
-  v28 = v27;
+  v30.fields.z = (float)(v8 * 0.5) + v15;
+  v30.fields.y = (float)(v9 * 0.5) + v14;
+  v30.fields.x = (float)(v10 * 0.5) + v13;
+  UnityEngine_Camera__ScreenPointToRay_70084964(&v26, v12, v30, 0LL);
+  v27 = v26;
   if ( !UnityEngine_Physics_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v16);
-  v26 = v28;
-  renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_Physics__RaycastAll_70469704(&v26, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo);
+  v25 = v27;
+  renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_Physics__RaycastAll_70593732(&v25, 0LL);
   if ( !renderTextureCamera )
     goto LABEL_19;
   klass = renderTextureCamera[1].klass;
-  v18 = renderTextureCamera;
+  v17 = renderTextureCamera;
   if ( (int)klass < 1 )
     return 0LL;
-  v19 = 0LL;
+  v18 = 0LL;
   for ( i = &renderTextureCamera[1].monitor; ; i = (void **)((char *)i + 44) )
   {
-    if ( v19 >= (unsigned int)klass )
-      sub_1BCAA44(renderTextureCamera, renderTextureUI);
-    v21 = (struct UnityEngine_Vector2_o)i[4];
-    v23 = *(_OWORD *)i;
-    v22 = *((_OWORD *)i + 1);
-    v29.fields.m_Collider = *((_DWORD *)i + 10);
-    v29.fields.m_UV = v21;
-    *(_OWORD *)&v29.fields.m_Point.fields.x = v23;
-    *(_OWORD *)&v29.fields.m_Normal.fields.y = v22;
+    if ( v18 >= (unsigned int)klass )
+      sub_1BD36BC(renderTextureCamera, renderTextureUI);
+    v20 = (struct UnityEngine_Vector2_o)i[4];
+    v22 = *(_OWORD *)i;
+    v21 = *((_OWORD *)i + 1);
+    v28.fields.m_Collider = *((_DWORD *)i + 10);
+    v28.fields.m_UV = v20;
+    *(_OWORD *)&v28.fields.m_Point.fields.x = v22;
+    *(_OWORD *)&v28.fields.m_Normal.fields.y = v21;
     cullingMask = UnityEngine_Camera__get_cullingMask(v12, 0LL);
-    renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_RaycastHit__get_collider(&v29, 0LL);
+    renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_RaycastHit__get_collider(&v28, 0LL);
     if ( !renderTextureCamera )
       goto LABEL_19;
     renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_Component__get_gameObject(
@@ -135,14 +134,14 @@ UnityEngine_GameObject_o *__fastcall MapModelCamera__RayCast_34406416(
                                                     0LL);
     if ( ((cullingMask >> (char)renderTextureCamera) & 1) != 0 )
       break;
-    LODWORD(klass) = v18[1].klass;
-    if ( (__int64)++v19 >= (int)klass )
+    LODWORD(klass) = v17[1].klass;
+    if ( (__int64)++v18 >= (int)klass )
       return 0LL;
   }
-  renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_RaycastHit__get_collider(&v29, 0LL);
+  renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_RaycastHit__get_collider(&v28, 0LL);
   if ( !renderTextureCamera )
 LABEL_19:
-    sub_1BCAA3C(renderTextureCamera, renderTextureUI);
+    sub_1BD36B4(renderTextureCamera, renderTextureUI);
   return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)renderTextureCamera, 0LL);
 }
 
@@ -158,28 +157,25 @@ void __fastcall MapModelCamera__Setup(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v10; // x1
-  __int64 v11; // x2
+  __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x1
   __int64 screenUI; // x0
-  __int64 v16; // x1
   Il2CppObject *Component_object; // x21
   UnityEngine_Camera_o *cameraInstance; // x20
   __int64 methodPtr_low; // x10
-  UnityEngine_RenderTexture_o *v20; // x1
-  int v21; // w20
-  int v22; // w0
+  UnityEngine_RenderTexture_o *v17; // x1
+  int v18; // w20
+  int v19; // w0
 
-  if ( (byte_4B12F92 & 1) == 0 )
+  if ( (byte_4B33F1C & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_GameObject_GetComponent_UITexture___, screen, method);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v10, v11);
-    sub_1BCA7E0(&UnityEngine_RenderTexture_TypeInfo, v12, v13);
-    byte_4B12F92 = 1;
+    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_UITexture___, screen);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BD3458(&UnityEngine_RenderTexture_TypeInfo, v11);
+    byte_4B33F1C = 1;
   }
   this->fields.screenUI = screen;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.screenUI,
     (int64_t)screen,
     (int64_t)method,
@@ -193,9 +189,9 @@ void __fastcall MapModelCamera__Setup(
     goto LABEL_21;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)screenUI,
-                       (const MethodInfo_2F626D0 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                       (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   screenUI = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( (screenUI & 1) == 0 )
   {
@@ -211,15 +207,15 @@ void __fastcall MapModelCamera__Setup(
           && (methodPtr_low = LOBYTE(UnityEngine_RenderTexture_TypeInfo->vtable._0_Equals.methodPtr),
               *(unsigned __int8 *)(*(_QWORD *)screenUI + 304LL) >= (unsigned int)methodPtr_low) )
         {
-          v20 = *(UnityEngine_RenderTexture_c **)(*(_QWORD *)(*(_QWORD *)screenUI + 200LL) + 8 * methodPtr_low - 8) == UnityEngine_RenderTexture_TypeInfo
+          v17 = *(UnityEngine_RenderTexture_c **)(*(_QWORD *)(*(_QWORD *)screenUI + 200LL) + 8 * methodPtr_low - 8) == UnityEngine_RenderTexture_TypeInfo
               ? (UnityEngine_RenderTexture_o *)screenUI
               : 0LL;
         }
         else
         {
-          v20 = 0LL;
+          v17 = 0LL;
         }
-        UnityEngine_Camera__set_targetTexture(cameraInstance, v20, 0LL);
+        UnityEngine_Camera__set_targetTexture(cameraInstance, v17, 0LL);
         screenUI = (__int64)this->fields.cameraInstance;
         if ( screenUI )
         {
@@ -231,15 +227,15 @@ void __fastcall MapModelCamera__Setup(
                          *(_QWORD *)(*(_QWORD *)screenUI + 384LL));
             if ( this->fields.cameraInstance )
             {
-              v21 = screenUI;
+              v18 = screenUI;
               screenUI = (__int64)UnityEngine_Camera__get_targetTexture(this->fields.cameraInstance, 0LL);
               if ( screenUI )
               {
-                v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)screenUI + 408LL))(
+                v19 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)screenUI + 408LL))(
                         screenUI,
                         *(_QWORD *)(*(_QWORD *)screenUI + 416LL));
-                this->fields.renderTextureSize.fields.x = (float)v21;
-                this->fields.renderTextureSize.fields.y = (float)v22;
+                this->fields.renderTextureSize.fields.x = (float)v18;
+                this->fields.renderTextureSize.fields.y = (float)v19;
                 this->fields.renderTextureSize.fields.z = 0.0;
                 return;
               }
@@ -249,6 +245,6 @@ void __fastcall MapModelCamera__Setup(
       }
     }
 LABEL_21:
-    sub_1BCAA3C(screenUI, v14);
+    sub_1BD36B4(screenUI, v12);
   }
 }

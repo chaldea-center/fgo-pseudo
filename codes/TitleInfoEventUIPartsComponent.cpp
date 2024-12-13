@@ -8,26 +8,24 @@ void __fastcall TitleInfoEventUIPartsComponent__UpdateDisp(
         TitleInfoEventUIPartsComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   DataManager_o *Instance; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   bool IsOpen; // w20
 
-  if ( (byte_4B14CD9 & 1) == 0 )
+  if ( (byte_4B35C71 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method, v2);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4, v5);
-    byte_4B14CD9 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B35C71 = 1;
   }
   if ( this->fields.commonReleaseId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL
+                                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL
       || (IsOpen = CommonReleaseMaster__IsOpen(
                      (CommonReleaseMaster_o *)Instance,
                      this->fields.commonReleaseId,
@@ -36,7 +34,7 @@ void __fastcall TitleInfoEventUIPartsComponent__UpdateDisp(
                      0LL),
           (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1BCAA3C(Instance, v7);
+      sub_1BD36B4(Instance, v5);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, IsOpen, 0LL);
   }

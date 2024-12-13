@@ -13,22 +13,21 @@ bool __fastcall CharaGraphFilterLogicBase__IsAllFilterOff(
   ListViewSort_o *sort; // x20
 
   v4 = this;
-  if ( (byte_4B15530 & 1) == 0 )
+  if ( (byte_4B364CB & 1) == 0 )
   {
-    this = (CharaGraphFilterLogicBase_o *)sub_1BCA7E0(
+    this = (CharaGraphFilterLogicBase_o *)sub_1BD3458(
                                             &Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__,
-                                            list,
-                                            method);
-    byte_4B15530 = 1;
+                                            list);
+    byte_4B364CB = 1;
   }
   if ( !list
     || (sort = v4->fields.sort,
         this = (CharaGraphFilterLogicBase_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                 (System_Collections_Generic_List_T__o *)list,
-                                                (const MethodInfo_3588F1C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__),
+                                                (const MethodInfo_35A8050 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__),
         !sort) )
   {
-    sub_1BCAA3C(this, list);
+    sub_1BD36B4(this, list);
   }
   return ListViewSort__IsUnSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)this, 0LL);
 }
@@ -43,22 +42,21 @@ bool __fastcall CharaGraphFilterLogicBase__IsAllFilterOn(
   ListViewSort_o *sort; // x20
 
   v4 = this;
-  if ( (byte_4B15531 & 1) == 0 )
+  if ( (byte_4B364CC & 1) == 0 )
   {
-    this = (CharaGraphFilterLogicBase_o *)sub_1BCA7E0(
+    this = (CharaGraphFilterLogicBase_o *)sub_1BD3458(
                                             &Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__,
-                                            list,
-                                            method);
-    byte_4B15531 = 1;
+                                            list);
+    byte_4B364CC = 1;
   }
   if ( !list
     || (sort = v4->fields.sort,
         this = (CharaGraphFilterLogicBase_o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                 (System_Collections_Generic_List_T__o *)list,
-                                                (const MethodInfo_3588F1C *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__),
+                                                (const MethodInfo_35A8050 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__),
         !sort) )
   {
-    sub_1BCAA3C(this, list);
+    sub_1BD36B4(this, list);
   }
   return ListViewSort__IsSelectedAllTargetFilters(sort, (ListViewSort_FilterKind_array *)this, 0LL);
 }
@@ -74,15 +72,15 @@ bool __fastcall CharaGraphFilterLogicBase__IsMatchRarityFilter(
   struct CharaGraphListViewItemBase_o *item; // x0
   ListViewSort_o *sort; // x19
 
-  if ( (byte_4B15532 & 1) == 0 )
+  if ( (byte_4B364CD & 1) == 0 )
   {
-    sub_1BCA7E0(&FilterKindList_TypeInfo, method, v2);
-    byte_4B15532 = 1;
+    sub_1BD3458(&FilterKindList_TypeInfo, method);
+    byte_4B364CD = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(FilterKindList_TypeInfo);
     v4 = FilterKindList_TypeInfo;
   }
   if ( CharaGraphFilterLogicBase__IsAllFilterOff(this, v4->static_fields->RarityFilterKindList, v2) )
@@ -95,7 +93,7 @@ bool __fastcall CharaGraphFilterLogicBase__IsMatchRarityFilter(
                                                         item->klass->vtable._10_ModifyLocal.methodPtr),
         !sort) )
   {
-    sub_1BCAA3C(item, v5);
+    sub_1BD36B4(item, v5);
   }
   return ListViewSort__IsMatchRarityFilter(sort, (int32_t)item, 0LL);
 }
@@ -105,24 +103,23 @@ bool __fastcall CharaGraphFilterLogicBase__IsMatchSelectedItemFilter(
         CharaGraphFilterLogicBase_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   ListViewSort_o *sort; // x20
   struct ListViewSort_o *Filter; // x0
-  struct ListViewSort_o *v6; // x1
+  struct ListViewSort_o *v5; // x1
   struct CharaGraphListViewItemBase_o *item; // x8
 
-  if ( (byte_4B15533 & 1) == 0 )
+  if ( (byte_4B364CE & 1) == 0 )
   {
-    sub_1BCA7E0(&ListViewSort_FilterKind___TypeInfo, method, v2);
-    byte_4B15533 = 1;
+    sub_1BD3458(&ListViewSort_FilterKind___TypeInfo, method);
+    byte_4B364CE = 1;
   }
   sort = this->fields.sort;
-  Filter = (struct ListViewSort_o *)sub_1BCA888(ListViewSort_FilterKind___TypeInfo, 1LL);
+  Filter = (struct ListViewSort_o *)sub_1BD3500(ListViewSort_FilterKind___TypeInfo, 1LL);
   if ( !Filter )
     goto LABEL_13;
-  v6 = Filter;
+  v5 = Filter;
   if ( !*(_DWORD *)&Filter->fields.FILTER_DEFAULT_VALUE )
-    sub_1BCAA44(Filter, Filter);
+    sub_1BD36BC(Filter, Filter);
   LODWORD(Filter->fields.manager) = 39;
   if ( !sort )
     goto LABEL_13;
@@ -137,7 +134,7 @@ bool __fastcall CharaGraphFilterLogicBase__IsMatchSelectedItemFilter(
   item = this->fields.item;
   if ( !item )
 LABEL_13:
-    sub_1BCAA3C(Filter, v6);
+    sub_1BD36B4(Filter, v5);
   return item->fields._IsSwapChoice_k__BackingField != item->fields._IsChoice_k__BackingField;
 }
 
@@ -154,7 +151,7 @@ void __fastcall CharaGraphFilterLogicBase__SetListViewItem(
   PartyListViewItem_o *v7; // x7
 
   this->fields.item = item;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.item, (int64_t)item, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.item, (int64_t)item, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -170,5 +167,5 @@ void __fastcall CharaGraphFilterLogicBase__SetListViewSort(
   PartyListViewItem_o *v7; // x7
 
   this->fields.sort = sort;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)sort, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)sort, (int64_t)method, v3, v4, v5, v6, v7);
 }

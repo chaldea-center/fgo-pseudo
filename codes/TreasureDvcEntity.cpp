@@ -8,115 +8,106 @@ void __fastcall TreasureDvcEntity___cctor(const MethodInfo *method)
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
+  __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x1
-  __int64 v19; // x2
-  int64_t v20; // x1
+  __int64 v13; // x1
+  int64_t v14; // x1
   struct TreasureDvcEntity_StaticFields *static_fields; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  int64_t v28; // x1
-  struct TreasureDvcEntity_StaticFields *v29; // x0
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  int64_t v36; // x1
-  struct TreasureDvcEntity_StaticFields *v37; // x0
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x1
-  struct TreasureDvcEntity_StaticFields *v45; // x0
-  int64_t v46; // x2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  BattleSetupInfo_o *v49; // x5
-  FollowerInfo_o *v50; // x6
-  PartyListViewItem_o *v51; // x7
-  int64_t v52; // x1
-  struct TreasureDvcEntity_StaticFields *v53; // x0
-  int64_t v54; // x2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
-  BattleSetupInfo_o *v57; // x5
-  FollowerInfo_o *v58; // x6
-  PartyListViewItem_o *v59; // x7
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  int64_t v22; // x1
+  struct TreasureDvcEntity_StaticFields *v23; // x0
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  int64_t v30; // x1
+  struct TreasureDvcEntity_StaticFields *v31; // x0
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
+  int64_t v38; // x1
+  struct TreasureDvcEntity_StaticFields *v39; // x0
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
+  int64_t v46; // x1
+  struct TreasureDvcEntity_StaticFields *v47; // x0
+  int64_t v48; // x2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  BattleSetupInfo_o *v51; // x5
+  FollowerInfo_o *v52; // x6
+  PartyListViewItem_o *v53; // x7
 
-  if ( (byte_4B16D9B & 1) == 0 )
+  if ( (byte_4B37D58 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, v1, v2);
-    sub_1BCA7E0(&StringLiteral_20063/*"groupSeqIDs"*/, v8, v9);
-    sub_1BCA7E0(&StringLiteral_18740/*"delayEnd"*/, v10, v11);
-    sub_1BCA7E0(&StringLiteral_16694/*"_actSet"*/, v12, v13);
-    sub_1BCA7E0(&StringLiteral_23024/*"randomWeights"*/, v14, v15);
-    sub_1BCA7E0(&StringLiteral_24119/*"tdTypeChangeIDs"*/, v16, v17);
-    sub_1BCA7E0(&StringLiteral_23023/*"randomSeqIds"*/, v18, v19);
-    byte_4B16D9B = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, v1);
+    sub_1BD3458(&StringLiteral_20093/*"groupSeqIDs"*/, v8);
+    sub_1BD3458(&StringLiteral_18768/*"delayEnd"*/, v9);
+    sub_1BD3458(&StringLiteral_16714/*"_actSet"*/, v10);
+    sub_1BD3458(&StringLiteral_23057/*"randomWeights"*/, v11);
+    sub_1BD3458(&StringLiteral_24154/*"tdTypeChangeIDs"*/, v12);
+    sub_1BD3458(&StringLiteral_23056/*"randomSeqIds"*/, v13);
+    byte_4B37D58 = 1;
   }
-  TreasureDvcEntity_TypeInfo->static_fields->KEY_RANDOM_SEQ_ID = (struct System_String_o *)StringLiteral_23023/*"randomSeqIds"*/;
-  sub_1BCA784(
+  TreasureDvcEntity_TypeInfo->static_fields->KEY_RANDOM_SEQ_ID = (struct System_String_o *)StringLiteral_23056/*"randomSeqIds"*/;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)TreasureDvcEntity_TypeInfo->static_fields,
-    StringLiteral_23023/*"randomSeqIds"*/,
+    StringLiteral_23056/*"randomSeqIds"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v20 = StringLiteral_23024/*"randomWeights"*/;
+  v14 = StringLiteral_23057/*"randomWeights"*/;
   static_fields = TreasureDvcEntity_TypeInfo->static_fields;
-  static_fields->KEY_RANDOM_SEQ_WEIGHT = (struct System_String_o *)StringLiteral_23024/*"randomWeights"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&static_fields->KEY_RANDOM_SEQ_WEIGHT, v20, v22, v23, v24, v25, v26, v27);
-  v28 = StringLiteral_20063/*"groupSeqIDs"*/;
-  v29 = TreasureDvcEntity_TypeInfo->static_fields;
-  v29->KEY_GROUP_SEQ_ID = (struct System_String_o *)StringLiteral_20063/*"groupSeqIDs"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v29->KEY_GROUP_SEQ_ID, v28, v30, v31, v32, v33, v34, v35);
-  v36 = StringLiteral_24119/*"tdTypeChangeIDs"*/;
-  v37 = TreasureDvcEntity_TypeInfo->static_fields;
-  v37->KEY_TD_TYPE_CHANGE_ID = (struct System_String_o *)StringLiteral_24119/*"tdTypeChangeIDs"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v37->KEY_TD_TYPE_CHANGE_ID, v36, v38, v39, v40, v41, v42, v43);
-  v44 = StringLiteral_18740/*"delayEnd"*/;
-  v45 = TreasureDvcEntity_TypeInfo->static_fields;
-  v45->KEY_TD_DELAY_END = (struct System_String_o *)StringLiteral_18740/*"delayEnd"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v45->KEY_TD_DELAY_END, v44, v46, v47, v48, v49, v50, v51);
-  v52 = StringLiteral_16694/*"_actSet"*/;
-  v53 = TreasureDvcEntity_TypeInfo->static_fields;
-  v53->KET_SUFFIX_ACTSET = (struct System_String_o *)StringLiteral_16694/*"_actSet"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v53->KET_SUFFIX_ACTSET, v52, v54, v55, v56, v57, v58, v59);
+  static_fields->KEY_RANDOM_SEQ_WEIGHT = (struct System_String_o *)StringLiteral_23057/*"randomWeights"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->KEY_RANDOM_SEQ_WEIGHT, v14, v16, v17, v18, v19, v20, v21);
+  v22 = StringLiteral_20093/*"groupSeqIDs"*/;
+  v23 = TreasureDvcEntity_TypeInfo->static_fields;
+  v23->KEY_GROUP_SEQ_ID = (struct System_String_o *)StringLiteral_20093/*"groupSeqIDs"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v23->KEY_GROUP_SEQ_ID, v22, v24, v25, v26, v27, v28, v29);
+  v30 = StringLiteral_24154/*"tdTypeChangeIDs"*/;
+  v31 = TreasureDvcEntity_TypeInfo->static_fields;
+  v31->KEY_TD_TYPE_CHANGE_ID = (struct System_String_o *)StringLiteral_24154/*"tdTypeChangeIDs"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v31->KEY_TD_TYPE_CHANGE_ID, v30, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_18768/*"delayEnd"*/;
+  v39 = TreasureDvcEntity_TypeInfo->static_fields;
+  v39->KEY_TD_DELAY_END = (struct System_String_o *)StringLiteral_18768/*"delayEnd"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v39->KEY_TD_DELAY_END, v38, v40, v41, v42, v43, v44, v45);
+  v46 = StringLiteral_16714/*"_actSet"*/;
+  v47 = TreasureDvcEntity_TypeInfo->static_fields;
+  v47->KET_SUFFIX_ACTSET = (struct System_String_o *)StringLiteral_16714/*"_actSet"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v47->KET_SUFFIX_ACTSET, v46, v48, v49, v50, v51, v52, v53);
 }
 
 
 void __fastcall TreasureDvcEntity___ctor(TreasureDvcEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16D9A & 1) == 0 )
+  if ( (byte_4B37D57 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_int___ctor__, method, v2);
-    byte_4B16D9A = 1;
+    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B37D57 = 1;
   }
-  *(_QWORD *)&this->fields.cacheRandomSeqId = -1LL;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31B2C40 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -130,14 +121,12 @@ System_Int32_array *__fastcall TreasureDvcEntity__GetAssumedEffectId(
         TreasureDvcEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16D96 & 1) == 0 )
+  if ( (byte_4B37D53 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_17114/*"assumedEffectId"*/, method, v2);
-    byte_4B16D96 = 1;
+    sub_1BD3458(&StringLiteral_17135/*"assumedEffectId"*/, method);
+    byte_4B37D53 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_17114/*"assumedEffectId"*/, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_17135/*"assumedEffectId"*/, 0LL);
 }
 
 
@@ -161,40 +150,169 @@ System_Int32_array *__fastcall TreasureDvcEntity__GetExcludeTdChangeTypes(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4B16D8F & 1) == 0 )
+  if ( (byte_4B37D4C & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_19505/*"excludeTdChangeTypes"*/, defArray, method);
-    byte_4B16D8F = 1;
+    sub_1BD3458(&StringLiteral_19535/*"excludeTdChangeTypes"*/, defArray);
+    byte_4B37D4C = 1;
   }
-  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_19505/*"excludeTdChangeTypes"*/, defArray, v3);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-int32_t __fastcall TreasureDvcEntity__GetLotteriedSeqId(
-        TreasureDvcEntity_o *this,
-        int32_t limit,
-        const MethodInfo *method)
-{
-  const MethodInfo *v5; // x2
-
-  if ( TreasureDvcEntity__IsRandomTD(this, *(const MethodInfo **)&limit) )
-    return this->fields.cacheRandomSeqId;
-  else
-    return TreasureDvcEntity__getSeqId(this, limit, v5);
+  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_19535/*"excludeTdChangeTypes"*/, defArray, v3);
 }
 
 
 System_String_o *__fastcall TreasureDvcEntity__GetNpNameFileSuffix(TreasureDvcEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16D95 & 1) == 0 )
+  if ( (byte_4B37D52 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_22400/*"npNameFileSuffix"*/, method, v2);
-    byte_4B16D95 = 1;
+    sub_1BD3458(&StringLiteral_22433/*"npNameFileSuffix"*/, method);
+    byte_4B37D52 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22400/*"npNameFileSuffix"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22433/*"npNameFileSuffix"*/, 0LL, 0LL);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+int32_t __fastcall TreasureDvcEntity__GetRandomSeqIdEachLimit(
+        TreasureDvcEntity_o *this,
+        int32_t limitCount,
+        int32_t *groupSeqId,
+        int32_t actSetId,
+        const MethodInfo *method)
+{
+  __int64 v9; // x1
+  int32_t seqId; // w21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int v13; // w8
+  __int64 v14; // x22
+  const MethodInfo *v15; // x4
+  __int64 v16; // x23
+  __int64 v17; // x8
+  unsigned __int64 v18; // x28
+  __int64 v19; // x8
+  int32_t v20; // w24
+  unsigned __int64 v21; // x21
+  TreasureDvcEntity_c *v22; // x0
+  int32_t v23; // w26
+  TreasureDvcEntity_o *AddLimitKey; // x25
+  const MethodInfo *v25; // x4
+  TreasureDvcEntity_o *v26; // x27
+  const MethodInfo *v27; // x4
+  System_String_o *v28; // x26
+  const MethodInfo *v29; // x2
+  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x3
+  const MethodInfo *v32; // x3
+  int32_t RandomSeqIndex; // w0
+  const MethodInfo *v34; // x3
+  int32_t v36; // [xsp+4h] [xbp-6Ch]
+  int32_t *v37; // [xsp+8h] [xbp-68h]
+
+  if ( (byte_4B37D46 & 1) == 0 )
+  {
+    sub_1BD3458(&int___TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, v9);
+    byte_4B37D46 = 1;
+  }
+  seqId = this->fields.seqId;
+  *groupSeqId = 0;
+  v11 = sub_1BD3500(int___TypeInfo, 2LL);
+  if ( !v11 )
+    goto LABEL_28;
+  v13 = *(_DWORD *)(v11 + 24);
+  v14 = v11;
+  if ( !v13 )
+    goto LABEL_27;
+  *(_DWORD *)(v11 + 32) = limitCount;
+  if ( v13 == 1 )
+    goto LABEL_27;
+  *(_DWORD *)(v11 + 36) = -1;
+  if ( actSetId )
+  {
+    v11 = sub_1BD3500(int___TypeInfo, 2LL);
+    if ( v11 )
+    {
+      v16 = v11;
+      if ( *(_DWORD *)(v11 + 24) )
+      {
+        *(_DWORD *)(v11 + 32) = actSetId;
+        goto LABEL_11;
+      }
+LABEL_27:
+      sub_1BD36BC(v11, v12);
+    }
+LABEL_28:
+    sub_1BD36B4(v11, v12);
+  }
+  v11 = sub_1BD3500(int___TypeInfo, 1LL);
+  v16 = v11;
+LABEL_11:
+  v17 = *(_QWORD *)(v14 + 24);
+  if ( (int)v17 >= 1 )
+  {
+    v36 = seqId;
+    v37 = groupSeqId;
+    v18 = 0LL;
+    while ( 1 )
+    {
+      if ( v18 >= (unsigned int)v17 )
+        goto LABEL_27;
+      if ( !v16 )
+        goto LABEL_28;
+      v19 = *(_QWORD *)(v16 + 24);
+      if ( (int)v19 >= 1 )
+        break;
+LABEL_23:
+      LODWORD(v17) = *(_DWORD *)(v14 + 24);
+      if ( (__int64)++v18 >= (int)v17 )
+        return v36;
+    }
+    v20 = *(_DWORD *)(v14 + 4 * v18 + 32);
+    v21 = 0LL;
+    while ( 1 )
+    {
+      if ( v21 >= (unsigned int)v19 )
+        goto LABEL_27;
+      v22 = TreasureDvcEntity_TypeInfo;
+      v23 = *(_DWORD *)(v16 + 32 + 4 * v21);
+      if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
+        v22 = TreasureDvcEntity_TypeInfo;
+      }
+      AddLimitKey = (TreasureDvcEntity_o *)TreasureDvcEntity__makeAddLimitKey(
+                                             (TreasureDvcEntity_o *)v22,
+                                             v22->static_fields->KEY_RANDOM_SEQ_ID,
+                                             v20,
+                                             v23,
+                                             v15);
+      v26 = (TreasureDvcEntity_o *)TreasureDvcEntity__makeAddLimitKey(
+                                     AddLimitKey,
+                                     TreasureDvcEntity_TypeInfo->static_fields->KEY_RANDOM_SEQ_WEIGHT,
+                                     v20,
+                                     v23,
+                                     v25);
+      v28 = TreasureDvcEntity__makeAddLimitKey(
+              v26,
+              TreasureDvcEntity_TypeInfo->static_fields->KEY_GROUP_SEQ_ID,
+              v20,
+              v23,
+              v27);
+      v11 = TreasureDvcEntity__checkScript(this, (System_String_o *)AddLimitKey, v29);
+      if ( (v11 & 1) != 0 )
+      {
+        v11 = TreasureDvcEntity__checkScript(this, (System_String_o *)v26, v30);
+        if ( (v11 & 1) != 0 )
+          break;
+      }
+      LODWORD(v19) = *(_DWORD *)(v16 + 24);
+      if ( (__int64)++v21 >= (int)v19 )
+        goto LABEL_23;
+    }
+    seqId = TreasureDvcEntity__getRandomSeqId(this, (System_String_o *)AddLimitKey, (System_String_o *)v26, v31);
+    RandomSeqIndex = TreasureDvcEntity__getRandomSeqIndex(this, (System_String_o *)AddLimitKey, seqId, v32);
+    *v37 = TreasureDvcEntity__getGroupSeqId(this, v28, RandomSeqIndex, v34);
+  }
+  return seqId;
 }
 
 
@@ -204,281 +322,251 @@ System_Collections_Generic_List_int__o *__fastcall TreasureDvcEntity__GetTdChang
         int32_t battlePontId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
+  __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x2
+  __int64 v13; // x1
   __int64 v14; // x1
-  __int64 v15; // x2
+  __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x2
+  __int64 v17; // x1
   __int64 v18; // x1
-  __int64 v19; // x2
+  __int64 v19; // x1
   __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x1
+  __int64 v21; // x22
+  System_Collections_Generic_List_int__o *v22; // x19
   __int64 v23; // x2
-  __int64 v24; // x1
-  __int64 v25; // x2
-  __int64 v26; // x1
-  __int64 v27; // x2
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x1
-  __int64 v31; // x2
-  __int64 v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x1
-  __int64 v35; // x2
-  __int64 v36; // x1
-  __int64 v37; // x2
-  __int64 v38; // x22
-  __int64 v39; // x1
-  __int64 v40; // x2
-  __int64 v41; // x3
-  System_Collections_Generic_List_int__o *v42; // x19
-  Il2CppObject *v43; // x0
+  __int64 v24; // x3
+  __int64 v25; // x4
+  Il2CppObject *v26; // x0
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
-  __int64 v45; // x1
-  int64_t v46; // x2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  BattleSetupInfo_o *v49; // x5
-  FollowerInfo_o *v50; // x6
-  PartyListViewItem_o *v51; // x7
+  __int64 v28; // x1
+  int64_t v29; // x2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  BattleSetupInfo_o *v32; // x5
+  FollowerInfo_o *v33; // x6
+  PartyListViewItem_o *v34; // x7
   System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *Keys; // x20
-  __int64 v53; // x1
-  __int64 v54; // x2
-  __int64 v55; // x3
-  System_Func_object__bool__o *v56; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v57; // x20
-  __int64 v58; // x1
-  __int64 v59; // x2
-  __int64 v60; // x3
-  System_Func_object__object__o *v61; // x21
+  System_Func_object__bool__o *v36; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v37; // x20
+  System_Func_object__object__o *v38; // x21
   System_Collections_Generic_Dictionary_object__object__c *klass; // x8
-  System_Collections_Generic_Dictionary_object__object__o *v63; // x20
-  __int64 v64; // x9
+  System_Collections_Generic_Dictionary_object__object__o *v40; // x20
+  __int64 v41; // x9
   int32_t *p_offset; // x10
-  __int64 v66; // x0
-  __int64 v67; // x1
-  __int64 v68; // x20
-  __int64 v69; // x8
-  __int64 v70; // x9
-  int *v71; // x10
-  __int64 v72; // x0
-  __int64 v73; // x8
-  __int64 v74; // x9
-  int *v75; // x10
-  __int64 v76; // x0
-  System_String_o *v77; // x0
-  _BOOL8 v78; // x0
-  __int64 v79; // x1
-  __int64 v80; // x1
+  __int64 v43; // x0
+  __int64 v44; // x1
+  __int64 v45; // x20
+  __int64 v46; // x8
+  __int64 v47; // x9
+  int *v48; // x10
+  __int64 v49; // x0
+  __int64 v50; // x8
+  __int64 v51; // x9
+  int *v52; // x10
+  __int64 v53; // x0
+  System_String_o *v54; // x0
+  _BOOL8 v55; // x0
+  __int64 v56; // x1
+  __int64 v57; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v82; // x9
+  _QWORD *v59; // x9
   __int64 size; // x10
-  __int64 v84; // x8
-  __int64 v85; // x9
-  int *v86; // x10
-  __int64 v87; // x0
-  int32_t v89; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v61; // x8
+  __int64 v62; // x9
+  int *v63; // x10
+  __int64 v64; // x0
+  int32_t v66; // [xsp+8h] [xbp-48h] BYREF
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B16D97 & 1) == 0 )
+  if ( (byte_4B37D54 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_System_Collections_Generic_Dictionary_string__object__get_Keys__,
-      *(_QWORD *)&battlePontId,
-      method);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_Select_string__string___, v6, v7);
-    sub_1BCA7E0(&Method_System_Linq_Enumerable_Where_string___, v8, v9);
-    sub_1BCA7E0(&System_Func_string__string__TypeInfo, v10, v11);
-    sub_1BCA7E0(&System_Func_string__bool__TypeInfo, v12, v13);
-    sub_1BCA7E0(&System_IDisposable_TypeInfo, v14, v15);
-    sub_1BCA7E0(&System_Collections_Generic_IEnumerable_string__TypeInfo, v16, v17);
-    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_string__TypeInfo, v18, v19);
-    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v20, v21);
-    sub_1BCA7E0(&int_TypeInfo, v22, v23);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_int__Add__, v24, v25);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_int___ctor__, v26, v27);
-    sub_1BCA7E0(&System_Collections_Generic_List_int__TypeInfo, v28, v29);
-    sub_1BCA7E0(&Method_TreasureDvcEntity___c__DisplayClass54_0__GetTdChangeByBattlePointPhaseList_b__0__, v30, v31);
-    sub_1BCA7E0(&Method_TreasureDvcEntity___c__DisplayClass54_0__GetTdChangeByBattlePointPhaseList_b__1__, v32, v33);
-    sub_1BCA7E0(&TreasureDvcEntity___c__DisplayClass54_0_TypeInfo, v34, v35);
-    sub_1BCA7E0(&StringLiteral_24115/*"tdChangeByBattlePoint_{0}_"*/, v36, v37);
-    byte_4B16D97 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Keys__, *(_QWORD *)&battlePontId);
+    sub_1BD3458(&Method_System_Linq_Enumerable_Select_string__string___, v5);
+    sub_1BD3458(&Method_System_Linq_Enumerable_Where_string___, v6);
+    sub_1BD3458(&System_Func_string__string__TypeInfo, v7);
+    sub_1BD3458(&System_Func_string__bool__TypeInfo, v8);
+    sub_1BD3458(&System_IDisposable_TypeInfo, v9);
+    sub_1BD3458(&System_Collections_Generic_IEnumerable_string__TypeInfo, v10);
+    sub_1BD3458(&System_Collections_Generic_IEnumerator_string__TypeInfo, v11);
+    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1BD3458(&int_TypeInfo, v13);
+    sub_1BD3458(&Method_System_Collections_Generic_List_int__Add__, v14);
+    sub_1BD3458(&Method_System_Collections_Generic_List_int___ctor__, v15);
+    sub_1BD3458(&System_Collections_Generic_List_int__TypeInfo, v16);
+    sub_1BD3458(&Method_TreasureDvcEntity___c__DisplayClass48_0__GetTdChangeByBattlePointPhaseList_b__0__, v17);
+    sub_1BD3458(&Method_TreasureDvcEntity___c__DisplayClass48_0__GetTdChangeByBattlePointPhaseList_b__1__, v18);
+    sub_1BD3458(&TreasureDvcEntity___c__DisplayClass48_0_TypeInfo, v19);
+    sub_1BD3458(&StringLiteral_24150/*"tdChangeByBattlePoint_{0}_"*/, v20);
+    byte_4B37D54 = 1;
   }
   result = 0;
-  v38 = sub_1BCAA2C(TreasureDvcEntity___c__DisplayClass54_0_TypeInfo, *(_QWORD *)&battlePontId, method, v3);
-  TreasureDvcEntity___c__DisplayClass54_0___ctor((TreasureDvcEntity___c__DisplayClass54_0_o *)v38, 0LL);
-  v42 = (System_Collections_Generic_List_int__o *)sub_1BCAA2C(
-                                                    System_Collections_Generic_List_int__TypeInfo,
-                                                    v39,
-                                                    v40,
-                                                    v41);
+  v21 = sub_1BD36A4(TreasureDvcEntity___c__DisplayClass48_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v21, 0LL);
+  v22 = (System_Collections_Generic_List_int__o *)sub_1BD36A4(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v42,
-    (const MethodInfo_35843E4 *)Method_System_Collections_Generic_List_int___ctor__);
-  v89 = battlePontId;
-  v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v89);
+    v22,
+    (const MethodInfo_35A3518 *)Method_System_Collections_Generic_List_int___ctor__);
+  v66 = battlePontId;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66, v23, v24, v25);
   script = (System_Collections_Generic_Dictionary_object__object__o *)System_String__Format(
-                                                                        (System_String_o *)StringLiteral_24115/*"tdChangeByBattlePoint_{0}_"*/,
-                                                                        v43,
+                                                                        (System_String_o *)StringLiteral_24150/*"tdChangeByBattlePoint_{0}_"*/,
+                                                                        v26,
                                                                         0LL);
-  if ( !v38 )
+  if ( !v21 )
     goto LABEL_41;
-  *(_QWORD *)(v38 + 16) = script;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v38 + 16), (int64_t)script, v46, v47, v48, v49, v50, v51);
+  *(_QWORD *)(v21 + 16) = script;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v21 + 16), (int64_t)script, v29, v30, v31, v32, v33, v34);
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script
     || (Keys = System_Collections_Generic_Dictionary_object__object___get_Keys(
                  script,
-                 (const MethodInfo_3264F40 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__),
-        v56 = (System_Func_object__bool__o *)sub_1BCAA2C(System_Func_string__bool__TypeInfo, v53, v54, v55),
+                 (const MethodInfo_3284074 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__),
+        v36 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_string__bool__TypeInfo),
         System_Func_object__bool____ctor(
-          v56,
-          (Il2CppObject *)v38,
-          Method_TreasureDvcEntity___c__DisplayClass54_0__GetTdChangeByBattlePointPhaseList_b__0__,
+          v36,
+          (Il2CppObject *)v21,
+          Method_TreasureDvcEntity___c__DisplayClass48_0__GetTdChangeByBattlePointPhaseList_b__0__,
           0LL),
-        v57 = System_Linq_Enumerable__Where_object_(
+        v37 = System_Linq_Enumerable__Where_object_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)Keys,
-                (System_Func_TSource__bool__o *)v56,
-                (const MethodInfo_2F51894 *)Method_System_Linq_Enumerable_Where_string___),
-        v61 = (System_Func_object__object__o *)sub_1BCAA2C(System_Func_string__string__TypeInfo, v58, v59, v60),
+                (System_Func_TSource__bool__o *)v36,
+                (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_string___),
+        v38 = (System_Func_object__object__o *)sub_1BD36A4(System_Func_string__string__TypeInfo),
         System_Func_object__object____ctor(
-          v61,
-          (Il2CppObject *)v38,
-          Method_TreasureDvcEntity___c__DisplayClass54_0__GetTdChangeByBattlePointPhaseList_b__1__,
+          v38,
+          (Il2CppObject *)v21,
+          Method_TreasureDvcEntity___c__DisplayClass48_0__GetTdChangeByBattlePointPhaseList_b__1__,
           0LL),
         (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Linq_Enumerable__Select_object__object_(
-                                                                               v57,
-                                                                               (System_Func_TSource__TResult__o *)v61,
-                                                                               (const MethodInfo_2F43A70 *)Method_System_Linq_Enumerable_Select_string__string___)) == 0LL) )
+                                                                               v37,
+                                                                               (System_Func_TSource__TResult__o *)v38,
+                                                                               (const MethodInfo_2F62E1C *)Method_System_Linq_Enumerable_Select_string__string___)) == 0LL) )
   {
 LABEL_41:
-    sub_1BCAA3C(script, v45);
+    sub_1BD36B4(script, v28);
   }
   klass = script->klass;
-  v63 = script;
-  v64 = *(unsigned __int16 *)(&script->klass->_2.bitflags2 + 3);
+  v40 = script;
+  v41 = *(unsigned __int16 *)(&script->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&script->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_string__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_string__TypeInfo )
     {
-      --v64;
+      --v41;
       p_offset += 4;
-      if ( !v64 )
+      if ( !v41 )
         goto LABEL_10;
     }
-    v66 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v43 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_10:
-    v66 = sub_1C1C7C0(script, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
+    v43 = sub_1C25438(script, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
   }
-  v68 = (*(__int64 (__fastcall **)(System_Collections_Generic_Dictionary_object__object__o *, _QWORD))v66)(
-          v63,
-          *(_QWORD *)(v66 + 8));
-  if ( !v68 )
-    sub_1BCAA3C(0LL, v67);
+  v45 = (*(__int64 (__fastcall **)(System_Collections_Generic_Dictionary_object__object__o *, _QWORD))v43)(
+          v40,
+          *(_QWORD *)(v43 + 8));
+  if ( !v45 )
+    sub_1BD36B4(0LL, v44);
   while ( 1 )
   {
-    v69 = *(_QWORD *)v68;
-    v70 = *(unsigned __int16 *)(*(_QWORD *)v68 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v68 + 302LL) )
+    v46 = *(_QWORD *)v45;
+    v47 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
     {
-      v71 = (int *)(*(_QWORD *)(v69 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v71 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v48 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v70;
-        v71 += 4;
-        if ( !v70 )
+        --v47;
+        v48 += 4;
+        if ( !v47 )
           goto LABEL_17;
       }
-      v72 = v69 + 16LL * *v71 + 312;
+      v49 = v46 + 16LL * *v48 + 312;
     }
     else
     {
 LABEL_17:
-      v72 = sub_1C1C7C0(v68, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v49 = sub_1C25438(v45, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v72)(v68, *(_QWORD *)(v72 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v45, *(_QWORD *)(v49 + 8)) & 1) == 0 )
       break;
-    v73 = *(_QWORD *)v68;
-    v74 = *(unsigned __int16 *)(*(_QWORD *)v68 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v68 + 302LL) )
+    v50 = *(_QWORD *)v45;
+    v51 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
     {
-      v75 = (int *)(*(_QWORD *)(v73 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_string__c **)v75 - 1) != System_Collections_Generic_IEnumerator_string__TypeInfo )
+      v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_string__c **)v52 - 1) != System_Collections_Generic_IEnumerator_string__TypeInfo )
       {
-        --v74;
-        v75 += 4;
-        if ( !v74 )
+        --v51;
+        v52 += 4;
+        if ( !v51 )
           goto LABEL_24;
       }
-      v76 = v73 + 16LL * *v75 + 312;
+      v53 = v50 + 16LL * *v52 + 312;
     }
     else
     {
 LABEL_24:
-      v76 = sub_1C1C7C0(v68, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
+      v53 = sub_1C25438(v45, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
     }
-    v77 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v76)(v68, *(_QWORD *)(v76 + 8));
-    v78 = System_Int32__TryParse(v77, &result, 0LL);
-    if ( v78 )
+    v54 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v45, *(_QWORD *)(v53 + 8));
+    v55 = System_Int32__TryParse(v54, &result, 0LL);
+    if ( v55 )
     {
-      if ( !v42 )
-        sub_1BCAA3C(v78, v79);
-      v80 = (unsigned int)result;
-      items = v42->fields._items;
-      v82 = Method_System_Collections_Generic_List_int__Add__;
-      ++v42->fields._version;
+      if ( !v22 )
+        sub_1BD36B4(v55, v56);
+      v57 = (unsigned int)result;
+      items = v22->fields._items;
+      v59 = Method_System_Collections_Generic_List_int__Add__;
+      ++v22->fields._version;
       if ( !items )
-        sub_1BCAA3C(v78, v80);
-      size = v42->fields._size;
+        sub_1BD36B4(v55, v57);
+      size = v22->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v42,
-          v80,
-          *(const MethodInfo_3584C38 **)(*(_QWORD *)(v82[4] + 192LL) + 112LL));
+          v22,
+          v57,
+          *(const MethodInfo_35A3D6C **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
       }
       else
       {
-        v42->fields._size = size + 1;
-        items->m_Items[size + 1] = v80;
+        v22->fields._size = size + 1;
+        items->m_Items[size + 1] = v57;
       }
     }
   }
-  v84 = *(_QWORD *)v68;
-  v85 = *(unsigned __int16 *)(*(_QWORD *)v68 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v68 + 302LL) )
+  v61 = *(_QWORD *)v45;
+  v62 = *(unsigned __int16 *)(*(_QWORD *)v45 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v45 + 302LL) )
   {
-    v86 = (int *)(*(_QWORD *)(v84 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v86 - 1) != System_IDisposable_TypeInfo )
+    v63 = (int *)(*(_QWORD *)(v61 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v63 - 1) != System_IDisposable_TypeInfo )
     {
-      --v85;
-      v86 += 4;
-      if ( !v85 )
+      --v62;
+      v63 += 4;
+      if ( !v62 )
         goto LABEL_36;
     }
-    v87 = v84 + 16LL * *v86 + 312;
+    v64 = v61 + 16LL * *v63 + 312;
   }
   else
   {
 LABEL_36:
-    v87 = sub_1C1C7C0(v68, System_IDisposable_TypeInfo, 0LL);
+    v64 = sub_1C25438(v45, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v87)(v68, *(_QWORD *)(v87 + 8));
-  return v42;
+  (*(void (__fastcall **)(__int64, _QWORD))v64)(v45, *(_QWORD *)(v64 + 8));
+  return v22;
 }
 
 
@@ -496,15 +584,15 @@ bool __fastcall TreasureDvcEntity__IsDelayEnd(TreasureDvcEntity_o *this, const M
   const MethodInfo *v2; // x2
   TreasureDvcEntity_c *v4; // x0
 
-  if ( (byte_4B16D93 & 1) == 0 )
+  if ( (byte_4B37D50 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, method, v2);
-    byte_4B16D93 = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, method);
+    byte_4B37D50 = 1;
   }
   v4 = TreasureDvcEntity_TypeInfo;
   if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
     v4 = TreasureDvcEntity_TypeInfo;
   }
   return TreasureDvcEntity__checkScript(this, v4->static_fields->KEY_TD_DELAY_END, v2);
@@ -516,15 +604,15 @@ bool __fastcall TreasureDvcEntity__IsGroupId(TreasureDvcEntity_o *this, const Me
   const MethodInfo *v2; // x2
   TreasureDvcEntity_c *v4; // x0
 
-  if ( (byte_4B16D87 & 1) == 0 )
+  if ( (byte_4B37D44 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, method, v2);
-    byte_4B16D87 = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, method);
+    byte_4B37D44 = 1;
   }
   v4 = TreasureDvcEntity_TypeInfo;
   if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
     v4 = TreasureDvcEntity_TypeInfo;
   }
   return TreasureDvcEntity__checkScriptPartialMatch(this, v4->static_fields->KEY_GROUP_SEQ_ID, v2);
@@ -533,15 +621,14 @@ bool __fastcall TreasureDvcEntity__IsGroupId(TreasureDvcEntity_o *this, const Me
 
 bool __fastcall TreasureDvcEntity__IsOnlyFirstOneSpeed(TreasureDvcEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_4B16D94 & 1) == 0 )
+  if ( (byte_4B37D51 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_6904/*"ForcedOnlyFirstOneSpeed"*/, method, v2);
-    byte_4B16D94 = 1;
+    sub_1BD3458(&StringLiteral_6918/*"ForcedOnlyFirstOneSpeed"*/, method);
+    byte_4B37D51 = 1;
   }
-  return TreasureDvcEntity__getScriptInt(this, (System_String_o *)StringLiteral_6904/*"ForcedOnlyFirstOneSpeed"*/, 0, v3) > 0;
+  return TreasureDvcEntity__getScriptInt(this, (System_String_o *)StringLiteral_6918/*"ForcedOnlyFirstOneSpeed"*/, 0, v2) > 0;
 }
 
 
@@ -549,34 +636,33 @@ bool __fastcall TreasureDvcEntity__IsRandomTD(TreasureDvcEntity_o *this, const M
 {
   const MethodInfo *v2; // x2
   TreasureDvcEntity_c *v4; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
-  TreasureDvcEntity_c *v7; // x0
+  const MethodInfo *v5; // x2
+  TreasureDvcEntity_c *v6; // x0
 
-  if ( (byte_4B16D86 & 1) == 0 )
+  if ( (byte_4B37D43 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, method, v2);
-    byte_4B16D86 = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, method);
+    byte_4B37D43 = 1;
   }
   v4 = TreasureDvcEntity_TypeInfo;
   if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
     v4 = TreasureDvcEntity_TypeInfo;
   }
   if ( !TreasureDvcEntity__checkScriptPartialMatch(this, v4->static_fields->KEY_RANDOM_SEQ_ID, v2) )
     return 0;
-  v7 = TreasureDvcEntity_TypeInfo;
+  v6 = TreasureDvcEntity_TypeInfo;
   if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, v5);
-    v7 = TreasureDvcEntity_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
+    v6 = TreasureDvcEntity_TypeInfo;
   }
-  return TreasureDvcEntity__checkScriptPartialMatch(this, v7->static_fields->KEY_RANDOM_SEQ_WEIGHT, v6);
+  return TreasureDvcEntity__checkScriptPartialMatch(this, v6->static_fields->KEY_RANDOM_SEQ_WEIGHT, v5);
 }
 
 
-bool __fastcall TreasureDvcEntity__IsRandomTD_40754676(
+bool __fastcall TreasureDvcEntity__IsRandomTD_40846528(
         TreasureDvcEntity_o *this,
         System_String_o *keySeqId,
         System_String_o *keyWeight,
@@ -594,15 +680,15 @@ bool __fastcall TreasureDvcEntity__IsTDTypeChange(TreasureDvcEntity_o *this, con
   const MethodInfo *v2; // x2
   TreasureDvcEntity_c *v4; // x0
 
-  if ( (byte_4B16D90 & 1) == 0 )
+  if ( (byte_4B37D4D & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, method, v2);
-    byte_4B16D90 = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, method);
+    byte_4B37D4D = 1;
   }
   v4 = TreasureDvcEntity_TypeInfo;
   if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
     v4 = TreasureDvcEntity_TypeInfo;
   }
   return TreasureDvcEntity__checkScriptPartialMatch(this, v4->static_fields->KEY_TD_TYPE_CHANGE_ID, v2);
@@ -618,141 +704,132 @@ bool __fastcall TreasureDvcEntity__TryGetTdIdChangeByBattlePoint(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
+  __int64 v16; // x1
   __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
-  __int64 v21; // x1
-  __int64 v22; // x2
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x1
-  __int64 v26; // x2
-  System_Collections_Generic_List_int__o *v27; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x3
-  TreasureDvcEntity___c_c *v31; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v32; // x20
-  System_Func_int__int__o *_9__55_0; // x24
-  Il2CppObject *v34; // x25
+  System_Collections_Generic_List_int__o *v18; // x0
+  TreasureDvcEntity___c_c *v19; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x20
+  System_Func_int__int__o *_9__49_0; // x24
+  Il2CppObject *v22; // x25
   struct TreasureDvcEntity___c_StaticFields *static_fields; // x0
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
-  System_Linq_IOrderedEnumerable_TSource__o *v42; // x0
-  __int64 v43; // x1
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  System_Linq_IOrderedEnumerable_TSource__o *v30; // x0
+  __int64 v31; // x1
   System_Linq_IOrderedEnumerable_TSource__c *klass; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v45; // x20
-  __int64 v46; // x9
+  System_Linq_IOrderedEnumerable_TSource__o *v33; // x20
+  __int64 v34; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v49; // x1
-  __int64 v50; // x20
-  __int64 v51; // x8
-  __int64 v52; // x9
-  int *v53; // x10
-  __int64 v54; // x0
-  __int64 v55; // x8
-  __int64 v56; // x9
-  int *v57; // x10
-  __int64 v58; // x0
-  int32_t v59; // w24
-  Il2CppObject *v60; // x22
-  Il2CppObject *v61; // x2
-  System_String_o *v62; // x1
-  const MethodInfo *v63; // x3
-  bool v64; // w22
-  int v65; // w23
-  __int64 v66; // x8
-  __int64 v67; // x9
-  int *v68; // x10
-  __int64 v69; // x0
-  int32_t v71; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v72; // [xsp+Ch] [xbp-54h] BYREF
+  __int64 v37; // x1
+  __int64 v38; // x20
+  __int64 v39; // x8
+  __int64 v40; // x9
+  int *v41; // x10
+  __int64 v42; // x0
+  __int64 v43; // x8
+  __int64 v44; // x9
+  int *v45; // x10
+  __int64 v46; // x0
+  __int64 v47; // x2
+  __int64 v48; // x3
+  __int64 v49; // x4
+  int32_t v50; // w24
+  Il2CppObject *v51; // x22
+  __int64 v52; // x2
+  __int64 v53; // x3
+  __int64 v54; // x4
+  Il2CppObject *v55; // x2
+  System_String_o *v56; // x1
+  const MethodInfo *v57; // x3
+  bool v58; // w22
+  int v59; // w23
+  __int64 v60; // x8
+  __int64 v61; // x9
+  int *v62; // x10
+  __int64 v63; // x0
+  int32_t v65; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v66; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4B16D98 & 1) == 0 )
+  if ( (byte_4B37D55 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_System_Linq_Enumerable_OrderByDescending_int__int___,
-      *(_QWORD *)&battlePointId,
-      *(_QWORD *)&battlePointPhase);
-    sub_1BCA7E0(&System_Func_int__int__TypeInfo, v9, v10);
-    sub_1BCA7E0(&System_IDisposable_TypeInfo, v11, v12);
-    sub_1BCA7E0(&System_Collections_Generic_IEnumerable_int__TypeInfo, v13, v14);
-    sub_1BCA7E0(&System_Collections_Generic_IEnumerator_int__TypeInfo, v15, v16);
-    sub_1BCA7E0(&System_Collections_IEnumerator_TypeInfo, v17, v18);
-    sub_1BCA7E0(&int_TypeInfo, v19, v20);
-    sub_1BCA7E0(&Method_TreasureDvcEntity___c__TryGetTdIdChangeByBattlePoint_b__55_0__, v21, v22);
-    sub_1BCA7E0(&TreasureDvcEntity___c_TypeInfo, v23, v24);
-    sub_1BCA7E0(&StringLiteral_24116/*"tdChangeByBattlePoint_{0}_{1}"*/, v25, v26);
-    byte_4B16D98 = 1;
+    sub_1BD3458(&Method_System_Linq_Enumerable_OrderByDescending_int__int___, *(_QWORD *)&battlePointId);
+    sub_1BD3458(&System_Func_int__int__TypeInfo, v9);
+    sub_1BD3458(&System_IDisposable_TypeInfo, v10);
+    sub_1BD3458(&System_Collections_Generic_IEnumerable_int__TypeInfo, v11);
+    sub_1BD3458(&System_Collections_Generic_IEnumerator_int__TypeInfo, v12);
+    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v13);
+    sub_1BD3458(&int_TypeInfo, v14);
+    sub_1BD3458(&Method_TreasureDvcEntity___c__TryGetTdIdChangeByBattlePoint_b__49_0__, v15);
+    sub_1BD3458(&TreasureDvcEntity___c_TypeInfo, v16);
+    sub_1BD3458(&StringLiteral_24151/*"tdChangeByBattlePoint_{0}_{1}"*/, v17);
+    byte_4B37D55 = 1;
   }
-  v27 = TreasureDvcEntity__GetTdChangeByBattlePointPhaseList(
+  v18 = TreasureDvcEntity__GetTdChangeByBattlePointPhaseList(
           this,
           battlePointId,
           *(const MethodInfo **)&battlePointPhase);
-  v31 = TreasureDvcEntity___c_TypeInfo;
-  v32 = (System_Collections_Generic_IEnumerable_TSource__o *)v27;
+  v19 = TreasureDvcEntity___c_TypeInfo;
+  v20 = (System_Collections_Generic_IEnumerable_TSource__o *)v18;
   if ( !TreasureDvcEntity___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity___c_TypeInfo, v28);
-    v31 = TreasureDvcEntity___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity___c_TypeInfo);
+    v19 = TreasureDvcEntity___c_TypeInfo;
   }
-  _9__55_0 = v31->static_fields->__9__55_0;
-  if ( !_9__55_0 )
+  _9__49_0 = v19->static_fields->__9__49_0;
+  if ( !_9__49_0 )
   {
-    if ( !v31->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v31, v28);
-      v31 = TreasureDvcEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = TreasureDvcEntity___c_TypeInfo;
     }
-    v34 = (Il2CppObject *)v31->static_fields->__9;
-    _9__55_0 = (System_Func_int__int__o *)sub_1BCAA2C(System_Func_int__int__TypeInfo, v28, v29, v30);
+    v22 = (Il2CppObject *)v19->static_fields->__9;
+    _9__49_0 = (System_Func_int__int__o *)sub_1BD36A4(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(
-      _9__55_0,
-      v34,
-      Method_TreasureDvcEntity___c__TryGetTdIdChangeByBattlePoint_b__55_0__,
+      _9__49_0,
+      v22,
+      Method_TreasureDvcEntity___c__TryGetTdIdChangeByBattlePoint_b__49_0__,
       0LL);
     static_fields = TreasureDvcEntity___c_TypeInfo->static_fields;
-    static_fields->__9__55_0 = _9__55_0;
-    sub_1BCA784(
-      (PartyOrganizationUtility_o *)&static_fields->__9__55_0,
-      (int64_t)_9__55_0,
-      v36,
-      v37,
-      v38,
-      v39,
-      v40,
-      v41);
+    static_fields->__9__49_0 = _9__49_0;
+    sub_1BD33FC(
+      (PartyOrganizationUtility_o *)&static_fields->__9__49_0,
+      (int64_t)_9__49_0,
+      v24,
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
   }
-  v42 = System_Linq_Enumerable__OrderByDescending_int__int_(
-          v32,
-          (System_Func_TSource__TKey__o *)_9__55_0,
-          (const MethodInfo_2F3B7EC *)Method_System_Linq_Enumerable_OrderByDescending_int__int___);
-  if ( !v42 )
-    sub_1BCAA3C(0LL, v43);
-  klass = v42->klass;
-  v45 = v42;
-  v46 = *(unsigned __int16 *)(&v42->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v42->klass->_2.bitflags2 + 3) )
+  v30 = System_Linq_Enumerable__OrderByDescending_int__int_(
+          v20,
+          (System_Func_TSource__TKey__o *)_9__49_0,
+          (const MethodInfo_2F5AB98 *)Method_System_Linq_Enumerable_OrderByDescending_int__int___);
+  if ( !v30 )
+    sub_1BD36B4(0LL, v31);
+  klass = v30->klass;
+  v33 = v30;
+  v34 = *(unsigned __int16 *)(&v30->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v30->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_int__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
     {
-      --v46;
+      --v34;
       p_offset += 4;
-      if ( !v46 )
+      if ( !v34 )
         goto LABEL_14;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -760,98 +837,98 @@ bool __fastcall TreasureDvcEntity__TryGetTdIdChangeByBattlePoint(
   else
   {
 LABEL_14:
-    p_method = sub_1C1C7C0(v42, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
+    p_method = sub_1C25438(v30, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
   }
-  v50 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))p_method)(
-          v45,
+  v38 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))p_method)(
+          v33,
           *(_QWORD *)(p_method + 8));
-  if ( !v50 )
-    sub_1BCAA3C(0LL, v49);
+  if ( !v38 )
+    sub_1BD36B4(0LL, v37);
   while ( 1 )
   {
-    v51 = *(_QWORD *)v50;
-    v52 = *(unsigned __int16 *)(*(_QWORD *)v50 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v50 + 302LL) )
+    v39 = *(_QWORD *)v38;
+    v40 = *(unsigned __int16 *)(*(_QWORD *)v38 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v38 + 302LL) )
     {
-      v53 = (int *)(*(_QWORD *)(v51 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v53 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v41 = (int *)(*(_QWORD *)(v39 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v41 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v52;
-        v53 += 4;
-        if ( !v52 )
+        --v40;
+        v41 += 4;
+        if ( !v40 )
           goto LABEL_21;
       }
-      v54 = v51 + 16LL * *v53 + 312;
+      v42 = v39 + 16LL * *v41 + 312;
     }
     else
     {
 LABEL_21:
-      v54 = sub_1C1C7C0(v50, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v42 = sub_1C25438(v38, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v54)(v50, *(_QWORD *)(v54 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v42)(v38, *(_QWORD *)(v42 + 8)) & 1) == 0 )
       break;
-    v55 = *(_QWORD *)v50;
-    v56 = *(unsigned __int16 *)(*(_QWORD *)v50 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v50 + 302LL) )
+    v43 = *(_QWORD *)v38;
+    v44 = *(unsigned __int16 *)(*(_QWORD *)v38 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v38 + 302LL) )
     {
-      v57 = (int *)(*(_QWORD *)(v55 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_int__c **)v57 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
+      v45 = (int *)(*(_QWORD *)(v43 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_int__c **)v45 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
       {
-        --v56;
-        v57 += 4;
-        if ( !v56 )
+        --v44;
+        v45 += 4;
+        if ( !v44 )
           goto LABEL_28;
       }
-      v58 = v55 + 16LL * *v57 + 312;
+      v46 = v43 + 16LL * *v45 + 312;
     }
     else
     {
 LABEL_28:
-      v58 = sub_1C1C7C0(v50, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
+      v46 = sub_1C25438(v38, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
     }
-    v59 = (*(__int64 (__fastcall **)(__int64, _QWORD))v58)(v50, *(_QWORD *)(v58 + 8));
-    if ( v59 <= battlePointPhase )
+    v50 = (*(__int64 (__fastcall **)(__int64, _QWORD))v46)(v38, *(_QWORD *)(v46 + 8));
+    if ( v50 <= battlePointPhase )
     {
-      v72 = battlePointId;
-      v60 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
-      v71 = v59;
-      v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v71);
-      v62 = System_String__Format_62415592((System_String_o *)StringLiteral_24116/*"tdChangeByBattlePoint_{0}_{1}"*/, v60, v61, 0LL);
-      *tdIdChangeByBattlePoint = TreasureDvcEntity__getScriptInt(this, v62, 0, v63);
-      v64 = 1;
-      v65 = 5;
+      v66 = battlePointId;
+      v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66, v47, v48, v49);
+      v65 = v50;
+      v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65, v52, v53, v54);
+      v56 = System_String__Format_62539620((System_String_o *)StringLiteral_24151/*"tdChangeByBattlePoint_{0}_{1}"*/, v51, v55, 0LL);
+      *tdIdChangeByBattlePoint = TreasureDvcEntity__getScriptInt(this, v56, 0, v57);
+      v58 = 1;
+      v59 = 5;
       goto LABEL_33;
     }
   }
-  v64 = 0;
-  v65 = 6;
+  v58 = 0;
+  v59 = 6;
 LABEL_33:
-  v66 = *(_QWORD *)v50;
-  v67 = *(unsigned __int16 *)(*(_QWORD *)v50 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v50 + 302LL) )
+  v60 = *(_QWORD *)v38;
+  v61 = *(unsigned __int16 *)(*(_QWORD *)v38 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v38 + 302LL) )
   {
-    v68 = (int *)(*(_QWORD *)(v66 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v68 - 1) != System_IDisposable_TypeInfo )
+    v62 = (int *)(*(_QWORD *)(v60 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v62 - 1) != System_IDisposable_TypeInfo )
     {
-      --v67;
-      v68 += 4;
-      if ( !v67 )
+      --v61;
+      v62 += 4;
+      if ( !v61 )
         goto LABEL_37;
     }
-    v69 = v66 + 16LL * *v68 + 312;
+    v63 = v60 + 16LL * *v62 + 312;
   }
   else
   {
 LABEL_37:
-    v69 = sub_1C1C7C0(v50, System_IDisposable_TypeInfo, 0LL);
+    v63 = sub_1C25438(v38, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v69)(v50, *(_QWORD *)(v69 + 8));
-  if ( v65 == 6 )
+  (*(void (__fastcall **)(__int64, _QWORD))v63)(v38, *(_QWORD *)(v63 + 8));
+  if ( v59 == 6 )
   {
-    v64 = 0;
+    v58 = 0;
     *tdIdChangeByBattlePoint = 0;
   }
-  return v64;
+  return v58;
 }
 
 
@@ -869,14 +946,14 @@ bool __fastcall TreasureDvcEntity__TryGetWithBackStepNpcIds(
   FollowerInfo_o *v11; // x6
   PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4B16D99 & 1) == 0 )
+  if ( (byte_4B37D56 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_24120/*"tdWithBackStepNpcIds"*/, npcIds, method);
-    byte_4B16D99 = 1;
+    sub_1BD3458(&StringLiteral_24155/*"tdWithBackStepNpcIds"*/, npcIds);
+    byte_4B37D56 = 1;
   }
-  ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_24120/*"tdWithBackStepNpcIds"*/, 0LL, v3);
+  ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_24155/*"tdWithBackStepNpcIds"*/, 0LL, v3);
   *npcIds = ScriptIntArrayParam;
-  sub_1BCA784((PartyOrganizationUtility_o *)npcIds, (int64_t)ScriptIntArrayParam, v7, v8, v9, v10, v11, v12);
+  sub_1BD33FC((PartyOrganizationUtility_o *)npcIds, (int64_t)ScriptIntArrayParam, v7, v8, v9, v10, v11, v12);
   return *npcIds != 0LL;
 }
 
@@ -888,17 +965,17 @@ bool __fastcall TreasureDvcEntity__checkScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B16D81 & 1) == 0 )
+  if ( (byte_4B37D3E & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key, method);
-    byte_4B16D81 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_4B37D3E = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
                        (Il2CppObject *)key,
-                       (const MethodInfo_3265454 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -909,87 +986,64 @@ bool __fastcall TreasureDvcEntity__checkScriptPartialMatch(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v8; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
   System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *Keys; // x0
-  __int64 v15; // x1
-  __int64 v16; // x1
-  bool v17; // w20
-  int v18; // w19
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v20; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v11; // x1
+  __int64 v12; // x1
+  bool v13; // w20
+  int v14; // w19
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v16; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B16D82 & 1) == 0 )
+  if ( (byte_4B37D3F & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__object__get_Keys__, checkKey, method);
-    sub_1BCA7E0(
-      &Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__,
-      v5,
-      v6);
-    sub_1BCA7E0(
-      &Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__,
-      v7,
-      v8);
-    sub_1BCA7E0(
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Keys__, checkKey);
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__, v5);
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__, v6);
+    sub_1BD3458(
       &Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__get_Current__,
-      v9,
-      v10);
-    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__, v11, v12);
-    byte_4B16D82 = 1;
+      v7);
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__, v8);
+    byte_4B37D3F = 1;
   }
-  memset(&v20, 0, sizeof(v20));
+  memset(&v16, 0, sizeof(v16));
   script = this->fields.script;
   if ( script )
   {
     Keys = System_Collections_Generic_Dictionary_object__object___get_Keys(
              (System_Collections_Generic_Dictionary_object__object__o *)script,
-             (const MethodInfo_3264F40 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__);
+             (const MethodInfo_3284074 *)Method_System_Collections_Generic_Dictionary_string__object__get_Keys__);
     if ( !Keys )
-      sub_1BCAA3C(0LL, v15);
+      sub_1BD36B4(0LL, v11);
     System_Collections_Generic_Dictionary_KeyCollection_object__object___GetEnumerator(
-      &v20,
+      &v16,
       Keys,
-      (const MethodInfo_34C6D64 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__);
+      (const MethodInfo_34E5E98 *)Method_System_Collections_Generic_Dictionary_KeyCollection_string__object__GetEnumerator__);
     while ( 1 )
     {
-      v17 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
-              &v20,
-              (const MethodInfo_33654BC *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__);
-      if ( !v17 )
+      v13 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___MoveNext(
+              &v16,
+              (const MethodInfo_33845F0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__MoveNext__);
+      if ( !v13 )
         break;
-      if ( !v20.fields._currentKey )
-        sub_1BCAA3C(0LL, v16);
-      if ( System_String__Contains((System_String_o *)v20.fields._currentKey, checkKey, 0LL) )
+      if ( !v16.fields._currentKey )
+        sub_1BD36B4(0LL, v12);
+      if ( System_String__Contains((System_String_o *)v16.fields._currentKey, checkKey, 0LL) )
       {
-        v18 = 5;
+        v14 = 5;
         goto LABEL_11;
       }
     }
-    v18 = 2;
+    v14 = 2;
 LABEL_11:
     System_Collections_Generic_Dictionary_KeyCollection_Enumerator_object__object___Dispose(
-      &v20,
-      (const MethodInfo_33654B8 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__);
-    LOBYTE(script) = v17 && v18 == 5;
+      &v16,
+      (const MethodInfo_33845EC *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_string__object__Dispose__);
+    LOBYTE(script) = v13 && v14 == 5;
   }
   return (char)script;
-}
-
-
-int32_t __fastcall TreasureDvcEntity__getCacheGroupId(TreasureDvcEntity_o *this, const MethodInfo *method)
-{
-  return this->fields.cacheGroupId;
-}
-
-
-int32_t __fastcall TreasureDvcEntity__getCacheRandomSeqId(TreasureDvcEntity_o *this, const MethodInfo *method)
-{
-  return this->fields.cacheRandomSeqId;
 }
 
 
@@ -1004,124 +1058,130 @@ bool __fastcall TreasureDvcEntity__getEffectExplanation(
 {
   long double v7; // q0
   __int64 v14; // x1
-  __int64 v15; // x2
+  __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x2
+  __int64 v17; // x1
   __int64 v18; // x1
-  __int64 v19; // x2
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x1
-  __int64 v23; // x2
-  __int64 v24; // x0
-  __int64 v25; // x0
+  __int64 v19; // x0
+  __int64 v20; // x0
   Il2CppObject *MasterData_object; // x0
+  const MethodInfo *v22; // x3
   TreasureDvcLvEntity_o *Entity; // x0
-  __int64 v28; // x1
-  TreasureDvcLvEntity_o *v29; // x23
-  System_String_o *v30; // x25
+  TreasureDvcLvEntity_o *v24; // x23
+  System_String_o *v25; // x25
   Il2CppObject *name; // x24
-  Il2CppObject *v32; // x0
-  System_String_o *v33; // x0
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
-  System_String_o *v40; // x0
-  __int64 v41; // x1
-  int64_t v42; // x2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  BattleSetupInfo_o *v45; // x5
-  FollowerInfo_o *v46; // x6
-  PartyListViewItem_o *v47; // x7
-  System_String_o *Detail_40762364; // x0
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  Il2CppObject *v30; // x0
+  System_String_o *v31; // x0
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
+  System_String_o *v38; // x0
+  __int64 v39; // x1
+  const MethodInfo *v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
+  System_String_o *Detail_40844664; // x0
+  int64_t v47; // x2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  BattleSetupInfo_o *v50; // x5
+  FollowerInfo_o *v51; // x6
+  PartyListViewItem_o *v52; // x7
   int32_t gaugeCount; // w8
-  LocalizationManager_c *v56; // x0
+  LocalizationManager_c *v54; // x0
   System_String_o *unknownNameText; // x1
-  int32_t v59; // [xsp+Ch] [xbp-54h] BYREF
+  int32_t v57; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4B16D80 & 1) == 0 )
+  if ( (byte_4B37D3D & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, tdName, tdExplanation);
-    sub_1BCA7E0(&int_TypeInfo, v14, v15);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v16, v17);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v18, v19);
-    sub_1BCA7E0(&StringLiteral_9461/*"NP_NAME"*/, v20, v21);
-    sub_1BCA7E0(&StringLiteral_9462/*"NP_NAME_LEVEL"*/, v22, v23);
-    byte_4B16D80 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, tdName);
+    sub_1BD3458(&int_TypeInfo, v14);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v15);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v16);
+    sub_1BD3458(&StringLiteral_9475/*"NP_NAME"*/, v17);
+    sub_1BD3458(&StringLiteral_9476/*"NP_NAME_LEVEL"*/, v18);
+    byte_4B37D3D = 1;
   }
-  v24 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v24 + 309) & 1) == 0 )
-    v24 = sub_1C1C6BC(v7);
-  v25 = *(_QWORD *)(*(_QWORD *)(v24 + 192) + 16LL);
-  if ( (*(_BYTE *)(v25 + 309) & 1) == 0 )
-    v25 = sub_1C1C6BC(v7);
-  MasterData_object = **(Il2CppObject ***)(v25 + 184);
+  v19 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
+    v19 = sub_1C25334(v7);
+  v20 = *(_QWORD *)(*(_QWORD *)(v19 + 192) + 16LL);
+  if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
+    v20 = sub_1C25334(v7);
+  MasterData_object = **(Il2CppObject ***)(v20 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0LL )
+                              (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___)) == 0LL )
   {
-    sub_1BCAA3C(MasterData_object, tdName);
+    sub_1BD36B4(MasterData_object, tdName);
   }
-  Entity = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)MasterData_object, this->fields.id, lv, 0LL);
+  Entity = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)MasterData_object, this->fields.id, lv, v22);
   *maxLv = this->fields.maxLv;
-  v29 = Entity;
+  v24 = Entity;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v28);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( lv < 1 )
   {
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_9461/*"NP_NAME"*/, 0LL);
-    v33 = System_String__Format(v40, (Il2CppObject *)this->fields.name, 0LL);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_9475/*"NP_NAME"*/, 0LL);
+    v31 = System_String__Format(v38, (Il2CppObject *)this->fields.name, 0LL);
   }
   else
   {
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_9462/*"NP_NAME_LEVEL"*/, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9476/*"NP_NAME_LEVEL"*/, 0LL);
     name = (Il2CppObject *)this->fields.name;
-    v59 = lv;
-    v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v59);
-    v33 = System_String__Format_62415592(v30, name, v32, 0LL);
+    v57 = lv;
+    v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v57, v27, v28, v29);
+    v31 = System_String__Format_62539620(v25, name, v30, 0LL);
   }
-  *tdName = v33;
-  sub_1BCA784((PartyOrganizationUtility_o *)tdName, (int64_t)v33, v34, v35, v36, v37, v38, v39);
-  if ( v29 )
+  *tdName = v31;
+  sub_1BD33FC((PartyOrganizationUtility_o *)tdName, (int64_t)v31, v32, v33, v34, v35, v36, v37);
+  if ( v24 )
   {
-    Detail_40762364 = TreasureDvcLvEntity__getDetail_40762364(v29, lv, 0LL);
-    *tdExplanation = Detail_40762364;
-    sub_1BCA784((PartyOrganizationUtility_o *)tdExplanation, (int64_t)Detail_40762364, v49, v50, v51, v52, v53, v54);
-    gaugeCount = v29->fields.gaugeCount;
+    Detail_40844664 = TreasureDvcLvEntity__getDetail_40844664(v24, lv, v40);
+    *tdExplanation = Detail_40844664;
+    sub_1BD33FC((PartyOrganizationUtility_o *)tdExplanation, (int64_t)Detail_40844664, v47, v48, v49, v50, v51, v52);
+    gaugeCount = v24->fields.gaugeCount;
   }
   else
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v41);
-    if ( !byte_4B1194D )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !byte_4B32906 )
     {
-      sub_1BCA7E0(&LocalizationManager_TypeInfo, v41, v42);
-      byte_4B1194D = 1;
+      sub_1BD3458(&LocalizationManager_TypeInfo, v39);
+      byte_4B32906 = 1;
     }
-    v56 = LocalizationManager_TypeInfo;
+    v54 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v41);
-      v56 = LocalizationManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v54 = LocalizationManager_TypeInfo;
     }
-    unknownNameText = v56->static_fields->unknownNameText;
+    unknownNameText = v54->static_fields->unknownNameText;
     *tdExplanation = unknownNameText;
-    sub_1BCA784((PartyOrganizationUtility_o *)tdExplanation, (int64_t)unknownNameText, v42, v43, v44, v45, v46, v47);
+    sub_1BD33FC(
+      (PartyOrganizationUtility_o *)tdExplanation,
+      (int64_t)unknownNameText,
+      (int64_t)v40,
+      v41,
+      v42,
+      v43,
+      v44,
+      v45);
     gaugeCount = 0;
   }
   *tdGuageCount = gaugeCount;
-  return v29 != 0LL;
+  return v24 != 0LL;
 }
 
 
@@ -1137,18 +1197,17 @@ System_Int32_array *__fastcall TreasureDvcEntity__getFixAppearanceInfoArray(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = limit;
-  if ( (byte_4B16D8D & 1) == 0 )
+  if ( (byte_4B37D4A & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_19645/*"fixAppearanceId_"*/, *(_QWORD *)&limit, method);
-    byte_4B16D8D = 1;
+    sub_1BD3458(&StringLiteral_19675/*"fixAppearanceId_"*/, *(_QWORD *)&limit);
+    byte_4B37D4A = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v5 = System_String__Concat_62401220((System_String_o *)StringLiteral_19645/*"fixAppearanceId_"*/, v4, 0LL);
+  v5 = System_String__Concat_62525248((System_String_o *)StringLiteral_19675/*"fixAppearanceId_"*/, v4, 0LL);
   return TreasureDvcEntity__getScriptIntArrayParam(this, v5, 0LL, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TreasureDvcEntity__getGroupSeqId(
         TreasureDvcEntity_o *this,
         System_String_o *keyGroupSeqId,
@@ -1161,22 +1220,22 @@ int32_t __fastcall TreasureDvcEntity__getGroupSeqId(
   __int64 v10; // x1
   int32_t max_length; // w8
 
-  if ( (byte_4B16D8C & 1) == 0 )
+  if ( (byte_4B37D49 & 1) == 0 )
   {
-    sub_1BCA7E0(&int___TypeInfo, keyGroupSeqId, *(_QWORD *)&index);
-    byte_4B16D8C = 1;
+    sub_1BD3458(&int___TypeInfo, keyGroupSeqId);
+    byte_4B37D49 = 1;
   }
-  v7 = (System_Int32_array *)sub_1BCA888(int___TypeInfo, 0LL);
+  v7 = (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
   ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, keyGroupSeqId, v7, v8);
   if ( (index & 0x80000000) != 0 )
-    return -1;
+    return 0;
   if ( !ScriptIntArrayParam )
-    sub_1BCAA3C(0LL, v10);
+    sub_1BD36B4(0LL, v10);
   max_length = ScriptIntArrayParam->max_length;
   if ( max_length <= index )
-    return -1;
+    return 0;
   if ( max_length <= (unsigned int)index )
-    sub_1BCAA44(ScriptIntArrayParam, v10);
+    sub_1BD36BC(ScriptIntArrayParam, v10);
   return ScriptIntArrayParam->m_Items[index + 1];
 }
 
@@ -1202,217 +1261,69 @@ int32_t __fastcall TreasureDvcEntity__getRandomSeqId(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x1
-  __int64 v16; // x2
-  System_Int32_array *v17; // x22
-  const MethodInfo *v18; // x3
+  System_Int32_array *v12; // x22
+  const MethodInfo *v13; // x3
   System_Int32_array *ScriptIntArrayParam; // x20
-  const MethodInfo *v20; // x3
-  System_Int32_array *v21; // x21
-  __int64 v22; // x1
-  __int64 v23; // x2
-  __int64 v24; // x3
-  WeightRate_int__o *v25; // x19
-  __int64 v26; // x0
-  __int64 v27; // x1
-  __int64 v28; // x8
-  unsigned __int64 v29; // x22
-  int32_t v30; // w1
+  const MethodInfo *v15; // x3
+  System_Int32_array *v16; // x21
+  WeightRate_int__o *v17; // x19
+  __int64 v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x8
+  unsigned __int64 v21; // x22
+  int32_t v22; // w1
 
-  if ( (byte_4B16D8A & 1) == 0 )
+  if ( (byte_4B37D47 & 1) == 0 )
   {
-    sub_1BCA7E0(&int___TypeInfo, keySeqId, keyWeight);
-    sub_1BCA7E0(&Method_WeightRate_int___ctor__, v7, v8);
-    sub_1BCA7E0(&Method_WeightRate_int__getData__, v9, v10);
-    sub_1BCA7E0(&Method_WeightRate_int__getTotalWeight__, v11, v12);
-    sub_1BCA7E0(&Method_WeightRate_int__setWeight__, v13, v14);
-    sub_1BCA7E0(&WeightRate_int__TypeInfo, v15, v16);
-    byte_4B16D8A = 1;
+    sub_1BD3458(&int___TypeInfo, keySeqId);
+    sub_1BD3458(&Method_WeightRate_int___ctor__, v7);
+    sub_1BD3458(&Method_WeightRate_int__getData__, v8);
+    sub_1BD3458(&Method_WeightRate_int__getTotalWeight__, v9);
+    sub_1BD3458(&Method_WeightRate_int__setWeight__, v10);
+    sub_1BD3458(&WeightRate_int__TypeInfo, v11);
+    byte_4B37D47 = 1;
   }
-  v17 = (System_Int32_array *)sub_1BCA888(int___TypeInfo, 0LL);
-  ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, keySeqId, v17, v18);
-  v21 = TreasureDvcEntity__getScriptIntArrayParam(this, keyWeight, v17, v20);
-  v25 = (WeightRate_int__o *)sub_1BCAA2C(WeightRate_int__TypeInfo, v22, v23, v24);
-  WeightRate_int____ctor(v25, (const MethodInfo_3984A0C *)Method_WeightRate_int___ctor__);
+  v12 = (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
+  ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, keySeqId, v12, v13);
+  v16 = TreasureDvcEntity__getScriptIntArrayParam(this, keyWeight, v12, v15);
+  v17 = (WeightRate_int__o *)sub_1BD36A4(WeightRate_int__TypeInfo);
+  WeightRate_int____ctor(v17, (const MethodInfo_39A2E88 *)Method_WeightRate_int___ctor__);
   if ( !ScriptIntArrayParam )
     goto LABEL_14;
-  v28 = *(_QWORD *)&ScriptIntArrayParam->max_length;
-  if ( (int)v28 >= 1 )
+  v20 = *(_QWORD *)&ScriptIntArrayParam->max_length;
+  if ( (int)v20 >= 1 )
   {
-    v29 = 0LL;
-    while ( v21 )
+    v21 = 0LL;
+    while ( v16 )
     {
-      if ( v29 >= v21->max_length || v29 >= (unsigned int)v28 )
-        sub_1BCAA44(v26, v27);
-      if ( !v25 )
+      if ( v21 >= v16->max_length || v21 >= (unsigned int)v20 )
+        sub_1BD36BC(v18, v19);
+      if ( !v17 )
         break;
       WeightRate_int___setWeight(
-        v25,
-        v21->m_Items[v29 + 1],
-        ScriptIntArrayParam->m_Items[v29 + 1],
-        (const MethodInfo_3983F28 *)Method_WeightRate_int__setWeight__);
-      LODWORD(v28) = ScriptIntArrayParam->max_length;
-      if ( (__int64)++v29 >= (int)v28 )
+        v17,
+        v16->m_Items[v21 + 1],
+        ScriptIntArrayParam->m_Items[v21 + 1],
+        (const MethodInfo_39A23A4 *)Method_WeightRate_int__setWeight__);
+      LODWORD(v20) = ScriptIntArrayParam->max_length;
+      if ( (__int64)++v21 >= (int)v20 )
         goto LABEL_11;
     }
 LABEL_14:
-    sub_1BCAA3C(v26, v27);
+    sub_1BD36B4(v18, v19);
   }
 LABEL_11:
-  if ( !v25 )
+  if ( !v17 )
     goto LABEL_14;
-  v30 = UnityEngine_Random__Range_70113984(0, v25->fields.totalweight, 0LL);
-  return WeightRate_int___getData(v25, v30, (const MethodInfo_398439C *)Method_WeightRate_int__getData__);
+  v22 = UnityEngine_Random__Range_70238012(0, v17->fields.totalweight, 0LL);
+  return WeightRate_int___getData(v17, v22, (const MethodInfo_39A2818 *)Method_WeightRate_int__getData__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-int32_t __fastcall TreasureDvcEntity__getRandomSeqIdEachLimit(
-        TreasureDvcEntity_o *this,
-        int32_t limitCount,
-        int32_t actSetId,
-        const MethodInfo *method)
-{
-  __int64 v7; // x1
-  __int64 v8; // x2
-  int32_t result; // w0
-  __int64 v10; // x0
-  __int64 v11; // x1
-  int v12; // w8
-  __int64 v13; // x20
-  const MethodInfo *v14; // x4
-  __int64 v15; // x21
-  __int64 v16; // x8
-  unsigned __int64 v17; // x26
-  __int64 v18; // x8
-  int32_t v19; // w22
-  unsigned __int64 v20; // x29
-  TreasureDvcEntity_c *v21; // x0
-  int32_t v22; // w24
-  TreasureDvcEntity_o *AddLimitKey; // x23
-  const MethodInfo *v24; // x4
-  TreasureDvcEntity_o *v25; // x25
-  const MethodInfo *v26; // x4
-  System_String_o *v27; // x24
-  const MethodInfo *v28; // x2
-  const MethodInfo *v29; // x2
-  const MethodInfo *v30; // x3
-  int32_t RandomSeqId; // w0
-  const MethodInfo *v32; // x3
-  int32_t RandomSeqIndex; // w0
-  const MethodInfo *v34; // x3
-
-  if ( (byte_4B16D89 & 1) == 0 )
-  {
-    sub_1BCA7E0(&int___TypeInfo, *(_QWORD *)&limitCount, *(_QWORD *)&actSetId);
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, v7, v8);
-    byte_4B16D89 = 1;
-  }
-  result = this->fields.cacheRandomSeqId;
-  if ( (result & 0x80000000) == 0 )
-    return result;
-  this->fields.cacheRandomSeqId = this->fields.seqId;
-  v10 = sub_1BCA888(int___TypeInfo, 2LL);
-  if ( !v10 )
-    goto LABEL_30;
-  v12 = *(_DWORD *)(v10 + 24);
-  v13 = v10;
-  if ( !v12 || (*(_DWORD *)(v10 + 32) = limitCount, v12 == 1) )
-LABEL_29:
-    sub_1BCAA44(v10, v11);
-  *(_DWORD *)(v10 + 36) = -1;
-  if ( !actSetId )
-  {
-    v10 = sub_1BCA888(int___TypeInfo, 1LL);
-    v15 = v10;
-    goto LABEL_12;
-  }
-  v10 = sub_1BCA888(int___TypeInfo, 2LL);
-  if ( !v10 )
-LABEL_30:
-    sub_1BCAA3C(v10, v11);
-  v15 = v10;
-  if ( !*(_DWORD *)(v10 + 24) )
-    goto LABEL_29;
-  *(_DWORD *)(v10 + 32) = actSetId;
-LABEL_12:
-  v16 = *(_QWORD *)(v13 + 24);
-  if ( (int)v16 >= 1 )
-  {
-    v17 = 0LL;
-    while ( 1 )
-    {
-      if ( v17 >= (unsigned int)v16 )
-        goto LABEL_29;
-      if ( !v15 )
-        goto LABEL_30;
-      v18 = *(_QWORD *)(v15 + 24);
-      if ( (int)v18 >= 1 )
-        break;
-LABEL_24:
-      LODWORD(v16) = *(_DWORD *)(v13 + 24);
-      if ( (__int64)++v17 >= (int)v16 )
-        return this->fields.cacheRandomSeqId;
-    }
-    v19 = *(_DWORD *)(v13 + 4 * v17 + 32);
-    v20 = 0LL;
-    while ( 1 )
-    {
-      if ( v20 >= (unsigned int)v18 )
-        goto LABEL_29;
-      v21 = TreasureDvcEntity_TypeInfo;
-      v22 = *(_DWORD *)(v15 + 32 + 4 * v20);
-      if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, v11);
-        v21 = TreasureDvcEntity_TypeInfo;
-      }
-      AddLimitKey = (TreasureDvcEntity_o *)TreasureDvcEntity__makeAddLimitKey(
-                                             (TreasureDvcEntity_o *)v21,
-                                             v21->static_fields->KEY_RANDOM_SEQ_ID,
-                                             v19,
-                                             v22,
-                                             v14);
-      v25 = (TreasureDvcEntity_o *)TreasureDvcEntity__makeAddLimitKey(
-                                     AddLimitKey,
-                                     TreasureDvcEntity_TypeInfo->static_fields->KEY_RANDOM_SEQ_WEIGHT,
-                                     v19,
-                                     v22,
-                                     v24);
-      v27 = TreasureDvcEntity__makeAddLimitKey(
-              v25,
-              TreasureDvcEntity_TypeInfo->static_fields->KEY_GROUP_SEQ_ID,
-              v19,
-              v22,
-              v26);
-      v10 = TreasureDvcEntity__checkScript(this, (System_String_o *)AddLimitKey, v28);
-      if ( (v10 & 1) != 0 )
-      {
-        v10 = TreasureDvcEntity__checkScript(this, (System_String_o *)v25, v29);
-        if ( (v10 & 1) != 0 )
-          break;
-      }
-      LODWORD(v18) = *(_DWORD *)(v15 + 24);
-      if ( (__int64)++v20 >= (int)v18 )
-        goto LABEL_24;
-    }
-    RandomSeqId = TreasureDvcEntity__getRandomSeqId(this, (System_String_o *)AddLimitKey, (System_String_o *)v25, v30);
-    this->fields.cacheRandomSeqId = RandomSeqId;
-    RandomSeqIndex = TreasureDvcEntity__getRandomSeqIndex(this, (System_String_o *)AddLimitKey, RandomSeqId, v32);
-    this->fields.cacheGroupId = TreasureDvcEntity__getGroupSeqId(this, v27, RandomSeqIndex, v34);
-  }
-  return this->fields.cacheRandomSeqId;
-}
-
-
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TreasureDvcEntity__getRandomSeqIndex(
         TreasureDvcEntity_o *this,
         System_String_o *keySeqId,
@@ -1427,15 +1338,15 @@ int32_t __fastcall TreasureDvcEntity__getRandomSeqIndex(
   System_Int32_array *v12; // x8
   __int64 v13; // x0
 
-  if ( (byte_4B16D8B & 1) == 0 )
+  if ( (byte_4B37D48 & 1) == 0 )
   {
-    sub_1BCA7E0(&int___TypeInfo, keySeqId, *(_QWORD *)&seqId);
-    byte_4B16D8B = 1;
+    sub_1BD3458(&int___TypeInfo, keySeqId);
+    byte_4B37D48 = 1;
   }
-  v7 = (System_Int32_array *)sub_1BCA888(int___TypeInfo, 0LL);
+  v7 = (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
   ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, keySeqId, v7, v8);
   if ( !ScriptIntArrayParam )
-    sub_1BCAA3C(0LL, v10);
+    sub_1BD36B4(0LL, v10);
   max_length = ScriptIntArrayParam->max_length;
   v12 = ScriptIntArrayParam;
   if ( max_length < 1 )
@@ -1449,7 +1360,7 @@ LABEL_9:
     while ( 1 )
     {
       if ( max_length == (_DWORD)v13 )
-        sub_1BCAA44(v13, v10);
+        sub_1BD36BC(v13, v10);
       if ( v12->m_Items[(int)v13 + 1] == seqId )
         break;
       v13 = (unsigned int)(v13 + 1);
@@ -1463,15 +1374,14 @@ LABEL_9:
 
 System_Int32_array *__fastcall TreasureDvcEntity__getRelatedBgms(TreasureDvcEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
 
-  if ( (byte_4B16D8E & 1) == 0 )
+  if ( (byte_4B37D4B & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_23091/*"relationBgmIds"*/, method, v2);
-    byte_4B16D8E = 1;
+    sub_1BD3458(&StringLiteral_23125/*"relationBgmIds"*/, method);
+    byte_4B37D4B = 1;
   }
-  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_23091/*"relationBgmIds"*/, 0LL, v3);
+  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_23125/*"relationBgmIds"*/, 0LL, v2);
 }
 
 
@@ -1484,22 +1394,21 @@ int32_t __fastcall TreasureDvcEntity__getScriptInt(
 {
   int32_t v4; // w20
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
+  __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
-  __int64 v11; // x2
-  __int64 v12; // x3
-  TreasureDvcEntity_o *v14; // x0
-  System_String_o *v15; // x1
-  System_Int32_array *v16; // x2
-  const MethodInfo *v17; // x3
+  __int64 v10; // x2
+  __int64 v11; // x3
+  TreasureDvcEntity_o *v13; // x0
+  System_String_o *v14; // x1
+  System_Int32_array *v15; // x2
+  const MethodInfo *v16; // x3
 
   v4 = defVal;
-  if ( (byte_4B16D83 & 1) == 0 )
+  if ( (byte_4B37D40 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key, *(_QWORD *)&defVal);
-    sub_1BCA7E0(&long_TypeInfo, v7, v8);
-    byte_4B16D83 = 1;
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1BD3458(&long_TypeInfo, v7);
+    byte_4B37D40 = 1;
   }
   if ( !TreasureDvcEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -1508,14 +1417,14 @@ int32_t __fastcall TreasureDvcEntity__getScriptInt(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_32651E0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1BCAA3C(script, v9);
+    sub_1BD36B4(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v11, v12);
-  sub_1BCACFC(script);
-  return (unsigned int)TreasureDvcEntity__getScriptIntArrayParam(v14, v15, v16, v17);
+    return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
+  sub_1BD3974(script);
+  return (unsigned int)TreasureDvcEntity__getScriptIntArrayParam(v13, v14, v15, v16);
 }
 
 
@@ -1526,51 +1435,42 @@ System_Int32_array *__fastcall TreasureDvcEntity__getScriptIntArrayParam(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
-  System_Collections_Generic_List_object__c *v21; // x1
+  System_Collections_Generic_List_object__c *v14; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
   Il2CppObject *Item; // x21
-  __int64 v25; // x2
-  __int64 v26; // x3
-  System_Collections_Generic_List_object__o *v27; // x19
-  TreasureDvcEntity___c_c *v28; // x8
-  System_Converter_object__int__o *_9__28_0; // x20
+  System_Collections_Generic_List_object__o *v18; // x19
+  TreasureDvcEntity___c_c *v19; // x8
+  System_Converter_object__int__o *_9__26_0; // x20
   __int64 methodPtr_low; // x10
-  Il2CppObject *v31; // x21
+  Il2CppObject *v22; // x21
   struct TreasureDvcEntity___c_StaticFields *static_fields; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
-  TreasureDvcEntity_o *v39; // x0
-  int32_t v40; // w1
-  const MethodInfo *v41; // x2
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  TreasureDvcEntity_o *v30; // x0
+  int32_t v31; // w1
+  const MethodInfo *v32; // x2
 
-  if ( (byte_4B16D84 & 1) == 0 )
+  if ( (byte_4B37D41 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Converter_object__int__TypeInfo, key, defVal);
-    sub_1BCA7E0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7, v8);
-    sub_1BCA7E0(&int___TypeInfo, v9, v10);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v11, v12);
-    sub_1BCA7E0(&Method_System_Collections_Generic_List_int__ToArray__, v13, v14);
-    sub_1BCA7E0(&System_Collections_Generic_List_object__TypeInfo, v15, v16);
-    sub_1BCA7E0(&Method_TreasureDvcEntity___c__getScriptIntArrayParam_b__28_0__, v17, v18);
-    sub_1BCA7E0(&TreasureDvcEntity___c_TypeInfo, v19, v20);
-    byte_4B16D84 = 1;
+    sub_1BD3458(&System_Converter_object__int__TypeInfo, key);
+    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1BD3458(&int___TypeInfo, v8);
+    sub_1BD3458(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v9);
+    sub_1BD3458(&Method_System_Collections_Generic_List_int__ToArray__, v10);
+    sub_1BD3458(&System_Collections_Generic_List_object__TypeInfo, v11);
+    sub_1BD3458(&Method_TreasureDvcEntity___c__getScriptIntArrayParam_b__26_0__, v12);
+    sub_1BD3458(&TreasureDvcEntity___c_TypeInfo, v13);
+    byte_4B37D41 = 1;
   }
   if ( !TreasureDvcEntity__checkScript(this, key, (const MethodInfo *)defVal) )
     return defVal;
@@ -1580,99 +1480,99 @@ System_Int32_array *__fastcall TreasureDvcEntity__getScriptIntArrayParam(
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            script,
            (Il2CppObject *)key,
-           (const MethodInfo_32651E0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( sub_1BCA91C(Item, int___TypeInfo) )
-    return (System_Int32_array *)sub_1BCA91C(Item, int___TypeInfo);
+           (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( sub_1BD3594(Item, int___TypeInfo) )
+    return (System_Int32_array *)sub_1BD3594(Item, int___TypeInfo);
   script = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
   if ( !script )
     goto LABEL_21;
   script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                         script,
                                                                         (Il2CppObject *)key,
-                                                                        (const MethodInfo_32651E0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v27 = (System_Collections_Generic_List_object__o *)script;
-  v28 = TreasureDvcEntity___c_TypeInfo;
+                                                                        (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v18 = (System_Collections_Generic_List_object__o *)script;
+  v19 = TreasureDvcEntity___c_TypeInfo;
   if ( !TreasureDvcEntity___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(TreasureDvcEntity___c_TypeInfo, v21);
-    v28 = TreasureDvcEntity___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TreasureDvcEntity___c_TypeInfo);
+    v19 = TreasureDvcEntity___c_TypeInfo;
   }
-  _9__28_0 = v28->static_fields->__9__28_0;
-  if ( !v27
-    || (v21 = System_Collections_Generic_List_object__TypeInfo,
+  _9__26_0 = v19->static_fields->__9__26_0;
+  if ( !v18
+    || (v14 = System_Collections_Generic_List_object__TypeInfo,
         methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(v27->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (System_Collections_Generic_List_object__c *)v27->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
+        LOBYTE(v18->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
+    && (System_Collections_Generic_List_object__c *)v18->klass->_2.typeHierarchy[methodPtr_low - 1] == System_Collections_Generic_List_object__TypeInfo )
   {
-    if ( !_9__28_0 )
+    if ( !_9__26_0 )
     {
-      if ( !v28->_2.cctor_finished )
+      if ( !v19->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v28, v21);
-        v28 = TreasureDvcEntity___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v19);
+        v19 = TreasureDvcEntity___c_TypeInfo;
       }
-      v31 = (Il2CppObject *)v28->static_fields->__9;
-      _9__28_0 = (System_Converter_object__int__o *)sub_1BCAA2C(System_Converter_object__int__TypeInfo, v21, v25, v26);
+      v22 = (Il2CppObject *)v19->static_fields->__9;
+      _9__26_0 = (System_Converter_object__int__o *)sub_1BD36A4(System_Converter_object__int__TypeInfo);
       System_Converter_object__int____ctor(
-        _9__28_0,
-        v31,
-        Method_TreasureDvcEntity___c__getScriptIntArrayParam_b__28_0__,
+        _9__26_0,
+        v22,
+        Method_TreasureDvcEntity___c__getScriptIntArrayParam_b__26_0__,
         0LL);
       static_fields = TreasureDvcEntity___c_TypeInfo->static_fields;
-      static_fields->__9__28_0 = _9__28_0;
-      sub_1BCA784(
-        (PartyOrganizationUtility_o *)&static_fields->__9__28_0,
-        (int64_t)_9__28_0,
-        v33,
-        v34,
-        v35,
-        v36,
-        v37,
-        v38);
+      static_fields->__9__26_0 = _9__26_0;
+      sub_1BD33FC(
+        (PartyOrganizationUtility_o *)&static_fields->__9__26_0,
+        (int64_t)_9__26_0,
+        v24,
+        v25,
+        v26,
+        v27,
+        v28,
+        v29);
     }
-    if ( v27 )
+    if ( v18 )
     {
       script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_List_object___ConvertAll_int_(
-                                                                            v27,
-                                                                            (System_Converter_T__TOutput__o *)_9__28_0,
-                                                                            (const MethodInfo_2E42B5C *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                                            v18,
+                                                                            (System_Converter_T__TOutput__o *)_9__26_0,
+                                                                            (const MethodInfo_2E61464 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
       if ( script )
         return System_Collections_Generic_List_int___ToArray(
                  (System_Collections_Generic_List_int__o *)script,
-                 (const MethodInfo_35866F0 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 (const MethodInfo_35A5824 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
 LABEL_21:
-    sub_1BCAA3C(script, v21);
+    sub_1BD36B4(script, v14);
   }
-  sub_1BCACFC(v27);
-  return (System_Int32_array *)TreasureDvcEntity__getSeqId(v39, v40, v41);
+  sub_1BD3974(v18);
+  return (System_Int32_array *)TreasureDvcEntity__getSeqId(v30, v31, v32);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TreasureDvcEntity__getSeqId(TreasureDvcEntity_o *this, int32_t limit, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x2
-  Il2CppObject *v7; // x0
-  System_String_o *v8; // x0
-  const MethodInfo *v9; // x3
-  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v3; // x3
+  __int64 v4; // x4
+  __int64 v7; // x1
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x3
+  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B16D85 & 1) == 0 )
+  if ( (byte_4B37D42 & 1) == 0 )
   {
-    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&limit, method);
-    sub_1BCA7E0(&StringLiteral_21332/*"limitSeqId_{0}"*/, v5, v6);
-    byte_4B16D85 = 1;
+    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&limit);
+    sub_1BD3458(&StringLiteral_21363/*"limitSeqId_{0}"*/, v7);
+    byte_4B37D42 = 1;
   }
-  v11 = limit;
-  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
-  v8 = System_String__Format((System_String_o *)StringLiteral_21332/*"limitSeqId_{0}"*/, v7, 0LL);
-  return TreasureDvcEntity__getScriptInt(this, v8, this->fields.seqId, v9);
+  v12 = limit;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, method, v3, v4);
+  v9 = System_String__Format((System_String_o *)StringLiteral_21363/*"limitSeqId_{0}"*/, v8, 0LL);
+  return TreasureDvcEntity__getScriptInt(this, v9, this->fields.seqId, v10);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TreasureDvcEntity__getTDTypeChangeId(
         TreasureDvcEntity_o *this,
         System_String_o *key,
@@ -1684,17 +1584,17 @@ int32_t __fastcall TreasureDvcEntity__getTDTypeChangeId(
   System_Int32_array *ScriptIntArrayParam; // x0
   __int64 v10; // x1
 
-  if ( (byte_4B16D92 & 1) == 0 )
+  if ( (byte_4B37D4F & 1) == 0 )
   {
-    sub_1BCA7E0(&int___TypeInfo, key, *(_QWORD *)&commandType);
-    byte_4B16D92 = 1;
+    sub_1BD3458(&int___TypeInfo, key);
+    byte_4B37D4F = 1;
   }
-  v7 = (System_Int32_array *)sub_1BCA888(int___TypeInfo, 0LL);
+  v7 = (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
   ScriptIntArrayParam = TreasureDvcEntity__getScriptIntArrayParam(this, key, v7, v8);
   if ( !ScriptIntArrayParam )
-    sub_1BCAA3C(0LL, v10);
+    sub_1BD36B4(0LL, v10);
   if ( commandType - 1 >= ScriptIntArrayParam->max_length )
-    sub_1BCAA44(ScriptIntArrayParam, v10);
+    sub_1BD36BC(ScriptIntArrayParam, v10);
   return ScriptIntArrayParam->m_Items[commandType];
 }
 
@@ -1707,67 +1607,65 @@ int32_t __fastcall TreasureDvcEntity__getTDTypeChangeIdEachLimit(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
   int32_t id; // w21
-  __int64 v10; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x4
-  __int64 v13; // x8
-  __int64 v14; // x22
-  unsigned __int64 v15; // x24
-  TreasureDvcEntity_o *v16; // x0
-  int32_t v17; // w23
+  __int64 v9; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x4
+  __int64 v12; // x8
+  __int64 v13; // x22
+  unsigned __int64 v14; // x24
+  TreasureDvcEntity_o *v15; // x0
+  int32_t v16; // w23
   System_String_o *AddLimitKey; // x23
-  const MethodInfo *v19; // x2
-  const MethodInfo *v20; // x3
+  const MethodInfo *v18; // x2
+  const MethodInfo *v19; // x3
 
-  if ( (byte_4B16D91 & 1) == 0 )
+  if ( (byte_4B37D4E & 1) == 0 )
   {
-    sub_1BCA7E0(&int___TypeInfo, *(_QWORD *)&limitCount, *(_QWORD *)&commandType);
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, v7, v8);
-    byte_4B16D91 = 1;
+    sub_1BD3458(&int___TypeInfo, *(_QWORD *)&limitCount);
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, v7);
+    byte_4B37D4E = 1;
   }
   id = this->fields.id;
-  v10 = sub_1BCA888(int___TypeInfo, 2LL);
-  if ( !v10 )
-    sub_1BCAA3C(0LL, v11);
-  v13 = *(_QWORD *)(v10 + 24);
-  v14 = v10;
-  if ( !(_DWORD)v13 || (*(_DWORD *)(v10 + 32) = limitCount, (_DWORD)v13 == 1) )
+  v9 = sub_1BD3500(int___TypeInfo, 2LL);
+  if ( !v9 )
+    sub_1BD36B4(0LL, v10);
+  v12 = *(_QWORD *)(v9 + 24);
+  v13 = v9;
+  if ( !(_DWORD)v12 || (*(_DWORD *)(v9 + 32) = limitCount, (_DWORD)v12 == 1) )
 LABEL_15:
-    sub_1BCAA44(v10, v11);
-  *(_DWORD *)(v10 + 36) = -1;
-  if ( (int)v13 < 1 )
+    sub_1BD36BC(v9, v10);
+  *(_DWORD *)(v9 + 36) = -1;
+  if ( (int)v12 < 1 )
     return id;
-  v15 = 0LL;
+  v14 = 0LL;
   while ( 1 )
   {
-    if ( v15 >= (unsigned int)v13 )
+    if ( v14 >= (unsigned int)v12 )
       goto LABEL_15;
-    v16 = (TreasureDvcEntity_o *)TreasureDvcEntity_TypeInfo;
-    v17 = *(_DWORD *)(v14 + 32 + 4 * v15);
+    v15 = (TreasureDvcEntity_o *)TreasureDvcEntity_TypeInfo;
+    v16 = *(_DWORD *)(v13 + 32 + 4 * v14);
     if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, v11);
-      v16 = (TreasureDvcEntity_o *)TreasureDvcEntity_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
+      v15 = (TreasureDvcEntity_o *)TreasureDvcEntity_TypeInfo;
     }
     AddLimitKey = TreasureDvcEntity__makeAddLimitKey(
+                    v15,
+                    *(System_String_o **)(v15[1].fields.effectFlag + 24),
                     v16,
-                    (System_String_o *)v16[1].fields.script->fields._entries,
-                    v17,
                     0,
-                    v12);
-    v10 = TreasureDvcEntity__checkScript(this, AddLimitKey, v19);
-    if ( (v10 & 1) != 0 )
-      return TreasureDvcEntity__getTDTypeChangeId(this, AddLimitKey, commandType, v20);
-    LODWORD(v13) = *(_DWORD *)(v14 + 24);
-    if ( (__int64)++v15 >= (int)v13 )
+                    v11);
+    v9 = TreasureDvcEntity__checkScript(this, AddLimitKey, v18);
+    if ( (v9 & 1) != 0 )
+      return TreasureDvcEntity__getTDTypeChangeId(this, AddLimitKey, commandType, v19);
+    LODWORD(v12) = *(_DWORD *)(v13 + 24);
+    if ( (__int64)++v14 >= (int)v12 )
       return id;
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TreasureDvcEntity__makeAddLimitKey(
         TreasureDvcEntity_o *this,
         System_String_o *baseKey,
@@ -1778,104 +1676,93 @@ System_String_o *__fastcall TreasureDvcEntity__makeAddLimitKey(
   int32_t v6; // w20
   Il2CppObject *v7; // x19
   __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x1
-  __int64 v13; // x2
-  TreasureDvcEntity_c *v14; // x0
+  TreasureDvcEntity_c *v11; // x0
   System_String_o *KET_SUFFIX_ACTSET; // x20
+  System_String_o *v13; // x0
+  System_String_o *v14; // x0
+  Il2CppObject *v15; // x21
   System_String_o *v16; // x0
-  System_String_o *v17; // x0
-  Il2CppObject *v18; // x21
-  System_String_o *v19; // x0
-  Il2CppObject *v20; // x2
-  int32_t v22; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v23; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v17; // x2
+  int32_t v19; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = limit;
   v7 = (Il2CppObject *)baseKey;
-  v22 = actSet;
-  v23 = limit;
-  if ( (byte_4B16D88 & 1) == 0 )
+  v19 = actSet;
+  v20 = limit;
+  if ( (byte_4B37D45 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity_TypeInfo, baseKey, *(_QWORD *)&limit);
-    sub_1BCA7E0(&StringLiteral_25366/*"{0}{1}{2}"*/, v8, v9);
-    sub_1BCA7E0(&StringLiteral_16290/*"_"*/, v10, v11);
-    sub_1BCA7E0(&StringLiteral_1/*""*/, v12, v13);
-    byte_4B16D88 = 1;
+    sub_1BD3458(&TreasureDvcEntity_TypeInfo, baseKey);
+    sub_1BD3458(&StringLiteral_25402/*"{0}{1}{2}"*/, v8);
+    sub_1BD3458(&StringLiteral_16309/*"_"*/, v9);
+    sub_1BD3458(&StringLiteral_1/*""*/, v10);
+    byte_4B37D45 = 1;
   }
   if ( v6 != -1 || actSet )
   {
     if ( actSet )
     {
-      v14 = TreasureDvcEntity_TypeInfo;
+      v11 = TreasureDvcEntity_TypeInfo;
       if ( !TreasureDvcEntity_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo, baseKey);
-        v14 = TreasureDvcEntity_TypeInfo;
+        j_il2cpp_runtime_class_init_0(TreasureDvcEntity_TypeInfo);
+        v11 = TreasureDvcEntity_TypeInfo;
       }
-      KET_SUFFIX_ACTSET = v14->static_fields->KET_SUFFIX_ACTSET;
-      v16 = System_Int32__ToString((int32_t)&v22, 0LL);
-      v17 = System_String__Concat_62401220(KET_SUFFIX_ACTSET, v16, 0LL);
-      v6 = v23;
-      v18 = (Il2CppObject *)v17;
+      KET_SUFFIX_ACTSET = v11->static_fields->KET_SUFFIX_ACTSET;
+      v13 = System_Int32__ToString((int32_t)&v19, 0LL);
+      v14 = System_String__Concat_62525248(KET_SUFFIX_ACTSET, v13, 0LL);
+      v6 = v20;
+      v15 = (Il2CppObject *)v14;
     }
     else
     {
-      v18 = (Il2CppObject *)StringLiteral_1/*""*/;
+      v15 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
     if ( v6 == -1 )
     {
-      v20 = (Il2CppObject *)StringLiteral_1/*""*/;
+      v17 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
     else
     {
-      v19 = System_Int32__ToString((int32_t)&v23, 0LL);
-      v20 = (Il2CppObject *)System_String__Concat_62401220((System_String_o *)StringLiteral_16290/*"_"*/, v19, 0LL);
+      v16 = System_Int32__ToString((int32_t)&v20, 0LL);
+      v17 = (Il2CppObject *)System_String__Concat_62525248((System_String_o *)StringLiteral_16309/*"_"*/, v16, 0LL);
     }
-    return System_String__Format_62415660((System_String_o *)StringLiteral_25366/*"{0}{1}{2}"*/, v7, v20, v18, 0LL);
+    return System_String__Format_62539688((System_String_o *)StringLiteral_25402/*"{0}{1}{2}"*/, v7, v17, v15, 0LL);
   }
   return (System_String_o *)v7;
-}
-
-
-void __fastcall TreasureDvcEntity__resetCacheRandomSeqId(TreasureDvcEntity_o *this, const MethodInfo *method)
-{
-  this->fields.cacheRandomSeqId = -1;
 }
 
 
 void __fastcall TreasureDvcEntity___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B16D9C & 1) == 0 )
+  if ( (byte_4B37D59 & 1) == 0 )
   {
-    sub_1BCA7E0(&TreasureDvcEntity___c_TypeInfo, v1, v2);
-    byte_4B16D9C = 1;
+    sub_1BD3458(&TreasureDvcEntity___c_TypeInfo, v1);
+    byte_4B37D59 = 1;
   }
-  v4 = (Il2CppObject *)sub_1BCAA2C(TreasureDvcEntity___c_TypeInfo, v1, v2, v3);
-  System_Object___ctor(v4, 0LL);
-  TreasureDvcEntity___c_TypeInfo->static_fields->__9 = (struct TreasureDvcEntity___c_o *)v4;
-  sub_1BCA784(
+  v2 = (Il2CppObject *)sub_1BD36A4(TreasureDvcEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  TreasureDvcEntity___c_TypeInfo->static_fields->__9 = (struct TreasureDvcEntity___c_o *)v2;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)TreasureDvcEntity___c_TypeInfo->static_fields,
-    (int64_t)v4,
+    (int64_t)v2,
+    v3,
+    v4,
     v5,
     v6,
     v7,
-    v8,
-    v9,
-    v10);
+    v8);
 }
 
 
@@ -1885,7 +1772,7 @@ void __fastcall TreasureDvcEntity___c___ctor(TreasureDvcEntity___c_o *this, cons
 }
 
 
-int32_t __fastcall TreasureDvcEntity___c___TryGetTdIdChangeByBattlePoint_b__55_0(
+int32_t __fastcall TreasureDvcEntity___c___TryGetTdIdChangeByBattlePoint_b__49_0(
         TreasureDvcEntity___c_o *this,
         int32_t x,
         const MethodInfo *method)
@@ -1894,17 +1781,17 @@ int32_t __fastcall TreasureDvcEntity___c___TryGetTdIdChangeByBattlePoint_b__55_0
 }
 
 
-int32_t __fastcall TreasureDvcEntity___c___getScriptIntArrayParam_b__28_0(
+int32_t __fastcall TreasureDvcEntity___c___getScriptIntArrayParam_b__26_0(
         TreasureDvcEntity___c_o *this,
         Il2CppObject *x,
         const MethodInfo *method)
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4B16D9D & 1) == 0 )
+  if ( (byte_4B37D5A & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_1/*""*/, x, method);
-    byte_4B16D9D = 1;
+    sub_1BD3458(&StringLiteral_1/*""*/, x);
+    byte_4B37D5A = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(
@@ -1919,39 +1806,39 @@ int32_t __fastcall TreasureDvcEntity___c___getScriptIntArrayParam_b__28_0(
 }
 
 
-void __fastcall TreasureDvcEntity___c__DisplayClass54_0___ctor(
-        TreasureDvcEntity___c__DisplayClass54_0_o *this,
+void __fastcall TreasureDvcEntity___c__DisplayClass48_0___ctor(
+        TreasureDvcEntity___c__DisplayClass48_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-bool __fastcall TreasureDvcEntity___c__DisplayClass54_0___GetTdChangeByBattlePointPhaseList_b__0(
-        TreasureDvcEntity___c__DisplayClass54_0_o *this,
+bool __fastcall TreasureDvcEntity___c__DisplayClass48_0___GetTdChangeByBattlePointPhaseList_b__0(
+        TreasureDvcEntity___c__DisplayClass48_0_o *this,
         System_String_o *x,
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   return System_String__StartsWith(x, this->fields.checkKey, 0LL);
 }
 
 
-System_String_o *__fastcall TreasureDvcEntity___c__DisplayClass54_0___GetTdChangeByBattlePointPhaseList_b__1(
-        TreasureDvcEntity___c__DisplayClass54_0_o *this,
+System_String_o *__fastcall TreasureDvcEntity___c__DisplayClass48_0___GetTdChangeByBattlePointPhaseList_b__1(
+        TreasureDvcEntity___c__DisplayClass48_0_o *this,
         System_String_o *x,
         const MethodInfo *method)
 {
-  TreasureDvcEntity___c__DisplayClass54_0_o *v4; // x20
+  TreasureDvcEntity___c__DisplayClass48_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B16D9E & 1) == 0 )
+  if ( (byte_4B37D5B & 1) == 0 )
   {
-    this = (TreasureDvcEntity___c__DisplayClass54_0_o *)sub_1BCA7E0(&StringLiteral_1/*""*/, x, method);
-    byte_4B16D9E = 1;
+    this = (TreasureDvcEntity___c__DisplayClass48_0_o *)sub_1BD3458(&StringLiteral_1/*""*/, x);
+    byte_4B37D5B = 1;
   }
   if ( !x )
-    sub_1BCAA3C(this, x);
-  return System_String__Replace_62420848(x, v4->fields.checkKey, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    sub_1BD36B4(this, x);
+  return System_String__Replace_62544876(x, v4->fields.checkKey, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }

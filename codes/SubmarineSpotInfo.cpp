@@ -22,10 +22,10 @@ void __fastcall SubmarineSpotInfo___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v8->fields, (int64_t)spot, v9, v10, v11, v12, v13, v14);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v8->fields, (int64_t)spot, v9, v10, v11, v12, v13, v14);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_1BCA784((PartyOrganizationUtility_o *)v8, (int64_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
+  sub_1BD33FC((PartyOrganizationUtility_o *)v8, (int64_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
   LODWORD(v8->monitor) = panelId;
 }
 
@@ -68,7 +68,7 @@ void __fastcall SubmarineSpotInfo__set_EventPanelSpotEntity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -98,5 +98,5 @@ void __fastcall SubmarineSpotInfo__set_SpotEntity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

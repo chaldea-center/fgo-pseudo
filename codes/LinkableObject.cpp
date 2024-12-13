@@ -6,55 +6,49 @@ void __fastcall LinkableObject___ctor(LinkableObject_o *this, const MethodInfo *
 
 void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   int32_t linkType; // w8
-  _QWORD *v11; // x0
-  System_Reflection_MethodBase_o *v12; // x0
-  __int64 v13; // x1
-  System_String_o *v14; // x19
-  _QWORD *v15; // x0
-  System_Reflection_MethodBase_o *v16; // x0
-  __int64 v17; // x1
+  _QWORD *v7; // x0
+  System_Reflection_MethodBase_o *v8; // x0
+  System_String_o *v9; // x19
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
   System_String_o *linkUrl; // x19
 
-  if ( (byte_4B18B4B & 1) == 0 )
+  if ( (byte_4B39B26 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Application_TypeInfo, method, v2);
-    sub_1BCA7E0(&Method_LinkableObject_OnClick__, v4, v5);
-    sub_1BCA7E0(&WebViewManager_TypeInfo, v6, v7);
-    sub_1BCA7E0(&StringLiteral_1/*""*/, v8, v9);
-    byte_4B18B4B = 1;
+    sub_1BD3458(&UnityEngine_Application_TypeInfo, method);
+    sub_1BD3458(&Method_LinkableObject_OnClick__, v3);
+    sub_1BD3458(&WebViewManager_TypeInfo, v4);
+    sub_1BD3458(&StringLiteral_1/*""*/, v5);
+    byte_4B39B26 = 1;
   }
   linkType = this->fields.linkType;
   if ( linkType == 2 )
   {
-    v15 = Method_LinkableObject_OnClick__;
+    v10 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v15 = (_QWORD *)sub_1BCA7F8(Method_LinkableObject_OnClick__);
-    v16 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v15, v15[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0LL);
+      v10 = (_QWORD *)sub_1BD3470(Method_LinkableObject_OnClick__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1BD343C(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0LL);
     linkUrl = this->fields.linkUrl;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, v17);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     UnityEngine_Application__OpenURL(linkUrl, 0LL);
   }
   else if ( linkType == 1 )
   {
-    v11 = Method_LinkableObject_OnClick__;
+    v7 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1BCA7F8(Method_LinkableObject_OnClick__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v11, v11[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0LL);
-    v14 = this->fields.linkUrl;
+      v7 = (_QWORD *)sub_1BD3470(Method_LinkableObject_OnClick__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1BD343C(v7, v7[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
+    v9 = this->fields.linkUrl;
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo, v13);
-    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, v14, 0LL, 0LL);
+      j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
+    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, v9, 0LL, 0LL);
   }
 }
 
@@ -74,7 +68,7 @@ void __fastcall LinkableObject__SetUp(
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)p_linkUrl,
     (int64_t)lnkUrl,
     (int64_t)lnkUrl,

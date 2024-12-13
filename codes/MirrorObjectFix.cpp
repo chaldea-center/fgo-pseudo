@@ -8,16 +8,16 @@ void __fastcall MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo
   PartyListViewItem_o *v7; // x7
   int64_t v9; // x1
 
-  if ( (byte_4B18F57 & 1) == 0 )
+  if ( (byte_4B39F35 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_21177/*"joint_all_Base/joint_all"*/, method, v2);
-    byte_4B18F57 = 1;
+    sub_1BD3458(&StringLiteral_21208/*"joint_all_Base/joint_all"*/, method);
+    byte_4B39F35 = 1;
   }
-  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_BD1EA0;
+  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_BD72E0;
   *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.y = 0x3E99999A3F333333LL;
-  v9 = StringLiteral_21177/*"joint_all_Base/joint_all"*/;
-  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_21177/*"joint_all_Base/joint_all"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.rootTransformPath, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_21208/*"joint_all_Base/joint_all"*/;
+  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_21208/*"joint_all_Base/joint_all"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.rootTransformPath, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -42,7 +42,7 @@ UnityEngine_Bounds_o *__fastcall MirrorObjectFix__GetBounds(
   m_Extents = this->fields.mirrorBounds.fields.m_Extents;
   RootTransform = MirrorObjectFix__get_RootTransform(this, method);
   if ( !RootTransform )
-    sub_1BCAA3C(0LL, v8);
+    sub_1BD36B4(0LL, v8);
   v11.fields.x = x;
   v11.fields.y = y;
   v11.fields.z = z;
@@ -63,31 +63,30 @@ void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const Met
   float z; // s13
   float w; // s14
   __int64 v11; // x1
-  __int64 v12; // x2
   UnityEngine_Vector3_o lossyScale; // [xsp+0h] [xbp-170h]
-  UnityEngine_Matrix4x4_o v14; // [xsp+10h] [xbp-160h] BYREF
-  UnityEngine_Matrix4x4_o v15; // [xsp+50h] [xbp-120h] BYREF
-  UnityEngine_Matrix4x4_o v16; // [xsp+90h] [xbp-E0h] BYREF
-  UnityEngine_Matrix4x4_o v17; // [xsp+D0h] [xbp-A0h] BYREF
+  UnityEngine_Matrix4x4_o v13; // [xsp+10h] [xbp-160h] BYREF
+  UnityEngine_Matrix4x4_o v14; // [xsp+50h] [xbp-120h] BYREF
+  UnityEngine_Matrix4x4_o v15; // [xsp+90h] [xbp-E0h] BYREF
+  UnityEngine_Matrix4x4_o v16; // [xsp+D0h] [xbp-A0h] BYREF
   float m11; // [xsp+158h] [xbp-18h]
   float m01; // [xsp+15Ch] [xbp-14h]
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s3.4,4:s4.4,8:s5.4
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v24; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Quaternion_o v23; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  MirrorObjectFix__GetBounds((UnityEngine_Bounds_o *)&v17, this, method);
-  v3 = *(_OWORD *)&v17.fields.m00;
-  m11 = v17.fields.m11;
-  m01 = v17.fields.m01;
-  UnityEngine_Gizmos__get_matrix(&v16, 0LL);
-  v17 = v16;
-  v22.fields.g = 0.92157;
-  v22.fields.b = 0.015686;
-  v22.fields.r = 1.0;
-  v22.fields.a = 1.0;
-  UnityEngine_Gizmos__set_color(v22, 0LL);
+  MirrorObjectFix__GetBounds((UnityEngine_Bounds_o *)&v16, this, method);
+  v3 = *(_OWORD *)&v16.fields.m00;
+  m11 = v16.fields.m11;
+  m01 = v16.fields.m01;
+  UnityEngine_Gizmos__get_matrix(&v15, 0LL);
+  v16 = v15;
+  v21.fields.g = 0.92157;
+  v21.fields.b = 0.015686;
+  v21.fields.r = 1.0;
+  v21.fields.a = 1.0;
+  UnityEngine_Gizmos__set_color(v21, 0LL);
   RootTransform = MirrorObjectFix__get_RootTransform(this, v4);
   if ( !RootTransform
     || (rotation = UnityEngine_Transform__get_rotation(RootTransform, 0LL),
@@ -97,29 +96,29 @@ void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const Met
         w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BCAA3C(RootTransform, v6);
+    sub_1BD36B4(RootTransform, v6);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0LL);
-  *(_QWORD *)&v20.fields.x = v3;
-  v20.fields.z = *((float *)&v3 + 2);
-  v24.fields.x = x;
-  v24.fields.y = y;
-  v24.fields.z = z;
-  v24.fields.w = w;
-  UnityEngine_Matrix4x4__TRS(&v16, v20, v24, lossyScale, 0LL);
-  v15 = v16;
-  UnityEngine_Gizmos__set_matrix(&v15, 0LL);
-  if ( !byte_4B109C1 )
-  {
-    sub_1BCA7E0(&UnityEngine_Vector3_TypeInfo, v11, v12);
-    byte_4B109C1 = 1;
-  }
-  v21.fields.x = *((float *)&v3 + 3) + *((float *)&v3 + 3);
-  v21.fields.y = m01 + m01;
-  v21.fields.z = m11 + m11;
-  UnityEngine_Gizmos__DrawWireCube(UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, v21, 0LL);
-  v14 = v17;
+  *(_QWORD *)&v19.fields.x = v3;
+  v19.fields.z = *((float *)&v3 + 2);
+  v23.fields.x = x;
+  v23.fields.y = y;
+  v23.fields.z = z;
+  v23.fields.w = w;
+  UnityEngine_Matrix4x4__TRS(&v15, v19, v23, lossyScale, 0LL);
+  v14 = v15;
   UnityEngine_Gizmos__set_matrix(&v14, 0LL);
+  if ( !byte_4B31941 )
+  {
+    sub_1BD3458(&UnityEngine_Vector3_TypeInfo, v11);
+    byte_4B31941 = 1;
+  }
+  v20.fields.x = *((float *)&v3 + 3) + *((float *)&v3 + 3);
+  v20.fields.y = m01 + m01;
+  v20.fields.z = m11 + m11;
+  UnityEngine_Gizmos__DrawWireCube(UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, v20, 0LL);
+  v13 = v16;
+  UnityEngine_Gizmos__set_matrix(&v13, 0LL);
 }
 
 
@@ -127,87 +126,76 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
         MirrorObjectFix_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Transform_o **p_cacheRootTransform; // x20
   UnityEngine_Object_o *cacheRootTransform; // x21
-  __int64 v6; // x1
   UnityEngine_Object_o *rootTransform; // x21
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  struct UnityEngine_Transform_o *v14; // x1
-  __int64 v15; // x1
-  UnityEngine_Transform_o *v16; // x0
-  __int64 v17; // x1
-  UnityEngine_Transform_o *v18; // x21
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  struct UnityEngine_Transform_o *v12; // x1
+  UnityEngine_Transform_o *v13; // x0
+  __int64 v14; // x1
+  UnityEngine_Transform_o *v15; // x21
   struct UnityEngine_Transform_o *transform; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
 
-  if ( (byte_4B18F56 & 1) == 0 )
+  if ( (byte_4B39F34 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B18F56 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B39F34 = 1;
   }
   p_cacheRootTransform = &this->fields.cacheRootTransform;
   cacheRootTransform = (UnityEngine_Object_o *)this->fields.cacheRootTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(cacheRootTransform, 0LL, 0LL) )
   {
     rootTransform = (UnityEngine_Object_o *)this->fields.rootTransform;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(rootTransform, 0LL, 0LL) )
     {
-      v14 = this->fields.rootTransform;
+      v12 = this->fields.rootTransform;
     }
     else
     {
       if ( System_String__IsNullOrEmpty(this->fields.rootTransformPath, 0LL) )
       {
 LABEL_14:
-        v18 = *p_cacheRootTransform;
+        v15 = *p_cacheRootTransform;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
-        if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v18, 0LL, 0LL) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0LL, 0LL) )
         {
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
           this->fields.cacheRootTransform = transform;
-          sub_1BCA784(
+          sub_1BD33FC(
             (PartyOrganizationUtility_o *)&this->fields.cacheRootTransform,
             (int64_t)transform,
+            v17,
+            v18,
+            v19,
             v20,
             v21,
-            v22,
-            v23,
-            v24,
-            v25);
+            v22);
         }
         return *p_cacheRootTransform;
       }
-      v16 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      if ( !v16 )
-        sub_1BCAA3C(0LL, v17);
-      v14 = UnityEngine_Transform__Find(v16, this->fields.rootTransformPath, 0LL);
+      v13 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+      if ( !v13 )
+        sub_1BD36B4(0LL, v14);
+      v12 = UnityEngine_Transform__Find(v13, this->fields.rootTransformPath, 0LL);
     }
-    *p_cacheRootTransform = v14;
-    sub_1BCA784(
-      (PartyOrganizationUtility_o *)&this->fields.cacheRootTransform,
-      (int64_t)v14,
-      v8,
-      v9,
-      v10,
-      v11,
-      v12,
-      v13);
+    *p_cacheRootTransform = v12;
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.cacheRootTransform, (int64_t)v12, v6, v7, v8, v9, v10, v11);
     goto LABEL_14;
   }
   return *p_cacheRootTransform;

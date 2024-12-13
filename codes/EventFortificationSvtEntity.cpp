@@ -1,15 +1,13 @@
 void __fastcall EventFortificationSvtEntity___ctor(EventFortificationSvtEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B161A8 & 1) == 0 )
+  if ( (byte_4B37154 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B161A8 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37154 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,19 +18,16 @@ System_String_o *__fastcall EventFortificationSvtEntity__CreatePK(
         int32_t position,
         const MethodInfo *method)
 {
-  if ( (byte_4B161A7 & 1) == 0 )
+  if ( (byte_4B37153 & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataEntityBase_CreateMultiplePK_int__int__int___,
-      *(_QWORD *)&fortificationIdx,
-      *(_QWORD *)&position);
-    byte_4B161A7 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&fortificationIdx);
+    byte_4B37153 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            fortificationIdx,
            position,
-           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F2FD38 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

@@ -11,36 +11,33 @@ System_String_o *__fastcall MasterMissionTab__GetButtonSpriteName(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
-  System_String_o **v11; // x9
-  __int64 *v12; // x10
-  System_String_o **v13; // x8
+  System_String_o **v8; // x9
+  __int64 *v9; // x10
+  System_String_o **v10; // x8
 
-  if ( (byte_4B19376 & 1) == 0 )
+  if ( (byte_4B3A357 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_17670/*"btn_bg_on_4"*/, isOn, method);
-    sub_1BCA7E0(&StringLiteral_17665/*"btn_bg_off_4"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_17666/*"btn_bg_off_5"*/, v7, v8);
-    sub_1BCA7E0(&StringLiteral_17671/*"btn_bg_on_5"*/, v9, v10);
-    byte_4B19376 = 1;
+    sub_1BD3458(&StringLiteral_17696/*"btn_bg_on_4"*/, isOn);
+    sub_1BD3458(&StringLiteral_17691/*"btn_bg_off_4"*/, v5);
+    sub_1BD3458(&StringLiteral_17692/*"btn_bg_off_5"*/, v6);
+    sub_1BD3458(&StringLiteral_17697/*"btn_bg_on_5"*/, v7);
+    byte_4B3A357 = 1;
   }
   if ( isOn )
-    v11 = (System_String_o **)&StringLiteral_17671/*"btn_bg_on_5"*/;
+    v8 = (System_String_o **)&StringLiteral_17697/*"btn_bg_on_5"*/;
   else
-    v11 = (System_String_o **)&StringLiteral_17666/*"btn_bg_off_5"*/;
+    v8 = (System_String_o **)&StringLiteral_17692/*"btn_bg_off_5"*/;
   if ( isOn )
-    v12 = &StringLiteral_17670/*"btn_bg_on_4"*/;
+    v9 = &StringLiteral_17696/*"btn_bg_on_4"*/;
   else
-    v12 = &StringLiteral_17665/*"btn_bg_off_4"*/;
+    v9 = &StringLiteral_17691/*"btn_bg_off_4"*/;
   if ( this->fields.isSmall )
-    v13 = v11;
+    v10 = v8;
   else
-    v13 = (System_String_o **)v12;
-  return *v13;
+    v10 = (System_String_o **)v9;
+  return *v10;
 }
 
 
@@ -230,7 +227,7 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
       }
     }
 LABEL_53:
-    sub_1BCAA3C(transform, v5);
+    sub_1BD36B4(transform, v5);
   }
   transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -394,7 +391,7 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
                                                     0LL)) == 0LL) )
   {
 LABEL_53:
-    sub_1BCAA3C(gameObject, v5);
+    sub_1BD36B4(gameObject, v5);
   }
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)gameObject,

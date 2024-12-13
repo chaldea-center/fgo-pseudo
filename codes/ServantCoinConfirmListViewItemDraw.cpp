@@ -12,10 +12,11 @@ void __fastcall ServantCoinConfirmListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   if ( !item || (this = (ServantCoinConfirmListViewItemDraw_o *)this->fields.itemIcon) == 0LL )
-    sub_1BCAA3C(this, item);
+    sub_1BD36B4(this, item);
   ItemIconComponent__SetItem(
     (ItemIconComponent_o *)this,
     item->fields._ItemId_k__BackingField,
     item->fields._Num_k__BackingField,
+    1,
     0LL);
 }

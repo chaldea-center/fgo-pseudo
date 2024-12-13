@@ -28,36 +28,32 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__Init(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  const MethodInfo *v3; // x3
+  const MethodInfo *v2; // x3
+  __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
+  __int64 v6; // x1
   UICommonButton_o *button; // x0
-  __int64 v11; // x1
   UISprite_o *frameSprite; // x19
 
-  if ( (byte_4B123A6 & 1) == 0 )
+  if ( (byte_4B33330 & 1) == 0 )
   {
-    sub_1BCA7E0(&AtlasManager_TypeInfo, method, v2);
-    sub_1BCA7E0(&StringLiteral_20537/*"img_frameselect"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_1/*""*/, v7, v8);
-    byte_4B123A6 = 1;
+    sub_1BD3458(&AtlasManager_TypeInfo, method);
+    sub_1BD3458(&StringLiteral_20567/*"img_frameselect"*/, v4);
+    sub_1BD3458(&StringLiteral_1/*""*/, v5);
+    byte_4B33330 = 1;
   }
-  RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v3);
+  RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v2);
   button = this->fields.button;
   if ( !button
     || (UICommonButton__SetEnable(button, 1, 0LL), (button = (UICommonButton_o *)this->fields.wordLabel) == 0LL) )
   {
-    sub_1BCAA3C(button, v9);
+    sub_1BD36B4(button, v6);
   }
   UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   frameSprite = this->fields.frameSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v11);
-  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20537/*"img_frameselect"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20567/*"img_frameselect"*/, 0LL);
 }
 
 
@@ -99,7 +95,7 @@ LABEL_8:
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1BCAA3C(button, isUse);
+    sub_1BD36B4(button, isUse);
   }
   UICommonButton__SetEnable(button, 0, 0LL);
   RecommendSupportMessageSelectListViewItemDraw__SetHighlight(this, 0, v9);
@@ -124,13 +120,12 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
   if ( !frameSprite
     || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0LL)) == 0LL )
   {
-    sub_1BCAA3C(frameSprite, isActive);
+    sub_1BD36B4(frameSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         RecommendSupportMessageSelectListViewItem_o *item,
@@ -145,10 +140,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4B12415 )
+    if ( !byte_4B3339F )
     {
-      sub_1BCA7E0(&RecommendSupportMessageSelectDialog_TypeInfo, item, isInput);
-      byte_4B12415 = 1;
+      sub_1BD3458(&RecommendSupportMessageSelectDialog_TypeInfo, item);
+      byte_4B3339F = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -157,7 +152,7 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
       method);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1BCAA3C(wordLabel, v8);
+      sub_1BD36B4(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
   }
 }
@@ -177,10 +172,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4B12415 )
+    if ( !byte_4B3339F )
     {
-      sub_1BCA7E0(&RecommendSupportMessageSelectDialog_TypeInfo, item, method);
-      byte_4B12415 = 1;
+      sub_1BD3458(&RecommendSupportMessageSelectDialog_TypeInfo, item);
+      byte_4B3339F = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -189,13 +184,12 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
       v3);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
     if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1BCAA3C(wordLabel, v8);
+      sub_1BD36B4(wordLabel, v8);
     UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetMask(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         bool isActive,
@@ -205,6 +199,6 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetMask(
 
   mask = this->fields.mask;
   if ( !mask )
-    sub_1BCAA3C(0LL, isActive);
+    sub_1BD36B4(0LL, isActive);
   UnityEngine_GameObject__SetActive(mask, isActive, 0LL);
 }

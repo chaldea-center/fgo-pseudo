@@ -1,12 +1,11 @@
 void __fastcall ServantStatusCharaGraphListViewItemDraw___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
 
-  if ( (byte_4B121A3 & 1) == 0 )
+  if ( (byte_4B3312D & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantStatusCharaGraphListViewItemDraw_TypeInfo, v1, v2);
-    byte_4B121A3 = 1;
+    sub_1BD3458(&ServantStatusCharaGraphListViewItemDraw_TypeInfo, v1);
+    byte_4B3312D = 1;
   }
   ServantStatusCharaGraphListViewItemDraw_TypeInfo->static_fields->DEFAULT_DEPTH = 10;
 }
@@ -25,25 +24,24 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__ExecuteSpriteFadein(
         float duration,
         const MethodInfo *method)
 {
-  __int64 v3; // x2
   UnityEngine_Object_o *charaGraph; // x20
-  __int64 v7; // x1
-  UICharaGraphTexture_o *v8; // x0
+  __int64 v6; // x1
+  UICharaGraphTexture_o *v7; // x0
 
-  if ( (byte_4B121A1 & 1) == 0 )
+  if ( (byte_4B3312B & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v3);
-    byte_4B121A1 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3312B = 1;
   }
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL) )
   {
-    v8 = this->fields.charaGraph;
-    if ( !v8 )
-      sub_1BCAA3C(0LL, v7);
-    UICharaGraphTexture__ExecuteSpriteFadein(v8, duration, 0LL);
+    v7 = this->fields.charaGraph;
+    if ( !v7 )
+      sub_1BD36B4(0LL, v6);
+    UICharaGraphTexture__ExecuteSpriteFadein(v7, duration, 0LL);
   }
 }
 
@@ -53,25 +51,24 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__ExecuteSpriteFadeout(
         float duration,
         const MethodInfo *method)
 {
-  __int64 v3; // x2
   UnityEngine_Object_o *charaGraph; // x20
-  __int64 v7; // x1
-  UICharaGraphTexture_o *v8; // x0
+  __int64 v6; // x1
+  UICharaGraphTexture_o *v7; // x0
 
-  if ( (byte_4B121A0 & 1) == 0 )
+  if ( (byte_4B3312A & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v3);
-    byte_4B121A0 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3312A = 1;
   }
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL) )
   {
-    v8 = this->fields.charaGraph;
-    if ( !v8 )
-      sub_1BCAA3C(0LL, v7);
-    UICharaGraphTexture__ExecuteSpriteFadeout(v8, duration, 0LL);
+    v7 = this->fields.charaGraph;
+    if ( !v7 )
+      sub_1BD36B4(0LL, v6);
+    UICharaGraphTexture__ExecuteSpriteFadeout(v7, duration, 0LL);
   }
 }
 
@@ -80,25 +77,24 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__ExecuteSpriteHide(
         ServantStatusCharaGraphListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *charaGraph; // x20
-  __int64 v5; // x1
-  UICharaGraphTexture_o *v6; // x0
+  __int64 v4; // x1
+  UICharaGraphTexture_o *v5; // x0
 
-  if ( (byte_4B1219F & 1) == 0 )
+  if ( (byte_4B33129 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B1219F = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B33129 = 1;
   }
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL) )
   {
-    v6 = this->fields.charaGraph;
-    if ( !v6 )
-      sub_1BCAA3C(0LL, v5);
-    UICharaGraphTexture__ExecuteSpriteFadeoutForce(v6, 0LL);
+    v5 = this->fields.charaGraph;
+    if ( !v5 )
+      sub_1BD36B4(0LL, v4);
+    UICharaGraphTexture__ExecuteSpriteFadeoutForce(v5, 0LL);
   }
 }
 
@@ -107,27 +103,26 @@ int32_t __fastcall ServantStatusCharaGraphListViewItemDraw__GetCharaGraphBaseKin
         ServantStatusCharaGraphListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *charaGraph; // x20
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
-  struct UICharaGraphTexture_o *v8; // x8
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
+  struct UICharaGraphTexture_o *v7; // x8
 
-  if ( (byte_4B1219C & 1) == 0 )
+  if ( (byte_4B33126 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B1219C = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B33126 = 1;
   }
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  v5 = UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL);
-  if ( v5 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v4 = UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL);
+  if ( v4 )
     return -1;
-  v8 = this->fields.charaGraph;
-  if ( !v8 )
-    sub_1BCAA3C(v5, v6);
-  return v8->fields.baseKind;
+  v7 = this->fields.charaGraph;
+  if ( !v7 )
+    sub_1BD36B4(v4, v5);
+  return v7->fields.baseKind;
 }
 
 
@@ -139,23 +134,22 @@ int32_t __fastcall ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAft
         const MethodInfo *method)
 {
   __int64 v6; // x1
-  __int64 v7; // x2
   Il2CppObject *Instance; // x0
-  __int64 v9; // x1
+  __int64 v8; // x1
 
-  if ( (byte_4B1219E & 1) == 0 )
+  if ( (byte_4B33128 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&svtId, *(_QWORD *)&limitCount);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6, v7);
-    byte_4B1219E = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, *(_QWORD *)&svtId);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4B33128 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v9);
+    sub_1BD36B4(Instance, v8);
   }
   return ServantLimitImageMaster__GetServantImageLimitSealAfter(
            (ServantLimitImageMaster_o *)Instance,
@@ -171,31 +165,30 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetExCharaGraph(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
   UnityEngine_Object_o *charaGraph; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
+  __int64 v7; // x0
+  __int64 v8; // x1
   struct ServantStatusListViewItem_o *mainInfo; // x8
   struct UserServantEntity_o *userSvtEntity; // x9
-  UICharaGraphTexture_o *v12; // x20
-  __int64 v13; // x21
-  __int64 v14; // x22
+  UICharaGraphTexture_o *v11; // x20
+  __int64 v12; // x21
+  __int64 v13; // x22
   struct UserServantCollectionEntity_o *userSvtCollectionEntity; // x9
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v16; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v15; // x0
   struct ServantLeaderInfo_o *servantLeaderInfo; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
-  if ( (byte_4B121A2 & 1) == 0 )
+  if ( (byte_4B3312C & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, item, method);
-    sub_1BCA7E0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5, v6);
-    byte_4B121A2 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, item);
+    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    byte_4B3312C = 1;
   }
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
-  v8 = UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL);
-  if ( (v8 & 1) == 0 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v7 = UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL);
+  if ( (v7 & 1) == 0 )
   {
     if ( !item )
       goto LABEL_20;
@@ -205,9 +198,9 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetExCharaGraph(
     userSvtEntity = mainInfo->fields.userSvtEntity;
     if ( userSvtEntity )
     {
-      v12 = this->fields.charaGraph;
-      v14 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
-      v13 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
+      v11 = this->fields.charaGraph;
+      v13 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
+      v12 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
     }
     else
     {
@@ -217,31 +210,31 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetExCharaGraph(
         servantLeaderInfo = mainInfo->fields.servantLeaderInfo;
         if ( !servantLeaderInfo )
           return;
-        v12 = this->fields.charaGraph;
-        v14 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.currentCryptoKey;
-        v13 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.fakeValue;
-        v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo;
+        v11 = this->fields.charaGraph;
+        v13 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.currentCryptoKey;
+        v12 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.fakeValue;
+        v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo;
         if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           goto LABEL_15;
 LABEL_14:
-        j_il2cpp_runtime_class_init_0(v16, v9);
+        j_il2cpp_runtime_class_init_0(v15);
 LABEL_15:
-        *(_QWORD *)&v18.fields.currentCryptoKey = v14;
-        *(_QWORD *)&v18.fields.fakeValue = v13;
-        v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(v18, 0LL);
-        if ( v12 )
+        *(_QWORD *)&v17.fields.currentCryptoKey = v13;
+        *(_QWORD *)&v17.fields.fakeValue = v12;
+        v7 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(v17, 0LL);
+        if ( v11 )
         {
-          UICharaGraphTexture__SetExCharaGraph(v12, v8, item->fields.imageLimitCount, 0LL);
+          UICharaGraphTexture__SetExCharaGraph(v11, v7, item->fields.imageLimitCount, 0LL);
           return;
         }
 LABEL_20:
-        sub_1BCAA3C(v8, v9);
+        sub_1BD36B4(v7, v8);
       }
-      v12 = this->fields.charaGraph;
-      v14 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.currentCryptoKey;
-      v13 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.fakeValue;
+      v11 = this->fields.charaGraph;
+      v13 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.currentCryptoKey;
+      v12 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.fakeValue;
     }
-    v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo;
+    v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo;
     if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       goto LABEL_15;
     goto LABEL_14;
@@ -249,7 +242,6 @@ LABEL_20:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
         ServantStatusCharaGraphListViewItemDraw_o *this,
         ServantStatusCharaGraphListViewItem_o *item,
@@ -257,105 +249,103 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v8; // x1
   struct UICharaGraphTexture_o **p_charaGraph; // x20
   UnityEngine_Object_o *charaGraph; // x22
   UICharaGraphTexture_o *ImageLimitSealAfter; // x0
-  UserCommandCodeCollectionEntity_o *v14; // x1
+  UserCommandCodeCollectionEntity_o *v12; // x1
   struct ServantStatusListViewItem_o *mainInfo; // x8
   UserCommandCodeEntity_o *userCommandCodeEntity; // x22
   UnityEngine_GameObject_o *charaGraphBase; // x21
-  ServantStatusCharaGraphListViewItemDraw_c *v18; // x0
-  UICharaGraphTexture_o *TexturePrefab_38625912; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  ServantStatusCharaGraphListViewItemDraw_c *v16; // x0
+  UICharaGraphTexture_o *TexturePrefab_38694224; // x0
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   UserCommandCodeCollectionEntity_o *userCommandCodeCollectionEntity; // x22
-  UnityEngine_GameObject_o *v27; // x21
-  ServantStatusCharaGraphListViewItemDraw_c *v28; // x0
+  UnityEngine_GameObject_o *v25; // x21
+  ServantStatusCharaGraphListViewItemDraw_c *v26; // x0
   CommandCodeEntity_o *commandCodeEntity; // x22
-  UnityEngine_GameObject_o *v30; // x21
-  ServantStatusCharaGraphListViewItemDraw_c *v31; // x0
+  UnityEngine_GameObject_o *v28; // x21
+  ServantStatusCharaGraphListViewItemDraw_c *v29; // x0
   struct UserServantEntity_o *userSvtEntity; // x9
-  __int64 v33; // x22
-  __int64 v34; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v35; // x0
-  const MethodInfo *v36; // x3
-  struct ServantStatusListViewItem_o *v37; // x8
-  int32_t v38; // w21
-  UnityEngine_GameObject_o *v39; // x22
-  UserServantEntity_o *v40; // x23
-  ServantStatusCharaGraphListViewItemDraw_c *v41; // x0
-  struct UserServantEntity_o *v42; // x9
-  __int64 v43; // x22
-  __int64 v44; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v45; // x0
-  const MethodInfo *v46; // x3
-  struct ServantStatusListViewItem_o *v47; // x8
-  int32_t v48; // w2
+  __int64 v31; // x22
+  __int64 v32; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v33; // x0
+  const MethodInfo *v34; // x3
+  struct ServantStatusListViewItem_o *v35; // x8
+  int32_t v36; // w21
+  UnityEngine_GameObject_o *v37; // x22
+  UserServantEntity_o *v38; // x23
+  ServantStatusCharaGraphListViewItemDraw_c *v39; // x0
+  struct UserServantEntity_o *v40; // x9
+  __int64 v41; // x22
+  __int64 v42; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v43; // x0
+  const MethodInfo *v44; // x3
+  struct ServantStatusListViewItem_o *v45; // x8
+  int32_t v46; // w2
   struct UserServantCollectionEntity_o *userSvtCollectionEntity; // x9
-  __int64 v50; // x22
-  __int64 v51; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v52; // x0
-  const MethodInfo *v53; // x3
-  struct ServantStatusListViewItem_o *v54; // x8
-  int32_t v55; // w21
-  UnityEngine_GameObject_o *v56; // x22
-  UserServantCollectionEntity_o *v57; // x23
-  ServantStatusCharaGraphListViewItemDraw_c *v58; // x0
-  struct UserServantCollectionEntity_o *v59; // x9
-  __int64 v60; // x22
-  __int64 v61; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v62; // x0
-  const MethodInfo *v63; // x3
-  struct ServantStatusListViewItem_o *v64; // x8
-  int32_t v65; // w2
+  __int64 v48; // x22
+  __int64 v49; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v50; // x0
+  const MethodInfo *v51; // x3
+  struct ServantStatusListViewItem_o *v52; // x8
+  int32_t v53; // w21
+  UnityEngine_GameObject_o *v54; // x22
+  UserServantCollectionEntity_o *v55; // x23
+  ServantStatusCharaGraphListViewItemDraw_c *v56; // x0
+  struct UserServantCollectionEntity_o *v57; // x9
+  __int64 v58; // x22
+  __int64 v59; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v60; // x0
+  const MethodInfo *v61; // x3
+  struct ServantStatusListViewItem_o *v62; // x8
+  int32_t v63; // w2
   struct ServantLeaderInfo_o *servantLeaderInfo; // x9
-  __int64 v67; // x22
-  __int64 v68; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v69; // x0
-  const MethodInfo *v70; // x3
-  struct ServantStatusListViewItem_o *v71; // x8
-  int32_t v72; // w21
-  UnityEngine_GameObject_o *v73; // x22
-  ServantLeaderInfo_o *v74; // x23
-  ServantStatusCharaGraphListViewItemDraw_c *v75; // x0
-  struct ServantLeaderInfo_o *v76; // x9
-  __int64 v77; // x22
-  __int64 v78; // x23
-  ServantStatusCharaGraphListViewItemDraw_o *v79; // x0
-  const MethodInfo *v80; // x3
-  struct ServantStatusListViewItem_o *v81; // x8
-  int32_t v82; // w2
+  __int64 v65; // x22
+  __int64 v66; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v67; // x0
+  const MethodInfo *v68; // x3
+  struct ServantStatusListViewItem_o *v69; // x8
+  int32_t v70; // w21
+  UnityEngine_GameObject_o *v71; // x22
+  ServantLeaderInfo_o *v72; // x23
+  ServantStatusCharaGraphListViewItemDraw_c *v73; // x0
+  struct ServantLeaderInfo_o *v74; // x9
+  __int64 v75; // x22
+  __int64 v76; // x23
+  ServantStatusCharaGraphListViewItemDraw_o *v77; // x0
+  const MethodInfo *v78; // x3
+  struct ServantStatusListViewItem_o *v79; // x8
+  int32_t v80; // w2
   EquipTargetInfo_o *equipTargetInfo; // x22
-  UnityEngine_GameObject_o *v84; // x24
+  UnityEngine_GameObject_o *v82; // x24
   int32_t imageLimitCount; // w23
   UnityEngine_Object_o *baseButton; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v86; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v87; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v89; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v90; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v91; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v92; // 0:x0.16
 
-  if ( (byte_4B1219D & 1) == 0 )
+  if ( (byte_4B33127 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, item, *(_QWORD *)&mode);
-    sub_1BCA7E0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7, v8);
-    sub_1BCA7E0(&ServantStatusCharaGraphListViewItemDraw_TypeInfo, v9, v10);
-    byte_4B1219D = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, item);
+    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    sub_1BD3458(&ServantStatusCharaGraphListViewItemDraw_TypeInfo, v8);
+    byte_4B33127 = 1;
   }
   if ( !item || !mode )
     return;
   p_charaGraph = &this->fields.charaGraph;
   charaGraph = (UnityEngine_Object_o *)this->fields.charaGraph;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   ImageLimitSealAfter = (UICharaGraphTexture_o *)UnityEngine_Object__op_Equality(charaGraph, 0LL, 0LL);
   mainInfo = item->fields.mainInfo;
   if ( !mainInfo )
@@ -366,16 +356,16 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
     if ( userCommandCodeEntity )
     {
       charaGraphBase = this->fields.charaGraphBase;
-      v18 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+      v16 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
       if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-        v18 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+        v16 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
       }
-      TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38625912(
+      TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38694224(
                                  charaGraphBase,
                                  userCommandCodeEntity,
-                                 v18->static_fields->DEFAULT_DEPTH,
+                                 v16->static_fields->DEFAULT_DEPTH,
                                  0LL,
                                  0LL);
     }
@@ -384,17 +374,17 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
       userCommandCodeCollectionEntity = mainInfo->fields.userCommandCodeCollectionEntity;
       if ( userCommandCodeCollectionEntity )
       {
-        v27 = this->fields.charaGraphBase;
-        v28 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+        v25 = this->fields.charaGraphBase;
+        v26 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
         if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-          v28 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+          j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+          v26 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
         }
-        TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38626376(
-                                   v27,
+        TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38694688(
+                                   v25,
                                    userCommandCodeCollectionEntity,
-                                   v28->static_fields->DEFAULT_DEPTH,
+                                   v26->static_fields->DEFAULT_DEPTH,
                                    0LL,
                                    0LL);
       }
@@ -403,17 +393,17 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
         commandCodeEntity = mainInfo->fields.commandCodeEntity;
         if ( commandCodeEntity )
         {
-          v30 = this->fields.charaGraphBase;
-          v31 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+          v28 = this->fields.charaGraphBase;
+          v29 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
           if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-            v31 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+            j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+            v29 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
           }
-          TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38626840(
-                                     v30,
+          TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38695152(
+                                     v28,
                                      commandCodeEntity,
-                                     v31->static_fields->DEFAULT_DEPTH,
+                                     v29->static_fields->DEFAULT_DEPTH,
                                      0LL,
                                      0LL);
         }
@@ -422,37 +412,37 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
           userSvtEntity = mainInfo->fields.userSvtEntity;
           if ( userSvtEntity )
           {
-            v34 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
-            v33 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
+            v32 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.currentCryptoKey;
+            v31 = *(_QWORD *)&userSvtEntity->fields.svtId.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-            *(_QWORD *)&v87.fields.currentCryptoKey = v34;
-            *(_QWORD *)&v87.fields.fakeValue = v33;
-            v35 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                                 v87,
+              j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+            *(_QWORD *)&v85.fields.currentCryptoKey = v32;
+            *(_QWORD *)&v85.fields.fakeValue = v31;
+            v33 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                                 v85,
                                                                  0LL);
             ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                             v35,
-                                                             (int32_t)v35,
+                                                             v33,
+                                                             (int32_t)v33,
                                                              item->fields.imageLimitCount,
-                                                             v36);
-            v37 = item->fields.mainInfo;
-            if ( !v37 )
+                                                             v34);
+            v35 = item->fields.mainInfo;
+            if ( !v35 )
               goto LABEL_83;
-            v38 = (int)ImageLimitSealAfter;
-            v39 = this->fields.charaGraphBase;
-            v40 = v37->fields.userSvtEntity;
-            v41 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+            v36 = (int)ImageLimitSealAfter;
+            v37 = this->fields.charaGraphBase;
+            v38 = v35->fields.userSvtEntity;
+            v39 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
             if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-              v41 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+              j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+              v39 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
             }
-            TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38621628(
-                                       v39,
-                                       v40,
+            TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38689940(
+                                       v37,
                                        v38,
-                                       v41->static_fields->DEFAULT_DEPTH,
+                                       v36,
+                                       v39->static_fields->DEFAULT_DEPTH,
                                        0LL,
                                        0,
                                        0LL);
@@ -462,37 +452,37 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
             userSvtCollectionEntity = mainInfo->fields.userSvtCollectionEntity;
             if ( userSvtCollectionEntity )
             {
-              v51 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.currentCryptoKey;
-              v50 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.fakeValue;
+              v49 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.currentCryptoKey;
+              v48 = *(_QWORD *)&userSvtCollectionEntity->fields.svtId.fields.fakeValue;
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-              *(_QWORD *)&v89.fields.currentCryptoKey = v51;
-              *(_QWORD *)&v89.fields.fakeValue = v50;
-              v52 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                                   v89,
+                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+              *(_QWORD *)&v87.fields.currentCryptoKey = v49;
+              *(_QWORD *)&v87.fields.fakeValue = v48;
+              v50 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                                   v87,
                                                                    0LL);
               ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                               v52,
-                                                               (int32_t)v52,
+                                                               v50,
+                                                               (int32_t)v50,
                                                                item->fields.imageLimitCount,
-                                                               v53);
-              v54 = item->fields.mainInfo;
-              if ( !v54 )
+                                                               v51);
+              v52 = item->fields.mainInfo;
+              if ( !v52 )
                 goto LABEL_83;
-              v55 = (int)ImageLimitSealAfter;
-              v56 = this->fields.charaGraphBase;
-              v57 = v54->fields.userSvtCollectionEntity;
-              v58 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+              v53 = (int)ImageLimitSealAfter;
+              v54 = this->fields.charaGraphBase;
+              v55 = v52->fields.userSvtCollectionEntity;
+              v56 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
               if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
               {
-                j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-                v58 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+                j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+                v56 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
               }
-              TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38622824(
-                                         v56,
-                                         v57,
+              TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38691136(
+                                         v54,
                                          v55,
-                                         v58->static_fields->DEFAULT_DEPTH,
+                                         v53,
+                                         v56->static_fields->DEFAULT_DEPTH,
                                          0LL,
                                          0LL);
             }
@@ -501,37 +491,37 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
               servantLeaderInfo = mainInfo->fields.servantLeaderInfo;
               if ( servantLeaderInfo )
               {
-                v68 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.currentCryptoKey;
-                v67 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.fakeValue;
+                v66 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.currentCryptoKey;
+                v65 = *(_QWORD *)&servantLeaderInfo->fields.svtId.fields.fakeValue;
                 if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-                  j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-                *(_QWORD *)&v91.fields.currentCryptoKey = v68;
-                *(_QWORD *)&v91.fields.fakeValue = v67;
-                v69 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                                     v91,
+                  j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+                *(_QWORD *)&v89.fields.currentCryptoKey = v66;
+                *(_QWORD *)&v89.fields.fakeValue = v65;
+                v67 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                                     v89,
                                                                      0LL);
                 ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                                 v69,
-                                                                 (int32_t)v69,
+                                                                 v67,
+                                                                 (int32_t)v67,
                                                                  item->fields.imageLimitCount,
-                                                                 v70);
-                v71 = item->fields.mainInfo;
-                if ( !v71 )
+                                                                 v68);
+                v69 = item->fields.mainInfo;
+                if ( !v69 )
                   goto LABEL_83;
-                v72 = (int)ImageLimitSealAfter;
-                v73 = this->fields.charaGraphBase;
-                v74 = v71->fields.servantLeaderInfo;
-                v75 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+                v70 = (int)ImageLimitSealAfter;
+                v71 = this->fields.charaGraphBase;
+                v72 = v69->fields.servantLeaderInfo;
+                v73 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
                 if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
                 {
-                  j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
-                  v75 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
+                  v73 = ServantStatusCharaGraphListViewItemDraw_TypeInfo;
                 }
-                TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38623996(
-                                           v73,
-                                           v74,
+                TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38692308(
+                                           v71,
                                            v72,
-                                           v75->static_fields->DEFAULT_DEPTH,
+                                           v70,
+                                           v73->static_fields->DEFAULT_DEPTH,
                                            0LL,
                                            0LL);
               }
@@ -540,17 +530,17 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
                 equipTargetInfo = mainInfo->fields.equipTargetInfo;
                 if ( !equipTargetInfo )
                   goto LABEL_74;
-                v84 = this->fields.charaGraphBase;
+                v82 = this->fields.charaGraphBase;
                 imageLimitCount = item->fields.imageLimitCount;
                 if ( !ServantStatusCharaGraphListViewItemDraw_TypeInfo->_2.cctor_finished )
                 {
-                  j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo, v14);
+                  j_il2cpp_runtime_class_init_0(ServantStatusCharaGraphListViewItemDraw_TypeInfo);
                   mainInfo = item->fields.mainInfo;
                   if ( !mainInfo )
                     goto LABEL_83;
                 }
-                TexturePrefab_38625912 = CharaGraphManager__CreateTexturePrefab_38625184(
-                                           v84,
+                TexturePrefab_38694224 = CharaGraphManager__CreateTexturePrefab_38693496(
+                                           v82,
                                            equipTargetInfo,
                                            imageLimitCount,
                                            ServantStatusCharaGraphListViewItemDraw_TypeInfo->static_fields->DEFAULT_DEPTH,
@@ -563,16 +553,16 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
         }
       }
     }
-    *p_charaGraph = TexturePrefab_38625912;
-    sub_1BCA784(
+    *p_charaGraph = TexturePrefab_38694224;
+    sub_1BD33FC(
       (PartyOrganizationUtility_o *)&this->fields.charaGraph,
-      (int64_t)TexturePrefab_38625912,
+      (int64_t)TexturePrefab_38694224,
+      v18,
+      v19,
       v20,
       v21,
       v22,
-      v23,
-      v24,
-      v25);
+      v23);
   }
   else if ( userCommandCodeEntity )
   {
@@ -583,129 +573,129 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
   }
   else
   {
-    v14 = mainInfo->fields.userCommandCodeCollectionEntity;
-    if ( v14 )
+    v12 = mainInfo->fields.userCommandCodeCollectionEntity;
+    if ( v12 )
     {
       ImageLimitSealAfter = *p_charaGraph;
       if ( !*p_charaGraph )
         goto LABEL_83;
-      UICharaGraphTexture__SetCommand_41559620(ImageLimitSealAfter, v14, 0LL, 0LL);
+      UICharaGraphTexture__SetCommand_41660544(ImageLimitSealAfter, v12, 0LL, 0LL);
     }
     else
     {
-      v14 = (UserCommandCodeCollectionEntity_o *)mainInfo->fields.commandCodeEntity;
-      if ( v14 )
+      v12 = (UserCommandCodeCollectionEntity_o *)mainInfo->fields.commandCodeEntity;
+      if ( v12 )
       {
         ImageLimitSealAfter = *p_charaGraph;
         if ( !*p_charaGraph )
           goto LABEL_83;
-        UICharaGraphTexture__SetCommand_41559764(ImageLimitSealAfter, (CommandCodeEntity_o *)v14, 0LL, 0LL);
+        UICharaGraphTexture__SetCommand_41660688(ImageLimitSealAfter, (CommandCodeEntity_o *)v12, 0LL, 0LL);
       }
       else
       {
-        v42 = mainInfo->fields.userSvtEntity;
-        if ( v42 )
+        v40 = mainInfo->fields.userSvtEntity;
+        if ( v40 )
         {
-          v44 = *(_QWORD *)&v42->fields.svtId.fields.currentCryptoKey;
-          v43 = *(_QWORD *)&v42->fields.svtId.fields.fakeValue;
+          v42 = *(_QWORD *)&v40->fields.svtId.fields.currentCryptoKey;
+          v41 = *(_QWORD *)&v40->fields.svtId.fields.fakeValue;
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, 0LL);
-          *(_QWORD *)&v88.fields.currentCryptoKey = v44;
-          *(_QWORD *)&v88.fields.fakeValue = v43;
-          v45 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                               v88,
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+          *(_QWORD *)&v86.fields.currentCryptoKey = v42;
+          *(_QWORD *)&v86.fields.fakeValue = v41;
+          v43 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                               v86,
                                                                0LL);
           ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                           v45,
-                                                           (int32_t)v45,
+                                                           v43,
+                                                           (int32_t)v43,
                                                            item->fields.imageLimitCount,
-                                                           v46);
-          v47 = item->fields.mainInfo;
-          if ( !v47 )
+                                                           v44);
+          v45 = item->fields.mainInfo;
+          if ( !v45 )
             goto LABEL_83;
-          v48 = (int)ImageLimitSealAfter;
+          v46 = (int)ImageLimitSealAfter;
           ImageLimitSealAfter = *p_charaGraph;
           if ( !*p_charaGraph )
             goto LABEL_83;
-          UICharaGraphTexture__SetCharacter_41557848(ImageLimitSealAfter, v47->fields.userSvtEntity, v48, 0LL, 0, 0LL);
+          UICharaGraphTexture__SetCharacter_41658772(ImageLimitSealAfter, v45->fields.userSvtEntity, v46, 0LL, 0, 0LL);
         }
         else
         {
-          v59 = mainInfo->fields.userSvtCollectionEntity;
-          if ( v59 )
+          v57 = mainInfo->fields.userSvtCollectionEntity;
+          if ( v57 )
           {
-            v61 = *(_QWORD *)&v59->fields.svtId.fields.currentCryptoKey;
-            v60 = *(_QWORD *)&v59->fields.svtId.fields.fakeValue;
+            v59 = *(_QWORD *)&v57->fields.svtId.fields.currentCryptoKey;
+            v58 = *(_QWORD *)&v57->fields.svtId.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, 0LL);
-            *(_QWORD *)&v90.fields.currentCryptoKey = v61;
-            *(_QWORD *)&v90.fields.fakeValue = v60;
-            v62 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                                 v90,
+              j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+            *(_QWORD *)&v88.fields.currentCryptoKey = v59;
+            *(_QWORD *)&v88.fields.fakeValue = v58;
+            v60 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                                 v88,
                                                                  0LL);
             ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                             v62,
-                                                             (int32_t)v62,
+                                                             v60,
+                                                             (int32_t)v60,
                                                              item->fields.imageLimitCount,
-                                                             v63);
-            v64 = item->fields.mainInfo;
-            if ( !v64 )
+                                                             v61);
+            v62 = item->fields.mainInfo;
+            if ( !v62 )
               goto LABEL_83;
-            v65 = (int)ImageLimitSealAfter;
+            v63 = (int)ImageLimitSealAfter;
             ImageLimitSealAfter = *p_charaGraph;
             if ( !*p_charaGraph )
               goto LABEL_83;
-            UICharaGraphTexture__SetCharacter_41558360(
+            UICharaGraphTexture__SetCharacter_41659284(
               ImageLimitSealAfter,
-              v64->fields.userSvtCollectionEntity,
-              v65,
+              v62->fields.userSvtCollectionEntity,
+              v63,
               0LL,
               0LL);
           }
           else
           {
-            v76 = mainInfo->fields.servantLeaderInfo;
-            if ( v76 )
+            v74 = mainInfo->fields.servantLeaderInfo;
+            if ( v74 )
             {
-              v78 = *(_QWORD *)&v76->fields.svtId.fields.currentCryptoKey;
-              v77 = *(_QWORD *)&v76->fields.svtId.fields.fakeValue;
+              v76 = *(_QWORD *)&v74->fields.svtId.fields.currentCryptoKey;
+              v75 = *(_QWORD *)&v74->fields.svtId.fields.fakeValue;
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, 0LL);
-              *(_QWORD *)&v92.fields.currentCryptoKey = v78;
-              *(_QWORD *)&v92.fields.fakeValue = v77;
-              v79 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47011428(
-                                                                   v92,
+                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+              *(_QWORD *)&v90.fields.currentCryptoKey = v76;
+              *(_QWORD *)&v90.fields.fakeValue = v75;
+              v77 = (ServantStatusCharaGraphListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(
+                                                                   v90,
                                                                    0LL);
               ImageLimitSealAfter = (UICharaGraphTexture_o *)ServantStatusCharaGraphListViewItemDraw__GetImageLimitSealAfter(
-                                                               v79,
-                                                               (int32_t)v79,
+                                                               v77,
+                                                               (int32_t)v77,
                                                                item->fields.imageLimitCount,
-                                                               v80);
-              v81 = item->fields.mainInfo;
-              if ( !v81 )
+                                                               v78);
+              v79 = item->fields.mainInfo;
+              if ( !v79 )
                 goto LABEL_83;
-              v82 = (int)ImageLimitSealAfter;
+              v80 = (int)ImageLimitSealAfter;
               ImageLimitSealAfter = *p_charaGraph;
               if ( !*p_charaGraph )
                 goto LABEL_83;
-              UICharaGraphTexture__SetCharacter_41558820(
+              UICharaGraphTexture__SetCharacter_41659744(
                 ImageLimitSealAfter,
-                v81->fields.servantLeaderInfo,
-                v82,
+                v79->fields.servantLeaderInfo,
+                v80,
                 0LL,
                 0LL);
             }
             else
             {
-              v14 = (UserCommandCodeCollectionEntity_o *)mainInfo->fields.equipTargetInfo;
-              if ( v14 )
+              v12 = (UserCommandCodeCollectionEntity_o *)mainInfo->fields.equipTargetInfo;
+              if ( v12 )
               {
                 ImageLimitSealAfter = *p_charaGraph;
                 if ( !*p_charaGraph )
                   goto LABEL_83;
-                UICharaGraphTexture__SetCharacter_41559240(
+                UICharaGraphTexture__SetCharacter_41660164(
                   ImageLimitSealAfter,
-                  (EquipTargetInfo_o *)v14,
+                  (EquipTargetInfo_o *)v12,
                   item->fields.imageLimitCount,
                   mainInfo->fields.isNpcFollowerServantEquip,
                   0LL,
@@ -720,7 +710,7 @@ void __fastcall ServantStatusCharaGraphListViewItemDraw__SetItem(
 LABEL_74:
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
     ImageLimitSealAfter = (UICharaGraphTexture_o *)this->fields.baseButton;
@@ -734,6 +724,6 @@ LABEL_74:
       return;
     }
 LABEL_83:
-    sub_1BCAA3C(ImageLimitSealAfter, v14);
+    sub_1BD36B4(ImageLimitSealAfter, v12);
   }
 }

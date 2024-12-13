@@ -1,14 +1,12 @@
 void __fastcall TabOpenEffectComponent___ctor(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B111C9 & 1) == 0 )
+  if ( (byte_4B3214D & 1) == 0 )
   {
-    sub_1BCA7E0(&CommonEffectComponent_TypeInfo, method, v2);
-    byte_4B111C9 = 1;
+    sub_1BD3458(&CommonEffectComponent_TypeInfo, method);
+    byte_4B3214D = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -35,34 +33,30 @@ void __fastcall TabOpenEffectComponent__ChangeUIFunc(TabOpenEffectComponent_o *t
 
 void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   Il2CppObject *Component_object; // x20
-  __int64 v9; // x1
-  Il2CppObject *v10; // x19
-  _BOOL8 v11; // x0
-  __int64 v12; // x1
+  Il2CppObject *v6; // x19
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4B111C8 & 1) == 0 )
+  if ( (byte_4B3214C & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_Animation___, method, v2);
-    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v4, v5);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v6, v7);
-    byte_4B111C8 = 1;
+    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B3214C = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-  v10 = UnityEngine_Component__GetComponent_object_(
-          (UnityEngine_Component_o *)this,
-          (const MethodInfo_2F09734 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+  v6 = UnityEngine_Component__GetComponent_object_(
+         (UnityEngine_Component_o *)this,
+         (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
-  v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-  if ( v11 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
+  if ( v7 )
   {
     if ( Component_object )
     {
@@ -70,16 +64,16 @@ void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *
       return;
     }
 LABEL_14:
-    sub_1BCAA3C(v11, v12);
+    sub_1BD36B4(v7, v8);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
-  v11 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0LL, 0LL);
-  if ( v11 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v6, 0LL, 0LL);
+  if ( v7 )
   {
-    if ( !v10 )
+    if ( !v6 )
       goto LABEL_14;
-    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v10, 0LL);
+    UnityEngine_Animation__Play((UnityEngine_Animation_o *)v6, 0LL);
   }
 }
 
@@ -92,7 +86,7 @@ void __fastcall TabOpenEffectComponent__SetAnimationEndCallback(
   if ( callback )
   {
     this->fields.animEndCallback = callback;
-    sub_1BCA784(&this->fields.animEndCallback, callback);
+    sub_1BD33FC(&this->fields.animEndCallback);
   }
 }
 
@@ -105,6 +99,6 @@ void __fastcall TabOpenEffectComponent__SetChangeUICallback(
   if ( callback )
   {
     this->fields.changeUICallback = callback;
-    sub_1BCA784(&this->fields.changeUICallback, callback);
+    sub_1BD33FC(&this->fields.changeUICallback);
   }
 }

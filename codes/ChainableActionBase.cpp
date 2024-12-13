@@ -17,10 +17,10 @@ void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const Me
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.endCallback = 0LL;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
   v2->fields.nextAction = 0LL;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_1BCA784((PartyOrganizationUtility_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1BD33FC((PartyOrganizationUtility_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -77,15 +77,15 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   System_Action_c *v15; // x1
 
   v4 = this;
-  if ( (byte_4B1A8A7 & 1) == 0 )
+  if ( (byte_4B3B8A7 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_1BCA7E0(&System_Action_TypeInfo, endCallbacks, method);
-    byte_4B1A8A7 = 1;
+    this = (ChainableActionBase_o *)sub_1BD3458(&System_Action_TypeInfo, endCallbacks);
+    byte_4B3B8A7 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_1BCAA3C(this, endCallbacks);
+      sub_1BD36B4(this, endCallbacks);
     v5 = *(_QWORD *)&endCallbacks->max_length;
     if ( (int)v5 >= 1 )
     {
@@ -102,16 +102,16 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
           if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
             || (*p_fields = v8, (System_Action_c *)v8->klass != v15) )
           {
-            sub_1BCACFC(v8);
+            sub_1BD3974(v8);
 LABEL_16:
-            sub_1BCAA44(this, endCallbacks);
+            sub_1BD36BC(this, endCallbacks);
           }
         }
         else
         {
           *p_fields = 0LL;
         }
-        sub_1BCA784((PartyOrganizationUtility_o *)&v4->fields, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+        sub_1BD33FC((PartyOrganizationUtility_o *)&v4->fields, (int64_t)v8, v9, v10, v11, v12, v13, v14);
         LODWORD(v5) = endCallbacks->max_length;
         ++v6;
       }
@@ -134,7 +134,7 @@ void __fastcall ChainableActionBase__SetNextAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields.nextAction = nextAction;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.nextAction,
     (int64_t)nextAction,
     (int64_t)method,

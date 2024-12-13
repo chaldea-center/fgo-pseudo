@@ -1,15 +1,13 @@
 void __fastcall ServantPassiveSkillEntity___ctor(ServantPassiveSkillEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16A9F & 1) == 0 )
+  if ( (byte_4B37A54 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16A9F = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37A54 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +18,16 @@ System_String_o *__fastcall ServantPassiveSkillEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B16A9A & 1) == 0 )
+  if ( (byte_4B37A4F & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num, *(_QWORD *)&priority);
-    byte_4B16A9A = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
+    byte_4B37A4F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_2F11344 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F2FD38 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -62,107 +60,103 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
         const MethodInfo *method)
 {
   __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v16; // x1
   Il2CppObject *Instance; // x0
-  __int64 v22; // x1
+  __int64 v18; // x1
   Il2CppObject *Entity; // x0
-  __int64 v24; // x1
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  SkillEntity_o *v31; // x24
-  int32_t v32; // w1
+  __int64 v20; // x1
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  SkillEntity_o *v27; // x24
+  int32_t v28; // w1
   int32_t EffectChargeTurn; // w0
-  LocalizationManager_c *v34; // x0
+  LocalizationManager_c *v30; // x0
   System_String_o *unknownNameText; // x1
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
   System_String_o *EffectExplanation; // x1
   System_String_o *EffectTitle; // x0
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
 
-  if ( (byte_4B16A9C & 1) == 0 )
+  if ( (byte_4B37A51 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_SkillMaster___, charge, title);
-    sub_1BCA7E0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v13, v14);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v15, v16);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17, v18);
-    sub_1BCA7E0(&StringLiteral_1/*""*/, v19, v20);
-    byte_4B16A9C = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_SkillMaster___, charge);
+    sub_1BD3458(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v13);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v14);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1BD3458(&StringLiteral_1/*""*/, v16);
+    byte_4B37A51 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v22);
+    sub_1BD36B4(Instance, v18);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_31B2E40 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
-    v31 = (SkillEntity_o *)Entity;
+    v27 = (SkillEntity_o *)Entity;
     if ( isEquip )
     {
-      v32 = 0;
+      v28 = 0;
       EffectChargeTurn = -1;
     }
     else
     {
       EffectChargeTurn = SkillEntity__getEffectChargeTurn((SkillEntity_o *)Entity, skillLv, 0LL);
-      v32 = skillLv;
+      v28 = skillLv;
     }
     *charge = EffectChargeTurn;
-    EffectTitle = SkillEntity__getEffectTitle(v31, v32, 0LL);
+    EffectTitle = SkillEntity__getEffectTitle(v27, v28, 0LL);
     *title = EffectTitle;
-    sub_1BCA784((PartyOrganizationUtility_o *)title, (int64_t)EffectTitle, v44, v45, v46, v47, v48, v49);
-    EffectExplanation = SkillEntity__getEffectExplanation(v31, skillLv, 0LL);
+    sub_1BD33FC((PartyOrganizationUtility_o *)title, (int64_t)EffectTitle, v40, v41, v42, v43, v44, v45);
+    EffectExplanation = SkillEntity__getEffectExplanation(v27, skillLv, 0LL);
     *explanation = EffectExplanation;
   }
   else
   {
     *charge = -1;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24);
-    if ( !byte_4B1194D )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    if ( !byte_4B32906 )
     {
-      sub_1BCA7E0(&LocalizationManager_TypeInfo, v24, v25);
-      byte_4B1194D = 1;
+      sub_1BD3458(&LocalizationManager_TypeInfo, v20);
+      byte_4B32906 = 1;
     }
-    v34 = LocalizationManager_TypeInfo;
+    v30 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24);
-      v34 = LocalizationManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v30 = LocalizationManager_TypeInfo;
     }
-    unknownNameText = v34->static_fields->unknownNameText;
+    unknownNameText = v30->static_fields->unknownNameText;
     *title = unknownNameText;
-    sub_1BCA784((PartyOrganizationUtility_o *)title, (int64_t)unknownNameText, v25, v26, v27, v28, v29, v30);
+    sub_1BD33FC((PartyOrganizationUtility_o *)title, (int64_t)unknownNameText, v21, v22, v23, v24, v25, v26);
     *explanation = (System_String_o *)StringLiteral_1/*""*/;
     EffectExplanation = (System_String_o *)StringLiteral_1/*""*/;
   }
-  sub_1BCA784((PartyOrganizationUtility_o *)explanation, (int64_t)EffectExplanation, v36, v37, v38, v39, v40, v41);
+  sub_1BD33FC((PartyOrganizationUtility_o *)explanation, (int64_t)EffectExplanation, v32, v33, v34, v35, v36, v37);
 }
 
 
@@ -173,24 +167,23 @@ int32_t __fastcall ServantPassiveSkillEntity__getFriendPointUpVal(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
   Il2CppObject *Instance; // x0
-  __int64 v8; // x1
+  __int64 v7; // x1
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_4B16A9E & 1) == 0 )
+  if ( (byte_4B37A53 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&skillLv, method);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5, v6);
-    byte_4B16A9E = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&skillLv);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B37A53 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_SkillLvMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v8);
+    sub_1BD36B4(Instance, v7);
   }
   Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, this->fields.skillId, skillLv, 0LL);
   if ( Entity )
@@ -223,60 +216,54 @@ System_String_o *__fastcall ServantPassiveSkillEntity__getSkillName(
         ServantPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
+  __int64 v7; // x1
   Il2CppObject *Entity; // x0
-  __int64 v13; // x1
-  __int64 v14; // x2
-  LocalizationManager_c *v16; // x0
+  __int64 v9; // x1
+  LocalizationManager_c *v11; // x0
 
-  if ( (byte_4B16A9D & 1) == 0 )
+  if ( (byte_4B37A52 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_SkillMaster___, method, v2);
-    sub_1BCA7E0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v4, v5);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v6, v7);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8, v9);
-    byte_4B16A9D = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_SkillMaster___, method);
+    sub_1BD3458(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v3);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v4);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B37A52 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
+                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
   {
-    sub_1BCAA3C(Instance, v11);
+    sub_1BD36B4(Instance, v7);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_31B2E40 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getName((SkillEntity_o *)Entity, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
-  if ( !byte_4B1194D )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  if ( !byte_4B32906 )
   {
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v13, v14);
-    byte_4B1194D = 1;
+    sub_1BD3458(&LocalizationManager_TypeInfo, v9);
+    byte_4B32906 = 1;
   }
-  v16 = LocalizationManager_TypeInfo;
+  v11 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v13);
-    v16 = LocalizationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v11 = LocalizationManager_TypeInfo;
   }
-  return v16->static_fields->unknownNameText;
+  return v11->static_fields->unknownNameText;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall ServantPassiveSkillEntity__isUse(
         ServantPassiveSkillEntity_o *this,
         int64_t userId,
@@ -291,62 +278,55 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
 {
   int64_t Time; // x27
   __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v20; // x1
   __int64 v21; // x1
-  __int64 v22; // x2
+  __int64 v22; // x1
   __int64 v23; // x1
-  __int64 v24; // x2
+  __int64 v24; // x1
   __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x1
-  __int64 v28; // x2
-  __int64 v29; // x1
-  __int64 v30; // x2
-  __int64 v31; // x1
-  __int64 v32; // x2
   DataManager_o *Instance; // x0
+  __int64 v27; // x1
   bool IsExchangeSvt; // w22
-  const MethodInfo *v35; // x7
+  const MethodInfo *v29; // x7
   int condQuestId; // w23
   int32_t condQuestPhase; // w24
   bool IsQuestPhaseClear; // w0
-  CommonReleaseMaster_o *v41; // x23
-  __int64 v42; // x1
+  CommonReleaseMaster_o *v35; // x23
   EventFilterEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
   Time = nowTime;
-  if ( (byte_4B16A9B & 1) == 0 )
+  if ( (byte_4B37A50 & 1) == 0 )
   {
-    sub_1BCA7E0(&CondType_TypeInfo, userId, *(_QWORD *)&svtLv);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v19, v20);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_EventFilterMaster___, v21, v22);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___, v23, v24);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_UserExchangeSvtMaster___, v25, v26);
-    sub_1BCA7E0(&DataManager_TypeInfo, v27, v28);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v29, v30);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v31, v32);
-    byte_4B16A9B = 1;
+    sub_1BD3458(&CondType_TypeInfo, userId);
+    sub_1BD3458(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v19);
+    sub_1BD3458(&Method_DataManager_GetMasterData_EventFilterMaster___, v20);
+    sub_1BD3458(&Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___, v21);
+    sub_1BD3458(&Method_DataManager_GetMaster_UserExchangeSvtMaster___, v22);
+    sub_1BD3458(&DataManager_TypeInfo, v23);
+    sub_1BD3458(&NetworkManager_TypeInfo, v24);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
+    byte_4B37A50 = 1;
   }
   entity = 0LL;
   if ( nowTime <= 0 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, userId);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Time = NetworkManager__getTime(0LL);
   }
   if ( Time < this->fields.startedAt || Time > this->fields.endedAt || !isMySvt && (this->fields.flag & 0x40) != 0 )
     return 0;
   if ( this->fields.eventId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_40;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_EventFilterMaster___);
+                                  (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventFilterMaster___);
     if ( !Instance )
       goto LABEL_40;
-    if ( EventFilterMaster__TryGetEntity_39853044(
+    if ( EventFilterMaster__TryGetEntity_39931376(
            (EventFilterMaster_o *)Instance,
            &entity,
            this->fields.eventId,
@@ -372,7 +352,7 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
     goto LABEL_34;
   condQuestPhase = this->fields.condQuestPhase;
   if ( !CondType_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, userId);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   IsQuestPhaseClear = CondType__IsQuestPhaseClear(userId, condQuestId, condQuestPhase, beforeClearQuestId, 0, 0LL);
   IsExchangeSvt = 0;
   if ( IsQuestPhaseClear )
@@ -380,42 +360,42 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
 LABEL_34:
     if ( this->fields.commonReleaseId < 1 )
       goto LABEL_39;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_40;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                  (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
     if ( !Instance )
       goto LABEL_40;
-    v41 = (CommonReleaseMaster_o *)Instance;
+    v35 = (CommonReleaseMaster_o *)Instance;
     IsExchangeSvt = 0;
     if ( !CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0LL, 0, 0LL) )
       goto LABEL_21;
-    if ( !CommonReleaseMaster__IsContainCondType(v41, this->fields.commonReleaseId, 192, 0LL) )
+    if ( !CommonReleaseMaster__IsContainCondType(v35, this->fields.commonReleaseId, 192, 0LL) )
     {
 LABEL_39:
       IsExchangeSvt = 1;
       goto LABEL_21;
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v42);
-    Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserExchangeSvtMaster___);
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_UserExchangeSvtMaster___);
     if ( Instance )
     {
       IsExchangeSvt = UserExchangeSvtMaster__IsExchangeSvt((UserExchangeSvtMaster_o *)Instance, this->fields.svtId, 0LL);
       goto LABEL_21;
     }
 LABEL_40:
-    sub_1BCAA3C(Instance, userId);
+    sub_1BD36B4(Instance, v27);
   }
 LABEL_21:
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___);
+                                (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___);
   if ( !Instance )
     goto LABEL_40;
   return ServantPassiveSkillReleaseMaster__isUse(
@@ -426,5 +406,5 @@ LABEL_21:
            dispLimitCount,
            beforeClearQuestId,
            IsExchangeSvt,
-           v35);
+           v29);
 }

@@ -1,15 +1,13 @@
 void __fastcall UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16F7E & 1) == 0 )
+  if ( (byte_4B37F3D & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_long___ctor__, method, v2);
-    byte_4B16F7E = 1;
+    sub_1BD3458(&Method_DataEntityBase_long___ctor__, method);
+    byte_4B37F3D = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_31B2C88 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_31D1D38 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -84,25 +82,22 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
         UserPresentHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
+  GiftName_GiftNameBase_o *v4; // x19
+  System_String_o *v5; // x0
   __int64 v6; // x1
-  GiftName_GiftNameBase_o *v7; // x19
-  System_String_o *v8; // x0
-  __int64 v9; // x1
 
-  if ( (byte_4B16F7D & 1) == 0 )
+  if ( (byte_4B37F3C & 1) == 0 )
   {
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, method, v2);
-    sub_1BCA7E0(&StringLiteral_10589/*"PRESENT_INFO"*/, v4, v5);
-    byte_4B16F7D = 1;
+    sub_1BD3458(&LocalizationManager_TypeInfo, method);
+    sub_1BD3458(&StringLiteral_10604/*"PRESENT_INFO"*/, v3);
+    byte_4B37F3C = 1;
   }
-  v7 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
+  v4 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10589/*"PRESENT_INFO"*/, 0LL);
-  if ( !v7 )
-    sub_1BCAA3C(v8, v9);
-  return System_String__Format_62415592(v8, (Il2CppObject *)v7->fields.name, (Il2CppObject *)v7->fields.count, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10604/*"PRESENT_INFO"*/, 0LL);
+  if ( !v4 )
+    sub_1BD36B4(v5, v6);
+  return System_String__Format_62539620(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);
 }

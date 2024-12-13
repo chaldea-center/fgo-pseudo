@@ -9,9 +9,9 @@ void __fastcall OrganizationTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.kind = kind;
   this->fields.textCode = textCode;
-  sub_1BCA784(&this->fields.textCode, textCode);
+  sub_1BD33FC(&this->fields.textCode);
   this->fields.imageName = imageName;
-  sub_1BCA784(&this->fields.imageName, imageName);
+  sub_1BD33FC(&this->fields.imageName);
   this->fields.eventData = eventData;
-  sub_1BCA784(&this->fields.eventData, eventData);
+  sub_1BD33FC(&this->fields.eventData);
 }

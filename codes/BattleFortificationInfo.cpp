@@ -8,24 +8,22 @@ int32_t __fastcall BattleFortificationInfo__GetFortificationWorkType(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_4B1885E & 1) == 0 )
+  if ( (byte_4B39838 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_EventFortificationMaster___, method, v2);
-    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
-    byte_4B1885E = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1BD3458(&DataManager_TypeInfo, v3);
+    byte_4B39838 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_EventFortificationMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
-    sub_1BCAA3C(0LL, v7);
+    sub_1BD36B4(0LL, v5);
   Entity = EventFortificationMaster__GetEntity(
              (EventFortificationMaster_o *)Master_object,
              this->fields.eventId,
@@ -41,27 +39,23 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
   GiftEntity_o *result; // x0
-  __int64 v11; // x1
-  GiftEntity_o *v12; // x19
+  GiftEntity_o *v8; // x19
 
-  if ( (byte_4B1885C & 1) == 0 )
+  if ( (byte_4B39836 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_EventFortificationMaster___, method, v2);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_GiftMaster___, v4, v5);
-    sub_1BCA7E0(&DataManager_TypeInfo, v6, v7);
-    byte_4B1885C = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1BD3458(&Method_DataManager_GetMaster_GiftMaster___, v3);
+    sub_1BD3458(&DataManager_TypeInfo, v4);
+    byte_4B39836 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_EventFortificationMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
     goto LABEL_12;
   result = (GiftEntity_o *)EventFortificationMaster__GetEntity(
@@ -71,14 +65,14 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
                              0LL);
   if ( result )
   {
-    v12 = result;
+    v8 = result;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_GiftMaster___);
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_GiftMaster___);
     if ( Master_object )
-      return GiftMaster__getDataById((GiftMaster_o *)Master_object, (int32_t)v12[1].klass, 0LL);
+      return GiftMaster__getDataById((GiftMaster_o *)Master_object, (int32_t)v8[1].klass, 0LL);
 LABEL_12:
-    sub_1BCAA3C(Master_object, v9);
+    sub_1BD36B4(Master_object, v6);
   }
   return result;
 }
@@ -88,24 +82,22 @@ int32_t __fastcall BattleFortificationInfo__GetMaxFortificationPoint(
         BattleFortificationInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_4B1885D & 1) == 0 )
+  if ( (byte_4B39837 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_EventFortificationMaster___, method, v2);
-    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
-    byte_4B1885D = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1BD3458(&DataManager_TypeInfo, v3);
+    byte_4B39837 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_EventFortificationMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
-    sub_1BCAA3C(0LL, v7);
+    sub_1BD36B4(0LL, v5);
   Entity = EventFortificationMaster__GetEntity(
              (EventFortificationMaster_o *)Master_object,
              this->fields.eventId,

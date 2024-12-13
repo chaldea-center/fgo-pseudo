@@ -1,30 +1,28 @@
 void __fastcall EventItemDisplayEntity___ctor(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B161B8 & 1) == 0 )
+  if ( (byte_4B37164 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B161B8 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37164 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventItemDisplayEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4B161B6 & 1) == 0 )
+  if ( (byte_4B37162 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId, method);
-    byte_4B161B6 = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
+    byte_4B37162 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F2F8A8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -61,37 +59,32 @@ bool __fastcall EventItemDisplayEntity__HasScreenFlag(
 
 bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v5; // x1
   int64_t Time; // x0
   Il2CppObject *Instance; // x0
-  const MethodInfo *v12; // x1
+  const MethodInfo *v8; // x1
   struct System_Int32_array *conditionDetailIds; // x20
-  __int64 v14; // x8
-  bool v15; // w21
-  DataMasterBase_TMaster__TEntity__PKType__o *v16; // x19
-  unsigned __int64 v17; // x22
+  __int64 v10; // x8
+  bool v11; // w21
+  DataMasterBase_TMaster__TEntity__PKType__o *v12; // x19
+  unsigned __int64 v13; // x22
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B161B7 & 1) == 0 )
+  if ( (byte_4B37163 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method, v2);
-    sub_1BCA7E0(
+    sub_1BD3458(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
+    sub_1BD3458(
       &Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__,
-      v4,
-      v5);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v6, v7);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8, v9);
-    byte_4B161B7 = 1;
+      v3);
+    sub_1BD3458(&NetworkManager_TypeInfo, v4);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B37163 = 1;
   }
   entity = 0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   if ( Time < this->fields.openedAt || Time >= this->fields.closedAt )
   {
@@ -99,32 +92,32 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_20;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+                 (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
     conditionDetailIds = this->fields.conditionDetailIds;
     if ( !conditionDetailIds )
       goto LABEL_20;
-    v14 = *(_QWORD *)&conditionDetailIds->max_length;
-    v15 = (int)v14 > 0;
-    if ( (int)v14 >= 1 )
+    v10 = *(_QWORD *)&conditionDetailIds->max_length;
+    v11 = (int)v10 > 0;
+    if ( (int)v10 >= 1 )
     {
-      v16 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-      v17 = 0LL;
+      v12 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+      v13 = 0LL;
       while ( 1 )
       {
-        if ( v17 >= (unsigned int)v14 )
-          sub_1BCAA44(Instance, v12);
-        if ( !v16 )
+        if ( v13 >= (unsigned int)v10 )
+          sub_1BD36BC(Instance, v8);
+        if ( !v12 )
           break;
         Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
-                                     v16,
+                                     v12,
                                      &entity,
-                                     conditionDetailIds->m_Items[v17 + 1],
-                                     (const MethodInfo_31B2E94 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+                                     conditionDetailIds->m_Items[v13 + 1],
+                                     (const MethodInfo_31D1F44 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)Instance & 1) == 0 )
           goto LABEL_24;
         Instance = entity;
@@ -132,20 +125,20 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
           break;
         Instance = (Il2CppObject *)EventItemDisplayReleaseEntity__IsCondEnable(
                                      (EventItemDisplayReleaseEntity_o *)entity,
-                                     v12);
+                                     v8);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
 LABEL_24:
-          LODWORD(v14) = conditionDetailIds->max_length;
-          v15 = (__int64)++v17 < (int)v14;
-          if ( (__int64)v17 < (int)v14 )
+          LODWORD(v10) = conditionDetailIds->max_length;
+          v11 = (__int64)++v13 < (int)v10;
+          if ( (__int64)v13 < (int)v10 )
             continue;
         }
-        return !v15;
+        return !v11;
       }
 LABEL_20:
-      sub_1BCAA3C(Instance, v12);
+      sub_1BD36B4(Instance, v8);
     }
-    return !v15;
+    return !v11;
   }
 }

@@ -18,11 +18,11 @@ void __fastcall ScriptSelectListViewItem___ctor(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.message, (int64_t)message, v8, v9, v10, v11, v12, v13);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.message, (int64_t)message, v8, v9, v10, v11, v12, v13);
   this->fields.fontType = fontType;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.fontType, (int64_t)fontType, v14, v15, v16, v17, v18, v19);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.fontType, (int64_t)fontType, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -36,14 +36,12 @@ System_String_o *__fastcall ScriptSelectListViewItem__ToString(
         ScriptSelectListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B17E92 & 1) == 0 )
+  if ( (byte_4B38E62 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_21628/*"message "*/, method, v2);
-    byte_4B17E92 = 1;
+    sub_1BD3458(&StringLiteral_21660/*"message "*/, method);
+    byte_4B38E62 = 1;
   }
-  return System_String__Concat_62401220((System_String_o *)StringLiteral_21628/*"message "*/, this->fields.message, 0LL);
+  return System_String__Concat_62525248((System_String_o *)StringLiteral_21660/*"message "*/, this->fields.message, 0LL);
 }
 
 

@@ -2,40 +2,32 @@ void __fastcall CharaGraphSortOwnerServantMission___ctor(
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x3
-  CharaGraphSortManageUnitSvtCollection_o *v7; // x20
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  CharaGraphSortManageUnitSvtCollection_o *v3; // x20
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B12538 & 1) == 0 )
+  if ( (byte_4B334C2 & 1) == 0 )
   {
-    sub_1BCA7E0(&CharaGraphSortManageUnitServantMission_TypeInfo, method, v2);
-    byte_4B12538 = 1;
+    sub_1BD3458(&CharaGraphSortManageUnitServantMission_TypeInfo, method);
+    byte_4B334C2 = 1;
   }
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0LL);
-  v7 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1BCAA2C(
-                                                    CharaGraphSortManageUnitServantMission_TypeInfo,
-                                                    v4,
-                                                    v5,
-                                                    v6);
-  CharaGraphSortManageUnitSvtCollection___ctor(v7, 0LL);
-  this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v7;
-  sub_1BCA784(
+  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1BD36A4(CharaGraphSortManageUnitServantMission_TypeInfo);
+  CharaGraphSortManageUnitSvtCollection___ctor(v3, 0LL);
+  this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
-    (int64_t)v7,
+    (int64_t)v3,
+    v4,
+    v5,
+    v6,
+    v7,
     v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+    v9);
 }
 
 
@@ -43,12 +35,10 @@ System_String_o *__fastcall CharaGraphSortOwnerServantMission__get_SortSaveKeyPr
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B12537 & 1) == 0 )
+  if ( (byte_4B334C1 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_4503/*"CharaGraphSort_SvtMission_"*/, method, v2);
-    byte_4B12537 = 1;
+    sub_1BD3458(&StringLiteral_4511/*"CharaGraphSort_SvtMission_"*/, method);
+    byte_4B334C1 = 1;
   }
-  return (System_String_o *)StringLiteral_4503/*"CharaGraphSort_SvtMission_"*/;
+  return (System_String_o *)StringLiteral_4511/*"CharaGraphSort_SvtMission_"*/;
 }

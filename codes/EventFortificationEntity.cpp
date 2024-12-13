@@ -1,30 +1,28 @@
 void __fastcall EventFortificationEntity___ctor(EventFortificationEntity_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B161A0 & 1) == 0 )
+  if ( (byte_4B3714C & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B161A0 = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B3714C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventFortificationEntity__CreatePK(int32_t eventId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4B1619D & 1) == 0 )
+  if ( (byte_4B37149 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx, method);
-    byte_4B1619D = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4B37149 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            idx,
-           (const MethodInfo_2F10EB4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F2F8A8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,24 +40,22 @@ int32_t __fastcall EventFortificationEntity__GetGiftItemIcon(
         EventFortificationEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
   GiftEntity_o *DataById; // x0
 
-  if ( (byte_4B1619E & 1) == 0 )
+  if ( (byte_4B3714A & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMaster_GiftMaster___, method, v2);
-    sub_1BCA7E0(&DataManager_TypeInfo, v4, v5);
-    byte_4B1619E = 1;
+    sub_1BD3458(&Method_DataManager_GetMaster_GiftMaster___, method);
+    sub_1BD3458(&DataManager_TypeInfo, v3);
+    byte_4B3714A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_GiftMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
-    sub_1BCAA3C(0LL, v7);
+    sub_1BD36B4(0LL, v5);
   DataById = GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0LL);
   if ( DataById )
     return GiftEntity__getIconImageId(DataById, 0LL);
@@ -72,157 +68,154 @@ bool __fastcall EventFortificationEntity__IsOpenFortificationWarningDialog(
         EventFortificationEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
+  __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x1
-  __int64 v13; // x2
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x1
   Il2CppObject *Master_object; // x20
-  int64_t UserId; // x0
-  __int64 v21; // x1
-  const MethodInfo *v22; // x3
-  __int64 v23; // x2
-  __int64 v24; // x3
+  EventFortificationDetailMaster_o *EntitiesByOpend; // x0
+  const MethodInfo *v13; // x3
   System_Object_array *setSvtInfos; // x19
-  EventFortificationEntity___c_c *v28; // x0
+  EventFortificationEntity___c_c *v17; // x0
   System_Func_object__bool__o *_9__14_0; // x20
-  Il2CppObject *v30; // x21
+  Il2CppObject *v19; // x21
   struct EventFortificationEntity___c_StaticFields *static_fields; // x0
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
   UserEventFortificationEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1619F & 1) == 0 )
+  if ( (byte_4B3714B & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_BasicHelper_Any_SetSvtInfo___, method, v2);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_EventFortificationDetailMaster___, v4, v5);
-    sub_1BCA7E0(&Method_DataManager_GetMaster_UserEventFortificationMaster___, v6, v7);
-    sub_1BCA7E0(&DataManager_TypeInfo, v8, v9);
-    sub_1BCA7E0(&System_Func_SetSvtInfo__bool__TypeInfo, v10, v11);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v12, v13);
-    sub_1BCA7E0(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__, v14, v15);
-    sub_1BCA7E0(&EventFortificationEntity___c_TypeInfo, v16, v17);
-    byte_4B1619F = 1;
+    sub_1BD3458(&Method_BasicHelper_Any_SetSvtInfo___, method);
+    sub_1BD3458(&Method_DataManager_GetMaster_EventFortificationDetailMaster___, v3);
+    sub_1BD3458(&Method_DataManager_GetMaster_UserEventFortificationMaster___, v4);
+    sub_1BD3458(&DataManager_TypeInfo, v5);
+    sub_1BD3458(&System_Func_SetSvtInfo__bool__TypeInfo, v6);
+    sub_1BD3458(&NetworkManager_TypeInfo, v7);
+    sub_1BD3458(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__, v8);
+    sub_1BD3458(&EventFortificationEntity___c_TypeInfo, v9);
+    byte_4B3714B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   entity = 0LL;
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v18);
-  UserId = NetworkManager__get_UserId(0LL);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !byte_4B31D77 )
+  {
+    sub_1BD3458(&NetworkManager_TypeInfo, v10);
+    byte_4B31D77 = 1;
+  }
+  EntitiesByOpend = (EventFortificationDetailMaster_o *)NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    EntitiesByOpend = (EventFortificationDetailMaster_o *)NetworkManager_TypeInfo;
+  }
   if ( !Master_object )
-    goto LABEL_22;
+    goto LABEL_26;
   UserEventFortificationMaster__TryGetEntity(
     (UserEventFortificationMaster_o *)Master_object,
     &entity,
-    UserId,
+    (int64_t)EntitiesByOpend[2].fields._lookup->fields._values,
     this->fields.eventId,
     this->fields.idx,
     0LL);
-  UserId = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F12C3C *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
-  if ( !UserId )
-    goto LABEL_22;
-  UserId = (int64_t)EventFortificationDetailMaster__GetEntitiesByOpend(
-                      (EventFortificationDetailMaster_o *)UserId,
-                      this->fields.eventId,
-                      this->fields.idx,
-                      v22);
+  EntitiesByOpend = (EventFortificationDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
+  if ( !EntitiesByOpend )
+    goto LABEL_26;
+  EntitiesByOpend = (EventFortificationDetailMaster_o *)EventFortificationDetailMaster__GetEntitiesByOpend(
+                                                          EntitiesByOpend,
+                                                          this->fields.eventId,
+                                                          this->fields.idx,
+                                                          v13);
   if ( !entity )
     return 1;
   setSvtInfos = (System_Object_array *)entity->fields.setSvtInfos;
   if ( !setSvtInfos )
     return 1;
-  if ( !UserId )
-LABEL_22:
-    sub_1BCAA3C(UserId, v21);
-  if ( (signed int)setSvtInfos->max_length < *(_DWORD *)(UserId + 24) )
+  if ( !EntitiesByOpend )
+LABEL_26:
+    sub_1BD36B4(EntitiesByOpend, v10);
+  if ( (signed int)setSvtInfos->max_length < SLODWORD(EntitiesByOpend->fields._MasterName_k__BackingField) )
     return 1;
-  v28 = EventFortificationEntity___c_TypeInfo;
+  v17 = EventFortificationEntity___c_TypeInfo;
   if ( !EventFortificationEntity___c_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(EventFortificationEntity___c_TypeInfo, v21);
-    v28 = EventFortificationEntity___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventFortificationEntity___c_TypeInfo);
+    v17 = EventFortificationEntity___c_TypeInfo;
   }
-  _9__14_0 = (System_Func_object__bool__o *)v28->static_fields->__9__14_0;
+  _9__14_0 = (System_Func_object__bool__o *)v17->static_fields->__9__14_0;
   if ( !_9__14_0 )
   {
-    if ( !v28->_2.cctor_finished )
+    if ( !v17->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v28, v21);
-      v28 = EventFortificationEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v17);
+      v17 = EventFortificationEntity___c_TypeInfo;
     }
-    v30 = (Il2CppObject *)v28->static_fields->__9;
-    _9__14_0 = (System_Func_object__bool__o *)sub_1BCAA2C(System_Func_SetSvtInfo__bool__TypeInfo, v21, v23, v24);
+    v19 = (Il2CppObject *)v17->static_fields->__9;
+    _9__14_0 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_SetSvtInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__14_0,
-      v30,
+      v19,
       Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__,
       0LL);
     static_fields = EventFortificationEntity___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Func_SetSvtInfo__bool__o *)_9__14_0;
-    sub_1BCA784(
+    sub_1BD33FC(
       (PartyOrganizationUtility_o *)&static_fields->__9__14_0,
       (int64_t)_9__14_0,
-      v32,
-      v33,
-      v34,
-      v35,
-      v36,
-      v37);
+      v21,
+      v22,
+      v23,
+      v24,
+      v25,
+      v26);
   }
-  return BasicHelper__Any_object__49274176(
+  return BasicHelper__Any_object__49399452(
            setSvtInfos,
            (System_Func_T__bool__o *)_9__14_0,
-           (const MethodInfo_2EFDD40 *)Method_BasicHelper_Any_SetSvtInfo___);
+           (const MethodInfo_2F1C69C *)Method_BasicHelper_Any_SetSvtInfo___);
 }
 
 
 void __fastcall EventFortificationEntity___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B161A1 & 1) == 0 )
+  if ( (byte_4B3714D & 1) == 0 )
   {
-    sub_1BCA7E0(&EventFortificationEntity___c_TypeInfo, v1, v2);
-    byte_4B161A1 = 1;
+    sub_1BD3458(&EventFortificationEntity___c_TypeInfo, v1);
+    byte_4B3714D = 1;
   }
-  v4 = (Il2CppObject *)sub_1BCAA2C(EventFortificationEntity___c_TypeInfo, v1, v2, v3);
-  System_Object___ctor(v4, 0LL);
-  EventFortificationEntity___c_TypeInfo->static_fields->__9 = (struct EventFortificationEntity___c_o *)v4;
-  sub_1BCA784(
+  v2 = (Il2CppObject *)sub_1BD36A4(EventFortificationEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  EventFortificationEntity___c_TypeInfo->static_fields->__9 = (struct EventFortificationEntity___c_o *)v2;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)EventFortificationEntity___c_TypeInfo->static_fields,
-    (int64_t)v4,
+    (int64_t)v2,
+    v3,
+    v4,
     v5,
     v6,
     v7,
-    v8,
-    v9,
-    v10);
+    v8);
 }
 
 
@@ -238,6 +231,6 @@ bool __fastcall EventFortificationEntity___c___IsOpenFortificationWarningDialog_
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCAA3C(this, 0LL);
+    sub_1BD36B4(this, 0LL);
   return !info->fields.type && info->fields.svtId < 1;
 }

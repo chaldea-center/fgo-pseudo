@@ -2,16 +2,14 @@ void __fastcall ServantPassiveSkillReleaseEntity___ctor(
         ServantPassiveSkillReleaseEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16AAE & 1) == 0 )
+  if ( (byte_4B37A63 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_string___ctor__, method, v2);
-    byte_4B16AAE = 1;
+    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B37A63 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31B2CB8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,17 +21,17 @@ System_String_o *__fastcall ServantPassiveSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B16AAC & 1) == 0 )
+  if ( (byte_4B37A61 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num, *(_QWORD *)&priority);
-    byte_4B16AAC = 1;
+    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
+    byte_4B37A61 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_2F11804 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2F301F8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -61,110 +59,109 @@ System_String_o *__fastcall ServantPassiveSkillReleaseEntity__getCreatePrimaryke
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x19
-  System_String_o *v8; // x0
-  __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  int64_t v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  int64_t v29; // x2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  BattleSetupInfo_o *v32; // x5
-  FollowerInfo_o *v33; // x6
-  PartyListViewItem_o *v34; // x7
-  int64_t v35; // x1
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
-  int64_t v42; // x2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  BattleSetupInfo_o *v45; // x5
-  FollowerInfo_o *v46; // x6
-  PartyListViewItem_o *v47; // x7
-  int64_t v48; // x1
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
-  int32_t v56; // [xsp+0h] [xbp-30h] BYREF
-  int32_t v57; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v58; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v59; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v6; // x19
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  int64_t v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
+  int64_t v34; // x1
+  int64_t v35; // x2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  BattleSetupInfo_o *v38; // x5
+  FollowerInfo_o *v39; // x6
+  PartyListViewItem_o *v40; // x7
+  int64_t v41; // x2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  BattleSetupInfo_o *v44; // x5
+  FollowerInfo_o *v45; // x6
+  PartyListViewItem_o *v46; // x7
+  int64_t v47; // x1
+  int64_t v48; // x2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  BattleSetupInfo_o *v51; // x5
+  FollowerInfo_o *v52; // x6
+  PartyListViewItem_o *v53; // x7
+  int32_t v55; // [xsp+0h] [xbp-30h] BYREF
+  int32_t v56; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v57; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v58; // [xsp+Ch] [xbp-24h] BYREF
 
-  v58 = num;
-  v59 = svtId;
-  v56 = idx;
-  v57 = priority;
-  if ( (byte_4B16AAB & 1) == 0 )
+  v57 = num;
+  v58 = svtId;
+  v55 = idx;
+  v56 = priority;
+  if ( (byte_4B37A60 & 1) == 0 )
   {
-    sub_1BCA7E0(&string___TypeInfo, *(_QWORD *)&num, *(_QWORD *)&priority);
-    sub_1BCA7E0(&StringLiteral_1541/*":"*/, v5, v6);
-    byte_4B16AAB = 1;
+    sub_1BD3458(&string___TypeInfo, *(_QWORD *)&num);
+    sub_1BD3458(&StringLiteral_1541/*":"*/, v5);
+    byte_4B37A60 = 1;
   }
-  v7 = sub_1BCA888(string___TypeInfo, 7LL);
-  v8 = System_Int32__ToString((int32_t)&v59, 0LL);
-  if ( !v7 )
-    sub_1BCAA3C(v8, v9);
-  if ( !*(_DWORD *)(v7 + 24) )
+  v6 = sub_1BD3500(string___TypeInfo, 7LL);
+  v7 = System_Int32__ToString((int32_t)&v58, 0LL);
+  if ( !v6 )
+    sub_1BD36B4(v7, v8);
+  if ( !*(_DWORD *)(v6 + 24) )
     goto LABEL_12;
-  *(_QWORD *)(v7 + 32) = v8;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)v8, v10, v11, v12, v13, v14, v15);
-  if ( *(_DWORD *)(v7 + 24) <= 1u )
+  *(_QWORD *)(v6 + 32) = v7;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)v7, v9, v10, v11, v12, v13, v14);
+  if ( *(_DWORD *)(v6 + 24) <= 1u )
     goto LABEL_12;
-  v22 = StringLiteral_1541/*":"*/;
-  *(_QWORD *)(v7 + 40) = StringLiteral_1541/*":"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 40), v22, v16, v17, v18, v19, v20, v21);
-  v8 = System_Int32__ToString((int32_t)&v58, 0LL);
-  if ( *(_DWORD *)(v7 + 24) <= 2u )
+  v21 = StringLiteral_1541/*":"*/;
+  *(_QWORD *)(v6 + 40) = StringLiteral_1541/*":"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 40), v21, v15, v16, v17, v18, v19, v20);
+  v7 = System_Int32__ToString((int32_t)&v57, 0LL);
+  if ( *(_DWORD *)(v6 + 24) <= 2u )
     goto LABEL_12;
-  *(_QWORD *)(v7 + 48) = v8;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 48), (int64_t)v8, v23, v24, v25, v26, v27, v28);
-  if ( *(_DWORD *)(v7 + 24) <= 3u )
+  *(_QWORD *)(v6 + 48) = v7;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 48), (int64_t)v7, v22, v23, v24, v25, v26, v27);
+  if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_12;
-  v35 = StringLiteral_1541/*":"*/;
-  *(_QWORD *)(v7 + 56) = StringLiteral_1541/*":"*/;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 56), v35, v29, v30, v31, v32, v33, v34);
-  v8 = System_Int32__ToString((int32_t)&v57, 0LL);
-  if ( *(_DWORD *)(v7 + 24) <= 4u
-    || (*(_QWORD *)(v7 + 64) = v8,
-        sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 64), (int64_t)v8, v36, v37, v38, v39, v40, v41),
-        *(_DWORD *)(v7 + 24) <= 5u)
-    || (v48 = StringLiteral_1541/*":"*/,
-        *(_QWORD *)(v7 + 72) = StringLiteral_1541/*":"*/,
-        sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 72), v48, v42, v43, v44, v45, v46, v47),
-        v8 = System_Int32__ToString((int32_t)&v56, 0LL),
-        *(_DWORD *)(v7 + 24) <= 6u) )
+  v34 = StringLiteral_1541/*":"*/;
+  *(_QWORD *)(v6 + 56) = StringLiteral_1541/*":"*/;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 56), v34, v28, v29, v30, v31, v32, v33);
+  v7 = System_Int32__ToString((int32_t)&v56, 0LL);
+  if ( *(_DWORD *)(v6 + 24) <= 4u
+    || (*(_QWORD *)(v6 + 64) = v7,
+        sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 64), (int64_t)v7, v35, v36, v37, v38, v39, v40),
+        *(_DWORD *)(v6 + 24) <= 5u)
+    || (v47 = StringLiteral_1541/*":"*/,
+        *(_QWORD *)(v6 + 72) = StringLiteral_1541/*":"*/,
+        sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 72), v47, v41, v42, v43, v44, v45, v46),
+        v7 = System_Int32__ToString((int32_t)&v55, 0LL),
+        *(_DWORD *)(v6 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1BCAA44(v8, v9);
+    sub_1BD36BC(v7, v8);
   }
-  *(_QWORD *)(v7 + 80) = v8;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v7 + 80), (int64_t)v8, v49, v50, v51, v52, v53, v54);
-  return System_String__Concat_62414748((System_String_array *)v7, 0LL);
+  *(_QWORD *)(v6 + 80) = v7;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v6 + 80), (int64_t)v7, v48, v49, v50, v51, v52, v53);
+  return System_String__Concat_62538776((System_String_array *)v6, 0LL);
 }
 
 
@@ -176,34 +173,42 @@ bool __fastcall ServantPassiveSkillReleaseEntity__isUse(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x2
   int32_t condType; // w22
-  int64_t UserId; // x0
-  __int64 v12; // x1
+  NetworkManager_c *v10; // x0
   int32_t condNum; // w20
   int32_t condTargetId; // w21
-  int64_t v15; // x22
-  int32_t v16; // w21
-  int64_t v17; // x19
+  int64_t userIdNumber; // x22
+  int32_t v14; // w21
+  int64_t v15; // x19
 
-  if ( (byte_4B16AAD & 1) == 0 )
+  if ( (byte_4B37A62 & 1) == 0 )
   {
-    sub_1BCA7E0(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount, *(_QWORD *)&beforeClearQuestId);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v7, v8);
-    byte_4B16AAD = 1;
+    sub_1BD3458(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1BD3458(&NetworkManager_TypeInfo, v7);
+    byte_4B37A62 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&dispLimitCount);
-    UserId = NetworkManager__get_UserId(0LL);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !byte_4B31D77 )
+    {
+      sub_1BD3458(&NetworkManager_TypeInfo, *(_QWORD *)&dispLimitCount);
+      byte_4B31D77 = 1;
+    }
+    v10 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      v10 = NetworkManager_TypeInfo;
+    }
     condTargetId = this->fields.condTargetId;
     condNum = this->fields.condNum;
-    v15 = UserId;
+    userIdNumber = v10->static_fields->userIdNumber;
     if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v12);
-    return CondType__IsQuestPhaseClear(v15, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    return CondType__IsQuestPhaseClear(userIdNumber, condTargetId, condNum, beforeClearQuestId, 0, 0LL);
   }
   else if ( condType == 70 )
   {
@@ -211,10 +216,10 @@ bool __fastcall ServantPassiveSkillReleaseEntity__isUse(
   }
   else
   {
-    v16 = this->fields.condTargetId;
-    v17 = this->fields.condNum;
+    v14 = this->fields.condTargetId;
+    v15 = this->fields.condNum;
     if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
-    return CondType__IsOpen(condType, v16, v17, 0, 0LL, 0LL);
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    return CondType__IsOpen(condType, v14, v15, 0, 0LL, 0LL);
   }
 }

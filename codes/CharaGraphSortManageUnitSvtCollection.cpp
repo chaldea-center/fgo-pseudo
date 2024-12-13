@@ -10,18 +10,16 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__C
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  Il2CppObject *v4; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4B155CB & 1) == 0 )
+  if ( (byte_4B36566 & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method, v2);
-    byte_4B155CB = 1;
+    sub_1BD3458(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method);
+    byte_4B36566 = 1;
   }
-  v4 = (Il2CppObject *)sub_1BCAA2C(ServantCollectionCharaGraphFilterLogic_TypeInfo, method, v2, v3);
-  System_Object___ctor(v4, 0LL);
-  return (CharaGraphFilterLogicBase_o *)v4;
+  v2 = (Il2CppObject *)sub_1BD36A4(ServantCollectionCharaGraphFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
@@ -29,22 +27,16 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__Cre
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  ServantCollectionCharaGraphSortLogic_o *v4; // x19
+  ServantCollectionCharaGraphSortLogic_o *v2; // x19
 
-  if ( (byte_4B155CA & 1) == 0 )
+  if ( (byte_4B36565 & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantCollectionCharaGraphSortLogic_TypeInfo, method, v2);
-    byte_4B155CA = 1;
+    sub_1BD3458(&ServantCollectionCharaGraphSortLogic_TypeInfo, method);
+    byte_4B36565 = 1;
   }
-  v4 = (ServantCollectionCharaGraphSortLogic_o *)sub_1BCAA2C(
-                                                   ServantCollectionCharaGraphSortLogic_TypeInfo,
-                                                   method,
-                                                   v2,
-                                                   v3);
-  ServantCollectionCharaGraphSortLogic___ctor(v4, 0LL);
-  return (CharaGraphSortLogicBase_o *)v4;
+  v2 = (ServantCollectionCharaGraphSortLogic_o *)sub_1BD36A4(ServantCollectionCharaGraphSortLogic_TypeInfo);
+  ServantCollectionCharaGraphSortLogic___ctor(v2, 0LL);
+  return (CharaGraphSortLogicBase_o *)v2;
 }
 
 
@@ -84,12 +76,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitSvtCollection__get_SortSaveK
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B155C9 & 1) == 0 )
+  if ( (byte_4B36564 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_1505/*"5"*/, method, v2);
-    byte_4B155C9 = 1;
+    sub_1BD3458(&StringLiteral_1504/*"5"*/, method);
+    byte_4B36564 = 1;
   }
-  return (System_String_o *)StringLiteral_1505/*"5"*/;
+  return (System_String_o *)StringLiteral_1504/*"5"*/;
 }

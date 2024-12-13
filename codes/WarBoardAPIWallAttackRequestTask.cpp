@@ -19,13 +19,13 @@ void __fastcall WarBoardAPIWallAttackRequestTask___ctor(
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  WarBoardAPIRequestTask___ctor_36369024(
+  WarBoardAPIRequestTask___ctor_36429844(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)resultCallback);
   this->fields.attackPieceData = attacker;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.attackPieceData,
     (int64_t)attacker,
     v9,
@@ -35,7 +35,7 @@ void __fastcall WarBoardAPIWallAttackRequestTask___ctor(
     v13,
     v14);
   this->fields.targetWallData = target;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.targetWallData, (int64_t)target, v15, v16, v17, v18, v19, v20);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.targetWallData, (int64_t)target, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -43,52 +43,49 @@ void __fastcall WarBoardAPIWallAttackRequestTask__SetRequest(
         WarBoardAPIWallAttackRequestTask_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x1
-  __int64 v7; // x2
   Il2CppObject *Instance; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
   WarBoardData_o *warBoardData; // x20
-  WarBoardWallAttackRequest_o *v11; // x21
+  WarBoardWallAttackRequest_o *v8; // x21
   struct WarBoardPieceData_o *attackPieceData; // x8
   struct WarBoardWallData_o *targetWallData; // x9
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B14058 & 1) == 0 )
+  if ( (byte_4B34FEE & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_NetworkManager_getRequest_WarBoardWallAttackRequest___, method, v2);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v4, v5);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6, v7);
-    byte_4B14058 = 1;
+    sub_1BD3458(&Method_NetworkManager_getRequest_WarBoardWallAttackRequest___, method);
+    sub_1BD3458(&NetworkManager_TypeInfo, v3);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4B34FEE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   warBoardData = (WarBoardData_o *)Instance[27].monitor;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v9);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2F964CC *)Method_NetworkManager_getRequest_WarBoardWallAttackRequest___);
+               (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_WarBoardWallAttackRequest___);
   if ( !warBoardData
-    || (v11 = (WarBoardWallAttackRequest_o *)Instance,
+    || (v8 = (WarBoardWallAttackRequest_o *)Instance,
         Instance = (Il2CppObject *)WarBoardData__get_id(warBoardData, 0LL),
         (attackPieceData = this->fields.attackPieceData) == 0LL)
     || (targetWallData = this->fields.targetWallData) == 0LL
-    || !v11 )
+    || !v8 )
   {
 LABEL_11:
-    sub_1BCAA3C(Instance, v9);
+    sub_1BD36B4(Instance, v6);
   }
   WarBoardWallAttackRequest__beginRequest(
-    v11,
+    v8,
     (int32_t)Instance,
     attackPieceData->fields._forceId_k__BackingField,
     attackPieceData->fields._groupId_k__BackingField,
@@ -98,6 +95,6 @@ LABEL_11:
     targetWallData->fields._squareIndex_k__BackingField,
     warBoardData,
     0LL);
-  this->fields.request = (struct RequestBase_o *)v11;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v11, v14, v15, v16, v17, v18, v19);
+  this->fields.request = (struct RequestBase_o *)v8;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v8, v11, v12, v13, v14, v15, v16);
 }

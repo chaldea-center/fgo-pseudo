@@ -11,9 +11,9 @@ void __fastcall ScriptPlayListViewItem___ctor(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  ListViewItem___ctor_41447164((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
   this->fields.path = path;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.path, (int64_t)path, v6, v7, v8, v9, v10, v11);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.path, (int64_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -44,7 +44,7 @@ System_String_o *__fastcall ScriptPlayListViewItem__get_TitleText(
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0LL);
 LABEL_6:
-    sub_1BCAA3C(path, method);
+    sub_1BD36B4(path, method);
   }
   return this->fields.path;
 }

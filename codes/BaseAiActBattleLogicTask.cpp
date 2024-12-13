@@ -42,10 +42,10 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_1BCAA3C(IsNullOrEmpty, v7);
+        sub_1BD36B4(IsNullOrEmpty, v7);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_1BCA784((PartyOrganizationUtility_o *)p_interruptActions, 0LL, v8, v9, v10, v11, v12, v13);
+      sub_1BD33FC((PartyOrganizationUtility_o *)p_interruptActions, 0LL, v8, v9, v10, v11, v12, v13);
     }
   }
 }
@@ -63,7 +63,7 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields.interruptActions = actions;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.interruptActions,
     (int64_t)actions,
     (int64_t)method,

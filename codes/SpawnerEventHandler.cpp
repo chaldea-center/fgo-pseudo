@@ -7,35 +7,34 @@ void __fastcall SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const Me
 
 void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  System_Object_array *ComponentsInChildren_object__49324452; // x0
+  System_Object_array *ComponentsInChildren_object__49449880; // x0
   struct UnityEngine_ParticleSystem_array **p_particleArray; // x19
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B195D3 & 1) == 0 )
+  if ( (byte_4B3A5B8 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method, v2);
-    byte_4B195D3 = 1;
+    sub_1BD3458(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
+    byte_4B3A5B8 = 1;
   }
-  ComponentsInChildren_object__49324452 = UnityEngine_Component__GetComponentsInChildren_object__49324452(
+  ComponentsInChildren_object__49449880 = UnityEngine_Component__GetComponentsInChildren_object__49449880(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_2F0A1A4 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__49324452;
+                                            (const MethodInfo_2F28B98 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__49449880;
   p_particleArray = &this->fields.particleArray;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)p_particleArray,
-    (int64_t)ComponentsInChildren_object__49324452,
+    (int64_t)ComponentsInChildren_object__49449880,
+    v5,
     v6,
     v7,
     v8,
     v9,
-    v10,
-    v11);
+    v10);
   *((_BYTE *)p_particleArray + 8) = 1;
 }
 
@@ -60,7 +59,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
       if ( (int)v4 >= max_length )
         break;
       if ( (unsigned int)v4 >= max_length )
-        sub_1BCAA44(this, method);
+        sub_1BD36BC(this, method);
       this = (SpawnerEventHandler_o *)particleArray->m_Items[v4];
       if ( this )
       {
@@ -70,7 +69,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         if ( particleArray )
           continue;
       }
-      sub_1BCAA3C(this, method);
+      sub_1BD36B4(this, method);
     }
   }
 }

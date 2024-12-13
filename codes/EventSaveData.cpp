@@ -18,7 +18,6 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventSaveData__SetValueByArray(
         EventSaveData_o *this,
         System_String_array *valueArray,
@@ -36,18 +35,18 @@ void __fastcall EventSaveData__SetValueByArray(
   uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v14 = separator;
-  if ( (byte_4B13671 & 1) == 0 )
+  if ( (byte_4B34608 & 1) == 0 )
   {
-    sub_1BCA7E0(&char_TypeInfo, valueArray, separator);
-    byte_4B13671 = 1;
+    sub_1BD3458(&char_TypeInfo, valueArray);
+    byte_4B34608 = 1;
   }
   if ( valueArray )
   {
     if ( !char_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(char_TypeInfo, valueArray);
+      j_il2cpp_runtime_class_init_0(char_TypeInfo);
     v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

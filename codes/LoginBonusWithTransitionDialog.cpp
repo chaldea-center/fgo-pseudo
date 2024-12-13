@@ -23,90 +23,75 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
         const MethodInfo *method)
 {
   __int64 v14; // x1
-  __int64 v15; // x2
+  __int64 v15; // x1
   __int64 v16; // x1
-  __int64 v17; // x2
+  __int64 v17; // x1
   __int64 v18; // x1
-  __int64 v19; // x2
+  __int64 v19; // x1
   __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x1
-  __int64 v23; // x2
-  __int64 v24; // x1
-  __int64 v25; // x2
-  __int64 v26; // x1
-  __int64 v27; // x2
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x25
+  __int64 v21; // x1
+  __int64 v22; // x25
   System_String_o *buttonDecideLabel; // x0
-  GiftEntity_o *v32; // x1
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
-  int64_t v39; // x2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  BattleSetupInfo_o *v42; // x5
-  FollowerInfo_o *v43; // x6
-  PartyListViewItem_o *v44; // x7
-  __int64 v45; // x1
-  __int64 v46; // x2
-  __int64 v47; // x3
-  CommonConfirmDialog_ClickDelegate_o *v48; // x23
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
-  __int64 v55; // x1
+  GiftEntity_o *v24; // x1
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
+  CommonConfirmDialog_ClickDelegate_o *v37; // x23
+  int64_t v38; // x2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  BattleSetupInfo_o *v41; // x5
+  FollowerInfo_o *v42; // x6
+  PartyListViewItem_o *v43; // x7
   UILabel_o *buttonCancelLabel; // x23
   UILabel_o *titleLabel; // x22
   System_Collections_Generic_Dictionary_string__object__o *TransitionDialog; // x0
   UILabel_o *messageLabel; // x22
-  System_Collections_Generic_Dictionary_string__object__o *v60; // x0
-  __int64 v61; // x1
-  __int64 v62; // x2
-  __int64 v63; // x3
-  System_Action_o *v64; // x20
+  System_Collections_Generic_Dictionary_string__object__o *v48; // x0
+  System_Action_o *v49; // x20
 
-  if ( (byte_4B18B6D & 1) == 0 )
+  if ( (byte_4B39B48 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, bonusData, giftMst);
-    sub_1BCA7E0(&CommonConfirmDialog_ClickDelegate_TypeInfo, v14, v15);
-    sub_1BCA7E0(&Method_CommonConfirmDialog_EndOpen__, v16, v17);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v18, v19);
-    sub_1BCA7E0(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__, v20, v21);
-    sub_1BCA7E0(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo, v22, v23);
-    sub_1BCA7E0(&StringLiteral_3787/*"COMMON_CONFIRM_CLOSE"*/, v24, v25);
-    sub_1BCA7E0(&StringLiteral_18786/*"detail"*/, v26, v27);
-    sub_1BCA7E0(&StringLiteral_22219/*"name"*/, v28, v29);
-    byte_4B18B6D = 1;
+    sub_1BD3458(&System_Action_TypeInfo, bonusData);
+    sub_1BD3458(&CommonConfirmDialog_ClickDelegate_TypeInfo, v14);
+    sub_1BD3458(&Method_CommonConfirmDialog_EndOpen__, v15);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v16);
+    sub_1BD3458(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__, v17);
+    sub_1BD3458(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo, v18);
+    sub_1BD3458(&StringLiteral_3794/*"COMMON_CONFIRM_CLOSE"*/, v19);
+    sub_1BD3458(&StringLiteral_18814/*"detail"*/, v20);
+    sub_1BD3458(&StringLiteral_22252/*"name"*/, v21);
+    byte_4B39B48 = 1;
   }
-  v30 = sub_1BCAA2C(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo, bonusData, giftMst, itemMst);
-  System_Object___ctor((Il2CppObject *)v30, 0LL);
-  if ( !v30 )
+  v22 = sub_1BD36A4(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v22, 0LL);
+  if ( !v22 )
     goto LABEL_15;
-  *(_QWORD *)(v30 + 16) = onDecideCallback;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v30 + 16), (int64_t)onDecideCallback, v33, v34, v35, v36, v37, v38);
-  *(_QWORD *)(v30 + 24) = onCancelCallback;
-  sub_1BCA784((PartyOrganizationUtility_o *)(v30 + 24), (int64_t)onCancelCallback, v39, v40, v41, v42, v43, v44);
-  v48 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BCAA2C(CommonConfirmDialog_ClickDelegate_TypeInfo, v45, v46, v47);
+  *(_QWORD *)(v22 + 16) = onDecideCallback;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)onDecideCallback, v25, v26, v27, v28, v29, v30);
+  *(_QWORD *)(v22 + 24) = onCancelCallback;
+  sub_1BD33FC((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)onCancelCallback, v31, v32, v33, v34, v35, v36);
+  v37 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BD36A4(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v48,
-    (Il2CppObject *)v30,
+    v37,
+    (Il2CppObject *)v22,
     Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__,
     0LL);
-  this->fields.clickFunc = v48;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)v48, v49, v50, v51, v52, v53, v54);
+  this->fields.clickFunc = v37;
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)v37, v38, v39, v40, v41, v42, v43);
   buttonCancelLabel = this->fields.buttonCancelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v55);
-  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3787/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3794/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_15;
   UILabel__set_text(buttonCancelLabel, buttonDecideLabel, 0LL);
@@ -120,33 +105,33 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
   TransitionDialog = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0LL);
   buttonDecideLabel = EntityScriptUtil__GetStringValue(
                         TransitionDialog,
-                        (System_String_o *)StringLiteral_22219/*"name"*/,
+                        (System_String_o *)StringLiteral_22252/*"name"*/,
                         0LL,
                         0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, buttonDecideLabel, 0LL);
   messageLabel = this->fields.messageLabel;
-  v60 = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0LL);
-  buttonDecideLabel = EntityScriptUtil__GetStringValue(v60, (System_String_o *)StringLiteral_18786/*"detail"*/, 0LL, 0LL);
+  v48 = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0LL);
+  buttonDecideLabel = EntityScriptUtil__GetStringValue(v48, (System_String_o *)StringLiteral_18814/*"detail"*/, 0LL, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, buttonDecideLabel, 0LL), !giftMst)
     || (buttonDecideLabel = (System_String_o *)GiftMaster__getDataById(giftMst, bonusData->fields.giftId, 0LL)) == 0LL
-    || (v32 = (GiftEntity_o *)buttonDecideLabel,
+    || (v24 = (GiftEntity_o *)buttonDecideLabel,
         (buttonDecideLabel = (System_String_o *)this->fields.bonusItemIcon) == 0LL) )
   {
 LABEL_15:
-    sub_1BCAA3C(buttonDecideLabel, v32);
+    sub_1BD36B4(buttonDecideLabel, v24);
   }
-  ItemIconComponent__SetGift((ItemIconComponent_o *)buttonDecideLabel, v32, v32->fields.num, 0, 0LL);
-  v64 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v61, v62, v63);
-  System_Action___ctor(v64, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v64, 0, 0LL);
+  ItemIconComponent__SetGift((ItemIconComponent_o *)buttonDecideLabel, v24, v24->fields.num, 0, 0LL);
+  v49 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v49, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v49, 0, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall LoginBonusWithTransitionDialog__Open_43900792(
+void __fastcall LoginBonusWithTransitionDialog__Open_44010360(
         LoginBonusWithTransitionDialog_o *this,
         CommonUI_CampaignDirectBonusData_o *bonusData,
         GiftMaster_o *giftMst,
@@ -192,7 +177,7 @@ void __fastcall LoginBonusWithTransitionDialog__Open_43900792(
         !v11) )
   {
 LABEL_10:
-    sub_1BCAA3C(buttonDecide, bonusData);
+    sub_1BD36B4(buttonDecide, bonusData);
   }
   v15 = 0;
   v16 = v13;
@@ -215,54 +200,47 @@ void __fastcall LoginBonusWithTransitionDialog___c__DisplayClass1_0___Open_b__0(
         bool isDecide,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x2
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v7; // x1
+  __int64 v8; // x21
+  __int64 v9; // x0
   __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x21
-  __int64 v13; // x0
-  __int64 v14; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   Il2CppObject *Instance; // x19
-  __int64 v22; // x1
-  __int64 v23; // x2
-  __int64 v24; // x3
-  System_Action_o *v25; // x20
+  System_Action_o *v18; // x20
 
-  if ( (byte_4B18B6E & 1) == 0 )
+  if ( (byte_4B39B49 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, isDecide, method);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6, v7);
-    sub_1BCA7E0(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__, v8, v9);
-    sub_1BCA7E0(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo, v10, v11);
-    byte_4B18B6E = 1;
+    sub_1BD3458(&System_Action_TypeInfo, isDecide);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BD3458(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__, v6);
+    sub_1BD3458(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo, v7);
+    byte_4B39B49 = 1;
   }
-  v12 = sub_1BCAA2C(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo, isDecide, method, v3);
-  System_Object___ctor((Il2CppObject *)v12, 0LL);
-  if ( !v12
-    || (*(_QWORD *)(v12 + 24) = this,
-        sub_1BCA784((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)this, v15, v16, v17, v18, v19, v20),
-        *(_BYTE *)(v12 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v25 = (System_Action_o *)sub_1BCAA2C(System_Action_TypeInfo, v22, v23, v24),
+  v8 = sub_1BD36A4(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  if ( !v8
+    || (*(_QWORD *)(v8 + 24) = this,
+        sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16),
+        *(_BYTE *)(v8 + 16) = isDecide,
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v18 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo),
         System_Action___ctor(
-          v25,
-          (Il2CppObject *)v12,
+          v18,
+          (Il2CppObject *)v8,
           Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__,
           0LL),
         !Instance) )
   {
-    sub_1BCAA3C(v13, v14);
+    sub_1BD36B4(v9, v10);
   }
-  CommonUI__CloseLoginBonusWithTransitionDialog((CommonUI_o *)Instance, v25, 0LL);
+  CommonUI__CloseLoginBonusWithTransitionDialog((CommonUI_o *)Instance, v18, 0LL);
 }
 
 
@@ -283,7 +261,7 @@ void __fastcall LoginBonusWithTransitionDialog___c__DisplayClass1_1___Open_b__1(
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   v3 = 24LL;
   if ( this->fields.isDecide )
     v3 = 16LL;

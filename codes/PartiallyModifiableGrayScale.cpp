@@ -12,63 +12,53 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
 {
   PartiallyModifiableGrayScale_o *v6; // x21
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
   float posX; // s9
-  float v22; // s8
-  UnityEngine_Vector2_o v23; // x1
+  float v15; // s8
   UnityEngine_Vector2_o texelSize; // kr00_8
   UnityEngine_Object_o *MaskTexture; // x22
-  __int64 v26; // x1
   UnityEngine_Object_o *OverTexture; // x22
   float radius; // s0
-  System_String_o *v29; // x23
-  PartiallyModifiableGrayScale_o *v30; // x22
-  PartiallyModifiableGrayScale_o *v31; // x27
-  __int64 v32; // x26
-  int v33; // w2
-  UnityEngine_Object_o *v34; // x24
-  UnityEngine_Object_o *v35; // x22
-  UnityEngine_Object_o *v36; // x24
-  UnityEngine_Object_o *v37; // x24
-  __int64 v38; // x1
+  System_String_o *v20; // x23
+  PartiallyModifiableGrayScale_o *v21; // x22
+  PartiallyModifiableGrayScale_o *v22; // x27
+  __int64 v23; // x26
+  int v24; // w2
+  UnityEngine_Object_o *v25; // x24
+  UnityEngine_Object_o *v26; // x22
+  UnityEngine_Object_o *v27; // x24
+  UnityEngine_Object_o *v28; // x24
   UnityEngine_Material_o *material; // x21
-  UnityEngine_Vector4_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4B18F7D & 1) == 0 )
+  if ( (byte_4B39F5B & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Graphics_TypeInfo, source, destination);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v7, v8);
-    sub_1BCA7E0(&StringLiteral_16418/*"_IsSet"*/, v9, v10);
-    sub_1BCA7E0(&StringLiteral_16463/*"_OverTex"*/, v11, v12);
-    sub_1BCA7E0(&StringLiteral_16509/*"_Size"*/, v13, v14);
-    sub_1BCA7E0(&StringLiteral_16491/*"_Saturation"*/, v15, v16);
-    sub_1BCA7E0(&StringLiteral_16548/*"_UVPosition"*/, v17, v18);
-    this = (PartiallyModifiableGrayScale_o *)sub_1BCA7E0(&StringLiteral_16436/*"_MaskTex"*/, v19, v20);
-    byte_4B18F7D = 1;
+    sub_1BD3458(&UnityEngine_Graphics_TypeInfo, source);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BD3458(&StringLiteral_16437/*"_IsSet"*/, v8);
+    sub_1BD3458(&StringLiteral_16482/*"_OverTex"*/, v9);
+    sub_1BD3458(&StringLiteral_16528/*"_Size"*/, v10);
+    sub_1BD3458(&StringLiteral_16510/*"_Saturation"*/, v11);
+    sub_1BD3458(&StringLiteral_16567/*"_UVPosition"*/, v12);
+    this = (PartiallyModifiableGrayScale_o *)sub_1BD3458(&StringLiteral_16455/*"_MaskTex"*/, v13);
+    byte_4B39F5B = 1;
   }
   if ( !source )
     goto LABEL_46;
   posX = v6->fields.posX;
-  v22 = v6->fields.posY + 0.5;
+  v15 = v6->fields.posY + 0.5;
   texelSize = UnityEngine_Texture__get_texelSize((UnityEngine_Texture_o *)source, 0LL);
   MaskTexture = (UnityEngine_Object_o *)v6->fields.MaskTexture;
   if ( texelSize.fields.y < 0.0 )
-    v22 = 1.0 - v22;
+    v15 = 1.0 - v15;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    ((void (__fastcall *)(_QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(UnityEngine_Object_TypeInfo, v23);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(MaskTexture, 0LL, 0LL) )
   {
     this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
@@ -76,13 +66,13 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16436/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16455/*"_MaskTex"*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0LL);
   }
   OverTexture = (UnityEngine_Object_o *)v6->fields.OverTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(OverTexture, 0LL, 0LL) )
   {
     this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
@@ -90,7 +80,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16463/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16482/*"_OverTex"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0LL);
   }
@@ -98,83 +88,83 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   if ( !this
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16491/*"_Saturation"*/,
+          (System_String_o *)StringLiteral_16510/*"_Saturation"*/,
           v6->fields.saturation,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL)
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16509/*"_Size"*/,
+          (System_String_o *)StringLiteral_16528/*"_Size"*/,
           v6->fields.radius,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL) )
   {
 LABEL_46:
-    sub_1BCAA3C(this, source);
+    sub_1BD36B4(this, source);
   }
-  v40.fields.x = posX + 0.5;
-  v40.fields.z = 0.0;
-  v40.fields.w = 0.0;
-  v40.fields.y = v22;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16548/*"_UVPosition"*/, v40, 0LL);
+  v30.fields.x = posX + 0.5;
+  v30.fields.z = 0.0;
+  v30.fields.w = 0.0;
+  v30.fields.y = v15;
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16567/*"_UVPosition"*/, v30, 0LL);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   radius = v6->fields.radius;
-  v29 = (System_String_o *)StringLiteral_16418/*"_IsSet"*/;
-  v30 = this;
+  v20 = (System_String_o *)StringLiteral_16437/*"_IsSet"*/;
+  v21 = this;
   if ( radius >= 0.03 )
-    v31 = this;
+    v22 = this;
   else
-    v31 = 0LL;
+    v22 = 0LL;
   if ( radius >= 0.03 )
-    v32 = StringLiteral_16418/*"_IsSet"*/;
+    v23 = StringLiteral_16437/*"_IsSet"*/;
   else
-    v32 = 0LL;
+    v23 = 0LL;
   if ( radius < 0.03 )
   {
-    v33 = 0;
+    v24 = 0;
     goto LABEL_42;
   }
-  v34 = (UnityEngine_Object_o *)v6->fields.MaskTexture;
+  v25 = (UnityEngine_Object_o *)v6->fields.MaskTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, source);
-  if ( UnityEngine_Object__op_Inequality(v34, 0LL, 0LL) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(v25, 0LL, 0LL) )
   {
-    v35 = (UnityEngine_Object_o *)v6->fields.OverTexture;
+    v26 = (UnityEngine_Object_o *)v6->fields.OverTexture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, source);
-    this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v35, 0LL, 0LL);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v26, 0LL, 0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      v33 = 3;
-      v30 = v31;
-      v29 = (System_String_o *)v32;
+      v24 = 3;
+      v21 = v22;
+      v20 = (System_String_o *)v23;
       goto LABEL_42;
     }
-    v30 = v31;
-    v29 = (System_String_o *)v32;
+    v21 = v22;
+    v20 = (System_String_o *)v23;
   }
-  v36 = (UnityEngine_Object_o *)v6->fields.OverTexture;
+  v27 = (UnityEngine_Object_o *)v6->fields.OverTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, source);
-  this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v36, 0LL, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v27, 0LL, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v33 = 2;
+    v24 = 2;
   }
   else
   {
-    v37 = (UnityEngine_Object_o *)v6->fields.MaskTexture;
+    v28 = (UnityEngine_Object_o *)v6->fields.MaskTexture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, source);
-    this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v37, 0LL, 0LL);
-    v33 = (unsigned __int8)this & 1;
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    this = (PartiallyModifiableGrayScale_o *)UnityEngine_Object__op_Inequality(v28, 0LL, 0LL);
+    v24 = (unsigned __int8)this & 1;
   }
 LABEL_42:
-  if ( !v30 )
+  if ( !v21 )
     goto LABEL_46;
-  UnityEngine_Material__SetInt((UnityEngine_Material_o *)v30, v29, v33, 0LL);
+  UnityEngine_Material__SetInt((UnityEngine_Material_o *)v21, v20, v24, 0LL);
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo, v38);
-  UnityEngine_Graphics__Blit_70000204((UnityEngine_Texture_o *)source, destination, material, 0LL);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
+  UnityEngine_Graphics__Blit_70124232((UnityEngine_Texture_o *)source, destination, material, 0LL);
 }

@@ -34,7 +34,7 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
   p_endCallBack = (PartyOrganizationUtility_o *)&this->fields.endCallBack;
   v9 = endCallBack;
   p_endCallBack->klass = 0LL;
-  sub_1BCA784(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1BD33FC(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
   if ( endCallBack )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -51,17 +51,17 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
 {
   TitleInfoEventLeagueVsGaugeFlashEffect_o *v10; // x20
   __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
-  float v15; // s0
-  float v16; // s8
-  double v17; // d0
+  __int64 v12; // x1
+  float v13; // s0
+  float v14; // s8
+  double v15; // d0
   struct UIProgressBar_array *gaugeBar; // x8
-  struct UIProgressBar_array *v19; // x8
-  Il2CppObject *v20; // x0
-  System_String_o *v21; // x0
-  __int64 v22; // x1
+  struct UIProgressBar_array *v17; // x8
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  Il2CppObject *v21; // x0
+  System_String_o *v22; // x0
   UnityEngine_Object_o *gaugeSimpleAnim; // x22
   System_String_o *v24; // x21
   int64_t v25; // x2
@@ -71,25 +71,24 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   FollowerInfo_o *v29; // x6
   PartyListViewItem_o *v30; // x7
   UnityEngine_Object_o *gaugeAnim; // x22
-  __int64 v32; // x1
   UnityEngine_Object_o *Clip; // x22
-  int32_t v34; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v33; // [xsp+Ch] [xbp-44h] BYREF
 
   v10 = this;
-  if ( (byte_4B14508 & 1) == 0 )
+  if ( (byte_4B3549E & 1) == 0 )
   {
-    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&joinGroupId, point1);
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, v11, v12);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1BCA7E0(&StringLiteral_17488/*"bit_vs_gauge_flash_"*/, v13, v14);
-    byte_4B14508 = 1;
+    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&joinGroupId);
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, v11);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1BD3458(&StringLiteral_17513/*"bit_vs_gauge_flash_"*/, v12);
+    byte_4B3549E = 1;
   }
-  v15 = 0.5;
-  v16 = 0.5;
+  v13 = 0.5;
+  v14 = 0.5;
   if ( point1 != point2 )
   {
-    v17 = fmin((double)point1 / (double)(point2 + point1), 1.0);
-    v16 = v17;
-    v15 = 1.0 - v17;
+    v15 = fmin((double)point1 / (double)(point2 + point1), 1.0);
+    v14 = v15;
+    v13 = 1.0 - v15;
   }
   gaugeBar = v10->fields.gaugeBar;
   if ( !gaugeBar )
@@ -99,29 +98,29 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)gaugeBar->m_Items[0];
   if ( !this )
     goto LABEL_29;
-  UIProgressBar__set_value((UIProgressBar_o *)this, v15, 0LL);
-  v19 = v10->fields.gaugeBar;
-  if ( !v19 )
+  UIProgressBar__set_value((UIProgressBar_o *)this, v13, 0LL);
+  v17 = v10->fields.gaugeBar;
+  if ( !v17 )
     goto LABEL_29;
-  if ( v19->max_length <= 1 )
+  if ( v17->max_length <= 1 )
 LABEL_30:
-    sub_1BCAA44(this, *(_QWORD *)&joinGroupId);
-  this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v19->m_Items[1];
+    sub_1BD36BC(this, *(_QWORD *)&joinGroupId);
+  this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v17->m_Items[1];
   if ( !this )
     goto LABEL_29;
-  UIProgressBar__set_value((UIProgressBar_o *)this, v16, 0LL);
-  v34 = joinGroupId;
-  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-  v21 = System_String__Concat((Il2CppObject *)StringLiteral_17488/*"bit_vs_gauge_flash_"*/, v20, 0LL);
+  UIProgressBar__set_value((UIProgressBar_o *)this, v14, 0LL);
+  v33 = joinGroupId;
+  v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v18, v19, v20);
+  v22 = System_String__Concat((Il2CppObject *)StringLiteral_17513/*"bit_vs_gauge_flash_"*/, v21, 0LL);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
-  v24 = v21;
+  v24 = v22;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(gaugeSimpleAnim, 0LL, 0LL) )
   {
     gaugeAnim = (UnityEngine_Object_o *)v10->fields.gaugeAnim;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&joinGroupId);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Inequality(gaugeAnim, 0LL, 0LL) )
       goto LABEL_28;
     this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
@@ -129,18 +128,18 @@ LABEL_30:
     {
       Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)this, v24, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(Clip, 0LL, 0LL) )
         goto LABEL_25;
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_69899248((UnityEngine_Animation_o *)this, v24, 0LL);
+        UnityEngine_Animation__Play_70023276((UnityEngine_Animation_o *)this, v24, 0LL);
         goto LABEL_28;
       }
     }
 LABEL_29:
-    sub_1BCAA3C(this, *(_QWORD *)&joinGroupId);
+    sub_1BD36B4(this, *(_QWORD *)&joinGroupId);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
@@ -154,8 +153,8 @@ LABEL_25:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_29;
-  SimpleAnimation__Play_64539336((SimpleAnimation_o *)this, v24, 0LL);
+  SimpleAnimation__Play_64663364((SimpleAnimation_o *)this, v24, 0LL);
 LABEL_28:
   v10->fields.endCallBack = callback;
-  sub_1BCA784((PartyOrganizationUtility_o *)&v10->fields.endCallBack, (int64_t)callback, v25, v26, v27, v28, v29, v30);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&v10->fields.endCallBack, (int64_t)callback, v25, v26, v27, v28, v29, v30);
 }

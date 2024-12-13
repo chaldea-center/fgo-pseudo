@@ -1,16 +1,14 @@
 void __fastcall SpotLayerMaster___ctor(SpotLayerMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16CA8 & 1) == 0 )
+  if ( (byte_4B37C5E & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int___ctor__, method, v2);
-    byte_4B16CA8 = 1;
+    sub_1BD3458(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int___ctor__, method);
+    byte_4B37C5E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     434,
-    (const MethodInfo_31B2E00 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int___ctor__);
+    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int___ctor__);
 }
 
 
@@ -24,23 +22,20 @@ int32_t __fastcall SpotLayerMaster__GetParentLayerBySpotId(
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B16CA7 & 1) == 0 )
+  if ( (byte_4B37C5D & 1) == 0 )
   {
-    sub_1BCA7E0(
-      &Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__,
-      *(_QWORD *)&spotId,
-      method);
-    byte_4B16CA7 = 1;
+    sub_1BD3458(&Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__, *(_QWORD *)&spotId);
+    byte_4B37C5D = 1;
   }
   entity = 0LL;
   v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          spotId,
-         (const MethodInfo_31B2E94 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
+         (const MethodInfo_31D1F44 *)Method_DataMasterBase_SpotLayerMaster__SpotLayerEntity__int__TryGetEntity__);
   if ( !v5 )
     return 0;
   if ( !entity )
-    sub_1BCAA3C(v5, v6);
+    sub_1BD36B4(v5, v6);
   return (int32_t)entity[1].monitor;
 }

@@ -1,14 +1,12 @@
 void __fastcall CommandCardExceedConfirmDialog___ctor(CommandCardExceedConfirmDialog_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B19A64 & 1) == 0 )
+  if ( (byte_4B3AA4B & 1) == 0 )
   {
-    sub_1BCA7E0(&BaseDialog_TypeInfo, method, v2);
-    byte_4B19A64 = 1;
+    sub_1BD3458(&BaseDialog_TypeInfo, method);
+    byte_4B3AA4B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
 }
 
@@ -31,7 +29,7 @@ void __fastcall CommandCardExceedConfirmDialog__CallOnRequest(
   {
     p_onRequest = (PartyOrganizationUtility_o *)&this->fields.onRequest;
     p_onRequest->klass = 0LL;
-    sub_1BCA784(p_onRequest, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1BD33FC(p_onRequest, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))onRequest->fields.m_target)(
       onRequest->fields.original_method_info,
       (unsigned int)itemUseCount,
@@ -49,18 +47,15 @@ void __fastcall CommandCardExceedConfirmDialog__DisplayCommandCards(
         const MethodInfo *method)
 {
   CommandCardExceedConfirmDialog_o *v10; // x21
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x3
-  BattleCommandData_o *v14; // x23
+  BattleCommandData_o *v11; // x23
   struct ItemEntity_o *exceedItemEntity; // x8
-  int32_t v16; // w3
+  int32_t v13; // w3
 
   v10 = this;
-  if ( (byte_4B19A63 & 1) == 0 )
+  if ( (byte_4B3AA4A & 1) == 0 )
   {
-    this = (CommandCardExceedConfirmDialog_o *)sub_1BCA7E0(&BattleCommandData_TypeInfo, previousCard, afterCard);
-    byte_4B19A63 = 1;
+    this = (CommandCardExceedConfirmDialog_o *)sub_1BD3458(&BattleCommandData_TypeInfo, previousCard);
+    byte_4B3AA4A = 1;
   }
   if ( !previousCard
     || (CombineCommandCardComponent__DispCommandCard(
@@ -71,17 +66,17 @@ void __fastcall CommandCardExceedConfirmDialog__DisplayCommandCards(
           0,
           0,
           0LL),
-        v14 = (BattleCommandData_o *)sub_1BCAA2C(BattleCommandData_TypeInfo, v11, v12, v13),
-        BattleCommandData___ctor_44073012(v14, data, 0LL),
+        v11 = (BattleCommandData_o *)sub_1BD36A4(BattleCommandData_TypeInfo),
+        BattleCommandData___ctor_44181656(v11, data, 0LL),
         (exceedItemEntity = v10->fields.exceedItemEntity) == 0LL)
-    || !v14
-    || (v16 = v10->fields.nowCommandCardParam + exceedItemEntity->fields.value * itemUseCount,
-        v14->fields.commandCardParam = v16,
+    || !v11
+    || (v13 = v10->fields.nowCommandCardParam + exceedItemEntity->fields.value * itemUseCount,
+        v11->fields.commandCardParam = v13,
         !afterCard) )
   {
-    sub_1BCAA3C(this, previousCard);
+    sub_1BD36B4(this, previousCard);
   }
-  CombineCommandCardComponent__DispCommandCard(afterCard, v14, v10->fields.userCommandCodeId, v16, 0, 0, 0LL);
+  CombineCommandCardComponent__DispCommandCard(afterCard, v11, v10->fields.userCommandCodeId, v13, 0, 0, 0LL);
 }
 
 
@@ -93,7 +88,6 @@ void __fastcall CommandCardExceedConfirmDialog__EndOpen(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall CommandCardExceedConfirmDialog__GetAfterCommandCardParam(
         CommandCardExceedConfirmDialog_o *this,
         int32_t itemUseCount,
@@ -103,7 +97,7 @@ int32_t __fastcall CommandCardExceedConfirmDialog__GetAfterCommandCardParam(
 
   exceedItemEntity = this->fields.exceedItemEntity;
   if ( !exceedItemEntity )
-    sub_1BCAA3C(this, *(_QWORD *)&itemUseCount);
+    sub_1BD36B4(this, itemUseCount);
   return this->fields.nowCommandCardParam + exceedItemEntity->fields.value * itemUseCount;
 }
 
@@ -112,53 +106,59 @@ int32_t __fastcall CommandCardExceedConfirmDialog__GetItemUsableCount(
         CommandCardExceedConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x2
+  void *Instance; // x0
   __int64 v6; // x1
-  __int64 v7; // x2
-  int64_t Instance; // x0
-  __int64 v9; // x1
-  __int64 v10; // x1
   Il2CppObject *MasterData_object; // x20
   struct ItemEntity_o *exceedItemEntity; // x8
-  struct ItemEntity_o *v13; // x8
-  int v14; // w8
+  struct ItemEntity_o *v9; // x8
+  int v10; // w8
 
-  if ( (byte_4B19A60 & 1) == 0 )
+  if ( (byte_4B3AA47 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_UserItemMaster___, method, v2);
-    sub_1BCA7E0(&NetworkManager_TypeInfo, v4, v5);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6, v7);
-    byte_4B19A60 = 1;
+    sub_1BD3458(&Method_DataManager_GetMasterData_UserItemMaster___, method);
+    sub_1BD3458(&NetworkManager_TypeInfo, v3);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4B3AA47 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_13;
+    goto LABEL_17;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v10);
-  Instance = NetworkManager__get_UserId(0LL);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  if ( !byte_4B31D77 )
+  {
+    sub_1BD3458(&NetworkManager_TypeInfo, v6);
+    byte_4B31D77 = 1;
+  }
+  Instance = NetworkManager_TypeInfo;
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    Instance = NetworkManager_TypeInfo;
+  }
   exceedItemEntity = this->fields.exceedItemEntity;
   if ( !exceedItemEntity
     || !MasterData_object
-    || (Instance = (int64_t)UserItemMaster__GetEntityDefinitely(
-                              (UserItemMaster_o *)MasterData_object,
-                              Instance,
-                              exceedItemEntity->fields.id,
-                              0LL)) == 0
-    || (v13 = this->fields.exceedItemEntity) == 0LL )
+    || (Instance = UserItemMaster__GetEntityDefinitely(
+                     (UserItemMaster_o *)MasterData_object,
+                     *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL),
+                     exceedItemEntity->fields.id,
+                     0LL)) == 0LL
+    || (v9 = this->fields.exceedItemEntity) == 0LL )
   {
-LABEL_13:
-    sub_1BCAA3C(Instance, v9);
+LABEL_17:
+    sub_1BD36B4(Instance, v6);
   }
-  v14 = (this->fields.constantMaxStatus - this->fields.nowCommandCardParam) / v13->fields.value;
-  if ( *(_DWORD *)(Instance + 28) >= v14 )
-    return v14;
+  v10 = (this->fields.constantMaxStatus - this->fields.nowCommandCardParam) / v9->fields.value;
+  if ( *((_DWORD *)Instance + 7) >= v10 )
+    return v10;
   else
-    return *(_DWORD *)(Instance + 28);
+    return *((_DWORD *)Instance + 7);
 }
 
 
@@ -169,20 +169,19 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetMessageLocalizati
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x2
-  System_String_o **v6; // x8
+  System_String_o **v5; // x8
 
-  if ( (byte_4B19A5D & 1) == 0 )
+  if ( (byte_4B3AA44 & 1) == 0 )
   {
-    sub_1BCA7E0(&StringLiteral_3737/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/, isOk, method);
-    sub_1BCA7E0(&StringLiteral_3732/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/, v4, v5);
-    byte_4B19A5D = 1;
+    sub_1BD3458(&StringLiteral_3744/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/, isOk);
+    sub_1BD3458(&StringLiteral_3739/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/, v4);
+    byte_4B3AA44 = 1;
   }
   if ( isOk )
-    v6 = (System_String_o **)&StringLiteral_3732/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/;
+    v5 = (System_String_o **)&StringLiteral_3739/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_3737/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/;
-  return *v6;
+    v5 = (System_String_o **)&StringLiteral_3744/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/;
+  return *v5;
 }
 
 
@@ -200,7 +199,7 @@ int32_t __fastcall CommandCardExceedConfirmDialog__GetNowCommandCardParam(
   if ( !commandCardParam )
     return 0;
   if ( commandCardParam->max_length <= index )
-    sub_1BCAA44(this, entity);
+    sub_1BD36BC(this, entity);
   return commandCardParam->m_Items[index + 1];
 }
 
@@ -227,7 +226,7 @@ int32_t __fastcall CommandCardExceedConfirmDialog__GetRequiredQp(
     UseQp = CommandCardExceedConfirmDialog__GetUseQp(this, nowCommandCardParam, method);
     exceedItemEntity = this->fields.exceedItemEntity;
     if ( !exceedItemEntity )
-      sub_1BCAA3C(UseQp, v8);
+      sub_1BD36B4(UseQp, v8);
     v6 += UseQp;
     --v4;
     nowCommandCardParam += exceedItemEntity->fields.value;
@@ -245,15 +244,14 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetRequiredQpText(
         const MethodInfo *method)
 {
   __int64 v6; // x1
-  __int64 v7; // x2
-  System_String_o *v9; // x20
+  System_String_o *v8; // x20
   Il2CppObject *NumberFormat; // x1
 
-  if ( (byte_4B19A5C & 1) == 0 )
+  if ( (byte_4B3AA43 & 1) == 0 )
   {
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, *(_QWORD *)&requiredQp, isOk);
-    sub_1BCA7E0(&StringLiteral_3734/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, v6, v7);
-    byte_4B19A5C = 1;
+    sub_1BD3458(&LocalizationManager_TypeInfo, *(_QWORD *)&requiredQp);
+    sub_1BD3458(&StringLiteral_3741/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, v6);
+    byte_4B3AA43 = 1;
   }
   if ( LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -262,13 +260,13 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetRequiredQpText(
   }
   else
   {
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&requiredQp);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( isOk )
       return LocalizationManager__GetNumberFormat(requiredQp, 0LL);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3741/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, 0LL);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(requiredQp, 0LL);
-  return System_String__Format(v9, NumberFormat, 0LL);
+  return System_String__Format(v8, NumberFormat, 0LL);
 }
 
 
@@ -288,7 +286,7 @@ int32_t __fastcall CommandCardExceedConfirmDialog__GetUseQp(
   beyondRankParamEntities = this->fields.beyondRankParamEntities;
   if ( !beyondRankParamEntities )
 LABEL_14:
-    sub_1BCAA3C(this, *(_QWORD *)&param);
+    sub_1BD36B4(this, param);
   max_length = beyondRankParamEntities->max_length;
   if ( max_length < 1 )
     return 0;
@@ -297,7 +295,7 @@ LABEL_14:
   while ( 1 )
   {
     if ( max_length == v5 )
-      sub_1BCAA44(this, param);
+      sub_1BD36BC(this, *(_QWORD *)&param);
     v7 = beyondRankParamEntities->m_Items[v5];
     if ( v6 <= param )
       break;
@@ -322,23 +320,22 @@ void __fastcall CommandCardExceedConfirmDialog__OnClickCancel(
         CommandCardExceedConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4B19A5F & 1) == 0 )
+  if ( (byte_4B3AA46 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_OnClickCancel__, method, v2);
-    byte_4B19A5F = 1;
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_OnClickCancel__, method);
+    byte_4B3AA46 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
-    v4 = Method_CommandCardExceedConfirmDialog_OnClickCancel__;
+    v3 = Method_CommandCardExceedConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CommandCardExceedConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_CommandCardExceedConfirmDialog_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0LL);
+      v3 = (_QWORD *)sub_1BD3470(Method_CommandCardExceedConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, 0LL, 0LL);
   }
 }
@@ -348,32 +345,31 @@ void __fastcall CommandCardExceedConfirmDialog__OnClickDecide(
         CommandCardExceedConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  __int64 v6; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
   UISliderWithButton_o *sliderWithButton; // x0
-  int32_t v8; // w0
-  const MethodInfo *v9; // x2
+  int32_t v7; // w0
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4B19A5E & 1) == 0 )
+  if ( (byte_4B3AA45 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_OnClickDecide__, method, v2);
-    byte_4B19A5E = 1;
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_OnClickDecide__, method);
+    byte_4B3AA45 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
-    v4 = Method_CommandCardExceedConfirmDialog_OnClickDecide__;
+    v3 = Method_CommandCardExceedConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_CommandCardExceedConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCA7F8(Method_CommandCardExceedConfirmDialog_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCA7C4(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0LL);
+      v3 = (_QWORD *)sub_1BD3470(Method_CommandCardExceedConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
     sliderWithButton = this->fields.sliderWithButton;
     if ( !sliderWithButton )
-      sub_1BCAA3C(0LL, v6);
-    v8 = UISliderWithButton__sliderValueChange(sliderWithButton, 0LL);
-    CommandCardExceedConfirmDialog__CallOnRequest(this, v8, v9);
+      sub_1BD36B4(0LL, v5);
+    v7 = UISliderWithButton__sliderValueChange(sliderWithButton, 0LL);
+    CommandCardExceedConfirmDialog__CallOnRequest(this, v7, v8);
     BaseDialog__Close((BaseDialog_o *)this, 0LL, 0LL);
   }
 }
@@ -390,7 +386,7 @@ void __fastcall CommandCardExceedConfirmDialog__OnSliderValueChange(
 
   sliderWithButton = this->fields.sliderWithButton;
   if ( !sliderWithButton )
-    sub_1BCAA3C(0LL, method);
+    sub_1BD36B4(0LL, method);
   v4 = UISliderWithButton__sliderValueChange(sliderWithButton, 0LL);
   CommandCardExceedConfirmDialog__SetCommandCard(this, v4, v5);
   CommandCardExceedConfirmDialog__SetValueLabels(this, v4, v6);
@@ -408,184 +404,161 @@ void __fastcall CommandCardExceedConfirmDialog__Open(
         const MethodInfo *method)
 {
   __int64 v15; // x1
-  __int64 v16; // x2
+  __int64 v16; // x1
   __int64 v17; // x1
-  __int64 v18; // x2
+  __int64 v18; // x1
   __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v20; // x1
   __int64 v21; // x1
-  __int64 v22; // x2
+  __int64 v22; // x1
   __int64 v23; // x1
-  __int64 v24; // x2
+  __int64 v24; // x1
   __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x1
-  __int64 v28; // x2
-  __int64 v29; // x1
-  __int64 v30; // x2
-  __int64 v31; // x1
-  __int64 v32; // x2
-  __int64 v33; // x1
-  __int64 v34; // x2
-  __int64 v35; // x1
-  __int64 v36; // x2
-  System_Action_o *v37; // x26
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
+  System_Action_o *v26; // x26
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  int64_t v33; // x2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  BattleSetupInfo_o *v36; // x5
+  FollowerInfo_o *v37; // x6
+  PartyListViewItem_o *v38; // x7
   void *Instance; // x0
-  const MethodInfo *v51; // x1
+  const MethodInfo *v40; // x1
   Il2CppObject *Entity; // x0
-  int64_t v53; // x2
-  int32_t v54; // w3
-  System_String_o *v55; // x4
-  BattleSetupInfo_o *v56; // x5
-  FollowerInfo_o *v57; // x6
-  PartyListViewItem_o *v58; // x7
+  int64_t v42; // x2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  BattleSetupInfo_o *v45; // x5
+  FollowerInfo_o *v46; // x6
+  PartyListViewItem_o *v47; // x7
   Il2CppObject *MasterData_object; // x0
+  int64_t v49; // x2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  BattleSetupInfo_o *v52; // x5
+  FollowerInfo_o *v53; // x6
+  PartyListViewItem_o *v54; // x7
+  __int64 v55; // x0
+  __int64 v56; // x1
+  struct System_Int32_array *commandCardParam; // x8
+  CommandCardRankParamMaster_o *commandCardRankParamMaster; // x8
+  struct CommandCardRankParamEntity_array *BeyondEntities; // x0
   int64_t v60; // x2
   int32_t v61; // w3
   System_String_o *v62; // x4
   BattleSetupInfo_o *v63; // x5
   FollowerInfo_o *v64; // x6
   PartyListViewItem_o *v65; // x7
-  __int64 v66; // x0
-  __int64 v67; // x1
-  struct System_Int32_array *commandCardParam; // x8
-  CommandCardRankParamMaster_o *commandCardRankParamMaster; // x8
-  struct CommandCardRankParamEntity_array *BeyondEntities; // x0
-  int64_t v71; // x2
-  int32_t v72; // w3
-  System_String_o *v73; // x4
-  BattleSetupInfo_o *v74; // x5
-  FollowerInfo_o *v75; // x6
-  PartyListViewItem_o *v76; // x7
-  __int64 v77; // x1
-  BalanceConfig_c *v78; // x0
+  BalanceConfig_c *v66; // x0
   int32_t ItemUsableCount; // w20
-  const MethodInfo *v80; // x1
-  const MethodInfo *v81; // x2
-  const MethodInfo *v82; // x2
-  const MethodInfo *v83; // x2
-  const MethodInfo *v84; // x2
-  __int64 v85; // x2
-  __int64 v86; // x3
+  const MethodInfo *v68; // x1
+  const MethodInfo *v69; // x2
+  const MethodInfo *v70; // x2
+  const MethodInfo *v71; // x2
+  const MethodInfo *v72; // x2
   struct UISliderWithButton_o *sliderWithButton; // x8
   System_Collections_Generic_List_EventDelegate__o *onChange; // x20
-  EventDelegate_Callback_o *v89; // x21
-  __int64 v90; // x1
-  __int64 v91; // x2
-  __int64 v92; // x3
+  EventDelegate_Callback_o *v75; // x21
   struct UICommonButton_o *decideButton; // x8
   System_Collections_Generic_List_EventDelegate__o *onClick; // x20
-  EventDelegate_Callback_o *v95; // x21
-  __int64 v96; // x2
-  __int64 v97; // x3
+  EventDelegate_Callback_o *v78; // x21
   struct UICommonButton_o *cancelButton; // x8
-  System_Collections_Generic_List_EventDelegate__o *v99; // x20
-  EventDelegate_Callback_o *v100; // x21
+  System_Collections_Generic_List_EventDelegate__o *v80; // x20
+  EventDelegate_Callback_o *v81; // x21
 
-  if ( (byte_4B19A59 & 1) == 0 )
+  if ( (byte_4B3AA40 & 1) == 0 )
   {
-    sub_1BCA7E0(&System_Action_TypeInfo, userServantCommandCardEntity, previousCommandData);
-    sub_1BCA7E0(&BalanceConfig_TypeInfo, v15, v16);
-    sub_1BCA7E0(&EventDelegate_Callback_TypeInfo, v17, v18);
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_EndOpen__, v19, v20);
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_OnClickCancel__, v21, v22);
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_OnClickDecide__, v23, v24);
-    sub_1BCA7E0(&Method_CommandCardExceedConfirmDialog_OnSliderValueChange__, v25, v26);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_CommandCardRankParamMaster___, v27, v28);
-    sub_1BCA7E0(&Method_DataManager_GetMasterData_ItemMaster___, v29, v30);
-    sub_1BCA7E0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v31, v32);
-    sub_1BCA7E0(&EventDelegate_TypeInfo, v33, v34);
-    sub_1BCA7E0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v35, v36);
-    byte_4B19A59 = 1;
+    sub_1BD3458(&System_Action_TypeInfo, userServantCommandCardEntity);
+    sub_1BD3458(&BalanceConfig_TypeInfo, v15);
+    sub_1BD3458(&EventDelegate_Callback_TypeInfo, v16);
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_EndOpen__, v17);
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_OnClickCancel__, v18);
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_OnClickDecide__, v19);
+    sub_1BD3458(&Method_CommandCardExceedConfirmDialog_OnSliderValueChange__, v20);
+    sub_1BD3458(&Method_DataManager_GetMasterData_CommandCardRankParamMaster___, v21);
+    sub_1BD3458(&Method_DataManager_GetMasterData_ItemMaster___, v22);
+    sub_1BD3458(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v23);
+    sub_1BD3458(&EventDelegate_TypeInfo, v24);
+    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
+    byte_4B3AA40 = 1;
   }
-  v37 = (System_Action_o *)sub_1BCAA2C(
-                             System_Action_TypeInfo,
-                             userServantCommandCardEntity,
-                             previousCommandData,
-                             userCommandCodeId);
-  System_Action___ctor(v37, (Il2CppObject *)this, Method_CommandCardExceedConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v37, 0, 0LL);
+  v26 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  System_Action___ctor(v26, (Il2CppObject *)this, Method_CommandCardExceedConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v26, 0, 0LL);
   this->fields.isButtonEnable = 0;
   this->fields.onRequest = onRequest;
-  sub_1BCA784((PartyOrganizationUtility_o *)&this->fields.onRequest, (int64_t)onRequest, v38, v39, v40, v41, v42, v43);
+  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.onRequest, (int64_t)onRequest, v27, v28, v29, v30, v31, v32);
   this->fields.previousCommandDataList = previousCommandData;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.previousCommandDataList,
     (int64_t)previousCommandData,
-    v44,
-    v45,
-    v46,
-    v47,
-    v48,
-    v49);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_22;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              exceedItemId,
-             (const MethodInfo_31B2E40 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.exceedItemEntity = (struct ItemEntity_o *)Entity;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.exceedItemEntity,
     (int64_t)Entity,
-    v53,
-    v54,
-    v55,
-    v56,
-    v57,
-    v58);
+    v42,
+    v43,
+    v44,
+    v45,
+    v46,
+    v47);
   this->fields.userCommandCodeId = userCommandCodeId;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37DEB14 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F12C90 *)Method_DataManager_GetMasterData_CommandCardRankParamMaster___);
+                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommandCardRankParamMaster___);
   this->fields.commandCardRankParamMaster = (struct CommandCardRankParamMaster_o *)MasterData_object;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.commandCardRankParamMaster,
     (int64_t)MasterData_object,
-    v60,
-    v61,
-    v62,
-    v63,
-    v64,
-    v65);
+    v49,
+    v50,
+    v51,
+    v52,
+    v53,
+    v54);
   if ( userServantCommandCardEntity && (commandCardParam = userServantCommandCardEntity->fields.commandCardParam) != 0LL )
   {
     if ( commandCardParam->max_length <= cardIndex )
-      sub_1BCAA44(v66, v67);
-    v51 = (const MethodInfo *)(unsigned int)commandCardParam->m_Items[cardIndex + 1];
+      sub_1BD36BC(v55, v56);
+    v40 = (const MethodInfo *)(unsigned int)commandCardParam->m_Items[cardIndex + 1];
   }
   else
   {
-    v51 = 0LL;
+    v40 = 0LL;
   }
   Instance = this->fields.commandCardRankParamMaster;
-  this->fields.nowCommandCardParam = (int)v51;
+  this->fields.nowCommandCardParam = (int)v40;
   if ( !Instance )
     goto LABEL_22;
   Instance = (void *)CommandCardRankParamMaster__GetParamRank(
                        (CommandCardRankParamMaster_o *)Instance,
-                       (int32_t)v51,
+                       (int32_t)v40,
                        0LL);
   commandCardRankParamMaster = this->fields.commandCardRankParamMaster;
   this->fields.nowCommandCardParamRank = (int)Instance;
@@ -593,72 +566,71 @@ void __fastcall CommandCardExceedConfirmDialog__Open(
     goto LABEL_22;
   BeyondEntities = CommandCardRankParamMaster__GetBeyondEntities(commandCardRankParamMaster, (int32_t)Instance, 0LL);
   this->fields.beyondRankParamEntities = BeyondEntities;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&this->fields.beyondRankParamEntities,
     (int64_t)BeyondEntities,
-    v71,
-    v72,
-    v73,
-    v74,
-    v75,
-    v76);
-  v78 = BalanceConfig_TypeInfo;
+    v60,
+    v61,
+    v62,
+    v63,
+    v64,
+    v65);
+  v66 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v77);
-    v78 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    v66 = BalanceConfig_TypeInfo;
   }
-  this->fields.constantMaxStatus = v78->static_fields->CommandCardParamUpMax;
+  this->fields.constantMaxStatus = v66->static_fields->CommandCardParamUpMax;
   Instance = UserGameMaster__getSelfUserGame(0LL);
   if ( !Instance )
     goto LABEL_22;
   this->fields.userQp = *((_DWORD *)Instance + 24);
-  ItemUsableCount = CommandCardExceedConfirmDialog__GetItemUsableCount(this, v51);
-  CommandCardExceedConfirmDialog__UpdateDisplay(this, v80);
-  CommandCardExceedConfirmDialog__SetStaticLabels(this, ItemUsableCount, v81);
-  CommandCardExceedConfirmDialog__SetCommandCard(this, 1, v82);
-  CommandCardExceedConfirmDialog__SetValueLabels(this, 1, v83);
-  CommandCardExceedConfirmDialog__SetSliderWithButton(this, ItemUsableCount, v84);
+  ItemUsableCount = CommandCardExceedConfirmDialog__GetItemUsableCount(this, v40);
+  CommandCardExceedConfirmDialog__UpdateDisplay(this, v68);
+  CommandCardExceedConfirmDialog__SetStaticLabels(this, ItemUsableCount, v69);
+  CommandCardExceedConfirmDialog__SetCommandCard(this, 1, v70);
+  CommandCardExceedConfirmDialog__SetValueLabels(this, 1, v71);
+  CommandCardExceedConfirmDialog__SetSliderWithButton(this, ItemUsableCount, v72);
   sliderWithButton = this->fields.sliderWithButton;
   if ( !sliderWithButton )
     goto LABEL_22;
   onChange = sliderWithButton->fields.onChange;
-  v89 = (EventDelegate_Callback_o *)sub_1BCAA2C(EventDelegate_Callback_TypeInfo, v51, v85, v86);
+  v75 = (EventDelegate_Callback_o *)sub_1BD36A4(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v89,
+    v75,
     (Il2CppObject *)this,
     Method_CommandCardExceedConfirmDialog_OnSliderValueChange__,
     0LL);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v90);
-  Instance = EventDelegate__Set_47333340(onChange, v89, 0LL);
+    j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+  Instance = EventDelegate__Set_47458532(onChange, v75, 0LL);
   decideButton = this->fields.decideButton;
   if ( !decideButton
     || (onClick = decideButton->fields.onClick,
-        v95 = (EventDelegate_Callback_o *)sub_1BCAA2C(EventDelegate_Callback_TypeInfo, v51, v91, v92),
+        v78 = (EventDelegate_Callback_o *)sub_1BD36A4(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
-          v95,
+          v78,
           (Il2CppObject *)this,
           (intptr_t)Method_CommandCardExceedConfirmDialog_OnClickDecide__,
           0LL),
-        Instance = EventDelegate__Set_47333340(onClick, v95, 0LL),
+        Instance = EventDelegate__Set_47458532(onClick, v78, 0LL),
         (cancelButton = this->fields.cancelButton) == 0LL) )
   {
 LABEL_22:
-    sub_1BCAA3C(Instance, v51);
+    sub_1BD36B4(Instance, v40);
   }
-  v99 = cancelButton->fields.onClick;
-  v100 = (EventDelegate_Callback_o *)sub_1BCAA2C(EventDelegate_Callback_TypeInfo, v51, v96, v97);
+  v80 = cancelButton->fields.onClick;
+  v81 = (EventDelegate_Callback_o *)sub_1BD36A4(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v100,
+    v81,
     (Il2CppObject *)this,
     (intptr_t)Method_CommandCardExceedConfirmDialog_OnClickCancel__,
     0LL);
-  EventDelegate__Set_47333340(v99, v100, 0LL);
+  EventDelegate__Set_47458532(v80, v81, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CommandCardExceedConfirmDialog__SetButtonState(
         CommandCardExceedConfirmDialog_o *this,
         bool isOk,
@@ -669,7 +641,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetButtonState(
 
   decideButton = this->fields.decideButton;
   if ( !decideButton )
-    sub_1BCAA3C(0LL, isOk);
+    sub_1BD36B4(0LL, isOk);
   if ( isOk )
     v4 = 0LL;
   else
@@ -706,7 +678,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetCommandCard(
   {
     if ( !max_length )
 LABEL_16:
-      sub_1BCAA44(this, *(_QWORD *)&itemUseCount);
+      sub_1BD36BC(this, *(_QWORD *)&itemUseCount);
     CommandCardExceedConfirmDialog__DisplayCommandCards(
       this,
       this->fields.previousCommandCard,
@@ -719,7 +691,7 @@ LABEL_16:
   previousCommandCard2Sprites = this->fields.previousCommandCard2Sprites;
   if ( !previousCommandCard2Sprites )
 LABEL_14:
-    sub_1BCAA3C(this, *(_QWORD *)&itemUseCount);
+    sub_1BD36B4(this, *(_QWORD *)&itemUseCount);
   v9 = 4LL;
   while ( 1 )
   {
@@ -770,7 +742,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetSliderWithButton(
     || (UISliderWithButton__init(sliderWithButton, itemUsableCount, 0, 1, 0LL),
         (sliderWithButton = this->fields.sliderWithButton) == 0LL) )
   {
-    sub_1BCAA3C(sliderWithButton, *(_QWORD *)&itemUsableCount);
+    sub_1BD36B4(sliderWithButton, *(_QWORD *)&itemUsableCount);
   }
   if ( itemUsableCount >= 2 )
     UISliderWithButton__normalMode(sliderWithButton, 0LL);
@@ -786,44 +758,38 @@ void __fastcall CommandCardExceedConfirmDialog__SetStaticLabels(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
   UILabel_o *titleLabel; // x21
   System_String_o *gameObject; // x0
-  __int64 v17; // x1
+  __int64 v12; // x1
   UILabel_o *descriptionLabel; // x21
-  __int64 v19; // x1
   UILabel_o *itemNameLabel; // x20
   struct ItemEntity_o *exceedItemEntity; // x8
   UILabel_o *decideButtonLabel; // x20
   UILabel_o *cancelButtonLabel; // x19
 
-  if ( (byte_4B19A5A & 1) == 0 )
+  if ( (byte_4B3AA41 & 1) == 0 )
   {
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, *(_QWORD *)&itemUsableCount, method);
-    sub_1BCA7E0(&StringLiteral_3736/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, v5, v6);
-    sub_1BCA7E0(&StringLiteral_3738/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, v7, v8);
-    sub_1BCA7E0(&StringLiteral_3727/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, v9, v10);
-    sub_1BCA7E0(&StringLiteral_3739/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, v11, v12);
-    sub_1BCA7E0(&StringLiteral_3728/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, v13, v14);
-    byte_4B19A5A = 1;
+    sub_1BD3458(&LocalizationManager_TypeInfo, *(_QWORD *)&itemUsableCount);
+    sub_1BD3458(&StringLiteral_3743/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, v5);
+    sub_1BD3458(&StringLiteral_3745/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, v6);
+    sub_1BD3458(&StringLiteral_3734/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, v7);
+    sub_1BD3458(&StringLiteral_3746/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, v8);
+    sub_1BD3458(&StringLiteral_3735/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, v9);
+    byte_4B3AA41 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&itemUsableCount);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3746/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_20;
   UILabel__set_text(titleLabel, gameObject, 0LL);
   descriptionLabel = this->fields.descriptionLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3738/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3745/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, 0LL);
   if ( !descriptionLabel )
     goto LABEL_20;
   UILabel__set_text(descriptionLabel, gameObject, 0LL);
@@ -838,27 +804,27 @@ void __fastcall CommandCardExceedConfirmDialog__SetStaticLabels(
     goto LABEL_15;
   itemNameLabel = this->fields.itemNameLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3743/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, 0LL);
   exceedItemEntity = this->fields.exceedItemEntity;
   if ( !exceedItemEntity
     || (gameObject = System_String__Format(gameObject, (Il2CppObject *)exceedItemEntity->fields.name, 0LL),
         !itemNameLabel) )
   {
 LABEL_20:
-    sub_1BCAA3C(gameObject, v17);
+    sub_1BD36B4(gameObject, v12);
   }
   UILabel__set_text(itemNameLabel, gameObject, 0LL);
 LABEL_15:
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3728/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3735/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_20;
   UILabel__set_text(decideButtonLabel, gameObject, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3727/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, 0LL);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_20;
   UILabel__set_text(cancelButtonLabel, gameObject, 0LL);
@@ -873,62 +839,58 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
 {
   CommandCardExceedConfirmDialog_o *v4; // x19
   __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x1
-  __int64 v16; // x2
+  __int64 v10; // x1
   struct BattleCommandData_array *previousCommandDataList; // x8
   UILabel_o *previousStatusLabel; // x21
-  System_String_o *v19; // x22
+  System_String_o *v13; // x22
   Il2CppObject *NumberFormat; // x23
-  Il2CppObject *v21; // x0
+  Il2CppObject *v15; // x0
   UILabel_o *afterStatusLabel; // x21
   UILabel_o *previousStatusLabel2Sprites; // x21
-  System_String_o *v24; // x22
-  Il2CppObject *v25; // x23
-  Il2CppObject *v26; // x0
+  System_String_o *v18; // x22
+  Il2CppObject *v19; // x23
+  Il2CppObject *v20; // x0
   struct ItemEntity_o *exceedItemEntity; // x8
-  CommandCardExceedConfirmDialog_o *v28; // x22
-  Il2CppObject *v29; // x23
-  Il2CppObject *v30; // x0
-  __int64 v31; // x1
+  CommandCardExceedConfirmDialog_o *v22; // x22
+  Il2CppObject *v23; // x23
+  Il2CppObject *v24; // x0
   UILabel_o *itemCountLabel; // x21
-  System_String_o *v33; // x22
-  Il2CppObject *v34; // x0
-  const MethodInfo *v35; // x2
+  System_String_o *v26; // x22
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  Il2CppObject *v30; // x0
+  const MethodInfo *v31; // x2
   int32_t RequiredQp; // w0
   UILabel_o *requiredQpLabel; // x21
-  int32_t v38; // w20
+  int32_t v34; // w20
   UILabel_o *requiredQpText; // x21
-  CommandCardExceedConfirmDialog_o *v40; // x0
-  const MethodInfo *v41; // x3
+  CommandCardExceedConfirmDialog_o *v36; // x0
+  const MethodInfo *v37; // x3
   UILabel_o *userQpLabel; // x21
   UILabel_o *userQpText; // x21
   UILabel_o *messageLabel; // x21
-  CommandCardExceedConfirmDialog_o *v45; // x0
-  const MethodInfo *v46; // x2
+  CommandCardExceedConfirmDialog_o *v41; // x0
+  const MethodInfo *v42; // x2
   System_String_o *MessageLocalizationKey; // x0
-  __int64 v48; // x1
-  int32_t v49; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v44; // x1
+  int32_t v45; // [xsp+Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_4B19A5B & 1) == 0 )
+  if ( (byte_4B3AA42 & 1) == 0 )
   {
-    sub_1BCA7E0(&int_TypeInfo, *(_QWORD *)&itemUseCount, method);
-    sub_1BCA7E0(&LocalizationManager_TypeInfo, v5, v6);
-    sub_1BCA7E0(&StringLiteral_3729/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, v7, v8);
-    sub_1BCA7E0(&StringLiteral_3733/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, v9, v10);
-    sub_1BCA7E0(&StringLiteral_3731/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, v11, v12);
-    sub_1BCA7E0(&StringLiteral_3735/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, v13, v14);
-    this = (CommandCardExceedConfirmDialog_o *)sub_1BCA7E0(&StringLiteral_3730/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, v15, v16);
-    byte_4B19A5B = 1;
+    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&itemUseCount);
+    sub_1BD3458(&LocalizationManager_TypeInfo, v5);
+    sub_1BD3458(&StringLiteral_3736/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, v6);
+    sub_1BD3458(&StringLiteral_3740/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, v7);
+    sub_1BD3458(&StringLiteral_3738/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, v8);
+    sub_1BD3458(&StringLiteral_3742/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, v9);
+    this = (CommandCardExceedConfirmDialog_o *)sub_1BD3458(&StringLiteral_3737/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, v10);
+    byte_4B3AA42 = 1;
   }
   previousCommandDataList = v4->fields.previousCommandDataList;
   if ( !previousCommandDataList )
@@ -937,11 +899,11 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
   {
     previousStatusLabel = v4->fields.previousStatusLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&itemUseCount);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3730/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
     NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.nowCommandCardParam, 0LL);
-    v21 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
-    this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62415592(v19, NumberFormat, v21, 0LL);
+    v15 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
+    this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62539620(v13, NumberFormat, v15, 0LL);
     if ( previousStatusLabel )
     {
       UILabel__set_text(previousStatusLabel, (System_String_o *)this, 0LL);
@@ -949,61 +911,61 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
       goto LABEL_13;
     }
 LABEL_28:
-    sub_1BCAA3C(this, *(_QWORD *)&itemUseCount);
+    sub_1BD36B4(this, *(_QWORD *)&itemUseCount);
   }
   previousStatusLabel2Sprites = v4->fields.previousStatusLabel2Sprites;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&itemUseCount);
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3730/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
-  v25 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.nowCommandCardParam, 0LL);
-  v26 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
-  this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62415592(v24, v25, v26, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3737/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
+  v19 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.nowCommandCardParam, 0LL);
+  v20 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
+  this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62539620(v18, v19, v20, 0LL);
   if ( !previousStatusLabel2Sprites )
     goto LABEL_28;
   UILabel__set_text(previousStatusLabel2Sprites, (System_String_o *)this, 0LL);
   afterStatusLabel = v4->fields.afterStatusLabel2Sprites;
 LABEL_13:
-  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3729/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0LL);
+  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0LL);
   exceedItemEntity = v4->fields.exceedItemEntity;
   if ( !exceedItemEntity )
     goto LABEL_28;
-  v28 = this;
-  v29 = (Il2CppObject *)LocalizationManager__GetNumberFormat(
+  v22 = this;
+  v23 = (Il2CppObject *)LocalizationManager__GetNumberFormat(
                           v4->fields.nowCommandCardParam + exceedItemEntity->fields.value * itemUseCount,
                           0LL);
-  v30 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
-  this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62415592((System_String_o *)v28, v29, v30, 0LL);
+  v24 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v4->fields.constantMaxStatus, 0LL);
+  this = (CommandCardExceedConfirmDialog_o *)System_String__Format_62539620((System_String_o *)v22, v23, v24, 0LL);
   if ( !afterStatusLabel )
     goto LABEL_28;
   UILabel__set_text(afterStatusLabel, (System_String_o *)this, 0LL);
   itemCountLabel = v4->fields.itemCountLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31);
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3731/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, 0LL);
-  v49 = itemUseCount;
-  v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
-  this = (CommandCardExceedConfirmDialog_o *)System_String__Format(v33, v34, 0LL);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3738/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, 0LL);
+  v45 = itemUseCount;
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v27, v28, v29);
+  this = (CommandCardExceedConfirmDialog_o *)System_String__Format(v26, v30, 0LL);
   if ( !itemCountLabel )
     goto LABEL_28;
   UILabel__set_text(itemCountLabel, (System_String_o *)this, 0LL);
-  RequiredQp = CommandCardExceedConfirmDialog__GetRequiredQp(v4, itemUseCount, v35);
+  RequiredQp = CommandCardExceedConfirmDialog__GetRequiredQp(v4, itemUseCount, v31);
   requiredQpLabel = v4->fields.requiredQpLabel;
-  v38 = RequiredQp;
-  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3733/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, 0LL);
+  v34 = RequiredQp;
+  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3740/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, 0LL);
   if ( !requiredQpLabel )
     goto LABEL_28;
   UILabel__set_text(requiredQpLabel, (System_String_o *)this, 0LL);
   requiredQpText = v4->fields.requiredQpText;
   this = (CommandCardExceedConfirmDialog_o *)CommandCardExceedConfirmDialog__GetRequiredQpText(
-                                               v40,
-                                               v38,
-                                               v38 <= v4->fields.userQp,
-                                               v41);
+                                               v36,
+                                               v34,
+                                               v34 <= v4->fields.userQp,
+                                               v37);
   if ( !requiredQpText )
     goto LABEL_28;
   UILabel__set_text(requiredQpText, (System_String_o *)this, 0LL);
   userQpLabel = v4->fields.userQpLabel;
-  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3735/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, 0LL);
+  this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3742/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, 0LL);
   if ( !userQpLabel )
     goto LABEL_28;
   UILabel__set_text(userQpLabel, (System_String_o *)this, 0LL);
@@ -1013,7 +975,7 @@ LABEL_13:
     goto LABEL_28;
   UILabel__set_text(userQpText, (System_String_o *)this, 0LL);
   messageLabel = v4->fields.messageLabel;
-  MessageLocalizationKey = CommandCardExceedConfirmDialog__GetMessageLocalizationKey(v45, v38 <= v4->fields.userQp, v46);
+  MessageLocalizationKey = CommandCardExceedConfirmDialog__GetMessageLocalizationKey(v41, v34 <= v4->fields.userQp, v42);
   this = (CommandCardExceedConfirmDialog_o *)LocalizationManager__Get(MessageLocalizationKey, 0LL);
   if ( !messageLabel )
     goto LABEL_28;
@@ -1021,13 +983,13 @@ LABEL_13:
   this = (CommandCardExceedConfirmDialog_o *)v4->fields.decideButton;
   if ( !this )
     goto LABEL_28;
-  if ( v38 <= v4->fields.userQp )
-    v48 = 0LL;
+  if ( v34 <= v4->fields.userQp )
+    v44 = 0LL;
   else
-    v48 = 3LL;
+    v44 = 3LL;
   ((void (__fastcall *)(CommandCardExceedConfirmDialog_o *, __int64, __int64, void *))this->klass[1]._1.klass)(
     this,
-    v48,
+    v44,
     1LL,
     this->klass[1]._1.fields);
 }
@@ -1037,48 +999,47 @@ void __fastcall CommandCardExceedConfirmDialog__UpdateDisplay(
         CommandCardExceedConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  CommandCardExceedConfirmDialog_o *v3; // x19
+  CommandCardExceedConfirmDialog_o *v2; // x19
   struct BattleCommandData_array *previousCommandDataList; // x8
   int max_length; // w21
   UnityEngine_Object_o *bgSprite; // x20
-  int32_t v7; // w1
+  int32_t v6; // w1
 
-  v3 = this;
-  if ( (byte_4B19A62 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4B3AA49 & 1) == 0 )
   {
-    this = (CommandCardExceedConfirmDialog_o *)sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B19A62 = 1;
+    this = (CommandCardExceedConfirmDialog_o *)sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3AA49 = 1;
   }
-  previousCommandDataList = v3->fields.previousCommandDataList;
+  previousCommandDataList = v2->fields.previousCommandDataList;
   if ( !previousCommandDataList )
     goto LABEL_17;
   max_length = previousCommandDataList->max_length;
-  bgSprite = (UnityEngine_Object_o *)v3->fields.bgSprite;
+  bgSprite = (UnityEngine_Object_o *)v2->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(bgSprite, 0LL, 0LL) )
   {
-    this = (CommandCardExceedConfirmDialog_o *)v3->fields.bgSprite;
+    this = (CommandCardExceedConfirmDialog_o *)v2->fields.bgSprite;
     if ( !this )
       goto LABEL_17;
     if ( max_length <= 1 )
-      v7 = 668;
+      v6 = 668;
     else
-      v7 = 730;
-    UIWidget__set_width((UIWidget_o *)this, v7, 0LL);
+      v6 = 730;
+    UIWidget__set_width((UIWidget_o *)this, v6, 0LL);
   }
-  this = (CommandCardExceedConfirmDialog_o *)v3->fields.previousBase;
+  this = (CommandCardExceedConfirmDialog_o *)v2->fields.previousBase;
   if ( !this
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, max_length < 2, 0LL),
-        (this = (CommandCardExceedConfirmDialog_o *)v3->fields.afterBase) == 0LL)
+        (this = (CommandCardExceedConfirmDialog_o *)v2->fields.afterBase) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, max_length < 2, 0LL),
-        (this = (CommandCardExceedConfirmDialog_o *)v3->fields.previousBase2Sprite) == 0LL)
+        (this = (CommandCardExceedConfirmDialog_o *)v2->fields.previousBase2Sprite) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, max_length > 1, 0LL),
-        (this = (CommandCardExceedConfirmDialog_o *)v3->fields.afterBase2Sprite) == 0LL) )
+        (this = (CommandCardExceedConfirmDialog_o *)v2->fields.afterBase2Sprite) == 0LL) )
   {
 LABEL_17:
-    sub_1BCAA3C(this, method);
+    sub_1BD36B4(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, max_length > 1, 0LL);
 }
@@ -1088,23 +1049,22 @@ UnityEngine_GameObject_o *__fastcall CommandCardExceedConfirmDialog__get_closeBt
         CommandCardExceedConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   UnityEngine_Object_o *cancelButton; // x20
-  __int64 v5; // x1
-  UnityEngine_Component_o *v7; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B19A61 & 1) == 0 )
+  if ( (byte_4B3AA48 & 1) == 0 )
   {
-    sub_1BCA7E0(&UnityEngine_Object_TypeInfo, method, v2);
-    byte_4B19A61 = 1;
+    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3AA48 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(cancelButton, 0LL, 0LL) )
     return 0LL;
-  v7 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v7 )
-    sub_1BCAA3C(0LL, v5);
-  return UnityEngine_Component__get_gameObject(v7, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v6 )
+    sub_1BD36B4(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

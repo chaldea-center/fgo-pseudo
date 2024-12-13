@@ -8,18 +8,17 @@ void __fastcall ServantAddMaster___cctor(const MethodInfo *method)
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
-  __int64 v9; // x2
 
-  if ( (byte_4B16843 & 1) == 0 )
+  if ( (byte_4B377F8 & 1) == 0 )
   {
-    sub_1BCA7E0(&ServantAddMaster_TypeInfo, v1, v2);
-    sub_1BCA7E0(&StringLiteral_22833/*"presentDialogMessageId"*/, v8, v9);
-    byte_4B16843 = 1;
+    sub_1BD3458(&ServantAddMaster_TypeInfo, v1);
+    sub_1BD3458(&StringLiteral_22866/*"presentDialogMessageId"*/, v8);
+    byte_4B377F8 = 1;
   }
-  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_22833/*"presentDialogMessageId"*/;
-  sub_1BCA784(
+  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_22866/*"presentDialogMessageId"*/;
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)ServantAddMaster_TypeInfo->static_fields,
-    StringLiteral_22833/*"presentDialogMessageId"*/,
+    StringLiteral_22866/*"presentDialogMessageId"*/,
     v2,
     v3,
     v4,
@@ -31,15 +30,13 @@ void __fastcall ServantAddMaster___cctor(const MethodInfo *method)
 
 void __fastcall ServantAddMaster___ctor(ServantAddMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-
-  if ( (byte_4B16842 & 1) == 0 )
+  if ( (byte_4B377F7 & 1) == 0 )
   {
-    sub_1BCA7E0(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__, method, v2);
-    byte_4B16842 = 1;
+    sub_1BD3458(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__, method);
+    byte_4B377F7 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     375,
-    (const MethodInfo_31B2E00 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
+    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
 }

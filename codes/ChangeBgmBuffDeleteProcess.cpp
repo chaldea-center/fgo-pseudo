@@ -4,7 +4,6 @@ void __fastcall ChangeBgmBuffDeleteProcess___ctor(ChangeBgmBuffDeleteProcess_o *
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ChangeBgmBuffDeleteProcess__Exec(
         ChangeBgmBuffDeleteProcess_o *this,
         BattleBuffData_BuffData_o *buff,
@@ -24,29 +23,29 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
   const MethodInfo *v16; // x2
   __int64 v17; // x0
 
-  if ( (byte_4B1884B & 1) == 0 )
+  if ( (byte_4B39825 & 1) == 0 )
   {
-    sub_1BCA7E0(&BattleBuffData_BuffData___TypeInfo, buff, isAddAfterTask);
-    byte_4B1884B = 1;
+    sub_1BD3458(&BattleBuffData_BuffData___TypeInfo, buff);
+    byte_4B39825 = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1BCA888(BattleBuffData_BuffData___TypeInfo, 1LL);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1BD3500(BattleBuffData_BuffData___TypeInfo, 1LL);
   if ( !v7 )
     goto LABEL_10;
   v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1BCA91C(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1BD3594(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v17 = sub_1BCAA60(0LL);
-      sub_1BCA908(v17, 0LL);
+      v17 = sub_1BD36D8(0LL);
+      sub_1BD3580(v17, 0LL);
     }
   }
   if ( !LODWORD(v15->fields._Data_k__BackingField) )
-    sub_1BCAA44(v7, v8);
+    sub_1BD36BC(v7, v8);
   v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1BCA784(
+  sub_1BD33FC(
     (PartyOrganizationUtility_o *)&v15->fields._Perf_k__BackingField,
     (int64_t)buff,
     v9,
@@ -63,7 +62,7 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0LL) )
   {
 LABEL_10:
-    sub_1BCAA3C(v7, v8);
+    sub_1BD36B4(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }
