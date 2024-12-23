@@ -13,14 +13,14 @@ void __fastcall UserFormationRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4B38B9B & 1) == 0 )
+  if ( (byte_4B685EB & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_24676/*"userEquipId"*/, *(_QWORD *)&deckNo);
-    sub_1BD3458(&StringLiteral_18740/*"deckNo"*/, v7);
-    byte_4B38B9B = 1;
+    sub_1BE4ACC(&StringLiteral_24729/*"userEquipId"*/, *(_QWORD *)&deckNo);
+    sub_1BE4ACC(&StringLiteral_18765/*"deckNo"*/, v7);
+    byte_4B685EB = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18740/*"deckNo"*/, deckNo, 0LL);
-  RequestBase__addField_41971420((RequestBase_o *)this, (System_String_o *)StringLiteral_24676/*"userEquipId"*/, userEquipId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18765/*"deckNo"*/, deckNo, 0LL);
+  RequestBase__addField_42110748((RequestBase_o *)this, (System_String_o *)StringLiteral_24729/*"userEquipId"*/, userEquipId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -29,11 +29,11 @@ System_String_o *__fastcall UserFormationRequest__getMockData(UserFormationReque
 {
   __int64 v2; // x1
 
-  if ( (byte_4B38B9A & 1) == 0 )
+  if ( (byte_4B685EA & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_1/*""*/, v2);
-    byte_4B38B9A = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v2);
+    byte_4B685EA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -46,16 +46,16 @@ System_String_o *__fastcall UserFormationRequest__getURL(UserFormationRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B38B99 & 1) == 0 )
+  if ( (byte_4B685E9 & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_24754/*"userformation/Setup"*/, v2);
-    byte_4B38B99 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_24807/*"userformation/Setup"*/, v2);
+    byte_4B685E9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_24754/*"userformation/Setup"*/, 0LL);
+  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_24807/*"userformation/Setup"*/, 0LL);
 }
 
 
@@ -72,12 +72,12 @@ void __fastcall UserFormationRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4B38B9C & 1) == 0 )
+  if ( (byte_4B685EC & 1) == 0 )
   {
-    sub_1BD3458(&JsonManager_TypeInfo, responseList);
-    sub_1BD3458(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v6);
-    byte_4B38B9C = 1;
+    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
+    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
+    byte_4B685EC = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -91,7 +91,7 @@ void __fastcall UserFormationRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22325/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22370/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

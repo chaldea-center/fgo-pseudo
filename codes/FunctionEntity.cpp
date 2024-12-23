@@ -1,13 +1,13 @@
 void __fastcall FunctionEntity___ctor(FunctionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B373EF & 1) == 0 )
+  if ( (byte_4B66E10 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B373EF = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B66E10 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,19 +27,19 @@ EffectFlipData_array *__fastcall FunctionEntity__GetActEnemyEffectFlipDataArray(
   EffectFlipData_array *result; // x0
   EffectFlipData_array *v7; // x19
 
-  if ( (byte_4B373ED & 1) == 0 )
+  if ( (byte_4B66E0E & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_GetValue_string__object___, method);
-    sub_1BD3458(&Method_JsonManager_DeserializeArray_EffectFlipData___, v3);
-    sub_1BD3458(&JsonManager_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_16833/*"actEnemyEffectFlip"*/, v5);
-    byte_4B373ED = 1;
+    sub_1BE4ACC(&Method_BasicHelper_GetValue_string__object___, method);
+    sub_1BE4ACC(&Method_JsonManager_DeserializeArray_EffectFlipData___, v3);
+    sub_1BE4ACC(&JsonManager_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_16854/*"actEnemyEffectFlip"*/, v5);
+    byte_4B66E0E = 1;
   }
   result = (EffectFlipData_array *)BasicHelper__GetValue_object__object_(
                                      (System_Collections_Generic_Dictionary_K__V__o *)this->fields.script,
-                                     (Il2CppObject *)StringLiteral_16833/*"actEnemyEffectFlip"*/,
+                                     (Il2CppObject *)StringLiteral_16854/*"actEnemyEffectFlip"*/,
                                      0LL,
-                                     (const MethodInfo_2F1FDCC *)Method_BasicHelper_GetValue_string__object___);
+                                     (const MethodInfo_2F47858 *)Method_BasicHelper_GetValue_string__object___);
   if ( result )
   {
     v7 = result;
@@ -47,7 +47,7 @@ EffectFlipData_array *__fastcall FunctionEntity__GetActEnemyEffectFlipDataArray(
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     return (EffectFlipData_array *)JsonManager__DeserializeArray_object_(
                                      &v7->obj,
-                                     (const MethodInfo_2F98C0C *)Method_JsonManager_DeserializeArray_EffectFlipData___);
+                                     (const MethodInfo_2FC092C *)Method_JsonManager_DeserializeArray_EffectFlipData___);
   }
   return result;
 }
@@ -64,9 +64,9 @@ int32_t __fastcall FunctionEntity__GetAddStateBuffId(FunctionEntity_o *this, con
     return -1;
   vals = this->fields.vals;
   if ( !vals )
-    sub_1BD36B4(isAddState, v4);
+    sub_1BE4D28(isAddState, v4);
   if ( !vals->max_length )
-    sub_1BD36BC(isAddState, v4);
+    sub_1BE4D30(isAddState, v4);
   return vals->m_Items[1];
 }
 
@@ -80,37 +80,37 @@ int32_t __fastcall FunctionEntity__GetAddStateBuffTypeFromFunction(FunctionEntit
   struct System_Int32_array *vals; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4B373E8 & 1) == 0 )
+  if ( (byte_4B66E09 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_BuffMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
-    byte_4B373E8 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
+    byte_4B66E09 = 1;
   }
   entity = 0LL;
   if ( FuncList__isAddState(this->fields.funcType, 0LL) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_BuffMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
     vals = this->fields.vals;
     if ( !vals )
       goto LABEL_13;
     if ( !vals->max_length )
-      sub_1BD36BC(Master_object, v6);
+      sub_1BE4D30(Master_object, v6);
     if ( !Master_object )
       goto LABEL_13;
     Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                       &entity,
                                       vals->m_Items[1],
-                                      (const MethodInfo_31D1F44 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                      (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Master_object & 1) != 0 )
     {
       if ( entity )
         return HIDWORD(entity[1].klass);
 LABEL_13:
-      sub_1BD36B4(Master_object, v6);
+      sub_1BE4D28(Master_object, v6);
     }
   }
   return 0;
@@ -131,24 +131,24 @@ System_Int32_array *__fastcall FunctionEntity__GetFuncIndividuality(FunctionEnti
   const MethodInfo *v12; // x2
   System_Collections_Generic_IEnumerable_T__o *IntArrayDefaultEmpty; // x0
 
-  if ( (byte_4B373EA & 1) == 0 )
+  if ( (byte_4B66E0B & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_FuncTypeDetailMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__AddRange__, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__ToArray__, v5);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int___ctor__, v6);
-    sub_1BD3458(&System_Collections_Generic_List_int__TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_19898/*"funcIndividuality"*/, v8);
-    byte_4B373EA = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_FuncTypeDetailMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v6);
+    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_19936/*"funcIndividuality"*/, v8);
+    byte_4B66E0B = 1;
   }
-  v9 = (System_Collections_Generic_List_int__o *)sub_1BD36A4(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_35A3518 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_FuncTypeDetailMaster___);
   if ( !Master_object
     || (Master_object = FuncTypeDetailMaster__GetIndividuality(
                           (FuncTypeDetailMaster_o *)Master_object,
@@ -156,23 +156,23 @@ System_Int32_array *__fastcall FunctionEntity__GetFuncIndividuality(FunctionEnti
                           v12),
         !v9) )
   {
-    sub_1BD36B4(Master_object, v11);
+    sub_1BE4D28(Master_object, v11);
   }
   System_Collections_Generic_List_int___AddRange(
     v9,
     (System_Collections_Generic_IEnumerable_T__o *)Master_object,
-    (const MethodInfo_35A3F78 *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
   IntArrayDefaultEmpty = (System_Collections_Generic_IEnumerable_T__o *)EntityScriptUtil__GetIntArrayDefaultEmpty(
                                                                           this->fields.script,
-                                                                          (System_String_o *)StringLiteral_19898/*"funcIndividuality"*/,
+                                                                          (System_String_o *)StringLiteral_19936/*"funcIndividuality"*/,
                                                                           0LL);
   System_Collections_Generic_List_int___AddRange(
     v9,
     IntArrayDefaultEmpty,
-    (const MethodInfo_35A3F78 *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
   return System_Collections_Generic_List_int___ToArray(
            v9,
-           (const MethodInfo_35A5824 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -181,12 +181,12 @@ System_String_o *__fastcall FunctionEntity__GetNoEffectText(
         System_String_o *defText,
         const MethodInfo *method)
 {
-  if ( (byte_4B373EE & 1) == 0 )
+  if ( (byte_4B66E0F & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_22359/*"noEffectText"*/, defText);
-    byte_4B373EE = 1;
+    sub_1BE4ACC(&StringLiteral_22404/*"noEffectText"*/, defText);
+    byte_4B66E0F = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22359/*"noEffectText"*/, defText, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22404/*"noEffectText"*/, defText, 0LL);
 }
 
 
@@ -194,12 +194,12 @@ int32_t __fastcall FunctionEntity__GetPopupTextCondensedScaleSize(FunctionEntity
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B373EB & 1) == 0 )
+  if ( (byte_4B66E0C & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_10845/*"PopupTextCondensedScaleSize"*/, method);
-    byte_4B373EB = 1;
+    sub_1BE4ACC(&StringLiteral_10858/*"PopupTextCondensedScaleSize"*/, method);
+    byte_4B66E0C = 1;
   }
-  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10845/*"PopupTextCondensedScaleSize"*/, 0, v2);
+  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10858/*"PopupTextCondensedScaleSize"*/, 0, v2);
 }
 
 
@@ -207,12 +207,12 @@ int32_t __fastcall FunctionEntity__GetPopupTextCondensedScaleValue(FunctionEntit
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B373EC & 1) == 0 )
+  if ( (byte_4B66E0D & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_10846/*"PopupTextCondensedScaleValue"*/, method);
-    byte_4B373EC = 1;
+    sub_1BE4ACC(&StringLiteral_10859/*"PopupTextCondensedScaleValue"*/, method);
+    byte_4B66E0D = 1;
   }
-  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10846/*"PopupTextCondensedScaleValue"*/, 0, v2);
+  return FunctionEntity__getScript(this, (System_String_o *)StringLiteral_10859/*"PopupTextCondensedScaleValue"*/, 0, v2);
 }
 
 
@@ -236,7 +236,7 @@ void __fastcall FunctionEntity__GetTargetVals(
   System_Int32_array *tvals; // x1
 
   *originalTvals = 0LL;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)originalTvals,
     0LL,
     (int64_t)overwriteTvals,
@@ -249,7 +249,7 @@ void __fastcall FunctionEntity__GetTargetVals(
   {
     tvals = this->fields.tvals;
     *originalTvals = tvals;
-    sub_1BD33FC((PartyOrganizationUtility_o *)originalTvals, (int64_t)tvals, v12, v13, v14, v15, v16, v17);
+    sub_1BE4A70((PartyOrganizationUtility_o *)originalTvals, (int64_t)tvals, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -259,14 +259,14 @@ bool __fastcall FunctionEntity__TryGetOverwriteTvals(
         System_Int32_array_array **tvalsArray,
         const MethodInfo *method)
 {
-  if ( (byte_4B373E9 & 1) == 0 )
+  if ( (byte_4B66E0A & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_22693/*"overwriteTvals"*/, tvalsArray);
-    byte_4B373E9 = 1;
+    sub_1BE4ACC(&StringLiteral_22738/*"overwriteTvals"*/, tvalsArray);
+    byte_4B66E0A = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_22693/*"overwriteTvals"*/,
+           (System_String_o *)StringLiteral_22738/*"overwriteTvals"*/,
            tvalsArray,
            0LL);
 }
@@ -276,17 +276,17 @@ bool __fastcall FunctionEntity__checkScript(FunctionEntity_o *this, System_Strin
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B373E3 & 1) == 0 )
+  if ( (byte_4B66E04 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    byte_4B373E3 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_4B66E04 = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
                        (Il2CppObject *)key,
-                       (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -295,14 +295,14 @@ System_Int32_array *__fastcall FunctionEntity__getEffectList(FunctionEntity_o *t
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4B373E6 & 1) == 0 )
+  if ( (byte_4B66E07 & 1) == 0 )
   {
-    sub_1BD3458(&int___TypeInfo, method);
-    byte_4B373E6 = 1;
+    sub_1BE4ACC(&int___TypeInfo, method);
+    byte_4B66E07 = 1;
   }
   result = this->fields.effectList;
   if ( !result )
-    return (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -311,14 +311,14 @@ System_Int32_array *__fastcall FunctionEntity__getQuestTargetValues(FunctionEnti
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4B373E7 & 1) == 0 )
+  if ( (byte_4B66E08 & 1) == 0 )
   {
-    sub_1BD3458(&int___TypeInfo, method);
-    byte_4B373E7 = 1;
+    sub_1BE4ACC(&int___TypeInfo, method);
+    byte_4B66E08 = 1;
   }
   result = this->fields.questTvals;
   if ( !result )
-    return (System_Int32_array *)sub_1BD3500(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -342,11 +342,11 @@ int32_t __fastcall FunctionEntity__getScript(
   const MethodInfo *v16; // x3
 
   v4 = defVal;
-  if ( (byte_4B373E4 & 1) == 0 )
+  if ( (byte_4B66E05 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    sub_1BD3458(&long_TypeInfo, v7);
-    byte_4B373E4 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1BE4ACC(&long_TypeInfo, v7);
+    byte_4B66E05 = 1;
   }
   if ( !FunctionEntity__checkScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -355,18 +355,18 @@ int32_t __fastcall FunctionEntity__getScript(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1BD36B4(script, v8);
+    sub_1BE4D28(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
-  sub_1BD3974(script);
-  return (unsigned int)FunctionEntity__getScript_40137484(v13, v14, v15, v16);
+  sub_1BE4FE8(script);
+  return (unsigned int)FunctionEntity__getScript_40264308(v13, v14, v15, v16);
 }
 
 
-System_String_o *__fastcall FunctionEntity__getScript_40137484(
+System_String_o *__fastcall FunctionEntity__getScript_40264308(
         FunctionEntity_o *this,
         System_String_o *key,
         System_String_o *defVal,
@@ -375,10 +375,10 @@ System_String_o *__fastcall FunctionEntity__getScript_40137484(
   __int64 v7; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
 
-  if ( (byte_4B373E5 & 1) == 0 )
+  if ( (byte_4B66E06 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    byte_4B373E5 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    byte_4B66E06 = 1;
   }
   if ( !FunctionEntity__checkScript(this, key, (const MethodInfo *)defVal) )
     return defVal;
@@ -387,9 +387,9 @@ System_String_o *__fastcall FunctionEntity__getScript_40137484(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1BD36B4(script, v7);
+    sub_1BE4D28(script, v7);
   }
   return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, Il2CppMethodPointer))script->klass->vtable._3_ToString.method)(
                               script,

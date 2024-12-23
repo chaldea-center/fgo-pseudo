@@ -1,12 +1,12 @@
 void __fastcall BlackoutPanelControl___ctor(BlackoutPanelControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B32502 & 1) == 0 )
+  if ( (byte_4B61EA5 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_1/*""*/, method);
-    byte_4B32502 = 1;
+    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
+    byte_4B61EA5 = 1;
   }
   this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(&this->fields.eventName);
+  sub_1BE4A70(&this->fields.eventName);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -18,7 +18,7 @@ void __fastcall BlackoutPanelControl__Hide(BlackoutPanelControl_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v3);
+    sub_1BE4D28(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -32,7 +32,7 @@ void __fastcall BlackoutPanelControl__SetBlackoutText(
 
   blackoutLabel = this->fields.blackoutLabel;
   if ( !blackoutLabel )
-    sub_1BD36B4(0LL, message);
+    sub_1BE4D28(0LL, message);
   UILabel__set_text(blackoutLabel, message, 0LL);
 }
 
@@ -43,7 +43,7 @@ void __fastcall BlackoutPanelControl__SetEventName(
         const MethodInfo *method)
 {
   this->fields.eventName = eventName;
-  sub_1BD33FC(&this->fields.eventName);
+  sub_1BE4A70(&this->fields.eventName);
 }
 
 
@@ -54,6 +54,6 @@ void __fastcall BlackoutPanelControl__Show(BlackoutPanelControl_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v3);
+    sub_1BE4D28(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }

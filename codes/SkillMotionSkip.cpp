@@ -14,7 +14,7 @@ void __fastcall SkillMotionSkip__MotionStart(SkillMotionSkip_o *this, const Meth
   if ( !manager
     || (v3 = (CommonMotionSkip_o *)this, (this = (SkillMotionSkip_o *)manager->fields._Perf_k__BackingField) == 0LL) )
   {
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   }
   if ( BattlePerformance__IsNowActionNotSkillSkip((BattlePerformance_o *)this, 0LL) )
     CommonMotionSkip__Release(v3, v4);
@@ -36,9 +36,9 @@ void __fastcall SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodIn
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
     || (infoComp = Perf_k__BackingField->fields.infoComp) == 0LL )
   {
-    sub_1BD36B4(infoComp, v4);
+    sub_1BE4D28(infoComp, v4);
   }
-  BattleInformationComponent__DestroyDisplayingMessage(infoComp, 0LL);
+  BattleInformationComponent__DestroyDisplayingMessage(infoComp, 0, 0LL);
 }
 
 
@@ -60,7 +60,7 @@ void __fastcall SkillMotionSkip__ResetSkipTimeScale(SkillMotionSkip_o *this, con
       || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
       || (data = Perf_k__BackingField->fields.data) == 0LL )
     {
-      sub_1BD36B4(data, v4);
+      sub_1BE4D28(data, v4);
     }
     AccelSystemTimeScale = BattleData__get_AccelSystemTimeScale(data, 0LL);
     BattlePerformance__SetTimeScale(Perf_k__BackingField, AccelSystemTimeScale, 0LL);

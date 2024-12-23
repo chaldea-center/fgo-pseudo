@@ -14,7 +14,7 @@ void __fastcall BattleLogicCameraTask___ctor(
   v4 = (PartyOrganizationUtility_o *)this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)cameraName);
   v4->fields._TransitionDestinationFromDetail_k__BackingField = cameraName;
-  v4 = (PartyOrganizationUtility_o *)((char *)v4 + 128);
+  v4 = (PartyOrganizationUtility_o *)((char *)v4 + 144);
   LODWORD(v4[-1].fields._BasePartyItem_k__BackingField) = 27;
-  sub_1BD33FC(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
+  sub_1BE4A70(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
 }

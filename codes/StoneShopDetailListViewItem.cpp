@@ -27,33 +27,33 @@ void __fastcall StoneShopDetailListViewItem___ctor(
   PartyListViewItem_o *v26; // x7
   int32_t v27; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B337A7 & 1) == 0 )
+  if ( (byte_4B6317A & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&index);
-    sub_1BD3458(&DataManager_TypeInfo, v7);
-    sub_1BD3458(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    sub_1BD3458(&int_TypeInfo, v9);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v10);
-    sub_1BD3458(&StringLiteral_12467/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, v11);
-    byte_4B337A7 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&index);
+    sub_1BE4ACC(&DataManager_TypeInfo, v7);
+    sub_1BE4ACC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    sub_1BE4ACC(&int_TypeInfo, v9);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v10);
+    sub_1BE4ACC(&StringLiteral_12481/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, v11);
+    byte_4B6317A = 1;
   }
-  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
   if ( giftEnt )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ItemMaster___);
     if ( !Master_object )
       goto LABEL_17;
     Master_object = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                       giftEnt->fields.objectId,
-                      (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
     if ( Master_object )
       Master_object = (Il2CppObject *)ItemEntity__GetImageId((ItemEntity_o *)Master_object, 0LL);
     if ( !this )
 LABEL_17:
-      sub_1BD36B4(Master_object, v13);
+      sub_1BE4D28(Master_object, v13);
     this->fields._ImageId_k__BackingField = (int)Master_object;
     if ( giftEnt->fields.num <= 1 )
       num = -1;
@@ -61,12 +61,12 @@ LABEL_17:
       num = giftEnt->fields.num;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12467/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12481/*"STONE_SHOP_EXTRA_ITEM_NUM"*/, 0LL);
     v27 = num;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v16, v17, v18);
     v20 = System_String__Format(v15, v19, 0LL);
     this->fields._Message_k__BackingField = v20;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields._Message_k__BackingField,
       (int64_t)v20,
       v21,
@@ -116,7 +116,7 @@ void __fastcall StoneShopDetailListViewItem__set_Message(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Message_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._Message_k__BackingField,
     (int64_t)value,
     (int64_t)method,

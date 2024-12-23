@@ -2,10 +2,10 @@ void __fastcall CommandSpellWindowComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B3A43F & 1) == 0 )
+  if ( (byte_4B69ECD & 1) == 0 )
   {
-    sub_1BD3458(&CommandSpellWindowComponent_TypeInfo, v1);
-    byte_4B3A43F = 1;
+    sub_1BE4ACC(&CommandSpellWindowComponent_TypeInfo, v1);
+    byte_4B69ECD = 1;
   }
   CommandSpellWindowComponent_TypeInfo->static_fields->objheight = 120;
 }
@@ -22,18 +22,18 @@ void __fastcall CommandSpellWindowComponent___ctor(CommandSpellWindowComponent_o
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B3A43E & 1) == 0 )
+  if ( (byte_4B69ECC & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_1BD3458(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_4B3A43E = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_1BE4ACC(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
+    byte_4B69ECC = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_GameObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objlist = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.objlist, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.objlist, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   this->fields.temporarySpell = -1;
   BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0LL);
 }
@@ -47,10 +47,10 @@ void __fastcall CommandSpellWindowComponent__Close(
   UnityEngine_Component_o *tree_root; // x0
   UnityEngine_Object_o *classBoardWindowButton; // x21
 
-  if ( (byte_4B3A434 & 1) == 0 )
+  if ( (byte_4B69EC2 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, call);
-    byte_4B3A434 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, call);
+    byte_4B69EC2 = 1;
   }
   tree_root = (UnityEngine_Component_o *)this->fields.tree_root;
   if ( !tree_root )
@@ -72,7 +72,7 @@ void __fastcall CommandSpellWindowComponent__Close(
   tree_root = (UnityEngine_Component_o *)this->fields.checkWindow;
   if ( !tree_root )
 LABEL_12:
-    sub_1BD36B4(tree_root, call);
+    sub_1BE4D28(tree_root, call);
   ((void (__fastcall *)(UnityEngine_Component_o *, void *))tree_root->klass[1]._1.parent)(
     tree_root,
     tree_root->klass[1]._1.generic_class);
@@ -94,14 +94,14 @@ void __fastcall CommandSpellWindowComponent__EndCloseClassBoardEffectListDialog(
   __int64 v4; // x1
   UnityEngine_GameObject_o *classBoardWindowMask; // x0
 
-  if ( (byte_4B3A43D & 1) == 0 )
+  if ( (byte_4B69ECB & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4B3A43D = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4B69ECB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   CommonUI__CloseClassBoardEffectListDialog((CommonUI_o *)Instance, 0LL, 0LL);
   classBoardWindowMask = this->fields.classBoardWindowMask;
   this->fields.isOpenClassBoardEffectListDialog = 0;
@@ -195,30 +195,30 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
   System_Collections_Generic_List_Enumerator_object__o v84; // [xsp+20h] [xbp-80h] BYREF
   UnityEngine_Vector3_o v85; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3A435 & 1) == 0 )
+  if ( (byte_4B69EC3 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Array_Sort_CommandSpellEntity___, bp);
-    sub_1BD3458(&CommandSpellWindowComponent_TypeInfo, v9);
-    sub_1BD3458(&System_Comparison_CommandSpellEntity__TypeInfo, v10);
-    sub_1BD3458(&Method_DataManager_GetMasterData_CommandSpellMaster___, v11);
-    sub_1BD3458(&Method_DataMasterBase_getEntitys_CommandSpellEntity___, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v15);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___, v16);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GameObject__Add__, v17);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GameObject__Clear__, v18);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v19);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v20);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v21);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_1BD3458(&Method_CommandSpellWindowComponent___c__InitializeCommandSpell_b__39_0__, v23);
-    sub_1BD3458(&CommandSpellWindowComponent___c_TypeInfo, v24);
-    sub_1BD3458(&StringLiteral_15744/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/, v25);
-    sub_1BD3458(&StringLiteral_15743/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/, v26);
-    sub_1BD3458(&StringLiteral_2850/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, v27);
-    sub_1BD3458(&StringLiteral_3782/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, v28);
-    byte_4B3A435 = 1;
+    sub_1BE4ACC(&Method_System_Array_Sort_CommandSpellEntity___, bp);
+    sub_1BE4ACC(&CommandSpellWindowComponent_TypeInfo, v9);
+    sub_1BE4ACC(&System_Comparison_CommandSpellEntity__TypeInfo, v10);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommandSpellMaster___, v11);
+    sub_1BE4ACC(&Method_DataMasterBase_getEntitys_CommandSpellEntity___, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v15);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___, v16);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject__Add__, v17);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject__Clear__, v18);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v19);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v20);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v21);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent___c__InitializeCommandSpell_b__39_0__, v23);
+    sub_1BE4ACC(&CommandSpellWindowComponent___c_TypeInfo, v24);
+    sub_1BE4ACC(&StringLiteral_15765/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/, v25);
+    sub_1BE4ACC(&StringLiteral_15764/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/, v26);
+    sub_1BE4ACC(&StringLiteral_2851/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, v27);
+    sub_1BE4ACC(&StringLiteral_3784/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, v28);
+    byte_4B69EC3 = 1;
   }
   memset(&v84, 0, sizeof(v84));
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -226,7 +226,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)bp, 0LL, 0LL) )
   {
     this->fields.battlePerf = bp;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.battlePerf, (int64_t)bp, v30, v31, v32, v33, v34, v35);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.battlePerf, (int64_t)bp, v30, v31, v32, v33, v34, v35);
   }
   checkWindow = (BattleWindowComponent_o *)this->fields.checkWindow;
   if ( !checkWindow )
@@ -247,12 +247,12 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
   checkuselabel = this->fields.checkuselabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  checkWindow = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2850/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, 0LL);
+  checkWindow = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2851/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, 0LL);
   if ( !checkuselabel )
     goto LABEL_77;
   UILabel__set_text(checkuselabel, (System_String_o *)checkWindow, 0LL);
   classBoardCautionLabel = this->fields.classBoardCautionLabel;
-  checkWindow = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3782/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, 0LL);
+  checkWindow = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3784/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, 0LL);
   if ( !classBoardCautionLabel )
     goto LABEL_77;
   UILabel__set_text(classBoardCautionLabel, (System_String_o *)checkWindow, 0LL);
@@ -278,36 +278,36 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
   this->fields.mode = inMode;
   if ( !inMode )
     this->fields.commandCount = 10;
-  checkWindow = (BattleWindowComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  checkWindow = (BattleWindowComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !checkWindow )
     goto LABEL_77;
   checkWindow = (BattleWindowComponent_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)checkWindow,
-                                             (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                                             (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
   if ( !checkWindow )
     goto LABEL_77;
   Entitys_object = DataMasterBase__getEntitys_object_(
                      (DataMasterBase_o *)checkWindow,
-                     (const MethodInfo_2F31F18 *)Method_DataMasterBase_getEntitys_CommandSpellEntity___);
+                     (const MethodInfo_2F599A4 *)Method_DataMasterBase_getEntitys_CommandSpellEntity___);
   if ( this->fields.objlist )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v83,
       (System_Collections_Generic_List_object__o *)this->fields.objlist,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     v84 = v83;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v84,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       current = v84.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70278272((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_70452000((UnityEngine_Object_o *)current, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v84,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
     objlist = this->fields.objlist;
     if ( !objlist )
       goto LABEL_77;
@@ -333,7 +333,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
       v44 = CommandSpellWindowComponent___c_TypeInfo;
     }
     v46 = (Il2CppObject *)v44->static_fields->__9;
-    _9__39_0 = (System_Comparison_T__o *)sub_1BD36A4(System_Comparison_CommandSpellEntity__TypeInfo);
+    _9__39_0 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_CommandSpellEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__39_0,
       v46,
@@ -341,7 +341,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
       0LL);
     static_fields = CommandSpellWindowComponent___c_TypeInfo->static_fields;
     static_fields->__9__39_0 = (struct System_Comparison_CommandSpellEntity__o *)_9__39_0;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&static_fields->__9__39_0,
       (int64_t)_9__39_0,
       v48,
@@ -351,10 +351,10 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
       v52,
       v53);
   }
-  System_Array__Sort_object__49279172(
+  System_Array__Sort_object__49441616(
     Entitys_object,
     _9__39_0,
-    (const MethodInfo_2EFF0C4 *)Method_System_Array_Sort_CommandSpellEntity___);
+    (const MethodInfo_2F26B50 *)Method_System_Array_Sort_CommandSpellEntity___);
   if ( !Entitys_object )
     goto LABEL_77;
   max_length = Entitys_object->max_length;
@@ -367,7 +367,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
     {
       if ( (unsigned int)v55 >= max_length )
 LABEL_78:
-        sub_1BD36BC(checkWindow, v29);
+        sub_1BE4D30(checkWindow, v29);
       checkWindow = (BattleWindowComponent_o *)m_Items[v55];
       if ( !checkWindow )
         goto LABEL_77;
@@ -418,7 +418,7 @@ LABEL_78:
         UnityEngine_Transform__set_localPosition(v60, v85, 0LL);
         checkWindow = (BattleWindowComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    v58,
-                                                   (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___);
+                                                   (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___);
         if ( (unsigned int)v55 >= Entitys_object->max_length )
           goto LABEL_78;
         v62 = m_Items[v55];
@@ -434,7 +434,7 @@ LABEL_78:
           this->fields.commandCount,
           v61);
         v63->fields._closeBtnObject = (struct UnityEngine_GameObject_o *)this;
-        sub_1BD33FC(
+        sub_1BE4A70(
           (PartyOrganizationUtility_o *)&v63->fields._closeBtnObject,
           (int64_t)this,
           v64,
@@ -461,14 +461,14 @@ LABEL_78:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)checkWindow,
             (Il2CppObject *)v58,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
         }
         else
         {
           v79 = v76 + 8 * m_CancellationTokenSource_low;
           LODWORD(checkWindow->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v79 + 32) = v58;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v79 + 32), (int64_t)v58, v70, v71, v72, v73, v74, v75);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v79 + 32), (int64_t)v58, v70, v71, v72, v73, v74, v75);
         }
       }
 LABEL_65:
@@ -485,19 +485,19 @@ LABEL_65:
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v82 = &StringLiteral_15743/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/;
+    v82 = &StringLiteral_15764/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/;
   }
   else
   {
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v82 = &StringLiteral_15744/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/;
+    v82 = &StringLiteral_15765/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/;
   }
   checkWindow = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)*v82, 0LL);
   if ( !titleLabel )
 LABEL_77:
-    sub_1BD36B4(checkWindow, v29);
+    sub_1BE4D28(checkWindow, v29);
   UILabel__set_text(titleLabel, (System_String_o *)checkWindow, 0LL);
 }
 
@@ -517,12 +517,12 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpellDepth(
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4B3A436 & 1) == 0 )
+  if ( (byte_4B69EC4 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_UIPanel___, *(_QWORD *)&inMode);
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_UIScrollView___, v8);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v9);
-    byte_4B3A436 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UIPanel___, *(_QWORD *)&inMode);
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UIScrollView___, v8);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v9);
+    byte_4B69EC4 = 1;
   }
   CommandSpellWindowComponent__InitializeCommandSpell(this, 0LL, inMode, -1, v4);
   tree_root = (UnityEngine_Component_o *)this->fields.tree_root;
@@ -534,7 +534,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpellDepth(
     goto LABEL_14;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        tree_root,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   tree_root = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -547,7 +547,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpellDepth(
     {
       tree_root = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)Component_object,
-                                               (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                               (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
       if ( tree_root )
       {
         UIPanel__set_depth((UIPanel_o *)tree_root, scrollViewDepth, 0LL);
@@ -556,7 +556,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpellDepth(
         {
           tree_root = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                    tree_root,
-                                                   (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                                   (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
           if ( tree_root )
           {
             UIPanel__set_depth((UIPanel_o *)tree_root, scrollViewDepth, 0LL);
@@ -566,7 +566,7 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpellDepth(
       }
     }
 LABEL_14:
-    sub_1BD36B4(tree_root, v10);
+    sub_1BE4D28(tree_root, v10);
   }
 }
 
@@ -598,13 +598,13 @@ void __fastcall CommandSpellWindowComponent__OnClickClassBoardWindowOpen(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4B3A43C & 1) == 0 )
+  if ( (byte_4B69ECA & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, method);
-    sub_1BD3458(&Method_CommandSpellWindowComponent_EndCloseClassBoardEffectListDialog__, v3);
-    sub_1BD3458(&Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__, v4);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B3A43C = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, method);
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_EndCloseClassBoardEffectListDialog__, v3);
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__, v4);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4B69ECA = 1;
   }
   if ( !this->fields.isOpenClassBoardEffectListDialog )
   {
@@ -614,18 +614,18 @@ void __fastcall CommandSpellWindowComponent__OnClickClassBoardWindowOpen(
       UnityEngine_GameObject__SetActive(classBoardWindowMask, 1, 0LL);
     v7 = Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__;
     if ( (*((_BYTE *)Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BD3470(Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BD343C(v7, v7[4]);
+      v7 = (_QWORD *)sub_1BE4AE4(Method_CommandSpellWindowComponent_OnClickClassBoardWindowOpen__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v10 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(
       v10,
       (Il2CppObject *)this,
       Method_CommandSpellWindowComponent_EndCloseClassBoardEffectListDialog__,
       0LL);
     if ( !Instance )
-      sub_1BD36B4(v11, v12);
+      sub_1BE4D28(v11, v12);
     CommonUI__OpenClassBoardEffectListDialog((CommonUI_o *)Instance, 1, 0, 0, v10, 2, 0LL, 0LL);
   }
 }
@@ -660,18 +660,18 @@ void __fastcall CommandSpellWindowComponent__Open(
   System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4B3A437 & 1) == 0 )
+  if ( (byte_4B69EC5 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, call);
-    sub_1BD3458(&CondType_TypeInfo, v5);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v10);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v11);
-    sub_1BD3458(&StringLiteral_1/*""*/, v12);
-    byte_4B3A437 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, call);
+    sub_1BE4ACC(&CondType_TypeInfo, v5);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v10);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v11);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v12);
+    byte_4B69EC5 = 1;
   }
   memset(&v27, 0, sizeof(v27));
   this->fields.isOpenFlg = 0;
@@ -698,19 +698,19 @@ void __fastcall CommandSpellWindowComponent__Open(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v26,
       (System_Collections_Generic_List_object__o *)SelfUserGame,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     v27 = v26;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v27,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       if ( !v27.fields._current )
-        sub_1BD36B4(0LL, v17);
+        sub_1BE4D28(0LL, v17);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v27.fields._current,
-                           (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___);
+                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___);
       if ( !Component_object )
-        sub_1BD36B4(0LL, v19);
+        sub_1BE4D28(0LL, v19);
       CommandSpellObjectComponent__updateIsUse(
         (CommandSpellObjectComponent_o *)Component_object,
         this->fields.mode,
@@ -719,7 +719,7 @@ void __fastcall CommandSpellWindowComponent__Open(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v27,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   }
   SelfUserGame = (UserGameEntity_o *)this->fields.tree_root;
   if ( !SelfUserGame
@@ -728,7 +728,7 @@ void __fastcall CommandSpellWindowComponent__Open(
                                              0LL)) == 0LL )
   {
 LABEL_34:
-    sub_1BD36B4(SelfUserGame, v14);
+    sub_1BE4D28(SelfUserGame, v14);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SelfUserGame, 1, 0LL);
   classBoardWindowButton = (UnityEngine_Object_o *)this->fields.classBoardWindowButton;
@@ -746,7 +746,7 @@ LABEL_34:
     ClassBoardReleaseQuestId = v23->static_fields->ClassBoardReleaseQuestId;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    SelfUserGame = (UserGameEntity_o *)CondType__IsQuestClear_38374588(ClassBoardReleaseQuestId, -1, 0, 0LL);
+    SelfUserGame = (UserGameEntity_o *)CondType__IsQuestClear_38498148(ClassBoardReleaseQuestId, -1, 0, 0LL);
     if ( v22 )
     {
       UnityEngine_GameObject__SetActive(v22, (unsigned __int8)SelfUserGame & 1, 0LL);
@@ -798,7 +798,7 @@ void __fastcall CommandSpellWindowComponent__SetCheckUseLabel(
     || (spellnamelabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(spellnamelabel, 0LL)) == 0LL )
   {
 LABEL_13:
-    sub_1BD36B4(spellnamelabel, isAddFunction);
+    sub_1BE4D28(spellnamelabel, isAddFunction);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)spellnamelabel, isAddFunction, 0LL);
 }
@@ -825,7 +825,7 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
   BalanceConfig_c *v17; // x8
   int32_t ClassBoardReleaseQuestId; // w22
   const MethodInfo *v19; // x2
-  bool IsQuestClear_38374588; // w8
+  bool IsQuestClear_38498148; // w8
   struct BattleWindowOuterClickManagerComponent_o *checkWindow; // x20
   BattleWindowComponent_EndCall_o *v22; // x21
   BattleWindowOuterClickManagerComponent_o *v23; // x20
@@ -833,20 +833,20 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
   const MethodInfo *v25; // x3
   const MethodInfo *v26; // x2
 
-  if ( (byte_4B3A438 & 1) == 0 )
+  if ( (byte_4B69EC6 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, *(_QWORD *)&Id);
-    sub_1BD3458(&Method_CommandSpellWindowComponent_cancelSpell__, v5);
-    sub_1BD3458(&Method_CommandSpellWindowComponent_endSpellOpened__, v6);
-    sub_1BD3458(&CondType_TypeInfo, v7);
-    sub_1BD3458(&Method_DataManager_GetMasterData_CommandSpellMaster___, v8);
-    sub_1BD3458(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v9);
-    sub_1BD3458(&DataManager_TypeInfo, v10);
-    sub_1BD3458(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v11);
-    sub_1BD3458(&BattleWindowComponent_EndCall_TypeInfo, v12);
-    sub_1BD3458(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo, v13);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4B3A438 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&Id);
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_cancelSpell__, v5);
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_endSpellOpened__, v6);
+    sub_1BE4ACC(&CondType_TypeInfo, v7);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommandSpellMaster___, v8);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v9);
+    sub_1BE4ACC(&DataManager_TypeInfo, v10);
+    sub_1BE4ACC(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v11);
+    sub_1BE4ACC(&BattleWindowComponent_EndCall_TypeInfo, v12);
+    sub_1BE4ACC(&BattleWindowOuterClickComponent_OuterClickCall_TypeInfo, v13);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4B69EC6 = 1;
   }
   battlePerf = this->fields.battlePerf;
   if ( !battlePerf )
@@ -859,18 +859,18 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
   if ( BattleWindowComponent__isOpen((BattleWindowComponent_o *)this, 0LL) )
   {
     this->fields.tmp_Id = Id;
-    battlePerf = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    battlePerf = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( battlePerf )
     {
       battlePerf = DataManager__GetMasterData_object_(
                      (DataManager_o *)battlePerf,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
       if ( battlePerf )
       {
         battlePerf = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)battlePerf,
                        Id,
-                       (const MethodInfo_31D1EF0 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+                       (const MethodInfo_31FD7C4 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
         if ( battlePerf )
         {
           if ( this->fields.spellnamelabel )
@@ -878,7 +878,7 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
             UILabel__set_text(this->fields.spellnamelabel, *((System_String_o **)battlePerf + 4), 0LL);
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+            Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
             v17 = BalanceConfig_TypeInfo;
             if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
             {
@@ -888,9 +888,9 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
             ClassBoardReleaseQuestId = v17->static_fields->ClassBoardReleaseQuestId;
             if ( !CondType_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-            IsQuestClear_38374588 = CondType__IsQuestClear_38374588(ClassBoardReleaseQuestId, -1, 0, 0LL);
+            IsQuestClear_38498148 = CondType__IsQuestClear_38498148(ClassBoardReleaseQuestId, -1, 0, 0LL);
             battlePerf = 0LL;
-            if ( IsQuestClear_38374588 )
+            if ( IsQuestClear_38498148 )
             {
               if ( !Master_object )
                 goto LABEL_23;
@@ -901,7 +901,7 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
             }
             CommandSpellWindowComponent__SetCheckUseLabel(this, (unsigned __int8)battlePerf & 1, v19);
             checkWindow = this->fields.checkWindow;
-            v22 = (BattleWindowComponent_EndCall_o *)sub_1BD36A4(BattleWindowComponent_EndCall_TypeInfo);
+            v22 = (BattleWindowComponent_EndCall_o *)sub_1BE4D18(BattleWindowComponent_EndCall_TypeInfo);
             BattleWindowComponent_EndCall___ctor(
               v22,
               (Il2CppObject *)this,
@@ -914,7 +914,7 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
                 v22,
                 checkWindow->klass->vtable._11_CompOpen.methodPtr);
               v23 = this->fields.checkWindow;
-              v24 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_1BD36A4(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
+              v24 = (BattleWindowOuterClickComponent_OuterClickCall_o *)sub_1BE4D18(BattleWindowOuterClickComponent_OuterClickCall_TypeInfo);
               BattleWindowOuterClickComponent_OuterClickCall___ctor(
                 v24,
                 (Il2CppObject *)this,
@@ -931,7 +931,7 @@ void __fastcall CommandSpellWindowComponent__UseSpell(
       }
     }
 LABEL_23:
-    sub_1BD36B4(battlePerf, *(_QWORD *)&Id);
+    sub_1BE4D28(battlePerf, *(_QWORD *)&Id);
   }
 }
 
@@ -943,21 +943,21 @@ void __fastcall CommandSpellWindowComponent__cancelSpell(CommandSpellWindowCompo
   __int64 v5; // x1
   struct BattleWindowOuterClickManagerComponent_o *checkWindow; // x0
 
-  if ( (byte_4B3A43A & 1) == 0 )
+  if ( (byte_4B69EC8 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CommandSpellWindowComponent_cancelSpell__, method);
-    byte_4B3A43A = 1;
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_cancelSpell__, method);
+    byte_4B69EC8 = 1;
   }
   if ( this->fields.isOpenFlg )
   {
     v3 = Method_CommandSpellWindowComponent_cancelSpell__;
     if ( (*((_BYTE *)Method_CommandSpellWindowComponent_cancelSpell__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BD3470(Method_CommandSpellWindowComponent_cancelSpell__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BE4AE4(Method_CommandSpellWindowComponent_cancelSpell__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
     OverwriteAssetSoundName__PlayCommonSe(v4, 10, 0LL);
     checkWindow = this->fields.checkWindow;
     if ( !checkWindow )
-      sub_1BD36B4(0LL, v5);
+      sub_1BE4D28(0LL, v5);
     ((void (__fastcall *)(struct BattleWindowOuterClickManagerComponent_o *, _QWORD, Il2CppMethodPointer))checkWindow->klass->vtable._12_Close.method)(
       checkWindow,
       0LL,
@@ -990,21 +990,21 @@ UnityEngine_GameObject_o *__fastcall CommandSpellWindowComponent__get_closeBtnOb
   System_String_o *name; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4B3A43B & 1) == 0 )
+  if ( (byte_4B69EC9 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponentsInChildren_UIMessageButton___, method);
-    sub_1BD3458(&StringLiteral_13088/*"Sprite"*/, v3);
-    byte_4B3A43B = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentsInChildren_UIMessageButton___, method);
+    sub_1BE4ACC(&StringLiteral_13106/*"Sprite"*/, v3);
+    byte_4B69EC9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (transform = UnityEngine_Component__GetComponentsInChildren_object_(
                       (UnityEngine_Component_o *)transform,
                       1,
-                      (const MethodInfo_2F28C14 *)Method_UnityEngine_Component_GetComponentsInChildren_UIMessageButton___)) == 0LL )
+                      (const MethodInfo_2F506A0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIMessageButton___)) == 0LL )
   {
 LABEL_14:
-    sub_1BD36B4(transform, v5);
+    sub_1BE4D28(transform, v5);
   }
   v6 = *((_DWORD *)transform + 6);
   v7 = transform;
@@ -1014,7 +1014,7 @@ LABEL_14:
   while ( 1 )
   {
     if ( v8 >= v6 )
-      sub_1BD36BC(transform, v5);
+      sub_1BE4D30(transform, v5);
     v9 = (char *)&v7[2 * v8];
     v10 = (UnityEngine_Component_o *)*((_QWORD *)v9 + 4);
     if ( !v10 )
@@ -1023,7 +1023,7 @@ LABEL_14:
     if ( !transform )
       goto LABEL_14;
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)transform, 0LL);
-    transform = (void *)System_String__op_Equality(name, (System_String_o *)StringLiteral_13088/*"Sprite"*/, 0LL);
+    transform = (void *)System_String__op_Equality(name, (System_String_o *)StringLiteral_13106/*"Sprite"*/, 0LL);
     if ( ((unsigned __int8)transform & 1) != 0 )
       break;
     v6 = v7[6];
@@ -1045,15 +1045,15 @@ void __fastcall CommandSpellWindowComponent__okSpell(CommandSpellWindowComponent
   System_Reflection_MethodBase_o *v4; // x0
   struct CommandSpellWindowComponent_UseCommandSpellCallBack_o *callback_use; // x8
 
-  if ( (byte_4B3A439 & 1) == 0 )
+  if ( (byte_4B69EC7 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CommandSpellWindowComponent_okSpell__, method);
-    byte_4B3A439 = 1;
+    sub_1BE4ACC(&Method_CommandSpellWindowComponent_okSpell__, method);
+    byte_4B69EC7 = 1;
   }
   v3 = Method_CommandSpellWindowComponent_okSpell__;
   if ( (*((_BYTE *)Method_CommandSpellWindowComponent_okSpell__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BD3470(Method_CommandSpellWindowComponent_okSpell__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BE4AE4(Method_CommandSpellWindowComponent_okSpell__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
   callback_use = this->fields.callback_use;
   if ( callback_use )
@@ -1090,7 +1090,7 @@ void __fastcall CommandSpellWindowComponent__setCallBackPushClose(
   PartyListViewItem_o *v7; // x7
 
   this->fields.callback_close = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.callback_close,
     (int64_t)callback,
     (int64_t)method,
@@ -1114,7 +1114,7 @@ void __fastcall CommandSpellWindowComponent__setCallBackUse(
   PartyListViewItem_o *v7; // x7
 
   this->fields.callback_use = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.callback_use,
     (int64_t)callback,
     (int64_t)method,
@@ -1132,7 +1132,7 @@ void __fastcall CommandSpellWindowComponent__setClose(CommandSpellWindowComponen
 
   checkWindow = this->fields.checkWindow;
   if ( !checkWindow )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   ((void (__fastcall *)(struct BattleWindowOuterClickManagerComponent_o *, Il2CppMethodPointer))checkWindow->klass->vtable._9_setClose.method)(
     checkWindow,
     checkWindow->klass->vtable._10_Open.methodPtr);
@@ -1161,7 +1161,7 @@ void __fastcall CommandSpellWindowComponent__set_closeBtnObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._closeBtnObject = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._closeBtnObject,
     (int64_t)value,
     (int64_t)method,
@@ -1195,7 +1195,7 @@ void __fastcall CommandSpellWindowComponent_CloseButtonCallBack___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1206,12 +1206,12 @@ void __fastcall CommandSpellWindowComponent_CloseButtonCallBack___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v10) & 1) == 0 )
+  if ( (sub_1BE4B8C(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v14, 0LL);
+      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1223,9 +1223,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A196C0;
+  this->fields.m_target = (Il2CppObject *)sub_1A2AB68;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A19680;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A2AB28;
 }
 
 
@@ -1238,7 +1238,7 @@ System_IAsyncResult_o *__fastcall CommandSpellWindowComponent_CloseButtonCallBac
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1BD340C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, &v5, callback, object);
 }
 
 
@@ -1247,7 +1247,7 @@ void __fastcall CommandSpellWindowComponent_CloseButtonCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 
@@ -1283,7 +1283,7 @@ void __fastcall CommandSpellWindowComponent_UseCommandSpellCallBack___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1294,12 +1294,12 @@ void __fastcall CommandSpellWindowComponent_UseCommandSpellCallBack___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v10) & 1) == 0 )
+  if ( (sub_1BE4B8C(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v14, 0LL);
+      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1311,9 +1311,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A1971C;
+  this->fields.m_target = (Il2CppObject *)sub_1A2ABC4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A196D4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A2AB7C;
 }
 
 
@@ -1329,14 +1329,14 @@ System_IAsyncResult_o *__fastcall CommandSpellWindowComponent_UseCommandSpellCal
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = commandSpellId;
-  if ( (byte_4B3A440 & 1) == 0 )
+  if ( (byte_4B69ECE & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&commandSpellId);
-    byte_4B3A440 = 1;
+    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&commandSpellId);
+    byte_4B69ECE = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BD340C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, v9, callback, object);
 }
 
 
@@ -1345,7 +1345,7 @@ void __fastcall CommandSpellWindowComponent_UseCommandSpellCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 
@@ -1372,15 +1372,15 @@ void __fastcall CommandSpellWindowComponent___c___cctor(const MethodInfo *method
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B3A441 & 1) == 0 )
+  if ( (byte_4B69ECF & 1) == 0 )
   {
-    sub_1BD3458(&CommandSpellWindowComponent___c_TypeInfo, v1);
-    byte_4B3A441 = 1;
+    sub_1BE4ACC(&CommandSpellWindowComponent___c_TypeInfo, v1);
+    byte_4B69ECF = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(CommandSpellWindowComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(CommandSpellWindowComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CommandSpellWindowComponent___c_TypeInfo->static_fields->__9 = (struct CommandSpellWindowComponent___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)CommandSpellWindowComponent___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1407,6 +1407,6 @@ int32_t __fastcall CommandSpellWindowComponent___c___InitializeCommandSpell_b__3
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BD36B4(this, a);
+    sub_1BE4D28(this, a);
   return b->fields.priority - a->fields.priority;
 }

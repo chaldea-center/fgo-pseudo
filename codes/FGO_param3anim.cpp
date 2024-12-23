@@ -22,20 +22,20 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   __int64 v14; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B36035 & 1) == 0 )
+  if ( (byte_4B65A43 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1BD3458(&StringLiteral_16773/*"_threeValue2"*/, v3);
-    sub_1BD3458(&StringLiteral_16768/*"_threeValue0"*/, v4);
-    sub_1BD3458(&StringLiteral_16769/*"_threeValue1"*/, v5);
-    byte_4B36035 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1BE4ACC(&StringLiteral_16794/*"_threeValue2"*/, v3);
+    sub_1BE4ACC(&StringLiteral_16789/*"_threeValue0"*/, v4);
+    sub_1BE4ACC(&StringLiteral_16790/*"_threeValue1"*/, v5);
+    byte_4B65A43 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._renderer,
     (int64_t)Component_object,
     v8,
@@ -50,45 +50,45 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16768/*"_threeValue0"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16789/*"_threeValue0"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_16;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16769/*"_threeValue1"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16790/*"_threeValue1"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_16;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16773/*"_threeValue2"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16794/*"_threeValue2"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16768/*"_threeValue0"*/,
+          (System_String_o *)StringLiteral_16789/*"_threeValue0"*/,
           this->fields.three_value.fields.x,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16769/*"_threeValue1"*/,
+          (System_String_o *)StringLiteral_16790/*"_threeValue1"*/,
           this->fields.three_value.fields.y,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
   {
 LABEL_16:
-    sub_1BD36B4(renderer, v14);
+    sub_1BE4D28(renderer, v14);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16773/*"_threeValue2"*/,
+    (System_String_o *)StringLiteral_16794/*"_threeValue2"*/,
     this->fields.three_value.fields.z,
     0LL);
 }
@@ -100,36 +100,36 @@ void __fastcall FGO_param3anim__Update(FGO_param3anim_o *this, const MethodInfo 
   __int64 v4; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B36036 & 1) == 0 )
+  if ( (byte_4B65A44 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_16773/*"_threeValue2"*/, method);
-    sub_1BD3458(&StringLiteral_16768/*"_threeValue0"*/, v3);
-    sub_1BD3458(&StringLiteral_16769/*"_threeValue1"*/, v4);
-    byte_4B36036 = 1;
+    sub_1BE4ACC(&StringLiteral_16794/*"_threeValue2"*/, method);
+    sub_1BE4ACC(&StringLiteral_16789/*"_threeValue0"*/, v3);
+    sub_1BE4ACC(&StringLiteral_16790/*"_threeValue1"*/, v4);
+    byte_4B65A44 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16768/*"_threeValue0"*/,
+          (System_String_o *)StringLiteral_16789/*"_threeValue0"*/,
           this->fields.three_value.fields.x,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16769/*"_threeValue1"*/,
+          (System_String_o *)StringLiteral_16790/*"_threeValue1"*/,
           this->fields.three_value.fields.y,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
   {
-    sub_1BD36B4(renderer, method);
+    sub_1BE4D28(renderer, method);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16773/*"_threeValue2"*/,
+    (System_String_o *)StringLiteral_16794/*"_threeValue2"*/,
     this->fields.three_value.fields.z,
     0LL);
 }

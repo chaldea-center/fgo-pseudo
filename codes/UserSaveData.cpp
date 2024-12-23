@@ -56,43 +56,43 @@ void __fastcall UserSaveData__DeleteContinueData(const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v36; // x1
 
-  if ( (byte_4B36C2E & 1) == 0 )
+  if ( (byte_4B66647 & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, v1);
-    sub_1BD3458(&AutoOrganizationManager_TypeInfo, v2);
-    sub_1BD3458(&BattleData_TypeInfo, v3);
-    sub_1BD3458(&BattleResultBondsComponent_TypeInfo, v4);
-    sub_1BD3458(&BonusSelectSummonPartyServantListViewManager_TypeInfo, v5);
-    sub_1BD3458(&CoinRoomCoinListViewManager_TypeInfo, v6);
-    sub_1BD3458(&CombineServantListViewManager_TypeInfo, v7);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventSuperBossMaster___, v8);
-    sub_1BD3458(&EquipGraphListViewManager_TypeInfo, v9);
-    sub_1BD3458(&EventInfoCircleProgressControl_TypeInfo, v10);
-    sub_1BD3458(&EventInfoPointRiverProgressControl_TypeInfo, v11);
-    sub_1BD3458(&FavoriteChangeListViewManager_TypeInfo, v12);
-    sub_1BD3458(&FollowerSelectItemListViewManager_TypeInfo, v13);
-    sub_1BD3458(&FriendOperationItemListViewManager_TypeInfo, v14);
-    sub_1BD3458(&MaterialCollectionServantListViewManager_TypeInfo, v15);
-    sub_1BD3458(&MaterialEventLogListViewManager_TypeInfo, v16);
-    sub_1BD3458(&MyRoomParamsManager_TypeInfo, v17);
-    sub_1BD3458(&MyRoomStateMaterial_TypeInfo, v18);
-    sub_1BD3458(&OptionManager_TypeInfo, v19);
-    sub_1BD3458(&PartyServantListViewManager_TypeInfo, v20);
-    sub_1BD3458(&ScrTerminalListTop_TypeInfo, v21);
-    sub_1BD3458(&ScriptManager_TypeInfo, v22);
-    sub_1BD3458(&ServantCommentManager_TypeInfo, v23);
-    sub_1BD3458(&ServantListViewManager_TypeInfo, v24);
-    sub_1BD3458(&ServantOperationListViewManager_TypeInfo, v25);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
-    sub_1BD3458(&SupportServantEquipListViewManager_TypeInfo, v27);
-    sub_1BD3458(&SupportServantListViewManager_TypeInfo, v28);
-    sub_1BD3458(&SvtEqCombineListViewManager_TypeInfo, v29);
-    sub_1BD3458(&TerminalPramsManager_TypeInfo, v30);
-    sub_1BD3458(&TutorialFlag_TypeInfo, v31);
-    sub_1BD3458(&UserPresentListViewManager_TypeInfo, v32);
-    sub_1BD3458(&UserServantCoinListViewManager_TypeInfo, v33);
-    sub_1BD3458(&clsQuestCheck_TypeInfo, v34);
-    byte_4B36C2E = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, v1);
+    sub_1BE4ACC(&AutoOrganizationManager_TypeInfo, v2);
+    sub_1BE4ACC(&BattleData_TypeInfo, v3);
+    sub_1BE4ACC(&BattleResultBondsComponent_TypeInfo, v4);
+    sub_1BE4ACC(&BonusSelectSummonPartyServantListViewManager_TypeInfo, v5);
+    sub_1BE4ACC(&CoinRoomCoinListViewManager_TypeInfo, v6);
+    sub_1BE4ACC(&CombineServantListViewManager_TypeInfo, v7);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventSuperBossMaster___, v8);
+    sub_1BE4ACC(&EquipGraphListViewManager_TypeInfo, v9);
+    sub_1BE4ACC(&EventInfoCircleProgressControl_TypeInfo, v10);
+    sub_1BE4ACC(&EventInfoPointRiverProgressControl_TypeInfo, v11);
+    sub_1BE4ACC(&FavoriteChangeListViewManager_TypeInfo, v12);
+    sub_1BE4ACC(&FollowerSelectItemListViewManager_TypeInfo, v13);
+    sub_1BE4ACC(&FriendOperationItemListViewManager_TypeInfo, v14);
+    sub_1BE4ACC(&MaterialCollectionServantListViewManager_TypeInfo, v15);
+    sub_1BE4ACC(&MaterialEventLogListViewManager_TypeInfo, v16);
+    sub_1BE4ACC(&MyRoomParamsManager_TypeInfo, v17);
+    sub_1BE4ACC(&MyRoomStateMaterial_TypeInfo, v18);
+    sub_1BE4ACC(&OptionManager_TypeInfo, v19);
+    sub_1BE4ACC(&PartyServantListViewManager_TypeInfo, v20);
+    sub_1BE4ACC(&ScrTerminalListTop_TypeInfo, v21);
+    sub_1BE4ACC(&ScriptManager_TypeInfo, v22);
+    sub_1BE4ACC(&ServantCommentManager_TypeInfo, v23);
+    sub_1BE4ACC(&ServantListViewManager_TypeInfo, v24);
+    sub_1BE4ACC(&ServantOperationListViewManager_TypeInfo, v25);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
+    sub_1BE4ACC(&SupportServantEquipListViewManager_TypeInfo, v27);
+    sub_1BE4ACC(&SupportServantListViewManager_TypeInfo, v28);
+    sub_1BE4ACC(&SvtEqCombineListViewManager_TypeInfo, v29);
+    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v30);
+    sub_1BE4ACC(&TutorialFlag_TypeInfo, v31);
+    sub_1BE4ACC(&UserPresentListViewManager_TypeInfo, v32);
+    sub_1BE4ACC(&UserServantCoinListViewManager_TypeInfo, v33);
+    sub_1BE4ACC(&clsQuestCheck_TypeInfo, v34);
+    byte_4B66647 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -100,13 +100,13 @@ void __fastcall UserSaveData__DeleteContinueData(const MethodInfo *method)
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   OptionManager__DeleteContinueData(0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventSuperBossMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventSuperBossMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v36);
+    sub_1BE4D28(Instance, v36);
   }
   EventSuperBossMaster__DeleteContinueData((EventSuperBossMaster_o *)Instance, 0LL);
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
@@ -232,30 +232,30 @@ void __fastcall UserSaveData__DeleteData(bool isClearAccountData, const MethodIn
   __int64 v22; // x1
   AccountingManager_c *v23; // x0
 
-  if ( (byte_4B36C2D & 1) == 0 )
+  if ( (byte_4B66646 & 1) == 0 )
   {
-    sub_1BD3458(&AccountingManager_TypeInfo, method);
-    sub_1BD3458(&CombineResultFormManager_TypeInfo, v3);
-    sub_1BD3458(&EventRandomMissionClearManager_TypeInfo, v4);
-    sub_1BD3458(&LastUsedDeckNumberManager_TypeInfo, v5);
-    sub_1BD3458(&MaterialBranchRouteManager_TypeInfo, v6);
-    sub_1BD3458(&MaterialGroupClearHistoryManager_TypeInfo, v7);
-    sub_1BD3458(&NetworkManager_TypeInfo, v8);
-    sub_1BD3458(&OtherUserNewManager_TypeInfo, v9);
-    sub_1BD3458(&QuestHintDialogOpenManager_TypeInfo, v10);
-    sub_1BD3458(&ServantCharaGraphEXOpenManager_TypeInfo, v11);
-    sub_1BD3458(&ServantCommentManager_TypeInfo, v12);
-    sub_1BD3458(&ServantProfileEventJoinManager_TypeInfo, v13);
-    sub_1BD3458(&ServantProfileLimitCountManager_TypeInfo, v14);
-    sub_1BD3458(&UserCommandCodeCollectionManager_TypeInfo, v15);
-    sub_1BD3458(&UserCommandCodeNewManager_TypeInfo, v16);
-    sub_1BD3458(&UserEquipNewManager_TypeInfo, v17);
-    sub_1BD3458(&UserServantCollectionManager_TypeInfo, v18);
-    sub_1BD3458(&UserServantLockManager_TypeInfo, v19);
-    sub_1BD3458(&UserServantNewManager_TypeInfo, v20);
-    sub_1BD3458(&WarBoardMessageHistoryManager_TypeInfo, v21);
-    sub_1BD3458(&WarBoardMovieHistoryManager_TypeInfo, v22);
-    byte_4B36C2D = 1;
+    sub_1BE4ACC(&AccountingManager_TypeInfo, method);
+    sub_1BE4ACC(&CombineResultFormManager_TypeInfo, v3);
+    sub_1BE4ACC(&EventRandomMissionClearManager_TypeInfo, v4);
+    sub_1BE4ACC(&LastUsedDeckNumberManager_TypeInfo, v5);
+    sub_1BE4ACC(&MaterialBranchRouteManager_TypeInfo, v6);
+    sub_1BE4ACC(&MaterialGroupClearHistoryManager_TypeInfo, v7);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v8);
+    sub_1BE4ACC(&OtherUserNewManager_TypeInfo, v9);
+    sub_1BE4ACC(&QuestHintDialogOpenManager_TypeInfo, v10);
+    sub_1BE4ACC(&ServantCharaGraphEXOpenManager_TypeInfo, v11);
+    sub_1BE4ACC(&ServantCommentManager_TypeInfo, v12);
+    sub_1BE4ACC(&ServantProfileEventJoinManager_TypeInfo, v13);
+    sub_1BE4ACC(&ServantProfileLimitCountManager_TypeInfo, v14);
+    sub_1BE4ACC(&UserCommandCodeCollectionManager_TypeInfo, v15);
+    sub_1BE4ACC(&UserCommandCodeNewManager_TypeInfo, v16);
+    sub_1BE4ACC(&UserEquipNewManager_TypeInfo, v17);
+    sub_1BE4ACC(&UserServantCollectionManager_TypeInfo, v18);
+    sub_1BE4ACC(&UserServantLockManager_TypeInfo, v19);
+    sub_1BE4ACC(&UserServantNewManager_TypeInfo, v20);
+    sub_1BE4ACC(&WarBoardMessageHistoryManager_TypeInfo, v21);
+    sub_1BE4ACC(&WarBoardMovieHistoryManager_TypeInfo, v22);
+    byte_4B66646 = 1;
   }
   if ( isClearAccountData )
   {
@@ -332,10 +332,10 @@ void __fastcall UserSaveData__DeleteSaveData(bool clearAsset, const MethodInfo *
   const MethodInfo *v3; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4B36C2C & 1) == 0 )
+  if ( (byte_4B66645 & 1) == 0 )
   {
-    sub_1BD3458(&DataManager_TypeInfo, method);
-    byte_4B36C2C = 1;
+    sub_1BE4ACC(&DataManager_TypeInfo, method);
+    byte_4B66645 = 1;
   }
   UnityEngine_PlayerPrefs__DeleteAll(0LL);
   UserSaveData__InitLoad(v3);
@@ -383,29 +383,29 @@ void __fastcall UserSaveData__InitLoad(const MethodInfo *method)
   __int64 v19; // x1
   __int64 v20; // x1
 
-  if ( (byte_4B36C2F & 1) == 0 )
+  if ( (byte_4B66648 & 1) == 0 )
   {
-    sub_1BD3458(&AutoOrganizationManager_TypeInfo, v1);
-    sub_1BD3458(&BonusSelectSummonPartyServantListViewManager_TypeInfo, v2);
-    sub_1BD3458(&CoinRoomCoinListViewManager_TypeInfo, v3);
-    sub_1BD3458(&CombineServantListViewManager_TypeInfo, v4);
-    sub_1BD3458(&EquipGraphListViewManager_TypeInfo, v5);
-    sub_1BD3458(&FavoriteChangeListViewManager_TypeInfo, v6);
-    sub_1BD3458(&FollowerSelectItemListViewManager_TypeInfo, v7);
-    sub_1BD3458(&FriendOperationItemListViewManager_TypeInfo, v8);
-    sub_1BD3458(&MaterialCollectionServantListViewManager_TypeInfo, v9);
-    sub_1BD3458(&MaterialEventLogListViewManager_TypeInfo, v10);
-    sub_1BD3458(&PartyServantListViewManager_TypeInfo, v11);
-    sub_1BD3458(&ServantFilterSelectMenu_TypeInfo, v12);
-    sub_1BD3458(&ServantListViewManager_TypeInfo, v13);
-    sub_1BD3458(&ServantOperationListViewManager_TypeInfo, v14);
-    sub_1BD3458(&ServantSortSelectMenu_TypeInfo, v15);
-    sub_1BD3458(&SupportServantEquipListViewManager_TypeInfo, v16);
-    sub_1BD3458(&SvtEqCombineListViewManager_TypeInfo, v17);
-    sub_1BD3458(&TerminalPramsManager_TypeInfo, v18);
-    sub_1BD3458(&UserPresentListViewManager_TypeInfo, v19);
-    sub_1BD3458(&UserServantCoinListViewManager_TypeInfo, v20);
-    byte_4B36C2F = 1;
+    sub_1BE4ACC(&AutoOrganizationManager_TypeInfo, v1);
+    sub_1BE4ACC(&BonusSelectSummonPartyServantListViewManager_TypeInfo, v2);
+    sub_1BE4ACC(&CoinRoomCoinListViewManager_TypeInfo, v3);
+    sub_1BE4ACC(&CombineServantListViewManager_TypeInfo, v4);
+    sub_1BE4ACC(&EquipGraphListViewManager_TypeInfo, v5);
+    sub_1BE4ACC(&FavoriteChangeListViewManager_TypeInfo, v6);
+    sub_1BE4ACC(&FollowerSelectItemListViewManager_TypeInfo, v7);
+    sub_1BE4ACC(&FriendOperationItemListViewManager_TypeInfo, v8);
+    sub_1BE4ACC(&MaterialCollectionServantListViewManager_TypeInfo, v9);
+    sub_1BE4ACC(&MaterialEventLogListViewManager_TypeInfo, v10);
+    sub_1BE4ACC(&PartyServantListViewManager_TypeInfo, v11);
+    sub_1BE4ACC(&ServantFilterSelectMenu_TypeInfo, v12);
+    sub_1BE4ACC(&ServantListViewManager_TypeInfo, v13);
+    sub_1BE4ACC(&ServantOperationListViewManager_TypeInfo, v14);
+    sub_1BE4ACC(&ServantSortSelectMenu_TypeInfo, v15);
+    sub_1BE4ACC(&SupportServantEquipListViewManager_TypeInfo, v16);
+    sub_1BE4ACC(&SvtEqCombineListViewManager_TypeInfo, v17);
+    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v18);
+    sub_1BE4ACC(&UserPresentListViewManager_TypeInfo, v19);
+    sub_1BE4ACC(&UserServantCoinListViewManager_TypeInfo, v20);
+    byte_4B66648 = 1;
   }
   if ( !EquipGraphListViewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EquipGraphListViewManager_TypeInfo);

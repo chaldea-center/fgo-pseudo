@@ -13,12 +13,12 @@ BattleActionData_o *__fastcall PlayCurrentBgmLogicTask__MakeActionData(
 {
   PlayCurrentBgmActionData_o *v3; // x19
 
-  if ( (byte_4B39F04 & 1) == 0 )
+  if ( (byte_4B69988 & 1) == 0 )
   {
-    sub_1BD3458(&PlayCurrentBgmActionData_TypeInfo, logic);
-    byte_4B39F04 = 1;
+    sub_1BE4ACC(&PlayCurrentBgmActionData_TypeInfo, logic);
+    byte_4B69988 = 1;
   }
-  v3 = (PlayCurrentBgmActionData_o *)sub_1BD36A4(PlayCurrentBgmActionData_TypeInfo);
+  v3 = (PlayCurrentBgmActionData_o *)sub_1BE4D18(PlayCurrentBgmActionData_TypeInfo);
   PlayCurrentBgmActionData___ctor(v3, 0LL);
   return (BattleActionData_o *)v3;
 }

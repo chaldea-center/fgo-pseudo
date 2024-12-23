@@ -2,10 +2,10 @@ void __fastcall CommandAssistConfirmDialogComponent___ctor(
         CommandAssistConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B31D64 & 1) == 0 )
+  if ( (byte_4B61704 & 1) == 0 )
   {
-    sub_1BD3458(&BaseDialog_TypeInfo, method);
-    byte_4B31D64 = 1;
+    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
+    byte_4B61704 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -20,10 +20,10 @@ void __fastcall CommandAssistConfirmDialogComponent__Init(
   __int64 v3; // x1
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4B31D60 & 1) == 0 )
+  if ( (byte_4B61700 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_1/*""*/, method);
-    byte_4B31D60 = 1;
+    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
+    byte_4B61700 = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, method);
@@ -34,11 +34,11 @@ void __fastcall CommandAssistConfirmDialogComponent__Init(
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = this->fields.closeLabel) == 0LL) )
   {
-    sub_1BD36B4(titleLabel, v3);
+    sub_1BE4D28(titleLabel, v3);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.closeCallback = 0LL;
-  sub_1BD33FC(&this->fields.closeCallback);
+  sub_1BE4A70(&this->fields.closeCallback);
 }
 
 
@@ -50,18 +50,18 @@ void __fastcall CommandAssistConfirmDialogComponent__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_o *closeCallback; // x8
 
-  if ( (byte_4B31D62 & 1) == 0 )
+  if ( (byte_4B61702 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CommandAssistConfirmDialogComponent_OnClickCloseButton__, method);
-    byte_4B31D62 = 1;
+    sub_1BE4ACC(&Method_CommandAssistConfirmDialogComponent_OnClickCloseButton__, method);
+    byte_4B61702 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_CommandAssistConfirmDialogComponent_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_CommandAssistConfirmDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BD3470();
-    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BE4AE4();
+    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     closeCallback = this->fields.closeCallback;
     if ( closeCallback )
@@ -94,16 +94,16 @@ void __fastcall CommandAssistConfirmDialogComponent__Open(
   System_Action_o *v20; // x20
   const MethodInfo *v21; // x3
 
-  if ( (byte_4B31D61 & 1) == 0 )
+  if ( (byte_4B61701 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, closeCallback);
-    sub_1BD3458(&Method_CommandAssistConfirmDialogComponent__Open_b__11_0__, v7);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v8);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_5662/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_MESSAGE"*/, v10);
-    sub_1BD3458(&StringLiteral_3794/*"COMMON_CONFIRM_CLOSE"*/, v11);
-    sub_1BD3458(&StringLiteral_5663/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_TITLE"*/, v12);
-    byte_4B31D61 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, closeCallback);
+    sub_1BE4ACC(&Method_CommandAssistConfirmDialogComponent__Open_b__11_0__, v7);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v8);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_5665/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_MESSAGE"*/, v10);
+    sub_1BE4ACC(&StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, v11);
+    sub_1BE4ACC(&StringLiteral_5666/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_TITLE"*/, v12);
+    byte_4B61701 = 1;
   }
   CommandAssistConfirmDialogComponent__Init(this, (const MethodInfo *)closeCallback);
   this->fields.eventId = eventId;
@@ -115,22 +115,22 @@ void __fastcall CommandAssistConfirmDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5663/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5666/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
   messageLabel = this->fields.messageLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5662/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5665/*"EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_15;
   UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
   closeLabel = this->fields.closeLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3794/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_15;
   UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
   this->fields.closeCallback = closeCallback;
-  sub_1BD33FC(&this->fields.closeCallback);
+  sub_1BE4A70(&this->fields.closeCallback);
   listViewManager = (UnityEngine_Object_o *)this->fields.listViewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -143,10 +143,10 @@ void __fastcall CommandAssistConfirmDialogComponent__Open(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1BD36B4(gameObject, v14);
+    sub_1BE4D28(gameObject, v14);
   }
 LABEL_14:
-  v20 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_CommandAssistConfirmDialogComponent__Open_b__11_0__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v20, 0, v21);
 }
@@ -176,10 +176,10 @@ UnityEngine_GameObject_o *__fastcall CommandAssistConfirmDialogComponent__get_cl
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B31D63 & 1) == 0 )
+  if ( (byte_4B61703 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B31D63 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B61703 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -188,6 +188,6 @@ UnityEngine_GameObject_o *__fastcall CommandAssistConfirmDialogComponent__get_cl
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

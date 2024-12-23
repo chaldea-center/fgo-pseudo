@@ -119,51 +119,51 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
   EventMissionGroupEntity_o *entity; // [xsp+58h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v111; // [xsp+60h] [xbp-80h] BYREF
 
-  if ( (byte_4B3B3C3 & 1) == 0 )
+  if ( (byte_4B6AE5C & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Any_EventCommandAssistEntity___, *(_QWORD *)&eventId);
-    sub_1BD3458(&CommandAssistLvUpListViewItem_TypeInfo, v4);
-    sub_1BD3458(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
-    sub_1BD3458(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v6);
-    sub_1BD3458(&Method_DataManager_GetMaster_EventMissionGroupMaster___, v7);
-    sub_1BD3458(&Method_DataManager_GetMaster_SkillDetailMaster___, v8);
-    sub_1BD3458(&Method_DataManager_GetMaster_SkillLvMaster___, v9);
-    sub_1BD3458(&DataManager_TypeInfo, v10);
-    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___, v11);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___, v12);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Where_CommonReleaseEntity___, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__, v15);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__get_Current__, v16);
-    sub_1BD3458(&System_Func_EventCommandAssistEntity__bool__TypeInfo, v17);
-    sub_1BD3458(&System_Func_CommonReleaseEntity__bool__TypeInfo, v18);
-    sub_1BD3458(&Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__, v19);
-    sub_1BD3458(&Method_System_Collections_Generic_List_ListViewItem__Add__, v20);
-    sub_1BD3458(&Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__, v21);
-    sub_1BD3458(&Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__, v22);
-    sub_1BD3458(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__, v23);
-    sub_1BD3458(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__, v24);
-    sub_1BD3458(&System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo, v25);
-    sub_1BD3458(&string_TypeInfo, v26);
-    sub_1BD3458(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_0__, v27);
-    sub_1BD3458(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_1__, v28);
-    sub_1BD3458(&CommandAssistLvUpListViewManager___c_TypeInfo, v29);
-    byte_4B3B3C3 = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Any_EventCommandAssistEntity___, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&CommandAssistLvUpListViewItem_TypeInfo, v4);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v6);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_EventMissionGroupMaster___, v7);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_SkillDetailMaster___, v8);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_SkillLvMaster___, v9);
+    sub_1BE4ACC(&DataManager_TypeInfo, v10);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___, v11);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___, v12);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_CommonReleaseEntity___, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__, v15);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__get_Current__, v16);
+    sub_1BE4ACC(&System_Func_EventCommandAssistEntity__bool__TypeInfo, v17);
+    sub_1BE4ACC(&System_Func_CommonReleaseEntity__bool__TypeInfo, v18);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__, v19);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v20);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__, v21);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__, v22);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Count__, v23);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__, v24);
+    sub_1BE4ACC(&System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo, v25);
+    sub_1BE4ACC(&string_TypeInfo, v26);
+    sub_1BE4ACC(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_0__, v27);
+    sub_1BE4ACC(&Method_CommandAssistLvUpListViewManager___c__CreateList_b__0_1__, v28);
+    sub_1BE4ACC(&CommandAssistLvUpListViewManager___c_TypeInfo, v29);
+    byte_4B6AE5C = 1;
   }
   memset(&v111, 0, sizeof(v111));
   entity = 0LL;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  v31 = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventMissionGroupMaster___);
-  v32 = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_SkillDetailMaster___);
-  v33 = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
-  v34 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v31 = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventMissionGroupMaster___);
+  v32 = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_SkillLvMaster___);
+  DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_SkillDetailMaster___);
+  v33 = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventCommandAssistEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v34,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventCommandAssistEntity___ctor__);
   if ( !v33 )
     goto LABEL_53;
   v103 = v32;
@@ -174,20 +174,20 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v109,
     (System_Collections_Generic_List_object__o *)ValidEntityList,
-    (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
+    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_EventCommandAssistEntity__GetEnumerator__);
   v111 = v109;
   while ( 1 )
   {
     v37 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v111,
-            (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
+            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__MoveNext__);
     if ( !v37 )
       break;
     current = v111.fields._current;
     if ( !v111.fields._current )
-      sub_1BD36B4(v37, v38);
+      sub_1BE4D28(v37, v38);
     if ( !Master_object )
-      sub_1BD36B4(v37, v38);
+      sub_1BE4D28(v37, v38);
     List = CommonReleaseMaster__getList(
              (CommonReleaseMaster_o *)Master_object,
              HIDWORD(v111.fields._current[3].monitor),
@@ -208,7 +208,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         v41 = CommandAssistLvUpListViewManager___c_TypeInfo;
       }
       v44 = (Il2CppObject *)v41->static_fields->__9;
-      _9__0_1 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_CommonReleaseEntity__bool__TypeInfo);
+      _9__0_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_CommonReleaseEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__0_1,
         v44,
@@ -216,7 +216,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         0LL);
       static_fields = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
       static_fields->__9__0_1 = (struct System_Func_CommonReleaseEntity__bool__o *)_9__0_1;
-      sub_1BD33FC(
+      sub_1BE4A70(
         (PartyOrganizationUtility_o *)&static_fields->__9__0_1,
         (int64_t)_9__0_1,
         v46,
@@ -229,17 +229,17 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
     v52 = System_Linq_Enumerable__Where_object_(
             v42,
             (System_Func_TSource__bool__o *)_9__0_1,
-            (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
+            (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_CommonReleaseEntity___);
     v53 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                  v52,
-                                                                 (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
+                                                                 (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_CommonReleaseEntity___);
     v54 = System_Linq_Enumerable__FirstOrDefault_object_(
             v53,
-            (const MethodInfo_2F53F14 *)Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
+            (const MethodInfo_2F7B9A0 *)Method_System_Linq_Enumerable_FirstOrDefault_CommonReleaseEntity___);
     if ( v54 )
     {
       if ( !v31 )
-        sub_1BD36B4(v54, v55);
+        sub_1BE4D28(v54, v55);
       if ( EventMissionGroupMaster__TryGetEntity(
              (EventMissionGroupMaster_o *)v31,
              &entity,
@@ -256,33 +256,33 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
                                           0LL);
         v63 = (int64_t)CurrentEntity;
         if ( !v34 )
-          sub_1BD36B4(CurrentEntity, CurrentEntity);
+          sub_1BE4D28(CurrentEntity, CurrentEntity);
         items = v34->fields._items;
         v65 = Method_System_Collections_Generic_List_EventCommandAssistEntity__Add__;
         ++v34->fields._version;
         if ( !items )
-          sub_1BD36B4(CurrentEntity, CurrentEntity);
+          sub_1BE4D28(CurrentEntity, CurrentEntity);
         size = v34->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v34,
             CurrentEntity,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
         }
         else
         {
           v67 = &items->obj.klass + size;
           v34->fields._size = size + 1;
           v67[4] = (Il2CppClass *)v63;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v67 + 4), v63, v57, v58, v59, v60, v61, v62);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v67 + 4), v63, v57, v58, v59, v60, v61, v62);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v111,
-    (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
+    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_EventCommandAssistEntity__Dispose__);
   v68 = CommandAssistLvUpListViewManager___c_TypeInfo;
   if ( !CommandAssistLvUpListViewManager___c_TypeInfo->_2.cctor_finished )
   {
@@ -298,7 +298,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
       v68 = CommandAssistLvUpListViewManager___c_TypeInfo;
     }
     v70 = (Il2CppObject *)v68->static_fields->__9;
-    _9__0_0 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_EventCommandAssistEntity__bool__TypeInfo);
+    _9__0_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_EventCommandAssistEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__0_0,
       v70,
@@ -306,12 +306,12 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
       0LL);
     v71 = CommandAssistLvUpListViewManager___c_TypeInfo->static_fields;
     v71->__9__0_0 = (struct System_Func_EventCommandAssistEntity__bool__o *)_9__0_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v71->__9__0_0, (int64_t)_9__0_0, v72, v73, v74, v75, v76, v77);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v71->__9__0_0, (int64_t)_9__0_0, v72, v73, v74, v75, v76, v77);
   }
   ValidEntityList = (void *)BasicHelper__Any_object_(
                               (System_Collections_Generic_List_T__o *)v34,
                               (System_Func_T__bool__o *)_9__0_0,
-                              (const MethodInfo_2F1C5F0 *)Method_BasicHelper_Any_EventCommandAssistEntity___);
+                              (const MethodInfo_2F4407C *)Method_BasicHelper_Any_EventCommandAssistEntity___);
   if ( ((unsigned __int8)ValidEntityList & 1) == 0 )
   {
     if ( !v34 )
@@ -325,7 +325,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         ValidEntityList = System_Collections_Generic_List_object___get_Item(
                             v34,
                             v78,
-                            (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
+                            (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_EventCommandAssistEntity__get_Item__);
         if ( !ValidEntityList || !v32 )
           break;
         v79 = ValidEntityList;
@@ -334,7 +334,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
                 *((_DWORD *)ValidEntityList + 13),
                 *((_DWORD *)ValidEntityList + 10),
                 0LL);
-        if ( !v80 || (Empty = SkillLvEntity__getDetail_40754448(v80, v80->fields.lv, 0, 0LL)) == 0LL )
+        if ( !v80 || (Empty = SkillLvEntity__getDetail_40890048(v80, v80->fields.lv, 0, 0LL)) == 0LL )
           Empty = string_TypeInfo->static_fields->Empty;
         ValidEntityList = EventCommandAssistMaster__GetEntity(
                             v107,
@@ -349,7 +349,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
                 *((_DWORD *)ValidEntityList + 13),
                 *((_DWORD *)ValidEntityList + 10),
                 0LL);
-        if ( !v83 || (beforeDetail = SkillLvEntity__getDetail_40754448(v83, v83->fields.lv, 0, 0LL)) == 0LL )
+        if ( !v83 || (beforeDetail = SkillLvEntity__getDetail_40890048(v83, v83->fields.lv, 0, 0LL)) == 0LL )
           beforeDetail = string_TypeInfo->static_fields->Empty;
         v85 = *((_DWORD *)v79 + 4);
         v86 = *((_DWORD *)v79 + 12);
@@ -357,7 +357,7 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         v89 = (System_String_o *)*((_QWORD *)v82 + 4);
         v90 = v34->fields._size;
-        v91 = (CommandAssistLvUpListViewItem_o *)sub_1BD36A4(CommandAssistLvUpListViewItem_TypeInfo);
+        v91 = (CommandAssistLvUpListViewItem_o *)sub_1BE4D18(CommandAssistLvUpListViewItem_TypeInfo);
         CommandAssistLvUpListViewItem___ctor(
           v91,
           v78,
@@ -384,20 +384,20 @@ void __fastcall CommandAssistLvUpListViewManager__CreateList(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v91,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
         }
         else
         {
           v101 = &v98->obj.klass + v100;
           itemList->fields._size = v100 + 1;
           v101[4] = (Il2CppClass *)v91;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v101 + 4), (int64_t)v91, v92, v93, v94, v95, v96, v97);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v101 + 4), (int64_t)v91, v92, v93, v94, v95, v96, v97);
         }
         if ( missionIdb == ++v78 )
           goto LABEL_50;
       }
 LABEL_53:
-      sub_1BD36B4(ValidEntityList, v36);
+      sub_1BE4D28(ValidEntityList, v36);
     }
 LABEL_50:
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0LL);
@@ -430,15 +430,15 @@ void __fastcall CommandAssistLvUpListViewManager___c___cctor(const MethodInfo *m
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B3B3C4 & 1) == 0 )
+  if ( (byte_4B6AE5D & 1) == 0 )
   {
-    sub_1BD3458(&CommandAssistLvUpListViewManager___c_TypeInfo, v1);
-    byte_4B3B3C4 = 1;
+    sub_1BE4ACC(&CommandAssistLvUpListViewManager___c_TypeInfo, v1);
+    byte_4B6AE5D = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(CommandAssistLvUpListViewManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(CommandAssistLvUpListViewManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CommandAssistLvUpListViewManager___c_TypeInfo->static_fields->__9 = (struct CommandAssistLvUpListViewManager___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)CommandAssistLvUpListViewManager___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -473,6 +473,6 @@ bool __fastcall CommandAssistLvUpListViewManager___c___CreateList_b__0_1(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return ent->fields.condType == 177;
 }

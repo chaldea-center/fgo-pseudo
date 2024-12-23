@@ -13,10 +13,10 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
 {
   UnityEngine_GameObject_o *selectImgObj; // x0
 
-  if ( (byte_4B3A9C9 & 1) == 0 )
+  if ( (byte_4B6A461 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_1262/*"1"*/, item);
-    byte_4B3A9C9 = 1;
+    sub_1BE4ACC(&StringLiteral_1262/*"1"*/, item);
+    byte_4B6A461 = 1;
   }
   if ( item )
   {
@@ -33,7 +33,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
         return;
       }
 LABEL_10:
-      sub_1BD36B4(selectImgObj, item);
+      sub_1BE4D28(selectImgObj, item);
     }
     UnityEngine_GameObject__SetActive(selectImgObj, 0, 0LL);
   }
@@ -55,20 +55,20 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x21
   const MethodInfo *v14; // x4
 
-  if ( (byte_4B3A9C8 & 1) == 0 )
+  if ( (byte_4B6A460 & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, item);
-    sub_1BD3458(&StringLiteral_9438/*"NOT_SELECT_MAX_EQUIP"*/, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    sub_1BD3458(&StringLiteral_1262/*"1"*/, v9);
-    byte_4B3A9C8 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, item);
+    sub_1BE4ACC(&StringLiteral_9446/*"NOT_SELECT_MAX_EQUIP"*/, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    sub_1BE4ACC(&StringLiteral_1262/*"1"*/, v9);
+    byte_4B6A460 = 1;
   }
   if ( item && mode )
   {
     icon = this->fields.icon;
     if ( !icon )
       goto LABEL_38;
-    ServantFaceIconComponent__Set_39008112(
+    ServantFaceIconComponent__Set_39132220(
       icon,
       item->fields.userCommandCode,
       item->fields.iconLabelInfo1,
@@ -123,7 +123,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         maskLabel = this->fields.maskLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9438/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
+        icon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9446/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
         if ( !maskLabel )
           goto LABEL_38;
         UILabel__set_text(maskLabel, (System_String_o *)icon, 0LL);
@@ -156,7 +156,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         }
       }
 LABEL_38:
-      sub_1BD36B4(icon, item);
+      sub_1BE4D28(icon, item);
     }
   }
 }

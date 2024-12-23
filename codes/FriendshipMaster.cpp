@@ -1,14 +1,14 @@
 void __fastcall FriendshipMaster___ctor(FriendshipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B373D3 & 1) == 0 )
+  if ( (byte_4B66DF4 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__, method);
-    byte_4B373D3 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__, method);
+    byte_4B66DF4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     31,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ FriendshipEntity_o *__fastcall FriendshipMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B373D1 & 1) == 0 )
+  if ( (byte_4B66DF2 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4B373D1 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4B66DF2 = 1;
   }
   PK = (Il2CppObject *)FriendshipEntity__CreatePK(id, rank, *(const MethodInfo **)&rank);
   return (FriendshipEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_31D2248 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
+                                 (const MethodInfo_31FDB1C *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__GetEntity__);
 }
 
 
@@ -65,7 +65,7 @@ FriendshipEntity_o *__fastcall FriendshipMaster__GetFriendShipRankEntity(
       {
         v12 = entity;
         if ( !entity )
-          sub_1BD36B4(v13, v14);
+          sub_1BE4D28(v13, v14);
         if ( entity->fields.friendship > friendship )
           break;
         if ( v16 > RankMax )
@@ -108,11 +108,11 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   int32_t v30; // [xsp+1Ch] [xbp-64h] BYREF
 
   v30 = friendshipId;
-  if ( (byte_4B373D4 & 1) == 0 )
+  if ( (byte_4B66DF5 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___, *(_QWORD *)&friendshipId);
-    sub_1BD3458(&StringLiteral_1541/*":"*/, v15);
-    byte_4B373D4 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___, *(_QWORD *)&friendshipId);
+    sub_1BE4ACC(&StringLiteral_1542/*":"*/, v15);
+    byte_4B66DF5 = 1;
   }
   v16 = 0;
   v17 = 0;
@@ -124,13 +124,13 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   {
     v18 = System_Int32__ToString((int32_t)&v30, 0LL);
     v19 = System_Int32__ToString((int32_t)max, 0LL);
-    v20 = System_String__Concat_62536508(v18, (System_String_o *)StringLiteral_1541/*":"*/, v19, 0LL);
+    v20 = System_String__Concat_62710068(v18, (System_String_o *)StringLiteral_1542/*":"*/, v19, 0LL);
     result = 0LL;
     EntityFromId_object = DataMasterBase__TryGetEntityFromId_object_(
                             (DataMasterBase_o *)this,
                             &result,
                             v20,
-                            (const MethodInfo_2F31B24 *)Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
+                            (const MethodInfo_2F595B0 *)Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___);
     if ( !EntityFromId_object )
       break;
     if ( v16 <= friendship )
@@ -139,7 +139,7 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
       v23 = result;
       if ( !result )
 LABEL_23:
-        sub_1BD36B4(EntityFromId_object, v22);
+        sub_1BE4D28(EntityFromId_object, v22);
       monitor = (int)result[1].monitor;
       v25 = monitor < 1;
       if ( monitor < 1 )
@@ -190,21 +190,21 @@ int32_t __fastcall FriendshipMaster__GetRankMax(FriendshipMaster_o *this, int32_
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
   v18 = id;
-  if ( (byte_4B373D5 & 1) == 0 )
+  if ( (byte_4B66DF6 & 1) == 0 )
   {
-    sub_1BD3458(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&id);
-    sub_1BD3458(&StringLiteral_1541/*":"*/, v4);
-    byte_4B373D5 = 1;
+    sub_1BE4ACC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&id);
+    sub_1BE4ACC(&StringLiteral_1542/*":"*/, v4);
+    byte_4B66DF6 = 1;
   }
   for ( i = 0; ; i = v17 + 1 )
   {
     v17 = i;
     v6 = System_Int32__ToString((int32_t)&v18, 0LL);
     v7 = System_Int32__ToString((int32_t)&v17, 0LL);
-    v8 = System_String__Concat_62536508(v6, (System_String_o *)StringLiteral_1541/*":"*/, v7, 0LL);
+    v8 = System_String__Concat_62710068(v6, (System_String_o *)StringLiteral_1542/*":"*/, v7, 0LL);
     lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
-      sub_1BD36B4(0LL, v10);
+      sub_1BE4D28(0LL, v10);
     klass = lookup->klass;
     v12 = lookup;
     v13 = *(unsigned __int16 *)(&lookup->klass->_2.bitflags2 + 3);
@@ -223,7 +223,7 @@ int32_t __fastcall FriendshipMaster__GetRankMax(FriendshipMaster_o *this, int32_
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(
+      p_method = sub_1C36AAC(
                    lookup,
                    System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
                    0LL);
@@ -248,15 +248,15 @@ bool __fastcall FriendshipMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B373D2 & 1) == 0 )
+  if ( (byte_4B66DF3 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__, entity);
-    byte_4B373D2 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__, entity);
+    byte_4B66DF3 = 1;
   }
   PK = (Il2CppObject *)FriendshipEntity__CreatePK(id, rank, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_FriendshipMaster__FriendshipEntity__string__TryGetEntity__);
 }

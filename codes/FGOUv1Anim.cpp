@@ -3,14 +3,14 @@ void __fastcall FGOUv1Anim___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4B3602B & 1) == 0 )
+  if ( (byte_4B65A39 & 1) == 0 )
   {
-    sub_1BD3458(&FGOUv1Anim_TypeInfo, v1);
-    sub_1BD3458(&StringLiteral_16541/*"_SubTex"*/, v2);
-    byte_4B3602B = 1;
+    sub_1BE4ACC(&FGOUv1Anim_TypeInfo, v1);
+    sub_1BE4ACC(&StringLiteral_16562/*"_SubTex"*/, v2);
+    byte_4B65A39 = 1;
   }
   FGOUv1Anim_TypeInfo->static_fields->subTexID = UnityEngine_Shader__PropertyToID(
-                                                   (System_String_o *)StringLiteral_16541/*"_SubTex"*/,
+                                                   (System_String_o *)StringLiteral_16562/*"_SubTex"*/,
                                                    0LL);
 }
 
@@ -48,13 +48,13 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
   UnityEngine_Material_o *v11; // x20
   FGOUv1Anim_c *v12; // x0
 
-  if ( (byte_4B3602A & 1) == 0 )
+  if ( (byte_4B65A38 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, method);
-    sub_1BD3458(&FGOUv1Anim_TypeInfo, v3);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v4);
-    sub_1BD3458(&UnityEngine_Material_TypeInfo, v5);
-    byte_4B3602A = 1;
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, method);
+    sub_1BE4ACC(&FGOUv1Anim_TypeInfo, v3);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v4);
+    sub_1BE4ACC(&UnityEngine_Material_TypeInfo, v5);
+    byte_4B65A38 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -66,7 +66,7 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
       goto LABEL_28;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                               (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !gameObject )
       goto LABEL_28;
     if ( isShared )
@@ -82,19 +82,19 @@ void __fastcall FGOUv1Anim__UpdateUV(FGOUv1Anim_o *this, const MethodInfo *metho
       goto LABEL_28;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                               (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !gameObject )
       goto LABEL_28;
     v10 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)gameObject, 0LL);
-    v11 = (UnityEngine_Material_o *)sub_1BD36A4(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor_70141544(v11, v10, 0LL);
+    v11 = (UnityEngine_Material_o *)sub_1BE4D18(UnityEngine_Material_TypeInfo);
+    UnityEngine_Material___ctor_70315272(v11, v10, 0LL);
   }
   gameObject = (UnityEngine_GameObject_o *)FGOUv1Anim_TypeInfo;
   if ( !FGOUv1Anim_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FGOUv1Anim_TypeInfo);
   if ( !v11 )
 LABEL_28:
-    sub_1BD36B4(gameObject, v8);
+    sub_1BE4D28(gameObject, v8);
   if ( UnityEngine_Material__HasProperty(v11, FGOUv1Anim_TypeInfo->static_fields->subTexID, 0LL) )
   {
     v12 = FGOUv1Anim_TypeInfo;
@@ -103,7 +103,7 @@ LABEL_28:
       j_il2cpp_runtime_class_init_0(FGOUv1Anim_TypeInfo);
       v12 = FGOUv1Anim_TypeInfo;
     }
-    UnityEngine_Material__SetTextureOffset_70143780(v11, v12->static_fields->subTexID, this->fields.m_Offset, 0LL);
+    UnityEngine_Material__SetTextureOffset_70317508(v11, v12->static_fields->subTexID, this->fields.m_Offset, 0LL);
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -114,7 +114,7 @@ LABEL_28:
     {
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  gameObject,
-                                                 (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                 (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
       if ( gameObject )
       {
         UnityEngine_Renderer__set_sharedMaterial((UnityEngine_Renderer_o *)gameObject, v11, 0LL);

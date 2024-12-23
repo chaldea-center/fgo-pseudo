@@ -67,16 +67,16 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
   float v41; // s3
 
   v6 = this;
-  if ( (byte_4B341B0 & 1) == 0 )
+  if ( (byte_4B63B9A & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, item);
-    sub_1BD3458(&StringLiteral_12093/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v7);
-    sub_1BD3458(&StringLiteral_17678/*"btn_bg_20"*/, v8);
-    sub_1BD3458(&StringLiteral_12091/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v9);
-    sub_1BD3458(&StringLiteral_12092/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v10);
-    sub_1BD3458(&StringLiteral_12087/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v11);
-    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_1BD3458(&StringLiteral_17679/*"btn_bg_21"*/, v12);
-    byte_4B341B0 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, item);
+    sub_1BE4ACC(&StringLiteral_12106/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v7);
+    sub_1BE4ACC(&StringLiteral_17699/*"btn_bg_20"*/, v8);
+    sub_1BE4ACC(&StringLiteral_12104/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v9);
+    sub_1BE4ACC(&StringLiteral_12105/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v10);
+    sub_1BE4ACC(&StringLiteral_12100/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v11);
+    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_1BE4ACC(&StringLiteral_17700/*"btn_bg_21"*/, v12);
+    byte_4B63B9A = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode )
@@ -90,7 +90,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12091/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
+                                                       (System_String_o *)StringLiteral_12104/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
                                                        0LL);
     if ( !v14 )
       goto LABEL_54;
@@ -102,7 +102,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_55;
     v16 = v15->m_Items[1];
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12087/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
+                                                       (System_String_o *)StringLiteral_12100/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
                                                        0LL);
     if ( !v16 )
       goto LABEL_54;
@@ -112,25 +112,25 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_54;
     if ( v17->max_length <= 2 )
 LABEL_55:
-      sub_1BD36BC(this, item);
+      sub_1BE4D30(this, item);
     v18 = v17->m_Items[2];
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12093/*"SERVANT_STATUS_TD_SPEED_TWICE"*/,
+                                                       (System_String_o *)StringLiteral_12106/*"SERVANT_STATUS_TD_SPEED_TWICE"*/,
                                                        0LL);
     if ( !v18 )
       goto LABEL_54;
     UIRangeLabel__Set(v18, (System_String_o *)this, 0LL, 1, 0, 0LL);
     explanationLabel = v6->fields.explanationLabel;
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12092/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/,
+                                                       (System_String_o *)StringLiteral_12105/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/,
                                                        0LL);
     if ( !explanationLabel )
       goto LABEL_54;
     UILabel__set_text(explanationLabel, (System_String_o *)this, 0LL);
-    if ( !byte_4B320B5 )
+    if ( !byte_4B61A55 )
     {
-      sub_1BD3458(&LocalizationManager_TypeInfo, item);
-      byte_4B320B5 = 1;
+      sub_1BE4ACC(&LocalizationManager_TypeInfo, item);
+      byte_4B61A55 = 1;
     }
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -143,11 +143,11 @@ LABEL_55:
     v22 = m_CancellationTokenSource[21];
     v23 = m_CancellationTokenSource[22];
     v24 = m_CancellationTokenSource[23];
-    if ( !byte_4B320B6 )
+    if ( !byte_4B61A56 )
     {
-      sub_1BD3458(&LocalizationManager_TypeInfo, item);
+      sub_1BE4ACC(&LocalizationManager_TypeInfo, item);
       this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager_TypeInfo;
-      byte_4B320B6 = 1;
+      byte_4B61A56 = 1;
     }
     if ( !LODWORD(this[2].fields.tdSpeedButtonSpriteList) )
     {
@@ -189,7 +189,7 @@ LABEL_55:
         this = (ServantStatusListViewItemDrawTdSpeed_o *)tdSpeedButtonSpriteList->m_Items[v28];
         if ( !this )
           break;
-        v36 = (System_String_o **)(v28 == v34 ? &StringLiteral_17679/*"btn_bg_21"*/ : &StringLiteral_17678/*"btn_bg_20"*/);
+        v36 = (System_String_o **)(v28 == v34 ? &StringLiteral_17700/*"btn_bg_21"*/ : &StringLiteral_17699/*"btn_bg_20"*/);
         UISprite__set_spriteName((UISprite_o *)this, *v36, 0LL);
         v37 = v6->fields.tdSpeedRangeLabelList;
         if ( !v37 )
@@ -208,7 +208,7 @@ LABEL_55:
           return;
       }
 LABEL_54:
-      sub_1BD36B4(this, item);
+      sub_1BE4D28(this, item);
     }
   }
 }

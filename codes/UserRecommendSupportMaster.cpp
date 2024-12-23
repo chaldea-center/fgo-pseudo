@@ -1,14 +1,14 @@
 void __fastcall UserRecommendSupportMaster___ctor(UserRecommendSupportMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37F82 & 1) == 0 )
+  if ( (byte_4B679BD & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string___ctor__, method);
-    byte_4B37F82 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string___ctor__, method);
+    byte_4B679BD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    511,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string___ctor__);
+    515,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ UserRecommendSupportEntity_o *__fastcall UserRecommendSupportMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B37F83 & 1) == 0 )
+  if ( (byte_4B679BE & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__GetEntity__,
       userId);
-    byte_4B37F83 = 1;
+    byte_4B679BE = 1;
   }
   PK = (Il2CppObject *)UserRecommendSupportEntity__CreatePK(userId, idx, *(const MethodInfo **)&idx);
   return (UserRecommendSupportEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            PK,
-                                           (const MethodInfo_31D2248 *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__GetEntity__);
+                                           (const MethodInfo_31FDB1C *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__GetEntity__);
 }
 
 
@@ -78,11 +78,11 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
   int max_length; // w8
   unsigned int v39; // w24
   Il2CppObject *v40; // x23
-  PartyOrganizationUtility_o *klass; // x24
-  PartyOrganizationUtility_c *v42; // x8
+  Il2CppClass *klass; // x24
+  char *properties; // x8
   __int128 v43; // q0
   Il2CppClass *v44; // x8
-  char *properties; // x8
+  char *v45; // x8
   __int128 v46; // q0
   System_Int64_array *v47; // x24
   int64_t v48; // x2
@@ -96,40 +96,40 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v57; // [xsp+20h] [xbp-A0h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v58; // [xsp+40h] [xbp-80h]
 
-  if ( (byte_4B37F80 & 1) == 0 )
+  if ( (byte_4B679BB & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, method);
-    sub_1BD3458(&Method_DataManager_GetMaster_UserServantMaster___, v3);
-    sub_1BD3458(&DataManager_TypeInfo, v4);
-    sub_1BD3458(&Method_System_Linq_Enumerable_OfType_UserRecommendSupportEntity___, v5);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_UserRecommendSupportEntity___, v6);
-    sub_1BD3458(&EquipTargetInfo_TypeInfo, v7);
-    sub_1BD3458(&long___TypeInfo, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__Add__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__ToArray__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_UserRecommendSupportEntity___ctor__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__get_Item__, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__set_Item__, v13);
-    sub_1BD3458(&System_Collections_Generic_List_UserRecommendSupportEntity__TypeInfo, v14);
-    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15);
-    sub_1BD3458(&UserRecommendSupportEntity_TypeInfo, v16);
-    byte_4B37F80 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_UserServantMaster___, v3);
+    sub_1BE4ACC(&DataManager_TypeInfo, v4);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_OfType_UserRecommendSupportEntity___, v5);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_UserRecommendSupportEntity___, v6);
+    sub_1BE4ACC(&EquipTargetInfo_TypeInfo, v7);
+    sub_1BE4ACC(&long___TypeInfo, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__Add__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__ToArray__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_UserRecommendSupportEntity___ctor__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__get_Item__, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_UserRecommendSupportEntity__set_Item__, v13);
+    sub_1BE4ACC(&System_Collections_Generic_List_UserRecommendSupportEntity__TypeInfo, v14);
+    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15);
+    sub_1BE4ACC(&UserRecommendSupportEntity_TypeInfo, v16);
+    byte_4B679BB = 1;
   }
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_UserRecommendSupportEntity__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_UserRecommendSupportEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_UserRecommendSupportEntity___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_UserServantMaster___);
   list = (System_Collections_IEnumerable_o *)this->fields.list;
   v20 = (DataMasterBase_o *)Master_object;
   v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                list,
-                                                               (const MethodInfo_2F5A2A0 *)Method_System_Linq_Enumerable_OfType_UserRecommendSupportEntity___);
+                                                               (const MethodInfo_2F81D2C *)Method_System_Linq_Enumerable_OfType_UserRecommendSupportEntity___);
   v23 = System_Linq_Enumerable__ToArray_object_(
           v21,
-          (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_UserRecommendSupportEntity___);
+          (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_UserRecommendSupportEntity___);
   for ( i = 0; ; ++i )
   {
     Item = (__int64)BalanceConfig_TypeInfo;
@@ -140,8 +140,8 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
     }
     if ( i >= *(_DWORD *)(*(_QWORD *)(Item + 184) + 172LL) )
       break;
-    v26 = (UserRecommendSupportEntity_o *)sub_1BD36A4(UserRecommendSupportEntity_TypeInfo);
-    UserRecommendSupportEntity___ctor_40987452(v26, i, v27);
+    v26 = (UserRecommendSupportEntity_o *)sub_1BE4D18(UserRecommendSupportEntity_TypeInfo);
+    UserRecommendSupportEntity___ctor_41123156(v26, i, v27);
     if ( !v17 )
       goto LABEL_44;
     items = v17->fields._items;
@@ -155,14 +155,14 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
       System_Collections_Generic_List_object___AddWithResize(
         v17,
         (Il2CppObject *)v26,
-        *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
     }
     else
     {
       v37 = &items->obj.klass + size;
       v17->fields._size = size + 1;
       v37[4] = (Il2CppClass *)v26;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v37 + 4), (int64_t)v26, v28, v29, v30, v31, v32, v33);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v37 + 4), (int64_t)v26, v28, v29, v30, v31, v32, v33);
     }
     if ( !v23 )
       goto LABEL_44;
@@ -178,7 +178,7 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
         Item = (__int64)System_Collections_Generic_List_object___get_Item(
                           v17,
                           i,
-                          (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__get_Item__);
+                          (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__get_Item__);
         if ( !Item || !v40 )
           goto LABEL_44;
         if ( *(_DWORD *)(Item + 24) == LODWORD(v40[1].monitor) )
@@ -187,67 +187,67 @@ UserRecommendSupportEntity_array *__fastcall UserRecommendSupportMaster__GetReco
         if ( (int)++v39 >= max_length )
           goto LABEL_41;
       }
-      klass = (PartyOrganizationUtility_o *)v40[3].klass;
+      klass = v40[3].klass;
       if ( !klass )
         goto LABEL_44;
-      v42 = klass[1].klass;
-      if ( v42 )
+      properties = (char *)klass->_1.properties;
+      if ( properties )
       {
-        v43 = *(_OWORD *)&v42->_1.byval_arg.bits;
-        *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)&v42->_1.namespaze;
+        v43 = *(_OWORD *)(properties + 40);
+        *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)(properties + 24);
         *(_OWORD *)&v58.fields.fakeValue = v43;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v57 = v58;
-        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47140144(&v57, 0LL) )
+        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47302584(&v57, 0LL) )
         {
-          Item = sub_1BD3500(long___TypeInfo, 1LL);
+          Item = sub_1BE4B74(long___TypeInfo, 1LL);
           v44 = v40[3].klass;
           if ( !v44 )
             goto LABEL_44;
-          properties = (char *)v44->_1.properties;
-          if ( !properties )
+          v45 = (char *)v44->_1.properties;
+          if ( !v45 )
             goto LABEL_44;
-          v46 = *(_OWORD *)(properties + 40);
+          v46 = *(_OWORD *)(v45 + 40);
           v47 = (System_Int64_array *)Item;
-          *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)(properties + 24);
+          *(_OWORD *)&v58.fields.currentCryptoKey = *(_OWORD *)(v45 + 24);
           *(_OWORD *)&v58.fields.fakeValue = v46;
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v56 = v58;
-          Item = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47140144(&v56, 0LL);
+          Item = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47302584(&v56, 0LL);
           if ( !v47 )
             goto LABEL_44;
           if ( !v47->max_length )
 LABEL_45:
-            sub_1BD36BC(Item, v22);
+            sub_1BE4D30(Item, v22);
           v47->m_Items[0] = Item;
           if ( !v20 )
             goto LABEL_44;
           Item = DataMasterBase__isEntityExistsFromId(v20, v47, 0LL);
-          klass = (PartyOrganizationUtility_o *)v40[3].klass;
+          klass = v40[3].klass;
           if ( (Item & 1) != 0 )
           {
             if ( !klass )
               goto LABEL_44;
-            v54 = (EquipTargetInfo_o *)klass[1].klass;
+            v54 = (EquipTargetInfo_o *)klass->_1.properties;
 LABEL_40:
-            klass[1].klass = (PartyOrganizationUtility_c *)v54;
-            sub_1BD33FC(klass + 1, (int64_t)v54, v48, v49, v50, v51, v52, v53);
+            klass->_1.properties = v54;
+            sub_1BE4A70((PartyOrganizationUtility_o *)&klass->_1.properties, (int64_t)v54, v48, v49, v50, v51, v52, v53);
             System_Collections_Generic_List_object___set_Item(
               v17,
               i,
               v40,
-              (const MethodInfo_35C0B14 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__set_Item__);
+              (const MethodInfo_35EBFA8 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__set_Item__);
             continue;
           }
         }
         else
         {
-          klass = (PartyOrganizationUtility_o *)v40[3].klass;
+          klass = v40[3].klass;
         }
       }
-      v54 = (EquipTargetInfo_o *)sub_1BD36A4(EquipTargetInfo_TypeInfo);
+      v54 = (EquipTargetInfo_o *)sub_1BE4D18(EquipTargetInfo_TypeInfo);
       EquipTargetInfo___ctor(v54, 0LL);
       if ( !klass )
         goto LABEL_44;
@@ -258,10 +258,10 @@ LABEL_41:
   }
   if ( !v17 )
 LABEL_44:
-    sub_1BD36B4(Item, v22);
+    sub_1BE4D28(Item, v22);
   return (UserRecommendSupportEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                v17,
-                                               (const MethodInfo_35C28E8 *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__ToArray__);
+                                               (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_UserRecommendSupportEntity__ToArray__);
 }
 
 
@@ -284,35 +284,35 @@ bool __fastcall UserRecommendSupportMaster__IsSettingServant(
   System_Func_T__bool__o *v17; // x21
   __int64 *v18; // x8
 
-  if ( (byte_4B37F81 & 1) == 0 )
+  if ( (byte_4B679BC & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Any_UserRecommendSupportEntity___, userSvtId);
-    sub_1BD3458(&Method_DataMasterBase_getEntitys_UserRecommendSupportEntity___, v7);
-    sub_1BD3458(&System_Func_UserRecommendSupportEntity__bool__TypeInfo, v8);
-    sub_1BD3458(&Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__0__, v9);
-    sub_1BD3458(&Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__1__, v10);
-    sub_1BD3458(&UserRecommendSupportMaster___c__DisplayClass1_0_TypeInfo, v11);
-    byte_4B37F81 = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Any_UserRecommendSupportEntity___, userSvtId);
+    sub_1BE4ACC(&Method_DataMasterBase_getEntitys_UserRecommendSupportEntity___, v7);
+    sub_1BE4ACC(&System_Func_UserRecommendSupportEntity__bool__TypeInfo, v8);
+    sub_1BE4ACC(&Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__0__, v9);
+    sub_1BE4ACC(&Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__1__, v10);
+    sub_1BE4ACC(&UserRecommendSupportMaster___c__DisplayClass1_0_TypeInfo, v11);
+    byte_4B679BC = 1;
   }
-  v12 = (Il2CppObject *)sub_1BD36A4(UserRecommendSupportMaster___c__DisplayClass1_0_TypeInfo);
+  v12 = (Il2CppObject *)sub_1BE4D18(UserRecommendSupportMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor(v12, 0LL);
   if ( !v12 )
-    sub_1BD36B4(v13, v14);
+    sub_1BE4D28(v13, v14);
   v12[1].klass = (Il2CppClass *)userSvtId;
   Entitys_object = DataMasterBase__getEntitys_object_(
                      (DataMasterBase_o *)this,
-                     (const MethodInfo_2F31F18 *)Method_DataMasterBase_getEntitys_UserRecommendSupportEntity___);
-  v16 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_UserRecommendSupportEntity__bool__TypeInfo);
+                     (const MethodInfo_2F599A4 *)Method_DataMasterBase_getEntitys_UserRecommendSupportEntity___);
+  v16 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_UserRecommendSupportEntity__bool__TypeInfo);
   v17 = (System_Func_T__bool__o *)v16;
   if ( isEquip )
     v18 = &Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__0__;
   else
     v18 = &Method_UserRecommendSupportMaster___c__DisplayClass1_0__IsSettingServant_b__1__;
   System_Func_object__bool____ctor(v16, v12, *v18, 0LL);
-  return BasicHelper__Any_object__49399452(
+  return BasicHelper__Any_object__49561896(
            Entitys_object,
            v17,
-           (const MethodInfo_2F1C69C *)Method_BasicHelper_Any_UserRecommendSupportEntity___);
+           (const MethodInfo_2F44128 *)Method_BasicHelper_Any_UserRecommendSupportEntity___);
 }
 
 
@@ -325,19 +325,19 @@ bool __fastcall UserRecommendSupportMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B37F84 & 1) == 0 )
+  if ( (byte_4B679BF & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__TryGetEntity__,
       entity);
-    byte_4B37F84 = 1;
+    byte_4B679BF = 1;
   }
   PK = (Il2CppObject *)UserRecommendSupportEntity__CreatePK(userId, idx, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_UserRecommendSupportMaster__UserRecommendSupportEntity__string__TryGetEntity__);
 }
 
 
@@ -355,7 +355,7 @@ bool __fastcall UserRecommendSupportMaster___c__DisplayClass1_0___IsSettingServa
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return UserRecommendSupportEntity__GetEquipUserSvtId(x, (const MethodInfo *)x) == this->fields.userSvtId;
 }
 
@@ -368,7 +368,7 @@ bool __fastcall UserRecommendSupportMaster___c__DisplayClass1_0___IsSettingServa
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   userSvtLeaderInfo = x->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
     userSvtLeaderInfo = (struct ServantLeaderInfo_o *)userSvtLeaderInfo->fields.userSvtId;

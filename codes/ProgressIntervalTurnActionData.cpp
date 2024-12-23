@@ -11,19 +11,19 @@ void __fastcall ProgressIntervalTurnActionData___ctor(ProgressIntervalTurnAction
   PartyListViewItem_o *v11; // x7
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B39483 & 1) == 0 )
+  if ( (byte_4B68EEB & 1) == 0 )
   {
-    sub_1BD3458(&BattleActionData_TypeInfo, method);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_BattleServantData___ctor__, v3);
-    sub_1BD3458(&System_Collections_Generic_HashSet_BattleServantData__TypeInfo, v4);
-    byte_4B39483 = 1;
+    sub_1BE4ACC(&BattleActionData_TypeInfo, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_BattleServantData___ctor__, v3);
+    sub_1BE4ACC(&System_Collections_Generic_HashSet_BattleServantData__TypeInfo, v4);
+    byte_4B68EEB = 1;
   }
-  v5 = (System_Collections_Generic_HashSet_T__o *)sub_1BD36A4(System_Collections_Generic_HashSet_BattleServantData__TypeInfo);
+  v5 = (System_Collections_Generic_HashSet_T__o *)sub_1BE4D18(System_Collections_Generic_HashSet_BattleServantData__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
     v5,
-    (const MethodInfo_347A0FC *)Method_System_Collections_Generic_HashSet_BattleServantData___ctor__);
+    (const MethodInfo_34A5290 *)Method_System_Collections_Generic_HashSet_BattleServantData___ctor__);
   this->fields.turnProgressSvtHash = (struct System_Collections_Generic_HashSet_BattleServantData__o *)v5;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.turnProgressSvtHash, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.turnProgressSvtHash, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, v12);
@@ -42,12 +42,12 @@ void __fastcall ProgressIntervalTurnActionData__AddTurnProgressServants(
   Il2CppObject *v8; // x21
 
   v4 = this;
-  if ( (byte_4B39481 & 1) == 0 )
+  if ( (byte_4B68EE9 & 1) == 0 )
   {
-    this = (ProgressIntervalTurnActionData_o *)sub_1BD3458(
+    this = (ProgressIntervalTurnActionData_o *)sub_1BE4ACC(
                                                  &Method_System_Collections_Generic_HashSet_BattleServantData__Add__,
                                                  svtArray);
-    byte_4B39481 = 1;
+    byte_4B68EE9 = 1;
   }
   if ( !svtArray )
     goto LABEL_13;
@@ -58,7 +58,7 @@ void __fastcall ProgressIntervalTurnActionData__AddTurnProgressServants(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1BD36BC(this, svtArray);
+        sub_1BE4D30(this, svtArray);
       v7 = &svtArray->obj.klass + (int)v6;
       v8 = (Il2CppObject *)v7[4];
       if ( !v8 )
@@ -72,14 +72,14 @@ void __fastcall ProgressIntervalTurnActionData__AddTurnProgressServants(
         this = (ProgressIntervalTurnActionData_o *)System_Collections_Generic_HashSet_object___Add(
                                                      (System_Collections_Generic_HashSet_T__o *)this,
                                                      v8,
-                                                     (const MethodInfo_347B2E0 *)Method_System_Collections_Generic_HashSet_BattleServantData__Add__);
+                                                     (const MethodInfo_34A6474 *)Method_System_Collections_Generic_HashSet_BattleServantData__Add__);
       }
       max_length = svtArray->max_length;
       if ( (int)++v6 >= max_length )
         return;
     }
 LABEL_13:
-    sub_1BD36B4(this, svtArray);
+    sub_1BE4D28(this, svtArray);
   }
 }
 
@@ -125,44 +125,44 @@ void __fastcall ProgressIntervalTurnActionData__FixDisplayWaitingIntervalBuff(
   System_Collections_Generic_HashSet_Enumerator_T__o v38; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_HashSet_Enumerator_T__o v39; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B39482 & 1) == 0 )
+  if ( (byte_4B68EEA & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_BattleBuffData_BuffData__TypeInfo, data);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v5);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__Dispose__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__MoveNext__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__get_Current__, v9);
-    sub_1BD3458(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_BattleServantData__GetEnumerator__, v11);
-    sub_1BD3458(&Method_ProgressIntervalTurnActionData_UpdateIntervalTurn__, v12);
-    sub_1BD3458(&Method_ProgressIntervalTurnActionData___c__FixDisplayWaitingIntervalBuff_b__2_0__, v13);
-    sub_1BD3458(&ProgressIntervalTurnActionData___c_TypeInfo, v14);
-    byte_4B39482 = 1;
+    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, data);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v5);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__Dispose__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__MoveNext__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__get_Current__, v9);
+    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_BattleServantData__GetEnumerator__, v11);
+    sub_1BE4ACC(&Method_ProgressIntervalTurnActionData_UpdateIntervalTurn__, v12);
+    sub_1BE4ACC(&Method_ProgressIntervalTurnActionData___c__FixDisplayWaitingIntervalBuff_b__2_0__, v13);
+    sub_1BE4ACC(&ProgressIntervalTurnActionData___c_TypeInfo, v14);
+    byte_4B68EEA = 1;
   }
   memset(&v39, 0, sizeof(v39));
   BattleActionData__AddFieldServantUpdateIntervalBuff((BattleActionData_o *)this, data, method);
   turnProgressSvtHash = (System_Collections_Generic_HashSet_T__o *)this->fields.turnProgressSvtHash;
   if ( !turnProgressSvtHash )
-    sub_1BD36B4(0LL, v15);
+    sub_1BE4D28(0LL, v15);
   System_Collections_Generic_HashSet_object___GetEnumerator(
     &v38,
     turnProgressSvtHash,
-    (const MethodInfo_347AC64 *)Method_System_Collections_Generic_HashSet_BattleServantData__GetEnumerator__);
+    (const MethodInfo_34A5DF8 *)Method_System_Collections_Generic_HashSet_BattleServantData__GetEnumerator__);
   v39 = v38;
   while ( 1 )
   {
     v17 = System_Collections_Generic_HashSet_Enumerator_object___MoveNext(
             &v39,
-            (const MethodInfo_33358E0 *)Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__MoveNext__);
+            (const MethodInfo_3361770 *)Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__MoveNext__);
     if ( !v17 )
       break;
     current = v39.fields._current;
     if ( !v39.fields._current )
-      sub_1BD36B4(v17, v18);
+      sub_1BE4D28(v17, v18);
     BuffData = BattleServantData__get_BuffData((BattleServantData_o *)v39.fields._current, 0LL);
     if ( !BuffData )
-      sub_1BD36B4(0LL, v21);
+      sub_1BE4D28(0LL, v21);
     AllIntervalBuffArray = BattleBuffData__GetAllIntervalBuffArray(BuffData, 0LL);
     v23 = ProgressIntervalTurnActionData___c_TypeInfo;
     v24 = (System_Collections_Generic_IEnumerable_TSource__o *)AllIntervalBuffArray;
@@ -180,7 +180,7 @@ void __fastcall ProgressIntervalTurnActionData__FixDisplayWaitingIntervalBuff(
         v23 = ProgressIntervalTurnActionData___c_TypeInfo;
       }
       v26 = (Il2CppObject *)v23->static_fields->__9;
-      _9__2_0 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+      _9__2_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__2_0,
         v26,
@@ -188,7 +188,7 @@ void __fastcall ProgressIntervalTurnActionData__FixDisplayWaitingIntervalBuff(
         0LL);
       static_fields = ProgressIntervalTurnActionData___c_TypeInfo->static_fields;
       static_fields->__9__2_0 = (struct System_Func_BattleBuffData_BuffData__bool__o *)_9__2_0;
-      sub_1BD33FC(
+      sub_1BE4A70(
         (PartyOrganizationUtility_o *)&static_fields->__9__2_0,
         (int64_t)_9__2_0,
         v28,
@@ -201,11 +201,11 @@ void __fastcall ProgressIntervalTurnActionData__FixDisplayWaitingIntervalBuff(
     v34 = System_Linq_Enumerable__Where_object_(
             v24,
             (System_Func_TSource__bool__o *)_9__2_0,
-            (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+            (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
     v35 = System_Linq_Enumerable__ToArray_object_(
             v34,
-            (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-    v36 = (System_Action_object__o *)sub_1BD36A4(System_Action_BattleBuffData_BuffData__TypeInfo);
+            (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+    v36 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_object____ctor(
       v36,
       (Il2CppObject *)this,
@@ -220,7 +220,7 @@ void __fastcall ProgressIntervalTurnActionData__FixDisplayWaitingIntervalBuff(
   }
   System_Collections_Generic_HashSet_Enumerator_object___Dispose(
     &v39,
-    (const MethodInfo_33358DC *)Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__Dispose__);
+    (const MethodInfo_336176C *)Method_System_Collections_Generic_HashSet_Enumerator_BattleServantData__Dispose__);
 }
 
 
@@ -232,7 +232,7 @@ void __fastcall ProgressIntervalTurnActionData__UpdateIntervalTurn(
   BattleBuffData_IntervalData_o *intervalData; // x0
 
   if ( !buff )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   intervalData = buff->fields.intervalData;
   if ( intervalData )
     BattleBuffData_IntervalData__DecrementTurn(intervalData, 0LL);
@@ -250,15 +250,15 @@ void __fastcall ProgressIntervalTurnActionData___c___cctor(const MethodInfo *met
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B39484 & 1) == 0 )
+  if ( (byte_4B68EEC & 1) == 0 )
   {
-    sub_1BD3458(&ProgressIntervalTurnActionData___c_TypeInfo, v1);
-    byte_4B39484 = 1;
+    sub_1BE4ACC(&ProgressIntervalTurnActionData___c_TypeInfo, v1);
+    byte_4B68EEC = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(ProgressIntervalTurnActionData___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(ProgressIntervalTurnActionData___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ProgressIntervalTurnActionData___c_TypeInfo->static_fields->__9 = (struct ProgressIntervalTurnActionData___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)ProgressIntervalTurnActionData___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -284,6 +284,6 @@ bool __fastcall ProgressIntervalTurnActionData___c___FixDisplayWaitingIntervalBu
         const MethodInfo *method)
 {
   if ( !x || (this = (ProgressIntervalTurnActionData___c_o *)x->fields.intervalData) == 0LL )
-    sub_1BD36B4(this, x);
+    sub_1BE4D28(this, x);
   return BattleBuffData_IntervalData__get_HasIntervalTurn((BattleBuffData_IntervalData_o *)this, 0LL);
 }

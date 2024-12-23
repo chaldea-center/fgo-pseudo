@@ -1,28 +1,28 @@
 void __fastcall TotalLoginEntity___ctor(TotalLoginEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37D19 & 1) == 0 )
+  if ( (byte_4B67753 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B37D19 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B67753 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TotalLoginEntity__CreatePK(int32_t eventId, int32_t day, const MethodInfo *method)
 {
-  if ( (byte_4B37D18 & 1) == 0 )
+  if ( (byte_4B67752 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&day);
-    byte_4B37D18 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&day);
+    byte_4B67752 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            day,
-           (const MethodInfo_2F2F8A8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

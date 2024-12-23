@@ -60,18 +60,18 @@ void __fastcall FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B36623 & 1) == 0 )
+  if ( (byte_4B6603B & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, method);
-    sub_1BD3458(&FadeLogger_TypeInfo, v3);
-    sub_1BD3458(&UnityEngine_GUI_TypeInfo, v4);
-    sub_1BD3458(&string___TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_1837/*"<size="*/, v6);
-    sub_1BD3458(&StringLiteral_16116/*"[FADE]\n"*/, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    sub_1BD3458(&StringLiteral_1625/*"</size>"*/, v9);
-    sub_1BD3458(&StringLiteral_1866/*">"*/, v10);
-    byte_4B36623 = 1;
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, method);
+    sub_1BE4ACC(&FadeLogger_TypeInfo, v3);
+    sub_1BE4ACC(&UnityEngine_GUI_TypeInfo, v4);
+    sub_1BE4ACC(&string___TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_1838/*"<size="*/, v6);
+    sub_1BE4ACC(&StringLiteral_16137/*"[FADE]\n"*/, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    sub_1BE4ACC(&StringLiteral_1626/*"</size>"*/, v9);
+    sub_1BE4ACC(&StringLiteral_1867/*">"*/, v10);
+    byte_4B6603B = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -81,7 +81,7 @@ void __fastcall FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     if ( !FadeLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
     FadeLog = FadeLogger__GetFadeLog((const MethodInfo *)v11);
-    v13 = System_String__Concat_62525248((System_String_o *)StringLiteral_16116/*"[FADE]\n"*/, FadeLog, 0LL);
+    v13 = System_String__Concat_62698808((System_String_o *)StringLiteral_16137/*"[FADE]\n"*/, FadeLog, 0LL);
     v14 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -90,36 +90,36 @@ void __fastcall FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
     v53.fields.m_Width = v14 * 660.0;
     v53.fields.m_Height = v14 * 825.0;
     UnityEngine_GUI__Box(v53, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v15 = (System_String_o *)sub_1BD3500(string___TypeInfo, 5LL);
+    v15 = (System_String_o *)sub_1BE4B74(string___TypeInfo, 5LL);
     if ( !v15 )
-      sub_1BD36B4(0LL, v16);
+      sub_1BE4D28(0LL, v16);
     v23 = v15;
     if ( !LODWORD(v15[1].klass) )
       goto LABEL_18;
-    v24 = StringLiteral_1837/*"<size="*/;
-    v15[1].monitor = (void *)StringLiteral_1837/*"<size="*/;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v15[1].monitor, v24, v17, v18, v19, v20, v21, v22);
+    v24 = StringLiteral_1838/*"<size="*/;
+    v15[1].monitor = (void *)StringLiteral_1838/*"<size="*/;
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v15[1].monitor, v24, v17, v18, v19, v20, v21, v22);
     v52 = v14 * 18.0;
     v15 = System_Single__ToString(v14 * 18.0, (const MethodInfo *)&v52);
     if ( LODWORD(v23[1].klass) <= 1
       || (v23[1].fields = (System_String_Fields)v15,
-          sub_1BD33FC((PartyOrganizationUtility_o *)&v23[1].fields, (int64_t)v15, v25, v26, v27, v28, v29, v30),
+          sub_1BE4A70((PartyOrganizationUtility_o *)&v23[1].fields, (int64_t)v15, v25, v26, v27, v28, v29, v30),
           LODWORD(v23[1].klass) <= 2)
-      || (v37 = StringLiteral_1866/*">"*/,
-          v23[2].klass = (System_String_c *)StringLiteral_1866/*">"*/,
-          sub_1BD33FC((PartyOrganizationUtility_o *)&v23[2], v37, v31, v32, v33, v34, v35, v36),
+      || (v37 = StringLiteral_1867/*">"*/,
+          v23[2].klass = (System_String_c *)StringLiteral_1867/*">"*/,
+          sub_1BE4A70((PartyOrganizationUtility_o *)&v23[2], v37, v31, v32, v33, v34, v35, v36),
           LODWORD(v23[1].klass) <= 3)
       || (v23[2].monitor = v13,
-          sub_1BD33FC((PartyOrganizationUtility_o *)&v23[2].monitor, (int64_t)v13, v38, v39, v40, v41, v42, v43),
+          sub_1BE4A70((PartyOrganizationUtility_o *)&v23[2].monitor, (int64_t)v13, v38, v39, v40, v41, v42, v43),
           LODWORD(v23[1].klass) <= 4) )
     {
 LABEL_18:
-      sub_1BD36BC(v15, v16);
+      sub_1BE4D30(v15, v16);
     }
-    v50 = StringLiteral_1625/*"</size>"*/;
-    v23[2].fields = (System_String_Fields)StringLiteral_1625/*"</size>"*/;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v23[2].fields, v50, v44, v45, v46, v47, v48, v49);
-    v51 = System_String__Concat_62538776((System_String_array *)v23, 0LL);
+    v50 = StringLiteral_1626/*"</size>"*/;
+    v23[2].fields = (System_String_Fields)StringLiteral_1626/*"</size>"*/;
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v23[2].fields, v50, v44, v45, v46, v47, v48, v49);
+    v51 = System_String__Concat_62712336((System_String_array *)v23, 0LL);
     v54.fields.m_XMin = 10.0;
     v54.fields.m_YMin = 5.0;
     v54.fields.m_Width = v14 * 800.0;

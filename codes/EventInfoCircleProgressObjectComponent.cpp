@@ -17,7 +17,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__ApplyProgressData(
 
   progressData = this->fields.progressData;
   if ( !progressData )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   Level = progressData->fields.Level;
   DispState = progressData->fields.DispState;
   IsCompleted = progressData->fields.IsCompleted;
@@ -47,16 +47,16 @@ bool __fastcall EventInfoCircleProgressObjectComponent__IsBackDrawState(
   int64_t CondValue; // x20
 
   v2 = this;
-  if ( (byte_4B379A7 & 1) == 0 )
+  if ( (byte_4B673C4 & 1) == 0 )
   {
-    this = (EventInfoCircleProgressObjectComponent_o *)sub_1BD3458(&CondType_TypeInfo, method);
-    byte_4B379A7 = 1;
+    this = (EventInfoCircleProgressObjectComponent_o *)sub_1BE4ACC(&CondType_TypeInfo, method);
+    byte_4B673C4 = 1;
   }
   if ( v2->fields.isExtraCircle )
     return 1;
   reverseCondition = v2->fields.reverseCondition;
   if ( !reverseCondition )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   CondKind = reverseCondition->fields.CondKind;
   CondId = reverseCondition->fields.CondId;
   CondValue = reverseCondition->fields.CondValue;
@@ -80,17 +80,17 @@ bool __fastcall EventInfoCircleProgressObjectComponent__IsCompletedState(
   int64_t v9; // x20
 
   v4 = this;
-  if ( (byte_4B379A8 & 1) == 0 )
+  if ( (byte_4B673C5 & 1) == 0 )
   {
-    this = (EventInfoCircleProgressObjectComponent_o *)sub_1BD3458(&CondType_TypeInfo, *(_QWORD *)&dispState);
-    byte_4B379A8 = 1;
+    this = (EventInfoCircleProgressObjectComponent_o *)sub_1BE4ACC(&CondType_TypeInfo, *(_QWORD *)&dispState);
+    byte_4B673C5 = 1;
   }
   v5 = 64LL;
   if ( dispState == 1 )
     v5 = 72LL;
   v6 = *(EventInfoCircleProgressObjectComponent_c **)((char *)&v4->klass + v5);
   if ( !v6 )
-    sub_1BD36B4(this, *(_QWORD *)&dispState);
+    sub_1BE4D28(this, *(_QWORD *)&dispState);
   v8 = v6[4];
   v7 = v6[5];
   v9 = (int)v6[6];
@@ -137,40 +137,40 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayAnimSlideIn(
   System_Action_o *v34; // x21
   System_Action_o *v35; // x22
 
-  if ( (byte_4B379A6 & 1) == 0 )
+  if ( (byte_4B673C3 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, endAction);
-    sub_1BD3458(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
-    sub_1BD3458(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass23_0__PlayAnimSlideIn_b__0__, v6);
-    sub_1BD3458(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass23_0__PlayAnimSlideIn_b__1__, v7);
-    sub_1BD3458(&EventInfoCircleProgressObjectComponent___c__DisplayClass23_0_TypeInfo, v8);
-    byte_4B379A6 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, endAction);
+    sub_1BE4ACC(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
+    sub_1BE4ACC(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass23_0__PlayAnimSlideIn_b__0__, v6);
+    sub_1BE4ACC(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass23_0__PlayAnimSlideIn_b__1__, v7);
+    sub_1BE4ACC(&EventInfoCircleProgressObjectComponent___c__DisplayClass23_0_TypeInfo, v8);
+    byte_4B673C3 = 1;
   }
-  v9 = sub_1BD36A4(EventInfoCircleProgressObjectComponent___c__DisplayClass23_0_TypeInfo);
+  v9 = sub_1BE4D18(EventInfoCircleProgressObjectComponent___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_6;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 32), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 32), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 40) = endAction;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 40), (int64_t)endAction, v18, v19, v20, v21, v22, v23);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 40), (int64_t)endAction, v18, v19, v20, v21, v22, v23);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *(float *)(v9 + 16) = GameObjectExtensions__GetLocalPositionX(gameObject, 0LL);
   *(_DWORD *)(v9 + 20) = 0;
   v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        v25,
-                       (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_2FAB284 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v9 + 24) = Component_object;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)Component_object, v27, v28, v29, v30, v31, v32);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)Component_object, v27, v28, v29, v30, v31, v32);
   v33 = *(EasingObject_o **)(v9 + 24);
-  v34 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v34 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v34,
     (Il2CppObject *)v9,
     Method_EventInfoCircleProgressObjectComponent___c__DisplayClass23_0__PlayAnimSlideIn_b__0__,
     0LL);
-  v35 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v35,
     (Il2CppObject *)v9,
@@ -178,7 +178,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayAnimSlideIn(
     0LL);
   if ( !v33 )
 LABEL_6:
-    sub_1BD36B4(v10, v11);
+    sub_1BE4D28(v10, v11);
   EasingObject__Play(v33, 0.5, v34, v35, 0.0, 5, 0LL);
 }
 
@@ -231,34 +231,34 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayAnimToBackDraw(
   System_Action_o *v45; // x20
   UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B379A5 & 1) == 0 )
+  if ( (byte_4B673C2 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, endAction);
-    sub_1BD3458(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
-    sub_1BD3458(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass22_0__PlayAnimToBackDraw_b__1__, v6);
-    sub_1BD3458(&EventInfoCircleProgressObjectComponent___c__DisplayClass22_0_TypeInfo, v7);
-    sub_1BD3458(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass22_1__PlayAnimToBackDraw_b__0__, v8);
-    sub_1BD3458(&EventInfoCircleProgressObjectComponent___c__DisplayClass22_1_TypeInfo, v9);
-    byte_4B379A5 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, endAction);
+    sub_1BE4ACC(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v5);
+    sub_1BE4ACC(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass22_0__PlayAnimToBackDraw_b__1__, v6);
+    sub_1BE4ACC(&EventInfoCircleProgressObjectComponent___c__DisplayClass22_0_TypeInfo, v7);
+    sub_1BE4ACC(&Method_EventInfoCircleProgressObjectComponent___c__DisplayClass22_1__PlayAnimToBackDraw_b__0__, v8);
+    sub_1BE4ACC(&EventInfoCircleProgressObjectComponent___c__DisplayClass22_1_TypeInfo, v9);
+    byte_4B673C2 = 1;
   }
-  v10 = sub_1BD36A4(EventInfoCircleProgressObjectComponent___c__DisplayClass22_0_TypeInfo);
+  v10 = sub_1BE4D18(EventInfoCircleProgressObjectComponent___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_9;
   *(_QWORD *)(v10 + 24) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v10 + 24), (int64_t)this, v13, v14, v15, v16, v17, v18);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 24), (int64_t)this, v13, v14, v15, v16, v17, v18);
   *(_QWORD *)(v10 + 32) = endAction;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v10 + 32), (int64_t)endAction, v19, v20, v21, v22, v23, v24);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 32), (int64_t)endAction, v19, v20, v21, v22, v23, v24);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *(float *)(v10 + 16) = GameObjectExtensions__GetLocalEulerAngleX(gameObject, 0LL);
   *(_DWORD *)(v10 + 20) = 1151172608;
-  v26 = sub_1BD36A4(EventInfoCircleProgressObjectComponent___c__DisplayClass22_1_TypeInfo);
+  v26 = sub_1BE4D18(EventInfoCircleProgressObjectComponent___c__DisplayClass22_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v26, 0LL);
   if ( !v26 )
     goto LABEL_9;
   *(_QWORD *)(v26 + 32) = v10;
   v33 = v26 + 32;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v26 + 32), v10, v27, v28, v29, v30, v31, v32);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v26 + 32), v10, v27, v28, v29, v30, v31, v32);
   v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !*(_QWORD *)(v26 + 32) )
     goto LABEL_9;
@@ -272,18 +272,18 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayAnimToBackDraw(
   v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        v34,
-                       (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_2FAB284 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v26 + 16) = Component_object;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)Component_object, v36, v37, v38, v39, v40, v41);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)Component_object, v36, v37, v38, v39, v40, v41);
   v42 = *(EasingObject_o **)(v26 + 16);
-  v43 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v43 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v43,
     (Il2CppObject *)v26,
     Method_EventInfoCircleProgressObjectComponent___c__DisplayClass22_1__PlayAnimToBackDraw_b__0__,
     0LL);
   v44 = *(Il2CppObject **)(v26 + 32);
-  v45 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v45 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v45,
     v44,
@@ -291,7 +291,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayAnimToBackDraw(
     0LL);
   if ( !v42 )
 LABEL_9:
-    sub_1BD36B4(v11, v12);
+    sub_1BE4D28(v11, v12);
   EasingObject__Play(v42, 0.5, v43, v45, 0.0, 0, 0LL);
 }
 
@@ -315,7 +315,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__PlayCompleteAnim(
   this = *(EventInfoCircleProgressObjectComponent_o **)((char *)&this->klass + v5);
   if ( !this )
 LABEL_6:
-    sub_1BD36B4(this, endAction);
+    sub_1BE4D28(this, endAction);
   EventInfoCircleProgressDrawComponent__PlayCompleteAnim(
     (EventInfoCircleProgressDrawComponent_o *)this,
     endAction,
@@ -339,7 +339,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__SetActive(
         EventInfoCircleProgressDrawComponent__SetActive(frontDrawObject, isActive, method),
         (frontDrawObject = this->fields.backDrawObject) == 0LL) )
   {
-    sub_1BD36B4(frontDrawObject, isActive);
+    sub_1BE4D28(frontDrawObject, isActive);
   }
   EventInfoCircleProgressDrawComponent__SetActive(frontDrawObject, v5, v6);
 }
@@ -375,7 +375,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__Setup(
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.circleProgressCtrl = circleProgressCtrl;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.circleProgressCtrl,
     (int64_t)circleProgressCtrl,
     (int64_t)progressData,
@@ -385,7 +385,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__Setup(
     v6,
     v7);
   this->fields.progressData = progressData;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.progressData,
     (int64_t)progressData,
     v11,
@@ -420,7 +420,7 @@ void __fastcall EventInfoCircleProgressObjectComponent__Setup(
       }
     }
 LABEL_13:
-    sub_1BD36B4(frontDrawObject, v18);
+    sub_1BE4D28(frontDrawObject, v18);
   }
   if ( !frontDrawObject )
     goto LABEL_13;
@@ -546,7 +546,7 @@ void __fastcall EventInfoCircleProgressObjectComponent___c__DisplayClass22_1___P
     v8 = v6;
   if ( !this )
 LABEL_7:
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   v9 = CS___8__locals1->fields.fromAngle
      + (float)((float)(CS___8__locals1->fields.toAngle - CS___8__locals1->fields.fromAngle) * v8);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -581,7 +581,7 @@ void __fastcall EventInfoCircleProgressObjectComponent___c__DisplayClass23_0___P
     || (v3 = this,
         (this = (EventInfoCircleProgressObjectComponent___c__DisplayClass23_0_o *)this->fields.__4__this) == 0LL) )
   {
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   }
   mNow = easingObj->fields.mNow;
   v5 = fminf(mNow, 1.0);

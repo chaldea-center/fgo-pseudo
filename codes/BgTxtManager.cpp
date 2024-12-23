@@ -8,10 +8,10 @@ bool __fastcall BgTxtManager__IsActiveBgTxt(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B365BC & 1) == 0 )
+  if ( (byte_4B65FD4 & 1) == 0 )
   {
-    sub_1BD3458(&ServantCommentManager_TypeInfo, v1);
-    byte_4B365BC = 1;
+    sub_1BE4ACC(&ServantCommentManager_TypeInfo, v1);
+    byte_4B65FD4 = 1;
   }
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);

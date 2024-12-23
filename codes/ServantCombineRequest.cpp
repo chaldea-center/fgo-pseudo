@@ -16,18 +16,18 @@ void __fastcall ServantCombineRequest__beginRequest(
   __int64 v12; // x1
   __int64 v13; // x1
 
-  if ( (byte_4B38B3B & 1) == 0 )
+  if ( (byte_4B6858B & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_17278/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_1BD3458(&StringLiteral_19976/*"getExp"*/, v11);
-    sub_1BD3458(&StringLiteral_24648/*"useQp"*/, v12);
-    sub_1BD3458(&StringLiteral_21601/*"materialUserSvtIds"*/, v13);
-    byte_4B38B3B = 1;
+    sub_1BE4ACC(&StringLiteral_17299/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_1BE4ACC(&StringLiteral_20014/*"getExp"*/, v11);
+    sub_1BE4ACC(&StringLiteral_24701/*"useQp"*/, v12);
+    sub_1BE4ACC(&StringLiteral_21641/*"materialUserSvtIds"*/, v13);
+    byte_4B6858B = 1;
   }
-  RequestBase__addField_41971420((RequestBase_o *)this, (System_String_o *)StringLiteral_17278/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
-  RequestBase__addField_41965080((RequestBase_o *)this, (System_String_o *)StringLiteral_21601/*"materialUserSvtIds"*/, materialSvtIds, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24648/*"useQp"*/, useQp, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19976/*"getExp"*/, getExp, 0LL);
+  RequestBase__addField_42110748((RequestBase_o *)this, (System_String_o *)StringLiteral_17299/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField_42104408((RequestBase_o *)this, (System_String_o *)StringLiteral_21641/*"materialUserSvtIds"*/, materialSvtIds, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24701/*"useQp"*/, useQp, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20014/*"getExp"*/, getExp, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -36,15 +36,15 @@ System_String_o *__fastcall ServantCombineRequest__getMockData(ServantCombineReq
 {
   __int64 v2; // x1
 
-  if ( (byte_4B38B3A & 1) == 0 )
+  if ( (byte_4B6858A & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_9252/*"MockSvtCombineResponse"*/, v2);
-    byte_4B38B3A = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_9259/*"MockSvtCombineResponse"*/, v2);
+    byte_4B6858A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9252/*"MockSvtCombineResponse"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9259/*"MockSvtCombineResponse"*/, 0LL);
 }
 
 
@@ -53,16 +53,16 @@ System_String_o *__fastcall ServantCombineRequest__getURL(ServantCombineRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B38B39 & 1) == 0 )
+  if ( (byte_4B68589 & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_17952/*"card/combine"*/, v2);
-    byte_4B38B39 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_17976/*"card/combine"*/, v2);
+    byte_4B68589 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_17952/*"card/combine"*/, 0LL);
+  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_17976/*"card/combine"*/, 0LL);
 }
 
 
@@ -79,12 +79,12 @@ void __fastcall ServantCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4B38B3C & 1) == 0 )
+  if ( (byte_4B6858C & 1) == 0 )
   {
-    sub_1BD3458(&JsonManager_TypeInfo, responseList);
-    sub_1BD3458(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v6);
-    byte_4B38B3C = 1;
+    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
+    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
+    byte_4B6858C = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -98,7 +98,7 @@ void __fastcall ServantCombineRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22325/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22370/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

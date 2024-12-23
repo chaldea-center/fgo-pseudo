@@ -8,20 +8,20 @@ void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const 
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B3841D & 1) == 0 )
+  if ( (byte_4B67E6A & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_1/*""*/, method);
-    byte_4B3841D = 1;
+    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
+    byte_4B67E6A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
   v3 = StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
-void __fastcall TransformServantInfo___ctor_41370448(
+void __fastcall TransformServantInfo___ctor_41508944(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -42,7 +42,7 @@ void __fastcall TransformServantInfo___ctor_41370448(
   v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = svtId;
   *(_DWORD *)(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = dispLimitCount;
-  sub_1BD33FC(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
+  sub_1BE4A70(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -56,10 +56,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4B3841E & 1) == 0 )
+  if ( (byte_4B67E6B & 1) == 0 )
   {
-    sub_1BD3458(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    byte_4B3841E = 1;
+    sub_1BE4ACC(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    byte_4B67E6B = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

@@ -1,14 +1,14 @@
 void __fastcall EventFilterMaster___ctor(EventFilterMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3713B & 1) == 0 )
+  if ( (byte_4B66B58 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string___ctor__, method);
-    byte_4B3713B = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string___ctor__, method);
+    byte_4B66B58 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    183,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string___ctor__);
+    187,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string___ctor__);
 }
 
 
@@ -24,13 +24,13 @@ System_String_o *__fastcall EventFilterMaster__GetButtonTextFromLocalization(
   __int64 v9; // x1
   __int64 *v11; // x8
 
-  if ( (byte_4B3713E & 1) == 0 )
+  if ( (byte_4B66B5B & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
-    sub_1BD3458(&StringLiteral_11832/*"SERVANT_SORT_BONUS_KIND_ALL"*/, v7);
-    sub_1BD3458(&StringLiteral_11837/*"SERVANT_SORT_BONUS_KIND_CLOSE_EVENT"*/, v8);
-    sub_1BD3458(&StringLiteral_11839/*"SERVANT_SORT_BONUS_KIND_FINISH_EVENT"*/, v9);
-    byte_4B3713E = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
+    sub_1BE4ACC(&StringLiteral_11845/*"SERVANT_SORT_BONUS_KIND_ALL"*/, v7);
+    sub_1BE4ACC(&StringLiteral_11850/*"SERVANT_SORT_BONUS_KIND_CLOSE_EVENT"*/, v8);
+    sub_1BE4ACC(&StringLiteral_11852/*"SERVANT_SORT_BONUS_KIND_FINISH_EVENT"*/, v9);
+    byte_4B66B5B = 1;
   }
   switch ( kind )
   {
@@ -43,19 +43,19 @@ System_String_o *__fastcall EventFilterMaster__GetButtonTextFromLocalization(
     case 6:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = &StringLiteral_11839/*"SERVANT_SORT_BONUS_KIND_FINISH_EVENT"*/;
+      v11 = &StringLiteral_11852/*"SERVANT_SORT_BONUS_KIND_FINISH_EVENT"*/;
       return LocalizationManager__Get((System_String_o *)*v11, 0LL);
     case 7:
       return EventFilterMaster__GetFilterButtonTextServant(index, *(const MethodInfo **)&kind);
     case 8:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = &StringLiteral_11837/*"SERVANT_SORT_BONUS_KIND_CLOSE_EVENT"*/;
+      v11 = &StringLiteral_11850/*"SERVANT_SORT_BONUS_KIND_CLOSE_EVENT"*/;
       return LocalizationManager__Get((System_String_o *)*v11, 0LL);
     default:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = &StringLiteral_11832/*"SERVANT_SORT_BONUS_KIND_ALL"*/;
+      v11 = &StringLiteral_11845/*"SERVANT_SORT_BONUS_KIND_ALL"*/;
       return LocalizationManager__Get((System_String_o *)*v11, 0LL);
   }
 }
@@ -70,17 +70,17 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextEvent(int32_t 
   int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
   v8 = num;
-  if ( (byte_4B3713F & 1) == 0 )
+  if ( (byte_4B66B5C & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_11840/*"SERVANT_SORT_BONUS_KIND_ONLY"*/, v3);
-    sub_1BD3458(&StringLiteral_11838/*"SERVANT_SORT_BONUS_KIND_EVENT_"*/, v4);
-    byte_4B3713F = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_11853/*"SERVANT_SORT_BONUS_KIND_ONLY"*/, v3);
+    sub_1BE4ACC(&StringLiteral_11851/*"SERVANT_SORT_BONUS_KIND_EVENT_"*/, v4);
+    byte_4B66B5C = 1;
   }
   if ( (unsigned int)(num - 1) <= 3 )
   {
     v6 = System_Int32__ToString((int32_t)&v8, 0LL);
-    v7 = System_String__Concat_62525248((System_String_o *)StringLiteral_11838/*"SERVANT_SORT_BONUS_KIND_EVENT_"*/, v6, 0LL);
+    v7 = System_String__Concat_62698808((System_String_o *)StringLiteral_11851/*"SERVANT_SORT_BONUS_KIND_EVENT_"*/, v6, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     return LocalizationManager__Get(v7, 0LL);
@@ -89,7 +89,7 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextEvent(int32_t 
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_11840/*"SERVANT_SORT_BONUS_KIND_ONLY"*/, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_11853/*"SERVANT_SORT_BONUS_KIND_ONLY"*/, 0LL);
   }
 }
 
@@ -126,27 +126,27 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextEventCampaign(
   int v28; // [xsp+8h] [xbp-28h] BYREF
   int v29; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B37140 & 1) == 0 )
+  if ( (byte_4B66B5D & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_EventCampaignMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(&int_TypeInfo, v4);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_11835/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/, v6);
-    sub_1BD3458(&StringLiteral_11836/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_SUCCESS"*/, v7);
-    sub_1BD3458(&StringLiteral_11834/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_EXP"*/, v8);
-    sub_1BD3458(&StringLiteral_11833/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, v9);
-    byte_4B37140 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_EventCampaignMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(&int_TypeInfo, v4);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_11848/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/, v6);
+    sub_1BE4ACC(&StringLiteral_11849/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_SUCCESS"*/, v7);
+    sub_1BE4ACC(&StringLiteral_11847/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_EXP"*/, v8);
+    sub_1BE4ACC(&StringLiteral_11846/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, v9);
+    byte_4B66B5D = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_EventCampaignMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventCampaignMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v11);
+    sub_1BE4D28(0LL, v11);
   Data = EventCampaignMaster__getData((EventCampaignMaster_o *)Master_object, campaignId, v12);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  result = LocalizationManager__Get((System_String_o *)StringLiteral_11833/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, 0LL);
+  result = LocalizationManager__Get((System_String_o *)StringLiteral_11846/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, 0LL);
   if ( !Data )
     return result;
   target = Data->fields.target;
@@ -155,7 +155,7 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextEventCampaign(
 LABEL_10:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11834/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_EXP"*/, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11847/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_EXP"*/, 0LL);
     v20 = int_TypeInfo;
     v29 = Data->fields.value / 1000;
     v21 = &v29;
@@ -165,7 +165,7 @@ LABEL_10:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11836/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_SUCCESS"*/, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11849/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_SUCCESS"*/, 0LL);
     v20 = int_TypeInfo;
     v28 = Data->fields.value / 1000;
     v21 = &v28;
@@ -175,7 +175,7 @@ LABEL_10:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_11835/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_11848/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/, 0LL);
     calcType = Data->fields.calcType;
     v19 = v23;
     if ( calcType == 2 )
@@ -208,7 +208,7 @@ LABEL_23:
     goto LABEL_10;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_11833/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_11846/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN"*/, 0LL);
 }
 
 
@@ -221,17 +221,17 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextServant(int32_
   int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
   v8 = num;
-  if ( (byte_4B37141 & 1) == 0 )
+  if ( (byte_4B66B5E & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_11842/*"SERVANT_SORT_BONUS_KIND_SERVANT_"*/, v3);
-    sub_1BD3458(&StringLiteral_11841/*"SERVANT_SORT_BONUS_KIND_SERVANT"*/, v4);
-    byte_4B37141 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_11855/*"SERVANT_SORT_BONUS_KIND_SERVANT_"*/, v3);
+    sub_1BE4ACC(&StringLiteral_11854/*"SERVANT_SORT_BONUS_KIND_SERVANT"*/, v4);
+    byte_4B66B5E = 1;
   }
   if ( (unsigned int)(num - 1) <= 3 )
   {
     v6 = System_Int32__ToString((int32_t)&v8, 0LL);
-    v7 = System_String__Concat_62525248((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_BONUS_KIND_SERVANT_"*/, v6, 0LL);
+    v7 = System_String__Concat_62698808((System_String_o *)StringLiteral_11855/*"SERVANT_SORT_BONUS_KIND_SERVANT_"*/, v6, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     return LocalizationManager__Get(v7, 0LL);
@@ -240,7 +240,7 @@ System_String_o *__fastcall EventFilterMaster__GetFilterButtonTextServant(int32_
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    return LocalizationManager__Get((System_String_o *)StringLiteral_11841/*"SERVANT_SORT_BONUS_KIND_SERVANT"*/, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_11854/*"SERVANT_SORT_BONUS_KIND_SERVANT"*/, 0LL);
   }
 }
 
@@ -255,22 +255,22 @@ bool __fastcall EventFilterMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B3713C & 1) == 0 )
+  if ( (byte_4B66B59 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__, entity);
-    byte_4B3713C = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__, entity);
+    byte_4B66B59 = 1;
   }
   PK = (Il2CppObject *)EventFilterEntity__CreatePK(id, type, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EventFilterMaster__TryGetEntity_39931376(
+bool __fastcall EventFilterMaster__TryGetEntity_40057224(
         EventFilterMaster_o *this,
         EventFilterEntity_o **entity,
         int32_t id,
@@ -279,15 +279,15 @@ bool __fastcall EventFilterMaster__TryGetEntity_39931376(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B3713D & 1) == 0 )
+  if ( (byte_4B66B5A & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__, entity);
-    byte_4B3713D = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__, entity);
+    byte_4B66B5A = 1;
   }
   PK = (Il2CppObject *)EventFilterEntity__CreatePK(id, type, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventFilterMaster__EventFilterEntity__string__TryGetEntity__);
 }

@@ -19,22 +19,22 @@ void __fastcall SelectTakeOverTypeComponent__SetupTitleImg(
   UISprite_o *titleImg; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4B34AD3 & 1) == 0 )
+  if ( (byte_4B644D1 & 1) == 0 )
   {
-    sub_1BD3458(&SelectTakeOverTypeComponent_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_20746/*"img_txt_account"*/, v3);
-    sub_1BD3458(&StringLiteral_20747/*"img_txt_account_overwrite"*/, v4);
-    byte_4B34AD3 = 1;
+    sub_1BE4ACC(&SelectTakeOverTypeComponent_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_20786/*"img_txt_account"*/, v3);
+    sub_1BE4ACC(&StringLiteral_20787/*"img_txt_account_overwrite"*/, v4);
+    byte_4B644D1 = 1;
   }
   titleImg = this->fields.titleImg;
   if ( !titleImg
     || (!SelectTakeOverTypeComponent_TypeInfo->static_fields->isOverride
-      ? (v6 = &StringLiteral_20746/*"img_txt_account"*/)
-      : (v6 = &StringLiteral_20747/*"img_txt_account_overwrite"*/),
+      ? (v6 = &StringLiteral_20786/*"img_txt_account"*/)
+      : (v6 = &StringLiteral_20787/*"img_txt_account_overwrite"*/),
         UISprite__set_spriteName(titleImg, (System_String_o *)*v6, 0LL),
         (titleImg = this->fields.titleImg) == 0LL) )
   {
-    sub_1BD36B4(titleImg, method);
+    sub_1BE4D28(titleImg, method);
   }
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))titleImg->klass->vtable._33_MakePixelPerfect.method)(
     titleImg,

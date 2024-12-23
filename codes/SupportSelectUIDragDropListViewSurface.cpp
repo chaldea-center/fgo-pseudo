@@ -26,7 +26,7 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields.dropObject = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.dropObject,
     (int64_t)value,
     (int64_t)method,

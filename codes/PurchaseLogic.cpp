@@ -88,29 +88,29 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
   FollowerInfo_o *v88; // x6
   PartyListViewItem_o *v89; // x7
 
-  if ( (byte_4B36B1B & 1) == 0 )
+  if ( (byte_4B66534 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_string__TypeInfo, method);
-    sub_1BD3458(&System_Action_string__float__TypeInfo, v3);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product___ctor__, v4);
-    sub_1BD3458(&System_Collections_Generic_HashSet_Product__TypeInfo, v5);
-    sub_1BD3458(&Method_PurchaseLogic___c___ctor_b__87_0__, v6);
-    sub_1BD3458(&Method_PurchaseLogic___c___ctor_b__87_1__, v7);
-    sub_1BD3458(&Method_PurchaseLogic___c___ctor_b__87_2__, v8);
-    sub_1BD3458(&Method_PurchaseLogic___c___ctor_b__87_3__, v9);
-    sub_1BD3458(&PurchaseLogic___c_TypeInfo, v10);
-    sub_1BD3458(&StringLiteral_1/*""*/, v11);
-    byte_4B36B1B = 1;
+    sub_1BE4ACC(&System_Action_string__TypeInfo, method);
+    sub_1BE4ACC(&System_Action_string__float__TypeInfo, v3);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product___ctor__, v4);
+    sub_1BE4ACC(&System_Collections_Generic_HashSet_Product__TypeInfo, v5);
+    sub_1BE4ACC(&Method_PurchaseLogic___c___ctor_b__87_0__, v6);
+    sub_1BE4ACC(&Method_PurchaseLogic___c___ctor_b__87_1__, v7);
+    sub_1BE4ACC(&Method_PurchaseLogic___c___ctor_b__87_2__, v8);
+    sub_1BE4ACC(&Method_PurchaseLogic___c___ctor_b__87_3__, v9);
+    sub_1BE4ACC(&PurchaseLogic___c_TypeInfo, v10);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v11);
+    byte_4B66534 = 1;
   }
-  v12 = (System_Collections_Generic_HashSet_T__o *)sub_1BD36A4(System_Collections_Generic_HashSet_Product__TypeInfo);
+  v12 = (System_Collections_Generic_HashSet_T__o *)sub_1BE4D18(System_Collections_Generic_HashSet_Product__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
     v12,
-    (const MethodInfo_347A0FC *)Method_System_Collections_Generic_HashSet_Product___ctor__);
+    (const MethodInfo_34A5290 *)Method_System_Collections_Generic_HashSet_Product___ctor__);
   this->fields._pendingProducts = (struct System_Collections_Generic_HashSet_Product__o *)v12;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v12, v13, v14, v15, v16, v17, v18);
   v19 = StringLiteral_1/*""*/;
   this->fields._currentTransactionId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._currentTransactionId,
     (int64_t)v19,
     v20,
@@ -134,11 +134,11 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
       v32 = PurchaseLogic___c_TypeInfo;
     }
     v34 = (Il2CppObject *)v32->static_fields->__9;
-    _9__87_0 = (System_Action_object__o *)sub_1BD36A4(System_Action_string__TypeInfo);
+    _9__87_0 = (System_Action_object__o *)sub_1BE4D18(System_Action_string__TypeInfo);
     System_Action_object____ctor(_9__87_0, v34, Method_PurchaseLogic___c___ctor_b__87_0__, 0LL);
     static_fields = PurchaseLogic___c_TypeInfo->static_fields;
     static_fields->__9__87_0 = (struct System_Action_string__o *)_9__87_0;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&static_fields->__9__87_0,
       (int64_t)_9__87_0,
       v36,
@@ -149,7 +149,7 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
       v41);
   }
   this->fields._logOutputAction = (struct System_Action_string__o *)_9__87_0;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logOutputAction,
     (int64_t)_9__87_0,
     v26,
@@ -173,14 +173,14 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
       v48 = PurchaseLogic___c_TypeInfo;
     }
     v50 = (Il2CppObject *)v48->static_fields->__9;
-    _9__87_1 = (System_Action_object__o *)sub_1BD36A4(System_Action_string__TypeInfo);
+    _9__87_1 = (System_Action_object__o *)sub_1BE4D18(System_Action_string__TypeInfo);
     System_Action_object____ctor(_9__87_1, v50, Method_PurchaseLogic___c___ctor_b__87_1__, 0LL);
     v51 = PurchaseLogic___c_TypeInfo->static_fields;
     v51->__9__87_1 = (struct System_Action_string__o *)_9__87_1;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v51->__9__87_1, (int64_t)_9__87_1, v52, v53, v54, v55, v56, v57);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v51->__9__87_1, (int64_t)_9__87_1, v52, v53, v54, v55, v56, v57);
   }
   this->fields._logErrorOutputAction = (struct System_Action_string__o *)_9__87_1;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logErrorOutputAction,
     (int64_t)_9__87_1,
     v42,
@@ -204,14 +204,14 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
       v64 = PurchaseLogic___c_TypeInfo;
     }
     v66 = (Il2CppObject *)v64->static_fields->__9;
-    _9__87_2 = (System_Action_object__o *)sub_1BD36A4(System_Action_string__TypeInfo);
+    _9__87_2 = (System_Action_object__o *)sub_1BE4D18(System_Action_string__TypeInfo);
     System_Action_object____ctor(_9__87_2, v66, Method_PurchaseLogic___c___ctor_b__87_2__, 0LL);
     v67 = PurchaseLogic___c_TypeInfo->static_fields;
     v67->__9__87_2 = (struct System_Action_string__o *)_9__87_2;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v67->__9__87_2, (int64_t)_9__87_2, v68, v69, v70, v71, v72, v73);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v67->__9__87_2, (int64_t)_9__87_2, v68, v69, v70, v71, v72, v73);
   }
   this->fields._sendReportOutputAction = (struct System_Action_string__o *)_9__87_2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._sendReportOutputAction,
     (int64_t)_9__87_2,
     v58,
@@ -235,14 +235,14 @@ void __fastcall PurchaseLogic___ctor(PurchaseLogic_o *this, const MethodInfo *me
       v80 = PurchaseLogic___c_TypeInfo;
     }
     v82 = (Il2CppObject *)v80->static_fields->__9;
-    _9__87_3 = (System_Action_T1__T2__o *)sub_1BD36A4(System_Action_string__float__TypeInfo);
+    _9__87_3 = (System_Action_T1__T2__o *)sub_1BE4D18(System_Action_string__float__TypeInfo);
     System_Action_object__float____ctor(_9__87_3, v82, Method_PurchaseLogic___c___ctor_b__87_3__, 0LL);
     v83 = PurchaseLogic___c_TypeInfo->static_fields;
     v83->__9__87_3 = (struct System_Action_string__float__o *)_9__87_3;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v83->__9__87_3, (int64_t)_9__87_3, v84, v85, v86, v87, v88, v89);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v83->__9__87_3, (int64_t)_9__87_3, v84, v85, v86, v87, v88, v89);
   }
   this->fields._logErrorOutputActionSampledByRatio = (struct System_Action_string__float__o *)_9__87_3;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logErrorOutputActionSampledByRatio,
     (int64_t)_9__87_3,
     v74,
@@ -281,12 +281,12 @@ void __fastcall PurchaseLogic__AddDeferredPurchaseProductIdsToPlayerPrefs(
   PurchaseLogic_o *v22; // x0
   const MethodInfo *v23; // x2
 
-  if ( (byte_4B36B15 & 1) == 0 )
+  if ( (byte_4B6652E & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Distinct_string___, productId);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_string___, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__Add__, v5);
-    byte_4B36B15 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Distinct_string___, productId);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_string___, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v5);
+    byte_4B6652E = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(productId, 0LL);
   if ( !IsNullOrEmpty )
@@ -301,7 +301,7 @@ void __fastcall PurchaseLogic__AddDeferredPurchaseProductIdsToPlayerPrefs(
           ++DeferredPurchaseProductIdsFromPlayerPrefs->fields._version,
           !items) )
     {
-      sub_1BD36B4(DeferredPurchaseProductIdsFromPlayerPrefs, v9);
+      sub_1BE4D28(DeferredPurchaseProductIdsFromPlayerPrefs, v9);
     }
     size = DeferredPurchaseProductIdsFromPlayerPrefs->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -309,21 +309,21 @@ void __fastcall PurchaseLogic__AddDeferredPurchaseProductIdsToPlayerPrefs(
       System_Collections_Generic_List_object___AddWithResize(
         DeferredPurchaseProductIdsFromPlayerPrefs,
         (Il2CppObject *)productId,
-        *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
       v20 = &items->obj.klass + size;
       v17->fields._size = size + 1;
       v20[4] = (Il2CppClass *)productId;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)productId, v10, v11, v12, v13, v14, v15);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)productId, v10, v11, v12, v13, v14, v15);
     }
     v21 = System_Linq_Enumerable__Distinct_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-            (const MethodInfo_2F4EB20 *)Method_System_Linq_Enumerable_Distinct_string___);
+            (const MethodInfo_2F765AC *)Method_System_Linq_Enumerable_Distinct_string___);
     v22 = (PurchaseLogic_o *)System_Linq_Enumerable__ToList_object_(
                                v21,
-                               (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_string___);
+                               (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_string___);
     PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(
       v22,
       (System_Collections_Generic_List_string__o *)v22,
@@ -339,18 +339,18 @@ void __fastcall PurchaseLogic__AddPendingPurchase(
 {
   System_Collections_Generic_HashSet_T__o *pendingProducts; // x0
 
-  if ( (byte_4B36AFE & 1) == 0 )
+  if ( (byte_4B66517 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Add__, product);
-    byte_4B36AFE = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Add__, product);
+    byte_4B66517 = 1;
   }
   pendingProducts = (System_Collections_Generic_HashSet_T__o *)this->fields._pendingProducts;
   if ( !pendingProducts )
-    sub_1BD36B4(0LL, product);
+    sub_1BE4D28(0LL, product);
   System_Collections_Generic_HashSet_object___Add(
     pendingProducts,
     (Il2CppObject *)product,
-    (const MethodInfo_347B2E0 *)Method_System_Collections_Generic_HashSet_Product__Add__);
+    (const MethodInfo_34A6474 *)Method_System_Collections_Generic_HashSet_Product__Add__);
 }
 
 
@@ -383,12 +383,12 @@ void __fastcall PurchaseLogic__AddPreparePurchaseShopIdsToPlayerPrefs(
   int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
   v24 = shopId;
-  if ( (byte_4B36B19 & 1) == 0 )
+  if ( (byte_4B66532 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Distinct_string___, *(_QWORD *)&shopId);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_string___, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__Add__, v5);
-    byte_4B36B19 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Distinct_string___, *(_QWORD *)&shopId);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_string___, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v5);
+    byte_4B66532 = 1;
   }
   if ( shopId >= 1 )
   {
@@ -403,7 +403,7 @@ void __fastcall PurchaseLogic__AddPreparePurchaseShopIdsToPlayerPrefs(
           ++PreparePurchaseShopIdsFromPlayerPrefs->fields._version,
           !items) )
     {
-      sub_1BD36B4(PreparePurchaseShopIdsFromPlayerPrefs, v9);
+      sub_1BE4D28(PreparePurchaseShopIdsFromPlayerPrefs, v9);
     }
     size = PreparePurchaseShopIdsFromPlayerPrefs->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -411,21 +411,21 @@ void __fastcall PurchaseLogic__AddPreparePurchaseShopIdsToPlayerPrefs(
       System_Collections_Generic_List_object___AddWithResize(
         PreparePurchaseShopIdsFromPlayerPrefs,
         (Il2CppObject *)v6,
-        *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
       v20 = &items->obj.klass + size;
       v17->fields._size = size + 1;
       v20[4] = (Il2CppClass *)v6;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)v6, v10, v11, v12, v13, v14, v15);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)v6, v10, v11, v12, v13, v14, v15);
     }
     v21 = System_Linq_Enumerable__Distinct_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)v17,
-            (const MethodInfo_2F4EB20 *)Method_System_Linq_Enumerable_Distinct_string___);
+            (const MethodInfo_2F765AC *)Method_System_Linq_Enumerable_Distinct_string___);
     v22 = (PurchaseLogic_o *)System_Linq_Enumerable__ToList_object_(
                                v21,
-                               (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_string___);
+                               (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_string___);
     PurchaseLogic__SavePreparePurchaseShopIdsToPlayerPrefs(v22, (System_Collections_Generic_List_string__o *)v22, v23);
   }
 }
@@ -486,30 +486,30 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
   FollowerInfo_o *v52; // x6
   PartyListViewItem_o *v53; // x7
 
-  if ( (byte_4B36AFB & 1) == 0 )
+  if ( (byte_4B66514 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, result);
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8);
-    sub_1BD3458(&JsonManager_TypeInfo, v9);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v10);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v11);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_1BD3458(&Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_0__, v13);
-    sub_1BD3458(&Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_1__, v14);
-    sub_1BD3458(&PurchaseLogic___c_TypeInfo, v15);
-    sub_1BD3458(&StringLiteral_12453/*"STONE_PURCHASE_RESULT_BLOCK"*/, v16);
-    sub_1BD3458(&StringLiteral_22779/*"perMonthAmount"*/, v17);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v18);
-    sub_1BD3458(&StringLiteral_21659/*"message"*/, v19);
-    sub_1BD3458(&StringLiteral_17248/*"bankAvailable"*/, v20);
-    byte_4B36AFB = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, result);
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8);
+    sub_1BE4ACC(&JsonManager_TypeInfo, v9);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v10);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v11);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_0__, v13);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_1__, v14);
+    sub_1BE4ACC(&PurchaseLogic___c_TypeInfo, v15);
+    sub_1BE4ACC(&StringLiteral_12467/*"STONE_PURCHASE_RESULT_BLOCK"*/, v16);
+    sub_1BE4ACC(&StringLiteral_22824/*"perMonthAmount"*/, v17);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v18);
+    sub_1BE4ACC(&StringLiteral_21699/*"message"*/, v19);
+    sub_1BE4ACC(&StringLiteral_17269/*"bankAvailable"*/, v20);
+    byte_4B66514 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12453/*"STONE_PURCHASE_RESULT_BLOCK"*/, 0LL);
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22325/*"ng"*/, 0LL) )
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12467/*"STONE_PURCHASE_RESULT_BLOCK"*/, 0LL);
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22370/*"ng"*/, 0LL) )
     goto LABEL_33;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -518,15 +518,15 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
   if ( !Dictionary
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-          (Il2CppObject *)StringLiteral_22779/*"perMonthAmount"*/,
-          (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_22824/*"perMonthAmount"*/,
+          (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     goto LABEL_33;
   }
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            v23,
-           (Il2CppObject *)StringLiteral_22779/*"perMonthAmount"*/,
-           (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (Il2CppObject *)StringLiteral_22824/*"perMonthAmount"*/,
+           (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_48;
   v26 = (System_String_o *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Item + 360LL))(
@@ -540,13 +540,13 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
   {
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            v23,
-           (Il2CppObject *)StringLiteral_17248/*"bankAvailable"*/,
-           (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (Il2CppObject *)StringLiteral_17269/*"bankAvailable"*/,
+           (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                v23,
-               (Il2CppObject *)StringLiteral_17248/*"bankAvailable"*/,
-               (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+               (Il2CppObject *)StringLiteral_17269/*"bankAvailable"*/,
+               (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_48;
       v31 = (System_String_o *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Item + 360LL))(
@@ -555,13 +555,13 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
       v32 = System_Int32__Parse(v31, 0LL);
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              v23,
-             (Il2CppObject *)StringLiteral_21659/*"message"*/,
-             (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+             (Il2CppObject *)StringLiteral_21699/*"message"*/,
+             (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v23,
-                 (Il2CppObject *)StringLiteral_21659/*"message"*/,
-                 (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_21699/*"message"*/,
+                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Item )
           goto LABEL_48;
         v33 = (System_String_o *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Item + 360LL))(
@@ -572,7 +572,7 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
         {
           if ( !System_String__IsNullOrEmpty(v33, 0LL) )
           {
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
@@ -592,11 +592,11 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
                   Item = PurchaseLogic___c_TypeInfo;
                 }
                 v36 = (Il2CppObject *)**((_QWORD **)Item + 23);
-                v35 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+                v35 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
                 System_Action___ctor(v35, v36, Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_0__, 0LL);
                 static_fields = PurchaseLogic___c_TypeInfo->static_fields;
                 static_fields->__9__32_0 = v35;
-                sub_1BD33FC(
+                sub_1BE4A70(
                   (PartyOrganizationUtility_o *)&static_fields->__9__32_0,
                   (int64_t)v35,
                   v38,
@@ -628,7 +628,7 @@ int32_t __fastcall PurchaseLogic__CheckBankStatusAndMonthlyLimit(
                 return v30;
               }
 LABEL_48:
-              sub_1BD36B4(Item, v25);
+              sub_1BE4D28(Item, v25);
             }
           }
           return 1;
@@ -642,7 +642,7 @@ LABEL_48:
 LABEL_33:
     if ( !System_String__IsNullOrEmpty(v21, 0LL) )
     {
-      v44 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v44 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v44, 0LL, 0LL) )
@@ -662,11 +662,11 @@ LABEL_33:
             Item = PurchaseLogic___c_TypeInfo;
           }
           v46 = (Il2CppObject *)**((_QWORD **)Item + 23);
-          v45 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+          v45 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
           System_Action___ctor(v45, v46, Method_PurchaseLogic___c__CheckBankStatusAndMonthlyLimit_b__32_1__, 0LL);
           v47 = PurchaseLogic___c_TypeInfo->static_fields;
           v47->__9__32_1 = v45;
-          sub_1BD33FC((PartyOrganizationUtility_o *)&v47->__9__32_1, (int64_t)v45, v48, v49, v50, v51, v52, v53);
+          sub_1BE4A70((PartyOrganizationUtility_o *)&v47->__9__32_1, (int64_t)v45, v48, v49, v50, v51, v52, v53);
         }
         if ( !v44 )
           goto LABEL_48;
@@ -695,7 +695,7 @@ int32_t __fastcall PurchaseLogic__ComputePurchaseResult(
   if ( (unsigned int)failureReason > 6 )
     return 7;
   else
-    return dword_C12A58[failureReason];
+    return dword_C1CBB0[failureReason];
 }
 
 
@@ -714,13 +714,13 @@ void __fastcall PurchaseLogic__ConfirmPurchase(
   UnityEngine_Purchasing_IStoreController_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4B36B01 & 1) == 0 )
+  if ( (byte_4B6651A & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Contains__, product);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Remove__, v5);
-    sub_1BD3458(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
-    sub_1BD3458(&PurchaseLogic_TypeInfo, v7);
-    byte_4B36B01 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Contains__, product);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Remove__, v5);
+    sub_1BE4ACC(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, v7);
+    byte_4B6651A = 1;
   }
   pendingProducts = this->fields._pendingProducts;
   if ( !pendingProducts )
@@ -728,18 +728,18 @@ void __fastcall PurchaseLogic__ConfirmPurchase(
   if ( !System_Collections_Generic_HashSet_object___Contains(
           (System_Collections_Generic_HashSet_T__o *)pendingProducts,
           (Il2CppObject *)product,
-          (const MethodInfo_347A7F0 *)Method_System_Collections_Generic_HashSet_Product__Contains__) )
+          (const MethodInfo_34A5984 *)Method_System_Collections_Generic_HashSet_Product__Contains__) )
     return;
   pendingProducts = this->fields._pendingProducts;
   if ( !pendingProducts
     || (pendingProducts = (struct System_Collections_Generic_HashSet_Product__o *)System_Collections_Generic_HashSet_object___Remove(
                                                                                     (System_Collections_Generic_HashSet_T__o *)pendingProducts,
                                                                                     (Il2CppObject *)product,
-                                                                                    (const MethodInfo_347A9BC *)Method_System_Collections_Generic_HashSet_Product__Remove__),
+                                                                                    (const MethodInfo_34A5B50 *)Method_System_Collections_Generic_HashSet_Product__Remove__),
         (storeController = PurchaseLogic_TypeInfo->static_fields->_storeController) == 0LL) )
   {
 LABEL_15:
-    sub_1BD36B4(pendingProducts, product);
+    sub_1BE4D28(pendingProducts, product);
   }
   klass = storeController->klass;
   v11 = *(unsigned __int16 *)(&storeController->klass->_2.bitflags2 + 3);
@@ -758,7 +758,7 @@ LABEL_15:
   else
   {
 LABEL_11:
-    p_method = sub_1C25438(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 2LL);
+    p_method = sub_1C36AAC(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 2LL);
   }
   (*(void (__fastcall **)(struct UnityEngine_Purchasing_IStoreController_o *, UnityEngine_Purchasing_Product_o *, _QWORD))p_method)(
     storeController,
@@ -840,7 +840,7 @@ void __fastcall PurchaseLogic__ExecuteBuyProductFinishedActionAndClear(
       isSentGift,
       *(_QWORD *)&buyProductFinishedAction->fields.extra_arg);
   p_buyProductFinishedAction->klass = 0LL;
-  sub_1BD33FC(
+  sub_1BE4A70(
     p_buyProductFinishedAction,
     0LL,
     *(int64_t *)&perMonthAmount,
@@ -860,12 +860,12 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogic__ExtractReceiptContent
   PurchaseLogic_ReceiptContents_o *v3; // x19
   const MethodInfo *v4; // x1
 
-  if ( (byte_4B36B02 & 1) == 0 )
+  if ( (byte_4B6651B & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseLogic_ReceiptContents_TypeInfo, product);
-    byte_4B36B02 = 1;
+    sub_1BE4ACC(&PurchaseLogic_ReceiptContents_TypeInfo, product);
+    byte_4B6651B = 1;
   }
-  v3 = (PurchaseLogic_ReceiptContents_o *)sub_1BD36A4(PurchaseLogic_ReceiptContents_TypeInfo);
+  v3 = (PurchaseLogic_ReceiptContents_o *)sub_1BE4D18(PurchaseLogic_ReceiptContents_TypeInfo);
   PurchaseLogic_ReceiptContents___ctor(v3, v4);
   return v3;
 }
@@ -893,10 +893,10 @@ void __fastcall PurchaseLogic__GetAddedStoneNum(
     if ( v7 )
     {
       if ( !(_DWORD)v7 )
-        sub_1BD36BC(this, purchaseResultArray);
+        sub_1BE4D30(this, purchaseResultArray);
       v8 = purchaseResultArray->m_Items[0];
       if ( !v8 )
-        sub_1BD36B4(this, purchaseResultArray);
+        sub_1BE4D28(this, purchaseResultArray);
       *freeStoneNum = v8->fields.freeStoneNum;
       *chargeStoneNum = v8->fields.chargeStoneNum;
       *shopId = v8->fields.purchasedBankShopId;
@@ -923,11 +923,11 @@ UnityEngine_Purchasing_IAppleExtensions_o *__fastcall PurchaseLogic__GetAppleExt
   __int64 p_method; // x0
   __int64 v14; // x1
 
-  if ( (byte_4B36B0F & 1) == 0 )
+  if ( (byte_4B66528 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, method);
-    this = (PurchaseLogic_o *)sub_1BD3458(&PurchaseLogic_TypeInfo, v2);
-    byte_4B36B0F = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, method);
+    this = (PurchaseLogic_o *)sub_1BE4ACC(&PurchaseLogic_TypeInfo, v2);
+    byte_4B66528 = 1;
   }
   if ( !PurchaseLogic_TypeInfo->static_fields->_storeExtensionProvider )
     return 0LL;
@@ -936,7 +936,7 @@ UnityEngine_Purchasing_IAppleExtensions_o *__fastcall PurchaseLogic__GetAppleExt
     return 0LL;
   storeExtensionProvider = PurchaseLogic_TypeInfo->static_fields->_storeExtensionProvider;
   if ( !storeExtensionProvider )
-    sub_1BD36B4(IsAppleDevice, v4);
+    sub_1BE4D28(IsAppleDevice, v4);
   klass = storeExtensionProvider->klass;
   v7 = Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___;
   v8 = *(unsigned __int16 *)(&storeExtensionProvider->klass->_2.bitflags2 + 3);
@@ -957,9 +957,9 @@ UnityEngine_Purchasing_IAppleExtensions_o *__fastcall PurchaseLogic__GetAppleExt
   else
   {
 LABEL_10:
-    p_method = sub_1C25438(storeExtensionProvider, v9, v10);
+    p_method = sub_1C36AAC(storeExtensionProvider, v9, v10);
   }
-  v14 = sub_1BD358C(*(_QWORD *)(p_method + 8), v7);
+  v14 = sub_1BE4C00(*(_QWORD *)(p_method + 8), v7);
   return (UnityEngine_Purchasing_IAppleExtensions_o *)(*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *, __int64))(v14 + 8))(
                                                         storeExtensionProvider,
                                                         v14);
@@ -979,11 +979,11 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *__fastcall PurchaseLogic__GetConf
   __int64 v8; // x0
   __int64 v9; // x0
 
-  if ( (byte_4B36AF5 & 1) == 0 )
+  if ( (byte_4B6650E & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Array_Empty_IPurchasingModule___, method);
-    sub_1BD3458(&UnityEngine_Purchasing_StandardPurchasingModule_TypeInfo, v2);
-    byte_4B36AF5 = 1;
+    sub_1BE4ACC(&Method_System_Array_Empty_IPurchasingModule___, method);
+    sub_1BE4ACC(&UnityEngine_Purchasing_StandardPurchasingModule_TypeInfo, v2);
+    byte_4B6650E = 1;
   }
   if ( !UnityEngine_Purchasing_StandardPurchasingModule_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Purchasing_StandardPurchasingModule_TypeInfo);
@@ -993,17 +993,17 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *__fastcall PurchaseLogic__GetConf
   v7 = *((_QWORD *)Method_System_Array_Empty_IPurchasingModule___ + 7);
   if ( !v7 )
   {
-    sub_1C25390(Method_System_Array_Empty_IPurchasingModule___);
+    sub_1C36A04(Method_System_Array_Empty_IPurchasingModule___);
     v7 = v5[7];
   }
   v8 = *(_QWORD *)(v7 + 16);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C25334(inited);
+    v8 = sub_1C369A8(inited);
   if ( !*(_DWORD *)(v8 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v8);
   v9 = *(_QWORD *)(v5[7] + 16LL);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C25334(inited);
+    v9 = sub_1C369A8(inited);
   return UnityEngine_Purchasing_ConfigurationBuilder__Instance(
            v6,
            **(UnityEngine_Purchasing_Extension_IPurchasingModule_array ***)(v9 + 184),
@@ -1025,35 +1025,35 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogic__GetDeferred
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
   System_Collections_Generic_List_object__o *v11; // x19
 
-  if ( (byte_4B36B13 & 1) == 0 )
+  if ( (byte_4B6652C & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_string___, method);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string___ctor__, v2);
-    sub_1BD3458(&System_Collections_Generic_List_string__TypeInfo, v3);
-    sub_1BD3458(&string_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_5334/*"DeferredPurchaseProductIds"*/, v5);
-    byte_4B36B13 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_string___, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v2);
+    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v3);
+    sub_1BE4ACC(&string_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_5337/*"DeferredPurchaseProductIds"*/, v5);
+    byte_4B6652C = 1;
   }
   String = UnityEngine_PlayerPrefs__GetString(
-             (System_String_o *)StringLiteral_5334/*"DeferredPurchaseProductIds"*/,
+             (System_String_o *)StringLiteral_5337/*"DeferredPurchaseProductIds"*/,
              string_TypeInfo->static_fields->Empty,
              0LL);
   v7 = System_String__op_Inequality(String, string_TypeInfo->static_fields->Empty, 0LL);
   if ( v7 )
   {
     if ( !String )
-      sub_1BD36B4(v7, v8);
+      sub_1BE4D28(v7, v8);
     v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String, 0x3Bu, 0, 0LL);
     return (System_Collections_Generic_List_string__o *)System_Linq_Enumerable__ToList_object_(
                                                           v9,
-                                                          (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_string___);
+                                                          (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_string___);
   }
   else
   {
-    v11 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_string__TypeInfo);
+    v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v11,
-      (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
     return (System_Collections_Generic_List_string__o *)v11;
   }
 }
@@ -1081,39 +1081,39 @@ PurchaseByBank_UnityIap_Request_PurchaseResult_o *__fastcall PurchaseLogic__GetF
   const MethodInfo *v19; // x0
   System_Func_object__bool__o *v20; // x20
 
-  if ( (byte_4B36B06 & 1) == 0 )
+  if ( (byte_4B6651F & 1) == 0 )
   {
-    sub_1BD3458(
-      &Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult____77013200,
+    sub_1BE4ACC(
+      &Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult____77202744,
       purchaseResultArray);
-    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult___, v6);
-    sub_1BD3458(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v7);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass45_0__GetFirstPurchaseResult_b__0__, v8);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass45_0_TypeInfo, v9);
-    byte_4B36B06 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult___, v6);
+    sub_1BE4ACC(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v7);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass45_0__GetFirstPurchaseResult_b__0__, v8);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass45_0_TypeInfo, v9);
+    byte_4B6651F = 1;
   }
-  v10 = sub_1BD36A4(PurchaseLogic___c__DisplayClass45_0_TypeInfo);
+  v10 = sub_1BE4D18(PurchaseLogic___c__DisplayClass45_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1BD36B4(v11, v12);
+    sub_1BE4D28(v11, v12);
   *(_QWORD *)(v10 + 16) = transactionId;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)transactionId, v13, v14, v15, v16, v17, v18);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)transactionId, v13, v14, v15, v16, v17, v18);
   if ( !purchaseResultArray )
     return 0LL;
   if ( !PurchaseLogic__IsAppleDevice(v19) )
     return (PurchaseByBank_UnityIap_Request_PurchaseResult_o *)System_Linq_Enumerable__FirstOrDefault_object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)purchaseResultArray,
-                                                                 (const MethodInfo_2F53F14 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult___);
-  v20 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
+                                                                 (const MethodInfo_2F7B9A0 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+  v20 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v20,
     (Il2CppObject *)v10,
     Method_PurchaseLogic___c__DisplayClass45_0__GetFirstPurchaseResult_b__0__,
     0LL);
-  return (PurchaseByBank_UnityIap_Request_PurchaseResult_o *)System_Linq_Enumerable__FirstOrDefault_object__49631076(
+  return (PurchaseByBank_UnityIap_Request_PurchaseResult_o *)System_Linq_Enumerable__FirstOrDefault_object__49793520(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)purchaseResultArray,
                                                                (System_Func_TSource__bool__o *)v20,
-                                                               (const MethodInfo_2F54F64 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult____77013200);
+                                                               (const MethodInfo_2F7C9F0 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult____77202744);
 }
 
 
@@ -1123,12 +1123,12 @@ PurchaseLogic_o *__fastcall PurchaseLogic__GetInstance(const MethodInfo *method)
   PurchaseLogic_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B36AF3 & 1) == 0 )
+  if ( (byte_4B6650C & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseLogicAndroid_TypeInfo, v1);
-    byte_4B36AF3 = 1;
+    sub_1BE4ACC(&PurchaseLogicAndroid_TypeInfo, v1);
+    byte_4B6650C = 1;
   }
-  v2 = (PurchaseLogic_o *)sub_1BD36A4(PurchaseLogicAndroid_TypeInfo);
+  v2 = (PurchaseLogic_o *)sub_1BE4D18(PurchaseLogicAndroid_TypeInfo);
   PurchaseLogic___ctor(v2, v3);
   return v2;
 }
@@ -1148,32 +1148,32 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogic__GetPrepareP
   __int64 v9; // x1
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4B36B17 & 1) == 0 )
+  if ( (byte_4B66530 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_string___, method);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string___ctor__, v2);
-    sub_1BD3458(&System_Collections_Generic_List_string__TypeInfo, v3);
-    sub_1BD3458(&string_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_10878/*"PreparePurchaseShopIds"*/, v5);
-    byte_4B36B17 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_string___, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v2);
+    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v3);
+    sub_1BE4ACC(&string_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_10891/*"PreparePurchaseShopIds"*/, v5);
+    byte_4B66530 = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_string__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
   String = UnityEngine_PlayerPrefs__GetString(
-             (System_String_o *)StringLiteral_10878/*"PreparePurchaseShopIds"*/,
+             (System_String_o *)StringLiteral_10891/*"PreparePurchaseShopIds"*/,
              string_TypeInfo->static_fields->Empty,
              0LL);
   v8 = System_String__op_Inequality(String, string_TypeInfo->static_fields->Empty, 0LL);
   if ( !v8 )
     return (System_Collections_Generic_List_string__o *)v6;
   if ( !String )
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String, 0x3Bu, 0, 0LL);
   return (System_Collections_Generic_List_string__o *)System_Linq_Enumerable__ToList_object_(
                                                         v10,
-                                                        (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_string___);
+                                                        (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_string___);
 }
 
 
@@ -1191,34 +1191,34 @@ int32_t __fastcall PurchaseLogic__GetPrice(PurchaseLogic_o *this, int32_t bankSh
   int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v14 = bankShopId;
-  if ( (byte_4B36B0B & 1) == 0 )
+  if ( (byte_4B66524 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_BankShopMaster___, *(_QWORD *)&bankShopId);
-    sub_1BD3458(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BD3458(&StringLiteral_6169/*"Entity is not found. bankShopId="*/, v7);
-    byte_4B36B0B = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_BankShopMaster___, *(_QWORD *)&bankShopId);
+    sub_1BE4ACC(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BE4ACC(&StringLiteral_6172/*"Entity is not found. bankShopId="*/, v7);
+    byte_4B66524 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_BankShopMaster___);
+                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BankShopMaster___);
   if ( !Instance )
     goto LABEL_9;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              bankShopId,
-             (const MethodInfo_31D1EF0 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
+             (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
   if ( Entity )
     return (int32_t)Entity[3].monitor;
   logErrorOutputAction = this->fields._logErrorOutputAction;
   v13 = System_Int32__ToString((int32_t)&v14, 0LL);
-  Instance = (DataManager_o *)System_String__Concat_62525248((System_String_o *)StringLiteral_6169/*"Entity is not found. bankShopId="*/, v13, 0LL);
+  Instance = (DataManager_o *)System_String__Concat_62698808((System_String_o *)StringLiteral_6172/*"Entity is not found. bankShopId="*/, v13, 0LL);
   if ( !logErrorOutputAction )
 LABEL_9:
-    sub_1BD36B4(Instance, v9);
+    sub_1BE4D28(Instance, v9);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, DataManager_o *, _QWORD))logErrorOutputAction->fields.m_target)(
     logErrorOutputAction->fields.original_method_info,
     Instance,
@@ -1242,20 +1242,20 @@ void __fastcall PurchaseLogic__InitializePurchasingFramework(PurchaseLogic_o *th
   __int64 v13; // x1
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B36AF4 & 1) == 0 )
+  if ( (byte_4B6650D & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, method);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v3);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__GetEnumerator__, v5);
-    sub_1BD3458(&PurchaseBehaviour_TypeInfo, v6);
-    byte_4B36AF4 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v3);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v5);
+    sub_1BE4ACC(&PurchaseBehaviour_TypeInfo, v6);
+    byte_4B6650D = 1;
   }
   memset(&v14, 0, sizeof(v14));
-  if ( (byte_4B36AF6 & 1) == 0 )
+  if ( (byte_4B6650F & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseLogic_TypeInfo, method);
-    byte_4B36AF6 = 1;
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, method);
+    byte_4B6650F = 1;
   }
   static_fields = PurchaseLogic_TypeInfo->static_fields;
   if ( !static_fields->_storeController || !static_fields->_storeExtensionProvider )
@@ -1282,25 +1282,25 @@ void __fastcall PurchaseLogic__InitializePurchasingFramework(PurchaseLogic_o *th
     }
     ConsumableProductIdCollection = (System_Collections_Generic_List_object__o *)v10->static_fields->ConsumableProductIdCollection;
     if ( !ConsumableProductIdCollection )
-      sub_1BD36B4(0LL, v9);
+      sub_1BE4D28(0LL, v9);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v14,
       ConsumableProductIdCollection,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     while ( 1 )
     {
       v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v14,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
       if ( !v12 )
         break;
       if ( !v8 )
-        sub_1BD36B4(v12, v13);
+        sub_1BE4D28(v12, v13);
       UnityEngine_Purchasing_ConfigurationBuilder__AddProduct(v8, (System_String_o *)v14.fields._current, 0, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
     UnityEngine_Purchasing_UnityPurchasing__Initialize((UnityEngine_Purchasing_IStoreListener_o *)this, v8, 0LL);
   }
 }
@@ -1315,8 +1315,8 @@ void __fastcall PurchaseLogic__InitiatePurchase(
   const MethodInfo *v4; // x5
 
   if ( !bankShop )
-    sub_1BD36B4(this, 0LL);
-  PurchaseLogic__InitiatePurchase_39409376(
+    sub_1BE4D28(this, 0LL);
+  PurchaseLogic__InitiatePurchase_39533772(
     this,
     bankShop->fields.id,
     bankShop->fields.googleShopId,
@@ -1327,7 +1327,7 @@ void __fastcall PurchaseLogic__InitiatePurchase(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PurchaseLogic__InitiatePurchase_39409376(
+void __fastcall PurchaseLogic__InitiatePurchase_39533772(
         PurchaseLogic_o *this,
         int32_t shopId,
         System_String_o *productId,
@@ -1365,19 +1365,19 @@ void __fastcall PurchaseLogic__InitiatePurchase_39409376(
   struct System_Action_string__o *v38; // x8
   const MethodInfo *v39; // x4
 
-  if ( (byte_4B36AF7 & 1) == 0 )
+  if ( (byte_4B66510 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Purchasing_IStoreController_TypeInfo, *(_QWORD *)&shopId);
-    sub_1BD3458(&PurchaseLogic_TypeInfo, v13);
-    sub_1BD3458(&StringLiteral_7745/*"InitiatePurchase: FAIL. PurchasingFramework not initialized."*/, v14);
-    sub_1BD3458(&StringLiteral_7746/*"InitiatePurchase: FAIL. StoreController is null."*/, v15);
-    sub_1BD3458(&StringLiteral_7744/*"InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase"*/, v16);
-    sub_1BD3458(&StringLiteral_7747/*"InitiatePurchase: FAIL. StoreController.products is null."*/, v17);
-    sub_1BD3458(&StringLiteral_7748/*"InitiatePurchase: Initialized With Mismatched ObfuscatedAccountId."*/, v18);
-    byte_4B36AF7 = 1;
+    sub_1BE4ACC(&UnityEngine_Purchasing_IStoreController_TypeInfo, *(_QWORD *)&shopId);
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, v13);
+    sub_1BE4ACC(&StringLiteral_7751/*"InitiatePurchase: FAIL. PurchasingFramework not initialized."*/, v14);
+    sub_1BE4ACC(&StringLiteral_7752/*"InitiatePurchase: FAIL. StoreController is null."*/, v15);
+    sub_1BE4ACC(&StringLiteral_7750/*"InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase"*/, v16);
+    sub_1BE4ACC(&StringLiteral_7753/*"InitiatePurchase: FAIL. StoreController.products is null."*/, v17);
+    sub_1BE4ACC(&StringLiteral_7754/*"InitiatePurchase: Initialized With Mismatched ObfuscatedAccountId."*/, v18);
+    byte_4B66510 = 1;
   }
   this->fields._buyProductFinishedAction = finishedAction;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._buyProductFinishedAction,
     (int64_t)finishedAction,
     (int64_t)productId,
@@ -1386,10 +1386,10 @@ void __fastcall PurchaseLogic__InitiatePurchase_39409376(
     (BattleSetupInfo_o *)method,
     v6,
     v7);
-  if ( (byte_4B36AF6 & 1) == 0 )
+  if ( (byte_4B6650F & 1) == 0 )
   {
-    v19 = sub_1BD3458(&PurchaseLogic_TypeInfo, v20);
-    byte_4B36AF6 = 1;
+    v19 = sub_1BE4ACC(&PurchaseLogic_TypeInfo, v20);
+    byte_4B6650F = 1;
   }
   static_fields = PurchaseLogic_TypeInfo->static_fields;
   if ( !static_fields->_storeController || !static_fields->_storeExtensionProvider )
@@ -1399,14 +1399,14 @@ void __fastcall PurchaseLogic__InitiatePurchase_39409376(
     {
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, float))logErrorOutputActionSampledByRatio->fields.m_target)(
         logErrorOutputActionSampledByRatio->fields.original_method_info,
-        StringLiteral_7745/*"InitiatePurchase: FAIL. PurchasingFramework not initialized."*/,
+        StringLiteral_7751/*"InitiatePurchase: FAIL. PurchasingFramework not initialized."*/,
         *(_QWORD *)&logErrorOutputActionSampledByRatio->fields.extra_arg,
         0.01);
       v24 = 11;
       goto LABEL_33;
     }
 LABEL_39:
-    sub_1BD36B4(v19, v20);
+    sub_1BE4D28(v19, v20);
   }
   v19 = ((__int64 (__fastcall *)(PurchaseLogic_o *, Il2CppMethodPointer))this->klass->vtable._16_IsInitializedWithMismatchedObfuscatedAccountId.method)(
           this,
@@ -1418,7 +1418,7 @@ LABEL_39:
     {
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logErrorOutputAction->fields.m_target)(
         logErrorOutputAction->fields.original_method_info,
-        StringLiteral_7748/*"InitiatePurchase: Initialized With Mismatched ObfuscatedAccountId."*/,
+        StringLiteral_7754/*"InitiatePurchase: Initialized With Mismatched ObfuscatedAccountId."*/,
         *(_QWORD *)&logErrorOutputAction->fields.extra_arg);
       v24 = 14;
 LABEL_33:
@@ -1433,7 +1433,7 @@ LABEL_33:
     v31 = this->fields._logErrorOutputAction;
     if ( !v31 )
       goto LABEL_39;
-    v32 = &StringLiteral_7746/*"InitiatePurchase: FAIL. StoreController is null."*/;
+    v32 = &StringLiteral_7752/*"InitiatePurchase: FAIL. StoreController is null."*/;
 LABEL_30:
     v19 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v31->fields.m_target)(
             v31->fields.original_method_info,
@@ -1445,7 +1445,7 @@ LABEL_31:
     {
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v38->fields.m_target)(
         v38->fields.original_method_info,
-        StringLiteral_7744/*"InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase"*/,
+        StringLiteral_7750/*"InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase"*/,
         *(_QWORD *)&v38->fields.extra_arg);
       v24 = 12;
       goto LABEL_33;
@@ -1469,7 +1469,7 @@ LABEL_31:
   else
   {
 LABEL_17:
-    p_method = sub_1C25438(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
+    p_method = sub_1C36AAC(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
   }
   v19 = (*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IStoreController_o *, _QWORD))p_method)(
           storeController,
@@ -1479,7 +1479,7 @@ LABEL_17:
     v31 = this->fields._logErrorOutputAction;
     if ( !v31 )
       goto LABEL_39;
-    v32 = &StringLiteral_7747/*"InitiatePurchase: FAIL. StoreController.products is null."*/;
+    v32 = &StringLiteral_7753/*"InitiatePurchase: FAIL. StoreController.products is null."*/;
     goto LABEL_30;
   }
   v33 = PurchaseLogic_TypeInfo->static_fields->_storeController;
@@ -1502,7 +1502,7 @@ LABEL_17:
   else
   {
 LABEL_27:
-    v37 = sub_1C25438(v33, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
+    v37 = sub_1C36AAC(v33, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
   }
   v19 = (*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IStoreController_o *, _QWORD))v37)(
           v33,
@@ -1531,10 +1531,10 @@ bool __fastcall PurchaseLogic__IsAppleDevice(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B36B09 & 1) == 0 )
+  if ( (byte_4B66522 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, v1);
-    byte_4B36B09 = 1;
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, v1);
+    byte_4B66522 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -1556,10 +1556,10 @@ bool __fastcall PurchaseLogic__IsGooglePlayDevice(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B36B0A & 1) == 0 )
+  if ( (byte_4B66523 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, v1);
-    byte_4B36B0A = 1;
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, v1);
+    byte_4B66523 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -1582,11 +1582,11 @@ bool __fastcall PurchaseLogic__IsLimitOver(PurchaseLogic_o *this, int32_t value,
   ManagerConfig_c *v5; // x0
   int32_t Limit; // w0
 
-  if ( (byte_4B36AFC & 1) == 0 )
+  if ( (byte_4B66515 & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&value);
-    sub_1BD3458(&ManagerConfig_TypeInfo, v4);
-    byte_4B36AFC = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&value);
+    sub_1BE4ACC(&ManagerConfig_TypeInfo, v4);
+    byte_4B66515 = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -1616,18 +1616,18 @@ bool __fastcall PurchaseLogic__IsPendingPurchase(
 {
   System_Collections_Generic_HashSet_T__o *pendingProducts; // x0
 
-  if ( (byte_4B36B00 & 1) == 0 )
+  if ( (byte_4B66519 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Contains__, prodcut);
-    byte_4B36B00 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Contains__, prodcut);
+    byte_4B66519 = 1;
   }
   pendingProducts = (System_Collections_Generic_HashSet_T__o *)this->fields._pendingProducts;
   if ( !pendingProducts )
-    sub_1BD36B4(0LL, prodcut);
+    sub_1BE4D28(0LL, prodcut);
   return System_Collections_Generic_HashSet_object___Contains(
            pendingProducts,
            (Il2CppObject *)prodcut,
-           (const MethodInfo_347A7F0 *)Method_System_Collections_Generic_HashSet_Product__Contains__);
+           (const MethodInfo_34A5984 *)Method_System_Collections_Generic_HashSet_Product__Contains__);
 }
 
 
@@ -1635,10 +1635,10 @@ bool __fastcall PurchaseLogic__IsPurchasingFrameworkInitialized(PurchaseLogic_o 
 {
   struct PurchaseLogic_StaticFields *static_fields; // x8
 
-  if ( (byte_4B36AF6 & 1) == 0 )
+  if ( (byte_4B6650F & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseLogic_TypeInfo, method);
-    byte_4B36AF6 = 1;
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, method);
+    byte_4B6650F = 1;
   }
   static_fields = PurchaseLogic_TypeInfo->static_fields;
   return static_fields->_storeController && static_fields->_storeExtensionProvider != 0LL;
@@ -1664,15 +1664,15 @@ bool __fastcall PurchaseLogic__IsServerCommitedPurchase(
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B36B04 & 1) == 0 )
+  if ( (byte_4B6651D & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_System_Linq_Enumerable_All_PurchaseByBank_UnityIap_Request_PurchaseResult___,
       purchaseResultArray);
-    sub_1BD3458(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v4);
-    sub_1BD3458(&Method_PurchaseLogic___c__IsServerCommitedPurchase_b__43_0__, v5);
-    sub_1BD3458(&PurchaseLogic___c_TypeInfo, v6);
-    byte_4B36B04 = 1;
+    sub_1BE4ACC(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v4);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__IsServerCommitedPurchase_b__43_0__, v5);
+    sub_1BE4ACC(&PurchaseLogic___c_TypeInfo, v6);
+    byte_4B6651D = 1;
   }
   if ( !purchaseResultArray )
     return 0;
@@ -1691,11 +1691,11 @@ bool __fastcall PurchaseLogic__IsServerCommitedPurchase(
       v7 = PurchaseLogic___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__43_0 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
+    _9__43_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__43_0, v9, Method_PurchaseLogic___c__IsServerCommitedPurchase_b__43_0__, 0LL);
     static_fields = PurchaseLogic___c_TypeInfo->static_fields;
     static_fields->__9__43_0 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__o *)_9__43_0;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&static_fields->__9__43_0,
       (int64_t)_9__43_0,
       v11,
@@ -1708,7 +1708,7 @@ bool __fastcall PurchaseLogic__IsServerCommitedPurchase(
   return System_Linq_Enumerable__All_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)purchaseResultArray,
            (System_Func_TSource__bool__o *)_9__43_0,
-           (const MethodInfo_2F3BE08 *)Method_System_Linq_Enumerable_All_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+           (const MethodInfo_2F63894 *)Method_System_Linq_Enumerable_All_PurchaseByBank_UnityIap_Request_PurchaseResult___);
 }
 
 
@@ -1722,21 +1722,21 @@ void __fastcall PurchaseLogic__OnDeferred(
   struct System_Action_string__o *logOutputAction; // x19
 
   v4 = this;
-  if ( (byte_4B36B0E & 1) == 0 )
+  if ( (byte_4B66527 & 1) == 0 )
   {
-    this = (PurchaseLogic_o *)sub_1BD3458(&StringLiteral_10026/*"OnDeferred product="*/, product);
-    byte_4B36B0E = 1;
+    this = (PurchaseLogic_o *)sub_1BE4ACC(&StringLiteral_10035/*"OnDeferred product="*/, product);
+    byte_4B66527 = 1;
   }
   if ( !product
     || (metadata_k__BackingField = product->fields._metadata_k__BackingField) == 0LL
     || (logOutputAction = v4->fields._logOutputAction,
-        this = (PurchaseLogic_o *)System_String__Concat_62525248(
-                                    (System_String_o *)StringLiteral_10026/*"OnDeferred product="*/,
+        this = (PurchaseLogic_o *)System_String__Concat_62698808(
+                                    (System_String_o *)StringLiteral_10035/*"OnDeferred product="*/,
                                     metadata_k__BackingField->fields._localizedTitle_k__BackingField,
                                     0LL),
         !logOutputAction) )
   {
-    sub_1BD36B4(this, product);
+    sub_1BE4D28(this, product);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, PurchaseLogic_o *, _QWORD))logOutputAction->fields.m_target)(
     logOutputAction->fields.original_method_info,
@@ -1835,68 +1835,68 @@ void __fastcall PurchaseLogic__OnEndPaymentStore(
   int32_t shopId; // [xsp+24h] [xbp-6Ch] BYREF
   __int64 v91; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4B36B08 & 1) == 0 )
+  if ( (byte_4B66521 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CommonUI_OpenStonePurchaseReciveMenu___76989376, *(_QWORD *)&purchaseResult);
-    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_Product___, v13);
-    sub_1BD3458(&System_Func_Product__bool__TypeInfo, v14);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v15);
-    sub_1BD3458(&PurchaseLogic_ProductFinishedAction_TypeInfo, v16);
-    sub_1BD3458(&PurchaseBehaviour_Result_TypeInfo, v17);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
-    sub_1BD3458(&string___TypeInfo, v19);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass47_0__OnEndPaymentStore_b__0__, v20);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass47_0_TypeInfo, v21);
-    sub_1BD3458(&StringLiteral_16258/*"] "*/, v22);
-    sub_1BD3458(&StringLiteral_15999/*"[ "*/, v23);
-    sub_1BD3458(&StringLiteral_10955/*"PurchaseLogic:OnEndPaymentStore result "*/, v24);
-    sub_1BD3458(&StringLiteral_4761/*"Confirming purchase of "*/, v25);
-    sub_1BD3458(&StringLiteral_1/*""*/, v26);
-    byte_4B36B08 = 1;
+    sub_1BE4ACC(&Method_CommonUI_OpenStonePurchaseReciveMenu___77178840, *(_QWORD *)&purchaseResult);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_Product___, v13);
+    sub_1BE4ACC(&System_Func_Product__bool__TypeInfo, v14);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v15);
+    sub_1BE4ACC(&PurchaseLogic_ProductFinishedAction_TypeInfo, v16);
+    sub_1BE4ACC(&PurchaseBehaviour_Result_TypeInfo, v17);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
+    sub_1BE4ACC(&string___TypeInfo, v19);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass47_0__OnEndPaymentStore_b__0__, v20);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass47_0_TypeInfo, v21);
+    sub_1BE4ACC(&StringLiteral_16279/*"] "*/, v22);
+    sub_1BE4ACC(&StringLiteral_16020/*"[ "*/, v23);
+    sub_1BE4ACC(&StringLiteral_10968/*"PurchaseLogic:OnEndPaymentStore result "*/, v24);
+    sub_1BE4ACC(&StringLiteral_4764/*"Confirming purchase of "*/, v25);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v26);
+    byte_4B66521 = 1;
   }
   v91 = 0LL;
   shopId = 0;
   isSentGift[0] = 0;
-  v27 = sub_1BD36A4(PurchaseLogic___c__DisplayClass47_0_TypeInfo);
+  v27 = sub_1BE4D18(PurchaseLogic___c__DisplayClass47_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v27, 0LL);
   if ( !v27 )
     goto LABEL_26;
   *(_QWORD *)(v27 + 16) = productId;
   v36 = (System_String_o **)(v27 + 16);
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)productId, v30, v31, v32, v33, v34, v35);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)productId, v30, v31, v32, v33, v34, v35);
   logOutputAction = this->fields._logOutputAction;
-  v28 = (System_String_o *)sub_1BD3500(string___TypeInfo, 5LL);
+  v28 = (System_String_o *)sub_1BE4B74(string___TypeInfo, 5LL);
   if ( !v28 )
     goto LABEL_26;
   v44 = v28;
   if ( !LODWORD(v28[1].klass) )
     goto LABEL_25;
-  v45 = StringLiteral_10955/*"PurchaseLogic:OnEndPaymentStore result "*/;
-  v28[1].monitor = (void *)StringLiteral_10955/*"PurchaseLogic:OnEndPaymentStore result "*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v28[1].monitor, v45, v38, v39, v40, v41, v42, v43);
+  v45 = StringLiteral_10968/*"PurchaseLogic:OnEndPaymentStore result "*/;
+  v28[1].monitor = (void *)StringLiteral_10968/*"PurchaseLogic:OnEndPaymentStore result "*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v28[1].monitor, v45, v38, v39, v40, v41, v42, v43);
   v87.klass = (System_Enum_c *)PurchaseBehaviour_Result_TypeInfo;
   v87.monitor = (void *)-1LL;
   v88 = purchaseResult;
   v28 = System_Enum__ToString(&v87, 0LL);
   if ( LODWORD(v44[1].klass) <= 1
     || (v44[1].fields = (System_String_Fields)v28,
-        sub_1BD33FC((PartyOrganizationUtility_o *)&v44[1].fields, (int64_t)v28, v46, v47, v48, v49, v50, v51),
+        sub_1BE4A70((PartyOrganizationUtility_o *)&v44[1].fields, (int64_t)v28, v46, v47, v48, v49, v50, v51),
         LODWORD(v44[1].klass) <= 2)
-    || (v58 = StringLiteral_15999/*"[ "*/,
-        v44[2].klass = (System_String_c *)StringLiteral_15999/*"[ "*/,
-        sub_1BD33FC((PartyOrganizationUtility_o *)&v44[2], (int64_t)v58, v52, v53, v54, v55, v56, v57),
+    || (v58 = StringLiteral_16020/*"[ "*/,
+        v44[2].klass = (System_String_c *)StringLiteral_16020/*"[ "*/,
+        sub_1BE4A70((PartyOrganizationUtility_o *)&v44[2], (int64_t)v58, v52, v53, v54, v55, v56, v57),
         LODWORD(v44[1].klass) <= 3)
     || (v44[2].monitor = resultData,
-        sub_1BD33FC((PartyOrganizationUtility_o *)&v44[2].monitor, (int64_t)resultData, v59, v60, v61, v62, v63, v64),
+        sub_1BE4A70((PartyOrganizationUtility_o *)&v44[2].monitor, (int64_t)resultData, v59, v60, v61, v62, v63, v64),
         LODWORD(v44[1].klass) <= 4) )
   {
 LABEL_25:
-    sub_1BD36BC(v28, v29);
+    sub_1BE4D30(v28, v29);
   }
-  v71 = StringLiteral_16258/*"] "*/;
-  v44[2].fields = (System_String_Fields)StringLiteral_16258/*"] "*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v44[2].fields, v71, v65, v66, v67, v68, v69, v70);
-  v28 = System_String__Concat_62538776((System_String_array *)v44, 0LL);
+  v71 = StringLiteral_16279/*"] "*/;
+  v44[2].fields = (System_String_Fields)StringLiteral_16279/*"] "*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v44[2].fields, v71, v65, v66, v67, v68, v69, v70);
+  v28 = System_String__Concat_62712336((System_String_array *)v44, 0LL);
   if ( !logOutputAction )
     goto LABEL_26;
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))logOutputAction->fields.m_target)(
@@ -1916,25 +1916,25 @@ LABEL_25:
       transactionId,
       this->klass->vtable._25_OnDeferred.methodPtr);
   v72 = this->fields._logOutputAction;
-  v28 = System_String__Concat_62525248((System_String_o *)StringLiteral_4761/*"Confirming purchase of "*/, *v36, 0LL);
+  v28 = System_String__Concat_62698808((System_String_o *)StringLiteral_4764/*"Confirming purchase of "*/, *v36, 0LL);
   if ( !v72 )
 LABEL_26:
-    sub_1BD36B4(v28, v29);
+    sub_1BE4D28(v28, v29);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))v72->fields.m_target)(
     v72->fields.original_method_info,
     v28,
     *(_QWORD *)&v72->fields.extra_arg);
   pendingProducts = this->fields._pendingProducts;
-  v74 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_Product__bool__TypeInfo);
+  v74 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_Product__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v74,
     (Il2CppObject *)v27,
     Method_PurchaseLogic___c__DisplayClass47_0__OnEndPaymentStore_b__0__,
     0LL);
-  v75 = System_Linq_Enumerable__FirstOrDefault_object__49631076(
+  v75 = System_Linq_Enumerable__FirstOrDefault_object__49793520(
           (System_Collections_Generic_IEnumerable_TSource__o *)pendingProducts,
           (System_Func_TSource__bool__o *)v74,
-          (const MethodInfo_2F54F64 *)Method_System_Linq_Enumerable_FirstOrDefault_Product___);
+          (const MethodInfo_2F7C9F0 *)Method_System_Linq_Enumerable_FirstOrDefault_Product___);
   if ( v75 )
     ((void (__fastcall *)(PurchaseLogic_o *, Il2CppObject *, Il2CppMethodPointer))this->klass->vtable._18_ConfirmPurchase.method)(
       this,
@@ -1943,20 +1943,20 @@ LABEL_26:
 LABEL_18:
   if ( purchaseResult != 4 && !this->fields._buyProductFinishedAction )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      v77 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v78 = (PurchaseLogic_ProductFinishedAction_o *)sub_1BD36A4(PurchaseLogic_ProductFinishedAction_TypeInfo);
+      v77 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v78 = (PurchaseLogic_ProductFinishedAction_o *)sub_1BE4D18(PurchaseLogic_ProductFinishedAction_TypeInfo);
       PurchaseLogic_ProductFinishedAction___ctor(
         v78,
         v77,
-        (intptr_t)Method_CommonUI_OpenStonePurchaseReciveMenu___76989376,
+        (intptr_t)Method_CommonUI_OpenStonePurchaseReciveMenu___77178840,
         v79);
       this->fields._buyProductFinishedAction = v78;
-      sub_1BD33FC(
+      sub_1BE4A70(
         (PartyOrganizationUtility_o *)&this->fields._buyProductFinishedAction,
         (int64_t)v78,
         v80,
@@ -2045,34 +2045,34 @@ void __fastcall PurchaseLogic__OnEndSendReceiptData(
   int32_t purchasedBankShopId; // w23
   const MethodInfo *v53; // x2
 
-  if ( (byte_4B36B05 & 1) == 0 )
+  if ( (byte_4B6651E & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_BankShopMaster___, result);
-    sub_1BD3458(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BD3458(&StringLiteral_11345/*"ReceiptError"*/, v7);
-    sub_1BD3458(&StringLiteral_22930/*"purchaseResultArray is null."*/, v8);
-    sub_1BD3458(&StringLiteral_7192/*"Google Play canceled on restore purchase"*/, v9);
-    sub_1BD3458(&StringLiteral_10954/*"PurchaseLogic:EndSendReceiptData ["*/, v10);
-    sub_1BD3458(&StringLiteral_23081/*"receipt_error"*/, v11);
-    sub_1BD3458(&StringLiteral_17939/*"canceled_purchase_error"*/, v12);
-    sub_1BD3458(&StringLiteral_10957/*"PurchaseResult NotFound Error"*/, v13);
-    sub_1BD3458(&StringLiteral_10958/*"PurchaseResult NotFound."*/, v14);
-    sub_1BD3458(&StringLiteral_10739/*"PaymentOk"*/, v15);
-    sub_1BD3458(&StringLiteral_7193/*"Google Play pending on restore purchase"*/, v16);
-    sub_1BD3458(&StringLiteral_10953/*"PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId="*/, v17);
-    sub_1BD3458(&StringLiteral_6277/*"Error["*/, v18);
-    sub_1BD3458(&StringLiteral_22777/*"pending_purchase_error"*/, v19);
-    sub_1BD3458(&StringLiteral_1/*""*/, v20);
-    sub_1BD3458(&StringLiteral_5334/*"DeferredPurchaseProductIds"*/, v21);
-    sub_1BD3458(&StringLiteral_16255/*"]"*/, v22);
-    byte_4B36B05 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_BankShopMaster___, result);
+    sub_1BE4ACC(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BE4ACC(&StringLiteral_11358/*"ReceiptError"*/, v7);
+    sub_1BE4ACC(&StringLiteral_22975/*"purchaseResultArray is null."*/, v8);
+    sub_1BE4ACC(&StringLiteral_7198/*"Google Play canceled on restore purchase"*/, v9);
+    sub_1BE4ACC(&StringLiteral_10967/*"PurchaseLogic:EndSendReceiptData ["*/, v10);
+    sub_1BE4ACC(&StringLiteral_23126/*"receipt_error"*/, v11);
+    sub_1BE4ACC(&StringLiteral_17963/*"canceled_purchase_error"*/, v12);
+    sub_1BE4ACC(&StringLiteral_10970/*"PurchaseResult NotFound Error"*/, v13);
+    sub_1BE4ACC(&StringLiteral_10971/*"PurchaseResult NotFound."*/, v14);
+    sub_1BE4ACC(&StringLiteral_10752/*"PaymentOk"*/, v15);
+    sub_1BE4ACC(&StringLiteral_7199/*"Google Play pending on restore purchase"*/, v16);
+    sub_1BE4ACC(&StringLiteral_10966/*"PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId="*/, v17);
+    sub_1BE4ACC(&StringLiteral_6280/*"Error["*/, v18);
+    sub_1BE4ACC(&StringLiteral_22822/*"pending_purchase_error"*/, v19);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v20);
+    sub_1BE4ACC(&StringLiteral_5337/*"DeferredPurchaseProductIds"*/, v21);
+    sub_1BE4ACC(&StringLiteral_16276/*"]"*/, v22);
+    byte_4B6651E = 1;
   }
   logOutputAction = this->fields._logOutputAction;
-  FirstPurchaseResult = (__int64)System_String__Concat_62536508(
-                                   (System_String_o *)StringLiteral_10954/*"PurchaseLogic:EndSendReceiptData ["*/,
+  FirstPurchaseResult = (__int64)System_String__Concat_62710068(
+                                   (System_String_o *)StringLiteral_10967/*"PurchaseLogic:EndSendReceiptData ["*/,
                                    result,
-                                   (System_String_o *)StringLiteral_16255/*"]"*/,
+                                   (System_String_o *)StringLiteral_16276/*"]"*/,
                                    0LL);
   if ( !logOutputAction )
     goto LABEL_49;
@@ -2093,8 +2093,8 @@ void __fastcall PurchaseLogic__OnEndSendReceiptData(
       if ( (IsServerCommitedPurchase & 1) != 0 )
       {
         v35 = this->fields._logOutputAction;
-        FirstPurchaseResult = (__int64)System_String__Concat_62525248(
-                                         (System_String_o *)StringLiteral_10953/*"PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId="*/,
+        FirstPurchaseResult = (__int64)System_String__Concat_62698808(
+                                         (System_String_o *)StringLiteral_10966/*"PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId="*/,
                                          this->fields._currentTransactionId,
                                          0LL);
         if ( !v35 )
@@ -2116,25 +2116,25 @@ LABEL_21:
           if ( v41 >= 1 )
           {
             PurchaseLogic__RemovePreparePurchaseShopIdsInPlayerPrefs(this, v41, v40);
-            FirstPurchaseResult = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            FirstPurchaseResult = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !FirstPurchaseResult )
               goto LABEL_49;
             FirstPurchaseResult = (__int64)DataManager__GetMasterData_object_(
                                              (DataManager_o *)FirstPurchaseResult,
-                                             (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_BankShopMaster___);
+                                             (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BankShopMaster___);
             if ( !FirstPurchaseResult )
               goto LABEL_49;
             Entity = (const MethodInfo *)DataMasterBase_object__object__int___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)FirstPurchaseResult,
                                            v41,
-                                           (const MethodInfo_31D1EF0 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
+                                           (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
             if ( Entity )
             {
               klass = (System_String_o *)Entity->klass;
               FirstPurchaseResult = PurchaseLogic__IsAppleDevice(Entity);
               if ( (FirstPurchaseResult & 1) != 0 )
               {
-                FirstPurchaseResult = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5334/*"DeferredPurchaseProductIds"*/, 0LL);
+                FirstPurchaseResult = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5337/*"DeferredPurchaseProductIds"*/, 0LL);
                 if ( (FirstPurchaseResult & 1) != 0 )
                 {
                   v44 = this->fields._purchaseResultArray;
@@ -2154,23 +2154,23 @@ LABEL_37:
                     while ( 1 )
                     {
                       if ( (unsigned int)v50 >= max_length )
-                        sub_1BD36BC(FirstPurchaseResult, purchaseResultArray);
+                        sub_1BE4D30(FirstPurchaseResult, purchaseResultArray);
                       v51 = v44->m_Items[v50];
                       if ( !v51 )
                         break;
                       purchasedBankShopId = v51->fields.purchasedBankShopId;
-                      FirstPurchaseResult = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                      FirstPurchaseResult = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                       if ( !FirstPurchaseResult )
                         break;
                       FirstPurchaseResult = (__int64)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)FirstPurchaseResult,
-                                                       (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_BankShopMaster___);
+                                                       (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BankShopMaster___);
                       if ( !FirstPurchaseResult )
                         break;
                       FirstPurchaseResult = (__int64)DataMasterBase_object__object__int___GetEntity(
                                                        (DataMasterBase_TMaster__TEntity__PKType__o *)FirstPurchaseResult,
                                                        purchasedBankShopId,
-                                                       (const MethodInfo_31D1EF0 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
+                                                       (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
                       if ( FirstPurchaseResult )
                         PurchaseLogic__RemoveDeferredPurchaseProductIdsInPlayerPrefs(
                           this,
@@ -2181,7 +2181,7 @@ LABEL_37:
                         goto LABEL_37;
                     }
 LABEL_49:
-                    sub_1BD36B4(FirstPurchaseResult, purchaseResultArray);
+                    sub_1BE4D28(FirstPurchaseResult, purchaseResultArray);
                   }
                 }
               }
@@ -2194,7 +2194,7 @@ LABEL_38:
             v47 = this;
             v31 = v36;
             v48 = klass;
-            v32 = (System_String_o *)StringLiteral_10739/*"PaymentOk"*/;
+            v32 = (System_String_o *)StringLiteral_10752/*"PaymentOk"*/;
             v49 = v41;
             goto LABEL_35;
           }
@@ -2204,9 +2204,9 @@ LABEL_38:
         {
           ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logErrorOutputAction->fields.m_target)(
             logErrorOutputAction->fields.original_method_info,
-            StringLiteral_10958/*"PurchaseResult NotFound."*/,
+            StringLiteral_10971/*"PurchaseResult NotFound."*/,
             *(_QWORD *)&logErrorOutputAction->fields.extra_arg);
-          v37 = &StringLiteral_10957/*"PurchaseResult NotFound Error"*/;
+          v37 = &StringLiteral_10970/*"PurchaseResult NotFound Error"*/;
           goto LABEL_33;
         }
         goto LABEL_49;
@@ -2219,34 +2219,34 @@ LABEL_38:
         goto LABEL_49;
       IsServerCommitedPurchase = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v39->fields.m_target)(
                                    v39->fields.original_method_info,
-                                   StringLiteral_22930/*"purchaseResultArray is null."*/,
+                                   StringLiteral_22975/*"purchaseResultArray is null."*/,
                                    *(_QWORD *)&v39->fields.extra_arg);
     }
     v36 = 2;
     goto LABEL_21;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22777/*"pending_purchase_error"*/, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22822/*"pending_purchase_error"*/, 0LL) )
   {
-    if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_17939/*"canceled_purchase_error"*/, 0LL) )
+    if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_17963/*"canceled_purchase_error"*/, 0LL) )
     {
-      v29 = &StringLiteral_7192/*"Google Play canceled on restore purchase"*/;
+      v29 = &StringLiteral_7198/*"Google Play canceled on restore purchase"*/;
       currentTransactionId = (System_String_o *)StringLiteral_1/*""*/;
       v31 = 17;
       goto LABEL_10;
     }
-    if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_23081/*"receipt_error"*/, 0LL) )
+    if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_23126/*"receipt_error"*/, 0LL) )
     {
-      v38 = System_String__Concat_62536508(
-              (System_String_o *)StringLiteral_6277/*"Error["*/,
+      v38 = System_String__Concat_62710068(
+              (System_String_o *)StringLiteral_6280/*"Error["*/,
               result,
-              (System_String_o *)StringLiteral_16255/*"]"*/,
+              (System_String_o *)StringLiteral_16276/*"]"*/,
               0LL);
       currentTransactionId = (System_String_o *)StringLiteral_1/*""*/;
       v31 = 7;
       v32 = v38;
       goto LABEL_34;
     }
-    v37 = &StringLiteral_11345/*"ReceiptError"*/;
+    v37 = &StringLiteral_11358/*"ReceiptError"*/;
 LABEL_33:
     v32 = (System_String_o *)*v37;
     currentTransactionId = (System_String_o *)StringLiteral_1/*""*/;
@@ -2257,7 +2257,7 @@ LABEL_33:
     this,
     1LL,
     this->klass->vtable._31_IsDeferredPurchaseExists.methodPtr);
-  v29 = &StringLiteral_7193/*"Google Play pending on restore purchase"*/;
+  v29 = &StringLiteral_7199/*"Google Play pending on restore purchase"*/;
   currentTransactionId = (System_String_o *)StringLiteral_1/*""*/;
   v31 = 16;
 LABEL_10:
@@ -2284,11 +2284,11 @@ void __fastcall PurchaseLogic__OnInitializeFailed(PurchaseLogic_o *this, int32_t
   System_Enum_o v12; // [xsp+8h] [xbp-38h] BYREF
   int32_t v13; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4B36B10 & 1) == 0 )
+  if ( (byte_4B66529 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Purchasing_InitializationFailureReason_TypeInfo, *(_QWORD *)&error);
-    sub_1BD3458(&StringLiteral_10056/*"OnInitializeFailed InitializationFailureReason:"*/, v5);
-    byte_4B36B10 = 1;
+    sub_1BE4ACC(&UnityEngine_Purchasing_InitializationFailureReason_TypeInfo, *(_QWORD *)&error);
+    sub_1BE4ACC(&StringLiteral_10065/*"OnInitializeFailed InitializationFailureReason:"*/, v5);
+    byte_4B66529 = 1;
   }
   ((void (__fastcall *)(PurchaseLogic_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._29_EnableCrashReporterOnInitializeFailed.method)(
     this,
@@ -2301,7 +2301,7 @@ void __fastcall PurchaseLogic__OnInitializeFailed(PurchaseLogic_o *this, int32_t
     v12.monitor = (void *)-1LL;
     v13 = error;
     v7 = System_Enum__ToString(&v12, 0LL);
-    v8 = System_String__Concat_62525248((System_String_o *)StringLiteral_10056/*"OnInitializeFailed InitializationFailureReason:"*/, v7, 0LL);
+    v8 = System_String__Concat_62698808((System_String_o *)StringLiteral_10065/*"OnInitializeFailed InitializationFailureReason:"*/, v7, 0LL);
     if ( logErrorOutputActionSampledByRatio )
     {
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD, float))logErrorOutputActionSampledByRatio->fields.m_target)(
@@ -2312,14 +2312,14 @@ void __fastcall PurchaseLogic__OnInitializeFailed(PurchaseLogic_o *this, int32_t
       return;
     }
 LABEL_9:
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   }
   logErrorOutputAction = this->fields._logErrorOutputAction;
   v12.klass = (System_Enum_c *)UnityEngine_Purchasing_InitializationFailureReason_TypeInfo;
   v12.monitor = (void *)-1LL;
   v13 = error;
   v11 = System_Enum__ToString(&v12, 0LL);
-  v8 = System_String__Concat_62525248((System_String_o *)StringLiteral_10056/*"OnInitializeFailed InitializationFailureReason:"*/, v11, 0LL);
+  v8 = System_String__Concat_62698808((System_String_o *)StringLiteral_10065/*"OnInitializeFailed InitializationFailureReason:"*/, v11, 0LL);
   if ( !logErrorOutputAction )
     goto LABEL_9;
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))logErrorOutputAction->fields.m_target)(
@@ -2364,13 +2364,13 @@ void __fastcall PurchaseLogic__OnInitialized(
   UnityEngine_Purchasing_IAppleExtensions_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4B36B0D & 1) == 0 )
+  if ( (byte_4B66526 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_Product__TypeInfo, controller);
-    sub_1BD3458(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v7);
-    sub_1BD3458(&PurchaseLogic_TypeInfo, v8);
-    sub_1BD3458(&StringLiteral_10057/*"OnInitialized: PASS"*/, v9);
-    byte_4B36B0D = 1;
+    sub_1BE4ACC(&System_Action_Product__TypeInfo, controller);
+    sub_1BE4ACC(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v7);
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, v8);
+    sub_1BE4ACC(&StringLiteral_10066/*"OnInitialized: PASS"*/, v9);
+    byte_4B66526 = 1;
   }
   v10 = ((__int64 (__fastcall *)(PurchaseLogic_o *, Il2CppMethodPointer, UnityEngine_Purchasing_IExtensionProvider_o *, const MethodInfo *))this->klass->vtable._28_EnableCrashReporterOnInitializeSucceeded.method)(
           this,
@@ -2379,13 +2379,13 @@ void __fastcall PurchaseLogic__OnInitialized(
           method);
   logOutputAction = this->fields._logOutputAction;
   if ( !logOutputAction )
-    sub_1BD36B4(v10, v11);
+    sub_1BE4D28(v10, v11);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logOutputAction->fields.m_target)(
     logOutputAction->fields.original_method_info,
-    StringLiteral_10057/*"OnInitialized: PASS"*/,
+    StringLiteral_10066/*"OnInitialized: PASS"*/,
     *(_QWORD *)&logOutputAction->fields.extra_arg);
   PurchaseLogic_TypeInfo->static_fields->_storeController = controller;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)PurchaseLogic_TypeInfo->static_fields,
     (int64_t)controller,
     v13,
@@ -2396,7 +2396,7 @@ void __fastcall PurchaseLogic__OnInitialized(
     v18);
   static_fields = PurchaseLogic_TypeInfo->static_fields;
   static_fields->_storeExtensionProvider = extensions;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&static_fields->_storeExtensionProvider,
     (int64_t)extensions,
     v20,
@@ -2409,7 +2409,7 @@ void __fastcall PurchaseLogic__OnInitialized(
   if ( AppleExtension )
   {
     v29 = AppleExtension;
-    v30 = (System_Action_object__o *)sub_1BD36A4(System_Action_Product__TypeInfo);
+    v30 = (System_Action_object__o *)sub_1BE4D18(System_Action_Product__TypeInfo);
     System_Action_object____ctor(
       v30,
       (Il2CppObject *)this,
@@ -2432,7 +2432,7 @@ void __fastcall PurchaseLogic__OnInitialized(
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(v29, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 2LL);
+      p_method = sub_1C36AAC(v29, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 2LL);
     }
     (*(void (__fastcall **)(UnityEngine_Purchasing_IAppleExtensions_o *, System_Action_object__o *, _QWORD))p_method)(
       v29,
@@ -2547,31 +2547,31 @@ void __fastcall PurchaseLogic__OnPurchaseFailed(
   System_DateTime_o v102; // 0:x0.8
 
   v5 = (const MethodInfo *)product;
-  if ( (byte_4B36B12 & 1) == 0 )
+  if ( (byte_4B6652B & 1) == 0 )
   {
-    sub_1BD3458(&Method_CommonUI_OpenStonePurchaseReciveMenu___76989376, product);
-    sub_1BD3458(&System_DateTime_TypeInfo, v7);
-    sub_1BD3458(&System_Decimal_TypeInfo, v8);
-    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___, v9);
-    sub_1BD3458(&System_Func_BankShopEntity__bool__TypeInfo, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__Contains__, v11);
-    sub_1BD3458(&NetworkManager_TypeInfo, v12);
-    sub_1BD3458(&object___TypeInfo, v13);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v14);
-    sub_1BD3458(&PurchaseLogic_ProductFinishedAction_TypeInfo, v15);
-    sub_1BD3458(&PurchaseBehaviour_TypeInfo, v16);
-    sub_1BD3458(&UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, v17);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
-    sub_1BD3458(&string_TypeInfo, v19);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass61_0__OnPurchaseFailed_b__0__, v20);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass61_0_TypeInfo, v21);
-    sub_1BD3458(&StringLiteral_25174/*"yyyy/MM/dd HH:mm:ss"*/, v22);
-    sub_1BD3458(&StringLiteral_10091/*"OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}, Purchase StartTime: {2}, Purchase FailedTime: {3}"*/, v23);
-    sub_1BD3458(&StringLiteral_5313/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/, v24);
-    byte_4B36B12 = 1;
+    sub_1BE4ACC(&Method_CommonUI_OpenStonePurchaseReciveMenu___77178840, product);
+    sub_1BE4ACC(&System_DateTime_TypeInfo, v7);
+    sub_1BE4ACC(&System_Decimal_TypeInfo, v8);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___, v9);
+    sub_1BE4ACC(&System_Func_BankShopEntity__bool__TypeInfo, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Contains__, v11);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v12);
+    sub_1BE4ACC(&object___TypeInfo, v13);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BE4ACC(&PurchaseLogic_ProductFinishedAction_TypeInfo, v15);
+    sub_1BE4ACC(&PurchaseBehaviour_TypeInfo, v16);
+    sub_1BE4ACC(&UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, v17);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
+    sub_1BE4ACC(&string_TypeInfo, v19);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass61_0__OnPurchaseFailed_b__0__, v20);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass61_0_TypeInfo, v21);
+    sub_1BE4ACC(&StringLiteral_25227/*"yyyy/MM/dd HH:mm:ss"*/, v22);
+    sub_1BE4ACC(&StringLiteral_10100/*"OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}, Purchase StartTime: {2}, Purchase FailedTime: {3}"*/, v23);
+    sub_1BE4ACC(&StringLiteral_5316/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/, v24);
+    byte_4B6652B = 1;
   }
   dateData = 0LL;
-  v25 = sub_1BD36A4(PurchaseLogic___c__DisplayClass61_0_TypeInfo);
+  v25 = sub_1BE4D18(PurchaseLogic___c__DisplayClass61_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v25, 0LL);
   if ( v5 )
   {
@@ -2591,7 +2591,7 @@ void __fastcall PurchaseLogic__OnPurchaseFailed(
   Empty = (int64_t)static_fields->Empty;
   *(struct System_String_StaticFields *)(v25 + 16) = (struct System_String_StaticFields)static_fields->Empty;
   v37 = (System_String_o **)(v25 + 16);
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v25 + 16), Empty, v28, v29, v30, v31, v32, v33);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 16), Empty, v28, v29, v30, v31, v32, v33);
   IsAppleDevice = PurchaseLogic__IsAppleDevice(v38);
   if ( (IsAppleDevice & 1) != 0 )
   {
@@ -2606,7 +2606,7 @@ void __fastcall PurchaseLogic__OnPurchaseFailed(
       IsAppleDevice = System_Collections_Generic_List_object___Contains(
                         (System_Collections_Generic_List_object__o *)IsAppleDevice,
                         (Il2CppObject *)*v37,
-                        (const MethodInfo_35C1120 *)Method_System_Collections_Generic_List_string__Contains__);
+                        (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_string__Contains__);
       if ( (IsAppleDevice & 1) != 0 )
       {
         PurchaseLogic__RemoveDeferredPurchaseProductIdsInPlayerPrefs(this, *v37, v39);
@@ -2619,8 +2619,8 @@ void __fastcall PurchaseLogic__OnPurchaseFailed(
                                 v42,
                                 v43,
                                 v44);
-        IsAppleDevice = (__int64)System_String__Format_62539620(
-                                   (System_String_o *)StringLiteral_5313/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/,
+        IsAppleDevice = (__int64)System_String__Format_62713180(
+                                   (System_String_o *)StringLiteral_5316/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/,
                                    (Il2CppObject *)v41,
                                    v45,
                                    0LL);
@@ -2641,69 +2641,69 @@ void __fastcall PurchaseLogic__OnPurchaseFailed(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   dateData = NetworkManager__getDateTime(0LL).fields._dateData;
   sendReportOutputAction = this->fields._sendReportOutputAction;
-  IsAppleDevice = sub_1BD3500(object___TypeInfo, 4LL);
+  IsAppleDevice = sub_1BE4B74(object___TypeInfo, 4LL);
   if ( !IsAppleDevice )
 LABEL_53:
-    sub_1BD36B4(IsAppleDevice, v27);
+    sub_1BE4D28(IsAppleDevice, v27);
   v53 = *v37;
   v54 = (System_Object_array *)IsAppleDevice;
   if ( v53 )
   {
-    IsAppleDevice = sub_1BD3594(v53, *(_QWORD *)(*(_QWORD *)IsAppleDevice + 64LL));
+    IsAppleDevice = sub_1BE4C08(v53, *(_QWORD *)(*(_QWORD *)IsAppleDevice + 64LL));
     if ( !IsAppleDevice )
       goto LABEL_55;
   }
   if ( !v54->max_length )
     goto LABEL_54;
   v54->m_Items[0] = (Il2CppObject *)v53;
-  sub_1BD33FC((PartyOrganizationUtility_o *)v54->m_Items, (int64_t)v53, v47, v48, v49, v50, v51, v52);
+  sub_1BE4A70((PartyOrganizationUtility_o *)v54->m_Items, (int64_t)v53, v47, v48, v49, v50, v51, v52);
   v99 = failureReason;
   IsAppleDevice = j_il2cpp_value_box_0(UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, &v99, v55, v56, v57);
   v64 = IsAppleDevice;
   if ( IsAppleDevice )
   {
-    IsAppleDevice = sub_1BD3594(IsAppleDevice, v54->obj.klass->_1.element_class);
+    IsAppleDevice = sub_1BE4C08(IsAppleDevice, v54->obj.klass->_1.element_class);
     if ( !IsAppleDevice )
       goto LABEL_55;
   }
   if ( v54->max_length <= 1 )
     goto LABEL_54;
   v54->m_Items[1] = (Il2CppObject *)v64;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v54->m_Items[1], v64, v58, v59, v60, v61, v62, v63);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v54->m_Items[1], v64, v58, v59, v60, v61, v62, v63);
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v101.fields._dateData = (uint64_t)&this->fields._purchaseStartTime;
-  IsAppleDevice = (__int64)System_DateTime__ToString_63216220(v101, (System_String_o *)StringLiteral_25174/*"yyyy/MM/dd HH:mm:ss"*/, 0LL);
+  IsAppleDevice = (__int64)System_DateTime__ToString_63389780(v101, (System_String_o *)StringLiteral_25227/*"yyyy/MM/dd HH:mm:ss"*/, 0LL);
   v71 = IsAppleDevice;
   if ( IsAppleDevice )
   {
-    IsAppleDevice = sub_1BD3594(IsAppleDevice, v54->obj.klass->_1.element_class);
+    IsAppleDevice = sub_1BE4C08(IsAppleDevice, v54->obj.klass->_1.element_class);
     if ( !IsAppleDevice )
       goto LABEL_55;
   }
   if ( v54->max_length <= 2 )
     goto LABEL_54;
   v54->m_Items[2] = (Il2CppObject *)v71;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v54->m_Items[2], v71, v65, v66, v67, v68, v69, v70);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v54->m_Items[2], v71, v65, v66, v67, v68, v69, v70);
   v102.fields._dateData = (uint64_t)&dateData;
-  IsAppleDevice = (__int64)System_DateTime__ToString_63216220(v102, (System_String_o *)StringLiteral_25174/*"yyyy/MM/dd HH:mm:ss"*/, 0LL);
+  IsAppleDevice = (__int64)System_DateTime__ToString_63389780(v102, (System_String_o *)StringLiteral_25227/*"yyyy/MM/dd HH:mm:ss"*/, 0LL);
   v78 = IsAppleDevice;
   if ( IsAppleDevice )
   {
-    IsAppleDevice = sub_1BD3594(IsAppleDevice, v54->obj.klass->_1.element_class);
+    IsAppleDevice = sub_1BE4C08(IsAppleDevice, v54->obj.klass->_1.element_class);
     if ( !IsAppleDevice )
     {
 LABEL_55:
-      v98 = sub_1BD36D8(IsAppleDevice);
-      sub_1BD3580(v98, 0LL);
+      v98 = sub_1BE4D4C(IsAppleDevice);
+      sub_1BE4BF4(v98, 0LL);
     }
   }
   if ( v54->max_length <= 3 )
 LABEL_54:
-    sub_1BD36BC(IsAppleDevice, v27);
+    sub_1BE4D30(IsAppleDevice, v27);
   v54->m_Items[3] = (Il2CppObject *)v78;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v54->m_Items[3], v78, v72, v73, v74, v75, v76, v77);
-  IsAppleDevice = (__int64)System_String__Format_62539756((System_String_o *)StringLiteral_10091/*"OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}, Purchase StartTime: {2}, Purchase FailedTime: {3}"*/, v54, 0LL);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v54->m_Items[3], v78, v72, v73, v74, v75, v76, v77);
+  IsAppleDevice = (__int64)System_String__Format_62713316((System_String_o *)StringLiteral_10100/*"OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}, Purchase StartTime: {2}, Purchase FailedTime: {3}"*/, v54, 0LL);
   if ( !sendReportOutputAction )
     goto LABEL_53;
   IsAppleDevice = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))sendReportOutputAction->fields.m_target)(
@@ -2713,21 +2713,21 @@ LABEL_54:
 LABEL_34:
   if ( !this->fields._buyProductFinishedAction )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     IsAppleDevice = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
     if ( (IsAppleDevice & 1) != 0 )
     {
-      v80 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v81 = (PurchaseLogic_ProductFinishedAction_o *)sub_1BD36A4(PurchaseLogic_ProductFinishedAction_TypeInfo);
+      v80 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v81 = (PurchaseLogic_ProductFinishedAction_o *)sub_1BE4D18(PurchaseLogic_ProductFinishedAction_TypeInfo);
       PurchaseLogic_ProductFinishedAction___ctor(
         v81,
         v80,
-        (intptr_t)Method_CommonUI_OpenStonePurchaseReciveMenu___76989376,
+        (intptr_t)Method_CommonUI_OpenStonePurchaseReciveMenu___77178840,
         v82);
       this->fields._buyProductFinishedAction = v81;
-      sub_1BD33FC(
+      sub_1BE4A70(
         (PartyOrganizationUtility_o *)&this->fields._buyProductFinishedAction,
         (int64_t)v81,
         v83,
@@ -2756,16 +2756,16 @@ LABEL_34:
     v91 = PurchaseBehaviour_TypeInfo;
   }
   BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v91->static_fields->BankShopEntityCollection;
-  v93 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_BankShopEntity__bool__TypeInfo);
+  v93 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BankShopEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v93,
     (Il2CppObject *)v25,
     Method_PurchaseLogic___c__DisplayClass61_0__OnPurchaseFailed_b__0__,
     0LL);
-  v94 = System_Linq_Enumerable__FirstOrDefault_object__49631076(
+  v94 = System_Linq_Enumerable__FirstOrDefault_object__49793520(
           BankShopEntityCollection,
           (System_Func_TSource__bool__o *)v93,
-          (const MethodInfo_2F54F64 *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
+          (const MethodInfo_2F7C9F0 *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
   if ( v94 )
     klass = (int32_t)v94[1].klass;
   else
@@ -2777,7 +2777,7 @@ LABEL_34:
   if ( (unsigned int)failureReason > 6 )
     v97 = 7;
   else
-    v97 = dword_C12A58[failureReason];
+    v97 = dword_C1CBB0[failureReason];
   PurchaseLogic__ExecuteBuyProductFinishedActionAndClear(this, v97, (int32_t)v5, 0, 0, klass, 0, v96);
 }
 
@@ -2822,22 +2822,22 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
   struct System_Action_string__o *logErrorOutputAction; // x8
   System_Decimal_o v39; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4B36B11 & 1) == 0 )
+  if ( (byte_4B6652A & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Any_string___, purchaseEventArgs);
-    sub_1BD3458(&System_Decimal_TypeInfo, v5);
-    sub_1BD3458(&System_Func_string__bool__TypeInfo, v6);
-    sub_1BD3458(&PurchaseBehaviour_TypeInfo, v7);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass60_0__ProcessPurchase_b__0__, v8);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass60_0_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_10906/*"ProcessPurchase: product is null"*/, v10);
-    sub_1BD3458(&StringLiteral_10905/*"ProcessPurchase: PASS. Product: '{0}'"*/, v11);
-    sub_1BD3458(&StringLiteral_10904/*"ProcessPurchase: FAIL. Unrecognized product: '{0}'"*/, v12);
-    sub_1BD3458(&StringLiteral_10886/*"Price: "*/, v13);
-    byte_4B36B11 = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Any_string___, purchaseEventArgs);
+    sub_1BE4ACC(&System_Decimal_TypeInfo, v5);
+    sub_1BE4ACC(&System_Func_string__bool__TypeInfo, v6);
+    sub_1BE4ACC(&PurchaseBehaviour_TypeInfo, v7);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass60_0__ProcessPurchase_b__0__, v8);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass60_0_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_10919/*"ProcessPurchase: product is null"*/, v10);
+    sub_1BE4ACC(&StringLiteral_10918/*"ProcessPurchase: PASS. Product: '{0}'"*/, v11);
+    sub_1BE4ACC(&StringLiteral_10917/*"ProcessPurchase: FAIL. Unrecognized product: '{0}'"*/, v12);
+    sub_1BE4ACC(&StringLiteral_10899/*"Price: "*/, v13);
+    byte_4B6652A = 1;
   }
   *(_OWORD *)&v39.fields.flags = 0uLL;
-  v14 = sub_1BD36A4(PurchaseLogic___c__DisplayClass60_0_TypeInfo);
+  v14 = sub_1BE4D18(PurchaseLogic___c__DisplayClass60_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( purchaseEventArgs )
   {
@@ -2853,7 +2853,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
   }
   *(_QWORD *)(v14 + 16) = purchasedProduct_k__BackingField;
   v23 = (UnityEngine_Purchasing_Product_o **)(v14 + 16);
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)(v14 + 16),
     (int64_t)purchasedProduct_k__BackingField,
     v16,
@@ -2871,7 +2871,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
       v24 = PurchaseBehaviour_TypeInfo;
     }
     ConsumableProductIdCollection = (System_Collections_Generic_List_T__o *)v24->static_fields->ConsumableProductIdCollection;
-    v26 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_string__bool__TypeInfo);
+    v26 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_string__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v26,
       (Il2CppObject *)v14,
@@ -2880,7 +2880,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
     v15 = BasicHelper__Any_object_(
             ConsumableProductIdCollection,
             (System_Func_T__bool__o *)v26,
-            (const MethodInfo_2F1C5F0 *)Method_BasicHelper_Any_string___);
+            (const MethodInfo_2F4407C *)Method_BasicHelper_Any_string___);
     v27 = *(_QWORD *)(v14 + 16);
     if ( v27 )
     {
@@ -2891,7 +2891,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
         v30 = *(Il2CppObject **)(v28 + 16);
         if ( (v15 & 1) == 0 )
         {
-          v15 = (__int64)System_String__Format((System_String_o *)StringLiteral_10904/*"ProcessPurchase: FAIL. Unrecognized product: '{0}'"*/, v30, 0LL);
+          v15 = (__int64)System_String__Format((System_String_o *)StringLiteral_10917/*"ProcessPurchase: FAIL. Unrecognized product: '{0}'"*/, v30, 0LL);
           if ( !logOutputAction )
             goto LABEL_28;
           ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logOutputAction->fields.m_target)(
@@ -2900,7 +2900,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
             *(_QWORD *)&logOutputAction->fields.extra_arg);
           goto LABEL_26;
         }
-        v15 = (__int64)System_String__Format((System_String_o *)StringLiteral_10905/*"ProcessPurchase: PASS. Product: '{0}'"*/, v30, 0LL);
+        v15 = (__int64)System_String__Format((System_String_o *)StringLiteral_10918/*"ProcessPurchase: PASS. Product: '{0}'"*/, v30, 0LL);
         if ( logOutputAction )
         {
           v15 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logOutputAction->fields.m_target)(
@@ -2917,7 +2917,7 @@ int32_t __fastcall PurchaseLogic__ProcessPurchase(
               if ( !System_Decimal_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(System_Decimal_TypeInfo);
               v33 = System_Decimal__ToString(&v39, 0LL);
-              v15 = (__int64)System_String__Concat_62525248((System_String_o *)StringLiteral_10886/*"Price: "*/, v33, 0LL);
+              v15 = (__int64)System_String__Concat_62698808((System_String_o *)StringLiteral_10899/*"Price: "*/, v33, 0LL);
               if ( v32 )
               {
                 v15 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v32->fields.m_target)(
@@ -2946,14 +2946,14 @@ LABEL_26:
       }
     }
 LABEL_28:
-    sub_1BD36B4(v15, purchasedProduct_k__BackingField);
+    sub_1BE4D28(v15, purchasedProduct_k__BackingField);
   }
   logErrorOutputAction = this->fields._logErrorOutputAction;
   if ( !logErrorOutputAction )
     goto LABEL_28;
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logErrorOutputAction->fields.m_target)(
     logErrorOutputAction->fields.original_method_info,
-    StringLiteral_10906/*"ProcessPurchase: product is null"*/,
+    StringLiteral_10919/*"ProcessPurchase: product is null"*/,
     *(_QWORD *)&logErrorOutputAction->fields.extra_arg);
   return 1;
 }
@@ -3001,24 +3001,24 @@ void __fastcall PurchaseLogic__PurchaseIfAvailable(
   PurchaseLogic_o *v40; // x0
   const MethodInfo *v41; // x3
 
-  if ( (byte_4B36AF8 & 1) == 0 )
+  if ( (byte_4B66511 & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&shopId);
-    sub_1BD3458(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass29_0__PurchaseIfAvailable_b__0__, v10);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass29_0__PurchaseIfAvailable_b__1__, v11);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass29_0_TypeInfo, v12);
-    byte_4B36AF8 = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&shopId);
+    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass29_0__PurchaseIfAvailable_b__0__, v10);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass29_0__PurchaseIfAvailable_b__1__, v11);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass29_0_TypeInfo, v12);
+    byte_4B66511 = 1;
   }
-  v13 = sub_1BD36A4(PurchaseLogic___c__DisplayClass29_0_TypeInfo);
+  v13 = sub_1BE4D18(PurchaseLogic___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
-    sub_1BD36B4(v14, v15);
+    sub_1BE4D28(v14, v15);
   *(_QWORD *)(v13 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 32) = product;
   *(_DWORD *)(v13 + 24) = price;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 32), (int64_t)product, v22, v23, v24, v25, v26, v27);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 32), (int64_t)product, v22, v23, v24, v25, v26, v27);
   *(_DWORD *)(v13 + 40) = shopId;
   if ( PurchaseLogic__IsAppleDevice(v28)
     && PurchaseLogic__IsPendingPurchase(this, *(UnityEngine_Purchasing_Product_o **)(v13 + 32), v29) )
@@ -3030,16 +3030,16 @@ void __fastcall PurchaseLogic__PurchaseIfAvailable(
   }
   else
   {
-    v32 = (NetworkManager_ResultCallbackFunc_o *)sub_1BD36A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v32 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v32,
       (Il2CppObject *)v13,
       Method_PurchaseLogic___c__DisplayClass29_0__PurchaseIfAvailable_b__0__,
       0LL);
     *(_QWORD *)(v13 + 48) = v32;
-    sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 48), (int64_t)v32, v33, v34, v35, v36, v37, v38);
+    sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 48), (int64_t)v32, v33, v34, v35, v36, v37, v38);
     LODWORD(v32) = *(_DWORD *)(v13 + 40);
-    v39 = (NetworkManager_ResultCallbackFunc_o *)sub_1BD36A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v39 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v39,
       (Il2CppObject *)v13,
@@ -3074,27 +3074,27 @@ void __fastcall PurchaseLogic__RemoveDeferredPurchaseProductIdsInPlayerPrefs(
   PurchaseLogic_o *v20; // x0
   const MethodInfo *v21; // x2
 
-  if ( (byte_4B36B16 & 1) == 0 )
+  if ( (byte_4B6652F & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__RemoveAll__, productId);
-    sub_1BD3458(&System_Predicate_string__TypeInfo, v4);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass82_0__RemoveDeferredPurchaseProductIdsInPlayerPrefs_b__0__, v5);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass82_0_TypeInfo, v6);
-    byte_4B36B16 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__RemoveAll__, productId);
+    sub_1BE4ACC(&System_Predicate_string__TypeInfo, v4);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass82_0__RemoveDeferredPurchaseProductIdsInPlayerPrefs_b__0__, v5);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass82_0_TypeInfo, v6);
+    byte_4B6652F = 1;
   }
-  v7 = sub_1BD36A4(PurchaseLogic___c__DisplayClass82_0_TypeInfo);
+  v7 = sub_1BE4D18(PurchaseLogic___c__DisplayClass82_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
     goto LABEL_7;
   *(_QWORD *)(v7 + 16) = productId;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)productId, v10, v11, v12, v13, v14, v15);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)productId, v10, v11, v12, v13, v14, v15);
   IsNullOrEmpty = System_String__IsNullOrEmpty(*(System_String_o **)(v7 + 16), 0LL);
   if ( IsNullOrEmpty )
     return;
   DeferredPurchaseProductIdsFromPlayerPrefs = PurchaseLogic__GetDeferredPurchaseProductIdsFromPlayerPrefs(
                                                 (PurchaseLogic_o *)IsNullOrEmpty,
                                                 v17);
-  v19 = (System_Predicate_object__o *)sub_1BD36A4(System_Predicate_string__TypeInfo);
+  v19 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_string__TypeInfo);
   System_Predicate_object____ctor(
     v19,
     (Il2CppObject *)v7,
@@ -3102,11 +3102,11 @@ void __fastcall PurchaseLogic__RemoveDeferredPurchaseProductIdsInPlayerPrefs(
     0LL);
   if ( !DeferredPurchaseProductIdsFromPlayerPrefs )
 LABEL_7:
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   v20 = (PurchaseLogic_o *)System_Collections_Generic_List_object___RemoveAll(
                              (System_Collections_Generic_List_object__o *)DeferredPurchaseProductIdsFromPlayerPrefs,
                              (System_Predicate_T__o *)v19,
-                             (const MethodInfo_35C23EC *)Method_System_Collections_Generic_List_string__RemoveAll__);
+                             (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_string__RemoveAll__);
   PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(v20, DeferredPurchaseProductIdsFromPlayerPrefs, v21);
 }
 
@@ -3119,11 +3119,11 @@ void __fastcall PurchaseLogic__RemovePendingPurchase(
   __int64 v5; // x1
   System_Collections_Generic_HashSet_T__o *pendingProducts; // x0
 
-  if ( (byte_4B36AFF & 1) == 0 )
+  if ( (byte_4B66518 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Contains__, product);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_Product__Remove__, v5);
-    byte_4B36AFF = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Contains__, product);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_Product__Remove__, v5);
+    byte_4B66518 = 1;
   }
   pendingProducts = (System_Collections_Generic_HashSet_T__o *)this->fields._pendingProducts;
   if ( !pendingProducts )
@@ -3131,7 +3131,7 @@ void __fastcall PurchaseLogic__RemovePendingPurchase(
   if ( System_Collections_Generic_HashSet_object___Contains(
          pendingProducts,
          (Il2CppObject *)product,
-         (const MethodInfo_347A7F0 *)Method_System_Collections_Generic_HashSet_Product__Contains__) )
+         (const MethodInfo_34A5984 *)Method_System_Collections_Generic_HashSet_Product__Contains__) )
   {
     pendingProducts = (System_Collections_Generic_HashSet_T__o *)this->fields._pendingProducts;
     if ( pendingProducts )
@@ -3139,11 +3139,11 @@ void __fastcall PurchaseLogic__RemovePendingPurchase(
       System_Collections_Generic_HashSet_object___Remove(
         pendingProducts,
         (Il2CppObject *)product,
-        (const MethodInfo_347A9BC *)Method_System_Collections_Generic_HashSet_Product__Remove__);
+        (const MethodInfo_34A5B50 *)Method_System_Collections_Generic_HashSet_Product__Remove__);
       return;
     }
 LABEL_8:
-    sub_1BD36B4(pendingProducts, product);
+    sub_1BE4D28(pendingProducts, product);
   }
 }
 
@@ -3175,24 +3175,24 @@ void __fastcall PurchaseLogic__RemovePreparePurchaseShopIdsInPlayerPrefs(
   int32_t v22; // [xsp+Ch] [xbp-24h] BYREF
 
   v22 = shopId;
-  if ( (byte_4B36B1A & 1) == 0 )
+  if ( (byte_4B66533 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__RemoveAll__, *(_QWORD *)&shopId);
-    sub_1BD3458(&System_Predicate_string__TypeInfo, v4);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass86_0__RemovePreparePurchaseShopIdsInPlayerPrefs_b__0__, v5);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass86_0_TypeInfo, v6);
-    byte_4B36B1A = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__RemoveAll__, *(_QWORD *)&shopId);
+    sub_1BE4ACC(&System_Predicate_string__TypeInfo, v4);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass86_0__RemovePreparePurchaseShopIdsInPlayerPrefs_b__0__, v5);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass86_0_TypeInfo, v6);
+    byte_4B66533 = 1;
   }
-  v7 = sub_1BD36A4(PurchaseLogic___c__DisplayClass86_0_TypeInfo);
+  v7 = sub_1BE4D18(PurchaseLogic___c__DisplayClass86_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( shopId >= 1 )
   {
     v8 = System_Int32__ToString((int32_t)&v22, 0LL);
     if ( !v7
       || (*(_QWORD *)(v7 + 16) = v8,
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)v8, v10, v11, v12, v13, v14, v15),
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)v8, v10, v11, v12, v13, v14, v15),
           PreparePurchaseShopIdsFromPlayerPrefs = PurchaseLogic__GetPreparePurchaseShopIdsFromPlayerPrefs(v16, v17),
-          v19 = (System_Predicate_object__o *)sub_1BD36A4(System_Predicate_string__TypeInfo),
+          v19 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_string__TypeInfo),
           System_Predicate_object____ctor(
             v19,
             (Il2CppObject *)v7,
@@ -3200,12 +3200,12 @@ void __fastcall PurchaseLogic__RemovePreparePurchaseShopIdsInPlayerPrefs(
             0LL),
           !PreparePurchaseShopIdsFromPlayerPrefs) )
     {
-      sub_1BD36B4(v8, v9);
+      sub_1BE4D28(v8, v9);
     }
     v20 = (PurchaseLogic_o *)System_Collections_Generic_List_object___RemoveAll(
                                (System_Collections_Generic_List_object__o *)PreparePurchaseShopIdsFromPlayerPrefs,
                                (System_Predicate_T__o *)v19,
-                               (const MethodInfo_35C23EC *)Method_System_Collections_Generic_List_string__RemoveAll__);
+                               (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_string__RemoveAll__);
     PurchaseLogic__SavePreparePurchaseShopIdsToPlayerPrefs(v20, PreparePurchaseShopIdsFromPlayerPrefs, v21);
   }
 }
@@ -3220,19 +3220,19 @@ void __fastcall PurchaseLogic__RequestGameServerBankStatus(
   Il2CppObject *Request_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B36AFA & 1) == 0 )
+  if ( (byte_4B66513 & 1) == 0 )
   {
-    sub_1BD3458(&Method_NetworkManager_getRequest_BankStatusRequest___, callback);
-    sub_1BD3458(&NetworkManager_TypeInfo, v4);
-    byte_4B36AFA = 1;
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_BankStatusRequest___, callback);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v4);
+    byte_4B66513 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      callback,
-                     (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_BankStatusRequest___);
+                     (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_BankStatusRequest___);
   if ( !Request_object )
-    sub_1BD36B4(0LL, v6);
+    sub_1BE4D28(0LL, v6);
   BankStatusRequest__beginRequest((BankStatusRequest_o *)Request_object, 0LL);
 }
 
@@ -3248,19 +3248,19 @@ void __fastcall PurchaseLogic__RequestPreparePurchaseByBank(
   Il2CppObject *Request_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B36AF9 & 1) == 0 )
+  if ( (byte_4B66512 & 1) == 0 )
   {
-    sub_1BD3458(&Method_NetworkManager_getRequest_PreparePurchaseByBankRequest___, *(_QWORD *)&shopId);
-    sub_1BD3458(&NetworkManager_TypeInfo, v6);
-    byte_4B36AF9 = 1;
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_PreparePurchaseByBankRequest___, *(_QWORD *)&shopId);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v6);
+    byte_4B66512 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      callback,
-                     (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_PreparePurchaseByBankRequest___);
+                     (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_PreparePurchaseByBankRequest___);
   if ( !Request_object )
-    sub_1BD36B4(0LL, v8);
+    sub_1BE4D28(0LL, v8);
   PreparePurchaseByBankRequest__beginRequest((PreparePurchaseByBankRequest_o *)Request_object, shopId, 0LL);
 }
 
@@ -3301,24 +3301,24 @@ void __fastcall PurchaseLogic__RestorePurchases(PurchaseLogic_o *this, const Met
   int32_t platform; // [xsp+18h] [xbp-28h]
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4B36AFD & 1) == 0 )
+  if ( (byte_4B66516 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_bool__string__TypeInfo, method);
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, v3);
-    sub_1BD3458(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v4);
-    sub_1BD3458(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, v5);
-    sub_1BD3458(&Method_PurchaseLogic__RestorePurchases_b__34_0__, v6);
-    sub_1BD3458(&PurchaseLogic_TypeInfo, v7);
-    sub_1BD3458(&UnityEngine_RuntimePlatform_TypeInfo, v8);
-    sub_1BD3458(&StringLiteral_11504/*"RestorePurchases FAIL. Not supported on this platform. Current = "*/, v9);
-    sub_1BD3458(&StringLiteral_11506/*"RestorePurchases started ..."*/, v10);
-    this = (PurchaseLogic_o *)sub_1BD3458(&StringLiteral_11503/*"RestorePurchases FAIL. Not initialized."*/, v11);
-    byte_4B36AFD = 1;
+    sub_1BE4ACC(&System_Action_bool__string__TypeInfo, method);
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, v3);
+    sub_1BE4ACC(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v4);
+    sub_1BE4ACC(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, v5);
+    sub_1BE4ACC(&Method_PurchaseLogic__RestorePurchases_b__34_0__, v6);
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, v7);
+    sub_1BE4ACC(&UnityEngine_RuntimePlatform_TypeInfo, v8);
+    sub_1BE4ACC(&StringLiteral_11517/*"RestorePurchases FAIL. Not supported on this platform. Current = "*/, v9);
+    sub_1BE4ACC(&StringLiteral_11519/*"RestorePurchases started ..."*/, v10);
+    this = (PurchaseLogic_o *)sub_1BE4ACC(&StringLiteral_11516/*"RestorePurchases FAIL. Not initialized."*/, v11);
+    byte_4B66516 = 1;
   }
-  if ( (byte_4B36AF6 & 1) == 0 )
+  if ( (byte_4B6650F & 1) == 0 )
   {
-    this = (PurchaseLogic_o *)sub_1BD3458(&PurchaseLogic_TypeInfo, method);
-    byte_4B36AF6 = 1;
+    this = (PurchaseLogic_o *)sub_1BE4ACC(&PurchaseLogic_TypeInfo, method);
+    byte_4B6650F = 1;
   }
   static_fields = PurchaseLogic_TypeInfo->static_fields;
   if ( !static_fields->_storeController || !static_fields->_storeExtensionProvider )
@@ -3328,7 +3328,7 @@ void __fastcall PurchaseLogic__RestorePurchases(PurchaseLogic_o *this, const Met
     {
       (*((void (__fastcall **)(_QWORD, __int64, _QWORD))monitor + 3))(
         *((_QWORD *)monitor + 8),
-        StringLiteral_11503/*"RestorePurchases FAIL. Not initialized."*/,
+        StringLiteral_11516/*"RestorePurchases FAIL. Not initialized."*/,
         *((_QWORD *)monitor + 5));
       return;
     }
@@ -3351,7 +3351,7 @@ void __fastcall PurchaseLogic__RestorePurchases(PurchaseLogic_o *this, const Met
       v32.klass = (System_Enum_c *)UnityEngine_RuntimePlatform_TypeInfo;
       v32.monitor = (void *)-1LL;
       v24 = System_Enum__ToString(&v32, 0LL);
-      this = (PurchaseLogic_o *)System_String__Concat_62525248((System_String_o *)StringLiteral_11504/*"RestorePurchases FAIL. Not supported on this platform. Current = "*/, v24, 0LL);
+      this = (PurchaseLogic_o *)System_String__Concat_62698808((System_String_o *)StringLiteral_11517/*"RestorePurchases FAIL. Not supported on this platform. Current = "*/, v24, 0LL);
       if ( v23 )
       {
         (*((void (__fastcall **)(_QWORD, PurchaseLogic_o *, _QWORD))v23 + 3))(
@@ -3361,7 +3361,7 @@ void __fastcall PurchaseLogic__RestorePurchases(PurchaseLogic_o *this, const Met
         return;
       }
 LABEL_35:
-      sub_1BD36B4(this, method);
+      sub_1BE4D28(this, method);
     }
   }
   v13 = v2[3].monitor;
@@ -3369,7 +3369,7 @@ LABEL_35:
     goto LABEL_35;
   this = (PurchaseLogic_o *)(*((__int64 (__fastcall **)(_QWORD, __int64, _QWORD))v13 + 3))(
                               *((_QWORD *)v13 + 8),
-                              StringLiteral_11506/*"RestorePurchases started ..."*/,
+                              StringLiteral_11519/*"RestorePurchases started ..."*/,
                               *((_QWORD *)v13 + 5));
   storeExtensionProvider = PurchaseLogic_TypeInfo->static_fields->_storeExtensionProvider;
   if ( !storeExtensionProvider )
@@ -3394,13 +3394,13 @@ LABEL_35:
   else
   {
 LABEL_19:
-    p_method = sub_1C25438(storeExtensionProvider, v18, v19);
+    p_method = sub_1C36AAC(storeExtensionProvider, v18, v19);
   }
-  v25 = sub_1BD358C(*(_QWORD *)(p_method + 8), v16);
+  v25 = sub_1BE4C00(*(_QWORD *)(p_method + 8), v16);
   v26 = (*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *, __int64))(v25 + 8))(
           storeExtensionProvider,
           v25);
-  v27 = (System_Action_bool__object__o *)sub_1BD36A4(System_Action_bool__string__TypeInfo);
+  v27 = (System_Action_bool__object__o *)sub_1BE4D18(System_Action_bool__string__TypeInfo);
   System_Action_bool__object____ctor(v27, v2, Method_PurchaseLogic__RestorePurchases_b__34_0__, 0LL);
   if ( !v26 )
     goto LABEL_35;
@@ -3421,7 +3421,7 @@ LABEL_19:
   else
   {
 LABEL_32:
-    v31 = sub_1C25438(v26, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 1LL);
+    v31 = sub_1C36AAC(v26, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 1LL);
   }
   (*(void (__fastcall **)(__int64, System_Action_bool__object__o *, _QWORD))v31)(v26, v27, *(_QWORD *)(v31 + 8));
 }
@@ -3464,22 +3464,22 @@ void __fastcall PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B36B14 & 1) == 0 )
+  if ( (byte_4B6652D & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Any_string___, deferredPurchaseProductIdList);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v5);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v6);
-    sub_1BD3458(&System_Func_string__bool__TypeInfo, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__GetEnumerator__, v8);
-    sub_1BD3458(&PurchaseBehaviour_TypeInfo, v9);
-    sub_1BD3458(&string_TypeInfo, v10);
-    sub_1BD3458(&Method_PurchaseLogic___c__DisplayClass80_0__SaveDeferredPurchaseProductIdsToPlayerPrefs_b__0__, v11);
-    sub_1BD3458(&PurchaseLogic___c__DisplayClass80_0_TypeInfo, v12);
-    sub_1BD3458(&StringLiteral_1576/*";"*/, v13);
-    sub_1BD3458(&StringLiteral_1/*""*/, v14);
-    sub_1BD3458(&StringLiteral_5334/*"DeferredPurchaseProductIds"*/, v15);
-    byte_4B36B14 = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Any_string___, deferredPurchaseProductIdList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v5);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v6);
+    sub_1BE4ACC(&System_Func_string__bool__TypeInfo, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v8);
+    sub_1BE4ACC(&PurchaseBehaviour_TypeInfo, v9);
+    sub_1BE4ACC(&string_TypeInfo, v10);
+    sub_1BE4ACC(&Method_PurchaseLogic___c__DisplayClass80_0__SaveDeferredPurchaseProductIdsToPlayerPrefs_b__0__, v11);
+    sub_1BE4ACC(&PurchaseLogic___c__DisplayClass80_0_TypeInfo, v12);
+    sub_1BE4ACC(&StringLiteral_1577/*";"*/, v13);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v14);
+    sub_1BE4ACC(&StringLiteral_5337/*"DeferredPurchaseProductIds"*/, v15);
+    byte_4B6652D = 1;
   }
   memset(&v34, 0, sizeof(v34));
   if ( deferredPurchaseProductIdList )
@@ -3488,20 +3488,20 @@ void __fastcall PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v33,
       (System_Collections_Generic_List_object__o *)deferredPurchaseProductIdList,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v34 = v33;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v34,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
-      v16 = sub_1BD36A4(PurchaseLogic___c__DisplayClass80_0_TypeInfo);
+      v16 = sub_1BE4D18(PurchaseLogic___c__DisplayClass80_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v16, 0LL);
       if ( !v16 )
-        sub_1BD36B4(v17, v18);
+        sub_1BE4D28(v17, v18);
       current = v34.fields._current;
       *(_QWORD *)(v16 + 16) = v34.fields._current;
       v26 = (System_String_o **)(v16 + 16);
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)current, v19, v20, v21, v22, v23, v24);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)current, v19, v20, v21, v22, v23, v24);
       if ( *(_QWORD *)(v16 + 16) )
       {
         v27 = System_String__Trim(*(System_String_o **)(v16 + 16), 0LL);
@@ -3514,7 +3514,7 @@ void __fastcall PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(
             v28 = PurchaseBehaviour_TypeInfo;
           }
           ConsumableProductIdCollection = (System_Collections_Generic_List_T__o *)v28->static_fields->ConsumableProductIdCollection;
-          v30 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_string__bool__TypeInfo);
+          v30 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_string__bool__TypeInfo);
           System_Func_object__bool____ctor(
             v30,
             (Il2CppObject *)v16,
@@ -3523,24 +3523,24 @@ void __fastcall PurchaseLogic__SaveDeferredPurchaseProductIdsToPlayerPrefs(
           if ( BasicHelper__Any_object_(
                  ConsumableProductIdCollection,
                  (System_Func_T__bool__o *)v30,
-                 (const MethodInfo_2F1C5F0 *)Method_BasicHelper_Any_string___) )
+                 (const MethodInfo_2F4407C *)Method_BasicHelper_Any_string___) )
           {
             if ( System_String__op_Inequality(a, string_TypeInfo->static_fields->Empty, 0LL) )
-              v31 = System_String__Concat_62525248(a, (System_String_o *)StringLiteral_1576/*";"*/, 0LL);
+              v31 = System_String__Concat_62698808(a, (System_String_o *)StringLiteral_1577/*";"*/, 0LL);
             else
               v31 = a;
-            a = System_String__Concat_62525248(v31, *v26, 0LL);
+            a = System_String__Concat_62698808(v31, *v26, 0LL);
           }
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v34,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
     if ( System_String__IsNullOrEmpty(a, 0LL) )
-      UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5334/*"DeferredPurchaseProductIds"*/, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5337/*"DeferredPurchaseProductIds"*/, 0LL);
     else
-      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_5334/*"DeferredPurchaseProductIds"*/, a, 0LL);
+      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_5337/*"DeferredPurchaseProductIds"*/, a, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -3565,17 +3565,17 @@ void __fastcall PurchaseLogic__SavePreparePurchaseShopIdsToPlayerPrefs(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4B36B18 & 1) == 0 )
+  if ( (byte_4B66531 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, shopIdList);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v5);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__GetEnumerator__, v6);
-    sub_1BD3458(&string_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_10878/*"PreparePurchaseShopIds"*/, v8);
-    sub_1BD3458(&StringLiteral_1576/*";"*/, v9);
-    sub_1BD3458(&StringLiteral_1/*""*/, v10);
-    byte_4B36B18 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, shopIdList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v5);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v6);
+    sub_1BE4ACC(&string_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_10891/*"PreparePurchaseShopIds"*/, v8);
+    sub_1BE4ACC(&StringLiteral_1577/*";"*/, v9);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v10);
+    byte_4B66531 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   if ( shopIdList )
@@ -3584,11 +3584,11 @@ void __fastcall PurchaseLogic__SavePreparePurchaseShopIdsToPlayerPrefs(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       (System_Collections_Generic_List_object__o *)shopIdList,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
     v16 = v15;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v16,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
       current = v16.fields._current;
       if ( v16.fields._current )
@@ -3597,20 +3597,20 @@ void __fastcall PurchaseLogic__SavePreparePurchaseShopIdsToPlayerPrefs(
         if ( !System_String__op_Equality(v13, string_TypeInfo->static_fields->Empty, 0LL) )
         {
           if ( System_String__op_Inequality(v11, string_TypeInfo->static_fields->Empty, 0LL) )
-            v14 = System_String__Concat_62525248(v11, (System_String_o *)StringLiteral_1576/*";"*/, 0LL);
+            v14 = System_String__Concat_62698808(v11, (System_String_o *)StringLiteral_1577/*";"*/, 0LL);
           else
             v14 = v11;
-          v11 = System_String__Concat_62525248(v14, (System_String_o *)current, 0LL);
+          v11 = System_String__Concat_62698808(v14, (System_String_o *)current, 0LL);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v16,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
     if ( System_String__IsNullOrEmpty(v11, 0LL) )
-      UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10878/*"PreparePurchaseShopIds"*/, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10891/*"PreparePurchaseShopIds"*/, 0LL);
     else
-      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10878/*"PreparePurchaseShopIds"*/, v11, 0LL);
+      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10891/*"PreparePurchaseShopIds"*/, v11, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -3634,20 +3634,20 @@ void __fastcall PurchaseLogic__SendPurchaseAction(
   int32_t id; // w20
   int googlePrice; // w21
 
-  if ( (byte_4B36B0C & 1) == 0 )
+  if ( (byte_4B66525 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_BankShopMaster___, paymentProductId);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v6);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1BD3458(&StringLiteral_8274/*"JPY"*/, v8);
-    byte_4B36B0C = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_BankShopMaster___, paymentProductId);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v6);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1BE4ACC(&StringLiteral_8280/*"JPY"*/, v8);
+    byte_4B66525 = 1;
   }
-  Instance = (BankShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (BankShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (BankShopEntity_array *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)Instance,
-                                       (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_BankShopMaster___);
+                                       (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BankShopMaster___);
   if ( !Instance )
     goto LABEL_18;
   Instance = BankShopMaster__GetEnableEntitiyList((BankShopMaster_o *)Instance, 0LL);
@@ -3661,11 +3661,11 @@ void __fastcall PurchaseLogic__SendPurchaseAction(
     while ( 1 )
     {
       if ( v13 >= max_length )
-        sub_1BD36BC(Instance, v10);
+        sub_1BE4D30(Instance, v10);
       v14 = v12->m_Items[v13];
       if ( !v14 || !paymentProductId )
         goto LABEL_18;
-      Instance = (BankShopEntity_array *)System_String__Equals_62533564(paymentProductId, v14->fields.googleShopId, 0LL);
+      Instance = (BankShopEntity_array *)System_String__Equals_62707124(paymentProductId, v14->fields.googleShopId, 0LL);
       if ( ((unsigned __int8)Instance & 1) != 0 )
         break;
       max_length = v12->max_length;
@@ -3676,20 +3676,20 @@ void __fastcall PurchaseLogic__SendPurchaseAction(
     if ( (id & 0x80000000) == 0 )
     {
       googlePrice = v14->fields.googlePrice;
-      Instance = (BankShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+      Instance = (BankShopEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
       if ( Instance )
       {
         AdManager__TrackPurchase(
           (AdManager_o *)Instance,
           id,
           (double)googlePrice,
-          (System_String_o *)StringLiteral_8274/*"JPY"*/,
+          (System_String_o *)StringLiteral_8280/*"JPY"*/,
           transactionId,
           0LL);
         return;
       }
 LABEL_18:
-      sub_1BD36B4(Instance, v10);
+      sub_1BE4D28(Instance, v10);
     }
   }
 }
@@ -3739,23 +3739,23 @@ void __fastcall PurchaseLogic__SendReceiptData(
   const MethodInfo *v43; // x2
   int64_t userIdNumber; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B36B03 & 1) == 0 )
+  if ( (byte_4B6651C & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_PurchaseByBank_UnityIap_Request_PurchaseResult____TypeInfo, receiptContents);
-    sub_1BD3458(&Method_NetworkManager_getRequest_PurchaseByBank_UnityIap_Request___, v12);
-    sub_1BD3458(&NetworkManager_TypeInfo, v13);
-    sub_1BD3458(&Method_PurchaseLogic_OnEndSendReceiptData__, v14);
-    sub_1BD3458(&Method_PurchaseLogic__SendReceiptData_b__42_0__, v15);
-    sub_1BD3458(&NetworkManager_ResultCallbackFunc_TypeInfo, v16);
-    sub_1BD3458(&StringLiteral_24749/*"user_id_error"*/, v17);
-    sub_1BD3458(&StringLiteral_10956/*"PurchaseLogic:SendReceiptData ["*/, v18);
-    sub_1BD3458(&StringLiteral_15409/*"UserId error: UserId="*/, v19);
-    sub_1BD3458(&StringLiteral_16255/*"]"*/, v20);
-    byte_4B36B03 = 1;
+    sub_1BE4ACC(&System_Action_PurchaseByBank_UnityIap_Request_PurchaseResult____TypeInfo, receiptContents);
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_PurchaseByBank_UnityIap_Request___, v12);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v13);
+    sub_1BE4ACC(&Method_PurchaseLogic_OnEndSendReceiptData__, v14);
+    sub_1BE4ACC(&Method_PurchaseLogic__SendReceiptData_b__42_0__, v15);
+    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v16);
+    sub_1BE4ACC(&StringLiteral_24802/*"user_id_error"*/, v17);
+    sub_1BE4ACC(&StringLiteral_10969/*"PurchaseLogic:SendReceiptData ["*/, v18);
+    sub_1BE4ACC(&StringLiteral_15430/*"UserId error: UserId="*/, v19);
+    sub_1BE4ACC(&StringLiteral_16276/*"]"*/, v20);
+    byte_4B6651C = 1;
   }
   userIdNumber = 0LL;
   this->fields._currentTransactionId = currentTransactionId;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._currentTransactionId,
     (int64_t)currentTransactionId,
     (int64_t)currentTransactionId,
@@ -3767,10 +3767,10 @@ void __fastcall PurchaseLogic__SendReceiptData(
   if ( !receiptContents )
     goto LABEL_25;
   logOutputAction = this->fields._logOutputAction;
-  v21 = System_String__Concat_62536508(
-          (System_String_o *)StringLiteral_10956/*"PurchaseLogic:SendReceiptData ["*/,
+  v21 = System_String__Concat_62710068(
+          (System_String_o *)StringLiteral_10969/*"PurchaseLogic:SendReceiptData ["*/,
           receiptContents->fields.payloadJsonStr,
-          (System_String_o *)StringLiteral_16255/*"]"*/,
+          (System_String_o *)StringLiteral_16276/*"]"*/,
           0LL);
   if ( !logOutputAction )
     goto LABEL_25;
@@ -3780,10 +3780,10 @@ void __fastcall PurchaseLogic__SendReceiptData(
     *(_QWORD *)&logOutputAction->fields.extra_arg);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B31D77 )
+  if ( !byte_4B61717 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, v24);
-    byte_4B31D77 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v24);
+    byte_4B61717 = 1;
   }
   v31 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3794,8 +3794,8 @@ void __fastcall PurchaseLogic__SendReceiptData(
   if ( v31->static_fields->userIdNumber > 0 )
   {
     this->fields._purchaseResultArray = 0LL;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields._purchaseResultArray, 0LL, v25, v26, v27, v28, v29, v30);
-    v32 = (NetworkManager_ResultCallbackFunc_o *)sub_1BD36A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields._purchaseResultArray, 0LL, v25, v26, v27, v28, v29, v30);
+    v32 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v32,
       (Il2CppObject *)this,
@@ -3805,13 +3805,13 @@ void __fastcall PurchaseLogic__SendReceiptData(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v32,
-                       (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_PurchaseByBank_UnityIap_Request___);
+                       (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_PurchaseByBank_UnityIap_Request___);
     payloadJsonStr = receiptContents->fields.payloadJsonStr;
     p_googleSignatureStr = &receiptContents->fields.googleSignatureStr;
     googleSignatureStr = receiptContents->fields.googleSignatureStr;
     v36 = p_googleSignatureStr[1];
     v38 = (PurchaseByBank_UnityIap_Request_o *)Request_object;
-    v39 = (System_Action_object__o *)sub_1BD36A4(System_Action_PurchaseByBank_UnityIap_Request_PurchaseResult____TypeInfo);
+    v39 = (System_Action_object__o *)sub_1BE4D18(System_Action_PurchaseByBank_UnityIap_Request_PurchaseResult____TypeInfo);
     System_Action_object____ctor(v39, (Il2CppObject *)this, Method_PurchaseLogic__SendReceiptData_b__42_0__, 0LL);
     if ( v38 )
     {
@@ -3826,15 +3826,15 @@ void __fastcall PurchaseLogic__SendReceiptData(
       return;
     }
 LABEL_25:
-    sub_1BD36B4(v21, v22);
+    sub_1BE4D28(v21, v22);
   }
   logErrorOutputAction = this->fields._logErrorOutputAction;
   if ( !v31->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v31);
-  if ( !byte_4B31D77 )
+  if ( !byte_4B61717 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, v24);
-    byte_4B31D77 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v24);
+    byte_4B61717 = 1;
   }
   v41 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3844,14 +3844,14 @@ LABEL_25:
   }
   userIdNumber = v41->static_fields->userIdNumber;
   v42 = System_Int64__ToString((int64_t)&userIdNumber, 0LL);
-  v21 = System_String__Concat_62525248((System_String_o *)StringLiteral_15409/*"UserId error: UserId="*/, v42, 0LL);
+  v21 = System_String__Concat_62698808((System_String_o *)StringLiteral_15430/*"UserId error: UserId="*/, v42, 0LL);
   if ( !logErrorOutputAction )
     goto LABEL_25;
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))logErrorOutputAction->fields.m_target)(
     logErrorOutputAction->fields.original_method_info,
     v21,
     *(_QWORD *)&logErrorOutputAction->fields.extra_arg);
-  PurchaseLogic__OnEndSendReceiptData(this, (System_String_o *)StringLiteral_24749/*"user_id_error"*/, v43);
+  PurchaseLogic__OnEndSendReceiptData(this, (System_String_o *)StringLiteral_24802/*"user_id_error"*/, v43);
 }
 
 
@@ -3915,10 +3915,10 @@ void __fastcall PurchaseLogic__UpdateMonthlyPurchasePrice(
   int32_t CumulativeAmount; // w21
   int32_t v6; // w0
 
-  if ( (byte_4B36B07 & 1) == 0 )
+  if ( (byte_4B66520 & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&bankShopId);
-    byte_4B36B07 = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&bankShopId);
+    byte_4B66520 = 1;
   }
   if ( !AgeVerificationMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AgeVerificationMenu_TypeInfo);
@@ -3956,7 +3956,7 @@ void __fastcall PurchaseLogic__ValidateReceipt(
     goto LABEL_6;
   if ( !v8 )
 LABEL_7:
-    sub_1BD36B4(IsAppleDevice, v6);
+    sub_1BE4D28(IsAppleDevice, v6);
   if ( v8->fields.isIOSOldStyleReceipt )
     transactionID_k__BackingField = v8->fields.iOSOldStyleTransactionId;
 LABEL_6:
@@ -3982,20 +3982,20 @@ void __fastcall PurchaseLogic___RestorePurchases_b__34_0(
   bool v14; // [xsp+Ch] [xbp-34h] BYREF
 
   v14 = result;
-  if ( (byte_4B36B1C & 1) == 0 )
+  if ( (byte_4B66535 & 1) == 0 )
   {
-    sub_1BD3458(&bool_TypeInfo, result);
-    sub_1BD3458(&StringLiteral_11505/*"RestorePurchases continuing: "*/, v6);
-    sub_1BD3458(&StringLiteral_1046/*". If no further messages, no purchases available to restore."*/, v7);
-    sub_1BD3458(&StringLiteral_19282/*"error: "*/, v8);
-    byte_4B36B1C = 1;
+    sub_1BE4ACC(&bool_TypeInfo, result);
+    sub_1BE4ACC(&StringLiteral_11518/*"RestorePurchases continuing: "*/, v6);
+    sub_1BE4ACC(&StringLiteral_1046/*". If no further messages, no purchases available to restore."*/, v7);
+    sub_1BE4ACC(&StringLiteral_19311/*"error: "*/, v8);
+    byte_4B66535 = 1;
   }
   logOutputAction = this->fields._logOutputAction;
   if ( !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
   v10 = System_Boolean__ToString((bool)&v14, 0LL);
-  v11 = System_String__Concat_62536508(
-          (System_String_o *)StringLiteral_11505/*"RestorePurchases continuing: "*/,
+  v11 = System_String__Concat_62710068(
+          (System_String_o *)StringLiteral_11518/*"RestorePurchases continuing: "*/,
           v10,
           (System_String_o *)StringLiteral_1046/*". If no further messages, no purchases available to restore."*/,
           0LL);
@@ -4008,10 +4008,10 @@ void __fastcall PurchaseLogic___RestorePurchases_b__34_0(
   if ( v14 )
     return;
   v13 = this->fields._logOutputAction;
-  v11 = System_String__Concat_62525248((System_String_o *)StringLiteral_19282/*"error: "*/, errorMessage, 0LL);
+  v11 = System_String__Concat_62698808((System_String_o *)StringLiteral_19311/*"error: "*/, errorMessage, 0LL);
   if ( !v13 )
 LABEL_10:
-    sub_1BD36B4(v11, v12);
+    sub_1BE4D28(v11, v12);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))v13->fields.m_target)(
     v13->fields.original_method_info,
     v11,
@@ -4031,7 +4031,7 @@ void __fastcall PurchaseLogic___SendReceiptData_b__42_0(
   PartyListViewItem_o *v7; // x7
 
   this->fields._purchaseResultArray = purchaseResultArray;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._purchaseResultArray,
     (int64_t)purchaseResultArray,
     (int64_t)method,
@@ -4055,7 +4055,7 @@ void __fastcall PurchaseLogic__set_BuyProductFinishedAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._buyProductFinishedAction = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._buyProductFinishedAction,
     (int64_t)value,
     (int64_t)method,
@@ -4079,7 +4079,7 @@ void __fastcall PurchaseLogic__set_LogErrorOutputAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._logErrorOutputAction = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logErrorOutputAction,
     (int64_t)value,
     (int64_t)method,
@@ -4103,7 +4103,7 @@ void __fastcall PurchaseLogic__set_LogErrorOutputActionSampledByRatio(
   PartyListViewItem_o *v7; // x7
 
   this->fields._logErrorOutputActionSampledByRatio = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logErrorOutputActionSampledByRatio,
     (int64_t)value,
     (int64_t)method,
@@ -4127,7 +4127,7 @@ void __fastcall PurchaseLogic__set_LogOutputAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._logOutputAction = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._logOutputAction,
     (int64_t)value,
     (int64_t)method,
@@ -4151,7 +4151,7 @@ void __fastcall PurchaseLogic__set_SendReportOutputAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._sendReportOutputAction = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._sendReportOutputAction,
     (int64_t)value,
     (int64_t)method,
@@ -4185,7 +4185,7 @@ void __fastcall PurchaseLogic_ProductFinishedAction___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -4196,12 +4196,12 @@ void __fastcall PurchaseLogic_ProductFinishedAction___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v10) & 1) == 0 )
+  if ( (sub_1BE4B8C(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v14, 0LL);
+      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -4213,9 +4213,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A15E84;
+  this->fields.m_target = (Il2CppObject *)sub_1A2732C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A15DFC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A272A4;
 }
 
 
@@ -4263,12 +4263,12 @@ System_IAsyncResult_o *__fastcall PurchaseLogic_ProductFinishedAction__BeginInvo
   v34 = freeStoneNum;
   v32 = shopId;
   v31[0] = isSentGift;
-  if ( (byte_4B36B1D & 1) == 0 )
+  if ( (byte_4B66536 & 1) == 0 )
   {
-    sub_1BD3458(&bool_TypeInfo, *(_QWORD *)&purchaseResult);
-    sub_1BD3458(&int_TypeInfo, v12);
-    sub_1BD3458(&PurchaseBehaviour_Result_TypeInfo, v13);
-    byte_4B36B1D = 1;
+    sub_1BE4ACC(&bool_TypeInfo, *(_QWORD *)&purchaseResult);
+    sub_1BE4ACC(&int_TypeInfo, v12);
+    sub_1BE4ACC(&PurchaseBehaviour_Result_TypeInfo, v13);
+    byte_4B66536 = 1;
   }
   v30[6] = 0LL;
   v30[0] = j_il2cpp_value_box_0(
@@ -4282,7 +4282,7 @@ System_IAsyncResult_o *__fastcall PurchaseLogic_ProductFinishedAction__BeginInvo
   v30[3] = j_il2cpp_value_box_0(int_TypeInfo, &v33, v20, v21, v22);
   v30[4] = j_il2cpp_value_box_0(int_TypeInfo, &v32, v23, v24, v25);
   v30[5] = j_il2cpp_value_box_0(bool_TypeInfo, v31, v26, v27, v28);
-  return (System_IAsyncResult_o *)sub_1BD340C(this, v30, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, v30, callback, object);
 }
 
 
@@ -4291,7 +4291,7 @@ void __fastcall PurchaseLogic_ProductFinishedAction__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 
@@ -4360,19 +4360,19 @@ void __fastcall PurchaseLogic_ReceiptContents___ctor(PurchaseLogic_ReceiptConten
   FollowerInfo_o *v41; // x6
   PartyListViewItem_o *v42; // x7
 
-  if ( (byte_4B36B1E & 1) == 0 )
+  if ( (byte_4B66537 & 1) == 0 )
   {
-    sub_1BD3458(&string_TypeInfo, method);
-    byte_4B36B1E = 1;
+    sub_1BE4ACC(&string_TypeInfo, method);
+    byte_4B66537 = 1;
   }
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.payloadJsonStr = static_fields->Empty;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)Empty, v2, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)Empty, v2, v3, v4, v5, v6, v7);
   v11 = string_TypeInfo->static_fields;
   v12 = v11->Empty;
   this->fields.googleSignatureStr = v11->Empty;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.googleSignatureStr,
     (int64_t)v12,
     v13,
@@ -4384,15 +4384,15 @@ void __fastcall PurchaseLogic_ReceiptContents___ctor(PurchaseLogic_ReceiptConten
   v19 = string_TypeInfo->static_fields;
   v20 = v19->Empty;
   this->fields.receiptBase64Str = v19->Empty;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.receiptBase64Str, (int64_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.receiptBase64Str, (int64_t)v20, v21, v22, v23, v24, v25, v26);
   v27 = string_TypeInfo->static_fields;
   v28 = v27->Empty;
   this->fields.purchaseToken = v27->Empty;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.purchaseToken, (int64_t)v28, v29, v30, v31, v32, v33, v34);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.purchaseToken, (int64_t)v28, v29, v30, v31, v32, v33, v34);
   v35 = string_TypeInfo->static_fields;
   v36 = v35->Empty;
   this->fields.iOSOldStyleTransactionId = v35->Empty;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.iOSOldStyleTransactionId,
     (int64_t)v36,
     v37,
@@ -4416,15 +4416,15 @@ void __fastcall PurchaseLogic___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B36B1F & 1) == 0 )
+  if ( (byte_4B66538 & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseLogic___c_TypeInfo, v1);
-    byte_4B36B1F = 1;
+    sub_1BE4ACC(&PurchaseLogic___c_TypeInfo, v1);
+    byte_4B66538 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(PurchaseLogic___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(PurchaseLogic___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PurchaseLogic___c_TypeInfo->static_fields->__9 = (struct PurchaseLogic___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)PurchaseLogic___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -4459,13 +4459,13 @@ void __fastcall PurchaseLogic___c____ctor_b__87_1(
   __int64 v4; // x1
   Il2CppObject *v5; // x19
 
-  if ( (byte_4B36B20 & 1) == 0 )
+  if ( (byte_4B66539 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Debug_TypeInfo, str);
-    sub_1BD3458(&StringLiteral_16145/*"[UnityIAP]課金エラー:"*/, v4);
-    byte_4B36B20 = 1;
+    sub_1BE4ACC(&UnityEngine_Debug_TypeInfo, str);
+    sub_1BE4ACC(&StringLiteral_16166/*"[UnityIAP]課金エラー:"*/, v4);
+    byte_4B66539 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Concat_62525248((System_String_o *)StringLiteral_16145/*"[UnityIAP]課金エラー:"*/, str, 0LL);
+  v5 = (Il2CppObject *)System_String__Concat_62698808((System_String_o *)StringLiteral_16166/*"[UnityIAP]課金エラー:"*/, str, 0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__LogError(v5, 0LL);
@@ -4482,17 +4482,17 @@ void __fastcall PurchaseLogic___c____ctor_b__87_2(
   System_String_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B36B21 & 1) == 0 )
+  if ( (byte_4B6653A & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, str);
-    sub_1BD3458(&StringLiteral_16145/*"[UnityIAP]課金エラー:"*/, v4);
-    byte_4B36B21 = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, str);
+    sub_1BE4ACC(&StringLiteral_16166/*"[UnityIAP]課金エラー:"*/, v4);
+    byte_4B6653A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-  v6 = System_String__Concat_62525248((System_String_o *)StringLiteral_16145/*"[UnityIAP]課金エラー:"*/, str, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  v6 = System_String__Concat_62698808((System_String_o *)StringLiteral_16166/*"[UnityIAP]課金エラー:"*/, str, 0LL);
   if ( !Instance )
-    sub_1BD36B4(v6, v7);
-  CrashReporter__SendReport_30688920((CrashReporter_o *)Instance, v6, 0LL, 0LL, 0LL);
+    sub_1BE4D28(v6, v7);
+  CrashReporter__SendReport_30760204((CrashReporter_o *)Instance, v6, 0LL, 0LL, 0LL);
 }
 
 
@@ -4510,19 +4510,19 @@ void __fastcall PurchaseLogic___c____ctor_b__87_3(
   float v11; // [xsp+Ch] [xbp-34h] BYREF
 
   v11 = ratio;
-  if ( (byte_4B36B22 & 1) == 0 )
+  if ( (byte_4B6653B & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Debug_TypeInfo, str);
-    sub_1BD3458(&StringLiteral_16144/*"[UnityIAP]課金エラー(ratio:"*/, v6);
-    sub_1BD3458(&StringLiteral_832/*"):"*/, v7);
-    byte_4B36B22 = 1;
+    sub_1BE4ACC(&UnityEngine_Debug_TypeInfo, str);
+    sub_1BE4ACC(&StringLiteral_16165/*"[UnityIAP]課金エラー(ratio:"*/, v6);
+    sub_1BE4ACC(&StringLiteral_832/*"):"*/, v7);
+    byte_4B6653B = 1;
   }
   v8 = UnityEngine_Random__Range(0.0, 1.0, 0LL);
   if ( v8 < ratio )
   {
     v9 = System_Single__ToString(v8, (const MethodInfo *)&v11);
-    v10 = (Il2CppObject *)System_String__Concat_62538512(
-                            (System_String_o *)StringLiteral_16144/*"[UnityIAP]課金エラー(ratio:"*/,
+    v10 = (Il2CppObject *)System_String__Concat_62712072(
+                            (System_String_o *)StringLiteral_16165/*"[UnityIAP]課金エラー(ratio:"*/,
                             v9,
                             (System_String_o *)StringLiteral_832/*"):"*/,
                             str,
@@ -4556,7 +4556,7 @@ bool __fastcall PurchaseLogic___c___IsServerCommitedPurchase_b__43_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return x->fields.isCommitedAlready;
 }
 
@@ -4601,21 +4601,21 @@ void __fastcall PurchaseLogic___c__DisplayClass29_0___PurchaseIfAvailable_b__0(
   System_Enum_o v29; // [xsp+8h] [xbp-38h] BYREF
   int v30; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4B36B23 & 1) == 0 )
+  if ( (byte_4B6653C & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, requestResultStr);
-    sub_1BD3458(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
-    sub_1BD3458(&NetworkManager_TypeInfo, v7);
-    sub_1BD3458(&PurchaseLogic_PurchaseAvailablilty_TypeInfo, v8);
-    sub_1BD3458(&PurchaseLogic_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_10960/*"Purchasing product asychronously: '{0}'"*/, v10);
-    sub_1BD3458(&StringLiteral_15134/*"Unexpected PurchaseAvailablilty value: "*/, v11);
-    byte_4B36B23 = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, requestResultStr);
+    sub_1BE4ACC(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v7);
+    sub_1BE4ACC(&PurchaseLogic_PurchaseAvailablilty_TypeInfo, v8);
+    sub_1BE4ACC(&PurchaseLogic_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_10973/*"Purchasing product asychronously: '{0}'"*/, v10);
+    sub_1BE4ACC(&StringLiteral_15153/*"Unexpected PurchaseAvailablilty value: "*/, v11);
+    byte_4B6653C = 1;
   }
   _4__this = (uint64_t)this->fields.__4__this;
   if ( !_4__this )
 LABEL_29:
-    sub_1BD36B4(_4__this, requestResultStr);
+    sub_1BE4D28(_4__this, requestResultStr);
   _4__this = PurchaseLogic__CheckBankStatusAndMonthlyLimit(
                (PurchaseLogic_o *)_4__this,
                requestResultStr,
@@ -4636,7 +4636,7 @@ LABEL_29:
         goto LABEL_29;
       logOutputAction = v14->fields._logOutputAction;
       _4__this = (uint64_t)System_String__Format(
-                             (System_String_o *)StringLiteral_10960/*"Purchasing product asychronously: '{0}'"*/,
+                             (System_String_o *)StringLiteral_10973/*"Purchasing product asychronously: '{0}'"*/,
                              (Il2CppObject *)definition_k__BackingField->fields._id_k__BackingField,
                              0LL);
       if ( !logOutputAction )
@@ -4678,7 +4678,7 @@ LABEL_29:
       v29.klass = (System_Enum_c *)PurchaseLogic_PurchaseAvailablilty_TypeInfo;
       v29.monitor = (void *)-1LL;
       v27 = System_Enum__ToString(&v29, 0LL);
-      _4__this = (uint64_t)System_String__Concat_62525248((System_String_o *)StringLiteral_15134/*"Unexpected PurchaseAvailablilty value: "*/, v27, 0LL);
+      _4__this = (uint64_t)System_String__Concat_62698808((System_String_o *)StringLiteral_15153/*"Unexpected PurchaseAvailablilty value: "*/, v27, 0LL);
       if ( !logErrorOutputAction )
         goto LABEL_29;
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, uint64_t, _QWORD))logErrorOutputAction->fields.m_target)(
@@ -4711,7 +4711,7 @@ LABEL_23:
     if ( !v22 )
     {
 LABEL_17:
-      p_method = sub_1C25438(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 1LL);
+      p_method = sub_1C36AAC(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 1LL);
       goto LABEL_28;
     }
   }
@@ -4736,15 +4736,15 @@ void __fastcall PurchaseLogic___c__DisplayClass29_0___PurchaseIfAvailable_b__1(
   PurchaseLogic_o *_4__this; // x19
   const MethodInfo *v10; // x7
 
-  if ( (byte_4B36B24 & 1) == 0 )
+  if ( (byte_4B6653D & 1) == 0 )
   {
-    sub_1BD3458(&AgeVerificationMenu_TypeInfo, result);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v5);
-    byte_4B36B24 = 1;
+    sub_1BE4ACC(&AgeVerificationMenu_TypeInfo, result);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v5);
+    byte_4B6653D = 1;
   }
   CumulativeAmount = (PurchaseLogic_o *)System_String__op_Inequality(
                                           result,
-                                          (System_String_o *)StringLiteral_22325/*"ng"*/,
+                                          (System_String_o *)StringLiteral_22370/*"ng"*/,
                                           0LL);
   if ( ((unsigned __int8)CumulativeAmount & 1) != 0 )
   {
@@ -4754,7 +4754,7 @@ void __fastcall PurchaseLogic___c__DisplayClass29_0___PurchaseIfAvailable_b__1(
       return;
     }
 LABEL_10:
-    sub_1BD36B4(CumulativeAmount, v7);
+    sub_1BE4D28(CumulativeAmount, v7);
   }
   _4__this = this->fields.__4__this;
   if ( !AgeVerificationMenu_TypeInfo->_2.cctor_finished )
@@ -4780,7 +4780,7 @@ bool __fastcall PurchaseLogic___c__DisplayClass45_0___GetFirstPurchaseResult_b__
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return System_String__op_Equality(x->fields.transactionId, this->fields.transactionId, 0LL);
 }
 
@@ -4804,7 +4804,7 @@ bool __fastcall PurchaseLogic___c__DisplayClass47_0___OnEndPaymentStore_b__0(
     return 0;
   definition_k__BackingField = p->fields._definition_k__BackingField;
   if ( !definition_k__BackingField )
-    sub_1BD36B4(this, p);
+    sub_1BE4D28(this, p);
   return System_String__op_Equality(definition_k__BackingField->fields._id_k__BackingField, this->fields.productId, 0LL);
 }
 
@@ -4827,8 +4827,8 @@ bool __fastcall PurchaseLogic___c__DisplayClass60_0___ProcessPurchase_b__0(
 
   product = this->fields.product;
   if ( !product || (definition_k__BackingField = product->fields._definition_k__BackingField) == 0LL )
-    sub_1BD36B4(this, id);
-  return System_String__Equals_62534368(definition_k__BackingField->fields._id_k__BackingField, id, 4, 0LL);
+    sub_1BE4D28(this, id);
+  return System_String__Equals_62707928(definition_k__BackingField->fields._id_k__BackingField, id, 4, 0LL);
 }
 
 
@@ -4846,8 +4846,8 @@ bool __fastcall PurchaseLogic___c__DisplayClass61_0___OnPurchaseFailed_b__0(
         const MethodInfo *method)
 {
   if ( !bankShop )
-    sub_1BD36B4(this, 0LL);
-  return System_String__Equals_62534368(this->fields.productId, bankShop->fields.googleShopId, 4, 0LL);
+    sub_1BE4D28(this, 0LL);
+  return System_String__Equals_62707928(this->fields.productId, bankShop->fields.googleShopId, 4, 0LL);
 }
 
 
@@ -4864,7 +4864,7 @@ bool __fastcall PurchaseLogic___c__DisplayClass80_0___SaveDeferredPurchaseProduc
         System_String_o *id,
         const MethodInfo *method)
 {
-  return System_String__Equals_62534368(id, this->fields.idStr, 4, 0LL);
+  return System_String__Equals_62707928(id, this->fields.idStr, 4, 0LL);
 }
 
 

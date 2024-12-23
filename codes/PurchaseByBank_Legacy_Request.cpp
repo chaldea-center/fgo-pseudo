@@ -10,28 +10,28 @@ System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__o 
   System_Collections_Generic_IEnumerable_TSource__o *purchaseResultArray; // x0
   System_Collections_Generic_List_object__o *v9; // x19
 
-  if ( (byte_4B38AFB & 1) == 0 )
+  if ( (byte_4B6854A & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Debug_TypeInfo, v1);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_PurchaseByBank_Legacy_Request_PurchaseResult___, v2);
-    sub_1BD3458(&Method_System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult___ctor__, v3);
-    sub_1BD3458(&System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__TypeInfo, v4);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_22930/*"purchaseResultArray is null."*/, v6);
-    byte_4B38AFB = 1;
+    sub_1BE4ACC(&UnityEngine_Debug_TypeInfo, v1);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_PurchaseByBank_Legacy_Request_PurchaseResult___, v2);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult___ctor__, v3);
+    sub_1BE4ACC(&System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__TypeInfo, v4);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_22975/*"purchaseResultArray is null."*/, v6);
+    byte_4B6854A = 1;
   }
   purchaseResultArray = (System_Collections_Generic_IEnumerable_TSource__o *)PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray;
   if ( purchaseResultArray )
     return (System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__o *)System_Linq_Enumerable__ToList_object_(
                                                                                                 purchaseResultArray,
-                                                                                                (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_PurchaseByBank_Legacy_Request_PurchaseResult___);
+                                                                                                (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_PurchaseByBank_Legacy_Request_PurchaseResult___);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_22930/*"purchaseResultArray is null."*/, 0LL);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__TypeInfo);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_22975/*"purchaseResultArray is null."*/, 0LL);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult___ctor__);
   return (System_Collections_Generic_List_PurchaseByBank_Legacy_Request_PurchaseResult__o *)v9;
 }
 
@@ -56,14 +56,14 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedChargeStoneNum(co
   PartyListViewItem_o *v16; // x7
   System_Collections_Generic_IEnumerable_int__o *v17; // x0
 
-  if ( (byte_4B38AFA & 1) == 0 )
+  if ( (byte_4B68549 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___, v1);
-    sub_1BD3458(&System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo, v2);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v3);
-    sub_1BD3458(&Method_PurchaseByBank_Legacy_Request___c__GetTotalAddedChargeStoneNum_b__7_0__, v4);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request___c_TypeInfo, v5);
-    byte_4B38AFA = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___, v1);
+    sub_1BE4ACC(&System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo, v2);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v3);
+    sub_1BE4ACC(&Method_PurchaseByBank_Legacy_Request___c__GetTotalAddedChargeStoneNum_b__7_0__, v4);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request___c_TypeInfo, v5);
+    byte_4B68549 = 1;
   }
   purchaseResultArray = (System_Collections_Generic_IEnumerable_TSource__o *)PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray;
   if ( !purchaseResultArray )
@@ -83,7 +83,7 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedChargeStoneNum(co
       v7 = PurchaseByBank_Legacy_Request___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__7_0 = (System_Func_object__int__o *)sub_1BD36A4(System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo);
+    _9__7_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__7_0,
       v9,
@@ -91,12 +91,12 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedChargeStoneNum(co
       0LL);
     static_fields = PurchaseByBank_Legacy_Request___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__o *)_9__7_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__7_0, (int64_t)_9__7_0, v11, v12, v13, v14, v15, v16);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__7_0, (int64_t)_9__7_0, v11, v12, v13, v14, v15, v16);
   }
   v17 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
                                                            purchaseResultArray,
                                                            (System_Func_TSource__TResult__o *)_9__7_0,
-                                                           (const MethodInfo_2F62540 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___);
+                                                           (const MethodInfo_2F89FCC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___);
   return System_Linq_Enumerable__Sum(v17, 0LL);
 }
 
@@ -121,14 +121,14 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedFreeStoneNum(cons
   PartyListViewItem_o *v16; // x7
   System_Collections_Generic_IEnumerable_int__o *v17; // x0
 
-  if ( (byte_4B38AF9 & 1) == 0 )
+  if ( (byte_4B68548 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___, v1);
-    sub_1BD3458(&System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo, v2);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v3);
-    sub_1BD3458(&Method_PurchaseByBank_Legacy_Request___c__GetTotalAddedFreeStoneNum_b__6_0__, v4);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request___c_TypeInfo, v5);
-    byte_4B38AF9 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___, v1);
+    sub_1BE4ACC(&System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo, v2);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v3);
+    sub_1BE4ACC(&Method_PurchaseByBank_Legacy_Request___c__GetTotalAddedFreeStoneNum_b__6_0__, v4);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request___c_TypeInfo, v5);
+    byte_4B68548 = 1;
   }
   purchaseResultArray = (System_Collections_Generic_IEnumerable_TSource__o *)PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray;
   if ( !purchaseResultArray )
@@ -148,7 +148,7 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedFreeStoneNum(cons
       v7 = PurchaseByBank_Legacy_Request___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__6_0 = (System_Func_object__int__o *)sub_1BD36A4(System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo);
+    _9__6_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__6_0,
       v9,
@@ -156,12 +156,12 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__GetTotalAddedFreeStoneNum(cons
       0LL);
     static_fields = PurchaseByBank_Legacy_Request___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Func_PurchaseByBank_Legacy_Request_PurchaseResult__int__o *)_9__6_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__6_0, (int64_t)_9__6_0, v11, v12, v13, v14, v15, v16);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__6_0, (int64_t)_9__6_0, v11, v12, v13, v14, v15, v16);
   }
   v17 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
                                                            purchaseResultArray,
                                                            (System_Func_TSource__TResult__o *)_9__6_0,
-                                                           (const MethodInfo_2F62540 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___);
+                                                           (const MethodInfo_2F89FCC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_Legacy_Request_PurchaseResult__int___);
   return System_Linq_Enumerable__Sum(v17, 0LL);
 }
 
@@ -190,28 +190,28 @@ void __fastcall PurchaseByBank_Legacy_Request__beginRequest(
   const MethodInfo *v23; // x1
   const MethodInfo *v24; // x1
 
-  if ( (byte_4B38AF8 & 1) == 0 )
+  if ( (byte_4B68547 & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, purchaseBaseData);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v11);
-    sub_1BD3458(&StringLiteral_23841/*"storeError"*/, v12);
-    sub_1BD3458(&StringLiteral_22927/*"purchaseData"*/, v13);
-    sub_1BD3458(&StringLiteral_22928/*"purchaseDataBase64"*/, v14);
-    sub_1BD3458(&StringLiteral_23604/*"signatureData"*/, v15);
-    byte_4B38AF8 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, purchaseBaseData);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v11);
+    sub_1BE4ACC(&StringLiteral_23893/*"storeError"*/, v12);
+    sub_1BE4ACC(&StringLiteral_22972/*"purchaseData"*/, v13);
+    sub_1BE4ACC(&StringLiteral_22973/*"purchaseDataBase64"*/, v14);
+    sub_1BE4ACC(&StringLiteral_23656/*"signatureData"*/, v15);
+    byte_4B68547 = 1;
   }
-  RequestBase__addField_41965080(
+  RequestBase__addField_42104408(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22927/*"purchaseData"*/,
+    (System_String_o *)StringLiteral_22972/*"purchaseData"*/,
     purchaseData,
     *(const MethodInfo **)&storeError);
   if ( !System_String__IsNullOrEmpty(purchaseBaseData, 0LL) )
-    RequestBase__addField_41965080((RequestBase_o *)this, (System_String_o *)StringLiteral_22928/*"purchaseDataBase64"*/, purchaseBaseData, v16);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23841/*"storeError"*/, storeError, v16);
+    RequestBase__addField_42104408((RequestBase_o *)this, (System_String_o *)StringLiteral_22973/*"purchaseDataBase64"*/, purchaseBaseData, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23893/*"storeError"*/, storeError, v16);
   if ( !System_String__IsNullOrEmpty(extraToken, 0LL) )
-    RequestBase__addField_41965080((RequestBase_o *)this, (System_String_o *)StringLiteral_23604/*"signatureData"*/, extraToken, v18);
+    RequestBase__addField_42104408((RequestBase_o *)this, (System_String_o *)StringLiteral_23656/*"signatureData"*/, extraToken, v18);
   PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray = 0LL;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)PurchaseByBank_Legacy_Request_TypeInfo->static_fields,
     0LL,
     v17,
@@ -237,12 +237,12 @@ System_String_o *__fastcall PurchaseByBank_Legacy_Request__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4B38AF7 & 1) == 0 )
+  if ( (byte_4B68546 & 1) == 0 )
   {
-    sub_1BD3458(&AndroidUtil_TypeInfo, method);
-    sub_1BD3458(&DatFileName_TypeInfo, v2);
-    sub_1BD3458(&StringLiteral_1120/*"/"*/, v3);
-    byte_4B38AF7 = 1;
+    sub_1BE4ACC(&AndroidUtil_TypeInfo, method);
+    sub_1BE4ACC(&DatFileName_TypeInfo, v2);
+    sub_1BE4ACC(&StringLiteral_1120/*"/"*/, v3);
+    byte_4B68546 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -250,7 +250,7 @@ System_String_o *__fastcall PurchaseByBank_Legacy_Request__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(1, 0LL);
-  return System_String__Concat_62536508(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
+  return System_String__Concat_62710068(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
 }
 
 
@@ -260,18 +260,18 @@ int32_t __fastcall PurchaseByBank_Legacy_Request__getPurchasedBankShopId(const M
   __int64 v2; // x1
   struct PurchaseByBank_Legacy_Request_PurchaseResult_array *purchaseResultArray; // x0
 
-  if ( (byte_4B38AF5 & 1) == 0 )
+  if ( (byte_4B68544 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_Legacy_Request_PurchaseResult___, v1);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v2);
-    byte_4B38AF5 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_Legacy_Request_PurchaseResult___, v1);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v2);
+    byte_4B68544 = 1;
   }
   purchaseResultArray = PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray;
   if ( purchaseResultArray )
   {
     purchaseResultArray = (struct PurchaseByBank_Legacy_Request_PurchaseResult_array *)System_Linq_Enumerable__FirstOrDefault_object_(
                                                                                          (System_Collections_Generic_IEnumerable_TSource__o *)purchaseResultArray,
-                                                                                         (const MethodInfo_2F53F14 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_Legacy_Request_PurchaseResult___);
+                                                                                         (const MethodInfo_2F7B9A0 *)Method_System_Linq_Enumerable_FirstOrDefault_PurchaseByBank_Legacy_Request_PurchaseResult___);
     if ( purchaseResultArray )
       LODWORD(purchaseResultArray) = purchaseResultArray->bounds;
   }
@@ -286,16 +286,16 @@ System_String_o *__fastcall PurchaseByBank_Legacy_Request__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B38AF6 & 1) == 0 )
+  if ( (byte_4B68545 & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_23550/*"shop/purchaseByBank"*/, v2);
-    byte_4B38AF6 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_23601/*"shop/purchaseByBank"*/, v2);
+    byte_4B68545 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_23550/*"shop/purchaseByBank"*/, 0LL);
+  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_23601/*"shop/purchaseByBank"*/, 0LL);
 }
 
 
@@ -337,19 +337,19 @@ void __fastcall PurchaseByBank_Legacy_Request__requestCompleted(
   __int64 v35; // x1
   struct NetworkManager_ResultCallbackFunc_o *v36; // x8
 
-  if ( (byte_4B38AFC & 1) == 0 )
+  if ( (byte_4B6854B & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, responseList);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
-    sub_1BD3458(&Method_JsonManager_DeserializeArray_PurchaseByBank_Legacy_Request_PurchaseResult___, v6);
-    sub_1BD3458(&JsonManager_TypeInfo, v7);
-    sub_1BD3458(&PurchaseByBank_Legacy_Request_TypeInfo, v8);
-    sub_1BD3458(&ResponseCommandKind_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_23184/*"result"*/, v10);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v11);
-    sub_1BD3458(&StringLiteral_22931/*"purchaseResults"*/, v12);
-    sub_1BD3458(&StringLiteral_1/*""*/, v13);
-    byte_4B38AFC = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, responseList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
+    sub_1BE4ACC(&Method_JsonManager_DeserializeArray_PurchaseByBank_Legacy_Request_PurchaseResult___, v6);
+    sub_1BE4ACC(&JsonManager_TypeInfo, v7);
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request_TypeInfo, v8);
+    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_23229/*"result"*/, v10);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v11);
+    sub_1BE4ACC(&StringLiteral_22976/*"purchaseResults"*/, v12);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v13);
+    byte_4B6854B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -357,7 +357,7 @@ void __fastcall PurchaseByBank_Legacy_Request__requestCompleted(
   if ( v14 )
   {
     v15 = v14;
-    if ( ResponseData__checkError_42055668(v14, 0LL) )
+    if ( ResponseData__checkError_42194996(v14, 0LL) )
     {
       success = (System_Collections_Generic_Dictionary_object__object__o *)v15->fields.success;
       if ( success )
@@ -366,13 +366,13 @@ void __fastcall PurchaseByBank_Legacy_Request__requestCompleted(
         v18 = StringLiteral_1/*""*/;
         if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                 v17,
-                (Il2CppObject *)StringLiteral_23184/*"result"*/,
-                (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                (Il2CppObject *)StringLiteral_23229/*"result"*/,
+                (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           goto LABEL_11;
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  success,
-                 (Il2CppObject *)StringLiteral_23184/*"result"*/,
-                 (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_23229/*"result"*/,
+                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( Item )
         {
           v18 = (void *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -381,20 +381,20 @@ void __fastcall PurchaseByBank_Legacy_Request__requestCompleted(
 LABEL_11:
           if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
                  success,
-                 (Il2CppObject *)StringLiteral_22931/*"purchaseResults"*/,
-                 (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                 (Il2CppObject *)StringLiteral_22976/*"purchaseResults"*/,
+                 (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           {
             v21 = System_Collections_Generic_Dictionary_object__object___get_Item(
                     success,
-                    (Il2CppObject *)StringLiteral_22931/*"purchaseResults"*/,
-                    (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                    (Il2CppObject *)StringLiteral_22976/*"purchaseResults"*/,
+                    (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
             if ( !JsonManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
             v22 = JsonManager__DeserializeArray_object_(
                     v21,
-                    (const MethodInfo_2F98C0C *)Method_JsonManager_DeserializeArray_PurchaseByBank_Legacy_Request_PurchaseResult___);
+                    (const MethodInfo_2FC092C *)Method_JsonManager_DeserializeArray_PurchaseByBank_Legacy_Request_PurchaseResult___);
             PurchaseByBank_Legacy_Request_TypeInfo->static_fields->purchaseResultArray = (struct PurchaseByBank_Legacy_Request_PurchaseResult_array *)v22;
-            sub_1BD33FC(
+            sub_1BE4A70(
               (PartyOrganizationUtility_o *)PurchaseByBank_Legacy_Request_TypeInfo->static_fields,
               (int64_t)v22,
               v23,
@@ -422,7 +422,7 @@ LABEL_23:
           return;
         }
 LABEL_25:
-        sub_1BD36B4(Item, v20);
+        sub_1BE4D28(Item, v20);
       }
     }
     else
@@ -431,16 +431,16 @@ LABEL_25:
       if ( fail )
       {
         v30 = (System_Collections_Generic_Dictionary_object__object__o *)v15->fields.fail;
-        v18 = (void *)StringLiteral_22325/*"ng"*/;
+        v18 = (void *)StringLiteral_22370/*"ng"*/;
         if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                 v30,
-                (Il2CppObject *)StringLiteral_23184/*"result"*/,
-                (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                (Il2CppObject *)StringLiteral_23229/*"result"*/,
+                (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           goto LABEL_19;
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  fail,
-                 (Il2CppObject *)StringLiteral_23184/*"result"*/,
-                 (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_23229/*"result"*/,
+                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( Item )
         {
           v18 = (void *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -458,7 +458,7 @@ LABEL_25:
     m_target = v36->fields.m_target;
     original_method_info = v36->fields.original_method_info;
     v34 = *(_QWORD *)&v36->fields.extra_arg;
-    v35 = StringLiteral_22325/*"ng"*/;
+    v35 = StringLiteral_22370/*"ng"*/;
     goto LABEL_23;
   }
 }
@@ -483,15 +483,15 @@ void __fastcall PurchaseByBank_Legacy_Request___c___cctor(const MethodInfo *meth
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B38AFD & 1) == 0 )
+  if ( (byte_4B6854C & 1) == 0 )
   {
-    sub_1BD3458(&PurchaseByBank_Legacy_Request___c_TypeInfo, v1);
-    byte_4B38AFD = 1;
+    sub_1BE4ACC(&PurchaseByBank_Legacy_Request___c_TypeInfo, v1);
+    byte_4B6854C = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(PurchaseByBank_Legacy_Request___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(PurchaseByBank_Legacy_Request___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PurchaseByBank_Legacy_Request___c_TypeInfo->static_fields->__9 = (struct PurchaseByBank_Legacy_Request___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)PurchaseByBank_Legacy_Request___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -517,7 +517,7 @@ int32_t __fastcall PurchaseByBank_Legacy_Request___c___GetTotalAddedChargeStoneN
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return x->fields.chargeStoneNum;
 }
 
@@ -528,6 +528,6 @@ int32_t __fastcall PurchaseByBank_Legacy_Request___c___GetTotalAddedFreeStoneNum
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return x->fields.freeStoneNum;
 }

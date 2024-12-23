@@ -16,16 +16,16 @@ void __fastcall FGOEffectSheetAnimation__OnEnable(FGOEffectSheetAnimation_o *thi
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B36019 & 1) == 0 )
+  if ( (byte_4B65A27 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_4B36019 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    byte_4B65A27 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.compRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.compRenderer,
     (int64_t)Component_object,
     v4,
@@ -52,11 +52,11 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
   UnityEngine_Vector2_o v13; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o v14; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B3601A & 1) == 0 )
+  if ( (byte_4B65A28 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_16450/*"_MainTex"*/, v3);
-    byte_4B3601A = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_16471/*"_MainTex"*/, v3);
+    byte_4B65A28 = 1;
   }
   compRenderer = (UnityEngine_Object_o *)this->fields.compRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,20 +82,20 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
                        - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v12 / uvAnimationTileX)),
           UnityEngine_Material__SetTextureOffset(
             (UnityEngine_Material_o *)material,
-            (System_String_o *)StringLiteral_16450/*"_MainTex"*/,
+            (System_String_o *)StringLiteral_16471/*"_MainTex"*/,
             v13,
             0LL),
           (material = this->fields.compRenderer) == 0LL)
       || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0LL)) == 0LL )
     {
 LABEL_15:
-      sub_1BD36B4(material, v5);
+      sub_1BE4D28(material, v5);
     }
     v14.fields.x = 1.0 / (float)uvAnimationTileX;
     v14.fields.y = 1.0 / (float)uvAnimationTileY;
     UnityEngine_Material__SetTextureScale(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16450/*"_MainTex"*/,
+      (System_String_o *)StringLiteral_16471/*"_MainTex"*/,
       v14,
       0LL);
   }

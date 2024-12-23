@@ -3,7 +3,6 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  UpdateIntervalBuffViewBattleLogicTask_o *v4; // x20
   int64_t v5; // x2
   int32_t v6; // w3
   System_String_o *v7; // x4
@@ -11,13 +10,11 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  v4 = this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)actData);
-  v4->fields.baseActData = actData;
-  v4 = (UpdateIntervalBuffViewBattleLogicTask_o *)((char *)v4 + 240);
-  LODWORD(v4[-1].fields.command) = 58;
-  sub_1BD33FC((PartyOrganizationUtility_o *)v4, (int64_t)actData, v5, v6, v7, v8, v9, v10);
-  BYTE3(v4[-1].fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.key) = 1;
+  this->fields.actiontype = 58;
+  this->fields.baseActData = actData;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.baseActData, (int64_t)actData, v5, v6, v7, v8, v9, v10);
+  this->fields.isSkipStep = 1;
 }
 
 
@@ -29,13 +26,13 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
   BattleActionData_o *baseActData; // x19
   UpdateViewIntervalBuffActionData_o *v5; // x20
 
-  if ( (byte_4B39F05 & 1) == 0 )
+  if ( (byte_4B6998A & 1) == 0 )
   {
-    sub_1BD3458(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_4B39F05 = 1;
+    sub_1BE4ACC(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
+    byte_4B6998A = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1BD36A4(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1BE4D18(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0LL);
   return (BattleActionData_o *)v5;
 }

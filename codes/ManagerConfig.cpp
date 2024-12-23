@@ -76,7 +76,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   BattleSetupInfo_o *v74; // x5
   FollowerInfo_o *v75; // x6
   PartyListViewItem_o *v76; // x7
-  PartyOrganizationUtility_o *v77; // x0
+  struct ManagerConfig_StaticFields *v77; // x0
   int64_t v78; // x1
   int64_t v79; // x2
   int32_t v80; // w3
@@ -92,7 +92,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   BattleSetupInfo_o *v90; // x5
   FollowerInfo_o *v91; // x6
   PartyListViewItem_o *v92; // x7
-  struct ManagerConfig_StaticFields *v93; // x0
+  PartyOrganizationUtility_o *v93; // x0
   int64_t v94; // x1
   int64_t v95; // x2
   int32_t v96; // w3
@@ -292,7 +292,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   BattleSetupInfo_o *v290; // x5
   FollowerInfo_o *v291; // x6
   PartyListViewItem_o *v292; // x7
-  PartyOrganizationUtility_o *v293; // x8
+  struct ManagerConfig_StaticFields *v293; // x8
   void *v294; // x1
   int64_t v295; // x2
   int32_t v296; // w3
@@ -388,7 +388,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   BattleSetupInfo_o *v386; // x5
   FollowerInfo_o *v387; // x6
   PartyListViewItem_o *v388; // x7
-  PartyOrganizationUtility_o *v389; // x8
+  struct ManagerConfig_StaticFields *v389; // x8
   void *v390; // x1
   int64_t v391; // x2
   int32_t v392; // w3
@@ -510,87 +510,87 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   PartyListViewItem_o *v508; // x7
   struct ManagerConfig_StaticFields *v509; // x8
 
-  if ( (byte_4B369BE & 1) == 0 )
+  if ( (byte_4B663D7 & 1) == 0 )
   {
-    sub_1BD3458(&ManagerConfig_TypeInfo, v1);
-    sub_1BD3458(&StringLiteral_20270/*"https://cdn.data.fate-go.jp/AssetStorages"*/, v8);
-    sub_1BD3458(&StringLiteral_1540/*"9c286e9a1f4e25081aeb8bc2dd08135a52e2125c423119953a9facbd671e3387"*/, v9);
-    sub_1BD3458(&StringLiteral_1463/*"20241205_19:24"*/, v10);
-    sub_1BD3458(&StringLiteral_19931/*"game.fate-go.jp"*/, v11);
-    sub_1BD3458(&StringLiteral_2389/*"Android"*/, v12);
-    sub_1BD3458(&StringLiteral_6772/*"Fgo_20180629_1"*/, v13);
-    sub_1BD3458(&StringLiteral_18310/*"com.aniplex.fategrandorder"*/, v14);
-    sub_1BD3458(&StringLiteral_6767/*"Fgo_20150511_1"*/, v15);
-    sub_1BD3458(&StringLiteral_24965/*"webview.fate-go.jp"*/, v16);
-    sub_1BD3458(&StringLiteral_1/*""*/, v17);
-    sub_1BD3458(&StringLiteral_11207/*"RELEASE"*/, v18);
-    sub_1BD3458(&StringLiteral_1389/*"1015521325"*/, v19);
-    sub_1BD3458(&StringLiteral_1414/*"2.103.0"*/, v20);
-    byte_4B369BE = 1;
+    sub_1BE4ACC(&ManagerConfig_TypeInfo, v1);
+    sub_1BE4ACC(&StringLiteral_20308/*"https://cdn.data.fate-go.jp/AssetStorages"*/, v8);
+    sub_1BE4ACC(&StringLiteral_1405/*"14c40b2693278e499db186ea97e94e6c6ca0f656bac08a2e3bf7bac1da72c353"*/, v9);
+    sub_1BE4ACC(&StringLiteral_19969/*"game.fate-go.jp"*/, v10);
+    sub_1BE4ACC(&StringLiteral_2390/*"Android"*/, v11);
+    sub_1BE4ACC(&StringLiteral_6776/*"Fgo_20180629_1"*/, v12);
+    sub_1BE4ACC(&StringLiteral_1415/*"2.104.0"*/, v13);
+    sub_1BE4ACC(&StringLiteral_18335/*"com.aniplex.fategrandorder"*/, v14);
+    sub_1BE4ACC(&StringLiteral_6771/*"Fgo_20150511_1"*/, v15);
+    sub_1BE4ACC(&StringLiteral_25018/*"webview.fate-go.jp"*/, v16);
+    sub_1BE4ACC(&StringLiteral_1464/*"20241219_00:56"*/, v17);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v18);
+    sub_1BE4ACC(&StringLiteral_11220/*"RELEASE"*/, v19);
+    sub_1BE4ACC(&StringLiteral_1389/*"1015521325"*/, v20);
+    byte_4B663D7 = 1;
   }
-  ManagerConfig_TypeInfo->static_fields->AppVer = (struct System_String_o *)StringLiteral_1414/*"2.103.0"*/;
-  sub_1BD33FC(
+  ManagerConfig_TypeInfo->static_fields->AppVer = (struct System_String_o *)StringLiteral_1415/*"2.104.0"*/;
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)ManagerConfig_TypeInfo->static_fields,
-    StringLiteral_1414/*"2.103.0"*/,
+    StringLiteral_1415/*"2.104.0"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v21 = StringLiteral_1540/*"9c286e9a1f4e25081aeb8bc2dd08135a52e2125c423119953a9facbd671e3387"*/;
+  v21 = StringLiteral_1405/*"14c40b2693278e499db186ea97e94e6c6ca0f656bac08a2e3bf7bac1da72c353"*/;
   static_fields = ManagerConfig_TypeInfo->static_fields;
-  static_fields->verCode = (struct System_String_o *)StringLiteral_1540/*"9c286e9a1f4e25081aeb8bc2dd08135a52e2125c423119953a9facbd671e3387"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->verCode, v21, v23, v24, v25, v26, v27, v28);
-  v29 = StringLiteral_1463/*"20241205_19:24"*/;
+  static_fields->verCode = (struct System_String_o *)StringLiteral_1405/*"14c40b2693278e499db186ea97e94e6c6ca0f656bac08a2e3bf7bac1da72c353"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->verCode, v21, v23, v24, v25, v26, v27, v28);
+  v29 = StringLiteral_1464/*"20241219_00:56"*/;
   v30 = ManagerConfig_TypeInfo->static_fields;
-  v30->AppBuildDate = (struct System_String_o *)StringLiteral_1463/*"20241205_19:24"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v30->AppBuildDate, v29, v31, v32, v33, v34, v35, v36);
-  v37 = StringLiteral_6767/*"Fgo_20150511_1"*/;
+  v30->AppBuildDate = (struct System_String_o *)StringLiteral_1464/*"20241219_00:56"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v30->AppBuildDate, v29, v31, v32, v33, v34, v35, v36);
+  v37 = StringLiteral_6771/*"Fgo_20150511_1"*/;
   v38 = ManagerConfig_TypeInfo->static_fields;
-  v38->SaveDataVer = (struct System_String_o *)StringLiteral_6767/*"Fgo_20150511_1"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v38->SaveDataVer, v37, v39, v40, v41, v42, v43, v44);
-  v45 = StringLiteral_6772/*"Fgo_20180629_1"*/;
+  v38->SaveDataVer = (struct System_String_o *)StringLiteral_6771/*"Fgo_20150511_1"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v38->SaveDataVer, v37, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_6776/*"Fgo_20180629_1"*/;
   v46 = ManagerConfig_TypeInfo->static_fields;
-  v46->MasterDataCacheVer = (struct System_String_o *)StringLiteral_6772/*"Fgo_20180629_1"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v46->MasterDataCacheVer, v45, v47, v48, v49, v50, v51, v52);
+  v46->MasterDataCacheVer = (struct System_String_o *)StringLiteral_6776/*"Fgo_20180629_1"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v46->MasterDataCacheVer, v45, v47, v48, v49, v50, v51, v52);
   v53 = ManagerConfig_TypeInfo->static_fields;
-  *(_OWORD *)&v53->TIMEOUT = xmmword_BD8D50;
+  *(_OWORD *)&v53->TIMEOUT = xmmword_BE2E80;
   v53->SLOW_CONNECT_WAIT_TIME = 2.0;
   v53->SERVER_TIME_OVER_LIMIT = 3600LL;
   v53->DOWNLOAD_RETRY_DELAY_TIME = 10.0;
   v53->LIMIT_FREE_SIZE = 52428800LL;
-  *(_OWORD *)&v53->RETRY_COUNT = xmmword_BD8F10;
+  *(_OWORD *)&v53->RETRY_COUNT = xmmword_BE3040;
   v53->MINIMUM_ENABLE_ALPHA = 0.005;
-  v54 = StringLiteral_18310/*"com.aniplex.fategrandorder"*/;
-  v53->AndroidPackageName = (struct System_String_o *)StringLiteral_18310/*"com.aniplex.fategrandorder"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v53->AndroidPackageName, v54, v55, v56, v57, v58, v59, v60);
+  v54 = StringLiteral_18335/*"com.aniplex.fategrandorder"*/;
+  v53->AndroidPackageName = (struct System_String_o *)StringLiteral_18335/*"com.aniplex.fategrandorder"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v53->AndroidPackageName, v54, v55, v56, v57, v58, v59, v60);
   v61 = StringLiteral_1389/*"1015521325"*/;
   v62 = ManagerConfig_TypeInfo->static_fields;
   v62->iOSApplicationID = (struct System_String_o *)StringLiteral_1389/*"1015521325"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v62->iOSApplicationID, v61, v63, v64, v65, v66, v67, v68);
-  v69 = StringLiteral_2389/*"Android"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v62->iOSApplicationID, v61, v63, v64, v65, v66, v67, v68);
+  v69 = StringLiteral_2390/*"Android"*/;
   v70 = ManagerConfig_TypeInfo->static_fields;
-  v70->PlatformName = (struct System_String_o *)StringLiteral_2389/*"Android"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v70->PlatformName, v69, v71, v72, v73, v74, v75, v76);
-  v77 = (PartyOrganizationUtility_o *)ManagerConfig_TypeInfo->static_fields;
-  v77->fields._IsQuestStartMenuMode_k__BackingField = 1;
-  v78 = StringLiteral_19931/*"game.fate-go.jp"*/;
-  v77[1].klass = (PartyOrganizationUtility_c *)StringLiteral_19931/*"game.fate-go.jp"*/;
-  sub_1BD33FC(v77 + 1, v78, v79, v80, v81, v82, v83, v84);
+  v70->PlatformName = (struct System_String_o *)StringLiteral_2390/*"Android"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v70->PlatformName, v69, v71, v72, v73, v74, v75, v76);
+  v77 = ManagerConfig_TypeInfo->static_fields;
+  v77->ReleaseNetworkSecurity = 1;
+  v78 = StringLiteral_19969/*"game.fate-go.jp"*/;
+  v77->ReleaseGameServerAddress = (struct System_String_o *)StringLiteral_19969/*"game.fate-go.jp"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v77->ReleaseGameServerAddress, v78, v79, v80, v81, v82, v83, v84);
   v85 = ManagerConfig_TypeInfo->static_fields;
-  v86 = StringLiteral_20270/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
-  v85->ReleaseDataServerAddress = (struct System_String_o *)StringLiteral_20270/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v85->ReleaseDataServerAddress, v86, v87, v88, v89, v90, v91, v92);
-  v93 = ManagerConfig_TypeInfo->static_fields;
-  v94 = StringLiteral_24965/*"webview.fate-go.jp"*/;
-  v93->ReleaseWebServerAddress = (struct System_String_o *)StringLiteral_24965/*"webview.fate-go.jp"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v93->ReleaseWebServerAddress, v94, v95, v96, v97, v98, v99, v100);
+  v86 = StringLiteral_20308/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
+  v85->ReleaseDataServerAddress = (struct System_String_o *)StringLiteral_20308/*"https://cdn.data.fate-go.jp/AssetStorages"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v85->ReleaseDataServerAddress, v86, v87, v88, v89, v90, v91, v92);
+  v93 = (PartyOrganizationUtility_o *)ManagerConfig_TypeInfo->static_fields;
+  v94 = StringLiteral_25018/*"webview.fate-go.jp"*/;
+  v93[1].klass = (PartyOrganizationUtility_c *)StringLiteral_25018/*"webview.fate-go.jp"*/;
+  sub_1BE4A70(v93 + 1, v94, v95, v96, v97, v98, v99, v100);
   v101 = ManagerConfig_TypeInfo->static_fields;
   v101->ReviewNetworkSecurity = 1;
   v102 = StringLiteral_1/*""*/;
   v101->ReviewGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v101->ReviewGameServerAddress,
     (int64_t)v102,
     v103,
@@ -602,7 +602,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v109 = StringLiteral_1/*""*/;
   v110 = ManagerConfig_TypeInfo->static_fields;
   v110->ReviewDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v110->ReviewDataServerAddress,
     (int64_t)v109,
     v111,
@@ -614,7 +614,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v117 = StringLiteral_1/*""*/;
   v118 = ManagerConfig_TypeInfo->static_fields;
   v118->ReviewWebServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v118->ReviewWebServerAddress,
     (int64_t)v117,
     v119,
@@ -627,7 +627,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v125->StagingNetworkSecurity = 1;
   v126 = StringLiteral_1/*""*/;
   v125->StagingGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v125->StagingGameServerAddress,
     (int64_t)v126,
     v127,
@@ -639,7 +639,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v133 = StringLiteral_1/*""*/;
   v134 = ManagerConfig_TypeInfo->static_fields;
   v134->StagingDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v134->StagingDataServerAddress,
     (int64_t)v133,
     v135,
@@ -651,7 +651,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v141 = StringLiteral_1/*""*/;
   v142 = ManagerConfig_TypeInfo->static_fields;
   v142->StagingWebServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v142->StagingWebServerAddress,
     (int64_t)v141,
     v143,
@@ -664,7 +664,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v149->GameCloneNetworkSecurity = 1;
   v150 = StringLiteral_1/*""*/;
   v149->GameCloneGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v149->GameCloneGameServerAddress,
     (int64_t)v150,
     v151,
@@ -676,7 +676,7 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v157 = StringLiteral_1/*""*/;
   v158 = ManagerConfig_TypeInfo->static_fields;
   v158->GameCloneDataServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v158->GameCloneDataServerAddress,
     (int64_t)v157,
     v159,
@@ -688,12 +688,12 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v165 = StringLiteral_1/*""*/;
   p_GameCloneWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->GameCloneWebServerAddress;
   p_GameCloneWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_GameCloneWebServerAddress, (int64_t)v165, v167, v168, v169, v170, v171, v172);
+  sub_1BE4A70(p_GameCloneWebServerAddress, (int64_t)v165, v167, v168, v169, v170, v171, v172);
   v173 = ManagerConfig_TypeInfo->static_fields;
   v173->ReleaseCloneNetworkSecurity = 1;
   v174 = StringLiteral_1/*""*/;
   v173->ReleaseCloneGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v173->ReleaseCloneGameServerAddress,
     (int64_t)v174,
     v175,
@@ -705,16 +705,16 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v181 = StringLiteral_1/*""*/;
   p_ReleaseCloneDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->ReleaseCloneDataServerAddress;
   p_ReleaseCloneDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_ReleaseCloneDataServerAddress, (int64_t)v181, v183, v184, v185, v186, v187, v188);
+  sub_1BE4A70(p_ReleaseCloneDataServerAddress, (int64_t)v181, v183, v184, v185, v186, v187, v188);
   v189 = StringLiteral_1/*""*/;
   p_ReleaseCloneWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->ReleaseCloneWebServerAddress;
   p_ReleaseCloneWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_ReleaseCloneWebServerAddress, (int64_t)v189, v191, v192, v193, v194, v195, v196);
+  sub_1BE4A70(p_ReleaseCloneWebServerAddress, (int64_t)v189, v191, v192, v193, v194, v195, v196);
   v197 = ManagerConfig_TypeInfo->static_fields;
   v197->DebugNetworkSecurity = 1;
   v198 = StringLiteral_1/*""*/;
   v197->DebugGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v197->DebugGameServerAddress,
     (int64_t)v198,
     v199,
@@ -726,16 +726,16 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v205 = StringLiteral_1/*""*/;
   p_DebugDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DebugDataServerAddress;
   p_DebugDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DebugDataServerAddress, (int64_t)v205, v207, v208, v209, v210, v211, v212);
+  sub_1BE4A70(p_DebugDataServerAddress, (int64_t)v205, v207, v208, v209, v210, v211, v212);
   v213 = StringLiteral_1/*""*/;
   p_DebugWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DebugWebServerAddress;
   p_DebugWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DebugWebServerAddress, (int64_t)v213, v215, v216, v217, v218, v219, v220);
+  sub_1BE4A70(p_DebugWebServerAddress, (int64_t)v213, v215, v216, v217, v218, v219, v220);
   v221 = ManagerConfig_TypeInfo->static_fields;
   v221->EventDevNetworkSecurity = 1;
   v222 = StringLiteral_1/*""*/;
   v221->EventDevGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v221->EventDevGameServerAddress,
     (int64_t)v222,
     v223,
@@ -747,16 +747,16 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v229 = StringLiteral_1/*""*/;
   p_EventDevDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->EventDevDataServerAddress;
   p_EventDevDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_EventDevDataServerAddress, (int64_t)v229, v231, v232, v233, v234, v235, v236);
+  sub_1BE4A70(p_EventDevDataServerAddress, (int64_t)v229, v231, v232, v233, v234, v235, v236);
   v237 = StringLiteral_1/*""*/;
   p_EventDevWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->EventDevWebServerAddress;
   p_EventDevWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_EventDevWebServerAddress, (int64_t)v237, v239, v240, v241, v242, v243, v244);
+  sub_1BE4A70(p_EventDevWebServerAddress, (int64_t)v237, v239, v240, v241, v242, v243, v244);
   v245 = ManagerConfig_TypeInfo->static_fields;
   v245->DevelopNetworkSecurity = 1;
   v246 = StringLiteral_1/*""*/;
   v245->DevelopGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v245->DevelopGameServerAddress,
     (int64_t)v246,
     v247,
@@ -768,16 +768,16 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v253 = StringLiteral_1/*""*/;
   p_DevelopDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DevelopDataServerAddress;
   p_DevelopDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DevelopDataServerAddress, (int64_t)v253, v255, v256, v257, v258, v259, v260);
+  sub_1BE4A70(p_DevelopDataServerAddress, (int64_t)v253, v255, v256, v257, v258, v259, v260);
   v261 = StringLiteral_1/*""*/;
   p_DevelopWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DevelopWebServerAddress;
   p_DevelopWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DevelopWebServerAddress, (int64_t)v261, v263, v264, v265, v266, v267, v268);
+  sub_1BE4A70(p_DevelopWebServerAddress, (int64_t)v261, v263, v264, v265, v266, v267, v268);
   v269 = ManagerConfig_TypeInfo->static_fields;
   v269->QaNetworkSecurity = 1;
   v270 = StringLiteral_1/*""*/;
   v269->QaGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v269->QaGameServerAddress,
     (int64_t)v270,
     v271,
@@ -789,21 +789,29 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v277 = StringLiteral_1/*""*/;
   p_QaDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->QaDataServerAddress;
   p_QaDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_QaDataServerAddress, (int64_t)v277, v279, v280, v281, v282, v283, v284);
+  sub_1BE4A70(p_QaDataServerAddress, (int64_t)v277, v279, v280, v281, v282, v283, v284);
   v285 = StringLiteral_1/*""*/;
   p_QaWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->QaWebServerAddress;
   p_QaWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_QaWebServerAddress, (int64_t)v285, v287, v288, v289, v290, v291, v292);
-  v293 = (PartyOrganizationUtility_o *)ManagerConfig_TypeInfo->static_fields;
-  v293[2].fields._IsQuestStartMenuMode_k__BackingField = 1;
+  sub_1BE4A70(p_QaWebServerAddress, (int64_t)v285, v287, v288, v289, v290, v291, v292);
+  v293 = ManagerConfig_TypeInfo->static_fields;
+  v293->DevNetworkSecurity = 1;
   v294 = StringLiteral_1/*""*/;
-  v293[3].klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(v293 + 3, (int64_t)v294, v295, v296, v297, v298, v299, v300);
+  v293->DevGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1BE4A70(
+    (PartyOrganizationUtility_o *)&v293->DevGameServerAddress,
+    (int64_t)v294,
+    v295,
+    v296,
+    v297,
+    v298,
+    v299,
+    v300);
   v301 = ManagerConfig_TypeInfo->static_fields;
   v301->PlanNetworkSecurity = 1;
   v302 = StringLiteral_1/*""*/;
   v301->PlanGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v301->PlanGameServerAddress,
     (int64_t)v302,
     v303,
@@ -815,12 +823,12 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v309 = StringLiteral_1/*""*/;
   p_PlanDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->PlanDataServerAddress;
   p_PlanDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_PlanDataServerAddress, (int64_t)v309, v311, v312, v313, v314, v315, v316);
+  sub_1BE4A70(p_PlanDataServerAddress, (int64_t)v309, v311, v312, v313, v314, v315, v316);
   v317 = ManagerConfig_TypeInfo->static_fields;
   v317->LimitNetworkSecurity = 1;
   v318 = StringLiteral_1/*""*/;
   v317->LimitGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v317->LimitGameServerAddress,
     (int64_t)v318,
     v319,
@@ -832,12 +840,12 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v325 = StringLiteral_1/*""*/;
   p_LimitDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->LimitDataServerAddress;
   p_LimitDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_LimitDataServerAddress, (int64_t)v325, v327, v328, v329, v330, v331, v332);
+  sub_1BE4A70(p_LimitDataServerAddress, (int64_t)v325, v327, v328, v329, v330, v331, v332);
   v333 = ManagerConfig_TypeInfo->static_fields;
   v333->PlayNetworkSecurity = 1;
   v334 = StringLiteral_1/*""*/;
   v333->PlayGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v333->PlayGameServerAddress,
     (int64_t)v334,
     v335,
@@ -849,12 +857,12 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v341 = StringLiteral_1/*""*/;
   p_PlayDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->PlayDataServerAddress;
   p_PlayDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_PlayDataServerAddress, (int64_t)v341, v343, v344, v345, v346, v347, v348);
+  sub_1BE4A70(p_PlayDataServerAddress, (int64_t)v341, v343, v344, v345, v346, v347, v348);
   v349 = ManagerConfig_TypeInfo->static_fields;
   v349->DesignNetworkSecurity = 1;
   v350 = StringLiteral_1/*""*/;
   v349->DesignGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v349->DesignGameServerAddress,
     (int64_t)v350,
     v351,
@@ -866,12 +874,12 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v357 = StringLiteral_1/*""*/;
   p_DesignDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DesignDataServerAddress;
   p_DesignDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DesignDataServerAddress, (int64_t)v357, v359, v360, v361, v362, v363, v364);
+  sub_1BE4A70(p_DesignDataServerAddress, (int64_t)v357, v359, v360, v361, v362, v363, v364);
   v365 = ManagerConfig_TypeInfo->static_fields;
   v365->VersionUpNetworkSecurity = 1;
   v366 = StringLiteral_1/*""*/;
   v365->VersionUp1GameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v365->VersionUp1GameServerAddress,
     (int64_t)v366,
     v367,
@@ -883,74 +891,82 @@ void __fastcall ManagerConfig___cctor(const MethodInfo *method)
   v373 = StringLiteral_1/*""*/;
   p_VersionUp1DataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->VersionUp1DataServerAddress;
   p_VersionUp1DataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_VersionUp1DataServerAddress, (int64_t)v373, v375, v376, v377, v378, v379, v380);
+  sub_1BE4A70(p_VersionUp1DataServerAddress, (int64_t)v373, v375, v376, v377, v378, v379, v380);
   v381 = StringLiteral_1/*""*/;
   p_VersionUpWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->VersionUpWebServerAddress;
   p_VersionUpWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_VersionUpWebServerAddress, (int64_t)v381, v383, v384, v385, v386, v387, v388);
-  v389 = (PartyOrganizationUtility_o *)ManagerConfig_TypeInfo->static_fields;
-  v389[3].fields._IsQuestStartMenuMode_k__BackingField = 1;
+  sub_1BE4A70(p_VersionUpWebServerAddress, (int64_t)v381, v383, v384, v385, v386, v387, v388);
+  v389 = ManagerConfig_TypeInfo->static_fields;
+  v389->StressNetworkSecurity = 1;
   v390 = StringLiteral_1/*""*/;
-  v389[4].klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(v389 + 4, (int64_t)v390, v391, v392, v393, v394, v395, v396);
+  v389->StressGameServerAddress = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1BE4A70(
+    (PartyOrganizationUtility_o *)&v389->StressGameServerAddress,
+    (int64_t)v390,
+    v391,
+    v392,
+    v393,
+    v394,
+    v395,
+    v396);
   v397 = StringLiteral_1/*""*/;
   p_StressDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->StressDataServerAddress;
   p_StressDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_StressDataServerAddress, (int64_t)v397, v399, v400, v401, v402, v403, v404);
+  sub_1BE4A70(p_StressDataServerAddress, (int64_t)v397, v399, v400, v401, v402, v403, v404);
   v405 = StringLiteral_1/*""*/;
   p_DevDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DevDataServerAddress;
   p_DevDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DevDataServerAddress, (int64_t)v405, v407, v408, v409, v410, v411, v412);
+  sub_1BE4A70(p_DevDataServerAddress, (int64_t)v405, v407, v408, v409, v410, v411, v412);
   v413 = StringLiteral_1/*""*/;
   p_DevWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->DevWebServerAddress;
   p_DevWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_DevWebServerAddress, (int64_t)v413, v415, v416, v417, v418, v419, v420);
+  sub_1BE4A70(p_DevWebServerAddress, (int64_t)v413, v415, v416, v417, v418, v419, v420);
   v421 = StringLiteral_1/*""*/;
   p_VerUpGameServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->VerUpGameServerAddress;
   p_VerUpGameServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_VerUpGameServerAddress, (int64_t)v421, v423, v424, v425, v426, v427, v428);
+  sub_1BE4A70(p_VerUpGameServerAddress, (int64_t)v421, v423, v424, v425, v426, v427, v428);
   v429 = StringLiteral_1/*""*/;
   p_VerUpDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->VerUpDataServerAddress;
   p_VerUpDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_VerUpDataServerAddress, (int64_t)v429, v431, v432, v433, v434, v435, v436);
+  sub_1BE4A70(p_VerUpDataServerAddress, (int64_t)v429, v431, v432, v433, v434, v435, v436);
   v437 = StringLiteral_1/*""*/;
   p_VerUpWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->VerUpWebServerAddress;
   p_VerUpWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_VerUpWebServerAddress, (int64_t)v437, v439, v440, v441, v442, v443, v444);
+  sub_1BE4A70(p_VerUpWebServerAddress, (int64_t)v437, v439, v440, v441, v442, v443, v444);
   v445 = StringLiteral_1/*""*/;
   p_StgGameServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->StgGameServerAddress;
   p_StgGameServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_StgGameServerAddress, (int64_t)v445, v447, v448, v449, v450, v451, v452);
+  sub_1BE4A70(p_StgGameServerAddress, (int64_t)v445, v447, v448, v449, v450, v451, v452);
   v453 = StringLiteral_1/*""*/;
   p_StgDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->StgDataServerAddress;
   p_StgDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_StgDataServerAddress, (int64_t)v453, v455, v456, v457, v458, v459, v460);
+  sub_1BE4A70(p_StgDataServerAddress, (int64_t)v453, v455, v456, v457, v458, v459, v460);
   v461 = StringLiteral_1/*""*/;
   p_StgWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->StgWebServerAddress;
   p_StgWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_StgWebServerAddress, (int64_t)v461, v463, v464, v465, v466, v467, v468);
+  sub_1BE4A70(p_StgWebServerAddress, (int64_t)v461, v463, v464, v465, v466, v467, v468);
   v469 = StringLiteral_1/*""*/;
   p_IPAddressDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->IPAddressDataServerAddress;
   p_IPAddressDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_IPAddressDataServerAddress, (int64_t)v469, v471, v472, v473, v474, v475, v476);
+  sub_1BE4A70(p_IPAddressDataServerAddress, (int64_t)v469, v471, v472, v473, v474, v475, v476);
   v477 = StringLiteral_1/*""*/;
   p_IPAddressWebServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->IPAddressWebServerAddress;
   p_IPAddressWebServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_IPAddressWebServerAddress, (int64_t)v477, v479, v480, v481, v482, v483, v484);
+  sub_1BE4A70(p_IPAddressWebServerAddress, (int64_t)v477, v479, v480, v481, v482, v483, v484);
   v485 = StringLiteral_1/*""*/;
   p_ScriptGameServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->ScriptGameServerAddress;
   p_ScriptGameServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_ScriptGameServerAddress, (int64_t)v485, v487, v488, v489, v490, v491, v492);
+  sub_1BE4A70(p_ScriptGameServerAddress, (int64_t)v485, v487, v488, v489, v490, v491, v492);
   v493 = StringLiteral_1/*""*/;
   p_ScriptDataServerAddress = (PartyOrganizationUtility_o *)&ManagerConfig_TypeInfo->static_fields->ScriptDataServerAddress;
   p_ScriptDataServerAddress->klass = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  sub_1BD33FC(p_ScriptDataServerAddress, (int64_t)v493, v495, v496, v497, v498, v499, v500);
+  sub_1BE4A70(p_ScriptDataServerAddress, (int64_t)v493, v495, v496, v497, v498, v499, v500);
   v501 = ManagerConfig_TypeInfo->static_fields;
   *(_WORD *)&v501->IsTrueTargetPlatform = 257;
   v501->IsNetworkMock = 0;
-  v502 = StringLiteral_11207/*"RELEASE"*/;
-  v501->ServerDefaultType = (struct System_String_o *)StringLiteral_11207/*"RELEASE"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v501->ServerDefaultType, v502, v503, v504, v505, v506, v507, v508);
+  v502 = StringLiteral_11220/*"RELEASE"*/;
+  v501->ServerDefaultType = (struct System_String_o *)StringLiteral_11220/*"RELEASE"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v501->ServerDefaultType, v502, v503, v504, v505, v506, v507, v508);
   v509 = ManagerConfig_TypeInfo->static_fields;
   v509->UseAppServer = v509->IsTrueTargetPlatform;
   *(_DWORD *)&v509->UseDebugCommand = 0;

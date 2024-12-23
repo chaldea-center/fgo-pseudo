@@ -9,16 +9,16 @@ void __fastcall UIOpenLabelURL___cctor(const MethodInfo *method)
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4B35E3C & 1) == 0 )
+  if ( (byte_4B6584A & 1) == 0 )
   {
-    sub_1BD3458(&UIOpenLabelURL_TypeInfo, v1);
-    sub_1BD3458(&StringLiteral_15794/*"WebView:"*/, v8);
-    byte_4B35E3C = 1;
+    sub_1BE4ACC(&UIOpenLabelURL_TypeInfo, v1);
+    sub_1BE4ACC(&StringLiteral_15815/*"WebView:"*/, v8);
+    byte_4B6584A = 1;
   }
-  UIOpenLabelURL_TypeInfo->static_fields->BOOT_WEB_VIEW = (struct System_String_o *)StringLiteral_15794/*"WebView:"*/;
-  sub_1BD33FC(
+  UIOpenLabelURL_TypeInfo->static_fields->BOOT_WEB_VIEW = (struct System_String_o *)StringLiteral_15815/*"WebView:"*/;
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)UIOpenLabelURL_TypeInfo->static_fields,
-    StringLiteral_15794/*"WebView:"*/,
+    StringLiteral_15815/*"WebView:"*/,
     v2,
     v3,
     v4,
@@ -50,20 +50,20 @@ void __fastcall UIOpenLabelURL__OnClick(UIOpenLabelURL_o *this, const MethodInfo
   struct System_String_o *BOOT_WEB_VIEW; // x8
   System_String_o *v15; // x19
 
-  if ( (byte_4B35E3B & 1) == 0 )
+  if ( (byte_4B65849 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Application_TypeInfo, method);
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_UILabel___, v3);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BD3458(&UICamera_TypeInfo, v5);
-    sub_1BD3458(&UIOpenLabelURL_TypeInfo, v6);
-    sub_1BD3458(&WebViewManager_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B35E3B = 1;
+    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, method);
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UILabel___, v3);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BE4ACC(&UICamera_TypeInfo, v5);
+    sub_1BE4ACC(&UIOpenLabelURL_TypeInfo, v6);
+    sub_1BE4ACC(&WebViewManager_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B65849 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -113,7 +113,7 @@ void __fastcall UIOpenLabelURL__OnClick(UIOpenLabelURL_o *this, const MethodInfo
         }
       }
 LABEL_27:
-      sub_1BD36B4(v11, v10);
+      sub_1BE4D28(v11, v10);
     }
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);

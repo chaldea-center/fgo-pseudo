@@ -15,25 +15,25 @@ void __fastcall BattleResumeRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_4B389BF & 1) == 0 )
+  if ( (byte_4B6840E & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_22968/*"questPhase"*/, battleId);
-    sub_1BD3458(&StringLiteral_24656/*"usedTurnList"*/, v11);
-    sub_1BD3458(&StringLiteral_22966/*"questId"*/, v12);
-    sub_1BD3458(&StringLiteral_17308/*"battleId"*/, v13);
-    byte_4B389BF = 1;
+    sub_1BE4ACC(&StringLiteral_23013/*"questPhase"*/, battleId);
+    sub_1BE4ACC(&StringLiteral_24709/*"usedTurnList"*/, v11);
+    sub_1BE4ACC(&StringLiteral_23011/*"questId"*/, v12);
+    sub_1BE4ACC(&StringLiteral_17329/*"battleId"*/, v13);
+    byte_4B6840E = 1;
   }
   this->fields.currentQuestId = questId;
-  RequestBase__addField_41971420(
+  RequestBase__addField_42110748(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17308/*"battleId"*/,
+    (System_String_o *)StringLiteral_17329/*"battleId"*/,
     battleId,
     *(const MethodInfo **)&questPhase);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22966/*"questId"*/, questId, v14);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22968/*"questPhase"*/, questPhase, v15);
-  RequestBase__addField_41973572(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23011/*"questId"*/, questId, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23013/*"questPhase"*/, questPhase, v15);
+  RequestBase__addField_42112900(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24656/*"usedTurnList"*/,
+    (System_String_o *)StringLiteral_24709/*"usedTurnList"*/,
     &usedTurnArray->obj,
     v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
@@ -44,15 +44,15 @@ System_String_o *__fastcall BattleResumeRequest__getMockData(BattleResumeRequest
 {
   __int64 v2; // x1
 
-  if ( (byte_4B389BE & 1) == 0 )
+  if ( (byte_4B6840D & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_9245/*"MockBattleResumeRequest"*/, v2);
-    byte_4B389BE = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_9252/*"MockBattleResumeRequest"*/, v2);
+    byte_4B6840D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9245/*"MockBattleResumeRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9252/*"MockBattleResumeRequest"*/, 0LL);
 }
 
 
@@ -61,16 +61,16 @@ System_String_o *__fastcall BattleResumeRequest__getURL(BattleResumeRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B389BD & 1) == 0 )
+  if ( (byte_4B6840C & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_17289/*"battle/resume"*/, v2);
-    byte_4B389BD = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_17310/*"battle/resume"*/, v2);
+    byte_4B6840C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_17289/*"battle/resume"*/, 0LL);
+  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_17310/*"battle/resume"*/, 0LL);
 }
 
 
@@ -95,19 +95,19 @@ void __fastcall BattleResumeRequest__requestCompleted(
   TerminalPramsManager_c *v18; // x0
   struct NetworkManager_ResultCallbackFunc_o *v19; // x8
 
-  if ( (byte_4B389C0 & 1) == 0 )
+  if ( (byte_4B6840F & 1) == 0 )
   {
-    sub_1BD3458(&JsonManager_TypeInfo, responseList);
-    sub_1BD3458(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BD3458(&TerminalPramsManager_TypeInfo, v6);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v7);
-    byte_4B389C0 = 1;
+    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
+    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v6);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v7);
+    byte_4B6840F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v8 = ResponseCommandKind__SearchData(38, responseList, 0LL);
   if ( v8
-    && (v9 = v8, ResponseData__checkError_42055668(v8, 0LL))
+    && (v9 = v8, ResponseData__checkError_42194996(v8, 0LL))
     && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -122,10 +122,10 @@ void __fastcall BattleResumeRequest__requestCompleted(
     currentQuestId = this->fields.currentQuestId;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B33FA7 )
+    if ( !byte_4B63991 )
     {
-      sub_1BD3458(&TerminalPramsManager_TypeInfo, v12);
-      byte_4B33FA7 = 1;
+      sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v12);
+      byte_4B63991 = 1;
     }
     v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -140,10 +140,10 @@ void __fastcall BattleResumeRequest__requestCompleted(
       SpotId = QuestMaster__GetSpotId(this->fields.currentQuestId, 0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4B33FA8 )
+      if ( !byte_4B63992 )
       {
-        sub_1BD3458(&TerminalPramsManager_TypeInfo, v16);
-        byte_4B33FA8 = 1;
+        sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v16);
+        byte_4B63992 = 1;
       }
       v18 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -167,7 +167,7 @@ void __fastcall BattleResumeRequest__requestCompleted(
     if ( v19 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v19->fields.m_target)(
         v19->fields.original_method_info,
-        StringLiteral_22325/*"ng"*/,
+        StringLiteral_22370/*"ng"*/,
         *(_QWORD *)&v19->fields.extra_arg);
   }
 }

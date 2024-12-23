@@ -18,17 +18,17 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___ctor(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4B3A6E6 & 1) == 0 )
+  if ( (byte_4B6A17E & 1) == 0 )
   {
-    sub_1BD3458(&AssetStorageLoadWrapper_TypeInfo, method);
-    sub_1BD3458(&ClassBoardResourceContents_TypeInfo, v3);
-    byte_4B3A6E6 = 1;
+    sub_1BE4ACC(&AssetStorageLoadWrapper_TypeInfo, method);
+    sub_1BE4ACC(&ClassBoardResourceContents_TypeInfo, v3);
+    byte_4B6A17E = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v4 = (Il2CppObject *)sub_1BD36A4(ClassBoardResourceContents_TypeInfo);
+  v4 = (Il2CppObject *)sub_1BE4D18(ClassBoardResourceContents_TypeInfo);
   System_Object___ctor(v4, 0LL);
   this->fields._Contents_k__BackingField = (struct ClassBoardResourceContents_o *)v4;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._Contents_k__BackingField,
     (int64_t)v4,
     v5,
@@ -37,10 +37,10 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___ctor(
     v8,
     v9,
     v10);
-  v11 = (AssetStorageLoadWrapper_o *)sub_1BD36A4(AssetStorageLoadWrapper_TypeInfo);
+  v11 = (AssetStorageLoadWrapper_o *)sub_1BE4D18(AssetStorageLoadWrapper_TypeInfo);
   AssetStorageLoadWrapper___ctor(v11, 0LL);
   this->fields.assetStorageLoadWrapper = v11;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v11, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -48,12 +48,12 @@ System_String_o *__fastcall ClassBoardResourceCatalogAssetBundle__GetIconAtlasPa
         ClassBoardResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B3A6ED & 1) == 0 )
+  if ( (byte_4B6A185 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_4570/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, method);
-    byte_4B3A6ED = 1;
+    sub_1BE4ACC(&StringLiteral_4573/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, method);
+    byte_4B6A185 = 1;
   }
-  return (System_String_o *)StringLiteral_4570/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
+  return (System_String_o *)StringLiteral_4573/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
 }
 
 
@@ -62,7 +62,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardReso
         ClassBoardResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
         System_String_o *name,
-        const MethodInfo_2F25548 *method)
+        const MethodInfo_2F4CFD4 *method)
 {
   __int64 v4; // x4
   __int64 v5; // x20
@@ -71,7 +71,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardReso
   __int64 v11; // x21
   void *v12; // x0
   __int64 v13; // x1
-  Il2CppObject *Object_object__49362760; // x23
+  Il2CppObject *Object_object__49525204; // x23
   __int64 *v15; // x1
   __int64 v16; // x0
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // x0 OVERLAPPED
@@ -84,12 +84,12 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardReso
   v8 = *(_QWORD *)(v4 + 56);
   if ( !v8 )
   {
-    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, assetData);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, assetData);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v10);
     v8 = *(_QWORD *)(v5 + 56);
     if ( !v8 )
     {
-      sub_1C25390();
+      sub_1C36A04();
       v8 = *(_QWORD *)(v5 + 56);
     }
   }
@@ -97,16 +97,16 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardReso
   v12 = memset((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), 0, *(_DWORD *)(*(_QWORD *)v8 + 252LL));
   if ( !assetData )
     goto LABEL_12;
-  Object_object__49362760 = AssetData__GetObject_object__49362760(
+  Object_object__49525204 = AssetData__GetObject_object__49525204(
                               assetData,
                               name,
-                              (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                              (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v12 = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49362760, 0LL, 0LL);
+  v12 = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49525204, 0LL, 0LL);
   if ( ((unsigned __int8)v12 & 1) == 0 )
   {
-    if ( Object_object__49362760 )
+    if ( Object_object__49525204 )
     {
       v15 = *(__int64 **)(*(_QWORD *)(v5 + 56) + 8LL);
       v16 = *v15;
@@ -114,13 +114,13 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall ClassBoardReso
       ((void (__fastcall *)(__int64, __int64 *, Il2CppObject *, __int64 *, __int64))v15[2])(
         v16,
         v15,
-        Object_object__49362760,
+        Object_object__49525204,
         v19,
         v19[0]);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1BD36B4(v12, v13);
+    sub_1BE4D28(v12, v13);
   }
   memset((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), 0, v11);
   memcpy((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), (char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), v11);
@@ -139,38 +139,38 @@ Il2CppObject *__fastcall ClassBoardResourceCatalogAssetBundle__GetObject_object_
         ClassBoardResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
         System_String_o *name,
-        const MethodInfo_2F25484 *method)
+        const MethodInfo_2F4CF10 *method)
 {
   __int64 v7; // x1
-  Il2CppObject *Object_object__49362760; // x20
+  Il2CppObject *Object_object__49525204; // x20
 
   if ( !method->rgctx_data )
   {
-    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, assetData);
-    this = (ClassBoardResourceCatalogAssetBundle_o *)sub_1BD3458(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, assetData);
+    this = (ClassBoardResourceCatalogAssetBundle_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
     if ( !method->rgctx_data )
-      this = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C25390();
+      this = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C36A04();
   }
   if ( !assetData )
     goto LABEL_11;
-  Object_object__49362760 = AssetData__GetObject_object__49362760(
+  Object_object__49525204 = AssetData__GetObject_object__49525204(
                               assetData,
                               name,
-                              (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                              (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (ClassBoardResourceCatalogAssetBundle_o *)UnityEngine_Object__op_Equality(
-                                                     (UnityEngine_Object_o *)Object_object__49362760,
+                                                     (UnityEngine_Object_o *)Object_object__49525204,
                                                      0LL,
                                                      0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0LL;
-  if ( !Object_object__49362760 )
+  if ( !Object_object__49525204 )
 LABEL_11:
-    sub_1BD36B4(this, assetData);
+    sub_1BE4D28(this, assetData);
   return UnityEngine_GameObject__GetComponent_object_(
-           (UnityEngine_GameObject_o *)Object_object__49362760,
-           (const MethodInfo_2F81A7C *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+           (UnityEngine_GameObject_o *)Object_object__49525204,
+           (const MethodInfo_2FA979C *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
@@ -187,20 +187,20 @@ ClassBoardBlank_o *__fastcall ClassBoardResourceCatalogAssetBundle__GetUniqueBla
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = assetId;
-  if ( (byte_4B3A6EB & 1) == 0 )
+  if ( (byte_4B6A183 & 1) == 0 )
   {
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___, *(_QWORD *)&assetId);
-    sub_1BD3458(&StringLiteral_4576/*"ClassBoardBlank"*/, v4);
-    byte_4B3A6EB = 1;
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___, *(_QWORD *)&assetId);
+    sub_1BE4ACC(&StringLiteral_4579/*"ClassBoardBlank"*/, v4);
+    byte_4B6A183 = 1;
   }
   mainAssetData = this->fields.mainAssetData;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_62525248((System_String_o *)StringLiteral_4576/*"ClassBoardBlank"*/, v6, 0LL);
+  v7 = System_String__Concat_62698808((System_String_o *)StringLiteral_4579/*"ClassBoardBlank"*/, v6, 0LL);
   return (ClassBoardBlank_o *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                                 this,
                                 mainAssetData,
                                 v7,
-                                (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___);
+                                (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___);
 }
 
 
@@ -217,20 +217,20 @@ ClassBoardLock_o *__fastcall ClassBoardResourceCatalogAssetBundle__GetUniqueLock
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = assetId;
-  if ( (byte_4B3A6EC & 1) == 0 )
+  if ( (byte_4B6A184 & 1) == 0 )
   {
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___, *(_QWORD *)&assetId);
-    sub_1BD3458(&StringLiteral_4579/*"ClassBoardLock"*/, v4);
-    byte_4B3A6EC = 1;
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___, *(_QWORD *)&assetId);
+    sub_1BE4ACC(&StringLiteral_4582/*"ClassBoardLock"*/, v4);
+    byte_4B6A184 = 1;
   }
   mainAssetData = this->fields.mainAssetData;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_62525248((System_String_o *)StringLiteral_4579/*"ClassBoardLock"*/, v6, 0LL);
+  v7 = System_String__Concat_62698808((System_String_o *)StringLiteral_4582/*"ClassBoardLock"*/, v6, 0LL);
   return (ClassBoardLock_o *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                                this,
                                mainAssetData,
                                v7,
-                               (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___);
+                               (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___);
 }
 
 
@@ -247,20 +247,20 @@ ClassBoardSquare_o *__fastcall ClassBoardResourceCatalogAssetBundle__GetUniqueSq
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = assetId;
-  if ( (byte_4B3A6EA & 1) == 0 )
+  if ( (byte_4B6A182 & 1) == 0 )
   {
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___, *(_QWORD *)&assetId);
-    sub_1BD3458(&StringLiteral_4585/*"ClassBoardSquare"*/, v4);
-    byte_4B3A6EA = 1;
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___, *(_QWORD *)&assetId);
+    sub_1BE4ACC(&StringLiteral_4588/*"ClassBoardSquare"*/, v4);
+    byte_4B6A182 = 1;
   }
   mainAssetData = this->fields.mainAssetData;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_62525248((System_String_o *)StringLiteral_4585/*"ClassBoardSquare"*/, v6, 0LL);
+  v7 = System_String__Concat_62698808((System_String_o *)StringLiteral_4588/*"ClassBoardSquare"*/, v6, 0LL);
   return (ClassBoardSquare_o *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                                  this,
                                  mainAssetData,
                                  v7,
-                                 (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___);
+                                 (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___);
 }
 
 
@@ -285,7 +285,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(
     return;
   if ( !loadCallback )
 LABEL_5:
-    sub_1BD36B4(assetStorageLoadWrapper, assetBundlePath);
+    sub_1BE4D28(assetStorageLoadWrapper, assetBundlePath);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))loadCallback->fields.m_target)(
     loadCallback->fields.original_method_info,
     0LL,
@@ -328,7 +328,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadEnd(
   Il2CppObject *v31; // x27
   Il2CppObject *v32; // x22
   Il2CppObject *v33; // x21
-  char *Object_object__49362760; // x0
+  char *Object_object__49525204; // x0
   __int64 v35; // x1
   int64_t v36; // x28
   int64_t v37; // x29
@@ -359,107 +359,107 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadEnd(
   Il2CppObject *v62; // [xsp+10h] [xbp-70h]
   Il2CppObject *Object_object; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4B3A6E8 & 1) == 0 )
+  if ( (byte_4B6A180 & 1) == 0 )
   {
-    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, method);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBackground___, v3);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___, v4);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardDisableOpenDialog___, v5);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLine___, v6);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockOpenConfirmDialog___, v7);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockReleaseConditionDialog___, v8);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___, v9);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareDetailDialog___, v10);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareOpenConfirmDialog___, v11);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___, v12);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardUIController___, v13);
-    sub_1BD3458(&StringLiteral_4575/*"ClassBoardBg"*/, v14);
-    sub_1BD3458(&StringLiteral_4581/*"ClassBoardLockReleaseConditionDialog"*/, v15);
-    sub_1BD3458(&StringLiteral_4578/*"ClassBoardLine"*/, v16);
-    sub_1BD3458(&StringLiteral_4586/*"ClassBoardSquareDetailDialog"*/, v17);
-    sub_1BD3458(&StringLiteral_4579/*"ClassBoardLock"*/, v18);
-    sub_1BD3458(&StringLiteral_4584/*"ClassBoardSelectView"*/, v19);
-    sub_1BD3458(&StringLiteral_6948/*"ForwardIconAnimObject"*/, v20);
-    sub_1BD3458(&StringLiteral_4576/*"ClassBoardBlank"*/, v21);
-    sub_1BD3458(&StringLiteral_4577/*"ClassBoardDisableOpenDialog"*/, v22);
-    sub_1BD3458(&StringLiteral_4580/*"ClassBoardLockOpenConfirmDialog"*/, v23);
-    sub_1BD3458(&StringLiteral_4585/*"ClassBoardSquare"*/, v24);
-    sub_1BD3458(&StringLiteral_4587/*"ClassBoardSquareOpenConfirmDialog"*/, v25);
-    sub_1BD3458(&StringLiteral_4588/*"ClassBoardUI"*/, v26);
-    byte_4B3A6E8 = 1;
+    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, method);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBackground___, v3);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___, v4);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardDisableOpenDialog___, v5);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLine___, v6);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockOpenConfirmDialog___, v7);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockReleaseConditionDialog___, v8);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___, v9);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareDetailDialog___, v10);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareOpenConfirmDialog___, v11);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___, v12);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardUIController___, v13);
+    sub_1BE4ACC(&StringLiteral_4578/*"ClassBoardBg"*/, v14);
+    sub_1BE4ACC(&StringLiteral_4584/*"ClassBoardLockReleaseConditionDialog"*/, v15);
+    sub_1BE4ACC(&StringLiteral_4581/*"ClassBoardLine"*/, v16);
+    sub_1BE4ACC(&StringLiteral_4589/*"ClassBoardSquareDetailDialog"*/, v17);
+    sub_1BE4ACC(&StringLiteral_4582/*"ClassBoardLock"*/, v18);
+    sub_1BE4ACC(&StringLiteral_4587/*"ClassBoardSelectView"*/, v19);
+    sub_1BE4ACC(&StringLiteral_6952/*"ForwardIconAnimObject"*/, v20);
+    sub_1BE4ACC(&StringLiteral_4579/*"ClassBoardBlank"*/, v21);
+    sub_1BE4ACC(&StringLiteral_4580/*"ClassBoardDisableOpenDialog"*/, v22);
+    sub_1BE4ACC(&StringLiteral_4583/*"ClassBoardLockOpenConfirmDialog"*/, v23);
+    sub_1BE4ACC(&StringLiteral_4588/*"ClassBoardSquare"*/, v24);
+    sub_1BE4ACC(&StringLiteral_4590/*"ClassBoardSquareOpenConfirmDialog"*/, v25);
+    sub_1BE4ACC(&StringLiteral_4591/*"ClassBoardUI"*/, v26);
+    byte_4B6A180 = 1;
   }
   Object_object = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                     this,
                     this->fields.mainAssetData,
-                    (System_String_o *)StringLiteral_4585/*"ClassBoardSquare"*/,
-                    (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___);
+                    (System_String_o *)StringLiteral_4588/*"ClassBoardSquare"*/,
+                    (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquare___);
   v62 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4578/*"ClassBoardLine"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLine___);
+          (System_String_o *)StringLiteral_4581/*"ClassBoardLine"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLine___);
   lockAsset = (ClassBoardLock_o *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                                     this,
                                     this->fields.mainAssetData,
-                                    (System_String_o *)StringLiteral_4579/*"ClassBoardLock"*/,
-                                    (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___);
+                                    (System_String_o *)StringLiteral_4582/*"ClassBoardLock"*/,
+                                    (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLock___);
   v27 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4576/*"ClassBoardBlank"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___);
+          (System_String_o *)StringLiteral_4579/*"ClassBoardBlank"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBlank___);
   v28 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4577/*"ClassBoardDisableOpenDialog"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardDisableOpenDialog___);
+          (System_String_o *)StringLiteral_4580/*"ClassBoardDisableOpenDialog"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardDisableOpenDialog___);
   v29 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4587/*"ClassBoardSquareOpenConfirmDialog"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareOpenConfirmDialog___);
+          (System_String_o *)StringLiteral_4590/*"ClassBoardSquareOpenConfirmDialog"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareOpenConfirmDialog___);
   v30 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4580/*"ClassBoardLockOpenConfirmDialog"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockOpenConfirmDialog___);
+          (System_String_o *)StringLiteral_4583/*"ClassBoardLockOpenConfirmDialog"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockOpenConfirmDialog___);
   v31 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4581/*"ClassBoardLockReleaseConditionDialog"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockReleaseConditionDialog___);
+          (System_String_o *)StringLiteral_4584/*"ClassBoardLockReleaseConditionDialog"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardLockReleaseConditionDialog___);
   v32 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4586/*"ClassBoardSquareDetailDialog"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareDetailDialog___);
+          (System_String_o *)StringLiteral_4589/*"ClassBoardSquareDetailDialog"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardSquareDetailDialog___);
   v33 = ClassBoardResourceCatalogAssetBundle__GetObject_object_(
           this,
           this->fields.mainAssetData,
-          (System_String_o *)StringLiteral_4588/*"ClassBoardUI"*/,
-          (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardUIController___);
-  Object_object__49362760 = (char *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
+          (System_String_o *)StringLiteral_4591/*"ClassBoardUI"*/,
+          (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardUIController___);
+  Object_object__49525204 = (char *)ClassBoardResourceCatalogAssetBundle__GetObject_object_(
                                       this,
                                       this->fields.modelAssetData,
-                                      (System_String_o *)StringLiteral_4575/*"ClassBoardBg"*/,
-                                      (const MethodInfo_2F25484 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBackground___);
+                                      (System_String_o *)StringLiteral_4578/*"ClassBoardBg"*/,
+                                      (const MethodInfo_2F4CF10 *)Method_ClassBoardResourceCatalogAssetBundle_GetObject_ClassBoardBackground___);
   if ( !this->fields.boardSelectViewAssetData )
     goto LABEL_13;
-  v36 = (int64_t)Object_object__49362760;
-  Object_object__49362760 = (char *)AssetData__GetObject_object__49362760(
+  v36 = (int64_t)Object_object__49525204;
+  Object_object__49525204 = (char *)AssetData__GetObject_object__49525204(
                                       this->fields.boardSelectViewAssetData,
-                                      (System_String_o *)StringLiteral_4584/*"ClassBoardSelectView"*/,
-                                      (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                                      (System_String_o *)StringLiteral_4587/*"ClassBoardSelectView"*/,
+                                      (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
   if ( !this->fields.boardSelectViewAssetData )
     goto LABEL_13;
-  v37 = (int64_t)Object_object__49362760;
-  Object_object__49362760 = (char *)AssetData__GetObject_object__49362760(
+  v37 = (int64_t)Object_object__49525204;
+  Object_object__49525204 = (char *)AssetData__GetObject_object__49525204(
                                       this->fields.boardSelectViewAssetData,
-                                      (System_String_o *)StringLiteral_6948/*"ForwardIconAnimObject"*/,
-                                      (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                                      (System_String_o *)StringLiteral_6952/*"ForwardIconAnimObject"*/,
+                                      (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
   if ( !this->fields._Contents_k__BackingField )
     goto LABEL_13;
-  v39 = (int64_t)Object_object__49362760;
+  v39 = (int64_t)Object_object__49525204;
   ClassBoardResourceContents__SetContents(
     this->fields._Contents_k__BackingField,
     (ClassBoardSquare_o *)Object_object,
@@ -467,43 +467,43 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadEnd(
     lockAsset,
     (ClassBoardBlank_o *)v27,
     v38);
-  Object_object__49362760 = (char *)this->fields._Contents_k__BackingField;
-  if ( !Object_object__49362760 )
+  Object_object__49525204 = (char *)this->fields._Contents_k__BackingField;
+  if ( !Object_object__49525204 )
     goto LABEL_13;
   ClassBoardResourceContents__SetContentsDialog(
-    (ClassBoardResourceContents_o *)Object_object__49362760,
+    (ClassBoardResourceContents_o *)Object_object__49525204,
     (ClassBoardDisableOpenDialog_o *)v28,
     (ClassBoardSquareOpenConfirmDialog_o *)v29,
     (ClassBoardLockOpenConfirmDialog_o *)v30,
     (ClassBoardLockReleaseConditionDialog_o *)v31,
     (ClassBoardSquareDetailDialog_o *)v32,
     v40);
-  Object_object__49362760 = (char *)this->fields._Contents_k__BackingField;
-  if ( !Object_object__49362760 )
+  Object_object__49525204 = (char *)this->fields._Contents_k__BackingField;
+  if ( !Object_object__49525204 )
     goto LABEL_13;
   ClassBoardResourceContents__SetContentsUI(
-    (ClassBoardResourceContents_o *)Object_object__49362760,
+    (ClassBoardResourceContents_o *)Object_object__49525204,
     (ClassBoardUIController_o *)v33,
     this->fields.boardUiAtlasManagerUnit,
     this->fields.iconAtlasManagerUnit,
     this->fields.classUiAtlasManagerUnit,
     v41);
-  Object_object__49362760 = (char *)this->fields._Contents_k__BackingField;
-  if ( !Object_object__49362760 )
+  Object_object__49525204 = (char *)this->fields._Contents_k__BackingField;
+  if ( !Object_object__49525204 )
     goto LABEL_13;
-  *((_QWORD *)Object_object__49362760 + 12) = v36;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(Object_object__49362760 + 96), v36, v42, v43, v44, v45, v46, v47);
-  Object_object__49362760 = (char *)this->fields._Contents_k__BackingField;
-  if ( !Object_object__49362760
-    || (*((_QWORD *)Object_object__49362760 + 13) = v37,
-        sub_1BD33FC((PartyOrganizationUtility_o *)(Object_object__49362760 + 104), v37, v48, v49, v50, v51, v52, v53),
-        (Object_object__49362760 = (char *)this->fields._Contents_k__BackingField) == 0LL)
-    || (*((_QWORD *)Object_object__49362760 + 14) = v39,
-        sub_1BD33FC((PartyOrganizationUtility_o *)(Object_object__49362760 + 112), v39, v54, v55, v56, v57, v58, v59),
+  *((_QWORD *)Object_object__49525204 + 12) = v36;
+  sub_1BE4A70((PartyOrganizationUtility_o *)(Object_object__49525204 + 96), v36, v42, v43, v44, v45, v46, v47);
+  Object_object__49525204 = (char *)this->fields._Contents_k__BackingField;
+  if ( !Object_object__49525204
+    || (*((_QWORD *)Object_object__49525204 + 13) = v37,
+        sub_1BE4A70((PartyOrganizationUtility_o *)(Object_object__49525204 + 104), v37, v48, v49, v50, v51, v52, v53),
+        (Object_object__49525204 = (char *)this->fields._Contents_k__BackingField) == 0LL)
+    || (*((_QWORD *)Object_object__49525204 + 14) = v39,
+        sub_1BE4A70((PartyOrganizationUtility_o *)(Object_object__49525204 + 112), v39, v54, v55, v56, v57, v58, v59),
         (loadEndCallback = this->fields.loadEndCallback) == 0LL) )
   {
 LABEL_13:
-    sub_1BD36B4(Object_object__49362760, v35);
+    sub_1BE4D28(Object_object__49525204, v35);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))loadEndCallback->fields.m_target)(
     loadEndCallback->fields.original_method_info,
@@ -615,28 +615,28 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   FollowerInfo_o *v101; // x6
   PartyListViewItem_o *v102; // x7
 
-  if ( (byte_4B3A6E7 & 1) == 0 )
+  if ( (byte_4B6A17F & 1) == 0 )
   {
-    sub_1BD3458(&System_Action___TypeInfo, callback);
-    sub_1BD3458(&System_Action_Action____TypeInfo, v10);
-    sub_1BD3458(&System_Action_Action__TypeInfo, v11);
-    sub_1BD3458(&System_Action_TypeInfo, v12);
-    sub_1BD3458(&AtlasManagerUnit_TypeInfo, v13);
-    sub_1BD3458(&ChainableActionParallel_TypeInfo, v14);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle_LoadEnd__, v15);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_0__, v16);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_1__, v17);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_2__, v18);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_3__, v19);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_4__, v20);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_5__, v21);
-    sub_1BD3458(&StringLiteral_4574/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, v22);
-    sub_1BD3458(&StringLiteral_4573/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, v23);
-    sub_1BD3458(&StringLiteral_4570/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, v24);
-    byte_4B3A6E7 = 1;
+    sub_1BE4ACC(&System_Action___TypeInfo, callback);
+    sub_1BE4ACC(&System_Action_Action____TypeInfo, v10);
+    sub_1BE4ACC(&System_Action_Action__TypeInfo, v11);
+    sub_1BE4ACC(&System_Action_TypeInfo, v12);
+    sub_1BE4ACC(&AtlasManagerUnit_TypeInfo, v13);
+    sub_1BE4ACC(&ChainableActionParallel_TypeInfo, v14);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle_LoadEnd__, v15);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_0__, v16);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_1__, v17);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_2__, v18);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_3__, v19);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_4__, v20);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle__LoadSystemAsset_b__32_5__, v21);
+    sub_1BE4ACC(&StringLiteral_4577/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, v22);
+    sub_1BE4ACC(&StringLiteral_4576/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, v23);
+    sub_1BE4ACC(&StringLiteral_4573/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, v24);
+    byte_4B6A17F = 1;
   }
   this->fields.loadEndCallback = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.loadEndCallback,
     (int64_t)callback,
     (int64_t)method,
@@ -646,10 +646,10 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
     v6,
     v7);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
-  v26 = (AtlasManagerUnit_o *)sub_1BD36A4(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v26, (System_String_o *)StringLiteral_4574/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, assetStorageLoadWrapper, 0LL);
+  v26 = (AtlasManagerUnit_o *)sub_1BE4D18(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v26, (System_String_o *)StringLiteral_4577/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, assetStorageLoadWrapper, 0LL);
   this->fields.boardUiAtlasManagerUnit = v26;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.boardUiAtlasManagerUnit,
     (int64_t)v26,
     v27,
@@ -659,10 +659,10 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
     v31,
     v32);
   v33 = this->fields.assetStorageLoadWrapper;
-  v34 = (AtlasManagerUnit_o *)sub_1BD36A4(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v34, (System_String_o *)StringLiteral_4573/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, v33, 0LL);
+  v34 = (AtlasManagerUnit_o *)sub_1BE4D18(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v34, (System_String_o *)StringLiteral_4576/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, v33, 0LL);
   this->fields.classUiAtlasManagerUnit = v34;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.classUiAtlasManagerUnit,
     (int64_t)v34,
     v35,
@@ -672,10 +672,10 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
     v39,
     v40);
   v41 = this->fields.assetStorageLoadWrapper;
-  v42 = (AtlasManagerUnit_o *)sub_1BD36A4(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v42, (System_String_o *)StringLiteral_4570/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, v41, 0LL);
+  v42 = (AtlasManagerUnit_o *)sub_1BE4D18(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v42, (System_String_o *)StringLiteral_4573/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, v41, 0LL);
   this->fields.iconAtlasManagerUnit = v42;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.iconAtlasManagerUnit,
     (int64_t)v42,
     v43,
@@ -684,8 +684,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
     v46,
     v47,
     v48);
-  v49 = sub_1BD3500(System_Action_Action____TypeInfo, 6LL);
-  v50 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  v49 = sub_1BE4B74(System_Action_Action____TypeInfo, 6LL);
+  v50 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v50,
     (Il2CppObject *)this,
@@ -696,8 +696,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( !*(_DWORD *)(v49 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v49 + 32) = v50;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 32), (int64_t)v50, v53, v54, v55, v56, v57, v58);
-  v59 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 32), (int64_t)v50, v53, v54, v55, v56, v57, v58);
+  v59 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v59,
     (Il2CppObject *)this,
@@ -706,8 +706,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( *(_DWORD *)(v49 + 24) <= 1u )
     goto LABEL_15;
   *(_QWORD *)(v49 + 40) = v59;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 40), (int64_t)v59, v60, v61, v62, v63, v64, v65);
-  v66 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 40), (int64_t)v59, v60, v61, v62, v63, v64, v65);
+  v66 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v66,
     (Il2CppObject *)this,
@@ -716,8 +716,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( *(_DWORD *)(v49 + 24) <= 2u )
     goto LABEL_15;
   *(_QWORD *)(v49 + 48) = v66;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 48), (int64_t)v66, v67, v68, v69, v70, v71, v72);
-  v73 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 48), (int64_t)v66, v67, v68, v69, v70, v71, v72);
+  v73 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v73,
     (Il2CppObject *)this,
@@ -726,8 +726,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( *(_DWORD *)(v49 + 24) <= 3u )
     goto LABEL_15;
   *(_QWORD *)(v49 + 56) = v73;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 56), (int64_t)v73, v74, v75, v76, v77, v78, v79);
-  v80 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 56), (int64_t)v73, v74, v75, v76, v77, v78, v79);
+  v80 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v80,
     (Il2CppObject *)this,
@@ -736,8 +736,8 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( *(_DWORD *)(v49 + 24) <= 4u )
     goto LABEL_15;
   *(_QWORD *)(v49 + 64) = v80;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 64), (int64_t)v80, v81, v82, v83, v84, v85, v86);
-  v87 = (System_Action_object__o *)sub_1BD36A4(System_Action_Action__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 64), (int64_t)v80, v81, v82, v83, v84, v85, v86);
+  v87 = (System_Action_object__o *)sub_1BE4D18(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v87,
     (Il2CppObject *)this,
@@ -746,22 +746,22 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__LoadSystemAsset(
   if ( *(_DWORD *)(v49 + 24) <= 5u )
     goto LABEL_15;
   *(_QWORD *)(v49 + 72) = v87;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 72), (int64_t)v87, v88, v89, v90, v91, v92, v93);
-  v94 = (ChainableActionParallel_o *)sub_1BD36A4(ChainableActionParallel_TypeInfo);
-  ChainableActionParallel___ctor_47244508(v94, (System_Action_Action__array *)v49, 0LL);
-  v95 = sub_1BD3500(System_Action___TypeInfo, 1LL);
-  v96 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 72), (int64_t)v87, v88, v89, v90, v91, v92, v93);
+  v94 = (ChainableActionParallel_o *)sub_1BE4D18(ChainableActionParallel_TypeInfo);
+  ChainableActionParallel___ctor_47406948(v94, (System_Action_Action__array *)v49, 0LL);
+  v95 = sub_1BE4B74(System_Action___TypeInfo, 1LL);
+  v96 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v96, (Il2CppObject *)this, Method_ClassBoardResourceCatalogAssetBundle_LoadEnd__, 0LL);
   if ( !v95 )
     goto LABEL_16;
   if ( !*(_DWORD *)(v95 + 24) )
 LABEL_15:
-    sub_1BD36BC(v51, v52);
+    sub_1BE4D30(v51, v52);
   *(_QWORD *)(v95 + 32) = v96;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v95 + 32), (int64_t)v96, v97, v98, v99, v100, v101, v102);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v95 + 32), (int64_t)v96, v97, v98, v99, v100, v101, v102);
   if ( !v94 || (v51 = ChainableActionBase__Final((ChainableActionBase_o *)v94, (System_Action_array *)v95, 0LL)) == 0LL )
 LABEL_16:
-    sub_1BD36B4(v51, v52);
+    sub_1BE4D28(v51, v52);
   ChainableActionBase__Execute(v51, 0LL);
 }
 
@@ -774,7 +774,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__ReleaseAll(
 
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
   if ( !assetStorageLoadWrapper )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   AssetStorageLoadWrapper__ReleaseAll(assetStorageLoadWrapper, 0LL);
 }
 
@@ -815,31 +815,31 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__ReloadBoardUIAtlas(
   AtlasManagerUnit_o *v33; // x19
   System_Action_o *v34; // x21
 
-  if ( (byte_4B3A6E9 & 1) == 0 )
+  if ( (byte_4B6A181 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, callback);
-    sub_1BD3458(&AtlasManagerUnit_TypeInfo, v5);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0__ReloadBoardUIAtlas_b__0__, v6);
-    sub_1BD3458(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_4574/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, v8);
-    byte_4B3A6E9 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, callback);
+    sub_1BE4ACC(&AtlasManagerUnit_TypeInfo, v5);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0__ReloadBoardUIAtlas_b__0__, v6);
+    sub_1BE4ACC(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_4577/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, v8);
+    byte_4B6A181 = 1;
   }
-  v9 = sub_1BD36A4(ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0_TypeInfo);
+  v9 = sub_1BE4D18(ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_8;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = callback;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)callback, v18, v19, v20, v21, v22, v23);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)callback, v18, v19, v20, v21, v22, v23);
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( boardUiAtlasManagerUnit )
     AtlasManagerUnit__Release(boardUiAtlasManagerUnit, 0LL);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
-  v26 = (AtlasManagerUnit_o *)sub_1BD36A4(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v26, (System_String_o *)StringLiteral_4574/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, assetStorageLoadWrapper, 0LL);
+  v26 = (AtlasManagerUnit_o *)sub_1BE4D18(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v26, (System_String_o *)StringLiteral_4577/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, assetStorageLoadWrapper, 0LL);
   this->fields.boardUiAtlasManagerUnit = v26;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.boardUiAtlasManagerUnit,
     (int64_t)v26,
     v27,
@@ -849,7 +849,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__ReloadBoardUIAtlas(
     v31,
     v32);
   v33 = this->fields.boardUiAtlasManagerUnit;
-  v34 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v34 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v34,
     (Il2CppObject *)v9,
@@ -857,7 +857,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__ReloadBoardUIAtlas(
     0LL);
   if ( !v33 )
 LABEL_8:
-    sub_1BD36B4(v10, v11);
+    sub_1BE4D28(v10, v11);
   AtlasManagerUnit__Load(v33, v34, 1, 0LL);
 }
 
@@ -872,7 +872,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle__SetSpriteOfUiAtlas(
 
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( !boardUiAtlasManagerUnit )
-    sub_1BD36B4(0LL, sprite);
+    sub_1BE4D28(0LL, sprite);
   AtlasManagerUnit__SetUI(boardUiAtlasManagerUnit, sprite, spriteName, 0LL);
 }
 
@@ -903,29 +903,29 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_0(
   AssetLoader_LoadEndDataHandler_o *v23; // x20
   const MethodInfo *v24; // x3
 
-  if ( (byte_4B3A6EE & 1) == 0 )
+  if ( (byte_4B6A186 & 1) == 0 )
   {
-    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0__LoadSystemAsset_b__6__, v5);
-    sub_1BD3458(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0_TypeInfo, v6);
-    sub_1BD3458(&StringLiteral_4571/*"ClassBoard/Main"*/, v7);
-    byte_4B3A6EE = 1;
+    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0__LoadSystemAsset_b__6__, v5);
+    sub_1BE4ACC(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0_TypeInfo, v6);
+    sub_1BE4ACC(&StringLiteral_4574/*"ClassBoard/Main"*/, v7);
+    byte_4B6A186 = 1;
   }
-  v8 = sub_1BD36A4(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0_TypeInfo);
+  v8 = sub_1BE4D18(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BD36B4(v9, v10);
+    sub_1BE4D28(v9, v10);
   *(_QWORD *)(v8 + 24) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)(v8 + 16) = f;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
-  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
+  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v23,
     (Il2CppObject *)v8,
     Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0__LoadSystemAsset_b__6__,
     0LL);
-  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4571/*"ClassBoard/Main"*/, v23, v24);
+  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4574/*"ClassBoard/Main"*/, v23, v24);
 }
 
 
@@ -955,29 +955,29 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_1(
   AssetLoader_LoadEndDataHandler_o *v23; // x20
   const MethodInfo *v24; // x3
 
-  if ( (byte_4B3A6EF & 1) == 0 )
+  if ( (byte_4B6A187 & 1) == 0 )
   {
-    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1__LoadSystemAsset_b__7__, v5);
-    sub_1BD3458(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1_TypeInfo, v6);
-    sub_1BD3458(&StringLiteral_4558/*"ClassBoard/Bg"*/, v7);
-    byte_4B3A6EF = 1;
+    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1__LoadSystemAsset_b__7__, v5);
+    sub_1BE4ACC(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1_TypeInfo, v6);
+    sub_1BE4ACC(&StringLiteral_4561/*"ClassBoard/Bg"*/, v7);
+    byte_4B6A187 = 1;
   }
-  v8 = sub_1BD36A4(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1_TypeInfo);
+  v8 = sub_1BE4D18(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BD36B4(v9, v10);
+    sub_1BE4D28(v9, v10);
   *(_QWORD *)(v8 + 24) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)(v8 + 16) = f;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
-  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
+  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v23,
     (Il2CppObject *)v8,
     Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1__LoadSystemAsset_b__7__,
     0LL);
-  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4558/*"ClassBoard/Bg"*/, v23, v24);
+  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4561/*"ClassBoard/Bg"*/, v23, v24);
 }
 
 
@@ -1007,29 +1007,29 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_2(
   AssetLoader_LoadEndDataHandler_o *v23; // x20
   const MethodInfo *v24; // x3
 
-  if ( (byte_4B3A6F0 & 1) == 0 )
+  if ( (byte_4B6A188 & 1) == 0 )
   {
-    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
-    sub_1BD3458(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2__LoadSystemAsset_b__8__, v5);
-    sub_1BD3458(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2_TypeInfo, v6);
-    sub_1BD3458(&StringLiteral_4572/*"ClassBoard/Select"*/, v7);
-    byte_4B3A6F0 = 1;
+    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
+    sub_1BE4ACC(&Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2__LoadSystemAsset_b__8__, v5);
+    sub_1BE4ACC(&ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2_TypeInfo, v6);
+    sub_1BE4ACC(&StringLiteral_4575/*"ClassBoard/Select"*/, v7);
+    byte_4B6A188 = 1;
   }
-  v8 = sub_1BD36A4(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2_TypeInfo);
+  v8 = sub_1BE4D18(ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BD36B4(v9, v10);
+    sub_1BE4D28(v9, v10);
   *(_QWORD *)(v8 + 24) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)this, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)(v8 + 16) = f;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
-  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)f, v17, v18, v19, v20, v21, v22);
+  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v23,
     (Il2CppObject *)v8,
     Method_ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2__LoadSystemAsset_b__8__,
     0LL);
-  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4572/*"ClassBoard/Select"*/, v23, v24);
+  ClassBoardResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_4575/*"ClassBoard/Select"*/, v23, v24);
 }
 
 
@@ -1042,7 +1042,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_3(
 
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( !boardUiAtlasManagerUnit )
-    sub_1BD36B4(0LL, f);
+    sub_1BE4D28(0LL, f);
   AtlasManagerUnit__Load(boardUiAtlasManagerUnit, f, 3, 0LL);
 }
 
@@ -1056,7 +1056,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_4(
 
   classUiAtlasManagerUnit = this->fields.classUiAtlasManagerUnit;
   if ( !classUiAtlasManagerUnit )
-    sub_1BD36B4(0LL, f);
+    sub_1BE4D28(0LL, f);
   AtlasManagerUnit__Load(classUiAtlasManagerUnit, f, 3, 0LL);
 }
 
@@ -1070,7 +1070,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___LoadSystemAsset_b__32_5(
 
   iconAtlasManagerUnit = this->fields.iconAtlasManagerUnit;
   if ( !iconAtlasManagerUnit )
-    sub_1BD36B4(0LL, f);
+    sub_1BE4D28(0LL, f);
   AtlasManagerUnit__Load(iconAtlasManagerUnit, f, 3, 0LL);
 }
 
@@ -1107,7 +1107,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0___Loa
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.mainAssetData = asset,
-        sub_1BD33FC(
+        sub_1BE4A70(
           (PartyOrganizationUtility_o *)&_4__this->fields.mainAssetData,
           (int64_t)asset,
           (int64_t)method,
@@ -1118,7 +1118,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_0___Loa
           v7),
         (f = this->fields.f) == 0LL) )
   {
-    sub_1BD36B4(_4__this, asset);
+    sub_1BE4D28(_4__this, asset);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))f->fields.m_target)(
     f->fields.original_method_info,
@@ -1150,7 +1150,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1___Loa
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.modelAssetData = asset,
-        sub_1BD33FC(
+        sub_1BE4A70(
           (PartyOrganizationUtility_o *)&_4__this->fields.modelAssetData,
           (int64_t)asset,
           (int64_t)method,
@@ -1161,7 +1161,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_1___Loa
           v7),
         (f = this->fields.f) == 0LL) )
   {
-    sub_1BD36B4(_4__this, asset);
+    sub_1BE4D28(_4__this, asset);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))f->fields.m_target)(
     f->fields.original_method_info,
@@ -1193,7 +1193,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2___Loa
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.boardSelectViewAssetData = asset,
-        sub_1BD33FC(
+        sub_1BE4A70(
           (PartyOrganizationUtility_o *)&_4__this->fields.boardSelectViewAssetData,
           (int64_t)asset,
           (int64_t)method,
@@ -1204,7 +1204,7 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass32_2___Loa
           v7),
         (f = this->fields.f) == 0LL) )
   {
-    sub_1BD36B4(_4__this, asset);
+    sub_1BE4D28(_4__this, asset);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))f->fields.m_target)(
     f->fields.original_method_info,
@@ -1239,11 +1239,11 @@ void __fastcall ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0___Rel
     || (v9 = this,
         (this = (ClassBoardResourceCatalogAssetBundle___c__DisplayClass35_0_o *)_4__this->fields._Contents_k__BackingField) == 0LL) )
   {
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   }
   boardUiAtlasManagerUnit = (struct System_Action_o *)_4__this->fields.boardUiAtlasManagerUnit;
   this[3].fields.callback = boardUiAtlasManagerUnit;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this[3].fields.callback,
     (int64_t)boardUiAtlasManagerUnit,
     v2,

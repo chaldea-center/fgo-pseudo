@@ -15,7 +15,7 @@ void __fastcall UserOwnRarePrism___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
     (int64_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void __fastcall UserOwnRarePrism___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_1BD36B4(v13, v14);
+    sub_1BE4D28(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.rarePri;
 }

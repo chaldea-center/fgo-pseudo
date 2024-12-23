@@ -9,20 +9,20 @@ void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B397A6 & 1) == 0 )
+  if ( (byte_4B6920F & 1) == 0 )
   {
-    sub_1BD3458(&int___TypeInfo, method);
-    byte_4B397A6 = 1;
+    sub_1BE4ACC(&int___TypeInfo, method);
+    byte_4B6920F = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_1BD3500(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   if ( !v3->max_length )
-    sub_1BD36BC(v3, v3);
+    sub_1BE4D30(v3, v3);
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.defTurnEffect, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.defTurnEffect, (int64_t)v3, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -81,7 +81,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         {
           TurnEffect = StageEntity__getTurnEffect(stage, (int32_t)battleEvent, 0LL);
           Data_k__BackingField->fields.turnEffect = TurnEffect;
-          sub_1BD33FC(
+          sub_1BE4A70(
             (PartyOrganizationUtility_o *)&Data_k__BackingField->fields.turnEffect,
             (int64_t)TurnEffect,
             v13,
@@ -101,7 +101,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
                       this->fields.defTurnEffect,
                       0LL);
               Data_k__BackingField->fields.turnEffect = v20;
-              sub_1BD33FC(
+              sub_1BE4A70(
                 (PartyOrganizationUtility_o *)&Data_k__BackingField->fields.turnEffect,
                 (int64_t)v20,
                 v21,
@@ -116,7 +116,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         }
       }
 LABEL_16:
-      sub_1BD36B4(this, battleEvent);
+      sub_1BE4D28(this, battleEvent);
     }
   }
 }

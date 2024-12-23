@@ -5,12 +5,12 @@ AssumedBattleAssetSearcherForMasterSkill_o *__fastcall AssumedBattleAssetSearche
   AssumedBattleAssetSearcherBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B39393 & 1) == 0 )
+  if ( (byte_4B68DF7 & 1) == 0 )
   {
-    sub_1BD3458(&AssumedBattleAssetSearcherForMasterSkill_TypeInfo, v1);
-    byte_4B39393 = 1;
+    sub_1BE4ACC(&AssumedBattleAssetSearcherForMasterSkill_TypeInfo, v1);
+    byte_4B68DF7 = 1;
   }
-  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1BD36A4(AssumedBattleAssetSearcherForMasterSkill_TypeInfo);
+  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1BE4D18(AssumedBattleAssetSearcherForMasterSkill_TypeInfo);
   AssumedBattleAssetSearcherBase___ctor(v2, v3);
   return (AssumedBattleAssetSearcherForMasterSkill_o *)v2;
 }
@@ -32,20 +32,20 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
   struct BattlePerformance_o *Perf_k__BackingField; // x8
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B39392 & 1) == 0 )
+  if ( (byte_4B68DF6 & 1) == 0 )
   {
-    sub_1BD3458(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo, method);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__, v3);
-    sub_1BD3458(&Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__, v4);
-    sub_1BD3458(&System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo, v5);
-    byte_4B39392 = 1;
+    sub_1BE4ACC(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__, v3);
+    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__, v4);
+    sub_1BE4ACC(&System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo, v5);
+    byte_4B68DF6 = 1;
   }
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1BD36A4(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1BE4D18(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
   AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
-  v8 = (System_Collections_Generic_HashSet_SimpleSkillData__o *)sub_1BD36A4(System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo);
+  v8 = (System_Collections_Generic_HashSet_SimpleSkillData__o *)sub_1BE4D18(System_Collections_Generic_HashSet_SimpleSkillData__TypeInfo);
   System_Collections_Generic_HashSet_SimpleSkillData____ctor(
     v8,
-    (const MethodInfo_347C2C8 *)Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__);
+    (const MethodInfo_34A745C *)Method_System_Collections_Generic_HashSet_SimpleSkillData___ctor__);
   manager = this->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
@@ -54,12 +54,12 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
                                                               v10),
         !v8) )
   {
-    sub_1BD36B4(v9, v10);
+    sub_1BE4D28(v9, v10);
   }
   System_Collections_Generic_HashSet_SimpleSkillData___UnionWith(
     v8,
     v9,
-    (const MethodInfo_347D4B8 *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
+    (const MethodInfo_34A864C *)Method_System_Collections_Generic_HashSet_SimpleSkillData__UnionWith__);
   AssumedEffectExtractLogic__FromSkill((System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v8, v6, v13);
   return v6;
 }

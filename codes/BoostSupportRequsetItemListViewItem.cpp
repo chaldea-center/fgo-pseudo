@@ -15,32 +15,32 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
   CommonReleaseMaster_o *v16; // x22
   bool v17; // w0
 
-  if ( (byte_4B31D1D & 1) == 0 )
+  if ( (byte_4B616BD & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_1BD3458(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
-    sub_1BD3458(&DataManager_TypeInfo, v12);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Contains_int___, v13);
-    byte_4B31D1D = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
+    sub_1BE4ACC(&DataManager_TypeInfo, v12);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Contains_int___, v13);
+    byte_4B616BD = 1;
   }
-  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
   this->fields.boostEntity = boostEntity;
-  sub_1BD33FC(&this->fields.boostEntity);
+  sub_1BE4A70(&this->fields.boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_1BD33FC(&this->fields.usrItemEntityList);
+  sub_1BE4A70(&this->fields.usrItemEntityList);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !boostEntity
     || !Master_object
     || (this->fields.commonConsumeEntity = CommonConsumeMaster__GetIdEntityList(
                                              (CommonConsumeMaster_o *)Master_object,
                                              boostEntity->fields.commonConsumeId,
                                              0LL),
-        sub_1BD33FC(&this->fields.commonConsumeEntity),
-        (Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0LL) )
+        sub_1BE4A70(&this->fields.commonConsumeEntity),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0LL) )
   {
-    sub_1BD36B4(Master_object, v15);
+    sub_1BE4D28(Master_object, v15);
   }
   v16 = (CommonReleaseMaster_o *)Master_object;
   this->fields.isRelease = CommonReleaseMaster__IsOpen(
@@ -53,7 +53,7 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
     v17 = System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
             boostEntity->fields.id,
-            (const MethodInfo_2F49970 *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
   else
     v17 = 0;
   this->fields.isRecommended = v17;

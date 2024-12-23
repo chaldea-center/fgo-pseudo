@@ -54,18 +54,18 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
   FollowerInfo_o *v48; // x6
   PartyListViewItem_o *v49; // x7
 
-  if ( (byte_4B3AC9E & 1) == 0 )
+  if ( (byte_4B6A736 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CStateManager_MissionNotifyComponent___ctor__, method);
-    sub_1BD3458(&Method_CStateManager_MissionNotifyComponent__add__, v9);
-    sub_1BD3458(&CStateManager_MissionNotifyComponent__TypeInfo, v10);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v11);
-    sub_1BD3458(&ManagerConfig_TypeInfo, v12);
-    sub_1BD3458(&MissionNotifyComponent_StateFrameIn_TypeInfo, v13);
-    sub_1BD3458(&MissionNotifyComponent_StateFrameOut_TypeInfo, v14);
-    sub_1BD3458(&MissionNotifyComponent_StateNone_TypeInfo, v15);
-    sub_1BD3458(&MissionNotifyComponent_StateShowing_TypeInfo, v16);
-    byte_4B3AC9E = 1;
+    sub_1BE4ACC(&Method_CStateManager_MissionNotifyComponent___ctor__, method);
+    sub_1BE4ACC(&Method_CStateManager_MissionNotifyComponent__add__, v9);
+    sub_1BE4ACC(&CStateManager_MissionNotifyComponent__TypeInfo, v10);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v11);
+    sub_1BE4ACC(&ManagerConfig_TypeInfo, v12);
+    sub_1BE4ACC(&MissionNotifyComponent_StateFrameIn_TypeInfo, v13);
+    sub_1BE4ACC(&MissionNotifyComponent_StateFrameOut_TypeInfo, v14);
+    sub_1BE4ACC(&MissionNotifyComponent_StateNone_TypeInfo, v15);
+    sub_1BE4ACC(&MissionNotifyComponent_StateShowing_TypeInfo, v16);
+    byte_4B6A736 = 1;
   }
   gameObject = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -82,21 +82,21 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
   this->fields.mFrameOutPosY = v20 + v19;
   mAtlas = baseSp->fields.mAtlas;
   this->fields.baseAtlas = mAtlas;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.baseAtlas, (int64_t)mAtlas, v2, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.baseAtlas, (int64_t)mAtlas, v2, v3, v4, v5, v6, v7);
   MissionNotifyComponent__FrameInOut(this, 0, 0LL, 1, v22);
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v24 = (CStateManager_T__o *)sub_1BD36A4(CStateManager_MissionNotifyComponent__TypeInfo);
+    v24 = (CStateManager_T__o *)sub_1BE4D18(CStateManager_MissionNotifyComponent__TypeInfo);
     CStateManager_object____ctor(
       v24,
       (Il2CppObject *)this,
       4,
-      (const MethodInfo_315EC74 *)Method_CStateManager_MissionNotifyComponent___ctor__);
+      (const MethodInfo_318A548 *)Method_CStateManager_MissionNotifyComponent___ctor__);
     this->fields.mFSM = (struct CStateManager_MissionNotifyComponent__o *)v24;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v24, v25, v26, v27, v28, v29, v30);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v24, v25, v26, v27, v28, v29, v30);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v32 = (Il2CppObject *)sub_1BD36A4(MissionNotifyComponent_StateNone_TypeInfo);
+    v32 = (Il2CppObject *)sub_1BE4D18(MissionNotifyComponent_StateNone_TypeInfo);
     System_Object___ctor(v32, 0LL);
     if ( !mFSM )
       goto LABEL_20;
@@ -104,9 +104,9 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
       mFSM,
       0,
       (IState_T__o *)v32,
-      (const MethodInfo_315ED1C *)Method_CStateManager_MissionNotifyComponent__add__);
+      (const MethodInfo_318A5F0 *)Method_CStateManager_MissionNotifyComponent__add__);
     v33 = (CStateManager_T__o *)*p_mFSM;
-    v34 = (Il2CppObject *)sub_1BD36A4(MissionNotifyComponent_StateFrameIn_TypeInfo);
+    v34 = (Il2CppObject *)sub_1BE4D18(MissionNotifyComponent_StateFrameIn_TypeInfo);
     System_Object___ctor(v34, 0LL);
     if ( !v33 )
       goto LABEL_20;
@@ -114,9 +114,9 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
       v33,
       1,
       (IState_T__o *)v34,
-      (const MethodInfo_315ED1C *)Method_CStateManager_MissionNotifyComponent__add__);
+      (const MethodInfo_318A5F0 *)Method_CStateManager_MissionNotifyComponent__add__);
     v35 = (CStateManager_T__o *)*p_mFSM;
-    v36 = (Il2CppObject *)sub_1BD36A4(MissionNotifyComponent_StateShowing_TypeInfo);
+    v36 = (Il2CppObject *)sub_1BE4D18(MissionNotifyComponent_StateShowing_TypeInfo);
     System_Object___ctor(v36, 0LL);
     if ( !v35 )
       goto LABEL_20;
@@ -124,9 +124,9 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
       v35,
       2,
       (IState_T__o *)v36,
-      (const MethodInfo_315ED1C *)Method_CStateManager_MissionNotifyComponent__add__);
+      (const MethodInfo_318A5F0 *)Method_CStateManager_MissionNotifyComponent__add__);
     v37 = (CStateManager_T__o *)*p_mFSM;
-    v38 = (Il2CppObject *)sub_1BD36A4(MissionNotifyComponent_StateFrameOut_TypeInfo);
+    v38 = (Il2CppObject *)sub_1BE4D18(MissionNotifyComponent_StateFrameOut_TypeInfo);
     System_Object___ctor(v38, 0LL);
     if ( !v37 )
       goto LABEL_20;
@@ -134,15 +134,15 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
       v37,
       3,
       (IState_T__o *)v38,
-      (const MethodInfo_315ED1C *)Method_CStateManager_MissionNotifyComponent__add__);
+      (const MethodInfo_318A5F0 *)Method_CStateManager_MissionNotifyComponent__add__);
     MissionNotifyComponent__SetState(this, 0, v39);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_20;
-  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__49817248(
+  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__49980352(
                  (UnityEngine_GameObject_o *)gameObject,
-                 (const MethodInfo_2F826A0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                 (const MethodInfo_2FAA3C0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
   if ( !gameObject )
     goto LABEL_20;
   v40 = *((_DWORD *)gameObject + 6);
@@ -153,7 +153,7 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
     while ( 1 )
     {
       if ( v42 >= v40 )
-        sub_1BD36BC(gameObject, method);
+        sub_1BE4D30(gameObject, method);
       gameObject = (void *)*((_QWORD *)v41 + (int)v42 + 4);
       if ( !gameObject )
         break;
@@ -163,12 +163,12 @@ void __fastcall MissionNotifyComponent__Awake(MissionNotifyComponent_o *this, co
         goto LABEL_19;
     }
 LABEL_20:
-    sub_1BD36B4(gameObject, method);
+    sub_1BE4D28(gameObject, method);
   }
 LABEL_19:
   main = UnityEngine_Camera__get_main(0LL);
   this->fields.mCamera = main;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.mCamera, (int64_t)main, v44, v45, v46, v47, v48, v49);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mCamera, (int64_t)main, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -242,26 +242,26 @@ void __fastcall MissionNotifyComponent__FrameInOut(
   System_Action_o *v56; // x22
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3ACA3 & 1) == 0 )
+  if ( (byte_4B6A73B & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, is_framein);
-    sub_1BD3458(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v9);
-    sub_1BD3458(&Method_MissionNotifyComponent___c__DisplayClass64_0__FrameInOut_b__0__, v10);
-    sub_1BD3458(&Method_MissionNotifyComponent___c__DisplayClass64_0__FrameInOut_b__1__, v11);
-    sub_1BD3458(&MissionNotifyComponent___c__DisplayClass64_0_TypeInfo, v12);
-    byte_4B3ACA3 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, is_framein);
+    sub_1BE4ACC(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v9);
+    sub_1BE4ACC(&Method_MissionNotifyComponent___c__DisplayClass64_0__FrameInOut_b__0__, v10);
+    sub_1BE4ACC(&Method_MissionNotifyComponent___c__DisplayClass64_0__FrameInOut_b__1__, v11);
+    sub_1BE4ACC(&MissionNotifyComponent___c__DisplayClass64_0_TypeInfo, v12);
+    byte_4B6A73B = 1;
   }
-  v13 = sub_1BD36A4(MissionNotifyComponent___c__DisplayClass64_0_TypeInfo);
+  v13 = sub_1BE4D18(MissionNotifyComponent___c__DisplayClass64_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_27;
   *(_QWORD *)(v13 + 40) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 40), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 40), (int64_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 56) = end_act;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 56), (int64_t)end_act, v22, v23, v24, v25, v26, v27);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 56), (int64_t)end_act, v22, v23, v24, v25, v26, v27);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *(_QWORD *)(v13 + 16) = gameObject;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)gameObject, v29, v30, v31, v32, v33, v34);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)gameObject, v29, v30, v31, v32, v33, v34);
   timeScale = UnityEngine_Time__get_timeScale(0LL);
   LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v13 + 16), 0LL);
   mFrameInPosY = this->fields.mFrameInPosY;
@@ -303,7 +303,7 @@ void __fastcall MissionNotifyComponent__FrameInOut(
     v46 = 0.5;
   else
     v46 = 0.25;
-  v47 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v47 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v47,
     (Il2CppObject *)v13,
@@ -316,11 +316,11 @@ void __fastcall MissionNotifyComponent__FrameInOut(
   }
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        *(UnityEngine_GameObject_o **)(v13 + 16),
-                       (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_2FAB284 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v13 + 64) = Component_object;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v13 + 64), (int64_t)Component_object, v49, v50, v51, v52, v53, v54);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 64), (int64_t)Component_object, v49, v50, v51, v52, v53, v54);
   v55 = *(EasingObject_o **)(v13 + 64);
-  v56 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v56 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v56,
     (Il2CppObject *)v13,
@@ -328,7 +328,7 @@ void __fastcall MissionNotifyComponent__FrameInOut(
     0LL);
   if ( !v55 )
 LABEL_27:
-    sub_1BD36B4(v14, v15);
+    sub_1BE4D28(v14, v15);
   EasingObject__Play(v55, v46 * timeScale, v56, v47, 0.0, 17, 0LL);
 }
 
@@ -351,14 +351,14 @@ int32_t __fastcall MissionNotifyComponent__GetState(MissionNotifyComponent_o *th
   struct CStateManager_MissionNotifyComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4B3ACA1 & 1) == 0 )
+  if ( (byte_4B6A739 & 1) == 0 )
   {
-    this = (MissionNotifyComponent_o *)sub_1BD3458(&Method_CStateManager_MissionNotifyComponent__getState__, method);
-    byte_4B3ACA1 = 1;
+    this = (MissionNotifyComponent_o *)sub_1BE4ACC(&Method_CStateManager_MissionNotifyComponent__getState__, method);
+    byte_4B6A739 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -399,11 +399,11 @@ void __fastcall MissionNotifyComponent__OnDragStart(MissionNotifyComponent_o *th
   Il2CppObject *Component_object; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4B3ACA4 & 1) == 0 )
+  if ( (byte_4B6A73C & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_EasingObject___, method);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B3ACA4 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_EasingObject___, method);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B6A73C = 1;
   }
   if ( MissionNotifyComponent__GetState(this, method) != 3 && !this->fields.mIsDragDone )
   {
@@ -419,7 +419,7 @@ LABEL_14:
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            gameObject,
-                           (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_EasingObject___);
+                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_EasingObject___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -436,7 +436,7 @@ LABEL_13:
         goto LABEL_14;
       }
     }
-    sub_1BD36B4(gameObject, v6);
+    sub_1BE4D28(gameObject, v6);
   }
 }
 
@@ -465,18 +465,18 @@ void __fastcall MissionNotifyComponent__SetState(
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4B3ACA2 & 1) == 0 )
+  if ( (byte_4B6A73A & 1) == 0 )
   {
-    sub_1BD3458(&Method_CStateManager_MissionNotifyComponent__setState__, *(_QWORD *)&state);
-    byte_4B3ACA2 = 1;
+    sub_1BE4ACC(&Method_CStateManager_MissionNotifyComponent__setState__, *(_QWORD *)&state);
+    byte_4B6A73A = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1BD36B4(0LL, *(_QWORD *)&state);
+    sub_1BE4D28(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_315EDA8 *)Method_CStateManager_MissionNotifyComponent__setState__);
+    (const MethodInfo_318A67C *)Method_CStateManager_MissionNotifyComponent__setState__);
 }
 
 
@@ -597,43 +597,43 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
   int monitor; // [xsp+14h] [xbp-6Ch]
   Il2CppObject *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4B3ACA0 & 1) == 0 )
+  if ( (byte_4B6A738 & 1) == 0 )
   {
-    sub_1BD3458(&AtlasManager_TypeInfo, disp_info);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventMissionAddMaster___, v11);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventMissionMaster___, v12);
-    sub_1BD3458(&Method_DataManager_GetMasterData_GiftMaster___, v13);
-    sub_1BD3458(&Method_DataManager_GetMaster_CompleteMissionMaster___, v14);
-    sub_1BD3458(&DataManager_TypeInfo, v15);
-    sub_1BD3458(&Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__TryGetEntity__, v16);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_Animation___, v17);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v18);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v19);
-    sub_1BD3458(&long___TypeInfo, v20);
-    sub_1BD3458(&Method_UnityEngine_Object_Instantiate_GameObject___, v21);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v22);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v23);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
-    sub_1BD3458(&StringLiteral_21590/*"master_mission_weekly"*/, v25);
-    sub_1BD3458(&StringLiteral_21589/*"master_mission_special"*/, v26);
-    sub_1BD3458(&StringLiteral_21585/*"master_mission_daily"*/, v27);
-    sub_1BD3458(&StringLiteral_21587/*"master_mission_extra"*/, v28);
-    sub_1BD3458(&StringLiteral_21588/*"master_mission_panel"*/, v29);
-    sub_1BD3458(&StringLiteral_1120/*"/"*/, v30);
-    sub_1BD3458(&StringLiteral_9351/*"N0"*/, v31);
-    sub_1BD3458(&StringLiteral_21586/*"master_mission_event"*/, v32);
-    byte_4B3ACA0 = 1;
+    sub_1BE4ACC(&AtlasManager_TypeInfo, disp_info);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventMissionAddMaster___, v11);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventMissionMaster___, v12);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_GiftMaster___, v13);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_CompleteMissionMaster___, v14);
+    sub_1BE4ACC(&DataManager_TypeInfo, v15);
+    sub_1BE4ACC(&Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__TryGetEntity__, v16);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_Animation___, v17);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v18);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v19);
+    sub_1BE4ACC(&long___TypeInfo, v20);
+    sub_1BE4ACC(&Method_UnityEngine_Object_Instantiate_GameObject___, v21);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v22);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v23);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
+    sub_1BE4ACC(&StringLiteral_21630/*"master_mission_weekly"*/, v25);
+    sub_1BE4ACC(&StringLiteral_21629/*"master_mission_special"*/, v26);
+    sub_1BE4ACC(&StringLiteral_21625/*"master_mission_daily"*/, v27);
+    sub_1BE4ACC(&StringLiteral_21627/*"master_mission_extra"*/, v28);
+    sub_1BE4ACC(&StringLiteral_21628/*"master_mission_panel"*/, v29);
+    sub_1BE4ACC(&StringLiteral_1120/*"/"*/, v30);
+    sub_1BE4ACC(&StringLiteral_9359/*"N0"*/, v31);
+    sub_1BE4ACC(&StringLiteral_21626/*"master_mission_event"*/, v32);
+    byte_4B6A738 = 1;
   }
   entity = 0LL;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_121;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_CompleteMissionMaster___);
+  Instance = (__int64)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_CompleteMissionMaster___);
   if ( !disp_info || !MasterData_object )
     goto LABEL_121;
   v36 = (_DWORD)disp_info + 16;
@@ -642,14 +642,14 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
          (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
          &entity,
          disp_info->fields.eventMissionId,
-         (const MethodInfo_31D1F44 *)Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__TryGetEntity__) )
+         (const MethodInfo_31FD818 *)Method_DataMasterBase_EventMissionMaster__EventMissionEntity__int__TryGetEntity__) )
   {
     Instance = (__int64)entity;
     if ( !entity )
       goto LABEL_121;
     monitor = (int)entity[1].monitor;
     IsMasterMission = EventMissionEntity__IsMasterMission((EventMissionEntity_o *)entity, 0LL);
-    Instance = sub_1BD3500(long___TypeInfo, 1LL);
+    Instance = sub_1BE4B74(long___TypeInfo, 1LL);
     if ( !entity )
       goto LABEL_121;
     v34 = Instance;
@@ -739,9 +739,9 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
       (float)disp_info->fields.progressTo / (float)disp_info->fields.condition,
       0LL);
     progressLabel = this->fields.progressLabel;
-    v45 = System_Int32__ToString_63330856((int)disp_info + 44, (System_String_o *)StringLiteral_9351/*"N0"*/, 0LL);
-    v46 = System_Int32__ToString_63330856((int)disp_info + 48, (System_String_o *)StringLiteral_9351/*"N0"*/, 0LL);
-    Instance = (__int64)System_String__Concat_62536508(v45, (System_String_o *)StringLiteral_1120/*"/"*/, v46, 0LL);
+    v45 = System_Int32__ToString_63504416((int)disp_info + 44, (System_String_o *)StringLiteral_9359/*"N0"*/, 0LL);
+    v46 = System_Int32__ToString_63504416((int)disp_info + 48, (System_String_o *)StringLiteral_9359/*"N0"*/, 0LL);
+    Instance = (__int64)System_String__Concat_62710068(v45, (System_String_o *)StringLiteral_1120/*"/"*/, v46, 0LL);
     if ( !progressLabel )
       goto LABEL_121;
     UILabel__set_text(progressLabel, (System_String_o *)Instance, 0LL);
@@ -792,16 +792,16 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
   v55 = frame_out_start_func;
   Instance = (__int64)UnityEngine_Object__Instantiate_object_(
                         clearEffectPrefab,
-                        (const MethodInfo_2FB6C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                        (const MethodInfo_2FDE9E4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Instance )
     goto LABEL_121;
   v56 = (UnityEngine_GameObject_o *)Instance;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)Instance,
-                       (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   this->fields.mClearEffectSimpleAnim = (struct SimpleAnimation_o *)Component_object;
   p_mClearEffectSimpleAnim = &this->fields.mClearEffectSimpleAnim;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.mClearEffectSimpleAnim,
     (int64_t)Component_object,
     v59,
@@ -812,10 +812,10 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
     v64);
   v65 = UnityEngine_GameObject__GetComponent_object_(
           v56,
-          (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+          (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   this->fields.mClearEffectAnim = (struct UnityEngine_Animation_o *)v65;
   p_mClearEffectAnim = &this->fields.mClearEffectAnim;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.mClearEffectAnim, (int64_t)v65, v67, v68, v69, v70, v71, v72);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mClearEffectAnim, (int64_t)v65, v67, v68, v69, v70, v71, v72);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)this->fields.mClearEffectSimpleAnim, 0LL, 0LL) )
   {
     Instance = (__int64)*p_mClearEffectSimpleAnim;
@@ -840,9 +840,9 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
     }
   }
   GameObjectExtensions__SafeSetParent(v56, (UnityEngine_Component_o *)clearSp, 0LL);
-  Instance = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__49817248(
+  Instance = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__49980352(
                         v56,
-                        (const MethodInfo_2F826A0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                        (const MethodInfo_2FAA3C0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
   if ( !Instance )
     goto LABEL_121;
   v75 = *(_DWORD *)(Instance + 24);
@@ -862,7 +862,7 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
         goto LABEL_70;
     }
 LABEL_122:
-    sub_1BD36BC(Instance, v34);
+    sub_1BE4D30(Instance, v34);
   }
 LABEL_70:
   if ( !entity )
@@ -888,12 +888,12 @@ LABEL_89:
   v80 = monitor;
   if ( !EventMissionEntity__IsDirectReward((EventMissionEntity_o *)entity, 0LL) )
     goto LABEL_89;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_121;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_GiftMaster___);
+                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !entity || !Instance )
     goto LABEL_121;
   GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, HIDWORD(entity[5].klass), 0LL);
@@ -902,12 +902,12 @@ LABEL_89:
   v82 = GiftListById;
   if ( !*(_QWORD *)&GiftListById->max_length )
     goto LABEL_89;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_121;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventMissionAddMaster___);
+                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventMissionAddMaster___);
   if ( !entity || !Instance )
     goto LABEL_121;
   v83 = EventMissionAddMaster__GetEventMissionChangeRewardIcon(
@@ -932,7 +932,7 @@ LABEL_89:
     if ( !Instance )
       goto LABEL_121;
     v114 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-    GameObjectExtensions__SetLocalScale_34383188(v114, 0.4, 0.4, 1.0, 0LL);
+    GameObjectExtensions__SetLocalScale_34489076(v114, 0.4, 0.4, 1.0, 0LL);
     goto LABEL_119;
   }
   if ( !v82->max_length )
@@ -940,8 +940,8 @@ LABEL_89:
   v85 = (int32_t *)v82->m_Items[0];
   if ( !v85 || !itemIcon )
 LABEL_121:
-    sub_1BD36B4(Instance, v34);
-  ItemIconComponent__SetGift_38924152(this->fields.itemIcon, v85[5], v85[6], v85[7], 0, 0LL);
+    sub_1BE4D28(Instance, v34);
+  ItemIconComponent__SetGift_39048172(this->fields.itemIcon, v85[5], v85[6], v85[7], 0, 0LL);
 LABEL_119:
   Instance = (__int64)this->fields.itemIcon;
   if ( !Instance )
@@ -961,28 +961,28 @@ LABEL_90:
   v87 = this->fields.noLabel;
   if ( !v87 )
     goto LABEL_121;
-  v88 = System_String__Concat_62525248((System_String_o *)Instance, v87->fields.mText, 0LL);
+  v88 = System_String__Concat_62698808((System_String_o *)Instance, v87->fields.mText, 0LL);
   UnityEngine_Object__set_name(v86, v88, 0LL);
   switch ( v80 )
   {
     case 1:
     case 7:
-      v89 = &StringLiteral_21586/*"master_mission_event"*/;
+      v89 = &StringLiteral_21626/*"master_mission_event"*/;
       goto LABEL_101;
     case 2:
-      v89 = &StringLiteral_21590/*"master_mission_weekly"*/;
+      v89 = &StringLiteral_21630/*"master_mission_weekly"*/;
       goto LABEL_101;
     case 3:
-      v89 = &StringLiteral_21585/*"master_mission_daily"*/;
+      v89 = &StringLiteral_21625/*"master_mission_daily"*/;
       goto LABEL_101;
     case 4:
-      v89 = &StringLiteral_21587/*"master_mission_extra"*/;
+      v89 = &StringLiteral_21627/*"master_mission_extra"*/;
       goto LABEL_101;
     case 5:
-      v89 = &StringLiteral_21589/*"master_mission_special"*/;
+      v89 = &StringLiteral_21629/*"master_mission_special"*/;
       goto LABEL_101;
     case 6:
-      v89 = &StringLiteral_21588/*"master_mission_panel"*/;
+      v89 = &StringLiteral_21628/*"master_mission_panel"*/;
 LABEL_101:
       v90 = (System_String_o *)*v89;
       break;
@@ -1003,7 +1003,7 @@ LABEL_101:
     typeSp = this->fields.typeSp;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI_38642884(monitor_high, typeSp, v90, 0LL);
+    AtlasManager__SetEventUI_38766888(monitor_high, typeSp, v90, 0LL);
   }
   Instance = (__int64)this->fields.typeSp;
   if ( !Instance )
@@ -1014,14 +1014,14 @@ LABEL_101:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   if ( v47 && v80 == 3 )
   {
-    v99 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    v99 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
     Instance = (__int64)System_Int32__ToString(v36, 0LL);
     if ( !v99 )
       goto LABEL_121;
     AdManager__TrackEvent((AdManager_o *)v99, 8, 8, 0, 0, (System_String_o *)Instance, 0LL);
   }
   this->fields.mDragStartAct = drag_start_act;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.mDragStartAct,
     (int64_t)drag_start_act,
     v93,
@@ -1031,7 +1031,7 @@ LABEL_101:
     v97,
     v98);
   this->fields.mFrameOutStartFunc = frame_out_start_func;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.mFrameOutStartFunc,
     (int64_t)frame_out_start_func,
     v100,
@@ -1041,7 +1041,7 @@ LABEL_101:
     v104,
     v105);
   this->fields.mFrameOutEndAct = frame_out_end_act;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.mFrameOutEndAct,
     (int64_t)frame_out_end_act,
     v106,
@@ -1058,16 +1058,16 @@ void __fastcall MissionNotifyComponent__Update(MissionNotifyComponent_o *this, c
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4B3AC9F & 1) == 0 )
+  if ( (byte_4B6A737 & 1) == 0 )
   {
-    sub_1BD3458(&Method_CStateManager_MissionNotifyComponent__update__, method);
-    byte_4B3AC9F = 1;
+    sub_1BE4ACC(&Method_CStateManager_MissionNotifyComponent__update__, method);
+    byte_4B6A737 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_315ED84 *)Method_CStateManager_MissionNotifyComponent__update__);
+      (const MethodInfo_318A658 *)Method_CStateManager_MissionNotifyComponent__update__);
 }
 
 
@@ -1110,27 +1110,27 @@ void __fastcall MissionNotifyComponent_StateFrameIn__begin(
   System_Action_o *v19; // x21
   const MethodInfo *v20; // x4
 
-  if ( (byte_4B3ACA5 & 1) == 0 )
+  if ( (byte_4B6A73D & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, that);
-    sub_1BD3458(&Method_MissionNotifyComponent_StateFrameIn_begin__, v4);
-    sub_1BD3458(&Method_MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0__begin_b__0__, v5);
-    sub_1BD3458(&MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0_TypeInfo, v6);
-    byte_4B3ACA5 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, that);
+    sub_1BE4ACC(&Method_MissionNotifyComponent_StateFrameIn_begin__, v4);
+    sub_1BE4ACC(&Method_MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0__begin_b__0__, v5);
+    sub_1BE4ACC(&MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0_TypeInfo, v6);
+    byte_4B6A73D = 1;
   }
-  v7 = sub_1BD36A4(MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0_TypeInfo);
+  v7 = sub_1BE4D18(MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
     goto LABEL_8;
   *(_QWORD *)(v7 + 16) = that;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)that, v10, v11, v12, v13, v14, v15);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)that, v10, v11, v12, v13, v14, v15);
   v16 = Method_MissionNotifyComponent_StateFrameIn_begin__;
   if ( (*((_BYTE *)Method_MissionNotifyComponent_StateFrameIn_begin__ + 83) & 2) != 0 )
-    v16 = (_QWORD *)sub_1BD3470(Method_MissionNotifyComponent_StateFrameIn_begin__);
-  v17 = (System_Reflection_MethodBase_o *)sub_1BD343C(v16, v16[4]);
+    v16 = (_QWORD *)sub_1BE4AE4(Method_MissionNotifyComponent_StateFrameIn_begin__);
+  v17 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v16, v16[4]);
   OverwriteAssetSoundName__PlayCommonSe(v17, 20, 0LL);
   v18 = *(MissionNotifyComponent_o **)(v7 + 16);
-  v19 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v19,
     (Il2CppObject *)v7,
@@ -1138,7 +1138,7 @@ void __fastcall MissionNotifyComponent_StateFrameIn__begin(
     0LL);
   if ( !v18 )
 LABEL_8:
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   MissionNotifyComponent__FrameInOut(v18, 1, v19, 0, v20);
 }
 
@@ -1178,7 +1178,7 @@ void __fastcall MissionNotifyComponent_StateFrameIn___c__DisplayClass0_0___begin
 
   that = this->fields.that;
   if ( !that )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   MissionNotifyComponent__SetState(that, 2, v2);
 }
 
@@ -1227,22 +1227,22 @@ void __fastcall MissionNotifyComponent_StateFrameOut__begin(
   void *v33; // x19
   unsigned int v34; // w20
 
-  if ( (byte_4B3ACA8 & 1) == 0 )
+  if ( (byte_4B6A740 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, that);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v5);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BD3458(&Method_MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0__begin_b__0__, v7);
-    sub_1BD3458(&MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0_TypeInfo, v8);
-    byte_4B3ACA8 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, that);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___, v5);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BE4ACC(&Method_MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0__begin_b__0__, v7);
+    sub_1BE4ACC(&MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0_TypeInfo, v8);
+    byte_4B6A740 = 1;
   }
-  v9 = sub_1BD36A4(MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_1BE4D18(MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_22;
   *(_QWORD *)(v9 + 16) = that;
   v18 = v9 + 16;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)that, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)that, v12, v13, v14, v15, v16, v17);
   if ( !*(_QWORD *)(v9 + 16) )
     goto LABEL_22;
   v19 = *(_QWORD *)(*(_QWORD *)(v9 + 16) + 216LL);
@@ -1253,7 +1253,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut__begin(
                                              *(_QWORD *)(v19 + 40));
   this->fields.mNextComp = v20;
   p_fields = &this->fields;
-  sub_1BD33FC((PartyOrganizationUtility_o *)p_fields, (int64_t)v20, v22, v23, v24, v25, v26, v27);
+  sub_1BE4A70((PartyOrganizationUtility_o *)p_fields, (int64_t)v20, v22, v23, v24, v25, v26, v27);
   if ( !*(_QWORD *)v18 )
     goto LABEL_22;
   if ( !*(_BYTE *)(*(_QWORD *)v18 + 193LL) )
@@ -1264,7 +1264,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut__begin(
     if ( UnityEngine_Object__op_Equality(mNextComp, 0LL, 0LL) )
     {
       v29 = *(MissionNotifyComponent_o **)(v9 + 16);
-      v30 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+      v30 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
       System_Action___ctor(
         v30,
         (Il2CppObject *)v9,
@@ -1278,12 +1278,12 @@ void __fastcall MissionNotifyComponent_StateFrameOut__begin(
   gameObject = *(void **)v18;
   if ( !*(_QWORD *)v18
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL)) == 0LL
-    || (gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__49817248(
+    || (gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__49980352(
                        (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_2F826A0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___)) == 0LL )
+                       (const MethodInfo_2FAA3C0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___)) == 0LL )
   {
 LABEL_22:
-    sub_1BD36B4(gameObject, v11);
+    sub_1BE4D28(gameObject, v11);
   }
   v32 = *((_DWORD *)gameObject + 6);
   v33 = gameObject;
@@ -1293,7 +1293,7 @@ LABEL_22:
     while ( 1 )
     {
       if ( v34 >= v32 )
-        sub_1BD36BC(gameObject, v11);
+        sub_1BE4D30(gameObject, v11);
       gameObject = (void *)*((_QWORD *)v33 + (int)v34 + 4);
       if ( !gameObject )
         break;
@@ -1312,19 +1312,19 @@ void __fastcall MissionNotifyComponent_StateFrameOut__end(
         MissionNotifyComponent_o *that,
         const MethodInfo *method)
 {
-  if ( (byte_4B3ACAA & 1) == 0 )
+  if ( (byte_4B6A742 & 1) == 0 )
   {
-    this = (MissionNotifyComponent_StateFrameOut_o *)sub_1BD3458(
+    this = (MissionNotifyComponent_StateFrameOut_o *)sub_1BE4ACC(
                                                        &Method_ActionExtensions_Call_MissionNotifyComponent___,
                                                        that);
-    byte_4B3ACAA = 1;
+    byte_4B6A742 = 1;
   }
   if ( !that )
-    sub_1BD36B4(this, that);
+    sub_1BE4D28(this, that);
   ActionExtensions__Call_object_(
     (System_Action_T__o *)that->fields.mFrameOutEndAct,
     (Il2CppObject *)that,
-    (const MethodInfo_2E83E90 *)Method_ActionExtensions_Call_MissionNotifyComponent___);
+    (const MethodInfo_2EAB91C *)Method_ActionExtensions_Call_MissionNotifyComponent___);
 }
 
 
@@ -1372,21 +1372,21 @@ void __fastcall MissionNotifyComponent_StateFrameOut__update(
   const MethodInfo *v40; // x4
   UnityEngine_Vector2_o v41; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B3ACA9 & 1) == 0 )
+  if ( (byte_4B6A741 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, that);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BD3458(&Method_MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0__update_b__0__, v6);
-    sub_1BD3458(&MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4B3ACA9 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, that);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BE4ACC(&Method_MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0__update_b__0__, v6);
+    sub_1BE4ACC(&MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0_TypeInfo, v7);
+    byte_4B6A741 = 1;
   }
-  v8 = sub_1BD36A4(MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0_TypeInfo);
+  v8 = sub_1BE4D18(MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_25;
   *(_QWORD *)(v8 + 16) = that;
   v17 = (__int64 *)(v8 + 16);
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)that, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)that, v11, v12, v13, v14, v15, v16);
   klass = *(_QWORD *)(v8 + 16);
   if ( !klass )
     goto LABEL_25;
@@ -1405,7 +1405,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut__update(
     v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)klass, 0LL);
     v41.fields.x = v21;
     v41.fields.y = v22;
-    GameObjectExtensions__SetLocalPosition_34380800(v23, v41, 0LL);
+    GameObjectExtensions__SetLocalPosition_34486688(v23, v41, 0LL);
     if ( !*v17 )
       goto LABEL_25;
     v24 = *(_QWORD *)(*v17 + 32);
@@ -1443,7 +1443,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut__update(
         return;
       }
 LABEL_25:
-      sub_1BD36B4(klass, v10);
+      sub_1BE4D28(klass, v10);
     }
   }
   else
@@ -1461,9 +1461,9 @@ LABEL_25:
       if ( MissionNotifyComponent__GetState((MissionNotifyComponent_o *)klass, v10) != 1 )
       {
         p_fields->klass = 0LL;
-        sub_1BD33FC(p_fields, 0LL, v32, v33, v34, v35, v36, v37);
+        sub_1BE4A70(p_fields, 0LL, v32, v33, v34, v35, v36, v37);
         v38 = *(MissionNotifyComponent_o **)(v8 + 16);
-        v39 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+        v39 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
         System_Action___ctor(
           v39,
           (Il2CppObject *)v8,
@@ -1495,7 +1495,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut___c__DisplayClass1_0___begi
 
   that = this->fields.that;
   if ( !that )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   MissionNotifyComponent__SetState(that, 0, v2);
 }
 
@@ -1517,7 +1517,7 @@ void __fastcall MissionNotifyComponent_StateFrameOut___c__DisplayClass2_0___upda
 
   that = this->fields.that;
   if ( !that )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   MissionNotifyComponent__SetState(that, 0, v2);
 }
 
@@ -1575,10 +1575,10 @@ void __fastcall MissionNotifyComponent_StateShowing__begin(
   UnityEngine_Object_o *mClearEffectSimpleAnim; // x20
   UnityEngine_Object_o *mClearEffectAnim; // x20
 
-  if ( (byte_4B3ACA6 & 1) == 0 )
+  if ( (byte_4B6A73E & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, that);
-    byte_4B3ACA6 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, that);
+    byte_4B6A73E = 1;
   }
   this->fields.mStartTime = UnityEngine_Time__get_realtimeSinceStartup(0LL);
   if ( !that )
@@ -1602,7 +1602,7 @@ void __fastcall MissionNotifyComponent_StateShowing__begin(
       return;
     }
 LABEL_16:
-    sub_1BD36B4(baseSp, v6);
+    sub_1BE4D28(baseSp, v6);
   }
   mClearEffectAnim = (UnityEngine_Object_o *)that->fields.mClearEffectAnim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1642,7 +1642,7 @@ void __fastcall MissionNotifyComponent_StateShowing__end(
   if ( v5 < v6 )
     x = this->fields.mTouchPosDifOld.fields.x;
   if ( !that )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   v7 = fminf(y, 15.0);
   v8 = y < -15.0;
   v9 = fminf(x, 15.0);
@@ -1680,13 +1680,13 @@ void __fastcall MissionNotifyComponent_StateShowing__update(
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = (float32x2_t *)this;
-  if ( (byte_4B3ACA7 & 1) == 0 )
+  if ( (byte_4B6A73F & 1) == 0 )
   {
-    this = (MissionNotifyComponent_StateShowing_o *)sub_1BD3458(&CTouch_TypeInfo, that);
-    byte_4B3ACA7 = 1;
+    this = (MissionNotifyComponent_StateShowing_o *)sub_1BE4ACC(&CTouch_TypeInfo, that);
+    byte_4B6A73F = 1;
   }
   if ( !that )
-    sub_1BD36B4(this, that);
+    sub_1BE4D28(this, that);
   if ( !that->fields.mIsDragDone )
   {
     if ( that->fields.mIsPress || (float)(UnityEngine_Time__get_realtimeSinceStartup(0LL) - v4[6].n64_f32[0]) < 2.0 )
@@ -1703,7 +1703,7 @@ LABEL_13:
   mCamera = that->fields.mCamera;
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-  v4[2].n64_u64[0] = (unsigned __int64)CTouch__getScreenPosition_47253212(mCamera, 0LL);
+  v4[2].n64_u64[0] = (unsigned __int64)CTouch__getScreenPosition_47415652(mCamera, 0LL);
   if ( UnityEngine_Input__get_touchCount(0LL) > 1 )
     v4[2].n64_u64[0] = v4[3].n64_u64[0];
   v9 = v4[6].n64_i32[1];
@@ -1725,7 +1725,7 @@ LABEL_13:
   v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   v16.fields.x = v13;
   v16.fields.y = v14;
-  GameObjectExtensions__SetLocalPosition_34380800(v15, v16, 0LL);
+  GameObjectExtensions__SetLocalPosition_34486688(v15, v16, 0LL);
   if ( UnityEngine_Input__get_touchCount(0LL) >= 2 )
     goto LABEL_13;
 }
@@ -1750,7 +1750,7 @@ void __fastcall MissionNotifyComponent___c__DisplayClass64_0___FrameInOut_b__0(
   GameObjectExtensions__SetLocalPosition(this->fields.tgt_obj, this->fields.pos_to, 0LL);
   _4__this = this->fields.__4__this;
   if ( !_4__this || (baseSp = _4__this->fields.baseSp) == 0LL )
-    sub_1BD36B4(baseSp, v4);
+    sub_1BE4D28(baseSp, v4);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, float))baseSp->klass->vtable._8_set_alpha.method)(
     baseSp,
     baseSp->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -1791,7 +1791,7 @@ void __fastcall MissionNotifyComponent___c__DisplayClass64_0___FrameInOut_b__1(
   _4__this = v4->fields.__4__this;
   if ( !_4__this || (this = (MissionNotifyComponent___c__DisplayClass64_0_o *)_4__this->fields.baseSp) == 0LL )
 LABEL_5:
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   ((void (__fastcall *)(MissionNotifyComponent___c__DisplayClass64_0_o *, Il2CppClass *, float))this->klass[1]._1.castClass)(
     this,
     this->klass[1]._1.declaringType,

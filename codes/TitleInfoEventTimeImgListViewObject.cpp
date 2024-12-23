@@ -23,22 +23,22 @@ void __fastcall TitleInfoEventTimeImgListViewObject__Init(
   PartyListViewItem_o *v13; // x7
   const MethodInfo *v14; // x2
 
-  if ( (byte_4B35C22 & 1) == 0 )
+  if ( (byte_4B6562E & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___, *(_QWORD *)&state);
-    byte_4B35C22 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___, *(_QWORD *)&state);
+    byte_4B6562E = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1BD33FC((PartyOrganizationUtility_o *)p_itemDraw, (int64_t)Component_object, v8, v9, v10, v11, v12, v13),
+        sub_1BE4A70((PartyOrganizationUtility_o *)p_itemDraw, (int64_t)Component_object, v8, v9, v10, v11, v12, v13),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0LL) )
   {
-    sub_1BD36B4(dispObject, *(_QWORD *)&state);
+    sub_1BE4D28(dispObject, *(_QWORD *)&state);
   }
   TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
 }

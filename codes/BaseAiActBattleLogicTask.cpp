@@ -25,27 +25,27 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  BattleActionData_array **p_interruptActions; // x19
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  BattleActionData_array **p_interruptActions; // x20
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
 
   if ( addAction )
   {
-    p_interruptActions = &this->fields.interruptActions;
     IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.interruptActions, 0LL);
     if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_1BD36B4(IsNullOrEmpty, v7);
+        sub_1BE4D28(IsNullOrEmpty, v7);
+      p_interruptActions = &this->fields.interruptActions;
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_1BD33FC((PartyOrganizationUtility_o *)p_interruptActions, 0LL, v8, v9, v10, v11, v12, v13);
+      sub_1BE4A70((PartyOrganizationUtility_o *)p_interruptActions, 0LL, v9, v10, v11, v12, v13, v14);
     }
   }
 }
@@ -63,7 +63,7 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields.interruptActions = actions;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.interruptActions,
     (int64_t)actions,
     (int64_t)method,

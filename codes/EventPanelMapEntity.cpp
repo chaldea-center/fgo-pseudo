@@ -1,13 +1,13 @@
 void __fastcall EventPanelMapEntity___ctor(EventPanelMapEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B371F1 & 1) == 0 )
+  if ( (byte_4B66C0E & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B371F1 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B66C0E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
 }
 
 

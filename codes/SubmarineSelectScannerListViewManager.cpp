@@ -49,36 +49,36 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
   Il2CppClass **v38; // x0
   DataManager_o *v39; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4B33D9D & 1) == 0 )
+  if ( (byte_4B63787 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v4);
-    sub_1BD3458(&Method_System_Collections_Generic_List_ListViewItem__Add__, v5);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v6);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1BD3458(&SubmarineSelectScannerListViewItem_TypeInfo, v8);
-    sub_1BD3458(&StringLiteral_5818/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v9);
-    byte_4B33D9D = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v4);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v5);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v6);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1BE4ACC(&SubmarineSelectScannerListViewItem_TypeInfo, v8);
+    sub_1BE4ACC(&StringLiteral_5821/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v9);
+    byte_4B63787 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !MasterData_object )
     goto LABEL_25;
   ListByEventId = EventPanelScanMaster__GetListByEventId((EventPanelScanMaster_o *)MasterData_object, eventId, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5818/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5821/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, 0LL);
   v39 = Instance;
   if ( !ListByEventId )
     goto LABEL_25;
@@ -89,7 +89,7 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
     while ( 1 )
     {
       if ( (unsigned int)v15 >= max_length )
-        sub_1BD36BC(Instance, v11);
+        sub_1BE4D30(Instance, v11);
       v16 = ListByEventId->m_Items[v15];
       Instance = (DataManager_o *)EventPanelScanMaster__IsSatisfyReleaseCondition(
                                     (EventPanelScanMaster_o *)MasterData_object,
@@ -112,13 +112,13 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
       }
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       id = v16->fields.id;
-      v22 = sub_1BD36A4(SubmarineSelectScannerListViewItem_TypeInfo);
-      ListViewItem___ctor_41548032((ListViewItem_o *)v22, v15, 0LL);
+      v22 = sub_1BE4D18(SubmarineSelectScannerListViewItem_TypeInfo);
+      ListViewItem___ctor_41686696((ListViewItem_o *)v22, v15, 0LL);
       *(_DWORD *)(v22 + 120) = iconImageId;
       *(_DWORD *)(v22 + 112) = eventId;
       *(_DWORD *)(v22 + 116) = id;
       *(_QWORD *)(v22 + 128) = name;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v22 + 128), name, v23, v24, v25, v26, v27, v28);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v22 + 128), name, v23, v24, v25, v26, v27, v28);
       *(_BYTE *)(v22 + 144) = v17 & 1;
       if ( !itemList )
         break;
@@ -133,21 +133,21 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v22,
-          *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
       }
       else
       {
         v38 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v38[4] = (Il2CppClass *)v22;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v38 + 4), v22, v29, v30, v31, v32, v33, v34);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v38 + 4), v22, v29, v30, v31, v32, v33, v34);
       }
       max_length = ListByEventId->max_length;
       if ( (int)++v15 >= max_length )
         goto LABEL_23;
     }
 LABEL_25:
-    sub_1BD36B4(Instance, v11);
+    sub_1BE4D28(Instance, v11);
   }
 LABEL_23:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0LL);
@@ -171,15 +171,15 @@ void __fastcall SubmarineSelectScannerListViewManager__OnClickListView(
   System_Action_T1__T2__o *OnClickItemAction_k__BackingField; // x8
 
   v4 = this;
-  if ( (byte_4B33D9E & 1) == 0 )
+  if ( (byte_4B63788 & 1) == 0 )
   {
-    sub_1BD3458(&Method_ActionExtensions_Call_int__bool___, obj);
-    this = (SubmarineSelectScannerListViewManager_o *)sub_1BD3458(&SubmarineSelectScannerListViewItem_TypeInfo, v5);
-    byte_4B33D9E = 1;
+    sub_1BE4ACC(&Method_ActionExtensions_Call_int__bool___, obj);
+    this = (SubmarineSelectScannerListViewManager_o *)sub_1BE4ACC(&SubmarineSelectScannerListViewItem_TypeInfo, v5);
+    byte_4B63788 = 1;
   }
   if ( !obj )
 LABEL_11:
-    sub_1BD36B4(this, obj);
+    sub_1BE4D28(this, obj);
   linkItem = obj->fields.linkItem;
   if ( !linkItem )
     return;
@@ -187,7 +187,7 @@ LABEL_11:
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (SubmarineSelectScannerListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != SubmarineSelectScannerListViewItem_TypeInfo )
   {
-    sub_1BD3974(linkItem);
+    sub_1BE4FE8(linkItem);
     goto LABEL_11;
   }
   OnClickItemAction_k__BackingField = (System_Action_T1__T2__o *)v4->fields._OnClickItemAction_k__BackingField;
@@ -196,7 +196,7 @@ LABEL_11:
       OnClickItemAction_k__BackingField,
       HIDWORD(linkItem[1].klass),
       linkItem[1].fields.sortValue0,
-      (const MethodInfo_2E840CC *)Method_ActionExtensions_Call_int__bool___);
+      (const MethodInfo_2EABB58 *)Method_ActionExtensions_Call_int__bool___);
 }
 
 
@@ -220,7 +220,7 @@ void __fastcall SubmarineSelectScannerListViewManager__set_OnClickItemAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickItemAction_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._OnClickItemAction_k__BackingField,
     (int64_t)value,
     (int64_t)method,

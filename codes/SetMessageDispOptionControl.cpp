@@ -16,25 +16,25 @@ void __fastcall SetMessageDispOptionControl__Init(SetMessageDispOptionControl_o 
   UILabel_o *infoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4B325DB & 1) == 0 )
+  if ( (byte_4B61F7E & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, method);
-    sub_1BD3458(&OptionManager_TypeInfo, v3);
-    sub_1BD3458(&StringLiteral_9809/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
-    sub_1BD3458(&StringLiteral_9810/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
-    byte_4B325DB = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
+    sub_1BE4ACC(&OptionManager_TypeInfo, v3);
+    sub_1BE4ACC(&StringLiteral_9818/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
+    sub_1BE4ACC(&StringLiteral_9819/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
+    byte_4B61F7E = 1;
   }
   dispTitle = this->fields.dispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9809/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9818/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
   if ( !dispTitle
     || (UILabel__set_text(dispTitle, v7, 0LL),
         infoLb = this->fields.infoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9810/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9819/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
         !infoLb) )
   {
-    sub_1BD36B4(v7, v8);
+    sub_1BE4D28(v7, v8);
   }
   UILabel__set_text(infoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -50,15 +50,15 @@ void __fastcall SetMessageDispOptionControl__OnChangeBtn(SetMessageDispOptionCon
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B325DE & 1) == 0 )
+  if ( (byte_4B61F81 & 1) == 0 )
   {
-    sub_1BD3458(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
-    byte_4B325DE = 1;
+    sub_1BE4ACC(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
+    byte_4B61F81 = 1;
   }
   v3 = Method_SetMessageDispOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetMessageDispOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BD3470(Method_SetMessageDispOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BE4AE4(Method_SetMessageDispOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isDisp, 0LL);
   this->fields.isDisp ^= 1u;
   SetMessageDispOptionControl__setDispValue(this, v5);
@@ -69,10 +69,10 @@ void __fastcall SetMessageDispOptionControl__Reflection(SetMessageDispOptionCont
 {
   _BOOL4 isDisp; // w19
 
-  if ( (byte_4B325DD & 1) == 0 )
+  if ( (byte_4B61F80 & 1) == 0 )
   {
-    sub_1BD3458(&OptionManager_TypeInfo, method);
-    byte_4B325DD = 1;
+    sub_1BE4ACC(&OptionManager_TypeInfo, method);
+    byte_4B61F80 = 1;
   }
   isDisp = this->fields.isDisp;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -89,18 +89,18 @@ void __fastcall SetMessageDispOptionControl__setDispValue(
   UIButton_o *switchButton; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4B325DC & 1) == 0 )
+  if ( (byte_4B61F7F & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_17729/*"btn_on"*/, method);
-    sub_1BD3458(&StringLiteral_17728/*"btn_off"*/, v3);
-    byte_4B325DC = 1;
+    sub_1BE4ACC(&StringLiteral_17750/*"btn_on"*/, method);
+    sub_1BE4ACC(&StringLiteral_17749/*"btn_off"*/, v3);
+    byte_4B61F7F = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   if ( this->fields.isDisp )
-    v5 = &StringLiteral_17729/*"btn_on"*/;
+    v5 = &StringLiteral_17750/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17728/*"btn_off"*/;
+    v5 = &StringLiteral_17749/*"btn_off"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v5, 0LL);
 }

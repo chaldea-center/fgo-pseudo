@@ -1,9 +1,9 @@
 void __fastcall SummonHistoryListViewObject___ctor(SummonHistoryListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B33830 & 1) == 0 )
+  if ( (byte_4B63203 & 1) == 0 )
   {
-    sub_1BD3458(&ListViewObject_TypeInfo, method);
-    byte_4B33830 = 1;
+    sub_1BE4ACC(&ListViewObject_TypeInfo, method);
+    byte_4B63203 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void __fastcall SummonHistoryListViewObject__Awake(SummonHistoryListViewObject_o
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B3382E & 1) == 0 )
+  if ( (byte_4B63201 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___, method);
-    byte_4B3382E = 1;
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___, method);
+    byte_4B63201 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BD36B4(0LL, v3);
+    sub_1BE4D28(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
+                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_SummonHistoryListViewItemDraw___);
   this->fields.itemDraw = (struct SummonHistoryListViewItemDraw_o *)Component_object;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -51,11 +51,11 @@ void __fastcall SummonHistoryListViewObject__SetupDisp(SummonHistoryListViewObje
   const MethodInfo *v9; // x2
   SummonHistoryListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4B3382F & 1) == 0 )
+  if ( (byte_4B63202 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&SummonHistoryListViewItem_TypeInfo, v3);
-    byte_4B3382F = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&SummonHistoryListViewItem_TypeInfo, v3);
+    byte_4B63202 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -79,7 +79,7 @@ void __fastcall SummonHistoryListViewObject__SetupDisp(SummonHistoryListViewObje
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BD36B4(0LL, v8);
+      sub_1BE4D28(0LL, v8);
     SummonHistoryListViewItemDraw__SetItem(v10, (SummonHistoryListViewItem_o *)v6, v9);
   }
 }

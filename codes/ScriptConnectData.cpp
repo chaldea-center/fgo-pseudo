@@ -33,7 +33,7 @@ void __fastcall ScriptConnectData___ctor(
   v12 = this;
   v13 = isView;
   this->fields.ConnectPath = connectPath;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)this,
     (int64_t)connectPath,
     (int64_t)objectPath,
@@ -43,9 +43,9 @@ void __fastcall ScriptConnectData___ctor(
     (FollowerInfo_o *)isView,
     (PartyListViewItem_o *)method);
   v12->fields.ObjectPath = objectPath;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v12->fields.ObjectPath, (int64_t)objectPath, v14, v15, v16, v17, v18, v19);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v12->fields.ObjectPath, (int64_t)objectPath, v14, v15, v16, v17, v18, v19);
   v12->fields.EndCallback = endCallback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v12->fields.EndCallback,
     (int64_t)endCallback,
     v20,
@@ -56,7 +56,7 @@ void __fastcall ScriptConnectData___ctor(
     v25);
   v12->fields.ErrorCallback = errorCallback;
   v12 = (ScriptConnectData_o *)((char *)v12 + 24);
-  sub_1BD33FC((PartyOrganizationUtility_o *)v12, (int64_t)errorCallback, v26, v27, v28, v29, v30, v31);
+  sub_1BE4A70((PartyOrganizationUtility_o *)v12, (int64_t)errorCallback, v26, v27, v28, v29, v30, v31);
   LODWORD(v12->fields.ObjectPath) = jumpLine;
   BYTE4(v12->fields.ObjectPath) = v13;
   BYTE5(v12->fields.ObjectPath) = 0;

@@ -17,16 +17,16 @@ void __fastcall BgmPlayArgs___ctor(
   float value; // s0
   BgmManager_c *v20; // x0
 
-  if ( (byte_4B367B7 & 1) == 0 )
+  if ( (byte_4B661D0 & 1) == 0 )
   {
-    sub_1BD3458(&BgmManager_TypeInfo, bgmName);
-    sub_1BD3458(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_1BD3458(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4B367B7 = 1;
+    sub_1BE4ACC(&BgmManager_TypeInfo, bgmName);
+    sub_1BE4ACC(&Method_System_Nullable_float__GetValueOrDefault__, v11);
+    sub_1BE4ACC(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4B661D0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)bgmName, v13, v14, v15, v16, v17, v18);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)bgmName, v13, v14, v15, v16, v17, v18);
   if ( volume.fields.hasValue )
   {
     value = volume.fields.value;
@@ -66,18 +66,18 @@ void __fastcall BgmPlayArgs__Update(
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4B367B8 & 1) == 0 )
+  if ( (byte_4B661D1 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Nullable_float__GetValueOrDefault__, volume);
-    sub_1BD3458(&Method_System_Nullable_long__GetValueOrDefault__, v10);
-    sub_1BD3458(&Method_System_Nullable_long__get_HasValue__, v11);
-    this = (BgmPlayArgs_o *)sub_1BD3458(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4B367B8 = 1;
+    sub_1BE4ACC(&Method_System_Nullable_float__GetValueOrDefault__, volume);
+    sub_1BE4ACC(&Method_System_Nullable_long__GetValueOrDefault__, v10);
+    sub_1BE4ACC(&Method_System_Nullable_long__get_HasValue__, v11);
+    this = (BgmPlayArgs_o *)sub_1BE4ACC(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4B661D1 = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BD36B4)(this, volume);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BE4D28)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -129,7 +129,7 @@ void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *v
   PartyListViewItem_o *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 

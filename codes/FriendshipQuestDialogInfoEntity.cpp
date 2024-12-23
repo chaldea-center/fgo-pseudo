@@ -2,14 +2,14 @@ void __fastcall FriendshipQuestDialogInfoEntity___ctor(
         FriendshipQuestDialogInfoEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B373D8 & 1) == 0 )
+  if ( (byte_4B66DF9 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B373D8 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B66DF9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,15 +19,15 @@ System_String_o *__fastcall FriendshipQuestDialogInfoEntity__CreatePK(
         int32_t questId,
         const MethodInfo *method)
 {
-  if ( (byte_4B373D7 & 1) == 0 )
+  if ( (byte_4B66DF8 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questId);
-    byte_4B373D7 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questId);
+    byte_4B66DF8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            questId,
-           (const MethodInfo_2F2F8A8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,10 +41,10 @@ System_String_o *__fastcall FriendshipQuestDialogInfoEntity__CreatePrimaryKey(
   const MethodInfo *v6; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
-  if ( (byte_4B373D6 & 1) == 0 )
+  if ( (byte_4B66DF7 & 1) == 0 )
   {
-    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4B373D6 = 1;
+    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_4B66DF7 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -52,6 +52,6 @@ System_String_o *__fastcall FriendshipQuestDialogInfoEntity__CreatePrimaryKey(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v4;
   *(_QWORD *)&v8.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(v8, 0LL);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v8, 0LL);
   return FriendshipQuestDialogInfoEntity__CreatePK(v5, this->fields.questId, v6);
 }

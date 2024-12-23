@@ -6,10 +6,10 @@ void __fastcall MoveAnimationComponent___ctor(MoveAnimationComponent_o *this, co
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4B31941 )
+  if ( !byte_4B612E1 )
   {
-    sub_1BD3458(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B31941 = 1;
+    sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4B612E1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -65,12 +65,12 @@ void __fastcall MoveAnimationComponent__PlayAnimation(
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
   v10.fields.x = p_endPosition->fields.x;
-  MoveAnimationComponent__PlayAnimation_46057784(this, animationType, v10, v11, onFinish, method);
+  MoveAnimationComponent__PlayAnimation_46220188(this, animationType, v10, v11, onFinish, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MoveAnimationComponent__PlayAnimation_46057784(
+void __fastcall MoveAnimationComponent__PlayAnimation_46220188(
         MoveAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromPosition,
@@ -99,10 +99,10 @@ void __fastcall MoveAnimationComponent__PlayAnimation_46057784(
   v10 = fromPosition.fields.z;
   v11 = fromPosition.fields.y;
   v12 = fromPosition.fields.x;
-  if ( (byte_4B3ACC1 & 1) == 0 )
+  if ( (byte_4B6A75A & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-    byte_4B3ACC1 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
+    byte_4B6A75A = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -114,7 +114,7 @@ void __fastcall MoveAnimationComponent__PlayAnimation_46057784(
     || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL )
   {
 LABEL_16:
-    sub_1BD36B4(transform, v17);
+    sub_1BE4D28(transform, v17);
   }
   v20.fields.x = v12;
   v20.fields.y = v11;
@@ -176,7 +176,7 @@ void __fastcall MoveAnimationComponent__SetBeginWorldPosition(
         (Target = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0LL)) == 0LL)
     || (Target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(Target, 0LL)) == 0LL )
   {
-    sub_1BD36B4(Target, v8);
+    sub_1BE4D28(Target, v8);
   }
   this->fields.beginPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Target, 0LL);
 }

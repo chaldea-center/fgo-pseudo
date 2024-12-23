@@ -17,25 +17,25 @@ void __fastcall BuffAggregationArgs___cctor(const MethodInfo *method)
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B396D5 & 1) == 0 )
+  if ( (byte_4B6913E & 1) == 0 )
   {
-    sub_1BD3458(&BuffAggregationArgs_TypeInfo, v1);
-    byte_4B396D5 = 1;
+    sub_1BE4ACC(&BuffAggregationArgs_TypeInfo, v1);
+    byte_4B6913E = 1;
   }
-  v2 = sub_1BD36A4(BuffAggregationArgs_TypeInfo);
+  v2 = sub_1BE4D18(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v2 + 16) = 1;
   *(_BYTE *)(v2 + 18) = 1;
   System_Object___ctor((Il2CppObject *)v2, 0LL);
   *(_WORD *)(v2 + 16) = 256;
   BuffAggregationArgs_TypeInfo->static_fields->DisplaySet = (struct BuffAggregationArgs_o *)v2;
-  sub_1BD33FC((PartyOrganizationUtility_o *)BuffAggregationArgs_TypeInfo->static_fields, v2, v3, v4, v5, v6, v7, v8);
-  v9 = sub_1BD36A4(BuffAggregationArgs_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)BuffAggregationArgs_TypeInfo->static_fields, v2, v3, v4, v5, v6, v7, v8);
+  v9 = sub_1BE4D18(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v9 + 16) = 1;
   *(_BYTE *)(v9 + 18) = 1;
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   static_fields = BuffAggregationArgs_TypeInfo->static_fields;
   static_fields->LogicSet = (struct BuffAggregationArgs_o *)v9;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->LogicSet, v9, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->LogicSet, v9, v11, v12, v13, v14, v15, v16);
 }
 
 

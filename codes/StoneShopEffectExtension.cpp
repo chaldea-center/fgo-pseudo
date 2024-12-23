@@ -9,26 +9,26 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
   System_Enum_o v10; // [xsp+8h] [xbp-38h] BYREF
   int32_t v11; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4B3618D & 1) == 0 )
+  if ( (byte_4B65BA4 & 1) == 0 )
   {
-    sub_1BD3458(&StoneShopEffect_Kind_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_6467/*"ExtendFriendMax"*/, v3);
-    sub_1BD3458(&StringLiteral_3263/*"BattleContinue"*/, v4);
-    sub_1BD3458(&StringLiteral_6468/*"ExtendServantEquipMax"*/, v5);
-    sub_1BD3458(&StringLiteral_2412/*"ApRecover"*/, v6);
-    sub_1BD3458(&StringLiteral_6469/*"ExtendServantMax"*/, v7);
-    byte_4B3618D = 1;
+    sub_1BE4ACC(&StoneShopEffect_Kind_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_6470/*"ExtendFriendMax"*/, v3);
+    sub_1BE4ACC(&StringLiteral_3264/*"BattleContinue"*/, v4);
+    sub_1BE4ACC(&StringLiteral_6471/*"ExtendServantEquipMax"*/, v5);
+    sub_1BE4ACC(&StringLiteral_2413/*"ApRecover"*/, v6);
+    sub_1BE4ACC(&StringLiteral_6472/*"ExtendServantMax"*/, v7);
+    byte_4B65BA4 = 1;
   }
   if ( this <= 10 )
   {
     if ( this == 1 )
     {
-      v8 = &StringLiteral_3263/*"BattleContinue"*/;
+      v8 = &StringLiteral_3264/*"BattleContinue"*/;
       return (System_String_o *)*v8;
     }
     if ( this == 2 )
     {
-      v8 = &StringLiteral_2412/*"ApRecover"*/;
+      v8 = &StringLiteral_2413/*"ApRecover"*/;
       return (System_String_o *)*v8;
     }
 LABEL_16:
@@ -39,16 +39,16 @@ LABEL_16:
   }
   if ( this == 11 )
   {
-    v8 = &StringLiteral_6467/*"ExtendFriendMax"*/;
+    v8 = &StringLiteral_6470/*"ExtendFriendMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this == 12 )
   {
-    v8 = &StringLiteral_6469/*"ExtendServantMax"*/;
+    v8 = &StringLiteral_6472/*"ExtendServantMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this != 13 )
     goto LABEL_16;
-  v8 = &StringLiteral_6468/*"ExtendServantEquipMax"*/;
+  v8 = &StringLiteral_6471/*"ExtendServantEquipMax"*/;
   return (System_String_o *)*v8;
 }

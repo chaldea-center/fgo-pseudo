@@ -23,10 +23,10 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      sub_1BD36B4(0LL, v13);
+      sub_1BE4D28(0LL, v13);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   }
   return !isActiveAndEnabled;
@@ -46,10 +46,10 @@ void __fastcall WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onClickCallback = 0LL;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.onClickCallback, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.onClickCallback, 0LL, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -72,7 +72,7 @@ void __fastcall WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject
       onClickCallback->fields.original_method_info,
       *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_1BD33FC(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_1BE4A70(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -95,7 +95,7 @@ void __fastcall WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObjec
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_1BD33FC(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_1BE4A70(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
     }
   }
 }
@@ -122,7 +122,7 @@ void __fastcall WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (PartyOrganizationUtility_c *)callback;
-      sub_1BD33FC(p_onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
+      sub_1BE4A70(p_onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
     }
   }
 }

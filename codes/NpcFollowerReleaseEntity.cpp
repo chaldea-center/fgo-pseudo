@@ -1,13 +1,13 @@
 void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37586 & 1) == 0 )
+  if ( (byte_4B66FB3 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B37586 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B66FB3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31D1D68 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4B37584 & 1) == 0 )
+  if ( (byte_4B66FB1 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
-    byte_4B37584 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
+    byte_4B66FB1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_2F2FEF4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2F57980 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -53,10 +53,10 @@ bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *t
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4B37585 & 1) == 0 )
+  if ( (byte_4B66FB2 & 1) == 0 )
   {
-    sub_1BD3458(&CondType_TypeInfo, method);
-    byte_4B37585 = 1;
+    sub_1BE4ACC(&CondType_TypeInfo, method);
+    byte_4B66FB2 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

@@ -1,26 +1,26 @@
 void __fastcall FGOSequenceManager___ctor(FGOSequenceManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3893D & 1) == 0 )
+  if ( (byte_4B6838B & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_FGOSequenceManager___ctor__, method);
-    byte_4B3893D = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_FGOSequenceManager___ctor__, method);
+    byte_4B6838B = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_37FE060 *)Method_SingletonMonoBehaviour_FGOSequenceManager___ctor__);
+    (const MethodInfo_38291E0 *)Method_SingletonMonoBehaviour_FGOSequenceManager___ctor__);
 }
 
 
 void __fastcall FGOSequenceManager__Awake(FGOSequenceManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B38936 & 1) == 0 )
+  if ( (byte_4B68384 & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_FGOSequenceManager__Awake__, method);
-    byte_4B38936 = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_FGOSequenceManager__Awake__, method);
+    byte_4B68384 = 1;
   }
   SingletonMonoBehaviour_object___Awake(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_37FDF6C *)Method_SingletonMonoBehaviour_FGOSequenceManager__Awake__);
+    (const MethodInfo_38290EC *)Method_SingletonMonoBehaviour_FGOSequenceManager__Awake__);
 }
 
 
@@ -54,20 +54,20 @@ void __fastcall FGOSequenceManager__ChangeBg(
   v12 = pos.fields.z;
   v13 = pos.fields.y;
   v14 = pos.fields.x;
-  if ( (byte_4B3893C & 1) == 0 )
+  if ( (byte_4B6838A & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, name);
-    byte_4B3893C = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, name);
+    byte_4B6838A = 1;
   }
   result = 0;
   if ( !System_Int32__TryParse(bgType, &result, 0LL) )
     result = 0;
   if ( !this->fields.isEditorMode )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
     v20 = System_Int32__Parse(name, 0LL);
     if ( !Instance )
-      sub_1BD36B4(v20, v21);
+      sub_1BE4D28(v20, v21);
     v23.fields.x = v14;
     v23.fields.y = v13;
     v23.fields.z = v12;
@@ -94,22 +94,22 @@ void __fastcall FGOSequenceManager__InitNoblePhantasm(FGOSequenceManager_o *this
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B38939 & 1) == 0 )
+  if ( (byte_4B68387 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_ForceDisableObject___, method);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B38939 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_ForceDisableObject___, method);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B68387 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_ForceDisableObject___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_ForceDisableObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0LL);
   if ( v5 )
   {
     if ( !Component_object )
-      sub_1BD36B4(v5, v6);
+      sub_1BE4D28(v5, v6);
     ForceDisableObject__DisableAllObjects((ForceDisableObject_o *)Component_object, 0LL);
   }
 }
@@ -117,10 +117,10 @@ void __fastcall FGOSequenceManager__InitNoblePhantasm(FGOSequenceManager_o *this
 
 void __fastcall FGOSequenceManager__SetupSound(FGOSequenceManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B38938 & 1) == 0 )
+  if ( (byte_4B68386 & 1) == 0 )
   {
-    sub_1BD3458(&SoundManager_TypeInfo, method);
-    byte_4B38938 = 1;
+    sub_1BE4ACC(&SoundManager_TypeInfo, method);
+    byte_4B68386 = 1;
   }
   if ( this->fields.isEditorMode && !this->fields.isInitialized )
   {
@@ -143,10 +143,10 @@ UnityEngine_Transform_o *__fastcall FGOSequenceManager__getCameraTransform(
   UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B3893A & 1) == 0 )
+  if ( (byte_4B68388 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, name);
-    byte_4B3893A = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, name);
+    byte_4B68388 = 1;
   }
   cameraPos = (UnityEngine_Object_o *)this->fields.cameraPos;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -155,7 +155,7 @@ UnityEngine_Transform_o *__fastcall FGOSequenceManager__getCameraTransform(
     FGOSequenceManager__setup(this, v6);
   v7 = this->fields.cameraPos;
   if ( !v7 )
-    sub_1BD36B4(0LL, v6);
+    sub_1BE4D28(0LL, v6);
   transform = UnityEngine_GameObject__get_transform(v7, 0LL);
   return TransformHelper__getNodeFromName(transform, name, 0, v9);
 }
@@ -180,10 +180,10 @@ UnityEngine_Transform_o *__fastcall FGOSequenceManager__getCharacterPosition(
   UnityEngine_Transform_o *v16; // x0
   const MethodInfo *v17; // x3
 
-  if ( (byte_4B3893B & 1) == 0 )
+  if ( (byte_4B68389 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, name);
-    byte_4B3893B = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, name);
+    byte_4B68389 = 1;
   }
   fieldPos = (UnityEngine_Object_o *)this->fields.fieldPos;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -203,7 +203,7 @@ UnityEngine_Transform_o *__fastcall FGOSequenceManager__getCharacterPosition(
   uniqueFieldPosArray = this->fields.uniqueFieldPosArray;
   if ( !uniqueFieldPosArray )
 LABEL_25:
-    sub_1BD36B4(v7, v6);
+    sub_1BE4D28(v7, v6);
   v12 = uniqueFieldPosArray->max_length - 1;
   if ( (v12 & 0x80000000) != 0 )
     return 0LL;
@@ -211,7 +211,7 @@ LABEL_25:
   {
     if ( v12 >= uniqueFieldPosArray->max_length )
 LABEL_28:
-      sub_1BD36BC(v7, v6);
+      sub_1BE4D30(v7, v6);
     v13 = v12;
     v14 = (UnityEngine_Object_o *)uniqueFieldPosArray->m_Items[v12];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -284,8 +284,8 @@ void __fastcall FGOSequenceManager__setup(FGOSequenceManager_o *this, const Meth
   Il2CppObject *Instance; // x0
   __int64 v23; // x1
   Il2CppClass *klass; // x8
-  const MethodInfo *v25; // x8
-  InvokerMethod invoker_method; // x8
+  Il2CppMethodPointer methodPtr; // x8
+  __int64 v26; // x8
   struct UnityEngine_GameObject_array *v27; // x0
   struct UnityEngine_GameObject_array **p_uniqueFieldPosArray; // x19
   int64_t v29; // x2
@@ -309,40 +309,40 @@ void __fastcall FGOSequenceManager__setup(FGOSequenceManager_o *this, const Meth
   PartyListViewItem_o *v47; // x7
   int v48; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B38937 & 1) == 0 )
+  if ( (byte_4B68385 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_GameObject___TypeInfo, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v3);
-    sub_1BD3458(&StringLiteral_11551/*"RootCameraPrefab"*/, v4);
-    sub_1BD3458(&StringLiteral_6799/*"FieldMotionPrefab"*/, v5);
-    sub_1BD3458(&StringLiteral_785/*"(motion)"*/, v6);
-    sub_1BD3458(&StringLiteral_6800/*"FieldMotionPrefab(common)"*/, v7);
-    byte_4B38937 = 1;
+    sub_1BE4ACC(&UnityEngine_GameObject___TypeInfo, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v3);
+    sub_1BE4ACC(&StringLiteral_11564/*"RootCameraPrefab"*/, v4);
+    sub_1BE4ACC(&StringLiteral_6803/*"FieldMotionPrefab"*/, v5);
+    sub_1BE4ACC(&StringLiteral_785/*"(motion)"*/, v6);
+    sub_1BE4ACC(&StringLiteral_6804/*"FieldMotionPrefab(common)"*/, v7);
+    byte_4B68385 = 1;
   }
   v48 = 0;
-  v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11551/*"RootCameraPrefab"*/, 0LL);
+  v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11564/*"RootCameraPrefab"*/, 0LL);
   this->fields.cameraPos = v8;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.cameraPos, (int64_t)v8, v9, v10, v11, v12, v13, v14);
-  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6800/*"FieldMotionPrefab(common)"*/, 0LL);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.cameraPos, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6804/*"FieldMotionPrefab(common)"*/, 0LL);
   this->fields.fieldPos = v15;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.fieldPos, (int64_t)v15, v16, v17, v18, v19, v20, v21);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.fieldPos, (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   klass = Instance[5].klass;
   if ( !klass
-    || (v25 = klass->vtable[20].method) == 0LL
-    || (invoker_method = v25->invoker_method) == 0LL
-    || (v27 = (struct UnityEngine_GameObject_array *)sub_1BD3500(
+    || (methodPtr = klass->vtable[21].methodPtr) == 0LL
+    || (v26 = *((_QWORD *)methodPtr + 2)) == 0
+    || (v27 = (struct UnityEngine_GameObject_array *)sub_1BE4B74(
                                                        UnityEngine_GameObject___TypeInfo,
-                                                       (unsigned int)(*((_DWORD *)invoker_method + 6) - 1)),
+                                                       (unsigned int)(*(_DWORD *)(v26 + 24) - 1)),
         this->fields.uniqueFieldPosArray = v27,
         p_uniqueFieldPosArray = &this->fields.uniqueFieldPosArray,
-        sub_1BD33FC((PartyOrganizationUtility_o *)p_uniqueFieldPosArray, (int64_t)v27, v29, v30, v31, v32, v33, v34),
+        sub_1BE4A70((PartyOrganizationUtility_o *)p_uniqueFieldPosArray, (int64_t)v27, v29, v30, v31, v32, v33, v34),
         (v35 = *p_uniqueFieldPosArray) == 0LL) )
   {
 LABEL_12:
-    sub_1BD36B4(Instance, v23);
+    sub_1BE4D28(Instance, v23);
   }
   v36 = 0LL;
   v37 = 32LL;
@@ -350,16 +350,16 @@ LABEL_12:
   {
     v48 = v36 + 1;
     v38 = System_Int32__ToString((int32_t)&v48, 0LL);
-    v39 = System_String__Concat_62536508(
-            (System_String_o *)StringLiteral_6799/*"FieldMotionPrefab"*/,
+    v39 = System_String__Concat_62710068(
+            (System_String_o *)StringLiteral_6803/*"FieldMotionPrefab"*/,
             v38,
             (System_String_o *)StringLiteral_785/*"(motion)"*/,
             0LL);
     v40 = UnityEngine_GameObject__Find(v39, 0LL);
     if ( v36 >= v35->max_length )
-      sub_1BD36BC(v40, v41);
+      sub_1BE4D30(v40, v41);
     *(Il2CppClass **)((char *)&v35->obj.klass + v37) = (Il2CppClass *)v40;
-    sub_1BD33FC((PartyOrganizationUtility_o *)((char *)v35 + v37), (int64_t)v40, v42, v43, v44, v45, v46, v47);
+    sub_1BE4A70((PartyOrganizationUtility_o *)((char *)v35 + v37), (int64_t)v40, v42, v43, v44, v45, v46, v47);
     v35 = *p_uniqueFieldPosArray;
     v37 += 8LL;
     ++v36;

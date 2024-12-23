@@ -23,10 +23,10 @@ void __fastcall TerminalBoardOptionTextData___ctor(
   v10 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v10->fields._ForwardText_k__BackingField = forwardText;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v10->fields, (int64_t)forwardText, v11, v12, v13, v14, v15, v16);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v10->fields, (int64_t)forwardText, v11, v12, v13, v14, v15, v16);
   v10->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v10 = (TerminalBoardOptionTextData_o *)((char *)v10 + 32);
-  sub_1BD33FC((PartyOrganizationUtility_o *)v10, (int64_t)behindTextFormat, v17, v18, v19, v20, v21, v22);
+  sub_1BE4A70((PartyOrganizationUtility_o *)v10, (int64_t)behindTextFormat, v17, v18, v19, v20, v21, v22);
   LODWORD(v10->monitor) = itemImageId;
   BYTE4(v10->monitor) = isLeft;
 }
@@ -53,14 +53,14 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
   PartyListViewItem_o *v18; // x7
 
   if ( !args )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   v10 = *(_QWORD *)&args->max_length;
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
   if ( v10 )
   {
-    v12 = System_String__Format_62539756(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
+    v12 = System_String__Format_62713316(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
     this->fields._BehindText_k__BackingField = v12;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields._BehindText_k__BackingField,
       (int64_t)v12,
       v13,
@@ -73,7 +73,7 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields._BehindText_k__BackingField,
       (int64_t)BehindTextFormat_k__BackingField,
       (int64_t)method,
@@ -136,7 +136,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindText(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._BehindText_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -160,7 +160,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -184,7 +184,7 @@ void __fastcall TerminalBoardOptionTextData__set_ForwardText(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 

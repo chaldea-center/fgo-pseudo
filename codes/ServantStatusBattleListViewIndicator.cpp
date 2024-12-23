@@ -31,11 +31,11 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
 
-  if ( (byte_4B329DA & 1) == 0 )
+  if ( (byte_4B62AD2 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&Method_ServantStatusBattleListViewIndicator_OnClickBottom__, v3);
-    byte_4B329DA = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&Method_ServantStatusBattleListViewIndicator_OnClickBottom__, v3);
+    byte_4B62AD2 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,8 +51,8 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
     {
       v8 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickBottom__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1BD3470(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1BD343C(v8, v8[4]);
+        v8 = (_QWORD *)sub_1BE4AE4(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 7, 0LL);
       v6 = this->fields.manager;
       if ( v6 )
@@ -72,8 +72,8 @@ LABEL_20:
     {
       v13 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickBottom__ + 83) & 2) != 0 )
-        v13 = (_QWORD *)sub_1BD3470(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
-      v14 = (System_Reflection_MethodBase_o *)sub_1BD343C(v13, v13[4]);
+        v13 = (_QWORD *)sub_1BE4AE4(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
+      v14 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v13, v13[4]);
       OverwriteAssetSoundName__PlaySystemSe(v14, 7, 0LL);
       v6 = this->fields.manager;
       if ( v6 )
@@ -83,7 +83,7 @@ LABEL_20:
         goto LABEL_20;
       }
 LABEL_22:
-      sub_1BD36B4(v6, v5);
+      sub_1BE4D28(v6, v5);
     }
   }
 }
@@ -105,11 +105,11 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
   _QWORD *v12; // x0
   System_Reflection_MethodBase_o *v13; // x0
 
-  if ( (byte_4B329D9 & 1) == 0 )
+  if ( (byte_4B62AD1 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&Method_ServantStatusBattleListViewIndicator_OnClickTop__, v3);
-    byte_4B329D9 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&Method_ServantStatusBattleListViewIndicator_OnClickTop__, v3);
+    byte_4B62AD1 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -124,8 +124,8 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
     {
       v7 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickTop__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1BD3470(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1BD343C(v7, v7[4]);
+        v7 = (_QWORD *)sub_1BE4AE4(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0LL);
       v6 = this->fields.manager;
       if ( v6 )
@@ -145,8 +145,8 @@ LABEL_19:
     {
       v12 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickTop__ + 83) & 2) != 0 )
-        v12 = (_QWORD *)sub_1BD3470(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
-      v13 = (System_Reflection_MethodBase_o *)sub_1BD343C(v12, v12[4]);
+        v12 = (_QWORD *)sub_1BE4AE4(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
+      v13 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v12, v12[4]);
       OverwriteAssetSoundName__PlaySystemSe(v13, 7, 0LL);
       v6 = this->fields.manager;
       if ( v6 )
@@ -156,12 +156,13 @@ LABEL_19:
         goto LABEL_19;
       }
 LABEL_21:
-      sub_1BD36B4(v6, v5);
+      sub_1BE4D28(v6, v5);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
         ServantStatusBattleListViewIndicator_o *this,
         ListViewManager_o *manager,
@@ -179,12 +180,20 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_1BD33FC(&this->fields.manager);
+  sub_1BE4A70(
+    (PartyOrganizationUtility_o *)&this->fields.manager,
+    (int64_t)manager,
+    (int64_t)item,
+    isTop,
+    (System_String_o *)isBottom,
+    (BattleSetupInfo_o *)isLeft,
+    (FollowerInfo_o *)isRight,
+    (PartyListViewItem_o *)method);
   bottomObject = (UnityEngine_GameObject_o *)*(p_manager - 2);
   if ( !bottomObject
     || (UnityEngine_GameObject__SetActive(bottomObject, isTop, 0LL), (bottomObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_1BD36B4(bottomObject, v13);
+    sub_1BE4D28(bottomObject, v13);
   }
   UnityEngine_GameObject__SetActive(bottomObject, isBottom, 0LL);
   if ( item )
@@ -218,7 +227,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyPosition(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isTop, 0LL),
         (this = (ServantStatusBattleListViewIndicator_o *)v4->fields.bottomObject) == 0LL) )
   {
-    sub_1BD36B4(this, manager);
+    sub_1BE4D28(this, manager);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isBottom, 0LL);
 }
@@ -238,7 +247,7 @@ void __fastcall ServantStatusBattleListViewIndicator__SetIndexMax(
   if ( !topObject
     || (UnityEngine_GameObject__SetActive(topObject, 0, 0LL), (topObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_1BD36B4(topObject, *(_QWORD *)&max);
+    sub_1BE4D28(topObject, *(_QWORD *)&max);
   }
   UnityEngine_GameObject__SetActive(topObject, 0, 0LL);
 }

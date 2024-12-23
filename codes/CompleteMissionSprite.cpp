@@ -14,41 +14,41 @@ UIAtlas_o *__fastcall CompleteMissionSprite__CreateUIAtlasFromAssetData(
   __int64 v7; // x1
   __int64 v8; // x1
   System_Object_array *ObjectList_object; // x0
-  Il2CppObject *Object_object__49362760; // x19
+  Il2CppObject *Object_object__49525204; // x19
 
-  if ( (byte_4B35F04 & 1) == 0 )
+  if ( (byte_4B65912 & 1) == 0 )
   {
-    sub_1BD3458(&Method_AssetData_GetObjectList_GameObject___, assetData);
-    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, v6);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
-    this = (CompleteMissionSprite_o *)sub_1BD3458(&UnityEngine_Object_TypeInfo, v8);
-    byte_4B35F04 = 1;
+    sub_1BE4ACC(&Method_AssetData_GetObjectList_GameObject___, assetData);
+    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, v6);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
+    this = (CompleteMissionSprite_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B65912 = 1;
   }
   if ( !assetData )
     goto LABEL_12;
   ObjectList_object = AssetData__GetObjectList_object_(
                         assetData,
-                        (const MethodInfo_2F13900 *)Method_AssetData_GetObjectList_GameObject___);
+                        (const MethodInfo_2F3B38C *)Method_AssetData_GetObjectList_GameObject___);
   if ( !ObjectList_object || !*(_QWORD *)&ObjectList_object->max_length )
     return 0LL;
-  Object_object__49362760 = AssetData__GetObject_object__49362760(
+  Object_object__49525204 = AssetData__GetObject_object__49525204(
                               assetData,
                               name,
-                              (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                              (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (CompleteMissionSprite_o *)UnityEngine_Object__op_Equality(
-                                      (UnityEngine_Object_o *)Object_object__49362760,
+                                      (UnityEngine_Object_o *)Object_object__49525204,
                                       0LL,
                                       0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0LL;
-  if ( !Object_object__49362760 )
+  if ( !Object_object__49525204 )
 LABEL_12:
-    sub_1BD36B4(this, assetData);
+    sub_1BE4D28(this, assetData);
   return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
-                        (UnityEngine_GameObject_o *)Object_object__49362760,
-                        (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                        (UnityEngine_GameObject_o *)Object_object__49525204,
+                        (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 }
 
 
@@ -72,21 +72,21 @@ void __fastcall CompleteMissionSprite__InitBtn(
   System_Action_o *v16; // x22
   const MethodInfo *v17; // x4
 
-  if ( (byte_4B35EFE & 1) == 0 )
+  if ( (byte_4B6590C & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_CompleteMissionSprite___c__DisplayClass12_0__InitBtn_b__0__, v5);
-    sub_1BD3458(&CompleteMissionSprite___c__DisplayClass12_0_TypeInfo, v6);
-    byte_4B35EFE = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_CompleteMissionSprite___c__DisplayClass12_0__InitBtn_b__0__, v5);
+    sub_1BE4ACC(&CompleteMissionSprite___c__DisplayClass12_0_TypeInfo, v6);
+    byte_4B6590C = 1;
   }
-  v7 = sub_1BD36A4(CompleteMissionSprite___c__DisplayClass12_0_TypeInfo);
+  v7 = sub_1BE4D18(CompleteMissionSprite___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
   *(_DWORD *)(v7 + 24) = eventId;
-  v16 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)v7, Method_CompleteMissionSprite___c__DisplayClass12_0__InitBtn_b__0__, 0LL);
   CompleteMissionSprite__LoadEventUI(this, eventId, v16, 1, v17);
 }
@@ -112,21 +112,21 @@ void __fastcall CompleteMissionSprite__InitFrame(
   System_Action_o *v16; // x22
   const MethodInfo *v17; // x4
 
-  if ( (byte_4B35EFF & 1) == 0 )
+  if ( (byte_4B6590D & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_CompleteMissionSprite___c__DisplayClass13_0__InitFrame_b__0__, v5);
-    sub_1BD3458(&CompleteMissionSprite___c__DisplayClass13_0_TypeInfo, v6);
-    byte_4B35EFF = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_CompleteMissionSprite___c__DisplayClass13_0__InitFrame_b__0__, v5);
+    sub_1BE4ACC(&CompleteMissionSprite___c__DisplayClass13_0_TypeInfo, v6);
+    byte_4B6590D = 1;
   }
-  v7 = sub_1BD36A4(CompleteMissionSprite___c__DisplayClass13_0_TypeInfo);
+  v7 = sub_1BE4D18(CompleteMissionSprite___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1BD36B4(v8, v9);
+    sub_1BE4D28(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
   *(_DWORD *)(v7 + 24) = eventId;
-  v16 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v7,
@@ -165,25 +165,25 @@ void __fastcall CompleteMissionSprite__InitPanel(
   System_Action_o *v27; // x21
   const MethodInfo *v28; // x4
 
-  if ( (byte_4B35F00 & 1) == 0 )
+  if ( (byte_4B6590E & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_CompleteMissionSprite___c__DisplayClass14_0__InitPanel_b__0__, v9);
-    sub_1BD3458(&CompleteMissionSprite___c__DisplayClass14_0_TypeInfo, v10);
-    byte_4B35F00 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_CompleteMissionSprite___c__DisplayClass14_0__InitPanel_b__0__, v9);
+    sub_1BE4ACC(&CompleteMissionSprite___c__DisplayClass14_0_TypeInfo, v10);
+    byte_4B6590E = 1;
   }
-  v11 = sub_1BD36A4(CompleteMissionSprite___c__DisplayClass14_0_TypeInfo);
+  v11 = sub_1BE4D18(CompleteMissionSprite___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1BD36B4(v12, v13);
+    sub_1BE4D28(v12, v13);
   *(_DWORD *)(v11 + 16) = eventId;
   *(_QWORD *)(v11 + 24) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
   *(_DWORD *)(v11 + 32) = panelCount;
   *(_QWORD *)(v11 + 40) = listBgSprite;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v11 + 40), (int64_t)listBgSprite, v20, v21, v22, v23, v24, v25);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 40), (int64_t)listBgSprite, v20, v21, v22, v23, v24, v25);
   v26 = *(_DWORD *)(v11 + 16);
-  v27 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(
     v27,
     (Il2CppObject *)v11,
@@ -203,13 +203,13 @@ void __fastcall CompleteMissionSprite__InitTarget(
   System_Action_o *v6; // x21
   const MethodInfo *v7; // x4
 
-  if ( (byte_4B35F01 & 1) == 0 )
+  if ( (byte_4B6590F & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_CompleteMissionSprite__InitTarget_b__15_0__, v5);
-    byte_4B35F01 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_CompleteMissionSprite__InitTarget_b__15_0__, v5);
+    byte_4B6590F = 1;
   }
-  v6 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_CompleteMissionSprite__InitTarget_b__15_0__, 0LL);
   CompleteMissionSprite__LoadEventUI(this, eventId, v6, 1, v7);
 }
@@ -248,15 +248,15 @@ void __fastcall CompleteMissionSprite__LoadEventUI(
   const MethodInfo *v31; // x2
   int32_t v32; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B35F02 & 1) == 0 )
+  if ( (byte_4B65910 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BD3458(&AssetManager_TypeInfo, v9);
-    sub_1BD3458(&Method_CompleteMissionSprite_LoadEventUIEnd__, v10);
-    sub_1BD3458(&int_TypeInfo, v11);
-    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, v12);
-    sub_1BD3458(&StringLiteral_6367/*"EventUI/Prefabs/{0}"*/, v13);
-    byte_4B35F02 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&AssetManager_TypeInfo, v9);
+    sub_1BE4ACC(&Method_CompleteMissionSprite_LoadEventUIEnd__, v10);
+    sub_1BE4ACC(&int_TypeInfo, v11);
+    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, v12);
+    sub_1BE4ACC(&StringLiteral_6370/*"EventUI/Prefabs/{0}"*/, v13);
+    byte_4B65910 = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0LL) )
@@ -272,7 +272,7 @@ void __fastcall CompleteMissionSprite__LoadEventUI(
     if ( (System_Action_c *)v17->klass != System_Action_TypeInfo
       || (*p_eventUILoadCallbackFunc = (struct System_Action_o *)v17, (System_Action_c *)v17->klass != v24) )
     {
-      v15 = sub_1BD3974(v17);
+      v15 = sub_1BE4FE8(v17);
 LABEL_9:
       if ( callback )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, long double))callback->fields.m_target)(
@@ -286,7 +286,7 @@ LABEL_9:
   {
     *p_eventUILoadCallbackFunc = 0LL;
   }
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.eventUILoadCallbackFunc,
     (int64_t)v17,
     v18,
@@ -301,8 +301,8 @@ LABEL_9:
     this->fields.isEventUILoad = 1;
     v32 = eventId;
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v25, v26, v27);
-    v29 = System_String__Format((System_String_o *)StringLiteral_6367/*"EventUI/Prefabs/{0}"*/, v28, 0LL);
-    v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v29 = System_String__Format((System_String_o *)StringLiteral_6370/*"EventUI/Prefabs/{0}"*/, v28, 0LL);
+    v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v30, (Il2CppObject *)this, Method_CompleteMissionSprite_LoadEventUIEnd__, 0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -344,17 +344,17 @@ void __fastcall CompleteMissionSprite__LoadEventUIEnd(
   struct System_Action_o *eventUILoadCallbackFunc; // t1
   int32_t eventId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B35F03 & 1) == 0 )
+  if ( (byte_4B65911 & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, assetData);
-    sub_1BD3458(&StringLiteral_5462/*"DownloadEventUIAtlas{0}01"*/, v10);
-    byte_4B35F03 = 1;
+    sub_1BE4ACC(&int_TypeInfo, assetData);
+    sub_1BE4ACC(&StringLiteral_5465/*"DownloadEventUIAtlas{0}01"*/, v10);
+    byte_4B65911 = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     this->fields.eventUIAssetData = assetData;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields.eventUIAssetData,
       (int64_t)assetData,
       (int64_t)method,
@@ -365,14 +365,14 @@ void __fastcall CompleteMissionSprite__LoadEventUIEnd(
       v7);
     eventId = this->fields.eventId;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v11, v12, v13);
-    v15 = (CompleteMissionSprite_o *)System_String__Format((System_String_o *)StringLiteral_5462/*"DownloadEventUIAtlas{0}01"*/, v14, 0LL);
+    v15 = (CompleteMissionSprite_o *)System_String__Format((System_String_o *)StringLiteral_5465/*"DownloadEventUIAtlas{0}01"*/, v14, 0LL);
     UIAtlasFromAssetData = CompleteMissionSprite__CreateUIAtlasFromAssetData(
                              v15,
                              assetData,
                              (System_String_o *)v15,
                              v16);
     this->fields.eventUIDownloadAtlas = UIAtlasFromAssetData;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas,
       (int64_t)UIAtlasFromAssetData,
       v18,
@@ -388,7 +388,7 @@ void __fastcall CompleteMissionSprite__LoadEventUIEnd(
   if ( eventUILoadCallbackFunc )
   {
     p_eventUILoadCallbackFunc->klass = 0LL;
-    sub_1BD33FC(p_eventUILoadCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1BE4A70(p_eventUILoadCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v25->fields.m_target)(
       v25->fields.original_method_info,
       *(_QWORD *)&v25->fields.extra_arg);
@@ -417,19 +417,19 @@ void __fastcall CompleteMissionSprite__ReleaseEventUI(CompleteMissionSprite_o *t
   PartyListViewItem_o *v19; // x7
   int32_t eventId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B35F05 & 1) == 0 )
+  if ( (byte_4B65913 & 1) == 0 )
   {
-    sub_1BD3458(&AssetManager_TypeInfo, method);
-    sub_1BD3458(&int_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_6367/*"EventUI/Prefabs/{0}"*/, v10);
-    byte_4B35F05 = 1;
+    sub_1BE4ACC(&AssetManager_TypeInfo, method);
+    sub_1BE4ACC(&int_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_6370/*"EventUI/Prefabs/{0}"*/, v10);
+    byte_4B65913 = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     eventId = this->fields.eventId;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v2, v3, v4);
-    v12 = System_String__Format((System_String_o *)StringLiteral_6367/*"EventUI/Prefabs/{0}"*/, v11, 0LL);
+    v12 = System_String__Format((System_String_o *)StringLiteral_6370/*"EventUI/Prefabs/{0}"*/, v11, 0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(v12, 0LL);
@@ -441,13 +441,13 @@ void __fastcall CompleteMissionSprite__ReleaseEventUI(CompleteMissionSprite_o *t
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_38574016(eventUIAssetData, 0LL);
+      AssetManager__releaseAsset_38697776(eventUIAssetData, 0LL);
     }
   }
   this->fields.eventUIDownloadAtlas = 0LL;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.eventUIAssetData = 0LL;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.eventUIAssetData, 0LL, v14, v15, v16, v17, v18, v19);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.eventUIAssetData, 0LL, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -462,10 +462,10 @@ bool __fastcall CompleteMissionSprite__SetEventUI(
   UnityEngine_Object_o *eventUIDownloadAtlas; // x22
   bool v10; // w21
 
-  if ( (byte_4B35F06 & 1) == 0 )
+  if ( (byte_4B65914 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4B35F06 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, sprite);
+    byte_4B65914 = 1;
   }
   IsNullOrEmpty = (UIAtlas_o *)System_String__IsNullOrEmpty(spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
@@ -496,7 +496,7 @@ bool __fastcall CompleteMissionSprite__SetEventUI(
         }
       }
 LABEL_17:
-      sub_1BD36B4(IsNullOrEmpty, v8);
+      sub_1BE4D28(IsNullOrEmpty, v8);
     }
   }
   if ( !sprite )
@@ -514,12 +514,12 @@ void __fastcall CompleteMissionSprite___InitTarget_b__15_0(CompleteMissionSprite
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B35F07 & 1) == 0 )
+  if ( (byte_4B65915 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_20848/*"img_txt_target_panel"*/, method);
-    byte_4B35F07 = 1;
+    sub_1BE4ACC(&StringLiteral_20888/*"img_txt_target_panel"*/, method);
+    byte_4B65915 = 1;
   }
-  CompleteMissionSprite__SetEventUI(this, this->fields.sprite, (System_String_o *)StringLiteral_20848/*"img_txt_target_panel"*/, v2);
+  CompleteMissionSprite__SetEventUI(this, this->fields.sprite, (System_String_o *)StringLiteral_20888/*"img_txt_target_panel"*/, v2);
 }
 
 
@@ -534,15 +534,15 @@ void __fastcall CompleteMissionSprite___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B35F08 & 1) == 0 )
+  if ( (byte_4B65916 & 1) == 0 )
   {
-    sub_1BD3458(&CompleteMissionSprite___c_TypeInfo, v1);
-    byte_4B35F08 = 1;
+    sub_1BE4ACC(&CompleteMissionSprite___c_TypeInfo, v1);
+    byte_4B65916 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(CompleteMissionSprite___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(CompleteMissionSprite___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CompleteMissionSprite___c_TypeInfo->static_fields->__9 = (struct CompleteMissionSprite___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)CompleteMissionSprite___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -593,19 +593,19 @@ void __fastcall CompleteMissionSprite___c__DisplayClass12_0___InitBtn_b__0(
   int32_t eventId; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = this;
-  if ( (byte_4B35F09 & 1) == 0 )
+  if ( (byte_4B65917 & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, method);
-    this = (CompleteMissionSprite___c__DisplayClass12_0_o *)sub_1BD3458(&StringLiteral_17863/*"button_mission_{0}"*/, v6);
-    byte_4B35F09 = 1;
+    sub_1BE4ACC(&int_TypeInfo, method);
+    this = (CompleteMissionSprite___c__DisplayClass12_0_o *)sub_1BE4ACC(&StringLiteral_17887/*"button_mission_{0}"*/, v6);
+    byte_4B65917 = 1;
   }
   _4__this = v5->fields.__4__this;
   if ( !_4__this )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   sprite = _4__this->fields.sprite;
   eventId = v5->fields.eventId;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v2, v3, v4);
-  v10 = System_String__Format((System_String_o *)StringLiteral_17863/*"button_mission_{0}"*/, v9, 0LL);
+  v10 = System_String__Format((System_String_o *)StringLiteral_17887/*"button_mission_{0}"*/, v9, 0LL);
   CompleteMissionSprite__SetEventUI(_4__this, sprite, v10, v11);
 }
 
@@ -635,19 +635,19 @@ void __fastcall CompleteMissionSprite___c__DisplayClass13_0___InitFrame_b__0(
   int32_t eventId; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = this;
-  if ( (byte_4B35F0A & 1) == 0 )
+  if ( (byte_4B65918 & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, method);
-    this = (CompleteMissionSprite___c__DisplayClass13_0_o *)sub_1BD3458(&StringLiteral_20552/*"img_flame_{0}"*/, v6);
-    byte_4B35F0A = 1;
+    sub_1BE4ACC(&int_TypeInfo, method);
+    this = (CompleteMissionSprite___c__DisplayClass13_0_o *)sub_1BE4ACC(&StringLiteral_20592/*"img_flame_{0}"*/, v6);
+    byte_4B65918 = 1;
   }
   _4__this = v5->fields.__4__this;
   if ( !_4__this )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   sprite = _4__this->fields.sprite;
   eventId = v5->fields.eventId;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v2, v3, v4);
-  v10 = System_String__Format((System_String_o *)StringLiteral_20552/*"img_flame_{0}"*/, v9, 0LL);
+  v10 = System_String__Format((System_String_o *)StringLiteral_20592/*"img_flame_{0}"*/, v9, 0LL);
   CompleteMissionSprite__SetEventUI(_4__this, sprite, v10, v11);
 }
 
@@ -709,26 +709,26 @@ void __fastcall CompleteMissionSprite___c__DisplayClass14_0___InitPanel_b__0(
   int v44; // [xsp+Ch] [xbp-54h] BYREF
 
   v5 = this;
-  if ( (byte_4B35F0B & 1) == 0 )
+  if ( (byte_4B65919 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, method);
-    sub_1BD3458(&AvalonSceneManager_TypeInfo, v6);
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_UISprite___, v7);
-    sub_1BD3458(&int_TypeInfo, v8);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1BD3458(&Method_CompleteMissionSprite___c__InitPanel_b__14_1__, v10);
-    sub_1BD3458(&CompleteMissionSprite___c_TypeInfo, v11);
-    sub_1BD3458(&StringLiteral_21733/*"mission_bg_{0}"*/, v12);
-    sub_1BD3458(&StringLiteral_21745/*"mission_on_{0}"*/, v13);
-    this = (CompleteMissionSprite___c__DisplayClass14_0_o *)sub_1BD3458(&StringLiteral_19501/*"event_tab_type5_0"*/, v14);
-    byte_4B35F0B = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, method);
+    sub_1BE4ACC(&AvalonSceneManager_TypeInfo, v6);
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UISprite___, v7);
+    sub_1BE4ACC(&int_TypeInfo, v8);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1BE4ACC(&Method_CompleteMissionSprite___c__InitPanel_b__14_1__, v10);
+    sub_1BE4ACC(&CompleteMissionSprite___c_TypeInfo, v11);
+    sub_1BE4ACC(&StringLiteral_21773/*"mission_bg_{0}"*/, v12);
+    sub_1BE4ACC(&StringLiteral_21785/*"mission_on_{0}"*/, v13);
+    this = (CompleteMissionSprite___c__DisplayClass14_0_o *)sub_1BE4ACC(&StringLiteral_19530/*"event_tab_type5_0"*/, v14);
+    byte_4B65919 = 1;
   }
   if ( v5->fields.panelCount >= 1 )
   {
     v15 = 0;
     while ( 1 )
     {
-      this = (CompleteMissionSprite___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (CompleteMissionSprite___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         break;
       monitor = this[28].monitor;
@@ -751,12 +751,12 @@ void __fastcall CompleteMissionSprite___c__DisplayClass14_0___InitPanel_b__0(
         break;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                           (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
       _4__this = v5->fields.__4__this;
       v44 = v15 + 100 * v5->fields.eventId + 1;
       v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v19, v20, v21);
       this = (CompleteMissionSprite___c__DisplayClass14_0_o *)System_String__Format(
-                                                                (System_String_o *)StringLiteral_21745/*"mission_on_{0}"*/,
+                                                                (System_String_o *)StringLiteral_21785/*"mission_on_{0}"*/,
                                                                 v22,
                                                                 0LL);
       if ( !_4__this )
@@ -771,7 +771,7 @@ void __fastcall CompleteMissionSprite___c__DisplayClass14_0___InitPanel_b__0(
         goto LABEL_12;
     }
 LABEL_25:
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   }
 LABEL_12:
   v24 = v5->fields.__4__this;
@@ -780,7 +780,7 @@ LABEL_12:
   sprite = v24->fields.sprite;
   eventId = v5->fields.eventId;
   v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v2, v3, v4);
-  v27 = System_String__Format((System_String_o *)StringLiteral_21733/*"mission_bg_{0}"*/, v26, 0LL);
+  v27 = System_String__Format((System_String_o *)StringLiteral_21773/*"mission_bg_{0}"*/, v26, 0LL);
   CompleteMissionSprite__SetEventUI(v24, sprite, v27, v28);
   this = (CompleteMissionSprite___c__DisplayClass14_0_o *)v5->fields.__4__this;
   if ( !this )
@@ -788,13 +788,13 @@ LABEL_12:
   CompleteMissionSprite__SetEventUI(
     (CompleteMissionSprite_o *)this,
     v5->fields.listBgSprite,
-    (System_String_o *)StringLiteral_19501/*"event_tab_type5_0"*/,
+    (System_String_o *)StringLiteral_19530/*"event_tab_type5_0"*/,
     v29);
-  this = (CompleteMissionSprite___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (CompleteMissionSprite___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_25;
   CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v31 = AvalonSceneManager_TypeInfo;
   v32 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -818,11 +818,11 @@ LABEL_12:
       this = (CompleteMissionSprite___c__DisplayClass14_0_o *)CompleteMissionSprite___c_TypeInfo;
     }
     klass = (Il2CppObject *)this[3].fields.listBgSprite->klass;
-    v34 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(v34, klass, Method_CompleteMissionSprite___c__InitPanel_b__14_1__, 0LL);
     static_fields = CompleteMissionSprite___c_TypeInfo->static_fields;
     static_fields->__9__14_1 = v34;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__14_1, (int64_t)v34, v37, v38, v39, v40, v41, v42);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__14_1, (int64_t)v34, v37, v38, v39, v40, v41, v42);
   }
   if ( !v32 )
     goto LABEL_25;

@@ -16,18 +16,18 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4B385E0 & 1) == 0 )
+  if ( (byte_4B6802D & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_22385/*"none"*/, method);
-    sub_1BD3458(&StringLiteral_1/*""*/, v9);
-    byte_4B385E0 = 1;
+    sub_1BE4ACC(&StringLiteral_22430/*"none"*/, method);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v9);
+    byte_4B6802D = 1;
   }
-  v10 = StringLiteral_22385/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_22385/*"none"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, v10, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_22430/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_22430/*"none"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)v11, v12, v13, v14, v15, v16, v17);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -59,7 +59,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   PartyListViewItem_o *v7; // x7
 
   this->fields.eventData = value;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -72,5 +72,5 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   PartyListViewItem_o *v7; // x7
 
   this->fields.title = value;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

@@ -32,46 +32,46 @@ void __fastcall SetSmoothnessControl__Init(SetSmoothnessControl_o *this, const M
   struct GameOptionRadioButtonGroup_o *v20; // x20
   System_Action_int__o *v21; // x21
 
-  if ( (byte_4B3260E & 1) == 0 )
+  if ( (byte_4B61FB1 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_int__TypeInfo, method);
-    sub_1BD3458(&AtlasManager_TypeInfo, v3);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v4);
-    sub_1BD3458(&OptionManager_TypeInfo, v5);
-    sub_1BD3458(&Method_SetSmoothnessControl__Init_b__5_0__, v6);
-    sub_1BD3458(&string___TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_9850/*"OPTION_SMOOTHNESS_BUTTON_2"*/, v8);
-    sub_1BD3458(&StringLiteral_9849/*"OPTION_SMOOTHNESS_BUTTON_1"*/, v9);
-    sub_1BD3458(&StringLiteral_9848/*"OPTION_SMOOTHNESS_ATTENTION"*/, v10);
-    sub_1BD3458(&StringLiteral_20794/*"img_txt_framerate"*/, v11);
-    byte_4B3260E = 1;
+    sub_1BE4ACC(&System_Action_int__TypeInfo, method);
+    sub_1BE4ACC(&AtlasManager_TypeInfo, v3);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
+    sub_1BE4ACC(&OptionManager_TypeInfo, v5);
+    sub_1BE4ACC(&Method_SetSmoothnessControl__Init_b__5_0__, v6);
+    sub_1BE4ACC(&string___TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_9859/*"OPTION_SMOOTHNESS_BUTTON_2"*/, v8);
+    sub_1BE4ACC(&StringLiteral_9858/*"OPTION_SMOOTHNESS_BUTTON_1"*/, v9);
+    sub_1BE4ACC(&StringLiteral_9857/*"OPTION_SMOOTHNESS_ATTENTION"*/, v10);
+    sub_1BE4ACC(&StringLiteral_20834/*"img_txt_framerate"*/, v11);
+    byte_4B61FB1 = 1;
   }
   this->fields.isHighQuality = 0;
   titleSptite = this->fields.titleSptite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage(titleSptite, (System_String_o *)StringLiteral_20794/*"img_txt_framerate"*/, 0LL);
+  AtlasManager__SetMyRoomImage(titleSptite, (System_String_o *)StringLiteral_20834/*"img_txt_framerate"*/, 0LL);
   attentionLabel = this->fields.attentionLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9848/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
+  fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9857/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
   if ( !attentionLabel )
     goto LABEL_18;
   UILabel__set_text(attentionLabel, fpsRadioButtonGroup, 0LL);
-  v16 = (System_String_array *)sub_1BD3500(string___TypeInfo, 2LL);
-  fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9849/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL);
+  v16 = (System_String_array *)sub_1BE4B74(string___TypeInfo, 2LL);
+  fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9858/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL);
   if ( !v16 )
     goto LABEL_18;
   if ( !v16->max_length
     || (v16->m_Items[0] = fpsRadioButtonGroup,
-        sub_1BD33FC(v16->m_Items),
-        fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9850/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL),
+        sub_1BE4A70(v16->m_Items),
+        fpsRadioButtonGroup = LocalizationManager__Get((System_String_o *)StringLiteral_9859/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL),
         v16->max_length <= 1) )
   {
-    sub_1BD36BC(fpsRadioButtonGroup, v15);
+    sub_1BE4D30(fpsRadioButtonGroup, v15);
   }
   v16->m_Items[1] = fpsRadioButtonGroup;
-  sub_1BD33FC(&v16->m_Items[1]);
+  sub_1BE4A70(&v16->m_Items[1]);
   fpsRadioButtonGroup = (System_String_o *)this->fields.fpsRadioButtonGroup;
   if ( !fpsRadioButtonGroup )
     goto LABEL_18;
@@ -87,15 +87,15 @@ void __fastcall SetSmoothnessControl__Init(SetSmoothnessControl_o *this, const M
   if ( !v18
     || (GameOptionRadioButtonGroup__SelectButtonByIndex(v18, (unsigned __int8)fpsRadioButtonGroup & 1, 1, v19),
         v20 = this->fields.fpsRadioButtonGroup,
-        v21 = (System_Action_int__o *)sub_1BD36A4(System_Action_int__TypeInfo),
+        v21 = (System_Action_int__o *)sub_1BE4D18(System_Action_int__TypeInfo),
         System_Action_int____ctor(v21, (Il2CppObject *)this, (intptr_t)Method_SetSmoothnessControl__Init_b__5_0__, 0LL),
         !v20) )
   {
 LABEL_18:
-    sub_1BD36B4(fpsRadioButtonGroup, v15);
+    sub_1BE4D28(fpsRadioButtonGroup, v15);
   }
   v20->fields.selectedCallback = v21;
-  sub_1BD33FC(&v20->fields.selectedCallback);
+  sub_1BE4A70(&v20->fields.selectedCallback);
 }
 
 
@@ -108,19 +108,19 @@ void __fastcall SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, c
   bool Value; // w19
   System_Nullable_bool__o v8; // 0:w0.2
 
-  if ( (byte_4B3260F & 1) == 0 )
+  if ( (byte_4B61FB2 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Nullable_bool__get_HasValue__, method);
-    sub_1BD3458(&Method_System_Nullable_bool__get_Value__, v3);
-    sub_1BD3458(&OptionManager_TypeInfo, v4);
-    byte_4B3260F = 1;
+    sub_1BE4ACC(&Method_System_Nullable_bool__get_HasValue__, method);
+    sub_1BE4ACC(&Method_System_Nullable_bool__get_Value__, v3);
+    sub_1BE4ACC(&OptionManager_TypeInfo, v4);
+    byte_4B61FB2 = 1;
   }
   hasValue = this->fields.isHighQuality.fields.hasValue;
   v5 = (System_Nullable_bool__o)((_WORD)this + 64);
   if ( hasValue )
   {
     v8 = v5;
-    Value = System_Nullable_bool___get_Value(v8, (const MethodInfo_36DA094 *)Method_System_Nullable_bool__get_Value__);
+    Value = System_Nullable_bool___get_Value(v8, (const MethodInfo_37056CC *)Method_System_Nullable_bool__get_Value__);
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     OptionManager__SetBattleFpsHighOrNot(Value, 0LL);
@@ -140,22 +140,22 @@ void __fastcall SetSmoothnessControl___Init_b__5_0(
   System_Reflection_MethodBase_o *v8; // x0
   struct System_Nullable_bool__o v9; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B32610 & 1) == 0 )
+  if ( (byte_4B61FB3 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Nullable_bool___ctor__, *(_QWORD *)&selectedIndex);
-    sub_1BD3458(&Method_SetSmoothnessControl__Init_b__5_0__, v5);
-    byte_4B32610 = 1;
+    sub_1BE4ACC(&Method_System_Nullable_bool___ctor__, *(_QWORD *)&selectedIndex);
+    sub_1BE4ACC(&Method_SetSmoothnessControl__Init_b__5_0__, v5);
+    byte_4B61FB3 = 1;
   }
   v6 = &v9;
   v9 = 0;
   System_Nullable_bool____ctor(
     (System_Nullable_bool__o)v6,
     selectedIndex > 0,
-    (const MethodInfo_36DA078 *)Method_System_Nullable_bool___ctor__);
+    (const MethodInfo_37056B0 *)Method_System_Nullable_bool___ctor__);
   this->fields.isHighQuality = v9;
   v7 = Method_SetSmoothnessControl__Init_b__5_0__;
   if ( (*((_BYTE *)Method_SetSmoothnessControl__Init_b__5_0__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1BD3470(Method_SetSmoothnessControl__Init_b__5_0__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1BD343C(v7, v7[4]);
+    v7 = (_QWORD *)sub_1BE4AE4(Method_SetSmoothnessControl__Init_b__5_0__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
 }

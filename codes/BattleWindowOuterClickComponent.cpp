@@ -32,7 +32,7 @@ void __fastcall BattleWindowOuterClickComponent__setClickCallBack(
   PartyListViewItem_o *v7; // x7
 
   this->fields.clickCallBack = call;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.clickCallBack,
     (int64_t)call,
     (int64_t)method,
@@ -66,7 +66,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -77,12 +77,12 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v10) & 1) == 0 )
+  if ( (sub_1BE4B8C(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v14, 0LL);
+      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -94,9 +94,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A1966C;
+  this->fields.m_target = (Il2CppObject *)sub_1A2AB14;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_1A1962C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_1A2AAD4;
 }
 
 
@@ -109,7 +109,7 @@ System_IAsyncResult_o *__fastcall BattleWindowOuterClickComponent_OuterClickCall
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1BD340C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, &v5, callback, object);
 }
 
 
@@ -118,7 +118,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 

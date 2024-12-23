@@ -2,10 +2,10 @@ void __fastcall ClassBoardMissionListViewItemDraw___ctor(
         ClassBoardMissionListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B3A6CA & 1) == 0 )
+  if ( (byte_4B6A162 & 1) == 0 )
   {
-    sub_1BD3458(&MissionListViewItemDraw_TypeInfo, method);
-    byte_4B3A6CA = 1;
+    sub_1BE4ACC(&MissionListViewItemDraw_TypeInfo, method);
+    byte_4B6A162 = 1;
   }
   if ( !MissionListViewItemDraw_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
@@ -35,13 +35,13 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
   __int64 v21; // x20
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B3A6C9 & 1) == 0 )
+  if ( (byte_4B6A161 & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, missionListViewItem);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_3542/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, v10);
-    sub_1BD3458(&StringLiteral_3541/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, v11);
-    byte_4B3A6C9 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, missionListViewItem);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_3544/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, v10);
+    sub_1BE4ACC(&StringLiteral_3543/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, v11);
+    byte_4B6A161 = 1;
   }
   conditionTitle = (UnityEngine_Object_o *)this->fields.conditionTitle;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,7 +51,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
     v13 = this->fields.conditionTitle;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3542/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, 0LL);
+    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3544/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, 0LL);
     if ( !v13 )
       goto LABEL_29;
     UILabel__set_text(v13, missionCondLb, 0LL);
@@ -64,7 +64,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
     v17 = this->fields.progLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3541/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, 0LL);
+    missionCondLb = LocalizationManager__Get((System_String_o *)StringLiteral_3543/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, 0LL);
     if ( !v17 )
       goto LABEL_29;
     UILabel__set_text(v17, missionCondLb, 0LL);
@@ -95,7 +95,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
         while ( 1 )
         {
           if ( (unsigned int)v21 >= (unsigned int)v19 )
-            sub_1BD36BC(v20, v15);
+            sub_1BE4D30(v20, v15);
           missionCondLb = (System_String_o *)disableDispObjList->m_Items[v21];
           if ( !missionCondLb )
             break;
@@ -105,7 +105,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
             goto LABEL_26;
         }
 LABEL_29:
-        sub_1BD36B4(missionCondLb, v15);
+        sub_1BE4D28(missionCondLb, v15);
       }
     }
     else

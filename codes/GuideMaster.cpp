@@ -1,14 +1,14 @@
 void __fastcall GuideMaster___ctor(GuideMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37492 & 1) == 0 )
+  if ( (byte_4B66EBC & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__, method);
-    byte_4B37492 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__, method);
+    byte_4B66EBC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    159,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
+    163,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_GuideMaster__GuideEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ GuideEntity_o *__fastcall GuideMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B37490 & 1) == 0 )
+  if ( (byte_4B66EBA & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__, *(_QWORD *)&guideType);
-    byte_4B37490 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__, *(_QWORD *)&guideType);
+    byte_4B66EBA = 1;
   }
   PK = (Il2CppObject *)GuideEntity__CreatePK(guideType, priority, *(const MethodInfo **)&priority);
   return (GuideEntity_o *)DataMasterBase_object__object__object___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                             PK,
-                            (const MethodInfo_31D2248 *)Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
+                            (const MethodInfo_31FDB1C *)Method_DataMasterBase_GuideMaster__GuideEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall GuideMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B37491 & 1) == 0 )
+  if ( (byte_4B66EBB & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__, entity);
-    byte_4B37491 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__, entity);
+    byte_4B66EBB = 1;
   }
   PK = (Il2CppObject *)GuideEntity__CreatePK(guideType, priority, *(const MethodInfo **)&guideType);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_GuideMaster__GuideEntity__string__TryGetEntity__);
 }
 
 
@@ -101,31 +101,31 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
   FollowerInfo_o *v39; // x6
   PartyListViewItem_o *v40; // x7
 
-  if ( (byte_4B37493 & 1) == 0 )
+  if ( (byte_4B66EBD & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&type);
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BD3458(&System_Comparison_GuideEntity__TypeInfo, v6);
-    sub_1BD3458(&GuideEntity_TypeInfo, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GuideEntity__Add__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GuideEntity__Sort__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GuideEntity__ToArray__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_GuideEntity___ctor__, v11);
-    sub_1BD3458(&System_Collections_Generic_List_GuideEntity__TypeInfo, v12);
-    sub_1BD3458(&Method_GuideMaster___c__getDataListByType_b__3_0__, v13);
-    sub_1BD3458(&GuideMaster___c_TypeInfo, v14);
-    byte_4B37493 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&type);
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1BE4ACC(&System_Comparison_GuideEntity__TypeInfo, v6);
+    sub_1BE4ACC(&GuideEntity_TypeInfo, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GuideEntity__Add__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GuideEntity__Sort__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GuideEntity__ToArray__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_GuideEntity___ctor__, v11);
+    sub_1BE4ACC(&System_Collections_Generic_List_GuideEntity__TypeInfo, v12);
+    sub_1BE4ACC(&Method_GuideMaster___c__getDataListByType_b__3_0__, v13);
+    sub_1BE4ACC(&GuideMaster___c_TypeInfo, v14);
+    byte_4B66EBD = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_GuideEntity__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_GuideEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_GuideEntity___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_GuideEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_25;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_316E4C0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v19 = Count;
@@ -138,7 +138,7 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v20,
-               (const MethodInfo_316E550 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v16 = (int64_t)list;
@@ -160,14 +160,14 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
             System_Collections_Generic_List_object___AddWithResize(
               v15,
               (Il2CppObject *)list,
-              *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
           }
           else
           {
             v31 = &items->obj.klass + size;
             v15->fields._size = size + 1;
             v31[4] = (Il2CppClass *)v16;
-            sub_1BD33FC((PartyOrganizationUtility_o *)(v31 + 4), v16, v21, v22, v23, v24, v25, v26);
+            sub_1BE4A70((PartyOrganizationUtility_o *)(v31 + 4), v16, v21, v22, v23, v24, v25, v26);
           }
         }
       }
@@ -175,7 +175,7 @@ GuideEntity_array *__fastcall GuideMaster__getDataListByType(
         goto LABEL_17;
     }
 LABEL_25:
-    sub_1BD36B4(list, v16);
+    sub_1BE4D28(list, v16);
   }
 LABEL_17:
   list = GuideMaster___c_TypeInfo;
@@ -193,21 +193,21 @@ LABEL_17:
       list = GuideMaster___c_TypeInfo;
     }
     v33 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v32 = (System_Comparison_T__o *)sub_1BD36A4(System_Comparison_GuideEntity__TypeInfo);
+    v32 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_GuideEntity__TypeInfo);
     System_Comparison_object____ctor(v32, v33, Method_GuideMaster___c__getDataListByType_b__3_0__, 0LL);
     static_fields = GuideMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_GuideEntity__o *)v32;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v32, v35, v36, v37, v38, v39, v40);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v32, v35, v36, v37, v38, v39, v40);
   }
   if ( !v15 )
     goto LABEL_25;
-  System_Collections_Generic_List_object___Sort_56371284(
+  System_Collections_Generic_List_object___Sort_56548584(
     v15,
     v32,
-    (const MethodInfo_35C2854 *)Method_System_Collections_Generic_List_GuideEntity__Sort__);
+    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_GuideEntity__Sort__);
   return (GuideEntity_array *)System_Collections_Generic_List_object___ToArray(
                                 v15,
-                                (const MethodInfo_35C28E8 *)Method_System_Collections_Generic_List_GuideEntity__ToArray__);
+                                (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_GuideEntity__ToArray__);
 }
 
 
@@ -226,11 +226,11 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
   int32_t condQuestId; // w24
   int64_t userIdNumber; // x22
 
-  if ( (byte_4B37494 & 1) == 0 )
+  if ( (byte_4B66EBE & 1) == 0 )
   {
-    sub_1BD3458(&CondType_TypeInfo, *(_QWORD *)&type);
-    sub_1BD3458(&NetworkManager_TypeInfo, v5);
-    byte_4B37494 = 1;
+    sub_1BE4ACC(&CondType_TypeInfo, *(_QWORD *)&type);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v5);
+    byte_4B66EBE = 1;
   }
   DataListByType = GuideMaster__getDataListByType(this, type, method);
   if ( !DataListByType )
@@ -244,14 +244,14 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
     while ( 1 )
     {
       if ( (unsigned int)v11 >= (unsigned int)v8 )
-        sub_1BD36BC(DataListByType, v7);
+        sub_1BE4D30(DataListByType, v7);
       v10 = v9->m_Items[v11];
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4B31D77 )
+      if ( !byte_4B61717 )
       {
-        sub_1BD3458(&NetworkManager_TypeInfo, v7);
-        byte_4B31D77 = 1;
+        sub_1BE4ACC(&NetworkManager_TypeInfo, v7);
+        byte_4B61717 = 1;
       }
       v12 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -260,7 +260,7 @@ GuideEntity_o *__fastcall GuideMaster__getGuideData(GuideMaster_o *this, int32_t
         v12 = NetworkManager_TypeInfo;
       }
       if ( !v10 )
-        sub_1BD36B4(v12, v7);
+        sub_1BE4D28(v12, v7);
       condQuestId = v10->fields.condQuestId;
       condQuestPhase = v10->fields.condQuestPhase;
       userIdNumber = v12->static_fields->userIdNumber;
@@ -295,15 +295,15 @@ void __fastcall GuideMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B37495 & 1) == 0 )
+  if ( (byte_4B66EBF & 1) == 0 )
   {
-    sub_1BD3458(&GuideMaster___c_TypeInfo, v1);
-    byte_4B37495 = 1;
+    sub_1BE4ACC(&GuideMaster___c_TypeInfo, v1);
+    byte_4B66EBF = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(GuideMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(GuideMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   GuideMaster___c_TypeInfo->static_fields->__9 = (struct GuideMaster___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)GuideMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -328,6 +328,6 @@ int32_t __fastcall GuideMaster___c___getDataListByType_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BD36B4(this, a);
+    sub_1BE4D28(this, a);
   return b->fields.priority - a->fields.priority;
 }

@@ -15,7 +15,7 @@ UnityEngine_Vector2_o __fastcall UserGradeComponent__GetGradeLocalSize(
 
   usrGradeImg = this->fields.usrGradeImg;
   if ( !usrGradeImg )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))usrGradeImg->klass->vtable._22_get_localSize.method)(
     usrGradeImg,
     usrGradeImg->klass->vtable._23_get_drawingDimensions.methodPtr);
@@ -31,10 +31,10 @@ void __fastcall UserGradeComponent__Set(UserGradeComponent_o *this, int32_t grad
   System_String_o *IconImage; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B36006 & 1) == 0 )
+  if ( (byte_4B65A14 & 1) == 0 )
   {
-    sub_1BD3458(&Grade_TypeInfo, *(_QWORD *)&gradeKind);
-    byte_4B36006 = 1;
+    sub_1BE4ACC(&Grade_TypeInfo, *(_QWORD *)&gradeKind);
+    byte_4B65A14 = 1;
   }
   if ( !Grade_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Grade_TypeInfo);
@@ -50,7 +50,7 @@ void __fastcall UserGradeComponent__SetGradeAlpha(UserGradeComponent_o *this, fl
 
   usrGradeImg = this->fields.usrGradeImg;
   if ( !usrGradeImg )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, long double))usrGradeImg->klass->vtable._8_set_alpha.method)(
     usrGradeImg,
     usrGradeImg->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -67,11 +67,11 @@ void __fastcall UserGradeComponent__SetImage(
   UnityEngine_Object_o *usrGradeImg; // x21
   UISprite_o *v7; // x20
 
-  if ( (byte_4B36007 & 1) == 0 )
+  if ( (byte_4B65A15 & 1) == 0 )
   {
-    sub_1BD3458(&AtlasManager_TypeInfo, spName);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B36007 = 1;
+    sub_1BE4ACC(&AtlasManager_TypeInfo, spName);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B65A15 = 1;
   }
   usrGradeImg = (UnityEngine_Object_o *)this->fields.usrGradeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,10 +95,10 @@ void __fastcall UserGradeComponent__SetImageLocal(
   __int64 v6; // x1
   UISprite_o *v7; // x0
 
-  if ( (byte_4B36008 & 1) == 0 )
+  if ( (byte_4B65A16 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, spName);
-    byte_4B36008 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, spName);
+    byte_4B65A16 = 1;
   }
   usrGradeImg = (UnityEngine_Object_o *)this->fields.usrGradeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -107,7 +107,7 @@ void __fastcall UserGradeComponent__SetImageLocal(
   {
     v7 = this->fields.usrGradeImg;
     if ( !v7 )
-      sub_1BD36B4(0LL, v6);
+      sub_1BE4D28(0LL, v6);
     UISprite__set_spriteName(v7, spName, 0LL);
   }
 }

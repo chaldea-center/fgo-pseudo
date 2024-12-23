@@ -1,13 +1,13 @@
 void __fastcall EffectMovieEntity___ctor(EffectMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3701B & 1) == 0 )
+  if ( (byte_4B66A35 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B3701B = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B66A35 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -39,12 +39,12 @@ System_String_o *__fastcall EffectMovieEntity__GetFilePath(
   int32_t v18; // [xsp+8h] [xbp-28h] BYREF
   int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B3701A & 1) == 0 )
+  if ( (byte_4B66A34 & 1) == 0 )
   {
-    sub_1BD3458(&EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
-    sub_1BD3458(&int_TypeInfo, v7);
-    sub_1BD3458(&string_TypeInfo, v8);
-    byte_4B3701A = 1;
+    sub_1BE4ACC(&EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
+    sub_1BE4ACC(&int_TypeInfo, v7);
+    sub_1BE4ACC(&string_TypeInfo, v8);
+    byte_4B66A34 = 1;
   }
   switch ( this->fields.folderType )
   {
@@ -77,7 +77,7 @@ System_String_o *__fastcall EffectMovieEntity__GetFilePath(
 LABEL_11:
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(v13, v11, method, v3, v4);
       v16 = System_String__Format(NOBLE_PATH, v15, 0LL);
-      result = System_String__Concat_62525248(v16, this->fields.name, 0LL);
+      result = System_String__Concat_62698808(v16, this->fields.name, 0LL);
       break;
     case 5:
       v17 = EffectMovieMaster_TypeInfo;
@@ -86,7 +86,7 @@ LABEL_11:
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
         v17 = EffectMovieMaster_TypeInfo;
       }
-      result = System_String__Concat_62525248(v17->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
+      result = System_String__Concat_62698808(v17->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
       break;
     default:
       result = string_TypeInfo->static_fields->Empty;

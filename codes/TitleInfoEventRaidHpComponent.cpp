@@ -20,22 +20,22 @@ void __fastcall TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4B354CE & 1) == 0 )
+  if ( (byte_4B64ECD & 1) == 0 )
   {
-    sub_1BD3458(&TitleInfoEventRaidHpComponent_TypeInfo, v1);
-    sub_1BD3458(&StringLiteral_19454/*"event_raid_ok"*/, v8);
-    sub_1BD3458(&StringLiteral_19452/*"event_raid_ng"*/, v9);
-    byte_4B354CE = 1;
+    sub_1BE4ACC(&TitleInfoEventRaidHpComponent_TypeInfo, v1);
+    sub_1BE4ACC(&StringLiteral_19483/*"event_raid_ok"*/, v8);
+    sub_1BE4ACC(&StringLiteral_19481/*"event_raid_ng"*/, v9);
+    byte_4B64ECD = 1;
   }
   static_fields = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
   static_fields->WIDTH = 31.0;
-  v11 = StringLiteral_19454/*"event_raid_ok"*/;
-  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19454/*"event_raid_ok"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->RESULT_OK_SPNAME, v11, v2, v3, v4, v5, v6, v7);
-  v12 = StringLiteral_19452/*"event_raid_ng"*/;
+  v11 = StringLiteral_19483/*"event_raid_ok"*/;
+  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19483/*"event_raid_ok"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->RESULT_OK_SPNAME, v11, v2, v3, v4, v5, v6, v7);
+  v12 = StringLiteral_19481/*"event_raid_ng"*/;
   v13 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v13->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19452/*"event_raid_ng"*/;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v13->RESULT_NG_SPNAME, v12, v14, v15, v16, v17, v18, v19);
+  v13->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19481/*"event_raid_ng"*/;
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v13->RESULT_NG_SPNAME, v12, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -55,10 +55,10 @@ void __fastcall TitleInfoEventRaidHpComponent__Setup(
   UISprite_o *v6; // x20
   System_String_o *RESULT_NG_SPNAME; // x1
 
-  if ( (byte_4B354CD & 1) == 0 )
+  if ( (byte_4B64ECC & 1) == 0 )
   {
-    sub_1BD3458(&TitleInfoEventRaidHpComponent_TypeInfo, *(_QWORD *)&dispHpType);
-    byte_4B354CD = 1;
+    sub_1BE4ACC(&TitleInfoEventRaidHpComponent_TypeInfo, *(_QWORD *)&dispHpType);
+    byte_4B64ECC = 1;
   }
   resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
   if ( !resultSp )
@@ -94,7 +94,7 @@ void __fastcall TitleInfoEventRaidHpComponent__Setup(
         }
       }
 LABEL_22:
-      sub_1BD36B4(resultSp, *(_QWORD *)&dispHpType);
+      sub_1BE4D28(resultSp, *(_QWORD *)&dispHpType);
     }
     v6 = this->fields.resultSp;
     resultSp = (UnityEngine_Component_o *)TitleInfoEventRaidHpComponent_TypeInfo;

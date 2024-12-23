@@ -9,23 +9,23 @@ void __fastcall ClassBoardEffectDialogTabComponent___cctor(const MethodInfo *met
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4B3A688 & 1) == 0 )
+  if ( (byte_4B6A120 & 1) == 0 )
   {
-    sub_1BD3458(&ClassBoardEffectDialogTabComponent_TypeInfo, v1);
-    sub_1BD3458(&StringLiteral_17750/*"btn_tab_{0}"*/, v8);
-    byte_4B3A688 = 1;
+    sub_1BE4ACC(&ClassBoardEffectDialogTabComponent_TypeInfo, v1);
+    sub_1BE4ACC(&StringLiteral_17772/*"btn_tab_{0}"*/, v8);
+    byte_4B6A120 = 1;
   }
-  ClassBoardEffectDialogTabComponent_TypeInfo->static_fields->TAB_BTN_NAME_FORMAT = (struct System_String_o *)StringLiteral_17750/*"btn_tab_{0}"*/;
-  sub_1BD33FC(
+  ClassBoardEffectDialogTabComponent_TypeInfo->static_fields->TAB_BTN_NAME_FORMAT = (struct System_String_o *)StringLiteral_17772/*"btn_tab_{0}"*/;
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)ClassBoardEffectDialogTabComponent_TypeInfo->static_fields,
-    StringLiteral_17750/*"btn_tab_{0}"*/,
+    StringLiteral_17772/*"btn_tab_{0}"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  ClassBoardEffectDialogTabComponent_TypeInfo->static_fields->DISABLED_COLOR = (struct UnityEngine_Color_o)xmmword_BD80E0;
+  ClassBoardEffectDialogTabComponent_TypeInfo->static_fields->DISABLED_COLOR = (struct UnityEngine_Color_o)xmmword_BE2210;
 }
 
 
@@ -70,11 +70,11 @@ void __fastcall ClassBoardEffectDialogTabComponent__SetButtonEnable(
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B3A686 & 1) == 0 )
+  if ( (byte_4B6A11E & 1) == 0 )
   {
-    sub_1BD3458(&ClassBoardEffectDialogTabComponent_TypeInfo, isEnable);
-    sub_1BD3458(&UnityEngine_GameObject___TypeInfo, v5);
-    byte_4B3A686 = 1;
+    sub_1BE4ACC(&ClassBoardEffectDialogTabComponent_TypeInfo, isEnable);
+    sub_1BE4ACC(&UnityEngine_GameObject___TypeInfo, v5);
+    byte_4B6A11E = 1;
   }
   classButton = this->fields.classButton;
   if ( !classButton )
@@ -95,14 +95,14 @@ void __fastcall ClassBoardEffectDialogTabComponent__SetButtonEnable(
           *(UnityEngine_Color_o *)(*(_QWORD *)&classButton[1].fields.specifyHoverColor.fields.b + 8LL),
           0LL),
         v8 = this->fields.classButton,
-        classButton = (UICommonButton_o *)sub_1BD3500(UnityEngine_GameObject___TypeInfo, 1LL),
+        classButton = (UICommonButton_o *)sub_1BE4B74(UnityEngine_GameObject___TypeInfo, 1LL),
         !v8) )
   {
 LABEL_10:
-    sub_1BD36B4(classButton, isEnable);
+    sub_1BE4D28(classButton, isEnable);
   }
   v8->fields.tweenTargets = (struct UnityEngine_GameObject_array *)classButton;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v8->fields.tweenTargets, (int64_t)classButton, v9, v10, v11, v12, v13, v14);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v8->fields.tweenTargets, (int64_t)classButton, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -117,7 +117,7 @@ void __fastcall ClassBoardEffectDialogTabComponent__SetButtonState(
 
   bgSprite = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !bgSprite || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL )
-    sub_1BD36B4(bgSprite, isEnable);
+    sub_1BE4D28(bgSprite, isEnable);
   v6 = isEnable;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, v6, 0LL);
   this->fields.isSelect = v6;
@@ -164,19 +164,19 @@ void __fastcall ClassBoardEffectDialogTabComponent__Setup(
   const MethodInfo *v39; // x2
   int v40; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B3A685 & 1) == 0 )
+  if ( (byte_4B6A11D & 1) == 0 )
   {
-    sub_1BD3458(&AtlasManager_TypeInfo, effectListDialog);
-    sub_1BD3458(&ClassBoardEffectDialogTabComponent_TypeInfo, v13);
-    sub_1BD3458(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, v14);
-    sub_1BD3458(&DataManager_TypeInfo, v15);
-    sub_1BD3458(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v16);
-    sub_1BD3458(&UnityEngine_GameObject___TypeInfo, v17);
-    sub_1BD3458(&int_TypeInfo, v18);
-    byte_4B3A685 = 1;
+    sub_1BE4ACC(&AtlasManager_TypeInfo, effectListDialog);
+    sub_1BE4ACC(&ClassBoardEffectDialogTabComponent_TypeInfo, v13);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, v14);
+    sub_1BE4ACC(&DataManager_TypeInfo, v15);
+    sub_1BE4ACC(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v16);
+    sub_1BE4ACC(&UnityEngine_GameObject___TypeInfo, v17);
+    sub_1BE4ACC(&int_TypeInfo, v18);
+    byte_4B6A11D = 1;
   }
   this->fields.effectListDialog = effectListDialog;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.effectListDialog,
     (int64_t)effectListDialog,
     *(int64_t *)&baseId,
@@ -188,13 +188,13 @@ void __fastcall ClassBoardEffectDialogTabComponent__Setup(
   this->fields.baseId = baseId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_24;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   this->fields.baseId,
-                                                                  (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+                                                                  (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   v24 = Master_object;
   if ( !isSupport )
   {
@@ -213,13 +213,13 @@ void __fastcall ClassBoardEffectDialogTabComponent__Setup(
       {
         UIWidget__set_color(buttonSprite, *(UnityEngine_Color_o *)&Master_object[2].fields._lookup->monitor, 0LL);
         classButton = this->fields.classButton;
-        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)sub_1BD3500(
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)sub_1BE4B74(
                                                                         UnityEngine_GameObject___TypeInfo,
                                                                         1LL);
         if ( classButton )
         {
           classButton->fields.tweenTargets = (struct UnityEngine_GameObject_array *)Master_object;
-          sub_1BD33FC(
+          sub_1BE4A70(
             (PartyOrganizationUtility_o *)&classButton->fields.tweenTargets,
             (int64_t)Master_object,
             v27,
@@ -232,7 +232,7 @@ void __fastcall ClassBoardEffectDialogTabComponent__Setup(
         }
       }
 LABEL_24:
-      sub_1BD36B4(Master_object, v20);
+      sub_1BE4D28(Master_object, v20);
     }
   }
 LABEL_14:
@@ -260,7 +260,7 @@ LABEL_14:
   if ( !Master_object )
     goto LABEL_24;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-  GameObjectExtensions__SetLocalScale_34383024(gameObject, 0.6, 0LL);
+  GameObjectExtensions__SetLocalScale_34488912(gameObject, 0.6, 0LL);
   if ( !isSupport )
     ClassBoardEffectDialogTabComponent__SetButtonState(this, isDisp, v39);
 }
@@ -276,22 +276,22 @@ void __fastcall ClassBoardEffectDialogTabComponent__onClickButton(
   const MethodInfo *v6; // x2
   ClassBoardEffectListDialog_o *effectListDialog; // x0
 
-  if ( (byte_4B3A687 & 1) == 0 )
+  if ( (byte_4B6A11F & 1) == 0 )
   {
-    sub_1BD3458(&Method_ClassBoardEffectDialogTabComponent_onClickButton__, method);
-    byte_4B3A687 = 1;
+    sub_1BE4ACC(&Method_ClassBoardEffectDialogTabComponent_onClickButton__, method);
+    byte_4B6A11F = 1;
   }
   if ( !this->fields.isSelect )
   {
     v3 = Method_ClassBoardEffectDialogTabComponent_onClickButton__;
     if ( (*((_BYTE *)Method_ClassBoardEffectDialogTabComponent_onClickButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BD3470(Method_ClassBoardEffectDialogTabComponent_onClickButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BE4AE4(Method_ClassBoardEffectDialogTabComponent_onClickButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     effectListDialog = this->fields.effectListDialog;
     this->fields.isSelect = 1;
     if ( !effectListDialog )
-      sub_1BD36B4(0LL, v5);
+      sub_1BE4D28(0LL, v5);
     ClassBoardEffectListDialog__ChangeTab(effectListDialog, this->fields.baseId, v6);
   }
 }

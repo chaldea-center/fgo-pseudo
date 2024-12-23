@@ -24,7 +24,7 @@ void __fastcall SyncPositionComponent__SetTarget(
   const MethodInfo *v9; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.targetTransform,
     (int64_t)targetTransform,
     (int64_t)method,
@@ -47,10 +47,10 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
   UnityEngine_Transform_o *v7; // x19
   int v8; // s0
 
-  if ( (byte_4B3B2B9 & 1) == 0 )
+  if ( (byte_4B6AD52 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B3B2B9 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B6AD52 = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -60,7 +60,7 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v6 = this->fields.targetTransform;
     if ( !v6 || (v7 = transform, *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(v6, 0LL), !v7) )
-      sub_1BD36B4(transform, v5);
+      sub_1BE4D28(transform, v5);
     UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
   }
 }

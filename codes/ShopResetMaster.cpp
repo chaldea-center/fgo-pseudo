@@ -1,14 +1,14 @@
 void __fastcall ShopResetMaster___ctor(ShopResetMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B382CA & 1) == 0 )
+  if ( (byte_4B67D14 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string___ctor__, method);
-    byte_4B382CA = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string___ctor__, method);
+    byte_4B67D14 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    521,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string___ctor__);
+    525,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ShopResetEntity_o *__fastcall ShopResetMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B382CB & 1) == 0 )
+  if ( (byte_4B67D15 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__GetEntity__, *(_QWORD *)&shopId);
-    byte_4B382CB = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__GetEntity__, *(_QWORD *)&shopId);
+    byte_4B67D15 = 1;
   }
   PK = (Il2CppObject *)ShopResetEntity__CreatePK(shopId, consumeItemId, *(const MethodInfo **)&consumeItemId);
   return (ShopResetEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_31D2248 *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__GetEntity__);
+                                (const MethodInfo_31FDB1C *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall ShopResetMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B382CC & 1) == 0 )
+  if ( (byte_4B67D16 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__TryGetEntity__, entity);
-    byte_4B382CC = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__TryGetEntity__, entity);
+    byte_4B67D16 = 1;
   }
   PK = (Il2CppObject *)ShopResetEntity__CreatePK(shopId, consumeItemId, *(const MethodInfo **)&shopId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_ShopResetMaster__ShopResetEntity__string__TryGetEntity__);
 }

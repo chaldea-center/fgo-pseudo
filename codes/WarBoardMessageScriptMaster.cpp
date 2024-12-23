@@ -1,16 +1,16 @@
 void __fastcall WarBoardMessageScriptMaster___ctor(WarBoardMessageScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B381AB & 1) == 0 )
+  if ( (byte_4B67BE6 & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__,
       method);
-    byte_4B381AB = 1;
+    byte_4B67BE6 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    415,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    419,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
 }
 
 
@@ -43,23 +43,23 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
   int32_t *v26; // x10
   __int64 v27; // x0
 
-  if ( (byte_4B381AC & 1) == 0 )
+  if ( (byte_4B67BE7 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, imageId);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v5);
-    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BD3458(&WarBoardMessageScriptEntity_TypeInfo, v8);
-    byte_4B381AC = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, imageId);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
+    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1BE4ACC(&WarBoardMessageScriptEntity_TypeInfo, v8);
+    byte_4B67BE7 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BD36B4(0LL, imageId);
+    sub_1BE4D28(0LL, imageId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BD36B4(0LL, v10);
+    sub_1BE4D28(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -79,7 +79,7 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -102,7 +102,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v19 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v20 = (System_String_o **)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
                                 Enumerator,
@@ -114,13 +114,13 @@ LABEL_16:
     if ( LOBYTE((*v20)[12].fields._stringLength) < (unsigned int)methodPtr_low
       || *((WarBoardMessageScriptEntity_c **)(*v20)[8].monitor + methodPtr_low - 1) != WarBoardMessageScriptEntity_TypeInfo )
     {
-      sub_1BD3974(v20);
+      sub_1BE4FE8(v20);
 LABEL_33:
-      sub_1BD36B4(v20, v21);
+      sub_1BE4D28(v20, v21);
     }
     if ( !imageId )
-      sub_1BD36B4(v20, WarBoardMessageScriptEntity_TypeInfo);
-    if ( System_String__Equals_62533564(imageId, v20[2], 0LL) )
+      sub_1BE4D28(v20, WarBoardMessageScriptEntity_TypeInfo);
+    if ( System_String__Equals_62707124(imageId, v20[2], 0LL) )
       goto LABEL_25;
   }
   v22 = 0LL;
@@ -142,7 +142,7 @@ LABEL_25:
   else
   {
 LABEL_29:
-    v27 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
   return v22;

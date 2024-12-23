@@ -19,16 +19,16 @@ System_Collections_IEnumerator_o *__fastcall TestBattleRequestButton__battleRequ
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B34A37 & 1) == 0 )
+  if ( (byte_4B64435 & 1) == 0 )
   {
-    sub_1BD3458(&TestBattleRequestButton__battleRequest_d__4_TypeInfo, *(_QWORD *)&questNo);
-    byte_4B34A37 = 1;
+    sub_1BE4ACC(&TestBattleRequestButton__battleRequest_d__4_TypeInfo, *(_QWORD *)&questNo);
+    byte_4B64435 = 1;
   }
-  v7 = sub_1BD36A4(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
+  v7 = sub_1BE4D18(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v7 + 40) = questNo;
   *(_DWORD *)(v7 + 44) = questPhase;
   return (System_Collections_IEnumerator_o *)v7;
@@ -40,22 +40,22 @@ void __fastcall TestBattleRequestButton__beginInitialize(TestBattleRequestButton
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B34A36 & 1) == 0 )
+  if ( (byte_4B64434 & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B34A36 = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4B64434 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
 
 void __fastcall TestBattleRequestButton__beginStartUp(TestBattleRequestButton_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_39454504((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_39578900((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -74,7 +74,7 @@ void __fastcall TestBattleRequestButton__startRequestA(TestBattleRequestButton_o
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = TestBattleRequestButton__battleRequest(this, 1010, 1, v2);
-  UnityEngine_MonoBehaviour__StartCoroutine_70263544((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70437272((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -115,16 +115,16 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
   PartyListViewItem_o *v22; // x7
 
   v2 = this;
-  if ( (byte_4B34A38 & 1) == 0 )
+  if ( (byte_4B64436 & 1) == 0 )
   {
-    sub_1BD3458(&Method_NetworkManager_getRequest_BattleSetupRequest___, method);
-    sub_1BD3458(&NetworkManager_TypeInfo, v3);
-    sub_1BD3458(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_1BD3458(&Method_TestBattleRequestButton_callbackRequest__, v6);
-    sub_1BD3458(&UnityEngine_WaitForEndOfFrame_TypeInfo, v7);
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B34A38 = 1;
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_BattleSetupRequest___, method);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v3);
+    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
+    sub_1BE4ACC(&Method_TestBattleRequestButton_callbackRequest__, v6);
+    sub_1BE4ACC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v7);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B64436 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -137,7 +137,7 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
         goto LABEL_19;
       _4__this->fields.isRequest = 0;
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-      v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1BD36A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v12,
         (Il2CppObject *)_4__this,
@@ -147,13 +147,13 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (TestBattleRequestButton__battleRequest_d__4_o *)NetworkManager__getRequest_object_(
                                                                 v12,
-                                                                (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_BattleSetupRequest___);
+                                                                (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_BattleSetupRequest___);
       if ( SelfUserGame )
       {
         activeDeckId = SelfUserGame->fields.activeDeckId;
         if ( !this )
 LABEL_19:
-          sub_1BD36B4(this, method);
+          sub_1BE4D28(this, method);
       }
       else
       {
@@ -192,18 +192,18 @@ LABEL_19:
     goto LABEL_19;
   if ( _4__this->fields.isRequest )
   {
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !this )
       goto LABEL_19;
     AvalonSceneManager__changeScene((AvalonSceneManager_o *)this, 10, 1, 0LL, 0LL);
     return 0;
   }
 LABEL_18:
-  v15 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BD36A4(UnityEngine_WaitForEndOfFrame_TypeInfo);
+  v15 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BE4D18(UnityEngine_WaitForEndOfFrame_TypeInfo);
   UnityEngine_WaitForEndOfFrame___ctor(v15, 0LL);
   v2->fields.__2__current = (Il2CppObject *)v15;
   p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-  sub_1BD33FC(p__2__current, (int64_t)v15, v17, v18, v19, v20, v21, v22);
+  sub_1BE4A70(p__2__current, (int64_t)v15, v17, v18, v19, v20, v21, v22);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
   return result;
@@ -226,11 +226,11 @@ void __fastcall __noreturn TestBattleRequestButton__battleRequest_d__4__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BD346C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BD36A4(v2);
+  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BD346C(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1BD3580(v3, v4);
+  v4 = sub_1BE4AE0(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1BE4BF4(v3, v4);
 }
 
 

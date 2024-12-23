@@ -18,10 +18,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__CreateList(
   __int64 v8; // x1
   struct ListViewSort_o *sort; // x8
 
-  if ( (byte_4B33339 & 1) == 0 )
+  if ( (byte_4B62D0C & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_ListViewItem__AddRange__, *(_QWORD *)&category);
-    byte_4B33339 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__AddRange__, *(_QWORD *)&category);
+    byte_4B62D0C = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   itemList = this->fields.itemList;
@@ -32,10 +32,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__CreateList(
     || (System_Collections_Generic_List_object___AddRange(
           (System_Collections_Generic_List_object__o *)itemList,
           v7,
-          (const MethodInfo_35C0F9C *)Method_System_Collections_Generic_List_ListViewItem__AddRange__),
+          (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_ListViewItem__AddRange__),
         (sort = this->fields.sort) == 0LL) )
   {
-    sub_1BD36B4(v7, v8);
+    sub_1BE4D28(v7, v8);
   }
   sort->fields.isAscendingOrder = 0;
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -55,14 +55,14 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
         RecommendSupportMessageSelectListViewManager_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B33335 & 1) == 0 )
+  if ( (byte_4B62D08 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_OfType_RecommendSupportMessageSelectListViewItem___, method);
-    byte_4B33335 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_OfType_RecommendSupportMessageSelectListViewItem___, method);
+    byte_4B62D08 = 1;
   }
   return (System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem__o *)System_Linq_Enumerable__OfType_object_(
                                                                                                   (System_Collections_IEnumerable_o *)this->fields.itemList,
-                                                                                                  (const MethodInfo_2F5A2A0 *)Method_System_Linq_Enumerable_OfType_RecommendSupportMessageSelectListViewItem___);
+                                                                                                  (const MethodInfo_2F81D2C *)Method_System_Linq_Enumerable_OfType_RecommendSupportMessageSelectListViewItem___);
 }
 
 
@@ -87,18 +87,18 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObje
   FollowerInfo_o *v17; // x6
   PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4B33336 & 1) == 0 )
+  if ( (byte_4B62D09 & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_ExcludeNull_GameObject___, method);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Select_GameObject__RecommendSupportMessageSelectListViewObject___, v3);
-    sub_1BD3458(&System_Func_GameObject__RecommendSupportMessageSelectListViewObject__TypeInfo, v4);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__EnumerateObjects_b__11_0__, v5);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v6);
-    byte_4B33336 = 1;
+    sub_1BE4ACC(&Method_BasicHelper_ExcludeNull_GameObject___, method);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_GameObject__RecommendSupportMessageSelectListViewObject___, v3);
+    sub_1BE4ACC(&System_Func_GameObject__RecommendSupportMessageSelectListViewObject__TypeInfo, v4);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__EnumerateObjects_b__11_0__, v5);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v6);
+    byte_4B62D09 = 1;
   }
   v7 = BasicHelper__ExcludeNull_object_(
          (System_Collections_Generic_IEnumerable_T__o *)this->fields.objectList,
-         (const MethodInfo_2F1CF44 *)Method_BasicHelper_ExcludeNull_GameObject___);
+         (const MethodInfo_2F449D0 *)Method_BasicHelper_ExcludeNull_GameObject___);
   v8 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
   v9 = (System_Collections_Generic_IEnumerable_TSource__o *)v7;
   if ( !RecommendSupportMessageSelectListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -115,7 +115,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObje
       v8 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__11_0 = (System_Func_object__object__o *)sub_1BD36A4(System_Func_GameObject__RecommendSupportMessageSelectListViewObject__TypeInfo);
+    _9__11_0 = (System_Func_object__object__o *)sub_1BE4D18(System_Func_GameObject__RecommendSupportMessageSelectListViewObject__TypeInfo);
     System_Func_object__object____ctor(
       _9__11_0,
       v11,
@@ -123,7 +123,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObje
       0LL);
     static_fields = RecommendSupportMessageSelectListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = (struct System_Func_GameObject__RecommendSupportMessageSelectListViewObject__o *)_9__11_0;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&static_fields->__9__11_0,
       (int64_t)_9__11_0,
       v13,
@@ -136,7 +136,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObje
   return (System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObject__o *)System_Linq_Enumerable__Select_object__object_(
                                                                                                     v9,
                                                                                                     (System_Func_TSource__TResult__o *)_9__11_0,
-                                                                                                    (const MethodInfo_2F62E1C *)Method_System_Linq_Enumerable_Select_GameObject__RecommendSupportMessageSelectListViewObject___);
+                                                                                                    (const MethodInfo_2F8A8A8 *)Method_System_Linq_Enumerable_Select_GameObject__RecommendSupportMessageSelectListViewObject___);
 }
 
 
@@ -150,17 +150,17 @@ RecommendSupportMessageSelectListViewItem_o *__fastcall RecommendSupportMessageS
   RecommendSupportMessageSelectListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4B3333C & 1) == 0 )
+  if ( (byte_4B62D0F & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_IndexValue_ListViewItem___, *(_QWORD *)&index);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewItem_TypeInfo, v5);
-    byte_4B3333C = 1;
+    sub_1BE4ACC(&Method_BasicHelper_IndexValue_ListViewItem___, *(_QWORD *)&index);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewItem_TypeInfo, v5);
+    byte_4B62D0F = 1;
   }
-  result = (RecommendSupportMessageSelectListViewItem_o *)BasicHelper__IndexValue_object__49414608(
+  result = (RecommendSupportMessageSelectListViewItem_o *)BasicHelper__IndexValue_object__49577052(
                                                             (System_Collections_Generic_List_T__o *)this->fields.itemList,
                                                             index,
                                                             0LL,
-                                                            (const MethodInfo_2F201D0 *)Method_BasicHelper_IndexValue_ListViewItem___);
+                                                            (const MethodInfo_2F47C5C *)Method_BasicHelper_IndexValue_ListViewItem___);
   if ( result )
   {
     methodPtr_low = LOBYTE(RecommendSupportMessageSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -229,30 +229,30 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
   PartyListViewItem_o *v47; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v48; // x0
 
-  if ( (byte_4B3333A & 1) == 0 )
+  if ( (byte_4B62D0D & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(
+    sub_1BE4ACC(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(
       &Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__RecommendSupportMessageSelectListViewItem___,
       v4);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___, v5);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Where_RecommendAdviceMessageEntity___, v6);
-    sub_1BD3458(&System_Func_RecommendAdviceMessageEntity__bool__TypeInfo, v7);
-    sub_1BD3458(&System_Func_RecommendAdviceMessageEntity__int__RecommendSupportMessageSelectListViewItem__TypeInfo, v8);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_0__, v9);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_1__, v10);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_2__, v11);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_3__, v12);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_4__, v13);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v14);
-    byte_4B3333A = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___, v5);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_RecommendAdviceMessageEntity___, v6);
+    sub_1BE4ACC(&System_Func_RecommendAdviceMessageEntity__bool__TypeInfo, v7);
+    sub_1BE4ACC(&System_Func_RecommendAdviceMessageEntity__int__RecommendSupportMessageSelectListViewItem__TypeInfo, v8);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_0__, v9);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_1__, v10);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_2__, v11);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_3__, v12);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__GetItemList_b__18_4__, v13);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v14);
+    byte_4B62D0D = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v16);
+    sub_1BE4D28(0LL, v16);
   Entities = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendAdviceMessageMaster__GetEntities(
                                                                     (RecommendAdviceMessageMaster_o *)Master_object,
                                                                     0LL);
@@ -274,7 +274,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
         v18 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
       }
       v20 = (Il2CppObject *)v18->static_fields->__9;
-      _9__18_1 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
+      _9__18_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__18_1,
         v20,
@@ -300,7 +300,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
         v29 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
       }
       v30 = (Il2CppObject *)v29->static_fields->__9;
-      _9__18_1 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
+      _9__18_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__18_1,
         v30,
@@ -326,7 +326,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
         v35 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
       }
       v36 = (Il2CppObject *)v35->static_fields->__9;
-      _9__18_1 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
+      _9__18_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__18_1,
         v36,
@@ -352,7 +352,7 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
         v32 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
       }
       v33 = (Il2CppObject *)v32->static_fields->__9;
-      _9__18_1 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
+      _9__18_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_RecommendAdviceMessageEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__18_1,
         v33,
@@ -365,12 +365,12 @@ System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem
     default:
       goto LABEL_33;
   }
-  sub_1BD33FC(p__9__18_1, (int64_t)_9__18_1, v21, v22, v23, v24, v25, v26);
+  sub_1BE4A70(p__9__18_1, (int64_t)_9__18_1, v21, v22, v23, v24, v25, v26);
 LABEL_32:
   Entities = System_Linq_Enumerable__Where_object_(
                Entities,
                (System_Func_TSource__bool__o *)_9__18_1,
-               (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_RecommendAdviceMessageEntity___);
+               (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_RecommendAdviceMessageEntity___);
 LABEL_33:
   v38 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
   if ( !RecommendSupportMessageSelectListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -387,7 +387,7 @@ LABEL_33:
       v38 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
     }
     v40 = (Il2CppObject *)v38->static_fields->__9;
-    _9__18_0 = (System_Func_T1__T2__TResult__o *)sub_1BD36A4(System_Func_RecommendAdviceMessageEntity__int__RecommendSupportMessageSelectListViewItem__TypeInfo);
+    _9__18_0 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_RecommendAdviceMessageEntity__int__RecommendSupportMessageSelectListViewItem__TypeInfo);
     System_Func_object__int__object____ctor(
       _9__18_0,
       v40,
@@ -395,15 +395,15 @@ LABEL_33:
       0LL);
     v41 = RecommendSupportMessageSelectListViewManager___c_TypeInfo->static_fields;
     v41->__9__18_0 = (struct System_Func_RecommendAdviceMessageEntity__int__RecommendSupportMessageSelectListViewItem__o *)_9__18_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v41->__9__18_0, (int64_t)_9__18_0, v42, v43, v44, v45, v46, v47);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v41->__9__18_0, (int64_t)_9__18_0, v42, v43, v44, v45, v46, v47);
   }
-  v48 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object__49688848(
+  v48 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object__49851292(
                                                                Entities,
                                                                (System_Func_TSource__int__TResult__o *)_9__18_0,
-                                                               (const MethodInfo_2F63110 *)Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__RecommendSupportMessageSelectListViewItem___);
+                                                               (const MethodInfo_2F8AB9C *)Method_System_Linq_Enumerable_Select_RecommendAdviceMessageEntity__RecommendSupportMessageSelectListViewItem___);
   return (System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewItem__o *)System_Linq_Enumerable__ToArray_object_(
                                                                                                   v48,
-                                                                                                  (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___);
+                                                                                                  (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___);
 }
 
 
@@ -425,7 +425,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__InvokeOnClick(
 
   FuncOnClick = this->fields.FuncOnClick;
   this->fields.FuncOnClick = 0LL;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.FuncOnClick,
     0LL,
     *(int64_t *)&resultKind,
@@ -437,7 +437,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__InvokeOnClick(
   if ( FuncOnClick )
   {
     if ( !obj )
-      sub_1BD36B4(v11, v12);
+      sub_1BE4D28(v11, v12);
     Index = ListViewObject__get_Index(obj, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))FuncOnClick->fields.m_target)(
       FuncOnClick->fields.original_method_info,
@@ -454,7 +454,7 @@ bool __fastcall RecommendSupportMessageSelectListViewManager__IsClippingOrNoTerm
         const MethodInfo *method)
 {
   return item && !item->fields.isTermination
-      || ListViewManager__ClippingItem_41563988((ListViewManager_o *)this, item, 0LL);
+      || ListViewManager__ClippingItem_41702652((ListViewManager_o *)this, item, 0LL);
 }
 
 
@@ -482,19 +482,19 @@ void __fastcall RecommendSupportMessageSelectListViewManager__ModifyList(
   FollowerInfo_o *v20; // x6
   PartyListViewItem_o *v21; // x7
 
-  if ( (byte_4B3333B & 1) == 0 )
+  if ( (byte_4B62D0E & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_RecommendSupportMessageSelectListViewItem__TypeInfo, isNeedSort);
-    sub_1BD3458(&Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewItem___, v5);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___, v6);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager___c__ModifyList_b__19_0__, v7);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v8);
-    byte_4B3333B = 1;
+    sub_1BE4ACC(&System_Action_RecommendSupportMessageSelectListViewItem__TypeInfo, isNeedSort);
+    sub_1BE4ACC(&Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewItem___, v5);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___, v6);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager___c__ModifyList_b__19_0__, v7);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v8);
+    byte_4B62D0E = 1;
   }
   v9 = RecommendSupportMessageSelectListViewManager__EnumerateItems(this, (const MethodInfo *)isNeedSort);
   v10 = System_Linq_Enumerable__ToArray_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v9,
-          (const MethodInfo_2F6ADB4 *)Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___);
+          (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_RecommendSupportMessageSelectListViewItem___);
   v11 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
   v12 = (System_Collections_Generic_IEnumerable_T__o *)v10;
   if ( !RecommendSupportMessageSelectListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -511,7 +511,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__ModifyList(
       v11 = RecommendSupportMessageSelectListViewManager___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__19_0 = (System_Action_object__o *)sub_1BD36A4(System_Action_RecommendSupportMessageSelectListViewItem__TypeInfo);
+    _9__19_0 = (System_Action_object__o *)sub_1BE4D18(System_Action_RecommendSupportMessageSelectListViewItem__TypeInfo);
     System_Action_object____ctor(
       _9__19_0,
       v14,
@@ -519,7 +519,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__ModifyList(
       0LL);
     static_fields = RecommendSupportMessageSelectListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__19_0 = (struct System_Action_RecommendSupportMessageSelectListViewItem__o *)_9__19_0;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&static_fields->__9__19_0,
       (int64_t)_9__19_0,
       v16,
@@ -532,7 +532,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__ModifyList(
   BasicHelper__ForEach_object_(
     v12,
     (System_Action_T__o *)_9__19_0,
-    (const MethodInfo_2F1E5E0 *)Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewItem___);
+    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewItem___);
   if ( isNeedSort )
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
 }
@@ -582,18 +582,18 @@ void __fastcall RecommendSupportMessageSelectListViewManager__RequestListObject(
   PartyListViewItem_o *v20; // x7
   System_Action_o *FuncOnMoveEnd; // x20
 
-  if ( (byte_4B3333E & 1) == 0 )
+  if ( (byte_4B62D11 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_RecommendSupportMessageSelectListViewObject__TypeInfo, *(_QWORD *)&mode);
-    sub_1BD3458(&Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewObject___, v5);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BD3458(
+    sub_1BE4ACC(&System_Action_RecommendSupportMessageSelectListViewObject__TypeInfo, *(_QWORD *)&mode);
+    sub_1BE4ACC(&Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewObject___, v5);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BE4ACC(
       &Method_RecommendSupportMessageSelectListViewManager___c__DisplayClass26_0__RequestListObject_b__0__,
       v7);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager___c__DisplayClass26_0_TypeInfo, v8);
-    byte_4B3333E = 1;
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager___c__DisplayClass26_0_TypeInfo, v8);
+    byte_4B62D11 = 1;
   }
-  v9 = sub_1BD36A4(RecommendSupportMessageSelectListViewManager___c__DisplayClass26_0_TypeInfo);
+  v9 = sub_1BE4D18(RecommendSupportMessageSelectListViewManager___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_13;
@@ -601,7 +601,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__RequestListObject(
   v12 = (System_Collections_Generic_IEnumerable_T__o *)RecommendSupportMessageSelectListViewManager__EnumerateObjects(
                                                          this,
                                                          v11);
-  v13 = (System_Action_object__o *)sub_1BD36A4(System_Action_RecommendSupportMessageSelectListViewObject__TypeInfo);
+  v13 = (System_Action_object__o *)sub_1BE4D18(System_Action_RecommendSupportMessageSelectListViewObject__TypeInfo);
   System_Action_object____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -610,7 +610,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__RequestListObject(
   BasicHelper__ForEach_object_(
     v12,
     (System_Action_T__o *)v13,
-    (const MethodInfo_2F1E5E0 *)Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewObject___);
+    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_RecommendSupportMessageSelectListViewObject___);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -637,13 +637,13 @@ void __fastcall RecommendSupportMessageSelectListViewManager__RequestListObject(
         goto LABEL_12;
       }
 LABEL_13:
-      sub_1BD36B4(v10, v11);
+      sub_1BE4D28(v10, v11);
     }
   }
 LABEL_12:
   FuncOnMoveEnd = this->fields.FuncOnMoveEnd;
   this->fields.FuncOnMoveEnd = 0LL;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.FuncOnMoveEnd, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.FuncOnMoveEnd, 0LL, v15, v16, v17, v18, v19, v20);
   ActionExtensions__Call(FuncOnMoveEnd, 0LL);
 }
 
@@ -660,7 +660,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetFuncOnClick(
   PartyListViewItem_o *v7; // x7
 
   this->fields.FuncOnClick = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.FuncOnClick,
     (int64_t)callback,
     (int64_t)method,
@@ -685,7 +685,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.FuncOnClick = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.FuncOnClick,
     (int64_t)callback,
     (int64_t)callback,
@@ -694,11 +694,11 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetMode(
     v5,
     v6,
     v7);
-  RecommendSupportMessageSelectListViewManager__SetMode_33165520(this, mode, v10);
+  RecommendSupportMessageSelectListViewManager__SetMode_33255272(this, mode, v10);
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33165520(
+void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33255272(
         RecommendSupportMessageSelectListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -721,7 +721,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33165520(
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33173904(
+void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33263656(
         RecommendSupportMessageSelectListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -734,7 +734,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33173904(
   const MethodInfo *v10; // x2
 
   this->fields.FuncOnMoveEnd = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.FuncOnMoveEnd,
     (int64_t)callback,
     (int64_t)callback,
@@ -743,7 +743,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetMode_33173904(
     v5,
     v6,
     v7);
-  RecommendSupportMessageSelectListViewManager__SetMode_33165520(this, mode, v10);
+  RecommendSupportMessageSelectListViewManager__SetMode_33255272(this, mode, v10);
 }
 
 
@@ -762,11 +762,11 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetObjectItem(
   int32_t v11; // w1
 
   v4 = (UnityEngine_Object_o *)obj;
-  if ( (byte_4B3333D & 1) == 0 )
+  if ( (byte_4B62D10 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, obj);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewObject_TypeInfo, v6);
-    byte_4B3333D = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, obj);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewObject_TypeInfo, v6);
+    byte_4B62D10 = 1;
   }
   if ( v4 )
   {
@@ -787,7 +787,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetObjectItem(
   if ( !v8 )
   {
     if ( !v4 )
-      sub_1BD36B4(v8, v9);
+      sub_1BE4D28(v8, v9);
     if ( this->fields.initMode == 2 )
       v11 = 2;
     else
@@ -806,7 +806,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager__SetScrollViewEnabl
 
   scrollView = (UnityEngine_Behaviour_o *)this->fields.scrollView;
   if ( !scrollView )
-    sub_1BD36B4(0LL, value);
+    sub_1BE4D28(0LL, value);
   UnityEngine_Behaviour__set_enabled(scrollView, value, 0LL);
 }
 
@@ -819,10 +819,10 @@ bool __fastcall RecommendSupportMessageSelectListViewManager___get_ClippingObjec
   ListViewItem_o *Item; // x0
 
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   Item = (ListViewItem_o *)RecommendSupportMessageSelectListViewObject__GetItem(x, (const MethodInfo *)x);
   return Item && !Item->fields.isTermination
-      || ListViewManager__ClippingItem_41563988((ListViewManager_o *)this, Item, 0LL);
+      || ListViewManager__ClippingItem_41702652((ListViewManager_o *)this, Item, 0LL);
 }
 
 
@@ -840,10 +840,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__add_FuncOnClick(
   RecommendSupportMessageSelectListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B33331 & 1) == 0 )
+  if ( (byte_4B62D04 & 1) == 0 )
   {
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4B33331 = 1;
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, value);
+    byte_4B62D04 = 1;
   }
   FuncOnClick = (System_Delegate_o *)this->fields.FuncOnClick;
   p_FuncOnClick = &this->fields.FuncOnClick;
@@ -855,13 +855,13 @@ void __fastcall RecommendSupportMessageSelectListViewManager__add_FuncOnClick(
       if ( (RecommendSupportMessageSelectListViewManager_CallbackFunc_c *)v7->klass != RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C0E948(p_FuncOnClick, v7, FuncOnClick);
+    v8 = sub_1C1FFBC(p_FuncOnClick, v7, FuncOnClick);
     v9 = FuncOnClick == (System_Delegate_o *)v8;
     FuncOnClick = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BD3974(v7);
+  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BE4FE8(v7);
   RecommendSupportMessageSelectListViewManager__remove_FuncOnClick(v10, v11, v12);
 }
 
@@ -880,10 +880,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__add_FuncOnMoveEnd(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B33333 & 1) == 0 )
+  if ( (byte_4B62D06 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, value);
-    byte_4B33333 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, value);
+    byte_4B62D06 = 1;
   }
   FuncOnMoveEnd = (System_Delegate_o *)this->fields.FuncOnMoveEnd;
   p_FuncOnMoveEnd = &this->fields.FuncOnMoveEnd;
@@ -895,13 +895,13 @@ void __fastcall RecommendSupportMessageSelectListViewManager__add_FuncOnMoveEnd(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C0E948(p_FuncOnMoveEnd, v7, FuncOnMoveEnd);
+    v8 = sub_1C1FFBC(p_FuncOnMoveEnd, v7, FuncOnMoveEnd);
     v9 = FuncOnMoveEnd == (System_Delegate_o *)v8;
     FuncOnMoveEnd = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BD3974(v7);
+  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BE4FE8(v7);
   RecommendSupportMessageSelectListViewManager__remove_FuncOnMoveEnd(v10, v11, v12);
 }
 
@@ -917,16 +917,16 @@ System_Collections_Generic_List_RecommendSupportMessageSelectListViewObject__o *
   System_Func_object__bool__o *v7; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4B33338 & 1) == 0 )
+  if ( (byte_4B62D0B & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___, method);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Where_RecommendSupportMessageSelectListViewObject___, v3);
-    sub_1BD3458(&System_Func_RecommendSupportMessageSelectListViewObject__bool__TypeInfo, v4);
-    sub_1BD3458(&Method_RecommendSupportMessageSelectListViewManager__get_ClippingObjectList_b__15_0__, v5);
-    byte_4B33338 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___, method);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_RecommendSupportMessageSelectListViewObject___, v3);
+    sub_1BE4ACC(&System_Func_RecommendSupportMessageSelectListViewObject__bool__TypeInfo, v4);
+    sub_1BE4ACC(&Method_RecommendSupportMessageSelectListViewManager__get_ClippingObjectList_b__15_0__, v5);
+    byte_4B62D0B = 1;
   }
   v6 = RecommendSupportMessageSelectListViewManager__EnumerateObjects(this, method);
-  v7 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_RecommendSupportMessageSelectListViewObject__bool__TypeInfo);
+  v7 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_RecommendSupportMessageSelectListViewObject__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v7,
     (Il2CppObject *)this,
@@ -935,10 +935,10 @@ System_Collections_Generic_List_RecommendSupportMessageSelectListViewObject__o *
   v8 = System_Linq_Enumerable__Where_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v6,
          (System_Func_TSource__bool__o *)v7,
-         (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_RecommendSupportMessageSelectListViewObject___);
+         (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_RecommendSupportMessageSelectListViewObject___);
   return (System_Collections_Generic_List_RecommendSupportMessageSelectListViewObject__o *)System_Linq_Enumerable__ToList_object_(
                                                                                              v8,
-                                                                                             (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___);
+                                                                                             (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___);
 }
 
 
@@ -948,15 +948,15 @@ System_Collections_Generic_List_RecommendSupportMessageSelectListViewObject__o *
 {
   System_Collections_Generic_IEnumerable_RecommendSupportMessageSelectListViewObject__o *v3; // x0
 
-  if ( (byte_4B33337 & 1) == 0 )
+  if ( (byte_4B62D0A & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___, method);
-    byte_4B33337 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___, method);
+    byte_4B62D0A = 1;
   }
   v3 = RecommendSupportMessageSelectListViewManager__EnumerateObjects(this, method);
   return (System_Collections_Generic_List_RecommendSupportMessageSelectListViewObject__o *)System_Linq_Enumerable__ToList_object_(
                                                                                              (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-                                                                                             (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___);
+                                                                                             (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_RecommendSupportMessageSelectListViewObject___);
 }
 
 
@@ -974,10 +974,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__remove_FuncOnClick
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B33332 & 1) == 0 )
+  if ( (byte_4B62D05 & 1) == 0 )
   {
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4B33332 = 1;
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, value);
+    byte_4B62D05 = 1;
   }
   FuncOnClick = (System_Delegate_o *)this->fields.FuncOnClick;
   p_FuncOnClick = &this->fields.FuncOnClick;
@@ -989,13 +989,13 @@ void __fastcall RecommendSupportMessageSelectListViewManager__remove_FuncOnClick
       if ( (RecommendSupportMessageSelectListViewManager_CallbackFunc_c *)v7->klass != RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C0E948(p_FuncOnClick, v7, FuncOnClick);
+    v8 = sub_1C1FFBC(p_FuncOnClick, v7, FuncOnClick);
     v9 = FuncOnClick == (System_Delegate_o *)v8;
     FuncOnClick = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BD3974(v7);
+  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BE4FE8(v7);
   RecommendSupportMessageSelectListViewManager__add_FuncOnMoveEnd(v10, v11, v12);
 }
 
@@ -1013,10 +1013,10 @@ void __fastcall RecommendSupportMessageSelectListViewManager__remove_FuncOnMoveE
   RecommendSupportMessageSelectListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B33334 & 1) == 0 )
+  if ( (byte_4B62D07 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, value);
-    byte_4B33334 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, value);
+    byte_4B62D07 = 1;
   }
   FuncOnMoveEnd = (System_Delegate_o *)this->fields.FuncOnMoveEnd;
   p_FuncOnMoveEnd = &this->fields.FuncOnMoveEnd;
@@ -1028,13 +1028,13 @@ void __fastcall RecommendSupportMessageSelectListViewManager__remove_FuncOnMoveE
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C0E948(p_FuncOnMoveEnd, v7, FuncOnMoveEnd);
+    v8 = sub_1C1FFBC(p_FuncOnMoveEnd, v7, FuncOnMoveEnd);
     v9 = FuncOnMoveEnd == (System_Delegate_o *)v8;
     FuncOnMoveEnd = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BD3974(v7);
+  v10 = (RecommendSupportMessageSelectListViewManager_o *)sub_1BE4FE8(v7);
   RecommendSupportMessageSelectListViewManager__EnumerateItems(v10, v11);
 }
 
@@ -1061,7 +1061,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager_CallbackFunc___ctor
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1072,12 +1072,12 @@ void __fastcall RecommendSupportMessageSelectListViewManager_CallbackFunc___ctor
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v10) & 1) == 0 )
+  if ( (sub_1BE4B8C(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v14, 0LL);
+      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1089,9 +1089,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A10A5C;
+  this->fields.m_target = (Il2CppObject *)sub_1A21EE4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A10A04;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A21E8C;
 }
 
 
@@ -1114,11 +1114,11 @@ System_IAsyncResult_o *__fastcall RecommendSupportMessageSelectListViewManager_C
 
   v15 = result;
   v16 = kind;
-  if ( (byte_4B3333F & 1) == 0 )
+  if ( (byte_4B62D12 & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&kind);
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager_ResultKind_TypeInfo, v9);
-    byte_4B3333F = 1;
+    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&kind);
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager_ResultKind_TypeInfo, v9);
+    byte_4B62D12 = 1;
   }
   v14[2] = 0LL;
   v14[0] = j_il2cpp_value_box_0(
@@ -1128,7 +1128,7 @@ System_IAsyncResult_o *__fastcall RecommendSupportMessageSelectListViewManager_C
              callback,
              object);
   v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1BD340C(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, v14, callback, object);
 }
 
 
@@ -1137,7 +1137,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager_CallbackFunc__EndIn
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 
@@ -1166,15 +1166,15 @@ void __fastcall RecommendSupportMessageSelectListViewManager___c___cctor(const M
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B33340 & 1) == 0 )
+  if ( (byte_4B62D13 & 1) == 0 )
   {
-    sub_1BD3458(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v1);
-    byte_4B33340 = 1;
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewManager___c_TypeInfo, v1);
+    byte_4B62D13 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(RecommendSupportMessageSelectListViewManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(RecommendSupportMessageSelectListViewManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RecommendSupportMessageSelectListViewManager___c_TypeInfo->static_fields->__9 = (struct RecommendSupportMessageSelectListViewManager___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)RecommendSupportMessageSelectListViewManager___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1199,18 +1199,18 @@ RecommendSupportMessageSelectListViewObject_o *__fastcall RecommendSupportMessag
         UnityEngine_GameObject_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_4B33341 & 1) == 0 )
+  if ( (byte_4B62D14 & 1) == 0 )
   {
-    this = (RecommendSupportMessageSelectListViewManager___c_o *)sub_1BD3458(
+    this = (RecommendSupportMessageSelectListViewManager___c_o *)sub_1BE4ACC(
                                                                    &Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewObject___,
                                                                    x);
-    byte_4B33341 = 1;
+    byte_4B62D14 = 1;
   }
   if ( !x )
-    sub_1BD36B4(this, x);
+    sub_1BE4D28(this, x);
   return (RecommendSupportMessageSelectListViewObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                             x,
-                                                            (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewObject___);
+                                                            (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewObject___);
 }
 
 
@@ -1223,12 +1223,12 @@ RecommendSupportMessageSelectListViewItem_o *__fastcall RecommendSupportMessageS
   RecommendSupportMessageSelectListViewItem_o *v6; // x21
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B33342 & 1) == 0 )
+  if ( (byte_4B62D15 & 1) == 0 )
   {
-    sub_1BD3458(&RecommendSupportMessageSelectListViewItem_TypeInfo, item);
-    byte_4B33342 = 1;
+    sub_1BE4ACC(&RecommendSupportMessageSelectListViewItem_TypeInfo, item);
+    byte_4B62D15 = 1;
   }
-  v6 = (RecommendSupportMessageSelectListViewItem_o *)sub_1BD36A4(RecommendSupportMessageSelectListViewItem_TypeInfo);
+  v6 = (RecommendSupportMessageSelectListViewItem_o *)sub_1BE4D18(RecommendSupportMessageSelectListViewItem_TypeInfo);
   RecommendSupportMessageSelectListViewItem___ctor(v6, i, item, v7);
   return v6;
 }
@@ -1240,7 +1240,7 @@ bool __fastcall RecommendSupportMessageSelectListViewManager___c___GetItemList_b
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return entity->fields.category == 1;
 }
 
@@ -1251,7 +1251,7 @@ bool __fastcall RecommendSupportMessageSelectListViewManager___c___GetItemList_b
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return entity->fields.category == 2;
 }
 
@@ -1262,7 +1262,7 @@ bool __fastcall RecommendSupportMessageSelectListViewManager___c___GetItemList_b
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return entity->fields.category == 3;
 }
 
@@ -1273,7 +1273,7 @@ bool __fastcall RecommendSupportMessageSelectListViewManager___c___GetItemList_b
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return entity->fields.category == 4;
 }
 
@@ -1284,7 +1284,7 @@ void __fastcall RecommendSupportMessageSelectListViewManager___c___ModifyList_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   RecommendSupportMessageSelectListViewItem__UpdateProperties(x, (const MethodInfo *)x);
 }
 
@@ -1303,6 +1303,6 @@ void __fastcall RecommendSupportMessageSelectListViewManager___c__DisplayClass26
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   RecommendSupportMessageSelectListViewObject__Init(x, this->fields.mode, method);
 }

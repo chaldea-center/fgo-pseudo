@@ -1,13 +1,13 @@
 void __fastcall SummonAssetManager___ctor(SummonAssetManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B364A7 & 1) == 0 )
+  if ( (byte_4B65EBF & 1) == 0 )
   {
-    sub_1BD3458(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__, method);
-    byte_4B364A7 = 1;
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__, method);
+    byte_4B65EBF = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_37FE060 *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
+    (const MethodInfo_38291E0 *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
 }
 
 
@@ -24,7 +24,7 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
   __int64 v11; // x1
   ServantRewardAction_o *result; // x0
   System_String_o **v13; // x8
-  Il2CppObject *Object_object__49362760; // x19
+  Il2CppObject *Object_object__49525204; // x19
   UnityEngine_GameObject_o *transform; // x0
   __int64 v16; // x1
   UnityEngine_GameObject_o *v17; // x19
@@ -32,31 +32,31 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
   UnityEngine_Transform_o *v19; // x20
   UnityEngine_Transform_o *v20; // x20
 
-  if ( (byte_4B364A5 & 1) == 0 )
+  if ( (byte_4B65EBD & 1) == 0 )
   {
-    sub_1BD3458(&Method_AssetData_GetObject_GameObject____76969040, parent);
-    sub_1BD3458(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___, v7);
-    sub_1BD3458(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BD3458(&StringLiteral_12827/*"Servant_get_prefab"*/, v10);
-    sub_1BD3458(&StringLiteral_12828/*"Servant_get_prefab_for_battle"*/, v11);
-    byte_4B364A5 = 1;
+    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, parent);
+    sub_1BE4ACC(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___, v7);
+    sub_1BE4ACC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BE4ACC(&StringLiteral_12845/*"Servant_get_prefab"*/, v10);
+    sub_1BE4ACC(&StringLiteral_12846/*"Servant_get_prefab_for_battle"*/, v11);
+    byte_4B65EBD = 1;
   }
   result = (ServantRewardAction_o *)this->fields.summonAssets;
   if ( result )
   {
-    v13 = (System_String_o **)&StringLiteral_12828/*"Servant_get_prefab_for_battle"*/;
+    v13 = (System_String_o **)&StringLiteral_12846/*"Servant_get_prefab_for_battle"*/;
     if ( !isForBattle )
-      v13 = (System_String_o **)&StringLiteral_12827/*"Servant_get_prefab"*/;
-    Object_object__49362760 = AssetData__GetObject_object__49362760(
+      v13 = (System_String_o **)&StringLiteral_12845/*"Servant_get_prefab"*/;
+    Object_object__49525204 = AssetData__GetObject_object__49525204(
                                 (AssetData_o *)result,
                                 *v13,
-                                (const MethodInfo_2F13748 *)Method_AssetData_GetObject_GameObject____76969040);
+                                (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__49362760,
-                                              (const MethodInfo_2FB6C24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__49525204,
+                                              (const MethodInfo_2FDE9E4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_21;
     v17 = transform;
@@ -66,20 +66,20 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
     UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)transform, parent, 0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v18 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4B31941 )
+    if ( !byte_4B612E1 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1BD3458(&UnityEngine_Vector3_TypeInfo, v16);
-      byte_4B31941 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, v16);
+      byte_4B612E1 = 1;
     }
     if ( !v18 )
       goto LABEL_21;
     UnityEngine_Transform__set_localPosition(v18, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v19 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4B31947 )
+    if ( !byte_4B612E7 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1BD3458(&UnityEngine_Quaternion_TypeInfo, v16);
-      byte_4B31947 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1BE4ACC(&UnityEngine_Quaternion_TypeInfo, v16);
+      byte_4B612E7 = 1;
     }
     if ( !v19 )
       goto LABEL_21;
@@ -89,18 +89,18 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
       0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v20 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4B31946 )
+    if ( !byte_4B612E6 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1BD3458(&UnityEngine_Vector3_TypeInfo, v16);
-      byte_4B31946 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, v16);
+      byte_4B612E6 = 1;
     }
     if ( !v20 )
 LABEL_21:
-      sub_1BD36B4(transform, v16);
+      sub_1BE4D28(transform, v16);
     UnityEngine_Transform__set_localScale(v20, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
     return (ServantRewardAction_o *)GameObjectExtensions__SafeGetComponent_object_(
                                       v17,
-                                      (const MethodInfo_2F83564 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
+                                      (const MethodInfo_2FAB284 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
   }
   return result;
 }
@@ -133,23 +133,23 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
   AssetData_o *summonAssets; // x0
   AssetLoader_LoadEndDataHandler_o *v25; // x19
 
-  if ( (byte_4B364A4 & 1) == 0 )
+  if ( (byte_4B65EBC & 1) == 0 )
   {
-    sub_1BD3458(&AssetManager_TypeInfo, onLoad);
-    sub_1BD3458(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_1BD3458(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__, v6);
-    sub_1BD3458(&SummonAssetManager___c__DisplayClass1_0_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_5975/*"Effect/Summon"*/, v8);
-    byte_4B364A4 = 1;
+    sub_1BE4ACC(&AssetManager_TypeInfo, onLoad);
+    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
+    sub_1BE4ACC(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__, v6);
+    sub_1BE4ACC(&SummonAssetManager___c__DisplayClass1_0_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_5978/*"Effect/Summon"*/, v8);
+    byte_4B65EBC = 1;
   }
-  v9 = sub_1BD36A4(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_1BE4D18(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1BD36B4(v10, v11);
+    sub_1BE4D28(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = onLoad;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)onLoad, v18, v19, v20, v21, v22, v23);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)onLoad, v18, v19, v20, v21, v22, v23);
   summonAssets = this->fields.summonAssets;
   if ( summonAssets && !AssetData__get_IsEmpty(summonAssets, 0LL) )
   {
@@ -157,7 +157,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
   }
   else
   {
-    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1BD36A4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v25,
       (Il2CppObject *)v9,
@@ -165,7 +165,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
       0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5975/*"Effect/Summon"*/, v25, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5978/*"Effect/Summon"*/, v25, 1, 0LL);
   }
 }
 
@@ -182,10 +182,10 @@ void __fastcall SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *thi
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B364A6 & 1) == 0 )
+  if ( (byte_4B65EBE & 1) == 0 )
   {
-    sub_1BD3458(&AssetManager_TypeInfo, method);
-    byte_4B364A6 = 1;
+    sub_1BE4ACC(&AssetManager_TypeInfo, method);
+    byte_4B65EBE = 1;
   }
   summonAssets = this->fields.summonAssets;
   p_summonAssets = (PartyOrganizationUtility_o *)&this->fields.summonAssets;
@@ -194,9 +194,9 @@ void __fastcall SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *thi
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38574016(v4, 0LL);
+    AssetManager__releaseAsset_38697776(v4, 0LL);
     p_summonAssets->klass = 0LL;
-    sub_1BD33FC(p_summonAssets, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1BE4A70(p_summonAssets, 0LL, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -223,9 +223,9 @@ void __fastcall SummonAssetManager___c__DisplayClass1_0___LoadSummonAssets_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BD36B4(0LL, data);
+    sub_1BE4D28(0LL, data);
   _4__this->fields.summonAssets = data;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&_4__this->fields.summonAssets,
     (int64_t)data,
     (int64_t)method,

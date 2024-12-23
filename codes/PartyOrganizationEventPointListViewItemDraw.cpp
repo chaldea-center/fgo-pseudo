@@ -108,7 +108,7 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
               titleLabel = (UIWidget_o *)this->fields.titleLabel;
               if ( !titleLabel )
                 goto LABEL_17;
-              UILabel__SetCondensedScale((UILabel_o *)titleLabel, 510, 0LL);
+              UILabel__SetCondensedScale((UILabel_o *)titleLabel, 510, 0, 0LL);
             }
             dataLabel = this->fields.dataLabel;
             titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetDataString(item, v12);
@@ -122,6 +122,6 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
       }
     }
 LABEL_17:
-    sub_1BD36B4(titleLabel, item);
+    sub_1BE4D28(titleLabel, item);
   }
 }

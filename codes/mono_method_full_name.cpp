@@ -1,4 +1,4 @@
 __int64 __fastcall mono_method_full_name(__int64 a1)
 {
-  return sub_1BAFD6C(*(_QWORD *)(a1 + 24));
+  return sub_1BC13E0(*(_QWORD *)(a1 + 24));
 }

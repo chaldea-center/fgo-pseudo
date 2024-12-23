@@ -1,5 +1,5 @@
 __int64 __fastcall mono_class_instance_size(__int64 a1)
 {
-  sub_1BB822C();
+  sub_1BC98A0();
   return il2cpp_class_instance_size_0(a1);
 }

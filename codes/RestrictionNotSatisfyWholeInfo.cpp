@@ -15,28 +15,28 @@ System_String_o *__fastcall RestrictionNotSatisfyWholeInfo__AddColorCodeAndFixMe
   __int64 v8; // x1
   System_String_o *v9; // x0
 
-  if ( (byte_4B33214 & 1) == 0 )
+  if ( (byte_4B62BE5 & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, message);
-    sub_1BD3458(&StringLiteral_16016/*"[-]"*/, v6);
-    sub_1BD3458(&StringLiteral_11235/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v7);
-    sub_1BD3458(&StringLiteral_16121/*"[FFFF00]"*/, v8);
-    byte_4B33214 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, message);
+    sub_1BE4ACC(&StringLiteral_16037/*"[-]"*/, v6);
+    sub_1BE4ACC(&StringLiteral_11248/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v7);
+    sub_1BE4ACC(&StringLiteral_16142/*"[FFFF00]"*/, v8);
+    byte_4B62BE5 = 1;
   }
   if ( !isAddFixMessage )
-    return System_String__Concat_62536508(
-             (System_String_o *)StringLiteral_16121/*"[FFFF00]"*/,
+    return System_String__Concat_62710068(
+             (System_String_o *)StringLiteral_16142/*"[FFFF00]"*/,
              message,
-             (System_String_o *)StringLiteral_16016/*"[-]"*/,
+             (System_String_o *)StringLiteral_16037/*"[-]"*/,
              0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11235/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
-  return System_String__Concat_62538512(
-           (System_String_o *)StringLiteral_16121/*"[FFFF00]"*/,
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11248/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
+  return System_String__Concat_62712072(
+           (System_String_o *)StringLiteral_16142/*"[FFFF00]"*/,
            message,
            v9,
-           (System_String_o *)StringLiteral_16016/*"[-]"*/,
+           (System_String_o *)StringLiteral_16037/*"[-]"*/,
            0LL);
 }
 
@@ -118,13 +118,13 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__Init(
   System_Int32_array *v69; // x0
 
   v7 = this;
-  if ( (byte_4B3320E & 1) == 0 )
+  if ( (byte_4B62BDF & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, restrictionWholeEntity);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Contains_int___, v8);
-    sub_1BD3458(&StringLiteral_43/*"\n"*/, v9);
-    this = (RestrictionNotSatisfyWholeInfo_o *)sub_1BD3458(&StringLiteral_1/*""*/, v10);
-    byte_4B3320E = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, restrictionWholeEntity);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Contains_int___, v8);
+    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v9);
+    this = (RestrictionNotSatisfyWholeInfo_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v10);
+    byte_4B62BDF = 1;
   }
   if ( restrictionWholeEntity )
   {
@@ -173,7 +173,7 @@ LABEL_100:
         v35 = v22 >= v24;
         if ( !this )
           break;
-        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                      (System_String_o *)this,
                                                      (System_String_o *)StringLiteral_43/*"\n"*/,
                                                      (System_String_o *)StringLiteral_1/*""*/,
@@ -215,7 +215,7 @@ LABEL_100:
         this = (RestrictionNotSatisfyWholeInfo_o *)restrictionWholeEntity->fields.summary;
         if ( !this )
           break;
-        v33 = System_String__Replace_62544876(
+        v33 = System_String__Replace_62718436(
                 (System_String_o *)this,
                 (System_String_o *)StringLiteral_43/*"\n"*/,
                 (System_String_o *)StringLiteral_1/*""*/,
@@ -242,7 +242,7 @@ LABEL_100:
           this = (RestrictionNotSatisfyWholeInfo_o *)System_Linq_Enumerable__Contains_int_(
                                                        (System_Collections_Generic_IEnumerable_TSource__o *)restrictionWholeEntity->fields.targetVals2,
                                                        v39 + 1,
-                                                       (const MethodInfo_2F49970 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                       (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !partyItem )
@@ -273,7 +273,7 @@ LABEL_94:
         v35 = v39 >= DeckMemberMax;
         if ( !this )
           break;
-        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                      (System_String_o *)this,
                                                      (System_String_o *)StringLiteral_43/*"\n"*/,
                                                      (System_String_o *)StringLiteral_1/*""*/,
@@ -303,7 +303,7 @@ LABEL_51:
           this = (RestrictionNotSatisfyWholeInfo_o *)System_Linq_Enumerable__Contains_int_(
                                                        (System_Collections_Generic_IEnumerable_TSource__o *)restrictionWholeEntity->fields.targetVals2,
                                                        v14 + 1,
-                                                       (const MethodInfo_2F49970 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                       (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !partyItem )
@@ -357,7 +357,7 @@ LABEL_62:
           this = (RestrictionNotSatisfyWholeInfo_o *)System_Linq_Enumerable__Contains_int_(
                                                        (System_Collections_Generic_IEnumerable_TSource__o *)restrictionWholeEntity->fields.targetVals2,
                                                        v14 + 1,
-                                                       (const MethodInfo_2F49970 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                       (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !partyItem )
@@ -398,7 +398,7 @@ LABEL_63:
         v35 = v14 >= v15;
         if ( !this )
           break;
-        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                      (System_String_o *)this,
                                                      (System_String_o *)StringLiteral_43/*"\n"*/,
                                                      (System_String_o *)StringLiteral_1/*""*/,
@@ -476,7 +476,7 @@ LABEL_116:
               if ( !this )
                 goto LABEL_125;
 LABEL_121:
-              v56 = System_String__Replace_62544876(
+              v56 = System_String__Replace_62718436(
                       (System_String_o *)this,
                       (System_String_o *)StringLiteral_43/*"\n"*/,
                       (System_String_o *)StringLiteral_1/*""*/,
@@ -509,7 +509,7 @@ LABEL_82:
           if ( !this )
             break;
           v35 = v31 >= v32;
-          v56 = System_String__Replace_62544876(
+          v56 = System_String__Replace_62718436(
                   (System_String_o *)this,
                   (System_String_o *)StringLiteral_43/*"\n"*/,
                   (System_String_o *)StringLiteral_1/*""*/,
@@ -568,7 +568,7 @@ LABEL_119:
     }
   }
 LABEL_125:
-  sub_1BD36B4(this, restrictionWholeEntity);
+  sub_1BE4D28(this, restrictionWholeEntity);
 }
 
 
@@ -588,14 +588,14 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitFatigue(
   System_String_o *v13; // x0
   const MethodInfo *v14; // x3
 
-  if ( (byte_4B33210 & 1) == 0 )
+  if ( (byte_4B62BE1 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, partyItem);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_43/*"\n"*/, v6);
-    sub_1BD3458(&StringLiteral_11231/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B33210 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, partyItem);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v6);
+    sub_1BE4ACC(&StringLiteral_11244/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B62BE1 = 1;
   }
   v9 = 0;
   do
@@ -620,11 +620,11 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitFatigue(
   while ( ((unsigned __int64)Member[10].klass & 0x8000000000000000LL) != 0 );
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Member = LocalizationManager__Get((System_String_o *)StringLiteral_11231/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0LL);
+  Member = LocalizationManager__Get((System_String_o *)StringLiteral_11244/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0LL);
   if ( !Member )
 LABEL_14:
-    sub_1BD36B4(Member, partyItem);
-  v13 = System_String__Replace_62544876(
+    sub_1BE4D28(Member, partyItem);
+  v13 = System_String__Replace_62718436(
           Member,
           (System_String_o *)StringLiteral_43/*"\n"*/,
           (System_String_o *)StringLiteral_1/*""*/,
@@ -650,14 +650,14 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitNotSingleSupportOnly(
   System_String_o *v13; // x0
   const MethodInfo *v14; // x3
 
-  if ( (byte_4B33211 & 1) == 0 )
+  if ( (byte_4B62BE2 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, partyItem);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_43/*"\n"*/, v6);
-    sub_1BD3458(&StringLiteral_10434/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B33211 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, partyItem);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v6);
+    sub_1BE4ACC(&StringLiteral_10446/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B62BE2 = 1;
   }
   v9 = 0;
   do
@@ -682,11 +682,11 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitNotSingleSupportOnly(
   while ( !LOBYTE(Member[14].monitor) );
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Member = LocalizationManager__Get((System_String_o *)StringLiteral_10434/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0LL);
+  Member = LocalizationManager__Get((System_String_o *)StringLiteral_10446/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0LL);
   if ( !Member )
 LABEL_14:
-    sub_1BD36B4(Member, partyItem);
-  v13 = System_String__Replace_62544876(
+    sub_1BE4D28(Member, partyItem);
+  v13 = System_String__Replace_62718436(
           Member,
           (System_String_o *)StringLiteral_43/*"\n"*/,
           (System_String_o *)StringLiteral_1/*""*/,
@@ -712,14 +712,14 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitUniqueServant(
   System_String_o *v13; // x0
   const MethodInfo *v14; // x3
 
-  if ( (byte_4B3320F & 1) == 0 )
+  if ( (byte_4B62BE0 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, partyItem);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v5);
-    sub_1BD3458(&StringLiteral_43/*"\n"*/, v6);
-    sub_1BD3458(&StringLiteral_11234/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, v7);
-    sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B3320F = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, partyItem);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v5);
+    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v6);
+    sub_1BE4ACC(&StringLiteral_11247/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, v7);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B62BE0 = 1;
   }
   v9 = 0;
   do
@@ -744,11 +744,11 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitUniqueServant(
   while ( !BYTE2(Member[8].fields._stringLength) );
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Member = LocalizationManager__Get((System_String_o *)StringLiteral_11234/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0LL);
+  Member = LocalizationManager__Get((System_String_o *)StringLiteral_11247/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0LL);
   if ( !Member )
 LABEL_14:
-    sub_1BD36B4(Member, partyItem);
-  v13 = System_String__Replace_62544876(
+    sub_1BE4D28(Member, partyItem);
+  v13 = System_String__Replace_62718436(
           Member,
           (System_String_o *)StringLiteral_43/*"\n"*/,
           (System_String_o *)StringLiteral_1/*""*/,
@@ -758,7 +758,7 @@ LABEL_14:
 }
 
 
-bool __fastcall RestrictionNotSatisfyWholeInfo__Init_33053132(
+bool __fastcall RestrictionNotSatisfyWholeInfo__Init_33142224(
         RestrictionNotSatisfyWholeInfo_o *this,
         RestrictionEntity_o *restrictionEntity,
         PartyListViewItem_o *partyItem,
@@ -773,7 +773,7 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__Init_33053132(
   struct System_Int32_array *targetVals2; // x8
   System_String_o *name; // x8
   char v15; // w20
-  char IsSearchVals_40390000; // w22
+  char IsSearchVals_40523512; // w22
   System_String_o *v17; // x2
   const MethodInfo *v18; // x3
   char v19; // w1
@@ -832,13 +832,13 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__Init_33053132(
   const MethodInfo *v73; // x3
 
   v8 = this;
-  if ( (byte_4B33212 & 1) == 0 )
+  if ( (byte_4B62BE3 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, restrictionEntity);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Contains_int___, v9);
-    sub_1BD3458(&StringLiteral_43/*"\n"*/, v10);
-    this = (RestrictionNotSatisfyWholeInfo_o *)sub_1BD3458(&StringLiteral_1/*""*/, v11);
-    byte_4B33212 = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, restrictionEntity);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Contains_int___, v9);
+    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v10);
+    this = (RestrictionNotSatisfyWholeInfo_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v11);
+    byte_4B62BE3 = 1;
   }
   if ( !restrictionEntity )
     goto LABEL_171;
@@ -883,18 +883,18 @@ LABEL_20:
           Individuality = ServantEntity__getIndividuality(servantEntity, svtLimitCount, (int32_t)this, 0LL);
           v21 = 0;
           v27 = 0;
-          if ( !RestrictionEntity__IsRestriction_40390324(restrictionEntity, Individuality, 0LL) )
+          if ( !RestrictionEntity__IsRestriction_40523836(restrictionEntity, Individuality, 0LL) )
             goto LABEL_20;
         }
         break;
       }
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       v54 = v20 < v22;
-      IsSearchVals_40390000 = v20 >= v22;
+      IsSearchVals_40523512 = v20 >= v22;
       v60 = v54;
       if ( this )
       {
-        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+        this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                      (System_String_o *)this,
                                                      (System_String_o *)StringLiteral_43/*"\n"*/,
                                                      (System_String_o *)StringLiteral_1/*""*/,
@@ -910,7 +910,7 @@ LABEL_169:
         }
       }
 LABEL_171:
-      sub_1BD36B4(this, restrictionEntity);
+      sub_1BE4D28(this, restrictionEntity);
     case 6:
       v28 = 0;
       while ( 2 )
@@ -954,14 +954,14 @@ LABEL_30:
         if ( v31 >= v33->static_fields->DeckMemberMax )
         {
 LABEL_40:
-          IsSearchVals_40390000 = 1;
+          IsSearchVals_40523512 = 1;
           goto LABEL_41;
         }
         ++v31;
         this = (RestrictionNotSatisfyWholeInfo_o *)System_Linq_Enumerable__Contains_int_(
                                                      (System_Collections_Generic_IEnumerable_TSource__o *)restrictionEntity->fields.targetVals,
                                                      v34 + 1,
-                                                     (const MethodInfo_2F49970 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                     (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !partyItem )
@@ -989,12 +989,12 @@ LABEL_40:
         goto LABEL_30;
       }
       v32 = 0;
-      IsSearchVals_40390000 = LOBYTE(v35[2].fields.m_CachedPtr) != 0;
+      IsSearchVals_40523512 = LOBYTE(v35[2].fields.m_CachedPtr) != 0;
 LABEL_41:
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       if ( !this )
         goto LABEL_171;
-      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                    (System_String_o *)this,
                                                    (System_String_o *)StringLiteral_43/*"\n"*/,
                                                    (System_String_o *)StringLiteral_1/*""*/,
@@ -1003,7 +1003,7 @@ LABEL_41:
         goto LABEL_171;
       RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
         v8,
-        v32 & 1 | IsSearchVals_40390000 ^ 1,
+        v32 & 1 | IsSearchVals_40523512 ^ 1,
         (System_String_o *)this,
         v37);
       if ( (v32 & 1) == 0 )
@@ -1034,7 +1034,7 @@ LABEL_41:
         {
           v39 = 0;
 LABEL_157:
-          IsSearchVals_40390000 = 0;
+          IsSearchVals_40523512 = 0;
         }
         else
         {
@@ -1045,20 +1045,20 @@ LABEL_157:
             goto LABEL_171;
           v43 = ServantEntity__getIndividuality(v41, v42, (int32_t)this, 0LL);
           v39 = 0;
-          if ( !RestrictionEntity__IsSearchVals_40390000(restrictionEntity, v43, 0LL) )
+          if ( !RestrictionEntity__IsSearchVals_40523512(restrictionEntity, v43, 0LL) )
           {
 LABEL_55:
             ++v38;
             continue;
           }
-          IsSearchVals_40390000 = 1;
+          IsSearchVals_40523512 = 1;
         }
         break;
       }
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       if ( !this )
         goto LABEL_171;
-      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                    (System_String_o *)this,
                                                    (System_String_o *)StringLiteral_43/*"\n"*/,
                                                    (System_String_o *)StringLiteral_1/*""*/,
@@ -1067,7 +1067,7 @@ LABEL_55:
         goto LABEL_171;
       RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
         v8,
-        v39 & 1 | IsSearchVals_40390000 ^ 1,
+        v39 & 1 | IsSearchVals_40523512 ^ 1,
         (System_String_o *)this,
         v69);
       if ( (v39 & 1) != 0 )
@@ -1083,14 +1083,14 @@ LABEL_55:
       IsEmpty = PartyOrganizationListViewItem__get_IsEmpty((PartyOrganizationListViewItem_o *)this, 0LL);
       if ( IsEmpty )
       {
-        IsSearchVals_40390000 = 0;
+        IsSearchVals_40523512 = 0;
         v46 = 1;
       }
       else
       {
         if ( v44->fields.isFollower )
         {
-          IsSearchVals_40390000 = 0;
+          IsSearchVals_40523512 = 0;
         }
         else
         {
@@ -1100,14 +1100,14 @@ LABEL_55:
           if ( !v70 )
             goto LABEL_171;
           v72 = ServantEntity__getIndividuality(v70, v71, (int32_t)this, 0LL);
-          IsSearchVals_40390000 = RestrictionEntity__IsSearchVals_40390000(restrictionEntity, v72, 0LL);
+          IsSearchVals_40523512 = RestrictionEntity__IsSearchVals_40523512(restrictionEntity, v72, 0LL);
         }
-        v46 = IsSearchVals_40390000 ^ 1;
+        v46 = IsSearchVals_40523512 ^ 1;
       }
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       if ( !this )
         goto LABEL_171;
-      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62544876(
+      this = (RestrictionNotSatisfyWholeInfo_o *)System_String__Replace_62718436(
                                                    (System_String_o *)this,
                                                    (System_String_o *)StringLiteral_43/*"\n"*/,
                                                    (System_String_o *)StringLiteral_1/*""*/,
@@ -1157,23 +1157,23 @@ LABEL_116:
           goto LABEL_171;
         if ( !v59->max_length )
 LABEL_172:
-          sub_1BD36BC(this, restrictionEntity);
-        IsSearchVals_40390000 = v48 == v59->m_Items[1];
+          sub_1BE4D30(this, restrictionEntity);
+        IsSearchVals_40523512 = v48 == v59->m_Items[1];
       }
       else
       {
 LABEL_120:
-        IsSearchVals_40390000 = 1;
+        IsSearchVals_40523512 = 1;
       }
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       if ( !this )
         goto LABEL_171;
-      v17 = System_String__Replace_62544876(
+      v17 = System_String__Replace_62718436(
               (System_String_o *)this,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0LL);
-      v19 = IsSearchVals_40390000 ^ 1;
+      v19 = IsSearchVals_40523512 ^ 1;
 LABEL_123:
       v56 = v8;
       goto LABEL_153;
@@ -1226,8 +1226,8 @@ LABEL_123:
       if ( !name )
         goto LABEL_171;
       v15 = (char)this;
-      IsSearchVals_40390000 = (unsigned __int8)this ^ 1;
-      v17 = System_String__Replace_62544876(
+      IsSearchVals_40523512 = (unsigned __int8)this ^ 1;
+      v17 = System_String__Replace_62718436(
               name,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               (System_String_o *)StringLiteral_1/*""*/,
@@ -1281,7 +1281,7 @@ LABEL_123:
               this = (RestrictionNotSatisfyWholeInfo_o *)BalanceConfig_TypeInfo;
             }
             v63 = *(_DWORD *)(*(_QWORD *)&this[3].fields.m_CachedPtr + 160LL);
-            IsSearchVals_40390000 = i < v63;
+            IsSearchVals_40523512 = i < v63;
             if ( i >= v63 )
               break;
             if ( !partyItem )
@@ -1299,7 +1299,7 @@ LABEL_123:
               if ( !v65 )
                 goto LABEL_171;
               v67 = ServantEntity__getIndividuality(v65, v66, (int32_t)this, 0LL);
-              if ( RestrictionEntity__IsSearchVals_40390000(restrictionEntity, v67, 0LL) )
+              if ( RestrictionEntity__IsSearchVals_40523512(restrictionEntity, v67, 0LL) )
                 break;
             }
             this = (RestrictionNotSatisfyWholeInfo_o *)BalanceConfig_TypeInfo;
@@ -1318,7 +1318,7 @@ LABEL_123:
             ++v52;
             continue;
           }
-          IsSearchVals_40390000 = 0;
+          IsSearchVals_40523512 = 0;
           v58 = 1;
         }
         break;
@@ -1327,7 +1327,7 @@ LABEL_123:
       if ( !this )
         goto LABEL_171;
 LABEL_152:
-      v17 = System_String__Replace_62544876(
+      v17 = System_String__Replace_62718436(
               (System_String_o *)this,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               (System_String_o *)StringLiteral_1/*""*/,
@@ -1369,9 +1369,9 @@ LABEL_100:
       if ( !this )
         goto LABEL_171;
       v54 = v29 < v30;
-      IsSearchVals_40390000 = v29 >= v30;
+      IsSearchVals_40523512 = v29 >= v30;
       v55 = v54;
-      v17 = System_String__Replace_62544876(
+      v17 = System_String__Replace_62718436(
               (System_String_o *)this,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               (System_String_o *)StringLiteral_1/*""*/,
@@ -1381,7 +1381,7 @@ LABEL_100:
 LABEL_153:
       RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(v56, v19, v17, v18);
 LABEL_154:
-      v12 = IsSearchVals_40390000 ^ 1;
+      v12 = IsSearchVals_40523512 ^ 1;
       return v12 & 1;
     case 0x11:
       v57 = 0;
@@ -1414,7 +1414,7 @@ LABEL_150:
       this = (RestrictionNotSatisfyWholeInfo_o *)restrictionEntity->fields.name;
       if ( !this )
         goto LABEL_171;
-      IsSearchVals_40390000 = !v58;
+      IsSearchVals_40523512 = !v58;
       goto LABEL_152;
     default:
       return v12 & 1;
@@ -1438,10 +1438,10 @@ void __fastcall RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
   const MethodInfo *v13; // x3
   System_String_o *v14; // x1
 
-  if ( (byte_4B33213 & 1) == 0 )
+  if ( (byte_4B62BE4 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_25618/*"・"*/, isWarning);
-    byte_4B33213 = 1;
+    sub_1BE4ACC(&StringLiteral_25674/*"・"*/, isWarning);
+    byte_4B62BE4 = 1;
   }
   notSatisfySprite = (UnityEngine_Component_o *)this->fields.notSatisfySprite;
   if ( !notSatisfySprite )
@@ -1455,7 +1455,7 @@ void __fastcall RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
     notSatisfySprite = (UnityEngine_Component_o *)this->fields.wholeInfoPrefixLabel;
     if ( notSatisfySprite )
     {
-      UILabel__set_text((UILabel_o *)notSatisfySprite, (System_String_o *)StringLiteral_25618/*"・"*/, 0LL);
+      UILabel__set_text((UILabel_o *)notSatisfySprite, (System_String_o *)StringLiteral_25674/*"・"*/, 0LL);
       notSatisfySprite = (UnityEngine_Component_o *)this->fields.wholeInfoLabel;
       if ( notSatisfySprite )
       {
@@ -1464,13 +1464,13 @@ void __fastcall RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
       }
     }
 LABEL_13:
-    sub_1BD36B4(notSatisfySprite, isWarning);
+    sub_1BE4D28(notSatisfySprite, isWarning);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)notSatisfySprite, 1, 0LL);
   wholeInfoPrefixLabel = this->fields.wholeInfoPrefixLabel;
   notSatisfySprite = (UnityEngine_Component_o *)RestrictionNotSatisfyWholeInfo__AddColorCodeAndFixMessage(
                                                   v9,
-                                                  (System_String_o *)StringLiteral_25618/*"・"*/,
+                                                  (System_String_o *)StringLiteral_25674/*"・"*/,
                                                   0,
                                                   v10);
   if ( !wholeInfoPrefixLabel )

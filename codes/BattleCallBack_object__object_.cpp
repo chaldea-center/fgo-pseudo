@@ -3,7 +3,7 @@ void __fastcall BattleCallBack_object__object____ctor(
         Il2CppObject *arg1,
         Il2CppObject *arg2,
         System_Action_T1__T2__o *callBack,
-        const MethodInfo_314A0A4 *method)
+        const MethodInfo_3175978 *method)
 {
   int64_t v9; // x2
   int32_t v10; // w3
@@ -26,19 +26,19 @@ void __fastcall BattleCallBack_object__object____ctor(
 
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.arg1 = arg1;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)arg1, v9, v10, v11, v12, v13, v14);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)arg1, v9, v10, v11, v12, v13, v14);
   this->fields.arg2 = arg2;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.arg2, (int64_t)arg2, v15, v16, v17, v18, v19, v20);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.arg2, (int64_t)arg2, v15, v16, v17, v18, v19, v20);
   this->fields.callBack = callBack;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.callBack, (int64_t)callBack, v21, v22, v23, v24, v25, v26);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.callBack, (int64_t)callBack, v21, v22, v23, v24, v25, v26);
 }
 
 
-void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_314A104 *method)
+void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_31759D8 *method)
 {
   ActionExtensions__Call_object__object_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
-    (const MethodInfo_2E841D4 *)method->klass->rgctx_data->_4_ActionExtensions_Call_T1__T2_);
+    (const MethodInfo_2EABC60 *)method->klass->rgctx_data->_4_ActionExtensions_Call_T1__T2_);
 }

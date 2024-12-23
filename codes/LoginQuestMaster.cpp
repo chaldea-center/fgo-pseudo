@@ -1,14 +1,14 @@
 void __fastcall LoginQuestMaster___ctor(LoginQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B374D6 & 1) == 0 )
+  if ( (byte_4B66F01 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__, method);
-    byte_4B374D6 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__, method);
+    byte_4B66F01 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    360,
-    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
+    364,
+    (const MethodInfo_31FD784 *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
 }
 
 
@@ -42,23 +42,23 @@ LoginQuestEntity_o *__fastcall LoginQuestMaster__GetEntityByQuestId(
   int32_t *v26; // x10
   __int64 v27; // x0
 
-  if ( (byte_4B374D7 & 1) == 0 )
+  if ( (byte_4B66F02 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&questId);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v5);
-    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BD3458(&LoginQuestEntity_TypeInfo, v8);
-    byte_4B374D7 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&questId);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
+    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1BE4ACC(&LoginQuestEntity_TypeInfo, v8);
+    byte_4B66F02 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BD36B4(0LL, *(_QWORD *)&questId);
+    sub_1BE4D28(0LL, *(_QWORD *)&questId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BD36B4(0LL, v10);
+    sub_1BE4D28(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -78,7 +78,7 @@ LoginQuestEntity_o *__fastcall LoginQuestMaster__GetEntityByQuestId(
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -101,7 +101,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v19 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v20 = (LoginQuestEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
                                   Enumerator,
@@ -113,9 +113,9 @@ LABEL_16:
     if ( LOBYTE(v20->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (LoginQuestEntity_c *)v20->klass->_2.typeHierarchy[methodPtr_low - 1] != LoginQuestEntity_TypeInfo )
     {
-      sub_1BD3974(v20);
+      sub_1BE4FE8(v20);
 LABEL_32:
-      sub_1BD36B4(v20, v21);
+      sub_1BE4D28(v20, v21);
     }
     if ( v20->fields.questId == questId )
       goto LABEL_24;
@@ -139,7 +139,7 @@ LABEL_24:
   else
   {
 LABEL_28:
-    v27 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
   return v22;

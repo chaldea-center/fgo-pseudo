@@ -1,9 +1,9 @@
 void __fastcall CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3AA3F & 1) == 0 )
+  if ( (byte_4B6A4D7 & 1) == 0 )
   {
-    sub_1BD3458(&CommonEffectComponent_TypeInfo, method);
-    byte_4B3AA3F = 1;
+    sub_1BE4ACC(&CommonEffectComponent_TypeInfo, method);
+    byte_4B6A4D7 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -30,19 +30,19 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B3AA3E & 1) == 0 )
+  if ( (byte_4B6A4D6 & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B3AA3E = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B6A4D6 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -54,7 +54,7 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
       return;
     }
 LABEL_14:
-    sub_1BD36B4(v7, v8);
+    sub_1BE4D28(v7, v8);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -98,11 +98,11 @@ void __fastcall CommandCodeEffectComponent__SetCommandCodeImg(
   UnityEngine_Object_o *commandCodeImg; // x21
   UISprite_o *v7; // x20
 
-  if ( (byte_4B3AA3D & 1) == 0 )
+  if ( (byte_4B6A4D5 & 1) == 0 )
   {
-    sub_1BD3458(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B3AA3D = 1;
+    sub_1BE4ACC(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B6A4D5 = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -131,7 +131,7 @@ void __fastcall CommandCodeEffectComponent__SetDestroyEffectCallback(
   if ( callback )
   {
     this->fields.destroyEffectCallback = callback;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields.destroyEffectCallback,
       (int64_t)callback,
       (int64_t)method,
@@ -158,7 +158,7 @@ void __fastcall CommandCodeEffectComponent__SetDetachEffect(
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields.commandCodeDetachAction,
       (int64_t)action,
       (int64_t)method,
@@ -185,7 +185,7 @@ void __fastcall CommandCodeEffectComponent__SetEndEffectCallbak(
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_1BD33FC(
+    sub_1BE4A70(
       (PartyOrganizationUtility_o *)&this->fields.endEffectCallback,
       (int64_t)callback,
       (int64_t)method,

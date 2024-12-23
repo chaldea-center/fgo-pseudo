@@ -48,7 +48,7 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v5);
+    sub_1BE4D28(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, val, 0LL);
 }
 
@@ -75,7 +75,7 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
     || (UISprite__set_atlas(skillTitle, uiAtlas, 0LL), (skillTitle = this->fields.skillTitle) == 0LL)
     || (UISprite__set_spriteName(skillTitle, spriteName, 0LL), (skillTitle = this->fields.skillTitle) == 0LL) )
   {
-    sub_1BD36B4(skillTitle, uiAtlas);
+    sub_1BE4D28(skillTitle, uiAtlas);
   }
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))skillTitle->klass->vtable._33_MakePixelPerfect.method)(
     skillTitle,

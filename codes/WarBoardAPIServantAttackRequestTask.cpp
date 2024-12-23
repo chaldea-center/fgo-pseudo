@@ -19,13 +19,13 @@ void __fastcall WarBoardAPIServantAttackRequestTask___ctor(
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  WarBoardAPIRequestTask___ctor_36429844(
+  WarBoardAPIRequestTask___ctor_36543732(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)resultCallback);
   this->fields.attackPieceData = attacker;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.attackPieceData,
     (int64_t)attacker,
     v9,
@@ -35,7 +35,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask___ctor(
     v13,
     v14);
   this->fields.targetPieceData = target;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.targetPieceData,
     (int64_t)target,
     v15,
@@ -109,24 +109,24 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
   FollowerInfo_o *v58; // x6
   PartyListViewItem_o *v59; // x7
 
-  if ( (byte_4B34FF0 & 1) == 0 )
+  if ( (byte_4B649EE & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___, method);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToArray_long___, v3);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Where_WarBoardPieceData___, v4);
-    sub_1BD3458(&System_Func_WarBoardPieceData__long__TypeInfo, v5);
-    sub_1BD3458(&System_Func_WarBoardPieceData__bool__TypeInfo, v6);
-    sub_1BD3458(&Method_NetworkManager_getRequest_WarBoardBattleSetupRequest___, v7);
-    sub_1BD3458(&NetworkManager_TypeInfo, v8);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
-    sub_1BD3458(&Method_WarBoardAPIServantAttackRequestTask___c__SetRequest_b__3_1__, v10);
-    sub_1BD3458(&Method_WarBoardAPIServantAttackRequestTask___c__SetRequest_b__3_3__, v11);
-    sub_1BD3458(&WarBoardAPIServantAttackRequestTask___c_TypeInfo, v12);
-    sub_1BD3458(&Method_WarBoardAPIServantAttackRequestTask__SetRequest_b__3_0__, v13);
-    sub_1BD3458(&Method_WarBoardAPIServantAttackRequestTask__SetRequest_b__3_2__, v14);
-    byte_4B34FF0 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___, method);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_long___, v3);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_WarBoardPieceData___, v4);
+    sub_1BE4ACC(&System_Func_WarBoardPieceData__long__TypeInfo, v5);
+    sub_1BE4ACC(&System_Func_WarBoardPieceData__bool__TypeInfo, v6);
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_WarBoardBattleSetupRequest___, v7);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v8);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
+    sub_1BE4ACC(&Method_WarBoardAPIServantAttackRequestTask___c__SetRequest_b__3_1__, v10);
+    sub_1BE4ACC(&Method_WarBoardAPIServantAttackRequestTask___c__SetRequest_b__3_3__, v11);
+    sub_1BE4ACC(&WarBoardAPIServantAttackRequestTask___c_TypeInfo, v12);
+    sub_1BE4ACC(&Method_WarBoardAPIServantAttackRequestTask__SetRequest_b__3_0__, v13);
+    sub_1BE4ACC(&Method_WarBoardAPIServantAttackRequestTask__SetRequest_b__3_2__, v14);
+    byte_4B649EE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   attackPieceData = this->fields.attackPieceData;
@@ -148,7 +148,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
   if ( !Instance )
     goto LABEL_24;
   v21 = (System_Collections_Generic_IEnumerable_TSource__o *)*((_QWORD *)Instance + 2);
-  v22 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_WarBoardPieceData__bool__TypeInfo);
+  v22 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_WarBoardPieceData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v22,
     (Il2CppObject *)this,
@@ -157,7 +157,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
   v23 = System_Linq_Enumerable__Where_object_(
           v21,
           (System_Func_TSource__bool__o *)v22,
-          (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
+          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
   v24 = WarBoardAPIServantAttackRequestTask___c_TypeInfo;
   v25 = v23;
   if ( !WarBoardAPIServantAttackRequestTask___c_TypeInfo->_2.cctor_finished )
@@ -175,7 +175,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
       v24 = WarBoardAPIServantAttackRequestTask___c_TypeInfo;
     }
     v28 = (Il2CppObject *)v24->static_fields->__9;
-    _9__3_1 = (System_Func_T__TResult__o *)sub_1BD36A4(System_Func_WarBoardPieceData__long__TypeInfo);
+    _9__3_1 = (System_Func_T__TResult__o *)sub_1BE4D18(System_Func_WarBoardPieceData__long__TypeInfo);
     System_Func_object__long____ctor(
       _9__3_1,
       v28,
@@ -183,17 +183,17 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
       0LL);
     static_fields = WarBoardAPIServantAttackRequestTask___c_TypeInfo->static_fields;
     static_fields->__9__3_1 = (struct System_Func_WarBoardPieceData__long__o *)_9__3_1;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__3_1, (int64_t)_9__3_1, v30, v31, v32, v33, v34, v35);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__3_1, (int64_t)_9__3_1, v30, v31, v32, v33, v34, v35);
     nowSquareIndex_k__BackingField = v27;
   }
   v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                v25,
                                                                (System_Func_TSource__TResult__o *)_9__3_1,
-                                                               (const MethodInfo_2F62B28 *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___);
+                                                               (const MethodInfo_2F8A5B4 *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___);
   v37 = System_Linq_Enumerable__ToArray_long_(
           v36,
-          (const MethodInfo_2F6AD2C *)Method_System_Linq_Enumerable_ToArray_long___);
-  v38 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_WarBoardPieceData__bool__TypeInfo);
+          (const MethodInfo_2F92A4C *)Method_System_Linq_Enumerable_ToArray_long___);
+  v38 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_WarBoardPieceData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v38,
     (Il2CppObject *)this,
@@ -202,7 +202,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
   v39 = System_Linq_Enumerable__Where_object_(
           v21,
           (System_Func_TSource__bool__o *)v38,
-          (const MethodInfo_2F70C40 *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
+          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_WarBoardPieceData___);
   v40 = WarBoardAPIServantAttackRequestTask___c_TypeInfo;
   if ( !WarBoardAPIServantAttackRequestTask___c_TypeInfo->_2.cctor_finished )
   {
@@ -219,7 +219,7 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
       v40 = WarBoardAPIServantAttackRequestTask___c_TypeInfo;
     }
     v43 = (Il2CppObject *)v40->static_fields->__9;
-    _9__3_3 = (System_Func_T__TResult__o *)sub_1BD36A4(System_Func_WarBoardPieceData__long__TypeInfo);
+    _9__3_3 = (System_Func_T__TResult__o *)sub_1BE4D18(System_Func_WarBoardPieceData__long__TypeInfo);
     System_Func_object__long____ctor(
       _9__3_3,
       v43,
@@ -227,25 +227,25 @@ void __fastcall WarBoardAPIServantAttackRequestTask__SetRequest(
       0LL);
     v44 = WarBoardAPIServantAttackRequestTask___c_TypeInfo->static_fields;
     v44->__9__3_3 = (struct System_Func_WarBoardPieceData__long__o *)_9__3_3;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v44->__9__3_3, (int64_t)_9__3_3, v45, v46, v47, v48, v49, v50);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v44->__9__3_3, (int64_t)_9__3_3, v45, v46, v47, v48, v49, v50);
     nowSquareIndex_k__BackingField = v42;
   }
   v51 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
                                                                v39,
                                                                (System_Func_TSource__TResult__o *)_9__3_3,
-                                                               (const MethodInfo_2F62B28 *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___);
+                                                               (const MethodInfo_2F8A5B4 *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__long___);
   v52 = System_Linq_Enumerable__ToArray_long_(
           v51,
-          (const MethodInfo_2F6AD2C *)Method_System_Linq_Enumerable_ToArray_long___);
+          (const MethodInfo_2F92A4C *)Method_System_Linq_Enumerable_ToArray_long___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      0LL,
-                     (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_WarBoardBattleSetupRequest___);
+                     (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_WarBoardBattleSetupRequest___);
   Instance = (void *)WarBoardData__get_id(v18, 0LL);
   if ( !Request_object )
 LABEL_24:
-    sub_1BD36B4(Instance, attackPieceData);
+    sub_1BE4D28(Instance, attackPieceData);
   WarBoardBattleSetupRequest__beginRequest(
     (WarBoardBattleSetupRequest_o *)Request_object,
     (int32_t)Instance,
@@ -256,7 +256,7 @@ LABEL_24:
     v18,
     0LL);
   this->fields.request = (struct RequestBase_o *)Request_object;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.request,
     (int64_t)Request_object,
     v54,
@@ -276,7 +276,7 @@ bool __fastcall WarBoardAPIServantAttackRequestTask___SetRequest_b__3_0(
   struct WarBoardPieceData_o *attackPieceData; // x8
 
   if ( !x || (attackPieceData = this->fields.attackPieceData) == 0LL )
-    sub_1BD36B4(this, x);
+    sub_1BE4D28(this, x);
   return x->fields._forceId_k__BackingField == attackPieceData->fields._forceId_k__BackingField;
 }
 
@@ -289,7 +289,7 @@ bool __fastcall WarBoardAPIServantAttackRequestTask___SetRequest_b__3_2(
   struct WarBoardPieceData_o *targetPieceData; // x8
 
   if ( !x || (targetPieceData = this->fields.targetPieceData) == 0LL )
-    sub_1BD36B4(this, x);
+    sub_1BE4D28(this, x);
   return x->fields._forceId_k__BackingField == targetPieceData->fields._forceId_k__BackingField;
 }
 
@@ -305,15 +305,15 @@ void __fastcall WarBoardAPIServantAttackRequestTask___c___cctor(const MethodInfo
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B34FF1 & 1) == 0 )
+  if ( (byte_4B649EF & 1) == 0 )
   {
-    sub_1BD3458(&WarBoardAPIServantAttackRequestTask___c_TypeInfo, v1);
-    byte_4B34FF1 = 1;
+    sub_1BE4ACC(&WarBoardAPIServantAttackRequestTask___c_TypeInfo, v1);
+    byte_4B649EF = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(WarBoardAPIServantAttackRequestTask___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(WarBoardAPIServantAttackRequestTask___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardAPIServantAttackRequestTask___c_TypeInfo->static_fields->__9 = (struct WarBoardAPIServantAttackRequestTask___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)WarBoardAPIServantAttackRequestTask___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -339,7 +339,7 @@ int64_t __fastcall WarBoardAPIServantAttackRequestTask___c___SetRequest_b__3_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return WarBoardPieceData__get_WarBoardUserServantDataId(x, 0LL);
 }
 
@@ -350,6 +350,6 @@ int64_t __fastcall WarBoardAPIServantAttackRequestTask___c___SetRequest_b__3_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return WarBoardPieceData__get_WarBoardUserServantDataId(x, 0LL);
 }

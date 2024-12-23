@@ -13,15 +13,15 @@ void __fastcall WarBoardResumeRequest__beginRequest(
   int32_t id; // w0
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4B38BCD & 1) == 0 )
+  if ( (byte_4B6861D & 1) == 0 )
   {
-    this = (WarBoardResumeRequest_o *)sub_1BD3458(&StringLiteral_23760/*"stageId"*/, warBoardData);
-    byte_4B38BCD = 1;
+    this = (WarBoardResumeRequest_o *)sub_1BE4ACC(&StringLiteral_23812/*"stageId"*/, warBoardData);
+    byte_4B6861D = 1;
   }
   if ( !warBoardData )
-    sub_1BD36B4(this, warBoardData);
+    sub_1BE4D28(this, warBoardData);
   id = WarBoardData__get_id(warBoardData, 0LL);
-  RequestBase__addField(v4, (System_String_o *)StringLiteral_23760/*"stageId"*/, id, 0LL);
+  RequestBase__addField(v4, (System_String_o *)StringLiteral_23812/*"stageId"*/, id, 0LL);
   WarBoardData__SetRequest(warBoardData, v4, 0LL);
   RequestBase__beginRequest(v4, 0LL);
 }
@@ -32,16 +32,16 @@ System_String_o *__fastcall WarBoardResumeRequest__getURL(WarBoardResumeRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B38BCC & 1) == 0 )
+  if ( (byte_4B6861C & 1) == 0 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_24908/*"warBoard/resume"*/, v2);
-    byte_4B38BCC = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_24961/*"warBoard/resume"*/, v2);
+    byte_4B6861C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62525248(BaseUrl, (System_String_o *)StringLiteral_24908/*"warBoard/resume"*/, 0LL);
+  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_24961/*"warBoard/resume"*/, 0LL);
 }
 
 
@@ -63,15 +63,15 @@ void __fastcall WarBoardResumeRequest__requestCompleted(
   Il2CppObject *v15; // x0
   System_String_o *v16; // x1
 
-  if ( (byte_4B38BCE & 1) == 0 )
+  if ( (byte_4B6861E & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1BD3458(&JsonManager_TypeInfo, v6);
-    sub_1BD3458(&ResponseCommandKind_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_22325/*"ng"*/, v8);
-    sub_1BD3458(&StringLiteral_24915/*"warBoardData"*/, v9);
-    byte_4B38BCE = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1BE4ACC(&JsonManager_TypeInfo, v6);
+    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v8);
+    sub_1BE4ACC(&StringLiteral_24968/*"warBoardData"*/, v9);
+    byte_4B6861E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -82,21 +82,21 @@ void __fastcall WarBoardResumeRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24915/*"warBoardData"*/,
-             (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24968/*"warBoardData"*/,
+             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v15 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24915/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_24968/*"warBoardData"*/,
       v15,
-      (const MethodInfo_3284380 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v16 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v16 = (System_String_o *)StringLiteral_22325/*"ng"*/;
+    v16 = (System_String_o *)StringLiteral_22370/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v16, 0LL);
 }

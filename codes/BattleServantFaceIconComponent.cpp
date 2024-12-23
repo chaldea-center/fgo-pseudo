@@ -1,9 +1,9 @@
 void __fastcall BattleServantFaceIconComponent___ctor(BattleServantFaceIconComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B365BB & 1) == 0 )
+  if ( (byte_4B65FD3 & 1) == 0 )
   {
-    sub_1BD3458(&ServantFaceIconComponent_TypeInfo, method);
-    byte_4B365BB = 1;
+    sub_1BE4ACC(&ServantFaceIconComponent_TypeInfo, method);
+    byte_4B65FD3 = 1;
   }
   if ( !ServantFaceIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantFaceIconComponent_TypeInfo);
@@ -108,10 +108,10 @@ void __fastcall BattleServantFaceIconComponent__SetColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4B365BA & 1) == 0 )
+  if ( (byte_4B65FD2 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, widget);
-    byte_4B365BA = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, widget);
+    byte_4B65FD2 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -119,7 +119,7 @@ void __fastcall BattleServantFaceIconComponent__SetColor(
   if ( !v9 )
   {
     if ( !widget )
-      sub_1BD36B4(v9, v10);
+      sub_1BE4D28(v9, v10);
     v11.fields.b = b;
     v11.fields.a = a;
     v11.fields.r = r;
@@ -142,26 +142,26 @@ void __fastcall BattleServantFaceIconComponent__SetCommandCodeDrop(
   Il2CppObject *Entity; // x0
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B365B8 & 1) == 0 )
+  if ( (byte_4B65FD0 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, userCommandCodeId);
-    sub_1BD3458(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v7);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4B365B8 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, userCommandCodeId);
+    sub_1BE4ACC(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v7);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4B65FD0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v10);
+    sub_1BE4D28(Instance, v10);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              userCommandCodeId,
-             (const MethodInfo_31D209C *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
-  ServantFaceIconComponent__Set_39008112(
+             (const MethodInfo_31FD970 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+  ServantFaceIconComponent__Set_39132220(
     (ServantFaceIconComponent_o *)this,
     (UserCommandCodeEntity_o *)Entity,
     0LL,
@@ -203,12 +203,12 @@ void __fastcall BattleServantFaceIconComponent__SetDropLabel(
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = this;
-  if ( (byte_4B365B9 & 1) == 0 )
+  if ( (byte_4B65FD1 & 1) == 0 )
   {
-    sub_1BD3458(&int_TypeInfo, *(_QWORD *)&dropNum);
-    sub_1BD3458(&StringLiteral_25455/*"×{0}"*/, v7);
-    this = (BattleServantFaceIconComponent_o *)sub_1BD3458(&StringLiteral_1/*""*/, v8);
-    byte_4B365B9 = 1;
+    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&dropNum);
+    sub_1BE4ACC(&StringLiteral_25511/*"×{0}"*/, v7);
+    this = (BattleServantFaceIconComponent_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
+    byte_4B65FD1 = 1;
   }
   dropNumLabel = v6->fields.dropNumLabel;
   if ( dropNum < 2 )
@@ -219,11 +219,11 @@ void __fastcall BattleServantFaceIconComponent__SetDropLabel(
       return;
     }
 LABEL_8:
-    sub_1BD36B4(this, *(_QWORD *)&dropNum);
+    sub_1BE4D28(this, *(_QWORD *)&dropNum);
   }
   v11 = dropNum;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
-  this = (BattleServantFaceIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25455/*"×{0}"*/, v10, 0LL);
+  this = (BattleServantFaceIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25511/*"×{0}"*/, v10, 0LL);
   if ( !dropNumLabel )
     goto LABEL_8;
   UILabel__set_text(dropNumLabel, (System_String_o *)this, 0LL);
@@ -240,7 +240,7 @@ void __fastcall BattleServantFaceIconComponent__SetSvtDrop(
   const MethodInfo *v7; // x2
   MethodInfo *methoda; // [xsp+38h] [xbp-28h]
 
-  ServantFaceIconComponent__Set_38998480(
+  ServantFaceIconComponent__Set_39122588(
     (ServantFaceIconComponent_o *)this,
     svtId,
     limitCnt,
@@ -261,7 +261,7 @@ void __fastcall BattleServantFaceIconComponent__SetSvtDrop(
 }
 
 
-void __fastcall BattleServantFaceIconComponent__SetSvtDrop_38859852(
+void __fastcall BattleServantFaceIconComponent__SetSvtDrop_38983852(
         BattleServantFaceIconComponent_o *this,
         int64_t userSvtId,
         IconLabelInfo_o *info,
@@ -280,25 +280,25 @@ void __fastcall BattleServantFaceIconComponent__SetSvtDrop_38859852(
   const MethodInfo *v18; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4B365B7 & 1) == 0 )
+  if ( (byte_4B65FCF & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_UserServantMaster___, userSvtId);
-    sub_1BD3458(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v10);
-    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    byte_4B365B7 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserServantMaster___, userSvtId);
+    sub_1BE4ACC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v10);
+    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4B65FCF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
     || (Instance = DataMasterBase_object__object__long___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      userSvtId,
-                     (const MethodInfo_31D209C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__)) == 0LL )
+                     (const MethodInfo_31FD970 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__)) == 0LL )
   {
-    sub_1BD36B4(Instance, v14);
+    sub_1BE4D28(Instance, v14);
   }
   klass = Instance[5].klass;
   monitor = Instance[5].monitor;
@@ -306,8 +306,8 @@ void __fastcall BattleServantFaceIconComponent__SetSvtDrop_38859852(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = klass;
   *(_QWORD *)&v19.fields.fakeValue = monitor;
-  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47136620(v19, 0LL);
-  ServantFaceIconComponent__Set_38998480(
+  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v19, 0LL);
+  ServantFaceIconComponent__Set_39122588(
     (ServantFaceIconComponent_o *)this,
     v17,
     limit,

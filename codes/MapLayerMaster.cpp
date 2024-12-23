@@ -1,14 +1,14 @@
 void __fastcall MapLayerMaster___ctor(MapLayerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B382A2 & 1) == 0 )
+  if ( (byte_4B67CEC & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__, method);
-    byte_4B382A2 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__, method);
+    byte_4B67CEC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    433,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__);
+    437,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ MapLayerEntity_o *__fastcall MapLayerMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B382A3 & 1) == 0 )
+  if ( (byte_4B67CED & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__, *(_QWORD *)&mapId);
-    byte_4B382A3 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__, *(_QWORD *)&mapId);
+    byte_4B67CED = 1;
   }
   PK = (Il2CppObject *)MapLayerEntity__CreatePK(mapId, layer, *(const MethodInfo **)&layer);
   return (MapLayerEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_31D2248 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__);
+                               (const MethodInfo_31FDB1C *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall MapLayerMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B382A4 & 1) == 0 )
+  if ( (byte_4B67CEE & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__, entity);
-    byte_4B382A4 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__, entity);
+    byte_4B67CEE = 1;
   }
   PK = (Il2CppObject *)MapLayerEntity__CreatePK(mapId, layer, *(const MethodInfo **)&mapId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_MapLayerMaster__MapLayerEntity__string__TryGetEntity__);
 }

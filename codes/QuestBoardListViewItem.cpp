@@ -4,7 +4,7 @@ void __fastcall QuestBoardListViewItem___ctor(QuestBoardListViewItem_o *this, co
 }
 
 
-void __fastcall QuestBoardListViewItem___ctor_34635784(
+void __fastcall QuestBoardListViewItem___ctor_34741884(
         QuestBoardListViewItem_o *this,
         int32_t index,
         int32_t ikind,
@@ -36,10 +36,10 @@ void __fastcall QuestBoardListViewItem___ctor_34635784(
   PartyListViewItem_o *v33; // x7
 
   v15 = this;
-  ListViewItem___ctor_41548032((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
   v15->fields._info_kind_k__BackingField = ikind;
   v15->fields._quest_info_k__BackingField = qinf;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v15->fields._quest_info_k__BackingField,
     (int64_t)qinf,
     v16,
@@ -49,7 +49,7 @@ void __fastcall QuestBoardListViewItem___ctor_34635784(
     v20,
     v21);
   v15->fields._black_mark_prefab_k__BackingField = blackMarkPrefab;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&v15->fields._black_mark_prefab_k__BackingField,
     (int64_t)blackMarkPrefab,
     v22,
@@ -60,7 +60,7 @@ void __fastcall QuestBoardListViewItem___ctor_34635784(
     v27);
   v15->fields._white_mark_prefab_k__BackingField = whiteMarkPrefab;
   v15 = (QuestBoardListViewItem_o *)((char *)v15 + 136);
-  sub_1BD33FC((PartyOrganizationUtility_o *)v15, (int64_t)whiteMarkPrefab, v28, v29, v30, v31, v32, v33);
+  sub_1BE4A70((PartyOrganizationUtility_o *)v15, (int64_t)whiteMarkPrefab, v28, v29, v30, v31, v32, v33);
   LODWORD(v15->monitor) = overwriteBannerId;
   HIDWORD(v15->monitor) = recollectionWarId;
 }
@@ -78,12 +78,12 @@ bool __fastcall QuestBoardListViewItem__IsDisplayableRoadmapButton(
   __int64 v9; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4B34028 & 1) == 0 )
+  if ( (byte_4B63A12 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_WarMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__, v4);
-    byte_4B34028 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_WarMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__, v4);
+    byte_4B63A12 = 1;
   }
   entity = 0LL;
   if ( !this->fields._info_kind_k__BackingField )
@@ -99,15 +99,15 @@ bool __fastcall QuestBoardListViewItem__IsDisplayableRoadmapButton(
         return (unsigned __int8)quest_info_k__BackingField & 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_WarMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_WarMaster___);
       if ( !Master_object )
 LABEL_15:
-        sub_1BD36B4(Master_object, v9);
+        sub_1BE4D28(Master_object, v9);
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
              AreaBoardInfo_k__BackingField->fields.warId,
-             (const MethodInfo_31D1F44 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+             (const MethodInfo_31FD818 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
       {
         Master_object = entity;
         if ( entity )
@@ -200,7 +200,7 @@ void __fastcall QuestBoardListViewItem__set_black_mark_prefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._black_mark_prefab_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._black_mark_prefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -233,7 +233,7 @@ void __fastcall QuestBoardListViewItem__set_quest_info(
   PartyListViewItem_o *v7; // x7
 
   this->fields._quest_info_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._quest_info_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -257,7 +257,7 @@ void __fastcall QuestBoardListViewItem__set_white_mark_prefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._white_mark_prefab_k__BackingField = value;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._white_mark_prefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,

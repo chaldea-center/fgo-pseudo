@@ -1,14 +1,14 @@
 void __fastcall WarMessageMaster___ctor(WarMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B38269 & 1) == 0 )
+  if ( (byte_4B67CA8 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string___ctor__, method);
-    byte_4B38269 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string___ctor__, method);
+    byte_4B67CA8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    484,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string___ctor__);
+    488,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string___ctor__);
 }
 
 
@@ -22,11 +22,11 @@ WarMessageEntity_o *__fastcall WarMessageMaster__GetEntity(
   __int64 v7; // x1
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B3826A & 1) == 0 )
+  if ( (byte_4B67CA9 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__GetEntity__, *(_QWORD *)&warId);
-    sub_1BD3458(&WarMessageEntity_TypeInfo, v7);
-    byte_4B3826A = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__GetEntity__, *(_QWORD *)&warId);
+    sub_1BE4ACC(&WarMessageEntity_TypeInfo, v7);
+    byte_4B67CA9 = 1;
   }
   if ( !WarMessageEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarMessageEntity_TypeInfo);
@@ -34,7 +34,7 @@ WarMessageEntity_o *__fastcall WarMessageMaster__GetEntity(
   return (WarMessageEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_31D2248 *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__GetEntity__);
+                                 (const MethodInfo_31FDB1C *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__GetEntity__);
 }
 
 
@@ -103,35 +103,35 @@ System_Collections_Generic_List_WarMessageEntity__o *__fastcall WarMessageMaster
   PartyListViewItem_o *v61; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v62; // x0
 
-  if ( (byte_4B38268 & 1) == 0 )
+  if ( (byte_4B67CA7 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&warId);
-    sub_1BD3458(&Method_System_Linq_Enumerable_OrderBy_WarMessageEntity__int___, v5);
-    sub_1BD3458(&Method_System_Linq_Enumerable_ToList_WarMessageEntity___, v6);
-    sub_1BD3458(&System_Func_WarMessageEntity__int__TypeInfo, v7);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v8);
-    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_WarMessageEntity__Add__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_WarMessageEntity___ctor__, v12);
-    sub_1BD3458(&System_Collections_Generic_List_WarMessageEntity__TypeInfo, v13);
-    sub_1BD3458(&Method_WarMessageMaster___c__GetValidMessageList_b__0_0__, v14);
-    sub_1BD3458(&WarMessageMaster___c_TypeInfo, v15);
-    sub_1BD3458(&WarMessageEntity_TypeInfo, v16);
-    byte_4B38268 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&warId);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_OrderBy_WarMessageEntity__int___, v5);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_WarMessageEntity___, v6);
+    sub_1BE4ACC(&System_Func_WarMessageEntity__int__TypeInfo, v7);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v8);
+    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_WarMessageEntity__Add__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_WarMessageEntity___ctor__, v12);
+    sub_1BE4ACC(&System_Collections_Generic_List_WarMessageEntity__TypeInfo, v13);
+    sub_1BE4ACC(&Method_WarMessageMaster___c__GetValidMessageList_b__0_0__, v14);
+    sub_1BE4ACC(&WarMessageMaster___c_TypeInfo, v15);
+    sub_1BE4ACC(&WarMessageEntity_TypeInfo, v16);
+    byte_4B67CA7 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_WarMessageEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_WarMessageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_WarMessageEntity___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_WarMessageEntity___ctor__);
   if ( !list )
-    sub_1BD36B4(v19, v20);
+    sub_1BE4D28(v19, v20);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BD36B4(0LL, v21);
+    sub_1BE4D28(0LL, v21);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -151,7 +151,7 @@ System_Collections_Generic_List_WarMessageEntity__o *__fastcall WarMessageMaster
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -174,7 +174,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v30 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v30 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v31 = (WarMessageEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(
                                   Enumerator,
@@ -186,9 +186,9 @@ LABEL_16:
     if ( LOBYTE(v31->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (WarMessageEntity_c *)v31->klass->_2.typeHierarchy[methodPtr_low - 1] != WarMessageEntity_TypeInfo )
     {
-      sub_1BD3974(v31);
+      sub_1BE4FE8(v31);
 LABEL_43:
-      sub_1BD36B4(v31, v32);
+      sub_1BE4D28(v31, v32);
     }
     if ( v31->fields.warId == warId
       && WarMessageEntity__CheckCondition(v31, (const MethodInfo *)WarMessageEntity_TypeInfo) )
@@ -197,26 +197,26 @@ LABEL_43:
       if ( v36 )
       {
         if ( !v18 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         items = v18->fields._items;
         v45 = Method_System_Collections_Generic_List_WarMessageEntity__Add__;
         ++v18->fields._version;
         if ( !items )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         size = v18->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v18,
             (Il2CppObject *)v33,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
         }
         else
         {
           v47 = &items->obj.klass + size;
           v18->fields._size = size + 1;
           v47[4] = (Il2CppClass *)v33;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v47 + 4), (int64_t)v33, v38, v39, v40, v41, v42, v43);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v47 + 4), (int64_t)v33, v38, v39, v40, v41, v42, v43);
         }
       }
     }
@@ -238,7 +238,7 @@ LABEL_43:
   else
   {
 LABEL_33:
-    v51 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v51 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v51)(Enumerator, *(_QWORD *)(v51 + 8));
   v52 = WarMessageMaster___c_TypeInfo;
@@ -256,19 +256,19 @@ LABEL_33:
       v52 = WarMessageMaster___c_TypeInfo;
     }
     v54 = (Il2CppObject *)v52->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1BD36A4(System_Func_WarMessageEntity__int__TypeInfo);
+    _9__0_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_WarMessageEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_0, v54, Method_WarMessageMaster___c__GetValidMessageList_b__0_0__, 0LL);
     static_fields = WarMessageMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_WarMessageEntity__int__o *)_9__0_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v56, v57, v58, v59, v60, v61);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v56, v57, v58, v59, v60, v61);
   }
   v62 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v18,
                                                                (System_Func_TSource__TKey__o *)_9__0_0,
-                                                               (const MethodInfo_2F5A740 *)Method_System_Linq_Enumerable_OrderBy_WarMessageEntity__int___);
+                                                               (const MethodInfo_2F821CC *)Method_System_Linq_Enumerable_OrderBy_WarMessageEntity__int___);
   return (System_Collections_Generic_List_WarMessageEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                   v62,
-                                                                  (const MethodInfo_2F6EB10 *)Method_System_Linq_Enumerable_ToList_WarMessageEntity___);
+                                                                  (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_WarMessageEntity___);
 }
 
 
@@ -283,11 +283,11 @@ bool __fastcall WarMessageMaster__TryGetEntity(
   __int64 v9; // x1
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B3826B & 1) == 0 )
+  if ( (byte_4B67CAA & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__TryGetEntity__, entity);
-    sub_1BD3458(&WarMessageEntity_TypeInfo, v9);
-    byte_4B3826B = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__TryGetEntity__, entity);
+    sub_1BE4ACC(&WarMessageEntity_TypeInfo, v9);
+    byte_4B67CAA = 1;
   }
   if ( !WarMessageEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarMessageEntity_TypeInfo);
@@ -296,7 +296,7 @@ bool __fastcall WarMessageMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_WarMessageMaster__WarMessageEntity__string__TryGetEntity__);
 }
 
 
@@ -311,15 +311,15 @@ void __fastcall WarMessageMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B3826C & 1) == 0 )
+  if ( (byte_4B67CAB & 1) == 0 )
   {
-    sub_1BD3458(&WarMessageMaster___c_TypeInfo, v1);
-    byte_4B3826C = 1;
+    sub_1BE4ACC(&WarMessageMaster___c_TypeInfo, v1);
+    byte_4B67CAB = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(WarMessageMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(WarMessageMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarMessageMaster___c_TypeInfo->static_fields->__9 = (struct WarMessageMaster___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)WarMessageMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -343,6 +343,6 @@ int32_t __fastcall WarMessageMaster___c___GetValidMessageList_b__0_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   return v->fields.idx;
 }

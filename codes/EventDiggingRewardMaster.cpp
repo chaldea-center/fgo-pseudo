@@ -1,12 +1,12 @@
 void __fastcall EventDiggingRewardMaster___ctor(EventDiggingRewardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37104 & 1) == 0 )
+  if ( (byte_4B66B1E & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__, method);
-    byte_4B37104 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__, method);
+    byte_4B66B1E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    346,
-    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__);
+    350,
+    (const MethodInfo_31FD784 *)Method_DataMasterBase_EventDiggingRewardMaster__EventDiggingRewardEntity__int___ctor__);
 }

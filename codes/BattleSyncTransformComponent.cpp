@@ -8,15 +8,15 @@ void __fastcall BattleSyncTransformComponent___ctor(BattleSyncTransformComponent
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B3A40D & 1) == 0 )
+  if ( (byte_4B69E9B & 1) == 0 )
   {
-    sub_1BD3458(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
-    byte_4B3A40D = 1;
+    sub_1BE4ACC(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
+    byte_4B69E9B = 1;
   }
-  v3 = (Il2CppObject *)sub_1BD36A4(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1BE4D18(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -46,10 +46,10 @@ void __fastcall BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.targetObj, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.targetObj, 0LL, v3, v4, v5, v6, v7, v8);
   v15 = (float *)*(p_targetObj - 1);
   if ( !v15 )
-    sub_1BD36B4(v13, v14);
+    sub_1BE4D28(v13, v14);
   v15[5] = x;
   v15[6] = y;
   v15[7] = z;
@@ -88,7 +88,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.targetObj,
     (int64_t)target,
     (int64_t)syncSetting,
@@ -98,15 +98,15 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
     v6,
     v7);
   if ( !syncSetting )
-    sub_1BD36B4(v10, v11);
+    sub_1BE4D28(v10, v11);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)syncData, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.syncData, (int64_t)syncData, v12, v13, v14, v15, v16, v17);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_45062664(
+BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_45220884(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -124,7 +124,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   PartyListViewItem_o *v15; // x7
 
   this->fields.targetObj = target;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.targetObj,
     (int64_t)target,
     (int64_t)syncSettingData,
@@ -134,7 +134,7 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
     v6,
     v7);
   this->fields.syncData = syncSettingData;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.syncData,
     (int64_t)syncSettingData,
     v10,
@@ -171,10 +171,10 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B3A40C & 1) == 0 )
+  if ( (byte_4B69E9A & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B3A40C = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B69E9A = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -235,7 +235,7 @@ LABEL_23:
         }
       }
     }
-    sub_1BD36B4(transform, v5);
+    sub_1BE4D28(transform, v5);
   }
 }
 
@@ -252,7 +252,7 @@ void __fastcall BattleSyncTransformComponent__UpdateTarget(
   PartyListViewItem_o *v7; // x7
 
   this->fields.targetObj = target;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.targetObj,
     (int64_t)target,
     (int64_t)method,
@@ -272,7 +272,7 @@ bool __fastcall BattleSyncTransformComponent__get_IsNotExecSync(
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   return syncData->fields.syncType == 0;
 }
 

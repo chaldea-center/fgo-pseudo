@@ -12,11 +12,11 @@ void __fastcall UIIconLabel__Clear(UIIconLabel_o *this, const MethodInfo *method
   UnityEngine_Object_o *extentionTextLabel; // x20
   UnityEngine_Object_o *iconSprite; // x20
 
-  if ( (byte_4B36735 & 1) == 0 )
+  if ( (byte_4B6614E & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_1/*""*/, v3);
-    byte_4B36735 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v3);
+    byte_4B6614E = 1;
   }
   textLabel = this->fields.textLabel;
   if ( !textLabel )
@@ -44,7 +44,7 @@ void __fastcall UIIconLabel__Clear(UIIconLabel_o *this, const MethodInfo *method
       return;
     }
 LABEL_15:
-    sub_1BD36B4(textLabel, method);
+    sub_1BE4D28(textLabel, method);
   }
 }
 
@@ -55,7 +55,7 @@ int32_t __fastcall UIIconLabel__GetFontSize(UIIconLabel_o *this, const MethodInf
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   return textLabel->fields.mFontSize;
 }
 
@@ -70,10 +70,10 @@ UnityEngine_Vector2_o __fastcall UIIconLabel__GetIconSize(UIIconLabel_o *this, c
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B36738 & 1) == 0 )
+  if ( (byte_4B66151 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B36738 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B66151 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,17 +82,17 @@ UnityEngine_Vector2_o __fastcall UIIconLabel__GetIconSize(UIIconLabel_o *this, c
   {
     v5 = this->fields.iconSprite;
     if ( !v5 )
-      sub_1BD36B4(0LL, v4);
+      sub_1BE4D28(0LL, v4);
     ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v5->klass->vtable._22_get_localSize.method)(
       v5,
       v5->klass->vtable._23_get_drawingDimensions.methodPtr);
   }
   else
   {
-    if ( !byte_4B3183A )
+    if ( !byte_4B611DA )
     {
-      sub_1BD3458(&UnityEngine_Vector2_TypeInfo, v4);
-      byte_4B3183A = 1;
+      sub_1BE4ACC(&UnityEngine_Vector2_TypeInfo, v4);
+      byte_4B611DA = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -108,24 +108,31 @@ UnityEngine_Color_o __fastcall UIIconLabel__GetPurchaseDecisionColor(
         UIIconLabel_o *this,
         int32_t dispData,
         int32_t compareData,
+        int32_t iconKind,
         const MethodInfo *method)
 {
-  float v4; // s0
-  float v6; // s3
+  _BOOL4 v5; // w8
+  float v6; // s0
   float v7; // s1
-  float v8; // s2
+  float v8; // s3
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v4 = 1.0;
-  if ( dispData > compareData && compareData > -1 )
-    v4 = 0.5;
-  v6 = 1.0;
-  v7 = v4;
-  v8 = v4;
-  result.fields.a = v6;
-  result.fields.b = v8;
-  result.fields.g = v7;
-  result.fields.r = v4;
+  v5 = compareData >= 0;
+  v6 = 0.5;
+  v7 = 1.0;
+  if ( !v5 && iconKind == 28 )
+    v7 = 0.5;
+  if ( !v5 || dispData <= compareData )
+    v6 = v7;
+  v8 = 1.0;
+  v9 = v6;
+  v10 = v6;
+  result.fields.a = v8;
+  result.fields.b = v10;
+  result.fields.g = v9;
+  result.fields.r = v6;
   return result;
 }
 
@@ -136,7 +143,7 @@ UnityEngine_Vector2Int_o __fastcall UIIconLabel__GetTextLabelSize(UIIconLabel_o 
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1BD36B4(this, method);
+    sub_1BE4D28(this, method);
   return *(UnityEngine_Vector2Int_o *)&textLabel->fields.mWidth;
 }
 
@@ -146,7 +153,7 @@ void __fastcall UIIconLabel__Set(UIIconLabel_o *this, IconLabelInfo_o *info, con
   const MethodInfo *v3; // [xsp+8h] [xbp-18h]
 
   if ( info )
-    UIIconLabel__Set_39017476(
+    UIIconLabel__Set_39141664(
       this,
       info->fields.iconKind,
       info->fields.data,
@@ -171,10 +178,10 @@ void __fastcall UIIconLabel__SetAlpha(UIIconLabel_o *this, float alpha, const Me
   UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B36739 & 1) == 0 )
+  if ( (byte_4B66152 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B36739 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B66152 = 1;
   }
   textLabel = (UIWidget_o *)this->fields.textLabel;
   if ( !textLabel )
@@ -214,7 +221,7 @@ void __fastcall UIIconLabel__SetAlpha(UIIconLabel_o *this, float alpha, const Me
       return;
     }
 LABEL_15:
-    sub_1BD36B4(textLabel, method);
+    sub_1BE4D28(textLabel, method);
   }
 }
 
@@ -239,30 +246,30 @@ void __fastcall UIIconLabel__SetCombineResTxt(
   System_String_o *v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4B36737 & 1) == 0 )
+  if ( (byte_4B66150 & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, *(_QWORD *)&data);
-    sub_1BD3458(&StringLiteral_3728/*"COMBINE_RES_INFO"*/, v9);
-    sub_1BD3458(&StringLiteral_3718/*"COMBINE_LIMIT_INFO"*/, v10);
-    byte_4B36737 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, *(_QWORD *)&data);
+    sub_1BE4ACC(&StringLiteral_3730/*"COMBINE_RES_INFO"*/, v9);
+    sub_1BE4ACC(&StringLiteral_3720/*"COMBINE_LIMIT_INFO"*/, v10);
+    byte_4B66150 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(data, 0LL);
   v12 = LocalizationManager__GetNumberFormat(adjustData, 0LL);
   if ( isLimit )
-    v13 = (System_String_o **)&StringLiteral_3718/*"COMBINE_LIMIT_INFO"*/;
+    v13 = (System_String_o **)&StringLiteral_3720/*"COMBINE_LIMIT_INFO"*/;
   else
-    v13 = (System_String_o **)&StringLiteral_3728/*"COMBINE_RES_INFO"*/;
+    v13 = (System_String_o **)&StringLiteral_3730/*"COMBINE_RES_INFO"*/;
   v14 = *v13;
   textLabel = this->fields.textLabel;
   v16 = (Il2CppObject *)v12;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v17 = LocalizationManager__Get(v14, 0LL);
-  v18 = System_String__Format_62539620(v17, NumberFormat, v16, 0LL);
+  v18 = System_String__Format_62713180(v17, NumberFormat, v16, 0LL);
   if ( !textLabel )
-    sub_1BD36B4(v18, v19);
+    sub_1BE4D28(v18, v19);
   UILabel__set_text(textLabel, v18, 0LL);
 }
 
@@ -271,7 +278,7 @@ void __fastcall UIIconLabel__SetEventQuestion(UIIconLabel_o *this, const MethodI
 {
   const MethodInfo *v2; // [xsp+8h] [xbp-18h]
 
-  UIIconLabel__Set_39017476(this, 27, 0, 0, 0, 0LL, 1, 0, 0, v2);
+  UIIconLabel__Set_39141664(this, 27, 0, 0, 0, 0LL, 1, 0, 0, v2);
 }
 
 
@@ -284,7 +291,7 @@ void __fastcall UIIconLabel__SetPurchaseDecision(
 {
   const MethodInfo *v5; // [xsp+8h] [xbp-18h]
 
-  UIIconLabel__Set_39017476(this, iconKind, price, holdCount, 0, 0LL, 0, 0, 0, v5);
+  UIIconLabel__Set_39141664(this, iconKind, price, holdCount, 0, 0LL, 0, 0, 0, v5);
 }
 
 
@@ -294,7 +301,7 @@ void __fastcall UIIconLabel__SetTextLabelPixelPerfect(UIIconLabel_o *this, const
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1BD36B4(0LL, method);
+    sub_1BE4D28(0LL, method);
   ((void (__fastcall *)(struct UILabel_o *, Il2CppMethodPointer))textLabel->klass->vtable._33_MakePixelPerfect.method)(
     textLabel,
     textLabel->klass->vtable._34_get_minWidth.methodPtr);
@@ -315,7 +322,7 @@ void __fastcall UIIconLabel__SetTextLabelSize(
         UIWidget__set_width(textLabel, size.fields.m_X, 0LL),
         (textLabel = (UIWidget_o *)this->fields.textLabel) == 0LL) )
   {
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BD36B4)(textLabel, size);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BE4D28)(textLabel, size);
   }
   UIWidget__set_height(textLabel, m_Y, 0LL);
 }
@@ -329,26 +336,26 @@ void __fastcall UIIconLabel__SetTextLabelStrikeout(UIIconLabel_o *this, const Me
   System_String_o *v5; // x1
 
   v2 = this;
-  if ( (byte_4B3673A & 1) == 0 )
+  if ( (byte_4B66153 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_16027/*"[/s]"*/, method);
-    this = (UIIconLabel_o *)sub_1BD3458(&StringLiteral_16196/*"[s]"*/, v3);
-    byte_4B3673A = 1;
+    sub_1BE4ACC(&StringLiteral_16048/*"[/s]"*/, method);
+    this = (UIIconLabel_o *)sub_1BE4ACC(&StringLiteral_16217/*"[s]"*/, v3);
+    byte_4B66153 = 1;
   }
   textLabel = v2->fields.textLabel;
   if ( !textLabel )
-    sub_1BD36B4(this, method);
-  v5 = System_String__Concat_62536508(
-         (System_String_o *)StringLiteral_16196/*"[s]"*/,
+    sub_1BE4D28(this, method);
+  v5 = System_String__Concat_62710068(
+         (System_String_o *)StringLiteral_16217/*"[s]"*/,
          textLabel->fields.mText,
-         (System_String_o *)StringLiteral_16027/*"[/s]"*/,
+         (System_String_o *)StringLiteral_16048/*"[/s]"*/,
          0LL);
   UILabel__set_text(textLabel, v5, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UIIconLabel__Set_39017476(
+void __fastcall UIIconLabel__Set_39141664(
         UIIconLabel_o *this,
         int32_t iconKind,
         int32_t data,
@@ -453,7 +460,7 @@ void __fastcall UIIconLabel__Set_39017476(
   bool v106; // cc
   System_String_o *v107; // x0
   bool v108; // cc
-  System_String_o *v109; // x0
+  float v109; // s1
   bool v110; // cc
   System_String_o *v111; // x0
   bool v112; // cc
@@ -481,7 +488,7 @@ void __fastcall UIIconLabel__Set_39017476(
   __int64 v134; // x3
   __int64 v135; // x4
   Il2CppObject *v136; // x0
-  System_String_o *NumberFormat_39179700; // x0
+  System_String_o *NumberFormat_39303932; // x0
   bool v138; // cc
   System_String_o *v139; // x0
   UnityEngine_Object_o *extentionTextLabel; // x25
@@ -516,55 +523,55 @@ void __fastcall UIIconLabel__Set_39017476(
   price = data;
   v161 = equipData;
   LvExceedDewDropItemId = iconKind;
-  if ( (byte_4B36736 & 1) == 0 )
+  if ( (byte_4B6614F & 1) == 0 )
   {
-    sub_1BD3458(&AtlasManager_TypeInfo, *(_QWORD *)&iconKind);
-    sub_1BD3458(&BalanceConfig_TypeInfo, v17);
-    sub_1BD3458(&Method_DataManager_GetMaster_ServantExceedMaster___, v18);
-    sub_1BD3458(&Method_DataManager_GetMaster_ServantLvDetailMaster___, v19);
-    sub_1BD3458(&DataManager_TypeInfo, v20);
-    sub_1BD3458(&int_TypeInfo, v21);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v22);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v23);
-    sub_1BD3458(&Rarity_TypeInfo, v24);
-    sub_1BD3458(&StringLiteral_20580/*"img_list_atk"*/, v25);
-    sub_1BD3458(&StringLiteral_5729/*"EVENT_ITEM_UNIT"*/, v26);
-    sub_1BD3458(&StringLiteral_10972/*"QP_UNIT"*/, v27);
-    sub_1BD3458(&StringLiteral_855/*"+"*/, v28);
-    sub_1BD3458(&StringLiteral_20593/*"img_list_not_clear_cond"*/, v29);
-    sub_1BD3458(&StringLiteral_9431/*"NOT_HAVING_SHOP_ITEM_RECEIVE"*/, v30);
-    sub_1BD3458(&StringLiteral_12446/*"STONE_FRAGMENTS_UNIT"*/, v31);
-    sub_1BD3458(&StringLiteral_6621/*"FRIENDSHIP_UNIT"*/, v32);
-    sub_1BD3458(&StringLiteral_6564/*"FOLLOWER_SELECT_TYPE_POINT"*/, v33);
-    sub_1BD3458(&StringLiteral_20760/*"img_txt_bondslevel"*/, v34);
-    sub_1BD3458(&StringLiteral_20586/*"img_list_cost"*/, v35);
-    sub_1BD3458(&StringLiteral_20594/*"img_list_not_release_costume"*/, v36);
-    sub_1BD3458(&StringLiteral_20589/*"img_list_limit_cnt"*/, v37);
-    sub_1BD3458(&StringLiteral_20405/*"icon_nplv"*/, v38);
-    sub_1BD3458(&StringLiteral_1874/*"?"*/, v39);
-    sub_1BD3458(&StringLiteral_20591/*"img_list_lv"*/, v40);
-    sub_1BD3458(&StringLiteral_1120/*"/"*/, v41);
-    sub_1BD3458(&StringLiteral_8648/*"MANA_UNIT"*/, v42);
-    sub_1BD3458(&StringLiteral_424/*"#,0"*/, v43);
-    sub_1BD3458(&StringLiteral_20588/*"img_list_hp"*/, v44);
-    sub_1BD3458(&StringLiteral_20587/*"img_list_costume_num"*/, v45);
-    sub_1BD3458(&StringLiteral_691/*"("*/, v46);
-    sub_1BD3458(&StringLiteral_2076/*"ANONYMOUS_UNIT"*/, v47);
-    sub_1BD3458(&StringLiteral_20793/*"img_txt_fp"*/, v48);
-    sub_1BD3458(&StringLiteral_809/*")"*/, v49);
-    sub_1BD3458(&StringLiteral_12477/*"STONE_UNIT"*/, v50);
-    sub_1BD3458(&StringLiteral_1879/*"??/??"*/, v51);
-    sub_1BD3458(&StringLiteral_712/*"(+"*/, v52);
-    sub_1BD3458(&StringLiteral_1/*""*/, v53);
-    sub_1BD3458(&StringLiteral_6617/*"FREE_NAME"*/, v54);
-    sub_1BD3458(&StringLiteral_1878/*"??"*/, v55);
-    sub_1BD3458(&StringLiteral_20595/*"img_list_release_num"*/, v56);
-    sub_1BD3458(&StringLiteral_20618/*"img_nplv"*/, v57);
-    sub_1BD3458(&StringLiteral_11105/*"RARE_PRI_UNIT"*/, v58);
-    sub_1BD3458(&StringLiteral_20590/*"img_list_limitcount"*/, v59);
-    sub_1BD3458(&StringLiteral_1880/*"???"*/, v60);
-    sub_1BD3458(&StringLiteral_20592/*"img_list_no"*/, v61);
-    byte_4B36736 = 1;
+    sub_1BE4ACC(&AtlasManager_TypeInfo, *(_QWORD *)&iconKind);
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, v17);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ServantExceedMaster___, v18);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ServantLvDetailMaster___, v19);
+    sub_1BE4ACC(&DataManager_TypeInfo, v20);
+    sub_1BE4ACC(&int_TypeInfo, v21);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v22);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v23);
+    sub_1BE4ACC(&Rarity_TypeInfo, v24);
+    sub_1BE4ACC(&StringLiteral_20620/*"img_list_atk"*/, v25);
+    sub_1BE4ACC(&StringLiteral_5732/*"EVENT_ITEM_UNIT"*/, v26);
+    sub_1BE4ACC(&StringLiteral_10985/*"QP_UNIT"*/, v27);
+    sub_1BE4ACC(&StringLiteral_855/*"+"*/, v28);
+    sub_1BE4ACC(&StringLiteral_20633/*"img_list_not_clear_cond"*/, v29);
+    sub_1BE4ACC(&StringLiteral_9439/*"NOT_HAVING_SHOP_ITEM_RECEIVE"*/, v30);
+    sub_1BE4ACC(&StringLiteral_12460/*"STONE_FRAGMENTS_UNIT"*/, v31);
+    sub_1BE4ACC(&StringLiteral_6625/*"FRIENDSHIP_UNIT"*/, v32);
+    sub_1BE4ACC(&StringLiteral_6567/*"FOLLOWER_SELECT_TYPE_POINT"*/, v33);
+    sub_1BE4ACC(&StringLiteral_20800/*"img_txt_bondslevel"*/, v34);
+    sub_1BE4ACC(&StringLiteral_20626/*"img_list_cost"*/, v35);
+    sub_1BE4ACC(&StringLiteral_20634/*"img_list_not_release_costume"*/, v36);
+    sub_1BE4ACC(&StringLiteral_20629/*"img_list_limit_cnt"*/, v37);
+    sub_1BE4ACC(&StringLiteral_20443/*"icon_nplv"*/, v38);
+    sub_1BE4ACC(&StringLiteral_1875/*"?"*/, v39);
+    sub_1BE4ACC(&StringLiteral_20631/*"img_list_lv"*/, v40);
+    sub_1BE4ACC(&StringLiteral_1120/*"/"*/, v41);
+    sub_1BE4ACC(&StringLiteral_8654/*"MANA_UNIT"*/, v42);
+    sub_1BE4ACC(&StringLiteral_424/*"#,0"*/, v43);
+    sub_1BE4ACC(&StringLiteral_20628/*"img_list_hp"*/, v44);
+    sub_1BE4ACC(&StringLiteral_20627/*"img_list_costume_num"*/, v45);
+    sub_1BE4ACC(&StringLiteral_691/*"("*/, v46);
+    sub_1BE4ACC(&StringLiteral_2077/*"ANONYMOUS_UNIT"*/, v47);
+    sub_1BE4ACC(&StringLiteral_20833/*"img_txt_fp"*/, v48);
+    sub_1BE4ACC(&StringLiteral_809/*")"*/, v49);
+    sub_1BE4ACC(&StringLiteral_12491/*"STONE_UNIT"*/, v50);
+    sub_1BE4ACC(&StringLiteral_1880/*"??/??"*/, v51);
+    sub_1BE4ACC(&StringLiteral_712/*"(+"*/, v52);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v53);
+    sub_1BE4ACC(&StringLiteral_6620/*"FREE_NAME"*/, v54);
+    sub_1BE4ACC(&StringLiteral_1879/*"??"*/, v55);
+    sub_1BE4ACC(&StringLiteral_20635/*"img_list_release_num"*/, v56);
+    sub_1BE4ACC(&StringLiteral_20658/*"img_nplv"*/, v57);
+    sub_1BE4ACC(&StringLiteral_11118/*"RARE_PRI_UNIT"*/, v58);
+    sub_1BE4ACC(&StringLiteral_20630/*"img_list_limitcount"*/, v59);
+    sub_1BE4ACC(&StringLiteral_1881/*"???"*/, v60);
+    sub_1BE4ACC(&StringLiteral_20632/*"img_list_no"*/, v61);
+    byte_4B6614F = 1;
   }
   v160 = equipData + data;
   v62 = System_Int32__ToString((int32_t)&v160, 0LL);
@@ -589,81 +596,81 @@ void __fastcall UIIconLabel__Set_39017476(
   switch ( LvExceedDewDropItemId )
   {
     case 0:
-      goto LABEL_242;
+      goto LABEL_245;
     case 2:
       if ( price < 1 )
-        goto LABEL_162;
-      spriteName = (System_String_o *)StringLiteral_20591/*"img_list_lv"*/;
+        goto LABEL_165;
+      spriteName = (System_String_o *)StringLiteral_20631/*"img_list_lv"*/;
       if ( exceedCount < 1 )
       {
         v71 = 0;
         v72 = 0;
         LvExceedDewDropItemId = 0;
         if ( isHide )
-          v73 = (System_String_o *)StringLiteral_1878/*"??"*/;
+          v73 = (System_String_o *)StringLiteral_1879/*"??"*/;
         else
           v73 = v62;
-        goto LABEL_242;
+        goto LABEL_245;
       }
       if ( isHide )
       {
         v71 = 0;
         v72 = 0;
         LvExceedDewDropItemId = 0;
-        v73 = (System_String_o *)StringLiteral_1879/*"??/??"*/;
-        goto LABEL_199;
+        v73 = (System_String_o *)StringLiteral_1880/*"??/??"*/;
+        goto LABEL_202;
       }
       v73 = System_Int32__ToString((int32_t)&price, 0LL);
       v66 = 1.0;
       if ( !isMaxHide )
       {
         v139 = System_Int32__ToString((int32_t)&exceedCount, 0LL);
-        v73 = System_String__Concat_62536508(v73, (System_String_o *)StringLiteral_1120/*"/"*/, v139, 0LL);
+        v73 = System_String__Concat_62710068(v73, (System_String_o *)StringLiteral_1120/*"/"*/, v139, 0LL);
       }
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
-      goto LABEL_200;
+      goto LABEL_203;
     case 3:
-      v82 = &StringLiteral_20588/*"img_list_hp"*/;
+      v82 = &StringLiteral_20628/*"img_list_hp"*/;
       goto LABEL_38;
     case 5:
-      v82 = &StringLiteral_20580/*"img_list_atk"*/;
+      v82 = &StringLiteral_20620/*"img_list_atk"*/;
 LABEL_38:
       spriteName = (System_String_o *)*v82;
       v160 = v161 + price;
-      v83 = System_Int32__ToString_63330856((int32_t)&v160, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+      v83 = System_Int32__ToString_63504416((int32_t)&v160, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
       if ( isHide )
-        v73 = (System_String_o *)StringLiteral_1880/*"???"*/;
+        v73 = (System_String_o *)StringLiteral_1881/*"???"*/;
       else
         v73 = v83;
-      goto LABEL_242;
+      goto LABEL_245;
     case 7:
-      spriteName = (System_String_o *)StringLiteral_20586/*"img_list_cost"*/;
+      spriteName = (System_String_o *)StringLiteral_20626/*"img_list_cost"*/;
       if ( v161 < 1 )
       {
         v71 = 0;
         v72 = 0;
         LvExceedDewDropItemId = 0;
-        goto LABEL_241;
+        goto LABEL_244;
       }
       v84 = System_Int32__ToString((int32_t)&price, 0LL);
       v85 = System_Int32__ToString((int32_t)&v161, 0LL);
-      v73 = System_String__Concat_62536508(v84, (System_String_o *)StringLiteral_855/*"+"*/, v85, 0LL);
-LABEL_225:
+      v73 = System_String__Concat_62710068(v84, (System_String_o *)StringLiteral_855/*"+"*/, v85, 0LL);
+LABEL_228:
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
-      goto LABEL_242;
+      goto LABEL_245;
     case 8:
     case 57:
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
-      v79 = StringLiteral_20592/*"img_list_no"*/;
+      v79 = StringLiteral_20632/*"img_list_no"*/;
       v73 = v62;
       goto LABEL_49;
     case 9:
@@ -675,30 +682,30 @@ LABEL_225:
       else
         v73 = (System_String_o *)StringLiteral_1/*""*/;
       if ( price >= 1 )
-        v79 = StringLiteral_20590/*"img_list_limitcount"*/;
+        v79 = StringLiteral_20630/*"img_list_limitcount"*/;
       else
         v79 = 0LL;
 LABEL_49:
       spriteName = (System_String_o *)v79;
-      goto LABEL_242;
+      goto LABEL_245;
     case 10:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v86 = &StringLiteral_6617/*"FREE_NAME"*/;
-      goto LABEL_209;
+      v86 = &StringLiteral_6620/*"FREE_NAME"*/;
+      goto LABEL_212;
     case 11:
     case 27:
       if ( isHide )
       {
-        v73 = (System_String_o *)StringLiteral_1874/*"?"*/;
+        v73 = (System_String_o *)StringLiteral_1875/*"?"*/;
       }
       else
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        NumberFormat_39179700 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+        NumberFormat_39303932 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
         v64 = exceedCount;
-        v73 = NumberFormat_39179700;
+        v73 = NumberFormat_39303932;
       }
       v70 = 1.0;
       v138 = price <= v64 || v64 <= -1;
@@ -709,17 +716,17 @@ LABEL_49:
       else
         v66 = 0.5;
       spriteName = 0LL;
-      goto LABEL_221;
+      goto LABEL_224;
     case 12:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v87 = &StringLiteral_12477/*"STONE_UNIT"*/;
+      v87 = &StringLiteral_12491/*"STONE_UNIT"*/;
       goto LABEL_77;
     case 13:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v88 = LocalizationManager__Get((System_String_o *)StringLiteral_8648/*"MANA_UNIT"*/, 0LL);
-      v89 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v88 = LocalizationManager__Get((System_String_o *)StringLiteral_8654/*"MANA_UNIT"*/, 0LL);
+      v89 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v88, v89, 0LL);
       v71 = 0;
       spriteName = 0LL;
@@ -728,8 +735,8 @@ LABEL_49:
     case 14:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v90 = LocalizationManager__Get((System_String_o *)StringLiteral_10972/*"QP_UNIT"*/, 0LL);
-      v91 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v90 = LocalizationManager__Get((System_String_o *)StringLiteral_10985/*"QP_UNIT"*/, 0LL);
+      v91 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v90, v91, 0LL);
       v71 = 0;
       spriteName = 0LL;
@@ -740,24 +747,24 @@ LABEL_49:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       PriceInfo = LocalizationManager__GetPriceInfo(v92, 0LL);
-      goto LABEL_210;
+      goto LABEL_213;
     case 16:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v93 = LocalizationManager__Get((System_String_o *)StringLiteral_6621/*"FRIENDSHIP_UNIT"*/, 0LL);
-      v94 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v93 = LocalizationManager__Get((System_String_o *)StringLiteral_6625/*"FRIENDSHIP_UNIT"*/, 0LL);
+      v94 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       PriceInfo = System_String__Format(v93, v94, 0LL);
-      goto LABEL_210;
+      goto LABEL_213;
     case 17:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      PriceInfo = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
-      goto LABEL_210;
+      PriceInfo = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
+      goto LABEL_213;
     case 18:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v95 = LocalizationManager__Get((System_String_o *)StringLiteral_5729/*"EVENT_ITEM_UNIT"*/, 0LL);
-      v96 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v95 = LocalizationManager__Get((System_String_o *)StringLiteral_5732/*"EVENT_ITEM_UNIT"*/, 0LL);
+      v96 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v95, v96, 0LL);
       v71 = 0;
       LvExceedDewDropItemId = 0;
@@ -766,10 +773,10 @@ LABEL_49:
     case 19:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v87 = &StringLiteral_12446/*"STONE_FRAGMENTS_UNIT"*/;
+      v87 = &StringLiteral_12460/*"STONE_FRAGMENTS_UNIT"*/;
 LABEL_77:
       v97 = LocalizationManager__Get((System_String_o *)*v87, 0LL);
-      v98 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v98 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v97, v98, 0LL);
       v71 = 0;
       spriteName = 0LL;
@@ -778,8 +785,8 @@ LABEL_77:
     case 20:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v99 = LocalizationManager__Get((System_String_o *)StringLiteral_2076/*"ANONYMOUS_UNIT"*/, 0LL);
-      v100 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v99 = LocalizationManager__Get((System_String_o *)StringLiteral_2077/*"ANONYMOUS_UNIT"*/, 0LL);
+      v100 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v99, v100, 0LL);
       v71 = 0;
       spriteName = 0LL;
@@ -788,19 +795,19 @@ LABEL_77:
     case 21:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11105/*"RARE_PRI_UNIT"*/, 0LL);
-      v102 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11118/*"RARE_PRI_UNIT"*/, 0LL);
+      v102 = (Il2CppObject *)LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v73 = System_String__Format(v101, v102, 0LL);
       v71 = 0;
       spriteName = 0LL;
       LvExceedDewDropItemId = 18;
 LABEL_84:
       v72 = 1;
-      goto LABEL_242;
+      goto LABEL_245;
     case 22:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v103 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v103 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v70 = 1.0;
       v104 = price <= exceedCount || exceedCount <= -1;
       v73 = v103;
@@ -811,11 +818,11 @@ LABEL_84:
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 6;
-      goto LABEL_221;
+      goto LABEL_224;
     case 23:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v105 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v105 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v70 = 1.0;
       v106 = price <= exceedCount || exceedCount <= -1;
       v73 = v105;
@@ -826,11 +833,11 @@ LABEL_84:
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 7;
-      goto LABEL_221;
+      goto LABEL_224;
     case 24:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v107 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v107 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v70 = 1.0;
       v108 = price <= exceedCount || exceedCount <= -1;
       v73 = v107;
@@ -841,35 +848,38 @@ LABEL_84:
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 5;
-      goto LABEL_221;
+      goto LABEL_224;
     case 25:
     case 26:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v73 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v73 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
-      goto LABEL_144;
+      goto LABEL_147;
     case 28:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v109 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
       v70 = 1.0;
+      v73 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
+      if ( exceedCount < 0 )
+        v109 = 0.5;
+      else
+        v109 = 1.0;
       v110 = price <= exceedCount || exceedCount <= -1;
-      v73 = v109;
       v71 = 0;
       spriteName = 0LL;
       if ( v110 )
-        v66 = 1.0;
+        v66 = v109;
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 16;
-      goto LABEL_221;
+      goto LABEL_224;
     case 29:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v111 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v111 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v70 = 1.0;
       v112 = price <= exceedCount || exceedCount <= -1;
       v73 = v111;
@@ -880,11 +890,11 @@ LABEL_84:
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 17;
-      goto LABEL_221;
+      goto LABEL_224;
     case 30:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v113 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v113 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v70 = 1.0;
       v114 = price <= exceedCount || exceedCount <= -1;
       v73 = v113;
@@ -895,9 +905,9 @@ LABEL_84:
       else
         v66 = 0.5;
       LvExceedDewDropItemId = 18;
-LABEL_221:
+LABEL_224:
       v72 = 1;
-      goto LABEL_222;
+      goto LABEL_225;
     case 31:
       v115 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -908,10 +918,10 @@ LABEL_221:
       LvExceedDewDropItemId = v115->static_fields->LvExceedDewDropItemId;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v73 = LocalizationManager__GetNumberFormat_39179700(v67, 0LL);
+      v73 = LocalizationManager__GetNumberFormat_39303932(v67, 0LL);
       v71 = 0;
       v72 = 0;
-LABEL_144:
+LABEL_147:
       v70 = 1.0;
       v116 = price <= exceedCount || exceedCount <= -1;
       spriteName = 0LL;
@@ -919,57 +929,57 @@ LABEL_144:
         v66 = 1.0;
       else
         v66 = 0.5;
-LABEL_222:
+LABEL_225:
       v68 = v66;
       v69 = v66;
-      goto LABEL_242;
+      goto LABEL_245;
     case 32:
       if ( (price & 0x80000000) != 0 )
-        goto LABEL_162;
-      v117 = StringLiteral_20760/*"img_txt_bondslevel"*/;
-      if ( !StringLiteral_20760/*"img_txt_bondslevel"*/ )
-        goto LABEL_160;
+        goto LABEL_165;
+      v117 = StringLiteral_20800/*"img_txt_bondslevel"*/;
+      if ( !StringLiteral_20800/*"img_txt_bondslevel"*/ )
+        goto LABEL_163;
       iconSprite = (UIWidget_o *)this->fields.iconSprite;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       v119 = 40;
-      goto LABEL_158;
+      goto LABEL_161;
     case 33:
       if ( price < 1 )
-        goto LABEL_162;
-      v117 = StringLiteral_20618/*"img_nplv"*/;
-      if ( !StringLiteral_20618/*"img_nplv"*/ )
-        goto LABEL_160;
+        goto LABEL_165;
+      v117 = StringLiteral_20658/*"img_nplv"*/;
+      if ( !StringLiteral_20658/*"img_nplv"*/ )
+        goto LABEL_163;
       iconSprite = (UIWidget_o *)this->fields.iconSprite;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       v119 = 55;
-LABEL_158:
+LABEL_161:
       UIWidget__set_width(iconSprite, v119, 0LL);
       iconSprite = (UIWidget_o *)this->fields.iconSprite;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       UIWidget__set_height(iconSprite, 18, 0LL);
       v64 = exceedCount;
-LABEL_160:
+LABEL_163:
       spriteName = (System_String_o *)v117;
       if ( v64 < 1 )
       {
         v71 = 0;
         LvExceedDewDropItemId = 0;
-        goto LABEL_240;
+        goto LABEL_243;
       }
       v120 = System_Int32__ToString((int32_t)&price, 0LL);
       v121 = System_Int32__ToString((int32_t)&exceedCount, 0LL);
-      v73 = System_String__Concat_62536508(v120, (System_String_o *)StringLiteral_1120/*"/"*/, v121, 0LL);
+      v73 = System_String__Concat_62710068(v120, (System_String_o *)StringLiteral_1120/*"/"*/, v121, 0LL);
       v71 = 0;
       LvExceedDewDropItemId = 0;
       v72 = 1;
-LABEL_199:
+LABEL_202:
       v66 = 1.0;
-LABEL_200:
+LABEL_203:
       v68 = 1.0;
-      goto LABEL_201;
+      goto LABEL_204;
     case 34:
       if ( price < 1 )
       {
@@ -981,7 +991,7 @@ LABEL_200:
         v68 = 1.0;
         v69 = 1.0;
         v70 = 1.0;
-        goto LABEL_163;
+        goto LABEL_166;
       }
       if ( exceedCount )
       {
@@ -994,7 +1004,7 @@ LABEL_200:
         else
         {
           if ( exceedCount != 99 )
-            goto LABEL_239;
+            goto LABEL_242;
           v69 = 0.058824;
           v68 = 0.45098;
           v66 = 1.0;
@@ -1007,81 +1017,81 @@ LABEL_200:
         v69 = 1.0;
       }
       v70 = 1.0;
-LABEL_239:
+LABEL_242:
       v71 = 0;
       LvExceedDewDropItemId = 0;
-      spriteName = (System_String_o *)StringLiteral_20405/*"icon_nplv"*/;
-LABEL_240:
+      spriteName = (System_String_o *)StringLiteral_20443/*"icon_nplv"*/;
+LABEL_243:
       v72 = 1;
-LABEL_241:
+LABEL_244:
       v73 = v67;
-      goto LABEL_242;
+      goto LABEL_245;
     case 35:
       v122 = price;
       if ( !Rarity_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
       spriteName = Rarity__getIcon(v122, 0LL);
-      goto LABEL_180;
+      goto LABEL_183;
     case 36:
       v123 = price;
       if ( !Rarity_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
-      spriteName = Rarity__getIcon_38484936(v123, v64, lv, 0LL);
+      spriteName = Rarity__getIcon_38608696(v123, v64, lv, 0LL);
       if ( exceedCount < 1 )
-        goto LABEL_180;
+        goto LABEL_183;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      iconSprite = (UIWidget_o *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ServantExceedMaster___);
+      iconSprite = (UIWidget_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ServantExceedMaster___);
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       RarityIcon = ServantExceedMaster__GetRarityIcon((ServantExceedMaster_o *)iconSprite, price, exceedCount, 0, 0LL);
-      iconSprite = (UIWidget_o *)DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ServantLvDetailMaster___);
+      iconSprite = (UIWidget_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ServantLvDetailMaster___);
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       if ( ServantLvDetailMaster__GetRarityIcon((ServantLvDetailMaster_o *)iconSprite, price, lv, RarityIcon, 0LL) > 2 )
         v71 = 1;
       else
-LABEL_180:
+LABEL_183:
         v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
       v73 = (System_String_o *)StringLiteral_1/*""*/;
-      goto LABEL_242;
+      goto LABEL_245;
     case 38:
     case 39:
     case 40:
       if ( price >= 1 )
       {
-        v74 = System_Int32__ToString_63330856((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
-        PriceInfo = System_String__Concat_62525248((System_String_o *)StringLiteral_855/*"+"*/, v74, 0LL);
-LABEL_210:
+        v74 = System_Int32__ToString_63504416((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+        PriceInfo = System_String__Concat_62698808((System_String_o *)StringLiteral_855/*"+"*/, v74, 0LL);
+LABEL_213:
         v73 = PriceInfo;
         v71 = 0;
         v72 = 0;
         LvExceedDewDropItemId = 0;
         spriteName = 0LL;
-        goto LABEL_242;
+        goto LABEL_245;
       }
       if ( (price & 0x80000000) != 0 )
       {
-        PriceInfo = System_Int32__ToString_63330856((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
-        goto LABEL_210;
+        PriceInfo = System_Int32__ToString_63504416((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+        goto LABEL_213;
       }
-LABEL_162:
+LABEL_165:
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
       spriteName = 0LL;
-LABEL_163:
+LABEL_166:
       v73 = (System_String_o *)StringLiteral_1/*""*/;
-LABEL_242:
+LABEL_245:
       iconSprite = (UIWidget_o *)this->fields.textLabel;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       UILabel__set_text((UILabel_o *)iconSprite, v73, 0LL);
       iconSprite = (UIWidget_o *)this->fields.textLabel;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       v166.fields.r = v66;
       v166.fields.g = v68;
       v166.fields.b = v69;
@@ -1091,12 +1101,12 @@ LABEL_242:
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality(extentionTextLabel, 0LL, 0LL) )
-        goto LABEL_249;
+        goto LABEL_252;
       iconSprite = (UIWidget_o *)this->fields.extentionTextLabel;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       UILabel__set_text((UILabel_o *)iconSprite, v65, 0LL);
-LABEL_249:
+LABEL_252:
       v141 = (UnityEngine_Object_o *)this->fields.iconSprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1104,10 +1114,10 @@ LABEL_249:
         return;
       iconSprite = (UIWidget_o *)this->fields.iconSprite;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       iconSprite = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)iconSprite, 0LL);
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)iconSprite, v158 != 56, 0LL);
       if ( LvExceedDewDropItemId < 1 )
       {
@@ -1132,7 +1142,7 @@ LABEL_249:
         }
         iconSprite = (UIWidget_o *)this->fields.iconSprite;
         if ( !iconSprite )
-          goto LABEL_295;
+          goto LABEL_298;
         UISprite__set_spriteName((UISprite_o *)iconSprite, v143, 0LL);
       }
       else
@@ -1148,20 +1158,20 @@ LABEL_249:
       {
         iconSprite = (UIWidget_o *)this->fields.iconSprite;
         if ( !iconSprite )
-          goto LABEL_295;
+          goto LABEL_298;
         ((void (__fastcall *)(UIWidget_o *, Il2CppMethodPointer))iconSprite->klass->vtable._33_MakePixelPerfect.method)(
           iconSprite,
           iconSprite->klass->vtable._34_get_minWidth.methodPtr);
       }
       iconSprite = (UIWidget_o *)this->fields.iconSprite;
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       iconSprite = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconSprite, 0LL);
       if ( !iconSprite )
-        goto LABEL_295;
+        goto LABEL_298;
       iconSprite = (UIWidget_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)iconSprite, 0LL);
       if ( !this->fields.textLabel )
-        goto LABEL_295;
+        goto LABEL_298;
       v147 = (UnityEngine_Object_o *)iconSprite;
       transform = (UnityEngine_Object_o *)UnityEngine_Component__get_transform(
                                             (UnityEngine_Component_o *)this->fields.textLabel,
@@ -1172,15 +1182,15 @@ LABEL_249:
       {
         iconSprite = (UIWidget_o *)this->fields.textLabel;
         if ( !iconSprite )
-          goto LABEL_295;
+          goto LABEL_298;
         LODWORD(v149) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)iconSprite, 0LL);
         iconSprite = (UIWidget_o *)this->fields.iconSprite;
         if ( !iconSprite )
-          goto LABEL_295;
+          goto LABEL_298;
         v150 = v149;
         iconSprite = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconSprite, 0LL);
         if ( !iconSprite )
-          goto LABEL_295;
+          goto LABEL_298;
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0LL);
         y = localPosition.fields.y;
         z = localPosition.fields.z;
@@ -1189,12 +1199,12 @@ LABEL_249:
         if ( ((unsigned __int8)iconSprite & 1) != 0 )
         {
           if ( !textLabel )
-            goto LABEL_295;
+            goto LABEL_298;
           v150 = v150 - (float)textLabel->fields.mSpacingX;
         }
         else if ( !textLabel )
         {
-          goto LABEL_295;
+          goto LABEL_298;
         }
         mAlignment = textLabel->fields.mAlignment;
         if ( mAlignment == 2 )
@@ -1206,12 +1216,12 @@ LABEL_249:
           if ( mAlignment != 3 )
           {
             v156 = (float)-this->fields.blankSize;
-            goto LABEL_291;
+            goto LABEL_294;
           }
           v155 = v150 + (float)this->fields.blankSize;
         }
         v156 = -v155;
-LABEL_291:
+LABEL_294:
         iconSprite = (UIWidget_o *)this->fields.iconSprite;
         if ( iconSprite )
         {
@@ -1225,19 +1235,19 @@ LABEL_291:
             return;
           }
         }
-LABEL_295:
-        sub_1BD36B4(iconSprite, v63);
+LABEL_298:
+        sub_1BE4D28(iconSprite, v63);
       }
       return;
     case 41:
     case 42:
     case 43:
       v76 = price;
-      v77 = System_Int32__ToString_63330856((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+      v77 = System_Int32__ToString_63504416((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
       v78 = (System_String_o **)&StringLiteral_691/*"("*/;
       if ( v76 >= 0 )
         v78 = (System_String_o **)&StringLiteral_712/*"(+"*/;
-      v73 = System_String__Concat_62536508(*v78, v77, (System_String_o *)StringLiteral_809/*")"*/, 0LL);
+      v73 = System_String__Concat_62710068(*v78, v77, (System_String_o *)StringLiteral_809/*")"*/, 0LL);
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
@@ -1256,44 +1266,44 @@ LABEL_295:
         spriteName = 0LL;
         v68 = 1.0;
         v66 = 0.0;
-LABEL_201:
+LABEL_204:
         v69 = 1.0;
       }
       v70 = 1.0;
-      goto LABEL_242;
+      goto LABEL_245;
     case 44:
     case 45:
       if ( (price & 0x80000000) != 0 )
-        goto LABEL_162;
+        goto LABEL_165;
       if ( exceedCount < 1 )
         goto LABEL_29;
-      v80 = System_Int32__ToString_63330856((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
-      v81 = System_Int32__ToString_63330856((int32_t)&exceedCount, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
-      v73 = System_String__Concat_62536508(v80, (System_String_o *)StringLiteral_1120/*"/"*/, v81, 0LL);
+      v80 = System_Int32__ToString_63504416((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+      v81 = System_Int32__ToString_63504416((int32_t)&exceedCount, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+      v73 = System_String__Concat_62710068(v80, (System_String_o *)StringLiteral_1120/*"/"*/, v81, 0LL);
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
       spriteName = 0LL;
-      goto LABEL_199;
+      goto LABEL_202;
     case 46:
-      v125 = &StringLiteral_20588/*"img_list_hp"*/;
-      goto LABEL_184;
+      v125 = &StringLiteral_20628/*"img_list_hp"*/;
+      goto LABEL_187;
     case 47:
-      v125 = &StringLiteral_20580/*"img_list_atk"*/;
-LABEL_184:
+      v125 = &StringLiteral_20620/*"img_list_atk"*/;
+LABEL_187:
       spriteName = (System_String_o *)*v125;
-      v73 = System_Int32__ToString_63330856((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+      v73 = System_Int32__ToString_63504416((int32_t)&price, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
       if ( (v161 & 0x80000000) != 0 )
       {
         v127 = System_Int32__ToString((int32_t)&v161, 0LL);
       }
       else
       {
-        v126 = System_Int32__ToString_63330856((int32_t)&v161, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
-        v127 = System_String__Concat_62525248((System_String_o *)StringLiteral_855/*"+"*/, v126, 0LL);
+        v126 = System_Int32__ToString_63504416((int32_t)&v161, (System_String_o *)StringLiteral_424/*"#,0"*/, 0LL);
+        v127 = System_String__Concat_62698808((System_String_o *)StringLiteral_855/*"+"*/, v126, 0LL);
       }
       v65 = v127;
-      goto LABEL_225;
+      goto LABEL_228;
     case 48:
       v71 = 0;
       v72 = 0;
@@ -1303,66 +1313,66 @@ LABEL_184:
         v73 = (System_String_o *)StringLiteral_1/*""*/;
       else
         v73 = v62;
-      goto LABEL_242;
+      goto LABEL_245;
     case 49:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       PriceInfo = LocalizationManager__GetDate(time, 0LL);
-      goto LABEL_210;
+      goto LABEL_213;
     case 50:
-      spriteName = (System_String_o *)StringLiteral_20587/*"img_list_costume_num"*/;
+      spriteName = (System_String_o *)StringLiteral_20627/*"img_list_costume_num"*/;
       v128 = System_Int32__ToString((int32_t)&price, 0LL);
-      goto LABEL_198;
+      goto LABEL_201;
     case 51:
-      v129 = &StringLiteral_20595/*"img_list_release_num"*/;
-      goto LABEL_197;
+      v129 = &StringLiteral_20635/*"img_list_release_num"*/;
+      goto LABEL_200;
     case 52:
-      v129 = &StringLiteral_20594/*"img_list_not_release_costume"*/;
-      goto LABEL_197;
+      v129 = &StringLiteral_20634/*"img_list_not_release_costume"*/;
+      goto LABEL_200;
     case 53:
-      v129 = &StringLiteral_20593/*"img_list_not_clear_cond"*/;
-      goto LABEL_197;
+      v129 = &StringLiteral_20633/*"img_list_not_clear_cond"*/;
+      goto LABEL_200;
     case 54:
-      v129 = &StringLiteral_20589/*"img_list_limit_cnt"*/;
-LABEL_197:
+      v129 = &StringLiteral_20629/*"img_list_limit_cnt"*/;
+LABEL_200:
       spriteName = (System_String_o *)*v129;
       v130 = System_Int32__ToString((int32_t)&price, 0LL);
       v131 = System_Int32__ToString((int32_t)&exceedCount, 0LL);
-      v128 = System_String__Concat_62536508(v130, (System_String_o *)StringLiteral_1120/*"/"*/, v131, 0LL);
-      goto LABEL_198;
+      v128 = System_String__Concat_62710068(v130, (System_String_o *)StringLiteral_1120/*"/"*/, v131, 0LL);
+      goto LABEL_201;
     case 55:
-      spriteName = (System_String_o *)StringLiteral_20793/*"img_txt_fp"*/;
+      spriteName = (System_String_o *)StringLiteral_20833/*"img_txt_fp"*/;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v132 = LocalizationManager__Get((System_String_o *)StringLiteral_6564/*"FOLLOWER_SELECT_TYPE_POINT"*/, 0LL);
+      v132 = LocalizationManager__Get((System_String_o *)StringLiteral_6567/*"FOLLOWER_SELECT_TYPE_POINT"*/, 0LL);
       v159 = price;
       v136 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v159, v133, v134, v135);
       v128 = System_String__Format(v132, v136, 0LL);
-LABEL_198:
+LABEL_201:
       v73 = v128;
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
-      goto LABEL_199;
+      goto LABEL_202;
     case 56:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v86 = &StringLiteral_9431/*"NOT_HAVING_SHOP_ITEM_RECEIVE"*/;
-LABEL_209:
+      v86 = &StringLiteral_9439/*"NOT_HAVING_SHOP_ITEM_RECEIVE"*/;
+LABEL_212:
       PriceInfo = LocalizationManager__Get((System_String_o *)*v86, 0LL);
-      goto LABEL_210;
+      goto LABEL_213;
     default:
 LABEL_29:
       v71 = 0;
       v72 = 0;
       LvExceedDewDropItemId = 0;
       spriteName = 0LL;
-      goto LABEL_241;
+      goto LABEL_244;
   }
 }
 
 
-void __fastcall UIIconLabel__Set_39044608(
+void __fastcall UIIconLabel__Set_39168808(
         UIIconLabel_o *this,
         IconLabelInfo_o *info,
         bool isHide,
@@ -1371,7 +1381,7 @@ void __fastcall UIIconLabel__Set_39044608(
   const MethodInfo *v4; // [xsp+8h] [xbp-18h]
 
   if ( info )
-    UIIconLabel__Set_39017476(
+    UIIconLabel__Set_39141664(
       this,
       info->fields.iconKind,
       info->fields.data,

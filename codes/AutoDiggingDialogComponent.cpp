@@ -1,9 +1,9 @@
 void __fastcall AutoDiggingDialogComponent___ctor(AutoDiggingDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3B3CF & 1) == 0 )
+  if ( (byte_4B6AE68 & 1) == 0 )
   {
-    sub_1BD3458(&BaseDialog_TypeInfo, method);
-    byte_4B3B3CF = 1;
+    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
+    byte_4B6AE68 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -22,20 +22,20 @@ void __fastcall AutoDiggingDialogComponent__EndClose(AutoDiggingDialogComponent_
   struct System_Action_List_DiggingBlockComponent___o *closeCallbackFunc; // x20
   System_Collections_Generic_List_T__o *v10; // x0
 
-  if ( (byte_4B3B3CD & 1) == 0 )
+  if ( (byte_4B6AE66 & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Shuffle_DiggingBlockComponent___, method);
-    byte_4B3B3CD = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Shuffle_DiggingBlockComponent___, method);
+    byte_4B6AE66 = 1;
   }
   AutoDiggingDialogComponent__Init(this, method);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     v10 = BasicHelper__Shuffle_object_(
             (System_Collections_Generic_List_T__o *)this->fields.autoDiggingBlockList,
-            (const MethodInfo_2F20FDC *)Method_BasicHelper_Shuffle_DiggingBlockComponent___);
+            (const MethodInfo_2F48A68 *)Method_BasicHelper_Shuffle_DiggingBlockComponent___);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Collections_Generic_List_T__o *, _QWORD))closeCallbackFunc->fields.m_target)(
       closeCallbackFunc->fields.original_method_info,
       v10,
@@ -76,71 +76,71 @@ System_Collections_Generic_List_DiggingBlockComponent__o *__fastcall AutoDigging
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B3B3C9 & 1) == 0 )
+  if ( (byte_4B6AE62 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, blockList);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v10);
-    sub_1BD3458(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v11);
-    byte_4B3B3C9 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, blockList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v10);
+    sub_1BE4ACC(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v11);
+    byte_4B6AE62 = 1;
   }
   memset(&v31, 0, sizeof(v31));
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
   if ( !blockList )
-    sub_1BD36B4(v13, v14);
+    sub_1BE4D28(v13, v14);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)blockList,
-    (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
   v31 = v30;
   while ( 1 )
   {
     v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
+            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
     if ( !v15 )
       break;
     current = v31.fields._current;
     if ( !v31.fields._current )
-      sub_1BD36B4(v15, v16);
+      sub_1BE4D28(v15, v16);
     monitor = v31.fields._current[4].monitor;
     if ( !monitor )
-      sub_1BD36B4(v15, v16);
+      sub_1BE4D28(v15, v16);
     if ( monitor[6] == blockId && !monitor[7] )
     {
       if ( !v12 )
-        sub_1BD36B4(v15, v16);
+        sub_1BE4D28(v15, v16);
       items = v12->fields._items;
       v26 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
       ++v12->fields._version;
       if ( !items )
-        sub_1BD36B4(v15, v16);
+        sub_1BE4D28(v15, v16);
       size = v12->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v12,
           current,
-          *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         v12->fields._size = size + 1;
         v28[4] = (Il2CppClass *)current;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v28 + 4), (int64_t)current, v17, v18, v19, v20, v21, v22);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v28 + 4), (int64_t)current, v17, v18, v19, v20, v21, v22);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
   return (System_Collections_Generic_List_DiggingBlockComponent__o *)v12;
 }
 
@@ -176,20 +176,20 @@ System_Collections_Generic_List_DiggingBlockComponent__o *__fastcall AutoDigging
   int32_t v30; // w0
   int32_t v31; // w28
 
-  if ( (byte_4B3B3CA & 1) == 0 )
+  if ( (byte_4B6AE63 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, blockList);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Count__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Item__, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__get_Item__, v13);
-    sub_1BD3458(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
-    byte_4B3B3CA = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, blockList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Count__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Item__, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v13);
+    sub_1BE4ACC(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
+    byte_4B6AE63 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
   *consumeTotalNum = 0;
   if ( !blockList )
     goto LABEL_16;
@@ -201,13 +201,13 @@ System_Collections_Generic_List_DiggingBlockComponent__o *__fastcall AutoDigging
       Item = (Il2CppObject *)System_Collections_Generic_List_int___get_Item(
                                consumeList,
                                v18,
-                               (const MethodInfo_35A3A7C *)Method_System_Collections_Generic_List_int__get_Item__);
+                               (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( userItemNum - (int)Item >= 0 )
       {
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)blockList,
                  v18,
-                 (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_DiggingBlockComponent__get_Item__);
+                 (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_DiggingBlockComponent__get_Item__);
         if ( !v15 )
           break;
         items = v15->fields._items;
@@ -222,32 +222,32 @@ System_Collections_Generic_List_DiggingBlockComponent__o *__fastcall AutoDigging
           System_Collections_Generic_List_object___AddWithResize(
             v15,
             Item,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
           v29 = &items->obj.klass + size;
           v15->fields._size = size + 1;
           v29[4] = (Il2CppClass *)v28;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v29 + 4), v28, v19, v20, v21, v22, v23, v24);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 4), v28, v19, v20, v21, v22, v23, v24);
         }
         v30 = System_Collections_Generic_List_int___get_Item(
                 consumeList,
                 v18,
-                (const MethodInfo_35A3A7C *)Method_System_Collections_Generic_List_int__get_Item__);
+                (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
         v31 = *consumeTotalNum;
         userItemNum -= v30;
         Item = (Il2CppObject *)System_Collections_Generic_List_int___get_Item(
                                  consumeList,
                                  v18,
-                                 (const MethodInfo_35A3A7C *)Method_System_Collections_Generic_List_int__get_Item__);
+                                 (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
         *consumeTotalNum = (_DWORD)Item + v31;
       }
       if ( ++v18 >= blockList->fields._size )
         return (System_Collections_Generic_List_DiggingBlockComponent__o *)v15;
     }
 LABEL_16:
-    sub_1BD36B4(Item, v17);
+    sub_1BE4D28(Item, v17);
   }
   return (System_Collections_Generic_List_DiggingBlockComponent__o *)v15;
 }
@@ -307,84 +307,84 @@ System_Collections_Generic_List_int__o *__fastcall AutoDiggingDialogComponent__G
   System_Collections_Generic_List_Enumerator_object__o v51; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v52; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B3B3C8 & 1) == 0 )
+  if ( (byte_4B6AE61 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Array_IndexOf_int___, blockList);
-    sub_1BD3458(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v4);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v5);
-    sub_1BD3458(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__Add__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int___ctor__, v12);
-    sub_1BD3458(&System_Collections_Generic_List_int__TypeInfo, v13);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4B3B3C8 = 1;
+    sub_1BE4ACC(&Method_System_Array_IndexOf_int___, blockList);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v4);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v5);
+    sub_1BE4ACC(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v12);
+    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v13);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4B6AE61 = 1;
   }
   memset(&v52, 0, sizeof(v52));
-  v15 = (System_Collections_Generic_List_int__o *)sub_1BD36A4(System_Collections_Generic_List_int__TypeInfo);
+  v15 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v15,
-    (const MethodInfo_35A3518 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !blockList )
-    sub_1BD36B4(v16, v17);
+    sub_1BE4D28(v16, v17);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v51,
     (System_Collections_Generic_List_object__o *)blockList,
-    (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
   v52 = v51;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v52,
-            (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__) )
+            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__) )
   {
     current = v52.fields._current;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1BD36B4(0LL, v20);
+      sub_1BE4D28(0LL, v20);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
     if ( !current )
-      sub_1BD36B4(MasterData_object, v22);
+      sub_1BE4D28(MasterData_object, v22);
     monitor = current[4].monitor;
     if ( !monitor )
-      sub_1BD36B4(MasterData_object, v22);
+      sub_1BE4D28(MasterData_object, v22);
     if ( !MasterData_object )
-      sub_1BD36B4(0LL, v22);
+      sub_1BE4D28(0LL, v22);
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                monitor[6],
-               (const MethodInfo_31D1EF0 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
-    v25 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+               (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+    v25 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v25 )
-      sub_1BD36B4(0LL, v26);
+      sub_1BE4D28(0LL, v26);
     v27 = DataManager__GetMasterData_object_(
             (DataManager_o *)v25,
-            (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+            (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
     if ( !Entity )
-      sub_1BD36B4(v27, v28);
+      sub_1BE4D28(v27, v28);
     if ( !v27 )
-      sub_1BD36B4(0LL, v28);
+      sub_1BE4D28(0LL, v28);
     v29 = CommonConsumeMaster__GetEntity((CommonConsumeMaster_o *)v27, HIDWORD(Entity[1].monitor), 1, 0LL);
     v31 = v29;
     if ( !v29 )
     {
       if ( !v15 )
-        sub_1BD36B4(0LL, v30);
+        sub_1BE4D28(0LL, v30);
       items = v15->fields._items;
       v34 = Method_System_Collections_Generic_List_int__Add__;
       ++v15->fields._version;
       if ( !items )
-        sub_1BD36B4(0LL, v30);
+        sub_1BE4D28(0LL, v30);
       size = v15->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
           v15,
           0,
-          *(const MethodInfo_35A3D6C **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
       }
       else
       {
@@ -393,7 +393,7 @@ System_Collections_Generic_List_int__o *__fastcall AutoDiggingDialogComponent__G
       }
       klass = current[5].klass;
       if ( !klass )
-        sub_1BD36B4(v29, v30);
+        sub_1BE4D28(v29, v30);
       goto LABEL_23;
     }
     klass = current[5].klass;
@@ -403,19 +403,19 @@ LABEL_23:
       v36 = System_Array__IndexOf_int_(
               (System_Int32_array *)Entity[2].monitor,
               (int32_t)klass->_1.namespaze,
-              (const MethodInfo_302DFD8 *)Method_System_Array_IndexOf_int___);
+              (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___);
       if ( (v36 & 0x80000000) != 0 )
       {
         if ( !v31 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         if ( !v15 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         num = (unsigned int)v31->fields.num;
         v47 = v15->fields._items;
         v48 = Method_System_Collections_Generic_List_int__Add__;
         ++v15->fields._version;
         if ( !v47 )
-          sub_1BD36B4(v36, num);
+          sub_1BE4D28(v36, num);
         v49 = v15->fields._size;
         if ( (unsigned int)v49 < v47->max_length )
           goto LABEL_40;
@@ -423,26 +423,26 @@ LABEL_35:
         System_Collections_Generic_List_int___AddWithResize(
           v15,
           num,
-          *(const MethodInfo_35A3D6C **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
         v38 = Entity[3].klass;
         if ( !v38 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         if ( (unsigned int)v36 >= LODWORD(v38->_1.namespaze) )
-          sub_1BD36BC(v36, v37);
+          sub_1BE4D30(v36, v37);
         if ( !v31 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         if ( !v15 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         v39 = v31->fields.num;
         v40 = *((_DWORD *)&v38->_1.byval_arg.data + (unsigned int)v36);
         v41 = v15->fields._items;
         v42 = Method_System_Collections_Generic_List_int__Add__;
         ++v15->fields._version;
         if ( !v41 )
-          sub_1BD36B4(v36, v37);
+          sub_1BE4D28(v36, v37);
         v43 = v15->fields._size;
         LODWORD(num) = v39 + v40;
         if ( (unsigned int)v43 < v41->max_length )
@@ -454,19 +454,19 @@ LABEL_35:
         System_Collections_Generic_List_int___AddWithResize(
           v15,
           num,
-          *(const MethodInfo_35A3D6C **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
+          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
       }
     }
     else
     {
       if ( !v15 )
-        sub_1BD36B4(v29, v30);
+        sub_1BE4D28(v29, v30);
       num = (unsigned int)v29->fields.num;
       v47 = v15->fields._items;
       v48 = Method_System_Collections_Generic_List_int__Add__;
       ++v15->fields._version;
       if ( !v47 )
-        sub_1BD36B4(v29, num);
+        sub_1BE4D28(v29, num);
       v49 = v15->fields._size;
       if ( (unsigned int)v49 >= v47->max_length )
         goto LABEL_35;
@@ -480,7 +480,7 @@ LABEL_41:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v52,
-    (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
   return v15;
 }
 
@@ -493,7 +493,7 @@ void __fastcall AutoDiggingDialogComponent__Init(AutoDiggingDialogComponent_o *t
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -506,18 +506,18 @@ void __fastcall AutoDiggingDialogComponent__OnClickCloseBtn(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4B3B3CC & 1) == 0 )
+  if ( (byte_4B6AE65 & 1) == 0 )
   {
-    sub_1BD3458(&Method_AutoDiggingDialogComponent_OnClickCloseBtn__, method);
-    byte_4B3B3CC = 1;
+    sub_1BE4ACC(&Method_AutoDiggingDialogComponent_OnClickCloseBtn__, method);
+    byte_4B6AE65 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_AutoDiggingDialogComponent_OnClickCloseBtn__;
     if ( (*((_BYTE *)Method_AutoDiggingDialogComponent_OnClickCloseBtn__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BD3470(Method_AutoDiggingDialogComponent_OnClickCloseBtn__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BD343C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BE4AE4(Method_AutoDiggingDialogComponent_OnClickCloseBtn__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, 0LL, 0LL);
   }
@@ -542,33 +542,33 @@ void __fastcall AutoDiggingDialogComponent__OnClickDecideBtn(
   struct System_Action_bool__o *activateMaskPanel; // x20
   System_Action_o *v15; // x20
 
-  if ( (byte_4B3B3CB & 1) == 0 )
+  if ( (byte_4B6AE64 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, method);
-    sub_1BD3458(&Method_AutoDiggingDialogComponent_EndClose__, v3);
-    sub_1BD3458(&Method_AutoDiggingDialogComponent_OnClickDecideBtn__, v4);
-    byte_4B3B3CB = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, method);
+    sub_1BE4ACC(&Method_AutoDiggingDialogComponent_EndClose__, v3);
+    sub_1BE4ACC(&Method_AutoDiggingDialogComponent_OnClickDecideBtn__, v4);
+    byte_4B6AE64 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v5 = Method_AutoDiggingDialogComponent_OnClickDecideBtn__;
     if ( (*((_BYTE *)Method_AutoDiggingDialogComponent_OnClickDecideBtn__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BD3470(Method_AutoDiggingDialogComponent_OnClickDecideBtn__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BD343C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BE4AE4(Method_AutoDiggingDialogComponent_OnClickDecideBtn__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0LL);
     p_activateMaskPanel = (PartyOrganizationUtility_o *)&this->fields.activateMaskPanel;
     activateMaskPanel = this->fields.activateMaskPanel;
     if ( activateMaskPanel )
     {
       p_activateMaskPanel->klass = 0LL;
-      sub_1BD33FC(p_activateMaskPanel, 0LL, v7, v8, v9, v10, v11, v12);
+      sub_1BE4A70(p_activateMaskPanel, 0LL, v7, v8, v9, v10, v11, v12);
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))activateMaskPanel->fields.m_target)(
         activateMaskPanel->fields.original_method_info,
         1LL,
         *(_QWORD *)&activateMaskPanel->fields.extra_arg);
     }
-    v15 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    v15 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(v15, (Il2CppObject *)this, Method_AutoDiggingDialogComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
   }
@@ -701,61 +701,61 @@ void __fastcall AutoDiggingDialogComponent__Open(
   UserItemEntity_o *entity; // [xsp+78h] [xbp-68h] BYREF
   UnityEngine_Color_o v126; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B3B3C5 & 1) == 0 )
+  if ( (byte_4B6AE5E & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, blockList);
-    sub_1BD3458(&AtlasManager_TypeInfo, v7);
-    sub_1BD3458(&Method_AutoDiggingDialogComponent__Open_b__17_0__, v8);
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____76991200, v9);
-    sub_1BD3458(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v10);
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v11);
-    sub_1BD3458(&Method_DataManager_GetMasterData_UserItemMaster___, v12);
-    sub_1BD3458(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v15);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v16);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v17);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v18);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v19);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__AddRange__, v20);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__Add__, v21);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v22);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int__GetEnumerator__, v23);
-    sub_1BD3458(&Method_System_Collections_Generic_List_int___ctor__, v24);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v25);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Count__, v26);
-    sub_1BD3458(&Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__, v27);
-    sub_1BD3458(&System_Collections_Generic_List_int__TypeInfo, v28);
-    sub_1BD3458(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v29);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v30);
-    sub_1BD3458(&NetworkManager_TypeInfo, v31);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
-    sub_1BD3458(&StringLiteral_5115/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, v33);
-    sub_1BD3458(&StringLiteral_2171/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v34);
-    sub_1BD3458(&StringLiteral_5113/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, v35);
-    sub_1BD3458(&StringLiteral_2173/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, v36);
-    sub_1BD3458(&StringLiteral_2172/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, v37);
-    sub_1BD3458(&StringLiteral_11227/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v38);
-    sub_1BD3458(&StringLiteral_11226/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v39);
-    sub_1BD3458(&StringLiteral_2174/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/, v40);
-    sub_1BD3458(&StringLiteral_1209/*"0"*/, v41);
-    byte_4B3B3C5 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, blockList);
+    sub_1BE4ACC(&AtlasManager_TypeInfo, v7);
+    sub_1BE4ACC(&Method_AutoDiggingDialogComponent__Open_b__17_0__, v8);
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____77180672, v9);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v10);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v11);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserItemMaster___, v12);
+    sub_1BE4ACC(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v15);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v16);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v17);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v18);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v19);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__AddRange__, v20);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v21);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v22);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v23);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v24);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v25);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__get_Count__, v26);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__, v27);
+    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v28);
+    sub_1BE4ACC(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v29);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v30);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v31);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
+    sub_1BE4ACC(&StringLiteral_5118/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, v33);
+    sub_1BE4ACC(&StringLiteral_2172/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v34);
+    sub_1BE4ACC(&StringLiteral_5116/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, v35);
+    sub_1BE4ACC(&StringLiteral_2174/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, v36);
+    sub_1BE4ACC(&StringLiteral_2173/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, v37);
+    sub_1BE4ACC(&StringLiteral_11240/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v38);
+    sub_1BE4ACC(&StringLiteral_11239/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v39);
+    sub_1BE4ACC(&StringLiteral_2175/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/, v40);
+    sub_1BE4ACC(&StringLiteral_1209/*"0"*/, v41);
+    byte_4B6AE5E = 1;
   }
   entity = 0LL;
   memset(&v124, 0, sizeof(v124));
   consumeTotalNum = 0;
   memset(&v122, 0, sizeof(v122));
   this->fields.state = 1;
-  v42 = (System_Collections_Generic_List_int__o *)sub_1BD36A4(System_Collections_Generic_List_int__TypeInfo);
+  v42 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v42,
-    (const MethodInfo_35A3518 *)Method_System_Collections_Generic_List_int___ctor__);
-  v43 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+  v43 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v43,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
   this->fields.autoDiggingBlockList = (struct System_Collections_Generic_List_DiggingBlockComponent__o *)v43;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.autoDiggingBlockList,
     (int64_t)v43,
     v44,
@@ -781,16 +781,16 @@ void __fastcall AutoDiggingDialogComponent__Open(
   v56 = 0LL;
   while ( (__int64)v56 < (int)v54->max_length )
   {
-    v57 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+    v57 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v57,
-      (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
-    Instance = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+    Instance = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_100;
     Instance = (UILabel_o *)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserItemMaster___);
     entity = 0LL;
     if ( !blockList )
       goto LABEL_100;
@@ -798,45 +798,45 @@ void __fastcall AutoDiggingDialogComponent__Open(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v121,
       (System_Collections_Generic_List_object__o *)blockList,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
     v124 = v121;
     while ( 1 )
     {
       v59 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v124,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
       if ( !v59 )
         break;
       current = v124.fields._current;
       if ( !v124.fields._current )
-        sub_1BD36B4(v59, v60);
+        sub_1BE4D28(v59, v60);
       if ( v56 == LODWORD(v124.fields._current[5].monitor) )
       {
-        v62 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        v62 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !v62 )
-          sub_1BD36B4(0LL, v63);
+          sub_1BE4D28(0LL, v63);
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)v62,
-                              (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
         monitor = current[4].monitor;
         if ( !monitor )
-          sub_1BD36B4(MasterData_object, v65);
+          sub_1BE4D28(MasterData_object, v65);
         if ( !MasterData_object )
-          sub_1BD36B4(0LL, v65);
+          sub_1BE4D28(0LL, v65);
         v67 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                 monitor[6],
-                (const MethodInfo_31D1EF0 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
-        v68 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+        v68 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !v68 )
-          sub_1BD36B4(0LL, v69);
+          sub_1BE4D28(0LL, v69);
         v70 = DataManager__GetMasterData_object_(
                 (DataManager_o *)v68,
-                (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
         if ( !v67 )
-          sub_1BD36B4(v70, v71);
+          sub_1BE4D28(v70, v71);
         if ( !v70 )
-          sub_1BD36B4(0LL, v71);
+          sub_1BE4D28(0LL, v71);
         v72 = CommonConsumeMaster__GetEntity((CommonConsumeMaster_o *)v70, HIDWORD(v67[1].monitor), 1, 0LL);
         if ( v72 )
         {
@@ -850,7 +850,7 @@ void __fastcall AutoDiggingDialogComponent__Open(
 LABEL_22:
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v124,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
     v74 = this->fields.itemIcon;
     if ( !v74 )
       goto LABEL_100;
@@ -868,10 +868,10 @@ LABEL_22:
     AtlasManager__SetItem(consumeItemIcon->m_Items[v56], objectId, 0LL);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B31D77 )
+    if ( !byte_4B61717 )
     {
-      sub_1BD3458(&NetworkManager_TypeInfo, v51);
-      byte_4B31D77 = 1;
+      sub_1BE4ACC(&NetworkManager_TypeInfo, v51);
+      byte_4B61717 = 1;
     }
     Instance = (UILabel_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -894,7 +894,7 @@ LABEL_22:
       Item = System_Collections_Generic_List_object___get_Item(
                v55,
                v56,
-               (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
+               (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
       DiggingConsumeList = AutoDiggingDialogComponent__GetDiggingConsumeList(
                              (AutoDiggingDialogComponent_o *)Item,
                              (System_Collections_Generic_List_DiggingBlockComponent__o *)Item,
@@ -902,7 +902,7 @@ LABEL_22:
       Instance = (UILabel_o *)System_Collections_Generic_List_object___get_Item(
                                 v55,
                                 v56,
-                                (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
+                                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
       if ( !entity )
         goto LABEL_100;
       Instance = (UILabel_o *)AutoDiggingDialogComponent__GetAutoDiggingBlockList(
@@ -944,7 +944,7 @@ LABEL_22:
         goto LABEL_100;
       if ( v56 >= v86->max_length )
 LABEL_101:
-        sub_1BD36BC(Instance, v51);
+        sub_1BE4D30(Instance, v51);
       Instance = v86->m_Items[v56];
       if ( !Instance )
         goto LABEL_100;
@@ -969,7 +969,7 @@ LABEL_101:
       Instance = (UILabel_o *)System_Collections_Generic_List_object___get_Item(
                                 v55,
                                 v56,
-                                (const MethodInfo_35C0AC0 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
+                                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent___get_Item__);
       if ( !Instance )
         goto LABEL_100;
       if ( SLODWORD(Instance->fields.m_CancellationTokenSource) >= 1 )
@@ -987,7 +987,7 @@ LABEL_101:
           System_Collections_Generic_List_int___AddWithResize(
             v42,
             v56,
-            *(const MethodInfo_35A3D6C **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
+            *(const MethodInfo_35CF200 **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1004,7 +1004,7 @@ LABEL_101:
       System_Collections_Generic_List_object___AddRange(
         (System_Collections_Generic_List_object__o *)Instance,
         (System_Collections_Generic_IEnumerable_T__o *)v57,
-        (const MethodInfo_35C0F9C *)Method_System_Collections_Generic_List_DiggingBlockComponent__AddRange__);
+        (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_DiggingBlockComponent__AddRange__);
       v120 = 1;
     }
     v54 = this->fields.itemIcon;
@@ -1021,7 +1021,7 @@ LABEL_101:
   Instance = (UILabel_o *)UnityEngine_Component__GetComponentInChildren_object_(
                             (UnityEngine_Component_o *)Instance,
                             1,
-                            (const MethodInfo_2F285AC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____76991200);
+                            (const MethodInfo_2F50038 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77180672);
   if ( !this->fields.closeButton )
     goto LABEL_100;
   v91 = Instance;
@@ -1031,43 +1031,43 @@ LABEL_101:
   ComponentInChildren_object = UnityEngine_Component__GetComponentInChildren_object_(
                                  (UnityEngine_Component_o *)Instance,
                                  1,
-                                 (const MethodInfo_2F285AC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____76991200);
+                                 (const MethodInfo_2F50038 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77180672);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11227/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11240/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !v91 )
     goto LABEL_100;
   UILabel__set_text(v91, (System_String_o *)Instance, 0LL);
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11226/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11239/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !ComponentInChildren_object )
     goto LABEL_100;
   UILabel__set_text((UILabel_o *)ComponentInChildren_object, (System_String_o *)Instance, 0LL);
   consumeLabel = this->fields.consumeLabel;
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5113/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5116/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, 0LL);
   if ( !consumeLabel )
     goto LABEL_100;
   UILabel__set_text(consumeLabel, (System_String_o *)Instance, 0LL);
   possessionLabel = this->fields.possessionLabel;
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5115/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5118/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, 0LL);
   if ( !possessionLabel )
     goto LABEL_100;
   UILabel__set_text(possessionLabel, (System_String_o *)Instance, 0LL);
   titleLabel = this->fields.titleLabel;
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2173/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2174/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_100;
   UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
   subTitleLabel = this->fields.subTitleLabel;
-  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2172/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, 0LL);
+  Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2173/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, 0LL);
   if ( !subTitleLabel )
     goto LABEL_100;
   UILabel__set_text(subTitleLabel, (System_String_o *)Instance, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v98 = (System_String_o **)&StringLiteral_2171/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/;
+  v98 = (System_String_o **)&StringLiteral_2172/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/;
   if ( (v120 & 1) == 0 )
-    v98 = (System_String_o **)&StringLiteral_2174/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/;
+    v98 = (System_String_o **)&StringLiteral_2175/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/;
   Instance = (UILabel_o *)LocalizationManager__Get(*v98, 0LL);
   if ( !messageLabel )
     goto LABEL_100;
@@ -1078,23 +1078,23 @@ LABEL_101:
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v121,
     v42,
-    (const MethodInfo_35A4840 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_35CFCD4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v122 = v121;
   while ( 1 )
   {
     v100 = System_Collections_Generic_List_Enumerator_int___MoveNext(
              (System_Collections_Generic_List_Enumerator_int__o *)&v122,
-             (const MethodInfo_3331D84 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+             (const MethodInfo_335DC14 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
     if ( !v100 )
       break;
     v102 = this->fields.consumeItemNumLabel;
     if ( !v102 )
-      sub_1BD36B4(v100, v101);
+      sub_1BE4D28(v100, v101);
     if ( LODWORD(v122.fields._current) >= v102->max_length )
-      sub_1BD36BC(v100, v101);
+      sub_1BE4D30(v100, v101);
     v103 = (UIWidget_o *)v102->m_Items[SLODWORD(v122.fields._current)];
     if ( !v103 )
-      sub_1BD36B4(0LL, v101);
+      sub_1BE4D28(0LL, v101);
     v126.fields.r = 1.0;
     v126.fields.g = 0.0;
     v126.fields.b = 0.0;
@@ -1103,9 +1103,9 @@ LABEL_101:
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     (System_Collections_Generic_List_Enumerator_int__o *)&v122,
-    (const MethodInfo_3331D80 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_335DC10 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   this->fields.activateMaskPanel = setMask;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.activateMaskPanel,
     (int64_t)setMask,
     v104,
@@ -1115,7 +1115,7 @@ LABEL_101:
     v108,
     v109);
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)closeCallback,
     v110,
@@ -1127,9 +1127,9 @@ LABEL_101:
   Instance = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !Instance )
 LABEL_100:
-    sub_1BD36B4(Instance, v51);
+    sub_1BE4D28(Instance, v51);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
-  v116 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v116 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v116, (Il2CppObject *)this, Method_AutoDiggingDialogComponent__Open_b__17_0__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v116, 0, 0LL);
 }
@@ -1144,16 +1144,16 @@ void __fastcall AutoDiggingDialogComponent__SetAutoDiggingBtnState(
   UnityEngine_Component_o *decideButton; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B3B3C6 & 1) == 0 )
+  if ( (byte_4B6AE5F & 1) == 0 )
   {
-    sub_1BD3458(&Method_UnityEngine_Component_GetComponent_UICommonButton___, isEnable);
-    byte_4B3B3C6 = 1;
+    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UICommonButton___, isEnable);
+    byte_4B6AE5F = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     decideButton,
-                                                    (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
+                                                    (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
     || (((void (__fastcall *)(UnityEngine_Component_o *, bool, void *))decideButton->klass[1]._1.namespaze)(
           decideButton,
           isEnable,
@@ -1161,14 +1161,14 @@ void __fastcall AutoDiggingDialogComponent__SetAutoDiggingBtnState(
         (decideButton = (UnityEngine_Component_o *)this->fields.decideButton) == 0LL)
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     decideButton,
-                                                    (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
+                                                    (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
     || (UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)decideButton, isEnable, 0LL),
         (decideButton = (UnityEngine_Component_o *)this->fields.decideButton) == 0LL)
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     decideButton,
-                                                    (const MethodInfo_2F28128 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL )
+                                                    (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL )
   {
-    sub_1BD36B4(decideButton, isEnable);
+    sub_1BE4D28(decideButton, isEnable);
   }
   if ( isEnable )
     v6 = 0LL;
@@ -1229,86 +1229,86 @@ System_Collections_Generic_List_List_DiggingBlockComponent___o *__fastcall AutoD
   System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B3B3C7 & 1) == 0 )
+  if ( (byte_4B6AE60 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, blockList);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_List_DiggingBlockComponent___Add__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_List_DiggingBlockComponent____ctor__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v12);
-    sub_1BD3458(&System_Collections_Generic_List_List_DiggingBlockComponent___TypeInfo, v13);
-    sub_1BD3458(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
-    byte_4B3B3C7 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, blockList);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_List_DiggingBlockComponent___Add__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_List_DiggingBlockComponent____ctor__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v12);
+    sub_1BE4ACC(&System_Collections_Generic_List_List_DiggingBlockComponent___TypeInfo, v13);
+    sub_1BE4ACC(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
+    byte_4B6AE60 = 1;
   }
   memset(&v46, 0, sizeof(v46));
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_List_DiggingBlockComponent___TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_List_DiggingBlockComponent___TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_List_DiggingBlockComponent____ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_List_DiggingBlockComponent____ctor__);
   if ( blockKindNum >= 1 )
   {
     v16 = 0;
     do
     {
-      v17 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+      v17 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v17,
-        (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+        (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
       if ( !blockList )
         goto LABEL_29;
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v45,
         (System_Collections_Generic_List_object__o *)blockList,
-        (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+        (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
       v46 = v45;
       while ( 1 )
       {
         v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v46,
-                (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
+                (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
         if ( !v20 )
           break;
         current = v46.fields._current;
         if ( !v46.fields._current )
-          sub_1BD36B4(v20, v21);
+          sub_1BE4D28(v20, v21);
         if ( LODWORD(v46.fields._current[5].monitor) == v16 )
         {
           monitor = v46.fields._current[4].monitor;
           if ( !monitor )
-            sub_1BD36B4(v20, v21);
+            sub_1BE4D28(v20, v21);
           if ( !monitor[7] )
           {
             if ( !v17 )
-              sub_1BD36B4(v20, v21);
+              sub_1BE4D28(v20, v21);
             items = v17->fields._items;
             v31 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
             ++v17->fields._version;
             if ( !items )
-              sub_1BD36B4(v20, v21);
+              sub_1BE4D28(v20, v21);
             size = v17->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v17,
                 current,
-                *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
             }
             else
             {
               v33 = &items->obj.klass + size;
               v17->fields._size = size + 1;
               v33[4] = (Il2CppClass *)current;
-              sub_1BD33FC((PartyOrganizationUtility_o *)(v33 + 4), (int64_t)current, v22, v23, v24, v25, v26, v27);
+              sub_1BE4A70((PartyOrganizationUtility_o *)(v33 + 4), (int64_t)current, v22, v23, v24, v25, v26, v27);
             }
           }
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v46,
-        (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+        (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
       if ( !v15
         || (v40 = v15->fields._items,
             v41 = Method_System_Collections_Generic_List_List_DiggingBlockComponent___Add__,
@@ -1316,7 +1316,7 @@ System_Collections_Generic_List_List_DiggingBlockComponent___o *__fastcall AutoD
             !v40) )
       {
 LABEL_29:
-        sub_1BD36B4(v18, v19);
+        sub_1BE4D28(v18, v19);
       }
       v42 = v15->fields._size;
       if ( (unsigned int)v42 >= v40->max_length )
@@ -1324,14 +1324,14 @@ LABEL_29:
         System_Collections_Generic_List_object___AddWithResize(
           v15,
           (Il2CppObject *)v17,
-          *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &v40->obj.klass + v42;
         v15->fields._size = v42 + 1;
         v43[4] = (Il2CppClass *)v17;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v43 + 4), (int64_t)v17, v34, v35, v36, v37, v38, v39);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v43 + 4), (int64_t)v17, v34, v35, v36, v37, v38, v39);
       }
       ++v16;
     }
@@ -1343,15 +1343,15 @@ LABEL_29:
 
 void __fastcall AutoDiggingDialogComponent___Open_b__17_0(AutoDiggingDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3B3D0 & 1) == 0 )
+  if ( (byte_4B6AE69 & 1) == 0 )
   {
-    sub_1BD3458(&Method_ActionExtensions_Call_bool___, method);
-    byte_4B3B3D0 = 1;
+    sub_1BE4ACC(&Method_ActionExtensions_Call_bool___, method);
+    byte_4B6AE69 = 1;
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.activateMaskPanel,
     0,
-    (const MethodInfo_2E83DA0 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2EAB82C *)Method_ActionExtensions_Call_bool___);
   this->fields.state = 2;
 }
 
@@ -1364,10 +1364,10 @@ UnityEngine_GameObject_o *__fastcall AutoDiggingDialogComponent__get_closeBtnObj
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B3B3CE & 1) == 0 )
+  if ( (byte_4B6AE67 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    byte_4B3B3CE = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    byte_4B6AE67 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1376,6 +1376,6 @@ UnityEngine_GameObject_o *__fastcall AutoDiggingDialogComponent__get_closeBtnObj
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

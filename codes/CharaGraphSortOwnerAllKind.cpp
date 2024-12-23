@@ -24,22 +24,22 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4B3656B & 1) == 0 )
+  if ( (byte_4B65F83 & 1) == 0 )
   {
-    sub_1BD3458(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
-    sub_1BD3458(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
-    sub_1BD3458(&CharaGraphSortManageUnitServant_TypeInfo, v4);
-    byte_4B3656B = 1;
+    sub_1BE4ACC(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
+    sub_1BE4ACC(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
+    sub_1BE4ACC(&CharaGraphSortManageUnitServant_TypeInfo, v4);
+    byte_4B65F83 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = (Il2CppObject *)sub_1BD36A4(CharaGraphSortManageUnitServant_TypeInfo);
+  v5 = (Il2CppObject *)sub_1BE4D18(CharaGraphSortManageUnitServant_TypeInfo);
   System_Object___ctor(v5, 0LL);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v5;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
-  v12 = (Il2CppObject *)sub_1BD36A4(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (Il2CppObject *)sub_1BE4D18(CharaGraphSortManageUnitServantEquip_TypeInfo);
   System_Object___ctor(v12, 0LL);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v12;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
     (int64_t)v12,
     v13,
@@ -48,10 +48,10 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
     v16,
     v17,
     v18);
-  v19 = (Il2CppObject *)sub_1BD36A4(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  v19 = (Il2CppObject *)sub_1BE4D18(CharaGraphSortManageUnitCommandCode_TypeInfo);
   System_Object___ctor(v19, 0LL);
   this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v19;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
     (int64_t)v19,
     v20,

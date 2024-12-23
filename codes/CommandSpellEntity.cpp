@@ -1,13 +1,13 @@
 void __fastcall CommandSpellEntity___ctor(CommandSpellEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B36FB4 & 1) == 0 )
+  if ( (byte_4B669CE & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B36FB4 = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B669CE = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t __fastcall CommandSpellEntity__CreatePrimaryKey(CommandSpellEntity_o *th
 
 float __fastcall CommandSpellEntity__GetCutinAdditionalTime(CommandSpellEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B36FB2 & 1) == 0 )
+  if ( (byte_4B669CC & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_18630/*"cutinAdditionalTime"*/, method);
-    byte_4B36FB2 = 1;
+    sub_1BE4ACC(&StringLiteral_18655/*"cutinAdditionalTime"*/, method);
+    byte_4B669CC = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18630/*"cutinAdditionalTime"*/, 0.0, 0LL);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18655/*"cutinAdditionalTime"*/, 0.0, 0LL);
 }
 
 
@@ -38,16 +38,16 @@ bool __fastcall CommandSpellEntity__IsIgnoreBattlePointUp(
   System_Collections_Generic_IEnumerable_TSource__o *IntArray; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4B36FB3 & 1) == 0 )
+  if ( (byte_4B669CD & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Linq_Enumerable_Any_int___, battlePointIds);
-    sub_1BD3458(&Method_System_Linq_Enumerable_Intersect_int___, v5);
-    sub_1BD3458(&StringLiteral_7596/*"IgnoreBattlePointUp"*/, v6);
-    byte_4B36FB3 = 1;
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Any_int___, battlePointIds);
+    sub_1BE4ACC(&Method_System_Linq_Enumerable_Intersect_int___, v5);
+    sub_1BE4ACC(&StringLiteral_7602/*"IgnoreBattlePointUp"*/, v6);
+    byte_4B669CD = 1;
   }
   IntArray = (System_Collections_Generic_IEnumerable_TSource__o *)EntityScriptUtil__GetIntArray(
                                                                     this->fields.script,
-                                                                    (System_String_o *)StringLiteral_7596/*"IgnoreBattlePointUp"*/,
+                                                                    (System_String_o *)StringLiteral_7602/*"IgnoreBattlePointUp"*/,
                                                                     0LL,
                                                                     0LL);
   if ( IntArray )
@@ -55,10 +55,10 @@ bool __fastcall CommandSpellEntity__IsIgnoreBattlePointUp(
     v8 = System_Linq_Enumerable__Intersect_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)battlePointIds,
            IntArray,
-           (const MethodInfo_2F55ADC *)Method_System_Linq_Enumerable_Intersect_int___);
+           (const MethodInfo_2F7D568 *)Method_System_Linq_Enumerable_Intersect_int___);
     LOBYTE(IntArray) = System_Linq_Enumerable__Any_int_(
                          v8,
-                         (const MethodInfo_2F3CD08 *)Method_System_Linq_Enumerable_Any_int___);
+                         (const MethodInfo_2F64794 *)Method_System_Linq_Enumerable_Any_int___);
   }
   return (char)IntArray;
 }
@@ -69,18 +69,18 @@ bool __fastcall CommandSpellEntity__IsVoiceVolume(CommandSpellEntity_o *this, co
   __int64 v3; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B36FB0 & 1) == 0 )
+  if ( (byte_4B669CA & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1BD3458(&StringLiteral_15562/*"VoiceVolume"*/, v3);
-    byte_4B36FB0 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BE4ACC(&StringLiteral_15583/*"VoiceVolume"*/, v3);
+    byte_4B669CA = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
-                       (Il2CppObject *)StringLiteral_15562/*"VoiceVolume"*/,
-                       (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (Il2CppObject *)StringLiteral_15583/*"VoiceVolume"*/,
+                       (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -90,13 +90,13 @@ bool __fastcall CommandSpellEntity__checkHideInDetailWindow(CommandSpellEntity_o
   const MethodInfo *v2; // x3
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B36FAC & 1) == 0 )
+  if ( (byte_4B669C6 & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_7383/*"HideInDetailWindow"*/, method);
-    byte_4B36FAC = 1;
+    sub_1BE4ACC(&StringLiteral_7389/*"HideInDetailWindow"*/, method);
+    byte_4B669C6 = 1;
   }
   param = 0;
-  CommandSpellEntity__checkScript(this, (System_String_o *)StringLiteral_7383/*"HideInDetailWindow"*/, &param, v2);
+  CommandSpellEntity__checkScript(this, (System_String_o *)StringLiteral_7389/*"HideInDetailWindow"*/, &param, v2);
   return param > 0;
 }
 
@@ -119,12 +119,12 @@ bool __fastcall CommandSpellEntity__checkScript(
   int32_t v16; // w1
   const MethodInfo *v17; // x2
 
-  if ( (byte_4B36FAA & 1) == 0 )
+  if ( (byte_4B669C4 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1BD3458(&long_TypeInfo, v8);
-    byte_4B36FAA = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1BE4ACC(&long_TypeInfo, v8);
+    byte_4B669C4 = 1;
   }
   *param = 0;
   script = this->fields.script;
@@ -133,16 +133,16 @@ bool __fastcall CommandSpellEntity__checkScript(
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.script;
       if ( !Item
         || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                 Item,
                                                                                 (Il2CppObject *)key,
-                                                                                (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                                (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
       {
-        sub_1BD36B4(Item, v10);
+        sub_1BE4D28(Item, v10);
       }
       if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
       {
@@ -152,7 +152,7 @@ bool __fastcall CommandSpellEntity__checkScript(
       }
       else
       {
-        sub_1BD3974(Item);
+        sub_1BE4FE8(Item);
         LOBYTE(script) = CommandSpellEntity__checkUseTreasure(v15, v16, v17);
       }
     }
@@ -174,18 +174,18 @@ bool __fastcall CommandSpellEntity__checkUseTreasure(
   __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B36FAB & 1) == 0 )
+  if ( (byte_4B669C5 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, *(_QWORD *)&type);
-    sub_1BD3458(&StringLiteral_18157/*"checkUseTreasure"*/, v5);
-    byte_4B36FAB = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, *(_QWORD *)&type);
+    sub_1BE4ACC(&StringLiteral_18181/*"checkUseTreasure"*/, v5);
+    byte_4B669C5 = 1;
   }
   script = this->fields.script;
   return !script
       || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
             (System_Collections_Generic_Dictionary_object__object__o *)script,
-            (Il2CppObject *)StringLiteral_18157/*"checkUseTreasure"*/,
-            (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
+            (Il2CppObject *)StringLiteral_18181/*"checkUseTreasure"*/,
+            (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
       || Follower__isUseTreasure(type, 0LL);
 }
 
@@ -220,42 +220,42 @@ DataVals_array *__fastcall CommandSpellEntity__getDataValsList(CommandSpellEntit
   PartyListViewItem_o *v28; // x7
   __int64 v30; // x0
 
-  if ( (byte_4B36FA9 & 1) == 0 )
+  if ( (byte_4B669C3 & 1) == 0 )
   {
-    sub_1BD3458(&DataVals___TypeInfo, method);
-    sub_1BD3458(&DataVals_TypeInfo, v3);
-    sub_1BD3458(&StringLiteral_1/*""*/, v4);
-    byte_4B36FA9 = 1;
+    sub_1BE4ACC(&DataVals___TypeInfo, method);
+    sub_1BE4ACC(&DataVals_TypeInfo, v3);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v4);
+    byte_4B669C3 = 1;
   }
   svals = this->fields.svals;
   if ( !svals )
   {
-    v9 = (DataVals_array *)sub_1BD3500(DataVals___TypeInfo, 1LL);
-    v22 = (DataVals_o *)sub_1BD36A4(DataVals_TypeInfo);
+    v9 = (DataVals_array *)sub_1BE4B74(DataVals___TypeInfo, 1LL);
+    v22 = (DataVals_o *)sub_1BE4D18(DataVals_TypeInfo);
     DataVals___ctor(v22, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v9 )
     {
       if ( v22 )
       {
-        v6 = sub_1BD3594(v22, v9->obj.klass->_1.element_class);
+        v6 = sub_1BE4C08(v22, v9->obj.klass->_1.element_class);
         if ( !v6 )
         {
 LABEL_21:
-          v30 = sub_1BD36D8(v6);
-          sub_1BD3580(v30, 0LL);
+          v30 = sub_1BE4D4C(v6);
+          sub_1BE4BF4(v30, 0LL);
         }
       }
       if ( !v9->max_length )
 LABEL_20:
-        sub_1BD36BC(v6, v7);
+        sub_1BE4D30(v6, v7);
       v9->m_Items[0] = v22;
-      sub_1BD33FC((PartyOrganizationUtility_o *)v9->m_Items, (int64_t)v22, v23, v24, v25, v26, v27, v28);
+      sub_1BE4A70((PartyOrganizationUtility_o *)v9->m_Items, (int64_t)v22, v23, v24, v25, v26, v27, v28);
       return v9;
     }
 LABEL_13:
-    sub_1BD36B4(v6, v7);
+    sub_1BE4D28(v6, v7);
   }
-  v6 = sub_1BD3500(DataVals___TypeInfo, svals->max_length);
+  v6 = sub_1BE4B74(DataVals___TypeInfo, svals->max_length);
   v8 = this->fields.svals;
   if ( !v8 )
     goto LABEL_13;
@@ -271,20 +271,20 @@ LABEL_13:
     if ( v13 >= max_length )
       goto LABEL_20;
     v14 = (System_String_o *)*((_QWORD *)&v8->obj.klass + v10);
-    v15 = (DataVals_o *)sub_1BD36A4(DataVals_TypeInfo);
+    v15 = (DataVals_o *)sub_1BE4D18(DataVals_TypeInfo);
     DataVals___ctor(v15, v14, 0LL);
     if ( v9 )
     {
       if ( v15 )
       {
-        v6 = sub_1BD3594(v15, v9->obj.klass->_1.element_class);
+        v6 = sub_1BE4C08(v15, v9->obj.klass->_1.element_class);
         if ( !v6 )
           goto LABEL_21;
       }
       if ( v13 >= v9->max_length )
         goto LABEL_20;
       *((_QWORD *)&v9->obj.klass + v10) = v15;
-      sub_1BD33FC((PartyOrganizationUtility_o *)((char *)v9 + v11), (int64_t)v15, v16, v17, v18, v19, v20, v21);
+      sub_1BE4A70((PartyOrganizationUtility_o *)((char *)v9 + v11), (int64_t)v15, v16, v17, v18, v19, v20, v21);
       v8 = this->fields.svals;
       ++v10;
       v11 += 8LL;
@@ -311,32 +311,32 @@ System_String_o *__fastcall CommandSpellEntity__getPlayVoiceNo(CommandSpellEntit
   __int64 v7; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B36FAE & 1) == 0 )
+  if ( (byte_4B669C8 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
-    sub_1BD3458(&string_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_10821/*"PlayVoiceNo"*/, v5);
-    byte_4B36FAE = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
+    sub_1BE4ACC(&string_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_10834/*"PlayVoiceNo"*/, v5);
+    byte_4B669C8 = 1;
   }
   result = (System_String_o *)this->fields.script;
   if ( result )
   {
     if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_10821/*"PlayVoiceNo"*/,
-            (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+            (Il2CppObject *)StringLiteral_10834/*"PlayVoiceNo"*/,
+            (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       return 0LL;
     script = this->fields.script;
     if ( !script )
-      sub_1BD36B4(0LL, v7);
+      sub_1BE4D28(0LL, v7);
     result = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                   (System_Collections_Generic_Dictionary_object__object__o *)script,
-                                  (Il2CppObject *)StringLiteral_10821/*"PlayVoiceNo"*/,
-                                  (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                  (Il2CppObject *)StringLiteral_10834/*"PlayVoiceNo"*/,
+                                  (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( result && result->klass != string_TypeInfo )
     {
-      sub_1BD3974(result);
+      sub_1BE4FE8(result);
       return 0LL;
     }
   }
@@ -389,37 +389,37 @@ System_Int32_array_array *__fastcall CommandSpellEntity__getValues(
   FollowerInfo_o *v41; // x6
   PartyListViewItem_o *v42; // x7
 
-  if ( (byte_4B36FA8 & 1) == 0 )
+  if ( (byte_4B669C2 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Array_ConvertAll_string__int___, method);
-    sub_1BD3458(&System_Converter_string__int__TypeInfo, v3);
-    sub_1BD3458(&int_____TypeInfo, v4);
-    sub_1BD3458(&int___TypeInfo, v5);
-    sub_1BD3458(&Method_CommandSpellEntity___c__getValues_b__13_0__, v6);
-    sub_1BD3458(&CommandSpellEntity___c_TypeInfo, v7);
-    sub_1BD3458(&StringLiteral_15997/*"["*/, v8);
-    sub_1BD3458(&StringLiteral_1/*""*/, v9);
-    sub_1BD3458(&StringLiteral_16255/*"]"*/, v10);
-    byte_4B36FA8 = 1;
+    sub_1BE4ACC(&Method_System_Array_ConvertAll_string__int___, method);
+    sub_1BE4ACC(&System_Converter_string__int__TypeInfo, v3);
+    sub_1BE4ACC(&int_____TypeInfo, v4);
+    sub_1BE4ACC(&int___TypeInfo, v5);
+    sub_1BE4ACC(&Method_CommandSpellEntity___c__getValues_b__13_0__, v6);
+    sub_1BE4ACC(&CommandSpellEntity___c_TypeInfo, v7);
+    sub_1BE4ACC(&StringLiteral_16018/*"["*/, v8);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v9);
+    sub_1BE4ACC(&StringLiteral_16276/*"]"*/, v10);
+    byte_4B669C2 = 1;
   }
   svals = this->fields.svals;
   if ( !svals )
   {
-    v15 = sub_1BD3500(int_____TypeInfo, 1LL);
-    v12 = (System_String_o *)sub_1BD3500(int___TypeInfo, 5LL);
+    v15 = sub_1BE4B74(int_____TypeInfo, 1LL);
+    v12 = (System_String_o *)sub_1BE4B74(int___TypeInfo, 5LL);
     if ( v15 )
     {
       if ( !*(_DWORD *)(v15 + 24) )
 LABEL_26:
-        sub_1BD36BC(v12, v13);
+        sub_1BE4D30(v12, v13);
       *(_QWORD *)(v15 + 32) = v12;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v15 + 32), (int64_t)v12, v37, v38, v39, v40, v41, v42);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v15 + 32), (int64_t)v12, v37, v38, v39, v40, v41, v42);
       return (System_Int32_array_array *)v15;
     }
 LABEL_25:
-    sub_1BD36B4(v12, v13);
+    sub_1BE4D28(v12, v13);
   }
-  v12 = (System_String_o *)sub_1BD3500(int_____TypeInfo, svals->max_length);
+  v12 = (System_String_o *)sub_1BE4B74(int_____TypeInfo, svals->max_length);
   v14 = this->fields.svals;
   if ( !v14 )
     goto LABEL_25;
@@ -436,16 +436,16 @@ LABEL_25:
     v12 = v14->m_Items[v16];
     if ( v12 )
     {
-      v12 = System_String__Replace_62544876(
+      v12 = System_String__Replace_62718436(
               v12,
-              (System_String_o *)StringLiteral_15997/*"["*/,
+              (System_String_o *)StringLiteral_16018/*"["*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       if ( v12 )
       {
-        v12 = System_String__Replace_62544876(
+        v12 = System_String__Replace_62718436(
                 v12,
-                (System_String_o *)StringLiteral_16255/*"]"*/,
+                (System_String_o *)StringLiteral_16276/*"]"*/,
                 (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( v12 )
@@ -467,11 +467,11 @@ LABEL_25:
               v20 = CommandSpellEntity___c_TypeInfo;
             }
             v23 = (Il2CppObject *)v20->static_fields->__9;
-            _9__13_0 = (System_Converter_object__int__o *)sub_1BD36A4(System_Converter_string__int__TypeInfo);
+            _9__13_0 = (System_Converter_object__int__o *)sub_1BE4D18(System_Converter_string__int__TypeInfo);
             System_Converter_object__int____ctor(_9__13_0, v23, Method_CommandSpellEntity___c__getValues_b__13_0__, 0LL);
             static_fields = CommandSpellEntity___c_TypeInfo->static_fields;
             static_fields->__9__13_0 = (struct System_Converter_string__int__o *)_9__13_0;
-            sub_1BD33FC(
+            sub_1BE4A70(
               (PartyOrganizationUtility_o *)&static_fields->__9__13_0,
               (int64_t)_9__13_0,
               v25,
@@ -484,13 +484,13 @@ LABEL_25:
           v12 = (System_String_o *)System_Array__ConvertAll_object__int_(
                                      v21,
                                      (System_Converter_TInput__TOutput__o *)_9__13_0,
-                                     (const MethodInfo_302AA10 *)Method_System_Array_ConvertAll_string__int___);
+                                     (const MethodInfo_30527D0 *)Method_System_Array_ConvertAll_string__int___);
           if ( v15 )
           {
             if ( (unsigned int)v16 >= *(_DWORD *)(v15 + 24) )
               goto LABEL_26;
             p_monitor->klass = (PartyOrganizationUtility_c *)v12;
-            sub_1BD33FC(p_monitor, (int64_t)v12, v31, v32, v33, v34, v35, v36);
+            sub_1BE4A70(p_monitor, (int64_t)v12, v31, v32, v33, v34, v35, v36);
             v14 = this->fields.svals;
             ++v16;
             p_monitor = (PartyOrganizationUtility_o *)((char *)p_monitor + 8);
@@ -514,32 +514,32 @@ System_String_o *__fastcall CommandSpellEntity__getVoiceAssetName(CommandSpellEn
   __int64 v7; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B36FAD & 1) == 0 )
+  if ( (byte_4B669C7 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
-    sub_1BD3458(&string_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_15560/*"VoiceAssetName"*/, v5);
-    byte_4B36FAD = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
+    sub_1BE4ACC(&string_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_15581/*"VoiceAssetName"*/, v5);
+    byte_4B669C7 = 1;
   }
   result = (System_String_o *)this->fields.script;
   if ( result )
   {
     if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_15560/*"VoiceAssetName"*/,
-            (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+            (Il2CppObject *)StringLiteral_15581/*"VoiceAssetName"*/,
+            (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       return 0LL;
     script = this->fields.script;
     if ( !script )
-      sub_1BD36B4(0LL, v7);
+      sub_1BE4D28(0LL, v7);
     result = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                   (System_Collections_Generic_Dictionary_object__object__o *)script,
-                                  (Il2CppObject *)StringLiteral_15560/*"VoiceAssetName"*/,
-                                  (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                  (Il2CppObject *)StringLiteral_15581/*"VoiceAssetName"*/,
+                                  (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( result && result->klass != string_TypeInfo )
     {
-      sub_1BD3974(result);
+      sub_1BE4FE8(result);
       return 0LL;
     }
   }
@@ -561,21 +561,21 @@ float __fastcall CommandSpellEntity__getVoiceVolume(CommandSpellEntity_o *this, 
   CommandSpellEntity_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_4B36FB1 & 1) == 0 )
+  if ( (byte_4B669CB & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
-    sub_1BD3458(&long_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_15562/*"VoiceVolume"*/, v5);
-    byte_4B36FB1 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
+    sub_1BE4ACC(&long_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_15583/*"VoiceVolume"*/, v5);
+    byte_4B669CB = 1;
   }
   script = this->fields.script;
   v7 = 1.0;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
-          (Il2CppObject *)StringLiteral_15562/*"VoiceVolume"*/,
-          (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_15583/*"VoiceVolume"*/,
+          (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return v7;
   }
@@ -583,14 +583,14 @@ float __fastcall CommandSpellEntity__getVoiceVolume(CommandSpellEntity_o *this, 
   if ( !Item
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
-                                                                            (Il2CppObject *)StringLiteral_15562/*"VoiceVolume"*/,
-                                                                            (const MethodInfo_3284314 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (Il2CppObject *)StringLiteral_15583/*"VoiceVolume"*/,
+                                                                            (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1BD36B4(Item, v8);
+    sub_1BE4D28(Item, v8);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return (float)*(__int64 *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v10, v11) / 1000.0;
-  sub_1BD3974(Item);
+  sub_1BE4FE8(Item);
   return CommandSpellEntity__GetCutinAdditionalTime(v13, v14);
 }
 
@@ -600,18 +600,18 @@ bool __fastcall CommandSpellEntity__isPlayVoiceWait(CommandSpellEntity_o *this, 
   __int64 v3; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4B36FAF & 1) == 0 )
+  if ( (byte_4B669C9 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1BD3458(&StringLiteral_10822/*"PlayVoiceWait"*/, v3);
-    byte_4B36FAF = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BE4ACC(&StringLiteral_10835/*"PlayVoiceWait"*/, v3);
+    byte_4B669C9 = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
-                       (Il2CppObject *)StringLiteral_10822/*"PlayVoiceWait"*/,
-                       (const MethodInfo_3284588 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (Il2CppObject *)StringLiteral_10835/*"PlayVoiceWait"*/,
+                       (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -633,15 +633,15 @@ void __fastcall CommandSpellEntity___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B36FB5 & 1) == 0 )
+  if ( (byte_4B669CF & 1) == 0 )
   {
-    sub_1BD3458(&CommandSpellEntity___c_TypeInfo, v1);
-    byte_4B36FB5 = 1;
+    sub_1BE4ACC(&CommandSpellEntity___c_TypeInfo, v1);
+    byte_4B669CF = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(CommandSpellEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(CommandSpellEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CommandSpellEntity___c_TypeInfo->static_fields->__9 = (struct CommandSpellEntity___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)CommandSpellEntity___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,

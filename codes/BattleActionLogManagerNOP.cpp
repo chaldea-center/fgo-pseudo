@@ -8,14 +8,14 @@ void __fastcall BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *th
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B39380 & 1) == 0 )
+  if ( (byte_4B68DE4 & 1) == 0 )
   {
-    sub_1BD3458(&byte___TypeInfo, method);
-    byte_4B39380 = 1;
+    sub_1BE4ACC(&byte___TypeInfo, method);
+    byte_4B68DE4 = 1;
   }
-  v3 = (struct System_Byte_array *)sub_1BD3500(byte___TypeInfo, 1LL);
+  v3 = (struct System_Byte_array *)sub_1BE4B74(byte___TypeInfo, 1LL);
   this->fields.dummy = v3;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 

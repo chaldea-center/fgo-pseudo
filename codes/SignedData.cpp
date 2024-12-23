@@ -19,26 +19,26 @@ void __fastcall SignedData___cctor(const MethodInfo *method)
   FollowerInfo_o *v17; // x6
   PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4B3519C & 1) == 0 )
+  if ( (byte_4B64B9A & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__, v1);
-    sub_1BD3458(&System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo, v2);
-    sub_1BD3458(&SignedData_TypeInfo, v3);
-    byte_4B3519C = 1;
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__, v1);
+    sub_1BE4ACC(&System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo, v2);
+    sub_1BE4ACC(&SignedData_TypeInfo, v3);
+    byte_4B64B9A = 1;
   }
-  v4 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)sub_1BD36A4(System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo);
+  v4 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)sub_1BE4D18(System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo);
   System_Collections_Concurrent_ConcurrentQueue_object____ctor(
     v4,
-    (const MethodInfo_31C0548 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__);
+    (const MethodInfo_31EBE1C *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__);
   SignedData_TypeInfo->static_fields->SIGNED_PACK_QUEUE = (struct System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__o *)v4;
-  sub_1BD33FC((PartyOrganizationUtility_o *)SignedData_TypeInfo->static_fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)sub_1BD36A4(System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo);
+  sub_1BE4A70((PartyOrganizationUtility_o *)SignedData_TypeInfo->static_fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)sub_1BE4D18(System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TypeInfo);
   System_Collections_Concurrent_ConcurrentQueue_object____ctor(
     v11,
-    (const MethodInfo_31C0548 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__);
+    (const MethodInfo_31EBE1C *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData___ctor__);
   static_fields = SignedData_TypeInfo->static_fields;
   static_fields->SIGNED_PACK_QUEUE_ACCOUNT_REGIST = (struct System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__o *)v11;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&static_fields->SIGNED_PACK_QUEUE_ACCOUNT_REGIST,
     (int64_t)v11,
     v13,
@@ -75,7 +75,7 @@ void __fastcall SignedData__CreateSignedPackData(int32_t maxCount, const MethodI
   NetworkManager_c *v16; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
   SignedValue_c *v18; // x0
-  System_Byte_array *Bytes_63141868; // x21
+  System_Byte_array *Bytes_63315428; // x21
   System_Text_StringBuilder_o *v20; // x19
   _QWORD **appended; // x0
   __int64 v22; // x1
@@ -159,32 +159,32 @@ void __fastcall SignedData__CreateSignedPackData(int32_t maxCount, const MethodI
   System_Guid_o v101; // 0:x0.16
   System_Guid_o v102; // 0:x0.16
 
-  if ( (byte_4B3519A & 1) == 0 )
+  if ( (byte_4B64B98 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__, method);
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__, v2);
-    sub_1BD3458(&System_Convert_TypeInfo, v3);
-    sub_1BD3458(&System_Security_Cryptography_CryptoConfig_TypeInfo, v4);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v5);
-    sub_1BD3458(&NetworkManager_TypeInfo, v6);
-    sub_1BD3458(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v7);
-    sub_1BD3458(&System_Security_Cryptography_RSACryptoServiceProvider_TypeInfo, v8);
-    sub_1BD3458(&SignedData_TypeInfo, v9);
-    sub_1BD3458(&SignedData_SignedPackData_TypeInfo, v10);
-    sub_1BD3458(&SignedValue_TypeInfo, v11);
-    sub_1BD3458(&System_Text_StringBuilder_TypeInfo, v12);
-    sub_1BD3458(&StringLiteral_12130/*"SHA256"*/, v13);
-    sub_1BD3458(&StringLiteral_1655/*"<RSAKeyValue><Modulus>"*/, v14);
-    sub_1BD3458(&StringLiteral_1606/*"</D></RSAKeyValue>"*/, v15);
-    byte_4B3519A = 1;
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__, method);
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__, v2);
+    sub_1BE4ACC(&System_Convert_TypeInfo, v3);
+    sub_1BE4ACC(&System_Security_Cryptography_CryptoConfig_TypeInfo, v4);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v6);
+    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v7);
+    sub_1BE4ACC(&System_Security_Cryptography_RSACryptoServiceProvider_TypeInfo, v8);
+    sub_1BE4ACC(&SignedData_TypeInfo, v9);
+    sub_1BE4ACC(&SignedData_SignedPackData_TypeInfo, v10);
+    sub_1BE4ACC(&SignedValue_TypeInfo, v11);
+    sub_1BE4ACC(&System_Text_StringBuilder_TypeInfo, v12);
+    sub_1BE4ACC(&StringLiteral_12143/*"SHA256"*/, v13);
+    sub_1BE4ACC(&StringLiteral_1656/*"<RSAKeyValue><Modulus>"*/, v14);
+    sub_1BE4ACC(&StringLiteral_1607/*"</D></RSAKeyValue>"*/, v15);
+    byte_4B64B98 = 1;
   }
   v99 = (System_Guid_o)0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B31D77 )
+  if ( !byte_4B61717 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    byte_4B31D77 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    byte_4B61717 = 1;
   }
   v16 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -200,18 +200,18 @@ void __fastcall SignedData__CreateSignedPackData(int32_t maxCount, const MethodI
     j_il2cpp_runtime_class_init_0(SignedValue_TypeInfo);
     v18 = SignedValue_TypeInfo;
   }
-  Bytes_63141868 = System_BitConverter__GetBytes_63141868(v18->static_fields->exist, 0LL);
-  v20 = (System_Text_StringBuilder_o *)sub_1BD36A4(System_Text_StringBuilder_TypeInfo);
+  Bytes_63315428 = System_BitConverter__GetBytes_63315428(v18->static_fields->exist, 0LL);
+  v20 = (System_Text_StringBuilder_o *)sub_1BE4D18(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v20, 0LL);
   if ( !v20
-    || (appended = (_QWORD **)System_Text_StringBuilder__Append_61687144(
+    || (appended = (_QWORD **)System_Text_StringBuilder__Append_61859960(
                                 v20,
-                                (System_String_o *)StringLiteral_1655/*"<RSAKeyValue><Modulus>"*/,
+                                (System_String_o *)StringLiteral_1656/*"<RSAKeyValue><Modulus>"*/,
                                 0LL),
         (io = SignedValue_TypeInfo->static_fields->io) == 0LL) )
   {
 LABEL_70:
-    sub_1BD36B4(appended, v22);
+    sub_1BE4D28(appended, v22);
   }
   max_length = io->max_length;
   if ( max_length >= 1 )
@@ -247,26 +247,26 @@ LABEL_29:
     v30 = 0LL;
     while ( v30 < (unsigned int)v29 )
     {
-      if ( !Bytes_63141868 )
+      if ( !Bytes_63315428 )
         goto LABEL_70;
-      v31 = Bytes_63141868->max_length;
+      v31 = Bytes_63315428->max_length;
       if ( (int)v30 % v31 >= (unsigned int)v31 )
         break;
       v32 = *(_BYTE *)(v28 + 32 + v30);
-      v33 = Bytes_63141868->m_Items[(int)v30 % v31 + 4];
+      v33 = Bytes_63315428->m_Items[(int)v30 % v31 + 4];
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      v34 = System_Convert__ToChar_63155444(v33 ^ v32, 0LL);
-      appended = (_QWORD **)System_Text_StringBuilder__Append_61689472(v20, v34, 0LL);
+      v34 = System_Convert__ToChar_63329004(v33 ^ v32, 0LL);
+      appended = (_QWORD **)System_Text_StringBuilder__Append_61862288(v20, v34, 0LL);
       LODWORD(v29) = *(_DWORD *)(v28 + 24);
       if ( (__int64)++v30 >= (int)v29 )
         goto LABEL_29;
     }
 LABEL_69:
-    sub_1BD36BC(appended, v22);
+    sub_1BE4D30(appended, v22);
   }
 LABEL_30:
-  System_Text_StringBuilder__Append_61687144(v20, (System_String_o *)StringLiteral_1606/*"</D></RSAKeyValue>"*/, 0LL);
+  System_Text_StringBuilder__Append_61859960(v20, (System_String_o *)StringLiteral_1607/*"</D></RSAKeyValue>"*/, 0LL);
   v35 = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v20->klass->vtable._3_ToString.method)(
           v20,
           v20->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
@@ -277,17 +277,17 @@ LABEL_30:
       System_Text_StringBuilder__set_Chars(v20, v36++, 0x61u, 0LL);
     while ( v36 < System_Text_StringBuilder__get_Length(v20, 0LL) );
   }
-  v37 = (System_Security_Cryptography_RSACryptoServiceProvider_o *)sub_1BD36A4(System_Security_Cryptography_RSACryptoServiceProvider_TypeInfo);
+  v37 = (System_Security_Cryptography_RSACryptoServiceProvider_o *)sub_1BE4D18(System_Security_Cryptography_RSACryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_RSACryptoServiceProvider___ctor(v37, 0LL);
   if ( !v37 )
-    sub_1BD36B4(v38, v39);
+    sub_1BE4D28(v38, v39);
   ((void (__fastcall *)(System_Security_Cryptography_RSACryptoServiceProvider_o *, __int64, Il2CppMethodPointer))v37->klass->vtable._11_FromXmlString.method)(
     v37,
     v35,
     v37->klass->vtable._12_ToXmlString.methodPtr);
   if ( !System_Security_Cryptography_CryptoConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Security_Cryptography_CryptoConfig_TypeInfo);
-  v40 = System_Security_Cryptography_CryptoConfig__MapNameToOID_62000264((System_String_o *)StringLiteral_12130/*"SHA256"*/, 0LL);
+  v40 = System_Security_Cryptography_CryptoConfig__MapNameToOID_62173080((System_String_o *)StringLiteral_12143/*"SHA256"*/, 0LL);
   System_String__IsNullOrEmpty(v40, 0LL);
   v42 = SignedData_TypeInfo;
   cctor_finished = SignedData_TypeInfo->_2.cctor_finished;
@@ -300,10 +300,10 @@ LABEL_30:
     }
     SIGNED_PACK_QUEUE_ACCOUNT_REGIST = (System_Collections_Concurrent_ConcurrentQueue_T__o *)v42->static_fields->SIGNED_PACK_QUEUE_ACCOUNT_REGIST;
     if ( !SIGNED_PACK_QUEUE_ACCOUNT_REGIST )
-      sub_1BD36B4(0LL, v41);
+      sub_1BE4D28(0LL, v41);
     Count = System_Collections_Concurrent_ConcurrentQueue_object___get_Count(
               SIGNED_PACK_QUEUE_ACCOUNT_REGIST,
-              (const MethodInfo_31C0B18 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__);
+              (const MethodInfo_31EC3EC *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__);
     if ( Count < maxCount )
     {
       v72 = maxCount - Count;
@@ -313,28 +313,28 @@ LABEL_30:
         *(_QWORD *)&v102.fields._a = &v99;
         *(_QWORD *)&v102.fields._d = 0LL;
         v74 = System_Guid__ToString(v102, v73);
-        v75 = sub_1BD36A4(SignedData_SignedPackData_TypeInfo);
+        v75 = sub_1BE4D18(SignedData_SignedPackData_TypeInfo);
         System_Object___ctor((Il2CppObject *)v75, 0LL);
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
         v76 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(v74, 0LL);
         if ( !v75 )
-          sub_1BD36B4(v76, v76);
+          sub_1BE4D28(v76, v76);
         *(_QWORD *)(v75 + 16) = v76;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v75 + 16), (int64_t)v76, v77, v78, v79, v80, v81, v82);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v75 + 16), (int64_t)v76, v77, v78, v79, v80, v81, v82);
         if ( !SignedData_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
         SignedData = SignedData__MakeSignedData(v37, v40, v74, v83);
         v85 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(SignedData, 0LL);
         *(_QWORD *)(v75 + 24) = v85;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v75 + 24), (int64_t)v85, v86, v87, v88, v89, v90, v91);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v75 + 24), (int64_t)v85, v86, v87, v88, v89, v90, v91);
         v93 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)SignedData_TypeInfo->static_fields->SIGNED_PACK_QUEUE_ACCOUNT_REGIST;
         if ( !v93 )
-          sub_1BD36B4(0LL, v92);
+          sub_1BE4D28(0LL, v92);
         System_Collections_Concurrent_ConcurrentQueue_object___Enqueue(
           v93,
           (Il2CppObject *)v75,
-          (const MethodInfo_31C1718 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__);
+          (const MethodInfo_31ECFEC *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__);
         --v72;
       }
       while ( v72 );
@@ -349,10 +349,10 @@ LABEL_30:
     }
     SIGNED_PACK_QUEUE = (System_Collections_Concurrent_ConcurrentQueue_T__o *)v42->static_fields->SIGNED_PACK_QUEUE;
     if ( !SIGNED_PACK_QUEUE )
-      sub_1BD36B4(0LL, v41);
+      sub_1BE4D28(0LL, v41);
     v45 = System_Collections_Concurrent_ConcurrentQueue_object___get_Count(
             SIGNED_PACK_QUEUE,
-            (const MethodInfo_31C0B18 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__);
+            (const MethodInfo_31EC3EC *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__);
     if ( v45 < maxCount )
     {
       v46 = maxCount - v45;
@@ -362,30 +362,30 @@ LABEL_30:
         *(_QWORD *)&v101.fields._a = &v99;
         *(_QWORD *)&v101.fields._d = 0LL;
         v48 = System_Guid__ToString(v101, v47);
-        v49 = sub_1BD36A4(SignedData_SignedPackData_TypeInfo);
+        v49 = sub_1BE4D18(SignedData_SignedPackData_TypeInfo);
         System_Object___ctor((Il2CppObject *)v49, 0LL);
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
         v50 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(v48, 0LL);
         if ( !v49 )
-          sub_1BD36B4(v50, v50);
+          sub_1BE4D28(v50, v50);
         *(_QWORD *)(v49 + 16) = v50;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 16), (int64_t)v50, v51, v52, v53, v54, v55, v56);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 16), (int64_t)v50, v51, v52, v53, v54, v55, v56);
         v57 = System_Int64__ToString((int64_t)&userIdNumber, 0LL);
-        v59 = System_String__Concat_62525248(v57, v48, 0LL);
+        v59 = System_String__Concat_62698808(v57, v48, 0LL);
         if ( !SignedData_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(SignedData_TypeInfo);
         v60 = SignedData__MakeSignedData(v37, v40, v59, v58);
         v61 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(v60, 0LL);
         *(_QWORD *)(v49 + 24) = v61;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v49 + 24), (int64_t)v61, v62, v63, v64, v65, v66, v67);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 24), (int64_t)v61, v62, v63, v64, v65, v66, v67);
         v69 = (System_Collections_Concurrent_ConcurrentQueue_T__o *)SignedData_TypeInfo->static_fields->SIGNED_PACK_QUEUE;
         if ( !v69 )
-          sub_1BD36B4(0LL, v68);
+          sub_1BE4D28(0LL, v68);
         System_Collections_Concurrent_ConcurrentQueue_object___Enqueue(
           v69,
           (Il2CppObject *)v49,
-          (const MethodInfo_31C1718 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__);
+          (const MethodInfo_31ECFEC *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__Enqueue__);
         --v46;
       }
       while ( v46 );
@@ -408,7 +408,7 @@ LABEL_30:
   else
   {
 LABEL_66:
-    v97 = sub_1C25438(v37, System_IDisposable_TypeInfo, 0LL);
+    v97 = sub_1C36AAC(v37, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Security_Cryptography_RSACryptoServiceProvider_o *, _QWORD))v97)(
     v37,
@@ -426,19 +426,19 @@ bool __fastcall SignedData__GetSignedPackData(SignedData_SignedPackData_o **outD
   System_Collections_Concurrent_ConcurrentQueue_T__o **static_fields; // x8
   System_Collections_Concurrent_ConcurrentQueue_T__o *v9; // x0
 
-  if ( (byte_4B35197 & 1) == 0 )
+  if ( (byte_4B64B95 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__, method);
-    sub_1BD3458(&NetworkManager_TypeInfo, v3);
-    sub_1BD3458(&SignedData_TypeInfo, v4);
-    byte_4B35197 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__, method);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v3);
+    sub_1BE4ACC(&SignedData_TypeInfo, v4);
+    byte_4B64B95 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B31D77 )
+  if ( !byte_4B61717 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, method);
-    byte_4B31D77 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
+    byte_4B61717 = 1;
   }
   v5 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -461,9 +461,9 @@ bool __fastcall SignedData__GetSignedPackData(SignedData_SignedPackData_o **outD
       return System_Collections_Concurrent_ConcurrentQueue_object___TryDequeue(
                v9,
                (Il2CppObject **)outData,
-               (const MethodInfo_31C19B4 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
+               (const MethodInfo_31ED288 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
 LABEL_15:
-    sub_1BD36B4(v9, method);
+    sub_1BE4D28(v9, method);
   }
   v9 = *static_fields;
   if ( !*static_fields )
@@ -471,7 +471,7 @@ LABEL_15:
   return System_Collections_Concurrent_ConcurrentQueue_object___TryDequeue(
            v9,
            (Il2CppObject **)outData,
-           (const MethodInfo_31C19B4 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
+           (const MethodInfo_31ED288 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
 }
 
 
@@ -487,23 +487,23 @@ System_String_o *__fastcall SignedData__MakeSignedData(
   System_Byte_array *v11; // x0
   System_Byte_array *v12; // x19
 
-  if ( (byte_4B3519B & 1) == 0 )
+  if ( (byte_4B64B99 & 1) == 0 )
   {
-    sub_1BD3458(&System_Convert_TypeInfo, hashAlgorithm);
-    sub_1BD3458(&StringLiteral_9561/*"No Algorithm"*/, v7);
-    byte_4B3519B = 1;
+    sub_1BE4ACC(&System_Convert_TypeInfo, hashAlgorithm);
+    sub_1BE4ACC(&StringLiteral_9569/*"No Algorithm"*/, v7);
+    byte_4B64B99 = 1;
   }
   if ( System_String__IsNullOrEmpty(hashAlgorithm, 0LL) )
-    return (System_String_o *)StringLiteral_9561/*"No Algorithm"*/;
+    return (System_String_o *)StringLiteral_9569/*"No Algorithm"*/;
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_1BD36B4(0LL, v10);
+    sub_1BE4D28(0LL, v10);
   v11 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, Il2CppMethodPointer))UTF8->klass->vtable._19_GetBytes.method)(
                                UTF8,
                                idempotencyKey,
                                UTF8->klass->vtable._20_GetBytes.methodPtr);
   if ( !signProvider )
-    sub_1BD36B4(v11, v11);
+    sub_1BE4D28(v11, v11);
   v12 = System_Security_Cryptography_RSACryptoServiceProvider__SignData(
           signProvider,
           v11,
@@ -528,17 +528,17 @@ System_Threading_Tasks_Task_o *__fastcall SignedData__RefillSigningData(int32_t 
   SignedData_c *v11; // x0
   System_Action_o *v12; // x20
 
-  if ( (byte_4B35198 & 1) == 0 )
+  if ( (byte_4B64B96 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, method);
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__, v3);
-    sub_1BD3458(&SignedData_TypeInfo, v4);
-    sub_1BD3458(&System_Threading_Tasks_Task_TypeInfo, v5);
-    sub_1BD3458(&Method_SignedData___c__DisplayClass5_0__RefillSigningData_b__0__, v6);
-    sub_1BD3458(&SignedData___c__DisplayClass5_0_TypeInfo, v7);
-    byte_4B35198 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, method);
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__, v3);
+    sub_1BE4ACC(&SignedData_TypeInfo, v4);
+    sub_1BE4ACC(&System_Threading_Tasks_Task_TypeInfo, v5);
+    sub_1BE4ACC(&Method_SignedData___c__DisplayClass5_0__RefillSigningData_b__0__, v6);
+    sub_1BE4ACC(&SignedData___c__DisplayClass5_0_TypeInfo, v7);
+    byte_4B64B96 = 1;
   }
-  v8 = sub_1BD36A4(SignedData___c__DisplayClass5_0_TypeInfo);
+  v8 = sub_1BE4D18(SignedData___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_12;
@@ -552,12 +552,12 @@ System_Threading_Tasks_Task_o *__fastcall SignedData__RefillSigningData(int32_t 
   SIGNED_PACK_QUEUE = (System_Collections_Concurrent_ConcurrentQueue_T__o *)v11->static_fields->SIGNED_PACK_QUEUE;
   if ( !SIGNED_PACK_QUEUE )
 LABEL_12:
-    sub_1BD36B4(SIGNED_PACK_QUEUE, v10);
+    sub_1BE4D28(SIGNED_PACK_QUEUE, v10);
   if ( System_Collections_Concurrent_ConcurrentQueue_object___get_Count(
          SIGNED_PACK_QUEUE,
-         (const MethodInfo_31C0B18 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__) >= *(_DWORD *)(v8 + 16) )
+         (const MethodInfo_31EC3EC *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__get_Count__) >= *(_DWORD *)(v8 + 16) )
     return 0LL;
-  v12 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)v8, Method_SignedData___c__DisplayClass5_0__RefillSigningData_b__0__, 0LL);
   if ( !System_Threading_Tasks_Task_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Threading_Tasks_Task_TypeInfo);
@@ -572,11 +572,11 @@ System_Threading_Tasks_Task_o *__fastcall SignedData__RefreshSigningData(int32_t
   System_Collections_Concurrent_ConcurrentQueue_T__o *SIGNED_PACK_QUEUE; // x0
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B35199 & 1) == 0 )
+  if ( (byte_4B64B97 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__, method);
-    sub_1BD3458(&SignedData_TypeInfo, v3);
-    byte_4B35199 = 1;
+    sub_1BE4ACC(&Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__, method);
+    sub_1BE4ACC(&SignedData_TypeInfo, v3);
+    byte_4B64B97 = 1;
   }
   result = 0LL;
   do
@@ -589,11 +589,11 @@ System_Threading_Tasks_Task_o *__fastcall SignedData__RefreshSigningData(int32_t
     }
     SIGNED_PACK_QUEUE = (System_Collections_Concurrent_ConcurrentQueue_T__o *)v4->static_fields->SIGNED_PACK_QUEUE;
     if ( !SIGNED_PACK_QUEUE )
-      sub_1BD36B4(0LL, method);
+      sub_1BE4D28(0LL, method);
     System_Collections_Concurrent_ConcurrentQueue_object___TryDequeue(
       SIGNED_PACK_QUEUE,
       &result,
-      (const MethodInfo_31C19B4 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
+      (const MethodInfo_31ED288 *)Method_System_Collections_Concurrent_ConcurrentQueue_SignedData_SignedPackData__TryDequeue__);
   }
   while ( result );
   if ( !SignedData_TypeInfo->_2.cctor_finished )
@@ -622,10 +622,10 @@ void __fastcall SignedData___c__DisplayClass5_0___RefillSigningData_b__0(
 {
   int32_t maxCount; // w19
 
-  if ( (byte_4B3519D & 1) == 0 )
+  if ( (byte_4B64B9B & 1) == 0 )
   {
-    sub_1BD3458(&SignedData_TypeInfo, method);
-    byte_4B3519D = 1;
+    sub_1BE4ACC(&SignedData_TypeInfo, method);
+    byte_4B64B9B = 1;
   }
   maxCount = this->fields.maxCount;
   if ( !SignedData_TypeInfo->_2.cctor_finished )

@@ -1,14 +1,14 @@
 void __fastcall GachaDetailMaster___ctor(GachaDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37425 & 1) == 0 )
+  if ( (byte_4B66E50 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__, method);
-    byte_4B37425 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__, method);
+    byte_4B66E50 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    188,
-    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__);
+    192,
+    (const MethodInfo_31FD784 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__);
 }
 
 
@@ -26,19 +26,19 @@ GachaDetailEntity_o *__fastcall GachaDetailMaster__GetGachaDetailEntity(
   int32_t v10; // w22
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4B37426 & 1) == 0 )
+  if ( (byte_4B66E51 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&gachaID);
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BD3458(&GachaDetailEntity_TypeInfo, v6);
-    byte_4B37426 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&gachaID);
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1BE4ACC(&GachaDetailEntity_TypeInfo, v6);
+    byte_4B66E51 = 1;
   }
   result = (GachaDetailEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_14;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_316E4C0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v9 = Count;
@@ -51,7 +51,7 @@ GachaDetailEntity_o *__fastcall GachaDetailMaster__GetGachaDetailEntity(
       result = (GachaDetailEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                         (System_Collections_ObjectModel_Collection_T__o *)result,
                                         v10,
-                                        (const MethodInfo_316E550 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                        (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
       methodPtr_low = LOBYTE(GachaDetailEntity_TypeInfo->vtable._0_Equals.methodPtr);
@@ -66,7 +66,7 @@ GachaDetailEntity_o *__fastcall GachaDetailMaster__GetGachaDetailEntity(
         return 0LL;
     }
 LABEL_14:
-    sub_1BD36B4(result, *(_QWORD *)&gachaID);
+    sub_1BE4D28(result, *(_QWORD *)&gachaID);
   }
   return 0LL;
 }

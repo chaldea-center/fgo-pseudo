@@ -30,37 +30,37 @@ void __fastcall TerminalOverwriteMaster___cctor(const MethodInfo *method)
   FollowerInfo_o *v28; // x6
   PartyListViewItem_o *v29; // x7
 
-  if ( (byte_4B37CFA & 1) == 0 )
+  if ( (byte_4B67734 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__int__Add__, v1);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, v2);
-    sub_1BD3458(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
-    sub_1BD3458(&TerminalOverwriteMaster_TypeInfo, v4);
-    byte_4B37CFA = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__Add__, v1);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, v2);
+    sub_1BE4ACC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
+    sub_1BE4ACC(&TerminalOverwriteMaster_TypeInfo, v4);
+    byte_4B67734 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BD36A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v5,
-    (const MethodInfo_321B960 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_3247234 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   if ( !v5 )
     goto LABEL_7;
   System_Collections_Generic_Dictionary_int__int___Add(
     v5,
     2,
     3,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   System_Collections_Generic_Dictionary_int__int___Add(
     v5,
     4,
     4,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   System_Collections_Generic_Dictionary_int__int___Add(
     v5,
     7,
     2,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   TerminalOverwriteMaster_TypeInfo->static_fields->overwriteSkinTypeTable = v5;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)TerminalOverwriteMaster_TypeInfo->static_fields,
     (int64_t)v5,
     v8,
@@ -69,30 +69,30 @@ void __fastcall TerminalOverwriteMaster___cctor(const MethodInfo *method)
     v11,
     v12,
     v13);
-  v14 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BD36A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v14 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v14,
-    (const MethodInfo_321B960 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_3247234 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   if ( !v14 )
     goto LABEL_7;
   System_Collections_Generic_Dictionary_int__int___Add(
     v14,
     2,
     7,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   System_Collections_Generic_Dictionary_int__int___Add(
     v14,
     4,
     8,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   System_Collections_Generic_Dictionary_int__int___Add(
     v14,
     7,
     6,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   static_fields = TerminalOverwriteMaster_TypeInfo->static_fields;
   static_fields->overwriteEffectTypeTable = v14;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&static_fields->overwriteEffectTypeTable,
     (int64_t)v14,
     v16,
@@ -101,35 +101,35 @@ void __fastcall TerminalOverwriteMaster___cctor(const MethodInfo *method)
     v19,
     v20,
     v21);
-  v22 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BD36A4(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v22 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v22,
-    (const MethodInfo_321B960 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_3247234 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   if ( !v22 )
 LABEL_7:
-    sub_1BD36B4(v6, v7);
+    sub_1BE4D28(v6, v7);
   System_Collections_Generic_Dictionary_int__int___Add(
     v22,
     7,
     5,
-    (const MethodInfo_321C324 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   v23 = TerminalOverwriteMaster_TypeInfo->static_fields;
   v23->overwriteSpriteTypeTable = v22;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&v23->overwriteSpriteTypeTable, (int64_t)v22, v24, v25, v26, v27, v28, v29);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&v23->overwriteSpriteTypeTable, (int64_t)v22, v24, v25, v26, v27, v28, v29);
 }
 
 
 void __fastcall TerminalOverwriteMaster___ctor(TerminalOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37CF2 & 1) == 0 )
+  if ( (byte_4B6772C & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string___ctor__, method);
-    byte_4B37CF2 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string___ctor__, method);
+    byte_4B6772C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    463,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string___ctor__);
+    467,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string___ctor__);
 }
 
 
@@ -143,18 +143,18 @@ TerminalOverwriteEntity_o *__fastcall TerminalOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B37CF0 & 1) == 0 )
+  if ( (byte_4B6772A & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4B37CF0 = 1;
+    byte_4B6772A = 1;
   }
   PK = (Il2CppObject *)TerminalOverwriteEntity__CreatePK(id, type, priority, *(const MethodInfo **)&priority);
   return (TerminalOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_31D2248 *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__GetEntity__);
+                                        (const MethodInfo_31FDB1C *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -204,30 +204,30 @@ System_Collections_Generic_List_TerminalOverwriteEntity__o *__fastcall TerminalO
   int32_t *v42; // x10
   __int64 v43; // x0
 
-  if ( (byte_4B37CF3 & 1) == 0 )
+  if ( (byte_4B6772D & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&type);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v5);
-    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Add__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity___ctor__, v9);
-    sub_1BD3458(&System_Collections_Generic_List_TerminalOverwriteEntity__TypeInfo, v10);
-    sub_1BD3458(&TerminalOverwriteEntity_TypeInfo, v11);
-    byte_4B37CF3 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&type);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
+    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Add__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity___ctor__, v9);
+    sub_1BE4ACC(&System_Collections_Generic_List_TerminalOverwriteEntity__TypeInfo, v10);
+    sub_1BE4ACC(&TerminalOverwriteEntity_TypeInfo, v11);
+    byte_4B6772D = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_TerminalOverwriteEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_TerminalOverwriteEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_TerminalOverwriteEntity___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BD36B4(0LL, v13);
+    sub_1BE4D28(0LL, v13);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BD36B4(0LL, v15);
+    sub_1BE4D28(0LL, v15);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -247,7 +247,7 @@ System_Collections_Generic_List_TerminalOverwriteEntity__o *__fastcall TerminalO
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -270,7 +270,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v24 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v24 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
             Enumerator,
@@ -283,33 +283,33 @@ LABEL_16:
     if ( *(unsigned __int8 *)(*(_QWORD *)v25 + 304LL) < (unsigned int)methodPtr_low
       || *(TerminalOverwriteEntity_c **)(*(_QWORD *)(*(_QWORD *)v25 + 200LL) + 8 * methodPtr_low - 8) != TerminalOverwriteEntity_TypeInfo )
     {
-      sub_1BD3974(v25);
+      sub_1BE4FE8(v25);
 LABEL_35:
-      sub_1BD36B4(v25, v26);
+      sub_1BE4D28(v25, v26);
     }
     if ( *(_DWORD *)(v25 + 20) == type )
     {
       if ( !v12 )
-        sub_1BD36B4(v25, TerminalOverwriteEntity_TypeInfo);
+        sub_1BE4D28(v25, TerminalOverwriteEntity_TypeInfo);
       items = v12->fields._items;
       v37 = Method_System_Collections_Generic_List_TerminalOverwriteEntity__Add__;
       ++v12->fields._version;
       if ( !items )
-        sub_1BD36B4(v25, v34);
+        sub_1BE4D28(v25, v34);
       size = v12->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v12,
           (Il2CppObject *)v25,
-          *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
       }
       else
       {
         v39 = &items->obj.klass + size;
         v12->fields._size = size + 1;
         v39[4] = (Il2CppClass *)v33;
-        sub_1BD33FC((PartyOrganizationUtility_o *)(v39 + 4), v33, v27, v28, v29, v30, v31, v32);
+        sub_1BE4A70((PartyOrganizationUtility_o *)(v39 + 4), v33, v27, v28, v29, v30, v31, v32);
       }
     }
   }
@@ -330,7 +330,7 @@ LABEL_35:
   else
   {
 LABEL_31:
-    v43 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v43 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v43)(Enumerator, *(_QWORD *)(v43 + 8));
   return (System_Collections_Generic_List_TerminalOverwriteEntity__o *)v12;
@@ -345,25 +345,25 @@ int32_t __fastcall TerminalOverwriteMaster__GetOverwriteType(
 {
   __int64 v6; // x1
 
-  if ( (byte_4B37CF6 & 1) == 0 )
+  if ( (byte_4B67730 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, table);
-    this = (TerminalOverwriteMaster_o *)sub_1BD3458(
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, table);
+    this = (TerminalOverwriteMaster_o *)sub_1BE4ACC(
                                           &Method_System_Collections_Generic_Dictionary_int__int__get_Item__,
                                           v6);
-    byte_4B37CF6 = 1;
+    byte_4B67730 = 1;
   }
   if ( !table )
-    sub_1BD36B4(this, table);
+    sub_1BE4D28(this, table);
   if ( System_Collections_Generic_Dictionary_int__int___ContainsKey(
          table,
          type,
-         (const MethodInfo_321C510 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+         (const MethodInfo_3247DE4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
   {
     return System_Collections_Generic_Dictionary_int__int___get_Item(
              table,
              type,
-             (const MethodInfo_321C288 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+             (const MethodInfo_3247B5C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
   }
   else
   {
@@ -383,17 +383,17 @@ bool __fastcall TerminalOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B37CF1 & 1) == 0 )
+  if ( (byte_4B6772B & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__TryGetEntity__, entity);
-    byte_4B37CF1 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__TryGetEntity__, entity);
+    byte_4B6772B = 1;
   }
   PK = (Il2CppObject *)TerminalOverwriteEntity__CreatePK(id, type, priority, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_TerminalOverwriteMaster__TerminalOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -408,10 +408,10 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteEffectNames(
   int32_t OverwriteType; // w1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B37CF9 & 1) == 0 )
+  if ( (byte_4B67733 & 1) == 0 )
   {
-    sub_1BD3458(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
-    byte_4B37CF9 = 1;
+    sub_1BE4ACC(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
+    byte_4B67733 = 1;
   }
   v7 = (TerminalOverwriteMaster_o *)TerminalOverwriteMaster_TypeInfo;
   if ( !TerminalOverwriteMaster_TypeInfo->_2.cctor_finished )
@@ -482,26 +482,26 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteId(
   int v51; // w19
   System_Collections_Generic_List_Enumerator_object__o v53; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B37CF4 & 1) == 0 )
+  if ( (byte_4B6772E & 1) == 0 )
   {
-    sub_1BD3458(&System_Comparison_TerminalOverwriteEntity__TypeInfo, *(_QWORD *)&type);
-    sub_1BD3458(&CondType_TypeInfo, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__get_Current__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__, v15);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__, v16);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__get_Count__, v17);
-    sub_1BD3458(&string_TypeInfo, v18);
-    sub_1BD3458(&Method_TerminalOverwriteMaster___c__TryGetOverwriteId_b__7_0__, v19);
-    sub_1BD3458(&TerminalOverwriteMaster___c_TypeInfo, v20);
-    byte_4B37CF4 = 1;
+    sub_1BE4ACC(&System_Comparison_TerminalOverwriteEntity__TypeInfo, *(_QWORD *)&type);
+    sub_1BE4ACC(&CondType_TypeInfo, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__get_Current__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__, v15);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__, v16);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__get_Count__, v17);
+    sub_1BE4ACC(&string_TypeInfo, v18);
+    sub_1BE4ACC(&Method_TerminalOverwriteMaster___c__TryGetOverwriteId_b__7_0__, v19);
+    sub_1BE4ACC(&TerminalOverwriteMaster___c_TypeInfo, v20);
+    byte_4B6772E = 1;
   }
   memset(&v53, 0, sizeof(v53));
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   *overwriteId = static_fields->Empty;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)overwriteId,
     (int64_t)Empty,
     (int64_t)overwriteId,
@@ -512,7 +512,7 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteId(
     v7);
   EntityList = TerminalOverwriteMaster__GetEntityList(this, type, v23);
   if ( !EntityList )
-    sub_1BD36B4(0LL, v25);
+    sub_1BE4D28(0LL, v25);
   v26 = (System_Collections_Generic_List_object__o *)EntityList;
   if ( !EntityList->fields._size )
     return 0;
@@ -531,31 +531,31 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteId(
       v27 = TerminalOverwriteMaster___c_TypeInfo;
     }
     v29 = (Il2CppObject *)v27->static_fields->__9;
-    _9__7_0 = (System_Comparison_T__o *)sub_1BD36A4(System_Comparison_TerminalOverwriteEntity__TypeInfo);
+    _9__7_0 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_TerminalOverwriteEntity__TypeInfo);
     System_Comparison_object____ctor(_9__7_0, v29, Method_TerminalOverwriteMaster___c__TryGetOverwriteId_b__7_0__, 0LL);
     v30 = TerminalOverwriteMaster___c_TypeInfo->static_fields;
     v30->__9__7_0 = (struct System_Comparison_TerminalOverwriteEntity__o *)_9__7_0;
-    sub_1BD33FC((PartyOrganizationUtility_o *)&v30->__9__7_0, (int64_t)_9__7_0, v31, v32, v33, v34, v35, v36);
+    sub_1BE4A70((PartyOrganizationUtility_o *)&v30->__9__7_0, (int64_t)_9__7_0, v31, v32, v33, v34, v35, v36);
   }
-  System_Collections_Generic_List_object___Sort_56371284(
+  System_Collections_Generic_List_object___Sort_56548584(
     v26,
     _9__7_0,
-    (const MethodInfo_35C2854 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__);
+    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v53,
     v26,
-    (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__);
+    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__);
   while ( 1 )
   {
     v37 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v53,
-            (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__);
+            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__);
     v39 = v37;
     if ( !v37 )
       break;
     current = v53.fields._current;
     if ( !v53.fields._current )
-      sub_1BD36B4(v37, v38);
+      sub_1BE4D28(v37, v38);
     monitor = (int32_t)v53.fields._current[2].monitor;
     monitor_high = HIDWORD(v53.fields._current[2].monitor);
     klass_low = SLODWORD(v53.fields._current[3].klass);
@@ -565,7 +565,7 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteId(
     {
       klass = (System_String_o *)current[2].klass;
       *overwriteId = klass;
-      sub_1BD33FC((PartyOrganizationUtility_o *)overwriteId, (int64_t)klass, v44, v45, v46, v47, v48, v49);
+      sub_1BE4A70((PartyOrganizationUtility_o *)overwriteId, (int64_t)klass, v44, v45, v46, v47, v48, v49);
       v51 = 6;
       goto LABEL_20;
     }
@@ -574,7 +574,7 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteId(
 LABEL_20:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v53,
-    (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__);
+    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__);
   return v39 && v51 == 6;
 }
 
@@ -643,31 +643,31 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteIds(
   System_Collections_Generic_List_Enumerator_object__o v62; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v63; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B37CF5 & 1) == 0 )
+  if ( (byte_4B6772F & 1) == 0 )
   {
-    sub_1BD3458(&System_Comparison_TerminalOverwriteEntity__TypeInfo, *(_QWORD *)&type);
-    sub_1BD3458(&CondType_TypeInfo, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__get_Current__, v10);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__Add__, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string___ctor__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__get_Count__, v15);
-    sub_1BD3458(&Method_System_Collections_Generic_List_string__get_Count__, v16);
-    sub_1BD3458(&System_Collections_Generic_List_string__TypeInfo, v17);
-    sub_1BD3458(&Method_TerminalOverwriteMaster___c__TryGetOverwriteIds_b__8_0__, v18);
-    sub_1BD3458(&TerminalOverwriteMaster___c_TypeInfo, v19);
-    byte_4B37CF5 = 1;
+    sub_1BE4ACC(&System_Comparison_TerminalOverwriteEntity__TypeInfo, *(_QWORD *)&type);
+    sub_1BE4ACC(&CondType_TypeInfo, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__get_Current__, v10);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_TerminalOverwriteEntity__get_Count__, v15);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v16);
+    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v17);
+    sub_1BE4ACC(&Method_TerminalOverwriteMaster___c__TryGetOverwriteIds_b__8_0__, v18);
+    sub_1BE4ACC(&TerminalOverwriteMaster___c_TypeInfo, v19);
+    byte_4B6772F = 1;
   }
   memset(&v63, 0, sizeof(v63));
-  v20 = (System_Collections_Generic_List_object__o *)sub_1BD36A4(System_Collections_Generic_List_string__TypeInfo);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_35C055C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
   *overwriteIds = (System_Collections_Generic_List_string__o *)v20;
-  sub_1BD33FC((PartyOrganizationUtility_o *)overwriteIds, (int64_t)v20, v21, v22, v23, v24, v25, v26);
+  sub_1BE4A70((PartyOrganizationUtility_o *)overwriteIds, (int64_t)v20, v21, v22, v23, v24, v25, v26);
   EntityList = TerminalOverwriteMaster__GetEntityList(this, type, v27);
   if ( !EntityList )
     goto LABEL_31;
@@ -689,7 +689,7 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteIds(
         v31 = TerminalOverwriteMaster___c_TypeInfo;
       }
       v33 = (Il2CppObject *)v31->static_fields->__9;
-      _9__8_0 = (System_Comparison_T__o *)sub_1BD36A4(System_Comparison_TerminalOverwriteEntity__TypeInfo);
+      _9__8_0 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_TerminalOverwriteEntity__TypeInfo);
       System_Comparison_object____ctor(
         _9__8_0,
         v33,
@@ -697,7 +697,7 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteIds(
         0LL);
       static_fields = TerminalOverwriteMaster___c_TypeInfo->static_fields;
       static_fields->__9__8_0 = (struct System_Comparison_TerminalOverwriteEntity__o *)_9__8_0;
-      sub_1BD33FC(
+      sub_1BE4A70(
         (PartyOrganizationUtility_o *)&static_fields->__9__8_0,
         (int64_t)_9__8_0,
         v35,
@@ -707,26 +707,26 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteIds(
         v39,
         v40);
     }
-    System_Collections_Generic_List_object___Sort_56371284(
+    System_Collections_Generic_List_object___Sort_56548584(
       v30,
       _9__8_0,
-      (const MethodInfo_35C2854 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__);
+      (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__Sort__);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v62,
       v30,
-      (const MethodInfo_35C1888 *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__);
+      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_TerminalOverwriteEntity__GetEnumerator__);
     v41 = -1;
     v63 = v62;
     while ( 1 )
     {
       v42 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v63,
-              (const MethodInfo_3335E50 *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__);
+              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__MoveNext__);
       if ( !v42 )
         break;
       current = v63.fields._current;
       if ( !v63.fields._current )
-        sub_1BD36B4(v42, v43);
+        sub_1BE4D28(v42, v43);
       monitor = (int32_t)v63.fields._current[2].monitor;
       monitor_high = HIDWORD(v63.fields._current[2].monitor);
       klass_low = SLODWORD(v63.fields._current[3].klass);
@@ -744,37 +744,37 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteIds(
         }
         v55 = (System_Collections_Generic_List_object__o *)*overwriteIds;
         if ( !*overwriteIds )
-          sub_1BD36B4(0LL, v48);
+          sub_1BE4D28(0LL, v48);
         klass = (Il2CppObject *)current[2].klass;
         items = v55->fields._items;
         v58 = Method_System_Collections_Generic_List_string__Add__;
         ++v55->fields._version;
         if ( !items )
-          sub_1BD36B4(v55, klass);
+          sub_1BE4D28(v55, klass);
         size = v55->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v55,
             klass,
-            *(const MethodInfo_35C0D90 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
         }
         else
         {
           v60 = &items->obj.klass + size;
           v55->fields._size = size + 1;
           v60[4] = (Il2CppClass *)klass;
-          sub_1BD33FC((PartyOrganizationUtility_o *)(v60 + 4), (int64_t)klass, v49, v50, v51, v52, v53, v54);
+          sub_1BE4A70((PartyOrganizationUtility_o *)(v60 + 4), (int64_t)klass, v49, v50, v51, v52, v53, v54);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v63,
-      (const MethodInfo_3335E4C *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__);
+      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_TerminalOverwriteEntity__Dispose__);
     if ( *overwriteIds )
       return (*overwriteIds)->fields._size > 0;
 LABEL_31:
-    sub_1BD36B4(EntityList, v29);
+    sub_1BE4D28(EntityList, v29);
   }
   return 0;
 }
@@ -802,10 +802,10 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteSkinName(
   int32_t OverwriteType; // w1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B37CF7 & 1) == 0 )
+  if ( (byte_4B67731 & 1) == 0 )
   {
-    sub_1BD3458(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
-    byte_4B37CF7 = 1;
+    sub_1BE4ACC(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
+    byte_4B67731 = 1;
   }
   v7 = TerminalOverwriteMaster_TypeInfo;
   if ( !TerminalOverwriteMaster_TypeInfo->_2.cctor_finished )
@@ -833,10 +833,10 @@ bool __fastcall TerminalOverwriteMaster__TryGetOverwriteSpriteName(
   int32_t OverwriteType; // w1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B37CF8 & 1) == 0 )
+  if ( (byte_4B67732 & 1) == 0 )
   {
-    sub_1BD3458(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
-    byte_4B37CF8 = 1;
+    sub_1BE4ACC(&TerminalOverwriteMaster_TypeInfo, *(_QWORD *)&type);
+    byte_4B67732 = 1;
   }
   v7 = (TerminalOverwriteMaster_o *)TerminalOverwriteMaster_TypeInfo;
   if ( !TerminalOverwriteMaster_TypeInfo->_2.cctor_finished )
@@ -864,15 +864,15 @@ void __fastcall TerminalOverwriteMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B37CFB & 1) == 0 )
+  if ( (byte_4B67735 & 1) == 0 )
   {
-    sub_1BD3458(&TerminalOverwriteMaster___c_TypeInfo, v1);
-    byte_4B37CFB = 1;
+    sub_1BE4ACC(&TerminalOverwriteMaster___c_TypeInfo, v1);
+    byte_4B67735 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BD36A4(TerminalOverwriteMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BE4D18(TerminalOverwriteMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   TerminalOverwriteMaster___c_TypeInfo->static_fields->__9 = (struct TerminalOverwriteMaster___c_o *)v2;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)TerminalOverwriteMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -897,7 +897,7 @@ int32_t __fastcall TerminalOverwriteMaster___c___TryGetOverwriteId_b__7_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BD36B4(this, a);
+    sub_1BE4D28(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -909,6 +909,6 @@ int32_t __fastcall TerminalOverwriteMaster___c___TryGetOverwriteIds_b__8_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BD36B4(this, a);
+    sub_1BE4D28(this, a);
   return b->fields.priority - a->fields.priority;
 }

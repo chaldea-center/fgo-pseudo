@@ -1,9 +1,9 @@
 void __fastcall TutorialNotificationDialog___ctor(TutorialNotificationDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B35E2F & 1) == 0 )
+  if ( (byte_4B6583D & 1) == 0 )
   {
-    sub_1BD3458(&BaseDialog_TypeInfo, method);
-    byte_4B35E2F = 1;
+    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
+    byte_4B6583D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,11 +15,11 @@ void __fastcall TutorialNotificationDialog__Close(TutorialNotificationDialog_o *
 {
   const MethodInfo *v2; // x2
 
-  TutorialNotificationDialog__Close_38130180(this, 0LL, v2);
+  TutorialNotificationDialog__Close_38252292(this, 0LL, v2);
 }
 
 
-void __fastcall TutorialNotificationDialog__Close_38130180(
+void __fastcall TutorialNotificationDialog__Close_38252292(
         TutorialNotificationDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -32,14 +32,14 @@ void __fastcall TutorialNotificationDialog__Close_38130180(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4B35E2D & 1) == 0 )
+  if ( (byte_4B6583B & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, callback);
-    sub_1BD3458(&Method_TutorialNotificationDialog_EndClose__, v10);
-    byte_4B35E2D = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, callback);
+    sub_1BE4ACC(&Method_TutorialNotificationDialog_EndClose__, v10);
+    byte_4B6583B = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -49,7 +49,7 @@ void __fastcall TutorialNotificationDialog__Close_38130180(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_TutorialNotificationDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -72,7 +72,7 @@ void __fastcall TutorialNotificationDialog__EndClose(TutorialNotificationDialog_
   TutorialNotificationDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
@@ -80,7 +80,7 @@ void __fastcall TutorialNotificationDialog__EndClose(TutorialNotificationDialog_
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1BD33FC(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1BE4A70(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v12->fields.m_target)(
       v12->fields.original_method_info,
       *(_QWORD *)&v12->fields.extra_arg);
@@ -99,7 +99,7 @@ void __fastcall TutorialNotificationDialog__EndTurorialRequest(
         System_String_o *result,
         const MethodInfo *method)
 {
-  TutorialNotificationDialog__Close_38130180(this, this->fields.closeCallbackFunc, method);
+  TutorialNotificationDialog__Close_38252292(this, this->fields.closeCallbackFunc, method);
 }
 
 
@@ -110,11 +110,11 @@ void __fastcall TutorialNotificationDialog__Init(TutorialNotificationDialog_o *t
   __int64 v5; // x1
   UILabel_o *gameObject; // x0
 
-  if ( (byte_4B35E2B & 1) == 0 )
+  if ( (byte_4B65839 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_1/*""*/, v3);
-    byte_4B35E2B = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v3);
+    byte_4B65839 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -130,7 +130,7 @@ void __fastcall TutorialNotificationDialog__Init(TutorialNotificationDialog_o *t
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_10:
-    sub_1BD36B4(gameObject, v5);
+    sub_1BE4D28(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -149,30 +149,30 @@ void __fastcall TutorialNotificationDialog__OnClickClose(TutorialNotificationDia
   Il2CppObject *Request_object; // x0
   __int64 v12; // x1
 
-  if ( (byte_4B35E2E & 1) == 0 )
+  if ( (byte_4B6583C & 1) == 0 )
   {
-    sub_1BD3458(&Method_NetworkManager_getRequest_TutorialSetRequest___, method);
-    sub_1BD3458(&NetworkManager_TypeInfo, v3);
-    sub_1BD3458(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
-    sub_1BD3458(&Method_TutorialNotificationDialog_EndTurorialRequest__, v5);
-    sub_1BD3458(&Method_TutorialNotificationDialog_OnClickClose__, v6);
-    byte_4B35E2E = 1;
+    sub_1BE4ACC(&Method_NetworkManager_getRequest_TutorialSetRequest___, method);
+    sub_1BE4ACC(&NetworkManager_TypeInfo, v3);
+    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
+    sub_1BE4ACC(&Method_TutorialNotificationDialog_EndTurorialRequest__, v5);
+    sub_1BE4ACC(&Method_TutorialNotificationDialog_OnClickClose__, v6);
+    byte_4B6583C = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v7 = Method_TutorialNotificationDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_TutorialNotificationDialog_OnClickClose__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BD3470(Method_TutorialNotificationDialog_OnClickClose__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BD343C(v7, v7[4]);
+      v7 = (_QWORD *)sub_1BE4AE4(Method_TutorialNotificationDialog_OnClickClose__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
     if ( this->fields.flagId == -1 )
     {
-      TutorialNotificationDialog__Close_38130180(this, this->fields.closeCallbackFunc, v9);
+      TutorialNotificationDialog__Close_38252292(this, this->fields.closeCallbackFunc, v9);
     }
     else
     {
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1BD36A4(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -182,9 +182,9 @@ void __fastcall TutorialNotificationDialog__OnClickClose(TutorialNotificationDia
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
                          v10,
-                         (const MethodInfo_2FB5954 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+                         (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
       if ( !Request_object )
-        sub_1BD36B4(0LL, v12);
+        sub_1BE4D28(0LL, v12);
       TutorialSetRequest__beginRequest((TutorialSetRequest_o *)Request_object, this->fields.flagId, 0LL);
     }
   }
@@ -211,16 +211,16 @@ void __fastcall TutorialNotificationDialog__Open(
   System_String_o *v18; // x1
   System_Action_o *v19; // x20
 
-  if ( (byte_4B35E2C & 1) == 0 )
+  if ( (byte_4B6583A & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, message);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v12);
-    sub_1BD3458(&Method_TutorialNotificationDialog_EndOpen__, v13);
-    sub_1BD3458(&StringLiteral_1/*""*/, v14);
-    byte_4B35E2C = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, message);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v12);
+    sub_1BE4ACC(&Method_TutorialNotificationDialog_EndOpen__, v13);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v14);
+    byte_4B6583A = 1;
   }
   this->fields.closeCallbackFunc = func;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)func,
     *(int64_t *)&flagId,
@@ -237,7 +237,7 @@ void __fastcall TutorialNotificationDialog__Open(
   {
     v17 = this->fields.messageLabel;
     if ( !v17 )
-      sub_1BD36B4(0LL, v16);
+      sub_1BE4D28(0LL, v16);
     if ( message )
       v18 = message;
     else
@@ -245,7 +245,7 @@ void __fastcall TutorialNotificationDialog__Open(
     UILabel__set_text(v17, v18, 0LL);
   }
   this->fields.isButtonEnable = 0;
-  v19 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_TutorialNotificationDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0LL);
 }

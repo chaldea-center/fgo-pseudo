@@ -14,12 +14,12 @@ void __fastcall ObjectDomain___ctor(
 }
 
 
-void __fastcall ObjectDomain___ctor_34273812(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
+void __fastcall ObjectDomain___ctor_34379700(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
 {
   ObjectDomain_Fields fields; // [xsp+0h] [xbp-20h]
 
   if ( !domain )
-    sub_1BD36B4(this, 0LL);
+    sub_1BE4D28(this, 0LL);
   fields = domain->fields;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields = fields;

@@ -23,13 +23,13 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
   int32_t v14; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B385AA & 1) == 0 )
+  if ( (byte_4B67FF7 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
-    sub_1BD3458(&RaceResultEffectParam_TypeInfo, v5);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BD3458(&StringLiteral_1/*""*/, v7);
-    byte_4B385AA = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
+    sub_1BE4ACC(&RaceResultEffectParam_TypeInfo, v5);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v7);
+    byte_4B67FF7 = 1;
   }
   entity = 0LL;
   if ( param )
@@ -48,12 +48,12 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
           {
             v13 = *((_DWORD *)monitor + 8);
             v14 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
@@ -74,7 +74,7 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1BD36B4(Instance, param);
+              sub_1BE4D28(Instance, param);
             }
           }
         }

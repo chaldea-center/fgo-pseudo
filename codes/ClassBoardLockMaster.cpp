@@ -1,14 +1,14 @@
 void __fastcall ClassBoardLockMaster___ctor(ClassBoardLockMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B36F33 & 1) == 0 )
+  if ( (byte_4B6694D & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__, method);
-    byte_4B36F33 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__, method);
+    byte_4B6694D = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    428,
-    (const MethodInfo_31D1EB0 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__);
+    432,
+    (const MethodInfo_31FD784 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__);
 }
 
 
@@ -24,24 +24,24 @@ bool __fastcall ClassBoardLockMaster__IsOpen(ClassBoardLockMaster_o *this, int32
   int32_t klass; // w21
   int64_t monitor_low; // x20
 
-  if ( (byte_4B36F32 & 1) == 0 )
+  if ( (byte_4B6694C & 1) == 0 )
   {
-    sub_1BD3458(&CondType_TypeInfo, *(_QWORD *)&releaseId);
-    sub_1BD3458(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v4);
-    sub_1BD3458(&DataManager_TypeInfo, v5);
-    sub_1BD3458(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
-    byte_4B36F32 = 1;
+    sub_1BE4ACC(&CondType_TypeInfo, *(_QWORD *)&releaseId);
+    sub_1BE4ACC(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v4);
+    sub_1BE4ACC(&DataManager_TypeInfo, v5);
+    sub_1BE4ACC(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
+    byte_4B6694C = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           releaseId,
-                          (const MethodInfo_31D1EF0 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
+                          (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1BD36B4(Master_object, v8);
+    sub_1BE4D28(Master_object, v8);
   }
   klass_high = HIDWORD(Master_object[3].klass);
   if ( !klass_high )

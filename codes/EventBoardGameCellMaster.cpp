@@ -1,14 +1,14 @@
 void __fastcall EventBoardGameCellMaster___ctor(EventBoardGameCellMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B37048 & 1) == 0 )
+  if ( (byte_4B66A62 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__, method);
-    byte_4B37048 = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__, method);
+    byte_4B66A62 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    306,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
+    310,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string___ctor__);
 }
 
 
@@ -28,21 +28,21 @@ int32_t __fastcall EventBoardGameCellMaster__GetBoardSquareCount(
   System_Collections_ObjectModel_ObservableCollection_T__o *list; // x19
   System_Predicate_object__o *v13; // x20
 
-  if ( (byte_4B3704A & 1) == 0 )
+  if ( (byte_4B66A64 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_Generic_List_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BD3458(&Method_ObservableCollectionExtensions_FindAll_DataEntityBase___, v5);
-    sub_1BD3458(&System_Predicate_DataEntityBase__TypeInfo, v6);
-    sub_1BD3458(&Method_EventBoardGameCellMaster___c__DisplayClass5_0__GetBoardSquareCount_b__0__, v7);
-    sub_1BD3458(&EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo, v8);
-    byte_4B3704A = 1;
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&Method_ObservableCollectionExtensions_FindAll_DataEntityBase___, v5);
+    sub_1BE4ACC(&System_Predicate_DataEntityBase__TypeInfo, v6);
+    sub_1BE4ACC(&Method_EventBoardGameCellMaster___c__DisplayClass5_0__GetBoardSquareCount_b__0__, v7);
+    sub_1BE4ACC(&EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo, v8);
+    byte_4B66A64 = 1;
   }
-  v9 = sub_1BD36A4(EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
+  v9 = sub_1BE4D18(EventBoardGameCellMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9
     || (*(_DWORD *)(v9 + 16) = eventId,
         list = (System_Collections_ObjectModel_ObservableCollection_T__o *)this->fields.list,
-        v13 = (System_Predicate_object__o *)sub_1BD36A4(System_Predicate_DataEntityBase__TypeInfo),
+        v13 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_DataEntityBase__TypeInfo),
         System_Predicate_object____ctor(
           v13,
           (Il2CppObject *)v9,
@@ -51,9 +51,9 @@ int32_t __fastcall EventBoardGameCellMaster__GetBoardSquareCount(
         (All_object = ObservableCollectionExtensions__FindAll_object_(
                         list,
                         (System_Predicate_T__o *)v13,
-                        (const MethodInfo_2FB7F74 *)Method_ObservableCollectionExtensions_FindAll_DataEntityBase___)) == 0LL) )
+                        (const MethodInfo_2FDFD34 *)Method_ObservableCollectionExtensions_FindAll_DataEntityBase___)) == 0LL) )
   {
-    sub_1BD36B4(All_object, v11);
+    sub_1BE4D28(All_object, v11);
   }
   return All_object->fields._size;
 }
@@ -68,18 +68,18 @@ EventBoardGameCellEntity_o *__fastcall EventBoardGameCellMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B37046 & 1) == 0 )
+  if ( (byte_4B66A60 & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B37046 = 1;
+    byte_4B66A60 = 1;
   }
   PK = (Il2CppObject *)EventBoardGameCellEntity__CreatePK(eventId, cellId, *(const MethodInfo **)&cellId);
   return (EventBoardGameCellEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_31D2248 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
+                                         (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__GetEntity__);
 }
 
 
@@ -114,23 +114,23 @@ EventBoardGameCellEntity_o *__fastcall EventBoardGameCellMaster__GetEntityFromEv
   int32_t *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4B37049 & 1) == 0 )
+  if ( (byte_4B66A63 & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&eventId);
-    sub_1BD3458(&EventBoardGameCellEntity_TypeInfo, v7);
-    sub_1BD3458(&System_IDisposable_TypeInfo, v8);
-    sub_1BD3458(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1BD3458(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_4B37049 = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&eventId);
+    sub_1BE4ACC(&EventBoardGameCellEntity_TypeInfo, v7);
+    sub_1BE4ACC(&System_IDisposable_TypeInfo, v8);
+    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
+    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v10);
+    byte_4B66A63 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BD36B4(0LL, *(_QWORD *)&eventId);
+    sub_1BE4D28(0LL, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_316EA98 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BD36B4(0LL, v12);
+    sub_1BE4D28(0LL, v12);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -150,7 +150,7 @@ EventBoardGameCellEntity_o *__fastcall EventBoardGameCellMaster__GetEntityFromEv
     else
     {
 LABEL_9:
-      p_method = sub_1C25438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -173,7 +173,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v21 = sub_1C25438(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v21 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
     v22 = (EventBoardGameCellEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(
                                           Enumerator,
@@ -185,9 +185,9 @@ LABEL_16:
     if ( LOBYTE(v22->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (EventBoardGameCellEntity_c *)v22->klass->_2.typeHierarchy[methodPtr_low - 1] != EventBoardGameCellEntity_TypeInfo )
     {
-      sub_1BD3974(v22);
+      sub_1BE4FE8(v22);
 LABEL_33:
-      sub_1BD36B4(v22, v23);
+      sub_1BE4D28(v22, v23);
     }
     if ( v22->fields.eventId == eventId && v22->fields.cellId == cellId )
       goto LABEL_25;
@@ -211,7 +211,7 @@ LABEL_25:
   else
   {
 LABEL_29:
-    v29 = sub_1C25438(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
   return v24;
@@ -228,19 +228,19 @@ bool __fastcall EventBoardGameCellMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B37047 & 1) == 0 )
+  if ( (byte_4B66A61 & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__,
       entity);
-    byte_4B37047 = 1;
+    byte_4B66A61 = 1;
   }
   PK = (Il2CppObject *)EventBoardGameCellEntity__CreatePK(eventId, cellId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventBoardGameCellMaster__EventBoardGameCellEntity__string__TryGetEntity__);
 }
 
 
@@ -261,17 +261,17 @@ bool __fastcall EventBoardGameCellMaster___c__DisplayClass5_0___GetBoardSquareCo
   __int64 methodPtr_low; // x10
 
   v4 = this;
-  if ( (byte_4B3704B & 1) == 0 )
+  if ( (byte_4B66A65 & 1) == 0 )
   {
-    this = (EventBoardGameCellMaster___c__DisplayClass5_0_o *)sub_1BD3458(&EventBoardGameCellEntity_TypeInfo, ent);
-    byte_4B3704B = 1;
+    this = (EventBoardGameCellMaster___c__DisplayClass5_0_o *)sub_1BE4ACC(&EventBoardGameCellEntity_TypeInfo, ent);
+    byte_4B66A65 = 1;
   }
   if ( !ent
     || (methodPtr_low = LOBYTE(EventBoardGameCellEntity_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(ent->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (EventBoardGameCellEntity_c *)ent->klass->_2.typeHierarchy[methodPtr_low - 1] != EventBoardGameCellEntity_TypeInfo )
   {
-    sub_1BD36B4(this, ent);
+    sub_1BE4D28(this, ent);
   }
   return LODWORD(ent[1].klass) == v4->fields.eventId;
 }

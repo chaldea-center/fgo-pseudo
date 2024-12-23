@@ -1,17 +1,17 @@
 void __fastcall WarEntity___ctor(WarEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3823C & 1) == 0 )
+  if ( (byte_4B67C77 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B3823C = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B67C77 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-void __fastcall WarEntity___ctor_41197708(WarEntity_o *this, WarEntity_o *cSrc, const MethodInfo *method)
+void __fastcall WarEntity___ctor_41333424(WarEntity_o *this, WarEntity_o *cSrc, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
@@ -59,32 +59,32 @@ void __fastcall WarEntity___ctor_41197708(WarEntity_o *this, WarEntity_o *cSrc, 
   FollowerInfo_o *v48; // x6
   PartyListViewItem_o *v49; // x7
 
-  if ( (byte_4B3823D & 1) == 0 )
+  if ( (byte_4B67C78 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_4B3823D = 1;
+    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_4B67C78 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31D1CF0 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1BD36B4(v5, v6);
+    sub_1BE4D28(v5, v6);
   this->fields.id = cSrc->fields.id;
   age = cSrc->fields.age;
   this->fields.age = age;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.age, (int64_t)age, v7, v8, v9, v10, v11, v12);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.age, (int64_t)age, v7, v8, v9, v10, v11, v12);
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v15, v16, v17, v18, v19, v20);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v15, v16, v17, v18, v19, v20);
   longName = cSrc->fields.longName;
   this->fields.longName = longName;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.longName, (int64_t)longName, v22, v23, v24, v25, v26, v27);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.longName, (int64_t)longName, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)&this->fields.bannerId = *(_QWORD *)&cSrc->fields.bannerId;
   this->fields.parentWarId = cSrc->fields.parentWarId;
   this->fields.flag = cSrc->fields.flag;
   emptyMessage = cSrc->fields.emptyMessage;
   this->fields.emptyMessage = emptyMessage;
-  sub_1BD33FC(
+  sub_1BE4A70(
     (PartyOrganizationUtility_o *)&this->fields.emptyMessage,
     (int64_t)emptyMessage,
     v29,
@@ -98,11 +98,11 @@ void __fastcall WarEntity___ctor_41197708(WarEntity_o *this, WarEntity_o *cSrc, 
   *(_QWORD *)&this->fields.eventId = *(_QWORD *)&cSrc->fields.eventId;
   coordinate = cSrc->fields.coordinate;
   this->fields.coordinate = coordinate;
-  sub_1BD33FC((PartyOrganizationUtility_o *)&this->fields.coordinate, (int64_t)coordinate, v36, v37, v38, v39, v40, v41);
+  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.coordinate, (int64_t)coordinate, v36, v37, v38, v39, v40, v41);
   coordinates = cSrc->fields.coordinates;
   this->fields.coordinates = coordinates;
   p_coordinates = &this->fields.coordinates;
-  sub_1BD33FC((PartyOrganizationUtility_o *)p_coordinates, (int64_t)coordinates, v44, v45, v46, v47, v48, v49);
+  sub_1BE4A70((PartyOrganizationUtility_o *)p_coordinates, (int64_t)coordinates, v44, v45, v46, v47, v48, v49);
   *((_DWORD *)p_coordinates + 2) = cSrc->fields.assetId;
 }
 
@@ -140,19 +140,19 @@ int32_t __fastcall WarEntity__GetBaseMap(WarEntity_o *this, const MethodInfo *me
   const MethodInfo *v6; // x3
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38247 & 1) == 0 )
+  if ( (byte_4B67C82 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38247 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C82 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 7, this->fields.id, v6);
   if ( PrioredEntity )
@@ -172,18 +172,18 @@ System_String_o *__fastcall WarEntity__GetNoticeText(WarEntity_o *this, const Me
   System_String_o *v9; // x19
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38249 & 1) == 0 )
+  if ( (byte_4B67C84 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_WarAddMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    sub_1BD3458(&StringLiteral_1/*""*/, v4);
-    byte_4B38249 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_WarAddMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v4);
+    byte_4B67C84 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v6);
+    sub_1BE4D28(0LL, v6);
   id = this->fields.id;
   v9 = (System_String_o *)StringLiteral_1/*""*/;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Master_object, 17, id, v7);
@@ -202,19 +202,19 @@ int32_t __fastcall WarEntity__GetPrioredBannerId(WarEntity_o *this, const Method
   int32_t bannerId; // w20
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38240 & 1) == 0 )
+  if ( (byte_4B67C7B & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38240 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C7B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   bannerId = this->fields.bannerId;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 3, this->fields.id, v6);
@@ -235,21 +235,21 @@ System_Single_array_array *__fastcall WarEntity__GetPrioredCoordinates(WarEntity
   WarAddEntity_o *PrioredEntity; // x0
   Il2CppObject *overwriteStr; // x19
 
-  if ( (byte_4B38246 & 1) == 0 )
+  if ( (byte_4B67C81 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_JsonManager_DeserializeMultiArray_float___, v3);
-    sub_1BD3458(&JsonManager_TypeInfo, v4);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B38246 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_JsonManager_DeserializeMultiArray_float___, v3);
+    sub_1BE4ACC(&JsonManager_TypeInfo, v4);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B67C81 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v7);
+    sub_1BE4D28(Instance, v7);
   }
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 11, this->fields.id, v8);
   if ( !PrioredEntity )
@@ -259,7 +259,7 @@ System_Single_array_array *__fastcall WarEntity__GetPrioredCoordinates(WarEntity
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return JsonManager__DeserializeMultiArray_float_(
            overwriteStr,
-           (const MethodInfo_2F98D3C *)Method_JsonManager_DeserializeMultiArray_float___);
+           (const MethodInfo_2FC0A5C *)Method_JsonManager_DeserializeMultiArray_float___);
 }
 
 
@@ -272,19 +272,19 @@ System_String_o *__fastcall WarEntity__GetPrioredLongName(WarEntity_o *this, con
   System_String_o *longName; // x20
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38244 & 1) == 0 )
+  if ( (byte_4B67C7F & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38244 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C7F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   longName = this->fields.longName;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 9, this->fields.id, v6);
@@ -303,19 +303,19 @@ int32_t __fastcall WarEntity__GetPrioredMaterialParentWarId(WarEntity_o *this, c
   int32_t materialParentWarId; // w20
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38245 & 1) == 0 )
+  if ( (byte_4B67C80 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38245 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C80 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   materialParentWarId = this->fields.materialParentWarId;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 10, this->fields.id, v6);
@@ -334,19 +334,19 @@ System_String_o *__fastcall WarEntity__GetPrioredName(WarEntity_o *this, const M
   System_String_o *name; // x20
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38243 & 1) == 0 )
+  if ( (byte_4B67C7E & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38243 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C7E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   name = this->fields.name;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 8, this->fields.id, v6);
@@ -365,19 +365,19 @@ int32_t __fastcall WarEntity__GetPrioredParentId(WarEntity_o *this, const Method
   int32_t parentWarId; // w20
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38241 & 1) == 0 )
+  if ( (byte_4B67C7C & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38241 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C7C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   parentWarId = this->fields.parentWarId;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 2, this->fields.id, v6);
@@ -396,17 +396,17 @@ int32_t __fastcall WarEntity__GetPriority(WarEntity_o *this, const MethodInfo *m
   WarAddEntity_o *PrioredEntity; // x0
   int32_t *p_overwriteId; // x8
 
-  if ( (byte_4B3824A & 1) == 0 )
+  if ( (byte_4B67C85 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_WarAddMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    byte_4B3824A = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_WarAddMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    byte_4B67C85 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v5);
+    sub_1BE4D28(0LL, v5);
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Master_object, 22, this->fields.id, v6);
   p_overwriteId = &PrioredEntity->fields.overwriteId;
   if ( !PrioredEntity )
@@ -423,19 +423,19 @@ int32_t __fastcall WarEntity__GetQuestBoardSectionId(WarEntity_o *this, const Me
   const MethodInfo *v6; // x3
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B38242 & 1) == 0 )
+  if ( (byte_4B67C7D & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, method);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B38242 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, method);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B67C7D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v5);
+    sub_1BE4D28(Instance, v5);
   }
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 13, this->fields.id, v6);
   if ( PrioredEntity )
@@ -453,17 +453,17 @@ int32_t __fastcall WarEntity__GetStartType(WarEntity_o *this, const MethodInfo *
   WarAddEntity_o *PrioredEntity; // x0
   int32_t *p_overwriteId; // x8
 
-  if ( (byte_4B38248 & 1) == 0 )
+  if ( (byte_4B67C83 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_WarAddMaster___, method);
-    sub_1BD3458(&DataManager_TypeInfo, v3);
-    byte_4B38248 = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_WarAddMaster___, method);
+    sub_1BE4ACC(&DataManager_TypeInfo, v3);
+    byte_4B67C83 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v5);
+    sub_1BE4D28(0LL, v5);
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Master_object, 16, this->fields.id, v6);
   p_overwriteId = &PrioredEntity->fields.overwriteId;
   if ( !PrioredEntity )
@@ -482,19 +482,19 @@ bool __fastcall WarEntity__HasFlag(WarEntity_o *this, int32_t flag, const Method
   int32_t overwriteId; // w21
   WarAddEntity_o *PrioredEntity; // x0
 
-  if ( (byte_4B3823F & 1) == 0 )
+  if ( (byte_4B67C7A & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMasterData_WarAddMaster___, *(_QWORD *)&flag);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B3823F = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarAddMaster___, *(_QWORD *)&flag);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B67C7A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
+                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarAddMaster___)) == 0LL )
   {
-    sub_1BD36B4(Instance, v7);
+    sub_1BE4D28(Instance, v7);
   }
   overwriteId = this->fields.flag;
   PrioredEntity = WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Instance, 6, this->fields.id, v8);
@@ -536,17 +536,17 @@ bool __fastcall WarEntity__IsContainPrioredEntity(WarEntity_o *this, int32_t typ
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B3824C & 1) == 0 )
+  if ( (byte_4B67C87 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataManager_GetMaster_WarAddMaster___, *(_QWORD *)&type);
-    sub_1BD3458(&DataManager_TypeInfo, v5);
-    byte_4B3824C = 1;
+    sub_1BE4ACC(&Method_DataManager_GetMaster_WarAddMaster___, *(_QWORD *)&type);
+    sub_1BE4ACC(&DataManager_TypeInfo, v5);
+    byte_4B67C87 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F31630 *)Method_DataManager_GetMaster_WarAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_WarAddMaster___);
   if ( !Master_object )
-    sub_1BD36B4(0LL, v7);
+    sub_1BE4D28(0LL, v7);
   return WarAddMaster__GetPrioredEntity((WarAddMaster_o *)Master_object, type, this->fields.id, v8) != 0LL;
 }
 
@@ -588,10 +588,10 @@ bool __fastcall WarEntity__IsMainInterlude(WarEntity_o *this, const MethodInfo *
   BalanceConfig_c *v3; // x0
   int32_t parentWarId; // w19
 
-  if ( (byte_4B3823E & 1) == 0 )
+  if ( (byte_4B67C79 & 1) == 0 )
   {
-    sub_1BD3458(&BalanceConfig_TypeInfo, method);
-    byte_4B3823E = 1;
+    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
+    byte_4B67C79 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   parentWarId = this->fields.parentWarId;
@@ -665,38 +665,38 @@ bool __fastcall WarEntity__IsPurchasedByRarePrism(WarEntity_o *this, const Metho
   System_Collections_Generic_List_T__o *m_CancellationTokenSource; // x20
   System_Func_object__bool__o *v27; // x21
 
-  if ( (byte_4B3824B & 1) == 0 )
+  if ( (byte_4B67C86 & 1) == 0 )
   {
-    sub_1BD3458(&Method_BasicHelper_Any_MapControl_QuestInfo___, method);
-    sub_1BD3458(&Method_DataManager_GetMasterData_UserQuestMaster___, v3);
-    sub_1BD3458(&System_Func_MapControl_QuestInfo__bool__TypeInfo, v4);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1BD3458(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
-    sub_1BD3458(&Method_WarEntity___c__DisplayClass53_0__IsPurchasedByRarePrism_b__0__, v7);
-    sub_1BD3458(&WarEntity___c__DisplayClass53_0_TypeInfo, v8);
-    byte_4B3824B = 1;
+    sub_1BE4ACC(&Method_BasicHelper_Any_MapControl_QuestInfo___, method);
+    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserQuestMaster___, v3);
+    sub_1BE4ACC(&System_Func_MapControl_QuestInfo__bool__TypeInfo, v4);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1BE4ACC(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
+    sub_1BE4ACC(&Method_WarEntity___c__DisplayClass53_0__IsPurchasedByRarePrism_b__0__, v7);
+    sub_1BE4ACC(&WarEntity___c__DisplayClass53_0_TypeInfo, v8);
+    byte_4B67C86 = 1;
   }
-  v9 = sub_1BD36A4(WarEntity___c__DisplayClass53_0_TypeInfo);
+  v9 = sub_1BE4D18(WarEntity___c__DisplayClass53_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_9;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   if ( WarEntity__HasFlag(this, 0x2000, v18) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       MasterData_object = DataManager__GetMasterData_object_(
                             Instance,
-                            (const MethodInfo_2F31684 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                            (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserQuestMaster___);
       *(_QWORD *)(v9 + 24) = MasterData_object;
-      sub_1BD33FC((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)MasterData_object, v20, v21, v22, v23, v24, v25);
-      Instance = (DataManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_37FE068 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)MasterData_object, v20, v21, v22, v23, v24, v25);
+      Instance = (DataManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( Instance )
       {
         m_CancellationTokenSource = (System_Collections_Generic_List_T__o *)Instance->fields.m_CancellationTokenSource;
-        v27 = (System_Func_object__bool__o *)sub_1BD36A4(System_Func_MapControl_QuestInfo__bool__TypeInfo);
+        v27 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_MapControl_QuestInfo__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v27,
           (Il2CppObject *)v9,
@@ -705,11 +705,11 @@ bool __fastcall WarEntity__IsPurchasedByRarePrism(WarEntity_o *this, const Metho
         return BasicHelper__Any_object_(
                  m_CancellationTokenSource,
                  (System_Func_T__bool__o *)v27,
-                 (const MethodInfo_2F1C5F0 *)Method_BasicHelper_Any_MapControl_QuestInfo___);
+                 (const MethodInfo_2F4407C *)Method_BasicHelper_Any_MapControl_QuestInfo___);
       }
     }
 LABEL_9:
-    sub_1BD36B4(Instance, v11);
+    sub_1BE4D28(Instance, v11);
   }
   return 0;
 }
@@ -777,10 +777,10 @@ bool __fastcall WarEntity___c__DisplayClass53_0___IsPurchasedByRarePrism_b__0(
   UserQuestEntity_o *EntityFromId; // x0
 
   v4 = this;
-  if ( (byte_4B3824D & 1) == 0 )
+  if ( (byte_4B67C88 & 1) == 0 )
   {
-    this = (WarEntity___c__DisplayClass53_0_o *)sub_1BD3458(&NetworkManager_TypeInfo, quest);
-    byte_4B3824D = 1;
+    this = (WarEntity___c__DisplayClass53_0_o *)sub_1BE4ACC(&NetworkManager_TypeInfo, quest);
+    byte_4B67C88 = 1;
   }
   if ( !quest )
     goto LABEL_17;
@@ -795,10 +795,10 @@ bool __fastcall WarEntity___c__DisplayClass53_0___IsPurchasedByRarePrism_b__0(
   userQuestMst = v4->fields.userQuestMst;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B31D77 )
+  if ( !byte_4B61717 )
   {
-    sub_1BD3458(&NetworkManager_TypeInfo, quest);
-    byte_4B31D77 = 1;
+    sub_1BE4ACC(&NetworkManager_TypeInfo, quest);
+    byte_4B61717 = 1;
   }
   this = (WarEntity___c__DisplayClass53_0_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -808,7 +808,7 @@ bool __fastcall WarEntity___c__DisplayClass53_0___IsPurchasedByRarePrism_b__0(
   }
   if ( !userQuestMst )
 LABEL_17:
-    sub_1BD36B4(this, quest);
+    sub_1BE4D28(this, quest);
   EntityFromId = UserQuestMaster__getEntityFromId(
                    userQuestMst,
                    *(_QWORD *)&this[5].fields.userQuestMst->fields.revision,

@@ -2,10 +2,10 @@ void __fastcall ItemIconWithConsumptionNumberComponent___ctor(
         ItemIconWithConsumptionNumberComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B36663 & 1) == 0 )
+  if ( (byte_4B6607B & 1) == 0 )
   {
-    sub_1BD3458(&ItemIconComponent_TypeInfo, method);
-    byte_4B36663 = 1;
+    sub_1BE4ACC(&ItemIconComponent_TypeInfo, method);
+    byte_4B6607B = 1;
   }
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
@@ -31,12 +31,12 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
   int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
 
   v12 = consumptionNumber;
-  if ( (byte_4B36662 & 1) == 0 )
+  if ( (byte_4B6607A & 1) == 0 )
   {
-    sub_1BD3458(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BD3458(&StringLiteral_11023/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
-    byte_4B36662 = 1;
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BE4ACC(&StringLiteral_11036/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
+    byte_4B6607A = 1;
   }
   consumptionNumberLabel = (UnityEngine_Object_o *)this->fields.consumptionNumberLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,11 +46,11 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
     v7 = this->fields.consumptionNumberLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11023/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11036/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
     v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v12, 0LL);
     v10 = System_String__Format(v8, v9, 0LL);
     if ( !v7 || (UILabel__set_text(v7, v10, 0LL), (v10 = (System_String_o *)this->fields.consumptionNumberLabel) == 0LL) )
-      sub_1BD36B4(v10, v11);
+      sub_1BE4D28(v10, v11);
     UILabel__set_fontSize((UILabel_o *)v10, 23, 0LL);
   }
 }

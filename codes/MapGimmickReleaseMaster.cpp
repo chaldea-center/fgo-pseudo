@@ -1,14 +1,14 @@
 void __fastcall MapGimmickReleaseMaster___ctor(MapGimmickReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3751E & 1) == 0 )
+  if ( (byte_4B66F49 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string___ctor__, method);
-    byte_4B3751E = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string___ctor__, method);
+    byte_4B66F49 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    249,
-    (const MethodInfo_31D2208 *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string___ctor__);
+    253,
+    (const MethodInfo_31FDADC *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ MapGimmickReleaseEntity_o *__fastcall MapGimmickReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B3751C & 1) == 0 )
+  if ( (byte_4B66F47 & 1) == 0 )
   {
-    sub_1BD3458(
+    sub_1BE4ACC(
       &Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__GetEntity__,
       *(_QWORD *)&mapGimmickId);
-    byte_4B3751C = 1;
+    byte_4B66F47 = 1;
   }
   PK = (Il2CppObject *)MapGimmickReleaseEntity__CreatePK(mapGimmickId, priority, *(const MethodInfo **)&priority);
   return (MapGimmickReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_31D2248 *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__GetEntity__);
+                                        (const MethodInfo_31FDB1C *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__GetEntity__);
 }
 
 
@@ -78,37 +78,37 @@ bool __fastcall MapGimmickReleaseMaster__IsOpen(
   System_Collections_Generic_List_Enumerator_T__o v40; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v41; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B3751F & 1) == 0 )
+  if ( (byte_4B66F4A & 1) == 0 )
   {
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, mapGimmickEntity);
-    sub_1BD3458(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__, v6);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__, v7);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__, v8);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__bool__get_Values__, v9);
-    sub_1BD3458(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__, v10);
-    sub_1BD3458(&System_Collections_Generic_Dictionary_int__bool__TypeInfo, v11);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_bool__Dispose__, v12);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_bool__MoveNext__, v13);
-    sub_1BD3458(&Method_System_Collections_Generic_List_Enumerator_bool__get_Current__, v14);
-    sub_1BD3458(&Method_System_Collections_Generic_List_bool__GetEnumerator__, v15);
-    sub_1BD3458(&Method_System_Collections_Generic_List_bool___ctor___76908488, v16);
-    sub_1BD3458(&System_Collections_Generic_List_bool__TypeInfo, v17);
-    sub_1BD3458(&MapGimmickReleaseEntity_TypeInfo, v18);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v19);
-    sub_1BD3458(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v20);
-    sub_1BD3458(&Method_SingletonTemplate_QuestTree__get_Instance__, v21);
-    byte_4B3751F = 1;
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, mapGimmickEntity);
+    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__, v6);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__, v7);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__, v8);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__bool__get_Values__, v9);
+    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__, v10);
+    sub_1BE4ACC(&System_Collections_Generic_Dictionary_int__bool__TypeInfo, v11);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_bool__Dispose__, v12);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_bool__MoveNext__, v13);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_bool__get_Current__, v14);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_bool__GetEnumerator__, v15);
+    sub_1BE4ACC(&Method_System_Collections_Generic_List_bool___ctor___77097744, v16);
+    sub_1BE4ACC(&System_Collections_Generic_List_bool__TypeInfo, v17);
+    sub_1BE4ACC(&MapGimmickReleaseEntity_TypeInfo, v18);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v19);
+    sub_1BE4ACC(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v20);
+    sub_1BE4ACC(&Method_SingletonTemplate_QuestTree__get_Instance__, v21);
+    byte_4B66F4A = 1;
   }
   memset(&v41, 0, sizeof(v41));
   if ( !mapGimmickEntity )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     return 0;
-  MapGmkOffIdList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37FDC48 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  MapGmkOffIdList = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !MapGmkOffIdList )
     goto LABEL_39;
   MapGmkOffIdList = QuestAfterAction__getMapGmkOffIdList((QuestAfterAction_o *)MapGmkOffIdList, 0LL);
@@ -121,17 +121,17 @@ bool __fastcall MapGimmickReleaseMaster__IsOpen(
     do
     {
       if ( v26 == v27 )
-        sub_1BD36BC(MapGmkOffIdList, v25);
+        sub_1BE4D30(MapGmkOffIdList, v25);
       if ( *((_DWORD *)MapGmkOffIdList + v27 + 8) == mapGimmickEntity->fields.id )
         return 0;
     }
     while ( v26 != ++v27 );
   }
-  v28 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1BD36A4(System_Collections_Generic_Dictionary_int__bool__TypeInfo);
+  v28 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__bool__TypeInfo);
   System_Collections_Generic_Dictionary_int__bool____ctor(
     v28,
-    (const MethodInfo_3215B98 *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
-  MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_37FE068 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    (const MethodInfo_324146C *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
+  MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !MapGmkOffIdList
     || (v29 = QuestTree__CheckMapGimmickCond(
                 (QuestTree_o *)MapGmkOffIdList,
@@ -140,7 +140,7 @@ bool __fastcall MapGimmickReleaseMaster__IsOpen(
                 mapGimmickEntity->fields.dispTargetId,
                 mapGimmickEntity->fields.dispTargetValue,
                 0LL),
-        (MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_37FE068 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL)
+        (MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL)
     || (MapGmkOffIdList = (void *)QuestTree__CheckMapGimmickCond(
                                     (QuestTree_o *)MapGmkOffIdList,
                                     mapGimmickEntity->fields.id,
@@ -153,15 +153,15 @@ bool __fastcall MapGimmickReleaseMaster__IsOpen(
           v28,
           0,
           v29 & (unsigned __int8)MapGmkOffIdList & 1,
-          (const MethodInfo_3216558 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__),
+          (const MethodInfo_3241E2C *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__),
         (MapGmkOffIdList = this->fields.list) == 0LL) )
   {
 LABEL_39:
-    sub_1BD36B4(MapGmkOffIdList, v25);
+    sub_1BE4D28(MapGmkOffIdList, v25);
   }
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)MapGmkOffIdList,
-            (const MethodInfo_316E4C0 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v31 = Count;
@@ -174,7 +174,7 @@ LABEL_39:
       MapGmkOffIdList = System_Collections_ObjectModel_Collection_object___get_Item(
                           (System_Collections_ObjectModel_Collection_T__o *)MapGmkOffIdList,
                           v32,
-                          (const MethodInfo_316E550 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                          (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !MapGmkOffIdList )
         goto LABEL_39;
       v33 = (int32_t *)MapGmkOffIdList;
@@ -188,13 +188,13 @@ LABEL_39:
         && (!System_Collections_Generic_Dictionary_int__bool___ContainsKey(
                v28,
                *((_DWORD *)MapGmkOffIdList + 9),
-               (const MethodInfo_321676C *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__)
+               (const MethodInfo_3242040 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__)
          || System_Collections_Generic_Dictionary_int__bool___get_Item(
               v28,
               v33[9],
-              (const MethodInfo_32164C8 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__)) )
+              (const MethodInfo_3241D9C *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__)) )
       {
-        MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_37FE068 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+        MapGmkOffIdList = SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
         if ( !MapGmkOffIdList )
           goto LABEL_39;
         v35 = QuestTree__CheckMapGimmickCond((QuestTree_o *)MapGmkOffIdList, v33[4], v33[6], v33[7], v33[8], 0LL);
@@ -202,31 +202,31 @@ LABEL_39:
           v28,
           v33[9],
           v35,
-          (const MethodInfo_3216558 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+          (const MethodInfo_3241E2C *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
       }
     }
     while ( v31 != ++v32 );
   }
   Values = System_Collections_Generic_Dictionary_int__bool___get_Values(
              v28,
-             (const MethodInfo_3216378 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
-  v37 = (System_Collections_Generic_List_bool__o *)sub_1BD36A4(System_Collections_Generic_List_bool__TypeInfo);
-  System_Collections_Generic_List_bool____ctor_56063520(
+             (const MethodInfo_3241C4C *)Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
+  v37 = (System_Collections_Generic_List_bool__o *)sub_1BE4D18(System_Collections_Generic_List_bool__TypeInfo);
+  System_Collections_Generic_List_bool____ctor_56240820(
     v37,
     (System_Collections_Generic_IEnumerable_T__o *)Values,
-    (const MethodInfo_3577620 *)Method_System_Collections_Generic_List_bool___ctor___76908488);
+    (const MethodInfo_35A2AB4 *)Method_System_Collections_Generic_List_bool___ctor___77097744);
   if ( !v37 )
     goto LABEL_39;
   System_Collections_Generic_List_bool___GetEnumerator(
     &v40,
     v37,
-    (const MethodInfo_3578858 *)Method_System_Collections_Generic_List_bool__GetEnumerator__);
+    (const MethodInfo_35A3CEC *)Method_System_Collections_Generic_List_bool__GetEnumerator__);
   v41 = v40;
   while ( 1 )
   {
     v38 = System_Collections_Generic_List_Enumerator_bool___MoveNext(
             &v41,
-            (const MethodInfo_332DAAC *)Method_System_Collections_Generic_List_Enumerator_bool__MoveNext__);
+            (const MethodInfo_335993C *)Method_System_Collections_Generic_List_Enumerator_bool__MoveNext__);
     if ( !v38 )
       break;
     if ( LOBYTE(v41.fields._current) )
@@ -239,7 +239,7 @@ LABEL_39:
 LABEL_37:
   System_Collections_Generic_List_Enumerator_bool___Dispose(
     &v41,
-    (const MethodInfo_332DAA8 *)Method_System_Collections_Generic_List_Enumerator_bool__Dispose__);
+    (const MethodInfo_3359938 *)Method_System_Collections_Generic_List_Enumerator_bool__Dispose__);
   return v38 && v39 == 13;
 }
 
@@ -254,15 +254,15 @@ bool __fastcall MapGimmickReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B3751D & 1) == 0 )
+  if ( (byte_4B66F48 & 1) == 0 )
   {
-    sub_1BD3458(&Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__TryGetEntity__, entity);
-    byte_4B3751D = 1;
+    sub_1BE4ACC(&Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__TryGetEntity__, entity);
+    byte_4B66F48 = 1;
   }
   PK = (Il2CppObject *)MapGimmickReleaseEntity__CreatePK(mapGimmickId, priority, *(const MethodInfo **)&mapGimmickId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31D2298 *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_31FDB6C *)Method_DataMasterBase_MapGimmickReleaseMaster__MapGimmickReleaseEntity__string__TryGetEntity__);
 }

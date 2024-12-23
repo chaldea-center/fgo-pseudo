@@ -1,9 +1,9 @@
 void __fastcall ItemDetailInfoComponent___ctor(ItemDetailInfoComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3263A & 1) == 0 )
+  if ( (byte_4B61FDD & 1) == 0 )
   {
-    sub_1BD3458(&BaseDialog_TypeInfo, method);
-    byte_4B3263A = 1;
+    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
+    byte_4B61FDD = 1;
   }
   *(_QWORD *)&this->fields.DETAIL_FONT_SIZE = 0x1200000019LL;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -27,7 +27,7 @@ void __fastcall ItemDetailInfoComponent__Callback(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1BD33FC(p_callbackFunc);
+    sub_1BE4A70(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       result,
@@ -40,11 +40,11 @@ void __fastcall ItemDetailInfoComponent__Close(ItemDetailInfoComponent_o *this, 
 {
   const MethodInfo *v2; // x2
 
-  ItemDetailInfoComponent__Close_31725372(this, 0LL, v2);
+  ItemDetailInfoComponent__Close_31798924(this, 0LL, v2);
 }
 
 
-void __fastcall ItemDetailInfoComponent__Close_31725372(
+void __fastcall ItemDetailInfoComponent__Close_31798924(
         ItemDetailInfoComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -52,15 +52,15 @@ void __fastcall ItemDetailInfoComponent__Close_31725372(
   __int64 v5; // x1
   System_Action_o *v6; // x20
 
-  if ( (byte_4B32638 & 1) == 0 )
+  if ( (byte_4B61FDB & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, callback);
-    sub_1BD3458(&Method_ItemDetailInfoComponent_EndClose__, v5);
-    byte_4B32638 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, callback);
+    sub_1BE4ACC(&Method_ItemDetailInfoComponent_EndClose__, v5);
+    byte_4B61FDB = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BD33FC(&this->fields.closeCallbackFunc);
-  v6 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+  sub_1BE4A70(&this->fields.closeCallbackFunc);
+  v6 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ItemDetailInfoComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
@@ -77,7 +77,7 @@ void __fastcall ItemDetailInfoComponent__EndClose(ItemDetailInfoComponent_o *thi
   ItemDetailInfoComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BD36B4(0LL, v4);
+    sub_1BE4D28(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -85,7 +85,7 @@ void __fastcall ItemDetailInfoComponent__EndClose(ItemDetailInfoComponent_o *thi
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0LL;
-    sub_1BD33FC(p_closeCallbackFunc);
+    sub_1BE4A70(p_closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -106,11 +106,11 @@ void __fastcall ItemDetailInfoComponent__Init(ItemDetailInfoComponent_o *this, c
   UnityEngine_GameObject_o *itemDetailInfo; // x0
   UnityEngine_Object_o *externalPayStoneNumLabel; // x20
 
-  if ( (byte_4B32633 & 1) == 0 )
+  if ( (byte_4B61FD6 & 1) == 0 )
   {
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, method);
-    sub_1BD3458(&StringLiteral_1/*""*/, v3);
-    byte_4B32633 = 1;
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
+    sub_1BE4ACC(&StringLiteral_1/*""*/, v3);
+    byte_4B61FD6 = 1;
   }
   itemDetailInfo = this->fields.itemDetailInfo;
   if ( !itemDetailInfo )
@@ -149,7 +149,7 @@ void __fastcall ItemDetailInfoComponent__Init(ItemDetailInfoComponent_o *this, c
   itemDetailInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !itemDetailInfo )
 LABEL_16:
-    sub_1BD36B4(itemDetailInfo, method);
+    sub_1BE4D28(itemDetailInfo, method);
   UnityEngine_GameObject__SetActive(itemDetailInfo, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -186,12 +186,12 @@ void __fastcall ItemDetailInfoComponent__Open(
   const MethodInfo *v13; // x1
   System_Action_o *v14; // x20
 
-  if ( (byte_4B32635 & 1) == 0 )
+  if ( (byte_4B61FD8 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, itemData);
-    sub_1BD3458(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, v9);
-    sub_1BD3458(&Method_ItemDetailInfoComponent_EndOpen__, v10);
-    byte_4B32635 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, itemData);
+    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, v9);
+    sub_1BE4ACC(&Method_ItemDetailInfoComponent_EndOpen__, v10);
+    byte_4B61FD8 = 1;
   }
   if ( !this->fields.state )
   {
@@ -201,14 +201,14 @@ void __fastcall ItemDetailInfoComponent__Open(
           (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL)
       || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      gameObject,
-                                                     (const MethodInfo_2F81A7C *)Method_UnityEngine_GameObject_GetComponent_UIPanel___)) == 0LL
+                                                     (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIPanel___)) == 0LL
       || (UIPanel__set_depth((UIPanel_o *)gameObject, depth, 0LL),
           this->fields.callbackFunc = callback,
-          gameObject = (UnityEngine_GameObject_o *)sub_1BD33FC(&this->fields.callbackFunc),
+          gameObject = (UnityEngine_GameObject_o *)sub_1BE4A70(&this->fields.callbackFunc),
           !itemData)
       || (gameObject = (UnityEngine_GameObject_o *)this->fields.itemNameLabel) == 0LL )
     {
-      sub_1BD36B4(gameObject, v12);
+      sub_1BE4D28(gameObject, v12);
     }
     UILabel__set_text((UILabel_o *)gameObject, itemData->fields.name, 0LL);
     WrapControlText__textAdjust(
@@ -219,7 +219,7 @@ void __fastcall ItemDetailInfoComponent__Open(
       0LL);
     this->fields.state = 1;
     ItemDetailInfoComponent__setBtnInfoActive(this, v13);
-    v14 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    v14 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(v14, (Il2CppObject *)this, Method_ItemDetailInfoComponent_EndOpen__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v14, 0, 0LL);
   }
@@ -239,11 +239,11 @@ void __fastcall ItemDetailInfoComponent__OpenItemMsgInfo(
   const MethodInfo *v12; // x1
   System_Action_o *v13; // x20
 
-  if ( (byte_4B32636 & 1) == 0 )
+  if ( (byte_4B61FD9 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, name);
-    sub_1BD3458(&Method_ItemDetailInfoComponent_EndOpen__, v9);
-    byte_4B32636 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, name);
+    sub_1BE4ACC(&Method_ItemDetailInfoComponent_EndOpen__, v9);
+    byte_4B61FD9 = 1;
   }
   if ( !this->fields.state )
   {
@@ -251,16 +251,16 @@ void __fastcall ItemDetailInfoComponent__OpenItemMsgInfo(
     if ( !gameObject
       || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
           this->fields.callbackFunc = callback,
-          sub_1BD33FC(&this->fields.callbackFunc),
+          sub_1BE4A70(&this->fields.callbackFunc),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.itemNameLabel) == 0LL) )
     {
-      sub_1BD36B4(gameObject, v11);
+      sub_1BE4D28(gameObject, v11);
     }
     UILabel__set_text((UILabel_o *)gameObject, name, 0LL);
     WrapControlText__textAdjust(this->fields.itemDetailLabel, detail, this->fields.DETAIL_FONT_SIZE, 0, 0LL);
     this->fields.state = 1;
     ItemDetailInfoComponent__setBtnInfoActive(this, v12);
-    v13 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(v13, (Il2CppObject *)this, Method_ItemDetailInfoComponent_EndOpen__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0LL);
   }
@@ -280,11 +280,11 @@ void __fastcall ItemDetailInfoComponent__OpenUserItemInfo(
   const MethodInfo *v12; // x1
   System_Action_o *v13; // x20
 
-  if ( (byte_4B32634 & 1) == 0 )
+  if ( (byte_4B61FD7 & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, itemData);
-    sub_1BD3458(&Method_ItemDetailInfoComponent_EndOpen__, v9);
-    byte_4B32634 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, itemData);
+    sub_1BE4ACC(&Method_ItemDetailInfoComponent_EndOpen__, v9);
+    byte_4B61FD7 = 1;
   }
   if ( !this->fields.state )
   {
@@ -292,13 +292,13 @@ void __fastcall ItemDetailInfoComponent__OpenUserItemInfo(
     if ( !gameObject
       || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
           this->fields.callbackFunc = callback,
-          gameObject = (UnityEngine_GameObject_o *)sub_1BD33FC(&this->fields.callbackFunc),
+          gameObject = (UnityEngine_GameObject_o *)sub_1BE4A70(&this->fields.callbackFunc),
           !itemData)
       || (gameObject = (UnityEngine_GameObject_o *)this->fields.itemNameLabel) == 0LL
       || (UILabel__set_text((UILabel_o *)gameObject, itemData->fields.name, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel) == 0LL) )
     {
-      sub_1BD36B4(gameObject, v11);
+      sub_1BE4D28(gameObject, v11);
     }
     UILabel__set_spacingY((UILabel_o *)gameObject, spacingY, 0LL);
     WrapControlText__textAdjust(
@@ -309,7 +309,7 @@ void __fastcall ItemDetailInfoComponent__OpenUserItemInfo(
       0LL);
     this->fields.state = 1;
     ItemDetailInfoComponent__setBtnInfoActive(this, v12);
-    v13 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
     System_Action___ctor(v13, (Il2CppObject *)this, Method_ItemDetailInfoComponent_EndOpen__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0LL);
   }
@@ -347,17 +347,17 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
   const MethodInfo *v32; // x1
   System_Action_o *v33; // x20
 
-  if ( (byte_4B32637 & 1) == 0 )
+  if ( (byte_4B61FDA & 1) == 0 )
   {
-    sub_1BD3458(&System_Action_TypeInfo, name);
-    sub_1BD3458(&Method_ItemDetailInfoComponent_EndOpen__, v13);
-    sub_1BD3458(&LocalizationManager_TypeInfo, v14);
-    sub_1BD3458(&UnityEngine_Object_TypeInfo, v15);
-    sub_1BD3458(&StringLiteral_5911/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/, v16);
-    sub_1BD3458(&StringLiteral_6614/*"FREESTONE_INFO_TITLE"*/, v17);
-    sub_1BD3458(&StringLiteral_10510/*"PAYSTONE_INFO_TITLE"*/, v18);
-    sub_1BD3458(&StringLiteral_12449/*"STONE_INFO_NOTICE"*/, v19);
-    byte_4B32637 = 1;
+    sub_1BE4ACC(&System_Action_TypeInfo, name);
+    sub_1BE4ACC(&Method_ItemDetailInfoComponent_EndOpen__, v13);
+    sub_1BE4ACC(&LocalizationManager_TypeInfo, v14);
+    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v15);
+    sub_1BE4ACC(&StringLiteral_5914/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/, v16);
+    sub_1BE4ACC(&StringLiteral_6617/*"FREESTONE_INFO_TITLE"*/, v17);
+    sub_1BE4ACC(&StringLiteral_10522/*"PAYSTONE_INFO_TITLE"*/, v18);
+    sub_1BE4ACC(&StringLiteral_12463/*"STONE_INFO_NOTICE"*/, v19);
+    byte_4B61FDA = 1;
   }
   if ( !this->fields.state )
   {
@@ -366,7 +366,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
     {
       UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
       this->fields.callbackFunc = callback;
-      sub_1BD33FC(&this->fields.callbackFunc);
+      sub_1BE4A70(&this->fields.callbackFunc);
       gameObject = this->fields.itemDetailInfo;
       if ( gameObject )
       {
@@ -389,7 +389,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_10510/*"PAYSTONE_INFO_TITLE"*/,
+                                                       (System_String_o *)StringLiteral_10522/*"PAYSTONE_INFO_TITLE"*/,
                                                        0LL);
             if ( payStoneTitleLabel )
             {
@@ -408,7 +408,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
                     UILabel__set_text(payStoneNumLabel, (System_String_o *)gameObject, 0LL);
                     freeStoneTitleLabel = this->fields.freeStoneTitleLabel;
                     gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                               (System_String_o *)StringLiteral_6614/*"FREESTONE_INFO_TITLE"*/,
+                                                               (System_String_o *)StringLiteral_6617/*"FREESTONE_INFO_TITLE"*/,
                                                                0LL);
                     if ( freeStoneTitleLabel )
                     {
@@ -429,7 +429,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                     (System_String_o *)StringLiteral_5911/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/,
+                                                                     (System_String_o *)StringLiteral_5914/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/,
                                                                      0LL);
                           if ( !v27 )
                             goto LABEL_34;
@@ -453,14 +453,14 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
                         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_12449/*"STONE_INFO_NOTICE"*/,
+                                                                   (System_String_o *)StringLiteral_12463/*"STONE_INFO_NOTICE"*/,
                                                                    0LL);
                         if ( stoneNoticeLabel )
                         {
                           UILabel__set_text(stoneNoticeLabel, (System_String_o *)gameObject, 0LL);
                           this->fields.state = 1;
                           ItemDetailInfoComponent__setBtnInfoActive(this, v32);
-                          v33 = (System_Action_o *)sub_1BD36A4(System_Action_TypeInfo);
+                          v33 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
                           System_Action___ctor(v33, (Il2CppObject *)this, Method_ItemDetailInfoComponent_EndOpen__, 0LL);
                           BaseDialog__Open((BaseDialog_o *)this, v33, 0, 0LL);
                           return;
@@ -476,7 +476,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
       }
     }
 LABEL_34:
-    sub_1BD36B4(gameObject, v21);
+    sub_1BE4D28(gameObject, v21);
   }
 }
 
@@ -496,10 +496,10 @@ void __fastcall ItemDetailInfoComponent__add_callbackFunc(
   ItemDetailInfoComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B32631 & 1) == 0 )
+  if ( (byte_4B61FD4 & 1) == 0 )
   {
-    sub_1BD3458(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, value);
-    byte_4B32631 = 1;
+    sub_1BE4ACC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, value);
+    byte_4B61FD4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -512,13 +512,13 @@ void __fastcall ItemDetailInfoComponent__add_callbackFunc(
       if ( (ItemDetailInfoComponent_CallbackFunc_c *)v8->klass != ItemDetailInfoComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C0E948(p_callbackFunc, v8, v6);
+    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ItemDetailInfoComponent_o *)sub_1BD3974(v8);
+  v11 = (ItemDetailInfoComponent_o *)sub_1BE4FE8(v8);
   ItemDetailInfoComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -527,12 +527,12 @@ System_String_o *__fastcall ItemDetailInfoComponent__get_closeBtnPath(
         ItemDetailInfoComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B32639 & 1) == 0 )
+  if ( (byte_4B61FDC & 1) == 0 )
   {
-    sub_1BD3458(&StringLiteral_7727/*"InfoWindow/CloseBtn"*/, method);
-    byte_4B32639 = 1;
+    sub_1BE4ACC(&StringLiteral_7733/*"InfoWindow/CloseBtn"*/, method);
+    byte_4B61FDC = 1;
   }
-  return (System_String_o *)StringLiteral_7727/*"InfoWindow/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_7733/*"InfoWindow/CloseBtn"*/;
 }
 
 
@@ -550,10 +550,10 @@ void __fastcall ItemDetailInfoComponent__remove_callbackFunc(
   ItemDetailInfoComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B32632 & 1) == 0 )
+  if ( (byte_4B61FD5 & 1) == 0 )
   {
-    sub_1BD3458(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, value);
-    byte_4B32632 = 1;
+    sub_1BE4ACC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, value);
+    byte_4B61FD5 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -566,13 +566,13 @@ void __fastcall ItemDetailInfoComponent__remove_callbackFunc(
       if ( (ItemDetailInfoComponent_CallbackFunc_c *)v8->klass != ItemDetailInfoComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C0E948(p_callbackFunc, v8, v6);
+    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ItemDetailInfoComponent_o *)sub_1BD3974(v8);
+  v11 = (ItemDetailInfoComponent_o *)sub_1BE4FE8(v8);
   ItemDetailInfoComponent__Init(v11, v12);
 }
 
@@ -600,7 +600,7 @@ void __fastcall ItemDetailInfoComponent__setBtnInfoActive(ItemDetailInfoComponen
       return;
     }
 LABEL_9:
-    sub_1BD36B4(stoneDetailBtnObject, method);
+    sub_1BE4D28(stoneDetailBtnObject, method);
   }
 }
 
@@ -623,15 +623,15 @@ void __fastcall ItemDetailInfoComponent_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BD33FC(&this->fields.method);
+  sub_1BE4A70(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BD3518(v6) & 1) == 0 )
+  if ( (sub_1BE4B8C(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BD36D0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BD3580(v10, 0LL);
+      v10 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BE4BF4(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -643,9 +643,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0E5A0;
+  this->fields.m_target = (Il2CppObject *)sub_1A1FA28;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0E558;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1F9E0;
 }
 
 
@@ -661,14 +661,14 @@ System_IAsyncResult_o *__fastcall ItemDetailInfoComponent_CallbackFunc__BeginInv
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4B3263B & 1) == 0 )
+  if ( (byte_4B61FDE & 1) == 0 )
   {
-    sub_1BD3458(&bool_TypeInfo, result);
-    byte_4B3263B = 1;
+    sub_1BE4ACC(&bool_TypeInfo, result);
+    byte_4B61FDE = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BD340C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BE4A80(this, v9, callback, object);
 }
 
 
@@ -677,7 +677,7 @@ void __fastcall ItemDetailInfoComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BD3410(result, 0LL, method);
+  sub_1BE4A84(result, 0LL, method);
 }
 
 
