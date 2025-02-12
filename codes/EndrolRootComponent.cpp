@@ -8,15 +8,15 @@ void __fastcall EndrolRootComponent___ctor(EndrolRootComponent_o *this, const Me
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B6A9F2 & 1) == 0 )
+  if ( (byte_4BB84FF & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, method);
-    byte_4B6A9F2 = 1;
+    sub_1C13D24(&int___TypeInfo, method);
+    byte_4BB84FF = 1;
   }
   this->fields.nowDispIndex = -1;
-  v3 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 2LL);
+  v3 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 2LL);
   this->fields.effectWave = v3;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.effectWave, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.effectWave, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -31,26 +31,26 @@ int32_t __fastcall EndrolRootComponent__CheckNextDispContent(
   __int64 v6; // x1
   __int64 v7; // x1
 
-  if ( (byte_4B6A9ED & 1) == 0 )
+  if ( (byte_4BB84FA & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_18300/*"column=3"*/, nextDispText);
-    sub_1BE4ACC(&StringLiteral_18299/*"column=2"*/, v4);
-    sub_1BE4ACC(&StringLiteral_1595/*"<"*/, v5);
-    sub_1BE4ACC(&StringLiteral_1888/*"@"*/, v6);
-    this = (EndrolRootComponent_o *)sub_1BE4ACC(&StringLiteral_7620/*"Image"*/, v7);
-    byte_4B6A9ED = 1;
+    sub_1C13D24(&StringLiteral_18343/*"collectionSelector"*/, nextDispText);
+    sub_1C13D24(&StringLiteral_18342/*"collection"*/, v4);
+    sub_1C13D24(&StringLiteral_1598/*";Port="*/, v5);
+    sub_1C13D24(&StringLiteral_1891/*"?xml"*/, v6);
+    this = (EndrolRootComponent_o *)sub_1C13D24(&StringLiteral_7640/*"Illegal rep dist code"*/, v7);
+    byte_4BB84FA = 1;
   }
   if ( !nextDispText )
-    sub_1BE4D28(this, nextDispText);
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7620/*"Image"*/, 0LL) )
+    sub_1C13F80(this, nextDispText);
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7640/*"Illegal rep dist code"*/, 0LL) )
     return 2;
-  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1888/*"@"*/, 0LL) )
+  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1891/*"?xml"*/, 0LL) )
     return 3;
-  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1595/*"<"*/, 0LL) )
+  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1598/*";Port="*/, 0LL) )
     return 1;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_18299/*"column=2"*/, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_18342/*"collection"*/, 0LL) )
     return 5;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_18300/*"column=3"*/, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_18343/*"collectionSelector"*/, 0LL) )
     return 5;
   return 4;
 }
@@ -171,37 +171,37 @@ void __fastcall EndrolRootComponent__CheckOrderEndrol(EndrolRootComponent_o *thi
   PartyOrganizationUtility_o *p_defaultTextColor; // [xsp+8h] [xbp-78h]
   PartyOrganizationUtility_o *p_bgmName; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4B6A9F1 & 1) == 0 )
+  if ( (byte_4BB84FE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v3);
-    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v4);
-    sub_1BE4ACC(&StringLiteral_19119/*"effect"*/, v5);
-    sub_1BE4ACC(&StringLiteral_6906/*"FontSize"*/, v6);
-    sub_1BE4ACC(&StringLiteral_23378/*"scroll"*/, v7);
-    sub_1BE4ACC(&StringLiteral_23815/*"start"*/, v8);
-    sub_1BE4ACC(&StringLiteral_17391/*"bgm"*/, v9);
-    sub_1BE4ACC(&StringLiteral_18784/*"default_text_color"*/, v10);
-    sub_1BE4ACC(&StringLiteral_1595/*"<"*/, v11);
-    sub_1BE4ACC(&StringLiteral_9491/*"NULL"*/, v12);
-    sub_1BE4ACC(&StringLiteral_24942/*"wait"*/, v13);
-    sub_1BE4ACC(&StringLiteral_19251/*"end"*/, v14);
-    sub_1BE4ACC(&StringLiteral_1888/*"@"*/, v15);
-    sub_1BE4ACC(&StringLiteral_18783/*"default_font_size"*/, v16);
-    sub_1BE4ACC(&StringLiteral_17377/*"begine_time"*/, v17);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v18);
-    sub_1BE4ACC(&StringLiteral_87/*"\r"*/, v19);
-    sub_1BE4ACC(&StringLiteral_1867/*">"*/, v20);
-    sub_1BE4ACC(&StringLiteral_18782/*"default_clearance"*/, v21);
-    byte_4B6A9F1 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, v3);
+    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v4);
+    sub_1C13D24(&StringLiteral_19163/*"ef_soundopen"*/, v5);
+    sub_1C13D24(&StringLiteral_6926/*"FontAsset.UpdateDiacriticalAdjustmentRecords"*/, v6);
+    sub_1C13D24(&StringLiteral_23431/*"sceneSet"*/, v7);
+    sub_1C13D24(&StringLiteral_23868/*"squares_target"*/, v8);
+    sub_1C13D24(&StringLiteral_17437/*"behaveAsAssistSkill"*/, v9);
+    sub_1C13D24(&StringLiteral_18828/*"deemedTime"*/, v10);
+    sub_1C13D24(&StringLiteral_1598/*";Port="*/, v11);
+    sub_1C13D24(&StringLiteral_9515/*"NP_START_1"*/, v12);
+    sub_1C13D24(&StringLiteral_24998/*"vm.shared.size"*/, v13);
+    sub_1C13D24(&StringLiteral_19295/*"enableFullScreen"*/, v14);
+    sub_1C13D24(&StringLiteral_1891/*"?xml"*/, v15);
+    sub_1C13D24(&StringLiteral_18827/*"decryption error"*/, v16);
+    sub_1C13D24(&StringLiteral_17422/*"battleusecontinuerequestsave.dat"*/, v17);
+    sub_1C13D24(&StringLiteral_1/*""*/, v18);
+    sub_1C13D24(&StringLiteral_88/*"\r"*/, v19);
+    sub_1C13D24(&StringLiteral_1870/*"=spot"*/, v20);
+    sub_1C13D24(&StringLiteral_18826/*"decoderFallback"*/, v21);
+    byte_4BB84FE = 1;
   }
-  v22 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.creditText = (struct System_Collections_Generic_List_string__o *)v22;
   p_creditText = &this->fields.creditText;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.creditText, (int64_t)v22, v24, v25, v26, v27, v28, v29);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.creditText, (int64_t)v22, v24, v25, v26, v27, v28, v29);
   txtLength = this->fields.txtLength;
   this->fields.lastPostion = 0.0;
   if ( txtLength >= 1 )
@@ -220,8 +220,8 @@ void __fastcall EndrolRootComponent__CheckOrderEndrol(EndrolRootComponent_o *thi
       klass = (int64_t)allCreditText->m_Items[v34];
       if ( !klass )
 LABEL_136:
-        sub_1BE4D28(klass, v31);
-      klass = System_String__StartsWith((System_String_o *)klass, (System_String_o *)StringLiteral_1888/*"@"*/, 0LL);
+        sub_1C13F80(klass, v31);
+      klass = System_String__StartsWith((System_String_o *)klass, (System_String_o *)StringLiteral_1891/*"?xml"*/, 0LL);
       if ( (klass & 1) == 0 )
         break;
       v36 = this->fields.allCreditText;
@@ -232,7 +232,7 @@ LABEL_136:
       klass = (int64_t)v36->m_Items[v34];
       if ( !klass )
         goto LABEL_136;
-      klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_23815/*"start"*/, 0LL);
+      klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_23868/*"squares_target"*/, 0LL);
       if ( (klass & 1) != 0 )
         goto LABEL_65;
       v37 = this->fields.allCreditText;
@@ -243,7 +243,7 @@ LABEL_136:
       klass = (int64_t)v37->m_Items[v34];
       if ( !klass )
         goto LABEL_136;
-      klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_17377/*"begine_time"*/, 0LL);
+      klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_17422/*"battleusecontinuerequestsave.dat"*/, 0LL);
       v38 = this->fields.allCreditText;
       if ( !v38 )
         goto LABEL_136;
@@ -264,7 +264,7 @@ LABEL_136:
       }
       else
       {
-        klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_23378/*"scroll"*/, 0LL);
+        klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_23431/*"sceneSet"*/, 0LL);
         v53 = this->fields.allCreditText;
         if ( !v53 )
           goto LABEL_136;
@@ -285,7 +285,7 @@ LABEL_136:
         }
         else
         {
-          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_19251/*"end"*/, 0LL);
+          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_19295/*"enableFullScreen"*/, 0LL);
           if ( (klass & 1) != 0 )
           {
 LABEL_67:
@@ -300,7 +300,7 @@ LABEL_67:
           klass = (int64_t)v76->m_Items[v34];
           if ( !klass )
             goto LABEL_136;
-          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_24942/*"wait"*/, 0LL);
+          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_24998/*"vm.shared.size"*/, 0LL);
           v77 = this->fields.allCreditText;
           if ( !v77 )
             goto LABEL_136;
@@ -321,7 +321,7 @@ LABEL_67:
           }
           else
           {
-            klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_19119/*"effect"*/, 0LL);
+            klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_19163/*"ef_soundopen"*/, 0LL);
             v79 = this->fields.allCreditText;
             if ( !v79 )
               goto LABEL_136;
@@ -397,7 +397,7 @@ LABEL_67:
             }
             else
             {
-              klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_17391/*"bgm"*/, 0LL);
+              klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_17437/*"behaveAsAssistSkill"*/, 0LL);
               v85 = this->fields.allCreditText;
               if ( !v85 )
                 goto LABEL_136;
@@ -409,13 +409,13 @@ LABEL_67:
                 goto LABEL_136;
               if ( (v86 & 1) != 0 )
               {
-                v87 = System_String__Replace_62718436(
+                v87 = System_String__Replace_62987572(
                         (System_String_o *)klass,
-                        (System_String_o *)StringLiteral_87/*"\r"*/,
+                        (System_String_o *)StringLiteral_88/*"\r"*/,
                         (System_String_o *)StringLiteral_1/*""*/,
                         0LL);
                 p_bgmName->klass = (PartyOrganizationUtility_c *)v87;
-                sub_1BE4A70(p_bgmName, (int64_t)v87, v88, v89, v90, v91, v92, v93);
+                sub_1C13CC8(p_bgmName, (int64_t)v87, v88, v89, v90, v91, v92, v93);
                 klass = (int64_t)p_bgmName->klass;
                 if ( !p_bgmName->klass )
                   goto LABEL_136;
@@ -426,13 +426,13 @@ LABEL_67:
                   goto LABEL_137;
                 v100 = *(struct System_String_o **)(klass + 40);
                 this->fields.bgmName = v100;
-                sub_1BE4A70(p_bgmName, (int64_t)v100, v94, v95, v96, v97, v98, v99);
-                klass = System_String__op_Inequality(this->fields.bgmName, (System_String_o *)StringLiteral_9491/*"NULL"*/, 0LL);
+                sub_1C13CC8(p_bgmName, (int64_t)v100, v94, v95, v96, v97, v98, v99);
+                klass = System_String__op_Inequality(this->fields.bgmName, (System_String_o *)StringLiteral_9515/*"NP_START_1"*/, 0LL);
                 this->fields.isBgmPlay = klass & 1;
               }
               else
               {
-                klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_18783/*"default_font_size"*/, 0LL);
+                klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_18827/*"decryption error"*/, 0LL);
                 v101 = this->fields.allCreditText;
                 if ( !v101 )
                   goto LABEL_136;
@@ -454,7 +454,7 @@ LABEL_67:
                 }
                 else
                 {
-                  klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_18782/*"default_clearance"*/, 0LL);
+                  klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_18826/*"decoderFallback"*/, 0LL);
                   v103 = this->fields.allCreditText;
                   if ( !v103 )
                     goto LABEL_136;
@@ -478,7 +478,7 @@ LABEL_67:
                   {
                     klass = System_String__Contains(
                               (System_String_o *)klass,
-                              (System_String_o *)StringLiteral_18784/*"default_text_color"*/,
+                              (System_String_o *)StringLiteral_18828/*"deemedTime"*/,
                               0LL);
                     if ( (klass & 1) != 0 )
                     {
@@ -497,7 +497,7 @@ LABEL_67:
                         goto LABEL_137;
                       v112 = *(_QWORD *)(klass + 40);
                       p_defaultTextColor->klass = (PartyOrganizationUtility_c *)v112;
-                      sub_1BE4A70(p_defaultTextColor, v112, v106, v107, v108, v109, v110, v111);
+                      sub_1C13CC8(p_defaultTextColor, v112, v106, v107, v108, v109, v110, v111);
                     }
                   }
                 }
@@ -520,9 +520,9 @@ LABEL_68:
     klass = (int64_t)v40->m_Items[v34];
     if ( !klass )
       goto LABEL_136;
-    klass = (int64_t)System_String__Replace_62718436(
+    klass = (int64_t)System_String__Replace_62987572(
                        (System_String_o *)klass,
-                       (System_String_o *)StringLiteral_87/*"\r"*/,
+                       (System_String_o *)StringLiteral_88/*"\r"*/,
                        (System_String_o *)StringLiteral_1/*""*/,
                        0LL);
     v47 = (System_Collections_Generic_List_object__o *)*p_creditText;
@@ -540,14 +540,14 @@ LABEL_68:
       System_Collections_Generic_List_object___AddWithResize(
         v47,
         (Il2CppObject *)klass,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
     }
     else
     {
       v52 = &items->obj.klass + size;
       v47->fields._size = size + 1;
       v52[4] = (Il2CppClass *)v51;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v52 + 4), v51, v41, v42, v43, v44, v45, v46);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v52 + 4), v51, v41, v42, v43, v44, v45, v46);
     }
     v55 = this->fields.allCreditText;
     if ( !v55 )
@@ -558,7 +558,7 @@ LABEL_68:
     if ( !klass )
       goto LABEL_136;
     defaultFontSize = this->fields.defaultFontSize;
-    klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_6906/*"FontSize"*/, 0LL);
+    klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_6926/*"FontAsset.UpdateDiacriticalAdjustmentRecords"*/, 0LL);
     if ( (klass & 1) != 0 )
     {
       v57 = this->fields.allCreditText;
@@ -585,7 +585,7 @@ LABEL_68:
           klass = v63;
           if ( !v63 )
             goto LABEL_136;
-          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_6906/*"FontSize"*/, 0LL);
+          klass = System_String__Contains((System_String_o *)klass, (System_String_o *)StringLiteral_6926/*"FontAsset.UpdateDiacriticalAdjustmentRecords"*/, 0LL);
           if ( (klass & 1) != 0 )
           {
             if ( v60 >= *(_DWORD *)(v59 + 24) )
@@ -593,29 +593,29 @@ LABEL_68:
             klass = (int64_t)v62->klass;
             if ( !v62->klass )
               goto LABEL_136;
-            klass = (int64_t)System_String__Replace_62718436(
+            klass = (int64_t)System_String__Replace_62987572(
                                (System_String_o *)klass,
-                               (System_String_o *)StringLiteral_1595/*"<"*/,
+                               (System_String_o *)StringLiteral_1598/*";Port="*/,
                                (System_String_o *)StringLiteral_1/*""*/,
                                0LL);
             if ( v60 >= *(_DWORD *)(v59 + 24) )
               break;
             v62->klass = (PartyOrganizationUtility_c *)klass;
-            sub_1BE4A70(v62, klass, v64, v65, v66, v67, v68, v69);
+            sub_1C13CC8(v62, klass, v64, v65, v66, v67, v68, v69);
             if ( v60 >= *(_DWORD *)(v59 + 24) )
               break;
             klass = (int64_t)v62->klass;
             if ( !v62->klass )
               goto LABEL_136;
-            klass = (int64_t)System_String__Replace_62718436(
+            klass = (int64_t)System_String__Replace_62987572(
                                (System_String_o *)klass,
-                               (System_String_o *)StringLiteral_1867/*">"*/,
+                               (System_String_o *)StringLiteral_1870/*"=spot"*/,
                                (System_String_o *)StringLiteral_1/*""*/,
                                0LL);
             if ( v60 >= *(_DWORD *)(v59 + 24) )
               break;
             v62->klass = (PartyOrganizationUtility_c *)klass;
-            sub_1BE4A70(v62, klass, v70, v71, v72, v73, v74, v75);
+            sub_1C13CC8(v62, klass, v70, v71, v72, v73, v74, v75);
             if ( v60 >= *(_DWORD *)(v59 + 24) )
               break;
             klass = (int64_t)v62->klass;
@@ -634,7 +634,7 @@ LABEL_68:
             goto LABEL_64;
         }
 LABEL_137:
-        sub_1BE4D30(klass, v31);
+        sub_1C13F88(klass, v31);
       }
     }
 LABEL_64:
@@ -662,11 +662,11 @@ void __fastcall EndrolRootComponent__ClippingItem(
   const MethodInfo *v13; // x4
   int32_t lastObjectPosY; // w21
 
-  if ( (byte_4B6A9EC & 1) == 0 )
+  if ( (byte_4BB84F9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, item);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Item__, v5);
-    byte_4B6A9EC = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, item);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, v5);
+    byte_4BB84F9 = 1;
   }
   creditText = (System_Collections_Generic_List_object__o *)this->fields.creditText;
   v7 = (const MethodInfo *)(unsigned int)(this->fields.nowDispIndex + 1);
@@ -678,7 +678,7 @@ void __fastcall EndrolRootComponent__ClippingItem(
     v8 = System_Collections_Generic_List_object___get_Item(
            creditText,
            (int32_t)v7,
-           (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
+           (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
     v10 = EndrolRootComponent__CheckNextDispContent((EndrolRootComponent_o *)v8, (System_String_o *)v8, v9);
     if ( v10 != 3 )
     {
@@ -689,7 +689,7 @@ void __fastcall EndrolRootComponent__ClippingItem(
         v12 = System_Collections_Generic_List_object___get_Item(
                 creditText,
                 this->fields.nowDispIndex,
-                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
         creditText = (System_Collections_Generic_List_object__o *)EndrolRootComponent__SetItemInfo(
                                                                     this,
                                                                     (System_String_o *)v12,
@@ -706,7 +706,7 @@ void __fastcall EndrolRootComponent__ClippingItem(
         }
       }
 LABEL_10:
-      sub_1BE4D28(creditText, v7);
+      sub_1C13F80(creditText, v7);
     }
   }
 }
@@ -728,12 +728,12 @@ void __fastcall EndrolRootComponent__CreateText(EndrolRootComponent_o *this, int
   const MethodInfo *v15; // x4
   int32_t lastObjectPosY; // w20
 
-  if ( (byte_4B6A9EB & 1) == 0 )
+  if ( (byte_4BB84F8 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___, *(_QWORD *)&index);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Item__, v5);
-    sub_1BE4ACC(&NGUITools_TypeInfo, v6);
-    byte_4B6A9EB = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___, *(_QWORD *)&index);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, v5);
+    sub_1C13D24(&NGUITools_TypeInfo, v6);
+    byte_4BB84F8 = 1;
   }
   contentPref = (UnityEngine_Component_o *)this->fields.contentPref;
   ++this->fields.nowDispIndex;
@@ -743,17 +743,17 @@ void __fastcall EndrolRootComponent__CreateText(EndrolRootComponent_o *this, int
   gameObject = UnityEngine_Component__get_gameObject(contentPref, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  contentPref = (UnityEngine_Component_o *)NGUITools__AddChild_47712092(endrolContentParent, gameObject, 0LL);
+  contentPref = (UnityEngine_Component_o *)NGUITools__AddChild_47903640(endrolContentParent, gameObject, 0LL);
   if ( !contentPref
     || (contentPref = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)contentPref,
-                                                   (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___),
+                                                   (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EndrolContentItem___),
         !this->fields.creditText)
     || (v10 = (EndrolContentItem_o *)contentPref,
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)this->fields.creditText,
                  index,
-                 (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__),
+                 (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__),
         contentPref = (UnityEngine_Component_o *)EndrolRootComponent__CheckNextDispContent(
                                                    (EndrolRootComponent_o *)Item,
                                                    (System_String_o *)Item,
@@ -763,7 +763,7 @@ void __fastcall EndrolRootComponent__CreateText(EndrolRootComponent_o *this, int
         v14 = System_Collections_Generic_List_object___get_Item(
                 (System_Collections_Generic_List_object__o *)this->fields.creditText,
                 index,
-                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__),
+                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__),
         contentPref = (UnityEngine_Component_o *)EndrolRootComponent__SetItemInfo(
                                                    this,
                                                    (System_String_o *)v14,
@@ -773,7 +773,7 @@ void __fastcall EndrolRootComponent__CreateText(EndrolRootComponent_o *this, int
         !v10) )
   {
 LABEL_11:
-    sub_1BE4D28(contentPref, *(_QWORD *)&index);
+    sub_1C13F80(contentPref, *(_QWORD *)&index);
   }
   lastObjectPosY = this->fields.lastObjectPosY;
   this->fields.lastObjectPosY = lastObjectPosY
@@ -788,15 +788,15 @@ void __fastcall EndrolRootComponent__EndFadeout(EndrolRootComponent_o *this, con
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B6A9E9 & 1) == 0 )
+  if ( (byte_4BB84F6 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4B6A9E9 = 1;
+    sub_1C13D24(&UnityEngine_Application_TypeInfo, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4BB84F6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
   UnityEngine_QualitySettings__set_vSyncCount(0, 0LL);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -824,34 +824,34 @@ void __fastcall EndrolRootComponent__OnClickEndrol(EndrolRootComponent_o *this, 
   __int64 v16; // x0
   __int64 v17; // x1
 
-  if ( (byte_4B6A9F0 & 1) == 0 )
+  if ( (byte_4BB84FD & 1) == 0 )
   {
-    sub_1BE4ACC(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1BE4ACC(&Method_EndrolRootComponent_callbackConfirmDlg__, v3);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BE4ACC(&StringLiteral_5554/*"ENDROLL_TITLE"*/, v6);
-    sub_1BE4ACC(&StringLiteral_5553/*"ENDROLL_MESSAGE"*/, v7);
-    sub_1BE4ACC(&StringLiteral_5551/*"ENDROLL_CANCEL"*/, v8);
-    sub_1BE4ACC(&StringLiteral_5552/*"ENDROLL_DECIDE"*/, v9);
-    byte_4B6A9F0 = 1;
+    sub_1C13D24(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1C13D24(&Method_EndrolRootComponent_callbackConfirmDlg__, v3);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C13D24(&StringLiteral_5567/*"ENDPOINT"*/, v6);
+    sub_1C13D24(&StringLiteral_5566/*"ENABLE_SERIAL_CODE"*/, v7);
+    sub_1C13D24(&StringLiteral_5564/*"ENABLE_OVERWRITE_CLASS_IDS"*/, v8);
+    sub_1C13D24(&StringLiteral_5565/*"ENABLE_PRESENT_HISTORY"*/, v9);
+    byte_4BB84FD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5554/*"ENDROLL_TITLE"*/, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5553/*"ENDROLL_MESSAGE"*/, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5552/*"ENDROLL_DECIDE"*/, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5551/*"ENDROLL_CANCEL"*/, 0LL);
-  v15 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BE4D18(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5567/*"ENDPOINT"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5566/*"ENABLE_SERIAL_CODE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5565/*"ENABLE_PRESENT_HISTORY"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5564/*"ENABLE_OVERWRITE_CLASS_IDS"*/, 0LL);
+  v15 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C13F70(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v15,
     (Il2CppObject *)this,
     Method_EndrolRootComponent_callbackConfirmDlg__,
     0LL);
   if ( !Instance )
-    sub_1BE4D28(v16, v17);
-  CommonUI__OpenConfirmDialog_30873636((CommonUI_o *)Instance, v11, v12, v13, v14, v15, 0, 0, 0, 0LL);
+    sub_1C13F80(v16, v17);
+  CommonUI__OpenConfirmDialog_31070492((CommonUI_o *)Instance, v11, v12, v13, v14, v15, 0, 0, 0, 0LL);
 }
 
 
@@ -864,17 +864,17 @@ void __fastcall EndrolRootComponent__OnScrollEnd(EndrolRootComponent_o *this, co
   const MethodInfo *v7; // x2
   System_Collections_IEnumerator_o *v8; // x1
 
-  if ( (byte_4B6A9E5 & 1) == 0 )
+  if ( (byte_4BB84F2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_EndrolRootComponent__OnScrollEnd_b__28_0__, v3);
-    byte_4B6A9E5 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_EndrolRootComponent__OnScrollEnd_b__28_0__, v3);
+    byte_4BB84F2 = 1;
   }
   endWaitTime = this->fields.endWaitTime;
-  v5 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_EndrolRootComponent__OnScrollEnd_b__28_0__, 0LL);
   v8 = EndrolRootComponent__Wait(v6, endWaitTime, v5, v7);
-  UnityEngine_MonoBehaviour__StartCoroutine_70437272((UnityEngine_MonoBehaviour_o *)this, v8, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v8, 0LL);
 }
 
 
@@ -894,7 +894,7 @@ void __fastcall EndrolRootComponent__OnUpdateScroll(EndrolRootComponent_o *this,
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)panel, v7, 0LL),
         (panel = (UnityEngine_Component_o *)this->fields.panel) == 0LL) )
   {
-    sub_1BE4D28(panel, method);
+    sub_1C13F80(panel, method);
   }
   v6.fields.y = -value;
   v6.fields.x = 0.0;
@@ -929,28 +929,28 @@ void __fastcall EndrolRootComponent__Open(
   System_Action_o *v25; // x22
   const MethodInfo *v26; // x3
 
-  if ( (byte_4B6A9E7 & 1) == 0 )
+  if ( (byte_4BB84F4 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, assetData);
-    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, v7);
-    sub_1BE4ACC(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__0__, v8);
-    sub_1BE4ACC(&EndrolRootComponent___c__DisplayClass30_0_TypeInfo, v9);
-    byte_4B6A9E7 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, assetData);
+    sub_1C13D24(&UnityEngine_Application_TypeInfo, v7);
+    sub_1C13D24(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__0__, v8);
+    sub_1C13D24(&EndrolRootComponent___c__DisplayClass30_0_TypeInfo, v9);
+    byte_4BB84F4 = 1;
   }
-  v10 = sub_1BE4D18(EndrolRootComponent___c__DisplayClass30_0_TypeInfo);
+  v10 = sub_1C13F70(EndrolRootComponent___c__DisplayClass30_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1BE4D28(v11, v12);
+    sub_1C13F80(v11, v12);
   *(_QWORD *)(v10 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
   *(_QWORD *)(v10 + 24) = endCallback;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 24), (int64_t)endCallback, v19, v20, v21, v22, v23, v24);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 24), (int64_t)endCallback, v19, v20, v21, v22, v23, v24);
   UnityEngine_QualitySettings__set_vSyncCount(1, 0LL);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   UnityEngine_Application__set_targetFrameRate(60, 0LL);
   this->fields.lastObjectPosY = 0;
-  v25 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v25, (Il2CppObject *)v10, Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__0__, 0LL);
   EndrolRootComponent__SetAssetStorageData(this, assetData, v25, v26);
 }
@@ -975,10 +975,10 @@ void __fastcall EndrolRootComponent__OpenTextFile(
     || (v3 = this, (this = (EndrolRootComponent_o *)UnityEngine_TextAsset__get_text(assetData, 0LL)) == 0LL)
     || (v4 = System_String__Split((System_String_o *)this, 0xAu, 0, 0LL),
         v3->fields.allCreditText = v4,
-        sub_1BE4A70((PartyOrganizationUtility_o *)&v3->fields.allCreditText, (int64_t)v4, v5, v6, v7, v8, v9, v10),
+        sub_1C13CC8((PartyOrganizationUtility_o *)&v3->fields.allCreditText, (int64_t)v4, v5, v6, v7, v8, v9, v10),
         (allCreditText = v3->fields.allCreditText) == 0LL) )
   {
-    sub_1BE4D28(this, assetData);
+    sub_1C13F80(this, assetData);
   }
   v3->fields.txtLength = *(_QWORD *)&allCreditText->max_length;
 }
@@ -992,25 +992,25 @@ void __fastcall EndrolRootComponent__SetAssetStorageData(
 {
   EndrolRootComponent_o *v6; // x20
   __int64 v7; // x1
-  Il2CppObject *Object_object__49525204; // x0
+  Il2CppObject *Object_object__49747248; // x0
   const MethodInfo *v9; // x2
 
   v6 = this;
-  if ( (byte_4B6A9E6 & 1) == 0 )
+  if ( (byte_4BB84F3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_AssetData_GetObject_TextAsset____77158424, data);
-    this = (EndrolRootComponent_o *)sub_1BE4ACC(&StringLiteral_18566/*"credit"*/, v7);
-    byte_4B6A9E6 = 1;
+    sub_1C13D24(&Method_AssetData_GetObject_TextAsset____77466816, data);
+    this = (EndrolRootComponent_o *)sub_1C13D24(&StringLiteral_18610/*"cpu.brand"*/, v7);
+    byte_4BB84F3 = 1;
   }
   if ( !data
-    || (Object_object__49525204 = AssetData__GetObject_object__49525204(
+    || (Object_object__49747248 = AssetData__GetObject_object__49747248(
                                     data,
-                                    (System_String_o *)StringLiteral_18566/*"credit"*/,
-                                    (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_TextAsset____77158424),
-        EndrolRootComponent__OpenTextFile(v6, (UnityEngine_TextAsset_o *)Object_object__49525204, v9),
+                                    (System_String_o *)StringLiteral_18610/*"cpu.brand"*/,
+                                    (const MethodInfo_2F71530 *)Method_AssetData_GetObject_TextAsset____77466816),
+        EndrolRootComponent__OpenTextFile(v6, (UnityEngine_TextAsset_o *)Object_object__49747248, v9),
         !endCallback) )
   {
-    sub_1BE4D28(this, data);
+    sub_1C13F80(this, data);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))endCallback->fields.m_target)(
     endCallback->fields.original_method_info,
@@ -1136,26 +1136,26 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
   UnityEngine_Vector2_o v116; // 0:s0.4,4:s1.4
 
   v8 = this;
-  if ( (byte_4B6A9EE & 1) == 0 )
+  if ( (byte_4BB84FB & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Enum_TypeInfo, nextDispString);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Item__, v9);
-    sub_1BE4ACC(&UIWidget_Pivot_var, v10);
-    sub_1BE4ACC(&UIWidget_Pivot_TypeInfo, v11);
-    sub_1BE4ACC(&string___TypeInfo, v12);
-    sub_1BE4ACC(&System_Type_TypeInfo, v13);
-    sub_1BE4ACC(&StringLiteral_1858/*"="*/, v14);
-    sub_1BE4ACC(&StringLiteral_20177/*"height"*/, v15);
-    sub_1BE4ACC(&StringLiteral_1595/*"<"*/, v16);
-    sub_1BE4ACC(&StringLiteral_21364/*"left"*/, v17);
-    sub_1BE4ACC(&StringLiteral_23267/*"right"*/, v18);
-    sub_1BE4ACC(&StringLiteral_367/*"\""*/, v19);
-    sub_1BE4ACC(&StringLiteral_16018/*"["*/, v20);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v21);
-    sub_1BE4ACC(&StringLiteral_25039/*"width"*/, v22);
-    sub_1BE4ACC(&StringLiteral_1867/*">"*/, v23);
-    this = (EndrolRootComponent_o *)sub_1BE4ACC(&StringLiteral_18029/*"center"*/, v24);
-    byte_4B6A9EE = 1;
+    sub_1C13D24(&System_Enum_TypeInfo, nextDispString);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, v9);
+    sub_1C13D24(&UIWidget_Pivot_var, v10);
+    sub_1C13D24(&UIWidget_Pivot_TypeInfo, v11);
+    sub_1C13D24(&string___TypeInfo, v12);
+    sub_1C13D24(&System_Type_TypeInfo, v13);
+    sub_1C13D24(&StringLiteral_1861/*"<{0}>"*/, v14);
+    sub_1C13D24(&StringLiteral_20221/*"hasUserAuthorizedPermission"*/, v15);
+    sub_1C13D24(&StringLiteral_1598/*";Port="*/, v16);
+    sub_1C13D24(&StringLiteral_21413/*"lavender"*/, v17);
+    sub_1C13D24(&StringLiteral_23320/*"reverseMyDeckSvtPosition"*/, v18);
+    sub_1C13D24(&StringLiteral_369/*"\""*/, v19);
+    sub_1C13D24(&StringLiteral_16061/*"You must call the Bind method before performing this operation."*/, v20);
+    sub_1C13D24(&StringLiteral_1/*""*/, v21);
+    sub_1C13D24(&StringLiteral_25095/*"webview"*/, v22);
+    sub_1C13D24(&StringLiteral_1870/*"=spot"*/, v23);
+    this = (EndrolRootComponent_o *)sub_1C13D24(&StringLiteral_18071/*"card_servant_np"*/, v24);
+    byte_4BB84FB = 1;
   }
   if ( type == 5 )
   {
@@ -1171,9 +1171,9 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
       if ( !this )
         goto LABEL_145;
       defaultFontSize = v8->fields.defaultFontSize;
-      this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+      this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                         (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_1595/*"<"*/,
+                                        (System_String_o *)StringLiteral_1598/*";Port="*/,
                                         (System_String_o *)StringLiteral_1/*""*/,
                                         0LL);
       if ( LODWORD(v38->fields.m_CancellationTokenSource) )
@@ -1181,9 +1181,9 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
         this = (EndrolRootComponent_o *)v38->fields.contentPref;
         if ( !this )
           goto LABEL_145;
-        this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+        this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                           (System_String_o *)this,
-                                          (System_String_o *)StringLiteral_1867/*">"*/,
+                                          (System_String_o *)StringLiteral_1870/*"=spot"*/,
                                           (System_String_o *)StringLiteral_1/*""*/,
                                           0LL);
         if ( !this )
@@ -1195,7 +1195,7 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
         {
           v114 = item;
           v40 = System_Int32__Parse((System_String_o *)this->fields.endrolContentParent, 0LL);
-          this = (EndrolRootComponent_o *)sub_1BE4B74(string___TypeInfo, v40);
+          this = (EndrolRootComponent_o *)sub_1C13DCC(string___TypeInfo, v40);
           m_CancellationTokenSource = (int)v38->fields.m_CancellationTokenSource;
           v43 = (System_String_array *)this;
           if ( m_CancellationTokenSource < 2 )
@@ -1223,7 +1223,7 @@ LABEL_76:
               goto LABEL_145;
             this = (EndrolRootComponent_o *)System_String__StartsWith(
                                               (System_String_o *)this,
-                                              (System_String_o *)StringLiteral_1595/*"<"*/,
+                                              (System_String_o *)StringLiteral_1598/*";Port="*/,
                                               0LL);
             if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
               break;
@@ -1233,15 +1233,15 @@ LABEL_76:
               goto LABEL_145;
             if ( (v47 & 1) != 0 )
             {
-              this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+              this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_1595/*"<"*/,
+                                                (System_String_o *)StringLiteral_1598/*";Port="*/,
                                                 (System_String_o *)StringLiteral_1/*""*/,
                                                 0LL);
               if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
                 break;
               *p_endrolContentParent = this;
-              sub_1BE4A70(
+              sub_1C13CC8(
                 (PartyOrganizationUtility_o *)p_endrolContentParent,
                 (int64_t)this,
                 v48,
@@ -1255,15 +1255,15 @@ LABEL_76:
               this = *p_endrolContentParent;
               if ( !*p_endrolContentParent )
                 goto LABEL_145;
-              this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+              this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_1867/*">"*/,
+                                                (System_String_o *)StringLiteral_1870/*"=spot"*/,
                                                 (System_String_o *)StringLiteral_1/*""*/,
                                                 0LL);
               if ( v46 >= LODWORD(v38->fields.m_CancellationTokenSource) )
                 break;
               *p_endrolContentParent = this;
-              sub_1BE4A70(
+              sub_1C13CC8(
                 (PartyOrganizationUtility_o *)p_endrolContentParent,
                 (int64_t)this,
                 v54,
@@ -1279,7 +1279,7 @@ LABEL_76:
                 goto LABEL_145;
               this = (EndrolRootComponent_o *)System_String__Contains(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_1858/*"="*/,
+                                                (System_String_o *)StringLiteral_1861/*"<{0}>"*/,
                                                 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
               {
@@ -1303,7 +1303,7 @@ LABEL_76:
             {
               this = (EndrolRootComponent_o *)System_String__Contains(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_16018/*"["*/,
+                                                (System_String_o *)StringLiteral_16061/*"You must call the Bind method before performing this operation."*/,
                                                 0LL);
               v66 = (unsigned int)v38->fields.m_CancellationTokenSource;
               if ( ((unsigned __int8)this & 1) != 0 )
@@ -1320,7 +1320,7 @@ LABEL_76:
               {
                 if ( v46 >= v66 )
                   break;
-                this = (EndrolRootComponent_o *)System_String__Concat_62698808(
+                this = (EndrolRootComponent_o *)System_String__Concat_62967944(
                                                   v8->fields.defaultTextColor,
                                                   (System_String_o *)*p_endrolContentParent,
                                                   0LL);
@@ -1332,7 +1332,7 @@ LABEL_76:
               }
               v68 = &v43->obj.klass + (int)v44;
               v68[4] = (Il2CppClass *)v67;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v68 + 4), (int64_t)v67, v60, v61, v62, v63, v64, v65);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v68 + 4), (int64_t)v67, v60, v61, v62, v63, v64, v65);
               ++v44;
             }
             m_CancellationTokenSource = (int)v38->fields.m_CancellationTokenSource;
@@ -1345,7 +1345,7 @@ LABEL_76:
       }
     }
 LABEL_144:
-    sub_1BE4D30(this, nextDispString);
+    sub_1C13F88(this, nextDispString);
   }
   if ( type != 4 )
   {
@@ -1383,7 +1383,7 @@ LABEL_144:
             goto LABEL_145;
           this = (EndrolRootComponent_o *)System_String__StartsWith(
                                             (System_String_o *)this,
-                                            (System_String_o *)StringLiteral_1595/*"<"*/,
+                                            (System_String_o *)StringLiteral_1598/*";Port="*/,
                                             0LL);
           if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
             goto LABEL_144;
@@ -1393,9 +1393,9 @@ LABEL_144:
             goto LABEL_145;
           if ( (v35 & 1) != 0 )
           {
-            this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+            this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                               (System_String_o *)this,
-                                              (System_String_o *)StringLiteral_1595/*"<"*/,
+                                              (System_String_o *)StringLiteral_1598/*";Port="*/,
                                               (System_String_o *)StringLiteral_1/*""*/,
                                               0LL);
             if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
@@ -1411,9 +1411,9 @@ LABEL_144:
             this = (EndrolRootComponent_o *)this->fields.endrolContentParent;
             if ( !this )
               goto LABEL_145;
-            this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+            this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                               (System_String_o *)this,
-                                              (System_String_o *)StringLiteral_367/*"\""*/,
+                                              (System_String_o *)StringLiteral_369/*"\""*/,
                                               (System_String_o *)StringLiteral_1/*""*/,
                                               0LL);
             v28 = this;
@@ -1422,7 +1422,7 @@ LABEL_144:
           {
             this = (EndrolRootComponent_o *)System_String__Contains(
                                               (System_String_o *)this,
-                                              (System_String_o *)StringLiteral_25039/*"width"*/,
+                                              (System_String_o *)StringLiteral_25095/*"webview"*/,
                                               0LL);
             if ( v29 >= LODWORD(v27->fields.m_CancellationTokenSource) )
               goto LABEL_144;
@@ -1443,7 +1443,7 @@ LABEL_144:
             {
               this = (EndrolRootComponent_o *)System_String__Contains(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_20177/*"height"*/,
+                                                (System_String_o *)StringLiteral_20221/*"hasUserAuthorizedPermission"*/,
                                                 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
               {
@@ -1460,9 +1460,9 @@ LABEL_144:
                 this = (EndrolRootComponent_o *)this->fields.endrolContentParent;
                 if ( !this )
                   goto LABEL_145;
-                v37 = System_String__Replace_62718436(
+                v37 = System_String__Replace_62987572(
                         (System_String_o *)this,
-                        (System_String_o *)StringLiteral_1867/*">"*/,
+                        (System_String_o *)StringLiteral_1870/*"=spot"*/,
                         (System_String_o *)StringLiteral_1/*""*/,
                         0LL);
                 v30 = System_Single__Parse(v37, 0LL);
@@ -1487,12 +1487,12 @@ LABEL_144:
       this = (EndrolRootComponent_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)this,
                                         v8->fields.nowDispIndex,
-                                        (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                        (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( this )
       {
         this = (EndrolRootComponent_o *)System_String__Contains(
                                           (System_String_o *)this,
-                                          (System_String_o *)StringLiteral_16018/*"["*/,
+                                          (System_String_o *)StringLiteral_16061/*"You must call the Bind method before performing this operation."*/,
                                           0LL);
         creditText = v8->fields.creditText;
         if ( ((unsigned __int8)this & 1) != 0 )
@@ -1502,7 +1502,7 @@ LABEL_144:
           this = (EndrolRootComponent_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)v8->fields.creditText,
                                             v8->fields.nowDispIndex,
-                                            (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                            (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
         }
         else
         {
@@ -1512,8 +1512,8 @@ LABEL_144:
           v104 = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)v8->fields.creditText,
                    v8->fields.nowDispIndex,
-                   (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
-          this = (EndrolRootComponent_o *)System_String__Concat_62698808(defaultTextColor, (System_String_o *)v104, 0LL);
+                   (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
+          this = (EndrolRootComponent_o *)System_String__Concat_62967944(defaultTextColor, (System_String_o *)v104, 0LL);
         }
         v105 = this;
         if ( item )
@@ -1553,7 +1553,7 @@ LABEL_140:
       goto LABEL_142;
     }
 LABEL_145:
-    sub_1BE4D28(this, nextDispString);
+    sub_1C13F80(this, nextDispString);
   }
   v75 = 0;
   klass = 4;
@@ -1569,7 +1569,7 @@ LABEL_145:
       goto LABEL_145;
     this = (EndrolRootComponent_o *)System_String__StartsWith(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1595/*"<"*/,
+                                      (System_String_o *)StringLiteral_1598/*";Port="*/,
                                       0LL);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
@@ -1581,7 +1581,7 @@ LABEL_145:
     {
       this = (EndrolRootComponent_o *)System_String__Contains(
                                         (System_String_o *)this,
-                                        (System_String_o *)StringLiteral_16018/*"["*/,
+                                        (System_String_o *)StringLiteral_16061/*"You must call the Bind method before performing this operation."*/,
                                         0LL);
       v94 = (unsigned int)v73->fields.m_CancellationTokenSource;
       if ( ((unsigned __int8)this & 1) != 0 )
@@ -1594,7 +1594,7 @@ LABEL_145:
       {
         if ( v75 >= v94 )
           goto LABEL_144;
-        this = (EndrolRootComponent_o *)System_String__Concat_62698808(
+        this = (EndrolRootComponent_o *)System_String__Concat_62967944(
                                           v8->fields.defaultTextColor,
                                           (System_String_o *)*v78,
                                           0LL);
@@ -1602,29 +1602,29 @@ LABEL_145:
       }
       goto LABEL_125;
     }
-    this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+    this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1595/*"<"*/,
+                                      (System_String_o *)StringLiteral_1598/*";Port="*/,
                                       (System_String_o *)StringLiteral_1/*""*/,
                                       0LL);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
     *v78 = this;
-    sub_1BE4A70((PartyOrganizationUtility_o *)v78, (int64_t)this, v81, v82, v83, v84, v85, v86);
+    sub_1C13CC8((PartyOrganizationUtility_o *)v78, (int64_t)this, v81, v82, v83, v84, v85, v86);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
     this = *v78;
     if ( !*v78 )
       goto LABEL_145;
-    this = (EndrolRootComponent_o *)System_String__Replace_62718436(
+    this = (EndrolRootComponent_o *)System_String__Replace_62987572(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1867/*">"*/,
+                                      (System_String_o *)StringLiteral_1870/*"=spot"*/,
                                       (System_String_o *)StringLiteral_1/*""*/,
                                       0LL);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
     *v78 = this;
-    sub_1BE4A70((PartyOrganizationUtility_o *)v78, (int64_t)this, v87, v88, v89, v90, v91, v92);
+    sub_1C13CC8((PartyOrganizationUtility_o *)v78, (int64_t)this, v87, v88, v89, v90, v91, v92);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
     this = *v78;
@@ -1632,7 +1632,7 @@ LABEL_145:
       goto LABEL_145;
     this = (EndrolRootComponent_o *)System_String__Contains(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_1858/*"="*/,
+                                      (System_String_o *)StringLiteral_1861/*"<{0}>"*/,
                                       0LL);
     if ( v75 >= LODWORD(v73->fields.m_CancellationTokenSource) )
       goto LABEL_144;
@@ -1653,7 +1653,7 @@ LABEL_145:
     }
     this = (EndrolRootComponent_o *)System_String__Contains(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_18029/*"center"*/,
+                                      (System_String_o *)StringLiteral_18071/*"card_servant_np"*/,
                                       0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
       break;
@@ -1664,7 +1664,7 @@ LABEL_145:
       goto LABEL_145;
     this = (EndrolRootComponent_o *)System_String__Contains(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_21364/*"left"*/,
+                                      (System_String_o *)StringLiteral_21413/*"lavender"*/,
                                       0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
       break;
@@ -1675,7 +1675,7 @@ LABEL_145:
       goto LABEL_145;
     this = (EndrolRootComponent_o *)System_String__Contains(
                                       (System_String_o *)this,
-                                      (System_String_o *)StringLiteral_23267/*"right"*/,
+                                      (System_String_o *)StringLiteral_23320/*"reverseMyDeckSvtPosition"*/,
                                       0LL);
     if ( ((unsigned __int8)this & 1) != 0 )
       break;
@@ -1689,7 +1689,7 @@ LABEL_125:
   this = *v78;
   if ( !*v78 )
     goto LABEL_145;
-  this = (EndrolRootComponent_o *)System_String__Substring_62717812((System_String_o *)this, 0, 1, 0LL);
+  this = (EndrolRootComponent_o *)System_String__Substring_62986948((System_String_o *)this, 0, 1, 0LL);
   if ( !this )
     goto LABEL_145;
   this = (EndrolRootComponent_o *)System_String__ToUpper((System_String_o *)this, 0LL);
@@ -1700,7 +1700,7 @@ LABEL_125:
   if ( !*v78 )
     goto LABEL_145;
   v96 = System_String__Substring((System_String_o *)this, 1, 0LL);
-  v97 = System_String__Concat_62698808((System_String_o *)v95, v96, 0LL);
+  v97 = System_String__Concat_62967944((System_String_o *)v95, v96, 0LL);
   v98 = (int)UIWidget_Pivot_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -1717,7 +1717,7 @@ LABEL_125:
     klass = (int)this->klass;
     goto LABEL_125;
   }
-  sub_1BE4FE8(this);
+  sub_1C14240(this);
   EndrolRootComponent__callbackConfirmDlg(v111, v112, v113);
   return result;
 }
@@ -1755,56 +1755,56 @@ void __fastcall EndrolRootComponent__StartEndroll(EndrolRootComponent_o *this, c
   float v30; // [xsp+8h] [xbp-68h] BYREF
   int v31; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B6A9E4 & 1) == 0 )
+  if ( (byte_4BB84F1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Collections_Hashtable_TypeInfo, method);
-    sub_1BE4ACC(&int_TypeInfo, v3);
-    sub_1BE4ACC(&float_TypeInfo, v4);
-    sub_1BE4ACC(&StringLiteral_10127/*"OnUpdateScroll"*/, v5);
-    sub_1BE4ACC(&StringLiteral_19917/*"from"*/, v6);
-    sub_1BE4ACC(&StringLiteral_24265/*"time"*/, v7);
-    sub_1BE4ACC(&StringLiteral_22599/*"onupdate"*/, v8);
-    sub_1BE4ACC(&StringLiteral_10104/*"OnScrollEnd"*/, v9);
-    sub_1BE4ACC(&StringLiteral_24306/*"to"*/, v10);
-    sub_1BE4ACC(&StringLiteral_22591/*"oncomplete"*/, v11);
-    sub_1BE4ACC(&iTween_TypeInfo, v12);
-    byte_4B6A9E4 = 1;
+    sub_1C13D24(&System_Collections_Hashtable_TypeInfo, method);
+    sub_1C13D24(&int_TypeInfo, v3);
+    sub_1C13D24(&float_TypeInfo, v4);
+    sub_1C13D24(&StringLiteral_10152/*"OnTooltip"*/, v5);
+    sub_1C13D24(&StringLiteral_19961/*"friendCode"*/, v6);
+    sub_1C13D24(&StringLiteral_24320/*"textarea"*/, v7);
+    sub_1C13D24(&StringLiteral_22651/*"onProductPurchaseDeferred"*/, v8);
+    sub_1C13D24(&StringLiteral_10129/*"OnProductsRetrieved"*/, v9);
+    sub_1C13D24(&StringLiteral_24361/*"timeoutTicks"*/, v10);
+    sub_1C13D24(&StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/, v11);
+    sub_1C13D24(&iTween_TypeInfo, v12);
+    byte_4BB84F1 = 1;
   }
   lastPostion = this->fields.lastPostion;
-  v14 = (System_Collections_Hashtable_o *)sub_1BE4D18(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_63278568(v14, 0LL);
+  v14 = (System_Collections_Hashtable_o *)sub_1C13F70(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_63547704(v14, 0LL);
   v31 = 0;
   v18 = j_il2cpp_value_box_0(int_TypeInfo, &v31, v15, v16, v17);
   if ( !v14 )
-    sub_1BE4D28(v18, v19);
+    sub_1C13F80(v18, v19);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
     v14,
-    StringLiteral_19917/*"from"*/,
+    StringLiteral_19961/*"friendCode"*/,
     v18,
     v14->klass->vtable._24_Clear.methodPtr);
   v30 = lastPostion + 580.0;
   v23 = j_il2cpp_value_box_0(float_TypeInfo, &v30, v20, v21, v22);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
     v14,
-    StringLiteral_24306/*"to"*/,
+    StringLiteral_24361/*"timeoutTicks"*/,
     v23,
     v14->klass->vtable._24_Clear.methodPtr);
   endrolTotalTime = this->fields.endrolTotalTime;
   v27 = j_il2cpp_value_box_0(float_TypeInfo, &endrolTotalTime, v24, v25, v26);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
     v14,
-    StringLiteral_24265/*"time"*/,
+    StringLiteral_24320/*"textarea"*/,
     v27,
     v14->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
     v14,
-    StringLiteral_22599/*"onupdate"*/,
-    StringLiteral_10127/*"OnUpdateScroll"*/,
+    StringLiteral_22651/*"onProductPurchaseDeferred"*/,
+    StringLiteral_10152/*"OnTooltip"*/,
     v14->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
     v14,
-    StringLiteral_22591/*"oncomplete"*/,
-    StringLiteral_10104/*"OnScrollEnd"*/,
+    StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/,
+    StringLiteral_10129/*"OnProductsRetrieved"*/,
     v14->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !iTween_TypeInfo->_2.cctor_finished )
@@ -1826,15 +1826,15 @@ void __fastcall EndrolRootComponent__StopEndrol(EndrolRootComponent_o *this, con
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4B6A9E8 & 1) == 0 )
+  if ( (byte_4BB84F5 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_EndrolRootComponent_EndFadeout__, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B6A9E8 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C13D24(&Method_EndrolRootComponent_EndFadeout__, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4BB84F5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1843,10 +1843,10 @@ void __fastcall EndrolRootComponent__StopEndrol(EndrolRootComponent_o *this, con
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_EndrolRootComponent_EndFadeout__, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v11, v12);
+    sub_1C13F80(v11, v12);
   CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0LL);
 }
 
@@ -1865,17 +1865,17 @@ System_Collections_IEnumerator_o *__fastcall EndrolRootComponent__Wait(
   FollowerInfo_o *v11; // x6
   PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4B6A9EA & 1) == 0 )
+  if ( (byte_4BB84F7 & 1) == 0 )
   {
-    sub_1BE4ACC(&EndrolRootComponent__Wait_d__33_TypeInfo, callback);
-    byte_4B6A9EA = 1;
+    sub_1C13D24(&EndrolRootComponent__Wait_d__33_TypeInfo, callback);
+    byte_4BB84F7 = 1;
   }
-  v6 = sub_1BE4D18(EndrolRootComponent__Wait_d__33_TypeInfo);
+  v6 = sub_1C13F70(EndrolRootComponent__Wait_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0LL);
   *(_DWORD *)(v6 + 16) = 0;
   *(float *)(v6 + 32) = waitTime;
   *(_QWORD *)(v6 + 40) = callback;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v6 + 40), (int64_t)callback, v7, v8, v9, v10, v11, v12);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v6 + 40), (int64_t)callback, v7, v8, v9, v10, v11, v12);
   return (System_Collections_IEnumerator_o *)v6;
 }
 
@@ -1890,14 +1890,14 @@ void __fastcall EndrolRootComponent__callbackConfirmDlg(
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4B6A9EF & 1) == 0 )
+  if ( (byte_4BB84FC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isSkip);
-    byte_4B6A9EF = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isSkip);
+    byte_4BB84FC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0LL);
   if ( isSkip )
     EndrolRootComponent__StopEndrol(this, v7);
@@ -1932,10 +1932,10 @@ bool __fastcall EndrolRootComponent__Wait_d__33__MoveNext(
   struct System_Action_o *callback; // x8
 
   v2 = this;
-  if ( (byte_4B6A9F4 & 1) == 0 )
+  if ( (byte_4BB8501 & 1) == 0 )
   {
-    this = (EndrolRootComponent__Wait_d__33_o *)sub_1BE4ACC(&UnityEngine_WaitForSeconds_TypeInfo, method);
-    byte_4B6A9F4 = 1;
+    this = (EndrolRootComponent__Wait_d__33_o *)sub_1C13D24(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_4BB8501 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -1943,7 +1943,7 @@ bool __fastcall EndrolRootComponent__Wait_d__33__MoveNext(
     callback = v2->fields.callback;
     v2->fields.__1__state = -1;
     if ( !callback )
-      sub_1BE4D28(this, method);
+      sub_1C13F80(this, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
       callback->fields.original_method_info,
       *(_QWORD *)&callback->fields.extra_arg);
@@ -1952,10 +1952,10 @@ bool __fastcall EndrolRootComponent__Wait_d__33__MoveNext(
   {
     v2->fields.__1__state = -1;
     waitTime = v2->fields.waitTime;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_1BE4D18(UnityEngine_WaitForSeconds_TypeInfo);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1C13F70(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v5, waitTime, 0LL);
     v2->fields.__2__current = (Il2CppObject *)v5;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v2->fields.__2__current, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.__2__current, (int64_t)v5, v6, v7, v8, v9, v10, v11);
     result = 1;
     v2->fields.__1__state = 1;
     return result;
@@ -1980,11 +1980,11 @@ void __fastcall __noreturn EndrolRootComponent__Wait_d__33__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
+  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BE4AE0(&Method_EndrolRootComponent__Wait_d__33_System_Collections_IEnumerator_Reset__);
-  sub_1BE4BF4(v3, v4);
+  v4 = sub_1C13D38(&Method_EndrolRootComponent__Wait_d__33_System_Collections_IEnumerator_Reset__);
+  sub_1C13E4C(v3, v4);
 }
 
 
@@ -2044,14 +2044,14 @@ void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__0(
   PartyListViewItem_o *v28; // x7
   System_Collections_IEnumerator_o *v29; // x1
 
-  if ( (byte_4B6A9F3 & 1) == 0 )
+  if ( (byte_4BB8500 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1BE4ACC(&SoundManager_TypeInfo, v5);
-    sub_1BE4ACC(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__1__, v6);
-    byte_4B6A9F3 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1C13D24(&SoundManager_TypeInfo, v5);
+    sub_1C13D24(&Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__1__, v6);
+    byte_4BB8500 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2086,8 +2086,8 @@ void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__0(
     goto LABEL_23;
   endCallback = this->fields.endCallback;
   *((_QWORD *)_4__this + 20) = endCallback;
-  sub_1BE4A70((PartyOrganizationUtility_o *)_4__this + 1, (int64_t)endCallback, (int64_t)v10, v12, v13, v14, v15, v16);
-  _4__this = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C13CC8((PartyOrganizationUtility_o *)_4__this + 1, (int64_t)endCallback, (int64_t)v10, v12, v13, v14, v15, v16);
+  _4__this = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v18 = (CommonUI_o *)_4__this;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
@@ -2099,23 +2099,23 @@ void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__0(
         (v20 = this->fields.__4__this) == 0LL) )
   {
 LABEL_23:
-    sub_1BE4D28(_4__this, method);
+    sub_1C13F80(_4__this, method);
   }
   startWaitTime = v20->fields.startWaitTime;
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_EndrolRootComponent___c__DisplayClass30_0__Open_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v23, v24, v25, v26, v27, v28);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v23, v24, v25, v26, v27, v28);
   }
   v29 = EndrolRootComponent__Wait((EndrolRootComponent_o *)_4__this, startWaitTime, _9__1, v19);
-  UnityEngine_MonoBehaviour__StartCoroutine_70437272((UnityEngine_MonoBehaviour_o *)v20, v29, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)v20, v29, 0LL);
 }
 
 
@@ -2127,6 +2127,6 @@ void __fastcall EndrolRootComponent___c__DisplayClass30_0___Open_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   EndrolRootComponent__StartEndroll(_4__this, method);
 }

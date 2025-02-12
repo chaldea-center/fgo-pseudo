@@ -12,12 +12,12 @@ void __fastcall ScriptFlagData___ctor(ScriptFlagData_o *this, System_String_o *n
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v4->fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)name;
   v4 = (PartyOrganizationUtility_o *)((char *)v4 + 16);
-  sub_1BE4A70(v4, (int64_t)name, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8(v4, (int64_t)name, v5, v6, v7, v8, v9, v10);
   v4->monitor = 0LL;
 }
 
 
-void __fastcall ScriptFlagData___ctor_42622216(
+void __fastcall ScriptFlagData___ctor_42823968(
         ScriptFlagData_o *this,
         System_String_o *name,
         int64_t v,
@@ -35,7 +35,7 @@ void __fastcall ScriptFlagData___ctor_42622216(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)name;
   v6 = (PartyOrganizationUtility_o *)((char *)v6 + 16);
-  sub_1BE4A70(v6, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C13CC8(v6, (int64_t)name, v7, v8, v9, v10, v11, v12);
   v6->monitor = (void *)v;
 }
 
@@ -49,7 +49,7 @@ bool __fastcall ScriptFlagData__Comp(ScriptFlagData_o *this, System_String_o *vs
 }
 
 
-bool __fastcall ScriptFlagData__Comp_42622304(ScriptFlagData_o *this, const MethodInfo *method)
+bool __fastcall ScriptFlagData__Comp_42824056(ScriptFlagData_o *this, const MethodInfo *method)
 {
   return this->fields.v != 0;
 }
@@ -64,26 +64,26 @@ int64_t __fastcall ScriptFlagData__Conv(ScriptFlagData_o *this, System_String_o 
   bool v8; // w8
   bool v9; // w8
 
-  if ( (byte_4B687FB & 1) == 0 )
+  if ( (byte_4BB6334 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_22523/*"off"*/, vs);
-    sub_1BE4ACC(&StringLiteral_22553/*"on"*/, v4);
-    sub_1BE4ACC(&StringLiteral_19638/*"false"*/, v5);
-    sub_1BE4ACC(&StringLiteral_24418/*"true"*/, v6);
-    byte_4B687FB = 1;
+    sub_1C13D24(&StringLiteral_22575/*"obj"*/, vs);
+    sub_1C13D24(&StringLiteral_22605/*"offset={0}, blurRadius={1}, color={2}"*/, v4);
+    sub_1C13D24(&StringLiteral_19682/*"factory_{0}_{1}"*/, v5);
+    sub_1C13D24(&StringLiteral_24473/*"treasureDeviceRuby"*/, v6);
+    byte_4BB6334 = 1;
   }
-  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24418/*"true"*/, 0LL)
-    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22553/*"on"*/, 0LL) )
+  if ( System_String__op_Equality(vs, (System_String_o *)StringLiteral_24473/*"treasureDeviceRuby"*/, 0LL)
+    || System_String__op_Equality(vs, (System_String_o *)StringLiteral_22605/*"offset={0}, blurRadius={1}, color={2}"*/, 0LL) )
   {
     return 1LL;
   }
   if ( !vs )
     return 0LL;
-  v8 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19638/*"false"*/, 0LL);
+  v8 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_19682/*"factory_{0}_{1}"*/, 0LL);
   result = 0LL;
   if ( !v8 )
   {
-    v9 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22523/*"off"*/, 0LL);
+    v9 = System_String__op_Equality(vs, (System_String_o *)StringLiteral_22575/*"obj"*/, 0LL);
     result = 0LL;
     if ( !v9 )
       return System_Int64__Parse(vs, 0LL);
@@ -113,14 +113,14 @@ void __fastcall ScriptFlagData__SetRahdom(
   v6 = (ScriptFlagData_o *)ScriptFlagData__Conv(this, ss, (const MethodInfo *)es);
   v7 = (int)v6;
   v9 = ScriptFlagData__Conv(v6, es, v8);
-  v10 = UnityEngine_Random__Range_70411740(v7, v9 + 1, 0LL);
+  v10 = UnityEngine_Random__Range_70681728(v7, v9 + 1, 0LL);
   if ( v9 < v10 )
     v10 = v9;
   this->fields.v = v10;
 }
 
 
-void __fastcall ScriptFlagData__Set_42622344(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
+void __fastcall ScriptFlagData__Set_42824096(ScriptFlagData_o *this, int64_t v, const MethodInfo *method)
 {
   this->fields.v = v;
 }

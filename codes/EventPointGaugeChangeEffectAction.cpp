@@ -20,10 +20,10 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4B6AA14 & 1) == 0 )
+  if ( (byte_4BB8521 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B6AA14 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB8521 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (monitor = (CommonEffectComponent_o *)v7[1].monitor) == 0LL )
 LABEL_23:
-      sub_1BE4D28(monitor, v4);
+      sub_1C13F80(monitor, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)monitor, 0LL);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0LL) )
       return 1;
@@ -84,7 +84,7 @@ void __fastcall EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction;
   v9 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0LL;
-  sub_1BE4A70(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -100,7 +100,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
   __int64 v10; // x1
-  Il2CppObject *ComponentInChildren_object__49610264; // x0
+  Il2CppObject *ComponentInChildren_object__49832308; // x0
   int64_t v12; // x2
   int32_t v13; // w3
   System_String_o *v14; // x4
@@ -134,23 +134,23 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   FollowerInfo_o *v42; // x6
   PartyListViewItem_o *v43; // x7
 
-  if ( (byte_4B6AA13 & 1) == 0 )
+  if ( (byte_4BB8520 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
-    byte_4B6AA13 = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
+    byte_4BB8520 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__49610264 = UnityEngine_Component__GetComponentInChildren_object__49610264(
+  ComponentInChildren_object__49832308 = UnityEngine_Component__GetComponentInChildren_object__49832308(
                                            transform,
-                                           (const MethodInfo_2F4FE18 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__49610264;
-  sub_1BE4A70(
+                                           (const MethodInfo_2F86174 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__49832308;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.commonEffectComponent,
-    (int64_t)ComponentInChildren_object__49610264,
+    (int64_t)ComponentInChildren_object__49832308,
     v12,
     v13,
     v14,
@@ -159,11 +159,11 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
     v17);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
-    || (v18 = UnityEngine_Component__GetComponentInChildren_object__49610264(
+    || (v18 = UnityEngine_Component__GetComponentInChildren_object__49832308(
                 transform,
-                (const MethodInfo_2F4FE18 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+                (const MethodInfo_2F86174 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
         this->fields.simpleAnimation = (struct SimpleAnimation_o *)v18,
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.simpleAnimation,
           (int64_t)v18,
           v19,
@@ -177,15 +177,15 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_1BE4D28(transform, v10);
+    sub_1C13F80(transform, v10);
   }
-  v25 = UnityEngine_Component__GetComponentInChildren_object__49610264(
+  v25 = UnityEngine_Component__GetComponentInChildren_object__49832308(
           transform,
-          (const MethodInfo_2F4FE18 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+          (const MethodInfo_2F86174 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.animation = (struct UnityEngine_Animation_o *)v25;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)v25, v26, v27, v28, v29, v30, v31);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)v25, v26, v27, v28, v29, v30, v31);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction,
     (int64_t)gaugeChangeAct,
     v32,
@@ -195,7 +195,7 @@ LABEL_7:
     v36,
     v37);
   this->fields.endAction = endAct;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.endAction, (int64_t)endAct, v38, v39, v40, v41, v42, v43);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.endAction, (int64_t)endAct, v38, v39, v40, v41, v42, v43);
 }
 
 
@@ -215,7 +215,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Update(
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
     if ( endAction )
       ActionExtensions__Call(endAction, 0LL);
   }

@@ -1,16 +1,16 @@
 void __fastcall EventItemDisplayGroupMaster___ctor(EventItemDisplayGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66B86 & 1) == 0 )
+  if ( (byte_4BB469F & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string___ctor__,
       method);
-    byte_4B66B86 = 1;
+    byte_4BB469F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     169,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string___ctor__);
 }
 
 
@@ -23,18 +23,18 @@ EventItemDisplayGroupEntity_o *__fastcall EventItemDisplayGroupMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66B84 & 1) == 0 )
+  if ( (byte_4BB469D & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B66B84 = 1;
+    byte_4BB469D = 1;
   }
   PK = (Il2CppObject *)EventItemDisplayGroupEntity__CreatePK(eventId, groupIndex, *(const MethodInfo **)&groupIndex);
   return (EventItemDisplayGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__GetEntity__);
+                                            (const MethodInfo_323D0DC *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +48,17 @@ bool __fastcall EventItemDisplayGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66B85 & 1) == 0 )
+  if ( (byte_4BB469E & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__TryGetEntity__,
       entity);
-    byte_4B66B85 = 1;
+    byte_4BB469E = 1;
   }
   PK = (Il2CppObject *)EventItemDisplayGroupEntity__CreatePK(eventId, groupIndex, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventItemDisplayGroupMaster__EventItemDisplayGroupEntity__string__TryGetEntity__);
 }

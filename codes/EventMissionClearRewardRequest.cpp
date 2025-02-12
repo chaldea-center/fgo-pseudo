@@ -8,22 +8,22 @@ void __fastcall EventMissionClearRewardRequest__beginRequest(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4B684C6 & 1) == 0 )
+  if ( (byte_4BB5FFF & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, *(_QWORD *)&missionId);
-    byte_4B684C6 = 1;
+    sub_1C13D24(&int___TypeInfo, *(_QWORD *)&missionId);
+    byte_4BB5FFF = 1;
   }
-  v5 = (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 1LL);
+  v5 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 1LL);
   if ( !v5 )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   if ( !v5->max_length )
-    sub_1BE4D30(v5, v5);
+    sub_1C13F88(v5, v5);
   v5->m_Items[1] = missionId;
-  EventMissionClearRewardRequest__beginRequest_42157000(this, v5, v7);
+  EventMissionClearRewardRequest__beginRequest_42356148(this, v5, v7);
 }
 
 
-void __fastcall EventMissionClearRewardRequest__beginRequest_42157000(
+void __fastcall EventMissionClearRewardRequest__beginRequest_42356148(
         EventMissionClearRewardRequest_o *this,
         System_Int32_array *missionIds,
         const MethodInfo *method)
@@ -31,12 +31,12 @@ void __fastcall EventMissionClearRewardRequest__beginRequest_42157000(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4B684C7 & 1) == 0 )
+  if ( (byte_4BB6000 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_21769/*"missionIds"*/, missionIds);
-    byte_4B684C7 = 1;
+    sub_1C13D24(&StringLiteral_21819/*"minutes"*/, missionIds);
+    byte_4BB6000 = 1;
   }
-  RequestBase__addField_42112900((RequestBase_o *)this, (System_String_o *)StringLiteral_21769/*"missionIds"*/, &missionIds->obj, v3);
+  RequestBase__addField_42312048((RequestBase_o *)this, (System_String_o *)StringLiteral_21819/*"minutes"*/, &missionIds->obj, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -48,16 +48,16 @@ System_String_o *__fastcall EventMissionClearRewardRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B684C5 & 1) == 0 )
+  if ( (byte_4BB5FFE & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19392/*"eventMission/receive"*/, v2);
-    byte_4B684C5 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_19436/*"event/scanPanelMap"*/, v2);
+    byte_4BB5FFE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19392/*"eventMission/receive"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19436/*"event/scanPanelMap"*/, 0LL);
 }
 
 
@@ -75,18 +75,18 @@ void __fastcall EventMissionClearRewardRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4B684C8 & 1) == 0 )
+  if ( (byte_4BB6001 & 1) == 0 )
   {
-    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B684C8 = 1;
+    sub_1C13D24(&JsonManager_TypeInfo, responseList);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB6001 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(50, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42194996(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -105,7 +105,7 @@ void __fastcall EventMissionClearRewardRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22370/*"ng"*/,
+        StringLiteral_22421/*"newAttributes"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

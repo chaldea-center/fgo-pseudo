@@ -1,9 +1,9 @@
 void __fastcall AppendSkillExchangeDialog___ctor(AppendSkillExchangeDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6A3EB & 1) == 0 )
+  if ( (byte_4BB7F0D & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B6A3EB = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BB7F0D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -39,19 +39,19 @@ System_String_o *__fastcall AppendSkillExchangeDialog__ExchangeLvText(
   Il2CppObject *v11; // x0
   int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B6A3E7 & 1) == 0 )
+  if ( (byte_4BB7F09 & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&currentLv);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&StringLiteral_8382/*"LEVEL_INFO"*/, v5);
-    sub_1BE4ACC(&StringLiteral_2113/*"APPEND_SKILL_EXCHANGE_LOCK"*/, v6);
-    byte_4B6A3E7 = 1;
+    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&currentLv);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, v5);
+    sub_1C13D24(&StringLiteral_2116/*"APPEND_SKILL_EXCHANGE_LIMIT_MSG"*/, v6);
+    byte_4BB7F09 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( currentLv <= 0 )
-    return LocalizationManager__Get((System_String_o *)StringLiteral_2113/*"APPEND_SKILL_EXCHANGE_LOCK"*/, 0LL);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8382/*"LEVEL_INFO"*/, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_2116/*"APPEND_SKILL_EXCHANGE_LIMIT_MSG"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, 0LL);
   v13 = currentLv;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v8, v9, v10);
   return System_String__Format(v7, v11, 0LL);
@@ -62,10 +62,10 @@ void __fastcall AppendSkillExchangeDialog__Init(AppendSkillExchangeDialog_o *thi
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4B6A3E5 & 1) == 0 )
+  if ( (byte_4BB7F07 & 1) == 0 )
   {
-    sub_1BE4ACC(&string_TypeInfo, method);
-    byte_4B6A3E5 = 1;
+    sub_1C13D24(&string_TypeInfo, method);
+    byte_4BB7F07 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -121,7 +121,7 @@ void __fastcall AppendSkillExchangeDialog__Init(AppendSkillExchangeDialog_o *thi
         (titleLabel = this->fields.cancelButtonLabel) == 0LL) )
   {
 LABEL_19:
-    sub_1BE4D28(titleLabel, method);
+    sub_1C13F80(titleLabel, method);
   }
   UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0LL);
   this->fields.isButtonEnable = 0;
@@ -134,19 +134,19 @@ void __fastcall AppendSkillExchangeDialog__OnClickCancel(AppendSkillExchangeDial
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4B6A3E9 & 1) == 0 )
+  if ( (byte_4BB7F0B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_AppendSkillExchangeDialog_OnClickCancel__, method);
-    byte_4B6A3E9 = 1;
+    sub_1C13D24(&Method_AppendSkillExchangeDialog_OnClickCancel__, method);
+    byte_4BB7F0B = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v3 = Method_AppendSkillExchangeDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_AppendSkillExchangeDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_AppendSkillExchangeDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_AppendSkillExchangeDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, 0LL, 0LL);
   }
 }
@@ -160,22 +160,22 @@ void __fastcall AppendSkillExchangeDialog__OnClickDecide(AppendSkillExchangeDial
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B6A3E8 & 1) == 0 )
+  if ( (byte_4BB7F0A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_AppendSkillExchangeDialog_OnClickDecide__, v3);
-    sub_1BE4ACC(&Method_AppendSkillExchangeDialog__OnClickDecide_b__24_0__, v4);
-    byte_4B6A3E8 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_AppendSkillExchangeDialog_OnClickDecide__, v3);
+    sub_1C13D24(&Method_AppendSkillExchangeDialog__OnClickDecide_b__24_0__, v4);
+    byte_4BB7F0A = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v5 = Method_AppendSkillExchangeDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_AppendSkillExchangeDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BE4AE4(Method_AppendSkillExchangeDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-    v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v5 = (_QWORD *)sub_1C13D3C(Method_AppendSkillExchangeDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C13D08(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+    v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_AppendSkillExchangeDialog__OnClickDecide_b__24_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
@@ -186,13 +186,13 @@ void __fastcall AppendSkillExchangeDialog__OnEnable(AppendSkillExchangeDialog_o 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B6A3EA & 1) == 0 )
+  if ( (byte_4BB7F0C & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3223/*"BaseWindow/ButtonBase/CancelButton"*/, method);
-    byte_4B6A3EA = 1;
+    sub_1C13D24(&StringLiteral_3226/*"BaseUtcOffsetDelta"*/, method);
+    byte_4BB7F0C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42781316(transform, (System_String_o *)StringLiteral_3223/*"BaseWindow/ButtonBase/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42984304(transform, (System_String_o *)StringLiteral_3226/*"BaseUtcOffsetDelta"*/, 0LL);
 }
 
 
@@ -262,35 +262,35 @@ void __fastcall AppendSkillExchangeDialog__Open(
   int32_t v66; // [xsp+8h] [xbp-48h] BYREF
   int32_t v67; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B6A3E6 & 1) == 0 )
+  if ( (byte_4BB7F08 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, baseData);
-    sub_1BE4ACC(&Method_AppendSkillExchangeDialog_EndOpen__, v11);
-    sub_1BE4ACC(&int_TypeInfo, v12);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v13);
-    sub_1BE4ACC(&StringLiteral_2124/*"APPEND_SKILL_EXCHANGE_UNLIMITED_MSG"*/, v14);
-    sub_1BE4ACC(&StringLiteral_2122/*"APPEND_SKILL_EXCHANGE_TARGET"*/, v15);
-    sub_1BE4ACC(&StringLiteral_2103/*"APPEND_SKILL_EXCHANGE_BASE"*/, v16);
-    sub_1BE4ACC(&StringLiteral_2115/*"APPEND_SKILL_EXCHANGE_MSG"*/, v17);
-    sub_1BE4ACC(&StringLiteral_3797/*"COMMON_CONFIRM_DECIDE"*/, v18);
-    sub_1BE4ACC(&StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, v19);
-    sub_1BE4ACC(&StringLiteral_2114/*"APPEND_SKILL_EXCHANGE_LV"*/, v20);
-    sub_1BE4ACC(&StringLiteral_2123/*"APPEND_SKILL_EXCHANGE_TITLE"*/, v21);
-    sub_1BE4ACC(&StringLiteral_2119/*"APPEND_SKILL_EXCHANGE_REMAINING_COUNT"*/, v22);
-    byte_4B6A3E6 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, baseData);
+    sub_1C13D24(&Method_AppendSkillExchangeDialog_EndOpen__, v11);
+    sub_1C13D24(&int_TypeInfo, v12);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v13);
+    sub_1C13D24(&StringLiteral_2127/*"APPEND_SKILL_EXCHANGE_TITLE"*/, v14);
+    sub_1C13D24(&StringLiteral_2125/*"APPEND_SKILL_EXCHANGE_SELECT_BASE_INFO"*/, v15);
+    sub_1C13D24(&StringLiteral_2106/*"APPEND_SKILL_COMBINE_SELECT_BASE_INFO"*/, v16);
+    sub_1C13D24(&StringLiteral_2118/*"APPEND_SKILL_EXCHANGE_LV"*/, v17);
+    sub_1C13D24(&StringLiteral_3800/*"COMMON"*/, v18);
+    sub_1C13D24(&StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, v19);
+    sub_1C13D24(&StringLiteral_2117/*"APPEND_SKILL_EXCHANGE_LOCK"*/, v20);
+    sub_1C13D24(&StringLiteral_2126/*"APPEND_SKILL_EXCHANGE_TARGET"*/, v21);
+    sub_1C13D24(&StringLiteral_2122/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/, v22);
+    byte_4BB7F08 = 1;
   }
   AppendSkillExchangeDialog__Init(this, (const MethodInfo *)baseData);
   this->fields.onDecide = decideAction;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)decideAction, v23, v24, v25, v26, v27, v28);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)decideAction, v23, v24, v25, v26, v27, v28);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2123/*"APPEND_SKILL_EXCHANGE_TITLE"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2126/*"APPEND_SKILL_EXCHANGE_TARGET"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_32;
   UILabel__set_text(titleLabel, appendSkillBaseIconComp, 0LL);
   appendSkillBaseInfo = this->fields.appendSkillBaseInfo;
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2103/*"APPEND_SKILL_EXCHANGE_BASE"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2106/*"APPEND_SKILL_COMBINE_SELECT_BASE_INFO"*/, 0LL);
   if ( !appendSkillBaseInfo )
     goto LABEL_32;
   UILabel__set_text(appendSkillBaseInfo, appendSkillBaseIconComp, 0LL);
@@ -306,7 +306,7 @@ void __fastcall AppendSkillExchangeDialog__Open(
     goto LABEL_32;
   UILabel__set_text(beforeAppendSkillBaseLvInfo, appendSkillBaseIconComp, 0LL);
   afterAppendSkillBaseLvInfo = this->fields.afterAppendSkillBaseLvInfo;
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2114/*"APPEND_SKILL_EXCHANGE_LV"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2117/*"APPEND_SKILL_EXCHANGE_LOCK"*/, 0LL);
   if ( !targetData )
     goto LABEL_32;
   v38 = appendSkillBaseIconComp;
@@ -327,7 +327,7 @@ void __fastcall AppendSkillExchangeDialog__Open(
     goto LABEL_32;
   UILabel__set_text((UILabel_o *)appendSkillBaseIconComp, baseData->fields.targetDetail, 0LL);
   appendSkillTargetInfo = this->fields.appendSkillTargetInfo;
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2122/*"APPEND_SKILL_EXCHANGE_TARGET"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2125/*"APPEND_SKILL_EXCHANGE_SELECT_BASE_INFO"*/, 0LL);
   if ( !appendSkillTargetInfo )
     goto LABEL_32;
   UILabel__set_text(appendSkillTargetInfo, appendSkillBaseIconComp, 0LL);
@@ -341,7 +341,7 @@ void __fastcall AppendSkillExchangeDialog__Open(
     goto LABEL_32;
   UILabel__set_text(beforeAppendSkillTargetLvInfo, appendSkillBaseIconComp, 0LL);
   afterAppendSkillTargetLvInfo = this->fields.afterAppendSkillTargetLvInfo;
-  v45 = (AppendSkillExchangeDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2114/*"APPEND_SKILL_EXCHANGE_LV"*/, 0LL);
+  v45 = (AppendSkillExchangeDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2117/*"APPEND_SKILL_EXCHANGE_LOCK"*/, 0LL);
   currentLv = baseData->fields.currentLv;
   v47 = (System_String_o *)v45;
   v49 = (Il2CppObject *)AppendSkillExchangeDialog__ExchangeLvText(v45, currentLv, v48);
@@ -353,7 +353,7 @@ void __fastcall AppendSkillExchangeDialog__Open(
         (appendSkillBaseIconComp = (System_String_o *)this->fields.appendSkillIconTargetMessageLabel) == 0LL) )
   {
 LABEL_32:
-    sub_1BE4D28(appendSkillBaseIconComp, v31);
+    sub_1C13F80(appendSkillBaseIconComp, v31);
   }
   UILabel__set_text((UILabel_o *)appendSkillBaseIconComp, targetData->fields.targetDetail, 0LL);
   IsExchangeLimited = UserServantAppendPassiveSkillMaster__IsExchangeLimited(0LL);
@@ -365,7 +365,7 @@ LABEL_32:
     if ( v52 )
       goto LABEL_22;
 LABEL_26:
-    appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2124/*"APPEND_SKILL_EXCHANGE_UNLIMITED_MSG"*/, 0LL);
+    appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_2127/*"APPEND_SKILL_EXCHANGE_TITLE"*/, 0LL);
     if ( !appendSkillWarningMessageLabel )
       goto LABEL_32;
     goto LABEL_27;
@@ -373,7 +373,7 @@ LABEL_26:
   if ( !IsExchangeLimited )
     goto LABEL_26;
 LABEL_22:
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2115/*"APPEND_SKILL_EXCHANGE_MSG"*/, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2118/*"APPEND_SKILL_EXCHANGE_LV"*/, 0LL);
   v67 = remainingCount;
   v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67, v54, v55, v56);
   appendSkillBaseIconComp = System_String__Format(v53, v57, 0LL);
@@ -381,7 +381,7 @@ LABEL_22:
     goto LABEL_32;
   UILabel__set_text(appendSkillWarningMessageLabel, appendSkillBaseIconComp, 0LL);
   appendSkillWarningMessageLabel = this->fields.remainingCountLabel;
-  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_2119/*"APPEND_SKILL_EXCHANGE_REMAINING_COUNT"*/, 0LL);
+  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_2122/*"APPEND_SKILL_EXCHANGE_PRESELECT_TARGET_INFO"*/, 0LL);
   v66 = remainingCount;
   v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66, v59, v60, v61);
   appendSkillBaseIconComp = System_String__Format(v58, v62, 0LL);
@@ -392,16 +392,16 @@ LABEL_27:
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_3797/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMON"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_32;
   UILabel__set_text(decideButtonLabel, appendSkillBaseIconComp, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  appendSkillBaseIconComp = LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_32;
   UILabel__set_text(cancelButtonLabel, appendSkillBaseIconComp, 0LL);
-  v65 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v65 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v65, (Il2CppObject *)this, Method_AppendSkillExchangeDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
 }

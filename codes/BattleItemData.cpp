@@ -1,13 +1,13 @@
 void __fastcall BattleItemData___ctor(BattleItemData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B692AA & 1) == 0 )
+  if ( (byte_4BB6DF1 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonTemplate_BattleItemData___ctor__, method);
-    byte_4B692AA = 1;
+    sub_1C13D24(&Method_SingletonTemplate_BattleItemData___ctor__, method);
+    byte_4BB6DF1 = 1;
   }
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_38292E0 *)Method_SingletonTemplate_BattleItemData___ctor__);
+    (const MethodInfo_386A8A0 *)Method_SingletonTemplate_BattleItemData___ctor__);
 }
 
 
@@ -59,15 +59,15 @@ BattleItemData_SaveData_o *__fastcall BattleItemData__GetSaveData(BattleItemData
   __int64 v5; // x1
   BattleItemData_SaveData_o *result; // x0
 
-  if ( (byte_4B692A9 & 1) == 0 )
+  if ( (byte_4BB6DF0 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleItemData_SaveData_TypeInfo, method);
-    byte_4B692A9 = 1;
+    sub_1C13D24(&BattleItemData_SaveData_TypeInfo, method);
+    byte_4BB6DF0 = 1;
   }
-  v3 = (Il2CppObject *)sub_1BE4D18(BattleItemData_SaveData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C13F70(BattleItemData_SaveData_TypeInfo);
   System_Object___ctor(v3, 0LL);
   if ( !v3 )
-    sub_1BE4D28(v4, v5);
+    sub_1C13F80(v4, v5);
   result = (BattleItemData_SaveData_o *)v3;
   v3[1].klass = *(Il2CppClass **)&this->fields.itemId;
   return result;

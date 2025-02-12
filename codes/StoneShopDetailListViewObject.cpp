@@ -1,9 +1,9 @@
 void __fastcall StoneShopDetailListViewObject___ctor(StoneShopDetailListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6317F & 1) == 0 )
+  if ( (byte_4BB0C96 & 1) == 0 )
   {
-    sub_1BE4ACC(&ListViewObject_TypeInfo, method);
-    byte_4B6317F = 1;
+    sub_1C13D24(&ListViewObject_TypeInfo, method);
+    byte_4BB0C96 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void __fastcall StoneShopDetailListViewObject__Awake(StoneShopDetailListViewObje
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B6317D & 1) == 0 )
+  if ( (byte_4BB0C94 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_StoneShopDetailListViewItemDraw___, method);
-    byte_4B6317D = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_StoneShopDetailListViewItemDraw___, method);
+    byte_4BB0C94 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_StoneShopDetailListViewItemDraw___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_StoneShopDetailListViewItemDraw___);
   this->fields.itemDraw = (struct StoneShopDetailListViewItemDraw_o *)Component_object;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -53,11 +53,11 @@ void __fastcall StoneShopDetailListViewObject__SetupDisp(
   const MethodInfo *v9; // x2
   StoneShopDetailListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4B6317E & 1) == 0 )
+  if ( (byte_4BB0C95 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    sub_1BE4ACC(&StoneShopDetailListViewItem_TypeInfo, v3);
-    byte_4B6317E = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    sub_1C13D24(&StoneShopDetailListViewItem_TypeInfo, v3);
+    byte_4BB0C95 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -81,7 +81,7 @@ void __fastcall StoneShopDetailListViewObject__SetupDisp(
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BE4D28(0LL, v8);
+      sub_1C13F80(0LL, v8);
     StoneShopDetailListViewItemDraw__SetItem(v10, (StoneShopDetailListViewItem_o *)v6, v9);
   }
 }

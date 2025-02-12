@@ -1,14 +1,14 @@
 void __fastcall EventRewardSceneMaster___ctor(EventRewardSceneMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66CD7 & 1) == 0 )
+  if ( (byte_4BB47EE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string___ctor__, method);
-    byte_4B66CD7 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string___ctor__, method);
+    byte_4BB47EE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     189,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ EventRewardSceneEntity_o *__fastcall EventRewardSceneMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66CD5 & 1) == 0 )
+  if ( (byte_4BB47EC & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B66CD5 = 1;
+    byte_4BB47EC = 1;
   }
   PK = (Il2CppObject *)EventRewardSceneEntity__CreatePK(eventId, slot, *(const MethodInfo **)&slot);
   return (EventRewardSceneEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__GetEntity__);
+                                       (const MethodInfo_323D0DC *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__GetEntity__);
 }
 
 
@@ -48,50 +48,49 @@ EventRewardSceneEntity_array *__fastcall EventRewardSceneMaster__GetEntityList(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_object__o *v12; // x21
-  int64_t v13; // x1
+  System_Collections_Generic_List_object__o *v11; // x21
+  int64_t v12; // x1
   int64_t list; // x0
-  int v15; // w22
-  int32_t v16; // w23
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  __int64 methodPtr_low; // x10
+  int v14; // w22
+  int32_t v15; // w23
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
+  Il2CppClass **v25; // x0
 
-  if ( (byte_4B66CD8 & 1) == 0 )
+  if ( (byte_4BB47EF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BE4ACC(&EventRewardSceneEntity_TypeInfo, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__get_Count__, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo, v11);
-    byte_4B66CD8 = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Count__,
+      *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Item__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__get_Count__, v9);
+    sub_1C13D24(&System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo, v10);
+    byte_4BB47EF = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__);
+    v11,
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
-    goto LABEL_21;
+    goto LABEL_19;
   list = System_Collections_ObjectModel_Collection_object___get_Count(
            (System_Collections_ObjectModel_Collection_T__o *)list,
-           (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+           (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v15 = list;
-    v16 = 0;
+    v14 = list;
+    v15 = 0;
     while ( 1 )
     {
       list = (int64_t)this->fields.list;
@@ -99,57 +98,51 @@ EventRewardSceneEntity_array *__fastcall EventRewardSceneMaster__GetEntityList(
         break;
       list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)list,
-                        v16,
-                        (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                        v15,
+                        (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Item__);
       if ( !list )
         break;
-      v13 = list;
-      methodPtr_low = LOBYTE(EventRewardSceneEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) < (unsigned int)methodPtr_low
-        || *(EventRewardSceneEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) != EventRewardSceneEntity_TypeInfo )
-      {
-        break;
-      }
+      v12 = list;
       if ( *(_DWORD *)(list + 16) == eventId )
       {
-        if ( !v12 )
+        if ( !v11 )
           break;
-        items = v12->fields._items;
-        v25 = Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__;
-        ++v12->fields._version;
+        items = v11->fields._items;
+        v23 = Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__;
+        ++v11->fields._version;
         if ( !items )
           break;
-        size = v12->fields._size;
+        size = v11->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v12,
+            v11,
             (Il2CppObject *)list,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
-          v27 = &items->obj.klass + size;
-          v12->fields._size = size + 1;
-          v27[4] = (Il2CppClass *)v13;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 4), v13, v17, v18, v19, v20, v21, v22);
+          v25 = &items->obj.klass + size;
+          v11->fields._size = size + 1;
+          v25[4] = (Il2CppClass *)v12;
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), v12, v16, v17, v18, v19, v20, v21);
         }
       }
-      if ( v15 == ++v16 )
-        goto LABEL_17;
+      if ( v14 == ++v15 )
+        goto LABEL_15;
     }
-LABEL_21:
-    sub_1BE4D28(list, v13);
+LABEL_19:
+    sub_1C13F80(list, v12);
   }
-LABEL_17:
-  if ( !v12 )
-    goto LABEL_21;
-  if ( v12->fields._size < 1 )
+LABEL_15:
+  if ( !v11 )
+    goto LABEL_19;
+  if ( v11->fields._size < 1 )
     return 0LL;
   else
     return (EventRewardSceneEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                             v12,
-                                             (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__);
+                                             v11,
+                                             (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__);
 }
 
 
@@ -163,17 +156,17 @@ bool __fastcall EventRewardSceneMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66CD6 & 1) == 0 )
+  if ( (byte_4BB47ED & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__TryGetEntity__, entity);
-    byte_4B66CD6 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__TryGetEntity__, entity);
+    byte_4BB47ED = 1;
   }
   PK = (Il2CppObject *)EventRewardSceneEntity__CreatePK(eventId, slot, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventRewardSceneMaster__EventRewardSceneEntity__string__TryGetEntity__);
 }
 
 
@@ -190,50 +183,49 @@ EventRewardSceneEntity_array *__fastcall EventRewardSceneMaster__getEntityFromId
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x1
-  System_Collections_Generic_List_object__o *v14; // x22
-  int64_t v15; // x1
+  System_Collections_Generic_List_object__o *v13; // x22
+  int64_t v14; // x1
   int64_t list; // x0
-  int v17; // w23
-  int32_t v18; // w24
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  __int64 methodPtr_low; // x10
+  int v16; // w23
+  int32_t v17; // w24
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v27; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v29; // x0
+  Il2CppClass **v27; // x0
 
-  if ( (byte_4B66CD9 & 1) == 0 )
+  if ( (byte_4BB47F0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1BE4ACC(&EventRewardSceneEntity_TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardSceneEntity__get_Count__, v12);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo, v13);
-    byte_4B66CD9 = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Count__,
+      *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Item__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardSceneEntity__get_Count__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo, v12);
+    byte_4BB47F0 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v14,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__);
+    v13,
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventRewardSceneEntity___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
-    goto LABEL_22;
+    goto LABEL_20;
   list = System_Collections_ObjectModel_Collection_object___get_Count(
            (System_Collections_ObjectModel_Collection_T__o *)list,
-           (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+           (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v17 = list;
-    v18 = 0;
+    v16 = list;
+    v17 = 0;
     while ( 1 )
     {
       list = (int64_t)this->fields.list;
@@ -241,55 +233,49 @@ EventRewardSceneEntity_array *__fastcall EventRewardSceneMaster__getEntityFromId
         break;
       list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)list,
-                        v18,
-                        (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                        v17,
+                        (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventRewardSceneEntity__get_Item__);
       if ( !list )
         break;
-      v15 = list;
-      methodPtr_low = LOBYTE(EventRewardSceneEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) < (unsigned int)methodPtr_low
-        || *(EventRewardSceneEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) != EventRewardSceneEntity_TypeInfo )
-      {
-        break;
-      }
+      v14 = list;
       if ( *(_DWORD *)(list + 16) == eventId && *(_DWORD *)(list + 28) == eventType )
       {
-        if ( !v14 )
+        if ( !v13 )
           break;
-        items = v14->fields._items;
-        v27 = Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__;
-        ++v14->fields._version;
+        items = v13->fields._items;
+        v25 = Method_System_Collections_Generic_List_EventRewardSceneEntity__Add__;
+        ++v13->fields._version;
         if ( !items )
           break;
-        size = v14->fields._size;
+        size = v13->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v14,
+            v13,
             (Il2CppObject *)list,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v29 = &items->obj.klass + size;
-          v14->fields._size = size + 1;
-          v29[4] = (Il2CppClass *)v15;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 4), v15, v19, v20, v21, v22, v23, v24);
+          v27 = &items->obj.klass + size;
+          v13->fields._size = size + 1;
+          v27[4] = (Il2CppClass *)v14;
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 4), v14, v18, v19, v20, v21, v22, v23);
         }
       }
-      if ( v17 == ++v18 )
-        goto LABEL_18;
+      if ( v16 == ++v17 )
+        goto LABEL_16;
     }
-LABEL_22:
-    sub_1BE4D28(list, v15);
+LABEL_20:
+    sub_1C13F80(list, v14);
   }
-LABEL_18:
-  if ( !v14 )
-    goto LABEL_22;
-  if ( v14->fields._size < 1 )
+LABEL_16:
+  if ( !v13 )
+    goto LABEL_20;
+  if ( v13->fields._size < 1 )
     return 0LL;
   else
     return (EventRewardSceneEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                             v14,
-                                             (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__);
+                                             v13,
+                                             (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventRewardSceneEntity__ToArray__);
 }

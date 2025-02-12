@@ -1,13 +1,13 @@
 void __fastcall ClassBoardBaseEntity___ctor(ClassBoardBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66930 & 1) == 0 )
+  if ( (byte_4BB4448 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B66930 = 1;
+    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BB4448 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ bool __fastcall ClassBoardBaseEntity__IsOpen(ClassBoardBaseEntity_o *this, const
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4B6692F & 1) == 0 )
+  if ( (byte_4BB4447 & 1) == 0 )
   {
-    sub_1BE4ACC(&CondType_TypeInfo, method);
-    byte_4B6692F = 1;
+    sub_1C13D24(&CondType_TypeInfo, method);
+    byte_4BB4447 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

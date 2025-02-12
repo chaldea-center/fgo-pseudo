@@ -18,9 +18,9 @@ void __fastcall SupportSelectListViewItem___ctor(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
   this->fields.supportServantData = supportServantData;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.supportServantData,
     (int64_t)supportServantData,
     v8,
@@ -30,7 +30,7 @@ void __fastcall SupportSelectListViewItem___ctor(
     v12,
     v13);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.eventFriendPoints,
     (int64_t)friendPointCampaigns,
     v14,
@@ -54,7 +54,7 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
   PartyListViewItem_o *v7; // x7
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.eventFriendPoints,
     (int64_t)friendPointCampaigns,
     (int64_t)method,
@@ -74,7 +74,7 @@ System_String_o *__fastcall SupportSelectListViewItem__get_DeckName(
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -99,7 +99,7 @@ void __fastcall SupportSelectListViewItem__set_listObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._listObj_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._listObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -127,7 +127,7 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._listObj_k__BackingField,
     (int64_t)obj,
     (int64_t)method,
@@ -137,7 +137,7 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
     v6,
     v7);
   if ( !*p_listObj_k__BackingField )
-    sub_1BE4D28(0LL, v10);
+    sub_1C13F80(0LL, v10);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

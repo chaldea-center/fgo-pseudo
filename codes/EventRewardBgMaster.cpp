@@ -1,14 +1,14 @@
 void __fastcall EventRewardBgMaster___ctor(EventRewardBgMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66CB3 & 1) == 0 )
+  if ( (byte_4BB47CA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string___ctor__, method);
-    byte_4B66CB3 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string___ctor__, method);
+    byte_4BB47CA = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     302,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ EventRewardBgEntity_o *__fastcall EventRewardBgMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66CB1 & 1) == 0 )
+  if ( (byte_4BB47C8 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B66CB1 = 1;
+    byte_4BB47C8 = 1;
   }
   PK = (Il2CppObject *)EventRewardBgEntity__CreatePK(eventId, slot, priority, *(const MethodInfo **)&priority);
   return (EventRewardBgEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__GetEntity__);
+                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__GetEntity__);
 }
 
 
@@ -47,87 +47,79 @@ int32_t __fastcall EventRewardBgMaster__GetEventRewardBgId(
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x1
   DataManager_o *Instance; // x0
   __int64 m_CancellationTokenSource_high; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x8
-  CommonReleaseMaster_o *v14; // x22
-  int32_t v15; // w24
-  int m_CancellationTokenSource; // w29
-  int32_t v17; // w23
-  DataManager_o *v18; // x25
-  __int64 methodPtr_low; // x10
+  CommonReleaseMaster_o *v13; // x22
+  int32_t v14; // w24
+  int m_CancellationTokenSource; // w28
+  int32_t v16; // w23
+  DataManager_o *v17; // x25
 
-  if ( (byte_4B66CB4 & 1) == 0 )
+  if ( (byte_4BB47CB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
-    sub_1BE4ACC(&EventRewardBgEntity_TypeInfo, v9);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4B66CB4 = 1;
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Item__, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BB47CB = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+                                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         (list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list) == 0LL) )
   {
-LABEL_19:
-    sub_1BE4D28(Instance, m_CancellationTokenSource_high);
+LABEL_17:
+    sub_1C13F80(Instance, m_CancellationTokenSource_high);
   }
-  v14 = (CommonReleaseMaster_o *)Instance;
-  v15 = 0;
+  v13 = (CommonReleaseMaster_o *)Instance;
+  v14 = 0;
   m_CancellationTokenSource = 0;
-  v17 = 0;
-  while ( v17 < System_Collections_ObjectModel_Collection_object___get_Count(
+  v16 = 0;
+  while ( v16 < System_Collections_ObjectModel_Collection_object___get_Count(
                   list,
-                  (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Count__) )
   {
     Instance = (DataManager_o *)this->fields.list;
     if ( Instance )
     {
       Instance = (DataManager_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                     (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                                    v17,
-                                    (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                    v16,
+                                    (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Item__);
       if ( Instance )
       {
-        v18 = Instance;
-        methodPtr_low = LOBYTE(EventRewardBgEntity_TypeInfo->vtable._0_Equals.methodPtr);
-        if ( LOBYTE(Instance->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-          && (EventRewardBgEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == EventRewardBgEntity_TypeInfo )
+        v17 = Instance;
+        if ( Instance->fields.m_CachedPtr == eventId
+          && *((_DWORD *)&Instance->fields.UnityEngine_Behaviour_Fields + 1) == slot )
         {
-          if ( Instance->fields.m_CachedPtr == eventId
-            && *((_DWORD *)&Instance->fields.UnityEngine_Behaviour_Fields + 1) == slot )
+          m_CancellationTokenSource_high = HIDWORD(Instance->fields.m_CancellationTokenSource);
+          if ( (int)m_CancellationTokenSource_high < 1 )
+            goto LABEL_14;
+          if ( !v13 )
+            goto LABEL_17;
+          Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(v13, m_CancellationTokenSource_high, 0LL, 0, 0LL);
+          if ( ((unsigned __int8)Instance & 1) != 0 )
           {
-            m_CancellationTokenSource_high = HIDWORD(Instance->fields.m_CancellationTokenSource);
-            if ( (int)m_CancellationTokenSource_high < 1 )
-              goto LABEL_16;
-            if ( !v14 )
-              goto LABEL_19;
-            Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(v14, m_CancellationTokenSource_high, 0LL, 0, 0LL);
-            if ( ((unsigned __int8)Instance & 1) != 0 )
+LABEL_14:
+            if ( m_CancellationTokenSource < SLODWORD(v17->fields.m_CancellationTokenSource) )
             {
-LABEL_16:
-              if ( m_CancellationTokenSource < SLODWORD(v18->fields.m_CancellationTokenSource) )
-              {
-                v15 = *(_DWORD *)&v18->fields._DispLog;
-                m_CancellationTokenSource = (int)v18->fields.m_CancellationTokenSource;
-              }
+              v14 = *(_DWORD *)&v17->fields._DispLog;
+              m_CancellationTokenSource = (int)v17->fields.m_CancellationTokenSource;
             }
           }
-          list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-          ++v17;
-          if ( list )
-            continue;
         }
+        list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+        ++v16;
+        if ( list )
+          continue;
       }
     }
-    goto LABEL_19;
+    goto LABEL_17;
   }
-  return v15;
+  return v14;
 }
 
 
@@ -141,87 +133,79 @@ int32_t __fastcall EventRewardBgMaster__GetEventRewardSlotBgId(
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x1
   DataManager_o *Instance; // x0
   __int64 m_CancellationTokenSource_high; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x8
-  CommonReleaseMaster_o *v14; // x22
-  int32_t v15; // w24
-  int m_CancellationTokenSource; // w29
-  int32_t v17; // w23
-  DataManager_o *v18; // x25
-  __int64 methodPtr_low; // x10
+  CommonReleaseMaster_o *v13; // x22
+  int32_t v14; // w24
+  int m_CancellationTokenSource; // w28
+  int32_t v16; // w23
+  DataManager_o *v17; // x25
 
-  if ( (byte_4B66CB5 & 1) == 0 )
+  if ( (byte_4BB47CC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
-    sub_1BE4ACC(&EventRewardBgEntity_TypeInfo, v9);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4B66CB5 = 1;
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Item__, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BB47CC = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+                                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         (list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list) == 0LL) )
   {
-LABEL_19:
-    sub_1BE4D28(Instance, m_CancellationTokenSource_high);
+LABEL_17:
+    sub_1C13F80(Instance, m_CancellationTokenSource_high);
   }
-  v14 = (CommonReleaseMaster_o *)Instance;
-  v15 = 0;
+  v13 = (CommonReleaseMaster_o *)Instance;
+  v14 = 0;
   m_CancellationTokenSource = 0;
-  v17 = 0;
-  while ( v17 < System_Collections_ObjectModel_Collection_object___get_Count(
+  v16 = 0;
+  while ( v16 < System_Collections_ObjectModel_Collection_object___get_Count(
                   list,
-                  (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Count__) )
   {
     Instance = (DataManager_o *)this->fields.list;
     if ( Instance )
     {
       Instance = (DataManager_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                     (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                                    v17,
-                                    (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                    v16,
+                                    (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventRewardBgEntity__get_Item__);
       if ( Instance )
       {
-        v18 = Instance;
-        methodPtr_low = LOBYTE(EventRewardBgEntity_TypeInfo->vtable._0_Equals.methodPtr);
-        if ( LOBYTE(Instance->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-          && (EventRewardBgEntity_c *)Instance->klass->_2.typeHierarchy[methodPtr_low - 1] == EventRewardBgEntity_TypeInfo )
+        v17 = Instance;
+        if ( Instance->fields.m_CachedPtr == eventId
+          && *((_DWORD *)&Instance->fields.UnityEngine_Behaviour_Fields + 1) == slot )
         {
-          if ( Instance->fields.m_CachedPtr == eventId
-            && *((_DWORD *)&Instance->fields.UnityEngine_Behaviour_Fields + 1) == slot )
+          m_CancellationTokenSource_high = HIDWORD(Instance->fields.m_CancellationTokenSource);
+          if ( (int)m_CancellationTokenSource_high < 1 )
+            goto LABEL_14;
+          if ( !v13 )
+            goto LABEL_17;
+          Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(v13, m_CancellationTokenSource_high, 0LL, 0, 0LL);
+          if ( ((unsigned __int8)Instance & 1) != 0 )
           {
-            m_CancellationTokenSource_high = HIDWORD(Instance->fields.m_CancellationTokenSource);
-            if ( (int)m_CancellationTokenSource_high < 1 )
-              goto LABEL_16;
-            if ( !v14 )
-              goto LABEL_19;
-            Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(v14, m_CancellationTokenSource_high, 0LL, 0, 0LL);
-            if ( ((unsigned __int8)Instance & 1) != 0 )
+LABEL_14:
+            if ( m_CancellationTokenSource < SLODWORD(v17->fields.m_CancellationTokenSource) )
             {
-LABEL_16:
-              if ( m_CancellationTokenSource < SLODWORD(v18->fields.m_CancellationTokenSource) )
-              {
-                v15 = *((_DWORD *)&v18->fields._DispLog + 1);
-                m_CancellationTokenSource = (int)v18->fields.m_CancellationTokenSource;
-              }
+              v14 = *((_DWORD *)&v17->fields._DispLog + 1);
+              m_CancellationTokenSource = (int)v17->fields.m_CancellationTokenSource;
             }
           }
-          list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-          ++v17;
-          if ( list )
-            continue;
         }
+        list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
+        ++v16;
+        if ( list )
+          continue;
       }
     }
-    goto LABEL_19;
+    goto LABEL_17;
   }
-  return v15;
+  return v14;
 }
 
 
@@ -236,15 +220,15 @@ bool __fastcall EventRewardBgMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66CB2 & 1) == 0 )
+  if ( (byte_4BB47C9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__TryGetEntity__, entity);
-    byte_4B66CB2 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__TryGetEntity__, entity);
+    byte_4BB47C9 = 1;
   }
   PK = (Il2CppObject *)EventRewardBgEntity__CreatePK(eventId, slot, priority, *(const MethodInfo **)&slot);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventRewardBgMaster__EventRewardBgEntity__string__TryGetEntity__);
 }

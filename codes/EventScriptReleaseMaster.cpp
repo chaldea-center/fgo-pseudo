@@ -1,14 +1,14 @@
 void __fastcall EventScriptReleaseMaster___ctor(EventScriptReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66CF7 & 1) == 0 )
+  if ( (byte_4BB480E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__, method);
-    byte_4B66CF7 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__, method);
+    byte_4BB480E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     220,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string___ctor__);
 }
 
 
@@ -23,12 +23,12 @@ EventScriptReleaseEntity_o *__fastcall EventScriptReleaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66CF5 & 1) == 0 )
+  if ( (byte_4BB480C & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B66CF5 = 1;
+    byte_4BB480C = 1;
   }
   PK = (Il2CppObject *)EventScriptReleaseEntity__CreatePK(
                          eventId,
@@ -39,7 +39,7 @@ EventScriptReleaseEntity_o *__fastcall EventScriptReleaseMaster__GetEntity(
   return (EventScriptReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__);
+                                         (const MethodInfo_323D0DC *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__GetEntity__);
 }
 
 
@@ -55,19 +55,19 @@ bool __fastcall EventScriptReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66CF6 & 1) == 0 )
+  if ( (byte_4BB480D & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_4B66CF6 = 1;
+    byte_4BB480D = 1;
   }
   PK = (Il2CppObject *)EventScriptReleaseEntity__CreatePK(eventId, flagId, type, targetId, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventScriptReleaseMaster__EventScriptReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -79,32 +79,31 @@ bool __fastcall EventScriptReleaseMaster__isAvailable(
         const MethodInfo *method)
 {
   __int64 v7; // x1
-  __int64 v8; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v11; // w22
-  bool v12; // w26
-  int32_t v13; // w23
-  __int64 methodPtr_low; // x10
+  int32_t v10; // w22
+  char v11; // w25
+  int32_t v12; // w23
 
-  if ( (byte_4B66CF8 & 1) == 0 )
+  if ( (byte_4BB480F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_1BE4ACC(&EventScriptReleaseEntity_TypeInfo, v8);
-    byte_4B66CF8 = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_EventScriptReleaseEntity__get_Count__,
+      *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventScriptReleaseEntity__get_Item__, v7);
+    byte_4BB480F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_18;
+    goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventScriptReleaseEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v11 = Count;
+    v10 = Count;
+    v11 = 0;
     v12 = 0;
-    v13 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -112,27 +111,23 @@ bool __fastcall EventScriptReleaseMaster__isAvailable(
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v13,
-                                                                 (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                 v12,
+                                                                 (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventScriptReleaseEntity__get_Item__);
       if ( !list )
         break;
-      methodPtr_low = LOBYTE(EventScriptReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-        || (EventScriptReleaseEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] != EventScriptReleaseEntity_TypeInfo )
-      {
-        break;
-      }
       if ( LODWORD(list->fields.items) == eventId && HIDWORD(list->fields.items) == flag )
       {
         if ( !EventScriptReleaseEntity__isAvailable((EventScriptReleaseEntity_o *)list, *(const MethodInfo **)&eventId) )
-          return 0;
-        v12 = 1;
+          goto LABEL_14;
+        v11 = 1;
       }
-      if ( v11 == ++v13 )
-        return v12;
+      if ( v10 == ++v12 )
+        return v11 & 1;
     }
-LABEL_18:
-    sub_1BE4D28(list, *(_QWORD *)&eventId);
+LABEL_16:
+    sub_1C13F80(list, *(_QWORD *)&eventId);
   }
-  return 0;
+LABEL_14:
+  v11 = 0;
+  return v11 & 1;
 }

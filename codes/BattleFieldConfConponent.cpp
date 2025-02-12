@@ -13,7 +13,7 @@ void __fastcall BattleFieldConfConponent__Close(
 
   buffListView = this->fields.buffListView;
   if ( !buffListView )
-    sub_1BE4D28(0LL, call);
+    sub_1C13F80(0LL, call);
   BattleViewBufflistComponent__setHide(buffListView, 0, 0LL);
   BattleWindowComponent__Close((BattleWindowComponent_o *)this, call, 0LL);
 }
@@ -25,7 +25,7 @@ void __fastcall BattleFieldConfConponent__CompOpen(BattleFieldConfConponent_o *t
 
   buffListView = this->fields.buffListView;
   if ( !buffListView )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   BattleViewBufflistComponent__setShow(buffListView, 0LL);
   BattleWindowComponent__CompOpen((BattleWindowComponent_o *)this, 0LL);
 }
@@ -42,7 +42,7 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
   System_String_o *ASSET_BATTLE_COMMON; // x20
   AssetData_o *AssetStorage; // x0
   __int64 v11; // x1
-  Il2CppObject *Object_object__49525204; // x20
+  Il2CppObject *Object_object__49747248; // x20
   Il2CppObject *Component_object; // x0
   int64_t v14; // x2
   int32_t v15; // w3
@@ -51,15 +51,15 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4B69AEC & 1) == 0 )
+  if ( (byte_4BB7620 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_AssetData_GetObject_GameObject____77158408, method);
-    sub_1BE4ACC(&AssetManager_TypeInfo, v3);
-    sub_1BE4ACC(&BattleDataDefine_TypeInfo, v4);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v5);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BE4ACC(&StringLiteral_3259/*"BattleAssetUIAtlas"*/, v7);
-    byte_4B69AEC = 1;
+    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, method);
+    sub_1C13D24(&AssetManager_TypeInfo, v3);
+    sub_1C13D24(&BattleDataDefine_TypeInfo, v4);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v5);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C13D24(&StringLiteral_3262/*"Battle/UniqueCamera/"*/, v7);
+    byte_4BB7620 = 1;
   }
   v8 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -73,25 +73,25 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
   AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0LL);
   if ( !AssetStorage )
     goto LABEL_14;
-  Object_object__49525204 = AssetData__GetObject_object__49525204(
+  Object_object__49747248 = AssetData__GetObject_object__49747248(
                               AssetStorage,
-                              (System_String_o *)StringLiteral_3259/*"BattleAssetUIAtlas"*/,
-                              (const MethodInfo_2F3B1D4 *)Method_AssetData_GetObject_GameObject____77158408);
+                              (System_String_o *)StringLiteral_3262/*"Battle/UniqueCamera/"*/,
+                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   AssetStorage = (AssetData_o *)UnityEngine_Object__op_Inequality(
-                                  (UnityEngine_Object_o *)Object_object__49525204,
+                                  (UnityEngine_Object_o *)Object_object__49747248,
                                   0LL,
                                   0LL);
   if ( ((unsigned __int8)AssetStorage & 1) != 0 )
   {
-    if ( Object_object__49525204 )
+    if ( Object_object__49747248 )
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)Object_object__49525204,
-                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (UnityEngine_GameObject_o *)Object_object__49747248,
+                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       this->fields.BattleAssetUIAtlas = (struct UIAtlas_o *)Component_object;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields.BattleAssetUIAtlas,
         (int64_t)Component_object,
         v14,
@@ -103,7 +103,7 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
       return;
     }
 LABEL_14:
-    sub_1BE4D28(AssetStorage, v11);
+    sub_1C13F80(AssetStorage, v11);
   }
 }
 
@@ -138,7 +138,7 @@ void __fastcall BattleFieldConfConponent__Initialize(
                                                 0LL),
         !transform) )
   {
-    sub_1BE4D28(gameObject, v6);
+    sub_1C13F80(gameObject, v6);
   }
   v9 = 0;
   v10 = 0;
@@ -146,7 +146,7 @@ void __fastcall BattleFieldConfConponent__Initialize(
   BattleWindowComponent__setInitData((BattleWindowComponent_o *)this, 2, 0.15, 0, 0LL);
   BattleWindowComponent__setClose((BattleWindowComponent_o *)this, 0LL);
   this->fields.callbackClose = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackClose,
     (int64_t)callback,
     v11,
@@ -170,7 +170,7 @@ void __fastcall BattleFieldConfConponent__OnClick(BattleFieldConfConponent_o *th
 
   ActionExtensions__Call(this->fields.callbackClose, 0LL);
   this->fields.fieldData = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.fieldData, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.fieldData, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -183,7 +183,7 @@ void __fastcall BattleFieldConfConponent__Open(
 
   buffListView = this->fields.buffListView;
   if ( !buffListView )
-    sub_1BE4D28(0LL, call);
+    sub_1C13F80(0LL, call);
   BattleViewBufflistComponent__setHide(buffListView, 0, 0LL);
   BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0LL);
 }
@@ -206,7 +206,7 @@ void __fastcall BattleFieldConfConponent__SetConfData(
 
   this->fields.fieldData = inFieldData;
   p_fieldData = &this->fields.fieldData;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.fieldData,
     (int64_t)inFieldData,
     (int64_t)method,
@@ -220,7 +220,7 @@ void __fastcall BattleFieldConfConponent__SetConfData(
     buffListView = this->fields.buffListView;
     BuffData = BattleFieldEnvironmentData__get_BuffData(*p_fieldData, 0LL);
     if ( !BuffData || (BuffData = (BattleBuffData_o *)BattleBuffData__getShowServantConf(BuffData, 0LL), !buffListView) )
-      sub_1BE4D28(BuffData, v12);
+      sub_1C13F80(BuffData, v12);
     BattleViewBufflistComponent__setBuffList(buffListView, (BattleBuffData_ShowBuffData_array *)BuffData, 0LL);
   }
 }
@@ -234,7 +234,7 @@ void __fastcall BattleFieldConfConponent__SetUISprite(
         const MethodInfo *method)
 {
   if ( !sprite )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   UISprite__set_atlas(sprite, atlas, 0LL);
   UISprite__set_spriteName(sprite, spriteName, 0LL);
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
@@ -247,12 +247,12 @@ System_String_o *__fastcall BattleFieldConfConponent__get_closeBtnPath(
         BattleFieldConfConponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B69AED & 1) == 0 )
+  if ( (byte_4BB7621 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_18253/*"close"*/, method);
-    byte_4B69AED = 1;
+    sub_1C13D24(&StringLiteral_18296/*"clearRandomMissions"*/, method);
+    byte_4BB7621 = 1;
   }
-  return (System_String_o *)StringLiteral_18253/*"close"*/;
+  return (System_String_o *)StringLiteral_18296/*"clearRandomMissions"*/;
 }
 
 
@@ -268,7 +268,7 @@ void __fastcall BattleFieldConfConponent__setCallBackPushClose(
   PartyListViewItem_o *v7; // x7
 
   this->fields.callbackClose = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackClose,
     (int64_t)callback,
     (int64_t)method,

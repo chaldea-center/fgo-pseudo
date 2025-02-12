@@ -24,7 +24,7 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
   PartyListViewItem_o *v22; // x7
   const MethodInfo *v23; // [xsp+28h] [xbp-68h]
 
-  if ( (byte_4B64A1E & 1) == 0 )
+  if ( (byte_4BB252F & 1) == 0 )
   {
     v10 = *(_QWORD *)&angle.fields.value.fields.y;
     v11 = *(_QWORD *)&angle.fields.hasValue;
@@ -32,14 +32,14 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     v13 = *(_QWORD *)&position.fields.hasValue;
     v14 = effetctPrefab;
     v15 = parent;
-    sub_1BE4ACC(&StringLiteral_23295/*"root_text/type01/dm_base"*/, parent);
+    sub_1C13D24(&StringLiteral_23348/*"ring_gard2_2"*/, parent);
     parent = v15;
     effetctPrefab = v14;
     *(_QWORD *)&position.fields.hasValue = v13;
     *(_QWORD *)&position.fields.value.fields.y = v12;
     *(_QWORD *)&angle.fields.hasValue = v11;
     *(_QWORD *)&angle.fields.value.fields.y = v10;
-    byte_4B64A1E = 1;
+    byte_4BB252F = 1;
   }
   WarBoardCommonEffectPerformance___ctor(
     (WarBoardCommonEffectPerformance_o *)this,
@@ -52,9 +52,9 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     doInstantiate,
     1,
     v23);
-  v16 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_23295/*"root_text/type01/dm_base"*/, 0LL);
+  v16 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_23348/*"ring_gard2_2"*/, 0LL);
   this->fields.textObject = v16;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.textObject, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.textObject, (int64_t)v16, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -70,11 +70,11 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
   UnityEngine_GameObject_o *v9; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4B64A1F & 1) == 0 )
+  if ( (byte_4BB2530 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UILabel___, text);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
-    byte_4B64A1F = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UILabel___, text);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
+    byte_4BB2530 = 1;
   }
   textObject = (UnityEngine_Object_o *)this->fields.textObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -86,7 +86,7 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v9,
-                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -101,6 +101,6 @@ void __fastcall WarBoardPopTextEffectPerformance__SetPopText(
         return;
       }
     }
-    sub_1BE4D28(v9, v8);
+    sub_1C13F80(v9, v8);
   }
 }

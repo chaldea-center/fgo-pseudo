@@ -2,10 +2,10 @@ void __fastcall SupportSelectRootComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B634FF & 1) == 0 )
+  if ( (byte_4BB1016 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectRootComponent_TypeInfo, v1);
-    byte_4B634FF = 1;
+    sub_1C13D24(&SupportSelectRootComponent_TypeInfo, v1);
+    byte_4BB1016 = 1;
   }
   LODWORD(SupportSelectRootComponent_TypeInfo->static_fields->EDIT_SCENE_FADE_TIME) = (struct SupportSelectRootComponent_StaticFields)1056964608;
 }
@@ -30,11 +30,11 @@ void __fastcall SupportSelectRootComponent___ctor(SupportSelectRootComponent_o *
   FollowerInfo_o *v17; // x6
   PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4B634FE & 1) == 0 )
+  if ( (byte_4BB1015 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&int___TypeInfo, v3);
-    byte_4B634FE = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&int___TypeInfo, v3);
+    byte_4BB1015 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -42,9 +42,9 @@ void __fastcall SupportSelectRootComponent___ctor(SupportSelectRootComponent_o *
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, (unsigned int)v4->static_fields->FixMainSupportDeckNum);
+  v5 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)v4->static_fields->FixMainSupportDeckNum);
   this->fields.tempFixMainQuestSupportDeckIds = v5;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.tempFixMainQuestSupportDeckIds,
     (int64_t)v5,
     v6,
@@ -53,11 +53,11 @@ void __fastcall SupportSelectRootComponent___ctor(SupportSelectRootComponent_o *
     v9,
     v10,
     v11);
-  v12 = (struct System_Int32_array *)sub_1BE4B74(
+  v12 = (struct System_Int32_array *)sub_1C13DCC(
                                        int___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->FixEventSupportDeckNum);
   this->fields.tempFixEventQuestSupportDeckIds = v12;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.tempFixEventQuestSupportDeckIds,
     (int64_t)v12,
     v13,
@@ -78,13 +78,13 @@ void __fastcall SupportSelectRootComponent__CallbackUpdateDeckIdApi(
   int32_t CenterNum; // w0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B634D9 & 1) == 0 )
+  if ( (byte_4BB0FF0 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_12659/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, result);
-    byte_4B634D9 = 1;
+    sub_1C13D24(&StringLiteral_12689/*"SUPPORT_SELECT_NAME_CLEAR"*/, result);
+    byte_4BB0FF0 = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, (const MethodInfo *)result);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_12659/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, CenterNum, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_12689/*"SUPPORT_SELECT_NAME_CLEAR"*/, CenterNum, 0LL);
   SupportSelectRootComponent__ReturnScene(this, result, v6);
 }
 
@@ -102,25 +102,26 @@ void __fastcall SupportSelectRootComponent__ChangeDeckName(
   System_String_o *DefaultDeckName; // x22
   SupportDeckNameInputMenu_CallbackFunc_o *v10; // x23
   const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x4
 
-  if ( (byte_4B634F8 & 1) == 0 )
+  if ( (byte_4BB100F & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportDeckNameInputMenu_CallbackFunc_TypeInfo, method);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndChangeDeckName__, v3);
-    byte_4B634F8 = 1;
+    sub_1C13D24(&SupportDeckNameInputMenu_CallbackFunc_TypeInfo, method);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndChangeDeckName__, v3);
+    byte_4BB100F = 1;
   }
   CenterNum = (SupportServantData_o *)SupportSelectRootComponent__getCenterNum(this, method);
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_8;
   if ( (unsigned int)CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(CenterNum, v5);
+    sub_1C13F88(CenterNum, v5);
   CenterNum = supportServantData->m_Items[(int)CenterNum];
   if ( !CenterNum
     || (deckNameInputMenu = this->fields.deckNameInputMenu,
         deckName_k__BackingField = CenterNum->fields._deckName_k__BackingField,
         DefaultDeckName = SupportServantData__getDefaultDeckName(CenterNum, 0LL),
-        v10 = (SupportDeckNameInputMenu_CallbackFunc_o *)sub_1BE4D18(SupportDeckNameInputMenu_CallbackFunc_TypeInfo),
+        v10 = (SupportDeckNameInputMenu_CallbackFunc_o *)sub_1C13F70(SupportDeckNameInputMenu_CallbackFunc_TypeInfo),
         SupportDeckNameInputMenu_CallbackFunc___ctor(
           v10,
           (Il2CppObject *)this,
@@ -129,9 +130,9 @@ void __fastcall SupportSelectRootComponent__ChangeDeckName(
         !deckNameInputMenu) )
   {
 LABEL_8:
-    sub_1BE4D28(CenterNum, v5);
+    sub_1C13F80(CenterNum, v5);
   }
-  SupportDeckNameInputMenu__Open(deckNameInputMenu, deckName_k__BackingField, DefaultDeckName, v10, 0LL);
+  SupportDeckNameInputMenu__Open(deckNameInputMenu, deckName_k__BackingField, DefaultDeckName, v10, v12);
 }
 
 
@@ -149,7 +150,7 @@ void __fastcall SupportSelectRootComponent__ChangeTitle(SupportSelectRootCompone
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1BE4D28(titleInfo, method);
+    sub_1C13F80(titleInfo, method);
   }
   if ( this->fields.isDragSwapState )
   {
@@ -185,11 +186,11 @@ void __fastcall SupportSelectRootComponent__ConfirmDeckCopy(
   const MethodInfo *v15; // x3
   const MethodInfo *v16; // x4
 
-  if ( (byte_4B634F1 & 1) == 0 )
+  if ( (byte_4BB1008 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, *(_QWORD *)&targetDeckId);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndConfirmDeckCopy__, v5);
-    byte_4B634F1 = 1;
+    sub_1C13D24(&SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo, *(_QWORD *)&targetDeckId);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndConfirmDeckCopy__, v5);
+    byte_4BB1008 = 1;
   }
   this->fields.copyTargetDeckId = targetDeckId;
   CenterNum = SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&targetDeckId);
@@ -198,11 +199,11 @@ void __fastcall SupportSelectRootComponent__ConfirmDeckCopy(
     goto LABEL_9;
   max_length = supportServantData->max_length;
   if ( (unsigned int)CenterNum >= max_length || (v10 = this->fields.copyTargetDeckId - 1, v10 >= max_length) )
-    sub_1BE4D30(CenterNum, v7);
+    sub_1C13F88(CenterNum, v7);
   copyConfirmMenu = this->fields.copyConfirmMenu;
   v12 = supportServantData->m_Items[(int)CenterNum];
   v13 = supportServantData->m_Items[v10];
-  v14 = (SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo);
+  v14 = (SupportSelectConfirmCopyMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectConfirmCopyMenu_OnClickButtonEvent_TypeInfo);
   SupportSelectConfirmCopyMenu_OnClickButtonEvent___ctor(
     v14,
     (Il2CppObject *)this,
@@ -210,7 +211,7 @@ void __fastcall SupportSelectRootComponent__ConfirmDeckCopy(
     v15);
   if ( !copyConfirmMenu )
 LABEL_9:
-    sub_1BE4D28(CenterNum, v7);
+    sub_1C13F80(CenterNum, v7);
   SupportSelectConfirmCopyMenu__Open(copyConfirmMenu, v12, v13, v14, v16);
 }
 
@@ -227,14 +228,14 @@ void __fastcall SupportSelectRootComponent__CopySupportData(
   int v10; // w24
   SupportSelectRootComponent_o **v11; // x25
 
-  if ( (byte_4B634FC & 1) == 0 )
+  if ( (byte_4BB1013 & 1) == 0 )
   {
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&BalanceConfig_TypeInfo, orgData);
-    byte_4B634FC = 1;
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&BalanceConfig_TypeInfo, orgData);
+    byte_4BB1013 = 1;
   }
   if ( !orgData )
 LABEL_18:
-    sub_1BE4D28(this, orgData);
+    sub_1C13F80(this, orgData);
   if ( (int)orgData->max_length >= 1 )
   {
     v8 = 0LL;
@@ -256,7 +257,7 @@ LABEL_18:
         if ( !toData )
           goto LABEL_18;
         if ( v8 >= toData->max_length || v8 >= orgData->max_length )
-          sub_1BE4D30(this, orgData);
+          sub_1C13F88(this, orgData);
         this = *v11;
         if ( !*v11 )
           goto LABEL_18;
@@ -284,10 +285,10 @@ void __fastcall SupportSelectRootComponent__EndCancelConfirmMenu(
   const MethodInfo *v10; // x2
   const MethodInfo *v11; // x2
 
-  if ( (byte_4B634EB & 1) == 0 )
+  if ( (byte_4BB1002 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, isDecide);
-    byte_4B634EB = 1;
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, isDecide);
+    byte_4BB1002 = 1;
   }
   cancelConfirmMenu = this->fields.cancelConfirmMenu;
   if ( !cancelConfirmMenu )
@@ -295,11 +296,11 @@ void __fastcall SupportSelectRootComponent__EndCancelConfirmMenu(
   CancelConfirmMenu__Close(cancelConfirmMenu, 0LL);
   v6 = Method_SupportSelectRootComponent_EndCancelConfirmMenu__;
   if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndCancelConfirmMenu__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndCancelConfirmMenu__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v6, v6[4]);
+    v6 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndCancelConfirmMenu__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C13D08(v6, v6[4]);
   if ( isDecide )
   {
-    OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0LL);
+    OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0LL);
     SupportSelectRootComponent__CopySupportData(
       v8,
       this->fields.tmpSupportServantData,
@@ -315,9 +316,9 @@ void __fastcall SupportSelectRootComponent__EndCancelConfirmMenu(
       return;
     }
 LABEL_10:
-    sub_1BE4D28(cancelConfirmMenu, isDecide);
+    sub_1C13F80(cancelConfirmMenu, isDecide);
   }
-  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0LL);
+  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
 }
 
 
@@ -333,11 +334,11 @@ void __fastcall SupportSelectRootComponent__EndChangeDeckIdCancelConfirmMenu(
   System_Reflection_MethodBase_o *v8; // x0
   const MethodInfo *v9; // x2
 
-  if ( (byte_4B634EA & 1) == 0 )
+  if ( (byte_4BB1001 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__, isDecide);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v5);
-    byte_4B634EA = 1;
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__, isDecide);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v5);
+    byte_4BB1001 = 1;
   }
   cancelConfirmDeckIdDialog = this->fields.cancelConfirmDeckIdDialog;
   if ( !cancelConfirmDeckIdDialog )
@@ -345,22 +346,22 @@ void __fastcall SupportSelectRootComponent__EndChangeDeckIdCancelConfirmMenu(
   CancelConfirmDeckIdDialog__Close(cancelConfirmDeckIdDialog, 0LL);
   v7 = Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__;
   if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C13D08(v7, v7[4]);
   if ( isDecide )
   {
-    OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0LL);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0LL);
     cancelConfirmDeckIdDialog = (CancelConfirmDeckIdDialog_o *)this->fields.supportServantSelectMenu;
     if ( cancelConfirmDeckIdDialog )
     {
       SupportServantSelectMenu__ClearScrollValue((SupportServantSelectMenu_o *)cancelConfirmDeckIdDialog, 0LL);
-      SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22543/*"ok"*/, v9);
+      SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22595/*"offline"*/, v9);
       return;
     }
 LABEL_10:
-    sub_1BE4D28(cancelConfirmDeckIdDialog, isDecide);
+    sub_1C13F80(cancelConfirmDeckIdDialog, isDecide);
   }
-  OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
+  OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0, 0LL);
 }
 
 
@@ -376,52 +377,54 @@ void __fastcall SupportSelectRootComponent__EndChangeDeckName(
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
   __int64 v11; // x1
-  SupportSelectEditMenu_o *supportEditMenu; // x0
-  SupportDeckNameInputMenu_o *deckNameInputMenu; // x20
+  SupportSelectEditMenu_o *deckNameInputMenu; // x0
+  struct SupportDeckNameInputMenu_o *v13; // x20
   System_Action_o *v14; // x21
+  System_Action_o *v15; // x1
 
-  if ( (byte_4B634F9 & 1) == 0 )
+  if ( (byte_4BB1010 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent__EndChangeDeckName_b__110_0__, v11);
-    byte_4B634F9 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SupportSelectRootComponent__EndChangeDeckName_b__110_0__, v11);
+    byte_4BB1010 = 1;
   }
-  if ( isDecide )
+  if ( !isDecide )
   {
-    this->fields.editDeckName = changeName;
-    sub_1BE4A70(
-      (PartyOrganizationUtility_o *)&this->fields.editDeckName,
-      (int64_t)changeName,
-      (int64_t)changeName,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
-    supportEditMenu = this->fields.supportEditMenu;
-    if ( supportEditMenu )
+    deckNameInputMenu = (SupportSelectEditMenu_o *)this->fields.deckNameInputMenu;
+    if ( deckNameInputMenu )
     {
-      SupportSelectEditMenu__Close(supportEditMenu, (const MethodInfo *)isDecide);
-      deckNameInputMenu = this->fields.deckNameInputMenu;
-      v14 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
-      System_Action___ctor(
-        v14,
-        (Il2CppObject *)this,
-        Method_SupportSelectRootComponent__EndChangeDeckName_b__110_0__,
-        0LL);
-      if ( deckNameInputMenu )
-      {
-        SupportDeckNameInputMenu__Close_33982860(deckNameInputMenu, v14, 0LL);
-        return;
-      }
+      v15 = 0LL;
+      goto LABEL_9;
     }
-LABEL_9:
-    sub_1BE4D28(supportEditMenu, isDecide);
+LABEL_10:
+    sub_1C13F80(deckNameInputMenu, isDecide);
   }
-  supportEditMenu = (SupportSelectEditMenu_o *)this->fields.deckNameInputMenu;
-  if ( !supportEditMenu )
-    goto LABEL_9;
-  SupportDeckNameInputMenu__Close((SupportDeckNameInputMenu_o *)supportEditMenu, 0LL);
+  this->fields.editDeckName = changeName;
+  sub_1C13CC8(
+    (PartyOrganizationUtility_o *)&this->fields.editDeckName,
+    (int64_t)changeName,
+    (int64_t)changeName,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
+  deckNameInputMenu = this->fields.supportEditMenu;
+  if ( !deckNameInputMenu )
+    goto LABEL_10;
+  SupportSelectEditMenu__Close(deckNameInputMenu, (const MethodInfo *)isDecide);
+  v13 = this->fields.deckNameInputMenu;
+  v14 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  System_Action___ctor(v14, (Il2CppObject *)this, Method_SupportSelectRootComponent__EndChangeDeckName_b__110_0__, 0LL);
+  if ( !v13 )
+    goto LABEL_10;
+  deckNameInputMenu = (SupportSelectEditMenu_o *)v13;
+  v15 = v14;
+LABEL_9:
+  SupportDeckNameInputMenu__Close_34273536(
+    (SupportDeckNameInputMenu_o *)deckNameInputMenu,
+    v15,
+    (const MethodInfo *)changeName);
 }
 
 
@@ -434,7 +437,7 @@ void __fastcall SupportSelectRootComponent__EndCloseServantEquipListCancel(
 
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   SupportSelectMenu__Reset(supportSelectMenu, (int32_t)method, v2);
 }
 
@@ -447,7 +450,7 @@ void __fastcall SupportSelectRootComponent__EndCloseServantEquipListDecide(
 
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   SupportSelectMenu__Redisp(supportSelectMenu, method);
 }
 
@@ -459,14 +462,14 @@ void __fastcall SupportSelectRootComponent__EndCloseShowServantQuestJump(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B634E2 & 1) == 0 )
+  if ( (byte_4BB0FF9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B634E2 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB0FF9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0LL);
 }
 
@@ -498,7 +501,7 @@ void __fastcall SupportSelectRootComponent__EndConfirmDeckCopy(
         goto LABEL_15;
       max_length = supportServantData->max_length;
       if ( v5 >= max_length || (unsigned int)CenterNum >= max_length )
-        sub_1BE4D30(CenterNum, isDecide);
+        sub_1C13F88(CenterNum, isDecide);
       v8 = supportServantData->m_Items[v5];
       if ( !v8 )
         goto LABEL_15;
@@ -529,7 +532,7 @@ void __fastcall SupportSelectRootComponent__EndConfirmDeckCopy(
       }
     }
 LABEL_15:
-    sub_1BE4D28(CenterNum, isDecide);
+    sub_1C13F80(CenterNum, isDecide);
   }
   CenterNum = this->fields.copyConfirmMenu;
   if ( !CenterNum )
@@ -547,8 +550,8 @@ void __fastcall SupportSelectRootComponent__EndConfirmMenu(
 
   supportSelectConfirmMenu = this->fields.supportSelectConfirmMenu;
   if ( !supportSelectConfirmMenu )
-    sub_1BE4D28(0LL, flag);
-  SupportSelectConfirmMenu__Close_34058304(supportSelectConfirmMenu, 0LL, method);
+    sub_1C13F80(0LL, flag);
+  SupportSelectConfirmMenu__Close_34283040(supportSelectConfirmMenu, 0LL, method);
   this->fields.state = 1;
 }
 
@@ -571,10 +574,10 @@ void __fastcall SupportSelectRootComponent__EndInitAll(
   const MethodInfo *v14; // x2
   const MethodInfo *v15; // x2
 
-  if ( (byte_4B634F5 & 1) == 0 )
+  if ( (byte_4BB100C & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, isDecide);
-    byte_4B634F5 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, isDecide);
+    byte_4BB100C = 1;
   }
   confirmDeckMenu = (__int64)this->fields.confirmDeckMenu;
   if ( !confirmDeckMenu )
@@ -589,7 +592,7 @@ void __fastcall SupportSelectRootComponent__EndInitAll(
       v8 = confirmDeckMenu;
       if ( (unsigned int)confirmDeckMenu >= supportServantData->max_length )
 LABEL_34:
-        sub_1BE4D30(confirmDeckMenu, isDecide);
+        sub_1C13F88(confirmDeckMenu, isDecide);
       confirmDeckMenu = (__int64)supportServantData->m_Items[(int)confirmDeckMenu];
       if ( confirmDeckMenu )
       {
@@ -662,7 +665,7 @@ LABEL_34:
       }
     }
 LABEL_33:
-    sub_1BE4D28(confirmDeckMenu, isDecide);
+    sub_1C13F80(confirmDeckMenu, isDecide);
   }
 }
 
@@ -676,12 +679,12 @@ void __fastcall SupportSelectRootComponent__EndLoadCommonBg(
   UnityEngine_Component_o *titleInfo; // x0
   System_Action_o *v6; // x20
 
-  if ( (byte_4B634D4 & 1) == 0 )
+  if ( (byte_4BB0FEB & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AtlasManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent__EndLoadCommonBg_b__52_0__, v4);
-    byte_4B634D4 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AtlasManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SupportSelectRootComponent__EndLoadCommonBg_b__52_0__, v4);
+    byte_4BB0FEB = 1;
   }
   titleInfo = (UnityEngine_Component_o *)this->fields.titleInfo;
   if ( !titleInfo
@@ -690,10 +693,10 @@ void __fastcall SupportSelectRootComponent__EndLoadCommonBg(
         (titleInfo = (UnityEngine_Component_o *)this->fields.backSkinSprite) == 0LL)
     || (titleInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(titleInfo, 0LL)) == 0LL )
   {
-    sub_1BE4D28(titleInfo, method);
+    sub_1C13F80(titleInfo, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0LL);
-  v6 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_SupportSelectRootComponent__EndLoadCommonBg_b__52_0__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -718,10 +721,10 @@ void __fastcall SupportSelectRootComponent__EndRemoveAll(
   const MethodInfo *v13; // x2
   const MethodInfo *v14; // x2
 
-  if ( (byte_4B634F3 & 1) == 0 )
+  if ( (byte_4BB100A & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, isDecide);
-    byte_4B634F3 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, isDecide);
+    byte_4BB100A = 1;
   }
   confirmDeckMenu = this->fields.confirmDeckMenu;
   if ( !confirmDeckMenu )
@@ -770,7 +773,7 @@ void __fastcall SupportSelectRootComponent__EndRemoveAll(
         goto LABEL_30;
       if ( (unsigned int)CenterNum >= v11->max_length )
 LABEL_31:
-        sub_1BE4D30(confirmDeckMenu, isDecide);
+        sub_1C13F88(confirmDeckMenu, isDecide);
       confirmDeckMenu = (SupportSelectConfirmDeckMenu_o *)v11->m_Items[CenterNum];
       if ( !confirmDeckMenu )
         goto LABEL_30;
@@ -805,7 +808,7 @@ LABEL_31:
       }
     }
 LABEL_30:
-    sub_1BE4D28(confirmDeckMenu, isDecide);
+    sub_1C13F80(confirmDeckMenu, isDecide);
   }
 }
 
@@ -825,10 +828,10 @@ void __fastcall SupportSelectRootComponent__EndRemoveAllEquip(
   const MethodInfo *v11; // x2
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B634F7 & 1) == 0 )
+  if ( (byte_4BB100E & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, isDecide);
-    byte_4B634F7 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, isDecide);
+    byte_4BB100E = 1;
   }
   confirmDeckMenu = this->fields.confirmDeckMenu;
   if ( !confirmDeckMenu )
@@ -867,7 +870,7 @@ void __fastcall SupportSelectRootComponent__EndRemoveAllEquip(
           goto LABEL_22;
         if ( (unsigned int)CenterNum >= v10->max_length )
 LABEL_23:
-          sub_1BE4D30(confirmDeckMenu, isDecide);
+          sub_1C13F88(confirmDeckMenu, isDecide);
         confirmDeckMenu = (SupportSelectConfirmDeckMenu_o *)v10->m_Items[CenterNum];
         if ( !confirmDeckMenu )
           goto LABEL_22;
@@ -888,7 +891,7 @@ LABEL_23:
       }
     }
 LABEL_22:
-    sub_1BE4D28(confirmDeckMenu, isDecide);
+    sub_1C13F80(confirmDeckMenu, isDecide);
   }
 }
 
@@ -910,11 +913,11 @@ void __fastcall SupportSelectRootComponent__EndSelectCopySupportDeck(
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x4
 
-  if ( (byte_4B634F0 & 1) == 0 )
+  if ( (byte_4BB1007 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectEditMenu_OnClickButtonEvent_TypeInfo, *(_QWORD *)&deckId);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportEditMenu__, v5);
-    byte_4B634F0 = 1;
+    sub_1C13D24(&SupportSelectEditMenu_OnClickButtonEvent_TypeInfo, *(_QWORD *)&deckId);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportEditMenu__, v5);
+    byte_4BB1007 = 1;
   }
   if ( deckId == -1 )
   {
@@ -927,11 +930,11 @@ void __fastcall SupportSelectRootComponent__EndSelectCopySupportDeck(
     if ( !supportServantData )
       goto LABEL_10;
     if ( (unsigned int)copyDeckSelectMenu >= supportServantData->max_length )
-      sub_1BE4D30(copyDeckSelectMenu, *(_QWORD *)&deckId);
+      sub_1C13F88(copyDeckSelectMenu, *(_QWORD *)&deckId);
     supportEditMenu = this->fields.supportEditMenu;
     isEdit = this->fields.isEdit;
     v11 = supportServantData->m_Items[(int)copyDeckSelectMenu];
-    v12 = (SupportSelectEditMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectEditMenu_OnClickButtonEvent_TypeInfo);
+    v12 = (SupportSelectEditMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectEditMenu_OnClickButtonEvent_TypeInfo);
     SupportSelectEditMenu_OnClickButtonEvent___ctor(
       v12,
       (Il2CppObject *)this,
@@ -939,7 +942,7 @@ void __fastcall SupportSelectRootComponent__EndSelectCopySupportDeck(
       v13);
     if ( !supportEditMenu )
 LABEL_10:
-      sub_1BE4D28(copyDeckSelectMenu, *(_QWORD *)&deckId);
+      sub_1C13F80(copyDeckSelectMenu, *(_QWORD *)&deckId);
     SupportSelectEditMenu__Open(supportEditMenu, v11, isEdit, v12, v14);
   }
   else
@@ -957,19 +960,19 @@ void __fastcall SupportSelectRootComponent__EndShowEquip(
 {
   SupportSelectMenu_o *supportSelectMenu; // x0
 
-  if ( (byte_4B634E3 & 1) == 0 )
+  if ( (byte_4BB0FFA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4B634E3 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_4BB0FFA = 1;
   }
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu
     || (SupportSelectMenu__moveCenterItem(supportSelectMenu, this->fields.selectNum, method),
-        (supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+        (supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
     || (CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)supportSelectMenu, 0LL, 0LL),
         (supportSelectMenu = this->fields.supportSelectMenu) == 0LL) )
   {
-    sub_1BE4D28(supportSelectMenu, isDecide);
+    sub_1C13F80(supportSelectMenu, isDecide);
   }
   SupportSelectMenu__Redisp(supportSelectMenu, (const MethodInfo *)isDecide);
 }
@@ -987,16 +990,16 @@ void __fastcall SupportSelectRootComponent__EndShowServant(
   SupportServantData_o **m_Items; // x9
   SupportServantData_o *v8; // x10
 
-  if ( (byte_4B634E0 & 1) == 0 )
+  if ( (byte_4BB0FF7 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4B634E0 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_4BB0FF7 = 1;
   }
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
     goto LABEL_15;
   SupportSelectMenu__moveCenterItem(supportSelectMenu, this->fields.selectNum, method);
-  supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !supportSelectMenu )
     goto LABEL_15;
   CommonUI__CloseServantStatusDialog((CommonUI_o *)supportSelectMenu, 0LL, 0LL);
@@ -1025,7 +1028,7 @@ void __fastcall SupportSelectRootComponent__EndShowServant(
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
 LABEL_15:
-    sub_1BE4D28(supportSelectMenu, isDecide);
+    sub_1C13F80(supportSelectMenu, isDecide);
   SupportSelectMenu__Redisp(supportSelectMenu, (const MethodInfo *)isDecide);
 }
 
@@ -1044,12 +1047,12 @@ void __fastcall SupportSelectRootComponent__EndShowServantWithQuest(
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4B634E1 & 1) == 0 )
+  if ( (byte_4BB0FF8 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCloseShowServantQuestJump__, v7);
-    byte_4B634E1 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCloseShowServantQuestJump__, v7);
+    byte_4BB0FF8 = 1;
   }
   if ( questId < 1 )
   {
@@ -1057,15 +1060,15 @@ void __fastcall SupportSelectRootComponent__EndShowServantWithQuest(
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v9 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       (Il2CppObject *)this,
       Method_SupportSelectRootComponent_EndCloseShowServantQuestJump__,
       0LL);
     if ( !Instance )
-      sub_1BE4D28(v10, v11);
+      sub_1C13F80(v10, v11);
     CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v9, 0LL);
   }
 }
@@ -1086,7 +1089,7 @@ void __fastcall SupportSelectRootComponent__EndSupportEditMenu(
   supportSelectMenu = this->fields.supportSelectMenu;
   CenterNum = SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&resultKind);
   if ( !supportSelectMenu )
-    sub_1BE4D28(CenterNum, v7);
+    sub_1C13F80(CenterNum, v7);
   SupportSelectMenu__moveCenterItem(supportSelectMenu, CenterNum, v8);
   switch ( resultKind )
   {
@@ -1287,35 +1290,35 @@ void __fastcall SupportSelectRootComponent__EndSupportSelectMenu(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v173; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v174; // 0:x0.16
 
-  if ( (byte_4B634DA & 1) == 0 )
+  if ( (byte_4BB0FF1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BE4ACC(&SupportServantEquipListMenu_CallbackFunc_TypeInfo, v8);
-    sub_1BE4ACC(&CancelConfirmMenu_CallbackFunc_TypeInfo, v9);
-    sub_1BE4ACC(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, v10);
-    sub_1BE4ACC(&SupportServantSelectMenu_CallbackFunc_TypeInfo, v11);
-    sub_1BE4ACC(&ServantStatusDialog_EndDelegate_TypeInfo, v12);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Count_int___, v13);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_int___, v14);
-    sub_1BE4ACC(&ServantStatusDialog_FormationEndDelegate_TypeInfo, v15);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v16);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v19);
-    sub_1BE4ACC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v20);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, v21);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndConfirmMenu__, v22);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndShowEquip__, v23);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndShowServantWithQuest__, v24);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndShowServant__, v25);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportSelectMenu__, v26);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportServantEquipListMenu__, v27);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_OnBackSelect__, v28);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent__EndSupportSelectMenu_b__66_2__, v29);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_0__, v30);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_1__, v31);
-    sub_1BE4ACC(&SupportSelectRootComponent___c_TypeInfo, v32);
-    byte_4B634DA = 1;
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&result);
+    sub_1C13D24(&SupportServantEquipListMenu_CallbackFunc_TypeInfo, v8);
+    sub_1C13D24(&CancelConfirmMenu_CallbackFunc_TypeInfo, v9);
+    sub_1C13D24(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, v10);
+    sub_1C13D24(&SupportServantSelectMenu_CallbackFunc_TypeInfo, v11);
+    sub_1C13D24(&ServantStatusDialog_EndDelegate_TypeInfo, v12);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Count_int___, v13);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_int___, v14);
+    sub_1C13D24(&ServantStatusDialog_FormationEndDelegate_TypeInfo, v15);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v16);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v19);
+    sub_1C13D24(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v20);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, v21);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndConfirmMenu__, v22);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndShowEquip__, v23);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndShowServantWithQuest__, v24);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndShowServant__, v25);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportSelectMenu__, v26);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportServantEquipListMenu__, v27);
+    sub_1C13D24(&Method_SupportSelectRootComponent_OnBackSelect__, v28);
+    sub_1C13D24(&Method_SupportSelectRootComponent__EndSupportSelectMenu_b__66_2__, v29);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_0__, v30);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_1__, v31);
+    sub_1C13D24(&SupportSelectRootComponent___c_TypeInfo, v32);
+    byte_4BB0FF1 = 1;
   }
   this->fields.classPos = classPos;
   CenterNum = SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&result);
@@ -1337,7 +1340,7 @@ void __fastcall SupportSelectRootComponent__EndSupportSelectMenu(
         goto LABEL_164;
       cancelConfirmMenu = this->fields.cancelConfirmMenu;
       v42 = supportServantData->m_Items[CenterNum];
-      v43 = (CancelConfirmMenu_CallbackFunc_o *)sub_1BE4D18(CancelConfirmMenu_CallbackFunc_TypeInfo);
+      v43 = (CancelConfirmMenu_CallbackFunc_o *)sub_1C13F70(CancelConfirmMenu_CallbackFunc_TypeInfo);
       CancelConfirmMenu_CallbackFunc___ctor(
         v43,
         (Il2CppObject *)this,
@@ -1362,11 +1365,11 @@ void __fastcall SupportSelectRootComponent__EndSupportSelectMenu(
 LABEL_15:
             v47 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
             if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-              v47 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-            v48 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v47, v47[4]);
-            OverwriteAssetSoundName__PlaySystemSe(v48, 2, 0LL);
+              v47 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+            v48 = (System_Reflection_MethodBase_o *)sub_1C13D08(v47, v47[4]);
+            OverwriteAssetSoundName__PlaySystemSe(v48, 2, 0, 0LL);
             supportSelectConfirmMenu = this->fields.supportSelectConfirmMenu;
-            v50 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1BE4D18(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
+            v50 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1C13F70(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
             SupportSelectConfirmMenu_CallbackFunc___ctor(
               v50,
               (Il2CppObject *)this,
@@ -1378,7 +1381,7 @@ LABEL_15:
               return;
             }
 LABEL_163:
-            sub_1BE4D28(isUpdate, v36);
+            sub_1C13F80(isUpdate, v36);
           }
           SupportSelectRootComponent__SaveTemp(this, -1, v44);
           isUpdate = (int64_t)this->fields.supportServantSelectMenu;
@@ -1391,9 +1394,9 @@ LABEL_163:
           SupportServantSelectMenu__ModifyItem((SupportServantSelectMenu_o *)isUpdate, 0LL);
           v135 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
           if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-            v135 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-          v136 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v135, v135[4]);
-          OverwriteAssetSoundName__PlaySystemSe(v136, 8, 0LL);
+            v135 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+          v136 = (System_Reflection_MethodBase_o *)sub_1C13D08(v135, v135[4]);
+          OverwriteAssetSoundName__PlaySystemSe(v136, 8, 0, 0LL);
           isUpdate = (int64_t)this->fields.supportSelectMenu;
           if ( !isUpdate )
             goto LABEL_163;
@@ -1401,15 +1404,15 @@ LABEL_163:
           goto LABEL_134;
         }
 LABEL_164:
-        sub_1BE4D30(isUpdate, v36);
+        sub_1C13F88(isUpdate, v36);
       }
       if ( this->fields.isEdit )
       {
         v133 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
         if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-          v133 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-        v134 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v133, v133[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v134, 8, 0LL);
+          v133 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+        v134 = (System_Reflection_MethodBase_o *)sub_1C13D08(v133, v133[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v134, 8, 0, 0LL);
 LABEL_134:
         SupportSelectRootComponent__SetActiveApplyIcon(this, v36);
         v76 = this;
@@ -1435,7 +1438,7 @@ LABEL_135:
           v143 = SupportSelectRootComponent___c_TypeInfo;
         }
         v145 = (Il2CppObject *)v143->static_fields->__9;
-        _9__66_0 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+        _9__66_0 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           _9__66_0,
           v145,
@@ -1443,7 +1446,7 @@ LABEL_135:
           0LL);
         static_fields = SupportSelectRootComponent___c_TypeInfo->static_fields;
         static_fields->__9__66_0 = _9__66_0;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&static_fields->__9__66_0,
           (int64_t)_9__66_0,
           v147,
@@ -1456,10 +1459,10 @@ LABEL_135:
       v153 = System_Linq_Enumerable__Where_int_(
                tempFixMainQuestSupportDeckIds,
                (System_Func_TSource__bool__o *)_9__66_0,
-               (const MethodInfo_2F9868C *)Method_System_Linq_Enumerable_Where_int___);
+               (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
       v154 = System_Linq_Enumerable__Count_int_(
                v153,
-               (const MethodInfo_2F7403C *)Method_System_Linq_Enumerable_Count_int___);
+               (const MethodInfo_2FA9F90 *)Method_System_Linq_Enumerable_Count_int___);
       v155 = SupportSelectRootComponent___c_TypeInfo;
       tempFixEventQuestSupportDeckIds = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.tempFixEventQuestSupportDeckIds;
       v157 = v154;
@@ -1477,7 +1480,7 @@ LABEL_135:
           v155 = SupportSelectRootComponent___c_TypeInfo;
         }
         v159 = (Il2CppObject *)v155->static_fields->__9;
-        _9__66_1 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+        _9__66_1 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           _9__66_1,
           v159,
@@ -1485,7 +1488,7 @@ LABEL_135:
           0LL);
         v160 = SupportSelectRootComponent___c_TypeInfo->static_fields;
         v160->__9__66_1 = _9__66_1;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&v160->__9__66_1,
           (int64_t)_9__66_1,
           v161,
@@ -1498,10 +1501,10 @@ LABEL_135:
       v167 = System_Linq_Enumerable__Where_int_(
                tempFixEventQuestSupportDeckIds,
                (System_Func_TSource__bool__o *)_9__66_1,
-               (const MethodInfo_2F9868C *)Method_System_Linq_Enumerable_Where_int___);
+               (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
       isUpdate = System_Linq_Enumerable__Count_int_(
                    v167,
-                   (const MethodInfo_2F7403C *)Method_System_Linq_Enumerable_Count_int___);
+                   (const MethodInfo_2FA9F90 *)Method_System_Linq_Enumerable_Count_int___);
       if ( v157 < 1 || (int)isUpdate <= 0 )
       {
         v168 = this->fields.supportServantData;
@@ -1523,9 +1526,9 @@ LABEL_135:
       SupportServantSelectMenu__ModifyItem((SupportServantSelectMenu_o *)isUpdate, 0LL);
       v170 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-        v170 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-      v171 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v170, v170[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v171, 8, 0LL);
+        v170 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+      v171 = (System_Reflection_MethodBase_o *)sub_1C13D08(v170, v170[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v171, 8, 0, 0LL);
       SupportSelectRootComponent__RequestApi(this, v172);
       return;
     case 2:
@@ -1570,7 +1573,7 @@ LABEL_135:
       supportServantSelectMenu = this->fields.supportServantSelectMenu;
       v58 = this->fields.tempFixMainQuestSupportDeckIds;
       v59 = this->fields.tempFixEventQuestSupportDeckIds;
-      callback = (SupportServantSelectMenu_CallbackFunc_o *)sub_1BE4D18(SupportServantSelectMenu_CallbackFunc_TypeInfo);
+      callback = (SupportServantSelectMenu_CallbackFunc_o *)sub_1C13F70(SupportServantSelectMenu_CallbackFunc_TypeInfo);
       SupportServantSelectMenu_CallbackFunc___ctor(
         callback,
         (Il2CppObject *)this,
@@ -1597,7 +1600,7 @@ LABEL_135:
         goto LABEL_163;
       SupportSelectMenu__moveCenterItem((SupportSelectMenu_o *)isUpdate, this->fields.selectNum, v37);
       SupportSelectRootComponent__setEditUI(this, 1, v61);
-      isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v62 = this->fields.supportServantData;
       if ( !v62 )
         goto LABEL_163;
@@ -1610,7 +1613,7 @@ LABEL_135:
       v65 = this->fields.tempFixMainQuestSupportDeckIds;
       v66 = this->fields.tempFixEventQuestSupportDeckIds;
       v67 = (CommonUI_o *)isUpdate;
-      v68 = (SupportServantEquipListMenu_CallbackFunc_o *)sub_1BE4D18(SupportServantEquipListMenu_CallbackFunc_TypeInfo);
+      v68 = (SupportServantEquipListMenu_CallbackFunc_o *)sub_1C13F70(SupportServantEquipListMenu_CallbackFunc_TypeInfo);
       SupportServantEquipListMenu_CallbackFunc___ctor(
         v68,
         (Il2CppObject *)this,
@@ -1670,7 +1673,7 @@ LABEL_135:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v173.fields.currentCryptoKey = v83;
       *(_QWORD *)&v173.fields.fakeValue = v82;
-      isUpdate = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v173, 0LL);
+      isUpdate = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v173, 0LL);
       if ( !(_DWORD)isUpdate )
         goto LABEL_120;
       v84 = this->fields.supportServantData;
@@ -1697,11 +1700,11 @@ LABEL_135:
         goto LABEL_163;
       if ( ServantLeaderInfo__IsSlotRestriction((ServantLeaderInfo_o *)v81, v87->fields.questRestrictionInfo, 0LL) )
         goto LABEL_120;
-      isUpdate = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      isUpdate = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !isUpdate )
         goto LABEL_163;
       v88 = *(_DWORD *)(isUpdate + 48);
-      isUpdate = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      isUpdate = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !isUpdate )
         goto LABEL_163;
       if ( v88 < 1 )
@@ -1718,7 +1721,7 @@ LABEL_135:
       if ( !questRestrictionInfo )
         goto LABEL_163;
       v92 = *(_DWORD *)(isUpdate + 52);
-      isUpdate = QuestRestrictionInfo__IsMyServantOrNpcRestriction_41431712(questRestrictionInfo, v92, 0LL);
+      isUpdate = QuestRestrictionInfo__IsMyServantOrNpcRestriction_41628040(questRestrictionInfo, v92, 0LL);
       if ( (isUpdate & 1) == 0 )
         goto LABEL_76;
       v93 = this->fields.supportServantData;
@@ -1736,7 +1739,7 @@ LABEL_135:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v174.fields.currentCryptoKey = v97;
       *(_QWORD *)&v174.fields.fakeValue = v96;
-      v98 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v174, 0LL);
+      v98 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v174, 0LL);
       v99 = *(_DWORD *)(v81 + 64);
       v100 = v98;
       isUpdate = ServantLeaderInfo__getDispLimitCount((ServantLeaderInfo_o *)v81, 0LL);
@@ -1747,8 +1750,8 @@ LABEL_135:
 LABEL_76:
       if ( this->fields.supportInfoJump )
       {
-        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-        v102 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+        v102 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
         System_Action___ctor(
           v102,
           (Il2CppObject *)this,
@@ -1763,9 +1766,9 @@ LABEL_76:
         {
           v103 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
           if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-            v103 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-          v104 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v103, v103[4]);
-          OverwriteAssetSoundName__PlaySystemSe(v104, 0, 0LL);
+            v103 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+          v104 = (System_Reflection_MethodBase_o *)sub_1C13D08(v103, v103[4]);
+          OverwriteAssetSoundName__PlaySystemSe(v104, 0, 0, 0LL);
           isUpdate = (int64_t)this->fields.supportInfoJump;
           if ( !isUpdate )
             goto LABEL_163;
@@ -1774,7 +1777,7 @@ LABEL_76:
           *(_DWORD *)(isUpdate + 52) = *(_DWORD *)(v81 + 16);
           if ( !SupportInfoJump__ReturnScene((SupportInfoJump_o *)isUpdate, 1, supportInfoJump, 0LL) )
           {
-            isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+            isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
             if ( !isUpdate )
               goto LABEL_163;
             AvalonSceneManager__popScene(
@@ -1790,9 +1793,9 @@ LABEL_76:
 LABEL_120:
         v131 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
         if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-          v131 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-        v132 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v131, v131[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v132, 2, 0LL);
+          v131 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+        v132 = (System_Reflection_MethodBase_o *)sub_1C13D08(v131, v131[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v132, 2, 0, 0LL);
         isUpdate = (int64_t)this->fields.supportSelectMenu;
         if ( !isUpdate )
           goto LABEL_163;
@@ -1829,10 +1832,10 @@ LABEL_120:
       isFriendInfo = v109->fields.isFriendInfo;
       v111 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-        v111 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-      v112 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v111, v111[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v112, 0, 0LL);
-      isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v111 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+      v112 = (System_Reflection_MethodBase_o *)sub_1C13D08(v111, v111[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v112, 0, 0, 0LL);
+      isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v113 = this->fields.supportServantData;
       if ( !v113 )
         goto LABEL_163;
@@ -1846,7 +1849,7 @@ LABEL_120:
       if ( isFriendInfo )
       {
         v117 = *(ServantLeaderInfo_o **)(v107 + 24);
-        v118 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo);
+        v118 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v118,
           (Il2CppObject *)this,
@@ -1854,12 +1857,12 @@ LABEL_120:
           0LL);
         if ( !v116 )
           goto LABEL_163;
-        CommonUI__OpenServantStatusDialog_30886140(v116, kind, v117, v118, 0LL);
+        CommonUI__OpenServantStatusDialog_31082996(v116, kind, v117, v118, 0LL);
       }
       else
       {
         v138 = *(_QWORD *)(v107 + 56);
-        v139 = (ServantStatusDialog_FormationEndDelegate_o *)sub_1BE4D18(ServantStatusDialog_FormationEndDelegate_TypeInfo);
+        v139 = (ServantStatusDialog_FormationEndDelegate_o *)sub_1C13F70(ServantStatusDialog_FormationEndDelegate_TypeInfo);
         ServantStatusDialog_FormationEndDelegate___ctor(
           v139,
           (Il2CppObject *)this,
@@ -1867,7 +1870,7 @@ LABEL_120:
           0LL);
         if ( !v116 )
           goto LABEL_163;
-        CommonUI__OpenServantStatusDialog_30883508(v116, kind, v138, v139, 0LL, 0LL);
+        CommonUI__OpenServantStatusDialog_31080364(v116, kind, v138, v139, 0LL, 0LL);
       }
       return;
     case 9:
@@ -1898,9 +1901,9 @@ LABEL_120:
                                   0LL);
       v123 = Method_SupportSelectRootComponent_EndSupportSelectMenu__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_EndSupportSelectMenu__ + 83) & 2) != 0 )
-        v123 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
-      v124 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v123, v123[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v124, 0, 0LL);
+        v123 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_EndSupportSelectMenu__);
+      v124 = (System_Reflection_MethodBase_o *)sub_1C13D08(v123, v123[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v124, 0, 0, 0LL);
       v125 = this->fields.supportServantData;
       if ( !v125 )
         goto LABEL_163;
@@ -1915,12 +1918,12 @@ LABEL_120:
           v127 = 14;
         else
           v127 = 13;
-        isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        isUpdate = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !UserServantLeaderEntity )
           goto LABEL_163;
         equipTarget1 = UserServantLeaderEntity->fields.equipTarget1;
         v129 = (CommonUI_o *)isUpdate;
-        v130 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo);
+        v130 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v130,
           (Il2CppObject *)this,
@@ -1928,12 +1931,12 @@ LABEL_120:
           0LL);
         if ( !v129 )
           goto LABEL_163;
-        CommonUI__OpenServantEquipStatusDialog_30889236(v129, v127, equipTarget1, v130, 0LL, 0LL);
+        CommonUI__OpenServantEquipStatusDialog_31086092(v129, v127, equipTarget1, v130, 0LL, 0LL);
       }
       else
       {
-        v140 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v141 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo);
+        v140 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v141 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
           v141,
           (Il2CppObject *)this,
@@ -1984,16 +1987,16 @@ void __fastcall SupportSelectRootComponent__EndSupportServantDragSwap(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v34; // [xsp+60h] [xbp-90h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v35; // [xsp+80h] [xbp-70h]
 
-  if ( (byte_4B634DF & 1) == 0 )
+  if ( (byte_4BB0FF6 & 1) == 0 )
   {
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, *(_QWORD *)&kind);
-    byte_4B634DF = 1;
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, *(_QWORD *)&kind);
+    byte_4BB0FF6 = 1;
   }
   if ( kind != 1 )
     return;
   if ( leader1 && (equipTarget1 = leader1->fields.equipTarget1) != 0LL )
   {
-    v14 = BasicHelper__DecryptValue_42087228(equipTarget1->fields.svtId, 0LL);
+    v14 = BasicHelper__DecryptValue_42285396(equipTarget1->fields.svtId, 0LL);
     if ( !leader2 )
       goto LABEL_11;
   }
@@ -2010,7 +2013,7 @@ LABEL_11:
   v15 = leader2->fields.equipTarget1;
   if ( !v15 )
     goto LABEL_11;
-  v16 = BasicHelper__DecryptValue_42087228(v15->fields.svtId, 0LL);
+  v16 = BasicHelper__DecryptValue_42285396(v15->fields.svtId, 0LL);
 LABEL_12:
   if ( leader1 && (v17 = leader1->fields.equipTarget1) != 0LL )
   {
@@ -2028,7 +2031,7 @@ LABEL_12:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v33 = v35;
-  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47302584(&v33, 0LL);
+  v19 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47494132(&v33, 0LL);
   if ( leader2 && (v20 = leader2->fields.equipTarget1) != 0LL )
   {
     v21 = *(_OWORD *)&v20->fields.userSvtId.fields.fakeValue;
@@ -2045,7 +2048,7 @@ LABEL_12:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v31 = v34;
-  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47302584(&v31, 0LL);
+  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47494132(&v31, 0LL);
   if ( classPos1 != classPos2 )
   {
     v24 = v22;
@@ -2082,10 +2085,10 @@ LABEL_12:
           }
         }
 LABEL_39:
-        sub_1BE4D28(CenterNum, v26);
+        sub_1C13F80(CenterNum, v26);
       }
     }
-    sub_1BE4D30(CenterNum, v26);
+    sub_1C13F88(CenterNum, v26);
   }
 }
 
@@ -2168,44 +2171,44 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v76; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v77; // 0:x0.16
 
-  if ( (byte_4B634DD & 1) == 0 )
+  if ( (byte_4BB0FF4 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BE4ACC(&CommonConfirmDialog_ClickDelegate_TypeInfo, v9);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ServantMaster___, v10);
-    sub_1BE4ACC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v12);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v14);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1BE4ACC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v17);
-    sub_1BE4ACC(&System_Text_StringBuilder_TypeInfo, v18);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCloseServantEquipListDecide__, v19);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__DisplayClass71_0__EndSupportServantEquipListMenu_b__0__, v20);
-    sub_1BE4ACC(&SupportSelectRootComponent___c__DisplayClass71_0_TypeInfo, v21);
-    sub_1BE4ACC(&StringLiteral_10282/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v22);
-    sub_1BE4ACC(&StringLiteral_3799/*"COMMON_CONFIRM_NO"*/, v23);
-    sub_1BE4ACC(&StringLiteral_3804/*"COMMON_CONFIRM_YES"*/, v24);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v25);
-    byte_4B634DD = 1;
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&result);
+    sub_1C13D24(&CommonConfirmDialog_ClickDelegate_TypeInfo, v9);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ServantMaster___, v10);
+    sub_1C13D24(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v12);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v14);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1C13D24(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v17);
+    sub_1C13D24(&System_Text_StringBuilder_TypeInfo, v18);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCloseServantEquipListDecide__, v19);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__DisplayClass71_0__EndSupportServantEquipListMenu_b__0__, v20);
+    sub_1C13D24(&SupportSelectRootComponent___c__DisplayClass71_0_TypeInfo, v21);
+    sub_1C13D24(&StringLiteral_10307/*"P3M"*/, v22);
+    sub_1C13D24(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v23);
+    sub_1C13D24(&StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/, v24);
+    sub_1C13D24(&StringLiteral_1/*""*/, v25);
+    byte_4BB0FF4 = 1;
   }
   *(_QWORD *)actMaxRarity = 0LL;
   skillName = 0LL;
   *(_QWORD *)minFontSize = 0LL;
-  v26 = sub_1BE4D18(SupportSelectRootComponent___c__DisplayClass71_0_TypeInfo);
+  v26 = sub_1C13F70(SupportSelectRootComponent___c__DisplayClass71_0_TypeInfo);
   SupportSelectRootComponent___c__DisplayClass71_0___ctor(
     (SupportSelectRootComponent___c__DisplayClass71_0_o *)v26,
     0LL);
   if ( !v26 )
     goto LABEL_42;
   *(_QWORD *)(v26 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)this, v29, v30, v31, v32, v33, v34);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)this, v29, v30, v31, v32, v33, v34);
   *(_QWORD *)(v26 + 32) = item;
   v35 = v26 + 32;
   *(_DWORD *)(v26 + 24) = result;
   *(_DWORD *)(v26 + 28) = classPos;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)item, v36, v37, v38, v39, v40, v41);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)item, v36, v37, v38, v39, v40, v41);
   if ( *(_DWORD *)(v26 + 24) == 1 && *(_QWORD *)v35 )
   {
     supportServantData = this->fields.supportServantData;
@@ -2213,7 +2216,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
       goto LABEL_42;
     selectNum = this->fields.selectNum;
     if ( (unsigned int)selectNum >= supportServantData->max_length )
-      sub_1BE4D30(UserServantLeaderEntity, v28);
+      sub_1C13F88(UserServantLeaderEntity, v28);
     UserServantLeaderEntity = supportServantData->m_Items[selectNum];
     if ( !UserServantLeaderEntity )
       goto LABEL_42;
@@ -2230,7 +2233,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
           goto LABEL_42;
         if ( *(_QWORD *)(*(_QWORD *)v35 + 128LL) )
         {
-          UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+          UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
           userServantLeaderEntityList = v45->fields.userServantLeaderEntityList;
           if ( !userServantLeaderEntityList )
             goto LABEL_42;
@@ -2241,7 +2244,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v76.fields.currentCryptoKey = v49;
           *(_QWORD *)&v76.fields.fakeValue = v48;
-          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                               v76,
                                                               0LL);
           if ( !v45->fields.userServantLeaderEntityList )
@@ -2256,7 +2259,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
           if ( !v51 )
             goto LABEL_42;
           v52 = (int)UserServantLeaderEntity;
-          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                               v51[1],
                                                               0LL);
           if ( !v47 )
@@ -2271,19 +2274,19 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                  -1,
                  0LL) )
           {
-            UserServantLeaderEntity = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            UserServantLeaderEntity = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( UserServantLeaderEntity )
             {
               UserServantLeaderEntity = (SupportServantData_o *)DataManager__GetMasterData_object_(
                                                                   (DataManager_o *)UserServantLeaderEntity,
-                                                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantMaster___);
               if ( UserServantLeaderEntity )
               {
                 Entity = DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)UserServantLeaderEntity,
                            *(_DWORD *)&v45->fields.isFriendInfo,
-                           (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-                UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+                           (const MethodInfo_3238624 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
                 v54 = v45->fields.userServantLeaderEntityList;
                 if ( v54 )
                 {
@@ -2294,7 +2297,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                   *(_QWORD *)&v77.fields.currentCryptoKey = v57;
                   *(_QWORD *)&v77.fields.fakeValue = v56;
-                  UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+                  UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                                       v77,
                                                                       0LL);
                   if ( Entity )
@@ -2319,7 +2322,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                           Name = ServantEntity__GetName((ServantEntity_o *)UserServantLeaderEntity, -1, 0, -1, 0, 0LL);
                           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-                          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47334904(
+                          UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47526452(
                                                                               Name,
                                                                               0LL);
                           if ( v55 )
@@ -2333,7 +2336,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                                      skillName,
                                                      actMaxRarity[1],
                                                      0LL);
-                            UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+                            UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
                             if ( UserServantLeaderEntity )
                             {
                               PartyOrganizationUtility__DecisionFontSize(
@@ -2342,17 +2345,17 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                 minFontSize,
                                 actMaxRarity[0],
                                 0LL);
-                              v64 = (System_Text_StringBuilder_o *)sub_1BE4D18(System_Text_StringBuilder_TypeInfo);
+                              v64 = (System_Text_StringBuilder_o *)sub_1C13F70(System_Text_StringBuilder_TypeInfo);
                               System_Text_StringBuilder___ctor(v64, 0LL);
                               if ( v64 )
                               {
-                                System_Text_StringBuilder__Append_61859960(v64, RarityInvalidMessage, 0LL);
+                                System_Text_StringBuilder__Append_62129096(v64, RarityInvalidMessage, 0LL);
                                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                v65 = LocalizationManager__Get((System_String_o *)StringLiteral_10282/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
-                                System_Text_StringBuilder__Append_61859960(v64, v65, 0LL);
-                                Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                                v67 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+                                v65 = LocalizationManager__Get((System_String_o *)StringLiteral_10307/*"P3M"*/, 0LL);
+                                System_Text_StringBuilder__Append_62129096(v64, v65, 0LL);
+                                Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                                v67 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
                                 System_Action___ctor(
                                   v67,
                                   (Il2CppObject *)this,
@@ -2361,13 +2364,13 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                 if ( Instance )
                                 {
                                   CommonUI__CloseSupportServantEquipListMenu((CommonUI_o *)Instance, v67, 0LL);
-                                  v68 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                                  v68 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                                   v69 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v64->klass->vtable._3_ToString.method)(
                                                              v64,
                                                              v64->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-                                  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3804/*"COMMON_CONFIRM_YES"*/, 0LL);
-                                  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_NO"*/, 0LL);
-                                  v72 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BE4D18(CommonConfirmDialog_ClickDelegate_TypeInfo);
+                                  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/, 0LL);
+                                  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+                                  v72 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C13F70(CommonConfirmDialog_ClickDelegate_TypeInfo);
                                   CommonConfirmDialog_ClickDelegate___ctor(
                                     v72,
                                     (Il2CppObject *)v26,
@@ -2375,7 +2378,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                     0LL);
                                   if ( v68 )
                                   {
-                                    CommonUI__OpenConfirmDialog_30874076(
+                                    CommonUI__OpenConfirmDialog_31070932(
                                       (CommonUI_o *)v68,
                                       (System_String_o *)StringLiteral_1/*""*/,
                                       v69,
@@ -2408,7 +2411,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
               }
             }
 LABEL_42:
-            sub_1BE4D28(UserServantLeaderEntity, v28);
+            sub_1C13F80(UserServantLeaderEntity, v28);
           }
         }
       }
@@ -2460,7 +2463,7 @@ void __fastcall SupportSelectRootComponent__ExecutionServantSet(
       goto LABEL_11;
     }
 LABEL_32:
-    sub_1BE4D30(this, *(_QWORD *)&result);
+    sub_1C13F88(this, *(_QWORD *)&result);
   }
   v8 = this->fields.supportServantData;
   if ( !v8 )
@@ -2522,7 +2525,7 @@ LABEL_11:
                                                  0LL)) == 0LL )
   {
 LABEL_31:
-    sub_1BE4D28(this, *(_QWORD *)&result);
+    sub_1C13F80(this, *(_QWORD *)&result);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }
@@ -2624,36 +2627,36 @@ System_Collections_Generic_List_string__o *__fastcall SupportSelectRootComponent
   int v88; // [xsp+44h] [xbp-6Ch] BYREF
   UserServantCollectionEntity_o *entity; // [xsp+48h] [xbp-68h] BYREF
 
-  if ( (byte_4B634E5 & 1) == 0 )
+  if ( (byte_4BB0FFC & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ServantMaster___, v10);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserServantMaster___, v11);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v12);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v13);
-    sub_1BE4ACC(&DataManager_TypeInfo, v14);
-    sub_1BE4ACC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v15);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___, v16);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___, v17);
-    sub_1BE4ACC(&System_Func_UserServantLeaderEntity__bool__TypeInfo, v18);
-    sub_1BE4ACC(&int_TypeInfo, v19);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v20);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v21);
-    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v22);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v23);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v24);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__DisplayClass81_0__GetFixedErrorList_b__0__, v26);
-    sub_1BE4ACC(&SupportSelectRootComponent___c__DisplayClass81_0_TypeInfo, v27);
-    sub_1BE4ACC(&StringLiteral_12580/*"SUPPORT_DECK_FIXED_ERROR_SERVANT"*/, v28);
-    sub_1BE4ACC(&StringLiteral_12581/*"SUPPORT_DECK_FIXED_ERROR_SERVANT_NAME_ONLY"*/, v29);
-    byte_4B634E5 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ServantMaster___, v10);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantMaster___, v11);
+    sub_1C13D24(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v12);
+    sub_1C13D24(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v13);
+    sub_1C13D24(&DataManager_TypeInfo, v14);
+    sub_1C13D24(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v15);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___, v16);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___, v17);
+    sub_1C13D24(&System_Func_UserServantLeaderEntity__bool__TypeInfo, v18);
+    sub_1C13D24(&int_TypeInfo, v19);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, v20);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, v21);
+    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v22);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v23);
+    sub_1C13D24(&NetworkManager_TypeInfo, v24);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__DisplayClass81_0__GetFixedErrorList_b__0__, v26);
+    sub_1C13D24(&SupportSelectRootComponent___c__DisplayClass81_0_TypeInfo, v27);
+    sub_1C13D24(&StringLiteral_12610/*"SUM_INFO"*/, v28);
+    sub_1C13D24(&StringLiteral_12611/*"SUM_OVER_INFO"*/, v29);
+    byte_4BB0FFC = 1;
   }
   entity = 0LL;
-  v30 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
+  v30 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v30,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( isMain )
   {
     if ( SupportSelectRootComponent__IsFixedMainQuestSupportDeckIdNow(this, nowDeckId, v31) )
@@ -2664,23 +2667,23 @@ System_Collections_Generic_List_string__o *__fastcall SupportSelectRootComponent
     return (System_Collections_Generic_List_string__o *)v30;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, v32);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                             (DataManager_o *)Instance,
-                                                                            (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantMaster___),
-        (Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
+                                                                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantMaster___),
+        (Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
   {
 LABEL_73:
-    sub_1BE4D28(Instance, v34);
+    sub_1C13F80(Instance, v34);
   }
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserServantMaster___);
+    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
-  Instance = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Instance = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   v84 = (ServantLimitImageMaster_o *)Instance;
   v85 = (UserServantCollectionMaster_o *)Master_object;
   v36 = BalanceConfig_TypeInfo;
@@ -2705,7 +2708,7 @@ LABEL_73:
           goto LABEL_73;
         if ( v38 >= fixDeckIds->max_length )
 LABEL_74:
-          sub_1BE4D30(Instance, v34);
+          sub_1C13F88(Instance, v34);
         v39 = fixDeckIds->m_Items[v38 + 1];
         if ( v39 )
         {
@@ -2720,7 +2723,7 @@ LABEL_74:
             }
             if ( v40 >= v36->static_fields->SupportDeckMemberMax )
               break;
-            v42 = sub_1BE4D18(SupportSelectRootComponent___c__DisplayClass81_0_TypeInfo);
+            v42 = sub_1C13F70(SupportSelectRootComponent___c__DisplayClass81_0_TypeInfo);
             SupportSelectRootComponent___c__DisplayClass81_0___ctor(
               (SupportSelectRootComponent___c__DisplayClass81_0_o *)v42,
               0LL);
@@ -2740,7 +2743,7 @@ LABEL_74:
               goto LABEL_73;
             *(_QWORD *)(v42 + 16) = Instance;
             v50 = v42 + 16;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v42 + 16), Instance, v44, v45, v46, v47, v48, v49);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v42 + 16), Instance, v44, v45, v46, v47, v48, v49);
             if ( !*(_QWORD *)(v42 + 16) )
               goto LABEL_73;
             if ( *(_DWORD *)(*(_QWORD *)(v42 + 16) + 64LL) )
@@ -2754,7 +2757,7 @@ LABEL_74:
               if ( !v52 )
                 goto LABEL_73;
               userServantLeaderEntityList = (System_Collections_Generic_IEnumerable_TSource__o *)v52->fields.userServantLeaderEntityList;
-              v54 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_UserServantLeaderEntity__bool__TypeInfo);
+              v54 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_UserServantLeaderEntity__bool__TypeInfo);
               System_Func_object__bool____ctor(
                 v54,
                 (Il2CppObject *)v42,
@@ -2763,10 +2766,10 @@ LABEL_74:
               v55 = System_Linq_Enumerable__Where_object_(
                       userServantLeaderEntityList,
                       (System_Func_TSource__bool__o *)v54,
-                      (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___);
+                      (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___);
               Instance = System_Linq_Enumerable__Count_object_(
                            v55,
-                           (const MethodInfo_2F74408 *)Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___);
+                           (const MethodInfo_2FAA35C *)Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___);
               if ( (int)Instance >= 1 )
               {
                 if ( !*(_QWORD *)v50 )
@@ -2777,7 +2780,7 @@ LABEL_74:
                 Instance = (int64_t)DataMasterBase_object__object__int___GetEntity(
                                       MasterData_object,
                                       *(_DWORD *)(*(_QWORD *)v50 + 64LL),
-                                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                      (const MethodInfo_3238624 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
                 if ( !*(_QWORD *)v50 )
                   goto LABEL_73;
                 v56 = (ServantEntity_o *)Instance;
@@ -2790,10 +2793,10 @@ LABEL_74:
                   v58 = Rarity;
                   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                  if ( !byte_4B61717 )
+                  if ( !byte_4BAF1E5 )
                   {
-                    sub_1BE4ACC(&NetworkManager_TypeInfo, v34);
-                    byte_4B61717 = 1;
+                    sub_1C13D24(&NetworkManager_TypeInfo, v34);
+                    byte_4BAF1E5 = 1;
                   }
                   Instance = (int64_t)NetworkManager_TypeInfo;
                   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2832,7 +2835,7 @@ LABEL_74:
                   }
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_12580/*"SUPPORT_DECK_FIXED_ERROR_SERVANT"*/, 0LL);
+                  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_12610/*"SUM_INFO"*/, 0LL);
                   v88 = v58;
                   Instance = j_il2cpp_value_box_0(int_TypeInfo, &v88, v70, v71, v72);
                   if ( !v56 )
@@ -2840,19 +2843,19 @@ LABEL_74:
                   v73 = (Il2CppObject *)Instance;
                   Name = (Il2CppObject *)ServantEntity__getName(v56, v59, -1, 0LL);
                   ClassName = (Il2CppObject *)ServantEntity__getClassName(v56, 0LL);
-                  Instance = (int64_t)System_String__Format_62713248(v69, v73, Name, ClassName, 0LL);
+                  Instance = (int64_t)System_String__Format_62982384(v69, v73, Name, ClassName, 0LL);
                 }
                 else
                 {
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_12581/*"SUPPORT_DECK_FIXED_ERROR_SERVANT_NAME_ONLY"*/, 0LL);
+                  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_12611/*"SUM_OVER_INFO"*/, 0LL);
                   if ( !v56 )
                     goto LABEL_73;
                   v60 = (System_String_o *)Instance;
                   v61 = (Il2CppObject *)ServantEntity__getName(v56, -1, -1, 0LL);
                   v62 = (Il2CppObject *)ServantEntity__getClassName(v56, 0LL);
-                  Instance = (int64_t)System_String__Format_62713180(v60, v61, v62, 0LL);
+                  Instance = (int64_t)System_String__Format_62982316(v60, v61, v62, 0LL);
                 }
                 v34 = Instance;
                 if ( !v30 )
@@ -2868,14 +2871,14 @@ LABEL_74:
                   System_Collections_Generic_List_object___AddWithResize(
                     v30,
                     (Il2CppObject *)Instance,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v79 = &items->obj.klass + size;
                   v30->fields._size = size + 1;
                   v79[4] = (Il2CppClass *)v34;
-                  sub_1BE4A70((PartyOrganizationUtility_o *)(v79 + 4), v34, v63, v64, v65, v66, v67, v68);
+                  sub_1C13CC8((PartyOrganizationUtility_o *)(v79 + 4), v34, v63, v64, v65, v66, v67, v68);
                 }
               }
             }
@@ -2910,21 +2913,21 @@ void __fastcall SupportSelectRootComponent__InitAll(SupportSelectRootComponent_o
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x4
 
-  if ( (byte_4B634F4 & 1) == 0 )
+  if ( (byte_4BB100B & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndInitAll__, v3);
-    byte_4B634F4 = 1;
+    sub_1C13D24(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndInitAll__, v3);
+    byte_4BB100B = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_7;
   if ( (unsigned int)CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(CenterNum, v5);
+    sub_1C13F88(CenterNum, v5);
   confirmDeckMenu = this->fields.confirmDeckMenu;
   v8 = supportServantData->m_Items[(int)CenterNum];
-  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
+  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
   SupportSelectConfirmDeckMenu_OnClickButtonEvent___ctor(
     v9,
     (Il2CppObject *)this,
@@ -2932,7 +2935,7 @@ void __fastcall SupportSelectRootComponent__InitAll(SupportSelectRootComponent_o
     v10);
   if ( !confirmDeckMenu )
 LABEL_7:
-    sub_1BE4D28(CenterNum, v5);
+    sub_1C13F80(CenterNum, v5);
   SupportSelectConfirmDeckMenu__Open(confirmDeckMenu, 1, v8, v9, v11);
 }
 
@@ -2952,11 +2955,11 @@ void __fastcall SupportSelectRootComponent__InitSupportServantData(
   PartyListViewItem_o *v11; // x7
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B634CC & 1) == 0 )
+  if ( (byte_4BB0FE3 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&SupportServantData___TypeInfo, v3);
-    byte_4B634CC = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&SupportServantData___TypeInfo, v3);
+    byte_4BB0FE3 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -2964,11 +2967,11 @@ void __fastcall SupportSelectRootComponent__InitSupportServantData(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct SupportServantData_array *)sub_1BE4B74(
+  v5 = (struct SupportServantData_array *)sub_1C13DCC(
                                             SupportServantData___TypeInfo,
                                             (unsigned int)v4->static_fields->SupportDeckMax);
   this->fields.supportServantData = v5;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.supportServantData, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.supportServantData, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   SupportSelectRootComponent__RefreshSupportServantData(this, v12);
 }
 
@@ -2992,10 +2995,10 @@ bool __fastcall SupportSelectRootComponent__IsFinallyUpdate(
   struct SupportServantData_array *v15; // x9
   SupportServantData_o *v16; // x9
 
-  if ( (byte_4B634FD & 1) == 0 )
+  if ( (byte_4BB1014 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    byte_4B634FD = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    byte_4BB1014 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -3066,11 +3069,11 @@ bool __fastcall SupportSelectRootComponent__IsFinallyUpdate(
       goto LABEL_34;
     if ( i >= v15->max_length )
 LABEL_35:
-      sub_1BE4D30(Servant, method);
+      sub_1C13F88(Servant, method);
     v16 = v15->m_Items[i];
     if ( !v16 )
 LABEL_34:
-      sub_1BE4D28(Servant, method);
+      sub_1C13F80(Servant, method);
     if ( System_String__op_Inequality(v9->fields._deckName_k__BackingField, v16->fields._deckName_k__BackingField, 0LL) )
       return v6;
   }
@@ -3086,17 +3089,17 @@ bool __fastcall SupportSelectRootComponent__IsFixedEventQuestSupportDeckIdNow(
 {
   System_Int32_array *tempFixEventQuestSupportDeckIds; // x0
 
-  if ( (byte_4B634CE & 1) == 0 )
+  if ( (byte_4BB0FE5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_IndexOf_int___, *(_QWORD *)&checkDeckId);
-    byte_4B634CE = 1;
+    sub_1C13D24(&Method_System_Array_IndexOf_int___, *(_QWORD *)&checkDeckId);
+    byte_4BB0FE5 = 1;
   }
   tempFixEventQuestSupportDeckIds = this->fields.tempFixEventQuestSupportDeckIds;
   if ( tempFixEventQuestSupportDeckIds )
     LOBYTE(tempFixEventQuestSupportDeckIds) = System_Array__IndexOf_int_(
                                                 tempFixEventQuestSupportDeckIds,
                                                 checkDeckId,
-                                                (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___) >= 0;
+                                                (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___) >= 0;
   return (char)tempFixEventQuestSupportDeckIds;
 }
 
@@ -3109,17 +3112,17 @@ bool __fastcall SupportSelectRootComponent__IsFixedMainQuestSupportDeckIdNow(
 {
   System_Int32_array *tempFixMainQuestSupportDeckIds; // x0
 
-  if ( (byte_4B634CD & 1) == 0 )
+  if ( (byte_4BB0FE4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_IndexOf_int___, *(_QWORD *)&checkDeckId);
-    byte_4B634CD = 1;
+    sub_1C13D24(&Method_System_Array_IndexOf_int___, *(_QWORD *)&checkDeckId);
+    byte_4BB0FE4 = 1;
   }
   tempFixMainQuestSupportDeckIds = this->fields.tempFixMainQuestSupportDeckIds;
   if ( tempFixMainQuestSupportDeckIds )
     LOBYTE(tempFixMainQuestSupportDeckIds) = System_Array__IndexOf_int_(
                                                tempFixMainQuestSupportDeckIds,
                                                checkDeckId,
-                                               (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___) >= 0;
+                                               (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___) >= 0;
   return (char)tempFixMainQuestSupportDeckIds;
 }
 
@@ -3163,20 +3166,20 @@ bool __fastcall SupportSelectRootComponent__IsPossibleCopy(
   System_Int32_array *v37; // [xsp+10h] [xbp-70h]
   bool v38; // [xsp+1Ch] [xbp-64h]
 
-  if ( (byte_4B634EE & 1) == 0 )
+  if ( (byte_4BB1005 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___, v6);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___, v7);
-    sub_1BE4ACC(&System_Func_UserServantLeaderEntity__bool__TypeInfo, v8);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__DisplayClass98_0__IsPossibleCopy_b__0__, v9);
-    sub_1BE4ACC(&SupportSelectRootComponent___c__DisplayClass98_0_TypeInfo, v10);
-    byte_4B634EE = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___, v6);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___, v7);
+    sub_1C13D24(&System_Func_UserServantLeaderEntity__bool__TypeInfo, v8);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__DisplayClass98_0__IsPossibleCopy_b__0__, v9);
+    sub_1C13D24(&SupportSelectRootComponent___c__DisplayClass98_0_TypeInfo, v10);
+    byte_4BB1005 = 1;
   }
   CenterNum = (SupportServantData_o *)SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&idx);
   if ( !fixDeckIds )
 LABEL_28:
-    sub_1BE4D28(CenterNum, v12);
+    sub_1C13F80(CenterNum, v12);
   v13 = *(_QWORD *)&fixDeckIds->max_length;
   v14 = (int)v13 > 0;
   if ( (int)v13 >= 1 )
@@ -3190,7 +3193,7 @@ LABEL_28:
       v38 = v14;
       if ( v16 >= (unsigned __int64)(unsigned int)v13 )
 LABEL_29:
-        sub_1BE4D30(CenterNum, v12);
+        sub_1C13F88(CenterNum, v12);
       v18 = fixDeckIds->m_Items[v16 + 1];
       v19 = v18 - 1;
       if ( v18 >= 1 && v19 != idx )
@@ -3205,7 +3208,7 @@ LABEL_29:
           }
           if ( i >= SHIDWORD(CenterNum[1].fields.oldEquipIdList->m_Items[16]) )
             break;
-          v21 = sub_1BE4D18(SupportSelectRootComponent___c__DisplayClass98_0_TypeInfo);
+          v21 = sub_1C13F70(SupportSelectRootComponent___c__DisplayClass98_0_TypeInfo);
           SupportSelectRootComponent___c__DisplayClass98_0___ctor(
             (SupportSelectRootComponent___c__DisplayClass98_0_o *)v21,
             0LL);
@@ -3221,7 +3224,7 @@ LABEL_29:
           if ( !v21 )
             goto LABEL_28;
           *(_QWORD *)(v21 + 16) = CenterNum;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v21 + 16), (int64_t)CenterNum, v23, v24, v25, v26, v27, v28);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v21 + 16), (int64_t)CenterNum, v23, v24, v25, v26, v27, v28);
           v29 = *(_QWORD *)(v21 + 16);
           if ( !v29 )
             goto LABEL_28;
@@ -3236,7 +3239,7 @@ LABEL_29:
             if ( !v31 )
               goto LABEL_28;
             userServantLeaderEntityList = (System_Collections_Generic_IEnumerable_TSource__o *)v31->fields.userServantLeaderEntityList;
-            v33 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_UserServantLeaderEntity__bool__TypeInfo);
+            v33 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_UserServantLeaderEntity__bool__TypeInfo);
             System_Func_object__bool____ctor(
               v33,
               (Il2CppObject *)v21,
@@ -3245,10 +3248,10 @@ LABEL_29:
             v34 = System_Linq_Enumerable__Where_object_(
                     userServantLeaderEntityList,
                     (System_Func_TSource__bool__o *)v33,
-                    (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___);
+                    (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_UserServantLeaderEntity___);
             if ( System_Linq_Enumerable__Count_object_(
                    v34,
-                   (const MethodInfo_2F74408 *)Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___) > 0 )
+                   (const MethodInfo_2FAA35C *)Method_System_Linq_Enumerable_Count_UserServantLeaderEntity___) > 0 )
             {
               v14 = v38;
               return !v14;
@@ -3322,18 +3325,18 @@ bool __fastcall SupportSelectRootComponent__IsUpdateDeckId(
   int32_t v51; // w0
   bool v52; // w8
 
-  if ( (byte_4B634DB & 1) == 0 )
+  if ( (byte_4BB0FF2 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Count_int___, v3);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_SequenceEqual_int___, v4);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_int___, v5);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v6);
-    sub_1BE4ACC(&int___TypeInfo, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_0__, v8);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_1__, v9);
-    sub_1BE4ACC(&SupportSelectRootComponent___c_TypeInfo, v10);
-    byte_4B634DB = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Count_int___, v3);
+    sub_1C13D24(&Method_System_Linq_Enumerable_SequenceEqual_int___, v4);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_int___, v5);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v6);
+    sub_1C13D24(&int___TypeInfo, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_0__, v8);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_1__, v9);
+    sub_1C13D24(&SupportSelectRootComponent___c_TypeInfo, v10);
+    byte_4BB0FF2 = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   SelfUserGame = (System_Array_o *)UserGameMaster__getSelfUserGame(0LL);
@@ -3350,7 +3353,7 @@ bool __fastcall SupportSelectRootComponent__IsUpdateDeckId(
     if ( v16 )
     {
       v17 = v16;
-      v18 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BE4C08(v16, int___TypeInfo);
+      v18 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1C13E60(v16, int___TypeInfo);
       if ( !v18 )
         goto LABEL_17;
     }
@@ -3367,14 +3370,14 @@ bool __fastcall SupportSelectRootComponent__IsUpdateDeckId(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v19 = BalanceConfig_TypeInfo;
     }
-    v18 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BE4B74(
+    v18 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1C13DCC(
                                                                  int___TypeInfo,
                                                                  (unsigned int)v19->static_fields->FixMainSupportDeckNum);
   }
   SelfUserGame = (System_Array_o *)v14[13].monitor;
   if ( !SelfUserGame )
 LABEL_40:
-    sub_1BE4D28(SelfUserGame, v13);
+    sub_1C13F80(SelfUserGame, v13);
   if ( !SelfUserGame[1].monitor )
   {
 LABEL_18:
@@ -3384,7 +3387,7 @@ LABEL_18:
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v22 = BalanceConfig_TypeInfo;
     }
-    v21 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BE4B74(
+    v21 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1C13DCC(
                                                                  int___TypeInfo,
                                                                  (unsigned int)v22->static_fields->FixEventSupportDeckNum);
     goto LABEL_22;
@@ -3396,22 +3399,22 @@ LABEL_18:
     goto LABEL_22;
   }
   v17 = v20;
-  v21 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BE4C08(v20, int___TypeInfo);
+  v21 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1C13E60(v20, int___TypeInfo);
   if ( !v21 )
   {
 LABEL_17:
-    sub_1BE4FE8(v17);
+    sub_1C14240(v17);
     goto LABEL_18;
   }
 LABEL_22:
   v23 = System_Linq_Enumerable__SequenceEqual_int_(
           v18,
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.tempFixMainQuestSupportDeckIds,
-          (const MethodInfo_2F8D4F8 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+          (const MethodInfo_2FC3758 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
   v24 = v23 & System_Linq_Enumerable__SequenceEqual_int_(
                 v21,
                 (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.tempFixEventQuestSupportDeckIds,
-                (const MethodInfo_2F8D4F8 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+                (const MethodInfo_2FC3758 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
   if ( (v24 & 1) == 0 )
     goto LABEL_37;
   tempFixMainQuestSupportDeckIds = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.tempFixMainQuestSupportDeckIds;
@@ -3430,11 +3433,11 @@ LABEL_22:
       v26 = SupportSelectRootComponent___c_TypeInfo;
     }
     v28 = (Il2CppObject *)v26->static_fields->__9;
-    _9__67_0 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+    _9__67_0 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(_9__67_0, v28, Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_0__, 0LL);
     static_fields = SupportSelectRootComponent___c_TypeInfo->static_fields;
     static_fields->__9__67_0 = _9__67_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__67_0,
       (int64_t)_9__67_0,
       v30,
@@ -3447,8 +3450,8 @@ LABEL_22:
   v36 = System_Linq_Enumerable__Where_int_(
           tempFixMainQuestSupportDeckIds,
           (System_Func_TSource__bool__o *)_9__67_0,
-          (const MethodInfo_2F9868C *)Method_System_Linq_Enumerable_Where_int___);
-  v37 = System_Linq_Enumerable__Count_int_(v36, (const MethodInfo_2F7403C *)Method_System_Linq_Enumerable_Count_int___);
+          (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
+  v37 = System_Linq_Enumerable__Count_int_(v36, (const MethodInfo_2FA9F90 *)Method_System_Linq_Enumerable_Count_int___);
   v38 = SupportSelectRootComponent___c_TypeInfo;
   tempFixEventQuestSupportDeckIds = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.tempFixEventQuestSupportDeckIds;
   v40 = v37;
@@ -3466,17 +3469,17 @@ LABEL_22:
       v38 = SupportSelectRootComponent___c_TypeInfo;
     }
     v42 = (Il2CppObject *)v38->static_fields->__9;
-    _9__67_1 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+    _9__67_1 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(_9__67_1, v42, Method_SupportSelectRootComponent___c__IsUpdateDeckId_b__67_1__, 0LL);
     v43 = SupportSelectRootComponent___c_TypeInfo->static_fields;
     v43->__9__67_1 = _9__67_1;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v43->__9__67_1, (int64_t)_9__67_1, v44, v45, v46, v47, v48, v49);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v43->__9__67_1, (int64_t)_9__67_1, v44, v45, v46, v47, v48, v49);
   }
   v50 = System_Linq_Enumerable__Where_int_(
           tempFixEventQuestSupportDeckIds,
           (System_Func_TSource__bool__o *)_9__67_1,
-          (const MethodInfo_2F9868C *)Method_System_Linq_Enumerable_Where_int___);
-  v51 = System_Linq_Enumerable__Count_int_(v50, (const MethodInfo_2F7403C *)Method_System_Linq_Enumerable_Count_int___);
+          (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
+  v51 = System_Linq_Enumerable__Count_int_(v50, (const MethodInfo_2FA9F90 *)Method_System_Linq_Enumerable_Count_int___);
   if ( v40 < 1 || v51 <= 0 )
     v52 = CenterNum + 1 != monitor;
   else
@@ -3494,10 +3497,10 @@ bool __fastcall SupportSelectRootComponent__IsValidServantData(
 {
   BalanceConfig_c *v4; // x0
 
-  if ( (byte_4B634CF & 1) == 0 )
+  if ( (byte_4BB0FE6 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&index);
-    byte_4B634CF = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&index);
+    byte_4BB0FE6 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -3582,41 +3585,41 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v71; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v72; // 0:x0.16
 
-  if ( (byte_4B634DC & 1) == 0 )
+  if ( (byte_4BB0FF3 & 1) == 0 )
   {
-    sub_1BE4ACC(&CommonConfirmDialog_ClickDelegate_TypeInfo, *(_QWORD *)&result);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ServantMaster___, v9);
-    sub_1BE4ACC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v10);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v11);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_1BE4ACC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v15);
-    sub_1BE4ACC(&System_Text_StringBuilder_TypeInfo, v16);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__DisplayClass69_0__OnBackSelect_b__0__, v17);
-    sub_1BE4ACC(&SupportSelectRootComponent___c__DisplayClass69_0_TypeInfo, v18);
-    sub_1BE4ACC(&StringLiteral_10282/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v19);
-    sub_1BE4ACC(&StringLiteral_3799/*"COMMON_CONFIRM_NO"*/, v20);
-    sub_1BE4ACC(&StringLiteral_3804/*"COMMON_CONFIRM_YES"*/, v21);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v22);
-    byte_4B634DC = 1;
+    sub_1C13D24(&CommonConfirmDialog_ClickDelegate_TypeInfo, *(_QWORD *)&result);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ServantMaster___, v9);
+    sub_1C13D24(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v10);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v11);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_1C13D24(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v15);
+    sub_1C13D24(&System_Text_StringBuilder_TypeInfo, v16);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__DisplayClass69_0__OnBackSelect_b__0__, v17);
+    sub_1C13D24(&SupportSelectRootComponent___c__DisplayClass69_0_TypeInfo, v18);
+    sub_1C13D24(&StringLiteral_10307/*"P3M"*/, v19);
+    sub_1C13D24(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v20);
+    sub_1C13D24(&StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/, v21);
+    sub_1C13D24(&StringLiteral_1/*""*/, v22);
+    byte_4BB0FF3 = 1;
   }
   *(_QWORD *)actMaxRarity = 0LL;
   skillName = 0LL;
   *(_QWORD *)minFontSize = 0LL;
-  v23 = sub_1BE4D18(SupportSelectRootComponent___c__DisplayClass69_0_TypeInfo);
+  v23 = sub_1C13F70(SupportSelectRootComponent___c__DisplayClass69_0_TypeInfo);
   SupportSelectRootComponent___c__DisplayClass69_0___ctor(
     (SupportSelectRootComponent___c__DisplayClass69_0_o *)v23,
     0LL);
   if ( !v23 )
     goto LABEL_35;
   *(_QWORD *)(v23 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v23 + 16), (int64_t)this, v26, v27, v28, v29, v30, v31);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v23 + 16), (int64_t)this, v26, v27, v28, v29, v30, v31);
   *(_QWORD *)(v23 + 32) = entity;
   v32 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v23 + 32);
   *(_DWORD *)(v23 + 24) = result;
   *(_DWORD *)(v23 + 28) = classPos;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v23 + 32), (int64_t)entity, v33, v34, v35, v36, v37, v38);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v23 + 32), (int64_t)entity, v33, v34, v35, v36, v37, v38);
   if ( *(_DWORD *)(v23 + 24) == 1 )
   {
     supportServantData = this->fields.supportServantData;
@@ -3624,7 +3627,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
       goto LABEL_35;
     selectNum = this->fields.selectNum;
     if ( (unsigned int)selectNum >= supportServantData->max_length )
-      sub_1BE4D30(UserServantLeaderEntity, v25);
+      sub_1C13F88(UserServantLeaderEntity, v25);
     UserServantLeaderEntity = supportServantData->m_Items[selectNum];
     if ( !UserServantLeaderEntity )
       goto LABEL_35;
@@ -3637,7 +3640,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
     v42 = UserServantLeaderEntity;
     if ( UserServantLeaderEntity->fields.oldServantIdList )
     {
-      UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       v43 = (UserServantEntity_o *)*v32;
       if ( !*v32 )
         goto LABEL_35;
@@ -3648,7 +3651,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v71.fields.currentCryptoKey = v46;
       *(_QWORD *)&v71.fields.fakeValue = v45;
-      UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+      UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                           v71,
                                                           0LL);
       if ( !*v32 )
@@ -3659,7 +3662,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
       if ( !oldServantIdList )
         goto LABEL_35;
       v49 = (int)UserServantLeaderEntity;
-      UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+      UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                           *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&oldServantIdList->m_Items[3],
                                                           0LL);
       if ( !v44 )
@@ -3674,12 +3677,12 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
              -1,
              0LL) )
       {
-        UserServantLeaderEntity = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        UserServantLeaderEntity = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( UserServantLeaderEntity )
         {
           UserServantLeaderEntity = (SupportServantData_o *)DataManager__GetMasterData_object_(
                                                               (DataManager_o *)UserServantLeaderEntity,
-                                                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantMaster___);
           v50 = (UserServantEntity_o *)*v32;
           if ( *v32 )
           {
@@ -3690,7 +3693,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v72.fields.currentCryptoKey = v53;
             *(_QWORD *)&v72.fields.fakeValue = v52;
-            UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+            UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                                 v72,
                                                                 0LL);
             if ( v51 )
@@ -3698,12 +3701,12 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
               v54 = DataMasterBase_object__object__int___GetEntity(
                       v51,
                       (int32_t)UserServantLeaderEntity,
-                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-              UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+                      (const MethodInfo_3238624 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+              UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
               if ( *v32 )
               {
                 v55 = (PartyOrganizationUtility_o *)UserServantLeaderEntity;
-                UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(
+                UserServantLeaderEntity = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(
                                                                     (*v32)[6],
                                                                     0LL);
                 if ( v54 )
@@ -3734,7 +3737,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
                                                  skillName,
                                                  actMaxRarity[1],
                                                  0LL);
-                        UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+                        UserServantLeaderEntity = (SupportServantData_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
                         if ( UserServantLeaderEntity )
                         {
                           PartyOrganizationUtility__DecisionFontSize(
@@ -3743,22 +3746,22 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
                             minFontSize,
                             actMaxRarity[0],
                             0LL);
-                          v61 = (System_Text_StringBuilder_o *)sub_1BE4D18(System_Text_StringBuilder_TypeInfo);
+                          v61 = (System_Text_StringBuilder_o *)sub_1C13F70(System_Text_StringBuilder_TypeInfo);
                           System_Text_StringBuilder___ctor(v61, 0LL);
                           if ( v61 )
                           {
-                            System_Text_StringBuilder__Append_61859960(v61, RarityInvalidMessage, 0LL);
+                            System_Text_StringBuilder__Append_62129096(v61, RarityInvalidMessage, 0LL);
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10282/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
-                            System_Text_StringBuilder__Append_61859960(v61, v62, 0LL);
-                            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                            v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10307/*"P3M"*/, 0LL);
+                            System_Text_StringBuilder__Append_62129096(v61, v62, 0LL);
+                            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                             v64 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v61->klass->vtable._3_ToString.method)(
                                                        v61,
                                                        v61->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-                            v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3804/*"COMMON_CONFIRM_YES"*/, 0LL);
-                            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_NO"*/, 0LL);
-                            v67 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BE4D18(CommonConfirmDialog_ClickDelegate_TypeInfo);
+                            v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/, 0LL);
+                            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+                            v67 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C13F70(CommonConfirmDialog_ClickDelegate_TypeInfo);
                             CommonConfirmDialog_ClickDelegate___ctor(
                               v67,
                               (Il2CppObject *)v23,
@@ -3766,7 +3769,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
                               0LL);
                             if ( Instance )
                             {
-                              CommonUI__OpenConfirmDialog_30874076(
+                              CommonUI__OpenConfirmDialog_31070932(
                                 (CommonUI_o *)Instance,
                                 (System_String_o *)StringLiteral_1/*""*/,
                                 v64,
@@ -3798,7 +3801,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
           }
         }
 LABEL_35:
-        sub_1BE4D28(UserServantLeaderEntity, v25);
+        sub_1C13F80(UserServantLeaderEntity, v25);
       }
     }
   }
@@ -3857,18 +3860,18 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
   System_Int32_array *tempFixEventQuestSupportDeckIds; // x25
   CancelConfirmDeckIdDialog_CallbackFunc_o *v45; // x27
 
-  if ( (byte_4B634E9 & 1) == 0 )
+  if ( (byte_4BB1000 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo, v4);
-    sub_1BE4ACC(&CancelConfirmMenu_CallbackFunc_TypeInfo, v5);
-    sub_1BE4ACC(&int___TypeInfo, v6);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, v8);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__, v9);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_OnClickBack__, v10);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v11);
-    byte_4B634E9 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo, v4);
+    sub_1C13D24(&CancelConfirmMenu_CallbackFunc_TypeInfo, v5);
+    sub_1C13D24(&int___TypeInfo, v6);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, v8);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__, v9);
+    sub_1C13D24(&Method_SupportSelectRootComponent_OnClickBack__, v10);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v11);
+    byte_4BB1000 = 1;
   }
   if ( !this->fields.supportInfoJump )
   {
@@ -3876,18 +3879,18 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
     {
       v17 = Method_SupportSelectRootComponent_OnClickBack__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickBack__ + 83) & 2) != 0 )
-        v17 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickBack__);
-      v18 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v17, v17[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v18, 1, 0LL);
+        v17 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickBack__);
+      v18 = (System_Reflection_MethodBase_o *)sub_1C13D08(v17, v17[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v18, 1, 0, 0LL);
       CenterNum = (SupportServantSelectMenu_o *)SupportSelectRootComponent__getCenterNum(this, v19);
       supportServantData = this->fields.supportServantData;
       if ( supportServantData )
       {
         if ( (unsigned int)CenterNum >= supportServantData->max_length )
-          sub_1BE4D30(CenterNum, v14);
+          sub_1C13F88(CenterNum, v14);
         cancelConfirmMenu = this->fields.cancelConfirmMenu;
         v22 = supportServantData->m_Items[(int)CenterNum];
-        v23 = (CancelConfirmMenu_CallbackFunc_o *)sub_1BE4D18(CancelConfirmMenu_CallbackFunc_TypeInfo);
+        v23 = (CancelConfirmMenu_CallbackFunc_o *)sub_1C13F70(CancelConfirmMenu_CallbackFunc_TypeInfo);
         CancelConfirmMenu_CallbackFunc___ctor(
           v23,
           (Il2CppObject *)this,
@@ -3907,9 +3910,9 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
     {
       v25 = Method_SupportSelectRootComponent_OnClickBack__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickBack__ + 83) & 2) != 0 )
-        v25 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickBack__);
-      v26 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v25, v25[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v26, 1, 0LL);
+        v25 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickBack__);
+      v26 = (System_Reflection_MethodBase_o *)sub_1C13D08(v25, v25[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v26, 1, 0, 0LL);
       if ( this->fields.isEdit )
       {
         SupportSelectRootComponent__SetActiveApplyIcon(this, v14);
@@ -3921,7 +3924,7 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
       if ( CenterNum )
       {
         SupportServantSelectMenu__ClearScrollValue(CenterNum, 0LL);
-        SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22543/*"ok"*/, v34);
+        SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22595/*"offline"*/, v34);
         return;
       }
       goto LABEL_52;
@@ -3941,7 +3944,7 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
       if ( v31 )
       {
         v32 = v31;
-        v33 = (System_Int32_array *)sub_1BE4C08(v31, int___TypeInfo);
+        v33 = (System_Int32_array *)sub_1C13E60(v31, int___TypeInfo);
         if ( !v33 )
           goto LABEL_43;
       }
@@ -3958,7 +3961,7 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
         v35 = BalanceConfig_TypeInfo;
       }
-      v33 = (System_Int32_array *)sub_1BE4B74(int___TypeInfo, (unsigned int)v35->static_fields->FixMainSupportDeckNum);
+      v33 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)v35->static_fields->FixMainSupportDeckNum);
     }
     CenterNum = (SupportServantSelectMenu_o *)v29->fields.callbackFunc;
     if ( !CenterNum )
@@ -3972,11 +3975,11 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
       goto LABEL_48;
     }
     v32 = v36;
-    v38 = (System_Int32_array *)sub_1BE4C08(v36, int___TypeInfo);
+    v38 = (System_Int32_array *)sub_1C13E60(v36, int___TypeInfo);
     if ( v38 )
       goto LABEL_48;
 LABEL_43:
-    sub_1BE4FE8(v32);
+    sub_1C14240(v32);
 LABEL_44:
     v39 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -3984,18 +3987,18 @@ LABEL_44:
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v39 = BalanceConfig_TypeInfo;
     }
-    v38 = (System_Int32_array *)sub_1BE4B74(int___TypeInfo, (unsigned int)v39->static_fields->FixEventSupportDeckNum);
+    v38 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)v39->static_fields->FixEventSupportDeckNum);
 LABEL_48:
     SupportSelectRootComponent__getCenterNum(this, v37);
     v40 = Method_SupportSelectRootComponent_OnClickBack__;
     if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickBack__ + 83) & 2) != 0 )
-      v40 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickBack__);
-    v41 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v40, v40[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v41, 2, 0LL);
+      v40 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickBack__);
+    v41 = (System_Reflection_MethodBase_o *)sub_1C13D08(v40, v40[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v41, 2, 0, 0LL);
     cancelConfirmDeckIdDialog = this->fields.cancelConfirmDeckIdDialog;
     tempFixMainQuestSupportDeckIds = this->fields.tempFixMainQuestSupportDeckIds;
     tempFixEventQuestSupportDeckIds = this->fields.tempFixEventQuestSupportDeckIds;
-    v45 = (CancelConfirmDeckIdDialog_CallbackFunc_o *)sub_1BE4D18(CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo);
+    v45 = (CancelConfirmDeckIdDialog_CallbackFunc_o *)sub_1C13F70(CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo);
     CancelConfirmDeckIdDialog_CallbackFunc___ctor(
       v45,
       (Il2CppObject *)this,
@@ -4016,13 +4019,13 @@ LABEL_48:
       return;
     }
 LABEL_52:
-    sub_1BE4D28(CenterNum, v14);
+    sub_1C13F80(CenterNum, v14);
   }
   v12 = Method_SupportSelectRootComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickBack__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickBack__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v12, v12[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v13, 1, 0LL);
+    v12 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickBack__);
+  v13 = (System_Reflection_MethodBase_o *)sub_1C13D08(v12, v12[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v13, 1, 0, 0LL);
   CenterNum = this->fields.supportServantSelectMenu;
   if ( !CenterNum )
     goto LABEL_52;
@@ -4034,7 +4037,7 @@ LABEL_52:
   LODWORD(CenterNum->fields.closeTransform) = -1;
   if ( !SupportInfoJump__ReturnScene((SupportInfoJump_o *)CenterNum, 1, supportInfoJump, 0LL) )
   {
-    CenterNum = (SupportServantSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    CenterNum = (SupportServantSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( CenterNum )
     {
       AvalonSceneManager__popScene(
@@ -4083,14 +4086,14 @@ void __fastcall SupportSelectRootComponent__OnClickFixEventDeckButton(
   const MethodInfo *v30; // x2
   const MethodInfo *v31; // x1
 
-  if ( (byte_4B634E7 & 1) == 0 )
+  if ( (byte_4BB0FFE & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&idx);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v6);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndConfirmMenu__, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_OnClickFixEventDeckButton__, v8);
-    byte_4B634E7 = 1;
+    sub_1C13D24(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&idx);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v6);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndConfirmMenu__, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent_OnClickFixEventDeckButton__, v8);
+    byte_4BB0FFE = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&idx);
   v11 = SupportSelectRootComponent__getCenterNum(this, v10) + 1;
@@ -4105,7 +4108,7 @@ void __fastcall SupportSelectRootComponent__OnClickFixEventDeckButton(
   if ( !supportServantData )
     goto LABEL_19;
   if ( CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(FixedErrorList, v14);
+    sub_1C13F88(FixedErrorList, v14);
   v17 = FixedErrorList;
   FixedErrorList = (System_Collections_Generic_List_object__o *)supportServantData->m_Items[CenterNum];
   if ( FixedErrorList )
@@ -4117,11 +4120,11 @@ void __fastcall SupportSelectRootComponent__OnClickFixEventDeckButton(
     {
       v18 = Method_SupportSelectRootComponent_OnClickFixEventDeckButton__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickFixEventDeckButton__ + 83) & 2) != 0 )
-        v18 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickFixEventDeckButton__);
-      v19 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v18, v18[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0LL);
+        v18 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickFixEventDeckButton__);
+      v19 = (System_Reflection_MethodBase_o *)sub_1C13D08(v18, v18[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0LL);
       supportSelectConfirmMenu = this->fields.supportSelectConfirmMenu;
-      v21 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1BE4D18(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
+      v21 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1C13F70(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
       SupportSelectConfirmMenu_CallbackFunc___ctor(
         v21,
         (Il2CppObject *)this,
@@ -4133,7 +4136,7 @@ void __fastcall SupportSelectRootComponent__OnClickFixEventDeckButton(
         return;
       }
 LABEL_19:
-      sub_1BE4D28(FixedErrorList, v14);
+      sub_1C13F80(FixedErrorList, v14);
     }
   }
   if ( !v17 )
@@ -4161,13 +4164,13 @@ LABEL_19:
   {
     v24 = Method_SupportSelectRootComponent_OnClickFixEventDeckButton__;
     if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickFixEventDeckButton__ + 83) & 2) != 0 )
-      v24 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickFixEventDeckButton__);
-    v25 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v24, v24[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0LL);
+      v24 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickFixEventDeckButton__);
+    v25 = (System_Reflection_MethodBase_o *)sub_1C13D08(v24, v24[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0, 0LL);
     fixErrorDialog = this->fields.fixErrorDialog;
     FixedErrorList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                                     v17,
-                                                                    (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                                                    (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
     if ( !fixErrorDialog )
       goto LABEL_19;
     SupportDeckFixErrorDialog__Open(fixErrorDialog, (System_String_array *)FixedErrorList, 0LL);
@@ -4239,14 +4242,14 @@ void __fastcall SupportSelectRootComponent__OnClickFixMainDeckButton(
   const MethodInfo *v30; // x2
   const MethodInfo *v31; // x1
 
-  if ( (byte_4B634E6 & 1) == 0 )
+  if ( (byte_4BB0FFD & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&idx);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v6);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndConfirmMenu__, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_OnClickFixMainDeckButton__, v8);
-    byte_4B634E6 = 1;
+    sub_1C13D24(&SupportSelectConfirmMenu_CallbackFunc_TypeInfo, *(_QWORD *)&idx);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v6);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndConfirmMenu__, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent_OnClickFixMainDeckButton__, v8);
+    byte_4BB0FFD = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, *(const MethodInfo **)&idx);
   v11 = SupportSelectRootComponent__getCenterNum(this, v10) + 1;
@@ -4261,7 +4264,7 @@ void __fastcall SupportSelectRootComponent__OnClickFixMainDeckButton(
   if ( !supportServantData )
     goto LABEL_19;
   if ( CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(FixedErrorList, v14);
+    sub_1C13F88(FixedErrorList, v14);
   v17 = FixedErrorList;
   FixedErrorList = (System_Collections_Generic_List_object__o *)supportServantData->m_Items[CenterNum];
   if ( FixedErrorList )
@@ -4273,11 +4276,11 @@ void __fastcall SupportSelectRootComponent__OnClickFixMainDeckButton(
     {
       v18 = Method_SupportSelectRootComponent_OnClickFixMainDeckButton__;
       if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickFixMainDeckButton__ + 83) & 2) != 0 )
-        v18 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickFixMainDeckButton__);
-      v19 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v18, v18[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0LL);
+        v18 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickFixMainDeckButton__);
+      v19 = (System_Reflection_MethodBase_o *)sub_1C13D08(v18, v18[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0LL);
       supportSelectConfirmMenu = this->fields.supportSelectConfirmMenu;
-      v21 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1BE4D18(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
+      v21 = (SupportSelectConfirmMenu_CallbackFunc_o *)sub_1C13F70(SupportSelectConfirmMenu_CallbackFunc_TypeInfo);
       SupportSelectConfirmMenu_CallbackFunc___ctor(
         v21,
         (Il2CppObject *)this,
@@ -4289,7 +4292,7 @@ void __fastcall SupportSelectRootComponent__OnClickFixMainDeckButton(
         return;
       }
 LABEL_19:
-      sub_1BE4D28(FixedErrorList, v14);
+      sub_1C13F80(FixedErrorList, v14);
     }
   }
   if ( !v17 )
@@ -4317,13 +4320,13 @@ LABEL_19:
   {
     v24 = Method_SupportSelectRootComponent_OnClickFixMainDeckButton__;
     if ( (*((_BYTE *)Method_SupportSelectRootComponent_OnClickFixMainDeckButton__ + 83) & 2) != 0 )
-      v24 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_OnClickFixMainDeckButton__);
-    v25 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v24, v24[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0LL);
+      v24 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_OnClickFixMainDeckButton__);
+    v25 = (System_Reflection_MethodBase_o *)sub_1C13D08(v24, v24[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0, 0LL);
     fixErrorDialog = this->fields.fixErrorDialog;
     FixedErrorList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                                     v17,
-                                                                    (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                                                    (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
     if ( !fixErrorDialog )
       goto LABEL_19;
     SupportDeckFixErrorDialog__Open(fixErrorDialog, (System_String_array *)FixedErrorList, 0LL);
@@ -4376,22 +4379,22 @@ void __fastcall SupportSelectRootComponent__OpenSupportEditMenu(
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x4
 
-  if ( (byte_4B634ED & 1) == 0 )
+  if ( (byte_4BB1004 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectEditMenu_OnClickButtonEvent_TypeInfo, method);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportEditMenu__, v3);
-    byte_4B634ED = 1;
+    sub_1C13D24(&SupportSelectEditMenu_OnClickButtonEvent_TypeInfo, method);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportEditMenu__, v3);
+    byte_4BB1004 = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_7;
   if ( (unsigned int)CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(CenterNum, v5);
+    sub_1C13F88(CenterNum, v5);
   supportEditMenu = this->fields.supportEditMenu;
   isEdit = this->fields.isEdit;
   v9 = supportServantData->m_Items[(int)CenterNum];
-  v10 = (SupportSelectEditMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectEditMenu_OnClickButtonEvent_TypeInfo);
+  v10 = (SupportSelectEditMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectEditMenu_OnClickButtonEvent_TypeInfo);
   SupportSelectEditMenu_OnClickButtonEvent___ctor(
     v10,
     (Il2CppObject *)this,
@@ -4399,7 +4402,7 @@ void __fastcall SupportSelectRootComponent__OpenSupportEditMenu(
     v11);
   if ( !supportEditMenu )
 LABEL_7:
-    sub_1BE4D28(CenterNum, v5);
+    sub_1C13F80(CenterNum, v5);
   SupportSelectEditMenu__Open(supportEditMenu, v9, isEdit, v10, v12);
 }
 
@@ -4413,16 +4416,16 @@ void __fastcall SupportSelectRootComponent__PlaySEOnClickFixQuestSupportDeck(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4B634E8 & 1) == 0 )
+  if ( (byte_4BB0FFF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__, isFixed);
-    byte_4B634E8 = 1;
+    sub_1C13D24(&Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__, isFixed);
+    byte_4BB0FFF = 1;
   }
   v4 = Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__;
   if ( (*((_BYTE *)Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v4, v4[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v5, !isFixed, 0LL);
+    v4 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_PlaySEOnClickFixQuestSupportDeck__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v5, !isFixed, 0, 0LL);
 }
 
 
@@ -4479,10 +4482,10 @@ void __fastcall SupportSelectRootComponent__RefreshSupportServantData(
   __int64 v36; // x0
 
   v2 = this;
-  if ( (byte_4B634CB & 1) == 0 )
+  if ( (byte_4BB0FE2 & 1) == 0 )
   {
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&SupportServantData_TypeInfo, method);
-    byte_4B634CB = 1;
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&SupportServantData_TypeInfo, method);
+    byte_4BB0FE2 = 1;
   }
   supportServantData = (unsigned int *)v2->fields.supportServantData;
   if ( !supportServantData )
@@ -4498,23 +4501,23 @@ void __fastcall SupportSelectRootComponent__RefreshSupportServantData(
       goto LABEL_37;
     if ( !*(_QWORD *)&supportServantData[2 * v4 + 8] )
     {
-      v7 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+      v7 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
       SupportServantData___ctor(v7, 0LL);
       if ( v7 )
       {
-        this = (SupportSelectRootComponent_o *)sub_1BE4C08(v7, *(_QWORD *)(*(_QWORD *)supportServantData + 64LL));
+        this = (SupportSelectRootComponent_o *)sub_1C13E60(v7, *(_QWORD *)(*(_QWORD *)supportServantData + 64LL));
         if ( !this )
         {
 LABEL_38:
-          v36 = sub_1BE4D4C();
-          sub_1BE4BF4(v36, 0LL);
+          v36 = sub_1C13FA4();
+          sub_1C13E4C(v36, 0LL);
         }
       }
       if ( v4 >= supportServantData[6] )
 LABEL_37:
-        sub_1BE4D30(this, method);
+        sub_1C13F88(this, method);
       *(_QWORD *)&supportServantData[2 * v4 + 8] = v7;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&supportServantData[v5], (int64_t)v7, v8, v9, v10, v11, v12, v13);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&supportServantData[v5], (int64_t)v7, v8, v9, v10, v11, v12, v13);
       supportServantData = (unsigned int *)v2->fields.supportServantData;
     }
     ++v4;
@@ -4536,18 +4539,18 @@ LABEL_37:
       goto LABEL_37;
     if ( !*(_QWORD *)&orgSupportServantData[2 * v15 + 8] )
     {
-      v18 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+      v18 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
       SupportServantData___ctor(v18, 0LL);
       if ( v18 )
       {
-        this = (SupportSelectRootComponent_o *)sub_1BE4C08(v18, *(_QWORD *)(*(_QWORD *)orgSupportServantData + 64LL));
+        this = (SupportSelectRootComponent_o *)sub_1C13E60(v18, *(_QWORD *)(*(_QWORD *)orgSupportServantData + 64LL));
         if ( !this )
           goto LABEL_38;
       }
       if ( v15 >= orgSupportServantData[6] )
         goto LABEL_37;
       *(_QWORD *)&orgSupportServantData[2 * v15 + 8] = v18;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&orgSupportServantData[v16], (int64_t)v18, v19, v20, v21, v22, v23, v24);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&orgSupportServantData[v16], (int64_t)v18, v19, v20, v21, v22, v23, v24);
       orgSupportServantData = (unsigned int *)v2->fields.orgSupportServantData;
     }
     ++v15;
@@ -4558,7 +4561,7 @@ LABEL_37:
   tmpSupportServantData = (unsigned int *)v2->fields.tmpSupportServantData;
   if ( !tmpSupportServantData )
 LABEL_35:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   v26 = 0LL;
   v27 = 8LL;
   while ( 1 )
@@ -4570,18 +4573,18 @@ LABEL_35:
       goto LABEL_37;
     if ( !*(_QWORD *)&tmpSupportServantData[2 * v26 + 8] )
     {
-      v29 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+      v29 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
       SupportServantData___ctor(v29, 0LL);
       if ( v29 )
       {
-        this = (SupportSelectRootComponent_o *)sub_1BE4C08(v29, *(_QWORD *)(*(_QWORD *)tmpSupportServantData + 64LL));
+        this = (SupportSelectRootComponent_o *)sub_1C13E60(v29, *(_QWORD *)(*(_QWORD *)tmpSupportServantData + 64LL));
         if ( !this )
           goto LABEL_38;
       }
       if ( v26 >= tmpSupportServantData[6] )
         goto LABEL_37;
       *(_QWORD *)&tmpSupportServantData[2 * v26 + 8] = v29;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&tmpSupportServantData[v27], (int64_t)v29, v30, v31, v32, v33, v34, v35);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&tmpSupportServantData[v27], (int64_t)v29, v30, v31, v32, v33, v34, v35);
       tmpSupportServantData = (unsigned int *)v2->fields.tmpSupportServantData;
     }
     ++v26;
@@ -4604,21 +4607,21 @@ void __fastcall SupportSelectRootComponent__RemoveAll(SupportSelectRootComponent
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x4
 
-  if ( (byte_4B634F2 & 1) == 0 )
+  if ( (byte_4BB1009 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndRemoveAll__, v3);
-    byte_4B634F2 = 1;
+    sub_1C13D24(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndRemoveAll__, v3);
+    byte_4BB1009 = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_7;
   if ( (unsigned int)CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(CenterNum, v5);
+    sub_1C13F88(CenterNum, v5);
   confirmDeckMenu = this->fields.confirmDeckMenu;
   v8 = supportServantData->m_Items[(int)CenterNum];
-  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
+  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
   SupportSelectConfirmDeckMenu_OnClickButtonEvent___ctor(
     v9,
     (Il2CppObject *)this,
@@ -4626,7 +4629,7 @@ void __fastcall SupportSelectRootComponent__RemoveAll(SupportSelectRootComponent
     v10);
   if ( !confirmDeckMenu )
 LABEL_7:
-    sub_1BE4D28(CenterNum, v5);
+    sub_1C13F80(CenterNum, v5);
   SupportSelectConfirmDeckMenu__Open(confirmDeckMenu, 0, v8, v9, v11);
 }
 
@@ -4645,21 +4648,21 @@ void __fastcall SupportSelectRootComponent__RemoveAllEquip(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x4
 
-  if ( (byte_4B634F6 & 1) == 0 )
+  if ( (byte_4BB100D & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndRemoveAllEquip__, v3);
-    byte_4B634F6 = 1;
+    sub_1C13D24(&SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo, method);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndRemoveAllEquip__, v3);
+    byte_4BB100D = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_7;
   if ( (unsigned int)CenterNum >= supportServantData->max_length )
-    sub_1BE4D30(CenterNum, v5);
+    sub_1C13F88(CenterNum, v5);
   confirmDeckMenu = this->fields.confirmDeckMenu;
   v8 = supportServantData->m_Items[(int)CenterNum];
-  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1BE4D18(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
+  v9 = (SupportSelectConfirmDeckMenu_OnClickButtonEvent_o *)sub_1C13F70(SupportSelectConfirmDeckMenu_OnClickButtonEvent_TypeInfo);
   SupportSelectConfirmDeckMenu_OnClickButtonEvent___ctor(
     v9,
     (Il2CppObject *)this,
@@ -4667,7 +4670,7 @@ void __fastcall SupportSelectRootComponent__RemoveAllEquip(
     v10);
   if ( !confirmDeckMenu )
 LABEL_7:
-    sub_1BE4D28(CenterNum, v5);
+    sub_1C13F80(CenterNum, v5);
   SupportSelectConfirmDeckMenu__Open(confirmDeckMenu, 2, v8, v9, v11);
 }
 
@@ -4690,16 +4693,16 @@ void __fastcall SupportSelectRootComponent__RequestApi(SupportSelectRootComponen
   const MethodInfo *v16; // x2
   NetworkManager_ResultCallbackFunc_o *v17; // x21
 
-  if ( (byte_4B634D8 & 1) == 0 )
+  if ( (byte_4BB0FEF & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&Method_NetworkManager_getRequest_FollowerSetupRequest___, v3);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v4);
-    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_CallbackUpdateDeckIdApi__, v7);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v8);
-    byte_4B634D8 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&Method_NetworkManager_getRequest_FollowerSetupRequest___, v3);
+    sub_1C13D24(&NetworkManager_TypeInfo, v4);
+    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C13D24(&Method_SupportSelectRootComponent_CallbackUpdateDeckIdApi__, v7);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v8);
+    byte_4BB0FEF = 1;
   }
   v9 = SupportSelectRootComponent__getCenterNum(this, method) + 1;
   if ( SupportSelectRootComponent__IsFinallyUpdate(this, v10) )
@@ -4724,7 +4727,7 @@ void __fastcall SupportSelectRootComponent__RequestApi(SupportSelectRootComponen
         goto LABEL_21;
       if ( i >= orgSupportServantData->max_length )
 LABEL_22:
-        sub_1BE4D30(Instance, v11);
+        sub_1C13F88(Instance, v11);
       Instance = supportServantData->m_Items[i];
       if ( !Instance )
         goto LABEL_21;
@@ -4734,14 +4737,14 @@ LABEL_22:
   else if ( !SupportSelectRootComponent__IsUpdateDeckId(this, v11) )
   {
 LABEL_20:
-    SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22543/*"ok"*/, v16);
+    SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_22595/*"offline"*/, v16);
     return;
   }
-  Instance = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (SupportServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   CommonUI__SetConnectMarkFadeInLag((CommonUI_o *)Instance, 0, 0LL);
-  v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v17,
     (Il2CppObject *)this,
@@ -4751,10 +4754,10 @@ LABEL_20:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (SupportServantData_o *)NetworkManager__getRequest_object_(
                                        v17,
-                                       (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_FollowerSetupRequest___);
+                                       (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_FollowerSetupRequest___);
   if ( !Instance )
 LABEL_21:
-    sub_1BE4D28(Instance, v11);
+    sub_1C13F80(Instance, v11);
   if ( !FollowerSetupRequest__beginRequest(
           (FollowerSetupRequest_o *)Instance,
           this->fields.supportServantData,
@@ -4793,12 +4796,12 @@ void __fastcall SupportSelectRootComponent__RequestDeckName(
     if ( !supportServantData )
       goto LABEL_8;
     if ( CenterNum >= supportServantData->max_length )
-      sub_1BE4D30(IsNullOrEmpty, v5);
+      sub_1C13F88(IsNullOrEmpty, v5);
     IsNullOrEmpty = (SupportSelectMenu_o *)supportServantData->m_Items[CenterNum];
     if ( !IsNullOrEmpty
       || (editDeckName = this->fields.editDeckName,
           IsNullOrEmpty->fields.decideButton = (struct UICommonButton_o *)editDeckName,
-          sub_1BE4A70(
+          sub_1C13CC8(
             (PartyOrganizationUtility_o *)&IsNullOrEmpty->fields.decideButton,
             (int64_t)editDeckName,
             v6,
@@ -4814,7 +4817,7 @@ void __fastcall SupportSelectRootComponent__RequestDeckName(
           !indicator) )
     {
 LABEL_8:
-      sub_1BE4D28(IsNullOrEmpty, v5);
+      sub_1C13F80(IsNullOrEmpty, v5);
     }
     SupportSelectListViewIndicator__DrawPartyInfo(indicator, (SupportSelectListViewItem_o *)IsNullOrEmpty, v16);
   }
@@ -4839,21 +4842,21 @@ void __fastcall SupportSelectRootComponent__ReturnScene(
   const MethodInfo *v15; // x1
   SceneJumpInfo_o *sceneJumpInfo; // x0
 
-  if ( (byte_4B634EC & 1) == 0 )
+  if ( (byte_4BB1003 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, result);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_ReturnScene__, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B634EC = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, result);
+    sub_1C13D24(&Method_SupportSelectRootComponent_ReturnScene__, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB1003 = 1;
   }
   this->fields.state = 0;
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22370/*"ng"*/, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22421/*"newAttributes"*/, 0LL) )
   {
     v8 = Method_SupportSelectRootComponent_ReturnScene__;
     if ( (*((_BYTE *)Method_SupportSelectRootComponent_ReturnScene__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1BE4AE4(Method_SupportSelectRootComponent_ReturnScene__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v8, v8[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0LL);
+      v8 = (_QWORD *)sub_1C13D3C(Method_SupportSelectRootComponent_ReturnScene__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C13D08(v8, v8[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0LL);
     supportSelectMenu = this->fields.supportSelectMenu;
     if ( supportSelectMenu )
     {
@@ -4876,14 +4879,14 @@ LABEL_11:
       goto LABEL_11;
     }
 LABEL_20:
-    sub_1BE4D28(supportSelectMenu, v10);
+    sub_1C13F80(supportSelectMenu, v10);
   }
-  supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !supportSelectMenu )
     goto LABEL_20;
   if ( AvalonSceneManager__IsStackScene((AvalonSceneManager_o *)supportSelectMenu, 0LL) )
   {
-    supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !supportSelectMenu )
       goto LABEL_20;
     AvalonSceneManager__popScene((AvalonSceneManager_o *)supportSelectMenu, 1, 0LL, 0LL);
@@ -4893,7 +4896,7 @@ LABEL_20:
     sceneJumpInfo = this->fields.sceneJumpInfo;
     if ( !sceneJumpInfo || !SceneJumpInfo__ReturnScene(sceneJumpInfo, 0LL) )
     {
-      supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      supportSelectMenu = (SupportSelectMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( !supportSelectMenu )
         goto LABEL_20;
       AvalonSceneManager__transitionScene((AvalonSceneManager_o *)supportSelectMenu, 39, 1, 0LL, 0LL);
@@ -4925,11 +4928,11 @@ void __fastcall SupportSelectRootComponent__SaveTemp(
   if ( !supportServantData )
     goto LABEL_7;
   if ( targetIdx >= supportServantData->max_length )
-    sub_1BE4D30(this, *(_QWORD *)&targetIdx);
+    sub_1C13F88(this, *(_QWORD *)&targetIdx);
   this = (SupportSelectRootComponent_o *)supportServantData->m_Items[targetIdx];
   if ( !this )
 LABEL_7:
-    sub_1BE4D28(this, *(_QWORD *)&targetIdx);
+    sub_1C13F80(this, *(_QWORD *)&targetIdx);
   SupportServantData__ResetOld((SupportServantData_o *)this, 0LL);
   SupportSelectRootComponent__CopySupportData(
     v5,
@@ -4982,29 +4985,29 @@ void __fastcall SupportSelectRootComponent__SelectCopySupportDeck(
   const MethodInfo *v38; // x3
   const MethodInfo *v39; // x5
 
-  if ( (byte_4B634EF & 1) == 0 )
+  if ( (byte_4BB1006 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v6);
-    sub_1BE4ACC(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSelectCopySupportDeck__, v8);
-    byte_4B634EF = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v6);
+    sub_1C13D24(&SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSelectCopySupportDeck__, v8);
+    byte_4BB1006 = 1;
   }
   supportEditMenu = this->fields.supportEditMenu;
   if ( !supportEditMenu )
     goto LABEL_33;
   SupportSelectEditMenu__Close(supportEditMenu, method);
-  v10 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v10 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
-  v11 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
+  v11 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v11,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   CenterNum = SupportSelectRootComponent__getCenterNum(this, v12);
   IsFixedMainQuestSupportDeckIdNow = SupportSelectRootComponent__IsFixedMainQuestSupportDeckIdNow(
                                        this,
@@ -5051,7 +5054,7 @@ void __fastcall SupportSelectRootComponent__SelectCopySupportDeck(
         System_Collections_Generic_List_int___AddWithResize(
           v10,
           i,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
@@ -5090,7 +5093,7 @@ void __fastcall SupportSelectRootComponent__SelectCopySupportDeck(
       System_Collections_Generic_List_int___AddWithResize(
         v11,
         i,
-        *(const MethodInfo_35CF200 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+        *(const MethodInfo_36101A8 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
     }
     else
     {
@@ -5103,13 +5106,13 @@ void __fastcall SupportSelectRootComponent__SelectCopySupportDeck(
         supportServantData = this->fields.supportServantData,
         supportEditMenu = (SupportSelectEditMenu_o *)System_Collections_Generic_List_int___ToArray(
                                                        v10,
-                                                       (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__),
+                                                       (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__),
         !v11)
     || (v35 = (System_Int32_array *)supportEditMenu,
         v36 = System_Collections_Generic_List_int___ToArray(
                 v11,
-                (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__),
-        v37 = (SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *)sub_1BE4D18(SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo),
+                (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__),
+        v37 = (SupportSelectCopyDeckSelectMenu_OnSelectEvent_o *)sub_1C13F70(SupportSelectCopyDeckSelectMenu_OnSelectEvent_TypeInfo),
         SupportSelectCopyDeckSelectMenu_OnSelectEvent___ctor(
           v37,
           (Il2CppObject *)this,
@@ -5118,7 +5121,7 @@ void __fastcall SupportSelectRootComponent__SelectCopySupportDeck(
         !copyDeckSelectMenu) )
   {
 LABEL_33:
-    sub_1BE4D28(supportEditMenu, method);
+    sub_1C13F80(supportEditMenu, method);
   }
   SupportSelectCopyDeckSelectMenu__Open(copyDeckSelectMenu, supportServantData, v35, v36, v37, v39);
 }
@@ -5140,7 +5143,7 @@ void __fastcall SupportSelectRootComponent__SetActiveApplyIcon(
       return;
     }
 LABEL_7:
-    sub_1BE4D28(supportSelectMenu, method);
+    sub_1C13F80(supportSelectMenu, method);
   }
   supportSelectMenu = (SupportSelectMenu_o *)SupportSelectRootComponent__getCenterNum(this, method);
   if ( !this->fields.supportSelectMenu )
@@ -5168,10 +5171,10 @@ void __fastcall SupportSelectRootComponent__SetCacheAssetNameList(
   PartyOrganizationUtility_o *p_cacheAssetNameList; // x21
   struct System_String_array *cacheAssetNameList; // t1
 
-  if ( (byte_4B634D7 & 1) == 0 )
+  if ( (byte_4BB0FEE & 1) == 0 )
   {
-    sub_1BE4ACC(&AssetManager_TypeInfo, list);
-    byte_4B634D7 = 1;
+    sub_1C13D24(&AssetManager_TypeInfo, list);
+    byte_4BB0FEE = 1;
   }
   cacheAssetNameList = this->fields.cacheAssetNameList;
   p_cacheAssetNameList = (PartyOrganizationUtility_o *)&this->fields.cacheAssetNameList;
@@ -5180,15 +5183,15 @@ void __fastcall SupportSelectRootComponent__SetCacheAssetNameList(
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage_38704408(list, 0LL, 1, 0LL);
+    AssetManager__loadAssetStorage_38941952(list, 0LL, 1, 0LL);
   }
   p_cacheAssetNameList->klass = (PartyOrganizationUtility_c *)list;
-  sub_1BE4A70(p_cacheAssetNameList, (int64_t)list, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8(p_cacheAssetNameList, (int64_t)list, (int64_t)method, v3, v4, v5, v6, v7);
   if ( v10 )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_38706752(v10, 0LL);
+    AssetManager__releaseAssetStorage_38944296(v10, 0LL);
   }
 }
 
@@ -5242,24 +5245,24 @@ void __fastcall SupportSelectRootComponent__SetEquip(
 
   v7 = result;
   v8 = this;
-  if ( (byte_4B634DE & 1) == 0 )
+  if ( (byte_4BB0FF5 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BE4ACC(&Method_System_Array_IndexOf_long___, v9);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndCloseServantEquipListCancel__, v12);
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&result);
+    sub_1C13D24(&Method_System_Array_IndexOf_long___, v9);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndCloseServantEquipListCancel__, v12);
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(
                                              &Method_SupportSelectRootComponent_EndCloseServantEquipListDecide__,
                                              v13);
-    byte_4B634DE = 1;
+    byte_4BB0FF5 = 1;
   }
   selectNum = v8->fields.selectNum;
   v8->fields.state = 1;
   if ( v7 != 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v20 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     v21 = &Method_SupportSelectRootComponent_EndCloseServantEquipListCancel__;
     goto LABEL_26;
   }
@@ -5268,7 +5271,7 @@ void __fastcall SupportSelectRootComponent__SetEquip(
     userSvtEntity = item->fields.userSvtEntity;
     if ( !userSvtEntity )
       goto LABEL_32;
-    this = (SupportSelectRootComponent_o *)BasicHelper__DecryptValue_42087228(userSvtEntity->fields.svtId, 0LL);
+    this = (SupportSelectRootComponent_o *)BasicHelper__DecryptValue_42285396(userSvtEntity->fields.svtId, 0LL);
     v16 = item->fields.userSvtEntity;
     if ( !v16 )
       goto LABEL_32;
@@ -5288,11 +5291,11 @@ void __fastcall SupportSelectRootComponent__SetEquip(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v30 = v32;
-  this = (SupportSelectRootComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47302584(&v30, 0LL);
+  this = (SupportSelectRootComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47494132(&v30, 0LL);
   supportServantData = v8->fields.supportServantData;
   if ( !supportServantData )
 LABEL_32:
-    sub_1BE4D28(this, *(_QWORD *)&result);
+    sub_1C13F80(this, *(_QWORD *)&result);
   if ( (unsigned int)selectNum >= supportServantData->max_length )
     goto LABEL_33;
   v23 = supportServantData->m_Items[selectNum];
@@ -5302,7 +5305,7 @@ LABEL_32:
   this = (SupportSelectRootComponent_o *)System_Array__IndexOf_long_(
                                            v23->fields.equipIdList,
                                            (int64_t)this,
-                                           (const MethodInfo_3055EA8 *)Method_System_Array_IndexOf_long___);
+                                           (const MethodInfo_308C2A4 *)Method_System_Array_IndexOf_long___);
   if ( (_DWORD)this != -1 )
   {
     v25 = v8->fields.supportServantData;
@@ -5321,13 +5324,13 @@ LABEL_32:
     goto LABEL_32;
   if ( (unsigned int)selectNum >= v26->max_length )
 LABEL_33:
-    sub_1BE4D30(this, *(_QWORD *)&result);
+    sub_1C13F88(this, *(_QWORD *)&result);
   this = (SupportSelectRootComponent_o *)v26->m_Items[selectNum];
   if ( !this )
     goto LABEL_32;
   SupportServantData__setEquipData((SupportServantData_o *)this, classPos, (int64_t)v24, v18, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v20 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v20 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   v21 = &Method_SupportSelectRootComponent_EndCloseServantEquipListDecide__;
 LABEL_26:
   v27 = v20;
@@ -5442,15 +5445,15 @@ void __fastcall SupportSelectRootComponent__SetFriendInfo(
   __int64 v94; // x0
 
   v9 = this;
-  if ( (byte_4B634D0 & 1) == 0 )
+  if ( (byte_4BB0FE7 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, deckIndex);
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, v10);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_SequenceEqual_int___, v11);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v12);
-    sub_1BE4ACC(&SupportServantData___TypeInfo, v13);
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&SupportServantData_TypeInfo, v14);
-    byte_4B634D0 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, deckIndex);
+    sub_1C13D24(&BalanceConfig_TypeInfo, v10);
+    sub_1C13D24(&Method_System_Linq_Enumerable_SequenceEqual_int___, v11);
+    sub_1C13D24(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v12);
+    sub_1C13D24(&SupportServantData___TypeInfo, v13);
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&SupportServantData_TypeInfo, v14);
+    byte_4BB0FE7 = 1;
   }
   *deckIndex = 0;
   supportInfoJump = v9->fields.supportInfoJump;
@@ -5474,9 +5477,9 @@ void __fastcall SupportSelectRootComponent__SetFriendInfo(
       goto LABEL_73;
     if ( v17 >= v20[6] )
 LABEL_74:
-      sub_1BE4D30(this, deckIndex);
+      sub_1C13F88(this, deckIndex);
     *(_QWORD *)&v20[i] = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v20[i], 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v20[i], 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ++v17;
   }
   if ( !otherUserGameEntity )
@@ -5484,7 +5487,7 @@ LABEL_74:
   this = (SupportSelectRootComponent_o *)System_Linq_Enumerable__SequenceEqual_int_(
                                            (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.mainSupportDeckIds,
                                            (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.eventSupportDeckIds,
-                                           (const MethodInfo_2F8D4F8 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+                                           (const MethodInfo_2FC3758 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
   mainSupportDeckIds = otherUserGameEntity->fields.mainSupportDeckIds;
   if ( !mainSupportDeckIds )
     goto LABEL_73;
@@ -5496,9 +5499,9 @@ LABEL_74:
     if ( !eventSupportDeckIds )
       goto LABEL_73;
     v48 = *(_QWORD *)&eventSupportDeckIds->max_length;
-    v49 = sub_1BE4B74(SupportServantData___TypeInfo, (unsigned int)(v48 + v22));
+    v49 = sub_1C13DCC(SupportServantData___TypeInfo, (unsigned int)(v48 + v22));
     *p_supportServantData = (unsigned int *)v49;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.supportServantData, v49, v50, v51, v52, v53, v54, v55);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.supportServantData, v49, v50, v51, v52, v53, v54, v55);
     if ( (int)v22 < 1 )
     {
       v57 = 0;
@@ -5516,13 +5519,13 @@ LABEL_52:
         if ( v72->m_Items[v71 + 1] >= 1 )
         {
           v73 = *p_supportServantData;
-          v74 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+          v74 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
           SupportServantData___ctor(v74, 0LL);
           if ( !v73 )
             break;
           if ( v74 )
           {
-            this = (SupportSelectRootComponent_o *)sub_1BE4C08(v74, *(_QWORD *)(*(_QWORD *)v73 + 64LL));
+            this = (SupportSelectRootComponent_o *)sub_1C13E60(v74, *(_QWORD *)(*(_QWORD *)v73 + 64LL));
             if ( !this )
               goto LABEL_75;
           }
@@ -5530,7 +5533,7 @@ LABEL_52:
             goto LABEL_74;
           v81 = &v73[2 * v57];
           *((_QWORD *)v81 + 4) = v74;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v81 + 8), (int64_t)v74, v75, v76, v77, v78, v79, v80);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v81 + 8), (int64_t)v74, v75, v76, v77, v78, v79, v80);
           v82 = *p_supportServantData;
           if ( !*p_supportServantData )
             break;
@@ -5547,7 +5550,7 @@ LABEL_52:
           this = *(SupportSelectRootComponent_o **)&v82[2 * v57 + 8];
           if ( !this )
             break;
-          SupportServantData__Init_34146312(
+          SupportServantData__Init_34371192(
             (SupportServantData_o *)this,
             otherUserGameEntity,
             v83->fields.kind,
@@ -5576,25 +5579,25 @@ LABEL_52:
         if ( v58->m_Items[v56 + 1] >= 1 )
         {
           v59 = *p_supportServantData;
-          v60 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+          v60 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
           SupportServantData___ctor(v60, 0LL);
           if ( !v59 )
             break;
           if ( v60 )
           {
-            this = (SupportSelectRootComponent_o *)sub_1BE4C08(v60, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
+            this = (SupportSelectRootComponent_o *)sub_1C13E60(v60, *(_QWORD *)(*(_QWORD *)v59 + 64LL));
             if ( !this )
             {
 LABEL_75:
-              v94 = sub_1BE4D4C();
-              sub_1BE4BF4(v94, 0LL);
+              v94 = sub_1C13FA4();
+              sub_1C13E4C(v94, 0LL);
             }
           }
           if ( v57 >= v59[6] )
             goto LABEL_74;
           v67 = &v59[2 * v57];
           *((_QWORD *)v67 + 4) = v60;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v67 + 8), (int64_t)v60, v61, v62, v63, v64, v65, v66);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v67 + 8), (int64_t)v60, v61, v62, v63, v64, v65, v66);
           v68 = *p_supportServantData;
           if ( !*p_supportServantData )
             break;
@@ -5611,7 +5614,7 @@ LABEL_75:
           this = *(SupportSelectRootComponent_o **)&v68[2 * v57 + 8];
           if ( !this )
             break;
-          SupportServantData__Init_34146312(
+          SupportServantData__Init_34371192(
             (SupportServantData_o *)this,
             otherUserGameEntity,
             v69->fields.kind,
@@ -5627,11 +5630,11 @@ LABEL_75:
       }
     }
 LABEL_73:
-    sub_1BE4D28(this, deckIndex);
+    sub_1C13F80(this, deckIndex);
   }
-  v24 = sub_1BE4B74(SupportServantData___TypeInfo, (unsigned int)v22);
+  v24 = sub_1C13DCC(SupportServantData___TypeInfo, (unsigned int)v22);
   *p_supportServantData = (unsigned int *)v24;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.supportServantData, v24, v25, v26, v27, v28, v29, v30);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.supportServantData, v24, v25, v26, v27, v28, v29, v30);
   if ( (int)v22 >= 1 )
   {
     v31 = -(__int64)(unsigned int)v22;
@@ -5648,20 +5651,20 @@ LABEL_73:
       if ( *((int *)&v34->obj.klass + v32) >= 1 )
       {
         v36 = *p_supportServantData;
-        v37 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+        v37 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
         SupportServantData___ctor(v37, 0LL);
         if ( !v36 )
           goto LABEL_73;
         if ( v37 )
         {
-          this = (SupportSelectRootComponent_o *)sub_1BE4C08(v37, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
+          this = (SupportSelectRootComponent_o *)sub_1C13E60(v37, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
           if ( !this )
             goto LABEL_75;
         }
         if ( v35 >= v36[6] )
           goto LABEL_74;
         *(_QWORD *)&v36[v33] = v37;
-        sub_1BE4A70((PartyOrganizationUtility_o *)&v36[v33], (int64_t)v37, v38, v39, v40, v41, v42, v43);
+        sub_1C13CC8((PartyOrganizationUtility_o *)&v36[v33], (int64_t)v37, v38, v39, v40, v41, v42, v43);
         v44 = *p_supportServantData;
         if ( !*p_supportServantData )
           goto LABEL_73;
@@ -5678,7 +5681,7 @@ LABEL_73:
         this = *(SupportSelectRootComponent_o **)&v44[v33];
         if ( !this )
           goto LABEL_73;
-        SupportServantData__Init_34146312(
+        SupportServantData__Init_34371192(
           (SupportServantData_o *)this,
           otherUserGameEntity,
           v45->fields.kind,
@@ -5698,12 +5701,12 @@ LABEL_69:
   if ( !supportSelectMenu )
     goto LABEL_73;
   indicator = supportSelectMenu->fields.indicator;
-  v87 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v87 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v87, (Il2CppObject *)v9, Method_SupportSelectRootComponent_modifyCenterItemCallBack__, 0LL);
   if ( !indicator )
     goto LABEL_73;
   indicator->fields.modifyCenterItemCallBack = v87;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&indicator->fields.modifyCenterItemCallBack,
     (int64_t)v87,
     v88,
@@ -5807,36 +5810,36 @@ void __fastcall SupportSelectRootComponent__SetFriendInfoPrepareBattle(
   __int64 v83; // x0
 
   v8 = this;
-  if ( (byte_4B634D1 & 1) == 0 )
+  if ( (byte_4BB0FE8 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, v9);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_QuestMaster___, v10);
-    sub_1BE4ACC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v11);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Count_int___, v12);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_int___, v13);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v14);
-    sub_1BE4ACC(&int___TypeInfo, v15);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1BE4ACC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v17);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v18);
-    sub_1BE4ACC(&SupportServantData___TypeInfo, v19);
-    sub_1BE4ACC(&SupportServantData_TypeInfo, v20);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent___c__SetFriendInfoPrepareBattle_b__49_0__, v21);
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&SupportSelectRootComponent___c_TypeInfo, v22);
-    byte_4B634D1 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&BalanceConfig_TypeInfo, v9);
+    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, v10);
+    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v11);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Count_int___, v12);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_int___, v13);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v14);
+    sub_1C13D24(&int___TypeInfo, v15);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1C13D24(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v17);
+    sub_1C13D24(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v18);
+    sub_1C13D24(&SupportServantData___TypeInfo, v19);
+    sub_1C13D24(&SupportServantData_TypeInfo, v20);
+    sub_1C13D24(&Method_SupportSelectRootComponent___c__SetFriendInfoPrepareBattle_b__49_0__, v21);
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&SupportSelectRootComponent___c_TypeInfo, v22);
+    byte_4BB0FE8 = 1;
   }
   supportInfoJump = v8->fields.supportInfoJump;
   if ( !supportInfoJump )
     goto LABEL_57;
   if ( !supportInfoJump->fields.questRestrictionInfo )
     goto LABEL_11;
-  this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_57;
   this = (SupportSelectRootComponent_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)this,
-                                           (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                           (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
   v24 = v8->fields.supportInfoJump;
   if ( !v24 )
     goto LABEL_57;
@@ -5846,7 +5849,7 @@ void __fastcall SupportSelectRootComponent__SetFriendInfoPrepareBattle(
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              questRestrictionInfo->fields.questId,
-             (const MethodInfo_31FD7C4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+             (const MethodInfo_3238624 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( Entity )
     v27 = !QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, 0LL);
   else
@@ -5870,13 +5873,13 @@ LABEL_11:
     if ( v28 >= v31[6] )
       goto LABEL_58;
     *(_QWORD *)&v31[i] = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v31[i], 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v31[i], 0LL, v2, v3, v4, v5, v6, v7);
     ++v28;
   }
   v32 = v8->fields.supportInfoJump;
   if ( !v32 || (followerInfo = v32->fields.followerInfo) == 0LL )
 LABEL_57:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   if ( v27 )
   {
     this = (SupportSelectRootComponent_o *)followerInfo->fields.mainSupportDeckIds;
@@ -5893,10 +5896,10 @@ LABEL_57:
   if ( !v34 )
     goto LABEL_28;
   v35 = v34;
-  v36 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BE4C08(v34, int___TypeInfo);
+  v36 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1C13E60(v34, int___TypeInfo);
   if ( !v36 )
   {
-    sub_1BE4FE8(v35);
+    sub_1C14240(v35);
 LABEL_28:
     v36 = 0LL;
   }
@@ -5915,7 +5918,7 @@ LABEL_28:
       v37 = SupportSelectRootComponent___c_TypeInfo;
     }
     v39 = (Il2CppObject *)v37->static_fields->__9;
-    _9__49_0 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+    _9__49_0 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__49_0,
       v39,
@@ -5923,7 +5926,7 @@ LABEL_28:
       0LL);
     static_fields = SupportSelectRootComponent___c_TypeInfo->static_fields;
     static_fields->__9__49_0 = _9__49_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__49_0,
       (int64_t)_9__49_0,
       v41,
@@ -5936,11 +5939,11 @@ LABEL_28:
   v47 = System_Linq_Enumerable__Where_int_(
           v36,
           (System_Func_TSource__bool__o *)_9__49_0,
-          (const MethodInfo_2F9868C *)Method_System_Linq_Enumerable_Where_int___);
-  v48 = System_Linq_Enumerable__Count_int_(v47, (const MethodInfo_2F7403C *)Method_System_Linq_Enumerable_Count_int___);
-  v49 = sub_1BE4B74(SupportServantData___TypeInfo, v48);
+          (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
+  v48 = System_Linq_Enumerable__Count_int_(v47, (const MethodInfo_2FA9F90 *)Method_System_Linq_Enumerable_Count_int___);
+  v49 = sub_1C13DCC(SupportServantData___TypeInfo, v48);
   *p_supportServantData = (unsigned int *)v49;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v8->fields.supportServantData, v49, v50, v51, v52, v53, v54, v55);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v8->fields.supportServantData, v49, v50, v51, v52, v53, v54, v55);
   if ( !v36 )
     goto LABEL_57;
   monitor = v36[1].monitor;
@@ -5956,23 +5959,23 @@ LABEL_28:
       if ( *((int *)&v36->klass + v57) >= 1 )
       {
         v60 = *p_supportServantData;
-        v61 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+        v61 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
         SupportServantData___ctor(v61, 0LL);
         if ( !v60 )
           goto LABEL_57;
         if ( v61 )
         {
-          this = (SupportSelectRootComponent_o *)sub_1BE4C08(v61, *(_QWORD *)(*(_QWORD *)v60 + 64LL));
+          this = (SupportSelectRootComponent_o *)sub_1C13E60(v61, *(_QWORD *)(*(_QWORD *)v60 + 64LL));
           if ( !this )
           {
-            v83 = sub_1BE4D4C();
-            sub_1BE4BF4(v83, 0LL);
+            v83 = sub_1C13FA4();
+            sub_1C13E4C(v83, 0LL);
           }
         }
         if ( v59 >= v60[6] )
           break;
         *(_QWORD *)&v60[v58] = v61;
-        sub_1BE4A70((PartyOrganizationUtility_o *)&v60[v58], (int64_t)v61, v62, v63, v64, v65, v66, v67);
+        sub_1C13CC8((PartyOrganizationUtility_o *)&v60[v58], (int64_t)v61, v62, v63, v64, v65, v66, v67);
         v68 = *p_supportServantData;
         if ( !*p_supportServantData )
           goto LABEL_57;
@@ -5986,7 +5989,7 @@ LABEL_28:
         this = *(SupportSelectRootComponent_o **)&v68[v58];
         if ( !this )
           goto LABEL_57;
-        SupportServantData__Init_34147152(
+        SupportServantData__Init_34372032(
           (SupportServantData_o *)this,
           v69->fields.followerInfo,
           v69->fields.kind,
@@ -6004,19 +6007,19 @@ LABEL_28:
         goto LABEL_51;
     }
 LABEL_58:
-    sub_1BE4D30(this, method);
+    sub_1C13F88(this, method);
   }
 LABEL_51:
   supportSelectMenu = v8->fields.supportSelectMenu;
   if ( !supportSelectMenu )
     goto LABEL_57;
   indicator = supportSelectMenu->fields.indicator;
-  v73 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v73 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v73, (Il2CppObject *)v8, Method_SupportSelectRootComponent_modifyCenterItemCallBack__, 0LL);
   if ( !indicator )
     goto LABEL_57;
   indicator->fields.modifyCenterItemCallBack = v73;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&indicator->fields.modifyCenterItemCallBack,
     (int64_t)v73,
     v74,
@@ -6030,7 +6033,7 @@ LABEL_51:
     goto LABEL_57;
   v81 = v80->fields.questRestrictionInfo;
   followerQuestInfomationDraw = v8->fields.followerQuestInfomationDraw;
-  this = (SupportSelectRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  this = (SupportSelectRootComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !this || !followerQuestInfomationDraw )
     goto LABEL_57;
   FollowerQuestInfomationDraw__SetInfomation(followerQuestInfomationDraw, v81, this->fields.kind, 0LL, 0LL);
@@ -6148,20 +6151,20 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
   System_Action_o *v109; // x20
   int32_t deckIndex; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B634D2 & 1) == 0 )
+  if ( (byte_4BB0FE9 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AtlasManager_TypeInfo, v3);
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, v4);
-    sub_1BE4ACC(&SupportSelectMenu_CallbackFunc_TypeInfo, v5);
-    sub_1BE4ACC(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v6);
-    sub_1BE4ACC(&int___TypeInfo, v7);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndLoadCommonBg__, v8);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportSelectMenu__, v9);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportServantDragSwap__, v10);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v11);
-    sub_1BE4ACC(&StringLiteral_12659/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, v12);
-    byte_4B634D2 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AtlasManager_TypeInfo, v3);
+    sub_1C13D24(&BalanceConfig_TypeInfo, v4);
+    sub_1C13D24(&SupportSelectMenu_CallbackFunc_TypeInfo, v5);
+    sub_1C13D24(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, v6);
+    sub_1C13D24(&int___TypeInfo, v7);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndLoadCommonBg__, v8);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportSelectMenu__, v9);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportServantDragSwap__, v10);
+    sub_1C13D24(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v11);
+    sub_1C13D24(&StringLiteral_12689/*"SUPPORT_SELECT_NAME_CLEAR"*/, v12);
+    byte_4BB0FE9 = 1;
   }
   SupportSelectRootComponent__InitSupportServantData(this, method);
   deckIndex = 0;
@@ -6169,7 +6172,7 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
   if ( !supportInfoJump )
   {
     EventTutorialMaster__CheckTutorial(-1, 48, 0LL, 0, 0, 0, 0, 0LL);
-    Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_12659/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, 0, 0LL);
+    Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_12689/*"SUPPORT_SELECT_NAME_CLEAR"*/, 0, 0LL);
     v19 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
@@ -6181,12 +6184,12 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
       Int = v20;
     deckIndex = Int;
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-    v22 = (struct System_Int32_array *)sub_1BE4B74(
+    v22 = (struct System_Int32_array *)sub_1C13DCC(
                                          int___TypeInfo,
                                          (unsigned int)BalanceConfig_TypeInfo->static_fields->FixMainSupportDeckNum);
     p_tempFixMainQuestSupportDeckIds = &this->fields.tempFixMainQuestSupportDeckIds;
     this->fields.tempFixMainQuestSupportDeckIds = v22;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.tempFixMainQuestSupportDeckIds,
       (int64_t)v22,
       v24,
@@ -6230,10 +6233,10 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
       j_il2cpp_runtime_class_init_0(followerQuestInfomationDraw);
       oldEquipIdList = BalanceConfig_TypeInfo->static_fields;
     }
-    v37 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, (unsigned int)oldEquipIdList->FixEventSupportDeckNum);
+    v37 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)oldEquipIdList->FixEventSupportDeckNum);
     p_tempFixEventQuestSupportDeckIds = &this->fields.tempFixEventQuestSupportDeckIds;
     this->fields.tempFixEventQuestSupportDeckIds = v37;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.tempFixEventQuestSupportDeckIds,
       (int64_t)v37,
       v39,
@@ -6302,7 +6305,7 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
         followerQuestInfomationDraw = (SupportServantData_o *)this->fields.titleInfo;
         if ( followerQuestInfomationDraw )
         {
-          TitleInfoControl__setTitleInfo_38073752(
+          TitleInfoControl__setTitleInfo_38289072(
             (TitleInfoControl_o *)followerQuestInfomationDraw,
             this->fields.myFSM,
             2,
@@ -6342,7 +6345,7 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
                       {
                         eventSetupInfo = this->fields.eventSetupInfo;
                         followerQuestInfomationDraw->fields.eventSetupInfo = eventSetupInfo;
-                        sub_1BE4A70(
+                        sub_1C13CC8(
                           (PartyOrganizationUtility_o *)&followerQuestInfomationDraw->fields.eventSetupInfo,
                           (int64_t)eventSetupInfo,
                           v60,
@@ -6357,18 +6360,18 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
                         goto LABEL_49;
                     }
 LABEL_77:
-                    sub_1BE4D30(followerQuestInfomationDraw, v16);
+                    sub_1C13F88(followerQuestInfomationDraw, v16);
                   }
 LABEL_49:
                   v70 = this->fields.supportSelectMenu;
                   v71 = this->fields.supportServantData;
-                  v72 = (SupportSelectMenu_CallbackFunc_o *)sub_1BE4D18(SupportSelectMenu_CallbackFunc_TypeInfo);
+                  v72 = (SupportSelectMenu_CallbackFunc_o *)sub_1C13F70(SupportSelectMenu_CallbackFunc_TypeInfo);
                   SupportSelectMenu_CallbackFunc___ctor(
                     v72,
                     (Il2CppObject *)this,
                     (intptr_t)Method_SupportSelectRootComponent_EndSupportSelectMenu__,
                     v73);
-                  v74 = (SupportSelectMenu_DragSwapCallbackFunc_o *)sub_1BE4D18(SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
+                  v74 = (SupportSelectMenu_DragSwapCallbackFunc_o *)sub_1C13F70(SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
                   SupportSelectMenu_DragSwapCallbackFunc___ctor(
                     v74,
                     (Il2CppObject *)this,
@@ -6381,7 +6384,7 @@ LABEL_49:
                     if ( v77 )
                     {
                       indicator = v77->fields.indicator;
-                      v79 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+                      v79 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
                       System_Action___ctor(
                         v79,
                         (Il2CppObject *)this,
@@ -6390,7 +6393,7 @@ LABEL_49:
                       if ( indicator )
                       {
                         indicator->fields.modifyCenterItemCallBack = v79;
-                        sub_1BE4A70(
+                        sub_1C13CC8(
                           (PartyOrganizationUtility_o *)&indicator->fields.modifyCenterItemCallBack,
                           (int64_t)v79,
                           v80,
@@ -6411,7 +6414,7 @@ LABEL_49:
       }
     }
 LABEL_76:
-    sub_1BE4D28(followerQuestInfomationDraw, v16);
+    sub_1C13F80(followerQuestInfomationDraw, v16);
   }
   if ( supportInfoJump->fields.otherUserGameEntity )
     SupportSelectRootComponent__SetFriendInfo(this, &deckIndex, v14);
@@ -6424,7 +6427,7 @@ LABEL_76:
   followerQuestInfomationDraw = (SupportServantData_o *)this->fields.titleInfo;
   if ( !followerQuestInfomationDraw )
     goto LABEL_76;
-  TitleInfoControl__setTitleInfo_38073752(
+  TitleInfoControl__setTitleInfo_38289072(
     (TitleInfoControl_o *)followerQuestInfomationDraw,
     this->fields.myFSM,
     2,
@@ -6454,7 +6457,7 @@ LABEL_76:
       {
         v97 = this->fields.eventSetupInfo;
         followerQuestInfomationDraw->fields.eventSetupInfo = v97;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&followerQuestInfomationDraw->fields.eventSetupInfo,
           (int64_t)v97,
           v88,
@@ -6474,13 +6477,13 @@ LABEL_65:
   v98 = this->fields.supportSelectMenu;
   v99 = this->fields.supportServantData;
   v100 = deckIndex;
-  v101 = (SupportSelectMenu_CallbackFunc_o *)sub_1BE4D18(SupportSelectMenu_CallbackFunc_TypeInfo);
+  v101 = (SupportSelectMenu_CallbackFunc_o *)sub_1C13F70(SupportSelectMenu_CallbackFunc_TypeInfo);
   SupportSelectMenu_CallbackFunc___ctor(
     v101,
     (Il2CppObject *)this,
     (intptr_t)Method_SupportSelectRootComponent_EndSupportSelectMenu__,
     v102);
-  v103 = (SupportSelectMenu_DragSwapCallbackFunc_o *)sub_1BE4D18(SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
+  v103 = (SupportSelectMenu_DragSwapCallbackFunc_o *)sub_1C13F70(SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
   SupportSelectMenu_DragSwapCallbackFunc___ctor(
     v103,
     (Il2CppObject *)this,
@@ -6504,7 +6507,7 @@ LABEL_71:
   if ( !followerQuestInfomationDraw )
     goto LABEL_76;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)followerQuestInfomationDraw, 0, 0LL);
-  v109 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v109 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v109, (Il2CppObject *)this, Method_SupportSelectRootComponent_EndLoadCommonBg__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -6535,10 +6538,10 @@ void __fastcall SupportSelectRootComponent__UpdateTempFixDeckId(
   int32_t v20; // w8
 
   v8 = this;
-  if ( (byte_4B634E4 & 1) == 0 )
+  if ( (byte_4BB0FFB & 1) == 0 )
   {
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
-    byte_4B634E4 = 1;
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&idx);
+    byte_4BB0FFB = 1;
   }
   if ( isEvent )
   {
@@ -6616,10 +6619,10 @@ void __fastcall SupportSelectRootComponent__UpdateTempFixDeckId(
     v20 = deckId;
   if ( !v19 )
 LABEL_38:
-    sub_1BE4D28(this, *(_QWORD *)&idx);
+    sub_1C13F80(this, *(_QWORD *)&idx);
   if ( v19->max_length <= idx )
 LABEL_39:
-    sub_1BE4D30(this, *(_QWORD *)&idx);
+    sub_1C13F88(this, *(_QWORD *)&idx);
   v19->m_Items[v12 + 1] = v20;
 }
 
@@ -6634,10 +6637,10 @@ void __fastcall SupportSelectRootComponent___EndLoadCommonBg_b__52_0(
   if ( !titleInfo
     || (titleInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(titleInfo, 0LL)) == 0LL )
   {
-    sub_1BE4D28(titleInfo, method);
+    sub_1C13F80(titleInfo, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0LL);
-  SceneRootComponent__beginStartUp_39578900((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_39820072((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -6649,7 +6652,7 @@ void __fastcall SupportSelectRootComponent___EndSupportSelectMenu_b__66_2(
 
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   SupportSelectMenu__Active(supportSelectMenu, method);
 }
 
@@ -6667,18 +6670,18 @@ void __fastcall SupportSelectRootComponent__beginFinish(SupportSelectRootCompone
   const MethodInfo *v10; // x2
 
   v8 = this;
-  if ( (byte_4B634D6 & 1) == 0 )
+  if ( (byte_4BB0FED & 1) == 0 )
   {
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(
                                              &Method_SingletonMonoBehaviour_AtlasManager__get_Instance__,
                                              method);
-    byte_4B634D6 = 1;
+    byte_4BB0FED = 1;
   }
   supportSelectMenu = v8->fields.supportSelectMenu;
   if ( !supportSelectMenu )
     goto LABEL_15;
   supportSelectMenu->fields.supportServantData = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&supportSelectMenu->fields.supportServantData, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&supportSelectMenu->fields.supportServantData, 0LL, v2, v3, v4, v5, v6, v7);
   BaseMenu__Init((BaseMenu_o *)supportSelectMenu, 0LL);
   this = (SupportSelectRootComponent_o *)v8->fields.supportServantSelectMenu;
   if ( !this )
@@ -6695,7 +6698,7 @@ void __fastcall SupportSelectRootComponent__beginFinish(SupportSelectRootCompone
   this = (SupportSelectRootComponent_o *)v8->fields.deckNameInputMenu;
   if ( !this )
     goto LABEL_15;
-  SupportDeckNameInputMenu__Init((SupportDeckNameInputMenu_o *)this, 0LL);
+  SupportDeckNameInputMenu__Init((SupportDeckNameInputMenu_o *)this, method);
   this = (SupportSelectRootComponent_o *)v8->fields.fixErrorDialog;
   if ( !this )
     goto LABEL_15;
@@ -6710,10 +6713,10 @@ void __fastcall SupportSelectRootComponent__beginFinish(SupportSelectRootCompone
                                                  (UnityEngine_Component_o *)this,
                                                  0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL),
-        (this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0LL) )
+        (this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__)) == 0LL) )
   {
 LABEL_15:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   }
   AtlasManager__ReleaseUISkin((AtlasManager_o *)this, 2, 0, 0LL);
   v8->fields.state = 0;
@@ -6757,13 +6760,13 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
   Il2CppObject *Instance; // x0
   __int64 v33; // x1
 
-  if ( (byte_4B634CA & 1) == 0 )
+  if ( (byte_4BB0FE1 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_1BE4ACC(&SupportServantData___TypeInfo, v4);
-    sub_1BE4ACC(&StringLiteral_13296/*"SvtEqScrollBarValue"*/, v5);
-    byte_4B634CA = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
+    sub_1C13D24(&SupportServantData___TypeInfo, v4);
+    sub_1C13D24(&StringLiteral_13329/*"Sundown"*/, v5);
+    byte_4BB0FE1 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
   supportServantData = this->fields.supportServantData;
@@ -6776,11 +6779,11 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v8 = BalanceConfig_TypeInfo;
     }
-    v9 = (struct SupportServantData_array *)sub_1BE4B74(
+    v9 = (struct SupportServantData_array *)sub_1C13DCC(
                                               SupportServantData___TypeInfo,
                                               (unsigned int)v8->static_fields->SupportDeckMax);
     this->fields.supportServantData = v9;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.supportServantData,
       (int64_t)v9,
       v10,
@@ -6798,11 +6801,11 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v16 = BalanceConfig_TypeInfo;
     }
-    v17 = (struct SupportServantData_array *)sub_1BE4B74(
+    v17 = (struct SupportServantData_array *)sub_1C13DCC(
                                                SupportServantData___TypeInfo,
                                                (unsigned int)v16->static_fields->SupportDeckMax);
     this->fields.orgSupportServantData = v17;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.orgSupportServantData,
       (int64_t)v17,
       v18,
@@ -6820,11 +6823,11 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v24 = BalanceConfig_TypeInfo;
     }
-    v25 = (struct SupportServantData_array *)sub_1BE4B74(
+    v25 = (struct SupportServantData_array *)sub_1C13DCC(
                                                SupportServantData___TypeInfo,
                                                (unsigned int)v24->static_fields->SupportDeckMax);
     this->fields.tmpSupportServantData = v25;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.tmpSupportServantData,
       (int64_t)v25,
       v26,
@@ -6835,10 +6838,10 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
       v31);
   }
   SupportSelectRootComponent__RefreshSupportServantData(this, v6);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13296/*"SvtEqScrollBarValue"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13329/*"Sundown"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v33);
+    sub_1C13F80(0LL, v33);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -6906,20 +6909,20 @@ void __fastcall SupportSelectRootComponent__beginStartUp(
   PartyListViewItem_o *v60; // x7
   const MethodInfo *v61; // x1
 
-  if ( (byte_4B634D3 & 1) == 0 )
+  if ( (byte_4BB0FEA & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, data);
-    sub_1BE4ACC(&AtlasManager_TypeInfo, v10);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventMaster___, v11);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_EventQuestMaster___, v12);
-    sub_1BE4ACC(&DataManager_TypeInfo, v13);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_int___, v14);
-    sub_1BE4ACC(&EventUpValSetupInfo_TypeInfo, v15);
-    sub_1BE4ACC(&SceneJumpInfo_TypeInfo, v16);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1BE4ACC(&SupportInfoJump_TypeInfo, v18);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent__beginStartUp_b__51_0__, v19);
-    byte_4B634D3 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, data);
+    sub_1C13D24(&AtlasManager_TypeInfo, v10);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, v11);
+    sub_1C13D24(&Method_DataManager_GetMaster_EventQuestMaster___, v12);
+    sub_1C13D24(&DataManager_TypeInfo, v13);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_int___, v14);
+    sub_1C13D24(&EventUpValSetupInfo_TypeInfo, v15);
+    sub_1C13D24(&SceneJumpInfo_TypeInfo, v16);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C13D24(&SupportInfoJump_TypeInfo, v18);
+    sub_1C13D24(&Method_SupportSelectRootComponent__beginStartUp_b__51_0__, v19);
+    byte_4BB0FEA = 1;
   }
   if ( data )
   {
@@ -6949,7 +6952,7 @@ void __fastcall SupportSelectRootComponent__beginStartUp(
     {
       v32 = 0LL;
     }
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.supportInfoJump,
       (int64_t)v32,
       (int64_t)method,
@@ -6989,12 +6992,12 @@ void __fastcall SupportSelectRootComponent__beginStartUp(
   {
     p_supportInfoJump = &this->fields.supportInfoJump;
     this->fields.supportInfoJump = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.supportInfoJump, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.supportInfoJump, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     v30 = 0LL;
     p_sceneJumpInfo = &this->fields.sceneJumpInfo;
     this->fields.sceneJumpInfo = 0LL;
   }
-  sub_1BE4A70((PartyOrganizationUtility_o *)p_sceneJumpInfo, (int64_t)v30, v24, v25, v26, v27, v28, v29);
+  sub_1C13CC8((PartyOrganizationUtility_o *)p_sceneJumpInfo, (int64_t)v30, v24, v25, v26, v27, v28, v29);
   *(_WORD *)&this->fields.isEdit = 0;
   SupportSelectRootComponent__RefreshSupportServantData(this, v36);
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.bgTxtSprite;
@@ -7008,22 +7011,22 @@ void __fastcall SupportSelectRootComponent__beginStartUp(
   v40 = *p_supportInfoJump;
   if ( !*p_supportInfoJump || !v40->fields.otherUserGameEntity || !v40->fields.questRestrictionInfo )
   {
-    bgTxtSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    bgTxtSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( bgTxtSprite )
     {
       bgTxtSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)bgTxtSprite,
-                                                 (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventMaster___);
+                                                 (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
       if ( bgTxtSprite )
       {
         EventValUpEventIdHash = EventMaster__GetEventValUpEventIdHash((EventMaster_o *)bgTxtSprite, 0, 0LL, 0LL);
         v53 = System_Linq_Enumerable__ToArray_int_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
-                (const MethodInfo_2F9293C *)Method_System_Linq_Enumerable_ToArray_int___);
-        v54 = (EventUpValSetupInfo_o *)sub_1BE4D18(EventUpValSetupInfo_TypeInfo);
-        EventUpValSetupInfo___ctor_39826336(v54, v53, 0, 0, 0, 0LL);
+                (const MethodInfo_2FC8B9C *)Method_System_Linq_Enumerable_ToArray_int___);
+        v54 = (EventUpValSetupInfo_o *)sub_1C13F70(EventUpValSetupInfo_TypeInfo);
+        EventUpValSetupInfo___ctor_40068584(v54, v53, 0, 0, 0, 0LL);
         this->fields.eventSetupInfo = v54;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.eventSetupInfo,
           (int64_t)v54,
           v55,
@@ -7037,11 +7040,11 @@ void __fastcall SupportSelectRootComponent__beginStartUp(
       }
     }
 LABEL_41:
-    sub_1BE4D28(bgTxtSprite, v37);
+    sub_1C13F80(bgTxtSprite, v37);
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  bgTxtSprite = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventQuestMaster___);
+  bgTxtSprite = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventQuestMaster___);
   if ( !*p_supportInfoJump )
     goto LABEL_41;
   questRestrictionInfo = (*p_supportInfoJump)->fields.questRestrictionInfo;
@@ -7055,12 +7058,12 @@ LABEL_41:
                                                                                       0LL);
   v43 = System_Linq_Enumerable__ToArray_int_(
           OngoingQuestTargetEventIds,
-          (const MethodInfo_2F9293C *)Method_System_Linq_Enumerable_ToArray_int___);
-  v44 = (EventUpValSetupInfo_o *)sub_1BE4D18(EventUpValSetupInfo_TypeInfo);
-  EventUpValSetupInfo___ctor_39826336(v44, v43, 0, 0, 0, 0LL);
+          (const MethodInfo_2FC8B9C *)Method_System_Linq_Enumerable_ToArray_int___);
+  v44 = (EventUpValSetupInfo_o *)sub_1C13F70(EventUpValSetupInfo_TypeInfo);
+  EventUpValSetupInfo___ctor_40068584(v44, v43, 0, 0, 0, 0LL);
   this->fields.eventSetupInfo = v44;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.eventSetupInfo, (int64_t)v44, v45, v46, v47, v48, v49, v50);
-  v51 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventSetupInfo, (int64_t)v44, v45, v46, v47, v48, v49, v50);
+  v51 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v51, (Il2CppObject *)this, Method_SupportSelectRootComponent__beginStartUp_b__51_0__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -7077,7 +7080,7 @@ int32_t __fastcall SupportSelectRootComponent__getCenterNum(
 
   supportSelectMenu = this->fields.supportSelectMenu;
   if ( !supportSelectMenu )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   CenterItem = SupportSelectMenu__GetCenterItem(supportSelectMenu, method);
   if ( CenterItem )
     LODWORD(CenterItem) = CenterItem->fields.index;
@@ -7104,15 +7107,15 @@ void __fastcall SupportSelectRootComponent__initSupportServantDatas(
   __int64 v14; // x0
 
   v2 = this;
-  if ( (byte_4B634FB & 1) == 0 )
+  if ( (byte_4BB1012 & 1) == 0 )
   {
-    this = (SupportSelectRootComponent_o *)sub_1BE4ACC(&SupportServantData_TypeInfo, method);
-    byte_4B634FB = 1;
+    this = (SupportSelectRootComponent_o *)sub_1C13D24(&SupportServantData_TypeInfo, method);
+    byte_4BB1012 = 1;
   }
   supportServantData = v2->fields.supportServantData;
   if ( !supportServantData )
 LABEL_15:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   v4 = 0;
   v5 = 32LL;
   while ( 1 )
@@ -7124,22 +7127,22 @@ LABEL_15:
       goto LABEL_17;
     if ( !*(Il2CppClass **)((char *)&supportServantData->obj.klass + v5) )
     {
-      v7 = (SupportServantData_o *)sub_1BE4D18(SupportServantData_TypeInfo);
+      v7 = (SupportServantData_o *)sub_1C13F70(SupportServantData_TypeInfo);
       SupportServantData___ctor(v7, 0LL);
       if ( v7 )
       {
-        this = (SupportSelectRootComponent_o *)sub_1BE4C08(v7, supportServantData->obj.klass->_1.element_class);
+        this = (SupportSelectRootComponent_o *)sub_1C13E60(v7, supportServantData->obj.klass->_1.element_class);
         if ( !this )
         {
-          v14 = sub_1BE4D4C();
-          sub_1BE4BF4(v14, 0LL);
+          v14 = sub_1C13FA4();
+          sub_1C13E4C(v14, 0LL);
         }
       }
       if ( v4 >= supportServantData->max_length )
 LABEL_17:
-        sub_1BE4D30(this, method);
+        sub_1C13F88(this, method);
       *(Il2CppClass **)((char *)&supportServantData->obj.klass + v5) = (Il2CppClass *)v7;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)((char *)supportServantData + v5),
         (int64_t)v7,
         v8,
@@ -7188,10 +7191,10 @@ bool __fastcall SupportSelectRootComponent__isUpdate(
   char v17; // w20
   struct SupportServantData_array *v18; // x8
 
-  if ( (byte_4B634FA & 1) == 0 )
+  if ( (byte_4BB1011 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, servant);
-    byte_4B634FA = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, servant);
+    byte_4BB1011 = 1;
   }
   v7 = 0;
   CenterNum = SupportSelectRootComponent__getCenterNum(this, (const MethodInfo *)servant);
@@ -7265,11 +7268,11 @@ LABEL_26:
     goto LABEL_30;
   if ( (unsigned int)CenterNum >= v18->max_length )
 LABEL_31:
-    sub_1BE4D30(OldServant, v8);
+    sub_1C13F88(OldServant, v8);
   OldServant = v18->m_Items[CenterNum];
   if ( !OldServant )
 LABEL_30:
-    sub_1BE4D28(OldServant, v8);
+    sub_1C13F80(OldServant, v8);
   return (v17 | SupportServantData__IsChangeDeckName(OldServant, 0LL)) & 1;
 }
 
@@ -7306,13 +7309,13 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
   int32_t v28; // w20
   const MethodInfo *v29; // x4
 
-  if ( (byte_4B634D5 & 1) == 0 )
+  if ( (byte_4BB0FEC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_IndexOf_int___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Concat_int___, v3);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_SequenceEqual_int___, v4);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_int___, v5);
-    byte_4B634D5 = 1;
+    sub_1C13D24(&Method_System_Array_IndexOf_int___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Concat_int___, v3);
+    sub_1C13D24(&Method_System_Linq_Enumerable_SequenceEqual_int___, v4);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    byte_4BB0FEC = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, method);
   SupportSelectRootComponent__SetActiveApplyIcon(this, v7);
@@ -7339,7 +7342,7 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
       v21 = System_Array__IndexOf_int_(
               eventSupportDeckIds,
               eventSupportDeckIds->m_Items[CenterNum + 1],
-              (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___);
+              (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___);
       v14 = 0;
       v17 = v21 + 1;
     }
@@ -7353,7 +7356,7 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
       v27 = System_Array__IndexOf_int_(
               eventSupportDeckIds,
               eventSupportDeckIds->m_Items[CenterNum + 1],
-              (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___);
+              (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___);
       v17 = 0;
       v14 = v27 + 1;
     }
@@ -7367,15 +7370,15 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
   if ( !System_Linq_Enumerable__SequenceEqual_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.mainSupportDeckIds,
           (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.eventSupportDeckIds,
-          (const MethodInfo_2F8D4F8 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
+          (const MethodInfo_2FC3758 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
   {
     v22 = System_Linq_Enumerable__Concat_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.mainSupportDeckIds,
             (System_Collections_Generic_IEnumerable_TSource__o *)otherUserGameEntity->fields.eventSupportDeckIds,
-            (const MethodInfo_2F70E6C *)Method_System_Linq_Enumerable_Concat_int___);
+            (const MethodInfo_2FA6DC0 *)Method_System_Linq_Enumerable_Concat_int___);
     eventSupportDeckIds = System_Linq_Enumerable__ToArray_int_(
                             v22,
-                            (const MethodInfo_2F9293C *)Method_System_Linq_Enumerable_ToArray_int___);
+                            (const MethodInfo_2FC8B9C *)Method_System_Linq_Enumerable_ToArray_int___);
     mainSupportDeckIds = otherUserGameEntity->fields.mainSupportDeckIds;
     if ( !mainSupportDeckIds )
       goto LABEL_39;
@@ -7394,7 +7397,7 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
       eventSupportDeckIds = (System_Int32_array *)System_Array__IndexOf_int_(
                                                     otherUserGameEntity->fields.mainSupportDeckIds,
                                                     eventSupportDeckIds->m_Items[CenterNum + 1],
-                                                    (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___);
+                                                    (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___);
       v26 = (_DWORD)eventSupportDeckIds + 1;
     }
     if ( CenterNum < max_length )
@@ -7409,7 +7412,7 @@ void __fastcall SupportSelectRootComponent__modifyCenterItemCallBack(
       v17 = System_Array__IndexOf_int_(
               otherUserGameEntity->fields.eventSupportDeckIds,
               v25->m_Items[CenterNum + 1],
-              (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___)
+              (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___)
           + 1;
 LABEL_27:
       eventSupportDeckIds = (System_Int32_array *)this->fields.supportSelectMenu;
@@ -7421,7 +7424,7 @@ LABEL_27:
       goto LABEL_34;
     }
 LABEL_40:
-    sub_1BE4D30(eventSupportDeckIds, v9);
+    sub_1C13F88(eventSupportDeckIds, v9);
   }
   eventSupportDeckIds = otherUserGameEntity->fields.mainSupportDeckIds;
   if ( !eventSupportDeckIds )
@@ -7431,7 +7434,7 @@ LABEL_40:
   eventSupportDeckIds = (System_Int32_array *)System_Array__IndexOf_int_(
                                                 eventSupportDeckIds,
                                                 eventSupportDeckIds->m_Items[CenterNum + 1],
-                                                (const MethodInfo_3055D98 *)Method_System_Array_IndexOf_int___);
+                                                (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___);
   if ( !this->fields.supportSelectMenu )
     goto LABEL_39;
   v14 = (_DWORD)eventSupportDeckIds + 1;
@@ -7457,7 +7460,7 @@ LABEL_36:
         (eventSupportDeckIds = (System_Int32_array *)this->fields.supportSelectMenu) == 0LL) )
   {
 LABEL_39:
-    sub_1BE4D28(eventSupportDeckIds, v9);
+    sub_1C13F80(eventSupportDeckIds, v9);
   }
   SupportSelectMenu__SetFixDeckButton(
     (SupportSelectMenu_o *)eventSupportDeckIds,
@@ -7525,7 +7528,7 @@ void __fastcall SupportSelectRootComponent__setEditUI(
         (blackMask = (UnityEngine_Component_o *)this->fields.supportSelectMenu) == 0LL) )
   {
 LABEL_12:
-    sub_1BE4D28(blackMask, editOn);
+    sub_1C13F80(blackMask, editOn);
   }
   SupportSelectMenu__SetupFooterButtons((SupportSelectMenu_o *)blackMask, v14, v15);
   SupportSelectRootComponent__ChangeTitle(this, v16);
@@ -7548,7 +7551,7 @@ void __fastcall SupportSelectRootComponent__setInfoUIDisp(
         (supportSelectMenu = this->fields.supportSelectMenu) == 0LL)
     || (scrollView = (UnityEngine_Behaviour_o *)supportSelectMenu->fields.indicator) == 0LL )
   {
-    sub_1BE4D28(scrollView, disp);
+    sub_1C13F80(scrollView, disp);
   }
   SupportSelectListViewIndicator__SetActive((SupportSelectListViewIndicator_o *)scrollView, disp, v6);
 }
@@ -7565,15 +7568,15 @@ void __fastcall SupportSelectRootComponent___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B63500 & 1) == 0 )
+  if ( (byte_4BB1017 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportSelectRootComponent___c_TypeInfo, v1);
-    byte_4B63500 = 1;
+    sub_1C13D24(&SupportSelectRootComponent___c_TypeInfo, v1);
+    byte_4BB1017 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(SupportSelectRootComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(SupportSelectRootComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   SupportSelectRootComponent___c_TypeInfo->static_fields->__9 = (struct SupportSelectRootComponent___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)SupportSelectRootComponent___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -7665,12 +7668,12 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass69_0___OnBackSelect_
   int32_t v17; // w21
   SupportServantSelectMenu_CallbackFunc_o *callback; // x27
 
-  if ( (byte_4B63501 & 1) == 0 )
+  if ( (byte_4BB1018 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportServantSelectMenu_CallbackFunc_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_OnBackSelect__, v6);
-    byte_4B63501 = 1;
+    sub_1C13D24(&SupportServantSelectMenu_CallbackFunc_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C13D24(&Method_SupportSelectRootComponent_OnBackSelect__, v6);
+    byte_4BB1018 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( isDecide )
@@ -7693,7 +7696,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass69_0___OnBackSelect_
       goto LABEL_15;
     selectNum = _4__this->fields.selectNum;
     if ( (unsigned int)selectNum >= supportServantData->max_length )
-      sub_1BE4D30(_4__this, isDecide);
+      sub_1C13F88(_4__this, isDecide);
     v10 = supportServantData->m_Items[selectNum];
     if ( !v10 )
       goto LABEL_15;
@@ -7706,7 +7709,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass69_0___OnBackSelect_
       || (monitor = (System_Int32_array *)v14[18].monitor,
           klass = (System_Int32_array *)v14[19].klass,
           v17 = (int)_4__this,
-          callback = (SupportServantSelectMenu_CallbackFunc_o *)sub_1BE4D18(SupportServantSelectMenu_CallbackFunc_TypeInfo),
+          callback = (SupportServantSelectMenu_CallbackFunc_o *)sub_1C13F70(SupportServantSelectMenu_CallbackFunc_TypeInfo),
           SupportServantSelectMenu_CallbackFunc___ctor(
             callback,
             v14,
@@ -7715,7 +7718,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass69_0___OnBackSelect_
           !supportServantSelectMenu) )
     {
 LABEL_15:
-      sub_1BE4D28(_4__this, isDecide);
+      sub_1C13F80(_4__this, isDecide);
     }
     SupportServantSelectMenu__Open(
       supportServantSelectMenu,
@@ -7729,7 +7732,7 @@ LABEL_15:
       callback,
       0LL);
   }
-  _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !_4__this )
     goto LABEL_15;
   CommonUI__CloseConfirmDialog((CommonUI_o *)_4__this, 0LL);
@@ -7767,12 +7770,12 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass71_0___EndSupportSer
   SupportServantEquipListMenu_CallbackFunc_o *callback; // x27
   const MethodInfo *v20; // x3
 
-  if ( (byte_4B63502 & 1) == 0 )
+  if ( (byte_4BB1019 & 1) == 0 )
   {
-    sub_1BE4ACC(&SupportServantEquipListMenu_CallbackFunc_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BE4ACC(&Method_SupportSelectRootComponent_EndSupportServantEquipListMenu__, v6);
-    byte_4B63502 = 1;
+    sub_1C13D24(&SupportServantEquipListMenu_CallbackFunc_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C13D24(&Method_SupportSelectRootComponent_EndSupportServantEquipListMenu__, v6);
+    byte_4BB1019 = 1;
   }
   if ( isDecide )
   {
@@ -7783,7 +7786,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass71_0___EndSupportSer
   }
   else
   {
-    _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v8 = this->fields.__4__this;
     if ( !v8 )
       goto LABEL_15;
@@ -7792,7 +7795,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass71_0___EndSupportSer
       goto LABEL_15;
     selectNum = v8->fields.selectNum;
     if ( (unsigned int)selectNum >= supportServantData->max_length )
-      sub_1BE4D30(_4__this, isDecide);
+      sub_1C13F88(_4__this, isDecide);
     v11 = supportServantData->m_Items[selectNum];
     if ( !v11 )
       goto LABEL_15;
@@ -7805,7 +7808,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass71_0___EndSupportSer
       || (monitor = (System_Int32_array *)v15[18].monitor,
           klass = (System_Int32_array *)v15[19].klass,
           v18 = (int)_4__this,
-          callback = (SupportServantEquipListMenu_CallbackFunc_o *)sub_1BE4D18(SupportServantEquipListMenu_CallbackFunc_TypeInfo),
+          callback = (SupportServantEquipListMenu_CallbackFunc_o *)sub_1C13F70(SupportServantEquipListMenu_CallbackFunc_TypeInfo),
           SupportServantEquipListMenu_CallbackFunc___ctor(
             callback,
             v15,
@@ -7814,7 +7817,7 @@ void __fastcall SupportSelectRootComponent___c__DisplayClass71_0___EndSupportSer
           !v14) )
     {
 LABEL_15:
-      sub_1BE4D28(_4__this, isDecide);
+      sub_1C13F80(_4__this, isDecide);
     }
     CommonUI__OpenSupportServantEquipListMenu(
       v14,
@@ -7828,7 +7831,7 @@ LABEL_15:
       callback,
       0LL);
   }
-  _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  _4__this = (SupportSelectRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !_4__this )
     goto LABEL_15;
   CommonUI__CloseConfirmDialog((CommonUI_o *)_4__this, 0LL);
@@ -7851,7 +7854,7 @@ bool __fastcall SupportSelectRootComponent___c__DisplayClass81_0___GetFixedError
   struct UserServantLeaderEntity_o *svtInfo; // x8
 
   if ( !x || (svtInfo = this->fields.svtInfo) == 0LL )
-    sub_1BE4D28(this, x);
+    sub_1C13F80(this, x);
   return x->fields.svtId == svtInfo->fields.svtId;
 }
 
@@ -7872,6 +7875,6 @@ bool __fastcall SupportSelectRootComponent___c__DisplayClass98_0___IsPossibleCop
   struct UserServantLeaderEntity_o *svtInfo; // x8
 
   if ( !x || (svtInfo = this->fields.svtInfo) == 0LL )
-    sub_1BE4D28(this, x);
+    sub_1C13F80(this, x);
   return x->fields.svtId == svtInfo->fields.svtId;
 }

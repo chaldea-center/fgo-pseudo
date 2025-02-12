@@ -1,13 +1,13 @@
 void __fastcall RecoverEntity___ctor(RecoverEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B671DE & 1) == 0 )
+  if ( (byte_4BB4D09 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B671DE = 1;
+    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BB4D09 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,25 +24,25 @@ CommandSpellEntity_o *__fastcall RecoverEntity__getRecvCmdSpellData(RecoverEntit
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B671DD & 1) == 0 )
+  if ( (byte_4BB4D08 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommandSpellMaster___, method);
-    sub_1BE4ACC(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B671DD = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommandSpellMaster___, method);
+    sub_1C13D24(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BB4D08 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommandSpellMaster___)) == 0LL )
+                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommandSpellMaster___)) == 0LL )
   {
-    sub_1BE4D28(Instance, v6);
+    sub_1C13F80(Instance, v6);
   }
   return (CommandSpellEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                    this->fields.targetId,
-                                   (const MethodInfo_31FD7C4 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+                                   (const MethodInfo_3238624 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
 }
 
 
@@ -53,23 +53,23 @@ ItemEntity_o *__fastcall RecoverEntity__getRecvItemData(RecoverEntity_o *this, c
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B671DC & 1) == 0 )
+  if ( (byte_4BB4D07 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ItemMaster___, method);
-    sub_1BE4ACC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B671DC = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, method);
+    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BB4D07 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
-    sub_1BE4D28(Instance, v6);
+    sub_1C13F80(Instance, v6);
   }
   return (ItemEntity_o *)DataMasterBase_object__object__int___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                            this->fields.targetId,
-                           (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                           (const MethodInfo_3238624 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
 }

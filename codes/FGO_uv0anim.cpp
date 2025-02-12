@@ -18,23 +18,23 @@ void __fastcall FGO_uv0anim__Start(FGO_uv0anim_o *this, const MethodInfo *method
   __int64 v11; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B65A4E & 1) == 0 )
+  if ( (byte_4BB3571 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1BE4ACC(&StringLiteral_16471/*"_MainTex"*/, v3);
-    byte_4B65A4E = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1C13D24(&StringLiteral_16515/*"_IsProportion"*/, v3);
+    byte_4BB3571 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields._renderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields._renderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_1BE4D28(renderer, v11);
+    sub_1C13F80(renderer, v11);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16471/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16515/*"_IsProportion"*/,
     this->fields.m_Offset,
     0LL);
 }
@@ -44,17 +44,17 @@ void __fastcall FGO_uv0anim__Update(FGO_uv0anim_o *this, const MethodInfo *metho
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B65A4F & 1) == 0 )
+  if ( (byte_4BB3572 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_16471/*"_MainTex"*/, method);
-    byte_4B65A4F = 1;
+    sub_1C13D24(&StringLiteral_16515/*"_IsProportion"*/, method);
+    byte_4BB3572 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_1BE4D28(renderer, method);
+    sub_1C13F80(renderer, method);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16471/*"_MainTex"*/,
+    (System_String_o *)StringLiteral_16515/*"_IsProportion"*/,
     this->fields.m_Offset,
     0LL);
 }

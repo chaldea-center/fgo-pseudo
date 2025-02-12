@@ -9,15 +9,15 @@ void __fastcall BattleActorAnimationEffect___ctor(BattleActorAnimationEffect_o *
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B69A03 & 1) == 0 )
+  if ( (byte_4BB7537 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleActorAnimationEffect_DisplayTrigger_TypeInfo, method);
-    byte_4B69A03 = 1;
+    sub_1C13D24(&BattleActorAnimationEffect_DisplayTrigger_TypeInfo, method);
+    byte_4BB7537 = 1;
   }
-  v3 = (BattleActorAnimationEffect_DisplayTrigger_o *)sub_1BE4D18(BattleActorAnimationEffect_DisplayTrigger_TypeInfo);
+  v3 = (BattleActorAnimationEffect_DisplayTrigger_o *)sub_1C13F70(BattleActorAnimationEffect_DisplayTrigger_TypeInfo);
   BattleActorAnimationEffect_DisplayTrigger___ctor(v3, v4);
   this->fields.trigger = v3;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.trigger, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.trigger, (int64_t)v3, v5, v6, v7, v8, v9, v10);
   this->fields.isDetachParent = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -34,7 +34,7 @@ void __fastcall BattleActorAnimationEffect__DetachParent(
     if ( !effectObj
       || (this = (BattleActorAnimationEffect_o *)UnityEngine_GameObject__get_transform(effectObj, 0LL)) == 0LL )
     {
-      sub_1BE4D28(this, effectObj);
+      sub_1C13F80(this, effectObj);
     }
     UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, parent, 0LL);
   }
@@ -94,7 +94,7 @@ void __fastcall BattleActorAnimationEffect__DisplayEffect(
   BattleActorAnimationEffect__ExecuteEffectMesh(v16, BattleEffect, actor->fields.uniqueID, v17);
   if ( !BattleEffect )
 LABEL_5:
-    sub_1BE4D28(this, actor);
+    sub_1C13F80(this, actor);
   UnityEngine_GameObject__SetActive(BattleEffect, 1, 0LL);
 }
 
@@ -117,17 +117,17 @@ void __fastcall BattleActorAnimationEffect__ExecuteEffectMesh(
   IEffectMesh_c **v15; // x10
   __int64 v16; // x0
 
-  if ( (byte_4B69A02 & 1) == 0 )
+  if ( (byte_4BB7536 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_IEffectMesh___, obj);
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&IEffectMesh_TypeInfo, v6);
-    byte_4B69A02 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_IEffectMesh___, obj);
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&IEffectMesh_TypeInfo, v6);
+    byte_4BB7536 = 1;
   }
   if ( !obj )
-    sub_1BE4D28(this, obj);
+    sub_1C13F80(this, obj);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        obj,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_IEffectMesh___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_IEffectMesh___);
   if ( Component_object )
   {
     klass = Component_object->klass;
@@ -148,7 +148,7 @@ void __fastcall BattleActorAnimationEffect__ExecuteEffectMesh(
     else
     {
 LABEL_9:
-      p_method = sub_1C36AAC(Component_object, IEffectMesh_TypeInfo, 0LL);
+      p_method = sub_1C65D04(Component_object, IEffectMesh_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(Il2CppObject *, _QWORD, _QWORD))p_method)(
       v9,
@@ -171,7 +171,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v16 = sub_1C36AAC(v9, IEffectMesh_TypeInfo, 1LL);
+      v16 = sub_1C65D04(v9, IEffectMesh_TypeInfo, 1LL);
     }
     (*(void (__fastcall **)(Il2CppObject *, _QWORD))v16)(v9, *(_QWORD *)(v16 + 8));
   }
@@ -189,9 +189,9 @@ void __fastcall BattleActorAnimationEffect__FlipEnemy(
     if ( !effectObj
       || (this = (BattleActorAnimationEffect_o *)UnityEngine_GameObject__get_transform(effectObj, 0LL)) == 0LL )
     {
-      sub_1BE4D28(this, effectObj);
+      sub_1C13F80(this, effectObj);
     }
-    UnityEngine_Transform__Rotate_70474664((UnityEngine_Transform_o *)this, 0.0, 180.0, 0.0, 0LL);
+    UnityEngine_Transform__Rotate_70744812((UnityEngine_Transform_o *)this, 0.0, 180.0, 0.0, 0LL);
   }
 }
 
@@ -226,10 +226,10 @@ UnityEngine_Vector3_o __fastcall BattleActorAnimationEffect__GetFlippedLocalScal
   }
   else
   {
-    if ( !byte_4B612E6 )
+    if ( !byte_4BAEDA6 )
     {
-      sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, isEnemy);
-      byte_4B612E6 = 1;
+      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, isEnemy);
+      byte_4BAEDA6 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->oneVector.fields.x;
@@ -256,10 +256,10 @@ UnityEngine_GameObject_o *__fastcall BattleActorAnimationEffect__MakeBattleEffec
   BattleActorAnimationEffect_o *v11; // x20
   BattleActorAnimationEffect_o *v12; // x20
 
-  if ( (byte_4B69A01 & 1) == 0 )
+  if ( (byte_4BB7535 & 1) == 0 )
   {
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&BattleEffectUtility_TypeInfo, actor);
-    byte_4B69A01 = 1;
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&BattleEffectUtility_TypeInfo, actor);
+    byte_4BB7535 = 1;
   }
   if ( !actor )
     goto LABEL_18;
@@ -281,10 +281,10 @@ UnityEngine_GameObject_o *__fastcall BattleActorAnimationEffect__MakeBattleEffec
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, parent, 0LL);
   this = (BattleActorAnimationEffect_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v9, 0LL);
   v10 = this;
-  if ( !byte_4B612E1 )
+  if ( !byte_4BAEDA1 )
   {
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, actor);
-    byte_4B612E1 = 1;
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&UnityEngine_Vector3_TypeInfo, actor);
+    byte_4BAEDA1 = 1;
   }
   if ( !v10 )
     goto LABEL_18;
@@ -294,10 +294,10 @@ UnityEngine_GameObject_o *__fastcall BattleActorAnimationEffect__MakeBattleEffec
     0LL);
   this = (BattleActorAnimationEffect_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v9, 0LL);
   v11 = this;
-  if ( !byte_4B612E9 )
+  if ( !byte_4BAEDA9 )
   {
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, actor);
-    byte_4B612E9 = 1;
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&UnityEngine_Vector3_TypeInfo, actor);
+    byte_4BAEDA9 = 1;
   }
   if ( !v11 )
     goto LABEL_18;
@@ -307,14 +307,14 @@ UnityEngine_GameObject_o *__fastcall BattleActorAnimationEffect__MakeBattleEffec
     0LL);
   this = (BattleActorAnimationEffect_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v9, 0LL);
   v12 = this;
-  if ( !byte_4B612E6 )
+  if ( !byte_4BAEDA6 )
   {
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, actor);
-    byte_4B612E6 = 1;
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&UnityEngine_Vector3_TypeInfo, actor);
+    byte_4BAEDA6 = 1;
   }
   if ( !v12 )
 LABEL_18:
-    sub_1BE4D28(this, actor);
+    sub_1C13F80(this, actor);
   UnityEngine_Transform__set_localScale(
     (UnityEngine_Transform_o *)v12,
     UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
@@ -328,13 +328,13 @@ System_String_o *__fastcall BattleActorAnimationEffect__MakeTriggerKey(
         System_String_o *eventTag,
         const MethodInfo *method)
 {
-  if ( (byte_4B699FF & 1) == 0 )
+  if ( (byte_4BB7533 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_25420/*"{0}:{1}"*/, eventTag);
-    byte_4B699FF = 1;
+    sub_1C13D24(&StringLiteral_25476/*"{0}/{1}"*/, eventTag);
+    byte_4BB7533 = 1;
   }
-  return System_String__Format_62713180(
-           (System_String_o *)StringLiteral_25420/*"{0}:{1}"*/,
+  return System_String__Format_62982316(
+           (System_String_o *)StringLiteral_25476/*"{0}/{1}"*/,
            (Il2CppObject *)animName,
            (Il2CppObject *)eventTag,
            0LL);
@@ -357,13 +357,13 @@ void __fastcall BattleActorAnimationEffect__OnExec(
   System_Action_object__o *v13; // x21
   System_Collections_IEnumerator_o *v14; // x1
 
-  if ( (byte_4B69A00 & 1) == 0 )
+  if ( (byte_4BB7534 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleActorControl__TypeInfo, actor);
-    sub_1BE4ACC(&Method_BasicHelper_DelayCall_BattleActorControl___, v5);
-    sub_1BE4ACC(&Method_BattleActorAnimationEffect_DisplayEffect__, v6);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
-    byte_4B69A00 = 1;
+    sub_1C13D24(&System_Action_BattleActorControl__TypeInfo, actor);
+    sub_1C13D24(&Method_BasicHelper_DelayCall_BattleActorControl___, v5);
+    sub_1C13D24(&Method_BattleActorAnimationEffect_DisplayEffect__, v6);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
+    byte_4BB7534 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -372,7 +372,7 @@ void __fastcall BattleActorAnimationEffect__OnExec(
   {
     trigger = this->fields.trigger;
     if ( !trigger )
-      sub_1BE4D28(v8, v9);
+      sub_1C13F80(v8, v9);
     delay = trigger->fields.delay;
     if ( delay <= 0.0 )
     {
@@ -380,14 +380,14 @@ void __fastcall BattleActorAnimationEffect__OnExec(
     }
     else
     {
-      v13 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleActorControl__TypeInfo);
+      v13 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleActorControl__TypeInfo);
       System_Action_object____ctor(v13, (Il2CppObject *)this, Method_BattleActorAnimationEffect_DisplayEffect__, 0LL);
       v14 = BasicHelper__DelayCall_object_(
               delay,
               (System_Action_T__o *)v13,
               (Il2CppObject *)actor,
-              (const MethodInfo_2F44740 *)Method_BasicHelper_DelayCall_BattleActorControl___);
-      UnityEngine_MonoBehaviour__StartCoroutine_70437272((UnityEngine_MonoBehaviour_o *)this, v14, 0LL);
+              (const MethodInfo_2F7AA9C *)Method_BasicHelper_DelayCall_BattleActorControl___);
+      UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v14, 0LL);
     }
   }
 }
@@ -413,10 +413,10 @@ System_String_o *__fastcall BattleActorAnimationEffect__get_TriggerKey(
   int32_t anim; // [xsp+18h] [xbp-28h]
 
   v2 = this;
-  if ( (byte_4B699FE & 1) == 0 )
+  if ( (byte_4BB7532 & 1) == 0 )
   {
-    this = (BattleActorAnimationEffect_o *)sub_1BE4ACC(&AnimationList_NAME_TypeInfo, method);
-    byte_4B699FE = 1;
+    this = (BattleActorAnimationEffect_o *)sub_1C13D24(&AnimationList_NAME_TypeInfo, method);
+    byte_4BB7532 = 1;
   }
   trigger = v2->fields.trigger;
   if ( !trigger
@@ -426,7 +426,7 @@ System_String_o *__fastcall BattleActorAnimationEffect__get_TriggerKey(
         this = (BattleActorAnimationEffect_o *)System_Enum__ToString(&v7, 0LL),
         (v5 = v2->fields.trigger) == 0LL) )
   {
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   }
   return BattleActorAnimationEffect__MakeTriggerKey((System_String_o *)this, v5->fields.eventTag, v4);
 }
@@ -452,18 +452,18 @@ void __fastcall BattleActorAnimationEffect_DisplayTrigger___ctor(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4B69A05 & 1) == 0 )
+  if ( (byte_4BB7539 & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v9);
-    byte_4B69A05 = 1;
+    sub_1C13D24(&int___TypeInfo, method);
+    sub_1C13D24(&StringLiteral_1/*""*/, v9);
+    byte_4BB7539 = 1;
   }
   v10 = StringLiteral_1/*""*/;
   this->fields.eventTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.eventTag, (int64_t)v10, v2, v3, v4, v5, v6, v7);
-  v11 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventTag, (int64_t)v10, v2, v3, v4, v5, v6, v7);
+  v11 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   this->fields.targetSvtLimits = v11;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.targetSvtLimits, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.targetSvtLimits, (int64_t)v11, v12, v13, v14, v15, v16, v17);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -483,32 +483,32 @@ bool __fastcall BattleActorAnimationEffect_DisplayTrigger__IsTarget(
   System_Int32_array *targetSvtLimits; // x19
   System_Func_int__bool__o *v13; // x20
 
-  if ( (byte_4B69A04 & 1) == 0 )
+  if ( (byte_4BB7538 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_int____77161864, *(_QWORD *)&limit);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0__IsTarget_b__0__, v6);
-    sub_1BE4ACC(&BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0_TypeInfo, v7);
-    byte_4B69A04 = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, *(_QWORD *)&limit);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v5);
+    sub_1C13D24(&Method_BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0__IsTarget_b__0__, v6);
+    sub_1C13D24(&BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0_TypeInfo, v7);
+    byte_4BB7538 = 1;
   }
-  v8 = sub_1BE4D18(BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0_TypeInfo);
+  v8 = sub_1C13F70(BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   *(_DWORD *)(v8 + 16) = limit;
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.targetSvtLimits, 0LL) )
     return 1;
   targetSvtLimits = this->fields.targetSvtLimits;
-  v13 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+  v13 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v13,
     (Il2CppObject *)v8,
     Method_BattleActorAnimationEffect_DisplayTrigger___c__DisplayClass4_0__IsTarget_b__0__,
     0LL);
-  return BasicHelper__Any_int__49561084(
+  return BasicHelper__Any_int__49783128(
            targetSvtLimits,
            (System_Func_T__bool__o *)v13,
-           (const MethodInfo_2F43DFC *)Method_BasicHelper_Any_int____77161864);
+           (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256);
 }
 
 

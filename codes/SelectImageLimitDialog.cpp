@@ -1,9 +1,9 @@
 void __fastcall SelectImageLimitDialog___ctor(SelectImageLimitDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B621FB & 1) == 0 )
+  if ( (byte_4BAFCEA & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B621FB = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BAFCEA = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -45,26 +45,26 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall SelectImageLimi
   int32_t result; // [xsp+2Ch] [xbp-64h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+30h] [xbp-60h] BYREF
 
-  if ( (byte_4B621F9 & 1) == 0 )
+  if ( (byte_4BAFCE8 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__int__Add__, json);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__, v9);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v12);
-    byte_4B621F9 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__int__Add__, json);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__, v9);
+    sub_1C13D24(&JsonManager_TypeInfo, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v12);
+    byte_4BAFCE8 = 1;
   }
   memset(&v25, 0, sizeof(v25));
   result = 0;
-  v13 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v13 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C13F70(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v13,
-    (const MethodInfo_32A6B28 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_32E9114 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   IsNullOrEmpty = System_String__IsNullOrEmpty(json, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -78,31 +78,31 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall SelectImageLimi
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v23,
       (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-      (const MethodInfo_32B0654 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_32F2DE0 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     v25 = v23;
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
               &v25,
-              (const MethodInfo_33AE940 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+              (const MethodInfo_33EFDF0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
       if ( !v25.fields._current.fields.value )
-        sub_1BE4D28(0LL, v17);
+        sub_1C13F80(0LL, v17);
       key = v25.fields._current.fields.key;
       v19 = (System_String_o *)((__int64 (*)(void))v25.fields._current.fields.value->klass->vtable[3].method)();
       v20 = System_Int32__TryParse(v19, &result, 0LL);
       if ( v20 )
       {
         if ( !v13 )
-          sub_1BE4D28(v20, v21);
+          sub_1C13F80(v20, v21);
         System_Collections_Generic_Dictionary_object__int___Add(
           v13,
           key,
           result,
-          (const MethodInfo_32A74DC *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+          (const MethodInfo_32E9AC8 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
       &v25,
-      (const MethodInfo_33AEA60 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+      (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
   return (System_Collections_Generic_Dictionary_string__int__o *)v13;
 }
@@ -110,16 +110,16 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall SelectImageLimi
 
 void __fastcall SelectImageLimitDialog__EndOpen(SelectImageLimitDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B621F1 & 1) == 0 )
+  if ( (byte_4BAFCE0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_ActionExtensions_Call_bool___, method);
-    byte_4B621F1 = 1;
+    sub_1C13D24(&Method_ActionExtensions_Call_bool___, method);
+    byte_4BAFCE0 = 1;
   }
   this->fields.state = 2;
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.SetMaskCollider,
     0,
-    (const MethodInfo_2EAB82C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2EE1B88 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -132,11 +132,11 @@ int32_t __fastcall SelectImageLimitDialog__GetImageLimitCount(
   __int64 v5; // x1
   System_Collections_Generic_Dictionary_int__int__o *dicSelectedImageLimit; // x0
 
-  if ( (byte_4B621F8 & 1) == 0 )
+  if ( (byte_4BAFCE7 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, *(_QWORD *)&svtId);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__, v5);
-    byte_4B621F8 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__, *(_QWORD *)&svtId);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__, v5);
+    byte_4BAFCE7 = 1;
   }
   dicSelectedImageLimit = this->fields.dicSelectedImageLimit;
   if ( !dicSelectedImageLimit )
@@ -144,16 +144,16 @@ int32_t __fastcall SelectImageLimitDialog__GetImageLimitCount(
   if ( System_Collections_Generic_Dictionary_int__int___ContainsKey(
          dicSelectedImageLimit,
          svtId,
-         (const MethodInfo_3247DE4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
+         (const MethodInfo_32899C4 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
   {
     dicSelectedImageLimit = this->fields.dicSelectedImageLimit;
     if ( dicSelectedImageLimit )
       return System_Collections_Generic_Dictionary_int__int___get_Item(
                dicSelectedImageLimit,
                svtId,
-               (const MethodInfo_3247B5C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+               (const MethodInfo_328973C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
 LABEL_8:
-    sub_1BE4D28(dicSelectedImageLimit, *(_QWORD *)&svtId);
+    sub_1C13F80(dicSelectedImageLimit, *(_QWORD *)&svtId);
   }
   return -1;
 }
@@ -170,14 +170,14 @@ void __fastcall SelectImageLimitDialog__Init(SelectImageLimitDialog_o *this, con
   System_Collections_Generic_Dictionary_int__int__o *v9; // x20
   UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B621EE & 1) == 0 )
+  if ( (byte_4BAFCDD & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, method);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v6);
-    byte_4B621EE = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, method);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v4);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_1/*""*/, v6);
+    byte_4BAFCDD = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -210,22 +210,22 @@ void __fastcall SelectImageLimitDialog__Init(SelectImageLimitDialog_o *this, con
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_11:
-    sub_1BE4D28(titleLabel, method);
+    sub_1C13F80(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
-  v8 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v8,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.imageIdList = v8;
-  sub_1BE4A70(&this->fields.imageIdList);
+  sub_1C13CC8(&this->fields.imageIdList);
   this->fields.selectedIndex = 0;
-  v9 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  v9 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1C13F70(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v9,
-    (const MethodInfo_3247234 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_3288E14 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   this->fields.dicSelectedImageLimit = v9;
-  sub_1BE4A70(&this->fields.dicSelectedImageLimit);
+  sub_1C13CC8(&this->fields.dicSelectedImageLimit);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -256,33 +256,33 @@ void __fastcall SelectImageLimitDialog__LoadImageLimitData(SelectImageLimitDialo
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+30h] [xbp-60h] BYREF
   int32_t result[2]; // [xsp+68h] [xbp-28h] BYREF
 
-  if ( (byte_4B621F6 & 1) == 0 )
+  if ( (byte_4BAFCE5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__Add__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__, v6);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v9);
-    sub_1BE4ACC(&StringLiteral_9324/*"MultipleViewSelectImageLimit"*/, v10);
-    sub_1BE4ACC(&StringLiteral_10777/*"PhotoCampaignSelectImageLimit2024"*/, v11);
-    byte_4B621F6 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int__Add__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__, v6);
+    sub_1C13D24(&JsonManager_TypeInfo, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v9);
+    sub_1C13D24(&StringLiteral_9348/*"Multiple self-reference within a group is redefined."*/, v10);
+    sub_1C13D24(&StringLiteral_10802/*"Persian"*/, v11);
+    byte_4BAFCE5 = 1;
   }
   *(_QWORD *)result = 0LL;
   memset(&v24, 0, sizeof(v24));
   eventType = this->fields.eventType;
   if ( eventType == 24 )
   {
-    v14 = &StringLiteral_9324/*"MultipleViewSelectImageLimit"*/;
+    v14 = &StringLiteral_9348/*"Multiple self-reference within a group is redefined."*/;
   }
   else
   {
     String = 0LL;
     if ( eventType != 26 )
       goto LABEL_8;
-    v14 = &StringLiteral_10777/*"PhotoCampaignSelectImageLimit2024"*/;
+    v14 = &StringLiteral_10802/*"Persian"*/;
   }
   String = UnityEngine_PlayerPrefs__GetString((System_String_o *)*v14, 0LL, 0LL);
 LABEL_8:
@@ -292,22 +292,22 @@ LABEL_8:
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     Dictionary = JsonManager__getDictionary(String, 0LL);
     if ( !Dictionary )
-      sub_1BE4D28(0LL, v16);
+      sub_1C13F80(0LL, v16);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
       &v23,
       (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-      (const MethodInfo_32B0654 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_32F2DE0 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     v24 = v23;
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
               &v24,
-              (const MethodInfo_33AE940 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+              (const MethodInfo_33EFDF0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
       value = v24.fields._current.fields.value;
       v18 = System_Int32__TryParse((System_String_o *)v24.fields._current.fields.key, &result[1], 0LL);
       if ( v18 )
       {
         if ( !value )
-          sub_1BE4D28(v18, v19);
+          sub_1C13F80(v18, v19);
         v20 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
                                    value,
                                    value->klass->vtable[4].methodPtr);
@@ -315,18 +315,18 @@ LABEL_8:
         {
           dicSelectedImageLimit = this->fields.dicSelectedImageLimit;
           if ( !dicSelectedImageLimit )
-            sub_1BE4D28(0LL, v21);
+            sub_1C13F80(0LL, v21);
           System_Collections_Generic_Dictionary_int__int___Add(
             dicSelectedImageLimit,
             result[1],
             result[0],
-            (const MethodInfo_3247BF8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+            (const MethodInfo_32897D8 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
         }
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
       &v24,
-      (const MethodInfo_33AEA60 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+      (const MethodInfo_33EFF10 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
 }
 
@@ -339,22 +339,22 @@ void __fastcall SelectImageLimitDialog__OnClickCancel(SelectImageLimitDialog_o *
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B621F3 & 1) == 0 )
+  if ( (byte_4BAFCE2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog_OnClickCancel__, v3);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog__OnClickCancel_b__23_0__, v4);
-    byte_4B621F3 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_SelectImageLimitDialog_OnClickCancel__, v3);
+    sub_1C13D24(&Method_SelectImageLimitDialog__OnClickCancel_b__23_0__, v4);
+    byte_4BAFCE2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_SelectImageLimitDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_SelectImageLimitDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BE4AE4(Method_SelectImageLimitDialog_OnClickCancel__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0LL);
+      v5 = (_QWORD *)sub_1C13D3C(Method_SelectImageLimitDialog_OnClickCancel__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C13D08(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
     this->fields.state = 3;
-    v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_SelectImageLimitDialog__OnClickCancel_b__23_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
@@ -380,22 +380,22 @@ void __fastcall SelectImageLimitDialog__OnClickDecide(SelectImageLimitDialog_o *
   System_Action_o *v17; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
-  if ( (byte_4B621F2 & 1) == 0 )
+  if ( (byte_4BAFCE1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v3);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog_OnClickDecide__, v5);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog__OnClickDecide_b__22_0__, v6);
-    byte_4B621F2 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v3);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1C13D24(&Method_SelectImageLimitDialog_OnClickDecide__, v5);
+    sub_1C13D24(&Method_SelectImageLimitDialog__OnClickDecide_b__22_0__, v6);
+    byte_4BAFCE1 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v7 = Method_SelectImageLimitDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_SelectImageLimitDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BE4AE4(Method_SelectImageLimitDialog_OnClickDecide__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0LL);
+      v7 = (_QWORD *)sub_1C13D3C(Method_SelectImageLimitDialog_OnClickDecide__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C13D08(v7, v7[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0LL);
     usrSvtEnt = this->fields.usrSvtEnt;
     if ( !usrSvtEnt )
       goto LABEL_12;
@@ -405,18 +405,18 @@ void __fastcall SelectImageLimitDialog__OnClickDecide(SelectImageLimitDialog_o *
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v18.fields.currentCryptoKey = v13;
     *(_QWORD *)&v18.fields.fakeValue = v12;
-    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v18, 0LL);
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v18, 0LL);
     if ( !this->fields.imageIdList )
 LABEL_12:
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
     v14 = v9;
     Item = System_Collections_Generic_List_int___get_Item(
              this->fields.imageIdList,
              this->fields.selectedIndex,
-             (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
+             (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
     SelectImageLimitDialog__SetImageLimitCount(this, v14, Item, v16);
     this->fields.state = 3;
-    v17 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_SelectImageLimitDialog__OnClickDecide_b__22_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v17, 0LL);
   }
@@ -442,12 +442,12 @@ void __fastcall SelectImageLimitDialog__OnClickImageLimit(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x2
 
-  if ( (byte_4B621FA & 1) == 0 )
+  if ( (byte_4BAFCE9 & 1) == 0 )
   {
-    sub_1BE4ACC(&SelectImageLimitListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&kind);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v7);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog_OnClickImageLimit__, v8);
-    byte_4B621FA = 1;
+    sub_1C13D24(&SelectImageLimitListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&kind);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v7);
+    sub_1C13D24(&Method_SelectImageLimitDialog_OnClickImageLimit__, v8);
+    byte_4BAFCE9 = 1;
   }
   if ( kind == 1 && this->fields.state == 2 )
   {
@@ -455,9 +455,9 @@ void __fastcall SelectImageLimitDialog__OnClickImageLimit(
     {
       v9 = Method_SelectImageLimitDialog_OnClickImageLimit__;
       if ( (*((_BYTE *)Method_SelectImageLimitDialog_OnClickImageLimit__ + 83) & 2) != 0 )
-        v9 = (_QWORD *)sub_1BE4AE4(Method_SelectImageLimitDialog_OnClickImageLimit__);
-      v10 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v9, v9[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0LL);
+        v9 = (_QWORD *)sub_1C13D3C(Method_SelectImageLimitDialog_OnClickImageLimit__);
+      v10 = (System_Reflection_MethodBase_o *)sub_1C13D08(v9, v9[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0LL);
     }
     imageIdList = this->fields.imageIdList;
     this->fields.selectedIndex = index;
@@ -466,11 +466,11 @@ void __fastcall SelectImageLimitDialog__OnClickImageLimit(
           imageIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                     imageIdList,
                                                                     index,
-                                                                    (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                                    (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__),
           !selectImageLimitListViewManager)
       || (SelectImageLimitListViewManager__ModifyItem(selectImageLimitListViewManager, (int32_t)imageIdList, v13),
           v14 = this->fields.selectImageLimitListViewManager,
-          v15 = (SelectImageLimitListViewManager_CallbackFunc_o *)sub_1BE4D18(SelectImageLimitListViewManager_CallbackFunc_TypeInfo),
+          v15 = (SelectImageLimitListViewManager_CallbackFunc_o *)sub_1C13F70(SelectImageLimitListViewManager_CallbackFunc_TypeInfo),
           SelectImageLimitListViewManager_CallbackFunc___ctor(
             v15,
             (Il2CppObject *)this,
@@ -478,11 +478,11 @@ void __fastcall SelectImageLimitDialog__OnClickImageLimit(
             v16),
           !v14) )
     {
-      sub_1BE4D28(imageIdList, *(_QWORD *)&kind);
+      sub_1C13F80(imageIdList, *(_QWORD *)&kind);
     }
     v14->fields.callbackFunc = v15;
-    sub_1BE4A70(&v14->fields.callbackFunc);
-    SelectImageLimitListViewManager__SetMode_31988220(v14, 2, v17);
+    sub_1C13CC8(&v14->fields.callbackFunc);
+    SelectImageLimitListViewManager__SetMode_32173456(v14, 2, v17);
   }
 }
 
@@ -491,13 +491,13 @@ void __fastcall SelectImageLimitDialog__OnEnable(SelectImageLimitDialog_o *this,
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B621F4 & 1) == 0 )
+  if ( (byte_4BAFCE3 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_15856/*"Window/Objects/Buttons/CancelButton"*/, method);
-    byte_4B621F4 = 1;
+    sub_1C13D24(&StringLiteral_15892/*"Wildcards '{0}' and '{1}' have not empty intersection, and causes the content model to become ambiguous. A content model must be formed such that during validation of an element information item sequence, the particle contained directly, indirectly or implicitly therein with which to attempt to validate each item in the sequence in turn can be uniquely determined without examining the content or attributes of that item, and without any information about the items in the remainder of the sequence."*/, method);
+    byte_4BAFCE3 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42781316(transform, (System_String_o *)StringLiteral_15856/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42984304(transform, (System_String_o *)StringLiteral_15892/*"Wildcards '{0}' and '{1}' have not empty intersection, and causes the content model to become ambiguous. A content model must be formed such that during validation of an element information item sequence, the particle contained directly, indirectly or implicitly therein with which to attempt to validate each item in the sequence in turn can be uniquely determined without examining the content or attributes of that item, and without any information about the items in the remainder of the sequence."*/, 0LL);
 }
 
 
@@ -549,34 +549,34 @@ void __fastcall SelectImageLimitDialog__OpenImageLimit(
   int32_t v47; // [xsp+Ch] [xbp-44h] BYREF
 
   v47 = index;
-  if ( (byte_4B621EF & 1) == 0 )
+  if ( (byte_4BAFCDE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_ActionExtensions_Call_bool___, *(_QWORD *)&eventType);
-    sub_1BE4ACC(&System_Action_TypeInfo, v12);
-    sub_1BE4ACC(&SelectImageLimitListViewManager_CallbackFunc_TypeInfo, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v15);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v16);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog_EndOpen__, v17);
-    sub_1BE4ACC(&Method_SelectImageLimitDialog_OnClickImageLimit__, v18);
-    sub_1BE4ACC(&StringLiteral_3797/*"COMMON_CONFIRM_DECIDE"*/, v19);
-    sub_1BE4ACC(&StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, v20);
-    sub_1BE4ACC(&StringLiteral_8927/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_"*/, v21);
-    sub_1BE4ACC(&StringLiteral_10530/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE"*/, v22);
-    sub_1BE4ACC(&StringLiteral_10531/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING"*/, v23);
-    sub_1BE4ACC(&StringLiteral_8928/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_"*/, v24);
-    byte_4B621EF = 1;
+    sub_1C13D24(&Method_ActionExtensions_Call_bool___, *(_QWORD *)&eventType);
+    sub_1C13D24(&System_Action_TypeInfo, v12);
+    sub_1C13D24(&SelectImageLimitListViewManager_CallbackFunc_TypeInfo, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v15);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v16);
+    sub_1C13D24(&Method_SelectImageLimitDialog_EndOpen__, v17);
+    sub_1C13D24(&Method_SelectImageLimitDialog_OnClickImageLimit__, v18);
+    sub_1C13D24(&StringLiteral_3800/*"COMMON"*/, v19);
+    sub_1C13D24(&StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, v20);
+    sub_1C13D24(&StringLiteral_8951/*"MST_REDISP_MSG"*/, v21);
+    sub_1C13D24(&StringLiteral_10555/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, v22);
+    sub_1C13D24(&StringLiteral_10556/*"PAYSTONE_INFO_TITLE"*/, v23);
+    sub_1C13D24(&StringLiteral_8952/*"MST_REDISP_TITLE_TXT"*/, v24);
+    byte_4BAFCDE = 1;
   }
   SelectImageLimitDialog__Init(this, *(const MethodInfo **)&eventType);
   this->fields.closeFunc = closeCallback;
-  sub_1BE4A70(&this->fields.closeFunc);
+  sub_1C13CC8(&this->fields.closeFunc);
   this->fields.eventType = eventType;
   this->fields.SetMaskCollider = setMaskMethod;
-  sub_1BE4A70(&this->fields.SetMaskCollider);
+  sub_1C13CC8(&this->fields.SetMaskCollider);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.SetMaskCollider,
     1,
-    (const MethodInfo_2EAB82C *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2EE1B88 *)Method_ActionExtensions_Call_bool___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_26;
@@ -592,19 +592,19 @@ void __fastcall SelectImageLimitDialog__OpenImageLimit(
   v29 = (int)gameObject;
   gameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_int___ToArray(
                                              this->fields.imageIdList,
-                                             (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                             (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
   if ( !this->fields.imageIdList )
     goto LABEL_26;
   v30 = (System_Int32_array *)gameObject;
   gameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_int___get_Item(
                                              this->fields.imageIdList,
                                              this->fields.selectedIndex,
-                                             (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                             (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
   if ( !selectImageLimitListViewManager )
     goto LABEL_26;
   SelectImageLimitListViewManager__CreateList(selectImageLimitListViewManager, v29, v30, (int32_t)gameObject, v31);
   v32 = this->fields.selectImageLimitListViewManager;
-  v33 = (SelectImageLimitListViewManager_CallbackFunc_o *)sub_1BE4D18(SelectImageLimitListViewManager_CallbackFunc_TypeInfo);
+  v33 = (SelectImageLimitListViewManager_CallbackFunc_o *)sub_1C13F70(SelectImageLimitListViewManager_CallbackFunc_TypeInfo);
   SelectImageLimitListViewManager_CallbackFunc___ctor(
     v33,
     (Il2CppObject *)this,
@@ -613,30 +613,30 @@ void __fastcall SelectImageLimitDialog__OpenImageLimit(
   if ( !v32 )
     goto LABEL_26;
   v32->fields.callbackFunc = v33;
-  sub_1BE4A70(&v32->fields.callbackFunc);
-  SelectImageLimitListViewManager__SetMode_31988220(v32, 2, v35);
+  sub_1C13CC8(&v32->fields.callbackFunc);
+  SelectImageLimitListViewManager__SetMode_32173456(v32, 2, v35);
   v36 = this->fields.eventType;
   if ( v36 == 26 )
   {
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10530/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10555/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
       warningLabel = this->fields.warningLabel;
-      v42 = (System_String_o *)StringLiteral_10531/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING"*/;
+      v42 = (System_String_o *)StringLiteral_10556/*"PAYSTONE_INFO_TITLE"*/;
       goto LABEL_19;
     }
 LABEL_26:
-    sub_1BE4D28(gameObject, v26);
+    sub_1C13F80(gameObject, v26);
   }
   if ( v36 != 24 )
     goto LABEL_21;
   v37 = this->fields.titleLabel;
   v38 = System_Int32__ToString((int32_t)&v47, 0LL);
-  v39 = System_String__Concat_62698808((System_String_o *)StringLiteral_8927/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_"*/, v38, 0LL);
+  v39 = System_String__Concat_62967944((System_String_o *)StringLiteral_8951/*"MST_REDISP_MSG"*/, v38, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(v39, 0LL);
@@ -645,7 +645,7 @@ LABEL_26:
   UILabel__set_text(v37, (System_String_o *)gameObject, 0LL);
   warningLabel = this->fields.warningLabel;
   v41 = System_Int32__ToString((int32_t)&v47, 0LL);
-  v42 = System_String__Concat_62698808((System_String_o *)StringLiteral_8928/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_"*/, v41, 0LL);
+  v42 = System_String__Concat_62967944((System_String_o *)StringLiteral_8952/*"MST_REDISP_TITLE_TXT"*/, v41, 0LL);
 LABEL_19:
   gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(v42, 0LL);
   if ( !warningLabel )
@@ -655,16 +655,16 @@ LABEL_21:
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3797/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMON"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_26;
   UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_26;
   UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0LL);
-  v46 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v46 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v46, (Il2CppObject *)this, Method_SelectImageLimitDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0LL);
 }
@@ -700,41 +700,41 @@ void __fastcall SelectImageLimitDialog__SaveImageLimitData(SelectImageLimitDialo
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v28; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v29; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4B621F5 & 1) == 0 )
+  if ( (byte_4BAFCE4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__Add__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__, v8);
-    sub_1BE4ACC(&int_TypeInfo, v9);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v12);
-    sub_1BE4ACC(&StringLiteral_9324/*"MultipleViewSelectImageLimit"*/, v13);
-    sub_1BE4ACC(&StringLiteral_10777/*"PhotoCampaignSelectImageLimit2024"*/, v14);
-    byte_4B621F5 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__Add__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v4);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__int__get_Current__, v8);
+    sub_1C13D24(&int_TypeInfo, v9);
+    sub_1C13D24(&JsonManager_TypeInfo, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v12);
+    sub_1C13D24(&StringLiteral_9348/*"Multiple self-reference within a group is redefined."*/, v13);
+    sub_1C13D24(&StringLiteral_10802/*"Persian"*/, v14);
+    byte_4BAFCE4 = 1;
   }
   memset(&v29, 0, 32);
   *(&v28.fields._getEnumeratorRetType + 1) = 0;
-  v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v15 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C13F70(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v15,
-    (const MethodInfo_32AF874 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    (const MethodInfo_32F2000 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
   dicSelectedImageLimit = this->fields.dicSelectedImageLimit;
   if ( !dicSelectedImageLimit )
-    sub_1BE4D28(0LL, v16);
+    sub_1C13F80(0LL, v16);
   System_Collections_Generic_Dictionary_int__int___GetEnumerator(
     &v28,
     dicSelectedImageLimit,
-    (const MethodInfo_3247FD0 *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
+    (const MethodInfo_3289BB0 *)Method_System_Collections_Generic_Dictionary_int__int__GetEnumerator__);
   *(_OWORD *)&v29.fields._dictionary = *(_OWORD *)&v28.fields._dictionary;
   v29.fields._current = v28.fields._current;
   while ( System_Collections_Generic_Dictionary_Enumerator_int__int___MoveNext(
             &v29,
-            (const MethodInfo_339F360 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
+            (const MethodInfo_33E0810 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__MoveNext__) )
   {
     key_high = HIDWORD(v29.fields._current.fields.key);
     *(&v28.fields._getEnumeratorRetType + 1) = (int32_t)v29.fields._current.fields.key;
@@ -742,16 +742,16 @@ void __fastcall SelectImageLimitDialog__SaveImageLimitData(SelectImageLimitDialo
     LODWORD(v28.fields._dictionary) = key_high;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v20, v21, v22);
     if ( !v15 )
-      sub_1BE4D28(v23, v24);
+      sub_1C13F80(v23, v24);
     System_Collections_Generic_Dictionary_object__object___Add(
       v15,
       v19,
       v23,
-      (const MethodInfo_32B0224 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+      (const MethodInfo_32F29B0 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__int___Dispose(
     &v29,
-    (const MethodInfo_339F460 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
+    (const MethodInfo_33E0910 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v25 = JsonManager__toJson((Il2CppObject *)v15, 0, 0, 0LL);
@@ -760,7 +760,7 @@ void __fastcall SelectImageLimitDialog__SaveImageLimitData(SelectImageLimitDialo
     eventType = this->fields.eventType;
     if ( eventType == 24 )
     {
-      v27 = &StringLiteral_9324/*"MultipleViewSelectImageLimit"*/;
+      v27 = &StringLiteral_9348/*"Multiple self-reference within a group is redefined."*/;
     }
     else
     {
@@ -770,7 +770,7 @@ LABEL_16:
         UnityEngine_PlayerPrefs__Save(0LL);
         return;
       }
-      v27 = &StringLiteral_10777/*"PhotoCampaignSelectImageLimit2024"*/;
+      v27 = &StringLiteral_10802/*"Persian"*/;
     }
     UnityEngine_PlayerPrefs__SetString((System_String_o *)*v27, v25, 0LL);
     goto LABEL_16;
@@ -822,34 +822,34 @@ void __fastcall SelectImageLimitDialog__SetImageIdList(
   int32_t v41; // w21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
 
-  if ( (byte_4B621F0 & 1) == 0 )
+  if ( (byte_4BAFCDF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ServantCostumeMaster___, usrSvtId);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v5);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_UserServantMaster___, v6);
-    sub_1BE4ACC(&DataManager_TypeInfo, v7);
-    sub_1BE4ACC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
-    sub_1BE4ACC(&ImageLimitCount_TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Contains__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Count__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v13);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_4B621F0 = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_ServantCostumeMaster___, usrSvtId);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v5);
+    sub_1C13D24(&Method_DataManager_GetMaster_UserServantMaster___, v6);
+    sub_1C13D24(&DataManager_TypeInfo, v7);
+    sub_1C13D24(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
+    sub_1C13D24(&ImageLimitCount_TypeInfo, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Contains__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Count__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v13);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4BAFCDF = 1;
   }
   SelectImageLimitDialog__LoadImageLimitData(this, (const MethodInfo *)usrSvtId);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_51;
   this->fields.usrSvtEnt = (struct UserServantEntity_o *)DataMasterBase_object__object__long___GetEntity(
                                                            (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                            usrSvtId,
-                                                           (const MethodInfo_31FD970 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                                           (const MethodInfo_323AB80 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   p_usrSvtEnt = &this->fields.usrSvtEnt;
-  sub_1BE4A70(&this->fields.usrSvtEnt);
+  sub_1C13CC8(&this->fields.usrSvtEnt);
   Master_object = this->fields.usrSvtEnt;
   if ( !Master_object )
     goto LABEL_51;
@@ -867,17 +867,17 @@ void __fastcall SelectImageLimitDialog__SetImageIdList(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v42.fields.currentCryptoKey = v23;
     *(_QWORD *)&v42.fields.fakeValue = v22;
-    if ( v21 > CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v42, 0LL) )
+    if ( v21 > CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v42, 0LL) )
       break;
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
     ImageLimitCount = ImageLimitCount__GetImageLimitCount(v20, v21, 0LL);
-    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = DataManager__GetMasterData_object_(
                       (DataManager_o *)Master_object,
-                      (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = (void *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -891,7 +891,7 @@ void __fastcall SelectImageLimitDialog__SetImageIdList(
     Master_object = (void *)System_Collections_Generic_List_int___Contains(
                               this->fields.imageIdList,
                               (int32_t)Master_object,
-                              (const MethodInfo_35CF578 *)Method_System_Collections_Generic_List_int__Contains__);
+                              (const MethodInfo_3610520 *)Method_System_Collections_Generic_List_int__Contains__);
     if ( ((unsigned __int8)Master_object & 1) == 0 )
     {
       Master_object = this->fields.imageIdList;
@@ -908,7 +908,7 @@ void __fastcall SelectImageLimitDialog__SetImageIdList(
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)Master_object,
           v25,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
       }
       else
       {
@@ -924,7 +924,7 @@ void __fastcall SelectImageLimitDialog__SetImageIdList(
   Master_object = *p_usrSvtEnt;
   if ( !*p_usrSvtEnt )
 LABEL_51:
-    sub_1BE4D28(Master_object, v17);
+    sub_1C13F80(Master_object, v17);
   if ( UserServantEntity__IsHeroine((UserServantEntity_o *)Master_object, 0LL) )
     goto LABEL_57;
   Master_object = *p_usrSvtEnt;
@@ -933,12 +933,12 @@ LABEL_51:
   if ( UserServantEntity__isLimitCountMax((UserServantEntity_o *)Master_object, 0LL) )
   {
 LABEL_57:
-    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = DataManager__GetMasterData_object_(
                       (DataManager_o *)Master_object,
-                      (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = ServantCostumeMaster__releasedCostumeEntityList(
@@ -956,7 +956,7 @@ LABEL_57:
       do
       {
         if ( v32 >= v30 )
-          sub_1BE4D30(Master_object, v17);
+          sub_1C13F88(Master_object, v17);
         v33 = *((_QWORD *)v31 + (int)v32 + 4);
         if ( !v33 )
           goto LABEL_51;
@@ -977,7 +977,7 @@ LABEL_57:
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)Master_object,
               v17,
-              *(const MethodInfo_35CF200 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+              *(const MethodInfo_36101A8 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
           }
           else
           {
@@ -994,12 +994,12 @@ LABEL_57:
   if ( (v37 & 0x80000000) == 0 )
   {
     v38 = v37;
-    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = DataManager__GetMasterData_object_(
                       (DataManager_o *)Master_object,
-                      (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
     if ( !Master_object )
       goto LABEL_51;
     Master_object = (void *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -1017,7 +1017,7 @@ LABEL_57:
       Master_object = (void *)System_Collections_Generic_List_int___get_Item(
                                 imageIdList,
                                 v41,
-                                (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( (_DWORD)Master_object == v40 )
       {
         this->fields.selectedIndex = v41;
@@ -1042,19 +1042,19 @@ void __fastcall SelectImageLimitDialog__SetImageLimitCount(
   System_Collections_Generic_Dictionary_int__int__o *dicSelectedImageLimit; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4B621F7 & 1) == 0 )
+  if ( (byte_4BAFCE6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__, *(_QWORD *)&svtId);
-    byte_4B621F7 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__, *(_QWORD *)&svtId);
+    byte_4BAFCE6 = 1;
   }
   dicSelectedImageLimit = this->fields.dicSelectedImageLimit;
   if ( !dicSelectedImageLimit )
-    sub_1BE4D28(0LL, *(_QWORD *)&svtId);
+    sub_1C13F80(0LL, *(_QWORD *)&svtId);
   System_Collections_Generic_Dictionary_int__int___set_Item(
     dicSelectedImageLimit,
     svtId,
     imageLimitCount,
-    (const MethodInfo_3247BE4 *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
+    (const MethodInfo_32897C4 *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
   SelectImageLimitDialog__SaveImageLimitData(this, v8);
 }
 
@@ -1067,7 +1067,7 @@ void __fastcall SelectImageLimitDialog___OnClickCancel_b__23_0(
 
   closeFunc = this->fields.closeFunc;
   if ( !closeFunc )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, __int64, _QWORD))closeFunc->fields.m_target)(
     closeFunc->fields.original_method_info,
     0LL,
@@ -1083,10 +1083,10 @@ void __fastcall SelectImageLimitDialog___OnClickDecide_b__22_0(
   System_Collections_Generic_List_int__o *imageIdList; // x0
   struct System_Action_bool__int__o *closeFunc; // x20
 
-  if ( (byte_4B621FC & 1) == 0 )
+  if ( (byte_4BAFCEB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, method);
-    byte_4B621FC = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, method);
+    byte_4BAFCEB = 1;
   }
   imageIdList = this->fields.imageIdList;
   if ( !imageIdList
@@ -1094,10 +1094,10 @@ void __fastcall SelectImageLimitDialog___OnClickDecide_b__22_0(
         imageIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                   imageIdList,
                                                                   this->fields.selectedIndex,
-                                                                  (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                                  (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__),
         !closeFunc) )
   {
-    sub_1BE4D28(imageIdList, method);
+    sub_1C13F80(imageIdList, method);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, _QWORD))closeFunc->fields.m_target)(
     closeFunc->fields.original_method_info,

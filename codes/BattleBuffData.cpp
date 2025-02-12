@@ -69,34 +69,34 @@ void __fastcall BattleBuffData___ctor(BattleBuffData_o *this, const MethodInfo *
   FollowerInfo_o *v69; // x6
   PartyListViewItem_o *v70; // x7
 
-  if ( (byte_4B68F18 & 1) == 0 )
+  if ( (byte_4BB6A5D & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData_TypeInfo, v7);
-    byte_4B68F18 = 1;
+    sub_1C13D24(&int___TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v5);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData_TypeInfo, v7);
+    byte_4BB6A5D = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.passiveList = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v8;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.passiveList, (int64_t)v8, v9, v10, v11, v12, v13, v14);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.passiveList, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.activeList = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v15;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.activeList, (int64_t)v15, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.activeList, (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.conditionalAuraBuff = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v22;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.conditionalAuraBuff,
     (int64_t)v22,
     v23,
@@ -105,25 +105,25 @@ void __fastcall BattleBuffData___ctor(BattleBuffData_o *this, const MethodInfo *
     v26,
     v27,
     v28);
-  v29 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v29 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v29,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.auraBuffList = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v29;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.auraBuffList, (int64_t)v29, v30, v31, v32, v33, v34, v35);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.auraBuffList, (int64_t)v29, v30, v31, v32, v33, v34, v35);
   this->fields.addBuffOrder = 1;
-  v36 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v36 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v36,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.unfixedBuffList = v36;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.unfixedBuffList, (int64_t)v36, v37, v38, v39, v40, v41, v42);
-  v43 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.unfixedBuffList, (int64_t)v36, v37, v38, v39, v40, v41, v42);
+  v43 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v43,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.classIconAuraEffectBuffList = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v43;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.classIconAuraEffectBuffList,
     (int64_t)v43,
     v44,
@@ -132,12 +132,12 @@ void __fastcall BattleBuffData___ctor(BattleBuffData_o *this, const MethodInfo *
     v47,
     v48,
     v49);
-  v50 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v50 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v50,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this->fields.updateWaitIntervalBuffList = (struct System_Collections_Generic_List_BattleBuffData_BuffData__o *)v50;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.updateWaitIntervalBuffList,
     (int64_t)v50,
     v51,
@@ -146,14 +146,14 @@ void __fastcall BattleBuffData___ctor(BattleBuffData_o *this, const MethodInfo *
     v54,
     v55,
     v56);
-  v57 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+  v57 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   this->fields.wkzero = v57;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.wkzero, (int64_t)v57, v58, v59, v60, v61, v62, v63);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.wkzero, (int64_t)v57, v58, v59, v60, v61, v62, v63);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v64 = (BattleBuffData_SkillRankChangeData_o *)sub_1BE4D18(BattleBuffData_SkillRankChangeData_TypeInfo);
+  v64 = (BattleBuffData_SkillRankChangeData_o *)sub_1C13F70(BattleBuffData_SkillRankChangeData_TypeInfo);
   BattleBuffData_SkillRankChangeData___ctor(v64, this, 0LL);
   this->fields.skillChangeData = v64;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.skillChangeData, (int64_t)v64, v65, v66, v67, v68, v69, v70);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.skillChangeData, (int64_t)v64, v65, v66, v67, v68, v69, v70);
 }
 
 
@@ -186,13 +186,13 @@ void __fastcall BattleBuffData__AddEffectBuffList(
   __int64 v25; // x8
 
   v4 = this;
-  if ( (byte_4B68F63 & 1) == 0 )
+  if ( (byte_4BB6AA8 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__,
                                  v5);
-    byte_4B68F63 = 1;
+    byte_4BB6AA8 = 1;
   }
   if ( !buff )
     goto LABEL_21;
@@ -204,7 +204,7 @@ void __fastcall BattleBuffData__AddEffectBuffList(
     if ( !System_Collections_Generic_List_object___Contains(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)buff,
-            (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+            (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
     {
       this = (BattleBuffData_o *)v4->fields.auraBuffList;
       if ( !this )
@@ -220,14 +220,14 @@ void __fastcall BattleBuffData__AddEffectBuffList(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)buff,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
       {
         v15 = v12 + 8 * passiveList_low;
         LODWORD(this->fields.passiveList) = passiveList_low + 1;
         *(_QWORD *)(v15 + 32) = buff;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v15 + 32), (int64_t)buff, v6, v7, v8, v9, v10, v11);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v15 + 32), (int64_t)buff, v6, v7, v8, v9, v10, v11);
       }
     }
   }
@@ -239,7 +239,7 @@ void __fastcall BattleBuffData__AddEffectBuffList(
   if ( System_Collections_Generic_List_object___Contains(
          (System_Collections_Generic_List_object__o *)this,
          (Il2CppObject *)buff,
-         (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+         (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
   {
     return;
   }
@@ -251,7 +251,7 @@ void __fastcall BattleBuffData__AddEffectBuffList(
         !v22) )
   {
 LABEL_21:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   v24 = SLODWORD(this->fields.passiveList);
   if ( (unsigned int)v24 >= *(_DWORD *)(v22 + 24) )
@@ -259,14 +259,14 @@ LABEL_21:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)buff,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
   }
   else
   {
     v25 = v22 + 8 * v24;
     LODWORD(this->fields.passiveList) = v24 + 1;
     *(_QWORD *)(v25 + 32) = buff;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 32), (int64_t)buff, v16, v17, v18, v19, v20, v21);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 32), (int64_t)buff, v16, v17, v18, v19, v20, v21);
   }
 }
 
@@ -280,19 +280,19 @@ void __fastcall BattleBuffData__AddForceBuff(
   __int64 v6; // x1
   System_Action_object__o *v7; // x21
 
-  if ( (byte_4B68F43 & 1) == 0 )
+  if ( (byte_4BB6A88 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v5);
-    sub_1BE4ACC(&Method_BattleBuffData__AddForceBuff_b__91_0__, v6);
-    byte_4B68F43 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
+    sub_1C13D24(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v5);
+    sub_1C13D24(&Method_BattleBuffData__AddForceBuff_b__91_0__, v6);
+    byte_4BB6A88 = 1;
   }
-  v7 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v7 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(v7, (Il2CppObject *)this, Method_BattleBuffData__AddForceBuff_b__91_0__, 0LL);
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)buffArray,
     (System_Action_T__o *)v7,
-    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
 }
 
 
@@ -380,24 +380,24 @@ void __fastcall BattleBuffData__AddGetSkillTypeBuff(
   System_Collections_Generic_List_Enumerator_object__o v80; // [xsp+20h] [xbp-70h] BYREF
 
   v4 = this;
-  if ( (byte_4B68F9B & 1) == 0 )
+  if ( (byte_4BB6AE0 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Comparison_BattleBuffData_BuffData__TypeInfo, addBuffList);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_0__, v14);
-    sub_1BE4ACC(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_1__, v15);
-    sub_1BE4ACC(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_2__, v16);
-    sub_1BE4ACC(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_3__, v17);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v18);
-    byte_4B68F9B = 1;
+    sub_1C13D24(&System_Comparison_BattleBuffData_BuffData__TypeInfo, addBuffList);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_0__, v14);
+    sub_1C13D24(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_1__, v15);
+    sub_1C13D24(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_2__, v16);
+    sub_1C13D24(&Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_3__, v17);
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData___c_TypeInfo, v18);
+    byte_4BB6AE0 = 1;
   }
   memset(&v80, 0, sizeof(v80));
   if ( !addBuffList )
@@ -423,11 +423,11 @@ void __fastcall BattleBuffData__AddGetSkillTypeBuff(
         v19 = BattleBuffData___c_TypeInfo;
       }
       v21 = (Il2CppObject *)v19->static_fields->__9;
-      _9__218_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+      _9__218_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
       System_Func_object__int____ctor(_9__218_0, v21, Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_0__, 0LL);
       static_fields = BattleBuffData___c_TypeInfo->static_fields;
       static_fields->__9__218_0 = (struct System_Func_BattleBuffData_BuffData__int__o *)_9__218_0;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&static_fields->__9__218_0,
         (int64_t)_9__218_0,
         v23,
@@ -440,60 +440,60 @@ void __fastcall BattleBuffData__AddGetSkillTypeBuff(
     v29 = System_Linq_Enumerable__Max_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)addBuffList,
             (System_Func_TSource__int__o *)_9__218_0,
-            (const MethodInfo_2F80E80 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
+            (const MethodInfo_2FB70E0 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
   }
   BattleBuffData__UpdateBuffAddOrder(v4, v29, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v79,
     (System_Collections_Generic_List_object__o *)addBuffList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v80 = v79;
   while ( 1 )
   {
     v30 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v80,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v30 )
       break;
     current = v80.fields._current;
     if ( !v80.fields._current )
-      sub_1BE4D28(v30, v31);
+      sub_1C13F80(v30, v31);
     if ( LODWORD(v80.fields._current[4].klass) )
     {
       auraBuffList = (System_Collections_Generic_List_object__o *)v4->fields.auraBuffList;
       if ( !auraBuffList )
-        sub_1BE4D28(0LL, v31);
+        sub_1C13F80(0LL, v31);
       items = auraBuffList->fields._items;
       v41 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
       ++auraBuffList->fields._version;
       if ( !items )
-        sub_1BE4D28(auraBuffList, v31);
+        sub_1C13F80(auraBuffList, v31);
       size = auraBuffList->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           auraBuffList,
           current,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &items->obj.klass + size;
         auraBuffList->fields._size = size + 1;
         v43[4] = (Il2CppClass *)current;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v43 + 4), (int64_t)current, v32, v33, v34, v35, v36, v37);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v43 + 4), (int64_t)current, v32, v33, v34, v35, v36, v37);
       }
     }
     if ( BYTE1(current[2].klass) )
     {
       passiveList = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
       if ( !passiveList )
-        sub_1BE4D28(0LL, v31);
+        sub_1C13F80(0LL, v31);
       v45 = passiveList->fields._items;
       v46 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
       ++passiveList->fields._version;
       if ( !v45 )
-        sub_1BE4D28(passiveList, v31);
+        sub_1C13F80(passiveList, v31);
       v47 = passiveList->fields._size;
       if ( (unsigned int)v47 < v45->max_length )
         goto LABEL_26;
@@ -501,18 +501,18 @@ LABEL_31:
       System_Collections_Generic_List_object___AddWithResize(
         passiveList,
         current,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
     }
     else
     {
       passiveList = (System_Collections_Generic_List_object__o *)v4->fields.activeList;
       if ( !passiveList )
-        sub_1BE4D28(0LL, v31);
+        sub_1C13F80(0LL, v31);
       v45 = passiveList->fields._items;
       v46 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
       ++passiveList->fields._version;
       if ( !v45 )
-        sub_1BE4D28(passiveList, v31);
+        sub_1C13F80(passiveList, v31);
       v47 = passiveList->fields._size;
       if ( (unsigned int)v47 >= v45->max_length )
         goto LABEL_31;
@@ -520,12 +520,12 @@ LABEL_26:
       v48 = &v45->obj.klass + v47;
       passiveList->fields._size = v47 + 1;
       v48[4] = (Il2CppClass *)current;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v48 + 4), (int64_t)current, v32, v33, v34, v35, v36, v37);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v48 + 4), (int64_t)current, v32, v33, v34, v35, v36, v37);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v80,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   v49 = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -542,7 +542,7 @@ LABEL_26:
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     klass = (Il2CppObject *)this[1].fields.passiveList->klass;
-    syncRoot = (Il2CppObject *)sub_1BE4D18(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    syncRoot = (Il2CppObject *)sub_1C13F70(System_Comparison_BattleBuffData_BuffData__TypeInfo);
     System_Comparison_object____ctor(
       (System_Comparison_T__o *)syncRoot,
       klass,
@@ -550,14 +550,14 @@ LABEL_26:
       0LL);
     v52 = BattleBuffData___c_TypeInfo->static_fields;
     v52->__9__218_1 = (struct System_Comparison_BattleBuffData_BuffData__o *)syncRoot;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v52->__9__218_1, (int64_t)syncRoot, v53, v54, v55, v56, v57, v58);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v52->__9__218_1, (int64_t)syncRoot, v53, v54, v55, v56, v57, v58);
   }
   if ( !v49 )
     goto LABEL_62;
-  System_Collections_Generic_List_object___Sort_56548584(
+  System_Collections_Generic_List_object___Sort_56814736(
     v49,
     (System_Comparison_T__o *)syncRoot,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)v4->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -574,18 +574,18 @@ LABEL_26:
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     v61 = (Il2CppObject *)this[1].fields.passiveList->klass;
-    v60 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    v60 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_BattleBuffData_BuffData__TypeInfo);
     System_Comparison_object____ctor(v60, v61, Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_2__, 0LL);
     v62 = BattleBuffData___c_TypeInfo->static_fields;
     v62->__9__218_2 = (struct System_Comparison_BattleBuffData_BuffData__o *)v60;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v62->__9__218_2, (int64_t)v60, v63, v64, v65, v66, v67, v68);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v62->__9__218_2, (int64_t)v60, v63, v64, v65, v66, v67, v68);
   }
   if ( !activeList )
     goto LABEL_62;
-  System_Collections_Generic_List_object___Sort_56548584(
+  System_Collections_Generic_List_object___Sort_56814736(
     activeList,
     v60,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   v69 = (System_Collections_Generic_List_object__o *)v4->fields.auraBuffList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -602,19 +602,19 @@ LABEL_26:
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     v71 = (Il2CppObject *)this[1].fields.passiveList->klass;
-    monitor = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    monitor = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_BattleBuffData_BuffData__TypeInfo);
     System_Comparison_object____ctor(monitor, v71, Method_BattleBuffData___c__AddGetSkillTypeBuff_b__218_3__, 0LL);
     v72 = BattleBuffData___c_TypeInfo->static_fields;
     v72->__9__218_3 = (struct System_Comparison_BattleBuffData_BuffData__o *)monitor;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v72->__9__218_3, (int64_t)monitor, v73, v74, v75, v76, v77, v78);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v72->__9__218_3, (int64_t)monitor, v73, v74, v75, v76, v77, v78);
   }
   if ( !v69 )
 LABEL_62:
-    sub_1BE4D28(this, addBuffList);
-  System_Collections_Generic_List_object___Sort_56548584(
+    sub_1C13F80(this, addBuffList);
+  System_Collections_Generic_List_object___Sort_56814736(
     v69,
     monitor,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
 }
 
 
@@ -643,10 +643,10 @@ void __fastcall BattleBuffData__AddUpdateWaitIntervalBuff(
   __int64 size; // x10
   Il2CppClass **v14; // x8
 
-  if ( (byte_4B68F15 & 1) == 0 )
+  if ( (byte_4BB6A5A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
-    byte_4B68F15 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
+    byte_4BB6A5A = 1;
   }
   updateWaitIntervalBuffList = (System_Collections_Generic_List_object__o *)this->fields.updateWaitIntervalBuffList;
   if ( !updateWaitIntervalBuffList
@@ -655,7 +655,7 @@ void __fastcall BattleBuffData__AddUpdateWaitIntervalBuff(
         ++updateWaitIntervalBuffList->fields._version,
         !items) )
   {
-    sub_1BE4D28(updateWaitIntervalBuffList, buff);
+    sub_1C13F80(updateWaitIntervalBuffList, buff);
   }
   size = updateWaitIntervalBuffList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -663,14 +663,14 @@ void __fastcall BattleBuffData__AddUpdateWaitIntervalBuff(
     System_Collections_Generic_List_object___AddWithResize(
       updateWaitIntervalBuffList,
       (Il2CppObject *)buff,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     updateWaitIntervalBuffList->fields._size = size + 1;
     v14[4] = (Il2CppClass *)buff;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 4), (int64_t)buff, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 4), (int64_t)buff, (int64_t)method, v3, v4, v5, v6, v7);
   }
 }
 
@@ -689,17 +689,17 @@ System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *__fastcall Ba
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B68FAE & 1) == 0 )
+  if ( (byte_4BB6AF3 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffEnumerable_d__247_TypeInfo, method);
-    byte_4B68FAE = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffEnumerable_d__247_TypeInfo, method);
+    byte_4BB6AF3 = 1;
   }
-  v3 = sub_1BE4D18(BattleBuffData__AllBuffEnumerable_d__247_TypeInfo);
+  v3 = sub_1C13F70(BattleBuffData__AllBuffEnumerable_d__247_TypeInfo);
   BattleBuffData__AllBuffEnumerable_d__247___ctor((BattleBuffData__AllBuffEnumerable_d__247_o *)v3, -2, 0LL);
   if ( !v3 )
-    sub_1BE4D28(v4, v5);
+    sub_1C13F80(v4, v5);
   *(_QWORD *)(v3 + 40) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v3 + 40), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v3 + 40), (int64_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)v3;
 }
 
@@ -720,17 +720,17 @@ System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *__fastcall Ba
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B68FB0 & 1) == 0 )
+  if ( (byte_4BB6AF5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo, isCheckInterval);
-    byte_4B68FB0 = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo, isCheckInterval);
+    byte_4BB6AF5 = 1;
   }
-  v5 = sub_1BE4D18(BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo);
+  v5 = sub_1C13F70(BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo);
   BattleBuffData__AllBuffValidEnumerable_d__249___ctor((BattleBuffData__AllBuffValidEnumerable_d__249_o *)v5, -2, 0LL);
   if ( !v5 )
-    sub_1BE4D28(v6, v7);
+    sub_1C13F80(v6, v7);
   *(_QWORD *)(v5 + 40) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)this, v8, v9, v10, v11, v12, v13);
   *(_BYTE *)(v5 + 49) = isCheckInterval;
   return (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)v5;
 }
@@ -752,20 +752,20 @@ System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *__fastcall Ba
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B68FAF & 1) == 0 )
+  if ( (byte_4BB6AF4 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo, isCheckInterval);
-    byte_4B68FAF = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo, isCheckInterval);
+    byte_4BB6AF4 = 1;
   }
-  v5 = sub_1BE4D18(BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo);
+  v5 = sub_1C13F70(BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo);
   BattleBuffData__AllBuffValidEnumerablePriorActive_d__248___ctor(
     (BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_o *)v5,
     -2,
     0LL);
   if ( !v5 )
-    sub_1BE4D28(v6, v7);
+    sub_1C13F80(v6, v7);
   *(_QWORD *)(v5 + 40) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)this, v8, v9, v10, v11, v12, v13);
   *(_BYTE *)(v5 + 49) = isCheckInterval;
   return (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)v5;
 }
@@ -784,32 +784,32 @@ void __fastcall BattleBuffData__ApplyBuffData(
   __int64 v10; // x1
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B68F98 & 1) == 0 )
+  if ( (byte_4BB6ADD & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, buff);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v8);
-    byte_4B68F98 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, buff);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v8);
+    byte_4BB6ADD = 1;
   }
   memset(&v11, 0, sizeof(v11));
   if ( !*dataList )
-    sub_1BE4D28(0LL, buff);
+    sub_1C13F80(0LL, buff);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)*dataList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v11,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v9 )
       break;
     if ( !v11.fields._current )
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
     if ( !buff )
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
     if ( LODWORD(v11.fields._current[4].klass) == buff->fields.auraEffectId
       && LODWORD(v11.fields._current[1].klass) == buff->fields.buffId )
     {
@@ -818,7 +818,7 @@ void __fastcall BattleBuffData__ApplyBuffData(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -880,53 +880,53 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__BoardTurnProgressing(
   System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v56; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F31 & 1) == 0 )
+  if ( (byte_4BB6A76 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData_checkBuffClear__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__BoardTurnProgressing_b__70_0__, v14);
-    sub_1BE4ACC(&Method_BattleBuffData___c__BoardTurnProgressing_b__70_1__, v15);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v16);
-    byte_4B68F31 = 1;
+    sub_1C13D24(&Method_BattleBuffData_checkBuffClear__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__BoardTurnProgressing_b__70_0__, v14);
+    sub_1C13D24(&Method_BattleBuffData___c__BoardTurnProgressing_b__70_1__, v15);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v16);
+    byte_4BB6A76 = 1;
   }
   memset(&v56, 0, sizeof(v56));
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   passiveList = this->fields.passiveList;
   if ( !passiveList )
     goto LABEL_35;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v55,
     (System_Collections_Generic_List_object__o *)passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v56 = v55;
   while ( 1 )
   {
     v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v56,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v20 )
       break;
     if ( !v56.fields._current )
-      sub_1BE4D28(v20, v21);
+      sub_1C13F80(v20, v21);
     if ( LOBYTE(v56.fields._current[23].klass) )
       BattleBuffData__ProgressBuffTurn((BattleBuffData_o *)v20, (BattleBuffData_BuffData_o *)v56.fields._current, v22);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v56,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   v23 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   passiveList = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -943,56 +943,56 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__BoardTurnProgressing(
       passiveList = BattleBuffData___c_TypeInfo;
     }
     v25 = (Il2CppObject *)**((_QWORD **)passiveList + 23);
-    v24 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v24 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v24, v25, Method_BattleBuffData___c__BoardTurnProgressing_b__70_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__70_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v24;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__70_0, (int64_t)v24, v27, v28, v29, v30, v31, v32);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__70_0, (int64_t)v24, v27, v28, v29, v30, v31, v32);
   }
   if ( !v23 )
     goto LABEL_35;
   passiveList = System_Collections_Generic_List_object___FindAll(
                   v23,
                   (System_Predicate_T__o *)v24,
-                  (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                  (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v17 )
     goto LABEL_35;
   System_Collections_Generic_List_object___AddRange(
     v17,
     (System_Collections_Generic_IEnumerable_T__o *)passiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v33 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v34 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v34 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v34, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v33 )
     goto LABEL_35;
   System_Collections_Generic_List_object___RemoveAll(
     v33,
     (System_Predicate_T__o *)v34,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   passiveList = this->fields.activeList;
   if ( !passiveList )
     goto LABEL_35;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v55,
     (System_Collections_Generic_List_object__o *)passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v56 = v55;
   while ( 1 )
   {
     v35 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v56,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v35 )
       break;
     if ( !v56.fields._current )
-      sub_1BE4D28(v35, v36);
+      sub_1C13F80(v35, v36);
     if ( LOBYTE(v56.fields._current[23].klass) )
       BattleBuffData__ProgressBuffTurn((BattleBuffData_o *)v35, (BattleBuffData_BuffData_o *)v56.fields._current, v37);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v56,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   passiveList = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -1009,33 +1009,33 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__BoardTurnProgressing(
       passiveList = BattleBuffData___c_TypeInfo;
     }
     v40 = (Il2CppObject *)**((_QWORD **)passiveList + 23);
-    v39 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v39 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v39, v40, Method_BattleBuffData___c__BoardTurnProgressing_b__70_1__, 0LL);
     v41 = BattleBuffData___c_TypeInfo->static_fields;
     v41->__9__70_1 = (struct System_Predicate_BattleBuffData_BuffData__o *)v39;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v41->__9__70_1, (int64_t)v39, v42, v43, v44, v45, v46, v47);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v41->__9__70_1, (int64_t)v39, v42, v43, v44, v45, v46, v47);
   }
   if ( !activeList
     || (All = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                activeList,
                                                                (System_Predicate_T__o *)v39,
-                                                               (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__),
+                                                               (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__),
         System_Collections_Generic_List_object___AddRange(
           v17,
           All,
-          (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__),
+          (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__),
         v49 = (System_Collections_Generic_List_object__o *)this->fields.activeList,
-        v50 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        v50 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(v50, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL),
         !v49) )
   {
 LABEL_35:
-    sub_1BE4D28(passiveList, v18);
+    sub_1C13F80(passiveList, v18);
   }
   System_Collections_Generic_List_object___RemoveAll(
     v49,
     (System_Predicate_T__o *)v50,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   v52 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__removeLinkageBuff(
                                                          this,
                                                          (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v17,
@@ -1044,14 +1044,14 @@ LABEL_35:
   System_Collections_Generic_List_object___AddRange(
     v17,
     v52,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v17,
     v53);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v17,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -1090,17 +1090,17 @@ bool __fastcall BattleBuffData__CancelExtendingLife(BattleBuffData_o *this, cons
   FollowerInfo_o *v33; // x6
   PartyListViewItem_o *v34; // x7
 
-  if ( (byte_4B68F34 & 1) == 0 )
+  if ( (byte_4BB6A79 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v3);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v4);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v5);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__CancelExtendingLife_b__73_0__, v7);
-    sub_1BE4ACC(&Method_BattleBuffData___c__CancelExtendingLife_b__73_1__, v8);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v9);
-    byte_4B68F34 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v3);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v4);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v5);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__CancelExtendingLife_b__73_0__, v7);
+    sub_1C13D24(&Method_BattleBuffData___c__CancelExtendingLife_b__73_1__, v8);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v9);
+    byte_4BB6A79 = 1;
   }
   v10 = BattleBuffData__AllBuffEnumerable(this, method);
   v11 = BattleBuffData___c_TypeInfo;
@@ -1119,11 +1119,11 @@ bool __fastcall BattleBuffData__CancelExtendingLife(BattleBuffData_o *this, cons
       v11 = BattleBuffData___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__73_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    _9__73_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__73_0, v14, Method_BattleBuffData___c__CancelExtendingLife_b__73_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__73_0 = (struct System_Func_BattleBuffData_BuffData__bool__o *)_9__73_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__73_0,
       (int64_t)_9__73_0,
       v16,
@@ -1136,10 +1136,10 @@ bool __fastcall BattleBuffData__CancelExtendingLife(BattleBuffData_o *this, cons
   v22 = System_Linq_Enumerable__Where_object_(
           v12,
           (System_Func_TSource__bool__o *)_9__73_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   v23 = System_Linq_Enumerable__ToArray_object_(
           v22,
-          (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+          (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
   v24 = BattleBuffData___c_TypeInfo;
   v25 = (System_Collections_Generic_IEnumerable_T__o *)v23;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -1156,16 +1156,16 @@ bool __fastcall BattleBuffData__CancelExtendingLife(BattleBuffData_o *this, cons
       v24 = BattleBuffData___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v24->static_fields->__9;
-    _9__73_1 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+    _9__73_1 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_object____ctor(_9__73_1, v27, Method_BattleBuffData___c__CancelExtendingLife_b__73_1__, 0LL);
     v28 = BattleBuffData___c_TypeInfo->static_fields;
     v28->__9__73_1 = (struct System_Action_BattleBuffData_BuffData__o *)_9__73_1;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v28->__9__73_1, (int64_t)_9__73_1, v29, v30, v31, v32, v33, v34);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v28->__9__73_1, (int64_t)_9__73_1, v29, v30, v31, v32, v33, v34);
   }
   BasicHelper__ForEach_object_(
     v25,
     (System_Action_T__o *)_9__73_1,
-    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v25, 0LL);
 }
 
@@ -1219,32 +1219,32 @@ bool __fastcall BattleBuffData__ChangeBuffState(
   PartyListViewItem_o *v50; // x7
   System_Action_object__o *v51; // x21
 
-  if ( (byte_4B68F6D & 1) == 0 )
+  if ( (byte_4BB6AB2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&now);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v15);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass149_0__ChangeBuffState_b__0__, v16);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass149_0_TypeInfo, v17);
-    byte_4B68F6D = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&now);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v15);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass149_0__ChangeBuffState_b__0__, v16);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass149_0_TypeInfo, v17);
+    byte_4BB6AB2 = 1;
   }
-  v18 = sub_1BE4D18(BattleBuffData___c__DisplayClass149_0_TypeInfo);
+  v18 = sub_1C13F70(BattleBuffData___c__DisplayClass149_0_TypeInfo);
   BattleBuffData___c__DisplayClass149_0___ctor((BattleBuffData___c__DisplayClass149_0_o *)v18, 0LL);
   if ( !v18 )
     goto LABEL_7;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
   *(_DWORD *)(v18 + 24) = now;
   *(_DWORD *)(v18 + 28) = max;
   *(_QWORD *)(v18 + 32) = servantIndv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 32), (int64_t)servantIndv, v27, v28, v29, v30, v31, v32);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 32), (int64_t)servantIndv, v27, v28, v29, v30, v31, v32);
   *(_QWORD *)(v18 + 40) = buffIndv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 40), (int64_t)buffIndv, v33, v34, v35, v36, v37, v38);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 40), (int64_t)buffIndv, v33, v34, v35, v36, v37, v38);
   *(_QWORD *)(v18 + 48) = fieldIndiv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 48), (int64_t)fieldIndiv, v39, v40, v41, v42, v43, v44);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 48), (int64_t)fieldIndiv, v39, v40, v41, v42, v43, v44);
   *(_QWORD *)(v18 + 56) = canSubStateBuffIndv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 56), (int64_t)canSubStateBuffIndv, v45, v46, v47, v48, v49, v50);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 56), (int64_t)canSubStateBuffIndv, v45, v46, v47, v48, v49, v50);
   *(_BYTE *)(v18 + 64) = 0;
-  v51 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v51 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v51,
     (Il2CppObject *)v18,
@@ -1255,16 +1255,16 @@ bool __fastcall BattleBuffData__ChangeBuffState(
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v51,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList) == 0LL) )
   {
 LABEL_7:
-    sub_1BE4D28(passiveList, v20);
+    sub_1C13F80(passiveList, v20);
   }
   System_Collections_Generic_List_object___ForEach(
     passiveList,
     (System_Action_T__o *)v51,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
   return *(_BYTE *)(v18 + 64);
 }
 
@@ -1294,18 +1294,18 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CheckAndGetFixedBuffAr
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4B68F9F & 1) == 0 )
+  if ( (byte_4BB6AE4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkBuffArray);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v6);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
-    byte_4B68F9F = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkBuffArray);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v6);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
+    byte_4BB6AE4 = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !checkBuffArray )
     goto LABEL_17;
   v12 = *(_QWORD *)&checkBuffArray->max_length;
@@ -1315,7 +1315,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CheckAndGetFixedBuffAr
     do
     {
       if ( v13 >= (unsigned int)v12 )
-        sub_1BE4D30(IsUnfix, v10);
+        sub_1C13F88(IsUnfix, v10);
       v14 = checkBuffArray->m_Items[v13];
       IsUnfix = BattleBuffData__IsUnfix(this, v14, v11);
       if ( !IsUnfix )
@@ -1333,14 +1333,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CheckAndGetFixedBuffAr
           System_Collections_Generic_List_object___AddWithResize(
             v8,
             (Il2CppObject *)v14,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
           v23 = &items->obj.klass + size;
           v8->fields._size = size + 1;
           v23[4] = (Il2CppClass *)v14;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)v14, (int64_t)v11, v15, v16, v17, v18, v19);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)v14, (int64_t)v11, v15, v16, v17, v18, v19);
         }
       }
       LODWORD(v12) = checkBuffArray->max_length;
@@ -1349,10 +1349,10 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CheckAndGetFixedBuffAr
   }
   if ( !v8 )
 LABEL_17:
-    sub_1BE4D28(IsUnfix, v10);
+    sub_1C13F80(IsUnfix, v10);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v8,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -1382,53 +1382,53 @@ void __fastcall BattleBuffData__CheckAndUpdateFieldIndividualityBuff(
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4B68F13 & 1) == 0 )
+  if ( (byte_4BB6A58 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffEntity_TypeInfo, buffList);
-    sub_1BE4ACC(&BuffList_TypeInfo, v6);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v7);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4B68F13 = 1;
+    sub_1C13D24(&BuffEntity_TypeInfo, buffList);
+    sub_1C13D24(&BuffList_TypeInfo, v6);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v7);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_4BB6A58 = 1;
   }
   memset(&v24, 0, sizeof(v24));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
-  v17 = (BuffEntity_o *)sub_1BE4D18(BuffEntity_TypeInfo);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
+  v17 = (BuffEntity_o *)sub_1C13F70(BuffEntity_TypeInfo);
   BuffEntity___ctor(v17, 0LL);
   if ( !buffList )
     goto LABEL_20;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_object__o *)buffList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v18 = 0;
   v24 = v23;
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v19 )
       break;
     if ( !v24.fields._current )
-      sub_1BE4D28(v19, v20);
+      sub_1C13F80(v19, v20);
     if ( !BYTE1(v24.fields._current[28].klass) )
     {
       if ( !MasterData_object )
-        sub_1BE4D28(v19, v20);
+        sub_1C13F80(v19, v20);
       Entity = DataMasterBase_object__object__int___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                  (int32_t)v24.fields._current[1].klass,
-                 (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                 (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
       if ( Entity )
       {
         klass_high = HIDWORD(Entity[1].klass);
@@ -1440,7 +1440,7 @@ void __fastcall BattleBuffData__CheckAndUpdateFieldIndividualityBuff(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( (v18 & 1) != 0 )
   {
     if ( logic )
@@ -1449,7 +1449,7 @@ void __fastcall BattleBuffData__CheckAndUpdateFieldIndividualityBuff(
       return;
     }
 LABEL_20:
-    sub_1BE4D28(Instance, v15);
+    sub_1C13F80(Instance, v15);
   }
 }
 
@@ -1490,45 +1490,45 @@ bool __fastcall BattleBuffData__CheckBuffGroup(
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F46 & 1) == 0 )
+  if ( (byte_4BB6A8B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_int____77161864, buffList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass95_0__CheckBuffGroup_b__0__, v14);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass95_0_TypeInfo, v15);
-    byte_4B68F46 = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, buffList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass95_0__CheckBuffGroup_b__0__, v14);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass95_0_TypeInfo, v15);
+    byte_4BB6A8B = 1;
   }
   memset(&v37, 0, sizeof(v37));
-  v16 = sub_1BE4D18(BattleBuffData___c__DisplayClass95_0_TypeInfo);
+  v16 = sub_1C13F70(BattleBuffData___c__DisplayClass95_0_TypeInfo);
   BattleBuffData___c__DisplayClass95_0___ctor((BattleBuffData___c__DisplayClass95_0_o *)v16, 0LL);
   if ( !v16 || (*(_DWORD *)(v16 + 16) = attachTarget, !buffList) )
-    sub_1BE4D28(v17, v18);
+    sub_1C13F80(v17, v18);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v36,
     (System_Collections_Generic_List_object__o *)buffList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v19 = (System_Func_int__bool__o **)(v16 + 24);
   v37 = v36;
   while ( 1 )
   {
     v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v37,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     v22 = v20;
     if ( !v20 )
       break;
     current = v37.fields._current;
     if ( !v37.fields._current )
-      sub_1BE4D28(v20, v21);
+      sub_1C13F80(v20, v21);
     if ( !BYTE1(v37.fields._current[28].klass) )
     {
       buffMst = BattleBuffData__get_buffMst(this, v21);
       if ( !buffMst )
-        sub_1BE4D28(0LL, v25);
+        sub_1C13F80(0LL, v25);
       if ( BuffMaster__GetBuffGroup(buffMst, (int32_t)current[1].klass, -1, 0LL) == groupId )
       {
         monitor = (System_Int32_array *)current[13].monitor;
@@ -1537,19 +1537,19 @@ bool __fastcall BattleBuffData__CheckBuffGroup(
           v27 = *v19;
           if ( !*v19 )
           {
-            v27 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+            v27 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
             System_Func_int__bool____ctor(
               v27,
               (Il2CppObject *)v16,
               Method_BattleBuffData___c__DisplayClass95_0__CheckBuffGroup_b__0__,
               0LL);
             *v19 = v27;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 24), (int64_t)v27, v28, v29, v30, v31, v32, v33);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 24), (int64_t)v27, v28, v29, v30, v31, v32, v33);
           }
-          if ( BasicHelper__Any_int__49561084(
+          if ( BasicHelper__Any_int__49783128(
                  monitor,
                  (System_Func_T__bool__o *)v27,
-                 (const MethodInfo_2F43DFC *)Method_BasicHelper_Any_int____77161864) )
+                 (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256) )
           {
             v34 = 5;
             goto LABEL_17;
@@ -1562,7 +1562,7 @@ bool __fastcall BattleBuffData__CheckBuffGroup(
 LABEL_17:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v37,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return v22 && v34 == 5;
 }
 
@@ -1599,17 +1599,17 @@ bool __fastcall BattleBuffData__CheckBuffRateTypeOrIndiv(
   int32_t v32; // w8
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B68F77 & 1) == 0 )
+  if ( (byte_4BB6ABC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, buffData);
-    sub_1BE4ACC(&int___TypeInfo, v11);
-    sub_1BE4ACC(&BuffList_TYPE___TypeInfo, v12);
-    byte_4B68F77 = 1;
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, buffData);
+    sub_1C13D24(&int___TypeInfo, v11);
+    sub_1C13D24(&BuffList_TYPE___TypeInfo, v12);
+    byte_4BB6ABC = 1;
   }
   entity = 0LL;
   *value = 0;
   *maxBuffRate = upperParam;
-  BuffList = sub_1BE4B74(int___TypeInfo, 2LL);
+  BuffList = sub_1C13DCC(int___TypeInfo, 2LL);
   if ( !BuffList )
     goto LABEL_39;
   v16 = *(_DWORD *)(BuffList + 24);
@@ -1622,7 +1622,7 @@ bool __fastcall BattleBuffData__CheckBuffRateTypeOrIndiv(
   *(_DWORD *)(BuffList + 36) = 161;
   if ( !BattleBuffData__CheckBuffType(this, (System_Int32_array *)BuffList, buffData, v15) )
   {
-    BuffList = sub_1BE4B74(BuffList_TYPE___TypeInfo, 1LL);
+    BuffList = sub_1C13DCC(BuffList_TYPE___TypeInfo, 1LL);
     if ( BuffList )
     {
       v14 = (BuffList_TYPE_array *)BuffList;
@@ -1672,7 +1672,7 @@ bool __fastcall BattleBuffData__CheckBuffRateTypeOrIndiv(
                          (DataMasterBase_TMaster__TEntity__PKType__o *)BuffList,
                          &entity,
                          (*v25)->fields.buffId,
-                         (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                         (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
             if ( (BuffList & 1) != 0 )
             {
               BuffList = (__int64)entity;
@@ -1725,13 +1725,13 @@ LABEL_30:
               return v22;
           }
 LABEL_40:
-          sub_1BE4D30(BuffList, v14);
+          sub_1C13F88(BuffList, v14);
         }
         return 0;
       }
     }
 LABEL_39:
-    sub_1BE4D28(BuffList, v14);
+    sub_1C13F80(BuffList, v14);
   }
   return 0;
 }
@@ -1752,16 +1752,16 @@ bool __fastcall BattleBuffData__CheckBuffType(
   const MethodInfo *v13; // x1
   System_Func_int__bool__o *v14; // x20
 
-  if ( (byte_4B68F8A & 1) == 0 )
+  if ( (byte_4BB6ACF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_int____77161864, types);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v7);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass194_0__CheckBuffType_b__0__, v9);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass194_0_TypeInfo, v10);
-    byte_4B68F8A = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, types);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v7);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass194_0__CheckBuffType_b__0__, v9);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass194_0_TypeInfo, v10);
+    byte_4BB6ACF = 1;
   }
-  v11 = sub_1BE4D18(BattleBuffData___c__DisplayClass194_0_TypeInfo);
+  v11 = sub_1C13F70(BattleBuffData___c__DisplayClass194_0_TypeInfo);
   BattleBuffData___c__DisplayClass194_0___ctor((BattleBuffData___c__DisplayClass194_0_o *)v11, 0LL);
   if ( !buffData )
     goto LABEL_10;
@@ -1770,23 +1770,23 @@ bool __fastcall BattleBuffData__CheckBuffType(
   buffMst = (DataMasterBase_TMaster__TEntity__PKType__o *)BattleBuffData__get_buffMst(this, v13);
   if ( !v11 || !buffMst )
 LABEL_10:
-    sub_1BE4D28(buffMst, v13);
+    sub_1C13F80(buffMst, v13);
   if ( DataMasterBase_object__object__int___TryGetEntity(
          buffMst,
          (Il2CppObject **)(v11 + 16),
          buffData->fields.buffId,
-         (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+         (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
   {
-    v14 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+    v14 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v14,
       (Il2CppObject *)v11,
       Method_BattleBuffData___c__DisplayClass194_0__CheckBuffType_b__0__,
       0LL);
-    return BasicHelper__Any_int__49561084(
+    return BasicHelper__Any_int__49783128(
              types,
              (System_Func_T__bool__o *)v14,
-             (const MethodInfo_2F43DFC *)Method_BasicHelper_Any_int____77161864);
+             (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256);
   }
   return 0;
 }
@@ -1804,7 +1804,7 @@ bool __fastcall BattleBuffData__CheckCommandCardBuffActive(
   bool result; // w0
 
   if ( !buff )
-    sub_1BE4D28(this, commandData);
+    sub_1C13F80(this, commandData);
   if ( !buff->fields._isRemove && BattleBuffData_BuffData__isCommandCardBuff(buff, 0LL) )
   {
     buff->fields.isActiveCC = 0;
@@ -1872,29 +1872,29 @@ bool __fastcall BattleBuffData__CheckDisableForciblyAddStateBuffAvoid(
   Il2CppObject *entity; // [xsp+20h] [xbp-70h] BYREF
   int32_t plusMinus; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68FBB & 1) == 0 )
+  if ( (byte_4BB6B00 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, selfIndiv);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, v7);
-    sub_1BE4ACC(&DataManager_TypeInfo, v8);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v9);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v13);
-    byte_4B68FBB = 1;
+    sub_1C13D24(&BuffList_TypeInfo, selfIndiv);
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, v7);
+    sub_1C13D24(&DataManager_TypeInfo, v8);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v9);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v13);
+    byte_4BB6B00 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   plusMinus = 0;
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(38, 0LL, 0LL);
   v17 = BattleBuffData__AllBuffValidEnumerable(this, 0, v16);
   if ( !v17 )
-    sub_1BE4D28(0LL, v18);
+    sub_1C13F80(0LL, v18);
   klass = v17->klass;
   v20 = v17;
   v21 = *(unsigned __int16 *)(&v17->klass->_2.bitflags2 + 3);
@@ -1913,13 +1913,13 @@ bool __fastcall BattleBuffData__CheckDisableForciblyAddStateBuffAvoid(
   else
   {
 LABEL_12:
-    p_method = sub_1C36AAC(v17, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v17, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v20,
           *(_QWORD *)(p_method + 8));
   if ( !v25 )
-    sub_1BE4D28(0LL, v24);
+    sub_1C13F80(0LL, v24);
   while ( 1 )
   {
     v26 = *(_QWORD *)v25;
@@ -1939,7 +1939,7 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v29 = sub_1C36AAC(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v29 = sub_1C65D04(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8));
     if ( (v30 & 1) == 0 )
@@ -1961,12 +1961,12 @@ LABEL_19:
     else
     {
 LABEL_26:
-      v34 = sub_1C36AAC(v25, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v34 = sub_1C65D04(v25, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v35 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v25, *(_QWORD *)(v34 + 8));
     v37 = v35;
     if ( !v35 )
-      sub_1BE4D28(0LL, v36);
+      sub_1C13F80(0LL, v36);
     if ( (!BattleBuffData_BuffData__isCommandCodeBuff(v35, 0LL) || BattleBuffData_BuffData__isActiveCommandCode(
                                                                      v37,
                                                                      0LL))
@@ -1976,17 +1976,17 @@ LABEL_26:
       if ( !IsCommandAssistBuff || (IsCommandAssistBuff = BattleBuffData_BuffData__IsActiveCommandAssist(v37, 0LL)) )
       {
         if ( !Master_object )
-          sub_1BE4D28(IsCommandAssistBuff, v39);
+          sub_1C13F80(IsCommandAssistBuff, v39);
         if ( DataMasterBase_object__object__int___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                &entity,
                v37->fields.buffId,
-               (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+               (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
         {
           if ( !entity )
-            sub_1BE4D28(0LL, v40);
+            sub_1C13F80(0LL, v40);
           if ( BuffEntity__IsDisableForciblyAddState((BuffEntity_o *)entity, 0LL)
-            && BattleBuffData__checkIndiviuality_43459960(
+            && BattleBuffData__checkIndiviuality_43664072(
                  this,
                  ActInfo,
                  v37,
@@ -2025,7 +2025,7 @@ LABEL_43:
   else
   {
 LABEL_47:
-    v45 = sub_1C36AAC(v25, System_IDisposable_TypeInfo, 0LL);
+    v45 = sub_1C65D04(v25, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v45)(v25, *(_QWORD *)(v45 + 8));
   return v30 & 1;
@@ -2048,18 +2048,18 @@ void __fastcall BattleBuffData__CheckDummyBuffData(
   int activeList_high; // w26
   bool v13; // nf
 
-  if ( (byte_4B68F24 & 1) == 0 )
+  if ( (byte_4BB6A69 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__RemoveAt__, reList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Count__, v4);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__RemoveAt__, reList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Count__, v4);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__,
                                  v5);
-    byte_4B68F24 = 1;
+    byte_4BB6A69 = 1;
   }
   if ( !reList )
 LABEL_24:
-    sub_1BE4D28(this, reList);
+    sub_1C13F80(this, reList);
   size = reList->fields._size;
   v7 = size - 1;
   if ( size - 1 >= 0 )
@@ -2072,7 +2072,7 @@ LABEL_24:
         this = (BattleBuffData_o *)System_Collections_Generic_List_object___get_Item(
                                      (System_Collections_Generic_List_object__o *)reList,
                                      v7,
-                                     (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
+                                     (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
         if ( !this )
           goto LABEL_24;
         if ( !LOBYTE(this->fields.conditionalAuraBuff) )
@@ -2091,7 +2091,7 @@ LABEL_24:
                   this = (BattleBuffData_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)reList,
                                                v10,
-                                               (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
+                                               (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
                   if ( !this )
                     goto LABEL_24;
                   if ( LOBYTE(this->fields.conditionalAuraBuff) )
@@ -2099,21 +2099,21 @@ LABEL_24:
                     this = (BattleBuffData_o *)System_Collections_Generic_List_object___get_Item(
                                                  (System_Collections_Generic_List_object__o *)reList,
                                                  v7,
-                                                 (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
+                                                 (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
                     if ( !this )
                       goto LABEL_24;
                     activeList_high = HIDWORD(this->fields.activeList);
                     this = (BattleBuffData_o *)System_Collections_Generic_List_object___get_Item(
                                                  (System_Collections_Generic_List_object__o *)reList,
                                                  v10,
-                                                 (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
+                                                 (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__get_Item__);
                     if ( !this )
                       goto LABEL_24;
                     if ( activeList_high == HIDWORD(this->fields.activeList) )
                       System_Collections_Generic_List_object___RemoveAt(
                         (System_Collections_Generic_List_object__o *)reList,
                         v10,
-                        (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__RemoveAt__);
+                        (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__RemoveAt__);
                   }
                 }
               }
@@ -2170,42 +2170,42 @@ BattleServantData_array *__fastcall BattleBuffData__CheckIndivSvtDataList(
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F49 & 1) == 0 )
+  if ( (byte_4BB6A8E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__, tvals);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__, v8);
-    sub_1BE4ACC(&Individuality_TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleServantData__Add__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleServantData__ToArray__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleServantData___ctor__, v13);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleServantData__TypeInfo, v14);
-    byte_4B68F49 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__, tvals);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleServantData__get_Current__, v8);
+    sub_1C13D24(&Individuality_TypeInfo, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleServantData__Add__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleServantData__ToArray__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleServantData___ctor__, v13);
+    sub_1C13D24(&System_Collections_Generic_List_BattleServantData__TypeInfo, v14);
+    byte_4BB6A8E = 1;
   }
   memset(&v37, 0, sizeof(v37));
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   if ( !svtDataList )
     goto LABEL_20;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v36,
     (System_Collections_Generic_List_object__o *)svtDataList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
   v18 = isIncludeIgnoreIndiv;
   v37 = v36;
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v37,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__MoveNext__);
     if ( !v19 )
       break;
     current = v37.fields._current;
     if ( !v37.fields._current )
-      sub_1BE4D28(v19, v20);
+      sub_1C13F80(v19, v20);
     ConcatServantAndBuffIndividualityies = BattleServantData__getConcatServantAndBuffIndividualityies(
                                              (BattleServantData_o *)v37.fields._current,
                                              0LL,
@@ -2219,38 +2219,38 @@ BattleServantData_array *__fastcall BattleBuffData__CheckIndivSvtDataList(
     if ( v23 )
     {
       if ( !v15 )
-        sub_1BE4D28(v23, v24);
+        sub_1C13F80(v23, v24);
       items = v15->fields._items;
       v32 = Method_System_Collections_Generic_List_BattleServantData__Add__;
       ++v15->fields._version;
       if ( !items )
-        sub_1BE4D28(v23, v24);
+        sub_1C13F80(v23, v24);
       size = v15->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v15,
           current,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
       }
       else
       {
         v34 = &items->obj.klass + size;
         v15->fields._size = size + 1;
         v34[4] = (Il2CppClass *)current;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v34 + 4), (int64_t)current, v25, v26, v27, v28, v29, v30);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v34 + 4), (int64_t)current, v25, v26, v27, v28, v29, v30);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v37,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantData__Dispose__);
   if ( !v15 )
 LABEL_20:
-    sub_1BE4D28(v16, v17);
+    sub_1C13F80(v16, v17);
   return (BattleServantData_array *)System_Collections_Generic_List_object___ToArray(
                                       v15,
-                                      (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleServantData__ToArray__);
+                                      (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleServantData__ToArray__);
 }
 
 
@@ -2283,16 +2283,16 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndiv(
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = buffData;
-  if ( (byte_4B68FB9 & 1) == 0 )
+  if ( (byte_4BB6AFE & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_TypeInfo, method);
-    sub_1BE4ACC(&BuffList_TypeInfo, v3);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, v4);
-    sub_1BE4ACC(&DataManager_TypeInfo, v5);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v6);
-    sub_1BE4ACC(&Individuality_TypeInfo, v7);
-    buffData = (BattleBuffData_BuffData_o *)sub_1BE4ACC(&int___TypeInfo, v8);
-    byte_4B68FB9 = 1;
+    sub_1C13D24(&BattleBuffData_TypeInfo, method);
+    sub_1C13D24(&BuffList_TypeInfo, v3);
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, v4);
+    sub_1C13D24(&DataManager_TypeInfo, v5);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v6);
+    sub_1C13D24(&Individuality_TypeInfo, v7);
+    buffData = (BattleBuffData_BuffData_o *)sub_1C13D24(&int___TypeInfo, v8);
+    byte_4BB6AFE = 1;
   }
   entity = 0LL;
   InvalidSacrificeIndividualities = (__int64)BattleBuffData__GetInvalidSacrificeIndividualities((const MethodInfo *)buffData);
@@ -2309,10 +2309,10 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndiv(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
     static_fields = BattleBuffData_TypeInfo->static_fields;
     static_fields->s_buffMst = (struct BuffMaster_o *)Master_object;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->s_buffMst,
       (int64_t)Master_object,
       v16,
@@ -2329,7 +2329,7 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndiv(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)InvalidSacrificeIndividualities,
                                       &entity,
                                       v2->fields.buffId,
-                                      (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                      (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
   if ( (InvalidSacrificeIndividualities & 1) == 0 )
     return 0;
   if ( !entity )
@@ -2348,13 +2348,13 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndiv(
     if ( !BuffList__CheckType(41, v23, 0LL) )
       return 0;
   }
-  InvalidSacrificeIndividualities = sub_1BE4B74(int___TypeInfo, 1LL);
+  InvalidSacrificeIndividualities = sub_1C13DCC(int___TypeInfo, 1LL);
   if ( !InvalidSacrificeIndividualities )
 LABEL_28:
-    sub_1BE4D28(InvalidSacrificeIndividualities, v10);
+    sub_1C13F80(InvalidSacrificeIndividualities, v10);
   v24 = (System_Int32_array *)InvalidSacrificeIndividualities;
   if ( !*(_DWORD *)(InvalidSacrificeIndividualities + 24) )
-    sub_1BE4D30(InvalidSacrificeIndividualities, v10);
+    sub_1C13F88(InvalidSacrificeIndividualities, v10);
   *(_DWORD *)(InvalidSacrificeIndividualities + 32) = v2->fields.param;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -2376,28 +2376,28 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndivArray(
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = (System_Collections_Generic_List_object__o *)buffDataList;
-  if ( (byte_4B68FBA & 1) == 0 )
+  if ( (byte_4BB6AFF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
-    buffDataList = (System_Collections_Generic_List_BattleBuffData_BuffData__o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
+    buffDataList = (System_Collections_Generic_List_BattleBuffData_BuffData__o *)sub_1C13D24(
                                                                                    &Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__,
                                                                                    v5);
-    byte_4B68FBA = 1;
+    byte_4BB6AFF = 1;
   }
   memset(&v10, 0, sizeof(v10));
   if ( !v2 )
-    sub_1BE4D28(buffDataList, method);
+    sub_1C13F80(buffDataList, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     v2,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v10,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v7 )
       break;
     if ( BattleBuffData__CheckInvalidSacrificeIndiv((BattleBuffData_BuffData_o *)v10.fields._current, v6) )
@@ -2410,7 +2410,7 @@ bool __fastcall BattleBuffData__CheckInvalidSacrificeIndivArray(
 LABEL_9:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v10,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return v7 && v8 == 4;
 }
 
@@ -2481,37 +2481,37 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
   System_Collections_Generic_List_Enumerator_object__o v66; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F30 & 1) == 0 )
+  if ( (byte_4BB6A75 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData_checkBuffClear__, logic);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v17);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v18);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v19);
-    sub_1BE4ACC(&Method_BattleBuffData___c__CommonTurnProgressing_b__69_0__, v20);
-    sub_1BE4ACC(&Method_BattleBuffData___c__CommonTurnProgressing_b__69_1__, v21);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v22);
-    byte_4B68F30 = 1;
+    sub_1C13D24(&Method_BattleBuffData_checkBuffClear__, logic);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v17);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v18);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v19);
+    sub_1C13D24(&Method_BattleBuffData___c__CommonTurnProgressing_b__69_0__, v20);
+    sub_1C13D24(&Method_BattleBuffData___c__CommonTurnProgressing_b__69_1__, v21);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v22);
+    byte_4BB6A75 = 1;
   }
   memset(&i, 0, sizeof(i));
-  v23 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v23,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   passiveList = this->fields.passiveList;
   if ( !passiveList )
     goto LABEL_44;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v66,
     (System_Collections_Generic_List_object__o *)passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   for ( i = v66;
         ;
         ((void (__fastcall *)(struct BaseBattleEvent_o *, BattleBuffData_o *, Il2CppObject *, bool, _QWORD, Il2CppMethodPointer))battleEvent->klass->vtable._32_ProgressBuffTurn.method)(
@@ -2524,21 +2524,21 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
   {
     v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v26 )
       break;
     if ( !logic )
-      sub_1BE4D28(v26, v27);
+      sub_1C13F80(v26, v27);
     data = logic->fields.data;
     if ( !data )
-      sub_1BE4D28(v26, v27);
+      sub_1C13F80(v26, v27);
     battleEvent = data->fields.battleEvent;
     if ( !battleEvent )
-      sub_1BE4D28(0LL, v27);
+      sub_1C13F80(0LL, v27);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   passiveList = BattleBuffData___c_TypeInfo;
   v30 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -2555,40 +2555,40 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
       passiveList = BattleBuffData___c_TypeInfo;
     }
     v32 = (Il2CppObject *)**((_QWORD **)passiveList + 23);
-    v31 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v31 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v31, v32, Method_BattleBuffData___c__CommonTurnProgressing_b__69_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__69_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v31;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__69_0, (int64_t)v31, v34, v35, v36, v37, v38, v39);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__69_0, (int64_t)v31, v34, v35, v36, v37, v38, v39);
   }
   if ( !v30 )
     goto LABEL_44;
   passiveList = System_Collections_Generic_List_object___FindAll(
                   v30,
                   (System_Predicate_T__o *)v31,
-                  (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                  (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v23 )
     goto LABEL_44;
   System_Collections_Generic_List_object___AddRange(
     v23,
     (System_Collections_Generic_IEnumerable_T__o *)passiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v40 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v41 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v41 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v41, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v40 )
     goto LABEL_44;
   System_Collections_Generic_List_object___RemoveAll(
     v40,
     (System_Predicate_T__o *)v41,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   passiveList = this->fields.activeList;
   if ( !passiveList )
     goto LABEL_44;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v66,
     (System_Collections_Generic_List_object__o *)passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   for ( i = v66;
         ;
         ((void (__fastcall *)(struct BaseBattleEvent_o *, BattleBuffData_o *, Il2CppObject *, bool, _QWORD, Il2CppMethodPointer))v45->klass->vtable._32_ProgressBuffTurn.method)(
@@ -2601,21 +2601,21 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
   {
     v42 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v42 )
       break;
     if ( !logic )
-      sub_1BE4D28(v42, v43);
+      sub_1C13F80(v42, v43);
     v44 = logic->fields.data;
     if ( !v44 )
-      sub_1BE4D28(v42, v43);
+      sub_1C13F80(v42, v43);
     v45 = v44->fields.battleEvent;
     if ( !v45 )
-      sub_1BE4D28(0LL, v43);
+      sub_1C13F80(0LL, v43);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   passiveList = BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -2632,31 +2632,31 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
       passiveList = BattleBuffData___c_TypeInfo;
     }
     v48 = (Il2CppObject *)**((_QWORD **)passiveList + 23);
-    v47 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v47 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v47, v48, Method_BattleBuffData___c__CommonTurnProgressing_b__69_1__, 0LL);
     v49 = BattleBuffData___c_TypeInfo->static_fields;
     v49->__9__69_1 = (struct System_Predicate_BattleBuffData_BuffData__o *)v47;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v49->__9__69_1, (int64_t)v47, v50, v51, v52, v53, v54, v55);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v49->__9__69_1, (int64_t)v47, v50, v51, v52, v53, v54, v55);
   }
   if ( !activeList )
     goto LABEL_44;
   All = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          activeList,
                                                          (System_Predicate_T__o *)v47,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   System_Collections_Generic_List_object___AddRange(
     v23,
     All,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v57 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-  v58 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v58 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v58, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v57 )
     goto LABEL_44;
   System_Collections_Generic_List_object___RemoveAll(
     v57,
     (System_Predicate_T__o *)v58,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   v60 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__removeLinkageBuff(
                                                          this,
                                                          (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v23,
@@ -2665,7 +2665,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
   System_Collections_Generic_List_object___AddRange(
     v23,
     v60,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v23,
@@ -2685,14 +2685,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__CommonTurnProgressing(
       BattleLogic__updateFieldBuff(logic, 0LL);
       return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                                 v23,
-                                                (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                                (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
     }
 LABEL_44:
-    sub_1BE4D28(passiveList, v24);
+    sub_1C13F80(passiveList, v24);
   }
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v23,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -2749,16 +2749,16 @@ bool __fastcall BattleBuffData__ConfirmationBuff(
   bool isRec; // [xsp+28h] [xbp-68h]
   int32_t plusMinus; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F7C & 1) == 0 )
+  if ( (byte_4BB6AC1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, actInfo);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v17);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v18);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v19);
-    byte_4B68F7C = 1;
+    sub_1C13D24(&System_IDisposable_TypeInfo, actInfo);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v17);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v18);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v19);
+    byte_4BB6AC1 = 1;
   }
   *targetBuff = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)targetBuff,
     0LL,
     (int64_t)selfIndv,
@@ -2770,7 +2770,7 @@ bool __fastcall BattleBuffData__ConfirmationBuff(
   plusMinus = 0;
   v21 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v20);
   if ( !v21 )
-    sub_1BE4D28(0LL, v22);
+    sub_1C13F80(0LL, v22);
   klass = v21->klass;
   v24 = v21;
   v25 = *(unsigned __int16 *)(&v21->klass->_2.bitflags2 + 3);
@@ -2789,13 +2789,13 @@ bool __fastcall BattleBuffData__ConfirmationBuff(
   else
   {
 LABEL_8:
-    p_method = sub_1C36AAC(v21, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v21, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v29 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v24,
           *(_QWORD *)(p_method + 8));
   if ( !v29 )
-    sub_1BE4D28(0LL, v28);
+    sub_1C13F80(0LL, v28);
   isRec = isRect;
   while ( 1 )
   {
@@ -2816,7 +2816,7 @@ LABEL_8:
     else
     {
 LABEL_16:
-      v33 = sub_1C36AAC(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v33 = sub_1C65D04(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v29, *(_QWORD *)(v33 + 8)) & 1) == 0 )
       break;
@@ -2837,19 +2837,19 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v37 = sub_1C36AAC(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v37 = sub_1C65D04(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v38 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v29, *(_QWORD *)(v37 + 8));
     v40 = v38;
     if ( !v38 )
-      sub_1BE4D28(0LL, v39);
+      sub_1C13F80(0LL, v39);
     if ( (!BattleBuffData_BuffData__isCommandCodeBuff(v38, 0LL) || BattleBuffData_BuffData__isActiveCommandCode(
                                                                      v40,
                                                                      0LL))
       && (!BattleBuffData_BuffData__isCommandCardBuff(v40, 0LL) || v40->fields.isActiveCC)
       && (!BattleBuffData_BuffData__IsCommandAssistBuff(v40, 0LL)
        || BattleBuffData_BuffData__IsActiveCommandAssist(v40, 0LL))
-      && BattleBuffData__checkIndiviuality_43459960(
+      && BattleBuffData__checkIndiviuality_43664072(
            this,
            actInfo,
            v40,
@@ -2869,7 +2869,7 @@ LABEL_23:
       && BattleBuffData__checkBuffSuccessful(this, v40, isRec, v41) )
     {
       *targetBuff = v40;
-      sub_1BE4A70((PartyOrganizationUtility_o *)targetBuff, (int64_t)v40, v42, v43, v44, v45, v46, v47);
+      sub_1C13CC8((PartyOrganizationUtility_o *)targetBuff, (int64_t)v40, v42, v43, v44, v45, v46, v47);
       v48 = 1;
       goto LABEL_38;
     }
@@ -2893,7 +2893,7 @@ LABEL_38:
   else
   {
 LABEL_42:
-    v52 = sub_1C36AAC(v29, System_IDisposable_TypeInfo, 0LL);
+    v52 = sub_1C65D04(v29, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v52)(v29, *(_QWORD *)(v52 + 8));
   return v48;
@@ -2917,22 +2917,22 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__CreateDummyBuff(
   struct BattleBuffData_IntervalData_o *intervalData; // x1
   BattleBuffData_BuffData_o *result; // x0
 
-  if ( (byte_4B68F58 & 1) == 0 )
+  if ( (byte_4BB6A9D & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_BuffData_TypeInfo, buff);
-    byte_4B68F58 = 1;
+    sub_1C13D24(&BattleBuffData_BuffData_TypeInfo, buff);
+    byte_4BB6A9D = 1;
   }
-  v4 = sub_1BE4D18(BattleBuffData_BuffData_TypeInfo);
+  v4 = sub_1C13F70(BattleBuffData_BuffData_TypeInfo);
   BattleBuffData_BuffData___ctor((BattleBuffData_BuffData_o *)v4, 0LL);
   if ( !buff || !v4 )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   *(_BYTE *)(v4 + 449) = 1;
   *(_DWORD *)(v4 + 464) = buff->fields.buffId;
   *(_BYTE *)(v4 + 33) = buff->fields.passive;
   *(_QWORD *)(v4 + 140) = *(_QWORD *)&buff->fields.addOrder;
   intervalData = buff->fields.intervalData;
   *(_QWORD *)(v4 + 360) = intervalData;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v4 + 360), (int64_t)intervalData, v7, v8, v9, v10, v11, v12);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v4 + 360), (int64_t)intervalData, v7, v8, v9, v10, v11, v12);
   result = (BattleBuffData_BuffData_o *)v4;
   *(_DWORD *)(v4 + 28) = buff->fields.param;
   return result;
@@ -2962,29 +2962,29 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__DebugGetShowServan
   System_Collections_Generic_List_object__o **v19; // x20
   System_Action_object__o *v20; // x22
 
-  if ( (byte_4B68F28 & 1) == 0 )
+  if ( (byte_4BB6A6D & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass47_0__DebugGetShowServantParamAll_b__0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass47_0_TypeInfo, v8);
-    byte_4B68F28 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass47_0__DebugGetShowServantParamAll_b__0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass47_0_TypeInfo, v8);
+    byte_4BB6A6D = 1;
   }
-  v9 = sub_1BE4D18(BattleBuffData___c__DisplayClass47_0_TypeInfo);
+  v9 = sub_1C13F70(BattleBuffData___c__DisplayClass47_0_TypeInfo);
   BattleBuffData___c__DisplayClass47_0___ctor((BattleBuffData___c__DisplayClass47_0_o *)v9, 0LL);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
   if ( !v9 )
     goto LABEL_8;
   *(_QWORD *)(v9 + 16) = v10;
   v19 = (System_Collections_Generic_List_object__o **)(v9 + 16);
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)v10, v13, v14, v15, v16, v17, v18);
-  v20 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)v10, v13, v14, v15, v16, v17, v18);
+  v20 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v20,
     (Il2CppObject *)v9,
@@ -2995,20 +2995,20 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__DebugGetShowServan
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v20,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList) == 0LL)
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v20,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (passiveList = *v19) == 0LL) )
   {
 LABEL_8:
-    sub_1BE4D28(passiveList, v12);
+    sub_1C13F80(passiveList, v12);
   }
   return (BattleBuffData_ShowBuffData_array *)System_Collections_Generic_List_object___ToArray(
                                                 passiveList,
-                                                (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
+                                                (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
 }
 
 
@@ -3021,19 +3021,19 @@ void __fastcall BattleBuffData__DelForceBuff(
   __int64 v6; // x1
   System_Action_object__o *v7; // x21
 
-  if ( (byte_4B68F44 & 1) == 0 )
+  if ( (byte_4BB6A89 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v5);
-    sub_1BE4ACC(&Method_BattleBuffData__DelForceBuff_b__92_0__, v6);
-    byte_4B68F44 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
+    sub_1C13D24(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v5);
+    sub_1C13D24(&Method_BattleBuffData__DelForceBuff_b__92_0__, v6);
+    byte_4BB6A89 = 1;
   }
-  v7 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v7 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(v7, (Il2CppObject *)this, Method_BattleBuffData__DelForceBuff_b__92_0__, 0LL);
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)buffArray,
     (System_Action_T__o *)v7,
-    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
 }
 
 
@@ -3045,12 +3045,12 @@ void __fastcall BattleBuffData__DeleteDummyBuff(BattleBuffData_o *this, const Me
   int32_t v6; // w20
   int32_t v7; // w20
 
-  if ( (byte_4B68FA2 & 1) == 0 )
+  if ( (byte_4BB6AE7 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v4);
-    byte_4B68FA2 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v4);
+    byte_4BB6AE7 = 1;
   }
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList )
@@ -3063,7 +3063,7 @@ void __fastcall BattleBuffData__DeleteDummyBuff(BattleBuffData_o *this, const Me
       activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   activeList,
                                                                   v6,
-                                                                  (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
       if ( !activeList )
         break;
       if ( BYTE1(activeList[11].monitor) )
@@ -3074,7 +3074,7 @@ void __fastcall BattleBuffData__DeleteDummyBuff(BattleBuffData_o *this, const Me
         System_Collections_Generic_List_object___RemoveAt(
           activeList,
           v6,
-          (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+          (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
       }
       if ( --v6 < 0 )
         goto LABEL_12;
@@ -3082,7 +3082,7 @@ void __fastcall BattleBuffData__DeleteDummyBuff(BattleBuffData_o *this, const Me
     }
     while ( activeList );
 LABEL_20:
-    sub_1BE4D28(activeList, method);
+    sub_1C13F80(activeList, method);
   }
 LABEL_12:
   activeList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
@@ -3096,7 +3096,7 @@ LABEL_12:
       activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   activeList,
                                                                   v7,
-                                                                  (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
       if ( !activeList )
         goto LABEL_20;
       if ( BYTE1(activeList[11].monitor) )
@@ -3107,7 +3107,7 @@ LABEL_12:
         System_Collections_Generic_List_object___RemoveAt(
           activeList,
           v7,
-          (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+          (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
       }
       if ( --v7 < 0 )
         return;
@@ -3141,14 +3141,14 @@ void __fastcall BattleBuffData__DirectUpdateWaitIntervalBuff(BattleBuffData_o *t
   int32_t size; // w2
   int v21; // w9
 
-  if ( (byte_4B68F17 & 1) == 0 )
+  if ( (byte_4BB6A5C & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v4);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DirectUpdateWaitIntervalBuff_b__28_0__, v5);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v6);
-    byte_4B68F17 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v4);
+    sub_1C13D24(&Method_BattleBuffData___c__DirectUpdateWaitIntervalBuff_b__28_0__, v5);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v6);
+    byte_4BB6A5C = 1;
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.updateWaitIntervalBuffList, 0LL) )
   {
@@ -3168,7 +3168,7 @@ void __fastcall BattleBuffData__DirectUpdateWaitIntervalBuff(BattleBuffData_o *t
         v9 = BattleBuffData___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__28_0 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+      _9__28_0 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
       System_Action_object____ctor(
         _9__28_0,
         v11,
@@ -3176,7 +3176,7 @@ void __fastcall BattleBuffData__DirectUpdateWaitIntervalBuff(BattleBuffData_o *t
         0LL);
       static_fields = BattleBuffData___c_TypeInfo->static_fields;
       static_fields->__9__28_0 = (struct System_Action_BattleBuffData_BuffData__o *)_9__28_0;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&static_fields->__9__28_0,
         (int64_t)_9__28_0,
         v13,
@@ -3190,10 +3190,10 @@ void __fastcall BattleBuffData__DirectUpdateWaitIntervalBuff(BattleBuffData_o *t
       || (System_Collections_Generic_List_object___ForEach(
             updateWaitIntervalBuffList,
             (System_Action_T__o *)_9__28_0,
-            (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+            (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
           (v19 = this->fields.updateWaitIntervalBuffList) == 0LL) )
     {
-      sub_1BE4D28(v9, v7);
+      sub_1C13F80(v9, v7);
     }
     size = v19->fields._size;
     v21 = v19->fields._version + 1;
@@ -3227,32 +3227,32 @@ bool __fastcall BattleBuffData__ExistsTargetIntervalBuff(
   System_Object_array *AllIntervalBuffArray; // x19
   System_Func_object__bool__o *v19; // x20
 
-  if ( (byte_4B68FB6 & 1) == 0 )
+  if ( (byte_4BB6AFB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_BattleBuffData_BuffData____77162216, *(_QWORD *)&targetType);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass255_0__ExistsTargetIntervalBuff_b__0__, v6);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass255_0_TypeInfo, v7);
-    byte_4B68FB6 = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_BattleBuffData_BuffData____77470608, *(_QWORD *)&targetType);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass255_0__ExistsTargetIntervalBuff_b__0__, v6);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass255_0_TypeInfo, v7);
+    byte_4BB6AFB = 1;
   }
-  v8 = sub_1BE4D18(BattleBuffData___c__DisplayClass255_0_TypeInfo);
+  v8 = sub_1C13F70(BattleBuffData___c__DisplayClass255_0_TypeInfo);
   BattleBuffData___c__DisplayClass255_0___ctor((BattleBuffData___c__DisplayClass255_0_o *)v8, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   *(_QWORD *)(v8 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
   *(_DWORD *)(v8 + 24) = targetType;
   AllIntervalBuffArray = (System_Object_array *)BattleBuffData__GetAllIntervalBuffArray(this, v17);
-  v19 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v19 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v19,
     (Il2CppObject *)v8,
     Method_BattleBuffData___c__DisplayClass255_0__ExistsTargetIntervalBuff_b__0__,
     0LL);
-  return BasicHelper__Any_object__49561896(
+  return BasicHelper__Any_object__49783940(
            AllIntervalBuffArray,
            (System_Func_T__bool__o *)v19,
-           (const MethodInfo_2F44128 *)Method_BasicHelper_Any_BattleBuffData_BuffData____77162216);
+           (const MethodInfo_2F7A484 *)Method_BasicHelper_Any_BattleBuffData_BuffData____77470608);
 }
 
 
@@ -3267,12 +3267,12 @@ System_Int32_array *__fastcall BattleBuffData__GetActBuffDamageBuffTargetIndivAr
   System_Int32_array **p_skillChangeData; // x8
 
   v6 = this;
-  if ( (byte_4B68F7D & 1) == 0 )
+  if ( (byte_4BB6AC2 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__,
                                  *(_QWORD *)&act);
-    byte_4B68F7D = 1;
+    byte_4BB6AC2 = 1;
   }
   if ( act != 107 )
   {
@@ -3284,7 +3284,7 @@ System_Int32_array *__fastcall BattleBuffData__GetActBuffDamageBuffTargetIndivAr
         this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buffData->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( this )
         {
           p_skillChangeData = (System_Int32_array **)&this->fields.skillChangeData;
@@ -3293,7 +3293,7 @@ System_Int32_array *__fastcall BattleBuffData__GetActBuffDamageBuffTargetIndivAr
       }
     }
 LABEL_11:
-    sub_1BE4D28(this, *(_QWORD *)&act);
+    sub_1C13F80(this, *(_QWORD *)&act);
   }
   if ( !buffData )
     goto LABEL_11;
@@ -3321,10 +3321,10 @@ BattleBuffData_ActValueResponse_o *__fastcall BattleBuffData__GetActValueDetail(
   int32_t upperParam[2]; // [xsp+38h] [xbp-38h] BYREF
 
   v4 = this;
-  if ( (byte_4B68F74 & 1) == 0 )
+  if ( (byte_4BB6AB9 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData_ActValueResponse_TypeInfo, actValueRequest);
-    byte_4B68F74 = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData_ActValueResponse_TypeInfo, actValueRequest);
+    byte_4BB6AB9 = 1;
   }
   *(_QWORD *)upperParam = 0LL;
   missText = 0LL;
@@ -3347,14 +3347,14 @@ BattleBuffData_ActValueResponse_o *__fastcall BattleBuffData__GetActValueDetail(
                                      v14),
         !v6) )
   {
-    sub_1BE4D28(this, actValueRequest);
+    sub_1C13F80(this, actValueRequest);
   }
   conditionalAuraBuff = (int)v6->fields.conditionalAuraBuff;
   v9 = upperParam[0];
   v8 = upperParam[1];
   v10 = missText;
   v11 = (_DWORD)this - conditionalAuraBuff;
-  v12 = (BattleBuffData_ActValueResponse_o *)sub_1BE4D18(BattleBuffData_ActValueResponse_TypeInfo);
+  v12 = (BattleBuffData_ActValueResponse_o *)sub_1C13F70(BattleBuffData_ActValueResponse_TypeInfo);
   BattleBuffData_ActValueResponse___ctor(v12, actValueRequest, v11, v8, v9, v10, 0LL);
   return v12;
 }
@@ -3382,14 +3382,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllBGMChangeBuffArr
   PartyListViewItem_o *v18; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
 
-  if ( (byte_4B68FB3 & 1) == 0 )
+  if ( (byte_4BB6AF8 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v3);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v4);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllBGMChangeBuffArray_b__252_0__, v5);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v6);
-    byte_4B68FB3 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v3);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v4);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllBGMChangeBuffArray_b__252_0__, v5);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v6);
+    byte_4BB6AF8 = 1;
   }
   v7 = BattleBuffData__AllBuffEnumerable(this, method);
   v8 = BattleBuffData___c_TypeInfo;
@@ -3408,7 +3408,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllBGMChangeBuffArr
       v8 = BattleBuffData___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__252_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    _9__252_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__252_0,
       v11,
@@ -3416,15 +3416,15 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllBGMChangeBuffArr
       0LL);
     p__9__252_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__252_0;
     p__9__252_0->klass = (PartyOrganizationUtility_c *)_9__252_0;
-    sub_1BE4A70(p__9__252_0, (int64_t)_9__252_0, v13, v14, v15, v16, v17, v18);
+    sub_1C13CC8(p__9__252_0, (int64_t)_9__252_0, v13, v14, v15, v16, v17, v18);
   }
   v19 = System_Linq_Enumerable__Where_object_(
           v9,
           (System_Func_TSource__bool__o *)_9__252_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   return (BattleBuffData_BuffData_array *)System_Linq_Enumerable__ToArray_object_(
                                             v19,
-                                            (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+                                            (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
 }
 
 
@@ -3447,13 +3447,13 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B68F94 & 1) == 0 )
+  if ( (byte_4BB6AD9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllCommandAssistBuff_b__208_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68F94 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllCommandAssistBuff_b__208_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6AD9 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
@@ -3471,11 +3471,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v6 = BattleBuffData___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__208_0 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__208_0 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(_9__208_0, v9, Method_BattleBuffData___c__GetAllCommandAssistBuff_b__208_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__208_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)_9__208_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__208_0,
       (int64_t)_9__208_0,
       v11,
@@ -3486,11 +3486,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v16);
   }
   if ( !passiveList )
-    sub_1BE4D28(v6, method);
+    sub_1C13F80(v6, method);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Collections_Generic_List_object___FindAll(
                                                                          passiveList,
                                                                          (System_Predicate_T__o *)_9__208_0,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
 }
 
 
@@ -3513,13 +3513,13 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B68F93 & 1) == 0 )
+  if ( (byte_4BB6AD8 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllCommandCodeBuff_b__207_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68F93 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllCommandCodeBuff_b__207_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6AD8 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
@@ -3537,11 +3537,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v6 = BattleBuffData___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__207_0 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__207_0 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(_9__207_0, v9, Method_BattleBuffData___c__GetAllCommandCodeBuff_b__207_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__207_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)_9__207_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__207_0,
       (int64_t)_9__207_0,
       v11,
@@ -3552,11 +3552,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v16);
   }
   if ( !passiveList )
-    sub_1BE4D28(v6, method);
+    sub_1C13F80(v6, method);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Collections_Generic_List_object___FindAll(
                                                                          passiveList,
                                                                          (System_Predicate_T__o *)_9__207_0,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
 }
 
 
@@ -3597,23 +3597,23 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllConnectedCommand
   PartyListViewItem_o *v33; // x7
   System_Collections_Generic_IEnumerable_T__o *v34; // x0
 
-  if ( (byte_4B68FA6 & 1) == 0 )
+  if ( (byte_4BB6AEB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v7);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_0__, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_1__, v9);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v10);
-    byte_4B68FA6 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v7);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_0__, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_1__, v9);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v10);
+    byte_4BB6AEB = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   All = BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -3630,24 +3630,24 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllConnectedCommand
       All = BattleBuffData___c_TypeInfo;
     }
     v16 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v15 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v15 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v15, v16, Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_0__, 0LL);
     p__9__235_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__235_0;
     p__9__235_0->klass = (PartyOrganizationUtility_c *)v15;
-    sub_1BE4A70(p__9__235_0, (int64_t)v15, v18, v19, v20, v21, v22, v23);
+    sub_1C13CC8(p__9__235_0, (int64_t)v15, v18, v19, v20, v21, v22, v23);
   }
   if ( !activeList )
     goto LABEL_19;
   All = System_Collections_Generic_List_object___FindAll(
           activeList,
           (System_Predicate_T__o *)v15,
-          (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+          (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v11 )
     goto LABEL_19;
   System_Collections_Generic_List_object___AddRange(
     v11,
     (System_Collections_Generic_IEnumerable_T__o *)All,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   All = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -3664,26 +3664,26 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllConnectedCommand
       All = BattleBuffData___c_TypeInfo;
     }
     v26 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v25 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v25 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v25, v26, Method_BattleBuffData___c__GetAllConnectedCommandCardBuff_b__235_1__, 0LL);
     p__9__235_1 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__235_1;
     p__9__235_1->klass = (PartyOrganizationUtility_c *)v25;
-    sub_1BE4A70(p__9__235_1, (int64_t)v25, v28, v29, v30, v31, v32, v33);
+    sub_1C13CC8(p__9__235_1, (int64_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !passiveList )
 LABEL_19:
-    sub_1BE4D28(All, v12);
+    sub_1C13F80(All, v12);
   v34 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          passiveList,
                                                          (System_Predicate_T__o *)v25,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   System_Collections_Generic_List_object___AddRange(
     v11,
     v34,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v11,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -3709,14 +3709,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllIntervalBuffArra
   PartyListViewItem_o *v18; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
 
-  if ( (byte_4B68FB5 & 1) == 0 )
+  if ( (byte_4BB6AFA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v3);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v4);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllIntervalBuffArray_b__254_0__, v5);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v6);
-    byte_4B68FB5 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v3);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v4);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllIntervalBuffArray_b__254_0__, v5);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v6);
+    byte_4BB6AFA = 1;
   }
   v7 = BattleBuffData__AllBuffEnumerable(this, method);
   v8 = BattleBuffData___c_TypeInfo;
@@ -3735,19 +3735,19 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllIntervalBuffArra
       v8 = BattleBuffData___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__254_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    _9__254_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__254_0, v11, Method_BattleBuffData___c__GetAllIntervalBuffArray_b__254_0__, 0LL);
     p__9__254_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__254_0;
     p__9__254_0->klass = (PartyOrganizationUtility_c *)_9__254_0;
-    sub_1BE4A70(p__9__254_0, (int64_t)_9__254_0, v13, v14, v15, v16, v17, v18);
+    sub_1C13CC8(p__9__254_0, (int64_t)_9__254_0, v13, v14, v15, v16, v17, v18);
   }
   v19 = System_Linq_Enumerable__Where_object_(
           v9,
           (System_Func_TSource__bool__o *)_9__254_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   return (BattleBuffData_BuffData_array *)System_Linq_Enumerable__ToArray_object_(
                                             v19,
-                                            (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+                                            (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
 }
 
 
@@ -3774,14 +3774,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllValidBGMChangeBu
   PartyListViewItem_o *v19; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
 
-  if ( (byte_4B68FB4 & 1) == 0 )
+  if ( (byte_4BB6AF9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v4);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAllValidBGMChangeBuffArray_b__253_0__, v6);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v7);
-    byte_4B68FB4 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v4);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAllValidBGMChangeBuffArray_b__253_0__, v6);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v7);
+    byte_4BB6AF9 = 1;
   }
   v8 = BattleBuffData__AllBuffValidEnumerable(this, 1, v2);
   v9 = BattleBuffData___c_TypeInfo;
@@ -3800,7 +3800,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllValidBGMChangeBu
       v9 = BattleBuffData___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__253_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    _9__253_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__253_0,
       v12,
@@ -3808,15 +3808,15 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAllValidBGMChangeBu
       0LL);
     p__9__253_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__253_0;
     p__9__253_0->klass = (PartyOrganizationUtility_c *)_9__253_0;
-    sub_1BE4A70(p__9__253_0, (int64_t)_9__253_0, v14, v15, v16, v17, v18, v19);
+    sub_1C13CC8(p__9__253_0, (int64_t)_9__253_0, v14, v15, v16, v17, v18, v19);
   }
   v20 = System_Linq_Enumerable__Where_object_(
           v10,
           (System_Func_TSource__bool__o *)_9__253_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   return (BattleBuffData_BuffData_array *)System_Linq_Enumerable__ToArray_object_(
                                             v20,
-                                            (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+                                            (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
 }
 
 
@@ -3851,27 +3851,27 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAvaliableActiveBuff
   FollowerInfo_o *v28; // x6
   PartyListViewItem_o *v29; // x7
 
-  if ( (byte_4B68F4E & 1) == 0 )
+  if ( (byte_4BB6A93 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, conditionsToAdd);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetAvaliableActiveBuffArray_b__105_0__, v7);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass105_0__GetAvaliableActiveBuffArray_b__1__, v8);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass105_0_TypeInfo, v9);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v10);
-    byte_4B68F4E = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, conditionsToAdd);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__GetAvaliableActiveBuffArray_b__105_0__, v7);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass105_0__GetAvaliableActiveBuffArray_b__1__, v8);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass105_0_TypeInfo, v9);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v10);
+    byte_4BB6A93 = 1;
   }
-  v11 = sub_1BE4D18(BattleBuffData___c__DisplayClass105_0_TypeInfo);
+  v11 = sub_1C13F70(BattleBuffData___c__DisplayClass105_0_TypeInfo);
   BattleBuffData___c__DisplayClass105_0___ctor((BattleBuffData___c__DisplayClass105_0_o *)v11, 0LL);
   if ( !v11 )
     goto LABEL_15;
   *(_QWORD *)(v11 + 16) = conditionsToAdd;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)conditionsToAdd, v14, v15, v16, v17, v18, v19);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)conditionsToAdd, v14, v15, v16, v17, v18, v19);
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( *(_QWORD *)(v11 + 16) )
   {
-    v21 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v21 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(
       v21,
       (Il2CppObject *)v11,
@@ -3895,25 +3895,25 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetAvaliableActiveBuff
         All = BattleBuffData___c_TypeInfo;
       }
       v22 = (Il2CppObject *)**((_QWORD **)All + 23);
-      v21 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+      v21 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
       System_Predicate_object____ctor(v21, v22, Method_BattleBuffData___c__GetAvaliableActiveBuffArray_b__105_0__, 0LL);
       static_fields = BattleBuffData___c_TypeInfo->static_fields;
       static_fields->__9__105_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v21;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__105_0, (int64_t)v21, v24, v25, v26, v27, v28, v29);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__105_0, (int64_t)v21, v24, v25, v26, v27, v28, v29);
     }
   }
   if ( !activeList
     || (All = System_Collections_Generic_List_object___FindAll(
                 activeList,
                 (System_Predicate_T__o *)v21,
-                (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
+                (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
   {
 LABEL_15:
-    sub_1BE4D28(All, v13);
+    sub_1C13F80(All, v13);
   }
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             (System_Collections_Generic_List_object__o *)All,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -3964,28 +3964,28 @@ System_Collections_Generic_List_int__o *__fastcall BattleBuffData__GetBuffGenera
   int *v46; // x10
   __int64 v47; // x0
 
-  if ( (byte_4B68F83 & 1) == 0 )
+  if ( (byte_4BB6AC8 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v13);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v16);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v17);
-    byte_4B68F83 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v13);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v16);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v17);
+    byte_4BB6AC8 = 1;
   }
-  v18 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v18 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v18,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   v21 = BattleBuffData__AllBuffValidEnumerable(this, 1, v20);
   if ( !v21 )
-    sub_1BE4D28(0LL, v22);
+    sub_1C13F80(0LL, v22);
   klass = v21->klass;
   v24 = v21;
   v25 = *(unsigned __int16 *)(&v21->klass->_2.bitflags2 + 3);
@@ -4004,13 +4004,13 @@ System_Collections_Generic_List_int__o *__fastcall BattleBuffData__GetBuffGenera
   else
   {
 LABEL_10:
-    p_method = sub_1C36AAC(v21, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v21, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v29 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v24,
           *(_QWORD *)(p_method + 8));
   if ( !v29 )
-    sub_1BE4D28(0LL, v28);
+    sub_1C13F80(0LL, v28);
   v30 = isRec;
   while ( 1 )
   {
@@ -4031,7 +4031,7 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v34 = sub_1C36AAC(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v34 = sub_1C65D04(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v29, *(_QWORD *)(v34 + 8)) & 1) == 0 )
       break;
@@ -4052,24 +4052,24 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v38 = sub_1C36AAC(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v38 = sub_1C65D04(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v39 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v29, *(_QWORD *)(v38 + 8));
     v41 = v39;
     if ( !v39 )
-      sub_1BE4D28(0LL, v40);
+      sub_1C13F80(0LL, v40);
     if ( !v39->fields._isRemove
-      && BattleBuffData_BuffData__CheckCond_43640596(v39, this, ActInfo, selfArray, opArray, v30, 0LL, 0LL) )
+      && BattleBuffData_BuffData__CheckCond_43845268(v39, this, ActInfo, selfArray, opArray, v30, 0LL, 0LL) )
     {
       IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v41->fields.generalParams, 0LL);
       if ( !IsNullOrEmpty )
       {
         if ( !v18 )
-          sub_1BE4D28(IsNullOrEmpty, v43);
+          sub_1C13F80(IsNullOrEmpty, v43);
         System_Collections_Generic_List_int___AddRange(
           v18,
           (System_Collections_Generic_IEnumerable_T__o *)v41->fields.generalParams,
-          (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+          (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
       }
     }
   }
@@ -4090,7 +4090,7 @@ LABEL_25:
   else
   {
 LABEL_37:
-    v47 = sub_1C36AAC(v29, System_IDisposable_TypeInfo, 0LL);
+    v47 = sub_1C65D04(v29, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v47)(v29, *(_QWORD *)(v47 + 8));
   return v18;
@@ -4108,10 +4108,10 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetBuffList(
   System_Object_array *v10; // x3
   const MethodInfo *v11; // x4
 
-  if ( (byte_4B68F59 & 1) == 0 )
+  if ( (byte_4BB6A9E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, types);
-    byte_4B68F59 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, types);
+    byte_4BB6A9E = 1;
   }
   v9 = BattleBuffData__AllBuffValidEnumerablePriorActive(
          this,
@@ -4119,8 +4119,8 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetBuffList(
          (const MethodInfo *)checkIndividuality);
   v10 = System_Linq_Enumerable__ToArray_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v9,
-          (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-  return BattleBuffData__getBuffList_43423608(
+          (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+  return BattleBuffData__getBuffList_43627720(
            this,
            types,
            checkIndividuality,
@@ -4144,17 +4144,17 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetBuffListMatchingLas
   const MethodInfo *v13; // x7
 
   v10 = this;
-  if ( (byte_4B68F86 & 1) == 0 )
+  if ( (byte_4BB6ACB & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F86 = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6ACB = 1;
   }
   if ( !svtData || (this = (BattleBuffData_o *)BattleServantData__getRevengeTargetUniqueId(svtData, 0LL), !data) )
-    sub_1BE4D28(this, *(_QWORD *)&act);
+    sub_1C13F80(this, *(_QWORD *)&act);
   ServantData = BattleData__getServantData(data, (int32_t)this, 0LL);
-  v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v12, svtData, ServantData, 0LL, 0LL, 0LL, 0LL, 0LL);
-  return BattleBuffData__getBuffList_43446400(v10, act, v12, isRec, 0, 0LL, 0LL, v13);
+  v12 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v12, svtData, ServantData, 0LL, 0LL, 0LL, 0LL, 0LL);
+  return BattleBuffData__getBuffList_43650512(v10, act, v12, isRec, 0, 0LL, 0LL, v13);
 }
 
 
@@ -4177,13 +4177,13 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B68FBD & 1) == 0 )
+  if ( (byte_4BB6B02 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetClassIconEffectBuffList_b__264_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68FBD = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__GetClassIconEffectBuffList_b__264_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6B02 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   classIconAuraEffectBuffList = (System_Collections_Generic_List_object__o *)this->fields.classIconAuraEffectBuffList;
@@ -4201,7 +4201,7 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v6 = BattleBuffData___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__264_0 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__264_0 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(
       _9__264_0,
       v9,
@@ -4209,14 +4209,14 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       0LL);
     p__9__264_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__264_0;
     p__9__264_0->klass = (PartyOrganizationUtility_c *)_9__264_0;
-    sub_1BE4A70(p__9__264_0, (int64_t)_9__264_0, v11, v12, v13, v14, v15, v16);
+    sub_1C13CC8(p__9__264_0, (int64_t)_9__264_0, v11, v12, v13, v14, v15, v16);
   }
   if ( !classIconAuraEffectBuffList )
-    sub_1BE4D28(v6, method);
+    sub_1C13F80(v6, method);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Collections_Generic_List_object___FindAll(
                                                                          classIconAuraEffectBuffList,
                                                                          (System_Predicate_T__o *)_9__264_0,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
 }
 
 
@@ -4282,33 +4282,33 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetCommandCardBuffArra
   __int64 v60; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B68FA4 & 1) == 0 )
+  if ( (byte_4BB6AE9 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, commandData);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v7);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v8);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v9);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v15);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v16);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    byte_4B68FA4 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, commandData);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v7);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v8);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v9);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v15);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v16);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    byte_4BB6AE9 = 1;
   }
   entity = 0LL;
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_51;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
   Instance = (DataManager_o *)BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v22);
   if ( !Instance )
     goto LABEL_51;
@@ -4330,11 +4330,11 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetCommandCardBuffArra
   else
   {
 LABEL_9:
-    v27 = sub_1C36AAC(Instance, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    v27 = sub_1C65D04(Instance, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v29 = (*(__int64 (__fastcall **)(DataManager_o *, _QWORD))v27)(v24, *(_QWORD *)(v27 + 8));
   if ( !v29 )
-    sub_1BE4D28(0LL, v28);
+    sub_1C13F80(0LL, v28);
   while ( 1 )
   {
     v30 = *(_QWORD *)v29;
@@ -4354,7 +4354,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v33 = sub_1C36AAC(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v33 = sub_1C65D04(v29, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v29, *(_QWORD *)(v33 + 8)) & 1) == 0 )
       break;
@@ -4375,7 +4375,7 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v37 = sub_1C36AAC(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v37 = sub_1C65D04(v29, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v38 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v29, *(_QWORD *)(v37 + 8));
     v40 = BattleBuffData__CheckCommandCardBuffActive(this, commandData, v38, 1, v39);
@@ -4383,18 +4383,18 @@ LABEL_23:
     {
       entity = 0LL;
       if ( !v38 )
-        sub_1BE4D28(v40, v41);
+        sub_1C13F80(v40, v41);
       if ( !MasterData_object )
-        sub_1BE4D28(v40, v41);
+        sub_1C13F80(v40, v41);
       v42 = DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
               &entity,
               v38->fields.buffId,
-              (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+              (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
       if ( v42 )
       {
         if ( !entity )
-          sub_1BE4D28(v42, v43);
+          sub_1C13F80(v42, v43);
         klass_high = HIDWORD(entity[1].klass);
         if ( !BuffList_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -4402,26 +4402,26 @@ LABEL_23:
         if ( v45 )
         {
           if ( !v18 )
-            sub_1BE4D28(v45, v46);
+            sub_1C13F80(v45, v46);
           items = v18->fields._items;
           v54 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
           ++v18->fields._version;
           if ( !items )
-            sub_1BE4D28(v45, v46);
+            sub_1C13F80(v45, v46);
           size = v18->fields._size;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v18,
               (Il2CppObject *)v38,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
           }
           else
           {
             v56 = &items->obj.klass + size;
             v18->fields._size = size + 1;
             v56[4] = (Il2CppClass *)v38;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v56 + 4), (int64_t)v38, v47, v48, v49, v50, v51, v52);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v56 + 4), (int64_t)v38, v47, v48, v49, v50, v51, v52);
           }
         }
       }
@@ -4444,15 +4444,15 @@ LABEL_23:
   else
   {
 LABEL_42:
-    v60 = sub_1C36AAC(v29, System_IDisposable_TypeInfo, 0LL);
+    v60 = sub_1C65D04(v29, System_IDisposable_TypeInfo, 0LL);
   }
   Instance = (DataManager_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v60)(v29, *(_QWORD *)(v60 + 8));
   if ( !v18 )
 LABEL_51:
-    sub_1BE4D28(Instance, v20);
+    sub_1C13F80(Instance, v20);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v18,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -4464,24 +4464,24 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetCommandCardTypeChangeBu
   __int64 v4; // x1
   const MethodInfo *v5; // x4
   BattleBuffData_BuffData_o *v6; // x1
-  BattleBuffData_BuffData_array *BuffList_43423608; // x0
+  BattleBuffData_BuffData_array *BuffList_43627720; // x0
   const MethodInfo *v8; // x2
   __int64 v9; // x8
 
-  if ( (byte_4B68FA0 & 1) == 0 )
+  if ( (byte_4BB6AE5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TYPE___TypeInfo, method);
-    byte_4B68FA0 = 1;
+    sub_1C13D24(&BuffList_TYPE___TypeInfo, method);
+    byte_4BB6AE5 = 1;
   }
-  result = (BattleBuffData_BuffData_o *)sub_1BE4B74(BuffList_TYPE___TypeInfo, 1LL);
+  result = (BattleBuffData_BuffData_o *)sub_1C13DCC(BuffList_TYPE___TypeInfo, 1LL);
   if ( !result )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   v6 = result;
   if ( !result->fields.count )
     goto LABEL_11;
   *(_DWORD *)&result->fields.isUse = 156;
-  BuffList_43423608 = BattleBuffData__getBuffList_43423608(this, (BuffList_TYPE_array *)result, 0LL, 0LL, v5);
-  result = (BattleBuffData_BuffData_o *)BattleBuffData__CheckAndGetFixedBuffArray(this, BuffList_43423608, v8);
+  BuffList_43627720 = BattleBuffData__getBuffList_43627720(this, (BuffList_TYPE_array *)result, 0LL, 0LL, v5);
+  result = (BattleBuffData_BuffData_o *)BattleBuffData__CheckAndGetFixedBuffArray(this, BuffList_43627720, v8);
   if ( result )
   {
     v9 = *(_QWORD *)&result->fields.count;
@@ -4490,7 +4490,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetCommandCardTypeChangeBu
       if ( (_DWORD)v9 )
         return *(BattleBuffData_BuffData_o **)&result->fields.isUse;
 LABEL_11:
-      sub_1BE4D30(result, v6);
+      sub_1C13F88(result, v6);
     }
     return 0LL;
   }
@@ -4513,16 +4513,16 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetCounterFuncBuffData
   BattleServantData_o *v14; // x2
   const MethodInfo *v15; // x7
 
-  if ( (byte_4B68FAC & 1) == 0 )
+  if ( (byte_4BB6AF1 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, selfSvt);
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v9);
-    byte_4B68FAC = 1;
+    sub_1C13D24(&BuffList_TypeInfo, selfSvt);
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v9);
+    byte_4BB6AF1 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   IsConstantMasterIndvAddBuffActive = BuffList__IsConstantMasterIndvAddBuffActive(0LL);
-  v11 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  v11 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
   v12 = v11;
   if ( IsConstantMasterIndvAddBuffActive )
   {
@@ -4534,8 +4534,8 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetCounterFuncBuffData
     v13 = 0LL;
     v14 = 0LL;
   }
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v11, v13, v14, 0LL, 0LL, 0LL, 0LL, 0LL);
-  return BattleBuffData__getBuffList_43446400(this, 102, v12, 0, checkOnly, 0LL, 0LL, v15);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v11, v13, v14, 0LL, 0LL, 0LL, 0LL, 0LL);
+  return BattleBuffData__getBuffList_43650512(this, 102, v12, 0, checkOnly, 0LL, 0LL, v15);
 }
 
 
@@ -4562,14 +4562,14 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   PartyListViewItem_o *v19; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
 
-  if ( (byte_4B68FAA & 1) == 0 )
+  if ( (byte_4BB6AEF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v4);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetCurrentWarBoardNotAttackedBuff_b__242_0__, v6);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v7);
-    byte_4B68FAA = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v4);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v5);
+    sub_1C13D24(&Method_BattleBuffData___c__GetCurrentWarBoardNotAttackedBuff_b__242_0__, v6);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v7);
+    byte_4BB6AEF = 1;
   }
   CurrentAllBaffList = BattleBuffData__getCurrentAllBaffList(this, 1, v2);
   v9 = BattleBuffData___c_TypeInfo;
@@ -4588,7 +4588,7 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v9 = BattleBuffData___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__242_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    _9__242_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__242_0,
       v12,
@@ -4596,15 +4596,15 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       0LL);
     p__9__242_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__242_0;
     p__9__242_0->klass = (PartyOrganizationUtility_c *)_9__242_0;
-    sub_1BE4A70(p__9__242_0, (int64_t)_9__242_0, v14, v15, v16, v17, v18, v19);
+    sub_1C13CC8(p__9__242_0, (int64_t)_9__242_0, v14, v15, v16, v17, v18, v19);
   }
   v20 = System_Linq_Enumerable__Where_object_(
           v10,
           (System_Func_TSource__bool__o *)_9__242_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Linq_Enumerable__ToList_object_(
                                                                          v20,
-                                                                         (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_BattleBuffData_BuffData___);
+                                                                         (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_BattleBuffData_BuffData___);
 }
 
 
@@ -4669,27 +4669,27 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   FollowerInfo_o *v57; // x6
   PartyListViewItem_o *v58; // x7
 
-  if ( (byte_4B68F9E & 1) == 0 )
+  if ( (byte_4BB6AE3 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Comparison_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v9);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetEffectBuffList_b__225_0__, v10);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetEffectBuffList_b__225_1__, v11);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetEffectBuffList_b__225_2__, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetEffectBuffList_b__225_3__, v13);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v14);
-    byte_4B68F9E = 1;
+    sub_1C13D24(&System_Comparison_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v9);
+    sub_1C13D24(&Method_BattleBuffData___c__GetEffectBuffList_b__225_0__, v10);
+    sub_1C13D24(&Method_BattleBuffData___c__GetEffectBuffList_b__225_1__, v11);
+    sub_1C13D24(&Method_BattleBuffData___c__GetEffectBuffList_b__225_2__, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__GetEffectBuffList_b__225_3__, v13);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v14);
+    byte_4BB6AE3 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   All = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -4706,24 +4706,24 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       All = BattleBuffData___c_TypeInfo;
     }
     v20 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v19 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v19 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v19, v20, Method_BattleBuffData___c__GetEffectBuffList_b__225_0__, 0LL);
     p__9__225_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__225_0;
     p__9__225_0->klass = (PartyOrganizationUtility_c *)v19;
-    sub_1BE4A70(p__9__225_0, (int64_t)v19, v22, v23, v24, v25, v26, v27);
+    sub_1C13CC8(p__9__225_0, (int64_t)v19, v22, v23, v24, v25, v26, v27);
   }
   if ( !passiveList )
     goto LABEL_31;
   All = System_Collections_Generic_List_object___FindAll(
           passiveList,
           (System_Predicate_T__o *)v19,
-          (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+          (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v15 )
     goto LABEL_31;
   System_Collections_Generic_List_object___AddRange(
     v15,
     (System_Collections_Generic_IEnumerable_T__o *)All,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   All = BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -4740,23 +4740,23 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       All = BattleBuffData___c_TypeInfo;
     }
     v30 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v29 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v29 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v29, v30, Method_BattleBuffData___c__GetEffectBuffList_b__225_1__, 0LL);
     p__9__225_1 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__225_1;
     p__9__225_1->klass = (PartyOrganizationUtility_c *)v29;
-    sub_1BE4A70(p__9__225_1, (int64_t)v29, v32, v33, v34, v35, v36, v37);
+    sub_1C13CC8(p__9__225_1, (int64_t)v29, v32, v33, v34, v35, v36, v37);
   }
   if ( !activeList )
 LABEL_31:
-    sub_1BE4D28(All, v16);
+    sub_1C13F80(All, v16);
   v38 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          activeList,
                                                          (System_Predicate_T__o *)v29,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   System_Collections_Generic_List_object___AddRange(
     v15,
     v38,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v39 = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
   {
@@ -4772,16 +4772,16 @@ LABEL_31:
       v39 = BattleBuffData___c_TypeInfo;
     }
     v41 = (Il2CppObject *)v39->static_fields->__9;
-    _9__225_2 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    _9__225_2 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_BattleBuffData_BuffData__TypeInfo);
     System_Comparison_object____ctor(_9__225_2, v41, Method_BattleBuffData___c__GetEffectBuffList_b__225_2__, 0LL);
     p__9__225_2 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__225_2;
     p__9__225_2->klass = (PartyOrganizationUtility_c *)_9__225_2;
-    sub_1BE4A70(p__9__225_2, (int64_t)_9__225_2, v43, v44, v45, v46, v47, v48);
+    sub_1C13CC8(p__9__225_2, (int64_t)_9__225_2, v43, v44, v45, v46, v47, v48);
   }
-  System_Collections_Generic_List_object___Sort_56548584(
+  System_Collections_Generic_List_object___Sort_56814736(
     v15,
     _9__225_2,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
   v49 = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
   {
@@ -4797,16 +4797,16 @@ LABEL_31:
       v49 = BattleBuffData___c_TypeInfo;
     }
     v51 = (Il2CppObject *)v49->static_fields->__9;
-    _9__225_3 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__225_3 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(_9__225_3, v51, Method_BattleBuffData___c__GetEffectBuffList_b__225_3__, 0LL);
     p__9__225_3 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__225_3;
     p__9__225_3->klass = (PartyOrganizationUtility_c *)_9__225_3;
-    sub_1BE4A70(p__9__225_3, (int64_t)_9__225_3, v53, v54, v55, v56, v57, v58);
+    sub_1C13CC8(p__9__225_3, (int64_t)_9__225_3, v53, v54, v55, v56, v57, v58);
   }
   System_Collections_Generic_List_object___RemoveAll(
     v15,
     (System_Predicate_T__o *)_9__225_3,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v15;
 }
 
@@ -4879,32 +4879,32 @@ int32_t __fastcall BattleBuffData__GetFamilyLinkageIdMax(BattleBuffData_o *this,
   __int64 v66; // x0
   System_Collections_Generic_IEnumerable_int__o **v68; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4B68FAD & 1) == 0 )
+  if ( (byte_4BB6AF2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_int__TypeInfo, method);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_int___, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_int___ctor__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_int__get_Count__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v7);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v8);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v9);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__0__, v11);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__1__, v12);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass246_0_TypeInfo, v13);
-    byte_4B68FAD = 1;
+    sub_1C13D24(&System_Action_int__TypeInfo, method);
+    sub_1C13D24(&Method_BasicHelper_ForEach_int___, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int___ctor__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__get_Count__, v5);
+    sub_1C13D24(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v7);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v8);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v9);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__0__, v11);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__1__, v12);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass246_0_TypeInfo, v13);
+    byte_4BB6AF2 = 1;
   }
-  v14 = sub_1BE4D18(BattleBuffData___c__DisplayClass246_0_TypeInfo);
+  v14 = sub_1C13F70(BattleBuffData___c__DisplayClass246_0_TypeInfo);
   BattleBuffData___c__DisplayClass246_0___ctor((BattleBuffData___c__DisplayClass246_0_o *)v14, 0LL);
-  v15 = (System_Collections_Generic_HashSet_int__o *)sub_1BE4D18(System_Collections_Generic_HashSet_int__TypeInfo);
+  v15 = (System_Collections_Generic_HashSet_int__o *)sub_1C13F70(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v15,
-    (const MethodInfo_349EE6C *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    (const MethodInfo_34E02D8 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( !v14 )
     goto LABEL_43;
   *(_QWORD *)(v14 + 16) = v15;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)v15, v18, v19, v20, v21, v22, v23);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)v15, v18, v19, v20, v21, v22, v23);
   v16 = BattleBuffData__AllBuffEnumerable(this, v24);
   if ( !v16 )
     goto LABEL_43;
@@ -4926,14 +4926,14 @@ int32_t __fastcall BattleBuffData__GetFamilyLinkageIdMax(BattleBuffData_o *this,
   else
   {
 LABEL_9:
-    p_method = sub_1C36AAC(v16, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v16, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v68 = (System_Collections_Generic_IEnumerable_int__o **)(v14 + 16);
   v31 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v26,
           *(_QWORD *)(p_method + 8));
   if ( !v31 )
-    sub_1BE4D28(0LL, v30);
+    sub_1C13F80(0LL, v30);
   v32 = (System_Action_int__o **)(v14 + 24);
   v33 = (System_Action_int__o **)(v14 + 32);
   while ( 1 )
@@ -4955,7 +4955,7 @@ LABEL_9:
     else
     {
 LABEL_17:
-      v37 = sub_1C36AAC(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v37 = sub_1C65D04(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v31, *(_QWORD *)(v37 + 8)) & 1) == 0 )
       break;
@@ -4976,48 +4976,48 @@ LABEL_17:
     else
     {
 LABEL_24:
-      v41 = sub_1C36AAC(v31, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v41 = sub_1C65D04(v31, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v42 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v41)(v31, *(_QWORD *)(v41 + 8));
     v44 = v42;
     if ( !v42 )
-      sub_1BE4D28(0LL, v43);
+      sub_1C13F80(0LL, v43);
     FamilyLinkageTargetIdArray = BattleBuffData_BuffData__get_FamilyLinkageTargetIdArray(v42, 0LL);
     v46 = *v32;
     v47 = (System_Collections_Generic_IEnumerable_T__o *)FamilyLinkageTargetIdArray;
     if ( !*v32 )
     {
-      v46 = (System_Action_int__o *)sub_1BE4D18(System_Action_int__TypeInfo);
+      v46 = (System_Action_int__o *)sub_1C13F70(System_Action_int__TypeInfo);
       System_Action_int____ctor(
         v46,
         (Il2CppObject *)v14,
         Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__0__,
         0LL);
       *v32 = v46;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 24), (int64_t)v46, v48, v49, v50, v51, v52, v53);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 24), (int64_t)v46, v48, v49, v50, v51, v52, v53);
     }
     BasicHelper__ForEach_int_(
       v47,
       (System_Action_T__o *)v46,
-      (const MethodInfo_2F45754 *)Method_BasicHelper_ForEach_int___);
+      (const MethodInfo_2F7BAB0 *)Method_BasicHelper_ForEach_int___);
     FamilyLinkageIdArray = BattleBuffData_BuffData__get_FamilyLinkageIdArray(v44, 0LL);
     v55 = *v33;
     v56 = (System_Collections_Generic_IEnumerable_T__o *)FamilyLinkageIdArray;
     if ( !*v33 )
     {
-      v55 = (System_Action_int__o *)sub_1BE4D18(System_Action_int__TypeInfo);
+      v55 = (System_Action_int__o *)sub_1C13F70(System_Action_int__TypeInfo);
       System_Action_int____ctor(
         v55,
         (Il2CppObject *)v14,
         Method_BattleBuffData___c__DisplayClass246_0__GetFamilyLinkageIdMax_b__1__,
         0LL);
       *v33 = v55;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 32), (int64_t)v55, v57, v58, v59, v60, v61, v62);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 32), (int64_t)v55, v57, v58, v59, v60, v61, v62);
     }
     BasicHelper__ForEach_int_(
       v56,
       (System_Action_T__o *)v55,
-      (const MethodInfo_2F45754 *)Method_BasicHelper_ForEach_int___);
+      (const MethodInfo_2F7BAB0 *)Method_BasicHelper_ForEach_int___);
   }
   v63 = *(_QWORD *)v31;
   v64 = *(unsigned __int16 *)(*(_QWORD *)v31 + 302LL);
@@ -5036,14 +5036,14 @@ LABEL_24:
   else
   {
 LABEL_36:
-    v66 = sub_1C36AAC(v31, System_IDisposable_TypeInfo, 0LL);
+    v66 = sub_1C65D04(v31, System_IDisposable_TypeInfo, 0LL);
   }
   v16 = (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v66)(
                                                                                v31,
                                                                                *(_QWORD *)(v66 + 8));
   if ( !*v68 )
 LABEL_43:
-    sub_1BE4D28(v16, v17);
+    sub_1C13F80(v16, v17);
   if ( SLODWORD((*v68)[2].klass) <= 0 )
     return 0;
   else
@@ -5099,22 +5099,22 @@ BattleBuffData_FieldChangeData_array *__fastcall BattleBuffData__GetFieldChangeA
   int *v44; // x10
   __int64 v45; // x0
 
-  if ( (byte_4B68FB2 & 1) == 0 )
+  if ( (byte_4BB6AF7 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, method);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v3);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v4);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__Add__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__ToArray__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_FieldChangeData__TypeInfo, v9);
-    byte_4B68FB2 = 1;
+    sub_1C13D24(&System_IDisposable_TypeInfo, method);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v3);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v4);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_FieldChangeData__TypeInfo, v9);
+    byte_4BB6AF7 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_FieldChangeData__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_FieldChangeData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData___ctor__);
   v12 = BattleBuffData__AllBuffValidEnumerable(this, 1, v11);
   if ( !v12 )
     goto LABEL_42;
@@ -5136,13 +5136,13 @@ BattleBuffData_FieldChangeData_array *__fastcall BattleBuffData__GetFieldChangeA
   else
   {
 LABEL_8:
-    p_method = sub_1C36AAC(v12, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v12, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v15,
           *(_QWORD *)(p_method + 8));
   if ( !v20 )
-    sub_1BE4D28(0LL, v19);
+    sub_1C13F80(0LL, v19);
   while ( 1 )
   {
     v21 = *(_QWORD *)v20;
@@ -5162,7 +5162,7 @@ LABEL_8:
     else
     {
 LABEL_15:
-      v24 = sub_1C36AAC(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v24 = sub_1C65D04(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
       break;
@@ -5183,35 +5183,35 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v28 = sub_1C36AAC(v20, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v28 = sub_1C65D04(v20, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
     if ( !v29 )
-      sub_1BE4D28(0LL, v30);
+      sub_1C13F80(0LL, v30);
     v37 = *(Il2CppObject **)(v29 + 312);
     if ( v37 )
     {
       if ( !v10 )
-        sub_1BE4D28(v29, v37);
+        sub_1C13F80(v29, v37);
       items = v10->fields._items;
       v39 = Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__Add__;
       ++v10->fields._version;
       if ( !items )
-        sub_1BE4D28(v29, v37);
+        sub_1C13F80(v29, v37);
       size = v10->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v10,
           v37,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
       }
       else
       {
         v41 = &items->obj.klass + size;
         v10->fields._size = size + 1;
         v41[4] = (Il2CppClass *)v37;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v41 + 4), (int64_t)v37, v31, v32, v33, v34, v35, v36);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v41 + 4), (int64_t)v37, v31, v32, v33, v34, v35, v36);
       }
     }
   }
@@ -5232,17 +5232,17 @@ LABEL_22:
   else
   {
 LABEL_35:
-    v45 = sub_1C36AAC(v20, System_IDisposable_TypeInfo, 0LL);
+    v45 = sub_1C65D04(v20, System_IDisposable_TypeInfo, 0LL);
   }
   v12 = (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v45)(
                                                                                v20,
                                                                                *(_QWORD *)(v45 + 8));
   if ( !v10 )
 LABEL_42:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   return (BattleBuffData_FieldChangeData_array *)System_Collections_Generic_List_object___ToArray(
                                                    v10,
-                                                   (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__ToArray__);
+                                                   (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_FieldChangeData__ToArray__);
 }
 
 
@@ -5257,7 +5257,7 @@ int32_t __fastcall BattleBuffData__GetFieldParamAddCount(
   const MethodInfo *v7; // x2
 
   if ( !battleData || (battleData = (BattleData_o *)BattleData__getQuestIndividualities(battleData, 0LL), !paramAdd) )
-    sub_1BE4D28(battleData, paramAdd);
+    sub_1C13F80(battleData, paramAdd);
   v5 = battleData;
   ParamAddCount = BattleBuffData__GetParamAddCount((System_Int32_array *)battleData, paramAdd->fields.fieldIndv, v4);
   return BattleBuffData__GetParamAddCountSignedIndividualityAndCheck(
@@ -5309,21 +5309,21 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetFirstMatchCondBuff(
   int *v40; // x10
   __int64 v41; // x0
 
-  if ( (byte_4B68F88 & 1) == 0 )
+  if ( (byte_4BB6ACD & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v13);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v14);
-    byte_4B68F88 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v13);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v14);
+    byte_4BB6ACD = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   v17 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v16);
   if ( !v17 )
-    sub_1BE4D28(0LL, v18);
+    sub_1C13F80(0LL, v18);
   klass = v17->klass;
   v20 = v17;
   v21 = *(unsigned __int16 *)(&v17->klass->_2.bitflags2 + 3);
@@ -5342,13 +5342,13 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetFirstMatchCondBuff(
   else
   {
 LABEL_10:
-    p_method = sub_1C36AAC(v17, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v17, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v20,
           *(_QWORD *)(p_method + 8));
   if ( !v25 )
-    sub_1BE4D28(0LL, v24);
+    sub_1C13F80(0LL, v24);
   v26 = isRec;
   while ( 1 )
   {
@@ -5369,7 +5369,7 @@ LABEL_10:
     else
     {
 LABEL_18:
-      v30 = sub_1C36AAC(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v30 = sub_1C65D04(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v25, *(_QWORD *)(v30 + 8)) & 1) == 0 )
       break;
@@ -5390,12 +5390,12 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v34 = sub_1C36AAC(v25, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v34 = sub_1C65D04(v25, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v35 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v25, *(_QWORD *)(v34 + 8));
     v37 = v35;
     if ( !v35 )
-      sub_1BE4D28(0LL, v36);
+      sub_1C13F80(0LL, v36);
     if ( BattleBuffData_BuffData__CheckCond(v35, this, ActInfo, checkIndividualities, v26, funcCond, 0LL) )
       goto LABEL_31;
   }
@@ -5418,7 +5418,7 @@ LABEL_31:
   else
   {
 LABEL_35:
-    v41 = sub_1C36AAC(v25, System_IDisposable_TypeInfo, 0LL);
+    v41 = sub_1C65D04(v25, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v41)(v25, *(_QWORD *)(v41 + 8));
   return v37;
@@ -5437,18 +5437,18 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetFixBuffArray(
   __int64 v10; // x1
   System_Func_object__bool__o *v11; // x23
   const MethodInfo *v12; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *BuffList_43446400; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *BuffList_43650512; // x0
 
-  if ( (byte_4B68F87 & 1) == 0 )
+  if ( (byte_4BB6ACC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData_IsFixBuff__, *(_QWORD *)&act);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v9);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v10);
-    byte_4B68F87 = 1;
+    sub_1C13D24(&Method_BattleBuffData_IsFixBuff__, *(_QWORD *)&act);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v9);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v10);
+    byte_4BB6ACC = 1;
   }
-  v11 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(v11, (Il2CppObject *)this, Method_BattleBuffData_IsFixBuff__, 0LL);
-  BuffList_43446400 = (System_Collections_Generic_IEnumerable_TSource__o *)BattleBuffData__getBuffList_43446400(
+  BuffList_43650512 = (System_Collections_Generic_IEnumerable_TSource__o *)BattleBuffData__getBuffList_43650512(
                                                                              this,
                                                                              act,
                                                                              checkIndividualities,
@@ -5458,8 +5458,8 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetFixBuffArray(
                                                                              0LL,
                                                                              v12);
   return (BattleBuffData_BuffData_array *)System_Linq_Enumerable__ToArray_object_(
-                                            BuffList_43446400,
-                                            (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+                                            BuffList_43650512,
+                                            (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
 }
 
 
@@ -5470,11 +5470,11 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetFixedBuffArray(
         BattleBuffData_BuffData_array *checklist,
         const MethodInfo *method)
 {
-  BattleBuffData_BuffData_array *BuffList_43423608; // x1
+  BattleBuffData_BuffData_array *BuffList_43627720; // x1
   const MethodInfo *v7; // x2
 
-  BuffList_43423608 = BattleBuffData__getBuffList_43423608(this, types, targetIndividualities, checklist, method);
-  return BattleBuffData__CheckAndGetFixedBuffArray(this, BuffList_43423608, v7);
+  BuffList_43627720 = BattleBuffData__getBuffList_43627720(this, types, targetIndividualities, checklist, method);
+  return BattleBuffData__CheckAndGetFixedBuffArray(this, BuffList_43627720, v7);
 }
 
 
@@ -5487,14 +5487,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetFunctionedFunctionB
   BattleBuffData_CheckIndividualitiesData_o *v7; // x22
   const MethodInfo *v8; // x7
 
-  if ( (byte_4B68FC2 & 1) == 0 )
+  if ( (byte_4BB6B07 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, selfServant);
-    byte_4B68FC2 = 1;
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, selfServant);
+    byte_4BB6B07 = 1;
   }
-  v7 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v7, selfServant, opponentServant, 0LL, 0LL, 0LL, 0LL, 0LL);
-  return BattleBuffData__getBuffList_43446400(this, 145, v7, 1, 0, 0LL, 0LL, v8);
+  v7 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v7, selfServant, opponentServant, 0LL, 0LL, 0LL, 0LL, 0LL);
+  return BattleBuffData__getBuffList_43650512(this, 145, v7, 1, 0, 0LL, 0LL, v8);
 }
 
 
@@ -5560,36 +5560,36 @@ System_Int32_array *__fastcall BattleBuffData__GetGrantBuffTypeArray(
   PartyListViewItem_o *v59; // x7
   System_Collections_Generic_IEnumerable_T__o *v60; // x0
 
-  if ( (byte_4B68F5B & 1) == 0 )
+  if ( (byte_4BB6AA0 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, isIncludePassive);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v7);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v8);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_1__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_2__, v14);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass119_0__GetGrantBuffTypeArray_b__0__, v15);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass119_0_TypeInfo, v16);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v17);
-    byte_4B68F5B = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, isIncludePassive);
+    sub_1C13D24(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v7);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v8);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_1__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_2__, v14);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass119_0__GetGrantBuffTypeArray_b__0__, v15);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass119_0_TypeInfo, v16);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v17);
+    byte_4BB6AA0 = 1;
   }
-  v18 = sub_1BE4D18(BattleBuffData___c__DisplayClass119_0_TypeInfo);
+  v18 = sub_1C13F70(BattleBuffData___c__DisplayClass119_0_TypeInfo);
   BattleBuffData___c__DisplayClass119_0___ctor((BattleBuffData___c__DisplayClass119_0_o *)v18, 0LL);
   if ( !v18 )
     goto LABEL_22;
   *(_QWORD *)(v18 + 24) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)this, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)this, v21, v22, v23, v24, v25, v26);
+  v27 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v27,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   *(_QWORD *)(v18 + 16) = v27;
   v28 = (System_Collections_Generic_List_int__o **)(v18 + 16);
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)v27, v29, v30, v31, v32, v33, v34);
-  v35 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)v27, v29, v30, v31, v32, v33, v34);
+  v35 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v35,
     (Il2CppObject *)v18,
@@ -5613,11 +5613,11 @@ System_Int32_array *__fastcall BattleBuffData__GetGrantBuffTypeArray(
         v38 = BattleBuffData___c_TypeInfo;
       }
       v40 = (Il2CppObject *)v38->static_fields->__9;
-      _9__119_1 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+      _9__119_1 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__119_1, v40, Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_1__, 0LL);
       static_fields = BattleBuffData___c_TypeInfo->static_fields;
       static_fields->__9__119_1 = (struct System_Func_BattleBuffData_BuffData__bool__o *)_9__119_1;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&static_fields->__9__119_1,
         (int64_t)_9__119_1,
         v42,
@@ -5630,11 +5630,11 @@ System_Int32_array *__fastcall BattleBuffData__GetGrantBuffTypeArray(
     v48 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                            PassiveList,
                                                            (System_Func_TSource__bool__o *)_9__119_1,
-                                                           (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+                                                           (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
     BasicHelper__ForEach_object_(
       v48,
       (System_Action_T__o *)v35,
-      (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+      (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
   }
   if ( isIncludeActive )
   {
@@ -5654,28 +5654,28 @@ System_Int32_array *__fastcall BattleBuffData__GetGrantBuffTypeArray(
         v50 = BattleBuffData___c_TypeInfo;
       }
       v52 = (Il2CppObject *)v50->static_fields->__9;
-      _9__119_2 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+      _9__119_2 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__119_2, v52, Method_BattleBuffData___c__GetGrantBuffTypeArray_b__119_2__, 0LL);
       v53 = BattleBuffData___c_TypeInfo->static_fields;
       v53->__9__119_2 = (struct System_Func_BattleBuffData_BuffData__bool__o *)_9__119_2;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v53->__9__119_2, (int64_t)_9__119_2, v54, v55, v56, v57, v58, v59);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v53->__9__119_2, (int64_t)_9__119_2, v54, v55, v56, v57, v58, v59);
     }
     v60 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                            ActiveList,
                                                            (System_Func_TSource__bool__o *)_9__119_2,
-                                                           (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+                                                           (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
     BasicHelper__ForEach_object_(
       v60,
       (System_Action_T__o *)v35,
-      (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+      (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
   }
   v19 = *v28;
   if ( !*v28 )
 LABEL_22:
-    sub_1BE4D28(v19, v20);
+    sub_1C13F80(v19, v20);
   return System_Collections_Generic_List_int___ToArray(
            v19,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -5696,33 +5696,33 @@ System_Int32_array *__fastcall BattleBuffData__GetIgnoreAuraBuffIds(BattleBuffDa
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B68F95 & 1) == 0 )
+  if ( (byte_4BB6ADA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_1BE4ACC(&StringLiteral_7485/*"IGNORE_AURA_BUFF"*/, v4);
-    byte_4B68F95 = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    sub_1C13D24(&StringLiteral_7505/*"IDREFS"*/, v4);
+    byte_4BB6ADA = 1;
   }
   ignoreAuraBuffIds = this->fields.ignoreAuraBuffIds;
   p_ignoreAuraBuffIds = (PartyOrganizationUtility_o *)&this->fields.ignoreAuraBuffIds;
   result = ignoreAuraBuffIds;
   if ( !ignoreAuraBuffIds )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                       (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
     {
-      sub_1BE4D28(Instance, v9);
+      sub_1C13F80(Instance, v9);
     }
     ValueArray = ConstantStrMaster__GetValueArray(
                    (ConstantStrMaster_o *)Instance,
-                   (System_String_o *)StringLiteral_7485/*"IGNORE_AURA_BUFF"*/,
+                   (System_String_o *)StringLiteral_7505/*"IDREFS"*/,
                    0LL,
                    0LL);
     p_ignoreAuraBuffIds->klass = (PartyOrganizationUtility_c *)ValueArray;
-    sub_1BE4A70(p_ignoreAuraBuffIds, (int64_t)ValueArray, v11, v12, v13, v14, v15, v16);
+    sub_1C13CC8(p_ignoreAuraBuffIds, (int64_t)ValueArray, v11, v12, v13, v14, v15, v16);
     return (System_Int32_array *)p_ignoreAuraBuffIds->klass;
   }
   return result;
@@ -5745,22 +5745,22 @@ System_Int32_array *__fastcall BattleBuffData__GetInvalidSacrificeIndividualitie
   PartyListViewItem_o *v12; // x7
   __int64 v13; // x1
 
-  if ( (byte_4B68FB8 & 1) == 0 )
+  if ( (byte_4BB6AFD & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_TypeInfo, v1);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_ConstantStrMaster___, v2);
-    sub_1BE4ACC(&DataManager_TypeInfo, v3);
-    sub_1BE4ACC(&StringLiteral_7532/*"INVALID_SACRIFICE_INDIV"*/, v4);
-    byte_4B68FB8 = 1;
+    sub_1C13D24(&BattleBuffData_TypeInfo, v1);
+    sub_1C13D24(&Method_DataManager_GetMaster_ConstantStrMaster___, v2);
+    sub_1C13D24(&DataManager_TypeInfo, v3);
+    sub_1C13D24(&StringLiteral_7552/*"INTERNAL ERROR: should not happen."*/, v4);
+    byte_4BB6AFD = 1;
   }
   constantStrMaster = BattleBuffData_TypeInfo->static_fields->constantStrMaster;
   if ( !constantStrMaster )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ConstantStrMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ConstantStrMaster___);
     BattleBuffData_TypeInfo->static_fields->constantStrMaster = (struct ConstantStrMaster_o *)Master_object;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)BattleBuffData_TypeInfo->static_fields,
       (int64_t)Master_object,
       v7,
@@ -5771,9 +5771,9 @@ System_Int32_array *__fastcall BattleBuffData__GetInvalidSacrificeIndividualitie
       v12);
     constantStrMaster = BattleBuffData_TypeInfo->static_fields->constantStrMaster;
     if ( !constantStrMaster )
-      sub_1BE4D28(0LL, v13);
+      sub_1C13F80(0LL, v13);
   }
-  return ConstantStrMaster__GetValueArray(constantStrMaster, (System_String_o *)StringLiteral_7532/*"INVALID_SACRIFICE_INDIV"*/, 0LL, 0LL);
+  return ConstantStrMaster__GetValueArray(constantStrMaster, (System_String_o *)StringLiteral_7552/*"INTERNAL ERROR: should not happen."*/, 0LL, 0LL);
 }
 
 
@@ -5844,40 +5844,40 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetLastMatchCondBuff(
   System_Collections_Generic_IEnumerable_TSource__o *v66; // x20
   System_Func_object__bool__o *v67; // x21
 
-  if ( (byte_4B68F89 & 1) == 0 )
+  if ( (byte_4BB6ACE & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_BuffData____77202600, v11);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_BuffData__int___, v12);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v13);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v14);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v15);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v16);
-    sub_1BE4ACC(&Method_BattleBuffData___c__GetLastMatchCondBuff_b__193_1__, v17);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass193_0__GetLastMatchCondBuff_b__0__, v18);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass193_0__GetLastMatchCondBuff_b__2__, v19);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass193_0_TypeInfo, v20);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v21);
-    byte_4B68F89 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_BuffData____77510744, v11);
+    sub_1C13D24(&Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_BuffData__int___, v12);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, v13);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v14);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v15);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v16);
+    sub_1C13D24(&Method_BattleBuffData___c__GetLastMatchCondBuff_b__193_1__, v17);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass193_0__GetLastMatchCondBuff_b__0__, v18);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass193_0__GetLastMatchCondBuff_b__2__, v19);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass193_0_TypeInfo, v20);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v21);
+    byte_4BB6ACE = 1;
   }
-  v22 = sub_1BE4D18(BattleBuffData___c__DisplayClass193_0_TypeInfo);
+  v22 = sub_1C13F70(BattleBuffData___c__DisplayClass193_0_TypeInfo);
   BattleBuffData___c__DisplayClass193_0___ctor((BattleBuffData___c__DisplayClass193_0_o *)v22, 0LL);
   if ( !v22 )
-    sub_1BE4D28(v23, v24);
+    sub_1C13F80(v23, v24);
   *(_QWORD *)(v22 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)this, v25, v26, v27, v28, v29, v30);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)this, v25, v26, v27, v28, v29, v30);
   *(_QWORD *)(v22 + 24) = buffAggregationArgs;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)buffAggregationArgs, v31, v32, v33, v34, v35, v36);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)buffAggregationArgs, v31, v32, v33, v34, v35, v36);
   *(_QWORD *)(v22 + 40) = checkIndividuality;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v22 + 40), (int64_t)checkIndividuality, v37, v38, v39, v40, v41, v42);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 40), (int64_t)checkIndividuality, v37, v38, v39, v40, v41, v42);
   *(_BYTE *)(v22 + 48) = isRec;
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   *(_QWORD *)(v22 + 32) = ActInfo;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v22 + 32), (int64_t)ActInfo, v44, v45, v46, v47, v48, v49);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 32), (int64_t)ActInfo, v44, v45, v46, v47, v48, v49);
   v51 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v50);
-  v52 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v52 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v52,
     (Il2CppObject *)v22,
@@ -5886,7 +5886,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetLastMatchCondBuff(
   v53 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v51,
           (System_Func_TSource__bool__o *)v52,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   v54 = BattleBuffData___c_TypeInfo;
   v55 = v53;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -5903,11 +5903,11 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetLastMatchCondBuff(
       v54 = BattleBuffData___c_TypeInfo;
     }
     v57 = (Il2CppObject *)v54->static_fields->__9;
-    _9__193_1 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+    _9__193_1 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
     System_Func_object__int____ctor(_9__193_1, v57, Method_BattleBuffData___c__GetLastMatchCondBuff_b__193_1__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__193_1 = (struct System_Func_BattleBuffData_BuffData__int__o *)_9__193_1;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__193_1,
       (int64_t)_9__193_1,
       v59,
@@ -5920,20 +5920,20 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetLastMatchCondBuff(
   v65 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                v55,
                                                                (System_Func_TSource__TKey__o *)_9__193_1,
-                                                               (const MethodInfo_2F826FC *)Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_BuffData__int___);
+                                                               (const MethodInfo_2FB895C *)Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_BuffData__int___);
   v66 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                v65,
-                                                               (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-  v67 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+                                                               (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+  v67 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v67,
     (Il2CppObject *)v22,
     Method_BattleBuffData___c__DisplayClass193_0__GetLastMatchCondBuff_b__2__,
     0LL);
-  return (BattleBuffData_BuffData_o *)System_Linq_Enumerable__FirstOrDefault_object__49793520(
+  return (BattleBuffData_BuffData_o *)System_Linq_Enumerable__FirstOrDefault_object__50015312(
                                         v66,
                                         (System_Func_TSource__bool__o *)v67,
-                                        (const MethodInfo_2F7C9F0 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_BuffData____77202600);
+                                        (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleBuffData_BuffData____77510744);
 }
 
 
@@ -5956,47 +5956,47 @@ int32_t __fastcall BattleBuffData__GetMotionChange(BattleBuffData_o *this, const
   int32_t klass; // w19
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B68FA1 & 1) == 0 )
+  if ( (byte_4BB6AE6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
-    byte_4B68FA1 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
+    byte_4BB6AE6 = 1;
   }
   memset(&v19, 0, sizeof(v19));
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v10);
   if ( !v9 )
-    sub_1BE4D28(PassiveList, v12);
+    sub_1C13F80(PassiveList, v12);
   System_Collections_Generic_List_object___AddRange(
     v9,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v13);
   System_Collections_Generic_List_object___AddRange(
     v9,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     v9,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v19,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v15 )
       break;
     if ( !v19.fields._current )
-      sub_1BE4D28(v15, v16);
+      sub_1C13F80(v15, v16);
     klass = (int32_t)v19.fields._current[11].klass;
     if ( klass )
       goto LABEL_10;
@@ -6005,7 +6005,7 @@ int32_t __fastcall BattleBuffData__GetMotionChange(BattleBuffData_o *this, const
 LABEL_10:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v19,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return klass;
 }
 
@@ -6043,55 +6043,55 @@ System_Int32_array *__fastcall BattleBuffData__GetNotTargetSkillIdArray(
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-80h] BYREF
   int32_t plusMinus; // [xsp+3Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F81 & 1) == 0 )
+  if ( (byte_4BB6AC6 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, checkIndividualities);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v13);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v14);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
-    byte_4B68F81 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, checkIndividualities);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v13);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v14);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
+    byte_4BB6AC6 = 1;
   }
   memset(&v31, 0, sizeof(v31));
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(103, 0LL, 0LL);
   plusMinus = 0;
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v18);
   if ( !v17 )
     goto LABEL_17;
   System_Collections_Generic_List_object___AddRange(
     v17,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v21);
   System_Collections_Generic_List_object___AddRange(
     v17,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
-  v23 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+  v23 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v23,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     v17,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v31 = v30;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
   {
     current = v31.fields._current;
     v26 = BattleBuffData__checkIndiviuality(
@@ -6104,28 +6104,28 @@ System_Int32_array *__fastcall BattleBuffData__GetNotTargetSkillIdArray(
     if ( v26 )
     {
       if ( !current )
-        sub_1BE4D28(v26, v27);
+        sub_1C13F80(v26, v27);
       klass = (System_Collections_Generic_IEnumerable_T__o *)current[19].klass;
       if ( klass )
       {
         if ( !v23 )
-          sub_1BE4D28(v26, klass);
+          sub_1C13F80(v26, klass);
         System_Collections_Generic_List_int___AddRange(
           v23,
           klass,
-          (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+          (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( !v23 )
 LABEL_17:
-    sub_1BE4D28(ActiveList, v20);
+    sub_1C13F80(ActiveList, v20);
   return System_Collections_Generic_List_int___ToArray(
            v23,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -6140,7 +6140,7 @@ int32_t __fastcall BattleBuffData__GetOpParamAddCount(
   const MethodInfo *v9; // x4
 
   if ( !checkIndividualityData || !paramAdd )
-    sub_1BE4D28(buffData, checkIndividualityData);
+    sub_1C13F80(buffData, checkIndividualityData);
   v8 = BattleBuffData__GetParamAddCountCheckIgnoreIndivUnreleaseable(
          buffData,
          checkIndividualityData->fields._opponentIndividualityCanRemove_k__BackingField,
@@ -6224,7 +6224,7 @@ int32_t __fastcall BattleBuffData__GetParamAddCountCheckIgnoreIndivUnreleaseable
   System_Int32_array *v9; // x0
 
   if ( !buffData )
-    sub_1BE4D28(0LL, checkIndividualityCanRemove);
+    sub_1C13F80(0LL, checkIndividualityCanRemove);
   if ( BattleBuffData_BuffData__checkState(buffData, 0x100000, 0LL) )
     v9 = checkIndividualityCanRemove;
   else
@@ -6244,7 +6244,7 @@ int32_t __fastcall BattleBuffData__GetParamAddCountCheckIgnoreIndivUnreleaseable
   System_Int32_array *v9; // x0
 
   if ( !buffData )
-    sub_1BE4D28(0LL, checkIndividualityCanRemove);
+    sub_1C13F80(0LL, checkIndividualityCanRemove);
   if ( BattleBuffData_BuffData__checkState(buffData, 0x100000, 0LL) )
     v9 = checkIndividualityCanRemove;
   else
@@ -6269,12 +6269,12 @@ int32_t __fastcall BattleBuffData__GetParamAddCountSignedIndividualityAndCheck(
   System_Func_T1__T2__TResult__o *v13; // x23
   System_Func_T1__T2__TResult__o *v14; // x24
 
-  if ( (byte_4B68FC3 & 1) == 0 )
+  if ( (byte_4BB6B08 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_int____int____bool__TypeInfo, targetIndividualityTwoDimensionArray);
-    sub_1BE4ACC(&Method_Individuality_IsMatchArray__, v5);
-    sub_1BE4ACC(&Individuality_TypeInfo, v6);
-    byte_4B68FC3 = 1;
+    sub_1C13D24(&System_Func_int____int____bool__TypeInfo, targetIndividualityTwoDimensionArray);
+    sub_1C13D24(&Method_Individuality_IsMatchArray__, v5);
+    sub_1C13D24(&Individuality_TypeInfo, v6);
+    byte_4BB6B08 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)selfIndividualityArray, 0LL) )
     return 0;
@@ -6284,7 +6284,7 @@ int32_t __fastcall BattleBuffData__GetParamAddCountSignedIndividualityAndCheck(
   if ( IsNullOrEmpty )
     return 0;
   if ( !targetIndividualityTwoDimensionArray )
-    sub_1BE4D28(IsNullOrEmpty, v8);
+    sub_1C13F80(IsNullOrEmpty, v8);
   v9 = *(_QWORD *)&targetIndividualityTwoDimensionArray->max_length;
   if ( (int)v9 < 1 )
     return 0;
@@ -6293,18 +6293,18 @@ int32_t __fastcall BattleBuffData__GetParamAddCountSignedIndividualityAndCheck(
   do
   {
     if ( v11 >= (unsigned int)v9 )
-      sub_1BE4D30(IsNullOrEmpty, v8);
+      sub_1C13F88(IsNullOrEmpty, v8);
     v12 = (System_Collections_ICollection_o *)targetIndividualityTwoDimensionArray->m_Items[v11];
     IsNullOrEmpty = BasicHelper__IsNullOrEmpty(v12, 0LL);
     if ( !IsNullOrEmpty )
     {
-      v13 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v13 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v13, 0LL, Method_Individuality_IsMatchArray__, 0LL);
-      v14 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v14 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v14, 0LL, Method_Individuality_IsMatchArray__, 0LL);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-      IsNullOrEmpty = Individuality__CheckSignedIndividualities_38602276(
+      IsNullOrEmpty = Individuality__CheckSignedIndividualities_38839820(
                         selfIndividualityArray,
                         (System_Int32_array *)v12,
                         (System_Func_int____int____bool__o *)v13,
@@ -6331,7 +6331,7 @@ int32_t __fastcall BattleBuffData__GetSelfParamAddCount(
   const MethodInfo *v9; // x4
 
   if ( !checkIndividualityData || !paramAdd )
-    sub_1BE4D28(buffData, checkIndividualityData);
+    sub_1C13F80(buffData, checkIndividualityData);
   v8 = BattleBuffData__GetParamAddCountCheckIgnoreIndivUnreleaseable(
          buffData,
          checkIndividualityData->fields._selfIndividualityCanRelease_k__BackingField,
@@ -6370,11 +6370,11 @@ int32_t __fastcall BattleBuffData__GetShiftGuts(
   PartyListViewItem_o *v21; // x7
   int32_t type; // w21
 
-  if ( (byte_4B68F5F & 1) == 0 )
+  if ( (byte_4BB6AA4 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, servantData);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
-    byte_4B68F5F = 1;
+    sub_1C13D24(&BuffList_TypeInfo, servantData);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
+    byte_4BB6AA4 = 1;
   }
   ShiftGutsBuff = BattleBuffData__GetShiftGutsBuff(
                     this,
@@ -6390,9 +6390,9 @@ int32_t __fastcall BattleBuffData__GetShiftGuts(
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)buffMst,
                v12->fields.buffId,
-               (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+               (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
     *buffEntity = (BuffEntity_o *)Entity;
-    sub_1BE4A70((PartyOrganizationUtility_o *)buffEntity, (int64_t)Entity, v16, v17, v18, v19, v20, v21);
+    sub_1C13CC8((PartyOrganizationUtility_o *)buffEntity, (int64_t)Entity, v16, v17, v18, v19, v20, v21);
     if ( !*buffEntity )
       goto LABEL_13;
     type = (*buffEntity)->fields.type;
@@ -6406,7 +6406,7 @@ int32_t __fastcall BattleBuffData__GetShiftGuts(
     }
     if ( !servantData )
 LABEL_13:
-      sub_1BE4D28(buffMst, v14);
+      sub_1C13F80(buffMst, v14);
     LODWORD(ShiftGutsBuff) = v12->fields.param * servantData->fields.maxhp / 1000;
   }
   return (int)ShiftGutsBuff;
@@ -6433,7 +6433,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetShiftGutsBuff(
   if ( !checkIndividualitiesDataArray->max_length )
     goto LABEL_11;
   v6 = this;
-  this = (BattleBuffData_o *)BattleBuffData__getBuffList_43446400(
+  this = (BattleBuffData_o *)BattleBuffData__getBuffList_43650512(
                                this,
                                111,
                                checkIndividualitiesDataArray->m_Items[0],
@@ -6444,7 +6444,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__GetShiftGutsBuff(
                                v4);
   if ( !this )
 LABEL_12:
-    sub_1BE4D28(this, servantData);
+    sub_1C13F80(this, servantData);
   passiveList = this->fields.passiveList;
   v9 = this;
   if ( (int)passiveList >= 1 )
@@ -6468,7 +6468,7 @@ LABEL_12:
         return 0LL;
     }
 LABEL_11:
-    sub_1BE4D30(this, servantData);
+    sub_1C13F88(this, servantData);
   }
   return 0LL;
 }
@@ -6497,27 +6497,27 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   PartyListViewItem_o *v20; // x7
   System_Predicate_object__o *v21; // x20
 
-  if ( (byte_4B68F9A & 1) == 0 )
+  if ( (byte_4BB6ADF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, buffList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor___77109024, v6);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v7);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass217_0__GetSkillTypeBuff_b__0__, v9);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass217_0_TypeInfo, v10);
-    byte_4B68F9A = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, buffList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor___77417304, v6);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass217_0__GetSkillTypeBuff_b__0__, v9);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass217_0_TypeInfo, v10);
+    byte_4BB6ADF = 1;
   }
-  v11 = sub_1BE4D18(BattleBuffData___c__DisplayClass217_0_TypeInfo);
+  v11 = sub_1C13F70(BattleBuffData___c__DisplayClass217_0_TypeInfo);
   BattleBuffData___c__DisplayClass217_0___ctor((BattleBuffData___c__DisplayClass217_0_o *)v11, 0LL);
-  v12 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_56421076(
+  v12 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_56687228(
     v12,
     (System_Collections_Generic_IEnumerable_T__o *)skillTypes,
-    (const MethodInfo_35CEAD4 *)Method_System_Collections_Generic_List_int___ctor___77109024);
+    (const MethodInfo_360FA7C *)Method_System_Collections_Generic_List_int___ctor___77417304);
   if ( !v11
     || (*(_QWORD *)(v11 + 16) = v12,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)v12, v15, v16, v17, v18, v19, v20),
-        v21 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)v12, v15, v16, v17, v18, v19, v20),
+        v21 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(
           v21,
           (Il2CppObject *)v11,
@@ -6525,12 +6525,12 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
           0LL),
         !buffList) )
   {
-    sub_1BE4D28(v13, v14);
+    sub_1C13F80(v13, v14);
   }
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Collections_Generic_List_object___FindAll(
                                                                          (System_Collections_Generic_List_object__o *)buffList,
                                                                          (System_Predicate_T__o *)v21,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
 }
 
 
@@ -6572,10 +6572,10 @@ int32_t __fastcall BattleBuffData__GetTotalParamAddValue(
   int32_t v27; // w9
   System_Int32_array *targetIdArray; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B68FA7 & 1) == 0 )
+  if ( (byte_4BB6AEC & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, battleData);
-    byte_4B68FA7 = 1;
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, battleData);
+    byte_4BB6AEC = 1;
   }
   targetIdArray = 0LL;
   ParamAddTargetIdArray = (BattleServantData_o *)BattleBuffData__TryGetParamAddTargetIdArray(
@@ -6588,7 +6588,7 @@ int32_t __fastcall BattleBuffData__GetTotalParamAddValue(
   {
     if ( !checkIndividualities || (v13 = targetIdArray) == 0LL )
 LABEL_33:
-      sub_1BE4D28(ParamAddTargetIdArray, v10);
+      sub_1C13F80(ParamAddTargetIdArray, v10);
     v14 = *(_QWORD *)&targetIdArray->max_length;
     if ( (int)v14 >= 1 )
     {
@@ -6598,7 +6598,7 @@ LABEL_33:
       while ( 1 )
       {
         if ( v17 >= (unsigned int)v14 )
-          sub_1BE4D30(ParamAddTargetIdArray, v10);
+          sub_1C13F88(ParamAddTargetIdArray, v10);
         v10 = (unsigned int)v13->m_Items[v17 + 1];
         if ( SelfUniqueId_k__BackingField == (_DWORD)v10 )
         {
@@ -6621,8 +6621,8 @@ LABEL_33:
                                                            0LL);
           if ( ((unsigned __int8)ParamAddTargetIdArray & 1) != 0 )
             goto LABEL_16;
-          v19 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-          BattleBuffData_CheckIndividualitiesData___ctor_43634876(v19, 0LL, v18, 0LL, 0LL, 0LL, 0LL, 0LL);
+          v19 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+          BattleBuffData_CheckIndividualitiesData___ctor_43839548(v19, 0LL, v18, 0LL, 0LL, 0LL, 0LL, 0LL);
           ParamAddTargetIdArray = (BattleServantData_o *)BattleBuffData__GetOpParamAddCount(
                                                            buffData,
                                                            v19,
@@ -6675,11 +6675,11 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetUpdateWaitIntervalB
   int32_t size; // w2
   int v9; // w9
 
-  if ( (byte_4B68F14 & 1) == 0 )
+  if ( (byte_4BB6A59 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
-    byte_4B68F14 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
+    byte_4BB6A59 = 1;
   }
   v5 = 0LL;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.updateWaitIntervalBuffList, 0LL) )
@@ -6688,10 +6688,10 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__GetUpdateWaitIntervalB
     if ( !updateWaitIntervalBuffList
       || (updateWaitIntervalBuffList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                                                       updateWaitIntervalBuffList,
-                                                                                      (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__),
+                                                                                      (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__),
           (v7 = this->fields.updateWaitIntervalBuffList) == 0LL) )
     {
-      sub_1BE4D28(updateWaitIntervalBuffList, v4);
+      sub_1C13F80(updateWaitIntervalBuffList, v4);
     }
     size = v7->fields._size;
     v5 = (BattleBuffData_BuffData_array *)updateWaitIntervalBuffList;
@@ -6719,12 +6719,12 @@ void __fastcall BattleBuffData__Initialize(BattleBuffData_o *this, const MethodI
   int v11; // w9
 
   v2 = this;
-  if ( (byte_4B68F19 & 1) == 0 )
+  if ( (byte_4BB6A5E & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__,
                                  method);
-    byte_4B68F19 = 1;
+    byte_4BB6A5E = 1;
   }
   passiveList = v2->fields.passiveList;
   if ( !passiveList )
@@ -6747,7 +6747,7 @@ void __fastcall BattleBuffData__Initialize(BattleBuffData_o *this, const MethodI
   conditionalAuraBuff = v2->fields.conditionalAuraBuff;
   if ( !conditionalAuraBuff )
 LABEL_13:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   v10 = conditionalAuraBuff->fields._size;
   v11 = conditionalAuraBuff->fields._version + 1;
   conditionalAuraBuff->fields._size = 0;
@@ -6789,27 +6789,27 @@ void __fastcall BattleBuffData__InitializeShift(
   System_Collections_Generic_List_object__o *activeList; // x19
   System_Predicate_object__o *v30; // x21
 
-  if ( (byte_4B68F8D & 1) == 0 )
+  if ( (byte_4BB6AD2 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, *(_QWORD *)&actorId);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v7);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass199_0__InitializeShift_b__0__, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass199_0__InitializeShift_b__1__, v9);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass199_0_TypeInfo, v10);
-    byte_4B68F8D = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, *(_QWORD *)&actorId);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v7);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass199_0__InitializeShift_b__0__, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass199_0__InitializeShift_b__1__, v9);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass199_0_TypeInfo, v10);
+    byte_4BB6AD2 = 1;
   }
-  v11 = sub_1BE4D18(BattleBuffData___c__DisplayClass199_0_TypeInfo);
+  v11 = sub_1C13F70(BattleBuffData___c__DisplayClass199_0_TypeInfo);
   BattleBuffData___c__DisplayClass199_0___ctor((BattleBuffData___c__DisplayClass199_0_o *)v11, 0LL);
   if ( !v11 )
     goto LABEL_10;
   *(_DWORD *)(v11 + 16) = actorId;
   *(_QWORD *)(v11 + 24) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 32) = buffindivs;
   v20 = v11 + 32;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)buffindivs, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)buffindivs, v21, v22, v23, v24, v25, v26);
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v28 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v28 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(
     v28,
     (Il2CppObject *)v11,
@@ -6820,13 +6820,13 @@ void __fastcall BattleBuffData__InitializeShift(
   v12 = System_Collections_Generic_List_object___RemoveAll(
           passiveList,
           (System_Predicate_T__o *)v28,
-          (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+          (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   if ( !*(_QWORD *)v20 )
     goto LABEL_10;
   if ( *(_QWORD *)(*(_QWORD *)v20 + 24LL) )
   {
     activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-    v30 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v30 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(
       v30,
       (Il2CppObject *)v11,
@@ -6837,11 +6837,11 @@ void __fastcall BattleBuffData__InitializeShift(
       System_Collections_Generic_List_object___RemoveAll(
         activeList,
         (System_Predicate_T__o *)v30,
-        (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+        (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
       return;
     }
 LABEL_10:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
 }
 
@@ -6875,7 +6875,7 @@ bool __fastcall BattleBuffData__IsCounterFunc(
 
   CounterFuncBuffDataList = BattleBuffData__GetCounterFuncBuffDataList(this, selfSvt, targetSvt, 1, v4);
   if ( !CounterFuncBuffDataList )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   return CounterFuncBuffDataList->max_length != 0;
 }
 
@@ -6929,15 +6929,15 @@ bool __fastcall BattleBuffData__IsGutsKeepUsableByFollowingAttackIndividuality(
   int32_t plusMinus; // [xsp+Ch] [xbp-44h] BYREF
 
   v8 = this;
-  if ( (byte_4B68F5D & 1) == 0 )
+  if ( (byte_4BB6AA2 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, buffData);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Skip_BattleBuffData_CheckIndividualitiesData___, v9);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_CheckIndividualitiesData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_CheckIndividualitiesData__TypeInfo, v12);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v13);
-    byte_4B68F5D = 1;
+    sub_1C13D24(&BuffList_TypeInfo, buffData);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Skip_BattleBuffData_CheckIndividualitiesData___, v9);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_CheckIndividualitiesData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_CheckIndividualitiesData__TypeInfo, v12);
+    this = (BattleBuffData_o *)sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v13);
+    byte_4BB6AA2 = 1;
   }
   plusMinus = 0;
   if ( !buffData )
@@ -6956,10 +6956,10 @@ bool __fastcall BattleBuffData__IsGutsKeepUsableByFollowingAttackIndividuality(
   this = (BattleBuffData_o *)System_Linq_Enumerable__Skip_object_(
                                (System_Collections_Generic_IEnumerable_TSource__o *)checkIndividualitiesDataArray,
                                1,
-                               (const MethodInfo_2F91250 *)Method_System_Linq_Enumerable_Skip_BattleBuffData_CheckIndividualitiesData___);
+                               (const MethodInfo_2FC74B0 *)Method_System_Linq_Enumerable_Skip_BattleBuffData_CheckIndividualitiesData___);
   if ( !this )
 LABEL_39:
-    sub_1BE4D28(this, buffData);
+    sub_1C13F80(this, buffData);
   klass = this->klass;
   v16 = this;
   v17 = *(unsigned __int16 *)(&this->klass->_2.bitflags2 + 3);
@@ -6978,14 +6978,14 @@ LABEL_39:
   else
   {
 LABEL_13:
-    v19 = sub_1C36AAC(
+    v19 = sub_1C65D04(
             this,
             System_Collections_Generic_IEnumerable_BattleBuffData_CheckIndividualitiesData__TypeInfo,
             0LL);
   }
   v22 = (*(__int64 (__fastcall **)(BattleBuffData_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
   if ( !v22 )
-    sub_1BE4D28(0LL, v21);
+    sub_1C13F80(0LL, v21);
   do
   {
     v23 = *(_QWORD *)v22;
@@ -7005,7 +7005,7 @@ LABEL_13:
     else
     {
 LABEL_21:
-      v26 = sub_1C36AAC(v22, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v26 = sub_1C65D04(v22, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v22, *(_QWORD *)(v26 + 8));
     if ( (v27 & 1) == 0 )
@@ -7027,7 +7027,7 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v31 = sub_1C36AAC(
+      v31 = sub_1C65D04(
               v22,
               System_Collections_Generic_IEnumerator_BattleBuffData_CheckIndividualitiesData__TypeInfo,
               0LL);
@@ -7055,7 +7055,7 @@ LABEL_28:
   else
   {
 LABEL_35:
-    v37 = sub_1C36AAC(v22, System_IDisposable_TypeInfo, 0LL);
+    v37 = sub_1C65D04(v22, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v37)(v22, *(_QWORD *)(v37 + 8));
   return v20 & 1;
@@ -7068,7 +7068,7 @@ bool __fastcall BattleBuffData__IsIgnoreIndividuality(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 0x10000, 0LL);
 }
 
@@ -7097,7 +7097,7 @@ bool __fastcall BattleBuffData__IsMatchBuffAggregationArgs(
 bool __fastcall BattleBuffData__IsOverwriteClass(BattleBuffData_BuffData_o *buff, const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   return BattleBuffData_BuffData__get_BuffType(buff, 0LL) == 107;
 }
 
@@ -7130,54 +7130,54 @@ bool __fastcall BattleBuffData__IsPermanentSleep(
   int32_t plusMinus; // [xsp+4h] [xbp-5Ch] BYREF
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B68FA8 & 1) == 0 )
+  if ( (byte_4BB6AED & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, checkIndividualities);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v11);
-    byte_4B68FA8 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, checkIndividualities);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v10);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v11);
+    byte_4BB6AED = 1;
   }
   memset(&v27, 0, sizeof(v27));
   plusMinus = 0;
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v13);
   if ( !v12 )
-    sub_1BE4D28(PassiveList, v15);
+    sub_1C13F80(PassiveList, v15);
   System_Collections_Generic_List_object___AddRange(
     v12,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v16);
   System_Collections_Generic_List_object___AddRange(
     v12,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(39, 0LL, 0LL);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v27,
     v12,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v27,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     v21 = v19;
     if ( !v19 )
       break;
     current = v27.fields._current;
     if ( !v27.fields._current )
-      sub_1BE4D28(v19, v20);
+      sub_1C13F80(v19, v20);
     if ( !BYTE1(v27.fields._current[28].klass)
       && BattleBuffData_BuffData__IsPermanentSleep((BattleBuffData_BuffData_o *)v27.fields._current, 0LL)
       && BattleBuffData__checkIndiviuality(
@@ -7196,7 +7196,7 @@ bool __fastcall BattleBuffData__IsPermanentSleep(
 LABEL_14:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return v21 && v24 == 4;
 }
 
@@ -7221,16 +7221,16 @@ bool __fastcall BattleBuffData__IsUnfix(
   int32_t v7; // w21
   int32_t size; // w23
 
-  if ( (byte_4B68F25 & 1) == 0 )
+  if ( (byte_4BB6A6A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Count__, buff);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v5);
-    byte_4B68F25 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Count__, buff);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v5);
+    byte_4BB6A6A = 1;
   }
   unfixedBuffList = this->fields.unfixedBuffList;
   if ( !unfixedBuffList )
 LABEL_9:
-    sub_1BE4D28(unfixedBuffList, buff);
+    sub_1C13F80(unfixedBuffList, buff);
   v7 = 0;
   while ( 1 )
   {
@@ -7240,7 +7240,7 @@ LABEL_9:
     unfixedBuffList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                   unfixedBuffList,
                                                                   v7,
-                                                                  (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                                  (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !buff )
       goto LABEL_9;
     if ( (_DWORD)unfixedBuffList == buff->fields.addOrder )
@@ -7268,32 +7268,32 @@ bool __fastcall BattleBuffData__IsWarBoardNotAttacked(BattleBuffData_o *this, co
   int v12; // w21
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B68FA9 & 1) == 0 )
+  if ( (byte_4BB6AEE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
-    byte_4B68FA9 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
+    byte_4BB6AEE = 1;
   }
   memset(&v14, 0, sizeof(v14));
   CurrentAllBaffList = (System_Collections_Generic_List_object__o *)BattleBuffData__getCurrentAllBaffList(this, 1, v2);
   if ( !CurrentAllBaffList )
-    sub_1BE4D28(0LL, v8);
+    sub_1C13F80(0LL, v8);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     CurrentAllBaffList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v14,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     v11 = v9;
     if ( !v9 )
       break;
     if ( !v14.fields._current )
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
     if ( !BYTE1(v14.fields._current[28].klass)
       && BattleBuffData_BuffData__IsWarBoardNotAttacked((BattleBuffData_BuffData_o *)v14.fields._current, 0LL) )
     {
@@ -7305,7 +7305,7 @@ bool __fastcall BattleBuffData__IsWarBoardNotAttacked(BattleBuffData_o *this, co
 LABEL_11:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return v11 && v12 == 4;
 }
 
@@ -7320,15 +7320,15 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__MakeRemoveBuffInfo(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B68F57 & 1) == 0 )
+  if ( (byte_4BB6A9C & 1) == 0 )
   {
-    sub_1BE4ACC(&RemovedBuffInfo_TypeInfo, endList);
-    byte_4B68F57 = 1;
+    sub_1C13D24(&RemovedBuffInfo_TypeInfo, endList);
+    byte_4BB6A9C = 1;
   }
-  v6 = (RemovedBuffInfo_o *)sub_1BE4D18(RemovedBuffInfo_TypeInfo);
+  v6 = (RemovedBuffInfo_o *)sub_1C13F70(RemovedBuffInfo_TypeInfo);
   RemovedBuffInfo___ctor(v6, 0LL);
   if ( !v6 )
-    sub_1BE4D28(v7, v8);
+    sub_1C13F80(v7, v8);
   RemovedBuffInfo__AddBuffs(v6, (System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *)endList, 0, 0LL);
   RemovedBuffInfo__AddBuffs(
     v6,
@@ -7373,13 +7373,13 @@ bool __fastcall BattleBuffData__OffStateWithAuraConditionCheck(
   const MethodInfo *v31; // x3
 
   v6 = this;
-  if ( (byte_4B68F97 & 1) == 0 )
+  if ( (byte_4BB6ADC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__,
                                  v7);
-    byte_4B68F97 = 1;
+    byte_4BB6ADC = 1;
   }
   if ( !buff )
     goto LABEL_32;
@@ -7398,7 +7398,7 @@ LABEL_11:
       if ( System_Collections_Generic_List_object___Contains(
              (System_Collections_Generic_List_object__o *)this,
              (Il2CppObject *)buff,
-             (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+             (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
       {
         v10 = 0;
       }
@@ -7418,14 +7418,14 @@ LABEL_11:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)buff,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = v17 + 8 * passiveList_low;
           LODWORD(this->fields.passiveList) = passiveList_low + 1;
           *(_QWORD *)(v20 + 32) = buff;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v20 + 32), (int64_t)buff, v11, v12, v13, v14, v15, v16);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v20 + 32), (int64_t)buff, v11, v12, v13, v14, v15, v16);
         }
         v10 = 1;
       }
@@ -7435,7 +7435,7 @@ LABEL_11:
       v8 = System_Collections_Generic_List_object___Contains(
              (System_Collections_Generic_List_object__o *)this,
              (Il2CppObject *)buff,
-             (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+             (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
       if ( !v8 )
       {
         this = (BattleBuffData_o *)v6->fields.conditionalAuraBuff;
@@ -7452,21 +7452,21 @@ LABEL_11:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)buff,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
             }
             else
             {
               v29 = v26 + 8 * v28;
               LODWORD(this->fields.passiveList) = v28 + 1;
               *(_QWORD *)(v29 + 32) = buff;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 32), (int64_t)buff, v21, (int32_t)v9, v22, v23, v24, v25);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v29 + 32), (int64_t)buff, v21, (int32_t)v9, v22, v23, v24, v25);
             }
             v10 = 1;
             goto LABEL_30;
           }
         }
 LABEL_32:
-        sub_1BE4D28(this, buff);
+        sub_1C13F80(this, buff);
       }
     }
     else
@@ -7499,13 +7499,13 @@ bool __fastcall BattleBuffData__OnStateWithAuraConditionCheck(
   const MethodInfo *v12; // x3
 
   v6 = this;
-  if ( (byte_4B68F96 & 1) == 0 )
+  if ( (byte_4BB6ADB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__,
                                  v7);
-    byte_4B68F96 = 1;
+    byte_4BB6ADB = 1;
   }
   if ( !buff )
     goto LABEL_23;
@@ -7527,7 +7527,7 @@ LABEL_11:
       v10 = System_Collections_Generic_List_object___Contains(
               (System_Collections_Generic_List_object__o *)this,
               (Il2CppObject *)buff,
-              (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+              (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
       if ( v10 )
       {
         this = (BattleBuffData_o *)v6->fields.auraBuffList;
@@ -7536,7 +7536,7 @@ LABEL_11:
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)buff,
-          (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+          (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
       }
       this = (BattleBuffData_o *)v6->fields.conditionalAuraBuff;
       if ( this )
@@ -7544,7 +7544,7 @@ LABEL_11:
         v8 = System_Collections_Generic_List_object___Contains(
                (System_Collections_Generic_List_object__o *)this,
                (Il2CppObject *)buff,
-               (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+               (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
         if ( !v8 )
         {
 LABEL_21:
@@ -7558,14 +7558,14 @@ LABEL_21:
           v8 = System_Collections_Generic_List_object___Remove(
                  (System_Collections_Generic_List_object__o *)this,
                  (Il2CppObject *)buff,
-                 (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+                 (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
           v10 = 1;
           goto LABEL_21;
         }
       }
     }
 LABEL_23:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   if ( state == 1 || state == 16 )
     goto LABEL_11;
@@ -7581,7 +7581,7 @@ bool __fastcall BattleBuffData__ProgressBuffTurn(
   bool v4; // w0
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   v4 = BattleBuffData_BuffData__checkProgressTurn(buff, 0LL);
   if ( v4 )
     --buff->fields.turn;
@@ -7608,19 +7608,19 @@ void __fastcall BattleBuffData__RechargeCommandAssistBuff(
   int chargeTurn; // w8
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B68F92 & 1) == 0 )
+  if ( (byte_4BB6AD7 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleData_TypeInfo, buff);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_1BE4ACC(&DataManager_TypeInfo, v6);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v7);
-    byte_4B68F92 = 1;
+    sub_1C13D24(&BattleData_TypeInfo, buff);
+    sub_1C13D24(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
+    sub_1C13D24(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
+    sub_1C13D24(&DataManager_TypeInfo, v6);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v7);
+    byte_4BB6AD7 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !BattleData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
   EventId = (Il2CppObject *)BattleData__GetEventId(0LL);
@@ -7635,16 +7635,16 @@ void __fastcall BattleBuffData__RechargeCommandAssistBuff(
                     0LL);
   v13 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C369A8(v12);
+    v13 = sub_1C65C00(v12);
   v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C369A8(v12);
+    v14 = sub_1C65C00(v12);
   EventId = **(Il2CppObject ***)(v14 + 184);
   if ( !EventId )
     goto LABEL_21;
   EventId = DataManager__GetMasterData_object_(
               (DataManager_o *)EventId,
-              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillLvMaster___);
   entity = 0LL;
   if ( !CurrentEntity || !EventId )
     goto LABEL_21;
@@ -7658,7 +7658,7 @@ void __fastcall BattleBuffData__RechargeCommandAssistBuff(
     return;
   if ( !entity )
 LABEL_21:
-    sub_1BE4D28(EventId, v10);
+    sub_1C13F80(EventId, v10);
   chargeTurn = entity->fields.chargeTurn;
   if ( chargeTurn >= 1 )
     buff->fields.reCharge = chargeTurn;
@@ -7687,32 +7687,32 @@ void __fastcall BattleBuffData__RechargeCommandCodeBuff(
   int chargeTurn; // w8
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B68F90 & 1) == 0 )
+  if ( (byte_4BB6AD5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommandCodeSkillMaster___, buff);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4B68F90 = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommandCodeSkillMaster___, buff);
+    sub_1C13D24(&Method_DataManager_GetMasterData_SkillLvMaster___, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4BB6AD5 = 1;
   }
   entity = 0LL;
-  Instance = (CommandCodeSkillEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (CommandCodeSkillEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommandCodeSkillMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommandCodeSkillMaster___);
   v11 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C369A8(v10);
+    v11 = sub_1C65C00(v10);
   v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C369A8(v10);
+    v12 = sub_1C65C00(v10);
   Instance = **(CommandCodeSkillEntity_array ***)(v12 + 184);
   if ( !Instance
     || (Instance = (CommandCodeSkillEntity_array *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)Instance,
-                                                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillLvMaster___),
+                                                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillLvMaster___),
         !buff)
     || !MasterData_object
     || (v13 = (SkillLvMaster_o *)Instance,
@@ -7722,7 +7722,7 @@ void __fastcall BattleBuffData__RechargeCommandCodeBuff(
                       0LL)) == 0LL) )
   {
 LABEL_24:
-    sub_1BE4D28(Instance, v8);
+    sub_1C13F80(Instance, v8);
   }
   max_length = Instance->max_length;
   v15 = Instance;
@@ -7732,7 +7732,7 @@ LABEL_24:
     while ( 1 )
     {
       if ( v16 >= max_length )
-        sub_1BE4D30(Instance, v8);
+        sub_1C13F88(Instance, v8);
       v17 = v15->m_Items[v16];
       entity = 0LL;
       if ( !v17 || !v13 )
@@ -7765,24 +7765,24 @@ void __fastcall BattleBuffData__RemoveActiveBuffWithCondition(
   System_Collections_Generic_List_object__o *activeList; // x0
   int32_t v8; // w21
 
-  if ( (byte_4B68F27 & 1) == 0 )
+  if ( (byte_4BB6A6C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, condition);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v6);
-    byte_4B68F27 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, condition);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v6);
+    byte_4BB6A6C = 1;
   }
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList )
 LABEL_11:
-    sub_1BE4D28(activeList, condition);
+    sub_1C13F80(activeList, condition);
   v8 = 0;
   while ( v8 < activeList->fields._size )
   {
     activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activeList,
                                                                 v8,
-                                                                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
     if ( !condition )
       goto LABEL_11;
     if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_Collections_Generic_List_object__o *, _QWORD))condition->fields.m_target)(
@@ -7796,7 +7796,7 @@ LABEL_11:
       System_Collections_Generic_List_object___RemoveAt(
         activeList,
         v8--,
-        (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+        (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
     }
     activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
     ++v8;
@@ -7818,24 +7818,24 @@ void __fastcall BattleBuffData__RemoveBuff(
   int32_t v9; // w22
   int items_high; // w25
 
-  if ( (byte_4B68F26 & 1) == 0 )
+  if ( (byte_4BB6A6B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, removeBuffList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v6);
-    byte_4B68F26 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, removeBuffList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v6);
+    byte_4BB6A6B = 1;
   }
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList )
 LABEL_20:
-    sub_1BE4D28(activeList, removeBuffList);
+    sub_1C13F80(activeList, removeBuffList);
   v8 = 0;
   while ( v8 < activeList->fields._size )
   {
     activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 activeList,
                                                                 v8,
-                                                                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
     if ( !activeList )
       goto LABEL_20;
     if ( BYTE1(activeList[11].monitor) )
@@ -7853,14 +7853,14 @@ LABEL_20:
           activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       activeList,
                                                                       v8,
-                                                                      (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                      (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
           if ( !activeList )
             goto LABEL_20;
           items_high = HIDWORD(activeList[3].fields._items);
           activeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       (System_Collections_Generic_List_object__o *)removeBuffList,
                                                                       v9,
-                                                                      (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                      (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
           if ( !activeList )
             goto LABEL_20;
           if ( items_high == HIDWORD(activeList[3].fields._items) )
@@ -7874,7 +7874,7 @@ LABEL_20:
         System_Collections_Generic_List_object___RemoveAt(
           activeList,
           v8--,
-          (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+          (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
       }
     }
 LABEL_19:
@@ -7951,38 +7951,38 @@ void __fastcall BattleBuffData__RemoveClassBoardCommandSpellBuff(
   System_Collections_Generic_List_ClassBoardCommandSpellEntity__o *entitys; // [xsp+48h] [xbp-68h] BYREF
 
   v5 = classBoardCommandSpellArray;
-  if ( (byte_4B68FBF & 1) == 0 )
+  if ( (byte_4BB6B04 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, classBoardCommandSpellArray);
-    sub_1BE4ACC(&DataManager_TypeInfo, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v15);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v16);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v17);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__0__, v18);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__1__, v19);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__2__, v20);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__3__, v21);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass266_0_TypeInfo, v22);
-    byte_4B68FBF = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, classBoardCommandSpellArray);
+    sub_1C13D24(&DataManager_TypeInfo, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v15);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v16);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v17);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__0__, v18);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__1__, v19);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__2__, v20);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__3__, v21);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass266_0_TypeInfo, v22);
+    byte_4BB6B04 = 1;
   }
   entitys = 0LL;
   memset(&v61, 0, sizeof(v61));
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v5, 0LL) )
   {
-    v23 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    v23 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v23,
-      (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+      (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
     if ( !v5 )
       goto LABEL_34;
     max_length = v5->max_length;
@@ -7994,7 +7994,7 @@ void __fastcall BattleBuffData__RemoveClassBoardCommandSpellBuff(
       while ( 1 )
       {
         if ( v28 >= (unsigned int)max_length )
-          sub_1BE4D30(Master_object, v25);
+          sub_1C13F88(Master_object, v25);
         v29 = v5->m_Items[v28];
         if ( !v29 || !Master_object )
           break;
@@ -8011,85 +8011,85 @@ void __fastcall BattleBuffData__RemoveClassBoardCommandSpellBuff(
           System_Collections_Generic_List_object___GetEnumerator(
             (System_Collections_Generic_List_Enumerator_T__o *)&v60,
             (System_Collections_Generic_List_object__o *)entitys,
-            (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
+            (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
           v61 = v60;
           while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                     &v61,
-                    (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__) )
+                    (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__) )
           {
-            v30 = sub_1BE4D18(BattleBuffData___c__DisplayClass266_0_TypeInfo);
+            v30 = sub_1C13F70(BattleBuffData___c__DisplayClass266_0_TypeInfo);
             BattleBuffData___c__DisplayClass266_0___ctor((BattleBuffData___c__DisplayClass266_0_o *)v30, 0LL);
             if ( !v30 )
-              sub_1BE4D28(v31, v32);
+              sub_1C13F80(v31, v32);
             current = v61.fields._current;
             *(_QWORD *)(v30 + 16) = v61.fields._current;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v30 + 16), (int64_t)current, v33, v34, v35, v36, v37, v38);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v30 + 16), (int64_t)current, v33, v34, v35, v36, v37, v38);
             passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-            v41 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+            v41 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
             System_Predicate_object____ctor(
               v41,
               (Il2CppObject *)v30,
               Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__0__,
               0LL);
             if ( !passiveList )
-              sub_1BE4D28(v42, v43);
+              sub_1C13F80(v42, v43);
             All = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                    passiveList,
                                                                    (System_Predicate_T__o *)v41,
-                                                                   (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                   (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
             if ( !v23 )
-              sub_1BE4D28(All, All);
+              sub_1C13F80(All, All);
             System_Collections_Generic_List_object___AddRange(
               v23,
               All,
-              (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+              (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
             v45 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-            v46 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+            v46 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
             System_Predicate_object____ctor(
               v46,
               (Il2CppObject *)v30,
               Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__1__,
               0LL);
             if ( !v45 )
-              sub_1BE4D28(v47, v48);
+              sub_1C13F80(v47, v48);
             System_Collections_Generic_List_object___RemoveAll(
               v45,
               (System_Predicate_T__o *)v46,
-              (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+              (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
             activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-            v50 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+            v50 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
             System_Predicate_object____ctor(
               v50,
               (Il2CppObject *)v30,
               Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__2__,
               0LL);
             if ( !activeList )
-              sub_1BE4D28(v51, v52);
+              sub_1C13F80(v51, v52);
             v53 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                    activeList,
                                                                    (System_Predicate_T__o *)v50,
-                                                                   (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                   (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
             System_Collections_Generic_List_object___AddRange(
               v23,
               v53,
-              (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+              (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
             v54 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-            v55 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+            v55 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
             System_Predicate_object____ctor(
               v55,
               (Il2CppObject *)v30,
               Method_BattleBuffData___c__DisplayClass266_0__RemoveClassBoardCommandSpellBuff_b__3__,
               0LL);
             if ( !v54 )
-              sub_1BE4D28(v56, v57);
+              sub_1C13F80(v56, v57);
             System_Collections_Generic_List_object___RemoveAll(
               v54,
               (System_Predicate_T__o *)v55,
-              (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+              (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v61,
-            (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
+            (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
         }
         Master_object = v58;
         v5 = v59;
@@ -8099,7 +8099,7 @@ void __fastcall BattleBuffData__RemoveClassBoardCommandSpellBuff(
           goto LABEL_32;
       }
 LABEL_34:
-      sub_1BE4D28(Master_object, v25);
+      sub_1C13F80(Master_object, v25);
     }
 LABEL_32:
     BattleBuffData__RemoveLinkageAndUpdateRemoveBuffInfluence(
@@ -8199,38 +8199,38 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
   System_Collections_Generic_List_Enumerator_object__o v88; // [xsp+40h] [xbp-80h] BYREF
   System_Collections_Generic_List_ClassBoardCommandSpellEntity__o *entitys; // [xsp+58h] [xbp-68h] BYREF
 
-  if ( (byte_4B68FBE & 1) == 0 )
+  if ( (byte_4BB6B03 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, classBoardSkillArray);
-    sub_1BE4ACC(&DataManager_TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v16);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v17);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v18);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__0__, v19);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__1__, v20);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__2__, v21);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__3__, v22);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass265_0_TypeInfo, v23);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__4__, v24);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__5__, v25);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__6__, v26);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__7__, v27);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass265_1_TypeInfo, v28);
-    byte_4B68FBE = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, classBoardSkillArray);
+    sub_1C13D24(&DataManager_TypeInfo, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__get_Current__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v16);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v17);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v18);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__0__, v19);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__1__, v20);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__2__, v21);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_0__RemoveClassBoardSkillBuff_b__3__, v22);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass265_0_TypeInfo, v23);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__4__, v24);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__5__, v25);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__6__, v26);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__7__, v27);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass265_1_TypeInfo, v28);
+    byte_4BB6B03 = 1;
   }
   entitys = 0LL;
   memset(&v88, 0, sizeof(v88));
-  v29 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v29 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v29,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   IsNullOrEmpty = (System_Collections_Generic_IEnumerable_T__o *)BasicHelper__IsNullOrEmpty(
                                                                    (System_Collections_ICollection_o *)classBoardSkillArray,
                                                                    0LL);
@@ -8243,7 +8243,7 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
       v32 = 0LL;
       while ( 1 )
       {
-        v33 = sub_1BE4D18(BattleBuffData___c__DisplayClass265_0_TypeInfo);
+        v33 = sub_1C13F70(BattleBuffData___c__DisplayClass265_0_TypeInfo);
         BattleBuffData___c__DisplayClass265_0___ctor((BattleBuffData___c__DisplayClass265_0_o *)v33, 0LL);
         if ( v32 >= classBoardSkillArray->max_length )
           break;
@@ -8251,9 +8251,9 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
           goto LABEL_46;
         v40 = classBoardSkillArray->m_Items[v32];
         *(_QWORD *)(v33 + 16) = v40;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v33 + 16), (int64_t)v40, v34, v35, v36, v37, v38, v39);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v33 + 16), (int64_t)v40, v34, v35, v36, v37, v38, v39);
         passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-        v42 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+        v42 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
         System_Predicate_object____ctor(
           v42,
           (Il2CppObject *)v33,
@@ -8264,15 +8264,15 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
         IsNullOrEmpty = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                          passiveList,
                                                                          (System_Predicate_T__o *)v42,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
         if ( !v29 )
           goto LABEL_46;
         System_Collections_Generic_List_object___AddRange(
           v29,
           IsNullOrEmpty,
-          (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+          (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
         v43 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-        v44 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+        v44 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
         System_Predicate_object____ctor(
           v44,
           (Il2CppObject *)v33,
@@ -8283,9 +8283,9 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
         System_Collections_Generic_List_object___RemoveAll(
           v43,
           (System_Predicate_T__o *)v44,
-          (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+          (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
         activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-        v46 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+        v46 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
         System_Predicate_object____ctor(
           v46,
           (Il2CppObject *)v33,
@@ -8296,13 +8296,13 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
         All = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                activeList,
                                                                (System_Predicate_T__o *)v46,
-                                                               (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                               (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
         System_Collections_Generic_List_object___AddRange(
           v29,
           All,
-          (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+          (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
         v48 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-        v49 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+        v49 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
         System_Predicate_object____ctor(
           v49,
           (Il2CppObject *)v33,
@@ -8313,12 +8313,12 @@ void __fastcall BattleBuffData__RemoveClassBoardSkillBuff(
         System_Collections_Generic_List_object___RemoveAll(
           v48,
           (System_Predicate_T__o *)v49,
-          (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+          (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
         if ( (__int64)++v32 >= (int)classBoardSkillArray->max_length )
           goto LABEL_15;
       }
 LABEL_47:
-      sub_1BE4D30(IsNullOrEmpty, v31);
+      sub_1C13F88(IsNullOrEmpty, v31);
     }
   }
 LABEL_15:
@@ -8330,10 +8330,10 @@ LABEL_15:
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  IsNullOrEmpty = (System_Collections_Generic_IEnumerable_T__o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  IsNullOrEmpty = (System_Collections_Generic_IEnumerable_T__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !classBoardCommandSpellArray )
 LABEL_46:
-    sub_1BE4D28(IsNullOrEmpty, v31);
+    sub_1C13F80(IsNullOrEmpty, v31);
   max_length = classBoardCommandSpellArray->max_length;
   if ( max_length >= 1 )
   {
@@ -8357,85 +8357,85 @@ LABEL_46:
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v87,
           (System_Collections_Generic_List_object__o *)entitys,
-          (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
+          (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
         v88 = v87;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v88,
-                  (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__) )
+                  (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__MoveNext__) )
         {
-          v55 = sub_1BE4D18(BattleBuffData___c__DisplayClass265_1_TypeInfo);
+          v55 = sub_1C13F70(BattleBuffData___c__DisplayClass265_1_TypeInfo);
           BattleBuffData___c__DisplayClass265_1___ctor((BattleBuffData___c__DisplayClass265_1_o *)v55, 0LL);
           if ( !v55 )
-            sub_1BE4D28(v56, v57);
+            sub_1C13F80(v56, v57);
           current = v88.fields._current;
           *(_QWORD *)(v55 + 16) = v88.fields._current;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v55 + 16), (int64_t)current, v58, v59, v60, v61, v62, v63);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v55 + 16), (int64_t)current, v58, v59, v60, v61, v62, v63);
           v65 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-          v66 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+          v66 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
           System_Predicate_object____ctor(
             v66,
             (Il2CppObject *)v55,
             Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__4__,
             0LL);
           if ( !v65 )
-            sub_1BE4D28(v67, v68);
+            sub_1C13F80(v67, v68);
           v69 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                  v65,
                                                                  (System_Predicate_T__o *)v66,
-                                                                 (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                 (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
           if ( !v29 )
-            sub_1BE4D28(v69, v69);
+            sub_1C13F80(v69, v69);
           System_Collections_Generic_List_object___AddRange(
             v29,
             v69,
-            (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+            (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
           v70 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-          v71 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+          v71 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
           System_Predicate_object____ctor(
             v71,
             (Il2CppObject *)v55,
             Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__5__,
             0LL);
           if ( !v70 )
-            sub_1BE4D28(v72, v73);
+            sub_1C13F80(v72, v73);
           System_Collections_Generic_List_object___RemoveAll(
             v70,
             (System_Predicate_T__o *)v71,
-            (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+            (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
           v74 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-          v75 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+          v75 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
           System_Predicate_object____ctor(
             v75,
             (Il2CppObject *)v55,
             Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__6__,
             0LL);
           if ( !v74 )
-            sub_1BE4D28(v76, v77);
+            sub_1C13F80(v76, v77);
           v78 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                                  v74,
                                                                  (System_Predicate_T__o *)v75,
-                                                                 (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                 (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
           System_Collections_Generic_List_object___AddRange(
             v29,
             v78,
-            (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+            (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
           v79 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-          v80 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+          v80 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
           System_Predicate_object____ctor(
             v80,
             (Il2CppObject *)v55,
             Method_BattleBuffData___c__DisplayClass265_1__RemoveClassBoardSkillBuff_b__7__,
             0LL);
           if ( !v79 )
-            sub_1BE4D28(v81, v82);
+            sub_1C13F80(v81, v82);
           System_Collections_Generic_List_object___RemoveAll(
             v79,
             (System_Predicate_T__o *)v80,
-            (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+            (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v88,
-          (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
+          (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardCommandSpellEntity__Dispose__);
       }
       IsNullOrEmpty = v85;
       v50 = classBoardCommandSpellArray;
@@ -8464,13 +8464,13 @@ void __fastcall BattleBuffData__RemoveClassIconEffectBuff(
   __int64 v5; // x1
 
   v4 = this;
-  if ( (byte_4B68FBC & 1) == 0 )
+  if ( (byte_4BB6B01 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, effectBuff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, effectBuff);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__,
                                  v5);
-    byte_4B68FBC = 1;
+    byte_4BB6B01 = 1;
   }
   if ( !effectBuff )
     goto LABEL_10;
@@ -8482,7 +8482,7 @@ void __fastcall BattleBuffData__RemoveClassIconEffectBuff(
     if ( System_Collections_Generic_List_object___Contains(
            (System_Collections_Generic_List_object__o *)this,
            (Il2CppObject *)effectBuff,
-           (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+           (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
     {
       this = (BattleBuffData_o *)v4->fields.classIconAuraEffectBuffList;
       if ( this )
@@ -8490,11 +8490,11 @@ void __fastcall BattleBuffData__RemoveClassIconEffectBuff(
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)effectBuff,
-          (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+          (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
         return;
       }
 LABEL_10:
-      sub_1BE4D28(this, effectBuff);
+      sub_1C13F80(this, effectBuff);
     }
   }
 }
@@ -8520,14 +8520,14 @@ void __fastcall BattleBuffData__RemoveLinkageAndUpdateRemoveBuffInfluence(
   const MethodInfo *v18; // x2
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B68FC0 & 1) == 0 )
+  if ( (byte_4BB6B05 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, removeBuffList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
-    byte_4B68FC0 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, removeBuffList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
+    byte_4BB6B05 = 1;
   }
   memset(&v19, 0, sizeof(v19));
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)removeBuffList, 0LL) )
@@ -8538,7 +8538,7 @@ void __fastcall BattleBuffData__RemoveLinkageAndUpdateRemoveBuffInfluence(
       System_Collections_Generic_List_object___AddRange(
         (System_Collections_Generic_List_object__o *)removeBuffList,
         (System_Collections_Generic_IEnumerable_T__o *)v12,
-        (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+        (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
       BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(this, removeBuffList, v14);
       BattleBuffData__CheckAndUpdateFieldIndividualityBuff(v15, removeBuffList, logic, v16);
       v12 = (System_Collections_Generic_List_BattleBuffData_BuffData__o *)BattleBuffData__CheckInvalidSacrificeIndivArray(
@@ -8553,18 +8553,18 @@ LABEL_8:
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v19,
           (System_Collections_Generic_List_object__o *)removeBuffList,
-          (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+          (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v19,
-                  (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
+                  (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
           BattleBuffData__RemoveClassIconEffectBuff(this, (BattleBuffData_BuffData_o *)v19.fields._current, v18);
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v19,
-          (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+          (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
         return;
       }
     }
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
 }
 
@@ -8685,65 +8685,65 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   Il2CppClass **v114; // x0
   System_Collections_Generic_List_int__o *v116; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4B68F36 & 1) == 0 )
+  if ( (byte_4BB6A7B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, endBuffs);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v8);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__bool__TypeInfo, v9);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__, v17);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, v18);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v19);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v20);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v21);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v22);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Count__, v23);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v24);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__get_Item__, v25);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v26);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v27);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass75_0__RemoveLinkageBuff_b__0__, v28);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass75_0__RemoveLinkageBuff_b__1__, v29);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass75_0_TypeInfo, v30);
-    byte_4B68F36 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, endBuffs);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v8);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__bool__TypeInfo, v9);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__, v17);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__, v18);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v19);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v20);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v21);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v22);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Count__, v23);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v24);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v25);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v26);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v27);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass75_0__RemoveLinkageBuff_b__0__, v28);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass75_0__RemoveLinkageBuff_b__1__, v29);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass75_0_TypeInfo, v30);
+    byte_4BB6A7B = 1;
   }
-  v31 = sub_1BE4D18(BattleBuffData___c__DisplayClass75_0_TypeInfo);
+  v31 = sub_1C13F70(BattleBuffData___c__DisplayClass75_0_TypeInfo);
   BattleBuffData___c__DisplayClass75_0___ctor((BattleBuffData___c__DisplayClass75_0_o *)v31, 0LL);
   if ( !v31 )
     goto LABEL_100;
   *(_BYTE *)(v31 + 16) = isFamily;
   *(_QWORD *)(v31 + 24) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v31 + 24), (int64_t)this, v34, v35, v36, v37, v38, v39);
-  v40 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v31 + 24), (int64_t)this, v34, v35, v36, v37, v38, v39);
+  v40 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v40,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v41 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v41 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v41,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   v42 = *(System_Func_object__bool__o **)(v31 + 32);
   if ( !v42 )
   {
-    v42 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    v42 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v42,
       (Il2CppObject *)v31,
       Method_BattleBuffData___c__DisplayClass75_0__RemoveLinkageBuff_b__1__,
       0LL);
     *(_QWORD *)(v31 + 32) = v42;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v31 + 32), (int64_t)v42, v43, v44, v45, v46, v47, v48);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v31 + 32), (int64_t)v42, v43, v44, v45, v46, v47, v48);
   }
   Item = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__Where_object_(
                                                         (System_Collections_Generic_IEnumerable_TSource__o *)endBuffs,
                                                         (System_Func_TSource__bool__o *)v42,
-                                                        (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+                                                        (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   if ( !Item )
     goto LABEL_100;
   klass = Item->klass;
@@ -8764,12 +8764,12 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   else
   {
 LABEL_11:
-    v53 = sub_1C36AAC(Item, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    v53 = sub_1C65D04(Item, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v55 = (*(__int64 (__fastcall **)(System_Collections_Generic_List_object__o *, _QWORD))v53)(v50, *(_QWORD *)(v53 + 8));
   v116 = v41;
   if ( !v55 )
-    sub_1BE4D28(0LL, v54);
+    sub_1C13F80(0LL, v54);
   while ( 1 )
   {
     v56 = *(_QWORD *)v55;
@@ -8789,7 +8789,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v59 = sub_1C36AAC(v55, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v59 = sub_1C65D04(v55, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v59)(v55, *(_QWORD *)(v59 + 8)) & 1) == 0 )
       break;
@@ -8810,20 +8810,20 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v63 = sub_1C36AAC(v55, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v63 = sub_1C65D04(v55, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v64 = (*(__int64 (__fastcall **)(__int64, _QWORD))v63)(v55, *(_QWORD *)(v63 + 8));
     if ( !v64 )
-      sub_1BE4D28(0LL, v65);
+      sub_1C13F80(0LL, v65);
     v66 = *(System_Collections_Generic_IEnumerable_T__o **)(v64 + 128);
     if ( v66 && v66[1].monitor )
     {
       if ( !v41 )
-        sub_1BE4D28(v64, v66);
+        sub_1C13F80(v64, v66);
       System_Collections_Generic_List_int___AddRange(
         v41,
         v66,
-        (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+        (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
     }
   }
   v67 = *(_QWORD *)v55;
@@ -8843,10 +8843,10 @@ LABEL_25:
   else
   {
 LABEL_36:
-    v70 = sub_1C36AAC(v55, System_IDisposable_TypeInfo, 0LL);
+    v70 = sub_1C65D04(v55, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v70)(v55, *(_QWORD *)(v70 + 8));
-  v71 = sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__bool__TypeInfo);
+  v71 = sub_1C13F70(System_Func_BattleBuffData_BuffData__int__bool__TypeInfo);
   System_Func_object__int__bool____ctor(
     (System_Func_T1__T2__TResult__o *)v71,
     (Il2CppObject *)v31,
@@ -8863,7 +8863,7 @@ LABEL_36:
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_int___get_Item(
                                                             v72,
                                                             v73,
-                                                            (const MethodInfo_35CEF10 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                            (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
       activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
       if ( !activeList )
         goto LABEL_100;
@@ -8883,7 +8883,7 @@ LABEL_73:
           Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 Item,
                                                                 v102,
-                                                                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
           if ( !v71 )
             break;
           v103 = (int64_t)Item;
@@ -8901,7 +8901,7 @@ LABEL_73:
               System_Collections_Generic_List_int___AddRange(
                 v116,
                 v33,
-                (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+                (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
             if ( *(_DWORD *)(v103 + 64) )
             {
               Item = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
@@ -8910,7 +8910,7 @@ LABEL_73:
               if ( System_Collections_Generic_List_object___Contains(
                      Item,
                      (Il2CppObject *)v103,
-                     (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+                     (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
               {
                 Item = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
                 if ( !Item )
@@ -8918,7 +8918,7 @@ LABEL_73:
                 System_Collections_Generic_List_object___Remove(
                   Item,
                   (Il2CppObject *)v103,
-                  (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+                  (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
               }
             }
             BattleBuffData__RemoveClassIconEffectBuff(this, (BattleBuffData_BuffData_o *)v103, v104);
@@ -8927,7 +8927,7 @@ LABEL_73:
             Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Contains(
                                                                   (System_Collections_Generic_List_object__o *)endBuffs,
                                                                   (Il2CppObject *)v103,
-                                                                  (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+                                                                  (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
             if ( ((unsigned __int8)Item & 1) == 0 )
             {
               if ( !v40 )
@@ -8943,14 +8943,14 @@ LABEL_73:
                 System_Collections_Generic_List_object___AddWithResize(
                   v40,
                   (Il2CppObject *)v103,
-                  *(const MethodInfo_35EC224 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
+                  *(const MethodInfo_362D1CC **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
               }
               else
               {
                 v114 = &items->obj.klass + size;
                 v40->fields._size = size + 1;
                 v114[4] = (Il2CppClass *)v103;
-                sub_1BE4A70((PartyOrganizationUtility_o *)(v114 + 4), v103, v105, v106, v107, v108, v109, v110);
+                sub_1C13CC8((PartyOrganizationUtility_o *)(v114 + 4), v103, v105, v106, v107, v108, v109, v110);
               }
             }
             Item = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
@@ -8959,7 +8959,7 @@ LABEL_73:
             System_Collections_Generic_List_object___RemoveAt(
               Item,
               v102,
-              (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+              (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
           }
           if ( --v102 < 0 )
             goto LABEL_98;
@@ -8978,7 +8978,7 @@ LABEL_98:
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                             activeList,
                                                             v76,
-                                                            (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                            (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
       if ( !v71 )
         break;
       v77 = (int64_t)Item;
@@ -8996,7 +8996,7 @@ LABEL_98:
           System_Collections_Generic_List_int___AddRange(
             v116,
             v33,
-            (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+            (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
         if ( *(_DWORD *)(v77 + 64) )
         {
           Item = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
@@ -9005,7 +9005,7 @@ LABEL_98:
           if ( System_Collections_Generic_List_object___Contains(
                  Item,
                  (Il2CppObject *)v77,
-                 (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+                 (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
           {
             Item = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
             if ( !Item )
@@ -9013,7 +9013,7 @@ LABEL_98:
             System_Collections_Generic_List_object___Remove(
               Item,
               (Il2CppObject *)v77,
-              (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+              (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
           }
         }
         BattleBuffData__RemoveClassIconEffectBuff(this, (BattleBuffData_BuffData_o *)v77, v78);
@@ -9022,7 +9022,7 @@ LABEL_98:
         Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Contains(
                                                               (System_Collections_Generic_List_object__o *)endBuffs,
                                                               (Il2CppObject *)v77,
-                                                              (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+                                                              (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
         if ( ((unsigned __int8)Item & 1) == 0 )
         {
           if ( !v40 )
@@ -9038,14 +9038,14 @@ LABEL_98:
             System_Collections_Generic_List_object___AddWithResize(
               v40,
               (Il2CppObject *)v77,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
           }
           else
           {
             v88 = &v85->obj.klass + v87;
             v40->fields._size = v87 + 1;
             v88[4] = (Il2CppClass *)v77;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v88 + 4), v77, v79, v80, v81, v82, v83, v84);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v88 + 4), v77, v79, v80, v81, v82, v83, v84);
           }
         }
         Item = (System_Collections_Generic_List_object__o *)this->fields.activeList;
@@ -9054,7 +9054,7 @@ LABEL_98:
         System_Collections_Generic_List_object___RemoveAt(
           Item,
           v76,
-          (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
+          (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAt__);
         if ( isCreateDummy )
         {
           Item = (System_Collections_Generic_List_object__o *)BattleBuffData__CreateDummyBuff(
@@ -9078,14 +9078,14 @@ LABEL_98:
               System_Collections_Generic_List_object___AddWithResize(
                 v96,
                 (Il2CppObject *)Item,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
             }
             else
             {
               v101 = &v99->obj.klass + v97;
               v96->fields._size = v97 + 1;
               v101[4] = (Il2CppClass *)v98;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v101 + 4), v98, v90, v91, v92, v93, v94, v95);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v101 + 4), v98, v90, v91, v92, v93, v94, v95);
             }
           }
           else
@@ -9094,7 +9094,7 @@ LABEL_98:
               (System_Collections_Generic_List_object__o *)this->fields.activeList,
               v76,
               (Il2CppObject *)Item,
-              (const MethodInfo_35ECFD4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__);
+              (const MethodInfo_362DF7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__);
           }
         }
       }
@@ -9104,7 +9104,7 @@ LABEL_98:
     }
     while ( activeList );
 LABEL_100:
-    sub_1BE4D28(Item, v33);
+    sub_1C13F80(Item, v33);
   }
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v40;
 }
@@ -9164,25 +9164,25 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
   const MethodInfo *v50; // x1
 
   v3 = logic;
-  if ( (byte_4B68F32 & 1) == 0 )
+  if ( (byte_4BB6A77 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData_checkBuffClear__, logic);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v9);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v10);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_0__, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_1__, v13);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v14);
-    byte_4B68F32 = 1;
+    sub_1C13D24(&Method_BattleBuffData_checkBuffClear__, logic);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v9);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v10);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_0__, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_1__, v13);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v14);
+    byte_4BB6A77 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   All = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -9200,11 +9200,11 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
       All = BattleBuffData___c_TypeInfo;
     }
     v21 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v19 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v19 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v19, v21, Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__71_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v19;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__71_0, (int64_t)v19, v23, v24, v25, v26, v27, v28);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__71_0, (int64_t)v19, v23, v24, v25, v26, v27, v28);
     v3 = v20;
   }
   if ( !passiveList )
@@ -9212,22 +9212,22 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
   All = System_Collections_Generic_List_object___FindAll(
           passiveList,
           (System_Predicate_T__o *)v19,
-          (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+          (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v15 )
     goto LABEL_24;
   System_Collections_Generic_List_object___AddRange(
     v15,
     (System_Collections_Generic_IEnumerable_T__o *)All,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v29 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v30 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v30 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v30, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v29 )
     goto LABEL_24;
   System_Collections_Generic_List_object___RemoveAll(
     v29,
     (System_Predicate_T__o *)v30,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   All = BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -9245,11 +9245,11 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
       All = BattleBuffData___c_TypeInfo;
     }
     v34 = (Il2CppObject *)**((_QWORD **)All + 23);
-    v32 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v32 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v32, v34, Method_BattleBuffData___c__RemoveNoTurnBuff_b__71_1__, 0LL);
     v35 = BattleBuffData___c_TypeInfo->static_fields;
     v35->__9__71_1 = (struct System_Predicate_BattleBuffData_BuffData__o *)v32;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v35->__9__71_1, (int64_t)v32, v36, v37, v38, v39, v40, v41);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v35->__9__71_1, (int64_t)v32, v36, v37, v38, v39, v40, v41);
     v3 = v33;
   }
   if ( !activeList )
@@ -9257,20 +9257,20 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
   v42 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          activeList,
                                                          (System_Predicate_T__o *)v32,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   System_Collections_Generic_List_object___AddRange(
     v15,
     v42,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v43 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-  v44 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v44 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v44, (Il2CppObject *)this, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v43 )
     goto LABEL_24;
   System_Collections_Generic_List_object___RemoveAll(
     v43,
     (System_Predicate_T__o *)v44,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   v46 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__removeLinkageBuff(
                                                          this,
                                                          (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v15,
@@ -9279,7 +9279,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
   System_Collections_Generic_List_object___AddRange(
     v15,
     v46,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v15,
@@ -9299,14 +9299,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__RemoveNoTurnBuff(
       BattleLogic__updateFieldBuff(v3, 0LL);
       return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                                 v15,
-                                                (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                                (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
     }
 LABEL_24:
-    sub_1BE4D28(All, v16);
+    sub_1C13F80(All, v16);
   }
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v15,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -9337,25 +9337,25 @@ void __fastcall BattleBuffData__RemovePassiveReplacedOnTransform(
   System_Predicate_object__o *v24; // x24
   const MethodInfo *v25; // x3
 
-  if ( (byte_4B68FB1 & 1) == 0 )
+  if ( (byte_4BB6AF6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, *(_QWORD *)&actorId);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v8);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v9);
-    sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, *(_QWORD *)&actorId);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v8);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v9);
+    sub_1C13D24(
       &Method_BattleBuffData___c__DisplayClass250_0__RemovePassiveReplacedOnTransform_g__IsRemovableBuff_0__,
       v10);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass250_0_TypeInfo, v11);
-    byte_4B68FB1 = 1;
+    sub_1C13D24(&BattleBuffData___c__DisplayClass250_0_TypeInfo, v11);
+    byte_4BB6AF6 = 1;
   }
-  v12 = (BattleBuffData___c__DisplayClass250_0_o *)sub_1BE4D18(BattleBuffData___c__DisplayClass250_0_TypeInfo);
+  v12 = (BattleBuffData___c__DisplayClass250_0_o *)sub_1C13F70(BattleBuffData___c__DisplayClass250_0_TypeInfo);
   BattleBuffData___c__DisplayClass250_0___ctor(v12, 0LL);
   if ( !v12 )
     goto LABEL_10;
   v12->fields.actorId = actorId;
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v16 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v16 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(
     v16,
     (Il2CppObject *)v12,
@@ -9366,10 +9366,10 @@ void __fastcall BattleBuffData__RemovePassiveReplacedOnTransform(
   All = System_Collections_Generic_List_object___FindAll(
           passiveList,
           (System_Predicate_T__o *)v16,
-          (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+          (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   v19 = (System_Collections_Generic_List_object__o *)All;
-  v20 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v20 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(
     v20,
     (Il2CppObject *)v12,
@@ -9380,15 +9380,15 @@ void __fastcall BattleBuffData__RemovePassiveReplacedOnTransform(
   v13 = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          activeList,
                                                          (System_Predicate_T__o *)v20,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v19 )
     goto LABEL_10;
   System_Collections_Generic_List_object___AddRange(
     v19,
     v13,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v21 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-  v22 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v22 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(
     v22,
     (Il2CppObject *)v12,
@@ -9398,9 +9398,9 @@ void __fastcall BattleBuffData__RemovePassiveReplacedOnTransform(
     || (System_Collections_Generic_List_object___RemoveAll(
           v21,
           (System_Predicate_T__o *)v22,
-          (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__),
+          (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__),
         v23 = (System_Collections_Generic_List_object__o *)this->fields.activeList,
-        v24 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        v24 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(
           v24,
           (Il2CppObject *)v12,
@@ -9409,12 +9409,12 @@ void __fastcall BattleBuffData__RemovePassiveReplacedOnTransform(
         !v23) )
   {
 LABEL_10:
-    sub_1BE4D28(v13, v14);
+    sub_1C13F80(v13, v14);
   }
   System_Collections_Generic_List_object___RemoveAll(
     v23,
     (System_Predicate_T__o *)v24,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   BattleBuffData__RemoveLinkageAndUpdateRemoveBuffInfluence(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v19,
@@ -9476,32 +9476,32 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__RemoveProgressingBuffList(
   const MethodInfo *v49; // x3
 
   v4 = this;
-  if ( (byte_4B68F41 & 1) == 0 )
+  if ( (byte_4BB6A86 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData_checkBuffClear__, linkedBuffList);
-    sub_1BE4ACC(&BattleLogic_TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__RemoveProgressingBuffList_b__89_0__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__RemoveProgressingBuffList_b__89_1__, v14);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v15);
-    byte_4B68F41 = 1;
+    sub_1C13D24(&Method_BattleBuffData_checkBuffClear__, linkedBuffList);
+    sub_1C13D24(&BattleLogic_TypeInfo, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v10);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__RemoveProgressingBuffList_b__89_0__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__RemoveProgressingBuffList_b__89_1__, v14);
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData___c_TypeInfo, v15);
+    byte_4BB6A86 = 1;
   }
   if ( !linkedBuffList )
     goto LABEL_27;
   v16 = System_Collections_Generic_List_object___ToArray(
           (System_Collections_Generic_List_object__o *)linkedBuffList,
-          (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+          (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   BattleBuffData__syncLinkageBuffChangeParam(v4, (BattleBuffData_BuffData_array *)v16, v17);
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -9518,7 +9518,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__RemoveProgressingBuffList(
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     v21 = (Il2CppObject *)this[1].fields.passiveList->klass;
-    klass = (System_Collections_Generic_List_BattleBuffData_BuffData__c *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    klass = (System_Collections_Generic_List_BattleBuffData_BuffData__c *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(
       (System_Predicate_object__o *)klass,
       v21,
@@ -9526,20 +9526,20 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__RemoveProgressingBuffList(
       0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__89_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)klass;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__89_0, (int64_t)klass, v23, v24, v25, v26, v27, v28);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__89_0, (int64_t)klass, v23, v24, v25, v26, v27, v28);
   }
   if ( !passiveList )
     goto LABEL_27;
   this = (BattleBuffData_o *)System_Collections_Generic_List_object___FindAll(
                                passiveList,
                                (System_Predicate_T__o *)klass,
-                               (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                               (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !v18 )
     goto LABEL_27;
   System_Collections_Generic_List_object___AddRange(
     v18,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   activeList = (System_Collections_Generic_List_object__o *)v4->fields.activeList;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -9556,42 +9556,42 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__RemoveProgressingBuffList(
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     v31 = (Il2CppObject *)this[1].fields.passiveList->klass;
-    monitor = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    monitor = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(monitor, v31, Method_BattleBuffData___c__RemoveProgressingBuffList_b__89_1__, 0LL);
     v32 = BattleBuffData___c_TypeInfo->static_fields;
     v32->__9__89_1 = (struct System_Predicate_BattleBuffData_BuffData__o *)monitor;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v32->__9__89_1, (int64_t)monitor, v33, v34, v35, v36, v37, v38);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v32->__9__89_1, (int64_t)monitor, v33, v34, v35, v36, v37, v38);
   }
   if ( !activeList )
     goto LABEL_27;
   All = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___FindAll(
                                                          activeList,
                                                          (System_Predicate_T__o *)monitor,
-                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   System_Collections_Generic_List_object___AddRange(
     v18,
     All,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v40 = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
-  v41 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v41 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v41, (Il2CppObject *)v4, Method_BattleBuffData_checkBuffClear__, 0LL);
   if ( !v40
     || (System_Collections_Generic_List_object___RemoveAll(
           v40,
           (System_Predicate_T__o *)v41,
-          (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__),
+          (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__),
         v42 = (System_Collections_Generic_List_object__o *)v4->fields.activeList,
-        v43 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        v43 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(v43, (Il2CppObject *)v4, Method_BattleBuffData_checkBuffClear__, 0LL),
         !v42) )
   {
 LABEL_27:
-    sub_1BE4D28(this, linkedBuffList);
+    sub_1C13F80(this, linkedBuffList);
   }
   System_Collections_Generic_List_object___RemoveAll(
     v42,
     (System_Predicate_T__o *)v43,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
   v45 = BattleBuffData__removeLinkageBuff(v4, (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v18, 0, v44);
   if ( BattleBuffData__CheckInvalidSacrificeIndivArray(
          (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v18,
@@ -9637,17 +9637,17 @@ void __fastcall BattleBuffData__RemoveSkillTypeBuff(
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
 
   v6 = this;
-  if ( (byte_4B68F99 & 1) == 0 )
+  if ( (byte_4BB6ADE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, buffList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, buffList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__,
                                  v11);
-    byte_4B68F99 = 1;
+    byte_4BB6ADE = 1;
   }
   memset(&v24, 0, sizeof(v24));
   SkillTypeBuff = (System_Collections_Generic_List_object__o *)BattleBuffData__GetSkillTypeBuff(
@@ -9656,52 +9656,52 @@ void __fastcall BattleBuffData__RemoveSkillTypeBuff(
                                                                  skillTypes,
                                                                  method);
   if ( !SkillTypeBuff )
-    sub_1BE4D28(0LL, v13);
+    sub_1C13F80(0LL, v13);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     SkillTypeBuff,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v24 = v23;
   while ( 1 )
   {
     v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v14 )
       break;
     if ( !buffList )
-      sub_1BE4D28(v14, v15);
+      sub_1C13F80(v14, v15);
     current = v24.fields._current;
     v17 = System_Collections_Generic_List_object___Remove(
             (System_Collections_Generic_List_object__o *)buffList,
             v24.fields._current,
-            (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+            (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
     if ( !current )
-      sub_1BE4D28(v17, v18);
+      sub_1C13F80(v17, v18);
     if ( LODWORD(current[4].klass) )
     {
       auraBuffList = (System_Collections_Generic_List_object__o *)v6->fields.auraBuffList;
       if ( !auraBuffList )
-        sub_1BE4D28(0LL, v18);
+        sub_1C13F80(0LL, v18);
       if ( System_Collections_Generic_List_object___Contains(
              auraBuffList,
              current,
-             (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+             (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
       {
         v22 = (System_Collections_Generic_List_object__o *)v6->fields.auraBuffList;
         if ( !v22 )
-          sub_1BE4D28(0LL, v21);
+          sub_1C13F80(0LL, v21);
         System_Collections_Generic_List_object___Remove(
           v22,
           current,
-          (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+          (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
       }
     }
     BattleBuffData__RemoveClassIconEffectBuff(v6, (BattleBuffData_BuffData_o *)current, v19);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -9723,18 +9723,18 @@ void __fastcall BattleBuffData__RemoveUpdateWaitIntervalBuff(
 {
   System_Collections_Generic_List_object__o *updateWaitIntervalBuffList; // x0
 
-  if ( (byte_4B68F16 & 1) == 0 )
+  if ( (byte_4BB6A5B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, buff);
-    byte_4B68F16 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, buff);
+    byte_4BB6A5B = 1;
   }
   updateWaitIntervalBuffList = (System_Collections_Generic_List_object__o *)this->fields.updateWaitIntervalBuffList;
   if ( !updateWaitIntervalBuffList )
-    sub_1BE4D28(0LL, buff);
+    sub_1C13F80(0LL, buff);
   System_Collections_Generic_List_object___Remove(
     updateWaitIntervalBuffList,
     (Il2CppObject *)buff,
-    (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+    (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
 }
 
 
@@ -9760,7 +9760,7 @@ void __fastcall BattleBuffData__ResetCommandAssistBuffActiveFlg(BattleBuffData_o
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1BE4D30(PassiveList, v4);
+        sub_1C13F88(PassiveList, v4);
       v8 = &v6->obj.klass + (int)v7;
       v9 = v8[4];
       if ( !v9 )
@@ -9775,7 +9775,7 @@ void __fastcall BattleBuffData__ResetCommandAssistBuffActiveFlg(BattleBuffData_o
         return;
     }
 LABEL_11:
-    sub_1BE4D28(PassiveList, v4);
+    sub_1C13F80(PassiveList, v4);
   }
 }
 
@@ -9802,7 +9802,7 @@ void __fastcall BattleBuffData__ResetCommandCodeBuffActiveFlg(BattleBuffData_o *
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1BE4D30(PassiveList, v4);
+        sub_1C13F88(PassiveList, v4);
       v8 = &v6->obj.klass + (int)v7;
       v9 = v8[4];
       if ( !v9 )
@@ -9817,7 +9817,7 @@ void __fastcall BattleBuffData__ResetCommandCodeBuffActiveFlg(BattleBuffData_o *
         return;
     }
 LABEL_11:
-    sub_1BE4D28(PassiveList, v4);
+    sub_1C13F80(PassiveList, v4);
   }
 }
 
@@ -9839,13 +9839,13 @@ void __fastcall BattleBuffData__ResetNotTakeOverBuff(BattleBuffData_o *this, con
   PartyListViewItem_o *v15; // x7
   System_Collections_Generic_List_object__o *activeList; // x0
 
-  if ( (byte_4B68F33 & 1) == 0 )
+  if ( (byte_4BB6A78 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__ResetNotTakeOverBuff_b__72_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68F33 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__ResetNotTakeOverBuff_b__72_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6A78 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -9862,11 +9862,11 @@ void __fastcall BattleBuffData__ResetNotTakeOverBuff(BattleBuffData_o *this, con
       v6 = BattleBuffData___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v6->static_fields->__9;
-    _9__72_0 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+    _9__72_0 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_object____ctor(_9__72_0, v8, Method_BattleBuffData___c__ResetNotTakeOverBuff_b__72_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__72_0 = (struct System_Action_BattleBuffData_BuffData__o *)_9__72_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__72_0,
       (int64_t)_9__72_0,
       v10,
@@ -9881,15 +9881,15 @@ void __fastcall BattleBuffData__ResetNotTakeOverBuff(BattleBuffData_o *this, con
     || (System_Collections_Generic_List_object___ForEach(
           activeList,
           (System_Action_T__o *)_9__72_0,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (activeList = (System_Collections_Generic_List_object__o *)this->fields.passiveList) == 0LL) )
   {
-    sub_1BE4D28(activeList, method);
+    sub_1C13F80(activeList, method);
   }
   System_Collections_Generic_List_object___ForEach(
     activeList,
     (System_Action_T__o *)_9__72_0,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
 }
 
 
@@ -9951,46 +9951,46 @@ void __fastcall BattleBuffData__ResetTargetUseBuff(
   int *v55; // x10
   __int64 v56; // x0
 
-  if ( (byte_4B68FB7 & 1) == 0 )
+  if ( (byte_4BB6AFC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, *(_QWORD *)&targetType);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v7);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v8);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v9);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v11);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass256_0__ResetTargetUseBuff_b__0__, v12);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass256_0_TypeInfo, v13);
-    byte_4B68FB7 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, *(_QWORD *)&targetType);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v7);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v8);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v9);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v10);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v11);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass256_0__ResetTargetUseBuff_b__0__, v12);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass256_0_TypeInfo, v13);
+    byte_4BB6AFC = 1;
   }
-  v14 = sub_1BE4D18(BattleBuffData___c__DisplayClass256_0_TypeInfo);
+  v14 = sub_1C13F70(BattleBuffData___c__DisplayClass256_0_TypeInfo);
   BattleBuffData___c__DisplayClass256_0___ctor((BattleBuffData___c__DisplayClass256_0_o *)v14, 0LL);
   if ( !v14 )
     goto LABEL_42;
   *(_QWORD *)(v14 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)this, v17, v18, v19, v20, v21, v22);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)this, v17, v18, v19, v20, v21, v22);
   *(_DWORD *)(v14 + 24) = targetType;
   v24 = BattleBuffData__AllBuffEnumerable(this, v23);
   v25 = *(System_Func_object__bool__o **)(v14 + 32);
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)v24;
   if ( !v25 )
   {
-    v25 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    v25 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v25,
       (Il2CppObject *)v14,
       Method_BattleBuffData___c__DisplayClass256_0__ResetTargetUseBuff_b__0__,
       0LL);
     *(_QWORD *)(v14 + 32) = v25;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v14 + 32), (int64_t)v25, v27, v28, v29, v30, v31, v32);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 32), (int64_t)v25, v27, v28, v29, v30, v31, v32);
   }
   v15 = System_Linq_Enumerable__Where_object_(
           v26,
           (System_Func_TSource__bool__o *)v25,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   if ( !v15 )
 LABEL_42:
-    sub_1BE4D28(v15, v16);
+    sub_1C13F80(v15, v16);
   klass = v15->klass;
   v34 = v15;
   v35 = *(unsigned __int16 *)(&v15->klass->_2.bitflags2 + 3);
@@ -10009,13 +10009,13 @@ LABEL_42:
   else
   {
 LABEL_11:
-    p_method = sub_1C36AAC(v15, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v15, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v39 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
           v34,
           *(_QWORD *)(p_method + 8));
   if ( !v39 )
-    sub_1BE4D28(0LL, v38);
+    sub_1C13F80(0LL, v38);
   while ( 1 )
   {
     v40 = *(_QWORD *)v39;
@@ -10035,7 +10035,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v43 = sub_1C36AAC(v39, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v43 = sub_1C65D04(v39, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v43)(v39, *(_QWORD *)(v43 + 8)) & 1) == 0 )
       break;
@@ -10056,14 +10056,14 @@ LABEL_18:
     else
     {
 LABEL_25:
-      v47 = sub_1C36AAC(v39, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v47 = sub_1C65D04(v39, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v48 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v47)(v39, *(_QWORD *)(v47 + 8));
     BattleBuffData__RemoveUpdateWaitIntervalBuff(this, v48, v49);
     if ( isIntervalOnly )
     {
       if ( !v48 )
-        sub_1BE4D28(v50, v51);
+        sub_1C13F80(v50, v51);
       intervalData = v48->fields.intervalData;
       if ( intervalData )
         BattleBuffData_IntervalData__Reset(intervalData, 0LL);
@@ -10071,7 +10071,7 @@ LABEL_25:
     else
     {
       if ( !v48 )
-        sub_1BE4D28(v50, v51);
+        sub_1C13F80(v50, v51);
       BattleBuffData_BuffData__RevertUnused(v48, 1, 0LL);
     }
   }
@@ -10092,7 +10092,7 @@ LABEL_25:
   else
   {
 LABEL_37:
-    v56 = sub_1C36AAC(v39, System_IDisposable_TypeInfo, 0LL);
+    v56 = sub_1C65D04(v39, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v56)(v39, *(_QWORD *)(v56 + 8));
 }
@@ -10121,22 +10121,22 @@ void __fastcall BattleBuffData__SetCommandAssistBuffActiveFlg(
   const MethodInfo *v23; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B68F91 & 1) == 0 )
+  if ( (byte_4BB6AD6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___, selectCommandAssistId);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v11);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v12);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4B68F91 = 1;
+    sub_1C13D24(&Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___, selectCommandAssistId);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v11);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v12);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_4BB6AD6 = 1;
   }
   entity = 0LL;
   PassiveList = BattleBuffData__getPassiveList(this, 1, (const MethodInfo *)setBuffAction);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !PassiveList )
     goto LABEL_24;
   max_length = PassiveList->max_length;
@@ -10147,7 +10147,7 @@ void __fastcall BattleBuffData__SetCommandAssistBuffActiveFlg(
     while ( 1 )
     {
       if ( v19 >= max_length )
-        sub_1BE4D30(Instance, v16);
+        sub_1C13F88(Instance, v16);
       v20 = PassiveList->m_Items[v19];
       if ( !v20 )
         break;
@@ -10172,13 +10172,13 @@ void __fastcall BattleBuffData__SetCommandAssistBuffActiveFlg(
                                            v18,
                                            &entity,
                                            v20->fields.buffId,
-                                           (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                           (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
               if ( ((unsigned __int8)Instance & 1) != 0 )
                 ActionExtensions__Call_object__object_(
                   (System_Action_T1__T2__o *)setBuffAction,
                   entity,
                   (Il2CppObject *)v20,
-                  (const MethodInfo_2EABC60 *)Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___);
+                  (const MethodInfo_2EE1FBC *)Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___);
             }
           }
         }
@@ -10188,7 +10188,7 @@ void __fastcall BattleBuffData__SetCommandAssistBuffActiveFlg(
         return;
     }
 LABEL_24:
-    sub_1BE4D28(Instance, v16);
+    sub_1C13F80(Instance, v16);
   }
 }
 
@@ -10214,31 +10214,31 @@ void __fastcall BattleBuffData__SetCommandCardBuffActive(
   Il2CppObject *Item; // x0
   const MethodInfo *v20; // x4
 
-  if ( (byte_4B68FA5 & 1) == 0 )
+  if ( (byte_4BB6AEA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, commandData);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v9);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v10);
-    byte_4B68FA5 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, commandData);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v9);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v10);
+    byte_4BB6AEA = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v12);
   if ( !v11 )
-    sub_1BE4D28(ActiveList, v14);
+    sub_1C13F80(ActiveList, v14);
   System_Collections_Generic_List_object___AddRange(
     v11,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v15);
   System_Collections_Generic_List_object___AddRange(
     v11,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( v11->fields._size >= 1 )
   {
     v17 = 0;
@@ -10248,7 +10248,7 @@ void __fastcall BattleBuffData__SetCommandCardBuffActive(
       Item = System_Collections_Generic_List_object___get_Item(
                v11,
                v17,
-               (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+               (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
       BattleBuffData__CheckCommandCardBuffActive(this, commandData, (BattleBuffData_BuffData_o *)Item, v18, v20);
       ++v17;
     }
@@ -10278,22 +10278,22 @@ void __fastcall BattleBuffData__SetCommandCodeBuffActiveFlg(
   const MethodInfo *v20; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B68F8F & 1) == 0 )
+  if ( (byte_4BB6AD4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___, selectUserCCId);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v9);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v10);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4B68F8F = 1;
+    sub_1C13D24(&Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___, selectUserCCId);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v9);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v10);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4BB6AD4 = 1;
   }
   entity = 0LL;
   PassiveList = BattleBuffData__getPassiveList(this, 1, (const MethodInfo *)setBuffAction);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !PassiveList )
     goto LABEL_22;
   max_length = PassiveList->max_length;
@@ -10304,7 +10304,7 @@ void __fastcall BattleBuffData__SetCommandCodeBuffActiveFlg(
     while ( 1 )
     {
       if ( v17 >= max_length )
-        sub_1BE4D30(Instance, v14);
+        sub_1C13F88(Instance, v14);
       v18 = PassiveList->m_Items[v17];
       if ( !v18 )
         break;
@@ -10329,13 +10329,13 @@ void __fastcall BattleBuffData__SetCommandCodeBuffActiveFlg(
                                            v16,
                                            &entity,
                                            v18->fields.buffId,
-                                           (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                           (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
               if ( ((unsigned __int8)Instance & 1) != 0 )
                 ActionExtensions__Call_object__object_(
                   (System_Action_T1__T2__o *)setBuffAction,
                   entity,
                   (Il2CppObject *)v18,
-                  (const MethodInfo_2EABC60 *)Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___);
+                  (const MethodInfo_2EE1FBC *)Method_ActionExtensions_Call_BuffEntity__BattleBuffData_BuffData___);
             }
           }
         }
@@ -10345,7 +10345,7 @@ void __fastcall BattleBuffData__SetCommandCodeBuffActiveFlg(
         return;
     }
 LABEL_22:
-    sub_1BE4D28(Instance, v14);
+    sub_1C13F80(Instance, v14);
   }
 }
 
@@ -10363,37 +10363,37 @@ void __fastcall BattleBuffData__SetNoActBuffWithoutExecuteServant(
   __int64 v10; // x1
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B68FAB & 1) == 0 )
+  if ( (byte_4BB6AF0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, servantArray);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v7);
-    byte_4B68FAB = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, servantArray);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v7);
+    byte_4BB6AF0 = 1;
   }
   memset(&v11, 0, sizeof(v11));
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !passiveList )
-    sub_1BE4D28(0LL, servantArray);
+    sub_1C13F80(0LL, servantArray);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( 1 )
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v11,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v9 )
       break;
     if ( !v11.fields._current )
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
     if ( SLODWORD(v11.fields._current[17].klass) >= 1 )
       BattleBuffData_BuffData__SetBuffNoActState((BattleBuffData_BuffData_o *)v11.fields._current, servantArray, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -10448,23 +10448,23 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
   const MethodInfo *v49; // x2
   RemovedBuffInfo_o *v50; // x20
 
-  if ( (byte_4B68F56 & 1) == 0 )
+  if ( (byte_4BB6A9B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkFunc);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
-    byte_4B68F56 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkFunc);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
+    byte_4BB6A9B = 1;
   }
   activeList = (__int64)this->fields.activeList;
   if ( !activeList )
     goto LABEL_40;
   activeList = (__int64)System_Collections_Generic_List_object___ToArray(
                           (System_Collections_Generic_List_object__o *)activeList,
-                          (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                          (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   v14 = this->fields.activeList;
   if ( !v14 )
     goto LABEL_40;
@@ -10475,10 +10475,10 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
   v14->fields._version = v17;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)v14->fields._items, 0, size, 0LL);
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !v16 )
     goto LABEL_40;
   v20 = *(_QWORD *)(v16 + 24);
@@ -10488,7 +10488,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
     while ( 1 )
     {
       if ( v21 >= (unsigned int)v20 )
-        sub_1BE4D30(activeList, checkFunc);
+        sub_1C13F88(activeList, checkFunc);
       if ( !checkFunc )
         goto LABEL_40;
       v22 = *(_QWORD *)(v16 + 32 + 8 * v21);
@@ -10511,14 +10511,14 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
         System_Collections_Generic_List_object___AddWithResize(
           v18,
           (Il2CppObject *)v22,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
       }
       else
       {
         v32 = &items->obj.klass + v31;
         v18->fields._size = v31 + 1;
         v32[4] = (Il2CppClass *)v22;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v32 + 4), v22, v23, v24, v25, v26, v27, v28);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), v22, v23, v24, v25, v26, v27, v28);
       }
       if ( !v22 )
         goto LABEL_40;
@@ -10530,7 +10530,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
         if ( System_Collections_Generic_List_object___Contains(
                (System_Collections_Generic_List_object__o *)activeList,
                (Il2CppObject *)v22,
-               (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+               (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
         {
           activeList = (__int64)this->fields.auraBuffList;
           if ( !activeList )
@@ -10538,7 +10538,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
           System_Collections_Generic_List_object___Remove(
             (System_Collections_Generic_List_object__o *)activeList,
             (Il2CppObject *)v22,
-            (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+            (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
         }
       }
       BattleBuffData__RemoveClassIconEffectBuff(this, (BattleBuffData_BuffData_o *)v22, v33);
@@ -10569,7 +10569,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromCheckFunc(
         v45[4] = (Il2CppClass *)v39;
         v38 = (PartyOrganizationUtility_o *)(v45 + 4);
 LABEL_33:
-        sub_1BE4A70(v38, (int64_t)v39, v23, v24, v25, v26, v27, v28);
+        sub_1C13CC8(v38, (int64_t)v39, v23, v24, v25, v26, v27, v28);
       }
 LABEL_37:
       LODWORD(v20) = *(_DWORD *)(v16 + 24);
@@ -10593,7 +10593,7 @@ LABEL_36:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)activeList,
         v39,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v46 + 192) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v46 + 192) + 112LL));
       goto LABEL_37;
     }
     v37 = v34 + 8 * v36;
@@ -10616,7 +10616,7 @@ LABEL_38:
                           v48);
   if ( !activeList )
 LABEL_40:
-    sub_1BE4D28(activeList, checkFunc);
+    sub_1C13F80(activeList, checkFunc);
   v50 = (RemovedBuffInfo_o *)activeList;
   BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
     this,
@@ -10641,19 +10641,19 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromDeadActorId(
   System_Func_object__bool__o *v12; // x21
   const MethodInfo *v13; // x3
 
-  if ( (byte_4B68F54 & 1) == 0 )
+  if ( (byte_4BB6A99 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, *(_QWORD *)&actorId);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass111_0__SubBuffFromDeadActorId_b__0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass111_0_TypeInfo, v8);
-    byte_4B68F54 = 1;
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, *(_QWORD *)&actorId);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass111_0__SubBuffFromDeadActorId_b__0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass111_0_TypeInfo, v8);
+    byte_4BB6A99 = 1;
   }
-  v9 = (BattleBuffData___c__DisplayClass111_0_o *)sub_1BE4D18(BattleBuffData___c__DisplayClass111_0_TypeInfo);
+  v9 = (BattleBuffData___c__DisplayClass111_0_o *)sub_1C13F70(BattleBuffData___c__DisplayClass111_0_TypeInfo);
   BattleBuffData___c__DisplayClass111_0___ctor(v9, 0LL);
   if ( !v9 )
-    sub_1BE4D28(v10, v11);
+    sub_1C13F80(v10, v11);
   v9->fields.actorId = actorId;
-  v12 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v9,
@@ -10689,24 +10689,24 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffFromType(
   System_Func_object__bool__o *v19; // x21
   const MethodInfo *v20; // x3
 
-  if ( (byte_4B68F53 & 1) == 0 )
+  if ( (byte_4BB6A98 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, *(_QWORD *)&buffId);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass110_0__SubBuffFromType_b__0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass110_0_TypeInfo, v8);
-    byte_4B68F53 = 1;
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, *(_QWORD *)&buffId);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass110_0__SubBuffFromType_b__0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass110_0_TypeInfo, v8);
+    byte_4BB6A98 = 1;
   }
-  v9 = sub_1BE4D18(BattleBuffData___c__DisplayClass110_0_TypeInfo);
+  v9 = sub_1C13F70(BattleBuffData___c__DisplayClass110_0_TypeInfo);
   BattleBuffData___c__DisplayClass110_0___ctor((BattleBuffData___c__DisplayClass110_0_o *)v9, 0LL);
   if ( !v9
     || (*(_QWORD *)(v9 + 16) = this,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17),
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17),
         (buffMst = BattleBuffData__get_buffMst(this, v18)) == 0LL) )
   {
-    sub_1BE4D28(buffMst, v11);
+    sub_1C13F80(buffMst, v11);
   }
   *(_DWORD *)(v9 + 24) = BuffMaster__GetBuffType(buffMst, buffId, -1, 0LL);
-  v19 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v19 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v19,
     (Il2CppObject *)v9,
@@ -10740,20 +10740,20 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__SubBuffSpecified(
   System_Func_object__bool__o *v18; // x21
   const MethodInfo *v19; // x3
 
-  if ( (byte_4B68F55 & 1) == 0 )
+  if ( (byte_4BB6A9A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, toRemove);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass112_0__SubBuffSpecified_g__CheckFunc_0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass112_0_TypeInfo, v8);
-    byte_4B68F55 = 1;
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, toRemove);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass112_0__SubBuffSpecified_g__CheckFunc_0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass112_0_TypeInfo, v8);
+    byte_4BB6A9A = 1;
   }
-  v9 = sub_1BE4D18(BattleBuffData___c__DisplayClass112_0_TypeInfo);
+  v9 = sub_1C13F70(BattleBuffData___c__DisplayClass112_0_TypeInfo);
   BattleBuffData___c__DisplayClass112_0___ctor((BattleBuffData___c__DisplayClass112_0_o *)v9, 0LL);
   if ( !v9 )
-    sub_1BE4D28(v10, v11);
+    sub_1C13F80(v10, v11);
   *(_QWORD *)(v9 + 16) = toRemove;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)toRemove, v12, v13, v14, v15, v16, v17);
-  v18 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)toRemove, v12, v13, v14, v15, v16, v17);
+  v18 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v9,
@@ -10789,7 +10789,7 @@ bool __fastcall BattleBuffData__TryGetParamAddTargetIdArray(
   PartyListViewItem_o *v21; // x7
 
   *targetIdArray = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)targetIdArray,
     0LL,
     (int64_t)individualityData,
@@ -10814,11 +10814,11 @@ bool __fastcall BattleBuffData__TryGetParamAddTargetIdArray(
                     0LL,
                     0LL);
       *targetIdArray = TargetIds;
-      sub_1BE4A70((PartyOrganizationUtility_o *)targetIdArray, (int64_t)TargetIds, v16, v17, v18, v19, v20, v21);
+      sub_1C13CC8((PartyOrganizationUtility_o *)targetIdArray, (int64_t)TargetIds, v16, v17, v18, v19, v20, v21);
       return paramAddIndividualityTargetType != -1;
     }
 LABEL_6:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
   return paramAddIndividualityTargetType != -1;
 }
@@ -10838,7 +10838,7 @@ bool __fastcall BattleBuffData__TryGetTotalParamAddBattlePointPhase(
 
   *totalParamAddBattlePointPhase = 0;
   if ( !buffData || !battleData )
-    sub_1BE4D28(this, buffData);
+    sub_1C13F80(this, buffData);
   ServantData = BattleData__getServantData(battleData, buffData->fields.actorId, 0LL);
   if ( ServantData )
     ServantData = (BattleServantData_o *)BattleServantData__GetBattlePointData(
@@ -10899,16 +10899,16 @@ void __fastcall BattleBuffData__UpdateBaseAddOrder(BattleBuffData_o *this, const
   int32_t v32; // w21
 
   v2 = this;
-  if ( (byte_4B68F9D & 1) == 0 )
+  if ( (byte_4BB6AE2 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v4);
-    sub_1BE4ACC(&System_Math_TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_0__, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_1__, v7);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v8);
-    byte_4B68F9D = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v4);
+    sub_1C13D24(&System_Math_TypeInfo, v5);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_0__, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_1__, v7);
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData___c_TypeInfo, v8);
+    byte_4BB6AE2 = 1;
   }
   activeList = v2->fields.activeList;
   if ( !activeList )
@@ -10934,22 +10934,22 @@ void __fastcall BattleBuffData__UpdateBaseAddOrder(BattleBuffData_o *this, const
         v10 = BattleBuffData___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__220_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+      _9__220_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
       System_Func_object__int____ctor(_9__220_0, v12, Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_0__, 0LL);
       p__9__220_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__220_0;
       p__9__220_0->klass = (PartyOrganizationUtility_c *)_9__220_0;
-      sub_1BE4A70(p__9__220_0, (int64_t)_9__220_0, v14, v15, v16, v17, v18, v19);
+      sub_1C13CC8(p__9__220_0, (int64_t)_9__220_0, v14, v15, v16, v17, v18, v19);
     }
     this = (BattleBuffData_o *)System_Linq_Enumerable__Max_object_(
                                  (System_Collections_Generic_IEnumerable_TSource__o *)activeList,
                                  (System_Func_TSource__int__o *)_9__220_0,
-                                 (const MethodInfo_2F80E80 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
+                                 (const MethodInfo_2FB70E0 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
     v20 = (int)this;
   }
   passiveList = v2->fields.passiveList;
   if ( !passiveList )
 LABEL_26:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   if ( passiveList->fields._size < 1 )
   {
     v32 = 0;
@@ -10971,20 +10971,20 @@ LABEL_26:
         v22 = BattleBuffData___c_TypeInfo;
       }
       v24 = (Il2CppObject *)v22->static_fields->__9;
-      _9__220_1 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+      _9__220_1 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
       System_Func_object__int____ctor(_9__220_1, v24, Method_BattleBuffData___c__UpdateBaseAddOrder_b__220_1__, 0LL);
       p__9__220_1 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__220_1;
       p__9__220_1->klass = (PartyOrganizationUtility_c *)_9__220_1;
-      sub_1BE4A70(p__9__220_1, (int64_t)_9__220_1, v26, v27, v28, v29, v30, v31);
+      sub_1C13CC8(p__9__220_1, (int64_t)_9__220_1, v26, v27, v28, v29, v30, v31);
     }
     v32 = System_Linq_Enumerable__Max_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)passiveList,
             (System_Func_TSource__int__o *)_9__220_1,
-            (const MethodInfo_2F80E80 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
+            (const MethodInfo_2FB70E0 *)Method_System_Linq_Enumerable_Max_BattleBuffData_BuffData___);
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v2->fields.addBuffOrder = System_Math__Max_63517952(v20, v32, 0LL) + 1;
+  v2->fields.addBuffOrder = System_Math__Max_63787088(v20, v32, 0LL) + 1;
 }
 
 
@@ -11049,24 +11049,24 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
   System_Collections_Generic_List_object__o *v57; // x19
   System_Action_object__o *v58; // x21
 
-  if ( (byte_4B68F9C & 1) == 0 )
+  if ( (byte_4BB6AE1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&addPassiveMaxOrder);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___, v5);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v8);
-    sub_1BE4ACC(&System_Math_TypeInfo, v9);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_0__, v10);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_1__, v11);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_2__, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass219_0__UpdateBuffAddOrder_b__3__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass219_0__UpdateBuffAddOrder_b__4__, v14);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass219_0_TypeInfo, v15);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v16);
-    byte_4B68F9C = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&addPassiveMaxOrder);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___, v5);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v8);
+    sub_1C13D24(&System_Math_TypeInfo, v9);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_0__, v10);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_1__, v11);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_2__, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass219_0__UpdateBuffAddOrder_b__3__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass219_0__UpdateBuffAddOrder_b__4__, v14);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass219_0_TypeInfo, v15);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v16);
+    byte_4BB6AE1 = 1;
   }
-  v17 = (BattleBuffData___c__DisplayClass219_0_o *)sub_1BE4D18(BattleBuffData___c__DisplayClass219_0_TypeInfo);
+  v17 = (BattleBuffData___c__DisplayClass219_0_o *)sub_1C13F70(BattleBuffData___c__DisplayClass219_0_TypeInfo);
   BattleBuffData___c__DisplayClass219_0___ctor(v17, 0LL);
   if ( !v17 )
     goto LABEL_39;
@@ -11100,16 +11100,16 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
         v21 = BattleBuffData___c_TypeInfo;
       }
       v23 = (Il2CppObject *)v21->static_fields->__9;
-      _9__219_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+      _9__219_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
       System_Func_object__int____ctor(_9__219_0, v23, Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_0__, 0LL);
       p__9__219_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__219_0;
       p__9__219_0->klass = (PartyOrganizationUtility_c *)_9__219_0;
-      sub_1BE4A70(p__9__219_0, (int64_t)_9__219_0, v25, v26, v27, v28, v29, v30);
+      sub_1C13CC8(p__9__219_0, (int64_t)_9__219_0, v25, v26, v27, v28, v29, v30);
     }
     v18 = System_Linq_Enumerable__Min_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)activeList,
             (System_Func_TSource__int__o *)_9__219_0,
-            (const MethodInfo_2F81C04 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
+            (const MethodInfo_2FB7E64 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
     passiveList = this->fields.passiveList;
     if ( !passiveList )
       goto LABEL_39;
@@ -11135,16 +11135,16 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
           v33 = BattleBuffData___c_TypeInfo;
         }
         v47 = (Il2CppObject *)v33->static_fields->__9;
-        _9__219_2 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+        _9__219_2 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
         System_Func_object__int____ctor(_9__219_2, v47, Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_2__, 0LL);
         p__9__219_2 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__219_2;
         p__9__219_2->klass = (PartyOrganizationUtility_c *)_9__219_2;
-        sub_1BE4A70(p__9__219_2, (int64_t)_9__219_2, v49, v50, v51, v52, v53, v54);
+        sub_1C13CC8(p__9__219_2, (int64_t)_9__219_2, v49, v50, v51, v52, v53, v54);
       }
       v45 = System_Linq_Enumerable__Min_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)passiveList,
               (System_Func_TSource__int__o *)_9__219_2,
-              (const MethodInfo_2F81C04 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
+              (const MethodInfo_2FB7E64 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
     }
     else
     {
@@ -11157,26 +11157,26 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
           v33 = BattleBuffData___c_TypeInfo;
         }
         v36 = (Il2CppObject *)v33->static_fields->__9;
-        _9__219_1 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+        _9__219_1 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
         System_Func_object__int____ctor(_9__219_1, v36, Method_BattleBuffData___c__UpdateBuffAddOrder_b__219_1__, 0LL);
         p__9__219_1 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__219_1;
         p__9__219_1->klass = (PartyOrganizationUtility_c *)_9__219_1;
-        sub_1BE4A70(p__9__219_1, (int64_t)_9__219_1, v38, v39, v40, v41, v42, v43);
+        sub_1C13CC8(p__9__219_1, (int64_t)_9__219_1, v38, v39, v40, v41, v42, v43);
       }
       v44 = System_Linq_Enumerable__Min_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)passiveList,
               (System_Func_TSource__int__o *)_9__219_1,
-              (const MethodInfo_2F81C04 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
+              (const MethodInfo_2FB7E64 *)Method_System_Linq_Enumerable_Min_BattleBuffData_BuffData___);
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v45 = System_Math__Min_63518280(v32, v44, 0LL);
+      v45 = System_Math__Min_63787416(v32, v44, 0LL);
     }
     v32 = v45;
   }
   if ( v32 <= v17->fields.addPassiveMaxOrder )
   {
     v55 = (System_Collections_Generic_List_object__o *)this->fields.activeList;
-    v56 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+    v56 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_object____ctor(
       v56,
       (Il2CppObject *)v17,
@@ -11187,9 +11187,9 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
       System_Collections_Generic_List_object___ForEach(
         v55,
         (System_Action_T__o *)v56,
-        (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+        (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
       v57 = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
-      v58 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+      v58 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
       System_Action_object____ctor(
         v58,
         (Il2CppObject *)v17,
@@ -11200,12 +11200,12 @@ void __fastcall BattleBuffData__UpdateBuffAddOrder(
         System_Collections_Generic_List_object___ForEach(
           v57,
           (System_Action_T__o *)v58,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
         return;
       }
     }
 LABEL_39:
-    sub_1BE4D28(v18, v19);
+    sub_1C13F80(v18, v19);
   }
 }
 
@@ -11231,22 +11231,22 @@ void __fastcall BattleBuffData__UpdateForceAllBuffNoAct(
   PartyListViewItem_o *v18; // x7
   System_Action_object__o *v19; // x20
 
-  if ( (byte_4B68F6E & 1) == 0 )
+  if ( (byte_4BB6AB3 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&showState);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v7);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass150_0__UpdateForceAllBuffNoAct_b__0__, v8);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass150_0_TypeInfo, v9);
-    byte_4B68F6E = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, *(_QWORD *)&showState);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v7);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass150_0__UpdateForceAllBuffNoAct_b__0__, v8);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass150_0_TypeInfo, v9);
+    byte_4BB6AB3 = 1;
   }
-  v10 = sub_1BE4D18(BattleBuffData___c__DisplayClass150_0_TypeInfo);
+  v10 = sub_1C13F70(BattleBuffData___c__DisplayClass150_0_TypeInfo);
   BattleBuffData___c__DisplayClass150_0___ctor((BattleBuffData___c__DisplayClass150_0_o *)v10, 0LL);
   if ( !v10 )
     goto LABEL_7;
   *(_QWORD *)(v10 + 16) = targets;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)targets, v13, v14, v15, v16, v17, v18);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)targets, v13, v14, v15, v16, v17, v18);
   *(_DWORD *)(v10 + 24) = showState;
-  v19 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v19 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v19,
     (Il2CppObject *)v10,
@@ -11257,16 +11257,16 @@ void __fastcall BattleBuffData__UpdateForceAllBuffNoAct(
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v19,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList) == 0LL) )
   {
 LABEL_7:
-    sub_1BE4D28(passiveList, v12);
+    sub_1C13F80(passiveList, v12);
   }
   System_Collections_Generic_List_object___ForEach(
     passiveList,
     (System_Action_T__o *)v19,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
 }
 
 
@@ -11307,16 +11307,16 @@ void __fastcall BattleBuffData__UpdateForceBuff(
   PartyListViewItem_o *v34; // x7
 
   v6 = this;
-  if ( (byte_4B68F45 & 1) == 0 )
+  if ( (byte_4BB6A8A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Comparison_BattleBuffData_BuffData__TypeInfo, buff);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v10);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateForceBuff_b__93_0__, v11);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v12);
-    byte_4B68F45 = 1;
+    sub_1C13D24(&System_Comparison_BattleBuffData_BuffData__TypeInfo, buff);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__, v10);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateForceBuff_b__93_0__, v11);
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData___c_TypeInfo, v12);
+    byte_4BB6A8A = 1;
   }
   if ( !buff )
     goto LABEL_22;
@@ -11329,7 +11329,7 @@ void __fastcall BattleBuffData__UpdateForceBuff(
   this = (BattleBuffData_o *)System_Collections_Generic_List_object___Contains(
                                v14,
                                (Il2CppObject *)buff,
-                               (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+                               (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
   if ( isAdd )
   {
     if ( ((unsigned __int8)this & 1) != 0 )
@@ -11345,25 +11345,25 @@ void __fastcall BattleBuffData__UpdateForceBuff(
         System_Collections_Generic_List_object___AddWithResize(
           v14,
           (Il2CppObject *)buff,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
         v24 = &items->obj.klass + size;
         v14->fields._size = size + 1;
         v24[4] = (Il2CppClass *)buff;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v24 + 4), (int64_t)buff, v15, v16, v17, v18, v19, v20);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v24 + 4), (int64_t)buff, v15, v16, v17, v18, v19, v20);
       }
       goto LABEL_15;
     }
 LABEL_22:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   if ( ((unsigned __int8)this & 1) != 0 )
     System_Collections_Generic_List_object___Remove(
       v14,
       (Il2CppObject *)buff,
-      (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+      (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
 LABEL_15:
   v25 = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -11380,11 +11380,11 @@ LABEL_15:
       v25 = BattleBuffData___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v25->static_fields->__9;
-    _9__93_0 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    _9__93_0 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_BattleBuffData_BuffData__TypeInfo);
     System_Comparison_object____ctor(_9__93_0, v27, Method_BattleBuffData___c__UpdateForceBuff_b__93_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__93_0 = (struct System_Comparison_BattleBuffData_BuffData__o *)_9__93_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__93_0,
       (int64_t)_9__93_0,
       v29,
@@ -11394,10 +11394,10 @@ LABEL_15:
       v33,
       v34);
   }
-  System_Collections_Generic_List_object___Sort_56548584(
+  System_Collections_Generic_List_object___Sort_56814736(
     v14,
     _9__93_0,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Sort__);
 }
 
 
@@ -11418,13 +11418,13 @@ void __fastcall BattleBuffData__UpdateForceNoField(BattleBuffData_o *this, const
   PartyListViewItem_o *v15; // x7
   System_Collections_Generic_List_object__o *activeList; // x0
 
-  if ( (byte_4B68FA3 & 1) == 0 )
+  if ( (byte_4BB6AE8 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__UpdateForceNoField_b__231_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68FA3 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__UpdateForceNoField_b__231_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6AE8 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
@@ -11441,26 +11441,26 @@ void __fastcall BattleBuffData__UpdateForceNoField(BattleBuffData_o *this, const
       v6 = BattleBuffData___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v6->static_fields->__9;
-    _9__231_0 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+    _9__231_0 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
     System_Action_object____ctor(_9__231_0, v8, Method_BattleBuffData___c__UpdateForceNoField_b__231_0__, 0LL);
     p__9__231_0 = (PartyOrganizationUtility_o *)&BattleBuffData___c_TypeInfo->static_fields->__9__231_0;
     p__9__231_0->klass = (PartyOrganizationUtility_c *)_9__231_0;
-    sub_1BE4A70(p__9__231_0, (int64_t)_9__231_0, v10, v11, v12, v13, v14, v15);
+    sub_1C13CC8(p__9__231_0, (int64_t)_9__231_0, v10, v11, v12, v13, v14, v15);
   }
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList
     || (System_Collections_Generic_List_object___ForEach(
           activeList,
           (System_Action_T__o *)_9__231_0,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (activeList = (System_Collections_Generic_List_object__o *)this->fields.passiveList) == 0LL) )
   {
-    sub_1BE4D28(activeList, method);
+    sub_1C13F80(activeList, method);
   }
   System_Collections_Generic_List_object___ForEach(
     activeList,
     (System_Action_T__o *)_9__231_0,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
 }
 
 
@@ -11517,69 +11517,69 @@ BattleActionData_BuffData_o *__fastcall BattleBuffData__UseFieldProgressingDoNot
   System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F40 & 1) == 0 )
+  if ( (byte_4BB6A85 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleActionData_BuffData_TypeInfo, svtData);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v13);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v14);
-    byte_4B68F40 = 1;
+    sub_1C13D24(&BattleActionData_BuffData_TypeInfo, svtData);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v13);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v14);
+    byte_4BB6A85 = 1;
   }
   memset(&v43, 0, sizeof(v43));
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v17 = sub_1BE4D18(BattleActionData_BuffData_TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v17 = sub_1C13F70(BattleActionData_BuffData_TypeInfo);
   BattleActionData_BuffData___ctor((BattleActionData_BuffData_o *)v17, 0LL);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v18);
   if ( !v16 )
-    sub_1BE4D28(PassiveList, v20);
+    sub_1C13F80(PassiveList, v20);
   System_Collections_Generic_List_object___AddRange(
     v16,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v21);
   System_Collections_Generic_List_object___AddRange(
     v16,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v42,
     v16,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v43 = v42;
   while ( 1 )
   {
     v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v43,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v23 )
       break;
     current = v43.fields._current;
     if ( !v43.fields._current )
-      sub_1BE4D28(v23, v24);
+      sub_1C13F80(v23, v24);
     if ( !BYTE1(v43.fields._current[28].klass) )
     {
       buffMst = (DataMasterBase_TMaster__TEntity__PKType__o *)BattleBuffData__get_buffMst(this, v24);
       if ( !buffMst )
-        sub_1BE4D28(0LL, v27);
+        sub_1C13F80(0LL, v27);
       Entity = (BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                  buffMst,
                                  (int32_t)current[1].klass,
-                                 (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                 (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
       v30 = Entity;
       if ( !Entity )
-        sub_1BE4D28(0LL, v29);
+        sub_1C13F80(0LL, v29);
       if ( Entity->fields.type == 32 )
       {
         DamageRelease = BuffEntity__getDamageRelease(Entity, 0LL);
@@ -11587,14 +11587,14 @@ BattleActionData_BuffData_o *__fastcall BattleBuffData__UseFieldProgressingDoNot
         {
           LODWORD(current[1].monitor) = 0;
           if ( !v17 )
-            sub_1BE4D28(DamageRelease, v32);
+            sub_1C13F80(DamageRelease, v32);
           *(_DWORD *)(v17 + 16) = funcIndex;
           if ( !svtData )
-            sub_1BE4D28(DamageRelease, v32);
+            sub_1C13F80(DamageRelease, v32);
           *(_DWORD *)(v17 + 40) = svtData->fields.uniqueId;
           DamageReleaseText = BuffEntity__getDamageReleaseText(v30, 0LL);
           *(_QWORD *)(v17 + 56) = DamageReleaseText;
-          sub_1BE4A70(
+          sub_1C13CC8(
             (PartyOrganizationUtility_o *)(v17 + 56),
             (int64_t)DamageReleaseText,
             v34,
@@ -11610,7 +11610,7 @@ BattleActionData_BuffData_o *__fastcall BattleBuffData__UseFieldProgressingDoNot
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v43,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   BattleBuffData__RemoveProgressingBuffList(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v15,
@@ -11666,70 +11666,70 @@ BattleActionData_o *__fastcall BattleBuffData__UseProgressingDoNotAct(
   System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F3F & 1) == 0 )
+  if ( (byte_4BB6A84 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleActionData_TypeInfo, svtData);
-    sub_1BE4ACC(&BattleActionData_BuffData_TypeInfo, v7);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v14);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
-    byte_4B68F3F = 1;
+    sub_1C13D24(&BattleActionData_TypeInfo, svtData);
+    sub_1C13D24(&BattleActionData_BuffData_TypeInfo, v7);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v14);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
+    byte_4BB6A84 = 1;
   }
   memset(&v47, 0, sizeof(v47));
-  linkedBuffList = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  linkedBuffList = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     linkedBuffList,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v17 = (BattleActionData_o *)sub_1BE4D18(BattleActionData_TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v17 = (BattleActionData_o *)sub_1C13F70(BattleActionData_TypeInfo);
   BattleActionData___ctor(v17, 0LL);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v18);
   if ( !v16 )
-    sub_1BE4D28(PassiveList, v20);
+    sub_1C13F80(PassiveList, v20);
   System_Collections_Generic_List_object___AddRange(
     v16,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v21);
   System_Collections_Generic_List_object___AddRange(
     v16,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v46,
     v16,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v47 = v46;
   while ( 1 )
   {
     v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v47,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v23 )
       break;
     current = v47.fields._current;
     if ( !v47.fields._current )
-      sub_1BE4D28(v23, v24);
+      sub_1C13F80(v23, v24);
     if ( !BYTE1(v47.fields._current[28].klass) )
     {
       buffMst = (DataMasterBase_TMaster__TEntity__PKType__o *)BattleBuffData__get_buffMst(this, v24);
       if ( !buffMst )
-        sub_1BE4D28(0LL, v27);
+        sub_1C13F80(0LL, v27);
       Entity = (BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                  buffMst,
                                  (int32_t)current[1].klass,
-                                 (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                 (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
       v30 = Entity;
       if ( !Entity )
-        sub_1BE4D28(0LL, v29);
+        sub_1C13F80(0LL, v29);
       if ( Entity->fields.type == 32 && BuffEntity__getDamageRelease(Entity, 0LL) >= 1 )
       {
         DamageRelease = BuffEntity__getDamageRelease(v30, 0LL);
@@ -11737,18 +11737,18 @@ BattleActionData_o *__fastcall BattleBuffData__UseProgressingDoNotAct(
         {
           LODWORD(current[1].monitor) = 0;
           if ( !svtData )
-            sub_1BE4D28(DamageRelease, v32);
+            sub_1C13F80(DamageRelease, v32);
           if ( !v17 )
-            sub_1BE4D28(DamageRelease, v32);
+            sub_1C13F80(DamageRelease, v32);
           v17->fields.targetId = svtData->fields.uniqueId;
-          v33 = sub_1BE4D18(BattleActionData_BuffData_TypeInfo);
+          v33 = sub_1C13F70(BattleActionData_BuffData_TypeInfo);
           BattleActionData_BuffData___ctor((BattleActionData_BuffData_o *)v33, 0LL);
           if ( !v33 )
-            sub_1BE4D28(v34, v35);
+            sub_1C13F80(v34, v35);
           *(_DWORD *)(v33 + 40) = svtData->fields.uniqueId;
           DamageReleaseText = BuffEntity__getDamageReleaseText(v30, 0LL);
           *(_QWORD *)(v33 + 56) = DamageReleaseText;
-          sub_1BE4A70(
+          sub_1C13CC8(
             (PartyOrganizationUtility_o *)(v33 + 56),
             (int64_t)DamageReleaseText,
             v37,
@@ -11767,7 +11767,7 @@ BattleActionData_o *__fastcall BattleBuffData__UseProgressingDoNotAct(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v47,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   BattleBuffData__RemoveProgressingBuffList(
     this,
     (System_Collections_Generic_List_BattleBuffData_BuffData__o *)linkedBuffList,
@@ -11803,17 +11803,17 @@ void __fastcall BattleBuffData__UsedProgressing(
   __int64 size; // x10
   Il2CppClass **v25; // x0
 
-  if ( (byte_4B68F3B & 1) == 0 )
+  if ( (byte_4BB6A80 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
-    byte_4B68F3B = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, checkList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
+    byte_4BB6A80 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !checkList )
     goto LABEL_20;
   max_length = checkList->max_length;
@@ -11823,7 +11823,7 @@ void __fastcall BattleBuffData__UsedProgressing(
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1BE4D30(v8, v9);
+        sub_1C13F88(v8, v9);
       v13 = checkList->m_Items[v12];
       if ( !v13 )
         break;
@@ -11853,14 +11853,14 @@ void __fastcall BattleBuffData__UsedProgressing(
                 System_Collections_Generic_List_object___AddWithResize(
                   v7,
                   (Il2CppObject *)v13,
-                  *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                  *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
               }
               else
               {
                 v25 = &items->obj.klass + size;
                 v7->fields._size = size + 1;
                 v25[4] = (Il2CppClass *)v13;
-                sub_1BE4A70(
+                sub_1C13CC8(
                   (PartyOrganizationUtility_o *)(v25 + 4),
                   (int64_t)v13,
                   (int64_t)v10,
@@ -11881,7 +11881,7 @@ void __fastcall BattleBuffData__UsedProgressing(
         goto LABEL_19;
     }
 LABEL_20:
-    sub_1BE4D28(v8, v9);
+    sub_1C13F80(v8, v9);
   }
 LABEL_19:
   BattleBuffData__RemoveProgressingBuffList(this, (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v7, v10);
@@ -11923,18 +11923,18 @@ bool __fastcall BattleBuffData___checkBuffTypeIndiviuality_g__CheckSignedPartial
   int32_t indvCountBelow; // w19
   int32_t indvCountAbove; // w24
 
-  if ( (byte_4B68FC6 & 1) == 0 )
+  if ( (byte_4BB6B0B & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_int____int____int__int__bool__TypeInfo, method);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArrayCount__, v3);
-    sub_1BE4ACC(&Individuality_TypeInfo, v4);
-    byte_4B68FC6 = 1;
+    sub_1C13D24(&System_Func_int____int____int__int__bool__TypeInfo, method);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArrayCount__, v3);
+    sub_1C13D24(&Individuality_TypeInfo, v4);
+    byte_4BB6B0B = 1;
   }
   self = a1->fields.self;
   targetCount = a1->fields.targetCount;
-  v7 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+  v7 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
   System_Func_object__object__int__int__bool____ctor(v7, 0LL, Method_Individuality_IsPartialMatchArrayCount__, 0LL);
-  v8 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+  v8 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
   System_Func_object__object__int__int__bool____ctor(v8, 0LL, Method_Individuality_IsPartialMatchArrayCount__, 0LL);
   indvCountAbove = a1->fields.indvCountAbove;
   indvCountBelow = a1->fields.indvCountBelow;
@@ -11962,18 +11962,18 @@ bool __fastcall BattleBuffData___checkBuffTypeIndiviuality_g__CheckSignedPartial
   System_Func_T1__T2__TResult__o *v7; // x21
   System_Func_T1__T2__TResult__o *v8; // x22
 
-  if ( (byte_4B68FC5 & 1) == 0 )
+  if ( (byte_4BB6B0A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_int____int____bool__TypeInfo, method);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArray__, v3);
-    sub_1BE4ACC(&Individuality_TypeInfo, v4);
-    byte_4B68FC5 = 1;
+    sub_1C13D24(&System_Func_int____int____bool__TypeInfo, method);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArray__, v3);
+    sub_1C13D24(&Individuality_TypeInfo, v4);
+    byte_4BB6B0A = 1;
   }
   self = a1->fields.self;
   target = a1->fields.target;
-  v7 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+  v7 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
   System_Func_object__object__bool____ctor(v7, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-  v8 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+  v8 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
   System_Func_object__object__bool____ctor(v8, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -11994,10 +11994,10 @@ bool __fastcall BattleBuffData___updateAuraBuffList_b__40_0(
 {
   System_Collections_Generic_List_object__o *conditionalAuraBuff; // x0
 
-  if ( (byte_4B68FC4 & 1) == 0 )
+  if ( (byte_4BB6B09 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, aura);
-    byte_4B68FC4 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, aura);
+    byte_4BB6B09 = 1;
   }
   conditionalAuraBuff = (System_Collections_Generic_List_object__o *)this->fields.conditionalAuraBuff;
   if ( !conditionalAuraBuff )
@@ -12005,7 +12005,7 @@ bool __fastcall BattleBuffData___updateAuraBuffList_b__40_0(
   if ( !System_Collections_Generic_List_object___Contains(
           conditionalAuraBuff,
           (Il2CppObject *)aura,
-          (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+          (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
   {
     conditionalAuraBuff = (System_Collections_Generic_List_object__o *)this->fields.activeList;
     if ( conditionalAuraBuff )
@@ -12013,7 +12013,7 @@ bool __fastcall BattleBuffData___updateAuraBuffList_b__40_0(
       if ( System_Collections_Generic_List_object___Contains(
              conditionalAuraBuff,
              (Il2CppObject *)aura,
-             (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+             (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
       {
         return 0;
       }
@@ -12022,10 +12022,10 @@ bool __fastcall BattleBuffData___updateAuraBuffList_b__40_0(
         return !System_Collections_Generic_List_object___Contains(
                   conditionalAuraBuff,
                   (Il2CppObject *)aura,
-                  (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+                  (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
     }
 LABEL_11:
-    sub_1BE4D28(conditionalAuraBuff, aura);
+    sub_1C13F80(conditionalAuraBuff, aura);
   }
   return 0;
 }
@@ -12064,11 +12064,11 @@ void __fastcall BattleBuffData__addBuff(
   __int64 v31; // x10
   Il2CppClass **v32; // x8
 
-  if ( (byte_4B68F42 & 1) == 0 )
+  if ( (byte_4BB6A87 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, buff);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v9);
-    byte_4B68F42 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, buff);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v9);
+    byte_4BB6A87 = 1;
   }
   auraBuffList = (System_Collections_Generic_List_object__o *)BattleBuffData__checkConditions(
                                                                 this,
@@ -12104,14 +12104,14 @@ void __fastcall BattleBuffData__addBuff(
       System_Collections_Generic_List_object___AddWithResize(
         auraBuffList,
         (Il2CppObject *)buff,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = &items->obj.klass + size;
       auraBuffList->fields._size = size + 1;
       v21[4] = (Il2CppClass *)buff;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v21 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v21 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
     }
   }
   if ( buff->fields.classIconAuraEffectId )
@@ -12130,14 +12130,14 @@ void __fastcall BattleBuffData__addBuff(
       System_Collections_Generic_List_object___AddWithResize(
         auraBuffList,
         (Il2CppObject *)buff,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
     }
     else
     {
       v25 = &v22->obj.klass + v24;
       auraBuffList->fields._size = v24 + 1;
       v25[4] = (Il2CppClass *)buff;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
     }
   }
   addBuffOrder = (unsigned int)this->fields.addBuffOrder;
@@ -12153,7 +12153,7 @@ void __fastcall BattleBuffData__addBuff(
         !v26) )
   {
 LABEL_35:
-    sub_1BE4D28(auraBuffList, addBuffOrder);
+    sub_1C13F80(auraBuffList, addBuffOrder);
   }
   v28 = auraBuffList->fields._size;
   if ( (unsigned int)v28 >= v26->max_length )
@@ -12161,7 +12161,7 @@ LABEL_35:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)auraBuffList,
       addBuffOrder,
-      *(const MethodInfo_35CF200 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_36101A8 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
@@ -12192,14 +12192,14 @@ LABEL_27:
     System_Collections_Generic_List_object___AddWithResize(
       auraBuffList,
       (Il2CppObject *)buff,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
     v32 = &v29->obj.klass + v31;
     auraBuffList->fields._size = v31 + 1;
     v32[4] = (Il2CppClass *)buff;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)buff, v12, (int32_t)v13, v14, v15, v16, v17);
   }
 }
 
@@ -12220,10 +12220,10 @@ void __fastcall BattleBuffData__changeBuffStateIfNeeded(
   _BOOL8 v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4B68F6C & 1) == 0 )
+  if ( (byte_4BB6AB1 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&now);
-    byte_4B68F6C = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&now);
+    byte_4BB6AB1 = 1;
   }
   if ( BattleBuffData__ChangeBuffState(
          this,
@@ -12245,7 +12245,7 @@ void __fastcall BattleBuffData__changeBuffStateIfNeeded(
       if ( v18 )
       {
         if ( !logic )
-          sub_1BE4D28(v18, v19);
+          sub_1C13F80(v18, v19);
         BattleLogic__updateConditionsBuffAll(logic, 0LL);
       }
     }
@@ -12265,10 +12265,10 @@ bool __fastcall BattleBuffData__checkActBuff(
   const MethodInfo *v11; // [xsp+8h] [xbp-48h]
   BattleBuffData_BuffData_o *targetBuff; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B68F78 & 1) == 0 )
+  if ( (byte_4BB6ABD & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F78 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6ABD = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -12323,20 +12323,20 @@ bool __fastcall BattleBuffData__checkActBuffDamageBuffIndiv(
   __int64 v43; // x0
   int32_t plusMinus; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F7E & 1) == 0 )
+  if ( (byte_4BB6AC3 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v9);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1BE4ACC(&Individuality_TypeInfo, v13);
-    byte_4B68F7E = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v9);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1C13D24(&Individuality_TypeInfo, v13);
+    byte_4BB6AC3 = 1;
   }
   plusMinus = 0;
   v14 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, (const MethodInfo *)checkIndividualities);
   if ( !v14 )
-    sub_1BE4D28(0LL, v15);
+    sub_1C13F80(0LL, v15);
   klass = v14->klass;
   v17 = v14;
   v18 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
@@ -12355,13 +12355,13 @@ bool __fastcall BattleBuffData__checkActBuffDamageBuffIndiv(
   else
   {
 LABEL_8:
-    p_method = sub_1C36AAC(v14, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v14, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v22 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *, _QWORD))p_method)(
           v17,
           *(_QWORD *)(p_method + 8));
   if ( !v22 )
-    sub_1BE4D28(0LL, v21);
+    sub_1C13F80(0LL, v21);
   while ( 1 )
   {
     v23 = *(_QWORD *)v22;
@@ -12381,7 +12381,7 @@ LABEL_8:
     else
     {
 LABEL_15:
-      v26 = sub_1C36AAC(v22, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v26 = sub_1C65D04(v22, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v22, *(_QWORD *)(v26 + 8));
     if ( (v27 & 1) == 0 )
@@ -12403,12 +12403,12 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v31 = sub_1C36AAC(v22, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v31 = sub_1C65D04(v22, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v32 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v22, *(_QWORD *)(v31 + 8));
     v34 = v32;
     if ( !v32 )
-      sub_1BE4D28(0LL, v33);
+      sub_1C13F80(0LL, v33);
     if ( (!BattleBuffData_BuffData__isCommandCodeBuff(v32, 0LL) || BattleBuffData_BuffData__isActiveCommandCode(
                                                                      v34,
                                                                      0LL))
@@ -12451,7 +12451,7 @@ LABEL_40:
   else
   {
 LABEL_44:
-    v43 = sub_1C36AAC(v22, System_IDisposable_TypeInfo, 0LL);
+    v43 = sub_1C65D04(v22, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v43)(v22, *(_QWORD *)(v43 + 8));
   return v27 & 1;
@@ -12459,7 +12459,7 @@ LABEL_44:
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall BattleBuffData__checkActBuff_43463616(
+bool __fastcall BattleBuffData__checkActBuff_43667728(
         BattleBuffData_o *this,
         int32_t act,
         BattleBuffData_CheckIndividualitiesData_o *checkIndividualities,
@@ -12471,16 +12471,16 @@ bool __fastcall BattleBuffData__checkActBuff_43463616(
   __int64 v12; // x1
   const MethodInfo *v14; // [xsp+8h] [xbp-48h]
 
-  if ( (byte_4B68F79 & 1) == 0 )
+  if ( (byte_4BB6ABE & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F79 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6ABE = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   if ( !checkIndividualities )
-    sub_1BE4D28(ActInfo, v12);
+    sub_1C13F80(ActInfo, v12);
   return BattleBuffData__ConfirmationBuff(
            this,
            ActInfo,
@@ -12511,7 +12511,7 @@ int32_t __fastcall BattleBuffData__checkAddParam(
 
   if ( !bufflist )
 LABEL_13:
-    sub_1BE4D28(this, bufflist);
+    sub_1C13F80(this, bufflist);
   v4 = *(_QWORD *)&bufflist->max_length;
   if ( (int)v4 < 1 )
     return 0;
@@ -12523,7 +12523,7 @@ LABEL_13:
   do
   {
     if ( v8 >= (unsigned int)v4 )
-      sub_1BE4D30(this, bufflist);
+      sub_1C13F88(this, bufflist);
     v11 = m_Items[v8];
     this = (BattleBuffData_o *)BattleBuffData__checkBuffSuccessful(v6, v11, v10, method);
     if ( ((unsigned __int8)this & 1) != 0 )
@@ -12576,67 +12576,67 @@ void __fastcall BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+40h] [xbp-80h] BYREF
   int32_t pal; // [xsp+6Ch] [xbp-54h] BYREF
 
-  if ( (byte_4B68F12 & 1) == 0 )
+  if ( (byte_4BB6A57 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, buffList);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v5);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v12);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v13);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4B68F12 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, buffList);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v5);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v12);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v13);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4BB6A57 = 1;
   }
   memset(&v33, 0, sizeof(v33));
   pal = 0;
   memset(&v32, 0, sizeof(v32));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___),
-        v18 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo),
+                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___),
+        v18 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo),
         System_Collections_Generic_List_object____ctor(
           v18,
-          (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__),
+          (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__),
         !v18) )
   {
-    sub_1BE4D28(Instance, v16);
+    sub_1C13F80(Instance, v16);
   }
   System_Collections_Generic_List_object___AddRange(
     v18,
     (System_Collections_Generic_IEnumerable_T__o *)this->fields.passiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___AddRange(
     v18,
     (System_Collections_Generic_IEnumerable_T__o *)this->fields.activeList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     v18,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v33 = v31;
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v33,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v19 )
       break;
     if ( !v33.fields._current )
-      sub_1BE4D28(v19, v20);
+      sub_1C13F80(v19, v20);
     if ( !BYTE1(v33.fields._current[28].klass) )
     {
       if ( !MasterData_object )
-        sub_1BE4D28(v19, v20);
+        sub_1C13F80(v19, v20);
       Entity = (BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                  (int32_t)v33.fields._current[1].klass,
-                                 (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                 (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
       if ( Entity )
       {
         pal = 0;
@@ -12655,32 +12655,32 @@ LABEL_38:
           if ( isCondition )
           {
             if ( !buffList )
-              sub_1BE4D28(isCondition, v25);
+              sub_1C13F80(isCondition, v25);
             System_Collections_Generic_List_object___GetEnumerator(
               (System_Collections_Generic_List_Enumerator_T__o *)&v31,
               (System_Collections_Generic_List_object__o *)buffList,
-              (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+              (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
             v32 = v31;
             while ( 1 )
             {
               v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                       &v32,
-                      (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+                      (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
               if ( !v26 )
                 break;
               current = v32.fields._current;
               if ( !v32.fields._current )
-                sub_1BE4D28(v26, v27);
+                sub_1C13F80(v26, v27);
               if ( !BYTE1(v32.fields._current[28].klass) )
               {
                 v29 = DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                         (int32_t)v32.fields._current[1].klass,
-                        (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                        (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
                 if ( SLODWORD(current[8].monitor) >= 1 )
                 {
                   if ( !v29 )
-                    sub_1BE4D28(0LL, v30);
+                    sub_1C13F80(0LL, v30);
                   if ( BuffEntity__checkBuffType((BuffEntity_o *)v29, 41, 0LL) && HIDWORD(current[1].monitor) == pal )
                   {
                     this->fields.resumptionHpFromLossMaxHp += LODWORD(current[8].monitor);
@@ -12692,7 +12692,7 @@ LABEL_38:
             }
             System_Collections_Generic_List_Enumerator_object___Dispose(
               &v32,
-              (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+              (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
           }
         }
       }
@@ -12700,7 +12700,7 @@ LABEL_38:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v33,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -12713,17 +12713,17 @@ bool __fastcall BattleBuffData__checkAuraBuff(BattleBuffData_o *this, const Meth
   int32_t size; // w24
   Il2CppObject *v8; // x21
 
-  if ( (byte_4B68F21 & 1) == 0 )
+  if ( (byte_4BB6A66 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v4);
-    byte_4B68F21 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Count__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v4);
+    byte_4BB6A66 = 1;
   }
   auraBuffList = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
   if ( !auraBuffList )
 LABEL_11:
-    sub_1BE4D28(auraBuffList, method);
+    sub_1C13F80(auraBuffList, method);
   v6 = 0;
   while ( 1 )
   {
@@ -12733,14 +12733,14 @@ LABEL_11:
     auraBuffList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   auraBuffList,
                                                                   v6,
-                                                                  (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                                                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
     if ( !this->fields.activeList )
       goto LABEL_11;
     v8 = (Il2CppObject *)auraBuffList;
     if ( !System_Collections_Generic_List_object___Contains(
             (System_Collections_Generic_List_object__o *)this->fields.activeList,
             (Il2CppObject *)auraBuffList,
-            (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+            (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
     {
       auraBuffList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
       if ( !auraBuffList )
@@ -12748,7 +12748,7 @@ LABEL_11:
       if ( !System_Collections_Generic_List_object___Contains(
               auraBuffList,
               v8,
-              (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+              (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
         break;
     }
     auraBuffList = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
@@ -12766,7 +12766,7 @@ bool __fastcall BattleBuffData__checkBoostSkill(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 2, 0LL);
 }
 
@@ -12780,13 +12780,13 @@ bool __fastcall BattleBuffData__checkBuffClear(
   __int64 v5; // x1
 
   v4 = this;
-  if ( (byte_4B68F3D & 1) == 0 )
+  if ( (byte_4BB6A82 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__,
                                  v5);
-    byte_4B68F3D = 1;
+    byte_4BB6A82 = 1;
   }
   if ( !buff )
     goto LABEL_14;
@@ -12800,7 +12800,7 @@ bool __fastcall BattleBuffData__checkBuffClear(
     if ( System_Collections_Generic_List_object___Contains(
            (System_Collections_Generic_List_object__o *)this,
            (Il2CppObject *)buff,
-           (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+           (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
     {
       this = (BattleBuffData_o *)v4->fields.auraBuffList;
       if ( this )
@@ -12808,11 +12808,11 @@ bool __fastcall BattleBuffData__checkBuffClear(
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)this,
           (Il2CppObject *)buff,
-          (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+          (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
         goto LABEL_13;
       }
 LABEL_14:
-      sub_1BE4D28(this, buff);
+      sub_1C13F80(this, buff);
     }
   }
 LABEL_13:
@@ -12866,7 +12866,7 @@ bool __fastcall BattleBuffData__checkBuffId(
       PassiveList = BattleBuffData__getPassiveList(this, 1, method);
       if ( !PassiveList )
 LABEL_27:
-        sub_1BE4D28(PassiveList, v9);
+        sub_1C13F80(PassiveList, v9);
       max_length = PassiveList->max_length;
       v12 = &idlist->m_Items[v7 + 1];
       if ( max_length >= 1 )
@@ -12892,7 +12892,7 @@ LABEL_13:
             goto LABEL_21;
         }
 LABEL_26:
-        sub_1BE4D30(PassiveList, v9);
+        sub_1C13F88(PassiveList, v9);
       }
 LABEL_21:
       ++v7;
@@ -12940,10 +12940,10 @@ bool __fastcall BattleBuffData__checkBuffIndividualities(
   unsigned int v19; // w24
   System_Int32_array *v20; // x23
 
-  if ( (byte_4B68F4A & 1) == 0 )
+  if ( (byte_4BB6A8F & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, individualities);
-    byte_4B68F4A = 1;
+    sub_1C13D24(&Individuality_TypeInfo, individualities);
+    byte_4BB6A8F = 1;
   }
   if ( !isActiveOnly && !isIgnoreIndivUnreleaseable )
   {
@@ -12983,7 +12983,7 @@ LABEL_14:
   PassiveList = (BattleBuffData_BuffData_o *)BattleBuffData__getActiveList(this, 1, (const MethodInfo *)isActiveOnly);
   if ( !PassiveList )
 LABEL_28:
-    sub_1BE4D28(PassiveList, v12);
+    sub_1C13F80(PassiveList, v12);
   max_length = PassiveList->fields.count;
   v18 = (BattleBuffData_BuffData_array *)PassiveList;
   if ( max_length >= 1 )
@@ -13012,7 +13012,7 @@ LABEL_28:
       return (unsigned __int8)PassiveList & 1;
     }
 LABEL_27:
-    sub_1BE4D30(PassiveList, v12);
+    sub_1C13F88(PassiveList, v12);
   }
   LOBYTE(PassiveList) = 0;
   return (unsigned __int8)PassiveList & 1;
@@ -13029,11 +13029,11 @@ bool __fastcall BattleBuffData__checkBuffSpecialAttack(
   int32_t v7; // w19
 
   v4 = this;
-  if ( (byte_4B68F2B & 1) == 0 )
+  if ( (byte_4BB6A70 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
-    byte_4B68F2B = 1;
+    sub_1C13D24(&BuffList_TypeInfo, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
+    byte_4BB6A70 = 1;
   }
   if ( !buff )
     goto LABEL_11;
@@ -13044,10 +13044,10 @@ bool __fastcall BattleBuffData__checkBuffSpecialAttack(
     || (this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_11:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   v7 = *(&this->fields.resumptionHpFromLossMaxHp + 1);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
@@ -13122,24 +13122,24 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
 
   v4 = isRec;
   v6 = this;
-  if ( (byte_4B68F5C & 1) == 0 )
+  if ( (byte_4BB6AA1 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, buff);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ConstantStrMaster___, v8);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_string__int___, v10);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_int___, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v14);
-    sub_1BE4ACC(&System_Func_string__int__TypeInfo, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v16);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1BE4ACC(&Method_BattleBuffData___c__checkBuffSuccessful_b__122_0__, v18);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v19);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&StringLiteral_9440/*"NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF"*/, v20);
-    byte_4B68F5C = 1;
+    sub_1C13D24(&BuffList_TypeInfo, buff);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantStrMaster___, v8);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Select_string__int___, v10);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_int___, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v14);
+    sub_1C13D24(&System_Func_string__int__TypeInfo, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__GetEnumerator__, v16);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C13D24(&Method_BattleBuffData___c__checkBuffSuccessful_b__122_0__, v18);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v19);
+    this = (BattleBuffData_o *)sub_1C13D24(&StringLiteral_9464/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, v20);
+    byte_4BB6AA1 = 1;
   }
   memset(&v62, 0, sizeof(v62));
   if ( !buff )
@@ -13151,15 +13151,15 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
     p_notUseCountWithNoDamageBuffTypes = &v6->fields.notUseCountWithNoDamageBuffTypes;
     if ( v6->fields.notUseCountWithNoDamageBuffTypes )
       goto LABEL_20;
-    this = (BattleBuffData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (BattleBuffData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_44;
     this = (BattleBuffData_o *)DataManager__GetMasterData_object_(
                                  (DataManager_o *)this,
-                                 (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
+                                 (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantStrMaster___);
     if ( !this )
       goto LABEL_44;
-    Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)this, (System_String_o *)StringLiteral_9440/*"NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF"*/, 0LL);
+    Value = ConstantStrMaster__GetValue((ConstantStrMaster_o *)this, (System_String_o *)StringLiteral_9464/*"NOT_DISPLAY_BATTLE_ATTRIBUTE"*/, 0LL);
     if ( Value )
     {
       v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(Value, 0x2Cu, 0, 0LL);
@@ -13178,11 +13178,11 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
           v26 = BattleBuffData___c_TypeInfo;
         }
         v28 = (Il2CppObject *)v26->static_fields->__9;
-        _9__122_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_string__int__TypeInfo);
+        _9__122_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_string__int__TypeInfo);
         System_Func_object__int____ctor(_9__122_0, v28, Method_BattleBuffData___c__checkBuffSuccessful_b__122_0__, 0LL);
         static_fields = BattleBuffData___c_TypeInfo->static_fields;
         static_fields->__9__122_0 = (struct System_Func_string__int__o *)_9__122_0;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&static_fields->__9__122_0,
           (int64_t)_9__122_0,
           v30,
@@ -13195,12 +13195,12 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
       v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                    v25,
                                                                    (System_Func_TSource__TResult__o *)_9__122_0,
-                                                                   (const MethodInfo_2F89FCC *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                   (const MethodInfo_2FC022C *)Method_System_Linq_Enumerable_Select_string__int___);
       v37 = System_Linq_Enumerable__ToList_int_(
               v36,
-              (const MethodInfo_2F965C4 *)Method_System_Linq_Enumerable_ToList_int___);
+              (const MethodInfo_2FCC824 *)Method_System_Linq_Enumerable_ToList_int___);
       *p_notUseCountWithNoDamageBuffTypes = (System_Collections_Generic_List_int__o *)v37;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&v6->fields.notUseCountWithNoDamageBuffTypes,
         (int64_t)v37,
         v38,
@@ -13216,12 +13216,12 @@ LABEL_20:
       p_buffMaster = (BattleBuffData_o **)&v6->fields.buffMaster;
       this = (BattleBuffData_o *)v6->fields.buffMaster;
       if ( this
-        || (this = (BattleBuffData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) != 0LL
+        || (this = (BattleBuffData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) != 0LL
         && (MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)this,
-                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___),
+                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___),
             *p_buffMaster = (BattleBuffData_o *)MasterData_object,
-            sub_1BE4A70(
+            sub_1C13CC8(
               (PartyOrganizationUtility_o *)&v6->fields.buffMaster,
               (int64_t)MasterData_object,
               v46,
@@ -13235,7 +13235,7 @@ LABEL_20:
         this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         v52 = *p_notUseCountWithNoDamageBuffTypes;
         if ( *p_notUseCountWithNoDamageBuffTypes )
         {
@@ -13243,17 +13243,17 @@ LABEL_20:
           System_Collections_Generic_List_int___GetEnumerator(
             (System_Collections_Generic_List_Enumerator_T__o *)&v61,
             v52,
-            (const MethodInfo_35CFCD4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+            (const MethodInfo_3610C7C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
           v62 = v61;
           while ( 1 )
           {
             v54 = System_Collections_Generic_List_Enumerator_int___MoveNext(
                     &v62,
-                    (const MethodInfo_335DC14 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+                    (const MethodInfo_33BAB1C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
             if ( !v54 )
               break;
             if ( !v53 )
-              sub_1BE4D28(v54, v55);
+              sub_1C13F80(v54, v55);
             current = v62.fields._current;
             v57 = *(&v53->fields.resumptionHpFromLossMaxHp + 1);
             if ( !BuffList_TypeInfo->_2.cctor_finished )
@@ -13262,18 +13262,18 @@ LABEL_20:
             {
               System_Collections_Generic_List_Enumerator_int___Dispose(
                 &v62,
-                (const MethodInfo_335DC10 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+                (const MethodInfo_33BAB18 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
               return 0;
             }
           }
           System_Collections_Generic_List_Enumerator_int___Dispose(
             &v62,
-            (const MethodInfo_335DC10 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+            (const MethodInfo_33BAB18 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
           goto LABEL_32;
         }
       }
 LABEL_44:
-      sub_1BE4D28(this, buff);
+      sub_1C13F80(this, buff);
     }
   }
 LABEL_32:
@@ -13307,7 +13307,7 @@ bool __fastcall BattleBuffData__checkBuffTurnCount(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.turn > 0 || buff->fields.count > 0 || buff->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -13393,20 +13393,20 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
   struct System_Int32_array *v80; // x20
   BattleBuffData___c__DisplayClass197_0_o selfs; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4B68F8B & 1) == 0 )
+  if ( (byte_4BB6AD0 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_int____int____bool__TypeInfo, self);
-    sub_1BE4ACC(&System_Func_int____int____int__int__bool__TypeInfo, v12);
-    sub_1BE4ACC(&Method_Individuality_IsMatchArrayCount__, v13);
-    sub_1BE4ACC(&Method_Individuality_IsMatchArray__, v14);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArrayCount__, v15);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArray__, v16);
-    sub_1BE4ACC(&Individuality_TypeInfo, v17);
-    byte_4B68F8B = 1;
+    sub_1C13D24(&System_Func_int____int____bool__TypeInfo, self);
+    sub_1C13D24(&System_Func_int____int____int__int__bool__TypeInfo, v12);
+    sub_1C13D24(&Method_Individuality_IsMatchArrayCount__, v13);
+    sub_1C13D24(&Method_Individuality_IsMatchArray__, v14);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArrayCount__, v15);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArray__, v16);
+    sub_1C13D24(&Individuality_TypeInfo, v17);
+    byte_4BB6AD0 = 1;
   }
   selfs.fields.self = self;
   memset(&selfs.fields.target, 0, 24);
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&selfs,
     (int64_t)self,
     (int64_t)target,
@@ -13416,9 +13416,9 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
     v6,
     v7);
   selfs.fields.target = target;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&selfs.fields.target, (int64_t)target, v18, v19, v20, v21, v22, v23);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&selfs.fields.target, (int64_t)target, v18, v19, v20, v21, v22, v23);
   selfs.fields.targetCount = targetCount;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&selfs.fields.targetCount,
     (int64_t)targetCount,
     v24,
@@ -13428,7 +13428,7 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
     v28,
     v29);
   if ( !buffEnt )
-    sub_1BE4D28(v30, v31);
+    sub_1C13F80(v30, v31);
   selfs.fields.indvCountAbove = BuffEntity__GetCkIndvCountAbove(buffEnt, 0, 0LL);
   selfs.fields.indvCountBelow = BuffEntity__GetCkIndvCountBelow(buffEnt, 0, 0LL);
   switch ( BuffEntity__getCheckIndvType(buffEnt, 0LL) )
@@ -13502,13 +13502,13 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
         if ( !selfs.fields.target || !*(_QWORD *)&selfs.fields.target->max_length )
         {
           v80 = selfs.fields.self;
-          v58 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+          v58 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
           System_Func_object__object__int__int__bool____ctor(
             v58,
             0LL,
             Method_Individuality_IsPartialMatchArrayCount__,
             0LL);
-          v59 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+          v59 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
           System_Func_object__object__int__int__bool____ctor(
             v59,
             0LL,
@@ -13523,13 +13523,13 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
           goto LABEL_60;
         }
         v75 = selfs.fields.self;
-        v76 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+        v76 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
         System_Func_object__object__bool____ctor(v76, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-        v77 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+        v77 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
         System_Func_object__object__bool____ctor(v77, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
         if ( !Individuality_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-        if ( !Individuality__CheckSignedIndividualities_38602276(
+        if ( !Individuality__CheckSignedIndividualities_38839820(
                 v75,
                 v74,
                 (System_Func_int____int____bool__o *)v76,
@@ -13538,7 +13538,7 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
         {
           v54 = selfs.fields.self;
           v55 = selfs.fields.targetCount;
-          v56 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+          v56 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
           v57 = &Method_Individuality_IsPartialMatchArrayCount__;
           goto LABEL_31;
         }
@@ -13546,13 +13546,13 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
       }
       v40 = selfs.fields.self;
       v41 = selfs.fields.target;
-      v42 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v42 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v42, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-      v43 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v43 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v43, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-      IsPartialMatchArrayCount = Individuality__CheckSignedIndividualities_38602276(
+      IsPartialMatchArrayCount = Individuality__CheckSignedIndividualities_38839820(
                                    v40,
                                    v41,
                                    (System_Func_int____int____bool__o *)v42,
@@ -13562,13 +13562,13 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
     case 3:
       v50 = selfs.fields.self;
       v51 = selfs.fields.target;
-      v52 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v52 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v52, 0LL, Method_Individuality_IsMatchArray__, 0LL);
-      v53 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v53 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v53, 0LL, Method_Individuality_IsMatchArray__, 0LL);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-      if ( !Individuality__CheckSignedIndividualities_38602276(
+      if ( !Individuality__CheckSignedIndividualities_38839820(
               v50,
               v51,
               (System_Func_int____int____bool__o *)v52,
@@ -13577,12 +13577,12 @@ bool __fastcall BattleBuffData__checkBuffTypeIndiviuality(
         goto LABEL_34;
       v54 = selfs.fields.self;
       v55 = selfs.fields.targetCount;
-      v56 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+      v56 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
       v57 = &Method_Individuality_IsMatchArrayCount__;
 LABEL_31:
       v58 = v56;
       System_Func_object__object__int__int__bool____ctor(v56, 0LL, *v57, 0LL);
-      v59 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+      v59 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
       System_Func_object__object__int__int__bool____ctor(v59, 0LL, *v57, 0LL);
       v61 = selfs.fields.indvCountAbove;
       v60 = selfs.fields.indvCountBelow;
@@ -13640,10 +13640,10 @@ bool __fastcall BattleBuffData__checkConditions(
   BattleBuffData_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B68F68 & 1) == 0 )
+  if ( (byte_4BB6AAD & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    byte_4B68F68 = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    byte_4BB6AAD = 1;
   }
   if ( !buff )
     goto LABEL_9;
@@ -13654,10 +13654,10 @@ bool __fastcall BattleBuffData__checkConditions(
     || (this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   return BuffEntity__isConditions((BuffEntity_o *)this, 0LL);
 }
@@ -13703,17 +13703,17 @@ void __fastcall BattleBuffData__checkFieldAlive(
   System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4B68F48 & 1) == 0 )
+  if ( (byte_4BB6A8D & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, aliveSvtData);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v10);
-    sub_1BE4ACC(&System_Func_int__int__bool__bool__TypeInfo, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__checkFieldAlive_b__97_0__, v14);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v15);
-    byte_4B68F48 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, aliveSvtData);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v10);
+    sub_1C13D24(&System_Func_int__int__bool__bool__TypeInfo, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__checkFieldAlive_b__97_0__, v14);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v15);
+    byte_4BB6A8D = 1;
   }
   v16 = BattleBuffData___c_TypeInfo;
   memset(&v40, 0, sizeof(v40));
@@ -13731,7 +13731,7 @@ void __fastcall BattleBuffData__checkFieldAlive(
       v16 = BattleBuffData___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__97_0 = sub_1BE4D18(System_Func_int__int__bool__bool__TypeInfo);
+    _9__97_0 = sub_1C13F70(System_Func_int__int__bool__bool__TypeInfo);
     System_Func_int__int__bool__bool____ctor(
       (System_Func_int__int__bool__bool__o *)_9__97_0,
       v18,
@@ -13739,37 +13739,37 @@ void __fastcall BattleBuffData__checkFieldAlive(
       0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__97_0 = (struct System_Func_int__int__bool__bool__o *)_9__97_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__97_0, _9__97_0, v20, v21, v22, v23, v24, v25);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__97_0, _9__97_0, v20, v21, v22, v23, v24, v25);
   }
   if ( !checkList )
     goto LABEL_28;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v39,
     (System_Collections_Generic_List_object__o *)checkList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v26 = 0;
   v40 = v39;
   while ( 1 )
   {
     v27 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v40,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v27 )
       break;
     current = v40.fields._current;
     if ( !v40.fields._current )
-      sub_1BE4D28(v27, v28);
+      sub_1C13F80(v27, v28);
     monitor = (unsigned int *)v40.fields._current[9].monitor;
     if ( monitor )
     {
       if ( !aliveSvtData )
-        sub_1BE4D28(v27, v28);
+        sub_1C13F80(v27, v28);
       TargetSideSvtDataList = FieldAliveServantData__getTargetSideSvtDataList(
                                 aliveSvtData,
                                 *((_BYTE *)monitor + 16),
                                 0LL);
       if ( !TargetSideSvtDataList )
-        sub_1BE4D28(0LL, v32);
+        sub_1C13F80(0LL, v32);
       v34 = (System_Int32_array *)*((_QWORD *)monitor + 3);
       if ( v34 )
       {
@@ -13779,11 +13779,11 @@ void __fastcall BattleBuffData__checkFieldAlive(
                                                                                           *((_BYTE *)monitor + 32),
                                                                                           v33);
         if ( !TargetSideSvtDataList )
-          sub_1BE4D28(0LL, v35);
+          sub_1C13F80(0LL, v35);
       }
       size = (unsigned int)TargetSideSvtDataList->fields._size;
       if ( !_9__97_0 )
-        sub_1BE4D28(TargetSideSvtDataList, size);
+        sub_1C13F80(TargetSideSvtDataList, size);
       if ( ((*(__int64 (__fastcall **)(_QWORD, __int64, _QWORD, _QWORD, _QWORD))(_9__97_0 + 24))(
               *(_QWORD *)(_9__97_0 + 64),
               size,
@@ -13798,7 +13798,7 @@ void __fastcall BattleBuffData__checkFieldAlive(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v40,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( (v26 & 1) != 0 )
   {
     if ( logic )
@@ -13807,7 +13807,7 @@ void __fastcall BattleBuffData__checkFieldAlive(
       return;
     }
 LABEL_28:
-    sub_1BE4D28(v16, aliveSvtData);
+    sub_1C13F80(v16, aliveSvtData);
   }
 }
 
@@ -13854,17 +13854,17 @@ void __fastcall BattleBuffData__checkFieldBuff(
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68F47 & 1) == 0 )
+  if ( (byte_4BB6A8C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, idList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v16);
-    byte_4B68F47 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, idList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v16);
+    byte_4BB6A8C = 1;
   }
   memset(&v44, 0, sizeof(v44));
   *onList = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)onList,
     0LL,
     (int64_t)aliveSvtData,
@@ -13874,30 +13874,30 @@ void __fastcall BattleBuffData__checkFieldBuff(
     (FollowerInfo_o *)method,
     v7);
   *offList = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)offList, 0LL, v17, v18, v19, v20, v21, v22);
+  sub_1C13CC8((PartyOrganizationUtility_o *)offList, 0LL, v17, v18, v19, v20, v21, v22);
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !passiveList )
     goto LABEL_39;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v43,
     passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v25 = 0;
   v44 = v43;
   while ( 1 )
   {
     v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v44,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v26 )
       break;
     if ( !v44.fields._current )
-      sub_1BE4D28(v26, v27);
+      sub_1C13F80(v26, v27);
     monitor_high = HIDWORD(v44.fields._current[3].monitor);
     if ( monitor_high >= 1 )
     {
       if ( !idList )
-        sub_1BE4D28(v26, v27);
+        sub_1C13F80(v26, v27);
       max_length = idList->max_length;
       if ( max_length < 1 )
       {
@@ -13914,7 +13914,7 @@ LABEL_14:
         while ( 1 )
         {
           if ( max_length == v31 )
-            sub_1BE4D30(v26, v27);
+            sub_1C13F88(v26, v27);
           if ( monitor_high == idList->m_Items[v31 + 1] )
             break;
           if ( max_length == ++v31 )
@@ -13931,30 +13931,30 @@ LABEL_14:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !passiveList )
     goto LABEL_39;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v43,
     passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v33 = v25;
   v44 = v43;
   while ( 1 )
   {
     v34 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v44,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v34 )
       break;
     if ( !v44.fields._current )
-      sub_1BE4D28(v34, v35);
+      sub_1C13F80(v34, v35);
     v37 = HIDWORD(v44.fields._current[3].monitor);
     if ( v37 >= 1 )
     {
       if ( !idList )
-        sub_1BE4D28(v34, v35);
+        sub_1C13F80(v34, v35);
       v38 = idList->max_length;
       if ( v38 < 1 )
       {
@@ -13971,7 +13971,7 @@ LABEL_28:
         while ( 1 )
         {
           if ( v38 == v39 )
-            sub_1BE4D30(v34, v35);
+            sub_1C13F88(v34, v35);
           if ( v37 == idList->m_Items[v39 + 1] )
             break;
           if ( v38 == ++v39 )
@@ -13988,7 +13988,7 @@ LABEL_28:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( (v33 & 1) != 0 )
   {
     if ( logic )
@@ -13997,7 +13997,7 @@ LABEL_28:
       goto LABEL_34;
     }
 LABEL_39:
-    sub_1BE4D28(passiveList, v23);
+    sub_1C13F80(passiveList, v23);
   }
 LABEL_34:
   BattleBuffData__checkFieldAlive(this, aliveSvtData, this->fields.passiveList, logic, v41);
@@ -14021,7 +14021,7 @@ bool __fastcall BattleBuffData__checkGutsBuffSuccessful(
   int v11; // w8
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   v6 = isRec;
   if ( buff->fields.isDecide && !buff->fields.isUse )
   {
@@ -14085,7 +14085,7 @@ bool __fastcall BattleBuffData__checkGutsBuffSuccessfulIndividual(
   BattleBuffData_BuffData_o *v24; // x1
 
   *buff = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)buff,
     0LL,
     *(int64_t *)&actionType,
@@ -14095,7 +14095,7 @@ bool __fastcall BattleBuffData__checkGutsBuffSuccessfulIndividual(
     v6,
     v7);
   if ( !bufflist )
-    sub_1BE4D28(v13, v14);
+    sub_1C13F80(v13, v14);
   v16 = *(_QWORD *)&bufflist->max_length;
   v17 = 0LL;
   if ( v16 && (int)v16 >= 1 )
@@ -14123,10 +14123,10 @@ bool __fastcall BattleBuffData__checkGutsBuffSuccessfulIndividual(
     }
     if ( (unsigned int)v18 >= bufflist->max_length )
 LABEL_12:
-      sub_1BE4D30(v17, v14);
+      sub_1C13F88(v17, v14);
     v24 = bufflist->m_Items[v18];
     *buff = v24;
-    sub_1BE4A70((PartyOrganizationUtility_o *)buff, (int64_t)v24, v19, v20, v21, (BattleSetupInfo_o *)v15, v22, v23);
+    sub_1C13CC8((PartyOrganizationUtility_o *)buff, (int64_t)v24, v19, v20, v21, (BattleSetupInfo_o *)v15, v22, v23);
     LOBYTE(v17) = 1;
   }
   return v17;
@@ -14144,8 +14144,8 @@ bool __fastcall BattleBuffData__checkIndiviuality(
   const MethodInfo *v7; // [xsp+10h] [xbp-20h]
 
   if ( !checkIndividualities )
-    sub_1BE4D28(this, actInfo);
-  return BattleBuffData__checkIndiviuality_43459960(
+    sub_1C13F80(this, actInfo);
+  return BattleBuffData__checkIndiviuality_43664072(
            this,
            actInfo,
            buffData,
@@ -14160,7 +14160,7 @@ bool __fastcall BattleBuffData__checkIndiviuality(
 }
 
 
-bool __fastcall BattleBuffData__checkIndiviuality_43459960(
+bool __fastcall BattleBuffData__checkIndiviuality_43664072(
         BattleBuffData_o *this,
         BuffList_ActInfo_o *actInfo,
         BattleBuffData_BuffData_o *buffData,
@@ -14237,7 +14237,7 @@ bool __fastcall BattleBuffData__checkIndiviuality_43459960(
         !OpponentInvokeCond_k__BackingField) )
   {
 LABEL_27:
-    sub_1BE4D28(this, actInfo);
+    sub_1C13F80(this, actInfo);
   }
   if ( opIndvAll )
     v31 = opIndvAll;
@@ -14304,11 +14304,11 @@ bool __fastcall BattleBuffData__checkShiftClear(
   System_Int32_array *Individualty; // x20
 
   v6 = this;
-  if ( (byte_4B68F8E & 1) == 0 )
+  if ( (byte_4BB6AD3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Individuality_TypeInfo, v7);
-    byte_4B68F8E = 1;
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    this = (BattleBuffData_o *)sub_1C13D24(&Individuality_TypeInfo, v7);
+    byte_4BB6AD3 = 1;
   }
   if ( !buff )
     goto LABEL_11;
@@ -14317,11 +14317,11 @@ bool __fastcall BattleBuffData__checkShiftClear(
   this = (BattleBuffData_o *)BattleBuffData__get_buffMst(v6, (const MethodInfo *)buff);
   if ( !this )
 LABEL_11:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   if ( !DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           buff->fields.buffId,
-          (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__) )
+          (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__) )
     return 0;
   Individualty = BattleBuffData_BuffData__GetIndividualty(buff, 0, 0, 0, 0LL);
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -14347,14 +14347,14 @@ bool __fastcall BattleBuffData__checkTypePlusMinus(
   int32_t v15; // w21
   bool result; // w0
 
-  if ( (byte_4B68F8C & 1) == 0 )
+  if ( (byte_4BB6AD1 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BuffList_TypeInfo, actInfo);
-    byte_4B68F8C = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&BuffList_TypeInfo, actInfo);
+    byte_4BB6AD1 = 1;
   }
   *plusMinus = 0;
   if ( !actInfo )
-    sub_1BE4D28(this, actInfo);
+    sub_1C13F80(this, actInfo);
   plusTypes = actInfo->fields.plusTypes;
   if ( plusTypes && (v9 = *(_QWORD *)&plusTypes->max_length, (int)v9 >= 1) )
   {
@@ -14363,7 +14363,7 @@ bool __fastcall BattleBuffData__checkTypePlusMinus(
     {
       if ( v10 >= (unsigned int)v9 )
 LABEL_23:
-        sub_1BE4D30(this, actInfo);
+        sub_1C13F88(this, actInfo);
       v11 = plusTypes->m_Items[v10 + 1];
       if ( !BuffList_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -14418,16 +14418,16 @@ void __fastcall BattleBuffData__clearActiveBuff(BattleBuffData_o *this, const Me
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4B68F2C & 1) == 0 )
+  if ( (byte_4BB6A71 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__,
                                  method);
-    byte_4B68F2C = 1;
+    byte_4BB6A71 = 1;
   }
   activeList = v2->fields.activeList;
   if ( !activeList )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   size = activeList->fields._size;
   v5 = activeList->fields._version + 1;
   activeList->fields._size = 0;
@@ -14445,16 +14445,16 @@ void __fastcall BattleBuffData__clearAuraBuff(BattleBuffData_o *this, const Meth
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4B68F2D & 1) == 0 )
+  if ( (byte_4BB6A72 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__,
                                  method);
-    byte_4B68F2D = 1;
+    byte_4BB6A72 = 1;
   }
   auraBuffList = v2->fields.auraBuffList;
   if ( !auraBuffList )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   size = auraBuffList->fields._size;
   v5 = auraBuffList->fields._version + 1;
   auraBuffList->fields._size = 0;
@@ -14525,18 +14525,18 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__geCheckBuffSuccessful(
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4B68F3A & 1) == 0 )
+  if ( (byte_4BB6A7F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, bufflist);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v6);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
-    byte_4B68F3A = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, bufflist);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v6);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
+    byte_4BB6A7F = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !bufflist )
     goto LABEL_17;
   v12 = *(_QWORD *)&bufflist->max_length;
@@ -14546,7 +14546,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__geCheckBuffSuccessful(
     do
     {
       if ( v13 >= (unsigned int)v12 )
-        sub_1BE4D30(v9, v10);
+        sub_1C13F88(v9, v10);
       v14 = bufflist->m_Items[v13];
       v9 = BattleBuffData__checkBuffSuccessful(this, v14, 1, v11);
       if ( v9 )
@@ -14564,14 +14564,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__geCheckBuffSuccessful(
           System_Collections_Generic_List_object___AddWithResize(
             v8,
             (Il2CppObject *)v14,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
           v23 = &items->obj.klass + size;
           v8->fields._size = size + 1;
           v23[4] = (Il2CppClass *)v14;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)v14, v15, (int32_t)v11, v16, v17, v18, v19);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)v14, v15, (int32_t)v11, v16, v17, v18, v19);
         }
       }
       LODWORD(v12) = bufflist->max_length;
@@ -14580,10 +14580,10 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__geCheckBuffSuccessful(
   }
   if ( !v8 )
 LABEL_17:
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v8,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -14606,16 +14606,16 @@ bool __fastcall BattleBuffData__getActBuff(
   const MethodInfo *v18; // [xsp+8h] [xbp-48h]
   BattleBuffData_BuffData_o *targetBuff; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B68F7A & 1) == 0 )
+  if ( (byte_4BB6ABF & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F7A = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6ABF = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   if ( !checkIndividualities )
-    sub_1BE4D28(ActInfo, v10);
+    sub_1C13F80(ActInfo, v10);
   selfConcatSvtIndividualities_k__BackingField = checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField;
   opponentConcatSvtIndividualities_k__BackingField = checkIndividualities->fields._opponentConcatSvtIndividualities_k__BackingField;
   selfIndividuality_k__BackingField = checkIndividualities->fields._selfIndividuality_k__BackingField;
@@ -14649,7 +14649,7 @@ float __fastcall BattleBuffData__getActMag(
 {
   const MethodInfo *v5; // x7
 
-  return BattleBuffData__getActMag_43459676(
+  return BattleBuffData__getActMag_43663788(
            this,
            act,
            selfIndiv,
@@ -14661,7 +14661,7 @@ float __fastcall BattleBuffData__getActMag(
 }
 
 
-float __fastcall BattleBuffData__getActMag_43459660(
+float __fastcall BattleBuffData__getActMag_43663772(
         BattleBuffData_o *this,
         int32_t act,
         System_Int32_array *selfIndiv,
@@ -14672,7 +14672,7 @@ float __fastcall BattleBuffData__getActMag_43459660(
 {
   const MethodInfo *v7; // x7
 
-  return BattleBuffData__getActMag_43459676(
+  return BattleBuffData__getActMag_43663788(
            this,
            act,
            selfIndiv,
@@ -14685,7 +14685,7 @@ float __fastcall BattleBuffData__getActMag_43459660(
 
 
 // local variable allocation has failed, the output may be wrong!
-float __fastcall BattleBuffData__getActMag_43459676(
+float __fastcall BattleBuffData__getActMag_43663788(
         BattleBuffData_o *this,
         int32_t act,
         System_Int32_array *selfIndiv,
@@ -14698,15 +14698,15 @@ float __fastcall BattleBuffData__getActMag_43459676(
   BuffList_ActInfo_o *ActInfo; // x0
   const MethodInfo *v16; // x7
 
-  if ( (byte_4B68F75 & 1) == 0 )
+  if ( (byte_4BB6ABA & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F75 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6ABA = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
-  return (float)BattleBuffData__getActValue_43458584(
+  return (float)BattleBuffData__getActValue_43662696(
                   this,
                   ActInfo,
                   selfIndiv,
@@ -14719,7 +14719,7 @@ float __fastcall BattleBuffData__getActMag_43459676(
 }
 
 
-float __fastcall BattleBuffData__getActMag_43459868(
+float __fastcall BattleBuffData__getActMag_43663980(
         BattleBuffData_o *this,
         BuffList_ActInfo_o *actInfo,
         BattleBuffData_CheckIndividualitiesData_o *checkIndividualities,
@@ -14728,8 +14728,8 @@ float __fastcall BattleBuffData__getActMag_43459868(
   const MethodInfo *v4; // x7
 
   if ( !checkIndividualities )
-    sub_1BE4D28(this, actInfo);
-  return (float)BattleBuffData__getActValue_43458584(
+    sub_1C13F80(this, actInfo);
+  return (float)BattleBuffData__getActValue_43662696(
                   this,
                   actInfo,
                   checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField,
@@ -14742,7 +14742,7 @@ float __fastcall BattleBuffData__getActMag_43459868(
 }
 
 
-float __fastcall BattleBuffData__getActMag_43459924(
+float __fastcall BattleBuffData__getActMag_43664036(
         BattleBuffData_o *this,
         int32_t act,
         BattleBuffData_CheckIndividualitiesData_o *checkIndividualities,
@@ -14751,8 +14751,8 @@ float __fastcall BattleBuffData__getActMag_43459924(
   const MethodInfo *v4; // x7
 
   if ( !checkIndividualities )
-    sub_1BE4D28(this, act);
-  return BattleBuffData__getActMag_43459676(
+    sub_1C13F80(this, act);
+  return BattleBuffData__getActMag_43663788(
            this,
            act,
            checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField,
@@ -14785,11 +14785,11 @@ int32_t __fastcall BattleBuffData__getActValue(
   const MethodInfo *v22; // [xsp+18h] [xbp-58h]
   int32_t upperParam[2]; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_4B68F6F & 1) == 0 )
+  if ( (byte_4BB6AB4 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&System_Math_TypeInfo, v13);
-    byte_4B68F6F = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&System_Math_TypeInfo, v13);
+    byte_4BB6AB4 = 1;
   }
   *(_QWORD *)upperParam = 0LL;
   *actflg = 0;
@@ -14813,7 +14813,7 @@ int32_t __fastcall BattleBuffData__getActValue(
                                           v22),
         !v16) )
   {
-    sub_1BE4D28(ActInfo, v15);
+    sub_1C13F80(ActInfo, v15);
   }
   v17 = (int)ActInfo;
   if ( BuffList_ActInfo__isLowerLimit(v16, 0LL) )
@@ -14821,7 +14821,7 @@ int32_t __fastcall BattleBuffData__getActValue(
     v18 = upperParam[0];
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v17 = System_Math__Max_63517952(v18, v17, 0LL);
+    v17 = System_Math__Max_63787088(v18, v17, 0LL);
   }
   v19 = v17 - v16->fields.baseValue;
   isUpperLimit = BuffList_ActInfo__isUpperLimit(v16, 0LL);
@@ -14832,7 +14832,7 @@ int32_t __fastcall BattleBuffData__getActValue(
 }
 
 
-int32_t __fastcall BattleBuffData__getActValue_43458400(
+int32_t __fastcall BattleBuffData__getActValue_43662512(
         BattleBuffData_o *this,
         int32_t act,
         bool *actflg,
@@ -14846,7 +14846,7 @@ int32_t __fastcall BattleBuffData__getActValue_43458400(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall BattleBuffData__getActValue_43458416(
+int32_t __fastcall BattleBuffData__getActValue_43662528(
         BattleBuffData_o *this,
         int32_t act,
         System_Int32_array *selfIndiv,
@@ -14858,15 +14858,15 @@ int32_t __fastcall BattleBuffData__getActValue_43458416(
   BuffList_ActInfo_o *ActInfo; // x0
   const MethodInfo *v14; // x7
 
-  if ( (byte_4B68F70 & 1) == 0 )
+  if ( (byte_4BB6AB5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F70 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6AB5 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
-  return BattleBuffData__getActValue_43458584(
+  return BattleBuffData__getActValue_43662696(
            this,
            ActInfo,
            selfIndiv,
@@ -14878,7 +14878,7 @@ int32_t __fastcall BattleBuffData__getActValue_43458416(
 }
 
 
-int32_t __fastcall BattleBuffData__getActValue_43458584(
+int32_t __fastcall BattleBuffData__getActValue_43662696(
         BattleBuffData_o *this,
         BuffList_ActInfo_o *actInfo,
         System_Int32_array *selfIndiv,
@@ -14897,10 +14897,10 @@ int32_t __fastcall BattleBuffData__getActValue_43458584(
   const MethodInfo *v22; // [xsp+18h] [xbp-58h]
   int32_t upperParam[2]; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_4B68F72 & 1) == 0 )
+  if ( (byte_4BB6AB7 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Math_TypeInfo, actInfo);
-    byte_4B68F72 = 1;
+    sub_1C13D24(&System_Math_TypeInfo, actInfo);
+    byte_4BB6AB7 = 1;
   }
   *(_QWORD *)upperParam = 0LL;
   CalculationParam = BattleBuffData__getCalculationParam(
@@ -14917,14 +14917,14 @@ int32_t __fastcall BattleBuffData__getActValue_43458584(
                        0LL,
                        v22);
   if ( !actInfo )
-    sub_1BE4D28(CalculationParam, v16);
+    sub_1C13F80(CalculationParam, v16);
   v17 = CalculationParam;
   if ( BuffList_ActInfo__isLowerLimit(actInfo, 0LL) )
   {
     v18 = upperParam[0];
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v17 = System_Math__Max_63517952(v18, v17, 0LL);
+    v17 = System_Math__Max_63787088(v18, v17, 0LL);
   }
   v19 = v17 - actInfo->fields.baseValue;
   isUpperLimit = BuffList_ActInfo__isUpperLimit(actInfo, 0LL);
@@ -14935,7 +14935,7 @@ int32_t __fastcall BattleBuffData__getActValue_43458584(
 }
 
 
-int32_t __fastcall BattleBuffData__getActValue_43458864(
+int32_t __fastcall BattleBuffData__getActValue_43662976(
         BattleBuffData_o *this,
         int32_t act,
         System_Int32_array *selfIndiv,
@@ -14944,11 +14944,11 @@ int32_t __fastcall BattleBuffData__getActValue_43458864(
 {
   const MethodInfo *v5; // x6
 
-  return BattleBuffData__getActValue_43458416(this, act, selfIndiv, this->fields.wkzero, checkIndividualities, 0LL, v5);
+  return BattleBuffData__getActValue_43662528(this, act, selfIndiv, this->fields.wkzero, checkIndividualities, 0LL, v5);
 }
 
 
-int32_t __fastcall BattleBuffData__getActValue_43458880(
+int32_t __fastcall BattleBuffData__getActValue_43662992(
         BattleBuffData_o *this,
         int32_t act,
         BattleBuffData_CheckIndividualitiesData_o *checkIndividualities,
@@ -14957,8 +14957,8 @@ int32_t __fastcall BattleBuffData__getActValue_43458880(
   const MethodInfo *v4; // x6
 
   if ( !checkIndividualities )
-    sub_1BE4D28(this, act);
-  return BattleBuffData__getActValue_43458416(
+    sub_1C13F80(this, act);
+  return BattleBuffData__getActValue_43662528(
            this,
            act,
            checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField,
@@ -14970,7 +14970,7 @@ int32_t __fastcall BattleBuffData__getActValue_43458880(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall BattleBuffData__getActValue_43458916(
+int32_t __fastcall BattleBuffData__getActValue_43663028(
         BattleBuffData_o *this,
         int32_t act,
         System_String_o **text,
@@ -14981,17 +14981,17 @@ int32_t __fastcall BattleBuffData__getActValue_43458916(
   __int64 v10; // x1
   const MethodInfo *v11; // x7
 
-  if ( (byte_4B68F71 & 1) == 0 )
+  if ( (byte_4BB6AB6 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F71 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6AB6 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   if ( !checkIndividualities )
-    sub_1BE4D28(ActInfo, v10);
-  return BattleBuffData__getActValue_43458584(
+    sub_1C13F80(ActInfo, v10);
+  return BattleBuffData__getActValue_43662696(
            this,
            ActInfo,
            checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField,
@@ -15035,77 +15035,77 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getActiveArrayNoActAft
   System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B68F1D & 1) == 0 )
+  if ( (byte_4BB6A62 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v9);
-    byte_4B68F1D = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v9);
+    byte_4BB6A62 = 1;
   }
   memset(&v30, 0, sizeof(v30));
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList )
     goto LABEL_19;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     activeList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v30 = v29;
   while ( 1 )
   {
     v13 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v30,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v13 )
       break;
     current = v30.fields._current;
     if ( !v30.fields._current )
-      sub_1BE4D28(v13, v14);
+      sub_1C13F80(v13, v14);
     v16 = BattleBuffData_BuffData__checkAct((BattleBuffData_BuffData_o *)v30.fields._current, 1, 0LL);
     if ( !v16 && LOBYTE(current[2].klass) )
     {
       if ( !v10 )
-        sub_1BE4D28(v16, v17);
+        sub_1C13F80(v16, v17);
       items = v10->fields._items;
       v25 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
       ++v10->fields._version;
       if ( !items )
-        sub_1BE4D28(v16, v17);
+        sub_1C13F80(v16, v17);
       size = v10->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v10,
           current,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
         v27 = &items->obj.klass + size;
         v10->fields._size = size + 1;
         v27[4] = (Il2CppClass *)current;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 4), (int64_t)current, v18, v19, v20, v21, v22, v23);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 4), (int64_t)current, v18, v19, v20, v21, v22, v23);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v30,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( !v10 )
 LABEL_19:
-    sub_1BE4D28(activeList, v11);
+    sub_1C13F80(activeList, v11);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v10,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -15128,7 +15128,7 @@ int32_t __fastcall BattleBuffData__getActiveBuffNum(
   ActiveList = BattleBuffData__getActiveList(this, 1, method);
   if ( !ActiveList )
 LABEL_17:
-    sub_1BE4D28(ActiveList, buffId);
+    sub_1C13F80(ActiveList, buffId);
   max_length = ActiveList->max_length;
   if ( max_length << 32 >= 1 )
   {
@@ -15164,7 +15164,7 @@ LABEL_13:
         goto LABEL_13;
     }
 LABEL_18:
-    sub_1BE4D30(ActiveList, buffId);
+    sub_1C13F88(ActiveList, buffId);
   }
   return 0;
 }
@@ -15183,10 +15183,10 @@ int32_t __fastcall BattleBuffData__getActiveIndividualitiesNum(
   int32_t v10; // w21
   System_Int32_array *Individualty; // x22
 
-  if ( (byte_4B68F4D & 1) == 0 )
+  if ( (byte_4BB6A92 & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, individualities);
-    byte_4B68F4D = 1;
+    sub_1C13D24(&Individuality_TypeInfo, individualities);
+    byte_4BB6A92 = 1;
   }
   ActiveList = BattleBuffData__getActiveList(this, 1, method);
   if ( !ActiveList )
@@ -15200,7 +15200,7 @@ int32_t __fastcall BattleBuffData__getActiveIndividualitiesNum(
     while ( 1 )
     {
       if ( v9 >= (unsigned int)max_length )
-        sub_1BE4D30(ActiveList, v6);
+        sub_1C13F88(ActiveList, v6);
       ActiveList = (BattleBuffData_BuffData_array *)v8->m_Items[v9];
       if ( !ActiveList )
         break;
@@ -15218,7 +15218,7 @@ int32_t __fastcall BattleBuffData__getActiveIndividualitiesNum(
         return v10;
     }
 LABEL_14:
-    sub_1BE4D28(ActiveList, v6);
+    sub_1C13F80(ActiveList, v6);
   }
   return 0;
 }
@@ -15240,21 +15240,21 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getActiveList(
   System_Collections_Generic_List_object__o *activeList; // x19
   System_Predicate_object__o *v13; // x20
 
-  if ( (byte_4B68F1B & 1) == 0 )
+  if ( (byte_4BB6A60 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, isCheckInterval);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass32_0__getActiveList_b__0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass32_0_TypeInfo, v8);
-    byte_4B68F1B = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, isCheckInterval);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass32_0__getActiveList_b__0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass32_0_TypeInfo, v8);
+    byte_4BB6A60 = 1;
   }
-  v9 = (BattleBuffData___c__DisplayClass32_0_o *)sub_1BE4D18(BattleBuffData___c__DisplayClass32_0_TypeInfo);
+  v9 = (BattleBuffData___c__DisplayClass32_0_o *)sub_1C13F70(BattleBuffData___c__DisplayClass32_0_TypeInfo);
   BattleBuffData___c__DisplayClass32_0___ctor(v9, 0LL);
   if ( !v9
     || (v9->fields.isCheckInterval = isCheckInterval,
         activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList,
-        v13 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        v13 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(
           v13,
           (Il2CppObject *)v9,
@@ -15264,13 +15264,13 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getActiveList(
     || (All = System_Collections_Generic_List_object___FindAll(
                 activeList,
                 (System_Predicate_T__o *)v13,
-                (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
+                (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
   {
-    sub_1BE4D28(All, v11);
+    sub_1C13F80(All, v11);
   }
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             (System_Collections_Generic_List_object__o *)All,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -15280,17 +15280,17 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getActiveListDebug(
 {
   System_Collections_Generic_List_object__o *activeList; // x0
 
-  if ( (byte_4B68F1F & 1) == 0 )
+  if ( (byte_4BB6A64 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
-    byte_4B68F1F = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
+    byte_4BB6A64 = 1;
   }
   activeList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !activeList )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             activeList,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -15316,11 +15316,11 @@ int32_t __fastcall BattleBuffData__getAdjustValue(
   int32_t upperParam[2]; // [xsp+38h] [xbp-48h] BYREF
 
   v11 = value;
-  if ( (byte_4B68F73 & 1) == 0 )
+  if ( (byte_4BB6AB8 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&value);
-    sub_1BE4ACC(&System_Math_TypeInfo, v13);
-    byte_4B68F73 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&value);
+    sub_1C13D24(&System_Math_TypeInfo, v13);
+    byte_4BB6AB8 = 1;
   }
   *(_QWORD *)upperParam = 0LL;
   missText = 0LL;
@@ -15341,13 +15341,13 @@ int32_t __fastcall BattleBuffData__getAdjustValue(
                        0LL,
                        v20);
   if ( !ActInfo )
-    sub_1BE4D28(CalculationParam, v16);
+    sub_1C13F80(CalculationParam, v16);
   if ( BuffList_ActInfo__isLowerLimit(ActInfo, 0LL) )
   {
     v17 = upperParam[0];
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v11 = System_Math__Max_63517952(v17, v11, 0LL);
+    v11 = System_Math__Max_63787088(v17, v11, 0LL);
   }
   isUpperLimit = BuffList_ActInfo__isUpperLimit(ActInfo, 0LL);
   if ( isUpperLimit && upperParam[1] < v11 )
@@ -15376,13 +15376,13 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4B68F20 & 1) == 0 )
+  if ( (byte_4BB6A65 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
-    sub_1BE4ACC(&Method_BattleBuffData___c__getAuraBuffList_b__38_0__, v4);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v5);
-    byte_4B68F20 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, method);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v3);
+    sub_1C13D24(&Method_BattleBuffData___c__getAuraBuffList_b__38_0__, v4);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v5);
+    byte_4BB6A65 = 1;
   }
   v6 = BattleBuffData___c_TypeInfo;
   auraBuffList = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
@@ -15400,11 +15400,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v6 = BattleBuffData___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__38_0 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__38_0 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(_9__38_0, v9, Method_BattleBuffData___c__getAuraBuffList_b__38_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__38_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)_9__38_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__38_0,
       (int64_t)_9__38_0,
       v11,
@@ -15415,11 +15415,11 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
       v16);
   }
   if ( !auraBuffList )
-    sub_1BE4D28(v6, method);
+    sub_1C13F80(v6, method);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)System_Collections_Generic_List_object___FindAll(
                                                                          auraBuffList,
                                                                          (System_Predicate_T__o *)_9__38_0,
-                                                                         (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                                                                         (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
 }
 
 
@@ -15456,21 +15456,21 @@ System_Int32_array *__fastcall BattleBuffData__getBuffActiveIDList(
   _QWORD *v29; // x9
   __int64 size; // x10
 
-  if ( (byte_4B68F50 & 1) == 0 )
+  if ( (byte_4BB6A95 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, IsIncludeUnsubState);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v6);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v7);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__getBuffActiveIDList_b__107_0__, v9);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v10);
-    byte_4B68F50 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, IsIncludeUnsubState);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v6);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__getBuffActiveIDList_b__107_0__, v9);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v10);
+    byte_4BB6A95 = 1;
   }
-  v11 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v11 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v11,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( IsIncludeUnsubState )
   {
     ActiveList = BattleBuffData__getActiveList(this, 1, v13);
@@ -15492,11 +15492,11 @@ System_Int32_array *__fastcall BattleBuffData__getBuffActiveIDList(
         ActiveList = BattleBuffData___c_TypeInfo;
       }
       v16 = (Il2CppObject *)**((_QWORD **)ActiveList + 23);
-      v15 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+      v15 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
       System_Predicate_object____ctor(v15, v16, Method_BattleBuffData___c__getBuffActiveIDList_b__107_0__, 0LL);
       static_fields = BattleBuffData___c_TypeInfo->static_fields;
       static_fields->__9__107_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v15;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__107_0, (int64_t)v15, v18, v19, v20, v21, v22, v23);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__107_0, (int64_t)v15, v18, v19, v20, v21, v22, v23);
     }
     if ( !this )
       goto LABEL_26;
@@ -15515,7 +15515,7 @@ System_Int32_array *__fastcall BattleBuffData__getBuffActiveIDList(
     while ( 1 )
     {
       if ( v26 >= v25 )
-        sub_1BE4D30(ActiveList, v12);
+        sub_1C13F88(ActiveList, v12);
       v27 = *((_QWORD *)v24 + (int)v26 + 4);
       if ( !v27 )
         break;
@@ -15533,7 +15533,7 @@ System_Int32_array *__fastcall BattleBuffData__getBuffActiveIDList(
         System_Collections_Generic_List_int___AddWithResize(
           v11,
           v12,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
       }
       else
       {
@@ -15545,14 +15545,14 @@ System_Int32_array *__fastcall BattleBuffData__getBuffActiveIDList(
         goto LABEL_24;
     }
 LABEL_26:
-    sub_1BE4D28(ActiveList, v12);
+    sub_1C13F80(ActiveList, v12);
   }
 LABEL_24:
   if ( !v11 )
     goto LABEL_26;
   return System_Collections_Generic_List_int___ToArray(
            v11,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -15596,35 +15596,35 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIDList(
   _QWORD *v36; // x9
   __int64 size; // x10
 
-  if ( (byte_4B68F4F & 1) == 0 )
+  if ( (byte_4BB6A94 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, IsIncludeUnsubState);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77128672, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v13);
-    sub_1BE4ACC(&Method_BattleBuffData___c__getBuffIDList_b__106_0__, v14);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v15);
-    byte_4B68F4F = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, IsIncludeUnsubState);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77436960, v10);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v13);
+    sub_1C13D24(&Method_BattleBuffData___c__getBuffIDList_b__106_0__, v14);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v15);
+    byte_4BB6A94 = 1;
   }
-  v16 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v16 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v16,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   PassiveList = BattleBuffData__getPassiveList(this, 1, v17);
   v21 = PassiveList;
   if ( !IsIncludeUnsubState )
   {
-    v22 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-    System_Collections_Generic_List_object____ctor_56539928(
+    v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    System_Collections_Generic_List_object____ctor_56806080(
       v22,
       (System_Collections_Generic_IEnumerable_T__o *)v21,
-      (const MethodInfo_35EBB18 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77128672);
+      (const MethodInfo_362CAC0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77436960);
     PassiveList = BattleBuffData___c_TypeInfo;
     if ( !BattleBuffData___c_TypeInfo->_2.cctor_finished )
     {
@@ -15640,23 +15640,23 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIDList(
         PassiveList = BattleBuffData___c_TypeInfo;
       }
       v24 = (Il2CppObject *)**((_QWORD **)PassiveList + 23);
-      v23 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+      v23 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
       System_Predicate_object____ctor(v23, v24, Method_BattleBuffData___c__getBuffIDList_b__106_0__, 0LL);
       static_fields = (PartyOrganizationUtility_o *)BattleBuffData___c_TypeInfo->static_fields;
       static_fields[1].klass = (PartyOrganizationUtility_c *)v23;
-      sub_1BE4A70(static_fields + 1, (int64_t)v23, v26, v27, v28, v29, v30, v31);
+      sub_1C13CC8(static_fields + 1, (int64_t)v23, v26, v27, v28, v29, v30, v31);
     }
     if ( !v22 )
       goto LABEL_26;
     PassiveList = System_Collections_Generic_List_object___FindAll(
                     v22,
                     (System_Predicate_T__o *)v23,
-                    (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                    (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
     if ( !PassiveList )
       goto LABEL_26;
     PassiveList = System_Collections_Generic_List_object___ToArray(
                     (System_Collections_Generic_List_object__o *)PassiveList,
-                    (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                    (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
     v21 = PassiveList;
   }
   if ( !v21 )
@@ -15668,7 +15668,7 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIDList(
     while ( 1 )
     {
       if ( v33 >= v32 )
-        sub_1BE4D30(PassiveList, v19);
+        sub_1C13F88(PassiveList, v19);
       v34 = *((_QWORD *)v21 + (int)v33 + 4);
       if ( !v34 )
         break;
@@ -15686,7 +15686,7 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIDList(
         System_Collections_Generic_List_int___AddWithResize(
           v16,
           v19,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
       }
       else
       {
@@ -15698,7 +15698,7 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIDList(
         goto LABEL_24;
     }
 LABEL_26:
-    sub_1BE4D28(PassiveList, v19);
+    sub_1C13F80(PassiveList, v19);
   }
 LABEL_24:
   PassiveList = BattleBuffData__getBuffActiveIDList(this, IsIncludeUnsubState, v20);
@@ -15707,10 +15707,10 @@ LABEL_24:
   System_Collections_Generic_List_int___AddRange(
     v16,
     (System_Collections_Generic_IEnumerable_T__o *)PassiveList,
-    (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
   return System_Collections_Generic_List_int___ToArray(
            v16,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -15816,35 +15816,35 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIndividualities(
   int *v102; // x10
   __int64 v103; // x0
 
-  if ( (byte_4B68F4B & 1) == 0 )
+  if ( (byte_4BB6A90 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, isActiveOnly);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v13);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v14);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v15);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v16);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v17);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v18);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v19);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v20);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v21);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__0__, v22);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__1__, v23);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass100_0_TypeInfo, v24);
-    byte_4B68F4B = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, isActiveOnly);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v13);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v14);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v15);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v16);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v17);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, v18);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v19);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v20);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v21);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__0__, v22);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__1__, v23);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass100_0_TypeInfo, v24);
+    byte_4BB6A90 = 1;
   }
-  v25 = sub_1BE4D18(BattleBuffData___c__DisplayClass100_0_TypeInfo);
+  v25 = sub_1C13F70(BattleBuffData___c__DisplayClass100_0_TypeInfo);
   BattleBuffData___c__DisplayClass100_0___ctor((BattleBuffData___c__DisplayClass100_0_o *)v25, 0LL);
   if ( !v25 )
     goto LABEL_77;
   *(_QWORD *)(v25 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 16), (int64_t)this, v28, v29, v30, v31, v32, v33);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 16), (int64_t)this, v28, v29, v30, v31, v32, v33);
   *(_QWORD *)(v25 + 24) = buffAggregationArgs;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 24), (int64_t)buffAggregationArgs, v34, v35, v36, v37, v38, v39);
-  v40 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 24), (int64_t)buffAggregationArgs, v34, v35, v36, v37, v38, v39);
+  v40 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v40,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( (isAiCheck || !isIgnoreIndivUnreleaseable) && !isActiveOnly )
   {
     PassiveList = BattleBuffData__getPassiveList(this, 1, v41);
@@ -15852,19 +15852,19 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIndividualities(
     v44 = (System_Collections_Generic_IEnumerable_TSource__o *)PassiveList;
     if ( !v43 )
     {
-      v43 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+      v43 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v43,
         (Il2CppObject *)v25,
         Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__0__,
         0LL);
       *(_QWORD *)(v25 + 32) = v43;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 32), (int64_t)v43, v45, v46, v47, v48, v49, v50);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 32), (int64_t)v43, v45, v46, v47, v48, v49, v50);
     }
     v26 = System_Linq_Enumerable__Where_object_(
             v44,
             (System_Func_TSource__bool__o *)v43,
-            (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+            (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
     if ( !v26 )
       goto LABEL_77;
     klass = v26->klass;
@@ -15885,13 +15885,13 @@ System_Int32_array *__fastcall BattleBuffData__getBuffIndividualities(
     else
     {
 LABEL_13:
-      p_method = sub_1C36AAC(v26, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+      p_method = sub_1C65D04(v26, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v57 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
             v52,
             *(_QWORD *)(p_method + 8));
     if ( !v57 )
-      sub_1BE4D28(0LL, v56);
+      sub_1C13F80(0LL, v56);
     while ( 1 )
     {
       v58 = *(_QWORD *)v57;
@@ -15911,7 +15911,7 @@ LABEL_13:
       else
       {
 LABEL_20:
-        v61 = sub_1C36AAC(v57, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v61 = sub_1C65D04(v57, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
       if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v61)(v57, *(_QWORD *)(v61 + 8)) & 1) == 0 )
         break;
@@ -15932,11 +15932,11 @@ LABEL_20:
       else
       {
 LABEL_27:
-        v65 = sub_1C36AAC(v57, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+        v65 = sub_1C65D04(v57, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
       }
       v66 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v65)(v57, *(_QWORD *)(v65 + 8));
       if ( !v66 )
-        sub_1BE4D28(0LL, v67);
+        sub_1C13F80(0LL, v67);
       Individualty = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData_BuffData__GetIndividualty(
                                                                       v66,
                                                                       isIncludeIgnoreIndiv,
@@ -15944,11 +15944,11 @@ LABEL_27:
                                                                       isAiCheck,
                                                                       0LL);
       if ( !v40 )
-        sub_1BE4D28(Individualty, Individualty);
+        sub_1C13F80(Individualty, Individualty);
       System_Collections_Generic_List_int___AddRange(
         v40,
         Individualty,
-        (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+        (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
     }
     v69 = *(_QWORD *)v57;
     v70 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
@@ -15967,7 +15967,7 @@ LABEL_27:
     else
     {
 LABEL_36:
-      v72 = sub_1C36AAC(v57, System_IDisposable_TypeInfo, 0LL);
+      v72 = sub_1C65D04(v57, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v72)(v57, *(_QWORD *)(v72 + 8));
   }
@@ -15976,19 +15976,19 @@ LABEL_36:
   v75 = (System_Collections_Generic_IEnumerable_TSource__o *)ActiveList;
   if ( !v74 )
   {
-    v74 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    v74 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v74,
       (Il2CppObject *)v25,
       Method_BattleBuffData___c__DisplayClass100_0__getBuffIndividualities_b__1__,
       0LL);
     *(_QWORD *)(v25 + 40) = v74;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 40), (int64_t)v74, v76, v77, v78, v79, v80, v81);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 40), (int64_t)v74, v76, v77, v78, v79, v80, v81);
   }
   v26 = System_Linq_Enumerable__Where_object_(
           v75,
           (System_Func_TSource__bool__o *)v74,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   if ( !v26 )
     goto LABEL_77;
   v82 = v26->klass;
@@ -16009,13 +16009,13 @@ LABEL_36:
   else
   {
 LABEL_46:
-    v86 = sub_1C36AAC(v26, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    v86 = sub_1C65D04(v26, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v88 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v86)(
           v83,
           *(_QWORD *)(v86 + 8));
   if ( !v88 )
-    sub_1BE4D28(0LL, v87);
+    sub_1C13F80(0LL, v87);
   while ( 1 )
   {
     v89 = *(_QWORD *)v88;
@@ -16035,7 +16035,7 @@ LABEL_46:
     else
     {
 LABEL_53:
-      v92 = sub_1C36AAC(v88, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v92 = sub_1C65D04(v88, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v92)(v88, *(_QWORD *)(v92 + 8)) & 1) == 0 )
       break;
@@ -16056,11 +16056,11 @@ LABEL_53:
     else
     {
 LABEL_60:
-      v96 = sub_1C36AAC(v88, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v96 = sub_1C65D04(v88, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v97 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v96)(v88, *(_QWORD *)(v96 + 8));
     if ( !v97 )
-      sub_1BE4D28(0LL, v98);
+      sub_1C13F80(0LL, v98);
     v99 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData_BuffData__GetIndividualty(
                                                            v97,
                                                            isIncludeIgnoreIndiv,
@@ -16068,11 +16068,11 @@ LABEL_60:
                                                            isAiCheck,
                                                            0LL);
     if ( !v40 )
-      sub_1BE4D28(v99, v99);
+      sub_1C13F80(v99, v99);
     System_Collections_Generic_List_int___AddRange(
       v40,
       v99,
-      (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
   }
   v100 = *(_QWORD *)v88;
   v101 = *(unsigned __int16 *)(*(_QWORD *)v88 + 302LL);
@@ -16091,17 +16091,17 @@ LABEL_60:
   else
   {
 LABEL_69:
-    v103 = sub_1C36AAC(v88, System_IDisposable_TypeInfo, 0LL);
+    v103 = sub_1C65D04(v88, System_IDisposable_TypeInfo, 0LL);
   }
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v103)(
                                                                v88,
                                                                *(_QWORD *)(v103 + 8));
   if ( !v40 )
 LABEL_77:
-    sub_1BE4D28(v26, v27);
+    sub_1C13F80(v26, v27);
   return System_Collections_Generic_List_int___ToArray(
            v40,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -16113,8 +16113,8 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList(
         const MethodInfo *method)
 {
   if ( !checkIndividualities )
-    sub_1BE4D28(this, types);
-  return BattleBuffData__getBuffList_43423608(
+    sub_1C13F80(this, types);
+  return BattleBuffData__getBuffList_43627720(
            this,
            types,
            checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField,
@@ -16123,7 +16123,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList(
 }
 
 
-BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43423608(
+BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43627720(
         BattleBuffData_o *this,
         BuffList_TYPE_array *types,
         System_Int32_array *targetIndividualities,
@@ -16167,23 +16167,23 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43423608(
   __int64 v42; // x0
   BattleBuffData_o *v44; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4B68F5A & 1) == 0 )
+  if ( (byte_4BB6A9F & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, types);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
-    sub_1BE4ACC(&Individuality_TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v14);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
-    byte_4B68F5A = 1;
+    sub_1C13D24(&BuffList_TypeInfo, types);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v8);
+    sub_1C13D24(&Individuality_TypeInfo, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v14);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v15);
+    byte_4BB6A9F = 1;
   }
-  v16 = sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v16 = sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     (System_Collections_Generic_List_object__o *)v16,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !checklist )
   {
     ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v19);
@@ -16192,15 +16192,15 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43423608(
     System_Collections_Generic_List_object___AddRange(
       (System_Collections_Generic_List_object__o *)v16,
       ActiveList,
-      (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+      (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
     PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v20);
     System_Collections_Generic_List_object___AddRange(
       (System_Collections_Generic_List_object__o *)v16,
       PassiveList,
-      (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+      (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
     ActiveList = (System_Collections_Generic_IEnumerable_T__o *)System_Collections_Generic_List_object___ToArray(
                                                                   (System_Collections_Generic_List_object__o *)v16,
-                                                                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
     v22 = *(_DWORD *)(v16 + 24);
     checklist = (BattleBuffData_BuffData_array *)ActiveList;
     v23 = *(_DWORD *)(v16 + 28) + 1;
@@ -16231,7 +16231,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43423608(
         ActiveList = (System_Collections_Generic_IEnumerable_T__o *)DataMasterBase_object__object__int___GetEntity(
                                                                       (DataMasterBase_TMaster__TEntity__PKType__o *)ActiveList,
                                                                       v26->fields.buffId,
-                                                                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                                                      (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( ActiveList )
         {
           if ( !types )
@@ -16282,14 +16282,14 @@ LABEL_42:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)v16,
               (Il2CppObject *)v26,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
           }
           else
           {
             v42 = v39 + 8 * v41;
             *(_DWORD *)(v16 + 24) = v41 + 1;
             *(_QWORD *)(v42 + 32) = v26;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v42 + 32), (int64_t)v26, v32, v33, v34, v35, v36, v37);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v42 + 32), (int64_t)v26, v32, v33, v34, v35, v36, v37);
           }
         }
       }
@@ -16298,20 +16298,20 @@ LABEL_42:
         goto LABEL_13;
     }
 LABEL_38:
-    sub_1BE4D30(ActiveList, v18);
+    sub_1C13F88(ActiveList, v18);
   }
 LABEL_36:
   if ( !v16 )
 LABEL_39:
-    sub_1BE4D28(ActiveList, v18);
+    sub_1C13F80(ActiveList, v18);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             (System_Collections_Generic_List_object__o *)v16,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43446400(
+BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43650512(
         BattleBuffData_o *this,
         int32_t act,
         BattleBuffData_CheckIndividualitiesData_o *checkIndividualities,
@@ -16396,57 +16396,57 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43446400(
   __int64 v87; // x0
   int32_t plusMinus; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F85 & 1) == 0 )
+  if ( (byte_4BB6ACA & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v15);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v16);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v17);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v18);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v19);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v20);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v21);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v22);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v23);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v24);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass189_0__getBuffList_b__0__, v25);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass189_0_TypeInfo, v26);
-    byte_4B68F85 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___, v15);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__bool__TypeInfo, v16);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v17);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v18);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v19);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v20);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v21);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v22);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v23);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v24);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass189_0__getBuffList_b__0__, v25);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass189_0_TypeInfo, v26);
+    byte_4BB6ACA = 1;
   }
-  v27 = sub_1BE4D18(BattleBuffData___c__DisplayClass189_0_TypeInfo);
+  v27 = sub_1C13F70(BattleBuffData___c__DisplayClass189_0_TypeInfo);
   BattleBuffData___c__DisplayClass189_0___ctor((BattleBuffData___c__DisplayClass189_0_o *)v27, 0LL);
   if ( !v27 )
     goto LABEL_50;
   *(_QWORD *)(v27 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)this, v30, v31, v32, v33, v34, v35);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)this, v30, v31, v32, v33, v34, v35);
   *(_QWORD *)(v27 + 24) = buffAggregationArgs;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 24), (int64_t)buffAggregationArgs, v36, v37, v38, v39, v40, v41);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 24), (int64_t)buffAggregationArgs, v36, v37, v38, v39, v40, v41);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
-  v43 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v43 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v43,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   plusMinus = 0;
   v45 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v44);
   v46 = *(System_Func_object__bool__o **)(v27 + 32);
   v47 = (System_Collections_Generic_IEnumerable_TSource__o *)v45;
   if ( !v46 )
   {
-    v46 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    v46 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v46,
       (Il2CppObject *)v27,
       Method_BattleBuffData___c__DisplayClass189_0__getBuffList_b__0__,
       0LL);
     *(_QWORD *)(v27 + 32) = v46;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v27 + 32), (int64_t)v46, v48, v49, v50, v51, v52, v53);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 32), (int64_t)v46, v48, v49, v50, v51, v52, v53);
   }
   v28 = System_Linq_Enumerable__Where_object_(
           v47,
           (System_Func_TSource__bool__o *)v46,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   if ( !v28 )
     goto LABEL_50;
   klass = v28->klass;
@@ -16467,13 +16467,13 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getBuffList_43446400(
   else
   {
 LABEL_13:
-    p_method = sub_1C36AAC(v28, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    p_method = sub_1C65D04(v28, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v60 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
           v55,
           *(_QWORD *)(p_method + 8));
   if ( !v60 )
-    sub_1BE4D28(0LL, v59);
+    sub_1C13F80(0LL, v59);
   v61 = isRec;
   while ( 1 )
   {
@@ -16494,7 +16494,7 @@ LABEL_13:
     else
     {
 LABEL_21:
-      v65 = sub_1C36AAC(v60, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v65 = sub_1C65D04(v60, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v65)(v60, *(_QWORD *)(v65 + 8)) & 1) == 0 )
       break;
@@ -16515,7 +16515,7 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v69 = sub_1C36AAC(v60, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v69 = sub_1C65D04(v60, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v71 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v69)(v60, *(_QWORD *)(v69 + 8));
     if ( !funcCond
@@ -16528,26 +16528,26 @@ LABEL_28:
       if ( v72 && (checkOnly || (v72 = BattleBuffData__checkBuffSuccessful(this, v71, v61, v75))) )
       {
         if ( !v43 )
-          sub_1BE4D28(v72, v73);
+          sub_1C13F80(v72, v73);
         items = v43->fields._items;
         v81 = Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__;
         ++v43->fields._version;
         if ( !items )
-          sub_1BE4D28(v72, v73);
+          sub_1C13F80(v72, v73);
         size = v43->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v43,
             (Il2CppObject *)v71,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v81[4] + 192LL) + 112LL));
         }
         else
         {
           v83 = &items->obj.klass + size;
           v43->fields._size = size + 1;
           v83[4] = (Il2CppClass *)v71;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v83 + 4), (int64_t)v71, v74, (int32_t)v75, v76, v77, v78, v79);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v83 + 4), (int64_t)v71, v74, (int32_t)v75, v76, v77, v78, v79);
         }
       }
     }
@@ -16569,17 +16569,17 @@ LABEL_28:
   else
   {
 LABEL_44:
-    v87 = sub_1C36AAC(v60, System_IDisposable_TypeInfo, 0LL);
+    v87 = sub_1C65D04(v60, System_IDisposable_TypeInfo, 0LL);
   }
   v28 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v87)(
                                                                v60,
                                                                *(_QWORD *)(v87 + 8));
   if ( !v43 )
 LABEL_50:
-    sub_1BE4D28(v28, v29);
+    sub_1C13F80(v28, v29);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v43,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -16628,52 +16628,52 @@ System_Int32_array *__fastcall BattleBuffData__getBuffParamList(
   System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+30h] [xbp-80h] BYREF
   int32_t plusMinus; // [xsp+4Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F84 & 1) == 0 )
+  if ( (byte_4BB6AC9 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v17);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v18);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v19);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v20);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v21);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v22);
-    byte_4B68F84 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v17);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v18);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v19);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v20);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v21);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v22);
+    byte_4BB6AC9 = 1;
   }
   memset(&v45, 0, sizeof(v45));
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
-  v24 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v24 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v24,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   plusMinus = 0;
-  v25 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v25 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v25,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v26);
   if ( !v25 )
     goto LABEL_24;
   System_Collections_Generic_List_object___AddRange(
     v25,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v29);
   System_Collections_Generic_List_object___AddRange(
     v25,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   if ( servantData )
   {
-    v31 = sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-    BattleBuffData_CheckIndividualitiesData___ctor_43634876(
+    v31 = sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor_43839548(
       (BattleBuffData_CheckIndividualitiesData_o *)v31,
       servantData,
       0LL,
@@ -16694,16 +16694,16 @@ System_Int32_array *__fastcall BattleBuffData__getBuffParamList(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v44,
     v25,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v33 = isIncludeRemove;
   v34 = isIncludeUnfix;
   v45 = v44;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v45,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
   {
     current = v45.fields._current;
-    v36 = BattleBuffData__checkIndiviuality_43459960(
+    v36 = BattleBuffData__checkIndiviuality_43664072(
             this,
             ActInfo,
             (BattleBuffData_BuffData_o *)v45.fields._current,
@@ -16718,22 +16718,22 @@ System_Int32_array *__fastcall BattleBuffData__getBuffParamList(
     if ( v36 )
     {
       if ( !current )
-        sub_1BE4D28(v36, v37);
+        sub_1C13F80(v36, v37);
       if ( !v24 )
-        sub_1BE4D28(v36, v37);
+        sub_1C13F80(v36, v37);
       monitor_high = HIDWORD(current[1].monitor);
       items = v24->fields._items;
       v40 = Method_System_Collections_Generic_List_int__Add__;
       ++v24->fields._version;
       if ( !items )
-        sub_1BE4D28(v36, monitor_high);
+        sub_1C13F80(v36, monitor_high);
       size = v24->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
           v24,
           monitor_high,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
@@ -16744,13 +16744,13 @@ System_Int32_array *__fastcall BattleBuffData__getBuffParamList(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v45,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   if ( !v24 )
 LABEL_24:
-    sub_1BE4D28(ActiveList, v28);
+    sub_1C13F80(ActiveList, v28);
   return System_Collections_Generic_List_int___ToArray(
            v24,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -16779,7 +16779,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__getBuffSuccessfulIndividua
         return 0LL;
     }
 LABEL_10:
-    sub_1BE4D28(this, bufflist);
+    sub_1C13F80(this, bufflist);
   }
   return 0LL;
 }
@@ -16888,7 +16888,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
   PartyListViewItem_o *v100; // x7
   int32_t plusAction; // w1
   int v102; // w19
-  int32_t ActValue_43458416; // w0
+  int32_t ActValue_43662528; // w0
   int v104; // w8
   int v105; // w19
   int v106; // w21
@@ -16916,18 +16916,18 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
   v13 = actflg;
   v15 = this;
   buffIf_k__BackingField = selfIf;
-  if ( (byte_4B68F76 & 1) == 0 )
+  if ( (byte_4BB6ABB & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffInterface_TypeInfo, actInfo);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v16);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v17);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v18);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v19);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v20);
-    sub_1BE4ACC(&System_Math_TypeInfo, v21);
-    sub_1BE4ACC(&BattleBuffData_ParamAdd_TypeInfo, v22);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&StringLiteral_11285/*"REVERT_BUFF_LOWER_LIMIT"*/, v23);
-    byte_4B68F76 = 1;
+    sub_1C13D24(&BuffInterface_TypeInfo, actInfo);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v16);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v17);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, v18);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v19);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v20);
+    sub_1C13D24(&System_Math_TypeInfo, v21);
+    sub_1C13D24(&BattleBuffData_ParamAdd_TypeInfo, v22);
+    this = (BattleBuffData_o *)sub_1C13D24(&StringLiteral_11311/*"RESUME_CENTER"*/, v23);
+    byte_4BB6ABB = 1;
   }
   *(_QWORD *)maxBuffRate = 0LL;
   totalParamAddBattlePointPhase = 0LL;
@@ -16940,7 +16940,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
   *upperParam = baseParam;
   *lowerParam = 0;
   *missText = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)missText,
     0LL,
     (int64_t)selfIndv,
@@ -16949,7 +16949,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
     (BattleSetupInfo_o *)upperParam,
     (FollowerInfo_o *)actflg,
     (PartyListViewItem_o *)missText);
-  this = (BattleBuffData_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_11285/*"REVERT_BUFF_LOWER_LIMIT"*/, 0LL);
+  this = (BattleBuffData_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_11311/*"RESUME_CENTER"*/, 0LL);
   v121 = (int)this;
   if ( !buffIf_k__BackingField )
   {
@@ -16960,7 +16960,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
   this = (BattleBuffData_o *)BattleBuffData__AllBuffValidEnumerablePriorActive(v15, 0, v25);
   if ( !this )
 LABEL_119:
-    sub_1BE4D28(this, actInfo);
+    sub_1C13F80(this, actInfo);
   klass = this->klass;
   v27 = buffProc;
   v28 = this;
@@ -16981,11 +16981,11 @@ LABEL_119:
   else
   {
 LABEL_12:
-    v31 = sub_1C36AAC(this, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
+    v31 = sub_1C65D04(this, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0LL);
   }
   v33 = (*(__int64 (__fastcall **)(BattleBuffData_o *, _QWORD))v31)(v28, *(_QWORD *)(v31 + 8));
   if ( !v33 )
-    sub_1BE4D28(0LL, v32);
+    sub_1C13F80(0LL, v32);
   v120 = v13;
   while ( 1 )
   {
@@ -17006,7 +17006,7 @@ LABEL_12:
     else
     {
 LABEL_20:
-      v37 = sub_1C36AAC(v33, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v37 = sub_1C65D04(v33, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v33, *(_QWORD *)(v37 + 8)) & 1) == 0 )
       break;
@@ -17027,12 +17027,12 @@ LABEL_20:
     else
     {
 LABEL_27:
-      v41 = sub_1C36AAC(v33, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
+      v41 = sub_1C65D04(v33, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0LL);
     }
     v42 = (BattleBuffData_BuffData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v41)(v33, *(_QWORD *)(v41 + 8));
     v44 = v42;
     if ( !v42 )
-      sub_1BE4D28(0LL, v43);
+      sub_1C13F80(0LL, v43);
     if ( !v42->fields._isRemove
       && (!BattleBuffData_BuffData__isCommandCodeBuff(v42, 0LL) || BattleBuffData_BuffData__isActiveCommandCode(
                                                                      v44,
@@ -17043,7 +17043,7 @@ LABEL_27:
       if ( !IsCommandAssistBuff || (IsCommandAssistBuff = BattleBuffData_BuffData__IsActiveCommandAssist(v44, 0LL)) )
       {
         if ( !checkIndividualities )
-          sub_1BE4D28(IsCommandAssistBuff, v46);
+          sub_1C13F80(IsCommandAssistBuff, v46);
         selfIndividuality_k__BackingField = checkIndividualities->fields._selfIndividuality_k__BackingField;
         opponentIndividuality_k__BackingField = checkIndividualities->fields._opponentIndividuality_k__BackingField;
         if ( BattleBuffData_BuffData__checkState(v44, 0x100000, 0LL) )
@@ -17058,7 +17058,7 @@ LABEL_27:
           v50 = selfIndv;
           v49 = opIndv;
         }
-        if ( BattleBuffData__checkIndiviuality_43459960(
+        if ( BattleBuffData__checkIndiviuality_43664072(
                v15,
                actInfo,
                v44,
@@ -17075,23 +17075,23 @@ LABEL_27:
           *v13 = 1;
           buffMst = (DataMasterBase_TMaster__TEntity__PKType__o *)BattleBuffData__get_buffMst(v15, v52);
           if ( !buffMst )
-            sub_1BE4D28(0LL, v54);
+            sub_1C13F80(0LL, v54);
           Entity = DataMasterBase_object__object__int___GetEntity(
                      buffMst,
                      v44->fields.buffId,
-                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
           v57 = (BuffEntity_o *)Entity;
           v124 = plusMinus;
           if ( v121 <= 0 && (plusMinus & 0x80000000) != 0 )
           {
             if ( !Entity )
-              sub_1BE4D28(0LL, v56);
+              sub_1C13F80(0LL, v56);
             v58 = actInfo->fields.baseParam;
             monitor_high = HIDWORD(Entity[4].monitor);
             v60 = *lowerParam;
             if ( !System_Math_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-            v61 = System_Math__Min_63518280(v60, v58 - monitor_high, 0LL);
+            v61 = System_Math__Min_63787416(v60, v58 - monitor_high, 0LL);
             v27 = buffProc;
             v62 = v61;
             *lowerParam = v61;
@@ -17099,7 +17099,7 @@ LABEL_27:
           else
           {
             if ( !Entity )
-              sub_1BE4D28(0LL, v56);
+              sub_1C13F80(0LL, v56);
             v63 = *upperParam;
             if ( *upperParam < SHIDWORD(Entity[4].monitor) )
               v63 = HIDWORD(Entity[4].monitor);
@@ -17109,7 +17109,7 @@ LABEL_27:
           ExtendLowerLimit = BuffEntity__GetExtendLowerLimit(v57, 0LL);
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          *lowerParam = System_Math__Min_63518280(v62, ExtendLowerLimit, 0LL);
+          *lowerParam = System_Math__Min_63787416(v62, ExtendLowerLimit, 0LL);
           HIDWORD(totalParamAddBattlePointPhase) = v44->fields.param;
           if ( !actInfo->fields.IsChangeMaxHp )
           {
@@ -17138,7 +17138,7 @@ LABEL_27:
               else
               {
 LABEL_63:
-                p_method = sub_1C36AAC(buffIf_k__BackingField, BuffInterface_TypeInfo, 2LL);
+                p_method = sub_1C65D04(buffIf_k__BackingField, BuffInterface_TypeInfo, 2LL);
               }
               v84 = (*(__int64 (__fastcall **)(BuffInterface_o *, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))p_method)(
                       buffIf_k__BackingField,
@@ -17175,7 +17175,7 @@ LABEL_84:
                 else
                 {
 LABEL_70:
-                  v77 = sub_1C36AAC(buffIf_k__BackingField, BuffInterface_TypeInfo, 1LL);
+                  v77 = sub_1C65D04(buffIf_k__BackingField, BuffInterface_TypeInfo, 1LL);
                 }
                 v84 = (*(__int64 (__fastcall **)(BuffInterface_o *, __int64, _QWORD, _QWORD))v77)(
                         buffIf_k__BackingField,
@@ -17209,7 +17209,7 @@ LABEL_70:
                 else
                 {
 LABEL_77:
-                  v83 = sub_1C36AAC(buffIf_k__BackingField, BuffInterface_TypeInfo, 1LL);
+                  v83 = sub_1C65D04(buffIf_k__BackingField, BuffInterface_TypeInfo, 1LL);
                 }
                 v84 = (*(__int64 (__fastcall **)(BuffInterface_o *, _QWORD, _QWORD, _QWORD))v83)(
                         buffIf_k__BackingField,
@@ -17227,8 +17227,8 @@ LABEL_85:
           {
             v87 = HIDWORD(totalParamAddBattlePointPhase);
             battleData = actInfo->fields.battleData;
-            v89 = (BattleBuffData_ParamAdd_o *)sub_1BE4D18(BattleBuffData_ParamAdd_TypeInfo);
-            BattleBuffData_ParamAdd___ctor_43644968(v89, v44, 0LL);
+            v89 = (BattleBuffData_ParamAdd_o *)sub_1C13F70(BattleBuffData_ParamAdd_TypeInfo);
+            BattleBuffData_ParamAdd___ctor_43849640(v89, v44, 0LL);
             isParamAddIndividualiry = (BattleBuffData_o *)BattleBuffData__GetTotalParamAddValue(
                                                             v44,
                                                             battleData,
@@ -17252,7 +17252,7 @@ LABEL_85:
           {
             v94 = BuffEntity__getMissText(v57, 0LL);
             v119->klass = (PartyOrganizationUtility_c *)v94;
-            sub_1BE4A70(v119, (int64_t)v94, v95, v96, v97, v98, v99, v100);
+            sub_1C13CC8(v119, (int64_t)v94, v95, v96, v97, v98, v99, v100);
           }
           if ( v124 >= 1 )
           {
@@ -17260,7 +17260,7 @@ LABEL_85:
             if ( plusAction )
             {
               v102 = HIDWORD(totalParamAddBattlePointPhase);
-              ActValue_43458416 = BattleBuffData__getActValue_43458416(
+              ActValue_43662528 = BattleBuffData__getActValue_43662528(
                                     v15,
                                     plusAction,
                                     v57->fields.vals,
@@ -17268,10 +17268,10 @@ LABEL_85:
                                     checkIndividualities,
                                     0LL,
                                     v93);
-              if ( ActValue_43458416 * v102 <= -1000 )
+              if ( ActValue_43662528 * v102 <= -1000 )
                 v104 = 0;
               else
-                v104 = ActValue_43458416 * v102 / 1000;
+                v104 = ActValue_43662528 * v102 / 1000;
               HIDWORD(totalParamAddBattlePointPhase) = v104;
             }
           }
@@ -17284,7 +17284,7 @@ LABEL_85:
             v106 = maxBuffRate[1];
             if ( !System_Math_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-            v107 = System_Math__Max_63517992(0.0, (float)((float)v106 / 1000.0) + 1.0, 0LL) * (float)v105;
+            v107 = System_Math__Max_63787128(0.0, (float)((float)v106 / 1000.0) + 1.0, 0LL) * (float)v105;
             v108 = (int)v107;
             if ( v107 == INFINITY )
               v108 = 0x80000000;
@@ -17324,7 +17324,7 @@ LABEL_85:
   else
   {
 LABEL_112:
-    v113 = sub_1C36AAC(v33, System_IDisposable_TypeInfo, 0LL);
+    v113 = sub_1C65D04(v33, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v113)(v33, *(_QWORD *)(v113 + 8));
   if ( v27 )
@@ -17352,30 +17352,30 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   const MethodInfo *v12; // x2
   System_Collections_Generic_IEnumerable_T__o *ActiveList; // x0
 
-  if ( (byte_4B68F1C & 1) == 0 )
+  if ( (byte_4BB6A61 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, isCheckInterval);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
-    byte_4B68F1C = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, isCheckInterval);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v6);
+    byte_4BB6A61 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   v8 = isCheckInterval;
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, v8, v9);
   if ( !v7 )
-    sub_1BE4D28(PassiveList, v11);
+    sub_1C13F80(PassiveList, v11);
   System_Collections_Generic_List_object___AddRange(
     v7,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, v8, v12);
   System_Collections_Generic_List_object___AddRange(
     v7,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v7;
 }
 
@@ -17401,10 +17401,10 @@ int64_t __fastcall BattleBuffData__getMaxBuffCount(
   BattleBuffData_BuffData_o *v18; // x22
   System_Int32_array *v19; // x23
 
-  if ( (byte_4B68F51 & 1) == 0 )
+  if ( (byte_4BB6A96 & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, individualities);
-    byte_4B68F51 = 1;
+    sub_1C13D24(&Individuality_TypeInfo, individualities);
+    byte_4BB6A96 = 1;
   }
   if ( !isActiveOnly )
   {
@@ -17427,7 +17427,7 @@ int64_t __fastcall BattleBuffData__getMaxBuffCount(
           Individualty = BattleBuffData_BuffData__GetIndividualty(v13, 0, 0, 0, 0LL);
           if ( !Individuality_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-          PassiveList = (BattleBuffData_BuffData_array *)Individuality__CheckIndividualities_38602688(
+          PassiveList = (BattleBuffData_BuffData_array *)Individuality__CheckIndividualities_38840232(
                                                            Individualty,
                                                            individualities,
                                                            0LL);
@@ -17439,7 +17439,7 @@ int64_t __fastcall BattleBuffData__getMaxBuffCount(
           goto LABEL_17;
       }
 LABEL_29:
-      sub_1BE4D30(PassiveList, v8);
+      sub_1C13F88(PassiveList, v8);
     }
   }
   count = 0LL;
@@ -17447,7 +17447,7 @@ LABEL_17:
   PassiveList = BattleBuffData__getActiveList(this, 1, (const MethodInfo *)isActiveOnly);
   if ( !PassiveList )
 LABEL_30:
-    sub_1BE4D28(PassiveList, v8);
+    sub_1C13F80(PassiveList, v8);
   v15 = PassiveList->max_length;
   v16 = PassiveList;
   if ( v15 >= 1 )
@@ -17463,7 +17463,7 @@ LABEL_30:
         v19 = BattleBuffData_BuffData__GetIndividualty(v18, 0, 0, 0, 0LL);
         if ( !Individuality_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-        PassiveList = (BattleBuffData_BuffData_array *)Individuality__CheckIndividualities_38602688(
+        PassiveList = (BattleBuffData_BuffData_array *)Individuality__CheckIndividualities_38840232(
                                                          v19,
                                                          individualities,
                                                          0LL);
@@ -17527,17 +17527,17 @@ int32_t __fastcall BattleBuffData__getMaxTurnBuffBase(
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+0h] [xbp-80h] BYREF
   int32_t plusMinus; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B68F7F & 1) == 0 )
+  if ( (byte_4BB6AC4 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v17);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v18);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v19);
-    byte_4B68F7F = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v17);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v18);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v19);
+    byte_4BB6AC4 = 1;
   }
   memset(&v33, 0, sizeof(v33));
   if ( !BuffList_TypeInfo->_2.cctor_finished )
@@ -17546,29 +17546,29 @@ int32_t __fastcall BattleBuffData__getMaxTurnBuffBase(
   plusMinus = 0;
   *actFlg = 0;
   v21 = ActInfo;
-  v22 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v23);
   if ( !v22 )
-    sub_1BE4D28(ActiveList, v25);
+    sub_1C13F80(ActiveList, v25);
   System_Collections_Generic_List_object___AddRange(
     v22,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v26);
   System_Collections_Generic_List_object___AddRange(
     v22,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     v22,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v33,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
   {
     current = v33.fields._current;
     v30 = BattleBuffData__checkIndiviuality(
@@ -17581,7 +17581,7 @@ int32_t __fastcall BattleBuffData__getMaxTurnBuffBase(
     if ( v30 )
     {
       if ( !current )
-        sub_1BE4D28(v30, v31);
+        sub_1C13F80(v30, v31);
       if ( lowTurn < SHIDWORD(current[1].klass) )
         lowTurn = HIDWORD(current[1].klass);
       if ( checkCount && SLODWORD(current[1].monitor) >= 1 )
@@ -17594,7 +17594,7 @@ int32_t __fastcall BattleBuffData__getMaxTurnBuffBase(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v33,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return lowTurn;
 }
 
@@ -17615,21 +17615,21 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getPassiveList(
   System_Collections_Generic_List_object__o *passiveList; // x19
   System_Predicate_object__o *v13; // x20
 
-  if ( (byte_4B68F1A & 1) == 0 )
+  if ( (byte_4BB6A5F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, isCheckInterval);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass31_0__getPassiveList_b__0__, v7);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass31_0_TypeInfo, v8);
-    byte_4B68F1A = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, isCheckInterval);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v6);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass31_0__getPassiveList_b__0__, v7);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass31_0_TypeInfo, v8);
+    byte_4BB6A5F = 1;
   }
-  v9 = (BattleBuffData___c__DisplayClass31_0_o *)sub_1BE4D18(BattleBuffData___c__DisplayClass31_0_TypeInfo);
+  v9 = (BattleBuffData___c__DisplayClass31_0_o *)sub_1C13F70(BattleBuffData___c__DisplayClass31_0_TypeInfo);
   BattleBuffData___c__DisplayClass31_0___ctor(v9, 0LL);
   if ( !v9
     || (v9->fields.isCheckInterval = isCheckInterval,
         passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList,
-        v13 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo),
+        v13 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo),
         System_Predicate_object____ctor(
           v13,
           (Il2CppObject *)v9,
@@ -17639,13 +17639,13 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getPassiveList(
     || (All = System_Collections_Generic_List_object___FindAll(
                 passiveList,
                 (System_Predicate_T__o *)v13,
-                (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
+                (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
   {
-    sub_1BE4D28(All, v11);
+    sub_1C13F80(All, v11);
   }
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             (System_Collections_Generic_List_object__o *)All,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -17655,17 +17655,17 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getPassiveListDebug(
 {
   System_Collections_Generic_List_object__o *passiveList; // x0
 
-  if ( (byte_4B68F1E & 1) == 0 )
+  if ( (byte_4BB6A63 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
-    byte_4B68F1E = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
+    byte_4BB6A63 = 1;
   }
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !passiveList )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             passiveList,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -17749,31 +17749,31 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getRectBuffList(
   Il2CppClass **v75; // x0
   int v79; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4B68F65 & 1) == 0 )
+  if ( (byte_4BB6AAA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_int____77161864, isAtkSide);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v11);
-    sub_1BE4ACC(&BattleBuffData_ShowBuffData_TypeInfo, v12);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass141_0__getRectBuffList_b__0__, v13);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass141_0_TypeInfo, v14);
-    sub_1BE4ACC(&StringLiteral_7294/*"HIDE_DEFF_TYPE"*/, v15);
-    byte_4B68F65 = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, isAtkSide);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v6);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v10);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v11);
+    sub_1C13D24(&BattleBuffData_ShowBuffData_TypeInfo, v12);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass141_0__getRectBuffList_b__0__, v13);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass141_0_TypeInfo, v14);
+    sub_1C13D24(&StringLiteral_7314/*"HH:mm:ss.fzzzzzz"*/, v15);
+    byte_4BB6AAA = 1;
   }
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
   if ( isAtkSide )
     v17 = 108;
   else
     v17 = 109;
   v79 = v17;
-  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_7294/*"HIDE_DEFF_TYPE"*/, 0LL);
+  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_7314/*"HH:mm:ss.fzzzzzz"*/, 0LL);
   v19 = BasicHelper__Convert2IntArray(Value, 0x2Cu, 0LL);
   ActiveList = (int64_t)BattleBuffData__getActiveList(this, 1, v20);
   if ( !ActiveList )
@@ -17787,9 +17787,9 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getRectBuffList(
     {
       if ( v26 >= v24 )
 LABEL_95:
-        sub_1BE4D30(ActiveList, v22);
+        sub_1C13F88(ActiveList, v22);
       v27 = *(BattleBuffData_BuffData_o **)(v25 + 8LL * (int)v26 + 32);
-      v28 = sub_1BE4D18(BattleBuffData___c__DisplayClass141_0_TypeInfo);
+      v28 = sub_1C13F70(BattleBuffData___c__DisplayClass141_0_TypeInfo);
       BattleBuffData___c__DisplayClass141_0___ctor((BattleBuffData___c__DisplayClass141_0_o *)v28, 0LL);
       if ( !v27 )
         break;
@@ -17817,26 +17817,26 @@ LABEL_95:
             ActiveList = (int64_t)DataMasterBase_object__object__int___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)ActiveList,
                                     v27->fields.buffId,
-                                    (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                    (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
             if ( !v28 )
               break;
             *(_QWORD *)(v28 + 16) = ActiveList;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v28 + 16), ActiveList, v34, v35, v36, v37, v38, v39);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v28 + 16), ActiveList, v34, v35, v36, v37, v38, v39);
             v40 = *(_QWORD *)(v28 + 16);
             if ( v40 )
             {
               if ( v19 != 0LL && !isAtkSide )
               {
-                v41 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+                v41 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
                 System_Func_int__bool____ctor(
                   v41,
                   (Il2CppObject *)v28,
                   Method_BattleBuffData___c__DisplayClass141_0__getRectBuffList_b__0__,
                   0LL);
-                ActiveList = BasicHelper__Any_int__49561084(
+                ActiveList = BasicHelper__Any_int__49783128(
                                v19,
                                (System_Func_T__bool__o *)v41,
-                               (const MethodInfo_2F43DFC *)Method_BasicHelper_Any_int____77161864);
+                               (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256);
                 v40 = *(_QWORD *)(v28 + 16);
                 if ( !v40 )
                   break;
@@ -17852,8 +17852,8 @@ LABEL_95:
                 if ( (ActiveList & 1) == 0 )
                 {
                   v43 = v42 & isShowDarkClassRelation;
-                  v44 = (BattleBuffData_ShowBuffData_o *)sub_1BE4D18(BattleBuffData_ShowBuffData_TypeInfo);
-                  BattleBuffData_ShowBuffData___ctor_43632084(v44, v27, 0LL);
+                  v44 = (BattleBuffData_ShowBuffData_o *)sub_1C13F70(BattleBuffData_ShowBuffData_TypeInfo);
+                  BattleBuffData_ShowBuffData___ctor_43836756(v44, v27, 0LL);
                   if ( (v43 & 1) != 0 )
                   {
                     if ( !v44 )
@@ -17873,14 +17873,14 @@ LABEL_95:
                     System_Collections_Generic_List_object___AddWithResize(
                       v16,
                       (Il2CppObject *)v44,
-                      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+                      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v54 = &items->obj.klass + size;
                     v16->fields._size = size + 1;
                     v54[4] = (Il2CppClass *)v44;
-                    sub_1BE4A70((PartyOrganizationUtility_o *)(v54 + 4), (int64_t)v44, v45, v46, v47, v48, v49, v50);
+                    sub_1C13CC8((PartyOrganizationUtility_o *)(v54 + 4), (int64_t)v44, v45, v46, v47, v48, v49, v50);
                   }
                 }
               }
@@ -17893,7 +17893,7 @@ LABEL_95:
         goto LABEL_43;
     }
 LABEL_94:
-    sub_1BE4D28(ActiveList, v22);
+    sub_1C13F80(ActiveList, v22);
   }
 LABEL_43:
   ActiveList = (int64_t)BattleBuffData__getPassiveList(this, 1, v23);
@@ -17942,14 +17942,14 @@ LABEL_43:
                   ActiveList = (int64_t)DataMasterBase_object__object__int___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)ActiveList,
                                           v58->fields.buffId,
-                                          (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                          (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
                   if ( !ActiveList )
                     goto LABEL_94;
                   v70 = *(_DWORD *)(ActiveList + 20);
                   if ( v70 != 144 && v70 != v79 || isShowOverwriteClassRelation )
                   {
-                    v63 = (BattleBuffData_ShowBuffData_o *)sub_1BE4D18(BattleBuffData_ShowBuffData_TypeInfo);
-                    BattleBuffData_ShowBuffData___ctor_43632084(v63, v58, 0LL);
+                    v63 = (BattleBuffData_ShowBuffData_o *)sub_1C13F70(BattleBuffData_ShowBuffData_TypeInfo);
+                    BattleBuffData_ShowBuffData___ctor_43836756(v63, v58, 0LL);
                     v71 = v70 == v79 || v70 == 144;
                     if ( v71 && isShowDarkClassRelation )
                     {
@@ -17970,8 +17970,8 @@ LABEL_43:
                     ActiveList = BattleBuffData_BuffData__checkState(v58, 4, 0LL);
                     if ( (ActiveList & 1) != 0 )
                     {
-                      v63 = (BattleBuffData_ShowBuffData_o *)sub_1BE4D18(BattleBuffData_ShowBuffData_TypeInfo);
-                      BattleBuffData_ShowBuffData___ctor_43632084(v63, v58, 0LL);
+                      v63 = (BattleBuffData_ShowBuffData_o *)sub_1C13F70(BattleBuffData_ShowBuffData_TypeInfo);
+                      BattleBuffData_ShowBuffData___ctor_43836756(v63, v58, 0LL);
                       if ( !v16 )
                         goto LABEL_94;
 LABEL_83:
@@ -17986,14 +17986,14 @@ LABEL_83:
                         System_Collections_Generic_List_object___AddWithResize(
                           v16,
                           (Il2CppObject *)v63,
-                          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+                          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
                       }
                       else
                       {
                         v75 = &v72->obj.klass + v74;
                         v16->fields._size = v74 + 1;
                         v75[4] = (Il2CppClass *)v63;
-                        sub_1BE4A70((PartyOrganizationUtility_o *)(v75 + 4), (int64_t)v63, v64, v65, v66, v67, v68, v69);
+                        sub_1C13CC8((PartyOrganizationUtility_o *)(v75 + 4), (int64_t)v63, v64, v65, v66, v67, v68, v69);
                       }
                     }
                   }
@@ -18010,7 +18010,7 @@ LABEL_83:
     goto LABEL_94;
   return (BattleBuffData_ShowBuffData_array *)System_Collections_Generic_List_object___ToArray(
                                                 v16,
-                                                (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
+                                                (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
 }
 
 
@@ -18021,22 +18021,22 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getReflectionEffectFun
   BuffList_TYPE_array *v3; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x4
-  BattleBuffData_BuffData_array *BuffList_43423608; // x1
+  BattleBuffData_BuffData_array *BuffList_43627720; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4B68F39 & 1) == 0 )
+  if ( (byte_4BB6A7E & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TYPE___TypeInfo, method);
-    byte_4B68F39 = 1;
+    sub_1C13D24(&BuffList_TYPE___TypeInfo, method);
+    byte_4BB6A7E = 1;
   }
-  v3 = (BuffList_TYPE_array *)sub_1BE4B74(BuffList_TYPE___TypeInfo, 1LL);
+  v3 = (BuffList_TYPE_array *)sub_1C13DCC(BuffList_TYPE___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   if ( !v3->max_length )
-    sub_1BE4D30(v3, v3);
+    sub_1C13F88(v3, v3);
   v3->m_Items[1] = 97;
-  BuffList_43423608 = BattleBuffData__getBuffList_43423608(this, v3, 0LL, 0LL, v5);
-  return BattleBuffData__geCheckBuffSuccessful(this, BuffList_43423608, v7);
+  BuffList_43627720 = BattleBuffData__getBuffList_43627720(this, v3, 0LL, 0LL, v5);
+  return BattleBuffData__geCheckBuffSuccessful(this, BuffList_43627720, v7);
 }
 
 
@@ -18075,10 +18075,10 @@ int32_t __fastcall BattleBuffData__getSameIndivualityBuffSum(
   unsigned int v20; // w25
   System_Int32_array *v21; // x24
 
-  if ( (byte_4B68F4C & 1) == 0 )
+  if ( (byte_4BB6A91 & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, indv);
-    byte_4B68F4C = 1;
+    sub_1C13D24(&Individuality_TypeInfo, indv);
+    byte_4BB6A91 = 1;
   }
   v11 = 0;
   if ( !isActiveOnly && !isIgnoreIndivUnreleaseable )
@@ -18116,7 +18116,7 @@ int32_t __fastcall BattleBuffData__getSameIndivualityBuffSum(
           goto LABEL_17;
       }
 LABEL_29:
-      sub_1BE4D30(PassiveList, v13);
+      sub_1C13F88(PassiveList, v13);
     }
     v11 = 0;
   }
@@ -18124,7 +18124,7 @@ LABEL_17:
   PassiveList = (BattleBuffData_BuffData_o *)BattleBuffData__getActiveList(this, 1, (const MethodInfo *)isActiveOnly);
   if ( !PassiveList )
 LABEL_28:
-    sub_1BE4D28(PassiveList, v13);
+    sub_1C13F80(PassiveList, v13);
   v18 = PassiveList->fields.count;
   v19 = PassiveList;
   if ( v18 >= 1 )
@@ -18180,31 +18180,31 @@ BattleBuffData_SaveData_o *__fastcall BattleBuffData__getSaveData(BattleBuffData
   PartyListViewItem_o *v19; // x7
   BattleBuffData_SaveData_o *result; // x0
 
-  if ( (byte_4B68F61 & 1) == 0 )
+  if ( (byte_4BB6AA6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
-    sub_1BE4ACC(&BattleBuffData_SaveData_TypeInfo, v3);
-    byte_4B68F61 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, method);
+    sub_1C13D24(&BattleBuffData_SaveData_TypeInfo, v3);
+    byte_4BB6AA6 = 1;
   }
-  v4 = sub_1BE4D18(BattleBuffData_SaveData_TypeInfo);
+  v4 = sub_1C13F70(BattleBuffData_SaveData_TypeInfo);
   BattleBuffData_SaveData___ctor((BattleBuffData_SaveData_o *)v4, 0LL);
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
   if ( !passiveList
     || (passiveList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                                      passiveList,
-                                                                     (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__),
+                                                                     (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__),
         !v4)
     || (*(_QWORD *)(v4 + 16) = passiveList,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v4 + 16), (int64_t)passiveList, v7, v8, v9, v10, v11, v12),
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v4 + 16), (int64_t)passiveList, v7, v8, v9, v10, v11, v12),
         (passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList) == 0LL) )
   {
-    sub_1BE4D28(passiveList, v5);
+    sub_1C13F80(passiveList, v5);
   }
   v13 = System_Collections_Generic_List_object___ToArray(
           passiveList,
-          (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+          (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   *(_QWORD *)(v4 + 24) = v13;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v4 + 24), (int64_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v4 + 24), (int64_t)v13, v14, v15, v16, v17, v18, v19);
   result = (BattleBuffData_SaveData_o *)v4;
   *(_DWORD *)(v4 + 32) = this->fields.addBuffOrder;
   return result;
@@ -18239,18 +18239,18 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
   __int64 size; // x10
   Il2CppClass **v25; // x0
 
-  if ( (byte_4B68F29 & 1) == 0 )
+  if ( (byte_4BB6A6E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v5);
-    byte_4B68F29 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v5);
+    byte_4BB6A6E = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = BattleBuffData__getActiveList(this, 1, v7);
   if ( !ActiveList )
     goto LABEL_19;
@@ -18262,7 +18262,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1BE4D30(ActiveList, v9);
+        sub_1C13F88(ActiveList, v9);
       v13 = &v11->obj.klass + (int)v12;
       v14 = (BattleBuffData_BuffData_o *)v13[4];
       if ( !v14 )
@@ -18295,14 +18295,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
               System_Collections_Generic_List_object___AddWithResize(
                 v6,
                 (Il2CppObject *)v14,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
             }
             else
             {
               v25 = &items->obj.klass + size;
               v6->fields._size = size + 1;
               v25[4] = (Il2CppClass *)v14;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)v14, v16, v17, v18, v19, v20, v21);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)v14, v16, v17, v18, v19, v20, v21);
             }
           }
         }
@@ -18312,14 +18312,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1BE4D28(ActiveList, v9);
+    sub_1C13F80(ActiveList, v9);
   }
 LABEL_17:
   if ( !v6 )
     goto LABEL_19;
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v6,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -18351,18 +18351,18 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
   __int64 size; // x10
   Il2CppClass **v25; // x0
 
-  if ( (byte_4B68F2A & 1) == 0 )
+  if ( (byte_4BB6A6F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v5);
-    byte_4B68F2A = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v4);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v5);
+    byte_4BB6A6F = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   PassiveList = BattleBuffData__getPassiveList(this, 1, v7);
   if ( !PassiveList )
     goto LABEL_27;
@@ -18374,7 +18374,7 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1BE4D30(PassiveList, v9);
+        sub_1C13F88(PassiveList, v9);
       v13 = &v11->obj.klass + (int)v12;
       v14 = (BattleBuffData_BuffData_o *)v13[4];
       if ( !v14 )
@@ -18421,14 +18421,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
                 System_Collections_Generic_List_object___AddWithResize(
                   v6,
                   (Il2CppObject *)v14,
-                  *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                  *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
               }
               else
               {
                 v25 = &items->obj.klass + size;
                 v6->fields._size = size + 1;
                 v25[4] = (Il2CppClass *)v14;
-                sub_1BE4A70(
+                sub_1C13CC8(
                   (PartyOrganizationUtility_o *)(v25 + 4),
                   (int64_t)v14,
                   (int64_t)v16,
@@ -18447,14 +18447,14 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__getShowCommandBuffList
         goto LABEL_25;
     }
 LABEL_27:
-    sub_1BE4D28(PassiveList, v9);
+    sub_1C13F80(PassiveList, v9);
   }
 LABEL_25:
   if ( !v6 )
     goto LABEL_27;
   return (BattleBuffData_BuffData_array *)System_Collections_Generic_List_object___ToArray(
                                             v6,
-                                            (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                                            (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
 }
 
 
@@ -18505,35 +18505,35 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getShowServantPara
   PartyListViewItem_o *v43; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v44; // x0
 
-  if ( (byte_4B68F23 & 1) == 0 )
+  if ( (byte_4BB6A68 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_ShowBuffData__int___, v3);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_ShowBuffData___, v4);
-    sub_1BE4ACC(&System_Func_BattleBuffData_ShowBuffData__int__TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__getShowServantParam_b__41_1__, v9);
-    sub_1BE4ACC(&Method_BattleBuffData___c__DisplayClass41_0__getShowServantParam_b__0__, v10);
-    sub_1BE4ACC(&BattleBuffData___c__DisplayClass41_0_TypeInfo, v11);
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v12);
-    byte_4B68F23 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_ShowBuffData__int___, v3);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_ShowBuffData___, v4);
+    sub_1C13D24(&System_Func_BattleBuffData_ShowBuffData__int__TypeInfo, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__getShowServantParam_b__41_1__, v9);
+    sub_1C13D24(&Method_BattleBuffData___c__DisplayClass41_0__getShowServantParam_b__0__, v10);
+    sub_1C13D24(&BattleBuffData___c__DisplayClass41_0_TypeInfo, v11);
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v12);
+    byte_4BB6A68 = 1;
   }
-  v13 = sub_1BE4D18(BattleBuffData___c__DisplayClass41_0_TypeInfo);
+  v13 = sub_1C13F70(BattleBuffData___c__DisplayClass41_0_TypeInfo);
   BattleBuffData___c__DisplayClass41_0___ctor((BattleBuffData___c__DisplayClass41_0_o *)v13, 0LL);
   if ( !v13 )
     goto LABEL_13;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
   *(_QWORD *)(v13 + 24) = v22;
   v23 = (System_Collections_Generic_List_BattleBuffData_ShowBuffData__o **)(v13 + 24);
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)v22, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)v22, v24, v25, v26, v27, v28, v29);
+  v30 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v30,
     (Il2CppObject *)v13,
@@ -18544,16 +18544,16 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getShowServantPara
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v30,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         (passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList) == 0LL) )
   {
 LABEL_13:
-    sub_1BE4D28(passiveList, v15);
+    sub_1C13F80(passiveList, v15);
   }
   System_Collections_Generic_List_object___ForEach(
     passiveList,
     (System_Action_T__o *)v30,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
   BattleBuffData__CheckDummyBuffData(v31, *v23, v32);
   v33 = BattleBuffData___c_TypeInfo;
   v34 = *v23;
@@ -18571,11 +18571,11 @@ LABEL_13:
       v33 = BattleBuffData___c_TypeInfo;
     }
     v36 = (Il2CppObject *)v33->static_fields->__9;
-    _9__41_1 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
+    _9__41_1 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_ShowBuffData__int__TypeInfo);
     System_Func_object__int____ctor(_9__41_1, v36, Method_BattleBuffData___c__getShowServantParam_b__41_1__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__41_1 = (struct System_Func_BattleBuffData_ShowBuffData__int__o *)_9__41_1;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__41_1,
       (int64_t)_9__41_1,
       v38,
@@ -18588,10 +18588,10 @@ LABEL_13:
   v44 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v34,
                                                                (System_Func_TSource__TKey__o *)_9__41_1,
-                                                               (const MethodInfo_2F826FC *)Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_ShowBuffData__int___);
+                                                               (const MethodInfo_2FB895C *)Method_System_Linq_Enumerable_OrderByDescending_BattleBuffData_ShowBuffData__int___);
   return (BattleBuffData_ShowBuffData_array *)System_Linq_Enumerable__ToArray_object_(
                                                 v44,
-                                                (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_ShowBuffData___);
+                                                (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_ShowBuffData___);
 }
 
 
@@ -18614,17 +18614,17 @@ System_Boolean_array *__fastcall BattleBuffData__getSkillSealSelectListFromValue
   int32_t v14; // [xsp+Ch] [xbp-44h] BYREF
 
   v14 = value;
-  if ( (byte_4B68F82 & 1) == 0 )
+  if ( (byte_4BB6AC7 & 1) == 0 )
   {
-    sub_1BE4ACC(&bool___TypeInfo, *(_QWORD *)&value);
-    sub_1BE4ACC(&char_TypeInfo, v3);
-    byte_4B68F82 = 1;
+    sub_1C13D24(&bool___TypeInfo, *(_QWORD *)&value);
+    sub_1C13D24(&char_TypeInfo, v3);
+    byte_4BB6AC7 = 1;
   }
-  v4 = (System_Boolean_array *)sub_1BE4B74(bool___TypeInfo, 3LL);
+  v4 = (System_Boolean_array *)sub_1C13DCC(bool___TypeInfo, 3LL);
   v5 = System_Int32__ToString((int32_t)&v14, 0LL);
   if ( !v5 )
 LABEL_17:
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   v7 = v5;
   if ( v5->fields._stringLength >= 1 )
   {
@@ -18646,7 +18646,7 @@ LABEL_17:
         if ( (int)v11 < (int)max_length )
         {
           if ( v11 >= max_length )
-            sub_1BE4D30(v5, v6);
+            sub_1C13F88(v5, v6);
           v4->m_Items[v11 + 4] = 1;
         }
       }
@@ -18692,49 +18692,49 @@ System_Int32_array *__fastcall BattleBuffData__getSkillSealSelectTurnList(
   System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-70h] BYREF
   int32_t plusMinus; // [xsp+3Ch] [xbp-54h] BYREF
 
-  if ( (byte_4B68F80 & 1) == 0 )
+  if ( (byte_4BB6AC5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, checkIndividualities);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
-    sub_1BE4ACC(&int___TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
-    byte_4B68F80 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, checkIndividualities);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v7);
+    sub_1C13D24(&int___TypeInfo, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v12);
+    byte_4BB6AC5 = 1;
   }
   memset(&v32, 0, sizeof(v32));
-  v13 = (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 3LL);
+  v13 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 3LL);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(99, 0LL, 0LL);
   plusMinus = 0;
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v16);
   if ( !v15 )
-    sub_1BE4D28(ActiveList, v18);
+    sub_1C13F80(ActiveList, v18);
   System_Collections_Generic_List_object___AddRange(
     v15,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getPassiveList(this, 1, v19);
   System_Collections_Generic_List_object___AddRange(
     v15,
     PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     v15,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   v32 = v31;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v32,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__) )
   {
     current = v32.fields._current;
     v23 = BattleBuffData__checkIndiviuality(
@@ -18747,13 +18747,13 @@ System_Int32_array *__fastcall BattleBuffData__getSkillSealSelectTurnList(
     if ( v23 )
     {
       if ( !current )
-        sub_1BE4D28(v23, v24);
+        sub_1C13F80(v23, v24);
       SkillSealSelectListFromValue = BattleBuffData__getSkillSealSelectListFromValue(
                                        (BattleBuffData_o *)v23,
                                        HIDWORD(current[1].monitor),
                                        v25);
       if ( !SkillSealSelectListFromValue )
-        sub_1BE4D28(0LL, v27);
+        sub_1C13F80(0LL, v27);
       if ( (int)*(_QWORD *)&SkillSealSelectListFromValue->max_length >= 1 )
       {
         v28 = (unsigned int)*(_QWORD *)&SkillSealSelectListFromValue->max_length;
@@ -18761,13 +18761,13 @@ System_Int32_array *__fastcall BattleBuffData__getSkillSealSelectTurnList(
         do
         {
           if ( v28 == v29 )
-            sub_1BE4D30(SkillSealSelectListFromValue, v27);
+            sub_1C13F88(SkillSealSelectListFromValue, v27);
           if ( SkillSealSelectListFromValue->m_Items[v29 + 4] )
           {
             if ( !v13 )
-              sub_1BE4D28(SkillSealSelectListFromValue, v27);
+              sub_1C13F80(SkillSealSelectListFromValue, v27);
             if ( v29 >= v13->max_length )
-              sub_1BE4D30(SkillSealSelectListFromValue, v27);
+              sub_1C13F88(SkillSealSelectListFromValue, v27);
             v13->m_Items[v29 + 1] = HIDWORD(current[1].klass);
           }
           ++v29;
@@ -18778,7 +18778,7 @@ System_Int32_array *__fastcall BattleBuffData__getSkillSealSelectTurnList(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v32,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   return v13;
 }
 
@@ -18792,7 +18792,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__getTDTypeChangeBuffData(
   __int64 v7; // x1
   BattleBuffData_CheckIndividualitiesData_o *v8; // x22
   const MethodInfo *v9; // x7
-  BattleBuffData_BuffData_array *BuffList_43446400; // x20
+  BattleBuffData_BuffData_array *BuffList_43650512; // x20
   BattleBuffData_BuffData_o *v11; // x19
   __int64 v12; // x0
   __int64 v13; // x1
@@ -18803,20 +18803,20 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__getTDTypeChangeBuffData(
   int addOrder; // w12
   bool v19; // cc
 
-  if ( (byte_4B68F60 & 1) == 0 )
+  if ( (byte_4BB6AA5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_BuffData_TypeInfo, servantData);
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v7);
-    byte_4B68F60 = 1;
+    sub_1C13D24(&BattleBuffData_BuffData_TypeInfo, servantData);
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v7);
+    byte_4BB6AA5 = 1;
   }
-  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v8, servantData, 0LL, 0LL, 0LL, 0LL, buffAggregationArgs, 0LL);
-  BuffList_43446400 = BattleBuffData__getBuffList_43446400(this, 86, v8, 1, 1, 0LL, buffAggregationArgs, v9);
-  v11 = (BattleBuffData_BuffData_o *)sub_1BE4D18(BattleBuffData_BuffData_TypeInfo);
+  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v8, servantData, 0LL, 0LL, 0LL, 0LL, buffAggregationArgs, 0LL);
+  BuffList_43650512 = BattleBuffData__getBuffList_43650512(this, 86, v8, 1, 1, 0LL, buffAggregationArgs, v9);
+  v11 = (BattleBuffData_BuffData_o *)sub_1C13F70(BattleBuffData_BuffData_TypeInfo);
   BattleBuffData_BuffData___ctor(v11, 0LL);
-  if ( !BuffList_43446400 )
+  if ( !BuffList_43650512 )
     goto LABEL_15;
-  max_length = BuffList_43446400->max_length;
+  max_length = BuffList_43650512->max_length;
   if ( max_length >= 1 )
   {
     v15 = 0;
@@ -18824,8 +18824,8 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__getTDTypeChangeBuffData(
     while ( 1 )
     {
       if ( max_length == v15 )
-        sub_1BE4D30(v12, v13);
-      v17 = BuffList_43446400->m_Items[v15];
+        sub_1C13F88(v12, v13);
+      v17 = BuffList_43650512->m_Items[v15];
       if ( !v17 )
         break;
       addOrder = v17->fields.addOrder;
@@ -18839,7 +18839,7 @@ BattleBuffData_BuffData_o *__fastcall BattleBuffData__getTDTypeChangeBuffData(
         return v11;
     }
 LABEL_15:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
   return v11;
 }
@@ -18864,16 +18864,16 @@ bool __fastcall BattleBuffData__getTestActBuff(
   const MethodInfo *v18; // [xsp+8h] [xbp-48h]
   BattleBuffData_BuffData_o *targetBuff; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B68F7B & 1) == 0 )
+  if ( (byte_4BB6AC0 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B68F7B = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6AC0 = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
   ActInfo = BuffList__getActInfo(act, 0LL, 0LL);
   if ( !checkIndividualities )
-    sub_1BE4D28(ActInfo, v10);
+    sub_1C13F80(ActInfo, v10);
   selfConcatSvtIndividualities_k__BackingField = checkIndividualities->fields._selfConcatSvtIndividualities_k__BackingField;
   opponentConcatSvtIndividualities_k__BackingField = checkIndividualities->fields._opponentConcatSvtIndividualities_k__BackingField;
   selfIndividuality_k__BackingField = checkIndividualities->fields._selfIndividuality_k__BackingField;
@@ -18920,25 +18920,25 @@ BuffMaster_o *__fastcall BattleBuffData__get_buffMst(BattleBuffData_o *this, con
   FollowerInfo_o *v14; // x6
   PartyListViewItem_o *v15; // x7
 
-  if ( (byte_4B68F2E & 1) == 0 )
+  if ( (byte_4BB6A73 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B68F2E = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4BB6A73 = 1;
   }
   tmpBuffMst = this->fields._tmpBuffMst;
   p_tmpBuffMst = (PartyOrganizationUtility_o *)&this->fields._tmpBuffMst;
   result = tmpBuffMst;
   if ( !tmpBuffMst )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1BE4D28(0LL, v8);
+      sub_1C13F80(0LL, v8);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
+                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
     p_tmpBuffMst->klass = (PartyOrganizationUtility_c *)MasterData_object;
-    sub_1BE4A70(p_tmpBuffMst, (int64_t)MasterData_object, v10, v11, v12, v13, v14, v15);
+    sub_1C13CC8(p_tmpBuffMst, (int64_t)MasterData_object, v10, v11, v12, v13, v14, v15);
     return (BuffMaster_o *)p_tmpBuffMst->klass;
   }
   return result;
@@ -18961,10 +18961,10 @@ bool __fastcall BattleBuffData__isConditionHp(
   int32_t pal[2]; // [xsp+8h] [xbp-38h] BYREF
 
   v8 = this;
-  if ( (byte_4B68F67 & 1) == 0 )
+  if ( (byte_4BB6AAC & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    byte_4B68F67 = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    byte_4BB6AAC = 1;
   }
   if ( !buff )
     goto LABEL_16;
@@ -18975,10 +18975,10 @@ bool __fastcall BattleBuffData__isConditionHp(
     || (this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_16:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   v10 = (BuffEntity_o *)this;
   if ( !BuffEntity__isConditionsHp((BuffEntity_o *)this, 0LL) )
@@ -19047,21 +19047,21 @@ bool __fastcall BattleBuffData__isConditionIndividuality(
   int32_t pal; // [xsp+Ch] [xbp-44h] BYREF
 
   v12 = this;
-  if ( (byte_4B68F6B & 1) == 0 )
+  if ( (byte_4BB6AB0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    sub_1BE4ACC(&System_Func_int____int____bool__TypeInfo, v13);
-    sub_1BE4ACC(&System_Func_int____int____int__int__bool__TypeInfo, v14);
-    sub_1BE4ACC(&Method_Individuality_IsMatchArray__, v15);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArrayCount__, v16);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArray__, v17);
-    sub_1BE4ACC(&Individuality_TypeInfo, v18);
-    sub_1BE4ACC(&int___TypeInfo, v19);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__AddRange__, v20);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v21);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor___77109032, v22);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v23);
-    byte_4B68F6B = 1;
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    sub_1C13D24(&System_Func_int____int____bool__TypeInfo, v13);
+    sub_1C13D24(&System_Func_int____int____int__int__bool__TypeInfo, v14);
+    sub_1C13D24(&Method_Individuality_IsMatchArray__, v15);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArrayCount__, v16);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArray__, v17);
+    sub_1C13D24(&Individuality_TypeInfo, v18);
+    sub_1C13D24(&int___TypeInfo, v19);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__AddRange__, v20);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v21);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor___77417312, v22);
+    this = (BattleBuffData_o *)sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v23);
+    byte_4BB6AB0 = 1;
   }
   if ( !buff )
     goto LABEL_39;
@@ -19073,7 +19073,7 @@ bool __fastcall BattleBuffData__isConditionIndividuality(
   this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                buff->fields.buffId,
-                               (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                               (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   pal = 0;
   v49 = 0LL;
   if ( !this )
@@ -19087,41 +19087,41 @@ bool __fastcall BattleBuffData__isConditionIndividuality(
     || ((v26 = buffIndv->max_length + servantIndv->max_length, !fieldIndiv)
       ? (max_length = 0)
       : (max_length = fieldIndiv->max_length),
-        v28 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo),
-        System_Collections_Generic_List_int____ctor_56420892(
+        v28 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo),
+        System_Collections_Generic_List_int____ctor_56687044(
           v28,
           v26 + max_length,
-          (const MethodInfo_35CEA1C *)Method_System_Collections_Generic_List_int___ctor___77109032),
+          (const MethodInfo_360F9C4 *)Method_System_Collections_Generic_List_int___ctor___77417312),
         !v28) )
   {
 LABEL_39:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   System_Collections_Generic_List_int___AddRange(
     v28,
     (System_Collections_Generic_IEnumerable_T__o *)servantIndv,
-    (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
   System_Collections_Generic_List_int___AddRange(
     v28,
     (System_Collections_Generic_IEnumerable_T__o *)buffIndv,
-    (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
   if ( fieldIndiv )
     System_Collections_Generic_List_int___AddRange(
       v28,
       (System_Collections_Generic_IEnumerable_T__o *)fieldIndiv,
-      (const MethodInfo_35CF40C *)Method_System_Collections_Generic_List_int__AddRange__);
+      (const MethodInfo_36103B4 *)Method_System_Collections_Generic_List_int__AddRange__);
   if ( !BuffEntity__isCondition(v25, 2, &pal, 0LL) )
   {
     if ( BuffEntity__TryGetConditionParamArray(v25, 3, &v49, 0LL) )
     {
       v37 = System_Collections_Generic_List_int___ToArray(
               v28,
-              (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+              (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
       v38 = v49;
       v39 = v37;
-      v40 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v40 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v40, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-      v41 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v41 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v41, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -19137,18 +19137,18 @@ LABEL_39:
     {
       v43 = System_Collections_Generic_List_int___ToArray(
               v28,
-              (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+              (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
       v44 = v49;
       v45 = v43;
-      v33 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v33 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v33, 0LL, Method_Individuality_IsMatchArray__, 0LL);
-      v34 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+      v34 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
       System_Func_object__object__bool____ctor(v34, 0LL, Method_Individuality_IsMatchArray__, 0LL);
       if ( !Individuality_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
       v35 = v45;
       v36 = v44;
-      return Individuality__CheckSignedIndividualities_38602276(
+      return Individuality__CheckSignedIndividualities_38839820(
                v35,
                v36,
                (System_Func_int____int____bool__o *)v33,
@@ -19161,34 +19161,34 @@ LABEL_39:
   IndividualitieCountBelow = BuffEntity__GetIndividualitieCountBelow(v25, 0, 0LL);
   v31 = System_Collections_Generic_List_int___ToArray(
           v28,
-          (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
-  this = (BattleBuffData_o *)sub_1BE4B74(int___TypeInfo, 1LL);
+          (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
+  this = (BattleBuffData_o *)sub_1C13DCC(int___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_39;
   v32 = this;
   if ( !LODWORD(this->fields.passiveList) )
-    sub_1BE4D30(this, buff);
+    sub_1C13F88(this, buff);
   LODWORD(this->fields.activeList) = pal;
   if ( IndividualitieCountAbove < 1 && IndividualitieCountBelow < 1 )
   {
-    v33 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+    v33 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
     System_Func_object__object__bool____ctor(v33, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-    v34 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+    v34 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
     System_Func_object__object__bool____ctor(v34, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
     if ( !Individuality_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
     v35 = v31;
     v36 = (System_Int32_array *)v32;
-    return Individuality__CheckSignedIndividualities_38602276(
+    return Individuality__CheckSignedIndividualities_38839820(
              v35,
              v36,
              (System_Func_int____int____bool__o *)v33,
              (System_Func_int____int____bool__o *)v34,
              0LL);
   }
-  v47 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+  v47 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
   System_Func_object__object__int__int__bool____ctor(v47, 0LL, Method_Individuality_IsPartialMatchArrayCount__, 0LL);
-  v48 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1BE4D18(System_Func_int____int____int__int__bool__TypeInfo);
+  v48 = (System_Func_T1__T2__T3__T4__TResult__o *)sub_1C13F70(System_Func_int____int____int__int__bool__TypeInfo);
   System_Func_object__object__int__int__bool____ctor(v48, 0LL, Method_Individuality_IsPartialMatchArrayCount__, 0LL);
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -19211,10 +19211,10 @@ bool __fastcall BattleBuffData__isContainConditionIndividuality(
   BattleBuffData_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B68F6A & 1) == 0 )
+  if ( (byte_4BB6AAF & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    byte_4B68F6A = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    byte_4BB6AAF = 1;
   }
   if ( !buff )
     goto LABEL_9;
@@ -19225,10 +19225,10 @@ bool __fastcall BattleBuffData__isContainConditionIndividuality(
     || (this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   return BuffEntity__isConditionIndividuality((BuffEntity_o *)this, 0LL);
 }
@@ -19242,10 +19242,10 @@ bool __fastcall BattleBuffData__isContainConditionsHp(
   BattleBuffData_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B68F69 & 1) == 0 )
+  if ( (byte_4BB6AAE & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
-    byte_4B68F69 = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, buff);
+    byte_4BB6AAE = 1;
   }
   if ( !buff )
     goto LABEL_9;
@@ -19256,10 +19256,10 @@ bool __fastcall BattleBuffData__isContainConditionsHp(
     || (this = (BattleBuffData_o *)DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      buff->fields.buffId,
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_9:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   }
   return BuffEntity__isConditionsHp((BuffEntity_o *)this, 0LL);
 }
@@ -19278,11 +19278,11 @@ bool __fastcall BattleBuffData__isGuts(
   __int64 v11; // x0
   __int64 v12; // x1
   const MethodInfo *v13; // x7
-  BattleBuffData_BuffData_array *BuffList_43446400; // x0
+  BattleBuffData_BuffData_array *BuffList_43650512; // x0
   const MethodInfo *v15; // x5
 
   *buff = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)buff,
     0LL,
     (int64_t)checkIndividualitiesDataArray,
@@ -19292,10 +19292,10 @@ bool __fastcall BattleBuffData__isGuts(
     v6,
     v7);
   if ( !checkIndividualitiesDataArray )
-    sub_1BE4D28(v11, v12);
+    sub_1C13F80(v11, v12);
   if ( !checkIndividualitiesDataArray->max_length )
-    sub_1BE4D30(v11, v12);
-  BuffList_43446400 = BattleBuffData__getBuffList_43446400(
+    sub_1C13F88(v11, v12);
+  BuffList_43650512 = BattleBuffData__getBuffList_43650512(
                         this,
                         126,
                         checkIndividualitiesDataArray->m_Items[0],
@@ -19306,7 +19306,7 @@ bool __fastcall BattleBuffData__isGuts(
                         v13);
   return BattleBuffData__checkGutsBuffSuccessfulIndividual(
            this,
-           BuffList_43446400,
+           BuffList_43650512,
            126,
            checkIndividualitiesDataArray,
            buff,
@@ -19320,7 +19320,7 @@ bool __fastcall BattleBuffData__isHide(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 8, 0LL);
 }
 
@@ -19331,33 +19331,33 @@ bool __fastcall BattleBuffData__isHideOtherCommand(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 512, 0LL);
 }
 
 
 bool __fastcall BattleBuffData__isIgnoreDefeatPoint(BattleBuffData_o *this, const MethodInfo *method)
 {
-  BuffList_TYPE_array *BuffList_43423608; // x0
+  BuffList_TYPE_array *BuffList_43627720; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x4
 
-  if ( (byte_4B68FC1 & 1) == 0 )
+  if ( (byte_4BB6B06 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TYPE___TypeInfo, method);
-    byte_4B68FC1 = 1;
+    sub_1C13D24(&BuffList_TYPE___TypeInfo, method);
+    byte_4BB6B06 = 1;
   }
-  BuffList_43423608 = (BuffList_TYPE_array *)sub_1BE4B74(BuffList_TYPE___TypeInfo, 1LL);
-  if ( !BuffList_43423608 )
+  BuffList_43627720 = (BuffList_TYPE_array *)sub_1C13DCC(BuffList_TYPE___TypeInfo, 1LL);
+  if ( !BuffList_43627720 )
     goto LABEL_7;
-  if ( !BuffList_43423608->max_length )
-    sub_1BE4D30(BuffList_43423608, BuffList_43423608);
-  BuffList_43423608->m_Items[1] = 184;
-  BuffList_43423608 = (BuffList_TYPE_array *)BattleBuffData__getBuffList_43423608(this, BuffList_43423608, 0LL, 0LL, v5);
-  if ( !BuffList_43423608 )
+  if ( !BuffList_43627720->max_length )
+    sub_1C13F88(BuffList_43627720, BuffList_43627720);
+  BuffList_43627720->m_Items[1] = 184;
+  BuffList_43627720 = (BuffList_TYPE_array *)BattleBuffData__getBuffList_43627720(this, BuffList_43627720, 0LL, 0LL, v5);
+  if ( !BuffList_43627720 )
 LABEL_7:
-    sub_1BE4D28(BuffList_43423608, v4);
-  return BuffList_43423608->max_length != 0;
+    sub_1C13F80(BuffList_43627720, v4);
+  return BuffList_43627720->max_length != 0;
 }
 
 
@@ -19367,7 +19367,7 @@ bool __fastcall BattleBuffData__isInvalidHide(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !BattleBuffData_BuffData__checkAct(buff, 1, 0LL) && BattleBuffData_BuffData__checkState(buff, 0x8000, 0LL);
 }
 
@@ -19378,7 +19378,7 @@ bool __fastcall BattleBuffData__isShow(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 4, 0LL);
 }
 
@@ -19389,7 +19389,7 @@ bool __fastcall BattleBuffData__isShowDamageAndCommandCardBuff(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 0x2000, 0LL);
 }
 
@@ -19400,7 +19400,7 @@ bool __fastcall BattleBuffData__isShowDeff(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 1024, 0LL);
 }
 
@@ -19411,7 +19411,7 @@ bool __fastcall BattleBuffData__isShowStatusBuffOnly(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__checkState(buff, 4096, 0LL);
 }
 
@@ -19434,11 +19434,11 @@ bool __fastcall BattleBuffData__isSphitBuff(BattleBuffData_o *this, int32_t *eff
   __int64 v18; // x22
   int32_t v19; // w23
 
-  if ( (byte_4B68F66 & 1) == 0 )
+  if ( (byte_4BB6AAB & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, effectId);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
-    byte_4B68F66 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, effectId);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
+    byte_4BB6AAB = 1;
   }
   *effectId = 0;
   PassiveList = BattleBuffData__getPassiveList(this, 1, method);
@@ -19464,7 +19464,7 @@ bool __fastcall BattleBuffData__isSphitBuff(BattleBuffData_o *this, int32_t *eff
         PassiveList = DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)PassiveList,
                         *(_DWORD *)(v12 + 16),
-                        (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                        (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( !PassiveList )
           goto LABEL_31;
         v13 = (BuffEntity_o *)PassiveList;
@@ -19487,7 +19487,7 @@ LABEL_16:
   PassiveList = BattleBuffData__getActiveList(this, 1, v8);
   if ( !PassiveList )
 LABEL_31:
-    sub_1BE4D28(PassiveList, v7);
+    sub_1C13F80(PassiveList, v7);
   v15 = *((_DWORD *)PassiveList + 6);
   v16 = PassiveList;
   if ( v15 >= 1 )
@@ -19506,7 +19506,7 @@ LABEL_31:
         PassiveList = DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)PassiveList,
                         *(_DWORD *)(v18 + 16),
-                        (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                        (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( !PassiveList )
           goto LABEL_31;
         v13 = (BuffEntity_o *)PassiveList;
@@ -19522,7 +19522,7 @@ LABEL_31:
         return 0;
     }
 LABEL_32:
-    sub_1BE4D30(PassiveList, v7);
+    sub_1C13F88(PassiveList, v7);
   }
   return 0;
 }
@@ -19539,7 +19539,7 @@ bool __fastcall BattleBuffData__isTDTypeChange(
 
   v4 = BattleBuffData__getTDTypeChangeBuffData(this, servantData, buffAggregationArgs, method);
   if ( !v4 )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   return v4->fields.param > 0;
 }
 
@@ -19566,7 +19566,7 @@ void __fastcall BattleBuffData__recBuff(
         const MethodInfo *method)
 {
   if ( !buffData )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   buffData->fields.isAct = 1;
 }
 
@@ -19587,30 +19587,30 @@ System_Collections_Generic_List_BattleBuffData_BuffData__o *__fastcall BattleBuf
   const MethodInfo *v14; // x4
   System_Collections_Generic_IEnumerable_T__o *v15; // x0
 
-  if ( (byte_4B68F35 & 1) == 0 )
+  if ( (byte_4BB6A7A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, endBuffs);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
-    byte_4B68F35 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, endBuffs);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
+    byte_4BB6A7A = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   v10 = isCreateDummy;
   v12 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__RemoveLinkageBuff(this, endBuffs, v10, 1, v11);
   if ( !v9 )
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   System_Collections_Generic_List_object___AddRange(
     v9,
     v12,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   v15 = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__RemoveLinkageBuff(this, endBuffs, v10, 0, v14);
   System_Collections_Generic_List_object___AddRange(
     v9,
     v15,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   return (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v9;
 }
 
@@ -19631,16 +19631,16 @@ void __fastcall BattleBuffData__setSaveData(
   System_Action_object__o *v12; // x22
 
   v4 = this;
-  if ( (byte_4B68F62 & 1) == 0 )
+  if ( (byte_4BB6AA7 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, sv);
-    sub_1BE4ACC(&Method_BattleBuffData__setSaveData_b__137_0__, v5);
-    sub_1BE4ACC(&Method_BattleBuffData__setSaveData_b__137_1__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v7);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, sv);
+    sub_1C13D24(&Method_BattleBuffData__setSaveData_b__137_0__, v5);
+    sub_1C13D24(&Method_BattleBuffData__setSaveData_b__137_1__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v7);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__,
                                  v8);
-    byte_4B68F62 = 1;
+    byte_4BB6AA7 = 1;
   }
   if ( !sv )
     goto LABEL_9;
@@ -19650,34 +19650,34 @@ void __fastcall BattleBuffData__setSaveData(
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)sv->fields.passive,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   this = (BattleBuffData_o *)v4->fields.activeList;
   if ( !this )
     goto LABEL_9;
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)this,
     (System_Collections_Generic_IEnumerable_T__o *)sv->fields.active,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   passiveList = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
-  v10 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v10 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(v10, (Il2CppObject *)v4, Method_BattleBuffData__setSaveData_b__137_0__, 0LL);
   if ( !passiveList
     || (System_Collections_Generic_List_object___ForEach(
           passiveList,
           (System_Action_T__o *)v10,
-          (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
+          (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__),
         activeList = (System_Collections_Generic_List_object__o *)v4->fields.activeList,
-        v12 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo),
+        v12 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo),
         System_Action_object____ctor(v12, (Il2CppObject *)v4, Method_BattleBuffData__setSaveData_b__137_1__, 0LL),
         !activeList) )
   {
 LABEL_9:
-    sub_1BE4D28(this, sv);
+    sub_1C13F80(this, sv);
   }
   System_Collections_Generic_List_object___ForEach(
     activeList,
     (System_Action_T__o *)v12,
-    (const MethodInfo_35ECC64 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
+    (const MethodInfo_362DC0C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
   v4->fields.addBuffOrder = sv->fields.addBuffOrder;
 }
 
@@ -19701,13 +19701,13 @@ void __fastcall BattleBuffData__startBattleRec(BattleBuffData_o *this, const Met
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B68F64 & 1) == 0 )
+  if ( (byte_4BB6AA9 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v5);
-    byte_4B68F64 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__, v5);
+    byte_4BB6AA9 = 1;
   }
   memset(&i, 0, sizeof(i));
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.passiveList;
@@ -19716,41 +19716,41 @@ void __fastcall BattleBuffData__startBattleRec(BattleBuffData_o *this, const Met
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   for ( i = v11; ; BYTE2(i.fields._current[2].klass) = 0 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &i,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v7 )
       break;
     if ( !i.fields._current )
-      sub_1BE4D28(v7, v8);
+      sub_1C13F80(v7, v8);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
   passiveList = (System_Collections_Generic_List_object__o *)this->fields.activeList;
   if ( !passiveList )
 LABEL_16:
-    sub_1BE4D28(passiveList, method);
+    sub_1C13F80(passiveList, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     passiveList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
   for ( i = v11; ; BYTE2(i.fields._current[2].klass) = 0 )
   {
     v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &i,
-           (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     if ( !v9 )
       break;
     if ( !i.fields._current )
-      sub_1BE4D28(v9, v10);
+      sub_1C13F80(v9, v10);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -19803,7 +19803,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
   PartyOrganizationUtility_o *v49; // x0
   int64_t v50; // x1
   Il2CppObject *v51; // x2
-  const MethodInfo_35ECFD4 *v52; // x3
+  const MethodInfo_362DF7C *v52; // x3
   const MethodInfo *v53; // x2
   struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v54; // x8
   Il2CppObject *v55; // x9
@@ -19812,24 +19812,24 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
   __int64 v58; // x12
   Il2CppClass **v59; // x0
   Il2CppObject *v60; // x1
-  const MethodInfo_35EC224 *v61; // x2
+  const MethodInfo_362D1CC *v61; // x2
   BattleBuffData_o *v62; // x0
   const MethodInfo *v63; // x3
   const MethodInfo *v64; // x2
   RemovedBuffInfo_o *v65; // x20
 
-  if ( (byte_4B68F52 & 1) == 0 )
+  if ( (byte_4BB6A97 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, individualities);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Reverse__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v17);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v18);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v19);
-    byte_4B68F52 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, individualities);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Clear__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Reverse__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v17);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v18);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v19);
+    byte_4BB6A97 = 1;
   }
   v20 = fromHead != 0 || fromTail < 1;
   if ( !v20 )
@@ -19839,7 +19839,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
       goto LABEL_47;
     System_Collections_Generic_List_object___Reverse(
       (System_Collections_Generic_List_object__o *)activeList,
-      (const MethodInfo_35EDB50 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Reverse__);
+      (const MethodInfo_362EAF8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Reverse__);
     fromHead = fromTail;
   }
   activeList = this->fields.activeList;
@@ -19847,7 +19847,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
     goto LABEL_47;
   activeList = System_Collections_Generic_List_object___ToArray(
                  (System_Collections_Generic_List_object__o *)activeList,
-                 (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                 (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   v22 = this->fields.activeList;
   if ( !v22 )
     goto LABEL_47;
@@ -19858,10 +19858,10 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
   v22->fields._version = v25;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)v22->fields._items, 0, size, 0LL);
-  v26 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v26 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v26,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   if ( !v24 )
     goto LABEL_47;
   v28 = v24[6];
@@ -19873,7 +19873,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
     while ( 1 )
     {
       if ( v29 >= v28 )
-        sub_1BE4D30(activeList, individualities);
+        sub_1C13F88(activeList, individualities);
       v32 = (char *)&v24[2 * v29];
       v33 = *((_QWORD *)v32 + 4);
       if ( !v33 )
@@ -19900,14 +19900,14 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
         System_Collections_Generic_List_object___AddWithResize(
           v26,
           (Il2CppObject *)v33,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &items->obj.klass + v42;
         v26->fields._size = v42 + 1;
         v43[4] = (Il2CppClass *)v33;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v43 + 4), v33, v34, v35, v36, v37, v38, v39);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v43 + 4), v33, v34, v35, v36, v37, v38, v39);
       }
       if ( *(_DWORD *)(v33 + 64) )
       {
@@ -19917,7 +19917,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
         if ( System_Collections_Generic_List_object___Contains(
                (System_Collections_Generic_List_object__o *)activeList,
                (Il2CppObject *)v33,
-               (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
+               (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__) )
         {
           activeList = this->fields.auraBuffList;
           if ( !activeList )
@@ -19925,7 +19925,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
           System_Collections_Generic_List_object___Remove(
             (System_Collections_Generic_List_object__o *)activeList,
             (Il2CppObject *)v33,
-            (const MethodInfo_35ED74C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
+            (const MethodInfo_362E6F4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Remove__);
         }
       }
       BattleBuffData__RemoveClassIconEffectBuff(this, (BattleBuffData_BuffData_o *)v33, v44);
@@ -19944,7 +19944,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
         {
           activeList = this->fields.activeList;
           v51 = v55;
-          v52 = (const MethodInfo_35ECFD4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__;
+          v52 = (const MethodInfo_362DF7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__;
           goto LABEL_41;
         }
         v56 = v54->fields._items;
@@ -19957,7 +19957,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
         {
           activeList = v54;
           v60 = v55;
-          v61 = *(const MethodInfo_35EC224 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL);
+          v61 = *(const MethodInfo_362D1CC **)(*(_QWORD *)(v57[4] + 192LL) + 112LL);
           goto LABEL_43;
         }
         v59 = &v56->obj.klass + v58;
@@ -19966,7 +19966,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__subBuffFromIndividualites(
         v49 = (PartyOrganizationUtility_o *)(v59 + 4);
         v50 = (int64_t)v55;
 LABEL_38:
-        sub_1BE4A70(v49, v50, v34, v35, v36, v37, v38, v39);
+        sub_1C13CC8(v49, v50, v34, v35, v36, v37, v38, v39);
       }
 LABEL_44:
       v28 = v24[6];
@@ -19979,7 +19979,7 @@ LABEL_44:
     if ( !v20 )
     {
       v51 = (Il2CppObject *)v33;
-      v52 = (const MethodInfo_35ECFD4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__;
+      v52 = (const MethodInfo_362DF7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Insert__;
 LABEL_41:
       System_Collections_Generic_List_object___Insert(
         (System_Collections_Generic_List_object__o *)activeList,
@@ -19997,7 +19997,7 @@ LABEL_41:
     if ( (unsigned int)v47 >= *(_DWORD *)(v45 + 24) )
     {
       v60 = (Il2CppObject *)v33;
-      v61 = *(const MethodInfo_35EC224 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL);
+      v61 = *(const MethodInfo_362D1CC **)(*(_QWORD *)(v46[4] + 192LL) + 112LL);
 LABEL_43:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)activeList,
@@ -20025,7 +20025,7 @@ LABEL_45:
                  v63);
   if ( !activeList )
 LABEL_47:
-    sub_1BE4D28(activeList, individualities);
+    sub_1C13F80(activeList, individualities);
   v65 = (RemovedBuffInfo_o *)activeList;
   BattleBuffData__checkAndAddResumptionHpFromLossMaxHp(
     this,
@@ -20082,27 +20082,27 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam(
   System_Collections_Generic_List_BattleBuffData_BuffData__o *reflectedBuffList; // [xsp+8h] [xbp-58h] BYREF
 
   v4 = this;
-  if ( (byte_4B68F37 & 1) == 0 )
+  if ( (byte_4BB6A7C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, linkedArray);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77128672, v6);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_0__, v9);
-    sub_1BE4ACC(&Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_1__, v10);
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v11);
-    byte_4B68F37 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__, linkedArray);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77436960, v6);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v7);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_0__, v9);
+    sub_1C13D24(&Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_1__, v10);
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData___c_TypeInfo, v11);
+    byte_4BB6A7C = 1;
   }
   if ( !linkedArray )
     goto LABEL_27;
   if ( !*(_QWORD *)&linkedArray->max_length )
     return;
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
-  System_Collections_Generic_List_object____ctor_56539928(
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  System_Collections_Generic_List_object____ctor_56806080(
     v12,
     (System_Collections_Generic_IEnumerable_T__o *)linkedArray,
-    (const MethodInfo_35EBB18 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77128672);
+    (const MethodInfo_362CAC0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor___77436960);
   this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
   reflectedBuffList = (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v12;
   activeList = (System_Collections_Generic_List_object__o *)v4->fields.activeList;
@@ -20120,23 +20120,23 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam(
       this = (BattleBuffData_o *)BattleBuffData___c_TypeInfo;
     }
     klass = (Il2CppObject *)this[1].fields.passiveList->klass;
-    v14 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    v14 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(v14, klass, Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_0__, 0LL);
     static_fields = BattleBuffData___c_TypeInfo->static_fields;
     static_fields->__9__76_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)v14;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__76_0, (int64_t)v14, v17, v18, v19, v20, v21, v22);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__76_0, (int64_t)v14, v17, v18, v19, v20, v21, v22);
   }
   if ( !activeList )
     goto LABEL_27;
   this = (BattleBuffData_o *)System_Collections_Generic_List_object___FindAll(
                                activeList,
                                (System_Predicate_T__o *)v14,
-                               (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
+                               (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__);
   if ( !this )
     goto LABEL_27;
   this = (BattleBuffData_o *)System_Collections_Generic_List_object___ToArray(
                                (System_Collections_Generic_List_object__o *)this,
-                               (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                               (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   v23 = BattleBuffData___c_TypeInfo;
   passiveList = (System_Collections_Generic_List_object__o *)v4->fields.passiveList;
   v25 = this;
@@ -20154,24 +20154,24 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam(
       v23 = BattleBuffData___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v23->static_fields->__9;
-    _9__76_1 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+    _9__76_1 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
     System_Predicate_object____ctor(_9__76_1, v27, Method_BattleBuffData___c__syncLinkageBuffChangeParam_b__76_1__, 0LL);
     v28 = BattleBuffData___c_TypeInfo->static_fields;
     v28->__9__76_1 = (struct System_Predicate_BattleBuffData_BuffData__o *)_9__76_1;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v28->__9__76_1, (int64_t)_9__76_1, v29, v30, v31, v32, v33, v34);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v28->__9__76_1, (int64_t)_9__76_1, v29, v30, v31, v32, v33, v34);
   }
   if ( !passiveList
     || (this = (BattleBuffData_o *)System_Collections_Generic_List_object___FindAll(
                                      passiveList,
                                      (System_Predicate_T__o *)_9__76_1,
-                                     (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
+                                     (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__FindAll__)) == 0LL )
   {
 LABEL_27:
-    sub_1BE4D28(this, linkedArray);
+    sub_1C13F80(this, linkedArray);
   }
   v35 = System_Collections_Generic_List_object___ToArray(
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+          (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   v38 = *(_QWORD *)&linkedArray->max_length;
   if ( (int)v38 >= 1 )
   {
@@ -20180,15 +20180,15 @@ LABEL_27:
     do
     {
       if ( v40 >= (unsigned int)v38 )
-        sub_1BE4D30(v35, v36);
+        sub_1C13F88(v35, v36);
       v41 = linkedArray->m_Items[v40];
-      BattleBuffData__syncLinkageBuffChangeParam_43422676(
+      BattleBuffData__syncLinkageBuffChangeParam_43626788(
         v4,
         v41,
         (BattleBuffData_BuffData_array *)v25,
         &reflectedBuffList,
         v37);
-      BattleBuffData__syncLinkageBuffChangeParam_43422676(v4, v41, v39, &reflectedBuffList, v42);
+      BattleBuffData__syncLinkageBuffChangeParam_43626788(v4, v41, v39, &reflectedBuffList, v42);
       LODWORD(v38) = linkedArray->max_length;
       ++v40;
     }
@@ -20197,7 +20197,7 @@ LABEL_27:
 }
 
 
-void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
+void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43626788(
         BattleBuffData_o *this,
         BattleBuffData_BuffData_o *linkedBuff,
         BattleBuffData_BuffData_array *checkArray,
@@ -20226,14 +20226,14 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
   const MethodInfo *v27; // x4
 
   v8 = this;
-  if ( (byte_4B68F38 & 1) == 0 )
+  if ( (byte_4BB6A7D & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, linkedBuff);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v9);
-    this = (BattleBuffData_o *)sub_1BE4ACC(
+    sub_1C13D24(&Individuality_TypeInfo, linkedBuff);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v9);
+    this = (BattleBuffData_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__,
                                  v10);
-    byte_4B68F38 = 1;
+    byte_4BB6A7D = 1;
   }
   if ( !checkArray )
     goto LABEL_23;
@@ -20244,7 +20244,7 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
     while ( 1 )
     {
       if ( v12 >= (unsigned int)v11 )
-        sub_1BE4D30(this, linkedBuff);
+        sub_1C13F88(this, linkedBuff);
       this = (BattleBuffData_o *)*reflectedBuffList;
       if ( !*reflectedBuffList )
         break;
@@ -20252,7 +20252,7 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
       this = (BattleBuffData_o *)System_Collections_Generic_List_object___Contains(
                                    (System_Collections_Generic_List_object__o *)this,
                                    (Il2CppObject *)v13,
-                                   (const MethodInfo_35EC5B4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
+                                   (const MethodInfo_362D55C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__Contains__);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         if ( !v13 )
@@ -20286,16 +20286,16 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)v13,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
             }
             else
             {
               v26 = v23 + 8 * passiveList_low;
               LODWORD(this->fields.passiveList) = passiveList_low + 1;
               *(_QWORD *)(v26 + 32) = v13;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)v13, v17, v18, v19, v20, v21, v22);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)v13, v17, v18, v19, v20, v21, v22);
             }
-            BattleBuffData__syncLinkageBuffChangeParam_43422676(v8, v13, checkArray, reflectedBuffList, v27);
+            BattleBuffData__syncLinkageBuffChangeParam_43626788(v8, v13, checkArray, reflectedBuffList, v27);
           }
         }
       }
@@ -20304,7 +20304,7 @@ void __fastcall BattleBuffData__syncLinkageBuffChangeParam_43422676(
         return;
     }
 LABEL_23:
-    sub_1BE4D28(this, linkedBuff);
+    sub_1C13F80(this, linkedBuff);
   }
 }
 
@@ -20322,10 +20322,10 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__turnProgressing(
   const MethodInfo *v11; // x4
 
   v8 = this;
-  if ( (byte_4B68F2F & 1) == 0 )
+  if ( (byte_4BB6A74 & 1) == 0 )
   {
-    this = (BattleBuffData_o *)sub_1BE4ACC(&BattleBuffData_BuffData___TypeInfo, logic);
-    byte_4B68F2F = 1;
+    this = (BattleBuffData_o *)sub_1C13D24(&BattleBuffData_BuffData___TypeInfo, logic);
+    byte_4BB6A74 = 1;
   }
   if ( !logic )
     goto LABEL_10;
@@ -20352,9 +20352,9 @@ BattleBuffData_BuffData_array *__fastcall BattleBuffData__turnProgressing(
       }
     }
 LABEL_10:
-    sub_1BE4D28(this, logic);
+    sub_1C13F80(this, logic);
   }
-  return (BattleBuffData_BuffData_array *)sub_1BE4B74(BattleBuffData_BuffData___TypeInfo, 0LL);
+  return (BattleBuffData_BuffData_array *)sub_1C13DCC(BattleBuffData_BuffData___TypeInfo, 0LL);
 }
 
 
@@ -20391,13 +20391,13 @@ void __fastcall BattleBuffData__turnProgressingIncrease(BattleBuffData_o *this, 
         goto LABEL_6;
     }
 LABEL_12:
-    sub_1BE4D30(PassiveList, v5);
+    sub_1C13F88(PassiveList, v5);
   }
 LABEL_6:
   PassiveList = (BattleBuffData_o *)BattleBuffData__getActiveList(this, 1, v6);
   if ( !PassiveList )
 LABEL_13:
-    sub_1BE4D28(PassiveList, v5);
+    sub_1C13F80(PassiveList, v5);
   v11 = PassiveList->fields.passiveList;
   v12 = PassiveList;
   if ( (int)v11 >= 1 )
@@ -20428,7 +20428,7 @@ void __fastcall BattleBuffData__turnProgressingIncreaseCalc(
   int32_t v5; // w10
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   paramAdd = buff->fields.paramAdd;
   if ( paramAdd )
   {
@@ -20457,22 +20457,22 @@ void __fastcall BattleBuffData__updateAuraBuffList(BattleBuffData_o *this, const
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B68F22 & 1) == 0 )
+  if ( (byte_4BB6A67 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleBuffData__updateAuraBuffList_b__40_0__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v3);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v4);
-    byte_4B68F22 = 1;
+    sub_1C13D24(&Method_BattleBuffData__updateAuraBuffList_b__40_0__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__, v3);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v4);
+    byte_4BB6A67 = 1;
   }
   auraBuffList = (System_Collections_Generic_List_object__o *)this->fields.auraBuffList;
-  v6 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+  v6 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
   System_Predicate_object____ctor(v6, (Il2CppObject *)this, Method_BattleBuffData__updateAuraBuffList_b__40_0__, 0LL);
   if ( !auraBuffList )
-    sub_1BE4D28(v7, v8);
+    sub_1C13F80(v7, v8);
   System_Collections_Generic_List_object___RemoveAll(
     auraBuffList,
     (System_Predicate_T__o *)v6,
-    (const MethodInfo_35ED880 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
+    (const MethodInfo_362E828 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__RemoveAll__);
 }
 
 
@@ -20491,7 +20491,7 @@ int32_t __fastcall BattleBuffData__useGuts(
   _BYTE *BuffSuccessfulIndividual; // x0
   const MethodInfo *v14; // x1
   const MethodInfo *v15; // x7
-  BattleBuffData_o *BuffList_43446400; // x0
+  BattleBuffData_o *BuffList_43650512; // x0
   const MethodInfo *v17; // x2
   _BYTE *v18; // x21
   int32_t v19; // w8
@@ -20507,14 +20507,14 @@ int32_t __fastcall BattleBuffData__useGuts(
   bool v29; // w0
   unsigned __int64 v30; // x8
 
-  if ( (byte_4B68F5E & 1) == 0 )
+  if ( (byte_4BB6AA3 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&maxhp);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v12);
-    byte_4B68F5E = 1;
+    sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&maxhp);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v12);
+    byte_4BB6AA3 = 1;
   }
   *motionName = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)motionName,
     0LL,
     (int64_t)motionName,
@@ -20526,8 +20526,8 @@ int32_t __fastcall BattleBuffData__useGuts(
   if ( !checkIndividualitiesDataArray )
     goto LABEL_15;
   if ( !checkIndividualitiesDataArray->max_length )
-    sub_1BE4D30(BuffSuccessfulIndividual, v14);
-  BuffList_43446400 = (BattleBuffData_o *)BattleBuffData__getBuffList_43446400(
+    sub_1C13F88(BuffSuccessfulIndividual, v14);
+  BuffList_43650512 = (BattleBuffData_o *)BattleBuffData__getBuffList_43650512(
                                             this,
                                             126,
                                             checkIndividualitiesDataArray->m_Items[0],
@@ -20537,8 +20537,8 @@ int32_t __fastcall BattleBuffData__useGuts(
                                             0LL,
                                             v15);
   BuffSuccessfulIndividual = BattleBuffData__getBuffSuccessfulIndividual(
-                               BuffList_43446400,
-                               (BattleBuffData_BuffData_array *)BuffList_43446400,
+                               BuffList_43650512,
+                               (BattleBuffData_BuffData_array *)BuffList_43650512,
                                v17);
   if ( !BuffSuccessfulIndividual )
     goto LABEL_15;
@@ -20550,15 +20550,15 @@ int32_t __fastcall BattleBuffData__useGuts(
     || (BuffSuccessfulIndividual = DataMasterBase_object__object__int___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)BuffSuccessfulIndividual,
                                      *((_DWORD *)v18 + 4),
-                                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                                     (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_15:
-    sub_1BE4D28(BuffSuccessfulIndividual, v14);
+    sub_1C13F80(BuffSuccessfulIndividual, v14);
   }
   v20 = BuffSuccessfulIndividual;
   v21 = BuffEntity__GetMotionName((BuffEntity_o *)BuffSuccessfulIndividual, 0LL);
   *motionName = v21;
-  sub_1BE4A70((PartyOrganizationUtility_o *)motionName, (int64_t)v21, v22, v23, v24, v25, v26, v27);
+  sub_1C13CC8((PartyOrganizationUtility_o *)motionName, (int64_t)v21, v22, v23, v24, v25, v26, v27);
   v28 = *((_DWORD *)v20 + 5);
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -20609,47 +20609,47 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__usedProgressing(BattleBuffData_o *
   __int64 size; // x10
   Il2CppClass **v35; // x0
 
-  if ( (byte_4B68F3C & 1) == 0 )
+  if ( (byte_4BB6A81 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, method);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
-    byte_4B68F3C = 1;
+    sub_1C13D24(&BuffList_TypeInfo, method);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
+    byte_4BB6A81 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   PassiveList = BattleBuffData__getPassiveList(this, 1, v11);
   if ( !v10 )
     goto LABEL_28;
   System_Collections_Generic_List_object___AddRange(
     v10,
     (System_Collections_Generic_IEnumerable_T__o *)PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v14);
   System_Collections_Generic_List_object___AddRange(
     v10,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveArrayNoActAfterUsed = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveArrayNoActAfterUsed(
                                                                                this,
                                                                                v16);
   System_Collections_Generic_List_object___AddRange(
     v10,
     ActiveArrayNoActAfterUsed,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = System_Collections_Generic_List_object___ToArray(
                   v10,
-                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   if ( !PassiveList )
     goto LABEL_28;
   v19 = *((_DWORD *)PassiveList + 6);
@@ -20660,7 +20660,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__usedProgressing(BattleBuffData_o *
     while ( 1 )
     {
       if ( v21 >= v19 )
-        sub_1BE4D30(PassiveList, v13);
+        sub_1C13F88(PassiveList, v13);
       v22 = (BattleBuffData_BuffData_o *)*((_QWORD *)v20 + (int)v21 + 4);
       if ( !v22 )
         break;
@@ -20672,7 +20672,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__usedProgressing(BattleBuffData_o *
         PassiveList = DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)PassiveList,
                         v22->fields.buffId,
-                        (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                        (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( !PassiveList )
           break;
         v23 = *((_DWORD *)PassiveList + 5);
@@ -20705,14 +20705,14 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__usedProgressing(BattleBuffData_o *
                   System_Collections_Generic_List_object___AddWithResize(
                     v9,
                     (Il2CppObject *)v22,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v35 = &items->obj.klass + size;
                   v9->fields._size = size + 1;
                   v35[4] = (Il2CppClass *)v22;
-                  sub_1BE4A70(
+                  sub_1C13CC8(
                     (PartyOrganizationUtility_o *)(v35 + 4),
                     (int64_t)v22,
                     (int64_t)v18,
@@ -20737,7 +20737,7 @@ RemovedBuffInfo_o *__fastcall BattleBuffData__usedProgressing(BattleBuffData_o *
                  v18);
     }
 LABEL_28:
-    sub_1BE4D28(PassiveList, v13);
+    sub_1C13F80(PassiveList, v13);
   }
   return BattleBuffData__RemoveProgressingBuffList(
            this,
@@ -20780,40 +20780,40 @@ void __fastcall BattleBuffData__usedProgressingGuts(BattleBuffData_o *this, cons
   __int64 size; // x10
   Il2CppClass **v33; // x0
 
-  if ( (byte_4B68F3E & 1) == 0 )
+  if ( (byte_4BB6A83 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, method);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
-    byte_4B68F3E = 1;
+    sub_1C13D24(&BuffList_TypeInfo, method);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__Add__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__, v7);
+    sub_1C13D24(&System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo, v8);
+    byte_4BB6A83 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleBuffData_BuffData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData___ctor__);
   PassiveList = BattleBuffData__getPassiveList(this, 1, v11);
   if ( !v10 )
     goto LABEL_28;
   System_Collections_Generic_List_object___AddRange(
     v10,
     (System_Collections_Generic_IEnumerable_T__o *)PassiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   ActiveList = (System_Collections_Generic_IEnumerable_T__o *)BattleBuffData__getActiveList(this, 1, v14);
   System_Collections_Generic_List_object___AddRange(
     v10,
     ActiveList,
-    (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
+    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__AddRange__);
   PassiveList = System_Collections_Generic_List_object___ToArray(
                   v10,
-                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
+                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ToArray__);
   if ( !PassiveList )
     goto LABEL_28;
   v17 = *((_DWORD *)PassiveList + 6);
@@ -20824,7 +20824,7 @@ void __fastcall BattleBuffData__usedProgressingGuts(BattleBuffData_o *this, cons
     while ( 1 )
     {
       if ( v19 >= v17 )
-        sub_1BE4D30(PassiveList, v13);
+        sub_1C13F88(PassiveList, v13);
       v20 = (BattleBuffData_BuffData_o *)*((_QWORD *)v18 + (int)v19 + 4);
       if ( !v20 )
         break;
@@ -20836,7 +20836,7 @@ void __fastcall BattleBuffData__usedProgressingGuts(BattleBuffData_o *this, cons
         PassiveList = DataMasterBase_object__object__int___GetEntity(
                         (DataMasterBase_TMaster__TEntity__PKType__o *)PassiveList,
                         v20->fields.buffId,
-                        (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                        (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
         if ( !PassiveList )
           break;
         v21 = *((_DWORD *)PassiveList + 5);
@@ -20869,14 +20869,14 @@ void __fastcall BattleBuffData__usedProgressingGuts(BattleBuffData_o *this, cons
                   System_Collections_Generic_List_object___AddWithResize(
                     v9,
                     (Il2CppObject *)v20,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v33 = &items->obj.klass + size;
                   v9->fields._size = size + 1;
                   v33[4] = (Il2CppClass *)v20;
-                  sub_1BE4A70(
+                  sub_1C13CC8(
                     (PartyOrganizationUtility_o *)(v33 + 4),
                     (int64_t)v20,
                     (int64_t)v16,
@@ -20898,7 +20898,7 @@ void __fastcall BattleBuffData__usedProgressingGuts(BattleBuffData_o *this, cons
         goto LABEL_27;
     }
 LABEL_28:
-    sub_1BE4D28(PassiveList, v13);
+    sub_1C13F80(PassiveList, v13);
   }
 LABEL_27:
   BattleBuffData__RemoveProgressingBuffList(this, (System_Collections_Generic_List_BattleBuffData_BuffData__o *)v9, v16);
@@ -20928,7 +20928,7 @@ void __fastcall BattleBuffData_ActValueRequest___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BuffAction_k__BackingField = buffAction;
   this->fields._CheckIndividualitiesData_k__BackingField = checkIndividualitiesData;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._CheckIndividualitiesData_k__BackingField,
     (int64_t)checkIndividualitiesData,
     v9,
@@ -20938,7 +20938,7 @@ void __fastcall BattleBuffData_ActValueRequest___ctor(
     v13,
     v14);
   this->fields._BuffIf_k__BackingField = buffIf;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._BuffIf_k__BackingField,
     (int64_t)buffIf,
     v15,
@@ -20964,10 +20964,10 @@ BuffList_ActInfo_o *__fastcall BattleBuffData_ActValueRequest__get_ActInfo(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B690E7 & 1) == 0 )
+  if ( (byte_4BB6C2D & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, method);
-    byte_4B690E7 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, method);
+    byte_4BB6C2D = 1;
   }
   p_actInfo = (PartyOrganizationUtility_o *)&this->fields.actInfo;
   actInfo = this->fields.actInfo;
@@ -20978,7 +20978,7 @@ BuffList_ActInfo_o *__fastcall BattleBuffData_ActValueRequest__get_ActInfo(
       j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
     actInfo = BuffList__getActInfo(BuffAction_k__BackingField, 0LL, 0LL);
     p_actInfo->klass = (PartyOrganizationUtility_c *)actInfo;
-    sub_1BE4A70(p_actInfo, (int64_t)actInfo, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8(p_actInfo, (int64_t)actInfo, v6, v7, v8, v9, v10, v11);
   }
   return actInfo;
 }
@@ -21034,13 +21034,13 @@ void __fastcall BattleBuffData_ActValueResponse___ctor(
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields.ActValueRequest = actValueRequest;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v12->fields, (int64_t)actValueRequest, v13, v14, v15, v16, v17, v18);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v12->fields, (int64_t)actValueRequest, v13, v14, v15, v16, v17, v18);
   v12->fields._Text_k__BackingField = text;
   v12 = (BattleBuffData_ActValueResponse_o *)((char *)v12 + 40);
   v12[-1].fields._LowerParam_k__BackingField = value;
   *(&v12[-1].fields._LowerParam_k__BackingField + 1) = upperParam;
   LODWORD(v12[-1].fields._Text_k__BackingField) = lowerParam;
-  sub_1BE4A70((PartyOrganizationUtility_o *)v12, (int64_t)text, v19, v20, v21, v22, v23, v24);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v12, (int64_t)text, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -21054,10 +21054,10 @@ int32_t __fastcall BattleBuffData_ActValueResponse__GetClampedValue(
   int32_t LowerParam_k__BackingField; // w22
   int32_t v7; // w21
 
-  if ( (byte_4B690E8 & 1) == 0 )
+  if ( (byte_4BB6C2E & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Math_TypeInfo, method);
-    byte_4B690E8 = 1;
+    sub_1C13D24(&System_Math_TypeInfo, method);
+    byte_4BB6C2E = 1;
   }
   ActValueRequest = this->fields.ActValueRequest;
   if ( !ActValueRequest
@@ -21065,7 +21065,7 @@ int32_t __fastcall BattleBuffData_ActValueResponse__GetClampedValue(
                                                                 ActValueRequest,
                                                                 method)) == 0LL )
   {
-    sub_1BE4D28(ActValueRequest, method);
+    sub_1C13F80(ActValueRequest, method);
   }
   v4 = (BuffList_ActInfo_o *)ActValueRequest;
   v5 = LODWORD(ActValueRequest->fields.actInfo) + this->fields._Value_k__BackingField;
@@ -21074,7 +21074,7 @@ int32_t __fastcall BattleBuffData_ActValueResponse__GetClampedValue(
     LowerParam_k__BackingField = this->fields._LowerParam_k__BackingField;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v5 = System_Math__Max_63517952(LowerParam_k__BackingField, v5, 0LL);
+    v5 = System_Math__Max_63787088(LowerParam_k__BackingField, v5, 0LL);
   }
   v7 = v5 - v4->fields.baseValue;
   if ( !BuffList_ActInfo__isUpperLimit(v4, 0LL) )
@@ -21095,19 +21095,19 @@ void __fastcall BattleBuffData_ActValueResponse__Merge(
   int32_t v6; // w22
 
   v4 = this;
-  if ( (byte_4B690E9 & 1) == 0 )
+  if ( (byte_4BB6C2F & 1) == 0 )
   {
-    this = (BattleBuffData_ActValueResponse_o *)sub_1BE4ACC(&System_Math_TypeInfo, response);
-    byte_4B690E9 = 1;
+    this = (BattleBuffData_ActValueResponse_o *)sub_1C13D24(&System_Math_TypeInfo, response);
+    byte_4BB6C2F = 1;
   }
   if ( !response )
-    sub_1BE4D28(this, response);
+    sub_1C13F80(this, response);
   UpperParam_k__BackingField = v4->fields._UpperParam_k__BackingField;
   v6 = response->fields._UpperParam_k__BackingField;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v4->fields._UpperParam_k__BackingField = System_Math__Max_63517952(UpperParam_k__BackingField, v6, 0LL);
-  v4->fields._LowerParam_k__BackingField = System_Math__Min_63518280(
+  v4->fields._UpperParam_k__BackingField = System_Math__Max_63787088(UpperParam_k__BackingField, v6, 0LL);
+  v4->fields._LowerParam_k__BackingField = System_Math__Min_63787416(
                                              v4->fields._LowerParam_k__BackingField,
                                              response->fields._LowerParam_k__BackingField,
                                              0LL);
@@ -21202,8 +21202,8 @@ bool __fastcall BattleBuffData_BuffData__CheckCond(
 
   plusMinus = 0;
   if ( !checkIndividualities )
-    sub_1BE4D28(this, svtBuff);
-  return BattleBuffData_BuffData__CheckCond_43640316(
+    sub_1C13F80(this, svtBuff);
+  return BattleBuffData_BuffData__CheckCond_43844988(
            this,
            svtBuff,
            actInfo,
@@ -21218,7 +21218,7 @@ bool __fastcall BattleBuffData_BuffData__CheckCond(
 }
 
 
-bool __fastcall BattleBuffData_BuffData__CheckCond_43640316(
+bool __fastcall BattleBuffData_BuffData__CheckCond_43844988(
         BattleBuffData_BuffData_o *this,
         BattleBuffData_o *svtBuff,
         BuffList_ActInfo_o *actInfo,
@@ -21243,8 +21243,8 @@ bool __fastcall BattleBuffData_BuffData__CheckCond_43640316(
   if ( this->fields.commandAssistId >= 1 && !this->fields.isActiveCA )
     return 0;
   if ( !svtBuff )
-    sub_1BE4D28(isCommandCardBuff, v20);
-  return BattleBuffData__checkIndiviuality_43459960(
+    sub_1C13F80(isCommandCardBuff, v20);
+  return BattleBuffData__checkIndiviuality_43664072(
            svtBuff,
            actInfo,
            this,
@@ -21265,7 +21265,7 @@ bool __fastcall BattleBuffData_BuffData__CheckCond_43640316(
 }
 
 
-bool __fastcall BattleBuffData_BuffData__CheckCond_43640596(
+bool __fastcall BattleBuffData_BuffData__CheckCond_43845268(
         BattleBuffData_BuffData_o *this,
         BattleBuffData_o *svtBuff,
         BuffList_ActInfo_o *actInfo,
@@ -21279,7 +21279,7 @@ bool __fastcall BattleBuffData_BuffData__CheckCond_43640596(
   int32_t plusMinus; // [xsp+2Ch] [xbp-4h] BYREF
 
   plusMinus = 0;
-  return BattleBuffData_BuffData__CheckCond_43640316(
+  return BattleBuffData_BuffData__CheckCond_43844988(
            this,
            svtBuff,
            actInfo,
@@ -21304,22 +21304,22 @@ bool __fastcall BattleBuffData_BuffData__CheckShortenSkillBuff(
   __int64 v6; // x1
   struct System_Int32_array *shortenSkillMaxCountArray; // x8
 
-  if ( (byte_4B690E2 & 1) == 0 )
+  if ( (byte_4BB6C28 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_IsValidIndex_int___, *(_QWORD *)&targetSkillIndex);
-    byte_4B690E2 = 1;
+    sub_1C13D24(&Method_BasicHelper_IsValidIndex_int___, *(_QWORD *)&targetSkillIndex);
+    byte_4BB6C28 = 1;
   }
   IsValidIndex_int = BasicHelper__IsValidIndex_int_(
                        this->fields.shortenSkillMaxCountArray,
                        targetSkillIndex,
-                       (const MethodInfo_2F48024 *)Method_BasicHelper_IsValidIndex_int___);
+                       (const MethodInfo_2F7E380 *)Method_BasicHelper_IsValidIndex_int___);
   if ( !IsValidIndex_int )
     return 0;
   shortenSkillMaxCountArray = this->fields.shortenSkillMaxCountArray;
   if ( !shortenSkillMaxCountArray )
-    sub_1BE4D28(IsValidIndex_int, v6);
+    sub_1C13F80(IsValidIndex_int, v6);
   if ( shortenSkillMaxCountArray->max_length <= targetSkillIndex )
-    sub_1BE4D30(IsValidIndex_int, v6);
+    sub_1C13F88(IsValidIndex_int, v6);
   return shortenSkillMaxCountArray->m_Items[targetSkillIndex + 1] != 0;
 }
 
@@ -21351,7 +21351,7 @@ bool __fastcall BattleBuffData_BuffData__EqualBuffType(
         const MethodInfo *method)
 {
   if ( !buffMst )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BuffMaster__GetBuffType(buffMst, this->fields.buffId, -1, 0LL) == targetType;
 }
 
@@ -21401,7 +21401,7 @@ System_Int32_array *__fastcall BattleBuffData_BuffData__GetClassRelateIndividual
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleServantData__GetClassRelateIndividuality(svtData, this->fields.param, 0LL);
 }
 
@@ -21437,17 +21437,17 @@ BuffDataExtension_GeneralParamAccessors_o *__fastcall BattleBuffData_BuffData__G
   __int64 v4; // x1
   BuffDataExtension_GeneralParamContinueFunction_o *v5; // x19
 
-  if ( (byte_4B690D8 & 1) == 0 )
+  if ( (byte_4BB6C1E & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffDataExtension_GeneralParamContinueFunction_TypeInfo, method);
-    byte_4B690D8 = 1;
+    sub_1C13D24(&BuffDataExtension_GeneralParamContinueFunction_TypeInfo, method);
+    byte_4BB6C1E = 1;
   }
   Entity = BattleBuffData_BuffData__get_Entity(this, method);
   if ( !Entity )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   if ( Entity->fields.type != 194 )
     return 0LL;
-  v5 = (BuffDataExtension_GeneralParamContinueFunction_o *)sub_1BE4D18(BuffDataExtension_GeneralParamContinueFunction_TypeInfo);
+  v5 = (BuffDataExtension_GeneralParamContinueFunction_o *)sub_1C13F70(BuffDataExtension_GeneralParamContinueFunction_TypeInfo);
   BuffDataExtension_GeneralParamContinueFunction___ctor(v5, 0LL);
   return (BuffDataExtension_GeneralParamAccessors_o *)v5;
 }
@@ -21473,45 +21473,45 @@ System_Int32_array *__fastcall BattleBuffData_BuffData__GetIndividualty(
   struct System_Int32_array *addIndividualty; // x8
   Il2CppClass *v20; // x8
 
-  if ( (byte_4B690DA & 1) == 0 )
+  if ( (byte_4BB6C20 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, IsIncludeIgnoreIndividuality);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
-    sub_1BE4ACC(&int___TypeInfo, v10);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4B690DA = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, IsIncludeIgnoreIndividuality);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v9);
+    sub_1C13D24(&int___TypeInfo, v10);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4BB6C20 = 1;
   }
   state = this->fields.state;
   if ( (state & 0x10000) != 0 && !IsIncludeIgnoreIndividuality )
-    return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   if ( isIgnoreIndivUnreleaseable )
   {
     if ( isAiCheck )
     {
       if ( (state & 0x80000) != 0 )
-        return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
     }
     else if ( (state & 0x880040) != 0 )
     {
-      return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+      return (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
     }
   }
   if ( this->fields._isRemove )
-    return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
-  Instance = (struct System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    return (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
+  Instance = (struct System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   Instance = (struct System_Int32_array *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)Instance,
-                                            (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___);
+                                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !Instance )
     goto LABEL_23;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.buffId,
-             (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+             (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   if ( !Entity )
-    return (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   v17 = Entity;
   Instance = (struct System_Int32_array *)BasicHelper__IsNullOrEmpty(
                                             (System_Collections_ICollection_o *)this->fields.addIndividualty,
@@ -21524,7 +21524,7 @@ System_Int32_array *__fastcall BattleBuffData_BuffData__GetIndividualty(
       addIndividualty = this->fields.addIndividualty;
       if ( addIndividualty )
       {
-        Instance = (struct System_Int32_array *)sub_1BE4B74(
+        Instance = (struct System_Int32_array *)sub_1C13DCC(
                                                   int___TypeInfo,
                                                   addIndividualty->max_length + klass->max_length);
         if ( v17[3].klass )
@@ -21545,7 +21545,7 @@ System_Int32_array *__fastcall BattleBuffData_BuffData__GetIndividualty(
       }
     }
 LABEL_23:
-    sub_1BE4D28(Instance, v15);
+    sub_1C13F80(Instance, v15);
   }
   return klass;
 }
@@ -21613,15 +21613,15 @@ bool __fastcall BattleBuffData_BuffData__IsExecuteFunctionedFunction(
   Il2CppObject *v20; // [xsp+8h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B690E4 & 1) == 0 )
+  if ( (byte_4BB6C2A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, *(_QWORD *)&funcId);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_FunctionMaster___, v5);
-    sub_1BE4ACC(&DataManager_TypeInfo, v6);
-    sub_1BE4ACC(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v7);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v8);
-    sub_1BE4ACC(&Individuality_TypeInfo, v9);
-    byte_4B690E4 = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, *(_QWORD *)&funcId);
+    sub_1C13D24(&Method_DataManager_GetMaster_FunctionMaster___, v5);
+    sub_1C13D24(&DataManager_TypeInfo, v6);
+    sub_1C13D24(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__, v7);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v8);
+    sub_1C13D24(&Individuality_TypeInfo, v9);
+    byte_4BB6C2A = 1;
   }
   entity = 0LL;
   v20 = 0LL;
@@ -21633,14 +21633,14 @@ bool __fastcall BattleBuffData_BuffData__IsExecuteFunctionedFunction(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_FunctionMaster___);
+  Master_object = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_FunctionMaster___);
   if ( !Master_object )
     goto LABEL_26;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           funcId,
-          (const MethodInfo_31FD818 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__) )
+          (const MethodInfo_3238670 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__TryGetEntity__) )
     return 0;
   Master_object = (System_Int32_array *)entity;
   if ( !entity )
@@ -21652,7 +21652,7 @@ bool __fastcall BattleBuffData_BuffData__IsExecuteFunctionedFunction(
   AddStateBuffId = FunctionEntity__GetAddStateBuffId((FunctionEntity_o *)entity, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v14 = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+  v14 = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
   functionedFunctionTargetFunctionIndividualityArray = this->fields.functionedFunctionTargetFunctionIndividualityArray;
   v16 = (DataMasterBase_TMaster__TEntity__PKType__o *)v14;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -21671,7 +21671,7 @@ bool __fastcall BattleBuffData_BuffData__IsExecuteFunctionedFunction(
           v16,
           &v20,
           AddStateBuffId,
-          (const MethodInfo_31FD818 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+          (const MethodInfo_3238670 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
     return 0;
   Master_object = (System_Int32_array *)BasicHelper__IsNullOrEmpty(
                                           (System_Collections_ICollection_o *)this->fields.functionedFunctionTargetBuffIndividualityArray,
@@ -21680,7 +21680,7 @@ bool __fastcall BattleBuffData_BuffData__IsExecuteFunctionedFunction(
     return 0;
   if ( !v20 )
 LABEL_26:
-    sub_1BE4D28(Master_object, v11);
+    sub_1C13F80(Master_object, v11);
   klass = v20[3].klass;
   functionedFunctionTargetBuffIndividualityArray = this->fields.functionedFunctionTargetBuffIndividualityArray;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -21728,23 +21728,23 @@ bool __fastcall BattleBuffData_BuffData__IsPermanentSleep(BattleBuffData_BuffDat
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B690E0 & 1) == 0 )
+  if ( (byte_4BB6C26 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, method);
-    sub_1BE4ACC(&DataManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v4);
-    byte_4B690E0 = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1C13D24(&DataManager_TypeInfo, v3);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v4);
+    byte_4BB6C26 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           this->fields.buffId,
-                          (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
+                          (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1BE4D28(Master_object, v6);
+    sub_1C13F80(Master_object, v6);
   }
   return HIDWORD(Master_object[1].klass) == 32 && BuffEntity__getDamageRelease((BuffEntity_o *)Master_object, 0LL) == -1;
 }
@@ -21766,17 +21766,17 @@ bool __fastcall BattleBuffData_BuffData__IsWarBoardNotAttacked(
   Il2CppObject *Master_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B690E1 & 1) == 0 )
+  if ( (byte_4BB6C27 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, method);
-    sub_1BE4ACC(&DataManager_TypeInfo, v3);
-    byte_4B690E1 = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1C13D24(&DataManager_TypeInfo, v3);
+    byte_4BB6C27 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
   if ( !Master_object )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   return BuffMaster__GetBuffType((BuffMaster_o *)Master_object, this->fields.buffId, -1, 0LL) == 183;
 }
 
@@ -21818,7 +21818,7 @@ void __fastcall BattleBuffData_BuffData__RegisterGeneralParams(
 
   GeneralParamOwner = BattleBuffData_BuffData__GetGeneralParamOwner(this, (const MethodInfo *)dataVals);
   this->fields.generalParamOwner = GeneralParamOwner;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.generalParamOwner,
     (int64_t)GeneralParamOwner,
     v6,
@@ -21836,13 +21836,13 @@ void __fastcall BattleBuffData_BuffData__RegisterGeneralParams(
   else
     v19 = 0LL;
   this->fields.generalParams = v19;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.generalParams, (int64_t)v19, v12, v13, v14, v15, v16, v17);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.generalParams, (int64_t)v19, v12, v13, v14, v15, v16, v17);
   v26 = this->fields.generalParamOwner;
   if ( v26 )
   {
     generalParams = this->fields.generalParams;
     v26->fields.generalParams = generalParams;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v26->fields, (int64_t)generalParams, v20, v21, v22, v23, v24, v25);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v26->fields, (int64_t)generalParams, v20, v21, v22, v23, v24, v25);
   }
 }
 
@@ -21859,10 +21859,10 @@ bool __fastcall BattleBuffData_BuffData__RemoveBuffCond(
   System_Int32_array *Individualty; // x22
   int32_t state; // w8
 
-  if ( (byte_4B690DE & 1) == 0 )
+  if ( (byte_4BB6C24 & 1) == 0 )
   {
-    sub_1BE4ACC(&Individuality_TypeInfo, *(_QWORD *)&removeTo);
-    byte_4B690DE = 1;
+    sub_1C13D24(&Individuality_TypeInfo, *(_QWORD *)&removeTo);
+    byte_4BB6C24 = 1;
   }
   if ( removeTo && removeCnt >= removeTo || (this->fields.state & 1) != 0 )
     return 0;
@@ -21907,23 +21907,23 @@ void __fastcall BattleBuffData_BuffData__SetBuffNoActState(
   System_Func_object__bool__o *v7; // x21
   int v8; // w9
 
-  if ( (byte_4B690DF & 1) == 0 )
+  if ( (byte_4BB6C25 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_BattleServantData____77161688, servantArray);
-    sub_1BE4ACC(&Method_BattleBuffData_BuffData__SetBuffNoActState_b__156_0__, v5);
-    sub_1BE4ACC(&System_Func_BattleServantData__bool__TypeInfo, v6);
-    byte_4B690DF = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_BattleServantData____77470080, servantArray);
+    sub_1C13D24(&Method_BattleBuffData_BuffData__SetBuffNoActState_b__156_0__, v5);
+    sub_1C13D24(&System_Func_BattleServantData__bool__TypeInfo, v6);
+    byte_4BB6C25 = 1;
   }
-  v7 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleServantData__bool__TypeInfo);
+  v7 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleServantData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v7,
     (Il2CppObject *)this,
     Method_BattleBuffData_BuffData__SetBuffNoActState_b__156_0__,
     0LL);
-  if ( BasicHelper__Any_object__49561896(
+  if ( BasicHelper__Any_object__49783940(
          (System_Object_array *)servantArray,
          (System_Func_T__bool__o *)v7,
-         (const MethodInfo_2F44128 *)Method_BasicHelper_Any_BattleServantData____77161688) )
+         (const MethodInfo_2F7A484 *)Method_BasicHelper_Any_BattleServantData____77470080) )
   {
     v8 = 0;
   }
@@ -21997,22 +21997,22 @@ void __fastcall BattleBuffData_BuffData__UsedShortenSkillCountProgress(
   int v10; // t1
   int v11; // w9
 
-  if ( (byte_4B690E3 & 1) == 0 )
+  if ( (byte_4BB6C29 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_IsValidIndex_int___, *(_QWORD *)&targetSkillIndex);
-    byte_4B690E3 = 1;
+    sub_1C13D24(&Method_BasicHelper_IsValidIndex_int___, *(_QWORD *)&targetSkillIndex);
+    byte_4BB6C29 = 1;
   }
   IsValidIndex_int = BasicHelper__IsValidIndex_int_(
                        this->fields.shortenSkillMaxCountArray,
                        targetSkillIndex,
-                       (const MethodInfo_2F48024 *)Method_BasicHelper_IsValidIndex_int___);
+                       (const MethodInfo_2F7E380 *)Method_BasicHelper_IsValidIndex_int___);
   if ( IsValidIndex_int )
   {
     shortenSkillMaxCountArray = this->fields.shortenSkillMaxCountArray;
     if ( !shortenSkillMaxCountArray )
-      sub_1BE4D28(IsValidIndex_int, v6);
+      sub_1C13F80(IsValidIndex_int, v6);
     if ( shortenSkillMaxCountArray->max_length <= targetSkillIndex )
-      sub_1BE4D30(IsValidIndex_int, v6);
+      sub_1C13F88(IsValidIndex_int, v6);
     v8 = (char *)shortenSkillMaxCountArray + 4 * targetSkillIndex;
     v10 = *((_DWORD *)v8 + 8);
     v9 = (int *)(v8 + 32);
@@ -22029,7 +22029,7 @@ bool __fastcall BattleBuffData_BuffData___SetBuffNoActState_b__156_0(
         const MethodInfo *method)
 {
   if ( !svt )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return svt->fields.uniqueId == this->fields.onPartyUniqueId;
 }
 
@@ -22079,7 +22079,7 @@ int32_t __fastcall BattleBuffData_BuffData__checkRelationOrder(
     if ( optBuff )
       return this->fields.addOrder - optBuff->fields.addOrder;
 LABEL_11:
-    sub_1BE4D28(this, optBuff);
+    sub_1C13F80(this, optBuff);
   }
   if ( !optBuff )
     goto LABEL_11;
@@ -22162,21 +22162,21 @@ BuffEntity_o *__fastcall BattleBuffData_BuffData__get_Entity(BattleBuffData_Buff
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B690D9 & 1) == 0 )
+  if ( (byte_4BB6C1F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BuffMaster___, method);
-    sub_1BE4ACC(&DataManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v4);
-    byte_4B690D9 = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1C13D24(&DataManager_TypeInfo, v3);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v4);
+    byte_4BB6C1F = 1;
   }
   cachedEntity = this->fields.cachedEntity;
   if ( !cachedEntity )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BuffMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BuffMaster___);
     if ( !Master_object )
-      sub_1BE4D28(0LL, v7);
+      sub_1C13F80(0LL, v7);
     if ( this->fields._isRemove )
       v8 = 464LL;
     else
@@ -22184,9 +22184,9 @@ BuffEntity_o *__fastcall BattleBuffData_BuffData__get_Entity(BattleBuffData_Buff
     cachedEntity = (struct BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                             *(_DWORD *)((char *)&this->klass + v8),
-                                            (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                            (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
     this->fields.cachedEntity = cachedEntity;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.cachedEntity,
       (int64_t)cachedEntity,
       v9,
@@ -22262,13 +22262,13 @@ BuffDataExtension_GeneralParamAccessors_o *__fastcall BattleBuffData_BuffData__g
   {
     GeneralParamOwner = BattleBuffData_BuffData__GetGeneralParamOwner(this, v4);
     this->fields.generalParamOwner = GeneralParamOwner;
-    sub_1BE4A70((PartyOrganizationUtility_o *)p_generalParamOwner, (int64_t)GeneralParamOwner, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8((PartyOrganizationUtility_o *)p_generalParamOwner, (int64_t)GeneralParamOwner, v6, v7, v8, v9, v10, v11);
     v18 = this->fields.generalParamOwner;
     if ( v18 )
     {
       generalParams = this->fields.generalParams;
       v18->fields.generalParams = generalParams;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v18->fields, (int64_t)generalParams, v12, v13, v14, v15, v16, v17);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v18->fields, (int64_t)generalParams, v12, v13, v14, v15, v16, v17);
     }
   }
   return *p_generalParamOwner;
@@ -22338,22 +22338,22 @@ bool __fastcall BattleBuffData_BuffData__isCommandCardBuff(BattleBuffData_BuffDa
   __int64 v13; // x0
   __int64 v14; // x1
 
-  if ( (byte_4B690DD & 1) == 0 )
+  if ( (byte_4BB6C23 & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, method);
-    byte_4B690DD = 1;
+    sub_1C13D24(&int___TypeInfo, method);
+    byte_4BB6C23 = 1;
   }
   servantCardIdsIndexArray = this->fields.servantCardIdsIndexArray;
   p_servantCardIdsIndexArray = (PartyOrganizationUtility_o *)&this->fields.servantCardIdsIndexArray;
   klass = servantCardIdsIndexArray;
   if ( !servantCardIdsIndexArray )
   {
-    v6 = sub_1BE4B74(int___TypeInfo, 0LL);
+    v6 = sub_1C13DCC(int___TypeInfo, 0LL);
     p_servantCardIdsIndexArray->klass = (PartyOrganizationUtility_c *)v6;
-    sub_1BE4A70(p_servantCardIdsIndexArray, v6, v7, v8, v9, v10, v11, v12);
+    sub_1C13CC8(p_servantCardIdsIndexArray, v6, v7, v8, v9, v10, v11, v12);
     klass = p_servantCardIdsIndexArray->klass;
     if ( !p_servantCardIdsIndexArray->klass )
-      sub_1BE4D28(v13, v14);
+      sub_1C13F80(v13, v14);
   }
   return klass[6] != 0;
 }
@@ -22373,12 +22373,12 @@ bool __fastcall BattleBuffData_BuffData__isEffectBuff(BattleBuffData_BuffData_o 
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B690DB & 1) == 0 )
+  if ( (byte_4BB6C21 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BuffMaster___, method);
-    sub_1BE4ACC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B690DB = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_BuffMaster___, method);
+    sub_1C13D24(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BB6C21 = 1;
   }
   if ( this->fields._isRemove )
   {
@@ -22386,18 +22386,18 @@ bool __fastcall BattleBuffData_BuffData__isEffectBuff(BattleBuffData_BuffData_o 
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
+                       (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BuffMaster___)) == 0LL )
     {
-      sub_1BE4D28(Instance, v7);
+      sub_1C13F80(Instance, v7);
     }
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                this->fields.buffId,
-               (const MethodInfo_31FD7C4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+               (const MethodInfo_3238624 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
     if ( Entity )
       LOBYTE(Entity) = SLODWORD(Entity[6].monitor) > 0;
   }
@@ -22426,33 +22426,33 @@ bool __fastcall BattleBuffData_BuffData__isEnableCommandCardBuff(
   System_Int32_array *servantCardIdsIndexArray; // x19
   System_Func_int__bool__o *v19; // x20
 
-  if ( (byte_4B690DC & 1) == 0 )
+  if ( (byte_4BB6C22 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_int____77161864, command);
-    sub_1BE4ACC(&System_Func_int__bool__TypeInfo, v5);
-    sub_1BE4ACC(&Method_BattleBuffData_BuffData___c__DisplayClass151_0__isEnableCommandCardBuff_b__0__, v6);
-    sub_1BE4ACC(&BattleBuffData_BuffData___c__DisplayClass151_0_TypeInfo, v7);
-    byte_4B690DC = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, command);
+    sub_1C13D24(&System_Func_int__bool__TypeInfo, v5);
+    sub_1C13D24(&Method_BattleBuffData_BuffData___c__DisplayClass151_0__isEnableCommandCardBuff_b__0__, v6);
+    sub_1C13D24(&BattleBuffData_BuffData___c__DisplayClass151_0_TypeInfo, v7);
+    byte_4BB6C22 = 1;
   }
-  v8 = sub_1BE4D18(BattleBuffData_BuffData___c__DisplayClass151_0_TypeInfo);
+  v8 = sub_1C13F70(BattleBuffData_BuffData___c__DisplayClass151_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   *(_QWORD *)(v8 + 16) = command;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)command, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)command, v11, v12, v13, v14, v15, v16);
   if ( !BattleBuffData_BuffData__isCommandCardBuff(this, v17) )
     return 0;
   servantCardIdsIndexArray = this->fields.servantCardIdsIndexArray;
-  v19 = (System_Func_int__bool__o *)sub_1BE4D18(System_Func_int__bool__TypeInfo);
+  v19 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v19,
     (Il2CppObject *)v8,
     Method_BattleBuffData_BuffData___c__DisplayClass151_0__isEnableCommandCardBuff_b__0__,
     0LL);
-  return BasicHelper__Any_int__49561084(
+  return BasicHelper__Any_int__49783128(
            servantCardIdsIndexArray,
            (System_Func_T__bool__o *)v19,
-           (const MethodInfo_2F43DFC *)Method_BasicHelper_Any_int____77161864);
+           (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256);
 }
 
 
@@ -22487,7 +22487,7 @@ bool __fastcall BattleBuffData_BuffData__isTargetSkill(BattleBuffData_BuffData_o
   if ( !v3 )
     return 0;
   if ( !(_DWORD)v3 )
-    sub_1BE4D30(this, method);
+    sub_1C13F88(this, method);
   return targetSkill->m_Items[1] != 0;
 }
 
@@ -22525,7 +22525,7 @@ void __fastcall BattleBuffData_BuffData__setShowState(
 
   v3 = type + 2;
   if ( (unsigned int)(type + 2) <= 5 && ((0x3Bu >> v3) & 1) != 0 )
-    this->fields.state |= dword_C1D270[v3];
+    this->fields.state |= dword_C3201C[v3];
 }
 
 
@@ -22573,7 +22573,7 @@ bool __fastcall BattleBuffData_BuffData___c__DisplayClass151_0___isEnableCommand
 
   command = this->fields.command;
   if ( !command )
-    sub_1BE4D28(this, index);
+    sub_1C13F80(this, index);
   return command->fields.servantCardIdsIndex == index;
 }
 
@@ -22588,22 +22588,22 @@ void __fastcall BattleBuffData_ChangeBgmData___ctor(BattleBuffData_ChangeBgmData
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B690CB & 1) == 0 )
+  if ( (byte_4BB6C11 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffUniqueValue_TypeInfo, method);
-    byte_4B690CB = 1;
+    sub_1C13D24(&BuffUniqueValue_TypeInfo, method);
+    byte_4BB6C11 = 1;
   }
   this->fields.addBgmOrder = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = (Il2CppObject *)sub_1BE4D18(BuffUniqueValue_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C13F70(BuffUniqueValue_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields.uniqueVal = (struct BuffUniqueValue_o *)v3;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleBuffData_ChangeBgmData___ctor_43633196(
+void __fastcall BattleBuffData_ChangeBgmData___ctor_43837868(
         BattleBuffData_ChangeBgmData_o *this,
         int32_t actorId,
         BattleBuffData_BuffData_o *buff,
@@ -22633,25 +22633,25 @@ void __fastcall BattleBuffData_ChangeBgmData___ctor_43633196(
   FollowerInfo_o *v29; // x6
   PartyListViewItem_o *v30; // x7
 
-  if ( (byte_4B690CC & 1) == 0 )
+  if ( (byte_4BB6C12 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffUniqueValue_TypeInfo, *(_QWORD *)&actorId);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BgmMaster___, v9);
-    sub_1BE4ACC(&DataManager_TypeInfo, v10);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v11);
-    byte_4B690CC = 1;
+    sub_1C13D24(&BuffUniqueValue_TypeInfo, *(_QWORD *)&actorId);
+    sub_1C13D24(&Method_DataManager_GetMaster_BgmMaster___, v9);
+    sub_1C13D24(&DataManager_TypeInfo, v10);
+    sub_1C13D24(&StringLiteral_1/*""*/, v11);
+    byte_4BB6C12 = 1;
   }
   this->fields.addBgmOrder = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !buff )
     goto LABEL_9;
   addOrder = buff->fields.addOrder;
-  v15 = sub_1BE4D18(BuffUniqueValue_TypeInfo);
+  v15 = sub_1C13F70(BuffUniqueValue_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0LL);
   *(_DWORD *)(v15 + 16) = addOrder;
   *(_DWORD *)(v15 + 20) = actorId;
   this->fields.uniqueVal = (struct BuffUniqueValue_o *)v15;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, v15, v16, v17, v18, v19, v20, v21);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, v15, v16, v17, v18, v19, v20, v21);
   if ( !baseVal )
     goto LABEL_9;
   Param = DataVals__GetParam(baseVal, 105, 0, 0LL);
@@ -22659,10 +22659,10 @@ void __fastcall BattleBuffData_ChangeBgmData___ctor_43633196(
   this->fields.priority = DataVals__GetBgmPriority(baseVal, Param, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BgmMaster___);
   if ( !Master_object )
 LABEL_9:
-    sub_1BE4D28(Master_object, v13);
+    sub_1C13F80(Master_object, v13);
   BgmFileName = BgmMaster__GetBgmFileName(
                   (BgmMaster_o *)Master_object,
                   this->fields.bgmId,
@@ -22670,7 +22670,7 @@ LABEL_9:
                   0LL);
   this->fields.bgmName = BgmFileName;
   p_bgmName = &this->fields.bgmName;
-  sub_1BE4A70((PartyOrganizationUtility_o *)p_bgmName, (int64_t)BgmFileName, v25, v26, v27, v28, v29, v30);
+  sub_1C13CC8((PartyOrganizationUtility_o *)p_bgmName, (int64_t)BgmFileName, v25, v26, v27, v28, v29, v30);
   *((_BYTE *)p_bgmName + 8) = DataVals__IsEqualsTo1(baseVal, 160, 0LL);
   *((_BYTE *)p_bgmName + 16) = DataVals__TryGetParam(baseVal, 163, (int32_t *)p_bgmName + 5, 0LL);
 }
@@ -22683,12 +22683,12 @@ Generator_BGM_o *__fastcall BattleBuffData_ChangeBgmData__MakeBgmGenerator(
 {
   Generator_BGMFromChangeBgmBuff_o *v5; // x21
 
-  if ( (byte_4B690CD & 1) == 0 )
+  if ( (byte_4BB6C13 & 1) == 0 )
   {
-    sub_1BE4ACC(&Generator_BGMFromChangeBgmBuff_TypeInfo, data);
-    byte_4B690CD = 1;
+    sub_1C13D24(&Generator_BGMFromChangeBgmBuff_TypeInfo, data);
+    byte_4BB6C13 = 1;
   }
-  v5 = (Generator_BGMFromChangeBgmBuff_o *)sub_1BE4D18(Generator_BGMFromChangeBgmBuff_TypeInfo);
+  v5 = (Generator_BGMFromChangeBgmBuff_o *)sub_1C13F70(Generator_BGMFromChangeBgmBuff_TypeInfo);
   Generator_BGMFromChangeBgmBuff___ctor(v5, data, this, 0LL);
   return (Generator_BGM_o *)v5;
 }
@@ -22718,17 +22718,17 @@ void __fastcall BattleBuffData_ChangeBgmData__UpdateUniqueVal(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B690CE & 1) == 0 )
+  if ( (byte_4BB6C14 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffUniqueValue_TypeInfo, *(_QWORD *)&buffUid);
-    byte_4B690CE = 1;
+    sub_1C13D24(&BuffUniqueValue_TypeInfo, *(_QWORD *)&buffUid);
+    byte_4BB6C14 = 1;
   }
-  v7 = sub_1BE4D18(BuffUniqueValue_TypeInfo);
+  v7 = sub_1C13F70(BuffUniqueValue_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = buffUid;
   *(_DWORD *)(v7 + 20) = actorId;
   this->fields.uniqueVal = (struct BuffUniqueValue_o *)v7;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, v7, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -22740,7 +22740,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor(
 }
 
 
-void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43634876(
+void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43839548(
         BattleBuffData_CheckIndividualitiesData_o *this,
         BattleServantData_o *self,
         BattleServantData_o *opponent,
@@ -22769,7 +22769,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43634876(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BuffAggregationArgs_k__BackingField = buffAggregationArgs;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._BuffAggregationArgs_k__BackingField,
     (int64_t)buffAggregationArgs,
     v15,
@@ -22796,7 +22796,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43634876(
   else
     v30 = (struct BuffInterface_o *)self;
   this->fields._buffIf_k__BackingField = v30;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._buffIf_k__BackingField,
     (int64_t)v30,
     v24,
@@ -22808,7 +22808,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43634876(
 }
 
 
-void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43637676(
+void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43842348(
         BattleBuffData_CheckIndividualitiesData_o *this,
         BattleServantData_o *self,
         BattleServantData_o *opponent,
@@ -22847,7 +22847,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43637676(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BuffAggregationArgs_k__BackingField = buffAggregationArgs;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._BuffAggregationArgs_k__BackingField,
     (int64_t)buffAggregationArgs,
     v15,
@@ -22860,7 +22860,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43637676(
   if ( selfConcatSvtIndividualities )
   {
     this->fields._selfConcatSvtIndividualities_k__BackingField = selfConcatSvtIndividualities;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields._selfConcatSvtIndividualities_k__BackingField,
       (int64_t)selfConcatSvtIndividualities,
       v22,
@@ -22877,7 +22877,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43637676(
   if ( opponentConcatSvtIndividualities )
   {
     this->fields._opponentConcatSvtIndividualities_k__BackingField = opponentConcatSvtIndividualities;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields._opponentConcatSvtIndividualities_k__BackingField,
       (int64_t)opponentConcatSvtIndividualities,
       v28,
@@ -22896,7 +22896,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData___ctor_43637676(
   else
     v40 = (struct BuffInterface_o *)self;
   this->fields._buffIf_k__BackingField = v40;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._buffIf_k__BackingField,
     (int64_t)v40,
     v34,
@@ -22950,14 +22950,14 @@ BattleBuffData_CheckIndividualitiesData_o *__fastcall BattleBuffData_CheckIndivi
            individuality,
            v6);
     this->fields._selfIndividuality_k__BackingField = v7;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
     v16 = BattleBuffData_CheckIndividualitiesData__GetConcatIndividuality(
             v14,
             this->fields._selfIndividualityCanRelease_k__BackingField,
             individuality,
             v15);
     this->fields._selfIndividualityCanRelease_k__BackingField = v16;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields._selfIndividualityCanRelease_k__BackingField,
       (int64_t)v16,
       v17,
@@ -22972,7 +22972,7 @@ BattleBuffData_CheckIndividualitiesData_o *__fastcall BattleBuffData_CheckIndivi
             individuality,
             v24);
     this->fields._selfConcatSvtIndividualities_k__BackingField = v25;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields._selfConcatSvtIndividualities_k__BackingField,
       (int64_t)v25,
       v26,
@@ -22995,21 +22995,21 @@ System_Int32_array *__fastcall BattleBuffData_CheckIndividualitiesData__GetConca
   __int64 v6; // x1
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4B690D7 & 1) == 0 )
+  if ( (byte_4BB6C1D & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Concat_int___, baseArray);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_int___, v6);
-    byte_4B690D7 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Concat_int___, baseArray);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_int___, v6);
+    byte_4BB6C1D = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)baseArray, 0LL) )
     return addArray;
   v8 = System_Linq_Enumerable__Concat_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)baseArray,
          (System_Collections_Generic_IEnumerable_TSource__o *)addArray,
-         (const MethodInfo_2F70E6C *)Method_System_Linq_Enumerable_Concat_int___);
+         (const MethodInfo_2FA6DC0 *)Method_System_Linq_Enumerable_Concat_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v8,
-           (const MethodInfo_2F9293C *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_2FC8B9C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -23076,11 +23076,11 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeIndividuality
   int32_t uniqueId; // w8
   int32_t v64; // w8
 
-  if ( (byte_4B690D4 & 1) == 0 )
+  if ( (byte_4BB6C1A & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, self);
-    sub_1BE4ACC(&int___TypeInfo, v11);
-    byte_4B690D4 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, self);
+    sub_1C13D24(&int___TypeInfo, v11);
+    byte_4BB6C1A = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -23095,12 +23095,12 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeIndividuality
                                                0,
                                                0LL);
     else
-      ConcatServantAndBuffIndividualityies = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+      ConcatServantAndBuffIndividualityies = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
     v25 = ConcatServantAndBuffIndividualityies;
     if ( this )
     {
       this->fields._selfIndividuality_k__BackingField = ConcatServantAndBuffIndividualityies;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields,
         (int64_t)ConcatServantAndBuffIndividualityies,
         v13,
@@ -23112,9 +23112,9 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeIndividuality
       if ( opponent )
         v26 = BattleServantData__getConcatServantAndBuffIndividualityies(opponent, commandOpponent, 0, 0, 0, 0LL);
       else
-        v26 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+        v26 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
       this->fields._opponentIndividuality_k__BackingField = v26;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields._opponentIndividuality_k__BackingField,
         (int64_t)v26,
         v27,
@@ -23126,9 +23126,9 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeIndividuality
       if ( self )
         v40 = BattleServantData__getConcatServantAndBuffIndividualityies(self, commandSelf, 0, 1, 0, 0LL);
       else
-        v40 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+        v40 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
       this->fields._selfIndividualityCanRelease_k__BackingField = v40;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields._selfIndividualityCanRelease_k__BackingField,
         (int64_t)v40,
         v41,
@@ -23148,7 +23148,7 @@ LABEL_30:
       goto LABEL_31;
     }
 LABEL_39:
-    sub_1BE4D28(ConcatServantAndBuffIndividualityies, v25);
+    sub_1C13F80(ConcatServantAndBuffIndividualityies, v25);
   }
   if ( self )
     ConcatServantAndBuffIndividualityies = BattleServantData__getConcatServantAndBuffIndividualityies(
@@ -23159,12 +23159,12 @@ LABEL_39:
                                              0,
                                              0LL);
   else
-    ConcatServantAndBuffIndividualityies = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    ConcatServantAndBuffIndividualityies = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   v25 = ConcatServantAndBuffIndividualityies;
   if ( !this )
     goto LABEL_39;
   this->fields._selfIndividuality_k__BackingField = ConcatServantAndBuffIndividualityies;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields,
     (int64_t)ConcatServantAndBuffIndividualityies,
     v19,
@@ -23176,9 +23176,9 @@ LABEL_39:
   if ( opponent )
     v33 = BattleServantData__getConcatServantAndBuffIndividualityies(opponent, 0LL, 0, 0, 0, 0LL);
   else
-    v33 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    v33 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   this->fields._opponentIndividuality_k__BackingField = v33;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentIndividuality_k__BackingField,
     (int64_t)v33,
     v34,
@@ -23190,9 +23190,9 @@ LABEL_39:
   if ( self )
     v47 = BattleServantData__getConcatServantAndBuffIndividualityies(self, 0LL, 0, 1, 0, 0LL);
   else
-    v47 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    v47 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   this->fields._selfIndividualityCanRelease_k__BackingField = v47;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._selfIndividualityCanRelease_k__BackingField,
     (int64_t)v47,
     v48,
@@ -23208,10 +23208,10 @@ LABEL_39:
     goto LABEL_30;
   }
 LABEL_31:
-  v56 = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+  v56 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
 LABEL_32:
   this->fields._opponentIndividualityCanRemove_k__BackingField = v56;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentIndividualityCanRemove_k__BackingField,
     (int64_t)v56,
     v57,
@@ -23248,10 +23248,10 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeOpponentConca
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B690D6 & 1) == 0 )
+  if ( (byte_4BB6C1C & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, opponent);
-    byte_4B690D6 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, opponent);
+    byte_4BB6C1C = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -23272,7 +23272,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeOpponentConca
         goto LABEL_14;
     }
 LABEL_15:
-    sub_1BE4D28(IsConstantMasterIndvAddBuffActive, ConcatSvtIndividualities);
+    sub_1C13F80(IsConstantMasterIndvAddBuffActive, ConcatSvtIndividualities);
   }
   if ( !opponent )
   {
@@ -23291,7 +23291,7 @@ LABEL_15:
                                0LL);
 LABEL_14:
   this->fields._opponentConcatSvtIndividualities_k__BackingField = ConcatSvtIndividualities;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentConcatSvtIndividualities_k__BackingField,
     (int64_t)ConcatSvtIndividualities,
     v9,
@@ -23318,10 +23318,10 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeSelfConcatSvt
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B690D5 & 1) == 0 )
+  if ( (byte_4BB6C1B & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffList_TypeInfo, self);
-    byte_4B690D5 = 1;
+    sub_1C13D24(&BuffList_TypeInfo, self);
+    byte_4BB6C1B = 1;
   }
   if ( !BuffList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BuffList_TypeInfo);
@@ -23342,7 +23342,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__InitializeSelfConcatSvt
         goto LABEL_14;
     }
 LABEL_15:
-    sub_1BE4D28(IsConstantMasterIndvAddBuffActive, ConcatSvtIndividualities);
+    sub_1C13F80(IsConstantMasterIndvAddBuffActive, ConcatSvtIndividualities);
   }
   if ( !self )
   {
@@ -23361,7 +23361,7 @@ LABEL_15:
                                0LL);
 LABEL_14:
   this->fields._selfConcatSvtIndividualities_k__BackingField = ConcatSvtIndividualities;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._selfConcatSvtIndividualities_k__BackingField,
     (int64_t)ConcatSvtIndividualities,
     v9,
@@ -23483,7 +23483,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_buffIf(
   PartyListViewItem_o *v7; // x7
 
   this->fields._buffIf_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._buffIf_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23507,7 +23507,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_opponentConcatSvtIn
   PartyListViewItem_o *v7; // x7
 
   this->fields._opponentConcatSvtIndividualities_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentConcatSvtIndividualities_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23531,7 +23531,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_opponentIndividuali
   PartyListViewItem_o *v7; // x7
 
   this->fields._opponentIndividuality_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentIndividuality_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23555,7 +23555,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_opponentIndividuali
   PartyListViewItem_o *v7; // x7
 
   this->fields._opponentIndividualityCanRemove_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._opponentIndividualityCanRemove_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23579,7 +23579,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_selfConcatSvtIndivi
   PartyListViewItem_o *v7; // x7
 
   this->fields._selfConcatSvtIndividualities_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._selfConcatSvtIndividualities_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23603,7 +23603,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_selfIndividuality(
   PartyListViewItem_o *v7; // x7
 
   this->fields._selfIndividuality_k__BackingField = value;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -23619,7 +23619,7 @@ void __fastcall BattleBuffData_CheckIndividualitiesData__set_selfIndividualityCa
   PartyListViewItem_o *v7; // x7
 
   this->fields._selfIndividualityCanRelease_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._selfIndividualityCanRelease_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23659,9 +23659,9 @@ void __fastcall BattleBuffData_CheckInvokeBuff___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._SelfSvt_k__BackingField = selfSvt;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)selfSvt, v9, v10, v11, v12, v13, v14);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)selfSvt, v9, v10, v11, v12, v13, v14);
   this->fields._TargetSvt_k__BackingField = targetSvt;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._TargetSvt_k__BackingField,
     (int64_t)targetSvt,
     v15,
@@ -23671,7 +23671,7 @@ void __fastcall BattleBuffData_CheckInvokeBuff___ctor(
     v19,
     v20);
   this->fields.checkActs = actions;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.checkActs, (int64_t)actions, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.checkActs, (int64_t)actions, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -23713,27 +23713,27 @@ bool __fastcall BattleBuffData_CheckInvokeBuff__IsInvoke(
   struct BuffList_ACTION_array *checkActs; // x19
   System_Func_T__TResult__o *v37; // x20
 
-  if ( (byte_4B690E5 & 1) == 0 )
+  if ( (byte_4BB6C2B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BasicHelper_Any_BuffList_ACTION___, buff);
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v7);
-    sub_1BE4ACC(&System_Func_BuffList_ACTION__bool__TypeInfo, v8);
-    sub_1BE4ACC(&Method_BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0__IsInvoke_b__0__, v9);
-    sub_1BE4ACC(&BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_TypeInfo, v10);
-    byte_4B690E5 = 1;
+    sub_1C13D24(&Method_BasicHelper_Any_BuffList_ACTION___, buff);
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v7);
+    sub_1C13D24(&System_Func_BuffList_ACTION__bool__TypeInfo, v8);
+    sub_1C13D24(&Method_BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0__IsInvoke_b__0__, v9);
+    sub_1C13D24(&BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_TypeInfo, v10);
+    byte_4BB6C2B = 1;
   }
-  v11 = sub_1BE4D18(BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_TypeInfo);
+  v11 = sub_1C13F70(BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   *(_QWORD *)(v11 + 16) = buff;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)buff, v14, v15, v16, v17, v18, v19);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)buff, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 24) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
   SelfSvt_k__BackingField = this->fields._SelfSvt_k__BackingField;
   TargetSvt_k__BackingField = this->fields._TargetSvt_k__BackingField;
-  v28 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(
+  v28 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(
     v28,
     SelfSvt_k__BackingField,
     TargetSvt_k__BackingField,
@@ -23743,18 +23743,18 @@ bool __fastcall BattleBuffData_CheckInvokeBuff__IsInvoke(
     0LL,
     v29);
   *(_QWORD *)(v11 + 32) = v28;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)v28, v30, v31, v32, v33, v34, v35);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)v28, v30, v31, v32, v33, v34, v35);
   checkActs = this->fields.checkActs;
-  v37 = (System_Func_T__TResult__o *)sub_1BE4D18(System_Func_BuffList_ACTION__bool__TypeInfo);
+  v37 = (System_Func_T__TResult__o *)sub_1C13F70(System_Func_BuffList_ACTION__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v37,
     (Il2CppObject *)v11,
     Method_BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0__IsInvoke_b__0__,
     0LL);
-  return BasicHelper__Any_Int32Enum__49561412(
+  return BasicHelper__Any_Int32Enum__49783456(
            (System_Int32Enum_array *)checkActs,
            (System_Func_T__bool__o *)v37,
-           (const MethodInfo_2F43F44 *)Method_BasicHelper_Any_BuffList_ACTION___);
+           (const MethodInfo_2F7A2A0 *)Method_BasicHelper_Any_BuffList_ACTION___);
 }
 
 
@@ -23786,7 +23786,7 @@ void __fastcall BattleBuffData_CheckInvokeBuff__set_SelfSvt(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SelfSvt_k__BackingField = value;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -23802,7 +23802,7 @@ void __fastcall BattleBuffData_CheckInvokeBuff__set_TargetSvt(
   PartyListViewItem_o *v7; // x7
 
   this->fields._TargetSvt_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._TargetSvt_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -23837,10 +23837,10 @@ bool __fastcall BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0___IsInvoke_
   const MethodInfo *v10; // x6
 
   v4 = this;
-  if ( (byte_4B690E6 & 1) == 0 )
+  if ( (byte_4BB6C2C & 1) == 0 )
   {
-    this = (BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_o *)sub_1BE4ACC(&BuffList_TypeInfo, *(_QWORD *)&act);
-    byte_4B690E6 = 1;
+    this = (BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0_o *)sub_1C13D24(&BuffList_TypeInfo, *(_QWORD *)&act);
+    byte_4BB6C2C = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -23859,7 +23859,7 @@ bool __fastcall BattleBuffData_CheckInvokeBuff___c__DisplayClass10_0___IsInvoke_
                                                                      0LL);
   if ( !buff )
 LABEL_9:
-    sub_1BE4D28(this, *(_QWORD *)&act);
+    sub_1C13F80(this, *(_QWORD *)&act);
   return BattleBuffData_BuffData__CheckCond(
            buff,
            buffData,
@@ -23886,7 +23886,7 @@ void __fastcall BattleBuffData_FieldChangeData___ctor(BattleBuffData_FieldChange
 }
 
 
-void __fastcall BattleBuffData_FieldChangeData___ctor_43632508(
+void __fastcall BattleBuffData_FieldChangeData___ctor_43837180(
         BattleBuffData_FieldChangeData_o *this,
         DataVals_o *baseVals,
         const MethodInfo *method)
@@ -23912,12 +23912,12 @@ void __fastcall BattleBuffData_FieldChangeData___ctor_43632508(
   FollowerInfo_o *v23; // x6
   PartyListViewItem_o *v24; // x7
 
-  if ( (byte_4B690C9 & 1) == 0 )
+  if ( (byte_4BB6C0F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_BgmMaster___, baseVals);
-    sub_1BE4ACC(&DataManager_TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v6);
-    byte_4B690C9 = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_BgmMaster___, baseVals);
+    sub_1C13D24(&DataManager_TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_1/*""*/, v6);
+    byte_4BB6C0F = 1;
   }
   this->fields.buffUniqueId = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -23931,22 +23931,22 @@ void __fastcall BattleBuffData_FieldChangeData___ctor_43632508(
   this->fields.bgmPriority = DataVals__GetBgmPriority(baseVals, Param, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_BgmMaster___);
   if ( !Master_object )
 LABEL_8:
-    sub_1BE4D28(Master_object, v8);
+    sub_1C13F80(Master_object, v8);
   BgmFileName = BgmMaster__GetBgmFileName(
                   (BgmMaster_o *)Master_object,
                   this->fields.bgmId,
                   (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
   this->fields.bgmName = BgmFileName;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)BgmFileName, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)BgmFileName, v11, v12, v13, v14, v15, v16);
   this->fields.isAllowSubBgmPlaying = DataVals__IsEqualsTo1(baseVals, 160, 0LL);
   ParamArray = DataVals__GetParamArray(baseVals, 102, 0LL);
   this->fields.individuality = ParamArray;
   p_individuality = &this->fields.individuality;
-  sub_1BE4A70((PartyOrganizationUtility_o *)p_individuality, (int64_t)ParamArray, v19, v20, v21, v22, v23, v24);
+  sub_1C13CC8((PartyOrganizationUtility_o *)p_individuality, (int64_t)ParamArray, v19, v20, v21, v22, v23, v24);
   *((_BYTE *)p_individuality + 8) = DataVals__GetParam(baseVals, 107, 0, 0LL) > 0;
   *((_BYTE *)p_individuality + 16) = DataVals__HasBgmPriorityInVals(baseVals, 0LL);
 }
@@ -23967,13 +23967,13 @@ BuffUniqueValue_o *__fastcall BattleBuffData_FieldChangeData__get_UniqueVal(
   int32_t buffUniqueId; // w21
   __int64 v4; // x19
 
-  if ( (byte_4B690CA & 1) == 0 )
+  if ( (byte_4BB6C10 & 1) == 0 )
   {
-    sub_1BE4ACC(&BuffUniqueValue_TypeInfo, method);
-    byte_4B690CA = 1;
+    sub_1C13D24(&BuffUniqueValue_TypeInfo, method);
+    byte_4BB6C10 = 1;
   }
   buffUniqueId = this->fields.buffUniqueId;
-  v4 = sub_1BE4D18(BuffUniqueValue_TypeInfo);
+  v4 = sub_1C13F70(BuffUniqueValue_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   *(_DWORD *)(v4 + 16) = buffUniqueId;
   *(_DWORD *)(v4 + 20) = -1;
@@ -23987,7 +23987,7 @@ void __fastcall BattleBuffData_IntervalData___ctor(BattleBuffData_IntervalData_o
 }
 
 
-void __fastcall BattleBuffData_IntervalData___ctor_43633944(
+void __fastcall BattleBuffData_IntervalData___ctor_43838616(
         BattleBuffData_IntervalData_o *this,
         DataVals_o *baseVal,
         const MethodInfo *method)
@@ -23997,7 +23997,7 @@ void __fastcall BattleBuffData_IntervalData___ctor_43633944(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !baseVal )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   this->fields.baseTurn = DataVals__GetParam(baseVal, 130, 0, 0LL);
   this->fields.baseCount = DataVals__GetParam(baseVal, 131, 0, 0LL);
   this->fields.intervalTurn = DataVals__GetParam(baseVal, 205, 0, 0LL);
@@ -24070,7 +24070,7 @@ bool __fastcall BattleBuffData_IntervalData__Update(
     {
       this->fields.intervalCount = (intervalCount - 1) & ~((intervalCount - 1) >> 31);
       if ( !buff )
-        sub_1BE4D28(this, 0LL);
+        sub_1C13F80(this, 0LL);
       buff->fields.isUse = 0;
       buff->fields.isDecide = 0;
     }
@@ -24104,7 +24104,7 @@ bool __fastcall BattleBuffData_IntervalData__Use(
     return 0;
   this->fields.updateTiming = 1;
   if ( !buffData )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   BattleBuffData__AddUpdateWaitIntervalBuff(buffData, buff, 0LL);
   return this->fields.intervalTurn <= 0 && this->fields.intervalCount < 1;
 }
@@ -24167,19 +24167,19 @@ void __fastcall BattleBuffData_ParamAdd___ctor(
   v14 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v14->fields.selfIndv = selfIndv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v14->fields, (int64_t)selfIndv, v15, v16, v17, v18, v19, v20);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v14->fields, (int64_t)selfIndv, v15, v16, v17, v18, v19, v20);
   v14->fields.opIndv = opIndv;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v14->fields.opIndv, (int64_t)opIndv, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v14->fields.opIndv, (int64_t)opIndv, v21, v22, v23, v24, v25, v26);
   v14->fields.fieldIndv = fieldIndv;
   v14 = (BattleBuffData_ParamAdd_o *)((char *)v14 + 32);
-  sub_1BE4A70((PartyOrganizationUtility_o *)v14, (int64_t)fieldIndv, v27, v28, v29, v30, v31, v32);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v14, (int64_t)fieldIndv, v27, v28, v29, v30, v31, v32);
   LODWORD(v14->fields.fieldIndv) = value;
   HIDWORD(v14->fields.fieldIndv) = maxValue;
   LODWORD(v14->fields.selfIndividualityAndCheck) = maxCount;
 }
 
 
-void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
+void __fastcall BattleBuffData_ParamAdd___ctor_43849348(
         BattleBuffData_ParamAdd_o *this,
         DataVals_o *dataVals,
         const MethodInfo *method)
@@ -24214,7 +24214,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
   PartyListViewItem_o *v32; // x7
 
   if ( !dataVals )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   ParamArray = DataVals__GetParamArray(dataVals, 151, 0LL);
   v6 = DataVals__GetParamArray(dataVals, 152, 0LL);
   v7 = DataVals__GetParamArray(dataVals, 153, 0LL);
@@ -24224,7 +24224,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
   BattleBuffData_ParamAdd___ctor(this, ParamArray, v6, v7, Param, v9, v10, v11);
   v12 = DataVals__GetSnapShotParamAddSelfIndividualityAndCheck(dataVals, 0LL);
   this->fields.selfIndividualityAndCheck = v12;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.selfIndividualityAndCheck,
     (int64_t)v12,
     v13,
@@ -24235,7 +24235,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
     v18);
   v19 = DataVals__GetSnapShotParamAddOpIndividualityAndCheck(dataVals, 0LL);
   this->fields.opIndividualityAndCheck = v19;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.opIndividualityAndCheck,
     (int64_t)v19,
     v20,
@@ -24246,7 +24246,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
     v25);
   v26 = DataVals__GetSnapShotParamAddFieldIndividualityAndCheck(dataVals, 0LL);
   this->fields.fieldIndividualityAndCheck = v26;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.fieldIndividualityAndCheck,
     (int64_t)v26,
     v27,
@@ -24258,7 +24258,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644676(
 }
 
 
-void __fastcall BattleBuffData_ParamAdd___ctor_43644968(
+void __fastcall BattleBuffData_ParamAdd___ctor_43849640(
         BattleBuffData_ParamAdd_o *this,
         BattleBuffData_BuffData_o *buffData,
         const MethodInfo *method)
@@ -24293,7 +24293,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644968(
   PartyListViewItem_o *v32; // x7
 
   if ( !buffData )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   BattleBuffData_ParamAdd___ctor(
     this,
     buffData->fields.paramAddSelfIndividuality,
@@ -24308,7 +24308,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644968(
                            buffData->fields.paramAddSelfIndividualityAndCheck,
                            v7);
   this->fields.selfIndividualityAndCheck = TwoDimensionIntArray;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.selfIndividualityAndCheck,
     (int64_t)TwoDimensionIntArray,
     v9,
@@ -24319,7 +24319,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644968(
     v14);
   v17 = BattleBuffData_ParamAdd__GetTwoDimensionIntArray(v15, buffData->fields.paramAddOpIndividualityAndCheck, v16);
   this->fields.opIndividualityAndCheck = v17;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.opIndividualityAndCheck,
     (int64_t)v17,
     v18,
@@ -24330,7 +24330,7 @@ void __fastcall BattleBuffData_ParamAdd___ctor_43644968(
     v23);
   v26 = BattleBuffData_ParamAdd__GetTwoDimensionIntArray(v24, buffData->fields.paramAddFieldIndividualityAndCheck, v25);
   this->fields.fieldIndividualityAndCheck = v26;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.fieldIndividualityAndCheck,
     (int64_t)v26,
     v27,
@@ -24367,23 +24367,23 @@ System_Int32_array_array *__fastcall BattleBuffData_ParamAdd__GetTwoDimensionInt
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4B690EA & 1) == 0 )
+  if ( (byte_4BB6C30 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int____Add__, arrayData);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int____ToArray__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int_____ctor__, v5);
-    sub_1BE4ACC(&System_Collections_Generic_List_int____TypeInfo, v6);
-    byte_4B690EA = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int____Add__, arrayData);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int____ToArray__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int_____ctor__, v5);
+    sub_1C13D24(&System_Collections_Generic_List_int____TypeInfo, v6);
+    byte_4BB6C30 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)arrayData, 0LL) )
     return 0LL;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_int____TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_int____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_int_____ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_int_____ctor__);
   if ( !arrayData )
 LABEL_18:
-    sub_1BE4D28(v9, p_obj);
+    sub_1C13F80(v9, p_obj);
   max_length = arrayData->max_length;
   if ( max_length >= 1 )
   {
@@ -24391,7 +24391,7 @@ LABEL_18:
     do
     {
       if ( v18 >= max_length )
-        sub_1BE4D30(v9, p_obj);
+        sub_1C13F88(v9, p_obj);
       v19 = arrayData->m_Items[v18];
       if ( !v19 )
         goto LABEL_18;
@@ -24409,14 +24409,14 @@ LABEL_18:
         System_Collections_Generic_List_object___AddWithResize(
           v8,
           p_obj,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = &items->obj.klass + size;
         v8->fields._size = size + 1;
         v23[4] = (Il2CppClass *)p_obj;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)p_obj, v11, v12, v13, v14, v15, v16);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)p_obj, v11, v12, v13, v14, v15, v16);
       }
       max_length = arrayData->max_length;
     }
@@ -24426,7 +24426,7 @@ LABEL_18:
     goto LABEL_18;
   return (System_Int32_array_array *)System_Collections_Generic_List_object___ToArray(
                                        v8,
-                                       (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_int____ToArray__);
+                                       (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_int____ToArray__);
 }
 
 
@@ -24458,7 +24458,7 @@ void __fastcall BattleBuffData_SaveArrayData___ctor(BattleBuffData_SaveArrayData
 }
 
 
-void __fastcall BattleBuffData_SaveArrayData___ctor_43645456(
+void __fastcall BattleBuffData_SaveArrayData___ctor_43850128(
         BattleBuffData_SaveArrayData_o *this,
         System_Int32_array *argIntArray,
         const MethodInfo *method)
@@ -24472,7 +24472,7 @@ void __fastcall BattleBuffData_SaveArrayData___ctor_43645456(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.intArray = argIntArray;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)argIntArray, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)argIntArray, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -24488,7 +24488,7 @@ void __fastcall BattleBuffData_ShowBuffData___ctor(BattleBuffData_ShowBuffData_o
 }
 
 
-void __fastcall BattleBuffData_ShowBuffData___ctor_43632084(
+void __fastcall BattleBuffData_ShowBuffData___ctor_43836756(
         BattleBuffData_ShowBuffData_o *this,
         BattleBuffData_BuffData_o *buff,
         const MethodInfo *method)
@@ -24513,7 +24513,7 @@ void __fastcall BattleBuffData_ShowBuffData___ctor_43632084(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !buff )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   this->fields.buffId = buff->fields.buffId;
   if ( buff->fields._isRemove )
   {
@@ -24537,7 +24537,7 @@ void __fastcall BattleBuffData_ShowBuffData___ctor_43632084(
   this->fields._IntervalData_k__BackingField = intervalData;
   p_IntervalData_k__BackingField = &this->fields._IntervalData_k__BackingField;
   *((_DWORD *)p_IntervalData_k__BackingField - 3) = addOrder;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)p_IntervalData_k__BackingField,
     (int64_t)intervalData,
     v7,
@@ -24587,7 +24587,7 @@ void __fastcall BattleBuffData_ShowBuffData__set_IntervalData(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IntervalData_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._IntervalData_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -24616,7 +24616,7 @@ void __fastcall BattleBuffData_SkillRankChangeData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v4->fields.buffData = buffData;
   v4 = (BattleBuffData_SkillRankChangeData_o *)((char *)v4 + 16);
-  sub_1BE4A70((PartyOrganizationUtility_o *)v4, (int64_t)buffData, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v4, (int64_t)buffData, v5, v6, v7, v8, v9, v10);
   LODWORD(v4->monitor) = 0;
   BYTE4(v4->monitor) = 0;
 }
@@ -24635,7 +24635,7 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData__GetLogicRankUpCount(
   const MethodInfo *v9; // x7
   __int64 v10; // x0
   __int64 v11; // x1
-  BattleBuffData_BuffData_array *BuffList_43446400; // x19
+  BattleBuffData_BuffData_array *BuffList_43650512; // x19
   const MethodInfo *v13; // x3
   BattleBuffData_SkillRankChangeData___c_c *v14; // x0
   System_Func_object__int__o *_9__11_0; // x20
@@ -24648,22 +24648,22 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData__GetLogicRankUpCount(
   FollowerInfo_o *v22; // x6
   PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4B690D0 & 1) == 0 )
+  if ( (byte_4BB6C16 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___, v3);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v4);
-    sub_1BE4ACC(&Method_BattleBuffData_SkillRankChangeData___c__GetLogicRankUpCount_b__11_0__, v5);
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
-    byte_4B690D0 = 1;
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___, v3);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v4);
+    sub_1C13D24(&Method_BattleBuffData_SkillRankChangeData___c__GetLogicRankUpCount_b__11_0__, v5);
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
+    byte_4BB6C16 = 1;
   }
   buffData = this->fields.buffData;
-  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
+  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
   if ( !buffData )
-    sub_1BE4D28(v10, v11);
-  BuffList_43446400 = BattleBuffData__getBuffList_43446400(buffData, 92, v8, 0, 0, 0LL, 0LL, 0LL);
-  BattleBuffData_SkillRankChangeData__RevertUnusedBuff(this, BuffList_43446400, 1, v13);
+    sub_1C13F80(v10, v11);
+  BuffList_43650512 = BattleBuffData__getBuffList_43650512(buffData, 92, v8, 0, 0, 0LL, 0LL, 0LL);
+  BattleBuffData_SkillRankChangeData__RevertUnusedBuff(this, BuffList_43650512, 1, v13);
   v14 = BattleBuffData_SkillRankChangeData___c_TypeInfo;
   if ( !BattleBuffData_SkillRankChangeData___c_TypeInfo->_2.cctor_finished )
   {
@@ -24679,7 +24679,7 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData__GetLogicRankUpCount(
       v14 = BattleBuffData_SkillRankChangeData___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v14->static_fields->__9;
-    _9__11_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+    _9__11_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__11_0,
       v16,
@@ -24687,7 +24687,7 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData__GetLogicRankUpCount(
       0LL);
     static_fields = BattleBuffData_SkillRankChangeData___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = (struct System_Func_BattleBuffData_BuffData__int__o *)_9__11_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__11_0,
       (int64_t)_9__11_0,
       v18,
@@ -24698,9 +24698,9 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData__GetLogicRankUpCount(
       v23);
   }
   return System_Linq_Enumerable__Sum_object_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)BuffList_43446400,
+           (System_Collections_Generic_IEnumerable_TSource__o *)BuffList_43650512,
            (System_Func_TSource__int__o *)_9__11_0,
-           (const MethodInfo_2F91654 *)Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___);
+           (const MethodInfo_2FC78B4 *)Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___);
 }
 
 
@@ -24718,20 +24718,20 @@ void __fastcall BattleBuffData_SkillRankChangeData__RevertUnusedBuff(
   __int64 v12; // x1
   System_Action_object__o *v13; // x21
 
-  if ( (byte_4B690D1 & 1) == 0 )
+  if ( (byte_4BB6C17 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v7);
-    sub_1BE4ACC(&Method_BattleBuffData_SkillRankChangeData___c__DisplayClass12_0__RevertUnusedBuff_b__0__, v8);
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData___c__DisplayClass12_0_TypeInfo, v9);
-    byte_4B690D1 = 1;
+    sub_1C13D24(&System_Action_BattleBuffData_BuffData__TypeInfo, buffArray);
+    sub_1C13D24(&Method_BasicHelper_ForEach_BattleBuffData_BuffData___, v7);
+    sub_1C13D24(&Method_BattleBuffData_SkillRankChangeData___c__DisplayClass12_0__RevertUnusedBuff_b__0__, v8);
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData___c__DisplayClass12_0_TypeInfo, v9);
+    byte_4BB6C17 = 1;
   }
-  v10 = sub_1BE4D18(BattleBuffData_SkillRankChangeData___c__DisplayClass12_0_TypeInfo);
+  v10 = sub_1C13F70(BattleBuffData_SkillRankChangeData___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_8;
   *(_BYTE *)(v10 + 16) = isUnused;
-  v13 = (System_Action_object__o *)sub_1BE4D18(System_Action_BattleBuffData_BuffData__TypeInfo);
+  v13 = (System_Action_object__o *)sub_1C13F70(System_Action_BattleBuffData_BuffData__TypeInfo);
   System_Action_object____ctor(
     v13,
     (Il2CppObject *)v10,
@@ -24740,7 +24740,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__RevertUnusedBuff(
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)buffArray,
     (System_Action_T__o *)v13,
-    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
+    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_BattleBuffData_BuffData___);
   if ( *(_BYTE *)(v10 + 16) )
   {
     buffData = this->fields.buffData;
@@ -24750,7 +24750,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__RevertUnusedBuff(
       return;
     }
 LABEL_8:
-    sub_1BE4D28(buffData, v12);
+    sub_1C13F80(buffData, v12);
   }
 }
 
@@ -24781,20 +24781,20 @@ void __fastcall BattleBuffData_SkillRankChangeData__Update(
   FollowerInfo_o *v22; // x6
   PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4B690CF & 1) == 0 )
+  if ( (byte_4BB6C15 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___, v3);
-    sub_1BE4ACC(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v4);
-    sub_1BE4ACC(&Method_BattleBuffData_SkillRankChangeData___c__Update_b__10_0__, v5);
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
-    byte_4B690CF = 1;
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___, v3);
+    sub_1C13D24(&System_Func_BattleBuffData_BuffData__int__TypeInfo, v4);
+    sub_1C13D24(&Method_BattleBuffData_SkillRankChangeData___c__Update_b__10_0__, v5);
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
+    byte_4BB6C15 = 1;
   }
   buffData = this->fields.buffData;
-  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
+  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
   if ( !buffData )
-    sub_1BE4D28(v10, v11);
+    sub_1C13F80(v10, v11);
   FixBuffArray = BattleBuffData__GetFixBuffArray(buffData, 92, v8, 0, 0LL);
   BattleBuffData_SkillRankChangeData__RevertUnusedBuff(this, FixBuffArray, 1, v13);
   v14 = BattleBuffData_SkillRankChangeData___c_TypeInfo;
@@ -24812,11 +24812,11 @@ void __fastcall BattleBuffData_SkillRankChangeData__Update(
       v14 = BattleBuffData_SkillRankChangeData___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v14->static_fields->__9;
-    _9__10_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+    _9__10_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleBuffData_BuffData__int__TypeInfo);
     System_Func_object__int____ctor(_9__10_0, v16, Method_BattleBuffData_SkillRankChangeData___c__Update_b__10_0__, 0LL);
     static_fields = BattleBuffData_SkillRankChangeData___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Func_BattleBuffData_BuffData__int__o *)_9__10_0;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__10_0,
       (int64_t)_9__10_0,
       v18,
@@ -24829,7 +24829,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__Update(
   this->fields._RankUpCount_k__BackingField = System_Linq_Enumerable__Sum_object_(
                                                 (System_Collections_Generic_IEnumerable_TSource__o *)FixBuffArray,
                                                 (System_Func_TSource__int__o *)_9__10_0,
-                                                (const MethodInfo_2F91654 *)Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___);
+                                                (const MethodInfo_2FC78B4 *)Method_System_Linq_Enumerable_Sum_BattleBuffData_BuffData___);
 }
 
 
@@ -24869,18 +24869,18 @@ void __fastcall BattleBuffData_SkillRankChangeData__UseBuff(
   System_Object_array *All_object; // x0
   const MethodInfo *v24; // x3
 
-  if ( (byte_4B690D2 & 1) == 0 )
+  if ( (byte_4BB6C18 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_FindAll_BattleBuffData_BuffData___, method);
-    sub_1BE4ACC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v3);
-    sub_1BE4ACC(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v4);
-    sub_1BE4ACC(&Method_BattleBuffData_SkillRankChangeData___c__UseBuff_b__13_0__, v5);
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
-    byte_4B690D2 = 1;
+    sub_1C13D24(&Method_System_Array_FindAll_BattleBuffData_BuffData___, method);
+    sub_1C13D24(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v3);
+    sub_1C13D24(&System_Predicate_BattleBuffData_BuffData__TypeInfo, v4);
+    sub_1C13D24(&Method_BattleBuffData_SkillRankChangeData___c__UseBuff_b__13_0__, v5);
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v6);
+    byte_4BB6C18 = 1;
   }
   buffData = this->fields.buffData;
-  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BE4D18(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_43634876(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
+  v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1C13F70(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+  BattleBuffData_CheckIndividualitiesData___ctor_43839548(v8, 0LL, 0LL, 0LL, 0LL, 0LL, 0LL, v9);
   if ( !buffData )
     goto LABEL_18;
   FixBuffArray = (BattleBuffData_o *)BattleBuffData__GetFixBuffArray(buffData, 92, v8, 0, 0LL);
@@ -24904,7 +24904,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__UseBuff(
         v13 = BattleBuffData_SkillRankChangeData___c_TypeInfo;
       }
       v15 = (Il2CppObject *)v13->static_fields->__9;
-      _9__13_0 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleBuffData_BuffData__TypeInfo);
+      _9__13_0 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleBuffData_BuffData__TypeInfo);
       System_Predicate_object____ctor(
         _9__13_0,
         v15,
@@ -24912,7 +24912,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__UseBuff(
         0LL);
       static_fields = BattleBuffData_SkillRankChangeData___c_TypeInfo->static_fields;
       static_fields->__9__13_0 = (struct System_Predicate_BattleBuffData_BuffData__o *)_9__13_0;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&static_fields->__9__13_0,
         (int64_t)_9__13_0,
         v17,
@@ -24925,7 +24925,7 @@ void __fastcall BattleBuffData_SkillRankChangeData__UseBuff(
     All_object = System_Array__FindAll_object_(
                    v12,
                    (System_Predicate_T__o *)_9__13_0,
-                   (const MethodInfo_305438C *)Method_System_Array_FindAll_BattleBuffData_BuffData___);
+                   (const MethodInfo_308A788 *)Method_System_Array_FindAll_BattleBuffData_BuffData___);
     if ( !All_object )
       goto LABEL_16;
     v11 = (BattleBuffData_BuffData_array *)All_object;
@@ -24940,7 +24940,7 @@ LABEL_16:
       return;
     }
 LABEL_18:
-    sub_1BE4D28(FixBuffArray, v11);
+    sub_1C13F80(FixBuffArray, v11);
   }
 }
 
@@ -24990,15 +24990,15 @@ void __fastcall BattleBuffData_SkillRankChangeData___c___cctor(const MethodInfo 
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B690D3 & 1) == 0 )
+  if ( (byte_4BB6C19 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v1);
-    byte_4B690D3 = 1;
+    sub_1C13D24(&BattleBuffData_SkillRankChangeData___c_TypeInfo, v1);
+    byte_4BB6C19 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(BattleBuffData_SkillRankChangeData___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(BattleBuffData_SkillRankChangeData___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleBuffData_SkillRankChangeData___c_TypeInfo->static_fields->__9 = (struct BattleBuffData_SkillRankChangeData___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)BattleBuffData_SkillRankChangeData___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -25024,7 +25024,7 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData___c___GetLogicRankUpCount_
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.param;
 }
 
@@ -25035,7 +25035,7 @@ int32_t __fastcall BattleBuffData_SkillRankChangeData___c___Update_b__10_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.param;
 }
 
@@ -25046,7 +25046,7 @@ bool __fastcall BattleBuffData_SkillRankChangeData___c___UseBuff_b__13_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.count > 0;
 }
 
@@ -25068,7 +25068,7 @@ void __fastcall BattleBuffData_SkillRankChangeData___c__DisplayClass12_0___Rever
   struct BattleBuffData_IntervalData_o *intervalData; // x8
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   isUnused = this->fields.isUnused;
   buff->fields.isUse = 0;
   buff->fields.isDecide = 0;
@@ -25153,14 +25153,14 @@ bool __fastcall BattleBuffData__AllBuffEnumerable_d__247__MoveNext(
 
   v55 = this;
   v2 = this;
-  if ( (byte_4B690F4 & 1) == 0 )
+  if ( (byte_4BB6C3A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v3);
-    this = (BattleBuffData__AllBuffEnumerable_d__247_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__get_Current__, v3);
+    this = (BattleBuffData__AllBuffEnumerable_d__247_o *)sub_1C13D24(
                                                            &Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__,
                                                            v4);
-    byte_4B690F4 = 1;
+    byte_4BB6C3A = 1;
   }
   v54 = &v55;
   _1__state = v2->fields.__1__state;
@@ -25173,33 +25173,33 @@ bool __fastcall BattleBuffData__AllBuffEnumerable_d__247__MoveNext(
         return 0;
       v2->fields.__1__state = -1;
       if ( !_4__this )
-        sub_1BE4D28(this, method);
+        sub_1C13F80(this, method);
       activeList = (System_Collections_Generic_List_object__o *)_4__this->fields.activeList;
       if ( !activeList )
-        sub_1BE4D28(0LL, method);
+        sub_1C13F80(0LL, method);
       System_Collections_Generic_List_object___GetEnumerator(
         &v52,
         activeList,
-        (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+        (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
       v8 = v55;
       v9 = *(_OWORD *)&v52.fields._list;
       p__7__wrap1 = &v55->fields.__7__wrap1;
       v53 = v52;
       v55->fields.__7__wrap1.fields._current = (struct BattleBuffData_BuffData_o *)v52.fields._current;
       *(_OWORD *)&v8->fields.__7__wrap1.fields._list = v9;
-      sub_1BE4A70((PartyOrganizationUtility_o *)p__7__wrap1, 0LL, v11, v12, v13, v14, v15, v16);
+      sub_1C13CC8((PartyOrganizationUtility_o *)p__7__wrap1, 0LL, v11, v12, v13, v14, v15, v16);
       v2 = v55;
     }
     v2->fields.__1__state = -3;
     v24 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
     v25 = v55;
     if ( v24 )
     {
       current = v55->fields.__7__wrap1.fields._current;
       v55->fields.__2__current = current;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&v25->fields.__2__current,
         (int64_t)current,
         v18,
@@ -25218,33 +25218,33 @@ bool __fastcall BattleBuffData__AllBuffEnumerable_d__247__MoveNext(
     *(_QWORD *)&v30->fields.__7__wrap1.fields._index = 0LL;
     v30->fields.__7__wrap1.fields._current = 0LL;
     if ( !_4__this )
-      sub_1BE4D28(v28, v29);
+      sub_1C13F80(v28, v29);
     passiveList = (System_Collections_Generic_List_object__o *)_4__this->fields.passiveList;
     if ( !passiveList )
-      sub_1BE4D28(0LL, v29);
+      sub_1C13F80(0LL, v29);
     System_Collections_Generic_List_object___GetEnumerator(
       &v52,
       passiveList,
-      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
+      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__GetEnumerator__);
     v32 = v55;
     v33 = *(_OWORD *)&v52.fields._list;
     v34 = &v55->fields.__7__wrap1;
     v53 = v52;
     v55->fields.__7__wrap1.fields._current = (struct BattleBuffData_BuffData_o *)v52.fields._current;
     *(_OWORD *)&v32->fields.__7__wrap1.fields._list = v33;
-    sub_1BE4A70((PartyOrganizationUtility_o *)v34, 0LL, v35, v36, v37, v38, v39, v40);
+    sub_1C13CC8((PartyOrganizationUtility_o *)v34, 0LL, v35, v36, v37, v38, v39, v40);
     v2 = v55;
   }
   v2->fields.__1__state = -4;
   v48 = System_Collections_Generic_List_Enumerator_object___MoveNext(
           (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-          (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
+          (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__MoveNext__);
   v49 = v55;
   if ( v48 )
   {
     v50 = v55->fields.__7__wrap1.fields._current;
     v55->fields.__2__current = v50;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v49->fields.__2__current, (int64_t)v50, v42, v43, v44, v45, v46, v47);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v49->fields.__2__current, (int64_t)v50, v42, v43, v44, v45, v46, v47);
     result = 1;
     v55->fields.__1__state = 2;
   }
@@ -25275,10 +25275,10 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B690F7 & 1) == 0 )
+  if ( (byte_4BB6C3D & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffEnumerable_d__247_TypeInfo, method);
-    byte_4B690F7 = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffEnumerable_d__247_TypeInfo, method);
+    byte_4BB6C3D = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -25288,13 +25288,13 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   }
   else
   {
-    v4 = sub_1BE4D18(BattleBuffData__AllBuffEnumerable_d__247_TypeInfo);
+    v4 = sub_1C13F70(BattleBuffData__AllBuffEnumerable_d__247_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     *(_DWORD *)(v4 + 16) = 0;
     *(_DWORD *)(v4 + 32) = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     *(_QWORD *)(v4 + 40) = _4__this;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v4 + 40), (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v4 + 40), (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
     return (System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *)v4;
   }
   return (System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *)this;
@@ -25317,11 +25317,11 @@ void __fastcall __noreturn BattleBuffData__AllBuffEnumerable_d__247__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
+  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BE4AE0(&Method_BattleBuffData__AllBuffEnumerable_d__247_System_Collections_IEnumerator_Reset__);
-  sub_1BE4BF4(v3, v4);
+  v4 = sub_1C13D38(&Method_BattleBuffData__AllBuffEnumerable_d__247_System_Collections_IEnumerator_Reset__);
+  sub_1C13E4C(v3, v4);
 }
 
 
@@ -25357,15 +25357,15 @@ void __fastcall BattleBuffData__AllBuffEnumerable_d__247____m__Finally1(
         BattleBuffData__AllBuffEnumerable_d__247_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B690F5 & 1) == 0 )
+  if ( (byte_4BB6C3B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    byte_4B690F5 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    byte_4BB6C3B = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -25373,15 +25373,15 @@ void __fastcall BattleBuffData__AllBuffEnumerable_d__247____m__Finally2(
         BattleBuffData__AllBuffEnumerable_d__247_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B690F6 & 1) == 0 )
+  if ( (byte_4BB6C3C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
-    byte_4B690F6 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__, method);
+    byte_4BB6C3C = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleBuffData_BuffData__Dispose__);
 }
 
 
@@ -25462,10 +25462,10 @@ bool __fastcall BattleBuffData__AllBuffValidEnumerablePriorActive_d__248__MoveNe
     this->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_20:
-      sub_1BE4D28(this, method);
+      sub_1C13F80(this, method);
     ActiveList = BattleBuffData__getActiveList(_4__this, this->fields.isCheckInterval, 0LL);
     v9->fields.__7__wrap1 = ActiveList;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)ActiveList, v12, v13, v14, v15, v16, v17);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)ActiveList, v12, v13, v14, v15, v16, v17);
     v18 = 0;
     v9->fields.__7__wrap2 = 0;
   }
@@ -25480,21 +25480,21 @@ LABEL_20:
       v24 = (int64_t)_7__wrap1->m_Items[v18];
       v9->fields.__2__current = (struct BattleBuffData_BuffData_o *)v24;
       p__2__current = (PartyOrganizationUtility_o *)&v9->fields.__2__current;
-      sub_1BE4A70(p__2__current, v24, v2, v3, v4, v5, v6, v7);
+      sub_1C13CC8(p__2__current, v24, v2, v3, v4, v5, v6, v7);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
       return result;
     }
 LABEL_21:
-    sub_1BE4D30(this, method);
+    sub_1C13F88(this, method);
   }
   v9->fields.__7__wrap1 = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, 0LL, v2, v3, v4, v5, v6, v7);
   if ( !_4__this )
     goto LABEL_20;
   PassiveList = BattleBuffData__getPassiveList(_4__this, v9->fields.isCheckInterval, 0LL);
   v9->fields.__7__wrap1 = PassiveList;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)PassiveList, v28, v29, v30, v31, v32, v33);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)PassiveList, v28, v29, v30, v31, v32, v33);
   v20 = 0;
   v9->fields.__7__wrap2 = 0;
 LABEL_14:
@@ -25506,7 +25506,7 @@ LABEL_14:
   if ( v20 >= v35 )
   {
     this->klass = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)this, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)this, 0LL, v2, v3, v4, v5, v6, v7);
     return 0;
   }
   if ( v20 >= (unsigned int)v35 )
@@ -25514,7 +25514,7 @@ LABEL_14:
   v36 = (int64_t)v34->m_Items[v20];
   v9->fields.__2__current = (struct BattleBuffData_BuffData_o *)v36;
   v37 = (PartyOrganizationUtility_o *)&v9->fields.__2__current;
-  sub_1BE4A70(v37, v36, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8(v37, v36, v2, v3, v4, v5, v6, v7);
   *(_DWORD *)&v37[-1].fields._IsQuestStartMenuMode_k__BackingField = 2;
   return 1;
 }
@@ -25535,10 +25535,10 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   PartyListViewItem_o *v11; // x7
   System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *result; // x0
 
-  if ( (byte_4B690F9 & 1) == 0 )
+  if ( (byte_4BB6C3F & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo, method);
-    byte_4B690F9 = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo, method);
+    byte_4BB6C3F = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -25549,13 +25549,13 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   }
   else
   {
-    v4 = (BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_o *)sub_1BE4D18(BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo);
+    v4 = (BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_o *)sub_1C13F70(BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v4->fields.__4__this, (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v4->fields.__4__this, (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
   }
   result = (System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *)v4;
   v4->fields.isCheckInterval = this->fields.__3__isCheckInterval;
@@ -25579,11 +25579,11 @@ void __fastcall __noreturn BattleBuffData__AllBuffValidEnumerablePriorActive_d__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
+  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BE4AE0(&Method_BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_System_Collections_IEnumerator_Reset__);
-  sub_1BE4BF4(v3, v4);
+  v4 = sub_1C13D38(&Method_BattleBuffData__AllBuffValidEnumerablePriorActive_d__248_System_Collections_IEnumerator_Reset__);
+  sub_1C13E4C(v3, v4);
 }
 
 
@@ -25680,10 +25680,10 @@ bool __fastcall BattleBuffData__AllBuffValidEnumerable_d__249__MoveNext(
     this->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_20:
-      sub_1BE4D28(this, method);
+      sub_1C13F80(this, method);
     PassiveList = BattleBuffData__getPassiveList(_4__this, this->fields.isCheckInterval, 0LL);
     v9->fields.__7__wrap1 = PassiveList;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&v9->fields.__7__wrap1,
       (int64_t)PassiveList,
       v12,
@@ -25706,21 +25706,21 @@ LABEL_20:
       v24 = (int64_t)_7__wrap1->m_Items[v18];
       v9->fields.__2__current = (struct BattleBuffData_BuffData_o *)v24;
       p__2__current = (PartyOrganizationUtility_o *)&v9->fields.__2__current;
-      sub_1BE4A70(p__2__current, v24, v2, v3, v4, v5, v6, v7);
+      sub_1C13CC8(p__2__current, v24, v2, v3, v4, v5, v6, v7);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
       return result;
     }
 LABEL_21:
-    sub_1BE4D30(this, method);
+    sub_1C13F88(this, method);
   }
   v9->fields.__7__wrap1 = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, 0LL, v2, v3, v4, v5, v6, v7);
   if ( !_4__this )
     goto LABEL_20;
   ActiveList = BattleBuffData__getActiveList(_4__this, v9->fields.isCheckInterval, 0LL);
   v9->fields.__7__wrap1 = ActiveList;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)ActiveList, v28, v29, v30, v31, v32, v33);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__7__wrap1, (int64_t)ActiveList, v28, v29, v30, v31, v32, v33);
   v20 = 0;
   v9->fields.__7__wrap2 = 0;
 LABEL_14:
@@ -25732,7 +25732,7 @@ LABEL_14:
   if ( v20 >= v35 )
   {
     this->klass = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)this, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C13CC8((PartyOrganizationUtility_o *)this, 0LL, v2, v3, v4, v5, v6, v7);
     return 0;
   }
   if ( v20 >= (unsigned int)v35 )
@@ -25740,7 +25740,7 @@ LABEL_14:
   v36 = (int64_t)v34->m_Items[v20];
   v9->fields.__2__current = (struct BattleBuffData_BuffData_o *)v36;
   v37 = (PartyOrganizationUtility_o *)&v9->fields.__2__current;
-  sub_1BE4A70(v37, v36, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8(v37, v36, v2, v3, v4, v5, v6, v7);
   *(_DWORD *)&v37[-1].fields._IsQuestStartMenuMode_k__BackingField = 2;
   return 1;
 }
@@ -25761,10 +25761,10 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   PartyListViewItem_o *v11; // x7
   System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *result; // x0
 
-  if ( (byte_4B690F8 & 1) == 0 )
+  if ( (byte_4BB6C3E & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo, method);
-    byte_4B690F8 = 1;
+    sub_1C13D24(&BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo, method);
+    byte_4BB6C3E = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -25775,13 +25775,13 @@ System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *__fastcall Ba
   }
   else
   {
-    v4 = (BattleBuffData__AllBuffValidEnumerable_d__249_o *)sub_1BE4D18(BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo);
+    v4 = (BattleBuffData__AllBuffValidEnumerable_d__249_o *)sub_1C13F70(BattleBuffData__AllBuffValidEnumerable_d__249_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0LL);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v4->fields.__4__this, (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v4->fields.__4__this, (int64_t)_4__this, v6, v7, v8, v9, v10, v11);
   }
   result = (System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__o *)v4;
   v4->fields.isCheckInterval = this->fields.__3__isCheckInterval;
@@ -25805,11 +25805,11 @@ void __fastcall __noreturn BattleBuffData__AllBuffValidEnumerable_d__249__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
+  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BE4AE0(&Method_BattleBuffData__AllBuffValidEnumerable_d__249_System_Collections_IEnumerator_Reset__);
-  sub_1BE4BF4(v3, v4);
+  v4 = sub_1C13D38(&Method_BattleBuffData__AllBuffValidEnumerable_d__249_System_Collections_IEnumerator_Reset__);
+  sub_1C13E4C(v3, v4);
 }
 
 
@@ -25840,15 +25840,15 @@ void __fastcall BattleBuffData___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B690EB & 1) == 0 )
+  if ( (byte_4BB6C31 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleBuffData___c_TypeInfo, v1);
-    byte_4B690EB = 1;
+    sub_1C13D24(&BattleBuffData___c_TypeInfo, v1);
+    byte_4BB6C31 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(BattleBuffData___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(BattleBuffData___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleBuffData___c_TypeInfo->static_fields->__9 = (struct BattleBuffData___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)BattleBuffData___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -25872,7 +25872,7 @@ int32_t __fastcall BattleBuffData___c___AddGetSkillTypeBuff_b__218_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -25884,7 +25884,7 @@ int32_t __fastcall BattleBuffData___c___AddGetSkillTypeBuff_b__218_1(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.addOrder - b->fields.addOrder;
 }
 
@@ -25896,7 +25896,7 @@ int32_t __fastcall BattleBuffData___c___AddGetSkillTypeBuff_b__218_2(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.addOrder - b->fields.addOrder;
 }
 
@@ -25908,7 +25908,7 @@ int32_t __fastcall BattleBuffData___c___AddGetSkillTypeBuff_b__218_3(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.addOrder - b->fields.addOrder;
 }
 
@@ -25919,7 +25919,7 @@ bool __fastcall BattleBuffData___c___BoardTurnProgressing_b__70_0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -25930,7 +25930,7 @@ bool __fastcall BattleBuffData___c___BoardTurnProgressing_b__70_1(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -25941,7 +25941,7 @@ bool __fastcall BattleBuffData___c___CancelExtendingLife_b__73_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -25952,7 +25952,7 @@ void __fastcall BattleBuffData___c___CancelExtendingLife_b__73_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   x->fields._IsExtendingLife_k__BackingField = 0;
 }
 
@@ -25963,7 +25963,7 @@ bool __fastcall BattleBuffData___c___CommonTurnProgressing_b__69_0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -25974,7 +25974,7 @@ bool __fastcall BattleBuffData___c___CommonTurnProgressing_b__69_1(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -25987,7 +25987,7 @@ void __fastcall BattleBuffData___c___DirectUpdateWaitIntervalBuff_b__28_0(
   BattleBuffData_IntervalData_o *intervalData; // x0
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   intervalData = buff->fields.intervalData;
   if ( intervalData )
     BattleBuffData_IntervalData__Update(intervalData, buff, method);
@@ -26000,7 +26000,7 @@ bool __fastcall BattleBuffData___c___GetAllBGMChangeBuffArray_b__252_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.changeBgmData != 0LL;
 }
 
@@ -26011,7 +26011,7 @@ bool __fastcall BattleBuffData___c___GetAllCommandAssistBuff_b__208_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.commandAssistId > 0;
 }
 
@@ -26022,7 +26022,7 @@ bool __fastcall BattleBuffData___c___GetAllCommandCodeBuff_b__207_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields.userCommandCodeId > 0;
 }
 
@@ -26033,7 +26033,7 @@ bool __fastcall BattleBuffData___c___GetAllConnectedCommandCardBuff_b__235_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__isCommandCardBuff(buff, (const MethodInfo *)buff);
 }
 
@@ -26044,7 +26044,7 @@ bool __fastcall BattleBuffData___c___GetAllConnectedCommandCardBuff_b__235_1(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__isCommandCardBuff(buff, (const MethodInfo *)buff)
       || buff->fields.userCommandCodeId > 0
       || buff->fields.commandAssistId > 0;
@@ -26057,7 +26057,7 @@ bool __fastcall BattleBuffData___c___GetAllIntervalBuffArray_b__254_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.intervalData != 0LL;
 }
 
@@ -26068,7 +26068,7 @@ bool __fastcall BattleBuffData___c___GetAllValidBGMChangeBuffArray_b__253_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.changeBgmData != 0LL;
 }
 
@@ -26083,7 +26083,7 @@ bool __fastcall BattleBuffData___c___GetAvaliableActiveBuffArray_b__105_0(
   int32_t state; // w8
 
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   result = !s->fields._isRemove
         && ((intervalData = s->fields.intervalData) == 0LL
          || intervalData->fields.intervalTurn <= 0 && intervalData->fields.intervalCount <= 0)
@@ -26103,7 +26103,7 @@ bool __fastcall BattleBuffData___c___GetClassIconEffectBuffList_b__264_0(
   bool result; // w0
 
   if ( !b )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   intervalData = b->fields.intervalData;
   result = (!intervalData || intervalData->fields.intervalTurn <= 0 && intervalData->fields.intervalCount <= 0)
         && (state = b->fields.state, (state & 0x24011) == 0)
@@ -26118,7 +26118,7 @@ bool __fastcall BattleBuffData___c___GetCurrentWarBoardNotAttackedBuff_b__242_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !buff->fields._isRemove && BattleBuffData_BuffData__IsWarBoardNotAttacked(buff, (const MethodInfo *)buff);
 }
 
@@ -26129,7 +26129,7 @@ bool __fastcall BattleBuffData___c___GetEffectBuffList_b__225_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__isEffectBuff(buff, (const MethodInfo *)buff);
 }
 
@@ -26140,7 +26140,7 @@ bool __fastcall BattleBuffData___c___GetEffectBuffList_b__225_1(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__isEffectBuff(buff, (const MethodInfo *)buff);
 }
 
@@ -26152,7 +26152,7 @@ int32_t __fastcall BattleBuffData___c___GetEffectBuffList_b__225_2(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.addOrder - b->fields.addOrder;
 }
 
@@ -26165,7 +26165,7 @@ bool __fastcall BattleBuffData___c___GetEffectBuffList_b__225_3(
   struct BattleBuffData_IntervalData_o *intervalData; // x8
 
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   intervalData = buff->fields.intervalData;
   if ( !intervalData )
     return 0;
@@ -26181,7 +26181,7 @@ bool __fastcall BattleBuffData___c___GetGrantBuffTypeArray_b__119_1(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !buff->fields._isRemove;
 }
 
@@ -26192,7 +26192,7 @@ bool __fastcall BattleBuffData___c___GetGrantBuffTypeArray_b__119_2(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !buff->fields._isRemove;
 }
 
@@ -26203,7 +26203,7 @@ int32_t __fastcall BattleBuffData___c___GetLastMatchCondBuff_b__193_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26214,7 +26214,7 @@ bool __fastcall BattleBuffData___c___RemoveNoTurnBuff_b__71_0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -26225,7 +26225,7 @@ bool __fastcall BattleBuffData___c___RemoveNoTurnBuff_b__71_1(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return !s->fields.turn && !s->fields._IsExtendingLife_k__BackingField;
 }
 
@@ -26236,7 +26236,7 @@ bool __fastcall BattleBuffData___c___RemoveProgressingBuffList_b__89_0(
         const MethodInfo *method)
 {
   if ( !_ )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return _->fields.count == 0;
 }
 
@@ -26247,7 +26247,7 @@ bool __fastcall BattleBuffData___c___RemoveProgressingBuffList_b__89_1(
         const MethodInfo *method)
 {
   if ( !_ )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return _->fields.count == 0;
 }
 
@@ -26258,7 +26258,7 @@ void __fastcall BattleBuffData___c___ResetNotTakeOverBuff_b__72_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   if ( !buff->fields.isTakeOverNextBattle )
   {
     buff->fields.turn = 0;
@@ -26273,7 +26273,7 @@ int32_t __fastcall BattleBuffData___c___UpdateBaseAddOrder_b__220_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26284,7 +26284,7 @@ int32_t __fastcall BattleBuffData___c___UpdateBaseAddOrder_b__220_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26295,7 +26295,7 @@ int32_t __fastcall BattleBuffData___c___UpdateBuffAddOrder_b__219_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26306,7 +26306,7 @@ int32_t __fastcall BattleBuffData___c___UpdateBuffAddOrder_b__219_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26317,7 +26317,7 @@ int32_t __fastcall BattleBuffData___c___UpdateBuffAddOrder_b__219_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.addOrder;
 }
 
@@ -26329,7 +26329,7 @@ int32_t __fastcall BattleBuffData___c___UpdateForceBuff_b__93_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.addOrder - b->fields.addOrder;
 }
 
@@ -26340,7 +26340,7 @@ void __fastcall BattleBuffData___c___UpdateForceNoField_b__231_0(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   if ( buff->fields.onfiledUniqueId >= 1 )
     buff->fields.state |= 1u;
   if ( buff->fields.onFieldAliveCond )
@@ -26381,7 +26381,7 @@ bool __fastcall BattleBuffData___c___getAuraBuffList_b__38_0(
   bool result; // w0
 
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   intervalData = s->fields.intervalData;
   result = (!intervalData || intervalData->fields.intervalTurn <= 0 && intervalData->fields.intervalCount <= 0)
         && (state = s->fields.state, (state & 0x24011) == 0)
@@ -26396,7 +26396,7 @@ bool __fastcall BattleBuffData___c___getBuffActiveIDList_b__107_0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return (s->fields.state & 0x80000) == 0;
 }
 
@@ -26407,7 +26407,7 @@ bool __fastcall BattleBuffData___c___getBuffIDList_b__106_0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return (s->fields.state & 0x80000) == 0;
 }
 
@@ -26418,7 +26418,7 @@ int32_t __fastcall BattleBuffData___c___getShowServantParam_b__41_1(
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return buff->fields._DisplayPriority_k__BackingField;
 }
 
@@ -26431,7 +26431,7 @@ bool __fastcall BattleBuffData___c___syncLinkageBuffChangeParam_b__76_0(
   __int64 v3; // x8
 
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   v3 = 120LL;
   if ( (x->fields.state & 0x400000) != 0 )
     v3 = 296LL;
@@ -26447,7 +26447,7 @@ bool __fastcall BattleBuffData___c___syncLinkageBuffChangeParam_b__76_1(
   __int64 v3; // x8
 
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   v3 = 120LL;
   if ( (x->fields.state & 0x400000) != 0 )
     v3 = 296LL;
@@ -26472,7 +26472,7 @@ bool __fastcall BattleBuffData___c__DisplayClass100_0___getBuffIndividualities_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, x);
+    sub_1C13F80(0LL, x);
   return BattleBuffData__IsMatchBuffAggregationArgs(_4__this, x, this->fields.buffAggregationArgs, 0LL);
 }
 
@@ -26486,7 +26486,7 @@ bool __fastcall BattleBuffData___c__DisplayClass100_0___getBuffIndividualities_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, x);
+    sub_1C13F80(0LL, x);
   return BattleBuffData__IsMatchBuffAggregationArgs(_4__this, x, this->fields.buffAggregationArgs, 0LL);
 }
 
@@ -26522,7 +26522,7 @@ bool __fastcall BattleBuffData___c__DisplayClass105_0___GetAvaliableActiveBuffAr
   conditionsToAdd = this->fields.conditionsToAdd;
   if ( !conditionsToAdd )
 LABEL_10:
-    sub_1BE4D28(this, s);
+    sub_1C13F80(this, s);
   return ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *))conditionsToAdd->fields.m_target)(conditionsToAdd->fields.original_method_info);
 }
 
@@ -26544,7 +26544,7 @@ bool __fastcall BattleBuffData___c__DisplayClass110_0___SubBuffFromType_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (_4__this = (BattleBuffData_o *)BattleBuffData__get_buffMst(_4__this, 0LL), !buff) || !_4__this )
-    sub_1BE4D28(_4__this, buff);
+    sub_1C13F80(_4__this, buff);
   return BuffMaster__GetBuffType((BuffMaster_o *)_4__this, buff->fields.buffId, -1, 0LL) == this->fields.checkBuffType;
 }
 
@@ -26569,7 +26569,7 @@ bool __fastcall BattleBuffData___c__DisplayClass111_0___SubBuffFromDeadActorId_b
   if ( actorId < 1 )
     return 0;
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   if ( buff->fields.isRemoveFieldBuffActorDeath )
     v4 = buff->fields.actorId;
   else
@@ -26593,18 +26593,18 @@ bool __fastcall BattleBuffData___c__DisplayClass112_0___SubBuffSpecified_g__Chec
 {
   System_Collections_Generic_HashSet_T__o *toRemove; // x0
 
-  if ( (byte_4B690EC & 1) == 0 )
+  if ( (byte_4BB6C32 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__, buff);
-    byte_4B690EC = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__, buff);
+    byte_4BB6C32 = 1;
   }
   toRemove = (System_Collections_Generic_HashSet_T__o *)this->fields.toRemove;
   if ( !toRemove )
-    sub_1BE4D28(0LL, buff);
+    sub_1C13F80(0LL, buff);
   return System_Collections_Generic_HashSet_object___Contains(
            toRemove,
            (Il2CppObject *)buff,
-           (const MethodInfo_34A5984 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
+           (const MethodInfo_34E6DF0 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
 }
 
 
@@ -26627,10 +26627,10 @@ void __fastcall BattleBuffData___c__DisplayClass119_0___GetGrantBuffTypeArray_b_
   _QWORD *v8; // x9
   __int64 size; // x10
 
-  if ( (byte_4B690ED & 1) == 0 )
+  if ( (byte_4BB6C33 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, buff);
-    byte_4B690ED = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, buff);
+    byte_4BB6C33 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
@@ -26645,7 +26645,7 @@ void __fastcall BattleBuffData___c__DisplayClass119_0___GetGrantBuffTypeArray_b_
         ++buffTypeList->fields._version,
         !items) )
   {
-    sub_1BE4D28(_4__this, buff);
+    sub_1C13F80(_4__this, buff);
   }
   size = buffTypeList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -26653,7 +26653,7 @@ void __fastcall BattleBuffData___c__DisplayClass119_0___GetGrantBuffTypeArray_b_
     System_Collections_Generic_List_int___AddWithResize(
       buffTypeList,
       (int32_t)_4__this,
-      *(const MethodInfo_35CF200 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_36101A8 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
@@ -26680,7 +26680,7 @@ bool __fastcall BattleBuffData___c__DisplayClass141_0___getRectBuffList_b__0(
 
   ent = this->fields.ent;
   if ( !ent )
-    sub_1BE4D28(this, type);
+    sub_1C13F80(this, type);
   return ent->fields.type == type;
 }
 
@@ -26730,7 +26730,7 @@ void __fastcall BattleBuffData___c__DisplayClass149_0___ChangeBuffState_b__0(
   this = (BattleBuffData___c__DisplayClass149_0_o *)v4->fields.__4__this;
   if ( !this )
 LABEL_22:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   isConditionHp = BattleBuffData__isConditionHp((BattleBuffData_o *)this, buff, v4->fields.now, v4->fields.max, 0LL);
   if ( v5 )
   {
@@ -26812,21 +26812,21 @@ void __fastcall BattleBuffData___c__DisplayClass150_0___UpdateForceAllBuffNoAct_
   const MethodInfo *v13; // x2
 
   v5 = this;
-  if ( (byte_4B690EE & 1) == 0 )
+  if ( (byte_4BB6C34 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_int____int____bool__TypeInfo, buff);
-    sub_1BE4ACC(&Method_Individuality_IsPartialMatchArray__, v6);
-    this = (BattleBuffData___c__DisplayClass150_0_o *)sub_1BE4ACC(&Individuality_TypeInfo, v7);
-    byte_4B690EE = 1;
+    sub_1C13D24(&System_Func_int____int____bool__TypeInfo, buff);
+    sub_1C13D24(&Method_Individuality_IsPartialMatchArray__, v6);
+    this = (BattleBuffData___c__DisplayClass150_0_o *)sub_1C13D24(&Individuality_TypeInfo, v7);
+    byte_4BB6C34 = 1;
   }
   if ( !buff )
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   Individualty = BattleBuffData_BuffData__GetIndividualty(buff, 0, 0, 0, v3);
   targets = v5->fields.targets;
   v10 = Individualty;
-  v11 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+  v11 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
   System_Func_object__object__bool____ctor(v11, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
-  v12 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_int____int____bool__TypeInfo);
+  v12 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_int____int____bool__TypeInfo);
   System_Func_object__object__bool____ctor(v12, 0LL, Method_Individuality_IsPartialMatchArray__, 0LL);
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
@@ -26861,7 +26861,7 @@ bool __fastcall BattleBuffData___c__DisplayClass189_0___getBuffList_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, x);
+    sub_1C13F80(0LL, x);
   return BattleBuffData__IsMatchBuffAggregationArgs(_4__this, x, this->fields.buffAggregationArgs, 0LL);
 }
 
@@ -26883,7 +26883,7 @@ bool __fastcall BattleBuffData___c__DisplayClass193_0___GetLastMatchCondBuff_b__
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, x);
+    sub_1C13F80(0LL, x);
   return BattleBuffData__IsMatchBuffAggregationArgs(_4__this, x, this->fields.buffAggregationArgs, 0LL);
 }
 
@@ -26896,7 +26896,7 @@ bool __fastcall BattleBuffData___c__DisplayClass193_0___GetLastMatchCondBuff_b__
   const MethodInfo *v3; // x6
 
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleBuffData_BuffData__CheckCond(
            x,
            this->fields.__4__this,
@@ -26925,7 +26925,7 @@ bool __fastcall BattleBuffData___c__DisplayClass194_0___CheckBuffType_b__0(
 
   buffEnt = this->fields.buffEnt;
   if ( !buffEnt )
-    sub_1BE4D28(this, type);
+    sub_1C13F80(this, type);
   return buffEnt->fields.type == type;
 }
 
@@ -26944,7 +26944,7 @@ bool __fastcall BattleBuffData___c__DisplayClass199_0___InitializeShift_b__0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return s->fields.actorId == this->fields.actorId;
 }
 
@@ -26958,7 +26958,7 @@ bool __fastcall BattleBuffData___c__DisplayClass199_0___InitializeShift_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, s);
+    sub_1C13F80(0LL, s);
   return BattleBuffData__checkShiftClear(_4__this, s, this->fields.buffindivs, 0LL);
 }
 
@@ -26979,19 +26979,19 @@ bool __fastcall BattleBuffData___c__DisplayClass217_0___GetSkillTypeBuff_b__0(
   BattleBuffData___c__DisplayClass217_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B690EF & 1) == 0 )
+  if ( (byte_4BB6C35 & 1) == 0 )
   {
-    this = (BattleBuffData___c__DisplayClass217_0_o *)sub_1BE4ACC(
+    this = (BattleBuffData___c__DisplayClass217_0_o *)sub_1C13D24(
                                                         &Method_System_Collections_Generic_List_int__Contains__,
                                                         buff);
-    byte_4B690EF = 1;
+    byte_4BB6C35 = 1;
   }
   if ( !buff || (this = (BattleBuffData___c__DisplayClass217_0_o *)v4->fields.targetSkillList) == 0LL )
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   return System_Collections_Generic_List_int___Contains(
            (System_Collections_Generic_List_int__o *)this,
            buff->fields.grantSkillType,
-           (const MethodInfo_35CF578 *)Method_System_Collections_Generic_List_int__Contains__);
+           (const MethodInfo_3610520 *)Method_System_Collections_Generic_List_int__Contains__);
 }
 
 
@@ -27009,7 +27009,7 @@ void __fastcall BattleBuffData___c__DisplayClass219_0___UpdateBuffAddOrder_b__3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   x->fields.addOrder += this->fields.addPassiveMaxOrder;
 }
 
@@ -27020,7 +27020,7 @@ void __fastcall BattleBuffData___c__DisplayClass219_0___UpdateBuffAddOrder_b__4(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   x->fields.addOrder += this->fields.addPassiveMaxOrder;
 }
 
@@ -27041,18 +27041,18 @@ void __fastcall BattleBuffData___c__DisplayClass246_0___GetFamilyLinkageIdMax_b_
 {
   System_Collections_Generic_HashSet_int__o *hash; // x0
 
-  if ( (byte_4B690F0 & 1) == 0 )
+  if ( (byte_4BB6C36 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&x);
-    byte_4B690F0 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&x);
+    byte_4BB6C36 = 1;
   }
   hash = this->fields.hash;
   if ( !hash )
-    sub_1BE4D28(0LL, *(_QWORD *)&x);
+    sub_1C13F80(0LL, *(_QWORD *)&x);
   System_Collections_Generic_HashSet_int___Add(
     hash,
     x,
-    (const MethodInfo_34A0070 *)Method_System_Collections_Generic_HashSet_int__Add__);
+    (const MethodInfo_34E14DC *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 
@@ -27064,18 +27064,18 @@ void __fastcall BattleBuffData___c__DisplayClass246_0___GetFamilyLinkageIdMax_b_
 {
   System_Collections_Generic_HashSet_int__o *hash; // x0
 
-  if ( (byte_4B690F1 & 1) == 0 )
+  if ( (byte_4BB6C37 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&x);
-    byte_4B690F1 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&x);
+    byte_4BB6C37 = 1;
   }
   hash = this->fields.hash;
   if ( !hash )
-    sub_1BE4D28(0LL, *(_QWORD *)&x);
+    sub_1C13F80(0LL, *(_QWORD *)&x);
   System_Collections_Generic_HashSet_int___Add(
     hash,
     x,
-    (const MethodInfo_34A0070 *)Method_System_Collections_Generic_HashSet_int__Add__);
+    (const MethodInfo_34E14DC *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 
@@ -27093,7 +27093,7 @@ bool __fastcall BattleBuffData___c__DisplayClass250_0___RemovePassiveReplacedOnT
         const MethodInfo *method)
 {
   if ( !buff )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return this->fields.actorId == buff->fields.actorId
       && BattleSkillInfoData__IsReplacePassiveTypeOnTransform(buff->fields.grantSkillType, 0LL)
       && !buff->fields.isNotRemoveOnTransform;
@@ -27118,7 +27118,7 @@ bool __fastcall BattleBuffData___c__DisplayClass255_0___ExistsTargetIntervalBuff
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (_4__this = (BattleBuffData_o *)BattleBuffData__get_buffMst(_4__this, 0LL), !buff) )
-    sub_1BE4D28(_4__this, buff);
+    sub_1C13F80(_4__this, buff);
   return BattleBuffData_BuffData__EqualBuffType(buff, (BuffMaster_o *)_4__this, this->fields.targetType, v6);
 }
 
@@ -27141,7 +27141,7 @@ bool __fastcall BattleBuffData___c__DisplayClass256_0___ResetTargetUseBuff_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (_4__this = (BattleBuffData_o *)BattleBuffData__get_buffMst(_4__this, 0LL), !x) )
-    sub_1BE4D28(_4__this, x);
+    sub_1C13F80(_4__this, x);
   return BattleBuffData_BuffData__EqualBuffType(x, (BuffMaster_o *)_4__this, this->fields.targetType, v6);
 }
 
@@ -27162,7 +27162,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_0___RemoveClassBoardSkillBuf
   struct AddSkillData_o *skillData; // x8
 
   if ( !p || (skillData = this->fields.skillData) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == skillData->fields.id;
 }
 
@@ -27175,7 +27175,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_0___RemoveClassBoardSkillBuf
   struct AddSkillData_o *skillData; // x8
 
   if ( !p || (skillData = this->fields.skillData) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == skillData->fields.id;
 }
 
@@ -27188,7 +27188,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_0___RemoveClassBoardSkillBuf
   struct AddSkillData_o *skillData; // x8
 
   if ( !a || (skillData = this->fields.skillData) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == skillData->fields.id;
 }
 
@@ -27201,7 +27201,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_0___RemoveClassBoardSkillBuf
   struct AddSkillData_o *skillData; // x8
 
   if ( !a || (skillData = this->fields.skillData) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == skillData->fields.id;
 }
 
@@ -27222,7 +27222,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_1___RemoveClassBoardSkillBuf
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !p || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27235,7 +27235,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_1___RemoveClassBoardSkillBuf
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !p || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27248,7 +27248,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_1___RemoveClassBoardSkillBuf
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !a || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27261,7 +27261,7 @@ bool __fastcall BattleBuffData___c__DisplayClass265_1___RemoveClassBoardSkillBuf
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !a || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27282,7 +27282,7 @@ bool __fastcall BattleBuffData___c__DisplayClass266_0___RemoveClassBoardCommandS
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !p || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27295,7 +27295,7 @@ bool __fastcall BattleBuffData___c__DisplayClass266_0___RemoveClassBoardCommandS
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !p || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, p);
+    sub_1C13F80(this, p);
   return p->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27308,7 +27308,7 @@ bool __fastcall BattleBuffData___c__DisplayClass266_0___RemoveClassBoardCommandS
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !a || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27321,7 +27321,7 @@ bool __fastcall BattleBuffData___c__DisplayClass266_0___RemoveClassBoardCommandS
   struct ClassBoardCommandSpellEntity_o *entity; // x8
 
   if ( !a || (entity = this->fields.entity) == 0LL )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.skillId == entity->fields.commandSpellId;
 }
 
@@ -27344,7 +27344,7 @@ bool __fastcall BattleBuffData___c__DisplayClass31_0___getPassiveList_b__0(
   bool result; // w0
 
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   result = (!this->fields.isCheckInterval
          || (intervalData = s->fields.intervalData) == 0LL
          || intervalData->fields.intervalTurn <= 0 && intervalData->fields.intervalCount <= 0)
@@ -27372,7 +27372,7 @@ bool __fastcall BattleBuffData___c__DisplayClass32_0___getActiveList_b__0(
   bool result; // w0
 
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   result = (!this->fields.isCheckInterval
          || (intervalData = s->fields.intervalData) == 0LL
          || intervalData->fields.intervalTurn <= 0 && intervalData->fields.intervalCount <= 0)
@@ -27411,14 +27411,14 @@ void __fastcall BattleBuffData___c__DisplayClass41_0___getShowServantParam_b__0(
   __int64 passiveList_low; // x10
   __int64 v19; // x8
 
-  if ( (byte_4B690F2 & 1) == 0 )
+  if ( (byte_4BB6C38 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, buff);
-    sub_1BE4ACC(&BattleBuffData_ShowBuffData_TypeInfo, v5);
-    byte_4B690F2 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, buff);
+    sub_1C13D24(&BattleBuffData_ShowBuffData_TypeInfo, v5);
+    byte_4BB6C38 = 1;
   }
-  v6 = (BattleBuffData_ShowBuffData_o *)sub_1BE4D18(BattleBuffData_ShowBuffData_TypeInfo);
-  BattleBuffData_ShowBuffData___ctor_43632084(v6, buff, v7);
+  v6 = (BattleBuffData_ShowBuffData_o *)sub_1C13F70(BattleBuffData_ShowBuffData_TypeInfo);
+  BattleBuffData_ShowBuffData___ctor_43836756(v6, buff, v7);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_38;
@@ -27496,20 +27496,20 @@ LABEL_33:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)_4__this,
               (Il2CppObject *)v6,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
             v19 = v16 + 8 * passiveList_low;
             LODWORD(_4__this->fields.passiveList) = passiveList_low + 1;
             *(_QWORD *)(v19 + 32) = v6;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v19 + 32), (int64_t)v6, v10, v11, v12, v13, v14, v15);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v19 + 32), (int64_t)v6, v10, v11, v12, v13, v14, v15);
           }
           return;
         }
       }
 LABEL_38:
-      sub_1BE4D28(_4__this, v8);
+      sub_1C13F80(_4__this, v8);
     }
     if ( buff->fields.passive )
       return;
@@ -27553,14 +27553,14 @@ void __fastcall BattleBuffData___c__DisplayClass47_0___DebugGetShowServantParamA
   __int64 size; // x10
   Il2CppClass **v19; // x8
 
-  if ( (byte_4B690F3 & 1) == 0 )
+  if ( (byte_4BB6C39 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, buff);
-    sub_1BE4ACC(&BattleBuffData_ShowBuffData_TypeInfo, v5);
-    byte_4B690F3 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__, buff);
+    sub_1C13D24(&BattleBuffData_ShowBuffData_TypeInfo, v5);
+    byte_4BB6C39 = 1;
   }
-  v6 = (BattleBuffData_ShowBuffData_o *)sub_1BE4D18(BattleBuffData_ShowBuffData_TypeInfo);
-  BattleBuffData_ShowBuffData___ctor_43632084(v6, buff, v7);
+  v6 = (BattleBuffData_ShowBuffData_o *)sub_1C13F70(BattleBuffData_ShowBuffData_TypeInfo);
+  BattleBuffData_ShowBuffData___ctor_43836756(v6, buff, v7);
   reList = (System_Collections_Generic_List_object__o *)this->fields.reList;
   if ( !reList
     || (items = reList->fields._items,
@@ -27568,7 +27568,7 @@ void __fastcall BattleBuffData___c__DisplayClass47_0___DebugGetShowServantParamA
         ++reList->fields._version,
         !items) )
   {
-    sub_1BE4D28(reList, v8);
+    sub_1C13F80(reList, v8);
   }
   size = reList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -27576,14 +27576,14 @@ void __fastcall BattleBuffData___c__DisplayClass47_0___DebugGetShowServantParamA
     System_Collections_Generic_List_object___AddWithResize(
       reList,
       (Il2CppObject *)v6,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     reList->fields._size = size + 1;
     v19[4] = (Il2CppClass *)v6;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v19 + 4), (int64_t)v6, v9, v10, v11, v12, v13, v14);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v19 + 4), (int64_t)v6, v9, v10, v11, v12, v13, v14);
   }
 }
 
@@ -27614,7 +27614,7 @@ bool __fastcall BattleBuffData___c__DisplayClass75_0___RemoveLinkageBuff_b__0(
   this = (BattleBuffData___c__DisplayClass75_0_o *)this->fields.__4__this;
   if ( !this )
 LABEL_8:
-    sub_1BE4D28(this, buff);
+    sub_1C13F80(this, buff);
   v5 = v4 == 0;
   v6 = 296LL;
   if ( v5 )
@@ -27633,7 +27633,7 @@ bool __fastcall BattleBuffData___c__DisplayClass75_0___RemoveLinkageBuff_b__1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return this->fields.isFamily == (((unsigned int)x->fields.state >> 22) & 1);
 }
 

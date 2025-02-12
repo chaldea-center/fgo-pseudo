@@ -15,22 +15,22 @@ void __fastcall EventDiggingRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_4B684BA & 1) == 0 )
+  if ( (byte_4BB5FF3 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_19387/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&StringLiteral_20498/*"idxY"*/, v11);
-    sub_1BE4ACC(&StringLiteral_17100/*"areaNum"*/, v12);
-    sub_1BE4ACC(&StringLiteral_20497/*"idxX"*/, v13);
-    byte_4B684BA = 1;
+    sub_1C13D24(&StringLiteral_19431/*"event/location"*/, *(_QWORD *)&eventId);
+    sub_1C13D24(&StringLiteral_20543/*"id-smime-alg-3DESwrap"*/, v11);
+    sub_1C13D24(&StringLiteral_17145/*"ar173"*/, v12);
+    sub_1C13D24(&StringLiteral_20542/*"id-ID"*/, v13);
+    byte_4BB5FF3 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19387/*"eventId"*/,
+    (System_String_o *)StringLiteral_19431/*"event/location"*/,
     eventId,
     (const MethodInfo *)idxX);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17100/*"areaNum"*/, areaNum, v14);
-  RequestBase__addField_42112900((RequestBase_o *)this, (System_String_o *)StringLiteral_20497/*"idxX"*/, &idxX->obj, v15);
-  RequestBase__addField_42112900((RequestBase_o *)this, (System_String_o *)StringLiteral_20498/*"idxY"*/, &idxY->obj, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17145/*"ar173"*/, areaNum, v14);
+  RequestBase__addField_42312048((RequestBase_o *)this, (System_String_o *)StringLiteral_20542/*"id-ID"*/, &idxX->obj, v15);
+  RequestBase__addField_42312048((RequestBase_o *)this, (System_String_o *)StringLiteral_20543/*"id-smime-alg-3DESwrap"*/, &idxY->obj, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -40,16 +40,16 @@ System_String_o *__fastcall EventDiggingRequest__getURL(EventDiggingRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B684B9 & 1) == 0 )
+  if ( (byte_4BB5FF2 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19369/*"event/digging"*/, v2);
-    byte_4B684B9 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_19413/*"evGO_ORDEALCALL"*/, v2);
+    byte_4BB5FF2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19369/*"event/digging"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19413/*"evGO_ORDEALCALL"*/, 0LL);
 }
 
 
@@ -66,16 +66,16 @@ void __fastcall EventDiggingRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4B684BB & 1) == 0 )
+  if ( (byte_4BB5FF4 & 1) == 0 )
   {
-    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
-    byte_4B684BB = 1;
+    sub_1C13D24(&JsonManager_TypeInfo, responseList);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
+    byte_4BB5FF4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(114, responseList, 0LL);
-  if ( v6 && (v7 = v6, ResponseData__checkError_42194996(v6, 0LL)) )
+  if ( v6 && (v7 = v6, ResponseData__checkError_42394144(v6, 0LL)) )
   {
     success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )

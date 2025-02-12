@@ -19,25 +19,25 @@ void __fastcall SetAdvantageClassAutoOptionControl__Init(
   UILabel_o *infoLabel; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4B61F6A & 1) == 0 )
+  if ( (byte_4BAFA59 & 1) == 0 )
   {
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
-    sub_1BE4ACC(&OptionManager_TypeInfo, v3);
-    sub_1BE4ACC(&StringLiteral_9807/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, v4);
-    sub_1BE4ACC(&StringLiteral_9806/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, v5);
-    byte_4B61F6A = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, method);
+    sub_1C13D24(&OptionManager_TypeInfo, v3);
+    sub_1C13D24(&StringLiteral_9832/*"OPEN_SEALED"*/, v4);
+    sub_1C13D24(&StringLiteral_9831/*"OPEN_PRESENT_BOX"*/, v5);
+    byte_4BAFA59 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9806/*"OPTION_ADVANTAGE_CLASS_AUTO"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9831/*"OPEN_PRESENT_BOX"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v7, 0LL),
         infoLabel = this->fields.infoLabel,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9807/*"OPTION_ADVANTAGE_CLASS_AUTO_INFO"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9832/*"OPEN_SEALED"*/, 0LL),
         !infoLabel) )
   {
-    sub_1BE4D28(v7, v8);
+    sub_1C13F80(v7, v8);
   }
   UILabel__set_text(infoLabel, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -57,10 +57,10 @@ void __fastcall SetAdvantageClassAutoOptionControl__OnClickButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4B61F6C & 1) == 0 )
+  if ( (byte_4BAFA5B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SetAdvantageClassAutoOptionControl_OnClickButton__, method);
-    byte_4B61F6C = 1;
+    sub_1C13D24(&Method_SetAdvantageClassAutoOptionControl_OnClickButton__, method);
+    byte_4BAFA5B = 1;
   }
   klass = this->klass;
   this->fields.flag ^= 1u;
@@ -70,9 +70,9 @@ void __fastcall SetAdvantageClassAutoOptionControl__OnClickButton(
   v4 = Method_SetAdvantageClassAutoOptionControl_OnClickButton__;
   flag = this->fields.flag;
   if ( (*((_BYTE *)Method_SetAdvantageClassAutoOptionControl_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1BE4AE4(Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v4, v4[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, !flag, 0LL);
+    v4 = (_QWORD *)sub_1C13D3C(Method_SetAdvantageClassAutoOptionControl_OnClickButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, !flag, 0, 0LL);
   SetAdvantageClassAutoOptionControl__RefreshDisplay(this, v7);
 }
 
@@ -83,10 +83,10 @@ void __fastcall SetAdvantageClassAutoOptionControl__Reflection(
 {
   _BOOL4 flag; // w19
 
-  if ( (byte_4B61F6D & 1) == 0 )
+  if ( (byte_4BAFA5C & 1) == 0 )
   {
-    sub_1BE4ACC(&OptionManager_TypeInfo, method);
-    byte_4B61F6D = 1;
+    sub_1C13D24(&OptionManager_TypeInfo, method);
+    byte_4BAFA5C = 1;
   }
   flag = this->fields.flag;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -103,18 +103,18 @@ void __fastcall SetAdvantageClassAutoOptionControl__RefreshDisplay(
   UIButton_o *switchButton; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4B61F6B & 1) == 0 )
+  if ( (byte_4BAFA5A & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_17750/*"btn_on"*/, method);
-    sub_1BE4ACC(&StringLiteral_17749/*"btn_off"*/, v3);
-    byte_4B61F6B = 1;
+    sub_1C13D24(&StringLiteral_17792/*"btn_getreward"*/, method);
+    sub_1C13D24(&StringLiteral_17791/*"btn_filter_on"*/, v3);
+    byte_4BAFA5A = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   if ( this->fields.flag )
-    v5 = &StringLiteral_17750/*"btn_on"*/;
+    v5 = &StringLiteral_17792/*"btn_getreward"*/;
   else
-    v5 = &StringLiteral_17749/*"btn_off"*/;
+    v5 = &StringLiteral_17791/*"btn_filter_on"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v5, 0LL);
 }

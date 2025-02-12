@@ -2,8 +2,8 @@ void __noreturn CreateNLSocket()
 {
   __int64 v0; // x0
 
-  v0 = sub_1BF5B1C(
+  v0 = sub_1C24D74(
          "/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/il2cpp/libil2cpp/mono/MonoPosixHelper.cpp(277) : "
          "Unsupported internal call for IL2CPP:CreateNLSocket - Not implemented");
-  sub_1BF488C(v0, 0LL);
+  sub_1C23AE4(v0, 0LL);
 }

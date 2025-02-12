@@ -1,9 +1,9 @@
 void __fastcall QuestAfterActionDialog___ctor(QuestAfterActionDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B639F6 & 1) == 0 )
+  if ( (byte_4BB150B & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B639F6 = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BB150B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -25,12 +25,12 @@ void __fastcall QuestAfterActionDialog__Init(QuestAfterActionDialog_o *this, con
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B639F2 & 1) == 0 )
+  if ( (byte_4BB1507 & 1) == 0 )
   {
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, v3);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v4);
-    byte_4B639F2 = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v3);
+    sub_1C13D24(&StringLiteral_1/*""*/, v4);
+    byte_4BB1507 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -44,13 +44,13 @@ void __fastcall QuestAfterActionDialog__Init(QuestAfterActionDialog_o *this, con
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
   if ( !closeLabel )
 LABEL_9:
-    sub_1BE4D28(titleLabel, v5);
+    sub_1C13F80(titleLabel, v5);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -62,19 +62,19 @@ void __fastcall QuestAfterActionDialog__OnClickCloseButton(QuestAfterActionDialo
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B639F4 & 1) == 0 )
+  if ( (byte_4BB1509 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_QuestAfterActionDialog_OnClickCloseButton__, v3);
-    sub_1BE4ACC(&Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, v4);
-    byte_4B639F4 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_QuestAfterActionDialog_OnClickCloseButton__, v3);
+    sub_1C13D24(&Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, v4);
+    byte_4BB1509 = 1;
   }
   v5 = Method_QuestAfterActionDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_QuestAfterActionDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BE4AE4(Method_QuestAfterActionDialog_OnClickCloseButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v5, v5[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0LL);
-  v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v5 = (_QWORD *)sub_1C13D3C(Method_QuestAfterActionDialog_OnClickCloseButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C13D08(v5, v5[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_QuestAfterActionDialog__OnClickCloseButton_b__8_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -101,10 +101,10 @@ void __fastcall QuestAfterActionDialog__Open(
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel || (UILabel__set_text(titleLabel, title, 0LL), (titleLabel = this->fields.messageLabel) == 0LL) )
-    sub_1BE4D28(titleLabel, v9);
+    sub_1C13F80(titleLabel, v9);
   UILabel__set_text(titleLabel, message, 0LL);
   this->fields.closeAction = closeAction;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.closeAction,
     (int64_t)closeAction,
     v11,
@@ -126,10 +126,10 @@ void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDial
   struct UILabel_o *v7; // x8
   int v8; // w8
 
-  if ( (byte_4B639F3 & 1) == 0 )
+  if ( (byte_4BB1508 & 1) == 0 )
   {
-    sub_1BE4ACC(&NGUITools_TypeInfo, method);
-    byte_4B639F3 = 1;
+    sub_1C13D24(&NGUITools_TypeInfo, method);
+    byte_4BB1508 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -137,7 +137,7 @@ void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDial
   gameObject = UnityEngine_Component__get_gameObject(messageLabel, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_47710900(gameObject, 1, 0LL);
+  NGUITools__UpdateWidgetCollider_47902448(gameObject, 1, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_14;
@@ -153,7 +153,7 @@ void __fastcall QuestAfterActionDialog__ResetScrollPosition(QuestAfterActionDial
   messageLabel = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !messageLabel )
 LABEL_14:
-    sub_1BE4D28(messageLabel, method);
+    sub_1C13F80(messageLabel, method);
   UIScrollView__ResetPosition((UIScrollView_o *)messageLabel, 0LL);
 }
 
@@ -173,10 +173,10 @@ System_String_o *__fastcall QuestAfterActionDialog__get_closeBtnPath(
         QuestAfterActionDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B639F5 & 1) == 0 )
+  if ( (byte_4BB150A & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_15850/*"Window/CloseButton"*/, method);
-    byte_4B639F5 = 1;
+    sub_1C13D24(&StringLiteral_15886/*"WhiteEarthBg"*/, method);
+    byte_4BB150A = 1;
   }
-  return (System_String_o *)StringLiteral_15850/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15886/*"WhiteEarthBg"*/;
 }

@@ -1,16 +1,16 @@
 void __fastcall EventRewardGuideReleaseMaster___ctor(EventRewardGuideReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66CC6 & 1) == 0 )
+  if ( (byte_4BB47DD & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string___ctor__,
       method);
-    byte_4B66CC6 = 1;
+    byte_4BB47DD = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     267,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string___ctor__);
 }
 
 
@@ -29,102 +29,98 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x1
-  System_Collections_Generic_List_object__o *v15; // x19
-  int64_t v16; // x1
+  System_Collections_Generic_List_object__o *v14; // x19
+  int64_t v15; // x1
   void *list; // x0
-  int32_t v18; // w22
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  __int64 methodPtr_low; // x10
+  int32_t v17; // w22
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v27; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v29; // x0
-  System_Comparison_T__o *v30; // x20
-  Il2CppObject *v31; // x21
+  Il2CppClass **v27; // x0
+  System_Comparison_T__o *v28; // x20
+  Il2CppObject *v29; // x21
   struct EventRewardGuideReleaseMaster___c_StaticFields *static_fields; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
 
-  if ( (byte_4B66CC7 & 1) == 0 )
+  if ( (byte_4BB47DE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BE4ACC(&System_Comparison_EventRewardGuideReleaseEntity__TypeInfo, v6);
-    sub_1BE4ACC(&EventRewardGuideReleaseEntity_TypeInfo, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Sort__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo, v12);
-    sub_1BE4ACC(&Method_EventRewardGuideReleaseMaster___c__GetEntities_b__3_0__, v13);
-    sub_1BE4ACC(&EventRewardGuideReleaseMaster___c_TypeInfo, v14);
-    byte_4B66CC7 = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_EventRewardGuideReleaseEntity__get_Count__,
+      *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventRewardGuideReleaseEntity__get_Item__, v5);
+    sub_1C13D24(&System_Comparison_EventRewardGuideReleaseEntity__TypeInfo, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Sort__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__, v10);
+    sub_1C13D24(&System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo, v11);
+    sub_1C13D24(&Method_EventRewardGuideReleaseMaster___c__GetEntities_b__3_0__, v12);
+    sub_1C13D24(&EventRewardGuideReleaseMaster___c_TypeInfo, v13);
+    byte_4BB47DE = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__);
+    v14,
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__);
   list = this->fields.list;
   if ( !list )
-    goto LABEL_26;
-  v18 = 0;
-  while ( v18 < System_Collections_ObjectModel_Collection_object___get_Count(
+    goto LABEL_24;
+  v17 = 0;
+  while ( v17 < System_Collections_ObjectModel_Collection_object___get_Count(
                   (System_Collections_ObjectModel_Collection_T__o *)list,
-                  (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventRewardGuideReleaseEntity__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
-      goto LABEL_26;
+      goto LABEL_24;
     list = System_Collections_ObjectModel_Collection_object___get_Item(
              (System_Collections_ObjectModel_Collection_T__o *)list,
-             v18,
-             (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             v17,
+             (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventRewardGuideReleaseEntity__get_Item__);
     if ( list )
     {
-      v16 = (int64_t)list;
-      methodPtr_low = LOBYTE(EventRewardGuideReleaseEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)list + 304LL) >= (unsigned int)methodPtr_low
-        && *(EventRewardGuideReleaseEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * methodPtr_low - 8) == EventRewardGuideReleaseEntity_TypeInfo
-        && *((_DWORD *)list + 4) == eventId )
+      v15 = (int64_t)list;
+      if ( *((_DWORD *)list + 4) == eventId )
       {
-        if ( !v15 )
-          goto LABEL_26;
-        items = v15->fields._items;
-        v27 = Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__;
-        ++v15->fields._version;
+        if ( !v14 )
+          goto LABEL_24;
+        items = v14->fields._items;
+        v25 = Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__;
+        ++v14->fields._version;
         if ( !items )
-          goto LABEL_26;
-        size = v15->fields._size;
+          goto LABEL_24;
+        size = v14->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v15,
+            v14,
             (Il2CppObject *)list,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v29 = &items->obj.klass + size;
-          v15->fields._size = size + 1;
-          v29[4] = (Il2CppClass *)v16;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 4), v16, v19, v20, v21, v22, v23, v24);
+          v27 = &items->obj.klass + size;
+          v14->fields._size = size + 1;
+          v27[4] = (Il2CppClass *)v15;
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 4), v15, v18, v19, v20, v21, v22, v23);
         }
       }
     }
     list = this->fields.list;
-    ++v18;
+    ++v17;
     if ( !list )
-      goto LABEL_26;
+      goto LABEL_24;
   }
   list = EventRewardGuideReleaseMaster___c_TypeInfo;
   if ( !EventRewardGuideReleaseMaster___c_TypeInfo->_2.cctor_finished )
@@ -132,36 +128,36 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
     j_il2cpp_runtime_class_init_0(EventRewardGuideReleaseMaster___c_TypeInfo);
     list = EventRewardGuideReleaseMaster___c_TypeInfo;
   }
-  v30 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v30 )
+  v28 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
+  if ( !v28 )
   {
     if ( !*((_DWORD *)list + 56) )
     {
       j_il2cpp_runtime_class_init_0(list);
       list = EventRewardGuideReleaseMaster___c_TypeInfo;
     }
-    v31 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v30 = (System_Comparison_T__o *)sub_1BE4D18(System_Comparison_EventRewardGuideReleaseEntity__TypeInfo);
-    System_Comparison_object____ctor(v30, v31, Method_EventRewardGuideReleaseMaster___c__GetEntities_b__3_0__, 0LL);
+    v29 = (Il2CppObject *)**((_QWORD **)list + 23);
+    v28 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_EventRewardGuideReleaseEntity__TypeInfo);
+    System_Comparison_object____ctor(v28, v29, Method_EventRewardGuideReleaseMaster___c__GetEntities_b__3_0__, 0LL);
     static_fields = EventRewardGuideReleaseMaster___c_TypeInfo->static_fields;
-    static_fields->__9__3_0 = (struct System_Comparison_EventRewardGuideReleaseEntity__o *)v30;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v30, v33, v34, v35, v36, v37, v38);
+    static_fields->__9__3_0 = (struct System_Comparison_EventRewardGuideReleaseEntity__o *)v28;
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v28, v31, v32, v33, v34, v35, v36);
   }
-  if ( !v15 )
-LABEL_26:
-    sub_1BE4D28(list, v16);
-  System_Collections_Generic_List_object___Sort_56548584(
-    v15,
-    v30,
-    (const MethodInfo_35EDCE8 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Sort__);
+  if ( !v14 )
+LABEL_24:
+    sub_1C13F80(list, v15);
+  System_Collections_Generic_List_object___Sort_56814736(
+    v14,
+    v28,
+    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Sort__);
   return (EventRewardGuideReleaseEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                                  v15,
-                                                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__);
+                                                  v14,
+                                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__GetEntities_40173968(
+EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__GetEntities_40396828(
         EventRewardGuideReleaseMaster_o *this,
         int32_t eventId,
         int32_t slot,
@@ -187,19 +183,19 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
   __int64 size; // x10
   Il2CppClass **v25; // x0
 
-  if ( (byte_4B66CC8 & 1) == 0 )
+  if ( (byte_4BB47DF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo, v9);
-    byte_4B66CC8 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__Add__, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo, v9);
+    byte_4BB47DF = 1;
   }
   Entities = EventRewardGuideReleaseMaster__GetEntities(this, eventId, *(const MethodInfo **)&slot);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__);
   if ( !Entities )
     goto LABEL_17;
   max_length = Entities->max_length;
@@ -209,7 +205,7 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
     while ( 1 )
     {
       if ( v21 >= max_length )
-        sub_1BE4D30(v12, v13);
+        sub_1C13F88(v12, v13);
       v13 = (int64_t)Entities->m_Items[v21];
       if ( !v13 )
         break;
@@ -228,14 +224,14 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)v13,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
         }
         else
         {
           v25 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v25[4] = (Il2CppClass *)v13;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v25 + 4), v13, v14, v15, v16, v17, v18, v19);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), v13, v14, v15, v16, v17, v18, v19);
         }
       }
       max_length = Entities->max_length;
@@ -243,14 +239,14 @@ EventRewardGuideReleaseEntity_array *__fastcall EventRewardGuideReleaseMaster__G
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
 LABEL_15:
   if ( !v11 )
     goto LABEL_17;
   return (EventRewardGuideReleaseEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                   v11,
-                                                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__);
+                                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity__ToArray__);
 }
 
 
@@ -265,12 +261,12 @@ EventRewardGuideReleaseEntity_o *__fastcall EventRewardGuideReleaseMaster__GetEn
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66CC4 & 1) == 0 )
+  if ( (byte_4BB47DB & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B66CC4 = 1;
+    byte_4BB47DB = 1;
   }
   PK = (Il2CppObject *)EventRewardGuideReleaseEntity__CreatePK(
                          eventId,
@@ -281,7 +277,7 @@ EventRewardGuideReleaseEntity_o *__fastcall EventRewardGuideReleaseMaster__GetEn
   return (EventRewardGuideReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__GetEntity__);
+                                              (const MethodInfo_323D0DC *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__GetEntity__);
 }
 
 
@@ -297,12 +293,12 @@ bool __fastcall EventRewardGuideReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66CC5 & 1) == 0 )
+  if ( (byte_4BB47DC & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_4B66CC5 = 1;
+    byte_4BB47DC = 1;
   }
   PK = (Il2CppObject *)EventRewardGuideReleaseEntity__CreatePK(
                          eventId,
@@ -314,7 +310,7 @@ bool __fastcall EventRewardGuideReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventRewardGuideReleaseMaster__EventRewardGuideReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -329,15 +325,15 @@ void __fastcall EventRewardGuideReleaseMaster___c___cctor(const MethodInfo *meth
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B66CC9 & 1) == 0 )
+  if ( (byte_4BB47E0 & 1) == 0 )
   {
-    sub_1BE4ACC(&EventRewardGuideReleaseMaster___c_TypeInfo, v1);
-    byte_4B66CC9 = 1;
+    sub_1C13D24(&EventRewardGuideReleaseMaster___c_TypeInfo, v1);
+    byte_4BB47E0 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(EventRewardGuideReleaseMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(EventRewardGuideReleaseMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventRewardGuideReleaseMaster___c_TypeInfo->static_fields->__9 = (struct EventRewardGuideReleaseMaster___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)EventRewardGuideReleaseMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -364,6 +360,6 @@ int32_t __fastcall EventRewardGuideReleaseMaster___c___GetEntities_b__3_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BE4D28(this, a);
+    sub_1C13F80(this, a);
   return a->fields.slot - b->fields.slot;
 }

@@ -19,9 +19,9 @@ void __fastcall StandFigureCollect___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._entity_k__BackingField = entity;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)entity, v7, v8, v9, v10, v11, v12);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)entity, v7, v8, v9, v10, v11, v12);
   this->fields._standFigure_k__BackingField = standFigure;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._standFigure_k__BackingField,
     (int64_t)standFigure,
     v13,
@@ -59,7 +59,7 @@ void __fastcall StandFigureCollect__set_entity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._entity_k__BackingField = value;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -75,7 +75,7 @@ void __fastcall StandFigureCollect__set_standFigure(
   PartyListViewItem_o *v7; // x7
 
   this->fields._standFigure_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._standFigure_k__BackingField,
     (int64_t)value,
     (int64_t)method,

@@ -16,7 +16,7 @@ void __fastcall BillBoardAroundLocalAxis__SetTargetTransform(
   PartyListViewItem_o *v7; // x7
 
   this->fields.targetTrans = trans;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.targetTrans,
     (int64_t)trans,
     (int64_t)method,
@@ -33,10 +33,10 @@ void __fastcall BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *thi
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4B65FD8 & 1) == 0 )
+  if ( (byte_4BB3AFB & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B65FD8 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB3AFB = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -172,7 +172,7 @@ void __fastcall BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
 LABEL_11:
-    sub_1BE4D28(targetTrans, method);
+    sub_1C13F80(targetTrans, method);
   v43.fields.x = v22;
   v43.fields.y = v23;
   v43.fields.z = v24;

@@ -9,16 +9,16 @@ void __fastcall ExcludeMotionMaster___cctor(const MethodInfo *method)
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4B66DED & 1) == 0 )
+  if ( (byte_4BB4904 & 1) == 0 )
   {
-    sub_1BE4ACC(&ExcludeMotionMaster_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_6392/*"ExcludeMotionTargetId"*/, v8);
-    byte_4B66DED = 1;
+    sub_1C13D24(&ExcludeMotionMaster_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_6411/*"Exceptions"*/, v8);
+    byte_4BB4904 = 1;
   }
-  ExcludeMotionMaster_TypeInfo->static_fields->EXCLUDE_MOTION_TARGET_ID = (struct System_String_o *)StringLiteral_6392/*"ExcludeMotionTargetId"*/;
-  sub_1BE4A70(
+  ExcludeMotionMaster_TypeInfo->static_fields->EXCLUDE_MOTION_TARGET_ID = (struct System_String_o *)StringLiteral_6411/*"Exceptions"*/;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)ExcludeMotionMaster_TypeInfo->static_fields,
-    StringLiteral_6392/*"ExcludeMotionTargetId"*/,
+    StringLiteral_6411/*"Exceptions"*/,
     v2,
     v3,
     v4,
@@ -30,15 +30,15 @@ void __fastcall ExcludeMotionMaster___cctor(const MethodInfo *method)
 
 void __fastcall ExcludeMotionMaster___ctor(ExcludeMotionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66DEA & 1) == 0 )
+  if ( (byte_4BB4901 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__, method);
-    byte_4B66DEA = 1;
+    sub_1C13D24(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__, method);
+    byte_4BB4901 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     490,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string___ctor__);
 }
 
 
@@ -80,14 +80,14 @@ System_Int32_array *__fastcall ExcludeMotionMaster__GetExcludeOptionIndexes(
   ExcludeMotionEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v8 = this;
-  if ( (byte_4B66DEC & 1) == 0 )
+  if ( (byte_4BB4903 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_Empty_int___, svtData);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v9);
-    sub_1BE4ACC(&ExcludeMotionMaster_TypeInfo, v10);
-    sub_1BE4ACC(&long_TypeInfo, v11);
-    this = (ExcludeMotionMaster_o *)sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v12);
-    byte_4B66DEC = 1;
+    sub_1C13D24(&Method_System_Array_Empty_int___, svtData);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v9);
+    sub_1C13D24(&ExcludeMotionMaster_TypeInfo, v10);
+    sub_1C13D24(&long_TypeInfo, v11);
+    this = (ExcludeMotionMaster_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
+    byte_4BB4903 = 1;
   }
   v35 = 0LL;
   entity = 0LL;
@@ -110,7 +110,7 @@ System_Int32_array *__fastcall ExcludeMotionMaster__GetExcludeOptionIndexes(
           enemyScript,
           (Il2CppObject *)v17->static_fields->EXCLUDE_MOTION_TARGET_ID,
           (Il2CppObject **)&v35,
-          (const MethodInfo_32B1A30 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_32F41BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     goto LABEL_12;
   this = v35;
   if ( !v35 )
@@ -136,15 +136,15 @@ LABEL_34:
         return *p_optionIndexes;
       }
 LABEL_46:
-      sub_1BE4D28(this, svtData);
+      sub_1C13F80(this, svtData);
     }
 LABEL_12:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B63737 )
+    if ( !byte_4BAF44D )
     {
-      sub_1BE4ACC(&TerminalPramsManager_TypeInfo, svtData);
-      byte_4B63737 = 1;
+      sub_1C13D24(&TerminalPramsManager_TypeInfo, svtData);
+      byte_4BAF44D = 1;
     }
     v22 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -165,10 +165,10 @@ LABEL_12:
     v25 = entity;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B63742 )
+    if ( !byte_4BAF44C )
     {
-      sub_1BE4ACC(&TerminalPramsManager_TypeInfo, svtData);
-      byte_4B63742 = 1;
+      sub_1C13D24(&TerminalPramsManager_TypeInfo, svtData);
+      byte_4BAF44C = 1;
     }
     this = (ExcludeMotionMaster_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -180,17 +180,17 @@ LABEL_12:
       goto LABEL_46;
     this = (ExcludeMotionMaster_o *)ExcludeMotionEntity__IsSatisfyPhaseCond(
                                       v25,
-                                      (int32_t)this[2].fields._lookup->fields._entries,
+                                      (int32_t)this[2].fields.list->fields._monitor,
                                       v23);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
 LABEL_50:
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4B6373A )
+      if ( !byte_4BB1250 )
       {
-        sub_1BE4ACC(&TerminalPramsManager_TypeInfo, svtData);
-        byte_4B6373A = 1;
+        sub_1C13D24(&TerminalPramsManager_TypeInfo, svtData);
+        byte_4BB1250 = 1;
       }
       v26 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -213,24 +213,24 @@ LABEL_50:
         v30 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
         if ( !v30 )
         {
-          sub_1C36A04(Method_System_Array_Empty_int___);
+          sub_1C65C5C(Method_System_Array_Empty_int___);
           v30 = v29[7];
         }
         v31 = *(_QWORD *)(v30 + 16);
         if ( (*(_BYTE *)(v31 + 309) & 1) == 0 )
-          v31 = sub_1C369A8(inited);
+          v31 = sub_1C65C00(inited);
         if ( !*(_DWORD *)(v31 + 224) )
           inited = j_il2cpp_runtime_class_init_0(v31);
         v32 = *(_QWORD *)(v29[7] + 16LL);
         if ( (*(_BYTE *)(v32 + 309) & 1) == 0 )
-          v32 = sub_1C369A8(inited);
+          v32 = sub_1C65C00(inited);
         p_optionIndexes = *(System_Int32_array ***)(v32 + 184);
         return *p_optionIndexes;
       }
     }
     goto LABEL_34;
   }
-  sub_1BE4FE8(v35);
+  sub_1C14240(v35);
   ExcludeMotionMaster___cctor(v34);
   return result;
 }
@@ -248,10 +248,10 @@ bool __fastcall ExcludeMotionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66DEB & 1) == 0 )
+  if ( (byte_4BB4902 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__, entity);
-    byte_4B66DEB = 1;
+    sub_1C13D24(&Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__, entity);
+    byte_4BB4902 = 1;
   }
   PK = (Il2CppObject *)ExcludeMotionEntity__CreatePK(
                          targetIdType,
@@ -264,5 +264,5 @@ bool __fastcall ExcludeMotionMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_ExcludeMotionMaster__ExcludeMotionEntity__string__TryGetEntity__);
 }

@@ -31,45 +31,45 @@ CreateSkillTaskFromBuffAction_array *__fastcall BattleAddSkillTaskBeforeTreasure
   PartyListViewItem_o *v20; // x7
   __int64 v22; // x0
 
-  if ( (byte_4B697A9 & 1) == 0 )
+  if ( (byte_4BB72DB & 1) == 0 )
   {
-    sub_1BE4ACC(&CreateComboStartSkillTask_TypeInfo, method);
-    sub_1BE4ACC(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
-    sub_1BE4ACC(&CreateTreasureDeviceBeforeSkillTask_TypeInfo, v3);
-    byte_4B697A9 = 1;
+    sub_1C13D24(&CreateComboStartSkillTask_TypeInfo, method);
+    sub_1C13D24(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
+    sub_1C13D24(&CreateTreasureDeviceBeforeSkillTask_TypeInfo, v3);
+    byte_4BB72DB = 1;
   }
-  v4 = (CreateSkillTaskFromBuffAction_array *)sub_1BE4B74(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
-  v5 = (Il2CppObject *)sub_1BE4D18(CreateComboStartSkillTask_TypeInfo);
+  v4 = (CreateSkillTaskFromBuffAction_array *)sub_1C13DCC(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
+  v5 = (Il2CppObject *)sub_1C13F70(CreateComboStartSkillTask_TypeInfo);
   System_Object___ctor(v5, 0LL);
   if ( !v4 )
-    sub_1BE4D28(v6, v7);
+    sub_1C13F80(v6, v7);
   if ( v5 )
   {
-    v6 = sub_1BE4C08(v5, v4->obj.klass->_1.element_class);
+    v6 = sub_1C13E60(v5, v4->obj.klass->_1.element_class);
     if ( !v6 )
       goto LABEL_12;
   }
   if ( !v4->max_length )
     goto LABEL_11;
   v4->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v5;
-  sub_1BE4A70((PartyOrganizationUtility_o *)v4->m_Items, (int64_t)v5, v8, v9, v10, v11, v12, v13);
-  v14 = (Il2CppObject *)sub_1BE4D18(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v4->m_Items, (int64_t)v5, v8, v9, v10, v11, v12, v13);
+  v14 = (Il2CppObject *)sub_1C13F70(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
   System_Object___ctor(v14, 0LL);
   if ( v14 )
   {
-    v6 = sub_1BE4C08(v14, v4->obj.klass->_1.element_class);
+    v6 = sub_1C13E60(v14, v4->obj.klass->_1.element_class);
     if ( !v6 )
     {
 LABEL_12:
-      v22 = sub_1BE4D4C(v6);
-      sub_1BE4BF4(v22, 0LL);
+      v22 = sub_1C13FA4(v6);
+      sub_1C13E4C(v22, 0LL);
     }
   }
   if ( v4->max_length <= 1 )
 LABEL_11:
-    sub_1BE4D30(v6, v7);
+    sub_1C13F88(v6, v7);
   v4->m_Items[1] = (CreateSkillTaskFromBuffAction_o *)v14;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v4->m_Items[1], (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v4->m_Items[1], (int64_t)v14, v15, v16, v17, v18, v19, v20);
   return v4;
 }
 

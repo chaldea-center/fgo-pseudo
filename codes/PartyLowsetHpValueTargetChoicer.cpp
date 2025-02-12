@@ -19,17 +19,17 @@ System_Int32_array *__fastcall PartyLowsetHpValueTargetChoicer__GetCandidate(
   BattleServantData_o *MostMatchedServant; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4B699A9 & 1) == 0 )
+  if ( (byte_4BB74DD & 1) == 0 )
   {
-    sub_1BE4ACC(&TargetFilterLowestHpValue_TypeInfo, method);
-    byte_4B699A9 = 1;
+    sub_1C13D24(&TargetFilterLowestHpValue_TypeInfo, method);
+    byte_4BB74DD = 1;
   }
   Candidate = PartyAllFieldTargetAggregator__GetCandidate((PartyAllFieldTargetAggregator_o *)this, method);
-  v4 = (Il2CppObject *)sub_1BE4D18(TargetFilterLowestHpValue_TypeInfo);
+  v4 = (Il2CppObject *)sub_1C13F70(TargetFilterLowestHpValue_TypeInfo);
   System_Object___ctor(v4, 0LL);
   args = this->fields.args;
   if ( !args )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   MostMatchedServant = TargetAggregator__GetMostMatchedServant(
                          (TargetAggregator_o *)this,
                          Candidate,

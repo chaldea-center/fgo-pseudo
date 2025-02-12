@@ -19,20 +19,20 @@ void __fastcall TradeStartRequest__beginRequest(
   __int64 v15; // x1
   __int64 v16; // x1
 
-  if ( (byte_4B685D7 & 1) == 0 )
+  if ( (byte_4BB6110 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_19387/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&StringLiteral_23143/*"reduceTimeItemId"*/, v13);
-    sub_1BE4ACC(&StringLiteral_24367/*"tradeGoodsNum"*/, v14);
-    sub_1BE4ACC(&StringLiteral_24369/*"tradeStoreIdx"*/, v15);
-    sub_1BE4ACC(&StringLiteral_24366/*"tradeGoodsId"*/, v16);
-    byte_4B685D7 = 1;
+    sub_1C13D24(&StringLiteral_19431/*"event/location"*/, *(_QWORD *)&eventId);
+    sub_1C13D24(&StringLiteral_23196/*"rebootAlreadyPlayMovie"*/, v13);
+    sub_1C13D24(&StringLiteral_24422/*"track"*/, v14);
+    sub_1C13D24(&StringLiteral_24424/*"trackAddPaymentInfo"*/, v15);
+    sub_1C13D24(&StringLiteral_24421/*"tr-TR"*/, v16);
+    byte_4BB6110 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19387/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24369/*"tradeStoreIdx"*/, tradeStoreIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24366/*"tradeGoodsId"*/, tradeGoodsId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24367/*"tradeGoodsNum"*/, tradeGoodsNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23143/*"reduceTimeItemId"*/, itemId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19431/*"event/location"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24424/*"trackAddPaymentInfo"*/, tradeStoreIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24421/*"tr-TR"*/, tradeGoodsId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24422/*"track"*/, tradeGoodsNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23196/*"rebootAlreadyPlayMovie"*/, itemId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -42,16 +42,16 @@ System_String_o *__fastcall TradeStartRequest__getURL(TradeStartRequest_o *this,
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B685D6 & 1) == 0 )
+  if ( (byte_4BB610F & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19381/*"event/tradeStart"*/, v2);
-    byte_4B685D6 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_19425/*"event/createRecipe"*/, v2);
+    byte_4BB610F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19381/*"event/tradeStart"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19425/*"event/createRecipe"*/, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ void __fastcall TradeStartRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4B685D8 & 1) == 0 )
+  if ( (byte_4BB6111 & 1) == 0 )
   {
-    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B685D8 = 1;
+    sub_1C13D24(&JsonManager_TypeInfo, responseList);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB6111 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -88,7 +88,7 @@ void __fastcall TradeStartRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22370/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22421/*"newAttributes"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

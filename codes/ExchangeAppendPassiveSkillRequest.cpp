@@ -12,20 +12,20 @@ void __fastcall ExchangeAppendPassiveSkillRequest__beginRequest(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x1
 
-  if ( (byte_4B684E0 & 1) == 0 )
+  if ( (byte_4BB6019 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_17299/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_1BE4ACC(&StringLiteral_17294/*"baseSkillNum"*/, v9);
-    sub_1BE4ACC(&StringLiteral_24191/*"targetSkillNum"*/, v10);
-    byte_4B684E0 = 1;
+    sub_1C13D24(&StringLiteral_17344/*"base64"*/, baseUsrSvtId);
+    sub_1C13D24(&StringLiteral_17339/*"banners"*/, v9);
+    sub_1C13D24(&StringLiteral_24246/*"tableName"*/, v10);
+    byte_4BB6019 = 1;
   }
-  RequestBase__addField_42110748(
+  RequestBase__addField_42309896(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17299/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17344/*"base64"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&baseSkillNum);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24191/*"targetSkillNum"*/, targetSkillNum, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17294/*"baseSkillNum"*/, baseSkillNum, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24246/*"tableName"*/, targetSkillNum, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17339/*"banners"*/, baseSkillNum, v12);
   RequestBase__beginRequest((RequestBase_o *)this, v13);
 }
 
@@ -37,16 +37,16 @@ System_String_o *__fastcall ExchangeAppendPassiveSkillRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B684DF & 1) == 0 )
+  if ( (byte_4BB6018 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_17985/*"card/exchangeAppendPassiveSkill"*/, v2);
-    byte_4B684DF = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_18027/*"capacity was less than the current size."*/, v2);
+    byte_4BB6018 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_17985/*"card/exchangeAppendPassiveSkill"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_18027/*"capacity was less than the current size."*/, 0LL);
 }
 
 
@@ -64,17 +64,17 @@ void __fastcall ExchangeAppendPassiveSkillRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4B684E1 & 1) == 0 )
+  if ( (byte_4BB601A & 1) == 0 )
   {
-    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B684E1 = 1;
+    sub_1C13D24(&JsonManager_TypeInfo, responseList);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB601A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(135, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42194996(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ void __fastcall ExchangeAppendPassiveSkillRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22370/*"ng"*/,
+        StringLiteral_22421/*"newAttributes"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

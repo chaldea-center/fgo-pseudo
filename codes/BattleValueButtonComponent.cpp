@@ -17,11 +17,11 @@ void __fastcall BattleValueButtonComponent__OnClickTarget(BattleValueButtonCompo
   __int64 v11; // x1
   int32_t val; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B69E9F & 1) == 0 )
+  if ( (byte_4BB79C2 & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B69E9F = 1;
+    sub_1C13D24(&int_TypeInfo, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BB79C2 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,7 +33,7 @@ void __fastcall BattleValueButtonComponent__OnClickTarget(BattleValueButtonCompo
     val = this->fields.val;
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &val, v5, v6, v7);
     if ( !v8 )
-      sub_1BE4D28(v10, v11);
-    UnityEngine_GameObject__SendMessage_70433372(v8, sendmessage, v10, 0LL);
+      sub_1C13F80(v10, v11);
+    UnityEngine_GameObject__SendMessage_70703360(v8, sendmessage, v10, 0LL);
   }
 }

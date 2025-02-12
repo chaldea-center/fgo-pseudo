@@ -9,16 +9,16 @@ void __fastcall TitleInfoWarBoardTitleComponent___cctor(const MethodInfo *method
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4B656C4 & 1) == 0 )
+  if ( (byte_4BB32BE & 1) == 0 )
   {
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_4010/*"CRIMovie/CRIMoviePlayerWithPanel"*/, v8);
-    byte_4B656C4 = 1;
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_4013/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/, v8);
+    byte_4BB32BE = 1;
   }
-  TitleInfoWarBoardTitleComponent_TypeInfo->static_fields->MOVIE_PLAYER_OBJECT_PATH = (struct System_String_o *)StringLiteral_4010/*"CRIMovie/CRIMoviePlayerWithPanel"*/;
-  sub_1BE4A70(
+  TitleInfoWarBoardTitleComponent_TypeInfo->static_fields->MOVIE_PLAYER_OBJECT_PATH = (struct System_String_o *)StringLiteral_4013/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)TitleInfoWarBoardTitleComponent_TypeInfo->static_fields,
-    StringLiteral_4010/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
+    StringLiteral_4013/*"CRAFT_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/,
     v2,
     v3,
     v4,
@@ -40,16 +40,16 @@ void __fastcall TitleInfoWarBoardTitleComponent___ctor(
   PartyListViewItem_o *v7; // x7
   void *v9; // x1
 
-  if ( (byte_4B656C3 & 1) == 0 )
+  if ( (byte_4BB32BD & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
-    byte_4B656C3 = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, method);
+    byte_4BB32BD = 1;
   }
   this->fields.TitleFadeOutPlayTime = 1.0;
   *(_QWORD *)&this->fields.BgmFadeOutPlayTime = 0x400000003F800000LL;
   v9 = StringLiteral_1/*""*/;
   this->fields.movieName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.movieName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.movieName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
   this->fields.moviePlayerDepth = 100;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -78,17 +78,17 @@ void __fastcall TitleInfoWarBoardTitleComponent__Awake(
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
   CStateManager_T__o *mFSM; // x21
-  TitleInfoWarBoardTitleComponent_StateNone_o *v22; // x22
+  Il2CppObject *v22; // x22
   Il2CppObject *ComponentInChildren_object; // x0
   __int64 v24; // x1
   CStateManager_T__o *v25; // x21
-  TitleInfoWarBoardTitleComponent_StateMovieFade_o *v26; // x22
+  Il2CppObject *v26; // x22
   CStateManager_T__o *v27; // x21
-  TitleInfoWarBoardTitleComponent_StateMovie_o *v28; // x22
+  Il2CppObject *v28; // x22
   CStateManager_T__o *v29; // x21
-  TitleInfoWarBoardTitleComponent_StatePlay_o *v30; // x22
+  Il2CppObject *v30; // x22
   CStateManager_T__o *v31; // x20
-  TitleInfoWarBoardTitleComponent_StateTouchWait_o *v32; // x21
+  Il2CppObject *v32; // x21
   const MethodInfo *v33; // x2
   UnityEngine_Object_o *particleObj; // x21
   const MethodInfo *v35; // x2
@@ -103,82 +103,82 @@ void __fastcall TitleInfoWarBoardTitleComponent__Awake(
   FollowerInfo_o *v44; // x6
   PartyListViewItem_o *v45; // x7
 
-  if ( (byte_4B656B1 & 1) == 0 )
+  if ( (byte_4BB32AB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_CStateManager_TitleInfoWarBoardTitleComponent___ctor__, method);
-    sub_1BE4ACC(&Method_CStateManager_TitleInfoWarBoardTitleComponent__add__, v3);
-    sub_1BE4ACC(&CStateManager_TitleInfoWarBoardTitleComponent__TypeInfo, v4);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___, v5);
-    sub_1BE4ACC(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StateMovieFade_TypeInfo, v8);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StateMovie_TypeInfo, v9);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StateNone_TypeInfo, v10);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StatePlay_TypeInfo, v11);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StateTouchWait_TypeInfo, v12);
-    byte_4B656B1 = 1;
+    sub_1C13D24(&Method_CStateManager_TitleInfoWarBoardTitleComponent___ctor__, method);
+    sub_1C13D24(&Method_CStateManager_TitleInfoWarBoardTitleComponent__add__, v3);
+    sub_1C13D24(&CStateManager_TitleInfoWarBoardTitleComponent__TypeInfo, v4);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___, v5);
+    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StateMovieFade_TypeInfo, v8);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StateMovie_TypeInfo, v9);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StateNone_TypeInfo, v10);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StatePlay_TypeInfo, v11);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StateTouchWait_TypeInfo, v12);
+    byte_4BB32AB = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v14 = (CStateManager_T__o *)sub_1BE4D18(CStateManager_TitleInfoWarBoardTitleComponent__TypeInfo);
+    v14 = (CStateManager_T__o *)sub_1C13F70(CStateManager_TitleInfoWarBoardTitleComponent__TypeInfo);
     CStateManager_object____ctor(
       v14,
       (Il2CppObject *)this,
       5,
-      (const MethodInfo_318A548 *)Method_CStateManager_TitleInfoWarBoardTitleComponent___ctor__);
+      (const MethodInfo_31C327C *)Method_CStateManager_TitleInfoWarBoardTitleComponent___ctor__);
     this->fields.mFSM = (struct CStateManager_TitleInfoWarBoardTitleComponent__o *)v14;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v14, v15, v16, v17, v18, v19, v20);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v22 = (TitleInfoWarBoardTitleComponent_StateNone_o *)sub_1BE4D18(TitleInfoWarBoardTitleComponent_StateNone_TypeInfo);
-    TitleInfoWarBoardTitleComponent_StateNone___ctor(v22, 0LL);
+    v22 = (Il2CppObject *)sub_1C13F70(TitleInfoWarBoardTitleComponent_StateNone_TypeInfo);
+    System_Object___ctor(v22, 0LL);
     if ( !mFSM )
       goto LABEL_25;
     CStateManager_object___add(
       mFSM,
       0,
       (IState_T__o *)v22,
-      (const MethodInfo_318A5F0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
+      (const MethodInfo_31C3324 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
     v25 = (CStateManager_T__o *)*p_mFSM;
-    v26 = (TitleInfoWarBoardTitleComponent_StateMovieFade_o *)sub_1BE4D18(TitleInfoWarBoardTitleComponent_StateMovieFade_TypeInfo);
-    TitleInfoWarBoardTitleComponent_StateMovieFade___ctor(v26, 0LL);
+    v26 = (Il2CppObject *)sub_1C13F70(TitleInfoWarBoardTitleComponent_StateMovieFade_TypeInfo);
+    System_Object___ctor(v26, 0LL);
     if ( !v25 )
       goto LABEL_25;
     CStateManager_object___add(
       v25,
       1,
       (IState_T__o *)v26,
-      (const MethodInfo_318A5F0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
+      (const MethodInfo_31C3324 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
     v27 = (CStateManager_T__o *)*p_mFSM;
-    v28 = (TitleInfoWarBoardTitleComponent_StateMovie_o *)sub_1BE4D18(TitleInfoWarBoardTitleComponent_StateMovie_TypeInfo);
-    TitleInfoWarBoardTitleComponent_StateMovie___ctor(v28, 0LL);
+    v28 = (Il2CppObject *)sub_1C13F70(TitleInfoWarBoardTitleComponent_StateMovie_TypeInfo);
+    System_Object___ctor(v28, 0LL);
     if ( !v27 )
       goto LABEL_25;
     CStateManager_object___add(
       v27,
       2,
       (IState_T__o *)v28,
-      (const MethodInfo_318A5F0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
+      (const MethodInfo_31C3324 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
     v29 = (CStateManager_T__o *)*p_mFSM;
-    v30 = (TitleInfoWarBoardTitleComponent_StatePlay_o *)sub_1BE4D18(TitleInfoWarBoardTitleComponent_StatePlay_TypeInfo);
-    TitleInfoWarBoardTitleComponent_StatePlay___ctor(v30, 0LL);
+    v30 = (Il2CppObject *)sub_1C13F70(TitleInfoWarBoardTitleComponent_StatePlay_TypeInfo);
+    System_Object___ctor(v30, 0LL);
     if ( !v29 )
       goto LABEL_25;
     CStateManager_object___add(
       v29,
       3,
       (IState_T__o *)v30,
-      (const MethodInfo_318A5F0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
+      (const MethodInfo_31C3324 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
     v31 = (CStateManager_T__o *)*p_mFSM;
-    v32 = (TitleInfoWarBoardTitleComponent_StateTouchWait_o *)sub_1BE4D18(TitleInfoWarBoardTitleComponent_StateTouchWait_TypeInfo);
-    TitleInfoWarBoardTitleComponent_StateTouchWait___ctor(v32, 0LL);
+    v32 = (Il2CppObject *)sub_1C13F70(TitleInfoWarBoardTitleComponent_StateTouchWait_TypeInfo);
+    System_Object___ctor(v32, 0LL);
     if ( !v31 )
       goto LABEL_25;
     CStateManager_object___add(
       v31,
       4,
       (IState_T__o *)v32,
-      (const MethodInfo_318A5F0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
+      (const MethodInfo_31C3324 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__add__);
     TitleInfoWarBoardTitleComponent__SetState(this, 0, v33);
   }
   particleObj = (UnityEngine_Object_o *)this->fields.particleObj;
@@ -196,14 +196,14 @@ void __fastcall TitleInfoWarBoardTitleComponent__Awake(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v38 = UnityEngine_Object__Instantiate_object_(
               v37,
-              (const MethodInfo_2FDE9E4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v38, 0LL, 0LL) )
       {
         GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v38, (UnityEngine_Component_o *)this, 0LL);
-        if ( !byte_4B612E1 )
+        if ( !byte_4BAEDA1 )
         {
-          sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, v39);
-          byte_4B612E1 = 1;
+          sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v39);
+          byte_4BAEDA1 = 1;
         }
         GameObjectExtensions__SetLocalPosition(
           (UnityEngine_GameObject_o *)v38,
@@ -213,12 +213,12 @@ void __fastcall TitleInfoWarBoardTitleComponent__Awake(
         {
           ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                          (UnityEngine_GameObject_o *)v38,
-                                         (const MethodInfo_2FA9A00 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
+                                         (const MethodInfo_2FDFC60 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIUnityRenderer___);
           if ( ComponentInChildren_object )
           {
             UIWidget__set_depth((UIWidget_o *)ComponentInChildren_object, 0, 0LL);
             this->fields.particleObj = (struct UnityEngine_GameObject_o *)v38;
-            sub_1BE4A70(
+            sub_1C13CC8(
               (PartyOrganizationUtility_o *)&this->fields.particleObj,
               (int64_t)v38,
               v40,
@@ -231,7 +231,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__Awake(
           }
         }
 LABEL_25:
-        sub_1BE4D28(ComponentInChildren_object, v24);
+        sub_1C13F80(ComponentInChildren_object, v24);
       }
     }
   }
@@ -257,23 +257,23 @@ UnityEngine_GameObject_o *__fastcall TitleInfoWarBoardTitleComponent__CreateCriM
   Il2CppObject *Component_object; // x20
   Il2CppObject *v15; // x20
 
-  if ( (byte_4B656BC & 1) == 0 )
+  if ( (byte_4BB32B6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIRootReScale___, moviePlayerName);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIRoot___, v6);
-    sub_1BE4ACC(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v8);
-    sub_1BE4ACC(&Method_UnityEngine_Resources_Load_GameObject___, v9);
-    byte_4B656BC = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIRootReScale___, moviePlayerName);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIRoot___, v6);
+    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C13D24(&Method_UnityEngine_Resources_Load_GameObject___, v9);
+    byte_4BB32B6 = 1;
   }
   object = UnityEngine_Resources__Load_object_(
              moviePlayerName,
-             (const MethodInfo_2FEE238 *)Method_UnityEngine_Resources_Load_GameObject___);
+             (const MethodInfo_30245D8 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__Instantiate_object_(
           object,
-          (const MethodInfo_2FDE9E4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   v12 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)parent, 0LL, 0LL);
   if ( v12 )
     GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v11, parent, 0LL);
@@ -281,7 +281,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoWarBoardTitleComponent__CreateCriM
     goto LABEL_19;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v11,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIRoot___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIRoot___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -293,7 +293,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoWarBoardTitleComponent__CreateCriM
   }
   v15 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)v11,
-          (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIRootReScale___);
+          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIRootReScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v12 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v15, 0LL, 0LL);
@@ -305,7 +305,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoWarBoardTitleComponent__CreateCriM
       goto LABEL_18;
     }
 LABEL_19:
-    sub_1BE4D28(v12, v13);
+    sub_1C13F80(v12, v13);
   }
 LABEL_18:
   GameObjectExtensions__ResetLocalScale((UnityEngine_GameObject_o *)v11, 0LL);
@@ -318,12 +318,12 @@ System_String_o *__fastcall TitleInfoWarBoardTitleComponent__CreateMoviePath(
         System_String_o *movieName,
         const MethodInfo *method)
 {
-  if ( (byte_4B656BD & 1) == 0 )
+  if ( (byte_4BB32B7 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9302/*"Movie/{0}.usm"*/, movieName);
-    byte_4B656BD = 1;
+    sub_1C13D24(&StringLiteral_9326/*"Move_Point_0"*/, movieName);
+    byte_4BB32B7 = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_9302/*"Movie/{0}.usm"*/, (Il2CppObject *)movieName, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_9326/*"Move_Point_0"*/, (Il2CppObject *)movieName, 0LL);
 }
 
 
@@ -340,11 +340,11 @@ void __fastcall TitleInfoWarBoardTitleComponent__EndMovie(
   int32_t questId; // w20
   WarBoardMovieHistoryManager_c *v10; // x0
 
-  if ( (byte_4B656BE & 1) == 0 )
+  if ( (byte_4BB32B8 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    sub_1BE4ACC(&WarBoardMovieHistoryManager_TypeInfo, v3);
-    byte_4B656BE = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    sub_1C13D24(&WarBoardMovieHistoryManager_TypeInfo, v3);
+    byte_4BB32B8 = 1;
   }
   moviePlayer = (UnityEngine_Object_o *)this->fields.moviePlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -360,7 +360,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__EndMovie(
   warBoardQuestEntity = this->fields.warBoardQuestEntity;
   if ( !warBoardQuestEntity )
 LABEL_12:
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   questId = warBoardQuestEntity->fields.questId;
   questPhase = warBoardQuestEntity->fields.questPhase;
   v10 = WarBoardMovieHistoryManager_TypeInfo;
@@ -380,10 +380,10 @@ void __fastcall TitleInfoWarBoardTitleComponent__FadeOutBGM(
 {
   float BgmFadeOutPlayTime; // s8
 
-  if ( (byte_4B656B7 & 1) == 0 )
+  if ( (byte_4BB32B1 & 1) == 0 )
   {
-    sub_1BE4ACC(&SoundManager_TypeInfo, method);
-    byte_4B656B7 = 1;
+    sub_1C13D24(&SoundManager_TypeInfo, method);
+    byte_4BB32B1 = 1;
   }
   BgmFadeOutPlayTime = this->fields.BgmFadeOutPlayTime;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -400,16 +400,16 @@ int32_t __fastcall TitleInfoWarBoardTitleComponent__GetState(
   struct CStateManager_TitleInfoWarBoardTitleComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4B656B9 & 1) == 0 )
+  if ( (byte_4BB32B3 & 1) == 0 )
   {
-    this = (TitleInfoWarBoardTitleComponent_o *)sub_1BE4ACC(
+    this = (TitleInfoWarBoardTitleComponent_o *)sub_1C13D24(
                                                   &Method_CStateManager_TitleInfoWarBoardTitleComponent__getState__,
                                                   method);
-    byte_4B656B9 = 1;
+    byte_4BB32B3 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -432,24 +432,24 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnClickCancelButton(
   __int64 v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4B656C1 & 1) == 0 )
+  if ( (byte_4BB32BB & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__, v5);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent__OnClickCancelButton_b__52_0__, v6);
-    byte_4B656C1 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__, v5);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent__OnClickCancelButton_b__52_0__, v6);
+    byte_4BB32BB = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v7 = Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BE4AE4(Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v7 = (_QWORD *)sub_1C13D3C(Method_TitleInfoWarBoardTitleComponent_OnClickCancelButton__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C13D08(v7, v7[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v10 = AvalonSceneManager_TypeInfo;
     v11 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -458,14 +458,14 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnClickCancelButton(
       v10 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-    v13 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(
       v13,
       (Il2CppObject *)this,
       Method_TitleInfoWarBoardTitleComponent__OnClickCancelButton_b__52_0__,
       0LL);
     if ( !v11 )
-      sub_1BE4D28(v14, v15);
+      sub_1C13F80(v14, v15);
     CommonUI__maskFadeout(v11, 1, DEFAULT_FADE_TIME, v13, 0LL);
   }
 }
@@ -487,30 +487,30 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnClickDecideButton(
   CommonUI_o *v12; // x20
   System_Action_o *v13; // x21
 
-  if ( (byte_4B656C0 & 1) == 0 )
+  if ( (byte_4BB32BA & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__, v4);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent__OnClickDecideButton_b__51_0__, v5);
-    byte_4B656C0 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__, v4);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent__OnClickDecideButton_b__51_0__, v5);
+    byte_4BB32BA = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v6 = Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1BE4AE4(Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v6, v6[4]);
-    OverwriteAssetSoundName__PlayCommonSe(v7, 28, 0LL);
+      v6 = (_QWORD *)sub_1C13D3C(Method_TitleInfoWarBoardTitleComponent_OnClickDecideButton__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C13D08(v6, v6[4]);
+    OverwriteAssetSoundName__PlayCommonSe(v7, 28, 0, 0LL);
     screenTouchInfo = (UnityEngine_Component_o *)this->fields.screenTouchInfo;
     this->fields.isButtonEnable = 0;
     if ( !screenTouchInfo
       || (screenTouchInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(screenTouchInfo, 0LL)) == 0LL
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0LL),
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
           TitleFadeOutPlayTime = this->fields.TitleFadeOutPlayTime,
           v12 = (CommonUI_o *)Instance,
-          v13 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo),
+          v13 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
           System_Action___ctor(
             v13,
             (Il2CppObject *)this,
@@ -518,7 +518,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnClickDecideButton(
             0LL),
           !v12) )
     {
-      sub_1BE4D28(screenTouchInfo, v8);
+      sub_1C13F80(screenTouchInfo, v8);
     }
     CommonUI__maskFadeout(v12, 1, TitleFadeOutPlayTime, v13, 0LL);
   }
@@ -531,13 +531,13 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B656C2 & 1) == 0 )
+  if ( (byte_4BB32BC & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3165/*"BackAnchor/BtnBg"*/, method);
-    byte_4B656C2 = 1;
+    sub_1C13D24(&StringLiteral_3168/*"Back/back"*/, method);
+    byte_4BB32BC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42781316(transform, (System_String_o *)StringLiteral_3165/*"BackAnchor/BtnBg"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_42984304(transform, (System_String_o *)StringLiteral_3168/*"Back/back"*/, 0LL);
 }
 
 
@@ -565,16 +565,16 @@ void __fastcall TitleInfoWarBoardTitleComponent__Play(
   System_String_o *MoviePath; // x20
   AssetLoader_LoadEndDataHandler_o *v22; // x21
 
-  if ( (byte_4B656B5 & 1) == 0 )
+  if ( (byte_4BB32AF & 1) == 0 )
   {
-    sub_1BE4ACC(&AssetManager_TypeInfo, end_act);
-    sub_1BE4ACC(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v11);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent__Play_b__34_0__, v12);
-    byte_4B656B5 = 1;
+    sub_1C13D24(&AssetManager_TypeInfo, end_act);
+    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent__Play_b__34_0__, v12);
+    byte_4BB32AF = 1;
   }
   this->fields.mEndAct = end_act;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.mEndAct,
     (int64_t)end_act,
     (int64_t)method,
@@ -609,7 +609,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__Play(
       }
     }
 LABEL_16:
-    sub_1BE4D28(gameObject, v14);
+    sub_1C13F80(gameObject, v14);
   }
 LABEL_11:
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.movieName, 0LL);
@@ -619,7 +619,7 @@ LABEL_11:
                 (TitleInfoWarBoardTitleComponent_o *)IsNullOrEmpty,
                 this->fields.movieName,
                 v20);
-  v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1BE4D18(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v22,
     (Il2CppObject *)this,
@@ -639,10 +639,10 @@ void __fastcall TitleInfoWarBoardTitleComponent__PlayBGM(
 {
   System_String_o *bgmName; // x19
 
-  if ( (byte_4B656B8 & 1) == 0 )
+  if ( (byte_4BB32B2 & 1) == 0 )
   {
-    sub_1BE4ACC(&SoundManager_TypeInfo, method);
-    byte_4B656B8 = 1;
+    sub_1C13D24(&SoundManager_TypeInfo, method);
+    byte_4BB32B2 = 1;
   }
   bgmName = this->fields.bgmName;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -677,13 +677,13 @@ void __fastcall TitleInfoWarBoardTitleComponent__PlayMovie(
   System_String_o *Path; // x22
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B656BB & 1) == 0 )
+  if ( (byte_4BB32B5 & 1) == 0 )
   {
-    sub_1BE4ACC(&BgmManager_TypeInfo, method);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___, v4);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, v5);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_TypeInfo, v6);
-    byte_4B656BB = 1;
+    sub_1C13D24(&BgmManager_TypeInfo, method);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___, v4);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, v5);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_TypeInfo, v6);
+    byte_4BB32B5 = 1;
   }
   v7 = TitleInfoWarBoardTitleComponent_TypeInfo;
   if ( !TitleInfoWarBoardTitleComponent_TypeInfo->_2.cctor_finished )
@@ -701,15 +701,15 @@ void __fastcall TitleInfoWarBoardTitleComponent__PlayMovie(
   v10 = CriMoviePlayerObject;
   CriMoviePlayerObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        CriMoviePlayerObject,
-                                                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   if ( !CriMoviePlayerObject )
     goto LABEL_18;
   UIPanel__set_depth((UIPanel_o *)CriMoviePlayerObject, this->fields.moviePlayerDepth, 0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v10,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
   this->fields.moviePlayer = (struct CRIMoviePlayer_o *)Component_object;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.moviePlayer,
     (int64_t)Component_object,
     v12,
@@ -737,10 +737,10 @@ void __fastcall TitleInfoWarBoardTitleComponent__PlayMovie(
   Path = AssetData__get_Path(this->fields.movieAssetData, 0LL);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4B622AD )
+  if ( !byte_4BAFD9C )
   {
-    sub_1BE4ACC(&BgmManager_TypeInfo, v9);
-    byte_4B622AD = 1;
+    sub_1C13D24(&BgmManager_TypeInfo, v9);
+    byte_4BAFD9C = 1;
   }
   CriMoviePlayerObject = (UnityEngine_GameObject_o *)BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -766,7 +766,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__PlayMovie(
         (CriMoviePlayerObject = (UnityEngine_GameObject_o *)this->fields.moviePlayer) == 0LL) )
   {
 LABEL_18:
-    sub_1BE4D28(CriMoviePlayerObject, v9);
+    sub_1C13F80(CriMoviePlayerObject, v9);
   }
   CRIMoviePlayer__MoviePlay((CRIMoviePlayer_o *)CriMoviePlayerObject, 1, 1, 1, 0LL);
 }
@@ -781,10 +781,10 @@ void __fastcall TitleInfoWarBoardTitleComponent__RefreshPanel(
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *base2Panel; // x20
 
-  if ( (byte_4B656B4 & 1) == 0 )
+  if ( (byte_4BB32AE & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B656B4 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB32AE = 1;
   }
   basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -831,7 +831,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__RefreshPanel(
       }
     }
 LABEL_20:
-    sub_1BE4D28(gameObject, v4);
+    sub_1C13F80(gameObject, v4);
   }
 }
 
@@ -846,10 +846,10 @@ void __fastcall TitleInfoWarBoardTitleComponent__SetBackgrundActive(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4B656BF & 1) == 0 )
+  if ( (byte_4BB32B9 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, isActive);
-    byte_4B656BF = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, isActive);
+    byte_4BB32B9 = 1;
   }
   backgrund = (UnityEngine_Object_o *)this->fields.backgrund;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -858,7 +858,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__SetBackgrundActive(
   {
     v7 = this->fields.backgrund;
     if ( !v7 )
-      sub_1BE4D28(0LL, v6);
+      sub_1C13F80(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isActive, 0LL);
   }
 }
@@ -881,18 +881,18 @@ void __fastcall TitleInfoWarBoardTitleComponent__SetState(
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4B656BA & 1) == 0 )
+  if ( (byte_4BB32B4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_CStateManager_TitleInfoWarBoardTitleComponent__setState__, *(_QWORD *)&state);
-    byte_4B656BA = 1;
+    sub_1C13D24(&Method_CStateManager_TitleInfoWarBoardTitleComponent__setState__, *(_QWORD *)&state);
+    byte_4BB32B4 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1BE4D28(0LL, *(_QWORD *)&state);
+    sub_1C13F80(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_318A67C *)Method_CStateManager_TitleInfoWarBoardTitleComponent__setState__);
+    (const MethodInfo_31C33B0 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__setState__);
 }
 
 
@@ -979,7 +979,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
   System_String_o *v82; // x24
   Il2CppClass *klass; // x23
   System_String_o *v84; // x22
-  Il2CppObject *ComponentInChildren_object__49610264; // x0
+  Il2CppObject *ComponentInChildren_object__49832308; // x0
   int64_t v86; // x2
   int32_t v87; // w3
   System_String_o *v88; // x4
@@ -1008,46 +1008,44 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
   Il2CppObject *v111; // [xsp+18h] [xbp-58h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-48h] BYREF
 
-  if ( (byte_4B656B3 & 1) == 0 )
+  if ( (byte_4BB32AD & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, warBoardQuestEnt);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, v9);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v10);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_BgmMaster___, v11);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_QuestMaster___, v12);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_WarBoardStageMaster___, v13);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v14);
-    sub_1BE4ACC(&DataManager_TypeInfo, v15);
-    sub_1BE4ACC(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__, v16);
-    sub_1BE4ACC(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v17);
-    sub_1BE4ACC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v18);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v19);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v20);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v21);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v23);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent___c__DisplayClass31_0__Setup_b__0__, v24);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_TypeInfo, v25);
-    sub_1BE4ACC(&WarBoardMovieHistoryManager_TypeInfo, v26);
-    sub_1BE4ACC(&StringLiteral_25691/*"仮"*/, v27);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v28);
-    byte_4B656B3 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, warBoardQuestEnt);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, v9);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v10);
+    sub_1C13D24(&Method_DataManager_GetMasterData_BgmMaster___, v11);
+    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, v12);
+    sub_1C13D24(&Method_DataManager_GetMasterData_WarBoardStageMaster___, v13);
+    sub_1C13D24(&Method_DataManager_GetMaster_QuestPhaseMaster___, v14);
+    sub_1C13D24(&DataManager_TypeInfo, v15);
+    sub_1C13D24(&Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__, v16);
+    sub_1C13D24(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v17);
+    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v18);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v19);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v20);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v21);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v23);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent___c__DisplayClass31_0__Setup_b__0__, v24);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_TypeInfo, v25);
+    sub_1C13D24(&WarBoardMovieHistoryManager_TypeInfo, v26);
+    sub_1C13D24(&StringLiteral_25748/*"プレイヤー"*/, v27);
+    sub_1C13D24(&StringLiteral_1/*""*/, v28);
+    byte_4BB32AD = 1;
   }
   entity = 0LL;
   v110 = 0LL;
   v111 = 0LL;
   v109 = 0LL;
-  v29 = sub_1BE4D18(TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_TypeInfo);
-  TitleInfoWarBoardTitleComponent___c__DisplayClass31_0___ctor(
-    (TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_o *)v29,
-    0LL);
+  v29 = sub_1C13F70(TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v29, 0LL);
   if ( !v29 )
     goto LABEL_69;
   *(_QWORD *)(v29 + 16) = callbackDecide;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 16), (int64_t)callbackDecide, v32, v33, v34, v35, v36, v37);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v29 + 16), (int64_t)callbackDecide, v32, v33, v34, v35, v36, v37);
   this->fields.warBoardQuestEntity = warBoardQuestEnt;
   p_warBoardQuestEntity = &this->fields.warBoardQuestEntity;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.warBoardQuestEntity,
     (int64_t)warBoardQuestEnt,
     v39,
@@ -1058,34 +1056,34 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
     v44);
   v45 = StringLiteral_1/*""*/;
   this->fields.bgmName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)v45, v46, v47, v48, v49, v50, v51);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)v45, v46, v47, v48, v49, v50, v51);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_WarBoardStageMaster___);
+                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_WarBoardStageMaster___);
   if ( !*p_warBoardQuestEntity || !Instance )
     goto LABEL_69;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          (*p_warBoardQuestEntity)->fields.stageId,
-         (const MethodInfo_31FD818 *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__) )
+         (const MethodInfo_3238670 *)Method_DataMasterBase_WarBoardStageMaster__WarBoardStageEntity__int__TryGetEntity__) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_69;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_BgmMaster___);
+                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_BgmMaster___);
     if ( !entity || !Instance )
       goto LABEL_69;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   &v109,
                                   (int32_t)entity[2].klass,
-                                  (const MethodInfo_31FD818 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                  (const MethodInfo_3238670 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
       if ( !v109 )
@@ -1097,22 +1095,22 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
           goto LABEL_69;
         monitor = (struct System_String_o *)v109[1].monitor;
         this->fields.bgmName = monitor;
-        sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)monitor, v52, v53, v54, v55, v56, v57);
+        sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.bgmName, (int64_t)monitor, v52, v53, v54, v55, v56, v57);
       }
     }
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B63737 )
+  if ( !byte_4BAF44D )
   {
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v31);
-    byte_4B63737 = 1;
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v31);
+    byte_4BAF44D = 1;
   }
   Instance = (DataManager_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1126,12 +1124,12 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
     (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
     &v111,
     *(_DWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 20LL),
-    (const MethodInfo_31FD818 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    (const MethodInfo_3238670 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
   if ( !v111 )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !*p_warBoardQuestEntity || !Instance )
     goto LABEL_69;
   Instance = (DataManager_o *)QuestPhaseMaster__TryGetEntity(
@@ -1147,7 +1145,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
       goto LABEL_69;
     WarBoardStartMovieName = QuestPhaseEntity__GetWarBoardStartMovieName(v110, 0LL);
     this->fields.movieName = WarBoardStartMovieName;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.movieName,
       (int64_t)WarBoardStartMovieName,
       v61,
@@ -1160,7 +1158,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
   v67 = *p_warBoardQuestEntity;
   if ( !*p_warBoardQuestEntity )
 LABEL_69:
-    sub_1BE4D28(Instance, v31);
+    sub_1C13F80(Instance, v31);
   questId = v67->fields.questId;
   questPhase = v67->fields.questPhase;
   v70 = WarBoardMovieHistoryManager_TypeInfo;
@@ -1182,7 +1180,7 @@ LABEL_69:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    v74 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v74 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !v74 )
       goto LABEL_69;
@@ -1195,9 +1193,9 @@ LABEL_69:
       goto LABEL_69;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)Instance,
-                         (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
     *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.screenTouchInfo,
       (int64_t)Component_object,
       v76,
@@ -1217,7 +1215,7 @@ LABEL_69:
   Instance = (DataManager_o *)v111;
   if ( !v111 )
     goto LABEL_69;
-  v82 = (System_String_o *)StringLiteral_25691/*"仮"*/;
+  v82 = (System_String_o *)StringLiteral_25748/*"プレイヤー"*/;
   Instance = (DataManager_o *)QuestEntity__getQuestName((QuestEntity_o *)v111, 0LL);
   if ( !v111 )
     goto LABEL_69;
@@ -1226,13 +1224,13 @@ LABEL_69:
   Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !Instance )
     goto LABEL_69;
-  ComponentInChildren_object__49610264 = UnityEngine_Component__GetComponentInChildren_object__49610264(
+  ComponentInChildren_object__49832308 = UnityEngine_Component__GetComponentInChildren_object__49832308(
                                            (UnityEngine_Component_o *)Instance,
-                                           (const MethodInfo_2F4FE18 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-  this->fields.mAnimation = (struct UnityEngine_Animation_o *)ComponentInChildren_object__49610264;
-  sub_1BE4A70(
+                                           (const MethodInfo_2F86174 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+  this->fields.mAnimation = (struct UnityEngine_Animation_o *)ComponentInChildren_object__49832308;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.mAnimation,
-    (int64_t)ComponentInChildren_object__49610264,
+    (int64_t)ComponentInChildren_object__49832308,
     v86,
     v87,
     v88,
@@ -1242,22 +1240,22 @@ LABEL_69:
   Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !Instance )
     goto LABEL_69;
-  Instance = (DataManager_o *)UnityEngine_Component__GetComponentInChildren_object__49610264(
+  Instance = (DataManager_o *)UnityEngine_Component__GetComponentInChildren_object__49832308(
                                 (UnityEngine_Component_o *)Instance,
-                                (const MethodInfo_2F4FE18 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+                                (const MethodInfo_2F86174 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
   if ( !Instance )
     goto LABEL_69;
   *(&Instance->fields.isFailedLoad + 1) = 1;
-  v92 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v92 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(
     v92,
     (Il2CppObject *)v29,
     Method_TitleInfoWarBoardTitleComponent___c__DisplayClass31_0__Setup_b__0__,
     0LL);
   this->fields.callbackDecide = v92;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.callbackDecide, (int64_t)v92, v93, v94, v95, v96, v97, v98);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.callbackDecide, (int64_t)v92, v93, v94, v95, v96, v97, v98);
   this->fields.callbackCancel = callbackCancel;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackCancel,
     (int64_t)callbackCancel,
     v99,
@@ -1342,21 +1340,21 @@ void __fastcall TitleInfoWarBoardTitleComponent__StartTitleEffect(
   __int64 v3; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_4B656B6 & 1) == 0 )
+  if ( (byte_4BB32B0 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_6695/*"FadeOutBGM"*/, method);
-    sub_1BE4ACC(&StringLiteral_10798/*"PlayBGM"*/, v3);
-    byte_4B656B6 = 1;
+    sub_1C13D24(&StringLiteral_6714/*"FadeChangeColor"*/, method);
+    sub_1C13D24(&StringLiteral_10823/*"Pink"*/, v3);
+    byte_4BB32B0 = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6695/*"FadeOutBGM"*/,
+    (System_String_o *)StringLiteral_6714/*"FadeChangeColor"*/,
     this->fields.BgmFadeOutStartTime,
     0LL);
   if ( !System_String__IsNullOrEmpty(this->fields.bgmName, 0LL) )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10798/*"PlayBGM"*/,
+      (System_String_o *)StringLiteral_10823/*"Pink"*/,
       this->fields.BgmPlayStartTime,
       0LL);
   TitleInfoWarBoardTitleComponent__SetState(this, 3, v4);
@@ -1369,16 +1367,16 @@ void __fastcall TitleInfoWarBoardTitleComponent__Update(
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4B656B2 & 1) == 0 )
+  if ( (byte_4BB32AC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_CStateManager_TitleInfoWarBoardTitleComponent__update__, method);
-    byte_4B656B2 = 1;
+    sub_1C13D24(&Method_CStateManager_TitleInfoWarBoardTitleComponent__update__, method);
+    byte_4BB32AC = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_318A658 *)Method_CStateManager_TitleInfoWarBoardTitleComponent__update__);
+      (const MethodInfo_31C338C *)Method_CStateManager_TitleInfoWarBoardTitleComponent__update__);
   TitleInfoWarBoardTitleComponent__RefreshPanel(this, method);
 }
 
@@ -1392,21 +1390,21 @@ void __fastcall TitleInfoWarBoardTitleComponent___OnClickCancelButton_b__52_0(
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_4B656C7 & 1) == 0 )
+  if ( (byte_4BB32C1 & 1) == 0 )
   {
-    this = (TitleInfoWarBoardTitleComponent_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B656C7 = 1;
+    this = (TitleInfoWarBoardTitleComponent_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB32C1 = 1;
   }
   callbackCancel = v2->fields.callbackCancel;
   if ( !callbackCancel )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackCancel->fields.m_target)(
     callbackCancel->fields.original_method_info,
     *(_QWORD *)&callbackCancel->fields.extra_arg);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70452000(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
 }
 
 
@@ -1419,19 +1417,19 @@ void __fastcall TitleInfoWarBoardTitleComponent___OnClickDecideButton_b__51_0(
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = (UnityEngine_Component_o *)this;
-  if ( (byte_4B656C6 & 1) == 0 )
+  if ( (byte_4BB32C0 & 1) == 0 )
   {
-    this = (TitleInfoWarBoardTitleComponent_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B656C6 = 1;
+    this = (TitleInfoWarBoardTitleComponent_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB32C0 = 1;
   }
   monitor = v2[4].monitor;
   if ( !monitor )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   (*((void (__fastcall **)(_QWORD, _QWORD))monitor + 3))(*((_QWORD *)monitor + 8), *((_QWORD *)monitor + 5));
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v2, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70452000(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
 }
 
 
@@ -1448,16 +1446,16 @@ void __fastcall TitleInfoWarBoardTitleComponent___Play_b__34_0(
   PartyListViewItem_o *v10; // x7
   const MethodInfo *v11; // x2
 
-  if ( (byte_4B656C5 & 1) == 0 )
+  if ( (byte_4BB32BF & 1) == 0 )
   {
-    sub_1BE4ACC(&SoundManager_TypeInfo, data);
-    byte_4B656C5 = 1;
+    sub_1C13D24(&SoundManager_TypeInfo, data);
+    byte_4BB32BF = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopBgm(0LL);
   this->fields.movieAssetData = data;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.movieAssetData, (int64_t)data, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.movieAssetData, (int64_t)data, v5, v6, v7, v8, v9, v10);
   TitleInfoWarBoardTitleComponent__SetState(this, 1, v11);
 }
 
@@ -1477,8 +1475,8 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovie__begin(
 {
   this->fields.state = 1;
   if ( !that )
-    sub_1BE4D28(this, 0LL);
-  TitleInfoWarBoardTitleComponent__PlayMovie(that, 0LL);
+    sub_1C13F80(this, 0LL);
+  TitleInfoWarBoardTitleComponent__PlayMovie(that, (const MethodInfo *)that);
 }
 
 
@@ -1488,17 +1486,17 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovie__end(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
+  const MethodInfo *v6; // x1
 
-  if ( (byte_4B657A2 & 1) == 0 )
+  if ( (byte_4BB32C4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, that);
-    byte_4B657A2 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, that);
+    byte_4BB32C4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance || (CommonUI__InitConnect((CommonUI_o *)Instance, 0LL), this->fields.state = 0, !that) )
-    sub_1BE4D28(Instance, v6);
-  TitleInfoWarBoardTitleComponent__EndMovie(that, 0LL);
+    sub_1C13F80(Instance, v6);
+  TitleInfoWarBoardTitleComponent__EndMovie(that, v6);
 }
 
 
@@ -1509,6 +1507,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovie__update(
 {
   int32_t state; // w8
   TitleInfoWarBoardTitleComponent_StateMovie_o *v4; // x19
+  const MethodInfo *v6; // x1
 
   state = this->fields.state;
   v4 = this;
@@ -1527,7 +1526,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovie__update(
       }
     }
 LABEL_12:
-    sub_1BE4D28(this, that);
+    sub_1C13F80(this, that);
   }
   if ( !that )
     goto LABEL_12;
@@ -1537,7 +1536,7 @@ LABEL_12:
   if ( !CRIMoviePlayer__IsPlaying((CRIMoviePlayer_o *)this, 0LL) )
   {
     v4->fields.state = 3;
-    TitleInfoWarBoardTitleComponent__StartTitleEffect(that, 0LL);
+    TitleInfoWarBoardTitleComponent__StartTitleEffect(that, v6);
   }
 }
 
@@ -1574,22 +1573,22 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovieFade__begin(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v21; // x21
 
-  if ( (byte_4B657A0 & 1) == 0 )
+  if ( (byte_4BB32C2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, that);
-    sub_1BE4ACC(&AvalonSceneManager_TypeInfo, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BE4ACC(&Method_TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0__begin_b__0__, v6);
-    sub_1BE4ACC(&TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0_TypeInfo, v7);
-    byte_4B657A0 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, that);
+    sub_1C13D24(&AvalonSceneManager_TypeInfo, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C13D24(&Method_TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0__begin_b__0__, v6);
+    sub_1C13D24(&TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0_TypeInfo, v7);
+    byte_4BB32C2 = 1;
   }
-  v8 = sub_1BE4D18(TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0_TypeInfo);
+  v8 = sub_1C13F70(TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_8;
   *(_QWORD *)(v8 + 16) = that;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)that, v11, v12, v13, v14, v15, v16);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)that, v11, v12, v13, v14, v15, v16);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v18 = AvalonSceneManager_TypeInfo;
   v19 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1598,7 +1597,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovieFade__begin(
     v18 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v18->static_fields->DEFAULT_FADE_TIME;
-  v21 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v8,
@@ -1606,7 +1605,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovieFade__begin(
     0LL);
   if ( !v19 )
 LABEL_8:
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   CommonUI__maskFadeout(v19, 2, DEFAULT_FADE_TIME, v21, 0LL);
 }
 
@@ -1619,14 +1618,14 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovieFade__end(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B657A1 & 1) == 0 )
+  if ( (byte_4BB32C3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, that);
-    byte_4B657A1 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, that);
+    byte_4BB32C3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   CommonUI__maskFadein((CommonUI_o *)Instance, 0.0, 0LL, 0LL);
 }
 
@@ -1652,12 +1651,13 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass
         TitleInfoWarBoardTitleComponent_StateMovieFade___c__DisplayClass0_0_o *this,
         const MethodInfo *method)
 {
+  const MethodInfo *v2; // x2
   TitleInfoWarBoardTitleComponent_o *that; // x0
 
   that = this->fields.that;
   if ( !that )
-    sub_1BE4D28(0LL, method);
-  TitleInfoWarBoardTitleComponent__SetState(that, 2, 0LL);
+    sub_1C13F80(0LL, method);
+  TitleInfoWarBoardTitleComponent__SetState(that, 2, v2);
 }
 
 
@@ -1710,15 +1710,16 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__begin(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *mAnimation; // x20
-  UnityEngine_Animation_o *v5; // x20
+  const MethodInfo *v5; // x2
+  UnityEngine_Animation_o *v6; // x20
   System_String_o *name; // x0
-  UnityEngine_Animation_o *v7; // x19
-  System_String_o *v8; // x0
+  UnityEngine_Animation_o *v8; // x19
+  System_String_o *v9; // x0
 
-  if ( (byte_4B657A3 & 1) == 0 )
+  if ( (byte_4BB32C5 & 1) == 0 )
   {
-    this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, that);
-    byte_4B657A3 = 1;
+    this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, that);
+    byte_4BB32C5 = 1;
   }
   if ( !that )
     goto LABEL_14;
@@ -1727,9 +1728,9 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__begin(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(mAnimation, 0LL, 0LL) )
   {
-    TitleInfoWarBoardTitleComponent__SetBackgrundActive(that, 1, 0LL);
-    v5 = that->fields.mAnimation;
-    if ( v5 )
+    TitleInfoWarBoardTitleComponent__SetBackgrundActive(that, 1, v5);
+    v6 = that->fields.mAnimation;
+    if ( v6 )
     {
       this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__get_clip(
                                                               that->fields.mAnimation,
@@ -1737,15 +1738,15 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__begin(
       if ( this )
       {
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-        this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__Play_70197004(v5, name, 0LL);
-        v7 = that->fields.mAnimation;
-        if ( v7 )
+        this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__Play_70466396(v6, name, 0LL);
+        v8 = that->fields.mAnimation;
+        if ( v8 )
         {
-          this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__get_clip(v7, 0LL);
+          this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__get_clip(v8, 0LL);
           if ( this )
           {
-            v8 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-            this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__get_Item(v7, v8, 0LL);
+            v9 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
+            this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)UnityEngine_Animation__get_Item(v8, v9, 0LL);
             if ( this )
             {
               UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)this, 1.0, 0LL);
@@ -1756,7 +1757,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__begin(
       }
     }
 LABEL_14:
-    sub_1BE4D28(this, that);
+    sub_1C13F80(this, that);
   }
 }
 
@@ -1778,11 +1779,12 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__update(
   UnityEngine_Object_o *mAnimation; // x20
   UnityEngine_Animation_o *v5; // x20
   System_String_o *name; // x0
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4B657A4 & 1) == 0 )
+  if ( (byte_4BB32C6 & 1) == 0 )
   {
-    this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, that);
-    byte_4B657A4 = 1;
+    this = (TitleInfoWarBoardTitleComponent_StatePlay_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, that);
+    byte_4BB32C6 = 1;
   }
   if ( !that )
     goto LABEL_13;
@@ -1805,13 +1807,13 @@ void __fastcall TitleInfoWarBoardTitleComponent_StatePlay__update(
         if ( this )
         {
           if ( UnityEngine_AnimationState__get_normalizedTime((UnityEngine_AnimationState_o *)this, 0LL) >= 1.0 )
-            TitleInfoWarBoardTitleComponent__SetState(that, 4, 0LL);
+            TitleInfoWarBoardTitleComponent__SetState(that, 4, v7);
           return;
         }
       }
     }
 LABEL_13:
-    sub_1BE4D28(this, that);
+    sub_1C13F80(this, that);
   }
 }
 
@@ -1837,7 +1839,7 @@ void __fastcall TitleInfoWarBoardTitleComponent_StateTouchWait__begin(
                                                                      (UnityEngine_Component_o *)this,
                                                                      0LL)) == 0LL )
   {
-    sub_1BE4D28(this, that);
+    sub_1C13F80(this, that);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }
@@ -1877,7 +1879,7 @@ void __fastcall TitleInfoWarBoardTitleComponent___c__DisplayClass31_0___Setup_b_
 
   callbackDecide = this->fields.callbackDecide;
   if ( !callbackDecide )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackDecide->fields.m_target)(
     callbackDecide->fields.original_method_info,
     *(_QWORD *)&callbackDecide->fields.extra_arg);

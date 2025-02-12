@@ -1,13 +1,13 @@
 void __fastcall EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66AC3 & 1) == 0 )
+  if ( (byte_4BB45DC & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B66AC3 = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BB45DC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall EventCampaignReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B66AC2 & 1) == 0 )
+  if ( (byte_4BB45DB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_4B66AC2 = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
+    byte_4BB45DB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_2F577C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F8DB20 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -91,40 +91,40 @@ System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
   v42 = target;
   v43 = eventId;
   v41 = idx;
-  if ( (byte_4B66AC1 & 1) == 0 )
+  if ( (byte_4BB45DA & 1) == 0 )
   {
-    sub_1BE4ACC(&string___TypeInfo, *(_QWORD *)&target);
-    sub_1BE4ACC(&StringLiteral_1542/*":"*/, v4);
-    byte_4B66AC1 = 1;
+    sub_1C13D24(&string___TypeInfo, *(_QWORD *)&target);
+    sub_1C13D24(&StringLiteral_1545/*"99:99:99"*/, v4);
+    byte_4BB45DA = 1;
   }
-  v5 = sub_1BE4B74(string___TypeInfo, 5LL);
+  v5 = sub_1C13DCC(string___TypeInfo, 5LL);
   v6 = System_Int32__ToString((int32_t)&v43, 0LL);
   if ( !v5 )
-    sub_1BE4D28(v6, v7);
+    sub_1C13F80(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_10;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)v6, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)v6, v8, v9, v10, v11, v12, v13);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_10;
-  v20 = StringLiteral_1542/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1542/*":"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
+  v20 = StringLiteral_1545/*"99:99:99"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1545/*"99:99:99"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 40), v20, v14, v15, v16, v17, v18, v19);
   v6 = System_Int32__ToString((int32_t)&v42, 0LL);
   if ( *(_DWORD *)(v5 + 24) <= 2u
     || (*(_QWORD *)(v5 + 48) = v6,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 48), (int64_t)v6, v21, v22, v23, v24, v25, v26),
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 48), (int64_t)v6, v21, v22, v23, v24, v25, v26),
         *(_DWORD *)(v5 + 24) <= 3u)
-    || (v33 = StringLiteral_1542/*":"*/,
-        *(_QWORD *)(v5 + 56) = StringLiteral_1542/*":"*/,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32),
+    || (v33 = StringLiteral_1545/*"99:99:99"*/,
+        *(_QWORD *)(v5 + 56) = StringLiteral_1545/*"99:99:99"*/,
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 56), v33, v27, v28, v29, v30, v31, v32),
         v6 = System_Int32__ToString((int32_t)&v41, 0LL),
         *(_DWORD *)(v5 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1BE4D30(v6, v7);
+    sub_1C13F88(v6, v7);
   }
   *(_QWORD *)(v5 + 64) = v6;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v5 + 64), (int64_t)v6, v34, v35, v36, v37, v38, v39);
-  return System_String__Concat_62712336((System_String_array *)v5, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v5 + 64), (int64_t)v6, v34, v35, v36, v37, v38, v39);
+  return System_String__Concat_62981472((System_String_array *)v5, 0LL);
 }

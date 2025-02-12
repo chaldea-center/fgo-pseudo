@@ -1,28 +1,28 @@
 void __fastcall EventCommandAssistEntity___ctor(EventCommandAssistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66AD7 & 1) == 0 )
+  if ( (byte_4BB45F0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B66AD7 = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BB45F0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventCommandAssistEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4B66AD6 & 1) == 0 )
+  if ( (byte_4BB45EF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4B66AD6 = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4BB45EF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F8D690 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,10 +44,10 @@ bool __fastcall EventCommandAssistEntity__IsOpen(
 {
   int32_t commonReleaseId; // w19
 
-  if ( (byte_4B66AD5 & 1) == 0 )
+  if ( (byte_4BB45EE & 1) == 0 )
   {
-    sub_1BE4ACC(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4B66AD5 = 1;
+    sub_1C13D24(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4BB45EE = 1;
   }
   commonReleaseId = this->fields.commonReleaseId;
   if ( (beforeClearQuestId & 0x80000000) == 0 )

@@ -12,21 +12,21 @@ System_Func_float__float__float__float__o *__fastcall ExtraEasing__AsymptoticSer
   const MethodInfo *v11; // x2
   System_Func_float__float__float__float__o *v12; // x20
 
-  if ( (byte_4B6B370 & 1) == 0 )
+  if ( (byte_4BB8E80 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_float__float__float__float__TypeInfo, v3);
-    sub_1BE4ACC(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_g__EasingFunc_0__, v6);
-    sub_1BE4ACC(&ExtraEasing___c__DisplayClass1_0_TypeInfo, v7);
-    byte_4B6B370 = 1;
+    sub_1C13D24(&System_Func_float__float__float__float__TypeInfo, v3);
+    sub_1C13D24(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_g__EasingFunc_0__, v6);
+    sub_1C13D24(&ExtraEasing___c__DisplayClass1_0_TypeInfo, v7);
+    byte_4BB8E80 = 1;
   }
-  v8 = sub_1BE4D18(ExtraEasing___c__DisplayClass1_0_TypeInfo);
+  v8 = sub_1C13F70(ExtraEasing___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   *(float *)(v8 + 16) = asymptoticSpeed;
   *(float *)(v8 + 20) = powerRate;
   ExtraEasing__ValidateAsymptoticParams((float *)(v8 + 16), (float *)(v8 + 20), v11);
-  v12 = (System_Func_float__float__float__float__o *)sub_1BE4D18(System_Func_float__float__float__float__TypeInfo);
+  v12 = (System_Func_float__float__float__float__o *)sub_1C13F70(System_Func_float__float__float__float__TypeInfo);
   System_Func_float__float__float__float____ctor(
     v12,
     (Il2CppObject *)v8,
@@ -50,21 +50,21 @@ System_Func_Vector3__Vector3__float__Vector3__o *__fastcall ExtraEasing__Asympto
   const MethodInfo *v11; // x2
   System_Func_Vector3__Vector3__float__Vector3__o *v12; // x20
 
-  if ( (byte_4B6B36F & 1) == 0 )
+  if ( (byte_4BB8E7F & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo, v3);
-    sub_1BE4ACC(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_g__EasingFunc_0__, v6);
-    sub_1BE4ACC(&ExtraEasing___c__DisplayClass0_0_TypeInfo, v7);
-    byte_4B6B36F = 1;
+    sub_1C13D24(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo, v3);
+    sub_1C13D24(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_g__EasingFunc_0__, v6);
+    sub_1C13D24(&ExtraEasing___c__DisplayClass0_0_TypeInfo, v7);
+    byte_4BB8E7F = 1;
   }
-  v8 = sub_1BE4D18(ExtraEasing___c__DisplayClass0_0_TypeInfo);
+  v8 = sub_1C13F70(ExtraEasing___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   *(float *)(v8 + 16) = asymptoticSpeed;
   *(float *)(v8 + 20) = powerRate;
   ExtraEasing__ValidateAsymptoticParams((float *)(v8 + 16), (float *)(v8 + 20), v11);
-  v12 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_1BE4D18(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+  v12 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_1C13F70(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
   System_Func_Vector3__Vector3__float__Vector3____ctor(
     v12,
     (Il2CppObject *)v8,
@@ -84,18 +84,18 @@ void __fastcall ExtraEasing__ValidateAsymptoticParams(
   float v7; // s1
   float v8; // s0
 
-  if ( (byte_4B6B371 & 1) == 0 )
+  if ( (byte_4BB8E81 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Debug_TypeInfo, powerRate);
-    sub_1BE4ACC(&StringLiteral_17158/*"asymptoticSpeed should be defined on 0～1"*/, v5);
-    sub_1BE4ACC(&StringLiteral_22897/*"powerRate should be defined on non negative"*/, v6);
-    byte_4B6B371 = 1;
+    sub_1C13D24(&UnityEngine_Debug_TypeInfo, powerRate);
+    sub_1C13D24(&StringLiteral_17203/*"assemblyName cannot have zero length."*/, v5);
+    sub_1C13D24(&StringLiteral_22950/*"playingMovie"*/, v6);
+    byte_4BB8E81 = 1;
   }
   if ( *asymptoticSpeed < 0.0 || *asymptoticSpeed > 1.0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_17158/*"asymptoticSpeed should be defined on 0～1"*/, 0LL);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_17203/*"assemblyName cannot have zero length."*/, 0LL);
     v7 = fminf(*asymptoticSpeed, 1.0);
     v8 = 0.0;
     if ( *asymptoticSpeed >= 0.0 )
@@ -106,7 +106,7 @@ void __fastcall ExtraEasing__ValidateAsymptoticParams(
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_22897/*"powerRate should be defined on non negative"*/, 0LL);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_22950/*"playingMovie"*/, 0LL);
     *powerRate = 0.0;
   }
 }

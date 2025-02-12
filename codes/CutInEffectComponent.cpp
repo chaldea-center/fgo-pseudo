@@ -1,9 +1,9 @@
 void __fastcall CutInEffectComponent___ctor(CutInEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B67FDF & 1) == 0 )
+  if ( (byte_4BB5B0E & 1) == 0 )
   {
-    sub_1BE4ACC(&CommonEffectComponent_TypeInfo, method);
-    byte_4B67FDF = 1;
+    sub_1C13D24(&CommonEffectComponent_TypeInfo, method);
+    byte_4BB5B0E = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -22,12 +22,12 @@ UnityEngine_GameObject_o *__fastcall CutInEffectComponent__GetPrefabRoot(
 
   prefabRoots = this->fields.prefabRoots;
   if ( !prefabRoots )
-    sub_1BE4D28(this, idx);
+    sub_1C13F80(this, idx);
   max_length = prefabRoots->max_length;
   if ( max_length <= idx )
     return 0LL;
   if ( max_length <= (unsigned int)idx )
-    sub_1BE4D30(this, *(_QWORD *)&idx);
+    sub_1C13F88(this, *(_QWORD *)&idx);
   return prefabRoots->m_Items[idx];
 }
 
@@ -42,10 +42,10 @@ void __fastcall CutInEffectComponent__PlayBuffEffect(
   __int64 v6; // x1
   BattlePerformance_o *v7; // x0
 
-  if ( (byte_4B67FDE & 1) == 0 )
+  if ( (byte_4BB5B0D & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&functionIndex);
-    byte_4B67FDE = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&functionIndex);
+    byte_4BB5B0D = 1;
   }
   battlePerformance = (UnityEngine_Object_o *)this->fields.battlePerformance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -54,7 +54,7 @@ void __fastcall CutInEffectComponent__PlayBuffEffect(
   {
     v7 = this->fields.battlePerformance;
     if ( !v7 )
-      sub_1BE4D28(0LL, v6);
+      sub_1C13F80(0LL, v6);
     BattlePerformance__PlayBuffInSkillCutInEffect(v7, functionIndex, 0LL);
   }
 }
@@ -86,14 +86,14 @@ void __fastcall CutInEffectComponent__PlayVoiceFromIdx(
           return;
         v8 = v6->fields.voiceStrs;
         if ( !v8 )
-          sub_1BE4D28(this, *(_QWORD *)&idx);
+          sub_1C13F80(this, *(_QWORD *)&idx);
         if ( v8->max_length > idx )
         {
-          CommonEffectComponent__PlayVoice_41628456((CommonEffectComponent_o *)this, v8->m_Items[idx], 0LL, v7);
+          CommonEffectComponent__PlayVoice_41826272((CommonEffectComponent_o *)this, v8->m_Items[idx], 0LL, v7);
           return;
         }
       }
-      sub_1BE4D30(this, *(_QWORD *)&idx);
+      sub_1C13F88(this, *(_QWORD *)&idx);
     }
   }
 }
@@ -111,7 +111,7 @@ void __fastcall CutInEffectComponent__SetBattlePerformance(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battlePerformance = performance;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.battlePerformance,
     (int64_t)performance,
     (int64_t)method,
@@ -135,7 +135,7 @@ void __fastcall CutInEffectComponent__SetVoiceStrs(
   PartyListViewItem_o *v7; // x7
 
   this->fields.voiceStrs = voiceStrs;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.voiceStrs,
     (int64_t)voiceStrs,
     (int64_t)method,

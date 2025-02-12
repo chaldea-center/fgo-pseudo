@@ -19,7 +19,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__Setup(
   const MethodInfo *v9; // x1
 
   this->fields.assistData = assistData;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.assistData,
     (int64_t)assistData,
     (int64_t)method,
@@ -85,26 +85,26 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
   int32_t lv; // [xsp+18h] [xbp-38h] BYREF
   int32_t imageId; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B6736F & 1) == 0 )
+  if ( (byte_4BB4E90 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, method);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_AssistMaster___, v3);
-    sub_1BE4ACC(&int_TypeInfo, v4);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v5);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1BE4ACC(&StringLiteral_5640/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, v8);
-    sub_1BE4ACC(&StringLiteral_5639/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, v9);
-    byte_4B6736F = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, method);
+    sub_1C13D24(&Method_DataManager_GetMasterData_AssistMaster___, v3);
+    sub_1C13D24(&int_TypeInfo, v4);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v5);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1C13D24(&StringLiteral_5653/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/, v8);
+    sub_1C13D24(&StringLiteral_5652/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/, v9);
+    byte_4BB4E90 = 1;
   }
   if ( this->fields.assistData )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_AssistMaster___);
+                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_AssistMaster___);
     assistData = this->fields.assistData;
     if ( !assistData )
       goto LABEL_46;
@@ -122,7 +122,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
     v16 = this->fields.assistData;
     if ( !v16 )
       goto LABEL_46;
-    GameObjectExtensions__SetLocalPosition_34486688(
+    GameObjectExtensions__SetLocalPosition_34711680(
       (UnityEngine_GameObject_o *)Instance,
       v16->fields.objectPosition,
       0LL);
@@ -152,7 +152,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
       v26 = this->fields.assistData;
       if ( !v26 )
         goto LABEL_46;
-      GameObjectExtensions__SetLocalPosition_34486688(
+      GameObjectExtensions__SetLocalPosition_34711680(
         (UnityEngine_GameObject_o *)Instance,
         v26->fields.iconPosition,
         0LL);
@@ -174,14 +174,14 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
       v30 = this->fields.assistData;
       if ( !v30 )
         goto LABEL_46;
-      GameObjectExtensions__SetLocalPosition_34486688(
+      GameObjectExtensions__SetLocalPosition_34711680(
         (UnityEngine_GameObject_o *)Instance,
         v30->fields.levelPosition,
         0LL);
       v31 = this->fields.levelLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, 0LL);
+      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5652/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
       lv = v15->fields.lv;
       v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v33, v34, v35);
       Instance = (DataManager_o *)System_String__Format(v32, v36, 0LL);
@@ -201,7 +201,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
         v38 = this->fields.assistData;
         if ( v38 )
         {
-          GameObjectExtensions__SetLocalPosition_34486688(
+          GameObjectExtensions__SetLocalPosition_34711680(
             (UnityEngine_GameObject_o *)Instance,
             v38->fields.maxLevelPosition,
             0LL);
@@ -213,7 +213,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
             v42 = this->fields.maxLevelLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5640/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, 0LL);
+            v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5653/*"EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA"*/, 0LL);
             v48 = v41;
             v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48, v44, v45, v46);
             Instance = (DataManager_o *)System_String__Format(v43, v47, 0LL);
@@ -226,7 +226,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
         }
       }
 LABEL_46:
-      sub_1BE4D28(Instance, v11);
+      sub_1C13F80(Instance, v11);
     }
   }
 }

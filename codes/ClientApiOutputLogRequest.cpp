@@ -12,20 +12,20 @@ void __fastcall ClientApiOutputLogRequest__beginRequest(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x1
 
-  if ( (byte_4B68468 & 1) == 0 )
+  if ( (byte_4BB5FA1 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_18268/*"code"*/, title);
-    sub_1BE4ACC(&StringLiteral_24294/*"title"*/, v9);
-    sub_1BE4ACC(&StringLiteral_21850/*"msg"*/, v10);
-    byte_4B68468 = 1;
+    sub_1C13D24(&StringLiteral_18311/*"closeBtn"*/, title);
+    sub_1C13D24(&StringLiteral_24349/*"time_status_icon_loop"*/, v9);
+    sub_1C13D24(&StringLiteral_21900/*"mp_framebg_"*/, v10);
+    byte_4BB5FA1 = 1;
   }
-  RequestBase__addField_42104408(
+  RequestBase__addField_42303556(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24294/*"title"*/,
+    (System_String_o *)StringLiteral_24349/*"time_status_icon_loop"*/,
     title,
     *(const MethodInfo **)&code);
-  RequestBase__addField_42104408((RequestBase_o *)this, (System_String_o *)StringLiteral_21850/*"msg"*/, message, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18268/*"code"*/, code, v12);
+  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_21900/*"mp_framebg_"*/, message, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18311/*"closeBtn"*/, code, v12);
   RequestBase__beginRequest((RequestBase_o *)this, v13);
 }
 
@@ -34,10 +34,10 @@ System_String_o *__fastcall ClientApiOutputLogRequest__getMockData(
         ClientApiOutputLogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B68467 & 1) == 0 )
+  if ( (byte_4BB5FA0 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
-    byte_4B68467 = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, method);
+    byte_4BB5FA0 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -50,16 +50,16 @@ System_String_o *__fastcall ClientApiOutputLogRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B68466 & 1) == 0 )
+  if ( (byte_4BB5F9F & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_4610/*"ClientApi/OutputLog"*/, v2);
-    byte_4B68466 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_4613/*"Click"*/, v2);
+    byte_4BB5F9F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_4610/*"ClientApi/OutputLog"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_4613/*"Click"*/, 0LL);
 }
 
 
@@ -74,29 +74,29 @@ void __fastcall ClientApiOutputLogRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4B68469 & 1) == 0 )
+  if ( (byte_4BB5FA2 & 1) == 0 )
   {
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B68469 = 1;
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB5FA2 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(30, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42194996(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_42394144(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22543/*"ok"*/;
+    v9 = &StringLiteral_22595/*"offline"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22370/*"ng"*/;
+    v9 = &StringLiteral_22421/*"newAttributes"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

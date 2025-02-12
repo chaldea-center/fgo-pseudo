@@ -15,27 +15,27 @@ void __fastcall FadeClipController___cctor(const MethodInfo *method)
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B67FED & 1) == 0 )
+  if ( (byte_4BB5B1E & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeClipController_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_16426/*"_FadeParam"*/, v2);
-    sub_1BE4ACC(&StringLiteral_16424/*"_FadeDegreeTo"*/, v3);
-    sub_1BE4ACC(&StringLiteral_16407/*"_FADE_CLIP"*/, v4);
-    sub_1BE4ACC(&StringLiteral_16423/*"_FadeDegreeFrom"*/, v5);
-    byte_4B67FED = 1;
+    sub_1C13D24(&FadeClipController_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_16470/*"_FaceColor"*/, v2);
+    sub_1C13D24(&StringLiteral_16468/*"_FaceAlphaTex"*/, v3);
+    sub_1C13D24(&StringLiteral_16451/*"_Cube"*/, v4);
+    sub_1C13D24(&StringLiteral_16467/*"_FLAVOR2"*/, v5);
+    byte_4BB5B1E = 1;
   }
   FadeClipController_TypeInfo->static_fields->FADE_PARAM_ID = UnityEngine_Shader__PropertyToID(
-                                                                (System_String_o *)StringLiteral_16426/*"_FadeParam"*/,
+                                                                (System_String_o *)StringLiteral_16470/*"_FaceColor"*/,
                                                                 0LL);
   FadeClipController_TypeInfo->static_fields->FADE_DEGREE_FROM_ID = UnityEngine_Shader__PropertyToID(
-                                                                      (System_String_o *)StringLiteral_16423/*"_FadeDegreeFrom"*/,
+                                                                      (System_String_o *)StringLiteral_16467/*"_FLAVOR2"*/,
                                                                       0LL);
-  v6 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16424/*"_FadeDegreeTo"*/, 0LL);
+  v6 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_16468/*"_FaceAlphaTex"*/, 0LL);
   static_fields = FadeClipController_TypeInfo->static_fields;
   static_fields->FADE_DEGREE_TO_ID = v6;
-  v8 = StringLiteral_16407/*"_FADE_CLIP"*/;
-  static_fields->FADE_CLIP_ID = (struct System_String_o *)StringLiteral_16407/*"_FADE_CLIP"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->FADE_CLIP_ID, v8, v9, v10, v11, v12, v13, v14);
+  v8 = StringLiteral_16451/*"_Cube"*/;
+  static_fields->FADE_CLIP_ID = (struct System_String_o *)StringLiteral_16451/*"_Cube"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->FADE_CLIP_ID, v8, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -61,10 +61,10 @@ void __fastcall FadeClipController__Setup(FadeClipController_o *this, const Meth
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4B67FEA & 1) == 0 )
+  if ( (byte_4BB5B1B & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B67FEA = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB5B1B = 1;
   }
   meshRenderer = (UnityEngine_Object_o *)this->fields.meshRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -78,10 +78,10 @@ void __fastcall FadeClipController__Setup(FadeClipController_o *this, const Meth
     {
       v6 = (UnityEngine_Renderer_o *)this->fields.meshRenderer;
       if ( !v6 )
-        sub_1BE4D28(0LL, v5);
+        sub_1C13F80(0LL, v5);
       v7 = UnityEngine_Renderer__get_material(v6, 0LL);
       this->fields.material = v7;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.material, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.material, (int64_t)v7, v8, v9, v10, v11, v12, v13);
     }
   }
 }
@@ -100,11 +100,11 @@ void __fastcall FadeClipController__Start(FadeClipController_o *this, const Meth
   FollowerInfo_o *v11; // x6
   PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4B67FEB & 1) == 0 )
+  if ( (byte_4BB5B1C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_MeshRenderer___, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B67FEB = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_MeshRenderer___, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BB5B1C = 1;
   }
   meshRenderer = (UnityEngine_Object_o *)this->fields.meshRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -113,9 +113,9 @@ void __fastcall FadeClipController__Start(FadeClipController_o *this, const Meth
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
     this->fields.meshRenderer = (struct UnityEngine_MeshRenderer_o *)Component_object;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.meshRenderer,
       (int64_t)Component_object,
       v7,
@@ -140,11 +140,11 @@ void __fastcall FadeClipController__Update(FadeClipController_o *this, const Met
   UnityEngine_Material_o *v9; // x19
   System_String_o *v10; // x1
 
-  if ( (byte_4B67FEC & 1) == 0 )
+  if ( (byte_4BB5B1D & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeClipController_TypeInfo, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B67FEC = 1;
+    sub_1C13D24(&FadeClipController_TypeInfo, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BB5B1D = 1;
   }
   material = (UnityEngine_Object_o *)this->fields.material;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -157,7 +157,7 @@ void __fastcall FadeClipController__Update(FadeClipController_o *this, const Met
       j_il2cpp_runtime_class_init_0(FadeClipController_TypeInfo);
     if ( !v6 )
       goto LABEL_17;
-    UnityEngine_Material__SetFloat_70321692(
+    UnityEngine_Material__SetFloat_70591680(
       v6,
       FadeClipController_TypeInfo->static_fields->FADE_PARAM_ID,
       this->fields._FadeParam,
@@ -165,7 +165,7 @@ void __fastcall FadeClipController__Update(FadeClipController_o *this, const Met
     v7 = this->fields.material;
     if ( !v7 )
       goto LABEL_17;
-    UnityEngine_Material__SetFloat_70321692(
+    UnityEngine_Material__SetFloat_70591680(
       v7,
       FadeClipController_TypeInfo->static_fields->FADE_DEGREE_FROM_ID,
       this->fields._FadeDegreeFrom,
@@ -173,7 +173,7 @@ void __fastcall FadeClipController__Update(FadeClipController_o *this, const Met
     v7 = this->fields.material;
     if ( !v7 )
       goto LABEL_17;
-    UnityEngine_Material__SetFloat_70321692(
+    UnityEngine_Material__SetFloat_70591680(
       v7,
       FadeClipController_TypeInfo->static_fields->FADE_DEGREE_TO_ID,
       this->fields._FadeDegreeTo,
@@ -188,7 +188,7 @@ void __fastcall FadeClipController__Update(FadeClipController_o *this, const Met
     }
     if ( !v9 )
 LABEL_17:
-      sub_1BE4D28(v7, v5);
+      sub_1C13F80(v7, v5);
     v10 = *(System_String_o **)(*(_QWORD *)&v7[7].fields.m_CachedPtr + 16LL);
     if ( fadeClip )
       UnityEngine_Material__EnableKeyword(v9, v10, 0LL);

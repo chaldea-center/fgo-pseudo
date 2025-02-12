@@ -17,27 +17,27 @@ void __fastcall BattleCommandSpellRequest__beginRequest(
   const MethodInfo *v20; // x1
   const MethodInfo *v21; // x1
 
-  if ( (byte_4B683FB & 1) == 0 )
+  if ( (byte_4BB5F34 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, battleId);
-    sub_1BE4ACC(&StringLiteral_24709/*"usedTurnList"*/, v13);
-    sub_1BE4ACC(&StringLiteral_18481/*"continueNum"*/, v14);
-    sub_1BE4ACC(&StringLiteral_18393/*"commandSpellId"*/, v15);
-    sub_1BE4ACC(&StringLiteral_17329/*"battleId"*/, v16);
-    byte_4B683FB = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, battleId);
+    sub_1C13D24(&StringLiteral_24764/*"us"*/, v13);
+    sub_1C13D24(&StringLiteral_18525/*"contentType"*/, v14);
+    sub_1C13D24(&StringLiteral_18437/*"combine_fodder013"*/, v15);
+    sub_1C13D24(&StringLiteral_17374/*"battle/turn"*/, v16);
+    byte_4BB5F34 = 1;
   }
-  RequestBase__addField_42110748(
+  RequestBase__addField_42309896(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17329/*"battleId"*/,
+    (System_String_o *)StringLiteral_17374/*"battle/turn"*/,
     battleId,
     (const MethodInfo *)usedTurnArray);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18393/*"commandSpellId"*/, commandSpellId, v17);
-  RequestBase__addField_42112900(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18437/*"combine_fodder013"*/, commandSpellId, v17);
+  RequestBase__addField_42312048(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24709/*"usedTurnList"*/,
+    (System_String_o *)StringLiteral_24764/*"us"*/,
     &usedTurnArray->obj,
     v18);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18481/*"continueNum"*/, continueCount, v19);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18525/*"contentType"*/, continueCount, v19);
   if ( bt_continue )
   {
     RequestBase__addBaseField((RequestBase_o *)this, v20);
@@ -59,15 +59,15 @@ System_String_o *__fastcall BattleCommandSpellRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4B683FA & 1) == 0 )
+  if ( (byte_4BB5F33 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_9250/*"MockBattleCommandSpellRequest"*/, v2);
-    byte_4B683FA = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_9274/*"Mn"*/, v2);
+    byte_4BB5F33 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9250/*"MockBattleCommandSpellRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9274/*"Mn"*/, 0LL);
 }
 
 
@@ -80,12 +80,12 @@ System_String_o *__fastcall BattleCommandSpellRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4B683FC & 1) == 0 )
+  if ( (byte_4BB5F35 & 1) == 0 )
   {
-    sub_1BE4ACC(&AndroidUtil_TypeInfo, method);
-    sub_1BE4ACC(&DatFileName_TypeInfo, v2);
-    sub_1BE4ACC(&StringLiteral_1120/*"/"*/, v3);
-    byte_4B683FC = 1;
+    sub_1C13D24(&AndroidUtil_TypeInfo, method);
+    sub_1C13D24(&DatFileName_TypeInfo, v2);
+    sub_1C13D24(&StringLiteral_1123/*"/"*/, v3);
+    byte_4BB5F35 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -93,7 +93,7 @@ System_String_o *__fastcall BattleCommandSpellRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(3, 0LL);
-  return System_String__Concat_62710068(DatFileSavePath, (System_String_o *)StringLiteral_1120/*"/"*/, FileName, 0LL);
+  return System_String__Concat_62979204(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
 }
 
 
@@ -104,16 +104,16 @@ System_String_o *__fastcall BattleCommandSpellRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B683F9 & 1) == 0 )
+  if ( (byte_4BB5F32 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_17306/*"battle/commandSpell"*/, v2);
-    byte_4B683F9 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_17351/*"basePath"*/, v2);
+    byte_4BB5F32 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_17306/*"battle/commandSpell"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_17351/*"basePath"*/, 0LL);
 }
 
 
@@ -129,29 +129,29 @@ void __fastcall BattleCommandSpellRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4B683FD & 1) == 0 )
+  if ( (byte_4BB5F36 & 1) == 0 )
   {
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v5);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v6);
-    byte_4B683FD = 1;
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v5);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
+    byte_4BB5F36 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(23, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42194996(v7, 0LL)) && v8->fields.success )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL)) && v8->fields.success )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22543/*"ok"*/;
+    v10 = &StringLiteral_22595/*"offline"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22370/*"ng"*/;
+    v10 = &StringLiteral_22421/*"newAttributes"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

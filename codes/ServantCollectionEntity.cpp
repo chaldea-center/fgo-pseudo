@@ -1,13 +1,13 @@
 void __fastcall ServantCollectionEntity___ctor(ServantCollectionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6726C & 1) == 0 )
+  if ( (byte_4BB4D97 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B6726C = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BB4D97 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ServantCollectionEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B6726A & 1) == 0 )
+  if ( (byte_4BB4D95 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4B6726A = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4BB4D95 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            collectionNo,
            priority,
-           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F8D690 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -55,25 +55,25 @@ bool __fastcall ServantCollectionEntity__IsOpenCondition(ServantCollectionEntity
   __int64 v6; // x0
   Il2CppObject *MasterData_object; // x0
 
-  if ( (byte_4B6726B & 1) == 0 )
+  if ( (byte_4BB4D96 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v4);
-    byte_4B6726B = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v4);
+    byte_4BB4D96 = 1;
   }
   v5 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C369A8(v2);
+    v5 = sub_1C65C00(v2);
   v6 = *(_QWORD *)(*(_QWORD *)(v5 + 192) + 16LL);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C369A8(v2);
+    v6 = sub_1C65C00(v2);
   MasterData_object = **(Il2CppObject ***)(v6 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1BE4D28(MasterData_object, method);
+    sub_1C13F80(MasterData_object, method);
   }
   return CommonReleaseMaster__IsOpen(
            (CommonReleaseMaster_o *)MasterData_object,

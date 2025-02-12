@@ -16,16 +16,16 @@ void __fastcall BattleRetireWindowComponent__CallbackConfirmDialog(
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B69CBE & 1) == 0 )
+  if ( (byte_4BB77F2 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4B69CBE = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    byte_4BB77F2 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseConfirmDialog(Instance, 0LL), (Instance = (CommonUI_o *)this->fields._data_k__BackingField) == 0LL) )
   {
-    sub_1BE4D28(Instance, v5);
+    sub_1C13F80(Instance, v5);
   }
   BattleData__UpdateContinueItemInfo((BattleData_o *)Instance, 0LL);
   BattleRetireWindowComponent__Open(this, 0LL, v6);
@@ -67,17 +67,17 @@ void __fastcall BattleRetireWindowComponent__Open(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B69CBF & 1) == 0 )
+  if ( (byte_4BB77F3 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, call);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_QuestMaster___, v5);
-    sub_1BE4ACC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v6);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v7);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1BE4ACC(&StringLiteral_2989/*"BATTLE_RETIRE_CHECKSTR"*/, v9);
-    sub_1BE4ACC(&StringLiteral_2990/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/, v10);
-    sub_1BE4ACC(&StringLiteral_1209/*"0"*/, v11);
-    byte_4B69CBF = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, call);
+    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, v5);
+    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v6);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v7);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1C13D24(&StringLiteral_2992/*"BATTLE_RESULT_GET_EP_RATE"*/, v9);
+    sub_1C13D24(&StringLiteral_2993/*"BATTLE_RETIRE_CHECKSTR"*/, v10);
+    sub_1C13D24(&StringLiteral_1212/*"0"*/, v11);
+    byte_4BB77F3 = 1;
   }
   ContinueItemNum = 0;
   continueItemRoot = this->fields.continueItemRoot;
@@ -87,7 +87,7 @@ void __fastcall BattleRetireWindowComponent__Open(
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.continueCount;
   if ( !continueItemRoot )
     goto LABEL_62;
-  UILabel__set_text((UILabel_o *)continueItemRoot, (System_String_o *)StringLiteral_1209/*"0"*/, 0LL);
+  UILabel__set_text((UILabel_o *)continueItemRoot, (System_String_o *)StringLiteral_1212/*"0"*/, 0LL);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.giveUpTitleSpr;
   if ( !continueItemRoot )
     goto LABEL_62;
@@ -144,12 +144,12 @@ void __fastcall BattleRetireWindowComponent__Open(
   v28.fields.z = 0.0;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v28, 0LL);
   this->fields.EnableContinueItem = 0;
-  continueItemRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  continueItemRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !continueItemRoot )
     goto LABEL_62;
   continueItemRoot = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)continueItemRoot,
-                                                   (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                                   (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
   data_k__BackingField = this->fields._data_k__BackingField;
   if ( !data_k__BackingField )
     goto LABEL_62;
@@ -161,7 +161,7 @@ void __fastcall BattleRetireWindowComponent__Open(
   continueItemRoot = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___GetEntity(
                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)continueItemRoot,
                                                    battle_ent->fields.questId,
-                                                   (const MethodInfo_31FD7C4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                                                   (const MethodInfo_3238624 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( !this->fields._data_k__BackingField )
     goto LABEL_62;
   v15 = (QuestEntity_o *)continueItemRoot;
@@ -264,7 +264,7 @@ void __fastcall BattleRetireWindowComponent__Open(
                                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                   continueItemRoot = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_2989/*"BATTLE_RETIRE_CHECKSTR"*/,
+                                                                                   (System_String_o *)StringLiteral_2992/*"BATTLE_RESULT_GET_EP_RATE"*/,
                                                                                    0LL);
                                   if ( checkGiveUpLabel )
                                   {
@@ -307,7 +307,7 @@ void __fastcall BattleRetireWindowComponent__Open(
     v16 = this->fields.checkGiveUpLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_2990/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
+    v17 = &StringLiteral_2993/*"BATTLE_RETIRE_CHECKSTR"*/;
     goto LABEL_38;
   }
   v18 = this->fields._data_k__BackingField;
@@ -321,7 +321,7 @@ void __fastcall BattleRetireWindowComponent__Open(
     v16 = this->fields.checkGiveUpLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_2989/*"BATTLE_RETIRE_CHECKSTR"*/;
+    v17 = &StringLiteral_2992/*"BATTLE_RESULT_GET_EP_RATE"*/;
 LABEL_38:
     continueItemRoot = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v17, 0LL);
     if ( v16 )
@@ -330,7 +330,7 @@ LABEL_38:
       goto LABEL_40;
     }
 LABEL_62:
-    sub_1BE4D28(continueItemRoot, call);
+    sub_1C13F80(continueItemRoot, call);
   }
   BattleRetireWindowComponent__SetInterruptionQuestUI(this, v19);
 LABEL_40:
@@ -365,16 +365,16 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
   UIRect_o *v23; // x20
   intptr_t m_CachedPtr; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B69CC0 & 1) == 0 )
+  if ( (byte_4BB77F4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
-    sub_1BE4ACC(&int_TypeInfo, v3);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BE4ACC(&Method_SingletonTemplate_BattleItemData__get_Instance__, v6);
-    sub_1BE4ACC(&StringLiteral_16821/*"_{0}"*/, v7);
-    sub_1BE4ACC(&StringLiteral_2991/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/, v8);
-    byte_4B69CC0 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
+    sub_1C13D24(&int_TypeInfo, v3);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C13D24(&Method_SingletonTemplate_BattleItemData__get_Instance__, v6);
+    sub_1C13D24(&StringLiteral_16865/*"_used_key"*/, v7);
+    sub_1C13D24(&StringLiteral_2994/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/, v8);
+    byte_4BB77F4 = 1;
   }
   checkGiveUpLabel = (UIWidget_o *)this->fields.checkGiveUpLabel;
   if ( !checkGiveUpLabel )
@@ -396,16 +396,16 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
     (UnityEngine_Transform_o *)checkGiveUpLabel,
     this->fields.messageLabelPosInInterruptionQuest,
     0LL);
-  checkGiveUpLabel = (UIWidget_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+  checkGiveUpLabel = (UIWidget_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
   if ( !checkGiveUpLabel )
     goto LABEL_46;
-  v13 = (System_String_o *)StringLiteral_2991/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/;
+  v13 = (System_String_o *)StringLiteral_2994/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
   if ( checkGiveUpLabel->fields.m_CachedPtr >= 1 )
   {
     m_CachedPtr = checkGiveUpLabel->fields.m_CachedPtr;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CachedPtr, v10, v11, v12);
-    v15 = System_String__Format((System_String_o *)StringLiteral_16821/*"_{0}"*/, v14, 0LL);
-    v13 = System_String__Concat_62698808(v13, v15, 0LL);
+    v15 = System_String__Format((System_String_o *)StringLiteral_16865/*"_used_key"*/, v14, 0LL);
+    v13 = System_String__Concat_62967944(v13, v15, 0LL);
   }
   v16 = this->fields.checkGiveUpLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -423,7 +423,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
                                      0LL);
   if ( !giveUpBg )
     goto LABEL_46;
-  UIRect__SetAnchor_47774904(giveUpBg, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
+  UIRect__SetAnchor_47966452(giveUpBg, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
   v18 = this->fields.giveUpBg;
   if ( !v18 )
     goto LABEL_46;
@@ -457,7 +457,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
     goto LABEL_46;
   Component_object = (UIRect_o *)UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)checkGiveUpLabel,
-                                   (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                   (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -470,7 +470,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
                                        0LL);
     if ( !Component_object )
       goto LABEL_46;
-    UIRect__SetAnchor_47774904(Component_object, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
+    UIRect__SetAnchor_47966452(Component_object, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
     checkGiveUpLabel = (UIWidget_o *)Component_object->fields.leftAnchor;
     if ( !checkGiveUpLabel )
       goto LABEL_46;
@@ -493,7 +493,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
     goto LABEL_46;
   v23 = (UIRect_o *)UnityEngine_GameObject__GetComponent_object_(
                       (UnityEngine_GameObject_o *)checkGiveUpLabel,
-                      (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                      (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0LL, 0LL) )
@@ -506,7 +506,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
                                          0LL);
       if ( v23 )
       {
-        UIRect__SetAnchor_47774904(v23, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
+        UIRect__SetAnchor_47966452(v23, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
         checkGiveUpLabel = (UIWidget_o *)v23->fields.leftAnchor;
         if ( checkGiveUpLabel )
         {
@@ -531,7 +531,7 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
       }
     }
 LABEL_46:
-    sub_1BE4D28(checkGiveUpLabel, method);
+    sub_1C13F80(checkGiveUpLabel, method);
   }
 }
 
@@ -559,18 +559,18 @@ void __fastcall BattleRetireWindowComponent__Update(BattleRetireWindowComponent_
   ErrorDialog_ClickDelegate_o *v21; // x22
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4B69CBD & 1) == 0 )
+  if ( (byte_4BB77F1 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleRetireWindowComponent_CallbackConfirmDialog__, method);
-    sub_1BE4ACC(&ErrorDialog_ClickDelegate_TypeInfo, v3);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v5);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1BE4ACC(&StringLiteral_2867/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, v8);
-    sub_1BE4ACC(&StringLiteral_2866/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, v9);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v10);
-    byte_4B69CBD = 1;
+    sub_1C13D24(&Method_BattleRetireWindowComponent_CallbackConfirmDialog__, method);
+    sub_1C13D24(&ErrorDialog_ClickDelegate_TypeInfo, v3);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&NetworkManager_TypeInfo, v5);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1C13D24(&StringLiteral_2870/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, v8);
+    sub_1C13D24(&StringLiteral_2869/*"BATTLE_CONTINUE_ITEM_BTN"*/, v9);
+    sub_1C13D24(&StringLiteral_1/*""*/, v10);
+    byte_4BB77F1 = 1;
   }
   data_k__BackingField = (UnityEngine_Object_o *)this->fields._data_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -580,7 +580,7 @@ void __fastcall BattleRetireWindowComponent__Update(BattleRetireWindowComponent_
     continueItemDeadLineLabel = this->fields.continueItemDeadLineLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2867/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2870/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0LL);
     if ( !this->fields._data_k__BackingField )
       goto LABEL_21;
     v15 = v13;
@@ -599,11 +599,11 @@ void __fastcall BattleRetireWindowComponent__Update(BattleRetireWindowComponent_
     if ( v18 < NetworkManager__getTime(0LL) && !this->fields.isShowDeadLineDialog )
     {
       this->fields.isShowDeadLineDialog = 1;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2866/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0LL);
-      v21 = (ErrorDialog_ClickDelegate_o *)sub_1BE4D18(ErrorDialog_ClickDelegate_TypeInfo);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2869/*"BATTLE_CONTINUE_ITEM_BTN"*/, 0LL);
+      v21 = (ErrorDialog_ClickDelegate_o *)sub_1C13F70(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(
         v21,
         (Il2CppObject *)this,
@@ -627,7 +627,7 @@ void __fastcall BattleRetireWindowComponent__Update(BattleRetireWindowComponent_
         return;
       }
 LABEL_21:
-      sub_1BE4D28(v13, v14);
+      sub_1C13F80(v13, v14);
     }
   }
 }
@@ -637,12 +637,12 @@ System_String_o *__fastcall BattleRetireWindowComponent__get_closeBtnPath(
         BattleRetireWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B69CC1 & 1) == 0 )
+  if ( (byte_4BB77F5 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_17721/*"btn_cancel"*/, method);
-    byte_4B69CC1 = 1;
+    sub_1C13D24(&StringLiteral_17763/*"btn_bg_challenge"*/, method);
+    byte_4BB77F5 = 1;
   }
-  return (System_String_o *)StringLiteral_17721/*"btn_cancel"*/;
+  return (System_String_o *)StringLiteral_17763/*"btn_bg_challenge"*/;
 }
 
 
@@ -666,7 +666,7 @@ void __fastcall BattleRetireWindowComponent__set_data(
   PartyListViewItem_o *v7; // x7
 
   this->fields._data_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._data_k__BackingField,
     (int64_t)value,
     (int64_t)method,

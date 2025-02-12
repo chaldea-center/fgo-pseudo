@@ -45,15 +45,15 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
   FollowerInfo_o *v43; // x6
   PartyListViewItem_o *v44; // x7
 
-  if ( (byte_4B68C1E & 1) == 0 )
+  if ( (byte_4BB6768 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_1/*""*/, *(_QWORD *)&index);
-    byte_4B68C1E = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, *(_QWORD *)&index);
+    byte_4BB6768 = 1;
   }
-  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
   v5 = StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._IconName_k__BackingField,
     (int64_t)v5,
     v6,
@@ -64,7 +64,7 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
     v11);
   v12 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)v12,
     v13,
@@ -77,12 +77,12 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0LL;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields._ItemEnt_k__BackingField, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields._ItemEnt_k__BackingField, 0LL, v19, v20, v21, v22, v23, v24);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
   v25 = StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._ClosedMessage_k__BackingField,
     (int64_t)v25,
     v26,
@@ -93,7 +93,7 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
     v31);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._LinkAction_k__BackingField,
     0LL,
     v32,
@@ -105,7 +105,7 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
   this->fields._IsFirst_k__BackingField = 0;
   v38 = StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._TransitionParam_k__BackingField,
     (int64_t)v38,
     v39,
@@ -259,7 +259,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._ClosedMessage_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -283,7 +283,7 @@ void __fastcall ItemLinkInfoListViewItem__set_IconName(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IconName_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._IconName_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -361,7 +361,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemEnt(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._ItemEnt_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -394,7 +394,7 @@ void __fastcall ItemLinkInfoListViewItem__set_LinkAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._LinkAction_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -418,7 +418,7 @@ void __fastcall ItemLinkInfoListViewItem__set_Name(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -460,7 +460,7 @@ void __fastcall ItemLinkInfoListViewItem__set_TransitionParam(
   PartyListViewItem_o *v7; // x7
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._TransitionParam_k__BackingField,
     (int64_t)value,
     (int64_t)method,

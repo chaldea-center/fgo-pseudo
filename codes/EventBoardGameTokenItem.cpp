@@ -8,15 +8,15 @@ void __fastcall EventBoardGameTokenItem__DestroyItem(EventBoardGameTokenItem_o *
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B6AA29 & 1) == 0 )
+  if ( (byte_4BB8536 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B6AA29 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB8536 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70452000(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
 }
 
 
@@ -45,25 +45,25 @@ void __fastcall EventBoardGameTokenItem__Init(EventBoardGameTokenItem_o *this, c
   FollowerInfo_o *v23; // x6
   PartyListViewItem_o *v24; // x7
 
-  if ( (byte_4B6AA25 & 1) == 0 )
+  if ( (byte_4BB8532 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
-    byte_4B6AA25 = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, method);
+    byte_4BB8532 = 1;
   }
   this->fields.index = 0;
   this->fields.haved = 0;
   v9 = StringLiteral_1/*""*/;
   this->fields.tokenName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.tokenName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tokenName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
   v10 = StringLiteral_1/*""*/;
   this->fields.tokenImageId = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.tokenImageId, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tokenImageId, (int64_t)v10, v11, v12, v13, v14, v15, v16);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel )
-    sub_1BE4D28(0LL, v17);
+    sub_1C13F80(0LL, v17);
   UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.callback = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.callback, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.callback, 0LL, v19, v20, v21, v22, v23, v24);
 }
 
 
@@ -75,21 +75,21 @@ void __fastcall EventBoardGameTokenItem__OnClickItem(EventBoardGameTokenItem_o *
   __int64 v6; // x1
   struct System_Action_int__o *callback; // x8
 
-  if ( (byte_4B6AA28 & 1) == 0 )
+  if ( (byte_4BB8535 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_EventBoardGameTokenItem_OnClickItem__, method);
-    byte_4B6AA28 = 1;
+    sub_1C13D24(&Method_EventBoardGameTokenItem_OnClickItem__, method);
+    byte_4BB8535 = 1;
   }
   if ( this->fields.callback && this->fields.haved )
   {
     v3 = Method_EventBoardGameTokenItem_OnClickItem__;
     if ( (*((_BYTE *)Method_EventBoardGameTokenItem_OnClickItem__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_EventBoardGameTokenItem_OnClickItem__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_EventBoardGameTokenItem_OnClickItem__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     callback = this->fields.callback;
     if ( !callback )
-      sub_1BE4D28(v5, v6);
+      sub_1C13F80(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callback->fields.m_target)(
       callback->fields.original_method_info,
       (unsigned int)this->fields.index,
@@ -127,10 +127,10 @@ void __fastcall EventBoardGameTokenItem__SetItem(
   PartyListViewItem_o *v28; // x7
 
   v12 = this;
-  if ( (byte_4B6AA26 & 1) == 0 )
+  if ( (byte_4BB8533 & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_1BE4ACC(&StringLiteral_24315/*"token_enpty"*/, item);
-    byte_4B6AA26 = 1;
+    this = (EventBoardGameTokenItem_o *)sub_1C13D24(&StringLiteral_24370/*"title2_2"*/, item);
+    byte_4BB8533 = 1;
   }
   v13 = *item;
   if ( ent )
@@ -140,7 +140,7 @@ void __fastcall EventBoardGameTokenItem__SetItem(
     v13->fields.index = ent->fields.tokenId;
     v14 = System_Int32__ToString((int)ent + 20, 0LL);
     v13->fields.tokenName = v14;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v13->fields.tokenName, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v13->fields.tokenName, (int64_t)v14, v15, v16, v17, v18, v19, v20);
     v13 = *item;
     if ( !*item )
       goto LABEL_14;
@@ -155,17 +155,17 @@ void __fastcall EventBoardGameTokenItem__SetItem(
         goto LABEL_11;
       }
 LABEL_14:
-      sub_1BE4D28(this, item);
+      sub_1C13F80(this, item);
     }
   }
   else if ( !v13 )
   {
     goto LABEL_14;
   }
-  v21 = (EventBoardGameTokenItem_o *)StringLiteral_24315/*"token_enpty"*/;
+  v21 = (EventBoardGameTokenItem_o *)StringLiteral_24370/*"title2_2"*/;
 LABEL_11:
   v13->fields.tokenImageId = (struct System_String_o *)v21;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&v13->fields.tokenImageId,
     (int64_t)v21,
     (int64_t)ent,
@@ -178,7 +178,7 @@ LABEL_11:
   if ( callback )
   {
     v12->fields.callback = callback;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v12->fields.callback, (int64_t)callback, v23, v24, v25, v26, v27, v28);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v12->fields.callback, (int64_t)callback, v23, v24, v25, v26, v27, v28);
   }
 }
 
@@ -206,10 +206,10 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
   PartyListViewItem_o *v19; // x7
 
   v10 = this;
-  if ( (byte_4B6AA27 & 1) == 0 )
+  if ( (byte_4BB8534 & 1) == 0 )
   {
-    this = (EventBoardGameTokenItem_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, item);
-    byte_4B6AA27 = 1;
+    this = (EventBoardGameTokenItem_o *)sub_1C13D24(&StringLiteral_1/*""*/, item);
+    byte_4BB8534 = 1;
   }
   if ( !item )
     goto LABEL_13;
@@ -218,7 +218,7 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
   p_tokenName = &item->fields.tokenName;
   tokenName = item->fields.tokenName;
   v10->fields.tokenName = tokenName;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&v10->fields.tokenName,
     (int64_t)tokenName,
     dispNo,
@@ -229,7 +229,7 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
     v7);
   tokenImageId = item->fields.tokenImageId;
   v10->fields.tokenImageId = tokenImageId;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&v10->fields.tokenImageId,
     (int64_t)tokenImageId,
     v14,
@@ -265,7 +265,7 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
       }
     }
 LABEL_13:
-    sub_1BE4D28(this, item);
+    sub_1C13F80(this, item);
   }
 }
 

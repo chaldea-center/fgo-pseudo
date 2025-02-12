@@ -4,7 +4,7 @@ void __fastcall BattleCallBack_int__bool__bool____ctor(
         bool arg2,
         bool arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_3175CB0 *method)
+        const MethodInfo_31AE844 *method)
 {
   PartyOrganizationUtility_o *v8; // x21
   bool v9; // w22
@@ -25,18 +25,18 @@ void __fastcall BattleCallBack_int__bool__bool____ctor(
   *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = arg1;
   *(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = v9;
   *(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 4) = v10;
-  sub_1BE4A70(v8, (int64_t)callBack, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8(v8, (int64_t)callBack, v11, v12, v13, v14, v15, v16);
 }
 
 
 void __fastcall BattleCallBack_int__bool__bool___call(
         BattleCallBack_int__bool__bool__o *this,
-        const MethodInfo_3175D00 *method)
+        const MethodInfo_31AE894 *method)
 {
   ActionExtensions__Call_int__bool__bool_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
     this->fields.arg3,
-    (const MethodInfo_2EABDE8 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
+    (const MethodInfo_2EE2144 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
 }

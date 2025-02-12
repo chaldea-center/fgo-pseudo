@@ -12,10 +12,10 @@ System_String_o *__fastcall ChangeCrystalMaterialSettingComponent__get_AlphaText
 {
   System_String_o *result; // x0
 
-  if ( (byte_4B69EBE & 1) == 0 )
+  if ( (byte_4BB79E1 & 1) == 0 )
   {
-    sub_1BE4ACC(&string_TypeInfo, method);
-    byte_4B69EBE = 1;
+    sub_1C13D24(&string_TypeInfo, method);
+    byte_4BB79E1 = 1;
   }
   result = this->fields.alphaTexturePropertyName;
   if ( !result )

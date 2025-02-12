@@ -21,26 +21,26 @@ void __fastcall BattleDataDefine___cctor(const MethodInfo *method)
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  if ( (byte_4B69143 & 1) == 0 )
+  if ( (byte_4BB6C89 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleDataDefine_TypeInfo, v1);
-    sub_1BE4ACC(&int___TypeInfo, v2);
-    sub_1BE4ACC(&StringLiteral_3241/*"Battle/Common"*/, v3);
-    byte_4B69143 = 1;
+    sub_1C13D24(&BattleDataDefine_TypeInfo, v1);
+    sub_1C13D24(&int___TypeInfo, v2);
+    sub_1C13D24(&StringLiteral_3244/*"Battle"*/, v3);
+    byte_4BB6C89 = 1;
   }
   static_fields = BattleDataDefine_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->OVERWRITE_ATK_RATE_PRIORITY = 0x3E800000001LL;
   *(_QWORD *)&static_fields->PERCENTAGE_DENOMINATOR = 0x447A000042C80000LL;
-  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_BE17B0;
-  v5 = sub_1BE4B74(int___TypeInfo, 1LL);
+  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_BF5FD0;
+  v5 = sub_1C13DCC(int___TypeInfo, 1LL);
   v6 = BattleDataDefine_TypeInfo->static_fields;
   v6->NO_INDIVIDUALITY_ARRAY = (struct System_Int32_array *)v5;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v6->NO_INDIVIDUALITY_ARRAY, v5, v7, v8, v9, v10, v11, v12);
-  v13 = StringLiteral_3241/*"Battle/Common"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v6->NO_INDIVIDUALITY_ARRAY, v5, v7, v8, v9, v10, v11, v12);
+  v13 = StringLiteral_3244/*"Battle"*/;
   v14 = BattleDataDefine_TypeInfo->static_fields;
-  v14->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3241/*"Battle/Common"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v14->ASSET_BATTLE_COMMON, v13, v15, v16, v17, v18, v19, v20);
-  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_BE13B0;
+  v14->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3244/*"Battle"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v14->ASSET_BATTLE_COMMON, v13, v15, v16, v17, v18, v19, v20);
+  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_BF5BD0;
 }
 
 
@@ -53,15 +53,15 @@ System_String_o *__fastcall BattleDataDefine__AddUniqueCameraPath(int32_t camera
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B69140 & 1) == 0 )
+  if ( (byte_4BB6C86 & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_3257/*"Battle/UniqueCamera/Add/{0}"*/, v6);
-    byte_4B69140 = 1;
+    sub_1C13D24(&int_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_3260/*"Battle/TurnEffect/"*/, v6);
+    byte_4BB6C86 = 1;
   }
   v9 = cameraId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
-  return System_String__Format((System_String_o *)StringLiteral_3257/*"Battle/UniqueCamera/Add/{0}"*/, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3260/*"Battle/TurnEffect/"*/, v7, 0LL);
 }
 
 
@@ -74,15 +74,15 @@ System_String_o *__fastcall BattleDataDefine__FieldMotionPath(int32_t motionId, 
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B6913F & 1) == 0 )
+  if ( (byte_4BB6C85 & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_3247/*"Battle/Field/{0}"*/, v6);
-    byte_4B6913F = 1;
+    sub_1C13D24(&int_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_3250/*"Battle/DropEffect/2"*/, v6);
+    byte_4BB6C85 = 1;
   }
   v9 = motionId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
-  return System_String__Format((System_String_o *)StringLiteral_3247/*"Battle/Field/{0}"*/, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3250/*"Battle/DropEffect/2"*/, v7, 0LL);
 }
 
 
@@ -99,26 +99,26 @@ System_String_o *__fastcall BattleDataDefine__MakeBgPath(int32_t bgId, const Met
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = bgId;
-  if ( (byte_4B69141 & 1) == 0 )
+  if ( (byte_4BB6C87 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleDataDefine_TypeInfo, method);
-    byte_4B69141 = 1;
+    sub_1C13D24(&BattleDataDefine_TypeInfo, method);
+    byte_4BB6C87 = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-  return BattleDataDefine__MakeBgPath_43677664(v3, v2);
+  return BattleDataDefine__MakeBgPath_43882336(v3, v2);
 }
 
 
-System_String_o *__fastcall BattleDataDefine__MakeBgPath_43677664(System_String_o *bgIdStr, const MethodInfo *method)
+System_String_o *__fastcall BattleDataDefine__MakeBgPath_43882336(System_String_o *bgIdStr, const MethodInfo *method)
 {
-  if ( (byte_4B69142 & 1) == 0 )
+  if ( (byte_4BB6C88 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3299/*"Bg/"*/, method);
-    byte_4B69142 = 1;
+    sub_1C13D24(&StringLiteral_3302/*"Between"*/, method);
+    byte_4BB6C88 = 1;
   }
-  return System_String__Concat_62698808((System_String_o *)StringLiteral_3299/*"Bg/"*/, bgIdStr, 0LL);
+  return System_String__Concat_62967944((System_String_o *)StringLiteral_3302/*"Between"*/, bgIdStr, 0LL);
 }
 
 

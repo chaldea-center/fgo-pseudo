@@ -42,9 +42,9 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
   FollowerInfo_o *v44; // x6
   PartyListViewItem_o *v45; // x7
 
-  ListViewItem___ctor_41686696((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int64_t)ent,
     v12,
@@ -55,11 +55,11 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v17);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_1BE4D28(v18, v19);
+    sub_1C13F80(v18, v19);
   this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._Name_k__BackingField = name;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)name,
     v20,
@@ -69,7 +69,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v24,
     v25);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int64_t)commonUiAtlas,
     v28,
@@ -79,7 +79,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v32,
     v33);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._IconAtlas_k__BackingField,
     (int64_t)iconAtlas,
     v34,
@@ -89,7 +89,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v38,
     v39);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._OnClickAction_k__BackingField,
     (int64_t)onClickAction,
     v40,
@@ -161,7 +161,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -185,7 +185,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._IconAtlas_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -218,7 +218,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_Name(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -242,7 +242,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._OnClickAction_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -266,7 +266,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenu
   PartyListViewItem_o *v7; // x7
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int64_t)value,
     (int64_t)method,

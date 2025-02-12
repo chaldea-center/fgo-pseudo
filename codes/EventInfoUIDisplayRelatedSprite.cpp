@@ -12,18 +12,18 @@ void __fastcall EventInfoUIDisplayRelatedSprite___ctor(
   PartyListViewItem_o *v10; // x7
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B68BA7 & 1) == 0 )
+  if ( (byte_4BB66F1 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__, method);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo, v3);
-    byte_4B68BA7 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__, method);
+    sub_1C13D24(&System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo, v3);
+    byte_4BB66F1 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__);
   this->fields.spriteRelationList = (struct System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__o *)v4;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.spriteRelationList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.spriteRelationList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, v11);
 }
 
@@ -78,40 +78,40 @@ void __fastcall EventInfoUIDisplayRelatedSprite__AfterRedisplay(
   Il2CppObject *component; // [xsp+18h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B68BA6 & 1) == 0 )
+  if ( (byte_4BB66F0 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__Dispose__,
       method);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__MoveNext__,
       v3);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__get_Current__,
       v4);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_TryGetComponent_EventInfoUIBase___, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__Add__, v6);
-    sub_1BE4ACC(
+    sub_1C13D24(&Method_UnityEngine_GameObject_TryGetComponent_EventInfoUIBase___, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__Add__, v6);
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__GetEnumerator__,
       v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo, v9);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v10);
-    byte_4B68BA6 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo, v9);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
+    byte_4BB66F0 = 1;
   }
   memset(&v47, 0, sizeof(v47));
   component = 0LL;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation___ctor__);
   spriteRelationList = this->fields.spriteRelationList;
   if ( !spriteRelationList )
     goto LABEL_45;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v45,
     (System_Collections_Generic_List_object__o *)spriteRelationList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__GetEnumerator__);
   v47 = v45;
   v14 = 1;
 LABEL_5:
@@ -120,35 +120,35 @@ LABEL_5:
   {
     v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v47,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__MoveNext__);
     if ( !v16 )
       break;
     current = v47.fields._current;
     if ( !v47.fields._current )
-      sub_1BE4D28(v16, v17);
+      sub_1C13F80(v16, v17);
     if ( LODWORD(v47.fields._current[1].klass) == -1 )
     {
       if ( !v11 )
-        sub_1BE4D28(v16, v17);
+        sub_1C13F80(v16, v17);
       items = v11->fields._items;
       v34 = Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1BE4D28(v16, v17);
+        sub_1C13F80(v16, v17);
       size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           current,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
       }
       else
       {
         v36 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v36[4] = (Il2CppClass *)current;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v36 + 4), (int64_t)current, v18, v19, v20, v21, v22, v23);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v36 + 4), (int64_t)current, v18, v19, v20, v21, v22, v23);
       }
     }
     else
@@ -161,23 +161,23 @@ LABEL_5:
       if ( !v28 )
       {
         if ( !EventUIObjcet )
-          sub_1BE4D28(v28, v29);
+          sub_1C13F80(v28, v29);
         if ( !UnityEngine_GameObject__TryGetComponent_object_(
                 (UnityEngine_GameObject_o *)EventUIObjcet,
                 &component,
-                (const MethodInfo_2FAAA2C *)Method_UnityEngine_GameObject_TryGetComponent_EventInfoUIBase___) )
+                (const MethodInfo_2FE0C8C *)Method_UnityEngine_GameObject_TryGetComponent_EventInfoUIBase___) )
           goto LABEL_24;
         if ( !component )
-          sub_1BE4D28(0LL, v29);
+          sub_1C13F80(0LL, v29);
         if ( (((__int64 (*)(void))component->klass->vtable[18].method)() & 1) != 0 )
         {
 LABEL_24:
           monitor = (UnityEngine_Component_o *)current[1].monitor;
           if ( !monitor )
-            sub_1BE4D28(0LL, v29);
+            sub_1C13F80(0LL, v29);
           gameObject = UnityEngine_Component__get_gameObject(monitor, 0LL);
           if ( !gameObject )
-            sub_1BE4D28(0LL, v39);
+            sub_1C13F80(0LL, v39);
           UnityEngine_GameObject__SetActive(gameObject, BYTE4(current[1].klass), 0LL);
           v14 = 0;
           goto LABEL_5;
@@ -185,44 +185,44 @@ LABEL_24:
       }
       v30 = (UnityEngine_Component_o *)current[1].monitor;
       if ( !v30 )
-        sub_1BE4D28(0LL, v29);
+        sub_1C13F80(0LL, v29);
       v31 = UnityEngine_Component__get_gameObject(v30, 0LL);
       if ( !v31 )
-        sub_1BE4D28(0LL, v32);
+        sub_1C13F80(0LL, v32);
       UnityEngine_GameObject__SetActive(v31, BYTE4(current[1].klass) == 0, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v47,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__Dispose__);
   if ( !v11 )
 LABEL_45:
-    sub_1BE4D28(spriteRelationList, v12);
+    sub_1C13F80(spriteRelationList, v12);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v45,
     v11,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__GetEnumerator__);
   v47 = v45;
   while ( 1 )
   {
     v40 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v47,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__MoveNext__);
     if ( !v40 )
       break;
     if ( !v47.fields._current )
-      sub_1BE4D28(v40, v41);
+      sub_1C13F80(v40, v41);
     v42 = (UnityEngine_Component_o *)v47.fields._current[1].monitor;
     if ( !v42 )
-      sub_1BE4D28(0LL, v41);
+      sub_1C13F80(0LL, v41);
     v43 = UnityEngine_Component__get_gameObject(v42, 0LL);
     if ( !v43 )
-      sub_1BE4D28(0LL, v44);
+      sub_1C13F80(0LL, v44);
     UnityEngine_GameObject__SetActive(v43, v15 & 1, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v47,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoUIDisplayRelatedSprite_SpriteRelation__Dispose__);
 }
 
 
@@ -271,26 +271,26 @@ void __fastcall EventInfoUIDisplayRelatedSprite__CheckAssertions(
   __int64 v40; // x0
 
   v2 = this;
-  if ( (byte_4B68BA5 & 1) == 0 )
+  if ( (byte_4BB66EF & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Linq_Enumerable_Select_EventInfoUIDisplayRelatedSprite_SpriteRelation__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int____,
       method);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &System_Func_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo,
       v3);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v4);
-    sub_1BE4ACC(
+    sub_1C13D24(&System_IDisposable_TypeInfo, v4);
+    sub_1C13D24(
       &System_Collections_Generic_IEnumerable_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo,
       v5);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &System_Collections_Generic_IEnumerator_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo,
       v6);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__get_Count__, v8);
-    sub_1BE4ACC(&Method_EventInfoUIDisplayRelatedSprite___c__CheckAssertions_b__3_0__, v9);
-    this = (EventInfoUIDisplayRelatedSprite_o *)sub_1BE4ACC(&EventInfoUIDisplayRelatedSprite___c_TypeInfo, v10);
-    byte_4B68BA5 = 1;
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoUIDisplayRelatedSprite_SpriteRelation__get_Count__, v8);
+    sub_1C13D24(&Method_EventInfoUIDisplayRelatedSprite___c__CheckAssertions_b__3_0__, v9);
+    this = (EventInfoUIDisplayRelatedSprite_o *)sub_1C13D24(&EventInfoUIDisplayRelatedSprite___c_TypeInfo, v10);
+    byte_4BB66EF = 1;
   }
   spriteRelationList = v2->fields.spriteRelationList;
   if ( !spriteRelationList )
@@ -312,7 +312,7 @@ void __fastcall EventInfoUIDisplayRelatedSprite__CheckAssertions(
       v12 = EventInfoUIDisplayRelatedSprite___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v12->static_fields->__9;
-    _9__3_0 = (System_Func_T1__T2__TResult__o *)sub_1BE4D18(System_Func_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo);
+    _9__3_0 = (System_Func_T1__T2__TResult__o *)sub_1C13F70(System_Func_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo);
     System_Func_object__int__ValueTuple_object__int_____ctor(
       _9__3_0,
       v14,
@@ -320,15 +320,15 @@ void __fastcall EventInfoUIDisplayRelatedSprite__CheckAssertions(
       0LL);
     static_fields = EventInfoUIDisplayRelatedSprite___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___o *)_9__3_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v16, v17, v18, v19, v20, v21);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v16, v17, v18, v19, v20, v21);
   }
   this = (EventInfoUIDisplayRelatedSprite_o *)System_Linq_Enumerable__Select_object__ValueTuple_object__int__(
                                                 (System_Collections_Generic_IEnumerable_TSource__o *)spriteRelationList,
                                                 (System_Func_TSource__int__TResult__o *)_9__3_0,
-                                                (const MethodInfo_2F89974 *)Method_System_Linq_Enumerable_Select_EventInfoUIDisplayRelatedSprite_SpriteRelation__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int____);
+                                                (const MethodInfo_2FBFBD4 *)Method_System_Linq_Enumerable_Select_EventInfoUIDisplayRelatedSprite_SpriteRelation__ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int____);
   if ( !this )
 LABEL_41:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   klass = this->klass;
   v23 = this;
   v24 = *(unsigned __int16 *)(&this->klass->_2.bitflags2 + 3);
@@ -348,14 +348,14 @@ LABEL_41:
   else
   {
 LABEL_16:
-    v26 = sub_1C36AAC(
+    v26 = sub_1C65D04(
             this,
             System_Collections_Generic_IEnumerable_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo,
             0LL);
   }
   v28 = (*(__int64 (__fastcall **)(EventInfoUIDisplayRelatedSprite_o *, _QWORD))v26)(v23, *(_QWORD *)(v26 + 8));
   if ( !v28 )
-    sub_1BE4D28(0LL, v27);
+    sub_1C13F80(0LL, v27);
   while ( 1 )
   {
     v29 = *(_QWORD *)v28;
@@ -375,7 +375,7 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v32 = sub_1C36AAC(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v32 = sub_1C65D04(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v28, *(_QWORD *)(v32 + 8)) & 1) == 0 )
       break;
@@ -397,7 +397,7 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v36 = sub_1C36AAC(
+      v36 = sub_1C65D04(
               v28,
               System_Collections_Generic_IEnumerator_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___TypeInfo,
               0LL);
@@ -421,7 +421,7 @@ LABEL_30:
   else
   {
 LABEL_37:
-    v40 = sub_1C36AAC(v28, System_IDisposable_TypeInfo, 0LL);
+    v40 = sub_1C65D04(v28, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v40)(v28, *(_QWORD *)(v40 + 8));
 }
@@ -463,15 +463,15 @@ void __fastcall EventInfoUIDisplayRelatedSprite___c___cctor(const MethodInfo *me
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B68BA8 & 1) == 0 )
+  if ( (byte_4BB66F2 & 1) == 0 )
   {
-    sub_1BE4ACC(&EventInfoUIDisplayRelatedSprite___c_TypeInfo, v1);
-    byte_4B68BA8 = 1;
+    sub_1C13D24(&EventInfoUIDisplayRelatedSprite___c_TypeInfo, v1);
+    byte_4BB66F2 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(EventInfoUIDisplayRelatedSprite___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(EventInfoUIDisplayRelatedSprite___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventInfoUIDisplayRelatedSprite___c_TypeInfo->static_fields->__9 = (struct EventInfoUIDisplayRelatedSprite___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)EventInfoUIDisplayRelatedSprite___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -498,7 +498,7 @@ System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o __fastc
         int32_t index,
         const MethodInfo *method)
 {
-  const MethodInfo_393E470 *v4; // x4
+  const MethodInfo_39801D8 *v4; // x4
   struct EventInfoUIDisplayRelatedSprite_SpriteRelation_o *v7; // x0 OVERLAPPED
   __int64 v8; // x1
   struct EventInfoUIDisplayRelatedSprite_SpriteRelation_o *v9; // [xsp+0h] [xbp-40h] BYREF
@@ -506,10 +506,10 @@ System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o __fastc
   System_ValueTuple_object__int__o v11; // 0:x0.16
   System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o result; // 0:x0.16
 
-  if ( (byte_4B68BA9 & 1) == 0 )
+  if ( (byte_4BB66F3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___ctor__, value);
-    byte_4B68BA9 = 1;
+    sub_1C13D24(&Method_System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___ctor__, value);
+    byte_4BB66F3 = 1;
   }
   v11.fields.Item1 = (Il2CppObject *)&v9;
   *(_QWORD *)&v11.fields.Item2 = value;

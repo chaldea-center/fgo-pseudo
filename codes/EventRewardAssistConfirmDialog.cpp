@@ -3,24 +3,24 @@ void __fastcall EventRewardAssistConfirmDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4B61A84 & 1) == 0 )
+  if ( (byte_4BAF574 & 1) == 0 )
   {
-    sub_1BE4ACC(&EventRewardAssistConfirmDialog_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_19513/*"event_skill_icon_{0}{1:D2}"*/, v2);
-    byte_4B61A84 = 1;
+    sub_1C13D24(&EventRewardAssistConfirmDialog_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_19557/*"event_reset_data_lost_battle"*/, v2);
+    byte_4BAF574 = 1;
   }
-  EventRewardAssistConfirmDialog_TypeInfo->static_fields->ASSIST_SKILL_ICON = (struct System_String_o *)StringLiteral_19513/*"event_skill_icon_{0}{1:D2}"*/;
-  sub_1BE4A70(EventRewardAssistConfirmDialog_TypeInfo->static_fields);
+  EventRewardAssistConfirmDialog_TypeInfo->static_fields->ASSIST_SKILL_ICON = (struct System_String_o *)StringLiteral_19557/*"event_reset_data_lost_battle"*/;
+  sub_1C13CC8(EventRewardAssistConfirmDialog_TypeInfo->static_fields);
   *(_QWORD *)&EventRewardAssistConfirmDialog_TypeInfo->static_fields->SKILL_NAME_LABEL_MAX_WIDTH = 0x26C0000010ELL;
 }
 
 
 void __fastcall EventRewardAssistConfirmDialog___ctor(EventRewardAssistConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B61A83 & 1) == 0 )
+  if ( (byte_4BAF573 & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B61A83 = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BAF573 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -49,10 +49,10 @@ void __fastcall EventRewardAssistConfirmDialog__Init(EventRewardAssistConfirmDia
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onDecide = 0LL;
-  sub_1BE4A70(&this->fields.onDecide);
+  sub_1C13CC8(&this->fields.onDecide);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -68,22 +68,22 @@ void __fastcall EventRewardAssistConfirmDialog__OnClickCancel(
   __int64 v6; // x1
   struct System_Action_int__o *onDecide; // x8
 
-  if ( (byte_4B61A81 & 1) == 0 )
+  if ( (byte_4BAF571 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_EventRewardAssistConfirmDialog_OnClickCancel__, method);
-    byte_4B61A81 = 1;
+    sub_1C13D24(&Method_EventRewardAssistConfirmDialog_OnClickCancel__, method);
+    byte_4BAF571 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_EventRewardAssistConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventRewardAssistConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_EventRewardAssistConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_EventRewardAssistConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     onDecide = this->fields.onDecide;
     this->fields.state = 0;
     if ( !onDecide )
-      sub_1BE4D28(v5, v6);
+      sub_1C13F80(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       0LL,
@@ -102,22 +102,22 @@ void __fastcall EventRewardAssistConfirmDialog__OnClickDecide(
   __int64 v6; // x1
   struct System_Action_int__o *onDecide; // x8
 
-  if ( (byte_4B61A80 & 1) == 0 )
+  if ( (byte_4BAF570 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_EventRewardAssistConfirmDialog_OnClickDecide__, method);
-    byte_4B61A80 = 1;
+    sub_1C13D24(&Method_EventRewardAssistConfirmDialog_OnClickDecide__, method);
+    byte_4BAF570 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_EventRewardAssistConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventRewardAssistConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_EventRewardAssistConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_EventRewardAssistConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     onDecide = this->fields.onDecide;
     this->fields.state = 0;
     if ( !onDecide )
-      sub_1BE4D28(v5, v6);
+      sub_1C13F80(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       1LL,
@@ -200,37 +200,37 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
   int v72; // [xsp+8h] [xbp-68h] BYREF
   int v73; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B61A7F & 1) == 0 )
+  if ( (byte_4BAF56F & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, shopEnt);
-    sub_1BE4ACC(&AtlasManager_TypeInfo, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_AssistMaster___, v8);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_SkillMaster___, v9);
-    sub_1BE4ACC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
-    sub_1BE4ACC(&Method_EventRewardAssistConfirmDialog_EndOpen__, v11);
-    sub_1BE4ACC(&EventRewardAssistConfirmDialog_TypeInfo, v12);
-    sub_1BE4ACC(&int_TypeInfo, v13);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v14);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1BE4ACC(&Method_EventRewardAssistConfirmDialog___c__DisplayClass22_0__Open_b__0__, v16);
-    sub_1BE4ACC(&EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo, v17);
-    sub_1BE4ACC(&StringLiteral_8382/*"LEVEL_INFO"*/, v18);
-    sub_1BE4ACC(&StringLiteral_5785/*"EVENT_REWARD_ASSIST_SKILL_MSG"*/, v19);
-    sub_1BE4ACC(&StringLiteral_5784/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, v20);
-    sub_1BE4ACC(&StringLiteral_5787/*"EVENT_REWARD_ASSIST_SKILL_TITLE"*/, v21);
-    sub_1BE4ACC(&StringLiteral_3799/*"COMMON_CONFIRM_NO"*/, v22);
-    sub_1BE4ACC(&StringLiteral_3804/*"COMMON_CONFIRM_YES"*/, v23);
-    sub_1BE4ACC(&StringLiteral_5783/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/, v24);
-    byte_4B61A7F = 1;
+    sub_1C13D24(&System_Action_TypeInfo, shopEnt);
+    sub_1C13D24(&AtlasManager_TypeInfo, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_AssistMaster___, v8);
+    sub_1C13D24(&Method_DataManager_GetMasterData_SkillMaster___, v9);
+    sub_1C13D24(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
+    sub_1C13D24(&Method_EventRewardAssistConfirmDialog_EndOpen__, v11);
+    sub_1C13D24(&EventRewardAssistConfirmDialog_TypeInfo, v12);
+    sub_1C13D24(&int_TypeInfo, v13);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v14);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1C13D24(&Method_EventRewardAssistConfirmDialog___c__DisplayClass22_0__Open_b__0__, v16);
+    sub_1C13D24(&EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo, v17);
+    sub_1C13D24(&StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, v18);
+    sub_1C13D24(&StringLiteral_5802/*"EVENT_RAID_TIME_OVER_TXT"*/, v19);
+    sub_1C13D24(&StringLiteral_5801/*"EVENT_RAID_TIME_OVER_NOTICE_"*/, v20);
+    sub_1C13D24(&StringLiteral_5804/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/, v21);
+    sub_1C13D24(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v22);
+    sub_1C13D24(&StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/, v23);
+    sub_1C13D24(&StringLiteral_5800/*"EVENT_RAID_TIME_LIMIT_TXT_"*/, v24);
+    byte_4BAF56F = 1;
   }
-  v25 = (Il2CppObject *)sub_1BE4D18(EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo);
+  v25 = (Il2CppObject *)sub_1C13F70(EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor(v25, 0LL);
   if ( !v25 )
     goto LABEL_46;
   v25[1].klass = (Il2CppClass *)this;
-  sub_1BE4A70(&v25[1]);
+  sub_1C13CC8(&v25[1]);
   v25[1].monitor = shopEnt;
-  Instance = (DataManager_o *)sub_1BE4A70(&v25[1].monitor);
+  Instance = (DataManager_o *)sub_1C13CC8(&v25[1].monitor);
   monitor = v25[1].monitor;
   if ( !monitor )
     goto LABEL_46;
@@ -238,64 +238,64 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
   if ( !v29 )
     goto LABEL_46;
   if ( !*(_DWORD *)(v29 + 24) )
-    sub_1BE4D30(Instance, v27);
+    sub_1C13F88(Instance, v27);
   v30 = (Il2CppObject *)*((_QWORD *)monitor + 13);
   v31 = *(_DWORD *)(v29 + 32);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_AssistMaster___);
+                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_AssistMaster___);
   if ( !Instance )
     goto LABEL_46;
   v32 = (AssistMaster_o *)Instance;
   v25[2].klass = (Il2CppClass *)AssistMaster__GetCurrentLevelEntity((AssistMaster_o *)Instance, v31, 0LL);
   v33 = (DataManager_o **)&v25[2];
-  Instance = (DataManager_o *)sub_1BE4A70(&v25[2]);
+  Instance = (DataManager_o *)sub_1C13CC8(&v25[2]);
   if ( !v25[2].klass )
     goto LABEL_46;
   v25[2].monitor = AssistMaster__GetAssistEntity(v32, v31, LODWORD(v25[2].klass->_1.byval_arg.data) + 1, 0LL);
   p_monitor = (DataManager_o **)&v25[2].monitor;
-  sub_1BE4A70(&v25[2].monitor);
+  sub_1C13CC8(&v25[2].monitor);
   this->fields.onDecide = onDecide;
   p_onDecide = &this->fields.onDecide;
-  Instance = (DataManager_o *)sub_1BE4A70(&this->fields.onDecide);
+  Instance = (DataManager_o *)sub_1C13CC8(&this->fields.onDecide);
   klass = v25[2].klass;
   if ( klass && *p_monitor )
   {
     bits = klass->_1.byval_arg.bits;
     v38 = *(&klass->_1.byval_arg.bits + 1);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillMaster___);
       if ( Instance )
       {
         Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                       bits,
-                                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                      (const MethodInfo_3238624 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
         v39 = *p_monitor;
         if ( *p_monitor )
         {
           v40 = (SkillEntity_o *)Instance;
           datalist = (int32_t)v39->fields.datalist;
           datalist_high = HIDWORD(v39->fields.datalist);
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( Instance )
           {
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillMaster___);
             if ( Instance )
             {
               Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                             datalist,
-                                            (const MethodInfo_31FD7C4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                            (const MethodInfo_3238624 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
               if ( v40 )
               {
                 skillNameLabel = (UILabel_o *)this->fields.skillNameLabel;
@@ -330,7 +330,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                             EventRewardAssistConfirmDialog_TypeInfo->static_fields->SKILL_NAME_LABEL_MAX_WIDTH,
                             0,
                             0LL);
-                          v47 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+                          v47 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
                           System_Action___ctor(
                             v47,
                             v25,
@@ -342,7 +342,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                           skillLvLabel = this->fields.skillLvLabel;
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8382/*"LEVEL_INFO"*/, 0LL);
+                          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, 0LL);
                           v73 = v38;
                           v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73, v50, v51, v52);
                           Instance = (DataManager_o *)System_String__Format(v49, v53, 0LL);
@@ -350,7 +350,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                           {
                             UILabel__set_text(skillLvLabel, (System_String_o *)Instance, 0LL);
                             combineSkillLvLabel = this->fields.combineSkillLvLabel;
-                            v55 = LocalizationManager__Get((System_String_o *)StringLiteral_5784/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, 0LL);
+                            v55 = LocalizationManager__Get((System_String_o *)StringLiteral_5801/*"EVENT_RAID_TIME_OVER_NOTICE_"*/, 0LL);
                             v72 = datalist_high;
                             v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72, v56, v57, v58);
                             Instance = (DataManager_o *)System_String__Format(v55, v59, 0LL);
@@ -389,7 +389,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                         0,
                                         0LL);
                                       titleLabel = this->fields.titleLabel;
-                                      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_5787/*"EVENT_REWARD_ASSIST_SKILL_TITLE"*/, 0LL);
+                                      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_5804/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/, 0LL);
                                       Instance = (DataManager_o *)System_String__Format(v65, v30, 0LL);
                                       if ( titleLabel )
                                       {
@@ -404,7 +404,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                             0LL);
                                           detailMsgLabel = this->fields.detailMsgLabel;
                                           Instance = (DataManager_o *)LocalizationManager__Get(
-                                                                        (System_String_o *)StringLiteral_5785/*"EVENT_REWARD_ASSIST_SKILL_MSG"*/,
+                                                                        (System_String_o *)StringLiteral_5802/*"EVENT_RAID_TIME_OVER_TXT"*/,
                                                                         0LL);
                                           v67 = this->fields.skillNameLabel;
                                           if ( v67 )
@@ -418,21 +418,21 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                               UILabel__set_text(detailMsgLabel, (System_String_o *)Instance, 0LL);
                                               confirmMsgLabel = this->fields.confirmMsgLabel;
                                               Instance = (DataManager_o *)LocalizationManager__Get(
-                                                                            (System_String_o *)StringLiteral_5783/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/,
+                                                                            (System_String_o *)StringLiteral_5800/*"EVENT_RAID_TIME_LIMIT_TXT_"*/,
                                                                             0LL);
                                               if ( confirmMsgLabel )
                                               {
                                                 UILabel__set_text(confirmMsgLabel, (System_String_o *)Instance, 0LL);
                                                 decideLabel = this->fields.decideLabel;
                                                 Instance = (DataManager_o *)LocalizationManager__Get(
-                                                                              (System_String_o *)StringLiteral_3804/*"COMMON_CONFIRM_YES"*/,
+                                                                              (System_String_o *)StringLiteral_3807/*"COMMON_CONFIRM_RETRY"*/,
                                                                               0LL);
                                                 if ( decideLabel )
                                                 {
                                                   UILabel__set_text(decideLabel, (System_String_o *)Instance, 0LL);
                                                   cancelLabel = this->fields.cancelLabel;
                                                   Instance = (DataManager_o *)LocalizationManager__Get(
-                                                                                (System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_NO"*/,
+                                                                                (System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                 0LL);
                                                   if ( cancelLabel )
                                                   {
@@ -447,7 +447,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                                         1,
                                                         0LL);
                                                       this->fields.state = 2;
-                                                      v71 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+                                                      v71 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
                                                       System_Action___ctor(
                                                         v71,
                                                         (Il2CppObject *)this,
@@ -481,7 +481,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
       }
     }
 LABEL_46:
-    sub_1BE4D28(Instance, v27);
+    sub_1C13F80(Instance, v27);
   }
   if ( !*p_onDecide )
     goto LABEL_46;
@@ -496,12 +496,12 @@ System_String_o *__fastcall EventRewardAssistConfirmDialog__get_closeBtnPath(
         EventRewardAssistConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B61A82 & 1) == 0 )
+  if ( (byte_4BAF572 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_15848/*"Window/CancelButton"*/, method);
-    byte_4B61A82 = 1;
+    sub_1C13D24(&StringLiteral_15884/*"White space not allowed before '?', '*', or '+'."*/, method);
+    byte_4BAF572 = 1;
   }
-  return (System_String_o *)StringLiteral_15848/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15884/*"White space not allowed before '?', '*', or '+'."*/;
 }
 
 
@@ -554,12 +554,12 @@ void __fastcall EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0
   int32_t eventId; // [xsp+Ch] [xbp-44h] BYREF
 
   v5 = this;
-  if ( (byte_4B61A85 & 1) == 0 )
+  if ( (byte_4BAF575 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, method);
-    sub_1BE4ACC(&EventRewardAssistConfirmDialog_TypeInfo, v6);
-    this = (EventRewardAssistConfirmDialog___c__DisplayClass22_0_o *)sub_1BE4ACC(&int_TypeInfo, v7);
-    byte_4B61A85 = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, method);
+    sub_1C13D24(&EventRewardAssistConfirmDialog_TypeInfo, v6);
+    this = (EventRewardAssistConfirmDialog___c__DisplayClass22_0_o *)sub_1C13D24(&int_TypeInfo, v7);
+    byte_4BAF575 = 1;
   }
   _4__this = v5->fields.__4__this;
   if ( !_4__this )
@@ -588,7 +588,7 @@ void __fastcall EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0
   v16 = (Il2CppObject *)this;
   imageId = beforeAssistEnt->fields.imageId;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId, v12, v13, v14);
-  v18 = System_String__Format_62713180((System_String_o *)klass, v16, v17, 0LL);
+  v18 = System_String__Format_62982316((System_String_o *)klass, v16, v17, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   this = (EventRewardAssistConfirmDialog___c__DisplayClass22_0_o *)AtlasManager__SetEventUI(skillIcon, v18, 0LL);
@@ -607,11 +607,11 @@ void __fastcall EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0
         (afterAssistEnt = v5->fields.afterAssistEnt) == 0LL) )
   {
 LABEL_14:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   }
   v30 = (Il2CppObject *)this;
   v33 = afterAssistEnt->fields.imageId;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v26, v27, v28);
-  v32 = System_String__Format_62713180(ASSIST_SKILL_ICON, v30, v31, 0LL);
+  v32 = System_String__Format_62982316(ASSIST_SKILL_ICON, v30, v31, 0LL);
   AtlasManager__SetEventUI(combineSkillIcon, v32, 0LL);
 }

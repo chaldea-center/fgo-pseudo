@@ -15,7 +15,7 @@ void __fastcall UserOwnStone___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
     (int64_t)itemEntity,
     v7,
@@ -25,6 +25,6 @@ void __fastcall UserOwnStone___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_1BE4D28(v13, v14);
+    sub_1C13F80(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.stone;
 }

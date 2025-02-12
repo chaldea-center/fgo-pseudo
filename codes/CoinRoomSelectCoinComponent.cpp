@@ -1,9 +1,9 @@
 void __fastcall CoinRoomSelectCoinComponent___ctor(CoinRoomSelectCoinComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6A295 & 1) == 0 )
+  if ( (byte_4BB7DB7 & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseMenu_TypeInfo, method);
-    byte_4B6A295 = 1;
+    sub_1C13D24(&BaseMenu_TypeInfo, method);
+    byte_4BB7DB7 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -25,8 +25,8 @@ void __fastcall CoinRoomSelectCoinComponent__EndOpen(CoinRoomSelectCoinComponent
   coinListViewManager = this->fields.coinListViewManager;
   this->fields.state = 2;
   if ( !coinListViewManager )
-    sub_1BE4D28(0LL, method);
-  CoinRoomCoinListViewManager__SetMode_45640736(coinListViewManager, 2, v2);
+    sub_1C13F80(0LL, method);
+  CoinRoomCoinListViewManager__SetMode_45835548(coinListViewManager, 2, v2);
 }
 
 
@@ -62,23 +62,23 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
   float EFFECT_FADE_TIME; // s8
   System_Action_o *v30; // x21
 
-  if ( (byte_4B6A294 & 1) == 0 )
+  if ( (byte_4BB7DB6 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, result);
-    sub_1BE4ACC(&CoinRoomUtility_TypeInfo, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent___c__DisplayClass14_0__EndRequest_b__0__, v7);
-    sub_1BE4ACC(&CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo, v8);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v9);
-    byte_4B6A294 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, result);
+    sub_1C13D24(&CoinRoomUtility_TypeInfo, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent___c__DisplayClass14_0__EndRequest_b__0__, v7);
+    sub_1C13D24(&CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo, v8);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v9);
+    byte_4BB7DB6 = 1;
   }
-  v10 = sub_1BE4D18(CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo);
+  v10 = sub_1C13F70(CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_10;
   *(_QWORD *)(v10 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
-  v11 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22370/*"ng"*/, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
+  v11 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22421/*"newAttributes"*/, 0LL);
   if ( v11 )
     return;
   coinListViewManager = this->fields.coinListViewManager;
@@ -86,8 +86,8 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
     goto LABEL_10;
   selectedCoinDic = (int64_t)coinListViewManager->fields.selectedCoinDic;
   *(_QWORD *)(v10 + 24) = selectedCoinDic;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 24), selectedCoinDic, v19, v20, v21, v22, v23, v24);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 24), selectedCoinDic, v19, v20, v21, v22, v23, v24);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v28 = CoinRoomUtility_TypeInfo;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
   {
@@ -95,7 +95,7 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
     v28 = CoinRoomUtility_TypeInfo;
   }
   EFFECT_FADE_TIME = v28->static_fields->EFFECT_FADE_TIME;
-  v30 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(
     v30,
     (Il2CppObject *)v10,
@@ -103,7 +103,7 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
     0LL);
   if ( !Instance )
 LABEL_10:
-    sub_1BE4D28(v11, v12);
+    sub_1C13F80(v11, v12);
   CommonUI__maskFadeout((CommonUI_o *)Instance, 1, EFFECT_FADE_TIME, v30, 0LL);
 }
 
@@ -123,7 +123,7 @@ void __fastcall CoinRoomSelectCoinComponent__Init(CoinRoomSelectCoinComponent_o 
   this->fields.beforeUserCoinRoomEntity = 0LL;
   p_beforeUserCoinRoomEntity = &this->fields.beforeUserCoinRoomEntity;
   this->fields.state = 0;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.beforeUserCoinRoomEntity, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.beforeUserCoinRoomEntity, 0LL, v2, v3, v4, v5, v6, v7);
   coinListViewManager = (CoinRoomCoinListViewManager_o *)*(p_beforeUserCoinRoomEntity - 6);
   if ( !coinListViewManager
     || (CoinRoomCoinListViewManager__DestroyList(coinListViewManager, v10),
@@ -132,7 +132,7 @@ void __fastcall CoinRoomSelectCoinComponent__Init(CoinRoomSelectCoinComponent_o 
                                                                  (UnityEngine_Component_o *)coinListViewManager,
                                                                  0LL)) == 0LL )
   {
-    sub_1BE4D28(coinListViewManager, v10);
+    sub_1C13F80(coinListViewManager, v10);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)coinListViewManager, 0, 0LL);
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
@@ -166,7 +166,7 @@ void __fastcall CoinRoomSelectCoinComponent__OnClickDecide(
   const MethodInfo *v23; // x2
   int32_t key; // w21
   Il2CppObject *value; // x22
-  _BOOL8 CanStrength_45628124; // x0
+  _BOOL8 CanStrength_45822988; // x0
   __int64 v27; // x1
   CoinConfirmSliderDialog_o *confirmSliderDialog; // x21
   System_Action_o *v29; // x22
@@ -179,78 +179,78 @@ void __fastcall CoinRoomSelectCoinComponent__OnClickDecide(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v36; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v37; // [xsp+30h] [xbp-70h] BYREF
 
-  if ( (byte_4B6A292 & 1) == 0 )
+  if ( (byte_4BB7DB4 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent_OnClickDecide__, v3);
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, v4);
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent__OnClickDecide_b__12_0__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__Add__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__GetEnumerator__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo, v9);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Any_KeyValuePair_int__SelectedUserSvtCoin____, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__Dispose__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__MoveNext__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__get_Current__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_int__SelectedUserSvtCoin__get_Key__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_int__SelectedUserSvtCoin__get_Value__, v15);
-    byte_4B6A292 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent_OnClickDecide__, v3);
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, v4);
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent__OnClickDecide_b__12_0__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__GetEnumerator__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo, v9);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Any_KeyValuePair_int__SelectedUserSvtCoin____, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__Dispose__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__MoveNext__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__get_Current__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_int__SelectedUserSvtCoin__get_Key__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_int__SelectedUserSvtCoin__get_Value__, v15);
+    byte_4BB7DB4 = 1;
   }
   memset(&v37, 0, sizeof(v37));
   if ( this->fields.state == 2 )
   {
     v16 = Method_CoinRoomSelectCoinComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_CoinRoomSelectCoinComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_1BE4AE4(Method_CoinRoomSelectCoinComponent_OnClickDecide__);
-    v17 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v16, v16[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v17, 8, 0LL);
+      v16 = (_QWORD *)sub_1C13D3C(Method_CoinRoomSelectCoinComponent_OnClickDecide__);
+    v17 = (System_Reflection_MethodBase_o *)sub_1C13D08(v16, v16[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v17, 8, 0, 0LL);
     coinListViewManager = this->fields.coinListViewManager;
     if ( !coinListViewManager )
       goto LABEL_21;
     selectedCoinDic = (System_Collections_Generic_Dictionary_int__object__o *)coinListViewManager->fields.selectedCoinDic;
-    v22 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo);
+    v22 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C13F70(System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v22,
-      (const MethodInfo_324FE94 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__);
+      (const MethodInfo_32918D4 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__);
     if ( !selectedCoinDic )
       goto LABEL_21;
     System_Collections_Generic_Dictionary_int__object___GetEnumerator(
       &v36,
       selectedCoinDic,
-      (const MethodInfo_3250CA0 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__GetEnumerator__);
+      (const MethodInfo_32926E0 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__GetEnumerator__);
     v37 = v36;
     while ( System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
               &v37,
-              (const MethodInfo_33A0CDC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__MoveNext__) )
+              (const MethodInfo_33E218C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__MoveNext__) )
     {
       key = (int32_t)v37.fields._current.fields.key;
       value = v37.fields._current.fields.value;
-      CanStrength_45628124 = CoinRoomCoinIconItem__IsCanStrength_45628124(
+      CanStrength_45822988 = CoinRoomCoinIconItem__IsCanStrength_45822988(
                                (int32_t)v37.fields._current.fields.key,
                                1,
                                v23);
-      if ( CanStrength_45628124 )
+      if ( CanStrength_45822988 )
       {
         if ( !v22 )
-          sub_1BE4D28(CanStrength_45628124, v27);
+          sub_1C13F80(CanStrength_45822988, v27);
         System_Collections_Generic_Dictionary_int__object___Add(
           v22,
           key,
           value,
-          (const MethodInfo_3250868 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__Add__);
+          (const MethodInfo_32922A8 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__Add__);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
       &v37,
-      (const MethodInfo_33A0E00 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__Dispose__);
+      (const MethodInfo_33E22B0 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__SelectedUserSvtCoin__Dispose__);
     v18 = System_Linq_Enumerable__Any_KeyValuePair_int__object__(
             (System_Collections_Generic_IEnumerable_TSource__o *)v22,
-            (const MethodInfo_2F63FCC *)Method_System_Linq_Enumerable_Any_KeyValuePair_int__SelectedUserSvtCoin____);
+            (const MethodInfo_2F99C14 *)Method_System_Linq_Enumerable_Any_KeyValuePair_int__SelectedUserSvtCoin____);
     if ( v18 )
     {
       confirmSliderDialog = this->fields.confirmSliderDialog;
-      v29 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v29 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(v29, (Il2CppObject *)this, Method_CoinRoomSelectCoinComponent__OnClickDecide_b__12_0__, 0LL);
       if ( confirmSliderDialog )
       {
@@ -262,14 +262,14 @@ void __fastcall CoinRoomSelectCoinComponent__OnClickDecide(
         return;
       }
 LABEL_21:
-      sub_1BE4D28(v18, v19);
+      sub_1C13F80(v18, v19);
     }
     v31 = this->fields.coinListViewManager;
     if ( !v31 )
       goto LABEL_21;
     v32 = v31->fields.selectedCoinDic;
     confirmDialog = this->fields.confirmDialog;
-    v34 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(v34, (Il2CppObject *)this, Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, 0LL);
     if ( !confirmDialog )
       goto LABEL_21;
@@ -291,13 +291,13 @@ void __fastcall CoinRoomSelectCoinComponent__OpenSelectCoinList(
   UILabel_o *subTitle; // x20
   System_Action_o *v10; // x20
 
-  if ( (byte_4B6A291 & 1) == 0 )
+  if ( (byte_4BB7DB3 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent_EndOpen__, v3);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&StringLiteral_3676/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, v5);
-    byte_4B6A291 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent_EndOpen__, v3);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&StringLiteral_3679/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, v5);
+    byte_4BB7DB3 = 1;
   }
   coinListPanel = this->fields.coinListPanel;
   if ( !coinListPanel )
@@ -322,16 +322,16 @@ void __fastcall CoinRoomSelectCoinComponent__OpenSelectCoinList(
   coinListPanel = (UnityEngine_GameObject_o *)this->fields.coinListViewManager;
   if ( !coinListPanel )
     goto LABEL_13;
-  CoinRoomCoinListViewManager__SetMode_45640736((CoinRoomCoinListViewManager_o *)coinListPanel, 1, v8);
+  CoinRoomCoinListViewManager__SetMode_45835548((CoinRoomCoinListViewManager_o *)coinListPanel, 1, v8);
   subTitle = this->fields.subTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  coinListPanel = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, 0LL);
+  coinListPanel = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, 0LL);
   if ( !subTitle )
 LABEL_13:
-    sub_1BE4D28(coinListPanel, method);
+    sub_1C13F80(coinListPanel, method);
   UILabel__set_text(subTitle, (System_String_o *)coinListPanel, 0LL);
-  v10 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_CoinRoomSelectCoinComponent_EndOpen__, 0LL);
   BaseMenu__Open((BaseMenu_o *)this, v10, 0LL);
 }
@@ -360,21 +360,21 @@ void __fastcall CoinRoomSelectCoinComponent__RequestCoinRoomPut(
   System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__o *selectedCoinDic; // x20
   NetworkManager_ResultCallbackFunc_o *v20; // x21
 
-  if ( (byte_4B6A293 & 1) == 0 )
+  if ( (byte_4BB7DB5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent_EndRequest__, method);
-    sub_1BE4ACC(&CoinRoomUtility_TypeInfo, v3);
-    sub_1BE4ACC(&Method_NetworkManager_getRequest_CoinRoomRequest___, v4);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v5);
-    sub_1BE4ACC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    byte_4B6A293 = 1;
+    sub_1C13D24(&Method_CoinRoomSelectCoinComponent_EndRequest__, method);
+    sub_1C13D24(&CoinRoomUtility_TypeInfo, v3);
+    sub_1C13D24(&Method_NetworkManager_getRequest_CoinRoomRequest___, v4);
+    sub_1C13D24(&NetworkManager_TypeInfo, v5);
+    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    byte_4BB7DB5 = 1;
   }
   v7 = CoinRoomUtility_TypeInfo;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
   UserCoinRoomEntity = CoinRoomUtility__GetUserCoinRoomEntity((const MethodInfo *)v7);
   this->fields.beforeUserCoinRoomEntity = UserCoinRoomEntity;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.beforeUserCoinRoomEntity,
     (int64_t)UserCoinRoomEntity,
     v9,
@@ -386,12 +386,12 @@ void __fastcall CoinRoomSelectCoinComponent__RequestCoinRoomPut(
   confirmDialog = this->fields.confirmDialog;
   if ( !confirmDialog )
     goto LABEL_11;
-  CoinConfirmDialog__Close_45622560(confirmDialog, 0LL, v16);
+  CoinConfirmDialog__Close_45817404(confirmDialog, 0LL, v16);
   coinListViewManager = this->fields.coinListViewManager;
   if ( !coinListViewManager )
     goto LABEL_11;
   selectedCoinDic = coinListViewManager->fields.selectedCoinDic;
-  v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1BE4D18(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v20,
     (Il2CppObject *)this,
@@ -401,10 +401,10 @@ void __fastcall CoinRoomSelectCoinComponent__RequestCoinRoomPut(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   confirmDialog = (CoinConfirmDialog_o *)NetworkManager__getRequest_object_(
                                            v20,
-                                           (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_CoinRoomRequest___);
+                                           (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_CoinRoomRequest___);
   if ( !confirmDialog )
 LABEL_11:
-    sub_1BE4D28(confirmDialog, v15);
+    sub_1C13F80(confirmDialog, v15);
   CoinRoomRequest__BeginRequest((CoinRoomRequest_o *)confirmDialog, selectedCoinDic, 0LL);
 }
 
@@ -428,21 +428,21 @@ void __fastcall CoinRoomSelectCoinComponent___OnClickDecide_b__12_0(
   const MethodInfo *v8; // x3
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4B6A296 & 1) == 0 )
+  if ( (byte_4BB7DB8 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    this = (CoinRoomSelectCoinComponent_o *)sub_1BE4ACC(&Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, v3);
-    byte_4B6A296 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    this = (CoinRoomSelectCoinComponent_o *)sub_1C13D24(&Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, v3);
+    byte_4BB7DB8 = 1;
   }
   klass = v2[6].klass;
   if ( !klass
     || (v5 = (CoinConfirmDialog_o *)v2[7].klass,
         methodPtr = (System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__o *)klass->vtable[11].methodPtr,
-        v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
         System_Action___ctor(v7, v2, Method_CoinRoomSelectCoinComponent_RequestCoinRoomPut__, 0LL),
         !v5) )
   {
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   }
   CoinConfirmDialog__Open(v5, methodPtr, v7, v8);
 }
@@ -467,13 +467,13 @@ void __fastcall CoinRoomSelectCoinComponent___c__DisplayClass14_0___EndRequest_b
   CommonUI_o *v6; // x19
 
   v3 = this;
-  if ( (byte_4B6A297 & 1) == 0 )
+  if ( (byte_4BB7DB9 & 1) == 0 )
   {
-    sub_1BE4ACC(&CoinRoomUtility_TypeInfo, method);
-    this = (CoinRoomSelectCoinComponent___c__DisplayClass14_0_o *)sub_1BE4ACC(
+    sub_1C13D24(&CoinRoomUtility_TypeInfo, method);
+    this = (CoinRoomSelectCoinComponent___c__DisplayClass14_0_o *)sub_1C13D24(
                                                                     &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                                     v4);
-    byte_4B6A297 = 1;
+    byte_4BB7DB9 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -486,12 +486,12 @@ void __fastcall CoinRoomSelectCoinComponent___c__DisplayClass14_0___EndRequest_b
     _4__this->fields.beforeUserCoinRoomEntity,
     v3->fields.selectedValue,
     v2);
-  this = (CoinRoomSelectCoinComponent___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (CoinRoomSelectCoinComponent___c__DisplayClass14_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v6 = (CommonUI_o *)this;
   if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
   if ( !v6 )
 LABEL_9:
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   CommonUI__maskFadein(v6, CoinRoomUtility_TypeInfo->static_fields->EFFECT_FADE_TIME, 0LL, 0LL);
 }

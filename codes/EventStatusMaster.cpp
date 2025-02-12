@@ -1,14 +1,14 @@
 void __fastcall EventStatusMaster___ctor(EventStatusMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66D25 & 1) == 0 )
+  if ( (byte_4BB483C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__, method);
-    byte_4B66D25 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__, method);
+    byte_4BB483C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     262,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ EventStatusEntity_o *__fastcall EventStatusMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B66D23 & 1) == 0 )
+  if ( (byte_4BB483A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__, *(_QWORD *)&eventId);
-    byte_4B66D23 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__, *(_QWORD *)&eventId);
+    byte_4BB483A = 1;
   }
   PK = (Il2CppObject *)EventStatusEntity__CreatePK(eventId, statusId, *(const MethodInfo **)&statusId);
   return (EventStatusEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_31FDB1C *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
+                                  (const MethodInfo_323D0DC *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall EventStatusMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B66D24 & 1) == 0 )
+  if ( (byte_4BB483B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__, entity);
-    byte_4B66D24 = 1;
+    sub_1C13D24(&Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__, entity);
+    byte_4BB483B = 1;
   }
   PK = (Il2CppObject *)EventStatusEntity__CreatePK(eventId, statusId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_EventStatusMaster__EventStatusEntity__string__TryGetEntity__);
 }
 
 
@@ -68,39 +68,36 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x1
   DataManager_o *Instance; // x0
-  __int64 v11; // x1
+  __int64 v10; // x1
   Il2CppObject *MasterData_object; // x21
   EventStatusEntity_o *result; // x0
-  EventStatusEntity_o *v14; // x21
+  EventStatusEntity_o *v13; // x21
   int32_t Count; // w0
-  int32_t v16; // w22
-  int32_t v17; // w23
-  __int64 methodPtr_low; // x10
+  int32_t v15; // w22
+  int32_t v16; // w23
 
-  if ( (byte_4B66D26 & 1) == 0 )
+  if ( (byte_4BB483D & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
-    sub_1BE4ACC(&EventStatusEntity_TypeInfo, v7);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v8);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4B66D26 = 1;
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventStatusEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventStatusEntity__get_Item__, v5);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
+    sub_1C13D24(&NetworkManager_TypeInfo, v7);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4BB483D = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_24;
+    goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B61717 )
+  if ( !byte_4BAF1E5 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v11);
-    byte_4B61717 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, v10);
+    byte_4BAF1E5 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -109,7 +106,7 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
   }
   if ( !MasterData_object )
-    goto LABEL_24;
+    goto LABEL_22;
   result = (EventStatusEntity_o *)UserEventMaster__GetEntity(
                                     (UserEventMaster_o *)MasterData_object,
                                     *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -117,17 +114,17 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
                                     0LL);
   if ( result )
   {
-    v14 = result;
+    v13 = result;
     Instance = (DataManager_o *)this->fields.list;
     if ( !Instance )
-      goto LABEL_24;
+      goto LABEL_22;
     Count = System_Collections_ObjectModel_Collection_object___get_Count(
               (System_Collections_ObjectModel_Collection_T__o *)Instance,
-              (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+              (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventStatusEntity__get_Count__);
     if ( Count >= 1 )
     {
-      v16 = Count;
-      v17 = 0;
+      v15 = Count;
+      v16 = 0;
       while ( 1 )
       {
         Instance = (DataManager_o *)this->fields.list;
@@ -135,24 +132,15 @@ EventStatusEntity_o *__fastcall EventStatusMaster__getNowEntity(
           break;
         result = (EventStatusEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                           (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                                          v17,
-                                          (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-        if ( result )
-        {
-          methodPtr_low = LOBYTE(EventStatusEntity_TypeInfo->vtable._0_Equals.methodPtr);
-          if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-            && (EventStatusEntity_c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] == EventStatusEntity_TypeInfo
-            && result->fields.eventId == eventId
-            && result->fields.statusId == LODWORD(v14[1].klass) )
-          {
-            return result;
-          }
-        }
-        if ( v16 == ++v17 )
+                                          v16,
+                                          (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventStatusEntity__get_Item__);
+        if ( result && result->fields.eventId == eventId && result->fields.statusId == LODWORD(v13[1].klass) )
+          return result;
+        if ( v15 == ++v16 )
           return 0LL;
       }
-LABEL_24:
-      sub_1BE4D28(Instance, v11);
+LABEL_22:
+      sub_1C13F80(Instance, v10);
     }
     return 0LL;
   }

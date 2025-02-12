@@ -29,11 +29,11 @@ void __fastcall EventDropItemUpValInfo___ctor(
   PartyListViewItem_o *v29; // x7
   int64_t baseFuncId; // x2
 
-  if ( (byte_4B6674C & 1) == 0 )
+  if ( (byte_4BB4278 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4B6674C = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BB4278 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -42,7 +42,7 @@ void __fastcall EventDropItemUpValInfo___ctor(
   this->fields.member = member;
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.funcEntity, (int64_t)funcEntity, v12, v13, v14, v15, v16, v17);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.funcEntity, (int64_t)funcEntity, v12, v13, v14, v15, v16, v17);
   v19 = this->fields.funcEntity;
   if ( !v19 )
     goto LABEL_24;
@@ -56,12 +56,12 @@ void __fastcall EventDropItemUpValInfo___ctor(
     targetType = v19->fields.targetType;
   }
   this->fields.targetType = targetType;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   v22 = this->fields.funcEntity;
   if ( !v22 )
     goto LABEL_24;
@@ -102,7 +102,7 @@ LABEL_22:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.baseFuncGroupEntity,
           (int64_t)funcGroupEntity,
           baseFuncId,
@@ -117,7 +117,7 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_1BE4D28(Instance, funcGroupEntity);
+    sub_1C13F80(Instance, funcGroupEntity);
   }
 LABEL_23:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;
@@ -127,7 +127,7 @@ LABEL_23:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventDropItemUpValInfo___ctor_39805328(
+void __fastcall EventDropItemUpValInfo___ctor_40047576(
         EventDropItemUpValInfo_o *this,
         int32_t member,
         EventDropUpValInfo_o *dropInfo,
@@ -170,11 +170,11 @@ void __fastcall EventDropItemUpValInfo___ctor_39805328(
   PartyListViewItem_o *v42; // x7
   int64_t baseFuncId; // x2
 
-  if ( (byte_4B6674D & 1) == 0 )
+  if ( (byte_4BB4279 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4B6674D = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_FunctionGroupMaster___, *(_QWORD *)&member);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BB4279 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dropInfo )
@@ -184,7 +184,7 @@ void __fastcall EventDropItemUpValInfo___ctor_39805328(
   funcEntity = dropInfo->fields.funcEntity;
   this->fields.funcEntity = funcEntity;
   p_funcEntity = &this->fields.funcEntity;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.funcEntity, (int64_t)funcEntity, v12, v13, v14, v15, v16, v17);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.funcEntity, (int64_t)funcEntity, v12, v13, v14, v15, v16, v17);
   v26 = this->fields.funcEntity;
   if ( !v26 )
     goto LABEL_18;
@@ -192,13 +192,13 @@ void __fastcall EventDropItemUpValInfo___ctor_39805328(
   funcType = v26->fields.funcType;
   this->fields.itemEntity = itemEntity;
   *(_QWORD *)&this->fields.baseFuncType = funcType;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.itemEntity, (int64_t)itemEntity, v20, v21, v22, v23, v24, v25);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.itemEntity, (int64_t)itemEntity, v20, v21, v22, v23, v24, v25);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_FunctionGroupMaster___);
   if ( !*p_funcEntity )
     goto LABEL_18;
   v28 = (FunctionGroupMaster_o *)Instance;
@@ -211,7 +211,7 @@ void __fastcall EventDropItemUpValInfo___ctor_39805328(
              0LL);
   this->fields.funcGroupEntity = Entity;
   p_funcGroupEntity = &this->fields.funcGroupEntity;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.funcGroupEntity,
     (int64_t)Entity,
     v31,
@@ -256,7 +256,7 @@ LABEL_16:
       else
       {
         this->fields.baseFuncGroupEntity = funcGroupEntity;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.baseFuncGroupEntity,
           (int64_t)funcGroupEntity,
           baseFuncId,
@@ -271,7 +271,7 @@ LABEL_16:
       }
     }
 LABEL_18:
-    sub_1BE4D28(Instance, funcGroupEntity);
+    sub_1C13F80(Instance, funcGroupEntity);
   }
 LABEL_17:
   this->fields.isEquipUp = dropInfo->fields.isEquipUp;

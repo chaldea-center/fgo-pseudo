@@ -12,10 +12,10 @@ void __fastcall WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(
   __int64 v4; // x1
   FSOffset_o *v5; // x0
 
-  if ( (byte_4B64AB0 & 1) == 0 )
+  if ( (byte_4BB25C1 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B64AB0 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB25C1 = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,7 +24,7 @@ void __fastcall WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(
   {
     v5 = this->fields.fsOffset;
     if ( !v5 || (FSOffset__AddOffsetX(v5, 0LL), (v5 = this->fields.fsOffset) == 0LL) )
-      sub_1BE4D28(v5, v4);
+      sub_1C13F80(v5, v4);
     FSOffset__AddBottomY(v5, 0LL);
   }
 }
@@ -38,7 +38,7 @@ void __fastcall WarBoardPartyBuffHelpButton__Awake(WarBoardPartyBuffHelpButton_o
   this->fields.isEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -50,16 +50,16 @@ void __fastcall WarBoardPartyBuffHelpButton__OnClickButton(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4B64AAF & 1) == 0 )
+  if ( (byte_4BB25C0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_WarBoardPartyBuffHelpButton_OnClickButton__, method);
-    byte_4B64AAF = 1;
+    sub_1C13D24(&Method_WarBoardPartyBuffHelpButton_OnClickButton__, method);
+    byte_4BB25C0 = 1;
   }
   v3 = Method_WarBoardPartyBuffHelpButton_OnClickButton__;
   if ( (*((_BYTE *)Method_WarBoardPartyBuffHelpButton_OnClickButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BE4AE4(Method_WarBoardPartyBuffHelpButton_OnClickButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    v3 = (_QWORD *)sub_1C13D3C(Method_WarBoardPartyBuffHelpButton_OnClickButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   ActionExtensions__Call(this->fields.onButtonClickCallback, 0LL);
 }
 
@@ -76,7 +76,7 @@ void __fastcall WarBoardPartyBuffHelpButton__SetActive(
   isEnable = this->fields.isEnable;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, isEnable && flag, 0LL);
 }
 
@@ -93,7 +93,7 @@ void __fastcall WarBoardPartyBuffHelpButton__SetClickButtonCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.onButtonClickCallback = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.onButtonClickCallback,
     (int64_t)callback,
     (int64_t)method,
@@ -118,7 +118,7 @@ void __fastcall WarBoardPartyBuffHelpButton__SetEnable(
   this->fields.isEnable = flag;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, v3, 0LL);
 }
 
@@ -133,7 +133,7 @@ void __fastcall WarBoardPartyBuffHelpButton__SetUpPositionForConfigurationMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForConfigurationMode, 0LL);
   WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(this, v5);
 }
@@ -149,7 +149,7 @@ void __fastcall WarBoardPartyBuffHelpButton__SetUpPositionForPlayMode(
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   UnityEngine_Transform__set_localPosition(transform, this->fields.positionForPlayMode, 0LL);
   WarBoardPartyBuffHelpButton__ApplyFsOffsetAdjustment(this, v5);
 }

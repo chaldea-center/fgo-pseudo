@@ -71,66 +71,66 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   FollowerInfo_o *v71; // x6
   PartyListViewItem_o *v72; // x7
 
-  if ( (byte_4B67305 & 1) == 0 )
+  if ( (byte_4BB4E30 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    sub_1BE4ACC(&string___TypeInfo, v3);
-    sub_1BE4ACC(&StringLiteral_18226/*"class_b_"*/, v4);
-    sub_1BE4ACC(&StringLiteral_18230/*"class_g_"*/, v5);
-    sub_1BE4ACC(&StringLiteral_18231/*"class_n_"*/, v6);
-    sub_1BE4ACC(&StringLiteral_18232/*"class_s_"*/, v7);
-    byte_4B67305 = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    sub_1C13D24(&string___TypeInfo, v3);
+    sub_1C13D24(&StringLiteral_18269/*"ckIndvCountBelow"*/, v4);
+    sub_1C13D24(&StringLiteral_18273/*"class"*/, v5);
+    sub_1C13D24(&StringLiteral_18274/*"class "*/, v6);
+    sub_1C13D24(&StringLiteral_18275/*"class1_12"*/, v7);
+    byte_4BB4E30 = 1;
   }
-  v8 = sub_1BE4B74(string___TypeInfo, 8LL);
+  v8 = sub_1C13DCC(string___TypeInfo, 8LL);
   if ( !v8 )
-    sub_1BE4D28(0LL, v9);
+    sub_1C13F80(0LL, v9);
   v16 = v8;
   if ( !*(_DWORD *)(v8 + 24) )
     goto LABEL_13;
-  v17 = StringLiteral_18231/*"class_n_"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_18231/*"class_n_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v8 + 32), v17, v10, v11, v12, v13, v14, v15);
+  v17 = StringLiteral_18274/*"class "*/;
+  *(_QWORD *)(v8 + 32) = StringLiteral_18274/*"class "*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 32), v17, v10, v11, v12, v13, v14, v15);
   if ( *(_DWORD *)(v16 + 24) <= 1u )
     goto LABEL_13;
-  v24 = StringLiteral_18226/*"class_b_"*/;
-  *(_QWORD *)(v16 + 40) = StringLiteral_18226/*"class_b_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_18269/*"ckIndvCountBelow"*/;
+  *(_QWORD *)(v16 + 40) = StringLiteral_18269/*"ckIndvCountBelow"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
   if ( *(_DWORD *)(v16 + 24) <= 2u )
     goto LABEL_13;
-  v31 = StringLiteral_18232/*"class_s_"*/;
-  *(_QWORD *)(v16 + 48) = StringLiteral_18232/*"class_s_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 48), v31, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_18275/*"class1_12"*/;
+  *(_QWORD *)(v16 + 48) = StringLiteral_18275/*"class1_12"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 48), v31, v25, v26, v27, v28, v29, v30);
   if ( *(_DWORD *)(v16 + 24) <= 3u )
     goto LABEL_13;
-  v38 = StringLiteral_18230/*"class_g_"*/;
-  *(_QWORD *)(v16 + 56) = StringLiteral_18230/*"class_g_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 56), v38, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_18273/*"class"*/;
+  *(_QWORD *)(v16 + 56) = StringLiteral_18273/*"class"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 56), v38, v32, v33, v34, v35, v36, v37);
   if ( *(_DWORD *)(v16 + 24) <= 4u )
     goto LABEL_13;
-  v45 = StringLiteral_18230/*"class_g_"*/;
-  *(_QWORD *)(v16 + 64) = StringLiteral_18230/*"class_g_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 64), v45, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_18273/*"class"*/;
+  *(_QWORD *)(v16 + 64) = StringLiteral_18273/*"class"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 64), v45, v39, v40, v41, v42, v43, v44);
   if ( *(_DWORD *)(v16 + 24) <= 5u
-    || (v52 = StringLiteral_18230/*"class_g_"*/,
-        *(_QWORD *)(v16 + 72) = StringLiteral_18230/*"class_g_"*/,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 72), v52, v46, v47, v48, v49, v50, v51),
+    || (v52 = StringLiteral_18273/*"class"*/,
+        *(_QWORD *)(v16 + 72) = StringLiteral_18273/*"class"*/,
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 72), v52, v46, v47, v48, v49, v50, v51),
         *(_DWORD *)(v16 + 24) <= 6u)
-    || (v59 = StringLiteral_18231/*"class_n_"*/,
-        *(_QWORD *)(v16 + 80) = StringLiteral_18231/*"class_n_"*/,
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 80), v59, v53, v54, v55, v56, v57, v58),
+    || (v59 = StringLiteral_18274/*"class "*/,
+        *(_QWORD *)(v16 + 80) = StringLiteral_18274/*"class "*/,
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 80), v59, v53, v54, v55, v56, v57, v58),
         *(_DWORD *)(v16 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1BE4D30(v8, v9);
+    sub_1C13F88(v8, v9);
   }
-  v66 = StringLiteral_18231/*"class_n_"*/;
-  *(_QWORD *)(v16 + 88) = StringLiteral_18231/*"class_n_"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v16 + 88), v66, v60, v61, v62, v63, v64, v65);
+  v66 = StringLiteral_18274/*"class "*/;
+  *(_QWORD *)(v16 + 88) = StringLiteral_18274/*"class "*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 88), v66, v60, v61, v62, v63, v64, v65);
   this->fields.frameCardFileList = (struct System_String_array *)v16;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, v16, v67, v68, v69, v70, v71, v72);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, v16, v67, v68, v69, v70, v71, v72);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -140,15 +140,15 @@ System_String_o *__fastcall ServantExceedEntity__CreatePK(
         int32_t exceedCount,
         const MethodInfo *method)
 {
-  if ( (byte_4B67304 & 1) == 0 )
+  if ( (byte_4BB4E2F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
-    byte_4B67304 = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
+    byte_4BB4E2F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F8D690 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -171,9 +171,9 @@ System_String_o *__fastcall ServantExceedEntity__getFrameCardPrefix(
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= frameCardFileList->max_length )
-    sub_1BE4D30(this, method);
+    sub_1C13F88(this, method);
   return frameCardFileList->m_Items[frameType];
 }

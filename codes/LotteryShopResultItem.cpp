@@ -21,15 +21,15 @@ void __fastcall LotteryShopResultItem__EndShowServantEquipStatusDialog(
   Il2CppObject *v11; // x21
   struct LotteryShopResultItem___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4B61AE0 & 1) == 0 )
+  if ( (byte_4BAF5D0 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1BE4ACC(&Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__, v4);
-    sub_1BE4ACC(&LotteryShopResultItem___c_TypeInfo, v5);
-    byte_4B61AE0 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1C13D24(&Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__, v4);
+    sub_1C13D24(&LotteryShopResultItem___c_TypeInfo, v5);
+    byte_4BAF5D0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = LotteryShopResultItem___c_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !LotteryShopResultItem___c_TypeInfo->_2.cctor_finished )
@@ -46,14 +46,14 @@ void __fastcall LotteryShopResultItem__EndShowServantEquipStatusDialog(
       v8 = LotteryShopResultItem___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__5_0 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    _9__5_0 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(_9__5_0, v11, Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__, 0LL);
     static_fields = LotteryShopResultItem___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = _9__5_0;
-    Instance = (Il2CppObject *)sub_1BE4A70(&static_fields->__9__5_0);
+    Instance = (Il2CppObject *)sub_1C13CC8(&static_fields->__9__5_0);
   }
   if ( !v9 )
-    sub_1BE4D28(Instance, v7);
+    sub_1C13F80(Instance, v7);
   CommonUI__CloseServantEquipStatusDialog(v9, _9__5_0, 0LL);
 }
 
@@ -74,34 +74,34 @@ void __fastcall LotteryShopResultItem__OnClickDetail(LotteryShopResultItem_o *th
   __int64 v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4B61ADF & 1) == 0 )
+  if ( (byte_4BAF5CF & 1) == 0 )
   {
-    sub_1BE4ACC(&ServantStatusDialog_EndDelegate_TypeInfo, method);
-    sub_1BE4ACC(&EquipTargetInfo_TypeInfo, v3);
-    sub_1BE4ACC(&Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__, v4);
-    sub_1BE4ACC(&Method_LotteryShopResultItem_OnClickDetail__, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4B61ADF = 1;
+    sub_1C13D24(&ServantStatusDialog_EndDelegate_TypeInfo, method);
+    sub_1C13D24(&EquipTargetInfo_TypeInfo, v3);
+    sub_1C13D24(&Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__, v4);
+    sub_1C13D24(&Method_LotteryShopResultItem_OnClickDetail__, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4BAF5CF = 1;
   }
   v7 = Method_LotteryShopResultItem_OnClickDetail__;
   if ( (*((_BYTE *)Method_LotteryShopResultItem_OnClickDetail__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1BE4AE4(Method_LotteryShopResultItem_OnClickDetail__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v7, v7[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = (_QWORD *)sub_1C13D3C(Method_LotteryShopResultItem_OnClickDetail__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C13D08(v7, v7[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   svtId = this->fields.svtId;
   v11 = (CommonUI_o *)Instance;
-  v12 = (EquipTargetInfo_o *)sub_1BE4D18(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_39799056(v12, svtId, 0, 1, 0, 0LL);
-  v13 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo);
+  v12 = (EquipTargetInfo_o *)sub_1C13F70(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_40041296(v12, svtId, 0, 1, 0, 0LL);
+  v13 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(
     v13,
     (Il2CppObject *)this,
     Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__,
     0LL);
   if ( !v11 )
-    sub_1BE4D28(v14, v15);
-  CommonUI__OpenServantEquipStatusDialog_30889236(v11, 11, v12, v13, 0LL, 0LL);
+    sub_1C13F80(v14, v15);
+  CommonUI__OpenServantEquipStatusDialog_31086092(v11, 11, v12, v13, 0LL, 0LL);
 }
 
 
@@ -117,8 +117,8 @@ void __fastcall LotteryShopResultItem__Set(
   this->fields.svtId = svtId;
   this->fields.isNew = !isGet;
   if ( !iconComp )
-    sub_1BE4D28(0LL, svtId);
-  ServantFaceIconComponent__Set_39122588(iconComp, svtId, 0, 0, 0, 0LL, 0LL, 2, !isGet, 0, 0LL, 0, 0, 0, 0, 0LL);
+    sub_1C13F80(0LL, svtId);
+  ServantFaceIconComponent__Set_39361048(iconComp, svtId, 0, 0, 0, 0LL, 0LL, 2, !isGet, 0, 0LL, 0, 0, 0, 0, 0LL, 0LL);
 }
 
 
@@ -127,15 +127,15 @@ void __fastcall LotteryShopResultItem___c___cctor(const MethodInfo *method)
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4B61AE1 & 1) == 0 )
+  if ( (byte_4BAF5D1 & 1) == 0 )
   {
-    sub_1BE4ACC(&LotteryShopResultItem___c_TypeInfo, v1);
-    byte_4B61AE1 = 1;
+    sub_1C13D24(&LotteryShopResultItem___c_TypeInfo, v1);
+    byte_4BAF5D1 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(LotteryShopResultItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(LotteryShopResultItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   LotteryShopResultItem___c_TypeInfo->static_fields->__9 = (struct LotteryShopResultItem___c_o *)v2;
-  sub_1BE4A70(LotteryShopResultItem___c_TypeInfo->static_fields);
+  sub_1C13CC8(LotteryShopResultItem___c_TypeInfo->static_fields);
 }
 
 

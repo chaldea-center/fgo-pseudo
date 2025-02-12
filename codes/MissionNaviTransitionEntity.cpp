@@ -1,13 +1,13 @@
 void __fastcall MissionNaviTransitionEntity___ctor(MissionNaviTransitionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66F6A & 1) == 0 )
+  if ( (byte_4BB4A98 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B66F6A = 1;
+    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BB4A98 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -40,16 +40,16 @@ bool __fastcall MissionNaviTransitionEntity__TryGetChallengeIconName(
   PartyListViewItem_o *v18; // x7
   System_String_o *iconName; // x1
 
-  if ( (byte_4B66F69 & 1) == 0 )
+  if ( (byte_4BB4A97 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_21563/*"mainquest"*/, challengeIconName);
-    sub_1BE4ACC(&StringLiteral_116/*" "*/, v10);
-    sub_1BE4ACC(&StringLiteral_8648/*"MAIN_SCENARIO"*/, v11);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v12);
-    byte_4B66F69 = 1;
+    sub_1C13D24(&StringLiteral_21612/*"main"*/, challengeIconName);
+    sub_1C13D24(&StringLiteral_117/*" "*/, v10);
+    sub_1C13D24(&StringLiteral_8672/*"MAIN_MENU_BAR_SELECT_PARTY"*/, v11);
+    sub_1C13D24(&StringLiteral_1/*""*/, v12);
+    byte_4BB4A97 = 1;
   }
   *challengeIconName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)challengeIconName,
     (int64_t)StringLiteral_1/*""*/,
     (int64_t)method,
@@ -59,22 +59,22 @@ bool __fastcall MissionNaviTransitionEntity__TryGetChallengeIconName(
     v6,
     v7);
   if ( this->fields.missionTransitionType == 2
-    && System_String__op_Equality(this->fields.transitionParam, (System_String_o *)StringLiteral_8648/*"MAIN_SCENARIO"*/, 0LL) )
+    && System_String__op_Equality(this->fields.transitionParam, (System_String_o *)StringLiteral_8672/*"MAIN_MENU_BAR_SELECT_PARTY"*/, 0LL) )
   {
-    *challengeIconName = (System_String_o *)StringLiteral_21563/*"mainquest"*/;
-    iconName = (System_String_o *)StringLiteral_21563/*"mainquest"*/;
+    *challengeIconName = (System_String_o *)StringLiteral_21612/*"main"*/;
+    iconName = (System_String_o *)StringLiteral_21612/*"main"*/;
   }
   else
   {
     if ( System_String__IsNullOrEmpty(this->fields.iconName, 0LL)
-      || System_String__op_Equality(this->fields.iconName, (System_String_o *)StringLiteral_116/*" "*/, 0LL) )
+      || System_String__op_Equality(this->fields.iconName, (System_String_o *)StringLiteral_117/*" "*/, 0LL) )
     {
       return 0;
     }
     iconName = this->fields.iconName;
     *challengeIconName = iconName;
   }
-  sub_1BE4A70((PartyOrganizationUtility_o *)challengeIconName, (int64_t)iconName, v13, v14, v15, v16, v17, v18);
+  sub_1C13CC8((PartyOrganizationUtility_o *)challengeIconName, (int64_t)iconName, v13, v14, v15, v16, v17, v18);
   return 1;
 }
 
@@ -98,14 +98,14 @@ bool __fastcall MissionNaviTransitionEntity__TryGetChallengeNaviName(
   PartyListViewItem_o *v16; // x7
   System_String_o *title; // x1
 
-  if ( (byte_4B66F68 & 1) == 0 )
+  if ( (byte_4BB4A96 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_116/*" "*/, challengeNaviName);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v10);
-    byte_4B66F68 = 1;
+    sub_1C13D24(&StringLiteral_117/*" "*/, challengeNaviName);
+    sub_1C13D24(&StringLiteral_1/*""*/, v10);
+    byte_4BB4A96 = 1;
   }
   *challengeNaviName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)challengeNaviName,
     (int64_t)StringLiteral_1/*""*/,
     (int64_t)method,
@@ -115,12 +115,12 @@ bool __fastcall MissionNaviTransitionEntity__TryGetChallengeNaviName(
     v6,
     v7);
   if ( System_String__IsNullOrEmpty(this->fields.title, 0LL)
-    || System_String__op_Equality(this->fields.title, (System_String_o *)StringLiteral_116/*" "*/, 0LL) )
+    || System_String__op_Equality(this->fields.title, (System_String_o *)StringLiteral_117/*" "*/, 0LL) )
   {
     return 0;
   }
   title = this->fields.title;
   *challengeNaviName = title;
-  sub_1BE4A70((PartyOrganizationUtility_o *)challengeNaviName, (int64_t)title, v11, v12, v13, v14, v15, v16);
+  sub_1C13CC8((PartyOrganizationUtility_o *)challengeNaviName, (int64_t)title, v11, v12, v13, v14, v15, v16);
   return 1;
 }

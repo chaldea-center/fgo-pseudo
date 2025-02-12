@@ -16,7 +16,7 @@ void __fastcall FieldBuffDeleteProcess__Init(
   PartyListViewItem_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)fieldEnvData, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)fieldEnvData, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -40,5 +40,5 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
   PartyListViewItem_o *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

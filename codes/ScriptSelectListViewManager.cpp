@@ -36,14 +36,14 @@ void __fastcall ScriptSelectListViewManager__CreateList(
   __int64 size; // x10
   Il2CppClass **v32; // x8
 
-  if ( (byte_4B688C8 & 1) == 0 )
+  if ( (byte_4BB6402 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__Add__, selectMessageList);
-    sub_1BE4ACC(&ScriptSelectListViewItem_TypeInfo, v12);
-    byte_4B688C8 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_ListViewItem__Add__, selectMessageList);
+    sub_1C13D24(&ScriptSelectListViewItem_TypeInfo, v12);
+    byte_4BB6402 = 1;
   }
   this->fields.clickFunc = callbackFunc;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.clickFunc,
     (int64_t)callbackFunc,
     (int64_t)fontType,
@@ -63,9 +63,9 @@ void __fastcall ScriptSelectListViewManager__CreateList(
     while ( 1 )
     {
       if ( v18 >= selectMessageList->max_length )
-        sub_1BE4D30(v16, v17);
+        sub_1C13F88(v16, v17);
       v20 = selectMessageList->m_Items[v18];
-      v21 = (ScriptSelectListViewItem_o *)sub_1BE4D18(ScriptSelectListViewItem_TypeInfo);
+      v21 = (ScriptSelectListViewItem_o *)sub_1C13F70(ScriptSelectListViewItem_TypeInfo);
       ScriptSelectListViewItem___ctor(v21, v18, v20, fontType, v22);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList )
@@ -81,20 +81,20 @@ void __fastcall ScriptSelectListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v21,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
       }
       else
       {
         v32 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v32[4] = (Il2CppClass *)v21;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v21, v23, v24, v25, v26, v27, v28);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v21, v23, v24, v25, v26, v27, v28);
       }
       if ( v19 == ++v18 )
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1BE4D28(itemList, v14);
+    sub_1C13F80(itemList, v14);
   }
 LABEL_13:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -132,14 +132,14 @@ void __fastcall ScriptSelectListViewManager__CreateListHidden(
   __int64 size; // x10
   Il2CppClass **v32; // x8
 
-  if ( (byte_4B688C9 & 1) == 0 )
+  if ( (byte_4BB6403 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__Add__, selectMessageList);
-    sub_1BE4ACC(&ScriptSelectListViewItem_TypeInfo, v13);
-    byte_4B688C9 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_ListViewItem__Add__, selectMessageList);
+    sub_1C13D24(&ScriptSelectListViewItem_TypeInfo, v13);
+    byte_4BB6403 = 1;
   }
   this->fields.clickFunc = callbackFunc;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.clickFunc,
     (int64_t)callbackFunc,
     (int64_t)itemIds,
@@ -161,10 +161,10 @@ void __fastcall ScriptSelectListViewManager__CreateListHidden(
       while ( 1 )
       {
         if ( v17 >= itemIds->max_length || v17 >= selectMessageList->max_length )
-          sub_1BE4D30(itemList, v15);
+          sub_1C13F88(itemList, v15);
         v19 = itemIds->m_Items[v17 + 1];
         v20 = selectMessageList->m_Items[v17];
-        v21 = (ScriptSelectListViewItem_o *)sub_1BE4D18(ScriptSelectListViewItem_TypeInfo);
+        v21 = (ScriptSelectListViewItem_o *)sub_1C13F70(ScriptSelectListViewItem_TypeInfo);
         ScriptSelectListViewItem___ctor(v21, v19, v20, fontType, v22);
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         if ( !itemList )
@@ -180,21 +180,21 @@ void __fastcall ScriptSelectListViewManager__CreateListHidden(
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v21,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + size;
           itemList->fields._size = size + 1;
           v32[4] = (Il2CppClass *)v21;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v21, v23, v24, v25, v26, v27, v28);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v21, v23, v24, v25, v26, v27, v28);
         }
         if ( v18 == ++v17 )
           goto LABEL_15;
       }
     }
 LABEL_17:
-    sub_1BE4D28(itemList, v15);
+    sub_1C13F80(itemList, v15);
   }
 LABEL_15:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -211,7 +211,7 @@ void __fastcall ScriptSelectListViewManager__DestroyList(ScriptSelectListViewMan
   PartyListViewItem_o *v7; // x7
 
   this->fields.clickFunc = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.clickFunc, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.clickFunc, 0LL, v2, v3, v4, v5, v6, v7);
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
 }
 
@@ -226,11 +226,11 @@ ScriptSelectListViewItem_o *__fastcall ScriptSelectListViewManager__GetItem(
   ScriptSelectListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4B688CA & 1) == 0 )
+  if ( (byte_4BB6404 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
-    sub_1BE4ACC(&ScriptSelectListViewItem_TypeInfo, v5);
-    byte_4B688CA = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
+    sub_1C13D24(&ScriptSelectListViewItem_TypeInfo, v5);
+    byte_4BB6404 = 1;
   }
   result = (ScriptSelectListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -238,7 +238,7 @@ ScriptSelectListViewItem_o *__fastcall ScriptSelectListViewManager__GetItem(
     result = (ScriptSelectListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)result,
                                              index,
-                                             (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                             (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       methodPtr_low = LOBYTE(ScriptSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -269,7 +269,7 @@ void __fastcall ScriptSelectListViewManager__OnClickListView(
   if ( clickFunc )
   {
     if ( !obj )
-      sub_1BE4D28(this, 0LL);
+      sub_1C13F80(this, 0LL);
     Index = ListViewObject__get_Index(obj, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickFunc->fields.m_target)(
       clickFunc->fields.original_method_info,
@@ -295,10 +295,10 @@ void __fastcall ScriptSelectListViewManager__OnMoveEnd(ScriptSelectListViewManag
   struct UIScrollView_o *v14; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4B688CF & 1) == 0 )
+  if ( (byte_4BB6409 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B688CF = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB6409 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -315,7 +315,7 @@ void __fastcall ScriptSelectListViewManager__OnMoveEnd(ScriptSelectListViewManag
       {
         v14 = this->fields.scrollView;
         if ( !v14 )
-          sub_1BE4D28(0LL, v7);
+          sub_1C13F80(0LL, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v14->klass->vtable._8_UpdateScrollbars.method)(
           v14,
           1LL,
@@ -325,7 +325,7 @@ void __fastcall ScriptSelectListViewManager__OnMoveEnd(ScriptSelectListViewManag
       if ( callbackFunc )
       {
         this->fields.callbackFunc = 0LL;
-        sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.callbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
+        sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.callbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc->fields.m_target)(
           callbackFunc->fields.original_method_info,
           *(_QWORD *)&callbackFunc->fields.extra_arg);
@@ -359,31 +359,31 @@ void __fastcall ScriptSelectListViewManager__RequestListObject(
   const MethodInfo *v21; // x3
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B688CD & 1) == 0 )
+  if ( (byte_4BB6407 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v11);
-    sub_1BE4ACC(&Method_ScriptSelectListViewManager_OnMoveEnd__, v12);
-    sub_1BE4ACC(&StringLiteral_10092/*"OnMoveEnd"*/, v13);
-    byte_4B688CD = 1;
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v11);
+    sub_1C13D24(&Method_ScriptSelectListViewManager_OnMoveEnd__, v12);
+    sub_1C13D24(&StringLiteral_10117/*"OnMouseDrag"*/, v13);
+    byte_4BB6407 = 1;
   }
   memset(&v22, 0, sizeof(v22));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptSelectListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1BE4D28(0LL, v15);
+    sub_1C13F80(0LL, v15);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10092/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10117/*"OnMouseDrag"*/,
       delay,
       0LL);
   }
@@ -393,27 +393,27 @@ void __fastcall ScriptSelectListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v22,
       ObjectList,
-      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
+      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v22,
-              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
+              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
     {
       current = v22.fields._current;
-      v18 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v18 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(v18, (Il2CppObject *)this, Method_ScriptSelectListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1BE4D28(v19, v20);
-      ScriptSelectListViewObject__Init_42713580((ScriptSelectListViewObject_o *)current, mode, v18, delay, v21);
+        sub_1C13F80(v19, v20);
+      ScriptSelectListViewObject__Init_42915452((ScriptSelectListViewObject_o *)current, mode, v18, delay, v21);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v22,
-      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
+      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptSelectListViewManager__RequestListObject_42713664(
+void __fastcall ScriptSelectListViewManager__RequestListObject_42915536(
         ScriptSelectListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -435,31 +435,31 @@ void __fastcall ScriptSelectListViewManager__RequestListObject_42713664(
   const MethodInfo *v19; // x3
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B688CE & 1) == 0 )
+  if ( (byte_4BB6408 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v9);
-    sub_1BE4ACC(&Method_ScriptSelectListViewManager_OnMoveEnd__, v10);
-    sub_1BE4ACC(&StringLiteral_10092/*"OnMoveEnd"*/, v11);
-    byte_4B688CE = 1;
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v9);
+    sub_1C13D24(&Method_ScriptSelectListViewManager_OnMoveEnd__, v10);
+    sub_1C13D24(&StringLiteral_10117/*"OnMouseDrag"*/, v11);
+    byte_4BB6408 = 1;
   }
   memset(&v20, 0, sizeof(v20));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptSelectListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1BE4D28(0LL, v13);
+    sub_1C13F80(0LL, v13);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10092/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10117/*"OnMouseDrag"*/,
       0.0,
       0LL);
   }
@@ -469,21 +469,21 @@ void __fastcall ScriptSelectListViewManager__RequestListObject_42713664(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v20,
       ObjectList,
-      (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
+      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v20,
-              (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
+              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
     {
       current = v20.fields._current;
-      v16 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v16 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(v16, (Il2CppObject *)this, Method_ScriptSelectListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1BE4D28(v17, v18);
-      ScriptSelectListViewObject__Init_42714816((ScriptSelectListViewObject_o *)current, mode, v16, v19);
+        sub_1C13F80(v17, v18);
+      ScriptSelectListViewObject__Init_42916688((ScriptSelectListViewObject_o *)current, mode, v16, v19);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v20,
-      (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
+      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
   }
 }
 
@@ -524,23 +524,23 @@ void __fastcall ScriptSelectListViewManager__SetMode(
   int32_t v34; // w1
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+8h] [xbp-88h] BYREF
 
-  if ( (byte_4B688CC & 1) == 0 )
+  if ( (byte_4BB6406 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v13);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v14);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v15);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v16);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__, v17);
-    sub_1BE4ACC(&Method_ScriptSelectListViewManager_OnMoveEnd__, v18);
-    sub_1BE4ACC(&StringLiteral_10092/*"OnMoveEnd"*/, v19);
-    byte_4B688CC = 1;
+    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__, v13);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__get_Current__, v14);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__, v15);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Count__, v16);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__, v17);
+    sub_1C13D24(&Method_ScriptSelectListViewManager_OnMoveEnd__, v18);
+    sub_1C13D24(&StringLiteral_10117/*"OnMouseDrag"*/, v19);
+    byte_4BB6406 = 1;
   }
   memset(&v35, 0, sizeof(v35));
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     *(int64_t *)&index,
@@ -557,7 +557,7 @@ void __fastcall ScriptSelectListViewManager__SetMode(
   {
     if ( mode == 2 )
     {
-      ScriptSelectListViewManager__RequestListObject_42713664(this, 4, v23);
+      ScriptSelectListViewManager__RequestListObject_42915536(this, 4, v23);
     }
     else if ( mode == 1 )
     {
@@ -577,12 +577,12 @@ void __fastcall ScriptSelectListViewManager__SetMode(
             Item = System_Collections_Generic_List_object___get_Item(
                      v24,
                      v25,
-                     (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__);
-            v27 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+                     (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__);
+            v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
             System_Action___ctor(v27, (Il2CppObject *)this, Method_ScriptSelectListViewManager_OnMoveEnd__, 0LL);
             if ( !Item )
               goto LABEL_31;
-            ScriptSelectListViewObject__Init_42713580(
+            ScriptSelectListViewObject__Init_42915452(
               (ScriptSelectListViewObject_o *)Item,
               3,
               v27,
@@ -598,7 +598,7 @@ LABEL_27:
       this->fields.callbackCount = 1;
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_10092/*"OnMoveEnd"*/,
+        (System_String_o *)StringLiteral_10117/*"OnMouseDrag"*/,
         0.0,
         0LL);
       if ( !v24 )
@@ -625,7 +625,7 @@ LABEL_27:
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   v24,
                                                                   v29,
-                                                                  (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__);
+                                                                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__get_Item__);
       if ( !ObjectList )
         break;
       v30 = (ScriptSelectListViewObject_o *)ObjectList;
@@ -635,31 +635,31 @@ LABEL_27:
       if ( !ObjectList )
         break;
       items_high = HIDWORD(ObjectList->fields._items);
-      v32 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v32 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(v32, (Il2CppObject *)this, Method_ScriptSelectListViewManager_OnMoveEnd__, 0LL);
       if ( items_high == index )
         v34 = 6;
       else
         v34 = 5;
-      ScriptSelectListViewObject__Init_42713580(v30, v34, v32, 0.0, v33);
+      ScriptSelectListViewObject__Init_42915452(v30, v34, v32, 0.0, v33);
       if ( ++v29 >= v24->fields._size )
         goto LABEL_28;
     }
 LABEL_31:
-    sub_1BE4D28(ObjectList, v22);
+    sub_1C13F80(ObjectList, v22);
   }
 LABEL_28:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v35,
     v24,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v35,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__MoveNext__) )
     ;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ScriptSelectListViewObject__Dispose__);
 }
 
 
@@ -674,23 +674,23 @@ void __fastcall ScriptSelectListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4B688CB & 1) == 0 )
+  if ( (byte_4BB6405 & 1) == 0 )
   {
-    this = (ScriptSelectListViewManager_o *)sub_1BE4ACC(&ScriptSelectListViewObject_TypeInfo, obj);
-    byte_4B688CB = 1;
+    this = (ScriptSelectListViewManager_o *)sub_1C13D24(&ScriptSelectListViewObject_TypeInfo, obj);
+    byte_4BB6405 = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(ScriptSelectListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (ScriptSelectListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != ScriptSelectListViewObject_TypeInfo )
   {
-    sub_1BE4D28(this, obj);
+    sub_1C13F80(this, obj);
   }
   if ( v5->fields.initMode == 2 )
     v7 = 4;
   else
     v7 = 2;
-  ScriptSelectListViewObject__Init_42713508((ScriptSelectListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  ScriptSelectListViewObject__Init_42915380((ScriptSelectListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -708,10 +708,10 @@ void __fastcall ScriptSelectListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B688C5 & 1) == 0 )
+  if ( (byte_4BB63FF & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, value);
-    byte_4B688C5 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, value);
+    byte_4BB63FF = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -723,13 +723,13 @@ void __fastcall ScriptSelectListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C1FFBC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C4F214(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1BE4FE8(v7);
+  sub_1C14240(v7);
   ScriptSelectListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -767,35 +767,35 @@ System_Collections_Generic_List_ScriptSelectListViewObject__o *__fastcall Script
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B688C7 & 1) == 0 )
+  if ( (byte_4BB6401 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_ScriptSelectListViewObject___, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__Add__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_ScriptSelectListViewObject___ctor__, v8);
-    sub_1BE4ACC(&System_Collections_Generic_List_ScriptSelectListViewObject__TypeInfo, v9);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v10);
-    byte_4B688C7 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_ScriptSelectListViewObject___, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_ScriptSelectListViewObject___ctor__, v8);
+    sub_1C13D24(&System_Collections_Generic_List_ScriptSelectListViewObject__TypeInfo, v9);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
+    byte_4BB6401 = 1;
   }
   memset(&v31, 0, sizeof(v31));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_ScriptSelectListViewObject__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_ScriptSelectListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_ScriptSelectListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1BE4D28(0LL, v12);
+    sub_1C13F80(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v31 = v30;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v31,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v31.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -804,38 +804,38 @@ System_Collections_Generic_List_ScriptSelectListViewObject__o *__fastcall Script
     if ( v15 )
     {
       if ( !current )
-        sub_1BE4D28(v15, v16);
+        sub_1C13F80(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_ScriptSelectListViewObject___);
+                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_ScriptSelectListViewObject___);
       v24 = (int64_t)Component_object;
       if ( !v11 )
-        sub_1BE4D28(Component_object, Component_object);
+        sub_1C13F80(Component_object, Component_object);
       items = v11->fields._items;
       v26 = Method_System_Collections_Generic_List_ScriptSelectListViewObject__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1BE4D28(Component_object, Component_object);
+        sub_1C13F80(Component_object, Component_object);
       size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           Component_object,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v28[4] = (Il2CppClass *)v24;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v28 + 4), v24, v18, v19, v20, v21, v22, v23);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v28 + 4), v24, v18, v19, v20, v21, v22, v23);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ScriptSelectListViewObject__o *)v11;
 }
 
@@ -853,10 +853,10 @@ void __fastcall ScriptSelectListViewManager__remove_callbackFunc(
   ScriptSelectListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B688C6 & 1) == 0 )
+  if ( (byte_4BB6400 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, value);
-    byte_4B688C6 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, value);
+    byte_4BB6400 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -868,13 +868,13 @@ void __fastcall ScriptSelectListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C1FFBC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C4F214(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1BE4FE8(v7);
+  sub_1C14240(v7);
   ScriptSelectListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -901,7 +901,7 @@ void __fastcall ScriptSelectListViewManager_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -912,12 +912,12 @@ void __fastcall ScriptSelectListViewManager_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BE4B8C(v10) & 1) == 0 )
+  if ( (sub_1C13DE4(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BE4BF4(v14, 0LL);
+      v14 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C13E4C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -929,9 +929,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A28590;
+  this->fields.m_target = (Il2CppObject *)sub_1A56DCC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A28548;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A56D84;
 }
 
 
@@ -947,14 +947,14 @@ System_IAsyncResult_o *__fastcall ScriptSelectListViewManager_ClickDelegate__Beg
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = select;
-  if ( (byte_4B688D0 & 1) == 0 )
+  if ( (byte_4BB640A & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&select);
-    byte_4B688D0 = 1;
+    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&select);
+    byte_4BB640A = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BE4A80(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C13CD8(this, v9, callback, object);
 }
 
 
@@ -963,7 +963,7 @@ void __fastcall ScriptSelectListViewManager_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BE4A84(result, 0LL, method);
+  sub_1C13CDC(result, 0LL, method);
 }
 
 

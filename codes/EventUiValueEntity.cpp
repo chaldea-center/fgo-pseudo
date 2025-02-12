@@ -10,20 +10,20 @@ void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const Meth
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B66DCC & 1) == 0 )
+  if ( (byte_4BB48E3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v3);
-    byte_4B66DCC = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    sub_1C13D24(&StringLiteral_1/*""*/, v3);
+    byte_4BB48E3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   v4 = StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1BE4A70((PartyOrganizationUtility_o *)p_value, (int64_t)v4, v6, v7, v8, v9, v10, v11);
+  sub_1C13CC8((PartyOrganizationUtility_o *)p_value, (int64_t)v4, v6, v7, v8, v9, v10, v11);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -35,16 +35,16 @@ System_String_o *__fastcall EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4B66DCD & 1) == 0 )
+  if ( (byte_4BB48E4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
-    byte_4B66DCD = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
+    byte_4BB48E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_2F57A14 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_2F8DD70 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

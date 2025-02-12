@@ -5,18 +5,18 @@ void __fastcall RoadmapDialog___cctor(const MethodInfo *method)
   __int64 v3; // x1
   struct RoadmapDialog_StaticFields *static_fields; // x0
 
-  if ( (byte_4B618DD & 1) == 0 )
+  if ( (byte_4BAF3F2 & 1) == 0 )
   {
-    sub_1BE4ACC(&RoadmapDialog_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_20471/*"icon_summon_arrow2"*/, v2);
-    sub_1BE4ACC(&StringLiteral_11554/*"Roadmap_bg"*/, v3);
-    byte_4B618DD = 1;
+    sub_1C13D24(&RoadmapDialog_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_20515/*"icon_sealact_skill"*/, v2);
+    sub_1C13D24(&StringLiteral_11581/*"RevocationMode"*/, v3);
+    byte_4BAF3F2 = 1;
   }
-  RoadmapDialog_TypeInfo->static_fields->SPRITE_NAME_BG = (struct System_String_o *)StringLiteral_11554/*"Roadmap_bg"*/;
-  sub_1BE4A70(RoadmapDialog_TypeInfo->static_fields);
+  RoadmapDialog_TypeInfo->static_fields->SPRITE_NAME_BG = (struct System_String_o *)StringLiteral_11581/*"RevocationMode"*/;
+  sub_1C13CC8(RoadmapDialog_TypeInfo->static_fields);
   static_fields = RoadmapDialog_TypeInfo->static_fields;
-  static_fields->SPRITE_NAME_ARROW = (struct System_String_o *)StringLiteral_20471/*"icon_summon_arrow2"*/;
-  sub_1BE4A70(&static_fields->SPRITE_NAME_ARROW);
+  static_fields->SPRITE_NAME_ARROW = (struct System_String_o *)StringLiteral_20515/*"icon_sealact_skill"*/;
+  sub_1C13CC8(&static_fields->SPRITE_NAME_ARROW);
 }
 
 
@@ -26,19 +26,19 @@ void __fastcall RoadmapDialog___ctor(RoadmapDialog_o *this, const MethodInfo *me
   __int64 v4; // x1
   System_Collections_Generic_List_object__o *v5; // x20
 
-  if ( (byte_4B618DC & 1) == 0 )
+  if ( (byte_4BAF3F1 & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_UIAtlas___ctor__, v3);
-    sub_1BE4ACC(&System_Collections_Generic_List_UIAtlas__TypeInfo, v4);
-    byte_4B618DC = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas___ctor__, v3);
+    sub_1C13D24(&System_Collections_Generic_List_UIAtlas__TypeInfo, v4);
+    byte_4BAF3F1 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.roadmapAtlasList = (struct System_Collections_Generic_List_UIAtlas__o *)v5;
-  sub_1BE4A70(&this->fields.roadmapAtlasList);
+  sub_1C13CC8(&this->fields.roadmapAtlasList);
   this->fields.centerBoardIndex = -1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -64,23 +64,23 @@ void __fastcall RoadmapDialog__Close(
   __int64 v9; // x1
   System_Action_o *v10; // x20
 
-  if ( (byte_4B618D9 & 1) == 0 )
+  if ( (byte_4BAF3EE & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, onClosedCallback);
-    sub_1BE4ACC(&Method_RoadmapDialog___c__DisplayClass25_0__Close_b__0__, v5);
-    sub_1BE4ACC(&RoadmapDialog___c__DisplayClass25_0_TypeInfo, v6);
-    byte_4B618D9 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, onClosedCallback);
+    sub_1C13D24(&Method_RoadmapDialog___c__DisplayClass25_0__Close_b__0__, v5);
+    sub_1C13D24(&RoadmapDialog___c__DisplayClass25_0_TypeInfo, v6);
+    byte_4BAF3EE = 1;
   }
-  v7 = (Il2CppObject *)sub_1BE4D18(RoadmapDialog___c__DisplayClass25_0_TypeInfo);
+  v7 = (Il2CppObject *)sub_1C13F70(RoadmapDialog___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor(v7, 0LL);
   if ( !v7 )
-    sub_1BE4D28(v8, v9);
+    sub_1C13F80(v8, v9);
   v7[1].klass = (Il2CppClass *)this;
-  sub_1BE4A70(&v7[1]);
+  sub_1C13CC8(&v7[1]);
   v7[1].monitor = onClosedCallback;
-  sub_1BE4A70(&v7[1].monitor);
+  sub_1C13CC8(&v7[1].monitor);
   this->fields.state = 3;
-  v10 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v10, v7, Method_RoadmapDialog___c__DisplayClass25_0__Close_b__0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -93,18 +93,18 @@ System_Collections_IEnumerator_o *__fastcall RoadmapDialog__CoOpen(
 {
   __int64 v5; // x21
 
-  if ( (byte_4B618D4 & 1) == 0 )
+  if ( (byte_4BAF3E9 & 1) == 0 )
   {
-    sub_1BE4ACC(&RoadmapDialog__CoOpen_d__19_TypeInfo, onOpenedCallback);
-    byte_4B618D4 = 1;
+    sub_1C13D24(&RoadmapDialog__CoOpen_d__19_TypeInfo, onOpenedCallback);
+    byte_4BAF3E9 = 1;
   }
-  v5 = sub_1BE4D18(RoadmapDialog__CoOpen_d__19_TypeInfo);
+  v5 = sub_1C13F70(RoadmapDialog__CoOpen_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1BE4A70(v5 + 32);
+  sub_1C13CC8(v5 + 32);
   *(_QWORD *)(v5 + 40) = onOpenedCallback;
-  sub_1BE4A70(v5 + 40);
+  sub_1C13CC8(v5 + 40);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -135,23 +135,23 @@ void __fastcall RoadmapDialog__OnClickClose(RoadmapDialog_o *this, const MethodI
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B618DA & 1) == 0 )
+  if ( (byte_4BAF3EF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_RoadmapDialog_OnClickClose__, method);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4B618DA = 1;
+    sub_1C13D24(&Method_RoadmapDialog_OnClickClose__, method);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    byte_4BAF3EF = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v4 = Method_RoadmapDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_RoadmapDialog_OnClickClose__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BE4AE4(Method_RoadmapDialog_OnClickClose__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v4 = (_QWORD *)sub_1C13D3C(Method_RoadmapDialog_OnClickClose__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1BE4D28(0LL, v7);
+      sub_1C13F80(0LL, v7);
     CommonUI__CloseRoadmapDialog((CommonUI_o *)Instance, 0LL);
   }
 }
@@ -168,26 +168,26 @@ void __fastcall RoadmapDialog__OnClickLeftButton(RoadmapDialog_o *this, const Me
   int32_t CenterIndex; // w20
   int32_t v10; // w1
 
-  if ( (byte_4B618D7 & 1) == 0 )
+  if ( (byte_4BAF3EC & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Math_TypeInfo, method);
-    sub_1BE4ACC(&Method_RoadmapDialog_OnClickLeftButton__, v3);
-    byte_4B618D7 = 1;
+    sub_1C13D24(&System_Math_TypeInfo, method);
+    sub_1C13D24(&Method_RoadmapDialog_OnClickLeftButton__, v3);
+    byte_4BAF3EC = 1;
   }
   if ( this->fields.state == 2 )
   {
     v4 = Method_RoadmapDialog_OnClickLeftButton__;
     if ( (*((_BYTE *)Method_RoadmapDialog_OnClickLeftButton__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BE4AE4(Method_RoadmapDialog_OnClickLeftButton__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 7, 0LL);
+      v4 = (_QWORD *)sub_1C13D3C(Method_RoadmapDialog_OnClickLeftButton__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 7, 0, 0LL);
     listViewManager = (ListViewManager_o *)this->fields.listViewManager;
     if ( !listViewManager )
-      sub_1BE4D28(v6, v7);
+      sub_1C13F80(v6, v7);
     CenterIndex = ListViewManager__GetCenterIndex(listViewManager, 0LL);
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v10 = System_Math__Max_63517952(CenterIndex - 1, 0, 0LL);
+    v10 = System_Math__Max_63787088(CenterIndex - 1, 0, 0LL);
     ListViewManager__MoveCenterItem(listViewManager, v10, 1, 0, 0.0, 0LL);
   }
 }
@@ -206,31 +206,31 @@ void __fastcall RoadmapDialog__OnClickRightButton(RoadmapDialog_o *this, const M
   int32_t ItemSum; // w21
   int32_t v12; // w1
 
-  if ( (byte_4B618D8 & 1) == 0 )
+  if ( (byte_4BAF3ED & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Math_TypeInfo, method);
-    sub_1BE4ACC(&Method_RoadmapDialog_OnClickRightButton__, v3);
-    byte_4B618D8 = 1;
+    sub_1C13D24(&System_Math_TypeInfo, method);
+    sub_1C13D24(&Method_RoadmapDialog_OnClickRightButton__, v3);
+    byte_4BAF3ED = 1;
   }
   if ( this->fields.state == 2 )
   {
     v4 = Method_RoadmapDialog_OnClickRightButton__;
     if ( (*((_BYTE *)Method_RoadmapDialog_OnClickRightButton__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BE4AE4(Method_RoadmapDialog_OnClickRightButton__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 7, 0LL);
+      v4 = (_QWORD *)sub_1C13D3C(Method_RoadmapDialog_OnClickRightButton__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 7, 0, 0LL);
     listViewManager = (ListViewManager_o *)this->fields.listViewManager;
     if ( !listViewManager
       || (CenterIndex = ListViewManager__GetCenterIndex((ListViewManager_o *)this->fields.listViewManager, 0LL),
           (v9 = (ListViewManager_o *)this->fields.listViewManager) == 0LL) )
     {
-      sub_1BE4D28(CenterIndex, v7);
+      sub_1C13F80(CenterIndex, v7);
     }
     v10 = CenterIndex;
     ItemSum = ListViewManager__get_ItemSum(v9, 0LL);
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v12 = System_Math__Min_63518280(v10 + 1, ItemSum - 1, 0LL);
+    v12 = System_Math__Min_63787416(v10 + 1, ItemSum - 1, 0LL);
     ListViewManager__MoveCenterItem(listViewManager, v12, 1, 0, 0.0, 0LL);
   }
 }
@@ -253,11 +253,11 @@ void __fastcall RoadmapDialog__Open(
   const MethodInfo *v16; // x2
   System_Collections_IEnumerator_o *v17; // x1
 
-  if ( (byte_4B618D3 & 1) == 0 )
+  if ( (byte_4BAF3E8 & 1) == 0 )
   {
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, roadmapAssetData);
-    sub_1BE4ACC(&StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, v9);
-    byte_4B618D3 = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, roadmapAssetData);
+    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v9);
+    byte_4BAF3E8 = 1;
   }
   basePanel = (System_String_o *)this->fields.basePanel;
   this->fields.state = 1;
@@ -273,17 +273,17 @@ void __fastcall RoadmapDialog__Open(
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  basePanel = LocalizationManager__Get((System_String_o *)StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  basePanel = LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
   if ( !closeLabel
     || (UILabel__set_text(closeLabel, basePanel, 0LL), (basePanel = (System_String_o *)this->fields.closeButton) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)basePanel, 0LL),
         AndroidBackKeyManager__AddBackBtn(gameObject, 0LL),
         this->fields.roadmapAtlasList = roadmapAtlasList,
-        sub_1BE4A70(&this->fields.roadmapAtlasList),
+        sub_1C13CC8(&this->fields.roadmapAtlasList),
         (basePanel = (System_String_o *)this->fields.listViewManager) == 0LL) )
   {
 LABEL_10:
-    sub_1BE4D28(basePanel, roadmapAssetData);
+    sub_1C13F80(basePanel, roadmapAssetData);
   }
   this->fields.centerBoardIndex = RoadmapBoardListViewManager__CreateList(
                                     (RoadmapBoardListViewManager_o *)basePanel,
@@ -293,7 +293,7 @@ LABEL_10:
   RoadmapDialog__UpdateLeftAndRightButton(this, v14);
   RoadmapDialog__SetUpUiSprites(this, v15);
   v17 = RoadmapDialog__CoOpen(this, onOpenedCallback, v16);
-  UnityEngine_MonoBehaviour__StartCoroutine_70437272((UnityEngine_MonoBehaviour_o *)this, v17, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v17, 0LL);
 }
 
 
@@ -314,37 +314,37 @@ void __fastcall RoadmapDialog__SetRoadmapSprite(
   __int64 v15; // x1
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B618D6 & 1) == 0 )
+  if ( (byte_4BAF3EB & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__, targetSprite);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__, v9);
-    byte_4B618D6 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__, targetSprite);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__, v9);
+    byte_4BAF3EB = 1;
   }
   memset(&v16, 0, sizeof(v16));
   roadmapAtlasList = this->fields.roadmapAtlasList;
   if ( !roadmapAtlasList )
-    sub_1BE4D28(0LL, targetSprite);
+    sub_1C13F80(0LL, targetSprite);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)roadmapAtlasList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
     if ( !v11 )
       break;
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_1BE4D28(v11, v12);
+      sub_1C13F80(v11, v12);
     Sprite = UIAtlas__GetSprite((UIAtlas_o *)v16.fields._current, spriteName, 0LL);
     if ( Sprite )
     {
       if ( !targetSprite )
-        sub_1BE4D28(Sprite, v15);
+        sub_1C13F80(Sprite, v15);
       UISprite__set_atlas(targetSprite, (UIAtlas_o *)current, 0LL);
       UISprite__set_spriteName(targetSprite, spriteName, 0LL);
       break;
@@ -352,7 +352,7 @@ void __fastcall RoadmapDialog__SetRoadmapSprite(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
 }
 
 
@@ -364,10 +364,10 @@ void __fastcall RoadmapDialog__SetUpUiSprites(RoadmapDialog_o *this, const Metho
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B618D5 & 1) == 0 )
+  if ( (byte_4BAF3EA & 1) == 0 )
   {
-    sub_1BE4ACC(&RoadmapDialog_TypeInfo, method);
-    byte_4B618D5 = 1;
+    sub_1C13D24(&RoadmapDialog_TypeInfo, method);
+    byte_4BAF3EA = 1;
   }
   v4 = RoadmapDialog_TypeInfo;
   bgSprite = this->fields.bgSprite;
@@ -400,7 +400,7 @@ void __fastcall RoadmapDialog__Update(RoadmapDialog_o *this, const MethodInfo *m
   {
     listViewManager = (ListViewManager_o *)this->fields.listViewManager;
     if ( !listViewManager )
-      sub_1BE4D28(0LL, method);
+      sub_1C13F80(0LL, method);
     CenterIndex = ListViewManager__GetCenterIndex(listViewManager, 0LL);
     if ( this->fields.centerBoardIndex != CenterIndex )
     {
@@ -451,7 +451,7 @@ void __fastcall RoadmapDialog__UpdateLeftAndRightButton(RoadmapDialog_o *this, c
         !rightButton) )
   {
 LABEL_8:
-    sub_1BE4D28(leftScrollArrowComponent, method);
+    sub_1C13F80(leftScrollArrowComponent, method);
   }
   ((void (__fastcall *)(struct UIButton_o *, bool, Il2CppMethodPointer))rightButton->klass->vtable._5_set_isEnabled.method)(
     rightButton,
@@ -472,10 +472,10 @@ UnityEngine_GameObject_o *__fastcall RoadmapDialog__get_closeBtnObject(RoadmapDi
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B618DB & 1) == 0 )
+  if ( (byte_4BAF3F0 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B618DB = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BAF3F0 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -484,7 +484,7 @@ UnityEngine_GameObject_o *__fastcall RoadmapDialog__get_closeBtnObject(RoadmapDi
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -515,11 +515,11 @@ bool __fastcall RoadmapDialog__CoOpen_d__19__MoveNext(RoadmapDialog__CoOpen_d__1
   System_Action_c *v13; // x1
 
   v2 = this;
-  if ( (byte_4B618DE & 1) == 0 )
+  if ( (byte_4BAF3F3 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    this = (RoadmapDialog__CoOpen_d__19_o *)sub_1BE4ACC(&Method_RoadmapDialog__CoOpen_b__19_0__, v3);
-    byte_4B618DE = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    this = (RoadmapDialog__CoOpen_d__19_o *)sub_1C13D24(&Method_RoadmapDialog__CoOpen_b__19_0__, v3);
+    byte_4BAF3F3 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -533,12 +533,12 @@ bool __fastcall RoadmapDialog__CoOpen_d__19__MoveNext(RoadmapDialog__CoOpen_d__1
                                                      (UnityEngine_Component_o *)_4__this,
                                                      0LL)) == 0LL) )
     {
-      sub_1BE4D28(this, method);
+      sub_1C13F80(this, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     onOpenedCallback = (System_Delegate_o *)v2->fields.onOpenedCallback;
     p_onOpenedCallback = &v2->fields.onOpenedCallback;
-    v10 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)_4__this, Method_RoadmapDialog__CoOpen_b__19_0__, 0LL);
     v11 = System_Delegate__Combine(onOpenedCallback, (System_Delegate_o *)v10, 0LL);
     v12 = v11;
@@ -551,11 +551,11 @@ bool __fastcall RoadmapDialog__CoOpen_d__19__MoveNext(RoadmapDialog__CoOpen_d__1
         if ( (System_Action_c *)v11->klass == v13 )
           goto LABEL_14;
       }
-      sub_1BE4FE8(v11);
+      sub_1C14240(v11);
     }
     *p_onOpenedCallback = (System_Action_o *)v12;
 LABEL_14:
-    sub_1BE4A70(p_onOpenedCallback);
+    sub_1C13CC8(p_onOpenedCallback);
     BaseDialog__Open((BaseDialog_o *)_4__this, *p_onOpenedCallback, 0, 0LL);
     return 0;
   }
@@ -564,7 +564,7 @@ LABEL_14:
     v2->fields.__2__current = 0LL;
     p__2__current = &v2->fields.__2__current;
     *((_DWORD *)p__2__current - 2) = -1;
-    sub_1BE4A70(p__2__current);
+    sub_1C13CC8(p__2__current);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -589,11 +589,11 @@ void __fastcall __noreturn RoadmapDialog__CoOpen_d__19__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BE4AE0(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BE4D18(v2);
+  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BE4AE0(&Method_RoadmapDialog__CoOpen_d__19_System_Collections_IEnumerator_Reset__);
-  sub_1BE4BF4(v3, v4);
+  v4 = sub_1C13D38(&Method_RoadmapDialog__CoOpen_d__19_System_Collections_IEnumerator_Reset__);
+  sub_1C13E4C(v3, v4);
 }
 
 
@@ -630,7 +630,7 @@ void __fastcall RoadmapDialog___c__DisplayClass25_0___Close_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   onClosedCallback = this->fields.onClosedCallback;
   _4__this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)_4__this, 0LL);

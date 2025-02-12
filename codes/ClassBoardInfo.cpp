@@ -7,14 +7,14 @@ void __fastcall ClassBoardInfo___ctor(ClassBoardInfo_o *this, const MethodInfo *
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall ClassBoardInfo__IsReleasedClassId(ClassBoardInfo_o *this, int32_t classId, const MethodInfo *method)
 {
-  if ( (byte_4B666AB & 1) == 0 )
+  if ( (byte_4BB41D6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&classId);
-    byte_4B666AB = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&classId);
+    byte_4BB41D6 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.releasedClassIds, 0LL)
       && System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.releasedClassIds,
            classId,
-           (const MethodInfo_2F713FC *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_2FA7350 *)Method_System_Linq_Enumerable_Contains_int___);
 }

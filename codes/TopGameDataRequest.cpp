@@ -8,15 +8,15 @@ System_String_o *__fastcall TopGameDataRequest__getMockData(TopGameDataRequest_o
 {
   __int64 v2; // x1
 
-  if ( (byte_4B685B6 & 1) == 0 )
+  if ( (byte_4BB60EF & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_9260/*"MockTopGameDataRequest"*/, v2);
-    byte_4B685B6 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_9284/*"MockBattleUseContinueItemRequest"*/, v2);
+    byte_4BB60EF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9260/*"MockTopGameDataRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9284/*"MockBattleUseContinueItemRequest"*/, 0LL);
 }
 
 
@@ -25,18 +25,18 @@ System_String_o *__fastcall TopGameDataRequest__getMockURL(TopGameDataRequest_o 
   __int64 v2; // x1
   NetworkManager_c *v3; // x0
 
-  if ( (byte_4B685B7 & 1) == 0 )
+  if ( (byte_4BB60F0 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_9261/*"MockTopGameDataRequest.txt"*/, v2);
-    byte_4B685B7 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_9285/*"MockBattleUseContinueRequest"*/, v2);
+    byte_4BB60F0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B64B75 )
+  if ( !byte_4BB2686 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    byte_4B64B75 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    byte_4BB2686 = 1;
   }
   v3 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -44,9 +44,9 @@ System_String_o *__fastcall TopGameDataRequest__getMockURL(TopGameDataRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v3 = NetworkManager_TypeInfo;
   }
-  return System_String__Concat_62698808(
+  return System_String__Concat_62967944(
            v3->static_fields->gameServerAddress,
-           (System_String_o *)StringLiteral_9261/*"MockTopGameDataRequest.txt"*/,
+           (System_String_o *)StringLiteral_9285/*"MockBattleUseContinueRequest"*/,
            0LL);
 }
 
@@ -56,16 +56,16 @@ System_String_o *__fastcall TopGameDataRequest__getURL(TopGameDataRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B685B5 & 1) == 0 )
+  if ( (byte_4BB60EE & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19975/*"gamedata/top"*/, v2);
-    byte_4B685B5 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_20019/*"ga-IE"*/, v2);
+    byte_4BB60EE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19975/*"gamedata/top"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_20019/*"ga-IE"*/, 0LL);
 }
 
 
@@ -115,7 +115,7 @@ void __fastcall TopGameDataRequest__requestCompleted(
   System_String_o *v37; // x21
   System_Byte_array *v38; // x21
   Il2CppObject *v39; // x21
-  System_Collections_Generic_Dictionary_string__object__o *Dictionary_39061924; // x0
+  System_Collections_Generic_Dictionary_string__object__o *Dictionary_39300376; // x0
   System_Collections_Generic_Dictionary_object__object__o *v41; // x21
   System_String_o *v42; // x22
   System_String_o *v43; // x22
@@ -126,37 +126,37 @@ void __fastcall TopGameDataRequest__requestCompleted(
   Il2CppObject *v48; // x21
   Il2CppObject *v49; // x21
 
-  if ( (byte_4B685B8 & 1) == 0 )
+  if ( (byte_4BB60F1 & 1) == 0 )
   {
-    sub_1BE4ACC(&CatAndMouseGame_TypeInfo, responseList);
-    sub_1BE4ACC(&System_Convert_TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v8);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v9);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v10);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_1BE4ACC(&StringLiteral_23456/*"serverHash"*/, v12);
-    sub_1BE4ACC(&StringLiteral_18724/*"dateVer"*/, v13);
-    sub_1BE4ACC(&StringLiteral_22543/*"ok"*/, v14);
-    sub_1BE4ACC(&StringLiteral_18709/*"dataVer"*/, v15);
-    sub_1BE4ACC(&StringLiteral_17151/*"assetbundleKey"*/, v16);
-    sub_1BE4ACC(&StringLiteral_21596/*"master"*/, v17);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v18);
-    sub_1BE4ACC(&StringLiteral_17149/*"assetbundle"*/, v19);
-    sub_1BE4ACC(&StringLiteral_25017/*"webview"*/, v20);
-    sub_1BE4ACC(&StringLiteral_16992/*"animalName"*/, v21);
-    sub_1BE4ACC(&StringLiteral_19754/*"folderName"*/, v22);
-    sub_1BE4ACC(&StringLiteral_25253/*"zooName"*/, v23);
-    sub_1BE4ACC(&StringLiteral_1209/*"0"*/, v24);
-    byte_4B685B8 = 1;
+    sub_1C13D24(&CatAndMouseGame_TypeInfo, responseList);
+    sub_1C13D24(&System_Convert_TypeInfo, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1C13D24(&JsonManager_TypeInfo, v8);
+    sub_1C13D24(&NetworkManager_TypeInfo, v9);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v10);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1C13D24(&StringLiteral_23509/*"serParser"*/, v12);
+    sub_1C13D24(&StringLiteral_18768/*"dataViewManager"*/, v13);
+    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v14);
+    sub_1C13D24(&StringLiteral_18753/*"darkslateblue"*/, v15);
+    sub_1C13D24(&StringLiteral_17196/*"asn1"*/, v16);
+    sub_1C13D24(&StringLiteral_21645/*"margin-left"*/, v17);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v18);
+    sub_1C13D24(&StringLiteral_17194/*"ascensionAfterDialogId"*/, v19);
+    sub_1C13D24(&StringLiteral_25073/*"war_board_resume"*/, v20);
+    sub_1C13D24(&StringLiteral_17037/*"android.permission.WRITE_EXTERNAL_STORAGE"*/, v21);
+    sub_1C13D24(&StringLiteral_19798/*"flex-wrap"*/, v22);
+    sub_1C13D24(&StringLiteral_25309/*"yyyyMMddHHmmss"*/, v23);
+    sub_1C13D24(&StringLiteral_1212/*"0"*/, v24);
+    byte_4BB60F1 = 1;
   }
   if ( this->fields._isNoRedirect_k__BackingField )
     goto LABEL_4;
-  if ( (byte_4B685B9 & 1) == 0 )
+  if ( (byte_4BB60F2 & 1) == 0 )
   {
-    sub_1BE4ACC(&TopHomeRequest_TypeInfo, responseList);
-    byte_4B685B9 = 1;
+    sub_1C13D24(&TopHomeRequest_TypeInfo, responseList);
+    byte_4BB60F2 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0LL;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -166,33 +166,33 @@ void __fastcall TopGameDataRequest__requestCompleted(
     || (v28 = v26, !ResponseData__checkError(v26, v26->fields.resCode, v27))
     || (success = (System_Collections_Generic_Dictionary_object__object__o *)v28->fields.success) == 0LL )
   {
-    v25 = &StringLiteral_22370/*"ng"*/;
+    v25 = &StringLiteral_22421/*"newAttributes"*/;
     goto LABEL_58;
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          success,
-         (Il2CppObject *)StringLiteral_18709/*"dataVer"*/,
-         (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_18753/*"darkslateblue"*/,
+         (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_18709/*"dataVer"*/,
-             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_18753/*"darkslateblue"*/,
+             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_59;
     v32 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                Item,
                                Item->klass->vtable[4].methodPtr);
-    v33 = (System_String_o *)StringLiteral_1209/*"0"*/;
+    v33 = (System_String_o *)StringLiteral_1212/*"0"*/;
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            success,
-           (Il2CppObject *)StringLiteral_18724/*"dateVer"*/,
-           (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (Il2CppObject *)StringLiteral_18768/*"dataViewManager"*/,
+           (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                success,
-               (Il2CppObject *)StringLiteral_18724/*"dateVer"*/,
-               (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+               (Il2CppObject *)StringLiteral_18768/*"dataViewManager"*/,
+               (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_59;
       v33 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -201,16 +201,16 @@ void __fastcall TopGameDataRequest__requestCompleted(
     }
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            success,
-           (Il2CppObject *)StringLiteral_21596/*"master"*/,
-           (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (Il2CppObject *)StringLiteral_21645/*"margin-left"*/,
+           (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       v35 = System_Int32__Parse(v32, 0LL);
       v36 = System_Int64__Parse(v33, 0LL);
       Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                success,
-               (Il2CppObject *)StringLiteral_21596/*"master"*/,
-               (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+               (Il2CppObject *)StringLiteral_21645/*"margin-left"*/,
+               (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Instance )
         goto LABEL_59;
       DataManager__setMasterData((DataManager_o *)Instance, v35, v36, Item, 0LL);
@@ -218,13 +218,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          success,
-         (Il2CppObject *)StringLiteral_17149/*"assetbundle"*/,
-         (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17194/*"ascensionAfterDialogId"*/,
+         (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_17149/*"assetbundle"*/,
-             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_17194/*"ascensionAfterDialogId"*/,
+             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_59;
     v37 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -238,19 +238,19 @@ void __fastcall TopGameDataRequest__requestCompleted(
     v39 = CatAndMouseGame__MouseInfoMsgPack(v38, 0LL);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    Dictionary_39061924 = JsonManager__getDictionary_39061924(v39, 0LL);
-    if ( Dictionary_39061924 )
+    Dictionary_39300376 = JsonManager__getDictionary_39300376(v39, 0LL);
+    if ( Dictionary_39300376 )
     {
-      v41 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary_39061924;
+      v41 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary_39300376;
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
-             (System_Collections_Generic_Dictionary_object__object__o *)Dictionary_39061924,
-             (Il2CppObject *)StringLiteral_19754/*"folderName"*/,
-             (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+             (System_Collections_Generic_Dictionary_object__object__o *)Dictionary_39300376,
+             (Il2CppObject *)StringLiteral_19798/*"flex-wrap"*/,
+             (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v41,
-                 (Il2CppObject *)StringLiteral_19754/*"folderName"*/,
-                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_19798/*"flex-wrap"*/,
+                 (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Item )
           goto LABEL_59;
         v42 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -262,13 +262,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
       }
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              v41,
-             (Il2CppObject *)StringLiteral_16992/*"animalName"*/,
-             (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+             (Il2CppObject *)StringLiteral_17037/*"android.permission.WRITE_EXTERNAL_STORAGE"*/,
+             (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v41,
-                 (Il2CppObject *)StringLiteral_16992/*"animalName"*/,
-                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_17037/*"android.permission.WRITE_EXTERNAL_STORAGE"*/,
+                 (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Item )
           goto LABEL_59;
         v43 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -280,13 +280,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
       }
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              v41,
-             (Il2CppObject *)StringLiteral_25253/*"zooName"*/,
-             (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+             (Il2CppObject *)StringLiteral_25309/*"yyyyMMddHHmmss"*/,
+             (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  v41,
-                 (Il2CppObject *)StringLiteral_25253/*"zooName"*/,
-                 (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_25309/*"yyyyMMddHHmmss"*/,
+                 (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Item )
           goto LABEL_59;
         v44 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -300,13 +300,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          success,
-         (Il2CppObject *)StringLiteral_17151/*"assetbundleKey"*/,
-         (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17196/*"asn1"*/,
+         (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_17151/*"assetbundleKey"*/,
-             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_17196/*"asn1"*/,
+             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_59;
     v45 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -322,38 +322,38 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          success,
-         (Il2CppObject *)StringLiteral_25017/*"webview"*/,
-         (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_25073/*"war_board_resume"*/,
+         (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    v48 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v48 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_25017/*"webview"*/,
-             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_25073/*"war_board_resume"*/,
+             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v48 )
       goto LABEL_59;
     DataManager__setWebViewData((DataManager_o *)v48, Item, 0LL);
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          success,
-         (Il2CppObject *)StringLiteral_23456/*"serverHash"*/,
-         (const MethodInfo_32B0418 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23509/*"serParser"*/,
+         (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    v49 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v49 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_23456/*"serverHash"*/,
-             (const MethodInfo_32B01A4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23509/*"serParser"*/,
+             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( v49 )
     {
       DataManager__setServerHash((DataManager_o *)v49, Item, 0LL);
       goto LABEL_4;
     }
 LABEL_59:
-    sub_1BE4D28(Item, v31);
+    sub_1C13F80(Item, v31);
   }
 LABEL_4:
-  v25 = &StringLiteral_22543/*"ok"*/;
+  v25 = &StringLiteral_22595/*"offline"*/;
 LABEL_58:
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v25, 0LL);
 }

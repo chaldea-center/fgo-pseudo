@@ -2,14 +2,14 @@ void __fastcall UserGachaPickupCollateralEntity___ctor(
         UserGachaPickupCollateralEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B67928 & 1) == 0 )
+  if ( (byte_4BB544C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B67928 = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BB544C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -21,19 +21,19 @@ System_String_o *__fastcall UserGachaPickupCollateralEntity__CreatePK(
         int32_t rarity,
         const MethodInfo *method)
 {
-  if ( (byte_4B67927 & 1) == 0 )
+  if ( (byte_4BB544B & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataEntityBase_CreateMultiplePK_long__int__int__int___,
       *(_QWORD *)&gachaPickupCollateralGroupId);
-    byte_4B67927 = 1;
+    byte_4BB544B = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            gachaPickupCollateralGroupId,
            type,
            rarity,
-           (const MethodInfo_2F57DBC *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_2F8E118 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 

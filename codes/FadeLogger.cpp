@@ -9,16 +9,16 @@ void __fastcall FadeLogger___cctor(const MethodInfo *method)
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4B66038 & 1) == 0 )
+  if ( (byte_4BB3B5B & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_932/*"--------"*/, v8);
-    byte_4B66038 = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_935/*"--------"*/, v8);
+    byte_4BB3B5B = 1;
   }
-  FadeLogger_TypeInfo->static_fields->BLANK = (struct System_String_o *)StringLiteral_932/*"--------"*/;
-  sub_1BE4A70(
+  FadeLogger_TypeInfo->static_fields->BLANK = (struct System_String_o *)StringLiteral_935/*"--------"*/;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)FadeLogger_TypeInfo->static_fields,
-    StringLiteral_932/*"--------"*/,
+    StringLiteral_935/*"--------"*/,
     v2,
     v3,
     v4,
@@ -39,16 +39,16 @@ void __fastcall FadeLogger___ctor(FadeLogger_o *this, const MethodInfo *method)
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4B66034 & 1) == 0 )
+  if ( (byte_4BB3B57 & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_Info_TypeInfo, method);
-    byte_4B66034 = 1;
+    sub_1C13D24(&FadeLogger_Info_TypeInfo, method);
+    byte_4BB3B57 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v3 = (FadeLogger_Info_o *)sub_1BE4D18(FadeLogger_Info_TypeInfo);
+  v3 = (FadeLogger_Info_o *)sub_1C13F70(FadeLogger_Info_TypeInfo);
   FadeLogger_Info___ctor(v3, 16, v4);
   this->fields.fadeLog = v3;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -60,10 +60,10 @@ void __fastcall FadeLogger__AddFadeLog(System_String_o *logText, const MethodInf
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4B66036 & 1) == 0 )
+  if ( (byte_4BB3B59 & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, method);
-    byte_4B66036 = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, method);
+    byte_4BB3B59 = 1;
   }
   v3 = FadeLogger_TypeInfo;
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
@@ -71,7 +71,7 @@ void __fastcall FadeLogger__AddFadeLog(System_String_o *logText, const MethodInf
   Instance = FadeLogger__get_Instance((const MethodInfo *)v3);
   buff = (FadeLogger_Info_o *)FadeLogger__get_Instance((const MethodInfo *)Instance);
   if ( !buff || !Instance || (buff = (FadeLogger_Info_o *)buff->fields.buff) == 0LL )
-    sub_1BE4D28(buff, v6);
+    sub_1C13F80(buff, v6);
   FadeLogger_Info__Add(buff, logText, v7);
 }
 
@@ -83,7 +83,7 @@ void __fastcall FadeLogger__AddLog(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   FadeLogger_Info__Add(info, logText, (const MethodInfo *)logText);
 }
 
@@ -136,28 +136,28 @@ System_String_o *__fastcall FadeLogger__CreateFadeLogText(
   System_String_o format; // [xsp+1Ch] [xbp-34h] BYREF
 
   *(float *)&format.klass = duration;
-  if ( (byte_4B66035 & 1) == 0 )
+  if ( (byte_4BB3B58 & 1) == 0 )
   {
-    sub_1BE4ACC(&MaskFade_Kind_TypeInfo, *(_QWORD *)&fadeKind);
-    sub_1BE4ACC(&object___TypeInfo, v9);
-    sub_1BE4ACC(&StringLiteral_25366/*"{0} カラー[{1}] 状態[{2}] 再生時間[{3}s]"*/, v10);
-    sub_1BE4ACC(&StringLiteral_1213/*"0.00"*/, v11);
-    byte_4B66035 = 1;
+    sub_1C13D24(&MaskFade_Kind_TypeInfo, *(_QWORD *)&fadeKind);
+    sub_1C13D24(&object___TypeInfo, v9);
+    sub_1C13D24(&StringLiteral_25422/*"{0} cannot be null"*/, v10);
+    sub_1C13D24(&StringLiteral_1216/*"0.00"*/, v11);
+    byte_4BB3B58 = 1;
   }
-  v12 = (System_String_o *)sub_1BE4B74(object___TypeInfo, 4LL);
+  v12 = (System_String_o *)sub_1C13DCC(object___TypeInfo, 4LL);
   if ( !v12 )
-    sub_1BE4D28(0LL, v13);
+    sub_1C13F80(0LL, v13);
   v20 = (System_Object_array *)v12;
   if ( funkName )
   {
-    v12 = (System_String_o *)sub_1BE4C08(funkName, v12->klass->_1.element_class);
+    v12 = (System_String_o *)sub_1C13E60(funkName, v12->klass->_1.element_class);
     if ( !v12 )
       goto LABEL_18;
   }
   if ( !v20->max_length )
     goto LABEL_17;
   v20->m_Items[0] = (Il2CppObject *)funkName;
-  sub_1BE4A70((PartyOrganizationUtility_o *)v20->m_Items, (int64_t)funkName, v14, v15, v16, v17, v18, v19);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v20->m_Items, (int64_t)funkName, v14, v15, v16, v17, v18, v19);
   v44.klass = (System_Enum_c *)MaskFade_Kind_TypeInfo;
   v44.monitor = (void *)-1LL;
   v45 = fadeKind;
@@ -165,42 +165,42 @@ System_String_o *__fastcall FadeLogger__CreateFadeLogText(
   v27 = (int64_t)v12;
   if ( v12 )
   {
-    v12 = (System_String_o *)sub_1BE4C08(v12, v20->obj.klass->_1.element_class);
+    v12 = (System_String_o *)sub_1C13E60(v12, v20->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_18;
   }
   if ( v20->max_length <= 1 )
     goto LABEL_17;
   v20->m_Items[1] = (Il2CppObject *)v27;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v20->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v20->m_Items[1], v27, v21, v22, v23, v24, v25, v26);
   if ( state )
   {
-    v12 = (System_String_o *)sub_1BE4C08(state, v20->obj.klass->_1.element_class);
+    v12 = (System_String_o *)sub_1C13E60(state, v20->obj.klass->_1.element_class);
     if ( !v12 )
       goto LABEL_18;
   }
   if ( v20->max_length <= 2 )
     goto LABEL_17;
   v20->m_Items[2] = (Il2CppObject *)state;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v20->m_Items[2], (int64_t)state, v28, v29, v30, v31, v32, v33);
-  v12 = System_Single__ToString_63587380(v34, &format, (const MethodInfo *)StringLiteral_1213/*"0.00"*/);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v20->m_Items[2], (int64_t)state, v28, v29, v30, v31, v32, v33);
+  v12 = System_Single__ToString_63856516(v34, &format, (const MethodInfo *)StringLiteral_1216/*"0.00"*/);
   v41 = (int64_t)v12;
   if ( v12 )
   {
-    v12 = (System_String_o *)sub_1BE4C08(v12, v20->obj.klass->_1.element_class);
+    v12 = (System_String_o *)sub_1C13E60(v12, v20->obj.klass->_1.element_class);
     if ( !v12 )
     {
 LABEL_18:
-      v43 = sub_1BE4D4C(v12);
-      sub_1BE4BF4(v43, 0LL);
+      v43 = sub_1C13FA4(v12);
+      sub_1C13E4C(v43, 0LL);
     }
   }
   if ( v20->max_length <= 3 )
 LABEL_17:
-    sub_1BE4D30(v12, v13);
+    sub_1C13F88(v12, v13);
   v20->m_Items[3] = (Il2CppObject *)v41;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v20->m_Items[3], v41, v35, v36, v37, v38, v39, v40);
-  return System_String__Format_62713316((System_String_o *)StringLiteral_25366/*"{0} カラー[{1}] 状態[{2}] 再生時間[{3}s]"*/, v20, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v20->m_Items[3], v41, v35, v36, v37, v38, v39, v40);
+  return System_String__Format_62982452((System_String_o *)StringLiteral_25422/*"{0} cannot be null"*/, v20, 0LL);
 }
 
 
@@ -211,17 +211,17 @@ System_String_o *__fastcall FadeLogger__GetFadeLog(const MethodInfo *method)
   FadeLogger_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B66037 & 1) == 0 )
+  if ( (byte_4BB3B5A & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, v1);
-    byte_4B66037 = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, v1);
+    byte_4BB3B5A = 1;
   }
   v2 = FadeLogger_TypeInfo;
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
   Instance = FadeLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (FadeLogger_o *)Instance->fields.fadeLog) == 0LL )
-    sub_1BE4D28(Instance, v4);
+    sub_1C13F80(Instance, v4);
   return (System_String_o *)((__int64 (__fastcall *)(FadeLogger_o *, void *))Instance->klass->vtable._3_ToString.method)(
                               Instance,
                               Instance->klass[1]._1.image);
@@ -243,10 +243,10 @@ FadeLogger_o *__fastcall FadeLogger__get_Instance(const MethodInfo *method)
   FadeLogger_c *v11; // x0
   struct FadeLogger_StaticFields *static_fields; // x0
 
-  if ( (byte_4B66033 & 1) == 0 )
+  if ( (byte_4BB3B56 & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, v1);
-    byte_4B66033 = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, v1);
+    byte_4BB3B56 = 1;
   }
   v2 = FadeLogger_TypeInfo;
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
@@ -256,7 +256,7 @@ FadeLogger_o *__fastcall FadeLogger__get_Instance(const MethodInfo *method)
   }
   if ( !v2->static_fields->instance )
   {
-    v3 = (FadeLogger_o *)sub_1BE4D18(v2);
+    v3 = (FadeLogger_o *)sub_1C13F70(v2);
     FadeLogger___ctor(v3, v4);
     v11 = FadeLogger_TypeInfo;
     if ( !FadeLogger_TypeInfo->_2.cctor_finished )
@@ -266,7 +266,7 @@ FadeLogger_o *__fastcall FadeLogger__get_Instance(const MethodInfo *method)
     }
     static_fields = v11->static_fields;
     static_fields->instance = v3;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->instance, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->instance, (int64_t)v3, v5, v6, v7, v8, v9, v10);
     v2 = FadeLogger_TypeInfo;
   }
   if ( !v2->_2.cctor_finished )
@@ -311,18 +311,18 @@ void __fastcall FadeLogger_Info___ctor(FadeLogger_Info_o *this, int32_t maxBuff,
   FollowerInfo_o *v32; // x6
   PartyListViewItem_o *v33; // x7
 
-  if ( (byte_4B66039 & 1) == 0 )
+  if ( (byte_4BB3B5C & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, *(_QWORD *)&maxBuff);
-    sub_1BE4ACC(&System_Text_StringBuilder_TypeInfo, v5);
-    sub_1BE4ACC(&string___TypeInfo, v6);
-    byte_4B66039 = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, *(_QWORD *)&maxBuff);
+    sub_1C13D24(&System_Text_StringBuilder_TypeInfo, v5);
+    sub_1C13D24(&string___TypeInfo, v6);
+    byte_4BB3B5C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.maxNum = maxBuff;
-  v7 = (struct System_String_array *)sub_1BE4B74(string___TypeInfo, (unsigned int)maxBuff);
+  v7 = (struct System_String_array *)sub_1C13DCC(string___TypeInfo, (unsigned int)maxBuff);
   this->fields.buff = v7;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   if ( maxBuff >= 1 )
   {
     v21 = 0LL;
@@ -337,23 +337,23 @@ void __fastcall FadeLogger_Info___ctor(FadeLogger_Info_o *this, int32_t maxBuff,
         v23 = FadeLogger_TypeInfo;
       }
       if ( !buff )
-        sub_1BE4D28(v23, v14);
+        sub_1C13F80(v23, v14);
       if ( v21 >= buff->max_length )
-        sub_1BE4D30(v23, v14);
+        sub_1C13F88(v23, v14);
       static_fields = (int64_t *)v23->static_fields;
       v26 = *static_fields;
       *(Il2CppClass **)((char *)&buff->obj.klass + v22) = (Il2CppClass *)*static_fields;
-      sub_1BE4A70((PartyOrganizationUtility_o *)((char *)buff + v22), v26, v15, v16, v17, v18, v19, v20);
+      sub_1C13CC8((PartyOrganizationUtility_o *)((char *)buff + v22), v26, v15, v16, v17, v18, v19, v20);
       ++v21;
       v22 += 8LL;
     }
     while ( maxBuff != v21 );
   }
   this->fields.currentIndex = -1;
-  v27 = (System_Text_StringBuilder_o *)sub_1BE4D18(System_Text_StringBuilder_TypeInfo);
+  v27 = (System_Text_StringBuilder_o *)sub_1C13F70(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v27, 0LL);
   this->fields.sb = v27;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.sb, (int64_t)v27, v28, v29, v30, v31, v32, v33);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.sb, (int64_t)v27, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -372,12 +372,12 @@ void __fastcall FadeLogger_Info__Add(FadeLogger_Info_o *this, System_String_o *n
   v9 = (this->fields.currentIndex + 1) % this->fields.maxNum;
   this->fields.currentIndex = v9;
   if ( !buff )
-    sub_1BE4D28(this, name);
+    sub_1C13F80(this, name);
   if ( v9 >= buff->max_length )
-    sub_1BE4D30(this, name);
+    sub_1C13F88(this, name);
   v10 = &buff->obj.klass + v9;
   v10[4] = (Il2CppClass *)name;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v10 + 4), (int64_t)name, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 4), (int64_t)name, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -395,13 +395,13 @@ System_String_o *__fastcall FadeLogger_Info__ToString(FadeLogger_Info_o *this, c
   il2cpp_array_size_t v12; // w9
   FadeLogger_c *v14; // x0
 
-  if ( (byte_4B6603A & 1) == 0 )
+  if ( (byte_4BB3B5D & 1) == 0 )
   {
-    sub_1BE4ACC(&FadeLogger_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_43/*"\n"*/, v3);
-    sub_1BE4ACC(&StringLiteral_116/*" "*/, v4);
-    sub_1BE4ACC(&StringLiteral_1867/*">"*/, v5);
-    byte_4B6603A = 1;
+    sub_1C13D24(&FadeLogger_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_43/*"\n"*/, v3);
+    sub_1C13D24(&StringLiteral_117/*" "*/, v4);
+    sub_1C13D24(&StringLiteral_1870/*"=spot"*/, v5);
+    byte_4BB3B5D = 1;
   }
   if ( this->fields.currentIndex == -1 )
   {
@@ -429,29 +429,29 @@ System_String_o *__fastcall FadeLogger_Info__ToString(FadeLogger_Info_o *this, c
         sb = this->fields.sb;
         if ( !sb )
           break;
-        v10 = v9 == currentIndex ? (System_String_o **)&StringLiteral_1867/*">"*/ : (System_String_o **)&StringLiteral_116/*" "*/;
-        sb = System_Text_StringBuilder__Append_61859960(sb, *v10, 0LL);
+        v10 = v9 == currentIndex ? (System_String_o **)&StringLiteral_1870/*"=spot"*/ : (System_String_o **)&StringLiteral_117/*" "*/;
+        sb = System_Text_StringBuilder__Append_62129096(sb, *v10, 0LL);
         buff = this->fields.buff;
         if ( !buff )
           break;
         v12 = (maxNum & (v9 >> 31)) + v9;
         if ( v12 >= buff->max_length )
-          sub_1BE4D30(sb, method);
+          sub_1C13F88(sb, method);
         sb = this->fields.sb;
         if ( !sb )
           break;
-        System_Text_StringBuilder__Append_61859960(sb, buff->m_Items[v12], 0LL);
+        System_Text_StringBuilder__Append_62129096(sb, buff->m_Items[v12], 0LL);
         sb = this->fields.sb;
         if ( !sb )
           break;
-        System_Text_StringBuilder__Append_61859960(sb, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
+        System_Text_StringBuilder__Append_62129096(sb, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
         currentIndex = this->fields.currentIndex;
         maxNum = this->fields.maxNum;
         if ( --v9 <= currentIndex - maxNum )
           goto LABEL_16;
       }
 LABEL_21:
-      sub_1BE4D28(sb, method);
+      sub_1C13F80(sb, method);
     }
 LABEL_16:
     sb = this->fields.sb;

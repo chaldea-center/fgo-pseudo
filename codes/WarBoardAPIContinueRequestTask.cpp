@@ -6,7 +6,7 @@ void __fastcall WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_36543732(
+  WarBoardAPIRequestTask___ctor_36769368(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -33,14 +33,14 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
   PartyListViewItem_o *v14; // x7
   int32_t id; // w0
 
-  if ( (byte_4B649F2 & 1) == 0 )
+  if ( (byte_4BB2503 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4B649F2 = 1;
+    sub_1C13D24(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
+    sub_1C13D24(&NetworkManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4BB2503 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -48,7 +48,7 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0LL,
-               (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+               (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_11;
   v8 = (WarBoardContinueRequest_o *)Instance;
@@ -62,9 +62,9 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1BE4D28(Instance, v6);
+    sub_1C13F80(Instance, v6);
   }
 LABEL_10:
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v8, v9, v10, v11, v12, v13, v14);
 }

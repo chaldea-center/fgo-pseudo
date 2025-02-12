@@ -42,191 +42,191 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
   struct GameOptionContentBase_array **p_contentsArray; // x19
   __int64 v29; // x0
 
-  if ( (byte_4B61F79 & 1) == 0 )
+  if ( (byte_4BAFA68 & 1) == 0 )
   {
-    sub_1BE4ACC(&GameOptionContentBase___TypeInfo, method);
-    byte_4B61F79 = 1;
+    sub_1C13D24(&GameOptionContentBase___TypeInfo, method);
+    byte_4BAFA68 = 1;
   }
   if ( !this->fields.contentsArray )
   {
-    v3 = sub_1BE4B74(GameOptionContentBase___TypeInfo, 21LL);
+    v3 = sub_1C13DCC(GameOptionContentBase___TypeInfo, 21LL);
     if ( !v3 )
-      sub_1BE4D28(0LL, v4);
+      sub_1C13F80(0LL, v4);
     setResolutionOptionCtr = this->fields.setResolutionOptionCtr;
     v6 = (struct GameOptionContentBase_array *)v3;
     if ( !setResolutionOptionCtr
-      || (v3 = sub_1BE4C08(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+      || (v3 = sub_1C13E60(this->fields.setResolutionOptionCtr, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
     {
       p_max_length = &v6->max_length;
       if ( !v6->max_length )
         goto LABEL_69;
       v6->m_Items[0] = (GameOptionContentBase_o *)setResolutionOptionCtr;
-      v3 = sub_1BE4A70(v6->m_Items);
+      v3 = sub_1C13CC8(v6->m_Items);
       setSmoothnessCtr = this->fields.setSmoothnessCtr;
-      if ( !setSmoothnessCtr || (v3 = sub_1BE4C08(this->fields.setSmoothnessCtr, v6->obj.klass->_1.element_class)) != 0 )
+      if ( !setSmoothnessCtr || (v3 = sub_1C13E60(this->fields.setSmoothnessCtr, v6->obj.klass->_1.element_class)) != 0 )
       {
         if ( *p_max_length <= 1 )
           goto LABEL_69;
         v6->m_Items[1] = (GameOptionContentBase_o *)setSmoothnessCtr;
-        v3 = sub_1BE4A70(&v6->m_Items[1]);
+        v3 = sub_1C13CC8(&v6->m_Items[1]);
         setVolCtr = this->fields.setVolCtr;
-        if ( !setVolCtr || (v3 = sub_1BE4C08(this->fields.setVolCtr, v6->obj.klass->_1.element_class)) != 0 )
+        if ( !setVolCtr || (v3 = sub_1C13E60(this->fields.setVolCtr, v6->obj.klass->_1.element_class)) != 0 )
         {
           if ( *p_max_length <= 2 )
             goto LABEL_69;
           v6->m_Items[2] = (GameOptionContentBase_o *)setVolCtr;
-          v3 = sub_1BE4A70(&v6->m_Items[2]);
+          v3 = sub_1C13CC8(&v6->m_Items[2]);
           setScenarioTextSpeedCtr = this->fields.setScenarioTextSpeedCtr;
           if ( !setScenarioTextSpeedCtr
-            || (v3 = sub_1BE4C08(this->fields.setScenarioTextSpeedCtr, v6->obj.klass->_1.element_class)) != 0 )
+            || (v3 = sub_1C13E60(this->fields.setScenarioTextSpeedCtr, v6->obj.klass->_1.element_class)) != 0 )
           {
             if ( *p_max_length <= 3 )
               goto LABEL_69;
             v6->m_Items[3] = (GameOptionContentBase_o *)setScenarioTextSpeedCtr;
-            v3 = sub_1BE4A70(&v6->m_Items[3]);
+            v3 = sub_1C13CC8(&v6->m_Items[3]);
             setScenarioCtr = this->fields.setScenarioCtr;
             if ( !setScenarioCtr
-              || (v3 = sub_1BE4C08(this->fields.setScenarioCtr, v6->obj.klass->_1.element_class)) != 0 )
+              || (v3 = sub_1C13E60(this->fields.setScenarioCtr, v6->obj.klass->_1.element_class)) != 0 )
             {
               if ( *p_max_length <= 4 )
                 goto LABEL_69;
               v6->m_Items[4] = (GameOptionContentBase_o *)setScenarioCtr;
-              v3 = sub_1BE4A70(&v6->m_Items[4]);
+              v3 = sub_1C13CC8(&v6->m_Items[4]);
               setSpoilerProtectionCtr = this->fields.setSpoilerProtectionCtr;
               if ( !setSpoilerProtectionCtr
-                || (v3 = sub_1BE4C08(this->fields.setSpoilerProtectionCtr, v6->obj.klass->_1.element_class)) != 0 )
+                || (v3 = sub_1C13E60(this->fields.setSpoilerProtectionCtr, v6->obj.klass->_1.element_class)) != 0 )
               {
                 if ( *p_max_length <= 5 )
                   goto LABEL_69;
                 v6->m_Items[5] = (GameOptionContentBase_o *)setSpoilerProtectionCtr;
-                v3 = sub_1BE4A70(&v6->m_Items[5]);
+                v3 = sub_1C13CC8(&v6->m_Items[5]);
                 setSwitchCtr = this->fields.setSwitchCtr;
                 if ( !setSwitchCtr
-                  || (v3 = sub_1BE4C08(this->fields.setSwitchCtr, v6->obj.klass->_1.element_class)) != 0 )
+                  || (v3 = sub_1C13E60(this->fields.setSwitchCtr, v6->obj.klass->_1.element_class)) != 0 )
                 {
                   if ( *p_max_length <= 6 )
                     goto LABEL_69;
                   v6->m_Items[6] = (GameOptionContentBase_o *)setSwitchCtr;
-                  v3 = sub_1BE4A70(&v6->m_Items[6]);
+                  v3 = sub_1C13CC8(&v6->m_Items[6]);
                   setSwitch2Ctr = this->fields.setSwitch2Ctr;
                   if ( !setSwitch2Ctr
-                    || (v3 = sub_1BE4C08(this->fields.setSwitch2Ctr, v6->obj.klass->_1.element_class)) != 0 )
+                    || (v3 = sub_1C13E60(this->fields.setSwitch2Ctr, v6->obj.klass->_1.element_class)) != 0 )
                   {
                     if ( *p_max_length <= 7 )
                       goto LABEL_69;
                     v6->m_Items[7] = (GameOptionContentBase_o *)setSwitch2Ctr;
-                    v3 = sub_1BE4A70(&v6->m_Items[7]);
+                    v3 = sub_1C13CC8(&v6->m_Items[7]);
                     setPreBattleFormationCtr = this->fields.setPreBattleFormationCtr;
                     if ( !setPreBattleFormationCtr
-                      || (v3 = sub_1BE4C08(this->fields.setPreBattleFormationCtr, v6->obj.klass->_1.element_class)) != 0 )
+                      || (v3 = sub_1C13E60(this->fields.setPreBattleFormationCtr, v6->obj.klass->_1.element_class)) != 0 )
                     {
                       if ( *p_max_length <= 8 )
                         goto LABEL_69;
                       v6->m_Items[8] = (GameOptionContentBase_o *)setPreBattleFormationCtr;
-                      v3 = sub_1BE4A70(&v6->m_Items[8]);
+                      v3 = sub_1C13CC8(&v6->m_Items[8]);
                       setAdvantageClassAutoCtr = this->fields.setAdvantageClassAutoCtr;
                       if ( !setAdvantageClassAutoCtr
-                        || (v3 = sub_1BE4C08(this->fields.setAdvantageClassAutoCtr, v6->obj.klass->_1.element_class)) != 0 )
+                        || (v3 = sub_1C13E60(this->fields.setAdvantageClassAutoCtr, v6->obj.klass->_1.element_class)) != 0 )
                       {
                         if ( *p_max_length <= 9 )
                           goto LABEL_69;
                         v6->m_Items[9] = (GameOptionContentBase_o *)setAdvantageClassAutoCtr;
-                        v3 = sub_1BE4A70(&v6->m_Items[9]);
+                        v3 = sub_1C13CC8(&v6->m_Items[9]);
                         setAutoSelectPartyCtr = this->fields.setAutoSelectPartyCtr;
                         if ( !setAutoSelectPartyCtr
-                          || (v3 = sub_1BE4C08(this->fields.setAutoSelectPartyCtr, v6->obj.klass->_1.element_class)) != 0 )
+                          || (v3 = sub_1C13E60(this->fields.setAutoSelectPartyCtr, v6->obj.klass->_1.element_class)) != 0 )
                         {
                           if ( *p_max_length <= 0xA )
                             goto LABEL_69;
                           v6->m_Items[10] = (GameOptionContentBase_o *)setAutoSelectPartyCtr;
-                          v3 = sub_1BE4A70(&v6->m_Items[10]);
+                          v3 = sub_1C13CC8(&v6->m_Items[10]);
                           setAutoOpenAutoOrganizationDialogCtr = this->fields.setAutoOpenAutoOrganizationDialogCtr;
                           if ( !setAutoOpenAutoOrganizationDialogCtr
-                            || (v3 = sub_1BE4C08(
+                            || (v3 = sub_1C13E60(
                                        this->fields.setAutoOpenAutoOrganizationDialogCtr,
                                        v6->obj.klass->_1.element_class)) != 0 )
                           {
                             if ( *p_max_length <= 0xB )
                               goto LABEL_69;
                             v6->m_Items[11] = (GameOptionContentBase_o *)setAutoOpenAutoOrganizationDialogCtr;
-                            v3 = sub_1BE4A70(&v6->m_Items[11]);
+                            v3 = sub_1C13CC8(&v6->m_Items[11]);
                             setTDPlaySpeedCtr = this->fields.setTDPlaySpeedCtr;
                             if ( !setTDPlaySpeedCtr
-                              || (v3 = sub_1BE4C08(this->fields.setTDPlaySpeedCtr, v6->obj.klass->_1.element_class)) != 0 )
+                              || (v3 = sub_1C13E60(this->fields.setTDPlaySpeedCtr, v6->obj.klass->_1.element_class)) != 0 )
                             {
                               if ( *p_max_length <= 0xC )
                                 goto LABEL_69;
                               v6->m_Items[12] = (GameOptionContentBase_o *)setTDPlaySpeedCtr;
-                              v3 = sub_1BE4A70(&v6->m_Items[12]);
+                              v3 = sub_1C13CC8(&v6->m_Items[12]);
                               setRandomLimitCountCtr = this->fields.setRandomLimitCountCtr;
                               if ( !setRandomLimitCountCtr
-                                || (v3 = sub_1BE4C08(
+                                || (v3 = sub_1C13E60(
                                            this->fields.setRandomLimitCountCtr,
                                            v6->obj.klass->_1.element_class)) != 0 )
                               {
                                 if ( *p_max_length <= 0xD )
                                   goto LABEL_69;
                                 v6->m_Items[13] = (GameOptionContentBase_o *)setRandomLimitCountCtr;
-                                v3 = sub_1BE4A70(&v6->m_Items[13]);
+                                v3 = sub_1C13CC8(&v6->m_Items[13]);
                                 setRandomLimitCountResetCtr = this->fields.setRandomLimitCountResetCtr;
                                 if ( !setRandomLimitCountResetCtr
-                                  || (v3 = sub_1BE4C08(
+                                  || (v3 = sub_1C13E60(
                                              this->fields.setRandomLimitCountResetCtr,
                                              v6->obj.klass->_1.element_class)) != 0 )
                                 {
                                   if ( *p_max_length <= 0xE )
                                     goto LABEL_69;
                                   v6->m_Items[14] = (GameOptionContentBase_o *)setRandomLimitCountResetCtr;
-                                  v3 = sub_1BE4A70(&v6->m_Items[14]);
+                                  v3 = sub_1C13CC8(&v6->m_Items[14]);
                                   setSvtRandCtr = this->fields.setSvtRandCtr;
                                   if ( !setSvtRandCtr
-                                    || (v3 = sub_1BE4C08(this->fields.setSvtRandCtr, v6->obj.klass->_1.element_class)) != 0 )
+                                    || (v3 = sub_1C13E60(this->fields.setSvtRandCtr, v6->obj.klass->_1.element_class)) != 0 )
                                   {
                                     if ( *p_max_length <= 0xF )
                                       goto LABEL_69;
                                     v6->m_Items[15] = (GameOptionContentBase_o *)setSvtRandCtr;
-                                    v3 = sub_1BE4A70(&v6->m_Items[15]);
+                                    v3 = sub_1C13CC8(&v6->m_Items[15]);
                                     setMessageDispCtr = this->fields.setMessageDispCtr;
                                     if ( !setMessageDispCtr
-                                      || (v3 = sub_1BE4C08(
+                                      || (v3 = sub_1C13E60(
                                                  this->fields.setMessageDispCtr,
                                                  v6->obj.klass->_1.element_class)) != 0 )
                                     {
                                       if ( *p_max_length <= 0x10 )
                                         goto LABEL_69;
                                       v6->m_Items[16] = (GameOptionContentBase_o *)setMessageDispCtr;
-                                      v3 = sub_1BE4A70(&v6->m_Items[16]);
+                                      v3 = sub_1C13CC8(&v6->m_Items[16]);
                                       setNoticeCtr = this->fields.setNoticeCtr;
                                       if ( !setNoticeCtr
-                                        || (v3 = sub_1BE4C08(this->fields.setNoticeCtr, v6->obj.klass->_1.element_class)) != 0 )
+                                        || (v3 = sub_1C13E60(this->fields.setNoticeCtr, v6->obj.klass->_1.element_class)) != 0 )
                                       {
                                         if ( *p_max_length <= 0x11 )
                                           goto LABEL_69;
                                         v6->m_Items[17] = (GameOptionContentBase_o *)setNoticeCtr;
-                                        v3 = sub_1BE4A70(&v6->m_Items[17]);
+                                        v3 = sub_1C13CC8(&v6->m_Items[17]);
                                         setPlayOpeningMovieCtr = this->fields.setPlayOpeningMovieCtr;
                                         if ( !setPlayOpeningMovieCtr
-                                          || (v3 = sub_1BE4C08(
+                                          || (v3 = sub_1C13E60(
                                                      this->fields.setPlayOpeningMovieCtr,
                                                      v6->obj.klass->_1.element_class)) != 0 )
                                         {
                                           if ( *p_max_length <= 0x12 )
                                             goto LABEL_69;
                                           v6->m_Items[18] = (GameOptionContentBase_o *)setPlayOpeningMovieCtr;
-                                          v3 = sub_1BE4A70(&v6->m_Items[18]);
+                                          v3 = sub_1C13CC8(&v6->m_Items[18]);
                                           fullDlCtr = this->fields.fullDlCtr;
                                           if ( !fullDlCtr
-                                            || (v3 = sub_1BE4C08(
+                                            || (v3 = sub_1C13E60(
                                                        this->fields.fullDlCtr,
                                                        v6->obj.klass->_1.element_class)) != 0 )
                                           {
                                             if ( *p_max_length <= 0x13 )
                                               goto LABEL_69;
                                             v6->m_Items[19] = (GameOptionContentBase_o *)fullDlCtr;
-                                            v3 = sub_1BE4A70(&v6->m_Items[19]);
+                                            v3 = sub_1C13CC8(&v6->m_Items[19]);
                                             setBlackListCtr = this->fields.setBlackListCtr;
                                             if ( !setBlackListCtr
-                                              || (v3 = sub_1BE4C08(
+                                              || (v3 = sub_1C13E60(
                                                          this->fields.setBlackListCtr,
                                                          v6->obj.klass->_1.element_class)) != 0 )
                                             {
@@ -234,13 +234,13 @@ void __fastcall SetGameOptionComponent__CreateContentsArrayIfNotYet(
                                               {
                                                 v6->m_Items[20] = (GameOptionContentBase_o *)setBlackListCtr;
                                                 p_contentsArray = &this->fields.contentsArray;
-                                                sub_1BE4A70(&v6->m_Items[20]);
+                                                sub_1C13CC8(&v6->m_Items[20]);
                                                 *p_contentsArray = v6;
-                                                sub_1BE4A70(p_contentsArray);
+                                                sub_1C13CC8(p_contentsArray);
                                                 return;
                                               }
 LABEL_69:
-                                              sub_1BE4D30(v3, v4);
+                                              sub_1C13F88(v3, v4);
                                             }
                                           }
                                         }
@@ -262,8 +262,8 @@ LABEL_69:
         }
       }
     }
-    v29 = sub_1BE4D4C();
-    sub_1BE4BF4(v29, 0LL);
+    v29 = sub_1C13FA4();
+    sub_1C13E4C(v29, 0LL);
   }
 }
 
@@ -287,10 +287,10 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B61F7A & 1) == 0 )
+  if ( (byte_4BAFA69 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B61F7A = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BAFA69 = 1;
   }
   SetGameOptionComponent__CreateContentsArrayIfNotYet(this, method);
   contentsArray = this->fields.contentsArray;
@@ -304,7 +304,7 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1BE4D30(gameObject, v4);
+        sub_1C13F88(gameObject, v4);
       v9 = contentsArray->m_Items[v7];
       if ( !v9 )
         break;
@@ -325,7 +325,7 @@ void __fastcall SetGameOptionComponent__InitGameOption(SetGameOptionComponent_o 
         goto LABEL_13;
     }
 LABEL_21:
-    sub_1BE4D28(gameObject, v4);
+    sub_1C13F80(gameObject, v4);
   }
   v8 = 160.0;
 LABEL_13:
@@ -368,7 +368,7 @@ void __fastcall SetGameOptionComponent__SetMaskEnabled(
 
   optionMask = this->fields.optionMask;
   if ( !optionMask )
-    sub_1BE4D28(0LL, isEnabled);
+    sub_1C13F80(0LL, isEnabled);
   UnityEngine_GameObject__SetActive(optionMask, isEnabled, 0LL);
 }
 
@@ -387,10 +387,10 @@ void __fastcall SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o 
   UnityEngine_GameObject_o *optionObj; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B61F7B & 1) == 0 )
+  if ( (byte_4BAFA6A & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, method);
-    byte_4B61F7B = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, method);
+    byte_4BAFA6A = 1;
   }
   hidePos = this->fields.hidePos;
   if ( !hidePos
@@ -402,7 +402,7 @@ void __fastcall SetGameOptionComponent__hideGameOption(SetGameOptionComponent_o 
     || (UnityEngine_GameObject__SetActive(hidePos, 0, 0LL),
         (hidePos = (UnityEngine_GameObject_o *)this->fields.optionScroll) == 0LL) )
   {
-    sub_1BE4D28(hidePos, method);
+    sub_1C13F80(hidePos, method);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *, float, float))hidePos->klass[1]._1.parent)(
     hidePos,
@@ -441,18 +441,18 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
   Il2CppObject *v22; // x22
   struct SetGameOptionComponent___c_StaticFields *v23; // x0
 
-  if ( (byte_4B61F7C & 1) == 0 )
+  if ( (byte_4BAFA6B & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_GameOptionContentBase__TypeInfo, callback);
-    sub_1BE4ACC(&Method_BasicHelper_ForEach_GameOptionContentBase___, v5);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___, v6);
-    sub_1BE4ACC(&System_Func_GameOptionContentBase__bool__TypeInfo, v7);
-    sub_1BE4ACC(&OptionManager_TypeInfo, v8);
-    sub_1BE4ACC(&SoundManager_TypeInfo, v9);
-    sub_1BE4ACC(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_0__, v10);
-    sub_1BE4ACC(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__, v11);
-    sub_1BE4ACC(&SetGameOptionComponent___c_TypeInfo, v12);
-    byte_4B61F7C = 1;
+    sub_1C13D24(&System_Action_GameOptionContentBase__TypeInfo, callback);
+    sub_1C13D24(&Method_BasicHelper_ForEach_GameOptionContentBase___, v5);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_GameOptionContentBase___, v6);
+    sub_1C13D24(&System_Func_GameOptionContentBase__bool__TypeInfo, v7);
+    sub_1C13D24(&OptionManager_TypeInfo, v8);
+    sub_1C13D24(&SoundManager_TypeInfo, v9);
+    sub_1C13D24(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_0__, v10);
+    sub_1C13D24(&Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__, v11);
+    sub_1C13D24(&SetGameOptionComponent___c_TypeInfo, v12);
+    byte_4BAFA6B = 1;
   }
   v13 = SetGameOptionComponent___c_TypeInfo;
   contentsArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.contentsArray;
@@ -470,7 +470,7 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
       v13 = SetGameOptionComponent___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__40_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_GameOptionContentBase__bool__TypeInfo);
+    _9__40_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_GameOptionContentBase__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__40_0,
       v16,
@@ -478,12 +478,12 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
       0LL);
     static_fields = SetGameOptionComponent___c_TypeInfo->static_fields;
     static_fields->__9__40_0 = (struct System_Func_GameOptionContentBase__bool__o *)_9__40_0;
-    sub_1BE4A70(&static_fields->__9__40_0);
+    sub_1C13CC8(&static_fields->__9__40_0);
   }
   v18 = System_Linq_Enumerable__Where_object_(
           contentsArray,
           (System_Func_TSource__bool__o *)_9__40_0,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_GameOptionContentBase___);
   v19 = SetGameOptionComponent___c_TypeInfo;
   v20 = (System_Collections_Generic_IEnumerable_T__o *)v18;
   if ( !SetGameOptionComponent___c_TypeInfo->_2.cctor_finished )
@@ -500,16 +500,16 @@ void __fastcall SetGameOptionComponent__reflectionGameOption(
       v19 = SetGameOptionComponent___c_TypeInfo;
     }
     v22 = (Il2CppObject *)v19->static_fields->__9;
-    _9__40_1 = (System_Action_object__o *)sub_1BE4D18(System_Action_GameOptionContentBase__TypeInfo);
+    _9__40_1 = (System_Action_object__o *)sub_1C13F70(System_Action_GameOptionContentBase__TypeInfo);
     System_Action_object____ctor(_9__40_1, v22, Method_SetGameOptionComponent___c__reflectionGameOption_b__40_1__, 0LL);
     v23 = SetGameOptionComponent___c_TypeInfo->static_fields;
     v23->__9__40_1 = (struct System_Action_GameOptionContentBase__o *)_9__40_1;
-    sub_1BE4A70(&v23->__9__40_1);
+    sub_1C13CC8(&v23->__9__40_1);
   }
   BasicHelper__ForEach_object_(
     v20,
     (System_Action_T__o *)_9__40_1,
-    (const MethodInfo_2F4606C *)Method_BasicHelper_ForEach_GameOptionContentBase___);
+    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_GameOptionContentBase___);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__stopSe(0.0, 0LL);
@@ -536,12 +536,12 @@ void __fastcall SetGameOptionComponent__showGameOption(SetGameOptionComponent_o 
   UnityEngine_GameObject_o *gameObject; // x20
   System_Action_o *v7; // x20
 
-  if ( (byte_4B61F78 & 1) == 0 )
+  if ( (byte_4BAFA67 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, method);
-    sub_1BE4ACC(&AtlasManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SetGameOptionComponent__showGameOption_b__36_0__, v4);
-    byte_4B61F78 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, method);
+    sub_1C13D24(&AtlasManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SetGameOptionComponent__showGameOption_b__36_0__, v4);
+    byte_4BAFA67 = 1;
   }
   bgTxtSprite = this->fields.bgTxtSprite;
   if ( !bgTxtSprite
@@ -549,10 +549,10 @@ void __fastcall SetGameOptionComponent__showGameOption(SetGameOptionComponent_o 
         bgTxtSprite = (struct UISprite_o *)BgTxtManager__IsActiveBgTxt(0LL),
         !gameObject) )
   {
-    sub_1BE4D28(bgTxtSprite, method);
+    sub_1C13F80(bgTxtSprite, method);
   }
   UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)bgTxtSprite & 1, 0LL);
-  v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_SetGameOptionComponent__showGameOption_b__36_0__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -565,15 +565,15 @@ void __fastcall SetGameOptionComponent___c___cctor(const MethodInfo *method)
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4B61F7D & 1) == 0 )
+  if ( (byte_4BAFA6C & 1) == 0 )
   {
-    sub_1BE4ACC(&SetGameOptionComponent___c_TypeInfo, v1);
-    byte_4B61F7D = 1;
+    sub_1C13D24(&SetGameOptionComponent___c_TypeInfo, v1);
+    byte_4BAFA6C = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(SetGameOptionComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(SetGameOptionComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   SetGameOptionComponent___c_TypeInfo->static_fields->__9 = (struct SetGameOptionComponent___c_o *)v2;
-  sub_1BE4A70(SetGameOptionComponent___c_TypeInfo->static_fields);
+  sub_1C13CC8(SetGameOptionComponent___c_TypeInfo->static_fields);
 }
 
 
@@ -589,7 +589,7 @@ bool __fastcall SetGameOptionComponent___c___reflectionGameOption_b__40_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return ((__int64 (__fastcall *)(GameOptionContentBase_o *, void *))x->klass->vtable._6_IsAvailable.method)(
            x,
            x->klass[1]._1.image);
@@ -602,7 +602,7 @@ void __fastcall SetGameOptionComponent___c___reflectionGameOption_b__40_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   ((void (__fastcall *)(GameOptionContentBase_o *, Il2CppMethodPointer))x->klass->vtable._5_Reflection.method)(
     x,
     x->klass->vtable._6_IsAvailable.methodPtr);

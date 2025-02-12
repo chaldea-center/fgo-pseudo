@@ -73,7 +73,7 @@ void __fastcall BlankEarthShortcutUIButton__SetPressAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields.onPressedAction = pressAction;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.onPressedAction,
     (int64_t)pressAction,
     (int64_t)method,

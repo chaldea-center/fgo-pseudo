@@ -1,14 +1,14 @@
 void __fastcall UserEventRaceMaster___ctor(UserEventRaceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B678A8 & 1) == 0 )
+  if ( (byte_4BB53D0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string___ctor__, method);
-    byte_4B678A8 = 1;
+    sub_1C13D24(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string___ctor__, method);
+    byte_4BB53D0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     218,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserEventRaceEntity_o *__fastcall UserEventRaceMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B678A6 & 1) == 0 )
+  if ( (byte_4BB53CE & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__GetEntity__, userId);
-    byte_4B678A6 = 1;
+    sub_1C13D24(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__GetEntity__, userId);
+    byte_4BB53CE = 1;
   }
   PK = (Il2CppObject *)UserEventRaceEntity__CreatePK(userId, eventId, termId, *(const MethodInfo **)&termId);
   return (UserEventRaceEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_31FDB1C *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__GetEntity__);
+                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__GetEntity__);
 }
 
 
@@ -51,64 +51,61 @@ int32_t __fastcall UserEventRaceMaster__GetTotalMostProgressedGroupId(
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x1
   void *Instance; // x0
-  __int64 v15; // x1
-  System_Collections_Generic_Dictionary_int__long__o *v16; // x23
-  int32_t v17; // w26
-  int64_t v18; // x19
-  int32_t v19; // w25
-  _DWORD *v20; // x27
-  __int64 methodPtr_low; // x10
-  int32_t v22; // w2
-  __int64 v23; // x9
-  __int64 v24; // x9
-  struct System_Int32_array *groupIds; // x22
-  unsigned __int64 v26; // x21
-  __int64 v27; // x28
-  int32_t *v28; // x24
-  int64_t v29; // x8
-  __int64 v30; // x9
-  int64_t v31; // x2
+  __int64 v14; // x1
+  System_Collections_Generic_Dictionary_int__long__o *v15; // x23
+  int32_t v16; // w26
+  int64_t v17; // x29
+  int32_t v18; // w25
+  _DWORD *v19; // x27
+  int32_t v20; // w2
+  __int64 v21; // x9
+  __int64 v22; // x9
+  struct System_Int32_array *groupIds; // x20
+  unsigned __int64 v24; // x21
+  __int64 v25; // x28
+  int32_t *v26; // x24
+  int64_t v27; // x8
+  __int64 v28; // x9
+  int64_t v29; // x2
   EventRaceMaster_o *MasterData_object; // [xsp+8h] [xbp-98h]
   int32_t Count; // [xsp+1Ch] [xbp-84h]
-  __int64 v37; // [xsp+20h] [xbp-80h]
+  __int64 v35; // [xsp+20h] [xbp-80h]
   int64_t value; // [xsp+30h] [xbp-70h] BYREF
   EventRaceEntity_o *entity; // [xsp+38h] [xbp-68h] BYREF
 
-  if ( (byte_4B678A9 & 1) == 0 )
+  if ( (byte_4BB53D1 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v4);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventRaceMaster___, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__long__Add__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__long__Remove__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__long__TryGetValue__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_int__long___ctor__, v9);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_int__long__TypeInfo, v10);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v11);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1BE4ACC(&UserEventRaceEntity_TypeInfo, v13);
-    byte_4B678A9 = 1;
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_UserEventRaceEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_UserEventRaceEntity__get_Item__, v4);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaceMaster___, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__long__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__long__Remove__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__long__TryGetValue__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_int__long___ctor__, v9);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_int__long__TypeInfo, v10);
+    sub_1C13D24(&NetworkManager_TypeInfo, v11);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4BB53D1 = 1;
   }
   value = 0LL;
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    goto LABEL_49;
+    goto LABEL_48;
   MasterData_object = (EventRaceMaster_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)Instance,
-                                             (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventRaceMaster___);
-  v16 = (System_Collections_Generic_Dictionary_int__long__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_int__long__TypeInfo);
+                                             (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+  v15 = (System_Collections_Generic_Dictionary_int__long__o *)sub_1C13F70(System_Collections_Generic_Dictionary_int__long__TypeInfo);
   System_Collections_Generic_Dictionary_int__long____ctor(
-    v16,
-    (const MethodInfo_324CE34 *)Method_System_Collections_Generic_Dictionary_int__long___ctor__);
+    v15,
+    (const MethodInfo_328EA14 *)Method_System_Collections_Generic_Dictionary_int__long___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B61717 )
+  if ( !byte_4BAF1E5 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v15);
-    byte_4B61717 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, v14);
+    byte_4BAF1E5 = 1;
   }
   Instance = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -117,127 +114,121 @@ int32_t __fastcall UserEventRaceMaster__GetTotalMostProgressedGroupId(
     Instance = NetworkManager_TypeInfo;
   }
   if ( !this->fields.list )
-    goto LABEL_49;
-  v37 = *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL);
+    goto LABEL_48;
+  v35 = *(_QWORD *)(*((_QWORD *)Instance + 23) + 64LL);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_UserEventRaceEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v17 = 0;
-    v18 = 0LL;
-    v19 = 0;
+    v16 = 0;
+    v17 = 0LL;
+    v18 = 0;
     while ( 1 )
     {
       Instance = this->fields.list;
       if ( !Instance )
-        goto LABEL_49;
+        goto LABEL_48;
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                   v19,
-                   (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                   v18,
+                   (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_UserEventRaceEntity__get_Item__);
       if ( !Instance )
-        goto LABEL_49;
-      v20 = Instance;
-      methodPtr_low = LOBYTE(UserEventRaceEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 304LL) < (unsigned int)methodPtr_low
-        || *(UserEventRaceEntity_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL) + 8 * methodPtr_low - 8) != UserEventRaceEntity_TypeInfo )
+        goto LABEL_48;
+      v19 = Instance;
+      if ( *((_QWORD *)Instance + 2) == v35 )
       {
-        goto LABEL_49;
-      }
-      if ( *((_QWORD *)Instance + 2) == v37 )
-      {
-        v22 = *((_DWORD *)Instance + 6);
-        if ( v22 == eventId || v22 == baseEventId )
+        v20 = *((_DWORD *)Instance + 6);
+        if ( v20 == eventId || v20 == baseEventId )
         {
           Instance = MasterData_object;
           if ( !MasterData_object )
-            goto LABEL_49;
-          Instance = (void *)EventRaceMaster__TryGetEntity(MasterData_object, &entity, v22, v20[7], 0LL);
+            goto LABEL_48;
+          Instance = (void *)EventRaceMaster__TryGetEntity(MasterData_object, &entity, v20, v19[7], 0LL);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
             if ( !entity )
-              goto LABEL_49;
-            v23 = *((_QWORD *)v20 + 4);
-            if ( !v23 )
-              goto LABEL_49;
-            v24 = *(_QWORD *)(v23 + 24);
-            if ( (int)v24 >= 1 )
+              goto LABEL_48;
+            v21 = *((_QWORD *)v19 + 4);
+            if ( !v21 )
+              goto LABEL_48;
+            v22 = *(_QWORD *)(v21 + 24);
+            if ( (int)v22 >= 1 )
               break;
           }
         }
       }
-LABEL_45:
-      if ( ++v19 == Count )
-        return v17;
+LABEL_43:
+      if ( ++v18 == Count )
+        return v16;
     }
     groupIds = entity->fields.groupIds;
     if ( groupIds )
     {
-      v26 = 0LL;
-      v27 = (unsigned int)v24;
-      v28 = &groupIds->m_Items[1];
+      v24 = 0LL;
+      v25 = (unsigned int)v22;
+      v26 = &groupIds->m_Items[1];
       while ( 1 )
       {
-        if ( v26 >= groupIds->max_length )
-LABEL_50:
-          sub_1BE4D30(Instance, v15);
-        if ( !v16 )
+        if ( v24 >= groupIds->max_length )
+LABEL_47:
+          sub_1C13F88(Instance, v14);
+        if ( !v15 )
           break;
         Instance = (void *)System_Collections_Generic_Dictionary_int__long___TryGetValue(
-                             v16,
-                             v28[v26],
+                             v15,
+                             v26[v24],
                              &value,
-                             (const MethodInfo_324EF2C *)Method_System_Collections_Generic_Dictionary_int__long__TryGetValue__);
+                             (const MethodInfo_3290B0C *)Method_System_Collections_Generic_Dictionary_int__long__TryGetValue__);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
-          if ( v26 >= groupIds->max_length )
-            goto LABEL_50;
+          if ( v24 >= groupIds->max_length )
+            goto LABEL_47;
           Instance = (void *)System_Collections_Generic_Dictionary_int__long___Remove(
-                               v16,
-                               v28[v26],
-                               (const MethodInfo_324EC2C *)Method_System_Collections_Generic_Dictionary_int__long__Remove__);
-          v29 = value;
+                               v15,
+                               v26[v24],
+                               (const MethodInfo_329080C *)Method_System_Collections_Generic_Dictionary_int__long__Remove__);
+          v27 = value;
         }
         else
         {
-          v29 = 0LL;
+          v27 = 0LL;
           value = 0LL;
         }
-        v30 = *((_QWORD *)v20 + 4);
-        if ( !v30 )
+        v28 = *((_QWORD *)v19 + 4);
+        if ( !v28 )
           break;
-        if ( v26 >= *(unsigned int *)(v30 + 24) )
-          goto LABEL_50;
-        v31 = *(_QWORD *)(v30 + 8 * v26 + 32) + v29;
-        value = v31;
-        if ( v26 >= groupIds->max_length )
-          goto LABEL_50;
+        if ( v24 >= *(unsigned int *)(v28 + 24) )
+          goto LABEL_47;
+        v29 = *(_QWORD *)(v28 + 8 * v24 + 32) + v27;
+        value = v29;
+        if ( v24 >= groupIds->max_length )
+          goto LABEL_47;
         System_Collections_Generic_Dictionary_int__long___Add(
-          v16,
-          v28[v26],
-          v31,
-          (const MethodInfo_324D808 *)Method_System_Collections_Generic_Dictionary_int__long__Add__);
-        if ( value == v18 )
+          v15,
+          v26[v24],
+          v29,
+          (const MethodInfo_328F3E8 *)Method_System_Collections_Generic_Dictionary_int__long__Add__);
+        if ( value == v17 )
         {
-          if ( v26 >= groupIds->max_length )
-            goto LABEL_50;
-          if ( v28[v26] < v17 )
-            v17 = v28[v26];
+          if ( v24 >= groupIds->max_length )
+            goto LABEL_47;
+          if ( v26[v24] < v16 )
+            v16 = v26[v24];
         }
-        else if ( value > v18 )
+        else if ( value > v17 )
         {
-          if ( v26 >= groupIds->max_length )
-            goto LABEL_50;
-          v17 = v28[v26];
-          v18 = value;
+          if ( v24 >= groupIds->max_length )
+            goto LABEL_47;
+          v16 = v26[v24];
+          v17 = value;
         }
-        if ( v27 == ++v26 )
-          goto LABEL_45;
+        if ( v25 == ++v24 )
+          goto LABEL_43;
       }
     }
-LABEL_49:
-    sub_1BE4D28(Instance, v15);
+LABEL_48:
+    sub_1C13F80(Instance, v14);
   }
   return 0;
 }
@@ -260,7 +251,7 @@ int64_t __fastcall UserEventRaceMaster__GetTotalRacePointInTerm(
 
   UserRacePoints = UserEventRaceMaster__GetUserRacePoints(this, eventId, term, method);
   if ( !UserRacePoints )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   max_length = UserRacePoints->max_length;
   v7 = UserRacePoints;
   if ( max_length << 32 < 1 )
@@ -271,7 +262,7 @@ int64_t __fastcall UserEventRaceMaster__GetTotalRacePointInTerm(
   do
   {
     if ( !max_length )
-      sub_1BE4D30(result, v5);
+      sub_1C13F88(result, v5);
     v11 = *m_Items++;
     --v9;
     --max_length;
@@ -299,21 +290,21 @@ System_Int64_array *__fastcall UserEventRaceMaster__GetUserRacePoints(
   unsigned int EventJoinGroupNum; // w0
   UserEventRaceEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B678AA & 1) == 0 )
+  if ( (byte_4BB53D2 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventPointGroupMaster___, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&long___TypeInfo, v8);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v9);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4B678AA = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventPointGroupMaster___, *(_QWORD *)&eventId);
+    sub_1C13D24(&long___TypeInfo, v8);
+    sub_1C13D24(&NetworkManager_TypeInfo, v9);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_4BB53D2 = 1;
   }
   entity = 0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B61717 )
+  if ( !byte_4BAF1E5 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4B61717 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4BAF1E5 = 1;
   }
   v11 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -333,18 +324,18 @@ System_Int64_array *__fastcall UserEventRaceMaster__GetUserRacePoints(
     if ( entity )
       return entity->fields.points;
 LABEL_16:
-    sub_1BE4D28(Instance, v13);
+    sub_1C13F80(Instance, v13);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
   if ( !Instance )
     goto LABEL_16;
   EventJoinGroupNum = EventPointGroupMaster__getEventJoinGroupNum((EventPointGroupMaster_o *)Instance, eventId, 0LL);
-  return (System_Int64_array *)sub_1BE4B74(long___TypeInfo, EventJoinGroupNum);
+  return (System_Int64_array *)sub_1C13DCC(long___TypeInfo, EventJoinGroupNum);
 }
 
 
@@ -359,15 +350,15 @@ bool __fastcall UserEventRaceMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B678A7 & 1) == 0 )
+  if ( (byte_4BB53CF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__TryGetEntity__, entity);
-    byte_4B678A7 = 1;
+    sub_1C13D24(&Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__TryGetEntity__, entity);
+    byte_4BB53CF = 1;
   }
   PK = (Il2CppObject *)UserEventRaceEntity__CreatePK(userId, eventId, termId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_UserEventRaceMaster__UserEventRaceEntity__string__TryGetEntity__);
 }

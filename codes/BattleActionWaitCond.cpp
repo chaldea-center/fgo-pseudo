@@ -78,7 +78,7 @@ void __fastcall BattleActionWaitCond_UntilSideEffectInvisible___ctor(
   v4->fields._normalFollowerInfo = (struct FollowerInfo_o *)perf;
   v4 = (PartyOrganizationUtility_o *)((char *)v4 + 24);
   *(_DWORD *)&v4[-1].fields._IsQuestStartMenuMode_k__BackingField = 1067450368;
-  sub_1BE4A70(v4, (int64_t)perf, v5, v6, v7, v8, v9, v10);
+  sub_1C13CC8(v4, (int64_t)perf, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -90,6 +90,6 @@ bool __fastcall BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }

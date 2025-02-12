@@ -10,10 +10,10 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
   bool AssetStorage; // w21
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4B65C9A & 1) == 0 )
+  if ( (byte_4BB37BD & 1) == 0 )
   {
-    sub_1BE4ACC(&AssetManager_TypeInfo, path);
-    byte_4B65C9A = 1;
+    sub_1C13D24(&AssetManager_TypeInfo, path);
+    byte_4BB37BD = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -22,7 +22,7 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
   {
     pathCounter = this->fields.pathCounter;
     if ( !pathCounter )
-      sub_1BE4D28(0LL, v9);
+      sub_1C13F80(0LL, v9);
     AssetPathLoadCounter__AddCount(pathCounter, path, v10);
   }
   return AssetStorage;
@@ -31,10 +31,10 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
 
 void __fastcall AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4B65C9B & 1) == 0 )
+  if ( (byte_4BB37BE & 1) == 0 )
   {
-    sub_1BE4ACC(&AssetManager_TypeInfo, path);
-    byte_4B65C9B = 1;
+    sub_1C13D24(&AssetManager_TypeInfo, path);
+    byte_4BB37BE = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -57,6 +57,6 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1BE4D28(0LL, v5);
+    sub_1C13F80(0LL, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, v6);
 }

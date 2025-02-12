@@ -1,9 +1,9 @@
 void __fastcall MultipleViewListViewObject___ctor(MultipleViewListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B621ED & 1) == 0 )
+  if ( (byte_4BAFCDC & 1) == 0 )
   {
-    sub_1BE4ACC(&ListViewObject_TypeInfo, method);
-    byte_4B621ED = 1;
+    sub_1C13D24(&ListViewObject_TypeInfo, method);
+    byte_4BAFCDC = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -16,19 +16,19 @@ void __fastcall MultipleViewListViewObject__Awake(MultipleViewListViewObject_o *
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_4B621E4 & 1) == 0 )
+  if ( (byte_4BAFCD3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___, method);
-    byte_4B621E4 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___, method);
+    byte_4BAFCD3 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   this->fields.itemDraw = (struct MultipleViewListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                      dispObject,
-                                                                     (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
-  sub_1BE4A70(&this->fields.itemDraw);
+                                                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewItemDraw___);
+  sub_1C13CC8(&this->fields.itemDraw);
 }
 
 
@@ -41,21 +41,21 @@ UnityEngine_GameObject_o *__fastcall MultipleViewListViewObject__CreateDragObjec
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B621E8 & 1) == 0 )
+  if ( (byte_4BAFCD7 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___, method);
-    byte_4B621E8 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___, method);
+    byte_4BAFCD7 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_MultipleViewListViewObject___)) == 0LL) )
   {
-    sub_1BE4D28(DragObject, v4);
+    sub_1C13F80(DragObject, v4);
   }
-  MultipleViewListViewObject__Init_31970112((MultipleViewListViewObject_o *)DragObject, 2, v6);
+  MultipleViewListViewObject__Init_32155304((MultipleViewListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -67,10 +67,10 @@ MultipleViewListViewItem_o *__fastcall MultipleViewListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4B621E6 & 1) == 0 )
+  if ( (byte_4BAFCD5 & 1) == 0 )
   {
-    sub_1BE4ACC(&MultipleViewListViewItem_TypeInfo, method);
-    byte_4B621E6 = 1;
+    sub_1C13D24(&MultipleViewListViewItem_TypeInfo, method);
+    byte_4BAFCD5 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -106,10 +106,10 @@ void __fastcall MultipleViewListViewObject__Init(
   int32_t v19; // w8
   struct System_Action_o *v20; // x19
 
-  if ( (byte_4B621E9 & 1) == 0 )
+  if ( (byte_4BAFCD8 & 1) == 0 )
   {
-    sub_1BE4ACC(&MultipleViewListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B621E9 = 1;
+    sub_1C13D24(&MultipleViewListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4BAFCD8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -137,12 +137,12 @@ void __fastcall MultipleViewListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BE4D28(transform, v15);
+    sub_1C13F80(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1BE4A70(&this->fields.callbackFunc);
+  sub_1C13CC8(&this->fields.callbackFunc);
   v18 = 1;
   v19 = v11;
   switch ( v11 )
@@ -174,7 +174,7 @@ LABEL_20:
       if ( *p_callbackFunc )
       {
         *p_callbackFunc = 0LL;
-        sub_1BE4A70(p_callbackFunc);
+        sub_1C13CC8(p_callbackFunc);
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v20->fields.m_target)(
           v20->fields.original_method_info,
           *(_QWORD *)&v20->fields.extra_arg);
@@ -191,7 +191,7 @@ void __fastcall MultipleViewListViewObject__InitItem(MultipleViewListViewObject_
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MultipleViewListViewObject__Init_31970112(
+void __fastcall MultipleViewListViewObject__Init_32155304(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -200,17 +200,17 @@ void __fastcall MultipleViewListViewObject__Init_31970112(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B612E1 )
+  if ( !byte_4BAEDA1 )
   {
-    sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B612E1 = 1;
+    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4BAEDA1 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MultipleViewListViewObject__Init_31971264(
+void __fastcall MultipleViewListViewObject__Init_32156456(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -219,17 +219,17 @@ void __fastcall MultipleViewListViewObject__Init_31971264(
 {
   int v5; // s1
 
-  if ( !byte_4B612E1 )
+  if ( !byte_4BAEDA1 )
   {
-    sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B612E1 = 1;
+    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4BAEDA1 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MultipleViewListViewObject__Init_31971348(
+void __fastcall MultipleViewListViewObject__Init_32156540(
         MultipleViewListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -238,10 +238,10 @@ void __fastcall MultipleViewListViewObject__Init_31971348(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B612E1 )
+  if ( !byte_4BAEDA1 )
   {
-    sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B612E1 = 1;
+    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4BAEDA1 = 1;
   }
   MultipleViewListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -251,17 +251,17 @@ void __fastcall MultipleViewListViewObject__OnClickSelect(MultipleViewListViewOb
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4B621EB & 1) == 0 )
+  if ( (byte_4BAFCDA & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_10020/*"OnClickSelectListView"*/, method);
-    byte_4B621EB = 1;
+    sub_1C13D24(&StringLiteral_10045/*"OnClickListViewVoice"*/, method);
+    byte_4BAFCDA = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1BE4D28(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10020/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
+      sub_1C13F80(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10045/*"OnClickListViewVoice"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -274,11 +274,11 @@ void __fastcall MultipleViewListViewObject__OnDestroy(MultipleViewListViewObject
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *v7; // x20
 
-  if ( (byte_4B621E5 & 1) == 0 )
+  if ( (byte_4BAFCD4 & 1) == 0 )
   {
-    sub_1BE4ACC(&NGUITools_TypeInfo, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B621E5 = 1;
+    sub_1C13D24(&NGUITools_TypeInfo, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BAFCD4 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -292,7 +292,7 @@ void __fastcall MultipleViewListViewObject__OnDestroy(MultipleViewListViewObject
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(v7, 0LL);
     *p_dragObject = 0LL;
-    sub_1BE4A70(p_dragObject);
+    sub_1C13CC8(p_dragObject);
   }
 }
 
@@ -303,24 +303,24 @@ void __fastcall MultipleViewListViewObject__OnLongPush(MultipleViewListViewObjec
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B621EC & 1) == 0 )
+  if ( (byte_4BAFCDB & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_10078/*"OnLongPushListView"*/, method);
-    sub_1BE4ACC(&StringLiteral_10096/*"OnPressCancel"*/, v3);
-    byte_4B621EC = 1;
+    sub_1C13D24(&StringLiteral_10103/*"OnLongPressRewardIcon"*/, method);
+    sub_1C13D24(&StringLiteral_10121/*"OnMouseUp"*/, v3);
+    byte_4BAFCDB = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_70433460(gameObject, (System_String_o *)StringLiteral_10096/*"OnPressCancel"*/, 0LL),
+      || (UnityEngine_GameObject__SendMessage_70703448(gameObject, (System_String_o *)StringLiteral_10121/*"OnMouseUp"*/, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0LL) )
     {
-      sub_1BE4D28(gameObject, v5);
+      sub_1C13F80(gameObject, v5);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_10078/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_10103/*"OnLongPressRewardIcon"*/,
       (Il2CppObject *)this,
       0LL);
   }
@@ -341,11 +341,11 @@ void __fastcall MultipleViewListViewObject__SetInput(
   struct ListViewItem_o *v10; // x1
   MultipleViewListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4B621E7 & 1) == 0 )
+  if ( (byte_4BAFCD6 & 1) == 0 )
   {
-    sub_1BE4ACC(&MultipleViewListViewItem_TypeInfo, isInput);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B621E7 = 1;
+    sub_1C13D24(&MultipleViewListViewItem_TypeInfo, isInput);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
+    byte_4BAFCD6 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -369,7 +369,7 @@ void __fastcall MultipleViewListViewObject__SetInput(
     }
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1BE4D28(0LL, v10);
+      sub_1C13F80(0LL, v10);
     MultipleViewListViewItemDraw__SetInput(v11, (MultipleViewListViewItem_o *)v10, isInput, v7);
   }
 }
@@ -381,12 +381,12 @@ void __fastcall MultipleViewListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_41717728((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41915964((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall MultipleViewListViewObject__SetItem_31975740(
+void __fastcall MultipleViewListViewObject__SetItem_32160948(
         MultipleViewListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -407,11 +407,11 @@ void __fastcall MultipleViewListViewObject__SetupDisp(MultipleViewListViewObject
   const MethodInfo *v9; // x3
   MultipleViewListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4B621EA & 1) == 0 )
+  if ( (byte_4BAFCD9 & 1) == 0 )
   {
-    sub_1BE4ACC(&MultipleViewListViewItem_TypeInfo, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B621EA = 1;
+    sub_1C13D24(&MultipleViewListViewItem_TypeInfo, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BAFCD9 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -435,7 +435,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BE4D28(0LL, v8);
+      sub_1C13F80(0LL, v8);
     MultipleViewListViewItemDraw__SetItem(v10, (MultipleViewListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -456,10 +456,10 @@ void __fastcall MultipleViewListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B621E2 & 1) == 0 )
+  if ( (byte_4BAFCD1 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, value);
-    byte_4B621E2 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, value);
+    byte_4BAFCD1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -472,13 +472,13 @@ void __fastcall MultipleViewListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MultipleViewListViewObject_o *)sub_1BE4FE8(v8);
+  v11 = (MultipleViewListViewObject_o *)sub_1C14240(v8);
   MultipleViewListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -497,10 +497,10 @@ void __fastcall MultipleViewListViewObject__remove_callbackFunc(
   MultipleViewListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B621E3 & 1) == 0 )
+  if ( (byte_4BAFCD2 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, value);
-    byte_4B621E3 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, value);
+    byte_4BAFCD2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -513,12 +513,12 @@ void __fastcall MultipleViewListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MultipleViewListViewObject_o *)sub_1BE4FE8(v8);
+  v11 = (MultipleViewListViewObject_o *)sub_1C14240(v8);
   MultipleViewListViewObject__Awake(v11, v12);
 }

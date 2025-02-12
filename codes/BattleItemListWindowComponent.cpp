@@ -21,22 +21,22 @@ void __fastcall BattleItemListWindowComponent__CloseWindow(
   __int64 v12; // x1
   BattleViewItemlistComponent_o *itemList; // x0
 
-  if ( (byte_4B69B17 & 1) == 0 )
+  if ( (byte_4BB764B & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3642/*"CLOSE_TO_TACTICAL"*/, method);
-    sub_1BE4ACC(&StringLiteral_3641/*"CLOSE_TO_MENU"*/, v9);
-    byte_4B69B17 = 1;
+    sub_1C13D24(&StringLiteral_3645/*"CLOSE_SOUND_PLAYER"*/, method);
+    sub_1C13D24(&StringLiteral_3644/*"CLOSE_SERIAL_CODE"*/, v9);
+    byte_4BB764B = 1;
   }
   if ( this->fields.isFromBattleMenu )
-    v10 = (struct System_String_o **)&StringLiteral_3641/*"CLOSE_TO_MENU"*/;
+    v10 = (struct System_String_o **)&StringLiteral_3644/*"CLOSE_SERIAL_CODE"*/;
   else
-    v10 = (struct System_String_o **)&StringLiteral_3642/*"CLOSE_TO_TACTICAL"*/;
+    v10 = (struct System_String_o **)&StringLiteral_3645/*"CLOSE_SOUND_PLAYER"*/;
   v11 = *v10;
   this->fields.closeFsmEvent = *v10;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.closeFsmEvent, (int64_t)v11, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.closeFsmEvent, (int64_t)v11, v2, v3, v4, v5, v6, v7);
   itemList = this->fields.itemList;
   if ( !itemList )
-    sub_1BE4D28(0LL, v12);
+    sub_1C13F80(0LL, v12);
   BattleViewItemlistComponent__setHide(itemList, 0LL);
   BattleWindowComponent__Close((BattleWindowComponent_o *)this, 0LL, 0LL);
 }
@@ -53,7 +53,7 @@ void __fastcall BattleItemListWindowComponent__CompClose(
     || (PlayMakerFSM__SendEvent(masterFsm, this->fields.closeFsmEvent, 0LL),
         (masterFsm = (PlayMakerFSM_o *)this->fields.itemList) == 0LL) )
   {
-    sub_1BE4D28(masterFsm, method);
+    sub_1C13F80(masterFsm, method);
   }
   BattleViewItemlistComponent__ClearObj((BattleViewItemlistComponent_o *)masterFsm, 0LL);
   BattleWindowComponent__CompClose((BattleWindowComponent_o *)this, 0LL);
@@ -68,7 +68,7 @@ void __fastcall BattleItemListWindowComponent__CompOpen(
 
   itemList = this->fields.itemList;
   if ( !itemList )
-    sub_1BE4D28(0LL, method);
+    sub_1C13F80(0LL, method);
   BattleViewItemlistComponent__setShow(itemList, 0LL);
   BattleWindowComponent__CompOpen((BattleWindowComponent_o *)this, 0LL);
 }
@@ -96,17 +96,17 @@ void __fastcall BattleItemListWindowComponent__Open(
   BattleDropItem_array *DropItems; // x23
   BattleDropItemComponent_ClickDelegate_o *v11; // x24
 
-  if ( (byte_4B69B16 & 1) == 0 )
+  if ( (byte_4BB764A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleItemListWindowComponent_OnItemClick__, fromBattleMenu);
-    sub_1BE4ACC(&BattleDropItemComponent_ClickDelegate_TypeInfo, v7);
-    byte_4B69B16 = 1;
+    sub_1C13D24(&Method_BattleItemListWindowComponent_OnItemClick__, fromBattleMenu);
+    sub_1C13D24(&BattleDropItemComponent_ClickDelegate_TypeInfo, v7);
+    byte_4BB764A = 1;
   }
   battleData = this->fields.battleData;
   if ( !battleData
     || (itemList = this->fields.itemList,
         DropItems = BattleData__getDropItems(battleData, 0LL),
-        v11 = (BattleDropItemComponent_ClickDelegate_o *)sub_1BE4D18(BattleDropItemComponent_ClickDelegate_TypeInfo),
+        v11 = (BattleDropItemComponent_ClickDelegate_o *)sub_1C13F70(BattleDropItemComponent_ClickDelegate_TypeInfo),
         BattleDropItemComponent_ClickDelegate___ctor(
           v11,
           (Il2CppObject *)this,
@@ -121,7 +121,7 @@ void __fastcall BattleItemListWindowComponent__Open(
           0LL),
         (battleData = (BattleData_o *)this->fields.itemList) == 0LL) )
   {
-    sub_1BE4D28(battleData, fromBattleMenu);
+    sub_1C13F80(battleData, fromBattleMenu);
   }
   BattleViewItemlistComponent__setHide((BattleViewItemlistComponent_o *)battleData, 0LL);
   this->fields.isFromBattleMenu = fromBattleMenu;
@@ -141,7 +141,7 @@ void __fastcall BattleItemListWindowComponent__SetBattleData(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battleData = data;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.battleData,
     (int64_t)data,
     (int64_t)method,
@@ -157,10 +157,10 @@ System_String_o *__fastcall BattleItemListWindowComponent__get_closeBtnPath(
         BattleItemListWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B69B18 & 1) == 0 )
+  if ( (byte_4BB764C & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_12737/*"Scroll Bar/item_list_close"*/, method);
-    byte_4B69B18 = 1;
+    sub_1C13D24(&StringLiteral_12767/*"ScreenshotFolder"*/, method);
+    byte_4BB764C = 1;
   }
-  return (System_String_o *)StringLiteral_12737/*"Scroll Bar/item_list_close"*/;
+  return (System_String_o *)StringLiteral_12767/*"ScreenshotFolder"*/;
 }

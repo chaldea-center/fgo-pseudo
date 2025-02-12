@@ -1,17 +1,13 @@
-void __fastcall AiEntity___ctor(AiEntity_o *this, const MethodInfo *method)
-{
-  AiBaseEntity___ctor((AiBaseEntity_o *)this, 0LL);
-}
-
-
 bool __fastcall AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B667C7 & 1) == 0 )
+  const MethodInfo *v2; // x3
+
+  if ( (byte_4BB42E2 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9645/*"NoBackStepNpc"*/, method);
-    byte_4B667C7 = 1;
+    sub_1C13D24(&StringLiteral_9669/*"No top object."*/, method);
+    byte_4BB42E2 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9645/*"NoBackStepNpc"*/, -1, 0LL) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9669/*"No top object."*/, -1, v2) == 1;
 }
 
 

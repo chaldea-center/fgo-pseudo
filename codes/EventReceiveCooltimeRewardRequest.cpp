@@ -7,12 +7,12 @@ void __fastcall EventReceiveCooltimeRewardRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4B684D1 & 1) == 0 )
+  if ( (byte_4BB600A & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_19387/*"eventId"*/, *(_QWORD *)&eventId);
-    byte_4B684D1 = 1;
+    sub_1C13D24(&StringLiteral_19431/*"event/location"*/, *(_QWORD *)&eventId);
+    byte_4BB600A = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19387/*"eventId"*/, eventId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19431/*"event/location"*/, eventId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -24,16 +24,16 @@ System_String_o *__fastcall EventReceiveCooltimeRewardRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B684D0 & 1) == 0 )
+  if ( (byte_4BB6009 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19374/*"event/receiveCooltimeReward"*/, v2);
-    byte_4B684D0 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_19418/*"evRETURN_SPOT"*/, v2);
+    byte_4BB6009 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19374/*"event/receiveCooltimeReward"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19418/*"evRETURN_SPOT"*/, 0LL);
 }
 
 
@@ -50,16 +50,16 @@ void __fastcall EventReceiveCooltimeRewardRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4B684D2 & 1) == 0 )
+  if ( (byte_4BB600B & 1) == 0 )
   {
-    sub_1BE4ACC(&JsonManager_TypeInfo, responseList);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v5);
-    byte_4B684D2 = 1;
+    sub_1C13D24(&JsonManager_TypeInfo, responseList);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
+    byte_4BB600B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(119, responseList, 0LL);
-  if ( v6 && (v7 = v6, ResponseData__checkError_42194996(v6, 0LL)) )
+  if ( v6 && (v7 = v6, ResponseData__checkError_42394144(v6, 0LL)) )
   {
     success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )

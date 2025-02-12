@@ -123,26 +123,26 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v116; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v117; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B66132 & 1) == 0 )
+  if ( (byte_4BB3C55 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Application_TypeInfo, method);
-    sub_1BE4ACC(&BgmManager_TypeInfo, v3);
-    sub_1BE4ACC(&UnityEngine_GUI_TypeInfo, v4);
-    sub_1BE4ACC(&int_TypeInfo, v5);
-    sub_1BE4ACC(&SoundLogger_TypeInfo, v6);
-    sub_1BE4ACC(&string___TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
-    sub_1BE4ACC(&StringLiteral_16110/*"[BGM]\n"*/, v9);
-    sub_1BE4ACC(&StringLiteral_5379/*"Detail:{0}"*/, v10);
-    sub_1BE4ACC(&StringLiteral_1838/*"<size="*/, v11);
-    sub_1BE4ACC(&StringLiteral_45/*"\n\n\n"*/, v12);
-    sub_1BE4ACC(&StringLiteral_5378/*"Detail: OFF"*/, v13);
-    sub_1BE4ACC(&StringLiteral_65/*"\n[SE]\n"*/, v14);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v15);
-    sub_1BE4ACC(&StringLiteral_1626/*"</size>"*/, v16);
-    sub_1BE4ACC(&StringLiteral_66/*"\n[VOICE]\n"*/, v17);
-    sub_1BE4ACC(&StringLiteral_1867/*">"*/, v18);
-    byte_4B66132 = 1;
+    sub_1C13D24(&UnityEngine_Application_TypeInfo, method);
+    sub_1C13D24(&BgmManager_TypeInfo, v3);
+    sub_1C13D24(&UnityEngine_GUI_TypeInfo, v4);
+    sub_1C13D24(&int_TypeInfo, v5);
+    sub_1C13D24(&SoundLogger_TypeInfo, v6);
+    sub_1C13D24(&string___TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
+    sub_1C13D24(&StringLiteral_16153/*"[Adjust]: Checking for new ATT status is only supported for iOS platform."*/, v9);
+    sub_1C13D24(&StringLiteral_5389/*"Destination host has an erroneous SSL certificate"*/, v10);
+    sub_1C13D24(&StringLiteral_1841/*"<single-transition>#"*/, v11);
+    sub_1C13D24(&StringLiteral_45/*"\n\n\n"*/, v12);
+    sub_1C13D24(&StringLiteral_5388/*"Destination array was not long enough. Check destIndex and length, and the array's lower bounds"*/, v13);
+    sub_1C13D24(&StringLiteral_66/*"\n[SE]\n"*/, v14);
+    sub_1C13D24(&StringLiteral_1/*""*/, v15);
+    sub_1C13D24(&StringLiteral_1629/*"</col>"*/, v16);
+    sub_1C13D24(&StringLiteral_67/*"\n[VOICE]\n"*/, v17);
+    sub_1C13D24(&StringLiteral_1870/*"=spot"*/, v18);
+    byte_4BB3C55 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -153,18 +153,18 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v20);
-    v23 = System_String__Concat_62698808((System_String_o *)StringLiteral_16110/*"[BGM]\n"*/, LogBgm, 0LL);
+    v23 = System_String__Concat_62967944((System_String_o *)StringLiteral_16153/*"[Adjust]: Checking for new ATT status is only supported for iOS platform."*/, LogBgm, 0LL);
     if ( (bgmIndex & 0x80000000) != 0 )
     {
       v27 = SoundLogger_TypeInfo;
       if ( !SoundLogger_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
       LogBgmDetailLast = SoundLogger__GetLogBgmDetailLast((const MethodInfo *)v27);
-      v29 = System_String__Concat_62710068(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
+      v29 = System_String__Concat_62979204(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
       LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v29);
-      v23 = System_String__Concat_62710068(v29, (System_String_o *)StringLiteral_66/*"\n[VOICE]\n"*/, LogVoice, 0LL);
+      v23 = System_String__Concat_62979204(v29, (System_String_o *)StringLiteral_67/*"\n[VOICE]\n"*/, LogVoice, 0LL);
       LogSe = SoundLogger__getLogSe((const MethodInfo *)v23);
-      v26 = &StringLiteral_65/*"\n[SE]\n"*/;
+      v26 = &StringLiteral_66/*"\n[SE]\n"*/;
     }
     else
     {
@@ -174,7 +174,7 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       LogSe = SoundLogger__GetLogBgmDetail(v24, v22);
       v26 = &StringLiteral_45/*"\n\n\n"*/;
     }
-    v31 = System_String__Concat_62710068(v23, (System_String_o *)*v26, LogSe, 0LL);
+    v31 = System_String__Concat_62979204(v23, (System_String_o *)*v26, LogSe, 0LL);
     v32 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -183,36 +183,36 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     v115.fields.m_Width = v32 * 310.0;
     v115.fields.m_Height = v32 * 825.0;
     UnityEngine_GUI__Box(v115, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v33 = (System_String_o *)sub_1BE4B74(string___TypeInfo, 5LL);
+    v33 = (System_String_o *)sub_1C13DCC(string___TypeInfo, 5LL);
     if ( v33 )
     {
       v41 = v33;
       if ( !LODWORD(v33[1].klass) )
         goto LABEL_40;
-      v42 = StringLiteral_1838/*"<size="*/;
-      v33[1].monitor = (void *)StringLiteral_1838/*"<size="*/;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v33[1].monitor, v42, v35, v36, v37, v38, v39, v40);
+      v42 = StringLiteral_1841/*"<single-transition>#"*/;
+      v33[1].monitor = (void *)StringLiteral_1841/*"<single-transition>#"*/;
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v33[1].monitor, v42, v35, v36, v37, v38, v39, v40);
       v114[0] = v32 * 18.0;
       v33 = System_Single__ToString(18.0, (const MethodInfo *)v114);
       if ( LODWORD(v41[1].klass) <= 1 )
         goto LABEL_40;
       v41[1].fields = (System_String_Fields)v33;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v41[1].fields, (int64_t)v33, v43, v44, v45, v46, v47, v48);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v41[1].fields, (int64_t)v33, v43, v44, v45, v46, v47, v48);
       if ( LODWORD(v41[1].klass) <= 2 )
         goto LABEL_40;
-      v55 = StringLiteral_1867/*">"*/;
-      v41[2].klass = (System_String_c *)StringLiteral_1867/*">"*/;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v41[2], v55, v49, v50, v51, v52, v53, v54);
+      v55 = StringLiteral_1870/*"=spot"*/;
+      v41[2].klass = (System_String_c *)StringLiteral_1870/*"=spot"*/;
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v41[2], v55, v49, v50, v51, v52, v53, v54);
       if ( LODWORD(v41[1].klass) <= 3 )
         goto LABEL_40;
       v41[2].monitor = v31;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v41[2].monitor, (int64_t)v31, v56, v57, v58, v59, v60, v61);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v41[2].monitor, (int64_t)v31, v56, v57, v58, v59, v60, v61);
       if ( LODWORD(v41[1].klass) <= 4 )
         goto LABEL_40;
-      v68 = StringLiteral_1626/*"</size>"*/;
-      v41[2].fields = (System_String_Fields)StringLiteral_1626/*"</size>"*/;
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v41[2].fields, v68, v62, v63, v64, v65, v66, v67);
-      v69 = System_String__Concat_62712336((System_String_array *)v41, 0LL);
+      v68 = StringLiteral_1629/*"</col>"*/;
+      v41[2].fields = (System_String_Fields)StringLiteral_1629/*"</col>"*/;
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v41[2].fields, v68, v62, v63, v64, v65, v66, v67);
+      v69 = System_String__Concat_62981472((System_String_array *)v41, 0LL);
       v116.fields.m_XMin = 10.0;
       v116.fields.m_YMin = 5.0;
       v116.fields.m_Width = v32 * 1000.0;
@@ -220,38 +220,38 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       UnityEngine_GUI__Label(v116, v69, 0LL);
       if ( (bgmIndex & 0x80000000) != 0 )
       {
-        v74 = (System_String_o *)StringLiteral_5378/*"Detail: OFF"*/;
+        v74 = (System_String_o *)StringLiteral_5388/*"Destination array was not long enough. Check destIndex and length, and the array's lower bounds"*/;
       }
       else
       {
         v113 = this->fields.bgmIndex;
         v73 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v113, v70, v71, v72);
-        v74 = System_String__Format((System_String_o *)StringLiteral_5379/*"Detail:{0}"*/, v73, 0LL);
+        v74 = System_String__Format((System_String_o *)StringLiteral_5389/*"Destination host has an erroneous SSL certificate"*/, v73, 0LL);
       }
-      v33 = (System_String_o *)sub_1BE4B74(string___TypeInfo, 5LL);
+      v33 = (System_String_o *)sub_1C13DCC(string___TypeInfo, 5LL);
       if ( v33 )
       {
         v81 = v33;
         if ( LODWORD(v33[1].klass) )
         {
-          v82 = StringLiteral_1838/*"<size="*/;
-          v33[1].monitor = (void *)StringLiteral_1838/*"<size="*/;
-          sub_1BE4A70((PartyOrganizationUtility_o *)&v33[1].monitor, v82, v75, v76, v77, v78, v79, v80);
+          v82 = StringLiteral_1841/*"<single-transition>#"*/;
+          v33[1].monitor = (void *)StringLiteral_1841/*"<single-transition>#"*/;
+          sub_1C13CC8((PartyOrganizationUtility_o *)&v33[1].monitor, v82, v75, v76, v77, v78, v79, v80);
           v114[0] = v32 * 18.0;
           v33 = System_Single__ToString(v83, (const MethodInfo *)v114);
           if ( LODWORD(v81[1].klass) > 1 )
           {
             v81[1].fields = (System_String_Fields)v33;
-            sub_1BE4A70((PartyOrganizationUtility_o *)&v81[1].fields, (int64_t)v33, v84, v85, v86, v87, v88, v89);
+            sub_1C13CC8((PartyOrganizationUtility_o *)&v81[1].fields, (int64_t)v33, v84, v85, v86, v87, v88, v89);
             if ( LODWORD(v81[1].klass) > 2 )
             {
-              v96 = StringLiteral_1867/*">"*/;
-              v81[2].klass = (System_String_c *)StringLiteral_1867/*">"*/;
-              sub_1BE4A70((PartyOrganizationUtility_o *)&v81[2], v96, v90, v91, v92, v93, v94, v95);
+              v96 = StringLiteral_1870/*"=spot"*/;
+              v81[2].klass = (System_String_c *)StringLiteral_1870/*"=spot"*/;
+              sub_1C13CC8((PartyOrganizationUtility_o *)&v81[2], v96, v90, v91, v92, v93, v94, v95);
               if ( LODWORD(v81[1].klass) > 3 )
               {
                 v81[2].monitor = v74;
-                sub_1BE4A70(
+                sub_1C13CC8(
                   (PartyOrganizationUtility_o *)&v81[2].monitor,
                   (int64_t)v74,
                   v97,
@@ -262,10 +262,10 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
                   v102);
                 if ( LODWORD(v81[1].klass) > 4 )
                 {
-                  v109 = StringLiteral_1626/*"</size>"*/;
-                  v81[2].fields = (System_String_Fields)StringLiteral_1626/*"</size>"*/;
-                  sub_1BE4A70((PartyOrganizationUtility_o *)&v81[2].fields, v109, v103, v104, v105, v106, v107, v108);
-                  v110 = System_String__Concat_62712336((System_String_array *)v81, 0LL);
+                  v109 = StringLiteral_1629/*"</col>"*/;
+                  v81[2].fields = (System_String_Fields)StringLiteral_1629/*"</col>"*/;
+                  sub_1C13CC8((PartyOrganizationUtility_o *)&v81[2].fields, v109, v103, v104, v105, v106, v107, v108);
+                  v110 = System_String__Concat_62981472((System_String_array *)v81, 0LL);
                   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
                   v117.fields.m_XMin = 10.0;
@@ -292,10 +292,10 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
           }
         }
 LABEL_40:
-        sub_1BE4D30(v33, v34);
+        sub_1C13F88(v33, v34);
       }
     }
-    sub_1BE4D28(v33, v34);
+    sub_1C13F80(v33, v34);
   }
 }
 

@@ -2,10 +2,10 @@ void __fastcall BattleSkillConfComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B69DA5 & 1) == 0 )
+  if ( (byte_4BB78D9 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleSkillConfComponent_TypeInfo, v1);
-    byte_4B69DA5 = 1;
+    sub_1C13D24(&BattleSkillConfComponent_TypeInfo, v1);
+    byte_4BB78D9 = 1;
   }
   *BattleSkillConfComponent_TypeInfo->static_fields = (struct BattleSkillConfComponent_StaticFields)0x4E00000014LL;
 }
@@ -105,7 +105,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
   UIWidget_o *skillConfLabel; // x25
   struct BattleSkillInfoData_o *v77; // x8
   struct UILabel_o *v78; // x25
-  System_String_o *Detail_40890048; // x26
+  System_String_o *Detail_41099888; // x26
   BattleSkillConfComponent_c *v80; // x0
   int32_t *static_fields; // x8
   UILabel_o *v82; // x0
@@ -138,30 +138,30 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
   int32_t skilllv; // [xsp+2Ch] [xbp-64h] BYREF
   UnityEngine_Vector2Int_o v110; // 0:x6.8
 
-  if ( (byte_4B69D9F & 1) == 0 )
+  if ( (byte_4BB78D3 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleSkillConfComponent_TypeInfo, skillInfo);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v12);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_SkillLvMaster___, v13);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_SkillMaster___, v14);
-    sub_1BE4ACC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v15);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_Collider___, v16);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, v17);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UIButton___, v18);
-    sub_1BE4ACC(&int_TypeInfo, v19);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v20);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v21);
-    sub_1BE4ACC(&ServantSkillStrengthStatus_TypeInfo, v22);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_1BE4ACC(&StringLiteral_3017/*"BATTLE_SKILL_CONF_TITLE"*/, v24);
-    sub_1BE4ACC(&StringLiteral_25332/*"{0}  Lv.{1}"*/, v25);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v26);
-    byte_4B69D9F = 1;
+    sub_1C13D24(&BattleSkillConfComponent_TypeInfo, skillInfo);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v12);
+    sub_1C13D24(&Method_DataManager_GetMasterData_SkillLvMaster___, v13);
+    sub_1C13D24(&Method_DataManager_GetMasterData_SkillMaster___, v14);
+    sub_1C13D24(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v15);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Collider___, v16);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, v17);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIButton___, v18);
+    sub_1C13D24(&int_TypeInfo, v19);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v20);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v21);
+    sub_1C13D24(&ServantSkillStrengthStatus_TypeInfo, v22);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
+    sub_1C13D24(&StringLiteral_3020/*"BATTLE_SKILLERROR_NP_LOWER"*/, v24);
+    sub_1C13D24(&StringLiteral_25388/*"{0:D}"*/, v25);
+    sub_1C13D24(&StringLiteral_1/*""*/, v26);
+    byte_4BB78D3 = 1;
   }
   this->fields.skillInfo = skillInfo;
   p_skillInfo = &this->fields.skillInfo;
   this->fields.isPlayedSe = 0;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.skillInfo,
     (int64_t)skillInfo,
     cancelOk,
@@ -178,7 +178,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
     v29 = this->fields.skillTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    data = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3017/*"BATTLE_SKILL_CONF_TITLE"*/, 0LL);
+    data = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3020/*"BATTLE_SKILLERROR_NP_LOWER"*/, 0LL);
     if ( !v29 )
       goto LABEL_159;
     UILabel__set_text(v29, (System_String_o *)data, 0LL);
@@ -217,7 +217,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
           goto LABEL_159;
         index = skillInfo->fields.index;
         if ( (unsigned int)index >= *(_DWORD *)(data + 24) )
-          sub_1BE4D30(data, index);
+          sub_1C13F88(data, index);
         v40 = *(unsigned __int8 *)(data + index + 32);
         if ( *(_BYTE *)(data + index + 32) )
           SkillSealTurn = BattleServantData__getSkillSealSelectTurn(v35, index, 0LL);
@@ -253,7 +253,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
         goto LABEL_159;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)data,
-                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       data = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -274,7 +274,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
         goto LABEL_159;
       v49 = UnityEngine_GameObject__GetComponent_object_(
               (UnityEngine_GameObject_o *)data,
-              (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       data = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v49, 0LL, 0LL);
@@ -285,12 +285,12 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)v49, cancelOk, 0LL);
       }
     }
-    data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( data )
     {
       data = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)data,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillMaster___);
       if ( *p_skillInfo )
       {
         v50 = (DataMasterBase_TMaster__TEntity__PKType__o *)data;
@@ -302,13 +302,13 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
           Entity = DataMasterBase_object__object__int___GetEntity(
                      v50,
                      data,
-                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-          data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                     (const MethodInfo_3238624 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+          data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( data )
           {
             data = (__int64)DataManager__GetMasterData_object_(
                               (DataManager_o *)data,
-                              (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SkillLvMaster___);
             if ( *p_skillInfo )
             {
               v52 = (SkillLvMaster_o *)data;
@@ -343,8 +343,8 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                       goto LABEL_159;
                     skilllv = (*p_skillInfo)->fields.skilllv;
                     v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &skilllv, v56, v57, v58);
-                    data = (__int64)System_String__Format_62713180(
-                                      (System_String_o *)StringLiteral_25332/*"{0}  Lv.{1}"*/,
+                    data = (__int64)System_String__Format_62982316(
+                                      (System_String_o *)StringLiteral_25388/*"{0:D}"*/,
                                       v60,
                                       v63,
                                       0LL);
@@ -368,7 +368,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                                            0LL);
                     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                    UnityEngine_Object__Destroy_70452000(gameObject, 0LL);
+                    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
                   }
                   if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
@@ -377,7 +377,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                   {
                     PATH = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
                     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)data, 0LL);
-                    data = (__int64)BaseMonoBehaviour__createObject_39146996(
+                    data = (__int64)BaseMonoBehaviour__createObject_39385652(
                                       (BaseMonoBehaviour_o *)this,
                                       PATH,
                                       transform,
@@ -387,9 +387,9 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                     {
                       v69 = UnityEngine_GameObject__GetComponent_object_(
                               (UnityEngine_GameObject_o *)data,
-                              (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
                       *p_skillStrengthStatus = (struct ServantSkillStrengthStatus_o *)v69;
-                      sub_1BE4A70(
+                      sub_1C13CC8(
                         (PartyOrganizationUtility_o *)&this->fields.skillStrengthStatus,
                         (int64_t)v69,
                         v70,
@@ -430,7 +430,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                             if ( v55 )
                             {
                               v78 = this->fields.skillConfLabel;
-                              Detail_40890048 = SkillLvEntity__getDetail_40890048(v55, v77->fields.skilllv, 0, 0LL);
+                              Detail_41099888 = SkillLvEntity__getDetail_41099888(v55, v77->fields.skilllv, 0, 0LL);
                               if ( isSetMinSize )
                               {
                                 v80 = BattleSkillConfComponent_TypeInfo;
@@ -441,7 +441,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                 }
                                 static_fields = (int32_t *)v80->static_fields;
                                 v82 = v78;
-                                v83 = Detail_40890048;
+                                v83 = Detail_41099888;
                                 v84 = *static_fields;
                                 v85 = *static_fields;
                               }
@@ -449,7 +449,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                               {
                                 v84 = 22;
                                 v82 = v78;
-                                v83 = Detail_40890048;
+                                v83 = Detail_41099888;
                                 v85 = 0;
                               }
                               WrapControlText__textBBCodeAdjust(v82, v83, v84, v85, 0LL);
@@ -489,7 +489,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                         {
                                           data = (__int64)UnityEngine_Component__GetComponent_object_(
                                                             (UnityEngine_Component_o *)data,
-                                                            (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                            (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
                                           if ( data )
                                           {
                                             UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)data, 0, 0LL);
@@ -512,7 +512,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                               if ( !v89 )
                                                 goto LABEL_159;
                                               v90 = this->fields.useCondSkillConfLabel;
-                                              v91 = SkillLvEntity__getDetail_40890048(v55, v89->fields.skilllv, 0, 0LL);
+                                              v91 = SkillLvEntity__getDetail_41099888(v55, v89->fields.skilllv, 0, 0LL);
                                               if ( isSetMinSize )
                                               {
                                                 v92 = BattleSkillConfComponent_TypeInfo;
@@ -583,7 +583,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                                 goto LABEL_159;
                                               data = (__int64)UnityEngine_Component__GetComponent_object_(
                                                                 (UnityEngine_Component_o *)data,
-                                                                (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                                (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
                                               if ( !data )
                                                 goto LABEL_159;
                                               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)data, 0, 0LL);
@@ -595,7 +595,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                                 goto LABEL_159;
                                               data = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                                                 (UnityEngine_GameObject_o *)data,
-                                                                (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                                                                (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Collider___);
                                               if ( !data )
                                                 goto LABEL_159;
                                               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)data, 1, 0LL);
@@ -604,7 +604,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                                                 goto LABEL_159;
                                               v99 = UnityEngine_GameObject__GetComponent_object_(
                                                       (UnityEngine_GameObject_o *)data,
-                                                      (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
+                                                      (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
                                               if ( v35 )
                                               {
                                                 data = (__int64)this->fields.okButton;
@@ -708,7 +708,7 @@ LABEL_154:
       }
     }
 LABEL_159:
-    sub_1BE4D28(data, v31);
+    sub_1C13F80(data, v31);
   }
   data = (__int64)this->fields.skillNameLabel;
   if ( !data )
@@ -739,7 +739,7 @@ LABEL_159:
     v45 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)data, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70452000(v45, 0LL);
+    UnityEngine_Object__Destroy_70721988(v45, 0LL);
   }
 }
 
@@ -803,24 +803,24 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
   int32_t CondItemNumber; // [xsp+Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B69DA2 & 1) == 0 )
+  if ( (byte_4BB78D6 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, method);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ItemMaster___, v3);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserItemMaster___, v4);
-    sub_1BE4ACC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v5);
-    sub_1BE4ACC(&int_TypeInfo, v6);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v7);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v8);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1BE4ACC(&Method_SingletonTemplate_BattleItemData__get_Instance__, v11);
-    sub_1BE4ACC(&string_TypeInfo, v12);
-    sub_1BE4ACC(&StringLiteral_21697/*"menu_txt_remaining"*/, v13);
-    sub_1BE4ACC(&StringLiteral_21698/*"menu_txt_spend"*/, v14);
-    sub_1BE4ACC(&StringLiteral_2944/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, v15);
-    sub_1BE4ACC(&StringLiteral_23684/*"skill_item_{0}"*/, v16);
-    byte_4B69DA2 = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, method);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v3);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserItemMaster___, v4);
+    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v5);
+    sub_1C13D24(&int_TypeInfo, v6);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v7);
+    sub_1C13D24(&NetworkManager_TypeInfo, v8);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C13D24(&Method_SingletonTemplate_BattleItemData__get_Instance__, v11);
+    sub_1C13D24(&string_TypeInfo, v12);
+    sub_1C13D24(&StringLiteral_21746/*"mediumspringgreen"*/, v13);
+    sub_1C13D24(&StringLiteral_21747/*"mediumturquoise"*/, v14);
+    sub_1C13D24(&StringLiteral_2947/*"BATTLE_LOSE"*/, v15);
+    sub_1C13D24(&StringLiteral_23737/*"simpleType"*/, v16);
+    byte_4BB78D6 = 1;
   }
   entity = 0LL;
   CondItemNumber = 0;
@@ -850,12 +850,12 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
   if ( !skillInfo )
     goto LABEL_92;
   UnityEngine_GameObject__SetActive(skillInfo, 1, 0LL);
-  skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !skillInfo )
     goto LABEL_92;
   skillInfo = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)skillInfo,
-                                            (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !this->fields.skillInfo )
     goto LABEL_92;
   v18 = (DataMasterBase_TMaster__TEntity__PKType__o *)skillInfo;
@@ -866,7 +866,7 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
           v18,
           &entity,
           (int32_t)skillInfo,
-          (const MethodInfo_31FD818 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+          (const MethodInfo_3238670 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     goto LABEL_28;
   useCondItemIcon = (UnityEngine_Object_o *)this->fields.useCondItemIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -886,7 +886,7 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
     goto LABEL_92;
   if ( LODWORD(entity[3].klass) == 35 )
   {
-    skillInfo = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38291E8 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+    skillInfo = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
     if ( !entity || !skillInfo )
       goto LABEL_92;
     v22 = BattleItemData__GetItemCountWithIdCheck((BattleItemData_o *)skillInfo, (int32_t)entity[1].klass, 0LL);
@@ -898,18 +898,18 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
   else
   {
 LABEL_28:
-    skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !skillInfo )
       goto LABEL_92;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)skillInfo,
-                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserItemMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B61717 )
+    if ( !byte_4BAF1E5 )
     {
-      sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-      byte_4B61717 = 1;
+      sub_1C13D24(&NetworkManager_TypeInfo, method);
+      byte_4BAF1E5 = 1;
     }
     skillInfo = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -943,7 +943,7 @@ LABEL_28:
         {
           m_CachedPtr = skillInfo[1].fields.m_CachedPtr;
           v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CachedPtr, v30, v31, v32);
-          v35 = System_String__Format((System_String_o *)StringLiteral_23684/*"skill_item_{0}"*/, v34, 0LL);
+          v35 = System_String__Format((System_String_o *)StringLiteral_23737/*"simpleType"*/, v34, 0LL);
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           AtlasManager__SetEventSprite(v33, v35, 0LL);
@@ -964,25 +964,25 @@ LABEL_28:
     {
       if ( v29 )
       {
-        skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        skillInfo = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !skillInfo )
           goto LABEL_92;
         skillInfo = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                   (DataManager_o *)skillInfo,
-                                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
         if ( !this->fields.skillInfo )
           goto LABEL_92;
         v36 = (ItemMaster_o *)skillInfo;
         skillInfo = (UnityEngine_GameObject_o *)BattleSkillInfoData__GetCondItemId(this->fields.skillInfo, 0LL);
         if ( !v36 )
           goto LABEL_92;
-        skillInfo = (UnityEngine_GameObject_o *)ItemMaster__GetItemData(v36, (int32_t)skillInfo, 0LL);
+        skillInfo = (UnityEngine_GameObject_o *)ItemMaster__GetItemData(v36, (int32_t)skillInfo, -1, 0LL);
         v40 = this->fields.useCondItemIcon;
         if ( skillInfo )
         {
           m_CachedPtr = skillInfo[1].fields.m_CachedPtr;
           v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CachedPtr, v37, v38, v39);
-          v42 = System_String__Format((System_String_o *)StringLiteral_23684/*"skill_item_{0}"*/, v41, 0LL);
+          v42 = System_String__Format((System_String_o *)StringLiteral_23737/*"simpleType"*/, v41, 0LL);
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           AtlasManager__SetEventSprite(v40, v42, 0LL);
@@ -1014,7 +1014,7 @@ LABEL_28:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2944/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, 0LL);
+      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2947/*"BATTLE_LOSE"*/, 0LL);
       m_CachedPtr = num;
       v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CachedPtr, v46, v47, v48);
       skillInfo = (UnityEngine_GameObject_o *)System_String__Format(v45, v49, 0LL);
@@ -1041,7 +1041,7 @@ LABEL_28:
         !v51) )
   {
 LABEL_92:
-    sub_1BE4D28(skillInfo, method);
+    sub_1C13F80(skillInfo, method);
   }
   UILabel__set_text(v51, (System_String_o *)skillInfo, 0LL);
 LABEL_79:
@@ -1053,7 +1053,7 @@ LABEL_79:
     v53 = this->fields.useCondItemLess;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v53, (System_String_o *)StringLiteral_21697/*"menu_txt_remaining"*/, 0LL);
+    AtlasManager__SetEventSprite(v53, (System_String_o *)StringLiteral_21746/*"mediumspringgreen"*/, 0LL);
   }
   useCondItemConsume = (UnityEngine_Object_o *)this->fields.useCondItemConsume;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1063,7 +1063,7 @@ LABEL_79:
     v55 = this->fields.useCondItemConsume;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v55, (System_String_o *)StringLiteral_21698/*"menu_txt_spend"*/, 0LL);
+    AtlasManager__SetEventSprite(v55, (System_String_o *)StringLiteral_21747/*"mediumturquoise"*/, 0LL);
   }
 }
 
@@ -1076,18 +1076,18 @@ void __fastcall BattleSkillConfComponent__ToEnableLabelCollider(
   UnityEngine_Component_o *skillConfLabel; // x0
   UnityEngine_Object_o *useCondSkillConfLabel; // x20
 
-  if ( (byte_4B69DA3 & 1) == 0 )
+  if ( (byte_4BB78D7 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_BoxCollider___, method);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B69DA3 = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_BoxCollider___, method);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BB78D7 = 1;
   }
   skillConfLabel = (UnityEngine_Component_o *)this->fields.skillConfLabel;
   if ( !skillConfLabel )
     goto LABEL_12;
   skillConfLabel = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 skillConfLabel,
-                                                (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
   if ( !skillConfLabel )
     goto LABEL_12;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)skillConfLabel, 1, 0LL);
@@ -1101,7 +1101,7 @@ void __fastcall BattleSkillConfComponent__ToEnableLabelCollider(
     {
       skillConfLabel = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     skillConfLabel,
-                                                    (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                                    (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
       if ( skillConfLabel )
       {
         UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)skillConfLabel, 1, 0LL);
@@ -1109,7 +1109,7 @@ void __fastcall BattleSkillConfComponent__ToEnableLabelCollider(
       }
     }
 LABEL_12:
-    sub_1BE4D28(skillConfLabel, method);
+    sub_1C13F80(skillConfLabel, method);
   }
 }
 
@@ -1118,12 +1118,12 @@ System_String_o *__fastcall BattleSkillConfComponent__get_closeBtnPath(
         BattleSkillConfComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B69DA4 & 1) == 0 )
+  if ( (byte_4BB78D8 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_17723/*"btn_close"*/, method);
-    byte_4B69DA4 = 1;
+    sub_1C13D24(&StringLiteral_17765/*"btn_bg_off"*/, method);
+    byte_4BB78D8 = 1;
   }
-  return (System_String_o *)StringLiteral_17723/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17765/*"btn_bg_off"*/;
 }
 
 
@@ -1137,12 +1137,12 @@ void __fastcall BattleSkillConfComponent__onClickCancel(BattleSkillConfComponent
   Il2CppObject *Component_object; // x20
   Il2CppObject *v9; // x20
 
-  if ( (byte_4B69DA0 & 1) == 0 )
+  if ( (byte_4BB78D4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___, v3);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B69DA0 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___, v3);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BB78D4 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1154,7 +1154,7 @@ void __fastcall BattleSkillConfComponent__onClickCancel(BattleSkillConfComponent
       goto LABEL_20;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          v7,
-                         (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___);
+                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v7 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1172,7 +1172,7 @@ void __fastcall BattleSkillConfComponent__onClickCancel(BattleSkillConfComponent
     {
       v9 = UnityEngine_GameObject__GetComponent_object_(
              v7,
-             (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v7 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0LL, 0LL);
@@ -1187,7 +1187,7 @@ LABEL_18:
       }
     }
 LABEL_20:
-    sub_1BE4D28(v7, v6);
+    sub_1C13F80(v7, v6);
   }
 }
 
@@ -1207,13 +1207,13 @@ void __fastcall BattleSkillConfComponent__onClickOK(BattleSkillConfComponent_o *
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
 
-  if ( (byte_4B69DA1 & 1) == 0 )
+  if ( (byte_4BB78D5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleSkillConfComponent_onClickOK__, method);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, v3);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___, v4);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B69DA1 = 1;
+    sub_1C13D24(&Method_BattleSkillConfComponent_onClickOK__, method);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, v3);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___, v4);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
+    byte_4BB78D5 = 1;
   }
   if ( this->fields.isPlaySkill )
   {
@@ -1221,9 +1221,9 @@ void __fastcall BattleSkillConfComponent__onClickOK(BattleSkillConfComponent_o *
     {
       v6 = Method_BattleSkillConfComponent_onClickOK__;
       if ( (*((_BYTE *)Method_BattleSkillConfComponent_onClickOK__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1BE4AE4(Method_BattleSkillConfComponent_onClickOK__);
-      v7 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v6, v6[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0LL);
+        v6 = (_QWORD *)sub_1C13D3C(Method_BattleSkillConfComponent_onClickOK__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C13D08(v6, v6[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0LL);
       this->fields.isPlayedSe = 1;
     }
     target = (UnityEngine_Object_o *)this->fields.target;
@@ -1236,7 +1236,7 @@ void __fastcall BattleSkillConfComponent__onClickOK(BattleSkillConfComponent_o *
         goto LABEL_27;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            v10,
-                           (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___);
+                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattlePerformancePlayer___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1255,10 +1255,10 @@ void __fastcall BattleSkillConfComponent__onClickOK(BattleSkillConfComponent_o *
       v10 = this->fields.target;
       if ( !v10 )
 LABEL_27:
-        sub_1BE4D28(v10, v9);
+        sub_1C13F80(v10, v9);
       v12 = UnityEngine_GameObject__GetComponent_object_(
               v10,
-              (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v12, 0LL, 0LL);
@@ -1277,9 +1277,9 @@ LABEL_27:
   {
     v13 = Method_BattleSkillConfComponent_onClickOK__;
     if ( (*((_BYTE *)Method_BattleSkillConfComponent_onClickOK__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1BE4AE4(Method_BattleSkillConfComponent_onClickOK__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v13, v13[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v14, 2, 0LL);
+      v13 = (_QWORD *)sub_1C13D3C(Method_BattleSkillConfComponent_onClickOK__);
+    v14 = (System_Reflection_MethodBase_o *)sub_1C13D08(v13, v13[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v14, 2, 0, 0LL);
     this->fields.isPlayedSe = 1;
   }
 }
@@ -1297,6 +1297,6 @@ void __fastcall BattleSkillConfComponent__setInit(
   PartyListViewItem_o *v7; // x7
 
   this->fields.data = data;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
   BattleWindowComponent__setInitData((BattleWindowComponent_o *)this, 2, 0.15, 0, 0LL);
 }

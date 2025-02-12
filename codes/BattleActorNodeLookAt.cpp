@@ -17,7 +17,7 @@ void __fastcall BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, cons
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.selfTransform = transform;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.selfTransform, (int64_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.selfTransform, (int64_t)transform, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -62,10 +62,10 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v42; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4B68EF9 & 1) == 0 )
+  if ( (byte_4BB6A3E & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B68EF9 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB6A3E = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
@@ -89,10 +89,10 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
       x = position.fields.x;
       y = position.fields.y;
       z = position.fields.z;
-      if ( !byte_4B612E3 )
+      if ( !byte_4BAEDA3 )
       {
-        sub_1BE4ACC(&System_Math_TypeInfo, v22);
-        byte_4B612E3 = 1;
+        sub_1C13D24(&System_Math_TypeInfo, v22);
+        byte_4BAEDA3 = 1;
       }
       v26 = v19 - x;
       v27 = v20 - y;
@@ -103,7 +103,7 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
         v39.fields.x = v26;
         v39.fields.y = v27;
         v39.fields.z = v21 - z;
-        v40 = UnityEngine_Quaternion__LookRotation_70390360(v39, 0LL);
+        v40 = UnityEngine_Quaternion__LookRotation_70660348(v39, 0LL);
         v28 = v40.fields.x;
         v29 = v40.fields.y;
         v30 = v40.fields.z;
@@ -128,7 +128,7 @@ void __fastcall BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this,
           goto LABEL_7;
         }
 LABEL_24:
-        sub_1BE4D28(selfTransform, v9);
+        sub_1C13F80(selfTransform, v9);
       }
     }
   }

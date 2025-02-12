@@ -32,7 +32,7 @@ void __fastcall CommandCodeSkillInfo__Set(
   UISprite_o *commandCodeIconBg; // x26
   int32_t klass; // w27
   UITexture_o *v28; // x26
-  UnityEngine_Object_o *Manager__loadCommandCodeTexture_38863232; // x23
+  UnityEngine_Object_o *Manager__loadCommandCodeTexture_39101624; // x23
   int64_t v30; // x2
   int32_t v31; // w3
   System_String_o *v32; // x4
@@ -49,32 +49,32 @@ void __fastcall CommandCodeSkillInfo__Set(
   float DetailObjHeight; // s1
   int v44; // s2
 
-  if ( (byte_4B65FF3 & 1) == 0 )
+  if ( (byte_4BB3B16 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommandCodeMaster___, v12);
-    sub_1BE4ACC(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v14);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
-    sub_1BE4ACC(&ServantAssetLoadManager_TypeInfo, v16);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1BE4ACC(&StringLiteral_23108/*"rarity"*/, v18);
-    sub_1BE4ACC(&StringLiteral_16331/*"_0"*/, v19);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v20);
-    byte_4B65FF3 = 1;
+    sub_1C13D24(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommandCodeMaster___, v12);
+    sub_1C13D24(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v14);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
+    sub_1C13D24(&ServantAssetLoadManager_TypeInfo, v16);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C13D24(&StringLiteral_23161/*"raid_down_last_"*/, v18);
+    sub_1C13D24(&StringLiteral_16375/*"^d"*/, v19);
+    sub_1C13D24(&StringLiteral_1/*""*/, v20);
+    byte_4BB3B16 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   if ( !Instance )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              commandCodeId,
-             (const MethodInfo_31FD7C4 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_3238624 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   if ( Entity )
   {
     v24 = Entity;
@@ -108,18 +108,18 @@ void __fastcall CommandCodeSkillInfo__Set(
       v28 = *p_CommandCodeIcon;
       if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-      Manager__loadCommandCodeTexture_38863232 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_38863232(
+      Manager__loadCommandCodeTexture_39101624 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_39101624(
                                                                            v28,
                                                                            commandCodeId,
                                                                            0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_38863232, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_39101624, 0LL, 0LL) )
       {
-        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_38863232;
-        sub_1BE4A70(
+        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_39101624;
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.CommandCodeIcon,
-          (int64_t)Manager__loadCommandCodeTexture_38863232,
+          (int64_t)Manager__loadCommandCodeTexture_39101624,
           v30,
           v31,
           v32,
@@ -133,10 +133,10 @@ void __fastcall CommandCodeSkillInfo__Set(
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
       RaritySpr = this->fields.RaritySpr;
       v37 = System_Int32__ToString((int)v24 + 64, 0LL);
-      Instance = System_String__Concat_62710068(
-                   (System_String_o *)StringLiteral_23108/*"rarity"*/,
+      Instance = System_String__Concat_62979204(
+                   (System_String_o *)StringLiteral_23161/*"raid_down_last_"*/,
                    v37,
-                   (System_String_o *)StringLiteral_16331/*"_0"*/,
+                   (System_String_o *)StringLiteral_16375/*"^d"*/,
                    0LL);
       if ( !RaritySpr )
         goto LABEL_36;
@@ -151,7 +151,7 @@ void __fastcall CommandCodeSkillInfo__Set(
       v39 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v24[3].klass;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47334904(v39, 0LL);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47526452(v39, 0LL);
       if ( !CommandCodeName )
         goto LABEL_36;
       UILabel__set_text(CommandCodeName, (System_String_o *)Instance, 0LL);
@@ -193,6 +193,6 @@ void __fastcall CommandCodeSkillInfo__Set(
       }
     }
 LABEL_36:
-    sub_1BE4D28(Instance, v22);
+    sub_1C13F80(Instance, v22);
   }
 }

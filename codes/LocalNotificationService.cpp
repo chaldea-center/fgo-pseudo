@@ -42,18 +42,18 @@ LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(c
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B683D6 & 1) == 0 )
+  if ( (byte_4BB5F0F & 1) == 0 )
   {
-    sub_1BE4ACC(&LocalNotificationService_TypeInfo, v1);
-    byte_4B683D6 = 1;
+    sub_1C13D24(&LocalNotificationService_TypeInfo, v1);
+    byte_4BB5F0F = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1BE4D18(LocalNotificationService_TypeInfo);
+    v3 = (Il2CppObject *)sub_1C13F70(LocalNotificationService_TypeInfo);
     System_Object___ctor(v3, 0LL);
     LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)LocalNotificationService_TypeInfo->static_fields,
       (int64_t)v3,
       v4,

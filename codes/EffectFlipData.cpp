@@ -18,13 +18,13 @@ void __fastcall EffectFlipData__Flip(
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_70474664(trEffect, 0.0, 180.0, 0.0, 0LL);
+    UnityEngine_Transform__Rotate_70744812(trEffect, 0.0, 180.0, 0.0, 0LL);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1BE4D28(this, trEffect);
+    sub_1C13F80(this, trEffect);
   *(UnityEngine_Vector3_o *)&v5 = UnityEngine_Transform__get_localScale(trEffect, 0LL);
   if ( this->fields.scaleX >= 1 )
     v5 = -v5;
@@ -57,6 +57,6 @@ void __fastcall EffectFlipData__OverwriteNodeName(
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1BE4A70((PartyOrganizationUtility_o *)baseNodeName, (int64_t)parentNodeName, v5, v6, v7, v8, v9, v10);
+    sub_1C13CC8((PartyOrganizationUtility_o *)baseNodeName, (int64_t)parentNodeName, v5, v6, v7, v8, v9, v10);
   }
 }

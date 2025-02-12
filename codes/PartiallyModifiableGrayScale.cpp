@@ -37,17 +37,17 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4B699E0 & 1) == 0 )
+  if ( (byte_4BB7514 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Graphics_TypeInfo, source);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_16458/*"_IsSet"*/, v8);
-    sub_1BE4ACC(&StringLiteral_16503/*"_OverTex"*/, v9);
-    sub_1BE4ACC(&StringLiteral_16549/*"_Size"*/, v10);
-    sub_1BE4ACC(&StringLiteral_16531/*"_Saturation"*/, v11);
-    sub_1BE4ACC(&StringLiteral_16588/*"_UVPosition"*/, v12);
-    this = (PartiallyModifiableGrayScale_o *)sub_1BE4ACC(&StringLiteral_16476/*"_MaskTex"*/, v13);
-    byte_4B699E0 = 1;
+    sub_1C13D24(&UnityEngine_Graphics_TypeInfo, source);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_16502/*"_Gradation"*/, v8);
+    sub_1C13D24(&StringLiteral_16547/*"_Offset"*/, v9);
+    sub_1C13D24(&StringLiteral_16593/*"_ScaleRatioC"*/, v10);
+    sub_1C13D24(&StringLiteral_16575/*"_ProjectorPos"*/, v11);
+    sub_1C13D24(&StringLiteral_16632/*"_TextureWidth"*/, v12);
+    this = (PartiallyModifiableGrayScale_o *)sub_1C13D24(&StringLiteral_16520/*"_L"*/, v13);
+    byte_4BB7514 = 1;
   }
   if ( !source )
     goto LABEL_46;
@@ -66,7 +66,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16476/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16520/*"_L"*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0LL);
   }
@@ -80,7 +80,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16503/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16547/*"_Offset"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0LL);
   }
@@ -88,35 +88,35 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   if ( !this
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16531/*"_Saturation"*/,
+          (System_String_o *)StringLiteral_16575/*"_ProjectorPos"*/,
           v6->fields.saturation,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL)
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16549/*"_Size"*/,
+          (System_String_o *)StringLiteral_16593/*"_ScaleRatioC"*/,
           v6->fields.radius,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL) )
   {
 LABEL_46:
-    sub_1BE4D28(this, source);
+    sub_1C13F80(this, source);
   }
   v30.fields.x = posX + 0.5;
   v30.fields.z = 0.0;
   v30.fields.w = 0.0;
   v30.fields.y = v15;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16588/*"_UVPosition"*/, v30, 0LL);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16632/*"_TextureWidth"*/, v30, 0LL);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   radius = v6->fields.radius;
-  v20 = (System_String_o *)StringLiteral_16458/*"_IsSet"*/;
+  v20 = (System_String_o *)StringLiteral_16502/*"_Gradation"*/;
   v21 = this;
   if ( radius >= 0.03 )
     v22 = this;
   else
     v22 = 0LL;
   if ( radius >= 0.03 )
-    v23 = StringLiteral_16458/*"_IsSet"*/;
+    v23 = StringLiteral_16502/*"_Gradation"*/;
   else
     v23 = 0LL;
   if ( radius < 0.03 )
@@ -166,5 +166,5 @@ LABEL_42:
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_70297960((UnityEngine_Texture_o *)source, destination, material, 0LL);
+  UnityEngine_Graphics__Blit_70567716((UnityEngine_Texture_o *)source, destination, material, 0LL);
 }

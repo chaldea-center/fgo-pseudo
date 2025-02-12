@@ -12,10 +12,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog___cctor(const MethodInfo *me
   struct MessageAndScrollDetailConfirmDialog_StaticFields *v10; // x9
   struct MessageAndScrollDetailConfirmDialog_StaticFields *v11; // x8
 
-  if ( (byte_4B69E18 & 1) == 0 )
+  if ( (byte_4BB7966 & 1) == 0 )
   {
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v1);
-    byte_4B69E18 = 1;
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v1);
+    byte_4BB7966 = 1;
   }
   static_fields = MessageAndScrollDetailConfirmDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MainTitleBasePos.fields.x = 0x4361000000000000LL;
@@ -44,8 +44,8 @@ void __fastcall MessageAndScrollDetailConfirmDialog___cctor(const MethodInfo *me
   v10->OkButtonBasePosTypeTwoAlternative.fields.z = 0.0;
   v11 = v3->static_fields;
   v11->DetailMessageBaseHeight = 1000;
-  *(_OWORD *)&v11->ButtonBaseSizeX = xmmword_BE3140;
-  *(_OWORD *)&v11->MainTitleFontSize = xmmword_BE2EE0;
+  *(_OWORD *)&v11->ButtonBaseSizeX = xmmword_BF7960;
+  *(_OWORD *)&v11->MainTitleFontSize = xmmword_BF7700;
 }
 
 
@@ -53,10 +53,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog___ctor(
         MessageAndScrollDetailConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B69E17 & 1) == 0 )
+  if ( (byte_4BB7965 & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B69E17 = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BB7965 = 1;
   }
   this->fields.isInitPanelDepth = 1;
   *(_QWORD *)&this->fields.onClickOkSeKind = 0x800000001LL;
@@ -95,15 +95,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize(
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v5 = inputCancelBtnWidth;
-  if ( (byte_4B69E0D & 1) == 0 )
+  if ( (byte_4BB795B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, inputCancelBtnWidth);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Nullable_int__GetValueOrDefault__, v9);
-    sub_1BE4ACC(&Method_System_Nullable_int__get_HasValue__, v10);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v11);
-    byte_4B69E0D = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, inputCancelBtnWidth);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v7);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v8);
+    sub_1C13D24(&Method_System_Nullable_int__GetValueOrDefault__, v9);
+    sub_1C13D24(&Method_System_Nullable_int__get_HasValue__, v10);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v11);
+    byte_4BB795B = 1;
   }
   okBtnLabel = (UnityEngine_Component_o *)this->fields.okBtnLabel;
   if ( !okBtnLabel )
@@ -120,10 +120,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize(
   v13 = (UnityEngine_GameObject_o *)okBtnLabel;
   Component_object = (UIWidget_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)okBtnLabel,
-                                     (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v15 = UnityEngine_GameObject__GetComponent_object_(
           v13,
-          (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -185,14 +185,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize(
       goto LABEL_45;
     okBtnLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)okBtnLabel,
-                                              (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     decideBtn = this->fields.decideBtn;
     if ( !decideBtn )
       goto LABEL_45;
     v20 = (UIWidget_o *)okBtnLabel;
     v21 = UnityEngine_GameObject__GetComponent_object_(
             decideBtn,
-            (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+            (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v20, 0LL, 0LL) )
@@ -240,14 +240,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize(
           return;
         }
 LABEL_45:
-        ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BE4D28)(okBtnLabel, inputCancelBtnWidth);
+        ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C13F80)(okBtnLabel, inputCancelBtnWidth);
       }
     }
   }
 }
 
 
-void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
+void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45389328(
         MessageAndScrollDetailConfirmDialog_o *this,
         System_Collections_Generic_Dictionary_string__object__o *script,
         const MethodInfo *method)
@@ -276,15 +276,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B69E0E & 1) == 0 )
+  if ( (byte_4BB795C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, script);
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v6);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_17958/*"cancelBtnWidth"*/, v8);
-    sub_1BE4ACC(&StringLiteral_18757/*"decideBtnWidth"*/, v9);
-    byte_4B69E0E = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, script);
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v6);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_18000/*"cameraRoll"*/, v8);
+    sub_1C13D24(&StringLiteral_18801/*"de-LI"*/, v9);
+    byte_4BB795C = 1;
   }
   okBtnLabel = (UnityEngine_Component_o *)this->fields.okBtnLabel;
   if ( !okBtnLabel )
@@ -301,10 +301,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
   v11 = (UnityEngine_GameObject_o *)okBtnLabel;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)okBtnLabel,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   v13 = UnityEngine_GameObject__GetComponent_object_(
           v11,
-          (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -317,7 +317,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
       okBtnLabel = (UnityEngine_Component_o *)MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                                                 (MessageAndScrollDetailConfirmDialog_o *)v14,
                                                 script,
-                                                (System_String_o *)StringLiteral_17958/*"cancelBtnWidth"*/,
+                                                (System_String_o *)StringLiteral_18000/*"cameraRoll"*/,
                                                 v15);
       v16 = (int)okBtnLabel;
       if ( !(_DWORD)okBtnLabel )
@@ -364,13 +364,13 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
       goto LABEL_43;
     okBtnLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)okBtnLabel,
-                                              (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !this->fields.decideBtn )
       goto LABEL_43;
     v19 = (UIWidget_o *)okBtnLabel;
     v20 = UnityEngine_GameObject__GetComponent_object_(
             this->fields.decideBtn,
-            (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+            (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0LL, 0LL) )
@@ -383,7 +383,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
         okBtnLabel = (UnityEngine_Component_o *)MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                                                   (MessageAndScrollDetailConfirmDialog_o *)v21,
                                                   script,
-                                                  (System_String_o *)StringLiteral_18757/*"decideBtnWidth"*/,
+                                                  (System_String_o *)StringLiteral_18801/*"de-LI"*/,
                                                   v22);
         v23 = (int)okBtnLabel;
         if ( !(_DWORD)okBtnLabel )
@@ -417,7 +417,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(
           }
         }
 LABEL_43:
-        sub_1BE4D28(okBtnLabel, script);
+        sub_1C13F80(okBtnLabel, script);
       }
     }
   }
@@ -465,11 +465,11 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel(
   MessageAndScrollDetailConfirmDialog_c *v41; // x0
 
   v19 = this;
-  if ( (byte_4B69E0A & 1) == 0 )
+  if ( (byte_4BB7958 & 1) == 0 )
   {
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, isNoMainTitle);
-    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1BE4ACC(&string_TypeInfo, v20);
-    byte_4B69E0A = 1;
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, isNoMainTitle);
+    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1C13D24(&string_TypeInfo, v20);
+    byte_4BB7958 = 1;
   }
   if ( isNoMainTitle )
   {
@@ -508,7 +508,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel(
     this = (MessageAndScrollDetailConfirmDialog_o *)v19->fields.noTitleMainMessageLabel;
     if ( !this )
 LABEL_46:
-      sub_1BE4D28(this, isNoMainTitle);
+      sub_1C13F80(this, isNoMainTitle);
   }
   this = (MessageAndScrollDetailConfirmDialog_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)this,
@@ -568,11 +568,11 @@ LABEL_46:
   UILabel__set_alignment(noTitleMainMessageLabel, mainMsgAlignment, 0LL);
   UILabel__set_alignment(noTitleDetailMessageLabel, detailMsgAlignment, 0LL);
   if ( mainMessage )
-    Empty = System_String__Trim_62728168(mainMessage, 0xAu, 0LL);
+    Empty = System_String__Trim_62997304(mainMessage, 0xAu, 0LL);
   else
     Empty = string_TypeInfo->static_fields->Empty;
   if ( detailMessage )
-    v37 = System_String__Trim_62728168(detailMessage, 0xAu, 0LL);
+    v37 = System_String__Trim_62997304(detailMessage, 0xAu, 0LL);
   else
     v37 = string_TypeInfo->static_fields->Empty;
   v38 = MessageAndScrollDetailConfirmDialog_TypeInfo;
@@ -624,7 +624,7 @@ LABEL_46:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45164920(
+void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45383724(
         MessageAndScrollDetailConfirmDialog_o *this,
         bool isNoMainTitle,
         bool isNoDetailTitle,
@@ -702,23 +702,23 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45
   x = detailMessagePos.fields.x;
   v13 = mainMessagePos.fields.z;
   v14 = mainMessagePos.fields.x;
-  if ( (byte_4B69E0B & 1) == 0 )
+  if ( (byte_4BB7959 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Enum_TryParse_NGUIText_Alignment___, isNoMainTitle);
-    sub_1BE4ACC(&System_Enum_TypeInfo, v21);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v22);
-    sub_1BE4ACC(&string_TypeInfo, v23);
-    sub_1BE4ACC(&StringLiteral_21553/*"mainMsgAlignment"*/, v24);
-    sub_1BE4ACC(&StringLiteral_21555/*"mainMsgOffset"*/, v25);
-    sub_1BE4ACC(&StringLiteral_21554/*"mainMsgFontSize"*/, v26);
-    sub_1BE4ACC(&StringLiteral_18842/*"detailMsgOffset"*/, v27);
-    sub_1BE4ACC(&StringLiteral_18841/*"detailMsgFontSize"*/, v28);
-    sub_1BE4ACC(&StringLiteral_18843/*"detailMsgSpacingY"*/, v29);
-    sub_1BE4ACC(&StringLiteral_18840/*"detailMsgAlignment"*/, v30);
-    sub_1BE4ACC(&StringLiteral_21552/*"mainMsg"*/, v31);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v32);
-    sub_1BE4ACC(&StringLiteral_21556/*"mainMsgSpacingY"*/, v33);
-    byte_4B69E0B = 1;
+    sub_1C13D24(&Method_System_Enum_TryParse_NGUIText_Alignment___, isNoMainTitle);
+    sub_1C13D24(&System_Enum_TypeInfo, v21);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v22);
+    sub_1C13D24(&string_TypeInfo, v23);
+    sub_1C13D24(&StringLiteral_21602/*"m_name"*/, v24);
+    sub_1C13D24(&StringLiteral_21604/*"m_type"*/, v25);
+    sub_1C13D24(&StringLiteral_21603/*"m_serializedStates"*/, v26);
+    sub_1C13D24(&StringLiteral_18886/*"descriptor.count"*/, v27);
+    sub_1C13D24(&StringLiteral_18885/*"description"*/, v28);
+    sub_1C13D24(&StringLiteral_18887/*"dest"*/, v29);
+    sub_1C13D24(&StringLiteral_18884/*"descender"*/, v30);
+    sub_1C13D24(&StringLiteral_21601/*"m_isReadOnly"*/, v31);
+    sub_1C13D24(&StringLiteral_1/*""*/, v32);
+    sub_1C13D24(&StringLiteral_21605/*"m_userToken"*/, v33);
+    byte_4BB7959 = 1;
   }
   result = 0;
   if ( isNoMainTitle )
@@ -737,7 +737,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45
     VecFromScript = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
                       gameObject,
                       script,
-                      (System_String_o *)StringLiteral_21555/*"mainMsgOffset"*/,
+                      (System_String_o *)StringLiteral_21604/*"m_type"*/,
                       v38);
     VecFromScript.fields.x = v14 + VecFromScript.fields.x;
     VecFromScript.fields.y = y + VecFromScript.fields.y;
@@ -763,7 +763,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45
     v75 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
             v40,
             script,
-            (System_String_o *)StringLiteral_21555/*"mainMsgOffset"*/,
+            (System_String_o *)StringLiteral_21604/*"m_type"*/,
             v41);
     v75.fields.x = v14 + v75.fields.x;
     v75.fields.y = v39 + v75.fields.y;
@@ -772,7 +772,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45
     mainMessageLabel = (UnityEngine_Component_o *)this->fields.noTitleMainMessageLabel;
     if ( !mainMessageLabel )
 LABEL_58:
-      sub_1BE4D28(mainMessageLabel, isNoMainTitle);
+      sub_1C13F80(mainMessageLabel, isNoMainTitle);
   }
   mainMessageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(mainMessageLabel, 0LL);
   if ( !mainMessageLabel )
@@ -794,7 +794,7 @@ LABEL_58:
     v76 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
             v44,
             script,
-            (System_String_o *)StringLiteral_18842/*"detailMsgOffset"*/,
+            (System_String_o *)StringLiteral_18886/*"descriptor.count"*/,
             v45);
     v76.fields.x = x + v76.fields.x;
     v76.fields.y = v43 + v76.fields.y;
@@ -820,7 +820,7 @@ LABEL_58:
     v77 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
             v47,
             script,
-            (System_String_o *)StringLiteral_18842/*"detailMsgOffset"*/,
+            (System_String_o *)StringLiteral_18886/*"descriptor.count"*/,
             v48);
     v77.fields.x = x + v77.fields.x;
     v77.fields.y = v46 + v77.fields.y;
@@ -847,14 +847,14 @@ LABEL_58:
   StringFromScript = MessageAndScrollDetailConfirmDialog__GetStringFromScript(
                        v49,
                        script,
-                       (System_String_o *)StringLiteral_21553/*"mainMsgAlignment"*/,
+                       (System_String_o *)StringLiteral_21602/*"m_name"*/,
                        v50);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   mainMessageLabel = (UnityEngine_Component_o *)System_Enum__TryParse_Int32Enum_(
                                                   StringFromScript,
                                                   &result,
-                                                  (const MethodInfo_2F60368 *)Method_System_Enum_TryParse_NGUIText_Alignment___);
+                                                  (const MethodInfo_2F95FB0 *)Method_System_Enum_TryParse_NGUIText_Alignment___);
   if ( ((unsigned __int8)mainMessageLabel & 1) != 0 )
   {
     if ( !noTitleMainMessageLabel )
@@ -864,14 +864,14 @@ LABEL_58:
   v53 = MessageAndScrollDetailConfirmDialog__GetStringFromScript(
           (MessageAndScrollDetailConfirmDialog_o *)mainMessageLabel,
           script,
-          (System_String_o *)StringLiteral_18840/*"detailMsgAlignment"*/,
+          (System_String_o *)StringLiteral_18884/*"descender"*/,
           v52);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   if ( System_Enum__TryParse_Int32Enum_(
          v53,
          &result,
-         (const MethodInfo_2F60368 *)Method_System_Enum_TryParse_NGUIText_Alignment___) )
+         (const MethodInfo_2F95FB0 *)Method_System_Enum_TryParse_NGUIText_Alignment___) )
   {
     UILabel__set_alignment(noTitleDetailMessageLabel, result, 0LL);
   }
@@ -880,15 +880,15 @@ LABEL_58:
     mainMessage = MessageAndScrollDetailConfirmDialog__GetStringFromScript(
                     (MessageAndScrollDetailConfirmDialog_o *)v54,
                     script,
-                    (System_String_o *)StringLiteral_21552/*"mainMsg"*/,
+                    (System_String_o *)StringLiteral_21601/*"m_isReadOnly"*/,
                     v55);
   if ( mainMessage )
   {
-    Empty = System_String__Trim_62728168(mainMessage, 0xAu, 0LL);
+    Empty = System_String__Trim_62997304(mainMessage, 0xAu, 0LL);
     if ( detailMessage )
     {
 LABEL_41:
-      v57 = System_String__Trim_62728168(detailMessage, 0xAu, 0LL);
+      v57 = System_String__Trim_62997304(detailMessage, 0xAu, 0LL);
       goto LABEL_44;
     }
   }
@@ -913,7 +913,7 @@ LABEL_44:
   IntFromScript = MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                     v58,
                     script,
-                    (System_String_o *)StringLiteral_21556/*"mainMsgSpacingY"*/,
+                    (System_String_o *)StringLiteral_21605/*"m_userToken"*/,
                     v59);
   UILabel__set_spacingY(noTitleMainMessageLabel, IntFromScript, 0LL);
   v61 = (MessageAndScrollDetailConfirmDialog_o *)WrapControlText__textAdjust(
@@ -925,7 +925,7 @@ LABEL_44:
   MainMessageFontSize = MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                           v61,
                           script,
-                          (System_String_o *)StringLiteral_21554/*"mainMsgFontSize"*/,
+                          (System_String_o *)StringLiteral_21603/*"m_serializedStates"*/,
                           v62);
   if ( MainMessageFontSize <= 0 )
   {
@@ -945,7 +945,7 @@ LABEL_44:
     v65 = MessageAndScrollDetailConfirmDialog_TypeInfo;
   }
   UILabel__set_fontSize(noTitleDetailMessageLabel, v65->static_fields->DetailMessageFontSize, 0LL);
-  v68 = MessageAndScrollDetailConfirmDialog__GetIntFromScript(v66, script, (System_String_o *)StringLiteral_18843/*"detailMsgSpacingY"*/, v67);
+  v68 = MessageAndScrollDetailConfirmDialog__GetIntFromScript(v66, script, (System_String_o *)StringLiteral_18887/*"dest"*/, v67);
   UILabel__set_spacingY(noTitleDetailMessageLabel, v68, 0LL);
   v69 = (MessageAndScrollDetailConfirmDialog_o *)WrapControlText__textAdjust(
                                                    noTitleDetailMessageLabel,
@@ -956,7 +956,7 @@ LABEL_44:
   DetailMessageFontSize = MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                             v69,
                             script,
-                            (System_String_o *)StringLiteral_18841/*"detailMsgFontSize"*/,
+                            (System_String_o *)StringLiteral_18885/*"description"*/,
                             v70);
   if ( DetailMessageFontSize <= 0 )
   {
@@ -998,22 +998,22 @@ void __fastcall MessageAndScrollDetailConfirmDialog__ChangeSummonSceneByGachaId(
   TerminalPramsManager_c *v12; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B69E0F & 1) == 0 )
+  if ( (byte_4BB795D & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMaster_GachaMaster___, *(_QWORD *)&gachaId);
-    sub_1BE4ACC(&DataManager_TypeInfo, v4);
-    sub_1BE4ACC(&Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v7);
-    byte_4B69E0F = 1;
+    sub_1C13D24(&Method_DataManager_GetMaster_GachaMaster___, *(_QWORD *)&gachaId);
+    sub_1C13D24(&DataManager_TypeInfo, v4);
+    sub_1C13D24(&Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BB795D = 1;
   }
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B632FF )
+  if ( !byte_4BB0E16 )
   {
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, *(_QWORD *)&gachaId);
-    byte_4B632FF = 1;
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&gachaId);
+    byte_4BB0E16 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1024,14 +1024,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__ChangeSummonSceneByGachaId(
   v8->static_fields->_SummonType_k__BackingField = 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_GachaMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_GachaMaster___);
   if ( !Master_object )
     goto LABEL_23;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     gachaId,
-                                    (const MethodInfo_31FD818 *)Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3238670 *)Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( !entity )
@@ -1039,10 +1039,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__ChangeSummonSceneByGachaId(
     klass = (int32_t)entity[3].klass;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B632FF )
+    if ( !byte_4BB0E16 )
     {
-      sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v10);
-      byte_4B632FF = 1;
+      sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
+      byte_4BB0E16 = 1;
     }
     v12 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1052,10 +1052,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__ChangeSummonSceneByGachaId(
     }
     v12->static_fields->_SummonType_k__BackingField = klass;
   }
-  Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Master_object )
 LABEL_23:
-    sub_1BE4D28(Master_object, v10);
+    sub_1C13F80(Master_object, v10);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Master_object, 20, 1, 0LL, 0LL);
 }
 
@@ -1083,13 +1083,13 @@ LABEL_8:
     || (this = (MessageAndScrollDetailConfirmDialog_o *)System_String__Split((System_String_o *)this, 0x2Cu, 0, 0LL)) == 0LL )
   {
 LABEL_10:
-    sub_1BE4D28(this, linkInfo);
+    sub_1C13F80(this, linkInfo);
   }
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource )
     goto LABEL_8;
   if ( !(_DWORD)m_CancellationTokenSource )
-    sub_1BE4D30(this, linkInfo);
+    sub_1C13F88(this, linkInfo);
   this = (MessageAndScrollDetailConfirmDialog_o *)System_Int32__TryParse(
                                                     (System_String_o *)this->fields.basePanel,
                                                     &result,
@@ -1106,7 +1106,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  MessageAndScrollDetailConfirmDialog__Close_45171604(this, 0LL, v2);
+  MessageAndScrollDetailConfirmDialog__Close_45390408(this, 0LL, v2);
 }
 
 
@@ -1135,15 +1135,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog__CloseFuncDialog(
   PartyOrganizationUtility_o *p_TransitionScrollTabName_k__BackingField; // x0
   const MethodInfo *v21; // x2
 
-  if ( (byte_4B69E09 & 1) == 0 )
+  if ( (byte_4BB7957 & 1) == 0 )
   {
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, result);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v9);
-    byte_4B69E09 = 1;
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, result);
+    sub_1C13D24(&StringLiteral_1/*""*/, v9);
+    byte_4BB7957 = 1;
   }
   closeNotificationCallback = this->fields.closeNotificationCallback;
   this->fields.closeNotificationCallback = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.closeNotificationCallback,
     0LL,
     (int64_t)method,
@@ -1155,10 +1155,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__CloseFuncDialog(
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   v18 = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-  if ( !byte_4B618AB )
+  if ( !byte_4BAF379 )
   {
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v11);
-    byte_4B618AB = 1;
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v11);
+    byte_4BAF379 = 1;
   }
   v19 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1168,12 +1168,12 @@ void __fastcall MessageAndScrollDetailConfirmDialog__CloseFuncDialog(
   }
   p_TransitionScrollTabName_k__BackingField = (PartyOrganizationUtility_o *)&v19->static_fields->_TransitionScrollTabName_k__BackingField;
   p_TransitionScrollTabName_k__BackingField->klass = v18;
-  sub_1BE4A70(p_TransitionScrollTabName_k__BackingField, (int64_t)v18, v12, v13, v14, v15, v16, v17);
-  MessageAndScrollDetailConfirmDialog__Close_45171604(this, closeNotificationCallback, v21);
+  sub_1C13CC8(p_TransitionScrollTabName_k__BackingField, (int64_t)v18, v12, v13, v14, v15, v16, v17);
+  MessageAndScrollDetailConfirmDialog__Close_45390408(this, closeNotificationCallback, v21);
 }
 
 
-void __fastcall MessageAndScrollDetailConfirmDialog__Close_45171604(
+void __fastcall MessageAndScrollDetailConfirmDialog__Close_45390408(
         MessageAndScrollDetailConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -1186,14 +1186,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Close_45171604(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4B69E14 & 1) == 0 )
+  if ( (byte_4BB7962 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, callback);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_EndClose__, v10);
-    byte_4B69E14 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, callback);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_EndClose__, v10);
+    byte_4BB7962 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.closeEndFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -1203,7 +1203,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Close_45171604(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_MessageAndScrollDetailConfirmDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -1226,8 +1226,8 @@ void __fastcall MessageAndScrollDetailConfirmDialog__DeicedFuncDialog(
   decideNotificationCallback = this->fields.decideNotificationCallback;
   p_decideNotificationCallback = (PartyOrganizationUtility_o *)&this->fields.decideNotificationCallback;
   p_decideNotificationCallback->klass = 0LL;
-  sub_1BE4A70(p_decideNotificationCallback, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
-  MessageAndScrollDetailConfirmDialog__Close_45171604(this, decideNotificationCallback, v11);
+  sub_1C13CC8(p_decideNotificationCallback, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+  MessageAndScrollDetailConfirmDialog__Close_45390408(this, decideNotificationCallback, v11);
 }
 
 
@@ -1252,7 +1252,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__EndClose(
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0LL;
-    sub_1BE4A70(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C13CC8(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -1278,22 +1278,22 @@ int32_t __fastcall MessageAndScrollDetailConfirmDialog__GetIntFromScript(
   Il2CppObject *v7; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B69E13 & 1) == 0 )
+  if ( (byte_4BB7961 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Convert_TypeInfo, script);
-    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1BE4ACC(
+    sub_1C13D24(&System_Convert_TypeInfo, script);
+    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1C13D24(
                                                       &Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__,
                                                       v6);
-    byte_4B69E13 = 1;
+    byte_4BB7961 = 1;
   }
   value = 0LL;
   if ( !script )
-    sub_1BE4D28(this, script);
+    sub_1C13F80(this, script);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_32B1A30 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_32F41BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return 0;
   v7 = value;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -1312,21 +1312,21 @@ System_String_o *__fastcall MessageAndScrollDetailConfirmDialog__GetStringFromSc
   __int64 v7; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B69E12 & 1) == 0 )
+  if ( (byte_4BB7960 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, script);
-    sub_1BE4ACC(&string_TypeInfo, v6);
-    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v7);
-    byte_4B69E12 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, script);
+    sub_1C13D24(&string_TypeInfo, v6);
+    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1C13D24(&StringLiteral_1/*""*/, v7);
+    byte_4BB7960 = 1;
   }
   value = 0LL;
   if ( !script )
-    sub_1BE4D28(this, script);
+    sub_1C13F80(this, script);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_32B1A30 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_32F41BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !value )
     return 0LL;
@@ -1345,19 +1345,19 @@ System_String_array *__fastcall MessageAndScrollDetailConfirmDialog__GetTransiti
   System_String_o *StringValue; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B69E10 & 1) == 0 )
+  if ( (byte_4BB795E & 1) == 0 )
   {
-    sub_1BE4ACC(&string_TypeInfo, script);
-    sub_1BE4ACC(&StringLiteral_24386/*"transitionParam"*/, v4);
-    byte_4B69E10 = 1;
+    sub_1C13D24(&string_TypeInfo, script);
+    sub_1C13D24(&StringLiteral_24441/*"tradeGoodsId"*/, v4);
+    byte_4BB795E = 1;
   }
   StringValue = EntityScriptUtil__GetStringValue(
                   script,
-                  (System_String_o *)StringLiteral_24386/*"transitionParam"*/,
+                  (System_String_o *)StringLiteral_24441/*"tradeGoodsId"*/,
                   string_TypeInfo->static_fields->Empty,
                   0LL);
   if ( !StringValue )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   return System_String__Split(StringValue, 0x2Fu, 0, 0LL);
 }
 
@@ -1386,23 +1386,23 @@ UnityEngine_Vector3_o __fastcall MessageAndScrollDetailConfirmDialog__GetVecFrom
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B69E11 & 1) == 0 )
+  if ( (byte_4BB795F & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Convert_TypeInfo, script);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_object__get_Count__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_object__get_Item__, v8);
-    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1BE4ACC(&System_Collections_Generic_List_object__TypeInfo, v9);
-    byte_4B69E11 = 1;
+    sub_1C13D24(&System_Convert_TypeInfo, script);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_object__get_Count__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_object__get_Item__, v8);
+    this = (MessageAndScrollDetailConfirmDialog_o *)sub_1C13D24(&System_Collections_Generic_List_object__TypeInfo, v9);
+    byte_4BB795F = 1;
   }
   value = 0LL;
   if ( !script )
-    sub_1BE4D28(this, script);
+    sub_1C13F80(this, script);
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          (System_Collections_Generic_Dictionary_object__object__o *)script,
          (Il2CppObject *)key,
          &value,
-         (const MethodInfo_32B1A30 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
+         (const MethodInfo_32F41BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
     && (v11 = value) != 0LL
     && (methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(value->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low)
@@ -1412,14 +1412,14 @@ UnityEngine_Vector3_o __fastcall MessageAndScrollDetailConfirmDialog__GetVecFrom
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)value,
              0,
-             (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_object__get_Item__);
+             (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_object__get_Item__);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     v18 = System_Convert__ToDouble(Item, 0LL);
     v19 = System_Collections_Generic_List_object___get_Item(
             (System_Collections_Generic_List_object__o *)v11,
             1,
-            (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_object__get_Item__);
+            (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_object__get_Item__);
     v20 = System_Convert__ToDouble(v19, 0LL);
     x = v18;
     y = v20;
@@ -1427,10 +1427,10 @@ UnityEngine_Vector3_o __fastcall MessageAndScrollDetailConfirmDialog__GetVecFrom
   }
   else
   {
-    if ( !byte_4B612E1 )
+    if ( !byte_4BAEDA1 )
     {
-      sub_1BE4ACC(&UnityEngine_Vector3_TypeInfo, v10);
-      byte_4B612E1 = 1;
+      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v10);
+      byte_4BAEDA1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -1450,10 +1450,10 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Init(
 {
   UILabel_o *mainTitleLabel; // x0
 
-  if ( (byte_4B69E04 & 1) == 0 )
+  if ( (byte_4BB7952 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_1/*""*/, method);
-    byte_4B69E04 = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, method);
+    byte_4BB7952 = 1;
   }
   if ( !this->fields.refuseInit )
   {
@@ -1487,7 +1487,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Init(
           (mainTitleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
 LABEL_14:
-      sub_1BE4D28(mainTitleLabel, method);
+      sub_1C13F80(mainTitleLabel, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mainTitleLabel, 0, 0LL);
     BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -1503,18 +1503,18 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct MessageAndScrollDetailConfirmDialog_ClickDelegate_o *clickDecideBtnFunc; // x8
 
-  if ( (byte_4B69E16 & 1) == 0 )
+  if ( (byte_4BB7964 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__, method);
-    byte_4B69E16 = 1;
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__, method);
+    byte_4BB7964 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickDecideSeKind, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_MessageAndScrollDetailConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickDecideSeKind, 0, 0LL);
     clickDecideBtnFunc = this->fields.clickDecideBtnFunc;
     if ( clickDecideBtnFunc )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickDecideBtnFunc->fields.m_target)(
@@ -1533,18 +1533,18 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OnClickOk(
   System_Reflection_MethodBase_o *v4; // x0
   struct MessageAndScrollDetailConfirmDialog_ClickDelegate_o *clickOkBtnFunc; // x8
 
-  if ( (byte_4B69E15 & 1) == 0 )
+  if ( (byte_4BB7963 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_OnClickOk__, method);
-    byte_4B69E15 = 1;
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_OnClickOk__, method);
+    byte_4BB7963 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_MessageAndScrollDetailConfirmDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_MessageAndScrollDetailConfirmDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BE4AE4(Method_MessageAndScrollDetailConfirmDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickOkSeKind, 0LL);
+      v3 = (_QWORD *)sub_1C13D3C(Method_MessageAndScrollDetailConfirmDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickOkSeKind, 0, 0LL);
     clickOkBtnFunc = this->fields.clickOkBtnFunc;
     if ( clickOkBtnFunc )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickOkBtnFunc->fields.m_target)(
@@ -1577,14 +1577,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Open(
   const MethodInfo *v22; // x3
   const MethodInfo *v23; // [xsp+30h] [xbp-80h]
 
-  if ( (byte_4B69E05 & 1) == 0 )
+  if ( (byte_4BB7953 & 1) == 0 )
   {
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, mainTitle);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_CloseFuncDialog__, v20);
-    byte_4B69E05 = 1;
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, mainTitle);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_CloseFuncDialog__, v20);
+    byte_4BB7953 = 1;
   }
   this->fields.closeNotificationCallback = func;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.closeNotificationCallback,
     (int64_t)func,
     (int64_t)mainMessage,
@@ -1593,13 +1593,13 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Open(
     (BattleSetupInfo_o *)func,
     (FollowerInfo_o *)script,
     *(PartyListViewItem_o **)&panelDepth);
-  v21 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1BE4D18(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
+  v21 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1C13F70(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
   MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
     v21,
     (Il2CppObject *)this,
     Method_MessageAndScrollDetailConfirmDialog_CloseFuncDialog__,
     v22);
-  MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
+  MessageAndScrollDetailConfirmDialog__OpenDialog_45376352(
     this,
     mainTitle,
     mainMessage,
@@ -1737,22 +1737,22 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog(
 
   v24 = detailTitleFontSize;
   v25 = mainTitleFontSize;
-  if ( (byte_4B69E07 & 1) == 0 )
+  if ( (byte_4BB7955 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, mainTitle);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, v30);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v31);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__, v32);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_EndOpen__, v33);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v34);
-    sub_1BE4ACC(&Method_System_Nullable_float__GetValueOrDefault__, v35);
-    sub_1BE4ACC(&Method_System_Nullable_float__get_HasValue__, v36);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v37);
-    sub_1BE4ACC(&StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, v38);
-    sub_1BE4ACC(&StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, v39);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v40);
-    sub_1BE4ACC(&StringLiteral_15859/*"Window/OkBtn"*/, v41);
-    byte_4B69E07 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, mainTitle);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, v30);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v31);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__, v32);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_EndOpen__, v33);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v34);
+    sub_1C13D24(&Method_System_Nullable_float__GetValueOrDefault__, v35);
+    sub_1C13D24(&Method_System_Nullable_float__get_HasValue__, v36);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v37);
+    sub_1C13D24(&StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, v38);
+    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v39);
+    sub_1C13D24(&StringLiteral_1/*""*/, v40);
+    sub_1C13D24(&StringLiteral_15895/*"Window"*/, v41);
+    byte_4BB7955 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
   isInitPanelDepth = this->fields.isInitPanelDepth;
@@ -1773,7 +1773,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog(
     }
   }
   this->fields.clickOkBtnFunc = okFunc;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.clickOkBtnFunc, (int64_t)okFunc, v43, v44, v45, v46, v47, v48);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.clickOkBtnFunc, (int64_t)okFunc, v43, v44, v45, v46, v47, v48);
   if ( mainTitleFontSize <= 0 )
   {
     v53 = MessageAndScrollDetailConfirmDialog_TypeInfo;
@@ -1869,7 +1869,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog(
   mainTitleLabel = this->fields.detailTitleLabel;
   if ( !mainTitleLabel )
 LABEL_92:
-    sub_1BE4D28(mainTitleLabel, keepPanelDepth);
+    sub_1C13F80(mainTitleLabel, keepPanelDepth);
   v68 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mainTitleLabel, 0LL);
   v118.fields.y = va;
   v118.fields.x = v65;
@@ -1908,14 +1908,14 @@ LABEL_92:
       if ( !mainTitleLabel )
         goto LABEL_92;
       UILabel__set_text(mainTitleLabel, decideBtnLabelName, 0LL);
-      v72 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1BE4D18(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
+      v72 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1C13F70(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
       MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
         v72,
         (Il2CppObject *)this,
         Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__,
         v73);
       this->fields.clickDecideBtnFunc = v72;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields.clickDecideBtnFunc,
         (int64_t)v72,
         v74,
@@ -1933,7 +1933,7 @@ LABEL_92:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, 0LL);
         v63 = (System_String_o *)mainTitleLabel;
       }
       if ( !v80 )
@@ -1974,7 +1974,7 @@ LABEL_92:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
         v63 = (System_String_o *)mainTitleLabel;
       }
       if ( !v90 )
@@ -2045,7 +2045,7 @@ LABEL_92:
         goto LABEL_92;
       v97 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                       (UnityEngine_Transform_o *)mainTitleLabel,
-                                      (System_String_o *)StringLiteral_15859/*"Window/OkBtn"*/,
+                                      (System_String_o *)StringLiteral_15895/*"Window"*/,
                                       0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2058,7 +2058,7 @@ LABEL_92:
           this->fields.closeButton = v98;
           p_closeButton = &this->fields.closeButton;
 LABEL_90:
-          sub_1BE4A70((PartyOrganizationUtility_o *)p_closeButton, (int64_t)v98, v99, v100, v101, v102, v103, v104);
+          sub_1C13CC8((PartyOrganizationUtility_o *)p_closeButton, (int64_t)v98, v99, v100, v101, v102, v103, v104);
           goto LABEL_91;
         }
         goto LABEL_92;
@@ -2082,13 +2082,13 @@ LABEL_90:
     }
   }
 LABEL_91:
-  v107 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v107 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v107, (Il2CppObject *)this, Method_MessageAndScrollDetailConfirmDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v107, 0, 0LL);
 }
 
 
-void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
+void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45376352(
         MessageAndScrollDetailConfirmDialog_o *this,
         System_String_o *mainTitle,
         System_String_o *mainMessage,
@@ -2241,31 +2241,31 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
   UnityEngine_Vector3_o v155; // 0:s3.4,4:s4.4,8:s5.4
 
   v18 = mainTitle;
-  if ( (byte_4B69E08 & 1) == 0 )
+  if ( (byte_4BB7956 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, mainTitle);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, v20);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v21);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__, v22);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_EndOpen__, v23);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_TypeInfo, v24);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v25);
-    sub_1BE4ACC(&StringLiteral_21561/*"mainTitleFontSize"*/, v26);
-    sub_1BE4ACC(&StringLiteral_18755/*"decideBtnFontSize"*/, v27);
-    sub_1BE4ACC(&StringLiteral_18845/*"detailTitleFontSize"*/, v28);
-    sub_1BE4ACC(&StringLiteral_18844/*"detailTitle"*/, v29);
-    sub_1BE4ACC(&StringLiteral_21560/*"mainTitle"*/, v30);
-    sub_1BE4ACC(&StringLiteral_18846/*"detailTitleOffset"*/, v31);
-    sub_1BE4ACC(&StringLiteral_17956/*"cancelBtnFontSize"*/, v32);
-    sub_1BE4ACC(&StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, v33);
-    sub_1BE4ACC(&StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, v34);
-    sub_1BE4ACC(&StringLiteral_18756/*"decideBtnLabel"*/, v35);
-    sub_1BE4ACC(&StringLiteral_17957/*"cancelBtnLabel"*/, v36);
-    sub_1BE4ACC(&StringLiteral_17874/*"buttonOffset"*/, v37);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v38);
-    sub_1BE4ACC(&StringLiteral_15859/*"Window/OkBtn"*/, v39);
-    sub_1BE4ACC(&StringLiteral_21562/*"mainTitleOffset"*/, v40);
-    byte_4B69E08 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, mainTitle);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, v20);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v21);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__, v22);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_EndOpen__, v23);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_TypeInfo, v24);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v25);
+    sub_1C13D24(&StringLiteral_21610/*"mailto"*/, v26);
+    sub_1C13D24(&StringLiteral_18799/*"de-CH"*/, v27);
+    sub_1C13D24(&StringLiteral_18889/*"destIdx"*/, v28);
+    sub_1C13D24(&StringLiteral_18888/*"destFileName"*/, v29);
+    sub_1C13D24(&StringLiteral_21609/*"mail"*/, v30);
+    sub_1C13D24(&StringLiteral_18890/*"dest_buffer"*/, v31);
+    sub_1C13D24(&StringLiteral_17998/*"cameraMove"*/, v32);
+    sub_1C13D24(&StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, v33);
+    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v34);
+    sub_1C13D24(&StringLiteral_18800/*"de-DE"*/, v35);
+    sub_1C13D24(&StringLiteral_17999/*"cameraMoveEase"*/, v36);
+    sub_1C13D24(&StringLiteral_17916/*"buddy_bg_at"*/, v37);
+    sub_1C13D24(&StringLiteral_1/*""*/, v38);
+    sub_1C13D24(&StringLiteral_15895/*"Window"*/, v39);
+    sub_1C13D24(&StringLiteral_21611/*"mailto:"*/, v40);
+    byte_4BB7956 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
   isInitPanelDepth = this->fields.isInitPanelDepth;
@@ -2286,7 +2286,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
     }
   }
   this->fields.clickOkBtnFunc = okFunc;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.clickOkBtnFunc, (int64_t)okFunc, v42, v43, v44, v45, v46, v47);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.clickOkBtnFunc, (int64_t)okFunc, v42, v43, v44, v45, v46, v47);
   if ( mainTitleFontSize )
   {
     IntFromScript = 0;
@@ -2296,7 +2296,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
     IntFromScript = MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                       v52,
                       script,
-                      (System_String_o *)StringLiteral_21561/*"mainTitleFontSize"*/,
+                      (System_String_o *)StringLiteral_21610/*"mailto"*/,
                       v53);
     if ( IntFromScript <= 0 )
     {
@@ -2320,7 +2320,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
     mainTitleLabel = (UILabel_o *)MessageAndScrollDetailConfirmDialog__GetStringFromScript(
                                     (MessageAndScrollDetailConfirmDialog_o *)mainTitleLabel,
                                     script,
-                                    (System_String_o *)StringLiteral_21560/*"mainTitle"*/,
+                                    (System_String_o *)StringLiteral_21609/*"mail"*/,
                                     v57);
     v18 = (System_String_o *)mainTitleLabel;
   }
@@ -2347,7 +2347,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
   VecFromScript = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
                     gameObject,
                     script,
-                    (System_String_o *)StringLiteral_21562/*"mainTitleOffset"*/,
+                    (System_String_o *)StringLiteral_21611/*"mailto:"*/,
                     v59);
   VecFromScript.fields.x = v63 + VecFromScript.fields.x;
   VecFromScript.fields.y = v64 + VecFromScript.fields.y;
@@ -2358,7 +2358,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
     IntFromScript = MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                       v66,
                       script,
-                      (System_String_o *)StringLiteral_18845/*"detailTitleFontSize"*/,
+                      (System_String_o *)StringLiteral_18889/*"destIdx"*/,
                       v67);
     if ( IntFromScript <= 0 )
     {
@@ -2382,7 +2382,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
     mainTitleLabel = (UILabel_o *)MessageAndScrollDetailConfirmDialog__GetStringFromScript(
                                     (MessageAndScrollDetailConfirmDialog_o *)mainTitleLabel,
                                     script,
-                                    (System_String_o *)StringLiteral_18844/*"detailTitle"*/,
+                                    (System_String_o *)StringLiteral_18888/*"destFileName"*/,
                                     v70);
     detailTitle = (System_String_o *)mainTitleLabel;
   }
@@ -2406,7 +2406,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
   v76 = v75[9];
   v77 = v75[10];
   v78 = v75[11];
-  v152 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(v71, script, (System_String_o *)StringLiteral_18846/*"detailTitleOffset"*/, v72);
+  v152 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(v71, script, (System_String_o *)StringLiteral_18890/*"dest_buffer"*/, v72);
   v152.fields.x = v76 + v152.fields.x;
   v152.fields.y = v77 + v152.fields.y;
   v152.fields.z = v78 + v152.fields.z;
@@ -2425,7 +2425,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__OpenDialog_45157548(
   v87 = this->fields.detailTitleLabel;
   if ( !v87 )
 LABEL_99:
-    sub_1BE4D28(mainTitleLabel, monitor_high);
+    sub_1C13F80(mainTitleLabel, monitor_high);
   v88 = (char)mainTitleLabel;
   IsNullOrEmpty = System_String__IsNullOrEmpty(v87->fields.mText, 0LL);
   v153.fields.x = x;
@@ -2434,7 +2434,7 @@ LABEL_99:
   v155.fields.x = v84;
   v155.fields.y = v85;
   v155.fields.z = v86;
-  MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45164920(
+  MessageAndScrollDetailConfirmDialog__AdjustScriptMessageLabel_45383724(
     this,
     v88 & 1,
     IsNullOrEmpty,
@@ -2454,12 +2454,12 @@ LABEL_99:
     StringFromScript = (MessageAndScrollDetailConfirmDialog_o *)MessageAndScrollDetailConfirmDialog__GetStringFromScript(
                                                                   (MessageAndScrollDetailConfirmDialog_o *)v92,
                                                                   script,
-                                                                  (System_String_o *)StringLiteral_18756/*"decideBtnLabel"*/,
+                                                                  (System_String_o *)StringLiteral_18800/*"de-DE"*/,
                                                                   v93);
     v96 = MessageAndScrollDetailConfirmDialog__GetStringFromScript(
             StringFromScript,
             script,
-            (System_String_o *)StringLiteral_17957/*"cancelBtnLabel"*/,
+            (System_String_o *)StringLiteral_17999/*"cameraMoveEase"*/,
             v95);
     if ( System_String__op_Inequality((System_String_o *)StringFromScript, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
@@ -2474,7 +2474,7 @@ LABEL_99:
       mainTitleLabel = (UILabel_o *)MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                                       v97,
                                       script,
-                                      (System_String_o *)StringLiteral_18755/*"decideBtnFontSize"*/,
+                                      (System_String_o *)StringLiteral_18799/*"de-CH"*/,
                                       v98);
       decideBtnLabel = this->fields.decideBtnLabel;
       monitor_high = (unsigned int)mainTitleLabel;
@@ -2493,7 +2493,7 @@ LABEL_99:
       UILabel__set_fontSize(decideBtnLabel, monitor_high, 0LL);
       v101 = MessageAndScrollDetailConfirmDialog__SetTransitionFunc(this, script, v100);
       this->fields.decideNotificationCallback = v101;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields.decideNotificationCallback,
         (int64_t)v101,
         v102,
@@ -2502,14 +2502,14 @@ LABEL_99:
         v105,
         v106,
         v107);
-      v108 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1BE4D18(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
+      v108 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1C13F70(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
       MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
         v108,
         (Il2CppObject *)this,
         Method_MessageAndScrollDetailConfirmDialog_DeicedFuncDialog__,
         v109);
       this->fields.clickDecideBtnFunc = v108;
-      sub_1BE4A70(
+      sub_1C13CC8(
         (PartyOrganizationUtility_o *)&this->fields.clickDecideBtnFunc,
         (int64_t)v108,
         v110,
@@ -2524,7 +2524,7 @@ LABEL_99:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3795/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMAND_TYPE_NAME_{0}"*/, 0LL);
         v96 = (System_String_o *)mainTitleLabel;
       }
       if ( !v116 )
@@ -2562,7 +2562,7 @@ LABEL_99:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3796/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+        mainTitleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
         v96 = (System_String_o *)mainTitleLabel;
       }
       if ( !v125 )
@@ -2598,7 +2598,7 @@ LABEL_99:
     v154 = MessageAndScrollDetailConfirmDialog__GetVecFromScript(
              v117,
              script,
-             (System_String_o *)StringLiteral_17874/*"buttonOffset"*/,
+             (System_String_o *)StringLiteral_17916/*"buddy_bg_at"*/,
              v118);
     v154.fields.x = v128 + v154.fields.x;
     v154.fields.y = v129 + v154.fields.y;
@@ -2607,7 +2607,7 @@ LABEL_99:
     mainTitleLabel = (UILabel_o *)MessageAndScrollDetailConfirmDialog__GetIntFromScript(
                                     v131,
                                     script,
-                                    (System_String_o *)StringLiteral_17956/*"cancelBtnFontSize"*/,
+                                    (System_String_o *)StringLiteral_17998/*"cameraMove"*/,
                                     v132);
     v133 = this->fields.okBtnLabel;
     monitor_high = (unsigned int)mainTitleLabel;
@@ -2624,7 +2624,7 @@ LABEL_99:
     if ( !v133 )
       goto LABEL_99;
     UILabel__set_fontSize(v133, monitor_high, 0LL);
-    MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45170524(this, script, v134);
+    MessageAndScrollDetailConfirmDialog__AdjustBtnSize_45389328(this, script, v134);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2659,7 +2659,7 @@ LABEL_99:
         goto LABEL_99;
       v137 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                        (UnityEngine_Transform_o *)mainTitleLabel,
-                                       (System_String_o *)StringLiteral_15859/*"Window/OkBtn"*/,
+                                       (System_String_o *)StringLiteral_15895/*"Window"*/,
                                        0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2672,7 +2672,7 @@ LABEL_99:
           this->fields.closeButton = v138;
           p_closeButton = &this->fields.closeButton;
 LABEL_97:
-          sub_1BE4A70((PartyOrganizationUtility_o *)p_closeButton, (int64_t)v138, v139, v140, v141, v142, v143, v144);
+          sub_1C13CC8((PartyOrganizationUtility_o *)p_closeButton, (int64_t)v138, v139, v140, v141, v142, v143, v144);
           goto LABEL_98;
         }
         goto LABEL_99;
@@ -2696,14 +2696,14 @@ LABEL_97:
     }
   }
 LABEL_98:
-  v147 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v147 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v147, (Il2CppObject *)this, Method_MessageAndScrollDetailConfirmDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v147, 0, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MessageAndScrollDetailConfirmDialog__Open_45159972(
+void __fastcall MessageAndScrollDetailConfirmDialog__Open_45378776(
         MessageAndScrollDetailConfirmDialog_o *this,
         System_String_o *mainTitle,
         System_String_o *mainMessage,
@@ -2740,14 +2740,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Open_45159972(
   MessageAndScrollDetailConfirmDialog_ClickDelegate_o *v35; // x26
   const MethodInfo *v36; // x3
 
-  if ( (byte_4B69E06 & 1) == 0 )
+  if ( (byte_4BB7954 & 1) == 0 )
   {
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, mainTitle);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog_CloseFuncDialog__, v28);
-    byte_4B69E06 = 1;
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo, mainTitle);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog_CloseFuncDialog__, v28);
+    byte_4BB7954 = 1;
   }
   this->fields.closeNotificationCallback = closeFunc;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.closeNotificationCallback,
     (int64_t)closeFunc,
     (int64_t)mainMessage,
@@ -2757,7 +2757,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Open_45159972(
     (FollowerInfo_o *)decideFunc,
     *(PartyListViewItem_o **)&panelDepth);
   this->fields.decideNotificationCallback = decideFunc;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.decideNotificationCallback,
     (int64_t)decideFunc,
     v29,
@@ -2766,7 +2766,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog__Open_45159972(
     v32,
     v33,
     v34);
-  v35 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1BE4D18(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
+  v35 = (MessageAndScrollDetailConfirmDialog_ClickDelegate_o *)sub_1C13F70(MessageAndScrollDetailConfirmDialog_ClickDelegate_TypeInfo);
   MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
     v35,
     (Il2CppObject *)this,
@@ -3006,68 +3006,68 @@ System_Action_o *__fastcall MessageAndScrollDetailConfirmDialog__SetTransitionFu
   int32_t eventType[2]; // [xsp+68h] [xbp-48h] BYREF
   int32_t result[2]; // [xsp+78h] [xbp-38h] BYREF
 
-  if ( (byte_4B69E0C & 1) == 0 )
+  if ( (byte_4BB795A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, script);
-    sub_1BE4ACC(&NotificationDialog_ClickDelegate_TypeInfo, v5);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_EventRewardSceneMaster___, v6);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_GachaMaster___, v7);
-    sub_1BE4ACC(&DataManager_TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Enum_TryParse_ServantOperationManager_Kind___, v9);
-    sub_1BE4ACC(&Method_System_Enum_TryParse_MasterMissionComponent_Type___, v10);
-    sub_1BE4ACC(&Method_System_Enum_TryParse_PayType_Type___, v11);
-    sub_1BE4ACC(&System_Enum_TypeInfo, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_GachaEntity__Find__, v13);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v14);
-    sub_1BE4ACC(&System_Predicate_GachaEntity__TypeInfo, v15);
-    sub_1BE4ACC(&SceneJumpInfo_TypeInfo, v16);
-    sub_1BE4ACC(&SceneList_TypeInfo, v17);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v19);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_10__, v20);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_12__, v21);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_2__, v22);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_3__, v23);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_4__, v24);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_5__, v25);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_6__, v26);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_7__, v27);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0__SetTransitionFunc_b__1__, v28);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0_TypeInfo, v29);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1__SetTransitionFunc_b__0__, v30);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1_TypeInfo, v31);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2__SetTransitionFunc_b__8__, v32);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2__SetTransitionFunc_b__9__, v33);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2_TypeInfo, v34);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3__SetTransitionFunc_b__11__, v35);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3_TypeInfo, v36);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4__SetTransitionFunc_b__14__, v37);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4_TypeInfo, v38);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5__SetTransitionFunc_b__15__, v39);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5_TypeInfo, v40);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6__SetTransitionFunc_b__16__, v41);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6_TypeInfo, v42);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v43);
-    sub_1BE4ACC(&StringLiteral_9683/*"NormalEventShop"*/, v44);
-    sub_1BE4ACC(&StringLiteral_13476/*"TERMINAL_BANNER_ERROR_DIALOG_MESSAGE_TO_SUMMON"*/, v45);
-    sub_1BE4ACC(&StringLiteral_12736/*"Scroll"*/, v46);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v47);
-    sub_1BE4ACC(&StringLiteral_13477/*"TERMINAL_BANNER_ERROR_DIALOG_TITLE"*/, v48);
-    sub_1BE4ACC(&StringLiteral_12704/*"Scene"*/, v49);
-    byte_4B69E0C = 1;
+    sub_1C13D24(&System_Action_TypeInfo, script);
+    sub_1C13D24(&NotificationDialog_ClickDelegate_TypeInfo, v5);
+    sub_1C13D24(&Method_DataManager_GetMaster_EventRewardSceneMaster___, v6);
+    sub_1C13D24(&Method_DataManager_GetMaster_GachaMaster___, v7);
+    sub_1C13D24(&DataManager_TypeInfo, v8);
+    sub_1C13D24(&Method_System_Enum_TryParse_ServantOperationManager_Kind___, v9);
+    sub_1C13D24(&Method_System_Enum_TryParse_MasterMissionComponent_Type___, v10);
+    sub_1C13D24(&Method_System_Enum_TryParse_PayType_Type___, v11);
+    sub_1C13D24(&System_Enum_TypeInfo, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_GachaEntity__Find__, v13);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v14);
+    sub_1C13D24(&System_Predicate_GachaEntity__TypeInfo, v15);
+    sub_1C13D24(&SceneJumpInfo_TypeInfo, v16);
+    sub_1C13D24(&SceneList_TypeInfo, v17);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v18);
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v19);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_10__, v20);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_12__, v21);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_2__, v22);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_3__, v23);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_4__, v24);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_5__, v25);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_6__, v26);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_7__, v27);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0__SetTransitionFunc_b__1__, v28);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0_TypeInfo, v29);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1__SetTransitionFunc_b__0__, v30);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1_TypeInfo, v31);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2__SetTransitionFunc_b__8__, v32);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2__SetTransitionFunc_b__9__, v33);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2_TypeInfo, v34);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3__SetTransitionFunc_b__11__, v35);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3_TypeInfo, v36);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4__SetTransitionFunc_b__14__, v37);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4_TypeInfo, v38);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5__SetTransitionFunc_b__15__, v39);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5_TypeInfo, v40);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6__SetTransitionFunc_b__16__, v41);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6_TypeInfo, v42);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v43);
+    sub_1C13D24(&StringLiteral_9707/*"None (FSM)"*/, v44);
+    sub_1C13D24(&StringLiteral_13509/*"TALKRESUME_CONFIRM_MIDDLE_BEFORE_NONE_BATTLE"*/, v45);
+    sub_1C13D24(&StringLiteral_12766/*"ScreenOrientation.Unknown is deprecated. Please use ScreenOrientation.AutoRotation"*/, v46);
+    sub_1C13D24(&StringLiteral_1/*""*/, v47);
+    sub_1C13D24(&StringLiteral_13510/*"TALKRESUME_CONFIRM_TITLE"*/, v48);
+    sub_1C13D24(&StringLiteral_12734/*"Save Action: Unsupported parameter type: "*/, v49);
+    byte_4BB795A = 1;
   }
   *(_QWORD *)result = 0LL;
   *(_QWORD *)eventType = 0LL;
-  v50 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0_TypeInfo);
+  v50 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v50, 0LL);
   if ( !v50 )
     goto LABEL_169;
   *(_QWORD *)(v50 + 16) = this;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v50 + 16), (int64_t)this, v53, v54, v55, v56, v57, v58);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v50 + 16), (int64_t)this, v53, v54, v55, v56, v57, v58);
   TransitionParam = MessageAndScrollDetailConfirmDialog__GetTransitionParam(v59, script, v60);
   *(_QWORD *)(v50 + 24) = TransitionParam;
   v62 = (__int64 *)(v50 + 24);
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v50 + 24), (int64_t)TransitionParam, v63, v64, v65, v66, v67, v68);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v50 + 24), (int64_t)TransitionParam, v63, v64, v65, v66, v67, v68);
   v69 = *(_QWORD *)(v50 + 24);
   if ( !v69 )
     goto LABEL_169;
@@ -3082,17 +3082,17 @@ System_Action_o *__fastcall MessageAndScrollDetailConfirmDialog__SetTransitionFu
     goto LABEL_169;
   if ( !*(_DWORD *)(v71 + 24) )
     goto LABEL_170;
-  v72 = System_String__Concat_62698808(*(System_String_o **)(v71 + 32), (System_String_o *)StringLiteral_12704/*"Scene"*/, 0LL);
+  v72 = System_String__Concat_62967944(*(System_String_o **)(v71 + 32), (System_String_o *)StringLiteral_12734/*"Save Action: Unsupported parameter type: "*/, 0LL);
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
   SceneType = SceneList__getSceneType(v72, 0LL);
-  v74 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1_TypeInfo);
+  v74 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v74, 0LL);
   if ( !v74 )
     goto LABEL_169;
   *(_QWORD *)(v74 + 24) = v50;
   v81 = (__int64 *)(v74 + 24);
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v74 + 24), v50, v75, v76, v77, v78, v79, v80);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v74 + 24), v50, v75, v76, v77, v78, v79, v80);
   if ( SceneType > 32 )
   {
     if ( SceneType != 72 )
@@ -3116,9 +3116,9 @@ System_Action_o *__fastcall MessageAndScrollDetailConfirmDialog__SetTransitionFu
                 System_Enum__TryParse_Int32Enum_(
                   v84,
                   (int32_t *)(v74 + 16),
-                  (const MethodInfo_2F60368 *)Method_System_Enum_TryParse_MasterMissionComponent_Type___);
+                  (const MethodInfo_2F95FB0 *)Method_System_Enum_TryParse_MasterMissionComponent_Type___);
               }
-              v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+              v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
               _9__51_4 = v85;
               v86 = (Il2CppObject *)v74;
               LODWORD(v87) = Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1__SetTransitionFunc_b__0__;
@@ -3126,7 +3126,7 @@ System_Action_o *__fastcall MessageAndScrollDetailConfirmDialog__SetTransitionFu
             }
           }
 LABEL_169:
-          sub_1BE4D28(IsNullOrEmpty, v52);
+          sub_1C13F80(IsNullOrEmpty, v52);
         }
         return 0LL;
       }
@@ -3145,7 +3145,7 @@ LABEL_169:
           v125 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
         }
         v126 = (Il2CppObject *)v125->static_fields->__9;
-        _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+        _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
         System_Action___ctor(
           _9__51_4,
           v126,
@@ -3155,7 +3155,7 @@ LABEL_169:
         static_fields->__9__51_4 = _9__51_4;
         p__9__51_4 = (PartyOrganizationUtility_o *)&static_fields->__9__51_4;
 LABEL_166:
-        sub_1BE4A70(p__9__51_4, (int64_t)_9__51_4, v91, v92, v93, v94, v95, v96);
+        sub_1C13CC8(p__9__51_4, (int64_t)_9__51_4, v91, v92, v93, v94, v95, v96);
         return _9__51_4;
       }
       return _9__51_4;
@@ -3167,7 +3167,7 @@ LABEL_166:
       goto LABEL_169;
     if ( *(int *)(v103 + 24) < 2 )
       return 0LL;
-    v104 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2_TypeInfo);
+    v104 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v104, 0LL);
     if ( !*v81 )
       goto LABEL_169;
@@ -3178,17 +3178,17 @@ LABEL_166:
     {
       System_Int32__TryParse(*(System_String_o **)(v105 + 40), result, 0LL);
       v106 = result[0];
-      v107 = (SceneJumpInfo_o *)sub_1BE4D18(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_39576856(v107, (System_String_o *)StringLiteral_9683/*"NormalEventShop"*/, v106, 0LL);
+      v107 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_39818028(v107, (System_String_o *)StringLiteral_9707/*"None (FSM)"*/, v106, 0LL);
       if ( !v104 )
         goto LABEL_169;
       *(_QWORD *)(v104 + 16) = v107;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v107, v108, v109, v110, v111, v112, v113);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v107, v108, v109, v110, v111, v112, v113);
       IsNullOrEmpty = *(SceneJumpInfo_o **)(v104 + 16);
       if ( !IsNullOrEmpty )
         goto LABEL_169;
       SceneJumpInfo__SetReturnNowScene(IsNullOrEmpty, 0LL);
-      _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(
         _9__51_4,
         (Il2CppObject *)v104,
@@ -3204,7 +3204,7 @@ LABEL_166:
       System_Int32__TryParse(*(System_String_o **)(v114 + 48), &eventType[1], 0LL);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      IsNullOrEmpty = (SceneJumpInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
+      IsNullOrEmpty = (SceneJumpInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
       if ( !IsNullOrEmpty )
         goto LABEL_169;
       if ( !EventRewardSceneMaster__getEntityFromIdAndEventType(
@@ -3215,11 +3215,11 @@ LABEL_166:
         return _9__51_4;
       v115 = result[0];
       v116 = eventType[1];
-      v117 = (SceneJumpInfo_o *)sub_1BE4D18(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_39576916(v117, (System_String_o *)StringLiteral_1/*""*/, v115, v116, 0LL);
+      v117 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_39818088(v117, (System_String_o *)StringLiteral_1/*""*/, v115, v116, 0LL);
       *(_QWORD *)(v104 + 16) = v117;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v117, v118, v119, v120, v121, v122, v123);
-      v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v117, v118, v119, v120, v121, v122, v123);
+      v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       v124 = &Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2__SetTransitionFunc_b__9__;
 LABEL_114:
       v87 = *v124;
@@ -3245,7 +3245,7 @@ LABEL_115:
         goto LABEL_169;
       if ( *(int *)(v135 + 24) >= 2 )
       {
-        v173 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3_TypeInfo);
+        v173 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3_TypeInfo);
         System_Object___ctor((Il2CppObject *)v173, 0LL);
         if ( !*v81 )
           goto LABEL_169;
@@ -3273,15 +3273,15 @@ LABEL_115:
         System_Enum__TryParse_Int32Enum_(
           v176,
           &result[1],
-          (const MethodInfo_2F60368 *)Method_System_Enum_TryParse_PayType_Type___);
+          (const MethodInfo_2F95FB0 *)Method_System_Enum_TryParse_PayType_Type___);
         if ( result[1] == 3 )
         {
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4B632FF )
+          if ( !byte_4BB0E16 )
           {
-            sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v177);
-            byte_4B632FF = 1;
+            sub_1C13D24(&TerminalPramsManager_TypeInfo, v177);
+            byte_4BB0E16 = 1;
           }
           v178 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3305,7 +3305,7 @@ LABEL_115:
               v179 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
             }
             v180 = (Il2CppObject *)v179->static_fields->__9;
-            _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+            _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
             System_Action___ctor(
               _9__51_4,
               v180,
@@ -3320,13 +3320,13 @@ LABEL_115:
         }
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        IsNullOrEmpty = (SceneJumpInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_GachaMaster___);
+        IsNullOrEmpty = (SceneJumpInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_GachaMaster___);
         if ( !IsNullOrEmpty )
           goto LABEL_169;
         ValidGachaEntityList = (System_Collections_Generic_List_object__o *)GachaMaster__GetValidGachaEntityList(
                                                                               (GachaMaster_o *)IsNullOrEmpty,
                                                                               0LL);
-        v183 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_GachaEntity__TypeInfo);
+        v183 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_GachaEntity__TypeInfo);
         System_Predicate_object____ctor(
           v183,
           (Il2CppObject *)v173,
@@ -3337,13 +3337,13 @@ LABEL_115:
         if ( System_Collections_Generic_List_object___Find(
                ValidGachaEntityList,
                (System_Predicate_T__o *)v183,
-               (const MethodInfo_35EC88C *)Method_System_Collections_Generic_List_GachaEntity__Find__) )
+               (const MethodInfo_362D834 *)Method_System_Collections_Generic_List_GachaEntity__Find__) )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v185 = LocalizationManager__Get((System_String_o *)StringLiteral_13477/*"TERMINAL_BANNER_ERROR_DIALOG_TITLE"*/, 0LL);
-          IsNullOrEmpty = (SceneJumpInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13476/*"TERMINAL_BANNER_ERROR_DIALOG_MESSAGE_TO_SUMMON"*/, 0LL);
+          v185 = LocalizationManager__Get((System_String_o *)StringLiteral_13510/*"TALKRESUME_CONFIRM_TITLE"*/, 0LL);
+          IsNullOrEmpty = (SceneJumpInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13509/*"TALKRESUME_CONFIRM_MIDDLE_BEFORE_NONE_BATTLE"*/, 0LL);
           v186 = (System_String_o *)IsNullOrEmpty;
           v187 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
           if ( !MessageAndScrollDetailConfirmDialog___c_TypeInfo->_2.cctor_finished )
@@ -3360,7 +3360,7 @@ LABEL_115:
               v187 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
             }
             v189 = (Il2CppObject *)v187->static_fields->__9;
-            _9__51_12 = (NotificationDialog_ClickDelegate_o *)sub_1BE4D18(NotificationDialog_ClickDelegate_TypeInfo);
+            _9__51_12 = (NotificationDialog_ClickDelegate_o *)sub_1C13F70(NotificationDialog_ClickDelegate_TypeInfo);
             NotificationDialog_ClickDelegate___ctor(
               _9__51_12,
               v189,
@@ -3368,7 +3368,7 @@ LABEL_115:
               0LL);
             v190 = MessageAndScrollDetailConfirmDialog___c_TypeInfo->static_fields;
             v190->__9__51_12 = _9__51_12;
-            sub_1BE4A70(
+            sub_1C13CC8(
               (PartyOrganizationUtility_o *)&v190->__9__51_12,
               (int64_t)_9__51_12,
               v191,
@@ -3380,7 +3380,7 @@ LABEL_115:
           }
           if ( !Instance )
             goto LABEL_169;
-          CommonUI__OpenNotificationDialog_30876232(
+          CommonUI__OpenNotificationDialog_31073088(
             (CommonUI_o *)Instance,
             v185,
             v186,
@@ -3405,7 +3405,7 @@ LABEL_115:
         }
         v104 = *v81;
       }
-      v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       v124 = &Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0__SetTransitionFunc_b__1__;
       goto LABEL_114;
     }
@@ -3433,7 +3433,7 @@ LABEL_115:
           v100 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
         }
         v101 = (Il2CppObject *)v100->static_fields->__9;
-        _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+        _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
         System_Action___ctor(
           _9__51_4,
           v101,
@@ -3446,7 +3446,7 @@ LABEL_115:
       }
       return _9__51_4;
     }
-    v104 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4_TypeInfo);
+    v104 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4_TypeInfo);
     System_Object___ctor((Il2CppObject *)v104, 0LL);
     if ( !*v81 )
       goto LABEL_169;
@@ -3456,13 +3456,13 @@ LABEL_115:
     if ( *(_DWORD *)(v145 + 24) > 1u )
     {
       v146 = *(System_String_o **)(v145 + 40);
-      v147 = (SceneJumpInfo_o *)sub_1BE4D18(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_39576768(v147, v146, 0LL);
+      v147 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_39817940(v147, v146, 0LL);
       if ( !v104 )
         goto LABEL_169;
       *(_QWORD *)(v104 + 16) = v147;
       v154 = v104 + 16;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v147, v148, v149, v150, v151, v152, v153);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v147, v148, v149, v150, v151, v152, v153);
       if ( !*v81 )
         goto LABEL_169;
       v155 = *(_QWORD *)(*v81 + 24);
@@ -3477,17 +3477,17 @@ LABEL_115:
         IsNullOrEmpty = (SceneJumpInfo_o *)System_Enum__TryParse_Int32Enum_(
                                              v156,
                                              eventType,
-                                             (const MethodInfo_2F60368 *)Method_System_Enum_TryParse_ServantOperationManager_Kind___);
+                                             (const MethodInfo_2F95FB0 *)Method_System_Enum_TryParse_ServantOperationManager_Kind___);
         if ( !*(_QWORD *)v154 )
           goto LABEL_169;
         *(_DWORD *)(*(_QWORD *)v154 + 24LL) = eventType[0];
       }
-      v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       v124 = &Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4__SetTransitionFunc_b__14__;
       goto LABEL_114;
     }
 LABEL_170:
-    sub_1BE4D30(IsNullOrEmpty, v52);
+    sub_1C13F88(IsNullOrEmpty, v52);
   }
   if ( SceneType == 23 )
   {
@@ -3506,7 +3506,7 @@ LABEL_170:
         v128 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
       }
       v129 = (Il2CppObject *)v128->static_fields->__9;
-      _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       System_Action___ctor(
         _9__51_4,
         v129,
@@ -3543,7 +3543,7 @@ LABEL_170:
           v132 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
         }
         v133 = (Il2CppObject *)v132->static_fields->__9;
-        _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+        _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
         System_Action___ctor(
           _9__51_4,
           v133,
@@ -3558,7 +3558,7 @@ LABEL_170:
     }
     IsNullOrEmpty = (SceneJumpInfo_o *)System_String__op_Equality(
                                          *(System_String_o **)(v131 + 40),
-                                         (System_String_o *)StringLiteral_12736/*"Scroll"*/,
+                                         (System_String_o *)StringLiteral_12766/*"ScreenOrientation.Unknown is deprecated. Please use ScreenOrientation.AutoRotation"*/,
                                          0LL);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
@@ -3572,10 +3572,10 @@ LABEL_170:
         v197 = *(_QWORD *)(v163 + 48);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4B618AB )
+        if ( !byte_4BAF379 )
         {
-          sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v52);
-          byte_4B618AB = 1;
+          sub_1C13D24(&TerminalPramsManager_TypeInfo, v52);
+          byte_4BAF379 = 1;
         }
         v198 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3585,7 +3585,7 @@ LABEL_170:
         }
         p_TransitionScrollTabName_k__BackingField = (PartyOrganizationUtility_o *)&v198->static_fields->_TransitionScrollTabName_k__BackingField;
         p_TransitionScrollTabName_k__BackingField->klass = (PartyOrganizationUtility_c *)v197;
-        sub_1BE4A70(p_TransitionScrollTabName_k__BackingField, v197, v157, v158, v159, v160, v161, v162);
+        sub_1C13CC8(p_TransitionScrollTabName_k__BackingField, v197, v157, v158, v159, v160, v161, v162);
         v200 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
         if ( !MessageAndScrollDetailConfirmDialog___c_TypeInfo->_2.cctor_finished )
         {
@@ -3601,7 +3601,7 @@ LABEL_170:
             v200 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
           }
           v201 = (Il2CppObject *)v200->static_fields->__9;
-          _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+          _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
           System_Action___ctor(
             _9__51_4,
             v201,
@@ -3615,7 +3615,7 @@ LABEL_170:
         return _9__51_4;
       }
     }
-    v104 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6_TypeInfo);
+    v104 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6_TypeInfo);
     System_Object___ctor((Il2CppObject *)v104, 0LL);
     if ( !*v81 )
       goto LABEL_169;
@@ -3625,13 +3625,13 @@ LABEL_170:
     if ( *(_DWORD *)(v164 + 24) > 1u )
     {
       v165 = *(System_String_o **)(v164 + 40);
-      v166 = (SceneJumpInfo_o *)sub_1BE4D18(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_39576768(v166, v165, 0LL);
+      v166 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_39817940(v166, v165, 0LL);
       if ( !v104 )
         goto LABEL_169;
       *(_QWORD *)(v104 + 16) = v166;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v166, v167, v168, v169, v170, v171, v172);
-      v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v166, v167, v168, v169, v170, v171, v172);
+      v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       v124 = &Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6__SetTransitionFunc_b__16__;
       goto LABEL_114;
     }
@@ -3646,7 +3646,7 @@ LABEL_170:
     goto LABEL_169;
   if ( *(int *)(v88 + 24) >= 2 )
   {
-    v104 = sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5_TypeInfo);
+    v104 = sub_1C13F70(MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5_TypeInfo);
     System_Object___ctor((Il2CppObject *)v104, 0LL);
     if ( !*v81 )
       goto LABEL_169;
@@ -3656,13 +3656,13 @@ LABEL_170:
     if ( *(_DWORD *)(v136 + 24) > 1u )
     {
       v137 = *(System_String_o **)(v136 + 40);
-      v138 = (SceneJumpInfo_o *)sub_1BE4D18(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_39576768(v138, v137, 0LL);
+      v138 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_39817940(v138, v137, 0LL);
       if ( !v104 )
         goto LABEL_169;
       *(_QWORD *)(v104 + 16) = v138;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v138, v139, v140, v141, v142, v143, v144);
-      v85 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v104 + 16), (int64_t)v138, v139, v140, v141, v142, v143, v144);
+      v85 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
       v124 = &Method_MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5__SetTransitionFunc_b__15__;
       goto LABEL_114;
     }
@@ -3683,7 +3683,7 @@ LABEL_170:
       v89 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
     }
     v90 = (Il2CppObject *)v89->static_fields->__9;
-    _9__51_4 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    _9__51_4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(
       _9__51_4,
       v90,
@@ -3706,10 +3706,10 @@ UnityEngine_GameObject_o *__fastcall MessageAndScrollDetailConfirmDialog__get_cl
   bool v4; // w8
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_4B69E03 & 1) == 0 )
+  if ( (byte_4BB7951 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, method);
-    byte_4B69E03 = 1;
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
+    byte_4BB7951 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3744,7 +3744,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -3755,12 +3755,12 @@ void __fastcall MessageAndScrollDetailConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BE4B8C(v10) & 1) == 0 )
+  if ( (sub_1C13DE4(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BE4BF4(v14, 0LL);
+      v14 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C13E4C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -3772,9 +3772,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A2A7E0;
+  this->fields.m_target = (Il2CppObject *)sub_1A5903C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A2A798;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A58FF4;
 }
 
 
@@ -3790,14 +3790,14 @@ System_IAsyncResult_o *__fastcall MessageAndScrollDetailConfirmDialog_ClickDeleg
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4B69E19 & 1) == 0 )
+  if ( (byte_4BB7967 & 1) == 0 )
   {
-    sub_1BE4ACC(&bool_TypeInfo, isOk);
-    byte_4B69E19 = 1;
+    sub_1C13D24(&bool_TypeInfo, isOk);
+    byte_4BB7967 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BE4A80(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C13CD8(this, v9, callback, object);
 }
 
 
@@ -3806,7 +3806,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BE4A84(result, 0LL, method);
+  sub_1C13CDC(result, 0LL, method);
 }
 
 
@@ -3833,15 +3833,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___cctor(const MethodInfo
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B69E1A & 1) == 0 )
+  if ( (byte_4BB7968 & 1) == 0 )
   {
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v1);
-    byte_4B69E1A = 1;
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v1);
+    byte_4BB7968 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(MessageAndScrollDetailConfirmDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(MessageAndScrollDetailConfirmDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MessageAndScrollDetailConfirmDialog___c_TypeInfo->static_fields->__9 = (struct MessageAndScrollDetailConfirmDialog___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)MessageAndScrollDetailConfirmDialog___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -3868,14 +3868,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E1B & 1) == 0 )
+  if ( (byte_4BB7969 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E1B = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7969 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 20, 1, 0LL, 0LL);
 }
 
@@ -3903,15 +3903,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   FollowerInfo_o *v17; // x6
   PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4B69E1C & 1) == 0 )
+  if ( (byte_4BB796A & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, isDecide);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1BE4ACC(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_13__, v4);
-    sub_1BE4ACC(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v5);
-    byte_4B69E1C = 1;
+    sub_1C13D24(&System_Action_TypeInfo, isDecide);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1C13D24(&Method_MessageAndScrollDetailConfirmDialog___c__SetTransitionFunc_b__51_13__, v4);
+    sub_1C13D24(&MessageAndScrollDetailConfirmDialog___c_TypeInfo, v5);
+    byte_4BB796A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !MessageAndScrollDetailConfirmDialog___c_TypeInfo->_2.cctor_finished )
@@ -3928,7 +3928,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
       v8 = MessageAndScrollDetailConfirmDialog___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__51_13 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+    _9__51_13 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
     System_Action___ctor(
       _9__51_13,
       v11,
@@ -3936,7 +3936,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
       0LL);
     static_fields = MessageAndScrollDetailConfirmDialog___c_TypeInfo->static_fields;
     static_fields->__9__51_13 = _9__51_13;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&static_fields->__9__51_13,
       (int64_t)_9__51_13,
       v13,
@@ -3947,8 +3947,8 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
       v18);
   }
   if ( !v9 )
-    sub_1BE4D28(Instance, v7);
-  CommonUI__CloseNotificationDialog_30876664(v9, _9__51_13, 0LL);
+    sub_1C13F80(Instance, v7);
+  CommonUI__CloseNotificationDialog_31073520(v9, _9__51_13, 0LL);
 }
 
 
@@ -3959,15 +3959,15 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E1D & 1) == 0 )
+  if ( (byte_4BB796B & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E1D = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB796B = 1;
   }
   TopLoginRequest__ResetAccesTime(0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0, 0LL);
 }
 
@@ -3979,14 +3979,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E1E & 1) == 0 )
+  if ( (byte_4BB796C & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E1E = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB796C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, 0LL, 0LL);
 }
 
@@ -3998,14 +3998,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E1F & 1) == 0 )
+  if ( (byte_4BB796D & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E1F = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB796D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 32, 1, 0LL, 0LL);
 }
 
@@ -4017,14 +4017,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E20 & 1) == 0 )
+  if ( (byte_4BB796E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E20 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB796E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 91, 1, 0LL, 0LL);
 }
 
@@ -4036,14 +4036,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E21 & 1) == 0 )
+  if ( (byte_4BB796F & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E21 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB796F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 23, 1, 0LL, 0LL);
 }
 
@@ -4055,14 +4055,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E22 & 1) == 0 )
+  if ( (byte_4BB7970 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E22 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7970 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 30, 1, 0LL, 0LL);
 }
 
@@ -4074,14 +4074,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c___SetTransitionFunc_b__5
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B69E23 & 1) == 0 )
+  if ( (byte_4BB7971 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E23 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7971 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 30, 1, 0LL, 0LL);
 }
 
@@ -4101,7 +4101,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0___SetT
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1BE4D28(this, method);
+    sub_1C13F80(this, method);
   MessageAndScrollDetailConfirmDialog__ChangeSummonSceneByLinkInfo(this->fields.__4__this, this->fields.linkInfo, v2);
 }
 
@@ -4124,17 +4124,17 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1___SetT
   struct MessageAndScrollDetailConfirmDialog___c__DisplayClass51_0_o *CS___8__locals1; // x9
   struct MessageAndScrollDetailConfirmDialog_o *_4__this; // x9
 
-  if ( (byte_4B69E24 & 1) == 0 )
+  if ( (byte_4BB7972 & 1) == 0 )
   {
-    sub_1BE4ACC(&TerminalSceneComponent_TypeInfo, method);
-    byte_4B69E24 = 1;
+    sub_1C13D24(&TerminalSceneComponent_TypeInfo, method);
+    byte_4BB7972 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4B618A6 )
+  if ( !byte_4BAF374 )
   {
-    sub_1BE4ACC(&TerminalSceneComponent_TypeInfo, method);
-    byte_4B618A6 = 1;
+    sub_1C13D24(&TerminalSceneComponent_TypeInfo, method);
+    byte_4BAF374 = 1;
   }
   mPlayerStatus = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -4149,7 +4149,7 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_1___SetT
     || (_4__this = CS___8__locals1->fields.__4__this) == 0LL
     || (mPlayerStatus = (TerminalSceneComponent_c *)mTerminalList->fields.mPlayerStatus) == 0LL )
   {
-    sub_1BE4D28(mPlayerStatus, method);
+    sub_1C13F80(mPlayerStatus, method);
   }
   ScrPlayerStatus__ClickLoginDialogOpenMasterMission(
     (ScrPlayerStatus_o *)mPlayerStatus,
@@ -4174,14 +4174,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2___SetT
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B69E25 & 1) == 0 )
+  if ( (byte_4BB7973 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E25 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7973 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   AvalonSceneManager__transitionScene(
     (AvalonSceneManager_o *)Instance,
     72,
@@ -4198,14 +4198,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_2___SetT
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B69E26 & 1) == 0 )
+  if ( (byte_4BB7974 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E26 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7974 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   AvalonSceneManager__transitionScene(
     (AvalonSceneManager_o *)Instance,
     72,
@@ -4229,7 +4229,7 @@ bool __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_3___SetT
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return n->fields.id == this->fields.gachaId;
 }
 
@@ -4249,14 +4249,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_4___SetT
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B69E27 & 1) == 0 )
+  if ( (byte_4BB7975 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E27 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7975 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, (Il2CppObject *)this->fields.info, 0LL);
 }
 
@@ -4276,14 +4276,14 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_5___SetT
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B69E28 & 1) == 0 )
+  if ( (byte_4BB7976 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E28 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7976 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 32, 1, (Il2CppObject *)this->fields.info, 0LL);
 }
 
@@ -4303,13 +4303,13 @@ void __fastcall MessageAndScrollDetailConfirmDialog___c__DisplayClass51_6___SetT
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B69E29 & 1) == 0 )
+  if ( (byte_4BB7977 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B69E29 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BB7977 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 30, 1, (Il2CppObject *)this->fields.info, 0LL);
 }

@@ -66,25 +66,25 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
   FollowerInfo_o *v58; // x6
   PartyListViewItem_o *v59; // x7
 
-  if ( (byte_4B699B2 & 1) == 0 )
+  if ( (byte_4BB74E6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_OrderBy_BattleServantData__float___, servantEnumerable);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ThenBy_BattleServantData__int___, v4);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToDictionary_BattleServantData__int__int___, v5);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleServantData___, v6);
-    sub_1BE4ACC(&System_Func_BattleServantData__int__TypeInfo, v7);
-    sub_1BE4ACC(&System_Func_BattleServantData__bool__TypeInfo, v8);
-    sub_1BE4ACC(&System_Func_BattleServantData__float__TypeInfo, v9);
-    sub_1BE4ACC(&Method_TargetFilterLowestHpRate___c__Apply_b__0_0__, v10);
-    sub_1BE4ACC(&Method_TargetFilterLowestHpRate___c__Apply_b__0_1__, v11);
-    sub_1BE4ACC(&Method_TargetFilterLowestHpRate___c__Apply_b__0_4__, v12);
-    sub_1BE4ACC(&Method_TargetFilterLowestHpRate___c__DisplayClass0_0__Apply_b__2__, v13);
-    sub_1BE4ACC(&Method_TargetFilterLowestHpRate___c__DisplayClass0_0__Apply_b__3__, v14);
-    sub_1BE4ACC(&TargetFilterLowestHpRate___c__DisplayClass0_0_TypeInfo, v15);
-    sub_1BE4ACC(&TargetFilterLowestHpRate___c_TypeInfo, v16);
-    byte_4B699B2 = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_OrderBy_BattleServantData__float___, servantEnumerable);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ThenBy_BattleServantData__int___, v4);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToDictionary_BattleServantData__int__int___, v5);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleServantData___, v6);
+    sub_1C13D24(&System_Func_BattleServantData__int__TypeInfo, v7);
+    sub_1C13D24(&System_Func_BattleServantData__bool__TypeInfo, v8);
+    sub_1C13D24(&System_Func_BattleServantData__float__TypeInfo, v9);
+    sub_1C13D24(&Method_TargetFilterLowestHpRate___c__Apply_b__0_0__, v10);
+    sub_1C13D24(&Method_TargetFilterLowestHpRate___c__Apply_b__0_1__, v11);
+    sub_1C13D24(&Method_TargetFilterLowestHpRate___c__Apply_b__0_4__, v12);
+    sub_1C13D24(&Method_TargetFilterLowestHpRate___c__DisplayClass0_0__Apply_b__2__, v13);
+    sub_1C13D24(&Method_TargetFilterLowestHpRate___c__DisplayClass0_0__Apply_b__3__, v14);
+    sub_1C13D24(&TargetFilterLowestHpRate___c__DisplayClass0_0_TypeInfo, v15);
+    sub_1C13D24(&TargetFilterLowestHpRate___c_TypeInfo, v16);
+    byte_4BB74E6 = 1;
   }
-  v17 = sub_1BE4D18(TargetFilterLowestHpRate___c__DisplayClass0_0_TypeInfo);
+  v17 = sub_1C13F70(TargetFilterLowestHpRate___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   v18 = TargetFilterLowestHpRate___c_TypeInfo;
   if ( !TargetFilterLowestHpRate___c_TypeInfo->_2.cctor_finished )
@@ -101,11 +101,11 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
       v18 = TargetFilterLowestHpRate___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v18->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleServantData__int__TypeInfo);
+    _9__0_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleServantData__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_0, v20, Method_TargetFilterLowestHpRate___c__Apply_b__0_0__, 0LL);
     static_fields = TargetFilterLowestHpRate___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_BattleServantData__int__o *)_9__0_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v22, v23, v24, v25, v26, v27);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v22, v23, v24, v25, v26, v27);
     v18 = TargetFilterLowestHpRate___c_TypeInfo;
   }
   if ( !v18->_2.cctor_finished )
@@ -122,22 +122,22 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
       v18 = TargetFilterLowestHpRate___c_TypeInfo;
     }
     v29 = (Il2CppObject *)v18->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleServantData__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleServantData__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_1, v29, Method_TargetFilterLowestHpRate___c__Apply_b__0_1__, 0LL);
     v30 = TargetFilterLowestHpRate___c_TypeInfo->static_fields;
     v30->__9__0_1 = (struct System_Func_BattleServantData__int__o *)_9__0_1;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v30->__9__0_1, (int64_t)_9__0_1, v31, v32, v33, v34, v35, v36);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v30->__9__0_1, (int64_t)_9__0_1, v31, v32, v33, v34, v35, v36);
   }
   v37 = System_Linq_Enumerable__ToDictionary_object__int__int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)servantEnumerable,
           (System_Func_TSource__TKey__o *)_9__0_0,
           (System_Func_TSource__TElement__o *)_9__0_1,
-          (const MethodInfo_2F93158 *)Method_System_Linq_Enumerable_ToDictionary_BattleServantData__int__int___);
+          (const MethodInfo_2FC93B8 *)Method_System_Linq_Enumerable_ToDictionary_BattleServantData__int__int___);
   if ( !v17 )
-    sub_1BE4D28(v37, v38);
+    sub_1C13F80(v37, v38);
   *(_QWORD *)(v17 + 16) = v37;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v17 + 16), (int64_t)v37, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleServantData__bool__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v17 + 16), (int64_t)v37, v39, v40, v41, v42, v43, v44);
+  v45 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleServantData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v45,
     (Il2CppObject *)v17,
@@ -146,8 +146,8 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
   v46 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)servantEnumerable,
           (System_Func_TSource__bool__o *)v45,
-          (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
-  v47 = (System_Func_T__TResult__o *)sub_1BE4D18(System_Func_BattleServantData__float__TypeInfo);
+          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+  v47 = (System_Func_T__TResult__o *)sub_1C13F70(System_Func_BattleServantData__float__TypeInfo);
   System_Func_object__float____ctor(
     v47,
     (Il2CppObject *)v17,
@@ -156,7 +156,7 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
   v48 = System_Linq_Enumerable__OrderBy_object__float_(
           v46,
           (System_Func_TSource__TKey__o *)v47,
-          (const MethodInfo_2F822A4 *)Method_System_Linq_Enumerable_OrderBy_BattleServantData__float___);
+          (const MethodInfo_2FB8504 *)Method_System_Linq_Enumerable_OrderBy_BattleServantData__float___);
   v49 = TargetFilterLowestHpRate___c_TypeInfo;
   v50 = v48;
   if ( !TargetFilterLowestHpRate___c_TypeInfo->_2.cctor_finished )
@@ -173,16 +173,16 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall TargetFi
       v49 = TargetFilterLowestHpRate___c_TypeInfo;
     }
     v52 = (Il2CppObject *)v49->static_fields->__9;
-    _9__0_4 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_BattleServantData__int__TypeInfo);
+    _9__0_4 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattleServantData__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_4, v52, Method_TargetFilterLowestHpRate___c__Apply_b__0_4__, 0LL);
     v53 = TargetFilterLowestHpRate___c_TypeInfo->static_fields;
     v53->__9__0_4 = (struct System_Func_BattleServantData__int__o *)_9__0_4;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v53->__9__0_4, (int64_t)_9__0_4, v54, v55, v56, v57, v58, v59);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v53->__9__0_4, (int64_t)_9__0_4, v54, v55, v56, v57, v58, v59);
   }
   return (System_Collections_Generic_IEnumerable_BattleServantData__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                           v50,
                                                                           (System_Func_TSource__TKey__o *)_9__0_4,
-                                                                          (const MethodInfo_2F91F68 *)Method_System_Linq_Enumerable_ThenBy_BattleServantData__int___);
+                                                                          (const MethodInfo_2FC81C8 *)Method_System_Linq_Enumerable_ThenBy_BattleServantData__int___);
 }
 
 
@@ -197,15 +197,15 @@ void __fastcall TargetFilterLowestHpRate___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B699B3 & 1) == 0 )
+  if ( (byte_4BB74E7 & 1) == 0 )
   {
-    sub_1BE4ACC(&TargetFilterLowestHpRate___c_TypeInfo, v1);
-    byte_4B699B3 = 1;
+    sub_1C13D24(&TargetFilterLowestHpRate___c_TypeInfo, v1);
+    byte_4BB74E7 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(TargetFilterLowestHpRate___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(TargetFilterLowestHpRate___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   TargetFilterLowestHpRate___c_TypeInfo->static_fields->__9 = (struct TargetFilterLowestHpRate___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)TargetFilterLowestHpRate___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -229,7 +229,7 @@ int32_t __fastcall TargetFilterLowestHpRate___c___Apply_b__0_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return x->fields.uniqueId;
 }
 
@@ -240,7 +240,7 @@ int32_t __fastcall TargetFilterLowestHpRate___c___Apply_b__0_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleServantData__getMaxHp(x, 0LL);
 }
 
@@ -251,7 +251,7 @@ int32_t __fastcall TargetFilterLowestHpRate___c___Apply_b__0_4(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return BattleServantData__getDeckIndex(x, 0LL);
 }
 
@@ -273,12 +273,12 @@ bool __fastcall TargetFilterLowestHpRate___c__DisplayClass0_0___Apply_b__2(
   System_Collections_Generic_Dictionary_int__int__o *uniqueIdToMaxHpDict; // x8
 
   v4 = this;
-  if ( (byte_4B699B4 & 1) == 0 )
+  if ( (byte_4BB74E8 & 1) == 0 )
   {
-    this = (TargetFilterLowestHpRate___c__DisplayClass0_0_o *)sub_1BE4ACC(
+    this = (TargetFilterLowestHpRate___c__DisplayClass0_0_o *)sub_1C13D24(
                                                                 &Method_System_Collections_Generic_Dictionary_int__int__get_Item__,
                                                                 x);
-    byte_4B699B4 = 1;
+    byte_4BB74E8 = 1;
   }
   if ( !x )
     goto LABEL_8;
@@ -290,11 +290,11 @@ bool __fastcall TargetFilterLowestHpRate___c__DisplayClass0_0___Apply_b__2(
   uniqueIdToMaxHpDict = v4->fields.uniqueIdToMaxHpDict;
   if ( !uniqueIdToMaxHpDict )
 LABEL_8:
-    sub_1BE4D28(this, x);
+    sub_1C13F80(this, x);
   return (int)this < System_Collections_Generic_Dictionary_int__int___get_Item(
                        uniqueIdToMaxHpDict,
                        x->fields.uniqueId,
-                       (const MethodInfo_3247B5C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+                       (const MethodInfo_328973C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
 }
 
 
@@ -307,12 +307,12 @@ float __fastcall TargetFilterLowestHpRate___c__DisplayClass0_0___Apply_b__3(
   System_Collections_Generic_Dictionary_int__int__o *uniqueIdToMaxHpDict; // x8
 
   v4 = this;
-  if ( (byte_4B699B5 & 1) == 0 )
+  if ( (byte_4BB74E9 & 1) == 0 )
   {
-    this = (TargetFilterLowestHpRate___c__DisplayClass0_0_o *)sub_1BE4ACC(
+    this = (TargetFilterLowestHpRate___c__DisplayClass0_0_o *)sub_1C13D24(
                                                                 &Method_System_Collections_Generic_Dictionary_int__int__get_Item__,
                                                                 x);
-    byte_4B699B5 = 1;
+    byte_4BB74E9 = 1;
   }
   if ( !x
     || (this = (TargetFilterLowestHpRate___c__DisplayClass0_0_o *)((__int64 (__fastcall *)(BattleServantData_o *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable._9_get_hp.method)(
@@ -321,11 +321,11 @@ float __fastcall TargetFilterLowestHpRate___c__DisplayClass0_0___Apply_b__3(
                                                                     method),
         (uniqueIdToMaxHpDict = v4->fields.uniqueIdToMaxHpDict) == 0LL) )
   {
-    sub_1BE4D28(this, x);
+    sub_1C13F80(this, x);
   }
   return (float)(int)this
        / (float)System_Collections_Generic_Dictionary_int__int___get_Item(
                   uniqueIdToMaxHpDict,
                   x->fields.uniqueId,
-                  (const MethodInfo_3247B5C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+                  (const MethodInfo_328973C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
 }

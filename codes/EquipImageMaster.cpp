@@ -1,12 +1,12 @@
 void __fastcall EquipImageMaster___ctor(EquipImageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66A4F & 1) == 0 )
+  if ( (byte_4BB4567 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_EquipImageMaster__EquipImageEntity__int___ctor__, method);
-    byte_4B66A4F = 1;
+    sub_1C13D24(&Method_DataMasterBase_EquipImageMaster__EquipImageEntity__int___ctor__, method);
+    byte_4BB4567 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     115,
-    (const MethodInfo_31FD784 *)Method_DataMasterBase_EquipImageMaster__EquipImageEntity__int___ctor__);
+    (const MethodInfo_3236300 *)Method_DataMasterBase_EquipImageMaster__EquipImageEntity__int___ctor__);
 }

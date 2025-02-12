@@ -70,64 +70,64 @@ void __fastcall BattleSetupRequest__beginRequest(
 
   v21 = choiceRandomLimitCounts;
   v22 = routeSelect;
-  if ( (byte_4B68418 & 1) == 0 )
+  if ( (byte_4BB5F51 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleData_TypeInfo, *(_QWORD *)&questId);
-    sub_1BE4ACC(&int___TypeInfo, v27);
-    sub_1BE4ACC(&StringLiteral_19767/*"followerId"*/, v28);
-    sub_1BE4ACC(&StringLiteral_19281/*"enemySelect"*/, v29);
-    sub_1BE4ACC(&StringLiteral_23300/*"routeSelect"*/, v30);
-    sub_1BE4ACC(&StringLiteral_16864/*"activeDeckId"*/, v31);
-    sub_1BE4ACC(&StringLiteral_24729/*"userEquipId"*/, v32);
-    sub_1BE4ACC(&StringLiteral_17585/*"boostId"*/, v33);
-    sub_1BE4ACC(&StringLiteral_21182/*"itemId"*/, v34);
-    sub_1BE4ACC(&StringLiteral_19769/*"followerSpoilerProtectionLimitCount"*/, v35);
-    sub_1BE4ACC(&StringLiteral_19768/*"followerRandomLimitCount"*/, v36);
-    sub_1BE4ACC(&StringLiteral_17947/*"campaignItemId"*/, v37);
-    sub_1BE4ACC(&StringLiteral_23013/*"questPhase"*/, v38);
-    sub_1BE4ACC(&StringLiteral_23132/*"recommendSupportIdx"*/, v39);
-    sub_1BE4ACC(&StringLiteral_25488/*"{}"*/, v40);
-    sub_1BE4ACC(&StringLiteral_19771/*"followerType"*/, v41);
-    sub_1BE4ACC(&StringLiteral_23011/*"questId"*/, v42);
-    sub_1BE4ACC(&StringLiteral_19765/*"followerClassId"*/, v43);
-    sub_1BE4ACC(&StringLiteral_19770/*"followerSupportDeckId"*/, v44);
-    sub_1BE4ACC(&StringLiteral_18194/*"choiceRandomLimitCounts"*/, v45);
-    sub_1BE4ACC(&StringLiteral_23014/*"questSelect"*/, v46);
-    sub_1BE4ACC(&StringLiteral_23225/*"restartWave"*/, v47);
-    byte_4B68418 = 1;
+    sub_1C13D24(&BattleData_TypeInfo, *(_QWORD *)&questId);
+    sub_1C13D24(&int___TypeInfo, v27);
+    sub_1C13D24(&StringLiteral_19811/*"focusable"*/, v28);
+    sub_1C13D24(&StringLiteral_19325/*"enemyCountChangeMessage"*/, v29);
+    sub_1C13D24(&StringLiteral_23353/*"river_fade_out"*/, v30);
+    sub_1C13D24(&StringLiteral_16908/*"accountLinkageInfo"*/, v31);
+    sub_1C13D24(&StringLiteral_24784/*"usecheck_win/win/btn_cancel"*/, v32);
+    sub_1C13D24(&StringLiteral_17627/*"bn-IN"*/, v33);
+    sub_1C13D24(&StringLiteral_21230/*"iso_8859-1"*/, v34);
+    sub_1C13D24(&StringLiteral_19813/*"follow/assign"*/, v35);
+    sub_1C13D24(&StringLiteral_19812/*"folderName"*/, v36);
+    sub_1C13D24(&StringLiteral_17989/*"callback parameter is null"*/, v37);
+    sub_1C13D24(&StringLiteral_23066/*"qop"*/, v38);
+    sub_1C13D24(&StringLiteral_23185/*"rc4"*/, v39);
+    sub_1C13D24(&StringLiteral_25545/*"{0}秒"*/, v40);
+    sub_1C13D24(&StringLiteral_19815/*"followId"*/, v41);
+    sub_1C13D24(&StringLiteral_23064/*"q"*/, v42);
+    sub_1C13D24(&StringLiteral_19809/*"focus-index"*/, v43);
+    sub_1C13D24(&StringLiteral_19814/*"follow/remove"*/, v44);
+    sub_1C13D24(&StringLiteral_18237/*"checkRead, checkWrite, checkError"*/, v45);
+    sub_1C13D24(&StringLiteral_23067/*"qop=\"{0}\", "*/, v46);
+    sub_1C13D24(&StringLiteral_23278/*"requestApItem Param: {0}, {1}, {2}"*/, v47);
+    byte_4BB5F51 = 1;
   }
   if ( !routeSelect )
-    v22 = (System_Int32_array *)sub_1BE4B74(int___TypeInfo, 0LL);
+    v22 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(choiceRandomLimitCounts, 0LL);
-  v50 = StringLiteral_25488/*"{}"*/;
+  v50 = StringLiteral_25545/*"{0}秒"*/;
   this->fields.currentQuestId = questId;
   this->fields.currentQuestPhase = questPhase;
   this->fields.activeDeckId = activeDeckId;
   if ( IsNullOrEmpty )
     v21 = (System_String_o *)v50;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23011/*"questId"*/, questId, v49);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23013/*"questPhase"*/, questPhase, v51);
-  RequestBase__addField_42110748((RequestBase_o *)this, (System_String_o *)StringLiteral_16864/*"activeDeckId"*/, activeDeckId, v52);
-  RequestBase__addField_42110748((RequestBase_o *)this, (System_String_o *)StringLiteral_19767/*"followerId"*/, followerId, v53);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19765/*"followerClassId"*/, followerClassId, v54);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21182/*"itemId"*/, itemId, v55);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17585/*"boostId"*/, boostId, v56);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19281/*"enemySelect"*/, enemySelect, v57);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23014/*"questSelect"*/, questSelect, v58);
-  RequestBase__addField_42110748((RequestBase_o *)this, (System_String_o *)StringLiteral_24729/*"userEquipId"*/, userEquipId, v59);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19771/*"followerType"*/, followerType, v60);
-  RequestBase__addField_42112900((RequestBase_o *)this, (System_String_o *)StringLiteral_23300/*"routeSelect"*/, &v22->obj, v61);
-  RequestBase__addField_42104408((RequestBase_o *)this, (System_String_o *)StringLiteral_18194/*"choiceRandomLimitCounts"*/, v21, v62);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19768/*"followerRandomLimitCount"*/, followerRndomLimitCount, v63);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23064/*"q"*/, questId, v49);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23066/*"qop"*/, questPhase, v51);
+  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_16908/*"accountLinkageInfo"*/, activeDeckId, v52);
+  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_19811/*"focusable"*/, followerId, v53);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19809/*"focus-index"*/, followerClassId, v54);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21230/*"iso_8859-1"*/, itemId, v55);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17627/*"bn-IN"*/, boostId, v56);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19325/*"enemyCountChangeMessage"*/, enemySelect, v57);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23067/*"qop=\"{0}\", "*/, questSelect, v58);
+  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_24784/*"usecheck_win/win/btn_cancel"*/, userEquipId, v59);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19815/*"followId"*/, followerType, v60);
+  RequestBase__addField_42312048((RequestBase_o *)this, (System_String_o *)StringLiteral_23353/*"river_fade_out"*/, &v22->obj, v61);
+  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_18237/*"checkRead, checkWrite, checkError"*/, v21, v62);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19812/*"folderName"*/, followerRndomLimitCount, v63);
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19769/*"followerSpoilerProtectionLimitCount"*/,
+    (System_String_o *)StringLiteral_19813/*"follow/assign"*/,
     followerSpoilerProtectionLimitCount,
     v64);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23132/*"recommendSupportIdx"*/, recommendSupportIdx, v65);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19770/*"followerSupportDeckId"*/, followerSupportDeckId, v66);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17947/*"campaignItemId"*/, campaignItemId, v67);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23225/*"restartWave"*/, restartWave, v68);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23185/*"rc4"*/, recommendSupportIdx, v65);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19814/*"follow/remove"*/, followerSupportDeckId, v66);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17989/*"callback parameter is null"*/, campaignItemId, v67);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23278/*"requestApItem Param: {0}, {1}, {2}"*/, restartWave, v68);
   if ( !BattleData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
   BattleData__setReserveResumeBattle(1, questId, questPhase, 0LL);
@@ -139,15 +139,15 @@ System_String_o *__fastcall BattleSetupRequest__getMockData(BattleSetupRequest_o
 {
   __int64 v2; // x1
 
-  if ( (byte_4B68417 & 1) == 0 )
+  if ( (byte_4BB5F50 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_9253/*"MockBattleSetupRequest"*/, v2);
-    byte_4B68417 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_9277/*"Moccasin"*/, v2);
+    byte_4BB5F50 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9253/*"MockBattleSetupRequest"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9277/*"Moccasin"*/, 0LL);
 }
 
 
@@ -156,16 +156,16 @@ System_String_o *__fastcall BattleSetupRequest__getURL(BattleSetupRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B68416 & 1) == 0 )
+  if ( (byte_4BB5F4F & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_17313/*"battle/setup"*/, v2);
-    byte_4B68416 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_17358/*"baseUserSvtId"*/, v2);
+    byte_4BB5F4F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_17313/*"battle/setup"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_17358/*"baseUserSvtId"*/, 0LL);
 }
 
 
@@ -215,28 +215,28 @@ void __fastcall BattleSetupRequest__requestCompleted(
   QuestPhaseEntity_o *v43; // [xsp+8h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4B68419 & 1) == 0 )
+  if ( (byte_4BB5F52 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleData_TypeInfo, responseList);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventDetailMaster___, v5);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventMaster___, v6);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_QuestGroupMaster___, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v8);
-    sub_1BE4ACC(&Method_DataManager_GetMaster_UserDeckMaster___, v9);
-    sub_1BE4ACC(&DataManager_TypeInfo, v10);
-    sub_1BE4ACC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v11);
-    sub_1BE4ACC(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v12);
-    sub_1BE4ACC(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__, v13);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v14);
-    sub_1BE4ACC(&LastUsedDeckNumberManager_TypeInfo, v15);
-    sub_1BE4ACC(&OptionManager_TypeInfo, v16);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v17);
-    sub_1BE4ACC(&ScriptManager_TypeInfo, v18);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v20);
-    sub_1BE4ACC(&UserMissionNewManager_TypeInfo, v21);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v22);
-    byte_4B68419 = 1;
+    sub_1C13D24(&BattleData_TypeInfo, responseList);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, v5);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, v6);
+    sub_1C13D24(&Method_DataManager_GetMasterData_QuestGroupMaster___, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v8);
+    sub_1C13D24(&Method_DataManager_GetMaster_UserDeckMaster___, v9);
+    sub_1C13D24(&DataManager_TypeInfo, v10);
+    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v11);
+    sub_1C13D24(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v12);
+    sub_1C13D24(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__, v13);
+    sub_1C13D24(&JsonManager_TypeInfo, v14);
+    sub_1C13D24(&LastUsedDeckNumberManager_TypeInfo, v15);
+    sub_1C13D24(&OptionManager_TypeInfo, v16);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v17);
+    sub_1C13D24(&ScriptManager_TypeInfo, v18);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
+    sub_1C13D24(&UserMissionNewManager_TypeInfo, v21);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v22);
+    byte_4BB5F52 = 1;
   }
   entity = 0LL;
   v43 = 0LL;
@@ -246,49 +246,49 @@ void __fastcall BattleSetupRequest__requestCompleted(
   if ( v23 )
   {
     v24 = v23;
-    if ( ResponseData__checkError_42194996(v23, 0LL) )
+    if ( ResponseData__checkError_42394144(v23, 0LL) )
     {
       success = (Il2CppObject *)v24->fields.success;
       if ( success )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
           Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_QuestGroupMaster___);
+                       (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestGroupMaster___);
           if ( Instance )
           {
             EventId = QuestGroupMaster__GetEventId((QuestGroupMaster_o *)Instance, this->fields.currentQuestId, 0LL);
             if ( EventId >= 1 )
             {
               v30 = EventId;
-              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !Instance )
                 goto LABEL_71;
               Instance = DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventMaster___);
+                           (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
               if ( !Instance )
                 goto LABEL_71;
               v31 = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                       v30,
-                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                      (const MethodInfo_3238624 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
               if ( v31 && EventEntity__IsOpen((EventEntity_o *)v31, 1, 0LL) )
               {
-                Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( !Instance )
                   goto LABEL_71;
                 Instance = DataManager__GetMasterData_object_(
                              (DataManager_o *)Instance,
-                             (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                             (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
                 if ( !Instance )
                   goto LABEL_71;
                 Instance = DataMasterBase_object__object__int___GetEntity(
                              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                              v30,
-                             (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                             (const MethodInfo_3238624 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
                 if ( !Instance )
                   goto LABEL_71;
                 if ( EventDetailEntity__IsMission((EventDetailEntity_o *)Instance, 0LL) )
@@ -309,10 +309,10 @@ void __fastcall BattleSetupRequest__requestCompleted(
             currentQuestId = this->fields.currentQuestId;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            if ( !byte_4B63991 )
+            if ( !byte_4BB14A6 )
             {
-              sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v29);
-              byte_4B63991 = 1;
+              sub_1C13D24(&TerminalPramsManager_TypeInfo, v29);
+              byte_4BB14A6 = 1;
             }
             v34 = TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -327,10 +327,10 @@ void __fastcall BattleSetupRequest__requestCompleted(
               SpotId = QuestMaster__GetSpotId(this->fields.currentQuestId, 0LL);
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-              if ( !byte_4B63992 )
+              if ( !byte_4BB14A7 )
               {
-                sub_1BE4ACC(&TerminalPramsManager_TypeInfo, v35);
-                byte_4B63992 = 1;
+                sub_1C13D24(&TerminalPramsManager_TypeInfo, v35);
+                byte_4BB14A7 = 1;
               }
               v37 = TerminalPramsManager_TypeInfo;
               if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -353,14 +353,14 @@ void __fastcall BattleSetupRequest__requestCompleted(
               goto LABEL_63;
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            Instance = DataManager__GetMaster_object_((const MethodInfo_2F590BC *)Method_DataManager_GetMaster_UserDeckMaster___);
+            Instance = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserDeckMaster___);
             if ( Instance )
             {
               if ( !DataMasterBase_object__object__long___TryGetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                       &entity,
                       this->fields.activeDeckId,
-                      (const MethodInfo_31FD9C4 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__) )
+                      (const MethodInfo_323ABCC *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__TryGetEntity__) )
               {
 LABEL_63:
                 if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -379,12 +379,12 @@ LABEL_63:
               }
               v43 = 0LL;
               v39 = this->fields.currentQuestId;
-              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( Instance )
               {
                 Instance = DataManager__GetMasterData_object_(
                              (DataManager_o *)Instance,
-                             (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                             (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
                 if ( Instance )
                 {
                   Instance = (Il2CppObject *)QuestPhaseMaster__TryGetEntity(
@@ -422,7 +422,7 @@ LABEL_63:
           }
         }
 LABEL_71:
-        sub_1BE4D28(Instance, v27);
+        sub_1C13F80(Instance, v27);
       }
     }
   }
@@ -430,6 +430,6 @@ LABEL_71:
   if ( v38 )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v38->fields.m_target)(
       v38->fields.original_method_info,
-      StringLiteral_22370/*"ng"*/,
+      StringLiteral_22421/*"newAttributes"*/,
       *(_QWORD *)&v38->fields.extra_arg);
 }

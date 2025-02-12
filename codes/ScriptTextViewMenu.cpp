@@ -25,7 +25,7 @@ void __fastcall ScriptTextViewMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BE4A70(p_callbackFunc, 0LL, *(int64_t *)&jumpLine, (int32_t)method, v4, v5, v6, v7);
+    sub_1C13CC8(p_callbackFunc, 0LL, *(int64_t *)&jumpLine, (int32_t)method, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       (unsigned int)result,
@@ -49,14 +49,14 @@ void __fastcall ScriptTextViewMenu__Close(ScriptTextViewMenu_o *this, const Meth
 
   this->fields.backupCallbackFunc = 0LL;
   p_backupCallbackFunc = &this->fields.backupCallbackFunc;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.backupCallbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.backupCallbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
   menuRootObject = (ListViewManager_o *)*(p_backupCallbackFunc - 4);
   *((_DWORD *)p_backupCallbackFunc - 4) = 0;
   if ( !menuRootObject
     || (ListViewManager__DestroyList(menuRootObject, 0LL),
         (menuRootObject = (ListViewManager_o *)this->fields.menuRootObject) == 0LL) )
   {
-    sub_1BE4D28(menuRootObject, v10);
+    sub_1C13F80(menuRootObject, v10);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)menuRootObject, 0, 0LL);
 }
@@ -100,7 +100,7 @@ void __fastcall ScriptTextViewMenu__OnClickItem(
     {
       this->fields.state = 2;
       if ( !item )
-        sub_1BE4D28(this, result);
+        sub_1C13F80(this, result);
       index = item->fields.index;
       result = 3;
       goto LABEL_8;
@@ -157,22 +157,22 @@ void __fastcall ScriptTextViewMenu__Open(
   const MethodInfo *v39; // x3
   System_RuntimeFieldHandle_o v40; // 0:w1.4
 
-  if ( (byte_4B643A3 & 1) == 0 )
+  if ( (byte_4BB1EBD & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptTextListViewManager_CallbackFunc_TypeInfo, textData);
-    sub_1BE4ACC(&char___TypeInfo, v12);
-    sub_1BE4ACC(&Method_ScriptTextViewMenu_OnClickItem__, v13);
-    sub_1BE4ACC(
+    sub_1C13D24(&ScriptTextListViewManager_CallbackFunc_TypeInfo, textData);
+    sub_1C13D24(&char___TypeInfo, v12);
+    sub_1C13D24(&Method_ScriptTextViewMenu_OnClickItem__, v13);
+    sub_1C13D24(
       &Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3,
       v14);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v15);
-    sub_1BE4ACC(&StringLiteral_87/*"\r"*/, v16);
-    byte_4B643A3 = 1;
+    sub_1C13D24(&StringLiteral_1/*""*/, v15);
+    sub_1C13D24(&StringLiteral_88/*"\r"*/, v16);
+    byte_4BB1EBD = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       *(int64_t *)&jumpLine,
@@ -182,7 +182,7 @@ void __fastcall ScriptTextViewMenu__Open(
       v6,
       v7);
     this->fields.backupCallbackFunc = callback;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.backupCallbackFunc,
       (int64_t)callback,
       v17,
@@ -197,17 +197,17 @@ void __fastcall ScriptTextViewMenu__Open(
     UnityEngine_GameObject__SetActive(menuRootObject, 1, 0LL);
     if ( textData )
     {
-      v31 = System_String__Replace_62718436(
+      v31 = System_String__Replace_62987572(
               textData,
-              (System_String_o *)StringLiteral_87/*"\r"*/,
+              (System_String_o *)StringLiteral_88/*"\r"*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0LL);
-      v32 = (System_Array_o *)sub_1BE4B74(char___TypeInfo, 4LL);
+      v32 = (System_Array_o *)sub_1C13DCC(char___TypeInfo, 4LL);
       v40.fields.value = Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62606144(v32, v40, 0LL);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62875280(v32, v40, 0LL);
       if ( !v31 )
         goto LABEL_16;
-      v33 = System_String__Split_62721200(v31, (System_Char_array *)v32, 0, 0LL);
+      v33 = System_String__Split_62990336(v31, (System_Char_array *)v32, 0, 0LL);
       this->fields.textLineData = v33;
       p_textLineData = &this->fields.textLineData;
     }
@@ -217,7 +217,7 @@ void __fastcall ScriptTextViewMenu__Open(
       p_textLineData = &this->fields.textLineData;
       v33 = 0LL;
     }
-    sub_1BE4A70((PartyOrganizationUtility_o *)p_textLineData, (int64_t)v33, v25, v26, v27, v28, v29, v30);
+    sub_1C13CC8((PartyOrganizationUtility_o *)p_textLineData, (int64_t)v33, v25, v26, v27, v28, v29, v30);
     menuRootObject = (UnityEngine_GameObject_o *)this->fields.scriptTextListViewManager;
     if ( menuRootObject )
     {
@@ -238,7 +238,7 @@ void __fastcall ScriptTextViewMenu__Open(
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)menuRootObject, 1, 0LL);
         scriptTextListViewManager = this->fields.scriptTextListViewManager;
-        v37 = (ScriptTextListViewManager_CallbackFunc_o *)sub_1BE4D18(ScriptTextListViewManager_CallbackFunc_TypeInfo);
+        v37 = (ScriptTextListViewManager_CallbackFunc_o *)sub_1C13F70(ScriptTextListViewManager_CallbackFunc_TypeInfo);
         ScriptTextListViewManager_CallbackFunc___ctor(
           v37,
           (Il2CppObject *)this,
@@ -246,13 +246,13 @@ void __fastcall ScriptTextViewMenu__Open(
           v38);
         if ( scriptTextListViewManager )
         {
-          ScriptTextListViewManager__SetMode_35756204(scriptTextListViewManager, 1, v37, v39);
+          ScriptTextListViewManager__SetMode_35985704(scriptTextListViewManager, 1, v37, v39);
           return;
         }
       }
     }
 LABEL_16:
-    sub_1BE4D28(menuRootObject, v23);
+    sub_1C13F80(menuRootObject, v23);
   }
 }
 
@@ -273,7 +273,7 @@ void __fastcall ScriptTextViewMenu__Reset(ScriptTextViewMenu_o *this, const Meth
     backupCallbackFunc = this->fields.backupCallbackFunc;
     this->fields.callbackFunc = backupCallbackFunc;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)backupCallbackFunc,
       v2,
@@ -302,10 +302,10 @@ void __fastcall ScriptTextViewMenu__add_backupCallbackFunc(
   ScriptTextViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B643A1 & 1) == 0 )
+  if ( (byte_4BB1EBB & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4B643A1 = 1;
+    sub_1C13D24(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4BB1EBB = 1;
   }
   backupCallbackFunc = this->fields.backupCallbackFunc;
   p_backupCallbackFunc = &this->fields.backupCallbackFunc;
@@ -318,13 +318,13 @@ void __fastcall ScriptTextViewMenu__add_backupCallbackFunc(
       if ( (ScriptTextViewMenu_CallbackFunc_c *)v8->klass != ScriptTextViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_backupCallbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_backupCallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BE4FE8(v8);
+  sub_1C14240(v8);
   ScriptTextViewMenu__remove_backupCallbackFunc(v11, v12, v13);
 }
 
@@ -344,10 +344,10 @@ void __fastcall ScriptTextViewMenu__add_callbackFunc(
   ScriptTextViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B6439F & 1) == 0 )
+  if ( (byte_4BB1EB9 & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4B6439F = 1;
+    sub_1C13D24(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4BB1EB9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -360,13 +360,13 @@ void __fastcall ScriptTextViewMenu__add_callbackFunc(
       if ( (ScriptTextViewMenu_CallbackFunc_c *)v8->klass != ScriptTextViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BE4FE8(v8);
+  sub_1C14240(v8);
   ScriptTextViewMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -388,10 +388,10 @@ void __fastcall ScriptTextViewMenu__remove_backupCallbackFunc(
   ScriptTextViewMenu_CallbackFunc_o *v14; // x3
   const MethodInfo *v15; // x4
 
-  if ( (byte_4B643A2 & 1) == 0 )
+  if ( (byte_4BB1EBC & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4B643A2 = 1;
+    sub_1C13D24(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4BB1EBC = 1;
   }
   backupCallbackFunc = this->fields.backupCallbackFunc;
   p_backupCallbackFunc = &this->fields.backupCallbackFunc;
@@ -404,13 +404,13 @@ void __fastcall ScriptTextViewMenu__remove_backupCallbackFunc(
       if ( (ScriptTextViewMenu_CallbackFunc_c *)v8->klass != ScriptTextViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_backupCallbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_backupCallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BE4FE8(v8);
+  sub_1C14240(v8);
   ScriptTextViewMenu__Open(v11, v12, v13, v14, v15);
 }
 
@@ -430,10 +430,10 @@ void __fastcall ScriptTextViewMenu__remove_callbackFunc(
   ScriptTextViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B643A0 & 1) == 0 )
+  if ( (byte_4BB1EBA & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4B643A0 = 1;
+    sub_1C13D24(&ScriptTextViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4BB1EBA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -446,13 +446,13 @@ void __fastcall ScriptTextViewMenu__remove_callbackFunc(
       if ( (ScriptTextViewMenu_CallbackFunc_c *)v8->klass != ScriptTextViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BE4FE8(v8);
+  sub_1C14240(v8);
   ScriptTextViewMenu__add_backupCallbackFunc(v11, v12, v13);
 }
 
@@ -479,7 +479,7 @@ void __fastcall ScriptTextViewMenu_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -490,12 +490,12 @@ void __fastcall ScriptTextViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BE4B8C(v10) & 1) == 0 )
+  if ( (sub_1C13DE4(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BE4BF4(v14, 0LL);
+      v14 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C13E4C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -507,9 +507,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A24470;
+  this->fields.m_target = (Il2CppObject *)sub_1A52CCC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A24418;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A52C74;
 }
 
 
@@ -532,16 +532,16 @@ System_IAsyncResult_o *__fastcall ScriptTextViewMenu_CallbackFunc__BeginInvoke(
 
   v15 = jumpLine;
   v16 = result;
-  if ( (byte_4B643A4 & 1) == 0 )
+  if ( (byte_4BB1EBE & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, *(_QWORD *)&result);
-    sub_1BE4ACC(&ScriptTextViewMenu_ResultKind_TypeInfo, v9);
-    byte_4B643A4 = 1;
+    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&result);
+    sub_1C13D24(&ScriptTextViewMenu_ResultKind_TypeInfo, v9);
+    byte_4BB1EBE = 1;
   }
   v14[2] = 0LL;
   v14[0] = j_il2cpp_value_box_0(ScriptTextViewMenu_ResultKind_TypeInfo, &v16, *(_QWORD *)&jumpLine, callback, object);
   v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1BE4A80(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1C13CD8(this, v14, callback, object);
 }
 
 
@@ -550,7 +550,7 @@ void __fastcall ScriptTextViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BE4A84(result, 0LL, method);
+  sub_1C13CDC(result, 0LL, method);
 }
 
 

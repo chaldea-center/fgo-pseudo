@@ -28,7 +28,7 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetInput(
       }
     }
 LABEL_8:
-    sub_1BE4D28(baseButton, item);
+    sub_1C13F80(baseButton, item);
   }
   baseButton = this->fields.baseButton;
   if ( !baseButton )
@@ -62,15 +62,15 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetItem(
   float v21; // s2
 
   v6 = this;
-  if ( (byte_4B6466C & 1) == 0 )
+  if ( (byte_4BB2186 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_TweenColor___, item);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_20852/*"img_txt_myroom"*/, v8);
-    sub_1BE4ACC(&StringLiteral_20858/*"img_txt_other"*/, v9);
-    sub_1BE4ACC(&StringLiteral_20794/*"img_txt_battle"*/, v10);
-    this = (ServantStatusVoiceListViewItemDraw_o *)sub_1BE4ACC(&StringLiteral_20886/*"img_txt_synthesis"*/, v11);
-    byte_4B6466C = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, item);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_20900/*"img_txt_holygrailforging"*/, v8);
+    sub_1C13D24(&StringLiteral_20906/*"img_txt_main_interlude"*/, v9);
+    sub_1C13D24(&StringLiteral_20842/*"img_tutorial_txtbg_sq"*/, v10);
+    this = (ServantStatusVoiceListViewItemDraw_o *)sub_1C13D24(&StringLiteral_20934/*"img_txt_serialcode"*/, v11);
+    byte_4BB2186 = 1;
   }
   if ( item && mode )
   {
@@ -78,7 +78,7 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetItem(
     if ( !voiceEntitiy )
       goto LABEL_26;
     v13 = voiceEntitiy->fields.svtVoiceType - 1;
-    v14 = (System_String_o **)(v13 > 8 ? &StringLiteral_20858/*"img_txt_other"*/ : (&off_45A39E0)[v13]);
+    v14 = (System_String_o **)(v13 > 8 ? &StringLiteral_20906/*"img_txt_main_interlude"*/ : (&off_45E6030)[v13]);
     this = (ServantStatusVoiceListViewItemDraw_o *)v6->fields.typeSpite;
     if ( !this )
       goto LABEL_26;
@@ -102,11 +102,11 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetItem(
           (this = (ServantStatusVoiceListViewItemDraw_o *)v6->fields.playIconSprite) == 0LL) )
     {
 LABEL_26:
-      sub_1BE4D28(this, item);
+      sub_1C13F80(this, item);
     }
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (ServantStatusVoiceListViewItemDraw_o *)UnityEngine_Object__op_Inequality(
@@ -157,7 +157,7 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetPlay(
   if ( !playIconSprite
     || (playIconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(playIconSprite, 0LL), !item) )
   {
-    sub_1BE4D28(playIconSprite, item);
+    sub_1C13F80(playIconSprite, item);
   }
   if ( item->fields.isPlay || !item->fields.isCanPlay )
   {

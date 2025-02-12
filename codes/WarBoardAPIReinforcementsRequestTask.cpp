@@ -20,14 +20,14 @@ void __fastcall WarBoardAPIReinforcementsRequestTask___ctor(
   FollowerInfo_o *v21; // x6
   PartyListViewItem_o *v22; // x7
 
-  WarBoardAPIRequestTask___ctor_36543732(
+  WarBoardAPIRequestTask___ctor_36769368(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)squareIds);
   this->fields.reinforcementsId = stageReinforcementId;
   this->fields.reinforcementsIndexes = reinforcementsIdx;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.reinforcementsIndexes,
     (int64_t)reinforcementsIdx,
     v11,
@@ -37,7 +37,7 @@ void __fastcall WarBoardAPIReinforcementsRequestTask___ctor(
     v15,
     v16);
   this->fields.squareIndexes = squareIds;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.squareIndexes,
     (int64_t)squareIds,
     v17,
@@ -66,14 +66,14 @@ void __fastcall WarBoardAPIReinforcementsRequestTask__SetRequest(
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4B649F3 & 1) == 0 )
+  if ( (byte_4BB2504 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___, method);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4B649F3 = 1;
+    sub_1C13D24(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___, method);
+    sub_1C13D24(&NetworkManager_TypeInfo, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4BB2504 = 1;
   }
-  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   klass = (WarBoardData_o *)Instance[11].klass;
@@ -81,10 +81,10 @@ void __fastcall WarBoardAPIReinforcementsRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (WarBoardReinforcementsRequest_o *)NetworkManager__getRequest_object_(
                                                   0LL,
-                                                  (const MethodInfo_2FDD714 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+                                                  (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
   if ( !Instance )
 LABEL_8:
-    sub_1BE4D28(Instance, v6);
+    sub_1C13F80(Instance, v6);
   v8 = (struct RequestBase_o *)Instance;
   WarBoardReinforcementsRequest__beginRequest(
     Instance,
@@ -94,5 +94,5 @@ LABEL_8:
     this->fields.squareIndexes,
     0LL);
   this->fields.request = v8;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.request, (int64_t)v8, v9, v10, v11, v12, v13, v14);
 }

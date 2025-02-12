@@ -2,10 +2,10 @@ void __fastcall SubmarineSelectScannerListViewItemObject___ctor(
         SubmarineSelectScannerListViewItemObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B63786 & 1) == 0 )
+  if ( (byte_4BB129B & 1) == 0 )
   {
-    sub_1BE4ACC(&ListViewObject_TypeInfo, method);
-    byte_4B63786 = 1;
+    sub_1C13D24(&ListViewObject_TypeInfo, method);
+    byte_4BB129B = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -27,20 +27,20 @@ void __fastcall SubmarineSelectScannerListViewItemObject__Awake(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4B63784 & 1) == 0 )
+  if ( (byte_4BB1299 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___, method);
-    byte_4B63784 = 1;
+    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___, method);
+    byte_4BB1299 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2FA979C *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
+                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerListViewItemDraw___);
   this->fields.itemDraw = (struct SubmarineSelectScannerListViewItemDraw_o *)Component_object;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -55,23 +55,23 @@ void __fastcall SubmarineSelectScannerListViewItemObject__SetItem(
   SubmarineSelectScannerListViewItemDraw_o *itemDraw; // x0
   __int64 methodPtr_low; // x9
 
-  if ( (byte_4B63785 & 1) == 0 )
+  if ( (byte_4BB129A & 1) == 0 )
   {
-    sub_1BE4ACC(&SubmarineSelectScannerListViewItem_TypeInfo, item);
-    byte_4B63785 = 1;
+    sub_1C13D24(&SubmarineSelectScannerListViewItem_TypeInfo, item);
+    byte_4BB129A = 1;
   }
-  ListViewObject__SetItem_41717728((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41915964((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1BE4D28(itemDraw, v7);
+    sub_1C13F80(itemDraw, v7);
   if ( item )
   {
     methodPtr_low = LOBYTE(SubmarineSelectScannerListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (SubmarineSelectScannerListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != SubmarineSelectScannerListViewItem_TypeInfo )
     {
-      sub_1BE4FE8(item);
+      sub_1C14240(item);
       goto LABEL_9;
     }
   }

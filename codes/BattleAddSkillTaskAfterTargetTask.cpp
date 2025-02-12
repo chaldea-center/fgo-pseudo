@@ -22,15 +22,15 @@ void __fastcall BattleAddSkillTaskAfterTargetTask__PrevAddTask(
   __int64 v13; // x1
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B697AB & 1) == 0 )
+  if ( (byte_4BB72DD & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__, taskList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__, v8);
-    this = (BattleAddSkillTaskAfterTargetTask_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__, taskList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__, v8);
+    this = (BattleAddSkillTaskAfterTargetTask_o *)sub_1C13D24(
                                                     &Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__,
                                                     v9);
-    byte_4B697AB = 1;
+    byte_4BB72DD = 1;
   }
   memset(&v14, 0, sizeof(v14));
   BattleAddSkillTaskAroundTargetTask__PrevAddTask(
@@ -40,23 +40,23 @@ void __fastcall BattleAddSkillTaskAfterTargetTask__PrevAddTask(
     arg,
     method);
   if ( !taskList )
-    sub_1BE4D28(v10, v11);
+    sub_1C13F80(v10, v11);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     (System_Collections_Generic_List_object__o *)taskList,
-    (const MethodInfo_35ECD1C *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
+    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
   while ( 1 )
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v14,
-            (const MethodInfo_3361CE0 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
+            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
     if ( !v12 )
       break;
     if ( !v14.fields._current )
-      sub_1BE4D28(v12, v13);
+      sub_1C13F80(v12, v13);
     BYTE3(v14.fields._current[14].klass) = 1;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_3361CDC *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
+    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
 }

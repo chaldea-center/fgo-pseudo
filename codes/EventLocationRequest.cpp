@@ -25,30 +25,30 @@ void __fastcall EventLocationRequest__beginRequest(
   const MethodInfo *v24; // x2
   const MethodInfo *v25; // x1
 
-  if ( (byte_4B684C3 & 1) == 0 )
+  if ( (byte_4BB5FFC & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_21348/*"latitude"*/, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&StringLiteral_19387/*"eventId"*/, v7);
-    sub_1BE4ACC(&StringLiteral_20224/*"horizontalAccuracy"*/, v8);
-    sub_1BE4ACC(&StringLiteral_24878/*"verticalAccuracy"*/, v9);
-    sub_1BE4ACC(&StringLiteral_24289/*"timestamp"*/, v10);
-    sub_1BE4ACC(&StringLiteral_21505/*"longitude"*/, v11);
-    sub_1BE4ACC(&StringLiteral_16951/*"altitude"*/, v12);
-    byte_4B684C3 = 1;
+    sub_1C13D24(&StringLiteral_21397/*"langVersion"*/, *(_QWORD *)&eventId);
+    sub_1C13D24(&StringLiteral_19431/*"event/location"*/, v7);
+    sub_1C13D24(&StringLiteral_20268/*"hintOpenType"*/, v8);
+    sub_1C13D24(&StringLiteral_24934/*"variable"*/, v9);
+    sub_1C13D24(&StringLiteral_24344/*"timePeriod"*/, v10);
+    sub_1C13D24(&StringLiteral_21554/*"lock_light_{0}"*/, v11);
+    sub_1C13D24(&StringLiteral_16996/*"algorithmGroup"*/, v12);
+    byte_4BB5FFC = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19387/*"eventId"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19431/*"event/location"*/, eventId, method);
   latitude = UnityEngine_LocationInfo__get_latitude(locInfo, 0LL);
-  RequestBase__addField_42156076((RequestBase_o *)this, (System_String_o *)StringLiteral_21348/*"latitude"*/, latitude, v14);
+  RequestBase__addField_42355224((RequestBase_o *)this, (System_String_o *)StringLiteral_21397/*"langVersion"*/, latitude, v14);
   longitude = UnityEngine_LocationInfo__get_longitude(locInfo, 0LL);
-  RequestBase__addField_42156076((RequestBase_o *)this, (System_String_o *)StringLiteral_21505/*"longitude"*/, longitude, v16);
+  RequestBase__addField_42355224((RequestBase_o *)this, (System_String_o *)StringLiteral_21554/*"lock_light_{0}"*/, longitude, v16);
   altitude = UnityEngine_LocationInfo__get_altitude(locInfo, 0LL);
-  RequestBase__addField_42156076((RequestBase_o *)this, (System_String_o *)StringLiteral_16951/*"altitude"*/, altitude, v18);
+  RequestBase__addField_42355224((RequestBase_o *)this, (System_String_o *)StringLiteral_16996/*"algorithmGroup"*/, altitude, v18);
   horizontalAccuracy = UnityEngine_LocationInfo__get_horizontalAccuracy(locInfo, 0LL);
-  RequestBase__addField_42156076((RequestBase_o *)this, (System_String_o *)StringLiteral_20224/*"horizontalAccuracy"*/, horizontalAccuracy, v20);
+  RequestBase__addField_42355224((RequestBase_o *)this, (System_String_o *)StringLiteral_20268/*"hintOpenType"*/, horizontalAccuracy, v20);
   verticalAccuracy = UnityEngine_LocationInfo__get_verticalAccuracy(locInfo, 0LL);
-  RequestBase__addField_42156076((RequestBase_o *)this, (System_String_o *)StringLiteral_24878/*"verticalAccuracy"*/, verticalAccuracy, v22);
+  RequestBase__addField_42355224((RequestBase_o *)this, (System_String_o *)StringLiteral_24934/*"variable"*/, verticalAccuracy, v22);
   timestamp = UnityEngine_LocationInfo__get_timestamp(locInfo, 0LL);
-  RequestBase__addField_42156228((RequestBase_o *)this, (System_String_o *)StringLiteral_24289/*"timestamp"*/, timestamp, v24);
+  RequestBase__addField_42355376((RequestBase_o *)this, (System_String_o *)StringLiteral_24344/*"timePeriod"*/, timestamp, v24);
   RequestBase__beginRequest((RequestBase_o *)this, v25);
 }
 
@@ -58,16 +58,16 @@ System_String_o *__fastcall EventLocationRequest__getURL(EventLocationRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B684C2 & 1) == 0 )
+  if ( (byte_4BB5FFB & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_19373/*"event/location"*/, v2);
-    byte_4B684C2 = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_19417/*"evMap2D_Mark_Create_Finish"*/, v2);
+    byte_4BB5FFB = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62698808(BaseUrl, (System_String_o *)StringLiteral_19373/*"event/location"*/, 0LL);
+  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19417/*"evMap2D_Mark_Create_Finish"*/, 0LL);
 }
 
 
@@ -91,25 +91,25 @@ void __fastcall EventLocationRequest__requestCompleted(
   __int64 *v17; // x9
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B684C4 & 1) == 0 )
+  if ( (byte_4BB5FFD & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, responseList);
-    sub_1BE4ACC(&JsonManager_TypeInfo, v5);
-    sub_1BE4ACC(&ResponseCommandKind_TypeInfo, v6);
-    sub_1BE4ACC(&StringLiteral_21484/*"locationCampaign"*/, v7);
-    sub_1BE4ACC(&StringLiteral_22370/*"ng"*/, v8);
-    sub_1BE4ACC(&StringLiteral_22371/*"ngParse"*/, v9);
-    byte_4B684C4 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, responseList);
+    sub_1C13D24(&JsonManager_TypeInfo, v5);
+    sub_1C13D24(&ResponseCommandKind_TypeInfo, v6);
+    sub_1C13D24(&StringLiteral_21533/*"localRotation.w"*/, v7);
+    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v8);
+    sub_1C13D24(&StringLiteral_22422/*"newBuilder"*/, v9);
+    byte_4BB5FFD = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v10 = ResponseCommandKind__SearchData(69, responseList, 0LL);
-  if ( !v10 || (v11 = v10, !ResponseData__checkError_42194996(v10, 0LL)) )
+  if ( !v10 || (v11 = v10, !ResponseData__checkError_42394144(v10, 0LL)) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v17 = &StringLiteral_22370/*"ng"*/;
+    v17 = &StringLiteral_22421/*"newAttributes"*/;
 LABEL_17:
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
       CallBack->fields.original_method_info,
@@ -122,14 +122,14 @@ LABEL_17:
   if ( !success
     || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           success,
-          (Il2CppObject *)StringLiteral_21484/*"locationCampaign"*/,
+          (Il2CppObject *)StringLiteral_21533/*"localRotation.w"*/,
           &value,
-          (const MethodInfo_32B1A30 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_32F41BC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v17 = &StringLiteral_22371/*"ngParse"*/;
+    v17 = &StringLiteral_22422/*"newBuilder"*/;
     goto LABEL_17;
   }
   v13 = value;

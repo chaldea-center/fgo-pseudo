@@ -12,10 +12,10 @@ void __fastcall AddBgmArgument___ctor(AddBgmArgument_o *this, DataVals_o *dataVa
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dataVal )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   ControlOtherBgmPriorityAtOverStageBgmArray = DataVals__GetControlOtherBgmPriorityAtOverStageBgmArray(dataVal, 0LL);
   this->fields.controlOtherBgmPriorityAtOverStageBgmArray = ControlOtherBgmPriorityAtOverStageBgmArray;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields,
     (int64_t)ControlOtherBgmPriorityAtOverStageBgmArray,
     v8,
@@ -95,21 +95,21 @@ void __fastcall AddBgmArgument__ControlOtherBgmPriorityAtOverStageBgm(
   int *v66; // x10
   __int64 v67; // x0
 
-  if ( (byte_4B6925C & 1) == 0 )
+  if ( (byte_4BB6DA3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_FirstOrDefault_ControlOtherBgmPriorityAtOverStageBgm___, fieldEnv);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Where_BattleFieldEnvironmentData_BGMData___, v7);
-    sub_1BE4ACC(&System_Func_ControlOtherBgmPriorityAtOverStageBgm__bool__TypeInfo, v8);
-    sub_1BE4ACC(&System_Func_BattleFieldEnvironmentData_BGMData__bool__TypeInfo, v9);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v10);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerable_BattleFieldEnvironmentData_BGMData__TypeInfo, v11);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_BattleFieldEnvironmentData_BGMData__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v13);
-    sub_1BE4ACC(&Method_AddBgmArgument___c__ControlOtherBgmPriorityAtOverStageBgm_b__3_0__, v14);
-    sub_1BE4ACC(&Method_AddBgmArgument___c__DisplayClass3_0__ControlOtherBgmPriorityAtOverStageBgm_b__1__, v15);
-    sub_1BE4ACC(&AddBgmArgument___c__DisplayClass3_0_TypeInfo, v16);
-    sub_1BE4ACC(&AddBgmArgument___c_TypeInfo, v17);
-    byte_4B6925C = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_ControlOtherBgmPriorityAtOverStageBgm___, fieldEnv);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Where_BattleFieldEnvironmentData_BGMData___, v7);
+    sub_1C13D24(&System_Func_ControlOtherBgmPriorityAtOverStageBgm__bool__TypeInfo, v8);
+    sub_1C13D24(&System_Func_BattleFieldEnvironmentData_BGMData__bool__TypeInfo, v9);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
+    sub_1C13D24(&System_Collections_Generic_IEnumerable_BattleFieldEnvironmentData_BGMData__TypeInfo, v11);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_BattleFieldEnvironmentData_BGMData__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v13);
+    sub_1C13D24(&Method_AddBgmArgument___c__ControlOtherBgmPriorityAtOverStageBgm_b__3_0__, v14);
+    sub_1C13D24(&Method_AddBgmArgument___c__DisplayClass3_0__ControlOtherBgmPriorityAtOverStageBgm_b__1__, v15);
+    sub_1C13D24(&AddBgmArgument___c__DisplayClass3_0_TypeInfo, v16);
+    sub_1C13D24(&AddBgmArgument___c_TypeInfo, v17);
+    byte_4BB6DA3 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
                     (System_Collections_ICollection_o *)this->fields.controlOtherBgmPriorityAtOverStageBgmArray,
@@ -141,7 +141,7 @@ void __fastcall AddBgmArgument__ControlOtherBgmPriorityAtOverStageBgm(
           v23 = AddBgmArgument___c_TypeInfo;
         }
         v25 = (Il2CppObject *)v23->static_fields->__9;
-        _9__3_0 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_BattleFieldEnvironmentData_BGMData__bool__TypeInfo);
+        _9__3_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_BattleFieldEnvironmentData_BGMData__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__3_0,
           v25,
@@ -149,7 +149,7 @@ void __fastcall AddBgmArgument__ControlOtherBgmPriorityAtOverStageBgm(
           0LL);
         static_fields = AddBgmArgument___c_TypeInfo->static_fields;
         static_fields->__9__3_0 = (struct System_Func_BattleFieldEnvironmentData_BGMData__bool__o *)_9__3_0;
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&static_fields->__9__3_0,
           (int64_t)_9__3_0,
           v27,
@@ -162,10 +162,10 @@ void __fastcall AddBgmArgument__ControlOtherBgmPriorityAtOverStageBgm(
       IsHighPriorityThanBaseStageBgm = System_Linq_Enumerable__Where_object_(
                                          (System_Collections_Generic_IEnumerable_TSource__o *)bgmList,
                                          (System_Func_TSource__bool__o *)_9__3_0,
-                                         (const MethodInfo_2F98960 *)Method_System_Linq_Enumerable_Where_BattleFieldEnvironmentData_BGMData___);
+                                         (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_BattleFieldEnvironmentData_BGMData___);
       if ( !IsHighPriorityThanBaseStageBgm )
 LABEL_47:
-        sub_1BE4D28(IsHighPriorityThanBaseStageBgm, v21);
+        sub_1C13F80(IsHighPriorityThanBaseStageBgm, v21);
       klass = IsHighPriorityThanBaseStageBgm->klass;
       v34 = IsHighPriorityThanBaseStageBgm;
       v35 = *(unsigned __int16 *)(&IsHighPriorityThanBaseStageBgm->klass->_2.bitflags2 + 3);
@@ -184,7 +184,7 @@ LABEL_47:
       else
       {
 LABEL_17:
-        p_method = sub_1C36AAC(
+        p_method = sub_1C65D04(
                      IsHighPriorityThanBaseStageBgm,
                      System_Collections_Generic_IEnumerable_BattleFieldEnvironmentData_BGMData__TypeInfo,
                      0LL);
@@ -193,7 +193,7 @@ LABEL_17:
               v34,
               *(_QWORD *)(p_method + 8));
       if ( !v39 )
-        sub_1BE4D28(0LL, v38);
+        sub_1C13F80(0LL, v38);
       while ( 1 )
       {
         v40 = *(_QWORD *)v39;
@@ -213,7 +213,7 @@ LABEL_17:
         else
         {
 LABEL_24:
-          v43 = sub_1C36AAC(v39, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v43 = sub_1C65D04(v39, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v43)(v39, *(_QWORD *)(v43 + 8)) & 1) == 0 )
           break;
@@ -234,7 +234,7 @@ LABEL_24:
         else
         {
 LABEL_31:
-          v47 = sub_1C36AAC(
+          v47 = sub_1C65D04(
                   v39,
                   System_Collections_Generic_IEnumerator_BattleFieldEnvironmentData_BGMData__TypeInfo,
                   0LL);
@@ -242,26 +242,26 @@ LABEL_31:
         v48 = (BattleFieldEnvironmentData_BGMData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v47)(
                                                         v39,
                                                         *(_QWORD *)(v47 + 8));
-        v49 = sub_1BE4D18(AddBgmArgument___c__DisplayClass3_0_TypeInfo);
+        v49 = sub_1C13F70(AddBgmArgument___c__DisplayClass3_0_TypeInfo);
         System_Object___ctor((Il2CppObject *)v49, 0LL);
         if ( !v48 )
-          sub_1BE4D28(v50, v51);
+          sub_1C13F80(v50, v51);
         BuffIndividuality = BattleFieldEnvironmentData_BGMData__GetBuffIndividuality(v48, fieldEnv, v52);
         if ( !v49 )
-          sub_1BE4D28(BuffIndividuality, BuffIndividuality);
+          sub_1C13F80(BuffIndividuality, BuffIndividuality);
         *(_QWORD *)(v49 + 16) = BuffIndividuality;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v49 + 16), (int64_t)BuffIndividuality, v54, v55, v56, v57, v58, v59);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v49 + 16), (int64_t)BuffIndividuality, v54, v55, v56, v57, v58, v59);
         controlOtherBgmPriorityAtOverStageBgmArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.controlOtherBgmPriorityAtOverStageBgmArray;
-        v61 = (System_Func_object__bool__o *)sub_1BE4D18(System_Func_ControlOtherBgmPriorityAtOverStageBgm__bool__TypeInfo);
+        v61 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_ControlOtherBgmPriorityAtOverStageBgm__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v61,
           (Il2CppObject *)v49,
           Method_AddBgmArgument___c__DisplayClass3_0__ControlOtherBgmPriorityAtOverStageBgm_b__1__,
           0LL);
-        v62 = System_Linq_Enumerable__FirstOrDefault_object__49793520(
+        v62 = System_Linq_Enumerable__FirstOrDefault_object__50015312(
                 controlOtherBgmPriorityAtOverStageBgmArray,
                 (System_Func_TSource__bool__o *)v61,
-                (const MethodInfo_2F7C9F0 *)Method_System_Linq_Enumerable_FirstOrDefault_ControlOtherBgmPriorityAtOverStageBgm___);
+                (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_ControlOtherBgmPriorityAtOverStageBgm___);
         if ( v62 )
           ControlOtherBgmPriorityAtOverStageBgm__UpdatePriority(
             (ControlOtherBgmPriorityAtOverStageBgm_o *)v62,
@@ -285,7 +285,7 @@ LABEL_31:
       else
       {
 LABEL_41:
-        v67 = sub_1C36AAC(v39, System_IDisposable_TypeInfo, 0LL);
+        v67 = sub_1C65D04(v39, System_IDisposable_TypeInfo, 0LL);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v67)(v39, *(_QWORD *)(v67 + 8));
     }
@@ -315,13 +315,13 @@ bool __fastcall AddBgmArgument__IsHighPriorityThanBaseStageBgm(
   struct ControlOtherBgmPriorityAtOverStageBgm_array *v19; // x8
   struct BattleFieldEnvironmentData_CommonData_o *comData; // x9
 
-  if ( (byte_4B6925D & 1) == 0 )
+  if ( (byte_4BB6DA4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__Add__, fieldEnv);
-    this = (AddBgmArgument_o *)sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__Add__, fieldEnv);
+    this = (AddBgmArgument_o *)sub_1C13D24(
                                  &Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__get_Item__,
                                  v6);
-    byte_4B6925D = 1;
+    byte_4BB6DA4 = 1;
   }
   if ( !fieldEnv )
     goto LABEL_14;
@@ -340,27 +340,27 @@ bool __fastcall AddBgmArgument__IsHighPriorityThanBaseStageBgm(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)addBgm,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &controlOtherBgmPriorityAtOverStageBgmArray->obj.klass + klass_low;
     v14->fields._size = klass_low + 1;
     v17[4] = (Il2CppClass *)addBgm;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v17 + 4), (int64_t)addBgm, v7, v8, v9, v10, v11, v12);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v17 + 4), (int64_t)addBgm, v7, v8, v9, v10, v11, v12);
   }
-  BattleFieldEnvironmentData__SortBGM_43775272(fieldEnv, v14, v18);
+  BattleFieldEnvironmentData__SortBGM_43981088(fieldEnv, v14, v18);
   this = (AddBgmArgument_o *)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)v14,
                                0,
-                               (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__get_Item__);
+                               (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__get_Item__);
   if ( !this
     || (v19 = this->fields.controlOtherBgmPriorityAtOverStageBgmArray) == 0LL
     || !addBgm
     || (comData = addBgm->fields.comData) == 0LL )
   {
 LABEL_14:
-    sub_1BE4D28(this, fieldEnv);
+    sub_1C13F80(this, fieldEnv);
   }
   return v19->max_length == comData->fields.addOrder;
 }
@@ -388,15 +388,15 @@ void __fastcall AddBgmArgument___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B6925E & 1) == 0 )
+  if ( (byte_4BB6DA5 & 1) == 0 )
   {
-    sub_1BE4ACC(&AddBgmArgument___c_TypeInfo, v1);
-    byte_4B6925E = 1;
+    sub_1C13D24(&AddBgmArgument___c_TypeInfo, v1);
+    byte_4BB6DA5 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(AddBgmArgument___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(AddBgmArgument___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   AddBgmArgument___c_TypeInfo->static_fields->__9 = (struct AddBgmArgument___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)AddBgmArgument___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -420,7 +420,7 @@ bool __fastcall AddBgmArgument___c___ControlOtherBgmPriorityAtOverStageBgm_b__3_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return (((__int64 (__fastcall *)(BattleFieldEnvironmentData_BGMData_o *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable._5_get_IsTargetBase.method)(
             x,
             x->klass->vtable._6_UpdateActive.methodPtr,
@@ -442,6 +442,6 @@ bool __fastcall AddBgmArgument___c__DisplayClass3_0___ControlOtherBgmPriorityAtO
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return ControlOtherBgmPriorityAtOverStageBgm__IsMatchCond(x, this->fields.buffIndividuality, method);
 }

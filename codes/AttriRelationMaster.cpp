@@ -1,14 +1,14 @@
 void __fastcall AttriRelationMaster___ctor(AttriRelationMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B667EF & 1) == 0 )
+  if ( (byte_4BB4308 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string___ctor__, method);
-    byte_4B667EF = 1;
+    sub_1C13D24(&Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string___ctor__, method);
+    byte_4BB4308 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     112,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ AttriRelationEntity_o *__fastcall AttriRelationMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B667ED & 1) == 0 )
+  if ( (byte_4BB4306 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__GetEntity__,
       *(_QWORD *)&atkAttri);
-    byte_4B667ED = 1;
+    byte_4BB4306 = 1;
   }
   PK = (Il2CppObject *)AttriRelationEntity__CreatePK(atkAttri, defAttri, *(const MethodInfo **)&defAttri);
   return (AttriRelationEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_31FDB1C *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__GetEntity__);
+                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall AttriRelationMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B667EE & 1) == 0 )
+  if ( (byte_4BB4307 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__TryGetEntity__, entity);
-    byte_4B667EE = 1;
+    sub_1C13D24(&Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__TryGetEntity__, entity);
+    byte_4BB4307 = 1;
   }
   PK = (Il2CppObject *)AttriRelationEntity__CreatePK(atkAttri, defAttri, *(const MethodInfo **)&atkAttri);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_AttriRelationMaster__AttriRelationEntity__string__TryGetEntity__);
 }
 
 
@@ -71,18 +71,18 @@ float __fastcall AttriRelationMaster__getRate(int32_t atk, int32_t def, const Me
   float v10; // s8
   AttriRelationEntity_o *Entity; // x0
 
-  if ( (byte_4B667F0 & 1) == 0 )
+  if ( (byte_4BB4309 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_AttriRelationMaster___, *(_QWORD *)&def);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B667F0 = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_AttriRelationMaster___, *(_QWORD *)&def);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4BB4309 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v7);
+    sub_1C13F80(0LL, v7);
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_AttriRelationMaster___);
+                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_AttriRelationMaster___);
   v10 = 1.0;
   if ( MasterData_object )
   {

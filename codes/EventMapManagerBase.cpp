@@ -96,23 +96,23 @@ void __fastcall EventMapManagerBase__Finish(EventMapManagerBase_o *this, const M
     this,
     this->klass->vtable._28_Finish.methodPtr);
   this->fields.terminalMap = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.terminalMap, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.terminalMap, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.mapCamera = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mapCamera, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapCamera, 0LL, v9, v10, v11, v12, v13, v14);
   this->fields.rootRoadP = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootRoadP, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootRoadP, 0LL, v15, v16, v17, v18, v19, v20);
   this->fields.rootSpotP = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootSpotP, 0LL, v21, v22, v23, v24, v25, v26);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootSpotP, 0LL, v21, v22, v23, v24, v25, v26);
   this->fields.rootPathP = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootPathP, 0LL, v27, v28, v29, v30, v31, v32);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootPathP, 0LL, v27, v28, v29, v30, v31, v32);
   this->fields.rootGimmickP = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootGimmickP, 0LL, v33, v34, v35, v36, v37, v38);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootGimmickP, 0LL, v33, v34, v35, v36, v37, v38);
   this->fields.rootEffectP = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootEffectP, 0LL, v39, v40, v41, v42, v43, v44);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootEffectP, 0LL, v39, v40, v41, v42, v43, v44);
   this->fields.warInfo = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.warInfo, 0LL, v45, v46, v47, v48, v49, v50);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.warInfo, 0LL, v45, v46, v47, v48, v49, v50);
   this->fields.mapInfo = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mapInfo, 0LL, v51, v52, v53, v54, v55, v56);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapInfo, 0LL, v51, v52, v53, v54, v55, v56);
 }
 
 
@@ -148,17 +148,17 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
   TerminalSceneComponent_o *mInstance; // x0
   System_Nullable_Vector3__o v6; // 0:x2.16
 
-  if ( (byte_4B636EF & 1) == 0 )
+  if ( (byte_4BB1206 & 1) == 0 )
   {
-    sub_1BE4ACC(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4B636EF = 1;
+    sub_1C13D24(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_4BB1206 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4B618A6 )
+  if ( !byte_4BAF374 )
   {
-    sub_1BE4ACC(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4B618A6 = 1;
+    sub_1C13D24(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_4BAF374 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -176,7 +176,7 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
                                                   (UnityEngine_Component_o *)dialog,
                                                   0LL)) == 0LL )
   {
-    sub_1BE4D28(mInstance, dialog);
+    sub_1C13F80(mInstance, dialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mInstance, 0, 0LL);
 }
@@ -231,17 +231,17 @@ void __fastcall EventMapManagerBase__SetAllTouchBlock(
   int v5; // w10
 
   v4 = this;
-  if ( (byte_4B636ED & 1) == 0 )
+  if ( (byte_4BB1204 & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
-    byte_4B636ED = 1;
+    this = (EventMapManagerBase_o *)sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
+    byte_4BB1204 = 1;
   }
   if ( !v4
     || (value ? (v5 = 1) : (v5 = -1),
         v4->fields.touchBlockNum = (v4->fields.touchBlockNum + v5) & ~((v4->fields.touchBlockNum + v5) >> 31),
-        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1BE4D28(this, value);
+    sub_1C13F80(this, value);
   }
   CommonUI__SetEventFadeMaskCollider((CommonUI_o *)this, v4->fields.touchBlockNum > 0, 0LL);
   ((void (__fastcall *)(EventMapManagerBase_o *, bool, Il2CppMethodPointer))v4->klass->vtable._31_SetCameraWorkBlock.method)(
@@ -263,10 +263,10 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
   struct MapCamera_o *v7; // x8
 
   v4 = this;
-  if ( (byte_4B636EE & 1) == 0 )
+  if ( (byte_4BB1205 & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_1BE4ACC(&UnityEngine_Object_TypeInfo, value);
-    byte_4B636EE = 1;
+    this = (EventMapManagerBase_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, value);
+    byte_4BB1205 = 1;
   }
   if ( !v4 )
     goto LABEL_13;
@@ -288,7 +288,7 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
       return;
     }
 LABEL_13:
-    sub_1BE4D28(this, value);
+    sub_1C13F80(this, value);
   }
 }
 
@@ -365,7 +365,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
   PartyListViewItem_o *v65; // x7
 
   this->fields.terminalMap = terminalMap;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.terminalMap,
     (int64_t)terminalMap,
     (int64_t)mapInfo,
@@ -375,13 +375,13 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     (FollowerInfo_o *)rootGimmickP,
     (PartyListViewItem_o *)rootPathP);
   this->fields.mapInfo = mapInfo;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mapInfo, (int64_t)mapInfo, v18, v19, v20, v21, v22, v23);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapInfo, (int64_t)mapInfo, v18, v19, v20, v21, v22, v23);
   this->fields.warInfo = warInfo;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.warInfo, (int64_t)warInfo, v24, v25, v26, v27, v28, v29);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.warInfo, (int64_t)warInfo, v24, v25, v26, v27, v28, v29);
   this->fields.mapCamera = mapCamera;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.mapCamera, (int64_t)mapCamera, v30, v31, v32, v33, v34, v35);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapCamera, (int64_t)mapCamera, v30, v31, v32, v33, v34, v35);
   this->fields.rootEffectP = rootEffectP;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.rootEffectP,
     (int64_t)rootEffectP,
     v36,
@@ -391,7 +391,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v40,
     v41);
   this->fields.rootGimmickP = rootGimmickP;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.rootGimmickP,
     (int64_t)rootGimmickP,
     v42,
@@ -401,9 +401,9 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v46,
     v47);
   this->fields.rootPathP = rootPathP;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootPathP, (int64_t)rootPathP, v48, v49, v50, v51, v52, v53);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootPathP, (int64_t)rootPathP, v48, v49, v50, v51, v52, v53);
   this->fields.rootRoadP = rootRoadP;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootRoadP, (int64_t)rootRoadP, v54, v55, v56, v57, v58, v59);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootRoadP, (int64_t)rootRoadP, v54, v55, v56, v57, v58, v59);
   this->fields.rootSpotP = rootSpotP;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.rootSpotP, (int64_t)rootSpotP, v60, v61, v62, v63, v64, v65);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.rootSpotP, (int64_t)rootSpotP, v60, v61, v62, v63, v64, v65);
 }

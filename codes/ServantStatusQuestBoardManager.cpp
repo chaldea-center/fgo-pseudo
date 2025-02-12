@@ -3,10 +3,10 @@ void __fastcall ServantStatusQuestBoardManager___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct ServantStatusQuestBoardManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4B6465D & 1) == 0 )
+  if ( (byte_4BB2177 & 1) == 0 )
   {
-    sub_1BE4ACC(&ServantStatusQuestBoardManager_TypeInfo, v1);
-    byte_4B6465D = 1;
+    sub_1C13D24(&ServantStatusQuestBoardManager_TypeInfo, v1);
+    byte_4BB2177 = 1;
   }
   static_fields = ServantStatusQuestBoardManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ALPHA_ANIM_SPD_RATE = 0x404000003F000000LL;
@@ -16,10 +16,10 @@ void __fastcall ServantStatusQuestBoardManager___cctor(const MethodInfo *method)
 
 void __fastcall ServantStatusQuestBoardManager___ctor(ServantStatusQuestBoardManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6465A & 1) == 0 )
+  if ( (byte_4BB2174 & 1) == 0 )
   {
-    sub_1BE4ACC(&NetworkManager_TypeInfo, method);
-    byte_4B6465A = 1;
+    sub_1C13D24(&NetworkManager_TypeInfo, method);
+    byte_4BB2174 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -38,11 +38,11 @@ AlphaTransitionCalculator_o *__fastcall ServantStatusQuestBoardManager__CreateAl
   System_Func_float__float__float__float__o *v5; // x19
   AlphaTransitionCalculator_o *v6; // x20
 
-  if ( (byte_4B6465C & 1) == 0 )
+  if ( (byte_4BB2176 & 1) == 0 )
   {
-    sub_1BE4ACC(&AlphaTransitionCalculator_TypeInfo, method);
-    sub_1BE4ACC(&ServantStatusQuestBoardManager_TypeInfo, v2);
-    byte_4B6465C = 1;
+    sub_1C13D24(&AlphaTransitionCalculator_TypeInfo, method);
+    sub_1C13D24(&ServantStatusQuestBoardManager_TypeInfo, v2);
+    byte_4BB2176 = 1;
   }
   v3 = ServantStatusQuestBoardManager_TypeInfo;
   if ( !ServantStatusQuestBoardManager_TypeInfo->_2.cctor_finished )
@@ -55,7 +55,7 @@ AlphaTransitionCalculator_o *__fastcall ServantStatusQuestBoardManager__CreateAl
          ServantStatusQuestBoardManager_TypeInfo->static_fields->ALPHA_ANIM_SPD_RATE,
          (float)ServantStatusQuestBoardManager_TypeInfo->static_fields->ALPHA_FADE_FRAME_NUM,
          0LL);
-  v6 = (AlphaTransitionCalculator_o *)sub_1BE4D18(AlphaTransitionCalculator_TypeInfo);
+  v6 = (AlphaTransitionCalculator_o *)sub_1C13F70(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v6, v4, v5, 0LL);
   return v6;
 }
@@ -113,12 +113,12 @@ bool __fastcall ServantStatusQuestBoardManager__UpdateAlphaAnim(
   int32_t ALPHA_ANIM_COUNT_RESET_VAL; // w8
   int32_t v24; // w22
 
-  if ( (byte_4B6465B & 1) == 0 )
+  if ( (byte_4BB2175 & 1) == 0 )
   {
-    sub_1BE4ACC(&ServantStatusQuestBoardManager_TypeInfo, method);
-    sub_1BE4ACC(&Method_TransitionCalculator_float__Update__, v3);
-    sub_1BE4ACC(&Method_TransitionCalculator_float__get_Current__, v4);
-    byte_4B6465B = 1;
+    sub_1C13D24(&ServantStatusQuestBoardManager_TypeInfo, method);
+    sub_1C13D24(&Method_TransitionCalculator_float__Update__, v3);
+    sub_1C13D24(&Method_TransitionCalculator_float__get_Current__, v4);
+    byte_4BB2175 = 1;
   }
   p_fadeUIAlphaCalculator = &this->fields.fadeUIAlphaCalculator;
   fadeUIAlphaCalculator = this->fields.fadeUIAlphaCalculator;
@@ -126,7 +126,7 @@ bool __fastcall ServantStatusQuestBoardManager__UpdateAlphaAnim(
   {
     AlphaCalculator = ServantStatusQuestBoardManager__CreateAlphaCalculator(0LL, method);
     *p_fadeUIAlphaCalculator = AlphaCalculator;
-    sub_1BE4A70(
+    sub_1C13CC8(
       (PartyOrganizationUtility_o *)&this->fields.fadeUIAlphaCalculator,
       (int64_t)AlphaCalculator,
       v8,
@@ -145,7 +145,7 @@ bool __fastcall ServantStatusQuestBoardManager__UpdateAlphaAnim(
   }
   TransitionCalculator_float___Update(
     (TransitionCalculator_float__o *)fadeUIAlphaCalculator,
-    (const MethodInfo_38AA644 *)Method_TransitionCalculator_float__Update__);
+    (const MethodInfo_38EBDBC *)Method_TransitionCalculator_float__Update__);
   fadeUIAlphaCalculator = *p_fadeUIAlphaCalculator;
   if ( !*p_fadeUIAlphaCalculator )
     goto LABEL_26;
@@ -207,7 +207,7 @@ bool __fastcall ServantStatusQuestBoardManager__UpdateAlphaAnim(
   }
   if ( !*p_fadeUIAlphaCalculator )
 LABEL_26:
-    sub_1BE4D28(fadeUIAlphaCalculator, v14);
+    sub_1C13F80(fadeUIAlphaCalculator, v14);
   this->fields.mAlphaAnimNow = (*p_fadeUIAlphaCalculator)->fields._Current_k__BackingField;
   return (char)fadeUIAlphaCalculator;
 }

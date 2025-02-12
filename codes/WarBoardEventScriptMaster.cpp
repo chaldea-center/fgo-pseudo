@@ -1,14 +1,14 @@
 void __fastcall WarBoardEventScriptMaster___ctor(WarBoardEventScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B67BCB & 1) == 0 )
+  if ( (byte_4BB56F5 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string___ctor__, method);
-    byte_4B67BCB = 1;
+    sub_1C13D24(&Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string___ctor__, method);
+    byte_4BB56F5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     471,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ WarBoardEventScriptEntity_o *__fastcall WarBoardEventScriptMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B67BCC & 1) == 0 )
+  if ( (byte_4BB56F6 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4B67BCC = 1;
+    byte_4BB56F6 = 1;
   }
   PK = (Il2CppObject *)WarBoardEventScriptEntity__CreatePK(id, idx, *(const MethodInfo **)&idx);
   return (WarBoardEventScriptEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           PK,
-                                          (const MethodInfo_31FDB1C *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__GetEntity__);
+                                          (const MethodInfo_323D0DC *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__GetEntity__);
 }
 
 
@@ -45,7 +45,7 @@ System_Collections_Generic_List_WarBoardEventScriptEntity__o *__fastcall WarBoar
   __int64 v5; // x1
   __int64 v6; // x1
   WarBoardEventScriptMaster___c_c *v7; // x0
-  struct System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *list; // x19
+  struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
   System_Func_object__object__o *_9__1_0; // x20
   Il2CppObject *v10; // x21
   struct WarBoardEventScriptMaster___c_StaticFields *static_fields; // x0
@@ -57,14 +57,14 @@ System_Collections_Generic_List_WarBoardEventScriptEntity__o *__fastcall WarBoar
   PartyListViewItem_o *v17; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4B67BCA & 1) == 0 )
+  if ( (byte_4BB56F4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_DataEntityBase__WarBoardEventScriptEntity___, method);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToList_WarBoardEventScriptEntity___, v3);
-    sub_1BE4ACC(&System_Func_DataEntityBase__WarBoardEventScriptEntity__TypeInfo, v4);
-    sub_1BE4ACC(&Method_WarBoardEventScriptMaster___c__GetEntityList_b__1_0__, v5);
-    sub_1BE4ACC(&WarBoardEventScriptMaster___c_TypeInfo, v6);
-    byte_4B67BCA = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Select_WarBoardEventScriptEntity__WarBoardEventScriptEntity___, method);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_WarBoardEventScriptEntity___, v3);
+    sub_1C13D24(&System_Func_WarBoardEventScriptEntity__WarBoardEventScriptEntity__TypeInfo, v4);
+    sub_1C13D24(&Method_WarBoardEventScriptMaster___c__GetEntityList_b__1_0__, v5);
+    sub_1C13D24(&WarBoardEventScriptMaster___c_TypeInfo, v6);
+    byte_4BB56F4 = 1;
   }
   v7 = WarBoardEventScriptMaster___c_TypeInfo;
   list = this->fields.list;
@@ -82,19 +82,19 @@ System_Collections_Generic_List_WarBoardEventScriptEntity__o *__fastcall WarBoar
       v7 = WarBoardEventScriptMaster___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__1_0 = (System_Func_object__object__o *)sub_1BE4D18(System_Func_DataEntityBase__WarBoardEventScriptEntity__TypeInfo);
+    _9__1_0 = (System_Func_object__object__o *)sub_1C13F70(System_Func_WarBoardEventScriptEntity__WarBoardEventScriptEntity__TypeInfo);
     System_Func_object__object____ctor(_9__1_0, v10, Method_WarBoardEventScriptMaster___c__GetEntityList_b__1_0__, 0LL);
     static_fields = WarBoardEventScriptMaster___c_TypeInfo->static_fields;
-    static_fields->__9__1_0 = (struct System_Func_DataEntityBase__WarBoardEventScriptEntity__o *)_9__1_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__1_0, (int64_t)_9__1_0, v12, v13, v14, v15, v16, v17);
+    static_fields->__9__1_0 = (struct System_Func_WarBoardEventScriptEntity__WarBoardEventScriptEntity__o *)_9__1_0;
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__1_0, (int64_t)_9__1_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__1_0,
-                                                               (const MethodInfo_2F8A8A8 *)Method_System_Linq_Enumerable_Select_DataEntityBase__WarBoardEventScriptEntity___);
+                                                               (const MethodInfo_2FC0B08 *)Method_System_Linq_Enumerable_Select_WarBoardEventScriptEntity__WarBoardEventScriptEntity___);
   return (System_Collections_Generic_List_WarBoardEventScriptEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                            v18,
-                                                                           (const MethodInfo_2F96830 *)Method_System_Linq_Enumerable_ToList_WarBoardEventScriptEntity___);
+                                                                           (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_WarBoardEventScriptEntity___);
 }
 
 
@@ -113,134 +113,130 @@ WarBoardEventScriptEntity_array *__fastcall WarBoardEventScriptMaster__GetList(
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x1
-  System_Collections_Generic_List_object__o *v15; // x19
-  int64_t v16; // x1
+  System_Collections_Generic_List_object__o *v14; // x19
+  int64_t v15; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int32_t v18; // w22
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  __int64 methodPtr_low; // x10
+  int32_t v17; // w22
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v27; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v29; // x0
-  WarBoardEventScriptMaster___c_c *v30; // x0
+  Il2CppClass **v27; // x0
+  WarBoardEventScriptMaster___c_c *v28; // x0
   System_Func_object__int__o *_9__0_0; // x20
-  Il2CppObject *v32; // x21
+  Il2CppObject *v30; // x21
   struct WarBoardEventScriptMaster___c_StaticFields *static_fields; // x0
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v40; // x0
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v38; // x0
 
-  if ( (byte_4B67BC9 & 1) == 0 )
+  if ( (byte_4BB56F3 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&id);
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_OrderBy_WarBoardEventScriptEntity__int___, v6);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_ToArray_WarBoardEventScriptEntity___, v7);
-    sub_1BE4ACC(&System_Func_WarBoardEventScriptEntity__int__TypeInfo, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_WarBoardEventScriptEntity__Add__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_WarBoardEventScriptEntity___ctor__, v10);
-    sub_1BE4ACC(&System_Collections_Generic_List_WarBoardEventScriptEntity__TypeInfo, v11);
-    sub_1BE4ACC(&Method_WarBoardEventScriptMaster___c__GetList_b__0_0__, v12);
-    sub_1BE4ACC(&WarBoardEventScriptMaster___c_TypeInfo, v13);
-    sub_1BE4ACC(&WarBoardEventScriptEntity_TypeInfo, v14);
-    byte_4B67BC9 = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_WarBoardEventScriptEntity__get_Count__,
+      *(_QWORD *)&id);
+    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_WarBoardEventScriptEntity__get_Item__, v5);
+    sub_1C13D24(&Method_System_Linq_Enumerable_OrderBy_WarBoardEventScriptEntity__int___, v6);
+    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_WarBoardEventScriptEntity___, v7);
+    sub_1C13D24(&System_Func_WarBoardEventScriptEntity__int__TypeInfo, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardEventScriptEntity__Add__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardEventScriptEntity___ctor__, v10);
+    sub_1C13D24(&System_Collections_Generic_List_WarBoardEventScriptEntity__TypeInfo, v11);
+    sub_1C13D24(&Method_WarBoardEventScriptMaster___c__GetList_b__0_0__, v12);
+    sub_1C13D24(&WarBoardEventScriptMaster___c_TypeInfo, v13);
+    byte_4BB56F3 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_WarBoardEventScriptEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_WarBoardEventScriptEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v15,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_WarBoardEventScriptEntity___ctor__);
+    v14,
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_WarBoardEventScriptEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-LABEL_17:
-    sub_1BE4D28(list, v16);
-  v18 = 0;
-  while ( v18 < System_Collections_ObjectModel_Collection_object___get_Count(
+LABEL_15:
+    sub_1C13F80(list, v15);
+  v17 = 0;
+  while ( v17 < System_Collections_ObjectModel_Collection_object___get_Count(
                   list,
-                  (const MethodInfo_3199D94 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_WarBoardEventScriptEntity__get_Count__) )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
-      goto LABEL_17;
+      goto LABEL_15;
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
-                                                               v18,
-                                                               (const MethodInfo_3199E24 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                               v17,
+                                                               (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_WarBoardEventScriptEntity__get_Item__);
     if ( list )
     {
-      v16 = (int64_t)list;
-      methodPtr_low = LOBYTE(WarBoardEventScriptEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(list->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-        && (WarBoardEventScriptEntity_c *)list->klass->_2.typeHierarchy[methodPtr_low - 1] == WarBoardEventScriptEntity_TypeInfo
-        && LODWORD(list->fields.items) == id )
+      v15 = (int64_t)list;
+      if ( LODWORD(list->fields.items) == id )
       {
-        if ( !v15 )
-          goto LABEL_17;
-        items = v15->fields._items;
-        v27 = Method_System_Collections_Generic_List_WarBoardEventScriptEntity__Add__;
-        ++v15->fields._version;
+        if ( !v14 )
+          goto LABEL_15;
+        items = v14->fields._items;
+        v25 = Method_System_Collections_Generic_List_WarBoardEventScriptEntity__Add__;
+        ++v14->fields._version;
         if ( !items )
-          goto LABEL_17;
-        size = v15->fields._size;
+          goto LABEL_15;
+        size = v14->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v15,
+            v14,
             (Il2CppObject *)list,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v29 = &items->obj.klass + size;
-          v15->fields._size = size + 1;
-          v29[4] = (Il2CppClass *)v16;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v29 + 4), v16, v19, v20, v21, v22, v23, v24);
+          v27 = &items->obj.klass + size;
+          v14->fields._size = size + 1;
+          v27[4] = (Il2CppClass *)v15;
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 4), v15, v18, v19, v20, v21, v22, v23);
         }
       }
     }
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
-    ++v18;
+    ++v17;
     if ( !list )
-      goto LABEL_17;
+      goto LABEL_15;
   }
-  v30 = WarBoardEventScriptMaster___c_TypeInfo;
+  v28 = WarBoardEventScriptMaster___c_TypeInfo;
   if ( !WarBoardEventScriptMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardEventScriptMaster___c_TypeInfo);
-    v30 = WarBoardEventScriptMaster___c_TypeInfo;
+    v28 = WarBoardEventScriptMaster___c_TypeInfo;
   }
-  _9__0_0 = (System_Func_object__int__o *)v30->static_fields->__9__0_0;
+  _9__0_0 = (System_Func_object__int__o *)v28->static_fields->__9__0_0;
   if ( !_9__0_0 )
   {
-    if ( !v30->_2.cctor_finished )
+    if ( !v28->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v30);
-      v30 = WarBoardEventScriptMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v28);
+      v28 = WarBoardEventScriptMaster___c_TypeInfo;
     }
-    v32 = (Il2CppObject *)v30->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1BE4D18(System_Func_WarBoardEventScriptEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__0_0, v32, Method_WarBoardEventScriptMaster___c__GetList_b__0_0__, 0LL);
+    v30 = (Il2CppObject *)v28->static_fields->__9;
+    _9__0_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_WarBoardEventScriptEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__0_0, v30, Method_WarBoardEventScriptMaster___c__GetList_b__0_0__, 0LL);
     static_fields = WarBoardEventScriptMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_WarBoardEventScriptEntity__int__o *)_9__0_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v34, v35, v36, v37, v38, v39);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v32, v33, v34, v35, v36, v37);
   }
-  v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
-                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v15,
+  v38 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v14,
                                                                (System_Func_TSource__TKey__o *)_9__0_0,
-                                                               (const MethodInfo_2F821CC *)Method_System_Linq_Enumerable_OrderBy_WarBoardEventScriptEntity__int___);
+                                                               (const MethodInfo_2FB842C *)Method_System_Linq_Enumerable_OrderBy_WarBoardEventScriptEntity__int___);
   return (WarBoardEventScriptEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                              v40,
-                                              (const MethodInfo_2F92AD4 *)Method_System_Linq_Enumerable_ToArray_WarBoardEventScriptEntity___);
+                                              v38,
+                                              (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_WarBoardEventScriptEntity___);
 }
 
 
@@ -254,19 +250,19 @@ bool __fastcall WarBoardEventScriptMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B67BCD & 1) == 0 )
+  if ( (byte_4BB56F7 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__TryGetEntity__,
       entity);
-    byte_4B67BCD = 1;
+    byte_4BB56F7 = 1;
   }
   PK = (Il2CppObject *)WarBoardEventScriptEntity__CreatePK(id, idx, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_WarBoardEventScriptMaster__WarBoardEventScriptEntity__string__TryGetEntity__);
 }
 
 
@@ -281,15 +277,15 @@ void __fastcall WarBoardEventScriptMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B67BCE & 1) == 0 )
+  if ( (byte_4BB56F8 & 1) == 0 )
   {
-    sub_1BE4ACC(&WarBoardEventScriptMaster___c_TypeInfo, v1);
-    byte_4B67BCE = 1;
+    sub_1C13D24(&WarBoardEventScriptMaster___c_TypeInfo, v1);
+    byte_4BB56F8 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(WarBoardEventScriptMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(WarBoardEventScriptMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardEventScriptMaster___c_TypeInfo->static_fields->__9 = (struct WarBoardEventScriptMaster___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)WarBoardEventScriptMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -309,24 +305,10 @@ void __fastcall WarBoardEventScriptMaster___c___ctor(WarBoardEventScriptMaster__
 
 WarBoardEventScriptEntity_o *__fastcall WarBoardEventScriptMaster___c___GetEntityList_b__1_0(
         WarBoardEventScriptMaster___c_o *this,
-        DataEntityBase_o *n,
+        WarBoardEventScriptEntity_o *n,
         const MethodInfo *method)
 {
-  __int64 methodPtr_low; // x10
-
-  if ( (byte_4B67BCF & 1) == 0 )
-  {
-    sub_1BE4ACC(&WarBoardEventScriptEntity_TypeInfo, n);
-    byte_4B67BCF = 1;
-  }
-  if ( !n )
-    return 0LL;
-  methodPtr_low = LOBYTE(WarBoardEventScriptEntity_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(n->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
-    return 0LL;
-  if ( (WarBoardEventScriptEntity_c *)n->klass->_2.typeHierarchy[methodPtr_low - 1] == WarBoardEventScriptEntity_TypeInfo )
-    return (WarBoardEventScriptEntity_o *)n;
-  return 0LL;
+  return n;
 }
 
 
@@ -336,6 +318,6 @@ int32_t __fastcall WarBoardEventScriptMaster___c___GetList_b__0_0(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   return a->fields.idx;
 }

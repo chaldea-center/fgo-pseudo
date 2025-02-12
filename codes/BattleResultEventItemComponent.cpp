@@ -36,29 +36,29 @@ void __fastcall BattleResultEventItemComponent___cctor(const MethodInfo *method)
   FollowerInfo_o *v34; // x6
   PartyListViewItem_o *v35; // x7
 
-  if ( (byte_4B69F93 & 1) == 0 )
+  if ( (byte_4BB7AB6 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, v1);
-    sub_1BE4ACC(&StringLiteral_20536/*"img_bg_ep"*/, v8);
-    sub_1BE4ACC(&StringLiteral_2967/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v9);
-    sub_1BE4ACC(&StringLiteral_20868/*"img_txt_reward"*/, v10);
-    sub_1BE4ACC(&StringLiteral_20537/*"img_bg_events"*/, v11);
-    byte_4B69F93 = 1;
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, v1);
+    sub_1C13D24(&StringLiteral_20582/*"imageUrl"*/, v8);
+    sub_1C13D24(&StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v9);
+    sub_1C13D24(&StringLiteral_20916/*"img_txt_myroom_saintgraf"*/, v10);
+    sub_1C13D24(&StringLiteral_20583/*"img"*/, v11);
+    byte_4BB7AB6 = 1;
   }
-  BattleResultEventItemComponent_TypeInfo->static_fields->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2967/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
-  sub_1BE4A70(
+  BattleResultEventItemComponent_TypeInfo->static_fields->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)BattleResultEventItemComponent_TypeInfo->static_fields,
-    StringLiteral_2967/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/,
+    StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v12 = StringLiteral_20868/*"img_txt_reward"*/;
+  v12 = StringLiteral_20916/*"img_txt_myroom_saintgraf"*/;
   static_fields = BattleResultEventItemComponent_TypeInfo->static_fields;
-  static_fields->EVENT_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_20868/*"img_txt_reward"*/;
-  sub_1BE4A70(
+  static_fields->EVENT_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_20916/*"img_txt_myroom_saintgraf"*/;
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&static_fields->EVENT_POINT_REWARD_TITLE_NAME,
     v12,
     v14,
@@ -67,14 +67,14 @@ void __fastcall BattleResultEventItemComponent___cctor(const MethodInfo *method)
     v17,
     v18,
     v19);
-  v20 = StringLiteral_20537/*"img_bg_events"*/;
+  v20 = StringLiteral_20583/*"img"*/;
   v21 = BattleResultEventItemComponent_TypeInfo->static_fields;
-  v21->EVENT_POINT_REWARD_BG_NAME = (struct System_String_o *)StringLiteral_20537/*"img_bg_events"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v21->EVENT_POINT_REWARD_BG_NAME, v20, v22, v23, v24, v25, v26, v27);
-  v28 = StringLiteral_20536/*"img_bg_ep"*/;
+  v21->EVENT_POINT_REWARD_BG_NAME = (struct System_String_o *)StringLiteral_20583/*"img"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v21->EVENT_POINT_REWARD_BG_NAME, v20, v22, v23, v24, v25, v26, v27);
+  v28 = StringLiteral_20582/*"imageUrl"*/;
   v29 = BattleResultEventItemComponent_TypeInfo->static_fields;
-  v29->EVENT_POINT_BG_TITLE_NAME = (struct System_String_o *)StringLiteral_20536/*"img_bg_ep"*/;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v29->EVENT_POINT_BG_TITLE_NAME, v28, v30, v31, v32, v33, v34, v35);
+  v29->EVENT_POINT_BG_TITLE_NAME = (struct System_String_o *)StringLiteral_20582/*"imageUrl"*/;
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v29->EVENT_POINT_BG_TITLE_NAME, v28, v30, v31, v32, v33, v34, v35);
   *(_QWORD *)&BattleResultEventItemComponent_TypeInfo->static_fields->TITLE_AT_LABEL_MAX_WIDTH = 0x19E0000013BLL;
 }
 
@@ -89,14 +89,14 @@ void __fastcall BattleResultEventItemComponent___ctor(BattleResultEventItemCompo
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4B69F92 & 1) == 0 )
+  if ( (byte_4BB7AB5 & 1) == 0 )
   {
-    sub_1BE4ACC(&UnityEngine_Color___TypeInfo, method);
-    byte_4B69F92 = 1;
+    sub_1C13D24(&UnityEngine_Color___TypeInfo, method);
+    byte_4BB7AB5 = 1;
   }
-  v3 = (struct UnityEngine_Color_array *)sub_1BE4B74(UnityEngine_Color___TypeInfo, 2LL);
+  v3 = (struct UnityEngine_Color_array *)sub_1C13DCC(UnityEngine_Color___TypeInfo, 2LL);
   this->fields.showModeChanButtonLabelEffectColors = v3;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.showModeChanButtonLabelEffectColors,
     (int64_t)v3,
     v4,
@@ -124,22 +124,22 @@ void __fastcall BattleResultEventItemComponent__CheckNextGroup(
   const MethodInfo *v11; // x1
   BattleResultEventItemComponent_EventDropItemInfo_o v12; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4B69F8C & 1) == 0 )
+  if ( (byte_4BB7AAF & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__ToArray__, method);
-    sub_1BE4ACC(
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__ToArray__, method);
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       v3);
-    sub_1BE4ACC(&StringLiteral_9777/*"OPEN"*/, v4);
-    sub_1BE4ACC(&StringLiteral_9392/*"NEXT"*/, v5);
-    byte_4B69F8C = 1;
+    sub_1C13D24(&StringLiteral_9802/*"OK_CONTINUE_ITEM"*/, v4);
+    sub_1C13D24(&StringLiteral_9416/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/, v5);
+    byte_4BB7AAF = 1;
   }
   if ( BattleResultEventItemComponent__isGetItems(this, method) )
   {
     myFsm = this->fields.myFsm;
     if ( myFsm )
     {
-      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9777/*"OPEN"*/, 0LL);
+      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9802/*"OK_CONTINUE_ITEM"*/, 0LL);
       myFsm = (PlayMakerFSM_o *)this->fields.dropInfoList;
       if ( myFsm )
       {
@@ -147,14 +147,14 @@ void __fastcall BattleResultEventItemComponent__CheckNextGroup(
           &v12,
           (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)myFsm,
           this->fields.currentGroupIndex,
-          (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+          (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
         myFsm = (PlayMakerFSM_o *)v12.fields.itemList;
         if ( v12.fields.itemList )
         {
           v8 = (BattleDropItem_array *)System_Collections_Generic_List_object___ToArray(
                                          (System_Collections_Generic_List_object__o *)v12.fields.itemList,
-                                         (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleDropItem__ToArray__);
-          BattleResultEventItemComponent__SetItemWindow_45317580(this, v8, v9);
+                                         (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleDropItem__ToArray__);
+          BattleResultEventItemComponent__SetItemWindow_45512248(this, v8, v9);
           BattleResultEventItemComponent__SetUi(this, this->fields.currentEventId, v10);
           BattleResultEventItemComponent__Open(this, v11);
           return;
@@ -162,7 +162,7 @@ void __fastcall BattleResultEventItemComponent__CheckNextGroup(
       }
     }
 LABEL_11:
-    sub_1BE4D28(myFsm, v6);
+    sub_1C13F80(myFsm, v6);
   }
   myFsm = (PlayMakerFSM_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !myFsm )
@@ -171,7 +171,7 @@ LABEL_11:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_11;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9392/*"NEXT"*/, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9416/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/, 0LL);
 }
 
 
@@ -193,21 +193,21 @@ void __fastcall BattleResultEventItemComponent__Close(BattleResultEventItemCompo
   PartyOrganizationUtility_o *p_newDroplist; // x19
   BattleResultEventItemComponent_EventDropItemInfo_o v17; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_4B69F8A & 1) == 0 )
+  if ( (byte_4BB7AAD & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_endClose__, method);
-    sub_1BE4ACC(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    sub_1BE4ACC(
+    sub_1C13D24(&Method_BattleResultEventItemComponent_endClose__, method);
+    sub_1C13D24(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       v4);
-    byte_4B69F8A = 1;
+    byte_4BB7AAD = 1;
   }
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow )
     goto LABEL_11;
   BattleViewItemlistComponent__setHide(itemWindow, 0LL);
   window = this->fields.window;
-  v7 = (BattleWindowComponent_EndCall_o *)sub_1BE4D18(BattleWindowComponent_EndCall_TypeInfo);
+  v7 = (BattleWindowComponent_EndCall_o *)sub_1C13F70(BattleWindowComponent_EndCall_TypeInfo);
   BattleWindowComponent_EndCall___ctor(v7, (Il2CppObject *)this, Method_BattleResultEventItemComponent_endClose__, 0LL);
   if ( !window )
     goto LABEL_11;
@@ -224,7 +224,7 @@ void __fastcall BattleResultEventItemComponent__Close(BattleResultEventItemCompo
       &v17,
       (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)itemWindow,
       this->fields.currentGroupIndex,
-      (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+      (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
     newDroplist = v17.fields.newDroplist;
   }
   else
@@ -233,12 +233,12 @@ void __fastcall BattleResultEventItemComponent__Close(BattleResultEventItemCompo
   }
   this->fields.newDroplist = newDroplist;
   p_newDroplist = (PartyOrganizationUtility_o *)&this->fields.newDroplist;
-  sub_1BE4A70(p_newDroplist, (int64_t)newDroplist, v9, v10, v11, v12, v13, v14);
+  sub_1C13CC8(p_newDroplist, (int64_t)newDroplist, v9, v10, v11, v12, v13, v14);
   itemWindow = *(BattleViewItemlistComponent_o **)&p_newDroplist[-1].fields._IsForceDisableSupportSelectBackBtn_k__BackingField;
   ++p_newDroplist->fields._SelectedNormalFollowerDeckId_k__BackingField;
   if ( !itemWindow )
 LABEL_11:
-    sub_1BE4D28(itemWindow, method);
+    sub_1C13F80(itemWindow, method);
   BattleViewItemlistComponent__ClearObj(itemWindow, 0LL);
 }
 
@@ -256,18 +256,18 @@ void __fastcall BattleResultEventItemComponent__DialogCallBack(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4B69F7C & 1) == 0 )
+  if ( (byte_4BB7A9F & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, flg);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B69F7C = 1;
+    sub_1C13D24(&System_Action_TypeInfo, flg);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4BB7A9F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, 0LL);
   if ( !Instance )
-    sub_1BE4D28(v8, v9);
+    sub_1C13F80(v8, v9);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v7, 0LL);
 }
 
@@ -278,15 +278,15 @@ void __fastcall BattleResultEventItemComponent__EndCloseDialogCallBack(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F7D & 1) == 0 )
+  if ( (byte_4BB7AA0 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3617/*"CLOSE"*/, method);
-    byte_4B69F7D = 1;
+    sub_1C13D24(&StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, method);
+    byte_4BB7AA0 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1BE4D28(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3617/*"CLOSE"*/, 0LL);
+    sub_1C13F80(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
@@ -312,18 +312,18 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
   FollowerInfo_o *v20; // x6
   PartyListViewItem_o *v21; // x7
 
-  if ( (byte_4B69F6D & 1) == 0 )
+  if ( (byte_4BB7A90 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___ctor__,
       method);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__TypeInfo, v3);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v4);
-    sub_1BE4ACC(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BE4ACC(&StringLiteral_2967/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v6);
-    sub_1BE4ACC(&StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, v7);
-    sub_1BE4ACC(&StringLiteral_2965/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v8);
-    byte_4B69F6D = 1;
+    sub_1C13D24(&System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__TypeInfo, v3);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
+    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C13D24(&StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v6);
+    sub_1C13D24(&StringLiteral_2974/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v7);
+    sub_1C13D24(&StringLiteral_2968/*"BATTLE_RAID_TOTALHP"*/, v8);
+    byte_4BB7A90 = 1;
   }
   window = this->fields.window;
   if ( !window )
@@ -341,11 +341,11 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
   ItemDetailInfoComponent__Init((ItemDetailInfoComponent_o *)window, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, 0LL);
+  window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2974/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   if ( !window )
     goto LABEL_28;
   v10 = (System_String_o *)window;
-  if ( !System_String__Equals_62707124((System_String_o *)window, (System_String_o *)StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, 0LL) )
+  if ( !System_String__Equals_62976260((System_String_o *)window, (System_String_o *)StringLiteral_2974/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL) )
   {
     window = (BattleWindowComponent_o *)this->fields.titleConfLabel;
     if ( !window )
@@ -360,7 +360,7 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
     v12 = this->fields.titleAtLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2967/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, 0LL);
+    window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
     if ( !v12 )
       goto LABEL_28;
     UILabel__set_text(v12, (System_String_o *)window, 0LL);
@@ -373,14 +373,14 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
     v14 = this->fields.titleNextItemLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2965/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
+    window = (BattleWindowComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2968/*"BATTLE_RAID_TOTALHP"*/, 0LL);
     if ( v14 )
     {
       UILabel__set_text(v14, (System_String_o *)window, 0LL);
       goto LABEL_26;
     }
 LABEL_28:
-    sub_1BE4D28(window, method);
+    sub_1C13F80(window, method);
   }
 LABEL_26:
   window = (BattleWindowComponent_o *)this->fields.touchNextRoot;
@@ -388,12 +388,12 @@ LABEL_26:
   if ( !window )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)window, 0, 0LL);
-  v15 = (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)sub_1BE4D18(System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__TypeInfo);
+  v15 = (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)sub_1C13F70(System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__TypeInfo);
   System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo____ctor(
     v15,
-    (const MethodInfo_3652930 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___ctor__);
+    (const MethodInfo_36938D8 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___ctor__);
   this->fields.dropInfoList = v15;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.dropInfoList, (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.dropInfoList, (int64_t)v15, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -407,21 +407,21 @@ void __fastcall BattleResultEventItemComponent__OnClickSwitchShowMode(
   __int64 v6; // x1
   BattleViewItemlistComponent_o *itemWindow; // x0
 
-  if ( (byte_4B69F8D & 1) == 0 )
+  if ( (byte_4BB7AB0 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_OnClickSwitchShowMode__, method);
-    byte_4B69F8D = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_OnClickSwitchShowMode__, method);
+    byte_4BB7AB0 = 1;
   }
   v3 = Method_BattleResultEventItemComponent_OnClickSwitchShowMode__;
   if ( (*((_BYTE *)Method_BattleResultEventItemComponent_OnClickSwitchShowMode__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BE4AE4(Method_BattleResultEventItemComponent_OnClickSwitchShowMode__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v3, v3[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
+    v3 = (_QWORD *)sub_1C13D3C(Method_BattleResultEventItemComponent_OnClickSwitchShowMode__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   this->fields.isShowPossessionNum ^= 1u;
   BattleResultEventItemComponent__UpdateShowModeChangeButton(this, v5);
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow )
-    sub_1BE4D28(0LL, v6);
+    sub_1C13F80(0LL, v6);
   BattleViewItemlistComponent__SwitchShowNumMode(itemWindow, this->fields.isShowPossessionNum, 0LL);
 }
 
@@ -434,12 +434,12 @@ void __fastcall BattleResultEventItemComponent__Open(BattleResultEventItemCompon
   const MethodInfo *v6; // x1
   BattleResultEventItemComponent_EventDropItemInfo_o v7; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4B69F70 & 1) == 0 )
+  if ( (byte_4BB7A93 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       method);
-    byte_4B69F70 = 1;
+    byte_4BB7A93 = 1;
   }
   dropInfoList = this->fields.dropInfoList;
   if ( !dropInfoList )
@@ -448,7 +448,7 @@ void __fastcall BattleResultEventItemComponent__Open(BattleResultEventItemCompon
     &v7,
     dropInfoList,
     this->fields.currentGroupIndex,
-    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
   ((void (__fastcall *)(BattleResultEventItemComponent_o *, _QWORD, void *))this->klass->vtable._6_SetTitleSprite.method)(
     this,
     (unsigned int)v7.fields.groupId,
@@ -460,7 +460,7 @@ void __fastcall BattleResultEventItemComponent__Open(BattleResultEventItemCompon
     &v7,
     dropInfoList,
     this->fields.currentGroupIndex,
-    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
   if ( v7.fields.groupId < 1 )
   {
     klass = this->klass;
@@ -470,12 +470,12 @@ void __fastcall BattleResultEventItemComponent__Open(BattleResultEventItemCompon
   dropInfoList = this->fields.dropInfoList;
   if ( !dropInfoList )
 LABEL_10:
-    sub_1BE4D28(dropInfoList, method);
+    sub_1C13F80(dropInfoList, method);
   System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___get_Item(
     &v7,
     dropInfoList,
     this->fields.currentGroupIndex,
-    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
   klass = this->klass;
   currentEventId = (unsigned int)v7.fields.groupId;
 LABEL_9:
@@ -499,12 +499,12 @@ void __fastcall BattleResultEventItemComponent__OpenCommonProcess(
   BattleWindowComponent_EndCall_o *v8; // x21
   const MethodInfo *v9; // x1
 
-  if ( (byte_4B69F91 & 1) == 0 )
+  if ( (byte_4BB7AB4 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_endOpen__, method);
-    sub_1BE4ACC(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    sub_1BE4ACC(&StringLiteral_5572/*"END_OPEN"*/, v4);
-    byte_4B69F91 = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_endOpen__, method);
+    sub_1C13D24(&BattleWindowComponent_EndCall_TypeInfo, v3);
+    sub_1C13D24(&StringLiteral_5585/*"END_NP"*/, v4);
+    byte_4BB7AB4 = 1;
   }
   touchNextRoot = this->fields.touchNextRoot;
   if ( !touchNextRoot )
@@ -514,9 +514,9 @@ void __fastcall BattleResultEventItemComponent__OpenCommonProcess(
   BattleResultEventItemComponent__UpdateShowModeChangeButton(this, v6);
   touchNextRoot = (UnityEngine_GameObject_o *)this->fields.myFsm;
   if ( !touchNextRoot
-    || (PlayMakerFSM__SendEvent((PlayMakerFSM_o *)touchNextRoot, (System_String_o *)StringLiteral_5572/*"END_OPEN"*/, 0LL),
+    || (PlayMakerFSM__SendEvent((PlayMakerFSM_o *)touchNextRoot, (System_String_o *)StringLiteral_5585/*"END_NP"*/, 0LL),
         window = this->fields.window,
-        v8 = (BattleWindowComponent_EndCall_o *)sub_1BE4D18(BattleWindowComponent_EndCall_TypeInfo),
+        v8 = (BattleWindowComponent_EndCall_o *)sub_1C13F70(BattleWindowComponent_EndCall_TypeInfo),
         BattleWindowComponent_EndCall___ctor(
           v8,
           (Il2CppObject *)this,
@@ -525,7 +525,7 @@ void __fastcall BattleResultEventItemComponent__OpenCommonProcess(
         !window) )
   {
 LABEL_7:
-    sub_1BE4D28(touchNextRoot, method);
+    sub_1C13F80(touchNextRoot, method);
   }
   ((void (__fastcall *)(struct BattleWindowComponent_o *, BattleWindowComponent_EndCall_o *, Il2CppMethodPointer))window->klass->vtable._10_Open.method)(
     window,
@@ -547,23 +547,23 @@ void __fastcall BattleResultEventItemComponent__OpenEventFortification(
   const MethodInfo *v8; // x1
   BattleResultEventItemComponent_EventDropItemInfo_o v9; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4B69F90 & 1) == 0 )
+  if ( (byte_4BB7AB3 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       method);
-    byte_4B69F90 = 1;
+    byte_4BB7AB3 = 1;
   }
   if ( BattleResultEventItemComponent__isGetItems(this, method) )
   {
     dropInfoList = this->fields.dropInfoList;
     if ( !dropInfoList )
-      sub_1BE4D28(0LL, v3);
+      sub_1C13F80(0LL, v3);
     System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___get_Item(
       &v9,
       dropInfoList,
       this->fields.currentGroupIndex,
-      (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+      (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
     klass = this->klass;
     groupId = (unsigned int)v9.fields.groupId;
     v7 = this;
@@ -616,13 +616,13 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
   int32_t v32; // [xsp+1Ch] [xbp-34h] BYREF
 
   v32 = eventId;
-  if ( (byte_4B69F75 & 1) == 0 )
+  if ( (byte_4BB7A98 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&Method_BetterList_string__Contains__, v7);
-    sub_1BE4ACC(&int_TypeInfo, v8);
-    sub_1BE4ACC(&StringLiteral_16822/*"_{0}_{1}"*/, v9);
-    byte_4B69F75 = 1;
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_BetterList_string__Contains__, v7);
+    sub_1C13D24(&int_TypeInfo, v8);
+    sub_1C13D24(&StringLiteral_16866/*"_userId="*/, v9);
+    byte_4BB7A98 = 1;
   }
   v10 = BattleResultEventItemComponent_TypeInfo;
   if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -630,15 +630,15 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
     j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo);
     v10 = BattleResultEventItemComponent_TypeInfo;
   }
-  v11 = System_String__Concat_62698808(
+  v11 = System_String__Concat_62967944(
           v10->static_fields->EVENT_POINT_BG_TITLE_NAME,
-          (System_String_o *)StringLiteral_16822/*"_{0}_{1}"*/,
+          (System_String_o *)StringLiteral_16866/*"_userId="*/,
           0LL);
   v31 = eventId;
   v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v12, v13, v14);
   v30 = groupId;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v16, v17, v18);
-  mAtlas = (UIAtlas_o *)System_String__Format_62713180(v11, v15, v19, 0LL);
+  mAtlas = (UIAtlas_o *)System_String__Format_62982316(v11, v15, v19, 0LL);
   eventPointAtSprite = this->fields.eventPointAtSprite;
   if ( !eventPointAtSprite )
     goto LABEL_19;
@@ -652,7 +652,7 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
   if ( BetterList_object___Contains(
          (BetterList_T__o *)mAtlas,
          (Il2CppObject *)v23,
-         (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+         (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
   {
     return v23;
   }
@@ -664,19 +664,19 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
   }
   EVENT_POINT_BG_TITLE_NAME = v24->static_fields->EVENT_POINT_BG_TITLE_NAME;
   v26 = System_Int32__ToString((int32_t)&v32, 0LL);
-  mAtlas = (UIAtlas_o *)System_String__Concat_62698808(EVENT_POINT_BG_TITLE_NAME, v26, 0LL);
+  mAtlas = (UIAtlas_o *)System_String__Concat_62967944(EVENT_POINT_BG_TITLE_NAME, v26, 0LL);
   v27 = this->fields.eventPointAtSprite;
   if ( !v27
     || (v23 = (System_String_o *)mAtlas, (mAtlas = v27->fields.mAtlas) == 0LL)
     || (mAtlas = (UIAtlas_o *)UIAtlas__GetListOfSprites(mAtlas, 0LL)) == 0LL )
   {
 LABEL_19:
-    sub_1BE4D28(mAtlas, v21);
+    sub_1C13F80(mAtlas, v21);
   }
   if ( !BetterList_object___Contains(
           (BetterList_T__o *)mAtlas,
           (Il2CppObject *)v23,
-          (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+          (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
   {
     v28 = BattleResultEventItemComponent_TypeInfo;
     if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -709,12 +709,12 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
   int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v14 = imageId;
-  if ( (byte_4B69F78 & 1) == 0 )
+  if ( (byte_4BB7A9B & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&imageId);
-    sub_1BE4ACC(&Method_BetterList_string__Contains__, v4);
-    sub_1BE4ACC(&StringLiteral_16330/*"_"*/, v5);
-    byte_4B69F78 = 1;
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&imageId);
+    sub_1C13D24(&Method_BetterList_string__Contains__, v4);
+    sub_1C13D24(&StringLiteral_16374/*"^c"*/, v5);
+    byte_4BB7A9B = 1;
   }
   v6 = BattleResultEventItemComponent_TypeInfo;
   if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -724,9 +724,9 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
   }
   EVENT_POINT_REWARD_BG_NAME = v6->static_fields->EVENT_POINT_REWARD_BG_NAME;
   v8 = System_Int32__ToString((int32_t)&v14, 0LL);
-  mAtlas = (UIAtlas_o *)System_String__Concat_62710068(
+  mAtlas = (UIAtlas_o *)System_String__Concat_62979204(
                           EVENT_POINT_REWARD_BG_NAME,
-                          (System_String_o *)StringLiteral_16330/*"_"*/,
+                          (System_String_o *)StringLiteral_16374/*"^c"*/,
                           v8,
                           0LL);
   bgSp = this->fields.bgSp;
@@ -742,7 +742,7 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
   if ( !BetterList_object___Contains(
           (BetterList_T__o *)mAtlas,
           v12,
-          (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+          (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
   {
     v13 = BattleResultEventItemComponent_TypeInfo;
     if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -758,7 +758,7 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
         (mAtlas = (UIAtlas_o *)this->fields.bgSp) == 0LL) )
   {
 LABEL_15:
-    sub_1BE4D28(mAtlas, v10);
+    sub_1C13F80(mAtlas, v10);
   }
   ((void (__fastcall *)(UIAtlas_o *, void *))mAtlas->klass[2]._1.typeMetadataHandle)(
     mAtlas,
@@ -773,10 +773,10 @@ void __fastcall BattleResultEventItemComponent__SetCondensedScale(
   UILabel_o *nextItemLabel; // x0
   UILabel_o *titleAtLabel; // x20
 
-  if ( (byte_4B69F8F & 1) == 0 )
+  if ( (byte_4BB7AB2 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, method);
-    byte_4B69F8F = 1;
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, method);
+    byte_4BB7AB2 = 1;
   }
   nextItemLabel = (UILabel_o *)BattleResultEventItemComponent_TypeInfo;
   titleAtLabel = this->fields.titleAtLabel;
@@ -790,7 +790,7 @@ void __fastcall BattleResultEventItemComponent__SetCondensedScale(
           0LL),
         (nextItemLabel = this->fields.nextItemLabel) == 0LL) )
   {
-    sub_1BE4D28(nextItemLabel, method);
+    sub_1C13F80(nextItemLabel, method);
   }
   UILabel__SetCondensedScale(
     nextItemLabel,
@@ -812,13 +812,13 @@ void __fastcall BattleResultEventItemComponent__SetItemWindow(
 
   itemWindow = this->fields.itemWindow;
   if ( !itemWindow )
-    sub_1BE4D28(0LL, itemArray);
+    sub_1C13F80(0LL, itemArray);
   BattleViewItemlistComponent__setEventResultCount(itemWindow, boostItemManaCount, rewardInfos, 0LL);
-  BattleResultEventItemComponent__SetItemWindow_45317580(this, itemArray, v8);
+  BattleResultEventItemComponent__SetItemWindow_45512248(this, itemArray, v8);
 }
 
 
-void __fastcall BattleResultEventItemComponent__SetItemWindow_45317580(
+void __fastcall BattleResultEventItemComponent__SetItemWindow_45512248(
         BattleResultEventItemComponent_o *this,
         BattleDropItem_array *itemArray,
         const MethodInfo *method)
@@ -830,22 +830,22 @@ void __fastcall BattleResultEventItemComponent__SetItemWindow_45317580(
   BattleViewItemlistComponent_o *v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4B69F72 & 1) == 0 )
+  if ( (byte_4BB7A95 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_setShowConf__, itemArray);
-    sub_1BE4ACC(&BattleDropItemComponent_ClickDelegate_TypeInfo, v5);
-    byte_4B69F72 = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_setShowConf__, itemArray);
+    sub_1C13D24(&BattleDropItemComponent_ClickDelegate_TypeInfo, v5);
+    byte_4BB7A95 = 1;
   }
   itemWindow = this->fields.itemWindow;
   currentEventId = this->fields.currentEventId;
-  v8 = (BattleDropItemComponent_ClickDelegate_o *)sub_1BE4D18(BattleDropItemComponent_ClickDelegate_TypeInfo);
+  v8 = (BattleDropItemComponent_ClickDelegate_o *)sub_1C13F70(BattleDropItemComponent_ClickDelegate_TypeInfo);
   BattleDropItemComponent_ClickDelegate___ctor(
     v8,
     (Il2CppObject *)this,
     Method_BattleResultEventItemComponent_setShowConf__,
     0LL);
   if ( !itemWindow
-    || (BattleViewItemlistComponent__setListDataCustomColumn_45228024(
+    || (BattleViewItemlistComponent__setListDataCustomColumn_45422600(
           itemWindow,
           itemArray,
           currentEventId,
@@ -854,7 +854,7 @@ void __fastcall BattleResultEventItemComponent__SetItemWindow_45317580(
           0LL),
         (v9 = this->fields.itemWindow) == 0LL) )
   {
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   }
   BattleViewItemlistComponent__setHide(v9, 0LL);
 }
@@ -890,16 +890,16 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
   System_String_o *countText; // [xsp+10h] [xbp-50h] BYREF
   System_String_o *nameText; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4B69F76 & 1) == 0 )
+  if ( (byte_4BB7A99 & 1) == 0 )
   {
-    sub_1BE4ACC(&long_TypeInfo, userEventPoint);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v8);
-    sub_1BE4ACC(&StringLiteral_2968/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v9);
-    sub_1BE4ACC(&StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v10);
-    sub_1BE4ACC(&StringLiteral_2966/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v11);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v12);
-    byte_4B69F76 = 1;
+    sub_1C13D24(&long_TypeInfo, userEventPoint);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v8);
+    sub_1C13D24(&StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v9);
+    sub_1C13D24(&StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v10);
+    sub_1C13D24(&StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v11);
+    sub_1C13D24(&StringLiteral_1/*""*/, v12);
+    byte_4BB7A99 = 1;
   }
   countText = 0LL;
   nameText = 0LL;
@@ -909,7 +909,7 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
     atLabel = this->fields.atLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
     v27 = eventRewardENt->fields.point - userEventPoint;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v27, v15, v16, v17);
     v19 = System_String__Format(v14, v18, 0LL);
@@ -921,24 +921,24 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
       v23 = isQp;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
       v25 = (Il2CppObject *)(v23 ? StringLiteral_1/*""*/ : nameText);
-      v19 = System_String__Format_62713180(v24, v25, (Il2CppObject *)countText, 0LL);
+      v19 = System_String__Format_62982316(v24, v25, (Il2CppObject *)countText, 0LL);
       if ( nextItemLabel )
         goto LABEL_18;
     }
 LABEL_15:
-    sub_1BE4D28(v19, v20);
+    sub_1C13F80(v19, v20);
   }
   v26 = this->fields.atLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2968/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, 0LL);
   if ( !v26 )
     goto LABEL_15;
   UILabel__set_text(v26, v19, 0LL);
   nextItemLabel = this->fields.nextItemLabel;
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2966/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
   if ( !nextItemLabel )
     goto LABEL_15;
 LABEL_18:
@@ -980,13 +980,13 @@ void __fastcall BattleResultEventItemComponent__SetTitleSprite(
   int32_t v30; // [xsp+8h] [xbp-48h] BYREF
   int32_t currentEventId; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B69F79 & 1) == 0 )
+  if ( (byte_4BB7A9C & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&currentGroup);
-    sub_1BE4ACC(&Method_BetterList_string__Contains__, v7);
-    sub_1BE4ACC(&int_TypeInfo, v8);
-    sub_1BE4ACC(&StringLiteral_20869/*"img_txt_reward_{0}_{1}"*/, v9);
-    byte_4B69F79 = 1;
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&currentGroup);
+    sub_1C13D24(&Method_BetterList_string__Contains__, v7);
+    sub_1C13D24(&int_TypeInfo, v8);
+    sub_1C13D24(&StringLiteral_20917/*"img_txt_myroom_soundplayer"*/, v9);
+    byte_4BB7A9C = 1;
   }
   if ( currentGroup < 1 )
   {
@@ -998,7 +998,7 @@ void __fastcall BattleResultEventItemComponent__SetTitleSprite(
     }
     EVENT_POINT_REWARD_TITLE_NAME = v20->static_fields->EVENT_POINT_REWARD_TITLE_NAME;
     v22 = System_Int32__ToString((int)this + 168, 0LL);
-    mAtlas = (UIAtlas_o *)System_String__Concat_62698808(EVENT_POINT_REWARD_TITLE_NAME, v22, 0LL);
+    mAtlas = (UIAtlas_o *)System_String__Concat_62967944(EVENT_POINT_REWARD_TITLE_NAME, v22, 0LL);
     titleSp = this->fields.titleSp;
     if ( titleSp )
     {
@@ -1012,7 +1012,7 @@ void __fastcall BattleResultEventItemComponent__SetTitleSprite(
           if ( !BetterList_object___Contains(
                   (BetterList_T__o *)mAtlas,
                   v24,
-                  (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+                  (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
           {
             v25 = BattleResultEventItemComponent_TypeInfo;
             if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -1032,13 +1032,13 @@ LABEL_25:
       }
     }
 LABEL_30:
-    sub_1BE4D28(mAtlas, v16);
+    sub_1C13F80(mAtlas, v16);
   }
   currentEventId = this->fields.currentEventId;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId, method, v3, v4);
   v30 = currentGroup;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v11, v12, v13);
-  mAtlas = (UIAtlas_o *)System_String__Format_62713180((System_String_o *)StringLiteral_20869/*"img_txt_reward_{0}_{1}"*/, v10, v14, 0LL);
+  mAtlas = (UIAtlas_o *)System_String__Format_62982316((System_String_o *)StringLiteral_20917/*"img_txt_myroom_soundplayer"*/, v10, v14, 0LL);
   v17 = this->fields.titleSp;
   if ( !v17 )
     goto LABEL_30;
@@ -1052,7 +1052,7 @@ LABEL_30:
   if ( !BetterList_object___Contains(
           (BetterList_T__o *)mAtlas,
           v18,
-          (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+          (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
   {
     v26 = BattleResultEventItemComponent_TypeInfo;
     if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -1062,7 +1062,7 @@ LABEL_30:
     }
     v27 = v26->static_fields->EVENT_POINT_REWARD_TITLE_NAME;
     v28 = System_Int32__ToString((int)this + 168, 0LL);
-    mAtlas = (UIAtlas_o *)System_String__Concat_62698808(v27, v28, 0LL);
+    mAtlas = (UIAtlas_o *)System_String__Concat_62967944(v27, v28, 0LL);
     v29 = this->fields.titleSp;
     if ( v29 )
     {
@@ -1076,7 +1076,7 @@ LABEL_30:
           if ( !BetterList_object___Contains(
                   (BetterList_T__o *)mAtlas,
                   v24,
-                  (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+                  (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
             goto LABEL_28;
           goto LABEL_25;
         }
@@ -1147,7 +1147,7 @@ void __fastcall BattleResultEventItemComponent__SetUi(
   int32_t v43; // w24
   UISprite_o *v44; // x23
   const MethodInfo *v45; // x3
-  EventRewardEntity_o *NextEventRewardEntity_40176540; // x0
+  EventRewardEntity_o *NextEventRewardEntity_40399264; // x0
   const MethodInfo *v47; // x3
   System_String_o *EVENT_POINT_REWARD_AT; // x20
   System_String_o *v49; // x0
@@ -1157,58 +1157,58 @@ void __fastcall BattleResultEventItemComponent__SetUi(
   BattleResultEventItemComponent_EventDropItemInfo_o v53[2]; // [xsp+0h] [xbp-90h] BYREF
   UserEventEntity_o *entity; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_4B69F74 & 1) == 0 )
+  if ( (byte_4BB7A97 & 1) == 0 )
   {
-    sub_1BE4ACC(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, v5);
-    sub_1BE4ACC(&Method_BetterList_string__Contains__, v6);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventDetailMaster___, v7);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventPointGroupMaster___, v8);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventRewardMaster___, v9);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserEventMaster___, v10);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserEventPointMaster___, v11);
-    sub_1BE4ACC(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v12);
-    sub_1BE4ACC(
+    sub_1C13D24(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, v5);
+    sub_1C13D24(&Method_BetterList_string__Contains__, v6);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, v7);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventPointGroupMaster___, v8);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventRewardMaster___, v9);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v10);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventPointMaster___, v11);
+    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v12);
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Count__,
       v13);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       v14);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v15);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_4B69F74 = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, v15);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_4BB7A97 = 1;
   }
   entity = 0LL;
   memset(&v53[1], 0, sizeof(BattleResultEventItemComponent_EventDropItemInfo_o));
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !SelfUserGame || !Instance )
     goto LABEL_65;
   if ( UserEventMaster__TryGetEntity((UserEventMaster_o *)Instance, &entity, SelfUserGame->fields.userId, eventId, 0LL) )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_65;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventRewardMaster___);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRewardMaster___);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_65;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !Instance )
       goto LABEL_65;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   eventId,
-                                  (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                  (const MethodInfo_3238624 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
     dropInfoList = this->fields.dropInfoList;
     if ( !dropInfoList )
       goto LABEL_65;
@@ -1227,7 +1227,7 @@ void __fastcall BattleResultEventItemComponent__SetUi(
           v53,
           (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)Instance,
           this->fields.currentGroupIndex,
-          (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+          (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
         Instance = (DataManager_o *)UserEventPointMaster__GetEventPoint(eventId, v53[0].fields.groupId, 0LL);
         if ( !MasterData_object )
           goto LABEL_65;
@@ -1252,7 +1252,7 @@ LABEL_32:
         }
         EVENT_POINT_BG_TITLE_NAME = v36->static_fields->EVENT_POINT_BG_TITLE_NAME;
         v38 = System_Int32__ToString((int)this + 168, 0LL);
-        Instance = (DataManager_o *)System_String__Concat_62698808(EVENT_POINT_BG_TITLE_NAME, v38, 0LL);
+        Instance = (DataManager_o *)System_String__Concat_62967944(EVENT_POINT_BG_TITLE_NAME, v38, 0LL);
         eventPointAtSprite = this->fields.eventPointAtSprite;
         if ( eventPointAtSprite )
         {
@@ -1266,7 +1266,7 @@ LABEL_32:
               if ( !BetterList_object___Contains(
                       (BetterList_T__o *)Instance,
                       v40,
-                      (const MethodInfo_31782E4 *)Method_BetterList_string__Contains__) )
+                      (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
               {
                 v41 = BattleResultEventItemComponent_TypeInfo;
                 if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
@@ -1287,7 +1287,7 @@ LABEL_32:
           }
         }
 LABEL_65:
-        sub_1BE4D28(Instance, v19);
+        sub_1C13F80(Instance, v19);
       }
       if ( !EventDetailEntity__IsGroupPoint(v22, 0LL) )
       {
@@ -1296,12 +1296,12 @@ LABEL_65:
           goto LABEL_65;
         goto LABEL_32;
       }
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_65;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
       if ( !this->fields.dropInfoList )
         goto LABEL_65;
       currentEventId = this->fields.currentEventId;
@@ -1310,16 +1310,16 @@ LABEL_65:
                                     v53,
                                     this->fields.dropInfoList,
                                     this->fields.currentGroupIndex,
-                                    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+                                    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
       if ( !v24 )
         goto LABEL_65;
       v25 = EventPointGroupMaster__GetEntity(v24, currentEventId, v53[0].fields.groupId, 0LL);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_65;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                                    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
       if ( !this->fields.dropInfoList )
         goto LABEL_65;
       userId = SelfUserGame->fields.userId;
@@ -1328,7 +1328,7 @@ LABEL_65:
                                     v53,
                                     this->fields.dropInfoList,
                                     this->fields.currentGroupIndex,
-                                    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+                                    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
       if ( !v27 )
         goto LABEL_65;
       Instance = (DataManager_o *)UserEventPointMaster__GetEntity(v27, userId, eventId, v53[0].fields.groupId, 0LL);
@@ -1362,7 +1362,7 @@ LABEL_65:
         v53,
         (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)Instance,
         this->fields.currentGroupIndex,
-        (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+        (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
       Instance = (DataManager_o *)BattleResultEventItemComponent__SearchEventGroupPointAtSprite(
                                     this,
                                     v43,
@@ -1378,10 +1378,10 @@ LABEL_65:
                                     v53,
                                     (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)Instance,
                                     this->fields.currentGroupIndex,
-                                    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+                                    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
       if ( !v28 || !MasterData_object )
         goto LABEL_65;
-      NextEventRewardEntity_40176540 = EventRewardMaster__GetNextEventRewardEntity_40176540(
+      NextEventRewardEntity_40399264 = EventRewardMaster__GetNextEventRewardEntity_40399264(
                                          (EventRewardMaster_o *)MasterData_object,
                                          eventId,
                                          v53[0].fields.groupId,
@@ -1390,7 +1390,7 @@ LABEL_65:
       BattleResultEventItemComponent__SetNextItemLabel(
         this,
         *(_QWORD *)&v28->fields._DispLog,
-        NextEventRewardEntity_40176540,
+        NextEventRewardEntity_40399264,
         v47);
       if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo);
@@ -1402,10 +1402,10 @@ LABEL_65:
         v53,
         (System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *)Instance,
         this->fields.currentGroupIndex,
-        (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+        (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
       v53[1] = v53[0];
       v49 = System_Int32__ToString((int32_t)&v53[1].fields.groupId, 0LL);
-      v50 = System_String__Concat_62698808(EVENT_POINT_REWARD_AT, v49, 0LL);
+      v50 = System_String__Concat_62967944(EVENT_POINT_REWARD_AT, v49, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( !LocalizationManager__ContainsKey(v50, 0LL) )
@@ -1445,16 +1445,16 @@ void __fastcall BattleResultEventItemComponent__UpdateShowModeChangeButton(
   float *p_r; // x9
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B69F8E & 1) == 0 )
+  if ( (byte_4BB7AB1 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_17699/*"btn_bg_20"*/, method);
-    sub_1BE4ACC(&StringLiteral_17700/*"btn_bg_21"*/, v3);
-    byte_4B69F8E = 1;
+    sub_1C13D24(&StringLiteral_17741/*"btn_auto_on"*/, method);
+    sub_1C13D24(&StringLiteral_17742/*"btn_badge_organization"*/, v3);
+    byte_4BB7AB1 = 1;
   }
   showModeChangeButton = this->fields.showModeChangeButton;
   if ( !showModeChangeButton )
     goto LABEL_14;
-  v5 = (System_String_o **)(this->fields.isShowPossessionNum ? &StringLiteral_17700/*"btn_bg_21"*/ : &StringLiteral_17699/*"btn_bg_20"*/);
+  v5 = (System_String_o **)(this->fields.isShowPossessionNum ? &StringLiteral_17742/*"btn_badge_organization"*/ : &StringLiteral_17741/*"btn_auto_on"*/);
   UIButton__set_normalSprite(showModeChangeButton, *v5, 0LL);
   showModeChanButtonLabelEffectColors = this->fields.showModeChanButtonLabelEffectColors;
   if ( !showModeChanButtonLabelEffectColors )
@@ -1465,7 +1465,7 @@ void __fastcall BattleResultEventItemComponent__UpdateShowModeChangeButton(
   {
     if ( !max_length )
 LABEL_15:
-      sub_1BE4D30(showModeChangeButton, method);
+      sub_1C13F88(showModeChangeButton, method);
     p_g = &showModeChanButtonLabelEffectColors->m_Items[0].fields.g;
     p_b = &showModeChanButtonLabelEffectColors->m_Items[0].fields.b;
     p_a = &showModeChanButtonLabelEffectColors->m_Items[0].fields.a;
@@ -1473,7 +1473,7 @@ LABEL_15:
     if ( showModeChangeButton )
       goto LABEL_11;
 LABEL_14:
-    sub_1BE4D28(showModeChangeButton, method);
+    sub_1C13F80(showModeChangeButton, method);
   }
   if ( max_length <= 1 )
     goto LABEL_15;
@@ -1505,18 +1505,18 @@ void __fastcall BattleResultEventItemComponent__commandCodeDialogCallBack(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4B69F84 & 1) == 0 )
+  if ( (byte_4BB7AA7 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, flg);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, v4);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B69F84 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, flg);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, v4);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4BB7AA7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_BattleResultEventItemComponent_EndCloseDialogCallBack__, 0LL);
   if ( !Instance )
-    sub_1BE4D28(v8, v9);
+    sub_1C13F80(v8, v9);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v7, 0LL);
 }
 
@@ -1607,36 +1607,36 @@ void __fastcall BattleResultEventItemComponent__createDropInfo(
   __int64 monitor_low; // x9
   __int128 v84; // q0
   char *v85; // x8
-  const MethodInfo_3653204 *v86; // x2
+  const MethodInfo_36941AC *v86; // x2
   PartyOrganizationUtility_o v87; // [xsp+20h] [xbp-C0h] BYREF
 
-  if ( (byte_4B69F77 & 1) == 0 )
+  if ( (byte_4BB7A9A & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_FindAll_BattleDropItem___, drop);
-    sub_1BE4ACC(&Method_BasicHelper_Any_BattleResultEventItemComponent_EventDropItemInfo___, v5);
-    sub_1BE4ACC(&System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__TypeInfo, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__AddRange__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__Add__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__FindAll__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem___ctor__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_BattleDropItem__TypeInfo, v12);
-    sub_1BE4ACC(&System_Predicate_BattleDropItem__TypeInfo, v13);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent___c__createDropInfo_b__42_2__, v14);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__0__, v15);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__1__, v16);
-    sub_1BE4ACC(&BattleResultEventItemComponent___c__DisplayClass42_0_TypeInfo, v17);
-    sub_1BE4ACC(&BattleResultEventItemComponent___c_TypeInfo, v18);
-    byte_4B69F77 = 1;
+    sub_1C13D24(&Method_System_Array_FindAll_BattleDropItem___, drop);
+    sub_1C13D24(&Method_BasicHelper_Any_BattleResultEventItemComponent_EventDropItemInfo___, v5);
+    sub_1C13D24(&System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__TypeInfo, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__AddRange__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__Add__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__FindAll__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem___ctor__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_BattleDropItem__TypeInfo, v12);
+    sub_1C13D24(&System_Predicate_BattleDropItem__TypeInfo, v13);
+    sub_1C13D24(&Method_BattleResultEventItemComponent___c__createDropInfo_b__42_2__, v14);
+    sub_1C13D24(&Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__0__, v15);
+    sub_1C13D24(&Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__1__, v16);
+    sub_1C13D24(&BattleResultEventItemComponent___c__DisplayClass42_0_TypeInfo, v17);
+    sub_1C13D24(&BattleResultEventItemComponent___c_TypeInfo, v18);
+    byte_4BB7A9A = 1;
   }
   memset(&v87, 0, 32);
-  v19 = sub_1BE4D18(BattleResultEventItemComponent___c__DisplayClass42_0_TypeInfo);
+  v19 = sub_1C13F70(BattleResultEventItemComponent___c__DisplayClass42_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v19, 0LL);
   if ( !v19 )
 LABEL_31:
-    sub_1BE4D28(All_object, v21);
+    sub_1C13F80(All_object, v21);
   *(_QWORD *)(v19 + 16) = drop;
-  sub_1BE4A70((PartyOrganizationUtility_o *)(v19 + 16), (int64_t)drop, v22, v23, v24, v25, v26, v27);
+  sub_1C13CC8((PartyOrganizationUtility_o *)(v19 + 16), (int64_t)drop, v22, v23, v24, v25, v26, v27);
   v28 = *(_QWORD *)(v19 + 16);
   if ( v28 )
   {
@@ -1650,19 +1650,19 @@ LABEL_31:
       dropInfoList = (System_Collections_Generic_List_T__o *)this->fields.dropInfoList;
       if ( !*v30 )
       {
-        v32 = (System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__o *)sub_1BE4D18(System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__TypeInfo);
+        v32 = (System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__o *)sub_1C13F70(System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool__TypeInfo);
         System_Func_BattleResultEventItemComponent_EventDropItemInfo__bool____ctor(
           v32,
           (Il2CppObject *)v19,
           Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__0__,
           0LL);
         *(_QWORD *)(v19 + 32) = v32;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v19 + 32), (int64_t)v32, v34, v35, v36, v37, v38, v39);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v19 + 32), (int64_t)v32, v34, v35, v36, v37, v38, v39);
       }
       All_object = (System_Collections_Generic_IEnumerable_T__o *)BasicHelper__Any_BattleResultEventItemComponent_EventDropItemInfo_(
                                                                     dropInfoList,
                                                                     (System_Func_T__bool__o *)v32,
-                                                                    (const MethodInfo_2F4445C *)Method_BasicHelper_Any_BattleResultEventItemComponent_EventDropItemInfo___);
+                                                                    (const MethodInfo_2F7A7B8 *)Method_BasicHelper_Any_BattleResultEventItemComponent_EventDropItemInfo___);
       if ( ((unsigned __int8)All_object & 1) == 0 )
       {
         memset(&v87, 0, 32);
@@ -1671,7 +1671,7 @@ LABEL_31:
           goto LABEL_31;
         v41 = *(int *)(v19 + 24);
         if ( (unsigned int)v41 >= v40->max_length )
-          sub_1BE4D30(All_object, v21);
+          sub_1C13F88(All_object, v21);
         v42 = v40->m_Items[v41];
         if ( !v42 )
           goto LABEL_31;
@@ -1679,35 +1679,35 @@ LABEL_31:
         v43 = *v31;
         if ( !*v31 )
         {
-          v43 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleDropItem__TypeInfo);
+          v43 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleDropItem__TypeInfo);
           System_Predicate_object____ctor(
             v43,
             (Il2CppObject *)v19,
             Method_BattleResultEventItemComponent___c__DisplayClass42_0__createDropInfo_b__1__,
             0LL);
           *(_QWORD *)(v19 + 40) = v43;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v19 + 40), (int64_t)v43, v44, v45, v46, v47, v48, v49);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v19 + 40), (int64_t)v43, v44, v45, v46, v47, v48, v49);
         }
         All_object = (System_Collections_Generic_IEnumerable_T__o *)System_Array__FindAll_object_(
                                                                       v40,
                                                                       (System_Predicate_T__o *)v43,
-                                                                      (const MethodInfo_305438C *)Method_System_Array_FindAll_BattleDropItem___);
+                                                                      (const MethodInfo_308A788 *)Method_System_Array_FindAll_BattleDropItem___);
         if ( All_object )
         {
           v50 = All_object;
-          v51 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_BattleDropItem__TypeInfo);
+          v51 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_BattleDropItem__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v51,
-            (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_BattleDropItem___ctor__);
+            (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_BattleDropItem___ctor__);
           v87.klass = (PartyOrganizationUtility_c *)v51;
-          sub_1BE4A70(&v87, (int64_t)v51, v52, v53, v54, v55, v56, v57);
+          sub_1C13CC8(&v87, (int64_t)v51, v52, v53, v54, v55, v56, v57);
           All_object = (System_Collections_Generic_IEnumerable_T__o *)v87.klass;
           if ( !v87.klass )
             goto LABEL_31;
           System_Collections_Generic_List_object___AddRange(
             (System_Collections_Generic_List_object__o *)v87.klass,
             v50,
-            (const MethodInfo_35EC430 *)Method_System_Collections_Generic_List_BattleDropItem__AddRange__);
+            (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_BattleDropItem__AddRange__);
         }
         klass = v87.klass;
         if ( !v87.klass )
@@ -1728,7 +1728,7 @@ LABEL_31:
             v59 = BattleResultEventItemComponent___c_TypeInfo;
           }
           v61 = (Il2CppObject *)v59->static_fields->__9;
-          _9__42_2 = (System_Predicate_object__o *)sub_1BE4D18(System_Predicate_BattleDropItem__TypeInfo);
+          _9__42_2 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_BattleDropItem__TypeInfo);
           System_Predicate_object____ctor(
             _9__42_2,
             v61,
@@ -1736,7 +1736,7 @@ LABEL_31:
             0LL);
           static_fields = BattleResultEventItemComponent___c_TypeInfo->static_fields;
           static_fields->__9__42_2 = (struct System_Predicate_BattleDropItem__o *)_9__42_2;
-          sub_1BE4A70(
+          sub_1C13CC8(
             (PartyOrganizationUtility_o *)&static_fields->__9__42_2,
             (int64_t)_9__42_2,
             v63,
@@ -1746,8 +1746,8 @@ LABEL_31:
             v67,
             v68);
         }
-        v87.fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)System_Collections_Generic_List_object___FindAll((System_Collections_Generic_List_object__o *)klass, (System_Predicate_T__o *)_9__42_2, (const MethodInfo_35EC934 *)Method_System_Collections_Generic_List_BattleDropItem__FindAll__);
-        sub_1BE4A70(
+        v87.fields.restrictionDialogHistoryList = (struct System_Collections_Generic_List_string__o *)System_Collections_Generic_List_object___FindAll((System_Collections_Generic_List_object__o *)klass, (System_Predicate_T__o *)_9__42_2, (const MethodInfo_362D8DC *)Method_System_Collections_Generic_List_BattleDropItem__FindAll__);
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&v87.fields,
           (int64_t)v87.fields.restrictionDialogHistoryList,
           v69,
@@ -1769,7 +1769,7 @@ LABEL_31:
         monitor_low = SLODWORD(All_object[1].monitor);
         if ( (unsigned int)monitor_low >= v82->max_length )
         {
-          v86 = *(const MethodInfo_3653204 **)(*(_QWORD *)(v81[4] + 192LL) + 112LL);
+          v86 = *(const MethodInfo_36941AC **)(*(_QWORD *)(v81[4] + 192LL) + 112LL);
           *(_OWORD *)&v87.fields._BasePartyItem_k__BackingField = *(_OWORD *)&v87.fields._SelectedNormalFollowerClassId_k__BackingField;
           *(_OWORD *)&v87.fields._IsForceDisableSupportSelectBackBtn_k__BackingField = *(_OWORD *)&v87.fields._SelectedPartyPosition_k__BackingField;
           System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___AddWithResize(
@@ -1784,7 +1784,7 @@ LABEL_31:
           v85 = (char *)v82 + 32 * monitor_low;
           *((_OWORD *)v85 + 2) = *(_OWORD *)&v87.fields._SelectedNormalFollowerClassId_k__BackingField;
           *((_OWORD *)v85 + 3) = v84;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v85 + 32), 0LL, v75, v76, v77, v78, v79, v80);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v85 + 32), 0LL, v75, v76, v77, v78, v79, v80);
         }
       }
       v28 = *(_QWORD *)(v19 + 16);
@@ -1803,15 +1803,15 @@ void __fastcall BattleResultEventItemComponent__endClose(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F8B & 1) == 0 )
+  if ( (byte_4BB7AAE & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_5577/*"END_PROC"*/, method);
-    byte_4B69F8B = 1;
+    sub_1C13D24(&StringLiteral_5590/*"END_OPENING_MOVIE"*/, method);
+    byte_4BB7AAE = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1BE4D28(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5577/*"END_PROC"*/, 0LL);
+    sub_1C13F80(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5590/*"END_OPENING_MOVIE"*/, 0LL);
 }
 
 
@@ -1821,15 +1821,15 @@ void __fastcall BattleResultEventItemComponent__endCommandCodeDialogCallBack(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F85 & 1) == 0 )
+  if ( (byte_4BB7AA8 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3617/*"CLOSE"*/, method);
-    byte_4B69F85 = 1;
+    sub_1C13D24(&StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, method);
+    byte_4BB7AA8 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1BE4D28(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3617/*"CLOSE"*/, 0LL);
+    sub_1C13F80(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
@@ -1839,15 +1839,15 @@ void __fastcall BattleResultEventItemComponent__endEventPointBuffDialogCallBack(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F89 & 1) == 0 )
+  if ( (byte_4BB7AAC & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3617/*"CLOSE"*/, method);
-    byte_4B69F89 = 1;
+    sub_1C13D24(&StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, method);
+    byte_4BB7AAC = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1BE4D28(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3617/*"CLOSE"*/, 0LL);
+    sub_1C13F80(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
@@ -1857,15 +1857,15 @@ void __fastcall BattleResultEventItemComponent__endItemDialogCallBack(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F81 & 1) == 0 )
+  if ( (byte_4BB7AA4 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3617/*"CLOSE"*/, method);
-    byte_4B69F81 = 1;
+    sub_1C13D24(&StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, method);
+    byte_4BB7AA4 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
-    sub_1BE4D28(0LL, method);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3617/*"CLOSE"*/, 0LL);
+    sub_1C13F80(0LL, method);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3620/*"CLICK_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
@@ -1875,17 +1875,17 @@ void __fastcall BattleResultEventItemComponent__endOpen(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F71 & 1) == 0 )
+  if ( (byte_4BB7A94 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9392/*"NEXT"*/, method);
-    byte_4B69F71 = 1;
+    sub_1C13D24(&StringLiteral_9416/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/, method);
+    byte_4BB7A94 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm
-    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9392/*"NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9416/*"NETWORK_ERROR_SERVER_NO_FILE_MESSAGE"*/, 0LL),
         (myFsm = (PlayMakerFSM_o *)this->fields.itemWindow) == 0LL) )
   {
-    sub_1BE4D28(myFsm, method);
+    sub_1C13F80(myFsm, method);
   }
   BattleViewItemlistComponent__setShow((BattleViewItemlistComponent_o *)myFsm, 0LL);
 }
@@ -1906,28 +1906,28 @@ void __fastcall BattleResultEventItemComponent__eventPointBuffDialogCallBack(
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4B69F88 & 1) == 0 )
+  if ( (byte_4BB7AAB & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, flg);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_endEventPointBuffDialogCallBack__, v4);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__, v5);
-    byte_4B69F88 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, flg);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_endEventPointBuffDialogCallBack__, v4);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__, v5);
+    byte_4BB7AAB = 1;
   }
   v6 = Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__;
   if ( (*((_BYTE *)Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BE4AE4(Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v6, v6[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0LL);
+    v6 = (_QWORD *)sub_1C13D3C(Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C13D08(v6, v6[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
   itemDialog = this->fields.itemDialog;
-  v9 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(
     v9,
     (Il2CppObject *)this,
     Method_BattleResultEventItemComponent_endEventPointBuffDialogCallBack__,
     0LL);
   if ( !itemDialog )
-    sub_1BE4D28(v10, v11);
-  ItemDetailInfoComponent__Close_31798924(itemDialog, v9, 0LL);
+    sub_1C13F80(v10, v11);
+  ItemDetailInfoComponent__Close_31983868(itemDialog, v9, 0LL);
 }
 
 
@@ -1943,12 +1943,12 @@ BattleDropItem_o *__fastcall BattleResultEventItemComponent__getNewDrop(
   struct System_Collections_Generic_List_BattleDropItem__o *v8; // x8
   BattleDropItem_o *v9; // x19
 
-  if ( (byte_4B69F6F & 1) == 0 )
+  if ( (byte_4BB7A92 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__RemoveAt__, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__, v4);
-    byte_4B69F6F = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__RemoveAt__, method);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__get_Count__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__get_Item__, v4);
+    byte_4BB7A92 = 1;
   }
   newDroplist = (System_Collections_Generic_List_object__o *)this->fields.newDroplist;
   if ( !newDroplist || newDroplist->fields._size < 1 )
@@ -1956,15 +1956,15 @@ BattleDropItem_o *__fastcall BattleResultEventItemComponent__getNewDrop(
   Item = System_Collections_Generic_List_object___get_Item(
            newDroplist,
            0,
-           (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
+           (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_BattleDropItem__get_Item__);
   v8 = this->fields.newDroplist;
   if ( !v8 )
-    sub_1BE4D28(Item, v7);
+    sub_1C13F80(Item, v7);
   v9 = (BattleDropItem_o *)Item;
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)v8,
     0,
-    (const MethodInfo_35ED9F8 *)Method_System_Collections_Generic_List_BattleDropItem__RemoveAt__);
+    (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_BattleDropItem__RemoveAt__);
   return v9;
 }
 
@@ -1978,29 +1978,29 @@ bool __fastcall BattleResultEventItemComponent__isGetItems(
   struct System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__o *dropInfoList; // x0
   BattleResultEventItemComponent_EventDropItemInfo_o v7; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4B69F6E & 1) == 0 )
+  if ( (byte_4BB7A91 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Count__,
       method);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       v3);
-    byte_4B69F6E = 1;
+    byte_4BB7A91 = 1;
   }
   currentGroupIndex = (unsigned int)this->fields.currentGroupIndex;
   if ( (currentGroupIndex & 0x80000000) != 0 )
     return 0;
   dropInfoList = this->fields.dropInfoList;
   if ( !dropInfoList )
-    sub_1BE4D28(0LL, currentGroupIndex);
+    sub_1C13F80(0LL, currentGroupIndex);
   if ( dropInfoList->fields._size <= (int)currentGroupIndex )
     return 0;
   System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo___get_Item(
     &v7,
     dropInfoList,
     currentGroupIndex,
-    (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+    (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
   return v7.fields.itemCount > 0;
 }
 
@@ -2020,24 +2020,24 @@ void __fastcall BattleResultEventItemComponent__itemDialogCallBack(
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4B69F80 & 1) == 0 )
+  if ( (byte_4BB7AA3 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, flg);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_endItemDialogCallBack__, v4);
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_itemDialogCallBack__, v5);
-    byte_4B69F80 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, flg);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_endItemDialogCallBack__, v4);
+    sub_1C13D24(&Method_BattleResultEventItemComponent_itemDialogCallBack__, v5);
+    byte_4BB7AA3 = 1;
   }
   v6 = Method_BattleResultEventItemComponent_itemDialogCallBack__;
   if ( (*((_BYTE *)Method_BattleResultEventItemComponent_itemDialogCallBack__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BE4AE4(Method_BattleResultEventItemComponent_itemDialogCallBack__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v6, v6[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0LL);
+    v6 = (_QWORD *)sub_1C13D3C(Method_BattleResultEventItemComponent_itemDialogCallBack__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C13D08(v6, v6[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
   itemDialog = this->fields.itemDialog;
-  v9 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_BattleResultEventItemComponent_endItemDialogCallBack__, 0LL);
   if ( !itemDialog )
-    sub_1BE4D28(v10, v11);
-  ItemDetailInfoComponent__Close_31798924(itemDialog, v9, 0LL);
+    sub_1C13F80(v10, v11);
+  ItemDetailInfoComponent__Close_31983868(itemDialog, v9, 0LL);
 }
 
 
@@ -2079,31 +2079,31 @@ void __fastcall BattleResultEventItemComponent__setResultData(
   int32_t eventIda; // [xsp+2Ch] [xbp-54h] BYREF
 
   eventIda = eventId;
-  if ( (byte_4B69F73 & 1) == 0 )
+  if ( (byte_4BB7A96 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleDropItem___TypeInfo, drop);
-    sub_1BE4ACC(&BattleResultEventItemComponent_TypeInfo, v10);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ItemMaster___, v11);
-    sub_1BE4ACC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_BattleDropItem__ToArray__, v13);
-    sub_1BE4ACC(
+    sub_1C13D24(&BattleDropItem___TypeInfo, drop);
+    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, v10);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v11);
+    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_BattleDropItem__ToArray__, v13);
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Count__,
       v14);
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__,
       v15);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v16);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    byte_4B69F73 = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, v16);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    byte_4BB7A96 = 1;
   }
   if ( !drop )
     this->fields.currentGroupIndex = -1;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !resultBoostItemRewardInfos )
     goto LABEL_35;
   max_length = resultBoostItemRewardInfos->max_length;
@@ -2115,7 +2115,7 @@ void __fastcall BattleResultEventItemComponent__setResultData(
     while ( 1 )
     {
       if ( v22 >= max_length )
-        sub_1BE4D30(Instance, v19);
+        sub_1C13F88(Instance, v19);
       v24 = resultBoostItemRewardInfos->m_Items[v22];
       if ( !v24 )
         goto LABEL_35;
@@ -2126,7 +2126,7 @@ void __fastcall BattleResultEventItemComponent__setResultData(
         Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                       v21,
                                       v24->fields.objectId,
-                                      (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                      (const MethodInfo_3238624 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         if ( Instance && LODWORD(Instance->fields.lookup) == 5 )
           v23 += v24->fields.num;
       }
@@ -2145,7 +2145,7 @@ LABEL_19:
   }
   EVENT_POINT_REWARD_AT = v25->static_fields->EVENT_POINT_REWARD_AT;
   v27 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v28 = System_String__Concat_62698808(EVENT_POINT_REWARD_AT, v27, 0LL);
+  v28 = System_String__Concat_62967944(EVENT_POINT_REWARD_AT, v27, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( !LocalizationManager__ContainsKey(v28, 0LL) )
@@ -2166,11 +2166,11 @@ LABEL_19:
     || (UILabel__set_text(titleAtLabel, (System_String_o *)Instance, 0LL),
         this->fields.currentEventId = eventIda,
         BattleResultEventItemComponent__createDropInfo(this, drop, v31),
-        Instance = (DataManager_o *)sub_1BE4B74(BattleDropItem___TypeInfo, 0LL),
+        Instance = (DataManager_o *)sub_1C13DCC(BattleDropItem___TypeInfo, 0LL),
         (dropInfoList = this->fields.dropInfoList) == 0LL) )
   {
 LABEL_35:
-    sub_1BE4D28(Instance, v19);
+    sub_1C13F80(Instance, v19);
   }
   currentGroupIndex = this->fields.currentGroupIndex;
   if ( dropInfoList->fields._size > currentGroupIndex )
@@ -2179,13 +2179,13 @@ LABEL_35:
       &v36,
       this->fields.dropInfoList,
       currentGroupIndex,
-      (const MethodInfo_3652E94 *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
+      (const MethodInfo_3693E3C *)Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__);
     Instance = (DataManager_o *)v36.fields.itemList;
     if ( !v36.fields.itemList )
       goto LABEL_35;
     Instance = (DataManager_o *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)v36.fields.itemList,
-                                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_BattleDropItem__ToArray__);
+                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_BattleDropItem__ToArray__);
   }
   BattleResultEventItemComponent__SetItemWindow(this, (BattleDropItem_array *)Instance, v23, rewardInfos, v32);
   BattleResultEventItemComponent__SetUi(this, eventIda, v35);
@@ -2199,16 +2199,16 @@ void __fastcall BattleResultEventItemComponent__setShowCommandCodeConf(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F82 & 1) == 0 )
+  if ( (byte_4BB7AA5 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9787/*"OPEN_COMMANDCODE"*/, commandCodeId);
-    byte_4B69F82 = 1;
+    sub_1C13D24(&StringLiteral_9812/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_CLOSE"*/, commandCodeId);
+    byte_4BB7AA5 = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_commandCodeId = commandCodeId;
   if ( !myFsm )
-    sub_1BE4D28(0LL, commandCodeId);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9787/*"OPEN_COMMANDCODE"*/, 0LL);
+    sub_1C13F80(0LL, commandCodeId);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9812/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_CLOSE"*/, 0LL);
 }
 
 
@@ -2224,7 +2224,7 @@ void __fastcall BattleResultEventItemComponent__setShowConf(
   const MethodInfo *v9; // x2
 
   if ( !item )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   type = item->fields.type;
   if ( Gift__IsServant(type, 0LL) )
   {
@@ -2252,16 +2252,16 @@ void __fastcall BattleResultEventItemComponent__setShowEventPointBuffConf(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F86 & 1) == 0 )
+  if ( (byte_4BB7AA9 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9788/*"OPEN_EVENTPOINTBUFF"*/, eventPointBuffId);
-    byte_4B69F86 = 1;
+    sub_1C13D24(&StringLiteral_9813/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE"*/, eventPointBuffId);
+    byte_4BB7AA9 = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_eventPointBuffId = eventPointBuffId;
   if ( !myFsm )
-    sub_1BE4D28(0LL, eventPointBuffId);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9788/*"OPEN_EVENTPOINTBUFF"*/, 0LL);
+    sub_1C13F80(0LL, eventPointBuffId);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9813/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
 }
 
 
@@ -2273,16 +2273,16 @@ void __fastcall BattleResultEventItemComponent__setShowItemConf(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F7E & 1) == 0 )
+  if ( (byte_4BB7AA1 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9794/*"OPEN_ITEM"*/, *(_QWORD *)&itemId);
-    byte_4B69F7E = 1;
+    sub_1C13D24(&StringLiteral_9819/*"OPEN_EVENTPOINTBUFF"*/, *(_QWORD *)&itemId);
+    byte_4BB7AA1 = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_itemId = itemId;
   if ( !myFsm )
-    sub_1BE4D28(0LL, *(_QWORD *)&itemId);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9794/*"OPEN_ITEM"*/, 0LL);
+    sub_1C13F80(0LL, *(_QWORD *)&itemId);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9819/*"OPEN_EVENTPOINTBUFF"*/, 0LL);
 }
 
 
@@ -2293,16 +2293,16 @@ void __fastcall BattleResultEventItemComponent__setShowServantConf(
 {
   PlayMakerFSM_o *myFsm; // x0
 
-  if ( (byte_4B69F7A & 1) == 0 )
+  if ( (byte_4BB7A9D & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_9802/*"OPEN_SERVANT"*/, userSvtId);
-    byte_4B69F7A = 1;
+    sub_1C13D24(&StringLiteral_9827/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, userSvtId);
+    byte_4BB7A9D = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_userSvtId = userSvtId;
   if ( !myFsm )
-    sub_1BE4D28(0LL, userSvtId);
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9802/*"OPEN_SERVANT"*/, 0LL);
+    sub_1C13F80(0LL, userSvtId);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9827/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, 0LL);
 }
 
 
@@ -2321,27 +2321,27 @@ void __fastcall BattleResultEventItemComponent__showCommandCodeDialog(
   Il2CppObject *v11; // x21
   ServantStatusDialog_EndDelegate_o *v12; // x22
 
-  if ( (byte_4B69F83 & 1) == 0 )
+  if ( (byte_4BB7AA6 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_commandCodeDialogCallBack__, method);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v3);
-    sub_1BE4ACC(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v4);
-    sub_1BE4ACC(&ServantStatusDialog_EndDelegate_TypeInfo, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4B69F83 = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_commandCodeDialogCallBack__, method);
+    sub_1C13D24(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v3);
+    sub_1C13D24(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v4);
+    sub_1C13D24(&ServantStatusDialog_EndDelegate_TypeInfo, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4BB7AA6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL
+                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL
     || (Entity = DataMasterBase_object__object__long___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    this->fields.tmp_commandCodeId,
-                   (const MethodInfo_31FD970 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__),
-        v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v12 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo),
+                   (const MethodInfo_323AB80 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__),
+        v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v12 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo),
         ServantStatusDialog_EndDelegate___ctor(
           v12,
           (Il2CppObject *)this,
@@ -2349,9 +2349,9 @@ void __fastcall BattleResultEventItemComponent__showCommandCodeDialog(
           0LL),
         !v11) )
   {
-    sub_1BE4D28(Instance, v9);
+    sub_1C13F80(Instance, v9);
   }
-  CommonUI__OpenServantStatusDialog_30886368((CommonUI_o *)v11, 0, (UserCommandCodeEntity_o *)Entity, v12, 0LL, 0LL);
+  CommonUI__OpenServantStatusDialog_31083224((CommonUI_o *)v11, 0, (UserCommandCodeEntity_o *)Entity, v12, 0LL, 0LL);
 }
 
 
@@ -2370,28 +2370,28 @@ void __fastcall BattleResultEventItemComponent__showEventPointBuffDialog(
   ItemDetailInfoComponent_o *itemDialog; // x20
   ItemDetailInfoComponent_CallbackFunc_o *v12; // x23
 
-  if ( (byte_4B69F87 & 1) == 0 )
+  if ( (byte_4BB7AAA & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__, method);
-    sub_1BE4ACC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_EventPointBuffMaster___, v4);
-    sub_1BE4ACC(&Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4B69F87 = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_eventPointBuffDialogCallBack__, method);
+    sub_1C13D24(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
+    sub_1C13D24(&Method_DataManager_GetMasterData_EventPointBuffMaster___, v4);
+    sub_1C13D24(&Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4BB7AAA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0LL
+                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0LL
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      this->fields.tmp_eventPointBuffId,
-                     (const MethodInfo_31FD7C4 *)Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__)) == 0LL
+                     (const MethodInfo_3238624 *)Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__)) == 0LL
     || (klass = (System_String_o *)Instance[2].klass,
         monitor = (System_String_o *)Instance[2].monitor,
         itemDialog = this->fields.itemDialog,
-        v12 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BE4D18(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
+        v12 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1C13F70(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v12,
           (Il2CppObject *)this,
@@ -2399,7 +2399,7 @@ void __fastcall BattleResultEventItemComponent__showEventPointBuffDialog(
           0LL),
         !itemDialog) )
   {
-    sub_1BE4D28(Instance, v8);
+    sub_1C13F80(Instance, v8);
   }
   ItemDetailInfoComponent__OpenItemMsgInfo(itemDialog, klass, monitor, v12, 0LL);
 }
@@ -2420,27 +2420,27 @@ void __fastcall BattleResultEventItemComponent__showItemDialog(
   ItemEntity_o *v11; // x21
   ItemDetailInfoComponent_CallbackFunc_o *v12; // x22
 
-  if ( (byte_4B69F7F & 1) == 0 )
+  if ( (byte_4BB7AA2 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_itemDialogCallBack__, method);
-    sub_1BE4ACC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_ItemMaster___, v4);
-    sub_1BE4ACC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4B69F7F = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_itemDialogCallBack__, method);
+    sub_1C13D24(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, v3);
+    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v4);
+    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4BB7AA2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
+                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
     || (Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    this->fields.tmp_itemId,
-                   (const MethodInfo_31FD7C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
+                   (const MethodInfo_3238624 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
         itemDialog = this->fields.itemDialog,
         v11 = (ItemEntity_o *)Entity,
-        v12 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BE4D18(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
+        v12 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1C13F70(ItemDetailInfoComponent_CallbackFunc_TypeInfo),
         ItemDetailInfoComponent_CallbackFunc___ctor(
           v12,
           (Il2CppObject *)this,
@@ -2448,7 +2448,7 @@ void __fastcall BattleResultEventItemComponent__showItemDialog(
           0LL),
         !itemDialog) )
   {
-    sub_1BE4D28(Instance, v8);
+    sub_1C13F80(Instance, v8);
   }
   ItemDetailInfoComponent__Open(itemDialog, v11, v12, 50, 0LL);
 }
@@ -2467,25 +2467,25 @@ void __fastcall BattleResultEventItemComponent__showServantDialog(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4B69F7B & 1) == 0 )
+  if ( (byte_4BB7A9E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_BattleResultEventItemComponent_DialogCallBack__, method);
-    sub_1BE4ACC(&ServantStatusDialog_EndDelegate_TypeInfo, v3);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    byte_4B69F7B = 1;
+    sub_1C13D24(&Method_BattleResultEventItemComponent_DialogCallBack__, method);
+    sub_1C13D24(&ServantStatusDialog_EndDelegate_TypeInfo, v3);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_4BB7A9E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   tmp_userSvtId = this->fields.tmp_userSvtId;
   v7 = (CommonUI_o *)Instance;
-  v8 = (ServantStatusDialog_EndDelegate_o *)sub_1BE4D18(ServantStatusDialog_EndDelegate_TypeInfo);
+  v8 = (ServantStatusDialog_EndDelegate_o *)sub_1C13F70(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(
     v8,
     (Il2CppObject *)this,
     Method_BattleResultEventItemComponent_DialogCallBack__,
     0LL);
   if ( !v7 )
-    sub_1BE4D28(v9, v10);
-  CommonUI__OpenServantStatusDialog_30883044(v7, 0, tmp_userSvtId, v8, 0LL, 0LL);
+    sub_1C13F80(v9, v10);
+  CommonUI__OpenServantStatusDialog_31079900(v7, 0, tmp_userSvtId, v8, 0LL, 0LL);
 }
 
 
@@ -2500,15 +2500,15 @@ void __fastcall BattleResultEventItemComponent___c___cctor(const MethodInfo *met
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B69F94 & 1) == 0 )
+  if ( (byte_4BB7AB7 & 1) == 0 )
   {
-    sub_1BE4ACC(&BattleResultEventItemComponent___c_TypeInfo, v1);
-    byte_4B69F94 = 1;
+    sub_1C13D24(&BattleResultEventItemComponent___c_TypeInfo, v1);
+    byte_4BB7AB7 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(BattleResultEventItemComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(BattleResultEventItemComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleResultEventItemComponent___c_TypeInfo->static_fields->__9 = (struct BattleResultEventItemComponent___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)BattleResultEventItemComponent___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -2534,12 +2534,12 @@ bool __fastcall BattleResultEventItemComponent___c___createDropInfo_b__42_2(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1BE4D28(this, 0LL);
+    sub_1C13F80(this, 0LL);
   if ( !s->fields.isNew )
     return 0;
-  if ( Gift__IsServant_38593364(s->fields.type, 0LL) )
+  if ( Gift__IsServant_38830908(s->fields.type, 0LL) )
     return 1;
-  return Gift__IsCommandCode_38593756(s->fields.type, 0LL);
+  return Gift__IsCommandCode_38831300(s->fields.type, 0LL);
 }
 
 
@@ -2565,11 +2565,11 @@ bool __fastcall BattleResultEventItemComponent___c__DisplayClass42_0___createDro
     goto LABEL_5;
   i = this->fields.i;
   if ( (unsigned int)i >= drop->max_length )
-    sub_1BE4D30(this, d);
+    sub_1C13F88(this, d);
   v5 = drop->m_Items[i];
   if ( !v5 )
 LABEL_5:
-    sub_1BE4D28(this, d);
+    sub_1C13F80(this, d);
   return d->fields.groupId == v5->fields.eventGroupId;
 }
 
@@ -2590,10 +2590,10 @@ bool __fastcall BattleResultEventItemComponent___c__DisplayClass42_0___createDro
     goto LABEL_6;
   i = this->fields.i;
   if ( (unsigned int)i >= drop->max_length )
-    sub_1BE4D30(this, item);
+    sub_1C13F88(this, item);
   v5 = drop->m_Items[i];
   if ( !v5 )
 LABEL_6:
-    sub_1BE4D28(this, item);
+    sub_1C13F80(this, item);
   return item->fields.eventGroupId == v5->fields.eventGroupId;
 }

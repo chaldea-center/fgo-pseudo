@@ -12,25 +12,25 @@ System_String_o *__fastcall AccountLinkageParams__AddColorCodeBracket(
   System_Collections_Generic_IEnumerable_string__o *v10; // x0
   System_String_o *v11; // x1
 
-  if ( (byte_4B68DDF & 1) == 0 )
+  if ( (byte_4BB6924 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Repeat_string___, method);
-    sub_1BE4ACC(&System_Text_RegularExpressions_Regex_TypeInfo, v3);
-    sub_1BE4ACC(&StringLiteral_16037/*"[-]"*/, v4);
-    sub_1BE4ACC(&StringLiteral_778/*"(\\[[0-9A-F]{6}\\])"*/, v5);
-    byte_4B68DDF = 1;
+    sub_1C13D24(&Method_System_Linq_Enumerable_Repeat_string___, method);
+    sub_1C13D24(&System_Text_RegularExpressions_Regex_TypeInfo, v3);
+    sub_1C13D24(&StringLiteral_16080/*"[ <length-percentage> | auto ]{1,4}"*/, v4);
+    sub_1C13D24(&StringLiteral_781/*"(\\[[0-9A-F]{6}\\])"*/, v5);
+    byte_4BB6924 = 1;
   }
-  v6 = (System_Text_RegularExpressions_Regex_o *)sub_1BE4D18(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_69259780(v6, (System_String_o *)StringLiteral_778/*"(\\[[0-9A-F]{6}\\])"*/, 1, 0LL);
-  if ( !v6 || (v7 = System_Text_RegularExpressions_Regex__Matches(v6, userName, 0LL)) == 0LL )
-    sub_1BE4D28(v7, v8);
+  v6 = (System_Text_RegularExpressions_Regex_o *)sub_1C13F70(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_69529172(v6, (System_String_o *)StringLiteral_781/*"(\\[[0-9A-F]{6}\\])"*/, 1, 0LL);
+  if ( !v6 || (v7 = System_Text_RegularExpressions_Regex__Matches_69525256(v6, userName, 0LL)) == 0LL )
+    sub_1C13F80(v7, v8);
   Count = System_Text_RegularExpressions_MatchCollection__get_Count(v7, 0LL);
   v10 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Repeat_object_(
-                                                              (Il2CppObject *)StringLiteral_16037/*"[-]"*/,
+                                                              (Il2CppObject *)StringLiteral_16080/*"[ <length-percentage> | auto ]{1,4}"*/,
                                                               Count,
-                                                              (const MethodInfo_2F82DB4 *)Method_System_Linq_Enumerable_Repeat_string___);
-  v11 = System_String__Concat_62710840(v10, 0LL);
-  return System_String__Concat_62698808(userName, v11, 0LL);
+                                                              (const MethodInfo_2FB9014 *)Method_System_Linq_Enumerable_Repeat_string___);
+  v11 = System_String__Concat_62979976(v10, 0LL);
+  return System_String__Concat_62967944(userName, v11, 0LL);
 }
 
 
@@ -47,37 +47,37 @@ System_String_o *__fastcall AccountLinkageParams__ConvertToBase64Url(
   System_String_o *v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4B68DDD & 1) == 0 )
+  if ( (byte_4BB6922 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Convert_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_1858/*"="*/, v3);
-    sub_1BE4ACC(&StringLiteral_855/*"+"*/, v4);
-    sub_1BE4ACC(&StringLiteral_915/*"-"*/, v5);
-    sub_1BE4ACC(&StringLiteral_16330/*"_"*/, v6);
-    sub_1BE4ACC(&StringLiteral_1120/*"/"*/, v7);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v8);
-    byte_4B68DDD = 1;
+    sub_1C13D24(&System_Convert_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_1861/*"<{0}>"*/, v3);
+    sub_1C13D24(&StringLiteral_858/*"+"*/, v4);
+    sub_1C13D24(&StringLiteral_918/*"-"*/, v5);
+    sub_1C13D24(&StringLiteral_16374/*"^c"*/, v6);
+    sub_1C13D24(&StringLiteral_1123/*"/"*/, v7);
+    sub_1C13D24(&StringLiteral_1/*""*/, v8);
+    byte_4BB6922 = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v9 = System_Convert__ToBase64String(bytes, 0LL);
   if ( !v9
-    || (v9 = System_String__Replace_62718436(
+    || (v9 = System_String__Replace_62987572(
                v9,
-               (System_String_o *)StringLiteral_855/*"+"*/,
-               (System_String_o *)StringLiteral_915/*"-"*/,
+               (System_String_o *)StringLiteral_858/*"+"*/,
+               (System_String_o *)StringLiteral_918/*"-"*/,
                0LL)) == 0LL
-    || (v9 = System_String__Replace_62718436(
+    || (v9 = System_String__Replace_62987572(
                v9,
-               (System_String_o *)StringLiteral_1120/*"/"*/,
-               (System_String_o *)StringLiteral_16330/*"_"*/,
+               (System_String_o *)StringLiteral_1123/*"/"*/,
+               (System_String_o *)StringLiteral_16374/*"^c"*/,
                0LL)) == 0LL )
   {
-    sub_1BE4D28(v9, v10);
+    sub_1C13F80(v9, v10);
   }
-  return System_String__Replace_62718436(
+  return System_String__Replace_62987572(
            v9,
-           (System_String_o *)StringLiteral_1858/*"="*/,
+           (System_String_o *)StringLiteral_1861/*"<{0}>"*/,
            (System_String_o *)StringLiteral_1/*""*/,
            0LL);
 }
@@ -144,46 +144,46 @@ System_String_o *__fastcall AccountLinkageParams__GetAuthURL(bool isTakeOver, co
   System_Collections_Generic_IEnumerable_string__o *v59; // x0
   Il2CppObject *v60; // x0
 
-  if ( (byte_4B68DDA & 1) == 0 )
+  if ( (byte_4BB691F & 1) == 0 )
   {
-    sub_1BE4ACC(&AccountLinkageParams_TypeInfo, method);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v3);
-    sub_1BE4ACC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v4);
-    sub_1BE4ACC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
-    sub_1BE4ACC(&Method_System_Linq_Enumerable_Select_KeyValuePair_string__string___string___, v6);
-    sub_1BE4ACC(&System_Func_KeyValuePair_string__string___string__TypeInfo, v7);
-    sub_1BE4ACC(&Method_AccountLinkageParams___c__GetAuthURL_b__21_0__, v8);
-    sub_1BE4ACC(&AccountLinkageParams___c_TypeInfo, v9);
-    sub_1BE4ACC(&System_Uri_TypeInfo, v10);
-    sub_1BE4ACC(&StringLiteral_11585/*"S256"*/, v11);
-    sub_1BE4ACC(&StringLiteral_18249/*"client_id"*/, v12);
-    sub_1BE4ACC(&StringLiteral_22799/*"password_emailcode"*/, v13);
-    sub_1BE4ACC(&StringLiteral_22428/*"nonce"*/, v14);
-    sub_1BE4ACC(&StringLiteral_19973/*"game_id"*/, v15);
-    sub_1BE4ACC(&StringLiteral_18273/*"code_challenge_method"*/, v16);
-    sub_1BE4ACC(&StringLiteral_17186/*"auth_method"*/, v17);
-    sub_1BE4ACC(&StringLiteral_530/*"&"*/, v18);
-    sub_1BE4ACC(&StringLiteral_23142/*"redirect_uri"*/, v19);
-    sub_1BE4ACC(&StringLiteral_25435/*"{0}?{1}"*/, v20);
-    sub_1BE4ACC(&StringLiteral_22798/*"password"*/, v21);
-    sub_1BE4ACC(&StringLiteral_18272/*"code_challenge"*/, v22);
-    byte_4B68DDA = 1;
+    sub_1C13D24(&AccountLinkageParams_TypeInfo, method);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v3);
+    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v4);
+    sub_1C13D24(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
+    sub_1C13D24(&Method_System_Linq_Enumerable_Select_KeyValuePair_string__string___string___, v6);
+    sub_1C13D24(&System_Func_KeyValuePair_string__string___string__TypeInfo, v7);
+    sub_1C13D24(&Method_AccountLinkageParams___c__GetAuthURL_b__21_0__, v8);
+    sub_1C13D24(&AccountLinkageParams___c_TypeInfo, v9);
+    sub_1C13D24(&System_Uri_TypeInfo, v10);
+    sub_1C13D24(&StringLiteral_11612/*"RtoMin"*/, v11);
+    sub_1C13D24(&StringLiteral_18292/*"clear00"*/, v12);
+    sub_1C13D24(&StringLiteral_22852/*"params"*/, v13);
+    sub_1C13D24(&StringLiteral_22479/*"noTargetNoActionType"*/, v14);
+    sub_1C13D24(&StringLiteral_20017/*"gYearMonth"*/, v15);
+    sub_1C13D24(&StringLiteral_18316/*"cm"*/, v16);
+    sub_1C13D24(&StringLiteral_17231/*"attributeProvider"*/, v17);
+    sub_1C13D24(&StringLiteral_532/*"&"*/, v18);
+    sub_1C13D24(&StringLiteral_23195/*"rebeccapurple"*/, v19);
+    sub_1C13D24(&StringLiteral_25491/*"{0}: {1}\n{2}: {3}\n{4}: {5}\n{6}: {7}\n{8}: {9}\n{10}: {11}\n{12}: {13}\n{14}: {15}\n{16}: {17}\n{18}: {19}\n{20}: {21}\n{22}: {23}\n{24}: {25}\n{26}: {27}\n{28}: {29}\n{30}: {31}\n{32}: {33}\n{34}: {35}\n{36}: {37}\n{38}: {39}\n{40}: {41}\n{42}: {43}\n{44}: {45}\n{46}: {47}\n{48}: {49}\n{50}: {51}\n{52}: {53}\n{54}: {55}\n{56}: {57}\n{58}: {59}\n{60}: {61}\n{62}: {63}\n{64}: {65}\n{66}: {67}\n{68}: {69}\n{70}: {71}\n{72}: {73}\n{74}: {75}\n{76}: {77}\n{78}: {79}\n{80}: {81}\n{82}: {83}\n{84}: {85}"*/, v20);
+    sub_1C13D24(&StringLiteral_22851/*"parameters.Count"*/, v21);
+    sub_1C13D24(&StringLiteral_18315/*"clr"*/, v22);
+    byte_4BB691F = 1;
   }
   authorizationUrl = AccountLinkageParams_TypeInfo->static_fields->authorizationUrl;
-  v24 = (System_Uri_o *)sub_1BE4D18(System_Uri_TypeInfo);
+  v24 = (System_Uri_o *)sub_1C13F70(System_Uri_TypeInfo);
   System_Uri___ctor(v24, authorizationUrl, 0LL);
   if ( !v24
     || (UserInfo = System_Uri__get_UserInfo(v24, 0LL)) == 0LL
     || (UserInfo = System_String__Split((System_String_o *)UserInfo, 0x3Au, 0, 0LL)) == 0LL )
   {
 LABEL_23:
-    sub_1BE4D28(UserInfo, v26);
+    sub_1C13F80(UserInfo, v26);
   }
   v33 = *((_QWORD *)UserInfo + 3);
   if ( v33 )
   {
     if ( !(_DWORD)v33 )
-      sub_1BE4D30(UserInfo, v26);
+      sub_1C13F88(UserInfo, v26);
     v34 = *((_QWORD *)UserInfo + 4);
     if ( (int)v33 >= 2 )
     {
@@ -198,17 +198,17 @@ LABEL_23:
   v35 = 0LL;
 LABEL_12:
   static_fields = AccountLinkageParams_TypeInfo->static_fields;
-  v37 = StringLiteral_22799/*"password_emailcode"*/;
-  v38 = StringLiteral_22798/*"password"*/;
+  v37 = StringLiteral_22852/*"params"*/;
+  v38 = StringLiteral_22851/*"parameters.Count"*/;
   static_fields->basicUserName = (struct System_String_o *)v34;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->basicUserName, v34, v27, v28, v29, v30, v31, v32);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->basicUserName, v34, v27, v28, v29, v30, v31, v32);
   v39 = AccountLinkageParams_TypeInfo->static_fields;
   v39->basicPassword = (struct System_String_o *)v35;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v39->basicPassword, v35, v40, v41, v42, v43, v44, v45);
-  v46 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BE4D18(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v39->basicPassword, v35, v40, v41, v42, v43, v44, v45);
+  v46 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C13F70(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v46,
-    (const MethodInfo_32AF874 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_32F2000 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   if ( !v46 )
     goto LABEL_23;
   if ( isTakeOver )
@@ -217,39 +217,39 @@ LABEL_12:
     v47 = (Il2CppObject *)v38;
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_19973/*"game_id"*/,
+    (Il2CppObject *)StringLiteral_20017/*"gYearMonth"*/,
     (Il2CppObject *)AccountLinkageParams_TypeInfo->static_fields->gameId,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_18249/*"client_id"*/,
+    (Il2CppObject *)StringLiteral_18292/*"clear00"*/,
     (Il2CppObject *)AccountLinkageParams_TypeInfo->static_fields->clientId,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_23142/*"redirect_uri"*/,
+    (Il2CppObject *)StringLiteral_23195/*"rebeccapurple"*/,
     (Il2CppObject *)AccountLinkageParams_TypeInfo->static_fields->redirectUri,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_22428/*"nonce"*/,
+    (Il2CppObject *)StringLiteral_22479/*"noTargetNoActionType"*/,
     (Il2CppObject *)AccountLinkageParams_TypeInfo->static_fields->nonce,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_18272/*"code_challenge"*/,
+    (Il2CppObject *)StringLiteral_18315/*"clr"*/,
     (Il2CppObject *)AccountLinkageParams_TypeInfo->static_fields->codeChallenge,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_18273/*"code_challenge_method"*/,
-    (Il2CppObject *)StringLiteral_11585/*"S256"*/,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (Il2CppObject *)StringLiteral_18316/*"cm"*/,
+    (Il2CppObject *)StringLiteral_11612/*"RtoMin"*/,
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
     v46,
-    (Il2CppObject *)StringLiteral_17186/*"auth_method"*/,
+    (Il2CppObject *)StringLiteral_17231/*"attributeProvider"*/,
     v47,
-    (const MethodInfo_32B0210 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    (const MethodInfo_32F299C *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   v48 = AccountLinkageParams___c_TypeInfo;
   if ( !AccountLinkageParams___c_TypeInfo->_2.cctor_finished )
   {
@@ -257,7 +257,7 @@ LABEL_12:
     v48 = AccountLinkageParams___c_TypeInfo;
   }
   _9__21_0 = (System_Func_T__TResult__o *)v48->static_fields->__9__21_0;
-  v50 = (System_String_o *)StringLiteral_530/*"&"*/;
+  v50 = (System_String_o *)StringLiteral_532/*"&"*/;
   if ( !_9__21_0 )
   {
     if ( !v48->_2.cctor_finished )
@@ -266,7 +266,7 @@ LABEL_12:
       v48 = AccountLinkageParams___c_TypeInfo;
     }
     v51 = (Il2CppObject *)v48->static_fields->__9;
-    _9__21_0 = (System_Func_T__TResult__o *)sub_1BE4D18(System_Func_KeyValuePair_string__string___string__TypeInfo);
+    _9__21_0 = (System_Func_T__TResult__o *)sub_1C13F70(System_Func_KeyValuePair_string__string___string__TypeInfo);
     System_Func_KeyValuePair_object__object___object____ctor(
       _9__21_0,
       v51,
@@ -274,15 +274,15 @@ LABEL_12:
       0LL);
     v52 = AccountLinkageParams___c_TypeInfo->static_fields;
     v52->__9__21_0 = (struct System_Func_KeyValuePair_string__string___string__o *)_9__21_0;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v52->__9__21_0, (int64_t)_9__21_0, v53, v54, v55, v56, v57, v58);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v52->__9__21_0, (int64_t)_9__21_0, v53, v54, v55, v56, v57, v58);
   }
   v59 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_KeyValuePair_object__object___object_(
                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v46,
                                                               (System_Func_TSource__TResult__o *)_9__21_0,
-                                                              (const MethodInfo_2F84934 *)Method_System_Linq_Enumerable_Select_KeyValuePair_string__string___string___);
-  v60 = (Il2CppObject *)System_String__Join_62714464(v50, v59, 0LL);
-  return System_String__Format_62713180(
-           (System_String_o *)StringLiteral_25435/*"{0}?{1}"*/,
+                                                              (const MethodInfo_2FBAB94 *)Method_System_Linq_Enumerable_Select_KeyValuePair_string__string___string___);
+  v60 = (Il2CppObject *)System_String__Join_62983600(v50, v59, 0LL);
+  return System_String__Format_62982316(
+           (System_String_o *)StringLiteral_25491/*"{0}: {1}\n{2}: {3}\n{4}: {5}\n{6}: {7}\n{8}: {9}\n{10}: {11}\n{12}: {13}\n{14}: {15}\n{16}: {17}\n{18}: {19}\n{20}: {21}\n{22}: {23}\n{24}: {25}\n{26}: {27}\n{28}: {29}\n{30}: {31}\n{32}: {33}\n{34}: {35}\n{36}: {37}\n{38}: {39}\n{40}: {41}\n{42}: {43}\n{44}: {45}\n{46}: {47}\n{48}: {49}\n{50}: {51}\n{52}: {53}\n{54}: {55}\n{56}: {57}\n{58}: {59}\n{60}: {61}\n{62}: {63}\n{64}: {65}\n{66}: {67}\n{68}: {69}\n{70}: {71}\n{72}: {73}\n{74}: {75}\n{76}: {77}\n{78}: {79}\n{80}: {81}\n{82}: {83}\n{84}: {85}"*/,
            (Il2CppObject *)authorizationUrl,
            v60,
            0LL);
@@ -312,15 +312,15 @@ void __fastcall AccountLinkageParams__GetCodeChallenge(const MethodInfo *method)
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  if ( (byte_4B68DDB & 1) == 0 )
+  if ( (byte_4BB6920 & 1) == 0 )
   {
-    sub_1BE4ACC(&AccountLinkageParams_TypeInfo, v1);
-    byte_4B68DDB = 1;
+    sub_1C13D24(&AccountLinkageParams_TypeInfo, v1);
+    byte_4BB6920 = 1;
   }
   RandomStringForUrl = AccountLinkageParams__GetRandomStringForUrl(0x20u, v1);
   static_fields = AccountLinkageParams_TypeInfo->static_fields;
   static_fields->codeVerifier = RandomStringForUrl;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&static_fields->codeVerifier,
     (int64_t)RandomStringForUrl,
     v4,
@@ -333,7 +333,7 @@ void __fastcall AccountLinkageParams__GetCodeChallenge(const MethodInfo *method)
   v13 = AccountLinkageParams__ConvertToBase64Url(v11, v12);
   v14 = AccountLinkageParams_TypeInfo->static_fields;
   v14->codeChallenge = v13;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v14->codeChallenge, (int64_t)v13, v15, v16, v17, v18, v19, v20);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v14->codeChallenge, (int64_t)v13, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -346,17 +346,17 @@ System_String_o *__fastcall AccountLinkageParams__GetRandomStringForUrl(uint32_t
   System_Byte_array *v7; // x19
   const MethodInfo *v8; // x1
 
-  if ( (byte_4B68DDC & 1) == 0 )
+  if ( (byte_4BB6921 & 1) == 0 )
   {
-    sub_1BE4ACC(&byte___TypeInfo, method);
-    sub_1BE4ACC(&System_Security_Cryptography_RNGCryptoServiceProvider_TypeInfo, v3);
-    byte_4B68DDC = 1;
+    sub_1C13D24(&byte___TypeInfo, method);
+    sub_1C13D24(&System_Security_Cryptography_RNGCryptoServiceProvider_TypeInfo, v3);
+    byte_4BB6921 = 1;
   }
-  v4 = (System_Security_Cryptography_RNGCryptoServiceProvider_o *)sub_1BE4D18(System_Security_Cryptography_RNGCryptoServiceProvider_TypeInfo);
+  v4 = (System_Security_Cryptography_RNGCryptoServiceProvider_o *)sub_1C13F70(System_Security_Cryptography_RNGCryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_RNGCryptoServiceProvider___ctor(v4, 0LL);
-  v5 = sub_1BE4B74(byte___TypeInfo, length);
+  v5 = sub_1C13DCC(byte___TypeInfo, length);
   if ( !v4 )
-    sub_1BE4D28(v5, v6);
+    sub_1C13F80(v5, v6);
   v7 = (System_Byte_array *)v5;
   ((void (__fastcall *)(System_Security_Cryptography_RNGCryptoServiceProvider_o *, __int64, Il2CppMethodPointer))v4->klass->vtable._6_GetBytes.method)(
     v4,
@@ -475,62 +475,62 @@ void __fastcall AccountLinkageParams__ResetParams(const MethodInfo *method)
   FollowerInfo_o *v105; // x6
   PartyListViewItem_o *v106; // x7
 
-  if ( (byte_4B68DE0 & 1) == 0 )
+  if ( (byte_4BB6925 & 1) == 0 )
   {
-    sub_1BE4ACC(&AccountLinkageParams_TypeInfo, v1);
-    byte_4B68DE0 = 1;
+    sub_1C13D24(&AccountLinkageParams_TypeInfo, v1);
+    byte_4BB6925 = 1;
   }
   static_fields = AccountLinkageParams_TypeInfo->static_fields;
   static_fields->authorizationCode = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&static_fields->authorizationCode, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->authorizationCode, 0LL, v2, v3, v4, v5, v6, v7);
   v9 = AccountLinkageParams_TypeInfo->static_fields;
   v9->accountLinkageToken = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v9->accountLinkageToken, 0LL, v10, v11, v12, v13, v14, v15);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v9->accountLinkageToken, 0LL, v10, v11, v12, v13, v14, v15);
   v16 = AccountLinkageParams_TypeInfo->static_fields;
   v16->authorizationUrl = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v16->authorizationUrl, 0LL, v17, v18, v19, v20, v21, v22);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v16->authorizationUrl, 0LL, v17, v18, v19, v20, v21, v22);
   v23 = AccountLinkageParams_TypeInfo->static_fields;
   v23->gameId = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v23->gameId, 0LL, v24, v25, v26, v27, v28, v29);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v23->gameId, 0LL, v24, v25, v26, v27, v28, v29);
   v30 = AccountLinkageParams_TypeInfo->static_fields;
   v30->clientId = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v30->clientId, 0LL, v31, v32, v33, v34, v35, v36);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v30->clientId, 0LL, v31, v32, v33, v34, v35, v36);
   v37 = AccountLinkageParams_TypeInfo->static_fields;
   v37->redirectUri = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v37->redirectUri, 0LL, v38, v39, v40, v41, v42, v43);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v37->redirectUri, 0LL, v38, v39, v40, v41, v42, v43);
   v44 = AccountLinkageParams_TypeInfo->static_fields;
   v44->nonce = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v44->nonce, 0LL, v45, v46, v47, v48, v49, v50);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v44->nonce, 0LL, v45, v46, v47, v48, v49, v50);
   v51 = AccountLinkageParams_TypeInfo->static_fields;
   v51->codeVerifier = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v51->codeVerifier, 0LL, v52, v53, v54, v55, v56, v57);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v51->codeVerifier, 0LL, v52, v53, v54, v55, v56, v57);
   v58 = AccountLinkageParams_TypeInfo->static_fields;
   v58->codeChallenge = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v58->codeChallenge, 0LL, v59, v60, v61, v62, v63, v64);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v58->codeChallenge, 0LL, v59, v60, v61, v62, v63, v64);
   v65 = AccountLinkageParams_TypeInfo->static_fields;
   v65->requestedAccountName = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v65->requestedAccountName, 0LL, v66, v67, v68, v69, v70, v71);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v65->requestedAccountName, 0LL, v66, v67, v68, v69, v70, v71);
   v72 = AccountLinkageParams_TypeInfo->static_fields;
   v72->requestedAccountFriendCode = 0LL;
   v72 = (struct AccountLinkageParams_StaticFields *)((char *)v72 + 96);
   LODWORD(v72[-1].basicPassword) = 0;
-  sub_1BE4A70((PartyOrganizationUtility_o *)v72, 0LL, v73, v74, v75, v76, v77, v78);
+  sub_1C13CC8((PartyOrganizationUtility_o *)v72, 0LL, v73, v74, v75, v76, v77, v78);
   v79 = (PartyOrganizationUtility_o *)AccountLinkageParams_TypeInfo->static_fields;
   v79->fields._CachedFriendshipUpItemInfo_k__BackingField = 0LL;
   v79 = (PartyOrganizationUtility_o *)((char *)v79 + 128);
   v79[-1].fields.temporaryPartyInfo = 0LL;
   LOBYTE(v79[-1].fields._TransitionDestinationFromDetail_k__BackingField) = 0;
   *(_QWORD *)&v79[-1].fields._IsQuestStartMenuMode_k__BackingField = 0LL;
-  sub_1BE4A70(v79, 0LL, v80, v81, v82, v83, v84, v85);
+  sub_1C13CC8(v79, 0LL, v80, v81, v82, v83, v84, v85);
   v86 = AccountLinkageParams_TypeInfo->static_fields;
   v86->newSecretKey = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v86->newSecretKey, 0LL, v87, v88, v89, v90, v91, v92);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v86->newSecretKey, 0LL, v87, v88, v89, v90, v91, v92);
   v93 = AccountLinkageParams_TypeInfo->static_fields;
   v93->basicUserName = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v93->basicUserName, 0LL, v94, v95, v96, v97, v98, v99);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v93->basicUserName, 0LL, v94, v95, v96, v97, v98, v99);
   v100 = AccountLinkageParams_TypeInfo->static_fields;
   v100->basicPassword = 0LL;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&v100->basicPassword, 0LL, v101, v102, v103, v104, v105, v106);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&v100->basicPassword, 0LL, v101, v102, v103, v104, v105, v106);
 }
 
 
@@ -541,10 +541,10 @@ System_Byte_array *__fastcall AccountLinkageParams__Sha256(System_String_o *sour
   System_Byte_array *v5; // x19
   System_Security_Cryptography_SHA256Managed_o *v6; // x20
 
-  if ( (byte_4B68DDE & 1) == 0 )
+  if ( (byte_4BB6923 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Security_Cryptography_SHA256Managed_TypeInfo, method);
-    byte_4B68DDE = 1;
+    sub_1C13D24(&System_Security_Cryptography_SHA256Managed_TypeInfo, method);
+    byte_4BB6923 = 1;
   }
   ASCII = System_Text_Encoding__get_ASCII(0LL);
   if ( !ASCII
@@ -552,11 +552,11 @@ System_Byte_array *__fastcall AccountLinkageParams__Sha256(System_String_o *sour
                                     ASCII,
                                     source,
                                     ASCII->klass->vtable._20_GetBytes.methodPtr),
-        v6 = (System_Security_Cryptography_SHA256Managed_o *)sub_1BE4D18(System_Security_Cryptography_SHA256Managed_TypeInfo),
+        v6 = (System_Security_Cryptography_SHA256Managed_o *)sub_1C13F70(System_Security_Cryptography_SHA256Managed_TypeInfo),
         System_Security_Cryptography_SHA256Managed___ctor(v6, 0LL),
         !v6) )
   {
-    sub_1BE4D28(ASCII, v4);
+    sub_1C13F80(ASCII, v4);
   }
   return System_Security_Cryptography_HashAlgorithm__ComputeHash(
            (System_Security_Cryptography_HashAlgorithm_o *)v6,
@@ -576,15 +576,15 @@ void __fastcall AccountLinkageParams___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4B68DE1 & 1) == 0 )
+  if ( (byte_4BB6926 & 1) == 0 )
   {
-    sub_1BE4ACC(&AccountLinkageParams___c_TypeInfo, v1);
-    byte_4B68DE1 = 1;
+    sub_1C13D24(&AccountLinkageParams___c_TypeInfo, v1);
+    byte_4BB6926 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BE4D18(AccountLinkageParams___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C13F70(AccountLinkageParams___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   AccountLinkageParams___c_TypeInfo->static_fields->__9 = (struct AccountLinkageParams___c_o *)v2;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)AccountLinkageParams___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -614,12 +614,12 @@ System_String_o *__fastcall AccountLinkageParams___c___GetAuthURL_b__21_0(
 
   value = (Il2CppObject *)pair.fields.value;
   key = (Il2CppObject *)pair.fields.key;
-  if ( (byte_4B68DE2 & 1) == 0 )
+  if ( (byte_4BB6927 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, pair.fields.key);
-    sub_1BE4ACC(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v5);
-    sub_1BE4ACC(&StringLiteral_25433/*"{0}={1}"*/, v6);
-    byte_4B68DE2 = 1;
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, pair.fields.key);
+    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v5);
+    sub_1C13D24(&StringLiteral_25489/*"{0}: {1}\n"*/, v6);
+    byte_4BB6927 = 1;
   }
-  return System_String__Format_62713180((System_String_o *)StringLiteral_25433/*"{0}={1}"*/, key, value, 0LL);
+  return System_String__Format_62982316((System_String_o *)StringLiteral_25489/*"{0}: {1}\n"*/, key, value, 0LL);
 }

@@ -2,10 +2,10 @@ void __fastcall InputUserBirthDayWindow___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B62029 & 1) == 0 )
+  if ( (byte_4BAFB18 & 1) == 0 )
   {
-    sub_1BE4ACC(&InputUserBirthDayWindow_TypeInfo, v1);
-    byte_4B62029 = 1;
+    sub_1C13D24(&InputUserBirthDayWindow_TypeInfo, v1);
+    byte_4BAFB18 = 1;
   }
   *InputUserBirthDayWindow_TypeInfo->static_fields = (struct InputUserBirthDayWindow_StaticFields)0xFFFFFFFA00000028LL;
 }
@@ -13,10 +13,10 @@ void __fastcall InputUserBirthDayWindow___cctor(const MethodInfo *method)
 
 void __fastcall InputUserBirthDayWindow___ctor(InputUserBirthDayWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B62028 & 1) == 0 )
+  if ( (byte_4BAFB17 & 1) == 0 )
   {
-    sub_1BE4ACC(&BaseDialog_TypeInfo, method);
-    byte_4B62028 = 1;
+    sub_1C13D24(&BaseDialog_TypeInfo, method);
+    byte_4BAFB17 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -40,7 +40,7 @@ void __fastcall InputUserBirthDayWindow__Callback(
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0LL;
-    sub_1BE4A70(p_callbackFunc);
+    sub_1C13CC8(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, struct System_Int32_array *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       result,
@@ -54,11 +54,11 @@ void __fastcall InputUserBirthDayWindow__Close(InputUserBirthDayWindow_o *this, 
 {
   const MethodInfo *v2; // x2
 
-  InputUserBirthDayWindow__Close_31820548(this, 0LL, v2);
+  InputUserBirthDayWindow__Close_32005512(this, 0LL, v2);
 }
 
 
-void __fastcall InputUserBirthDayWindow__Close_31820548(
+void __fastcall InputUserBirthDayWindow__Close_32005512(
         InputUserBirthDayWindow_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -69,31 +69,31 @@ void __fastcall InputUserBirthDayWindow__Close_31820548(
   UnityEngine_Component_o *birthMonthInput; // x0
   System_Action_o *v9; // x20
 
-  if ( (byte_4B62023 & 1) == 0 )
+  if ( (byte_4BAFB12 & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, callback);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Collider___, v5);
-    sub_1BE4ACC(&Method_InputUserBirthDayWindow_EndClose__, v6);
-    byte_4B62023 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, callback);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Collider___, v5);
+    sub_1C13D24(&Method_InputUserBirthDayWindow_EndClose__, v6);
+    byte_4BAFB12 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BE4A70(&this->fields.closeCallbackFunc);
+  sub_1C13CC8(&this->fields.closeCallbackFunc);
   birthMonthInput = (UnityEngine_Component_o *)this->fields.birthMonthInput;
   this->fields.state = 3;
   if ( !birthMonthInput
     || (birthMonthInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        birthMonthInput,
-                                                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)birthMonthInput, 0, 0LL),
         (birthMonthInput = (UnityEngine_Component_o *)this->fields.birthDayInput) == 0LL)
     || (birthMonthInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                        birthMonthInput,
-                                                       (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
   {
-    sub_1BE4D28(birthMonthInput, v7);
+    sub_1C13F80(birthMonthInput, v7);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)birthMonthInput, 0, 0LL);
-  v9 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_InputUserBirthDayWindow_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
 }
@@ -110,7 +110,7 @@ void __fastcall InputUserBirthDayWindow__EndClose(InputUserBirthDayWindow_o *thi
   InputUserBirthDayWindow__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BE4D28(0LL, v4);
+    sub_1C13F80(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -118,7 +118,7 @@ void __fastcall InputUserBirthDayWindow__EndClose(InputUserBirthDayWindow_o *thi
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0LL;
-    sub_1BE4A70(p_closeCallbackFunc);
+    sub_1C13CC8(p_closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -130,10 +130,10 @@ void __fastcall InputUserBirthDayWindow__EndOpen(InputUserBirthDayWindow_o *this
 {
   UnityEngine_Component_o *birthMonthInput; // x0
 
-  if ( (byte_4B62022 & 1) == 0 )
+  if ( (byte_4BAFB11 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    byte_4B62022 = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Collider___, method);
+    byte_4BAFB11 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -142,14 +142,14 @@ void __fastcall InputUserBirthDayWindow__EndOpen(InputUserBirthDayWindow_o *this
     if ( !birthMonthInput
       || (birthMonthInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                          birthMonthInput,
-                                                         (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)birthMonthInput, 1, 0LL),
           (birthMonthInput = (UnityEngine_Component_o *)this->fields.birthDayInput) == 0LL)
       || (birthMonthInput = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                          birthMonthInput,
-                                                         (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
     {
-      sub_1BE4D28(birthMonthInput, method);
+      sub_1C13F80(birthMonthInput, method);
     }
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)birthMonthInput, 1, 0LL);
   }
@@ -161,10 +161,10 @@ void __fastcall InputUserBirthDayWindow__Init(InputUserBirthDayWindow_o *this, c
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B6201F & 1) == 0 )
+  if ( (byte_4BAFB0E & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    byte_4B6201F = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Collider___, method);
+    byte_4BAFB0E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -176,15 +176,15 @@ void __fastcall InputUserBirthDayWindow__Init(InputUserBirthDayWindow_o *this, c
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                   (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.birthDayInput) == 0LL)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                   (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
   {
 LABEL_9:
-    sub_1BE4D28(gameObject, v4);
+    sub_1C13F80(gameObject, v4);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -203,7 +203,7 @@ void __fastcall InputUserBirthDayWindow__OnChangeInput(InputUserBirthDayWindow_o
   if ( !birthMonthInput
     || (birthMonthInput = (UILineInput_o *)UILineInput__GetText(birthMonthInput, 0LL), !this->fields.birthDayInput) )
   {
-    sub_1BE4D28(birthMonthInput, method);
+    sub_1C13F80(birthMonthInput, method);
   }
   v4 = (System_String_o *)birthMonthInput;
   Text = UILineInput__GetText(this->fields.birthDayInput, 0LL);
@@ -315,141 +315,141 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
   System_DateTime_o v91; // 0:x0.8
   System_DateTime_o v92; // 0:x0.8
 
-  if ( (byte_4B62024 & 1) == 0 )
+  if ( (byte_4BAFB13 & 1) == 0 )
   {
-    sub_1BE4ACC(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo, method);
-    sub_1BE4ACC(&System_DateTime_TypeInfo, v3);
-    sub_1BE4ACC(&Method_InputUserBirthDayWindow_OnClickDecide__, v4);
-    sub_1BE4ACC(&Method_InputUserBirthDayWindow_OnConfirm__, v5);
-    sub_1BE4ACC(&InputUserBirthDayWindow_TypeInfo, v6);
-    sub_1BE4ACC(&int_TypeInfo, v7);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v8);
-    sub_1BE4ACC(&NetworkManager_TypeInfo, v9);
-    sub_1BE4ACC(&object___TypeInfo, v10);
-    sub_1BE4ACC(&StringLiteral_11232/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, v11);
-    sub_1BE4ACC(&StringLiteral_12132/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, v12);
-    sub_1BE4ACC(&StringLiteral_12131/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, v13);
-    sub_1BE4ACC(&StringLiteral_11231/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, v14);
-    sub_1BE4ACC(&StringLiteral_12130/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, v15);
-    byte_4B62024 = 1;
+    sub_1C13D24(&InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo, method);
+    sub_1C13D24(&System_DateTime_TypeInfo, v3);
+    sub_1C13D24(&Method_InputUserBirthDayWindow_OnClickDecide__, v4);
+    sub_1C13D24(&Method_InputUserBirthDayWindow_OnConfirm__, v5);
+    sub_1C13D24(&InputUserBirthDayWindow_TypeInfo, v6);
+    sub_1C13D24(&int_TypeInfo, v7);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
+    sub_1C13D24(&NetworkManager_TypeInfo, v9);
+    sub_1C13D24(&object___TypeInfo, v10);
+    sub_1C13D24(&StringLiteral_11258/*"REMAIN_TASK"*/, v11);
+    sub_1C13D24(&StringLiteral_12159/*"SERVANT_UNIT"*/, v12);
+    sub_1C13D24(&StringLiteral_12158/*"SERVANT_TAKE"*/, v13);
+    sub_1C13D24(&StringLiteral_11257/*"RELEASE"*/, v14);
+    sub_1C13D24(&StringLiteral_12157/*"SERVANT_SUB_ATTRIBUTE_"*/, v15);
+    byte_4BAFB13 = 1;
   }
   dateData = 0LL;
   if ( this->fields.isInput )
   {
     birthMonthInput = this->fields.birthMonthInput;
     if ( !birthMonthInput )
-      sub_1BE4D28(0LL, method);
+      sub_1C13F80(0LL, method);
     Text = UILineInput__GetText(birthMonthInput, 0LL);
     v19 = System_Int32__Parse(Text, 0LL);
     birthDayInput = this->fields.birthDayInput;
     if ( !birthDayInput )
-      sub_1BE4D28(0LL, v18);
+      sub_1C13F80(0LL, v18);
     v21 = UILineInput__GetText(birthDayInput, 0LL);
     v22 = System_Int32__Parse(v21, 0LL);
     v88 = 0LL;
     v90.fields._dateData = (uint64_t)&v88;
-    System_DateTime___ctor_63377016(v90, 2000, v19, v22, 0LL);
+    System_DateTime___ctor_63646152(v90, 2000, v19, v22, 0LL);
     paramList = this->fields.paramList;
     if ( !paramList )
-      sub_1BE4D28(v23, v24);
+      sub_1C13F80(v23, v24);
     max_length = paramList->max_length;
     if ( !max_length )
-      sub_1BE4D30(v23, v24);
+      sub_1C13F88(v23, v24);
     paramList->m_Items[1] = v19;
     if ( max_length == 1 )
-      sub_1BE4D30(v23, v24);
+      sub_1C13F88(v23, v24);
     paramList->m_Items[2] = v22;
     v27 = Method_InputUserBirthDayWindow_OnClickDecide__;
     if ( (*((_BYTE *)Method_InputUserBirthDayWindow_OnClickDecide__ + 83) & 2) != 0 )
-      v27 = (_QWORD *)sub_1BE4AE4(Method_InputUserBirthDayWindow_OnClickDecide__);
-    v28 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v27, v27[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v28, 0, 0LL);
+      v27 = (_QWORD *)sub_1C13D3C(Method_InputUserBirthDayWindow_OnClickDecide__);
+    v28 = (System_Reflection_MethodBase_o *)sub_1C13D08(v27, v27[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v28, 0, 0, 0LL);
     if ( this->fields.isResetBirthday )
     {
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
       if ( !SelfUserGame )
-        sub_1BE4D28(0LL, v30);
+        sub_1C13F80(0LL, v30);
       birthDay = SelfUserGame->fields.birthDay;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      dateData = NetworkManager__getDateTime_39465728(birthDay, 0LL).fields._dateData;
+      dateData = NetworkManager__getDateTime_39706804(birthDay, 0LL).fields._dateData;
       confirmWindow = this->fields.confirmWindow;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_11232/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, 0LL);
-      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_11231/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0LL);
-      v35 = (System_Object_array *)sub_1BE4B74(object___TypeInfo, 4LL);
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_11258/*"REMAIN_TASK"*/, 0LL);
+      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_11257/*"RELEASE"*/, 0LL);
+      v35 = (System_Object_array *)sub_1C13DCC(object___TypeInfo, 4LL);
       if ( !System_DateTime_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
       v91.fields._dateData = (uint64_t)&dateData;
       Month = (InputUserBirthDayWindow_o *)System_DateTime__get_Month(v91, 0LL);
       PaddingBirthday = InputUserBirthDayWindow__getPaddingBirthday(Month, (int32_t)Month, v37);
       if ( !v35 )
-        sub_1BE4D28(PaddingBirthday, v39);
+        sub_1C13F80(PaddingBirthday, v39);
       v40 = (Il2CppObject *)PaddingBirthday;
       if ( PaddingBirthday )
       {
-        PaddingBirthday = (System_String_o *)sub_1BE4C08(PaddingBirthday, v35->obj.klass->_1.element_class);
+        PaddingBirthday = (System_String_o *)sub_1C13E60(PaddingBirthday, v35->obj.klass->_1.element_class);
         if ( !PaddingBirthday )
         {
-          v83 = sub_1BE4D4C();
-          sub_1BE4BF4(v83, 0LL);
+          v83 = sub_1C13FA4();
+          sub_1C13E4C(v83, 0LL);
         }
       }
       if ( !v35->max_length )
-        sub_1BE4D30(PaddingBirthday, v39);
+        sub_1C13F88(PaddingBirthday, v39);
       v35->m_Items[0] = v40;
-      sub_1BE4A70(v35->m_Items);
+      sub_1C13CC8(v35->m_Items);
       v92.fields._dateData = (uint64_t)&dateData;
       Day = (InputUserBirthDayWindow_o *)System_DateTime__get_Day(v92, 0LL);
       v43 = InputUserBirthDayWindow__getPaddingBirthday(Day, (int32_t)Day, v42);
       v45 = (Il2CppObject *)v43;
       if ( v43 )
       {
-        v43 = (System_String_o *)sub_1BE4C08(v43, v35->obj.klass->_1.element_class);
+        v43 = (System_String_o *)sub_1C13E60(v43, v35->obj.klass->_1.element_class);
         if ( !v43 )
         {
-          v84 = sub_1BE4D4C();
-          sub_1BE4BF4(v84, 0LL);
+          v84 = sub_1C13FA4();
+          sub_1C13E4C(v84, 0LL);
         }
       }
       if ( v35->max_length <= 1 )
-        sub_1BE4D30(v43, v44);
+        sub_1C13F88(v43, v44);
       v35->m_Items[1] = v45;
-      v46 = (InputUserBirthDayWindow_o *)sub_1BE4A70(&v35->m_Items[1]);
+      v46 = (InputUserBirthDayWindow_o *)sub_1C13CC8(&v35->m_Items[1]);
       v48 = InputUserBirthDayWindow__getPaddingBirthday(v46, v19, v47);
       v50 = (Il2CppObject *)v48;
       if ( v48 )
       {
-        v48 = (System_String_o *)sub_1BE4C08(v48, v35->obj.klass->_1.element_class);
+        v48 = (System_String_o *)sub_1C13E60(v48, v35->obj.klass->_1.element_class);
         if ( !v48 )
         {
-          v85 = sub_1BE4D4C();
-          sub_1BE4BF4(v85, 0LL);
+          v85 = sub_1C13FA4();
+          sub_1C13E4C(v85, 0LL);
         }
       }
       if ( v35->max_length <= 2 )
-        sub_1BE4D30(v48, v49);
+        sub_1C13F88(v48, v49);
       v35->m_Items[2] = v50;
-      v51 = (InputUserBirthDayWindow_o *)sub_1BE4A70(&v35->m_Items[2]);
+      v51 = (InputUserBirthDayWindow_o *)sub_1C13CC8(&v35->m_Items[2]);
       v53 = InputUserBirthDayWindow__getPaddingBirthday(v51, v22, v52);
       v55 = (Il2CppObject *)v53;
       if ( v53 )
       {
-        v53 = (System_String_o *)sub_1BE4C08(v53, v35->obj.klass->_1.element_class);
+        v53 = (System_String_o *)sub_1C13E60(v53, v35->obj.klass->_1.element_class);
         if ( !v53 )
         {
-          v86 = sub_1BE4D4C();
-          sub_1BE4BF4(v86, 0LL);
+          v86 = sub_1C13FA4();
+          sub_1C13E4C(v86, 0LL);
         }
       }
       if ( v35->max_length <= 3 )
-        sub_1BE4D30(v53, v54);
+        sub_1C13F88(v53, v54);
       v35->m_Items[3] = v55;
-      sub_1BE4A70(&v35->m_Items[3]);
-      v56 = System_String__Format_62713316(v34, v35, 0LL);
-      v57 = LocalizationManager__Get((System_String_o *)StringLiteral_12131/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0LL);
-      v58 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_1BE4D18(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+      sub_1C13CC8(&v35->m_Items[3]);
+      v56 = System_String__Format_62982452(v34, v35, 0LL);
+      v57 = LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SERVANT_TAKE"*/, 0LL);
+      v58 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_1C13F70(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
       InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
         v58,
         (Il2CppObject *)this,
@@ -462,7 +462,7 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
         v62 = InputUserBirthDayWindow_TypeInfo;
       }
       if ( !confirmWindow )
-        sub_1BE4D28(v62, v60);
+        sub_1C13F80(v62, v60);
       InputUserBirthDayConfirmWindow__OpenConfirmWindow(
         confirmWindow,
         v33,
@@ -478,22 +478,22 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
       v65 = this->fields.confirmWindow;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12132/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, 0LL);
-      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12130/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0LL);
+      v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12159/*"SERVANT_UNIT"*/, 0LL);
+      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12157/*"SERVANT_SUB_ATTRIBUTE_"*/, 0LL);
       LODWORD(v88) = v19;
       v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v88, v68, v69, v70);
       v87 = v22;
       v75 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v87, v72, v73, v74);
-      v76 = System_String__Format_62713180(v67, v71, v75, 0LL);
-      v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12131/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0LL);
-      v78 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_1BE4D18(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+      v76 = System_String__Format_62982316(v67, v71, v75, 0LL);
+      v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SERVANT_TAKE"*/, 0LL);
+      v78 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_1C13F70(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
       InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
         v78,
         (Il2CppObject *)this,
         Method_InputUserBirthDayWindow_OnConfirm__,
         v79);
       if ( !v65 )
-        sub_1BE4D28(v80, v81);
+        sub_1C13F80(v80, v81);
       InputUserBirthDayConfirmWindow__OpenConfirmWindow(v65, v66, v76, v77, v78, 30, 0, v82);
     }
   }
@@ -501,9 +501,9 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
   {
     v63 = Method_InputUserBirthDayWindow_OnClickDecide__;
     if ( (*((_BYTE *)Method_InputUserBirthDayWindow_OnClickDecide__ + 83) & 2) != 0 )
-      v63 = (_QWORD *)sub_1BE4AE4(Method_InputUserBirthDayWindow_OnClickDecide__);
-    v64 = (System_Reflection_MethodBase_o *)sub_1BE4AB0(v63, v63[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v64, 2, 0LL);
+      v63 = (_QWORD *)sub_1C13D3C(Method_InputUserBirthDayWindow_OnClickDecide__);
+    v64 = (System_Reflection_MethodBase_o *)sub_1C13D08(v63, v63[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v64, 2, 0, 0LL);
   }
 }
 
@@ -519,8 +519,8 @@ void __fastcall InputUserBirthDayWindow__OnConfirm(
 
   confirmWindow = this->fields.confirmWindow;
   if ( !confirmWindow )
-    sub_1BE4D28(0LL, isDecide);
-  InputUserBirthDayConfirmWindow__Close_31818040(confirmWindow, 0LL, method);
+    sub_1C13F80(0LL, isDecide);
+  InputUserBirthDayConfirmWindow__Close_32003000(confirmWindow, 0LL, method);
   if ( isDecide )
     InputUserBirthDayWindow__Callback(this, 1, v6, v7);
 }
@@ -554,20 +554,20 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
   System_String_o *v25; // x21
   System_Action_o *v26; // x20
 
-  if ( (byte_4B62020 & 1) == 0 )
+  if ( (byte_4BAFB0F & 1) == 0 )
   {
-    sub_1BE4ACC(&System_Action_TypeInfo, callback);
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_Collider___, v5);
-    sub_1BE4ACC(&CondType_TypeInfo, v6);
-    sub_1BE4ACC(&Method_InputUserBirthDayWindow_EndOpen__, v7);
-    sub_1BE4ACC(&int___TypeInfo, v8);
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, v9);
-    sub_1BE4ACC(&StringLiteral_7521/*"INPUT_BIRTHDAY_INFO"*/, v10);
-    sub_1BE4ACC(&StringLiteral_7522/*"INPUT_BIRTHDAY_NOTICE"*/, v11);
-    sub_1BE4ACC(&StringLiteral_11234/*"RESET_BIRTHDAY_TITLE"*/, v12);
-    sub_1BE4ACC(&StringLiteral_7523/*"INPUT_BIRTHDAY_TITLE"*/, v13);
-    sub_1BE4ACC(&StringLiteral_11233/*"RESET_BIRTHDAY_NOTICE"*/, v14);
-    byte_4B62020 = 1;
+    sub_1C13D24(&System_Action_TypeInfo, callback);
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Collider___, v5);
+    sub_1C13D24(&CondType_TypeInfo, v6);
+    sub_1C13D24(&Method_InputUserBirthDayWindow_EndOpen__, v7);
+    sub_1C13D24(&int___TypeInfo, v8);
+    sub_1C13D24(&LocalizationManager_TypeInfo, v9);
+    sub_1C13D24(&StringLiteral_7541/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_2"*/, v10);
+    sub_1C13D24(&StringLiteral_7542/*"INIT_DONE"*/, v11);
+    sub_1C13D24(&StringLiteral_11260/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/, v12);
+    sub_1C13D24(&StringLiteral_7543/*"INIT_OPEN"*/, v13);
+    sub_1C13D24(&StringLiteral_11259/*"RENAME"*/, v14);
+    byte_4BAFB0F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -577,15 +577,15 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
   this->fields.isInput = 0;
   InputUserBirthDayWindow__setExeBtnState(this, v17);
   this->fields.callbackFunc = callback;
-  sub_1BE4A70(&this->fields.callbackFunc);
+  sub_1C13CC8(&this->fields.callbackFunc);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   IsOpen = CondType__IsOpen(144, 0, 0LL, 0, 0LL, 0LL);
   this->fields.isResetBirthday = IsOpen;
   if ( IsOpen )
-    v19 = (System_String_o **)&StringLiteral_11234/*"RESET_BIRTHDAY_TITLE"*/;
+    v19 = (System_String_o **)&StringLiteral_11260/*"REPRINT_LAST_WAR_RAID_EVENT_ID_LIST"*/;
   else
-    v19 = (System_String_o **)&StringLiteral_7523/*"INPUT_BIRTHDAY_TITLE"*/;
+    v19 = (System_String_o **)&StringLiteral_7543/*"INIT_OPEN"*/;
   titleLb = this->fields.titleLb;
   v21 = *v19;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -595,12 +595,12 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
     goto LABEL_24;
   UILabel__set_text(titleLb, (System_String_o *)gameObject, 0LL);
   inputInfoLb = this->fields.inputInfoLb;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7521/*"INPUT_BIRTHDAY_INFO"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7541/*"INIT_CACHE_CLEAR_CONFIRM_TITLE_2"*/, 0LL);
   if ( !inputInfoLb )
     goto LABEL_24;
   UILabel__set_text(inputInfoLb, (System_String_o *)gameObject, 0LL);
   noticeLb = this->fields.noticeLb;
-  v24 = (System_String_o **)(this->fields.isResetBirthday ? &StringLiteral_11233/*"RESET_BIRTHDAY_NOTICE"*/ : &StringLiteral_7522/*"INPUT_BIRTHDAY_NOTICE"*/);
+  v24 = (System_String_o **)(this->fields.isResetBirthday ? &StringLiteral_11259/*"RENAME"*/ : &StringLiteral_7542/*"INIT_DONE"*/);
   v25 = *v24;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -612,20 +612,20 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
         !gameObject)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                   (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.birthDayInput) == 0LL)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                   (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
   {
 LABEL_24:
-    sub_1BE4D28(gameObject, v16);
+    sub_1C13F80(gameObject, v16);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
-  this->fields.paramList = (struct System_Int32_array *)sub_1BE4B74(int___TypeInfo, 2LL);
-  sub_1BE4A70(&this->fields.paramList);
-  v26 = (System_Action_o *)sub_1BE4D18(System_Action_TypeInfo);
+  this->fields.paramList = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 2LL);
+  sub_1C13CC8(&this->fields.paramList);
+  v26 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)this, Method_InputUserBirthDayWindow_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v26, 0, 0LL);
 }
@@ -646,10 +646,10 @@ void __fastcall InputUserBirthDayWindow__add_callbackFunc(
   InputUserBirthDayWindow_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B6201D & 1) == 0 )
+  if ( (byte_4BAFB0C & 1) == 0 )
   {
-    sub_1BE4ACC(&InputUserBirthDayWindow_CallbackFunc_TypeInfo, value);
-    byte_4B6201D = 1;
+    sub_1C13D24(&InputUserBirthDayWindow_CallbackFunc_TypeInfo, value);
+    byte_4BAFB0C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -662,13 +662,13 @@ void __fastcall InputUserBirthDayWindow__add_callbackFunc(
       if ( (InputUserBirthDayWindow_CallbackFunc_c *)v8->klass != InputUserBirthDayWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (InputUserBirthDayWindow_o *)sub_1BE4FE8(v8);
+  v11 = (InputUserBirthDayWindow_o *)sub_1C14240(v8);
   InputUserBirthDayWindow__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -678,14 +678,14 @@ void __fastcall InputUserBirthDayWindow__closeNotification(InputUserBirthDayWind
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B62025 & 1) == 0 )
+  if ( (byte_4BAFB14 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4B62025 = 1;
+    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4BAFB14 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BE4D28(0LL, v3);
+    sub_1C13F80(0LL, v3);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -700,14 +700,14 @@ System_String_o *__fastcall InputUserBirthDayWindow__getPaddingBirthday(
   int32_t v6; // [xsp+Ch] [xbp-14h] BYREF
 
   v6 = num;
-  if ( (byte_4B62027 & 1) == 0 )
+  if ( (byte_4BAFB16 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_117/*"  "*/, *(_QWORD *)&num);
-    byte_4B62027 = 1;
+    sub_1C13D24(&StringLiteral_118/*"  "*/, *(_QWORD *)&num);
+    byte_4BAFB16 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
   if ( num <= 9 )
-    return System_String__Concat_62698808((System_String_o *)StringLiteral_117/*"  "*/, v4, 0LL);
+    return System_String__Concat_62967944((System_String_o *)StringLiteral_118/*"  "*/, v4, 0LL);
   return v4;
 }
 
@@ -716,12 +716,12 @@ System_String_o *__fastcall InputUserBirthDayWindow__get_closeBtnPath(
         InputUserBirthDayWindow_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B62026 & 1) == 0 )
+  if ( (byte_4BAFB15 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_3227/*"BaseWindow/CancleBtn"*/, method);
-    byte_4B62026 = 1;
+    sub_1C13D24(&StringLiteral_3230/*"BaseWindow/ButtonRoot/CancleButton"*/, method);
+    byte_4BAFB15 = 1;
   }
-  return (System_String_o *)StringLiteral_3227/*"BaseWindow/CancleBtn"*/;
+  return (System_String_o *)StringLiteral_3230/*"BaseWindow/ButtonRoot/CancleButton"*/;
 }
 
 
@@ -739,10 +739,10 @@ void __fastcall InputUserBirthDayWindow__remove_callbackFunc(
   InputUserBirthDayWindow_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B6201E & 1) == 0 )
+  if ( (byte_4BAFB0D & 1) == 0 )
   {
-    sub_1BE4ACC(&InputUserBirthDayWindow_CallbackFunc_TypeInfo, value);
-    byte_4B6201E = 1;
+    sub_1C13D24(&InputUserBirthDayWindow_CallbackFunc_TypeInfo, value);
+    byte_4BAFB0D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -755,13 +755,13 @@ void __fastcall InputUserBirthDayWindow__remove_callbackFunc(
       if ( (InputUserBirthDayWindow_CallbackFunc_c *)v8->klass != InputUserBirthDayWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C1FFBC(p_callbackFunc, v8, v6);
+    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (InputUserBirthDayWindow_o *)sub_1BE4FE8(v8);
+  v11 = (InputUserBirthDayWindow_o *)sub_1C14240(v8);
   InputUserBirthDayWindow__Init(v11, v12);
 }
 
@@ -780,17 +780,17 @@ void __fastcall InputUserBirthDayWindow__setExeBtnState(InputUserBirthDayWindow_
   float v11; // s2
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B62021 & 1) == 0 )
+  if ( (byte_4BAFB10 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    byte_4B62021 = 1;
+    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    byte_4BAFB10 = 1;
   }
   confirmBtnBg = (UnityEngine_Component_o *)this->fields.confirmBtnBg;
   if ( !confirmBtnBg )
     goto LABEL_11;
   confirmBtnBg = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               confirmBtnBg,
-                                              (const MethodInfo_2F4FBB4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                              (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   confirmTxt = (UIWidget_o *)this->fields.confirmTxt;
   if ( !confirmTxt )
     goto LABEL_11;
@@ -811,7 +811,7 @@ void __fastcall InputUserBirthDayWindow__setExeBtnState(InputUserBirthDayWindow_
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1BE4D28(confirmBtnBg, method);
+    sub_1C13F80(confirmBtnBg, method);
   }
   if ( !v6 )
     goto LABEL_11;
@@ -842,15 +842,15 @@ void __fastcall InputUserBirthDayWindow_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BE4A70(&this->fields.method);
+  sub_1C13CC8(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BE4B8C(v6) & 1) == 0 )
+  if ( (sub_1C13DE4(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BE4D44(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BE4BF4(v10, 0LL);
+      v10 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C13E4C(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -862,9 +862,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A1FC84;
+  this->fields.m_target = (Il2CppObject *)sub_1A4E418;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1FC2C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A4E3C0;
 }
 
 
@@ -881,15 +881,15 @@ System_IAsyncResult_o *__fastcall InputUserBirthDayWindow_CallbackFunc__BeginInv
   char v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12[0] = result;
-  if ( (byte_4B6202A & 1) == 0 )
+  if ( (byte_4BAFB19 & 1) == 0 )
   {
-    sub_1BE4ACC(&bool_TypeInfo, result);
-    byte_4B6202A = 1;
+    sub_1C13D24(&bool_TypeInfo, result);
+    byte_4BAFB19 = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(bool_TypeInfo, v12, param, callback, object);
   v11[1] = (__int64)param;
-  return (System_IAsyncResult_o *)sub_1BE4A80(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C13CD8(this, v11, callback, object);
 }
 
 
@@ -898,7 +898,7 @@ void __fastcall InputUserBirthDayWindow_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BE4A84(result, 0LL, method);
+  sub_1C13CDC(result, 0LL, method);
 }
 
 

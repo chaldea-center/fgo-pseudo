@@ -1,13 +1,13 @@
 void __fastcall BgmEntity___ctor(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6685A & 1) == 0 )
+  if ( (byte_4BB4372 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B6685A = 1;
+    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BB4372 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_31FD5C4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,23 +19,23 @@ int32_t __fastcall BgmEntity__CreatePrimaryKey(BgmEntity_o *this, const MethodIn
 
 int32_t __fastcall BgmEntity__GetInvalidOverwrite(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66858 & 1) == 0 )
+  if ( (byte_4BB4370 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_8067/*"InvalidOverwrite"*/, method);
-    byte_4B66858 = 1;
+    sub_1C13D24(&StringLiteral_8087/*"InvalidCultureId"*/, method);
+    byte_4BB4370 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8067/*"InvalidOverwrite"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8087/*"InvalidCultureId"*/, 0, 0LL);
 }
 
 
 int32_t __fastcall BgmEntity__GetPriorityBgm(BgmEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66859 & 1) == 0 )
+  if ( (byte_4BB4371 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_22924/*"priorityBgm"*/, method);
-    byte_4B66859 = 1;
+    sub_1C13D24(&StringLiteral_22977/*"prefix"*/, method);
+    byte_4BB4371 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22924/*"priorityBgm"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22977/*"prefix"*/, 0, 0LL);
 }
 
 

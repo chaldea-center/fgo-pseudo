@@ -1,16 +1,16 @@
 void __fastcall ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B66960 & 1) == 0 )
+  if ( (byte_4BB4478 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__,
       method);
-    byte_4B66960 = 1;
+    byte_4BB4478 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     296,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B6695E & 1) == 0 )
+  if ( (byte_4BB4476 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4B6695E = 1;
+    byte_4BB4476 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -41,7 +41,7 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_31FDB1C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_323D0DC *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -57,12 +57,12 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B6695F & 1) == 0 )
+  if ( (byte_4BB4477 & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_4B6695F = 1;
+    byte_4BB4477 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -74,7 +74,7 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -107,13 +107,13 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   int32_t v30; // w2
   int32_t v31; // w3
 
-  if ( (byte_4B66961 & 1) == 0 )
+  if ( (byte_4BB4479 & 1) == 0 )
   {
-    sub_1BE4ACC(&int___TypeInfo, outEnt);
-    byte_4B66961 = 1;
+    sub_1C13D24(&int___TypeInfo, outEnt);
+    byte_4BB4479 = 1;
   }
   *outEnt = 0LL;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)outEnt,
     0LL,
     *(int64_t *)&relationId,
@@ -122,9 +122,9 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
     *(BattleSetupInfo_o **)&defClass,
     (FollowerInfo_o *)method,
     v7);
-  Entity = sub_1BE4B74(int___TypeInfo, 4LL);
+  Entity = sub_1C13DCC(int___TypeInfo, 4LL);
   if ( !Entity )
-    sub_1BE4D28(0LL, v15);
+    sub_1C13F80(0LL, v15);
   v17 = *(_DWORD *)(Entity + 24);
   v18 = (_DWORD *)Entity;
   if ( !v17 )
@@ -169,7 +169,7 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   v29 = v18[6];
   if ( v29 <= 2 || (v18[10] = 0, v29 == 3) )
 LABEL_19:
-    sub_1BE4D30(Entity, v15);
+    sub_1C13F88(Entity, v15);
   v30 = v18[8];
   v31 = v18[9];
   v18[11] = 0;

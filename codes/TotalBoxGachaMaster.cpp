@@ -1,14 +1,14 @@
 void __fastcall TotalBoxGachaMaster___ctor(TotalBoxGachaMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B6773A & 1) == 0 )
+  if ( (byte_4BB5266 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int___ctor__, method);
-    byte_4B6773A = 1;
+    sub_1C13D24(&Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int___ctor__, method);
+    byte_4BB5266 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     299,
-    (const MethodInfo_31FD784 *)Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int___ctor__);
+    (const MethodInfo_3236300 *)Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int___ctor__);
 }
 
 
@@ -33,34 +33,33 @@ TotalBoxGachaEntity_o *__fastcall TotalBoxGachaMaster__GetEntity(
   __int64 v17; // x9
   int32_t *v18; // x10
   __int64 v19; // x0
-  TotalBoxGachaEntity_o *v20; // x0
+  __int64 v20; // x0
   __int64 v21; // x1
   TotalBoxGachaEntity_o *v22; // x21
-  __int64 methodPtr_low; // x9
-  System_Collections_Generic_IEnumerator_T__c *v24; // x8
-  __int64 v25; // x9
-  int32_t *v26; // x10
-  __int64 v27; // x0
+  System_Collections_Generic_IEnumerator_T__c *v23; // x8
+  __int64 v24; // x9
+  int32_t *v25; // x10
+  __int64 v26; // x0
 
-  if ( (byte_4B6773B & 1) == 0 )
+  if ( (byte_4BB5267 & 1) == 0 )
   {
-    sub_1BE4ACC(
-      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_TotalBoxGachaEntity__GetEnumerator__,
       *(_QWORD *)&boxGachaId);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BE4ACC(&TotalBoxGachaEntity_TypeInfo, v8);
-    byte_4B6773B = 1;
+    sub_1C13D24(&Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int__getEntityList__, v5);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v6);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo, v7);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v8);
+    byte_4BB5267 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BE4D28(0LL, *(_QWORD *)&boxGachaId);
+    sub_1C13F80(0LL, *(_QWORD *)&boxGachaId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_TotalBoxGachaEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BE4D28(0LL, v10);
+    sub_1C13F80(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -80,7 +79,7 @@ TotalBoxGachaEntity_o *__fastcall TotalBoxGachaMaster__GetEntity(
     else
     {
 LABEL_9:
-      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -91,7 +90,7 @@ LABEL_9:
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       v18 = &v16->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v18 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      while ( *((System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__c **)v18 - 1) != System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo )
       {
         --v17;
         v18 += 4;
@@ -103,47 +102,39 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v19 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo, 0LL);
     }
-    v20 = (TotalBoxGachaEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
-                                     Enumerator,
-                                     *(_QWORD *)(v19 + 8));
-    v22 = v20;
+    v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
+            Enumerator,
+            *(_QWORD *)(v19 + 8));
+    v22 = (TotalBoxGachaEntity_o *)v20;
     if ( !v20 )
-      goto LABEL_32;
-    methodPtr_low = LOBYTE(TotalBoxGachaEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v20->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (TotalBoxGachaEntity_c *)v20->klass->_2.typeHierarchy[methodPtr_low - 1] != TotalBoxGachaEntity_TypeInfo )
-    {
-      sub_1BE4FE8(v20);
-LABEL_32:
-      sub_1BE4D28(v20, v21);
-    }
-    if ( v20->fields.boxGachaId == boxGachaId )
-      goto LABEL_24;
+      sub_1C13F80(0LL, v21);
+    if ( *(_DWORD *)(v20 + 20) == boxGachaId )
+      goto LABEL_22;
   }
   v22 = 0LL;
-LABEL_24:
-  v24 = Enumerator->klass;
-  v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+LABEL_22:
+  v23 = Enumerator->klass;
+  v24 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v26 = &v24->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    v25 = &v23->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
     {
-      --v25;
-      v26 += 4;
-      if ( !v25 )
-        goto LABEL_28;
+      --v24;
+      v25 += 4;
+      if ( !v24 )
+        goto LABEL_26;
     }
-    v27 = (__int64)&v24->vtable[*v26].method;
+    v26 = (__int64)&v23->vtable[*v25].method;
   }
   else
   {
-LABEL_28:
-    v27 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+LABEL_26:
+    v26 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
   return v22;
 }
 
@@ -160,7 +151,7 @@ int64_t __fastcall TotalBoxGachaMaster__GetEventTotalCount(
   __int64 v8; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x0
-  TotalBoxGachaEntity_c *v11; // x1
+  __int64 v11; // x1
   System_Collections_Generic_IEnumerator_T__o *v12; // x19
   int64_t v13; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
@@ -171,34 +162,34 @@ int64_t __fastcall TotalBoxGachaMaster__GetEventTotalCount(
   __int64 v19; // x9
   int *v20; // x10
   __int64 v21; // x0
-  __int64 v22; // x1
-  __int64 methodPtr_low; // x9
-  System_Collections_Generic_IEnumerator_T__c *v24; // x8
-  __int64 v25; // x9
-  int *v26; // x10
-  __int64 v27; // x0
+  System_Collections_Generic_IEnumerator_T__c *v22; // x8
+  __int64 v23; // x9
+  int *v24; // x10
+  __int64 v25; // x0
 
-  if ( (byte_4B6773C & 1) == 0 )
+  if ( (byte_4BB5268 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&eventId);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v5);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1BE4ACC(&TotalBoxGachaEntity_TypeInfo, v8);
-    byte_4B6773C = 1;
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_TotalBoxGachaEntity__GetEnumerator__,
+      *(_QWORD *)&eventId);
+    sub_1C13D24(&Method_DataMasterBase_TotalBoxGachaMaster__TotalBoxGachaEntity__int__getEntityList__, v5);
+    sub_1C13D24(&System_IDisposable_TypeInfo, v6);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo, v7);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v8);
+    byte_4BB5268 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BE4D28(0LL, *(_QWORD *)&eventId);
+    sub_1C13F80(0LL, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_TotalBoxGachaEntity__GetEnumerator__);
   v12 = Enumerator;
   v13 = 0LL;
   while ( 1 )
   {
     if ( !v12 )
-      goto LABEL_32;
+      sub_1C13F80(Enumerator, v11);
     klass = v12->klass;
     v15 = *(unsigned __int16 *)(&v12->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&v12->klass->_2.bitflags2 + 3) )
@@ -216,7 +207,7 @@ int64_t __fastcall TotalBoxGachaMaster__GetEventTotalCount(
     else
     {
 LABEL_10:
-      p_method = sub_1C36AAC(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C65D04(v12, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             v12,
@@ -227,7 +218,7 @@ LABEL_10:
     if ( *(_WORD *)(&v12->klass->_2.bitflags2 + 3) )
     {
       v20 = &v18->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v20 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      while ( *((System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__c **)v20 - 1) != System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo )
       {
         --v19;
         v20 += 4;
@@ -239,45 +230,36 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v21 = sub_1C36AAC(v12, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v21 = sub_1C65D04(v12, System_Collections_Generic_IEnumerator_TotalBoxGachaEntity__TypeInfo, 0LL);
     }
     Enumerator = (System_Collections_Generic_IEnumerator_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v21)(
                                                                   v12,
                                                                   *(_QWORD *)(v21 + 8));
     if ( !Enumerator )
-      sub_1BE4D28(0LL, v22);
-    v11 = TotalBoxGachaEntity_TypeInfo;
-    methodPtr_low = LOBYTE(TotalBoxGachaEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(Enumerator->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
-      || (TotalBoxGachaEntity_c *)Enumerator->klass->_2.typeHierarchy[methodPtr_low - 1] != TotalBoxGachaEntity_TypeInfo )
-    {
-      sub_1BE4FE8(Enumerator);
-LABEL_32:
-      sub_1BE4D28(Enumerator, v11);
-    }
+      sub_1C13F80(0LL, v11);
     if ( LODWORD(Enumerator[1].klass) == eventId )
       v13 += (int64_t)Enumerator[1].monitor;
   }
-  v24 = v12->klass;
-  v25 = *(unsigned __int16 *)(&v12->klass->_2.bitflags2 + 3);
+  v22 = v12->klass;
+  v23 = *(unsigned __int16 *)(&v12->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&v12->klass->_2.bitflags2 + 3) )
   {
-    v26 = &v24->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
+    v24 = &v22->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v24 - 1) != System_IDisposable_TypeInfo )
     {
-      --v25;
-      v26 += 4;
-      if ( !v25 )
-        goto LABEL_28;
+      --v23;
+      v24 += 4;
+      if ( !v23 )
+        goto LABEL_26;
     }
-    v27 = (__int64)&v24->vtable[*v26].method;
+    v25 = (__int64)&v22->vtable[*v24].method;
   }
   else
   {
-LABEL_28:
-    v27 = sub_1C36AAC(v12, System_IDisposable_TypeInfo, 0LL);
+LABEL_26:
+    v25 = sub_1C65D04(v12, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(v12, *(_QWORD *)(v27 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(v12, *(_QWORD *)(v25 + 8));
   return v13;
 }
 

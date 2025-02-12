@@ -2,10 +2,10 @@ void __fastcall ServantLimitSpoilerProtectionMaster___cctor(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4B67469 & 1) == 0 )
+  if ( (byte_4BB4F94 & 1) == 0 )
   {
-    sub_1BE4ACC(&ServantLimitSpoilerProtectionMaster_TypeInfo, v1);
-    byte_4B67469 = 1;
+    sub_1C13D24(&ServantLimitSpoilerProtectionMaster_TypeInfo, v1);
+    byte_4BB4F94 = 1;
   }
   ServantLimitSpoilerProtectionMaster_TypeInfo->static_fields->LIMIT_COUNT_THIRD_STAGE = 3;
 }
@@ -15,17 +15,17 @@ void __fastcall ServantLimitSpoilerProtectionMaster___ctor(
         ServantLimitSpoilerProtectionMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B67464 & 1) == 0 )
+  if ( (byte_4BB4F8F & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string___ctor__,
       method);
-    byte_4B67464 = 1;
+    byte_4BB4F8F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     316,
-    (const MethodInfo_31FDADC *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string___ctor__);
+    (const MethodInfo_323ADB8 *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string___ctor__);
 }
 
 
@@ -39,10 +39,10 @@ int32_t __fastcall ServantLimitSpoilerProtectionMaster__AdjustLimitCount(
   ServantLimitSpoilerProtectionMaster_c *v4; // x0
 
   LIMIT_COUNT_THIRD_STAGE = limitCount;
-  if ( (byte_4B67466 & 1) == 0 )
+  if ( (byte_4BB4F91 & 1) == 0 )
   {
-    sub_1BE4ACC(&ServantLimitSpoilerProtectionMaster_TypeInfo, *(_QWORD *)&limitCount);
-    byte_4B67466 = 1;
+    sub_1C13D24(&ServantLimitSpoilerProtectionMaster_TypeInfo, *(_QWORD *)&limitCount);
+    byte_4BB4F91 = 1;
   }
   v4 = ServantLimitSpoilerProtectionMaster_TypeInfo;
   if ( !ServantLimitSpoilerProtectionMaster_TypeInfo->_2.cctor_finished )
@@ -81,11 +81,11 @@ int32_t __fastcall ServantLimitSpoilerProtectionMaster__ChangeLimitCountBySpoile
 
   v5 = *(_QWORD *)&svtId.fields.fakeValue;
   v6 = *(_QWORD *)&svtId.fields.currentCryptoKey;
-  if ( (byte_4B67465 & 1) == 0 )
+  if ( (byte_4BB4F90 & 1) == 0 )
   {
-    sub_1BE4ACC(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId.fields.currentCryptoKey);
-    sub_1BE4ACC(&OptionManager_TypeInfo, v8);
-    byte_4B67465 = 1;
+    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId.fields.currentCryptoKey);
+    sub_1C13D24(&OptionManager_TypeInfo, v8);
+    byte_4BB4F90 = 1;
   }
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
@@ -147,12 +147,12 @@ ServantLimitSpoilerProtectionEntity_o *__fastcall ServantLimitSpoilerProtectionM
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B67462 & 1) == 0 )
+  if ( (byte_4BB4F8D & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4B67462 = 1;
+    byte_4BB4F8D = 1;
   }
   PK = (Il2CppObject *)ServantLimitSpoilerProtectionEntity__CreatePK(
                          svtId,
@@ -161,7 +161,7 @@ ServantLimitSpoilerProtectionEntity_o *__fastcall ServantLimitSpoilerProtectionM
   return (ServantLimitSpoilerProtectionEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                     PK,
-                                                    (const MethodInfo_31FDB1C *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__GetEntity__);
+                                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__GetEntity__);
 }
 
 
@@ -181,79 +181,75 @@ System_Int32_array *__fastcall ServantLimitSpoilerProtectionMaster__GetSpoilerPr
   __int64 v13; // x1
   __int64 v14; // x1
   __int64 v15; // x1
-  __int64 v16; // x1
-  System_Collections_Generic_List_int__o *v17; // x20
-  __int64 v18; // x1
+  System_Collections_Generic_List_int__o *v16; // x20
+  __int64 v17; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v20; // x1
+  __int64 v19; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v23; // x9
+  __int64 v22; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v26; // x8
-  __int64 v27; // x9
-  int32_t *v28; // x10
-  __int64 v29; // x0
-  _DWORD *v30; // x0
-  __int64 v31; // x1
-  _DWORD *v32; // x24
-  __int64 methodPtr_low; // x9
-  int v34; // w25
-  __int64 v35; // x0
-  __int64 v36; // x1
-  __int64 v37; // x1
+  System_Collections_Generic_IEnumerator_T__c *v25; // x8
+  __int64 v26; // x9
+  int32_t *v27; // x10
+  __int64 v28; // x0
+  __int64 v29; // x1
+  _DWORD *v30; // x24
+  int v31; // w25
+  __int64 v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v39; // x9
+  _QWORD *v36; // x9
   __int64 size; // x10
-  System_Collections_Generic_IEnumerator_T__c *v41; // x8
-  __int64 v42; // x9
-  int32_t *v43; // x10
-  __int64 v44; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v46; // 0:x0.16
+  System_Collections_Generic_IEnumerator_T__c *v38; // x8
+  __int64 v39; // x9
+  int32_t *v40; // x10
+  __int64 v41; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
 
   v5 = *(_QWORD *)&svtId.fields.fakeValue;
   v6 = *(_QWORD *)&svtId.fields.currentCryptoKey;
-  if ( (byte_4B67467 & 1) == 0 )
+  if ( (byte_4BB4F92 & 1) == 0 )
   {
-    sub_1BE4ACC(
-      &Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__,
+    sub_1C13D24(
+      &Method_System_Collections_ObjectModel_Collection_ServantLimitSpoilerProtectionEntity__GetEnumerator__,
       *(_QWORD *)&svtId.fields.currentCryptoKey);
-    sub_1BE4ACC(&System_IDisposable_TypeInfo, v8);
-    sub_1BE4ACC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_1BE4ACC(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v13);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v14);
-    sub_1BE4ACC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
-    sub_1BE4ACC(&ServantLimitSpoilerProtectionEntity_TypeInfo, v16);
-    byte_4B67467 = 1;
+    sub_1C13D24(&System_IDisposable_TypeInfo, v8);
+    sub_1C13D24(&System_Collections_Generic_IEnumerator_ServantLimitSpoilerProtectionEntity__TypeInfo, v9);
+    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v13);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v14);
+    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
+    byte_4BB4F92 = 1;
   }
-  v17 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v16 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v17,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    v16,
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    goto LABEL_42;
+    goto LABEL_39;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_319A36C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ServantLimitSpoilerProtectionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BE4D28(0LL, v20);
+    sub_1C13F80(0LL, v19);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v23 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v23;
+        --v22;
         p_offset += 4;
-        if ( !v23 )
+        if ( !v22 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -261,104 +257,98 @@ System_Int32_array *__fastcall ServantLimitSpoilerProtectionMaster__GetSpoilerPr
     else
     {
 LABEL_9:
-      p_method = sub_1C36AAC(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v26 = Enumerator->klass;
-    v27 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v25 = Enumerator->klass;
+    v26 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v28 = &v26->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v28 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v27 = &v25->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_ServantLimitSpoilerProtectionEntity__c **)v27 - 1) != System_Collections_Generic_IEnumerator_ServantLimitSpoilerProtectionEntity__TypeInfo )
       {
-        --v27;
-        v28 += 4;
-        if ( !v27 )
+        --v26;
+        v27 += 4;
+        if ( !v26 )
           goto LABEL_16;
       }
-      v29 = (__int64)&v26->vtable[*v28].method;
+      v28 = (__int64)&v25->vtable[*v27].method;
     }
     else
     {
 LABEL_16:
-      v29 = sub_1C36AAC(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v28 = sub_1C65D04(
+              Enumerator,
+              System_Collections_Generic_IEnumerator_ServantLimitSpoilerProtectionEntity__TypeInfo,
+              0LL);
     }
-    v30 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(
+    v30 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(
                       Enumerator,
-                      *(_QWORD *)(v29 + 8));
-    v32 = v30;
+                      *(_QWORD *)(v28 + 8));
     if ( !v30 )
-      goto LABEL_39;
-    methodPtr_low = LOBYTE(ServantLimitSpoilerProtectionEntity_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v30 + 304LL) < (unsigned int)methodPtr_low
-      || *(ServantLimitSpoilerProtectionEntity_c **)(*(_QWORD *)(*(_QWORD *)v30 + 200LL) + 8 * methodPtr_low - 8) != ServantLimitSpoilerProtectionEntity_TypeInfo )
-    {
-      sub_1BE4FE8(v30);
-LABEL_39:
-      sub_1BE4D28(v30, v31);
-    }
-    v34 = v30[4];
+      sub_1C13F80(0LL, v29);
+    v31 = v30[4];
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v46.fields.currentCryptoKey = v6;
-    *(_QWORD *)&v46.fields.fakeValue = v5;
-    v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47299060(v46, 0LL);
-    if ( v34 == (_DWORD)v35 && v32[5] == limitCount )
+    *(_QWORD *)&v43.fields.currentCryptoKey = v6;
+    *(_QWORD *)&v43.fields.fakeValue = v5;
+    v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v43, 0LL);
+    if ( v31 == (_DWORD)v32 && v30[5] == limitCount )
     {
-      if ( !v17 )
-        sub_1BE4D28(v35, v36);
-      v37 = (unsigned int)v32[6];
-      items = v17->fields._items;
-      v39 = Method_System_Collections_Generic_List_int__Add__;
-      ++v17->fields._version;
+      if ( !v16 )
+        sub_1C13F80(v32, v33);
+      v34 = (unsigned int)v30[6];
+      items = v16->fields._items;
+      v36 = Method_System_Collections_Generic_List_int__Add__;
+      ++v16->fields._version;
       if ( !items )
-        sub_1BE4D28(v35, v37);
-      size = v17->fields._size;
+        sub_1C13F80(v32, v34);
+      size = v16->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v17,
-          v37,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+          v16,
+          v34,
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
       }
       else
       {
-        v17->fields._size = size + 1;
-        items->m_Items[size + 1] = v37;
+        v16->fields._size = size + 1;
+        items->m_Items[size + 1] = v34;
       }
     }
   }
-  v41 = Enumerator->klass;
-  v42 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v38 = Enumerator->klass;
+  v39 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v43 = &v41->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
+    v40 = &v38->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v40 - 1) != System_IDisposable_TypeInfo )
     {
-      --v42;
-      v43 += 4;
-      if ( !v42 )
-        goto LABEL_34;
+      --v39;
+      v40 += 4;
+      if ( !v39 )
+        goto LABEL_32;
     }
-    v44 = (__int64)&v41->vtable[*v43].method;
+    v41 = (__int64)&v38->vtable[*v40].method;
   }
   else
   {
-LABEL_34:
-    v44 = sub_1C36AAC(Enumerator, System_IDisposable_TypeInfo, 0LL);
+LABEL_32:
+    v41 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v44)(
+  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v41)(
                                                              Enumerator,
-                                                             *(_QWORD *)(v44 + 8));
-  if ( !v17 )
-LABEL_42:
-    sub_1BE4D28(list, v18);
+                                                             *(_QWORD *)(v41 + 8));
+  if ( !v16 )
+LABEL_39:
+    sub_1C13F80(list, v17);
   return System_Collections_Generic_List_int___ToArray(
-           v17,
-           (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v16,
+           (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -381,11 +371,11 @@ bool __fastcall ServantLimitSpoilerProtectionMaster__IsSpoilerLimitCount(
 
   v5 = *(_QWORD *)&svtId.fields.fakeValue;
   v6 = *(_QWORD *)&svtId.fields.currentCryptoKey;
-  if ( (byte_4B67468 & 1) == 0 )
+  if ( (byte_4BB4F93 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&svtId.fields.currentCryptoKey);
-    sub_1BE4ACC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4B67468 = 1;
+    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&svtId.fields.currentCryptoKey);
+    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4BB4F93 = 1;
   }
   *(_QWORD *)&v16.fields.currentCryptoKey = v6;
   *(_QWORD *)&v16.fields.fakeValue = v5;
@@ -402,14 +392,14 @@ bool __fastcall ServantLimitSpoilerProtectionMaster__IsSpoilerLimitCount(
       while ( 1 )
       {
         if ( v13 >= (unsigned int)v12 )
-          sub_1BE4D30(SpoilerProtectionData, v10);
+          sub_1C13F88(SpoilerProtectionData, v10);
         v14 = v11->m_Items[v13 + 1];
-        SpoilerProtectionData = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3828DC8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        SpoilerProtectionData = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !SpoilerProtectionData )
           break;
         SpoilerProtectionData = (System_Int32_array *)DataManager__GetMasterData_object_(
                                                         (DataManager_o *)SpoilerProtectionData,
-                                                        (const MethodInfo_2F59110 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
         if ( !SpoilerProtectionData )
           break;
         SpoilerProtectionData = (System_Int32_array *)CommonReleaseMaster__IsOpen(
@@ -427,7 +417,7 @@ bool __fastcall ServantLimitSpoilerProtectionMaster__IsSpoilerLimitCount(
         return (unsigned __int8)SpoilerProtectionData & 1;
       }
 LABEL_16:
-      sub_1BE4D28(SpoilerProtectionData, v10);
+      sub_1C13F80(SpoilerProtectionData, v10);
     }
     LOBYTE(SpoilerProtectionData) = 0;
   }
@@ -449,17 +439,17 @@ bool __fastcall ServantLimitSpoilerProtectionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B67463 & 1) == 0 )
+  if ( (byte_4BB4F8E & 1) == 0 )
   {
-    sub_1BE4ACC(
+    sub_1C13D24(
       &Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__TryGetEntity__,
       entity);
-    byte_4B67463 = 1;
+    byte_4BB4F8E = 1;
   }
   PK = (Il2CppObject *)ServantLimitSpoilerProtectionEntity__CreatePK(svtId, limitCount, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31FDB6C *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__TryGetEntity__);
+           (const MethodInfo_323D128 *)Method_DataMasterBase_ServantLimitSpoilerProtectionMaster__ServantLimitSpoilerProtectionEntity__string__TryGetEntity__);
 }

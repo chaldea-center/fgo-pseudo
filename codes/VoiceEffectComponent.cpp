@@ -1,9 +1,9 @@
 void __fastcall VoiceEffectComponent___ctor(VoiceEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B68018 & 1) == 0 )
+  if ( (byte_4BB5B49 & 1) == 0 )
   {
-    sub_1BE4ACC(&CommonEffectComponent_TypeInfo, method);
-    byte_4B68018 = 1;
+    sub_1C13D24(&CommonEffectComponent_TypeInfo, method);
+    byte_4BB5B49 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -33,20 +33,20 @@ void __fastcall VoiceEffectComponent__LoadVoiceAsset(
   System_String_o *v19; // x20
   int32_t voiceId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B68017 & 1) == 0 )
+  if ( (byte_4BB5B48 & 1) == 0 )
   {
-    sub_1BE4ACC(&int_TypeInfo, callback);
-    sub_1BE4ACC(&SoundManager_TypeInfo, v7);
-    sub_1BE4ACC(&StringLiteral_25443/*"{0}_{1}"*/, v8);
-    byte_4B68017 = 1;
+    sub_1C13D24(&int_TypeInfo, callback);
+    sub_1C13D24(&SoundManager_TypeInfo, v7);
+    sub_1C13D24(&StringLiteral_25499/*"{0}:{1}\n"*/, v8);
+    byte_4BB5B48 = 1;
   }
   voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
   voiceId = this->fields.voiceId;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voiceId, method, v3, v4);
-  v11 = System_String__Format_62713180((System_String_o *)StringLiteral_25443/*"{0}_{1}"*/, voiceDataStr, v10, 0LL);
+  v11 = System_String__Format_62982316((System_String_o *)StringLiteral_25499/*"{0}:{1}\n"*/, voiceDataStr, v10, 0LL);
   this->fields.voicePath = v11;
   p_voicePath = &this->fields.voicePath;
-  sub_1BE4A70((PartyOrganizationUtility_o *)p_voicePath, (int64_t)v11, v13, v14, v15, v16, v17, v18);
+  sub_1C13CC8((PartyOrganizationUtility_o *)p_voicePath, (int64_t)v11, v13, v14, v15, v16, v17, v18);
   v19 = *p_voicePath;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);

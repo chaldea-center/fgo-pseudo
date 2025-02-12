@@ -1,28 +1,28 @@
 void __fastcall WarBoardStageWallEntity___ctor(WarBoardStageWallEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B67C6E & 1) == 0 )
+  if ( (byte_4BB5797 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B67C6E = 1;
+    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BB5797 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_31FD63C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardStageWallEntity__CreatePK(int32_t stageId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4B67C6C & 1) == 0 )
+  if ( (byte_4BB5795 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
-    byte_4B67C6C = 1;
+    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
+    byte_4BB5795 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            id,
-           (const MethodInfo_2F57334 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F8D690 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -47,10 +47,10 @@ System_Int32_array *__fastcall WarBoardStageWallEntity__GetCondAttackIndividuali
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_4B67C6D & 1) == 0 )
+  if ( (byte_4BB5796 & 1) == 0 )
   {
-    sub_1BE4ACC(&Method_System_Array_Empty_int___, method);
-    byte_4B67C6D = 1;
+    sub_1C13D24(&Method_System_Array_Empty_int___, method);
+    byte_4BB5796 = 1;
   }
   result = this->fields.condAttackIndividuality;
   if ( !result )
@@ -59,17 +59,17 @@ System_Int32_array *__fastcall WarBoardStageWallEntity__GetCondAttackIndividuali
     v6 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v6 )
     {
-      sub_1C36A04(Method_System_Array_Empty_int___);
+      sub_1C65C5C(Method_System_Array_Empty_int___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1C369A8(inited);
+      v7 = sub_1C65C00(inited);
     if ( !*(_DWORD *)(v7 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v7);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1C369A8(inited);
+      v8 = sub_1C65C00(inited);
     return **(System_Int32_array ***)(v8 + 184);
   }
   return result;

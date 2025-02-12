@@ -36,10 +36,10 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
   __int64 v12; // x1
   ListViewSort_o *v13; // x20
 
-  if ( (byte_4B65EF7 & 1) == 0 )
+  if ( (byte_4BB3A1A & 1) == 0 )
   {
-    sub_1BE4ACC(&FilterKindList_TypeInfo, method);
-    byte_4B65EF7 = 1;
+    sub_1C13D24(&FilterKindList_TypeInfo, method);
+    byte_4BB3A1A = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -57,7 +57,7 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
     if ( ListViewItem && sort )
       return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
 LABEL_16:
-    sub_1BE4D28(ListViewItem, v12);
+    sub_1C13F80(ListViewItem, v12);
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -97,10 +97,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   ServantCollectionCharaGraphFilterLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4B65EF6 & 1) == 0 )
+  if ( (byte_4BB3A19 & 1) == 0 )
   {
-    sub_1BE4ACC(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_4B65EF6 = 1;
+    sub_1C13D24(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
+    byte_4BB3A19 = 1;
   }
   p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -114,9 +114,9 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   {
     item = this->fields.item;
     p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
-    sub_1BE4A70(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
+    sub_1C13CC8(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1BE4FE8(this->fields.item);
+  sub_1C14240(this->fields.item);
   return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
 }

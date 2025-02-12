@@ -1,9 +1,9 @@
 void __fastcall CommonMessageManager___ctor(CommonMessageManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B68670 & 1) == 0 )
+  if ( (byte_4BB61A9 & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptMessageManager_TypeInfo, method);
-    byte_4B68670 = 1;
+    sub_1C13D24(&ScriptMessageManager_TypeInfo, method);
+    byte_4BB61A9 = 1;
   }
   this->fields.playSpeed = 2;
   if ( !ScriptMessageManager_TypeInfo->_2.cctor_finished )
@@ -92,31 +92,31 @@ System_String_array *__fastcall CommonMessageManager__AnalysParam(
   __int16 v76[2]; // [xsp+Ch] [xbp-64h] BYREF
 
   v3 = data;
-  if ( (byte_4B6866E & 1) == 0 )
+  if ( (byte_4BB61A7 & 1) == 0 )
   {
-    sub_1BE4ACC(&char_TypeInfo, data);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v4);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Item__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__set_Item__, v9);
-    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v10);
-    sub_1BE4ACC(&StringLiteral_1858/*"="*/, v11);
-    sub_1BE4ACC(&StringLiteral_116/*" "*/, v12);
-    sub_1BE4ACC(&StringLiteral_863/*","*/, v13);
-    sub_1BE4ACC(&StringLiteral_367/*"\""*/, v14);
-    this = (CommonMessageManager_o *)sub_1BE4ACC(&StringLiteral_1/*""*/, v15);
-    byte_4B6866E = 1;
+    sub_1C13D24(&char_TypeInfo, data);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, v4);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__set_Item__, v9);
+    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v10);
+    sub_1C13D24(&StringLiteral_1861/*"<{0}>"*/, v11);
+    sub_1C13D24(&StringLiteral_117/*" "*/, v12);
+    sub_1C13D24(&StringLiteral_866/*","*/, v13);
+    sub_1C13D24(&StringLiteral_369/*"\""*/, v14);
+    this = (CommonMessageManager_o *)sub_1C13D24(&StringLiteral_1/*""*/, v15);
+    byte_4BB61A7 = 1;
   }
   v76[0] = 0;
   if ( !v3 )
     goto LABEL_72;
   stringLength = v3->fields._stringLength;
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
   v18 = (System_String_o *)StringLiteral_1/*""*/;
   if ( stringLength >= 1 )
   {
@@ -140,8 +140,8 @@ System_String_array *__fastcall CommonMessageManager__AnalysParam(
           || (Item = System_Collections_Generic_List_object___get_Item(
                        v17,
                        size - 1,
-                       (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__),
-              !System_String__op_Equality((System_String_o *)Item, (System_String_o *)StringLiteral_116/*" "*/, 0LL)) )
+                       (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__),
+              !System_String__op_Equality((System_String_o *)Item, (System_String_o *)StringLiteral_117/*" "*/, 0LL)) )
         {
 LABEL_51:
           if ( !char_TypeInfo->_2.cctor_finished )
@@ -162,14 +162,14 @@ LABEL_51:
             System_Collections_Generic_List_object___AddWithResize(
               v17,
               (Il2CppObject *)data,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
           }
           else
           {
             v63 = &items->obj.klass + v62;
             v17->fields._size = v62 + 1;
             v63[4] = (Il2CppClass *)data;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v63 + 4), (int64_t)data, v54, v55, v56, v57, v58, v59);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v63 + 4), (int64_t)data, v54, v55, v56, v57, v58, v59);
           }
           goto LABEL_63;
         }
@@ -185,7 +185,7 @@ LABEL_51:
           v17,
           v33 - 1,
           v35,
-          (const MethodInfo_35EBFA8 *)Method_System_Collections_Generic_List_string__set_Item__);
+          (const MethodInfo_362CF50 *)Method_System_Collections_Generic_List_string__set_Item__);
       }
       else
       {
@@ -196,7 +196,7 @@ LABEL_51:
             if ( !char_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(char_TypeInfo);
             v22 = System_Char__ToString((uint16_t)v76, 0LL);
-            v18 = System_String__Concat_62698808(v18, v22, 0LL);
+            v18 = System_String__Concat_62967944(v18, v22, 0LL);
             if ( v19 < stringLength )
             {
               while ( 1 )
@@ -208,7 +208,7 @@ LABEL_51:
                 if ( !char_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(char_TypeInfo);
                 v24 = System_Char__ToString((uint16_t)v76, 0LL);
-                v18 = System_String__Concat_62698808(v18, v24, 0LL);
+                v18 = System_String__Concat_62967944(v18, v24, 0LL);
                 ++v19;
                 if ( stringLength == v23 )
                 {
@@ -219,7 +219,7 @@ LABEL_51:
               ++v19;
             }
 LABEL_61:
-            v40 = (System_String_o *)StringLiteral_367/*"\""*/;
+            v40 = (System_String_o *)StringLiteral_369/*"\""*/;
           }
           else
           {
@@ -228,7 +228,7 @@ LABEL_34:
               j_il2cpp_runtime_class_init_0(char_TypeInfo);
             v40 = System_Char__ToString((uint16_t)v76, 0LL);
           }
-          v18 = System_String__Concat_62698808(v18, v40, 0LL);
+          v18 = System_String__Concat_62967944(v18, v40, 0LL);
           goto LABEL_63;
         }
         this = (CommonMessageManager_o *)System_String__op_Inequality(v18, (System_String_o *)StringLiteral_1/*""*/, 0LL);
@@ -248,14 +248,14 @@ LABEL_31:
             System_Collections_Generic_List_object___AddWithResize(
               v17,
               (Il2CppObject *)v18,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
           }
           else
           {
             v39 = &v36->obj.klass + v38;
             v17->fields._size = v38 + 1;
             v39[4] = (Il2CppClass *)v18;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v39 + 4), (int64_t)v18, v25, v26, v27, v28, v29, v30);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v39 + 4), (int64_t)v18, v25, v26, v27, v28, v29, v30);
           }
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
@@ -272,14 +272,14 @@ LABEL_31:
             System_Collections_Generic_List_object___AddWithResize(
               v17,
               (Il2CppObject *)data,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
           }
           else
           {
             v50 = &v47->obj.klass + v49;
             v17->fields._size = v49 + 1;
             v50[4] = (Il2CppClass *)data;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v50 + 4), (int64_t)data, v41, v42, v43, v44, v45, v46);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v50 + 4), (int64_t)data, v41, v42, v43, v44, v45, v46);
           }
           v18 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_63;
@@ -290,14 +290,14 @@ LABEL_31:
         v52 = System_Collections_Generic_List_object___get_Item(
                 v17,
                 v51 - 1,
-                (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
-        if ( !System_String__op_Equality((System_String_o *)v52, (System_String_o *)StringLiteral_1858/*"="*/, 0LL) )
+                (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
+        if ( !System_String__op_Equality((System_String_o *)v52, (System_String_o *)StringLiteral_1861/*"<{0}>"*/, 0LL) )
         {
           v53 = System_Collections_Generic_List_object___get_Item(
                   v17,
                   v17->fields._size - 1,
-                  (const MethodInfo_35EBF54 *)Method_System_Collections_Generic_List_string__get_Item__);
-          if ( !System_String__op_Equality((System_String_o *)v53, (System_String_o *)StringLiteral_863/*","*/, 0LL) )
+                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
+          if ( !System_String__op_Equality((System_String_o *)v53, (System_String_o *)StringLiteral_866/*","*/, 0LL) )
             goto LABEL_51;
         }
       }
@@ -317,9 +317,9 @@ LABEL_66:
     if ( v17 )
       return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                       v17,
-                                      (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                      (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_72:
-    sub_1BE4D28(this, data);
+    sub_1C13F80(this, data);
   }
   if ( !v17 )
     goto LABEL_72;
@@ -334,18 +334,18 @@ LABEL_72:
     System_Collections_Generic_List_object___AddWithResize(
       v17,
       (Il2CppObject *)v18,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
   }
   else
   {
     v74 = &v71->obj.klass + v73;
     v17->fields._size = v73 + 1;
     v74[4] = (Il2CppClass *)v18;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v74 + 4), (int64_t)v18, v65, v66, v67, v68, v69, v70);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v74 + 4), (int64_t)v18, v65, v66, v67, v68, v69, v70);
   }
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v17,
-                                  (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -548,57 +548,57 @@ void __fastcall CommonMessageManager__AnalysScript(
   System_Collections_Generic_List_string__o *tagDataList; // [xsp+38h] [xbp-68h] BYREF
   System_RuntimeFieldHandle_o v197; // 0:w1.4
 
-  if ( (byte_4B6866C & 1) == 0 )
+  if ( (byte_4BB61A5 & 1) == 0 )
   {
-    sub_1BE4ACC(&char___TypeInfo, scriptData);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v5);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v6);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__ToArray__, v7);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string___ctor__, v10);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v11);
-    sub_1BE4ACC(&System_Collections_Generic_List_int__TypeInfo, v12);
-    sub_1BE4ACC(&System_Collections_Generic_List_string__TypeInfo, v13);
-    sub_1BE4ACC(
+    sub_1C13D24(&char___TypeInfo, scriptData);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v5);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, v6);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__ToArray__, v7);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, v10);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v11);
+    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v12);
+    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v13);
+    sub_1C13D24(
       &Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54,
       v14);
-    sub_1BE4ACC(&StringLiteral_396/*"#"*/, v15);
-    sub_1BE4ACC(&StringLiteral_1123/*"//"*/, v16);
-    sub_1BE4ACC(&StringLiteral_20324/*"i"*/, v17);
-    sub_1BE4ACC(&StringLiteral_21261/*"k"*/, v18);
-    sub_1BE4ACC(&StringLiteral_22994/*"q"*/, v19);
-    sub_1BE4ACC(&StringLiteral_508/*"%"*/, v20);
-    sub_1BE4ACC(&StringLiteral_530/*"&"*/, v21);
-    sub_1BE4ACC(&StringLiteral_21406/*"line"*/, v22);
-    sub_1BE4ACC(&StringLiteral_24180/*"talkStart"*/, v23);
-    sub_1BE4ACC(&StringLiteral_20515/*"image"*/, v24);
-    sub_1BE4ACC(&StringLiteral_16215/*"[r]"*/, v25);
-    sub_1BE4ACC(&StringLiteral_24176/*"talkName"*/, v26);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v27);
-    byte_4B6866C = 1;
+    sub_1C13D24(&StringLiteral_398/*"#"*/, v15);
+    sub_1C13D24(&StringLiteral_1126/*"//"*/, v16);
+    sub_1C13D24(&StringLiteral_20368/*"https://github.com/mono/mono/issues/12880"*/, v17);
+    sub_1C13D24(&StringLiteral_21309/*"joint_all_Base"*/, v18);
+    sub_1C13D24(&StringLiteral_23047/*"purchaseTime"*/, v19);
+    sub_1C13D24(&StringLiteral_510/*"%"*/, v20);
+    sub_1C13D24(&StringLiteral_532/*"&"*/, v21);
+    sub_1C13D24(&StringLiteral_21455/*"lightskyblue"*/, v22);
+    sub_1C13D24(&StringLiteral_24235/*"tVoice"*/, v23);
+    sub_1C13D24(&StringLiteral_20560/*"ifClear"*/, v24);
+    sub_1C13D24(&StringLiteral_16258/*"[i]"*/, v25);
+    sub_1C13D24(&StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/, v26);
+    sub_1C13D24(&StringLiteral_1/*""*/, v27);
+    byte_4BB61A5 = 1;
   }
-  v28 = (System_Array_o *)sub_1BE4B74(char___TypeInfo, 5LL);
+  v28 = (System_Array_o *)sub_1C13DCC(char___TypeInfo, 5LL);
   v197.fields.value = Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54;
   v29 = (System_Char_array *)v28;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62606144(v28, v197, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62875280(v28, v197, 0LL);
   if ( !scriptData )
     goto LABEL_144;
-  v32 = System_String__Split_62721200(scriptData, v29, 1, 0LL);
-  v33 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
+  v32 = System_String__Split_62990336(scriptData, v29, 1, 0LL);
+  v33 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v33,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
   tagDataList = (System_Collections_Generic_List_string__o *)v33;
-  v34 = (System_Collections_Generic_List_object__o *)sub_1BE4D18(System_Collections_Generic_List_string__TypeInfo);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v34,
-    (const MethodInfo_35EB9F0 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
   scriptDataList = (System_Collections_Generic_List_string__o *)v34;
-  v35 = (System_Collections_Generic_List_int__o *)sub_1BE4D18(System_Collections_Generic_List_int__TypeInfo);
+  v35 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v35,
-    (const MethodInfo_35CE9AC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
   lineDataList = v35;
   lastMessageIndex = -1;
   if ( !v32 )
@@ -620,14 +620,14 @@ void __fastcall CommonMessageManager__AnalysScript(
     while ( 1 )
     {
       if ( (int)v43 + (int)v45 >= (unsigned int)v42 )
-        sub_1BE4D30(v30, v31);
+        sub_1C13F88(v30, v31);
       v48 = v47[v45];
       if ( !v48 )
         goto LABEL_144;
       if ( v48->fields._stringLength < 1 )
         goto LABEL_53;
       v49 = (System_String_o *)StringLiteral_1/*""*/;
-      v30 = (System_String_o *)System_String__StartsWith(v47[v45], (System_String_o *)StringLiteral_1123/*"//"*/, 0LL);
+      v30 = (System_String_o *)System_String__StartsWith(v47[v45], (System_String_o *)StringLiteral_1126/*"//"*/, 0LL);
       if ( ((unsigned __int8)v30 & 1) != 0 )
         goto LABEL_53;
       v30 = (System_String_o *)System_String__StartsWith(v48, this->fields.codeCommentString, 0LL);
@@ -658,7 +658,7 @@ LABEL_18:
             if ( !v33 )
               goto LABEL_144;
             v58 = Method_System_Collections_Generic_List_string__Add__;
-            v31 = (Il2CppObject *)StringLiteral_24180/*"talkStart"*/;
+            v31 = (Il2CppObject *)StringLiteral_24235/*"tVoice"*/;
             items = v33->fields._items;
             ++v33->fields._version;
             if ( !items )
@@ -669,14 +669,14 @@ LABEL_18:
               System_Collections_Generic_List_object___AddWithResize(
                 v33,
                 v31,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
             }
             else
             {
               v61 = &items->obj.klass + size;
               v33->fields._size = size + 1;
               v61[4] = (Il2CppClass *)v31;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v61 + 4), (int64_t)v31, v52, v53, v54, v55, v56, v57);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v61 + 4), (int64_t)v31, v52, v53, v54, v55, v56, v57);
             }
             if ( !v34 )
               goto LABEL_144;
@@ -692,14 +692,14 @@ LABEL_18:
               System_Collections_Generic_List_object___AddWithResize(
                 v34,
                 v31,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
             }
             else
             {
               v71 = &v69->obj.klass + v70;
               v34->fields._size = v70 + 1;
               v71[4] = (Il2CppClass *)v31;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v71 + 4), (int64_t)v31, v62, v63, v64, v65, v66, v67);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v71 + 4), (int64_t)v31, v62, v63, v64, v65, v66, v67);
             }
             if ( !v35 )
               goto LABEL_144;
@@ -714,7 +714,7 @@ LABEL_18:
               System_Collections_Generic_List_int___AddWithResize(
                 v35,
                 v43 + v45 + 1,
-                *(const MethodInfo_35CF200 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+                *(const MethodInfo_36101A8 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
             }
             else
             {
@@ -737,24 +737,24 @@ LABEL_18:
             System_Collections_Generic_List_object___AddWithResize(
               v33,
               0LL,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v76[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v76[4] + 192LL) + 112LL));
           }
           else
           {
             v78 = &v75->obj.klass + v77;
             v33->fields._size = v77 + 1;
             v78[4] = 0LL;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v78 + 4), 0LL, v52, v53, v54, v55, v56, v57);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v78 + 4), 0LL, v52, v53, v54, v55, v56, v57);
           }
           if ( !v34 )
             goto LABEL_144;
           lastMessageIndex = v34->fields._size;
           if ( !v49 )
             goto LABEL_144;
-          v30 = System_String__Replace_62718436(
+          v30 = System_String__Replace_62987572(
                   v49,
                   this->fields.codeReturnString,
-                  (System_String_o *)StringLiteral_16215/*"[r]"*/,
+                  (System_String_o *)StringLiteral_16258/*"[i]"*/,
                   0LL);
           v85 = v34->fields._items;
           v86 = Method_System_Collections_Generic_List_string__Add__;
@@ -768,14 +768,14 @@ LABEL_18:
             System_Collections_Generic_List_object___AddWithResize(
               v34,
               (Il2CppObject *)v30,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
           }
           else
           {
             v89 = &v85->obj.klass + v87;
             v34->fields._size = v87 + 1;
             v89[4] = (Il2CppClass *)v88;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v89 + 4), v88, v79, v80, v81, v82, v83, v84);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v89 + 4), v88, v79, v80, v81, v82, v83, v84);
           }
           if ( !v35 )
             goto LABEL_144;
@@ -790,7 +790,7 @@ LABEL_18:
             System_Collections_Generic_List_int___AddWithResize(
               v35,
               v43 + v45 + 1,
-              *(const MethodInfo_35CF200 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
+              *(const MethodInfo_36101A8 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
           }
           else
           {
@@ -810,31 +810,31 @@ LABEL_53:
       }
     }
     v50 = v48;
-    v51 = (System_String_o *)StringLiteral_24176/*"talkName"*/;
+    v51 = (System_String_o *)StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/;
     v49 = System_String__Substring(v50, 1, 0LL);
     if ( !v51 )
       goto LABEL_18;
     v93 = v43 + v45 + 1;
-    v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_21261/*"k"*/, 0LL);
+    v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_21309/*"joint_all_Base"*/, 0LL);
     if ( ((unsigned __int8)v30 & 1) == 0 )
     {
-      v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_22994/*"q"*/, 0LL);
+      v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_23047/*"purchaseTime"*/, 0LL);
       if ( ((unsigned __int8)v30 & 1) == 0 )
       {
-        if ( System_String__op_Equality(v51, (System_String_o *)StringLiteral_24176/*"talkName"*/, 0LL) )
+        if ( System_String__op_Equality(v51, (System_String_o *)StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/, 0LL) )
         {
-          v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_24176/*"talkName"*/, 0LL);
+          v30 = (System_String_o *)System_String__op_Equality(v51, (System_String_o *)StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/, 0LL);
           v110 = (System_String_o *)StringLiteral_1/*""*/;
           if ( ((unsigned __int8)v30 & 1) != 0 )
             v110 = v49;
           a = v110;
         }
-        else if ( System_String__op_Equality(v51, (System_String_o *)StringLiteral_20324/*"i"*/, 0LL)
-               || System_String__op_Equality(v51, (System_String_o *)StringLiteral_20515/*"image"*/, 0LL)
-               || System_String__op_Equality(v51, (System_String_o *)StringLiteral_21406/*"line"*/, 0LL)
-               || System_String__StartsWith(v51, (System_String_o *)StringLiteral_508/*"%"*/, 0LL)
-               || System_String__StartsWith(v51, (System_String_o *)StringLiteral_530/*"&"*/, 0LL)
-               || (v30 = (System_String_o *)System_String__StartsWith(v51, (System_String_o *)StringLiteral_396/*"#"*/, 0LL),
+        else if ( System_String__op_Equality(v51, (System_String_o *)StringLiteral_20368/*"https://github.com/mono/mono/issues/12880"*/, 0LL)
+               || System_String__op_Equality(v51, (System_String_o *)StringLiteral_20560/*"ifClear"*/, 0LL)
+               || System_String__op_Equality(v51, (System_String_o *)StringLiteral_21455/*"lightskyblue"*/, 0LL)
+               || System_String__StartsWith(v51, (System_String_o *)StringLiteral_510/*"%"*/, 0LL)
+               || System_String__StartsWith(v51, (System_String_o *)StringLiteral_532/*"&"*/, 0LL)
+               || (v30 = (System_String_o *)System_String__StartsWith(v51, (System_String_o *)StringLiteral_398/*"#"*/, 0LL),
                    ((unsigned __int8)v30 & 1) != 0) )
         {
           v30 = (System_String_o *)System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0LL);
@@ -843,7 +843,7 @@ LABEL_53:
             if ( !v33 )
               goto LABEL_144;
             v118 = Method_System_Collections_Generic_List_string__Add__;
-            v31 = (Il2CppObject *)StringLiteral_24180/*"talkStart"*/;
+            v31 = (Il2CppObject *)StringLiteral_24235/*"tVoice"*/;
             v119 = v33->fields._items;
             ++v33->fields._version;
             if ( !v119 )
@@ -854,14 +854,14 @@ LABEL_53:
               System_Collections_Generic_List_object___AddWithResize(
                 v33,
                 v31,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
             }
             else
             {
               v121 = &v119->obj.klass + v120;
               v33->fields._size = v120 + 1;
               v121[4] = (Il2CppClass *)v31;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v121 + 4), (int64_t)v31, v94, v95, v96, v97, v98, v99);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v121 + 4), (int64_t)v31, v94, v95, v96, v97, v98, v99);
             }
             if ( !v34 )
               goto LABEL_144;
@@ -877,14 +877,14 @@ LABEL_53:
               System_Collections_Generic_List_object___AddWithResize(
                 v34,
                 v31,
-                *(const MethodInfo_35EC224 **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
+                *(const MethodInfo_362D1CC **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
             }
             else
             {
               v131 = &v129->obj.klass + v130;
               v34->fields._size = v130 + 1;
               v131[4] = (Il2CppClass *)v31;
-              sub_1BE4A70((PartyOrganizationUtility_o *)(v131 + 4), (int64_t)v31, v122, v123, v124, v125, v126, v127);
+              sub_1C13CC8((PartyOrganizationUtility_o *)(v131 + 4), (int64_t)v31, v122, v123, v124, v125, v126, v127);
             }
             if ( !v35 )
               goto LABEL_144;
@@ -899,7 +899,7 @@ LABEL_53:
               System_Collections_Generic_List_int___AddWithResize(
                 v35,
                 v93,
-                *(const MethodInfo_35CF200 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+                *(const MethodInfo_36101A8 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
             }
             else
             {
@@ -934,19 +934,19 @@ LABEL_104:
       System_Collections_Generic_List_object___AddWithResize(
         v33,
         0LL,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
     }
     else
     {
       v103 = &v100->obj.klass + v102;
       v33->fields._size = v102 + 1;
       v103[4] = 0LL;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v103 + 4), 0LL, v94, v95, v96, v97, v98, v99);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v103 + 4), 0LL, v94, v95, v96, v97, v98, v99);
     }
     if ( !v34 )
       goto LABEL_144;
     v111 = Method_System_Collections_Generic_List_string__Add__;
-    v31 = (Il2CppObject *)StringLiteral_16215/*"[r]"*/;
+    v31 = (Il2CppObject *)StringLiteral_16258/*"[i]"*/;
     v112 = v34->fields._items;
     ++v34->fields._version;
     if ( !v112 )
@@ -957,14 +957,14 @@ LABEL_104:
       System_Collections_Generic_List_object___AddWithResize(
         v34,
         v31,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
     }
     else
     {
       v114 = &v112->obj.klass + v113;
       v34->fields._size = v113 + 1;
       v114[4] = (Il2CppClass *)v31;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v114 + 4), (int64_t)v31, v104, v105, v106, v107, v108, v109);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v114 + 4), (int64_t)v31, v104, v105, v106, v107, v108, v109);
     }
     if ( !v35 )
       goto LABEL_144;
@@ -979,7 +979,7 @@ LABEL_104:
       System_Collections_Generic_List_int___AddWithResize(
         v35,
         v93,
-        *(const MethodInfo_35CF200 **)(*(_QWORD *)(v116[4] + 192LL) + 112LL));
+        *(const MethodInfo_36101A8 **)(*(_QWORD *)(v116[4] + 192LL) + 112LL));
     }
     else
     {
@@ -999,14 +999,14 @@ LABEL_105:
       System_Collections_Generic_List_object___AddWithResize(
         v33,
         (Il2CppObject *)v51,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v136[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v136[4] + 192LL) + 112LL));
     }
     else
     {
       v138 = &v135->obj.klass + v137;
       v33->fields._size = v137 + 1;
       v138[4] = (Il2CppClass *)v51;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v138 + 4), (int64_t)v51, v94, v95, v96, v97, v98, v99);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v138 + 4), (int64_t)v51, v94, v95, v96, v97, v98, v99);
     }
     if ( !v34 )
       goto LABEL_144;
@@ -1021,14 +1021,14 @@ LABEL_105:
       System_Collections_Generic_List_object___AddWithResize(
         v34,
         (Il2CppObject *)v49,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v146[4] + 192LL) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v146[4] + 192LL) + 112LL));
     }
     else
     {
       v148 = &v145->obj.klass + v147;
       v34->fields._size = v147 + 1;
       v148[4] = (Il2CppClass *)v49;
-      sub_1BE4A70((PartyOrganizationUtility_o *)(v148 + 4), (int64_t)v49, v139, v140, v141, v142, v143, v144);
+      sub_1C13CC8((PartyOrganizationUtility_o *)(v148 + 4), (int64_t)v49, v139, v140, v141, v142, v143, v144);
     }
     if ( !v35 )
       goto LABEL_144;
@@ -1043,7 +1043,7 @@ LABEL_105:
       System_Collections_Generic_List_int___AddWithResize(
         v35,
         v93,
-        *(const MethodInfo_35CF200 **)(*(_QWORD *)(v150[4] + 192LL) + 112LL));
+        *(const MethodInfo_36101A8 **)(*(_QWORD *)(v150[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1075,19 +1075,19 @@ LABEL_122:
     System_Collections_Generic_List_object___AddWithResize(
       v33,
       0LL,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v153[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v153[4] + 192LL) + 112LL));
   }
   else
   {
     v155 = &v152->obj.klass + v154;
     v33->fields._size = v154 + 1;
     v155[4] = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v155 + 4), 0LL, v36, v37, v38, (BattleSetupInfo_o *)v39, v40, v41);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v155 + 4), 0LL, v36, v37, v38, (BattleSetupInfo_o *)v39, v40, v41);
   }
   if ( !v34 )
     goto LABEL_144;
   v162 = Method_System_Collections_Generic_List_string__Add__;
-  v31 = (Il2CppObject *)StringLiteral_16215/*"[r]"*/;
+  v31 = (Il2CppObject *)StringLiteral_16258/*"[i]"*/;
   v163 = v34->fields._items;
   ++v34->fields._version;
   if ( !v163 )
@@ -1098,14 +1098,14 @@ LABEL_122:
     System_Collections_Generic_List_object___AddWithResize(
       v34,
       v31,
-      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
   }
   else
   {
     v165 = &v163->obj.klass + v164;
     v34->fields._size = v164 + 1;
     v165[4] = (Il2CppClass *)v31;
-    sub_1BE4A70((PartyOrganizationUtility_o *)(v165 + 4), (int64_t)v31, v156, v157, v158, v159, v160, v161);
+    sub_1C13CC8((PartyOrganizationUtility_o *)(v165 + 4), (int64_t)v31, v156, v157, v158, v159, v160, v161);
   }
   if ( !v35 )
     goto LABEL_144;
@@ -1120,7 +1120,7 @@ LABEL_122:
     System_Collections_Generic_List_int___AddWithResize(
       v35,
       v43,
-      *(const MethodInfo_35CF200 **)(*(_QWORD *)(v167[4] + 192LL) + 112LL));
+      *(const MethodInfo_36101A8 **)(*(_QWORD *)(v167[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1130,9 +1130,9 @@ LABEL_122:
 LABEL_140:
   v169 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                          v33,
-                                         (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                         (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
   this->fields.executeTagList = v169;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.executeTagList,
     (int64_t)v169,
     v170,
@@ -1144,9 +1144,9 @@ LABEL_140:
   if ( !v34
     || (v176 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                                v34,
-                                               (const MethodInfo_35EDD7C *)Method_System_Collections_Generic_List_string__ToArray__),
+                                               (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__),
         this->fields.executeDataList = v176,
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.executeDataList,
           (int64_t)v176,
           v177,
@@ -1158,9 +1158,9 @@ LABEL_140:
         !v35)
     || (v183 = System_Collections_Generic_List_int___ToArray(
                  v35,
-                 (const MethodInfo_35D0CB8 *)Method_System_Collections_Generic_List_int__ToArray__),
+                 (const MethodInfo_3611C60 *)Method_System_Collections_Generic_List_int__ToArray__),
         this->fields.executeLineList = v183,
-        sub_1BE4A70(
+        sub_1C13CC8(
           (PartyOrganizationUtility_o *)&this->fields.executeLineList,
           (int64_t)v183,
           v184,
@@ -1172,7 +1172,7 @@ LABEL_140:
         (executeDataList = this->fields.executeDataList) == 0LL) )
   {
 LABEL_144:
-    sub_1BE4D28(v30, v31);
+    sub_1C13F80(v30, v31);
   }
   this->fields.executeIndexMax = *(_QWORD *)&executeDataList->max_length;
 }
@@ -1378,44 +1378,44 @@ void __fastcall CommonMessageManager__AnalysText(
 
   v195 = this;
   v199 = (CommonMessageManager_o **)tagDataList;
-  if ( (byte_4B6866D & 1) == 0 )
+  if ( (byte_4BB61A6 & 1) == 0 )
   {
-    sub_1BE4ACC(&char_TypeInfo, tagDataList);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_int__Add__, v11);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__Add__, v12);
-    sub_1BE4ACC(&Method_System_Collections_Generic_List_string__get_Count__, v13);
-    sub_1BE4ACC(&StringLiteral_18234/*"clear"*/, v14);
-    sub_1BE4ACC(&StringLiteral_19778/*"font"*/, v15);
-    sub_1BE4ACC(&StringLiteral_19590/*"f"*/, v16);
-    sub_1BE4ACC(&StringLiteral_23759/*"speed"*/, v17);
-    sub_1BE4ACC(&StringLiteral_21261/*"k"*/, v18);
-    sub_1BE4ACC(&StringLiteral_22994/*"q"*/, v19);
-    sub_1BE4ACC(&StringLiteral_24934/*"voiceStop"*/, v20);
-    sub_1BE4ACC(&StringLiteral_17391/*"bgm"*/, v21);
-    sub_1BE4ACC(&StringLiteral_17393/*"bgmStop"*/, v22);
-    sub_1BE4ACC(&StringLiteral_25082/*"wt"*/, v23);
-    sub_1BE4ACC(&StringLiteral_23389/*"seStop"*/, v24);
-    sub_1BE4ACC(&StringLiteral_22759/*"page"*/, v25);
-    sub_1BE4ACC(&StringLiteral_24942/*"wait"*/, v26);
-    sub_1BE4ACC(&StringLiteral_19251/*"end"*/, v27);
-    sub_1BE4ACC(&StringLiteral_21245/*"jingle"*/, v28);
-    sub_1BE4ACC(&StringLiteral_23383/*"se"*/, v29);
-    sub_1BE4ACC(&StringLiteral_21323/*"l"*/, v30);
-    sub_1BE4ACC(&StringLiteral_24928/*"voice"*/, v31);
-    sub_1BE4ACC(&StringLiteral_24266/*"time "*/, v32);
-    sub_1BE4ACC(&StringLiteral_19783/*"fontSize"*/, v33);
-    sub_1BE4ACC(&StringLiteral_23387/*"seLoop"*/, v34);
-    sub_1BE4ACC(&StringLiteral_367/*"\""*/, v35);
-    sub_1BE4ACC(&StringLiteral_16215/*"[r]"*/, v36);
-    sub_1BE4ACC(&StringLiteral_16018/*"["*/, v37);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v38);
-    sub_1BE4ACC(&StringLiteral_23321/*"s"*/, v39);
-    sub_1BE4ACC(&StringLiteral_16276/*"]"*/, v40);
-    sub_1BE4ACC(&StringLiteral_17379/*"betweenHeight"*/, v41);
-    sub_1BE4ACC(&StringLiteral_21246/*"jingleStop"*/, v42);
-    sub_1BE4ACC(&StringLiteral_23732/*"soundStopAll"*/, v43);
-    this = (CommonMessageManager_o *)sub_1BE4ACC(&StringLiteral_1209/*"0"*/, v44);
-    byte_4B6866D = 1;
+    sub_1C13D24(&char_TypeInfo, tagDataList);
+    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v11);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, v12);
+    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v13);
+    sub_1C13D24(&StringLiteral_18277/*"class2_{0}"*/, v14);
+    sub_1C13D24(&StringLiteral_19822/*"follower/setupRecommendSupport"*/, v15);
+    sub_1C13D24(&StringLiteral_19634/*"extends"*/, v16);
+    sub_1C13D24(&StringLiteral_23812/*"sourceCode"*/, v17);
+    sub_1C13D24(&StringLiteral_21309/*"joint_all_Base"*/, v18);
+    sub_1C13D24(&StringLiteral_23047/*"purchaseTime"*/, v19);
+    sub_1C13D24(&StringLiteral_24990/*"visitor"*/, v20);
+    sub_1C13D24(&StringLiteral_17437/*"behaveAsAssistSkill"*/, v21);
+    sub_1C13D24(&StringLiteral_17439/*"betweenHeight"*/, v22);
+    sub_1C13D24(&StringLiteral_25138/*"wipeTime"*/, v23);
+    sub_1C13D24(&StringLiteral_23442/*"scheme"*/, v24);
+    sub_1C13D24(&StringLiteral_22812/*"p"*/, v25);
+    sub_1C13D24(&StringLiteral_24998/*"vm.shared.size"*/, v26);
+    sub_1C13D24(&StringLiteral_19295/*"enableFullScreen"*/, v27);
+    sub_1C13D24(&StringLiteral_21293/*"java/lang/Byte"*/, v28);
+    sub_1C13D24(&StringLiteral_23436/*"scheduler"*/, v29);
+    sub_1C13D24(&StringLiteral_21372/*"koi8-u"*/, v30);
+    sub_1C13D24(&StringLiteral_24984/*"virtualization-method"*/, v31);
+    sub_1C13D24(&StringLiteral_24321/*"textfield"*/, v32);
+    sub_1C13D24(&StringLiteral_19827/*"followerSpoilerProtectionLimitCount"*/, v33);
+    sub_1C13D24(&StringLiteral_23440/*"schemafragmentcount"*/, v34);
+    sub_1C13D24(&StringLiteral_369/*"\""*/, v35);
+    sub_1C13D24(&StringLiteral_16258/*"[i]"*/, v36);
+    sub_1C13D24(&StringLiteral_16061/*"You must call the Bind method before performing this operation."*/, v37);
+    sub_1C13D24(&StringLiteral_1/*""*/, v38);
+    sub_1C13D24(&StringLiteral_23374/*"routeTypes"*/, v39);
+    sub_1C13D24(&StringLiteral_16320/*"\\p{_xmlI}"*/, v40);
+    sub_1C13D24(&StringLiteral_17425/*"be-BY"*/, v41);
+    sub_1C13D24(&StringLiteral_21294/*"java/lang/Character"*/, v42);
+    sub_1C13D24(&StringLiteral_23785/*"smfSpotBtn_Click"*/, v43);
+    this = (CommonMessageManager_o *)sub_1C13D24(&StringLiteral_1212/*"0"*/, v44);
+    byte_4BB61A6 = 1;
   }
   v200[0] = 0;
   if ( !analysData )
@@ -1438,7 +1438,7 @@ void __fastcall CommonMessageManager__AnalysText(
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v61 = System_Char__ToString((uint16_t)v200, 0LL);
-        v46 = System_String__Concat_62698808(v46, v61, 0LL);
+        v46 = System_String__Concat_62967944(v46, v61, 0LL);
         if ( v60 == 34 )
         {
           if ( v47 < stringLength )
@@ -1452,7 +1452,7 @@ void __fastcall CommonMessageManager__AnalysText(
               if ( !char_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(char_TypeInfo);
               v63 = System_Char__ToString((uint16_t)v200, 0LL);
-              v46 = System_String__Concat_62698808(v46, v63, 0LL);
+              v46 = System_String__Concat_62967944(v46, v63, 0LL);
               ++v47;
               if ( stringLength == v62 )
               {
@@ -1463,7 +1463,7 @@ void __fastcall CommonMessageManager__AnalysText(
             ++v47;
           }
 LABEL_86:
-          v46 = System_String__Concat_62698808(v46, (System_String_o *)StringLiteral_367/*"\""*/, 0LL);
+          v46 = System_String__Concat_62967944(v46, (System_String_o *)StringLiteral_369/*"\""*/, 0LL);
         }
         if ( v47 >= stringLength )
         {
@@ -1491,22 +1491,22 @@ LABEL_86:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             0LL,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
         }
         else
         {
           v59 = v56 + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v59 + 32) = 0LL;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v59 + 32), 0LL, v50, v51, v52, v53, v54, v55);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v59 + 32), 0LL, v50, v51, v52, v53, v54, v55);
         }
         if ( !v46 )
           goto LABEL_234;
         v64 = (System_Collections_Generic_List_object__o *)*scriptDataList;
-        this = (CommonMessageManager_o *)System_String__Replace_62718436(
+        this = (CommonMessageManager_o *)System_String__Replace_62987572(
                                            v46,
                                            v195->fields.codeReturnString,
-                                           (System_String_o *)StringLiteral_16215/*"[r]"*/,
+                                           (System_String_o *)StringLiteral_16258/*"[i]"*/,
                                            0LL);
         if ( !v64 )
           goto LABEL_234;
@@ -1522,14 +1522,14 @@ LABEL_86:
           System_Collections_Generic_List_object___AddWithResize(
             v64,
             (Il2CppObject *)this,
-            *(const MethodInfo_35EC224 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
+            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
         }
         else
         {
           v75 = &items->obj.klass + size;
           v64->fields._size = size + 1;
           v75[4] = (Il2CppClass *)v74;
-          sub_1BE4A70((PartyOrganizationUtility_o *)(v75 + 4), (int64_t)v74, v65, v66, v67, v68, v69, v70);
+          sub_1C13CC8((PartyOrganizationUtility_o *)(v75 + 4), (int64_t)v74, v65, v66, v67, v68, v69, v70);
         }
         this = (CommonMessageManager_o *)*lineDataList;
         if ( !*lineDataList )
@@ -1545,7 +1545,7 @@ LABEL_86:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)this,
             line,
-            *(const MethodInfo_35CF200 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+            *(const MethodInfo_36101A8 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1584,7 +1584,7 @@ LABEL_86:
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
           v85 = System_Char__ToString((uint16_t)v200, 0LL);
-          v79 = System_String__Concat_62698808(v79, v85, 0LL);
+          v79 = System_String__Concat_62967944(v79, v85, 0LL);
           if ( v200[0] == 34 )
           {
             if ( v47 < stringLength )
@@ -1598,7 +1598,7 @@ LABEL_86:
                 if ( !char_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(char_TypeInfo);
                 v87 = System_Char__ToString((uint16_t)v200, 0LL);
-                v79 = System_String__Concat_62698808(v79, v87, 0LL);
+                v79 = System_String__Concat_62967944(v79, v87, 0LL);
                 ++v47;
                 if ( stringLength == v86 )
                 {
@@ -1609,7 +1609,7 @@ LABEL_86:
               ++v47;
             }
 LABEL_56:
-            v79 = System_String__Concat_62698808(v79, (System_String_o *)StringLiteral_367/*"\""*/, 0LL);
+            v79 = System_String__Concat_62967944(v79, (System_String_o *)StringLiteral_369/*"\""*/, 0LL);
           }
           v82 = v47;
         }
@@ -1628,7 +1628,7 @@ LABEL_56:
             {
               if ( (_DWORD)this == -200523172 )
               {
-                v121 = &StringLiteral_22994/*"q"*/;
+                v121 = &StringLiteral_23047/*"purchaseTime"*/;
 LABEL_150:
                 this = (CommonMessageManager_o *)System_String__op_Equality(v80, (System_String_o *)*v121, 0LL);
                 if ( ((unsigned __int8)this & 1) != 0 )
@@ -1649,19 +1649,19 @@ LABEL_150:
                     System_Collections_Generic_List_object___AddWithResize(
                       (System_Collections_Generic_List_object__o *)this,
                       0LL,
-                      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
+                      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v123[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v125 = v122 + 8 * v124;
                     LODWORD(this->fields.m_CancellationTokenSource) = v124 + 1;
                     *(_QWORD *)(v125 + 32) = 0LL;
-                    sub_1BE4A70((PartyOrganizationUtility_o *)(v125 + 32), 0LL, v88, v89, v90, v91, v92, v93);
+                    sub_1C13CC8((PartyOrganizationUtility_o *)(v125 + 32), 0LL, v88, v89, v90, v91, v92, v93);
                   }
                   this = (CommonMessageManager_o *)*scriptDataList;
                   if ( !*scriptDataList )
                     goto LABEL_234;
-                  tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_16215/*"[r]"*/;
+                  tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_16258/*"[i]"*/;
                   v145 = *(_QWORD *)&this->fields.m_CachedPtr;
                   v146 = Method_System_Collections_Generic_List_string__Add__;
                   ++HIDWORD(this->fields.m_CancellationTokenSource);
@@ -1673,14 +1673,14 @@ LABEL_150:
                     System_Collections_Generic_List_object___AddWithResize(
                       (System_Collections_Generic_List_object__o *)this,
                       (Il2CppObject *)tagDataList,
-                      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v146[4] + 192LL) + 112LL));
+                      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v146[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v148 = v145 + 8 * v147;
                     LODWORD(this->fields.m_CancellationTokenSource) = v147 + 1;
                     *(_QWORD *)(v148 + 32) = tagDataList;
-                    sub_1BE4A70(
+                    sub_1C13CC8(
                       (PartyOrganizationUtility_o *)(v148 + 32),
                       (int64_t)tagDataList,
                       v126,
@@ -1704,7 +1704,7 @@ LABEL_150:
                     System_Collections_Generic_List_int___AddWithResize(
                       (System_Collections_Generic_List_int__o *)this,
                       line,
-                      *(const MethodInfo_35CF200 **)(*(_QWORD *)(v156[4] + 192LL) + 112LL));
+                      *(const MethodInfo_36101A8 **)(*(_QWORD *)(v156[4] + 192LL) + 112LL));
                   }
                   else
                   {
@@ -1725,14 +1725,14 @@ LABEL_150:
                     System_Collections_Generic_List_object___AddWithResize(
                       (System_Collections_Generic_List_object__o *)this,
                       (Il2CppObject *)v80,
-                      *(const MethodInfo_35EC224 **)(*(_QWORD *)(v159[4] + 192LL) + 112LL));
+                      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v159[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v161 = v158 + 8 * v160;
                     LODWORD(this->fields.m_CancellationTokenSource) = v160 + 1;
                     *(_QWORD *)(v161 + 32) = v80;
-                    sub_1BE4A70(
+                    sub_1C13CC8(
                       (PartyOrganizationUtility_o *)(v161 + 32),
                       (int64_t)v80,
                       v149,
@@ -1767,7 +1767,7 @@ LABEL_150:
               }
               if ( (_DWORD)this == -166967934 )
               {
-                v94 = &StringLiteral_23321/*"s"*/;
+                v94 = &StringLiteral_23374/*"routeTypes"*/;
                 goto LABEL_133;
               }
             }
@@ -1775,12 +1775,12 @@ LABEL_150:
             {
               if ( (_DWORD)this == -301188886 )
               {
-                v121 = &StringLiteral_21261/*"k"*/;
+                v121 = &StringLiteral_21309/*"joint_all_Base"*/;
                 goto LABEL_150;
               }
               if ( (_DWORD)this == -281374168 )
               {
-                v94 = &StringLiteral_21245/*"jingle"*/;
+                v94 = &StringLiteral_21293/*"java/lang/Byte"*/;
                 goto LABEL_133;
               }
             }
@@ -1790,13 +1790,13 @@ LABEL_150:
             switch ( (_DWORD)this )
             {
               case 0xC73F3BA9:
-                v94 = &StringLiteral_24934/*"voiceStop"*/;
+                v94 = &StringLiteral_24990/*"visitor"*/;
                 goto LABEL_133;
               case 0xE30C2799:
-                v94 = &StringLiteral_19590/*"f"*/;
+                v94 = &StringLiteral_19634/*"extends"*/;
                 goto LABEL_133;
               case 0xE90C310B:
-                v94 = &StringLiteral_21323/*"l"*/;
+                v94 = &StringLiteral_21372/*"koi8-u"*/;
                 goto LABEL_133;
             }
           }
@@ -1806,13 +1806,13 @@ LABEL_150:
           switch ( (_DWORD)this )
           {
             case 0x892E4CA0:
-              v94 = &StringLiteral_24942/*"wait"*/;
+              v94 = &StringLiteral_24998/*"vm.shared.size"*/;
               goto LABEL_133;
             case 0x9859D490:
-              v94 = &StringLiteral_17379/*"betweenHeight"*/;
+              v94 = &StringLiteral_17425/*"be-BY"*/;
               goto LABEL_133;
             case 0xA8F18501:
-              v94 = &StringLiteral_19783/*"fontSize"*/;
+              v94 = &StringLiteral_19827/*"followerSpoilerProtectionLimitCount"*/;
               goto LABEL_133;
           }
         }
@@ -1825,10 +1825,10 @@ LABEL_150:
                 goto LABEL_176;
               break;
             case 0x815DFA76:
-              v99 = &StringLiteral_22759/*"page"*/;
+              v99 = &StringLiteral_22812/*"p"*/;
               goto LABEL_119;
             case 0x7F9BC9F9:
-              v94 = &StringLiteral_24928/*"voice"*/;
+              v94 = &StringLiteral_24984/*"virtualization-method"*/;
               goto LABEL_133;
           }
         }
@@ -1840,10 +1840,10 @@ LABEL_150:
           switch ( (_DWORD)this )
           {
             case 0x6A8E75AA:
-              v94 = &StringLiteral_19251/*"end"*/;
+              v94 = &StringLiteral_19295/*"enableFullScreen"*/;
               goto LABEL_133;
             case 0x6EE5B7E7:
-              v94 = &StringLiteral_23732/*"soundStopAll"*/;
+              v94 = &StringLiteral_23785/*"smfSpotBtn_Click"*/;
 LABEL_133:
               this = (CommonMessageManager_o *)System_String__op_Equality(v80, (System_String_o *)*v94, 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
@@ -1871,14 +1871,14 @@ LABEL_133:
                   System_Collections_Generic_List_object___AddWithResize(
                     (System_Collections_Generic_List_object__o *)this,
                     (Il2CppObject *)v80,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v114 = v111 + 8 * v113;
                   LODWORD(this->fields.m_CancellationTokenSource) = v113 + 1;
                   *(_QWORD *)(v114 + 32) = v80;
-                  sub_1BE4A70((PartyOrganizationUtility_o *)(v114 + 32), (int64_t)v80, v88, v89, v90, v91, v92, v93);
+                  sub_1C13CC8((PartyOrganizationUtility_o *)(v114 + 32), (int64_t)v80, v88, v89, v90, v91, v92, v93);
                 }
                 this = (CommonMessageManager_o *)*scriptDataList;
                 if ( !*scriptDataList )
@@ -1897,7 +1897,7 @@ LABEL_133:
                   v119 = (PartyOrganizationUtility_o *)(v118 + 32);
                   tagDataList = v110;
 LABEL_168:
-                  sub_1BE4A70(v119, (int64_t)tagDataList, v104, v105, v106, v107, v108, v109);
+                  sub_1C13CC8(v119, (int64_t)tagDataList, v104, v105, v106, v107, v108, v109);
                   goto LABEL_171;
                 }
                 v120 = v116[4];
@@ -1906,7 +1906,7 @@ LABEL_168:
               }
               break;
             case 0x7B80C780:
-              v94 = &StringLiteral_23759/*"speed"*/;
+              v94 = &StringLiteral_23812/*"sourceCode"*/;
               goto LABEL_133;
           }
         }
@@ -1915,7 +1915,7 @@ LABEL_168:
           switch ( (_DWORD)this )
           {
             case 0x5C6E1222:
-              v99 = &StringLiteral_18234/*"clear"*/;
+              v99 = &StringLiteral_18277/*"class2_{0}"*/;
 LABEL_119:
               this = (CommonMessageManager_o *)System_String__op_Equality(v80, (System_String_o *)*v99, 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
@@ -1934,14 +1934,14 @@ LABEL_119:
                   System_Collections_Generic_List_object___AddWithResize(
                     (System_Collections_Generic_List_object__o *)this,
                     (Il2CppObject *)v80,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v101[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v103 = v100 + 8 * v102;
                   LODWORD(this->fields.m_CancellationTokenSource) = v102 + 1;
                   *(_QWORD *)(v103 + 32) = v80;
-                  sub_1BE4A70((PartyOrganizationUtility_o *)(v103 + 32), (int64_t)v80, v88, v89, v90, v91, v92, v93);
+                  sub_1C13CC8((PartyOrganizationUtility_o *)(v103 + 32), (int64_t)v80, v88, v89, v90, v91, v92, v93);
                 }
                 if ( !v79 )
                   goto LABEL_234;
@@ -1967,10 +1967,10 @@ LABEL_119:
               }
               break;
             case 0x5DB2D891:
-              v94 = &StringLiteral_17391/*"bgm"*/;
+              v94 = &StringLiteral_17437/*"behaveAsAssistSkill"*/;
               goto LABEL_133;
             case 0x667B7330:
-              v94 = &StringLiteral_21246/*"jingleStop"*/;
+              v94 = &StringLiteral_21294/*"java/lang/Character"*/;
               goto LABEL_133;
           }
         }
@@ -1980,22 +1980,22 @@ LABEL_119:
         switch ( (_DWORD)this )
         {
           case 0x3C520AA5:
-            v94 = &StringLiteral_23383/*"se"*/;
+            v94 = &StringLiteral_23436/*"scheduler"*/;
             goto LABEL_133;
           case 0x47410F2B:
-            v94 = &StringLiteral_23387/*"seLoop"*/;
+            v94 = &StringLiteral_23440/*"schemafragmentcount"*/;
             goto LABEL_133;
           case 0x4B4794E6:
             this = (CommonMessageManager_o *)System_String__op_Equality(
                                                v80,
-                                               (System_String_o *)StringLiteral_25082/*"wt"*/,
+                                               (System_String_o *)StringLiteral_25138/*"wipeTime"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               this = *v199;
               if ( !*v199 )
                 goto LABEL_234;
-              tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_24942/*"wait"*/;
+              tagDataList = (System_Collections_Generic_List_string__o **)StringLiteral_24998/*"vm.shared.size"*/;
               v95 = *(_QWORD *)&this->fields.m_CachedPtr;
               v96 = Method_System_Collections_Generic_List_string__Add__;
               ++HIDWORD(this->fields.m_CancellationTokenSource);
@@ -2007,14 +2007,14 @@ LABEL_119:
                 System_Collections_Generic_List_object___AddWithResize(
                   (System_Collections_Generic_List_object__o *)this,
                   (Il2CppObject *)tagDataList,
-                  *(const MethodInfo_35EC224 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
+                  *(const MethodInfo_362D1CC **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
               }
               else
               {
                 v98 = v95 + 8 * v97;
                 LODWORD(this->fields.m_CancellationTokenSource) = v97 + 1;
                 *(_QWORD *)(v98 + 32) = tagDataList;
-                sub_1BE4A70(
+                sub_1C13CC8(
                   (PartyOrganizationUtility_o *)(v98 + 32),
                   (int64_t)tagDataList,
                   v88,
@@ -2028,11 +2028,11 @@ LABEL_119:
                 goto LABEL_234;
               v166 = v80->fields._stringLength;
               v136 = *scriptDataList;
-              v167 = (System_String_o *)StringLiteral_24266/*"time "*/;
+              v167 = (System_String_o *)StringLiteral_24321/*"textfield"*/;
               v168 = v79->fields._stringLength <= v166 + 1
-                   ? (System_String_o *)StringLiteral_1209/*"0"*/
+                   ? (System_String_o *)StringLiteral_1212/*"0"*/
                    : System_String__Substring(v79, v166 + 1, 0LL);
-              this = (CommonMessageManager_o *)System_String__Concat_62698808(v167, v168, 0LL);
+              this = (CommonMessageManager_o *)System_String__Concat_62967944(v167, v168, 0LL);
               if ( !v136 )
                 goto LABEL_234;
               goto LABEL_164;
@@ -2045,13 +2045,13 @@ LABEL_119:
         switch ( (_DWORD)this )
         {
           case 0x274E1290:
-            v94 = &StringLiteral_19778/*"font"*/;
+            v94 = &StringLiteral_19822/*"follower/setupRecommendSupport"*/;
             goto LABEL_133;
           case 0x34A684A5:
-            v94 = &StringLiteral_23389/*"seStop"*/;
+            v94 = &StringLiteral_23442/*"scheme"*/;
             goto LABEL_133;
           case 0x3B958991:
-            v94 = &StringLiteral_17393/*"bgmStop"*/;
+            v94 = &StringLiteral_17439/*"betweenHeight"*/;
             goto LABEL_133;
         }
       }
@@ -2073,20 +2073,20 @@ LABEL_157:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           0LL,
-          *(const MethodInfo_35EC224 **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
+          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v133[4] + 192LL) + 112LL));
       }
       else
       {
         v135 = v132 + 8 * v134;
         LODWORD(this->fields.m_CancellationTokenSource) = v134 + 1;
         *(_QWORD *)(v135 + 32) = 0LL;
-        sub_1BE4A70((PartyOrganizationUtility_o *)(v135 + 32), 0LL, v88, v89, v90, v91, v92, v93);
+        sub_1C13CC8((PartyOrganizationUtility_o *)(v135 + 32), 0LL, v88, v89, v90, v91, v92, v93);
       }
       v136 = *scriptDataList;
-      this = (CommonMessageManager_o *)System_String__Concat_62710068(
-                                         (System_String_o *)StringLiteral_16018/*"["*/,
+      this = (CommonMessageManager_o *)System_String__Concat_62979204(
+                                         (System_String_o *)StringLiteral_16061/*"You must call the Bind method before performing this operation."*/,
                                          v79,
-                                         (System_String_o *)StringLiteral_16276/*"]"*/,
+                                         (System_String_o *)StringLiteral_16320/*"\\p{_xmlI}"*/,
                                          0LL);
       if ( !v136 )
         goto LABEL_234;
@@ -2113,7 +2113,7 @@ LABEL_170:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
         (Il2CppObject *)tagDataList,
-        *(const MethodInfo_35EC224 **)(*(_QWORD *)(v120 + 192) + 112LL));
+        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v120 + 192) + 112LL));
 LABEL_171:
       this = (CommonMessageManager_o *)*lineDataList;
       if ( !*lineDataList )
@@ -2129,7 +2129,7 @@ LABEL_171:
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)this,
           line,
-          *(const MethodInfo_35CF200 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
+          *(const MethodInfo_36101A8 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
       }
       else
       {
@@ -2165,22 +2165,22 @@ LABEL_215:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)this,
               0LL,
-              *(const MethodInfo_35EC224 **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
+              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
           }
           else
           {
             v179 = v176 + 8 * v178;
             LODWORD(this->fields.m_CancellationTokenSource) = v178 + 1;
             *(_QWORD *)(v179 + 32) = 0LL;
-            sub_1BE4A70((PartyOrganizationUtility_o *)(v179 + 32), 0LL, v170, v171, v172, v173, v174, v175);
+            sub_1C13CC8((PartyOrganizationUtility_o *)(v179 + 32), 0LL, v170, v171, v172, v173, v174, v175);
           }
           if ( v46 )
           {
             v180 = (System_Collections_Generic_List_object__o *)*scriptDataList;
-            this = (CommonMessageManager_o *)System_String__Replace_62718436(
+            this = (CommonMessageManager_o *)System_String__Replace_62987572(
                                                v46,
                                                v195->fields.codeReturnString,
-                                               (System_String_o *)StringLiteral_16215/*"[r]"*/,
+                                               (System_String_o *)StringLiteral_16258/*"[i]"*/,
                                                0LL);
             if ( v180 )
             {
@@ -2196,14 +2196,14 @@ LABEL_215:
                   System_Collections_Generic_List_object___AddWithResize(
                     v180,
                     (Il2CppObject *)this,
-                    *(const MethodInfo_35EC224 **)(*(_QWORD *)(v188[4] + 192LL) + 112LL));
+                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v188[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v191 = &v187->obj.klass + v189;
                   v180->fields._size = v189 + 1;
                   v191[4] = (Il2CppClass *)v190;
-                  sub_1BE4A70(
+                  sub_1C13CC8(
                     (PartyOrganizationUtility_o *)(v191 + 4),
                     (int64_t)v190,
                     v181,
@@ -2227,7 +2227,7 @@ LABEL_215:
                       System_Collections_Generic_List_int___AddWithResize(
                         (System_Collections_Generic_List_int__o *)this,
                         line,
-                        *(const MethodInfo_35CF200 **)(*(_QWORD *)(v193[4] + 192LL) + 112LL));
+                        *(const MethodInfo_36101A8 **)(*(_QWORD *)(v193[4] + 192LL) + 112LL));
                     }
                     else
                     {
@@ -2244,7 +2244,7 @@ LABEL_215:
       }
     }
 LABEL_234:
-    sub_1BE4D28(this, tagDataList);
+    sub_1C13F80(this, tagDataList);
   }
 }
 
@@ -2266,7 +2266,7 @@ void __fastcall CommonMessageManager__EndExecuteScript(CommonMessageManager_o *t
   {
     p_callbackFunc = (PartyOrganizationUtility_o *)&this->fields.callbackFunc;
     p_callbackFunc->klass = 0LL;
-    sub_1BE4A70(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C13CC8(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
       *(_QWORD *)&callbackFunc->fields.extra_arg);
@@ -2309,29 +2309,29 @@ void __fastcall CommonMessageManager__Init(CommonMessageManager_o *this, const M
   FollowerInfo_o *v33; // x6
   PartyListViewItem_o *v34; // x7
 
-  if ( (byte_4B6866A & 1) == 0 )
+  if ( (byte_4BB61A3 & 1) == 0 )
   {
-    sub_1BE4ACC(&LocalizationManager_TypeInfo, method);
-    sub_1BE4ACC(&StringLiteral_11630/*"SCRIPT_ACTION_CODE_COMMENT"*/, v3);
-    sub_1BE4ACC(&StringLiteral_11640/*"SCRIPT_ACTION_CODE_VOICE"*/, v4);
-    sub_1BE4ACC(&StringLiteral_11633/*"SCRIPT_ACTION_CODE_RETURN"*/, v5);
-    sub_1BE4ACC(&StringLiteral_11639/*"SCRIPT_ACTION_CODE_TALK"*/, v6);
-    byte_4B6866A = 1;
+    sub_1C13D24(&LocalizationManager_TypeInfo, method);
+    sub_1C13D24(&StringLiteral_11657/*"SByte"*/, v3);
+    sub_1C13D24(&StringLiteral_11667/*"SCRIPT_ACTION_CODE_CLASS_SPLIT"*/, v4);
+    sub_1C13D24(&StringLiteral_11660/*"SCENARIO_SPEED_HIGH"*/, v5);
+    sub_1C13D24(&StringLiteral_11666/*"SCRIPT_ACTION_BACK_LOG_TALK_START"*/, v6);
+    byte_4BB61A3 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_11630/*"SCRIPT_ACTION_CODE_COMMENT"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_11657/*"SByte"*/, 0LL);
   this->fields.codeCommentString = v7;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.codeCommentString, (int64_t)v7, v8, v9, v10, v11, v12, v13);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11639/*"SCRIPT_ACTION_CODE_TALK"*/, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.codeCommentString, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11666/*"SCRIPT_ACTION_BACK_LOG_TALK_START"*/, 0LL);
   this->fields.codeTalkString = v14;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.codeTalkString, (int64_t)v14, v15, v16, v17, v18, v19, v20);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11640/*"SCRIPT_ACTION_CODE_VOICE"*/, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.codeTalkString, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11667/*"SCRIPT_ACTION_CODE_CLASS_SPLIT"*/, 0LL);
   this->fields.codeVoiceString = v21;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.codeVoiceString, (int64_t)v21, v22, v23, v24, v25, v26, v27);
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11633/*"SCRIPT_ACTION_CODE_RETURN"*/, 0LL);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.codeVoiceString, (int64_t)v21, v22, v23, v24, v25, v26, v27);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11660/*"SCENARIO_SPEED_HIGH"*/, 0LL);
   this->fields.codeReturnString = v28;
-  sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.codeReturnString, (int64_t)v28, v29, v30, v31, v32, v33, v34);
+  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.codeReturnString, (int64_t)v28, v29, v30, v31, v32, v33, v34);
   ScriptMessageCommonManager__ResetLongPress((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__ResetMessageWindow((ScriptMessageCommonManager_o *)this, 0LL);
   ScriptMessageCommonManager__QuitScreen((ScriptMessageCommonManager_o *)this, 0LL);
@@ -2360,7 +2360,7 @@ void __fastcall CommonMessageManager__OnClickWindow(CommonMessageManager_o *this
   if ( touchCallbackFunc )
   {
     this->fields.touchCallbackFunc = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.touchCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.touchCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))touchCallbackFunc->fields.m_target)(
       touchCallbackFunc->fields.original_method_info,
       *(_QWORD *)&touchCallbackFunc->fields.extra_arg);
@@ -2383,7 +2383,7 @@ void __fastcall CommonMessageManager__OnLongPressWindow(CommonMessageManager_o *
   if ( longPressCallbackFunc )
   {
     this->fields.longPressCallbackFunc = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.longPressCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.longPressCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))longPressCallbackFunc->fields.m_target)(
       longPressCallbackFunc->fields.original_method_info,
       *(_QWORD *)&longPressCallbackFunc->fields.extra_arg);
@@ -2406,7 +2406,7 @@ void __fastcall CommonMessageManager__OnPressWindow(CommonMessageManager_o *this
   if ( touchCallbackFunc )
   {
     this->fields.touchCallbackFunc = 0LL;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&this->fields.touchCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.touchCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))touchCallbackFunc->fields.m_target)(
       touchCallbackFunc->fields.original_method_info,
       *(_QWORD *)&touchCallbackFunc->fields.extra_arg);
@@ -2511,37 +2511,37 @@ bool __fastcall CommonMessageManager__ProcessScript(
   System_String_o **p_waitTalkName; // [xsp+8h] [xbp-68h]
 
   v5 = this;
-  if ( (byte_4B6866F & 1) == 0 )
+  if ( (byte_4BB61A8 & 1) == 0 )
   {
-    sub_1BE4ACC(&StringLiteral_21711/*"messageOn"*/, method);
-    sub_1BE4ACC(&StringLiteral_18234/*"clear"*/, v6);
-    sub_1BE4ACC(&StringLiteral_19778/*"font"*/, v7);
-    sub_1BE4ACC(&StringLiteral_22764/*"page3"*/, v8);
-    sub_1BE4ACC(&StringLiteral_21709/*"messageOff"*/, v9);
-    sub_1BE4ACC(&StringLiteral_22763/*"page2"*/, v10);
-    sub_1BE4ACC(&StringLiteral_19590/*"f"*/, v11);
-    sub_1BE4ACC(&StringLiteral_23759/*"speed"*/, v12);
-    sub_1BE4ACC(&StringLiteral_21261/*"k"*/, v13);
-    sub_1BE4ACC(&StringLiteral_915/*"-"*/, v14);
-    sub_1BE4ACC(&StringLiteral_22994/*"q"*/, v15);
-    sub_1BE4ACC(&StringLiteral_22778/*"parameter error"*/, v16);
-    sub_1BE4ACC(&StringLiteral_24335/*"touch2"*/, v17);
-    sub_1BE4ACC(&StringLiteral_22759/*"page"*/, v18);
-    sub_1BE4ACC(&StringLiteral_24942/*"wait"*/, v19);
-    sub_1BE4ACC(&StringLiteral_22777/*"parameter be unnecessary"*/, v20);
-    sub_1BE4ACC(&StringLiteral_19251/*"end"*/, v21);
-    sub_1BE4ACC(&StringLiteral_21703/*"message2"*/, v22);
-    sub_1BE4ACC(&StringLiteral_21323/*"l"*/, v23);
-    sub_1BE4ACC(&StringLiteral_19783/*"fontSize"*/, v24);
-    sub_1BE4ACC(&StringLiteral_21699/*"message"*/, v25);
-    sub_1BE4ACC(&StringLiteral_24176/*"talkName"*/, v26);
-    sub_1BE4ACC(&StringLiteral_24333/*"touch"*/, v27);
-    sub_1BE4ACC(&StringLiteral_21704/*"message3"*/, v28);
-    sub_1BE4ACC(&StringLiteral_1/*""*/, v29);
-    sub_1BE4ACC(&StringLiteral_23321/*"s"*/, v30);
-    sub_1BE4ACC(&StringLiteral_17379/*"betweenHeight"*/, v31);
-    this = (CommonMessageManager_o *)sub_1BE4ACC(&StringLiteral_18236/*"clear2"*/, v32);
-    byte_4B6866F = 1;
+    sub_1C13D24(&StringLiteral_21761/*"menu_txt_spend"*/, method);
+    sub_1C13D24(&StringLiteral_18277/*"class2_{0}"*/, v6);
+    sub_1C13D24(&StringLiteral_19822/*"follower/setupRecommendSupport"*/, v7);
+    sub_1C13D24(&StringLiteral_22817/*"pa-IN"*/, v8);
+    sub_1C13D24(&StringLiteral_21759/*"menu_txt_class_score"*/, v9);
+    sub_1C13D24(&StringLiteral_22816/*"pa"*/, v10);
+    sub_1C13D24(&StringLiteral_19634/*"extends"*/, v11);
+    sub_1C13D24(&StringLiteral_23812/*"sourceCode"*/, v12);
+    sub_1C13D24(&StringLiteral_21309/*"joint_all_Base"*/, v13);
+    sub_1C13D24(&StringLiteral_918/*"-"*/, v14);
+    sub_1C13D24(&StringLiteral_23047/*"purchaseTime"*/, v15);
+    sub_1C13D24(&StringLiteral_22831/*"page down"*/, v16);
+    sub_1C13D24(&StringLiteral_24390/*"token_enpty"*/, v17);
+    sub_1C13D24(&StringLiteral_22812/*"p"*/, v18);
+    sub_1C13D24(&StringLiteral_24998/*"vm.shared.size"*/, v19);
+    sub_1C13D24(&StringLiteral_22830/*"page"*/, v20);
+    sub_1C13D24(&StringLiteral_19295/*"enableFullScreen"*/, v21);
+    sub_1C13D24(&StringLiteral_21753/*"member_txt_"*/, v22);
+    sub_1C13D24(&StringLiteral_21372/*"koi8-u"*/, v23);
+    sub_1C13D24(&StringLiteral_19827/*"followerSpoilerProtectionLimitCount"*/, v24);
+    sub_1C13D24(&StringLiteral_21748/*"mediumvioletred"*/, v25);
+    sub_1C13D24(&StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/, v26);
+    sub_1C13D24(&StringLiteral_24388/*"token_balloon"*/, v27);
+    sub_1C13D24(&StringLiteral_21754/*"members"*/, v28);
+    sub_1C13D24(&StringLiteral_1/*""*/, v29);
+    sub_1C13D24(&StringLiteral_23374/*"routeTypes"*/, v30);
+    sub_1C13D24(&StringLiteral_17425/*"be-BY"*/, v31);
+    this = (CommonMessageManager_o *)sub_1C13D24(&StringLiteral_18279/*"classBoard/releaseSquare"*/, v32);
+    byte_4BB61A8 = 1;
   }
   state = v5->fields.state;
   if ( !state )
@@ -2576,7 +2576,7 @@ bool __fastcall CommonMessageManager__ProcessScript(
       executeLineList = v5->fields.executeLineList;
       if ( !executeLineList )
 LABEL_190:
-        sub_1BE4D28(this, method);
+        sub_1C13F80(this, method);
       if ( (unsigned int)executeIndex >= executeLineList->max_length )
         goto LABEL_189;
       v40 = executeDataList->m_Items[executeIndex];
@@ -2595,14 +2595,14 @@ LABEL_190:
             {
               this = (CommonMessageManager_o *)System_String__op_Equality(
                                                  v41,
-                                                 (System_String_o *)StringLiteral_22994/*"q"*/,
+                                                 (System_String_o *)StringLiteral_23047/*"purchaseTime"*/,
                                                  0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
                 goto LABEL_170;
             }
             else if ( (_DWORD)this == -166967934 )
             {
-              v68 = &StringLiteral_23321/*"s"*/;
+              v68 = &StringLiteral_23374/*"routeTypes"*/;
 LABEL_102:
               this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)*v68, 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
@@ -2614,7 +2614,7 @@ LABEL_102:
                 {
                   this = (CommonMessageManager_o *)System_String__op_Equality(
                                                      v42->m_Items[0],
-                                                     (System_String_o *)StringLiteral_915/*"-"*/,
+                                                     (System_String_o *)StringLiteral_918/*"-"*/,
                                                      0LL);
                   v75 = -1.0;
                   if ( ((unsigned __int8)this & 1) == 0 )
@@ -2626,7 +2626,7 @@ LABEL_102:
                 }
                 else
                 {
-                  v48 = &StringLiteral_22778/*"parameter error"*/;
+                  v48 = &StringLiteral_22831/*"page down"*/;
                   if ( v74 )
                     goto LABEL_169;
                   v75 = -1.0;
@@ -2640,7 +2640,7 @@ LABEL_102:
           {
             if ( (_DWORD)this == -385076981 )
             {
-              v60 = &StringLiteral_21323/*"l"*/;
+              v60 = &StringLiteral_21372/*"koi8-u"*/;
 LABEL_133:
               this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)*v60, 0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
@@ -2652,20 +2652,20 @@ LABEL_133:
                 {
                   this = (CommonMessageManager_o *)System_String__op_Equality(
                                                      v42->m_Items[0],
-                                                     (System_String_o *)StringLiteral_915/*"-"*/,
+                                                     (System_String_o *)StringLiteral_918/*"-"*/,
                                                      0LL);
                   v78 = -1.0;
                   if ( ((unsigned __int8)this & 1) == 0 )
                   {
                     if ( !v42->max_length )
 LABEL_189:
-                      sub_1BE4D30(this, method);
+                      sub_1C13F88(this, method);
                     v78 = System_Single__Parse(v42->m_Items[0], 0LL);
                   }
                 }
                 else
                 {
-                  v48 = &StringLiteral_22778/*"parameter error"*/;
+                  v48 = &StringLiteral_22831/*"page down"*/;
                   if ( v77 )
                     goto LABEL_169;
                   v78 = -1.0;
@@ -2679,17 +2679,17 @@ LABEL_189:
             {
               this = (CommonMessageManager_o *)System_String__op_Equality(
                                                  v41,
-                                                 (System_String_o *)StringLiteral_21261/*"k"*/,
+                                                 (System_String_o *)StringLiteral_21309/*"joint_all_Base"*/,
                                                  0LL);
               if ( ((unsigned __int8)this & 1) != 0 )
               {
                 if ( !v42 )
                   goto LABEL_190;
-                v48 = &StringLiteral_22777/*"parameter be unnecessary"*/;
+                v48 = &StringLiteral_22830/*"page"*/;
                 if ( *(_QWORD *)&v42->max_length )
                   goto LABEL_169;
                 v5->fields.state = 4;
-                v69 = &StringLiteral_24333/*"touch"*/;
+                v69 = &StringLiteral_24388/*"token_balloon"*/;
                 goto LABEL_150;
               }
             }
@@ -2701,13 +2701,13 @@ LABEL_189:
           {
             if ( (_DWORD)this == -1460566783 )
             {
-              v73 = &StringLiteral_19783/*"fontSize"*/;
+              v73 = &StringLiteral_19827/*"followerSpoilerProtectionLimitCount"*/;
             }
             else
             {
               if ( (_DWORD)this != -485742695 )
                 goto LABEL_153;
-              v73 = &StringLiteral_19590/*"f"*/;
+              v73 = &StringLiteral_19634/*"extends"*/;
             }
             goto LABEL_141;
           }
@@ -2715,7 +2715,7 @@ LABEL_189:
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
                                                v41,
-                                               (System_String_o *)StringLiteral_24942/*"wait"*/,
+                                               (System_String_o *)StringLiteral_24998/*"vm.shared.size"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
@@ -2724,7 +2724,7 @@ LABEL_189:
                 goto LABEL_190;
               if ( (int)v42->max_length < 1 )
               {
-                v48 = &StringLiteral_22778/*"parameter error"*/;
+                v48 = &StringLiteral_22831/*"page down"*/;
 LABEL_169:
                 if ( *v48 )
                 {
@@ -2742,7 +2742,7 @@ LABEL_151:
           }
           else if ( (_DWORD)this == -1738943344 )
           {
-            v60 = &StringLiteral_17379/*"betweenHeight"*/;
+            v60 = &StringLiteral_17425/*"be-BY"*/;
             goto LABEL_133;
           }
         }
@@ -2755,17 +2755,17 @@ LABEL_151:
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
                                                v41,
-                                               (System_String_o *)StringLiteral_22759/*"page"*/,
+                                               (System_String_o *)StringLiteral_22812/*"p"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               if ( !v42 )
                 goto LABEL_190;
-              v48 = &StringLiteral_22777/*"parameter be unnecessary"*/;
+              v48 = &StringLiteral_22830/*"page"*/;
               if ( *(_QWORD *)&v42->max_length )
                 goto LABEL_169;
               v5->fields.state = 4;
-              v69 = &StringLiteral_22759/*"page"*/;
+              v69 = &StringLiteral_22812/*"p"*/;
 LABEL_150:
               v57 = *v69;
               v5->fields.waitType = (struct System_String_o *)*v69;
@@ -2776,13 +2776,13 @@ LABEL_150:
           {
             this = (CommonMessageManager_o *)System_String__op_Equality(
                                                v41,
-                                               (System_String_o *)StringLiteral_21709/*"messageOff"*/,
+                                               (System_String_o *)StringLiteral_21759/*"menu_txt_class_score"*/,
                                                0LL);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               if ( !v42 )
                 goto LABEL_190;
-              v48 = &StringLiteral_22778/*"parameter error"*/;
+              v48 = &StringLiteral_22831/*"page down"*/;
               if ( *(_QWORD *)&v42->max_length )
                 goto LABEL_169;
               ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)v5, 0LL);
@@ -2794,12 +2794,12 @@ LABEL_150:
         }
         if ( (_DWORD)this == 1787721130 )
         {
-          this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_19251/*"end"*/, 0LL);
+          this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_19295/*"enableFullScreen"*/, 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !v42 )
               goto LABEL_190;
-            v48 = &StringLiteral_22777/*"parameter be unnecessary"*/;
+            v48 = &StringLiteral_22830/*"page"*/;
             if ( *(_QWORD *)&v42->max_length )
               goto LABEL_169;
             CommonMessageManager__EndExecuteScript(v5, method);
@@ -2808,7 +2808,7 @@ LABEL_150:
         }
         else if ( (_DWORD)this == 2072037248 )
         {
-          v68 = &StringLiteral_23759/*"speed"*/;
+          v68 = &StringLiteral_23812/*"sourceCode"*/;
           goto LABEL_102;
         }
       }
@@ -2816,7 +2816,7 @@ LABEL_150:
       {
         if ( (_DWORD)this == 659427984 )
         {
-          v73 = &StringLiteral_19778/*"font"*/;
+          v73 = &StringLiteral_19822/*"follower/setupRecommendSupport"*/;
 LABEL_141:
           this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)*v73, 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
@@ -2838,7 +2838,7 @@ LABEL_141:
             }
             else
             {
-              v48 = &StringLiteral_22778/*"parameter error"*/;
+              v48 = &StringLiteral_22831/*"page down"*/;
               if ( v79 )
                 goto LABEL_169;
               v81 = (ScriptMessageCommonManager_o *)v5;
@@ -2853,23 +2853,23 @@ LABEL_145:
         }
         if ( (_DWORD)this == 1550717474 )
         {
-          this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_18234/*"clear"*/, 0LL);
+          this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_18277/*"class2_{0}"*/, 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !v42 )
               goto LABEL_190;
-            v48 = &StringLiteral_22777/*"parameter be unnecessary"*/;
+            v48 = &StringLiteral_22830/*"page"*/;
             if ( *(_QWORD *)&v42->max_length )
               goto LABEL_169;
             v5->fields.state = 4;
-            v69 = &StringLiteral_18234/*"clear"*/;
+            v69 = &StringLiteral_18277/*"class2_{0}"*/;
             goto LABEL_150;
           }
         }
       }
       else if ( (_DWORD)this == 452920428 )
       {
-        this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_24176/*"talkName"*/, 0LL);
+        this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_24231/*"t68aZyLxlMWVjw8lWgdZ"*/, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           v56 = (PartyOrganizationUtility_o *)&v5->fields.waitTalkName;
@@ -2879,20 +2879,20 @@ LABEL_145:
       }
       else if ( (_DWORD)this == 549278861 )
       {
-        this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_21711/*"messageOn"*/, 0LL);
+        this = (CommonMessageManager_o *)System_String__op_Equality(v41, (System_String_o *)StringLiteral_21761/*"menu_txt_spend"*/, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !v42 )
             goto LABEL_190;
-          v48 = &StringLiteral_22778/*"parameter error"*/;
+          v48 = &StringLiteral_22831/*"page down"*/;
           if ( *(_QWORD *)&v42->max_length )
             goto LABEL_169;
           ScriptMessageCommonManager__OffScreen((ScriptMessageCommonManager_o *)v5, 0LL);
           ScriptMessageCommonManager__ClearText((ScriptMessageCommonManager_o *)v5, 0LL);
           v5->fields.state = 4;
-          v49 = StringLiteral_21699/*"message"*/;
-          v5->fields.waitType = (struct System_String_o *)StringLiteral_21699/*"message"*/;
-          sub_1BE4A70((PartyOrganizationUtility_o *)&v5->fields.waitType, v49, v50, v51, v52, v53, v54, v55);
+          v49 = StringLiteral_21748/*"mediumvioletred"*/;
+          v5->fields.waitType = (struct System_String_o *)StringLiteral_21748/*"mediumvioletred"*/;
+          sub_1C13CC8((PartyOrganizationUtility_o *)&v5->fields.waitType, v49, v50, v51, v52, v53, v54, v55);
           v56 = (PartyOrganizationUtility_o *)&v5->fields.waitMessage;
           v57 = 0LL;
           v5->fields.waitMessage = 0LL;
@@ -2903,15 +2903,15 @@ LABEL_153:
       if ( !v41 )
       {
         v5->fields.state = 4;
-        v83 = StringLiteral_21699/*"message"*/;
-        v5->fields.waitType = (struct System_String_o *)StringLiteral_21699/*"message"*/;
-        sub_1BE4A70((PartyOrganizationUtility_o *)&v5->fields.waitType, v83, (int64_t)v3, v43, v44, v45, v46, v47);
+        v83 = StringLiteral_21748/*"mediumvioletred"*/;
+        v5->fields.waitType = (struct System_String_o *)StringLiteral_21748/*"mediumvioletred"*/;
+        sub_1C13CC8((PartyOrganizationUtility_o *)&v5->fields.waitType, v83, (int64_t)v3, v43, v44, v45, v46, v47);
         v5->fields.waitMessage = v40;
         v56 = (PartyOrganizationUtility_o *)&v5->fields.waitMessage;
 LABEL_155:
         v57 = (int64_t)v40;
 LABEL_156:
-        sub_1BE4A70(v56, v57, (int64_t)v3, v43, v44, v45, v46, v47);
+        sub_1C13CC8(v56, v57, (int64_t)v3, v43, v44, v45, v46, v47);
       }
 LABEL_170:
       ++v5->fields.executeIndex;
@@ -2928,7 +2928,7 @@ LABEL_171:
       {
         if ( v59 != 1550717474 )
         {
-          if ( v59 == 1770621400 && System_String__op_Equality(v58, (System_String_o *)StringLiteral_24333/*"touch"*/, 0LL) )
+          if ( v59 == 1770621400 && System_String__op_Equality(v58, (System_String_o *)StringLiteral_24388/*"token_balloon"*/, 0LL) )
           {
             if ( v5->fields.isBusy )
             {
@@ -2940,12 +2940,12 @@ LABEL_181:
               (ScriptMessageCommonManager_o *)v5,
               v5->fields.isDispLastTouchMark,
               0LL);
-            v92 = &StringLiteral_24335/*"touch2"*/;
+            v92 = &StringLiteral_24390/*"token_enpty"*/;
             goto LABEL_188;
           }
           goto LABEL_173;
         }
-        if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_18234/*"clear"*/, 0LL) )
+        if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_18277/*"class2_{0}"*/, 0LL) )
           goto LABEL_173;
         if ( v5->fields.isBusy )
           goto LABEL_181;
@@ -2953,10 +2953,10 @@ LABEL_181:
           v5->fields.isCancelInput = 0;
         else
           ScriptMessageCommonManager__WaitNextTouch((ScriptMessageCommonManager_o *)v5, 1, 0LL);
-        v72 = &StringLiteral_18236/*"clear2"*/;
+        v72 = &StringLiteral_18279/*"classBoard/releaseSquare"*/;
         goto LABEL_120;
       }
-      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21699/*"message"*/, 0LL) )
+      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21748/*"mediumvioletred"*/, 0LL) )
         goto LABEL_173;
       if ( ScriptMessageCommonManager__IsReturnScroll((ScriptMessageCommonManager_o *)v5, 0LL) )
       {
@@ -2964,7 +2964,7 @@ LABEL_181:
           goto LABEL_181;
         if ( v5->fields.isCancelInput )
           v5->fields.isCancelInput = 0;
-        v72 = &StringLiteral_21703/*"message2"*/;
+        v72 = &StringLiteral_21753/*"member_txt_"*/;
         goto LABEL_120;
       }
       if ( *p_waitTalkName )
@@ -2979,7 +2979,7 @@ LABEL_181:
     }
     if ( v59 == 256629 )
     {
-      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21704/*"message3"*/, 0LL) || v5->fields.isScroll )
+      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21754/*"members"*/, 0LL) || v5->fields.isScroll )
         goto LABEL_173;
       v70 = *p_waitMessage;
       if ( !*p_waitMessage )
@@ -2995,7 +2995,7 @@ LABEL_113:
       goto LABEL_115;
     }
     if ( v59 != 226761566
-      || !System_String__op_Equality(v58, (System_String_o *)StringLiteral_24335/*"touch2"*/, 0LL)
+      || !System_String__op_Equality(v58, (System_String_o *)StringLiteral_24390/*"token_enpty"*/, 0LL)
       || v5->fields.isWaitNextTouchRequest )
     {
       goto LABEL_173;
@@ -3010,7 +3010,7 @@ LABEL_115:
   {
     if ( v59 == -2124547466 )
     {
-      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_22759/*"page"*/, 0LL) )
+      if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_22812/*"p"*/, 0LL) )
         goto LABEL_173;
       if ( v5->fields.isBusy )
         goto LABEL_181;
@@ -3018,16 +3018,16 @@ LABEL_115:
         v5->fields.isCancelInput = 0;
       else
         ScriptMessageCommonManager__WaitNextTouch((ScriptMessageCommonManager_o *)v5, 1, 0LL);
-      v72 = &StringLiteral_22763/*"page2"*/;
+      v72 = &StringLiteral_22816/*"pa"*/;
 LABEL_120:
       v67 = *v72;
       *p_waitType = (System_String_o *)*v72;
 LABEL_121:
-      sub_1BE4A70((PartyOrganizationUtility_o *)&v5->fields.waitType, v67, (int64_t)v61, v62, v63, v64, v65, v66);
+      sub_1C13CC8((PartyOrganizationUtility_o *)&v5->fields.waitType, v67, (int64_t)v61, v62, v63, v64, v65, v66);
       goto LABEL_171;
     }
     if ( v59 != -1857654992
-      || !System_String__op_Equality(v58, (System_String_o *)StringLiteral_18236/*"clear2"*/, 0LL)
+      || !System_String__op_Equality(v58, (System_String_o *)StringLiteral_18279/*"classBoard/releaseSquare"*/, 0LL)
       || v5->fields.isWaitNextTouchRequest )
     {
       goto LABEL_173;
@@ -3038,32 +3038,32 @@ LABEL_83:
   }
   if ( v59 == -336528737 )
   {
-    if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_22764/*"page3"*/, 0LL) || v5->fields.isScroll )
+    if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_22817/*"pa-IN"*/, 0LL) || v5->fields.isScroll )
       goto LABEL_173;
     goto LABEL_83;
   }
   if ( v59 == -16520990 )
   {
-    if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21703/*"message2"*/, 0LL)
+    if ( !System_String__op_Equality(v58, (System_String_o *)StringLiteral_21753/*"member_txt_"*/, 0LL)
       || v5->fields.isWaitNextTouchRequest )
     {
       goto LABEL_173;
     }
     ScriptMessageCommonManager__ReturnScroll((ScriptMessageCommonManager_o *)v5, v5->fields.playSpeed == 3, 0, 0LL);
-    v67 = StringLiteral_21704/*"message3"*/;
-    v5->fields.waitType = (struct System_String_o *)StringLiteral_21704/*"message3"*/;
+    v67 = StringLiteral_21754/*"members"*/;
+    v5->fields.waitType = (struct System_String_o *)StringLiteral_21754/*"members"*/;
     goto LABEL_121;
   }
   if ( v59 == -353306356
-    && System_String__op_Equality(v58, (System_String_o *)StringLiteral_22763/*"page2"*/, 0LL)
+    && System_String__op_Equality(v58, (System_String_o *)StringLiteral_22816/*"pa"*/, 0LL)
     && !v5->fields.isWaitNextTouchRequest )
   {
     ScriptMessageCommonManager__PageScroll((ScriptMessageCommonManager_o *)v5, v5->fields.playSpeed == 3, 0LL);
-    v92 = &StringLiteral_22764/*"page3"*/;
+    v92 = &StringLiteral_22817/*"pa-IN"*/;
 LABEL_188:
     v93 = *v92;
     v5->fields.waitType = (struct System_String_o *)*v92;
-    sub_1BE4A70((PartyOrganizationUtility_o *)&v5->fields.waitType, v93, v86, v87, v88, v89, v90, v91);
+    sub_1C13CC8((PartyOrganizationUtility_o *)&v5->fields.waitType, v93, v86, v87, v88, v89, v90, v91);
   }
 LABEL_173:
   isBusy = v5->fields.isBusy;
@@ -3099,7 +3099,7 @@ void __fastcall CommonMessageManager__SetCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.callbackFunc = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -3123,7 +3123,7 @@ void __fastcall CommonMessageManager__SetLongPressCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.longPressCallbackFunc = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.longPressCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -3154,7 +3154,7 @@ void __fastcall CommonMessageManager__SetMessageBlock(
   v8 = isDispLastTouchMark;
   ScriptMessageCommonManager__ResetScroll((ScriptMessageCommonManager_o *)this, 0LL);
   this->fields.callbackFunc = callbackFunc;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callbackFunc,
     v9,
@@ -3190,10 +3190,10 @@ void __fastcall CommonMessageManager__SetTalkName(
   System_String_o *className; // [xsp+18h] [xbp-38h] BYREF
   System_String_o *imageName; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4B6866B & 1) == 0 )
+  if ( (byte_4BB61A4 & 1) == 0 )
   {
-    sub_1BE4ACC(&ScriptMessageLabel_TypeInfo, name);
-    byte_4B6866B = 1;
+    sub_1C13D24(&ScriptMessageLabel_TypeInfo, name);
+    byte_4BB61A4 = 1;
   }
   imageName = 0LL;
   charaName = 0LL;
@@ -3224,7 +3224,7 @@ void __fastcall CommonMessageManager__SetTouchCallback(
   PartyListViewItem_o *v7; // x7
 
   this->fields.touchCallbackFunc = callback;
-  sub_1BE4A70(
+  sub_1C13CC8(
     (PartyOrganizationUtility_o *)&this->fields.touchCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
